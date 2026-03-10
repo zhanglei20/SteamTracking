@@ -921,6 +921,30 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _;
+      !(function (_) {
+        (_.full = ""),
+          (_.background_main = "_960x311"),
+          (_.background_mini = "_480x156"),
+          (_.capsule_main = "_400x225"),
+          (_.spotlight_main = "_1054x230");
+      })(_ || (_ = {}));
+      const _ = [
+        "localized_image_group",
+        "link_capsule",
+        "product_mobile_banner_override",
+        "product_banner_override",
+        "sale_section_title",
+        "schedule_track_art",
+        "localized_background_art",
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _,
@@ -10870,6 +10894,42 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+          eLocation: 0,
+        },
+        _ = _.createContext(_);
+      function _(_) {
+        const { children: _, location: __webpack_require__ } = _;
+        return (0, _.jsx)(_.Provider, {
+          value: {
+            ..._,
+            eLocation: __webpack_require__ ?? 0,
+          },
+          children: _,
+        });
+      }
+      function _() {
+        return _.useContext(_);
+      }
+      function _() {
+        return 2 == _().eLocation;
+      }
+      function _() {
+        const _ = _();
+        return 2 == _.eLocation || 1 == _.eLocation;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
       });
       var _,
         _ = __webpack_require__("chunkid"),
@@ -13031,9 +13091,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       (0, _._)(
@@ -14354,6 +14413,9 @@
           };
         }
       }
+      function _(_) {
+        return _?.replace(/[()]/g, "\\$&");
+      }
       (0, _._)([_._], _.prototype, "GID", void 0),
         (0, _._)([_._], _.prototype, "AnnouncementGID", void 0),
         (0, _._)([_._], _.prototype, "forumTopicGID", void 0),
@@ -14394,9 +14456,6 @@
         (0, _._)([_._], _.prototype, "video_preview_type", void 0),
         (0, _._)([_._], _.prototype, "video_preview_id", void 0),
         (0, _._)([_._], _.prototype, "m_overrideCurrentDay", void 0);
-      function _(_) {
-        return _?.replace(/[()]/g, "\\$&");
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -14852,263 +14911,8 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        const _ = (0, _._)(_.width, _),
-          _ = (0, _._)(_.height, _);
-        return {
-          sKey: `${_}_${_}x${_}`,
-          width: _,
-          height: _,
-          bEnforceDimensions: !_.bDisableEnforceDimensions,
-          artworkType: _,
-          bHiddenFromDropdown: "hero" === _,
-          bDeprecated: (_ ?? 0) >= 1,
-          fnGetLabelText() {
-            return "spotlight" == this.artworkType
-              ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
-              : (0, _._)("#EventEditor_ArtworkType_" + this.artworkType);
-          },
-        };
-      }
-      function _(_) {
-        return _?.flatMap((_) => {
-          const _ = _._[_];
-          if (
-            ((0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
-            "number" == typeof _.width && "number" == typeof _.height)
-          )
-            return [_(_, _)];
-          {
-            let _ = Math.max(
-              Array.isArray(_.width) ? _.width.length : 1,
-              Array.isArray(_.height) ? _.height.length : 1,
-            );
-            return Array.from(
-              {
-                length: _,
-              },
-              (_, _) => _(_, _, _),
-            );
-          }
-        });
-      }
-      class _ extends _._ {
-        m_filesToUpload = _._.array();
-        m_filesCompleted = _._.array();
-        m_clanImagesV2;
-        m_clanSteamID;
-        m_rgImageOptions;
-        m_localizedImageGroupPrimaryImage;
-        m_lastError = void 0;
-        constructor(_, _, _, _) {
-          super(),
-            (0, _._)(this),
-            (this.m_clanSteamID = _),
-            (this.m_rgImageOptions = _(_)),
-            (this.m_localizedImageGroupPrimaryImage = _),
-            (this.m_clanImagesV2 = _ ?? !1);
-        }
-        GetClanSteamID() {
-          return this.m_clanSteamID;
-        }
-        async AddImage(_, _ = 0) {
-          const { language: __webpack_require__ } = (0, _._)(_.name, _);
-          return this.AddImageForLanguage(_, __webpack_require__);
-        }
-        async AddImageForLanguage(_, _) {
-          if (!((0, _._)(_.type) || (_._.is_support && (0, _._)(_.type))))
-            return !1;
-          const _ = await (0, _._)(_, (0, _._)(_.type));
-          if (!_) return !1;
-          const _ = new _._(
-            _,
-            _.name,
-            _,
-            this.m_rgImageOptions,
-            _.src,
-            (0, _._)(_),
-            _,
-            this.m_localizedImageGroupPrimaryImage,
-          );
-          return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
-        }
-        async AddExistingClanImage(_, _ = 0) {
-          const _ = _._.GetHashAndExt(_);
-          if (!_) return !1;
-          const _ = _._.GenerateEditableURLFromHashAndExt(
-              this.m_clanSteamID,
-              _,
-            ),
-            _ = await _()({
-              url: _,
-              method: "GET",
-              responseType: "blob",
-            }),
-            _ = (0, _._)(_.data, _.file_name);
-          return await this.AddImage(_, _);
-        }
-        DeleteUploadImageByIndex(_) {
-          this.m_filesToUpload.splice(_, 1),
-            (this.m_filesToUpload = [...this.m_filesToUpload]);
-        }
-        DeleteUploadImage(_) {
-          let _ = this.m_filesToUpload.findIndex(
-            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
-          );
-          _ >= 0 && this.DeleteUploadImageByIndex(_);
-        }
-        ClearImages() {
-          this.m_filesToUpload = _._.array();
-        }
-        GetFilesUploaded() {
-          return this.m_filesCompleted;
-        }
-        GetLastErrorFile() {
-          return this.m_lastError;
-        }
-        GetCompletedFiles() {
-          return this.m_filesCompleted.length;
-        }
-        GetTotalFiles() {
-          return this.m_filesToUpload.length;
-        }
-        GetFilesToUpload() {
-          return this.m_filesToUpload.map((_) => _.file);
-        }
-        GetUploadImages() {
-          return this.m_filesToUpload;
-        }
-        BHasError() {
-          return null != this.m_lastError;
-        }
-        BAllDone() {
-          return (
-            this.m_filesCompleted.length > 0 &&
-            this.m_filesCompleted.length == this.m_filesToUpload.length
-          );
-        }
-        BIsFileCompleted(_) {
-          return -1 != this.m_filesCompleted.indexOf(_);
-        }
-        RetryAllFailedUploads() {
-          this.CancelAllUploads(), this.UploadAllImages();
-        }
-        async handleUploadRefresh(_) {
-          await _._.LoadClanImages(this.m_clanSteamID, !0, _);
-        }
-        BGetUploadsAreInSerial() {
-          return !1;
-        }
-        async UploadSingleImage(_, _, _, _) {
-          const _ = _.file,
-            _ = _.GetCurrentImageOption(),
-            _ = _.GetResizeDimension(),
-            _ = new FormData();
-          _.append("clanimage", _, _),
-            _.append("sessionid", _._.SESSIONID),
-            this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
-            _?.artworkType && _.append("arttype", _.artworkType),
-            _ &&
-              _.length > 0 &&
-              _.append(
-                "resize",
-                _.map((_) => _.width + "x" + _.height).join(","),
-              );
-          let _ = "/uploadimage/";
-          const _ = this.m_localizedImageGroupPrimaryImage;
-          _ &&
-            ((_ = "/ajaxuploadlocalizedimage/"),
-            _.append("origimagehash", _.image_hash),
-            _.thumbnail_hash && _.append("thumbhash", _.thumbnail_hash),
-            _.append("extension", "" + _.file_type),
-            _.append("language", "" + _));
-          const _ = _.split(".").pop()?.toLocaleLowerCase();
-          ("webm" != _ && "mp4" != _) ||
-            (_.append("video_width", "" + _.width),
-            _.append("video_height", "" + _.height));
-          let _,
-            _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              this.m_clanSteamID.ConvertTo64BitString() +
-              _,
-            _ = {
-              cancelToken: _,
-              withCredentials: !0,
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            },
-            _ = !0;
-          try {
-            (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
-          } catch (_) {
-            (_ = !1),
-              (this.m_lastError = {
-                file: _,
-                status: _.response ? _.response.status : 500,
-                message: (0, _._)(_).strErrorMsg,
-              }),
-              (_ = _.response);
-          }
-          return (
-            _ || (await this.handleUploadRefresh(_)),
-            {
-              bSuccess: _,
-              result: _.data,
-            }
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
-        (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
-        (0, _._)([_._], _.prototype, "m_lastError", void 0),
-        (0, _._)([_._], _.prototype, "AddImage", null),
-        (0, _._)([_._], _.prototype, "AddExistingClanImage", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImageByIndex", null),
-        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
-        (0, _._)([_._], _.prototype, "ClearImages", null);
-      class _ extends _ {
-        constructor(_, _, _) {
-          super(_, _, _, !1);
-        }
-      }
-      function _(_, _, _) {
-        const _ = (0, _._)(_ instanceof Array ? _ : [_]),
-          _ = _.ConvertTo64BitString();
-        return _.useMemo(() => new _(_, _, _), [_, _]);
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15253,307 +15057,8 @@
           }
           return _;
         },
-        async OverlayClanImage(_, _, _, _, _, _) {
-          let _,
-            _ = null,
-            _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              (_ =
-                "Load fail on url " +
-                _ +
-                " with error: " +
-                (0, _._)(_).strErrorMsg),
-                console.error(_);
-            }),
-            (_.onload = () => {
-              let _ = new Image();
-              (_.crossOrigin = "anonymous"),
-                (_.onerror = (_) => {
-                  (_ =
-                    "Load fail on url " +
-                    _ +
-                    " with error: " +
-                    (0, _._)(_).strErrorMsg),
-                    console.error(_);
-                }),
-                (_.onload = () => {
-                  try {
-                    let _ = document.createElement("canvas"),
-                      _ = _.getContext("2d");
-                    (_.width = _),
-                      (_.height = _),
-                      __webpack_require__?.drawImage(_, 0, 0, _, _);
-                    let _ = (_ - _.width) / 2,
-                      _ = (_ - _.height) / 2;
-                    __webpack_require__?.drawImage(_, _, _),
-                      _.toBlob((_) => (_ = _), "image/jpeg");
-                  } catch (_) {
-                    _ =
-                      "Failed during image processing for " + _ + " with " + _;
-                  }
-                }),
-                (_.src = _);
-            }),
-            (_.src = _);
-          let _ = 0;
-          for (; void 0 === _ && _ < 100; ) await (0, _._)(100), (_ += 1);
-          if (
-            (_ >= 100 &&
-              void 0 === _ &&
-              (_ = "AsyncOverlay - We timed out processing images"),
-            _)
-          )
-            throw (
-              (console.log(_),
-              {
-                success: 2,
-                err_msg: _,
-              })
-            );
-          const _ = new _._(_, void 0),
-            _ = new _._(
-              _,
-              _,
-              -1,
-              void 0,
-              "",
-              {
-                width: _,
-                height: _,
-              },
-              void 0,
-              void 0,
-            ),
-            _ = await _.UploadSingleImage(_, _, -1, void 0);
-          return _.bSuccess && _.result
-            ? _.result.image_hash +
-                this.GetExtensionString({
-                  file_type: _.fileType,
-                })
-            : void 0;
-        },
         BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      !(function (_) {
-        (_.full = ""),
-          (_.background_main = "_960x311"),
-          (_.background_mini = "_480x156"),
-          (_.capsule_main = "_400x225"),
-          (_.spotlight_main = "_1054x230");
-      })(_ || (_ = {}));
-      const _ = [
-        "localized_image_group",
-        "link_capsule",
-        "product_mobile_banner_override",
-        "product_banner_override",
-        "sale_section_title",
-        "schedule_track_art",
-        "localized_background_art",
-      ];
-      class _ {
-        constructor() {
-          (0, _._)(this),
-            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
-        }
-        m_mapClanToImages = new Map();
-        m_mapClanImageLoadPromises = new Map();
-        m_imageListChangeCallback = new Map();
-        m_mapClanImageLoadState = new Map();
-        m_mapImageIDToResolution = new Map();
-        BHasImageResolution(_) {
-          return this.m_mapImageIDToResolution.has(_.imageid);
-        }
-        GetImageResolution(_) {
-          return this.m_mapImageIDToResolution.get(_.imageid);
-        }
-        SetImageResolution(_, _) {
-          this.m_mapImageIDToResolution.set(_.imageid, _);
-        }
-        GetImageListCallbackForClanAccountIDInternal(_) {
-          return (
-            this.m_imageListChangeCallback.has(_) ||
-              this.m_imageListChangeCallback.set(_, new _._()),
-            this.m_imageListChangeCallback.get(_)
-          );
-        }
-        GetImageListCallbackForClanAccountID(_) {
-          return this.GetImageListCallbackForClanAccountIDInternal(_);
-        }
-        m_vecClanImageDragListener = new Array();
-        AddClanImageDragListener(_) {
-          -1 == this.m_vecClanImageDragListener.indexOf(_) &&
-            this.m_vecClanImageDragListener.push(_);
-        }
-        RemoveClanImageDragListener(_) {
-          let _ = this.m_vecClanImageDragListener.indexOf(_);
-          -1 != _ && this.m_vecClanImageDragListener.splice(_, 1);
-        }
-        GetClanImageDragListener() {
-          return this.m_vecClanImageDragListener;
-        }
-        BHasLoadedClanImages(_) {
-          return this.m_mapClanToImages.has(_.GetAccountID());
-        }
-        async LoadClanImages(_, _, _) {
-          const _ = _.GetAccountID();
-          if (_ || !this.m_mapClanImageLoadPromises.has(_)) {
-            const _ = this.InternalLoadClanImages(_, _, _);
-            this.m_mapClanImageLoadPromises.set(_, _);
-          }
-          return this.m_mapClanImageLoadPromises.get(_);
-        }
-        async InternalLoadClanImages(_, _, _) {
-          let _ = _.GetAccountID();
-          if (
-            ((0, _._)(_ && 0 != _, "ClanSteamID missing:" + _),
-            _ && (!this.m_mapClanToImages.has(_) || _))
-          ) {
-            let _,
-              _ = {};
-            const _ =
-              _._.COMMUNITY_BASE_URL +
-              "/gid/" +
-              _.ConvertTo64BitString() +
-              "/getimages/";
-            if (
-              ((_ = await _().get(_, {
-                params: _,
-                withCredentials: !0,
-                cancelToken: _,
-              })),
-              _)
-            ) {
-              for (let _ of _.data.images) _.clanAccountID = _;
-              (0, _._)(() => {
-                this.m_mapClanImageLoadState.set(_, {
-                  loaded: !0,
-                }),
-                  this.m_mapClanToImages.set(_, _.data.images),
-                  this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch(
-                    _.data.images,
-                  );
-              });
-            }
-          }
-          return this.m_mapClanToImages.get(_);
-        }
-        GetLoadState(_) {
-          return this.m_mapClanImageLoadState.get(_.GetAccountID());
-        }
-        GetClanImages(_) {
-          return this.GetClanImagesByAccount(_.GetAccountID());
-        }
-        GetClanImagesByAccount(_) {
-          let _ = this.m_mapClanToImages.get(_);
-          return _ || new Array();
-        }
-        GetFilteredClanImages(_, _) {
-          let _ = _.GetClanImages(_);
-          return this.GetFilteredClanImagesList(_, _);
-        }
-        GetFilteredClanImagesList(_, _) {
-          if (_ && _.trim().length > 0) {
-            _ = _.trim().toLowerCase();
-            let _ = new Array();
-            for (let _ of _)
-              _.file_name &&
-                _.file_name.toLowerCase().indexOf(_) >= 0 &&
-                __webpack_require__.push(_);
-            return _;
-          }
-          return _;
-        }
-        GetClanImageByID(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.imageid == _) : void 0;
-        }
-        GetClanImageByURL(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.thumb_url == _ || _.url == _) : void 0;
-        }
-        GetClanImageByFile(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.file_name == _.name) : void 0;
-        }
-        GetClanImageByImageHash(_, _) {
-          let _ = _.GetAccountID(),
-            _ = this.m_mapClanToImages.get(_);
-          return _ ? _.find((_) => _.image_hash == _) : void 0;
-        }
-        async DeleteClanImageByID(_, _) {
-          let _ = {
-              sessionid: _._.SESSIONID,
-              imageid: _,
-            },
-            _ = _.GetAccountID(),
-            _ = await _().get(
-              _._.COMMUNITY_BASE_URL +
-                "/gid/" +
-                _.ConvertTo64BitString() +
-                "/deleteimage/",
-              {
-                params: _,
-              },
-            );
-          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
-          let _ = this.m_mapClanToImages.get(_);
-          if (_) {
-            let _ = _.findIndex((_, _, _) => _.imageid == _);
-            _ >= 0 &&
-              (_.splice(_, 1),
-              this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch([
-                ..._,
-              ]));
-          }
-          return _.data;
-        }
-        async DeleteClanImage(_, _) {
-          return this.DeleteClanImageByID(_, _.imageid);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_mapClanToImages", void 0),
-        (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0);
-      const _ = new _();
-      function _(_) {
-        const _ = _._.InitFromClanID(_),
-          _ = (0, _._)("useLoadClanImages"),
-          [_, _] = (0, _.useState)(() => _.BHasLoadedClanImages(_));
-        return (
-          (0, _.useEffect)(() => {
-            const _ = _._.InitFromClanID(_);
-            return (
-              _.BHasLoadedClanImages(_) ||
-                _.LoadClanImages(_, !1, _.token).then(() => _(!0)),
-              () => __webpack_require__.cancel()
-            );
-          }, [_, _]),
-          _
-        );
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -34805,6 +34310,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_eView = "view"),
@@ -35024,7 +34530,14 @@
           _ = _ && _(_.route, _),
           _ = _(_, _.route, _ ? "relative" : "absolute"),
           _ = !_ && _ ? (0, _._)(_) : _,
-          _ = _ || !_ ? _ : (0, _._)(_, _);
+          _ = _ || !_ ? _ : (0, _._)(_, _),
+          _ = _(_, _.k_eViewWebSiteHub, "absolute"),
+          _ = Boolean(_.route != _.k_eViewWebSiteHub)
+            ? (0, _._)("#EventBrowse_MoreEventsBtn")
+            : "",
+          _ = _.useCallback(() => {
+            _ && window.location.assign(_);
+          }, [_]);
         return _
           ? _
             ? (0, _.jsx)(_._, {
@@ -35036,6 +34549,8 @@
                 onClick: (_) => {
                   _.onClick?.(_), _.push(_), _.preventDefault();
                 },
+                onOptionsActionDescription: _,
+                onOptionsButton: _ ? _ : void 0,
                 preferredFocus: __webpack_require__,
                 children: _.children,
               })
@@ -35045,6 +34560,8 @@
                 className: _.className,
                 onClick: _.onClick,
                 preferredFocus: __webpack_require__,
+                onOptionsActionDescription: _,
+                onOptionsButton: _ ? _ : void 0,
                 children: _.children,
               })
           : null;
@@ -35618,42 +35135,6 @@
           ],
         });
       });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-          eLocation: 0,
-        },
-        _ = _.createContext(_);
-      function _(_) {
-        const { children: _, location: __webpack_require__ } = _;
-        return (0, _.jsx)(_.Provider, {
-          value: {
-            ..._,
-            eLocation: __webpack_require__ ?? 0,
-          },
-          children: _,
-        });
-      }
-      function _() {
-        return _.useContext(_);
-      }
-      function _() {
-        return 2 == _().eLocation;
-      }
-      function _() {
-        const _ = _();
-        return 2 == _.eLocation || 1 == _.eLocation;
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -36389,6 +35870,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -36441,6 +35923,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -36539,15 +36022,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -38577,7 +38058,7 @@
             },
             [_, _, __webpack_require__],
           );
-        _.useLayoutEffect(() => {
+        (0, _.useLayoutEffect)(() => {
           if (!_.current || !__webpack_require__.current || !_.current) return;
           let _ = _.current.getBoundingClientRect(),
             _ = _.current.getBoundingClientRect(),
@@ -38857,7 +38338,7 @@
             bFitsInParent: !1,
           });
         if (
-          (_.useLayoutEffect(() => {
+          ((0, _.useLayoutEffect)(() => {
             if (!__webpack_require__ || !_.current || !_.current) return;
             let _ = _.current.getBoundingClientRect(),
               _ = _.current.getBoundingClientRect(),
@@ -38878,12 +38359,15 @@
               let _ = _.getBoundingClientRect();
               _ = _.top > _.top;
             }
-            (_.nHoverLeft == _ && _.bFitsInParent == _) ||
-              _({
-                nHoverLeft: _,
-                bFitsInParent: _,
-              });
-          }, [__webpack_require__, _, _, _, _]),
+            _((_) =>
+              _.nHoverLeft == _ && _.bFitsInParent == _
+                ? _
+                : {
+                    nHoverLeft: _,
+                    bFitsInParent: _,
+                  },
+            );
+          }, [__webpack_require__, _, _, _]),
           !__webpack_require__)
         )
           return null;

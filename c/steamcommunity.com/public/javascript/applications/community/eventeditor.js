@@ -5828,6 +5828,81 @@
             });
       }
       function _(_) {
+        const {
+          strExternalSaleEventType: _,
+          fnSetExternalSaleEventType: __webpack_require__,
+        } = _;
+        return (0, _.jsxs)("div", {
+          children: [
+            "Please Select event type so that:",
+            (0, _.jsxs)("ol", {
+              children: [
+                (0, _.jsx)("li", {
+                  children:
+                    "we can show the right documentation to the partner",
+                }),
+                (0, _.jsx)("li", {
+                  children:
+                    "Dev/Pub/Franchise sales are limited to the created apps if the hosting group is a creator hoem",
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              rgOptions: [
+                {
+                  label: "Publisher/Developer Sale",
+                  data: "publisher",
+                  tooltip:
+                    "A developer, publisher or franchise want to showcase their games on a sale page.",
+                },
+                {
+                  label: "Showcase/Festival/Convention",
+                  data: "showcase",
+                  tooltip:
+                    "festivals, convensions, showcases. Typically events with a physical presence, but not always",
+                },
+                {
+                  label: "Regional Sale",
+                  data: "region",
+                  tooltip: "For Made in XYZ Location events",
+                },
+                {
+                  label: "Themed Sale",
+                  data: "theme",
+                  tooltip:
+                    "For events organized around a particular genre, theme, style",
+                },
+                {
+                  label: "Franchise Sale",
+                  data: "franchise",
+                  tooltip: "For events organized around a particular franchise",
+                },
+                {
+                  label: "DEV Only: Locked Publisher/Developer Sale",
+                  data: "locked_publisher",
+                  tooltip:
+                    "A developer, publisher or franchise want to showcase their games on a sale page and are limited to only their linked apps with their creator home.",
+                },
+                {
+                  label: "DEV Only: Locked Franchise Sale",
+                  data: "locked_franchise",
+                  tooltip:
+                    "For events organized around a particular franchise and are limited to only their linked apps to their creator home",
+                },
+              ],
+              strDropDownClassName: _.DropDownScroll,
+              strDropDownMenuCtnClass: _.DropDownScroll,
+              strDropDownItemClassName: _.DropDownScrollItem,
+              selectedOption: _,
+              onChange: (_) => __webpack_require__(_.data),
+              contextMenuPositionOptions: {
+                bDisablePopTop: !0,
+              },
+            }),
+          ],
+        });
+      }
+      function _(_) {
         const { clanSteamID: _, gidClanEvent: __webpack_require__ } = _,
           { bLoading: _ } = (0, _._)(_.GetAccountID(), __webpack_require__);
         return _
@@ -5879,47 +5954,9 @@
                 label: (0, _._)("#SalePresented_By_Admin"),
                 tooltip: (0, _._)("#SalePresneted_By_Admin_ttip"),
               }),
-              "Select event type so that we can show the right documentation to the partner:",
-              (0, _.jsx)(_._, {
-                rgOptions: [
-                  {
-                    label: "Publisher/Developer Sale",
-                    data: "publisher",
-                    tooltip:
-                      "A developer, publisher or franchise want to showcase their games on a sale page.",
-                  },
-                  {
-                    label: "Showcase/Festival/Convention",
-                    data: "showcase",
-                    tooltip:
-                      "festivals, convensions, showcases. Typically events with a physical presence, but not always",
-                  },
-                  {
-                    label: "Regional Sale",
-                    data: "region",
-                    tooltip: "For Made in XYZ Location events",
-                  },
-                  {
-                    label: "Themed Sale",
-                    data: "theme",
-                    tooltip:
-                      "For events organized around a particular genre, theme, style",
-                  },
-                  {
-                    label: "Franchise Sale",
-                    data: "franchise",
-                    tooltip:
-                      "For events organized around a particular franchise",
-                  },
-                ],
-                strDropDownClassName: _.DropDownScroll,
-                strDropDownMenuCtnClass: _.DropDownScroll,
-                strDropDownItemClassName: _.DropDownScrollItem,
-                selectedOption: _,
-                onChange: (_) => _(_.data),
-                contextMenuPositionOptions: {
-                  bDisablePopTop: !0,
-                },
+              (0, _.jsx)(_, {
+                strExternalSaleEventType: _,
+                fnSetExternalSaleEventType: _,
               }),
             ],
           })
@@ -11611,41 +11648,37 @@
               });
       }
       function _(_) {
-        var _;
-        const { editModel: __webpack_require__, mode: _ } = _,
+        const { editModel: _, mode: __webpack_require__ } = _,
           [_, _, _, _, _, _, _] = (0, _._)(() => {
             var _;
             return [
-              __webpack_require__.GetEventType(),
-              __webpack_require__.GetEventModel().jsondata.sale_presenters,
-              __webpack_require__.GetEventModel().jsondata,
-              __webpack_require__.GetEventModel().clanSteamID,
-              __webpack_require__.GetGID(),
-              (null ===
-                (_ =
-                  __webpack_require__.GetEventModel().jsondata
-                    .sale_presenters) || void 0 === _
+              _.GetEventType(),
+              _.GetEventModel().jsondata.sale_presenters,
+              _.GetEventModel().jsondata,
+              _.GetEventModel().clanSteamID,
+              _.GetGID(),
+              (null === (_ = _.GetEventModel().jsondata.sale_presenters) ||
+              void 0 === _
                 ? void 0
                 : _.length) > 0,
-              __webpack_require__.BVisible(),
+              _.BVisible(),
             ];
           }),
           { creatorHome: _ } = (0, _._)(_.GetAccountID()),
-          { data: _ } = (0, _._)((0, _._)(_.GetAccountID())),
           { bRequiresHostDisclaimer: _ } = (0, _._)(_.GetAccountID(), _),
           _ = _._.includes(_.GetAccountID()),
           _ = 36 == _;
         (0, _.useEffect)(() => {
-          _._.Get().EnsureLoaded(__webpack_require__),
-            !_._.Get().BHasExplicitSettings(__webpack_require__) &&
-              __webpack_require__.GetSaleSectionCount() > 10 &&
+          _._.Get().EnsureLoaded(_),
+            !_._.Get().BHasExplicitSettings(_) &&
+              _.GetSaleSectionCount() > 10 &&
               (0, _._)();
-        }, [__webpack_require__]);
+        }, [_]);
         const _ = _.useCallback((_) => {
           (0, _._)(_.strSectionId) && (0, _._)(_.strSectionId);
         }, []);
         if (
-          !__webpack_require__.BIsSourceEventSaleEnabled() &&
+          !_.BIsSourceEventSaleEnabled() &&
           _.clone_from_event_gid &&
           _.clone_from_sale_enabled &&
           (!_ || !_.BHasClanAccountFlagSet(32))
@@ -11658,29 +11691,29 @@
                 children: (0, _._)("#Sale_CloneNotReady"),
               }),
               (0, _.jsx)(_, {
-                mode: _,
+                mode: __webpack_require__,
               }),
             ],
           });
         let _ = "#Sale_title",
           _ = "doc/marketing/event_tools/sales/tools";
-        1 == _
+        1 == __webpack_require__
           ? ((_ = "#Sale_UpdateLandingPage_title"),
             (_ = "doc/marketing/event_tools/updatelandingpages/tools"))
-          : 2 == _ &&
+          : 2 == __webpack_require__ &&
             ((_ = "#Sale_CreatorHome_title"),
             (_ = "doc/marketing/event_tools/creatorhome/tools"));
-        const _ = (0, _._)(__webpack_require__.GetClanSteamID()),
-          { bVisible: _ } = (0, _._)(__webpack_require__.GetEventModel()),
-          { bVisible: _ } = (0, _._)(__webpack_require__.GetEventModel()),
-          { bVisible: _ } = (0, _._)(__webpack_require__.GetEventModel()),
+        const _ = (0, _._)(_.GetClanSteamID()),
+          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+          { bVisible: _ } = (0, _._)(_.GetEventModel()),
+          { bVisible: _ } = (0, _._)(_.GetEventModel()),
           _ = _ || _ || (_ && _);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.SaleContainer, "SaleContainer"),
           children: [
             !_ &&
               (0, _.jsx)(_, {
-                mode: _,
+                mode: __webpack_require__,
               }),
             (0, _.jsxs)("div", {
               className: _.EventEditorTextTitleCtn,
@@ -11700,7 +11733,7 @@
             }),
             _ &&
               (0, _.jsx)(_, {
-                editModel: __webpack_require__,
+                editModel: _,
               }),
             (0, _.jsxs)(_, {
               children: [
@@ -11711,9 +11744,8 @@
                     rgSalePresenters: _,
                     bIsEventVisible: _,
                     fnCleanSaleEventPresenters: () => {
-                      (__webpack_require__.GetEventModel().jsondata.sale_presenters =
-                        void 0),
-                        __webpack_require__.SetDirty(_._.jsondata_sales);
+                      (_.GetEventModel().jsondata.sale_presenters = void 0),
+                        _.SetDirty(_._.jsondata_sales);
                     },
                     bPublishTab: !1,
                   }),
@@ -11724,11 +11756,11 @@
                       children: (0, _.jsx)(_, {}),
                     }),
                     (0, _.jsx)(_, {
-                      editModel: __webpack_require__,
+                      editModel: _,
                       onSelected: _,
                     }),
                     (0, _.jsx)(_, {
-                      editModel: __webpack_require__,
+                      editModel: _,
                     }),
                     _ &&
                       (0, _.jsx)(_, {
@@ -11747,30 +11779,8 @@
                           updateLandingPage: _,
                         }),
                       }),
-                    (0, _.jsxs)(_, {
-                      strSectionId: "SalePageEdit_TaggedItems",
-                      hasMinimize: !0,
-                      strToolTip: (0, _._)("#Sale_TagFilter_SectionTooltip"),
-                      strTitle: (0, _._)(
-                        "#Sale_TaggedItemsSection",
-                        _
-                          ? null !== (_ = null == _ ? void 0 : _.length) &&
-                            void 0 !== _
-                            ? _
-                            : 0
-                          : __webpack_require__.GetEventModel().GetTaggedItems()
-                              .length,
-                      ),
-                      children: [
-                        !_ &&
-                          (0, _.jsx)(_._, {
-                            editModel: __webpack_require__,
-                          }),
-                        _ &&
-                          (0, _.jsx)(_._, {
-                            editModel: __webpack_require__,
-                          }),
-                      ],
+                    (0, _.jsx)(_, {
+                      ..._,
                     }),
                     (0, _.jsx)(_, {
                       strSectionId: "SalePageEdit_AllArtworkCtn",
@@ -11781,13 +11791,11 @@
                           : "#Sale_Artwork_Sections",
                       ),
                       children: (0, _.jsx)(_, {
-                        editModel: __webpack_require__,
+                        editModel: _,
                       }),
                     }),
-                    (__webpack_require__.BHasTag("contenthub") ||
-                      __webpack_require__
-                        .GetEventModel()
-                        .BUsesContentHubForItemSource()) &&
+                    (_.BHasTag("contenthub") ||
+                      _.GetEventModel().BUsesContentHubForItemSource()) &&
                       (0, _.jsx)(_, {
                         strSectionId: "SalePageEdit_ContentHub",
                         hasMinimize: !0,
@@ -11795,18 +11803,18 @@
                         strToolTip:
                           "Manage settings for content hubs, including overrides for specific hubs and hub-based sales.",
                         children: (0, _.jsx)(_, {
-                          editModel: __webpack_require__,
+                          editModel: _,
                         }),
                       }),
                     (0, _.jsx)(_, {
-                      editModel: __webpack_require__,
+                      editModel: _,
                     }),
                     (0, _.jsx)(_, {
                       strSectionId: "SalePageEdit_SocialModule",
                       hasMinimize: !0,
                       strTitle: (0, _._)("#Sale_DefaultSocialModule"),
                       children: (0, _.jsx)(_, {
-                        editModel: __webpack_require__,
+                        editModel: _,
                       }),
                     }),
                     (0, _.jsx)("div", {
@@ -11816,11 +11824,10 @@
                       (0, _.jsx)(_, {
                         strSectionId: "SalePageEdit_BrowseMore",
                         strTitle: `(VO) ${(0, _._)("#Sale_BrowseMore")}`,
-                        valveOnlyClanSteamID:
-                          __webpack_require__.GetClanSteamID(),
+                        valveOnlyClanSteamID: _.GetClanSteamID(),
                         requireAdmin: !0,
                         children: (0, _.jsx)(_, {
-                          editModel: __webpack_require__,
+                          editModel: _,
                         }),
                       }),
                     !_ &&
@@ -11828,21 +11835,19 @@
                         strSectionId: "SalePageEdit_SubMenuEditor",
                         hasMinimize: !0,
                         strTitle: "(VO) Sub Menu Editor",
-                        valveOnlyClanSteamID:
-                          __webpack_require__.GetClanSteamID(),
+                        valveOnlyClanSteamID: _.GetClanSteamID(),
                         dataToCopy: _._.k_EventData_SubMenu,
                         children: (0, _.jsx)(_, {
-                          editModel: __webpack_require__,
+                          editModel: _,
                         }),
                       }),
                     (0, _.jsx)(_, {
                       strSectionId: "SalePageEdit_CustomCSSCode",
                       hasMinimize: !0,
                       strTitle: "(VO) Custom CSS",
-                      valveOnlyClanSteamID:
-                        __webpack_require__.GetClanSteamID(),
+                      valveOnlyClanSteamID: _.GetClanSteamID(),
                       children: (0, _.jsx)(_, {
-                        editModel: __webpack_require__,
+                        editModel: _,
                       }),
                     }),
                   ],
@@ -11850,6 +11855,63 @@
               ],
             }),
           ],
+        });
+      }
+      function _(_) {
+        var _;
+        const { editModel: __webpack_require__, mode: _ } = _,
+          [_, _, _] = (0, _._)(() => [
+            __webpack_require__.GetEventType(),
+            __webpack_require__.GetEventModel().clanSteamID,
+            __webpack_require__.GetEventModel().GID,
+          ]),
+          { data: _ } = (0, _._)((0, _._)(_.GetAccountID())),
+          _ = 36 == _,
+          {
+            bLoading: _,
+            strExternalSaleEventType: _,
+            fnSetExternalSaleEventType: _,
+          } = (0, _._)(_.GetAccountID(), _);
+        if (_)
+          return (0, _.jsx)(_._, {
+            size: "small",
+          });
+        const _ = _ || "locked_publisher" == _ || "locked_franchise" == _;
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsxs)(_, {
+            strSectionId: "SalePageEdit_TaggedItems",
+            hasMinimize: !0,
+            strToolTip: (0, _._)("#Sale_TagFilter_SectionTooltip"),
+            strTitle: (0, _._)(
+              "#Sale_TaggedItemsSection",
+              _
+                ? null !== (_ = null == _ ? void 0 : _.length) && void 0 !== _
+                  ? _
+                  : 0
+                : __webpack_require__.GetEventModel().GetTaggedItems().length,
+            ),
+            children: [
+              _ &&
+                (0, _.jsx)(_._, {
+                  editModel: __webpack_require__,
+                }),
+              !_ &&
+                (0, _.jsx)(_._, {
+                  editModel: __webpack_require__,
+                }),
+              !_ &&
+                (0, _.jsxs)(_._, {
+                  clanSteamID: _,
+                  children: [
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)(_, {
+                      strExternalSaleEventType: _,
+                      fnSetExternalSaleEventType: _,
+                    }),
+                  ],
+                }),
+            ],
+          }),
         });
       }
       function _(_) {
@@ -14866,8 +14928,64 @@
         (0, _._)([_._], _.prototype, "ShowTargets", null),
         (0, _._)([_._], _.prototype, "ClearTargets", null),
         (_ = (0, _._)([_._], _));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
+      const _ = (_) => {
+        const [_, __webpack_require__] = (0, _.useState)(!!_ && void 0);
+        return (
+          (0, _.useEffect)(() => {
+            const _ = _().CancelToken.source();
+            if (_) {
+              (async () => {
+                const _ = await _.Get().HintLoadIsAppReleaseInSteamChina(_, _);
+                _.token.reason || __webpack_require__(_);
+              })();
+            }
+            return () => _.cancel("useSteamChinaAppIsVisible: unmounting");
+          }, [_]),
+          !!_
+        );
+      };
+      class _ {
+        constructor() {
+          this.m_mapAppToSCVisibility = new Map();
+        }
+        BIsAppReleasedInSteamChina(_) {
+          return !!this.m_mapAppToSCVisibility.get(_);
+        }
+        async HintLoadIsAppReleaseInSteamChina(_, _) {
+          var _;
+          if (this.m_mapAppToSCVisibility.has(_))
+            return this.m_mapAppToSCVisibility.get(_);
+          const _ = _._.COMMUNITY_BASE_URL + `ogg/${_}/ajaxisvisibleinsc`;
+          try {
+            const _ = await _().get(_, {
+              withCredentials: !0,
+              cancelToken: _.token,
+            });
+            if (
+              1 ==
+                (null === (_ = null == _ ? void 0 : _.data) || void 0 === _
+                  ? void 0
+                  : _.success) &&
+              !_.token.reason
+            )
+              return (
+                this.m_mapAppToSCVisibility.set(_, Boolean(_.data.visible)),
+                !!_.data.visible
+              );
+          } catch (_) {
+            const _ = (0, _._)(_);
+            console.error(
+              "HintLoadIsAppReleaseInSteamChina: " + _.strErrorMsg,
+              _,
+            );
+          }
+          return !1;
+        }
+        static Get() {
+          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
+        }
+      }
       function _(_) {
         const { editModel: _ } = _,
           _ = (0, _._)(),
@@ -15019,7 +15137,7 @@
           });
         }),
         _ = (_) =>
-          (0, _._)(_.editModel.GetAppID())
+          _(_.editModel.GetAppID())
             ? (0, _.jsx)("div", {
                 className: _.WarningStylesBackground,
                 children: (0, _._)("#EventEmail_SteamChina_Warning"),
@@ -16826,7 +16944,10 @@
         }),
         _ = (0, _._)((_) => {
           const { editModel: _ } = _,
-            _ = (0, _._)(_.GetEventModel());
+            _ = (function (_) {
+              const _ = _(_.appid);
+              return _.appid ? _ : _._.IS_ALLOWED_SC;
+            })(_.GetEventModel());
           return (0, _.jsxs)("div", {
             children: [
               _ &&

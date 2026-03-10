@@ -1906,20 +1906,20 @@
           return "CClanFAQS_SearchFAQs_Request";
         }
       }
-      class E extends a.Message {
+      class N extends a.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            E.prototype.faqs || n.Sg(E.M()),
+            N.prototype.faqs || n.Sg(N.M()),
             a.Message.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
                 fields: {
-                  faqs: { n: 1, c: N, r: !0, q: !0 },
+                  faqs: { n: 1, c: E, r: !0, q: !0 },
                   num_total_results: {
                     n: 2,
                     br: n.qM.readInt32,
@@ -1929,79 +1929,6 @@
                     n: 3,
                     br: n.qM.readString,
                     bw: n.gp.writeString,
-                  },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = n.w0(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (s().BinaryReader)(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (s().BinaryWriter)();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (s().BinaryWriter)();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClanFAQS_SearchFAQs_Response";
-        }
-      }
-      class N extends a.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            N.prototype.articleid || n.Sg(N.M()),
-            a.Message.initialize(this, e, 0, -1, [6], null);
-        }
-        static M() {
-          return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
-                fields: {
-                  articleid: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  name: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  content: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                  clan_accountid: {
-                    n: 4,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  url_code: { n: 5, br: n.qM.readString, bw: n.gp.writeString },
-                  localized_names: {
-                    n: 6,
-                    r: !0,
-                    q: !0,
-                    br: n.qM.readString,
-                    bw: n.gp.writeRepeatedString,
                   },
                 },
               }),
@@ -2038,6 +1965,79 @@
         serializeBase64String() {
           var e = new (s().BinaryWriter)();
           return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQS_SearchFAQs_Response";
+        }
+      }
+      class E extends a.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            E.prototype.articleid || n.Sg(E.M()),
+            a.Message.initialize(this, e, 0, -1, [6], null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  articleid: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  name: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  content: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  clan_accountid: {
+                    n: 4,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  url_code: { n: 5, br: n.qM.readString, bw: n.gp.writeString },
+                  localized_names: {
+                    n: 6,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readString,
+                    bw: n.gp.writeRepeatedString,
+                  },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = n.w0(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (s().BinaryReader)(e),
+            r = new E();
+          return E.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (s().BinaryWriter)();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (s().BinaryWriter)();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClanFAQS_SearchFAQs_Response_CFAQSearchResult";
@@ -2354,7 +2354,7 @@
             );
           }),
           (e.SearchFAQs = function (e, t) {
-            return e.SendMsg("ClanFAQS.SearchFAQs#1", (0, l.I8)(G, t), E, {
+            return e.SendMsg("ClanFAQS.SearchFAQs#1", (0, l.I8)(G, t), N, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
@@ -2429,41 +2429,41 @@
             {
               Constructor: function (e) {
                 var t, r, a;
-                const { showErrorInfo: s } = e.context;
-                let o =
+                const { showErrorInfo: s, version: o } = e.context;
+                let m =
                   null === (t = null == e ? void 0 : e.children) || void 0 === t
                     ? void 0
                     : t.toString();
-                (null != o && null != o && 0 != o.length) ||
-                  (o =
+                (null != m && null != m && 0 != m.length) ||
+                  (m =
                     null === (r = null == e ? void 0 : e.args) || void 0 === r
                       ? void 0
                       : r[""]);
-                const m =
+                const u =
                     null === (a = null == e ? void 0 : e.args) || void 0 === a
                       ? void 0
                       : a.alt,
-                  u = (0, d.z5)(o, e.language);
-                return null == u
+                  c = (0, d.z5)(m, e.language, Number.parseInt(o));
+                return null == c
                   ? null
-                  : "string" == typeof u
-                    ? ((o = u),
+                  : "string" == typeof c
+                    ? ((m = c),
                       s
                         ? (0, i.jsx)(n.i, {
                             className: _().FAQImage,
-                            src: o,
-                            alt: m,
+                            src: m,
+                            alt: u,
                           })
-                        : ((o = o.replace("http://", "https://")),
+                        : ((m = m.replace("http://", "https://")),
                           (0, i.jsx)("img", {
                             className: _().FAQImage,
-                            src: o,
-                            alt: m,
+                            src: m,
+                            alt: u,
                           })))
                     : (0, i.jsx)(l.c, {
                         className: _().FAQImage,
-                        rgSources: u,
-                        alt: m,
+                        rgSources: c,
+                        alt: u,
                       });
               },
               autocloses: !1,
@@ -2485,8 +2485,8 @@
           ],
         ]),
         y = (e) => {
-          const { text: t, bShowErrorInfo: r } = e,
-            s = a.useCallback(
+          const { text: t, bShowErrorInfo: r, version: s } = e,
+            n = a.useCallback(
               (e) =>
                 new g.gL(
                   new g.pH(
@@ -2504,10 +2504,13 @@
                 ),
               [],
             ),
-            n = a.useRef(new u.B(p, s, m.TS.LANGUAGE));
+            l = a.useRef(new u.B(p, n, m.TS.LANGUAGE));
           return (0, i.jsx)("div", {
             className: _().FAQContainer,
-            children: n.current.ParseBBCode(t, { showErrorInfo: r }),
+            children: l.current.ParseBBCode(t, {
+              showErrorInfo: r,
+              version: s,
+            }),
           });
         };
     },

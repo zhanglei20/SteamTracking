@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Пропозицій не знайдено",
 	"AssetProperty_Range_MinPlaceholder": "Мін.",
 	"AssetProperty_Range_MaxPlaceholder": "Макс.",
-	"Accessories_FieldSectionLabel": "Аксесуари"
+	"Accessories_FieldSectionLabel": "Аксесуари",
+	"Listing_EnhancedAppearance_Missing": "Для цієї пропозиції ще не додано унікального чи покращеного зображення. Предмет може трохи відрізнятися від того, який показаний на цьому зображенні."
 }`);
     },
   },

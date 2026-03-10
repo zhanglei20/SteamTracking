@@ -259,6 +259,7 @@
 ._1_VGcqhwscnT-kPnPb2c22 ._1wPm9-zsQlqLzb92eR77lC > svg {
   height: 18px;
   width: 18px;
+  margin-right: 8px;
 }
 ._1_VGcqhwscnT-kPnPb2c22
   ._1wPm9-zsQlqLzb92eR77lC._3VSFddY_9-Sh1I3ByUwmD4
@@ -285,13 +286,23 @@
   > svg {
   color: #ffd55f;
 }
-._1_VGcqhwscnT-kPnPb2c22:hover ._1eb1crSvl4J1Ie12OvhHUz,
-._1_VGcqhwscnT-kPnPb2c22._1D7oiWH7xjJ2nI27nnFzwI ._1eb1crSvl4J1Ie12OvhHUz {
-  color: #3d4450;
+._1_VGcqhwscnT-kPnPb2c22.gpfocus {
+  background-color: #fff;
+  color: #0e141b;
 }
-._1_VGcqhwscnT-kPnPb2c22:hover ._3YpMycJiNuGZOe9A5ddrxL,
-._1_VGcqhwscnT-kPnPb2c22._1D7oiWH7xjJ2nI27nnFzwI ._3YpMycJiNuGZOe9A5ddrxL {
-  color: #3d4450;
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._3VSFddY_9-Sh1I3ByUwmD4,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._1eb1crSvl4J1Ie12OvhHUz,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._3BLSZg3UyXhaQ4rkXaTvhs,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._13th0aVaGQhNp6eltjFYyh,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._3YpMycJiNuGZOe9A5ddrxL {
+  color: #0e141b;
+}
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._3VSFddY_9-Sh1I3ByUwmD4 svg,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._1eb1crSvl4J1Ie12OvhHUz svg,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._3BLSZg3UyXhaQ4rkXaTvhs svg,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._13th0aVaGQhNp6eltjFYyh svg,
+._1_VGcqhwscnT-kPnPb2c22.gpfocus ._3YpMycJiNuGZOe9A5ddrxL svg {
+  color: #0e141b;
 }
 ._1t81JirfhcUdp7F73SUzQF {
   height: 100%;
@@ -963,6 +974,7 @@
 ._28S8ry9bxlwML-iCsdsuB .JZCa05wXidmR0BEW4wKuT > svg {
   height: 16px;
   width: 16px;
+  margin-right: 8px;
 }
 ._28S8ry9bxlwML-iCsdsuB .JZCa05wXidmR0BEW4wKuT.sMTceKd747vq8bsuL3OW9 {
   color: #b8bcbf;
@@ -981,23 +993,34 @@
 }
 ._28S8ry9bxlwML-iCsdsuB:hover .sMTceKd747vq8bsuL3OW9,
 ._28S8ry9bxlwML-iCsdsuB.NjA0Fz51GxvZgm847KioJ .sMTceKd747vq8bsuL3OW9 {
-  color: #3d4450;
+  color: #b8bcbf;
 }
 ._28S8ry9bxlwML-iCsdsuB:hover ._1xK5Up775-kzkarHJyaUSH,
 ._28S8ry9bxlwML-iCsdsuB.NjA0Fz51GxvZgm847KioJ ._1xK5Up775-kzkarHJyaUSH {
-  color: #3d4450;
+  color: #b8bcbf;
 }
 ._28S8ry9bxlwML-iCsdsuB:hover ._1HITbDUgqbAsnVISlw-IU4,
 ._28S8ry9bxlwML-iCsdsuB.NjA0Fz51GxvZgm847KioJ ._1HITbDUgqbAsnVISlw-IU4 {
-  color: #3d4450;
+  color: #b8bcbf;
 }
 ._28S8ry9bxlwML-iCsdsuB:hover ._2HfiRMT1mpZZy-Op04_Vp5,
 ._28S8ry9bxlwML-iCsdsuB.NjA0Fz51GxvZgm847KioJ ._2HfiRMT1mpZZy-Op04_Vp5 {
-  color: #3d4450;
+  color: #b8bcbf;
 }
 ._28S8ry9bxlwML-iCsdsuB:hover ._20E0pQUHwdjs6eM1Ow2GiS,
 ._28S8ry9bxlwML-iCsdsuB.NjA0Fz51GxvZgm847KioJ ._20E0pQUHwdjs6eM1Ow2GiS {
-  color: #3d4450;
+  color: #b8bcbf;
+}
+._28S8ry9bxlwML-iCsdsuB.gpfocus {
+  background-color: #fff;
+  color: #0e141b;
+}
+._28S8ry9bxlwML-iCsdsuB.gpfocus .sMTceKd747vq8bsuL3OW9,
+._28S8ry9bxlwML-iCsdsuB.gpfocus ._1xK5Up775-kzkarHJyaUSH,
+._28S8ry9bxlwML-iCsdsuB.gpfocus ._1HITbDUgqbAsnVISlw-IU4,
+._28S8ry9bxlwML-iCsdsuB.gpfocus ._2HfiRMT1mpZZy-Op04_Vp5,
+._28S8ry9bxlwML-iCsdsuB.gpfocus ._20E0pQUHwdjs6eM1Ow2GiS {
+  color: #0e141b;
 }
 ._2Sg7W8jsvFcXVuQ7fbhSLJ,
 .Lc2PK-Vkkvr2TUS0TfCqq {
@@ -3966,7 +3989,7 @@
 }
 ._3SETpnYbAtvmO7w4gpOCtK {
   position: absolute;
-  z-index: 10000;
+  z-index: 1500;
   -webkit-app-region: no-drag;
 }
 ._1lcizT_Nbxsk484XzTtcFf {
@@ -3976,6 +3999,7 @@
   border-radius: 2px;
   min-width: 240px;
   max-width: 308px;
+  box-shadow: 0 0 10px #000;
 }
 ._1lcizT_Nbxsk484XzTtcFf ._1A5Qloms_qv3D5xh052LKf {
   position: absolute;
@@ -4020,7 +4044,7 @@
   color: #8b929a;
 }
 ._2JvQPEForHWVgljtxxAwRP {
-  color: #3d4450;
+  color: #1a9fff;
   position: absolute;
   z-index: 1;
 }
@@ -4028,12 +4052,21 @@
   transform: rotate(90deg);
   transform-origin: top left;
 }
+._3SETpnYbAtvmO7w4gpOCtK[data-position="right"] ._1lcizT_Nbxsk484XzTtcFf {
+  border-left: 1px solid #1a9fff;
+}
 ._3SETpnYbAtvmO7w4gpOCtK[data-position="left"] ._2JvQPEForHWVgljtxxAwRP {
   transform: rotate(-90deg);
   transform-origin: top right;
 }
+._3SETpnYbAtvmO7w4gpOCtK[data-position="left"] ._1lcizT_Nbxsk484XzTtcFf {
+  border-right: 1px solid #1a9fff;
+}
 ._3SETpnYbAtvmO7w4gpOCtK[data-position="below"] ._2JvQPEForHWVgljtxxAwRP {
   transform: rotate(180deg);
+}
+._3SETpnYbAtvmO7w4gpOCtK[data-position="below"] ._1lcizT_Nbxsk484XzTtcFf {
+  border-top: 1px solid #1a9fff;
 }
 .r5C4vqop5qm8LQK3X0ko3 {
   display: flex;

@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Geen vermeldingen gevonden",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
-	"Accessories_FieldSectionLabel": "Accessoires"
+	"Accessories_FieldSectionLabel": "Accessoires",
+	"Listing_EnhancedAppearance_Missing": "Deze vermelding beschikt nog niet over unieke of verbeterde afbeeldingen. De hier weergegeven afbeelding kan enigszins afwijken van het daadwerkelijke voorwerp."
 }`);
     },
   },

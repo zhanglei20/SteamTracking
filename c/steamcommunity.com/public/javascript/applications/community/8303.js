@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "판매 등록 아이템이 없습니다.",
 	"AssetProperty_Range_MinPlaceholder": "최소",
 	"AssetProperty_Range_MaxPlaceholder": "최대",
-	"Accessories_FieldSectionLabel": "액세서리"
+	"Accessories_FieldSectionLabel": "액세서리",
+	"Listing_EnhancedAppearance_Missing": "이 판매 등록 아이템은 아직 고유 이미지 또는 보정된 이미지가 없습니다. 여기에 표시된 이미지는 실제 아이템과 약간 다를 수 있습니다."
 }`);
     },
   },

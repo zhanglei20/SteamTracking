@@ -69,6 +69,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Reset: "_3A_c3YHYd4YIjA8Y-olnPl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         PriceGuidelinesPicker: "_2skmsPR7jCBo5xHN2v_E6A",
         GuidelinesPanel: "_29sQa7P4ANi-KFpS_lkroj",
         GuidelinesDescription: "_3poXK_qmmnRcHLvBGFqi8h",
@@ -751,6 +756,7 @@
                 "#PricingDashboard_PriceMuchHigherThanGuidelines",
                 (0, _._)(_, _).join(""),
               )) ||
+            (_ && !1) ||
             (_ &&
               (0, _._)(
                 "#PricingDashboard_PriceMuchLowerThanGuidelines",
@@ -835,10 +841,12 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -910,6 +918,9 @@
           className: (_) => _[`Variant-${_}`],
         },
       ];
+      function _(_) {
+        _.preventDefault();
+      }
       const _ = [
           ..._._,
           {
@@ -975,7 +986,41 @@
             ),
             children: _,
           });
+        },
+        _ = function (_) {
+          const {
+              variant: _ = "default",
+              size: __webpack_require__ = "2",
+              minWidth: _ = "fit-content",
+              disabled: _,
+              icon: _,
+              ..._
+            } = _,
+            _ = _ ? _ : void 0;
+          return (0, _.jsx)("a", {
+            ...(0, _._)(
+              {
+                onClick: _,
+                ..._,
+                variant: _,
+                size: __webpack_require__,
+                minWidth: _,
+                className: _()(_.Button, _ && _.Icon, (0, _._)()),
+              },
+              _,
+            ),
+          });
         };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _() {
+        return _.Reset;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

@@ -280,7 +280,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -293,8 +292,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = 7,
-        _ = -1;
+      const _ = -1;
       class _ {
         m_userData;
         m_bLoadedDuringInit = !1;
@@ -360,10 +358,10 @@
           return this.m_bLoadedDuringInit;
         }
         GetMaxDoor() {
-          return _;
+          return 7;
         }
         SetInMemoryUpdateDoorOpenUpto(_) {
-          for (let _ = 0; _ < _; ++_) {
+          for (let _ = 0; _ < 7; ++_) {
             const _ = _ <= _;
             this.m_userData[_].opened != _ &&
               ((this.m_userData[_].opened = _),
@@ -372,7 +370,7 @@
           this.RecomputeState();
         }
         SetInMemorySpecificDoorState(_, _) {
-          _ < _
+          _ < 7
             ? this.m_userData[_].opened != _ &&
               ((this.m_userData[_].opened = _),
               this.GetDoorStateChangeCallback(_).Dispatch(_),
@@ -467,7 +465,7 @@
             if (200 == _.status && _.data?.doordata) {
               (this.m_userData = _.data.doordata),
                 (this.m_bLoadedDuringInit = !0);
-              for (let _ = 0; _ < _; ++_)
+              for (let _ = 0; _ < 7; ++_)
                 this.GetDoorStateChangeCallback(_).Dispatch(
                   this.m_userData[_].opened,
                 );
@@ -503,7 +501,7 @@
             });
             if (200 == _.status && 1 == _?.data?.success) {
               console.log("CDoorStore - closed " + _.data.count);
-              for (let _ = 0; _ < _; ++_)
+              for (let _ = 0; _ < 7; ++_)
                 (this.m_userData[_].opened = !1),
                   this.GetDoorStateChangeCallback(_).Dispatch(
                     this.m_userData[_].opened,

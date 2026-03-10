@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "İlan bulunamadı",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
-	"Accessories_FieldSectionLabel": "Aksesuarlar"
+	"Accessories_FieldSectionLabel": "Aksesuarlar",
+	"Listing_EnhancedAppearance_Missing": "Bu ilanda benzersiz veya geliştirilmiş görseller bulunmamaktadır. Burada gösterilen görsel, ilandaki öğeden biraz farklılık gösterebilir."
 }`);
     },
   },

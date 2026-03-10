@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "No se encontraron anuncios",
 	"AssetProperty_Range_MinPlaceholder": "Mín.",
 	"AssetProperty_Range_MaxPlaceholder": "Máx.",
-	"Accessories_FieldSectionLabel": "Accesorios"
+	"Accessories_FieldSectionLabel": "Accesorios",
+	"Listing_EnhancedAppearance_Missing": "Esta lista aún no incluye imágenes únicas o mejoradas. La imagen que aparece aquí puede variar ligeramente del artículo de la lista."
 }`);
     },
   },

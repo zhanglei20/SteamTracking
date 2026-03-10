@@ -794,6 +794,8 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -821,7 +823,6 @@
         });
       }
       const _ = [
-        ...[
           {
             prop: "weight",
             responsive: !0,
@@ -864,13 +865,15 @@
             cssProperty: "--white-space",
           },
         ],
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`TextSize-${_}`],
-        },
-      ];
+        _ = [
+          ..._,
+          ..._._,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (_) => _[`TextSize-${_}`],
+          },
+        ];
     },
   },
 ]);

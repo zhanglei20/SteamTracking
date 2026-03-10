@@ -2634,6 +2634,16 @@
                     br: l.qM.readEnum,
                     bw: l.gp.writeEnum,
                   },
+                  disable_microtrailers: {
+                    n: 15,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
+                  disable_animated_marketing: {
+                    n: 16,
+                    br: l.qM.readBool,
+                    bw: l.gp.writeBool,
+                  },
                 },
               }),
             Q.sm_m

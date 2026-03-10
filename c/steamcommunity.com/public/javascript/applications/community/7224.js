@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Fant ingen annonser",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
-	"Accessories_FieldSectionLabel": "Tilbehør"
+	"Accessories_FieldSectionLabel": "Tilbehør",
+	"Listing_EnhancedAppearance_Missing": "Denne annonsen har ennå ikke unike eller forbedrede bilder. Bildet som vises her, kan variere litt fra gjenstanden som er annonsert."
 }`);
     },
   },

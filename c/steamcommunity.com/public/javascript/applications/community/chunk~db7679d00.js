@@ -39,13 +39,11 @@
                 fields: {
                   language: {
                     _: 1,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   type: {
                     _: 2,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -104,13 +102,11 @@
                 fields: {
                   language: {
                     _: 1,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   type: {
                     _: 2,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -227,13 +223,11 @@
                 fields: {
                   language: {
                     _: 1,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   type: {
                     _: 2,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -408,13 +402,11 @@
                 fields: {
                   gameid: {
                     _: 1,
-                    _: !0,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
                   },
                   should_handle: {
                     _: 2,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },

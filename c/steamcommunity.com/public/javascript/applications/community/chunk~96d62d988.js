@@ -2389,7 +2389,6 @@
           let _ = {
               get_appids: !0,
               _: _._.LANGUAGE,
-              origin: self.origin,
             },
             _ =
               _._.STORE_BASE_URL +

@@ -9,8 +9,33 @@
         LowerPrice: "HFkBG6GEWlzLQZ3MWCZfy",
         FlexColGroup: "_98APa3FIHhT6HoHQPTdP-",
         CurrentPrice: "_2GBqA5FVPnXDKN337UQTQF",
+        ProposedPrice: "_1lW7HuIHz1dVNCRWv6gDDu",
         PriceUpdateOptionsGroup: "_29xcvKUrOD3qIkctp2Fo_N",
         FreeSettingCtn: "_1kDnDjWEynufWnYI9AFl3l",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        Heading: "_12ldq1_X5RuLWAAs_ODwt7",
+        "HeadingSize-1": "-YHuRmP6nUp0IqPQ4F3wk",
+        "HeadingSize-2": "_20m6yPkrPwQ8XwlhPdMtqu",
+        "HeadingSize-3": "_2jvih9p3Mc3zUn2nnxzDv7",
+        "HeadingSize-4": "_1zvMJY9dUjwMSI0j5QoEdq",
+        "HeadingSize-5": "_1196Oisy8jDA4szPu-KrKP",
+        "HeadingSize-6": "R1W-zMFN4WGw9JK48Yqez",
+        "HeadingSize-7": "Ena8Nl7MJg7YAYsWql_jo",
+        "HeadingSize-8": "jyf9-rlT4iFrHQOAVn298",
+        "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
+        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
+        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
+        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
+        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
       };
     },
     chunkid: (module) => {
@@ -26,6 +51,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = {
         PriceEdit: (_) => `/packages/pricing/${_}`,
@@ -192,7 +218,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -412,20 +437,229 @@
             })
           : null;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        depth: 0,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            level: _ = "auto",
+            className: __webpack_require__,
+            color: _,
+          } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
+        return (0, _.jsx)(_, {
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()((0, _._)(), _.Heading, __webpack_require__),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
+        },
+      ];
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { underline: _ = "auto", ...__webpack_require__ } = _;
+        return (0, _.jsx)("a", {
+          ...(0, _._)(
+            {
+              ...__webpack_require__,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { nPackageID: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              direction: "column",
+              align: "start",
+              paddingBottom: "4",
+              children: [
+                (0, _.jsx)(_._, {
+                  href: `${_._.PARTNER_BASE_URL}pricing/dashboard/?pn=${_}`,
+                  children: _._.Localize("#SinglePackagePricing_Right_Edit"),
+                }),
+                (0, _.jsx)(_._, {
+                  children: _._.Localize(
+                    "#SinglePackagePricing_Right_Edit_desc",
+                  ),
+                }),
+              ],
+            }),
+            (0, _.jsxs)(_._, {
+              direction: "column",
+              paddingBottom: "4",
+              children: [
+                (0, _.jsx)(_, {
+                  size: "6",
+                  children: _._.Localize(
+                    "#SinglePackagePricing_Right_Help_Title",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  children: _._.Localize(
+                    "#SinglePackagePricing_Right_Help_Desc",
+                  ),
+                }),
+                (0, _.jsx)(_, {
+                  href: `${_._.PARTNER_BASE_URL}doc/store/pricing`,
+                  children: _._.Localize("#SinglePackagePricing_Right_Link"),
+                }),
+              ],
+            }),
+            (0, _.jsxs)(_._, {
+              direction: "column",
+              children: [
+                (0, _.jsx)(_, {
+                  size: "6",
+                  children: _._.Localize("#SinglePackagePricing_Right_FAQ"),
+                }),
+                (0, _.jsxs)(_._, {
+                  children: [
+                    (0, _.jsx)(_._, {
+                      size: "4",
+                      weight: "medium",
+                      children: _._.Localize(
+                        "#SinglePackagePricing_Right_FAQ_switching",
+                      ),
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)(_._, {
+                      children: _._.LocalizeReact(
+                        "#SinglePackagePricing_Right_FAQ_switching_answer",
+                        (0, _.jsx)(_, {
+                          href: `${_._.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
+                          children: _._.Localize(
+                            "#SinglePackagePricing_Right_FAQ_switching_answer_link",
+                          ),
+                        }),
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const _ = `${_._.PARTNER_BASE_URL}doc/finance/taxfaq`;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              paddingBottom: "4",
+              children: (0, _.jsxs)(_._, {
+                size: "4",
+                color: "text-body",
+                contrast: "subtitle",
+                children: [
+                  _._.Localize("#SinglePricingPackage_Desc_1"),
+                  (0, _.jsx)(_, {
+                    href: _,
+                    children: _,
+                  }),
+                ],
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              paddingBottom: "4",
+              children: (0, _.jsx)(_._, {
+                children: _._.LocalizeReact(
+                  "#SinglePricingPackage_Desc_2",
+                  (0, _.jsx)(_, {
+                    href: _,
+                    children: _._.LocalizeReact(
+                      "#SinglePricingPackage_Desc_2_Link",
+                    ),
+                  }),
+                ),
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                children: _._.Localize("#SinglePricingPackage_Desc_3"),
+              }),
+            }),
+          ],
+        });
+      }
       const _ = (0, _._)();
       function _(_) {
         const { nPackageID: _, appids: __webpack_require__ } = _,
           _ = (0, _._)();
         (0, _._)(_);
-        const _ = (0, _._)();
+        const _ = (0, _._)(),
+          _ = Number.parseInt(_);
         return (0, _.jsx)(_._, {
-          children: (0, _.jsx)(_._, {
+          children: (0, _.jsxs)(_._, {
             fnBLocalChangesExist: _,
             fnWarnUser: _,
-            children: (0, _.jsx)(_, {
-              nPackageID: Number.parseInt(_),
-              appids: __webpack_require__.map(Number.parseInt),
-            }),
+            children: [
+              (0, _.jsxs)("div", {
+                className: "adminLeftCol",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "colSection",
+                    children: (0, _.jsx)(_, {}),
+                  }),
+                  (0, _.jsx)(_, {
+                    nPackageID: _,
+                    appids: __webpack_require__.map(Number.parseInt),
+                  }),
+                ],
+              }),
+              (0, _.jsx)("div", {
+                className: "adminRightCol",
+                children: (0, _.jsx)("div", {
+                  className: "panel",
+                  children: (0, _.jsx)(_, {
+                    nPackageID: _,
+                  }),
+                }),
+              }),
+            ],
           }),
         });
       }
@@ -551,6 +785,9 @@
           }),
           _.accessor(_ ? "nProposedPrice" : "strPriceKey", {
             header: (0, _._)("#PackagePricing_Col_Proposal"),
+            meta: {
+              cellClassname: _()(_().ProposedPrice),
+            },
             size: 280,
             cell: _ ? _ : _._,
           }),
@@ -559,101 +796,124 @@
           ? null
           : (0, _.jsxs)(_.Fragment, {
               children: [
-                !_ &&
-                  (0, _.jsxs)(_._, {
-                    paddingBottom: "4",
-                    children: [
+                _
+                  ? (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsx)("div", {
+                        className: "colSection",
+                        children: (0, _.jsx)(_._, {
+                          size: "4",
+                          color: "green-9",
+                          children: (0, _._)(
+                            "#PricingDashboard_ProposedPrice_CallOut",
+                          ),
+                        }),
+                      }),
+                    })
+                  : (0, _.jsx)(_.Fragment, {
+                      children: (0, _.jsx)("div", {
+                        className: "colSection",
+                        children: (0, _.jsxs)(_._, {
+                          direction: "row",
+                          children: [
+                            (0, _.jsx)(_._, {}),
+                            (0, _.jsxs)(_._, {
+                              direction: "column",
+                              paddingLeft: "5",
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  size: "3",
+                                  children: (0, _._)(
+                                    "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
+                                  ),
+                                }),
+                                (0, _.jsx)(_, {
+                                  nPackageID: _,
+                                  oPricingGuideline: _,
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                      }),
+                    }),
+                (0, _.jsxs)("div", {
+                  className: "colSection",
+                  children: [
+                    (0, _.jsx)(_._, {
+                      data: _,
+                      className: _()(
+                        _().DefaultFancyTable,
+                        _().NoColumnBorders,
+                        _().PackagePricingContext,
+                      ),
+                      columns: [
+                        _.accessor("eCurrencyCode", {
+                          header: (0, _._)("#PackagePricing_Col_Currency"),
+                          size: 200,
+                          cell: _,
+                        }),
+                        ..._,
+                      ],
+                      getRowKey: (_, _) => `${_.eCurrencyCode}`,
+                      nItemHeight: 20,
+                      stickyHeader: !0,
+                    }),
+                    (0, _.jsx)(_._, {
+                      data: _,
+                      className: _()(
+                        _().DefaultFancyTable,
+                        _().NoColumnBorders,
+                        _().PackagePricingContext,
+                      ),
+                      columns: [
+                        _.accessor("eRegionCode", {
+                          header: (0, _._)("#PackagePricing_Col_Region"),
+                          size: 200,
+                          cell: _,
+                        }),
+                        _.accessor("eCurrencyCode", {
+                          header: (0, _._)("#PackagePricing_Col_Currency"),
+                          size: 100,
+                          cell: _,
+                        }),
+                        ..._,
+                      ],
+                      getRowKey: (_, _) => `${_.eRegionCode}`,
+                      nItemHeight: 20,
+                      stickyHeader: !0,
+                    }),
+                    _.length > 0 &&
                       (0, _.jsx)(_._, {
-                        size: "4",
-                        children: (0, _._)(
-                          "#PricingDashboard_ApplyGuidelinesDialog_Context",
+                        data: _,
+                        className: _()(
+                          _().DefaultFancyTable,
+                          _().NoColumnBorders,
+                          _().PackagePricingContext,
                         ),
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: _().PriceUpdateOptionsGroup,
-                        children: [
-                          (0, _.jsx)(_._, {}),
-                          (0, _.jsx)(_, {
-                            nPackageID: _,
-                            oPricingGuideline: _,
+                        columns: [
+                          _.accessor("strCountryOverride", {
+                            header: (0, _._)("#PackagePricing_Col_Country"),
+                            size: 200,
+                            cell: _,
                           }),
+                          _.accessor("eCurrencyCode", {
+                            header: (0, _._)("#PackagePricing_Col_Currency"),
+                            size: 100,
+                            cell: _,
+                          }),
+                          ..._,
                         ],
+                        getRowKey: (_, _) => `${_.strCountryOverride}`,
+                        nItemHeight: 20,
+                        stickyHeader: !0,
                       }),
-                    ],
-                  }),
-                (0, _.jsx)(_._, {
-                  data: _,
-                  className: _()(
-                    _().DefaultFancyTable,
-                    _().NoColumnBorders,
-                    _().PackagePricingContext,
-                  ),
-                  columns: [
-                    _.accessor("eCurrencyCode", {
-                      header: (0, _._)("#PackagePricing_Col_Currency"),
-                      size: 200,
-                      cell: _,
+                    (0, _.jsx)(_._, {
+                      bReloadPageOnSave: !0,
                     }),
-                    ..._,
+                    (0, _.jsx)(_, {
+                      nPackageID: _,
+                    }),
                   ],
-                  getRowKey: (_, _) => `${_.eCurrencyCode}`,
-                  nItemHeight: 20,
-                  stickyHeader: !0,
-                }),
-                (0, _.jsx)(_._, {
-                  data: _,
-                  className: _()(
-                    _().DefaultFancyTable,
-                    _().NoColumnBorders,
-                    _().PackagePricingContext,
-                  ),
-                  columns: [
-                    _.accessor("eRegionCode", {
-                      header: (0, _._)("#PackagePricing_Col_Region"),
-                      size: 200,
-                      cell: _,
-                    }),
-                    _.accessor("eCurrencyCode", {
-                      header: (0, _._)("#PackagePricing_Col_Currency"),
-                      size: 100,
-                      cell: _,
-                    }),
-                    ..._,
-                  ],
-                  getRowKey: (_, _) => `${_.eRegionCode}`,
-                  nItemHeight: 20,
-                  stickyHeader: !0,
-                }),
-                _.length > 0 &&
-                  (0, _.jsx)(_._, {
-                    data: _,
-                    className: _()(
-                      _().DefaultFancyTable,
-                      _().NoColumnBorders,
-                      _().PackagePricingContext,
-                    ),
-                    columns: [
-                      _.accessor("strCountryOverride", {
-                        header: (0, _._)("#PackagePricing_Col_Country"),
-                        size: 200,
-                        cell: _,
-                      }),
-                      _.accessor("eCurrencyCode", {
-                        header: (0, _._)("#PackagePricing_Col_Currency"),
-                        size: 100,
-                        cell: _,
-                      }),
-                      ..._,
-                    ],
-                    getRowKey: (_, _) => `${_.strCountryOverride}`,
-                    nItemHeight: 20,
-                    stickyHeader: !0,
-                  }),
-                (0, _.jsx)(_._, {
-                  bReloadPageOnSave: !0,
-                }),
-                (0, _.jsx)(_, {
-                  nPackageID: _,
                 }),
               ],
             });
@@ -707,6 +967,7 @@
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
+                  color: "dull",
                   onClick: _,
                   children: (0, _._)(
                     "#PricingDashboard_ApplyGuidelinesDialog_Button",
@@ -722,29 +983,36 @@
                 }),
               ],
             })
-          : null;
+          : (0, _.jsx)(_.Fragment, {
+              children:
+                "Your pricing already matches selected conversion method",
+            });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.jsx)(_._, {
-          children: (0, _.jsxs)(_._, {
-            children: [
-              (0, _.jsx)(_._, {
-                path: _.PriceEdit(":packageid"),
-                children: (0, _.jsx)(_._, {
-                  config: {
-                    "packageadmin-price-editor": (_) =>
-                      (0, _.jsx)(_, {
-                        ..._,
-                      }),
-                  },
+        return (
+          _.use((0, _._)()),
+          (0, _.jsx)(_._, {
+            children: (0, _.jsxs)(_._, {
+              children: [
+                (0, _.jsx)(_._, {
+                  path: _.PriceEdit(":packageid"),
+                  children: (0, _.jsx)(_._, {
+                    config: {
+                      "packageadmin-price-editor": (_) =>
+                        (0, _.jsx)(_, {
+                          ..._,
+                        }),
+                    },
+                  }),
                 }),
-              }),
-              (0, _.jsx)(_._, {
-                component: _._,
-              }),
-            ],
-          }),
-        });
+                (0, _.jsx)(_._, {
+                  component: _._,
+                }),
+              ],
+            }),
+          })
+        );
       }
     },
   },

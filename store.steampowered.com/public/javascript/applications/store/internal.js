@@ -1258,17 +1258,15 @@
         },
       };
       function z(e) {
-        return e
-          ? "string" == typeof e
-            ? e
-            : "number" == typeof e
-              ? e.toString()
-              : (console.error(
-                  "Could not use default option labeler on Select option value. Custom labeler requried",
-                  e,
-                ),
-                "")
-          : "";
+        return "string" == typeof e
+          ? e
+          : "number" == typeof e
+            ? e.toString()
+            : (console.error(
+                "Could not use default option labeler on Select option value. Custom labeler requried",
+                e,
+              ),
+              "");
       }
       const U = Object.assign(function (e) {
         const {

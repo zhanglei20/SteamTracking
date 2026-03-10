@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Tidak Menemukan Iklan Penjualan",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
-	"Accessories_FieldSectionLabel": "Aksesori"
+	"Accessories_FieldSectionLabel": "Aksesori",
+	"Listing_EnhancedAppearance_Missing": "Iklan Penjualan ini belum memiliki gambar unik atau yang disempurnakan. Gambar yang ditampilkan di sini mungkin sedikit berbeda dengan item yang diiklankan."
 }`);
     },
   },

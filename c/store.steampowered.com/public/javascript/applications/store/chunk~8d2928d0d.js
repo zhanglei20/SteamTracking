@@ -5744,6 +5744,7 @@
         return (0, _._)({
           queryKey: ["usePromotionPlanBySalePage", _],
           queryFn: async () => {
+            if (!__webpack_require__) return null;
             const _ = _._.Init(_),
               _ = new _();
             _.set_clan_account_id(_),

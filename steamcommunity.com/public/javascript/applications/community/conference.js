@@ -355,7 +355,7 @@
         Y = t(75844),
         z = t(47822),
         J = t(70078),
-        X = t(86355),
+        X = t(7221),
         Z = t(4796),
         $ = t(81477),
         ee = t(46910),
@@ -1825,7 +1825,7 @@
         return (0, a.jsxs)("div", {
           children: [
             (0, a.jsx)("div", { className: rn.AboutTitle, children: t }),
-            (0, a.jsx)(L.u, { text: o, bShowErrorInfo: !1 }),
+            (0, a.jsx)(L.u, { text: o, bShowErrorInfo: !1, version: "0" }),
           ],
         });
       }

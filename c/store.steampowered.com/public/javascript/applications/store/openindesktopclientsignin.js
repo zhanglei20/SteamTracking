@@ -33,6 +33,35 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
+        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
+        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
+        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
+        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         OpenInBannerContainer: "_1EQpm6hAsghyCST7W04m-E",
         OpenInBannerContent: "_13oFTFTjvz0YaOVnWZxyqr",
         ValveOnly: "_3jg5qxP4_hiZYa6-GJDCOp",
@@ -187,6 +216,119 @@
             children: _,
           });
         };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _ = "span",
+            ref: __webpack_require__,
+            className: _,
+            ..._
+          } = _,
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: __webpack_require__,
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()(_.Text, _),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ...[
+          {
+            prop: "weight",
+            responsive: !0,
+            className: _.TextWeight,
+            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: _.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_, _.contrast ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            cssProperty: (_, _) => [
+              "--text-color",
+              (0, _._)(_.color ?? "text-body", _),
+            ],
+          },
+          {
+            prop: "truncate",
+            className: _.Truncate,
+          },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: _.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: _.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`TextSize-${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { underline: _ = "auto", ...__webpack_require__ } = _;
+        return (0, _.jsx)("a", {
+          ...(0, _._)(
+            {
+              ...__webpack_require__,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -910,6 +1052,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)(function (_) {
           const {
@@ -929,22 +1073,35 @@
               }),
               (0, _.jsx)(_._, {
                 active: _,
-                children: (0, _.jsx)(_._, {
+                children: (0, _.jsxs)(_._, {
                   strTitle: (0, _._)("#OpenInDesktopAppBanner_NotSignedIn"),
-                  strDescription: _
-                    ? (0, _._)("#Wishlist_NotSignedIn")
-                    : _._.Localize("#LoginRedirect_Dialog_Description"),
+                  strDescription: _._.Localize("#Wishlist_NotSignedIn"),
                   closeModal: _,
-                  onOK: _._,
-                  strOKButtonText: _._.Localize("#Login_SignIn"),
-                  children:
-                    _ &&
+                  bAlertDialog: !0,
+                  children: [
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsx)("br", {}),
                     (0, _.jsx)(_._, {
                       onClick: _,
                       children: (0, _._)(
                         "#OpenInDesktopAppBanner_OpenAppButton",
                       ),
                     }),
+                    (0, _.jsx)(_._, {
+                      onClick: _._,
+                      children: _._.Localize("#Login_SignIn"),
+                    }),
+                    !_ &&
+                      (0, _.jsxs)(_.Fragment, {
+                        children: [
+                          (0, _.jsx)("br", {}),
+                          (0, _.jsx)(_._, {
+                            href: `${_._.STORE_BASE_URL}about`,
+                            children: (0, _._)("#Button_InstallSteam"),
+                          }),
+                        ],
+                      }),
+                  ],
                 }),
               }),
             ],

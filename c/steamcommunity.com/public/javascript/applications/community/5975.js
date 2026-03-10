@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "出品が見つかりません",
 	"AssetProperty_Range_MinPlaceholder": "最小",
 	"AssetProperty_Range_MaxPlaceholder": "最大",
-	"Accessories_FieldSectionLabel": "アクセサリー"
+	"Accessories_FieldSectionLabel": "アクセサリー",
+	"Listing_EnhancedAppearance_Missing": "この出品にはまだ独自の画像や詳細な画像がありません。ここに表示されている画像は、出品されているアイテムと若干異なる場合があります。"
 }`);
     },
   },

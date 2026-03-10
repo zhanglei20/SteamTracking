@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "找不到上架商品",
 	"AssetProperty_Range_MinPlaceholder": "最低",
 	"AssetProperty_Range_MaxPlaceholder": "最高",
-	"Accessories_FieldSectionLabel": "配件"
+	"Accessories_FieldSectionLabel": "配件",
+	"Listing_EnhancedAppearance_Missing": "此上架物品尚無獨有或強化的圖片。此處顯示的圖片可能與上架物品稍有出入。"
 }`);
     },
   },

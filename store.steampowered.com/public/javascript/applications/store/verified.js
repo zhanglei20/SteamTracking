@@ -3,6 +3,45 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [6991],
   {
+    66532: (e) => {
+      e.exports = {
+        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
+        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
+        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
+        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
+        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
+        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
+        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
+        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
+        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
+        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
+        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
+        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
+        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
+        Caps3: "ch0xp_kjApA24ePv-4mUf",
+        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
+        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
+        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
+        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
+        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
+        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
+        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
+        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
+        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
+        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
+        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
+        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
+        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
+        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
+        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
+        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
+        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
+        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
+        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
+        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
+        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
+      };
+    },
     15527: (e) => {
       e.exports = {
         BroadcastPlayerLite: "SAxf3Rqn792kM6c4U_vx5",
@@ -45,45 +84,6 @@
         Mobile: "mhii5hgMCQvO2tXOUdWPQ",
       };
     },
-    66285: (e) => {
-      e.exports = {
-        GhostCtn: "_3Kh2xkNOxK9yAzjUL6Ivgx",
-        PlaceholderCap: "w8Jvjch8aFrIUAv0SH561",
-        GhostShine: "_2BHrUiVJgb5paKR9HDuFry",
-        PlaceholderBox: "_3xK5GjRYJTY1N5bjbocIm9",
-        ShineCtn: "cI9gcyxQOApga-GXz7_V4",
-        PlaceholderVideo: "_26iPLXluGpPw4W-coLs883",
-        CapsuleRow3: "_3K3QSflZnf6fPmoBKqoGjc",
-        CapsuleRow4: "_1gEPGVsJ0bb_BL9C4YvFNv",
-        CapsuleRowSuperCapsule: "_3zJewh51IljAQRz-6OMdOB",
-        ItemBrowserCapsule: "_2fHvxv3mZQin5_2wB2xfmg",
-        CapsuleRow23: "_3Zk9eQFgRurzIIkTvIMxHW",
-        CapRow: "dGk0hxulznq7MwRweW94h",
-        Caps2: "_1uECvRdcT_yaRni_AEsObF",
-        Caps3: "QU4kidgDKJx_jDfEquNmT",
-        CapsuleRow234: "_2V6zSuL6-efjUwNCdSspJk",
-        Caps4: "_3xqTH8e1tUBIai3kdvgahn",
-        SpotlightsRow: "_3_FBxHpnwok2YRFmtASM5I",
-        DailyDealsColumn: "_1Rudow4oFWhnDbqnzJ0nuM",
-        EventRow: "_1jEY56Mb_K-eNOlOZ2ayy0",
-        PlaceholderGroupImage: "_1RRbToD4zek6vvdq8pajSX",
-        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
-        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
-        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
-        PlaceholderButtons: "aHFZOytk7I6xyF53cX0Iz",
-        TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
-        VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
-        ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
-        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
-        ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
-        CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
-        ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
-        MainCapRow: "_4USkr2F0D76zPrDAKe8tZ",
-        PlaceholderRelease: "_3kqq8V4VYQWX0MTcaWruTa",
-        PlaceholderReviews: "_1TQDb8Ui8AuVqTFeIQHC8J",
-        PlaceholderTags: "_2I6t8VQXDbATmaOzp9jRzk",
-      };
-    },
     62307: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -94,6 +94,38 @@
         PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
         PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
         PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
+      };
+    },
+    81315: (e) => {
+      e.exports = {
+        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
+        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
+        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
+        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
+        TopLeft: "Clgi---P85XXv25yLZwB0",
+        Top: "_2Z9VyBAzofV3JvK__dECbX",
+        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
+        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
+        Middle: "_1HecozzoSZfUZSci9dLkxN",
+        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
+        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
+        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
+        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
+        Bottom: "sIHlK9sN2255-irERXD_V",
+        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
+        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
+        top: "_1iRW1Msfh60zHqD-xe4EAk",
+        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
+        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
+        right: "_15t6A4l27DY4KRL1aAUTTS",
+        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
+        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
+        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
+        middle: "_1CS75ZrrDXna6xatw5ZvPR",
+        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
+        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
+        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
+        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
       };
     },
     61088: (e) => {
@@ -139,63 +171,63 @@
     },
     20433: (e, t, s) => {
       "use strict";
-      s.d(t, { j: () => h, u: () => p });
-      var a = s(7850),
-        i = s(90626),
-        r = s(45699),
-        o = s(55963),
+      s.d(t, { j: () => m, u: () => p });
+      var i = s(7850),
+        a = s(90626),
+        o = s(45699),
+        r = s(55963),
         n = s(60014),
         l = s(49411),
         d = s(61336),
         c = s(52541),
-        u = s(8527);
+        h = s(8527);
       s(78327);
-      function m(e) {
+      function u(e) {
         if (e) {
           if ("appid" in e) return "app";
           if ("bundleid" in e) return "bundle";
           if ("packageid" in e) return "sub";
         }
       }
-      function h(e) {
+      function m(e) {
         const {
             id: t,
             hoverClassName: s,
-            fnGetIDOverride: r,
-            fnHoverState: o,
+            fnGetIDOverride: o,
+            fnHoverState: r,
             children: n,
           } = e,
-          l = i.useRef(null),
-          d = i.useCallback(
+          l = a.useRef(null),
+          d = a.useCallback(
             (e) => {
-              const s = m(t);
+              const s = u(t);
               s &&
-                (o && o(!0),
+                (r && r(!0),
                 window.GameHover &&
-                  window.GameHover(r ? r() : l.current, e, "global_hover", {
+                  window.GameHover(o ? o() : l.current, e, "global_hover", {
                     type: s,
                     id: (0, c.G$)(t).id,
                     v6: 1,
                   }));
             },
-            [o, r, t],
+            [r, o, t],
           ),
-          u = i.useCallback(
+          h = a.useCallback(
             (e) => {
-              m(t) &&
-                (o && e.relatedTarget && o(!1),
+              u(t) &&
+                (r && e.relatedTarget && r(!1),
                 window.HideGameHover &&
-                  window.HideGameHover(r ? r() : l.current, e, "global_hover"));
+                  window.HideGameHover(o ? o() : l.current, e, "global_hover"));
             },
-            [t, o, r],
+            [t, r, o],
           );
-        return (0, a.jsx)("div", {
+        return (0, i.jsx)("div", {
           ref: l,
           className: s,
           onMouseEnter: d,
-          onMouseLeave: u,
+          onMouseLeave: h,
           onFocus: d,
-          onBlur: u,
+          onBlur: h,
           children: n,
         });
       }
@@ -203,46 +235,368 @@
         const {
             id: t,
             strExtraParams: s,
-            fnOnClickOverride: i,
+            fnOnClickOverride: a,
             strOverrideURL: p,
           } = e,
           _ = (0, n.n9)(),
-          S = (0, l.w)(),
-          g = (0, d.NT)(
+          g = (0, l.w)(),
+          S = (0, d.NT)(
             p ||
               (t && "creatorid" in t
-                ? (0, o.It)(
-                    `${u.TS.STORE_BASE_URL}curator/${((0, c.G$))(t).id}${s ? `?${s}` : ""}`,
+                ? (0, r.It)(
+                    `${h.TS.STORE_BASE_URL}curator/${((0, c.G$))(t).id}${s ? `?${s}` : ""}`,
                     _,
-                    S,
+                    g,
                   )
-                : (0, o.It)(
-                    `${u.TS.STORE_BASE_URL}${m(t)}/${((0, c.G$))(t).id}${s ? `?${s}` : ""}`,
+                : (0, r.It)(
+                    `${h.TS.STORE_BASE_URL}${u(t)}/${((0, c.G$))(t).id}${s ? `?${s}` : ""}`,
                     _,
-                    S,
+                    g,
                   )),
           );
-        return (0, a.jsx)(h, {
+        return (0, i.jsx)(m, {
           ...e,
-          children: (0, a.jsx)(r.Ii, {
+          children: (0, i.jsx)(o.Ii, {
             className: e.className,
-            href: i ? void 0 : g,
-            target: u.TS.IN_CLIENT || i ? void 0 : "_blank",
+            href: a ? void 0 : S,
+            target: h.TS.IN_CLIENT || a ? void 0 : "_blank",
             rel: "noopener noreferrer",
-            onClick: i,
+            onClick: a,
             children: e.children,
           }),
         });
       }
     },
+    71381: (e, t, s) => {
+      "use strict";
+      s.d(t, { h: () => n });
+      var i = s(7850),
+        a = s(52038),
+        o = s(66532),
+        r = s.n(o);
+      function n(e) {
+        const {
+          capsules_per_row: t,
+          is_generic: s,
+          is_generic_trailer: o,
+          is_event_dash_row: n,
+          is_trailer_carousel: l,
+          is_spotlights: d,
+          is_item_browser: c,
+          is_maincap: h,
+          is_expanded_maincap: u,
+          is_expanded_display: m,
+          show_auto_advance_bar: p,
+        } = e;
+        if (!t) return null;
+        if (s)
+          return (0, i.jsx)("div", {
+            className: r().GhostCtn,
+            children: (0, i.jsx)("div", {
+              className: r().PlaceholderBox,
+              children: (0, i.jsx)("div", { className: r().ShineCtn }),
+            }),
+          });
+        if (o)
+          return (0, i.jsx)("div", {
+            className: r().GhostCtn,
+            children: (0, i.jsx)("div", {
+              className: r().PlaceholderVideo,
+              children: (0, i.jsx)("div", { className: r().ShineCtn }),
+            }),
+          });
+        if (l)
+          return (0, i.jsxs)("div", {
+            className: r().GhostCtn,
+            children: [
+              (0, i.jsxs)("div", {
+                className: r().TrailerCarouselRow,
+                children: [
+                  (0, i.jsx)("div", {
+                    className: r().VideoPlaceholder,
+                    children: (0, i.jsx)("div", { className: r().ShineCtn }),
+                  }),
+                  (0, i.jsx)("div", {
+                    className: r().ItemDescPlaceholer,
+                    children: (0, i.jsx)("div", { className: r().ShineCtn }),
+                  }),
+                ],
+              }),
+              p &&
+                (0, i.jsx)("div", {
+                  className: r().AutoAdvanceBar,
+                  children: (0, i.jsx)("div", { className: r().ShineCtn }),
+                }),
+            ],
+          });
+        if (n)
+          return (0, i.jsx)("div", {
+            className: r().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: r().EventRow,
+              children: [
+                (0, i.jsx)("div", {
+                  className: (0, a.A)(
+                    r().PlaceholderGroupImage,
+                    r().PlaceholderCap,
+                  ),
+                }),
+                (0, i.jsxs)("div", {
+                  className: (0, a.A)(r().DetailsPlaceholder),
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderTitle,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderSubtitle,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderButtons,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (d)
+          return (0, i.jsx)("div", {
+            className: r().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: r().SpotlightsRow,
+              children: [
+                (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                (0, i.jsxs)("div", {
+                  className: r().DailyDealsColumn,
+                  children: [
+                    (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                    (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (h)
+          return (0, i.jsx)("div", {
+            className: r().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: (0, a.A)({
+                [r().MainCapRow]: !0,
+                [r().MainCapRowExpanded]: u,
+              }),
+              children: [
+                (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                (0, i.jsxs)("div", {
+                  className: (0, a.A)(r().DetailsPlaceholder),
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderTitle,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderSubtitle,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderRelease,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderReviews,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, a.A)(
+                        r().PlaceholderTags,
+                        r().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (m)
+          return (0, i.jsx)("div", {
+            className: r().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: r().ExpandedItemRow,
+              children: [
+                (0, i.jsx)("div", {
+                  className: (0, a.A)(
+                    r().CapsulePlaceholder,
+                    r().PlaceholderCap,
+                  ),
+                }),
+                (0, i.jsx)("div", {
+                  className: (0, a.A)(
+                    r().ItemDefPlaceholder,
+                    r().PlaceholderCap,
+                  ),
+                }),
+              ],
+            }),
+          });
+        if (c) {
+          const e = [];
+          for (let s = 0; s < t[0]; s++)
+            e.push(
+              (0, i.jsx)(
+                "div",
+                {
+                  className: r().ItemBrowserCapsule,
+                  children: (0, i.jsx)("div", {
+                    className: r().PlaceholderCap,
+                  }),
+                },
+                "item_browse_ghost_" + s,
+              ),
+            );
+          return (0, i.jsx)("div", { className: r().GhostCtn, children: e });
+        }
+        return 1 == t?.length
+          ? 1 == t[0]
+            ? (0, i.jsx)("div", {
+                className: r().GhostCtn,
+                children: (0, i.jsx)("div", {
+                  className: r().CapsuleRowSuperCapsule,
+                  children: (0, i.jsx)("div", {
+                    className: r().PlaceholderCap,
+                  }),
+                }),
+              })
+            : 4 == t[0]
+              ? (0, i.jsx)("div", {
+                  className: r().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: r().CapsuleRow4,
+                    children: [
+                      (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                    ],
+                  }),
+                })
+              : (0, i.jsx)("div", {
+                  className: r().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: r().CapsuleRow3,
+                    children: [
+                      (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                    ],
+                  }),
+                })
+          : 2 == t?.length
+            ? 3 == t[0] && 3 == t[1]
+              ? (0, i.jsx)("div", {
+                  className: r().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: r().CapsuleRow23,
+                    children: [
+                      (0, i.jsxs)("div", {
+                        className: (0, a.A)(r().CapRow, r().Caps3),
+                        children: [
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        ],
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: (0, a.A)(r().CapRow, r().Caps3),
+                        children: [
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+              : (0, i.jsx)("div", {
+                  className: r().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: r().CapsuleRow23,
+                    children: [
+                      (0, i.jsxs)("div", {
+                        className: (0, a.A)(r().CapRow, r().Caps2),
+                        children: [
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        ],
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: (0, a.A)(r().CapRow, r().Caps3),
+                        children: [
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+            : (0, i.jsx)("div", {
+                className: r().GhostCtn,
+                children: (0, i.jsxs)("div", {
+                  className: r().CapsuleRow234,
+                  children: [
+                    (0, i.jsxs)("div", {
+                      className: (0, a.A)(r().CapRow, r().Caps2),
+                      children: [
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      ],
+                    }),
+                    (0, i.jsxs)("div", {
+                      className: (0, a.A)(r().CapRow, r().Caps3),
+                      children: [
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      ],
+                    }),
+                    (0, i.jsxs)("div", {
+                      className: (0, a.A)(r().CapRow, r().Caps4),
+                      children: [
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: r().PlaceholderCap }),
+                      ],
+                    }),
+                  ],
+                }),
+              });
+      }
+    },
     3067: (e, t, s) => {
       "use strict";
       s.d(t, { td: () => n });
-      var a = s(34629),
-        i = s(14947),
-        r = s(78327);
-      r.TS.CHAT_BASE_URL, r.TS.CHAT_BASE_URL;
-      class o {
+      var i = s(34629),
+        a = s(14947),
+        o = s(78327);
+      o.TS.CHAT_BASE_URL, o.TS.CHAT_BASE_URL;
+      class r {
         bValid = !1;
         stream = { 0: "#Broadcast_EnglishMain" };
         name = "";
@@ -254,7 +608,7 @@
         offlineImage = "";
         gidEvent = "";
         constructor(e) {
-          (0, i.Gn)(this), this.init(e);
+          (0, a.Gn)(this), this.init(e);
         }
         init(e) {
           (this.bValid = e.bValid),
@@ -269,17 +623,17 @@
             (this.gidEvent = e.gidEvent);
         }
       }
-      (0, a.Cg)([i.sH], o.prototype, "bValid", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "stream", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "name", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "appName", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "appID", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "link", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "linkName", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "tabIcon", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "offlineImage", void 0),
-        (0, a.Cg)([i.sH], o.prototype, "gidEvent", void 0);
-      let n = new o({
+      (0, i.Cg)([a.sH], r.prototype, "bValid", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "stream", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "name", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "appName", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "appID", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "link", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "linkName", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "tabIcon", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "offlineImage", void 0),
+        (0, i.Cg)([a.sH], r.prototype, "gidEvent", void 0);
+      let n = new r({
         bValid: !1,
         stream: { 0: "#Broadcast_EnglishMain" },
         name: "",
@@ -293,19 +647,19 @@
     },
     4299: (e, t, s) => {
       "use strict";
-      var a, i;
-      s.d(t, { J8: () => r, X8: () => i }),
+      var i, a;
+      s.d(t, { J8: () => o, X8: () => a }),
         (function (e) {
           (e[(e.Hover = 0)] = "Hover"),
             (e[(e.ClickPopup = 1)] = "ClickPopup"),
             (e[(e.ClickSurroundingRegion = 2)] = "ClickSurroundingRegion");
-        })(a || (a = {})),
+        })(i || (i = {})),
         (function (e) {
           (e[(e.Chat = 0)] = "Chat"),
             (e[(e.Notification = 1)] = "Notification"),
             (e[(e.Error = 2)] = "Error");
-        })(i || (i = {}));
-      class r {}
+        })(a || (a = {}));
+      class o {}
     },
     72224: (e, t, s) => {
       "use strict";
@@ -313,23 +667,23 @@
         s.d(t, {
           BroadcastDetails: () => ne,
           LinkOverlay: () => de,
-          default: () => Q,
+          default: () => $,
         });
-      var a = s(34629),
-        i = s(7850),
-        r = s(14947),
-        o = s(75844),
+      var i = s(34629),
+        a = s(7850),
+        o = s(14947),
+        r = s(75844),
         n = s(90626),
         l = s(88997),
         d = s(55963),
         c = s(54728),
-        u = s(16021),
-        m = s(84933),
-        h = s(6144);
+        h = s(16021),
+        u = s(84933),
+        m = s(6144);
       class p extends n.Component {
         m_elCanvas;
         m_Context;
-        m_schUpdate = new h.LU();
+        m_schUpdate = new m.LU();
         m_bSetupComplete = !1;
         componentDidMount() {
           0 == this.props.updateRate && this.updateCanvas();
@@ -354,24 +708,24 @@
             t = this.props.elementRef,
             s = this.props.updateRate;
           this.m_Context = this.m_elCanvas.getContext("2d");
-          let a = Math.floor(
+          let i = Math.floor(
               this.m_elCanvas.clientWidth / this.props.reductionFactor,
             ),
-            i = Math.floor(
+            a = Math.floor(
               this.m_elCanvas.clientHeight / this.props.reductionFactor,
             );
-          (this.m_elCanvas.width = a),
-            (this.m_elCanvas.height = i),
+          (this.m_elCanvas.width = i),
+            (this.m_elCanvas.height = a),
             this.props.blurAmount > 0 &&
               (this.m_Context.filter = "blur(" + this.props.blurAmount + "px)");
-          let r = () => {
-            this.m_Context.drawImage(t, 0, 0, a * e[0], i * e[1]),
-              s > 0 && this.m_schUpdate.Schedule(s, r);
+          let o = () => {
+            this.m_Context.drawImage(t, 0, 0, i * e[0], a * e[1]),
+              s > 0 && this.m_schUpdate.Schedule(s, o);
           };
-          r(), (this.m_bSetupComplete = !0);
+          o(), (this.m_bSetupComplete = !0);
         }
         render() {
-          return (0, i.jsx)("canvas", {
+          return (0, a.jsx)("canvas", {
             id: this.props.id,
             className: this.props.className,
             ref: this.BindCanvasRef,
@@ -380,98 +734,98 @@
           });
         }
       }
-      (0, a.Cg)([m.oI], p.prototype, "BindCanvasRef", null),
-        (0, a.Cg)([m.oI], p.prototype, "updateCanvas", null);
+      (0, i.Cg)([u.oI], p.prototype, "BindCanvasRef", null),
+        (0, i.Cg)([u.oI], p.prototype, "updateCanvas", null);
       var _ = s(60155),
-        S = s(16569),
-        g = s(90740),
-        C = s(52038);
-      const v = 500;
+        g = s(16569),
+        S = s(90740),
+        v = s(52038);
+      const C = 500;
       class b extends n.Component {
         render() {
           let {
             keyExtractor: e,
             style: t,
-            duration: s = v,
-            className: a,
-            children: r,
-            childRef: o,
+            duration: s = C,
+            className: i,
+            children: o,
+            childRef: r,
             ...n
           } = this.props;
           const l = { ...(t || {}), transitionDuration: s / 1e3 + "s" };
-          return (0, i.jsx)(S.A, {
+          return (0, a.jsx)(g.A, {
             ...n,
-            className: (0, C.A)("crossfade", a),
-            children: (0, i.jsx)(
-              g.A,
+            className: (0, v.A)("crossfade", i),
+            children: (0, a.jsx)(
+              S.A,
               {
-                nodeRef: o,
+                nodeRef: r,
                 classNames: "crossfade-anim",
                 timeout: s,
                 style: l,
-                children: r,
+                children: o,
               },
               e(),
             ),
           });
         }
       }
-      function y(e) {
+      function f(e) {
         const { src: t, ...s } = e,
-          a = { backgroundImage: `url(${t})` },
-          r = n.useRef(null);
-        return (0, i.jsx)(b, {
-          style: a,
+          i = { backgroundImage: `url(${t})` },
+          o = n.useRef(null);
+        return (0, a.jsx)(b, {
+          style: i,
           keyExtractor: () => t,
-          childRef: r,
+          childRef: o,
           ...s,
-          children: (0, i.jsx)("div", { ref: r, className: "crossfade-img" }),
+          children: (0, a.jsx)("div", { ref: o, className: "crossfade-img" }),
         });
       }
-      var f = s(41399),
-        x = s(69409),
-        I = s(81416),
+      var y = s(41399),
+        P = s(69409),
+        x = s(81416),
         w = s(12155),
         D = s(51272),
-        P = s(56011),
-        T = s(61859),
-        j = s(82227),
-        V = s(25489),
+        I = s(56011),
+        k = s(61859),
+        T = s(82227),
+        j = s(25489),
         B = s(78327),
-        k = s(3067),
-        A = s(36064),
-        N = s(15527),
-        M = s.n(N),
-        O = s(22797);
-      function G() {
-        return (0, i.jsx)("div", {
+        V = s(3067),
+        M = s(36064),
+        A = s(15527),
+        N = s.n(A),
+        R = s(22797);
+      function O() {
+        return (0, a.jsx)("div", {
           className: "STV_ReplayBanner",
-          children: (0, T.we)("#DASHPlayerControls_IsReplay"),
+          children: (0, k.we)("#DASHPlayerControls_IsReplay"),
         });
       }
-      const R = (0, o.PA)((e) => {
+      const G = (0, r.PA)((e) => {
         let t = e.video;
         if (t && (t.IsBroadcastClip() || t.IsBroadcastVOD())) return null;
         let s = c.fK.Loading,
-          a = "";
+          i = "";
         if (t) {
-          (s = t.GetBroadcastState()), (a = t.GetBroadcastStateDescription());
+          (s = t.GetBroadcastState()), (i = t.GetBroadcastStateDescription());
           let e = t.IsBuffering();
-          s == c.fK.Unlocking && ((s = c.fK.Loading), (a = "")),
-            s == c.fK.Ready && e && ((s = c.fK.Loading), (a = ""));
+          s == c.fK.Unlocking && ((s = c.fK.Loading), (i = "")),
+            s == c.fK.Ready && e && ((s = c.fK.Loading), (i = ""));
         }
         if (t && s != c.fK.Error && t.GetUserInputNeeded()) return null;
         if (s == c.fK.Ready) return null;
-        let r = s == c.fK.Loading;
-        return (0, i.jsxs)("div", {
+        let o = s == c.fK.Loading;
+        return (0, a.jsxs)("div", {
           className: "BroadcastVideoWatchState",
           style: { filter: "hue-rotate(40deg)" },
           children: [
-            r && (0, i.jsx)(O.t, {}),
-            !r &&
-              (0, i.jsx)("div", {
+            o && (0, a.jsx)(R.t, {}),
+            !o &&
+              (0, a.jsx)("div", {
                 className: "BroadcastVideoWatchState_Text",
-                children: a,
+                children: i,
               }),
           ],
         });
@@ -481,19 +835,19 @@
           c.es.UserInputClickVideo(this.props.video);
         }
         render() {
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "BroadcastVideoUserInputNeeded",
             onClick: this.OnClick,
             children: [
-              (0, i.jsx)(w.jGG, {}),
-              (0, i.jsx)("span", {
-                children: (0, T.we)("#DASHPlayerControls_ClickToPlay"),
+              (0, a.jsx)(w.jGG, {}),
+              (0, a.jsx)("span", {
+                children: (0, k.we)("#DASHPlayerControls_ClickToPlay"),
               }),
             ],
           });
         }
       }
-      (0, a.Cg)([m.oI], L.prototype, "OnClick", null);
+      (0, i.Cg)([u.oI], L.prototype, "OnClick", null);
       let E = class extends n.Component {
         constructor(e) {
           super(e);
@@ -503,101 +857,101 @@
         }
         render() {
           let e = this.props.stats;
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "dash_video_stats",
             children: [
-              (0, i.jsx)("button", {
+              (0, a.jsx)("button", {
                 className: "dash_stat_close_button",
                 onClick: this.HideStats,
-                children: (0, i.jsx)(w.sED, {}),
+                children: (0, a.jsx)(w.sED, {}),
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_BufferingResolution"),
+                  (0, k.we)("#DASHPlayerStats_BufferingResolution"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetBufferingResolutionToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_PlaybackResolution"),
+                  (0, k.we)("#DASHPlayerStats_PlaybackResolution"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetPlaybackResolutionToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_HtmlResolution"),
+                  (0, k.we)("#DASHPlayerStats_HtmlResolution"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetHTMLVideoResolutionToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_ContentServer"),
+                  (0, k.we)("#DASHPlayerStats_ContentServer"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetContentServerToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_StallEvents"),
+                  (0, k.we)("#DASHPlayerStats_StallEvents"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetStalledEventsToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_FailedDownloads"),
+                  (0, k.we)("#DASHPlayerStats_FailedDownloads"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetFailedDownloadsToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_TimeToFirstFrame"),
+                  (0, k.we)("#DASHPlayerStats_TimeToFirstFrame"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetTimeToFirstFrameToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_PlaybackRate"),
+                  (0, k.we)("#DASHPlayerStats_PlaybackRate"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetPlaybackRateForDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsx)(H, { stats: e }),
+              (0, a.jsx)(H, { stats: e }),
             ],
           });
         }
       };
-      (0, a.Cg)([m.oI], E.prototype, "HideStats", null),
-        (E = (0, a.Cg)([o.PA], E));
+      (0, i.Cg)([u.oI], E.prototype, "HideStats", null),
+        (E = (0, i.Cg)([r.PA], E));
       let H = class extends n.Component {
         constructor(e) {
           super(e);
@@ -605,89 +959,89 @@
         createBufferedRange(e) {
           let t = this.props.stats,
             s = [],
-            a = e ? "vidbuf" : "audbuf",
-            r = e
+            i = e ? "vidbuf" : "audbuf",
+            o = e
               ? t.GetNumBufferedVideoRanges()
               : t.GetNumBufferedAudioRanges();
-          if (r > 0)
-            for (let o = 0; o < r; ++o) {
-              let r = (0, T.we)(
+          if (o > 0)
+            for (let r = 0; r < o; ++r) {
+              let o = (0, k.we)(
                   e
                     ? "#DASHPlayerStats_VideoBufferRange"
                     : "#DASHPlayerStats_AudioBufferRange",
-                  o,
+                  r,
                 ),
                 n = e
-                  ? t.GetBufferedVideoSegmentForDisplay(o)
-                  : t.GetBufferedAudioSegmentForDisplay(o);
+                  ? t.GetBufferedVideoSegmentForDisplay(r)
+                  : t.GetBufferedAudioSegmentForDisplay(r);
               s.push(
-                (0, i.jsxs)(
+                (0, a.jsxs)(
                   "div",
                   {
                     children: [
-                      r,
+                      o,
                       " ",
-                      (0, i.jsx)("span", {
+                      (0, a.jsx)("span", {
                         className: "videoStatsValue",
                         children: n,
                       }),
                     ],
                   },
-                  a + o,
+                  i + r,
                 ),
               );
             }
           else {
-            let t = (0, T.we)(
+            let t = (0, k.we)(
               e
                 ? "#DASHPlayerStats_VideoNoRangeInformation"
                 : "#DASHPlayerStats_AudioNoRangeInformation",
             );
-            s.push((0, i.jsx)("div", { children: t }, a + "none"));
+            s.push((0, a.jsx)("div", { children: t }, i + "none"));
           }
           return s;
         }
         render() {
           let e = this.props.stats;
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "dash_video_quick_stats",
             children: [
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_BytesReceived"),
+                  (0, k.we)("#DASHPlayerStats_BytesReceived"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetBytesReceivedToDisplay(),
                   }),
                 ],
               }),
               this.props.stats.BHasFrameInformation() &&
-                (0, i.jsxs)("div", {
+                (0, a.jsxs)("div", {
                   children: [
-                    (0, T.we)("#DASHPlayerStats_DroppedFrames"),
+                    (0, k.we)("#DASHPlayerStats_DroppedFrames"),
                     " ",
-                    (0, i.jsx)("span", {
+                    (0, a.jsx)("span", {
                       className: "videoStatsValue",
                       children: e.GetDroppedFramesToDisplay(),
                     }),
                   ],
                 }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_VideoBuffered"),
+                  (0, k.we)("#DASHPlayerStats_VideoBuffered"),
                   " ",
-                  (0, i.jsxs)("span", {
+                  (0, a.jsxs)("span", {
                     className: "videoStatsValue",
                     children: [e.GetVideoBufferedToDisplay(), " "],
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_AudioBuffered"),
+                  (0, k.we)("#DASHPlayerStats_AudioBuffered"),
                   " ",
-                  (0, i.jsxs)("span", {
+                  (0, a.jsxs)("span", {
                     className: "videoStatsValue",
                     children: [e.GetAudioBufferedToDisplay(), " "],
                   }),
@@ -695,81 +1049,81 @@
               }),
               this.createBufferedRange(!0),
               this.createBufferedRange(!1),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_BandwidthRequired"),
+                  (0, k.we)("#DASHPlayerStats_BandwidthRequired"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetBandwidthRequiredToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_BandwidthVideo"),
+                  (0, k.we)("#DASHPlayerStats_BandwidthVideo"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetBandwithVideoToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_BandwidthNums"),
+                  (0, k.we)("#DASHPlayerStats_BandwidthNums"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetBandwidthStatsToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_DownloadNums"),
+                  (0, k.we)("#DASHPlayerStats_DownloadNums"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetDownloadTimeStatsToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_ActiveDownloads"),
+                  (0, k.we)("#DASHPlayerStats_ActiveDownloads"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetActiveDownloadsToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_VideoDownloadProgress"),
+                  (0, k.we)("#DASHPlayerStats_VideoDownloadProgress"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetVideoDownloadProgressToDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_DroppingFrames"),
+                  (0, k.we)("#DASHPlayerStats_DroppingFrames"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetPersistentFrameDropsForDisplay(),
                   }),
                 ],
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 children: [
-                  (0, T.we)("#DASHPlayerStats_CurrentFPS"),
+                  (0, k.we)("#DASHPlayerStats_CurrentFPS"),
                   " ",
-                  (0, i.jsx)("span", {
+                  (0, a.jsx)("span", {
                     className: "videoStatsValue",
                     children: e.GetCurrentFPSForDisplay(),
                   }),
@@ -779,7 +1133,7 @@
           });
         }
       };
-      H = (0, a.Cg)([o.PA], H);
+      H = (0, i.Cg)([r.PA], H);
       var U = s(74872);
       class F extends n.Component {
         m_elSettingsButton;
@@ -826,9 +1180,9 @@
             this.OnMouseUp,
             !0,
           ),
-            (0, P.id)(this.m_elSettingsPanel, e.target) ||
+            (0, I.id)(this.m_elSettingsPanel, e.target) ||
               this.setState({ bSettingsOpen: !1 }),
-            (0, P.id)(this.m_elSubtitlesPanel.current, e.target) ||
+            (0, I.id)(this.m_elSubtitlesPanel.current, e.target) ||
               this.setState({ bSubtitlesOpen: !1 });
         }
         bindSettingsButton(e) {
@@ -844,11 +1198,11 @@
         render() {
           let e = !1,
             t = !1;
-          const { video: s, actions: a } = this.props;
-          let r,
-            o,
+          const { video: s, actions: i } = this.props;
+          let o,
+            r,
             n = 0,
-            l = (0, i.jsx)(
+            l = (0, a.jsx)(
               "div",
               { className: "settingsMenuSeparator" },
               "separator",
@@ -856,9 +1210,9 @@
           if (
             (this.state.bSettingsOpen &&
               ((e = !0),
-              (r = this.props.video.GetVideoRepresentations()),
-              (o = r.map((e) =>
-                (0, i.jsx)(
+              (o = this.props.video.GetVideoRepresentations()),
+              (r = o.map((e) =>
+                (0, a.jsx)(
                   U.n,
                   {
                     onClick: () => {
@@ -873,27 +1227,27 @@
                   e.id,
                 ),
               )),
-              o.push(l),
-              o.push(
-                (0, i.jsxs)(
+              r.push(l),
+              r.push(
+                (0, a.jsxs)(
                   U.D,
                   {
                     onClick: this.OnShowStats,
                     children: [
-                      (0, T.we)("#Broadcast_VideoContext_ToggleStats"),
+                      (0, k.we)("#Broadcast_VideoContext_ToggleStats"),
                       "\t",
                     ],
                   },
                   "statsToggle",
                 ),
               ),
-              (n = 0 - (21 * o.length + 32))),
+              (n = 0 - (21 * r.length + 32))),
             this.state.bSubtitlesOpen)
           ) {
             (t = !0),
-              (o = []),
-              o.push(
-                (0, i.jsx)(
+              (r = []),
+              r.push(
+                (0, a.jsx)(
                   U.n,
                   {
                     onClick: () => {
@@ -904,15 +1258,15 @@
                     },
                     className: "NoSubtitles",
                     bChecked: !1,
-                    children: (0, T.we)("#Broadcast_None"),
+                    children: (0, k.we)("#Broadcast_None"),
                   },
                   "none",
                 ),
               );
             for (let e = 0; e < this.props.video.ListSubtitles().length; e++) {
               const t = this.props.video.ListSubtitles()[e];
-              o.push(
-                (0, i.jsx)(
+              r.push(
+                (0, a.jsx)(
                   U.n,
                   {
                     onClick: () => {
@@ -932,29 +1286,29 @@
           }
           const d =
             this.props.video.BHasPlayer() && this.props.video.BHasTimedText();
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "STV_BroadcastSettings",
             children: [
               d &&
-                (0, i.jsx)("div", {
+                (0, a.jsx)("div", {
                   className:
                     "videoControlButton" + (d ? " ClosedCaptionsActive" : ""),
                   onClick: this.OnSubtitlesClick,
                   ref: this.m_elSubtitlesButton,
-                  children: (0, i.jsx)(w.N8C, {}),
+                  children: (0, a.jsx)(w.N8C, {}),
                 }),
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", {
                 className:
                   "videoControlButton VideoSettings " +
                   (e ? " VideoSettingsOpen" : ""),
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
-                children: (0, i.jsx)(w.wB_, {}),
+                children: (0, a.jsx)(w.wB_, {}),
               }),
-              (0, i.jsx)(z, { video: s }),
-              a &&
-                a.map((e) =>
-                  (0, i.jsx)(
+              (0, a.jsx)(z, { video: s }),
+              i &&
+                i.map((e) =>
+                  (0, a.jsx)(
                     "div",
                     {
                       className: "videoControlButton videoControlFitWidth",
@@ -964,7 +1318,7 @@
                   ),
                 ),
               e &&
-                (0, i.jsx)("div", {
+                (0, a.jsx)("div", {
                   ref: this.BindSettingsPanel,
                   className: "STV_BroadcastSettingsPanel",
                   style: {
@@ -972,13 +1326,13 @@
                     top: this.m_SettingsButtonPos[1],
                     marginTop: n,
                   },
-                  children: (0, i.jsx)("div", {
+                  children: (0, a.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                    children: o,
+                    children: r,
                   }),
                 }),
               t &&
-                (0, i.jsx)("div", {
+                (0, a.jsx)("div", {
                   ref: this.m_elSubtitlesPanel,
                   className: "STV_BroadcastSettingsPanel SubtitlesMenu",
                   style: {
@@ -987,29 +1341,29 @@
                     top: this.m_SubtitlesButtonPos[1],
                     marginTop: n,
                   },
-                  children: (0, i.jsx)("div", {
+                  children: (0, a.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                    children: o,
+                    children: r,
                   }),
                 }),
             ],
           });
         }
       }
-      (0, a.Cg)([m.oI], F.prototype, "OnVideoControlClick", null),
-        (0, a.Cg)([m.oI], F.prototype, "OnSubtitlesClick", null),
-        (0, a.Cg)([m.oI], F.prototype, "OnMouseUp", null),
-        (0, a.Cg)([m.oI], F.prototype, "bindSettingsButton", null),
-        (0, a.Cg)([m.oI], F.prototype, "BindSettingsPanel", null),
-        (0, a.Cg)([m.oI], F.prototype, "OnShowStats", null);
+      (0, i.Cg)([u.oI], F.prototype, "OnVideoControlClick", null),
+        (0, i.Cg)([u.oI], F.prototype, "OnSubtitlesClick", null),
+        (0, i.Cg)([u.oI], F.prototype, "OnMouseUp", null),
+        (0, i.Cg)([u.oI], F.prototype, "bindSettingsButton", null),
+        (0, i.Cg)([u.oI], F.prototype, "BindSettingsPanel", null),
+        (0, i.Cg)([u.oI], F.prototype, "OnShowStats", null);
       const W = !0;
       let z = class extends n.Component {
         constructor(e) {
-          super(e), (0, r.Gn)(this);
+          super(e), (0, o.Gn)(this);
         }
         k_nHideSliderTimeout = 1500;
         m_bShowSlider = W;
-        m_schHideSlider = new h.LU();
+        m_schHideSlider = new m.LU();
         m_bChildDragging = !1;
         m_bMouseOver = !1;
         componentWillUnmount() {
@@ -1043,46 +1397,46 @@
           let e = this.props.video,
             t = e.IsMuted(),
             s = 100 * e.GetVolume(),
-            a = "videoControlButton";
+            i = "videoControlButton";
           s > 65
-            ? (a += " HighestVolume")
+            ? (i += " HighestVolume")
             : s > 45
-              ? (a += " HighVolume")
+              ? (i += " HighVolume")
               : s < 46 && s > 24
-                ? (a += " MedVolume")
-                : s < 25 && (a += " LowVolume");
-          let r = "BroadcastVolumeControl";
+                ? (i += " MedVolume")
+                : s < 25 && (i += " LowVolume");
+          let o = "BroadcastVolumeControl";
           return (
-            this.m_bShowSlider && (r += " ShowVolumeSlider"),
-            t && (r += " muted"),
-            (0, i.jsx)("div", {
-              className: r,
+            this.m_bShowSlider && (o += " ShowVolumeSlider"),
+            t && (o += " muted"),
+            (0, a.jsx)("div", {
+              className: o,
               onMouseEnter: this.OnMouseEnter,
               onMouseLeave: this.OnMouseLeave,
-              children: (0, i.jsxs)("div", {
+              children: (0, a.jsxs)("div", {
                 className: "BroadcastVolumeControl_FixedLayout",
                 children: [
-                  (0, i.jsx)("div", {
-                    className: a,
+                  (0, a.jsx)("div", {
+                    className: i,
                     onClick: this.ToggleMute,
-                    children: (0, i.jsx)(w.fSs, {}),
+                    children: (0, a.jsx)(w.fSs, {}),
                   }),
-                  (0, i.jsx)(J, { video: e, onDrag: this.OnChildDrag }),
+                  (0, a.jsx)(X, { video: e, onDrag: this.OnChildDrag }),
                 ],
               }),
             })
           );
         }
       };
-      (0, a.Cg)([r.sH], z.prototype, "m_bShowSlider", void 0),
-        (0, a.Cg)([m.oI], z.prototype, "ToggleMute", null),
-        (0, a.Cg)([m.oI], z.prototype, "OnMouseEnter", null),
-        (0, a.Cg)([m.oI], z.prototype, "OnMouseLeave", null),
-        (0, a.Cg)([m.oI], z.prototype, "OnChildDrag", null),
-        (z = (0, a.Cg)([o.PA], z));
-      let J = class extends n.Component {
+      (0, i.Cg)([o.sH], z.prototype, "m_bShowSlider", void 0),
+        (0, i.Cg)([u.oI], z.prototype, "ToggleMute", null),
+        (0, i.Cg)([u.oI], z.prototype, "OnMouseEnter", null),
+        (0, i.Cg)([u.oI], z.prototype, "OnMouseLeave", null),
+        (0, i.Cg)([u.oI], z.prototype, "OnChildDrag", null),
+        (z = (0, i.Cg)([r.PA], z));
+      let X = class extends n.Component {
         constructor(e) {
-          super(e), (0, r.Gn)(this);
+          super(e), (0, o.Gn)(this);
         }
         m_elSlider = null;
         m_nVolumeStartOfDrag = 0;
@@ -1124,27 +1478,27 @@
         }
         SetVolumeWithCoord(e, t) {
           let s = e.getBoundingClientRect(),
-            a = V.Fu(t, s.left, s.right, 0, 1),
-            i = V.OQ(a, 0, 1),
-            r = this.props.video;
-          r.SetMute(a < 0.01), r.SetVolume(i);
+            i = j.Fu(t, s.left, s.right, 0, 1),
+            a = j.OQ(i, 0, 1),
+            o = this.props.video;
+          o.SetMute(i < 0.01), o.SetVolume(a);
         }
         render() {
           let e = this.props.video,
             t = 100 * e.GetVolume();
           e.IsMuted() && (t = 0);
           let s = { left: `${t}%` },
-            a = { width: `${t}%` };
-          return (0, i.jsxs)("div", {
+            i = { width: `${t}%` };
+          return (0, a.jsxs)("div", {
             className: "BroadcastVolumeSlider",
             onMouseDown: this.OnMouseDown,
             children: [
-              (0, i.jsx)("div", { className: "BroadcastVolumeSlider_Track" }),
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", { className: "BroadcastVolumeSlider_Track" }),
+              (0, a.jsx)("div", {
                 className: "BroadcastVolumeSlider_Fill",
-                style: a,
+                style: i,
               }),
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", {
                 className: "BroadcastVolumeSlider_Thumb",
                 style: s,
               }),
@@ -1152,21 +1506,21 @@
           });
         }
       };
-      (0, a.Cg)([m.oI], J.prototype, "OnMouseDown", null),
-        (0, a.Cg)([m.oI], J.prototype, "OnMouseMove", null),
-        (0, a.Cg)([m.oI], J.prototype, "OnMouseUp", null),
-        (0, a.Cg)([r.XI], J.prototype, "SetVolumeWithCoord", null),
-        (J = (0, a.Cg)([o.PA], J));
+      (0, i.Cg)([u.oI], X.prototype, "OnMouseDown", null),
+        (0, i.Cg)([u.oI], X.prototype, "OnMouseMove", null),
+        (0, i.Cg)([u.oI], X.prototype, "OnMouseUp", null),
+        (0, i.Cg)([o.XI], X.prototype, "SetVolumeWithCoord", null),
+        (X = (0, i.Cg)([r.PA], X));
       var q = s(15759);
-      const X = 15;
+      const J = 15;
       let K = class extends n.Component {
-        m_schHideControls = new h.LU();
-        m_schUnmountControls = new h.LU();
+        m_schHideControls = new m.LU();
+        m_schUnmountControls = new m.LU();
         m_elVideo = null;
         m_elBroadcastPlayer = null;
         m_bMouseDown = !1;
         m_elMouseDown = null;
-        m_listeners = new h.Ji();
+        m_listeners = new m.Ji();
         constructor(e) {
           super(e),
             (this.state = {
@@ -1208,13 +1562,13 @@
             !this.props.nAppIDVOD ||
               (void 0 !== t.strInitialCapsuleImageUrl &&
                 e.nAppIDVOD == this.props.nAppIDVOD) ||
-              u.A.Get()
+              h.A.Get()
                 .QueueAppRequest(this.props.nAppIDVOD, {
                   include_assets: !0,
                   include_trailers: !0,
                 })
                 .then(() => {
-                  const e = u.A.Get().GetApp(this.props.nAppIDVOD),
+                  const e = h.A.Get().GetApp(this.props.nAppIDVOD),
                     t = e?.GetAssets().GetMainCapsuleURL() || "";
                   this.setState({ strInitialCapsuleImageUrl: t });
                 });
@@ -1335,7 +1689,7 @@
         OnContextMenu(e) {
           this.state.bFullscreen ||
             ((0, l.lX)(
-              (0, i.jsx)(_.tz, { children: this.GetContextMenuItems() }),
+              (0, a.jsx)(_.tz, { children: this.GetContextMenuItems() }),
               e,
             ),
             e.preventDefault());
@@ -1351,8 +1705,8 @@
           if (!t || !this.props.onOpenLinkInNewWindow) return;
           let s = t.GetBroadcastInfo();
           if (!s) return;
-          let a = (0, d.k2)(`${B.TS.STORE_BASE_URL}app/${s.m_strAppId}`);
-          this.props.onOpenLinkInNewWindow(e, a), e.stopPropagation();
+          let i = (0, d.k2)(`${B.TS.STORE_BASE_URL}app/${s.m_strAppId}`);
+          this.props.onOpenLinkInNewWindow(e, i), e.stopPropagation();
         }
         GetContextMenuItems() {
           let e = [],
@@ -1361,14 +1715,14 @@
           let s = t.GetBroadcastInfo();
           return (
             e.push(
-              (0, i.jsx)(
+              (0, a.jsx)(
                 _.IK,
                 {
                   bChecked: this.state.bShowStats,
                   onSelected: (e) => {
                     this.ToggleStatsView(e);
                   },
-                  children: (0, T.we)("#Broadcast_VideoContext_ToggleStats"),
+                  children: (0, k.we)("#Broadcast_VideoContext_ToggleStats"),
                 },
                 "togglestats",
               ),
@@ -1377,13 +1731,13 @@
               "0" != s.m_strAppId &&
               Number.parseInt(s.m_strAppId) != c.fO &&
               e.push(
-                (0, i.jsx)(
+                (0, a.jsx)(
                   _.kt,
                   {
                     onSelected: (e) => {
                       this.ShowStorePage(e);
                     },
-                    children: (0, T.we)("#Broadcast_VideoContext_OpenStore"),
+                    children: (0, k.we)("#Broadcast_VideoContext_OpenStore"),
                   },
                   "visitstore",
                 ),
@@ -1399,13 +1753,13 @@
         }
         OnToggleFullscreen() {
           this.m_elBroadcastPlayer &&
-            ((0, P.ww)(this.m_elBroadcastPlayer)
-              ? (0, P.MS)(this.m_elBroadcastPlayer)
-              : (0, P.tl)(this.m_elBroadcastPlayer, this.m_elVideo));
+            ((0, I.ww)(this.m_elBroadcastPlayer)
+              ? (0, I.MS)(this.m_elBroadcastPlayer)
+              : (0, I.tl)(this.m_elBroadcastPlayer, this.m_elVideo));
         }
         OnFullscreenChange(e) {
           if (!this.m_elBroadcastPlayer) return;
-          let t = (0, P.ww)(this.m_elBroadcastPlayer);
+          let t = (0, I.ww)(this.m_elBroadcastPlayer);
           this.setState({ bFullscreen: t });
         }
         BHideVideoControls() {
@@ -1420,14 +1774,14 @@
           const e = this.state.video,
             t = e && e.IsPaused(),
             s = e && e.BHasDASHStats() && this.state.bShowStats,
-            a = Boolean(e && e.IsReplay()),
-            r = this.state.bMountControls,
-            o = this.state.bControlsVisible || t,
+            i = Boolean(e && e.IsReplay()),
+            o = this.state.bMountControls,
+            r = this.state.bControlsVisible || t,
             n = e && e.GetUserInputNeeded(),
             l =
               e?.IsBroadcastVOD() && n && this.state.strInitialCapsuleImageUrl;
           let d = "videoContainer";
-          o || (d += " HidePlayerControls"),
+          r || (d += " HidePlayerControls"),
             t && (d += " VideoPaused"),
             this.state.bFullscreen && (d += " fullscreenVideo"),
             this.props.classes && (d += " " + this.props.classes);
@@ -1438,33 +1792,33 @@
             !this.state.bFullscreen &&
               this.props.onTheaterMode &&
               c.push(
-                (0, i.jsx)(
+                (0, a.jsx)(
                   "div",
                   {
                     onClick: this.props.onTheaterMode,
-                    title: (0, T.we)("#Broadcast_View_Theater"),
+                    title: (0, k.we)("#Broadcast_View_Theater"),
                     className: "BroadcastTheaterToggle",
                   },
                   "ChatPosToggle ChatTheaterToggle",
                 ),
               ),
             c.push(
-              (0, i.jsx)(
+              (0, a.jsx)(
                 "div",
                 {
-                  title: (0, T.we)("#Broadcast_View_Fullscreen"),
+                  title: (0, k.we)("#Broadcast_View_Fullscreen"),
                   onClick: this.OnToggleFullscreen,
                   className: "BroadcastFullscreenToggle",
                 },
                 "FullscreenToggle",
               ),
             );
-          const u = r && !this.BHideVideoControls(),
-            m = r && !this.state.bFullscreen,
-            h =
+          const h = o && !this.BHideVideoControls(),
+            u = o && !this.state.bFullscreen,
+            m =
               this.props.fnRenderBroadcastContext &&
               this.props.fnRenderBroadcastContext();
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             ref: this.BindBroadcastPlayerRef,
             className: d,
             onMouseMove: this.OnMouseMove,
@@ -1473,14 +1827,14 @@
             onContextMenu: this.OnContextMenu,
             onMouseDown: this.OnMouseDown,
             children: [
-              h &&
-                (0, i.jsx)("div", {
-                  className: M().BroadcastContext,
-                  children: h,
+              m &&
+                (0, a.jsx)("div", {
+                  className: N().BroadcastContext,
+                  children: m,
                 }),
-              a && (0, i.jsx)(G, {}),
+              i && (0, a.jsx)(O, {}),
               this.props.showVideoBackgroundBlur &&
-                (0, i.jsx)(p, {
+                (0, a.jsx)(p, {
                   className: "videoBlur",
                   elementRef: this.m_elVideo,
                   updateRate: 33,
@@ -1489,7 +1843,7 @@
                   reductionFactor: 10,
                   blurAmount: 5,
                 }),
-              (0, i.jsx)("video", {
+              (0, a.jsx)("video", {
                 className: "videoSrc",
                 ref: this.BindVideoRef,
                 muted: this.props.bMuted ?? !0,
@@ -1500,7 +1854,7 @@
                 onClick: this.props.fnVideoClick,
               }),
               this.props.linkRegions
-                ? (0, i.jsx)(de, {
+                ? (0, a.jsx)(de, {
                     linkRegions: this.props.linkRegions,
                     editMode: this.props.editMode,
                     onSaveLinkRegions: this.props.onSaveLinkRegions,
@@ -1508,81 +1862,81 @@
                 : null,
               this.props.linkElement,
               l &&
-                (0, i.jsx)("img", {
+                (0, a.jsx)("img", {
                   loading: "lazy",
-                  className: (0, C.A)(
-                    M().BroadcastPlaceholderImg,
+                  className: (0, v.A)(
+                    N().BroadcastPlaceholderImg,
                     "BroadcastPlaceholderImg",
                   ),
                   src: this.state.strInitialCapsuleImageUrl,
                 }),
-              u &&
-                (0, i.jsx)(Z, {
+              h &&
+                (0, a.jsx)(Q, {
                   video: e,
                   actions: c,
                   onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                   onShowStats: this.ToggleStatsView,
                   bIncludeClipEditor: this.props.bIncludeClipEditor,
                 }),
-              m && (0, i.jsx)($, { onClick: this.props.onRequestClose }),
+              u && (0, a.jsx)(Z, { onClick: this.props.onRequestClose }),
               s &&
-                (0, i.jsx)(E, {
+                (0, a.jsx)(E, {
                   stats: e.GetDASHPlayerStats(),
                   closeStats: this.CloseStats,
                 }),
-              (0, i.jsx)(R, { video: e }),
-              n && (0, i.jsx)(L, { video: e }),
+              (0, a.jsx)(G, { video: e }),
+              n && (0, a.jsx)(L, { video: e }),
             ],
           });
         }
       };
-      (0, a.Cg)([m.oI], K.prototype, "BindBroadcastPlayerRef", null),
-        (0, a.Cg)([m.oI], K.prototype, "BindVideoRef", null),
-        (0, a.Cg)([m.oI], K.prototype, "OnMouseDown", null),
-        (0, a.Cg)([m.oI], K.prototype, "OnMouseUp", null),
-        (0, a.Cg)([m.oI], K.prototype, "OnMouseMove", null),
-        (0, a.Cg)([m.oI], K.prototype, "OnMouseLeave", null),
-        (0, a.Cg)([m.oI], K.prototype, "HideControls", null),
-        (0, a.Cg)([m.oI], K.prototype, "UmountControls", null),
-        (0, a.Cg)([m.oI], K.prototype, "ShowStatsView", null),
-        (0, a.Cg)([m.oI], K.prototype, "OnContextMenu", null),
-        (0, a.Cg)([m.oI], K.prototype, "ToggleStatsView", null),
-        (0, a.Cg)([m.oI], K.prototype, "ShowStorePage", null),
-        (0, a.Cg)([m.oI], K.prototype, "CloseStats", null),
-        (0, a.Cg)([m.oI], K.prototype, "OnToggleFullscreen", null),
-        (0, a.Cg)([m.oI], K.prototype, "OnFullscreenChange", null),
-        (K = (0, a.Cg)([o.PA], K));
-      const Q = K;
-      let Z = class extends n.Component {
+      (0, i.Cg)([u.oI], K.prototype, "BindBroadcastPlayerRef", null),
+        (0, i.Cg)([u.oI], K.prototype, "BindVideoRef", null),
+        (0, i.Cg)([u.oI], K.prototype, "OnMouseDown", null),
+        (0, i.Cg)([u.oI], K.prototype, "OnMouseUp", null),
+        (0, i.Cg)([u.oI], K.prototype, "OnMouseMove", null),
+        (0, i.Cg)([u.oI], K.prototype, "OnMouseLeave", null),
+        (0, i.Cg)([u.oI], K.prototype, "HideControls", null),
+        (0, i.Cg)([u.oI], K.prototype, "UmountControls", null),
+        (0, i.Cg)([u.oI], K.prototype, "ShowStatsView", null),
+        (0, i.Cg)([u.oI], K.prototype, "OnContextMenu", null),
+        (0, i.Cg)([u.oI], K.prototype, "ToggleStatsView", null),
+        (0, i.Cg)([u.oI], K.prototype, "ShowStorePage", null),
+        (0, i.Cg)([u.oI], K.prototype, "CloseStats", null),
+        (0, i.Cg)([u.oI], K.prototype, "OnToggleFullscreen", null),
+        (0, i.Cg)([u.oI], K.prototype, "OnFullscreenChange", null),
+        (K = (0, i.Cg)([r.PA], K));
+      const $ = K;
+      let Q = class extends n.Component {
         render() {
           const { video: e } = this.props;
           if (!e) return null;
           let t = e.has_segments;
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "videoControls",
             children: [
-              (0, i.jsx)(ne, {
+              (0, a.jsx)(ne, {
                 steamID: this.props.video.GetBroadcastSteamID(),
                 bHideThumbnail: !0,
                 bVerticalBroadcastChat: !0,
                 onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
               }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 className: "videoControlsBottom" + (t ? "" : " noSegments"),
                 children: [
-                  (0, i.jsx)(oe, {
+                  (0, a.jsx)(re, {
                     video: e,
                     bIncludeClipEditor: this.props.bIncludeClipEditor,
                   }),
-                  (0, i.jsxs)("div", {
+                  (0, a.jsxs)("div", {
                     className: "STV_BroadcastController",
                     children: [
-                      (0, i.jsx)("div", {
+                      (0, a.jsx)("div", {
                         className: "videoControlsButtons LeftSpacer",
                       }),
-                      (0, i.jsx)(Y, { video: e }),
-                      (0, i.jsx)(ee, { video: e }),
-                      (0, i.jsx)(F, {
+                      (0, a.jsx)(Y, { video: e }),
+                      (0, a.jsx)(ee, { video: e }),
+                      (0, a.jsx)(F, {
                         video: e,
                         actions: this.props.actions,
                         onShowStats: this.props.onShowStats,
@@ -1595,14 +1949,14 @@
           });
         }
       };
-      Z = (0, a.Cg)([o.PA], Z);
-      class $ extends n.PureComponent {
+      Q = (0, i.Cg)([r.PA], Q);
+      class Z extends n.PureComponent {
         render() {
           return this.props.onClick
-            ? (0, i.jsx)("div", {
+            ? (0, a.jsx)("div", {
                 className: "STV_BroadcastClose",
                 onClick: this.props.onClick,
-                children: (0, i.jsx)(w.sED, {}),
+                children: (0, a.jsx)(w.sED, {}),
               })
             : null;
         }
@@ -1612,63 +1966,63 @@
           this.props.video.JumpTime(-15);
         }
         OnJumpForward() {
-          this.props.video.JumpTime(X);
+          this.props.video.JumpTime(J);
         }
         render() {
           let e = this.props.video,
             t = e.CanSeek();
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "videoControlsButtons PlayControls",
             children: [
-              (0, i.jsx)(se, { video: e }),
+              (0, a.jsx)(se, { video: e }),
               t &&
-                (0, i.jsxs)("div", {
+                (0, a.jsxs)("div", {
                   className: "videoControlButton videoControlJump controlFlip",
                   onClick: this.OnJumpBackward,
                   children: [
-                    (0, i.jsx)(w.tID, {
+                    (0, a.jsx)(w.tID, {
                       bHidePostArrow: !0,
                       bHidePreArrow: !0,
                       bShowJumpAheadBox: !0,
                       bFlipHorizontal: !0,
                     }),
-                    (0, i.jsx)("div", {
+                    (0, a.jsx)("div", {
                       className: "jumpAheadValue",
-                      children: X,
+                      children: J,
                     }),
                   ],
                 }),
-              (0, i.jsx)(te, { video: e }),
+              (0, a.jsx)(te, { video: e }),
               t &&
-                (0, i.jsxs)("div", {
+                (0, a.jsxs)("div", {
                   className: "videoControlButton videoControlJump",
                   onClick: this.OnJumpForward,
                   children: [
-                    (0, i.jsx)(w.tID, {
+                    (0, a.jsx)(w.tID, {
                       bHidePostArrow: !0,
                       bHidePreArrow: !0,
                       bShowJumpAheadBox: !0,
                       bFlipHorizontal: !1,
                     }),
-                    (0, i.jsx)("div", {
+                    (0, a.jsx)("div", {
                       className: "jumpAheadValue",
-                      children: X,
+                      children: J,
                     }),
                   ],
                 }),
-              t && (0, i.jsx)(ae, { video: e }),
+              t && (0, a.jsx)(ie, { video: e }),
             ],
           });
         }
       }
-      (0, a.Cg)([m.oI], Y.prototype, "OnJumpBackward", null),
-        (0, a.Cg)([m.oI], Y.prototype, "OnJumpForward", null);
-      const ee = (0, o.PA)((e) => {
+      (0, i.Cg)([u.oI], Y.prototype, "OnJumpBackward", null),
+        (0, i.Cg)([u.oI], Y.prototype, "OnJumpForward", null);
+      const ee = (0, r.PA)((e) => {
         if (e.video.IsBroadcastClip() || e.video.IsBroadcastVOD()) return null;
         let t = e.video.IsOnLiveEdge();
-        return (0, i.jsx)("div", {
+        return (0, a.jsx)("div", {
           className: "videoControlsButtons GoLive",
-          children: (0, i.jsxs)("div", {
+          children: (0, a.jsxs)("div", {
             className:
               "videoControlButton videoControlGoLive" +
               (t ? " isLiveEdge" : ""),
@@ -1678,14 +2032,14 @@
                   e.video.JumpToLiveEdge();
                 },
             children: [
-              (0, i.jsx)(w.tID, {
+              (0, a.jsx)(w.tID, {
                 bHidePreArrow: !0,
                 bHidePostArrow: !0,
                 bFlipHorizontal: !1,
               }),
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", {
                 className: "jumpGoLive",
-                children: (0, T.we)(
+                children: (0, k.we)(
                   t
                     ? "#DASHPlayerControls_IsLive"
                     : "#DASHPlayerControls_GoLive",
@@ -1701,18 +2055,18 @@
         }
         render() {
           let e = this.props.video.IsPaused();
-          return (0, i.jsx)("div", {
+          return (0, a.jsx)("div", {
             className: "videoControlButton buttonPlayPause",
             onClick: this.OnTogglePlayPause,
-            children: e ? (0, i.jsx)(w.jGG, {}) : (0, i.jsx)(w.vRz, {}),
+            children: e ? (0, a.jsx)(w.jGG, {}) : (0, a.jsx)(w.vRz, {}),
           });
         }
       };
-      (0, a.Cg)([m.oI], te.prototype, "OnTogglePlayPause", null),
-        (te = (0, a.Cg)([o.PA], te));
+      (0, i.Cg)([u.oI], te.prototype, "OnTogglePlayPause", null),
+        (te = (0, i.Cg)([r.PA], te));
       let se = class extends n.Component {
         constructor(e) {
-          super(e), (0, r.Gn)(this), (this.video = e.video);
+          super(e), (0, o.Gn)(this), (this.video = e.video);
         }
         componentDidUpdate() {
           this.video = this.props.video;
@@ -1734,26 +2088,26 @@
         }
         render() {
           let e = this.props.video.BHasMarkersOrSegments();
-          return (0, i.jsx)("div", {
+          return (0, a.jsx)("div", {
             className:
               "videoControlButton jumpToMarker controlFlip" +
               (e ? "" : " noMarkersOrSegments") +
               (this.has_previous_marker ? "" : " noMarkersInDirection"),
             onClick: this.OnJumpToPreviousMarkerClicked,
-            children: (0, i.jsx)(w.tID, {
+            children: (0, a.jsx)(w.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !0,
             }),
           });
         }
       };
-      (0, a.Cg)([r.sH], se.prototype, "video", void 0),
-        (0, a.Cg)([r.EW], se.prototype, "has_previous_marker", null),
-        (0, a.Cg)([m.oI], se.prototype, "OnJumpToPreviousMarkerClicked", null),
-        (se = (0, a.Cg)([o.PA], se));
-      let ae = class extends n.Component {
+      (0, i.Cg)([o.sH], se.prototype, "video", void 0),
+        (0, i.Cg)([o.EW], se.prototype, "has_previous_marker", null),
+        (0, i.Cg)([u.oI], se.prototype, "OnJumpToPreviousMarkerClicked", null),
+        (se = (0, i.Cg)([r.PA], se));
+      let ie = class extends n.Component {
         constructor(e) {
-          super(e), (0, r.Gn)(this), (this.video = e.video);
+          super(e), (0, o.Gn)(this), (this.video = e.video);
         }
         componentDidUpdate() {
           this.video = this.props.video;
@@ -1775,58 +2129,58 @@
         }
         render() {
           let e = this.props.video.BHasMarkersOrSegments();
-          return (0, i.jsx)("div", {
+          return (0, a.jsx)("div", {
             className:
               "videoControlButton jumpToMarker" +
               (e ? "" : " noMarkersOrSegments") +
               (this.has_next_marker ? "" : " noMarkersInDirection"),
             onClick: this.OnJumpToNextMarkerClicked,
-            children: (0, i.jsx)(w.tID, {
+            children: (0, a.jsx)(w.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !1,
             }),
           });
         }
       };
-      (0, a.Cg)([r.sH], ae.prototype, "video", void 0),
-        (0, a.Cg)([r.EW], ae.prototype, "has_next_marker", null),
-        (0, a.Cg)([m.oI], ae.prototype, "OnJumpToNextMarkerClicked", null),
-        (ae = (0, a.Cg)([o.PA], ae));
-      const ie = (e) =>
-        (0, i.jsx)("div", {
+      (0, i.Cg)([o.sH], ie.prototype, "video", void 0),
+        (0, i.Cg)([o.EW], ie.prototype, "has_next_marker", null),
+        (0, i.Cg)([u.oI], ie.prototype, "OnJumpToNextMarkerClicked", null),
+        (ie = (0, i.Cg)([r.PA], ie));
+      const ae = (e) =>
+        (0, a.jsx)("div", {
           className: "timelineMarker",
           title: e.label,
           style: { left: e.pos + "%" },
           onMouseEnter: () => e.onMouseEnter(e.pos),
           onMouseLeave: e.onMouseLeave,
           onMouseDown: e.onMouseDown ? e.onMouseDown : void 0,
-          children: (0, i.jsx)("div", {
+          children: (0, a.jsx)("div", {
             className: "timelineMarkerIcon",
-            children: (0, i.jsx)(w.Dp6, {}),
+            children: (0, a.jsx)(w.Dp6, {}),
           }),
         });
-      function re(e) {
+      function oe(e) {
         let t = e.startPos,
           s = e.endPos,
-          a = "",
-          r = 1;
+          i = "",
+          o = 1;
         return (
-          t < 0 && ((r = (s - t) / 10), (t = 0), (a = " hideFront")),
-          (0, i.jsxs)("div", {
-            className: "STV_timelineSegment" + a,
-            style: { left: t + "%", width: s - t + "%", opacity: r },
+          t < 0 && ((o = (s - t) / 10), (t = 0), (i = " hideFront")),
+          (0, a.jsxs)("div", {
+            className: "STV_timelineSegment" + i,
+            style: { left: t + "%", width: s - t + "%", opacity: o },
             onClick: e.onClick,
             children: [
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", {
                 className: "STV_timelineSegmentFrontFill",
                 style: { borderColor: "rgb(" + e.color + ")" },
               }),
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", {
                 className: "STV_timelineSegmentLabel",
                 style: { color: "rgb(" + e.color + ")" },
                 children: e.label,
               }),
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", {
                 className: "STV_timelineSegmentBackFill",
                 style: { borderColor: "rgb(" + e.color + ")" },
               }),
@@ -1834,7 +2188,7 @@
           })
         );
       }
-      let oe = class extends n.Component {
+      let re = class extends n.Component {
         m_elSlider = n.createRef();
         m_rectSlider = void 0;
         constructor(e) {
@@ -1904,17 +2258,17 @@
         AdjustSliderForClientX(e) {
           let t = this.props.video,
             s = t.GetTimelineStartPos(),
-            a = t.GetTimelineStartPos() + t.GetTimelineDuration(),
-            i = t.GetTimeAtMousePosition(e, this.m_rectSlider, s, a);
+            i = t.GetTimelineStartPos() + t.GetTimelineDuration(),
+            a = t.GetTimeAtMousePosition(e, this.m_rectSlider, s, i);
           if (this.state.bStartMouseDown) {
-            const e = V.OQ(i, s, t.m_editorEndTime - 5);
+            const e = j.OQ(a, s, t.m_editorEndTime - 5);
             t.m_editorStartTime = e;
           } else if (this.state.bEndMouseDown) {
-            const e = V.OQ(i, t.m_editorStartTime + 5, a);
+            const e = j.OQ(a, t.m_editorStartTime + 5, i);
             t.m_editorEndTime = e;
           } else
-            i != this.state.nGrabberMouseDownTime &&
-              this.setState({ nGrabberMouseDownTime: i });
+            a != this.state.nGrabberMouseDownTime &&
+              this.setState({ nGrabberMouseDownTime: a });
         }
         OnMouseHoverMove(e) {
           this.AdjustHoverForClientX(e.clientX);
@@ -1925,11 +2279,11 @@
         AdjustHoverForClientX(e) {
           let t = this.props.video,
             s = t.GetTimelineStartPos(),
-            a = t.GetTimelineStartPos() + t.GetTimelineDuration();
+            i = t.GetTimelineStartPos() + t.GetTimelineDuration();
           this.m_rectSlider =
             this.m_elSlider.current &&
             this.m_elSlider.current.getBoundingClientRect();
-          t.GetTimeAtMousePosition(e, this.m_rectSlider, s, a);
+          t.GetTimeAtMousePosition(e, this.m_rectSlider, s, i);
         }
         OnSegmentClick(e) {
           this.props.video.Seek(e);
@@ -1947,42 +2301,42 @@
               this.state.nGrabberMouseDownTime,
               c.a0.Timeline,
             ),
-            a = e.GetPercentOffsetFromTime(e.GetPlaybackTime(), c.a0.Timeline),
-            r = e.GetPercentOffsetFromTime(
+            i = e.GetPercentOffsetFromTime(e.GetPlaybackTime(), c.a0.Timeline),
+            o = e.GetPercentOffsetFromTime(
               e.GetVideoAvailableStartTime(),
               c.a0.Timeline,
             );
-          r < 0.05 && (r = 0);
-          let o = V.OQ(s, 0, 100).toFixed(1) + "%",
-            n = V.OQ(a, 0, 100).toFixed(1) + "%",
-            l = V.OQ(r, 0, 100).toFixed(1) + "%",
+          o < 0.05 && (o = 0);
+          let r = j.OQ(s, 0, 100).toFixed(1) + "%",
+            n = j.OQ(i, 0, 100).toFixed(1) + "%",
+            l = j.OQ(o, 0, 100).toFixed(1) + "%",
             d = {},
+            h = {},
             u = {},
-            m = {},
-            h = {};
+            m = {};
           t
-            ? ((h.left = o), (d.width = o), (u.width = n), (m.width = l))
-            : ((h.left = n), (u.width = n), (m.width = l));
-          let p = (0, A.ap)(e.GetPlaybackTime()),
-            _ = (0, A.ap)(this.state.nHoverValue),
-            S = "STV_timelineContainer";
-          this.state.bGrabberMouseDown && (S += " grabberDown"),
-            e.IsTimelineMapActive() && (S += " minimapActive");
-          let g = "";
-          (s = t ? s : a),
+            ? ((m.left = r), (d.width = r), (h.width = n), (u.width = l))
+            : ((m.left = n), (h.width = n), (u.width = l));
+          let p = (0, M.ap)(e.GetPlaybackTime()),
+            _ = (0, M.ap)(this.state.nHoverValue),
+            g = "STV_timelineContainer";
+          this.state.bGrabberMouseDown && (g += " grabberDown"),
+            e.IsTimelineMapActive() && (g += " minimapActive");
+          let S = "";
+          (s = t ? s : i),
             s > 100
-              ? (g = " grabberOffScreenRight grabberOffscreen")
-              : s < 0 && (g = " grabberOffScreenLeft grabberOffscreen");
-          let C = [];
+              ? (S = " grabberOffScreenRight grabberOffscreen")
+              : s < 0 && (S = " grabberOffScreenLeft grabberOffscreen");
+          let v = [];
           e.GetTimelineMarkers().forEach((t, s) => {
-            let a = e.GetPercentOffsetFromTime(t.nTime, c.a0.Timeline);
-            a < 0 ||
-              a > 100 ||
-              C.push(
-                (0, i.jsx)(
-                  ie,
+            let i = e.GetPercentOffsetFromTime(t.nTime, c.a0.Timeline);
+            i < 0 ||
+              i > 100 ||
+              v.push(
+                (0, a.jsx)(
+                  ae,
                   {
-                    pos: a,
+                    pos: i,
                     label: t.strTemplateName,
                     onMouseEnter: this.OnMarkerMouseEnter,
                     onMouseLeave: this.OnMarkerMouseLeave,
@@ -1991,18 +2345,18 @@
                 ),
               );
           });
-          let v = [];
+          let C = [];
           e.GetTimelineSegments().forEach((t, s) => {
-            let a = e.GetPercentOffsetFromTime(t.nTimeStart, c.a0.Timeline);
-            if (a > 100) return;
-            let r = e.GetPercentOffsetFromTime(t.nTimeEnd, c.a0.Timeline);
-            r < 0 ||
-              v.push(
-                (0, i.jsx)(
-                  re,
+            let i = e.GetPercentOffsetFromTime(t.nTimeStart, c.a0.Timeline);
+            if (i > 100) return;
+            let o = e.GetPercentOffsetFromTime(t.nTimeEnd, c.a0.Timeline);
+            o < 0 ||
+              C.push(
+                (0, a.jsx)(
+                  oe,
                   {
-                    startPos: a,
-                    endPos: r,
+                    startPos: i,
+                    endPos: o,
                     label: t.strTemplateName,
                     color: t.color,
                     onClick: (e) => this.OnSegmentClick(t.nTimeStart),
@@ -2015,25 +2369,25 @@
               e.m_editorStartTime,
               c.a0.Timeline,
             ),
-            y = e.GetPercentOffsetFromTime(e.m_editorEndTime, c.a0.Timeline),
-            f = this.props.bIncludeClipEditor
+            f = e.GetPercentOffsetFromTime(e.m_editorEndTime, c.a0.Timeline),
+            y = this.props.bIncludeClipEditor
               ? [
-                  (0, i.jsx)(
-                    ie,
+                  (0, a.jsx)(
+                    ae,
                     {
                       pos: b,
-                      label: (0, T.we)("#DASHPlayerControls_Start"),
+                      label: (0, k.we)("#DASHPlayerControls_Start"),
                       onMouseEnter: this.OnMarkerMouseEnter,
                       onMouseLeave: this.OnMarkerMouseLeave,
                       onMouseDown: (e) => this.OnMouseDown(e, "start"),
                     },
                     "start",
                   ),
-                  (0, i.jsx)(
-                    ie,
+                  (0, a.jsx)(
+                    ae,
                     {
-                      pos: y,
-                      label: (0, T.we)("#DASHPlayerControls_End"),
+                      pos: f,
+                      label: (0, k.we)("#DASHPlayerControls_End"),
                       onMouseEnter: this.OnMarkerMouseEnter,
                       onMouseLeave: this.OnMarkerMouseLeave,
                       onMouseDown: (e) => this.OnMouseDown(e, "end"),
@@ -2042,42 +2396,42 @@
                   ),
                 ]
               : [];
-          return (0, i.jsx)("div", {
+          return (0, a.jsx)("div", {
             className: "videoTimelineMain",
             tabIndex: 0,
             onKeyDown: this.OnKeyDown,
-            children: (0, i.jsxs)("div", {
-              className: S,
+            children: (0, a.jsxs)("div", {
+              className: g,
               children: [
-                (0, i.jsx)("div", { className: "DialogLabel", children: p }),
-                (0, i.jsx)("div", {
+                (0, a.jsx)("div", { className: "DialogLabel", children: p }),
+                (0, a.jsx)("div", {
                   className: "STV_timelineSegmentsContainer",
-                  children: v,
+                  children: C,
                 }),
-                (0, i.jsx)("div", {
+                (0, a.jsx)("div", {
                   onMouseDown: this.OnMouseDown,
                   onMouseMove: this.OnMouseHoverMove,
                   onMouseLeave: this.OnMouseHoverLeave,
                   ref: this.m_elSlider,
-                  children: (0, i.jsxs)("div", {
+                  children: (0, a.jsxs)("div", {
                     className: "VideoTimelineSlider",
                     children: [
-                      (0, i.jsx)("div", {
+                      (0, a.jsx)("div", {
                         className: "STV_timelineValue",
                         style: d,
                       }),
-                      (0, i.jsx)("div", {
+                      (0, a.jsx)("div", {
                         className: "STV_timelineGhostValue",
+                        style: h,
+                      }),
+                      (0, a.jsx)("div", {
+                        className: "STV_timelineNoVideo",
                         style: u,
                       }),
-                      (0, i.jsx)("div", {
-                        className: "STV_timelineNoVideo",
-                        style: m,
-                      }),
-                      C,
-                      f,
+                      v,
+                      y,
                       Boolean(this.state.hoverX) &&
-                        (0, i.jsx)(
+                        (0, a.jsx)(
                           "div",
                           {
                             style: {
@@ -2085,7 +2439,7 @@
                               left: this.state.hoverX - 75,
                               bottom: "30px",
                             },
-                            children: (0, i.jsxs)("div", {
+                            children: (0, a.jsxs)("div", {
                               style: {
                                 position: "relative",
                                 display: "flex",
@@ -2093,11 +2447,11 @@
                               },
                               children: [
                                 this.state.thumbnailURL &&
-                                  (0, i.jsx)("img", {
+                                  (0, a.jsx)("img", {
                                     style: { width: "150px" },
                                     src: this.state.thumbnailURL,
                                   }),
-                                (0, i.jsx)("span", {
+                                (0, a.jsx)("span", {
                                   className: "STV_timelineGrabberValue",
                                   style: {
                                     position: "absolute",
@@ -2110,14 +2464,14 @@
                           },
                           "grabbertime",
                         ),
-                      (0, i.jsx)("div", {
+                      (0, a.jsx)("div", {
                         className: "STV_timelineGrabber_Wrapper",
-                        style: h,
-                        children: (0, i.jsx)("div", {
-                          className: "STV_timelineGrabber" + g,
-                          children: (0, i.jsx)("div", {
+                        style: m,
+                        children: (0, a.jsx)("div", {
+                          className: "STV_timelineGrabber" + S,
+                          children: (0, a.jsx)("div", {
                             className: "STV_timelineGrabberArrow",
-                            children: (0, i.jsx)(w.apU, {}),
+                            children: (0, a.jsx)(w.apU, {}),
                           }),
                         }),
                       }),
@@ -2129,17 +2483,17 @@
           });
         }
       };
-      (0, a.Cg)([m.oI], oe.prototype, "OnMouseDown", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnMouseMove", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnMouseUp", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnKeyDown", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnMouseHoverMove", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnMouseHoverLeave", null),
-        (0, a.Cg)([m.oI], oe.prototype, "AdjustHoverForClientX", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnSegmentClick", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnMarkerMouseEnter", null),
-        (0, a.Cg)([m.oI], oe.prototype, "OnMarkerMouseLeave", null),
-        (oe = (0, a.Cg)([o.PA], oe));
+      (0, i.Cg)([u.oI], re.prototype, "OnMouseDown", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnMouseMove", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnMouseUp", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnKeyDown", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnMouseHoverMove", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnMouseHoverLeave", null),
+        (0, i.Cg)([u.oI], re.prototype, "AdjustHoverForClientX", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnSegmentClick", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnMarkerMouseEnter", null),
+        (0, i.Cg)([u.oI], re.prototype, "OnMarkerMouseLeave", null),
+        (re = (0, i.Cg)([r.PA], re));
       let ne = class extends n.Component {
         state = { info: null };
         static getDerivedStateFromProps(e, t) {
@@ -2156,10 +2510,10 @@
         }
         RenderStreamSwitcher() {
           const e = this.props.steamID;
-          return k.td.stream[e]
-            ? (0, i.jsx)(le, {
+          return V.td.stream[e]
+            ? (0, a.jsx)(le, {
                 value: e,
-                options: k.td.stream,
+                options: V.td.stream,
                 onChange: this.props.onLocalStreamChange,
               })
             : null;
@@ -2168,45 +2522,45 @@
           let { info: e } = this.state;
           if (!e) return null;
           let t = "";
-          e.m_nViewerCount && (t = (0, j.Dq)(e.m_nViewerCount));
+          e.m_nViewerCount && (t = (0, T.Dq)(e.m_nViewerCount));
           let s =
-              k.td.bValid && k.td.stream && k.td.stream[e.m_steamIDBroadcast],
-            a =
+              V.td.bValid && V.td.stream && V.td.stream[e.m_steamIDBroadcast],
+            i =
               !this.props.bHideThumbnail &&
               this.props.bVerticalBroadcastChat &&
               (parseInt(e.m_strAppId) > 0 || s);
-          const r =
+          const o =
             !this.props.bHideThumbnail &&
             this.props.bVerticalBroadcastChat &&
             s &&
-            k.td.gidEvent;
-          return (0, i.jsxs)("div", {
+            V.td.gidEvent;
+          return (0, a.jsxs)("div", {
             className: "BroadcastDetails",
             children: [
               !this.props.bHideThumbnail &&
-                (0, i.jsx)(y, {
+                (0, a.jsx)(f, {
                   className: "broadcastDetailsThumbBlur",
                   src: e.m_strThumbnailUrl,
                   draggable: !1,
                   duration: 2500,
                 }),
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 className: "BroadcastDetailsHeader",
                 children: [
                   e &&
                     e.m_strAppTitle &&
-                    (0, i.jsxs)("div", {
+                    (0, a.jsxs)("div", {
                       className: "displayColumn",
                       children: [
-                        (0, i.jsxs)("div", {
+                        (0, a.jsxs)("div", {
                           className: "Info",
                           children: [
-                            (0, i.jsx)("span", {
+                            (0, a.jsx)("span", {
                               className: "AppTitle",
                               children: e.m_strAppTitle,
                             }),
                             e.m_strTitle &&
-                              (0, i.jsxs)("span", {
+                              (0, a.jsxs)("span", {
                                 className: "BroadcastTitle",
                                 children: [" - ", e.m_strTitle],
                               }),
@@ -2215,36 +2569,36 @@
                           ],
                         }),
                         t &&
-                          (0, i.jsxs)("div", {
+                          (0, a.jsxs)("div", {
                             className: "BroadcastDetailsHeader_ViewerCount",
                             children: [
-                              (0, i.jsx)(w.y_e, {}),
-                              (0, T.Yp)("#Broadcast_ViewerCount", t),
+                              (0, a.jsx)(w.y_e, {}),
+                              (0, k.Yp)("#Broadcast_ViewerCount", t),
                             ],
                           }),
                       ],
                     }),
                   s &&
                     this.props.onOpenLinkInNewWindow &&
-                    (0, i.jsx)("div", {
+                    (0, a.jsx)("div", {
                       className: "Actions",
-                      children: (0, i.jsx)("div", {
+                      children: (0, a.jsx)("div", {
                         onClick: (e) =>
-                          this.props.onOpenLinkInNewWindow(e, k.td.link),
+                          this.props.onOpenLinkInNewWindow(e, V.td.link),
                         className: "BroadcastLink",
-                        children: k.td.linkName,
+                        children: V.td.linkName,
                       }),
                     }),
                 ],
               }),
-              r && (0, i.jsx)(x.m, { gidEvent: k.td.gidEvent }),
-              a &&
-                (0, i.jsx)(f.p, {
+              o && (0, a.jsx)(P.m, { gidEvent: V.td.gidEvent }),
+              i &&
+                (0, a.jsx)(y.p, {
                   id:
-                    k.td.bValid &&
-                    k.td.stream &&
-                    k.td.stream[e.m_steamIDBroadcast]
-                      ? k.td.appID
+                    V.td.bValid &&
+                    V.td.stream &&
+                    V.td.stream[e.m_steamIDBroadcast]
+                      ? V.td.appID
                       : parseInt(e.m_strAppId),
                   type: "game",
                   bPreferAssetWithoutOverride: !1,
@@ -2253,40 +2607,40 @@
           });
         }
       };
-      ne = (0, a.Cg)([o.PA], ne);
+      ne = (0, i.Cg)([r.PA], ne);
       class le extends n.Component {
         showContextMenu(e) {
-          const { options: t, value: s, onChange: a } = this.props,
-            r = Object.keys(t).map((e) =>
-              (0, i.jsx)(
+          const { options: t, value: s, onChange: i } = this.props,
+            o = Object.keys(t).map((e) =>
+              (0, a.jsx)(
                 _.IK,
                 {
-                  onSelected: () => a(e),
+                  onSelected: () => i(e),
                   bChecked: e === s,
-                  children: (0, T.we)(t[e]),
+                  children: (0, k.we)(t[e]),
                 },
                 e,
               ),
             );
-          (0, l.lX)((0, i.jsx)(_.tz, { children: r }), e);
+          (0, l.lX)((0, a.jsx)(_.tz, { children: o }), e);
         }
         render() {
           const { value: e, options: t } = this.props,
             s = t[e];
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "BroadcastLanguage",
             onClick: this.showContextMenu,
             children: [
-              (0, i.jsxs)("span", { children: [" - ", (0, T.we)(s)] }),
-              (0, i.jsx)("div", {
+              (0, a.jsxs)("span", { children: [" - ", (0, k.we)(s)] }),
+              (0, a.jsx)("div", {
                 className: "ContextMenuButton",
-                children: (0, i.jsx)(w.GB9, {}),
+                children: (0, a.jsx)(w.GB9, {}),
               }),
             ],
           });
         }
       }
-      (0, a.Cg)([m.oI], le.prototype, "showContextMenu", null);
+      (0, i.Cg)([u.oI], le.prototype, "showContextMenu", null);
       let de = class extends n.Component {
         constructor(e) {
           super(e), (this.state = { sizableRegion: [] });
@@ -2353,22 +2707,22 @@
             this.setState({ sizableRegion: s }, () => this.OnSaveRegions());
         }
         render() {
-          return (0, i.jsxs)("div", {
+          return (0, a.jsxs)("div", {
             className: "LinkOverlayContainer",
             children: [
-              (0, i.jsxs)("div", {
+              (0, a.jsxs)("div", {
                 className: "LinkOverlayValidRegion",
                 children: [
                   !this.props.editMode && this.props.linkRegions
                     ? this.props.linkRegions.map((e) => {
                         const t = (0, q.p)(e.url);
-                        return (0, i.jsx)(
+                        return (0, a.jsx)(
                           D.uU,
                           {
                             href: e.url,
                             bForceExternal: t,
                             bUseLinkFilter: t,
-                            children: (0, i.jsx)("div", {
+                            children: (0, a.jsx)("div", {
                               className: "LinkRegion",
                               style: {
                                 left: e.left + "%",
@@ -2376,7 +2730,7 @@
                                 width: e.width + "%",
                                 height: e.height + "%",
                               },
-                              children: (0, i.jsxs)("div", {
+                              children: (0, a.jsxs)("div", {
                                 className: "LinkRegionText",
                                 children: [e.link_description, " "],
                               }),
@@ -2388,8 +2742,8 @@
                     : null,
                   this.props.editMode &&
                     this.state.sizableRegion.map((e, t) =>
-                      (0, i.jsx)(
-                        I.I,
+                      (0, a.jsx)(
+                        x.I,
                         {
                           index: t,
                           deleteFn: this.DeleteRegion,
@@ -2405,37 +2759,37 @@
                       ),
                     ),
                   this.props.editMode &&
-                    (0, i.jsx)("div", {
+                    (0, a.jsx)("div", {
                       className: "AddLinkRegion",
                       onClick: this.AddLinkRegion,
-                      children: (0, T.we)("#SteamTV_AddLinkRegion"),
+                      children: (0, k.we)("#SteamTV_AddLinkRegion"),
                     }),
                 ],
               }),
-              (0, i.jsx)("div", {
+              (0, a.jsx)("div", {
                 className: "LinkOverlayInvalidRegion",
-                children: (0, i.jsx)("div", {
-                  children: (0, T.we)("#SteamTV_LinkRegionReserved"),
+                children: (0, a.jsx)("div", {
+                  children: (0, k.we)("#SteamTV_LinkRegionReserved"),
                 }),
               }),
             ],
           });
         }
       };
-      (0, a.Cg)([m.oI], de.prototype, "AddLinkRegion", null),
-        (0, a.Cg)([m.oI], de.prototype, "LoadLinkRegion", null),
-        (0, a.Cg)([m.oI], de.prototype, "OnSaveRegions", null),
-        (0, a.Cg)([m.oI], de.prototype, "DeleteRegion", null),
-        (0, a.Cg)([m.oI], de.prototype, "UpdatePanel", null),
-        (de = (0, a.Cg)([o.PA], de));
+      (0, i.Cg)([u.oI], de.prototype, "AddLinkRegion", null),
+        (0, i.Cg)([u.oI], de.prototype, "LoadLinkRegion", null),
+        (0, i.Cg)([u.oI], de.prototype, "OnSaveRegions", null),
+        (0, i.Cg)([u.oI], de.prototype, "DeleteRegion", null),
+        (0, i.Cg)([u.oI], de.prototype, "UpdatePanel", null),
+        (de = (0, i.Cg)([r.PA], de));
     },
     57876: (e, t, s) => {
       "use strict";
-      s.d(t, { Xh: () => l, cU: () => d, tf: () => u, wl: () => c });
-      var a = s(22837),
-        i = s(30894),
-        r = s(16021),
-        o = s(62792),
+      s.d(t, { Xh: () => l, cU: () => d, tf: () => h, wl: () => c });
+      var i = s(22837),
+        a = s(30894),
+        o = s(16021),
+        r = s(62792),
         n = s(78327);
       const l = {
         include_assets: !0,
@@ -2483,61 +2837,61 @@
         }
       }
       const c = 4;
-      function u(e, t, s, a, i, n) {
+      function h(e, t, s, i, a, n) {
         const l = new Array(),
           d = new Array(),
-          u = new Array(),
-          h = new Array();
+          h = new Array(),
+          m = new Array();
         if (!e || 0 == e.length) return l;
         const p = [
-          o.by.k_RejectSupportedLanguage,
-          o.by.k_RejectAlreadyDisplayed,
-          o.by.k_RejectNoTrailer,
+          r.by.k_RejectSupportedLanguage,
+          r.by.k_RejectAlreadyDisplayed,
+          r.by.k_RejectNoTrailer,
         ];
         for (let n of e) {
           let e = n.id,
-            c = o.by.k_NotRejected;
+            c = r.by.k_NotRejected;
           switch (n.item_type) {
             case "sub":
-              const i = r.A.Get().GetPackage(e);
-              if (1 !== i?.GetIncludedAppIDs()?.length) {
-                c = g(e, t, a, !0);
+              const a = o.A.Get().GetPackage(e);
+              if (1 !== a?.GetIncludedAppIDs()?.length) {
+                c = S(e, t, i, !0);
                 break;
               }
-              e = i.GetIncludedAppIDs()[0];
+              e = a.GetIncludedAppIDs()[0];
             case "app":
-              c = _(e, t, s, a, !0);
+              c = _(e, t, s, i, !0);
               break;
             case "bundle":
-              c = C(e, t, a, !0);
+              c = v(e, t, i, !0);
           }
           if (
-            (c == o.by.k_NotRejected
-              ? ((n.rejected = o.by.k_NotRejected),
+            (c == r.by.k_NotRejected
+              ? ((n.rejected = r.by.k_NotRejected),
                 l.push({ ...n, priority: 1 }))
               : p.includes(c)
-                ? ((n.rejected = o.by.k_NotRejected), d.push(n))
+                ? ((n.rejected = r.by.k_NotRejected), d.push(n))
                 : ((n.rejected = c),
-                  c == o.by.k_RejectIgnoredGame ? u.push(n) : h.push(n)),
-            l.length > i)
+                  c == r.by.k_RejectIgnoredGame ? h.push(n) : m.push(n)),
+            l.length > a)
           )
             break;
         }
         return (
-          l.length < i &&
-            (m(l, d, n, 2),
+          l.length < a &&
+            (u(l, d, n, 2),
             l.length < n &&
               t.enforce_minimum &&
-              (m(l, u, n, 3), m(l, h, n, c))),
+              (u(l, h, n, 3), u(l, m, n, c))),
           l
         );
       }
-      function m(e, t, s, a) {
-        for (let i = 0; e.length < s && i < t.length; ++i)
-          e.push({ ...t[i], priority: a });
+      function u(e, t, s, i) {
+        for (let a = 0; e.length < s && a < t.length; ++a)
+          e.push({ ...t[a], priority: i });
       }
-      function h(e, t) {
-        const s = i.Fm.Get();
+      function m(e, t) {
+        const s = a.Fm.Get();
         if (t.only_current_platform && s.BHasPlatformPreferenceSet()) {
           if (
             !(
@@ -2547,145 +2901,145 @@
                 s.BIsPreferredPlatform("linux"))
             )
           )
-            return o.by.k_RejectWrongPlatform;
+            return r.by.k_RejectWrongPlatform;
         }
         return !t.prepurchase && e.BIsComingSoon()
-          ? o.by.k_RejectNoComingSoon
+          ? r.by.k_RejectNoComingSoon
           : !t.virtual_reality && e.GetPlatforms()?.vr_support.vrhmd_only
-            ? o.by.k_RejectNoVR
+            ? r.by.k_RejectNoVR
             : e.GetAllCreatorClanIDs()?.some((e) => s.BIsIgnoringCurator(e))
-              ? o.by.k_RejectCreatorClan
-              : o.by.k_NotRejected;
+              ? r.by.k_RejectCreatorClan
+              : r.by.k_NotRejected;
       }
       function p(e, t) {
         if (t.localized) {
-          const t = (0, a.sf)(n.TS.LANGUAGE);
+          const t = (0, i.sf)(n.TS.LANGUAGE);
           if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
-            return o.by.k_RejectSupportedLanguage;
+            return r.by.k_RejectSupportedLanguage;
         }
-        return o.by.k_NotRejected;
+        return r.by.k_NotRejected;
       }
-      function _(e, t, s, a, n) {
-        const l = r.A.Get().GetApp(e);
-        if (!l) return o.by.k_RejectNotLoaded;
-        const d = h(l, t);
-        if (d != o.by.k_NotRejected) return d;
-        const c = i.Fm.Get();
-        if (c.BIsGameIgnored(e)) return o.by.k_RejectIgnoredGame;
-        if (c.BExcludeTagIDs(l.GetTagIDs())) return o.by.k_RejectIgnoreGameTags;
+      function _(e, t, s, i, n) {
+        const l = o.A.Get().GetApp(e);
+        if (!l) return r.by.k_RejectNotLoaded;
+        const d = m(l, t);
+        if (d != r.by.k_NotRejected) return d;
+        const c = a.Fm.Get();
+        if (c.BIsGameIgnored(e)) return r.by.k_RejectIgnoredGame;
+        if (c.BExcludeTagIDs(l.GetTagIDs())) return r.by.k_RejectIgnoreGameTags;
         if (c.BExcludesContentDescriptor(l.GetContentDescriptorIDs()))
-          return o.by.k_RejectIgnoreContentDescriptors;
+          return r.by.k_RejectIgnoreContentDescriptors;
         if (!t.early_access && l.BIsEarlyAccess())
-          return o.by.k_RejectEarlyAccess;
-        const u = l.GetAppType();
-        return t.software || 6 != u
+          return r.by.k_RejectEarlyAccess;
+        const h = l.GetAppType();
+        return t.software || 6 != h
           ? t.games_already_in_library && c.BIsGameOwned(e)
-            ? o.by.k_RejectInLibrary
+            ? r.by.k_RejectInLibrary
             : t.games_not_in_library && !c.BIsGameOwned(e)
-              ? o.by.k_RejectNotInLibrary
-              : !t.video && [7, 8, 9].includes(u)
-                ? o.by.k_RejectVideo
+              ? r.by.k_RejectNotInLibrary
+              : !t.video && [7, 8, 9].includes(h)
+                ? r.by.k_RejectVideo
                 : t.has_discount && !l.GetBestPurchaseOption().discount_pct
-                  ? o.by.k_RejectNoDiscount
+                  ? r.by.k_RejectNoDiscount
                   : "adultonly" != s &&
                       t.no_ao_content &&
                       (l.HasContentDescriptorID(3) ||
                         l.HasContentDescriptorID(4))
-                    ? o.by.k_RejectAO
-                    : 1 == u &&
+                    ? r.by.k_RejectAO
+                    : 1 == h &&
                         t.games_already_in_library &&
                         c.BIsGameOwned(l.GetParentAppID())
-                      ? o.by.k_RejectInLibrary
+                      ? r.by.k_RejectInLibrary
                       : n
-                        ? (1 == u && a.BHasAppID(l.GetParentAppID())) ||
-                          a.BHasAppID(e)
-                          ? o.by.k_RejectAlreadyDisplayed
+                        ? (1 == h && i.BHasAppID(l.GetParentAppID())) ||
+                          i.BHasAppID(e)
+                          ? r.by.k_RejectAlreadyDisplayed
                           : t.has_trailer && !l.BHasTrailers(!1)
-                            ? o.by.k_RejectNoTrailer
+                            ? r.by.k_RejectNoTrailer
                             : p(l, t)
-                        : o.by.k_NotRejected
-          : o.by.k_RejectSoftware;
+                        : r.by.k_NotRejected
+          : r.by.k_RejectSoftware;
       }
-      function S(e, t) {
-        const s = i.Fm.Get();
-        let a = !1;
+      function g(e, t) {
+        const s = a.Fm.Get();
+        let i = !1;
         for (let t of e) {
-          if (s.BIsGameIgnored(t)) return o.by.k_RejectIgnoredGame;
-          s.BIsGameOwned(t) && (a = !0);
+          if (s.BIsGameIgnored(t)) return r.by.k_RejectIgnoredGame;
+          s.BIsGameOwned(t) && (i = !0);
         }
-        return t.games_not_in_library && a
-          ? o.by.k_RejectInLibrary
-          : t.games_not_in_library && !a
-            ? o.by.k_RejectNotInLibrary
-            : o.by.k_NotRejected;
+        return t.games_not_in_library && i
+          ? r.by.k_RejectInLibrary
+          : t.games_not_in_library && !i
+            ? r.by.k_RejectNotInLibrary
+            : r.by.k_NotRejected;
       }
-      function g(e, t, s, a) {
-        const n = r.A.Get().GetPackage(e);
-        if (!n) return o.by.k_RejectNotLoaded;
-        const l = h(n, t);
-        if (l != o.by.k_NotRejected) return l;
-        const d = S(n.GetIncludedAppIDs(), t);
-        if (d != o.by.k_NotRejected) return d;
-        const c = i.Fm.Get();
+      function S(e, t, s, i) {
+        const n = o.A.Get().GetPackage(e);
+        if (!n) return r.by.k_RejectNotLoaded;
+        const l = m(n, t);
+        if (l != r.by.k_NotRejected) return l;
+        const d = g(n.GetIncludedAppIDs(), t);
+        if (d != r.by.k_NotRejected) return d;
+        const c = a.Fm.Get();
         return t.games_already_in_library && c.BOwnsPackage(e)
-          ? o.by.k_RejectInLibrary
+          ? r.by.k_RejectInLibrary
           : c.BIsPackageIgnored(e)
-            ? o.by.k_RejectIgnoredGame
-            : a
+            ? r.by.k_RejectIgnoredGame
+            : i
               ? s.BHasPackageID(e)
-                ? o.by.k_RejectAlreadyDisplayed
+                ? r.by.k_RejectAlreadyDisplayed
                 : p(n, t)
-              : o.by.k_NotRejected;
+              : r.by.k_NotRejected;
       }
-      function C(e, t, s, a) {
-        const i = r.A.Get().GetBundle(e);
-        if (!i) return o.by.k_RejectNotLoaded;
-        const n = h(i, t);
-        if (n != o.by.k_NotRejected) return n;
-        const l = S(i.GetIncludedAppIDs(), t);
-        return l != o.by.k_NotRejected
+      function v(e, t, s, i) {
+        const a = o.A.Get().GetBundle(e);
+        if (!a) return r.by.k_RejectNotLoaded;
+        const n = m(a, t);
+        if (n != r.by.k_NotRejected) return n;
+        const l = g(a.GetIncludedAppIDs(), t);
+        return l != r.by.k_NotRejected
           ? l
-          : a
+          : i
             ? s.BHasBundleID(e)
-              ? o.by.k_RejectAlreadyDisplayed
-              : p(i, t)
-            : o.by.k_NotRejected;
+              ? r.by.k_RejectAlreadyDisplayed
+              : p(a, t)
+            : r.by.k_NotRejected;
       }
     },
     79359: (e, t, s) => {
       "use strict";
       s.d(t, { M: () => n });
-      var a = s(90626),
-        i = s(6144),
-        r = s(84933);
-      const o = (e) => null != e;
+      var i = s(90626),
+        a = s(6144),
+        o = s(84933);
+      const r = (e) => null != e;
       function n(e, t) {
-        const [s, i] = a.useState(() => window.localStorage.getItem(e)),
-          n = a.useRef(e),
-          d = a.useCallback(
+        const [s, a] = i.useState(() => window.localStorage.getItem(e)),
+          n = i.useRef(e),
+          d = i.useCallback(
             (t) => {
-              const s = o(t) ? String(t) : null;
+              const s = r(t) ? String(t) : null;
               window.localStorage.setItem(e, s),
-                i(s),
+                a(s),
                 l.Get().GetLocalStoreChangeCallback(e).Dispatch(s);
             },
-            [e, i],
+            [e, a],
           );
-        a.useEffect(() => {
+        i.useEffect(() => {
           e != n.current &&
-            (i(window.localStorage.getItem(e)), (n.current = e));
+            (a(window.localStorage.getItem(e)), (n.current = e));
         }, [e]);
         const c = e == n.current ? s : window.localStorage.getItem(e);
-        let u = t;
+        let h = t;
         return (
-          o(c) &&
-            (u = o(t)
+          r(c) &&
+            (h = r(t)
               ? "boolean" == typeof t
                 ? t.constructor("false" !== c)
                 : t.constructor(c)
               : c),
-          (0, r.hL)(l.Get().GetLocalStoreChangeCallback(e), i),
-          [u, d]
+          (0, o.hL)(l.Get().GetLocalStoreChangeCallback(e), a),
+          [h, d]
         );
       }
       class l {
@@ -2693,7 +3047,7 @@
         GetLocalStoreChangeCallback(e) {
           return (
             this.m_mapChangeCallback.has(e) ||
-              this.m_mapChangeCallback.set(e, new i.lu()),
+              this.m_mapChangeCallback.set(e, new a.lu()),
             this.m_mapChangeCallback.get(e)
           );
         }
@@ -2705,18 +3059,18 @@
     },
     54728: (e, t, s) => {
       "use strict";
-      s.d(t, { es: () => R, fK: () => T, a0: () => j, fO: () => P });
-      var a = s(34629),
-        i = s(41735),
-        r = s.n(i),
-        o = s(14947),
+      s.d(t, { es: () => G, fK: () => k, a0: () => T, fO: () => I });
+      var i = s(34629),
+        a = s(41735),
+        o = s.n(a),
+        r = s(14947),
         n = s(3067),
         l = s(4299);
       function d(e, t, s) {
         return [e, t, s];
       }
       class c extends Error {}
-      class u extends l.J8 {
+      class h extends l.J8 {
         m_appid;
         constructor(e) {
           super(), (this.m_appid = e || 0);
@@ -2749,12 +3103,12 @@
           let s = [];
           if ("object" != typeof e || !Array.isArray(e))
             throw new c("expected array");
-          let a = e.length;
-          for (let i = 0; i < a; ++i)
+          let i = e.length;
+          for (let a = 0; a < i; ++a)
             try {
-              s.push(t(e[i]));
+              s.push(t(e[a]));
             } catch (e) {
-              throw ((e.message += "\n...while parsing array element " + i), e);
+              throw ((e.message += "\n...while parsing array element " + a), e);
             }
           return s;
         }
@@ -2762,12 +3116,12 @@
           let s = new Map();
           if ("object" != typeof e || Array.isArray(e))
             throw new c("expected object");
-          for (let a in e)
+          for (let i in e)
             try {
-              s.set(a, t(e[a]));
+              s.set(i, t(e[i]));
             } catch (e) {
               throw (
-                ((e.message += "\n...while parsing dictionary element " + a), e)
+                ((e.message += "\n...while parsing dictionary element " + i), e)
               );
             }
           return s;
@@ -2837,24 +3191,24 @@
         }
         UpdateMarkers(e, t) {
           let s = [],
-            a = [];
-          for (const i of e)
-            i.persistent
-              ? (a.length > 0 &&
-                  (a[a.length - 1].nTimeEnd = this.convertTime(i.Timestamp, t)),
-                i.name.length > 0 &&
-                  a.push({
-                    strTemplateName: i.name,
-                    nTimeStart: this.convertTime(i.Timestamp, t),
+            i = [];
+          for (const a of e)
+            a.persistent
+              ? (i.length > 0 &&
+                  (i[i.length - 1].nTimeEnd = this.convertTime(a.Timestamp, t)),
+                a.name.length > 0 &&
+                  i.push({
+                    strTemplateName: a.name,
+                    nTimeStart: this.convertTime(a.Timestamp, t),
                     nTimeEnd: -1,
-                    color: d(i.color_r, i.color_g, i.color_b),
+                    color: d(a.color_r, a.color_g, a.color_b),
                   }))
               : s.push({
-                  strTemplateName: i.name,
-                  nTime: this.convertTime(i.Timestamp, t),
-                  color: d(i.color_r, i.color_g, i.color_b),
+                  strTemplateName: a.name,
+                  nTime: this.convertTime(a.Timestamp, t),
+                  color: d(a.color_r, a.color_g, a.color_b),
                 });
-          return { rgMarkers: s, rgSegments: a };
+          return { rgMarkers: s, rgSegments: i };
         }
         UpdateRegions(e) {
           let t = [];
@@ -2869,31 +3223,31 @@
         }
         UpdateSoundtrack(e, t) {}
       }
-      var m = s(36064),
-        h = s(48333),
+      var u = s(36064),
+        m = s(48333),
         p = s(25489),
         _ = s(78327),
-        S = s(6419),
-        g = s(34374),
-        C = s(6144);
-      class v {
+        g = s(6419),
+        S = s(34374),
+        v = s(6144);
+      class C {
         m_elVideo = null;
         m_peerConnection = null;
         m_strBroadcastSteamID = void 0;
         m_ulWebRTCSessionID = void 0;
-        m_schCandidateTimer = new C.LU();
+        m_schCandidateTimer = new v.LU();
         m_nHostCandidateGeneration = void 0;
         m_nCandidateUpdateIntervalMS = void 0;
-        m_listeners = new C.Ji();
+        m_listeners = new v.Ji();
         m_bFirstPlay = !0;
         m_bStatsViewVisible = !1;
-        m_schCaptureDisplayStatsTrigger = new C.LU();
-        m_stats = new g._L();
+        m_schCaptureDisplayStatsTrigger = new v.LU();
+        m_stats = new S._L();
         constructor(e) {
-          (0, o.Gn)(this), (this.m_elVideo = e);
+          (0, r.Gn)(this), (this.m_elVideo = e);
         }
         async PlayMPD(e, t, s) {}
-        async PlayWebRTC(e, t, s, a, i) {
+        async PlayWebRTC(e, t, s, i, a) {
           (this.m_strBroadcastSteamID = e),
             (this.m_ulWebRTCSessionID = s),
             (this.m_nHostCandidateGeneration = 0),
@@ -2907,14 +3261,14 @@
               "resize",
               this.OnVideoResize,
             );
-          let o = {
+          let r = {
             iceServers: [
-              { urls: ["stun:" + a] },
-              { urls: ["turn:" + a], username: t, credential: s },
+              { urls: ["stun:" + i] },
+              { urls: ["turn:" + i], username: t, credential: s },
             ],
             iceTransportPolicy: "relay",
           };
-          (this.m_peerConnection = new RTCPeerConnection(o)),
+          (this.m_peerConnection = new RTCPeerConnection(r)),
             (this.m_peerConnection.oniceconnectionstatechange = ((e) => {
               this.m_peerConnection &&
                 (console.log(
@@ -2938,7 +3292,7 @@
                     String(e.candidate.sdpMLineIndex),
                   ),
                   t.append("candidate", e.candidate.candidate),
-                  r()
+                  o()
                     .post(
                       `${_.TS.CHAT_BASE_URL}broadcast/addbroadcastwebrtccandidate`,
                       t,
@@ -2965,7 +3319,7 @@
                 this.Play());
             }).bind(this)),
             this.m_peerConnection
-              .setRemoteDescription({ type: "offer", sdp: i })
+              .setRemoteDescription({ type: "offer", sdp: a })
               .then(async () => {
                 await this.m_peerConnection.setLocalDescription(
                   await this.m_peerConnection.createAnswer(),
@@ -2978,7 +3332,7 @@
                     this.m_peerConnection.localDescription.sdp,
                   );
                 try {
-                  await r()
+                  await o()
                     .post(
                       `${_.TS.CHAT_BASE_URL}broadcast/setbroadcastwebrtcanswer`,
                       e,
@@ -3012,7 +3366,7 @@
               String(this.m_nHostCandidateGeneration),
             );
           try {
-            await r()
+            await o()
               .post(
                 `${_.TS.CHAT_BASE_URL}broadcast/getbroadcastwebrtccandidates`,
                 e,
@@ -3183,34 +3537,34 @@
           return !1;
         }
       }
-      (0, a.Cg)([S.o], v.prototype, "PlayWebRTC", null),
-        (0, a.Cg)([o.XI.bound], v.prototype, "CaptureStatsForDisplay", null),
-        (0, a.Cg)([S.o], v.prototype, "OnVideoPause", null),
-        (0, a.Cg)([S.o], v.prototype, "OnVideoResize", null);
+      (0, i.Cg)([g.o], C.prototype, "PlayWebRTC", null),
+        (0, i.Cg)([r.XI.bound], C.prototype, "CaptureStatsForDisplay", null),
+        (0, i.Cg)([g.o], C.prototype, "OnVideoPause", null),
+        (0, i.Cg)([g.o], C.prototype, "OnVideoResize", null);
       var b = s(62490),
-        y = s(81393),
-        f = s(61859),
-        x = s(68797),
-        I = s(6469),
+        f = s(81393),
+        y = s(61859),
+        P = s(68797),
+        x = s(6469),
         w = s(43882),
         D = s(66703);
-      const P = 7;
-      var T, j;
+      const I = 7;
+      var k, T;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Unlocking = 1)] = "Unlocking"),
           (e[(e.Loading = 2)] = "Loading"),
           (e[(e.Ready = 3)] = "Ready"),
           (e[(e.Error = 4)] = "Error");
-      })(T || (T = {}));
-      class V {
+      })(k || (k = {}));
+      class j {
         m_rtUnlockTime = 0;
-        m_schUnlockTimeout = new C.LU();
+        m_schUnlockTimeout = new v.LU();
         m_broadcast;
         m_video;
         UnlockH264(e, t) {
           this.BCanUnlockH264()
-            ? (e.SetState(T.Unlocking, ""),
+            ? (e.SetState(k.Unlocking, ""),
               console.log("Unlocking H.264 for broadcast video playback"),
               this.RequestUnlockH264(),
               (this.m_broadcast = e),
@@ -3219,7 +3573,7 @@
               this.m_schUnlockTimeout.Schedule(100, () =>
                 this.CheckUnlockState(),
               ))
-            : e.SetState(T.Error, (0, f.we)("#BroadcastWatch_MinBrowser"));
+            : e.SetState(k.Error, (0, y.we)("#BroadcastWatch_MinBrowser"));
         }
         BCanUnlockH264() {
           return (0, D.Dp)("RemotePlay.UnlockH264")
@@ -3243,11 +3597,11 @@
                 );
         }
         CheckUnlockState() {
-          if (this.m_broadcast.m_eWatchState != T.Unlocking) return;
-          if ((0, m.Mc)() || (0, m.aM)())
+          if (this.m_broadcast.m_eWatchState != k.Unlocking) return;
+          if ((0, u.Mc)() || (0, u.aM)())
             return (
               console.log("Unlocking H.264 successful"),
-              this.m_broadcast.SetState(T.None, ""),
+              this.m_broadcast.SetState(k.None, ""),
               void this.m_video.Restart()
             );
           Date.now() - this.m_rtUnlockTime > 6e3
@@ -3255,8 +3609,8 @@
                 "Unlocking H.264 timed out (Steam client or servers offline?)",
               ),
               this.m_broadcast.SetState(
-                T.Error,
-                (0, f.we)("#BroadcastWatch_MinBrowser"),
+                k.Error,
+                (0, y.we)("#BroadcastWatch_MinBrowser"),
               ))
             : this.m_schUnlockTimeout.Schedule(100, () =>
                 this.CheckUnlockState(),
@@ -3265,7 +3619,7 @@
       }
       class B {
         constructor() {
-          (0, o.Gn)(this);
+          (0, r.Gn)(this);
         }
         m_steamIDBroadcast = "";
         m_ulBroadcastID = "";
@@ -3273,92 +3627,92 @@
         m_strCDNAuthUrlParameters = void 0;
         m_bWebRTC = !1;
         m_data;
-        m_eWatchState = T.None;
+        m_eWatchState = k.None;
         m_strStateDescription = "";
         m_rgVideos = [];
-        m_schManifestTimeout = new C.LU();
-        m_schHeartbeatTimeout = new C.LU();
+        m_schManifestTimeout = new v.LU();
+        m_schHeartbeatTimeout = new v.LU();
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == T.Error && console.log(this.m_strStateDescription);
+            e == k.Error && console.log(this.m_strStateDescription);
         }
       }
-      (0, a.Cg)([o.sH], B.prototype, "m_ulBroadcastID", void 0),
-        (0, a.Cg)([o.sH], B.prototype, "m_eWatchState", void 0),
-        (0, a.Cg)([o.sH], B.prototype, "m_strStateDescription", void 0),
-        (0, a.Cg)([o.XI], B.prototype, "SetState", null);
-      class k {
+      (0, i.Cg)([r.sH], B.prototype, "m_ulBroadcastID", void 0),
+        (0, i.Cg)([r.sH], B.prototype, "m_eWatchState", void 0),
+        (0, i.Cg)([r.sH], B.prototype, "m_strStateDescription", void 0),
+        (0, i.Cg)([r.XI], B.prototype, "SetState", null);
+      class V {
         m_steamIDBroadcast = "";
         m_bInitialized = !1;
         m_strTitle = "";
-        m_strAppId = "" + P;
-        m_nAppID = P;
+        m_strAppId = "" + I;
+        m_nAppID = I;
         m_strAppTitle = "";
         m_strThumbnailUrl = "";
         m_nViewerCount = 0;
         m_bIsOnline = !1;
-        m_schUpdateTimeout = new C.LU();
+        m_schUpdateTimeout = new v.LU();
         m_nRefCount = 0;
         constructor(e) {
-          (0, o.Gn)(this), (this.m_steamIDBroadcast = e);
+          (0, r.Gn)(this), (this.m_steamIDBroadcast = e);
         }
       }
-      (0, a.Cg)([o.sH], k.prototype, "m_bInitialized", void 0),
-        (0, a.Cg)([o.sH], k.prototype, "m_strTitle", void 0),
-        (0, a.Cg)([o.sH], k.prototype, "m_strAppId", void 0),
-        (0, a.Cg)([o.sH], k.prototype, "m_nAppID", void 0),
-        (0, a.Cg)([o.sH], k.prototype, "m_strAppTitle", void 0),
-        (0, a.Cg)([o.sH], k.prototype, "m_strThumbnailUrl", void 0),
-        (0, a.Cg)([o.sH], k.prototype, "m_nViewerCount", void 0),
-        (0, a.Cg)([o.sH], k.prototype, "m_bIsOnline", void 0);
-      class A {
+      (0, i.Cg)([r.sH], V.prototype, "m_bInitialized", void 0),
+        (0, i.Cg)([r.sH], V.prototype, "m_strTitle", void 0),
+        (0, i.Cg)([r.sH], V.prototype, "m_strAppId", void 0),
+        (0, i.Cg)([r.sH], V.prototype, "m_nAppID", void 0),
+        (0, i.Cg)([r.sH], V.prototype, "m_strAppTitle", void 0),
+        (0, i.Cg)([r.sH], V.prototype, "m_strThumbnailUrl", void 0),
+        (0, i.Cg)([r.sH], V.prototype, "m_nViewerCount", void 0),
+        (0, i.Cg)([r.sH], V.prototype, "m_bIsOnline", void 0);
+      class M {
         constructor() {
-          (0, o.Gn)(this);
+          (0, r.Gn)(this);
         }
-        m_eWatchState = T.None;
+        m_eWatchState = k.None;
         m_strStateDescription = "";
         m_rgVideos = [];
         SetState(e, t = "") {
           (this.m_eWatchState = e),
             (this.m_strStateDescription = t),
-            e == T.Error && console.log(this.m_strStateDescription);
+            e == k.Error && console.log(this.m_strStateDescription);
         }
       }
-      (0, a.Cg)([o.sH], A.prototype, "m_eWatchState", void 0),
-        (0, a.Cg)([o.sH], A.prototype, "m_strStateDescription", void 0),
-        (0, a.Cg)([o.XI], A.prototype, "SetState", null);
-      class N extends A {
+      (0, i.Cg)([r.sH], M.prototype, "m_eWatchState", void 0),
+        (0, i.Cg)([r.sH], M.prototype, "m_strStateDescription", void 0),
+        (0, i.Cg)([r.XI], M.prototype, "SetState", null);
+      class A extends M {
         m_clipID;
         m_data;
       }
-      class M extends A {
+      class N extends M {
         m_nAppIDVOD;
         m_manifestURL;
       }
-      class O {
+      class R {
         m_mapBroadcasts = new Map();
         m_mapClips = new Map();
         m_mapVODs = new Map();
         m_activeVideo = null;
         m_broadcastSettings = { nVolume: 1, bMuted: !1, ulViewerToken: "0" };
-        m_schSaveSettings = new C.LU();
+        m_schSaveSettings = new v.LU();
         m_broadcastInfos = {};
         constructor() {
-          (0, o.Gn)(this), this.LoadBroadcastSettings();
+          (0, r.Gn)(this), this.LoadBroadcastSettings();
         }
         GetBroadcastState(e) {
           if (e.IsBroadcastClip()) {
             let t = this.m_mapClips.get(e.GetBroadcastClipID());
-            return t ? t.m_eWatchState : T.None;
+            return t ? t.m_eWatchState : k.None;
           }
           if (e.IsBroadcastVOD()) {
             const t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
-            return t ? t.m_eWatchState : T.None;
+            return t ? t.m_eWatchState : k.None;
           }
           {
             let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-            return t ? t.m_eWatchState : T.None;
+            return t ? t.m_eWatchState : k.None;
           }
         }
         GetBroadcastStateDescription(e) {
@@ -3375,45 +3729,45 @@
             return t ? t.m_strStateDescription : "";
           }
         }
-        CreateBroadcastVideo(e, t, s, a) {
-          let i = this.GetOrCreateBroadcast(t),
-            { nVolume: r, bMuted: o } = this.m_broadcastSettings,
-            n = new G(e, r, o, s);
+        CreateBroadcastVideo(e, t, s, i) {
+          let a = this.GetOrCreateBroadcast(t),
+            { nVolume: o, bMuted: r } = this.m_broadcastSettings,
+            n = new O(e, o, r, s);
           if (
             (n.SetBroadcastSteamID(t),
-            i.m_rgVideos.push(n),
-            (i.m_bWebRTC = a),
-            !(0, m.Mc)() && !(0, m.aM)())
+            a.m_rgVideos.push(n),
+            (a.m_bWebRTC = i),
+            !(0, u.Mc)() && !(0, u.aM)())
           ) {
-            return new V().UnlockH264(i, n), n;
+            return new j().UnlockH264(a, n), n;
           }
           return n;
         }
         CreateClipVideo(e, t, s) {
-          let a = this.GetOrCreateClip(t),
-            { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            o = new G(e, i, r, s);
+          let i = this.GetOrCreateClip(t),
+            { nVolume: a, bMuted: o } = this.m_broadcastSettings,
+            r = new O(e, a, o, s);
           if (
-            (o.SetBroadcastClipID(t),
-            a.m_rgVideos.push(o),
-            !(0, m.Mc)() && !(0, m.aM)())
+            (r.SetBroadcastClipID(t),
+            i.m_rgVideos.push(r),
+            !(0, u.Mc)() && !(0, u.aM)())
           ) {
-            return new V().UnlockH264(a, o), o;
+            return new j().UnlockH264(i, r), r;
           }
-          return o;
+          return r;
         }
         CreateVODVideo(e, t, s) {
-          let a = this.GetOrCreateVOD(t),
-            { nVolume: i, bMuted: r } = this.m_broadcastSettings,
-            o = new G(e, i, r, s);
+          let i = this.GetOrCreateVOD(t),
+            { nVolume: a, bMuted: o } = this.m_broadcastSettings,
+            r = new O(e, a, o, s);
           if (
-            (o.SetBroadcastAppIDVOD(t),
-            a.m_rgVideos.push(o),
-            !(0, m.Mc)() && !(0, m.aM)())
+            (r.SetBroadcastAppIDVOD(t),
+            i.m_rgVideos.push(r),
+            !(0, u.Mc)() && !(0, u.aM)())
           ) {
-            return new V().UnlockH264(a, o), o;
+            return new j().UnlockH264(i, r), r;
           }
-          return o;
+          return r;
         }
         StartVideo(e) {
           if (e.IsBroadcastClip()) {
@@ -3421,24 +3775,24 @@
             let t = this.m_mapClips.get(e.GetBroadcastClipID());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == T.None
+              t.m_eWatchState == k.None
                 ? this.GetClipManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == T.Ready && e.StartClip(t);
+                : t.m_eWatchState == k.Ready && e.StartClip(t);
           } else if (e.IsBroadcastVOD()) {
             console.log(`Starting VOD for ${e.GetBroadcastAppIDVOD()}`);
             let t = this.m_mapVODs.get(e.GetBroadcastAppIDVOD());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == T.None
+              t.m_eWatchState == k.None
                 ? this.GetVODManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == T.Ready && e.StartVOD(t);
+                : t.m_eWatchState == k.Ready && e.StartVOD(t);
           } else {
             let t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
             if (!t) return;
             this.SetActiveVideo(e),
-              t.m_eWatchState == T.None
+              t.m_eWatchState == k.None
                 ? this.GetBroadcastManifest(t, e.GetWatchLocation())
-                : t.m_eWatchState == T.Ready && e.StartBroadcast(t);
+                : t.m_eWatchState == k.Ready && e.StartBroadcast(t);
           }
         }
         SetActiveVideo(e) {
@@ -3464,14 +3818,14 @@
               (s.m_ulBroadcastID &&
                 (async function (e, t, s) {
                   if (!t) return;
-                  let a = new FormData();
-                  a.append("steamid", e),
-                    a.append("broadcastid", t),
-                    a.append("viewertoken", s);
+                  let i = new FormData();
+                  i.append("steamid", e),
+                    i.append("broadcastid", t),
+                    i.append("viewertoken", s);
                   try {
-                    await r().post(
+                    await o().post(
                       _.TS.CHAT_BASE_URL + "broadcast/stopwatching",
-                      a,
+                      i,
                     );
                   } catch {}
                 })(
@@ -3496,10 +3850,10 @@
         }
         GetOrCreateBroadcastInfo(e) {
           if (!e) {
-            return new k("");
+            return new V("");
           }
           if (!this.m_broadcastInfos[e]) {
-            const t = (0, o.sH)(new k(e));
+            const t = (0, r.sH)(new V(e));
             this.m_broadcastInfos[e] = t;
           }
           return this.m_broadcastInfos[e];
@@ -3510,7 +3864,7 @@
             t ||
             ((t = new B()),
             (t.m_steamIDBroadcast = e),
-            (t.m_eWatchState = T.None),
+            (t.m_eWatchState = k.None),
             this.m_mapBroadcasts.set(e, t),
             t)
           );
@@ -3534,9 +3888,9 @@
           let t = this.m_mapClips.get(e);
           return (
             t ||
-            ((t = new N()),
+            ((t = new A()),
             (t.m_clipID = e),
-            (t.m_eWatchState = T.None),
+            (t.m_eWatchState = k.None),
             this.m_mapClips.set(e, t),
             t)
           );
@@ -3545,9 +3899,9 @@
           let t = this.m_mapVODs.get(e);
           return (
             t ||
-            ((t = new M()),
+            ((t = new N()),
             (t.m_nAppIDVOD = e),
-            (t.m_eWatchState = T.None),
+            (t.m_eWatchState = k.None),
             this.m_mapVODs.set(e, t),
             t)
           );
@@ -3556,7 +3910,7 @@
           let t = "0",
             s = this.m_mapBroadcasts.get(e.m_steamIDBroadcast);
           if ((s && (t = s.m_ulBroadcastID), 0 == e.m_nRefCount)) return;
-          const a = {
+          const i = {
             steamid: e.m_steamIDBroadcast,
             broadcastid: t,
             location:
@@ -3566,14 +3920,14 @@
               s.m_rgVideos[0].GetWatchLocation(),
           };
           try {
-            const t = await r().get(
+            const t = await o().get(
               `${_.TS.CHAT_BASE_URL}broadcast/getbroadcastinfo/`,
-              { params: a },
+              { params: i },
             );
             if (!t || !t.data || !t.data.success || 1 != t.data.success)
               return void (e.m_bInitialized = !0);
             const s = t.data;
-            (0, o.h5)(() => {
+            (0, r.h5)(() => {
               (e.m_bInitialized = !0),
                 (e.m_strTitle = s.title),
                 (e.m_strAppId = s.appid),
@@ -3603,8 +3957,8 @@
           );
         }
         async GetBroadcastManifest(e, t, s = Date.now()) {
-          e.SetState(T.Loading, "");
-          let a = {
+          e.SetState(k.Loading, "");
+          let i = {
               steamid: e.m_steamIDBroadcast,
               broadcastid: 0,
               viewertoken: this.m_broadcastSettings.ulViewerToken,
@@ -3612,34 +3966,34 @@
               sessionid: _.TS.SESSIONID,
               is_webrtc: e.m_bWebRTC,
             },
-            i = null;
+            a = null;
           try {
-            i = await r().get(
+            a = await o().get(
               _.TS.CHAT_BASE_URL + "broadcast/getbroadcastmpd/",
-              { params: a, withCredentials: !0 },
+              { params: i, withCredentials: !0 },
             );
           } catch (e) {
-            let t = (0, x.H)(e);
+            let t = (0, P.H)(e);
             console.error(
               "Failed to get broadcast manifest!" + t.strErrorMsg,
               t,
             );
           }
-          if (!i || 200 != i.status)
+          if (!a || 200 != a.status)
             return void e.SetState(
-              T.Error,
-              (0, f.we)("#BroadcastWatch_RequestFailed"),
+              k.Error,
+              (0, y.we)("#BroadcastWatch_RequestFailed"),
             );
-          let o = i.data;
-          o.viewertoken && this.SetViewerToken(o.viewertoken);
-          let n = o.success;
+          let r = a.data;
+          r.viewertoken && this.SetViewerToken(r.viewertoken);
+          let n = r.success;
           if ("ready" == n)
-            e.SetState(T.Ready),
-              (e.m_ulBroadcastID = o.broadcastid),
+            e.SetState(k.Ready),
+              (e.m_ulBroadcastID = r.broadcastid),
               (e.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
-              (e.m_strCDNAuthUrlParameters = o.cdn_auth_url_parameters),
-              (e.m_bWebRTC = o.is_webrtc),
-              (e.m_data = o),
+              (e.m_strCDNAuthUrlParameters = r.cdn_auth_url_parameters),
+              (e.m_bWebRTC = r.is_webrtc),
+              (e.m_data = r),
               this.LoadBroadcast(e),
               setTimeout(() => {
                 e.m_schHeartbeatTimeout.Schedule(
@@ -3649,117 +4003,117 @@
               }, 3e4 * Math.random());
           else if ("waiting" == n) {
             e.SetState(
-              T.Loading,
-              (0, f.we)("#BroadcastWatch_WaitingForResponse"),
+              k.Loading,
+              (0, y.we)("#BroadcastWatch_WaitingForResponse"),
             );
-            let a = Date.now() - s;
-            if (a > 6e4)
+            let i = Date.now() - s;
+            if (i > 6e4)
               return void e.SetState(
-                T.Error,
-                (0, f.we)("#BroadcastWatch_NotAvailable"),
+                k.Error,
+                (0, y.we)("#BroadcastWatch_NotAvailable"),
               );
-            let i = a > 3e4 ? o.retry : 5e3;
-            e.m_schManifestTimeout.Schedule(i, () =>
+            let a = i > 3e4 ? r.retry : 5e3;
+            e.m_schManifestTimeout.Schedule(a, () =>
               this.GetBroadcastManifest(e, t, s),
             );
           } else
             "waiting_for_start" == n
               ? (e.SetState(
-                  T.Loading,
-                  (0, f.we)("#BroadcastWatch_WaitingForStart"),
+                  k.Loading,
+                  (0, y.we)("#BroadcastWatch_WaitingForStart"),
                 ),
-                e.m_schManifestTimeout.Schedule(o.retry, () =>
+                e.m_schManifestTimeout.Schedule(r.retry, () =>
                   this.GetBroadcastManifest(e, t, s),
                 ))
               : "waiting_for_reconnect" == n
                 ? (e.SetState(
-                    T.Loading,
-                    (0, f.we)("#BroadcastWatch_WaitingForReconnect"),
+                    k.Loading,
+                    (0, y.we)("#BroadcastWatch_WaitingForReconnect"),
                   ),
-                  e.m_schManifestTimeout.Schedule(o.retry, () =>
+                  e.m_schManifestTimeout.Schedule(r.retry, () =>
                     this.GetBroadcastManifest(e, t, s),
                   ))
                 : "end" == n
                   ? e.SetState(
-                      T.Error,
-                      (0, f.we)("#BroadcastWatch_NotAvailable"),
+                      k.Error,
+                      (0, y.we)("#BroadcastWatch_NotAvailable"),
                     )
                   : "too_many_broadcasts" == n
                     ? e.SetState(
-                        T.Error,
-                        (0, f.we)("#BroadcastWatch_TooManyBroadcasts"),
+                        k.Error,
+                        (0, y.we)("#BroadcastWatch_TooManyBroadcasts"),
                       )
                     : "system_not_supported" == n
                       ? e.SetState(
-                          T.Error,
-                          (0, f.we)("#BroadcastWatch_SystemNotSupported"),
+                          k.Error,
+                          (0, y.we)("#BroadcastWatch_SystemNotSupported"),
                         )
                       : "user_restricted" == n
                         ? e.SetState(
-                            T.Error,
-                            (0, f.we)("#BroadcastWatch_UserRestricted"),
+                            k.Error,
+                            (0, y.we)("#BroadcastWatch_UserRestricted"),
                           )
                         : "poor_upload_quality" == n
                           ? e.SetState(
-                              T.Error,
-                              (0, f.we)("#BroadcastWatch_PoorUploadQuality"),
+                              k.Error,
+                              (0, y.we)("#BroadcastWatch_PoorUploadQuality"),
                             )
                           : "request_failed" == n
                             ? e.SetState(
-                                T.Error,
-                                (0, f.we)("#BroadcastWatch_RequestFailed"),
+                                k.Error,
+                                (0, y.we)("#BroadcastWatch_RequestFailed"),
                               )
                             : "too_many_viewers" == n
                               ? e.SetState(
-                                  T.Error,
-                                  (0, f.we)("#BroadcastWatch_TooManyViewers"),
+                                  k.Error,
+                                  (0, y.we)("#BroadcastWatch_TooManyViewers"),
                                 )
                               : e.SetState(
-                                  T.Error,
-                                  (0, f.we)("#BroadcastWatch_NotAvailable"),
+                                  k.Error,
+                                  (0, y.we)("#BroadcastWatch_NotAvailable"),
                                 );
         }
         async GetClipManifest(e, t) {
-          e.SetState(T.Loading, "");
+          e.SetState(k.Loading, "");
           let s = {
               clipid: e.m_clipID,
               watchlocation: t,
               sessionid: _.TS.SESSIONID,
             },
-            a = null;
+            i = null;
           try {
-            a = await r().get(_.TS.CHAT_BASE_URL + "broadcast/getclipdetails", {
+            i = await o().get(_.TS.CHAT_BASE_URL + "broadcast/getclipdetails", {
               params: s,
               withCredentials: !0,
             });
           } catch (e) {
             console.error(e), console.log("Failed to get clip manifest!");
           }
-          if (!a || 200 != a.status)
+          if (!i || 200 != i.status)
             return void e.SetState(
-              T.Error,
-              (0, f.we)("#BroadcastWatch_RequestFailed"),
+              k.Error,
+              (0, y.we)("#BroadcastWatch_RequestFailed"),
             );
-          let i = a.data;
-          1 == i.success
-            ? (e.SetState(T.Ready), (e.m_data = i), this.LoadClip(e))
-            : e.SetState(T.Error, (0, f.we)("#BroadcastWatch_RequestFailed"));
+          let a = i.data;
+          1 == a.success
+            ? (e.SetState(k.Ready), (e.m_data = a), this.LoadClip(e))
+            : e.SetState(k.Error, (0, y.we)("#BroadcastWatch_RequestFailed"));
         }
         async GetVODManifest(e, t) {
-          e.SetState(T.Loading, "");
-          let s = await I.K.Get().LoadVODForAppID(e.m_nAppIDVOD);
+          e.SetState(k.Loading, "");
+          let s = await x.K.Get().LoadVODForAppID(e.m_nAppIDVOD);
           s
-            ? (e.SetState(T.Ready),
+            ? (e.SetState(k.Ready),
               (e.m_manifestURL = s.video_url),
               this.LoadVOD(e))
-            : e.SetState(T.Error, (0, f.we)("#BroadcastWatch_RequestFailed"));
+            : e.SetState(k.Error, (0, y.we)("#BroadcastWatch_RequestFailed"));
         }
         async HeartbeatBroadcast(e) {
           let t = new FormData();
           t.append("steamid", e.m_steamIDBroadcast),
             t.append("broadcastid", e.m_ulBroadcastID),
             t.append("viewertoken", this.m_broadcastSettings.ulViewerToken),
-            r().post(_.TS.CHAT_BASE_URL + "broadcast/heartbeat/", t),
+            o().post(_.TS.CHAT_BASE_URL + "broadcast/heartbeat/", t),
             e.m_schHeartbeatTimeout.Schedule(
               1e3 * e.m_data.heartbeat_interval,
               () => this.HeartbeatBroadcast(e),
@@ -3777,15 +4131,15 @@
           e.m_rgVideos.findIndex((e) => e == this.m_activeVideo) >= 0 &&
             this.m_activeVideo.StartVOD(e);
         }
-        BroadcastDownloadFailed(e, t = !0, s = h.N_.Invalid) {
+        BroadcastDownloadFailed(e, t = !0, s = m.N_.Invalid) {
           e.Stop();
-          let a = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-          a &&
-            a.m_eWatchState != T.Loading &&
-            (a.m_bWebRTC && t && (a.m_bWebRTC = !1),
-            s == h.N_.StreamGone
-              ? this.DelayedGetBroadcastManifest(a, e.GetWatchLocation())
-              : this.GetBroadcastManifest(a, e.GetWatchLocation()));
+          let i = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
+          i &&
+            i.m_eWatchState != k.Loading &&
+            (i.m_bWebRTC && t && (i.m_bWebRTC = !1),
+            s == m.N_.StreamGone
+              ? this.DelayedGetBroadcastManifest(i, e.GetWatchLocation())
+              : this.GetBroadcastManifest(i, e.GetWatchLocation()));
         }
         UserInputClickVideo(e) {
           if (
@@ -3838,14 +4192,14 @@
             this.SaveBroadcastSettings());
         }
       }
-      (0, a.Cg)([o.sH], O.prototype, "m_mapBroadcasts", void 0),
+      (0, i.Cg)([r.sH], R.prototype, "m_mapBroadcasts", void 0),
         (function (e) {
           (e[(e.Timeline = 1)] = "Timeline"), (e[(e.Minimap = 2)] = "Minimap");
-        })(j || (j = {}));
-      class G {
+        })(T || (T = {}));
+      class O {
         m_elVideo = null;
         m_player = null;
-        m_listeners = new C.Ji();
+        m_listeners = new v.Ji();
         m_gameDataParser = null;
         m_eWatchLocation = 0;
         m_bStartWithSubtitles = !1;
@@ -3866,17 +4220,17 @@
         m_nVideoEndPos = 0;
         m_editorStartTime = 0;
         m_editorEndTime = 0;
-        m_rgMarkers = o.sH.array();
-        m_rgSegments = o.sH.array();
-        m_rgRegions = o.sH.array();
+        m_rgMarkers = r.sH.array();
+        m_rgSegments = r.sH.array();
+        m_rgRegions = r.sH.array();
         m_fnOnVideoEnd;
         m_videoEndingTimer;
-        constructor(e, t, s, a) {
-          (0, o.Gn)(this),
+        constructor(e, t, s, i) {
+          (0, r.Gn)(this),
             (this.m_elVideo = e),
             (this.m_nVolume = t),
             (this.m_bMuted = s),
-            (this.m_eWatchLocation = a);
+            (this.m_eWatchLocation = i);
         }
         SetBroadcastSteamID(e) {
           this.m_steamIDBroadcast = e;
@@ -3970,23 +4324,23 @@
           return null;
         }
         SetSubtitles(e) {
-          let t = e ? f.bi[e] : -1;
+          let t = e ? y.bi[e] : -1;
           this.m_player.SetSubtitles(t);
         }
         SetStartWithSubtitles(e) {
           this.m_bStartWithSubtitles = e;
         }
         GetBroadcastState() {
-          return R.GetBroadcastState(this);
+          return G.GetBroadcastState(this);
         }
         GetBroadcastStateDescription() {
-          return R.GetBroadcastStateDescription(this);
+          return G.GetBroadcastStateDescription(this);
         }
         SetOnVideoCallback(e) {
           this.m_fnOnVideoEnd = e;
         }
         InitPlayer() {
-          (0, y.wT)(!this.m_player, "Initialized twice?"),
+          (0, f.wT)(!this.m_player, "Initialized twice?"),
             this.m_listeners.AddEventListener(
               this.m_elVideo,
               "playing",
@@ -4056,7 +4410,7 @@
         }
         StartBroadcast(e) {
           if ((this.InitPlayer(), e.m_data.url)) {
-            let t = new h.Zn(this.m_elVideo);
+            let t = new m.Zn(this.m_elVideo);
             t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
               (this.m_player = t),
               this.m_player.PlayMPD(
@@ -4065,7 +4419,7 @@
                 e.m_strCDNAuthUrlParameters,
               );
           } else
-            (this.m_player = new v(this.m_elVideo)),
+            (this.m_player = new C(this.m_elVideo)),
               this.m_player.PlayWebRTC(
                 this.m_steamIDBroadcast,
                 e.m_ulViewerToken,
@@ -4083,11 +4437,11 @@
               e.m_ulViewerToken,
               e.m_strCDNAuthUrlParameters,
             ),
-            (this.m_BroadcastInfo = R.StartInfo(this.m_steamIDBroadcast));
+            (this.m_BroadcastInfo = G.StartInfo(this.m_steamIDBroadcast));
         }
         StartClip(e) {
           this.InitPlayer();
-          let t = new h.Zn(this.m_elVideo);
+          let t = new m.Zn(this.m_elVideo);
           t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
             (this.m_player = t),
             this.m_player.PlayMPD(e.m_data.clip_url),
@@ -4096,7 +4450,7 @@
         }
         StartVOD(e) {
           this.InitPlayer();
-          let t = new h.Zn(this.m_elVideo);
+          let t = new m.Zn(this.m_elVideo);
           t.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
             (this.m_player = t),
             _.iA.logged_in &&
@@ -4109,7 +4463,7 @@
         Stop() {
           this.m_listeners.Unregister(),
             this.m_BroadcastInfo &&
-              (R.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
+              (G.StopInfo(this.m_BroadcastInfo), (this.m_BroadcastInfo = null)),
             (this.m_gameDataParser = null),
             this.m_player && (this.m_player.Close(), (this.m_player = null));
         }
@@ -4120,16 +4474,16 @@
         }
         Play() {
           const e = this.GetBroadcastState();
-          e == T.None || this.IsBroadcastClip()
-            ? R.StartVideo(this)
-            : e == T.Ready &&
-              (R.SetActiveVideo(this),
+          e == k.None || this.IsBroadcastClip()
+            ? G.StartVideo(this)
+            : e == k.Ready &&
+              (G.SetActiveVideo(this),
               this.m_player
                 ? this.m_player.Play()
                 : this.IsBroadcastVOD()
-                  ? this.StartVOD(R.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
+                  ? this.StartVOD(G.GetBroadcastVOD(this.m_nBroadcastAppIDVOD))
                   : this.StartBroadcast(
-                      R.GetBroadcast(this.m_steamIDBroadcast),
+                      G.GetBroadcast(this.m_steamIDBroadcast),
                     ));
         }
         Pause() {
@@ -4158,12 +4512,12 @@
         SetVolume(e) {
           this.m_player && this.m_player.SetVolume(e),
             (this.m_nVolume = this.m_player.GetVolume()),
-            R.SaveVolumeChange(e, this.m_bMuted);
+            G.SaveVolumeChange(e, this.m_bMuted);
         }
         SetMute(e) {
           this.m_player && this.m_player.SetMuted(e),
             (this.m_bMuted = e),
-            R.SaveVolumeChange(this.m_nVolume, e);
+            G.SaveVolumeChange(this.m_nVolume, e);
         }
         IsMuted() {
           return this.m_bMuted;
@@ -4205,7 +4559,7 @@
               this.IsBroadcastVOD() &&
                 ((this.m_nTimelineDuration = this.m_nVideoEndPos),
                 this.m_fnOnVideoEnd &&
-                  this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br))
+                  this.m_nVideoEndPos - this.m_nPlaybackTime < m.Br))
             ) {
               const e = 400;
               this.m_videoEndingTimer = window.setTimeout(() => {
@@ -4214,7 +4568,7 @@
             }
             (this.m_bBuffering = this.m_player.IsBuffering()),
               (this.m_bOnLiveEdge =
-                this.m_nVideoEndPos - this.m_nPlaybackTime < h.Br),
+                this.m_nVideoEndPos - this.m_nPlaybackTime < m.Br),
               this.m_player.IsPaused() && (this.m_bOnLiveEdge = !1);
           }
         }
@@ -4227,7 +4581,7 @@
           if (!t || "object" != typeof t.gamedata) return;
           (this.m_gameDataParser &&
             this.m_gameDataParser.GetAppID() == t.gamedata.__appid) ||
-            (this.m_gameDataParser = new u(t.gamedata.__appid));
+            (this.m_gameDataParser = new h(t.gamedata.__appid));
           const s = this.m_player.GetLiveContentStartTime().getTime();
           if ("timelinemarkers" in t.gamedata) {
             const e = this.m_gameDataParser.UpdateMarkers(
@@ -4237,8 +4591,8 @@
             e &&
               (this.m_rgMarkers.replace(e.rgMarkers || []),
               this.m_rgSegments.replace(e.rgSegments || []));
-            const a = this.m_gameDataParser.UpdateRegions(t.gamedata.__regions);
-            a && this.m_rgRegions.replace(a);
+            const i = this.m_gameDataParser.UpdateRegions(t.gamedata.__regions);
+            i && this.m_rgRegions.replace(i);
           } else
             "soundtrack" in t.gamedata &&
               this.m_gameDataParser.UpdateSoundtrack(
@@ -4247,14 +4601,14 @@
               );
         }
         OnDownloadFailed(e) {
-          let t = e.detail || h.N_.Invalid;
-          R.BroadcastDownloadFailed(this, !0, t);
+          let t = e.detail || m.N_.Invalid;
+          G.BroadcastDownloadFailed(this, !0, t);
         }
         OnWebRTCRetry() {
-          R.BroadcastDownloadFailed(this, !1);
+          G.BroadcastDownloadFailed(this, !1);
         }
         OnWebRTCFailed() {
-          R.BroadcastDownloadFailed(this, !0);
+          G.BroadcastDownloadFailed(this, !0);
         }
         OnUserInputNeeded() {
           this.m_bUserInputNeeded = !0;
@@ -4272,18 +4626,18 @@
         GetTimelineDuration() {
           return this.m_nTimelineDuration;
         }
-        GetTimeAtMousePosition(e, t, s, a) {
-          let i = p.Fu(e, t.left, t.right, s, a);
-          return Math.floor(i + 0.5);
+        GetTimeAtMousePosition(e, t, s, i) {
+          let a = p.Fu(e, t.left, t.right, s, i);
+          return Math.floor(a + 0.5);
         }
         GetPercentOffsetFromTime(e, t) {
           let s = 0,
-            a = 0;
+            i = 0;
           return (
-            t == j.Timeline
-              ? ((a = this.m_nVideoEndPos), (s = a - this.m_nTimelineDuration))
-              : ((s = 0), (a = 0)),
-            p.Fu(e, s, a, 0, 100)
+            t == T.Timeline
+              ? ((i = this.m_nVideoEndPos), (s = i - this.m_nTimelineDuration))
+              : ((s = 0), (i = 0)),
+            p.Fu(e, s, i, 0, 100)
           );
         }
         GetTimelineMarkers() {
@@ -4305,120 +4659,120 @@
           return this.m_rgSegments.length > 0;
         }
       }
-      (0, a.Cg)([o.sH], G.prototype, "m_player", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_bPaused", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_nPlaybackTime", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_bBuffering", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_bOnLiveEdge", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_nVolume", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_bMuted", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_bUserInputNeeded", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_bIsReplay", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_nTimelineDuration", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_nVideoStartPos", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_nVideoEndPos", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_editorStartTime", void 0),
-        (0, a.Cg)([o.sH], G.prototype, "m_editorEndTime", void 0),
-        (0, a.Cg)([o.XI.bound], G.prototype, "StartBroadcast", null),
-        (0, a.Cg)([o.XI.bound], G.prototype, "StartClip", null),
-        (0, a.Cg)([o.XI.bound], G.prototype, "StartVOD", null),
-        (0, a.Cg)([S.o], G.prototype, "OnVideoPlaying", null),
-        (0, a.Cg)([S.o], G.prototype, "OnVideoPause", null),
-        (0, a.Cg)([o.XI.bound], G.prototype, "OnVideoTimeUpdate", null),
-        (0, a.Cg)([S.o], G.prototype, "OnVolumeUpdated", null),
-        (0, a.Cg)([o.XI.bound], G.prototype, "OnGameDataUpdate", null),
-        (0, a.Cg)([S.o], G.prototype, "OnDownloadFailed", null),
-        (0, a.Cg)([S.o], G.prototype, "OnWebRTCRetry", null),
-        (0, a.Cg)([S.o], G.prototype, "OnWebRTCFailed", null),
-        (0, a.Cg)([S.o], G.prototype, "OnUserInputNeeded", null);
-      const R = new O();
-      window.uiBroadcastWatchStore = R;
+      (0, i.Cg)([r.sH], O.prototype, "m_player", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_bPaused", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_nPlaybackTime", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_bBuffering", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_bOnLiveEdge", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_nVolume", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_bMuted", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_bUserInputNeeded", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_bIsReplay", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_nTimelineDuration", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_nVideoStartPos", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_nVideoEndPos", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_editorStartTime", void 0),
+        (0, i.Cg)([r.sH], O.prototype, "m_editorEndTime", void 0),
+        (0, i.Cg)([r.XI.bound], O.prototype, "StartBroadcast", null),
+        (0, i.Cg)([r.XI.bound], O.prototype, "StartClip", null),
+        (0, i.Cg)([r.XI.bound], O.prototype, "StartVOD", null),
+        (0, i.Cg)([g.o], O.prototype, "OnVideoPlaying", null),
+        (0, i.Cg)([g.o], O.prototype, "OnVideoPause", null),
+        (0, i.Cg)([r.XI.bound], O.prototype, "OnVideoTimeUpdate", null),
+        (0, i.Cg)([g.o], O.prototype, "OnVolumeUpdated", null),
+        (0, i.Cg)([r.XI.bound], O.prototype, "OnGameDataUpdate", null),
+        (0, i.Cg)([g.o], O.prototype, "OnDownloadFailed", null),
+        (0, i.Cg)([g.o], O.prototype, "OnWebRTCRetry", null),
+        (0, i.Cg)([g.o], O.prototype, "OnWebRTCFailed", null),
+        (0, i.Cg)([g.o], O.prototype, "OnUserInputNeeded", null);
+      const G = new R();
+      window.uiBroadcastWatchStore = G;
     },
     55263: (e, t, s) => {
       "use strict";
       s.d(t, {
         G6: () => l,
-        Gg: () => u,
+        Gg: () => h,
         MS: () => _,
         Ow: () => c,
-        YM: () => S,
-        mZ: () => m,
+        YM: () => g,
+        mZ: () => u,
         t7: () => d,
         zX: () => p,
       });
-      var a = s(41735),
-        i = s.n(a),
-        r = s(90626),
-        o = s(84933),
+      var i = s(41735),
+        a = s.n(i),
+        o = s(90626),
+        r = s(84933),
         n = s(16021);
-      function l(e, t, s, a) {
-        const l = (0, r.useRef)(void 0),
-          d = (0, r.useRef)(void 0),
-          c = (0, o.CH)();
+      function l(e, t, s, i) {
+        const l = (0, o.useRef)(void 0),
+          d = (0, o.useRef)(void 0),
+          c = (0, r.CH)();
         l.current = e;
-        const [u, m] = (0, r.useState)(void 0),
+        const [h, u] = (0, o.useState)(void 0),
           {
-            include_assets: h,
+            include_assets: m,
             include_release: p,
             include_platforms: _,
-            include_all_purchase_options: S,
-            include_screenshots: g,
-            include_trailers: C,
-            include_ratings: v,
+            include_all_purchase_options: g,
+            include_screenshots: S,
+            include_trailers: v,
+            include_ratings: C,
             include_tag_count: b,
-            include_reviews: y,
-            include_basic_info: f,
-            include_supported_languages: x,
-            include_full_description: I,
+            include_reviews: f,
+            include_basic_info: y,
+            include_supported_languages: P,
+            include_full_description: x,
             include_included_items: w,
             include_assets_without_overrides: D,
-            apply_user_filters: P,
-            include_links: T,
+            apply_user_filters: I,
+            include_links: k,
           } = s;
         if (
-          ((0, r.useEffect)(() => {
+          ((0, o.useEffect)(() => {
             const s = {
-              include_assets: h,
+              include_assets: m,
               include_release: p,
               include_platforms: _,
-              include_all_purchase_options: S,
-              include_screenshots: g,
-              include_trailers: C,
-              include_ratings: v,
+              include_all_purchase_options: g,
+              include_screenshots: S,
+              include_trailers: v,
+              include_ratings: C,
               include_tag_count: b,
-              include_reviews: y,
-              include_basic_info: f,
-              include_supported_languages: x,
-              include_full_description: I,
+              include_reviews: f,
+              include_basic_info: y,
+              include_supported_languages: P,
+              include_full_description: x,
               include_included_items: w,
               include_assets_without_overrides: D,
-              apply_user_filters: P,
-              include_links: T,
+              apply_user_filters: I,
+              include_links: k,
             };
-            let r = null;
+            let o = null;
             return (
               !e ||
                 e < 0 ||
                 n.A.Get().BHasStoreItem(e, t, s) ||
-                (void 0 !== u && a && a == d.current) ||
-                (a !== d.current && (m(void 0), (d.current = a)),
-                (r = i().CancelToken.source()),
+                (void 0 !== h && i && i == d.current) ||
+                (i !== d.current && (u(void 0), (d.current = i)),
+                (o = a().CancelToken.source()),
                 n.A.Get()
                   .QueueStoreItemRequest(e, t, s)
                   .then((t) => {
-                    r?.token.reason || l.current !== e || m(1 == t), c();
+                    o?.token.reason || l.current !== e || u(1 == t), c();
                   })),
-              () => r?.cancel("useStoreItemCache: unmounting")
+              () => o?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, a, u, h, p, _, S, g, C, v, b, y, f, x, I, w, D, P, T, c]),
+          }, [e, t, i, h, m, p, _, g, S, v, C, b, f, y, P, x, w, D, I, k, c]),
           !e)
         )
           return [null, 2];
-        if (!1 === u) return [void 0, 2];
+        if (!1 === h) return [void 0, 2];
         if (n.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!n.A.Get().BHasStoreItem(e, t, s)) return [void 0, 1];
-        const j = n.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return j ? [j, 3] : [null, 2];
+        const T = n.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return T ? [T, 3] : [null, 2];
       }
       function d(e, t, s) {
         return l(e, 0, t, s);
@@ -4426,77 +4780,77 @@
       function c(e, t, s) {
         return l(e, 2, t, s);
       }
-      function u(e, t, s) {
+      function h(e, t, s) {
         return l(e, 1, t, s);
       }
-      function m(e, t, s) {
-        const [a, i] = l(e, t, s);
-        let r;
-        1 != a?.GetStoreItemType() ||
-          a.GetAssets()?.GetHeaderURL() ||
-          1 != a?.GetIncludedAppIDs().length ||
-          (r = a.GetIncludedAppIDs()[0]);
-        const [o, n] = d(r, s);
-        return r && o?.BIsVisible() ? [o, n] : [a, i];
+      function u(e, t, s) {
+        const [i, a] = l(e, t, s);
+        let o;
+        1 != i?.GetStoreItemType() ||
+          i.GetAssets()?.GetHeaderURL() ||
+          1 != i?.GetIncludedAppIDs().length ||
+          (o = i.GetIncludedAppIDs()[0]);
+        const [r, n] = d(o, s);
+        return o && r?.BIsVisible() ? [r, n] : [i, a];
       }
-      function h(e, t, s, a) {
-        const l = (0, o.CH)(),
+      function m(e, t, s, i) {
+        const l = (0, r.CH)(),
           {
             include_assets: d,
             include_release: c,
-            include_platforms: u,
-            include_all_purchase_options: m,
-            include_screenshots: h,
+            include_platforms: h,
+            include_all_purchase_options: u,
+            include_screenshots: m,
             include_trailers: p,
             include_ratings: _,
-            include_tag_count: S,
-            include_reviews: g,
-            include_basic_info: C,
-            include_supported_languages: v,
+            include_tag_count: g,
+            include_reviews: S,
+            include_basic_info: v,
+            include_supported_languages: C,
             include_full_description: b,
-            include_included_items: y,
-            include_assets_without_overrides: f,
-            apply_user_filters: x,
-            include_links: I,
+            include_included_items: f,
+            include_assets_without_overrides: y,
+            apply_user_filters: P,
+            include_links: x,
           } = s;
         if (
-          ((0, r.useEffect)(() => {
+          ((0, o.useEffect)(() => {
             if (!e || 0 == e.length) return;
             const s = {
                 include_assets: d,
                 include_release: c,
-                include_platforms: u,
-                include_all_purchase_options: m,
-                include_screenshots: h,
+                include_platforms: h,
+                include_all_purchase_options: u,
+                include_screenshots: m,
                 include_trailers: p,
                 include_ratings: _,
-                include_tag_count: S,
-                include_reviews: g,
-                include_basic_info: C,
-                include_supported_languages: v,
+                include_tag_count: g,
+                include_reviews: S,
+                include_basic_info: v,
+                include_supported_languages: C,
                 include_full_description: b,
-                include_included_items: y,
-                include_assets_without_overrides: f,
-                apply_user_filters: x,
-                include_links: I,
+                include_included_items: f,
+                include_assets_without_overrides: y,
+                apply_user_filters: P,
+                include_links: x,
               },
-              a = e.filter(
+              i = e.filter(
                 (e) =>
                   !(
                     n.A.Get().BHasStoreItem(e, t, s) ||
                     n.A.Get().BIsStoreItemMissing(e, t)
                   ),
               );
-            if (0 == a.length) return;
-            const r = i().CancelToken.source(),
-              o = a.map((e) => n.A.Get().QueueStoreItemRequest(e, t, s));
+            if (0 == i.length) return;
+            const o = a().CancelToken.source(),
+              r = i.map((e) => n.A.Get().QueueStoreItemRequest(e, t, s));
             return (
-              Promise.all(o).then(() => {
-                r.token.reason || l();
+              Promise.all(r).then(() => {
+                o.token.reason || l();
               }),
-              () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
+              () => o.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, a, l, d, c, u, m, h, p, _, S, g, C, v, b, y, f, x, I]),
+          }, [e, t, i, l, d, c, h, u, m, p, _, g, S, v, C, b, f, y, P, x]),
           !e)
         )
           return 2;
@@ -4515,13 +4869,13 @@
           : 2;
       }
       function p(e, t, s) {
-        return h(e, 0, t, s);
+        return m(e, 0, t, s);
       }
       function _(e, t, s) {
-        return h(e, 2, t, s);
+        return m(e, 2, t, s);
       }
-      function S() {
-        r.useEffect(
+      function g() {
+        o.useEffect(
           () => (
             n.A.Get().SetReturnUnavailableItems(!0),
             () => n.A.Get().SetReturnUnavailableItems(!1)
@@ -4532,53 +4886,53 @@
     },
     53354: (e, t, s) => {
       "use strict";
-      s.d(t, { u: () => o });
-      var a = s(7850),
-        i = s(59952),
-        r = s(3088);
-      function o(e) {
-        const { strImageToken: t, language: s, strAltText: o } = e,
-          n = (0, i.z5)(t, s);
+      s.d(t, { u: () => r });
+      var i = s(7850),
+        a = s(59952),
+        o = s(3088);
+      function r(e) {
+        const { strImageToken: t, language: s, strAltText: r } = e,
+          n = (0, a.z5)(t, s);
         return n
           ? "string" == typeof n
-            ? (0, a.jsx)("img", { src: n, alt: o })
-            : (0, a.jsx)(r.c, { rgSources: n, strAltText: o })
+            ? (0, i.jsx)("img", { src: n, alt: r })
+            : (0, i.jsx)(o.c, { rgSources: n, strAltText: r })
           : null;
       }
     },
     2921: (e, t, s) => {
       "use strict";
-      s.d(t, { PE: () => G, qP: () => N, Yg: () => A });
-      var a = s(7850),
-        i = s(76217),
-        r = s(86927),
-        o = s(42834),
+      s.d(t, { PE: () => O, qP: () => A, Yg: () => M });
+      var i = s(7850),
+        a = s(76217),
+        o = s(86927),
+        r = s(42834),
         n = s(52471),
         l = s(39777),
         d = s(52541),
         c = s(38535),
-        u = s(90626),
-        m = s(92834),
-        h = s(1078),
+        h = s(90626),
+        u = s(92834),
+        m = s(1078),
         p = s(12155),
         _ = s(52038),
-        S = s(78327),
-        g = s(51706),
-        C = s(46253),
-        v = s(22797),
+        g = s(78327),
+        S = s(51706),
+        v = s(46253),
+        C = s(22797),
         b = s(54096),
-        y = s(91970),
-        f = s.n(y),
-        x = s(18654),
-        I = s.n(x),
+        f = s(91970),
+        y = s.n(f),
+        P = s(18654),
+        x = s.n(P),
         w = s(32754),
         D = s(61859),
-        P = s(30470),
-        T = s(24484);
-      function j(e) {
+        I = s(30470),
+        k = s(24484);
+      function T(e) {
         const { id: t } = e,
           { data: s } = (0, l.J$)(t),
-          i = (0, u.useMemo)(() => {
+          a = (0, h.useMemo)(() => {
             if (!s) return [];
             const e =
               s.categories?.supported_player_categoryids?.slice(0, 1) || [];
@@ -4591,262 +4945,262 @@
               e
             );
           }, [s]);
-        return i && 0 != i.length
-          ? (0, a.jsx)("div", {
-              className: (0, _.A)(I().SaleTagBlockCtn, "SaleTagBlockCtn"),
-              children: Boolean(i?.length > 0)
-                ? (0, a.jsx)("div", {
-                    className: (0, _.A)(I().TagBox, I().Categories),
-                    children: i.map((e) =>
-                      (0, a.jsx)(B, { categoryID: e }, "cat_" + e),
+        return a && 0 != a.length
+          ? (0, i.jsx)("div", {
+              className: (0, _.A)(x().SaleTagBlockCtn, "SaleTagBlockCtn"),
+              children: Boolean(a?.length > 0)
+                ? (0, i.jsx)("div", {
+                    className: (0, _.A)(x().TagBox, x().Categories),
+                    children: a.map((e) =>
+                      (0, i.jsx)(B, { categoryID: e }, "cat_" + e),
                     ),
                   })
-                : (0, a.jsx)("div", { children: (0, D.we)("#Broadcast_None") }),
+                : (0, i.jsx)("div", { children: (0, D.we)("#Broadcast_None") }),
             })
           : null;
       }
-      class V {
+      class j {
         m_rgCategories;
         constructor() {
-          this.m_rgCategories = (0, T.Tc)(
+          this.m_rgCategories = (0, k.Tc)(
             "feature_categories",
             "application_config",
           );
         }
         static g_Self = null;
         static Get() {
-          return V.g_Self || (V.g_Self = new V()), V.g_Self;
+          return j.g_Self || (j.g_Self = new j()), j.g_Self;
         }
       }
       function B(e) {
         const { categoryID: t } = e,
-          s = V.Get().m_rgCategories.find((e) => e.categoryid == t);
+          s = j.Get().m_rgCategories.find((e) => e.categoryid == t);
         return s
-          ? (0, a.jsx)("div", {
-              className: I().Category,
-              children: (0, a.jsx)(w.he, {
+          ? (0, i.jsx)("div", {
+              className: x().Category,
+              children: (0, i.jsx)(w.he, {
                 toolTipContent: s.name,
-                children: (0, a.jsx)("div", {
-                  className: I().CategoryIcon,
+                children: (0, i.jsx)("div", {
+                  className: x().CategoryIcon,
                   style: {
-                    background: `url(${P.TS.STORE_CDN_URL}/public/images/${s.image_path}) no-repeat center center/cover`,
+                    background: `url(${I.TS.STORE_CDN_URL}/public/images/${s.image_path}) no-repeat center center/cover`,
                   },
                 }),
               }),
             })
           : null;
       }
-      var k = s(90421);
-      function A(e) {
+      var V = s(90421);
+      function M(e) {
         const { id: t, bPopOutTrailerPlayback: s } = e,
-          { data: i } = (0, l.Yo)(t),
-          { data: r } = (0, l.j4)(t),
-          { data: o } = (0, l.J$)(t),
-          [n, d] = (0, u.useState)(!1),
-          [m, h] = (0, u.useState)(!1),
+          { data: a } = (0, l.Yo)(t),
+          { data: o } = (0, l.j4)(t),
+          { data: r } = (0, l.J$)(t),
+          [n, d] = (0, h.useState)(!1),
+          [u, m] = (0, h.useState)(!1),
           p = (0, c.dy)(),
-          S = i?.highlights?.filter((e) => !p || e.all_ages),
-          g = S && S?.length > 0 ? S[0] : void 0,
-          C = u.useCallback(() => {
-            g && (s ? h(!0) : d((e) => !e));
-          }, [g, s]);
-        if (!o)
-          return (0, a.jsx)("div", {
-            className: (0, _.A)(f().HilightGrid, f().MediaContainer),
-            children: (0, a.jsx)(v.t, { size: "medium" }),
+          g = a?.highlights?.filter((e) => !p || e.all_ages),
+          S = g && g?.length > 0 ? g[0] : void 0,
+          v = h.useCallback(() => {
+            S && (s ? m(!0) : d((e) => !e));
+          }, [S, s]);
+        if (!r)
+          return (0, i.jsx)("div", {
+            className: (0, _.A)(y().HilightGrid, y().MediaContainer),
+            children: (0, i.jsx)(C.t, { size: "medium" }),
           });
-        const b = g
-          ? (0, a.jsx)(R, { trailer: g, bPlayVideo: n, fnTogglePlayTrailer: C })
+        const b = S
+          ? (0, i.jsx)(G, { trailer: S, bPlayVideo: n, fnTogglePlayTrailer: v })
           : null;
-        return g ||
-          (r && r.all_ages_screenshots && r.all_ages_screenshots.length > 0)
-          ? (0, a.jsxs)("div", {
-              className: (0, _.A)(f().HilightGrid, f().MediaContainer),
+        return S ||
+          (o && o.all_ages_screenshots && o.all_ages_screenshots.length > 0)
+          ? (0, i.jsxs)("div", {
+              className: (0, _.A)(y().HilightGrid, y().MediaContainer),
               children: [
-                (0, a.jsx)(M, {
+                (0, i.jsx)(N, {
                   elFeaturedInCenter: b,
-                  storeItemScreenshots: r,
-                  trailer: g,
+                  storeItemScreenshots: o,
+                  trailer: S,
                   id: t,
-                  name: o.name || "",
+                  name: r.name || "",
                 }),
                 Boolean(s)
-                  ? (0, a.jsx)(G, {
+                  ? (0, i.jsx)(O, {
                       id: t,
-                      bShowModal: m,
-                      hideModal: () => h(!1),
+                      bShowModal: u,
+                      hideModal: () => m(!1),
                     })
-                  : (0, a.jsx)(O, {
-                      name: o.name || "",
-                      trailer: g,
+                  : (0, i.jsx)(R, {
+                      name: r.name || "",
+                      trailer: S,
                       bPlayVideo: n,
-                      fnTogglePlayTrailer: C,
+                      fnTogglePlayTrailer: v,
                       bControls: !0,
                     }),
               ],
             })
           : null;
       }
-      function N(e) {
+      function A(e) {
         const {
             id: t,
             fnOnClickButton: s,
-            bLowBandwidthMode: i,
-            bUseAssetWithoutOverride: r,
+            bLowBandwidthMode: a,
+            bUseAssetWithoutOverride: o,
           } = e,
-          { data: o } = (0, l.j4)(t),
+          { data: r } = (0, l.j4)(t),
           { data: d } = (0, l.J$)(t),
           { data: c } = (0, l.Yo)(t),
-          u = (0, n.kB)(t);
-        return void 0 !== !c && o && d
-          ? (0, a.jsx)("div", {
-              className: (0, _.A)(f().HilightGrid, f().MediaContainerMM),
-              children: (0, a.jsx)(M, {
+          h = (0, n.kB)(t);
+        return void 0 !== !c && r && d
+          ? (0, i.jsx)("div", {
+              className: (0, _.A)(y().HilightGrid, y().MediaContainerMM),
+              children: (0, i.jsx)(N, {
                 id: t,
-                elFeaturedInCenter: (0, a.jsx)(L, {
+                elFeaturedInCenter: (0, i.jsx)(L, {
                   id: t,
-                  bUseAssetWithoutOverride: Boolean(r),
+                  bUseAssetWithoutOverride: Boolean(o),
                   fnOnClickButton: s,
                 }),
-                trailer: u && u.length > 0 ? u[0] : void 0,
-                storeItemScreenshots: o,
-                featureElementclassName: f().MainImage,
-                bUseTrailerAsFirstThumb: !i,
+                trailer: h && h.length > 0 ? h[0] : void 0,
+                storeItemScreenshots: r,
+                featureElementclassName: y().MainImage,
+                bUseTrailerAsFirstThumb: !a,
                 bNoScreenShotModals: !0,
                 name: d.name || "",
               }),
             })
-          : (0, a.jsx)("div", {
-              className: (0, _.A)(f().HilightGrid, f().MediaContainerMM),
-              children: (0, a.jsx)(v.t, { size: "medium" }),
+          : (0, i.jsx)("div", {
+              className: (0, _.A)(y().HilightGrid, y().MediaContainerMM),
+              children: (0, i.jsx)(C.t, { size: "medium" }),
             });
       }
-      function M(e) {
+      function N(e) {
         const {
             elFeaturedInCenter: t,
             id: s,
-            name: i,
-            trailer: r,
+            name: a,
+            trailer: o,
             storeItemScreenshots: n,
             featureElementclassName: l,
-            bUseTrailerAsFirstThumb: m,
+            bUseTrailerAsFirstThumb: u,
             bNoScreenShotModals: p,
           } = e,
-          [S, g] = u.useState(void 0),
-          [C, v] = (0, h.XC)(),
+          [g, S] = h.useState(void 0),
+          [v, C] = (0, m.XC)(),
           b = (0, c.dy)(),
-          y = (0, u.useRef)(null),
-          [x, I] = (0, u.useState)(0);
+          f = (0, h.useRef)(null),
+          [P, x] = (0, h.useState)(0);
         if (!s) return null;
-        const w = t || (void 0 !== S && -1 !== S) ? S : 0,
+        const w = t || (void 0 !== g && -1 !== g) ? g : 0,
           D = new Array(),
-          P = new Array();
-        m &&
-          r &&
+          I = new Array();
+        u &&
+          o &&
           (D.push(
-            (0, a.jsx)(
-              R,
+            (0, i.jsx)(
+              G,
               {
-                trailer: r,
+                trailer: o,
                 bPlayVideo: !1,
                 fnTogglePlayTrailer: () => {},
-                onMouseEnter: () => g(0),
+                onMouseEnter: () => S(0),
                 onMouseLeave: () => {
-                  const e = y.current;
-                  e && I(e.currentTime);
+                  const e = f.current;
+                  e && x(e.currentTime);
                 },
               },
               "trail_thumb_",
             ),
           ),
-          P.push(
-            (0, a.jsx)(
-              O,
+          I.push(
+            (0, i.jsx)(
+              R,
               {
-                ref: y,
-                name: i,
-                trailer: r,
+                ref: f,
+                name: a,
+                trailer: o,
                 bControls: !1,
                 bPlayVideo: !0,
-                startTime: x,
+                startTime: P,
                 fnTogglePlayTrailer: () => {},
               },
               "trail_inline",
             ),
           ));
-        const T = (
+        const k = (
           b ? n?.all_ages_screenshots : n?.mature_content_screenshots
         )?.filter(Boolean);
         if (
-          (T?.forEach((e, s) => {
+          (k?.forEach((e, s) => {
             if ((t || s > 0) && D.length < 3) {
-              const t = (0, o.bu)(e, "thumb"),
-                i = (0, o.bu)(e, "full"),
-                r = D.length;
+              const t = (0, r.bu)(e, "thumb"),
+                a = (0, r.bu)(e, "full"),
+                o = D.length;
               D.push(
-                (0, a.jsx)(
+                (0, i.jsx)(
                   "div",
                   {
                     className: (0, _.A)({
-                      [f().ThumbnailCtn]: !0,
-                      [f().ThumbnialClickable]: !p,
+                      [y().ThumbnailCtn]: !0,
+                      [y().ThumbnialClickable]: !p,
                     }),
-                    children: (0, a.jsx)("img", {
+                    children: (0, i.jsx)("img", {
                       src: t,
                       onClick: p
                         ? void 0
                         : () => {
-                            const e = [...(T || [])];
+                            const e = [...(k || [])];
                             if (e.length > 0) {
                               for (let t = 0; t < s; ++t) {
                                 const t = e.shift();
                                 t && e.push(t);
                               }
-                              C(e.map((e) => (0, o.bu)(e, "full")));
+                              v(e.map((e) => (0, r.bu)(e, "full")));
                             }
                           },
-                      onMouseEnter: () => g(r),
+                      onMouseEnter: () => S(o),
                     }),
                   },
                   s + "_small_" + t,
                 ),
               ),
-                P.push(
-                  (0, a.jsx)(
+                I.push(
+                  (0, i.jsx)(
                     "div",
                     {
-                      className: f().ScreenshotDisplayCtn,
-                      children: (0, a.jsx)("img", { src: i }),
+                      className: y().ScreenshotDisplayCtn,
+                      children: (0, i.jsx)("img", { src: a }),
                     },
                     s + "_big_" + t,
                   ),
                 );
             }
           }),
-          !(t || (P && 0 != P.length)))
+          !(t || (I && 0 != I.length)))
         )
           return null;
-        const j = D.slice(0, 3),
-          V = Array.from({ length: Math.max(0, 3 - j.length) });
-        return (0, a.jsxs)(a.Fragment, {
+        const T = D.slice(0, 3),
+          j = Array.from({ length: Math.max(0, 3 - T.length) });
+        return (0, i.jsxs)(i.Fragment, {
           children: [
-            v,
-            (0, a.jsx)("div", {
-              className: l || f().MainMediaCtn,
+            C,
+            (0, i.jsx)("div", {
+              className: l || y().MainMediaCtn,
               children: Boolean(t && (-1 === w || void 0 === w))
-                ? (0, a.jsx)(a.Fragment, { children: t })
-                : (0, a.jsx)(a.Fragment, { children: void 0 !== w && P[w] }),
+                ? (0, i.jsx)(i.Fragment, { children: t })
+                : (0, i.jsx)(i.Fragment, { children: void 0 !== w && I[w] }),
             }),
-            Boolean(j.length > 0) &&
-              (0, a.jsxs)("div", {
-                className: f().ScreenshotThumbnailRow,
-                onMouseLeave: () => g(-1),
+            Boolean(T.length > 0) &&
+              (0, i.jsxs)("div", {
+                className: y().ScreenshotThumbnailRow,
+                onMouseLeave: () => S(-1),
                 children: [
-                  j,
-                  V.map((e, t) =>
-                    (0, a.jsx)(
+                  T,
+                  j.map((e, t) =>
+                    (0, i.jsx)(
                       "div",
-                      { className: f().ThumbnailCtn },
+                      { className: y().ThumbnailCtn },
                       `app_${(0, d.ER)(s)}_${t}`,
                     ),
                   ),
@@ -4855,18 +5209,18 @@
           ],
         });
       }
-      function O(e) {
+      function R(e) {
         const {
           ref: t,
           name: s,
-          trailer: i,
-          bControls: r,
-          bPlayVideo: o,
+          trailer: a,
+          bControls: o,
+          bPlayVideo: r,
           fnTogglePlayTrailer: l,
           startTime: d,
         } = e;
         if (
-          ((0, u.useEffect)(() => {
+          ((0, h.useEffect)(() => {
             const e = t?.current;
             if (null != d && d > 0 && e) {
               const t = () => {
@@ -4880,90 +5234,90 @@
               );
             }
           }, [t, d]),
-          !i)
+          !a)
         )
           return null;
-        let c = (0, _.A)(f().VideoLargeContainer, o && f().videoPlaying);
-        return (0, a.jsxs)("div", {
+        let c = (0, _.A)(y().VideoLargeContainer, r && y().videoPlaying);
+        return (0, i.jsxs)("div", {
           className: c,
           onClick: l,
           children: [
-            (0, a.jsx)(C.h, {
+            (0, i.jsx)(v.h, {
               name: s,
-              trailerCategory: i.trailer_category,
+              trailerCategory: a.trailer_category,
               trailerDisplay: 1,
               mouseOver: !1,
             }),
-            Boolean(o && i.microtrailer) &&
-              (0, a.jsx)("video", {
-                className: f().VideoLarge,
+            Boolean(r && a.microtrailer) &&
+              (0, i.jsx)("video", {
+                className: y().VideoLarge,
                 ref: t,
-                controls: r,
+                controls: o,
                 autoPlay: !0,
                 loop: !0,
                 muted: !0,
-                poster: null != d && d > 0 ? void 0 : i.screenshot_full,
-                children: i.microtrailer?.map((e) =>
-                  S.TS.IN_CLIENT && "video/mp4" == e.type
+                poster: null != d && d > 0 ? void 0 : a.screenshot_full,
+                children: a.microtrailer?.map((e) =>
+                  g.TS.IN_CLIENT && "video/mp4" == e.type
                     ? null
-                    : (0, a.jsx)(
+                    : (0, i.jsx)(
                         "source",
-                        { src: (0, n.M4)(i, e.filename || ""), type: e.type },
+                        { src: (0, n.M4)(a, e.filename || ""), type: e.type },
                         e.filename,
                       ),
                 ),
               }),
-            r &&
-              (0, a.jsx)("div", {
+            o &&
+              (0, i.jsx)("div", {
                 onClick: l,
-                children: (0, a.jsx)(p.sED, {}),
+                children: (0, i.jsx)(p.sED, {}),
               }),
           ],
         });
       }
-      function G(e) {
-        const { id: t, bShowModal: s, trailerBaseID: i, hideModal: r } = e,
-          { data: o } = (0, l.J$)(t),
+      function O(e) {
+        const { id: t, bShowModal: s, trailerBaseID: a, hideModal: o } = e,
+          { data: r } = (0, l.J$)(t),
           d = (0, n.kB)(t),
-          c = (0, u.useMemo)(() => {
+          c = (0, h.useMemo)(() => {
             if (d && 0 != d.length) {
-              if (i) {
-                const e = d.find((e) => e.trailer_base_id == i);
+              if (a) {
+                const e = d.find((e) => e.trailer_base_id == a);
                 if (e) return e;
               }
               return d[0];
             }
-          }, [d, i]),
-          h = u.useId(),
-          p = u.useId();
+          }, [d, a]),
+          m = h.useId(),
+          p = h.useId();
         if (!c || !c.adaptive_trailers) return null;
-        const { rgDashTrailers: _, rgHlsTrailers: S } = (0, n.hg)(c);
+        const { rgDashTrailers: _, rgHlsTrailers: g } = (0, n.hg)(c);
         return 0 == _?.length
           ? null
-          : (0, a.jsx)(g.EN, {
+          : (0, i.jsx)(S.EN, {
               active: s,
-              children: (0, a.jsxs)(g.eV, {
-                "aria-labelledby": (0, m.q)(h, p),
+              children: (0, i.jsxs)(S.eV, {
+                "aria-labelledby": (0, u.q)(m, p),
                 bAllowFullSize: !0,
                 bOKDisabled: !0,
-                closeModal: r,
+                closeModal: o,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: f().VideoPopupContainers,
-                    children: (0, a.jsx)(b.P, {
+                  (0, i.jsx)("div", {
+                    className: y().VideoPopupContainers,
+                    children: (0, i.jsx)(b.P, {
                       dashManifests: _ || [],
-                      hlsManifest: (S.length > 0 && S?.[0]) || "",
+                      hlsManifest: (g.length > 0 && g?.[0]) || "",
                       screenshot: (0, n.hl)(c),
                       altText: c.trailer_name,
                       muteWhenAutoplayBlocked: !0,
                     }),
                   }),
-                  (0, a.jsx)("div", {
-                    id: h,
+                  (0, i.jsx)("div", {
+                    id: m,
                     style: { display: "none" },
-                    children: o?.name || "",
+                    children: r?.name || "",
                   }),
-                  (0, a.jsx)("div", {
+                  (0, i.jsx)("div", {
                     id: p,
                     style: { display: "none" },
                     children: c.trailer_name,
@@ -4972,68 +5326,68 @@
               }),
             });
       }
-      function R(e) {
+      function G(e) {
         const {
           trailer: t,
           fnTogglePlayTrailer: s,
-          bPlayVideo: i,
-          onMouseEnter: r,
-          onMouseLeave: o,
+          bPlayVideo: a,
+          onMouseEnter: o,
+          onMouseLeave: r,
         } = e;
-        return (0, a.jsxs)("div", {
+        return (0, i.jsxs)("div", {
           className: (0, _.A)({
-            [f().VideoThumbnail]: !i,
-            [f().videoPlaying]: i,
-            [f().ThumbnailCtn]: !0,
+            [y().VideoThumbnail]: !a,
+            [y().videoPlaying]: a,
+            [y().ThumbnailCtn]: !0,
           }),
           onClick: s,
-          onMouseEnter: r,
-          onMouseLeave: o,
+          onMouseEnter: o,
+          onMouseLeave: r,
           children: [
-            (0, a.jsx)("img", { src: (0, n.hl)(t) }),
-            (0, a.jsx)("div", {
-              className: f().VideoPlayButton,
-              children: (0, a.jsx)(p.jGG, {}),
+            (0, i.jsx)("img", { src: (0, n.hl)(t) }),
+            (0, i.jsx)("div", {
+              className: y().VideoPlayButton,
+              children: (0, i.jsx)(p.jGG, {}),
             }),
           ],
         });
       }
       function L(e) {
         const { id: t, fnOnClickButton: s, bUseAssetWithoutOverride: n } = e,
-          [d, c] = (0, r.OP)(),
-          { data: u } = (0, l.lv)(t, n),
-          { data: m } = (0, l.J$)(t),
-          { data: h } = (0, l.wl)(t),
+          [d, c] = (0, o.OP)(),
+          { data: h } = (0, l.lv)(t, n),
+          { data: u } = (0, l.J$)(t),
+          { data: m } = (0, l.wl)(t),
           { data: p } = (0, l.xz)(t);
-        if (!u || !h || !m) return null;
-        const S = (0, o.b0)(u, "main_capsule");
-        return (0, a.jsxs)(i.Z, {
+        if (!h || !m || !u) return null;
+        const g = (0, r.b0)(h, "main_capsule");
+        return (0, i.jsxs)(a.Z, {
           focusable: !0,
           noFocusRing: !0,
-          className: f().MainCapsuleWithHover,
+          className: y().MainCapsuleWithHover,
           ...c,
           onActivate: s,
           children: [
-            (0, a.jsx)("img", { className: f().MainCapsule, src: S }),
-            (0, a.jsxs)("div", {
-              className: f().AppDetails,
+            (0, i.jsx)("img", { className: y().MainCapsule, src: g }),
+            (0, i.jsxs)("div", {
+              className: y().AppDetails,
               children: [
-                (0, a.jsx)("div", {
-                  className: (0, _.A)(f().GameName),
-                  children: m.name || "",
+                (0, i.jsx)("div", {
+                  className: (0, _.A)(y().GameName),
+                  children: u.name || "",
                 }),
-                (0, a.jsxs)("div", {
-                  className: f().ShortDesc,
-                  children: [h.short_description, " "],
+                (0, i.jsxs)("div", {
+                  className: y().ShortDesc,
+                  children: [m.short_description, " "],
                 }),
-                (0, a.jsx)(k.n, {
+                (0, i.jsx)(V.n, {
                   rgTagIDs: p ? p.slice(0, 10).map((e) => e.tagid || 0) : [],
                   instanceNum: 0,
                   bLargeText: !0,
                   bHideTitle: !0,
                   bNoStoreLinks: !0,
                 }),
-                (0, a.jsx)(j, { id: t }),
+                (0, i.jsx)(T, { id: t }),
               ],
             }),
           ],
@@ -5042,54 +5396,54 @@
     },
     69409: (e, t, s) => {
       "use strict";
-      s.d(t, { m: () => h });
-      var a = s(7850),
-        i = s(90626),
-        r = s(22837),
-        o = s(38390),
+      s.d(t, { m: () => m });
+      var i = s(7850),
+        a = s(90626),
+        o = s(22837),
+        r = s(38390),
         n = s(52038),
         l = s(61859),
         d = s(61336),
         c = s(78327),
-        u = s(15392),
-        m = s(27666);
-      function h(e) {
+        h = s(15392),
+        u = s(27666);
+      function m(e) {
         const { gidEvent: t } = e,
-          s = (0, o.RR)(t),
-          [h, p] = (0, i.useMemo)(() => {
+          s = (0, r.RR)(t),
+          [m, p] = (0, a.useMemo)(() => {
             if (
               s?.jsondata?.localized_sale_product_banner?.length > 0 &&
               s?.jsondata?.localized_sale_product_mobile_banner?.length > 0
             ) {
-              const e = (0, r.sf)(c.TS.LANGUAGE),
+              const e = (0, o.sf)(c.TS.LANGUAGE),
                 t = l.NT.GetWithFallback(
                   s.jsondata.localized_sale_product_banner,
                   e,
                 ),
-                a = l.NT.GetWithFallback(
+                i = l.NT.GetWithFallback(
                   s.jsondata.localized_sale_product_mobile_banner,
                   e,
                 );
-              if (t?.length > 0 && a?.length > 0)
+              if (t?.length > 0 && i?.length > 0)
                 return [
-                  m.z.GenerateURLFromHashAndExt(s.clanSteamID, t),
-                  m.z.GenerateURLFromHashAndExt(s.clanSteamID, a),
+                  u.z.GenerateURLFromHashAndExt(s.clanSteamID, t),
+                  u.z.GenerateURLFromHashAndExt(s.clanSteamID, i),
                 ];
             }
             return [null, null];
           }, [s]);
-        return h?.length > 0 && p?.length > 0
-          ? (0, a.jsxs)("a", {
+        return m?.length > 0 && p?.length > 0
+          ? (0, i.jsxs)("a", {
               href: (0, d.k2)(s.GetSaleURL()),
-              className: u.Link,
+              className: h.Link,
               children: [
-                (0, a.jsx)("img", {
-                  src: h,
-                  className: (0, n.A)(u.Banner, u.Big),
+                (0, i.jsx)("img", {
+                  src: m,
+                  className: (0, n.A)(h.Banner, h.Big),
                 }),
-                (0, a.jsx)("img", {
+                (0, i.jsx)("img", {
                   src: p,
-                  className: (0, n.A)(u.Banner, u.Mobile),
+                  className: (0, n.A)(h.Banner, h.Mobile),
                 }),
               ],
             })
@@ -5099,19 +5453,19 @@
     54847: (e, t, s) => {
       "use strict";
       s.d(t, { p: () => d });
-      var a = s(7850),
-        i = s(39777),
-        r = s(35380),
-        o = s(41399),
+      var i = s(7850),
+        a = s(39777),
+        o = s(35380),
+        r = s(41399),
         n = s(18654),
         l = s.n(n);
       function d(e) {
         const { id: t, type: s } = e,
-          n = (0, r.rt)({ id: t, type: s }),
-          { data: d } = (0, i.J$)(n);
-        return (0, a.jsx)("div", {
+          n = (0, o.rt)({ id: t, type: s }),
+          { data: d } = (0, a.J$)(n);
+        return (0, i.jsx)("div", {
           className: l().SaleItemBrowserRow,
-          children: (0, a.jsx)(o.p, {
+          children: (0, i.jsx)(r.p, {
             ...e,
             bShowReviewSummary: !0,
             bShowDemoButton: e.bShowDemoButton || 1 == d?.type,
@@ -5120,422 +5474,100 @@
         });
       }
     },
-    84842: (e, t, s) => {
-      "use strict";
-      s.d(t, { h: () => n });
-      var a = s(7850),
-        i = s(52038),
-        r = s(66285),
-        o = s.n(r);
-      function n(e) {
-        const {
-          capsules_per_row: t,
-          is_generic: s,
-          is_generic_trailer: r,
-          is_event_dash_row: n,
-          is_trailer_carousel: l,
-          is_spotlights: d,
-          is_item_browser: c,
-          is_maincap: u,
-          is_expanded_maincap: m,
-          is_expanded_display: h,
-          show_auto_advance_bar: p,
-        } = e;
-        if (!t) return null;
-        if (s)
-          return (0, a.jsx)("div", {
-            className: o().GhostCtn,
-            children: (0, a.jsx)("div", {
-              className: o().PlaceholderBox,
-              children: (0, a.jsx)("div", { className: o().ShineCtn }),
-            }),
-          });
-        if (r)
-          return (0, a.jsx)("div", {
-            className: o().GhostCtn,
-            children: (0, a.jsx)("div", {
-              className: o().PlaceholderVideo,
-              children: (0, a.jsx)("div", { className: o().ShineCtn }),
-            }),
-          });
-        if (l)
-          return (0, a.jsxs)("div", {
-            className: o().GhostCtn,
-            children: [
-              (0, a.jsxs)("div", {
-                className: o().TrailerCarouselRow,
-                children: [
-                  (0, a.jsx)("div", {
-                    className: o().VideoPlaceholder,
-                    children: (0, a.jsx)("div", { className: o().ShineCtn }),
-                  }),
-                  (0, a.jsx)("div", {
-                    className: o().ItemDescPlaceholer,
-                    children: (0, a.jsx)("div", { className: o().ShineCtn }),
-                  }),
-                ],
-              }),
-              p &&
-                (0, a.jsx)("div", {
-                  className: o().AutoAdvanceBar,
-                  children: (0, a.jsx)("div", { className: o().ShineCtn }),
-                }),
-            ],
-          });
-        if (n)
-          return (0, a.jsx)("div", {
-            className: o().GhostCtn,
-            children: (0, a.jsxs)("div", {
-              className: o().EventRow,
-              children: [
-                (0, a.jsx)("div", {
-                  className: (0, i.A)(
-                    o().PlaceholderGroupImage,
-                    o().PlaceholderCap,
-                  ),
-                }),
-                (0, a.jsxs)("div", {
-                  className: (0, i.A)(o().DetailsPlaceholder),
-                  children: [
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderTitle,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderSubtitle,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderButtons,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (d)
-          return (0, a.jsx)("div", {
-            className: o().GhostCtn,
-            children: (0, a.jsxs)("div", {
-              className: o().SpotlightsRow,
-              children: [
-                (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                (0, a.jsxs)("div", {
-                  className: o().DailyDealsColumn,
-                  children: [
-                    (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                    (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (u)
-          return (0, a.jsx)("div", {
-            className: o().GhostCtn,
-            children: (0, a.jsxs)("div", {
-              className: (0, i.A)({
-                [o().MainCapRow]: !0,
-                [o().MainCapRowExpanded]: m,
-              }),
-              children: [
-                (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                (0, a.jsxs)("div", {
-                  className: (0, i.A)(o().DetailsPlaceholder),
-                  children: [
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderTitle,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderSubtitle,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderRelease,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderReviews,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                    (0, a.jsx)("div", {
-                      className: (0, i.A)(
-                        o().PlaceholderTags,
-                        o().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (h)
-          return (0, a.jsx)("div", {
-            className: o().GhostCtn,
-            children: (0, a.jsxs)("div", {
-              className: o().ExpandedItemRow,
-              children: [
-                (0, a.jsx)("div", {
-                  className: (0, i.A)(
-                    o().CapsulePlaceholder,
-                    o().PlaceholderCap,
-                  ),
-                }),
-                (0, a.jsx)("div", {
-                  className: (0, i.A)(
-                    o().ItemDefPlaceholder,
-                    o().PlaceholderCap,
-                  ),
-                }),
-              ],
-            }),
-          });
-        if (c) {
-          const e = [];
-          for (let s = 0; s < t[0]; s++)
-            e.push(
-              (0, a.jsx)(
-                "div",
-                {
-                  className: o().ItemBrowserCapsule,
-                  children: (0, a.jsx)("div", {
-                    className: o().PlaceholderCap,
-                  }),
-                },
-                "item_browse_ghost_" + s,
-              ),
-            );
-          return (0, a.jsx)("div", { className: o().GhostCtn, children: e });
-        }
-        return 1 == t?.length
-          ? 1 == t[0]
-            ? (0, a.jsx)("div", {
-                className: o().GhostCtn,
-                children: (0, a.jsx)("div", {
-                  className: o().CapsuleRowSuperCapsule,
-                  children: (0, a.jsx)("div", {
-                    className: o().PlaceholderCap,
-                  }),
-                }),
-              })
-            : 4 == t[0]
-              ? (0, a.jsx)("div", {
-                  className: o().GhostCtn,
-                  children: (0, a.jsxs)("div", {
-                    className: o().CapsuleRow4,
-                    children: [
-                      (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                    ],
-                  }),
-                })
-              : (0, a.jsx)("div", {
-                  className: o().GhostCtn,
-                  children: (0, a.jsxs)("div", {
-                    className: o().CapsuleRow3,
-                    children: [
-                      (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                    ],
-                  }),
-                })
-          : 2 == t?.length
-            ? 3 == t[0] && 3 == t[1]
-              ? (0, a.jsx)("div", {
-                  className: o().GhostCtn,
-                  children: (0, a.jsxs)("div", {
-                    className: o().CapsuleRow23,
-                    children: [
-                      (0, a.jsxs)("div", {
-                        className: (0, i.A)(o().CapRow, o().Caps3),
-                        children: [
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        ],
-                      }),
-                      (0, a.jsxs)("div", {
-                        className: (0, i.A)(o().CapRow, o().Caps3),
-                        children: [
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, a.jsx)("div", {
-                  className: o().GhostCtn,
-                  children: (0, a.jsxs)("div", {
-                    className: o().CapsuleRow23,
-                    children: [
-                      (0, a.jsxs)("div", {
-                        className: (0, i.A)(o().CapRow, o().Caps2),
-                        children: [
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        ],
-                      }),
-                      (0, a.jsxs)("div", {
-                        className: (0, i.A)(o().CapRow, o().Caps3),
-                        children: [
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                          (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-            : (0, a.jsx)("div", {
-                className: o().GhostCtn,
-                children: (0, a.jsxs)("div", {
-                  className: o().CapsuleRow234,
-                  children: [
-                    (0, a.jsxs)("div", {
-                      className: (0, i.A)(o().CapRow, o().Caps2),
-                      children: [
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      ],
-                    }),
-                    (0, a.jsxs)("div", {
-                      className: (0, i.A)(o().CapRow, o().Caps3),
-                      children: [
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      ],
-                    }),
-                    (0, a.jsxs)("div", {
-                      className: (0, i.A)(o().CapRow, o().Caps4),
-                      children: [
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                        (0, a.jsx)("div", { className: o().PlaceholderCap }),
-                      ],
-                    }),
-                  ],
-                }),
-              });
-      }
-    },
     22208: (e, t, s) => {
       "use strict";
-      s.d(t, { k: () => Q, y: () => K });
-      var a = s(7850),
-        i = s(10224),
-        r = s(78327),
-        o = s(41399),
+      s.d(t, { k: () => $, y: () => K });
+      var i = s(7850),
+        a = s(10224),
+        o = s(78327),
+        r = s(41399),
         n = s(54847),
         l = s(39777),
         d = s(14987),
         c = s(60014),
-        u = s(75844),
-        m = s(90626),
-        h = s(55963),
+        h = s(75844),
+        u = s(90626),
+        m = s(55963),
         p = s(73371),
         _ = s.n(p),
-        S = s(72237),
-        g = s(88961),
-        C = s(84842),
-        v = s(57876),
+        g = s(96006),
+        S = s(94191),
+        v = s(71381),
+        C = s(57876),
         b = s(35380),
-        y = s(17690),
-        f = s(62792),
-        x = s(55263),
-        I = s(70300);
+        f = s(17690),
+        y = s(62792),
+        P = s(55263),
+        x = s(70300);
       class w {
         static instance_count = 0;
       }
       var D = s(94095),
-        P = s(90421),
-        T = s(12424),
-        j = s(78588),
-        V = s(8893),
+        I = s(90421),
+        k = s(12424),
+        T = s(78588),
+        j = s(8893),
         B = s(54492),
-        k = s(52038),
-        A = s(61859),
-        N = s(2921),
-        M = s(18654),
-        O = s.n(M),
-        G = s(20433),
-        R = s(52541),
+        V = s(52038),
+        M = s(61859),
+        A = s(2921),
+        N = s(18654),
+        R = s.n(N),
+        O = s(20433),
+        G = s(52541),
         L = s(90740);
       function E(e) {
         const {
             id: t,
             bPurchaseOptionsExpanded: s,
-            fnCollapseOptions: i,
-            bPreferAssetWithoutOverride: r,
+            fnCollapseOptions: a,
+            bPreferAssetWithoutOverride: o,
           } = e,
           { data: n } = (0, l.is)(t),
-          d = (0, m.useRef)(null);
+          d = (0, u.useRef)(null);
         return n
-          ? (0, a.jsx)(L.A, {
+          ? (0, i.jsx)(L.A, {
               nodeRef: d,
               in: s,
               mountOnEnter: !0,
               unmountOnExit: !0,
               timeout: 2e3,
               classNames: {
-                enterActive: O().Expanding,
-                enterDone: O().Expanded,
-                exit: O().Expanded,
-                exitActive: O().Collapsing,
+                enterActive: R().Expanding,
+                enterDone: R().Expanded,
+                exit: R().Expanded,
+                exitActive: R().Collapsing,
               },
-              children: (0, a.jsxs)("div", {
+              children: (0, i.jsxs)("div", {
                 ref: d,
-                className: O().BundleContentsCtnTransition,
+                className: R().BundleContentsCtnTransition,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: O().BundleContentsCtn,
+                  (0, i.jsx)("div", {
+                    className: R().BundleContentsCtn,
                     children: n
                       .filter((e) => Boolean(e.packageid))
                       .map((e) =>
-                        (0, a.jsx)(
+                        (0, i.jsx)(
                           "div",
                           {
-                            className: O().BundleContentItem,
-                            children: (0, a.jsx)(o.p, {
+                            className: R().BundleContentItem,
+                            children: (0, i.jsx)(r.p, {
                               id: e.packageid || 0,
                               type: "sub",
                               bForceSmallCapsuleArt: !0,
-                              bPreferAssetWithoutOverride: r,
+                              bPreferAssetWithoutOverride: o,
                             }),
                           },
-                          "purchaseitem_" + (0, R.ER)(t) + "_" + e.packageid,
+                          "purchaseitem_" + (0, G.ER)(t) + "_" + e.packageid,
                         ),
                       ),
                   }),
-                  (0, a.jsx)("div", {
-                    onClick: i,
-                    className: O().BundleShowButton,
-                    children: (0, a.jsx)("button", {
-                      className: O().ShowContentsButton,
-                      children: (0, A.we)("#Button_Close"),
+                  (0, i.jsx)("div", {
+                    onClick: a,
+                    className: R().BundleShowButton,
+                    children: (0, i.jsx)("button", {
+                      className: R().ShowContentsButton,
+                      children: (0, M.we)("#Button_Close"),
                     }),
                   }),
                 ],
@@ -5545,43 +5577,43 @@
       }
       var H = s(94636),
         U = s(24267);
-      const F = (0, u.PA)((e) => {
+      const F = (0, h.PA)((e) => {
         const {
             myInstance: t,
             setIsHovered: s,
-            displayStoreItem: i,
-            displayID: r,
-            hoverType: o,
+            displayStoreItem: a,
+            displayID: o,
+            hoverType: r,
             nHoverId: n,
-            displayInfo: u,
+            displayInfo: h,
           } = (function (e, t) {
-            const { id: s, type: a } = e,
-              i = t ? { ...v.Xh, ...t } : v.Xh,
-              [r, o] = (0, m.useMemo)(() => {
-                const e = { id: s, type: a };
+            const { id: s, type: i } = e,
+              a = t ? { ...C.Xh, ...t } : C.Xh,
+              [o, r] = (0, u.useMemo)(() => {
+                const e = { id: s, type: i };
                 return [e, (0, b.Sh)(e)];
-              }, [s, a]),
-              [n] = (0, x.G6)(s, (0, f.SW)(a), i),
-              [l, d] = (0, m.useMemo)(() => {
+              }, [s, i]),
+              [n] = (0, P.G6)(s, (0, y.SW)(i), a),
+              [l, d] = (0, u.useMemo)(() => {
                 const e = {
                   id:
                     (n?.GetParentAppID() != n?.GetID()
                       ? n?.GetParentAppID()
-                      : y.sc) ?? y.sc,
+                      : f.sc) ?? f.sc,
                   type: "game",
                 };
                 return [e, (0, b.Sh)(e)];
               }, [n]),
-              [c] = (0, x.t7)(l.id, i),
-              [u] = (0, m.useState)(++w.instance_count),
-              [h, p] = (0, m.useState)(!1),
-              _ = (0, I.qr)(a);
+              [c] = (0, P.t7)(l.id, a),
+              [h] = (0, u.useState)(++w.instance_count),
+              [m, p] = (0, u.useState)(!1),
+              _ = (0, x.qr)(i);
             return {
-              myInstance: u,
-              bIsHovered: h,
+              myInstance: h,
+              bIsHovered: m,
               setIsHovered: p,
-              displayInfo: r,
-              displayID: o,
+              displayInfo: o,
+              displayID: r,
               displayStoreItem: n,
               baseGameStoreItem: c,
               baseGameInfo: l,
@@ -5592,119 +5624,119 @@
           })(e, { include_all_purchase_options: !0 }),
           {
             bHidePrice: p,
-            bShowDemoButton: M,
-            bPreferDemoStorePage: R,
+            bShowDemoButton: N,
+            bPreferDemoStorePage: G,
             bShowPurchaseOptionsButton: L,
             bUseSubscriptionLayout: F,
             bPreferAssetWithoutOverride: W,
           } = e,
-          [z, J] = m.useState(!1),
-          q = () => J(!z),
-          { data: X } = (0, l.J$)(r),
-          K = (0, d._)(r),
-          Q = (0, c.n9)();
-        if (!i || !X)
-          return (0, a.jsx)(C.h, {
+          [z, X] = u.useState(!1),
+          q = () => X(!z),
+          { data: J } = (0, l.J$)(o),
+          K = (0, d._)(o),
+          $ = (0, c.n9)();
+        if (!a || !J)
+          return (0, i.jsx)(v.h, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
-        const Z = (0, h.L3)(Q),
-          $ =
-            (R &&
-              i.HasDemoStandaloneStorePage() &&
-              i.GetDemoStandaloneStorePageAppIDs()[0],
-            0 == X.item_type);
-        return (0, a.jsx)("div", {
-          className: (0, k.A)(
-            O().StoreSaleWidgetContainer,
-            O().LibraryAssetExpandedDisplay,
+        const Q = (0, m.L3)($),
+          Z =
+            (G &&
+              a.HasDemoStandaloneStorePage() &&
+              a.GetDemoStandaloneStorePageAppIDs()[0],
+            0 == J.item_type);
+        return (0, i.jsx)("div", {
+          className: (0, V.A)(
+            R().StoreSaleWidgetContainer,
+            R().LibraryAssetExpandedDisplay,
             "LibraryAssetExpandedDisplay",
           ),
-          children: (0, a.jsxs)(I.oj, {
-            appid: $ ? X.appid : void 0,
+          children: (0, i.jsxs)(x.oj, {
+            appid: Z ? J.appid : void 0,
             children: [
-              (0, a.jsxs)("div", {
-                className: O().StoreSaleWidgetLibraryAssetExtendedTop,
+              (0, i.jsxs)("div", {
+                className: R().StoreSaleWidgetLibraryAssetExtendedTop,
                 children: [
-                  (0, a.jsx)("div", {
-                    className: (0, k.A)(O().StoreSaleWidgetLeft),
-                    children: (0, a.jsx)(G.u, {
-                      id: r,
+                  (0, i.jsx)("div", {
+                    className: (0, V.A)(R().StoreSaleWidgetLeft),
+                    children: (0, i.jsx)(O.u, {
+                      id: o,
                       fnHoverState: s,
-                      children: (0, a.jsxs)("div", {
-                        className: O().StoreSaleWidgetImage,
+                      children: (0, i.jsxs)("div", {
+                        className: R().StoreSaleWidgetImage,
                         children: [
-                          (0, a.jsx)(g.V, { appids: K }),
-                          (0, a.jsx)(j.a, {
-                            id: r,
+                          (0, i.jsx)(S.V, { appids: K }),
+                          (0, i.jsx)(T.a, {
+                            id: o,
                             imageType: "library",
                             bPreferAssetWithoutOverride: W,
                           }),
-                          (0, a.jsx)(B.J, { id: r }),
+                          (0, i.jsx)(B.J, { id: o }),
                         ],
                       }),
                     }),
                   }),
-                  (0, a.jsxs)("div", {
-                    className: O().StoreSaleWidgetCrossCenterRight,
+                  (0, i.jsxs)("div", {
+                    className: R().StoreSaleWidgetCrossCenterRight,
                     children: [
-                      $ &&
-                        (0, a.jsx)(H.E, {
-                          id: r,
-                          classOverride: (0, k.A)(
+                      Z &&
+                        (0, i.jsx)(H.E, {
+                          id: o,
+                          classOverride: (0, V.A)(
                             _().WishlistButtonNotTop,
                             "WishlistButton",
                           ),
-                          snr: Z,
+                          snr: Q,
                         }),
-                      (0, a.jsxs)("div", {
-                        className: O().StoreSaleWidgetContents,
+                      (0, i.jsxs)("div", {
+                        className: R().StoreSaleWidgetContents,
                         children: [
-                          (0, a.jsxs)("div", {
-                            className: O().StoreSaleWidgetCenter,
+                          (0, i.jsxs)("div", {
+                            className: R().StoreSaleWidgetCenter,
                             children: [
-                              i.GetShortDescription()?.length > 0 &&
-                                (0, a.jsx)("div", {
-                                  className: (0, k.A)(
-                                    O().StoreSaleWidgetShortDesc,
+                              a.GetShortDescription()?.length > 0 &&
+                                (0, i.jsx)("div", {
+                                  className: (0, V.A)(
+                                    R().StoreSaleWidgetShortDesc,
                                     "StoreSaleWidgetShortDesc",
                                   ),
-                                  children: i.GetShortDescription(),
+                                  children: a.GetShortDescription(),
                                 }),
-                              (0, a.jsx)(P.n, {
-                                rgTagIDs: i.GetTagIDs(),
+                              (0, i.jsx)(I.n, {
+                                rgTagIDs: a.GetTagIDs(),
                                 instanceNum: t,
                               }),
-                              (0, a.jsxs)("div", {
-                                className: O().StoreMetaDataCtn,
+                              (0, i.jsxs)("div", {
+                                className: R().StoreMetaDataCtn,
                                 children: [
-                                  (0, a.jsx)("div", {
-                                    className: O().StoreSaleItemRelease,
-                                    children: (0, A.PP)(
+                                  (0, i.jsx)("div", {
+                                    className: R().StoreSaleItemRelease,
+                                    children: (0, M.PP)(
                                       "#Sale_ReleaseDate",
-                                      (0, a.jsx)("span", {
+                                      (0, i.jsx)("span", {
                                         children:
-                                          i.GetFormattedSteamReleaseDate(),
+                                          a.GetFormattedSteamReleaseDate(),
                                       }),
                                     ),
                                   }),
-                                  Boolean(i.GetDeveloperNames()?.length) &&
-                                    (0, a.jsxs)("div", {
-                                      className: O().StoreSaleItemDev,
+                                  Boolean(a.GetDeveloperNames()?.length) &&
+                                    (0, i.jsxs)("div", {
+                                      className: R().StoreSaleItemDev,
                                       children: [
-                                        (0, A.we)("#CreatorHome_DevelopedBy"),
-                                        (0, a.jsx)("span", {
-                                          children: i.GetDeveloperNames()[0],
+                                        (0, M.we)("#CreatorHome_DevelopedBy"),
+                                        (0, i.jsx)("span", {
+                                          children: a.GetDeveloperNames()[0],
                                         }),
                                       ],
                                     }),
-                                  Boolean(i.GetPublisherNames()?.length) &&
-                                    (0, a.jsxs)("div", {
-                                      className: O().StoreSaleItemDev,
+                                  Boolean(a.GetPublisherNames()?.length) &&
+                                    (0, i.jsxs)("div", {
+                                      className: R().StoreSaleItemDev,
                                       children: [
-                                        (0, A.we)("#CreatorHome_PublishedBy"),
-                                        (0, a.jsx)("span", {
-                                          children: i.GetPublisherNames()[0],
+                                        (0, M.we)("#CreatorHome_PublishedBy"),
+                                        (0, i.jsx)("span", {
+                                          children: a.GetPublisherNames()[0],
                                         }),
                                       ],
                                     }),
@@ -5712,56 +5744,56 @@
                               }),
                             ],
                           }),
-                          (0, a.jsx)("div", {
-                            className: O().StoreSaleLibraryAssetWidgetRight,
-                            children: (0, a.jsx)(N.Yg, {
-                              id: r,
+                          (0, i.jsx)("div", {
+                            className: R().StoreSaleLibraryAssetWidgetRight,
+                            children: (0, i.jsx)(A.Yg, {
+                              id: o,
                               bPopOutTrailerPlayback: !0,
                             }),
                           }),
                         ],
                       }),
-                      (0, a.jsx)("div", {
-                        className: O().StoreSaleItemReview,
-                        children: (0, a.jsx)(U.J, { id: r }),
+                      (0, i.jsx)("div", {
+                        className: R().StoreSaleItemReview,
+                        children: (0, i.jsx)(U.J, { id: o }),
                       }),
-                      (0, a.jsx)("div", {
-                        className: O().CapsuleBottomBar,
-                        children: Boolean(F && $)
-                          ? (0, a.jsx)(T.E, {
-                              appid: i.GetAppID(),
+                      (0, i.jsx)("div", {
+                        className: R().CapsuleBottomBar,
+                        children: Boolean(F && Z)
+                          ? (0, i.jsx)(k.E, {
+                              appid: a.GetAppID(),
                               bIsMuted: !1,
                             })
-                          : (0, a.jsxs)(a.Fragment, {
+                          : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                (0, a.jsx)(S.Q, { id: r }),
-                                (0, a.jsx)(D.w, {
-                                  id: r,
-                                  bShowDemoButton: M,
+                                (0, i.jsx)(g.Q, { id: o }),
+                                (0, i.jsx)(D.w, {
+                                  id: o,
+                                  bShowDemoButton: N,
                                   bHidePrice: p,
                                   bShowPurchaseOptionsButton: L,
                                   fnOnPurchaseOptionsClick: q,
-                                  bHideWishlistButton: !i.BIsComingSoon(),
+                                  bHideWishlistButton: !a.BIsComingSoon(),
                                 }),
                               ],
                             }),
                       }),
-                      (0, a.jsxs)("div", {
-                        className: O().StoreSaleWidgetBgTint,
+                      (0, i.jsxs)("div", {
+                        className: R().StoreSaleWidgetBgTint,
                         children: [
-                          (0, a.jsx)(V.G, {
-                            id: r,
+                          (0, i.jsx)(j.G, {
+                            id: o,
                             bPreferAssetWithoutOverride: W,
                           }),
-                          (0, a.jsx)(B.J, { id: r }),
+                          (0, i.jsx)(B.J, { id: o }),
                         ],
                       }),
                     ],
                   }),
                 ],
               }),
-              (0, a.jsx)(E, {
-                id: r,
+              (0, i.jsx)(E, {
+                id: o,
                 bPurchaseOptionsExpanded: z,
                 fnCollapseOptions: q,
                 bPreferAssetWithoutOverride: W,
@@ -5772,62 +5804,62 @@
       });
       var W = s(76217),
         z = s(23310),
-        J = s(91822),
+        X = s(91822),
         q = s(62307);
-      function X(e) {
+      function J(e) {
         const {
             id: t,
             type: s,
-            bShowDemoButton: i,
-            bHidePrice: r,
-            bHidePlatforms: o,
+            bShowDemoButton: a,
+            bHidePrice: o,
+            bHidePlatforms: r,
             bShowDeckCompatibilityDialog: n,
             bAutoFocus: d,
           } = e,
           c = (0, b.rt)({ id: t, type: s }),
-          { data: u } = (0, l.J$)(c),
-          { data: m } = (0, l.qI)(c),
-          h = 0 == u?.item_type;
-        return (0, a.jsx)(I.oj, {
-          appid: h ? u.id : void 0,
-          children: (0, a.jsxs)(W.Z, {
+          { data: h } = (0, l.J$)(c),
+          { data: u } = (0, l.qI)(c),
+          m = 0 == h?.item_type;
+        return (0, i.jsx)(x.oj, {
+          appid: m ? h.id : void 0,
+          children: (0, i.jsxs)(W.Z, {
             "flow-children": "grid",
             navEntryPreferPosition: z.iU.PREFERRED_CHILD,
             autoFocus: d,
-            navKey: "purchase_only_" + u?.id,
+            navKey: "purchase_only_" + h?.id,
             children: [
               "\t",
-              (0, a.jsxs)("div", {
+              (0, i.jsxs)("div", {
                 className: q.PurchaseOnlyCtn,
                 children: [
-                  (0, a.jsx)("div", {
+                  (0, i.jsx)("div", {
                     className: q.PurchaseOnlyNameCtn,
-                    children: (0, a.jsx)("div", {
+                    children: (0, i.jsx)("div", {
                       className: q.Name,
-                      children: u?.name,
+                      children: h?.name,
                     }),
                   }),
-                  (0, a.jsxs)("div", {
+                  (0, i.jsxs)("div", {
                     className: q.PurchaseAndPlatformCtn,
                     children: [
-                      Boolean(!o && 10 != u?.type) &&
-                        (0, a.jsxs)("div", {
+                      Boolean(!r && 10 != h?.type) &&
+                        (0, i.jsxs)("div", {
                           className: q.OS,
                           children: [
-                            (0, a.jsx)(S.Q, { id: c }),
-                            Boolean(n && 0 == u?.item_type && m) &&
-                              (0, a.jsx)(J.$o, {
+                            (0, i.jsx)(g.Q, { id: c }),
+                            Boolean(n && 0 == h?.item_type && u) &&
+                              (0, i.jsx)(X.$o, {
                                 className: q.DeckCompatIcon,
-                                category: m?.steam_deck_compat_category,
+                                category: u?.steam_deck_compat_category,
                               }),
                           ],
                         }),
-                      (0, a.jsx)(D.w, {
+                      (0, i.jsx)(D.w, {
                         id: c,
                         className: q.PurchaseOnlyActionCtn,
-                        bShowDemoButton: i,
+                        bShowDemoButton: a,
                         bShowCartButton: !0,
-                        bHidePrice: r,
+                        bHidePrice: o,
                         bHideWishlistButton: !0,
                         bShowDeckCompatibilityDialog: n,
                       }),
@@ -5842,34 +5874,507 @@
       function K(e) {
         const { displayStyle: t, requestCompact: s, ...l } = e,
           { type: d } = e,
-          c = (0, r.Qn)();
-        if ("purchaseonlydisplay" === t) return (0, a.jsx)(X, { ...l });
-        if (c) return (0, a.jsx)(o.p, { ...l });
-        if (s && !(0, i.c5)()) return (0, a.jsx)(n.p, { ...l });
-        if ("bundle" == d || "sub" == d) return (0, a.jsx)(o.p, { ...l });
-        if ((0, i.c5)() && ("library" == t || "animated" == t))
-          return (0, a.jsx)(o.p, { ...e, bShowReviewSummary: !0 });
+          c = (0, o.Qn)();
+        if ("purchaseonlydisplay" === t) return (0, i.jsx)(J, { ...l });
+        if (c) return (0, i.jsx)(r.p, { ...l });
+        if (s && !(0, a.c5)()) return (0, i.jsx)(n.p, { ...l });
+        if ("bundle" == d || "sub" == d) return (0, i.jsx)(r.p, { ...l });
+        if ((0, a.c5)() && ("library" == t || "animated" == t))
+          return (0, i.jsx)(r.p, { ...e, bShowReviewSummary: !0 });
         switch (t) {
           case "library":
           case "animated":
-            return (0, a.jsx)(F, { ...l });
+            return (0, i.jsx)(F, { ...l });
           default:
-            return (0, a.jsx)(o.p, { ...l, bShowReviewSummary: !0 });
+            return (0, i.jsx)(r.p, { ...l, bShowReviewSummary: !0 });
         }
       }
-      function Q(e, t) {
-        return "purchaseonlydisplay" !== e && !t && !(0, i.c5)();
+      function $(e, t) {
+        return "purchaseonlydisplay" !== e && !t && !(0, a.c5)();
       }
+    },
+    81416: (e, t, s) => {
+      "use strict";
+      s.d(t, { I: () => g });
+      var i,
+        a = s(34629),
+        o = s(7850),
+        r = s(90626),
+        n = s(84933),
+        l = s(75844),
+        d = s(6144),
+        c = s(61859),
+        h = s(53835),
+        u = s(12155),
+        m = s(81315),
+        p = s.n(m),
+        _ = s(25489);
+      !(function (e) {
+        (e.topleft = "topleft"),
+          (e.top = "top"),
+          (e.topright = "topright"),
+          (e.left = "left"),
+          (e.middle = "middle"),
+          (e.right = "right"),
+          (e.bottomleft = "bottomleft"),
+          (e.bottom = "bottom"),
+          (e.bottomright = "bottomright");
+      })(i || (i = {}));
+      let g = class extends r.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new d.Ji();
+        m_strDescription = "";
+        m_aspectRatio = 1;
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(e) {
+          super(e),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: void 0,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription = this.props.link_description ?? ""),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(e) {
+          this.m_elLinkRegionBox = e;
+        }
+        OnMouseDown(e, t) {
+          this.m_elLinkRegionBox?.parentElement &&
+            this.m_elLinkRegionBox.ownerDocument.defaultView &&
+            ((this.m_fnMouseUp = (e) => {
+              this.OnMouseUp(e, t);
+            }),
+            (this.m_fnMouseMove = (e) => {
+              this.OnMouseMove(e, t);
+            }),
+            this.setState({ EdgeDown: t }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((e.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((e.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            )),
+            e.preventDefault(),
+            e.stopPropagation();
+        }
+        OnMouseMove(e, t) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((e.shiftKey && this.m_fnMouseUp(), t)) {
+              case i.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                });
+                break;
+              case i.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(e.clientX),
+                });
+                break;
+              case i.top:
+                this.UpdateState({ curTopPosPct: this.CalcTopEdge(e.clientY) });
+                break;
+              case i.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY),
+                });
+                break;
+              case i.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(e.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                });
+                break;
+              case i.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(e.clientY),
+                  curRightPosPct: this.CalcRightEdge(e.clientX),
+                });
+                break;
+              case i.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY),
+                });
+                break;
+              case i.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(e.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY),
+                });
+                break;
+              case i.middle: {
+                const t = (0, _.OQ)(
+                    this.CalcLeftEdge(e.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  s = 100 - (t + this.state.curWidthPct),
+                  i = (0, _.OQ)(
+                    this.CalcTopEdge(e.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  a = {
+                    curLeftPosPct: t,
+                    curRightPosPct: s,
+                    curTopPosPct: i,
+                    curBottomPosPct: 100 - (i + this.state.curHeightPct),
+                  };
+                this.setState(a);
+                break;
+              }
+            }
+            e.preventDefault(), e.stopPropagation();
+          }
+        }
+        IsValidPct(e) {
+          return e >= 0 && e <= 100;
+        }
+        UpdateState(e) {
+          let t =
+              void 0 !== e.curTopPosPct
+                ? e.curTopPosPct
+                : this.state.curTopPosPct,
+            s =
+              void 0 !== e.curBottomPosPct
+                ? e.curBottomPosPct
+                : this.state.curBottomPosPct,
+            i =
+              void 0 !== e.curLeftPosPct
+                ? e.curLeftPosPct
+                : this.state.curLeftPosPct,
+            a =
+              void 0 !== e.curRightPosPct
+                ? e.curRightPosPct
+                : this.state.curRightPosPct,
+            o = (0, _.OQ)(
+              100 - a - i,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            r = (0, _.OQ)(
+              100 - s - t,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== e.curLeftPosPct || void 0 !== e.curRightPosPct
+              ? (r = o / this.m_aspectRatio)
+              : (o = r * this.m_aspectRatio)),
+            void 0 !== e.curLeftPosPct
+              ? (i = 100 - a - o)
+              : (a = 100 - (i + o)),
+            void 0 !== e.curTopPosPct ? (t = 100 - s - r) : (s = 100 - (t + r));
+          const n = 100 - a - i,
+            l = 100 - s - t;
+          this.IsValidPct(i) &&
+            this.IsValidPct(a) &&
+            this.IsValidPct(t) &&
+            this.IsValidPct(s) &&
+            this.IsValidPct(n) &&
+            this.IsValidPct(l) &&
+            this.setState({
+              curLeftPosPct: i,
+              curRightPosPct: a,
+              curTopPosPct: t,
+              curBottomPosPct: s,
+            });
+        }
+        GetXPercent(e) {
+          return this.m_rectLinkRegion
+            ? ((e - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+                (this.m_nLocalOffsetXPct ?? 0)
+            : 0;
+        }
+        GetYPercent(e) {
+          return this.m_rectLinkRegion
+            ? ((e - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+                (this.m_nLocalOffsetYPct ?? 0)
+            : 0;
+        }
+        CalcLeftEdge(e) {
+          return (0, _.OQ)(this.GetXPercent(e), 0, 100);
+        }
+        CalcRightEdge(e) {
+          return (0, _.OQ)(
+            100 - (this.GetXPercent(e) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(e) {
+          return (0, _.OQ)(this.GetYPercent(e), 0, 100);
+        }
+        CalcBottomEdge(e) {
+          return (0, _.OQ)(
+            100 - (this.GetYPercent(e) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(e, t) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({ EdgeDown: void 0 }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(e) {
+          this.setState({
+            text_link_url: e.target.value,
+            valid_link: this.validateUrl(e.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(e) {
+          this.setState({ text_link_description: e.target.value });
+        }
+        validateUrl(e) {
+          return (
+            null != e &&
+            /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+              e,
+            )
+          );
+        }
+        OnSaveLink() {
+          (this.m_strDescription = this.state.text_link_description ?? ""),
+            this.setState({ bEditingLink: !this.state.bEditingLink }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({ bEditingLink: !this.state.bEditingLink });
+        }
+        render() {
+          let e = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            t = p().LinkRegionDragBox;
+          return (
+            null != this.state.EdgeDown &&
+              (t += ` ${p().EdgeDown} ` + p()[this.state.EdgeDown]),
+            (0, o.jsxs)("div", {
+              className: t,
+              style: e,
+              ref: this.LinkRegionBoxRef,
+              draggable: !1,
+              children: [
+                (0, o.jsxs)("div", {
+                  className: p().LinkRegionGridBox,
+                  children: [
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().TopLeft}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.topleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().Top}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.top);
+                      },
+                    }),
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().TopRight}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.topright);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().Left}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.left);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, o.jsxs)("div", {
+                      className: `${p().LinkRegionEdge} ${p().Middle}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.middle);
+                      },
+                      draggable: !1,
+                      children: [
+                        this.props.deleteFn &&
+                          (0, o.jsx)("div", {
+                            className: p().LinkRegionDelete,
+                            onClick: this.HandleDelete,
+                            children: (0, o.jsx)(u.sED, {}),
+                          }),
+                        !this.props.bDisableLink &&
+                          (0, o.jsx)("div", {
+                            className: p().LinkRegionSettings,
+                            onClick: this.OnEditLink,
+                            children: (0, o.jsx)(u.xv8, {}),
+                          }),
+                        (0, o.jsxs)("div", {
+                          className: p().LinkText,
+                          children: [" ", this.m_strDescription, " "],
+                        }),
+                      ],
+                    }),
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().Right}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.right);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().BottomLeft}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.bottomleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().Bottom}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.bottom);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, o.jsx)("div", {
+                      className: `${p().LinkRegionEdge} ${p().BottomRight}`,
+                      onMouseDown: (e) => {
+                        this.OnMouseDown(e, i.bottomright);
+                      },
+                      draggable: !1,
+                    }),
+                  ],
+                }),
+                this.state.bEditingLink &&
+                  (0, o.jsxs)("div", {
+                    className: p().LinkRegionInfo,
+                    children: [
+                      (0, o.jsx)(h.pd, {
+                        className: p().LinkRegionInput,
+                        type: "text",
+                        name: "link_url",
+                        value: this.state.text_link_url,
+                        label: (0, c.we)("#SteamTV_LinkURL"),
+                        placeholder: "https://www.example.com",
+                        onChange: this.OnSetLinkURLChange,
+                        mustBeURL: !0,
+                      }),
+                      (0, o.jsx)(h.pd, {
+                        className: p().LinkRegionInput,
+                        type: "text",
+                        name: "link_description",
+                        value: this.state.text_link_description,
+                        label: (0, c.we)("#SteamTV_LinkDescription"),
+                        placeholder: (0, c.we)(
+                          "#SteamTV_LinkDescription_Placeholder",
+                        ),
+                        onChange: this.OnSetLinkDescriptionChange,
+                      }),
+                      (0, o.jsxs)("div", {
+                        className: p().LinkRegionButtonContainer,
+                        children: [
+                          (0, o.jsxs)(h.$n, {
+                            disabled: !this.state.valid_link,
+                            onClick: this.OnSaveLink,
+                            children: [" ", (0, c.we)("#Button_OK"), " "],
+                          }),
+                          (0, o.jsxs)(h.$n, {
+                            onClick: this.OnEditLink,
+                            children: [" ", (0, c.we)("#Button_Cancel")],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            })
+          );
+        }
+      };
+      (0, a.Cg)([n.oI], g.prototype, "LinkRegionBoxRef", null),
+        (0, a.Cg)([n.oI], g.prototype, "OnMouseDown", null),
+        (0, a.Cg)([n.oI], g.prototype, "OnMouseMove", null),
+        (0, a.Cg)([n.oI], g.prototype, "OnMouseUp", null),
+        (0, a.Cg)([n.oI], g.prototype, "HandleDelete", null),
+        (0, a.Cg)([n.oI], g.prototype, "OnSetLinkURLChange", null),
+        (0, a.Cg)([n.oI], g.prototype, "OnSetLinkDescriptionChange", null),
+        (0, a.Cg)([n.oI], g.prototype, "OnSaveLink", null),
+        (0, a.Cg)([n.oI], g.prototype, "OnEditLink", null),
+        (g = (0, a.Cg)([l.PA], g));
     },
     3088: (e, t, s) => {
       "use strict";
       s.d(t, { c: () => n });
-      var a = s(34629),
-        i = s(7850),
-        r = s(90626),
-        o = s(84933);
-      class n extends r.Component {
-        m_refImage = r.createRef();
+      var i = s(34629),
+        a = s(7850),
+        o = s(90626),
+        r = s(84933);
+      class n extends o.Component {
+        m_refImage = o.createRef();
         constructor(e) {
           super(e), (this.state = { nImage: 0, nPropChangeCounter: 0 });
         }
@@ -5918,172 +6423,172 @@
               rgSources: e,
               onIncrementalError: t,
               onError: s,
-              strAltText: a,
-              ...r
+              strAltText: i,
+              ...o
             } = this.props,
-            o = this.src,
+            r = this.src,
             n = this.state.nPropChangeCounter;
-          return (0, i.jsx)(
+          return (0, a.jsx)(
             "img",
             {
               ref: this.m_refImage,
-              ...r,
-              src: o,
+              ...o,
+              src: r,
               onError: this.OnImageError,
-              alt: a,
+              alt: i,
             },
             n,
           );
         }
       }
-      (0, a.Cg)([o.oI], n.prototype, "OnImageError", null);
+      (0, i.Cg)([r.oI], n.prototype, "OnImageError", null);
     },
     60801: (e, t, s) => {
       "use strict";
-      s.d(t, { S: () => j, X: () => D });
-      var a = s(7850),
-        i = s(90626),
-        r = s(76217),
-        o = s(61088),
-        n = s.n(o),
+      s.d(t, { S: () => T, X: () => D });
+      var i = s(7850),
+        a = s(90626),
+        o = s(76217),
+        r = s(61088),
+        n = s.n(r),
         l = s(12155),
         d = s(2627),
         c = s(61859),
-        u = s(53835),
-        m = s(52038),
-        h = s(79359),
+        h = s(53835),
+        u = s(52038),
+        m = s(79359),
         p = s(78327),
         _ = s(60778),
-        S = s(72224),
-        g = s(14947),
-        C = s(46253),
-        v = s(38535),
+        g = s(72224),
+        S = s(14947),
+        v = s(46253),
+        C = s(38535),
         b = s(54096),
-        y = s(31963);
-      const f = new _.wd("TrailerAppVideo"),
-        x = "bGameHighlightAutoplayDisabled",
-        I = "discovery-queue-volume",
+        f = s(31963);
+      const y = new _.wd("TrailerAppVideo"),
+        P = "bGameHighlightAutoplayDisabled",
+        x = "discovery-queue-volume",
         w = "discovery-queue-mute";
       function D(e) {
         const {
             storeItem: t,
             bCurrentlyActive: s,
-            autoPlayCookieName: o,
+            autoPlayCookieName: r,
             bPlayWithBroadcastPlayer: l,
-            showScreenshotInsteadOfMainCap: u,
-            autoplayCheckboxPosition: h,
+            showScreenshotInsteadOfMainCap: h,
+            autoplayCheckboxPosition: m,
             refTogglePlayPause: p,
             bShowAOAutoPlayWarning: _,
-            ...S
+            ...g
           } = e,
-          [g, b] = i.useState(!1),
-          [y, f] = i.useState(!1),
-          I = (0, v.$9)(),
+          [S, b] = a.useState(!1),
+          [f, y] = a.useState(!1),
+          x = (0, C.$9)(),
           w = (function (e, t) {
             const s = e?.GetAllTrailers().GetAllTrailers("blocked" == t);
             return s && s.length > 0 ? s[0] : void 0;
-          })(t, I),
-          D = (_ ?? !0) && w && !w.BIsAllAges() && "masked" == I,
-          T = (0, v.AS)(),
-          [j, V] = i.useState(!1),
-          [k, A] = i.useState(0),
-          N = i.useRef(void 0),
-          M = i.useRef(void 0),
-          [O, G] = i.useState(),
-          { bCookieLoaded: R } = (function (e, t, s) {
-            const a = i.useCallback(() => {
-              const t = (0, d.VY)(e ?? x),
-                a = !(!t || "true" !== t.toLowerCase());
-              s(!a);
+          })(t, x),
+          D = (_ ?? !0) && w && !w.BIsAllAges() && "masked" == x,
+          k = (0, C.AS)(),
+          [T, j] = a.useState(!1),
+          [V, M] = a.useState(0),
+          A = a.useRef(void 0),
+          N = a.useRef(void 0),
+          [R, O] = a.useState(),
+          { bCookieLoaded: G } = (function (e, t, s) {
+            const i = a.useCallback(() => {
+              const t = (0, d.VY)(e ?? P),
+                i = !(!t || "true" !== t.toLowerCase());
+              s(!i);
             }, [e, s]);
             return (function (e, t) {
-              const [s, a] = i.useState(!1);
+              const [s, i] = a.useState(!1);
               return (
-                i.useEffect(() => (e && (t(), a(!0)), () => a(!1)), [e, t]),
+                a.useEffect(() => (e && (t(), i(!0)), () => i(!1)), [e, t]),
                 { bCookieLoaded: s }
               );
-            })(t, a);
-          })(o, s, b),
-          L = R;
-        i.useEffect(() => {
-          s && L && (g || l) && !D && f(!0);
-        }, [g, L, s, l, D]),
-          i.useEffect(() => {
-            D && y && g && T();
-          }, [y, D, g, T]);
-        const E = (function (e, t, s, a, r) {
-          return i.useCallback(() => {
+            })(t, i);
+          })(r, s, b),
+          L = G;
+        a.useEffect(() => {
+          s && L && (S || l) && !D && y(!0);
+        }, [S, L, s, l, D]),
+          a.useEffect(() => {
+            D && f && S && k();
+          }, [f, D, S, k]);
+        const E = (function (e, t, s, i, o) {
+          return a.useCallback(() => {
             0 == e
               ? t(!0)
               : 1 == e && s.current
                 ? s.current.paused
                   ? s.current.play()
                   : s.current.pause()
-                : 2 == e && a.current
-                  ? a.current.IsPaused()
-                    ? a.current.Play()
-                    : a.current.Pause()
-                  : 2 == e && r && r.TogglePlayPause();
-          }, [r, e, a, s, t]);
-        })(k, f, N, M, O);
-        i.useEffect(() => {
+                : 2 == e && i.current
+                  ? i.current.IsPaused()
+                    ? i.current.Play()
+                    : i.current.Pause()
+                  : 2 == e && o && o.TogglePlayPause();
+          }, [o, e, i, s, t]);
+        })(V, y, A, N, R);
+        a.useEffect(() => {
           p && (p.current = E);
         }, [E, p]);
-        const H = t.GetScreenshots("allowed" != I),
-          U = u && H.length > 0 ? H[0] : t.GetAssets().GetMainCapsuleURL();
-        return (0, a.jsxs)(r.Z, {
+        const H = t.GetScreenshots("allowed" != x),
+          U = h && H.length > 0 ? H[0] : t.GetAssets().GetMainCapsuleURL();
+        return (0, i.jsxs)(o.Z, {
           className: n().AppCarouselTrailerCtn,
-          onMouseEnter: () => V(!0),
-          onMouseLeave: () => V(!1),
+          onMouseEnter: () => j(!0),
+          onMouseLeave: () => j(!1),
           children: [
-            (0, a.jsx)("img", {
-              className: (0, m.A)(n().AppMainCap, 0 != k && n().Hidden),
+            (0, i.jsx)("img", {
+              className: (0, u.A)(n().AppMainCap, 0 != V && n().Hidden),
               src: U,
               onClick: E,
             }),
             !l &&
-              (0, a.jsx)(B, {
+              (0, i.jsx)(B, {
                 storeItem: t,
-                bAutoplayVideos: g,
-                autoplayCheckboxPosition: h,
+                bAutoplayVideos: S,
+                autoplayCheckboxPosition: m,
                 fnSetAutoPlayVideos: (e) => {
-                  (0, d.lc)(o ?? x, String(!e), 3650), b(e), f(e);
+                  (0, d.lc)(r ?? P, String(!e), 3650), b(e), y(e);
                 },
               }),
-            (0, a.jsx)(C.h, {
+            (0, i.jsx)(v.h, {
               name: t.GetName(),
               trailerCategory: w?.GetTrailerCategory(),
-              trailerDisplay: k,
-              mouseOver: j,
+              trailerDisplay: V,
+              mouseOver: T,
             }),
-            (0, a.jsx)(P, {
-              eTrailerDisplay: k,
-              setTrailerDisplay: A,
+            (0, i.jsx)(I, {
+              eTrailerDisplay: V,
+              setTrailerDisplay: M,
               featuredTrailer: w,
-              refMicroTrailer: N,
-              refMainTrailer: M,
+              refMicroTrailer: A,
+              refMainTrailer: N,
               loadedAndActive: L && s,
-              setVideoShouldStart: f,
-              bMouseOverVideo: j,
+              setVideoShouldStart: y,
+              bMouseOverVideo: T,
               storeItem: t,
-              broadcastVideo: O,
-              fnSetBroadcastVideo: G,
+              broadcastVideo: R,
+              fnSetBroadcastVideo: O,
               fnTogglePlayPause: E,
-              bAutoplayVideos: g,
-              bVideoShouldStart: y,
+              bAutoplayVideos: S,
+              bVideoShouldStart: f,
               bPlayWithBroadcastPlayer: l,
-              ...S,
+              ...g,
             }),
             D &&
-              g &&
-              (0, a.jsxs)("div", {
+              S &&
+              (0, i.jsxs)("div", {
                 className: n().AOWarning,
                 children: [
-                  (0, a.jsx)("div", {
+                  (0, i.jsx)("div", {
                     className: n().Text,
                     children: (0, c.we)("#StoreTrailer_AOWarning_1"),
                   }),
-                  (0, a.jsx)("div", {
+                  (0, i.jsx)("div", {
                     className: n().Text,
                     children: (0, c.we)("#StoreTrailer_AOWarning_2"),
                   }),
@@ -6092,184 +6597,184 @@
           ],
         });
       }
-      function P(e) {
+      function I(e) {
         const {
             storeItem: t,
             featuredTrailer: s,
-            bPlayWithBroadcastPlayer: o,
+            bPlayWithBroadcastPlayer: r,
             bSkipMicroTrailer: d,
             nFadeRatio: c,
-            fnPlayPause: u,
-            bRequestPause: m,
-            fnComplete: h,
+            fnPlayPause: h,
+            bRequestPause: u,
+            fnComplete: m,
             eTrailerDisplay: _,
-            setTrailerDisplay: C,
+            setTrailerDisplay: v,
             refMainTrailer: b,
-            refMicroTrailer: y,
-            loadedAndActive: x,
-            setVideoShouldStart: I,
+            refMicroTrailer: f,
+            loadedAndActive: P,
+            setVideoShouldStart: x,
             broadcastVideo: w,
             fnSetBroadcastVideo: D,
-            fnTogglePlayPause: P,
-            bAutoplayVideos: j,
+            fnTogglePlayPause: I,
+            bAutoplayVideos: T,
             bVideoShouldStart: B,
           } = e,
-          [k, A] = i.useState(!1),
-          [N, M] = i.useState(!1),
-          [O, G] = i.useState(!1),
-          [R, L] = i.useState(!1),
-          [E, H] = i.useState(!1),
-          U = (0, v.$9)(),
+          [V, M] = a.useState(!1),
+          [A, N] = a.useState(!1),
+          [R, O] = a.useState(!1),
+          [G, L] = a.useState(!1),
+          [E, H] = a.useState(!1),
+          U = (0, C.$9)(),
           F = t?.GetMicroTrailer("blocked" == U),
           W = !!F || !!s;
-        i.useEffect(() => {
+        a.useEffect(() => {
           let e = !1;
-          x && O && W && (e = 0 === _ || (1 === _ && !R) || (2 === _ && !E)),
-            A(e),
-            u?.(j && e);
-        }, [u, _, E, R, x, j, O, W]),
+          P && R && W && (e = 0 === _ || (1 === _ && !G) || (2 === _ && !E)),
+            M(e),
+            h?.(T && e);
+        }, [h, _, E, G, P, T, R, W]),
           (function (e, t) {
-            i.useEffect(() => {
+            a.useEffect(() => {
               const s = e.current;
               if (!s) return;
-              const a = () => t(!0),
-                i = () => t(!1);
+              const i = () => t(!0),
+                a = () => t(!1);
               return (
-                s.addEventListener("play", a),
-                s.addEventListener("pause", i),
+                s.addEventListener("play", i),
+                s.addEventListener("pause", a),
                 () => {
-                  s.removeEventListener("play", a),
-                    s.removeEventListener("pause", i);
+                  s.removeEventListener("play", i),
+                    s.removeEventListener("pause", a);
                 }
               );
             }, [t, e]);
-          })(y, L),
-          i.useEffect(() => {
+          })(f, L),
+          a.useEffect(() => {
             B ||
-              (C(0),
-              A(!1),
-              G(!1),
-              y.current && (y.current.pause(), (y.current.currentTime = 0)),
+              (v(0),
+              M(!1),
+              O(!1),
+              f.current && (f.current.pause(), (f.current.currentTime = 0)),
               b.current && (b.current.Pause(), b.current.SeekToStart()));
-          }, [B, b, y, C]);
-        const z = i.useRef(!1);
+          }, [B, b, f, v]);
+        const z = a.useRef(!1);
         return (
-          i.useEffect(() => {
-            if (x && 0 === _)
-              if ((G(!0), B))
+          a.useEffect(() => {
+            if (P && 0 === _)
+              if ((O(!0), B))
                 if (b.current) {
-                  f.Debug("Starting microtrailer"), C(1);
-                  const a = () =>
+                  y.Debug("Starting microtrailer"), v(1);
+                  const i = () =>
                     (function (e, t, s) {
                       if (e.current) return;
                       (e.current = !0),
-                        f.Debug("Starting main trailer"),
+                        y.Debug("Starting main trailer"),
                         t(2),
                         s.Play();
-                    })(z, C, b.current);
-                  d || !y.current
-                    ? a()
+                    })(z, v, b.current);
+                  d || !f.current
+                    ? i()
                     : (L(!0),
-                      (y.current.onended = a),
-                      (e = y.current),
+                      (f.current.onended = i),
+                      (e = f.current),
                       (t = "microtrailer"),
                       (s = () => L(!1)),
                       e.play().catch((e) => {
-                        s(), f.Warning(`Failed to play ${t}: `, e);
+                        s(), y.Warning(`Failed to play ${t}: `, e);
                       }));
                 } else
-                  w && (f.Debug("Starting broadcast player"), C(2), w.Play());
-              else f.Debug("Showing image");
+                  w && (y.Debug("Starting broadcast player"), v(2), w.Play());
+              else y.Debug("Showing image");
             var e, t, s;
-          }, [x, _, d, B, h, w, C, b, y]),
+          }, [P, _, d, B, m, w, v, b, f]),
           (function (e, t) {
-            i.useEffect(() => {
+            a.useEffect(() => {
               if (!t.current || !t.current.onended) return;
               if (!e) return;
               let s = t.current.onended,
-                a = setTimeout(() => {
+                i = setTimeout(() => {
                   s();
                 }, 6e3);
-              return () => clearTimeout(a);
+              return () => clearTimeout(i);
             }, [e, t]);
-          })(R, y),
-          i.useEffect(() => {
-            x || I(!1);
-          }, [x, I]),
-          i.useEffect(() => {
-            const e = (0, g.fm)(() => {
-              M(w?.GetUserInputNeeded()), H(!w?.IsPaused());
+          })(G, f),
+          a.useEffect(() => {
+            P || x(!1);
+          }, [P, x]),
+          a.useEffect(() => {
+            const e = (0, S.fm)(() => {
+              N(w?.GetUserInputNeeded()), H(!w?.IsPaused());
             });
             return () => e();
           }, [w]),
-          (function (e, t, s, a, r, o, n) {
-            const [l, d] = i.useState(!1);
-            i.useEffect(() => {
+          (function (e, t, s, i, o, r, n) {
+            const [l, d] = a.useState(!1);
+            a.useEffect(() => {
               e && !l
-                ? 1 == t && s && a
+                ? 1 == t && s && i
                   ? (s.pause(), d(!0))
-                  : 2 == t && r && o
-                    ? (r.Pause(), d(!0))
+                  : 2 == t && o && r
+                    ? (o.Pause(), d(!0))
                     : 2 == t && n && !n.IsPaused() && (n.Pause(), d(!0))
                 : !e &&
                   l &&
                   (1 == t && s
                     ? s.play()
-                    : 2 == t && r
-                      ? r.Play()
+                    : 2 == t && o
+                      ? o.Play()
                       : 2 == t && n && n.IsPaused() && n.Play(),
                   d(!1));
-            }, [n, t, e, l, a, o, s, r]);
-          })(m, _, y.current, R, b.current, E, w),
+            }, [n, t, e, l, i, r, s, o]);
+          })(u, _, f.current, G, b.current, E, w),
           t && t.BIsVisible()
-            ? (s || o) &&
-              (0, a.jsxs)(a.Fragment, {
+            ? (s || r) &&
+              (0, i.jsxs)(i.Fragment, {
                 children: [
-                  k &&
-                    !N &&
-                    (0, a.jsx)(r.Z, {
+                  V &&
+                    !A &&
+                    (0, i.jsx)(o.Z, {
                       focusable: !0,
-                      onClick: P,
+                      onClick: I,
                       className: n().PlayButton,
-                      children: (0, a.jsx)(l.IOc, {}),
+                      children: (0, i.jsx)(l.IOc, {}),
                     }),
                   F &&
-                    (0, a.jsxs)("video", {
-                      className: V(!0, _),
-                      ref: y,
+                    (0, i.jsxs)("video", {
+                      className: j(!0, _),
+                      ref: f,
                       preload: "auto",
                       playsInline: !0,
                       muted: !0,
-                      onClick: P,
+                      onClick: I,
                       children: [
-                        (0, a.jsx)("source", {
+                        (0, i.jsx)("source", {
                           src: F.strWebMURL,
                           type: "video/webm",
                         }),
                         Boolean(!p.TS.IN_CLIENT) &&
-                          (0, a.jsx)("source", {
+                          (0, i.jsx)("source", {
                             src: F.strMP4URL,
                             type: "video/mp4",
                           }),
                       ],
                     }),
                   s &&
-                    !o &&
-                    (0, a.jsx)(T, {
+                    !r &&
+                    (0, i.jsx)(k, {
                       ref: b,
                       trailer: s,
                       eTrailerDisplay: _,
                       fadeRatio: c,
                       onPlayPauseChange: H,
-                      onPlaybackEnd: h,
+                      onPlaybackEnd: m,
                     }),
-                  o &&
-                    (0, a.jsx)(S.default, {
-                      classes: V(!1, _),
+                  r &&
+                    (0, i.jsx)(g.default, {
+                      classes: j(!1, _),
                       nAppIDVOD: t.GetAppID(),
                       watchLocation: 15,
-                      fnOnVideoEnd: h,
-                      fnVideoClick: P,
+                      fnOnVideoEnd: m,
+                      fnVideoClick: I,
                       fnSetBroadcastVideo: D,
                       bStartWithSubtitles: !0,
                       bStartMuted: !0,
@@ -6279,28 +6784,28 @@
             : null
         );
       }
-      function T(e) {
+      function k(e) {
         let {
           ref: t,
           trailer: s,
-          eTrailerDisplay: r,
-          fadeRatio: o,
+          eTrailerDisplay: o,
+          fadeRatio: r,
           onPlayPauseChange: n,
           onPlaybackEnd: l,
         } = e;
-        (0, i.useEffect)(() => {
-          if (void 0 !== o && t.current) {
-            let e = t.current.GetVolume() * o;
+        (0, a.useEffect)(() => {
+          if (void 0 !== r && t.current) {
+            let e = t.current.GetVolume() * r;
             const s = !0;
             t.current.SetVolume(e, s);
           }
-        }, [o, t]);
-        let d = 2 != r,
-          c = V(!1, r);
-        return (0, a.jsx)(j, {
-          children: (0, a.jsx)("div", {
+        }, [r, t]);
+        let d = 2 != o,
+          c = j(!1, o);
+        return (0, i.jsx)(T, {
+          children: (0, i.jsx)("div", {
             className: c,
-            children: (0, a.jsx)(b.P, {
+            children: (0, i.jsx)(b.P, {
               ref: t,
               dashManifests: s.GetTrailersDash(),
               hlsManifest: s.GetTrailerHls(),
@@ -6314,20 +6819,20 @@
           }),
         });
       }
-      function j(e) {
+      function T(e) {
         let { children: t } = e;
-        const [s, i] = (0, h.M)(I, 0.8),
-          [r, o] = (0, h.M)(w, !0);
-        return (0, a.jsx)(y.v, {
+        const [s, a] = (0, m.M)(x, 0.8),
+          [o, r] = (0, m.M)(w, !0);
+        return (0, i.jsx)(f.v, {
           playerVolume: s,
-          setPlayerVolume: i,
-          audioMuted: r,
-          setAudioMuted: o,
+          setPlayerVolume: a,
+          audioMuted: o,
+          setAudioMuted: r,
           children: t,
         });
       }
-      function V(e, t) {
-        return (0, m.A)({
+      function j(e, t) {
+        return (0, u.A)({
           [n().AppVideo]: !0,
           [n().PlayFullTrailer]: 2 == t,
           [n().PlayMicrotrailer]: 1 == t,
@@ -6340,24 +6845,24 @@
         const {
             storeItem: t,
             bAutoplayVideos: s,
-            fnSetAutoPlayVideos: i,
-            autoplayCheckboxPosition: r,
+            fnSetAutoPlayVideos: a,
+            autoplayCheckboxPosition: o,
           } = e,
-          o = { [r || "top"]: 0 };
-        return (0, a.jsx)("div", {
+          r = { [o || "top"]: 0 };
+        return (0, i.jsx)("div", {
           onClick: (e) => {
             e.preventDefault(), e.stopPropagation();
           },
           className: n().AutoplayCheckboxCtn,
-          children: (0, a.jsx)(
-            u.Yh,
+          children: (0, i.jsx)(
+            h.Yh,
             {
               controlled: !0,
               checked: s,
               className: n().AutoplayCheckbox,
-              style: o,
+              style: r,
               label: (0, c.we)("#StoreTrailer_AutoPlayVideos"),
-              onChange: i,
+              onChange: a,
             },
             t.GetAppID(),
           ),
@@ -6366,82 +6871,82 @@
     },
     12813: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => x });
-      var a = s(7850),
-        i = s(22837),
-        r = s(45699),
-        o = s(8527),
+      s.r(t), s.d(t, { default: () => P });
+      var i = s(7850),
+        a = s(22837),
+        o = s(45699),
+        r = s(8527),
         n = s(60014),
         l = s(90626),
         d = s(57876),
         c = s(55263),
-        u = s(84811),
-        m = s(53354),
-        h = s(22208),
+        h = s(84811),
+        u = s(53354),
+        m = s(22208),
         p = s(60801),
         _ = s(32630),
-        S = s(54096),
-        g = s(10224),
-        C = s(52038),
-        v = s(61859),
+        g = s(54096),
+        S = s(10224),
+        v = s(52038),
+        C = s(61859),
         b = s(61336),
-        y = s(70124),
-        f = s.n(y);
-      function x(e) {
+        f = s(70124),
+        y = s.n(f);
+      function P(e) {
         const {
             match: {
               params: { appid: t },
             },
           } = e,
           s = Number.parseInt(t),
-          [i] = (0, c.t7)(s, d.Xh);
+          [a] = (0, c.t7)(s, d.Xh);
         return (
           (0, l.useEffect)(() => {
-            if (i) {
-              const e = i.GetStorePageURL().replace("/app/", "/verified/");
+            if (a) {
+              const e = a.GetStorePageURL().replace("/app/", "/verified/");
               e != window.location.href &&
                 window.history.replaceState({}, "", e);
             }
-          }, [i]),
-          (0, a.jsx)(_.Ay, {
+          }, [a]),
+          (0, i.jsx)(_.Ay, {
             method: "verifiedprogram",
-            children: (0, a.jsx)(u.tH, {
-              children: (0, a.jsx)(w, { storeItem: i }),
+            children: (0, i.jsx)(h.tH, {
+              children: (0, i.jsx)(w, { storeItem: a }),
             }),
           })
         );
       }
-      function I(e) {
+      function x(e) {
         const { storeItem: t } = e,
           s = (0, b.L$)(
             "https://clan.akamai.steamstatic.com/images/41316928/846f603df6057b070667f2741730c2038648955d.png",
           );
-        return (0, a.jsxs)(a.Fragment, {
+        return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, a.jsx)("div", {
-              className: f().Headline,
-              children: (0, v.PP)(
+            (0, i.jsx)("div", {
+              className: y().Headline,
+              children: (0, C.PP)(
                 "#VerifiedProgram_DeckTitle",
                 t.GetName(),
-                (0, a.jsxs)("span", {
-                  className: f().Verified,
+                (0, i.jsxs)("span", {
+                  className: y().Verified,
                   children: [
-                    (0, a.jsx)("img", {
+                    (0, i.jsx)("img", {
                       src: s,
-                      alt: (0, v.we)("#VerifiedProgram_DeckAlt"),
+                      alt: (0, C.we)("#VerifiedProgram_DeckAlt"),
                     }),
-                    (0, v.we)("#VerifiedProgram_DeckTitle_Verified"),
+                    (0, C.we)("#VerifiedProgram_DeckTitle_Verified"),
                   ],
                 }),
               ),
             }),
-            (0, a.jsx)("div", {
-              className: f().Subtitle,
-              children: (0, v.oW)(
+            (0, i.jsx)("div", {
+              className: y().Subtitle,
+              children: (0, C.oW)(
                 "#VerifiedProgram_DeckSubTitle",
-                (0, a.jsx)(r.Ii, {
-                  className: f().Link,
-                  href: `${o.TS.STORE_BASE_URL}greatondeck`,
+                (0, i.jsx)(o.Ii, {
+                  className: y().Link,
+                  href: `${r.TS.STORE_BASE_URL}greatondeck`,
                 }),
               ),
             }),
@@ -6454,24 +6959,24 @@
         const s =
           t.GetAssets().GetLibraryHeroURL_2x() ??
           t.GetAssets().GetLibraryHeroURL();
-        return (0, a.jsxs)("div", {
-          className: f().Ctn,
+        return (0, i.jsxs)("div", {
+          className: y().Ctn,
           children: [
-            (0, a.jsx)("div", {
-              className: f().BackgroundImageCtn,
-              children: (0, a.jsx)("img", { src: s, alt: "" }),
+            (0, i.jsx)("div", {
+              className: y().BackgroundImageCtn,
+              children: (0, i.jsx)("img", { src: s, alt: "" }),
             }),
-            (0, a.jsx)("div", {
-              className: f().BackgroundImageBlurCtn,
-              children: (0, a.jsx)("img", { src: s, alt: "" }),
+            (0, i.jsx)("div", {
+              className: y().BackgroundImageBlurCtn,
+              children: (0, i.jsx)("img", { src: s, alt: "" }),
             }),
-            (0, a.jsxs)("div", {
-              className: (0, C.A)("page_content"),
+            (0, i.jsxs)("div", {
+              className: (0, v.A)("page_content"),
               children: [
-                (0, a.jsx)(I, { storeItem: t }),
-                (0, a.jsx)(T, { storeItem: t }),
-                (0, a.jsx)(D, { storeItem: t }),
-                (0, a.jsx)(P, { storeItem: t }),
+                (0, i.jsx)(x, { storeItem: t }),
+                (0, i.jsx)(k, { storeItem: t }),
+                (0, i.jsx)(D, { storeItem: t }),
+                (0, i.jsx)(I, { storeItem: t }),
               ],
             }),
           ],
@@ -6479,9 +6984,9 @@
       }
       function D(e) {
         const { storeItem: t } = e;
-        return (0, a.jsx)("div", {
-          className: f().CapsuleWrapper,
-          children: (0, a.jsx)(h.y, {
+        return (0, i.jsx)("div", {
+          className: y().CapsuleWrapper,
+          children: (0, i.jsx)(m.y, {
             id: t.GetID(),
             type: "game",
             bShowDeckCompatibilityDialog: !1,
@@ -6492,67 +6997,67 @@
           }),
         });
       }
-      function P(e) {
+      function I(e) {
         const { storeItem: t } = e,
           s = (0, n.aL)(
-            `${o.TS.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
+            `${r.TS.STORE_BASE_URL}steamdeck?utm_source=verifiedpage`,
             "banner",
           );
-        return (0, a.jsx)(r.Ii, {
+        return (0, i.jsx)(o.Ii, {
           href: s,
-          className: (0, C.A)(f().HardwareBannerCtn),
-          children: (0, a.jsx)(j, {}),
+          className: (0, v.A)(y().HardwareBannerCtn),
+          children: (0, i.jsx)(T, {}),
         });
       }
-      function T(e) {
+      function k(e) {
         const { storeItem: t } = e,
           s = (0, b.L$)(
             "https://clan.akamai.steamstatic.com/images//39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png",
           ),
-          i = [
+          a = [
             ...t.GetAllTrailers().GetHighlightTrailers(!0),
             ...t.GetAllTrailers().GetOtherTrailers(!0),
           ],
-          r = i?.[0]?.GetTrailersDash(),
-          o = i?.[0]?.GetTrailerHls(),
-          n = i?.[0]?.GetScreenshot();
-        return (0, a.jsxs)("div", {
-          className: f().DeviceFullWidthShadow,
+          o = a?.[0]?.GetTrailersDash(),
+          r = a?.[0]?.GetTrailerHls(),
+          n = a?.[0]?.GetScreenshot();
+        return (0, i.jsxs)("div", {
+          className: y().DeviceFullWidthShadow,
           children: [
-            (0, a.jsxs)("div", {
-              className: (0, C.A)(f().DeviceWrapper),
+            (0, i.jsxs)("div", {
+              className: (0, v.A)(y().DeviceWrapper),
               children: [
-                (0, a.jsx)(p.S, {
-                  children: (0, a.jsx)("div", {
-                    className: f().TrailerCtn,
-                    children: (0, a.jsx)(S.P, {
-                      dashManifests: r,
-                      hlsManifest: o,
+                (0, i.jsx)(p.S, {
+                  children: (0, i.jsx)("div", {
+                    className: y().TrailerCtn,
+                    children: (0, i.jsx)(g.P, {
+                      dashManifests: o,
+                      hlsManifest: r,
                       screenshot: n,
                       altText: t.GetName(),
                       muteWhenAutoplayBlocked: !0,
                     }),
                   }),
                 }),
-                (0, a.jsx)("img", {
+                (0, i.jsx)("img", {
                   src: s,
-                  alt: (0, v.we)("#VerifiedProgram_DeckDeviceAlt"),
+                  alt: (0, C.we)("#VerifiedProgram_DeckDeviceAlt"),
                 }),
               ],
             }),
-            (0, a.jsx)("div", {
-              className: f().VideoDisclaimer,
-              children: (0, v.we)("#VerifiedProgram_DeckDisclaimer"),
+            (0, i.jsx)("div", {
+              className: y().VideoDisclaimer,
+              children: (0, C.we)("#VerifiedProgram_DeckDisclaimer"),
             }),
           ],
         });
       }
-      function j(e) {
-        const t = (0, g.zI)(),
-          s = (0, i.sf)(o.TS.LANGUAGE);
-        return (0, a.jsx)(m.u, {
+      function T(e) {
+        const t = (0, S.zI)(),
+          s = (0, a.sf)(r.TS.LANGUAGE);
+        return (0, i.jsx)(u.u, {
           language: s,
-          strAltText: (0, v.we)("#VerifiedProgram_DeckShopBannerAlt"),
+          strAltText: (0, C.we)("#VerifiedProgram_DeckShopBannerAlt"),
           strImageToken: t
             ? "{STEAM_CLAN_LOC_IMAGE}/39049601/6e0ec24257ee5ada6e922c2130eaa75ce83747e8.jpg"
             : "{STEAM_CLAN_LOC_IMAGE}/39049601/c18308dc60fd94678bb348608ddc0d6b8fdb11ab.jpg",

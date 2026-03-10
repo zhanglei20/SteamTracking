@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Nicio listare găsită",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
-	"Accessories_FieldSectionLabel": "Accesorii"
+	"Accessories_FieldSectionLabel": "Accesorii",
+	"Listing_EnhancedAppearance_Missing": "Această listare nu are încă imagini unice sau îmbunătățite. Obiectul din imaginea afișată aici poate fi ușor diferit de obiectul listat."
 }`);
     },
   },

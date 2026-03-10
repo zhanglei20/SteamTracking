@@ -36,6 +36,7 @@
         FAQEditor: "_3YIwjQZlP_YdCZH2DIj5f7",
         Columns: "_2O3puXm5doASD7CnAby6Uh",
         LeftCol: "_3TyuR_ycmrQIlt-wuVBtaD",
+        RightCol: "_33CjP7i4tMRCeZEcf-utD8",
         EditorSaveButton: "_22iwdea7XXbiuZrrLZUU11",
         EditorLabel: "_3jk92bsX5BdG6dMFNGNNKa",
         EditorTitleField: "_37R-2WttVdEqucotluEzW_",
@@ -2068,7 +2069,7 @@
                           (0, _.jsx)(_, {
                             draft: __webpack_require__,
                             bbcodeEditorRef: _,
-                            className: _().RightCol,
+                            className: (0, _._)(_().RightCol, _().RightCol),
                           }),
                         ],
                       }),
@@ -2190,6 +2191,7 @@
               content: __webpack_require__,
               bIsPreview: _,
               elSideBars: _,
+              version: _,
             } = _,
             _ = (0, _._)();
           return (
@@ -2246,6 +2248,7 @@
                               children: (0, _.jsx)(_._, {
                                 text: __webpack_require__,
                                 bShowErrorInfo: _,
+                                version: _ || "0",
                               }),
                             }),
                           ],
@@ -2445,6 +2448,7 @@
               ? (0, _.jsx)(_, {
                   title: __webpack_require__.title,
                   content: __webpack_require__.content,
+                  version: __webpack_require__.version,
                   elSideBars: [
                     (0, _.jsx)(
                       _,
@@ -2519,6 +2523,8 @@
                         _,
                         _._.EREALM,
                       ),
+                      version:
+                        "" + __webpack_require__.GetLastTimeLanguageUpdated(_),
                     }),
                     (0, _.jsx)(_, {
                       draft: __webpack_require__,

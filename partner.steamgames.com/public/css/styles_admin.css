@@ -2810,6 +2810,10 @@ html, body { height:100%; }
 	color: black;
 }
 
+.drag_and_drop .must_select_type {
+	border: 1px solid red;
+}
+
 .drag_and_drop.screenshot_loc_drag_drop
 {
 	min-height: 30px;

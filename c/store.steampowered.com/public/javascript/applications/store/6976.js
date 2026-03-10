@@ -133,7 +133,10 @@
 	"Wishlist_Controls_Categories_Remove_Tooltip": "Remove this category from this item",
 	"Wishlist_Controls_Categories_Filter_Tooltip": "Filter your wishlist to items in this category",
 	"Wishlist_Controls_Categories_All": "All",
-	"Wishlist_Controls_Categories_Manage": "Add or Remove Categories"
+	"Wishlist_Controls_Categories_Manage": "Add or Remove Categories",
+	"Wishlist_Categories_Suggested_Discount": "Waiting For a Sale",
+	"Wishlist_Categories_Suggested_Birthday": "Birthday List",
+	"Wishlist_Categories_Suggested_Recommended": "Recommended by Friends"
 }`);
     },
   },

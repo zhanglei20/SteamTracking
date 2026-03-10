@@ -2748,8 +2748,8 @@
         #i;
         #a;
         #s;
-        #_;
         #d;
+        #_;
         #l;
         #u;
         #c;
@@ -2937,13 +2937,13 @@
           }
           let { error: _, errorUpdatedAt: _, status: _ } = _;
           if (_.select && _.data !== void 0)
-            if (_ && _.data === _?.data && _.select === this.#_) _ = this.#d;
+            if (_ && _.data === _?.data && _.select === this.#d) _ = this.#_;
             else
               try {
-                (this.#_ = _.select),
+                (this.#d = _.select),
                   (_ = _.select(_.data)),
                   (_ = _(_?.data, _, _)),
-                  (this.#d = _),
+                  (this.#_ = _),
                   (this.#s = null);
               } catch (_) {
                 this.#s = _;
@@ -2971,7 +2971,7 @@
             _ !== void 0 && ((_ = "success"), (_ = _(_?.data, _, _)), (_ = !0));
           }
           this.#s &&
-            ((_ = this.#s), (_ = this.#d), (_ = Date.now()), (_ = "error"));
+            ((_ = this.#s), (_ = this.#_), (_ = Date.now()), (_ = "error"));
           let _ = _.fetchStatus === "fetching",
             _ = _ === "pending",
             _ = _ === "error",
@@ -3178,9 +3178,9 @@
           let _ = this.#l(_).map((_) =>
             _.observer.getOptimisticResult(_.defaultedQueryOptions),
           );
-          return [_, (_) => this.#d(_ ?? _, _), () => this.#_(_, _)];
+          return [_, (_) => this.#_(_ ?? _, _), () => this.#d(_, _)];
         }
-        #_(_, _) {
+        #d(_, _) {
           let _ = this.#l(_);
           return _.map((_, _) => {
             let _ = _[_];
@@ -3193,7 +3193,7 @@
                 });
           });
         }
-        #d(_, _) {
+        #_(_, _) {
           return _
             ? ((!this.#i || this.#t !== this.#s || _ !== this.#a) &&
                 ((this.#a = _),
@@ -3229,7 +3229,7 @@
         #c() {
           if (this.hasListeners()) {
             let _ = this.#i,
-              _ = this.#d(this.#_(this.#t, this.#n), this.#r?.combine);
+              _ = this.#_(this.#d(this.#t, this.#n), this.#r?.combine);
             _ !== _ &&
               _.batch(() => {
                 this.listeners.forEach((_) => {
@@ -15626,6 +15626,9 @@ Error generating stack: ` +
   var _ = _(() => {
     "use strict";
   });
+  var _ = _(() => {
+    "use strict";
+  });
   var _ = _((exports, module) => {
     "use strict";
     var $jscomp = $jscomp || {};
@@ -26869,6 +26872,7 @@ Error generating stack: ` +
     _,
     _,
     _,
+    _,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -27069,6 +27073,11 @@ Error generating stack: ` +
                     _: 36,
                     _: _.readBool,
                     _: _.writeBool,
+                  },
+                  button_state_bits: {
+                    _: 37,
+                    _: _.readUint64String,
+                    _: _.writeUint64String,
                   },
                 },
               }),
@@ -30004,103 +30013,86 @@ Error generating stack: ` +
                   fields: {
                     controller_index: {
                       _: 1,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     initialized: {
                       _: 2,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     controller_type: {
                       _: 3,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     controller_style: {
                       _: 4,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     xinput_index: {
                       _: 5,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     is_wireless_steam_dongle: {
                       _: 6,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     vendor_id: {
                       _: 7,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     product_id: {
                       _: 8,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     capabilities: {
                       _: 9,
-                      _: !0,
                       _: _.readUint64String,
                       _: _.writeUint64String,
                     },
                     firmware_version: {
                       _: 10,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     firmware_build_time: {
                       _: 11,
-                      _: !0,
                       _: _.readString,
                       _: _.writeString,
                     },
                     serial_number: {
                       _: 12,
-                      _: !0,
                       _: _.readString,
                       _: _.writeString,
                     },
                     cpu_id: {
                       _: 13,
-                      _: !0,
                       _: _.readString,
                       _: _.writeString,
                     },
                     name: {
                       _: 14,
-                      _: !0,
                       _: _.readString,
                       _: _.writeString,
                     },
                     is_remote_device: {
                       _: 15,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     is_bluetooth: {
                       _: 16,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     has_touchscreen: {
                       _: 17,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
@@ -30113,175 +30105,146 @@ Error generating stack: ` +
                     },
                     battery_level: {
                       _: 19,
-                      _: !0,
                       _: _.readUint32,
                       _: _.writeUint32,
                     },
                     is_charging: {
                       _: 20,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     led_brightness: {
                       _: 21,
-                      _: !0,
                       _: _.readFloat,
                       _: _.writeFloat,
                     },
                     led_saturation: {
                       _: 22,
-                      _: !0,
                       _: _.readFloat,
                       _: _.writeFloat,
                     },
                     turn_on_sound: {
                       _: 23,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     turn_off_sound: {
                       _: 24,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     led_red: {
                       _: 25,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     led_green: {
                       _: 26,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     led_blue: {
                       _: 27,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     deadzone_left_stick: {
                       _: 28,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     deadzone_right_stick: {
                       _: 29,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     haptics_enabled: {
                       _: 30,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     gyro_sw_antidrift_enabled: {
                       _: 31,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     gyro_one_euro_filter_enabled: {
                       _: 32,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     haptic_strength_left: {
                       _: 33,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     haptic_strength_right: {
                       _: 34,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     pad_pressure_curve_left: {
                       _: 35,
-                      _: !0,
                       _: _.readFloat,
                       _: _.writeFloat,
                     },
                     pad_pressure_curve_right: {
                       _: 36,
-                      _: !0,
                       _: _.readFloat,
                       _: _.writeFloat,
                     },
                     left_stick_touch_disable_lpad: {
                       _: 37,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     right_stick_touch_disable_rpad: {
                       _: 38,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     player_slot_led_setting: {
                       _: 39,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     has_nintendo_layout: {
                       _: 40,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     has_reversed_layout: {
                       _: 41,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     has_universal_face_button_glyphs: {
                       _: 42,
-                      _: !0,
                       _: _.readBool,
                       _: _.writeBool,
                     },
                     gyro_stationary_tolerance: {
                       _: 43,
-                      _: !0,
                       _: _.readFloat,
                       _: _.writeFloat,
                     },
                     accel_stationary_tolerance: {
                       _: 44,
-                      _: !0,
                       _: _.readFloat,
                       _: _.writeFloat,
                     },
                     aux_capsense_threshold: {
                       _: 45,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     aux_capsense_hysterisis: {
                       _: 46,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
                     rumble_setting: {
                       _: 47,
-                      _: !0,
                       _: _.readInt32,
                       _: _.writeInt32,
                     },
@@ -30470,6 +30433,47 @@ Error generating stack: ` +
           }
           getClassName() {
             return "CSteamInputService_GetControllerList_Response";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_FirstSteamControllerConnection_Notification";
           }
         });
       ((_) => {
@@ -31271,6 +31275,63 @@ Error generating stack: ` +
           );
         }
         (_.SendMsgNotifyControllerListChanged = _),
+          (_.NotifyFirstSteamControllerConnectionHandler = {
+            name: "SteamInputManager.NotifyFirstSteamControllerConnection#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyFirstSteamControllerConnectionHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyFirstSteamControllerConnection = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyFirstSteamControllerConnection#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyFirstSteamControllerConnection = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyFirstSteamControllerConnection#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyFirstSteamControllerConnection = _),
           (_.StartControllerStateFlowHandler = {
             name: "SteamInputManager.StartControllerStateFlow#1",
             request: _,
@@ -32020,6 +32081,7 @@ Error generating stack: ` +
   var _,
     _ = _(() => {
       "use strict";
+      _();
       _();
       _ = {
         ATTRIBCAP_DIAMOND_BUTTONS: BigInt(1) << BigInt(0),
@@ -46850,6 +46912,18 @@ Error generating stack: ` +
           return _.valve_analytics?.product_impressions_tracking ?? !1;
         },
       },
+    },
+    _ = {
+      name: "clientHints",
+      options: {
+        path: "/",
+        secure: !0,
+        httpOnly: !1,
+        maxAge: 3600 * 24 * 7 * 365,
+      },
+      preferenceControls: {
+        isTechnicallyNecessary: !0,
+      },
     };
   function _(_, _) {
     if (!document.cookie || !_(_)) return;
@@ -46980,11 +47054,12 @@ Error generating stack: ` +
   }
   var _;
   _ ??= new Set();
-  async function _() {
-    await Promise.all(_);
+  var _;
+  function _() {
+    return (_ ??= Promise.all(_));
   }
   function _(_) {
-    (_ ??= new Set()), _.add(_);
+    (_ ??= new Set()), _.add(_), (_ = Promise.all(_));
   }
   function _(_) {
     let _ = new Map();

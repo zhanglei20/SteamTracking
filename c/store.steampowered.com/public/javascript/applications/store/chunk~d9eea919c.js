@@ -29,6 +29,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       !(function (_) {
         (_.k_eView = "view"),
@@ -275,7 +276,14 @@
           _ = _ && _(_.route, _),
           _ = _(_, _.route, _ ? "relative" : "absolute"),
           _ = !_ && _ ? (0, _._)(_) : _,
-          _ = _ || !_ ? _ : (0, _._)(_, _);
+          _ = _ || !_ ? _ : (0, _._)(_, _),
+          _ = _(_, _.k_eViewWebSiteHub, "absolute"),
+          _ = Boolean(_.route != _.k_eViewWebSiteHub)
+            ? (0, _._)("#EventBrowse_MoreEventsBtn")
+            : "",
+          _ = _.useCallback(() => {
+            _ && window.location.assign(_);
+          }, [_]);
         return _
           ? _
             ? (0, _.jsx)(_._, {
@@ -287,6 +295,8 @@
                 onClick: (_) => {
                   _.onClick?.(_), _.push(_), _.preventDefault();
                 },
+                onOptionsActionDescription: _,
+                onOptionsButton: _ ? _ : void 0,
                 preferredFocus: __webpack_require__,
                 children: _.children,
               })
@@ -296,6 +306,8 @@
                 className: _.className,
                 onClick: _.onClick,
                 preferredFocus: __webpack_require__,
+                onOptionsActionDescription: _,
+                onOptionsButton: _ ? _ : void 0,
                 children: _.children,
               })
           : null;

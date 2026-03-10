@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "ไม่พบรายการ",
 	"AssetProperty_Range_MinPlaceholder": "ต่ำสุด",
 	"AssetProperty_Range_MaxPlaceholder": "สูงสุด",
-	"Accessories_FieldSectionLabel": "อุปกรณ์เสริม"
+	"Accessories_FieldSectionLabel": "อุปกรณ์เสริม",
+	"Listing_EnhancedAppearance_Missing": "รายการนี้ยังไม่มีภาพที่เป็นเอกลักษณ์หรือที่ปรับแต่งแล้ว ภาพที่แสดงที่นี่อาจแตกต่างจากผลิตภัณฑ์ที่แสดงในรายการแล้วเล็กน้อย"
 }`);
     },
   },

@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Заявок на продажу не найдено",
 	"AssetProperty_Range_MinPlaceholder": "Мин.",
 	"AssetProperty_Range_MaxPlaceholder": "Макс.",
-	"Accessories_FieldSectionLabel": "Аксессуары"
+	"Accessories_FieldSectionLabel": "Аксессуары",
+	"Listing_EnhancedAppearance_Missing": "Для данного лота пока нет уникальных или улучшенных изображений. Показанное изображение может немного отличаться от того, как выглядит предмет."
 }`);
     },
   },

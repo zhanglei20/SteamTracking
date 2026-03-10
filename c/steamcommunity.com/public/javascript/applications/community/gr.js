@@ -592,7 +592,6 @@
         StartEndClip: "_1eb1crSvl4J1Ie12OvhHUz",
         ViewClip: "_3YpMycJiNuGZOe9A5ddrxL",
         ClipPhase: "_3BLSZg3UyXhaQ4rkXaTvhs",
-        active: "_1D7oiWH7xjJ2nI27nnFzwI",
       };
     },
     chunkid: (module) => {
@@ -6812,24 +6811,6 @@
                   onSelected: _,
                   className: _.HighlightContextMenuItem,
                   children: (0, _.jsxs)("div", {
-                    className: (0, _._)(_.MenuItem, _.DeleteMarker),
-                    children: [
-                      (0, _.jsx)(_.lMJ, {}),
-                      (0, _._)("#Marker_Action_Delete"),
-                    ],
-                  }),
-                },
-                "delete",
-              ),
-            ),
-          (0, _._)(_.entry) &&
-            _.push(
-              (0, _.jsx)(
-                _._,
-                {
-                  onSelected: _,
-                  className: _.HighlightContextMenuItem,
-                  children: (0, _.jsxs)("div", {
                     className: (0, _._)(_.MenuItem, _.ViewScreenshot),
                     children: [
                       (0, _.jsx)(_._, {}),
@@ -6857,6 +6838,24 @@
                   }),
                 },
                 "view_clip",
+              ),
+            ),
+          (0, _._)(_.entry) &&
+            _.push(
+              (0, _.jsx)(
+                _._,
+                {
+                  onSelected: _,
+                  className: _.HighlightContextMenuItem,
+                  children: (0, _.jsxs)("div", {
+                    className: (0, _._)(_.MenuItem, _.DeleteMarker),
+                    children: [
+                      (0, _.jsx)(_.lMJ, {}),
+                      (0, _._)("#Marker_Action_Delete"),
+                    ],
+                  }),
+                },
+                "delete",
               ),
             ),
           _.length

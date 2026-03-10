@@ -3328,11 +3328,13 @@
           }),
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
           {
             value: _,
             onTextChange: _,
+            onTextClear: _,
             clearable: _,
             onChange: _,
             radius: _,
@@ -3354,19 +3356,25 @@
             afterContent:
               _ && _
                 ? (0, _.jsx)(_, {
-                    onClick: () => _(""),
+                    onClick: () => {
+                      _(""), _ && _();
+                    },
                     cursor: "pointer",
                     hitSlop: !0,
                   })
                 : _,
             ref: _,
             disabled: _,
-          };
+          },
+          _ = (0, _.useRef)(null);
         return (0, _.jsx)(_._, {
           cursor: "text",
           ..._,
+          onClick: (_) => {
+            _.current && _.target !== _.current && _.current.focus();
+          },
           children: (0, _.jsx)("input", {
-            ref: _,
+            ref: (0, _._)(_, _),
             type: "text",
             ..._,
             "aria-disabled": _,
@@ -4564,17 +4572,15 @@
         },
       };
       function _(_) {
-        return _
-          ? "string" == typeof _
-            ? _
-            : "number" == typeof _
-              ? _.toString()
-              : (console.error(
-                  "Could not use default option labeler on Select option value. Custom labeler requried",
-                  _,
-                ),
-                "")
-          : "";
+        return "string" == typeof _
+          ? _
+          : "number" == typeof _
+            ? _.toString()
+            : (console.error(
+                "Could not use default option labeler on Select option value. Custom labeler requried",
+                _,
+              ),
+              "");
       }
       const _ = Object.assign(function (_) {
         const {

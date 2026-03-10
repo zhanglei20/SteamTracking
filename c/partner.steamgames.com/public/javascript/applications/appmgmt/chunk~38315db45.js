@@ -2852,6 +2852,16 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  disable_microtrailers: {
+                    _: 15,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  disable_animated_marketing: {
+                    _: 16,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m

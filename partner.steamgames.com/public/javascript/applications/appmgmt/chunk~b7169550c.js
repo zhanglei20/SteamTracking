@@ -766,6 +766,141 @@
         return (0, a.jsx)("div", { className: o().HeroCapsuleImageContainer });
       }
     },
+    94191: (e, t, n) => {
+      "use strict";
+      n.d(t, { V: () => S });
+      var a = n(7850),
+        r = n(8527),
+        s = n(47911),
+        i = n(20194),
+        o = n(75233),
+        c = n(24484),
+        l = n(75515);
+      var u = n(63664),
+        d = n(39777),
+        p = (n(35380), n(90626));
+      function g() {
+        return (0, i.I)({
+          queryKey: ["BroadcastApps"],
+          queryFn: async () => {
+            const e = await (async function () {
+              let e = (0, c.Tc)(
+                "broadcast_available_for_page",
+                "application_config",
+              );
+              if ((0, l.h7)(e)) {
+                const t = new Set();
+                return (
+                  e.filtered.forEach((e) => {
+                    e.appid && t.add(e.appid);
+                  }),
+                  Array.from(t)
+                );
+              }
+              return [];
+            })();
+            return new Set(e);
+          },
+        });
+      }
+      var m = n(58918),
+        h = n(17376);
+      const f =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
+      var _ = n(18654),
+        y = n.n(_),
+        b = n(12155),
+        I = n(52038),
+        v = n(94011);
+      function S(e) {
+        const { appids: t, hide_status_banners: n, show_early_access: i } = e,
+          { data: c } = (0, m.$Y)(),
+          { data: l } = (0, h.F0)(),
+          _ = t.length > 0 && t.every((e) => c && c.has(e)),
+          S = t.length > 0 && t.every((e) => l && l.has(e)),
+          A = (function (e) {
+            const { data: t } = g(),
+              [n, a] = (0, p.useState)(!1),
+              r = (0, o.jE)(),
+              s = (0, u.eG)();
+            return (
+              (0, p.useEffect)(() => {
+                if (!e || 0 == e.length || !t) return a(!1);
+                (async () => {
+                  const n = await Promise.all(
+                    e.map((e) => r.fetchQuery((0, d.us)(s, { appid: e }))),
+                  );
+                  a(
+                    n.some(
+                      (e) =>
+                        (e && e.appid && t.has(e.appid)) ||
+                        (e?.related_items?.parent_appid &&
+                          t.has(e.related_items.parent_appid)),
+                    ),
+                  );
+                })();
+              }, [e, s, r, t]),
+              n
+            );
+          })(t),
+          C = _ && !n,
+          L = S && !n,
+          w = !n && i;
+        return (0, a.jsxs)("div", {
+          className: (0, I.A)(y().CapsuleDecorators, "CapsuleDecorators"),
+          children: [
+            C &&
+              (0, a.jsxs)("span", {
+                className: (0, I.A)(y().Banner, y().Blue),
+                children: [
+                  (0, a.jsx)("img", {
+                    src: (0, r.YJ)(f),
+                    className: y().LinesImg,
+                    alt: s.Z.Localize("#Sale_InLibrary"),
+                  }),
+                  s.Z.Localize("#Sale_InLibrary"),
+                ],
+              }),
+            L &&
+              (0, a.jsxs)("span", {
+                className: y().Banner,
+                children: [
+                  (0, a.jsx)(b.qnF, { className: y().LinesImg }),
+                  s.Z.Localize("#Sale_OnWishlist"),
+                ],
+              }),
+            w && !C && !L && (0, a.jsx)(x, { appids: t }),
+            A && (0, a.jsx)(v.K, {}),
+          ],
+        });
+      }
+      function x(e) {
+        const { appids: t } = e,
+          n = (function (e) {
+            const [t, n] = (0, p.useState)(!1),
+              a = (0, o.jE)(),
+              r = (0, u.eG)();
+            return (
+              (0, p.useEffect)(() => {
+                if (!e || 0 == e.length) return n(!1);
+                (async () => {
+                  const t = await Promise.all(
+                    e.map((e) => a.fetchQuery((0, d.us)(r, { appid: e }))),
+                  );
+                  n(t.some((e) => e && e.is_early_access));
+                })();
+              }, [e, r, a]),
+              t
+            );
+          })(t);
+        return n
+          ? (0, a.jsx)("span", {
+              className: (0, I.A)(y().Banner, y().EarlyAccessGradient),
+              children: s.Z.Localize("#Sale_EarlyAccess"),
+            })
+          : null;
+      }
+    },
     74812: (e, t, n) => {
       "use strict";
       n.d(t, { q: () => s });
@@ -1283,140 +1418,6 @@
           className: s.bordered_live_stream_icon,
           children: (0, r.we)("#home_page_live_broadcast"),
         });
-      }
-    },
-    88961: (e, t, n) => {
-      "use strict";
-      n.d(t, { V: () => S });
-      var a = n(7850),
-        r = n(8527),
-        s = n(47911),
-        i = n(20194),
-        o = n(75233),
-        c = n(24484),
-        l = n(75515);
-      var u = n(63664),
-        d = n(39777),
-        p = (n(35380), n(90626));
-      function g() {
-        return (0, i.I)({
-          queryKey: ["BroadcastApps"],
-          queryFn: async () => {
-            const e = await (async function () {
-              let e = (0, c.Tc)(
-                "broadcast_available_for_page",
-                "application_config",
-              );
-              if ((0, l.h7)(e)) {
-                const t = new Set();
-                return (
-                  e.filtered.forEach((e) => {
-                    e.appid && t.add(e.appid);
-                  }),
-                  Array.from(t)
-                );
-              }
-              return [];
-            })();
-            return new Set(e);
-          },
-        });
-      }
-      var m = n(58918),
-        h = n(17376);
-      const f =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
-      var _ = n(18654),
-        y = n.n(_),
-        b = n(12155),
-        I = n(52038),
-        v = n(94011);
-      function S(e) {
-        const { appids: t, hide_status_banners: n, show_early_access: i } = e,
-          { data: c } = (0, m.$Y)(),
-          { data: l } = (0, h.F0)(),
-          _ = t.length > 0 && t.every((e) => c && c.has(e)),
-          S = t.length > 0 && t.every((e) => l && l.has(e)),
-          A = (function (e) {
-            const { data: t } = g(),
-              [n, a] = (0, p.useState)(!1),
-              r = (0, o.jE)(),
-              s = (0, u.eG)();
-            return (
-              (0, p.useEffect)(() => {
-                if (!e || 0 == e.length || !t) return a(!1);
-                (async () => {
-                  const n = await Promise.all(
-                    e.map((e) => r.fetchQuery((0, d.us)(s, { appid: e }))),
-                  );
-                  a(
-                    n.some(
-                      (e) =>
-                        (e && e.appid && t.has(e.appid)) ||
-                        (e?.related_items?.parent_appid &&
-                          t.has(e.related_items.parent_appid)),
-                    ),
-                  );
-                })();
-              }, [e, s, r, t]),
-              n
-            );
-          })(t),
-          C = _ && !n,
-          w = S && !n,
-          E = !n && i;
-        return (0, a.jsxs)("div", {
-          className: (0, I.A)(y().CapsuleDecorators, "CapsuleDecorators"),
-          children: [
-            C &&
-              (0, a.jsxs)("span", {
-                className: (0, I.A)(y().Banner, y().Blue),
-                children: [
-                  (0, a.jsx)("img", {
-                    src: (0, r.YJ)(f),
-                    className: y().LinesImg,
-                  }),
-                  s.Z.Localize("#Sale_InLibrary"),
-                ],
-              }),
-            w &&
-              (0, a.jsxs)("span", {
-                className: y().Banner,
-                children: [
-                  (0, a.jsx)(b.qnF, { className: y().LinesImg }),
-                  s.Z.Localize("#Sale_OnWishlist"),
-                ],
-              }),
-            E && !C && !w && (0, a.jsx)(x, { appids: t }),
-            A && (0, a.jsx)(v.K, {}),
-          ],
-        });
-      }
-      function x(e) {
-        const { appids: t } = e,
-          n = (function (e) {
-            const [t, n] = (0, p.useState)(!1),
-              a = (0, o.jE)(),
-              r = (0, u.eG)();
-            return (
-              (0, p.useEffect)(() => {
-                if (!e || 0 == e.length) return n(!1);
-                (async () => {
-                  const t = await Promise.all(
-                    e.map((e) => a.fetchQuery((0, d.us)(r, { appid: e }))),
-                  );
-                  n(t.some((e) => e && e.is_early_access));
-                })();
-              }, [e, r, a]),
-              t
-            );
-          })(t);
-        return n
-          ? (0, a.jsx)("span", {
-              className: (0, I.A)(y().Banner, y().EarlyAccessGradient),
-              children: s.Z.Localize("#Sale_EarlyAccess"),
-            })
-          : null;
       }
     },
     72860: (e, t, n) => {

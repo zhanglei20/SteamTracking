@@ -124,7 +124,7 @@
 	"ItemFlag_InCart": "在购物车中",
 	"ItemFlag_Ignored": "已忽略",
 	"ItemFlag_ExcludedByPreferences": "已按偏好排除",
-	"Wishlist_Controls_Categories_Header": "My Categories:",
+	"Wishlist_Controls_Categories_Header": "我的类别：",
 	"Wishlist_Categories_None": "无",
 	"Wishlist_Gamepad_Filter_Category": "按类别筛选",
 	"Wishlist_Gamepad_Filter_Clear_Category": "清除类别筛选条件",
@@ -133,7 +133,10 @@
 	"Wishlist_Controls_Categories_Remove_Tooltip": "从此项目中移除此类别",
 	"Wishlist_Controls_Categories_Filter_Tooltip": "筛选愿望单，仅显示此类别中的项目",
 	"Wishlist_Controls_Categories_All": "全部",
-	"Wishlist_Controls_Categories_Manage": "添加或移除类别"
+	"Wishlist_Controls_Categories_Manage": "添加或移除类别",
+	"Wishlist_Categories_Suggested_Discount": "正在等待特卖",
+	"Wishlist_Categories_Suggested_Birthday": "生日列表",
+	"Wishlist_Categories_Suggested_Recommended": "由好友推荐"
 }`);
     },
   },

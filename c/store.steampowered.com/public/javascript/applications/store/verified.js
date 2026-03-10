@@ -3,6 +3,45 @@
   {
     chunkid: (module) => {
       module.exports = {
+        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
+        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
+        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
+        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
+        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
+        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
+        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
+        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
+        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
+        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
+        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
+        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
+        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
+        Caps3: "ch0xp_kjApA24ePv-4mUf",
+        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
+        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
+        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
+        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
+        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
+        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
+        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
+        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
+        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
+        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
+        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
+        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
+        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
+        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
+        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
+        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
+        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
+        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
+        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
+        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
+        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         BroadcastPlayerLite: "SAxf3Rqn792kM6c4U_vx5",
         BroadcastPlayerLiteVideo: "yCd0zjymzfw3HkVm-1YwX",
         BroadcastContext: "_3TnYLKMweBMIC69qFU6OJj",
@@ -45,45 +84,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        GhostCtn: "_3Kh2xkNOxK9yAzjUL6Ivgx",
-        PlaceholderCap: "w8Jvjch8aFrIUAv0SH561",
-        GhostShine: "_2BHrUiVJgb5paKR9HDuFry",
-        PlaceholderBox: "_3xK5GjRYJTY1N5bjbocIm9",
-        ShineCtn: "cI9gcyxQOApga-GXz7_V4",
-        PlaceholderVideo: "_26iPLXluGpPw4W-coLs883",
-        CapsuleRow3: "_3K3QSflZnf6fPmoBKqoGjc",
-        CapsuleRow4: "_1gEPGVsJ0bb_BL9C4YvFNv",
-        CapsuleRowSuperCapsule: "_3zJewh51IljAQRz-6OMdOB",
-        ItemBrowserCapsule: "_2fHvxv3mZQin5_2wB2xfmg",
-        CapsuleRow23: "_3Zk9eQFgRurzIIkTvIMxHW",
-        CapRow: "dGk0hxulznq7MwRweW94h",
-        Caps2: "_1uECvRdcT_yaRni_AEsObF",
-        Caps3: "QU4kidgDKJx_jDfEquNmT",
-        CapsuleRow234: "_2V6zSuL6-efjUwNCdSspJk",
-        Caps4: "_3xqTH8e1tUBIai3kdvgahn",
-        SpotlightsRow: "_3_FBxHpnwok2YRFmtASM5I",
-        DailyDealsColumn: "_1Rudow4oFWhnDbqnzJ0nuM",
-        EventRow: "_1jEY56Mb_K-eNOlOZ2ayy0",
-        PlaceholderGroupImage: "_1RRbToD4zek6vvdq8pajSX",
-        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
-        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
-        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
-        PlaceholderButtons: "aHFZOytk7I6xyF53cX0Iz",
-        TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
-        VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
-        ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
-        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
-        ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
-        CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
-        ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
-        MainCapRow: "_4USkr2F0D76zPrDAKe8tZ",
-        PlaceholderRelease: "_3kqq8V4VYQWX0MTcaWruTa",
-        PlaceholderReviews: "_1TQDb8Ui8AuVqTFeIQHC8J",
-        PlaceholderTags: "_2I6t8VQXDbATmaOzp9jRzk",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         Name: "_1e4No10_bpJEyqWGdzhAs9",
@@ -92,6 +92,38 @@
         PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
         PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
         PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
+        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
+        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
+        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
+        TopLeft: "Clgi---P85XXv25yLZwB0",
+        Top: "_2Z9VyBAzofV3JvK__dECbX",
+        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
+        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
+        Middle: "_1HecozzoSZfUZSci9dLkxN",
+        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
+        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
+        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
+        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
+        Bottom: "sIHlK9sN2255-irERXD_V",
+        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
+        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
+        top: "_1iRW1Msfh60zHqD-xe4EAk",
+        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
+        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
+        right: "_15t6A4l27DY4KRL1aAUTTS",
+        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
+        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
+        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
+        middle: "_1CS75ZrrDXna6xatw5ZvPR",
+        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
+        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
+        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
+        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
       };
     },
     chunkid: (module) => {
@@ -234,6 +266,407 @@
             children: _.children,
           }),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          capsules_per_row: _,
+          is_generic: __webpack_require__,
+          is_generic_trailer: _,
+          is_event_dash_row: _,
+          is_trailer_carousel: _,
+          is_spotlights: _,
+          is_item_browser: _,
+          is_maincap: _,
+          is_expanded_maincap: _,
+          is_expanded_display: _,
+          show_auto_advance_bar: _,
+        } = _;
+        if (!_) return null;
+        if (__webpack_require__)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsx)("div", {
+              className: _().PlaceholderBox,
+              children: (0, _.jsx)("div", {
+                className: _().ShineCtn,
+              }),
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsx)("div", {
+              className: _().PlaceholderVideo,
+              children: (0, _.jsx)("div", {
+                className: _().ShineCtn,
+              }),
+            }),
+          });
+        if (_)
+          return (0, _.jsxs)("div", {
+            className: _().GhostCtn,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().TrailerCarouselRow,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().VideoPlaceholder,
+                    children: (0, _.jsx)("div", {
+                      className: _().ShineCtn,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().ItemDescPlaceholer,
+                    children: (0, _.jsx)("div", {
+                      className: _().ShineCtn,
+                    }),
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().AutoAdvanceBar,
+                  children: (0, _.jsx)("div", {
+                    className: _().ShineCtn,
+                  }),
+                }),
+            ],
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().EventRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().PlaceholderGroupImage,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().DetailsPlaceholder),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderSubtitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderButtons,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().SpotlightsRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().DailyDealsColumn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_().MainCapRow]: !0,
+                [_().MainCapRowExpanded]: _,
+              }),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().DetailsPlaceholder),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderSubtitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderRelease,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderReviews,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTags,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().ExpandedItemRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().CapsulePlaceholder,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().ItemDefPlaceholder,
+                    _().PlaceholderCap,
+                  ),
+                }),
+              ],
+            }),
+          });
+        if (_) {
+          const _ = [];
+          for (let _ = 0; _ < _[0]; _++)
+            _.push(
+              (0, _.jsx)(
+                "div",
+                {
+                  className: _().ItemBrowserCapsule,
+                  children: (0, _.jsx)("div", {
+                    className: _().PlaceholderCap,
+                  }),
+                },
+                "item_browse_ghost_" + _,
+              ),
+            );
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: _,
+          });
+        }
+        return 1 == _?.length
+          ? 1 == _[0]
+            ? (0, _.jsx)("div", {
+                className: _().GhostCtn,
+                children: (0, _.jsx)("div", {
+                  className: _().CapsuleRowSuperCapsule,
+                  children: (0, _.jsx)("div", {
+                    className: _().PlaceholderCap,
+                  }),
+                }),
+              })
+            : 4 == _[0]
+              ? (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow4,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ],
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow3,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ],
+                  }),
+                })
+          : 2 == _?.length
+            ? 3 == _[0] && 3 == _[1]
+              ? (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow23,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow23,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps2),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+            : (0, _.jsx)("div", {
+                className: _().GhostCtn,
+                children: (0, _.jsxs)("div", {
+                  className: _().CapsuleRow234,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().CapRow, _().Caps2),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().CapRow, _().Caps3),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().CapRow, _().Caps4),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -5447,407 +5880,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-          capsules_per_row: _,
-          is_generic: __webpack_require__,
-          is_generic_trailer: _,
-          is_event_dash_row: _,
-          is_trailer_carousel: _,
-          is_spotlights: _,
-          is_item_browser: _,
-          is_maincap: _,
-          is_expanded_maincap: _,
-          is_expanded_display: _,
-          show_auto_advance_bar: _,
-        } = _;
-        if (!_) return null;
-        if (__webpack_require__)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderBox,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderVideo,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsxs)("div", {
-            className: _().GhostCtn,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().TrailerCarouselRow,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().VideoPlaceholder,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().ItemDescPlaceholer,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                ],
-              }),
-              _ &&
-                (0, _.jsx)("div", {
-                  className: _().AutoAdvanceBar,
-                  children: (0, _.jsx)("div", {
-                    className: _().ShineCtn,
-                  }),
-                }),
-            ],
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().EventRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().PlaceholderGroupImage,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderButtons,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().SpotlightsRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().DailyDealsColumn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_().MainCapRow]: !0,
-                [_().MainCapRowExpanded]: _,
-              }),
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderRelease,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderReviews,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTags,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().ExpandedItemRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().CapsulePlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().ItemDefPlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-              ],
-            }),
-          });
-        if (_) {
-          const _ = [];
-          for (let _ = 0; _ < _[0]; _++)
-            _.push(
-              (0, _.jsx)(
-                "div",
-                {
-                  className: _().ItemBrowserCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                },
-                "item_browse_ghost_" + _,
-              ),
-            );
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: _,
-          });
-        }
-        return 1 == _?.length
-          ? 1 == _[0]
-            ? (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsx)("div", {
-                  className: _().CapsuleRowSuperCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                }),
-              })
-            : 4 == _[0]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow4,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow3,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-          : 2 == _?.length
-            ? 3 == _[0] && 3 == _[1]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps2),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-            : (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsxs)("div", {
-                  className: _().CapsuleRow234,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps2),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps3),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps4),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -6312,6 +6344,493 @@
       function _(_, _) {
         return "purchaseonlydisplay" !== _ && !_ && !(0, _._)();
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.topleft = "topleft"),
+          (_.top = "top"),
+          (_.topright = "topright"),
+          (_.left = "left"),
+          (_.middle = "middle"),
+          (_.right = "right"),
+          (_.bottomleft = "bottomleft"),
+          (_.bottom = "bottom"),
+          (_.bottomright = "bottomright");
+      })(_ || (_ = {}));
+      let _ = class extends _.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new _._();
+        m_strDescription = "";
+        m_aspectRatio = 1;
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(_) {
+          super(_),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: void 0,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription = this.props.link_description ?? ""),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(_) {
+          this.m_elLinkRegionBox = _;
+        }
+        OnMouseDown(_, _) {
+          this.m_elLinkRegionBox?.parentElement &&
+            this.m_elLinkRegionBox.ownerDocument.defaultView &&
+            ((this.m_fnMouseUp = (_) => {
+              this.OnMouseUp(_, _);
+            }),
+            (this.m_fnMouseMove = (_) => {
+              this.OnMouseMove(_, _);
+            }),
+            this.setState({
+              EdgeDown: _,
+            }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((_.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((_.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            )),
+            _.preventDefault(),
+            _.stopPropagation();
+        }
+        OnMouseMove(_, _) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
+              case _.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.top:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                });
+                break;
+              case _.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(_.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.middle: {
+                const _ = (0, _._)(
+                    this.CalcLeftEdge(_.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  _ = 100 - (_ + this.state.curWidthPct),
+                  _ = (0, _._)(
+                    this.CalcTopEdge(_.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  _ = {
+                    curLeftPosPct: _,
+                    curRightPosPct: _,
+                    curTopPosPct: _,
+                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
+                  };
+                this.setState(_);
+                break;
+              }
+            }
+            _.preventDefault(), _.stopPropagation();
+          }
+        }
+        IsValidPct(_) {
+          return _ >= 0 && _ <= 100;
+        }
+        UpdateState(_) {
+          let _ =
+              void 0 !== _.curTopPosPct
+                ? _.curTopPosPct
+                : this.state.curTopPosPct,
+            _ =
+              void 0 !== _.curBottomPosPct
+                ? _.curBottomPosPct
+                : this.state.curBottomPosPct,
+            _ =
+              void 0 !== _.curLeftPosPct
+                ? _.curLeftPosPct
+                : this.state.curLeftPosPct,
+            _ =
+              void 0 !== _.curRightPosPct
+                ? _.curRightPosPct
+                : this.state.curRightPosPct,
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
+              ? (_ = _ / this.m_aspectRatio)
+              : (_ = _ * this.m_aspectRatio)),
+            void 0 !== _.curLeftPosPct
+              ? (_ = 100 - _ - _)
+              : (_ = 100 - (_ + _)),
+            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
+          const _ = 100 - _ - _,
+            _ = 100 - _ - _;
+          this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.setState({
+              curLeftPosPct: _,
+              curRightPosPct: _,
+              curTopPosPct: _,
+              curBottomPosPct: _,
+            });
+        }
+        GetXPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+                (this.m_nLocalOffsetXPct ?? 0)
+            : 0;
+        }
+        GetYPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+                (this.m_nLocalOffsetYPct ?? 0)
+            : 0;
+        }
+        CalcLeftEdge(_) {
+          return (0, _._)(this.GetXPercent(_), 0, 100);
+        }
+        CalcRightEdge(_) {
+          return (0, _._)(
+            100 - (this.GetXPercent(_) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(_) {
+          return (0, _._)(this.GetYPercent(_), 0, 100);
+        }
+        CalcBottomEdge(_) {
+          return (0, _._)(
+            100 - (this.GetYPercent(_) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(_, _) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({
+              EdgeDown: void 0,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(_) {
+          this.setState({
+            text_link_url: _.target.value,
+            valid_link: this.validateUrl(_.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(_) {
+          this.setState({
+            text_link_description: _.target.value,
+          });
+        }
+        validateUrl(_) {
+          return (
+            null != _ &&
+            /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+              _,
+            )
+          );
+        }
+        OnSaveLink() {
+          (this.m_strDescription = this.state.text_link_description ?? ""),
+            this.setState({
+              bEditingLink: !this.state.bEditingLink,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({
+            bEditingLink: !this.state.bEditingLink,
+          });
+        }
+        render() {
+          let _ = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            _ = _().LinkRegionDragBox;
+          return (
+            null != this.state.EdgeDown &&
+              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
+            (0, _.jsxs)("div", {
+              className: _,
+              style: _,
+              ref: this.LinkRegionBoxRef,
+              draggable: !1,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().LinkRegionGridBox,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Top}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.top);
+                      },
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topright);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Left}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.left);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Middle}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.middle);
+                      },
+                      draggable: !1,
+                      children: [
+                        this.props.deleteFn &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionDelete,
+                            onClick: this.HandleDelete,
+                            children: (0, _.jsx)(_.sED, {}),
+                          }),
+                        !this.props.bDisableLink &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionSettings,
+                            onClick: this.OnEditLink,
+                            children: (0, _.jsx)(_.xv8, {}),
+                          }),
+                        (0, _.jsxs)("div", {
+                          className: _().LinkText,
+                          children: [" ", this.m_strDescription, " "],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Right}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.right);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottom);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomright);
+                      },
+                      draggable: !1,
+                    }),
+                  ],
+                }),
+                this.state.bEditingLink &&
+                  (0, _.jsxs)("div", {
+                    className: _().LinkRegionInfo,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_url",
+                        value: this.state.text_link_url,
+                        label: (0, _._)("#SteamTV_LinkURL"),
+                        placeholder: "https://www.example.com",
+                        onChange: this.OnSetLinkURLChange,
+                        mustBeURL: !0,
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_description",
+                        value: this.state.text_link_description,
+                        label: (0, _._)("#SteamTV_LinkDescription"),
+                        placeholder: (0, _._)(
+                          "#SteamTV_LinkDescription_Placeholder",
+                        ),
+                        onChange: this.OnSetLinkDescriptionChange,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().LinkRegionButtonContainer,
+                        children: [
+                          (0, _.jsxs)(_._, {
+                            disabled: !this.state.valid_link,
+                            onClick: this.OnSaveLink,
+                            children: [" ", (0, _._)("#Button_OK"), " "],
+                          }),
+                          (0, _.jsxs)(_._, {
+                            onClick: this.OnEditLink,
+                            children: [" ", (0, _._)("#Button_Cancel")],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            })
+          );
+        }
+      };
+      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "HandleDelete", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
+        (0, _._)([_._], _.prototype, "OnSaveLink", null),
+        (0, _._)([_._], _.prototype, "OnEditLink", null),
+        (_ = (0, _._)([_._], _));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

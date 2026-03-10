@@ -927,6 +927,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1032,6 +1033,9 @@
       }
       function _(_, _) {
         return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
+      }
+      function _(_) {
+        return _.startsWith("text") ? `var(--color-${_})` : _(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -860,6 +860,7 @@
       module.exports = {
         DateCtn: "_1mrqJ1WLmobh_wzIY3EVZl",
         PreLoadNowFeature: "_2XT3auesRGpSKWjno9Xcvm",
+        AreYouSure: "_2iSFYqNEyIWFfqoMXxYr8F",
       };
     },
     chunkid: (module) => {
@@ -1216,8 +1217,60 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Results: "_3mK1PrFPrbrn2M-BbAWsmL",
+        LoadingContainer: "K7yNfrxTJs0QuoFtUfy0z",
+        ResultRow: "_1QyQulOsH0dGeFUVgSa9ki",
+        GameName: "_353QhAGCSYbIguu7o4DJgs",
+        Label: "_3MUfh3QKRNr6qY0vEz3p04",
+        AvatarImageCtn: "_3h9l9X-3dBSAhMflfovg2K",
+        AvatarImage: "PBBKP18ULuCWFwYcEIOdW",
+        AppSearchInputContainer: "oxxmBMFO82IJEm1H341Wd",
+        AppSearchDLCCheckbox: "_1aduni8VCqZVqqDxyXb-pY",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DefaultFancyTable: "_3OVilOdb2tSBtG90cwqGUo",
         NoColumnBorders: "_3C2djc2HxWtHJaUqVq-cKt",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
+        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
+        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
+        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
+        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
+        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
+        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
+        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
+        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
+        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
+        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
+        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
+        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
+        Caps3: "ch0xp_kjApA24ePv-4mUf",
+        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
+        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
+        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
+        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
+        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
+        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
+        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
+        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
+        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
+        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
+        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
+        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
+        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
+        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
+        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
+        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
+        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
+        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
+        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
+        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
+        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
       };
     },
     chunkid: (module) => {
@@ -1292,6 +1345,20 @@
         Inactive: "_3G-I9qj7vqOe6SOFG27ohD",
         AudioLines: "IWabakUFeIH_d5rhBZ6dG",
         Active: "_37tPtXtV-sv9XgDHjS2cnj",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ArtPreview: "_3793xvP87t1rZYbAQDC1pG",
+        ArtNoArt: "_3WxfzmFYwb-rh8sn5VMFMl",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        StatusLineItemCtn: "V5SWm2fiBKJqCbPn7bpC0",
+        StatusIcon: "_1DFlt9vB8DfZc84ZeQcrgT",
+        StatusIconDone: "K_JWTc7pXC9lechbL_JMT",
+        StatusNotDone: "zl6s26pUkMfMXmoMlJstY",
       };
     },
     chunkid: (module) => {
@@ -1407,6 +1474,39 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        OtherEventsCtn: "_9H6b5yfaxlmcnHvkqtwDK",
+        OtherEvents_MainImageCtn: "_2qyLPxO8_nkczRvFiaju8N",
+        OtherEvents: "_16DzRvjcqFcYr0NYcWmTrg",
+        OtherEvents_EventCtn: "_1MwNf8slOG9lOvAeOshmuu",
+        OtherEvents_MainImage: "_3_wKbXvT7_y5YkrtadL0I6",
+        OtherEvents_BGImage: "_2pPj9UWoWM6h318uBN0-8X",
+        OtherEvents_ContentCtn: "_22jEpNTfml-w_aRJV-fKDm",
+        MaskImages: "_1kFdtNfhXozP4yI_qOv2H-",
+        HoversEnabled: "_3o6M87A6T172WsUE6MNvdW",
+        OtherEvents_TextCtn: "_3-EtNa1Nr_737K0kglkT9C",
+        OtherEvents_TextTitle: "_2jc1DpJ_WzFtigRh5qDWce",
+        UpcomingCtn: "_2CXrGPtlQh-j3aSa6XsQDI",
+        OtherEvents_SubTitle: "_1Swox5XYdeesack-J7fNLH",
+        PartnerEventRowCapsule_MainImage: "bC2Zkx7FlANno4SW8FwB-",
+        EventSummaryContainer: "_2GYp44BuZLfKRQdeILTDC3",
+        EventSummaryText: "ENbI1gFgvIca6HSKAbfiJ",
+        EventSummaryType: "_11JXznGoylLSEmZXZbgcsq",
+        HorizontalEvent: "_1ruRSreC31IK4kUGUcSRDK",
+        HorizontalSummary: "_2bTWamVtbFnHovwqhlrxiV",
+        HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
+        HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
+        HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
+        CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
+        AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
+        AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
+        AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         SearchResults: "_1ZSuk1trnTRF3290XhOiiv",
         SmallText: "_3KfJIWWHAYunAZwOr895l-",
       };
@@ -1495,7 +1595,9 @@
         AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
         BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
         OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
+        ButtonRow: "_2W9rAanKV4V6A7Exx4sWGF",
         BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        BackgroundColorResetBtn: "baRhk4ouyxcNfo_um5C76",
         UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
         HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
       };
@@ -1624,19 +1726,6 @@
         VisibilityNote: "_1G3X_jfMgGX1nzeOAvPZNG",
         EditorStatsRow: "_2SecokIlleKz0K30ieApg5",
         SteamBlog: "_1rafn02Kz4HF1-3xfmuaR0",
-        LunarNewYearHeader: "_1g4Yfobmkb5CVI2gzly8Bg",
-        EnvelopeArea: "_39E2FZTJMQvhj8ofBhy8AR",
-        TokenBalanceContainer: "_2tXIgZxKpkTb7xTUZ72Z9I",
-        TokenBalance: "_3WhoViO5mx4twzeo0r0dFQ",
-        EnvelopeContainer: "_1g0zsoC3W3W35C4mLJix2C",
-        BackingRect: "_2V4xVhoSgN6ULgdqpHEpJ9",
-        Envelope: "_2WNMeB-9H8LtPhtFfVmTj",
-        GiftLabel: "d2D-Iy1puDsQ_MAyI2LCq",
-        OpenState: "_3OVk1SNdESa9y13m8RkmGI",
-        Opened: "_28wlXXBWOcvlhNyC800pqB",
-        Unlocked: "_26x3oY6SpyqkUlv0Z85k2f",
-        NeedLogin: "_2F_XalPrF1aJwmTjLxnhQT",
-        BottomMessage: "_3M82Ie_ylqj38H82JslePb",
         _: "_1-pFh2QlJBUeqmXrWcbTQQ",
         LunarNewYearOpenEnvelopeVideoDialog: "_1-SzihnWiO-8bBYWJ-TS-4",
         Container: "_1dcfd1Jxk-yCCdG0k1eyG-",
@@ -1667,6 +1756,7 @@
       module.exports = {
         EventBannerCtn: "x7UKM0ooa97bLEC1DOAhd",
         EventBannerImg: "_2Rm2455wi6RIlGIhlKd6ja",
+        ListOfCreators: "GqfZD2s5l0_K21jh28djY",
       };
     },
     chunkid: (module) => {
@@ -1740,45 +1830,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        GhostCtn: "_3Kh2xkNOxK9yAzjUL6Ivgx",
-        PlaceholderCap: "w8Jvjch8aFrIUAv0SH561",
-        GhostShine: "_2BHrUiVJgb5paKR9HDuFry",
-        PlaceholderBox: "_3xK5GjRYJTY1N5bjbocIm9",
-        ShineCtn: "cI9gcyxQOApga-GXz7_V4",
-        PlaceholderVideo: "_26iPLXluGpPw4W-coLs883",
-        CapsuleRow3: "_3K3QSflZnf6fPmoBKqoGjc",
-        CapsuleRow4: "_1gEPGVsJ0bb_BL9C4YvFNv",
-        CapsuleRowSuperCapsule: "_3zJewh51IljAQRz-6OMdOB",
-        ItemBrowserCapsule: "_2fHvxv3mZQin5_2wB2xfmg",
-        CapsuleRow23: "_3Zk9eQFgRurzIIkTvIMxHW",
-        CapRow: "dGk0hxulznq7MwRweW94h",
-        Caps2: "_1uECvRdcT_yaRni_AEsObF",
-        Caps3: "QU4kidgDKJx_jDfEquNmT",
-        CapsuleRow234: "_2V6zSuL6-efjUwNCdSspJk",
-        Caps4: "_3xqTH8e1tUBIai3kdvgahn",
-        SpotlightsRow: "_3_FBxHpnwok2YRFmtASM5I",
-        DailyDealsColumn: "_1Rudow4oFWhnDbqnzJ0nuM",
-        EventRow: "_1jEY56Mb_K-eNOlOZ2ayy0",
-        PlaceholderGroupImage: "_1RRbToD4zek6vvdq8pajSX",
-        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
-        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
-        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
-        PlaceholderButtons: "aHFZOytk7I6xyF53cX0Iz",
-        TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
-        VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
-        ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
-        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
-        ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
-        CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
-        ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
-        MainCapRow: "_4USkr2F0D76zPrDAKe8tZ",
-        PlaceholderRelease: "_3kqq8V4VYQWX0MTcaWruTa",
-        PlaceholderReviews: "_1TQDb8Ui8AuVqTFeIQHC8J",
-        PlaceholderTags: "_2I6t8VQXDbATmaOzp9jRzk",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         SectionLabelCtn: "v7Xo47-E5cR6b-rvcmp-H",
         SectionLabelRight: "_3Vww38pO7uZXdih9MxhSkH",
         SectionLabelLinkButton: "_2DdLjM_1-DDJlVf9qhMXB3",
@@ -1818,6 +1869,17 @@
     },
     chunkid: (module) => {
       module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        TwoWidthCtn: "_49thIpYeG08pUfNc1x_w9",
+        TwoWidthCapsule: "_78Qv2C95AM2DNCuLD5o8U",
+        TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
+        Reason: "_2h0GKAYcXRP10ryZHFn79d",
+        StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         AppSocialLinksCtn: "_1wKUEA0cYqeUELXMe3Tp6T",
         AppSocialLinks: "YMmXzjieZthpAehitId4M",
         AppSocialLinkIcon: "OlwlyAPTdpJ7OieZmqzhc",
@@ -1848,6 +1910,11 @@
         Success: "zNkywkFbUJio86FBwBWwx",
         FriendCodeSelector: "_3nmSpgo_T_V0-Er7h8J2Ar",
         SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        SmallAvatar: "_2cuu0nLVc4medg6FpU6PQl",
       };
     },
     chunkid: (module) => {
@@ -2388,6 +2455,97 @@
         (0, _._)([_._], _.prototype, "ClearSalePage", null),
         (0, _._)([_._], _.prototype, "SetRequiresSalePage", null),
         (0, _._)([_._], _.prototype, "SetRequiresSalePageType", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = [1, 2, 11, 3, 4, 10, 5, 6, 13, 14, 15, 16],
+        _ = [
+          "#msg_action_details",
+          "#msg_preload_now",
+          "#msg_preload_now_for_free",
+          "#msg_prepurchase_now",
+          "#msg_play_now",
+          "#msg_play_it_now",
+          "#msg_weekend_play_free",
+          "#msg_action_buy",
+          "#msg_action_info",
+          "#Library_Update_TryItNow2",
+        ];
+      function _(_) {
+        switch (_) {
+          case 1:
+            return "Now Available";
+          case 2:
+            return "Weekend Deal";
+          case 3:
+            return "Pre-Purchase";
+          case 4:
+            return "Play Now";
+          case 6:
+            return "General";
+          case 7:
+            return "on Demo Quit";
+          case 9:
+            return "EJ's Korner";
+          case 5:
+            return "Pre-Load Now";
+          case 8:
+            return "Gifting Message";
+          case 10:
+            return "Major Update";
+          case 11:
+            return "Midweek Deal";
+          case 12:
+            return "Daily Deal";
+          case 13:
+            return "New DLC";
+          case 14:
+            return "Free Weekend";
+          case 15:
+            return "Sale Page";
+          case 16:
+            return "Play Test";
+          default:
+            return "--------------------";
+        }
+      }
+      var _;
+      function _(_, _) {
+        let _ = !0;
+        return (
+          1 == _
+            ? (_ = _?.startsWith("https://store.steamchina.com/"))
+            : 2 == _ && (_ = _?.startsWith("https://store.steampowered.com/")),
+          _
+        );
+      }
+      !(function (_) {
+        (_[(_.k_EMarketingMessageFlagsNone = 0)] =
+          "k_EMarketingMessageFlagsNone"),
+          (_[(_.k_EMarketingMessageFlagsHighPriority = 1)] =
+            "k_EMarketingMessageFlagsHighPriority"),
+          (_[(_.k_EMarketingMessageFlagsPlatformWindows = 2)] =
+            "k_EMarketingMessageFlagsPlatformWindows"),
+          (_[(_.k_EMarketingMessageFlagsPlatformMac = 4)] =
+            "k_EMarketingMessageFlagsPlatformMac"),
+          (_[(_.k_EMarketingMessageFlagsPlatformLinux = 8)] =
+            "k_EMarketingMessageFlagsPlatformLinux"),
+          (_[(_.k_EMarketingMessageFlagsPlatformRestrictions = 14)] =
+            "k_EMarketingMessageFlagsPlatformRestrictions");
+      })(_ || (_ = {}));
+      const _ = {
+        include_assets: !0,
+        include_basic_info: !0,
+        include_release: !0,
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -11847,6 +12005,208 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapAppIDToPaymentPartners = new Map();
+        m_mapAppIDToPromise = new Map();
+        m_mapPackageIDToPaymentPartners = new Map();
+        m_mapPackageIDToPromise = new Map();
+        m_mapBundleIDToPaymentPartners = new Map();
+        m_mapBundleIDToPromise = new Map();
+        GetInfoForApp(_) {
+          return this.m_mapAppIDToPaymentPartners.get(_);
+        }
+        BHasInfoForApp(_) {
+          return this.m_mapAppIDToPaymentPartners.has(_);
+        }
+        GetInfoForPackage(_) {
+          return this.m_mapPackageIDToPaymentPartners.get(_);
+        }
+        BHasInfoForPackage(_) {
+          return this.m_mapPackageIDToPaymentPartners.has(_);
+        }
+        GetInfoForBundle(_) {
+          return this.m_mapBundleIDToPaymentPartners.get(_);
+        }
+        BHasInfoForBundle(_) {
+          return this.m_mapBundleIDToPaymentPartners.has(_);
+        }
+        GetInfoForStoreItem(_, _) {
+          switch (_) {
+            case 0:
+              return this.GetInfoForApp(_);
+            case 1:
+              return this.GetInfoForPackage(_);
+            case 2:
+              return this.GetInfoForBundle(_);
+            default:
+              return null;
+          }
+        }
+        BHasInfoForStoreItem(_, _) {
+          switch (_) {
+            case 0:
+              return this.BHasInfoForApp(_);
+            case 1:
+              return this.BHasInfoForPackage(_);
+            case 2:
+              return this.BHasInfoForBundle(_);
+            default:
+              return !1;
+          }
+        }
+        async LoadAppPartnerInfo(_) {
+          return (
+            this.m_mapAppIDToPromise.has(_) ||
+              this.m_mapAppIDToPromise.set(
+                _,
+                this.InternalLoadAppPartnerInfo(_, null, null),
+              ),
+            this.m_mapAppIDToPromise.get(_)
+          );
+        }
+        async LoadPackagePartnerInfo(_) {
+          return (
+            this.m_mapPackageIDToPromise.has(_) ||
+              this.m_mapPackageIDToPromise.set(
+                _,
+                this.InternalLoadAppPartnerInfo(null, _, null),
+              ),
+            this.m_mapPackageIDToPromise.get(_)
+          );
+        }
+        async LoadBundlePartnerInfo(_) {
+          return (
+            this.m_mapBundleIDToPromise.has(_) ||
+              this.m_mapBundleIDToPromise.set(
+                _,
+                this.InternalLoadAppPartnerInfo(null, null, _),
+              ),
+            this.m_mapBundleIDToPromise.get(_)
+          );
+        }
+        async LoadStoreItemPartnerInfo(_, _) {
+          switch (_) {
+            case 0:
+              return this.LoadAppPartnerInfo(_);
+            case 1:
+              return this.LoadPackagePartnerInfo(_);
+            case 2:
+              return this.LoadBundlePartnerInfo(_);
+            default:
+              return null;
+          }
+        }
+        async InternalLoadAppPartnerInfo(_, _, _) {
+          let _ = null;
+          try {
+            const _ = {
+                appid: _,
+                packageid: _,
+                bundleid: _,
+              },
+              _ = _._.PARTNER_BASE_URL + "promotion/dailydeals/ajaxgetpartner",
+              _ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+              });
+            if (200 == _?.status && 1 == _.data?.success)
+              return _
+                ? (this.m_mapAppIDToPaymentPartners.set(_, _.data.partnerinfo),
+                  this.m_mapAppIDToPaymentPartners.get(_))
+                : _
+                  ? (this.m_mapPackageIDToPaymentPartners.set(
+                      _,
+                      _.data.partnerinfo,
+                    ),
+                    this.m_mapPackageIDToPaymentPartners.get(_))
+                  : (this.m_mapBundleIDToPaymentPartners.set(
+                      _,
+                      _.data.partnerinfo,
+                    ),
+                    this.m_mapBundleIDToPaymentPartners.get(_));
+            _ = (0, _._)(_);
+          } catch (_) {
+            _ = (0, _._)(_);
+          }
+          return (
+            console.error(
+              "CPartnerPaymentStore.LoadAppPartnerInfo failed: " +
+                _?.strErrorMsg,
+              _,
+            ),
+            null
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_DailyDealEditStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+      }
+      function _(_) {
+        return _(_, 0);
+      }
+      function _(_) {
+        return _(_._, (0, _._)(_));
+      }
+      function _(_, _) {
+        const [__webpack_require__, _] = _.useState(() =>
+          _.Get().GetInfoForStoreItem(_, _),
+        );
+        return (
+          _.useEffect(() => {
+            _
+              ? _.Get().BHasInfoForStoreItem(_, _) &&
+                null != __webpack_require__
+                ? _.Get().BHasInfoForStoreItem(_, _) &&
+                  __webpack_require__ != _.Get().GetInfoForStoreItem(_, _) &&
+                  _(_.Get().GetInfoForStoreItem(_, _))
+                : _.Get().LoadStoreItemPartnerInfo(_, _).then(_)
+              : _(null);
+          }, [_, _, __webpack_require__]),
+          __webpack_require__
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(null);
+        return (
+          (0, _.useEffect)(() => {
+            if (_?.length > 0) {
+              const _ = _.map((_) => _.Get().LoadStoreItemPartnerInfo(_, 0));
+              Promise.all(_).then(() => {
+                const _ = new Map();
+                _.forEach((_) => {
+                  _.Get().BHasInfoForApp(_) &&
+                    _.set(_, _.Get().GetInfoForApp(_));
+                }),
+                  __webpack_require__(_);
+              });
+            }
+          }, [_]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15862,6 +16222,132 @@
               }),
           ],
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (!_ || 0 == _.trim().length) return null;
+        try {
+          return JSON.parse(_);
+        } catch {
+          return null;
+        }
+      }
+      function _(_, _) {
+        const _ = new Set();
+        return _.filter((_) => {
+          const _ = _(_);
+          return (
+            !__webpack_require__.has(_) && (__webpack_require__.add(_), !0)
+          );
+        });
+      }
+      function _(..._) {
+        return [...new Set(_.flat())];
+      }
+      function _(_) {
+        const { href: _, children: __webpack_require__ } = _;
+        return _
+          ? (0, _.jsx)("a", {
+              ..._,
+              children: __webpack_require__,
+            })
+          : (0, _.jsx)(_.Fragment, {
+              children: __webpack_require__,
+            });
+      }
+      function _(_, _) {
+        const _ = {
+            sText: (0, _._)(
+              "#Dashboard_UpcomingEvents_AppReleaseState_unavailable",
+            ),
+            sTooltip: (0, _._)(
+              "#Dashboard_UpcomingEvents_AppReleaseState_unavailable_Description",
+            ),
+            bPrereleaseOrReleased: !1,
+          },
+          _ = {
+            sText: (0, _._)(
+              "#Dashboard_UpcomingEvents_AppReleaseState_storepagenotlive",
+            ),
+            sTooltip: void 0,
+            bPrereleaseOrReleased: !1,
+          },
+          _ = {
+            released: {
+              sText: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_released",
+              ),
+              sTooltip: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_released_Description",
+              ),
+              bPrereleaseOrReleased: !0,
+            },
+            prerelease: {
+              sText: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_prerelease",
+              ),
+              sTooltip: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_prerelease_Description",
+              ),
+              bPrereleaseOrReleased: !0,
+            },
+            ownersonly: {
+              sText: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_ownersonly",
+              ),
+              sTooltip: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_ownersonly_Description",
+              ),
+              bPrereleaseOrReleased: !1,
+            },
+            preloadonly: {
+              sText: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_preloadonly",
+              ),
+              sTooltip: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_preloadonly_Description",
+              ),
+              bPrereleaseOrReleased: !1,
+            },
+            disabled: {
+              sText: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_disabled",
+              ),
+              sTooltip: (0, _._)(
+                "#Dashboard_UpcomingEvents_AppReleaseState_disabled_Description",
+              ),
+              bPrereleaseOrReleased: !1,
+            },
+          };
+        let _ = _;
+        return _ in _ ? (_ = _[_]) : _ || (_ = _), _;
+      }
+      function _(_) {
+        if ("seasonalsale" == _.type) {
+          const _ = _.name.toLowerCase();
+          if (_.includes("spring")) return "#dd71d4";
+          if (_.includes("summer")) return "#29c6ec";
+          if (_.includes("autumn")) return "#ac240c";
+          if (_.includes("winter")) return "#01704f";
+        }
+      }
+      function _(_) {
+        let _ = 0;
+        for (let _ = 0; _ < _.length; _++) _ = _.charCodeAt(_) + ((_ << 5) - _);
+        return `hsl(${_ % 360}, ${50 + (_ % 50)}%, ${40 + (_ % 30)}%, 0.25)`;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -53432,14 +53918,12 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { model: _, fnOnDirty: __webpack_require__ } = _,
           [_, _] = (0, _._)(() => [
             _.sale_background_color,
             _.sale_background_repeat,
-          ]),
-          [_, _] = _.useState(null == _);
+          ]);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().FlexRowContainer, _().BackgroundConfigCtn),
           children: [
@@ -53449,44 +53933,40 @@
                 (0, _.jsx)(_._, {
                   children: (0, _._)("#Sale_Section_Background_Color"),
                 }),
-                (0, _.jsx)(_._, {
-                  className: _().BackgroundColorBtn,
-                  onClick: (_) => {
-                    (0, _._)(
-                      (0, _.jsx)(_._, {
-                        color: _,
-                        onChange: (_) => {
-                          (_.sale_background_color = _), __webpack_require__();
-                        },
-                      }),
-                      _,
-                      {
-                        bDisablePopTop: !0,
+                (0, _.jsxs)("div", {
+                  className: _().ButtonRow,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: _().BackgroundColorBtn,
+                      onClick: (_) => {
+                        (0, _._)(
+                          (0, _.jsx)(_._, {
+                            color: _,
+                            onChange: (_) => {
+                              (_.sale_background_color = _),
+                                __webpack_require__();
+                            },
+                          }),
+                          _,
+                          {
+                            bDisablePopTop: !0,
+                          },
+                        );
                       },
-                    );
-                  },
-                  style: {
-                    backgroundColor: _,
-                  },
-                  children: (0, _._)("#Sale_BackgroundColor"),
-                }),
-                Boolean(_._.is_support) &&
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _().ValveOnlyBackground,
-                      _().SaleEditorSpacing,
-                    ),
-                    children: (0, _.jsx)(_._, {
-                      label: "No Background color?",
-                      checked: _,
-                      onChange: (_) => {
-                        _(_),
-                          _ &&
-                            ((_.sale_background_color = void 0),
-                            __webpack_require__());
+                      style: {
+                        backgroundColor: _,
                       },
+                      children: (0, _._)("#Sale_BackgroundColor"),
                     }),
-                  }),
+                    (0, _.jsx)(_._, {
+                      className: _().BackgroundColorResetBtn,
+                      onClick: (_) => {
+                        (_.sale_background_color = ""), __webpack_require__();
+                      },
+                      children: (0, _._)("#Sale_BackgroundColor_Reset"),
+                    }),
+                  ],
+                }),
               ],
             }),
             (0, _.jsx)("div", {
@@ -57805,6 +58285,42 @@
         _ = __webpack_require__("chunkid");
       const _ = [11, 9, 12, 11, 2, 14];
       function _(_) {
+        const { closeModal: _ } = _,
+          [__webpack_require__, _] = (0, _.useState)(!1);
+        return __webpack_require__
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsxs)(_._, {
+              strTitle:
+                "Create marketing message outside the promotion plan workflow?",
+              onOK: () => _(!0),
+              onCancel: _,
+              className: _.AreYouSure,
+              children: [
+                (0, _.jsx)("p", {
+                  children:
+                    "Are you sure you want to create a marketing message directly?",
+                }),
+                (0, _.jsx)("p", {
+                  children:
+                    "The recommended approach is to create marketing messages through the Promotion Plan tool as a child of a promotion plan. When created this way, the Operations team can track the message's completeness and correctness alongside the rest of the promotion. It is part of the regular promotion workflow.",
+                }),
+                (0, _.jsx)("p", {
+                  children:
+                    "A marketing message created directly through this tool panel will not be tracked automatically. If you continue, it will be your responsibility to manage the message through the process or manually associate it with a promotion plan or coordinate directly with an operator.",
+                }),
+                (0, _.jsx)("p", {
+                  children: "You have been warned.",
+                }),
+                (0, _.jsx)("p", {
+                  children:
+                    "Your manager will be notified. This message will also be remembered.",
+                }),
+              ],
+            });
+      }
+      function _(_) {
         const {
             rtInitialDate: _,
             closeModal: __webpack_require__,
@@ -58277,6 +58793,235 @@
               position: "center",
               string: (0, _._)("#Loading"),
             });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { oEditableMessage: _ } = _,
+          [__webpack_require__] = (0, _._)(() => [_.GetStoreItemKey()]);
+        return __webpack_require__ && "app" == __webpack_require__.item_type
+          ? (0, _.jsx)(_, {
+              oEditableMessage: _,
+              idKey: __webpack_require__,
+            })
+          : (0, _.jsx)("div", {
+              className: _.ErrorStylesWithIcon,
+              children:
+                "Error: Major Update does not support anything but targeting app",
+            });
+      }
+      function _(_) {
+        const { oEditableMessage: _, idKey: __webpack_require__ } = _,
+          [_, _] = (0, _._)(() => [
+            _.GetUpdateEventClanAccountID(),
+            _.GetUpdateEventGID(),
+          ]),
+          [_] = (0, _._)(
+            __webpack_require__?._,
+            (0, _._)(__webpack_require__?.item_type),
+            _._,
+          ),
+          _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
+          _ = 12 != _?.GetAppType() ? _?.GetParentAppID() : void 0;
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_, {
+              appid: _ || __webpack_require__._,
+              selectedEventGID: _,
+              fnSetUpdateEvent: _.SetUpdateEvent,
+              label: (0, _._)("#EventDropDown_MM_FeaturedEvent"),
+              tooltip: (0, _._)("#EventDropDown_MM_FeaturedEvent_ttip"),
+              strUrlLearnMore:
+                "https://confluence.valve.org/display/SteamBiz/Steam+Promotions+Assets+Guide#SteamPromotionsAssetsGuide-MarketingMessageforUpdates",
+            }),
+            Boolean(_) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)("a", {
+                    href: `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/partnerevents/edit/${_}`,
+                    target: "_blank",
+                    children: "open event for edit",
+                  }),
+                  "   ",
+                  (0, _.jsx)(_._, {
+                    toolTipContent:
+                      "Once the event is published, go here to verify it is not awaiting moderation review. Games in the moderator review queue are not visible in the library",
+                    children: (0, _.jsx)("a", {
+                      href: `${_._.STORE_BASE_URL}events_admin/?selectedTags=vo_marketing_message&excludedTags=mod_reviewed&excludedTags=auto_migrated`,
+                      target: "_blank",
+                      children: "open event moderation tool",
+                    }),
+                  }),
+                  (0, _.jsx)("br", {}),
+                  (0, _.jsx)("br", {}),
+                ],
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            appid: _,
+            selectedEventGID: __webpack_require__,
+            fnSetUpdateEvent: _,
+            label: _,
+            tooltip: _,
+            strUrlLearnMore: _,
+            bFilterOutDrafts: _,
+          } = _,
+          _ = (0, _._)(),
+          { clanInfo: _, bLoadingClanInfo: _ } = (0, _._)(_),
+          _ = (function (_, _) {
+            const _ = (0, _._)(),
+              _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
+              _ = (0, _._)({
+                queryKey: ["eventdraftrecent", _, _],
+                queryFn: async () => {
+                  const _ = _._.Init(_._);
+                  return (
+                    _.Body().set_steamid(_.ConvertTo64BitString()),
+                    _ && _.Body().set_rtime_oldest_date(_),
+                    (await _._.GetDraftAndRecentPartnerEventSnippet(_, _))
+                      .Body()
+                      .toObject().snippets
+                  );
+                },
+                enabled: Boolean(_),
+              });
+            return (0, _.useMemo)(
+              () =>
+                _.isLoading || !_.data
+                  ? null
+                  : _.data.sort((_, _) =>
+                      _.hidden && _.hidden
+                        ? _.published && !_.published
+                          ? -1
+                          : _.published && !_.published
+                            ? 1
+                            : (_.rtime32_start_time ?? 0) -
+                              (_.rtime32_start_time ?? 0)
+                        : _.hidden
+                          ? -1
+                          : _.hidden
+                            ? 1
+                            : _.rtime32_start_time - _.rtime32_start_time,
+                    ),
+              [_.data, _.isLoading],
+            );
+          })(_?.clanAccountID, _ - 2592e3),
+          _ = (0, _.useMemo)(
+            () => (_ ? _?.filter((_) => !_.hidden) : _),
+            [_, _],
+          ),
+          _ = (0, _.useMemo)(
+            () =>
+              _
+                ? _.map((_) => {
+                    const _ = _.hidden
+                      ? _.published
+                        ? "#EventDropDown_HiddenPublish"
+                        : "#EventDropDown_Hidden"
+                      : "#EventDropDown_Visible";
+                    return {
+                      label: (0, _._)(
+                        _,
+                        (0, _._)(_.rtime32_start_time),
+                        _.event_name,
+                      ),
+                      data: _,
+                    };
+                  })
+                : [],
+            [_],
+          ),
+          _ = _?.find((_) => _.gid === __webpack_require__);
+        return (
+          "dev" == _._.WEB_UNIVERSE &&
+            console.log(
+              `AssetRequestSelectPartnerEvent: selectedEventGID=${__webpack_require__} === selected?.gid=${_?.gid}`,
+              __webpack_require__,
+              _,
+              _?.gid,
+            ),
+          _ || (!_ && !_?.appid)
+            ? _ && 0 != _.length
+              ? (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    Boolean(_) &&
+                      (0, _.jsx)("a", {
+                        href: _,
+                        target: "_blank",
+                        style: {
+                          float: "right",
+                        },
+                        children: (0, _._)(
+                          "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
+                        ),
+                      }),
+                    (0, _.jsx)(_._, {
+                      label: _,
+                      tooltip: _,
+                      selectedOption: _,
+                      onChange: (_) => _(_.clanAccountID, _.data.gid),
+                      rgOptions: _,
+                    }),
+                  ],
+                })
+              : (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      children: [
+                        _,
+                        " ",
+                        (0, _.jsx)(_._, {
+                          tooltip: _,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(_.ErrorStylesWithIcon, "ErrorCtn"),
+                      children: (0, _._)(
+                        "#EventDropDown_NoEventFound",
+                        (0, _.jsx)("a", {
+                          href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents`,
+                          target: "_blank",
+                        }),
+                      ),
+                    }),
+                  ],
+                })
+            : (0, _.jsx)(_._, {
+                string: (0, _._)("#Loading"),
+                size: "small",
+                position: "center",
+              })
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -71160,7 +71905,7 @@
             ? "Claim Operations Ownership?"
             : "Remove operator ownership",
           strDescription: _
-            ? "Do you want to cliam ownership of the operations for this plans promotion? This means reviewing and verifying all of require items are provided before the promotion needs to go live."
+            ? "Do you want to claim ownership of the operations for this plans promotion? This means reviewing and verifying all of require items are provided before the promotion needs to go live."
             : "Remove the current owner of the operations owner this promotion plan?",
           closeModal: __webpack_require__,
           onOK: () => {
@@ -71838,6 +72583,7 @@
             setEndTime: _,
             fnSetSlotFull: _,
           } = _,
+          [_, _] = (0, _.useState)(__webpack_require__),
           _ = (0, _.useMemo)(() => [_], [_]),
           _ = (0, _._)(104, _),
           _ = (0, _.useMemo)(() => {
@@ -71887,6 +72633,12 @@
                   _(_.data), _(_.data + _.rtDays * _._.PerDay);
                 },
               }),
+              _ != __webpack_require__ &&
+                (0, _.jsx)("p", {
+                  className: _.WarningStylesBackground,
+                  children:
+                    "Note: Changing the promotion date range will NOT affect the date and times in the dependant promotion objects like the marketing message or spotlight etc... They neeed to be manually updated.",
+                }),
             ],
           })
         );
@@ -78335,6 +79087,81 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
       function _(_) {
+        const {
+          strExternalSaleEventType: _,
+          fnSetExternalSaleEventType: __webpack_require__,
+        } = _;
+        return (0, _.jsxs)("div", {
+          children: [
+            "Please Select event type so that:",
+            (0, _.jsxs)("ol", {
+              children: [
+                (0, _.jsx)("li", {
+                  children:
+                    "we can show the right documentation to the partner",
+                }),
+                (0, _.jsx)("li", {
+                  children:
+                    "Dev/Pub/Franchise sales are limited to the created apps if the hosting group is a creator hoem",
+                }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              rgOptions: [
+                {
+                  label: "Publisher/Developer Sale",
+                  data: "publisher",
+                  tooltip:
+                    "A developer, publisher or franchise want to showcase their games on a sale page.",
+                },
+                {
+                  label: "Showcase/Festival/Convention",
+                  data: "showcase",
+                  tooltip:
+                    "festivals, convensions, showcases. Typically events with a physical presence, but not always",
+                },
+                {
+                  label: "Regional Sale",
+                  data: "region",
+                  tooltip: "For Made in XYZ Location events",
+                },
+                {
+                  label: "Themed Sale",
+                  data: "theme",
+                  tooltip:
+                    "For events organized around a particular genre, theme, style",
+                },
+                {
+                  label: "Franchise Sale",
+                  data: "franchise",
+                  tooltip: "For events organized around a particular franchise",
+                },
+                {
+                  label: "DEV Only: Locked Publisher/Developer Sale",
+                  data: "locked_publisher",
+                  tooltip:
+                    "A developer, publisher or franchise want to showcase their games on a sale page and are limited to only their linked apps with their creator home.",
+                },
+                {
+                  label: "DEV Only: Locked Franchise Sale",
+                  data: "locked_franchise",
+                  tooltip:
+                    "For events organized around a particular franchise and are limited to only their linked apps to their creator home",
+                },
+              ],
+              strDropDownClassName: _.DropDownScroll,
+              strDropDownMenuCtnClass: _.DropDownScroll,
+              strDropDownItemClassName: _.DropDownScrollItem,
+              selectedOption: _,
+              onChange: (_) => __webpack_require__(_.data),
+              contextMenuPositionOptions: {
+                bDisablePopTop: !0,
+              },
+            }),
+          ],
+        });
+      }
+      function _(_) {
         const { clanSteamID: _, gidClanEvent: __webpack_require__ } = _,
           { bLoading: _ } = (0, _._)(_.GetAccountID(), __webpack_require__);
         return _
@@ -78386,47 +79213,9 @@
                 label: (0, _._)("#SalePresented_By_Admin"),
                 tooltip: (0, _._)("#SalePresneted_By_Admin_ttip"),
               }),
-              "Select event type so that we can show the right documentation to the partner:",
-              (0, _.jsx)(_._, {
-                rgOptions: [
-                  {
-                    label: "Publisher/Developer Sale",
-                    data: "publisher",
-                    tooltip:
-                      "A developer, publisher or franchise want to showcase their games on a sale page.",
-                  },
-                  {
-                    label: "Showcase/Festival/Convention",
-                    data: "showcase",
-                    tooltip:
-                      "festivals, convensions, showcases. Typically events with a physical presence, but not always",
-                  },
-                  {
-                    label: "Regional Sale",
-                    data: "region",
-                    tooltip: "For Made in XYZ Location events",
-                  },
-                  {
-                    label: "Themed Sale",
-                    data: "theme",
-                    tooltip:
-                      "For events organized around a particular genre, theme, style",
-                  },
-                  {
-                    label: "Franchise Sale",
-                    data: "franchise",
-                    tooltip:
-                      "For events organized around a particular franchise",
-                  },
-                ],
-                strDropDownClassName: _.DropDownScroll,
-                strDropDownMenuCtnClass: _.DropDownScroll,
-                strDropDownItemClassName: _.DropDownScrollItem,
-                selectedOption: _,
-                onChange: (_) => _(_.data),
-                contextMenuPositionOptions: {
-                  bDisablePopTop: !0,
-                },
+              (0, _.jsx)(_, {
+                strExternalSaleEventType: _,
+                fnSetExternalSaleEventType: _,
               }),
             ],
           })
@@ -80490,6 +81279,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = {
@@ -80755,8 +81545,11 @@
           _
         );
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+      }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
@@ -81300,7 +82093,7 @@
         (0, _._)([_._], _.prototype, "SetSolrMatchCount", null),
         (0, _._)([_._], _.prototype, "SetFacetValueSearchString", null),
         (0, _._)([_._], _.prototype, "UpdateMatchCount", null);
-      const _ = (0, _._)((_) => {
+      const _ = (0, _._)(function (_) {
           const {
               language: _,
               linkColor: __webpack_require__,
@@ -81435,7 +82228,7 @@
               : null
           );
         }),
-        _ = (0, _._)((_) => {
+        _ = (0, _._)(function (_) {
           const { facets: _ } = _,
             [__webpack_require__, _] = (0, _.useState)([]);
           return (
@@ -81468,7 +82261,7 @@
               : null
           );
         }),
-        _ = (0, _._)((_) => {
+        _ = (0, _._)(function (_) {
           const {
               facetValue: _,
               language: __webpack_require__,
@@ -81489,7 +82282,7 @@
             ],
           });
         }),
-        _ = (0, _._)((_) => {
+        _ = (0, _._)(function (_) {
           const {
               language: _,
               linkColor: __webpack_require__,
@@ -81597,7 +82390,7 @@
         const _ = (0, _._)(_, (0, _._)(_));
         return _ ? _ : (0, _._)(_._.GetWithFallback(_, _).trim());
       }
-      const _ = (0, _._)((_) => {
+      const _ = (0, _._)(function (_) {
           const {
               language: _,
               highlightedFacetColor: __webpack_require__,
@@ -81691,7 +82484,7 @@
             });
           }
         }),
-        _ = (0, _._)((_) => {
+        _ = (0, _._)(function (_) {
           const {
               background: _,
               labelColor: __webpack_require__,
@@ -81699,11 +82492,13 @@
               buttonColor: _,
               highlightedFacetColor: _,
             } = _,
-            [_, _] = (0, _.useState)(!1);
+            [_, _] = (0, _.useState)(!1),
+            _ = (0, _._)(`(max-width: ${_.strMidscreenWidth})`),
+            _ = !(0, _._)() && (_ || !_);
           return (0, _.jsxs)("div", {
             className: _.FacetedBrowseCtn,
             children: [
-              _() &&
+              _ &&
                 (0, _.jsx)(_, {
                   buttonColor: _,
                   bShowControls: _,
@@ -81714,7 +82509,7 @@
               (0, _.jsxs)("div", {
                 className: _.FacetedBrowseInnerCtn,
                 children: [
-                  _ || !_()
+                  _
                     ? (0, _.jsx)(_, {
                         highlightedFacetColor: _,
                         linkColor: __webpack_require__,
@@ -81732,7 +82527,7 @@
             ],
           });
         }),
-        _ = (0, _._)((_) => {
+        _ = (0, _._)(function (_) {
           const {
               buttonColor: _,
               bShowControls: __webpack_require__,
@@ -81772,8 +82567,7 @@
                   ],
                 }),
           });
-        }),
-        _ = () => window.innerWidth < parseInt(_.strMidscreenWidth);
+        });
       function _(_) {
         const { section: _, event: __webpack_require__ } = _,
           [_, _, _] = (0, _._)(() => [
@@ -81782,7 +82576,35 @@
             _.highlighted_facet_color,
           ]),
           _ = (0, _._)(),
-          _ = (0, _._)(_, __webpack_require__, _);
+          _ = (function (_, _, _) {
+            if (_.disable_background && !_)
+              return {
+                paddingLeft: 0,
+                paddingRight: 0,
+              };
+            let _ = "";
+            _.background_image &&
+              (_ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`);
+            return _.background_gradient_bottom ||
+              _.background_gradient_top ||
+              _.length > 0 ||
+              _.background_repeat ||
+              _.border_color ||
+              _.border_width
+              ? {
+                  backgroundImage:
+                    _(_.background_gradient_bottom, _.background_gradient_top) +
+                    _,
+                  backgroundRepeat: _.background_repeat,
+                  backgroundSize:
+                    "coverBlur" == _.background_repeat ? "cover" : "",
+                  outlineStyle:
+                    _.border_color && _.border_width ? "solid" : void 0,
+                  outlineColor: _.border_color,
+                  outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
+                }
+              : {};
+          })(_, __webpack_require__, _);
         return (0, _.jsx)(_, {
           labelColor: _,
           headingColor: _,
@@ -82807,7 +83629,7 @@
       })(_ || (_ = {}));
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _,
         _ = __webpack_require__("chunkid"),
@@ -87936,6 +88758,260 @@
       }
       function _(_, _) {
         return `${_._.PARTNER_BASE_URL}promotion/discounts${_._.DiscountDashboard(_ ?? "")}?dd=1${_ ? `&de=${_}` : ""}`;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            fnSetItemID: _,
+            strLabel: __webpack_require__,
+            itemType: _,
+            fnFilterID: _,
+            className: _,
+            tooltip: _,
+            autoFocus: _,
+            bIncludeRetired: _,
+            bShowDLCToggle: _,
+            bOnlyDLC: _,
+            bRunQueryOnLoad: _,
+            rgParentAppIDs: _,
+          } = _,
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_] = _.useState(new _._()),
+          [_, _] = _.useState(new Array()),
+          [_, _] = _.useState(new Array()),
+          [_, _] = _.useState(new Array()),
+          _ = _.createRef(),
+          _ = _.createRef();
+        const _ = (0, _.useCallback)(
+            async (_, _) => {
+              _(!0);
+              let _ = {
+                  json: 1,
+                  term: _,
+                  bexcluderetired: !_,
+                },
+                _ = `${_._.PARTNER_BASE_URL}appsearch/suggestapps`;
+              switch (_) {
+                case 1:
+                  _ = `${_._.PARTNER_BASE_URL}admin/store/suggestpackage`;
+                  break;
+                case 2:
+                  _ = `${_._.PARTNER_BASE_URL}bundles/suggestbundle`;
+                  break;
+                default:
+                  _ ? (_.includedlc = !0) : !1 === _ && (_.includedlc = !1),
+                    _ &&
+                      ((_.bfilterappids = !0),
+                      (_.rgParentAppIds = JSON.stringify(_)));
+              }
+              const _ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+              });
+              200 == _?.status && 1 == _.data?.success
+                ? _
+                  ? (_(_.data.matches?.filter((_) => _(_._)) || []),
+                    _(
+                      _.data.package_matches?.filter((_) => _(_.packageid)) ||
+                        [],
+                    ),
+                    _(
+                      _.data.bundle_matches?.filter((_) => _(_.bundleid)) || [],
+                    ))
+                  : (_(_.data.matches || []),
+                    _(_.data.package_matches || []),
+                    _(_.data.bundle_matches || []))
+                : (_([]), _([]), _([])),
+                _(!1);
+            },
+            [_, _, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _(_), _(_.current?.value, _);
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ = _?.target?.value?.toLocaleLowerCase() ?? "";
+              _(_);
+              const _ = _.current?.checked;
+              _.Schedule(1e3, () => _(_, _));
+            },
+            [_, _, _],
+          );
+        let _;
+        switch (
+          (_.useEffect(() => {
+            _ && _(_);
+          }, []),
+          _)
+        ) {
+          case 1:
+            _ = (0, _._)("#StoreAdmin_Search_Placeholder_package");
+            break;
+          case 2:
+            _ = (0, _._)("#StoreAdmin_Search_Placeholder_bundle");
+            break;
+          default:
+            _ = (0, _._)("#StoreAdmin_Search_Placeholder");
+        }
+        const _ = _ && !_ && 0 == _;
+        return (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            (0, _.jsxs)("div", {
+              className: _.AppSearchInputContainer,
+              children: [
+                (0, _.jsx)(_._, {
+                  type: "text",
+                  ref: _,
+                  className: _.SearchInput,
+                  label: __webpack_require__,
+                  tooltip: _,
+                  placeholder: _,
+                  onChange: _,
+                  value: _,
+                  bAlwaysShowClearAction: _.length > 0,
+                  focusOnMount: _,
+                }),
+                _ &&
+                  (0, _.jsx)(_._, {
+                    ref: _,
+                    checked: _,
+                    onChange: _,
+                    className: _.AppSearchDLCCheckbox,
+                    label: (0, _._)("#StoreAdmin_Search_IncludeDLC"),
+                  }),
+              ],
+            }),
+            (0, _.jsxs)("div", {
+              className: _.Results,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _.LoadingContainer,
+                    children: (0, _.jsx)(_._, {
+                      size: "small",
+                    }),
+                  }),
+                Boolean(_?.length > 0) &&
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        name: _.match,
+                        _: _._,
+                        is_visible: !0,
+                        type: 0,
+                        fnSetItemID: () => {
+                          _([]), _(_._, _.itemid);
+                        },
+                      },
+                      _._,
+                    ),
+                  ),
+                Boolean(_?.length > 0) &&
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        name: _.name,
+                        _: _.packageid,
+                        type: 1,
+                        is_visible: _.is_visible,
+                        fnSetItemID: () => {
+                          _([]), _(_.packageid);
+                        },
+                      },
+                      _.packageid,
+                    ),
+                  ),
+                Boolean(_?.length > 0) &&
+                  _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        name: _.name,
+                        _: _.bundleid,
+                        type: 2,
+                        is_visible: _.is_visible,
+                        fnSetItemID: () => {
+                          _([]), _(_.bundleid);
+                        },
+                      },
+                      _.bundleid,
+                    ),
+                  ),
+              ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            name: _,
+            _: __webpack_require__,
+            type: _,
+            is_visible: _,
+            fnSetItemID: _,
+          } = _,
+          [_] = (0, _._)(__webpack_require__, _, {
+            include_assets: !0,
+          });
+        let _ = "#DailyDeals_HeaderArtMissing";
+        switch (_) {
+          case 1:
+            _ = "#DailyDeals_PackageHeaderArtMissing";
+            break;
+          case 2:
+            _ = "#DailyDeals_BundleHeaderArtMissing";
+        }
+        return (0, _.jsxs)("div", {
+          className: _.ResultRow,
+          onClick: () => _(),
+          children: [
+            (0, _.jsx)("div", {
+              className: (0, _._)(_.AvatarImageCtn, "AvatarImageCtn"),
+              children: (0, _.jsx)("img", {
+                src: _?.GetAssets()?.GetHeaderURL(),
+                className: _.AvatarImage,
+                alt: (0, _._)(_),
+              }),
+            }),
+            (0, _.jsxs)("div", {
+              className: _.GameName,
+              children: [
+                Boolean(!_) &&
+                  (0, _.jsxs)("span", {
+                    children: [(0, _._)("#Sale_FeaturingHidden"), " "],
+                  }),
+                _,
+                1 == _ ? ` (${__webpack_require__})` : "",
+              ],
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -96844,6 +97920,597 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      function _(_) {
+        if (_) {
+          if ("appid" in _) return "app";
+          if ("bundleid" in _) return "bundle";
+          if ("packageid" in _) return "sub";
+        }
+      }
+      function _(_) {
+        const {
+            _: _,
+            hoverClassName: __webpack_require__,
+            fnGetIDOverride: _,
+            fnHoverState: _,
+            children: _,
+          } = _,
+          _ = _.useRef(null),
+          _ = _.useCallback(
+            (_) => {
+              const _ = _(_);
+              _ &&
+                (_ && _(!0),
+                window.GameHover &&
+                  window.GameHover(_ ? _() : _.current, _, "global_hover", {
+                    type: _,
+                    _: (0, _._)(_)._,
+                    _: 1,
+                  }));
+            },
+            [_, _, _],
+          ),
+          _ = _.useCallback(
+            (_) => {
+              _(_) &&
+                (_ && _.relatedTarget && _(!1),
+                window.HideGameHover &&
+                  window.HideGameHover(_ ? _() : _.current, _, "global_hover"));
+            },
+            [_, _, _],
+          );
+        return (0, _.jsx)("div", {
+          ref: _,
+          className: __webpack_require__,
+          onMouseEnter: _,
+          onMouseLeave: _,
+          onFocus: _,
+          onBlur: _,
+          children: _,
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
+            strExtraParams: __webpack_require__,
+            fnOnClickOverride: _,
+            strOverrideURL: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(
+            _ ||
+              (_ && "creatorid" in _
+                ? (0, _._)(
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )
+                : (0, _._)(
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    _,
+                    _,
+                  )),
+          );
+        return (0, _.jsx)(_, {
+          ..._,
+          children: (0, _.jsx)(_._, {
+            className: _.className,
+            href: _ ? void 0 : _,
+            target: _._.IN_CLIENT || _ ? void 0 : "_blank",
+            rel: "noopener noreferrer",
+            onClick: _,
+            children: _.children,
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const _ = (0, _._)(_);
+        return _ ? _[_] : "";
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(_);
+        return _[_] != _ && ((_[_] = _), !0);
+      }
+      function _(_, _) {
+        const _ = (0, _._)(_);
+        return Boolean(_?.[_]);
+      }
+      function _(_) {
+        if (!_) return 0;
+        let _ = 0;
+        for (let _ = 0; _ < 31; ++_) {
+          _[(0, _._)(_)] && (_ += 1);
+        }
+        return _;
+      }
+      function _(_) {
+        const _ = new Array();
+        for (let _ = 0; _ < 31; ++_) {
+          const _ = (0, _._)(_);
+          _[_] && _.push([_, _[_]]);
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        const _ = (0, _._)(_.width, _),
+          _ = (0, _._)(_.height, _);
+        return {
+          sKey: `${_}_${_}x${_}`,
+          width: _,
+          height: _,
+          bEnforceDimensions: !_.bDisableEnforceDimensions,
+          artworkType: _,
+          bHiddenFromDropdown: "hero" === _,
+          bDeprecated: (_ ?? 0) >= 1,
+          fnGetLabelText() {
+            return "spotlight" == this.artworkType
+              ? (0, _._)("#EventEditor_ArtworkType_store_spotlight")
+              : (0, _._)("#EventEditor_ArtworkType_" + this.artworkType);
+          },
+        };
+      }
+      function _(_) {
+        return _?.flatMap((_) => {
+          const _ = _._[_];
+          if (
+            ((0, _._)(Boolean(_), `Artwork Type not in Map ${_}`),
+            "number" == typeof _.width && "number" == typeof _.height)
+          )
+            return [_(_, _)];
+          {
+            let _ = Math.max(
+              Array.isArray(_.width) ? _.width.length : 1,
+              Array.isArray(_.height) ? _.height.length : 1,
+            );
+            return Array.from(
+              {
+                length: _,
+              },
+              (_, _) => _(_, _, _),
+            );
+          }
+        });
+      }
+      class _ extends _._ {
+        m_filesToUpload = _._.array();
+        m_filesCompleted = _._.array();
+        m_clanImagesV2;
+        m_clanSteamID;
+        m_rgImageOptions;
+        m_localizedImageGroupPrimaryImage;
+        m_lastError = void 0;
+        constructor(_, _, _, _) {
+          super(),
+            (0, _._)(this),
+            (this.m_clanSteamID = _),
+            (this.m_rgImageOptions = _(_)),
+            (this.m_localizedImageGroupPrimaryImage = _),
+            (this.m_clanImagesV2 = _ ?? !1);
+        }
+        GetClanSteamID() {
+          return this.m_clanSteamID;
+        }
+        async AddImage(_, _ = 0) {
+          const { language: __webpack_require__ } = (0, _._)(_.name, _);
+          return this.AddImageForLanguage(_, __webpack_require__);
+        }
+        async AddImageForLanguage(_, _) {
+          if (!((0, _._)(_.type) || (_._.is_support && (0, _._)(_.type))))
+            return !1;
+          const _ = await (0, _._)(_, (0, _._)(_.type));
+          if (!_) return !1;
+          const _ = new _._(
+            _,
+            _.name,
+            _,
+            this.m_rgImageOptions,
+            _.src,
+            (0, _._)(_),
+            _,
+            this.m_localizedImageGroupPrimaryImage,
+          );
+          return (this.m_filesToUpload = [...this.m_filesToUpload, _]), !0;
+        }
+        async AddExistingClanImage(_, _ = 0) {
+          const _ = _._.GetHashAndExt(_);
+          if (!_) return !1;
+          const _ = _._.GenerateEditableURLFromHashAndExt(
+              this.m_clanSteamID,
+              _,
+            ),
+            _ = await _()({
+              url: _,
+              method: "GET",
+              responseType: "blob",
+            }),
+            _ = (0, _._)(_.data, _.file_name);
+          return await this.AddImage(_, _);
+        }
+        DeleteUploadImageByIndex(_) {
+          this.m_filesToUpload.splice(_, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]);
+        }
+        DeleteUploadImage(_) {
+          let _ = this.m_filesToUpload.findIndex(
+            (_) => _.file == _.file && _.uploadTime == _.uploadTime,
+          );
+          _ >= 0 && this.DeleteUploadImageByIndex(_);
+        }
+        ClearImages() {
+          this.m_filesToUpload = _._.array();
+        }
+        GetFilesUploaded() {
+          return this.m_filesCompleted;
+        }
+        GetLastErrorFile() {
+          return this.m_lastError;
+        }
+        GetCompletedFiles() {
+          return this.m_filesCompleted.length;
+        }
+        GetTotalFiles() {
+          return this.m_filesToUpload.length;
+        }
+        GetFilesToUpload() {
+          return this.m_filesToUpload.map((_) => _.file);
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        BHasError() {
+          return null != this.m_lastError;
+        }
+        BAllDone() {
+          return (
+            this.m_filesCompleted.length > 0 &&
+            this.m_filesCompleted.length == this.m_filesToUpload.length
+          );
+        }
+        BIsFileCompleted(_) {
+          return -1 != this.m_filesCompleted.indexOf(_);
+        }
+        RetryAllFailedUploads() {
+          this.CancelAllUploads(), this.UploadAllImages();
+        }
+        async handleUploadRefresh(_) {
+          await _._.LoadClanImages(this.m_clanSteamID, !0, _);
+        }
+        BGetUploadsAreInSerial() {
+          return !1;
+        }
+        async UploadSingleImage(_, _, _, _) {
+          const _ = _.file,
+            _ = _.GetCurrentImageOption(),
+            _ = _.GetResizeDimension(),
+            _ = new FormData();
+          _.append("clanimage", _, _),
+            _.append("sessionid", _._.SESSIONID),
+            this.m_clanImagesV2 && _.append("clan_images_v2", "1"),
+            _?.artworkType && _.append("arttype", _.artworkType),
+            _ &&
+              _.length > 0 &&
+              _.append(
+                "resize",
+                _.map((_) => _.width + "x" + _.height).join(","),
+              );
+          let _ = "/uploadimage/";
+          const _ = this.m_localizedImageGroupPrimaryImage;
+          _ &&
+            ((_ = "/ajaxuploadlocalizedimage/"),
+            _.append("origimagehash", _.image_hash),
+            _.thumbnail_hash && _.append("thumbhash", _.thumbnail_hash),
+            _.append("extension", "" + _.file_type),
+            _.append("language", "" + _));
+          const _ = _.split(".").pop()?.toLocaleLowerCase();
+          ("webm" != _ && "mp4" != _) ||
+            (_.append("video_width", "" + _.width),
+            _.append("video_height", "" + _.height));
+          let _,
+            _ =
+              _._.COMMUNITY_BASE_URL +
+              "/gid/" +
+              this.m_clanSteamID.ConvertTo64BitString() +
+              _,
+            _ = {
+              cancelToken: _,
+              withCredentials: !0,
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            },
+            _ = !0;
+          try {
+            (_ = await _().post(_, _, _)), this.m_filesCompleted.push(_);
+          } catch (_) {
+            (_ = !1),
+              (this.m_lastError = {
+                file: _,
+                status: _.response ? _.response.status : 500,
+                message: (0, _._)(_).strErrorMsg,
+              }),
+              (_ = _.response);
+          }
+          return (
+            _ || (await this.handleUploadRefresh(_)),
+            {
+              bSuccess: _,
+              result: _.data,
+            }
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_filesToUpload", void 0),
+        (0, _._)([_._], _.prototype, "m_filesCompleted", void 0),
+        (0, _._)([_._], _.prototype, "m_lastError", void 0),
+        (0, _._)([_._], _.prototype, "AddImage", null),
+        (0, _._)([_._], _.prototype, "AddExistingClanImage", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImageByIndex", null),
+        (0, _._)([_._], _.prototype, "DeleteUploadImage", null),
+        (0, _._)([_._], _.prototype, "ClearImages", null);
+      class _ extends _ {
+        constructor(_, _, _) {
+          super(_, _, _, !1);
+        }
+      }
+      function _(_, _, _) {
+        const _ = (0, _._)(_ instanceof Array ? _ : [_]),
+          _ = _.ConvertTo64BitString();
+        return _.useMemo(() => new _(_, _, _), [_, _]);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      class _ {
+        constructor() {
+          (0, _._)(this),
+            "dev" == _._.WEB_UNIVERSE && (window.g_ClanImageStore = this);
+        }
+        m_mapClanToImages = new Map();
+        m_mapClanImageLoadPromises = new Map();
+        m_imageListChangeCallback = new Map();
+        m_mapClanImageLoadState = new Map();
+        m_mapImageIDToResolution = new Map();
+        BHasImageResolution(_) {
+          return this.m_mapImageIDToResolution.has(_.imageid);
+        }
+        GetImageResolution(_) {
+          return this.m_mapImageIDToResolution.get(_.imageid);
+        }
+        SetImageResolution(_, _) {
+          this.m_mapImageIDToResolution.set(_.imageid, _);
+        }
+        GetImageListCallbackForClanAccountIDInternal(_) {
+          return (
+            this.m_imageListChangeCallback.has(_) ||
+              this.m_imageListChangeCallback.set(_, new _._()),
+            this.m_imageListChangeCallback.get(_)
+          );
+        }
+        GetImageListCallbackForClanAccountID(_) {
+          return this.GetImageListCallbackForClanAccountIDInternal(_);
+        }
+        m_vecClanImageDragListener = new Array();
+        AddClanImageDragListener(_) {
+          -1 == this.m_vecClanImageDragListener.indexOf(_) &&
+            this.m_vecClanImageDragListener.push(_);
+        }
+        RemoveClanImageDragListener(_) {
+          let _ = this.m_vecClanImageDragListener.indexOf(_);
+          -1 != _ && this.m_vecClanImageDragListener.splice(_, 1);
+        }
+        GetClanImageDragListener() {
+          return this.m_vecClanImageDragListener;
+        }
+        BHasLoadedClanImages(_) {
+          return this.m_mapClanToImages.has(_.GetAccountID());
+        }
+        async LoadClanImages(_, _, _) {
+          const _ = _.GetAccountID();
+          if (_ || !this.m_mapClanImageLoadPromises.has(_)) {
+            const _ = this.InternalLoadClanImages(_, _, _);
+            this.m_mapClanImageLoadPromises.set(_, _);
+          }
+          return this.m_mapClanImageLoadPromises.get(_);
+        }
+        async InternalLoadClanImages(_, _, _) {
+          let _ = _.GetAccountID();
+          if (
+            ((0, _._)(_ && 0 != _, "ClanSteamID missing:" + _),
+            _ && (!this.m_mapClanToImages.has(_) || _))
+          ) {
+            let _,
+              _ = {};
+            const _ =
+              _._.COMMUNITY_BASE_URL +
+              "/gid/" +
+              _.ConvertTo64BitString() +
+              "/getimages/";
+            if (
+              ((_ = await _().get(_, {
+                params: _,
+                withCredentials: !0,
+                cancelToken: _,
+              })),
+              _)
+            ) {
+              for (let _ of _.data.images) _.clanAccountID = _;
+              (0, _._)(() => {
+                this.m_mapClanImageLoadState.set(_, {
+                  loaded: !0,
+                }),
+                  this.m_mapClanToImages.set(_, _.data.images),
+                  this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch(
+                    _.data.images,
+                  );
+              });
+            }
+          }
+          return this.m_mapClanToImages.get(_);
+        }
+        GetLoadState(_) {
+          return this.m_mapClanImageLoadState.get(_.GetAccountID());
+        }
+        GetClanImages(_) {
+          return this.GetClanImagesByAccount(_.GetAccountID());
+        }
+        GetClanImagesByAccount(_) {
+          let _ = this.m_mapClanToImages.get(_);
+          return _ || new Array();
+        }
+        GetFilteredClanImages(_, _) {
+          let _ = _.GetClanImages(_);
+          return this.GetFilteredClanImagesList(_, _);
+        }
+        GetFilteredClanImagesList(_, _) {
+          if (_ && _.trim().length > 0) {
+            _ = _.trim().toLowerCase();
+            let _ = new Array();
+            for (let _ of _)
+              _.file_name &&
+                _.file_name.toLowerCase().indexOf(_) >= 0 &&
+                __webpack_require__.push(_);
+            return _;
+          }
+          return _;
+        }
+        GetClanImageByID(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.imageid == _) : void 0;
+        }
+        GetClanImageByURL(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.thumb_url == _ || _.url == _) : void 0;
+        }
+        GetClanImageByFile(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.file_name == _.name) : void 0;
+        }
+        GetClanImageByImageHash(_, _) {
+          let _ = _.GetAccountID(),
+            _ = this.m_mapClanToImages.get(_);
+          return _ ? _.find((_) => _.image_hash == _) : void 0;
+        }
+        async DeleteClanImageByID(_, _) {
+          let _ = {
+              sessionid: _._.SESSIONID,
+              imageid: _,
+            },
+            _ = _.GetAccountID(),
+            _ = await _().get(
+              _._.COMMUNITY_BASE_URL +
+                "/gid/" +
+                _.ConvertTo64BitString() +
+                "/deleteimage/",
+              {
+                params: _,
+              },
+            );
+          if (!_ || 200 != _.status || 1 != _.data.success) return _.data;
+          let _ = this.m_mapClanToImages.get(_);
+          if (_) {
+            let _ = _.findIndex((_, _, _) => _.imageid == _);
+            _ >= 0 &&
+              (_.splice(_, 1),
+              this.GetImageListCallbackForClanAccountIDInternal(_).Dispatch([
+                ..._,
+              ]));
+          }
+          return _.data;
+        }
+        async DeleteClanImage(_, _) {
+          return this.DeleteClanImageByID(_, _.imageid);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_mapClanToImages", void 0),
+        (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0);
+      const _ = new _();
+      function _(_) {
+        const _ = _._.InitFromClanID(_),
+          _ = (0, _._)("useLoadClanImages"),
+          [_, _] = (0, _.useState)(() => _.BHasLoadedClanImages(_));
+        return (
+          (0, _.useEffect)(() => {
+            const _ = _._.InitFromClanID(_);
+            return (
+              _.BHasLoadedClanImages(_) ||
+                _.LoadClanImages(_, !1, _.token).then(() => _(!0)),
+              () => __webpack_require__.cancel()
+            );
+          }, [_, _]),
+          _
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -102133,6 +103800,309 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { rgAssetURL: _, rgLang: __webpack_require__, bIsImage: _ } = _,
+          [_, _] = (0, _.useState)([]);
+        if (
+          ((0, _.useEffect)(() => {
+            let _ = !1;
+            const _ = _ ? _ : _;
+            return (
+              Promise.all(_.map((_) => __webpack_require__(_))).then((_) => {
+                _ || _(_);
+              }),
+              () => {
+                _ = !0;
+              }
+            );
+          }, [_, _]),
+          !_)
+        )
+          return (0, _.jsx)(_._, {
+            size: "small",
+            string: "Checking Assets...",
+          });
+        const _ = _.map((_, _) => (_ ? -1 : _)).filter((_) => -1 !== _);
+        return 0 === _.length
+          ? (0, _.jsx)(_._, {
+              bDone: !0,
+              name: "Uploaded assets verified",
+              tooltip:
+                "In the background we verified the assets by downloading from the CDN to verify they are present",
+            })
+          : (0, _.jsxs)(_.Fragment, {
+              children: [
+                (0, _.jsx)(_._, {
+                  bDone: !1,
+                  name: `${_.length} Asset(s) uploaded failed to fetch`,
+                }),
+                _.map((_) => ({
+                  url: _[_],
+                  lang: __webpack_require__[_],
+                })).map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      bDone: !1,
+                      name: `${(0, _._)(_.lang)} - Not found`,
+                      tooltip: `${_.url} not downloadable from the CDN`,
+                    },
+                    _.url,
+                  ),
+                ),
+              ],
+            });
+      }
+      function _(_) {
+        return new Promise((_) => {
+          const _ = new Image();
+          (_.onload = () => _(!0)), (_.onerror = () => _(!1)), (_.src = _);
+        });
+      }
+      function _(_) {
+        return new Promise((_) => {
+          const _ = document.createElement("video");
+          (_.preload = "metadata"),
+            (_.onloadedmetadata = () => _(!0)),
+            (_.onerror = () => _(!1)),
+            (_.src = _);
+        });
+      }
+      function _(_) {
+        const {
+            rgAssetLangs: _,
+            initialLang: __webpack_require__,
+            fnGetAssetUrl: _,
+            fnDeletAssetLang: _,
+            imageClassname: _,
+            fnDeleteAllAssets: _,
+            showDeleteAll: _ = !0,
+            bVerifyAssets: _,
+            bVideoAsset: _,
+          } = _,
+          [_, _] = _.useState(
+            __webpack_require__ ?? _._.Get().GetCurEditLanguage() ?? _[0],
+          ),
+          [_, _] = _.useState(_(_)),
+          _ = _.useMemo(() => [..._].sort(), [_]);
+        _.useEffect(() => {
+          const _ = _(_);
+          _ ? _(_) : _.length > 0 ? _(_[0]) : _(null);
+        }, [_, _, _]);
+        const _ = (0, _.useMemo)(() => _.map((_) => _(_)), [_, _]);
+        return (0, _.jsxs)("div", {
+          className: _().UploadedImageDisplayCtn,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().UploaderLeftCol,
+              children: (0, _.jsx)(_, {
+                curAssetURL: _,
+                imageClassname: _,
+              }),
+            }),
+            (0, _.jsx)("div", {
+              className: _().UploaderRightCol,
+              children: (0, _.jsxs)("div", {
+                className: _().SectionCtn,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().LangCountTitle,
+                    children: (0, _._)("#ImageUpload_LocalizedAssets"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().LangSelectCtn,
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          language: _,
+                          selectedLanguage: _,
+                          setSelectedLanguage: _,
+                          deleteLanguage: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  }),
+                  _ &&
+                    Boolean(_.length) &&
+                    (0, _.jsx)("a", {
+                      href: "#",
+                      className: _().DeleteAll,
+                      onClick: (_) => {
+                        _ ? _() : _.forEach((_) => _(_)), _.preventDefault();
+                      },
+                      children: (0, _._)("#Button_DeleteAll"),
+                    }),
+                  Boolean(_) &&
+                    (0, _.jsx)(_, {
+                      rgAssetURL: _,
+                      rgLang: _,
+                      bIsImage: !_,
+                    }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            language: _,
+            selectedLanguage: __webpack_require__,
+            setSelectedLanguage: _,
+            deleteLanguage: _,
+          } = _,
+          _ = (0, _._)(_);
+        return (0, _.jsxs)(
+          "div",
+          {
+            className: _().UploaderImgLang,
+            children: [
+              (0, _.jsx)("a", {
+                href: "#",
+                onClick: (_) => {
+                  _.preventDefault(), _(_);
+                },
+                children:
+                  _ === __webpack_require__
+                    ? (0, _.jsx)("span", {
+                        className: _().LangSelected,
+                        children: "" + _,
+                      })
+                    : (0, _.jsx)("span", {
+                        children: "" + _,
+                      }),
+              }),
+              (0, _.jsx)("a", {
+                href: "#",
+                onClick: (_) => {
+                  _.preventDefault(), _(_);
+                },
+                children: (0, _.jsx)(_._, {}),
+              }),
+            ],
+          },
+          "image" + _,
+        );
+      }
+      function _(_) {
+        const { curAssetURL: _, imageClassname: __webpack_require__ } = _;
+        if (!_)
+          return (0, _.jsx)("div", {
+            className: _().ArtNoArt,
+            children: (0, _._)("#ImageDisplay_NoAssetUploaded"),
+          });
+        const _ = (0, _._)(_);
+        return _._.includes(_)
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : _._.includes(_)
+            ? (0, _.jsx)(_, {
+                className: __webpack_require__ || _().ArtPreview,
+                strTextURL: _,
+              })
+            : (0, _.jsx)("img", {
+                className: __webpack_require__ || _().ArtPreview,
+                src: _,
+              });
+      }
+      function _(_) {
+        const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
+          _ = _.useRef(void 0);
+        return (
+          _.useEffect(() => {
+            _.current && (_.current.load(), _.current.play());
+          }, [_]),
+          (0, _.jsx)("video", {
+            ref: _,
+            className: __webpack_require__ || _().ArtPreview,
+            autoPlay: !0,
+            loop: !0,
+            controls: !0,
+            muted: !0,
+            children: (0, _.jsx)("source", {
+              src: _,
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { strTextURL: _, className: __webpack_require__ } = _,
+          [_, _] = _.useState("");
+        return (
+          _.useEffect(() => {
+            _()
+              .get(_)
+              .then((_) => {
+                _(_.data);
+              })
+              .catch((_) => {
+                console.error(_);
+              });
+          }, [_]),
+          (0, _.jsx)("textarea", {
+            className: __webpack_require__,
+            value: _,
+            readOnly: !0,
+            rows: 20,
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { bDone: _, name: __webpack_require__, tooltip: _ } = _;
+        return (0, _.jsxs)("div", {
+          className: _().StatusLineItemCtn,
+          children: [
+            (0, _.jsx)("span", {
+              className: (0, _._)(
+                _().StatusIcon,
+                _ ? _().StatusIconDone : _().StatusNotDone,
+              ),
+              children: _ ? (0, _.jsx)(_.Jlk, {}) : (0, _.jsx)(_._, {}),
+            }),
+            (0, _.jsx)(_._, {
+              toolTipContent: _,
+              children: __webpack_require__,
+            }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -104212,16 +106182,15 @@
                     }),
                 ],
               }),
-              (0, _.jsx)("div", {
-                className: _().ShareContainer,
-                children:
-                  !this.props.bInGamepadUI &&
-                  (0, _.jsx)(_, {
+              !this.props.bInGamepadUI &&
+                (0, _.jsx)("div", {
+                  className: _().ShareContainer,
+                  children: (0, _.jsx)(_, {
                     eventModel: _,
                     emoticonStore: this.props.emoticonStore,
                     partnerEventStore: this.props.partnerEventStore,
                   }),
-              }),
+                }),
             ],
           });
         }
@@ -105580,12 +107549,6 @@
                               loader: this.m_loader,
                               location: "bottom",
                             }),
-                          Boolean(_) &&
-                            (0, _.jsx)(_._, {
-                              eventModel: _,
-                              route: _._.k_eStoreNewsHub,
-                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
-                            }),
                         ],
                       }),
                 }),
@@ -106126,6 +108089,234 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          href: _,
+          children: __webpack_require__,
+          bAllowFocuseableAnchor: _,
+          ..._
+        } = _;
+        return (0, _._)()
+          ? (0, _.jsx)("div", {
+              ..._,
+              children: __webpack_require__,
+            })
+          : _
+            ? (0, _.jsx)(_._, {
+                href: _,
+                ..._,
+                children: __webpack_require__,
+              })
+            : (0, _.jsx)("a", {
+                href: _,
+                ..._,
+                children: __webpack_require__,
+              });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            creatorID: _,
+            bShowTagline: __webpack_require__,
+            bHideCreatorType: _,
+            bSmallFormat: _,
+            bHideFollowButton: _,
+            bAddLinkToMemberList: _,
+            bMinimalDisplay: _,
+          } = _,
+          { creatorHome: _ } = (0, _._)(_.clan_account_id),
+          [_] = (0, _._)();
+        if (_ || !_)
+          return (0, _.jsx)("div", {
+            className: _.DevSummaryWidgetCtn,
+            children: (0, _.jsx)(_._, {
+              string: (0, _._)("#Loading"),
+              size: "medium",
+              position: "center",
+            }),
+          });
+        const _ = _.type,
+          _ =
+            "developer" == _.type
+              ? (0, _._)("#CreatorHome_DevelopedBy")
+              : "publisher" == _.type
+                ? (0, _._)("#CreatorHome_PublishedBy")
+                : (0, _._)("#CreatorHome_InFranchise"),
+          _ = _.GetCreatorHomeURL(_),
+          _ = _.GetNumFollowers();
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_._, {
+            feature: "salecreatorhome",
+            children: (0, _.jsxs)(_._, {
+              className: (0, _._)(
+                _.DevSummaryCtn,
+                _ ? _.SmallFormat : _.LargeFormat,
+                _ ? _.MinimalDisplay : "",
+              ),
+              "flow-children": "row",
+              children: [
+                !_ &&
+                  (0, _.jsx)("span", {
+                    className: _.Title,
+                    children: _,
+                  }),
+                (0, _.jsxs)("div", {
+                  className: _.DevSummaryWidgetCtn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.DevSummaryBackground,
+                      style: {
+                        backgroundImage: `url(${_.GetAvatarURLFullSize()} )`,
+                      },
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_.DevSummaryContent),
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: _.FlexRowContainer,
+                          children: [
+                            (0, _.jsx)(_, {
+                              href: (0, _._)(_),
+                              className: _.AvatarLink,
+                              bAllowFocuseableAnchor: !0,
+                              children: (0, _.jsx)("img", {
+                                className: (0, _._)(_.Avatar, "Avatar_Trgt"),
+                                src: _.GetAvatarURLFullSize(),
+                              }),
+                            }),
+                            (0, _.jsxs)("div", {
+                              className: (0, _._)(
+                                _.FlexColumnContainer,
+                                _.CreatorDescCtn,
+                              ),
+                              children: [
+                                (0, _.jsxs)("div", {
+                                  className: (0, _._)(
+                                    _.CreatorTitleCtn,
+                                    _.FlexColumnContainer,
+                                  ),
+                                  children: [
+                                    (0, _.jsx)(_, {
+                                      href: (0, _._)(_),
+                                      className: _.CreatorNameName,
+                                      children: _.GetName(),
+                                    }),
+                                    Boolean(__webpack_require__) &&
+                                      (0, _.jsx)("div", {
+                                        className: (0, _._)(
+                                          _.FlexColumnContainer,
+                                          _.CreatorTagline,
+                                        ),
+                                        children: _.GetTagLine(),
+                                      }),
+                                  ],
+                                }),
+                                (0, _.jsx)("div", {
+                                  className: (0, _._)({
+                                    [_.FlexColumnContainer]: _,
+                                    [_.FlexRowContainer]: !_,
+                                    [_.SocialFollowersCtn]: !0,
+                                  }),
+                                  children: (0, _.jsxs)("div", {
+                                    className: (0, _._)(_.FollowBtnCtn),
+                                    children: [
+                                      Boolean(!_) &&
+                                        (0, _.jsx)(_._, {
+                                          clanAccountID: _.clan_account_id,
+                                          creatorID: _,
+                                        }),
+                                      (0, _.jsxs)("div", {
+                                        className: (0, _._)({
+                                          [_.Followers]: !0,
+                                        }),
+                                        children: [
+                                          (0, _.jsx)("span", {
+                                            children: (0, _._)(
+                                              "#CreatorHome_JustFollowers",
+                                            ),
+                                          }),
+                                          (0, _.jsx)("span", {
+                                            className: _.FollowerCount,
+                                            children: (0, _._)(_),
+                                          }),
+                                        ],
+                                      }),
+                                    ],
+                                  }),
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        Boolean(_) &&
+                          (0, _.jsx)("a", {
+                            href:
+                              _._.COMMUNITY_BASE_URL +
+                              "gid/" +
+                              _.GetClanSteamID().ConvertTo64BitString() +
+                              "/members/",
+                            target: "_blank",
+                            className: _.MembersListLink,
+                            children: (0, _._)("#ClanMembershipList"),
+                          }),
+                      ],
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          }),
+        });
+      }
+      function _(_) {
+        const { clanInfo: _, bAddLinkToMemberList: __webpack_require__ } = _;
+        if (
+          ((0, _._)(
+            _ && _.clanAccountID,
+            "CuratorHoverContent expect clanInfo, not supplied",
+          ),
+          !_)
+        )
+          return null;
+        const _ = {
+          clan_account_id: _.clanAccountID,
+          name: _.group_name,
+          type: "developer",
+        };
+        return (0, _.jsx)("div", {
+          className: _.CuratorHoverCtn,
+          children: (0, _.jsx)(_, {
+            creatorID: _,
+            bSmallFormat: !0,
+            bShowTagline: !0,
+            bHideCreatorType: !0,
+            bAddLinkToMemberList: __webpack_require__,
+          }),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -106418,7 +108609,6 @@
       }
       (0, _._)([_._], _.prototype, "m_mapDiscoveryQueues", void 0);
       __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
@@ -107040,36 +109230,647 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            bShowAsMuted: __webpack_require__,
+            bHidePrice: _,
+            bShowInLibraryInsteadOfPrice: _,
+            bHidePlatforms: _,
+            strClassName: _,
+            creatorAccountID: _,
+            bShowName: _,
+            onlyOneDiscountPct: _,
+            bShowAddToCart: _,
+            bShowWishlistButton: _,
+          } = _,
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!1),
+          { data: _ } = (0, _._)(_);
+        if (
+          ((0, _.useEffect)(() => {
+            _.current && _(_.current.offsetWidth < 370);
+          }, [_]),
+          !_ || !("appid" in _ || "bundleid" in _ || "packageid" in _))
+        )
+          return null;
+        const _ = Boolean(_ && 0 == _?.item_type),
+          _ = Boolean(!_ && !_ && !_ && _ && _);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsxs)("div", {
+                ref: _,
+                className: (0, _._)(
+                  _().CapsuleBottomBar,
+                  "CapsuleBottomBar",
+                  __webpack_require__ && _().Muted,
+                  _,
+                ),
+                children: [
+                  _ &&
+                    (0, _.jsx)(_, {
+                      creatorAccountID: _,
+                      ..._,
+                    }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      className: (0, _._)(
+                        _().MaxActionButtonWidth,
+                        _().AddToCartButton,
+                      ),
+                    }),
+                  _ &&
+                    "appid" in _ &&
+                    (0, _.jsx)(_._, {
+                      appid: _.appid,
+                      className: (0, _._)(
+                        _().MaxActionButtonWidth,
+                        _().AddToWishlistButton,
+                      ),
+                    }),
+                  !_ &&
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      bMinimizePlatforms: _,
+                    }),
+                  !_ &&
+                    (0, _.jsx)("span", {
+                      className: _().BottomBarPriceInfo,
+                      children: (0, _.jsx)(_._, {
+                        _: _,
+                        bShowInLibrary: _,
+                        onlyOneDiscountPct: _,
+                      }),
+                    }),
+                ],
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                _: _,
+              }),
+          ],
+        });
       }
-      function _(_, _, _) {
-        if (_.disable_background && !_)
-          return {
-            paddingLeft: 0,
-            paddingRight: 0,
-          };
-        let _ = "";
-        if (_.background_image) {
-          _ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`;
-        }
-        return _.background_gradient_bottom ||
-          _.background_gradient_top ||
-          _.length > 0 ||
-          _.background_repeat ||
-          _.border_color ||
-          _.border_width
-          ? {
-              backgroundImage:
-                _(_.background_gradient_bottom, _.background_gradient_top) + _,
-              backgroundRepeat: _.background_repeat,
-              backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
-              outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
-              outlineColor: _.border_color,
-              outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
+      function _(_) {
+        const { _: _ } = _,
+          { data: __webpack_require__ } = (0, _._)(_);
+        return __webpack_require__?.name
+          ? (0, _.jsx)("div", {
+              className: _().CapsuleName,
+              children: __webpack_require__.name,
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            creatorAccountID: _,
+            bShowAsMuted: __webpack_require__,
+            strClassName: _,
+          } = _,
+          _ = (0, _.useMemo)(
+            () => ({
+              creatorid: _,
+            }),
+            [_],
+          ),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = (function (_, _) {
+            let _ = "0000000000000000000000000000000000000000";
+            var _;
+            "string" == typeof _
+              ? (_ = _)
+              : _ &&
+                ((_ = _),
+                (_ = [..._]
+                  .map((_) => _.toString(16).padStart(2, "0"))
+                  .join("")));
+            let _ = ".jpg";
+            "0000000000000000000000000000000000000000" === _ && (_ = _),
+              44 == _.length &&
+                ((_ = __webpack_require__.slice(-4)),
+                (_ = __webpack_require__.slice(0, 40)));
+            let _ = _._.AVATAR_BASE_URL;
+            switch (
+              (_ ||
+                ((_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/avatars/"),
+                (_ += __webpack_require__.slice(0, 2) + "/")),
+              (_ += _),
+              _)
+            ) {
+              case "X-Small":
+              case "Small":
+                break;
+              case "Medium":
+              case "MediumLarge":
+                _ += "_medium";
+                break;
+              case "Large":
+              case "X-Large":
+              case "FillArea":
+                _ += "_full";
             }
-          : {};
+            return (_ += _), _;
+          })(_?.clan_avatar, "Medium"),
+          _ = _.name || "";
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(
+            _().BottomCreatorRow,
+            __webpack_require__ && _().Muted,
+            _,
+          ),
+          children: [
+            (0, _.jsx)("img", {
+              className: (0, _._)(_().CreatorLogo),
+              src: _,
+              alt: _,
+            }),
+            (0, _.jsx)("span", {
+              className: _().CreatorName,
+              children: _,
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = "capsule_index_";
+      function _(_) {
+        const {
+            capsule: _,
+            bShowParentApp: __webpack_require__,
+            elElementToAppendToHover: _,
+            index: _,
+            navKey: _,
+            bHideStoreHover: _,
+            onlyOneDiscountPct: _,
+            bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          _ = (0, _._)(
+            __webpack_require__ ? _?.related_items?.parent_appid : void 0,
+          ),
+          { data: _ } = (0, _._)(_);
+        if (!_ || !_) return null;
+        const _ = !!_ && !!_,
+          _ = (0, _.jsx)(_, {
+            ..._,
+            strExtraParams: _.strExtraParams,
+            _: _,
+            bIsHovered: _,
+            bHasParentAppToDisplay: _,
+            onlyOneDiscountPct: _,
+            bShowEarlyAccessBanner: _,
+          });
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)({
+            [_().OuterCapsuleContainer]: !0,
+            [_ + _]: 0 == _,
+          }),
+          navEntryPreferPosition: _._.PREFERRED_CHILD,
+          navKey: _,
+          children: [
+            (0, _.jsxs)(_._, {
+              appid: _.appid,
+              children: [
+                Boolean(_)
+                  ? (0, _.jsx)("div", {
+                      onMouseEnter: () => _(!0),
+                      onMouseLeave: () => _(!1),
+                      children: _,
+                    })
+                  : (0, _.jsx)(_._, {
+                      className: _().CapsuleContainer,
+                      _: _,
+                      elElementToAppend: _.elElementToAppendToHover,
+                      bShowDemoButton: _.bShowDemoButton,
+                      bPreferDemoStorePage: _.bPreferDemoStorePage,
+                      bShowDeckCompatibilityDialog:
+                        _.bShowDeckCompatibilityDialog,
+                      bHidePrice: _.bHidePrice,
+                      bUseSubscriptionLayout: _.bUseSubscriptionLayout,
+                      strExtraParams: _.strExtraParams,
+                      nCreatorAccountID: _.creatorAccountID,
+                      nWidthMultiplier: _.nWidthMultiplier,
+                      bShowIgnoreButton: _.bShowIgnoreButton,
+                      bShowDescription: _.bShowDescriptionInHover,
+                      children: _,
+                    }),
+                Boolean(_) &&
+                  (0, _.jsx)(_.Fragment, {
+                    children: _,
+                  }),
+              ],
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                strExtraParams: _.strExtraParams,
+                parentID: _,
+                parentStoreItemDefaultInfo: _,
+                childAppType: _.type,
+                bPreferDemoStorePage: Boolean(_),
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            strExtraParams: _,
+            parentID: __webpack_require__,
+            parentStoreItemDefaultInfo: _,
+            childAppType: _,
+            bPreferDemoStorePage: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          { data: _ } = (0, _._)(__webpack_require__);
+        return _
+          ? (0, _.jsx)(_._, {
+              className: _().CapsuleParentInfo,
+              ...(0, _._)(_, _, _, _, _),
+              children: (0, _.jsxs)(_._, {
+                appid: _.appid,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().ParentType,
+                    children: (0, _._)(
+                      11 == _
+                        ? "#SalePage_ParentApp_SoundTrack"
+                        : "#SalePage_ParentApp_DLC",
+                    ),
+                  }),
+                  (0, _.jsx)(_._, {
+                    _: __webpack_require__,
+                    strExtraParams: _,
+                    children: (0, _.jsx)("img", {
+                      loading: "lazy",
+                      className: _.AppCapsuleImage,
+                      alt: _.name || "",
+                      src: (0, _._)(_, "small_capsule"),
+                      width: 231,
+                      height: 87,
+                    }),
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            _: _,
+            bHideStatusBanners: __webpack_require__,
+            strExtraParams: _,
+            index: _,
+            imageType: _,
+            bHasParentAppToDisplay: _,
+            bIsHovered: _,
+            strDoubleCapsuleMessage: _,
+            bPreferDemoStorePage: _,
+            bShowEarlyAccessBanner: _,
+            bPreferAssetWithoutOverride: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(
+          (0, _._)(`${(0, _._)(_, _)}${_ ? `?${_}` : ""}`, _, _),
+        );
+        let _;
+        const _ = !!_;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_().TwoWidthCtn]: _,
+              }),
+              children: [
+                (0, _.jsxs)(_._, {
+                  href: _ ? void 0 : _,
+                  style: {
+                    display: "block",
+                    cursor: "pointer",
+                  },
+                  className: (0, _._)({
+                    [_().TwoWidthCapsule]: _,
+                  }),
+                  preferredFocus: _,
+                  onClick: _,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      appids: _,
+                      hide_status_banners: __webpack_require__,
+                      show_early_access: _.bShowEarlyAccessBanner,
+                    }),
+                    "none" != _ &&
+                      (0, _.jsx)(_._, {
+                        imageType: _,
+                        _: _,
+                        bPreferAssetWithoutOverride: _,
+                      }),
+                    (0, _.jsx)(_._, {
+                      _: _,
+                    }),
+                    (0, _.jsx)(_._, {
+                      _: _,
+                      active: _,
+                      bIsHoverMode: !0,
+                    }),
+                  ],
+                }),
+                _ &&
+                  (0, _.jsx)(_, {
+                    _: _,
+                    strDoubleCapsuleMessage: _,
+                    index: _,
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
+            strDoubleCapsuleMessage: __webpack_require__,
+            index: _,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().TwoWidthSideInfo, "TwoWidthSideInfo"),
+          children: [
+            (0, _.jsx)("div", {
+              className: _().Reason,
+              children: __webpack_require__,
+            }),
+            (0, _.jsx)("div", {
+              className: _().StoreSaleItemRelease,
+              children: (0, _.jsx)("span", {
+                children: _ ? (0, _._)(_) : "",
+              }),
+            }),
+            (0, _.jsx)(_._, {
+              bHideTitle: !0,
+              rgTagIDs: _?.map((_) => _.tagid) || [],
+              instanceNum: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            _: _,
+            bHidePriceIfOwned: __webpack_require__,
+            bHideStatusBanners: _,
+            bUseSubscriptionLayout: _,
+            elElementToAppendToHover: _,
+            bHidePrice: _,
+            bHidePlatforms: _,
+            creatorAccountID: _,
+            bIsHovered: _,
+            onlyOneDiscountPct: _,
+            strDoubleCapsuleMessage: _,
+          } = _,
+          { data: _ } = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = _ && !_;
+        if (_ && _ && 0 == _.item_type && _.appid)
+          return (0, _.jsx)(_._, {
+            appid: _.appid,
+            bIsMuted: _,
+          });
+        if (_) return null;
+        const _ = Boolean(_ && __webpack_require__),
+          _ = Boolean(_);
+        return (0, _.jsx)(_, {
+          _: _,
+          bShowAsMuted: _,
+          bHidePrice: _,
+          bShowInLibraryInsteadOfPrice: _,
+          bHidePlatforms: _,
+          creatorAccountID: _,
+          bShowName: _.bShowName,
+          onlyOneDiscountPct: _,
+          bShowWishlistButton: Boolean(_),
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsx)(_, {
+          appid: _,
+          bIsFree: Boolean(_?.is_free),
+          bIsComingSoon: Boolean(_?.is_coming_soon),
+          bTextMode: _,
+          className: __webpack_require__,
+        });
+      }
+      function _(_) {
+        const [_, __webpack_require__] = _.useState(!1),
+          _ = (0, _._)(),
+          {
+            appid: _,
+            bIsFree: _,
+            bIsComingSoon: _,
+            className: _,
+            bTextMode: _,
+          } = _,
+          _ = (0, _._)(_),
+          { bIsOwned: _ } = (0, _._)(_),
+          _ = (0, _._)(_),
+          { mutateAsync: _ } = (0, _._)(_, !_, (0, _._)(_)),
+          { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)();
+        if (_ || (!_ && _))
+          return _
+            ? (0, _.jsx)(_, {
+                possibleDemoAppID: _,
+              })
+            : null;
+        let _ = null;
+        return (
+          _ && !_
+            ? (_ = (0, _.jsx)(_._, {
+                size: 18,
+              }))
+            : _
+              ? _ && (_ = _ ? (0, _._)("#OnWishlist") : (0, _.jsx)(_.qnF, {}))
+              : (_ = _
+                  ? (0, _._)("#wishlist_add_to_wishlist")
+                  : (0, _.jsx)(_.T4m, {})),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)(_._, {
+                toolTipContent: (0, _._)("#AddToWishlist_ttip"),
+                children: (0, _.jsx)("div", {
+                  className: (0, _._)(_().WishList, _),
+                  onClick: async () => {
+                    _._.logged_in
+                      ? _ ||
+                        (__webpack_require__(!0),
+                        await _(),
+                        __webpack_require__(!1))
+                      : _();
+                  },
+                  children: _,
+                }),
+              }),
+              _,
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _
+          ? (1 != _.type && 12 != _.type) || !_.related_items?.parent_appid
+            ? null
+            : (0, _.jsx)(_, {
+                parentAppID: _.related_items?.parent_appid,
+                className: __webpack_require__,
+              })
+          : null;
+      }
+      function _(_) {
+        const { parentAppID: _, className: __webpack_require__ } = _,
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _ && _
+          ? (0, _.jsx)(_, {
+              appid: _,
+              bIsComingSoon: Boolean(_.is_coming_soon),
+              bIsFree: Boolean(_.is_free),
+              className: __webpack_require__,
+            })
+          : null;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            accountID: _,
+            bHideWhenNotAvailable: __webpack_require__,
+            bHideName: _,
+            bLink: _ = !0,
+          } = _,
+          [_] = (0, _._)(_),
+          _ = (0, _._)(_),
+          _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
+          _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
+          _ = _ ? "a" : "span";
+        return (0, _.jsx)(_.Fragment, {
+          children: Boolean(!_)
+            ? (0, _.jsx)(_.Fragment, {
+                children:
+                  Boolean(!__webpack_require__) &&
+                  (0, _.jsx)("span", {
+                    children: _,
+                  }),
+              })
+            : (0, _.jsxs)(_, {
+                href: _ ? _ : void 0,
+                children: [
+                  (0, _.jsx)("img", {
+                    className: _.SmallAvatar,
+                    src: _.avatar_url,
+                    "data-miniprofile": "s" + _.ConvertTo64BitString(),
+                  }),
+                  Boolean(!_) &&
+                    (0, _.jsx)("span", {
+                      children: _ ? `${_} (${_.persona_name})` : _.persona_name,
+                    }),
+                ],
+              }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -107409,6 +110210,41 @@
             ],
           });
         };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, ...__webpack_require__ } = _,
+          _ = (0, _._)(),
+          _ = _.useMemo(
+            () => ({
+              ..._._.GetDefaultParams(),
+              ..._,
+              ...__webpack_require__,
+            }),
+            [
+              _,
+              __webpack_require__.domain,
+              __webpack_require__.controller,
+              __webpack_require__.method,
+              __webpack_require__.submethod,
+              __webpack_require__.feature,
+              __webpack_require__.depth,
+            ],
+          );
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: _,
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

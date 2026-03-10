@@ -38,18 +38,8 @@
               (b.sm_m = {
                 proto: b,
                 fields: {
-                  language: {
-                    n: 1,
-                    q: !0,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
+                  language: { n: 1, br: p.qM.readString, bw: p.gp.writeString },
+                  type: { n: 2, br: p.qM.readString, bw: p.gp.writeString },
                 },
               }),
             b.sm_m
@@ -105,18 +95,8 @@
               (T.sm_m = {
                 proto: T,
                 fields: {
-                  language: {
-                    n: 1,
-                    q: !0,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
+                  language: { n: 1, br: p.qM.readString, bw: p.gp.writeString },
+                  type: { n: 2, br: p.qM.readString, bw: p.gp.writeString },
                 },
               }),
             T.sm_m
@@ -232,18 +212,8 @@
               (w.sm_m = {
                 proto: w,
                 fields: {
-                  language: {
-                    n: 1,
-                    q: !0,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
-                  type: {
-                    n: 2,
-                    q: !0,
-                    br: p.qM.readString,
-                    bw: p.gp.writeString,
-                  },
+                  language: { n: 1, br: p.qM.readString, bw: p.gp.writeString },
+                  type: { n: 2, br: p.qM.readString, bw: p.gp.writeString },
                 },
               }),
             w.sm_m
@@ -417,13 +387,11 @@
                 fields: {
                   gameid: {
                     n: 1,
-                    q: !0,
                     br: p.qM.readUint64String,
                     bw: p.gp.writeUint64String,
                   },
                   should_handle: {
                     n: 2,
-                    q: !0,
                     br: p.qM.readBool,
                     bw: p.gp.writeBool,
                   },

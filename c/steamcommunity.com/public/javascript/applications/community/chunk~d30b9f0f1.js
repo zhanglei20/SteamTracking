@@ -570,6 +570,45 @@
     },
     chunkid: (module) => {
       module.exports = {
+        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
+        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
+        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
+        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
+        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
+        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
+        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
+        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
+        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
+        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
+        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
+        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
+        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
+        Caps3: "ch0xp_kjApA24ePv-4mUf",
+        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
+        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
+        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
+        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
+        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
+        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
+        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
+        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
+        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
+        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
+        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
+        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
+        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
+        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
+        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
+        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
+        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
+        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
+        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
+        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
+        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         DiscoveryQueueWidgetCtn: "_3PAP1PfUymQrLEveRsxQxP",
         WidgetHeaderCtn: "_3i8xWeKjrdNgEjml1PQRuq",
         AppCarouselPosition: "_1DaxYFphX9KPH-YWeuNTvO",
@@ -702,6 +741,7 @@
       module.exports = {
         EventBannerCtn: "x7UKM0ooa97bLEC1DOAhd",
         EventBannerImg: "_2Rm2455wi6RIlGIhlKd6ja",
+        ListOfCreators: "GqfZD2s5l0_K21jh28djY",
       };
     },
     chunkid: (module) => {
@@ -727,45 +767,6 @@
       module.exports = {
         Dummy: "_3xTWQPntvW4ZC3wLrEh4Tk",
         Exhausted: "_3aOQ0Sjc2wuN64fXK8NrTX",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        GhostCtn: "_3Kh2xkNOxK9yAzjUL6Ivgx",
-        PlaceholderCap: "w8Jvjch8aFrIUAv0SH561",
-        GhostShine: "_2BHrUiVJgb5paKR9HDuFry",
-        PlaceholderBox: "_3xK5GjRYJTY1N5bjbocIm9",
-        ShineCtn: "cI9gcyxQOApga-GXz7_V4",
-        PlaceholderVideo: "_26iPLXluGpPw4W-coLs883",
-        CapsuleRow3: "_3K3QSflZnf6fPmoBKqoGjc",
-        CapsuleRow4: "_1gEPGVsJ0bb_BL9C4YvFNv",
-        CapsuleRowSuperCapsule: "_3zJewh51IljAQRz-6OMdOB",
-        ItemBrowserCapsule: "_2fHvxv3mZQin5_2wB2xfmg",
-        CapsuleRow23: "_3Zk9eQFgRurzIIkTvIMxHW",
-        CapRow: "dGk0hxulznq7MwRweW94h",
-        Caps2: "_1uECvRdcT_yaRni_AEsObF",
-        Caps3: "QU4kidgDKJx_jDfEquNmT",
-        CapsuleRow234: "_2V6zSuL6-efjUwNCdSspJk",
-        Caps4: "_3xqTH8e1tUBIai3kdvgahn",
-        SpotlightsRow: "_3_FBxHpnwok2YRFmtASM5I",
-        DailyDealsColumn: "_1Rudow4oFWhnDbqnzJ0nuM",
-        EventRow: "_1jEY56Mb_K-eNOlOZ2ayy0",
-        PlaceholderGroupImage: "_1RRbToD4zek6vvdq8pajSX",
-        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
-        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
-        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
-        PlaceholderButtons: "aHFZOytk7I6xyF53cX0Iz",
-        TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
-        VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
-        ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
-        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
-        ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
-        CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
-        ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
-        MainCapRow: "_4USkr2F0D76zPrDAKe8tZ",
-        PlaceholderRelease: "_3kqq8V4VYQWX0MTcaWruTa",
-        PlaceholderReviews: "_1TQDb8Ui8AuVqTFeIQHC8J",
-        PlaceholderTags: "_2I6t8VQXDbATmaOzp9jRzk",
       };
     },
     chunkid: (module) => {
@@ -4645,7 +4646,92 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      const _ = {
+        async OverlayClanImage(_, _, _, _, _, _) {
+          let _,
+            _ = null,
+            _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              (_ =
+                "Load fail on url " +
+                _ +
+                " with error: " +
+                (0, _._)(_).strErrorMsg),
+                console.error(_);
+            }),
+            (_.onload = () => {
+              let _ = new Image();
+              (_.crossOrigin = "anonymous"),
+                (_.onerror = (_) => {
+                  (_ =
+                    "Load fail on url " +
+                    _ +
+                    " with error: " +
+                    (0, _._)(_).strErrorMsg),
+                    console.error(_);
+                }),
+                (_.onload = () => {
+                  try {
+                    let _ = document.createElement("canvas"),
+                      _ = _.getContext("2d");
+                    (_.width = _),
+                      (_.height = _),
+                      null == _ || __webpack_require__.drawImage(_, 0, 0, _, _);
+                    let _ = (_ - _.width) / 2,
+                      _ = (_ - _.height) / 2;
+                    null == _ || __webpack_require__.drawImage(_, _, _),
+                      _.toBlob((_) => (_ = _), "image/jpeg");
+                  } catch (_) {
+                    _ =
+                      "Failed during image processing for " + _ + " with " + _;
+                  }
+                }),
+                (_.src = _);
+            }),
+            (_.src = _);
+          let _ = 0;
+          for (; void 0 === _ && _ < 100; ) await (0, _._)(100), (_ += 1);
+          if (
+            (_ >= 100 &&
+              void 0 === _ &&
+              (_ = "AsyncOverlay - We timed out processing images"),
+            _)
+          )
+            throw (
+              (console.log(_),
+              {
+                success: 2,
+                err_msg: _,
+              })
+            );
+          const _ = new _._(_, void 0),
+            _ = new _._(
+              _,
+              _,
+              -1,
+              void 0,
+              "",
+              {
+                width: _,
+                height: _,
+              },
+              void 0,
+              void 0,
+            ),
+            _ = await _.UploadSingleImage(_, _, -1, void 0);
+          return _.bSuccess && _.result
+            ? _.result.image_hash +
+                _._.GetExtensionString({
+                  file_type: _.fileType,
+                })
+            : void 0;
+        },
+      };
+      var _ = __webpack_require__("chunkid");
       class _ extends _._ {
         constructor(_ = !1) {
           super(_),
@@ -4763,7 +4849,7 @@
                       _._.COMMUNITY_BASE_URL +
                       "public/images/events/media_play_icon.png";
                   try {
-                    let _ = await _._.OverlayClanImage(_, _, _, _, 740, 555);
+                    let _ = await _.OverlayClanImage(_, _, _, _, 740, 555);
                     _.SetVideoHashAndExt(_);
                   } catch (_) {
                     console.error(
@@ -19643,6 +19729,176 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
+      function _(_) {
+        const {
+          uniqueID: _,
+          eTitleDisplaySize: __webpack_require__,
+          fnUpdateTitleDisplaySize: _,
+          bForceDisplay: _,
+          bSupportFullWidth: _,
+        } = _;
+        return __webpack_require__ || _
+          ? (0, _.jsxs)(_.Fragment, {
+              children: [
+                Boolean(_) &&
+                  (0, _.jsx)(_._, {
+                    onClick: (_) => {
+                      var _;
+                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                        void 0 === _ ||
+                        _.focus(),
+                        _._.k_HeaderFullWidth == __webpack_require__
+                          ? _(void 0)
+                          : _(_._.k_HeaderFullWidth);
+                    },
+                    toggled: __webpack_require__ == _._.k_HeaderFullWidth,
+                    tooltip: (0, _._)("#FormattingToolbar_FullWidth"),
+                    children: (0, _.jsx)(_.ZzC, {}),
+                  }),
+                _.map((_) =>
+                  (0, _.jsx)(
+                    _._,
+                    {
+                      tooltip: _(_),
+                      onClick: (_) => {
+                        var _;
+                        null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                          void 0 === _ ||
+                          _.focus(),
+                          _(_ == __webpack_require__ ? void 0 : _);
+                      },
+                      toggled: _ == __webpack_require__,
+                      children: (0, _._)("#Template_Section_Header_" + _),
+                    },
+                    "title_" + _ + "_" + _,
+                  ),
+                ),
+                (0, _.jsx)(_._, {}),
+              ],
+            })
+          : null;
+      }
+      const _ = [_._.k_Left, _._.k_Center, _._.k_Right],
+        _ = [_._.k_Top, _._.k_Center, _._.k_Bottom];
+      function _(_) {
+        switch (_) {
+          case _._.k_Header1:
+            return (0, _._)("#Template_Section_Header_Large_Tooltip");
+          case _._.k_Header2:
+            return (0, _._)("#Template_Section_Header_Medium_Tooltip");
+          case _._.k_Header3:
+            return (0, _._)("#Template_Section_Header_Small_Tooltip");
+          default:
+            return;
+        }
+      }
+      function _(_) {
+        const {
+          uniqueID: _,
+          eAlignment: __webpack_require__,
+          fnUpdateAlignment: _,
+          bVertical: _,
+          bText: _,
+        } = _;
+        return __webpack_require__
+          ? (0, _.jsx)(_.Fragment, {
+              children: (_ ? _ : _).map((_) =>
+                (0, _.jsx)(
+                  _._,
+                  {
+                    toolTipContent: _(_, _, _),
+                    direction: "bottom",
+                    children: (0, _.jsx)("div", {
+                      children: (0, _.jsx)(_._, {
+                        onClick: (_) => {
+                          var _;
+                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
+                            void 0 === _ ||
+                            __webpack_require__.focus(),
+                            _(_);
+                        },
+                        toggled: _ == __webpack_require__,
+                        children: (0, _.jsx)(_, {
+                          alignment: _,
+                          bVertical: _,
+                          bText: _,
+                        }),
+                      }),
+                    }),
+                  },
+                  _ + _,
+                ),
+              ),
+            })
+          : null;
+      }
+      function _(_) {
+        const { alignment: _, bVertical: __webpack_require__, bText: _ } = _;
+        if (__webpack_require__)
+          switch (_) {
+            case _._.k_Top:
+              return (0, _.jsx)(_.VBK, {});
+            case _._.k_Center:
+              return (0, _.jsx)(_.lGP, {});
+            case _._.k_Bottom:
+            default:
+              return (0, _.jsx)(_.vbm, {});
+          }
+        else
+          switch (_) {
+            case _._.k_Left:
+              return _ ? (0, _.jsx)(_.K6w, {}) : (0, _.jsx)(_.p71, {});
+            case _._.k_Center:
+              return _ ? (0, _.jsx)(_.q8c, {}) : (0, _.jsx)(_.vsW, {});
+            case _._.k_Right:
+            default:
+              return _ ? (0, _.jsx)(_.dWO, {}) : (0, _.jsx)(_.o5t, {});
+          }
+      }
+      function _(_, _, _) {
+        if (_)
+          switch (_) {
+            case _._.k_Top:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Vertical_Top",
+              );
+            case _._.k_Center:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Vertical_Center",
+              );
+            case _._.k_Bottom:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Vertical_Bottom",
+              );
+          }
+        else if (_)
+          switch (_) {
+            case _._.k_Left:
+              return (0, _._)("#Template_Section_Align_Text_Left");
+            case _._.k_Center:
+              return (0, _._)("#Template_Section_Align_Text_Center");
+            case _._.k_Right:
+              return (0, _._)("#Template_Section_Align_Text_Right");
+          }
+        else
+          switch (_) {
+            case _._.k_Left:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Horizontal_Left",
+              );
+            case _._.k_Center:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Horizontal_Center",
+              );
+            case _._.k_Right:
+              return (0, _._)(
+                "#Template_Section_MediaContent_Align_Horizontal_Right",
+              );
+          }
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -19791,7 +20047,6 @@
         );
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -20070,175 +20325,6 @@
         });
       }
       var _ = __webpack_require__("chunkid");
-      const _ = [_._.k_Header1, _._.k_Header2, _._.k_Header3];
-      function _(_) {
-        const {
-          uniqueID: _,
-          eTitleDisplaySize: __webpack_require__,
-          fnUpdateTitleDisplaySize: _,
-          bForceDisplay: _,
-          bSupportFullWidth: _,
-        } = _;
-        return __webpack_require__ || _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                Boolean(_) &&
-                  (0, _.jsx)(_._, {
-                    onClick: (_) => {
-                      var _;
-                      null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                        void 0 === _ ||
-                        _.focus(),
-                        _._.k_HeaderFullWidth == __webpack_require__
-                          ? _(void 0)
-                          : _(_._.k_HeaderFullWidth);
-                    },
-                    toggled: __webpack_require__ == _._.k_HeaderFullWidth,
-                    tooltip: (0, _._)("#FormattingToolbar_FullWidth"),
-                    children: (0, _.jsx)(_.ZzC, {}),
-                  }),
-                _.map((_) =>
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      tooltip: _(_),
-                      onClick: (_) => {
-                        var _;
-                        null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                          void 0 === _ ||
-                          _.focus(),
-                          _(_ == __webpack_require__ ? void 0 : _);
-                      },
-                      toggled: _ == __webpack_require__,
-                      children: (0, _._)("#Template_Section_Header_" + _),
-                    },
-                    "title_" + _ + "_" + _,
-                  ),
-                ),
-                (0, _.jsx)(_._, {}),
-              ],
-            })
-          : null;
-      }
-      const _ = [_._.k_Left, _._.k_Center, _._.k_Right],
-        _ = [_._.k_Top, _._.k_Center, _._.k_Bottom];
-      function _(_) {
-        switch (_) {
-          case _._.k_Header1:
-            return (0, _._)("#Template_Section_Header_Large_Tooltip");
-          case _._.k_Header2:
-            return (0, _._)("#Template_Section_Header_Medium_Tooltip");
-          case _._.k_Header3:
-            return (0, _._)("#Template_Section_Header_Small_Tooltip");
-          default:
-            return;
-        }
-      }
-      function _(_) {
-        const {
-          uniqueID: _,
-          eAlignment: __webpack_require__,
-          fnUpdateAlignment: _,
-          bVertical: _,
-          bText: _,
-        } = _;
-        return __webpack_require__
-          ? (0, _.jsx)(_.Fragment, {
-              children: (_ ? _ : _).map((_) =>
-                (0, _.jsx)(
-                  _._,
-                  {
-                    toolTipContent: _(_, _, _),
-                    direction: "bottom",
-                    children: (0, _.jsx)("div", {
-                      children: (0, _.jsx)(_._, {
-                        onClick: (_) => {
-                          var _;
-                          null === (_ = null == _ ? void 0 : _.currentTarget) ||
-                            void 0 === _ ||
-                            __webpack_require__.focus(),
-                            _(_);
-                        },
-                        toggled: _ == __webpack_require__,
-                        children: (0, _.jsx)(_, {
-                          alignment: _,
-                          bVertical: _,
-                          bText: _,
-                        }),
-                      }),
-                    }),
-                  },
-                  _ + _,
-                ),
-              ),
-            })
-          : null;
-      }
-      function _(_) {
-        const { alignment: _, bVertical: __webpack_require__, bText: _ } = _;
-        if (__webpack_require__)
-          switch (_) {
-            case _._.k_Top:
-              return (0, _.jsx)(_.VBK, {});
-            case _._.k_Center:
-              return (0, _.jsx)(_.lGP, {});
-            case _._.k_Bottom:
-            default:
-              return (0, _.jsx)(_.vbm, {});
-          }
-        else
-          switch (_) {
-            case _._.k_Left:
-              return _ ? (0, _.jsx)(_.K6w, {}) : (0, _.jsx)(_.p71, {});
-            case _._.k_Center:
-              return _ ? (0, _.jsx)(_.q8c, {}) : (0, _.jsx)(_.vsW, {});
-            case _._.k_Right:
-            default:
-              return _ ? (0, _.jsx)(_.dWO, {}) : (0, _.jsx)(_.o5t, {});
-          }
-      }
-      function _(_, _, _) {
-        if (_)
-          switch (_) {
-            case _._.k_Top:
-              return (0, _._)(
-                "#Template_Section_MediaContent_Align_Vertical_Top",
-              );
-            case _._.k_Center:
-              return (0, _._)(
-                "#Template_Section_MediaContent_Align_Vertical_Center",
-              );
-            case _._.k_Bottom:
-              return (0, _._)(
-                "#Template_Section_MediaContent_Align_Vertical_Bottom",
-              );
-          }
-        else if (_)
-          switch (_) {
-            case _._.k_Left:
-              return (0, _._)("#Template_Section_Align_Text_Left");
-            case _._.k_Center:
-              return (0, _._)("#Template_Section_Align_Text_Center");
-            case _._.k_Right:
-              return (0, _._)("#Template_Section_Align_Text_Right");
-          }
-        else
-          switch (_) {
-            case _._.k_Left:
-              return (0, _._)(
-                "#Template_Section_MediaContent_Align_Horizontal_Left",
-              );
-            case _._.k_Center:
-              return (0, _._)(
-                "#Template_Section_MediaContent_Align_Horizontal_Center",
-              );
-            case _._.k_Right:
-              return (0, _._)(
-                "#Template_Section_MediaContent_Align_Horizontal_Right",
-              );
-          }
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { saleSection: _, bTitleImageMode: __webpack_require__ } = _;
         return (
@@ -20261,20 +20347,11 @@
         var _;
         const { saleSection: __webpack_require__, editModel: _ } = _,
           [_, _] = (0, _.useState)(
-            !(null === (_ = __webpack_require__.localized_title) || void 0 === _
+            !(null === (_ = __webpack_require__.localized_label) || void 0 === _
               ? void 0
               : _.length),
-          ),
-          _ = (0, _._)(),
-          [_] = (0, _._)(() => {
-            var _;
-            return [
-              (null === (_ = __webpack_require__.localized_subtitle) ||
-              void 0 === _
-                ? void 0
-                : _[_]) || "",
-            ];
-          });
+          );
+        (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("p", {
@@ -20311,83 +20388,50 @@
               : (0, _.jsx)(_, {
                   ..._,
                 }),
-            (0, _.jsx)("br", {}),
-            (0, _.jsx)(_._, {
-              type: "text",
-              label: (0, _._)("#Sale_TitleHeader_short"),
-              tooltip: (0, _._)("#Sale_TitleHeader_short_ttip"),
-              value: _,
-              onChange: (_) => {
-                __webpack_require__.localized_subtitle ||
-                  (__webpack_require__.localized_subtitle = (0, _._)(
-                    [],
-                    31,
-                    null,
-                  )),
-                  _.currentTarget.value !=
-                    __webpack_require__.localized_subtitle[_] &&
-                    ((__webpack_require__.localized_subtitle[_] =
-                      _.currentTarget.value),
-                    _.SetDirty(_._.jsondata_sales));
-              },
-            }),
           ],
         });
       }
       function _(_) {
         const { saleSection: _, editModel: __webpack_require__ } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _._)(() => [
-            _.title_text_alignment || _._.k_Left,
-            _.title_display_size,
-          ]);
-        return (0, _.jsx)(_, {
-          language: _,
-          fnGetContent: () => {
-            var _;
-            return (
-              (null === (_ = _.localized_title) || void 0 === _
+          [_, _] = (0, _._)(() => {
+            var _, _;
+            return [
+              (null === (_ = _.localized_label) || void 0 === _
                 ? void 0
-                : _[_]) || ""
-            );
-          },
-          eTextAlignment: _,
-          eTitleDisplaySize: _,
-          bSingleLine: !0,
-          nTitleCharLimit: 120,
-          fnUpdateContent: (_) => {
-            var _;
-            _.localized_title || (_.localized_title = (0, _._)([], 31, null)),
-              (null === (_ = _.localized_title) || void 0 === _
+                : _[_]) || "",
+              (null === (_ = _.localized_subtitle) || void 0 === _
                 ? void 0
-                : _[_]) != _ &&
-                ((_.localized_title[_] = _),
-                __webpack_require__.SetDirty(_._.jsondata_sales));
-          },
-          rctToolbarControls: (0, _.jsxs)(_.Fragment, {
-            children: [
-              (0, _.jsx)(_, {
-                uniqueID: "dsec_header_" + _.unique_id,
-                eTitleDisplaySize: _,
-                fnUpdateTitleDisplaySize: (_) => {
-                  _ != _.title_display_size &&
-                    ((_.title_display_size = _),
+                : _[_]) || "",
+            ];
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              type: "text",
+              label: (0, _._)("#Sale_TitleHeader_title"),
+              value: _,
+              onChange: (_) => {
+                _.localized_label ||
+                  (_.localized_label = (0, _._)([], 31, null)),
+                  _.currentTarget.value != _.localized_label[_] &&
+                    ((_.localized_label[_] = _.currentTarget.value),
                     __webpack_require__.SetDirty(_._.jsondata_sales));
-                },
-                bForceDisplay: !0,
-              }),
-              (0, _.jsx)(_, {
-                uniqueID: "desc_horiz_" + +_.unique_id,
-                eAlignment: _,
-                fnUpdateAlignment: (_) => {
-                  _.title_text_alignment != _ &&
-                    ((_.title_text_alignment = _),
+              },
+            }),
+            (0, _.jsx)(_._, {
+              type: "text",
+              label: (0, _._)("#Sale_TitleHeader_subtitle"),
+              value: _,
+              onChange: (_) => {
+                _.localized_subtitle ||
+                  (_.localized_subtitle = (0, _._)([], 31, null)),
+                  _.currentTarget.value != _.localized_subtitle[_] &&
+                    ((_.localized_subtitle[_] = _.currentTarget.value),
                     __webpack_require__.SetDirty(_._.jsondata_sales));
-                },
-                bText: !0,
-              }),
-            ],
-          }),
+              },
+            }),
+          ],
         });
       }
       function _(_) {
@@ -28893,7 +28937,7 @@
           [_] = (0, _._)(() => [_.GetEventModel().clanSteamID]),
           { data: _ } = (0, _._)((0, _._)(_.GetAccountID()));
         let _ = [];
-        3 == (0, _._)(null != _ ? _ : [], _._) &&
+        1 != (0, _._)(null != _ ? _ : [], _._) &&
           _ &&
           (_ = _._(_.map((_) => _._.Get().GetApp(_)))
             .filter((_) => {
@@ -30598,16 +30642,19 @@
             await _._.Get().QueueMultipleAppRequests(_, {
               include_basic_info: !0,
             });
-            const _ = _.map((_) => {
-              const _ = _._.Get().GetApp(_);
-              return {
-                capsule: {
-                  _: _,
-                  type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
-                },
-                tags: [],
-              };
-            });
+            const _ = _._(
+              _.map((_) => {
+                const _ = _._.Get().GetApp(_);
+                if (!_) return null;
+                return {
+                  capsule: {
+                    _: _,
+                    type: (0, _._)(_.GetStoreItemType(), _.GetAppType()),
+                  },
+                  tags: [],
+                };
+              }),
+            );
             return (
               await this.props.fnUpdateDefaultTagsForItems(
                 this.props.editModel,
@@ -32234,6 +32281,472 @@
         return null === (_ = _.find((_) => _.data === _)) || void 0 === _
           ? void 0
           : _.warning;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
+      }
+      function _(_, _, _) {
+        if (_.disable_background && !_)
+          return {
+            paddingLeft: 0,
+            paddingRight: 0,
+          };
+        let _ = "";
+        if (_.background_image) {
+          _ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`;
+        }
+        return _.background_gradient_bottom ||
+          _.background_gradient_top ||
+          _.length > 0 ||
+          _.background_repeat ||
+          _.border_color ||
+          _.border_width
+          ? {
+              backgroundImage:
+                _(_.background_gradient_bottom, _.background_gradient_top) + _,
+              backgroundRepeat: _.background_repeat,
+              backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
+              outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
+              outlineColor: _.border_color,
+              outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
+            }
+          : {};
+      }
+      function _(_, _) {
+        return _
+          ? _.disable_background && !_
+            ? {
+                paddingLeft: 0,
+                paddingRight: 0,
+              }
+            : _.background_gradient_bottom ||
+                _.background_gradient_top ||
+                _.background_repeat ||
+                _.border_color ||
+                _.border_width
+              ? {
+                  background: _(
+                    _.background_gradient_bottom,
+                    _.background_gradient_top,
+                  ),
+                  backgroundRepeat: _.background_repeat,
+                  outlineStyle:
+                    _.border_color && _.border_width ? "solid" : void 0,
+                  outlineColor: _.border_color,
+                  outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
+                }
+              : {}
+          : {};
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+          capsules_per_row: _,
+          is_generic: __webpack_require__,
+          is_generic_trailer: _,
+          is_event_dash_row: _,
+          is_trailer_carousel: _,
+          is_spotlights: _,
+          is_item_browser: _,
+          is_maincap: _,
+          is_expanded_maincap: _,
+          is_expanded_display: _,
+          show_auto_advance_bar: _,
+        } = _;
+        if (!_) return null;
+        if (__webpack_require__)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsx)("div", {
+              className: _().PlaceholderBox,
+              children: (0, _.jsx)("div", {
+                className: _().ShineCtn,
+              }),
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsx)("div", {
+              className: _().PlaceholderVideo,
+              children: (0, _.jsx)("div", {
+                className: _().ShineCtn,
+              }),
+            }),
+          });
+        if (_)
+          return (0, _.jsxs)("div", {
+            className: _().GhostCtn,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _().TrailerCarouselRow,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().VideoPlaceholder,
+                    children: (0, _.jsx)("div", {
+                      className: _().ShineCtn,
+                    }),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().ItemDescPlaceholer,
+                    children: (0, _.jsx)("div", {
+                      className: _().ShineCtn,
+                    }),
+                  }),
+                ],
+              }),
+              _ &&
+                (0, _.jsx)("div", {
+                  className: _().AutoAdvanceBar,
+                  children: (0, _.jsx)("div", {
+                    className: _().ShineCtn,
+                  }),
+                }),
+            ],
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().EventRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().PlaceholderGroupImage,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().DetailsPlaceholder),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderSubtitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderButtons,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().SpotlightsRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsxs)("div", {
+                  className: _().DailyDealsColumn,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().PlaceholderCap,
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: (0, _._)({
+                [_().MainCapRow]: !0,
+                [_().MainCapRowExpanded]: _,
+              }),
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().PlaceholderCap,
+                }),
+                (0, _.jsxs)("div", {
+                  className: (0, _._)(_().DetailsPlaceholder),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderSubtitle,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderRelease,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderReviews,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().PlaceholderTags,
+                        _().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (_)
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: (0, _.jsxs)("div", {
+              className: _().ExpandedItemRow,
+              children: [
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().CapsulePlaceholder,
+                    _().PlaceholderCap,
+                  ),
+                }),
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().ItemDefPlaceholder,
+                    _().PlaceholderCap,
+                  ),
+                }),
+              ],
+            }),
+          });
+        if (_) {
+          const _ = [];
+          for (let _ = 0; _ < _[0]; _++)
+            _.push(
+              (0, _.jsx)(
+                "div",
+                {
+                  className: _().ItemBrowserCapsule,
+                  children: (0, _.jsx)("div", {
+                    className: _().PlaceholderCap,
+                  }),
+                },
+                "item_browse_ghost_" + _,
+              ),
+            );
+          return (0, _.jsx)("div", {
+            className: _().GhostCtn,
+            children: _,
+          });
+        }
+        return 1 == (null == _ ? void 0 : _.length)
+          ? 1 == _[0]
+            ? (0, _.jsx)("div", {
+                className: _().GhostCtn,
+                children: (0, _.jsx)("div", {
+                  className: _().CapsuleRowSuperCapsule,
+                  children: (0, _.jsx)("div", {
+                    className: _().PlaceholderCap,
+                  }),
+                }),
+              })
+            : 4 == _[0]
+              ? (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow4,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ],
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow3,
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: _().PlaceholderCap,
+                      }),
+                    ],
+                  }),
+                })
+          : 2 == (null == _ ? void 0 : _.length)
+            ? 3 == _[0] && 3 == _[1]
+              ? (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow23,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+              : (0, _.jsx)("div", {
+                  className: _().GhostCtn,
+                  children: (0, _.jsxs)("div", {
+                    className: _().CapsuleRow23,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps2),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(_().CapRow, _().Caps3),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().PlaceholderCap,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+            : (0, _.jsx)("div", {
+                className: _().GhostCtn,
+                children: (0, _.jsxs)("div", {
+                  className: _().CapsuleRow234,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().CapRow, _().Caps2),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().CapRow, _().Caps3),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: (0, _._)(_().CapRow, _().Caps4),
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().PlaceholderCap,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -38336,6 +38849,8 @@
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: !Boolean(_),
               ItemCount_4: 4 == _[0],
+              [_.ListOfCreators]:
+                _ && "creator_list_of_lists" == _.section.section_type,
             }),
             useTestScrollbar: !0,
             bLazyRenderChildren: !0,
@@ -39668,407 +40183,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-          capsules_per_row: _,
-          is_generic: __webpack_require__,
-          is_generic_trailer: _,
-          is_event_dash_row: _,
-          is_trailer_carousel: _,
-          is_spotlights: _,
-          is_item_browser: _,
-          is_maincap: _,
-          is_expanded_maincap: _,
-          is_expanded_display: _,
-          show_auto_advance_bar: _,
-        } = _;
-        if (!_) return null;
-        if (__webpack_require__)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderBox,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsx)("div", {
-              className: _().PlaceholderVideo,
-              children: (0, _.jsx)("div", {
-                className: _().ShineCtn,
-              }),
-            }),
-          });
-        if (_)
-          return (0, _.jsxs)("div", {
-            className: _().GhostCtn,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _().TrailerCarouselRow,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().VideoPlaceholder,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().ItemDescPlaceholer,
-                    children: (0, _.jsx)("div", {
-                      className: _().ShineCtn,
-                    }),
-                  }),
-                ],
-              }),
-              _ &&
-                (0, _.jsx)("div", {
-                  className: _().AutoAdvanceBar,
-                  children: (0, _.jsx)("div", {
-                    className: _().ShineCtn,
-                  }),
-                }),
-            ],
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().EventRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().PlaceholderGroupImage,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderButtons,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().SpotlightsRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: _().DailyDealsColumn,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: _().PlaceholderCap,
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: (0, _._)({
-                [_().MainCapRow]: !0,
-                [_().MainCapRowExpanded]: _,
-              }),
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().PlaceholderCap,
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().DetailsPlaceholder),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderSubtitle,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderRelease,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderReviews,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().PlaceholderTags,
-                        _().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: (0, _.jsxs)("div", {
-              className: _().ExpandedItemRow,
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().CapsulePlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().ItemDefPlaceholder,
-                    _().PlaceholderCap,
-                  ),
-                }),
-              ],
-            }),
-          });
-        if (_) {
-          const _ = [];
-          for (let _ = 0; _ < _[0]; _++)
-            _.push(
-              (0, _.jsx)(
-                "div",
-                {
-                  className: _().ItemBrowserCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                },
-                "item_browse_ghost_" + _,
-              ),
-            );
-          return (0, _.jsx)("div", {
-            className: _().GhostCtn,
-            children: _,
-          });
-        }
-        return 1 == (null == _ ? void 0 : _.length)
-          ? 1 == _[0]
-            ? (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsx)("div", {
-                  className: _().CapsuleRowSuperCapsule,
-                  children: (0, _.jsx)("div", {
-                    className: _().PlaceholderCap,
-                  }),
-                }),
-              })
-            : 4 == _[0]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow4,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow3,
-                    children: [
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().PlaceholderCap,
-                      }),
-                    ],
-                  }),
-                })
-          : 2 == (null == _ ? void 0 : _.length)
-            ? 3 == _[0] && 3 == _[1]
-              ? (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, _.jsx)("div", {
-                  className: _().GhostCtn,
-                  children: (0, _.jsxs)("div", {
-                    className: _().CapsuleRow23,
-                    children: [
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps2),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                      (0, _.jsxs)("div", {
-                        className: (0, _._)(_().CapRow, _().Caps3),
-                        children: [
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                          (0, _.jsx)("div", {
-                            className: _().PlaceholderCap,
-                          }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-            : (0, _.jsx)("div", {
-                className: _().GhostCtn,
-                children: (0, _.jsxs)("div", {
-                  className: _().CapsuleRow234,
-                  children: [
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps2),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps3),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                    (0, _.jsxs)("div", {
-                      className: (0, _._)(_().CapRow, _().Caps4),
-                      children: [
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                        (0, _.jsx)("div", {
-                          className: _().PlaceholderCap,
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -40585,7 +40699,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -41015,71 +41128,6 @@
             }),
           ],
         });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return `linear-gradient(0deg, ${_ || "transparent"} 0%, ${_ || "transparent"} 100%)`;
-      }
-      function _(_, _, _) {
-        if (_.disable_background && !_)
-          return {
-            paddingLeft: 0,
-            paddingRight: 0,
-          };
-        let _ = "";
-        if (_.background_image) {
-          _ += `,url(${_._.GenerateURLFromHashAndExt(_.clanSteamID, _.background_image)})`;
-        }
-        return _.background_gradient_bottom ||
-          _.background_gradient_top ||
-          _.length > 0 ||
-          _.background_repeat ||
-          _.border_color ||
-          _.border_width
-          ? {
-              backgroundImage:
-                _(_.background_gradient_bottom, _.background_gradient_top) + _,
-              backgroundRepeat: _.background_repeat,
-              backgroundSize: "coverBlur" == _.background_repeat ? "cover" : "",
-              outlineStyle: _.border_color && _.border_width ? "solid" : void 0,
-              outlineColor: _.border_color,
-              outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
-            }
-          : {};
-      }
-      function _(_, _) {
-        return _
-          ? _.disable_background && !_
-            ? {
-                paddingLeft: 0,
-                paddingRight: 0,
-              }
-            : _.background_gradient_bottom ||
-                _.background_gradient_top ||
-                _.background_repeat ||
-                _.border_color ||
-                _.border_width
-              ? {
-                  background: _(
-                    _.background_gradient_bottom,
-                    _.background_gradient_top,
-                  ),
-                  backgroundRepeat: _.background_repeat,
-                  outlineStyle:
-                    _.border_color && _.border_width ? "solid" : void 0,
-                  outlineColor: _.border_color,
-                  outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
-                }
-              : {}
-          : {};
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

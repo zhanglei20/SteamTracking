@@ -355,7 +355,7 @@
         s = t.n(n),
         r = t(78327),
         i = t(6379),
-        o = t(89128);
+        o = t(62641);
       class l extends i.ZQ {
         async DeleteOldAnnouncement(e, a) {
           let t = new URLSearchParams();

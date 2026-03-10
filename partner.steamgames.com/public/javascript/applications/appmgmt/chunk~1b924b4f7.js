@@ -69,6 +69,9 @@
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
       };
     },
+    91239: (e) => {
+      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
+    },
     31389: (e) => {
       e.exports = {
         PriceGuidelinesPicker: "_2skmsPR7jCBo5xHN2v_E6A",
@@ -85,11 +88,11 @@
     29903: (e, r, n) => {
       "use strict";
       n.d(r, {
-        mK: () => G,
-        Gy: () => z,
+        mK: () => B,
+        Gy: () => M,
         sh: () => R,
         T6: () => W,
-        Oo: () => U,
+        Oo: () => z,
       });
       var t = n(7850),
         o = n(91934),
@@ -473,7 +476,7 @@
           { nPriceInCents: l } = (0, v.xQ)(r, "USD"),
           d = !(!s || (i && s == i)),
           u = (0, v.d$)(r),
-          b = u && G(u.rtSubmitted),
+          b = u && B(u.rtSubmitted),
           { data: m } = (0, w.js)(u?.submitterID),
           S = m ? m.m_strPlayerName : u?.submitterID;
         return (i || d || a) && O == r + n
@@ -598,7 +601,7 @@
           [u, b, m] = (0, v.Wx)(s, i),
           h = (0, v.Gs)(i),
           p = a.useRef(void 0),
-          { strClassName: y } = M(o, i),
+          { strClassName: y } = U(o, i),
           C = "USD" == i,
           P = l ?? c,
           g = s != P;
@@ -607,7 +610,7 @@
           onKeyDown: I.nm,
           className: y,
           children: [
-            g && (0, t.jsx)(z, { nPriceInCents: s, nSavedPriceInCents: P }),
+            g && (0, t.jsx)(M, { nPriceInCents: s, nSavedPriceInCents: P }),
             (0, t.jsx)("div", { className: F().PricePrefix, children: u && u }),
             (0, t.jsx)(S, {
               menuTarget: (0, t.jsx)("div", {
@@ -661,7 +664,7 @@
       }
       function W(e) {
         const { packageID: r, strPriceKey: n } = e,
-          { strPriceWarning: o, bBadPrice: i, bShowWarningIcon: s } = M(r, n);
+          { strPriceWarning: o, bBadPrice: i, bShowWarningIcon: s } = U(r, n);
         return s
           ? (0, t.jsx)(T.he, {
               className: F().PriceAlert,
@@ -674,8 +677,8 @@
             })
           : null;
       }
-      const U = 2;
-      function M(e, r) {
+      const z = 2;
+      function U(e, r) {
         const {
             nPriceInCents: n,
             nPublishedPriceInCents: t,
@@ -690,8 +693,8 @@
           b = n != (o ?? t),
           m = n < i,
           S = !!s && n > s,
-          h = !!l && n > l * U,
-          p = !!l && n < l / U,
+          h = !!l && n > l * z,
+          p = !!l && n < l / z,
           y = !!l && n < l && !!c,
           C = !!l && n == l && !!c,
           P =
@@ -707,6 +710,7 @@
                 "#PricingDashboard_PriceMuchHigherThanGuidelines",
                 (0, v.Wx)(l, r).join(""),
               )) ||
+            (p && !1) ||
             (p &&
               (0, A.we)(
                 "#PricingDashboard_PriceMuchLowerThanGuidelines",
@@ -744,7 +748,7 @@
           [P, I, _, f, x],
         );
       }
-      function z(e) {
+      function M(e) {
         const { nPriceInCents: r, nSavedPriceInCents: n } = e;
         let o = null,
           i = null,
@@ -773,7 +777,7 @@
           children: [i, o],
         });
       }
-      function G(e) {
+      function B(e) {
         return new Date(1e3 * e).toLocaleString(A.pf.GetPreferredLocales(), {
           weekday: "long",
           month: "long",
@@ -785,17 +789,18 @@
     },
     53965: (e, r, n) => {
       "use strict";
-      n.d(r, { $: () => p });
+      n.d(r, { $: () => C, v: () => P });
       var t = n(7850),
         o = n(64238),
         i = n.n(o),
         s = n(69041),
         a = n(75659),
         c = n(41324),
-        l = n(73406),
-        d = n(90534),
-        u = n(53971);
-      function b(e) {
+        l = n(11820),
+        d = n(73406),
+        u = n(90534),
+        b = n(53971);
+      function m(e) {
         const {
           size: r = "3",
           loading: n = !0,
@@ -805,42 +810,45 @@
           ...a
         } = e;
         return o || !n
-          ? (0, t.jsxs)(d.az, {
+          ? (0, t.jsxs)(u.az, {
               position: "relative",
               ...a,
               width: "fit-content",
               children: [
                 (0, t.jsx)("div", {
                   "data-visibility": !n,
-                  className: l.ChildContainer,
+                  className: d.ChildContainer,
                   children: o,
                 }),
                 n &&
-                  (0, t.jsx)(u.s, {
+                  (0, t.jsx)(b.s, {
                     position: "absolute",
                     inset: "0",
                     justify: "center",
                     align: "center",
-                    children: (0, t.jsx)(m, { size: r, color: i, variant: s }),
+                    children: (0, t.jsx)(S, { size: r, color: i, variant: s }),
                   }),
               ],
             })
-          : (0, t.jsx)(m, { size: r, color: i, variant: s, ...a });
+          : (0, t.jsx)(S, { size: r, color: i, variant: s, ...a });
       }
-      function m(e) {
-        const { className: r, color: n, ...o } = (0, c.mz)(e, S);
+      function S(e) {
+        const { className: r, color: n, ...o } = (0, c.mz)(e, h);
         return (0, t.jsx)("div", {
           "data-accent-color": n,
-          className: i()(r, l.Spinner),
+          className: i()(r, d.Spinner),
           ...o,
         });
       }
-      const S = [
-        ...a.L,
-        { prop: "size", responsive: !0, className: (e) => l[`Size-${e}`] },
-        { prop: "variant", className: (e) => l[`Variant-${e}`] },
-      ];
       const h = [
+        ...a.L,
+        { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
+        { prop: "variant", className: (e) => d[`Variant-${e}`] },
+      ];
+      function p(e) {
+        e.preventDefault();
+      }
+      const y = [
           ...a.L,
           { prop: "size", responsive: !0, className: (e) => s[`Size-${e}`] },
           { prop: "variant", className: (e) => s[`Variant-${e}`] },
@@ -858,7 +866,7 @@
             responsive: !0,
           },
         ],
-        p = function (e) {
+        C = function (e) {
           const {
               variant: r = "default",
               size: n = "2",
@@ -867,18 +875,18 @@
               loading: l,
               children: d,
               onClick: u,
-              icon: m,
+              icon: b,
               ...S
             } = e,
-            p = l
-              ? (0, t.jsx)(b, {
+            h = l
+              ? (0, t.jsx)(m, {
                   size: n,
                   color: a,
                   variant: "bright",
                   children: d,
                 })
               : d,
-            y = l ? void 0 : u;
+            p = l ? void 0 : u;
           return (0, t.jsx)("button", {
             type: "button",
             ...(0, c.mz)(
@@ -888,14 +896,46 @@
                 size: n,
                 minWidth: o,
                 color: a,
-                className: i()(s.Button, m && s.Icon),
-                onClick: y,
+                className: i()(s.Button, b && s.Icon),
+                onClick: p,
               },
-              h,
+              y,
             ),
-            children: p,
+            children: h,
+          });
+        },
+        P = function (e) {
+          const {
+              variant: r = "default",
+              size: n = "2",
+              minWidth: o = "fit-content",
+              disabled: a,
+              icon: d,
+              ...u
+            } = e,
+            b = a ? p : void 0;
+          return (0, t.jsx)("a", {
+            ...(0, c.mz)(
+              {
+                onClick: b,
+                ...u,
+                variant: r,
+                size: n,
+                minWidth: o,
+                className: i()(s.Button, d && s.Icon, (0, l.T)()),
+              },
+              y,
+            ),
           });
         };
+    },
+    11820: (e, r, n) => {
+      "use strict";
+      n.d(r, { T: () => o });
+      var t = n(91239);
+      function o() {
+        return t.Reset;
+      }
     },
     87864: (e, r, n) => {
       "use strict";
@@ -1423,7 +1463,7 @@
     47184: (e, r, n) => {
       "use strict";
       n.d(r, { g: () => i });
-      var t = n(42475);
+      var t = n(48891);
       const o = {};
       (o.arabic = () => n.e(6873).then(n.t.bind(n, 46873, 19))),
         (o.brazilian = () => n.e(1365).then(n.t.bind(n, 1365, 19))),

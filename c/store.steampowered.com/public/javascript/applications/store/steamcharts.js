@@ -51,6 +51,25 @@
     },
     chunkid: (module) => {
       module.exports = {
+        SalePageHiddenWarning: "_2h9U3L_8MxvbQ6TGGaeBYa",
+        WarningText: "_2iB5yR1rkdynH8-UFCwUty",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        "duration-app-launch": "800ms",
+        narrowWidth: "500px",
+        SalePageLogoCtn: "_3Rukhd1HqXzPiBrK5hwPT-",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PresenterDisclaimer: "_3t5Ysy42auAhLs-ZV5jwdF",
+        PresenterLabel: "_2FnM_Y63_Jnu_t6cnt-4se",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         MenuBackgroundReflection: "_1vclHrINn0CO_nGkxoDkKy",
       };
     },
@@ -275,7 +294,9 @@
         AssetExampleSpotlightCtn: "_29B1UOzVRMVZSd22IyP43x",
         BackgroundConfigCtn: "_3SVRvFP-sXikNXmksKkDQ7",
         OptionCtn: "_2XnObldRTEs5T4Sswyv5Fo",
+        ButtonRow: "_2W9rAanKV4V6A7Exx4sWGF",
         BackgroundColorBtn: "_2YD-avez2pqO4MJHAO5_v0",
+        BackgroundColorResetBtn: "baRhk4ouyxcNfo_um5C76",
         UploadSuccess: "inXVzuN-asDe-A5jnsvvV",
         HighlightBox: "_3qTodEPOW76BNBFtgX0AUa",
       };
@@ -301,13 +322,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
-        narrowWidth: "500px",
-        SalePageLogoCtn: "_1Un6hCqh2IuOm0WLmrrA7w",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         ErrorDiv: "XeZExtCZ_zIcbkPRCqsnV",
       };
     },
@@ -324,12 +338,6 @@
         SubMenuItemCtn: "_3l8xeoR-wEUYEFOd8iTVOY",
         SubMenuItemText: "_31NjlVCoc_kJqU4O6T3GaQ",
         ImageWrapper: "_1b0D6GwIr3uJX-bYaBWXuU",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        PresenterDisclaimer: "_1RsiclQYbOWMcz3Hr6dVT9",
-        PresenterLabel: "adrBtsY2w7IX8V81nMir1",
       };
     },
     chunkid: (module) => {
@@ -3884,6 +3892,147 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      async function _(_, _, _) {
+        const _ = (0, _._)("partnereventpermissions", "application_config");
+        if (
+          (function (_) {
+            const _ = _;
+            if (
+              _ &&
+              Array.isArray(_) &&
+              _.length > 0 &&
+              "object" == typeof _[0]
+            )
+              return (
+                "number" == typeof _[0].clanid && "number" == typeof _[0].appid
+              );
+            return !1;
+          })(_)
+        ) {
+          const _ = _.find((_) => (_.clanid = _));
+          if (_) {
+            let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+            return _;
+          }
+        }
+        if (_._.logged_in) {
+          const _ = _._.InitFromClanID(_);
+          let _ = `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetpartnereventpermissions/`;
+          "partnerweb" == (0, _._)()
+            ? (_ = `${_._.PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${_}`)
+            : "store" == (0, _._)() &&
+              (_ = `${_._.STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${_}`);
+          const _ = await fetch(_, {
+            method: "GET",
+            credentials: "include",
+          });
+          if (200 == _.status) {
+            const _ = await _.json();
+            if (_) {
+              let { success: _, warn_msg: _, err_msg: _, ..._ } = _;
+              return _;
+            }
+          }
+        }
+        return (function (_, _) {
+          return {
+            clanid: _,
+            appid: _,
+            can_edit: !1,
+            owns_app: !1,
+            event_followed: [],
+            event_followed_flags: [],
+            event_ignored: [],
+            follows_app: !1,
+            valve_admin: !1,
+            support_user: !1,
+            limited_user: !0,
+          };
+        })(_, void 0);
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        (0, _._)(), (0, _._)();
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => await _(_),
+              enabled: !!_,
+            };
+          })(_),
+        );
+      }
+      function _(_) {
+        return ["useEventUserPermissions", _._.accountid, _];
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { eventModel: _ } = _,
+          { data: __webpack_require__ } = _(_.clanSteamID.GetAccountID());
+        if (
+          !__webpack_require__ ||
+          (!__webpack_require__.can_edit &&
+            !__webpack_require__.support_user) ||
+          "community" == (0, _._)()
+        )
+          return;
+        const _ = _.GetAllTags(),
+          _ = [];
+        return (
+          _.includes("hide_store") &&
+            _.push(_._.Localize("#Sale_SaleEventIsHidden_Reason_ProductHide")),
+          _.includes("mod_hide_store") &&
+            __webpack_require__.support_user &&
+            _.push(_._.Localize("#Sale_SaleEventIsHidden_Reason_Mod")),
+          !_.BIsVisibleEvent() &&
+            _.includes("contenthub") &&
+            _.push(_._.Localize("#Sale_SaleEventIsHidden_ContentHub_Preview")),
+          _.BIsVisibleEvent() && 0 == _.length
+            ? void 0
+            : (0, _.jsx)("div", {
+                className: _().SalePageHiddenWarning,
+                children: (0, _.jsxs)("div", {
+                  children: [
+                    !_.BIsVisibleEvent() &&
+                      (0, _.jsx)("div", {
+                        className: _().WarningText,
+                        children: _._.Localize("#Sale_SaleEventIsHidden"),
+                      }),
+                    _.length > 0 &&
+                      (0, _.jsxs)("div", {
+                        className: _().WarningText,
+                        children: [
+                          _._.LocalizePlural(
+                            "#Sale_SaleEventIsHidden_Reason",
+                            _.length,
+                          ),
+                          (0, _.jsx)("ul", {
+                            children: _.map((_) =>
+                              (0, _.jsx)(
+                                "li",
+                                {
+                                  children: _,
+                                },
+                                _,
+                              ),
+                            ),
+                          }),
+                        ],
+                      }),
+                  ],
+                }),
+              })
+        );
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -3903,12 +4052,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4014,79 +4159,43 @@
         }
       }
       function _(_) {
-        const { event: _, broadcastEmbedContext: __webpack_require__ } = _,
-          _ = Boolean(_?.jsondata?.broadcast_display_wide_player),
-          _ = Boolean(_?.jsondata?.broadcast_dispaly_wide_player_allow_chat);
-        return (0, _.jsx)(_.Fragment, {
-          children:
-            Boolean(
-              _.BEventCanShowBroadcastWidget() &&
-                _.BSaleShowBroadcastAtTopOfPage(),
-            ) &&
-            (0, _.jsx)(_._, {
-              event: _,
-              broadcastEmbedContext: __webpack_require__,
-              bWideBroadcastDisplay: _,
-              bWideBroadcastPermitChat: _,
-            }),
-        });
-      }
-      function _(_) {
-        const {
-          event: _,
-          fnOnChangeDayIndex: __webpack_require__,
-          addtionalAdminButtons: _,
-        } = _;
-        return (0, _.jsx)(_._, {
-          eventModel: _,
-          fnOnUpdateSaleDayIndex: __webpack_require__,
-          addtionalAdminButtons: _,
-          bSupportsSticky: !0,
-        });
-      }
-      function _(_) {
         const { event: _, bIsPreview: __webpack_require__ } = _;
         let _ = _.jsondata.sale_background_video_webm,
           _ = _.jsondata.sale_background_video_mp4;
-        return (
-          _._.Get().BHasSalePageBackgroundOverride() &&
-            ((_ = _._.Get().GetSalePageBackgroundWEBM()),
-            (_ = _._.Get().GetSalePageBackgroundMP4())),
-          Boolean(_ || _)
-            ? (0, _.jsx)(_._, {
-                children: (0, _.jsxs)("video", {
-                  loop: !0,
-                  muted: !0,
-                  autoPlay: !0,
-                  playsInline: !0,
-                  className: (0, _._)(
-                    _().SaleBackground,
-                    _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
-                    "SaleBackground",
-                    _().fullscreen_bg_video,
-                  ),
-                  style: {
-                    backgroundColor: __webpack_require__
-                      ? _.jsondata.sale_background_color
-                      : void 0,
-                  },
-                  children: [
-                    _ &&
-                      (0, _.jsx)("source", {
-                        src: _,
-                        type: "video/webm",
-                      }),
-                    _ &&
-                      !_._.IN_CLIENT &&
-                      (0, _.jsx)("source", {
-                        src: _,
-                        type: "video/mp4",
-                      }),
-                  ],
-                }),
-              })
-            : null
-        );
+        return Boolean(_ || _)
+          ? (0, _.jsx)(_._, {
+              children: (0, _.jsxs)("video", {
+                loop: !0,
+                muted: !0,
+                autoPlay: !0,
+                playsInline: !0,
+                className: (0, _._)(
+                  _().SaleBackground,
+                  _()[`CustomStyle_${_.jsondata.sale_vanity_id}`],
+                  "SaleBackground",
+                  _().fullscreen_bg_video,
+                ),
+                style: {
+                  backgroundColor: __webpack_require__
+                    ? _.jsondata.sale_background_color
+                    : void 0,
+                },
+                children: [
+                  _ &&
+                    (0, _.jsx)("source", {
+                      src: _,
+                      type: "video/webm",
+                    }),
+                  _ &&
+                    !_._.IN_CLIENT &&
+                    (0, _.jsx)("source", {
+                      src: _,
+                      type: "video/mp4",
+                    }),
+                ],
+              }),
+            })
+          : null;
       }
       function _(_) {
         const {
@@ -4095,16 +4204,11 @@
             children: _,
             bIsPreview: _,
           } = _,
-          _ = _.useRef(void 0),
+          _ = _.useRef(null),
           [_, _] = (0, _._)(() => [
             _.GetImageURLWithFallback("sale_header", __webpack_require__),
             _.jsondata.sale_sub_menu,
-          ]),
-          _ = _._.Get().BHasSalePageBackgroundOverride(),
-          _ = _.useMemo(
-            () => (_ ? _._.Get().GetSalePageBackgroundOverride() : _),
-            [_, _],
-          );
+          ]);
         _.useEffect(() => {
           if (!_) return;
           const _ = new Image();
@@ -4119,11 +4223,13 @@
           ),
           _ =
             _.jsondata.item_source_type === _._.k_EContentHub &&
-            (_.jsondata.sale_vanity_id.includes("contenthubsalepage_") || _),
-          _ = _ ? `url(${_})` : null;
+            ((_.jsondata.sale_vanity_id &&
+              _.jsondata.sale_vanity_id.includes("contenthubsalepage_")) ||
+              _),
+          _ = _ ? `url(${_})` : "none";
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            Boolean(_)
+            _
               ? (0, _.jsx)(_, {
                   event: _,
                   language: __webpack_require__,
@@ -4161,6 +4267,7 @@
                           _().Blur,
                         ),
                         src: _,
+                        alt: "Header",
                       })
                     : (0, _.jsx)("div", {
                         className: (0, _._)(
@@ -4197,7 +4304,7 @@
               __webpack_require__,
             ),
           ]);
-        return _?.length > 0
+        return _ && _?.length > 0
           ? _
             ? (0, _.jsx)("a", {
                 className: _().SalePageLogoCtn,
@@ -4207,6 +4314,7 @@
                     "sale_logo",
                     __webpack_require__,
                   ),
+                  alt: "logo",
                 }),
               })
             : (0, _.jsx)("div", {
@@ -4216,6 +4324,7 @@
                     "sale_logo",
                     __webpack_require__,
                   ),
+                  alt: "logo",
                 }),
               })
           : null;
@@ -4351,7 +4460,6 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5353,6 +5461,7 @@
         return -1 === _ ? _ : _.substring(0, _);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7381,13 +7490,15 @@
           } = _,
           _ = (0, _._)(),
           [_, _, _, _] = (0, _._)(() => [
-            __webpack_require__.mapGroupToSections.get(_?.background_id),
-            __webpack_require__.mapGroupToSections.get(_?.background_id)
-              ?.sectionUniqueIDs ?? [],
+            _ && __webpack_require__.mapGroupToSections.get(_.background_id),
+            (_ &&
+              __webpack_require__.mapGroupToSections.get(_.background_id)
+                ?.sectionUniqueIDs) ??
+              [],
             null != _
-              ? _.GetTabLastCoverSectionUntilEnd(_)
-              : _.GetSalePageLastCoverSectionUntilEnd(),
-            null != _ ? _.GetTabGroupCount(_) : _.GetSalePageGroupCount(),
+              ? _?.GetTabLastCoverSectionUntilEnd(_)
+              : _?.GetSalePageLastCoverSectionUntilEnd(),
+            null != _ ? _?.GetTabGroupCount(_) : _?.GetSalePageGroupCount(),
           ]),
           _ = _ && _ + 1 === _,
           [_, _, _] = (0, _._)(),
@@ -7407,7 +7518,7 @@
           const _ = _[_.length - 1];
           _ = (0, _._)(
             2,
-            _.GetSaleSectionByID(_),
+            _?.GetSaleSectionByID(_),
             _,
             _,
             _.nSaleSectionLastIndex,
@@ -7533,8 +7644,8 @@
           children: (0, _.jsx)(_._, {
             onClick: (_) =>
               __webpack_require__ && __webpack_require__ >= 0
-                ? _.AddTabBackgroundGroup(__webpack_require__)
-                : _.AddSalePageBackgroundGroup(),
+                ? _?.AddTabBackgroundGroup(__webpack_require__)
+                : _?.AddSalePageBackgroundGroup(),
             children: (0, _._)(
               __webpack_require__ && __webpack_require__ >= 0
                 ? "#BackgroundGroups_AddNewGroupTab"
@@ -7572,7 +7683,7 @@
             backgroundImageEditModel: _,
           } = _,
           _ =
-            __webpack_require__ >= 0
+            __webpack_require__ && __webpack_require__ >= 0
               ? _.selectedTabBackgroundDef.groups
               : _.GetSalePageGroupDefinition().groups,
           _ = _.findIndex((_) => _.background_id === _),
@@ -7679,10 +7790,10 @@
           } = _,
           [_, _] = (0, _.useState)(null),
           [_, _, _, _] = (0, _._)(() => [
-            _.GetTabLastCoverSectionUntilEnd(_),
-            _.BIsTabEnabled(_),
+            _?.GetTabLastCoverSectionUntilEnd(_),
+            _?.BIsTabEnabled(_),
             __webpack_require__.selectedTabBackgroundDef,
-            _.GetEventModel(),
+            _?.GetEventModel(),
           ]);
         return (0, _.jsxs)(_._, {
           children: [
@@ -7720,6 +7831,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -7732,7 +7844,7 @@
                 _().PresenterDisclaimer,
                 "PresenterDisclaimer",
               ),
-              children: (0, _._)(
+              children: _._.LocalizeReact(
                 "#SalePresented_By",
                 (0, _.jsx)(_, {
                   presentor: _[0],
@@ -7745,7 +7857,7 @@
                 _().PresenterDisclaimer,
                 "PresenterDisclaimer",
               ),
-              children: (0, _._)(
+              children: _._.LocalizeReact(
                 "#SalePresented_By_Multi",
                 _.slice(0, _.length - 1).map((_, _) =>
                   (0, _.jsxs)(
@@ -7770,9 +7882,10 @@
             });
       }
       function _(_) {
-        const { presentor: _, lang: __webpack_require__ } = _;
+        const { presentor: _, lang: __webpack_require__ } = _,
+          _ = (0, _._)(_.url);
         return (0, _.jsx)(_._, {
-          href: (0, _._)(_.url),
+          href: _,
           bUseLinkFilter: !0,
           className: _().PresenterLabel,
           children: _._.GetWithFallback(
@@ -7784,7 +7897,40 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { event: _, broadcastEmbedContext: __webpack_require__ } = _,
+          _ = Boolean(_?.jsondata?.broadcast_display_wide_player),
+          _ = Boolean(_?.jsondata?.broadcast_dispaly_wide_player_allow_chat);
+        return (0, _.jsx)(_.Fragment, {
+          children:
+            Boolean(
+              _.BEventCanShowBroadcastWidget() &&
+                _.BSaleShowBroadcastAtTopOfPage(),
+            ) &&
+            (0, _.jsx)(_._, {
+              event: _,
+              broadcastEmbedContext: __webpack_require__,
+              bWideBroadcastDisplay: _,
+              bWideBroadcastPermitChat: _,
+            }),
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+          event: _,
+          fnOnChangeDayIndex: __webpack_require__,
+          addtionalAdminButtons: _,
+        } = _;
+        return (0, _.jsx)(_._, {
+          eventModel: _,
+          fnOnUpdateSaleDayIndex: __webpack_require__,
+          addtionalAdminButtons: _,
+          bSupportsSticky: !0,
+        });
+      }
       function _(_) {
         const {
             promotionName: _,
@@ -7805,7 +7951,7 @@
             return _.useMemo(() => {
               const _ = _.GetSaleSectionFirstMatchByType("tabs"),
                 _ = _?.tabs?.filter((_) => !_.hide);
-              if (_?.length > 0) {
+              if (_ && _.length > 0) {
                 let _ =
                   __webpack_require__ > 0
                     ? _.find((_) => _.unique_id == __webpack_require__)
@@ -7842,7 +7988,7 @@
               _.length <= 1,
               "Must have at most one react_landing_background",
             ),
-            _.length >= 1 && (_[0].style.backgroundImage = null),
+            _.length >= 1 && (_[0].style.backgroundImage = ""),
             () => {
               _ && (_.remove(), _(null));
             }
@@ -7866,6 +8012,7 @@
           _ = (0, _._)(() => _?.BIsBackgroundImageEnabled() ?? !1);
         if (__webpack_require__ && void 0 !== _) {
           const _ =
+              __webpack_require__.jsondata.localized_sale_logo &&
               __webpack_require__.jsondata.localized_sale_logo?.filter(Boolean)
                 .length > 0,
             _ = __webpack_require__
@@ -7877,7 +8024,7 @@
             ? 0
             : __webpack_require__.BUsesContentHubForItemSource()
               ? 20
-              : __webpack_require__.jsondata.sale_header_offset;
+              : __webpack_require__.jsondata.sale_header_offset || 0;
           let _ = !1;
           530 === __webpack_require__.jsondata.sale_header_offset && (_ = !0);
           const _ = _._.Get().BIsPartnerTakeoverActive(
@@ -7902,13 +8049,13 @@
                 children: (0, _.jsxs)(_, {
                   event: __webpack_require__,
                   language: _,
-                  bIsPreview: _,
+                  bIsPreview: !!_,
                   children: [
                     _ && (0, _.jsx)(_._, {}),
                     (0, _.jsx)(_, {
                       eventModel: __webpack_require__,
                     }),
-                    Boolean(_) &&
+                    !!_ &&
                       (_ || _) &&
                       (0, _.jsx)(_, {
                         backgroundImageEditModel: _,
@@ -7929,7 +8076,7 @@
                         [_().ContentHub]: _,
                       }),
                       style: _
-                        ? null
+                        ? void 0
                         : {
                             marginTop: `${_ || 0}px`,
                           },
@@ -8018,7 +8165,7 @@
               _(
                 _.jsondata.sale_background_img_groups,
                 _,
-                _?.GetActiveTabUniqueID(),
+                _ && _.GetActiveTabUniqueID(),
               ),
               _,
             ];
@@ -8027,7 +8174,7 @@
         const _ = [
           {
             elements: [],
-            activeTab: new _._(null, _),
+            activeTab: new _._(void 0, _),
           },
         ];
         let _ = null;
@@ -8055,7 +8202,7 @@
               (_ = !0));
           else {
             const _ = _.diable_tab_id_filtering
-              ? new _._(null, _.GetSaleDay())
+              ? new _._(void 0, _ && _.GetSaleDay())
               : _;
             "tabs" == _.section_type &&
               _.tabs?.some((_) => _.unique_id == _?.GetActiveTabUniqueID()) &&
@@ -8080,11 +8227,13 @@
               nSectionID: _.unique_id,
               children: _,
             }));
+          const _ = _ && _.length && _[_.length - 1];
           let _ = (0, _.jsx)(
             _,
             {
               section: _,
-              nActiveTabID: _[_.length - 1].activeTab.GetActiveTabUniqueID(),
+              nActiveTabID:
+                _ && _.activeTab && _.activeTab.GetActiveTabUniqueID(),
               saleSectionIndex: _,
               ePreviewMode: _,
               salePageBackgroundDerivedConfig: _,
@@ -8097,7 +8246,9 @@
           const _ = _.mapSectionToGroup.get(_.unique_id);
           _ &&
             _.groupID != _ &&
-            (_[_.length - 1].elements.push(_(_, _, _?.GetActiveTabUniqueID())),
+            (_[_.length - 1].elements.push(
+              _(_, _, _ && _?.GetActiveTabUniqueID()),
+            ),
             (_ = null)),
             _
               ? (_ ||
@@ -8110,7 +8261,9 @@
               : _[_.length - 1].elements.push(_);
         }),
           _ &&
-            (_[_.length - 1].elements.push(_(_, _, _?.GetActiveTabUniqueID())),
+            (_[_.length - 1].elements.push(
+              _(_, _, _ && _?.GetActiveTabUniqueID()),
+            ),
             (_ = null));
         const _ = _.map((_, _) =>
             (0, _.jsx)(
@@ -8148,7 +8301,7 @@
           door_index_visibility: __webpack_require__,
           children: _,
         } = _;
-        return _
+        return _ && null != __webpack_require__
           ? (0, _.jsx)(_, {
               visibility_by_door_index_state: _,
               door_index_visibility: __webpack_require__,
@@ -8270,16 +8423,16 @@
         }, [_, _]);
         const _ = (0, _._)(() => _._.Get().GetMouseOverSectionID()),
           _ = _ && _ == _,
-          _ = _.useRef(void 0);
+          _ = _.useRef(null);
         return (
           (0, _._)((_) => _ == _ && (_.current?.scrollIntoView(), _(!0), !0)),
           (0, _.jsxs)("div", {
             ref: _,
-            className: (0, _._)(
-              _().SaleSectionLivePreview,
-              _ && _().Hover,
-              _ && _().JumpedTo,
-            ),
+            className: (0, _._)({
+              [_().SaleSectionLivePreview]: !0,
+              [_().Hover]: !!_,
+              [_().JumpedTo]: !!_,
+            }),
             onAnimationEnd: () => _(!1),
             onMouseEnter: () => _(!0),
             onMouseLeave: () => _(!1),
@@ -8297,56 +8450,6 @@
               __webpack_require__,
             ],
           })
-        );
-      }
-      function _(_) {
-        const { eventModel: _ } = _,
-          _ = (0, _._)(_.clanSteamID.GetAccountID());
-        if (!_ || (!_.can_edit && !_.support_user) || "store" != (0, _._)())
-          return;
-        const _ = _.GetAllTags(),
-          _ = [];
-        return (
-          _.includes("hide_store") &&
-            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_ProductHide")),
-          _.includes("mod_hide_store") &&
-            _.support_user &&
-            _.push((0, _._)("#Sale_SaleEventIsHidden_Reason_Mod")),
-          !_.BIsVisibleEvent() &&
-            _.includes("contenthub") &&
-            _.push((0, _._)("#Sale_SaleEventIsHidden_ContentHub_Preview")),
-          _.BIsVisibleEvent() && 0 == _.length
-            ? void 0
-            : (0, _.jsx)("div", {
-                className: _().SalePageHiddenWarning,
-                children: (0, _.jsxs)("div", {
-                  children: [
-                    !_.BIsVisibleEvent() &&
-                      (0, _.jsx)("div", {
-                        className: _().WarningText,
-                        children: (0, _._)("#Sale_SaleEventIsHidden"),
-                      }),
-                    _.length > 0 &&
-                      (0, _.jsxs)("div", {
-                        className: _().WarningText,
-                        children: [
-                          (0, _._)("#Sale_SaleEventIsHidden_Reason", _.length),
-                          (0, _.jsx)("ul", {
-                            children: _.map((_) =>
-                              (0, _.jsx)(
-                                "li",
-                                {
-                                  children: _,
-                                },
-                                _,
-                              ),
-                            ),
-                          }),
-                        ],
-                      }),
-                  ],
-                }),
-              })
         );
       }
     },

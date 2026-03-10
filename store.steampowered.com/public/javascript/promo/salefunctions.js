@@ -216,17 +216,25 @@ function fnRenderHeroCapsule( oItem )
 		$J('<div/>', {'class': 'broadcast_live_stream_icon', 'style': 'z-index:unset' } ).append( 'Live')
 	}
 
-	var Screenshots = $J( '<div/>', {'class': 'hover_screenshots' } );
-	var VideoCtn = $J( '<div/>', {'class': 'hover_video_container hero_screenshot_load', 'data-background': 'url(' + (  rgItemData.screenshots && rgItemData.screenshots.length > 0 ? GetScreenshotURL( rgItemData.screenshots[0].appid, rgItemData.screenshots[0].filename, '.600x338' ) : rgItemData.main_capsule ) + ')' } );
+	let ScreenshotsCtn = $J( '<div/>', {'class': 'capsule_hover_screenshots' } );
+	let VideoCtn = $J( '<div/>', {'class': 'hover_video_container hero_screenshot_load', 'data-background': 'url(' + rgItemData.main_capsule + ')' } );
 
-	if ( rgItemData.microtrailer )
+	if ( rgItemData.microtrailer && !GDynamicStore.s_preferences.disable_microtrailers )
 	{
-		var Video = $J( '<video/>', {'class': 'hero_video', 'loop': true, 'preload': 'none' } ).prop("muted", true).append( $J( '<source/>', { 'src': rgItemData.microtrailer, 'type': 'video/webm' } ) );
+		var Video = $J( '<video/>', {'class': 'hero_video', 'loop': true, 'preload': 'none', 'playsinline': true } ).prop("muted", true ).append( $J( '<source/>', { 'src': rgItemData.microtrailer, 'type': 'video/webm' } ) );
 		VideoCtn.append( Video );
 	}
+	else if ( rgItemData.screenshots )
+	{
+		for ( let i = 0; i < rgItemData.screenshots.length && i < 4; i++ )
+		{
+			const screenshot = $J( '<div/>', { 'class': 'screenshot hero_screenshot_load', 'data-background': 'url(' + GetScreenshotURL( rgItemData.screenshots[i].appid, rgItemData.screenshots[i].filename, '.600x338' ) + ')' } );
+			ScreenshotsCtn.append( screenshot )
+		}
+	}
 
-	Screenshots.append( VideoCtn );
-	$Cap.append( Screenshots );
+	ScreenshotsCtn.append( VideoCtn );
+	$Cap.append( ScreenshotsCtn );
 
 	var HeroData = $J( '<div/>', {'class': 'hero_data' } );
 	var HeroContent = $J( '<div/>', {'class': 'hero_data_content' } )
@@ -299,6 +307,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
+		$J(this).addClass( 'hover_active' );
 		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
 	} );
 
@@ -314,6 +323,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
+		$J(this).removeClass( 'hover_active' );
 		if ( $J(this).find('video.hero_video').length )
 			$J(this).find('video.hero_video')[0].pause();
 	} );

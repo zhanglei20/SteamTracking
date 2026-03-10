@@ -133,7 +133,6 @@
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  max-height: 85vh;
 }
 ._2ADsvLBScO2pMzUxFUg-_g ._3oQPVwTgG0CmSxwl3e1cI4,
 ._2ADsvLBScO2pMzUxFUg-_g ._2uCLczcyA7K90OppYPMeBA,
@@ -279,6 +278,11 @@
   color: var(--gpStoreLightestGrey);
   font-size: 14px;
   line-height: 20px;
+}
+._3c5UMEMwi7F5tnSJiw26TQ {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 ._1ALZVqWCl2J8DJg4XxemH1 {
   justify-content: center;

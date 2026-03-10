@@ -391,7 +391,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 			{
 				rgAjaxParams['pagev6'] = true;
 			}
-			if ( $Elem.data('hoverDisableScreenshots') )
+			if ( $Elem.data('hoverDisableScreenshots') || params.disableScreenshots )
 			{
 				rgAjaxParams['disableScreenshots'] = true;
 			}
@@ -2304,7 +2304,7 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.bNoWrap = bNoWrap;
 	this.nIndex = 0;
 	this.bIsAnimating = false;
-	this.bAllowWideScreenMode = bAllowWideScreenMode && window.UseWideScreenMode && window.UseWideScreenMode();
+	this.bAllowWideScreenMode = bAllowWideScreenMode;
 	this.bPreloadNearbyItems = bPreloadNearbyItems || this.bAllowWideScreenMode;
 
 	this.$elArrowLeft = $J('.arrow.left', this.$elContainer);
@@ -2349,6 +2349,9 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 
 	this.fnMouseOut();
 
+	this.$elArrowRight.hover( () => { instance.$elContainer.addClass( 'arrow_hover_next' ); }, () => { instance.$elContainer.removeClass( 'arrow_hover_next' ); } );
+	this.$elArrowLeft.hover( () => { instance.$elContainer.addClass( 'arrow_hover_prev' ) }, () => { instance.$elContainer.removeClass( 'arrow_hover_prev' ); } );
+
 	$elContainer.bind('mouseover', function(e) { instance.fnMouseOver(); } );
 	$elContainer.bind('mouseout', function(e) { instance.fnMouseOut(); }  );
 	// If we get a scroll event, and we're in respondive, hint all remaining images
@@ -2373,6 +2376,8 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 			);
 		});
 	}
+
+
 
 	// Bind arrows (if we have them)
 	this.$elArrowLeft.click( function(e){ instance.Advance(-1); e.preventDefault(); return true; });
@@ -2539,7 +2544,7 @@ CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 	if( nNextIndex == this.nIndex || nNextIndex === false )
 		return;
 
-	if ( this.bAllowWideScreenMode )
+	if ( this.bAllowWideScreenMode && window.UseWideScreenMode && window.UseWideScreenMode() )
 	{
 		const bGoForward = nNewIndex !== -1;
 		return this.WideModeAdvance( nNextIndex, bGoForward ) ;

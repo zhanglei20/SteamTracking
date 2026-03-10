@@ -1155,5 +1155,6 @@
     "PersonalCalendar_WishlistHide": "Hide",
     "PersonalCalendar_WishlistOnly": "Only",
     "PersonalCalendar_IgnoringWishlists": "Too many wishlisted games, disabled",
+    "Wishlist_QuickAdd_Header": "Categorize:",
     "dummy_for_end_of_file_convenience": "dummy"
 }

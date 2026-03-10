@@ -43,6 +43,7 @@
         DeveloperComments_Icon: "_2R6eCuptMWK0ZkTe0GeqEi",
         DeveloperComments_LinkNoIcon: "_1zjwW1q8ccnB76k2rPv9oM",
         DeveloperComments_LinkIcon: "_3OZNUKYm6BQ2AVO-NCNw2t",
+        CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
         CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
       };
@@ -2419,35 +2420,33 @@
                   appName: _,
                 }),
             _ = _ ? _ : _;
-          return (0, _.jsx)(_._, {
+          return (0, _.jsxs)(_._, {
             autoFocus: _,
             focusableIfEmpty: _,
             noFocusRing: !0,
             className: _().CompatibilityDetailsContainer,
             ..._,
-            children: (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsxs)("div", {
-                  _: __webpack_require__,
-                  className: _().DialogHeader,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().DialogTitle,
-                      children: _,
+            children: [
+              (0, _.jsxs)("div", {
+                _: __webpack_require__,
+                className: _().DialogHeader,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().DialogTitle,
+                    children: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().AppTitleCategory,
+                    children: (0, _.jsx)(_._, {
+                      category: _.resolved_category,
                     }),
-                    (0, _.jsx)("div", {
-                      className: _().AppTitleCategory,
-                      children: (0, _.jsx)(_._, {
-                        category: _.resolved_category,
-                      }),
-                    }),
-                  ],
-                }),
-                _,
-                !1,
-                _,
-              ],
-            }),
+                  }),
+                ],
+              }),
+              _,
+              !1,
+              _,
+            ],
           });
         }
         if (_ || _) {
@@ -2491,6 +2490,7 @@
           return (0, _.jsx)(_._, {
             tabs: _,
             classNameCtn: _().CompatibilityTabs,
+            classNameTabContent: _().CompatibilityTabContent,
             startingTab: _ ? "steamos" : "steamdeck",
           });
         }
@@ -2897,13 +2897,11 @@
                   ),
                 ),
               }),
-              (0, _.jsx)(_._, {
-                children:
-                  _ &&
-                  (0, _.jsx)(_._, {
-                    children: _.contents,
-                  }),
-              }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  className: this.props.classNameTabContent,
+                  children: _.contents,
+                }),
             ],
           });
         }

@@ -623,8 +623,8 @@
         _e = t(99487),
         ge = t(7193),
         we = t(39199),
-        me = t(96971),
-        ve = t(50832),
+        me = t(60860),
+        ve = t(79448),
         pe = t(40353);
       function he(e) {
         const { eventModel: n, nEventBadgeID: t } = e,

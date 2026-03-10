@@ -611,7 +611,7 @@
     41324: (s, e, r) => {
       "use strict";
       r.d(e, { Fd: () => m, ti: () => n, To: () => c, mz: () => a });
-      var p = r(43186);
+      var p = r(10430);
       const o = p.IE.reduce((s, e, r) => ((s[e] = r), s), {});
       function t(s, e) {
         if ("object" != typeof s) return s;
@@ -709,7 +709,7 @@
     },
     20187: (s, e, r) => {
       "use strict";
-      r.d(e, { EY: () => m });
+      r.d(e, { Ae: () => l, EY: () => m, U6: () => c });
       var p = r(7850),
         o = r(41324),
         t = r(75659),
@@ -721,11 +721,10 @@
           m = e;
         return (0, p.jsx)(m, {
           ref: r,
-          ...(0, o.mz)({ ...i, className: a()(n.Text, t) }, c),
+          ...(0, o.mz)({ ...i, className: a()(n.Text, t) }, l),
         });
       }
       const c = [
-        ...[
           {
             prop: "weight",
             responsive: !0,
@@ -765,9 +764,15 @@
             cssProperty: "--white-space",
           },
         ],
-        ...t.L,
-        { prop: "size", responsive: !0, className: (s) => n[`TextSize-${s}`] },
-      ];
+        l = [
+          ...c,
+          ...t.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (s) => n[`TextSize-${s}`],
+          },
+        ];
     },
   },
 ]);

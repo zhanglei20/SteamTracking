@@ -46,7 +46,7 @@
         (a.turkish = () => n.e(7996).then(n.t.bind(n, 87996, 19))),
         (a.ukrainian = () => n.e(7306).then(n.t.bind(n, 47306, 19))),
         (a.vietnamese = () => n.e(2539).then(n.t.bind(n, 72539, 19)));
-      const r = (0, n(42475).l)(async function (e) {
+      const r = (0, n(48891).l)(async function (e) {
         if (a[e]) return a[e]();
       });
       var o,

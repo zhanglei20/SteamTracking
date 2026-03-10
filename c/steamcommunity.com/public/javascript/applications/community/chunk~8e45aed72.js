@@ -2590,7 +2590,7 @@
             {
               Constructor: function (_) {
                 var _, _, _;
-                const { showErrorInfo: _ } = _.context;
+                const { showErrorInfo: _, version: _ } = _.context;
                 let _ =
                   null === (_ = null == _ ? void 0 : _.children) || void 0 === _
                     ? void 0
@@ -2604,7 +2604,7 @@
                     null === (_ = null == _ ? void 0 : _.args) || void 0 === _
                       ? void 0
                       : _.alt,
-                  _ = (0, _._)(_, _.language);
+                  _ = (0, _._)(_, _.language, Number.parseInt(_));
                 return null == _
                   ? null
                   : "string" == typeof _
@@ -2648,7 +2648,11 @@
           ],
         ]),
         _ = (_) => {
-          const { text: _, bShowErrorInfo: __webpack_require__ } = _,
+          const {
+              text: _,
+              bShowErrorInfo: __webpack_require__,
+              version: _,
+            } = _,
             _ = _.useCallback(
               (_) =>
                 new _._(
@@ -2672,6 +2676,7 @@
             className: _().FAQContainer,
             children: _.current.ParseBBCode(_, {
               showErrorInfo: __webpack_require__,
+              version: _,
             }),
           });
         };

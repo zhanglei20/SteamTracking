@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Inga annonser hittades",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
-	"Accessories_FieldSectionLabel": "Tillbehör"
+	"Accessories_FieldSectionLabel": "Tillbehör",
+	"Listing_EnhancedAppearance_Missing": "Den här annonsen har ännu inga unika eller förbättrade bilder. Bilden som visas här kan skilja sig något från artikeln som annonseras."
 }`);
     },
   },

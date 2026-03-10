@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Ingen opslag fundet",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
-	"Accessories_FieldSectionLabel": "Tilbehør"
+	"Accessories_FieldSectionLabel": "Tilbehør",
+	"Listing_EnhancedAppearance_Missing": "Dette opslag har endnu ikke unikke eller forbedrede billeder. Billedet, som vises her, kan variere lidt fra emnet i opslaget."
 }`);
     },
   },

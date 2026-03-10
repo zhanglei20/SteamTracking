@@ -1971,6 +1971,7 @@
             (0, _.jsx)(_._, {
               text: _,
               bShowErrorInfo: !1,
+              version: "0",
             }),
           ],
         });

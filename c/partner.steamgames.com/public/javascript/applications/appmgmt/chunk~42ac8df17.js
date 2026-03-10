@@ -262,8 +262,6 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
-        SalePageHiddenWarning: "_1YFdf1y95AkfWGA5KJ7xkq",
-        WarningText: "_2np-E5iWUyNp6j8VKY3Rti",
       };
     },
     chunkid: (module) => {
@@ -5255,28 +5253,37 @@
         const _ = await _.json();
         return 1 != _.success ? null : _;
       }
+      function _() {
+        return "undefined" != typeof window && "undefined" != typeof self
+          ? self.origin
+          : "ssr_server";
+      }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: _(_),
-          queryFn: async () => {
-            const _ = await (async function (_) {
-              const _ = _._.InitFromClanID(_);
-              return _(
-                `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${self.origin}`,
-              );
-            })(_);
-            if (_) {
-              _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
-                _.vanity_url &&
-                  _.setQueryData(_(_.vanity_url), _.clanAccountID);
-              const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
-              return _;
-            }
-            return null;
-          },
-          enabled: !!_,
-        });
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await (async function (_) {
+                  const _ = _._.InitFromClanID(_);
+                  return _(
+                    `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
+                  );
+                })(_);
+                if (_) {
+                  _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
+                    _.vanity_url &&
+                      _.setQueryData(_(_.vanity_url), _.clanAccountID);
+                  const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
+                  return _;
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_, _),
+        );
       }
       function _(_) {
         return ["clantoclaninfo", _];
@@ -5296,7 +5303,6 @@
               let _ = {
                 get_appids: !0,
                 _: _._.LANGUAGE,
-                origin: self.origin,
               };
               const _ = new URLSearchParams(_).toString(),
                 _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
@@ -8961,6 +8967,95 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            _: _,
+            strClassName: __webpack_require__,
+            bMinimizePlatforms: _,
+          } = _,
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        if (_) {
+          let _ =
+            _?.windows &&
+            (0, _.jsx)("span", {
+              title: _._.Localize("#Platform_Windows"),
+              children: (0, _.jsx)(_.Xz0, {
+                "aria-label": _._.Localize("#Platform_Windows"),
+              }),
+            });
+          return (
+            (0, _._)() && _?.mac
+              ? (_ = (0, _.jsx)("span", {
+                  title: _._.Localize("#Platform_Mac"),
+                  children: (0, _.jsx)(_.kPc, {
+                    "aria-label": _._.Localize("#Platform_Mac"),
+                  }),
+                }))
+              : ((0, _._)() || (0, _._)() || (0, _._)()) &&
+                _?.steamos_linux &&
+                (_ = (0, _.jsx)("span", {
+                  title: _._.Localize("#Platform_Linux"),
+                  children: (0, _.jsx)(_.Qte, {
+                    "aria-label": _._.Localize("#Platform_Linux"),
+                  }),
+                })),
+            _
+              ? (0, _.jsx)("span", {
+                  className: (0, _._)(_().CapsulePlatform, __webpack_require__),
+                  children: _,
+                })
+              : null
+          );
+        }
+        return (0, _.jsxs)("span", {
+          className: (0, _._)(_().CapsulePlatform, __webpack_require__),
+          children: [
+            _.windows &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Windows"),
+                children: (0, _.jsx)(_.Xz0, {
+                  "aria-label": _._.Localize("#Platform_Windows"),
+                }),
+              }),
+            _.mac &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Mac"),
+                children: (0, _.jsx)(_.kPc, {
+                  "aria-label": _._.Localize("#Platform_Mac"),
+                }),
+              }),
+            _.steamos_linux &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Linux"),
+                children: (0, _.jsx)(_.Qte, {
+                  "aria-label": _._.Localize("#Platform_Linux"),
+                }),
+              }),
+            _.vr_support?.vrhmd &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_VR"),
+                children: (0, _.jsx)(_._, {
+                  "aria-label": _._.Localize("#Platform_VR"),
+                }),
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -12618,7 +12713,6 @@
           let _ = {
               get_appids: !0,
               _: _._.LANGUAGE,
-              origin: self.origin,
             },
             _ =
               _._.STORE_BASE_URL +
@@ -16453,95 +16547,6 @@
           }),
         });
       };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _,
-            strClassName: __webpack_require__,
-            bMinimizePlatforms: _,
-          } = _,
-          { data: _ } = (0, _._)(_);
-        if (!_) return null;
-        if (_) {
-          let _ =
-            _?.windows &&
-            (0, _.jsx)("span", {
-              title: _._.Localize("#Platform_Windows"),
-              children: (0, _.jsx)(_.Xz0, {
-                "aria-label": _._.Localize("#Platform_Windows"),
-              }),
-            });
-          return (
-            (0, _._)() && _?.mac
-              ? (_ = (0, _.jsx)("span", {
-                  title: _._.Localize("#Platform_Mac"),
-                  children: (0, _.jsx)(_.kPc, {
-                    "aria-label": _._.Localize("#Platform_Mac"),
-                  }),
-                }))
-              : ((0, _._)() || (0, _._)() || (0, _._)()) &&
-                _?.steamos_linux &&
-                (_ = (0, _.jsx)("span", {
-                  title: _._.Localize("#Platform_Linux"),
-                  children: (0, _.jsx)(_.Qte, {
-                    "aria-label": _._.Localize("#Platform_Linux"),
-                  }),
-                })),
-            _
-              ? (0, _.jsx)("span", {
-                  className: (0, _._)(_().CapsulePlatform, __webpack_require__),
-                  children: _,
-                })
-              : null
-          );
-        }
-        return (0, _.jsxs)("span", {
-          className: (0, _._)(_().CapsulePlatform, __webpack_require__),
-          children: [
-            _.windows &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Windows"),
-                children: (0, _.jsx)(_.Xz0, {
-                  "aria-label": _._.Localize("#Platform_Windows"),
-                }),
-              }),
-            _.mac &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Mac"),
-                children: (0, _.jsx)(_.kPc, {
-                  "aria-label": _._.Localize("#Platform_Mac"),
-                }),
-              }),
-            _.steamos_linux &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Linux"),
-                children: (0, _.jsx)(_.Qte, {
-                  "aria-label": _._.Localize("#Platform_Linux"),
-                }),
-              }),
-            _.vr_support?.vrhmd &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_VR"),
-                children: (0, _.jsx)(_._, {
-                  "aria-label": _._.Localize("#Platform_VR"),
-                }),
-              }),
-          ],
-        });
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

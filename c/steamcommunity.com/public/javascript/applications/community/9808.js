@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "No Listings Found",
 	"AssetProperty_Range_MinPlaceholder": "Min",
 	"AssetProperty_Range_MaxPlaceholder": "Max",
-	"Accessories_FieldSectionLabel": "Accessories"
+	"Accessories_FieldSectionLabel": "Accessories",
+	"Listing_EnhancedAppearance_Missing": "This listing doesn't yet have unique or enhanced images. The image shown here may vary slightly from the item listed."
 }`);
     },
   },

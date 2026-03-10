@@ -33,6 +33,35 @@
         ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
       };
     },
+    65274: (e) => {
+      e.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    50122: (e) => {
+      e.exports = {
+        TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
+        Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
+        "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
+        "Underline-never": "_1gsOIvG4APXjSra-_55rdz",
+        "Underline-auto": "_2OgYmw12nDHXtyT9za9yzL",
+        "Underline-hover": "_3RITvcDUZq-hpnXRpiayfs",
+      };
+    },
     97824: (e) => {
       e.exports = {
         OpenInBannerContainer: "_1EQpm6hAsghyCST7W04m-E",
@@ -46,23 +75,23 @@
     },
     53965: (e, n, t) => {
       "use strict";
-      t.d(n, { $: () => _ });
+      t.d(n, { $: () => b });
       var i = t(7850),
         s = t(64238),
-        o = t.n(s),
-        r = t(69041),
+        r = t.n(s),
+        o = t(69041),
         a = t(75659),
         c = t(41324),
         l = t(73406),
         d = t(90534),
         h = t(53971);
-      function u(e) {
+      function p(e) {
         const {
           size: n = "3",
           loading: t = !0,
           children: s,
-          color: o,
-          variant: r,
+          color: r,
+          variant: o,
           ...a
         } = e;
         return s || !t
@@ -82,17 +111,17 @@
                     inset: "0",
                     justify: "center",
                     align: "center",
-                    children: (0, i.jsx)(p, { size: n, color: o, variant: r }),
+                    children: (0, i.jsx)(u, { size: n, color: r, variant: o }),
                   }),
               ],
             })
-          : (0, i.jsx)(p, { size: n, color: o, variant: r, ...a });
+          : (0, i.jsx)(u, { size: n, color: r, variant: o, ...a });
       }
-      function p(e) {
+      function u(e) {
         const { className: n, color: t, ...s } = (0, c.mz)(e, m);
         return (0, i.jsx)("div", {
           "data-accent-color": t,
-          className: o()(n, l.Spinner),
+          className: r()(n, l.Spinner),
           ...s,
         });
       }
@@ -101,25 +130,25 @@
         { prop: "size", responsive: !0, className: (e) => l[`Size-${e}`] },
         { prop: "variant", className: (e) => l[`Variant-${e}`] },
       ];
-      const b = [
+      const _ = [
           ...a.L,
-          { prop: "size", responsive: !0, className: (e) => r[`Size-${e}`] },
-          { prop: "variant", className: (e) => r[`Variant-${e}`] },
+          { prop: "size", responsive: !0, className: (e) => o[`Size-${e}`] },
+          { prop: "variant", className: (e) => o[`Variant-${e}`] },
           { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
           {
             prop: "width",
-            className: r.Width,
+            className: o.Width,
             cssProperty: "--width",
             responsive: !0,
           },
           {
             prop: "minWidth",
-            className: r.MinWidth,
+            className: o.MinWidth,
             cssProperty: "--min-width",
             responsive: !0,
           },
         ],
-        _ = function (e) {
+        b = function (e) {
           const {
               variant: n = "default",
               size: t = "2",
@@ -128,18 +157,18 @@
               loading: l,
               children: d,
               onClick: h,
-              icon: p,
+              icon: u,
               ...m
             } = e,
-            _ = l
-              ? (0, i.jsx)(u, {
+            b = l
+              ? (0, i.jsx)(p, {
                   size: t,
                   color: a,
                   variant: "bright",
                   children: d,
                 })
               : d,
-            C = l ? void 0 : h;
+            S = l ? void 0 : h;
           return (0, i.jsx)("button", {
             type: "button",
             ...(0, c.mz)(
@@ -149,29 +178,109 @@
                 size: t,
                 minWidth: s,
                 color: a,
-                className: o()(r.Button, p && r.Icon),
-                onClick: C,
+                className: r()(o.Button, u && o.Icon),
+                onClick: S,
               },
-              b,
+              _,
             ),
-            children: _,
+            children: b,
           });
         };
+    },
+    20187: (e, n, t) => {
+      "use strict";
+      t.d(n, { Ae: () => d, EY: () => l });
+      var i = t(7850),
+        s = t(41324),
+        r = t(75659),
+        o = t(64238),
+        a = t.n(o),
+        c = t(65274);
+      function l(e) {
+        const { as: n = "span", ref: t, className: r, ...o } = e,
+          l = n;
+        return (0, i.jsx)(l, {
+          ref: t,
+          ...(0, s.mz)({ ...o, className: a()(c.Text, r) }, d),
+        });
+      }
+      const d = [
+        ...[
+          {
+            prop: "weight",
+            responsive: !0,
+            className: c.TextWeight,
+            cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: c.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (e, n) => [
+              "--text-color",
+              (0, s.To)(e, n.contrast ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            cssProperty: (e, n) => [
+              "--text-color",
+              (0, s.To)(n.color ?? "text-body", e),
+            ],
+          },
+          { prop: "truncate", className: c.Truncate },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: c.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: c.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        ...r.L,
+        { prop: "size", responsive: !0, className: (e) => c[`TextSize-${e}`] },
+      ];
+    },
+    28491: (e, n, t) => {
+      "use strict";
+      t.d(n, { Y: () => a });
+      var i = t(7850),
+        s = t(20187),
+        r = t(41324),
+        o = t(50122);
+      function a(e) {
+        const { underline: n = "auto", ...t } = e;
+        return (0, i.jsx)("a", {
+          ...(0, r.mz)({ ...t, underline: n, className: o.TextLink }, c),
+        });
+      }
+      const c = [
+        ...s.Ae,
+        { prop: "underline", className: (e) => o[`Underline-${e}`] },
+      ];
     },
     84547: (e, n, t) => {
       "use strict";
       t.d(n, { E: () => d, l: () => h });
       var i = t(7850),
         s = t(78395),
-        o = t(62151),
-        r = t(8527),
+        r = t(62151),
+        o = t(8527),
         a = t(64753),
         c = t(21869);
       function l(e) {
         const { closeModal: n } = e;
         return (0, i.jsx)(s.o0, {
-          strTitle: o.F5.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: o.F5.Localize("#LoginRedirect_Dialog_Description"),
+          strTitle: r.F5.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: r.F5.Localize("#LoginRedirect_Dialog_Description"),
           closeModal: n,
           onOK: () => {
             h();
@@ -189,12 +298,12 @@
         };
       }
       function h() {
-        window.location.href = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        window.location.href = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
       }
     },
     62151: (e, n, t) => {
       "use strict";
-      t.d(n, { F5: () => o });
+      t.d(n, { F5: () => r });
       var i = t(42475);
       const s = {};
       (s.arabic = () => t.e(3695).then(t.t.bind(t, 93695, 19))),
@@ -227,13 +336,13 @@
         (s.turkish = () => t.e(4921).then(t.t.bind(t, 94921, 19))),
         (s.ukrainian = () => t.e(1667).then(t.t.bind(t, 11667, 19))),
         (s.vietnamese = () => t.e(4528).then(t.t.bind(t, 74528, 19)));
-      const o = (0, i.l)(async function (e) {
+      const r = (0, i.l)(async function (e) {
         if (s[e]) return s[e]();
       });
     },
     55672: (e, n, t) => {
       "use strict";
-      t.d(n, { Z: () => o });
+      t.d(n, { Z: () => r });
       var i = t(42475);
       const s = {};
       (s.arabic = () => t.e(3710).then(t.t.bind(t, 8476, 19))),
@@ -267,16 +376,16 @@
         (s.turkish = () => t.e(9152).then(t.t.bind(t, 34792, 19))),
         (s.ukrainian = () => t.e(2954).then(t.t.bind(t, 27246, 19))),
         (s.vietnamese = () => t.e(6149).then(t.t.bind(t, 59863, 19)));
-      const o = (0, i.l)(async function (e) {
+      const r = (0, i.l)(async function (e) {
         if (s[e]) return s[e]();
       });
     },
     62381: (e, n, t) => {
       "use strict";
-      t.d(n, { W: () => r });
+      t.d(n, { W: () => o });
       var i = t(30470);
       let s = { success: !0, result: 1 };
-      class o {
+      class r {
         m_mapWaitingCallbacks = new Map();
         m_socket;
         m_iCallSeq = 1;
@@ -390,8 +499,8 @@
           );
         }
       }
-      let r = new (class {
-        m_connection = new o();
+      let o = new (class {
+        m_connection = new r();
         FailureResult(e = 2) {
           let n = { success: !1, result: e };
           return (
@@ -476,25 +585,25 @@
             .catch(() => this.FailureResult());
         }
       })();
-      window.ClientConnectionAPI = r;
+      window.ClientConnectionAPI = o;
     },
     51706: (e, n, t) => {
       "use strict";
       t.d(n, {
         mt: () => l,
         o0: () => h.o0,
-        eV: () => u.eV,
+        eV: () => p.eV,
         KG: () => h.KG,
         Ee: () => h.Ee,
         x_: () => a.x_,
         of: () => d,
         pY: () => h.pY,
-        EN: () => r.E,
+        EN: () => o.E,
       });
       var i = t(7850),
         s = t(90626),
-        o = t(53835),
-        r = t(21869),
+        r = t(53835),
+        o = t(21869),
         a = t(2654);
       t(72739),
         t(48902),
@@ -522,17 +631,17 @@
             children: d,
             ...h
           } = e,
-          { headerId: u, context: p } = c({ labelledBy: e["aria-labelledby"] });
-        return (0, i.jsx)(o.t6.Provider, {
-          value: p,
-          children: (0, i.jsx)(r.E, {
+          { headerId: p, context: u } = c({ labelledBy: e["aria-labelledby"] });
+        return (0, i.jsx)(r.t6.Provider, {
+          value: u,
+          children: (0, i.jsx)(o.E, {
             active: n,
             children: (0, i.jsx)(a.x_, {
               onEscKeypress: t,
               className: l,
-              children: (0, i.jsx)(o.UC, {
+              children: (0, i.jsx)(r.UC, {
                 role: "dialog",
-                "aria-labelledby": u,
+                "aria-labelledby": p,
                 className: s,
                 ...h,
                 children: d,
@@ -543,35 +652,35 @@
       }
       function d(e) {
         const { className: n, children: t } = e;
-        return (0, i.jsx)(r.E, {
+        return (0, i.jsx)(o.E, {
           active: !0,
           children: (0, i.jsx)("div", { className: n, children: t }),
         });
       }
       t(81194);
       var h = t(78395),
-        u = t(10411);
+        p = t(10411);
       t(76222);
     },
     71009: (e, n, t) => {
       "use strict";
       t.r(n),
         t.d(n, {
-          OpenInDesktopClient: () => u,
+          OpenInDesktopClient: () => p,
           default: () => m,
-          useOpenWebInSteamClient: () => p,
+          useOpenWebInSteamClient: () => u,
         });
       var i = t(7850),
         s = t(90626),
-        o = t(30470),
-        r = t(84811),
+        r = t(30470),
+        o = t(84811),
         a = t(62381),
         c = t(97824),
         l = t(78327),
         d = t(2627),
         h = t(61859);
-      const u = (0, r.Nr)(function (e) {
-        const { fnOpenInSteamClient: n } = p();
+      const p = (0, o.Nr)(function (e) {
+        const { fnOpenInSteamClient: n } = u();
         return (0, i.jsx)("div", {
           className: c.OpenInBannerContainer,
           children: (0, i.jsxs)("div", {
@@ -604,12 +713,12 @@
           }),
         });
       });
-      function p() {
+      function u() {
         const [e, n] = s.useState(22);
         s.useEffect(() => {
-          o.TS.IN_CLIENT ||
-            o.TS.IN_MOBILE ||
-            o.TS.IN_MOBILE_WEBVIEW ||
+          r.TS.IN_CLIENT ||
+            r.TS.IN_MOBILE ||
+            r.TS.IN_MOBILE_WEBVIEW ||
             a.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
               n(e ? 1 : 2);
             });
@@ -627,60 +736,75 @@
         }, [e]);
         return { eClientConnectedState: e, fnOpenInSteamClient: t };
       }
-      const m = u;
+      const m = p;
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => m, default: () => b });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => b, default: () => S });
       var i = t(7850),
-        s = t(84811),
-        o = t(51706),
-        r = t(71009),
-        a = t(61859),
-        c = t(53965),
-        l = t(55672),
-        d = t(62151),
-        h = t(84547),
-        u = t(84933),
-        p = t(32754);
-      const m = (0, s.Nr)(function (e) {
+        s = t(53965),
+        r = t(28491),
+        o = t(62151),
+        a = t(84547),
+        c = t(55672),
+        l = t(84811),
+        d = t(51706),
+        h = t(71009),
+        p = t(32754),
+        u = t(61859),
+        m = t(84933),
+        _ = t(30470);
+      const b = (0, l.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
-            r.useOpenWebInSteamClient)(),
-            s = 1 == t,
-            [m, b, _] = (0, u.uD)();
+            h.useOpenWebInSteamClient)(),
+            l = 1 == t,
+            [b, S, C] = (0, m.uD)();
           return (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)(p.Gq, {
-                toolTipContent: l.Z.Localize("#AddToWishlist_ttip"),
-                children: (0, i.jsx)(c.$, {
-                  onClick: b,
-                  children: (0, a.we)("#AddToYourWishlist"),
+                toolTipContent: c.Z.Localize("#AddToWishlist_ttip"),
+                children: (0, i.jsx)(s.$, {
+                  onClick: S,
+                  children: (0, u.we)("#AddToYourWishlist"),
                 }),
               }),
-              (0, i.jsx)(o.EN, {
-                active: m,
-                children: (0, i.jsx)(o.o0, {
-                  strTitle: (0, a.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                  strDescription: s
-                    ? (0, a.we)("#Wishlist_NotSignedIn")
-                    : d.F5.Localize("#LoginRedirect_Dialog_Description"),
-                  closeModal: _,
-                  onOK: h.l,
-                  strOKButtonText: l.Z.Localize("#Login_SignIn"),
-                  children:
-                    s &&
-                    (0, i.jsx)(c.$, {
+              (0, i.jsx)(d.EN, {
+                active: b,
+                children: (0, i.jsxs)(d.o0, {
+                  strTitle: (0, u.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                  strDescription: o.F5.Localize("#Wishlist_NotSignedIn"),
+                  closeModal: C,
+                  bAlertDialog: !0,
+                  children: [
+                    (0, i.jsx)("br", {}),
+                    (0, i.jsx)("br", {}),
+                    (0, i.jsx)(s.$, {
                       onClick: n,
-                      children: (0, a.we)(
+                      children: (0, u.we)(
                         "#OpenInDesktopAppBanner_OpenAppButton",
                       ),
                     }),
+                    (0, i.jsx)(s.$, {
+                      onClick: a.l,
+                      children: c.Z.Localize("#Login_SignIn"),
+                    }),
+                    !l &&
+                      (0, i.jsxs)(i.Fragment, {
+                        children: [
+                          (0, i.jsx)("br", {}),
+                          (0, i.jsx)(r.Y, {
+                            href: `${_.TS.STORE_BASE_URL}about`,
+                            children: (0, u.we)("#Button_InstallSteam"),
+                          }),
+                        ],
+                      }),
+                  ],
                 }),
               }),
             ],
           });
         }),
-        b = m;
+        S = b;
     },
   },
 ]);

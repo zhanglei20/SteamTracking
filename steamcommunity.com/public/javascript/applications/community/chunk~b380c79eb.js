@@ -272,8 +272,8 @@
       r.d(s, { j: () => m });
       var o = r(7850),
         t = r(64238),
-        p = r.n(t),
-        n = r(38878),
+        n = r.n(t),
+        p = r(38878),
         i = r(90534),
         a = r(83392),
         l = r(75659),
@@ -303,14 +303,14 @@
               {
                 ..._,
                 radius: u,
-                className: p()(
-                  n.ControlBox,
-                  t && !m && n.Focusable,
-                  i && !m && n.Hoverable,
-                  a && !m && n.Clickable,
-                  m && n.Disabled,
-                  n[`Variant-${s}`],
-                  n[`Size-${r}`],
+                className: n()(
+                  p.ControlBox,
+                  t && !m && p.Focusable,
+                  i && !m && p.Hoverable,
+                  a && !m && p.Clickable,
+                  m && p.Disabled,
+                  p[`Variant-${s}`],
+                  p[`Size-${r}`],
                   d,
                 ),
               },
@@ -334,8 +334,8 @@
       r.d(s, { I: () => _ });
       var o = r(7850),
         t = r(90626),
-        p = r(61023),
-        n = r(90534),
+        n = r(61023),
+        p = r(90534),
         i = r(81393),
         a = r(64238),
         l = r.n(a),
@@ -352,7 +352,7 @@
         });
       }
       function u(e) {
-        return (0, o.jsx)(n.az, { className: c.Indicator, radius: e.radius });
+        return (0, o.jsx)(p.az, { className: c.Indicator, radius: e.radius });
       }
       function f(e, s) {
         const r = e.compareDocumentPosition(s);
@@ -364,29 +364,29 @@
       }
       (_.Item = function (e) {
         const { value: s, children: r } = e,
-          p = (0, t.useContext)(d),
-          [n, i] = (0, t.useState)(),
-          { register: a, unregister: _ } = p || {};
+          n = (0, t.useContext)(d),
+          [p, i] = (0, t.useState)(),
+          { register: a, unregister: _ } = n || {};
         if (
           ((0, t.useEffect)(
-            () => (n && a && _ ? (a(n, s), () => _(n, s)) : () => {}),
-            [a, _, s, n],
+            () => (p && a && _ ? (a(p, s), () => _(p, s)) : () => {}),
+            [a, _, s, p],
           ),
-          !p)
+          !n)
         )
           return null;
-        const { value: u, onValueChange: f, radius: g, size: v } = p,
+        const { value: u, onValueChange: f, radius: v, size: g } = n,
           y = s === u,
           x = y ? void 0 : () => f(s),
           N = void 0 === r ? s : r;
         return (0, o.jsx)(m.s, {
           justify: "center",
           align: "center",
-          radius: g,
+          radius: v,
           ref: i,
           onClick: x,
           "data-selected": y ? "true" : "false",
-          className: l()(c.Item, v && c[`Size-${v}`]),
+          className: l()(c.Item, g && c[`Size-${g}`]),
           children: N,
         });
       }),
@@ -394,16 +394,16 @@
           const {
               variant: s = "default",
               radius: r,
-              size: n,
+              size: p,
               children: a,
               value: m,
               onValueChange: _,
             } = e,
-            [g, v] = (0, t.useState)({}),
-            y = (0, t.useCallback)((e, s) => v((r) => ({ ...r, [s]: e })), []),
+            [v, g] = (0, t.useState)({}),
+            y = (0, t.useCallback)((e, s) => g((r) => ({ ...r, [s]: e })), []),
             x = (0, t.useCallback)(
               (e, s) =>
-                v((r) => {
+                g((r) => {
                   const o = { ...r };
                   return o[s] === e && delete o[s], o;
                 }),
@@ -416,17 +416,17 @@
                 register: y,
                 unregister: x,
                 radius: r,
-                size: n,
+                size: p,
               }),
-              [m, _, y, x, r, n],
+              [m, _, y, x, r, p],
             );
-          return (0, o.jsx)(p.j, {
+          return (0, o.jsx)(n.j, {
             clickable: !1,
             hoverable: !1,
             focusable: !1,
             variant: s,
             radius: r,
-            size: n,
+            size: p,
             className: l()(c.SegmentedControlBox, c[`Variant-${s}`]),
             tabIndex: 0,
             onKeyDown: (e) => {
@@ -441,11 +441,11 @@
                   s = -1;
               }
               if (s) {
-                const r = Array.from(Object.values(g)).sort(f);
+                const r = Array.from(Object.values(v)).sort(f);
                 let o;
                 if (null === m) o = s > 0 ? 0 : r.length - 1;
                 else {
-                  const e = g[m],
+                  const e = v[m],
                     t = r.findIndex((s) => s === e);
                   (0, i.wT)(
                     "number" == typeof t,
@@ -454,10 +454,10 @@
                     (o = t + s);
                 }
                 const t = r[o < 0 ? r.length + o : o % r.length],
-                  p = Object.keys(g).find((e) => g[e] === t);
-                "string" != typeof p
+                  n = Object.keys(v).find((e) => v[e] === t);
+                "string" != typeof n
                   ? console.error("Could not find next segmeneted value")
-                  : (_(p), e.stopPropagation(), e.preventDefault());
+                  : (_(n), e.stopPropagation(), e.preventDefault());
               }
             },
             children: (0, o.jsx)(d.Provider, {
@@ -475,19 +475,19 @@
       r.d(s, { A4: () => m, az: () => l });
       var o = r(7850),
         t = r(64238),
-        p = r.n(t),
-        n = r(11526),
+        n = r.n(t),
+        p = r(11526),
         i = r(75659),
         a = r(44041);
       function l(e) {
         const { as: s = "div", ref: r, ...t } = e,
-          i = (0, n.mz)({ ...t, className: p()(a.Box, e.className) }, c),
+          i = (0, p.mz)({ ...t, className: n()(a.Box, e.className) }, c),
           l = s;
         return (0, o.jsx)(l, { ref: r, ...i });
       }
       const c = i.h;
       function m(e) {
-        return (0, n.Ef)(e, i.L);
+        return (0, p.Ef)(e, i.L);
       }
     },
     83392: (e, s, r) => {
@@ -495,19 +495,19 @@
       r.d(s, { s: () => c });
       var o = r(7850),
         t = r(39479),
-        p = r(11526),
-        n = r(75659),
+        n = r(11526),
+        p = r(75659),
         i = r(64238),
         a = r.n(i),
         l = r(68875);
       function c(e) {
-        const { as: s = "div", ref: r, ...n } = e,
-          i = (0, p.mz)({ ...n, className: a()(e.className, l.Flex) }, m),
+        const { as: s = "div", ref: r, ...p } = e,
+          i = (0, n.mz)({ ...p, className: a()(e.className, l.Flex) }, m),
           c = s;
         return (0, o.jsx)(t.J, { children: (0, o.jsx)(c, { ref: r, ...i }) });
       }
       const m = [
-        ...n.h,
+        ...p.h,
         {
           prop: "direction",
           responsive: !0,
@@ -558,10 +558,10 @@
     },
     75659: (e, s, r) => {
       "use strict";
-      r.d(s, { L: () => p, h: () => n });
+      r.d(s, { L: () => n, h: () => p });
       var o = r(11526),
         t = r(88122);
-      const p = [
+      const n = [
           { prop: "margin", responsive: !0, className: (e) => t[`m-${e}`] },
           { prop: "marginX", responsive: !0, className: (e) => t[`mx-${e}`] },
           { prop: "marginY", responsive: !0, className: (e) => t[`my-${e}`] },
@@ -588,8 +588,8 @@
           },
           { prop: "marginEnd", responsive: !0, className: (e) => t[`me-${e}`] },
         ],
-        n = [
-          ...p,
+        p = [
+          ...n,
           { prop: "padding", responsive: !0, className: (e) => t[`p-${e}`] },
           { prop: "paddingX", responsive: !0, className: (e) => t[`px-${e}`] },
           { prop: "paddingY", responsive: !0, className: (e) => t[`py-${e}`] },
@@ -813,15 +813,16 @@
     11526: (e, s, r) => {
       "use strict";
       r.d(s, {
-        Ef: () => n,
+        Ef: () => p,
         Fd: () => l,
         ti: () => a,
         To: () => c,
+        w7: () => m,
         mz: () => i,
       });
-      var o = r(43186),
+      var o = r(96678),
         t = r(55348);
-      const p = {
+      const n = {
         0: !0,
         1: !0,
         2: !0,
@@ -833,7 +834,7 @@
         8: !0,
         9: !0,
       };
-      function n(e, s) {
+      function p(e, s) {
         const r = { remaining: { ...e }, extracted: {} };
         for (const e of s) {
           const s = e.prop;
@@ -845,44 +846,44 @@
       function i(e, s) {
         return (function (e, s, r) {
           const o = [],
-            p = {},
+            n = {},
             i = {},
-            { extracted: a, remaining: l } = n(e, s);
-          for (const n of s) {
-            if (!(n.prop in a)) continue;
-            let s = a[n.prop];
+            { extracted: a, remaining: l } = p(e, s);
+          for (const p of s) {
+            if (!(p.prop in a)) continue;
+            let s = a[p.prop];
             if (void 0 !== s) {
               if (
-                (n.responsive && (s = (0, t.I)(s, r.formFactor)), n.className)
+                (p.responsive && (s = (0, t.I)(s, r.formFactor)), p.className)
               ) {
                 if (
-                  !n.cssProperty &&
-                  !n.dataProperty &&
-                  "string" == typeof n.className &&
+                  !p.cssProperty &&
+                  !p.dataProperty &&
+                  "string" == typeof p.className &&
                   !s
                 )
                   continue;
                 const e =
-                  "function" == typeof n.className
-                    ? n.className(s)
-                    : n.className;
+                  "function" == typeof p.className
+                    ? p.className(s)
+                    : p.className;
                 o.push(e);
               }
-              if (n.cssProperty)
-                if ("function" == typeof n.cssProperty) {
-                  const r = n.cssProperty(s, e);
+              if (p.cssProperty)
+                if ("function" == typeof p.cssProperty) {
+                  const r = p.cssProperty(s, e);
                   if (r.length && Array.isArray(r[0]))
-                    r.forEach(([e, s]) => (p[e] = s));
+                    r.forEach(([e, s]) => (n[e] = s));
                   else {
                     const e = r;
-                    p[e[0]] = e[1];
+                    n[e[0]] = e[1];
                   }
-                } else p[n.cssProperty] = s;
-              if (n.dataProperty)
-                if ("function" == typeof n.dataProperty) {
-                  const [e, r] = n.dataProperty(s);
+                } else n[p.cssProperty] = s;
+              if (p.dataProperty)
+                if ("function" == typeof p.dataProperty) {
+                  const [e, r] = p.dataProperty(s);
                   i[`data-${e}`] = r;
-                } else i[`data-${n.dataProperty}`] = s;
+                } else i[`data-${p.dataProperty}`] = s;
             }
           }
           return (
@@ -892,14 +893,14 @@
             "style" in l &&
               l.style &&
               "object" == typeof l.style &&
-              Object.assign(p, l.style),
-            { ...i, ...l, className: o.join(" "), style: p }
+              Object.assign(n, l.style),
+            { ...i, ...l, className: o.join(" "), style: n }
           );
         })(e, s, { formFactor: (0, o.xC)() });
       }
       function a(e) {
         return (function (e) {
-          return !!p[e];
+          return !!n[e];
         })(e)
           ? `var(--spacing-${e})`
           : e;
@@ -912,19 +913,22 @@
       function c(e, s) {
         return e.startsWith("text") ? `var(--color-${e}-${s})` : l(e);
       }
+      function m(e) {
+        return e.startsWith("text") ? `var(--color-${e})` : l(e);
+      }
     },
     55348: (e, s, r) => {
       "use strict";
-      r.d(s, { I: () => p, n: () => n });
-      var o = r(43186);
+      r.d(s, { I: () => n, n: () => p });
+      var o = r(96678);
       const t = o.IE.reduce((e, s, r) => ((e[s] = r), e), {});
-      function p(e, s) {
+      function n(e, s) {
         if ("object" != typeof e) return e;
         for (let r = t[s]; r >= 0; r--) if (o.IE[r] in e) return e[o.IE[r]];
         return e.initial;
       }
-      function n(e) {
-        return p(e, (0, o.xC)());
+      function p(e) {
+        return n(e, (0, o.xC)());
       }
     },
     39479: (e, s, r) => {
@@ -932,13 +936,13 @@
       r.d(s, { J: () => a });
       var o = r(7850),
         t = r(8871),
-        p = r(90626),
-        n = r(7745),
+        n = r(90626),
+        p = r(7745),
         i = r(90665);
       function a(e) {
         var s;
         const { children: r, "flow-children": a, ...l } = e;
-        a && (l.layout = (0, n.O)(a));
+        a && (l.layout = (0, p.O)(a));
         const { ref: c, node: m } = (0, i.qp)(l),
           d = (0, t.Ue)(
             c,
@@ -946,7 +950,7 @@
           );
         return (0, o.jsx)(i.TJ.Provider, {
           value: m,
-          children: p.cloneElement(r, { ...r.props, ref: d }),
+          children: n.cloneElement(r, { ...r.props, ref: d }),
         });
       }
     },

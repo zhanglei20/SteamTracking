@@ -1427,17 +1427,15 @@
         },
       };
       function _(_) {
-        return _
-          ? "string" == typeof _
-            ? _
-            : "number" == typeof _
-              ? _.toString()
-              : (console.error(
-                  "Could not use default option labeler on Select option value. Custom labeler requried",
-                  _,
-                ),
-                "")
-          : "";
+        return "string" == typeof _
+          ? _
+          : "number" == typeof _
+            ? _.toString()
+            : (console.error(
+                "Could not use default option labeler on Select option value. Custom labeler requried",
+                _,
+              ),
+              "");
       }
       const _ = Object.assign(function (_) {
         const {

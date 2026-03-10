@@ -770,13 +770,142 @@
         (0, _._)([_._], _.prototype, "OnKeyUp", null),
         (0, _._)([_._], _.prototype, "Reset", null);
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_[(_.Debug = 0)] = "Debug"),
-          (_[(_.Info = 1)] = "Info"),
-          (_[(_.Warning = 2)] = "Warning"),
-          (_[(_.Error = 3)] = "Error");
-      })(_ || (_ = {}));
+      class _ {
+        SyncStore(_) {
+          return this.Subscribe(_).Unsubscribe;
+        }
+        GetValue() {
+          return this.Value;
+        }
+      }
+      (0, _._)([_._], _.prototype, "SyncStore", null),
+        (0, _._)([_._], _.prototype, "GetValue", null);
+      class _ extends _ {}
+      class _ extends _ {
+        m_callbacks;
+        m_currentValue;
+        m_fnEquals;
+        constructor(_, _) {
+          super(),
+            (this.m_callbacks = new _._()),
+            (this.m_currentValue = _),
+            (this.m_fnEquals = _);
+        }
+        Set(_) {
+          if (this.m_fnEquals) {
+            if (this.m_fnEquals(this.m_currentValue, _)) return !1;
+          } else if (this.m_currentValue === _) return !1;
+          return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
+        }
+        get Value() {
+          return this.m_currentValue;
+        }
+        Subscribe(_) {
+          return {
+            Unsubscribe: this.m_callbacks.Register(_).Unregister,
+          };
+        }
+        get SubscriberCount() {
+          return this.m_callbacks.CountRegistered();
+        }
+      }
+      function _(_, _) {
+        return new _(_, _);
+      }
+      class _ extends _ {
+        m_fnMap;
+        m_originalSubscribableValue;
+        m_mappedSubscribableValue;
+        m_bMappedValueStale = !1;
+        constructor(_, _, _) {
+          super(),
+            (this.m_originalSubscribableValue = _),
+            (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
+            (this.m_fnMap = _),
+            this.m_originalSubscribableValue.Subscribe(() => {
+              this.m_mappedSubscribableValue.SubscriberCount > 0
+                ? this.UpdateMappedValue()
+                : (this.m_bMappedValueStale = !0);
+            });
+        }
+        get Value() {
+          return (
+            this.m_bMappedValueStale && this.UpdateMappedValue(),
+            this.m_mappedSubscribableValue.Value
+          );
+        }
+        Subscribe(_) {
+          return this.m_mappedSubscribableValue.Subscribe(_);
+        }
+        UpdateMappedValue() {
+          this.m_mappedSubscribableValue.Set(
+            this.m_fnMap(this.m_originalSubscribableValue.Value),
+          ),
+            (this.m_bMappedValueStale = !1);
+        }
+      }
+      class _ {
+        m_schTimer;
+        m_fnCallback;
+        m_fnOnCancel;
+        Schedule(_, _) {
+          this.IsScheduled() && this.Cancel(),
+            (this.m_fnCallback = _),
+            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
+        }
+        AsyncSchedule(_, _) {
+          return new Promise((_, _) => {
+            this.Schedule(_, () => {
+              _(), __webpack_require__();
+            }),
+              (this.m_fnOnCancel = _);
+          });
+        }
+        IsScheduled() {
+          return void 0 !== this.m_schTimer;
+        }
+        Cancel() {
+          if (this.m_schTimer) {
+            const _ = this.m_fnOnCancel;
+            clearTimeout(this.m_schTimer), this.Reset(), _ && _();
+          }
+        }
+        Reset() {
+          (this.m_schTimer = void 0),
+            (this.m_fnCallback = void 0),
+            (this.m_fnOnCancel = void 0);
+        }
+        ScheduledInternal() {
+          const _ = this.m_fnCallback;
+          this.Reset(), _?.();
+        }
+      }
+      (0, _._)([_._], _.prototype, "ScheduledInternal", null);
+      class _ {
+        m_vecCallbacks = [];
+        Push(_) {
+          this.m_vecCallbacks.push(_);
+        }
+        PushArrayRemove(_, _) {
+          this.m_vecCallbacks.push(() => _._(_, _));
+        }
+        Unregister() {
+          for (const _ of this.m_vecCallbacks) _();
+          this.m_vecCallbacks = [];
+        }
+        GetUnregisterFunc() {
+          return this.Unregister;
+        }
+      }
+      (0, _._)([_._], _.prototype, "Unregister", null),
+        (function (_) {
+          (_[(_.Debug = 0)] = "Debug"),
+            (_[(_.Info = 1)] = "Info"),
+            (_[(_.Warning = 2)] = "Warning"),
+            (_[(_.Error = 3)] = "Error");
+        })(_ || (_ = {}));
       class _ {
         m_sName;
         m_fnIdGenerator = void 0;
@@ -1035,135 +1164,6 @@
             : console.assert(!!_, _, ...__webpack_require__)
           : _ || console.warn(_, ...__webpack_require__);
       }
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        SyncStore(_) {
-          return this.Subscribe(_).Unsubscribe;
-        }
-        GetValue() {
-          return this.Value;
-        }
-      }
-      (0, _._)([_._], _.prototype, "SyncStore", null),
-        (0, _._)([_._], _.prototype, "GetValue", null);
-      class _ extends _ {}
-      class _ extends _ {
-        m_callbacks;
-        m_currentValue;
-        m_fnEquals;
-        constructor(_, _) {
-          super(),
-            (this.m_callbacks = new _._()),
-            (this.m_currentValue = _),
-            (this.m_fnEquals = _);
-        }
-        Set(_) {
-          if (this.m_fnEquals) {
-            if (this.m_fnEquals(this.m_currentValue, _)) return !1;
-          } else if (this.m_currentValue === _) return !1;
-          return (this.m_currentValue = _), this.m_callbacks.Dispatch(_), !0;
-        }
-        get Value() {
-          return this.m_currentValue;
-        }
-        Subscribe(_) {
-          return {
-            Unsubscribe: this.m_callbacks.Register(_).Unregister,
-          };
-        }
-        get SubscriberCount() {
-          return this.m_callbacks.CountRegistered();
-        }
-      }
-      function _(_, _) {
-        return new _(_, _);
-      }
-      class _ extends _ {
-        m_fnMap;
-        m_originalSubscribableValue;
-        m_mappedSubscribableValue;
-        m_bMappedValueStale = !1;
-        constructor(_, _, _) {
-          super(),
-            (this.m_originalSubscribableValue = _),
-            (this.m_mappedSubscribableValue = new _(_(_.Value), _)),
-            (this.m_fnMap = _),
-            this.m_originalSubscribableValue.Subscribe(() => {
-              this.m_mappedSubscribableValue.SubscriberCount > 0
-                ? this.UpdateMappedValue()
-                : (this.m_bMappedValueStale = !0);
-            });
-        }
-        get Value() {
-          return (
-            this.m_bMappedValueStale && this.UpdateMappedValue(),
-            this.m_mappedSubscribableValue.Value
-          );
-        }
-        Subscribe(_) {
-          return this.m_mappedSubscribableValue.Subscribe(_);
-        }
-        UpdateMappedValue() {
-          this.m_mappedSubscribableValue.Set(
-            this.m_fnMap(this.m_originalSubscribableValue.Value),
-          ),
-            (this.m_bMappedValueStale = !1);
-        }
-      }
-      class _ {
-        m_schTimer;
-        m_fnCallback;
-        m_fnOnCancel;
-        Schedule(_, _) {
-          this.IsScheduled() && this.Cancel(),
-            (this.m_fnCallback = _),
-            (this.m_schTimer = window.setTimeout(this.ScheduledInternal, _));
-        }
-        AsyncSchedule(_, _) {
-          return new Promise((_, _) => {
-            this.Schedule(_, () => {
-              _(), __webpack_require__();
-            }),
-              (this.m_fnOnCancel = _);
-          });
-        }
-        IsScheduled() {
-          return void 0 !== this.m_schTimer;
-        }
-        Cancel() {
-          if (this.m_schTimer) {
-            const _ = this.m_fnOnCancel;
-            clearTimeout(this.m_schTimer), this.Reset(), _ && _();
-          }
-        }
-        Reset() {
-          (this.m_schTimer = void 0),
-            (this.m_fnCallback = void 0),
-            (this.m_fnOnCancel = void 0);
-        }
-        ScheduledInternal() {
-          const _ = this.m_fnCallback;
-          this.Reset(), _?.();
-        }
-      }
-      (0, _._)([_._], _.prototype, "ScheduledInternal", null);
-      class _ {
-        m_vecCallbacks = [];
-        Push(_) {
-          this.m_vecCallbacks.push(_);
-        }
-        PushArrayRemove(_, _) {
-          this.m_vecCallbacks.push(() => _._(_, _));
-        }
-        Unregister() {
-          for (const _ of this.m_vecCallbacks) _();
-          this.m_vecCallbacks = [];
-        }
-        GetUnregisterFunc() {
-          return this.Unregister;
-        }
-      }
-      (0, _._)([_._], _.prototype, "Unregister", null);
       const _ = new _("FocusHistory"),
         _ = _.Debug;
       class _ {
@@ -1762,14 +1762,16 @@
           _ = _;
         for (; _; ) {
           if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
-            if ("fixed" === window.getComputedStyle(_).position) break;
+            const _ = window.getComputedStyle(_);
+            if ("fixed" === _.position || "sticky" === _.position) break;
           }
           _ = _.offsetParent;
         }
         for (_ = _?.parentElement; _; ) {
           const { scrollTop: _, scrollLeft: _ } = _(_);
           if (((_ -= _), (_ -= _), "ownerDocument" in _)) {
-            if ("fixed" === window.getComputedStyle(_).position) break;
+            const _ = window.getComputedStyle(_);
+            if ("fixed" === _.position || "sticky" === _.position) break;
           }
           _ = _.parentElement;
         }
@@ -2234,7 +2236,11 @@
             }
           return this.m_Parent
             ? this.m_Parent.BuildConsolidatedActionDescriptionMap(_)
-            : _;
+            : this.m_Tree.GetParentEmbeddedNavTree()
+              ? this.m_Tree
+                  .GetParentEmbeddedNavTree()
+                  .Root.BuildConsolidatedActionDescriptionMap(_)
+              : _;
         }
         AddChild(_) {
           this.m_rgChildren.push(_),
@@ -3068,7 +3074,7 @@
         _ = new _("GamepadEvents").Debug;
       class _ extends _ {
         m_wrappedTree;
-        m_rgCallbackRegistrations = [];
+        m_rgCallbackRegistrations = new _();
         constructor(_, _) {
           super(_.m_Tree, _, _.m_FocusRing),
             this.SetProperties({
@@ -3081,17 +3087,21 @@
           _ && this.BindTree(_);
         }
         OnUnmount() {
-          for (const _ of this.m_rgCallbackRegistrations) _.Unregister();
-          this.m_rgCallbackRegistrations = [];
+          this.m_rgCallbackRegistrations.Unregister();
         }
         BindTree(_) {
           _.GetParentEmbeddedNavTree() &&
             ((this.m_wrappedTree = _),
-            this.m_rgCallbackRegistrations.push(
-              _.OnActivateCallbacks.Register(this.OnWrappedTreeActivated),
+            this.m_rgCallbackRegistrations.Push(
+              _.OnActivateCallbacks.Register(this.OnWrappedTreeActivated)
+                .Unregister,
             ),
             _.BIsActive() && this.OnWrappedTreeActivated(),
-            _.SetOnUnhandledButtonCallback(this.OnWrappedTreeUnhandledButton));
+            this.m_rgCallbackRegistrations.Push(
+              _.RegisterOnUnhandledButtonCallback(
+                this.OnWrappedTreeUnhandledButton,
+              ),
+            ));
         }
         OnWrappedTreeActivated() {
           _(
@@ -3242,7 +3252,8 @@
         m_onChildTreesChanged = new _._();
         m_Properties;
         m_onGlobalButtonDown;
-        m_onUnhandledButton;
+        m_rgOnUnhandledButton = [];
+        m_rgGlobalButtonHandlers = [];
         constructor(_, _, _, _, _) {
           (this.m_Controller = _),
             (this.m_context = _),
@@ -3331,11 +3342,15 @@
           (this.m_tsLastActivated = performance.now()),
             this.m_onActivateCallbacks.Dispatch(this, _),
             this.m_onActiveFocusStateChangedCallbacks.Dispatch(!0, this);
+          for (let _ = this.m_lastFocusNode; _; _ = _.Parent)
+            _.SetFocusWithin(!0);
         }
         OnDeactivate(_) {
           this.m_onDeactivateCallbacks.Dispatch(this, _),
             this.m_onActiveFocusStateChangedCallbacks.Dispatch(!1, this),
             (this.m_bWasActiveForLastFocusChange = !1);
+          for (let _ = this.m_lastFocusNode; _; _ = _.Parent)
+            _.SetFocusWithin(!1);
         }
         OnContextActiveStateChanged(_) {
           this.m_onActiveFocusStateChangedCallbacks.Dispatch(_, this);
@@ -3417,8 +3432,38 @@
             ? this.m_ParentNavTree
             : void 0;
         }
-        SetOnUnhandledButtonCallback(_) {
-          this.m_onUnhandledButton = _;
+        RegisterOnUnhandledButtonCallback(_) {
+          return (
+            this.m_rgOnUnhandledButton.push(_),
+            () => {
+              _._(this.m_rgOnUnhandledButton, _);
+            }
+          );
+        }
+        RegisterGlobalButtonHandler(_, _, _) {
+          const _ = {
+            button: _,
+            fnCallback: _,
+            description: _,
+          };
+          return (
+            this.m_rgGlobalButtonHandlers.push(_),
+            this.UpdateRootActionDescriptionMap(),
+            () => {
+              _._(this.m_rgGlobalButtonHandlers, _),
+                this.UpdateRootActionDescriptionMap();
+            }
+          );
+        }
+        UpdateRootActionDescriptionMap() {
+          const _ = {};
+          for (const { button: _, description: __webpack_require__ } of this
+            .m_rgGlobalButtonHandlers)
+            __webpack_require__ && (_[_] = __webpack_require__);
+          this.m_Root.SetProperties({
+            ...this.m_Root.m_Properties,
+            actionDescriptionMap: _,
+          });
         }
         SetOnGlobalButtonDown(_) {
           this.m_onGlobalButtonDown = _;
@@ -3431,6 +3476,14 @@
             )
               return !1;
           return this.HandleButtonDownEventAsLogicalEvent(_);
+        }
+        TryRootButtonListeners(_) {
+          for (const { button: _, fnCallback: __webpack_require__ } of this
+            .m_rgGlobalButtonHandlers)
+            if (_ == _.detail.button && !1 !== __webpack_require__(_))
+              return !0;
+          for (const _ of this.m_rgOnUnhandledButton) if (_(_)) return !0;
+          return !1;
         }
         HandleButtonDownEventAsLogicalEvent(_) {
           let { bUnhandled: _, bHadLogicalEventMapping: __webpack_require__ } =
@@ -3454,7 +3507,7 @@
             _(
               `Logical gamepad Event fired: ${_._[_.detail.button]}, had logical event: ${__webpack_require__}, was handled: ${!_}`,
             ),
-            _ && this.m_onUnhandledButton && (_ = this.m_onUnhandledButton(_)),
+            _ && (_ = !this.TryRootButtonListeners(_)),
             _ && (_ = this.m_Controller.FireUnhandledGamepadEventCallbacks(_)),
             _.stopPropagation(),
             _
@@ -4193,6 +4246,9 @@
         }
         IsActiveNavTree(_) {
           return Boolean(_ && _ == this.m_ActiveContext?.m_LastActiveNavTree);
+        }
+        GetActiveNavTree() {
+          return this.m_ActiveContext?.m_LastActiveNavTree;
         }
         BIsInActiveContext(_) {
           return Boolean(_ && _.WindowContext == this.m_ActiveContext);

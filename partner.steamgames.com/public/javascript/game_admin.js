@@ -497,6 +497,11 @@ function OnImageSelectTypeChanged( target )
 			elOverrideWarning.hide();
 	}
 
+	if ( imageType )
+	{
+		$J( target ).parent().removeClass( 'must_select_type' );
+	}
+
 	return false;
 }
 
@@ -586,8 +591,9 @@ function OnImagesLoadComplete( images )
 		{
 			if ( selectType.children().length > 1 )
 			{
-				const option = $J( '<option value="" selected disabled >Select Image Type...</option>' );
+				const option = $J( '<option value="" selected disabled hidden >Select Image Type...</option>' );
 				option.prependTo( selectType );
+				targetDiv.addClass( "must_select_type" );
 			}
 
 			selectType.appendTo( targetDiv );

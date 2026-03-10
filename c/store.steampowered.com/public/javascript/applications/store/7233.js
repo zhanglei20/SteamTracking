@@ -30,7 +30,7 @@
 	"Review_RatingStats_Funny_Plural": "%1$s personer syntes, at denne anmeldelse var sjov",
 	"Review_RecommendationID": "Anbefalings-ID: %1$s",
 	"Review_SectionTitle_Friends": "Venners anmeldelser",
-	"Review_SectionTitle_Top": "Nyttigste anmeldelser",
+	"Review_SectionTitle_Top": "Mest nyttige anmeldelser",
 	"Review_SectionTitle_Recent": "Senest opslået",
 	"Review_ReadMore": "Læs mere",
 	"Review_CSGO_Disclaimer": "ANMELDELSE AF CS:GO",

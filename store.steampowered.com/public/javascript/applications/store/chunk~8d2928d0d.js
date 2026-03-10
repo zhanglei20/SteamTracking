@@ -14,7 +14,7 @@
         l = r.n(o),
         c = r(65946),
         m = r(90626),
-        u = r(89128),
+        u = r(62641),
         d = r(75933),
         g = r(39733),
         B = r(81393),
@@ -192,76 +192,11 @@
           return "CPromotionPlanning_CreatePlan_Request";
         }
       }
-      class z extends b.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            z.prototype.promotion_id || y.Sg(z.M()),
-            b.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
-                fields: {
-                  promotion_id: {
-                    n: 1,
-                    br: y.qM.readFixed64String,
-                    bw: y.gp.writeFixed64String,
-                  },
-                  input_access_key: {
-                    n: 2,
-                    br: y.qM.readString,
-                    bw: y.gp.writeString,
-                  },
-                },
-              }),
-            z.sm_m
-          );
-        }
-        static MBF() {
-          return z.sm_mbf || (z.sm_mbf = y.w0(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return y.BT(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return y.Uq(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (p().BinaryReader)(e),
-            r = new z();
-          return z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return y.zj(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (p().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          y.i0(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (p().BinaryWriter)();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_CreatePlan_Response";
-        }
-      }
       class f extends b.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.plan || y.Sg(f.M()),
+            f.prototype.promotion_id || y.Sg(f.M()),
             b.Message.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
@@ -272,11 +207,15 @@
               (f.sm_m = {
                 proto: f,
                 fields: {
-                  plan: { n: 1, c: M },
                   promotion_id: {
-                    n: 2,
+                    n: 1,
                     br: y.qM.readFixed64String,
                     bw: y.gp.writeFixed64String,
+                  },
+                  input_access_key: {
+                    n: 2,
+                    br: y.qM.readString,
+                    bw: y.gp.writeString,
                   },
                 },
               }),
@@ -313,6 +252,67 @@
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlanning_CreatePlan_Response";
+        }
+      }
+      class z extends b.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            z.prototype.plan || y.Sg(z.M()),
+            b.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            z.sm_m ||
+              (z.sm_m = {
+                proto: z,
+                fields: {
+                  plan: { n: 1, c: M },
+                  promotion_id: {
+                    n: 2,
+                    br: y.qM.readFixed64String,
+                    bw: y.gp.writeFixed64String,
+                  },
+                },
+              }),
+            z.sm_m
+          );
+        }
+        static MBF() {
+          return z.sm_mbf || (z.sm_mbf = y.w0(z.M())), z.sm_mbf;
+        }
+        toObject(e = !1) {
+          return z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return y.BT(z.M(), e, t);
+        }
+        static fromObject(e) {
+          return y.Uq(z.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (p().BinaryReader)(e),
+            r = new z();
+          return z.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return y.zj(z.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (p().BinaryWriter)();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          y.i0(z.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (p().BinaryWriter)();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPromotionPlanning_UpdatePlan_Request";
@@ -3437,7 +3437,7 @@
             Me.sm_m ||
               (Me.sm_m = {
                 proto: Me,
-                fields: { clans: { n: 1, c: ze, r: !0, q: !0 } },
+                fields: { clans: { n: 1, c: fe, r: !0, q: !0 } },
               }),
             Me.sm_m
           );
@@ -3555,20 +3555,20 @@
           return "CPromotionPlanning_GetSalePageCandidatesForPromo_Response_salepage";
         }
       }
-      class ze extends b.Message {
+      class fe extends b.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ze.prototype.clan_account_id || y.Sg(ze.M()),
+            fe.prototype.clan_account_id || y.Sg(fe.M()),
             b.Message.initialize(this, e, 0, -1, [4], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            ze.sm_m ||
-              (ze.sm_m = {
-                proto: ze,
+            fe.sm_m ||
+              (fe.sm_m = {
+                proto: fe,
                 fields: {
                   clan_account_id: {
                     n: 1,
@@ -3586,66 +3586,6 @@
                     bw: y.gp.writeBool,
                   },
                   sale_pages: { n: 4, c: we, r: !0, q: !0 },
-                },
-              }),
-            ze.sm_m
-          );
-        }
-        static MBF() {
-          return ze.sm_mbf || (ze.sm_mbf = y.w0(ze.M())), ze.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ze.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return y.BT(ze.M(), e, t);
-        }
-        static fromObject(e) {
-          return y.Uq(ze.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (p().BinaryReader)(e),
-            r = new ze();
-          return ze.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return y.zj(ze.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (p().BinaryWriter)();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          y.i0(ze.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (p().BinaryWriter)();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_GetSalePageCandidatesForPromo_Response_clan";
-        }
-      }
-      class fe extends b.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            fe.prototype.partner_id || y.Sg(fe.M()),
-            b.Message.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            fe.sm_m ||
-              (fe.sm_m = {
-                proto: fe,
-                fields: {
-                  partner_id: {
-                    n: 1,
-                    br: y.qM.readUint32,
-                    bw: y.gp.writeUint32,
-                  },
                 },
               }),
             fe.sm_m
@@ -3681,6 +3621,66 @@
         serializeBase64String() {
           var e = new (p().BinaryWriter)();
           return fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlanning_GetSalePageCandidatesForPromo_Response_clan";
+        }
+      }
+      class ze extends b.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            ze.prototype.partner_id || y.Sg(ze.M()),
+            b.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            ze.sm_m ||
+              (ze.sm_m = {
+                proto: ze,
+                fields: {
+                  partner_id: {
+                    n: 1,
+                    br: y.qM.readUint32,
+                    bw: y.gp.writeUint32,
+                  },
+                },
+              }),
+            ze.sm_m
+          );
+        }
+        static MBF() {
+          return ze.sm_mbf || (ze.sm_mbf = y.w0(ze.M())), ze.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ze.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return y.BT(ze.M(), e, t);
+        }
+        static fromObject(e) {
+          return y.Uq(ze.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (p().BinaryReader)(e),
+            r = new ze();
+          return ze.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return y.zj(ze.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (p().BinaryWriter)();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          y.i0(ze.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (p().BinaryWriter)();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPromotionPlanning_GetAdvertisingAppsForPartner_Request";
@@ -5042,7 +5042,7 @@
           return e.SendMsg(
             "PromotionPlanning.CreatePlan#1",
             (0, _.I8)(w, t),
-            z,
+            f,
             { ePrivilege: 1 },
           );
         }),
@@ -5050,14 +5050,14 @@
             return e.SendMsg(
               "PromotionPlanning.CreateTentativePlan#1",
               (0, _.I8)(w, t),
-              z,
+              f,
               { ePrivilege: 1 },
             );
           }),
           (e.UpdatePlan = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.UpdatePlan#1",
-              (0, _.I8)(f, t),
+              (0, _.I8)(z, t),
               S,
               { ePrivilege: 1 },
             );
@@ -5065,7 +5065,7 @@
           (e.UpdatePlanPartnerInfo = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.UpdatePlanPartnerInfo#1",
-              (0, _.I8)(f, t),
+              (0, _.I8)(z, t),
               S,
               { ePrivilege: 1 },
             );
@@ -5073,7 +5073,7 @@
           (e.UpdatePlanInputData = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.UpdatePlanInputData#1",
-              (0, _.I8)(f, t),
+              (0, _.I8)(z, t),
               S,
               { ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -5241,7 +5241,7 @@
           (e.GetAdvertisingAppsForPartner = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.GetAdvertisingAppsForPartner#1",
-              (0, _.I8)(fe, t),
+              (0, _.I8)(ze, t),
               Se,
               { bConstMethod: !0, ePrivilege: 1 },
             );
@@ -5332,6 +5332,7 @@
         return (0, ke.I)({
           queryKey: ["usePromotionPlanBySalePage", t],
           queryFn: async () => {
+            if (!r) return null;
             const n = _.w.Init(ue),
               a = new de();
             a.set_clan_account_id(e),
@@ -5577,7 +5578,7 @@
         (0, $e.Cg)([tt.oI], ct.prototype, "OnDelete", null),
         (0, $e.Cg)([tt.oI], ct.prototype, "OnChangeDeleteForum", null);
       var mt = r(75113),
-        ut = r(96971),
+        ut = r(60860),
         dt = r(95695),
         gt = r(738),
         Bt = r(52038),
@@ -5587,8 +5588,8 @@
         yt = r(1501),
         Mt = r(35400),
         wt = r(36735),
-        zt = r(90316);
-      function ft(e) {
+        ft = r(90316);
+      function zt(e) {
         const { eventModel: t } = e,
           r = (0, c.q3)(() => t.jsondata.sale_sections);
         return (0, m.useMemo)(
@@ -5651,7 +5652,7 @@
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)("a", {
-              className: (0, Bt.A)(dt.Button, zt.AdminButton),
+              className: (0, Bt.A)(dt.Button, ft.AdminButton),
               onClick: (e) => {
                 (0, gt.pg)(
                   (0, s.jsx)(Qe.o0, {
@@ -5783,8 +5784,8 @@
             t.GID,
             t.clanSteamID.GetAccountID(),
           ]),
-          z = (0, Ye.Ec)(w),
-          [f, S] = m.useState(a),
+          f = (0, Ye.Ec)(w),
+          [z, S] = m.useState(a),
           { bVisible: h, ref: R } = (0, tt.hd)(),
           v = (e) => {
             (0, gt.pg)(
@@ -5803,7 +5804,7 @@
             eventModel: t,
             route: mt.PH.k_eCommunityAdminPage,
           });
-        if ((z.can_edit || z.support_user) && !o && !j) {
+        if ((f.can_edit || f.support_user) && !o && !j) {
           const e = [];
           if (void 0 !== B)
             for (let t = 0; t <= B; ++t)
@@ -5815,7 +5816,7 @@
             c = "community" == o,
             d = "store" == o,
             g = st.iA.is_support && (0, bt.m)(t.clanSteamID, !0),
-            z = f && !h,
+            f = z && !h,
             j = 36 == t.GetEventType(),
             P = j && F?.GetLinkedEventGID() == t.GID,
             W =
@@ -5827,44 +5828,44 @@
             children: [
               (0, s.jsx)("div", {
                 className: (0, Bt.A)(
-                  zt.DisplayAdminPanel_TopSpacer,
-                  z && zt.Sticky,
+                  ft.DisplayAdminPanel_TopSpacer,
+                  f && ft.Sticky,
                 ),
               }),
               (0, s.jsxs)("div", {
                 className: (0, Bt.A)({
-                  [zt.DisplayAdminPanel]: !0,
-                  [zt.Locked]: c,
-                  [zt.Sticky]: z,
+                  [ft.DisplayAdminPanel]: !0,
+                  [ft.Locked]: c,
+                  [ft.Sticky]: f,
                 }),
                 children: [
                   (0, s.jsx)("span", {
-                    className: zt.DisplayAdminPanel_Title,
+                    className: ft.DisplayAdminPanel_Title,
                     children: (0, et.we)("#EventDisplay_Admin_Title"),
                   }),
                   (0, s.jsxs)("div", {
                     className: (0, Bt.A)(
-                      zt.DisplayAdminPanel_ctn,
-                      z && zt.Sticky,
+                      ft.DisplayAdminPanel_ctn,
+                      f && ft.Sticky,
                     ),
                     children: [
                       i,
                       i &&
                         (0, s.jsx)("span", {
-                          className: zt.DisplayAdminPanel_Spacer,
+                          className: ft.DisplayAdminPanel_Spacer,
                           children: " ",
                         }),
                       (0, s.jsx)(mt.tj, {
                         eventModel: t,
                         route: mt.PH.k_eCommunityEdit,
-                        className: (0, Bt.A)(dt.Button, zt.AdminButton),
+                        className: (0, Bt.A)(dt.Button, ft.AdminButton),
                         children: j
                           ? (0, et.we)("#EventEditor_Edit_Page")
                           : (0, et.we)("#EventEditor_Edit"),
                       }),
                       Boolean(r && "community" == (0, st.yK)()) &&
                         (0, s.jsx)("span", {
-                          className: dt.Button + " " + zt.AdminButton,
+                          className: dt.Button + " " + ft.AdminButton,
                           onClick: v,
                           children: (0, et.we)("#EventDisplay_DeleteEvent"),
                         }),
@@ -5873,7 +5874,7 @@
                           children: (0, s.jsx)(mt.tj, {
                             eventModel: t,
                             route: mt.PH.k_eCommunityPublish,
-                            className: (0, Bt.A)(dt.Button, zt.AdminButton),
+                            className: (0, Bt.A)(dt.Button, ft.AdminButton),
                             children: (0, et.we)(
                               q
                                 ? "#EventEditor_Publish_VisibleNow"
@@ -5884,7 +5885,7 @@
                       (0, s.jsx)(mt.tj, {
                         eventModel: t,
                         route: mt.PH.k_eCommunityAdminPage,
-                        className: (0, Bt.A)(dt.Button, zt.AdminButton),
+                        className: (0, Bt.A)(dt.Button, ft.AdminButton),
                         children: (0, et.we)("#EventDisplay_Events"),
                       }),
                       Boolean(void 0 !== B && e.length > 0) &&
@@ -5904,7 +5905,7 @@
                         (0, s.jsx)(mt.tj, {
                           eventModel: t,
                           route: mt.PH.k_eStoreSalePage,
-                          className: (0, Bt.A)(dt.Button, zt.AdminButton),
+                          className: (0, Bt.A)(dt.Button, ft.AdminButton),
                           children: (0, et.we)("#EventDisplay_SalesPage"),
                         }),
                       Boolean(y && st.iA.is_support && M) &&
@@ -5918,7 +5919,7 @@
                           target: st.TS.IN_CLIENT ? "" : "_blank",
                           className: (0, Bt.A)(
                             dt.Button,
-                            zt.AdminButton,
+                            ft.AdminButton,
                             dt.ValveOnlyBackground,
                           ),
                           children: (0, et.we)("#EventDisplay_StatsPage"),
@@ -5934,7 +5935,7 @@
                           target: st.TS.IN_CLIENT ? "" : "_blank",
                           className: (0, Bt.A)(
                             dt.Button,
-                            zt.AdminButton,
+                            ft.AdminButton,
                             dt.ValveOnlyBackground,
                           ),
                           children: (0, et.we)(
@@ -5954,7 +5955,7 @@
                           target: st.TS.IN_CLIENT ? "" : "_blank",
                           className: (0, Bt.A)(
                             dt.Button,
-                            zt.AdminButton,
+                            ft.AdminButton,
                             dt.ValveOnlyBackground,
                           ),
                           children: (0, et.we)("#EventDisplay_CategoryEditor"),
@@ -5965,7 +5966,7 @@
                           route: y
                             ? mt.PH.k_eCommunityPreviewSale
                             : mt.PH.k_eCommunityView,
-                          className: (0, Bt.A)(dt.Button, zt.AdminButton),
+                          className: (0, Bt.A)(dt.Button, ft.AdminButton),
                           children: (0, et.we)(
                             y
                               ? "#EventDisplay_PreviewOnCommunity"
@@ -5976,16 +5977,16 @@
                         (0, s.jsx)(mt.tj, {
                           eventModel: t,
                           route: mt.PH.k_eStoreView,
-                          className: (0, Bt.A)(dt.Button, zt.AdminButton),
+                          className: (0, Bt.A)(dt.Button, ft.AdminButton),
                           children: (0, et.we)("#EventDisplay_ViewOnStore"),
                         }),
-                      (0, s.jsx)(ft, { eventModel: t }),
+                      (0, s.jsx)(zt, { eventModel: t }),
                       (0, s.jsx)(Tt, { eventModel: t }),
                       Boolean(st.iA.is_support) &&
                         (0, s.jsx)(qt, { eventModel: t }),
-                      z &&
+                      f &&
                         (0, s.jsx)("div", {
-                          className: zt.DisplayAdminPanelClose,
+                          className: ft.DisplayAdminPanelClose,
                           onClick: () => S(!1),
                           children: (0, s.jsx)(jt.Gq, {
                             toolTipContent: (0, et.we)(
@@ -5994,10 +5995,10 @@
                             children: (0, s.jsx)(vt.X, {}),
                           }),
                         }),
-                      !f &&
+                      !z &&
                         a &&
                         (0, s.jsx)("div", {
-                          className: zt.DisplayAdminPanelClose,
+                          className: ft.DisplayAdminPanelClose,
                           onClick: () => S(!0),
                           children: (0, s.jsx)(jt.Gq, {
                             toolTipContent: (0, et.we)(
@@ -6011,7 +6012,7 @@
                 ],
               }),
               (0, s.jsx)("div", {
-                className: zt.DisplayAdminPanelMarker,
+                className: ft.DisplayAdminPanelMarker,
                 ref: R,
               }),
             ],
@@ -6033,7 +6034,7 @@
                 (0, s.jsx)("a", {
                   className: (0, Bt.A)(
                     dt.Button,
-                    zt.AdminButton,
+                    ft.AdminButton,
                     dt.ValveOnlyBackground,
                   ),
                   onClick: () => {
@@ -6063,7 +6064,7 @@
                 (0, s.jsx)("a", {
                   className: (0, Bt.A)(
                     dt.Button,
-                    zt.AdminButton,
+                    ft.AdminButton,
                     dt.ValveOnlyBackground,
                   ),
                   onClick: (e) =>
@@ -6140,7 +6141,7 @@
                     target: st.TS.IN_CLIENT ? "" : "_blank",
                     className: (0, Bt.A)(
                       dt.Button,
-                      zt.AdminButton,
+                      ft.AdminButton,
                       dt.ValveOnlyBackground,
                     ),
                     children: (0, et.we)("#EventDisplay_PromotionEditor"),

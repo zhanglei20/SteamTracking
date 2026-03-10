@@ -1694,6 +1694,8 @@
     "Sale_TitleHeader_feature": "The Title/Header section can display either text or an image and serves as a label for the following content. When used in combination with the Tabs section, it can optionally provide sub-tab options automatically if two or more tabs are present. For tab functionality, a short name is required below.",
     "Sale_TitleHeader_sel": "Display type",
     "Sale_TitleHeader_desc": "Upload localized assets for the the header or title image",
+    "Sale_TitleHeader_title": "Title",
+    "Sale_TitleHeader_subtitle": "Sub-Title",
     "Sale_TitleHeader_short": "Tab sub-menu short name",
     "Sale_TitleHeader_short_ttip": "Provide a short name if you want this to appear in Tabs sub-menu. Sub-menu needs to also be explicitly enabled on the Tabs",
     "Sale_AddImage": "Add Image",

@@ -615,7 +615,6 @@
         StartEndClip: "_1eb1crSvl4J1Ie12OvhHUz",
         ViewClip: "_3YpMycJiNuGZOe9A5ddrxL",
         ClipPhase: "_3BLSZg3UyXhaQ4rkXaTvhs",
-        active: "_1D7oiWH7xjJ2nI27nnFzwI",
       };
     },
     45737: (e) => {
@@ -6266,24 +6265,6 @@
                 "clip",
               ),
             ),
-          (0, Kt.N$)(i.entry) &&
-            y.push(
-              (0, n.jsx)(
-                yr.kt,
-                {
-                  onSelected: b,
-                  className: Rr.HighlightContextMenuItem,
-                  children: (0, n.jsxs)("div", {
-                    className: (0, ye.A)(Rr.MenuItem, Rr.DeleteMarker),
-                    children: [
-                      (0, n.jsx)(wr.lMJ, {}),
-                      (0, g.we)("#Marker_Action_Delete"),
-                    ],
-                  }),
-                },
-                "delete",
-              ),
-            ),
           (0, Kt.sX)(i.entry) &&
             y.push(
               (0, n.jsx)(
@@ -6319,6 +6300,24 @@
                   }),
                 },
                 "view_clip",
+              ),
+            ),
+          (0, Kt.N$)(i.entry) &&
+            y.push(
+              (0, n.jsx)(
+                yr.kt,
+                {
+                  onSelected: b,
+                  className: Rr.HighlightContextMenuItem,
+                  children: (0, n.jsxs)("div", {
+                    className: (0, ye.A)(Rr.MenuItem, Rr.DeleteMarker),
+                    children: [
+                      (0, n.jsx)(wr.lMJ, {}),
+                      (0, g.we)("#Marker_Action_Delete"),
+                    ],
+                  }),
+                },
+                "delete",
               ),
             ),
           y.length ? (0, n.jsx)(yr.tz, { refInstance: _, children: y }) : null

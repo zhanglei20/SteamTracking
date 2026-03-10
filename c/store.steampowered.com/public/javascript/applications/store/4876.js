@@ -133,7 +133,10 @@
 	"Wishlist_Controls_Categories_Remove_Tooltip": "Αφαίρεση αυτής της κατηγορίας από αυτό το αντικείμενο",
 	"Wishlist_Controls_Categories_Filter_Tooltip": "Φιλτράρετε τη Λίστα Επιθυμιών σας για αντικείμενα αυτής της κατηγορίας",
 	"Wishlist_Controls_Categories_All": "Όλα",
-	"Wishlist_Controls_Categories_Manage": "Προσθήκη ή αφαίρεση κατηγοριών"
+	"Wishlist_Controls_Categories_Manage": "Προσθήκη ή αφαίρεση κατηγοριών",
+	"Wishlist_Categories_Suggested_Discount": "Σε αναμονή για προσφορά",
+	"Wishlist_Categories_Suggested_Birthday": "Λίστα γενεθλίων",
+	"Wishlist_Categories_Suggested_Recommended": "Προτείνονται από φίλους"
 }`);
     },
   },

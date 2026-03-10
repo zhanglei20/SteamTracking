@@ -38,6 +38,7 @@
         FAQEditor: "_3YIwjQZlP_YdCZH2DIj5f7",
         Columns: "_2O3puXm5doASD7CnAby6Uh",
         LeftCol: "_3TyuR_ycmrQIlt-wuVBtaD",
+        RightCol: "_33CjP7i4tMRCeZEcf-utD8",
         EditorSaveButton: "_22iwdea7XXbiuZrrLZUU11",
         EditorLabel: "_3jk92bsX5BdG6dMFNGNNKa",
         EditorTitleField: "_37R-2WttVdEqucotluEzW_",
@@ -138,7 +139,7 @@
     },
     70450: (e, t, s) => {
       "use strict";
-      s.r(t), s.d(t, { FAQRoutes: () => bt, default: () => At });
+      s.r(t), s.d(t, { FAQRoutes: () => At, default: () => bt });
       var a,
         n = s(7850),
         i = s(75844),
@@ -196,8 +197,8 @@
         j = s(22797),
         v = s(32754),
         C = s(52038),
-        b = s(61859),
-        A = s(41338),
+        A = s(61859),
+        b = s(41338),
         p = s(11259),
         w = s.n(p),
         f = s(14947),
@@ -209,8 +210,8 @@
         S = s.n(L),
         Q = s(25228),
         T = s(4434),
-        I = s(56011),
-        P = s(91675),
+        P = s(56011),
+        I = s(91675),
         B = s(87669),
         y = s(93084),
         k = s(41471);
@@ -221,10 +222,10 @@
           return (0, n.jsxs)("div", {
             className: L.FlexRowContainer,
             children: [
-              (0, n.jsx)(M, { draft: t, eLanguage: s }),
+              (0, n.jsx)(H, { draft: t, eLanguage: s }),
               (0, n.jsx)(Q.t3, {
-                strToolTip: (0, b.we)("#FAQEditor_Loc_Import_ttip"),
-                strLabel: (0, b.we)("#EventEditor_Loc_Import_Short"),
+                strToolTip: (0, A.we)("#FAQEditor_Loc_Import_ttip"),
+                strLabel: (0, A.we)("#EventEditor_Loc_Import_Short"),
                 fnOnImportLocData: (e, s) =>
                   (function (e, t, s) {
                     const a = new Set(),
@@ -265,45 +266,45 @@
                 className: L.EditPreviewButton,
                 onClick: (e) => {
                   (0, x.pg)(
-                    (0, n.jsx)(H, {
+                    (0, n.jsx)(M, {
                       direction: "export",
                       draft: t,
                       children: " ",
                     }),
-                    (0, I.uX)(e),
+                    (0, P.uX)(e),
                   );
                 },
-                children: (0, b.we)("#EventEditor_Loc_Export_Short"),
+                children: (0, A.we)("#EventEditor_Loc_Export_Short"),
               }),
               (0, n.jsx)("div", {
                 className: L.EditPreviewButton,
                 onClick: (e) => {
                   (0, x.pg)(
-                    (0, n.jsx)(H, {
+                    (0, n.jsx)(M, {
                       direction: "import",
                       draft: t,
                       children: " ",
                     }),
-                    (0, I.uX)(e),
+                    (0, P.uX)(e),
                   );
                 },
-                children: (0, b.we)("#EventEditor_Loc_Import_Short"),
+                children: (0, A.we)("#EventEditor_Loc_Import_Short"),
               }),
             ],
           });
         },
-        H = (e) => {
+        M = (e) => {
           const { closeModal: t, direction: s, draft: a } = e,
             [i, o] = r.useState(!1),
             [d, c] = r.useState(new Array()),
             u =
               (i || d.length,
-              (0, b.we)(
+              (0, A.we)(
                 "import" == s
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
                   : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
               )),
-            h = (0, b.we)(
+            h = (0, A.we)(
               "import" == s
                 ? "#EventEditor_Loc_Import_Crowdin_Confirm"
                 : "#EventEditor_Loc_Export_Crowdin_Confirm",
@@ -339,16 +340,16 @@
             children: i ? (0, n.jsx)(j.t, { position: "center" }) : m,
           });
         },
-        M = (e) => {
+        H = (e) => {
           const { draft: t, eLanguage: s } = e;
           return (0, n.jsx)(v.he, {
-            toolTipContent: (0, b.we)("#FAQEditor_Loc_Export_ttip"),
+            toolTipContent: (0, A.we)("#FAQEditor_Loc_Export_ttip"),
             children: (0, n.jsx)("div", {
               className: L.EditPreviewButton,
               onClick: (e) => {
                 (0, x.pg)(
                   (0, n.jsx)(_.o0, {
-                    strTitle: (0, b.we)("#EventEditor_Loc_Export"),
+                    strTitle: (0, A.we)("#EventEditor_Loc_Export"),
                     bAlertDialog: !0,
                     children: (0, n.jsx)(Q.Yg, {
                       fnGetLocData: () =>
@@ -381,10 +382,10 @@
                       lang: s,
                     }),
                   }),
-                  (0, I.uX)(e),
+                  (0, P.uX)(e),
                 );
               },
-              children: (0, b.we)("#EventEditor_Loc_Export_Short"),
+              children: (0, A.we)("#EventEditor_Loc_Export_Short"),
             }),
           });
         },
@@ -434,17 +435,17 @@
                 children: [
                   (0, n.jsx)("div", {
                     className: y.Language,
-                    children: (0, b.we)("#FAQCrowdin_LanguageHeader"),
+                    children: (0, A.we)("#FAQCrowdin_LanguageHeader"),
                   }),
                   (0, n.jsx)("div", {
                     className: y.Timestamp,
-                    children: (0, b.we)("#FAQCrowdin_DraftTimestampHeader"),
+                    children: (0, A.we)("#FAQCrowdin_DraftTimestampHeader"),
                   }),
                 ],
               }),
               (0, n.jsx)(o.Yh, {
                 className: y.CheckAll,
-                label: (0, b.we)("#FAQCrowdin_SelectAllCheckboxes"),
+                label: (0, A.we)("#FAQCrowdin_SelectAllCheckboxes"),
                 onChange: (e) => {
                   i(e ? s.slice() : []);
                 },
@@ -455,7 +456,7 @@
                   null != l
                     ? l
                     : (0, n.jsx)("div", {
-                        children: (0, b.we)("#FAQCrowdin_NoDraftFound"),
+                        children: (0, A.we)("#FAQCrowdin_NoDraftFound"),
                       }),
               }),
             ],
@@ -470,23 +471,23 @@
               : null,
             { data: c } = (0, k.js)(null == d ? void 0 : d.GetAccountID()),
             u = l
-              ? (0, b.we)(
+              ? (0, A.we)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
-                  (0, b.TW)(l.timestamp) +
+                  (0, A.TW)(l.timestamp) +
                     " @ " +
-                    (0, P.KC)(l.timestamp, { bForce24HourClock: !1 }),
+                    (0, I.KC)(l.timestamp, { bForce24HourClock: !1 }),
                   null !== (t = null == c ? void 0 : c.m_strPlayerName) &&
                     void 0 !== t
                     ? t
                     : l.author_account_id,
                 )
-              : (0, b.we)("#FAQCrowdin_NoDraftFound"),
+              : (0, A.we)("#FAQCrowdin_NoDraftFound"),
             h = (0, n.jsxs)("div", {
               className: y.LanguageCheckboxLabel,
               children: [
                 (0, n.jsx)("div", {
                   className: y.Language,
-                  children: (0, b.we)("#Language_" + (0, F.Lg)(a)),
+                  children: (0, A.we)("#Language_" + (0, F.Lg)(a)),
                 }),
                 (0, n.jsx)("div", { className: y.Timestamp, children: u }),
               ],
@@ -508,7 +509,7 @@
           j = r.useRef([]);
         if (m)
           return (0, n.jsx)(_.o0, {
-            strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
+            strTitle: (0, A.we)("#FAQDashboard_CrowdinToolTitle"),
             strDescription: m,
             bAlertDialog: !0,
             bDestructiveWarning: !0,
@@ -516,28 +517,28 @@
           });
         if (u)
           return (0, n.jsx)(_.o0, {
-            strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: (0, b.we)("#FAQDashboard_PublishComplete"),
+            strTitle: (0, A.we)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: (0, A.we)("#FAQDashboard_PublishComplete"),
             bAlertDialog: !0,
             closeModal: e.closeModal,
           });
         const v = (100 * (a + 0.5)) / t.length,
           C = t[a].internal_name;
         return (0, n.jsx)(_.eV, {
-          title: (0, b.we)("#FAQDashboard_CrowdinToolTitle"),
+          title: (0, A.we)("#FAQDashboard_CrowdinToolTitle"),
           ...e,
           onCancel: () => g.cancel("CrowdinImportDialog cancelled"),
           children: (0, n.jsxs)(o.nB, {
             children: [
               (0, n.jsxs)(o.a3, {
                 children: [
-                  (0, b.we)(
+                  (0, A.we)(
                     "#FAQDashboard_CrowdinToolInstructionsWithCount",
                     t.length,
                   ),
                   (0, n.jsx)("div", {
                     className: y.Warning,
-                    children: (0, b.we)("#FAQDashboard_CrowdinToolWarning"),
+                    children: (0, A.we)("#FAQDashboard_CrowdinToolWarning"),
                   }),
                 ],
               }),
@@ -589,14 +590,14 @@
                           if (g.token.reason) return;
                           if (1 != t)
                             return void x(
-                              (0, b.we)("#FAQDashboard_PublishFailed"),
+                              (0, A.we)("#FAQDashboard_PublishFailed"),
                             );
                         }
                       }
                       h(!0), c(!1);
                     },
                     disabled: d,
-                    children: (0, b.we)("#FAQDashboard_UpdateAllFAQsButton"),
+                    children: (0, A.we)("#FAQDashboard_UpdateAllFAQsButton"),
                   }),
                   d && (0, n.jsx)(Y, { nProgressPct: v, strCurrentLabel: C }),
                   j.current.length > 0 &&
@@ -620,7 +621,7 @@
             }),
             (0, n.jsx)("div", {
               className: y.CurrentFAQ,
-              children: (0, b.we)("#FAQDashboard_CrowdinToolProgress", s),
+              children: (0, A.we)("#FAQDashboard_CrowdinToolProgress", s),
             }),
           ],
         });
@@ -633,7 +634,7 @@
           children: [
             (0, n.jsx)("div", {
               className: y.ImportResultLabel,
-              children: (0, b.we)("#FAQDashboard_CrowdinToolResultsLabel"),
+              children: (0, A.we)("#FAQDashboard_CrowdinToolResultsLabel"),
             }),
             t.map((e, t) => {
               const a = s[t];
@@ -679,10 +680,10 @@
           if (!t)
             return (0, n.jsx)("div", {
               className: te().Never,
-              children: (0, b.we)("#FAQDashboard_TimeNever"),
+              children: (0, A.we)("#FAQDashboard_TimeNever"),
             });
           const a = Date.now() / 1e3 - t,
-            i = a < 86400 ? (0, b.Hq)(a, !1, !0) : (0, b.$z)(t);
+            i = a < 86400 ? (0, A.Hq)(a, !1, !0) : (0, A.$z)(t);
           return (0, n.jsx)(Z.gS, {
             className: s && te().Warning,
             rtFullDate: t,
@@ -730,7 +731,7 @@
                   e.visible_in_china_realm,
                 ];
               })
-              .sort((e, t) => (1 == a ? (0, A.lY)(e[1], t[1]) : t[a] - e[a]));
+              .sort((e, t) => (1 == a ? (0, b.lY)(e[1], t[1]) : t[a] - e[a]));
           return (
             (0, r.useEffect)(() => {
               l.pN.Get().RemoveAllDirtyDrafts();
@@ -745,7 +746,7 @@
                   0 == t.length &&
                     (0, n.jsx)("div", {
                       className: w().ErrorMsg,
-                      children: (0, b.we)("#FAQDashboard_Empty"),
+                      children: (0, A.we)("#FAQDashboard_Empty"),
                     }),
                   o.map((e) => (0, n.jsx)(ce, { rgColumns: e }, e[0])),
                   !s && (0, n.jsx)(j.t, { position: "center", size: "xlarge" }),
@@ -758,7 +759,7 @@
           const t = r.useCallback(
               () =>
                 (0, x.mK)((0, n.jsx)(ie, {}), window, {
-                  strTitle: (0, b.we)("#FAQDashboard_CreateFAQButton"),
+                  strTitle: (0, A.we)("#FAQDashboard_CreateFAQButton"),
                 }),
               [],
             ),
@@ -767,7 +768,7 @@
                 (0, x.mK)(
                   (0, n.jsx)(z, { bDisableBackgroundDismiss: !0 }),
                   window,
-                  { strTitle: (0, b.we)("#FAQDashboard_CrowdinToolTitle") },
+                  { strTitle: (0, A.we)("#FAQDashboard_CrowdinToolTitle") },
                 ),
               [],
             );
@@ -776,18 +777,18 @@
             children: [
               (0, n.jsx)("div", {
                 className: w().DashboardHeaderTitle,
-                children: (0, b.we)("#FAQDashboard_Header"),
+                children: (0, A.we)("#FAQDashboard_Header"),
               }),
               (0, n.jsxs)("div", {
                 className: w().DashboardHeaderButtonCtn,
                 children: [
                   (0, n.jsx)(o.$n, {
                     onClick: s,
-                    children: (0, b.we)("#FAQDashboard_CrowdinToolButton"),
+                    children: (0, A.we)("#FAQDashboard_CrowdinToolButton"),
                   }),
                   (0, n.jsx)(o.jn, {
                     onClick: t,
-                    children: (0, b.we)("#FAQDashboard_CreateFAQButton"),
+                    children: (0, A.we)("#FAQDashboard_CreateFAQButton"),
                   }),
                 ],
               }),
@@ -805,17 +806,17 @@
             className: w().CreateFAQDialog,
             children: [
               (0, n.jsx)(o.Y9, {
-                children: (0, b.we)("#FAQDashboard_CreateFAQButton"),
+                children: (0, A.we)("#FAQDashboard_CreateFAQButton"),
               }),
               (0, n.jsx)(o.nB, {
                 children: (0, n.jsxs)(o.a3, {
                   children: [
-                    (0, b.we)("#FAQDashboard_CreateFAQInstructions"),
+                    (0, A.we)("#FAQDashboard_CreateFAQInstructions"),
                     (0, n.jsx)("input", {
                       type: "text",
                       className: w().NameInput,
                       value: t,
-                      placeholder: (0, b.we)("#FAQDashboard_NamePlaceHolder"),
+                      placeholder: (0, A.we)("#FAQDashboard_NamePlaceHolder"),
                       onFocus: (e) => e.target.select(),
                       onChange: (e) => s(e.currentTarget.value),
                       maxLength: 120,
@@ -888,12 +889,12 @@
               i == a && w().Selected,
             );
           return (0, n.jsxs)(v.he, {
-            toolTipContent: (0, b.we)(t + "_ttip"),
+            toolTipContent: (0, A.we)(t + "_ttip"),
             direction: "top",
             className: l,
             onClick: () => r(a),
             children: [
-              (0, b.we)(t),
+              (0, A.we)(t),
               (0, n.jsx)("div", {
                 className: w().DownArrow,
                 children: (0, n.jsx)(g.GB9, {}),
@@ -912,7 +913,7 @@
           const { bIsVisible: t } = e;
           return (0, n.jsx)("div", {
             className: t ? w().Visible : w().Hidden,
-            children: (0, b.we)(
+            children: (0, A.we)(
               t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible",
             ),
           });
@@ -978,7 +979,7 @@
                     ? void 0
                     : e.length) > 0,
                 )
-                  ? (0, b.we)("#EventEditor_UnsavedChanges")
+                  ? (0, A.we)("#EventEditor_UnsavedChanges")
                   : null;
               }),
               () => {
@@ -1000,37 +1001,37 @@
                     ? void 0
                     : t.length) > 0,
                 ) ||
-                (e.pathname != bt.DashboardFAQ(u.UF.VANITY_ID) &&
+                (e.pathname != At.DashboardFAQ(u.UF.VANITY_ID) &&
                   !(null === (s = e.pathname) || void 0 === s
                     ? void 0
                     : s.startsWith(
-                        bt.ViewFAQ(u.UF.VANITY_ID, "").slice(0, -1),
+                        At.ViewFAQ(u.UF.VANITY_ID, "").slice(0, -1),
                       ))) ||
-                (0, b.we)("#EventEditor_UnsavedChanges")
+                (0, A.we)("#EventEditor_UnsavedChanges")
               );
             },
           });
         };
       var he = s(81047),
-        me = s(86355),
+        me = s(7221),
         _e = s(68359),
         xe = s(63556),
         ge = s(9239),
         je = s(84811),
         ve = s(33494),
         Ce = s(63280),
-        be = s.n(Ce),
-        Ae = s(64372),
+        Ae = s.n(Ce),
+        be = s(64372),
         pe = s(68797);
       const we = (e) =>
           (0, n.jsx)(v.he, {
-            toolTipContent: (0, b.we)("#FAQEditor_DeleteAction_ttip"),
+            toolTipContent: (0, A.we)("#FAQEditor_DeleteAction_ttip"),
             children: (0, n.jsx)("div", {
               className: (0, C.A)(L.EditPreviewButton, L.Delete),
               onClick: (t) => {
-                (0, x.pg)((0, n.jsx)(fe, { draft: e.draft }), (0, I.uX)(t));
+                (0, x.pg)((0, n.jsx)(fe, { draft: e.draft }), (0, P.uX)(t));
               },
-              children: (0, b.we)("#FAQEditor_DeleteAction"),
+              children: (0, A.we)("#FAQEditor_DeleteAction"),
             }),
           }),
         fe = (e) => {
@@ -1039,21 +1040,21 @@
             [i, d] = r.useState(!1),
             [c, h] = r.useState(void 0);
           let x = (0, n.jsx)("div", {
-            children: (0, b.we)("#FAQEditor_DeleteDesc"),
+            children: (0, A.we)("#FAQEditor_DeleteDesc"),
           });
           return (
             i
               ? (x = (0, n.jsx)(j.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, b.we)("#FAQEditor_DeletingInProgress"),
+                  string: (0, A.we)("#FAQEditor_DeletingInProgress"),
                 }))
               : c &&
                 (x = (0, n.jsx)("div", {
-                  children: (0, b.we)(
+                  children: (0, A.we)(
                     "Error_Description",
                     c,
-                    (0, b.we)("#Error_GenericFailureDescription"),
+                    (0, A.we)("#Error_GenericFailureDescription"),
                   ),
                 })),
             (0, n.jsx)(je.tH, {
@@ -1062,7 +1063,7 @@
                 children: (0, n.jsxs)(o.UC, {
                   children: [
                     (0, n.jsx)(o.Y9, {
-                      children: (0, b.we)("#FAQEditor_DeleteAction"),
+                      children: (0, A.we)("#FAQEditor_DeleteAction"),
                     }),
                     (0, n.jsx)(o.nB, {
                       children: (0, n.jsx)(o.a3, { children: x }),
@@ -1071,9 +1072,9 @@
                       children: (0, n.jsx)(o.CB, {
                         onCancel: s,
                         bOKDisabled: Boolean(i || c),
-                        strOKText: (0, b.we)("#FAQEditor_DeleteAction"),
+                        strOKText: (0, A.we)("#FAQEditor_DeleteAction"),
                         strCancelText: Boolean(i || c)
-                          ? (0, b.we)("#Button_OK")
+                          ? (0, A.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
                           d(!0),
@@ -1114,7 +1115,7 @@
           const { draft: t, bDisabled: s } = e,
             a = t.BNeedsSaving();
           return (0, n.jsx)(v.he, {
-            toolTipContent: (0, b.we)(
+            toolTipContent: (0, A.we)(
               a ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
             ),
             children: (0, n.jsx)("div", {
@@ -1124,15 +1125,15 @@
                   (0, x.pg)(
                     a
                       ? (0, n.jsx)(_.KG, {
-                          strDescription: (0, b.we)(
+                          strDescription: (0, A.we)(
                             "#FAQPublish_SaveRequire_ttip",
                           ),
                         })
                       : (0, n.jsx)(Ne, { draft: e.draft }),
-                    (0, I.uX)(t),
+                    (0, P.uX)(t),
                   );
               },
-              children: (0, b.we)("#FAQPublish_Publish"),
+              children: (0, A.we)("#FAQPublish_Publish"),
             }),
           });
         }),
@@ -1145,24 +1146,24 @@
             [h, m] = r.useState(void 0),
             [x, g] = (0, l.g5)(s.GetFAQID()),
             [v, C] = r.useState(new Array());
-          let A = null;
+          let b = null;
           if (g)
             if (i)
-              A = (0, n.jsx)(j.t, {
+              b = (0, n.jsx)(j.t, {
                 position: "center",
                 size: "medium",
-                string: (0, b.we)("#FAQPublish_Publishing"),
+                string: (0, A.we)("#FAQPublish_Publishing"),
               });
             else if (c)
-              A = (0, n.jsx)("div", {
-                children: (0, b.we)("#FAQPublish_Success"),
+              b = (0, n.jsx)("div", {
+                children: (0, A.we)("#FAQPublish_Success"),
               });
             else if (h)
-              A = (0, n.jsx)("div", {
-                children: (0, b.we)(
+              b = (0, n.jsx)("div", {
+                children: (0, A.we)(
                   "#Error_Description",
                   h,
-                  (0, b.we)("#Error_GenericFailureDescription"),
+                  (0, A.we)("#Error_GenericFailureDescription"),
                 ),
               });
             else if (x) {
@@ -1175,14 +1176,14 @@
                           e.last_publish_timestamp < e.last_update_timestamp,
                       )
                       .map((e) => e.language);
-              A = (0, n.jsxs)(n.Fragment, {
+              b = (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)("div", {
-                    children: (0, b.we)("#FAQPublish_Desc"),
+                    children: (0, A.we)("#FAQPublish_Desc"),
                   }),
                   (0, n.jsx)("br", {}),
                   (0, n.jsx)("div", {
-                    children: (0, b.we)("#FAQPublish_Desc2"),
+                    children: (0, A.we)("#FAQPublish_Desc2"),
                   }),
                   (0, n.jsx)("br", {}),
                   (0, n.jsx)(W, {
@@ -1194,14 +1195,14 @@
                 ],
               });
             } else
-              A = (0, n.jsx)("div", {
-                children: (0, b.we)("#FAQPublish_LoadError"),
+              b = (0, n.jsx)("div", {
+                children: (0, A.we)("#FAQPublish_LoadError"),
               });
           else
-            A = (0, n.jsx)(j.t, {
+            b = (0, n.jsx)(j.t, {
               size: "small",
               position: "center",
-              string: (0, b.we)("#FAQPublish_PublishWait"),
+              string: (0, A.we)("#FAQPublish_PublishWait"),
             });
           return (0, n.jsx)(je.tH, {
             children: (0, n.jsx)(_.x_, {
@@ -1210,18 +1211,18 @@
                 className: y.LanguageListDialog,
                 children: [
                   (0, n.jsx)(o.Y9, {
-                    children: (0, b.we)("#FAQPublish_Publish"),
+                    children: (0, A.we)("#FAQPublish_Publish"),
                   }),
                   (0, n.jsx)(o.nB, {
-                    children: (0, n.jsx)(o.a3, { children: A }),
+                    children: (0, n.jsx)(o.a3, { children: b }),
                   }),
                   (0, n.jsx)(o.wi, {
                     children: (0, n.jsx)(o.CB, {
                       onCancel: a,
                       bOKDisabled: Boolean(i || c || h || 0 == v.length),
-                      strOKText: (0, b.we)("#FAQPublish_Publish"),
+                      strOKText: (0, A.we)("#FAQPublish_Publish"),
                       strCancelText: Boolean(i || c || h)
-                        ? (0, b.we)("#Button_OK")
+                        ? (0, A.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
                         d(!0),
@@ -1250,13 +1251,13 @@
         },
         Ee = (e) =>
           (0, n.jsx)(v.he, {
-            toolTipContent: (0, b.we)("#FAQEditor_ChangeVisible_ttip"),
+            toolTipContent: (0, A.we)("#FAQEditor_ChangeVisible_ttip"),
             children: (0, n.jsx)("div", {
               className: L.EditPreviewButton,
               onClick: (t) => {
-                (0, x.pg)((0, n.jsx)(De, { draft: e.draft }), (0, I.uX)(t));
+                (0, x.pg)((0, n.jsx)(De, { draft: e.draft }), (0, P.uX)(t));
               },
-              children: (0, b.we)("#FAQEditor_EditVisible"),
+              children: (0, A.we)("#FAQEditor_EditVisible"),
             }),
           }),
         De = (e) => {
@@ -1268,41 +1269,41 @@
             m = l.pN.Get().GetFAQArticleSummary(t.GetFAQID()),
             [x, g] = r.useState(m.visible_in_global_realm),
             [v, C] = r.useState(m.visible_in_china_realm);
-          let A = (0, n.jsxs)(n.Fragment, {
+          let b = (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)("div", {
-                children: (0, b.we)("#FAQEditor_ChangeVisible_Desc"),
+                children: (0, A.we)("#FAQEditor_ChangeVisible_Desc"),
               }),
               (0, n.jsx)(o.Yh, {
-                label: (0, b.we)("#FAQEditor_VisibleInGlobal"),
+                label: (0, A.we)("#FAQEditor_VisibleInGlobal"),
                 checked: x,
                 onChange: (e) => g(e),
               }),
               (0, n.jsx)(o.Yh, {
-                label: (0, b.we)("#FAQEditor_VisibleInChina"),
+                label: (0, A.we)("#FAQEditor_VisibleInChina"),
                 checked: v,
-                tooltip: (0, b.we)("#FAQEditor_VisibleInChina_ttip"),
+                tooltip: (0, A.we)("#FAQEditor_VisibleInChina_ttip"),
                 onChange: (e) => C(e),
               }),
             ],
           });
           return (
             a
-              ? (A = (0, n.jsx)(j.t, {
+              ? (b = (0, n.jsx)(j.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, b.we)("#FAQEditor_ChangeVisible_InProgress"),
+                  string: (0, A.we)("#FAQEditor_ChangeVisible_InProgress"),
                 }))
               : d
-                ? (A = (0, n.jsx)("div", {
-                    children: (0, b.we)("#FAQEditor_ChangeVisible_Success"),
+                ? (b = (0, n.jsx)("div", {
+                    children: (0, A.we)("#FAQEditor_ChangeVisible_Success"),
                   }))
                 : u &&
-                  (A = (0, n.jsx)("div", {
-                    children: (0, b.we)(
+                  (b = (0, n.jsx)("div", {
+                    children: (0, A.we)(
                       "Error_Description",
                       u,
-                      (0, b.we)("#Error_GenericFailureDescription"),
+                      (0, A.we)("#Error_GenericFailureDescription"),
                     ),
                   })),
             (0, n.jsx)(je.tH, {
@@ -1311,18 +1312,18 @@
                 children: (0, n.jsxs)(o.UC, {
                   children: [
                     (0, n.jsx)(o.Y9, {
-                      children: (0, b.we)("#FAQEditor_ChangeVisible"),
+                      children: (0, A.we)("#FAQEditor_ChangeVisible"),
                     }),
                     (0, n.jsx)(o.nB, {
-                      children: (0, n.jsx)(o.a3, { children: A }),
+                      children: (0, n.jsx)(o.a3, { children: b }),
                     }),
                     (0, n.jsx)(o.wi, {
                       children: (0, n.jsx)(o.CB, {
                         onCancel: s,
                         bOKDisabled: Boolean(a || d || u),
-                        strOKText: (0, b.we)("#FAQEditor_ChangeVisible"),
+                        strOKText: (0, A.we)("#FAQEditor_ChangeVisible"),
                         strCancelText: Boolean(a || d || u)
-                          ? (0, b.we)("#Button_OK")
+                          ? (0, A.we)("#Button_OK")
                           : void 0,
                         onOK: async () => {
                           i(!0),
@@ -1355,8 +1356,8 @@
         Se = (s(42519), s(23809)),
         Qe = s(61739),
         Te = s(88942),
-        Ie = s(56545);
-      const Pe = (0, i.PA)((e) => {
+        Pe = s(56545);
+      const Ie = (0, i.PA)((e) => {
           var t, s, a, i, r;
           const { draft: o, eLanguage: d } = e,
             c = o.GetFAQID(),
@@ -1406,7 +1407,7 @@
                     (0, n.jsxs)("div", {
                       className: Le.SectionTitle,
                       children: [
-                        (0, b.we)("#FAQDashboard_VisibilityColumn"),
+                        (0, A.we)("#FAQDashboard_VisibilityColumn"),
                         " ",
                       ],
                     }),
@@ -1419,7 +1420,7 @@
                             (0, n.jsxs)("div", {
                               className: (0, C.A)(Le.StatusRow, Le.Global),
                               children: [
-                                (0, b.we)(
+                                (0, A.we)(
                                   "#FAQDashboard_VisibleInGlobalRealmLabel",
                                 ),
                                 " ",
@@ -1431,7 +1432,7 @@
                             (0, n.jsxs)("div", {
                               className: (0, C.A)(Le.StatusRow, Le.China),
                               children: [
-                                (0, b.we)(
+                                (0, A.we)(
                                   "#FAQDashboard_VisibleInChinaRealmLabel",
                                 ),
                                 " ",
@@ -1452,13 +1453,13 @@
                             _
                               ? (0, n.jsx)("div", {
                                   className: Le.PublishStatus,
-                                  children: (0, b.we)(
+                                  children: (0, A.we)(
                                     "#FAQStatus_DraftVersionsDesc",
                                   ),
                                 })
                               : (0, n.jsx)("div", {
                                   className: Le.PublishStatus,
-                                  children: (0, b.we)(
+                                  children: (0, A.we)(
                                     "#FAQStatus_NothingToPublish",
                                   ),
                                 }),
@@ -1480,7 +1481,7 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: Le.SectionTitle,
-                      children: (0, b.we)("#FAQDashboard_LocalizationSection"),
+                      children: (0, A.we)("#FAQDashboard_LocalizationSection"),
                     }),
                     (0, n.jsx)(Be, { draft: o }),
                     (0, n.jsxs)("div", {
@@ -1488,7 +1489,7 @@
                       children: [
                         (0, n.jsx)("div", {
                           className: Le.SectionDescription,
-                          children: (0, b.we)(
+                          children: (0, A.we)(
                             "#FAQDashboard_LocalizationSectionDesc",
                           ),
                         }),
@@ -1500,7 +1501,7 @@
                       children: [
                         (0, n.jsx)("div", {
                           className: Le.SectionDescription,
-                          children: (0, b.we)(
+                          children: (0, A.we)(
                             "#EventEditor_Loc_CrowdinIntegration_Desc",
                           ),
                         }),
@@ -1514,7 +1515,7 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: Le.SectionTitle,
-                      children: (0, b.we)(
+                      children: (0, A.we)(
                         "#FAQStatus_LocalizedVersionStatusHeader",
                       ),
                     }),
@@ -1525,13 +1526,13 @@
                           children: (0, n.jsxs)("tr", {
                             children: [
                               (0, n.jsx)("th", {
-                                children: (0, b.we)("#LanguageTitle"),
+                                children: (0, A.we)("#LanguageTitle"),
                               }),
                               (0, n.jsx)("th", {
-                                children: (0, b.we)("#FAQStatus_LastUpdated"),
+                                children: (0, A.we)("#FAQStatus_LastUpdated"),
                               }),
                               (0, n.jsx)("th", {
-                                children: (0, b.we)("#FAQStatus_LastPublished"),
+                                children: (0, A.we)("#FAQStatus_LastPublished"),
                               }),
                             ],
                           }),
@@ -1557,10 +1558,10 @@
                 (0, Qe.n)({
                   mutationKey: ["fetch_faq_translation", e],
                   mutationFn: async (s) => {
-                    const a = Ie.w.Init(Ae.PS);
+                    const a = Pe.w.Init(be.PS);
                     a.Body().set_faq_id(e), a.Body().set_language(s);
                     return (
-                      await Ae.RD.FetchLocalizationFromCrowdIn(t, a)
+                      await be.RD.FetchLocalizationFromCrowdIn(t, a)
                     ).GetEResult();
                   },
                 });
@@ -1570,9 +1571,9 @@
                 return (0, Te.I)({
                   queryKey: ["get_faq_crowdin_metadata", e],
                   queryFn: async () => {
-                    const s = Ie.w.Init(Ae.lk);
+                    const s = Pe.w.Init(be.lk);
                     s.Body().set_faq_id(e);
-                    return (await Ae.RD.GetCrowdInMetadata(t, s))
+                    return (await be.RD.GetCrowdInMetadata(t, s))
                       .Body()
                       .toObject();
                   },
@@ -1594,7 +1595,7 @@
           return (0, n.jsxs)("tr", {
             children: [
               (0, n.jsx)("td", {
-                children: (0, b.we)("#Language_" + (0, F.Lg)(t.language)),
+                children: (0, A.we)("#Language_" + (0, F.Lg)(t.language)),
               }),
               (0, n.jsx)("td", {
                 children: (0, n.jsx)(se, {
@@ -1616,19 +1617,19 @@
         Ve = s(26759),
         qe = s(54736),
         Ue = s(59461),
-        He = s(51520);
-      const Me = (0, i.PA)((e) => {
+        Me = s(51520);
+      const He = (0, i.PA)((e) => {
           const { draft: t } = e,
             s = t.BNeedsSaving();
           return (0, n.jsx)("div", {
             className: "btn_green_steamui btn_medium",
             onClick: (t) =>
-              (0, x.pg)((0, n.jsx)(Re, { draft: e.draft }), (0, I.uX)(t)),
+              (0, x.pg)((0, n.jsx)(Re, { draft: e.draft }), (0, P.uX)(t)),
             children: (0, n.jsxs)("span", {
               children: [
                 !s &&
-                  (0, n.jsx)("img", { className: He.SavedImage, src: Ue.A }),
-                (0, b.we)(s ? "#Button_Save" : "#Button_Saved"),
+                  (0, n.jsx)("img", { className: Me.SavedImage, src: Ue.A }),
+                (0, A.we)(s ? "#Button_Save" : "#Button_Saved"),
               ],
             }),
           });
@@ -1665,11 +1666,11 @@
                 id: c,
                 children: a
                   ? (0, n.jsx)("div", {
-                      children: (0, b.we)("#FAQSave_Saving"),
+                      children: (0, A.we)("#FAQSave_Saving"),
                     })
                   : (0, n.jsxs)("div", {
                       children: [
-                        (0, b.we)(
+                        (0, A.we)(
                           Boolean(1 == l)
                             ? "#FAQSave_SaveSuccess"
                             : "#FAQSave_Error",
@@ -1684,13 +1685,13 @@
                   : (0, n.jsx)("div", {
                       children: Boolean(1 == l)
                         ? (0, n.jsx)("div", {
-                            children: (0, b.we)("#FAQSave_SaveSuccess_desc"),
+                            children: (0, A.we)("#FAQSave_SaveSuccess_desc"),
                           })
                         : (0, n.jsx)("div", {
-                            children: (0, b.we)(
+                            children: (0, A.we)(
                               "#Error_Description",
                               l,
-                              (0, b.we)("#Error_GenericFailureDescription"),
+                              (0, A.we)("#Error_GenericFailureDescription"),
                             ),
                           }),
                     }),
@@ -1700,7 +1701,7 @@
                   !a &&
                   (0, n.jsx)(o.jn, {
                     onClick: s,
-                    children: (0, b.we)("#Button_OK"),
+                    children: (0, A.we)("#Button_OK"),
                   }),
               }),
             ],
@@ -1724,7 +1725,7 @@
                   route: s ? a.k_eCommunityEdit : a.k_eCommunityDashboard,
                   faqid: t.GetFAQID(),
                   className: S().EditPreviewButton,
-                  children: (0, b.we)(
+                  children: (0, A.we)(
                     s ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
                   ),
                 }),
@@ -1732,7 +1733,7 @@
                   children: [
                     (0, n.jsx)("div", {
                       className: We().EditorInternalNameLabel,
-                      children: (0, b.we)(
+                      children: (0, A.we)(
                         s
                           ? "#FAQEditor_InternalName_Preview"
                           : "#FAQEditor_InternalName",
@@ -1747,7 +1748,7 @@
                           onClick: (e) =>
                             (0, x.pg)(
                               (0, n.jsx)(ze, { draft: t }),
-                              (0, I.uX)(e),
+                              (0, P.uX)(e),
                             ),
                         }),
                       ],
@@ -1773,7 +1774,7 @@
                         route: a.k_eCommunityPreview,
                         faqid: t.GetFAQID(),
                         className: S().EditPreviewButton,
-                        children: (0, b.we)("#Button_Preview"),
+                        children: (0, A.we)("#Button_Preview"),
                       }),
                   ],
                 }),
@@ -1788,7 +1789,7 @@
             [u, h] = r.useState(1),
             [m, x] = r.useState(!1);
           return (0, n.jsxs)(_.eV, {
-            title: (0, b.we)("#FAQEditor_ChangeInternalName"),
+            title: (0, A.we)("#FAQEditor_ChangeInternalName"),
             bAllowFullSize: !0,
             onCancel: t,
             closeModal: t,
@@ -1796,12 +1797,12 @@
               (0, n.jsxs)(o.nB, {
                 children: [
                   (0, n.jsx)("div", {
-                    children: (0, b.we)("#FAQEditor_ChangeInternalName_desc"),
+                    children: (0, A.we)("#FAQEditor_ChangeInternalName_desc"),
                   }),
                   (0, n.jsx)("input", {
                     type: "text",
                     value: a,
-                    placeholder: (0, b.we)("#FAQEditor_ChangeInternalName"),
+                    placeholder: (0, A.we)("#FAQEditor_ChangeInternalName"),
                     onFocus: (e) => e.target.select(),
                     onChange: (e) => i(e.currentTarget.value),
                     maxLength: 240,
@@ -1809,7 +1810,7 @@
                   }),
                   Boolean(d && !m) &&
                     (0, n.jsx)(j.t, {
-                      string: (0, b.we)("#Updating"),
+                      string: (0, A.we)("#Updating"),
                       position: "center",
                       size: "medium",
                     }),
@@ -1817,11 +1818,11 @@
                     (0, n.jsx)("span", {
                       children:
                         1 == u
-                          ? (0, b.we)("#EventDisplay_Share_Success")
-                          : (0, b.we)(
+                          ? (0, A.we)("#EventDisplay_Share_Success")
+                          : (0, A.we)(
                               "#Error_Description",
                               u,
-                              (0, b.we)("#Error_GenericFailureDescription"),
+                              (0, A.we)("#Error_GenericFailureDescription"),
                             ),
                     }),
                 ],
@@ -1831,8 +1832,8 @@
                   bOKDisabled: 0 == a.trim().length || d,
                   onCancel: t,
                   strCancelText: m
-                    ? (0, b.we)("#Button_Close")
-                    : (0, b.we)("#Button_Cancel"),
+                    ? (0, A.we)("#Button_Close")
+                    : (0, A.we)("#Button_Cancel"),
                   onOK: async () => {
                     c(!0),
                       l.pN
@@ -1867,13 +1868,13 @@
                 className: S().FlexRowWrapFlexStartContainer,
                 style: { width: "unset", justifyContent: "center" },
                 children: [
-                  (0, n.jsx)(Me, { draft: t }),
+                  (0, n.jsx)(He, { draft: t }),
                   Boolean(d) &&
                     (0, n.jsx)("div", {
                       className: S().EditPreviewButton,
                       children: (0, n.jsx)("a", {
                         href: u.TS.HELP_BASE_URL + "faqs/view/" + i.url_code,
-                        children: (0, b.we)("#FAQEditir_ViewLiveFAQ"),
+                        children: (0, A.we)("#FAQEditir_ViewLiveFAQ"),
                       }),
                     }),
                 ],
@@ -1890,32 +1891,32 @@
             return (0, n.jsx)(j.t, {
               position: "center",
               size: "xlarge",
-              string: (0, b.we)("#Loading"),
+              string: (0, A.we)("#Loading"),
             });
           if (!s)
             return (0, n.jsx)(tt, {
-              strError: (0, b.we)("#FAQEditor_NoFAQFound"),
+              strError: (0, A.we)("#FAQEditor_NoFAQFound"),
             });
           const o = xe.O.Get().GetCurEditLanguage();
           return (0, n.jsxs)("div", {
             children: [
               (0, n.jsx)(Ke, { draft: s }),
               (0, n.jsxs)("div", {
-                className: be().FAQEditPage,
+                className: Ae().FAQEditPage,
                 children: [
                   (0, n.jsx)("div", {
-                    className: be().FAQMenuCtn,
-                    children: (0, n.jsx)(Pe, { draft: s, eLanguage: o }),
+                    className: Ae().FAQMenuCtn,
+                    children: (0, n.jsx)(Ie, { draft: s, eLanguage: o }),
                   }),
                   (0, n.jsx)("div", {
-                    className: be().FAQEditorCtn,
+                    className: Ae().FAQEditorCtn,
                     children: (0, n.jsx)("div", {
-                      className: be().FAQEditor,
+                      className: Ae().FAQEditor,
                       children: (0, n.jsxs)("div", {
-                        className: (0, C.A)(S().Columns, be().Columns),
+                        className: (0, C.A)(S().Columns, Ae().Columns),
                         children: [
                           (0, n.jsxs)("div", {
-                            className: (0, C.A)(S().LeftCol, be().LeftCol),
+                            className: (0, C.A)(S().LeftCol, Ae().LeftCol),
                             children: [
                               (0, n.jsx)($e, { draft: s, eLanguage: o }),
                               (0, n.jsx)(et, {
@@ -1928,7 +1929,7 @@
                           (0, n.jsx)(Je, {
                             draft: s,
                             bbcodeEditorRef: i,
-                            className: S().RightCol,
+                            className: (0, C.A)(S().RightCol, Ae().RightCol),
                           }),
                         ],
                       }),
@@ -1949,7 +1950,7 @@
               className: e.className,
               children: [
                 (0, n.jsx)("div", {
-                  children: (0, b.we)("#FAQEditor_ImageTitle"),
+                  children: (0, A.we)("#FAQEditor_ImageTitle"),
                 }),
                 (0, n.jsx)(ve.G, {
                   bShowLightBox: !0,
@@ -1977,17 +1978,17 @@
         $e = (0, i.PA)((e) => {
           const { draft: t, eLanguage: s } = e;
           return (0, n.jsxs)("div", {
-            className: be().EditorTitleField,
+            className: Ae().EditorTitleField,
             children: [
               (0, n.jsx)("div", {
-                className: be().EditorLabel,
-                children: (0, b.we)("#FAQEditor_TitleLabel"),
+                className: Ae().EditorLabel,
+                children: (0, A.we)("#FAQEditor_TitleLabel"),
               }),
               (0, n.jsx)("input", {
                 type: "text",
-                className: be().EditorTitleFieldInput,
+                className: Ae().EditorTitleFieldInput,
                 value: t.GetDraftTitle(s) || "",
-                placeholder: (0, b.we)("#FAQEditor_TitlePlaceHolder"),
+                placeholder: (0, A.we)("#FAQEditor_TitlePlaceHolder"),
                 onFocus: (e) => e.target.select(),
                 onChange: (e) => t.SetDraftTitle(s, e.currentTarget.value),
                 maxLength: 120,
@@ -1998,11 +1999,11 @@
         et = (0, i.PA)((e) => {
           const { draft: t, eLanguage: s, bbcodeEditorRef: a } = e;
           return (0, n.jsxs)("div", {
-            className: be().EditorPane,
+            className: Ae().EditorPane,
             children: [
               (0, n.jsx)("div", {
-                className: be().EditorLabel,
-                children: (0, b.we)("#FAQEditor_ContentLabel"),
+                className: Ae().EditorLabel,
+                children: (0, A.we)("#FAQEditor_ContentLabel"),
               }),
               (0, n.jsx)(ge.I, {
                 ref: a,
@@ -2010,44 +2011,50 @@
                 fnOnTextChange: (e) =>
                   t.SetDraftContent(s, e.currentTarget.value),
                 fnSetText: (e) => t.SetDraftContent(s, e),
-                strPlaceholder: (0, b.we)("#FAQEditor_ContentPlaceHolder"),
+                strPlaceholder: (0, A.we)("#FAQEditor_ContentPlaceHolder"),
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
-                className: be().TextPaneContainer,
-                classNameForTextArea: be().EditorPaneTextArea,
+                className: Ae().TextPaneContainer,
+                classNameForTextArea: Ae().EditorPaneTextArea,
               }),
             ],
           });
         }),
         tt = (e) =>
           (0, n.jsxs)("div", {
-            className: be().ErrorCtn,
+            className: Ae().ErrorCtn,
             children: [
               (0, n.jsx)("div", {
-                className: be().ErrorMsg,
+                className: Ae().ErrorMsg,
                 children: e.strError,
               }),
               (0, n.jsx)(h, {
                 route: a.k_eCommunityDashboard,
-                className: be().EscapeLink,
-                children: (0, b.we)("#FAQEditor_GoToDashboard"),
+                className: Ae().EscapeLink,
+                children: (0, A.we)("#FAQEditor_GoToDashboard"),
               }),
             ],
           });
       var st = s(17909),
         at = s(28735);
       const nt = (e) => {
-          const { title: t, content: s, bIsPreview: a, elSideBars: i } = e,
-            l = (0, d.zy)();
+          const {
+              title: t,
+              content: s,
+              bIsPreview: a,
+              elSideBars: i,
+              version: l,
+            } = e,
+            o = (0, d.zy)();
           return (
             r.useEffect(() => {
               var e, t, s;
               const a =
-                null === (e = null == l ? void 0 : l.hash) || void 0 === e
+                null === (e = null == o ? void 0 : o.hash) || void 0 === e
                   ? void 0
                   : e.substr(
                       "#" ===
-                        (null === (t = null == l ? void 0 : l.hash) ||
+                        (null === (t = null == o ? void 0 : o.hash) ||
                         void 0 === t
                           ? void 0
                           : t.substr(0, 1))
@@ -2058,14 +2065,14 @@
                 (null === (s = document.getElementById(a)) ||
                   void 0 === s ||
                   s.scrollIntoView({ block: "start", behavior: "smooth" }));
-            }, [l]),
+            }, [o]),
             (0, n.jsxs)("div", {
               className: (0, C.A)(at.FAQViewPage, u.TS.LANGUAGE),
               children: [
                 (0, n.jsx)("a", {
                   className: at.SupportTitle,
                   href: `${u.TS.HELP_BASE_URL}`,
-                  children: (0, b.we)("#FAQViewer_SteamSupport"),
+                  children: (0, A.we)("#FAQViewer_SteamSupport"),
                 }),
                 (0, n.jsxs)("div", {
                   className: at.Columns,
@@ -2088,6 +2095,7 @@
                               children: (0, n.jsx)(st.u, {
                                 text: s,
                                 bShowErrorInfo: a,
+                                version: l || "0",
                               }),
                             }),
                           ],
@@ -2124,22 +2132,22 @@
                 children: [
                   (0, n.jsx)("div", {
                     className: ot.TopicHeader,
-                    children: (0, b.we)("#FAQViewer_AdminLinks"),
+                    children: (0, A.we)("#FAQViewer_AdminLinks"),
                   }),
                   (0, n.jsx)("div", {
                     className: lt.InfoRow,
-                    children: (0, b.PP)(
+                    children: (0, A.PP)(
                       "#FAQViewer_Admin_LastUpdate",
                       (null == s ? void 0 : s.author_account_id)
                         ? (0, n.jsx)(rt.p, {
                             accountID: Number.parseInt(s.author_account_id),
                           })
-                        : (0, b.we)("#FAQViewer_UnknownUser"),
+                        : (0, A.we)("#FAQViewer_UnknownUser"),
                       (0, n.jsx)("span", {
                         children:
-                          (0, b.TW)(t.timestamp) +
+                          (0, A.TW)(t.timestamp) +
                           "@" +
-                          (0, P.KC)(t.timestamp, { bForce24HourClock: !1 }),
+                          (0, I.KC)(t.timestamp, { bForce24HourClock: !1 }),
                       }),
                     ),
                   }),
@@ -2148,7 +2156,7 @@
                     faqid: t.faq_id,
                     route: a.k_eCommunityEdit,
                     bForceAnchor: !0,
-                    children: (0, b.we)("#FAQViewer_GotoEditor"),
+                    children: (0, A.we)("#FAQViewer_GotoEditor"),
                   }),
                 ],
               })
@@ -2166,16 +2174,16 @@
           const i = s.GetLastSavedDraftVersion(t.language);
           return (0, n.jsx)("div", {
             className: lt.InfoRow,
-            children: (0, b.PP)(
+            children: (0, A.PP)(
               "#FAQViewer_DraftNewer",
               (0, n.jsx)(rt.p, {
                 accountID: Number.parseInt(i.author_account_id),
               }),
               (0, n.jsx)("span", {
                 children:
-                  (0, b.TW)(i.timestamp) +
+                  (0, A.TW)(i.timestamp) +
                   "@" +
-                  (0, P.KC)(i.timestamp, { bForce24HourClock: !1 }),
+                  (0, I.KC)(i.timestamp, { bForce24HourClock: !1 }),
               }),
             ),
           });
@@ -2195,12 +2203,12 @@
                     children: [
                       (0, n.jsx)("div", {
                         className: ot.TopicHeader,
-                        children: (0, b.we)(
+                        children: (0, A.we)(
                           "#FAQViewer_SideBar_ProblemWithSteam_Title",
                         ),
                       }),
                       (0, n.jsx)("div", {
-                        children: (0, b.we)(
+                        children: (0, A.we)(
                           "#FAQViewer_SideBar_ProblemWithSteam_Desc",
                         ),
                       }),
@@ -2209,7 +2217,7 @@
                         children: (0, n.jsx)("a", {
                           href: u.TS.HELP_BASE_URL,
                           className: L.EditPreviewButton,
-                          children: (0, b.we)(
+                          children: (0, A.we)(
                             "#FAQViewer_SideBar_ProblemWithSteam_Link",
                           ),
                         }),
@@ -2231,12 +2239,12 @@
                       children: [
                         (0, n.jsx)("div", {
                           className: ot.TopicHeader,
-                          children: (0, b.we)(
+                          children: (0, A.we)(
                             "#FAQViewer_SideBar_CommunityHelp_Title",
                           ),
                         }),
                         (0, n.jsx)("div", {
-                          children: (0, b.we)(
+                          children: (0, A.we)(
                             "#FAQViewer_SideBar_CommunityHelp_Desc",
                           ),
                         }),
@@ -2245,7 +2253,7 @@
                           children: (0, n.jsx)("a", {
                             href: u.TS.COMMUNITY_BASE_URL + "discussions",
                             className: L.EditPreviewButton,
-                            children: (0, b.we)(
+                            children: (0, A.we)(
                               "#FAQViewer_SideBar_CommunityHelp_Link",
                             ),
                           }),
@@ -2266,6 +2274,7 @@
               ? (0, n.jsx)(nt, {
                   title: s.title,
                   content: s.content,
+                  version: s.version,
                   elSideBars: [
                     (0, n.jsx)(ut, { faqContent: s }, "sidebar"),
                     (0, n.jsx)(dt, { faqContent: s }, "adminbar"),
@@ -2273,14 +2282,14 @@
                 })
               : (0, n.jsx)(it, {
                   children: (0, n.jsx)(xt, {
-                    strError: (0, b.we)("#FAQViewer_NoFAQFound"),
+                    strError: (0, A.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
             : (0, n.jsx)(it, {
                 children: (0, n.jsx)(j.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, b.we)("#Loading"),
+                  string: (0, A.we)("#Loading"),
                 }),
               });
         },
@@ -2302,7 +2311,7 @@
               (0, n.jsx)("a", {
                 className: mt().EscapeLink,
                 href: s,
-                children: (0, b.we)("#FAQViewer_GoToHomepage"),
+                children: (0, A.we)("#FAQViewer_GoToHomepage"),
               }),
             ],
           });
@@ -2319,33 +2328,34 @@
                     (0, n.jsx)(nt, {
                       title: s.GetDraftTitleWithFallback(i, u.TS.EREALM),
                       content: s.GetDraftContentWithFallback(i, u.TS.EREALM),
+                      version: "" + s.GetLastTimeLanguageUpdated(i),
                     }),
                     (0, n.jsx)(Ye, { draft: s, eLanguage: i }),
                   ],
                 })
               : (0, n.jsx)(it, {
                   children: (0, n.jsx)(xt, {
-                    strError: (0, b.we)("#FAQViewer_NoFAQFound"),
+                    strError: (0, A.we)("#FAQViewer_NoFAQFound"),
                   }),
                 })
             : (0, n.jsx)(it, {
                 children: (0, n.jsx)(j.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, b.we)("#Loading"),
+                  string: (0, A.we)("#Loading"),
                 }),
               });
         });
       var jt = s(60746),
         vt = s(6813),
         Ct = s(97058);
-      const bt = {
+      const At = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,
           DashboardFAQ: (e) => `/faqs/${e}/dashboard`,
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
         },
-        At = (0, i.PA)((e) => {
+        bt = (0, i.PA)((e) => {
           const [t, s] = r.useState(!0);
           return (
             r.useEffect(() => {
@@ -2357,7 +2367,7 @@
               ? (0, n.jsx)(j.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, b.we)("#Loading"),
+                  string: (0, A.we)("#Loading"),
                 })
               : (0, n.jsxs)(n.Fragment, {
                   children: [
@@ -2365,7 +2375,7 @@
                     (0, n.jsxs)(d.dO, {
                       children: [
                         (0, n.jsx)(d.qh, {
-                          path: bt.ViewFAQ(":vanity_str", ":faqid"),
+                          path: At.ViewFAQ(":vanity_str", ":faqid"),
                           render: (e) =>
                             (0, n.jsx)(vt.X, {
                               config: {
@@ -2378,7 +2388,7 @@
                             }),
                         }),
                         (0, n.jsx)(d.qh, {
-                          path: bt.EditFAQ(":vanity_str", ":faqid"),
+                          path: At.EditFAQ(":vanity_str", ":faqid"),
                           render: (e) =>
                             (0, n.jsx)(vt.X, {
                               config: {
@@ -2399,14 +2409,14 @@
                             }),
                         }),
                         (0, n.jsx)(d.qh, {
-                          path: bt.DashboardFAQ(":vanity_str"),
+                          path: At.DashboardFAQ(":vanity_str"),
                           render: (e) =>
                             (0, n.jsx)(vt.X, {
                               config: { "faqs-root": () => (0, n.jsx)(ae, {}) },
                             }),
                         }),
                         (0, n.jsx)(d.qh, {
-                          path: bt.PreviewFAQ(":vanity_str", ":faqid"),
+                          path: At.PreviewFAQ(":vanity_str", ":faqid"),
                           render: (e) =>
                             (0, n.jsx)(vt.X, {
                               config: {

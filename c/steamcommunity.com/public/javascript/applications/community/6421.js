@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Няма намерени обяви",
 	"AssetProperty_Range_MinPlaceholder": "Мин.",
 	"AssetProperty_Range_MaxPlaceholder": "Макс.",
-	"Accessories_FieldSectionLabel": "Аксесоари"
+	"Accessories_FieldSectionLabel": "Аксесоари",
+	"Listing_EnhancedAppearance_Missing": "Тази обява все още няма уникални или подобрени изображения. Възможно е тукашното показвано изображение да се различава незначително от обявения артикул."
 }`);
     },
   },

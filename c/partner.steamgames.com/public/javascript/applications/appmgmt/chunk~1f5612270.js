@@ -398,6 +398,14 @@
                 "#PricingDashboard_ApplyGuidelines_Instructions",
               ),
             }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("a", {
+              href: _._.PARTNER_BASE_URL + "doc/store/pricing#5",
+              target: "_blank",
+              children: (0, _._)("#PricingDashboard_ApplyGuidelines_Link"),
+            }),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)("br", {}),
             !_ &&
               (0, _.jsx)("div", {
                 className: _().Instructions,
@@ -405,18 +413,14 @@
                   "#PricingDashboard_ApplyGuidelines_Instructions2",
                 ),
               }),
-            (0, _.jsx)("br", {}),
-            (0, _.jsx)("br", {}),
-            (0, _.jsx)("a", {
-              href: _._.PARTNER_BASE_URL + "doc/store/pricing#5",
-              target: "_blank",
-              children: (0, _._)("#PricingDashboard_ApplyGuidelines_Link"),
-            }),
             (0, _.jsx)("div", {
               className: _().Instructions,
               children: (0, _._)("#PricingDashboard_ApplyGuidelines_Assurance"),
             }),
-            (0, _.jsx)(_._, {}),
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              bHideTour: !0,
+            }),
           ],
         });
       }

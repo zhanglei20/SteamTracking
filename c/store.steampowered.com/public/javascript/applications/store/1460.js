@@ -123,7 +123,9 @@
 	"ItemFlag_OnWishlist": "في قائمة الأمنيات",
 	"ItemFlag_InCart": "في العربة",
 	"ItemFlag_Ignored": "تم التجاهل",
-	"ItemFlag_ExcludedByPreferences": "مستبعدة حسب التفضيلات"
+	"ItemFlag_ExcludedByPreferences": "مستبعدة حسب التفضيلات",
+	"Wishlist_Categories_None": "لا شيء",
+	"Wishlist_Controls_Categories_All": "الكل"
 }`);
     },
   },

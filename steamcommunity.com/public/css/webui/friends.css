@@ -552,6 +552,44 @@
 .gamepadui_svg_library_FlipInRTL_1CpOA:dir(rtl) {
   scale: -1 1;
 }
+.gamepadui_svg_library_IbexDiagramFrontPanelTransparencyEffect_1SoIo {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+  transition-delay: .125s;
+}
+.gamepadui_svg_library_IbexDiagramFrontPanelTransparencyEffect_1SoIo.gamepadui_svg_library_ShowXRay_dX_dr {
+  opacity: 0.125;
+  transition-delay: 0s;
+}
+.gamepadui_svg_library_ActivatableFill_3D14G {
+  fill: #090e13;
+  transition-property: fill;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+.gamepadui_svg_library_ActivatableFill_3D14G.gamepadui_svg_library_Active_19Wwg {
+  fill: #1a9fff;
+}
+.gamepadui_svg_library_ActivatableStroke_2Jn2R {
+  stroke: #090e13;
+  transition-property: stroke;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+.gamepadui_svg_library_ActivatableStroke_2Jn2R.gamepadui_svg_library_Active_19Wwg {
+  stroke: #1a9fff;
+}
+.gamepadui_svg_library_ActivatableGradient_cIR7H {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+.gamepadui_svg_library_ActivatableGradient_cIR7H.gamepadui_svg_library_Active_19Wwg {
+  opacity: 1;
+}
 .friendsnooze_SnoozeContainer_1Dsum {
   position: relative;
   overflow: hidden;
@@ -2352,7 +2390,7 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   color: #dcdedf;
 }
@@ -2380,7 +2418,7 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 12px;
   line-height: 16px;
@@ -2400,7 +2438,7 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 12px;
   line-height: 16px;
@@ -2958,11 +2996,11 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
 }
 .gamepaddialog_GamepadDialogContent_16sYN .DialogSubHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -2975,9 +3013,9 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
 }
@@ -2992,9 +3030,9 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
@@ -3033,9 +3071,9 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
 }
@@ -3097,7 +3135,7 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   color: #dcdedf;
   margin-bottom: 10px;
@@ -3734,7 +3772,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -4229,11 +4267,11 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   padding-top: calc(8px + var(--basicui-header-height, 0px));
   padding-left: calc(12px + 1.4vw);
   padding-right: 16px;
@@ -4274,7 +4312,7 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   padding: 10px calc(12px + 1.4vw);
   color: #b8bcbf;
@@ -4817,7 +4855,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   background: #23262e;
   color: #8b929a;
@@ -5366,7 +5404,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -5571,10 +5609,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -5739,7 +5776,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -5954,7 +5991,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -6000,11 +6037,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -6168,11 +6205,11 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -6687,7 +6724,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -6720,7 +6757,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -6861,7 +6898,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -7033,7 +7070,7 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -7085,10 +7122,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   color: #67707b;
 }
 .chatroom_ChatRoomGroupControlsSteamDeck_imObP
@@ -7103,10 +7139,9 @@ button.gamepadinput_TogglePasswordVisibilityBtn_2-fpY svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   color: #67707b;
 }
 .chatroom_ChatRoomGroupControlsSteamDeck_imObP
@@ -10138,218 +10173,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   left: 0;
   right: 0;
   pointer-events: none;
-}
-.linkregionbox_LinkRegionDragBox_Rtlc- {
-  position: absolute;
-  top: 32px;
-  left: 32px;
-  right: 32px;
-  bottom: 32px;
-  -webkit-app-region: no-drag;
-  z-index: 50;
-}
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_EdgeDown_i9zrH {
-  z-index: 52;
-}
-.linkregionbox_LinkRegionGridBox_1Ob4A {
-  width: calc(100% + 30px);
-  height: calc(100% + 30px);
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-rows: 16px auto 16px;
-  grid-gap: 0;
-  grid-row-gap: 0;
-  margin-left: -16px;
-  margin-top: -16px;
-  -webkit-app-region: no-drag;
-}
-.linkregionbox_LinkRegionEdge_2stP4 {
-  background-color: rgba(92, 191, 230, 0.192);
-  width: 100%;
-  height: 100%;
-  -webkit-app-region: no-drag;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_TopLeft_Clgi- {
-  border-right: 2px dotted #008ada;
-  border-bottom: 2px dotted #008ada;
-  cursor: nwse-resize;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Top_2Z9Vy {
-  border-bottom: 2px dotted #008ada;
-  background: linear-gradient(
-    to top,
-    rgba(1, 153, 255, 0.5) -50%,
-    rgba(29, 30, 35, 0) 100%
-  );
-  cursor: ns-resize;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_TopRight_2-8Db {
-  border-left: 2px dotted #008ada;
-  border-bottom: 2px dotted #008ada;
-  cursor: nesw-resize;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Left_3ZwUw {
-  border-right: 2px dotted #008ada;
-  background: linear-gradient(
-    to left,
-    rgba(1, 153, 255, 0.5) -50%,
-    rgba(29, 30, 35, 0) 100%
-  );
-  cursor: ew-resize;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco {
-  cursor: move;
-  background-color: rgba(191, 202, 250, 0.133);
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco
-  .linkregionbox_LinkRegionDelete_3Hb3w {
-  width: 20px;
-  height: 20px;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  cursor: default;
-  opacity: 0;
-  -webkit-app-region: no-drag;
-  transition-property: opacity;
-  transition-duration: .21s;
-  transition-timing-function: ease-in-out;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco
-  .linkregionbox_LinkRegionSettings_VazMl {
-  width: 20px;
-  height: 20px;
-  max-width: 100%;
-  max-height: 100%;
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  cursor: default;
-  opacity: 0;
-  -webkit-app-region: no-drag;
-  transition-property: opacity;
-  transition-duration: .21s;
-  transition-timing-function: ease-in-out;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco
-  .linkregionbox_LinkRegionDelete_3Hb3w
-  line,
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco
-  .linkregionbox_LinkRegionSettings_VazMl
-  line {
-  stroke-width: 26px;
-  stroke: #008ada;
-  transition-property: stroke, stroke-width;
-  transition-duration: .21s;
-  transition-timing-function: ease-in-out;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco:hover
-  .linkregionbox_LinkRegionDelete_3Hb3w:hover
-  line,
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco:hover
-  .linkregionbox_LinkRegionSettings_VazMl:hover
-  line {
-  stroke: #cce0ff;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco:hover
-  .linkregionbox_LinkRegionDelete_3Hb3w,
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco:hover
-  .linkregionbox_LinkRegionSettings_VazMl {
-  opacity: 1;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Right_3h5fK {
-  border-left: 2px dotted #008ada;
-  background: linear-gradient(
-    to right,
-    rgba(1, 153, 255, 0.5) -50%,
-    rgba(29, 30, 35, 0) 100%
-  );
-  cursor: ew-resize;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_BottomLeft_2CQe0 {
-  border-right: 2px dotted #008ada;
-  border-top: 2px dotted #008ada;
-  cursor: nesw-resize;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Bottom_sIHlK {
-  border-top: 2px dotted #008ada;
-  background: linear-gradient(
-    to bottom,
-    rgba(1, 153, 255, 0.5) -50%,
-    rgba(29, 30, 35, 0) 100%
-  );
-  cursor: ns-resize;
-}
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_BottomRight_3lnwj {
-  border-left: 2px dotted #008ada;
-  border-top: 2px dotted #008ada;
-  cursor: nwse-resize;
-}
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_topleft_3W096
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_TopLeft_Clgi-,
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_top_1iRW1
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Top_2Z9Vy,
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_topright_1Yrl7
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_TopRight_2-8Db,
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_left_2iBrm
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Left_3ZwUw,
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_right_15t6A
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Right_3h5fK,
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_bottomleft_3SdBc
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_BottomLeft_2CQe0,
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_bottom_2kzZ9
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Bottom_sIHlK,
-.linkregionbox_LinkRegionDragBox_Rtlc-.linkregionbox_bottomright_2AKXk
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_BottomRight_3lnwj {
-  border-color: #fff;
-}
-.linkregionbox_LinkRegionEdge_2stP4:hover {
-  border-color: #7eadf8;
-}
-.linkregionbox_EdgeDown_i9zrH.linkregionbox_middle_1CS75
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco,
-.linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Middle_1Heco:hover {
-  z-index: 10;
-  background-color: rgba(133, 156, 255, 0.171);
-}
-.linkregionbox_EdgeDown_i9zrH.linkregionbox_middle_1CS75
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Right_3h5fK,
-.linkregionbox_EdgeDown_i9zrH.linkregionbox_middle_1CS75
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Bottom_sIHlK,
-.linkregionbox_EdgeDown_i9zrH.linkregionbox_middle_1CS75
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Top_2Z9Vy,
-.linkregionbox_EdgeDown_i9zrH.linkregionbox_middle_1CS75
-  .linkregionbox_LinkRegionEdge_2stP4.linkregionbox_Left_3ZwUw {
-  border-color: #fff;
-}
-.linkregionbox_LinkRegionButtonContainer_1ZJ42
-  .linkregionbox_DialogButton_nN2Q1 {
-  display: inline-block;
-  width: 100px;
-  margin-right: 20px;
-}
-.linkregionbox_LinkRegionInfo_3TiV7 {
-  background-color: #000;
-  padding: 10px;
-}
-.linkregionbox_LinkText_2TAc2 {
-  text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-}
-.cropmodal_CropImage_3qfqT {
-  position: relative;
-  margin: 0px auto;
-}
-.cropmodal_CropPreviewGroup_1RI-Q {
-  margin: 10px auto;
-}
-.cropmodal_CropPreviewLabel_3_zyL {
-  text-transform: uppercase;
-  color: #fff;
-  text-align: center;
 }
 .segmentedinputs_SegmentedCharacterInput_1gzkm {
   display: flex;
@@ -17923,7 +17746,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -18133,10 +17956,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -18301,7 +18123,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -18516,7 +18338,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -18562,11 +18384,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -18730,11 +18552,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -19252,7 +19074,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -19285,7 +19107,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -19348,11 +19170,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
 }
 .quickaccessvoicecontrolssteamdeck_Title_8BFsa
   .quickaccessvoicecontrolssteamdeck_PendingVoiceChats_3WFt2 {
@@ -19915,7 +19737,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -20120,10 +19942,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -20288,7 +20109,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -20503,7 +20324,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -20549,11 +20370,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -20717,11 +20538,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -21236,7 +21057,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -21269,7 +21090,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -21417,7 +21238,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -21619,7 +21440,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -22063,7 +21884,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -22268,10 +22089,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -22436,7 +22256,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -22651,7 +22471,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -22697,11 +22517,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -22865,11 +22685,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -23387,7 +23207,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -23420,7 +23240,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -23945,7 +23765,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -24150,10 +23970,9 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -24318,7 +24137,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -24533,7 +24352,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -24579,11 +24398,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -24747,11 +24566,11 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -25269,7 +25088,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -25302,7 +25121,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -25826,6 +25645,10 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .friendslist_OfflineMessage_2aYfi .friendslist_retryButton_1NI2e:active {
   background: linear-gradient(to right, #018eea 0%, #185feb 100%);
 }
+.friendslist_RadialMenuListener_3Rvs- {
+  width: 100%;
+  height: 100%;
+}
 @keyframes quickaccesscontrols_BackgroundAnimation_nTEVK {
   from {
     background-position: 0 100%;
@@ -25946,7 +25769,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -25988,7 +25811,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 12px;
   line-height: 16px;
@@ -26005,7 +25828,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -26045,7 +25868,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -26242,7 +26065,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -26284,7 +26107,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 12px;
   line-height: 16px;
@@ -26301,7 +26124,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -26339,7 +26162,7 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -27036,11 +26859,11 @@ svg.remoteplay_IconMobile_2371n {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   background: #0e141b;
   z-index: 5;
   box-shadow: 0 0 7px 12px #0e141b;
@@ -27086,7 +26909,7 @@ svg.remoteplay_IconMobile_2371n {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -27116,7 +26939,7 @@ svg.remoteplay_IconMobile_2371n {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -27426,7 +27249,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -27470,7 +27293,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   display: flex;
   flex-direction: row;
@@ -27687,7 +27510,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -27895,10 +27718,9 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -28063,7 +27885,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -28278,7 +28100,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -28324,11 +28146,11 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -28492,11 +28314,11 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -29014,7 +28836,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -29047,7 +28869,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -29346,7 +29168,7 @@ svg.reorderablelist_ReorderArrow_1jEeo {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -32621,7 +32443,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -32826,10 +32648,9 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -32994,7 +32815,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -33209,7 +33030,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -33255,11 +33076,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -33423,11 +33244,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -33945,7 +33766,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -33978,7 +33799,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -34418,7 +34239,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -34628,10 +34449,9 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -34796,7 +34616,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -35011,7 +34831,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -35057,11 +34877,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -35225,11 +35045,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -35747,7 +35567,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -35780,7 +35600,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -36044,7 +35864,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -36252,10 +36072,9 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -36420,7 +36239,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -36635,7 +36454,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -36681,11 +36500,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -36849,11 +36668,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -37371,7 +37190,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -37404,7 +37223,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -37820,7 +37639,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -38024,10 +37843,9 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -38192,7 +38010,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -38407,7 +38225,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -38453,11 +38271,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -38621,11 +38439,11 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -39138,7 +38956,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -39171,7 +38989,7 @@ div:hover > .BBCodeCollapseControl {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -42081,7 +41899,7 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -42284,10 +42102,9 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 14px;
-  line-height: 20px;
   text-transform: normal;
   padding-left: 16px;
   align-items: center;
@@ -42452,7 +42269,7 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -42667,7 +42484,7 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 10px;
@@ -42713,11 +42530,11 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   line-height: 22px;
   padding-bottom: 8px;
   padding-top: 3px;
@@ -42881,11 +42698,11 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   color: #fff;
   margin: 0;
   display: flex;
@@ -43398,7 +43215,7 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-weight: bold;
   font-size: 12px;
@@ -43431,7 +43248,7 @@ body.in_global_drag .title-area {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -44938,7 +44755,7 @@ body.in_global_drag .friendlist_titlebar {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;

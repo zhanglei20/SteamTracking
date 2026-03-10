@@ -249,15 +249,14 @@
     },
     35400: (e, t, n) => {
       n.d(t, {
-        DV: () => D,
-        Fq: () => _,
-        OC: () => I,
-        OM: () => S,
-        Sp: () => v,
-        Tn: () => C,
-        W3: () => b,
-        hH: () => g,
-        my: () => f,
+        DV: () => I,
+        OC: () => g,
+        OM: () => D,
+        Sp: () => b,
+        Tn: () => S,
+        W3: () => C,
+        hH: () => p,
+        my: () => v,
       });
       var s = n(34629),
         o = n(41735),
@@ -270,14 +269,13 @@
         u = n(78327),
         m = n(44165),
         h = n(34824);
-      const _ = 7,
-        p = -1;
-      class g {
+      const _ = -1;
+      class p {
         m_userData;
         m_bLoadedDuringInit = !1;
         m_strLastDoorOpenKey = "video_noneset";
         m_bIsAnyDoorOpened = !1;
-        m_nHighestDoorOpened = p;
+        m_nHighestDoorOpened = _;
         m_initialLoadPromise;
         m_mapDoorOpenPromise = new Map();
         m_mapChangeCallback = new Map();
@@ -337,10 +335,10 @@
           return this.m_bLoadedDuringInit;
         }
         GetMaxDoor() {
-          return _;
+          return 7;
         }
         SetInMemoryUpdateDoorOpenUpto(e) {
-          for (let t = 0; t < _; ++t) {
+          for (let t = 0; t < 7; ++t) {
             const n = t <= e;
             this.m_userData[t].opened != n &&
               ((this.m_userData[t].opened = n),
@@ -349,7 +347,7 @@
           this.RecomputeState();
         }
         SetInMemorySpecificDoorState(e, t) {
-          e < _
+          e < 7
             ? this.m_userData[e].opened != t &&
               ((this.m_userData[e].opened = t),
               this.GetDoorStateChangeCallback(e).Dispatch(t),
@@ -357,11 +355,11 @@
             : console.error("CDoorStore: Wrong door being set " + e);
         }
         RecomputeState() {
-          let e = p;
+          let e = _;
           this.m_userData?.forEach((t) => {
             t.opened && t.day > e && (e = t.day);
           });
-          const t = e != p;
+          const t = e != _;
           t != this.m_bIsAnyDoorOpened &&
             ((this.m_bIsAnyDoorOpened = t),
             this.GetIsAnyDoorOpenChange().Dispatch(t)),
@@ -440,7 +438,7 @@
             if (200 == n.status && n.data?.doordata) {
               (this.m_userData = n.data.doordata),
                 (this.m_bLoadedDuringInit = !0);
-              for (let e = 0; e < _; ++e)
+              for (let e = 0; e < 7; ++e)
                 this.GetDoorStateChangeCallback(e).Dispatch(
                   this.m_userData[e].opened,
                 );
@@ -474,7 +472,7 @@
             let e = await i().post(t, n, { withCredentials: !0 });
             if (200 == e.status && 1 == e?.data?.success) {
               console.log("CDoorStore - closed " + e.data.count);
-              for (let e = 0; e < _; ++e)
+              for (let e = 0; e < 7; ++e)
                 (this.m_userData[e].opened = !1),
                   this.GetDoorStateChangeCallback(e).Dispatch(
                     this.m_userData[e].opened,
@@ -496,12 +494,12 @@
         static s_Singleton;
         static Get() {
           return (
-            g.s_Singleton ||
-              ((g.s_Singleton = new g()),
-              g.s_Singleton.Init(),
+            p.s_Singleton ||
+              ((p.s_Singleton = new p()),
+              p.s_Singleton.Init(),
               "dev" == u.TS.WEB_UNIVERSE &&
-                (window.g_EventDoorStore = g.s_Singleton)),
-            g.s_Singleton
+                (window.g_EventDoorStore = p.s_Singleton)),
+            p.s_Singleton
           );
         }
         constructor() {
@@ -516,44 +514,44 @@
                 console.log("CDoorStore Loading - ", this.m_userData));
         }
       }
-      function I() {
-        return { fnOpenDoor: g.Get().OpenDoor };
+      function g() {
+        return { fnOpenDoor: p.Get().OpenDoor };
       }
-      function D() {
-        const [e, t] = (0, a.useState)(g.Get().BIsInitialized());
+      function I() {
+        const [e, t] = (0, a.useState)(p.Get().BIsInitialized());
         return (
           (0, a.useEffect)(() => {
-            e || g.Get().LoadDoorData();
+            e || p.Get().LoadDoorData();
           }, [e]),
-          (0, d.hL)(g.Get().GetDoorStateInitializedChangeCallback(), t),
+          (0, d.hL)(p.Get().GetDoorStateInitializedChangeCallback(), t),
           e
         );
       }
-      function S(e) {
-        const t = D(),
-          [n, s] = (0, a.useState)(t ? g.Get().BIsDoorOpened(e) : void 0);
-        return (0, d.hL)(g.Get().GetDoorStateChangeCallback(e), s), n;
+      function D(e) {
+        const t = I(),
+          [n, s] = (0, a.useState)(t ? p.Get().BIsDoorOpened(e) : void 0);
+        return (0, d.hL)(p.Get().GetDoorStateChangeCallback(e), s), n;
+      }
+      function S() {
+        const e = I(),
+          [t, n] = (0, a.useState)(e ? p.Get().GetLargestDoorOpenIndex() : _);
+        return (0, d.hL)(p.Get().GetLargestDoorIndexChange(), n), t;
       }
       function C() {
-        const e = D(),
-          [t, n] = (0, a.useState)(e ? g.Get().GetLargestDoorOpenIndex() : p);
-        return (0, d.hL)(g.Get().GetLargestDoorIndexChange(), n), t;
+        const e = I(),
+          [t, n] = (0, a.useState)(!!e && p.Get().BIsAnyDoorOpened());
+        return (0, d.hL)(p.Get().GetIsAnyDoorOpenChange(), n), t;
       }
-      function b() {
-        const e = D(),
-          [t, n] = (0, a.useState)(!!e && g.Get().BIsAnyDoorOpened());
-        return (0, d.hL)(g.Get().GetIsAnyDoorOpenChange(), n), t;
+      function b(e) {
+        p.Get().SetInMemoryUpdateDoorOpenUpto(e);
       }
-      function v(e) {
-        g.Get().SetInMemoryUpdateDoorOpenUpto(e);
+      function v(e, t) {
+        p.Get().SetInMemorySpecificDoorState(e, t);
       }
-      function f(e, t) {
-        g.Get().SetInMemorySpecificDoorState(e, t);
-      }
-      (0, s.Cg)([r.sH], g.prototype, "m_bIsAnyDoorOpened", void 0),
-        (0, s.Cg)([r.sH], g.prototype, "m_nHighestDoorOpened", void 0),
-        (0, s.Cg)([d.oI], g.prototype, "BIsDoorOpened", null),
-        (0, s.Cg)([d.oI], g.prototype, "OpenDoor", null);
+      (0, s.Cg)([r.sH], p.prototype, "m_bIsAnyDoorOpened", void 0),
+        (0, s.Cg)([r.sH], p.prototype, "m_nHighestDoorOpened", void 0),
+        (0, s.Cg)([d.oI], p.prototype, "BIsDoorOpened", null),
+        (0, s.Cg)([d.oI], p.prototype, "OpenDoor", null);
     },
     34824: (e, t, n) => {
       n.d(t, {
@@ -567,7 +565,7 @@
       var s,
         o = n(34629),
         i = n(14947),
-        r = (n(90626), n(89128)),
+        r = (n(90626), n(62641)),
         a = n(81393),
         l = n(6144),
         c = n(84933),

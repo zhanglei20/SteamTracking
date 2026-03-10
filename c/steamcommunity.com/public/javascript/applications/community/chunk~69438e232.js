@@ -249,6 +249,7 @@
         DeveloperComments_Icon: "_2R6eCuptMWK0ZkTe0GeqEi",
         DeveloperComments_LinkNoIcon: "_1zjwW1q8ccnB76k2rPv9oM",
         DeveloperComments_LinkIcon: "_3OZNUKYm6BQ2AVO-NCNw2t",
+        CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
         CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
       };
@@ -584,19 +585,6 @@
         VisibilityNote: "_1G3X_jfMgGX1nzeOAvPZNG",
         EditorStatsRow: "_2SecokIlleKz0K30ieApg5",
         SteamBlog: "_1rafn02Kz4HF1-3xfmuaR0",
-        LunarNewYearHeader: "_1g4Yfobmkb5CVI2gzly8Bg",
-        EnvelopeArea: "_39E2FZTJMQvhj8ofBhy8AR",
-        TokenBalanceContainer: "_2tXIgZxKpkTb7xTUZ72Z9I",
-        TokenBalance: "_3WhoViO5mx4twzeo0r0dFQ",
-        EnvelopeContainer: "_1g0zsoC3W3W35C4mLJix2C",
-        BackingRect: "_2V4xVhoSgN6ULgdqpHEpJ9",
-        Envelope: "_2WNMeB-9H8LtPhtFfVmTj",
-        GiftLabel: "d2D-Iy1puDsQ_MAyI2LCq",
-        OpenState: "_3OVk1SNdESa9y13m8RkmGI",
-        Opened: "_28wlXXBWOcvlhNyC800pqB",
-        Unlocked: "_26x3oY6SpyqkUlv0Z85k2f",
-        NeedLogin: "_2F_XalPrF1aJwmTjLxnhQT",
-        BottomMessage: "_3M82Ie_ylqj38H82JslePb",
         _: "_1-pFh2QlJBUeqmXrWcbTQQ",
         LunarNewYearOpenEnvelopeVideoDialog: "_1-SzihnWiO-8bBYWJ-TS-4",
         Container: "_1dcfd1Jxk-yCCdG0k1eyG-",
@@ -685,8 +673,6 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
-        SalePageHiddenWarning: "_1YFdf1y95AkfWGA5KJ7xkq",
-        WarningText: "_2np-E5iWUyNp6j8VKY3Rti",
       };
     },
     chunkid: (module) => {
@@ -938,6 +924,38 @@
       module.exports = {
         ClientSelectDropdown: "_36ai7Zh_5P9n3Lpg52IdgV",
         ClientListDropdownMenu: "bEY2j4LBFVv4rCwEfxS64",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
+        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
+        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
+        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
+        TopLeft: "Clgi---P85XXv25yLZwB0",
+        Top: "_2Z9VyBAzofV3JvK__dECbX",
+        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
+        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
+        Middle: "_1HecozzoSZfUZSci9dLkxN",
+        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
+        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
+        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
+        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
+        Bottom: "sIHlK9sN2255-irERXD_V",
+        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
+        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
+        top: "_1iRW1Msfh60zHqD-xe4EAk",
+        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
+        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
+        right: "_15t6A4l27DY4KRL1aAUTTS",
+        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
+        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
+        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
+        middle: "_1CS75ZrrDXna6xatw5ZvPR",
+        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
+        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
+        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
+        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
       };
     },
     chunkid: (module) => {
@@ -6295,6 +6313,16 @@
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  disable_microtrailers: {
+                    _: 15,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  disable_animated_marketing: {
+                    _: 16,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -10530,28 +10558,37 @@
         const _ = await _.json();
         return 1 != _.success ? null : _;
       }
+      function _() {
+        return "undefined" != typeof window && "undefined" != typeof self
+          ? self.origin
+          : "ssr_server";
+      }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: _(_),
-          queryFn: async () => {
-            const _ = await (async function (_) {
-              const _ = _._.InitFromClanID(_);
-              return _(
-                `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${self.origin}`,
-              );
-            })(_);
-            if (_) {
-              _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
-                _.vanity_url &&
-                  _.setQueryData(_(_.vanity_url), _.clanAccountID);
-              const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
-              return _;
-            }
-            return null;
-          },
-          enabled: !!_,
-        });
+        return (0, _._)(
+          (function (_, _) {
+            return {
+              queryKey: _(_),
+              queryFn: async () => {
+                const _ = await (async function (_) {
+                  const _ = _._.InitFromClanID(_);
+                  return _(
+                    `${_._.COMMUNITY_BASE_URL}gid/${_.ConvertTo64BitString()}/ajaxgetvanityandclanid/?origin=${_()}`,
+                  );
+                })(_);
+                if (_) {
+                  _.appid && _.setQueryData(_(_.appid), _.clanAccountID),
+                    _.vanity_url &&
+                      _.setQueryData(_(_.vanity_url), _.clanAccountID);
+                  const { clanSteamIDString: _, msg: _, success: _, ..._ } = _;
+                  return _;
+                }
+                return null;
+              },
+              enabled: !!_,
+            };
+          })(_, _),
+        );
       }
       function _(_) {
         return ["clantoclaninfo", _];
@@ -10571,7 +10608,6 @@
               let _ = {
                 get_appids: !0,
                 _: _._.LANGUAGE,
-                origin: self.origin,
               };
               const _ = new URLSearchParams(_).toString(),
                 _ = `${_._.STORE_BASE_URL}curator/${_}/ajaxgetcreatorhomeinfo/?${_}`,
@@ -10974,6 +11010,42 @@
             children: _.children,
           }),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = {
+          eLocation: 0,
+        },
+        _ = _.createContext(_);
+      function _(_) {
+        const { children: _, location: __webpack_require__ } = _;
+        return (0, _.jsx)(_.Provider, {
+          value: {
+            ..._,
+            eLocation: null != __webpack_require__ ? __webpack_require__ : 0,
+          },
+          children: _,
+        });
+      }
+      function _() {
+        return _.useContext(_);
+      }
+      function _() {
+        return 2 == _().eLocation;
+      }
+      function _() {
+        const _ = _();
+        return 2 == _.eLocation || 1 == _.eLocation;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -14193,6 +14265,96 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        var _;
+        const {
+            _: __webpack_require__,
+            strClassName: _,
+            bMinimizePlatforms: _,
+          } = _,
+          { data: _ } = (0, _._)(__webpack_require__);
+        if (!_) return null;
+        if (_) {
+          let _ =
+            (null == _ ? void 0 : _.windows) &&
+            (0, _.jsx)("span", {
+              title: _._.Localize("#Platform_Windows"),
+              children: (0, _.jsx)(_.Xz0, {
+                "aria-label": _._.Localize("#Platform_Windows"),
+              }),
+            });
+          return (
+            (0, _._)() && (null == _ ? void 0 : _.mac)
+              ? (_ = (0, _.jsx)("span", {
+                  title: _._.Localize("#Platform_Mac"),
+                  children: (0, _.jsx)(_.kPc, {
+                    "aria-label": _._.Localize("#Platform_Mac"),
+                  }),
+                }))
+              : ((0, _._)() || (0, _._)() || (0, _._)()) &&
+                (null == _ ? void 0 : _.steamos_linux) &&
+                (_ = (0, _.jsx)("span", {
+                  title: _._.Localize("#Platform_Linux"),
+                  children: (0, _.jsx)(_.Qte, {
+                    "aria-label": _._.Localize("#Platform_Linux"),
+                  }),
+                })),
+            _
+              ? (0, _.jsx)("span", {
+                  className: (0, _._)(_().CapsulePlatform, _),
+                  children: _,
+                })
+              : null
+          );
+        }
+        return (0, _.jsxs)("span", {
+          className: (0, _._)(_().CapsulePlatform, _),
+          children: [
+            _.windows &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Windows"),
+                children: (0, _.jsx)(_.Xz0, {
+                  "aria-label": _._.Localize("#Platform_Windows"),
+                }),
+              }),
+            _.mac &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Mac"),
+                children: (0, _.jsx)(_.kPc, {
+                  "aria-label": _._.Localize("#Platform_Mac"),
+                }),
+              }),
+            _.steamos_linux &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_Linux"),
+                children: (0, _.jsx)(_.Qte, {
+                  "aria-label": _._.Localize("#Platform_Linux"),
+                }),
+              }),
+            (null === (_ = _.vr_support) || void 0 === _ ? void 0 : _.vrhmd) &&
+              (0, _.jsx)("span", {
+                title: _._.Localize("#Platform_VR"),
+                children: (0, _.jsx)(_._, {
+                  "aria-label": _._.Localize("#Platform_VR"),
+                }),
+              }),
+          ],
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -14434,6 +14596,171 @@
             ],
           })
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      function _() {
+        return (0, _._)({
+          queryKey: ["BroadcastApps"],
+          queryFn: async () => {
+            const _ = await (async function () {
+              let _ = (0, _._)(
+                "broadcast_available_for_page",
+                "application_config",
+              );
+              if ((0, _._)(_)) {
+                const _ = new Set();
+                return (
+                  _.filtered.forEach((_) => {
+                    _.appid && _.add(_.appid);
+                  }),
+                  Array.from(_)
+                );
+              }
+              return [];
+            })();
+            return new Set(_);
+          },
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ =
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            appids: _,
+            hide_status_banners: __webpack_require__,
+            show_early_access: _,
+          } = _,
+          { data: _ } = (0, _._)(),
+          { data: _ } = (0, _._)(),
+          _ = _.length > 0 && _.every((_) => _ && _.has(_)),
+          _ = _.length > 0 && _.every((_) => _ && _.has(_)),
+          _ = (function (_) {
+            const { data: _ } = _(),
+              [__webpack_require__, _] = (0, _.useState)(!1),
+              _ = (0, _._)(),
+              _ = (0, _._)();
+            return (
+              (0, _.useEffect)(() => {
+                if (!_ || 0 == _.length || !_) return _(!1);
+                (async () => {
+                  const _ = await Promise.all(
+                    _.map((_) =>
+                      _.fetchQuery(
+                        (0, _._)(_, {
+                          appid: _,
+                        }),
+                      ),
+                    ),
+                  );
+                  _(
+                    __webpack_require__.some((_) => {
+                      var _;
+                      return (
+                        (_ && _.appid && _.has(_.appid)) ||
+                        ((null === (_ = null == _ ? void 0 : _.related_items) ||
+                        void 0 === _
+                          ? void 0
+                          : _.parent_appid) &&
+                          _.has(_.related_items.parent_appid))
+                      );
+                    }),
+                  );
+                })();
+              }, [_, _, _, _]),
+              __webpack_require__
+            );
+          })(_),
+          _ = _ && !__webpack_require__,
+          _ = _ && !__webpack_require__,
+          _ = !__webpack_require__ && _;
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().CapsuleDecorators, "CapsuleDecorators"),
+          children: [
+            _ &&
+              (0, _.jsxs)("span", {
+                className: (0, _._)(_().Banner, _().Blue),
+                children: [
+                  (0, _.jsx)("img", {
+                    src: (0, _._)(_),
+                    className: _().LinesImg,
+                    alt: _._.Localize("#Sale_InLibrary"),
+                  }),
+                  _._.Localize("#Sale_InLibrary"),
+                ],
+              }),
+            _ &&
+              (0, _.jsxs)("span", {
+                className: _().Banner,
+                children: [
+                  (0, _.jsx)(_.qnF, {
+                    className: _().LinesImg,
+                  }),
+                  _._.Localize("#Sale_OnWishlist"),
+                ],
+              }),
+            _ &&
+              !_ &&
+              !_ &&
+              (0, _.jsx)(_, {
+                appids: _,
+              }),
+            _ && (0, _.jsx)(_._, {}),
+          ],
+        });
+      }
+      function _(_) {
+        const { appids: _ } = _,
+          _ = (function (_) {
+            const [_, _] = (0, _.useState)(!1),
+              _ = (0, _._)(),
+              _ = (0, _._)();
+            return (
+              (0, _.useEffect)(() => {
+                if (!_ || 0 == _.length) return __webpack_require__(!1);
+                (async () => {
+                  const _ = await Promise.all(
+                    _.map((_) =>
+                      _.fetchQuery(
+                        (0, _._)(_, {
+                          appid: _,
+                        }),
+                      ),
+                    ),
+                  );
+                  __webpack_require__(_.some((_) => _ && _.is_early_access));
+                })();
+              }, [_, _, _]),
+              _
+            );
+          })(_);
+        return _
+          ? (0, _.jsx)("span", {
+              className: (0, _._)(_().Banner, _().EarlyAccessGradient),
+              children: _._.Localize("#Sale_EarlyAccess"),
+            })
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -16190,7 +16517,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = "0px 0px 100% 0px",
+      const _ = "100% 0px 100% 0px",
         _ = "tab",
         _ = "SaleSection_",
         _ = 940;
@@ -22723,7 +23050,7 @@
           } = _,
           _ = (0, _.jsx)("div", {
             style: {
-              gap: __webpack_require__ ? __webpack_require__ + "px" : "unset",
+              gap: __webpack_require__ ? __webpack_require__ + "px" : void 0,
             },
             className: (0, _._)({
               [_.ScrollSnapCarousel]: !0,
@@ -23474,35 +23801,33 @@
                   appName: _,
                 }),
             _ = _ ? _ : _;
-          return (0, _.jsx)(_._, {
+          return (0, _.jsxs)(_._, {
             autoFocus: _,
             focusableIfEmpty: _,
             noFocusRing: !0,
             className: _().CompatibilityDetailsContainer,
             ..._,
-            children: (0, _.jsxs)("div", {
-              children: [
-                (0, _.jsxs)("div", {
-                  _: _,
-                  className: _().DialogHeader,
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: _().DialogTitle,
-                      children: _,
+            children: [
+              (0, _.jsxs)("div", {
+                _: _,
+                className: _().DialogHeader,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().DialogTitle,
+                    children: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().AppTitleCategory,
+                    children: (0, _.jsx)(_, {
+                      category: __webpack_require__.resolved_category,
                     }),
-                    (0, _.jsx)("div", {
-                      className: _().AppTitleCategory,
-                      children: (0, _.jsx)(_, {
-                        category: __webpack_require__.resolved_category,
-                      }),
-                    }),
-                  ],
-                }),
-                _,
-                !1,
-                _,
-              ],
-            }),
+                  }),
+                ],
+              }),
+              _,
+              !1,
+              _,
+            ],
           });
         }
         if (_ || _) {
@@ -23546,6 +23871,7 @@
           return (0, _.jsx)(_._, {
             tabs: _,
             classNameCtn: _().CompatibilityTabs,
+            classNameTabContent: _().CompatibilityTabContent,
             startingTab: _ ? "steamos" : "steamdeck",
           });
         }
@@ -26953,12 +27279,6 @@
                             (0, _.jsx)(_, {
                               loader: this.m_loader,
                               location: "bottom",
-                            }),
-                          Boolean(_) &&
-                            (0, _.jsx)(_._, {
-                              eventModel: _,
-                              route: _._.k_eStoreNewsHub,
-                              children: (0, _._)("#EventBrowse_MoreEventsBtn"),
                             }),
                         ],
                       }),
@@ -35799,16 +36119,15 @@
                     }),
                 ],
               }),
-              (0, _.jsx)("div", {
-                className: _().ShareContainer,
-                children:
-                  !this.props.bInGamepadUI &&
-                  (0, _.jsx)(_, {
+              !this.props.bInGamepadUI &&
+                (0, _.jsx)("div", {
+                  className: _().ShareContainer,
+                  children: (0, _.jsx)(_, {
                     eventModel: _,
                     emoticonStore: this.props.emoticonStore,
                     partnerEventStore: this.props.partnerEventStore,
                   }),
-              }),
+                }),
             ],
           });
         }
@@ -39575,42 +39894,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {
-          eLocation: 0,
-        },
-        _ = _.createContext(_);
-      function _(_) {
-        const { children: _, location: __webpack_require__ } = _;
-        return (0, _.jsx)(_.Provider, {
-          value: {
-            ..._,
-            eLocation: null != __webpack_require__ ? __webpack_require__ : 0,
-          },
-          children: _,
-        });
-      }
-      function _() {
-        return _.useContext(_);
-      }
-      function _() {
-        return 2 == _().eLocation;
-      }
-      function _() {
-        const _ = _();
-        return 2 == _.eLocation || 1 == _.eLocation;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -40637,6 +40920,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
@@ -40697,6 +40981,7 @@
           : null;
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -40801,15 +41086,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -41409,96 +41692,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        var _;
-        const {
-            _: __webpack_require__,
-            strClassName: _,
-            bMinimizePlatforms: _,
-          } = _,
-          { data: _ } = (0, _._)(__webpack_require__);
-        if (!_) return null;
-        if (_) {
-          let _ =
-            (null == _ ? void 0 : _.windows) &&
-            (0, _.jsx)("span", {
-              title: _._.Localize("#Platform_Windows"),
-              children: (0, _.jsx)(_.Xz0, {
-                "aria-label": _._.Localize("#Platform_Windows"),
-              }),
-            });
-          return (
-            (0, _._)() && (null == _ ? void 0 : _.mac)
-              ? (_ = (0, _.jsx)("span", {
-                  title: _._.Localize("#Platform_Mac"),
-                  children: (0, _.jsx)(_.kPc, {
-                    "aria-label": _._.Localize("#Platform_Mac"),
-                  }),
-                }))
-              : ((0, _._)() || (0, _._)() || (0, _._)()) &&
-                (null == _ ? void 0 : _.steamos_linux) &&
-                (_ = (0, _.jsx)("span", {
-                  title: _._.Localize("#Platform_Linux"),
-                  children: (0, _.jsx)(_.Qte, {
-                    "aria-label": _._.Localize("#Platform_Linux"),
-                  }),
-                })),
-            _
-              ? (0, _.jsx)("span", {
-                  className: (0, _._)(_().CapsulePlatform, _),
-                  children: _,
-                })
-              : null
-          );
-        }
-        return (0, _.jsxs)("span", {
-          className: (0, _._)(_().CapsulePlatform, _),
-          children: [
-            _.windows &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Windows"),
-                children: (0, _.jsx)(_.Xz0, {
-                  "aria-label": _._.Localize("#Platform_Windows"),
-                }),
-              }),
-            _.mac &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Mac"),
-                children: (0, _.jsx)(_.kPc, {
-                  "aria-label": _._.Localize("#Platform_Mac"),
-                }),
-              }),
-            _.steamos_linux &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_Linux"),
-                children: (0, _.jsx)(_.Qte, {
-                  "aria-label": _._.Localize("#Platform_Linux"),
-                }),
-              }),
-            (null === (_ = _.vr_support) || void 0 === _ ? void 0 : _.vrhmd) &&
-              (0, _.jsx)("span", {
-                title: _._.Localize("#Platform_VR"),
-                children: (0, _.jsx)(_._, {
-                  "aria-label": _._.Localize("#Platform_VR"),
-                }),
-              }),
-          ],
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -41714,170 +41907,6 @@
                   className: (0, _._)(_.Banner, _.Mobile),
                 }),
               ],
-            })
-          : null;
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      function _() {
-        return (0, _._)({
-          queryKey: ["BroadcastApps"],
-          queryFn: async () => {
-            const _ = await (async function () {
-              let _ = (0, _._)(
-                "broadcast_available_for_page",
-                "application_config",
-              );
-              if ((0, _._)(_)) {
-                const _ = new Set();
-                return (
-                  _.filtered.forEach((_) => {
-                    _.appid && _.add(_.appid);
-                  }),
-                  Array.from(_)
-                );
-              }
-              return [];
-            })();
-            return new Set(_);
-          },
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            appids: _,
-            hide_status_banners: __webpack_require__,
-            show_early_access: _,
-          } = _,
-          { data: _ } = (0, _._)(),
-          { data: _ } = (0, _._)(),
-          _ = _.length > 0 && _.every((_) => _ && _.has(_)),
-          _ = _.length > 0 && _.every((_) => _ && _.has(_)),
-          _ = (function (_) {
-            const { data: _ } = _(),
-              [__webpack_require__, _] = (0, _.useState)(!1),
-              _ = (0, _._)(),
-              _ = (0, _._)();
-            return (
-              (0, _.useEffect)(() => {
-                if (!_ || 0 == _.length || !_) return _(!1);
-                (async () => {
-                  const _ = await Promise.all(
-                    _.map((_) =>
-                      _.fetchQuery(
-                        (0, _._)(_, {
-                          appid: _,
-                        }),
-                      ),
-                    ),
-                  );
-                  _(
-                    __webpack_require__.some((_) => {
-                      var _;
-                      return (
-                        (_ && _.appid && _.has(_.appid)) ||
-                        ((null === (_ = null == _ ? void 0 : _.related_items) ||
-                        void 0 === _
-                          ? void 0
-                          : _.parent_appid) &&
-                          _.has(_.related_items.parent_appid))
-                      );
-                    }),
-                  );
-                })();
-              }, [_, _, _, _]),
-              __webpack_require__
-            );
-          })(_),
-          _ = _ && !__webpack_require__,
-          _ = _ && !__webpack_require__,
-          _ = !__webpack_require__ && _;
-        return (0, _.jsxs)("div", {
-          className: (0, _._)(_().CapsuleDecorators, "CapsuleDecorators"),
-          children: [
-            _ &&
-              (0, _.jsxs)("span", {
-                className: (0, _._)(_().Banner, _().Blue),
-                children: [
-                  (0, _.jsx)("img", {
-                    src: (0, _._)(_),
-                    className: _().LinesImg,
-                  }),
-                  _._.Localize("#Sale_InLibrary"),
-                ],
-              }),
-            _ &&
-              (0, _.jsxs)("span", {
-                className: _().Banner,
-                children: [
-                  (0, _.jsx)(_.qnF, {
-                    className: _().LinesImg,
-                  }),
-                  _._.Localize("#Sale_OnWishlist"),
-                ],
-              }),
-            _ &&
-              !_ &&
-              !_ &&
-              (0, _.jsx)(_, {
-                appids: _,
-              }),
-            _ && (0, _.jsx)(_._, {}),
-          ],
-        });
-      }
-      function _(_) {
-        const { appids: _ } = _,
-          _ = (function (_) {
-            const [_, _] = (0, _.useState)(!1),
-              _ = (0, _._)(),
-              _ = (0, _._)();
-            return (
-              (0, _.useEffect)(() => {
-                if (!_ || 0 == _.length) return __webpack_require__(!1);
-                (async () => {
-                  const _ = await Promise.all(
-                    _.map((_) =>
-                      _.fetchQuery(
-                        (0, _._)(_, {
-                          appid: _,
-                        }),
-                      ),
-                    ),
-                  );
-                  __webpack_require__(_.some((_) => _ && _.is_early_access));
-                })();
-              }, [_, _, _]),
-              _
-            );
-          })(_);
-        return _
-          ? (0, _.jsx)("span", {
-              className: (0, _._)(_().Banner, _().EarlyAccessGradient),
-              children: _._.Localize("#Sale_EarlyAccess"),
             })
           : null;
       }
@@ -44136,6 +44165,502 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.topleft = "topleft"),
+          (_.top = "top"),
+          (_.topright = "topright"),
+          (_.left = "left"),
+          (_.middle = "middle"),
+          (_.right = "right"),
+          (_.bottomleft = "bottomleft"),
+          (_.bottom = "bottom"),
+          (_.bottomright = "bottomright");
+      })(_ || (_ = {}));
+      let _ = class extends _.Component {
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(_) {
+          var _;
+          super(_),
+            (this.m_fnMouseUp = null),
+            (this.m_fnMouseMove = null),
+            (this.m_listeners = new _._()),
+            (this.m_strDescription = ""),
+            (this.m_aspectRatio = 1),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: void 0,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription =
+              null !== (_ = this.props.link_description) && void 0 !== _
+                ? _
+                : ""),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(_) {
+          this.m_elLinkRegionBox = _;
+        }
+        OnMouseDown(_, _) {
+          var _;
+          (null === (_ = this.m_elLinkRegionBox) || void 0 === _
+            ? void 0
+            : _.parentElement) &&
+            this.m_elLinkRegionBox.ownerDocument.defaultView &&
+            ((this.m_fnMouseUp = (_) => {
+              this.OnMouseUp(_, _);
+            }),
+            (this.m_fnMouseMove = (_) => {
+              this.OnMouseMove(_, _);
+            }),
+            this.setState({
+              EdgeDown: _,
+            }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((_.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((_.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            )),
+            _.preventDefault(),
+            _.stopPropagation();
+        }
+        OnMouseMove(_, _) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
+              case _.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.top:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                });
+                break;
+              case _.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(_.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.middle: {
+                const _ = (0, _._)(
+                    this.CalcLeftEdge(_.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  _ = 100 - (_ + this.state.curWidthPct),
+                  _ = (0, _._)(
+                    this.CalcTopEdge(_.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  _ = {
+                    curLeftPosPct: _,
+                    curRightPosPct: _,
+                    curTopPosPct: _,
+                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
+                  };
+                this.setState(_);
+                break;
+              }
+            }
+            _.preventDefault(), _.stopPropagation();
+          }
+        }
+        IsValidPct(_) {
+          return _ >= 0 && _ <= 100;
+        }
+        UpdateState(_) {
+          let _ =
+              void 0 !== _.curTopPosPct
+                ? _.curTopPosPct
+                : this.state.curTopPosPct,
+            _ =
+              void 0 !== _.curBottomPosPct
+                ? _.curBottomPosPct
+                : this.state.curBottomPosPct,
+            _ =
+              void 0 !== _.curLeftPosPct
+                ? _.curLeftPosPct
+                : this.state.curLeftPosPct,
+            _ =
+              void 0 !== _.curRightPosPct
+                ? _.curRightPosPct
+                : this.state.curRightPosPct,
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
+              ? (_ = _ / this.m_aspectRatio)
+              : (_ = _ * this.m_aspectRatio)),
+            void 0 !== _.curLeftPosPct
+              ? (_ = 100 - _ - _)
+              : (_ = 100 - (_ + _)),
+            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
+          const _ = 100 - _ - _,
+            _ = 100 - _ - _;
+          this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.setState({
+              curLeftPosPct: _,
+              curRightPosPct: _,
+              curTopPosPct: _,
+              curBottomPosPct: _,
+            });
+        }
+        GetXPercent(_) {
+          var _;
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+                (null !== (_ = this.m_nLocalOffsetXPct) && void 0 !== _ ? _ : 0)
+            : 0;
+        }
+        GetYPercent(_) {
+          var _;
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+                (null !== (_ = this.m_nLocalOffsetYPct) && void 0 !== _ ? _ : 0)
+            : 0;
+        }
+        CalcLeftEdge(_) {
+          return (0, _._)(this.GetXPercent(_), 0, 100);
+        }
+        CalcRightEdge(_) {
+          return (0, _._)(
+            100 - (this.GetXPercent(_) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(_) {
+          return (0, _._)(this.GetYPercent(_), 0, 100);
+        }
+        CalcBottomEdge(_) {
+          return (0, _._)(
+            100 - (this.GetYPercent(_) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(_, _) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({
+              EdgeDown: void 0,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(_) {
+          this.setState({
+            text_link_url: _.target.value,
+            valid_link: this.validateUrl(_.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(_) {
+          this.setState({
+            text_link_description: _.target.value,
+          });
+        }
+        validateUrl(_) {
+          return (
+            null != _ &&
+            /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+              _,
+            )
+          );
+        }
+        OnSaveLink() {
+          var _;
+          (this.m_strDescription =
+            null !== (_ = this.state.text_link_description) && void 0 !== _
+              ? _
+              : ""),
+            this.setState({
+              bEditingLink: !this.state.bEditingLink,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({
+            bEditingLink: !this.state.bEditingLink,
+          });
+        }
+        render() {
+          let _ = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            _ = _().LinkRegionDragBox;
+          return (
+            null != this.state.EdgeDown &&
+              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
+            (0, _.jsxs)("div", {
+              className: _,
+              style: _,
+              ref: this.LinkRegionBoxRef,
+              draggable: !1,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().LinkRegionGridBox,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Top}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.top);
+                      },
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topright);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Left}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.left);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Middle}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.middle);
+                      },
+                      draggable: !1,
+                      children: [
+                        this.props.deleteFn &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionDelete,
+                            onClick: this.HandleDelete,
+                            children: (0, _.jsx)(_.sED, {}),
+                          }),
+                        !this.props.bDisableLink &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionSettings,
+                            onClick: this.OnEditLink,
+                            children: (0, _.jsx)(_.xv8, {}),
+                          }),
+                        (0, _.jsxs)("div", {
+                          className: _().LinkText,
+                          children: [" ", this.m_strDescription, " "],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Right}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.right);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottom);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomright);
+                      },
+                      draggable: !1,
+                    }),
+                  ],
+                }),
+                this.state.bEditingLink &&
+                  (0, _.jsxs)("div", {
+                    className: _().LinkRegionInfo,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_url",
+                        value: this.state.text_link_url,
+                        label: (0, _._)("#SteamTV_LinkURL"),
+                        placeholder: "https://www.example.com",
+                        onChange: this.OnSetLinkURLChange,
+                        mustBeURL: !0,
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_description",
+                        value: this.state.text_link_description,
+                        label: (0, _._)("#SteamTV_LinkDescription"),
+                        placeholder: (0, _._)(
+                          "#SteamTV_LinkDescription_Placeholder",
+                        ),
+                        onChange: this.OnSetLinkDescriptionChange,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().LinkRegionButtonContainer,
+                        children: [
+                          (0, _.jsxs)(_._, {
+                            disabled: !this.state.valid_link,
+                            onClick: this.OnSaveLink,
+                            children: [" ", (0, _._)("#Button_OK"), " "],
+                          }),
+                          (0, _.jsxs)(_._, {
+                            onClick: this.OnEditLink,
+                            children: [" ", (0, _._)("#Button_Cancel")],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            })
+          );
+        }
+      };
+      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "HandleDelete", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
+        (0, _._)([_._], _.prototype, "OnSaveLink", null),
+        (0, _._)([_._], _.prototype, "OnEditLink", null),
+        (_ = (0, _._)([_._], _));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -44298,13 +44823,11 @@
                   ),
                 ),
               }),
-              (0, _.jsx)(_._, {
-                children:
-                  _ &&
-                  (0, _.jsx)(_._, {
-                    children: _.contents,
-                  }),
-              }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  className: this.props.classNameTabContent,
+                  children: _.contents,
+                }),
             ],
           });
         }
@@ -45285,7 +45808,7 @@
             },
             [_, _, __webpack_require__],
           );
-        _.useLayoutEffect(() => {
+        (0, _.useLayoutEffect)(() => {
           if (!_.current || !__webpack_require__.current || !_.current) return;
           let _ = _.current.getBoundingClientRect(),
             _ = _.current.getBoundingClientRect(),
@@ -45565,7 +46088,7 @@
             bFitsInParent: !1,
           });
         if (
-          (_.useLayoutEffect(() => {
+          ((0, _.useLayoutEffect)(() => {
             if (!__webpack_require__ || !_.current || !_.current) return;
             let _ = _.current.getBoundingClientRect(),
               _ = _.current.getBoundingClientRect(),
@@ -45586,12 +46109,15 @@
               let _ = _.getBoundingClientRect();
               _ = _.top > _.top;
             }
-            (_.nHoverLeft == _ && _.bFitsInParent == _) ||
-              _({
-                nHoverLeft: _,
-                bFitsInParent: _,
-              });
-          }, [__webpack_require__, _, _, _, _]),
+            _((_) =>
+              _.nHoverLeft == _ && _.bFitsInParent == _
+                ? _
+                : {
+                    nHoverLeft: _,
+                    bFitsInParent: _,
+                  },
+            );
+          }, [__webpack_require__, _, _, _]),
           !__webpack_require__)
         )
           return null;

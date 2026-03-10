@@ -2777,6 +2777,13 @@ enum UnnamedEnum6dc1117c55eed9d3
 	k_EDisplayList = 4;
 }
 
+enum UnnamedEnum6efedda866715356
+{
+	None = 0;
+	Header = 1;
+	Fallback = 2;
+}
+
 enum UnnamedEnum702e80796a2bbcdf
 {
 	PRESERVE = 0;

@@ -214,7 +214,7 @@ ${COMMUNITY_BASE_URL}gid/${}/ajaxgetlastupdatetimeforpartnerevent
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetpartnereventpermissions/
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetsalesectionstats?event_gid=${}
 ${COMMUNITY_BASE_URL}gid/${}/ajaxgetvanityandclanid/
-${COMMUNITY_BASE_URL}gid/${}/ajaxgetvanityandclanid/?origin=${origin}
+${COMMUNITY_BASE_URL}gid/${}/ajaxgetvanityandclanid/?origin=${}
 ${COMMUNITY_BASE_URL}gid/${}/ajaxrollbackevent
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetlocalization/${}
 ${COMMUNITY_BASE_URL}gid/${}/announcements/ajaxgetmyvote/${AnnouncementGID}
@@ -873,8 +873,6 @@ ${MEDIA_CDN_URL}steam/clusters/${}/${}/${}${}
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}steam/spotlights/${}/${}${}
 ${MEDIA_CDN_URL}store/
-${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.mp4${bIsFirstOpen ? "" : "#t=5,6"}
-${MEDIA_CDN_URL}store/promo/lunar2020/red_envelope_2020.webm${bIsFirstOpen ? "" : "#t=5,6"}
 ${MEDIA_CDN_URL}store/promo/steamawards2025/trophy_220.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
@@ -978,6 +976,7 @@ ${PARTNER_BASE_URL}doc/accessibility_features#visual_recommendations
 ${PARTNER_BASE_URL}doc/accessibility_features#volume_controls
 ${PARTNER_BASE_URL}doc/features/playtest#4
 ${PARTNER_BASE_URL}doc/features/timeline
+${PARTNER_BASE_URL}doc/finance/taxfaq
 ${PARTNER_BASE_URL}doc/gettingstarted/contentsurvey/germany
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users/communication
@@ -1089,6 +1088,7 @@ ${PARTNER_BASE_URL}packages/rejectpricing
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxcreatemarketingmessagemajorevent
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
+${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions?clanaccountid=${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetprivatedata
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
 ${PARTNER_BASE_URL}partnerevents/ajaxremovemarketingmessagemajorevent
@@ -1096,6 +1096,7 @@ ${PARTNER_BASE_URL}partnerevents/ajaxsetprivatedata
 ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
+${PARTNER_BASE_URL}pricing/dashboard/?pn=${}
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/${}
 ${PARTNER_BASE_URL}promotion/analysis/ajaxgetpackagesdiscountsbytimerange
@@ -1210,6 +1211,7 @@ ${PARTNER_BASE_URL}timelinemarkers/ajaxdeletemarker
 ${PARTNER_BASE_URL}timelinemarkers/ajaxpublishmarkers
 ${PARTNER_BASE_URL}timelinemarkers/ajaxupdatemarker
 ${PARTNER_BASE_URL}user/ajaxgetusers
+${PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915
 ${PUBLIC_SHARED_URL}images/
 ${PUBLIC_SHARED_URL}images/responsive/youtube_16x9_placeholder.gif
 ${ProfileURL}ajaxgroupinvite?select_primary=1&json=1
@@ -1381,6 +1383,7 @@ ${STORE_BASE_URL}events/ajaxgetcreatorhomeidforapp
 ${STORE_BASE_URL}events/ajaxgetnewscurators
 ${STORE_BASE_URL}events/ajaxgetpartnerevent
 ${STORE_BASE_URL}events/ajaxgetpartnereventpermissions
+${STORE_BASE_URL}events/ajaxgetpartnereventpermissions?clanaccountid=${}
 ${STORE_BASE_URL}events/ajaxgetpartnereventspageable/
 ${STORE_BASE_URL}events/ajaxgetrepostedevent
 ${STORE_BASE_URL}events/ajaxgettodayboundedevents
@@ -1444,8 +1447,6 @@ ${STORE_BASE_URL}login?redir=${}
 ${STORE_BASE_URL}login?steamtv=1
 ${STORE_BASE_URL}login?steamtv=1&allow_password=1
 ${STORE_BASE_URL}logout
-${STORE_BASE_URL}lunarnewyearmarket
-${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}marketingmessages/list/?include_seen=1
 ${STORE_BASE_URL}meetsteam/${GID}
 ${STORE_BASE_URL}meetsteam/${GID}/${}
@@ -1479,7 +1480,7 @@ ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
 ${STORE_BASE_URL}personalcalendar
 ${STORE_BASE_URL}personalcalendar/
-${STORE_BASE_URL}personalcalendar/getrecommendations
+${STORE_BASE_URL}personalcalendarold/getrecommendations
 ${STORE_BASE_URL}phone/add
 ${STORE_BASE_URL}phone/manage
 ${STORE_BASE_URL}points/
@@ -1547,6 +1548,7 @@ ${STORE_BASE_URL}search
 ${STORE_BASE_URL}search/
 ${STORE_BASE_URL}search/?${}
 ${STORE_BASE_URL}search/?controllersupport=${strCategory}
+${STORE_BASE_URL}search/?controllersupport=${strCategory}%2C${strSecondaryCategory}
 ${STORE_BASE_URL}search/?filter=${_ ? "topsellers" : "globaltopsellers"}
 ${STORE_BASE_URL}search/results/?${}
 ${STORE_BASE_URL}search/suggest

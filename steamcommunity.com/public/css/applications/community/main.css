@@ -606,9 +606,9 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
@@ -1215,7 +1215,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   color: #dcdedf;
 }
@@ -1243,7 +1243,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 12px;
   line-height: 16px;
@@ -1263,7 +1263,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-size: 12px;
   line-height: 16px;
@@ -1626,6 +1626,44 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
 }
 ._1CpOAgPPD7f_fGI4HaYX6C:dir(rtl) {
   scale: -1 1;
+}
+._1SoIo_lz6BfTG8leoA-ltA {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+  transition-delay: .125s;
+}
+._1SoIo_lz6BfTG8leoA-ltA.dX_drVcjsB7c-39llrEDd {
+  opacity: 0.125;
+  transition-delay: 0s;
+}
+._3D14Gr6XaDtndRA8ojG443 {
+  fill: #090e13;
+  transition-property: fill;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+._3D14Gr6XaDtndRA8ojG443._19WwgHXljoThfByC7B-MLW {
+  fill: #1a9fff;
+}
+._2Jn2RR1yUV9GJ6u9HN1dER {
+  stroke: #090e13;
+  transition-property: stroke;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+._2Jn2RR1yUV9GJ6u9HN1dER._19WwgHXljoThfByC7B-MLW {
+  stroke: #1a9fff;
+}
+.cIR7HWORR4OnuhH8CsVvr {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+}
+.cIR7HWORR4OnuhH8CsVvr._19WwgHXljoThfByC7B-MLW {
+  opacity: 1;
 }
 ._2sssIwe0duyIrFvat2oXzH {
   display: flex;
@@ -2147,11 +2185,11 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
 }
 ._16sYNwqxz6giarbVaRUl7R .DialogSubHeader {
   font-family: "Motiva Sans", Helvetica, sans-serif;
@@ -2164,9 +2202,9 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
 }
@@ -2181,9 +2219,9 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
   text-transform: uppercase;
@@ -2220,9 +2258,9 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
 }
@@ -2277,7 +2315,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   color: #dcdedf;
   margin-bottom: 10px;
@@ -2887,7 +2925,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   font-style: italic;
   color: #b8bcbf;
@@ -3364,11 +3402,11 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: bold;
   font-size: 22px;
   line-height: 28px;
+  font-weight: bold;
   padding-top: calc(8px + var(--basicui-header-height, 0px));
   padding-left: calc(12px + 1.4vw);
   padding-right: 16px;
@@ -3409,7 +3447,7 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   padding: 10px calc(12px + 1.4vw);
   color: #b8bcbf;
@@ -3935,7 +3973,7 @@ button._2-fpY1CCK5fZZ3EyTH0RM_ svg {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   background: #23262e;
   color: #8b929a;

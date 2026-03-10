@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Nem található ajánlat",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
-	"Accessories_FieldSectionLabel": "Tartozékok"
+	"Accessories_FieldSectionLabel": "Tartozékok",
+	"Listing_EnhancedAppearance_Missing": "Ez az ajánlat még nem tartalmaz egyedi vagy javított képet. Az itt mutatott kép enyhén eltérhet a felajánlott tárgytól."
 }`);
     },
   },

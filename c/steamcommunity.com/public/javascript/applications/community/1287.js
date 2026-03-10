@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Nebyly nalezeny žádné nabídky",
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
-	"Accessories_FieldSectionLabel": "Připevněné položky"
+	"Accessories_FieldSectionLabel": "Připevněné položky",
+	"Listing_EnhancedAppearance_Missing": "Tato nabídka prozatím nemá unikátní nebo vylepšené obrázky. Skutečný vzhled položky se může od zde prezentovaného obrázku mírně lišit."
 }`);
     },
   },

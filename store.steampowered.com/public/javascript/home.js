@@ -42,6 +42,7 @@ GHomepage = {
 	rgTopSteamCurators: [],
 	rgAccountTagBuckets: [],
 	rgSteamAwardDefs: [],
+	rgAltBackgroundDef: [],
 
 	rgfnCustomRenders: [],
 
@@ -237,6 +238,7 @@ GHomepage = {
 			GHomepage.eGamingDeviceType = rgParams.eGamingDeviceType || 0;
 			GHomepage.bIsSeasonalSale = rgParams.bIsSeasonalSale || false;
 			GHomepage.rgSteamAwardDefs = rgParams.rgSteamAwardDefs || [];
+			GHomepage.rgAltBackgroundDef = rgParams.rgAltBackgroundDef || [];
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -1199,8 +1201,8 @@ GHomepage = {
 				var screenshot = rgScreenshots[i];
 				var unScreenshotAppId = screenshot.appid || unAppID;
 
-				var $ImgScreenshotThumb = $J ( '<div/>' ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.800x600' ) );
-				var $ImgScreenshot = $J ( '<div/>', {class:'large_screenshot'} ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.800x600' ) );
+				var $ImgScreenshotThumb = $J ( '<div/>' ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.1024x768' ) );
+				var $ImgScreenshot = $J ( '<div/>', {class:'large_screenshot'} ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.1024x768' ) );
 
 				$ImgCtn.append( $ImgScreenshot );
 
@@ -1212,12 +1214,8 @@ GHomepage = {
 		}
 
 		$CapCtn.append( $ImgCtn );
-
-		if ( rgAppInfo.microtrailer )
-		{
-			$CapCtn.data( 'microtrailerOnImageHover', 1 );
-			GHomepage.AddMicrotrailerToCapsule( $CapCtn, rgAppInfo.microtrailer );
-		}
+		$CapCtn.data( 'microtrailerOnImageHover', 1 );
+		GHomepage.AddHoverEffectToCapsule( $CapCtn, null, rgAppInfo.microtrailer );
 
 		var $RightColCtn = $J('<div/>').addClass('info');
 		var $InfoCtn = $J('<div/>', { 'class': 'info_ctn' });
@@ -1718,7 +1716,7 @@ GHomepage = {
 
 						$elInfoDiv.append( $elTopDetailsCtn );
 
-						if ( rgData.microtrailer )
+						if ( rgData.microtrailer && !GDynamicStore.s_preferences.disable_microtrailers )
 						{
 							const $Video = $J('<video/>', {
 								'class': 'tab_preview_video',
@@ -1743,7 +1741,8 @@ GHomepage = {
 						// However, for SteamChina, we need to disable this functionality since we don't have 'mature' screenshots, so we'd rather not
 						// have images than show mature content blocks
 						
-						for( var i=0; i < 3; i++ )
+						const nMaxScreenshots = GDynamicStore.s_preferences.disable_microtrailers ? 4 : 3;
+						for( var i=0; i < nMaxScreenshots; i++ )
 						{
 							if ( rgScreenshots && i < rgScreenshots.length )
 							{
@@ -2137,16 +2136,14 @@ GHomepage = {
 		if ( !$TopVRTitles.length )
 			return;
 
+		const k_nMinCapsules = $J( 'body' ).hasClass('v7') ? 5 : 4;
+		const k_nMaxCapsules = $J( 'body' ).hasClass('v7') ? 15 : 16;
+
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.top_vr, 'home', 4, 16, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			GHomepage.oDisplayLists.top_vr, 'home', k_nMinCapsules, k_nMaxCapsules, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 
-				if( GHomepage.oDisplayLists.top_vr.length > 0 && GStoreItemData.rgPackageData[ 354231 ])
-		{
-			rgCapsules.unshift( { packageid: 354231 });
-		}
-
-		if ( rgCapsules.length < 4 )
+		if ( rgCapsules.length < k_nMinCapsules )
 		{
 			$TopVRTitles.hide();
 			return;
@@ -2160,10 +2157,10 @@ GHomepage = {
 					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
 				}
 				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
-			},	'best_selling_vr', 4
+			},	'best_selling_vr', k_nMinCapsules
 		);
 
-		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
+		GDynamicStore.MarkAppDisplayed( rgCapsules, k_nMinCapsules );
 
 		$TopVRTitles.show();
 	},
@@ -2378,10 +2375,14 @@ GHomepage = {
 	RenderSteamDeckCarouselv2: function()
 	{
 		let $SteamDeckCarousel = $J( '#featured_steam_deck_gamesv2' );
+		let $SteamDeckParent = $J( '#home_deck_content' );
 		const k_nMinItemsInCarousel = 4;
 
 		if ( !$SteamDeckCarousel.length || !GHomepage.oDisplayLists.top_played_deck.length )
+		{
+			$SteamDeckParent.hide();
 			return;
+		}
 
 		let oFilterOptions = { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true };
 		if ( GHomepage.bIsSeasonalSale )
@@ -2389,14 +2390,17 @@ GHomepage = {
 
 		const rgSteamDeckGames = GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.top_played_deck, 'home', k_nMinItemsInCarousel, 24, oFilterOptions );
 
-		if ( rgSteamDeckGames.length >= k_nMinItemsInCarousel )
+		if ( rgSteamDeckGames.length < k_nMinItemsInCarousel )
 		{
-			GHomepage.FillPagedCapsuleCarousel( rgSteamDeckGames, $SteamDeckCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
-				return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
-			}, 'sale_deck_mostplayed', k_nMinItemsInCarousel );
-
-			GDynamicStore.MarkAppDisplayed( rgSteamDeckGames, k_nMinItemsInCarousel );
+			$SteamDeckParent.hide();
+			return;
 		}
+
+		GHomepage.FillPagedCapsuleCarousel( rgSteamDeckGames, $SteamDeckCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
+			return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
+		}, 'sale_deck_mostplayed', k_nMinItemsInCarousel );
+
+		GDynamicStore.MarkAppDisplayed( rgSteamDeckGames, k_nMinItemsInCarousel );
 	},
 
 	RenderContentHubCarousel: function()
@@ -3051,8 +3055,10 @@ GHomepage = {
 		}
 
 		const $Img = $J('<img/>', $J.extend( {}, rgDefaultImageProperties, rgImageProperties ) );
+		let $CapsuleImgCtn = $J('<div/>', {'class': 'capsule_image_ctn' } ).append( $Img );
 
-		$CapCtn.append( $J('<div/>', {'class': 'capsule_image_ctn' } ).append( $Img ) );
+		$CapCtn.append( $CapsuleImgCtn );
+		GHomepage.AddHoverEffectToCapsule( $CapCtn, rgItemData );
 
 		if ( rgOptions.html_before_price )
 		{
@@ -3065,12 +3071,6 @@ GHomepage = {
 		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
 		{
 			$CapCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
-		}
-
-		if ( rgItemData.microtrailer )
-		{
-			$CapCtn.addClass( 'add_microtrailer' );
-			GHomepage.AddMicrotrailerToCapsule( $CapCtn, rgItemData.microtrailer );
 		}
 
 		return $CapCtn;
@@ -3089,70 +3089,109 @@ GHomepage = {
 	AddMicrotrailersToStaticCaps: function( $Parent )
 	{
 		$Parent.children( '.add_microtrailer' ).each( function() {
-			GHomepage.AddMicrotrailerToCapsule( $J(this), $J(this).data('microtrailer') );
+			GHomepage.AddHoverEffectToCapsule( $J(this), null, $J(this).data('microtrailer') );
 		});
 	},
 
-	AddMicrotrailerToCapsule: function( $CapCtn, microtrailer )
+	AddHoverEffectToCapsule: function( $CapCtn, rgItemData, strMicrotrailerData )
 	{
-		if ( !microtrailer )
+		if ( !rgItemData && !strMicrotrailerData )
 			return;
 
 		if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
 			return;
 
-		$CapCtn.addClass( 'with_microtrailer' );
-		$CapCtn.data('hoverDisableScreenshots', true );
-		var $ImgCtn = $CapCtn.children('.capsule_image_ctn');
-		$CapCtn.one( 'mouseenter vgp_onfocus', function()
+		let $ImgCtn = $CapCtn.children('.capsule_image_ctn').first();
+
+		const strMicrotrailerWebmSrc = strMicrotrailerData || rgItemData?.microtrailer;
+		if ( GDynamicStore.s_preferences.disable_microtrailers )
 		{
-			let $Video = null;
-			if ( !$ImgCtn.children( '.sale_capsule_video' ).length )
+			if ( rgItemData?.screenshots )
 			{
-				$Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', playsinline: true }).prop( "muted", true )
-					.append($J("<source>", {src: microtrailer, type: "video/webm"}));
-				$ImgCtn.append( $Video );
-			}
-			else
-			{
-				$Video = $ImgCtn.children( '.sale_capsule_video' );
-			}
-
-			var playPromise;
-			var fnPlay = function() {
-				$CapCtn.addClass( 'with_microtrailer' );
-				$CapCtn.addClass( 'microtrailer_active' );
-				playPromise = $Video[0].play();
-				if ( playPromise )
-				{
-					playPromise.catch( function( e ) {
-						$CapCtn.removeClass( 'with_microtrailer' );
-
-					} );
+				let ScreenshotsCtn = $J('<div/>', {'class': 'capsule_hover_screenshots'});
+				for (let i = 0; i < rgItemData.screenshots.length && i < 4; i++) {
+					const screenshot = $J('<div/>', {
+						'class': 'screenshot capsule_screenshot_load',
+						'data-background': 'url(' + GetScreenshotURL(rgItemData.screenshots[i].appid, rgItemData.screenshots[i].filename, '.600x338') + ')'
+					});
+					ScreenshotsCtn.append( screenshot )
 				}
-			};
-			var fnPause = function() {
-				if ( playPromise )
-					playPromise.then( function() { $Video[0].pause() } );
+
+				$ImgCtn.append( ScreenshotsCtn );
+
+				$CapCtn.on('mouseenter vgp_onfocus', function () {
+					if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
+						return;
+
+					$J(this).addClass('hover_active');
+					$J(this).find('.capsule_screenshot_load').each( function () {
+						$J(this).css('backgroundImage', $J(this).data('background') );
+					});
+				});
+
+				$CapCtn.on('mouseleave vgp_onblur', function () {
+					$J(this).removeClass('hover_active');
+				});
+
+				$CapCtn.data('hoverDisableScreenshots', true);
+			}
+		}
+		else if ( strMicrotrailerWebmSrc )
+		{
+			$CapCtn.addClass( 'with_microtrailer' );
+			$CapCtn.data('hoverDisableScreenshots', true );
+
+			const bOnImageHover = $CapCtn.data('microtrailerOnImageHover');
+
+			let $elOnHover = $CapCtn;
+			if ( bOnImageHover && $ImgCtn.length && !window.UseGamepadScreenMode() )
+				$elOnHover = $ImgCtn;
+
+			$elOnHover.one( 'mouseenter vgp_onfocus', function()
+			{
+				let $Video = null;
+				if ( $ImgCtn.children( '.sale_capsule_video' ).length === 0 )
+				{
+					$Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', playsinline: true }).prop( "muted", true )
+						.append($J("<source>", {src: strMicrotrailerWebmSrc, type: "video/webm"}));
+					$ImgCtn.append( $Video );
+				}
 				else
-					$Video[0].pause();
+				{
+					$Video = $ImgCtn.children( '.sale_capsule_video' ).first();
+				}
 
-				$CapCtn.removeClass( 'microtrailer_active' );
-			};
+				var playPromise;
+				var fnPlay = function() {
+					if ( window.UseTouchFriendlyMode() && !window.UseGamepadScreenMode() )
+						return;
 
-			if ( $CapCtn.data('microtrailerOnImageHover') && !window.UseGamepadScreenMode() )
-			{
-				$ImgCtn.on( 'mouseenter vgp_onfocus', fnPlay );
-				$ImgCtn.on( 'mouseleave vgp_onblur', fnPause );
-			}
-			else
-			{
-				$CapCtn.on( 'mouseenter vgp_onfocus', fnPlay );
-				$CapCtn.on( 'mouseleave vgp_onblur', fnPause );
-			}
+					$CapCtn.addClass( 'with_microtrailer' );
+					$CapCtn.addClass( 'microtrailer_active' );
 
-			window.setTimeout( fnPlay, 1 );
-		});
+					playPromise = $Video[0].play();
+					if ( playPromise )
+					{
+						playPromise.catch( function( e ) {
+							$CapCtn.removeClass( 'with_microtrailer' );
+						} );
+					}
+				};
+				var fnPause = function() {
+					if ( playPromise )
+						playPromise.then( function() { $Video[0].pause() } );
+					else
+						$Video[0].pause();
+
+					$CapCtn.removeClass( 'microtrailer_active' );
+				};
+
+				$J( this ).on( 'mouseenter vgp_onfocus', fnPlay );
+				$J( this ).on( 'mouseleave vgp_onblur', fnPause );
+
+				window.setTimeout( fnPlay, 1 );
+			});
+		}
 	},
 
 	RenderHomeCapsuleBlock: function( rgItems, $Parent, strFeatureContext )
@@ -3169,7 +3208,7 @@ GHomepage = {
 				bFourRow = false;
 			else if ( rgRemainingItems.length == 4 )
 				bFourRow = true;
-			rgRemainingItems = GHomepage.RenderHomeCapsuleRow( rgRemainingItems, $Parent, 4, strFeatureContext, SaleCap );
+			rgRemainingItems = GHomepage.RenderHomeCapsuleRow( rgRemainingItems, $Parent, 4, strFeatureContext );
 			bFourRow = !bFourRow;
 		}
 		GHomepage.BindHomeCapAutoSizeEvents( $Parent );
@@ -3495,7 +3534,7 @@ GHomepage = {
 		$ItemLink.append( $ImageCapsule );
 
 		// micro trailer
-		if ( rgItemData.microtrailer )
+		if ( rgItemData.microtrailer && !GDynamicStore.s_preferences.disable_microtrailers )
 		{
 			let $Video = $J( '<video class="microtrailer_video" loop muted playsinline aria-hidden=true>' ).appendTo( $ImageCapsule );
 			$Video.on( "canplay", function() {
@@ -3625,7 +3664,6 @@ GHomepage = {
 		}
 
 		let $BottomCtn = $J('<div/>', {class: 'info_bottom_ctn'});
-		$J('<div/>').addClass('platforms').append(GStoreItemData.BuildSupportedPlatformIcon(rgItemData)).appendTo($BottomCtn);
 		$J('<div/>', {'class': 'price_ctn'}).html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;').appendTo($BottomCtn);
 		$RightCol.append( $BottomCtn );
 
@@ -3789,6 +3827,39 @@ GHomepage = {
 		$J( window ).on( 'mouseover click scroll focus touchstart vgp_onfocus resize', fnResetInteractionTimeoutAndPlay );
 
 		fnStartInteractionTimeout();
+	},
+	ToggleAlternateTakeover: function()
+	{
+		if ( !GHomepage.rgAltBackgroundDef )
+			return;
+
+		if ( !V_GetCookie( 'enable_home_alt_takeover' ) )
+		{
+			V_SetCookie('enable_home_alt_takeover', 1, 14 );
+
+			if ( window.innerWidth <= 500 )
+			{
+				$J('.page_background_holder').css('background-image', 'url(' + GHomepage.rgAltBackgroundDef.strPageBackgroundMobileURL + ')');
+			}
+			else
+			{
+				if ( GHomepage.rgAltBackgroundDef.strPageBackgroundWebM && !GDynamicStore.s_preferences.disable_microtrailers )
+				{
+					$J('.fullscreen-bg__video').attr('src', GHomepage.rgAltBackgroundDef.strPageBackgroundWebM );
+					$J('.fullscreen-bg__video').attr('poster', GHomepage.rgAltBackgroundDef.strPageBackgroundURL );
+					$J('.fullscreen-bg__video').get( 0 ).play();
+				}
+
+				$J('.page_background_holder').css('background-image', 'url(' + GHomepage.rgAltBackgroundDef.strPageBackgroundURL + ')');
+			}
+
+			$J( '.page_background_overlay' ).addClass( 'alternate' );
+		}
+		else
+		{
+			V_SetCookie('enable_home_alt_takeover', 0, -1 );
+			location.reload();
+		}
 	},
 };
 

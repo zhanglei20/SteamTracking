@@ -130,10 +130,13 @@
 	"Wishlist_Gamepad_Filter_Clear_Category": "Kategóriaszűrők törlése",
 	"Wishlist_Gamepad_Add_Category": "Kategória hozzáadása",
 	"Wishlist_Gamepad_Removecategory": "Kategória eltávolítása",
-	"Wishlist_Controls_Categories_Remove_Tooltip": "Remove this category from this item",
+	"Wishlist_Controls_Categories_Remove_Tooltip": "Eltávolítja ezt a kategóriát erről az elemről.",
 	"Wishlist_Controls_Categories_Filter_Tooltip": "Kívánságlistád szűrése az e kategóriában található elemekre.",
 	"Wishlist_Controls_Categories_All": "Összes",
-	"Wishlist_Controls_Categories_Manage": "Kategóriák hozzáadása vagy eltávolítása"
+	"Wishlist_Controls_Categories_Manage": "Kategóriák hozzáadása vagy eltávolítása",
+	"Wishlist_Categories_Suggested_Discount": "Akcióra várok",
+	"Wishlist_Categories_Suggested_Birthday": "Születésnapi lista",
+	"Wishlist_Categories_Suggested_Recommended": "Barátok ajánlották"
 }`);
     },
   },

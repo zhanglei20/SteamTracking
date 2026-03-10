@@ -266,6 +266,25 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
+        FullScreenCarousel: "GWpeP0OynUHnroAJBEqtW",
+        Carousel: "_3Ox4yOQ30uqXO-_SSU25-4",
+        InnerContainer: "OyPgwnvn3qD0HnYa4g5FY",
+        PageableContainer: "_3YkXocjmZ3Gzt3OHpou5A-",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        CarouselWrapper: "yZriF6RhqF6mZVbimfY5m",
+        Carousel: "_3RXtvFl56Rcjg9d3S8l0sg",
+        ReviewSectionTitle: "_1ed_Gl_BrsYGwgTnzD6Ks4",
+        LoadingThrobber: "_3Gx8g3deQNvG7maEho_KEm",
+        FullScreen: "_2-3tU3uMzoBujNDTj_j78I",
+        ModalPosition: "_1-PD5DTGhli1DHzHFM3S78",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        narrowWidth: "500px",
         ReviewDetails: "amNoDX2pd1HfanrHX9QUo",
         Top: "_2uvK1zucSC4I2mo3PDObGs",
         Friend: "_1LI9d9a8_tfZJvBuuZz6Oh",
@@ -273,13 +292,27 @@
         AuthorInfo: "_3F7bFyuhd9Wd6ElK9gYO78",
         ReviewInfo: "_3bOVkQDR-47l_JC2dHQts_",
         Body: "_1ezRJ8ihekaFqbr-BLpl4p",
+        ReviewText: "_7-m3PA_FStk99zsZUPYX-",
+        Text: "_1zbKizfCRpoX2D_zOLQes0",
         ReviewInfoHeader: "HGCiCZ2mhusHJku7z15Nw",
         HeaderText: "_2zyEpK1LijR3BZCoCwm5V6",
         Persona: "_2AL4QiqNSjqzhkK1W9m2E6",
         Playtime: "_1N9XZTVu3iXgXmyuKwSF4E",
         Headline: "_17lxcLR8FnXBii5ZgrKZCf",
-        ReviewText: "_7-m3PA_FStk99zsZUPYX-",
         FadeGradient: "_25ppgVnyq5WaMqUlTkqeug",
+        Gamepad: "_3xiX6A0plTO_i8P3Di75Oy",
+        ScrollPanel: "_3td8YZg3hAz_HxtJAPJXeJ",
+        ReviewHeaderLink: "pTfX5u-NsAgUX8Co1ntO8",
+        ReviewWrapper: "_3EzUr8FHQTy6eQl2ZpHLjq",
+        TextContainer: "uxZHwbCMxnLnMBo894hNi",
+        ReviewRatings: "hIgoBpQW6F1kNF7Bs7Gna",
+        ReviewReactions: "_3kYaVBYTs2J13FnFOmJqgK",
+        Fullscreen: "HdMtG8LBYDGx20EG8UEc1",
+        ReviewCategories: "_1ws-mV4Z-XpaO-YlEJfvlj",
+        ReadMoreButton: "Zq302wXf0fsRUcqWKFdy3",
+        VoteButtonsContainer: "_3yLQ-0lsgzRjHo5_mPaKBX",
+        MainDivider: "GjhFar4SYq03mCinc1Ck7",
+        CommentCount: "_1PW82leH_VoFuD5ITaDX0Q",
         Name: "K01H9PwUQhHjebFXo5Jhy",
         Count: "_24Z0sYrwo1ALn7WkF98RaU",
         AvatarContainer: "gRtbvIsqKpCY8sM1wgCK4",
@@ -291,29 +324,22 @@
         Location: "_2ifjfmA4V1OqEf39_KX1iV",
         ReviewSource: "_1flaV2raNUjjfHa0TAffZY",
         PostedDateAndSource: "T4IE5FC36srd-IePhWb1I",
-        Text: "_1zbKizfCRpoX2D_zOLQes0",
         Expanded: "_3NUI82h2e6Am3hmtU-1_Sq",
-        ReadMoreButton: "Zq302wXf0fsRUcqWKFdy3",
         ThumbIcon: "_1pk8MT_nsrwd0kif6cppyD",
         Down: "_1yQUzR4jghsMyIgpY_Ay7f",
         CountedIcon: "_2s2CbdRTNIrjcu41r05ZO_",
         SteamDeckIcon: "hiVsqfE7bsqlJBXW-5D1s",
-        ReviewReactions: "_3kYaVBYTs2J13FnFOmJqgK",
         Reaction: "gIkMYMHi6hVU9kquHJeBV",
         Icon: "_3HF_6EnhyIHLJKH2hzBLWT",
         ReviewCountedIcon: "_3Uzd_f-5YsYobTQa3Frb9b",
-        VoteButtonsContainer: "_3yLQ-0lsgzRjHo5_mPaKBX",
-        ReviewRatings: "hIgoBpQW6F1kNF7Bs7Gna",
         Left: "uKnloaPS_o0E0eTCMfMRJ",
         Right: "cHVnP4M48QFbMLEqcdKbs",
         ReviewRating: "_37ICOYBDy-RisYkzNGWFDX",
-        CommentCount: "_1PW82leH_VoFuD5ITaDX0Q",
         VoteButtons: "_22edD6e1Rd44stPirbVhB2",
         VoteButton: "_131dBxXvyV0SDKXTx9Ad0n",
         Selected: "_20o0K-LdkmbQfesddfuo-X",
         Award: "tZsBoG2WBEWtqx3xZ4MIB",
         VoteButtonText: "Nu7NgfdJiM1QdEPGrlUcN",
-        ReviewCategories: "_1ws-mV4Z-XpaO-YlEJfvlj",
         Disclaimer: "_2OpCkQAxn48FmAJ4KO84_C",
         LowerDisclaimer: "_2s6TIoq8OcJpmpUPEdWbfT",
         Highlight: "_1Og1SDK0h6unb2aONe0eSC",
@@ -325,6 +351,11 @@
         DeveloperResponse: "o1IEt4zkutNjpN0-UVQCO",
         ReviewHardware: "KahBO3vHzFejyThpZEiB",
         Title: "_3toTOSwDTTJaLLQjvKd99_",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        ReviewSectionTitle: "_2nAa7fM6w0mQzxPqb6sPYU",
       };
     },
     chunkid: (module) => {
@@ -344,7 +375,6 @@
         Mixed: "J3mo8jDoasHzmaeemRXyV",
         ReviewSection: "_1TDtXqBlTVLGgP7QifbduF",
         Reviews: "_1nHzHf_bsJHT58gTBq7xfR",
-        ReviewSectionTitle: "_2sbkrwfqKbkcBD9oLVYqUf",
         LoadingError: "_3EoDtRwsYvl2qGBjV18mvk",
         LoadMoreButton: "_2nAT1gpL4N6fargm37eReZ",
       };
@@ -375,6 +405,20 @@
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
+        PageableContainer: "SMWMsB-gz3WbYRK2HOm7i",
+        HeaderPageControls: "_2o5c89vAnrXN8C60QTSMqO",
+        Name: "_2hfibYuzyMOQ0sj2egsHh0",
+        Clickable: "S2uaatxG3tw8bGI9HaQio",
+        PageClickContainer: "bsNegRKT1Hbv4tqHrOk9-",
+        PageLeft: "_14b-hQsLwSwYcELtknxCUX",
+        PageRight: "_3IIEUTw03Vm3Mk54jlnUaT",
+        Disabled: "_16nHYucq6xgfe67DrVWLCI",
+        Small: "_3qlJ0L41KQFqUTzVQKFERC",
+        PageableCloseButton: "_2dB1oJFsqNThak1cFya2-q",
       };
     },
     chunkid: (module) => {
@@ -1116,6 +1160,36 @@
           prop: "size",
           responsive: !0,
           className: (_) => _[`TextSize-${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { underline: _ = "auto", ...__webpack_require__ } = _;
+        return (0, _.jsx)("a", {
+          ...(0, _._)(
+            {
+              ...__webpack_require__,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
         },
       ];
     },
@@ -2101,6 +2175,7 @@
           _ = window.screen.width <= _ ? 1 : 2;
         return (0, _.jsxs)(_._, {
           className: __webpack_require__,
+          "flow-children": "row",
           children: [
             (0, _.jsx)(_._, {
               active: _,
@@ -2251,21 +2326,25 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
           _ = new Date(_.setUTCHours(0, 0, 0, 0) - 15552e6),
           _ = Math.floor(__webpack_require__.getTime() / 1e3),
           { appid: _ } = _;
-        return (0, _.jsx)(_, {
-          appid: _,
-          partnerEventStore: _._.Get(),
-          event_customization: {
-            rtime_oldestevent: _,
-            exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
-            exclude_event_types: [34],
-          },
-          strClassName: "early_access_announcements",
-          trackingLocation: 3,
+        return (0, _.jsx)(_._, {
+          navID: "EventsRowBridge",
+          children: (0, _.jsx)(_, {
+            appid: _,
+            partnerEventStore: _._.Get(),
+            event_customization: {
+              rtime_oldestevent: _,
+              exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
+              exclude_event_types: [34],
+            },
+            strClassName: "early_access_announcements",
+            trackingLocation: 3,
+          }),
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -2852,49 +2931,60 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.jsxs)("a", {
-          href: `${_._.STORE_BASE_URL}search/?controllersupport=${_.strCategory}`,
-          className: _.InfoRow,
-          children: [
-            (0, _.jsx)("div", {
-              className: (0, _._)(
-                _.ImgSection,
-                _.bHightlightRow && _.HighlightRow,
-                _.bHighlightGPRequired && _.GamepadRequired,
-              ),
-              children: _.tagImage,
-            }),
-            (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _.LocSection,
-                _.bHighlightText && _.HighlightText,
-                _.bHightlightRow && _.HighlightRow,
-                _.bHighlightGPRequired && _.GamepadRequired,
-              ),
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _.LocString,
-                    _.bHighlightText && _.HighlightText,
-                    _.bHightlightRow && _.HighlightRow,
-                    _.bHighlightGPRequired && _.GamepadRequired,
-                    _.bPersonalized && _.Personalized,
-                  ),
-                  children: (0, _._)(_.strLocalizationToken),
-                }),
-                _.strTooltipString &&
-                  (0, _.jsx)(_._, {
-                    toolTipContent: (0, _._)(_.strTooltipString),
-                    className: _.ToolTipContainer,
-                    children: (0, _.jsx)("span", {
-                      className: _.ToolTipControl,
-                      children: "?",
-                    }),
+        const _ = _.strSecondaryCategory
+            ? `${_._.STORE_BASE_URL}search/?controllersupport=${_.strCategory}%2C${_.strSecondaryCategory}`
+            : `${_._.STORE_BASE_URL}search/?controllersupport=${_.strCategory}`,
+          _ = (0, _.jsxs)(_.Fragment, {
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _.ImgSection,
+                  _.bHightlightRow && _.HighlightRow,
+                  _.bHighlightGPRequired && _.GamepadRequired,
+                ),
+                children: _.tagImage,
+              }),
+              (0, _.jsxs)("div", {
+                className: (0, _._)(
+                  _.LocSection,
+                  _.bHighlightText && _.HighlightText,
+                  _.bHightlightRow && _.HighlightRow,
+                  _.bHighlightGPRequired && _.GamepadRequired,
+                ),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _.LocString,
+                      _.bHighlightText && _.HighlightText,
+                      _.bHightlightRow && _.HighlightRow,
+                      _.bHighlightGPRequired && _.GamepadRequired,
+                      _.bPersonalized && _.Personalized,
+                    ),
+                    children: (0, _._)(_.strLocalizationToken),
                   }),
-              ],
-            }),
-          ],
-        });
+                  _.strTooltipString &&
+                    (0, _.jsx)(_._, {
+                      toolTipContent: (0, _._)(_.strTooltipString),
+                      className: _.ToolTipContainer,
+                      children: (0, _.jsx)("span", {
+                        className: _.ToolTipControl,
+                        children: "?",
+                      }),
+                    }),
+                ],
+              }),
+            ],
+          });
+        return _.strCategory
+          ? (0, _.jsx)("a", {
+              href: _,
+              className: _.InfoRow,
+              children: _,
+            })
+          : (0, _.jsx)("div", {
+              className: _.InfoRow,
+              children: _,
+            });
       }
       function _() {
         return (0, _.jsx)(_, {
@@ -2970,6 +3060,8 @@
                   ? "#Store_ControllerSupport_PS_Personalized"
                   : "#Store_ControllerSupport_PS",
                 bPersonalized: _,
+                strCategory: "55",
+                strSecondaryCategory: "57",
               },
               "1",
             ),
@@ -4659,7 +4751,6 @@
         }, [_, _]);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let { trailers: _, screenshots: __webpack_require__ } = _;
@@ -5860,16 +5951,10 @@
               modalClassName: "DeckVerifiedModalDialog",
               children: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
-                  focusable: !1,
-                  "flow-children": "column",
-                  onGamepadDirection: (_) => !0,
-                  children: (0, _.jsx)(_._, {
-                    results: _,
-                    buttonProps: _,
-                    appName: _,
-                    eStartingTab: _,
-                    autoFocus: !0,
-                  }),
+                  results: _,
+                  buttonProps: _,
+                  appName: _,
+                  eStartingTab: _,
                 }),
               }),
             }),
@@ -6367,79 +6452,7 @@
         }
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = class extends _._ {
-          constructor(_, _) {
-            super(_, _);
-          }
-          bindMethods() {
-            super.bindMethods(),
-              (this.fetchNextPage = this.fetchNextPage.bind(this)),
-              (this.fetchPreviousPage = this.fetchPreviousPage.bind(this));
-          }
-          setOptions(_, _) {
-            super.setOptions(
-              {
-                ..._,
-                behavior: (0, _._)(),
-              },
-              _,
-            );
-          }
-          getOptimisticResult(_) {
-            return (_.behavior = (0, _._)()), super.getOptimisticResult(_);
-          }
-          fetchNextPage(_) {
-            return this.fetch({
-              ..._,
-              meta: {
-                fetchMore: {
-                  direction: "forward",
-                },
-              },
-            });
-          }
-          fetchPreviousPage(_) {
-            return this.fetch({
-              ..._,
-              meta: {
-                fetchMore: {
-                  direction: "backward",
-                },
-              },
-            });
-          }
-          createResult(_, _) {
-            const { state: __webpack_require__ } = _,
-              _ = super.createResult(_, _),
-              {
-                isFetching: _,
-                isRefetching: _,
-                isError: _,
-                isRefetchError: _,
-              } = _,
-              _ = __webpack_require__.fetchMeta?.fetchMore?.direction,
-              _ = _ && "forward" === _,
-              _ = _ && "forward" === _,
-              _ = _ && "backward" === _,
-              _ = _ && "backward" === _;
-            return {
-              ..._,
-              fetchNextPage: this.fetchNextPage,
-              fetchPreviousPage: this.fetchPreviousPage,
-              hasNextPage: (0, _._)(_, __webpack_require__.data),
-              hasPreviousPage: (0, _._)(_, __webpack_require__.data),
-              isFetchNextPageError: _,
-              isFetchingNextPage: _,
-              isFetchPreviousPageError: _,
-              isFetchingPreviousPage: _,
-              isRefetchError: _ && !_ && !_,
-              isRefetching: _ && !_ && !_,
-            };
-          }
-        },
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
       async function _(_, _, _, _) {
         if (!_) throw new _(8, "Bad appid");
         const _ = {
@@ -6520,22 +6533,6 @@
           __webpack_require__.push(_ + ":" + _);
         return _;
       }
-      function _(_, _, _) {
-        const _ = (0, _._)();
-        return (
-          (_ = {
-            queryKey: _(_, _),
-            queryFn: async (_) => _(_, _, _, _.pageParam),
-            enabled: _,
-            initialPageParam: "*",
-            getNextPageParam: (_) => _.cursor,
-            placeholderData: (_) => _,
-            retry: (_, _) => (_ instanceof _ ? 8 != _.eResult && _ < 3 : _ < 3),
-          }),
-          (0, _._)(_, _, _)
-        );
-        var _, _;
-      }
       async function _(_, _, _) {
         const _ = new FormData();
         Object.entries(_).forEach((_) => {
@@ -6554,34 +6551,13 @@
           throw new _(_.success, `Error ${_.success} from ${_}`);
         return _;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+      var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ...__webpack_require__ } = _;
-        return (0, _.jsx)("a", {
-          ...(0, _._)(
-            {
-              ...__webpack_require__,
-              underline: _,
-              className: _.TextLink,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "underline",
-          className: (_) => _[`Underline-${_}`],
-        },
-      ];
-      function _(_) {
         const { url: _, children: __webpack_require__ } = _;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           target: "_blank",
           href: _.href,
           underline: "auto",
@@ -6589,7 +6565,6 @@
           children: __webpack_require__,
         });
       }
-      var _;
       function _(_, _) {
         switch (_) {
           case _.k_EURLSite_Store:
@@ -6650,7 +6625,7 @@
         });
       }
       function _(_) {
-        const { author: _, bIsFriend: __webpack_require__ } = _,
+        const { author: _ } = _,
           _ = new _._(_.steamid);
         return (0, _.jsxs)(_._, {
           className: _().AuthorInfo,
@@ -6663,7 +6638,7 @@
               children: [
                 (0, _.jsx)(_._, {
                   className: _().Name,
-                  "data-miniprofile": _.GetAccountID(),
+                  "data-miniprofile": __webpack_require__.GetAccountID(),
                   href: _.profile_url,
                   children: _.personaname,
                 }),
@@ -7266,13 +7241,16 @@
           ),
           children: [
             (0, _.jsxs)("div", {
-              className: _().Text,
+              className: _().TextContainer,
               ref: (_) => {
                 _ && _.scrollHeight > _.clientHeight && _(!0);
               },
               children: [
-                (0, _.jsx)(_, {
-                  text: _.review,
+                (0, _.jsx)("div", {
+                  className: _().Text,
+                  children: (0, _.jsx)(_, {
+                    text: _.review,
+                  }),
                 }),
                 _ &&
                   (0, _.jsx)("div", {
@@ -7514,34 +7492,6 @@
         });
       }
       function _(_) {
-        const { review: _ } = _,
-          { appid: __webpack_require__ } = _.useContext(_);
-        return _.developer_response && _.timestamp_dev_responded
-          ? (0, _.jsxs)("div", {
-              className: _().DeveloperResponse,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().Text,
-                  children: _.Localize(
-                    "#Review_OfficialDeveloperResponseExistsDate",
-                    (0, _._)(_.timestamp_dev_responded, {
-                      fullmonthname: !0,
-                      bUseRelativeNames: !1,
-                    }),
-                  ),
-                }),
-                (0, _.jsx)("a", {
-                  className: _().Link,
-                  href: _(_, __webpack_require__),
-                  children: _.Localize(
-                    "#Review_OfficialDeveloperResponse_View",
-                  ),
-                }),
-              ],
-            })
-          : null;
-      }
-      function _(_) {
         const {
             review: _,
             bIsFriend: __webpack_require__,
@@ -7607,38 +7557,1103 @@
         });
       }
       function _(_) {
+        switch (_.detail.button) {
+          case _._.DIR_UP:
+          case _._.DIR_DOWN:
+            return !0;
+        }
+        return !1;
+      }
+      function _(_) {
         const {
           review: _,
           bIsFriend: __webpack_require__ = !1,
           bShortPresentation: _ = !1,
+          gamepadPresentation: _,
           mapTags: _,
+          className: _,
+          nItemWidth: _,
+          nItemHeight: _,
+          onActivate: _,
+          onCancel: _,
+          autoFocus: _,
         } = _;
-        return (0, _.jsxs)(_._, {
-          className: (0, _._)(
-            _().ReviewDetails,
-            __webpack_require__ && _().Friend,
-            _ && _().Short,
-          ),
-          children: [
-            (0, _.jsxs)(_._, {
-              className: _().Top,
-              children: [
-                (0, _.jsx)(_, {
-                  author: _.author,
-                  bIsFriend: __webpack_require__,
+        let _ = _ ? _._ : _._;
+        const _ = {
+          width: _ || void 0,
+          height: _ || void 0,
+        };
+        return (0, _.jsx)("div", {
+          style: _,
+          children: (0, _.jsx)(_, {
+            onGamepadDirection: "full" == _ ? _ : void 0,
+            className: (0, _._)(
+              _().ReviewDetails,
+              __webpack_require__ && _().Friend,
+              _ && _().Short,
+              !!_ && _().Gamepad,
+              "full" == _ && _().Fullscreen,
+              _,
+            ),
+            onActivate: _,
+            autoFocus: _,
+            children: (0, _.jsx)(_._, {
+              className: _().ScrollPanel,
+              style: {
+                maxHeight: _.height,
+              },
+              children: (0, _.jsx)("div", {
+                className: _().ReviewWrapper,
+                children: (0, _.jsxs)(_._, {
+                  className: _().Top,
+                  children: [
+                    (0, _.jsx)(_, {
+                      author: _.author,
+                    }),
+                    (0, _.jsx)(_, {
+                      review: _,
+                      bIsFriend: __webpack_require__,
+                      bShortPresentation: _,
+                      mapTags: _,
+                    }),
+                  ],
                 }),
-                (0, _.jsx)(_, {
-                  review: _,
-                  bIsFriend: __webpack_require__,
-                  bShortPresentation: _,
-                  mapTags: _,
+              }),
+            }),
+          }),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const { _: _, className: __webpack_require__, title: _ } = _;
+        return _
+          ? (0, _.jsx)("div", {
+              _: _,
+              className: (0, _._)(_().ReviewSectionTitle, __webpack_require__),
+              children: _.Localize(_),
+            })
+          : null;
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("VirtualizedBoxCarousel").Debug;
+      function _(_, _, _) {
+        const _ = (0, _._)("VBC_" + _, _ || 0);
+        return (
+          _.useEffect(() => {
+            _ && __webpack_require__(void 0, _ || 0);
+          }, []),
+          _
+        );
+      }
+      _.forwardRef(function (_, _) {
+        const {
+            name: __webpack_require__,
+            initialColumn: _,
+            fnOnFocusedColumnChange: _,
+          } = _,
+          [_, _] = _(__webpack_require__, _, _);
+        return (0, _.jsx)(_, {
+          ..._,
+          ref: _,
+          focusedColumn: _,
+          setFocusedColumn: _,
+        });
+      });
+      const _ = _.forwardRef(function (_, _) {
+        const _ = (0, _._)();
+        return (0, _.jsx)(_, {
+          ref: _,
+          ..._,
+          autoHeight: !_,
+        });
+      });
+      class _ extends _.PureComponent {
+        static defaultProps = {
+          nIndexLeftmost: 0,
+          scrollDuration: 100,
+          scrollTiming: "sine",
+          enableBumperPaging: !1,
+          bPlaySoundOnFailedScroll: !0,
+        };
+        state = {
+          nContainerWidth: 0,
+          nRightPadding: 0,
+        };
+        m_refContainer = _.createRef();
+        m_refGrid = void 0;
+        m_refGridContainer = _.createRef();
+        m_refGridElement = void 0;
+        m_resizeObserver;
+        m_scrollAnimation = null;
+        m_mapRefs = new Map();
+        m_iStart = 0;
+        m_iEnd = 0;
+        m_activeScrollTo = null;
+        StartScrollAnimation(_, _, _, _, _) {
+          let _ = this.m_refGrid;
+          if (_)
+            if (_) {
+              const _ = this.m_refGridElement;
+              _("StartScrollAnimation", _, _, _);
+              let _ = {
+                msDuration: _,
+                timing: this.props.scrollTiming,
+                onComplete: () => this.OnAnimationScrollComplete(_, _, _, _),
+              };
+              this.m_scrollAnimation && this.m_scrollAnimation.End(),
+                (this.m_scrollAnimation = new _._(
+                  _,
+                  {
+                    scrollLeft: _,
+                  },
+                  _,
+                )),
+                this.m_scrollAnimation.Start();
+            } else
+              _.scrollToPosition({
+                scrollLeft: _,
+                scrollTop: 0,
+              }),
+                this.OnAnimationScrollComplete(_, _, _, _);
+        }
+        RestoreScrollPosition(_) {
+          this.StartScrollAnimation(
+            _._.INVALID,
+            0,
+            "RestoreScrollPosition",
+            _,
+            0,
+          );
+        }
+        m_timeout = void 0;
+        SendScrollNotification(_) {
+          this.m_timeout && window.clearTimeout(this.m_timeout);
+          const _ = this.props.fnOnScroll;
+          this.m_timeout = window.setTimeout(() => {
+            _ && _(_), (this.m_timeout = void 0);
+          }, 250);
+        }
+        OnAnimationScrollComplete(_, _, _, _) {
+          _.unstable_batchedUpdates(() => {
+            _("OnAnimationScrollComplete", _, _),
+              this.SendScrollNotification(_);
+            const _ = this.m_mapRefs.get(_);
+            _ &&
+              _.current &&
+              (_("Sending focus to", _), _.current.TakeFocus(_)),
+              this.props.setFocusedColumn(_),
+              (this.m_scrollAnimation = null),
+              (this.m_activeScrollTo = null);
+          });
+        }
+        m_nTouchStartClientX = void 0;
+        OnTouchStart(_) {
+          1 == _.touches.length &&
+            (this.m_nTouchStartClientX = _.touches[0].clientX);
+        }
+        OnTouchEnd(_) {
+          this.m_nTouchStartClientX = void 0;
+        }
+        OnTouchMove(_) {
+          if (!this.m_refGrid || 0 == _.touches.length) return;
+          const _ = this.m_nTouchStartClientX - _.touches[0].clientX;
+          this.BlockMovementLeftPastFirstElement(_, _);
+        }
+        m_bMouseDown = !1;
+        OnMouseDown(_) {
+          this.m_bMouseDown = !0;
+        }
+        OnMouseUp(_) {
+          this.m_bMouseDown = !1;
+        }
+        BlockMovementLeftPastFirstElement(_, _) {
+          const _ = this.m_refGrid.getOffsetForCell({
+            alignment: this.props.scrollToAlignment,
+            columnIndex: this.props.nIndexLeftmost,
+          });
+          this.m_refGridElement.scrollLeft - _.scrollLeft + _ < 0 &&
+            _.cancelable &&
+            (console.warn("Blocking touch scroll out of bounds"),
+            _.cancelable && _.preventDefault());
+        }
+        SnapBackToFirstElement(_) {
+          console.warn("Carousel out of bounds, scrolling back to", _),
+            this.RestoreScrollPosition(_);
+        }
+        OnScroll(_) {
+          const _ = this.m_refGrid?.getOffsetForCell({
+            alignment: this.props.scrollToAlignment,
+            columnIndex: this.props.nIndexLeftmost,
+          });
+          this.SendScrollNotification(_.scrollLeft),
+            _.scrollLeft < Math.floor(_?.scrollLeft) &&
+              this.SnapBackToFirstElement(_.scrollLeft),
+            this.UpdateScrollArrows();
+        }
+        GetCellColumnWidth(_) {
+          let { fnGetColumnWidth: _ } = this.props,
+            _ = _(_.index) + this.props.nItemMarginX;
+          return (
+            _.index == this.props.nNumItems - 1 &&
+              (_ += this.state.nRightPadding),
+            _
+          );
+        }
+        OnItemFocused(_, _) {
+          this.m_bMouseDown ||
+            this.ScrollToItem(
+              _._.INVALID,
+              _,
+              this.props.scrollToAlignment || "auto",
+              void 0,
+              0,
+            );
+        }
+        CellRenderer(_) {
+          const {
+              fnGetColumnWidth: _,
+              fnGetId: __webpack_require__,
+              fnItemRenderer: _,
+              nItemHeight: _,
+              autoFocus: _,
+            } = this.props,
+            { key: _, columnIndex: _, style: _ } = _,
+            _ = _(_),
+            _ = parseInt(_.left.toString()),
+            _ = __webpack_require__(_),
+            _ = !this.m_mapRefs.has(_),
+            _ = this.m_mapRefs.get(_) || (0, _._)();
+          return (
+            this.m_mapRefs.set(_, _),
+            (0, _.jsx)(
+              _._,
+              {
+                navKey: _,
+                navRef: _,
+                focusable: !1,
+                onGamepadDirection: this.OnGamepadDirection,
+                autoFocus: _ && _ == this.props.focusedColumn && _,
+                "data-id": _,
+                onFocus: (_) => this.OnItemFocused(_, _),
+                style: _,
+                preferredFocus: _ == this.props.focusedColumn,
+                role: "listitem",
+                "aria-setsize": this.props.nNumItems,
+                "aria-posinset": _ + 1,
+                children: _(_, _, _, _),
+              },
+              _,
+            )
+          );
+        }
+        OnSectionRendered(_) {
+          (this.m_iStart = _.columnStartIndex),
+            (this.m_iEnd = _.columnStopIndex),
+            _("Section rendered", this.m_iStart, this.m_iEnd),
+            this.UpdateScrollArrows();
+        }
+        get alignment() {
+          return this.props.scrollToAlignment || "start";
+        }
+        GetLastFocusableColumn() {
+          let _ = this.props.nNumItems - 1;
+          if (this.props.fnDoesItemTakeFocus)
+            for (
+              ;
+              !this.props.fnDoesItemTakeFocus(_) &&
+              _ > this.props.nIndexLeftmost;
+            )
+              _--;
+          return _("LastFocusableColumn: ", _), _;
+        }
+        UpdateScrollArrows() {
+          if (this.props.fnUpdateArrows) {
+            const _ = this.m_refGrid?.getOffsetForCell({
+                alignment: this.props.scrollToAlignment,
+                columnIndex: this.props.nIndexLeftmost,
+              }),
+              _ = this.m_refGrid?.getOffsetForCell({
+                alignment: this.props.scrollToAlignment,
+                columnIndex: this.GetLastFocusableColumn(),
+              }),
+              _ = Math.round(this.m_refGridElement?.scrollLeft),
+              _ =
+                _ != Math.floor(_?.scrollLeft) &&
+                _ != Math.round(_?.scrollLeft),
+              _ =
+                _ != Math.floor(_?.scrollLeft) &&
+                _ != Math.round(_?.scrollLeft);
+            _(
+              "ShowLeftArrow: ",
+              _,
+              _,
+              " ShowRightArrow: ",
+              _,
+              _,
+              " ScrollPos: ",
+              _,
+            ),
+              this.props.fnUpdateArrows(_, _);
+          }
+        }
+        BindGridObject(_) {
+          if (
+            (this.m_refGridElement &&
+              (this.m_refGridElement.removeEventListener(
+                "touchstart",
+                this.OnTouchStart,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "touchend",
+                this.OnTouchEnd,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "touchmove",
+                this.OnTouchMove,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "mousedown",
+                this.OnMouseDown,
+              ),
+              this.m_refGridElement.removeEventListener(
+                "mouseup",
+                this.OnMouseUp,
+              )),
+            (this.m_refGrid = _),
+            (this.m_refGridElement = void 0),
+            this.m_refGrid)
+          ) {
+            const _ = this.m_refGridContainer.current;
+            this.m_refGrid._setScrollingContainerRef(_),
+              (this.m_refGridElement = _),
+              _?.addEventListener("touchstart", this.OnTouchStart),
+              _?.addEventListener("touchend", this.OnTouchEnd),
+              _?.addEventListener("touchmove", this.OnTouchMove, {
+                passive: !1,
+              }),
+              _?.addEventListener("mousedown", this.OnMouseDown),
+              _?.addEventListener("mouseup", this.OnMouseUp),
+              this.props["aria-label"] &&
+                _.firstChild.setAttribute(
+                  "aria-label",
+                  this.props["aria-label"],
+                ),
+              this.props["aria-labelledby"] &&
+                _.firstChild.setAttribute(
+                  "aria-labelledby",
+                  this.props["aria-labelledby"],
+                );
+            const _ = window.getComputedStyle(_),
+              _ = parseInt(_.getPropertyValue("padding-right")) || 0,
+              _ = parseInt(_.getPropertyValue("scroll-padding-right")) || 0,
+              _ = Math.max(_, _);
+            _ != this.state.nRightPadding &&
+              (_("Computed", _, "additional right padding"),
+              this.setState(
+                {
+                  nRightPadding: _,
+                },
+                () => {
+                  this.m_refGrid.recomputeGridSize({
+                    columnIndex: this.props.nNumItems - 1,
+                  });
+                },
+              ));
+          }
+        }
+        componentDidMount() {
+          this.m_refContainer.current &&
+            ((this.m_resizeObserver = (0, _._)(
+              this.m_refContainer.current,
+              this.OnResize,
+            )),
+            _(
+              "componentDidMount Setting width to",
+              this.m_refContainer.current.clientWidth,
+            ),
+            this.setState({
+              nContainerWidth: this.m_refContainer.current.clientWidth,
+            }));
+        }
+        componentDidUpdate(_) {
+          this.props.fnGetColumnWidth != _.fnGetColumnWidth &&
+            (_("Column width function changes, recalculating sizes"),
+            this.m_refGrid?.recomputeGridSize());
+        }
+        componentWillUnmount() {
+          this.m_resizeObserver?.disconnect();
+        }
+        OnResize() {
+          const _ = this.m_refContainer.current.clientWidth;
+          _ != this.state.nContainerWidth &&
+            (_(
+              "OnResize Setting width to",
+              this.m_refContainer.current.clientWidth,
+            ),
+            this.setState({
+              nContainerWidth: _,
+            })),
+            this.UpdateScrollArrows();
+        }
+        ScrollLeft(_) {
+          const _ = this.m_iEnd - this.m_iStart,
+            _ = (0, _._)(
+              this.props.focusedColumn - _,
+              this.props.nIndexLeftmost,
+              this.props.nNumItems - 1,
+            ),
+            _ = this.alignment;
+          return this.ScrollToItem(_._.INVALID, _, _, _);
+        }
+        ScrollRight(_) {
+          const _ = this.m_iEnd - this.m_iStart,
+            _ = (0, _._)(
+              this.props.focusedColumn + _,
+              this.props.nIndexLeftmost,
+              this.props.nNumItems - 1,
+            ),
+            _ = this.alignment;
+          return this.ScrollToItem(_._.INVALID, _, _, _);
+        }
+        ScrollToFirstChild() {
+          return this.ScrollToItem(
+            _._.INVALID,
+            this.props.nIndexLeftmost,
+            "auto",
+          );
+        }
+        MoveLeft(_) {
+          _("MoveLeft from", this.props.focusedColumn);
+          let _ = this.props.focusedColumn - 1;
+          for (
+            ;
+            _ != this.props.nIndexLeftmost - 1 &&
+            this.props.fnDoesItemTakeFocus &&
+            !this.props.fnDoesItemTakeFocus(_);
+          )
+            _--;
+          return _ == this.props.nIndexLeftmost - 1
+            ? (_("At left edge, not handling left gamepad"), !1)
+            : (_("MoveLeft to", _),
+              this.ScrollToItem(
+                _ ? _.detail.button : _._.INVALID,
+                _,
+                this.props.scrollToAlignment || "auto",
+                _,
+              ));
+        }
+        MoveRight(_) {
+          _("MoveRight from", this.props.focusedColumn);
+          let _ = this.props.focusedColumn + 1;
+          for (
+            ;
+            _ != this.props.nNumItems &&
+            this.props.fnDoesItemTakeFocus &&
+            !this.props.fnDoesItemTakeFocus(_);
+          )
+            _++;
+          return _ == this.props.nNumItems
+            ? (_("At right edge, not handling right gamepad"), !1)
+            : (_("MoveRight to", _),
+              this.ScrollToItem(
+                _ ? _.detail.button : _._.INVALID,
+                _,
+                this.props.scrollToAlignment || "auto",
+                _,
+              ));
+        }
+        ScrollToItem(_, _, _, _, _) {
+          if (
+            this.m_activeScrollTo &&
+            this.m_activeScrollTo.alignment === _ &&
+            this.m_activeScrollTo.iNewFocus === _
+          )
+            return !0;
+          if (
+            (_("ScrollToItem", _, _, _, _),
+            _ != this.props.focusedColumn &&
+              this.m_refGrid &&
+              (!this.props.fnDoesItemTakeFocus ||
+                this.props.fnDoesItemTakeFocus(_)))
+          ) {
+            const _ = this.m_refGrid.getOffsetForCell({
+                alignment: _,
+                columnIndex: _,
+                rowIndex: 0,
+              }),
+              _ = this.props.fnGetId(_);
+            return (
+              _("Scrolling to item", _, _, _, _.scrollLeft, _),
+              (this.m_activeScrollTo = {
+                iNewFocus: _,
+                alignment: _,
+              }),
+              this.props.fnOnFocusedColumnChange &&
+                this.props.fnOnFocusedColumnChange(this.props.focusedColumn, _),
+              this.StartScrollAnimation(
+                _,
+                _,
+                _,
+                _.scrollLeft,
+                _ ?? this.props.scrollDuration,
+              ),
+              _?.stopPropagation(),
+              _?.preventDefault(),
+              !0
+            );
+          }
+          return !1;
+        }
+        OnGamepadButtonDown(_) {
+          switch ((_("OnGamepadButtonDown", _.detail), _.detail.button)) {
+            case _._.BUMPER_LEFT:
+              return !!this.props.enableBumperPaging && this.ScrollLeft(_);
+            case _._.BUMPER_RIGHT:
+              return !!this.props.enableBumperPaging && this.ScrollRight(_);
+          }
+          return !1;
+        }
+        OnGamepadDirection(_) {
+          switch ((_("OnGamepadDirection", _.detail), _.detail.button)) {
+            case _._.DIR_LEFT:
+              return this.MoveLeft(_);
+            case _._.DIR_RIGHT:
+              return this.MoveRight(_);
+          }
+          return !1;
+        }
+        render() {
+          const {
+              className: _,
+              nNumItems: _,
+              nIndexLeftmost: __webpack_require__,
+              nHeight: _,
+              nItemHeight: _,
+              overscan: _ = 3,
+              scrollToAlignment: _,
+              focusedColumn: _,
+              autoHeight: _,
+              "aria-label": _,
+              navEntryPreferPosition: _,
+            } = this.props,
+            _ = this.state.nContainerWidth;
+          return (
+            _(
+              "Inner render",
+              this.props.name,
+              this.props.nNumItems,
+              _,
+              __webpack_require__,
+              _,
+            ),
+            (0, _.jsx)(_._, {
+              ref: this.m_refContainer,
+              "flow-children": "row",
+              onButtonDown: this.OnGamepadButtonDown,
+              focusable: !1,
+              navEntryPreferPosition: _,
+              children:
+                _ &&
+                (0, _.jsx)(_._, {
+                  role: "generic",
+                  containerRole: "list",
+                  ref: this.BindGridObject,
+                  containerProps: {
+                    ref: this.m_refGridContainer,
+                  },
+                  className: _,
+                  cellRenderer: this.CellRenderer,
+                  onScroll: this.OnScroll,
+                  onSectionRendered: this.OnSectionRendered,
+                  columnCount: _,
+                  columnWidth: this.GetCellColumnWidth,
+                  overscanColumnCount: _,
+                  overscanIndicesGetter: ({
+                    cellCount: _,
+                    overscanCellsCount: _,
+                    startIndex: __webpack_require__,
+                    stopIndex: _,
+                  }) => ({
+                    overscanStartIndex: Math.max(0, __webpack_require__ - _),
+                    overscanStopIndex: Math.min(_ - 1, _ + _),
+                  }),
+                  rowCount: 1,
+                  rowHeight: _,
+                  height: _,
+                  width: _,
+                  containerStyle: {
+                    overflow: "visible",
+                  },
+                  scrollToAlignment: this.alignment,
+                  scrollToColumn: _,
+                  tabIndex: null,
+                  autoHeight: _,
+                }),
+            })
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "RestoreScrollPosition", null),
+        (0, _._)([_._], _.prototype, "OnAnimationScrollComplete", null),
+        (0, _._)([_._], _.prototype, "OnTouchStart", null),
+        (0, _._)([_._], _.prototype, "OnTouchEnd", null),
+        (0, _._)([_._], _.prototype, "OnTouchMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)(
+          [_._, (0, _._)(250)],
+          _.prototype,
+          "SnapBackToFirstElement",
+          null,
+        ),
+        (0, _._)([_._], _.prototype, "OnScroll", null),
+        (0, _._)([_._], _.prototype, "GetCellColumnWidth", null),
+        (0, _._)([_._], _.prototype, "OnItemFocused", null),
+        (0, _._)([_._], _.prototype, "CellRenderer", null),
+        (0, _._)([_._], _.prototype, "OnSectionRendered", null),
+        (0, _._)([_._, (0, _._)(250)], _.prototype, "UpdateScrollArrows", null),
+        (0, _._)([_._], _.prototype, "BindGridObject", null),
+        (0, _._)([_._], _.prototype, "OnResize", null),
+        (0, _._)([_._], _.prototype, "ScrollLeft", null),
+        (0, _._)([_._], _.prototype, "ScrollRight", null),
+        (0, _._)([_._], _.prototype, "ScrollToFirstChild", null),
+        (0, _._)([_._], _.prototype, "MoveLeft", null),
+        (0, _._)([_._], _.prototype, "MoveRight", null),
+        (0, _._)([_._], _.prototype, "OnGamepadButtonDown", null),
+        (0, _._)([_._], _.prototype, "OnGamepadDirection", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      class _ extends _.Component {
+        onCloseButtonClicked(_) {
+          this.props.bShowCloseButton &&
+            this.props.fnOnCloseButtonClicked &&
+            this.props.bShowCloseButton &&
+            this.props.fnOnCloseButtonClicked &&
+            this.props.fnOnCloseButtonClicked(_);
+        }
+        render() {
+          let _ = this.props.bLeftEnabled || this.props.bRightEnabled,
+            _ = _().Medium;
+          "small" == this.props.buttonSize && (_ = _().Small);
+          let _ = {};
+          return (
+            !this.props.bNoHeader &&
+              this.props.headerPadding &&
+              (_.padding = this.props.headerPadding),
+            (0, _.jsxs)(_._, {
+              "flow-children": "row",
+              navEntryPreferPosition: _._.MAINTAIN_X,
+              className: (0, _._)(_().PageableContainer, this.props.className),
+              children: [
+                !this.props.bNoHeader &&
+                  (0, _.jsxs)("div", {
+                    className: _().HeaderPageControls,
+                    style: _,
+                    children: [
+                      this.props.customheader
+                        ? this.props.customheader
+                        : (0, _.jsxs)(_.Fragment, {
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: (0, _._)(
+                                  _().Name,
+                                  this.props.bClickableHeader && _().Clickable,
+                                ),
+                                onClick: this.props.fnOnClickHeader,
+                                children: this.props.name,
+                              }),
+                              this.props.aftername,
+                              (0, _.jsx)("div", {
+                                className: _().Rule,
+                              }),
+                            ],
+                          }),
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          _().PageClickContainer,
+                          this.props.pageContainerStyles,
+                        ),
+                        children: [
+                          _ &&
+                            (0, _.jsxs)(_.Fragment, {
+                              children: [
+                                (0, _.jsx)("div", {
+                                  className: (0, _._)(
+                                    _().PageLeft,
+                                    !this.props.bLeftEnabled && _().Disabled,
+                                    _,
+                                  ),
+                                  onClick: this.props.fnLeftClicked,
+                                  children: (0, _.jsx)(_.F2T, {
+                                    singlearrow: !0,
+                                    angle: 0,
+                                  }),
+                                }),
+                                (0, _.jsx)("div", {
+                                  className: (0, _._)(
+                                    _().PageRight,
+                                    !this.props.bRightEnabled && _().Disabled,
+                                    _,
+                                  ),
+                                  onClick: this.props.fnRightClicked,
+                                  children: (0, _.jsx)(_.F2T, {
+                                    singlearrow: !0,
+                                    angle: 180,
+                                  }),
+                                }),
+                                " ",
+                              ],
+                            }),
+                          this.props.bShowCloseButton &&
+                            (0, _.jsx)("div", {
+                              className: (0, _._)(
+                                _().PageableCloseButton,
+                                _ && _().PageButtonsVisible,
+                                _,
+                              ),
+                              onClick: this.onCloseButtonClicked,
+                              children: (0, _.jsx)(_.sED, {}),
+                            }),
+                        ],
+                      }),
+                    ],
+                  }),
+                (0, _.jsx)("div", {
+                  className: _().PageableContent,
+                  children: this.props.children,
                 }),
               ],
+            })
+          );
+        }
+      }
+      (0, _._)([_._], _.prototype, "onCloseButtonClicked", null);
+      class _ extends _.Component {
+        state = {
+          bLeftArrowEnabled: !1,
+          bRightArrowEnabled: !1,
+        };
+        m_refCarousel = _.createRef();
+        OnLeftClicked(_) {
+          this.ScrollLeft(_);
+        }
+        OnRightClicked(_) {
+          this.ScrollRight(_);
+        }
+        ScrollLeft(_) {
+          let _ = this.m_refCarousel.current;
+          _ && _.ScrollLeft(_);
+        }
+        ScrollRight(_) {
+          let _ = this.m_refCarousel.current;
+          _ && _.ScrollRight(_);
+        }
+        ScrollToFirstChild() {
+          let _ = this.m_refCarousel.current;
+          _ && _.ScrollToFirstChild();
+        }
+        OnUpdateArrows(_, _) {
+          (this.state.bLeftArrowEnabled == _ &&
+            this.state.bRightArrowEnabled == _) ||
+            this.setState({
+              bLeftArrowEnabled: _,
+              bRightArrowEnabled: _,
+            }),
+            this.props.fnUpdateArrows && this.props.fnUpdateArrows(_, _);
+        }
+        OnHeaderClick(_) {
+          this.props.bHeaderClickScrollToFirst &&
+            (this.props.onClickHeader && this.props.onClickHeader(_),
+            this.m_refCarousel.current &&
+              this.m_refCarousel.current.ScrollToFirstChild());
+        }
+        onCloseButtonClicked(_) {
+          this.props.bShowCloseButton &&
+            this.props.onCloseButtonClicked &&
+            this.props.bShowCloseButton &&
+            this.props.onCloseButtonClicked &&
+            this.props.onCloseButtonClicked(_);
+        }
+        render() {
+          let _ = this.props.children(this.m_refCarousel, this.OnUpdateArrows),
+            _ =
+              this.props.bHeaderClickScrollToFirst &&
+              this.state.bLeftArrowEnabled;
+          return (0, _.jsx)(_, {
+            name: this.props.name,
+            aftername: this.props.aftername,
+            className: this.props.className,
+            customheader: this.props.customheader,
+            fnOnClickHeader: this.OnHeaderClick,
+            bClickableHeader: _,
+            fnLeftClicked: this.OnLeftClicked,
+            fnRightClicked: this.OnRightClicked,
+            bLeftEnabled: this.state.bLeftArrowEnabled,
+            bRightEnabled: this.state.bRightArrowEnabled,
+            bShowCloseButton: this.props.bShowCloseButton,
+            fnOnCloseButtonClicked: this.onCloseButtonClicked,
+            bNoHeader: this.props.bNoHeader,
+            pageContainerStyles: this.props.pageContainerStyles,
+            buttonSize: this.props.buttonSize,
+            headerPadding: this.props.headerPadding,
+            children: _,
+          });
+        }
+      }
+      (0, _._)([_._], _.prototype, "OnLeftClicked", null),
+        (0, _._)([_._], _.prototype, "OnRightClicked", null),
+        (0, _._)([_._], _.prototype, "ScrollLeft", null),
+        (0, _._)([_._], _.prototype, "ScrollRight", null),
+        (0, _._)([_._], _.prototype, "ScrollToFirstChild", null),
+        (0, _._)([_._], _.prototype, "OnUpdateArrows", null),
+        (0, _._)([_._], _.prototype, "OnHeaderClick", null),
+        (0, _._)([_._], _.prototype, "onCloseButtonClicked", null);
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            itemWidthPercentage: _,
+            closeModal: __webpack_require__,
+            name: _,
+            nNumItems: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0),
+          _ = _.useCallback((_) => {
+            _ && (_(_.clientWidth), _(_.clientHeight));
+          }, []),
+          _ = _.useCallback((_) => (_ * _) / 100, [_, _]);
+        return (0, _.jsx)(_._, {
+          className: _().FullScreenCarousel,
+          onCancel: __webpack_require__,
+          children: (0, _.jsx)("div", {
+            className: _().InnerContainer,
+            ref: _,
+            children:
+              _ &&
+              (0, _.jsx)(_, {
+                className: _().PageableContainer,
+                name: _,
+                bNoHeader: !0,
+                fnUpdateArrows: void 0,
+                children: (_, _) =>
+                  (0, _.jsx)(_, {
+                    name: _,
+                    nNumItems: _,
+                    ..._,
+                    className: _().Carousel,
+                    ref: _,
+                    fnGetColumnWidth: _,
+                    fnUpdateArrows: _,
+                    nHeight: _,
+                    nItemHeight: _,
+                  }),
+              }),
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            name: _,
+            initialColumn: __webpack_require__,
+            modalClassName: _,
+            fnOnFocusedColumnChange: _,
+            bFullScreen: _,
+            setFullScreen: _,
+            nFullScreenItemWidthPercentage: _,
+            ..._
+          } = _,
+          [_, _] = _(_, __webpack_require__, _);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                onEscKeypress: () => _(!1),
+                className: _,
+                padding: "none",
+                children: (0, _.jsx)(_, {
+                  name: _,
+                  fnOnFocusedColumnChange: _,
+                  focusedColumn: _,
+                  setFocusedColumn: _,
+                  itemWidthPercentage: _,
+                  closeModal: () => _(!1),
+                  navEntryPreferPosition: _._.PREFERRED_CHILD,
+                  ..._,
+                }),
+              }),
             }),
             (0, _.jsx)(_, {
-              review: _,
+              name: _,
+              fnOnFocusedColumnChange: _,
+              focusedColumn: _,
+              setFocusedColumn: _,
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              ..._,
             }),
           ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            rgReviews: _,
+            nNumItems: __webpack_require__,
+            nFriendReviews: _,
+            getTitle: _,
+            mapTags: _,
+            onItemFocusChanged: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(void 0),
+          _ = 350,
+          _ = _.useId(),
+          _ = _.useCallback(
+            (_) => (_ < _.length ? _[_].recommendationid : "Throbber"),
+            [_],
+          ),
+          _ = _.useCallback((_) => _ < _.length, [_.length]),
+          _ = _.useCallback(
+            (_, _, _, _) => {
+              if (_ >= _.length)
+                return (0, _.jsx)(_._, {
+                  className: (0, _._)(_().LoadingThrobber, _().FullScreen),
+                  style: {
+                    width: _,
+                    height: _,
+                  },
+                  focusable: !1,
+                  children: (0, _.jsx)(_._, {
+                    size: "large",
+                    position: "center",
+                  }),
+                });
+              const _ = _[_],
+                _ = _ < _;
+              return (0, _.jsx)(_, {
+                gamepadPresentation: _ ? "full" : "capsule",
+                onActivate: _
+                  ? void 0
+                  : () => {
+                      _(!0);
+                    },
+                onCancel: () => {
+                  _(!1);
+                },
+                nItemWidth: _,
+                nItemHeight: _,
+                bIsFriend: _,
+                review: _,
+                mapTags: _,
+              });
+            },
+            [_, _, _, _],
+          ),
+          _ = _.useCallback((_) => _, [_]),
+          _ = _.useCallback(
+            (_, _) => {
+              _(_(_)), _ && _(_, _);
+            },
+            [_, _],
+          );
+        return (0, _.jsxs)("div", {
+          className: (0, _._)(_().CarouselWrapper),
+          children: [
+            (0, _.jsx)(_, {
+              className: _().ReviewSectionTitle,
+              _: _,
+              title: _,
+            }),
+            (0, _.jsx)(_, {
+              name: "AppReviews",
+              modalClassName: _().ModalPosition,
+              bFullScreen: _,
+              setFullScreen: _,
+              nFullScreenItemWidthPercentage: 80,
+              className: _().Carousel,
+              "aria-labelledby": _,
+              scrollToAlignment: "center",
+              nNumItems: __webpack_require__,
+              nHeight: _ / 0.92,
+              nItemHeight: _ / 0.92,
+              nItemMarginX: 20,
+              fnGetColumnWidth: _,
+              fnGetId: _,
+              navEntryPreferPosition: _._.PREFERRED_CHILD,
+              fnDoesItemTakeFocus: _,
+              fnOnFocusedColumnChange: _,
+              fnItemRenderer: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            queryReviews: _,
+            mapTags: __webpack_require__,
+            loadMore: _,
+          } = _,
+          _ = _.useMemo(
+            () => (_?.data?.pages || []).map((_) => _.reviews).flat(1),
+            [_?.data?.pages],
+          ),
+          _ = _.useCallback((_) => {}, []),
+          _ = _.useCallback(
+            (_, _) => {
+              _ && _ > _.length - 3 && !_.isFetching && _();
+            },
+            [_, _.length, _.isFetching],
+          );
+        return (0, _.jsx)(_, {
+          rgReviews: _,
+          nNumItems: _.length + (_ ? 1 : 0),
+          nFriendReviews: 0,
+          getTitle: _,
+          mapTags: __webpack_require__,
+          onItemFocusChanged: _,
+        });
+      }
+      function _(_) {
+        const { summary: _, mapTags: __webpack_require__ } = _,
+          _ = _?.friendreviews?.length || 0,
+          _ = _?.reviews?.length || 0,
+          _ = _.useCallback(
+            function (_) {
+              let _;
+              return (
+                (_ =
+                  _ < _
+                    ? "#Review_SectionTitle_Friends"
+                    : _ < _ + _
+                      ? "#Review_SectionTitle_Top"
+                      : "#Review_SectionTitle_Recent"),
+                _
+              );
+            },
+            [_, _],
+          ),
+          _ = _.useMemo(
+            () =>
+              (_?.friendreviews || [])
+                .concat(_?.reviews || [])
+                .concat(_?.recentreviews || []),
+            [_],
+          );
+        return (0, _.jsx)(_, {
+          rgReviews: _,
+          nNumItems: _.length,
+          nFriendReviews: _,
+          getTitle: _,
+          mapTags: __webpack_require__,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -7689,24 +8704,26 @@
       }
       function _(_) {
         const {
-          title: _,
-          className: __webpack_require__,
-          bIsFriend: _,
-          bShortPresentation: _,
-          reviews: _,
-          mapTags: _,
-        } = _;
+            title: _,
+            className: __webpack_require__,
+            bIsFriend: _,
+            bShortPresentation: _,
+            reviews: _,
+            mapTags: _,
+          } = _,
+          _ = _.useId();
         return _?.length
           ? (0, _.jsxs)("div", {
               className: _()(_().ReviewSection, __webpack_require__),
               children: [
-                _ &&
-                  (0, _.jsx)("div", {
-                    className: _().ReviewSectionTitle,
-                    children: _.Localize(_),
-                  }),
+                (0, _.jsx)(_, {
+                  _: _,
+                  title: _,
+                }),
                 (0, _.jsx)("div", {
                   className: _().Reviews,
+                  "aria-labelledby": _,
+                  role: "list",
                   children: _.map((_) =>
                     (0, _.jsx)(
                       _,
@@ -7736,7 +8753,8 @@
         });
       }
       function _(_) {
-        const { appid: _, title: __webpack_require__, searchParams: _ } = _,
+        const { searchParams: _ } = _,
+          { appid: __webpack_require__ } = _.useContext(_),
           [_, _] = _.useState(!1),
           _ = (0, _._)(
             _.useCallback((_) => {
@@ -7747,16 +8765,26 @@
               rootMargin: "0px 0px 1000px 0px",
             },
           ),
-          _ = _(_, _, _),
-          _ = (_?.data?.pages || []).map((_) => _.reviews).flat(1),
+          _ = (function (_, _, _) {
+            const _ = (0, _._)();
+            return (0, _._)({
+              queryKey: _(_, _),
+              queryFn: async (_) => _(_, _, _, _.pageParam),
+              enabled: _,
+              initialPageParam: "*",
+              getNextPageParam: (_) => _.cursor,
+              placeholderData: (_) => _,
+              retry: (_, _) =>
+                _ instanceof _ ? 8 != _.eResult && _ < 3 : _ < 3,
+            });
+          })(__webpack_require__, _, _),
           _ = _?.data?.pages?.[0],
           _ =
-            (_?.data?.pages[0].cAppRecommendationCount || 0) > _.length &&
-            "summary" != _.filter &&
-            !_.isError,
-          _ = new Map(_?.rgReviewTags.map((_) => [_._, _]));
+            (_?.data?.pages?.[_.data.pages.length - 1],
+            new Map(_?.rgReviewTags.map((_) => [_._, _])));
         return (0, _.jsxs)(_.Fragment, {
           children: [
+            !1,
             (0, _.jsxs)("div", {
               ref: _,
               className: _().StatusLine,
@@ -7772,22 +8800,13 @@
             }),
             "summary" == _?.reviewFilter &&
               (0, _.jsx)(_, {
-                appid: _,
                 summary: _,
                 mapTags: _,
               }),
             "summary" != _?.reviewFilter &&
               (0, _.jsx)(_, {
-                title: __webpack_require__,
-                reviews: _,
+                queryReviews: _,
                 mapTags: _,
-              }),
-            _ &&
-              (0, _.jsx)(_._, {
-                disabled: _.isFetching,
-                className: _().LoadMoreButton,
-                onClick: () => _.fetchNextPage(),
-                children: _.Localize("#Review_LoadMore"),
               }),
             _.isError &&
               (0, _.jsx)(_, {
@@ -7797,7 +8816,39 @@
         });
       }
       function _(_) {
-        const { summary: _, className: __webpack_require__, appid: _ } = _;
+        const { queryReviews: _, mapTags: __webpack_require__ } = _,
+          _ = (_?.data?.pages || []).map((_) => _.reviews).flat(1),
+          _ =
+            (_?.data?.pages[0].cAppRecommendationCount || 0) > _.length &&
+            !_.isError,
+          _ = _ ? () => _.fetchNextPage() : void 0,
+          _ = (0, _._)();
+        return 0 == _.length
+          ? null
+          : _
+            ? (0, _.jsx)(_, {
+                ..._,
+                loadMore: _,
+              })
+            : (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_, {
+                    reviews: _,
+                    mapTags: __webpack_require__,
+                  }),
+                  _ &&
+                    (0, _.jsx)(_._, {
+                      disabled: _.isFetching,
+                      className: _().LoadMoreButton,
+                      onClick: _,
+                      children: _.Localize("#Review_LoadMore"),
+                    }),
+                ],
+              });
+      }
+      function _(_) {
+        const { summary: _, className: __webpack_require__ } = _,
+          { appid: _ } = _.useContext(_);
         return _?.query_summary?.total_reviews_unfiltered
           ? (0, _.jsx)("a", {
               className: _()(_().BrowseAllLink, __webpack_require__),
@@ -7812,55 +8863,58 @@
           : null;
       }
       function _(_) {
-        const { appid: _, summary: __webpack_require__, mapTags: _ } = _;
-        return __webpack_require__
-          ? (0, _.jsx)(_.Fragment, {
-              children: (0, _.jsxs)(_._, {
-                className: _().ReviewSummary,
-                children: [
-                  (0, _.jsxs)(_._, {
-                    className: _().Left,
-                    children: [
-                      (0, _.jsx)(_, {
-                        title: "#Review_SectionTitle_Friends",
-                        className: _().Friends,
-                        bIsFriend: !0,
-                        reviews: __webpack_require__?.friendreviews,
-                        mapTags: _,
-                      }),
-                      (0, _.jsx)(_, {
-                        title: "#Review_SectionTitle_Top",
-                        className: _().TopReviews,
-                        reviews: __webpack_require__?.reviews,
-                        mapTags: _,
-                      }),
-                      (0, _.jsx)(_, {
-                        className: _().LeftColumn,
-                        summary: __webpack_require__,
-                        appid: _,
-                      }),
-                    ],
-                  }),
-                  (0, _.jsxs)(_._, {
-                    className: _().Right,
-                    children: [
-                      (0, _.jsx)(_, {
-                        title: "#Review_SectionTitle_Recent",
-                        className: _().Recent,
-                        bShortPresentation: !0,
-                        reviews: __webpack_require__?.recentreviews,
-                        mapTags: _,
-                      }),
-                      (0, _.jsx)(_, {
-                        className: _().RightColumn,
-                        summary: __webpack_require__,
-                        appid: _,
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            })
+        const { summary: _, mapTags: __webpack_require__ } = _,
+          _ = (0, _._)();
+        return _
+          ? _
+            ? (0, _.jsx)(_, {
+                ..._,
+              })
+            : (0, _.jsx)(_.Fragment, {
+                children: (0, _.jsxs)(_._, {
+                  className: _().ReviewSummary,
+                  children: [
+                    (0, _.jsxs)(_._, {
+                      className: _().Left,
+                      children: [
+                        (0, _.jsx)(_, {
+                          title: "#Review_SectionTitle_Friends",
+                          className: _().Friends,
+                          bIsFriend: !0,
+                          reviews: _?.friendreviews,
+                          mapTags: __webpack_require__,
+                        }),
+                        (0, _.jsx)(_, {
+                          title: "#Review_SectionTitle_Top",
+                          className: _().TopReviews,
+                          reviews: _?.reviews,
+                          mapTags: __webpack_require__,
+                        }),
+                        (0, _.jsx)(_, {
+                          className: _().LeftColumn,
+                          summary: _,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)(_._, {
+                      className: _().Right,
+                      children: [
+                        (0, _.jsx)(_, {
+                          title: "#Review_SectionTitle_Recent",
+                          className: _().Recent,
+                          bShortPresentation: !0,
+                          reviews: _?.recentreviews,
+                          mapTags: __webpack_require__,
+                        }),
+                        (0, _.jsx)(_, {
+                          className: _().RightColumn,
+                          summary: _,
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              })
           : null;
       }
       const _ = _.createContext({
@@ -7918,7 +8972,6 @@
             children: (0, _.jsx)(_._, {
               navID: "AppReviews",
               children: (0, _.jsx)(_, {
-                appid: _,
                 searchParams: _,
               }),
             }),
@@ -8009,7 +9062,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(async () => ({
@@ -8018,7 +9070,8 @@
               ._("chunkid")
               .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
           ).AccessibilityFeatureDisplay,
-        }));
+        })),
+        _ = () => null;
       function _(_) {
         const { appid: _ } = _;
         return (0, _.jsx)(_._, {
@@ -8128,6 +9181,10 @@
                   }),
                 }),
               appreviews: (_) =>
+                (0, _.jsx)(_, {
+                  ..._,
+                }),
+              "wishlist-item-categories": (_) =>
                 (0, _.jsx)(_, {
                   ..._,
                 }),

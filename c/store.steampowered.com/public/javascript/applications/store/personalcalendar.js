@@ -101,7 +101,7 @@
                 sessionid: _._.SESSIONID,
               },
               _ = await _().get(
-                `${_._.STORE_BASE_URL}personalcalendar/getrecommendations`,
+                `${_._.STORE_BASE_URL}personalcalendarold/getrecommendations`,
                 {
                   params: _,
                   timeout: 2e4,
@@ -136,12 +136,14 @@
       var _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
           {
             value: _,
             onTextChange: _,
+            onTextClear: _,
             clearable: _,
             onChange: _,
             radius: _,
@@ -163,19 +165,25 @@
             afterContent:
               _ && _
                 ? (0, _.jsx)(_._, {
-                    onClick: () => _(""),
+                    onClick: () => {
+                      _(""), _ && _();
+                    },
                     cursor: "pointer",
                     hitSlop: !0,
                   })
                 : _,
             ref: _,
             disabled: _,
-          };
+          },
+          _ = (0, _.useRef)(null);
         return (0, _.jsx)(_._, {
           cursor: "text",
           ..._,
+          onClick: (_) => {
+            _.current && _.target !== _.current && _.current.focus();
+          },
           children: (0, _.jsx)("input", {
-            ref: _,
+            ref: (0, _._)(_, _),
             type: "text",
             ..._,
             "aria-disabled": _,

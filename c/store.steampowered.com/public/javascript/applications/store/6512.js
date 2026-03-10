@@ -67,7 +67,7 @@
 	"Review_VoteError_AccessDenied": "Votre compte ne dispose pas des droits suffisants pour effectuer cette action.",
 	"Review_VoteError_LimitedUser": "Votre compte ne remplit pas les conditions requises pour utiliser cette option. Visitez le site du Support Steam pour plus d'informations.",
 	"Review_BrowseAll": "Parcourir toutes les évaluations",
-	"Review_BrowseAll_Plural": "Parcourir toutes les évaluations de %1$s",
+	"Review_BrowseAll_Plural": "Parcourir toutes les évaluations (%1$s)",
 	"Review_PurchaseSource_Steam": "Acheté sur Steam",
 	"Review_PurchaseSource_Key": "Clé Steam"
 }`);

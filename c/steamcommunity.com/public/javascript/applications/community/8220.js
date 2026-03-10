@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Δεν βρέθηκαν καταχωρίσεις",
 	"AssetProperty_Range_MinPlaceholder": "Ελάχ.",
 	"AssetProperty_Range_MaxPlaceholder": "Μέγ.",
-	"Accessories_FieldSectionLabel": "Αξεσουάρ"
+	"Accessories_FieldSectionLabel": "Αξεσουάρ",
+	"Listing_EnhancedAppearance_Missing": "Αυτή η καταχώριση δεν έχει ακόμα συγκεκριμένες ή βελτιωμένες εικόνες. Η εικόνα που εμφανίζεται εδώ μπορεί να διαφέρει ελαφρώς από το καταχωρισμένο αντικείμενο."
 }`);
     },
   },

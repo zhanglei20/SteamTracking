@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Không tìm thấy đăng bán nào",
 	"AssetProperty_Range_MinPlaceholder": "Tối thiểu",
 	"AssetProperty_Range_MaxPlaceholder": "Tối đa",
-	"Accessories_FieldSectionLabel": "Phụ kiện"
+	"Accessories_FieldSectionLabel": "Phụ kiện",
+	"Listing_EnhancedAppearance_Missing": "Mục đăng này chưa có ảnh độc nhất hoặc nổi bật. Ảnh hiện ở đây có thể khác một tí so với vật phẩm đăng bán."
 }`);
     },
   },

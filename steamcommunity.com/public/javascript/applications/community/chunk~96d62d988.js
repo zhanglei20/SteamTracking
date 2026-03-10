@@ -2171,7 +2171,7 @@
           return this.m_mapClanToCreatorHome.get(e.GetAccountID()).m_promise;
         }
         async InternalCreatorHome(e, t) {
-          let r = { get_appids: !0, l: z.TS.LANGUAGE, origin: self.origin },
+          let r = { get_appids: !0, l: z.TS.LANGUAGE },
             i =
               z.TS.STORE_BASE_URL +
               "curator/" +

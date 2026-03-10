@@ -42802,6 +42802,10 @@ var CLSTAMP = "steamdb";
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  additional_subject_data: {
+                    _: 7,
+                    _: _,
+                  },
                 },
               }),
             _.sm_m
@@ -76692,6 +76696,16 @@ var CLSTAMP = "steamdb";
                     _: _._.readEnum,
                     _: _._.writeEnum,
                   },
+                  disable_microtrailers: {
+                    _: 15,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  disable_animated_marketing: {
+                    _: 16,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
                 },
               }),
             _.sm_m
@@ -93889,8 +93903,12 @@ var CLSTAMP = "steamdb";
                     _: 3,
                     _: _,
                   },
-                  steam_game_overlay_options: {
+                  steam_game_info: {
                     _: 4,
+                    _: _,
+                  },
+                  steam_game_window_item_options: {
+                    _: 5,
                     _: _,
                   },
                 },
@@ -94050,7 +94068,67 @@ var CLSTAMP = "steamdb";
           return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
         }
         getClassName() {
-          return "CVRGamepadUI_Frame_FrameMenu_Item_SteamGameOverlayOptions";
+          return "CVRGamepadUI_Frame_FrameMenu_Item_SteamGameInfo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.show_for_single_window || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  show_for_single_window: {
+                    _: 1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CVRGamepadUI_Frame_FrameMenu_Item_SteamGameWindowItemsOptions";
         }
       }
       class _ extends _.Message {
@@ -104544,13 +104622,11 @@ var CLSTAMP = "steamdb";
                 fields: {
                   language: {
                     _: 1,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   type: {
                     _: 2,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -104611,13 +104687,11 @@ var CLSTAMP = "steamdb";
                 fields: {
                   language: {
                     _: 1,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   type: {
                     _: 2,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -104738,13 +104812,11 @@ var CLSTAMP = "steamdb";
                 fields: {
                   language: {
                     _: 1,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   type: {
                     _: 2,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -104925,13 +104997,11 @@ var CLSTAMP = "steamdb";
                 fields: {
                   gameid: {
                     _: 1,
-                    _: !0,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
                   },
                   should_handle: {
                     _: 2,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -105558,6 +105628,11 @@ var CLSTAMP = "steamdb";
                     _: 36,
                     _: _._.readBool,
                     _: _._.writeBool,
+                  },
+                  button_state_bits: {
+                    _: 37,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -108401,103 +108476,86 @@ var CLSTAMP = "steamdb";
                 fields: {
                   controller_index: {
                     _: 1,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   initialized: {
                     _: 2,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   controller_type: {
                     _: 3,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   controller_style: {
                     _: 4,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   xinput_index: {
                     _: 5,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   is_wireless_steam_dongle: {
                     _: 6,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   vendor_id: {
                     _: 7,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   product_id: {
                     _: 8,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   capabilities: {
                     _: 9,
-                    _: !0,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
                   },
                   firmware_version: {
                     _: 10,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   firmware_build_time: {
                     _: 11,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   serial_number: {
                     _: 12,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   cpu_id: {
                     _: 13,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   name: {
                     _: 14,
-                    _: !0,
                     _: _._.readString,
                     _: _._.writeString,
                   },
                   is_remote_device: {
                     _: 15,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   is_bluetooth: {
                     _: 16,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   has_touchscreen: {
                     _: 17,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -108510,175 +108568,146 @@ var CLSTAMP = "steamdb";
                   },
                   battery_level: {
                     _: 19,
-                    _: !0,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
                   is_charging: {
                     _: 20,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   led_brightness: {
                     _: 21,
-                    _: !0,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
                   led_saturation: {
                     _: 22,
-                    _: !0,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
                   turn_on_sound: {
                     _: 23,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   turn_off_sound: {
                     _: 24,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   led_red: {
                     _: 25,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   led_green: {
                     _: 26,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   led_blue: {
                     _: 27,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   deadzone_left_stick: {
                     _: 28,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   deadzone_right_stick: {
                     _: 29,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   haptics_enabled: {
                     _: 30,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   gyro_sw_antidrift_enabled: {
                     _: 31,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   gyro_one_euro_filter_enabled: {
                     _: 32,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   haptic_strength_left: {
                     _: 33,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   haptic_strength_right: {
                     _: 34,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   pad_pressure_curve_left: {
                     _: 35,
-                    _: !0,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
                   pad_pressure_curve_right: {
                     _: 36,
-                    _: !0,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
                   left_stick_touch_disable_lpad: {
                     _: 37,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   right_stick_touch_disable_rpad: {
                     _: 38,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   player_slot_led_setting: {
                     _: 39,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   has_nintendo_layout: {
                     _: 40,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   has_reversed_layout: {
                     _: 41,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   has_universal_face_button_glyphs: {
                     _: 42,
-                    _: !0,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
                   gyro_stationary_tolerance: {
                     _: 43,
-                    _: !0,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
                   accel_stationary_tolerance: {
                     _: 44,
-                    _: !0,
                     _: _._.readFloat,
                     _: _._.writeFloat,
                   },
                   aux_capsense_threshold: {
                     _: 45,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   aux_capsense_hysterisis: {
                     _: 46,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
                   rumble_setting: {
                     _: 47,
-                    _: !0,
                     _: _._.readInt32,
                     _: _._.writeInt32,
                   },
@@ -108859,6 +108888,45 @@ var CLSTAMP = "steamdb";
         }
         getClassName() {
           return "CSteamInputService_GetControllerList_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamInputService_FirstSteamControllerConnection_Notification";
         }
       }
       !(function (_) {
@@ -109485,6 +109553,51 @@ var CLSTAMP = "steamdb";
                 !1)
               : _.SendNotification(
                   "SteamInputManager.NotifyControllerListChanged#1",
+                  (0, _._)(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                );
+          }),
+          (_.NotifyFirstSteamControllerConnectionHandler = {
+            name: "SteamInputManager.NotifyFirstSteamControllerConnection#1",
+            request: _,
+          }),
+          (_.RegisterForNotifyFirstSteamControllerConnection = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultHandlerRegistry())
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : __webpack_require__.RegisterServiceNotificationHandler(
+                  _.NotifyFirstSteamControllerConnectionHandler,
+                  _,
+                );
+          }),
+          (_.NotifyFirstSteamControllerConnection = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyFirstSteamControllerConnection#1",
+                  (0, _._)(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                );
+          }),
+          (_.SendMsgNotifyFirstSteamControllerConnection = function (_, _) {
+            return null == (_ = _ || (0, _._)().GetDefaultTransport())
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyFirstSteamControllerConnection#1",
                   (0, _._)(_, _),
                   {
                     ePrivilege: 1,

@@ -210,7 +210,8 @@
 	"Listings_NoneFound": "Listauksia ei löytynyt",
 	"AssetProperty_Range_MinPlaceholder": "Min",
 	"AssetProperty_Range_MaxPlaceholder": "Max",
-	"Accessories_FieldSectionLabel": "Lisävarusteet"
+	"Accessories_FieldSectionLabel": "Lisävarusteet",
+	"Listing_EnhancedAppearance_Missing": "Tällä listauksella ei ole vielä yksilöllisiä tai parannettuja kuvia. Tässä esitetty kuva voi olla hieman erilainen listattuun esineeseen nähden."
 }`);
     },
   },

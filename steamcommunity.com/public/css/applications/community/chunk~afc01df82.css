@@ -1,79 +1,3 @@
-._3isL0ZmZcmPqrXDdNiNSsm {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-._3isL0ZmZcmPqrXDdNiNSsm.GamepadMode,
-.GamepadMode ._3isL0ZmZcmPqrXDdNiNSsm {
-  bottom: 40px;
-  z-index: 10;
-}
-._1QU3cLCGXCmYTUvjYiqqz6 {
-  position: absolute;
-  bottom: 6px;
-  left: 0;
-  right: 0;
-  background: #2c3036;
-  padding: 12px 0px 12px 12px;
-  box-shadow: 0 0 32px 0px #000000ab;
-  overflow-y: auto;
-  overflow-x: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-._1QU3cLCGXCmYTUvjYiqqz6.GamepadMode,
-.GamepadMode ._1QU3cLCGXCmYTUvjYiqqz6 {
-  padding: 4px 0px 2px 4px;
-}
-._1QU3cLCGXCmYTUvjYiqqz6:focus {
-  outline: none;
-}
-._1xVcZo7UqD1Idiz3hcGoHg {
-  color: #818181;
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-.vquL9mspYzz2tBtxrzqw9 {
-  color: #adaeaf;
-  transition-property: padding-left, color;
-  transition-duration: .15s;
-  transition-timing-function: ease-out;
-  line-height: 26px;
-  cursor: pointer;
-  margin-top: 0px;
-  padding-left: 22px;
-  margin-right: 12px;
-  overflow: hidden;
-}
-.vquL9mspYzz2tBtxrzqw9.GamepadMode,
-.GamepadMode .vquL9mspYzz2tBtxrzqw9 {
-  margin-bottom: 4px;
-  font-size: 10px;
-  line-height: 12px;
-  padding-left: 20px;
-  overflow: visible;
-}
-.vquL9mspYzz2tBtxrzqw9.GamepadMode._3O0sMruBIaruOmKJLJre-J._1cweL4uxVeoeKoymO9IuaT,
-.GamepadMode
-  .vquL9mspYzz2tBtxrzqw9._3O0sMruBIaruOmKJLJre-J._1cweL4uxVeoeKoymO9IuaT {
-  font-size: 10px;
-  line-height: 12px;
-}
-.vquL9mspYzz2tBtxrzqw9.GamepadMode.boNOGnexLhWO9Nd0e6-0A,
-.GamepadMode .vquL9mspYzz2tBtxrzqw9.boNOGnexLhWO9Nd0e6-0A {
-  padding-left: 24px;
-}
-.vquL9mspYzz2tBtxrzqw9 ._2dKJqMZUnKQIInZReBkcRI {
-  color: #6e6e6e;
-}
-.vquL9mspYzz2tBtxrzqw9.boNOGnexLhWO9Nd0e6-0A {
-  color: #dfe3e6;
-  background-color: #434953;
-  padding-left: 30px;
-}
-span._2_0t_pDYqkDefMC0gDZV8G {
-  color: #dfe3e6;
-}
 ._1UhmxrINvvaNnHzhCPoill {
   margin-bottom: 8px;
   margin-top: 8px;
@@ -168,6 +92,82 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   position: absolute;
   top: -1;
 }
+._3isL0ZmZcmPqrXDdNiNSsm {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+._3isL0ZmZcmPqrXDdNiNSsm.GamepadMode,
+.GamepadMode ._3isL0ZmZcmPqrXDdNiNSsm {
+  bottom: 40px;
+  z-index: 10;
+}
+._1QU3cLCGXCmYTUvjYiqqz6 {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  background: #2c3036;
+  padding: 12px 0px 12px 12px;
+  box-shadow: 0 0 32px 0px #000000ab;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+._1QU3cLCGXCmYTUvjYiqqz6.GamepadMode,
+.GamepadMode ._1QU3cLCGXCmYTUvjYiqqz6 {
+  padding: 4px 0px 2px 4px;
+}
+._1QU3cLCGXCmYTUvjYiqqz6:focus {
+  outline: none;
+}
+._1xVcZo7UqD1Idiz3hcGoHg {
+  color: #818181;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.vquL9mspYzz2tBtxrzqw9 {
+  color: #adaeaf;
+  transition-property: padding-left, color;
+  transition-duration: .15s;
+  transition-timing-function: ease-out;
+  line-height: 26px;
+  cursor: pointer;
+  margin-top: 0px;
+  padding-left: 22px;
+  margin-right: 12px;
+  overflow: hidden;
+}
+.vquL9mspYzz2tBtxrzqw9.GamepadMode,
+.GamepadMode .vquL9mspYzz2tBtxrzqw9 {
+  margin-bottom: 4px;
+  font-size: 10px;
+  line-height: 12px;
+  padding-left: 20px;
+  overflow: visible;
+}
+.vquL9mspYzz2tBtxrzqw9.GamepadMode._3O0sMruBIaruOmKJLJre-J._1cweL4uxVeoeKoymO9IuaT,
+.GamepadMode
+  .vquL9mspYzz2tBtxrzqw9._3O0sMruBIaruOmKJLJre-J._1cweL4uxVeoeKoymO9IuaT {
+  font-size: 10px;
+  line-height: 12px;
+}
+.vquL9mspYzz2tBtxrzqw9.GamepadMode.boNOGnexLhWO9Nd0e6-0A,
+.GamepadMode .vquL9mspYzz2tBtxrzqw9.boNOGnexLhWO9Nd0e6-0A {
+  padding-left: 24px;
+}
+.vquL9mspYzz2tBtxrzqw9 ._2dKJqMZUnKQIInZReBkcRI {
+  color: #6e6e6e;
+}
+.vquL9mspYzz2tBtxrzqw9.boNOGnexLhWO9Nd0e6-0A {
+  color: #dfe3e6;
+  background-color: #434953;
+  padding-left: 30px;
+}
+span._2_0t_pDYqkDefMC0gDZV8G {
+  color: #dfe3e6;
+}
 .Y5J3nttqNZsLax6MbnH-L {
   margin-right: 8px;
   border-radius: 3px;
@@ -182,6 +182,18 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   display: inline-block;
   margin-right: 8px;
   padding: 0 4px;
+}
+._3qfqTaQ35U6AO3FNeijcFV {
+  position: relative;
+  margin: 0px auto;
+}
+._1RI-QM2ZjK9MaVjeCLE_LF {
+  margin: 10px auto;
+}
+._3_zyLDUyxZNyexfX3kNOPv {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
 }
 ._3dX8-PpYvSNsGv4k5lvP-R {
   margin-right: 8px;
@@ -1768,7 +1780,7 @@ p a:hover {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
   margin-bottom: 8px;
 }
@@ -1783,9 +1795,9 @@ p a:hover {
   text-indent: 0;
   text-shadow: none;
   text-transform: none;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: #fff;
-  font-weight: 500;
+  font-weight: medium;
   font-size: 18px;
   line-height: 22px;
 }

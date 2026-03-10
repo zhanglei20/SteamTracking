@@ -36,6 +36,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
@@ -141,7 +142,7 @@
             onOffsetChange: _,
             measureElement: _,
           } = _,
-          _ = _ + _,
+          _ = ((0, _._)(), _ + _),
           _ = (0, _._)({
             count: __webpack_require__,
             scrollMargin: _,
@@ -181,6 +182,7 @@
             measureElement: _,
           } = _,
           _ = _ + _,
+          _ = (0, _._)(),
           _ = (0, _._)({
             count: _,
             scrollMargin: __webpack_require__ - (_?.offsetTop || 0),
@@ -191,8 +193,8 @@
             initialRect: _
               ? void 0
               : {
-                  height: 1e3,
-                  width: 1e3,
+                  height: _.viewportHeight?.value ?? 1e3,
+                  width: _.viewportWidth?.value ?? 1e3,
                 },
             initialOffset: _,
             observeElementOffset: _,

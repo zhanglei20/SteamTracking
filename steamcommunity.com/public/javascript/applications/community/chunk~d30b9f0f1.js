@@ -550,6 +550,45 @@
     70412: (e) => {
       e.exports = { EmptyTextPlaceholder: "OdrYEhT1tSscLcZEKjDvW" };
     },
+    66532: (e) => {
+      e.exports = {
+        GhostCtn: "_1ubg0tXv_umwQZUB_0jDRE",
+        PlaceholderCap: "_27gySE3vmqZlMXfuF632TP",
+        GhostShine: "_2l86dzSdcXulUY9WKa1Tbu",
+        PlaceholderBox: "_1XmpFdzcYugE4Z9e7kEWU0",
+        ShineCtn: "_2u3dr06IR8IZdxdklGi4vo",
+        PlaceholderVideo: "R5EqV-ifmaPOB3fyPBfhh",
+        CapsuleRow3: "_3kupXecbdHHKoQG8YCt4dL",
+        CapsuleRow4: "_33YZ_jDH_m_qIiXgOfMT76",
+        CapsuleRowSuperCapsule: "_3TP7KmXA-L05uPNVUFbGFa",
+        ItemBrowserCapsule: "_2RfEi9dkz-umKdhACj0xcl",
+        CapsuleRow23: "_3OEHujsE68pdk2YnrZVRMp",
+        CapRow: "_1R1HR9bMl_hU40P6h6Y51n",
+        Caps2: "_3NP9CpCeX-sy6hyPmlh2M5",
+        Caps3: "ch0xp_kjApA24ePv-4mUf",
+        CapsuleRow234: "_30kicHKjKoSXe0rh5mMDIU",
+        Caps4: "_3F43q6uNP6clXtkdnaOhn4",
+        SpotlightsRow: "_2qbLh__etckJ_mcn5XLyzG",
+        DailyDealsColumn: "_6o5HjMAgOX8KNp4cVQ33l",
+        EventRow: "_1_ztuzDN3PaSMNH4DQqoFS",
+        PlaceholderGroupImage: "ntVbFRmkoOazIFG2xnLEL",
+        DetailsPlaceholder: "lvNWfRKbNHxMhmhmkTxSa",
+        PlaceholderTitle: "_2KAn_rPFaW6MLKtxBBFrgi",
+        PlaceholderSubtitle: "_2PqXIU5kSbk1S4OHMrtpEG",
+        PlaceholderButtons: "_2Svpv7NgQYtnnih1Al0nKv",
+        TrailerCarouselRow: "_3aEDS0V4oHI2X845GlY4AQ",
+        VideoPlaceholder: "_1J4w1c1LMOidazCqHBu9c2",
+        ItemDescPlaceholer: "_1chbn_ZYr2_kVufM3llMqe",
+        AutoAdvanceBar: "XWmc4IL9WuoHRfkxKtkwf",
+        ExpandedItemRow: "_3QSW80jNmiGxWlCRe8GPvp",
+        CapsulePlaceholder: "woZ8x3k0HeLNHeEH2wYmd",
+        ItemDefPlaceholder: "_25qfK6y2ESK-sTYHvmIyiC",
+        MainCapRow: "_3uwmHkHfnqzkO3kjD2dsfX",
+        PlaceholderRelease: "lZpOQjeL8nSaqqVQSej0d",
+        PlaceholderReviews: "_1wTzeBKjOcMG6cUtzXqF3D",
+        PlaceholderTags: "_3pJA7V23G6n6uIbJSzFLFO",
+      };
+    },
     15830: (e) => {
       e.exports = {
         DiscoveryQueueWidgetCtn: "_3PAP1PfUymQrLEveRsxQxP",
@@ -682,6 +721,7 @@
       e.exports = {
         EventBannerCtn: "x7UKM0ooa97bLEC1DOAhd",
         EventBannerImg: "_2Rm2455wi6RIlGIhlKd6ja",
+        ListOfCreators: "GqfZD2s5l0_K21jh28djY",
       };
     },
     99671: (e) => {
@@ -707,45 +747,6 @@
       e.exports = {
         Dummy: "_3xTWQPntvW4ZC3wLrEh4Tk",
         Exhausted: "_3aOQ0Sjc2wuN64fXK8NrTX",
-      };
-    },
-    66285: (e) => {
-      e.exports = {
-        GhostCtn: "_3Kh2xkNOxK9yAzjUL6Ivgx",
-        PlaceholderCap: "w8Jvjch8aFrIUAv0SH561",
-        GhostShine: "_2BHrUiVJgb5paKR9HDuFry",
-        PlaceholderBox: "_3xK5GjRYJTY1N5bjbocIm9",
-        ShineCtn: "cI9gcyxQOApga-GXz7_V4",
-        PlaceholderVideo: "_26iPLXluGpPw4W-coLs883",
-        CapsuleRow3: "_3K3QSflZnf6fPmoBKqoGjc",
-        CapsuleRow4: "_1gEPGVsJ0bb_BL9C4YvFNv",
-        CapsuleRowSuperCapsule: "_3zJewh51IljAQRz-6OMdOB",
-        ItemBrowserCapsule: "_2fHvxv3mZQin5_2wB2xfmg",
-        CapsuleRow23: "_3Zk9eQFgRurzIIkTvIMxHW",
-        CapRow: "dGk0hxulznq7MwRweW94h",
-        Caps2: "_1uECvRdcT_yaRni_AEsObF",
-        Caps3: "QU4kidgDKJx_jDfEquNmT",
-        CapsuleRow234: "_2V6zSuL6-efjUwNCdSspJk",
-        Caps4: "_3xqTH8e1tUBIai3kdvgahn",
-        SpotlightsRow: "_3_FBxHpnwok2YRFmtASM5I",
-        DailyDealsColumn: "_1Rudow4oFWhnDbqnzJ0nuM",
-        EventRow: "_1jEY56Mb_K-eNOlOZ2ayy0",
-        PlaceholderGroupImage: "_1RRbToD4zek6vvdq8pajSX",
-        DetailsPlaceholder: "_2SrANXbyCGZNaPRuc1diKT",
-        PlaceholderTitle: "BryzNsBYLnALstxxAzdwn",
-        PlaceholderSubtitle: "_1rI86EQqPtdjPy7CDjcWE3",
-        PlaceholderButtons: "aHFZOytk7I6xyF53cX0Iz",
-        TrailerCarouselRow: "_2riTESHkYgpUJmljZgTq8l",
-        VideoPlaceholder: "vcMMLd9fIq4BaswR6HQQ9",
-        ItemDescPlaceholer: "_1kdJAyCv00MWHDn5rzbV2I",
-        AutoAdvanceBar: "_3F82OZtnlZ8bcDCZZT1TSF",
-        ExpandedItemRow: "_2OtITqwZfhmZb03KpQTBlh",
-        CapsulePlaceholder: "YPF1eKQQ3Eb-CUIZR3Fpm",
-        ItemDefPlaceholder: "_1rbaHDESwlAUrD1J-2EZpa",
-        MainCapRow: "_4USkr2F0D76zPrDAKe8tZ",
-        PlaceholderRelease: "_3kqq8V4VYQWX0MTcaWruTa",
-        PlaceholderReviews: "_1TQDb8Ui8AuVqTFeIQHC8J",
-        PlaceholderTags: "_2I6t8VQXDbATmaOzp9jRzk",
       };
     },
     46745: (e) => {
@@ -1640,13 +1641,13 @@
         s,
         l = a(34629),
         r = a(22837),
-        d = a(25918),
+        d = a(25888),
         c = a(14947),
         _ = a(17640),
         u = a(70078),
         p = a(5438),
         m = a(17720),
-        h = a(86355),
+        h = a(7221),
         g = a(68359),
         S = a(4796),
         v = a(63556),
@@ -4194,7 +4195,7 @@
       var i = a(34629),
         n = a(90626),
         o = a(14947),
-        s = a(25918),
+        s = a(25888),
         l = a(75933),
         r = a(65946);
       class d {
@@ -4457,17 +4458,17 @@
         );
       }
     },
-    25918: (e, t, a) => {
+    25888: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Av: () => O,
-        JN: () => I,
-        Lj: () => E,
-        Nc: () => j,
-        UX: () => A,
-        lX: () => N,
-        mf: () => M,
-        mh: () => L,
+        Nc: () => M,
+        UX: () => N,
+        Lj: () => G,
+        mf: () => B,
+        JN: () => k,
+        mh: () => R,
+        Av: () => H,
+        lX: () => F,
       });
       var i = a(34629),
         n = a(41735),
@@ -4490,9 +4491,83 @@
         y = a(78327),
         w = a(81278),
         x = a(88942),
-        C = a(27666),
-        T = a(62490);
-      class j extends m.$ {
+        C = a(28954),
+        T = a(64953),
+        j = a(27666),
+        D = a(14771);
+      const I = {
+        async OverlayClanImage(e, t, a, i, n, o) {
+          let s,
+            l = null,
+            r = new Image();
+          (r.crossOrigin = "anonymous"),
+            (r.onerror = (e) => {
+              (s =
+                "Load fail on url " +
+                a +
+                " with error: " +
+                (0, v.H)(e).strErrorMsg),
+                console.error(s);
+            }),
+            (r.onload = () => {
+              let e = new Image();
+              (e.crossOrigin = "anonymous"),
+                (e.onerror = (e) => {
+                  (s =
+                    "Load fail on url " +
+                    t +
+                    " with error: " +
+                    (0, v.H)(e).strErrorMsg),
+                    console.error(s);
+                }),
+                (e.onload = () => {
+                  try {
+                    let t = document.createElement("canvas"),
+                      a = t.getContext("2d");
+                    (t.width = n),
+                      (t.height = o),
+                      null == a || a.drawImage(e, 0, 0, n, o);
+                    let i = (n - r.width) / 2,
+                      s = (o - r.height) / 2;
+                    null == a || a.drawImage(r, i, s),
+                      t.toBlob((e) => (l = e), "image/jpeg");
+                  } catch (e) {
+                    s =
+                      "Failed during image processing for " + i + " with " + e;
+                  }
+                }),
+                (e.src = t);
+            }),
+            (r.src = a);
+          let d = 0;
+          for (; void 0 === l && d < 100; ) await (0, D.IP)(100), (d += 1);
+          if (
+            (d >= 100 &&
+              void 0 === l &&
+              (s = "AsyncOverlay - We timed out processing images"),
+            s)
+          )
+            throw (console.log(s), { success: 2, err_msg: s });
+          const c = new C.VE(e, void 0),
+            _ = new T.M7(
+              l,
+              i,
+              -1,
+              void 0,
+              "",
+              { width: n, height: o },
+              void 0,
+              void 0,
+            ),
+            u = await c.UploadSingleImage(_, i, -1, void 0);
+          return u.bSuccess && u.result
+            ? u.result.image_hash +
+                j.z.GetExtensionString({ file_type: _.fileType })
+            : void 0;
+        },
+      };
+      var E = a(62490);
+      class M extends m.$ {
         constructor(e = !1) {
           super(e),
             (this.m_curHoverCategoryType = void 0),
@@ -4609,7 +4684,7 @@
                       y.TS.COMMUNITY_BASE_URL +
                       "public/images/events/media_play_icon.png";
                   try {
-                    let o = await C.z.OverlayClanImage(e, a, i, t, 740, 555);
+                    let o = await I.OverlayClanImage(e, a, i, t, 740, 555);
                     n.SetVideoHashAndExt(o);
                   } catch (e) {
                     console.error(
@@ -4654,7 +4729,7 @@
               ),
             };
           if (!a && (n || t)) {
-            let t = await j.GetLastUpdateTimeForEvent(
+            let t = await M.GetLastUpdateTimeForEvent(
               e,
               this.m_editModel.GetEventModel().GID,
               void 0,
@@ -4848,7 +4923,7 @@
                   this.m_editModel.Refresh(i);
               }
             });
-            let i = await j.GetLastUpdateTimeForEvent(
+            let i = await M.GetLastUpdateTimeForEvent(
               e,
               this.m_editModel.GetGID(),
               void 0,
@@ -5034,38 +5109,38 @@
           ).data.capabilities;
         }
       }
-      function D(e) {
+      function A(e) {
         return `U${y.iA.accountid || "anon"}-${e}`;
       }
-      function I(e, t) {
-        k(window.sessionStorage, e, t);
+      function k(e, t) {
+        L(window.sessionStorage, e, t);
       }
-      function E(e) {
-        return G(window.sessionStorage, e);
+      function G(e) {
+        return O(window.sessionStorage, e);
       }
-      function M(e, t) {
-        k(window.localStorage, e, t);
+      function B(e, t) {
+        L(window.localStorage, e, t);
       }
-      function A(e) {
-        return G(window.localStorage, e);
+      function N(e) {
+        return O(window.localStorage, e);
       }
-      function k(e, t, a) {
-        e.setItem(D(t), JSON.stringify(a));
+      function L(e, t, a) {
+        e.setItem(A(t), JSON.stringify(a));
       }
-      function G(e, t) {
+      function O(e, t) {
         let a = null;
-        const i = e.getItem(D(t));
+        const i = e.getItem(A(t));
         if (i)
           try {
             a = JSON.parse(i);
           } catch {}
         return a;
       }
-      async function B(e, t, a) {
+      async function P(e, t, a) {
         try {
           return await (a
-            ? O.LoadHiddenPartnerEventByAnnouncementGID(e, t)
-            : L.LoadHiddenPartnerEventByAnnouncementGID(e, t));
+            ? H.LoadHiddenPartnerEventByAnnouncementGID(e, t)
+            : R.LoadHiddenPartnerEventByAnnouncementGID(e, t));
         } catch (e) {
           return void console.warn(
             "Fail to load event, if it was hidden, it's possible it was only partially constructed: " +
@@ -5074,7 +5149,7 @@
           );
         }
       }
-      function N(e, t) {
+      function F(e, t) {
         const {
           data: a,
           isFetching: i,
@@ -5106,13 +5181,13 @@
               const o = new Array();
               null === (a = s.announcement_gids) ||
                 void 0 === a ||
-                a.forEach((a) => o.push(B(e, a, t))),
+                a.forEach((a) => o.push(P(e, a, t))),
                 null === (i = s.hidden_announcement_gids) ||
                   void 0 === i ||
-                  i.forEach((a) => o.push(B(e, a, t)));
+                  i.forEach((a) => o.push(P(e, a, t)));
               const l = await Promise.all(o);
               return {
-                rgEventModels: T.Nv(l),
+                rgEventModels: E.Nv(l),
                 nHiddenEventCount:
                   null === (n = s.hidden_announcement_gids) || void 0 === n
                     ? void 0
@@ -5129,14 +5204,14 @@
           fnRefetch: n,
         };
       }
-      (0, i.Cg)([d.sH], j.prototype, "m_curHoverCategoryType", void 0),
-        (0, i.Cg)([d.sH], j.prototype, "m_curHoverCategoryTags", void 0),
-        (0, i.Cg)([d.XI], j.prototype, "ResetModel", null),
-        (0, i.Cg)([d.XI], j.prototype, "LoadClanEventLocalization", null);
-      const L = new j();
-      window.g_PartnerEventEditStore = L;
-      const O = new j(!0);
-      window.g_PartnerEventEditSummariesStore = O;
+      (0, i.Cg)([d.sH], M.prototype, "m_curHoverCategoryType", void 0),
+        (0, i.Cg)([d.sH], M.prototype, "m_curHoverCategoryTags", void 0),
+        (0, i.Cg)([d.XI], M.prototype, "ResetModel", null),
+        (0, i.Cg)([d.XI], M.prototype, "LoadClanEventLocalization", null);
+      const R = new M();
+      window.g_PartnerEventEditStore = R;
+      const H = new M(!0);
+      window.g_PartnerEventEditSummariesStore = H;
     },
     32669: (e, t, a) => {
       "use strict";
@@ -8810,10 +8885,10 @@
         y = a(52038),
         w = a(61859),
         x = a(40778),
-        C = a(25918),
+        C = a(25888),
         T = a(26408),
         j = a(32754),
-        D = a(1276),
+        D = a(73023),
         I = a(27666),
         E = a(98069);
       const M = (0, r.PA)((e) => {
@@ -11424,7 +11499,7 @@
         n = a(22837),
         o = a(69001),
         s = a(6901),
-        l = a(25918),
+        l = a(25888),
         r = a(75844),
         d = a(65946),
         c = a(90626),
@@ -11439,7 +11514,7 @@
         b = a(10206),
         f = a(54969),
         y = a(30294),
-        w = a(1276),
+        w = a(73023),
         x = a(96236),
         C = a(38135),
         T = a(22797),
@@ -18106,27 +18181,197 @@
           ],
         });
       }
-      var ei = a(90595),
-        ti = a(60342),
-        ai = a(8527),
-        ii = a(79821),
-        ni = a(90286),
-        oi = a(26555),
-        si = a(55608),
-        li = a(52893),
-        ri = a(22145),
-        di = a(26418),
-        ci = a.n(di),
-        _i = a(60637);
-      const ui = c.memo(function (e) {
+      var ei = a(8527),
+        ti = a(60746),
+        ai = a(90595),
+        ii = a(4869),
+        ni = a(30175);
+      const oi = [O.V8.k_Header1, O.V8.k_Header2, O.V8.k_Header3];
+      function si(e) {
+        const {
+          uniqueID: t,
+          eTitleDisplaySize: a,
+          fnUpdateTitleDisplaySize: n,
+          bForceDisplay: o,
+          bSupportFullWidth: s,
+        } = e;
+        return a || o
+          ? (0, i.jsxs)(i.Fragment, {
+              children: [
+                Boolean(s) &&
+                  (0, i.jsx)(ni.ff, {
+                    onClick: (e) => {
+                      var t;
+                      null === (t = null == e ? void 0 : e.currentTarget) ||
+                        void 0 === t ||
+                        t.focus(),
+                        O.V8.k_HeaderFullWidth == a
+                          ? n(void 0)
+                          : n(O.V8.k_HeaderFullWidth);
+                    },
+                    toggled: a == O.V8.k_HeaderFullWidth,
+                    tooltip: (0, M.we)("#FormattingToolbar_FullWidth"),
+                    children: (0, i.jsx)(K.ZzC, {}),
+                  }),
+                oi.map((e) =>
+                  (0, i.jsx)(
+                    ni.ff,
+                    {
+                      tooltip: di(e),
+                      onClick: (t) => {
+                        var i;
+                        null === (i = null == t ? void 0 : t.currentTarget) ||
+                          void 0 === i ||
+                          i.focus(),
+                          n(e == a ? void 0 : e);
+                      },
+                      toggled: e == a,
+                      children: (0, M.we)("#Template_Section_Header_" + e),
+                    },
+                    "title_" + e + "_" + t,
+                  ),
+                ),
+                (0, i.jsx)(ni.hK, {}),
+              ],
+            })
+          : null;
+      }
+      const li = [O.YI.k_Left, O.YI.k_Center, O.YI.k_Right],
+        ri = [O.YI.k_Top, O.YI.k_Center, O.YI.k_Bottom];
+      function di(e) {
+        switch (e) {
+          case O.V8.k_Header1:
+            return (0, M.we)("#Template_Section_Header_Large_Tooltip");
+          case O.V8.k_Header2:
+            return (0, M.we)("#Template_Section_Header_Medium_Tooltip");
+          case O.V8.k_Header3:
+            return (0, M.we)("#Template_Section_Header_Small_Tooltip");
+          default:
+            return;
+        }
+      }
+      function ci(e) {
+        const {
+          uniqueID: t,
+          eAlignment: a,
+          fnUpdateAlignment: n,
+          bVertical: o,
+          bText: s,
+        } = e;
+        return a
+          ? (0, i.jsx)(i.Fragment, {
+              children: (o ? ri : li).map((e) =>
+                (0, i.jsx)(
+                  j.Gq,
+                  {
+                    toolTipContent: ui(e, o, s),
+                    direction: "bottom",
+                    children: (0, i.jsx)("div", {
+                      children: (0, i.jsx)(ni.ff, {
+                        onClick: (t) => {
+                          var a;
+                          null === (a = null == t ? void 0 : t.currentTarget) ||
+                            void 0 === a ||
+                            a.focus(),
+                            n(e);
+                        },
+                        toggled: e == a,
+                        children: (0, i.jsx)(_i, {
+                          alignment: e,
+                          bVertical: o,
+                          bText: s,
+                        }),
+                      }),
+                    }),
+                  },
+                  t + e,
+                ),
+              ),
+            })
+          : null;
+      }
+      function _i(e) {
+        const { alignment: t, bVertical: a, bText: n } = e;
+        if (a)
+          switch (t) {
+            case O.YI.k_Top:
+              return (0, i.jsx)(ii.VBK, {});
+            case O.YI.k_Center:
+              return (0, i.jsx)(ii.lGP, {});
+            case O.YI.k_Bottom:
+            default:
+              return (0, i.jsx)(ii.vbm, {});
+          }
+        else
+          switch (t) {
+            case O.YI.k_Left:
+              return n ? (0, i.jsx)(ii.K6w, {}) : (0, i.jsx)(ii.p71, {});
+            case O.YI.k_Center:
+              return n ? (0, i.jsx)(ii.q8c, {}) : (0, i.jsx)(ii.vsW, {});
+            case O.YI.k_Right:
+            default:
+              return n ? (0, i.jsx)(ii.dWO, {}) : (0, i.jsx)(ii.o5t, {});
+          }
+      }
+      function ui(e, t, a) {
+        if (t)
+          switch (e) {
+            case O.YI.k_Top:
+              return (0, M.we)(
+                "#Template_Section_MediaContent_Align_Vertical_Top",
+              );
+            case O.YI.k_Center:
+              return (0, M.we)(
+                "#Template_Section_MediaContent_Align_Vertical_Center",
+              );
+            case O.YI.k_Bottom:
+              return (0, M.we)(
+                "#Template_Section_MediaContent_Align_Vertical_Bottom",
+              );
+          }
+        else if (a)
+          switch (e) {
+            case O.YI.k_Left:
+              return (0, M.we)("#Template_Section_Align_Text_Left");
+            case O.YI.k_Center:
+              return (0, M.we)("#Template_Section_Align_Text_Center");
+            case O.YI.k_Right:
+              return (0, M.we)("#Template_Section_Align_Text_Right");
+          }
+        else
+          switch (e) {
+            case O.YI.k_Left:
+              return (0, M.we)(
+                "#Template_Section_MediaContent_Align_Horizontal_Left",
+              );
+            case O.YI.k_Center:
+              return (0, M.we)(
+                "#Template_Section_MediaContent_Align_Horizontal_Center",
+              );
+            case O.YI.k_Right:
+              return (0, M.we)(
+                "#Template_Section_MediaContent_Align_Horizontal_Right",
+              );
+          }
+      }
+      var pi = a(79821),
+        mi = a(90286),
+        hi = a(26555),
+        gi = a(55608),
+        Si = a(52893),
+        vi = a(22145),
+        bi = a(26418),
+        fi = a.n(bi),
+        yi = a(60637);
+      const wi = c.memo(function (e) {
         const { schema: t, colorMarkType: a } = e,
-          [n, o] = (0, _i.J)(t, "color" == a.name),
+          [n, o] = (0, yi.J)(t, "color" == a.name),
           [s, l] = c.useState(),
           [r, d] = c.useState(),
           [_, u] = c.useState(),
           p = c.useMemo(
             () =>
-              new li.k_({
+              new Si.k_({
                 props: {
                   handleClickOn(e, t, i, o, s, l) {
                     if (l && (s.ctrlKey || 1 == s.button)) {
@@ -18168,13 +18413,13 @@
               }),
             [a, n],
           );
-        (0, ri.c$)(p);
+        (0, vi.c$)(p);
         let m = null;
         return (
           _ &&
             s &&
             r &&
-            (m = (0, i.jsx)(pi, {
+            (m = (0, i.jsx)(xi, {
               top: r,
               left: s,
               href: _.getAttribute(
@@ -18184,7 +18429,7 @@
           (0, i.jsxs)(i.Fragment, { children: [m, o] })
         );
       });
-      function pi(e) {
+      function xi(e) {
         const { top: t, left: a, href: n } = e,
           [o, s] = c.useState(0),
           l = c.useRef(null);
@@ -18193,32 +18438,32 @@
         }, [t, a, n]);
         const r = { top: `${t}px`, left: `${Math.max(a - o / 2, 12)}px` };
         return (0, i.jsxs)("div", {
-          className: ci().Hover,
+          className: fi().Hover,
           style: r,
           ref: l,
           children: [
-            (0, i.jsx)("div", { className: ci().Link, children: n }),
+            (0, i.jsx)("div", { className: fi().Link, children: n }),
             (0, i.jsx)("div", {
-              className: ci().LinkHelp,
+              className: fi().LinkHelp,
               children: (0, M.we)("#UserGameNotes_ClickToOpenLink"),
             }),
           ],
         });
       }
-      var mi = a(88089),
-        hi = a(72584),
-        gi = a.n(hi),
-        Si = a(29287),
-        vi = a(70412);
-      const bi = c.memo(function (e) {
+      var Ci = a(88089),
+        Ti = a(72584),
+        ji = a.n(Ti),
+        Di = a(29287),
+        Ii = a(70412);
+      const Ei = c.memo(function (e) {
         const { strPlaceholder: t } = e;
         return (
-          (0, ri.c$)(
+          (0, vi.c$)(
             c.useMemo(
               () =>
                 t
                   ? (function (e) {
-                      return new li.k_({
+                      return new Si.k_({
                         props: {
                           decorations(t) {
                             var a;
@@ -18230,13 +18475,13 @@
                                 : a.isTextblock) &&
                               0 === i.firstChild.content.size
                             ) {
-                              const t = Si.NZ.node(0, i.content.size, {
+                              const t = Di.NZ.node(0, i.content.size, {
                                 "data-placeholder": e,
-                                class: vi.EmptyTextPlaceholder,
+                                class: Ii.EmptyTextPlaceholder,
                               });
-                              return Si.zF.create(i, [t]);
+                              return Di.zF.create(i, [t]);
                             }
-                            return Si.zF.empty;
+                            return Di.zF.empty;
                           },
                         },
                       });
@@ -18248,34 +18493,33 @@
           null
         );
       });
-      var fi = a(79497),
-        yi = a(33561),
-        wi = a(68033),
-        xi = a(44832),
-        Ci = a(1805),
-        Ti = a(36969),
-        ji = a(30175),
-        Di = a(30600),
-        Ii = a(96640),
-        Ei = a(53197),
-        Mi = a.n(Ei);
-      function Ai(e) {
+      var Mi = a(79497),
+        Ai = a(33561),
+        ki = a(68033),
+        Gi = a(44832),
+        Bi = a(1805),
+        Ni = a(36969),
+        Li = a(30600),
+        Oi = a(96640),
+        Pi = a(53197),
+        Fi = a.n(Pi);
+      function Ri(e) {
         const [t, a] = (0, c.useState)(!0);
         return t
-          ? (0, i.jsx)(Gi, { ...e, fnShowRichTextEditor: a })
-          : (0, i.jsx)(ki, { ...e, fnShowRichTextEditor: a });
+          ? (0, i.jsx)(zi, { ...e, fnShowRichTextEditor: a })
+          : (0, i.jsx)(Hi, { ...e, fnShowRichTextEditor: a });
       }
-      function ki(e) {
+      function Hi(e) {
         const {
             fnShowRichTextEditor: t,
             strPlaceholder: a,
             fnGetContent: n,
             fnUpdateContent: o,
           } = e,
-          s = (0, yi.LU)(),
+          s = (0, Ai.LU)(),
           l = c.useMemo(() => {
-            const e = ai.iA.is_support;
-            return (0, ii.BY)({
+            const e = ei.iA.is_support;
+            return (0, pi.BY)({
               bIncludeMedia: ye.UF.CAN_UPLOAD_IMAGES,
               bIncludeValveOnly: e,
             });
@@ -18305,17 +18549,17 @@
               },
               fnSetText: (e) => o(e),
               strPlaceholder: a,
-              emoticonStore: wi.A,
+              emoticonStore: ki.A,
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
               limitBBCode: l,
-              classNameForTextArea: Mi().EventEditorDescription,
+              classNameForTextArea: Fi().EventEditorDescription,
               clanSteamID: s.GetClanSteamID(),
             }),
           ],
         });
       }
-      function Gi(e) {
+      function zi(e) {
         const {
             fnGetContent: t,
             language: a,
@@ -18339,16 +18583,16 @@
                     paragraph: e,
                     bullet_list: t,
                     list_item: a,
-                  } = si.DQ.nodes,
+                  } = gi.DQ.nodes,
                   {
                     strong: i,
                     italic: n,
                     underline: o,
                     strike: s,
-                  } = si.DQ.marks,
-                  { link: l } = Ii.g.marks,
-                  { color: r, bgcolor: d } = si.cI.marks;
-                return new fi.W({
+                  } = gi.DQ.marks,
+                  { link: l } = Oi.g.marks,
+                  { color: r, bgcolor: d } = gi.cI.marks;
+                return new Mi.W({
                   nodes: { paragraph: e, bullet_list: t, list_item: a },
                   marks: {
                     strong: i,
@@ -18366,9 +18610,9 @@
           [v, b] = c.useState(null),
           [f, y] = c.useState(),
           w = c.useRef(void 0),
-          x = (0, yi.LU)();
+          x = (0, Ai.LU)();
         (0, c.useEffect)(() => {
-          b(new ni.n(S, t(), (e) => o(e)));
+          b(new mi.n(S, t(), (e) => o(e)));
         }, [S, t, o]);
         const [C, T] = c.useState(!1),
           j = c.useCallback(
@@ -18377,20 +18621,20 @@
               T(e.borderBoxSize[0].blockSize > 300),
             [],
           ),
-          D = (0, Di.wY)(j);
+          D = (0, Li.wY)(j);
         return (
-          (0, oi.i)(v, { msAutosaveTimeout: 1e3 }),
+          (0, hi.i)(v, { msAutosaveTimeout: 1e3 }),
           (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsxs)("div", {
-                className: Mi().ToolBarCtn,
+                className: Fi().ToolBarCtn,
                 children: [
                   Boolean(s) &&
                     (0, i.jsxs)("span", {
-                      className: Mi().ToolBarTitle,
+                      className: Fi().ToolBarTitle,
                       children: [s, " ", l && (0, i.jsx)(J.o, { tooltip: l })],
                     }),
-                  (0, i.jsx)(Bi, {
+                  (0, i.jsx)(Ui, {
                     view: f,
                     refUpdateToolbar: w,
                     sticky: C,
@@ -18402,7 +18646,7 @@
                 ],
               }),
               (0, i.jsxs)("div", {
-                className: Mi().RichTextBackgroundCtn,
+                className: Fi().RichTextBackgroundCtn,
                 style: {
                   backgroundColor:
                     x.GetEventModel().jsondata.sale_background_color,
@@ -18413,25 +18657,25 @@
                   " ",
                   (0, i.jsx)("div", {
                     className: (0, E.A)({
-                      [Mi().AboutTheGameArea]: !0,
-                      [Mi().Container]: !0,
-                      [Mi().H1]: m == O.V8.k_Header1,
-                      [Mi().H2]: m == O.V8.k_Header2,
-                      [Mi().H3]: m == O.V8.k_Header3,
-                      [Mi().Left]: h == O.YI.k_Left,
-                      [Mi().Center]: h == O.YI.k_Center,
-                      [Mi().Right]: h == O.YI.k_Right,
+                      [Fi().AboutTheGameArea]: !0,
+                      [Fi().Container]: !0,
+                      [Fi().H1]: m == O.V8.k_Header1,
+                      [Fi().H2]: m == O.V8.k_Header2,
+                      [Fi().H3]: m == O.V8.k_Header3,
+                      [Fi().Left]: h == O.YI.k_Left,
+                      [Fi().Center]: h == O.YI.k_Center,
+                      [Fi().Right]: h == O.YI.k_Right,
                     }),
                     ref: D,
                     style: { backgroundImage: u },
-                    children: (0, i.jsxs)(Ci.l, {
+                    children: (0, i.jsxs)(Bi.l, {
                       panelProps: {
                         lang: (0, M.d$)((0, n.Lg)(a)),
                         onBlur: () => (null == v ? void 0 : v.CommitChanges()),
                       },
                       className: (0, E.A)({
-                        [Mi().EditorPanel]: !0,
-                        [gi().SingleLineProseMirror]: Boolean(_),
+                        [Fi().EditorPanel]: !0,
+                        [ji().SingleLineProseMirror]: Boolean(_),
                       }),
                       pmState: v,
                       refOnUpdate: w,
@@ -18439,17 +18683,17 @@
                       bSingleLine: d,
                       children: [
                         "color" in S.pm_schema.marks &&
-                          (0, i.jsx)(ui, {
+                          (0, i.jsx)(wi, {
                             colorMarkType: S.pm_schema.marks.color,
                             schema: S.pm_schema,
                           }),
                         "bgcolor" in S.pm_schema.marks &&
-                          (0, i.jsx)(ui, {
+                          (0, i.jsx)(wi, {
                             colorMarkType: S.pm_schema.marks.bgcolor,
                             schema: S.pm_schema,
                           }),
-                        Boolean(_) && (0, i.jsx)(mi.TG, { nMaxChars: _ }),
-                        (0, i.jsx)(bi, { strPlaceholder: r }),
+                        Boolean(_) && (0, i.jsx)(Ci.TG, { nMaxChars: _ }),
+                        (0, i.jsx)(Ei, { strPlaceholder: r }),
                       ],
                     }),
                   }),
@@ -18459,7 +18703,7 @@
           })
         );
       }
-      function Bi(e) {
+      function Ui(e) {
         const {
             view: t,
             refUpdateToolbar: a,
@@ -18469,205 +18713,36 @@
             bSingleLineEditor: l,
             fnShowRichTextEditor: r,
           } = e,
-          d = (0, xi.V9)();
-        return (0, i.jsx)(ji.bI, {
+          d = (0, Gi.V9)();
+        return (0, i.jsx)(ni.bI, {
           refUpdateToolbar: a,
           view: t,
-          children: (0, i.jsxs)(ji.Ez, {
+          children: (0, i.jsxs)(ni.Ez, {
             className: (0, E.A)({
-              [Mi().GameDescriptionEditorToolbar]: !0,
-              [Mi().Sticky]: s,
+              [Fi().GameDescriptionEditorToolbar]: !0,
+              [Fi().Sticky]: s,
             }),
             children: [
-              ai.iA.is_support &&
-                (0, i.jsx)(ji.ff, {
-                  className: Mi().VOBtn,
+              ei.iA.is_support &&
+                (0, i.jsx)(ni.ff, {
+                  className: Fi().VOBtn,
                   onClick: () => r(!1),
                   toggled: !1,
                   tooltip: "Toggle off the rich text editor",
                   children: "VO",
                 }),
-              (0, i.jsx)(Ti.Km, { schema: o }),
-              (0, i.jsx)(ji.XQ, {}),
-              (0, i.jsx)(Ti.z9, { schema: o, addtlAttrs: d }),
+              (0, i.jsx)(Ni.Km, { schema: o }),
+              (0, i.jsx)(ni.XQ, {}),
+              (0, i.jsx)(Ni.z9, { schema: o, addtlAttrs: d }),
               !l &&
-                (0, i.jsx)(Ti.C$, { schema: o, showIndentButtonsAsNeeded: !0 }),
-              (0, i.jsx)(ji.hK, {}),
+                (0, i.jsx)(Ni.C$, { schema: o, showIndentButtonsAsNeeded: !0 }),
+              (0, i.jsx)(ni.hK, {}),
               n,
             ],
           }),
         });
       }
-      var Ni = a(4869);
-      const Li = [O.V8.k_Header1, O.V8.k_Header2, O.V8.k_Header3];
-      function Oi(e) {
-        const {
-          uniqueID: t,
-          eTitleDisplaySize: a,
-          fnUpdateTitleDisplaySize: n,
-          bForceDisplay: o,
-          bSupportFullWidth: s,
-        } = e;
-        return a || o
-          ? (0, i.jsxs)(i.Fragment, {
-              children: [
-                Boolean(s) &&
-                  (0, i.jsx)(ji.ff, {
-                    onClick: (e) => {
-                      var t;
-                      null === (t = null == e ? void 0 : e.currentTarget) ||
-                        void 0 === t ||
-                        t.focus(),
-                        O.V8.k_HeaderFullWidth == a
-                          ? n(void 0)
-                          : n(O.V8.k_HeaderFullWidth);
-                    },
-                    toggled: a == O.V8.k_HeaderFullWidth,
-                    tooltip: (0, M.we)("#FormattingToolbar_FullWidth"),
-                    children: (0, i.jsx)(K.ZzC, {}),
-                  }),
-                Li.map((e) =>
-                  (0, i.jsx)(
-                    ji.ff,
-                    {
-                      tooltip: Ri(e),
-                      onClick: (t) => {
-                        var i;
-                        null === (i = null == t ? void 0 : t.currentTarget) ||
-                          void 0 === i ||
-                          i.focus(),
-                          n(e == a ? void 0 : e);
-                      },
-                      toggled: e == a,
-                      children: (0, M.we)("#Template_Section_Header_" + e),
-                    },
-                    "title_" + e + "_" + t,
-                  ),
-                ),
-                (0, i.jsx)(ji.hK, {}),
-              ],
-            })
-          : null;
-      }
-      const Pi = [O.YI.k_Left, O.YI.k_Center, O.YI.k_Right],
-        Fi = [O.YI.k_Top, O.YI.k_Center, O.YI.k_Bottom];
-      function Ri(e) {
-        switch (e) {
-          case O.V8.k_Header1:
-            return (0, M.we)("#Template_Section_Header_Large_Tooltip");
-          case O.V8.k_Header2:
-            return (0, M.we)("#Template_Section_Header_Medium_Tooltip");
-          case O.V8.k_Header3:
-            return (0, M.we)("#Template_Section_Header_Small_Tooltip");
-          default:
-            return;
-        }
-      }
-      function Hi(e) {
-        const {
-          uniqueID: t,
-          eAlignment: a,
-          fnUpdateAlignment: n,
-          bVertical: o,
-          bText: s,
-        } = e;
-        return a
-          ? (0, i.jsx)(i.Fragment, {
-              children: (o ? Fi : Pi).map((e) =>
-                (0, i.jsx)(
-                  j.Gq,
-                  {
-                    toolTipContent: Ui(e, o, s),
-                    direction: "bottom",
-                    children: (0, i.jsx)("div", {
-                      children: (0, i.jsx)(ji.ff, {
-                        onClick: (t) => {
-                          var a;
-                          null === (a = null == t ? void 0 : t.currentTarget) ||
-                            void 0 === a ||
-                            a.focus(),
-                            n(e);
-                        },
-                        toggled: e == a,
-                        children: (0, i.jsx)(zi, {
-                          alignment: e,
-                          bVertical: o,
-                          bText: s,
-                        }),
-                      }),
-                    }),
-                  },
-                  t + e,
-                ),
-              ),
-            })
-          : null;
-      }
-      function zi(e) {
-        const { alignment: t, bVertical: a, bText: n } = e;
-        if (a)
-          switch (t) {
-            case O.YI.k_Top:
-              return (0, i.jsx)(Ni.VBK, {});
-            case O.YI.k_Center:
-              return (0, i.jsx)(Ni.lGP, {});
-            case O.YI.k_Bottom:
-            default:
-              return (0, i.jsx)(Ni.vbm, {});
-          }
-        else
-          switch (t) {
-            case O.YI.k_Left:
-              return n ? (0, i.jsx)(Ni.K6w, {}) : (0, i.jsx)(Ni.p71, {});
-            case O.YI.k_Center:
-              return n ? (0, i.jsx)(Ni.q8c, {}) : (0, i.jsx)(Ni.vsW, {});
-            case O.YI.k_Right:
-            default:
-              return n ? (0, i.jsx)(Ni.dWO, {}) : (0, i.jsx)(Ni.o5t, {});
-          }
-      }
-      function Ui(e, t, a) {
-        if (t)
-          switch (e) {
-            case O.YI.k_Top:
-              return (0, M.we)(
-                "#Template_Section_MediaContent_Align_Vertical_Top",
-              );
-            case O.YI.k_Center:
-              return (0, M.we)(
-                "#Template_Section_MediaContent_Align_Vertical_Center",
-              );
-            case O.YI.k_Bottom:
-              return (0, M.we)(
-                "#Template_Section_MediaContent_Align_Vertical_Bottom",
-              );
-          }
-        else if (a)
-          switch (e) {
-            case O.YI.k_Left:
-              return (0, M.we)("#Template_Section_Align_Text_Left");
-            case O.YI.k_Center:
-              return (0, M.we)("#Template_Section_Align_Text_Center");
-            case O.YI.k_Right:
-              return (0, M.we)("#Template_Section_Align_Text_Right");
-          }
-        else
-          switch (e) {
-            case O.YI.k_Left:
-              return (0, M.we)(
-                "#Template_Section_MediaContent_Align_Horizontal_Left",
-              );
-            case O.YI.k_Center:
-              return (0, M.we)(
-                "#Template_Section_MediaContent_Align_Horizontal_Center",
-              );
-            case O.YI.k_Right:
-              return (0, M.we)(
-                "#Template_Section_MediaContent_Align_Horizontal_Right",
-              );
-          }
-      }
-      var qi = a(60746);
+      var qi = a(60342);
       function Vi(e) {
         const { saleSection: t, bTitleImageMode: a } = e;
         return (
@@ -18683,20 +18758,12 @@
       function Qi(e) {
         var t;
         const { saleSection: a, editModel: n } = e,
-          [s, l] = (0, c.useState)(
-            !(null === (t = a.localized_title) || void 0 === t
+          [o, s] = (0, c.useState)(
+            !(null === (t = a.localized_label) || void 0 === t
               ? void 0
               : t.length),
-          ),
-          r = (0, fe.E)(),
-          [_] = (0, d.q3)(() => {
-            var e;
-            return [
-              (null === (e = a.localized_subtitle) || void 0 === e
-                ? void 0
-                : e[r]) || "",
-            ];
-          });
+          );
+        (0, fe.E)();
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)("p", {
@@ -18708,95 +18775,69 @@
               children: [
                 (0, i.jsx)(m.Od, {
                   className: b.RadioButtons,
-                  checked: s,
+                  checked: o,
                   controlled: !0,
-                  onChange: () => l(!0),
+                  onChange: () => s(!0),
                   label: (0, M.we)(
                     "#Sale_Section_Media_Layout_ContentTypeImage",
                   ),
                 }),
                 (0, i.jsx)(m.Od, {
                   className: b.RadioButtons,
-                  checked: !s,
+                  checked: !o,
                   controlled: !0,
-                  onChange: () => l(!1),
+                  onChange: () => s(!1),
                   label: (0, M.we)(
                     "#Sale_Section_Media_Layout_ContentTypeText",
                   ),
                 }),
               ],
             }),
-            s ? (0, i.jsx)(Yi, { ...e }) : (0, i.jsx)(Wi, { ...e }),
-            (0, i.jsx)("br", {}),
-            (0, i.jsx)(m.pd, {
-              type: "text",
-              label: (0, M.we)("#Sale_TitleHeader_short"),
-              tooltip: (0, M.we)("#Sale_TitleHeader_short_ttip"),
-              value: _,
-              onChange: (e) => {
-                a.localized_subtitle ||
-                  (a.localized_subtitle = (0, N.$Y)([], 31, null)),
-                  e.currentTarget.value != a.localized_subtitle[r] &&
-                    ((a.localized_subtitle[r] = e.currentTarget.value),
-                    n.SetDirty(o.IQ.jsondata_sales));
-              },
-            }),
+            o ? (0, i.jsx)(Yi, { ...e }) : (0, i.jsx)(Wi, { ...e }),
           ],
         });
       }
       function Wi(e) {
         const { saleSection: t, editModel: a } = e,
           n = (0, fe.E)(),
-          [s, l] = (0, d.q3)(() => [
-            t.title_text_alignment || O.YI.k_Left,
-            t.title_display_size,
-          ]);
-        return (0, i.jsx)(Ai, {
-          language: n,
-          fnGetContent: () => {
-            var e;
-            return (
-              (null === (e = t.localized_title) || void 0 === e
+          [s, l] = (0, d.q3)(() => {
+            var e, a;
+            return [
+              (null === (e = t.localized_label) || void 0 === e
                 ? void 0
-                : e[n]) || ""
-            );
-          },
-          eTextAlignment: s,
-          eTitleDisplaySize: l,
-          bSingleLine: !0,
-          nTitleCharLimit: 120,
-          fnUpdateContent: (e) => {
-            var i;
-            t.localized_title || (t.localized_title = (0, N.$Y)([], 31, null)),
-              (null === (i = t.localized_title) || void 0 === i
+                : e[n]) || "",
+              (null === (a = t.localized_subtitle) || void 0 === a
                 ? void 0
-                : i[n]) != e &&
-                ((t.localized_title[n] = e), a.SetDirty(o.IQ.jsondata_sales));
-          },
-          rctToolbarControls: (0, i.jsxs)(i.Fragment, {
-            children: [
-              (0, i.jsx)(Oi, {
-                uniqueID: "dsec_header_" + t.unique_id,
-                eTitleDisplaySize: l,
-                fnUpdateTitleDisplaySize: (e) => {
-                  e != t.title_display_size &&
-                    ((t.title_display_size = e),
+                : a[n]) || "",
+            ];
+          });
+        return (0, i.jsxs)(i.Fragment, {
+          children: [
+            (0, i.jsx)(m.pd, {
+              type: "text",
+              label: (0, M.we)("#Sale_TitleHeader_title"),
+              value: s,
+              onChange: (e) => {
+                t.localized_label ||
+                  (t.localized_label = (0, N.$Y)([], 31, null)),
+                  e.currentTarget.value != t.localized_label[n] &&
+                    ((t.localized_label[n] = e.currentTarget.value),
                     a.SetDirty(o.IQ.jsondata_sales));
-                },
-                bForceDisplay: !0,
-              }),
-              (0, i.jsx)(Hi, {
-                uniqueID: "desc_horiz_" + +t.unique_id,
-                eAlignment: s,
-                fnUpdateAlignment: (e) => {
-                  t.title_text_alignment != e &&
-                    ((t.title_text_alignment = e),
+              },
+            }),
+            (0, i.jsx)(m.pd, {
+              type: "text",
+              label: (0, M.we)("#Sale_TitleHeader_subtitle"),
+              value: l,
+              onChange: (e) => {
+                t.localized_subtitle ||
+                  (t.localized_subtitle = (0, N.$Y)([], 31, null)),
+                  e.currentTarget.value != t.localized_subtitle[n] &&
+                    ((t.localized_subtitle[n] = e.currentTarget.value),
                     a.SetDirty(o.IQ.jsondata_sales));
-                },
-                bText: !0,
-              }),
-            ],
-          }),
+              },
+            }),
+          ],
         });
       }
       function Yi(e) {
@@ -18827,7 +18868,7 @@
           children: [
             (0, i.jsx)("p", { children: (0, M.we)("#Sale_TitleHeader_desc") }),
             Boolean(_)
-              ? (0, i.jsx)("img", { className: ti.LinkCapsuleImage, src: u })
+              ? (0, i.jsx)("img", { className: qi.LinkCapsuleImage, src: u })
               : (0, i.jsx)("div", {
                   children: (0, M.we)("#ClanImageChooser_None"),
                 }),
@@ -18941,7 +18982,7 @@
           className: (0, E.A)(Ft().FlexCenter, b.UploadLinkRow),
           children: [
             (0, i.jsx)("img", { src: S }),
-            (0, i.jsx)(ei.q, {
+            (0, i.jsx)(ai.q, {
               className: b.ImageLinkURL,
               url: h,
               bSkipForcingStoreLink: !1,
@@ -18981,14 +19022,14 @@
         const { editModel: t, link: a, closeModal: n } = e,
           [s, l] = (0, c.useState)(() => (null == a ? void 0 : a.url)),
           r = (0, d.q3)(() => (null == a ? void 0 : a.url)),
-          _ = (0, qi.Ec)(t.GetClanAccountID());
+          _ = (0, ti.Ec)(t.GetClanAccountID());
         return (0, i.jsxs)(q.o0, {
-          className: ti.DialogSize,
+          className: qi.DialogSize,
           strTitle: (0, M.we)(r ? "#Sale_EditLinkURL" : "#Sale_AddLinkURL"),
           bOKDisabled:
             !s ||
             0 == s.trim().length ||
-            (!s.startsWith(ai.TS.STORE_BASE_URL) && !_.valve_admin),
+            (!s.startsWith(ei.TS.STORE_BASE_URL) && !_.valve_admin),
           closeModal: n,
           onOK: () => {
             (a.url = s), t.SetDirty(o.IQ.jsondata_sales);
@@ -19012,7 +19053,7 @@
             }),
             Boolean(
               (null == s ? void 0 : s.length) > 8 &&
-                !(null == s ? void 0 : s.startsWith(ai.TS.STORE_BASE_URL)) &&
+                !(null == s ? void 0 : s.startsWith(ei.TS.STORE_BASE_URL)) &&
                 !_.valve_admin,
             ) &&
               (0, i.jsx)("div", {
@@ -21178,9 +21219,9 @@
               className: Qn().ToolBarTitle,
               children: (0, M.we)("#Template_Section_MediaContent_Media"),
             }),
-            (0, i.jsxs)(ji.Ez, {
+            (0, i.jsxs)(ni.Ez, {
               children: [
-                (0, i.jsx)(ji.ff, {
+                (0, i.jsx)(ni.ff, {
                   toggled: l != O.Cu.k_MediaTrailer,
                   tooltip: (0, M.we)(
                     "#Template_Section_MediaContent_ImageOrVideo",
@@ -21189,20 +21230,20 @@
                     t.media_type == O.Cu.k_MediaTrailer &&
                       ((t.media_type = O.Cu.k_MediaImage), a());
                   },
-                  children: (0, i.jsx)(Ni.EZL, {}),
+                  children: (0, i.jsx)(ii.EZL, {}),
                 }),
-                (0, i.jsx)(ji.ff, {
+                (0, i.jsx)(ni.ff, {
                   toggled: l == O.Cu.k_MediaTrailer,
                   tooltip: (0, M.we)("#Template_Section_MediaContent_Trailer"),
                   onClick: () => {
                     t.media_type != O.Cu.k_MediaTrailer &&
                       ((t.media_type = O.Cu.k_MediaTrailer), a());
                   },
-                  children: (0, i.jsx)(Ni.gat, {}),
+                  children: (0, i.jsx)(ii.gat, {}),
                 }),
-                (0, i.jsx)(ji.hK, {}),
+                (0, i.jsx)(ni.hK, {}),
                 o &&
-                  (0, i.jsx)(Hi, {
+                  (0, i.jsx)(ci, {
                     uniqueID: "media_horiz_" + n,
                     eAlignment: r,
                     bVertical: !1,
@@ -21213,7 +21254,7 @@
                     bText: !1,
                   }),
                 o &&
-                  (0, i.jsx)(Hi, {
+                  (0, i.jsx)(ci, {
                     uniqueID: "media_vert_" + n,
                     eAlignment: c,
                     bVertical: !0,
@@ -21261,7 +21302,7 @@
               : (0, i.jsxs)(i.Fragment, {
                   children: [
                     n &&
-                      (0, i.jsxs)(ji.Ez, {
+                      (0, i.jsxs)(ni.Ez, {
                         children: [
                           (0, i.jsxs)(m.JU, {
                             children: [
@@ -21273,8 +21314,8 @@
                               }),
                             ],
                           }),
-                          (0, i.jsx)(ji.hK, {}),
-                          (0, i.jsx)(Hi, {
+                          (0, i.jsx)(ni.hK, {}),
+                          (0, i.jsx)(ci, {
                             uniqueID: "tdc_alisng",
                             eAlignment: s,
                             fnUpdateAlignment: (e) => {
@@ -21316,17 +21357,17 @@
               className: no().ToolBarTitle,
               children: (0, M.we)("#Template_Section_TitleSubTitle_type"),
             }),
-            (0, i.jsxs)(ji.Ez, {
+            (0, i.jsxs)(ni.Ez, {
               children: [
-                (0, i.jsx)(ji.ff, {
+                (0, i.jsx)(ni.ff, {
                   toggled: !s,
                   tooltip: (0, M.we)("#Template_Section_TitleSubTitle_ttip"),
                   onClick: () => {
                     t.is_title_as_image && ((t.is_title_as_image = !1), a());
                   },
-                  children: (0, i.jsx)(Ni.bb4, {}),
+                  children: (0, i.jsx)(ii.bb4, {}),
                 }),
-                (0, i.jsx)(ji.ff, {
+                (0, i.jsx)(ni.ff, {
                   toggled: s && l == O.Cu.k_MediaImage,
                   tooltip: (0, M.we)(
                     "#Sale_Section_Media_Layout_Title_ContentTypeMedia",
@@ -21343,9 +21384,9 @@
                       (t.is_title_as_image = !0),
                       a();
                   },
-                  children: (0, i.jsx)(Ni.EZL, {}),
+                  children: (0, i.jsx)(ii.EZL, {}),
                 }),
-                (0, i.jsx)(ji.hK, {}),
+                (0, i.jsx)(ni.hK, {}),
                 o &&
                   (0, i.jsx)("div", {
                     className: no().ScaleCtn,
@@ -21426,7 +21467,7 @@
                     toolTipContent: po(e),
                     direction: "bottom",
                     children: (0, i.jsx)("div", {
-                      children: (0, i.jsx)(ji.ff, {
+                      children: (0, i.jsx)(ni.ff, {
                         onClick: (t) => {
                           var a;
                           null === (a = null == t ? void 0 : t.currentTarget) ||
@@ -21465,12 +21506,12 @@
         const { alignment: t } = e;
         switch (t) {
           case O.YI.k_Left:
-            return (0, i.jsx)(Ni.BlK, {});
+            return (0, i.jsx)(ii.BlK, {});
           case O.YI.k_Center:
-            return (0, i.jsx)(Ni.vIU, {});
+            return (0, i.jsx)(ii.vIU, {});
           case O.YI.k_Right:
           default:
-            return (0, i.jsx)(Ni.id, {});
+            return (0, i.jsx)(ii.id, {});
         }
       }
       const ho = 80;
@@ -21488,7 +21529,7 @@
           ]);
         return (0, i.jsx)("div", {
           className: no().TitleCtn,
-          children: (0, i.jsx)(Ai, {
+          children: (0, i.jsx)(Ri, {
             bSingleLine: !0,
             nTitleCharLimit: ho,
             language: n,
@@ -21516,7 +21557,7 @@
             label: (0, M.we)("#Sale_Section_Social_Share_Option_Title"),
             rctToolbarControls: (0, i.jsxs)(i.Fragment, {
               children: [
-                (0, i.jsx)(Oi, {
+                (0, i.jsx)(si, {
                   uniqueID: "title_vert_" + t,
                   eTitleDisplaySize: l,
                   fnUpdateTitleDisplaySize: (e) => {
@@ -21526,7 +21567,7 @@
                   bForceDisplay: !0,
                   bSupportFullWidth: !0,
                 }),
-                (0, i.jsx)(Hi, {
+                (0, i.jsx)(ci, {
                   uniqueID: "title_horiz_" + t,
                   eAlignment: r,
                   fnUpdateAlignment: (e) => {
@@ -21550,7 +21591,7 @@
           [l] = (0, d.q3)(() => [t.subtitle_alignment || O.YI.k_Left]);
         return (0, i.jsx)("div", {
           className: no().SubTitleCtn,
-          children: (0, i.jsx)(Ai, {
+          children: (0, i.jsx)(Ri, {
             bSingleLine: !0,
             language: a,
             fnGetContent: () => {
@@ -21574,7 +21615,7 @@
                   ? void 0
                   : o[a]) != e && ((t.localized_media_subtitle[a] = e), n());
             },
-            rctToolbarControls: (0, i.jsx)(Hi, {
+            rctToolbarControls: (0, i.jsx)(ci, {
               uniqueID: "sub_horiz_" + o,
               eAlignment: l,
               fnUpdateAlignment: (e) => {
@@ -21754,7 +21795,7 @@
               toggleMinimized: () => _(!r),
               elAdditionalButtons: (0, i.jsx)(wo, { ...e }),
               children: [
-                (0, i.jsx)(Ai, {
+                (0, i.jsx)(Ri, {
                   strPlaceholder: (0, M.we)(
                     "#Sale_Section_Quiz_QuestionPlaceholder",
                   ),
@@ -21763,7 +21804,7 @@
                   strOverrideBackgroundColor: m,
                   fnUpdateContent: (e) => ma(a, e, n, o),
                 }),
-                (0, i.jsx)(Ai, {
+                (0, i.jsx)(Ri, {
                   strPlaceholder: (0, M.we)(
                     "#Sale_Section_Quiz_AnswerPlaceholder",
                   ),
@@ -21793,7 +21834,7 @@
               (0, Ne.uX)(e),
             );
           },
-          children: (0, i.jsx)(Ni.bm, {}),
+          children: (0, i.jsx)(ii.bm, {}),
         });
       }
       var xo = a(95034),
@@ -22100,7 +22141,7 @@
                           n(a, t);
                       }
                     },
-                    children: (0, i.jsx)(Ni.OMN, {}),
+                    children: (0, i.jsx)(ii.OMN, {}),
                   }),
                 }),
                 (0, i.jsx)(Oo, { ...e }),
@@ -22111,7 +22152,7 @@
                   children: (0, i.jsx)("div", {
                     className: Eo().Icon,
                     ...s,
-                    children: (0, i.jsx)(Ni.yUV, {}),
+                    children: (0, i.jsx)(ii.yUV, {}),
                   }),
                 }),
                 Boolean(u) &&
@@ -22131,10 +22172,10 @@
                           n(a, t);
                       },
                       children: [
-                        (0, i.jsx)(Ni.rlm, {}),
+                        (0, i.jsx)(ii.rlm, {}),
                         p == t
-                          ? (0, i.jsx)(Ni.Hsy, {})
-                          : (0, i.jsx)(Ni.OMN, {}),
+                          ? (0, i.jsx)(ii.Hsy, {})
+                          : (0, i.jsx)(ii.OMN, {}),
                       ],
                     }),
                   }),
@@ -22219,7 +22260,7 @@
                       ? r()
                       : u());
                 },
-                children: (0, i.jsx)(Ni.bm, {}),
+                children: (0, i.jsx)(ii.bm, {}),
               }),
             }),
             (0, i.jsx)(Co.E, {
@@ -22354,7 +22395,7 @@
         const { saleSection: t, fnOnDirty: a } = e,
           [n, o, s] = (0, ae.uD)(!1),
           [l, r] = (0, c.useState)(() => 1),
-          _ = (0, yi.LU)(),
+          _ = (0, Ai.LU)(),
           [u] = (0, d.q3)(() => [t.show_as_carousel]),
           p = (0, M.we)(
             u
@@ -23069,7 +23110,7 @@
             : "#Template_Section_TabletToggle_Off_ttip";
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(ji.ff, {
+            (0, i.jsx)(ni.ff, {
               toggled: t,
               tooltip: (0, M.we)(d),
               onClick: () => {
@@ -23233,7 +23274,7 @@
             t.description_alignment || O.YI.k_Left,
             t.eDescriptionDisplaySize,
           ]);
-        return (0, i.jsx)(Ai, {
+        return (0, i.jsx)(Ri, {
           language: a,
           fnGetContent: () => {
             var e;
@@ -23256,7 +23297,7 @@
           rctToolbarControls: (0, i.jsxs)(i.Fragment, {
             children: [
               l &&
-                (0, i.jsx)(Oi, {
+                (0, i.jsx)(si, {
                   uniqueID: "dsec_header_" + o,
                   eTitleDisplaySize: c,
                   fnUpdateTitleDisplaySize: (e) => {
@@ -23265,7 +23306,7 @@
                   },
                   bForceDisplay: !0,
                 }),
-              (0, i.jsx)(Hi, {
+              (0, i.jsx)(ci, {
                 uniqueID: "desc_horiz_" + o,
                 eAlignment: r,
                 fnUpdateAlignment: (e) => {
@@ -23481,7 +23522,7 @@
               label: (0, M.we)("#Template_Section_TechSpec_Name"),
               tooltip: (0, M.we)("#Template_Section_TechSpec_Name_ttip"),
             }),
-            (0, i.jsx)(Ai, {
+            (0, i.jsx)(Ri, {
               language: a,
               fnGetContent: () =>
                 (function (e, t) {
@@ -23908,11 +23949,11 @@
                     strPlaceholder: (0, M.we)(
                       "#EventEditor_SaleTextSection_PlaceHolder",
                     ),
-                    emoticonStore: wi.A,
+                    emoticonStore: ki.A,
                     bSupportHTMLImport: !0,
                     showFormatHelp: "PartnerEvents",
                     classNameForTextArea: S.EventEditorDescription,
-                    limitBBCode: A.UF.CAN_UPLOAD_IMAGES ? void 0 : ii.K9,
+                    limitBBCode: A.UF.CAN_UPLOAD_IMAGES ? void 0 : pi.K9,
                     clanSteamID: p,
                   }),
                   (0, i.jsxs)("div", {
@@ -25072,7 +25113,7 @@
       var sl = a(54614),
         ll = a.n(sl),
         rl = a(17098),
-        dl = a(96971);
+        dl = a(60860);
       const cl = (0, r.PA)((e) => {
         const { saleSection: t, editModel: a } = e,
           n = a.GetCurEditLanguage(),
@@ -26208,7 +26249,7 @@
         X = a(66210),
         $ = a(10206),
         K = a(95186),
-        J = a(96971),
+        J = a(60860),
         Z = a(30294),
         ee = a(26408),
         te = a(26184),
@@ -26562,7 +26603,7 @@
           [o] = (0, h.q3)(() => [t.GetEventModel().clanSteamID]),
           { data: s } = (0, se.I)((0, ne.J)(o.GetAccountID()));
         let l = [];
-        3 == (0, C.zX)(null != s ? s : [], W.vl) &&
+        1 != (0, C.zX)(null != s ? s : [], W.vl) &&
           s &&
           (l = ae
             .Nv(s.map((e) => w.A.Get().GetApp(e)))
@@ -28123,16 +28164,19 @@
             await w.A.Get().QueueMultipleAppRequests(e, {
               include_basic_info: !0,
             });
-            const t = e.map((e) => {
-              const t = w.A.Get().GetApp(e);
-              return {
-                capsule: {
-                  id: e,
-                  type: (0, x._4)(t.GetStoreItemType(), t.GetAppType()),
-                },
-                tags: [],
-              };
-            });
+            const t = ae.Nv(
+              e.map((e) => {
+                const t = w.A.Get().GetApp(e);
+                if (!t) return null;
+                return {
+                  capsule: {
+                    id: e,
+                    type: (0, x._4)(t.GetStoreItemType(), t.GetAppType()),
+                  },
+                  tags: [],
+                };
+              }),
+            );
             return (
               await this.props.fnUpdateDefaultTagsForItems(
                 this.props.editModel,
@@ -29356,7 +29400,7 @@
       var i = a(7850),
         n = a(43527),
         o = a(69001),
-        s = a(25918),
+        s = a(25888),
         l = a(75844),
         r = a(65946),
         d = a(90626),
@@ -29621,6 +29665,383 @@
         return null === (a = e.find((e) => e.data === t)) || void 0 === a
           ? void 0
           : a.warning;
+      }
+    },
+    73023: (e, t, a) => {
+      "use strict";
+      a.d(t, { LO: () => n, Vb: () => o, vU: () => s });
+      var i = a(27666);
+      function n(e, t) {
+        return `linear-gradient(0deg, ${e || "transparent"} 0%, ${t || "transparent"} 100%)`;
+      }
+      function o(e, t, a) {
+        if (e.disable_background && !a)
+          return { paddingLeft: 0, paddingRight: 0 };
+        let o = "";
+        if (e.background_image) {
+          o += `,url(${i.z.GenerateURLFromHashAndExt(t.clanSteamID, e.background_image)})`;
+        }
+        return e.background_gradient_bottom ||
+          e.background_gradient_top ||
+          o.length > 0 ||
+          e.background_repeat ||
+          e.border_color ||
+          e.border_width
+          ? {
+              backgroundImage:
+                n(e.background_gradient_bottom, e.background_gradient_top) + o,
+              backgroundRepeat: e.background_repeat,
+              backgroundSize: "coverBlur" == e.background_repeat ? "cover" : "",
+              outlineStyle: e.border_color && e.border_width ? "solid" : void 0,
+              outlineColor: e.border_color,
+              outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
+            }
+          : {};
+      }
+      function s(e, t) {
+        return e
+          ? e.disable_background && !t
+            ? { paddingLeft: 0, paddingRight: 0 }
+            : e.background_gradient_bottom ||
+                e.background_gradient_top ||
+                e.background_repeat ||
+                e.border_color ||
+                e.border_width
+              ? {
+                  background: n(
+                    e.background_gradient_bottom,
+                    e.background_gradient_top,
+                  ),
+                  backgroundRepeat: e.background_repeat,
+                  outlineStyle:
+                    e.border_color && e.border_width ? "solid" : void 0,
+                  outlineColor: e.border_color,
+                  outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
+                }
+              : {}
+          : {};
+      }
+    },
+    71381: (e, t, a) => {
+      "use strict";
+      a.d(t, { h: () => l });
+      var i = a(7850),
+        n = a(52038),
+        o = a(66532),
+        s = a.n(o);
+      function l(e) {
+        const {
+          capsules_per_row: t,
+          is_generic: a,
+          is_generic_trailer: o,
+          is_event_dash_row: l,
+          is_trailer_carousel: r,
+          is_spotlights: d,
+          is_item_browser: c,
+          is_maincap: _,
+          is_expanded_maincap: u,
+          is_expanded_display: p,
+          show_auto_advance_bar: m,
+        } = e;
+        if (!t) return null;
+        if (a)
+          return (0, i.jsx)("div", {
+            className: s().GhostCtn,
+            children: (0, i.jsx)("div", {
+              className: s().PlaceholderBox,
+              children: (0, i.jsx)("div", { className: s().ShineCtn }),
+            }),
+          });
+        if (o)
+          return (0, i.jsx)("div", {
+            className: s().GhostCtn,
+            children: (0, i.jsx)("div", {
+              className: s().PlaceholderVideo,
+              children: (0, i.jsx)("div", { className: s().ShineCtn }),
+            }),
+          });
+        if (r)
+          return (0, i.jsxs)("div", {
+            className: s().GhostCtn,
+            children: [
+              (0, i.jsxs)("div", {
+                className: s().TrailerCarouselRow,
+                children: [
+                  (0, i.jsx)("div", {
+                    className: s().VideoPlaceholder,
+                    children: (0, i.jsx)("div", { className: s().ShineCtn }),
+                  }),
+                  (0, i.jsx)("div", {
+                    className: s().ItemDescPlaceholer,
+                    children: (0, i.jsx)("div", { className: s().ShineCtn }),
+                  }),
+                ],
+              }),
+              m &&
+                (0, i.jsx)("div", {
+                  className: s().AutoAdvanceBar,
+                  children: (0, i.jsx)("div", { className: s().ShineCtn }),
+                }),
+            ],
+          });
+        if (l)
+          return (0, i.jsx)("div", {
+            className: s().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: s().EventRow,
+              children: [
+                (0, i.jsx)("div", {
+                  className: (0, n.A)(
+                    s().PlaceholderGroupImage,
+                    s().PlaceholderCap,
+                  ),
+                }),
+                (0, i.jsxs)("div", {
+                  className: (0, n.A)(s().DetailsPlaceholder),
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderTitle,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderSubtitle,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderButtons,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (d)
+          return (0, i.jsx)("div", {
+            className: s().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: s().SpotlightsRow,
+              children: [
+                (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                (0, i.jsxs)("div", {
+                  className: s().DailyDealsColumn,
+                  children: [
+                    (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                    (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (_)
+          return (0, i.jsx)("div", {
+            className: s().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: (0, n.A)({
+                [s().MainCapRow]: !0,
+                [s().MainCapRowExpanded]: u,
+              }),
+              children: [
+                (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                (0, i.jsxs)("div", {
+                  className: (0, n.A)(s().DetailsPlaceholder),
+                  children: [
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderTitle,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderSubtitle,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderRelease,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderReviews,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                    (0, i.jsx)("div", {
+                      className: (0, n.A)(
+                        s().PlaceholderTags,
+                        s().PlaceholderCap,
+                      ),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
+        if (p)
+          return (0, i.jsx)("div", {
+            className: s().GhostCtn,
+            children: (0, i.jsxs)("div", {
+              className: s().ExpandedItemRow,
+              children: [
+                (0, i.jsx)("div", {
+                  className: (0, n.A)(
+                    s().CapsulePlaceholder,
+                    s().PlaceholderCap,
+                  ),
+                }),
+                (0, i.jsx)("div", {
+                  className: (0, n.A)(
+                    s().ItemDefPlaceholder,
+                    s().PlaceholderCap,
+                  ),
+                }),
+              ],
+            }),
+          });
+        if (c) {
+          const e = [];
+          for (let a = 0; a < t[0]; a++)
+            e.push(
+              (0, i.jsx)(
+                "div",
+                {
+                  className: s().ItemBrowserCapsule,
+                  children: (0, i.jsx)("div", {
+                    className: s().PlaceholderCap,
+                  }),
+                },
+                "item_browse_ghost_" + a,
+              ),
+            );
+          return (0, i.jsx)("div", { className: s().GhostCtn, children: e });
+        }
+        return 1 == (null == t ? void 0 : t.length)
+          ? 1 == t[0]
+            ? (0, i.jsx)("div", {
+                className: s().GhostCtn,
+                children: (0, i.jsx)("div", {
+                  className: s().CapsuleRowSuperCapsule,
+                  children: (0, i.jsx)("div", {
+                    className: s().PlaceholderCap,
+                  }),
+                }),
+              })
+            : 4 == t[0]
+              ? (0, i.jsx)("div", {
+                  className: s().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: s().CapsuleRow4,
+                    children: [
+                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                    ],
+                  }),
+                })
+              : (0, i.jsx)("div", {
+                  className: s().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: s().CapsuleRow3,
+                    children: [
+                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                    ],
+                  }),
+                })
+          : 2 == (null == t ? void 0 : t.length)
+            ? 3 == t[0] && 3 == t[1]
+              ? (0, i.jsx)("div", {
+                  className: s().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: s().CapsuleRow23,
+                    children: [
+                      (0, i.jsxs)("div", {
+                        className: (0, n.A)(s().CapRow, s().Caps3),
+                        children: [
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        ],
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: (0, n.A)(s().CapRow, s().Caps3),
+                        children: [
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+              : (0, i.jsx)("div", {
+                  className: s().GhostCtn,
+                  children: (0, i.jsxs)("div", {
+                    className: s().CapsuleRow23,
+                    children: [
+                      (0, i.jsxs)("div", {
+                        className: (0, n.A)(s().CapRow, s().Caps2),
+                        children: [
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        ],
+                      }),
+                      (0, i.jsxs)("div", {
+                        className: (0, n.A)(s().CapRow, s().Caps3),
+                        children: [
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        ],
+                      }),
+                    ],
+                  }),
+                })
+            : (0, i.jsx)("div", {
+                className: s().GhostCtn,
+                children: (0, i.jsxs)("div", {
+                  className: s().CapsuleRow234,
+                  children: [
+                    (0, i.jsxs)("div", {
+                      className: (0, n.A)(s().CapRow, s().Caps2),
+                      children: [
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      ],
+                    }),
+                    (0, i.jsxs)("div", {
+                      className: (0, n.A)(s().CapRow, s().Caps3),
+                      children: [
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      ],
+                    }),
+                    (0, i.jsxs)("div", {
+                      className: (0, n.A)(s().CapRow, s().Caps4),
+                      children: [
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
+                      ],
+                    }),
+                  ],
+                }),
+              });
       }
     },
     83561: (e, t, a) => {
@@ -35385,6 +35806,8 @@
               SaleSectionCarousel: !0,
               SaleSectionCarouselPadding: !Boolean(u),
               ItemCount_4: 4 == j[0],
+              [P.ListOfCreators]:
+                t && "creator_list_of_lists" == t.section.section_type,
             }),
             useTestScrollbar: !0,
             bLazyRenderChildren: !0,
@@ -35547,7 +35970,7 @@
         m = a.n(p),
         h = a(15041),
         g = a(30294),
-        S = a(1276),
+        S = a(73023),
         v = a(90595),
         b = a(96236),
         f = a(32630),
@@ -35912,7 +36335,7 @@
         l = a(96236),
         r = a(6878),
         d = a.n(r),
-        c = a(1276),
+        c = a(73023),
         _ = a(65946),
         u = a(30894),
         p = a(16021),
@@ -36538,328 +36961,6 @@
         });
       }
     },
-    84842: (e, t, a) => {
-      "use strict";
-      a.d(t, { h: () => l });
-      var i = a(7850),
-        n = a(52038),
-        o = a(66285),
-        s = a.n(o);
-      function l(e) {
-        const {
-          capsules_per_row: t,
-          is_generic: a,
-          is_generic_trailer: o,
-          is_event_dash_row: l,
-          is_trailer_carousel: r,
-          is_spotlights: d,
-          is_item_browser: c,
-          is_maincap: _,
-          is_expanded_maincap: u,
-          is_expanded_display: p,
-          show_auto_advance_bar: m,
-        } = e;
-        if (!t) return null;
-        if (a)
-          return (0, i.jsx)("div", {
-            className: s().GhostCtn,
-            children: (0, i.jsx)("div", {
-              className: s().PlaceholderBox,
-              children: (0, i.jsx)("div", { className: s().ShineCtn }),
-            }),
-          });
-        if (o)
-          return (0, i.jsx)("div", {
-            className: s().GhostCtn,
-            children: (0, i.jsx)("div", {
-              className: s().PlaceholderVideo,
-              children: (0, i.jsx)("div", { className: s().ShineCtn }),
-            }),
-          });
-        if (r)
-          return (0, i.jsxs)("div", {
-            className: s().GhostCtn,
-            children: [
-              (0, i.jsxs)("div", {
-                className: s().TrailerCarouselRow,
-                children: [
-                  (0, i.jsx)("div", {
-                    className: s().VideoPlaceholder,
-                    children: (0, i.jsx)("div", { className: s().ShineCtn }),
-                  }),
-                  (0, i.jsx)("div", {
-                    className: s().ItemDescPlaceholer,
-                    children: (0, i.jsx)("div", { className: s().ShineCtn }),
-                  }),
-                ],
-              }),
-              m &&
-                (0, i.jsx)("div", {
-                  className: s().AutoAdvanceBar,
-                  children: (0, i.jsx)("div", { className: s().ShineCtn }),
-                }),
-            ],
-          });
-        if (l)
-          return (0, i.jsx)("div", {
-            className: s().GhostCtn,
-            children: (0, i.jsxs)("div", {
-              className: s().EventRow,
-              children: [
-                (0, i.jsx)("div", {
-                  className: (0, n.A)(
-                    s().PlaceholderGroupImage,
-                    s().PlaceholderCap,
-                  ),
-                }),
-                (0, i.jsxs)("div", {
-                  className: (0, n.A)(s().DetailsPlaceholder),
-                  children: [
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderTitle,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderSubtitle,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderButtons,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (d)
-          return (0, i.jsx)("div", {
-            className: s().GhostCtn,
-            children: (0, i.jsxs)("div", {
-              className: s().SpotlightsRow,
-              children: [
-                (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                (0, i.jsxs)("div", {
-                  className: s().DailyDealsColumn,
-                  children: [
-                    (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                    (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (_)
-          return (0, i.jsx)("div", {
-            className: s().GhostCtn,
-            children: (0, i.jsxs)("div", {
-              className: (0, n.A)({
-                [s().MainCapRow]: !0,
-                [s().MainCapRowExpanded]: u,
-              }),
-              children: [
-                (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                (0, i.jsxs)("div", {
-                  className: (0, n.A)(s().DetailsPlaceholder),
-                  children: [
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderTitle,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderSubtitle,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderRelease,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderReviews,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                    (0, i.jsx)("div", {
-                      className: (0, n.A)(
-                        s().PlaceholderTags,
-                        s().PlaceholderCap,
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          });
-        if (p)
-          return (0, i.jsx)("div", {
-            className: s().GhostCtn,
-            children: (0, i.jsxs)("div", {
-              className: s().ExpandedItemRow,
-              children: [
-                (0, i.jsx)("div", {
-                  className: (0, n.A)(
-                    s().CapsulePlaceholder,
-                    s().PlaceholderCap,
-                  ),
-                }),
-                (0, i.jsx)("div", {
-                  className: (0, n.A)(
-                    s().ItemDefPlaceholder,
-                    s().PlaceholderCap,
-                  ),
-                }),
-              ],
-            }),
-          });
-        if (c) {
-          const e = [];
-          for (let a = 0; a < t[0]; a++)
-            e.push(
-              (0, i.jsx)(
-                "div",
-                {
-                  className: s().ItemBrowserCapsule,
-                  children: (0, i.jsx)("div", {
-                    className: s().PlaceholderCap,
-                  }),
-                },
-                "item_browse_ghost_" + a,
-              ),
-            );
-          return (0, i.jsx)("div", { className: s().GhostCtn, children: e });
-        }
-        return 1 == (null == t ? void 0 : t.length)
-          ? 1 == t[0]
-            ? (0, i.jsx)("div", {
-                className: s().GhostCtn,
-                children: (0, i.jsx)("div", {
-                  className: s().CapsuleRowSuperCapsule,
-                  children: (0, i.jsx)("div", {
-                    className: s().PlaceholderCap,
-                  }),
-                }),
-              })
-            : 4 == t[0]
-              ? (0, i.jsx)("div", {
-                  className: s().GhostCtn,
-                  children: (0, i.jsxs)("div", {
-                    className: s().CapsuleRow4,
-                    children: [
-                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                    ],
-                  }),
-                })
-              : (0, i.jsx)("div", {
-                  className: s().GhostCtn,
-                  children: (0, i.jsxs)("div", {
-                    className: s().CapsuleRow3,
-                    children: [
-                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                    ],
-                  }),
-                })
-          : 2 == (null == t ? void 0 : t.length)
-            ? 3 == t[0] && 3 == t[1]
-              ? (0, i.jsx)("div", {
-                  className: s().GhostCtn,
-                  children: (0, i.jsxs)("div", {
-                    className: s().CapsuleRow23,
-                    children: [
-                      (0, i.jsxs)("div", {
-                        className: (0, n.A)(s().CapRow, s().Caps3),
-                        children: [
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        ],
-                      }),
-                      (0, i.jsxs)("div", {
-                        className: (0, n.A)(s().CapRow, s().Caps3),
-                        children: [
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-              : (0, i.jsx)("div", {
-                  className: s().GhostCtn,
-                  children: (0, i.jsxs)("div", {
-                    className: s().CapsuleRow23,
-                    children: [
-                      (0, i.jsxs)("div", {
-                        className: (0, n.A)(s().CapRow, s().Caps2),
-                        children: [
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        ],
-                      }),
-                      (0, i.jsxs)("div", {
-                        className: (0, n.A)(s().CapRow, s().Caps3),
-                        children: [
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                          (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        ],
-                      }),
-                    ],
-                  }),
-                })
-            : (0, i.jsx)("div", {
-                className: s().GhostCtn,
-                children: (0, i.jsxs)("div", {
-                  className: s().CapsuleRow234,
-                  children: [
-                    (0, i.jsxs)("div", {
-                      className: (0, n.A)(s().CapRow, s().Caps2),
-                      children: [
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      ],
-                    }),
-                    (0, i.jsxs)("div", {
-                      className: (0, n.A)(s().CapRow, s().Caps3),
-                      children: [
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      ],
-                    }),
-                    (0, i.jsxs)("div", {
-                      className: (0, n.A)(s().CapRow, s().Caps4),
-                      children: [
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                        (0, i.jsx)("div", { className: s().PlaceholderCap }),
-                      ],
-                    }),
-                  ],
-                }),
-              });
-      }
-    },
     49397: (e, t, a) => {
       "use strict";
       a.d(t, { k: () => $, y: () => X });
@@ -36893,9 +36994,9 @@
         g = a(55963),
         S = a(73371),
         v = a.n(S),
-        b = a(72237),
-        f = a(88961),
-        y = a(84842),
+        b = a(96006),
+        f = a(94191),
+        y = a(71381),
         w = a(57876),
         x = a(17690),
         C = a(62792),
@@ -37326,7 +37427,6 @@
         fi: () => T,
         h_: () => j,
         jR: () => y,
-        sk: () => C,
         ue: () => f,
       });
       var i = a(7850),
@@ -37334,7 +37434,7 @@
         o = a(65946),
         s = a(70078),
         l = a(38390),
-        r = a(96971),
+        r = a(60860),
         d = a(95695),
         c = a.n(d),
         _ = a(52393),
@@ -37581,7 +37681,7 @@
         c = a.n(d),
         _ = a(15041),
         u = a(30294),
-        p = a(1276),
+        p = a(73023),
         m = a(90595),
         h = a(96236),
         g = a(32630),
@@ -37716,61 +37816,6 @@
         });
       }
     },
-    1276: (e, t, a) => {
-      "use strict";
-      a.d(t, { LO: () => n, Vb: () => o, vU: () => s });
-      var i = a(27666);
-      function n(e, t) {
-        return `linear-gradient(0deg, ${e || "transparent"} 0%, ${t || "transparent"} 100%)`;
-      }
-      function o(e, t, a) {
-        if (e.disable_background && !a)
-          return { paddingLeft: 0, paddingRight: 0 };
-        let o = "";
-        if (e.background_image) {
-          o += `,url(${i.z.GenerateURLFromHashAndExt(t.clanSteamID, e.background_image)})`;
-        }
-        return e.background_gradient_bottom ||
-          e.background_gradient_top ||
-          o.length > 0 ||
-          e.background_repeat ||
-          e.border_color ||
-          e.border_width
-          ? {
-              backgroundImage:
-                n(e.background_gradient_bottom, e.background_gradient_top) + o,
-              backgroundRepeat: e.background_repeat,
-              backgroundSize: "coverBlur" == e.background_repeat ? "cover" : "",
-              outlineStyle: e.border_color && e.border_width ? "solid" : void 0,
-              outlineColor: e.border_color,
-              outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
-            }
-          : {};
-      }
-      function s(e, t) {
-        return e
-          ? e.disable_background && !t
-            ? { paddingLeft: 0, paddingRight: 0 }
-            : e.background_gradient_bottom ||
-                e.background_gradient_top ||
-                e.background_repeat ||
-                e.border_color ||
-                e.border_width
-              ? {
-                  background: n(
-                    e.background_gradient_bottom,
-                    e.background_gradient_top,
-                  ),
-                  backgroundRepeat: e.background_repeat,
-                  outlineStyle:
-                    e.border_color && e.border_width ? "solid" : void 0,
-                  outlineColor: e.border_color,
-                  outlineWidth: e.border_width ? `${e.border_width}px` : void 0,
-                }
-              : {}
-          : {};
-      }
-    },
     75753: (e, t, a) => {
       "use strict";
       a.d(t, { W: () => W, J: () => Q });
@@ -37789,7 +37834,7 @@
         h = a(53398),
         g = a(18654),
         S = a.n(g),
-        v = a(72237),
+        v = a(96006),
         b = a(3740),
         f = a(14326),
         y = a(52038);
@@ -37934,7 +37979,7 @@
         M = a(35380),
         A = a(55963),
         k = a(33924),
-        G = a(88961),
+        G = a(94191),
         B = a(72860),
         N = a(70300),
         L = a(54492),
