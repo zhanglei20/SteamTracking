@@ -2132,7 +2132,7 @@
             },
             [_, _, __webpack_require__],
           );
-        _.useLayoutEffect(() => {
+        (0, _.useLayoutEffect)(() => {
           if (!_.current || !__webpack_require__.current || !_.current) return;
           let _ = _.current.getBoundingClientRect(),
             _ = _.current.getBoundingClientRect(),
@@ -2412,7 +2412,7 @@
             bFitsInParent: !1,
           });
         if (
-          (_.useLayoutEffect(() => {
+          ((0, _.useLayoutEffect)(() => {
             if (!__webpack_require__ || !_.current || !_.current) return;
             let _ = _.current.getBoundingClientRect(),
               _ = _.current.getBoundingClientRect(),
@@ -2433,12 +2433,15 @@
               let _ = _.getBoundingClientRect();
               _ = _.top > _.top;
             }
-            (_.nHoverLeft == _ && _.bFitsInParent == _) ||
-              _({
-                nHoverLeft: _,
-                bFitsInParent: _,
-              });
-          }, [__webpack_require__, _, _, _, _]),
+            _((_) =>
+              _.nHoverLeft == _ && _.bFitsInParent == _
+                ? _
+                : {
+                    nHoverLeft: _,
+                    bFitsInParent: _,
+                  },
+            );
+          }, [__webpack_require__, _, _, _]),
           !__webpack_require__)
         )
           return null;

@@ -1898,7 +1898,7 @@
             },
             [o, a, n],
           );
-        i.useLayoutEffect(() => {
+        (0, i.useLayoutEffect)(() => {
           if (!o.current || !n.current || !h.current) return;
           let e = o.current.getBoundingClientRect(),
             t = h.current.getBoundingClientRect(),
@@ -2134,26 +2134,29 @@
           a = (0, i.useRef)(null),
           [o, u] = (0, i.useState)({ nHoverLeft: 0, bFitsInParent: !1 });
         if (
-          (i.useLayoutEffect(() => {
+          ((0, i.useLayoutEffect)(() => {
             if (!n || !a.current || !t.current) return;
             let e = t.current.getBoundingClientRect(),
               r = a.current.getBoundingClientRect(),
               i = e.right - e.left,
               l = r.right - r.left,
-              c = s.OQ(n.nTickOffset - l / 2, 0 + k, i - l - k),
-              d = (0, C.PX)(
+              o = s.OQ(n.nTickOffset - l / 2, 0 + k, i - l - k),
+              c = (0, C.PX)(
                 a.current.ownerDocument.documentElement,
                 a.current,
                 "data-trailer-player",
               ),
-              h = !0;
-            if (d) {
-              let e = d.getBoundingClientRect();
-              h = r.top > e.top;
+              d = !0;
+            if (c) {
+              let e = c.getBoundingClientRect();
+              d = r.top > e.top;
             }
-            (o.nHoverLeft == c && o.bFitsInParent == h) ||
-              u({ nHoverLeft: c, bFitsInParent: h });
-          }, [n, a, t, o, u]),
+            u((e) =>
+              e.nHoverLeft == o && e.bFitsInParent == d
+                ? e
+                : { nHoverLeft: o, bFitsInParent: d },
+            );
+          }, [n, a, t, u]),
           !n)
         )
           return null;
