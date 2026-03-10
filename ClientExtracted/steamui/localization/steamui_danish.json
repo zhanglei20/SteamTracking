@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Din Steam Controller er nu direkte tilknyttet til %1$s!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Din Steam Controller er nu direkte tilknyttet til denne enhed!",
     "PairControllerScreen_Explainer_Plural": "For at tilknytte controlleren skal du trykke på de fremhævede knapper for at starte Bluetooth-tilknytningstilstand.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Afspil testlyd"
 }

@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Twój Steam Controller jest teraz bezpośrednio sparowany z twoim %1$s!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Twój Steam Controller jest teraz bezpośrednio sparowany z tym urządzeniem!",
     "PairControllerScreen_Explainer_Plural": "Aby sparować kontroler, naciśnij wyróżnione przyciski i przejdź do trybu parowania przez Bluetooth.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Odtwórz dźwięk testowy"
 }

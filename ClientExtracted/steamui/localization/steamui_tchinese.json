@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "您的 Steam Controller 現已與 %1$s 完成直接配對！",
     "OOBE_PairSteamController_Success1_UnknownHardware": "您的 Steam Controller 現已與此裝置完成直接配對！",
     "PairControllerScreen_Explainer_Plural": "如要配對控制器，請按下標出的按鍵進入藍牙配對模式",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "播放測試音訊"
 }

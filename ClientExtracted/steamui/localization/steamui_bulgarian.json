@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Steam контролерът Ви вече е директно сдвоен към Вашата %1$s!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Steam контролерът Ви вече е директно сдвоен към това устройство!",
     "PairControllerScreen_Explainer_Plural": "С цел да сдвоите контролера си, натиснете отличените бутони, за да влезете в режим на Bluetooth сдвояване.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Пускане на изпитателно аудио"
 }

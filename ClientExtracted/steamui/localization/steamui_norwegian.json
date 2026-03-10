@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Steam Controller er nå sammenkoblet direkte til %1$s!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Steam Controller er nå sammenkoblet direkte til denne enheten!",
     "PairControllerScreen_Explainer_Plural": "For å sammenkoble kontrolleren må du trykke på de markerte knappene for å gå inn i Bluetooth-sammenkoblingsmodus.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Spill av testlyd"
 }

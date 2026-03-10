@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Votre Steam Controller est désormais directement associé à votre %1$s !",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Votre Steam Controller est désormais directement associé à cet appareil  !",
     "PairControllerScreen_Explainer_Plural": "Appuyez sur les boutons mis en évidence pour entrer dans le mode d'association Bluetooth et associer votre contrôleur.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Lancer le test audio"
 }

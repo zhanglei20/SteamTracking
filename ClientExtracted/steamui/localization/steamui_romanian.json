@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Gamepadul tău Steam Controller este acum asociat direct cu %1$s!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Gamepadul tău Steam Controller este acum asociat direct cu acest dispozitiv!",
     "PairControllerScreen_Explainer_Plural": "Pentru a-ți asocia controlerul, apasă butoanele evidențiate pentru a intra în modul de asociere Bluetooth.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Redă secvența audio de probă"
 }

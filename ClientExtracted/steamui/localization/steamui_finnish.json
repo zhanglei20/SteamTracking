@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Steam Controllerisi on nyt yhdistetty laitteeseen %1$s.",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Steam Controllerisi on nyt yhdistetty tähän laitteeseen.",
     "PairControllerScreen_Explainer_Plural": "Yhdistä ohjain siirtymällä Bluetooth-laiteparitilaan ja painamalla korostettuja painikkeita.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Toista testiääni"
 }

@@ -55,5 +55,8 @@
     "InviteLanding_OpenInSteam_Help": "我们尝试在蒸汽平台客户端打开邀请链接。您的浏览器也许会提示您允许启动蒸汽平台客户端。",
     "Search_NonFriend02": "在蒸汽平台上添加好友的最佳方式是使用%1$s。",
     "InviteLanding_AccountMismatch": "我们检测到，您正在运行的蒸汽平台客户端的登录帐户，与您要登录此网页版所使用的帐户不一致。",
-    "GiveFeedbackToSteam_Desc": "向蒸汽平台提供%1$s"
+    "GiveFeedbackToSteam_Desc": "向蒸汽平台提供%1$s",
+    "ChatRoom_PlayestInvite_Invite": "%1$s 邀请您加入蒸汽平台游戏测试",
+    "ChatRoom_PlaytestInvite_YouInvited": "您邀请了 %1$s 加入蒸汽平台游戏测试 %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "您邀请了 %1$s 加入 %2$s%3$s 的蒸汽平台游戏测试"
 }

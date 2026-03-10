@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "¡El Steam Controller ahora está emparejado directamente con tu %1$s!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "¡El Steam Controller ahora está emparejado directamente con este dispositivo!",
     "PairControllerScreen_Explainer_Plural": "Para entrar en el modo de emparejamiento por Bluetooth y emparejar el mando, pulsa los botones resaltados",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Reproducir audio de prueba"
 }

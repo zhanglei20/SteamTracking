@@ -268,7 +268,7 @@
     "Settings_Controller_GenericGamepadSupport": "为通用控制器启用蒸汽平台输入",
     "Settings_Controller_SCPairing": "配对蒸汽平台控制器",
     "Settings_ControllerCalibration_HapticsEnable": "蒸汽平台触感",
-    "Settings_ControllerCalibration_Grip_Sensor_Desc": "蒸汽平台控制器的握持传感器可检测您的手与控制器握把之间的距离。您可以在蒸汽平台输入中将其用作普通按键，或用作陀螺仪激活按键。请使用下方设置调整手部识别的灵敏度。",
+    "Settings_ControllerCalibration_Grip_Sensor_Desc": "Steam Controller 的握持传感器可检测手与控制器握把之间的范围。您可以在蒸汽平台输入中将其用作普通按键，或用作陀螺仪激活按键。请使用下方设置调整手部检测的灵敏度。",
     "Settings_Customization_StartupVideo_Desc": "选择启动蒸汽平台时要播放的自定义影片，个性化您的蒸汽平台体验。此设置按设备生效，而非按用户生效。",
     "Settings_Customization_StartupVideo_Shuffle_Desc": "每次蒸汽平台启动时随机选择一个影片",
     "Settings_Customization_StartupVideo_Type_PointsShop": "来自蒸汽平台点数商店",
@@ -494,5 +494,7 @@
     "Overlay_ClipHint_2": "要管理/编辑/分享您所有的录像，请从客户端菜单转至%1$s，或在下方的蒸汽平台叠加界面菜单中选择 %2$s。",
     "HardwareDeviceName_Generic": "蒸汽平台设备",
     "SteamUI_Dialog_SystemInfo_SavedHardware_Error": "保存此信息到蒸汽平台时出错。请稍后重试。",
-    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其储存在蒸汽平台上"
+    "SteamUI_Dialog_SystemInfo_NameHardware_Desc": "保存此信息会将其存储在蒸汽平台服务器上，您可以将信息与自己的用户评测关联。",
+    "SteamUI_Dialog_SystemInfo_SavedHardware_Desc": "在您将自己的 PC 配置添加到评测中前，我们会检测并存储您相关的详情。蒸汽平台检测到您系统的软硬件如下：",
+    "Steam_EOLAlert_Expired": "蒸汽平台不再支持在 %1$s 上运行，未来可能不会收到更新。"
 }

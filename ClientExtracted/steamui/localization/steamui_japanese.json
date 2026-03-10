@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Steam Controllerが%1$sに直接ペアリングされました！",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Steam Controllerがこのデバイスに直接ペアリングされました！",
     "PairControllerScreen_Explainer_Plural": "コントローラをペアリングするには、強調表示されたボタンを押してBluetoothペアリングモードにしてください",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "テスト音声を再生"
 }

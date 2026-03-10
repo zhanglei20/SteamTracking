@@ -1715,7 +1715,7 @@
     "SteamReviewScore_3": "Olumsuz",
     "SteamReviewScore_2": "Çok Olumsuz",
     "SteamReviewScore_1": "Son Derece Olumsuz",
-    "SteamReviewScore_0": "İnceleme Puanı Yok",
+    "SteamReviewScore_0": "İnceleme Skoru Yok",
     "AppProperties_Title": "Özellikler - %1$s",
     "AppProperties_GeneralPage": "Genel",
     "AppProperties_CompatibilityPage": "Uyumluluk",
@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Steam Controller doğrudan %1$s ile eşleştirildi!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Steam Controller doğrudan bu aygıt ile eşleştirildi!",
     "PairControllerScreen_Explainer_Plural": "Kontrolcünüzü eşleştirmek için gösterilen tuşlara basarak Bluetooth eşleştirme moduna girin.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Test sesini oynat"
 }

@@ -9274,5 +9274,5 @@
     "OOBE_PairSteamController_Success1_KnownHardware": "Έχει γίνει απευθείας σύζευξη του Steam Controller με το %1$s σας!",
     "OOBE_PairSteamController_Success1_UnknownHardware": "Έχει γίνει απευθείας σύζευξη του Steam Controller με αυτήν τη συσκευή!",
     "PairControllerScreen_Explainer_Plural": "Για να κάνετε σύζευξη του χειριστηρίου σας, πατήστε τα επισημασμένα κουμπιά για είσοδο σε λειτουργία σύζευξης Bluetooth.",
-    "AudioChannelsScreen_PlayAudio": "Play test audio"
+    "AudioChannelsScreen_PlayAudio": "Αναπαραγωγή δοκιμαστικού ήχου"
 }
