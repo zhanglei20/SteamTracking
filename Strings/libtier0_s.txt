@@ -100,7 +100,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-17:59:18
+20:58:25
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -282,7 +282,6 @@ GetSpewOutputFunc
 GetStackTrackingFilter
 HOME
 HasStackTrackingFilters
-Hb(s
 IVALIDATE001
 Ignoring resume of count %d\n
 Illegal termination of worker thread '%s'
@@ -304,7 +303,7 @@ Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
-Mar 10 2026
+Mar 11 2026
 Matched '%s' -> '%s'\n
 MemFree:
 MemTotal:
