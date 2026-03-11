@@ -15279,7 +15279,9 @@
                     (_ = _.filter((_) => null != _.type && (0, _._)(_.type))),
                       _.trailer_carousel_allow_apps_without_trailers ||
                         (_ = _.filter((_) =>
-                          _._.Get().GetApp(_._)?.BHasTrailers(_),
+                          _._.Get()
+                            .GetApp(_._)
+                            ?.BHasTrailers("blocked" == _),
                         ));
                     const _ = _.slice(_, _ + _).map((_) => _._);
                     if (

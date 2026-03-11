@@ -14088,7 +14088,7 @@
               [_, m] = s.useState(!0),
               [p, h] = s.useState([]),
               g = (0, At.MU)(),
-              S = (0, ht.dy)(),
+              S = (0, ht.$9)(),
               f = (function (e, t, a) {
                 return (
                   "apps_seen_" +
@@ -14139,7 +14139,9 @@
                     (p = p.filter((e) => null != e.type && (0, dt.fp)(e.type))),
                       t.trailer_carousel_allow_apps_without_trailers ||
                         (p = p.filter((e) =>
-                          I.A.Get().GetApp(e.id)?.BHasTrailers(S),
+                          I.A.Get()
+                            .GetApp(e.id)
+                            ?.BHasTrailers("blocked" == S),
                         ));
                     const f = p.slice(c, c + Ra).map((e) => e.id);
                     if (
