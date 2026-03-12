@@ -2707,7 +2707,7 @@
     },
     82823: (t, c, n) => {
       "use strict";
-      n.d(c, { nk: () => Oe, D: () => Ze, xs: () => Be });
+      n.d(c, { nk: () => Oe, D: () => $e, xs: () => Pe });
       var e = n(7850),
         l = n(90626),
         s = n(8527),
@@ -7340,8 +7340,7 @@
           } = t,
           d = c.bSteamItems,
           u = (0, fe.LT)("sm"),
-          p = d ? h.rgAppData && h.rgAppData[We] : c.filterInGame.app,
-          f = Pe(p);
+          p = d ? h.rgAppData && h.rgAppData[Ge] : c.filterInGame.app;
         return (0, e.jsx)(ue.u.Provider, {
           value: r,
           children: (0, e.jsx)(_c.Provider, {
@@ -7389,39 +7388,27 @@
                           flexGrow: "1",
                           gap: "2",
                           children: [
-                            (0, e.jsx)(Ye, {
+                            (0, e.jsx)(Re, {
                               app: p || void 0,
                               value: c.strSearch || "",
                               onTextChange: (t) => n({ ...c, strSearch: t }),
                             }),
-                            f &&
-                              (0, e.jsx)(_, {
-                                marginLeft: "4",
-                                checked: !!c.bSearchDescriptions,
-                                onChange: (t) =>
-                                  n({ ...c, bSearchDescriptions: t }),
-                                title: Dt.Localize(
-                                  "#AdvancedSearch_IncludeDescriptions_Tooltip",
-                                ),
-                                children: Dt.Localize(
-                                  "#AdvancedSearch_IncludeDescriptions",
-                                ),
-                              }),
+                            false,
                           ],
                         }),
                       ],
                     }),
-                    (0, e.jsxs)(Ke, {
+                    (0, e.jsxs)(Ue, {
                       children: [
                         !d &&
-                          (0, e.jsx)(Fe, {
+                          (0, e.jsx)(Be, {
                             ...h,
                             filter: c.filterInGame,
                             onFilterChange: (t) => n({ ...c, filterInGame: t }),
                             suggestedInitialApp: c.filterSteam.app,
                           }),
                         d &&
-                          (0, e.jsx)($e, {
+                          (0, e.jsx)(Fe, {
                             ...h,
                             filter: c.filterSteam,
                             onFilterChange: (t) => n({ ...c, filterSteam: t }),
@@ -7429,7 +7416,7 @@
                           }),
                       ],
                     }),
-                    (0, e.jsx)(Ne, { filter: c, onFilterChange: n, config: l }),
+                    (0, e.jsx)(Ae, { filter: c, onFilterChange: n, config: l }),
                   ],
                 }),
               }),
@@ -7437,14 +7424,7 @@
           }),
         });
       }
-      const Ae = 440,
-        Re = 570;
-      function Pe(t) {
-        if (!t) return !1;
-        const c = t.appid;
-        return c === Ae || c === Re;
-      }
-      function Ne(t) {
+      function Ae(t) {
         const { filter: c, onFilterChange: n, config: r } = t,
           a = c.bSteamItems,
           [o, h] = (0, l.useState)(!1),
@@ -7471,7 +7451,7 @@
                           let c = { ...t, facets: { ...t.facets } };
                           t.app &&
                             (c.facets.Game = { [`app_${t.app.appid}`]: !0 });
-                          return (c.app = { appid: We, name: "", icon: "" }), c;
+                          return (c.app = { appid: Ge, name: "", icon: "" }), c;
                         })(r)
                       : s,
                     {
@@ -7483,7 +7463,7 @@
                     u = new FormData();
                   o && u.set("appid", o.appid.toString());
                   n && u.set("q", n);
-                  n && e && Pe(a.app) && u.set("descriptions", "1");
+                  n && e && (a.app, 0) && u.set("descriptions", "1");
                   for (const t of Object.keys(i))
                     if (i[t])
                       for (const c of Object.keys(i[t]))
@@ -7579,10 +7559,10 @@
           ],
         });
       }
-      function Ye(t) {
+      function Re(t) {
         const { value: c, onTextChange: n, app: s } = t,
           [r, a] = (0, l.useState)(!0);
-        return (0, e.jsx)(Be, {
+        return (0, e.jsx)(Pe, {
           radius: "full",
           variant: "inset",
           app: r ? s : void 0,
@@ -7591,7 +7571,7 @@
           onTextChange: n,
         });
       }
-      function Be(t) {
+      function Pe(t) {
         var c, n;
         const {
             value: s,
@@ -7662,7 +7642,7 @@
                     src: o.icon,
                     alt: "",
                   }),
-                  (0, e.jsx)(Ge, { visible: !V, children: o.name }),
+                  (0, e.jsx)(Ne, { visible: !V, children: o.name }),
                   (0, e.jsx)(k, {}),
                 ],
               })
@@ -7692,7 +7672,7 @@
             (0, e.jsx)(W.Suggestions, {
               children: m.map((t, c) =>
                 (0, e.jsx)(
-                  De,
+                  Ye,
                   {
                     name: t.market_name,
                     hashName: t.market_hash_name,
@@ -7708,7 +7688,7 @@
           ],
         });
       }
-      function Ge(t) {
+      function Ne(t) {
         const { visible: c, children: n } = t;
         return (0, e.jsx)(a.az, {
           className: Ft.Collapse,
@@ -7716,7 +7696,7 @@
           children: (0, e.jsx)(K.EY, { truncate: !0, children: n }),
         });
       }
-      function De(t) {
+      function Ye(t) {
         const { name: c, hashName: n, img: l, appName: s, searchScore: r } = t,
           a = (0, ue.b)();
         return (0, e.jsxs)(W.Suggestion, {
@@ -7767,7 +7747,7 @@
           ],
         });
       }
-      function Fe(t) {
+      function Be(t) {
         var c;
         const {
             rgApps: n = [],
@@ -7781,20 +7761,20 @@
           i || (v(!0), o && s[o.appid] && a({ ...r, app: s[o.appid] }));
         }, [a, r, o, s, i]);
         const h = !r.app && i,
-          d = cl(h),
+          d = Xe(h),
           u = (0, l.useMemo)(
-            () => n.filter((t) => t !== We && s[t]).map((t) => s[t]),
+            () => n.filter((t) => t !== Ge && s[t]).map((t) => s[t]),
             [n, s],
           );
         return (0, e.jsxs)(e.Fragment, {
           children: [
-            (0, e.jsx)(nl, {
+            (0, e.jsx)(Qe, {
               apps: u,
               selectedApp: r.app,
               onSelectionChange: (t) => a({ ...r, app: t, facets: {} }),
             }),
             h &&
-              (0, e.jsx)(Je, {
+              (0, e.jsx)(We, {
                 loading: d.isLoading,
                 apps:
                   null === (c = d.data) || void 0 === c ? void 0 : c.rgInGame,
@@ -7802,7 +7782,7 @@
                 onSelect: (t) => a({ ...r, app: s[t] || null, facets: {} }),
               }),
             !!r.app &&
-              (0, e.jsx)(Xe, {
+              (0, e.jsx)(Ke, {
                 appid: r.app.appid,
                 state: r,
                 onStateChange: a,
@@ -7810,26 +7790,26 @@
           ],
         });
       }
-      const We = 753,
-        Ue = `${We}_Game`;
-      function $e(t) {
+      const Ge = 753,
+        De = `${Ge}_Game`;
+      function Fe(t) {
         var c, n, a;
         const { filter: o, onFilterChange: i, suggestedInitialApp: v } = t,
           [h, d] = (0, l.useState)(!1),
           u = !o.app && h,
-          p = cl(u),
+          p = Xe(u),
           f = (0, r.I)(
-            ((g = tl),
+            ((g = qe),
             {
-              queryKey: ["marketfilters", We],
+              queryKey: ["marketfilters", Ge],
               queryFn: async () => {
-                const t = await g(We);
+                const t = await g(Ge);
                 if (!t)
                   throw new Error(
                     "Failed to load market facets for Steam Inventory items",
                   );
-                const c = t[Ue];
-                if ((delete t[Ue], !c.tags))
+                const c = t[De];
+                if ((delete t[De], !c.tags))
                   return { rgApps: [], facets: {}, mapAppIDs: {} };
                 const n = {},
                   e = [];
@@ -7861,9 +7841,9 @@
           }, [h, v, x, i, o]),
           f.isLoading)
         )
-          return (0, e.jsx)(rl, {});
+          return (0, e.jsx)(el, {});
         if (f.isError || !f.data || !C || !m)
-          return (0, e.jsx)(qe, {
+          return (0, e.jsx)(Je, {
             children: (0, e.jsx)(K.EY, {
               size: "4",
               children: Dt.Localize("#AdvancedSearch_FacetLoadError"),
@@ -7883,14 +7863,14 @@
         return (0, e.jsxs)(e.Fragment, {
           children: [
             _ &&
-              (0, e.jsx)(nl, {
+              (0, e.jsx)(Qe, {
                 apps: C,
                 selectedApp: o.app,
                 onSelectionChange: (t) => i({ ...o, app: t, facets: {} }),
               }),
             _ &&
               u &&
-              (0, e.jsx)(Je, {
+              (0, e.jsx)(We, {
                 loading: p.isLoading,
                 apps: j,
                 filterBy: x,
@@ -7910,7 +7890,7 @@
           ],
         });
       }
-      function Je(t) {
+      function We(t) {
         const { apps: c = [], filterBy: n = {}, onSelect: r, loading: o } = t,
           v = !(0, fe.LT)("sm"),
           h = (0, l.useMemo)(
@@ -7985,14 +7965,14 @@
           ],
         });
       }
-      function Ke(t) {
+      function Ue(t) {
         return (0, e.jsx)(i.s, {
           minHeight: "min(400px, 30vh)",
           direction: "column",
           children: t.children,
         });
       }
-      function Ze(t) {
+      function $e(t) {
         const c = {
           strSearch: "",
           bSearchDescriptions: t.bSearchDescriptions,
@@ -8021,7 +8001,7 @@
         } = t;
         "number" == typeof l &&
           r[l] &&
-          (l === We
+          (l === Ge
             ? ((c.bSteamItems = !0), (n = c.filterSteam))
             : (n.app = r[l])),
           "string" == typeof e && (c.strSearch = e);
@@ -8049,10 +8029,10 @@
           "number" == typeof t.unFilterMaxPrice &&
             t.unFilterMaxPrice < t.config.maxPrice &&
             (n.price[1] = t.unFilterMaxPrice),
-          c.bSteamItems && s && s[Ue] && n.facets.Game)
+          c.bSteamItems && s && s[De] && n.facets.Game)
         ) {
           const t = Object.keys(n.facets.Game)[0],
-            c = s[Ue].tags;
+            c = s[De].tags;
           if (c && t) {
             const e = c[t];
             if (e) {
@@ -8065,7 +8045,7 @@
         }
         return { state: c, config: t.config };
       }
-      function qe(t) {
+      function Je(t) {
         return (0, e.jsx)(i.s, {
           flexGrow: "1",
           radius: "sm",
@@ -8082,12 +8062,12 @@
           }),
         });
       }
-      function Xe(t) {
+      function Ke(t) {
         const { appid: c, ...n } = t,
           l = (function (t) {
             return (0, r.I)({
               queryKey: ["marketfilters", t],
-              queryFn: () => tl(t),
+              queryFn: () => qe(t),
               enabled: !!t,
             });
           })(c),
@@ -8121,9 +8101,9 @@
               })(t),
             );
           })(c);
-        if (l.isLoading || a.isLoading) return (0, e.jsx)(rl, {});
+        if (l.isLoading || a.isLoading) return (0, e.jsx)(el, {});
         if (l.isError || !l.data || a.isError || !a.data)
-          return (0, e.jsx)(qe, {
+          return (0, e.jsx)(Je, {
             children: (0, e.jsx)(K.EY, {
               size: "4",
               children: Dt.Localize("#AdvancedSearch_FacetLoadError"),
@@ -8134,7 +8114,7 @@
             return 2 === s.TS.EUNIVERSE ? 730 === t || 710 === t : 730 === t;
           })(t) && 1 === s.TS.EUNIVERSE
             ? ee
-            : Qe;
+            : Ze;
         })(c);
         return (0, e.jsx)(o, {
           appid: c,
@@ -8143,12 +8123,12 @@
           ...n,
         });
       }
-      function Qe(t) {
+      function Ze(t) {
         const { appid: c, facets: n, ...l } = t,
           s = _e(c, n);
         return 0 === s.length
           ? (0, e.jsx)(e.Fragment, {
-              children: (0, e.jsxs)(qe, {
+              children: (0, e.jsxs)(Je, {
                 children: [
                   (0, e.jsx)(K.EY, {
                     align: "center",
@@ -8170,7 +8150,7 @@
             })
           : (0, e.jsx)(we, { facets: s, ...l });
       }
-      async function tl(t) {
+      async function qe(t) {
         const c = await fetch(
           `${s.TS.COMMUNITY_BASE_URL}market/appfilters/${t}`,
         );
@@ -8181,7 +8161,7 @@
           throw new Error(`Loaded malformed market filters for app ${t}`);
         return n.facets;
       }
-      function cl(t = !0) {
+      function Xe(t = !0) {
         const { suggestedApps: c } = (0, l.useContext)(He);
         return (0, r.I)({
           queryKey: ["marketsuggestedapps"],
@@ -8198,7 +8178,7 @@
           initialData: c,
         });
       }
-      function nl(t) {
+      function Qe(t) {
         const {
             selectedApp: c,
             apps: n,
@@ -8223,7 +8203,7 @@
           children: [
             (0, e.jsxs)(pt.Trigger, {
               children: [
-                c && (0, e.jsx)(el, { app: c, size: s }),
+                c && (0, e.jsx)(tl, { app: c, size: s }),
                 !c &&
                   (0, e.jsx)(pt.Placeholder, {
                     weight: "medium",
@@ -8243,7 +8223,7 @@
                   {
                     value: t,
                     virtualItem: n,
-                    children: (0, e.jsx)(el, {
+                    children: (0, e.jsx)(tl, {
                       app: t,
                       active: t === c,
                       size: s,
@@ -8255,7 +8235,7 @@
           ],
         });
       }
-      function el(t) {
+      function tl(t) {
         const {
           app: { icon: c, name: n },
           active: l,
@@ -8265,7 +8245,7 @@
           align: "center",
           gap: "2",
           children: [
-            c && (0, e.jsx)(sl, { icon: c, size: s }),
+            c && (0, e.jsx)(nl, { icon: c, size: s }),
             (0, e.jsx)(K.EY, {
               color: l ? "accent-8" : void 0,
               contrast: l ? void 0 : "title",
@@ -8274,10 +8254,10 @@
           ],
         });
       }
-      const ll = {};
-      function sl(t) {
+      const cl = {};
+      function nl(t) {
         const { icon: c, size: n } = t,
-          [s, r] = (0, l.useState)(!!ll[c]);
+          [s, r] = (0, l.useState)(!!cl[c]);
         (0, l.useEffect)(() => {
           let t = !0;
           return (
@@ -8289,7 +8269,7 @@
             }
           );
         }, []),
-          s && (ll[c] = !0);
+          s && (cl[c] = !0);
         const o = (0, xt.n)(n),
           i = `var(--spacing-${parseInt(o) + 3})`;
         return s
@@ -8300,7 +8280,7 @@
             })
           : (0, e.jsx)(a.az, { width: i, height: i, background: "dull-10" });
       }
-      function rl() {
+      function el() {
         return (0, e.jsx)(i.s, {
           justify: "center",
           align: "center",

@@ -8754,8 +8754,7 @@
           } = _,
           _ = _.bSteamItems,
           _ = (0, _._)("sm"),
-          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app,
-          _ = _(_);
+          _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app;
         return (0, _.jsx)(_._.Provider, {
           value: _,
           children: (0, _.jsx)(_.Provider, {
@@ -8826,22 +8825,7 @@
                                   strSearch: _,
                                 }),
                             }),
-                            _ &&
-                              (0, _.jsx)(_, {
-                                marginLeft: "4",
-                                checked: !!_.bSearchDescriptions,
-                                onChange: (_) =>
-                                  __webpack_require__({
-                                    ..._,
-                                    bSearchDescriptions: _,
-                                  }),
-                                title: _.Localize(
-                                  "#AdvancedSearch_IncludeDescriptions_Tooltip",
-                                ),
-                                children: _.Localize(
-                                  "#AdvancedSearch_IncludeDescriptions",
-                                ),
-                              }),
+                            false,
                           ],
                         }),
                       ],
@@ -8883,13 +8867,6 @@
             }),
           }),
         });
-      }
-      const _ = 440,
-        _ = 570;
-      function _(_) {
-        if (!_) return !1;
-        const _ = _.appid;
-        return _ === _ || _ === _;
       }
       function _(_) {
         const { filter: _, onFilterChange: __webpack_require__, config: _ } = _,
@@ -8946,7 +8923,7 @@
                   __webpack_require__ && _.set("q", __webpack_require__);
                   __webpack_require__ &&
                     _ &&
-                    _(_.app) &&
+                    (_.app, 0) &&
                     _.set("descriptions", "1");
                   for (const _ of Object.keys(_))
                     if (_[_])

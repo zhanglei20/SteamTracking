@@ -415,11 +415,8 @@ ${COMMUNITY_CDN_URL}public/sounds/webui/steam_voice_channel_exit.m4a?v=1
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_message_old_smooth.m4a
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_smoother_friend_join.m4a
 ${COMMUNITY_CDN_URL}public/sounds/webui/ui_steam_smoother_friend_online.m4a
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${}&v=1&origin=${}
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${}&v=1&origin=${}
-${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=${}&origin=${}
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=1&origin=${}
 ${COMMUNITY_URL}app/${DOTA_APP_ID}/guides
 ${COMMUNITY_URL}app/570/guides
@@ -427,8 +424,6 @@ ${COMMUNITY_URL}broadcast/watchnew/${}?origin=https://${}&enablechat=0&enablevid
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
-${HELP_BASE_URL}${strISOCode}/
-${HELP_BASE_URL}${strISOCode}/faqs/view/0CAD-3B4D-B874-A065
 ${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}/faqs/view/4F8E-AE41-B6B1-F836
 ${HELP_BASE_URL}/wizard/HelpChangePassword
@@ -1189,7 +1184,6 @@ ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
 ${PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo
 ${PARTNER_BASE_URL}seasonpass/ajaxgetreleasedorupcomingdlc?parentappid=${}
-${PARTNER_BASE_URL}steamdirect
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
 ${PARTNER_BASE_URL}steamml/edit_problem
@@ -1259,7 +1253,6 @@ ${STORE_BASE_URL}/userreviews/rate/${}
 ${STORE_BASE_URL}/userreviews/votetag/${}
 ${STORE_BASE_URL}about
 ${STORE_BASE_URL}about/
-${STORE_BASE_URL}account
 ${STORE_BASE_URL}account/
 ${STORE_BASE_URL}account/ajaxgetcontrollersused
 ${STORE_BASE_URL}account/ajaxhardwaredelete
@@ -1267,7 +1260,6 @@ ${STORE_BASE_URL}account/ajaxhardwarerename
 ${STORE_BASE_URL}account/ajaxsetcookiepreferences
 ${STORE_BASE_URL}account/ajaxsetnotificationsettings
 ${STORE_BASE_URL}account/cookiepreferences
-${STORE_BASE_URL}account/cookiepreferences/
 ${STORE_BASE_URL}account/emailoptout
 ${STORE_BASE_URL}account/emailoptout/app
 ${STORE_BASE_URL}account/familymanagement/
@@ -1300,7 +1292,6 @@ ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}app${appid}/landing/${sale_update_landing_page_vanity_id}
 ${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
-${STORE_BASE_URL}app/${appid}/
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${completed_appid}
 ${STORE_BASE_URL}app/${id}
@@ -1332,7 +1323,6 @@ ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts
 ${STORE_BASE_URL}charts/
 ${STORE_BASE_URL}charts/steamdecktopplayed
-${STORE_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=wishlist
 ${STORE_BASE_URL}communityrecommendations/
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
@@ -1364,7 +1354,6 @@ ${STORE_BASE_URL}curators/
 ${STORE_BASE_URL}curators/${_ ? "ajaxfollow/" : "ajaxignore/"}
 ${STORE_BASE_URL}curators/ajaxfindcuratorlists
 ${STORE_BASE_URL}curators/ajaxgetmycuratorsalelists
-${STORE_BASE_URL}data_outbound
 ${STORE_BASE_URL}developer/${m_strVanity}/
 ${STORE_BASE_URL}developer/${vanity}/
 ${STORE_BASE_URL}digitalgiftcards/
@@ -1421,7 +1410,6 @@ ${STORE_BASE_URL}gameexplorer/exploreplayedlist
 ${STORE_BASE_URL}genre/Early%20Access/
 ${STORE_BASE_URL}genre/Free%20to%20Play/
 ${STORE_BASE_URL}greatondeck
-${STORE_BASE_URL}hardware_recycling/
 ${STORE_BASE_URL}hwsurvey/
 ${STORE_BASE_URL}itemstore/${nAppID}/
 ${STORE_BASE_URL}itemstore/${nAppID}/detail/${nItemDefID}
@@ -1439,8 +1427,6 @@ ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}
 ${STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${}&model=${similarity_model}
 ${STORE_BASE_URL}labs/ajaxgetsimilaritymodelnames
 ${STORE_BASE_URL}labs/trendingreviews/
-${STORE_BASE_URL}legal/
-${STORE_BASE_URL}login/${_ ? `?redir=${}` : ""}
 ${STORE_BASE_URL}login/?redir=${}
 ${STORE_BASE_URL}login/?steamtv
 ${STORE_BASE_URL}login?redir=${}
@@ -1496,7 +1482,6 @@ ${STORE_BASE_URL}points/shop/event/${}/reward/${defid}
 ${STORE_BASE_URL}points/shop/profileshowcases
 ${STORE_BASE_URL}pointssummary/
 ${STORE_BASE_URL}privacy_agreement
-${STORE_BASE_URL}privacy_agreement/
 ${STORE_BASE_URL}prizes/nextdraw/${}
 ${STORE_BASE_URL}promotion/ajaxclaimstickerforgenre
 ${STORE_BASE_URL}promotion/ajaxhasclaimedgenresticker
@@ -1561,7 +1546,6 @@ ${STORE_BASE_URL}stats/support?json=1
 ${STORE_BASE_URL}stats/supportdata.json
 ${STORE_BASE_URL}stats/userdata.json?days_back=3
 ${STORE_BASE_URL}steam_refunds
-${STORE_BASE_URL}steam_refunds/
 ${STORE_BASE_URL}steamawards/
 ${STORE_BASE_URL}steamawards/ajaxgetsteamawardeventdetails
 ${STORE_BASE_URL}steamawards/ajaxgetuservotes
@@ -1597,11 +1581,6 @@ ${STORE_BASE_URL}wishlist/profiles/${}/?wng=${}#sort=discount
 ${STORE_BASE_URL}yearinreview/
 ${STORE_CDN_URL}/categories/headerimage/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}/categories/headerimage/tags/${}?cc=${COUNTRY}&l=${LANGUAGE}
-${STORE_CDN_URL}/public/shared/images/footer/pw_logo.svg?v=1
-${STORE_CDN_URL}/public/shared/images/footer/valve_logo.svg?v=1
-${STORE_CDN_URL}/public/shared/images/footer/wechat_logo.svg?v=1
-${STORE_CDN_URL}/public/shared/images/footer/weibo_logo.svg?v=1
-${STORE_CDN_URL}/public/shared/images/responsive/logo_valve_footer.png
 ${STORE_CDN_URL}categories/image/
 ${STORE_CDN_URL}categories/image/category/${handle}?cc=${COUNTRY}&l=${LANGUAGE}
 ${STORE_CDN_URL}categories/image/category/${}?cc=${COUNTRY}&l=${LANGUAGE}
@@ -1621,7 +1600,6 @@ ${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
 ${STORE_ICON_BASE_URL}${}/
 ${STORE_ICON_BASE_URL}${}/header.jpg
-${STORE_ITEM_BASE_URL}${filename}
 ${STORE_ITEM_BASE_URL}${}
 ${STORE_ITEM_BASE_URL}steam/apps/${}/portrait.png
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
@@ -1944,7 +1922,6 @@ ${m_strRSSFeedURL}${}
 ${m_strRedirectURL}
 ${m_strWebAPIBaseURL}I${}Service/${}/v${}
 ${mp4_url}${_ ? _ : _}
-${mustBeURL}${}
 ${optional_url}${value}
 ${override_url}${}
 ${page_url}${m_sCurrentPage}
@@ -2004,8 +1981,6 @@ ${webm_url}${_ ? _ : _}
 ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home
-/wishlist/id/${profile_url}/
-Navigation type ${navigationType} can intercept ${canIntercept} path ${url} info: ${}
 [url=${HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${}[/url]
 http://
 http://${}
@@ -2013,12 +1988,9 @@ http://dashif.org/guidelines/thumbnail_tile${}
 http://help.steampowered.com/
 http://localhost:${}/
 http://proxy
-http://qr.weibo.cn/g/7kla92
 http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
 http://steamloopback.host
 http://store-tc.k.steam.net/graph
-http://twitter.com/steam
-http://weixin.qq.com/r/LC-K0i3EunDFrWmx93o_
 http://www.dota2.com
 http://www.dota2.com/700
 http://www.dota2.com/acolyteofthelostarts
@@ -2052,11 +2024,7 @@ http://www.dota2.com/thebetaisover/
 http://www.dota2.com/threespirits/
 http://www.dota2.com/winter2016
 http://www.dota2.com/wraithnight/
-http://www.facebook.com/Steam
 http://www.facebook.com/sharer.php?
-http://www.steampowered.com/steamworks/
-http://www.valvesoftware.com
-http://www.valvesoftware.com/legal.htm
 http://www.w3.org/1998/Math/MathML
 http://www.w3.org/1999/xhtml
 http://www.w3.org/1999/xlink
@@ -2298,7 +2266,6 @@ https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=933
 https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=938
 https://help.steampowered.com/en/wizard/HelpWithPublishingEvent
 https://help.steampowered.com/faqs/view/1025-BD94-12FC-3409
-https://help.steampowered.com/faqs/view/10BB-D27A-6378-4436
 https://help.steampowered.com/faqs/view/17DA-EC4C-7D5B-8266
 https://help.steampowered.com/faqs/view/1E45-57ED-9153-7EF4
 https://help.steampowered.com/faqs/view/2EA8-4D75-DA21-31EB
@@ -3011,9 +2978,7 @@ https://www.store.steampowered.com
 https://www.twitch.tv/
 https://www.twitch.tv/directory/game/Dota%202
 https://www.twitch.tv/valve
-https://www.valvesoftware.com
 https://www.valvesoftware.com/
-https://www.valvesoftware.com/about
 https://www.valvesoftware.com/en/about
 https://www.wanmei.com/
 https://www.youtube-nocookie.com
