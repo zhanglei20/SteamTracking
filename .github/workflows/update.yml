@@ -61,15 +61,20 @@ jobs:
             support-
 
       - name: Run update
+        id: update
         env:
           STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
         run: |
+          BEFORE=$(git rev-parse HEAD)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           bash update.sh
+          if [[ "$(git rev-parse HEAD)" != "$BEFORE" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Dispatch to ValveProtobufs
-        if: success()
+        if: steps.update.outputs.changed == 'true'
         run: gh api repos/SteamTracking/Protobufs/dispatches -f event_type=sync
         env:
           GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
