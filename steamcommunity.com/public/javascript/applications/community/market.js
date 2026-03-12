@@ -2146,6 +2146,8 @@
                 variant: "default",
                 name: "q",
                 autoComplete: "off",
+                popoverWidth: (t) =>
+                  `clamp( ${t.unTargetWidth}px, 440px, 95vw )`,
               }),
             }),
           }),
@@ -7591,32 +7593,39 @@
       }
       function Be(t) {
         var c, n;
-        const { value: s, onTextChange: a, app: o, onClearApp: v, ...h } = t,
-          d = (0, ue.b)(),
-          u = null == o ? void 0 : o.appid,
-          p = (0, r.I)({
-            queryKey: ["market_search_suggestions", s, u],
+        const {
+            value: s,
+            onTextChange: a,
+            app: o,
+            onClearApp: v,
+            popoverWidth: h,
+            ...d
+          } = t,
+          u = (0, ue.b)(),
+          p = null == o ? void 0 : o.appid,
+          f = (0, r.I)({
+            queryKey: ["market_search_suggestions", s, p],
             queryFn: async () => {
               const t = await fetch(
-                `/market/searchsuggestionsresults?q=${s}${u ? `&appid=${u}` : ""}${d ? "&debug=1" : ""}`,
+                `/market/searchsuggestionsresults?q=${s}${p ? `&appid=${p}` : ""}${u ? "&debug=1" : ""}`,
               );
               return await t.json();
             },
             placeholderData: (t) => t,
             enabled: !!s && s.length >= 2,
-            staleTime: d ? 0 : 1 / 0,
+            staleTime: u ? 0 : 1 / 0,
           }),
-          f = (
-            (null === (c = p.data) || void 0 === c ? void 0 : c.results) || []
-          ).map((t) => t.market_hash_name),
           g = (
-            (null === (n = p.data) || void 0 === n ? void 0 : n.results) || []
+            (null === (c = f.data) || void 0 === c ? void 0 : c.results) || []
+          ).map((t) => t.market_hash_name),
+          m = (
+            (null === (n = f.data) || void 0 === n ? void 0 : n.results) || []
           ).slice(0, 10),
-          m = F({
+          C = F({
             onTextChange: a,
-            suggestions: f,
+            suggestions: g,
             onSuggestionSelected: (t, c) => {
-              const n = g.find((c) => c.market_hash_name === t);
+              const n = m.find((c) => c.market_hash_name === t);
               n &&
                 ((window.location.href = ge.N.Item(
                   n.app_id,
@@ -7625,19 +7634,19 @@
                 c.preventDefault());
             },
           }),
-          [C, x] = (0, l.useState)(!1),
-          [_, j] = (0, l.useState)(!1),
-          y = C || !_,
-          V = (0, Te.wY)(
+          [x, _] = (0, l.useState)(!1),
+          [j, y] = (0, l.useState)(!1),
+          V = x || !j,
+          w = (0, Te.wY)(
             (0, l.useCallback)((t) => {
               const c = t.contentRect.width < 300;
-              x(c);
+              _(c);
             }, []),
           ),
-          w = o
+          b = o
             ? (0, e.jsxs)(i.s, {
                 cursor: "pointer",
-                radius: h.radius || "sm",
+                radius: d.radius || "sm",
                 background: "dull-6",
                 paddingY: "1",
                 paddingX: "2",
@@ -7653,34 +7662,35 @@
                     src: o.icon,
                     alt: "",
                   }),
-                  (0, e.jsx)(Ge, { visible: !y, children: o.name }),
+                  (0, e.jsx)(Ge, { visible: !V, children: o.name }),
                   (0, e.jsx)(k, {}),
                 ],
               })
             : null,
-          b =
-            o && !y
+          S =
+            o && !V
               ? Dt.Localize(
                   "#AdvancedSearch_TextSearch_PlaceholderWithApp",
                   o.name,
                 )
               : Dt.Localize("#AdvancedSearch_TextSearch_Placeholder");
         return (0, e.jsxs)(W.Root, {
-          state: m,
+          state: C,
+          popoverWidth: h,
           children: [
             (0, e.jsx)(W.TextInput, {
               value: s,
-              placeholder: b,
-              ...h,
+              placeholder: S,
+              ...d,
               title: Dt.Localize("#AdvancedSearch_TextSearch_Tooltip"),
-              beforeContent: w,
-              ref: V,
-              onFocus: () => j(!0),
-              onBlur: () => j(!1),
+              beforeContent: b,
+              ref: w,
+              onFocus: () => y(!0),
+              onBlur: () => y(!1),
               clearable: !0,
             }),
             (0, e.jsx)(W.Suggestions, {
-              children: g.map((t, c) =>
+              children: m.map((t, c) =>
                 (0, e.jsx)(
                   De,
                   {

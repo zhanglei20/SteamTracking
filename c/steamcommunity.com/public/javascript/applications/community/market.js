@@ -2503,6 +2503,8 @@
                 variant: "default",
                 name: "q",
                 autoComplete: "off",
+                popoverWidth: (_) =>
+                  `clamp( ${_.unTargetWidth}px, 440px, 95vw )`,
               }),
             }),
           }),
@@ -9057,7 +9059,14 @@
       }
       function _(_) {
         var _, _;
-        const { value: _, onTextChange: _, app: _, onClearApp: _, ..._ } = _,
+        const {
+            value: _,
+            onTextChange: _,
+            app: _,
+            onClearApp: _,
+            popoverWidth: _,
+            ..._
+          } = _,
           _ = (0, _._)(),
           _ = null == _ ? void 0 : _.appid,
           _ = (0, _._)({
@@ -9136,6 +9145,7 @@
               : _.Localize("#AdvancedSearch_TextSearch_Placeholder");
         return (0, _.jsxs)(_.Root, {
           state: _,
+          popoverWidth: _,
           children: [
             (0, _.jsx)(_.TextInput, {
               value: _,
