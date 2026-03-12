@@ -76,7 +76,7 @@ const __dirname = import.meta.dirname;
  * @property {Map<string, string>} exportedIds
  */
 
-const outputPath = pathResolve(__dirname, "../ValveProtobufs/webui/");
+const outputPath = pathResolve(__dirname, "ProtobufsWebui/");
 const files = await GetFilesToParse();
 
 const NotImplemented = "NotImplemented";

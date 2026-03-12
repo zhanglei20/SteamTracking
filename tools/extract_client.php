@@ -26,6 +26,7 @@ class ClientExtractor
 		$this->DumpStrings();
 		$this->ProcessJavascript();
 		$this->FixEncodings();
+		$this->DeleteDirectory( self::LINUX_BINS_DIR );
 
 		$this->Log( '{green}Done extracting client' );
 	}

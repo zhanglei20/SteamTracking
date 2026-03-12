@@ -1,6 +1,8 @@
 name: Track Steam Updates
 
 on:
+  schedule:
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 
 concurrency:
@@ -20,3 +22,54 @@ jobs:
         with:
           submodules: true
           fetch-depth: 1
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: 'stable'
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '10.x'
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Restore .support cache
+        uses: actions/cache@v5
+        with:
+          path: .support
+          key: support-${{ github.run_id }}
+          restore-keys: |
+            support-
+
+      - name: Run update
+        env:
+          STEAM_API_KEY: ${{ secrets.STEAM_API_KEY }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          bash update.sh
+
+      - name: Dispatch to ValveProtobufs
+        if: success()
+        run: gh api repos/SteamDatabase/Protobufs/dispatches -f event_type=sync
+        env:
+          GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}

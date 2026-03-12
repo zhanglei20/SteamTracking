@@ -8,6 +8,7 @@ if [[ -f "${LOCKFILE}" ]] && kill -0 "$(cat "${LOCKFILE}" || true)" 2>/dev/null;
 	exit 1
 fi
 
+mkdir -p "$(dirname "${LOCKFILE}")"
 echo $$ > "${LOCKFILE}"
 
 git_commit_message() {
@@ -30,7 +31,7 @@ php update.php "$@"
 
 git add -A
 MESSAGE=$(git_commit_message)
-git commit -S -a -m "${MESSAGE}" || true
+git commit -a -m "${MESSAGE}" || true
 git push
 
 rm "${LOCKFILE}"

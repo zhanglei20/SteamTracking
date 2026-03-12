@@ -3,22 +3,6 @@ declare(strict_types=1);
 
 ini_set( 'memory_limit', '1G' ); // Some files may be big
 
-if( \function_exists( 'sys_getloadavg' ) )
-{
-	if( ( \sys_getloadavg()[ 1 ] ?? 0.0 ) > 5.0 )
-	{
-		echo 'Not running due to high cpu load';
-		exit;
-	}
-}
-
-// Enable error tracking
-if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
-{
-	require '/var/www/steamdb.info/Library/MagicLoad.php';
-	require '/var/www/steamdb.info/Library/Bugsnag/Autoload.php';
-}
-
 	new SteamTracker( isset( $argv ) && count( $argv ) === 2 ? $argv[ 1 ] : '' );
 
 	class SteamTracker
@@ -28,7 +12,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		private int $CurrentTime;
 		private bool $UseCache = true;
 		private bool $ExtractClientArchives = false;
-		private bool $SyncProtobufs = false;
 		private bool $DumpJavascriptFiles = false;
 		private bool $UpdateManifestUrls = false;
 		private bool $UpdateSSRUrls = false;
@@ -81,12 +64,12 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				$this->UseCache = false;
 			}
 
-			$ApiKeyPath = __DIR__ . '/.support/apikey.txt';
-			$ETagsPath  = __DIR__ . '/.support/etags.json';
+			$ETagsPath = __DIR__ . '/.support/etags.json';
+			$ApiKey = getenv( 'STEAM_API_KEY' );
 
-			if( !file_exists( $ApiKeyPath ) )
+			if( $ApiKey === false || $ApiKey === '' )
 			{
-				$this->Log( '{lightred}Missing ' . $ApiKeyPath );
+				$this->Log( '{lightred}Missing STEAM_API_KEY environment variable' );
 
 				exit( 1 );
 			}
@@ -96,7 +79,7 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				$this->ETags = json_decode( file_get_contents( $ETagsPath ), true );
 			}
 
-			$this->APIKey = trim( file_get_contents( $ApiKeyPath ) );
+			$this->APIKey = trim( $ApiKey );
 			$this->CurrentTime = time( );
 
 			$this->URLsToFetch = $this->ParseUrls( );
@@ -188,29 +171,22 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 			if( $this->ExtractClientArchives )
 			{
+				$this->Log( '{lightblue}Building tools' );
+				system( 'bash build.sh' );
+
 				$this->Log( '{lightblue}Extracting client archives' );
 				$this->DumpJavascriptFiles = true;
-				$this->SyncProtobufs = true;
 
 				system( escapeshellarg( PHP_BINARY ) . ' tools/extract_client.php' );
 			}
 
 			if( $this->DumpJavascriptFiles )
 			{
-				$this->SyncProtobufs = true;
-
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
 				system( 'node dump_javascript_protobufs.mjs' );
 				system( 'node dump_javascript_urls.mjs' );
 				system( 'node tools/dump_javascript_svg.mjs' );
-			}
-
-			if( $this->SyncProtobufs && DIRECTORY_SEPARATOR === '/' )
-			{
-				$this->Log( '{lightblue}Syncing protobufs' );
-
-				system( 'bash ../ValveProtobufs/update.sh' );
 			}
 
 			$this->Log( '{lightblue}Done' );
@@ -419,6 +395,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 			{
 				$this->Log( 'Dumping mobile app' );
 
+				$Folder = dirname( $File );
+
+				if( !is_dir( $Folder ) )
+				{
+					mkdir( $Folder, 0755, true );
+				}
+
 				file_put_contents( $File, $Data );
 
 				$Zip = new ZipArchive();
@@ -454,6 +437,13 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 
 				$File = __DIR__ . '/' . $File;
 
+				$Folder = dirname( $File );
+
+				if( !is_dir( $Folder ) )
+				{
+					mkdir( $Folder, 0755, true );
+				}
+
 				file_put_contents( $File, $Data );
 
 				$this->ExtractClientArchives = true;
@@ -469,6 +459,8 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 				}
 
 				$Data = preg_replace( '/[&\?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
+				$Data = str_replace( 'akamai.steamstatic', 'fastly.steamstatic', $Data );
+				$Data = str_replace( '_cdn=akamai', '_cdn=fastly', $Data );
 
 				if( $File === 'Random/About.html' )
 				{
