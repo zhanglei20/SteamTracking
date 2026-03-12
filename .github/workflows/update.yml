@@ -70,6 +70,6 @@ jobs:
 
       - name: Dispatch to ValveProtobufs
         if: success()
-        run: gh api repos/SteamDatabase/Protobufs/dispatches -f event_type=sync
+        run: gh api repos/SteamTracking/Protobufs/dispatches -f event_type=sync
         env:
           GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}

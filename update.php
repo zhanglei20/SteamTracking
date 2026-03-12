@@ -41,7 +41,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		/** @var array<int, mixed> */
 		private array $Options =
 		[
-			CURLOPT_USERAGENT      => 'SteamDB',
+			CURLOPT_USERAGENT      => 'SteamTracking (+https://github.com/SteamTracking/SteamTracking)',
 			CURLOPT_ENCODING       => '',
 			CURLOPT_HEADER         => 1,
 			CURLOPT_AUTOREFERER    => 0,
