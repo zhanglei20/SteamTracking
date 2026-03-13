@@ -1048,6 +1048,11 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 			foreach( $Folders as $Folder => $NewChunks )
 			{
+				if( !is_dir( $Folder ) )
+				{
+					continue;
+				}
+
 				foreach( new DirectoryIterator( $Folder ) as $FileInfo )
 				{
 					if( $FileInfo->isDot() )
