@@ -1,9 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# Update
-git submodule update --remote --merge
-
 # ProtobufDumper
 cd SteamKit
 dotnet clean --configuration Release Resources/ProtobufDumper/ProtobufDumper/ProtobufDumper.csproj
