@@ -1021,7 +1021,7 @@
           } = t,
           o = (function (t, c, n, e, l) {
             var s, r;
-            return t
+            let a = t
               .replace(
                 /%assetid%/,
                 null !== (s = null == n ? void 0 : n.assetid) && void 0 !== s
@@ -1036,6 +1036,17 @@
               )
               .replace(/%owner_steamid%/, null != e ? e : "")
               .replace(/%listingid%/, null != l ? l : "");
+            (null == n ? void 0 : n.asset_properties) &&
+              n.asset_properties.forEach((t) => {
+                let c = "";
+                void 0 !== t.float_value
+                  ? (c = t.float_value.toString())
+                  : void 0 !== t.int_value
+                    ? (c = t.int_value.toString())
+                    : void 0 !== t.string_value && (c = t.string_value),
+                  (a = a.replace(`%propid:${t.propertyid}%`, c));
+              });
+            return (a = a.replace(/%propid:[0-9]+%/, "")), a;
           })(c.link, 0, l, s, a);
         if (o.startsWith("javascript:")) {
           const t = o.substring(11),

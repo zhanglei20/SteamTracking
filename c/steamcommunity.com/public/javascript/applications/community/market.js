@@ -1276,7 +1276,7 @@
           } = _,
           _ = (function (_, _, _, _, _) {
             var _, _;
-            return _.replace(
+            let _ = _.replace(
               /%assetid%/,
               null !== (_ = null == _ ? void 0 : _.assetid) && void 0 !== _
                 ? _
@@ -1290,6 +1290,17 @@
               )
               .replace(/%owner_steamid%/, null != _ ? _ : "")
               .replace(/%listingid%/, null != _ ? _ : "");
+            (null == _ ? void 0 : _.asset_properties) &&
+              _.asset_properties.forEach((_) => {
+                let _ = "";
+                void 0 !== _.float_value
+                  ? (_ = _.float_value.toString())
+                  : void 0 !== _.int_value
+                    ? (_ = _.int_value.toString())
+                    : void 0 !== _.string_value && (_ = _.string_value),
+                  (_ = _.replace(`%propid:${_.propertyid}%`, _));
+              });
+            return (_ = _.replace(/%propid:[0-9]+%/, "")), _;
           })(_.link, 0, _, _, _);
         if (_.startsWith("javascript:")) {
           const _ = _.substring(11),
