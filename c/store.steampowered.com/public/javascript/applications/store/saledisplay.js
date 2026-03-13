@@ -5760,10 +5760,13 @@
             eventModel: _,
             children: (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
-                promotionName: _,
-                language: __webpack_require__,
-                eventModel: _,
-                bIsPreview: _,
+                curator_clanid: _?.clanSteamID?.GetAccountID(),
+                children: (0, _.jsx)(_._, {
+                  promotionName: _,
+                  language: __webpack_require__,
+                  eventModel: _,
+                  bIsPreview: _,
+                }),
               }),
             }),
           }),

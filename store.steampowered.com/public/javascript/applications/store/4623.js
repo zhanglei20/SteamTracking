@@ -1529,16 +1529,17 @@
                 () => s.Ay.GetLinkParam({ ...p, feature: n || p.feature }, i),
                 [p, n, i],
               ),
-              f = r.useMemo(
-                () => c.A.AddNavParamToURL(t.GetStorePageURL(), h),
-                [t, h],
+              f = r.useMemo(() => c.A.GetCuratorClanIDParam(p), [p]),
+              g = r.useMemo(
+                () => c.A.AddNavParamToURL(t.GetStorePageURL(), h, f),
+                [t, h, f],
               ),
-              g = (0, a.b)(),
-              x = r.useCallback(() => {
-                _ && m.current != _ && (g.AddImpression(_, h), (m.current = _));
-              }, [g, _, h, m]),
-              C = (0, l.OO)({ onEnter: x });
-            return { ...u, href: f, ref: _ && !d ? C : void 0 };
+              x = (0, a.b)(),
+              C = r.useCallback(() => {
+                _ && m.current != _ && (x.AddImpression(_, h), (m.current = _));
+              }, [x, _, h, m]),
+              j = (0, l.OO)({ onEnter: C });
+            return { ...u, href: g, ref: _ && !d ? j : void 0 };
           })(e);
         return (0, i.jsx)(t, { ...n });
       }

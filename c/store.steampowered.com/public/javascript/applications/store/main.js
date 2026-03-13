@@ -1779,6 +1779,27 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 39049601,
+        _ = 41316928,
+        _ = 4397053,
+        _ = 4,
+        _ = 20,
+        _ = 45559995,
+        _ = 45902273,
+        _ = [4145017, 35143931, _, _, _];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       var _;
       function _(_) {
         return _ === _.k_ESteamRealmChina;
@@ -40787,10 +40808,12 @@
 	"verifiedprogram": 100756,
 	"trailercarousel": 100757
 }`);
+      var _ = __webpack_require__("chunkid");
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _.AddNavParamToURL(_, _);
+          const _ = _.GetSNRLinkParam(_, __webpack_require__),
+            _ = _.GetCuratorClanIDParam(_);
+          return _.AddNavParamToURL(_, _, _);
         }
         static ParseSNR(_) {
           const _ = _.split("_") || [];
@@ -40803,7 +40826,7 @@
             depth: _[5] ? Number(_[5]) : void 0,
           };
         }
-        static GetLinkParam(_, _ = null) {
+        static GetSNRLinkParam(_, _ = null) {
           let _ = _.ComputeLinkPrefix(
             _.domain,
             _.controller,
@@ -40814,13 +40837,19 @@
           const _ = _.EncodeEventComponent(_.feature);
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
-        static AddNavParamToURL(_, _) {
+        static GetCuratorClanIDParam(_) {
+          return _.curator_clanid ?? null;
+        }
+        static AddNavParamToURL(_, _, _) {
           if (!_ || 0 == _.length) return _;
           try {
             const _ = new URL((0, _._)(_)),
               _ = new URLSearchParams(_.search);
             return (
               _.set("snr", encodeURIComponent(_ ?? "")),
+              _ &&
+                !_._.includes(_) &&
+                _.set("curator_clanid", encodeURIComponent(_ ?? "")),
               _.origin + _.pathname + "?" + _.toString() + _.hash
             );
           } catch (_) {
@@ -40904,6 +40933,7 @@
               __webpack_require__.submethod,
               __webpack_require__.feature,
               __webpack_require__.depth,
+              __webpack_require__.curator_clanid,
             ],
           );
         return (0, _.jsx)(_.Provider, {
@@ -40921,8 +40951,17 @@
               submethod: _.submethod,
               feature: _.feature,
               depth: _.depth,
+              curator_clanid: _?.curator_data?.clanid,
             }),
-            [_.domain, _.controller, _.method, _.submethod, _.feature, _.depth],
+            [
+              _.domain,
+              _.controller,
+              _.method,
+              _.submethod,
+              _.feature,
+              _.depth,
+              _?.curator_data?.clanid,
+            ],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -40956,7 +40995,7 @@
         const _ = _();
         return _.useMemo(
           () =>
-            _._.GetLinkParam(
+            _._.GetSNRLinkParam(
               {
                 ..._,
                 feature: _ || _.feature,
@@ -40967,14 +41006,15 @@
         );
       }
       function _(_, _, _, _) {
-        const _ = _._.GetLinkParam(
-          {
-            ..._,
-            feature: _ || _.feature,
-          },
-          _,
-        );
-        return _._.AddNavParamToURL(_, _);
+        const _ = _._.GetSNRLinkParam(
+            {
+              ..._,
+              feature: _ || _.feature,
+            },
+            _,
+          ),
+          _ = _._.GetCuratorClanIDParam(_);
+        return _._.AddNavParamToURL(_, _, _);
       }
       function _(_) {
         const { href: _, ...__webpack_require__ } = _,
@@ -46909,8 +46949,9 @@
         }, [_, _, _, _]);
       }
       function _(_, _, __webpack_require__ = null) {
-        const _ = _(_, __webpack_require__);
-        return _._.AddNavParamToURL(_, _);
+        const _ = _(_, __webpack_require__),
+          _ = _ ? _._.GetCuratorClanIDParam(_) : null;
+        return _._.AddNavParamToURL(_, _, _);
       }
       function _(_, _, _, _ = null) {
         const _ = _(_, _, _);
@@ -46958,13 +46999,14 @@
           );
         }
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _._.AddNavParamToURL(_, _);
+          const _ = _.GetLinkParam(_, __webpack_require__),
+            _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
+          return _._.AddNavParamToURL(_, _, _);
         }
         static GetLinkParam(_, _ = null) {
           let _, _;
           if ("string" != typeof _) {
-            if (_.domain) return _._.GetLinkParam(_, _);
+            if (_.domain) return _._.GetSNRLinkParam(_, _);
             _ = _.feature || "";
           }
           if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())

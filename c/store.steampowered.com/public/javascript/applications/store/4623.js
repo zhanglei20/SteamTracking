@@ -1674,9 +1674,10 @@
                   ),
                 [_, _, _],
               ),
+              _ = _.useMemo(() => _._.GetCuratorClanIDParam(_), [_]),
               _ = _.useMemo(
-                () => _._.AddNavParamToURL(_.GetStorePageURL(), _),
-                [_, _],
+                () => _._.AddNavParamToURL(_.GetStorePageURL(), _, _),
+                [_, _, _],
               ),
               _ = (0, _._)(),
               _ = _.useCallback(() => {

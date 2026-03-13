@@ -5,7 +5,7 @@
   [3615],
   {
     60092: (e, t, r) => {
-      r.d(t, { g: () => Wt });
+      r.d(t, { g: () => qt });
       var i,
         n,
         a,
@@ -5745,8 +5745,9 @@
         vt = r(12155),
         jt = r(32754),
         Ft = r(77021),
-        Pt = r(8092);
-      function Wt(e) {
+        Pt = r(8092),
+        Wt = r(27939);
+      function qt(e) {
         const {
             eventModel: t,
             partnerEventStore: r,
@@ -5943,12 +5944,12 @@
                           ),
                         }),
                       Boolean(y && g && M) &&
-                        (0, s.jsx)(It, {
+                        (0, s.jsx)(Ct, {
                           clanAccountID: t.clanSteamID.GetAccountID(),
                           gidClanEvent: M,
                         }),
                       Boolean(
-                        y && g && u.bv == w && t.GetContentHubCategory(),
+                        y && g && Wt.bv == w && t.GetContentHubCategory(),
                       ) &&
                         (0, s.jsx)("a", {
                           href: `${st.TS.PARTNER_BASE_URL}admin/store/contenthub/categories?edit=${t.GetContentHubCategory()}`,
@@ -5981,9 +5982,9 @@
                           children: (0, et.we)("#EventDisplay_ViewOnStore"),
                         }),
                       (0, s.jsx)(zt, { eventModel: t }),
-                      (0, s.jsx)(Tt, { eventModel: t }),
+                      (0, s.jsx)(Ot, { eventModel: t }),
                       Boolean(st.iA.is_support) &&
-                        (0, s.jsx)(qt, { eventModel: t }),
+                        (0, s.jsx)(Tt, { eventModel: t }),
                       f &&
                         (0, s.jsx)("div", {
                           className: ft.DisplayAdminPanelClose,
@@ -6020,7 +6021,7 @@
         }
         return (0, s.jsx)("span", {});
       }
-      function qt(e) {
+      function Tt(e) {
         const { eventModel: t } = e,
           r = (0, Je.Fb)(),
           [i] = (0, Rt.QD)(d.jD, void 0);
@@ -6095,7 +6096,7 @@
             })
           : null;
       }
-      function Tt(e) {
+      function Ot(e) {
         const { eventModel: t } = e,
           r = (0, c.q3)(() => t.jsondata.sale_sections),
           i = (0, m.useMemo)(
@@ -6103,10 +6104,10 @@
             [r],
           );
         return i?.badge_progress?.levels?.length > 0 && st.iA.is_support
-          ? (0, s.jsx)(Ot, { section: i })
+          ? (0, s.jsx)(It, { section: i })
           : null;
       }
-      function Ot(e) {
+      function It(e) {
         const { section: t } = e,
           r = (0, g.fy)(t.badge_progress?.event_badgeid),
           i = (0, c.q3)(() => t.badge_progress.levels),
@@ -6128,7 +6129,7 @@
             }),
         });
       }
-      function It(e) {
+      function Ct(e) {
         const { clanAccountID: t, gidClanEvent: r } = e,
           i = Ke(t, r);
         return i

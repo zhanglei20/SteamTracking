@@ -5388,7 +5388,7 @@
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)(),
-          _ = _._.GetLinkParam(_),
+          _ = _._.GetSNRLinkParam(_),
           { mutateAsync: _ } = (0, _._)(_, !_, _),
           _ = _.useCallback(async () => {
             const { appid: _ } = _;

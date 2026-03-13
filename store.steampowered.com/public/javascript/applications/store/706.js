@@ -4668,7 +4668,7 @@
           a = (0, u.Fh)(t),
           s = (0, m.BD)(t),
           l = (0, c.n9)(),
-          C = d.A.GetLinkParam(l),
+          C = d.A.GetSNRLinkParam(l),
           { mutateAsync: _ } = (0, p.L)(t, !a, C),
           h = w.useCallback(async () => {
             const { appid: t } = e;

@@ -8308,16 +8308,17 @@
                 () => r.Ay.GetLinkParam({ ...h, feature: a || h.feature }, n),
                 [h, a, n],
               ),
-              g = s.useMemo(
-                () => l.A.AddNavParamToURL(t.GetStorePageURL(), _),
-                [t, _],
+              g = s.useMemo(() => l.A.GetCuratorClanIDParam(h), [h]),
+              S = s.useMemo(
+                () => l.A.AddNavParamToURL(t.GetStorePageURL(), _, g),
+                [t, _, g],
               ),
-              S = (0, i.b)(),
-              x = s.useCallback(() => {
-                p && m.current != p && (S.AddImpression(p, _), (m.current = p));
-              }, [S, p, _, m]),
-              C = (0, c.OO)({ onEnter: x });
-            return { ...u, href: g, ref: p && !d ? C : void 0 };
+              x = (0, i.b)(),
+              C = s.useCallback(() => {
+                p && m.current != p && (x.AddImpression(p, _), (m.current = p));
+              }, [x, p, _, m]),
+              v = (0, c.OO)({ onEnter: C });
+            return { ...u, href: S, ref: p && !d ? v : void 0 };
           })(e);
         return (0, n.jsx)(t, { ...a });
       }
@@ -9571,31 +9572,30 @@
         return `${["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"][t]}_${e}`;
       }
       var Ee = a(22837),
-        Be = a(62641),
-        Re = a(96859),
-        Ge = a(56330),
-        Le = a(52948),
-        Me = a(62490),
-        Pe = a(87853),
-        Ue = a.n(Pe);
-      function Oe(e) {
-        let t = Ue().PlatinumSection;
+        Be = a(96859),
+        Re = a(56330),
+        Ge = a(52948),
+        Le = a(62490),
+        Me = a(87853),
+        Pe = a.n(Me);
+      function Ue(e) {
+        let t = Pe().PlatinumSection;
         switch (e) {
           case 1:
-            t = Ue().GoldSection;
+            t = Pe().GoldSection;
             break;
           case 2:
-            t = Ue().SilverSection;
+            t = Pe().SilverSection;
             break;
           case 3:
-            t = Ue().BronzeSection;
+            t = Pe().BronzeSection;
         }
         return t;
       }
-      function Fe(e, t, a, n, s, r, i, o) {
+      function Oe(e, t, a, n, s, r, i, o) {
         t?.length > 25 &&
           e.jsondata.sale_sections.push({
-            ...(0, Re.Sm)("items", "#Sale_default_label_148"),
+            ...(0, Be.Sm)("items", "#Sale_default_label_148"),
             capsules: t.map((e) => ({
               id: e,
               type: n.has(e) ? "dlc" : "game",
@@ -9621,13 +9621,13 @@
             prefer_demo_store_page: Boolean(o),
           });
       }
-      function He(e, t, a, n, s, r, i, o) {
+      function Fe(e, t, a, n, s, r, i, o) {
         if (Y.iA.logged_in) {
           const l = O.Fm.Get(),
             c = t.filter((e) => l.BIsGameWishlisted(e));
           c?.length > 0 &&
             e.jsondata.sale_sections.push({
-              ...(0, Re.Sm)("items", "#Sale_OnWishlist"),
+              ...(0, Be.Sm)("items", "#Sale_OnWishlist"),
               capsules: c.map((e) => ({
                 id: e,
                 type: n.has(e) ? "dlc" : "game",
@@ -9650,7 +9650,7 @@
           if (d?.length > 0) {
             const t = d.length;
             e.jsondata.sale_sections.push({
-              ...(0, Re.Sm)("items", "#Sale_default_label_RecommendedForYou"),
+              ...(0, Be.Sm)("items", "#Sale_default_label_RecommendedForYou"),
               capsules: d.map((e) => ({
                 id: e,
                 type: n.has(e) ? "dlc" : "game",
@@ -9677,7 +9677,7 @@
             });
             t.length > 0 &&
               e.jsondata.sale_sections.push({
-                ...(0, Re.Sm)("dlc_for_you", "#Sale_default_label_246"),
+                ...(0, Be.Sm)("dlc_for_you", "#Sale_default_label_246"),
                 capsules: t.map((e) => ({ id: e, type: "dlc" })),
                 dlc_for_you_data: {
                   group_by_parent_app: !0,
@@ -9694,7 +9694,7 @@
           }
         }
       }
-      function We(e, t) {
+      function He(e, t) {
         const a = O.Fm.Get(),
           n = [],
           s = [],
@@ -9713,17 +9713,17 @@
                     ? i.push(l)
                     : o.push(l));
         return [
-          ...(0, Me.fW)(n),
-          ...(0, Me.fW)(s),
-          ...(0, Me.fW)(r),
-          ...(0, Me.fW)(i),
-          ...(0, Me.fW)(o),
+          ...(0, Le.fW)(n),
+          ...(0, Le.fW)(s),
+          ...(0, Le.fW)(r),
+          ...(0, Le.fW)(i),
+          ...(0, Le.fW)(o),
         ];
       }
-      function ze(e, t, a, n, s, r, i, o) {
+      function We(e, t, a, n, s, r, i, o) {
         e.jsondata.sale_sections.push({
-          ...(0, Re.Sm)("trailercarousel", ""),
-          capsules: We(t, a).map((e) => ({
+          ...(0, Be.Sm)("trailercarousel", ""),
+          capsules: He(t, a).map((e) => ({
             id: e,
             type: n.has(e) ? "dlc" : "game",
           })),
@@ -9737,25 +9737,26 @@
           prefer_demo_store_page: Boolean(o),
         });
       }
+      var ze = a(27939);
       function Ve(e, t, a, n, s) {
         const { data: r } = (0, i.I)({
           queryKey: ["useMonthEventModel", e],
           queryFn: () => {
             try {
               return (function (e, t, a, n, s) {
-                const r = (0, Re.U)(Be.wv, e),
+                const r = (0, Be.U)(ze.wv, e),
                   i = !1,
                   o = [...s, ...a],
                   l = new Set(s);
                 if (
                   ((r.jsondata.sale_sections = []),
-                  a.length > 9 && ze(r, a, n, l, i),
+                  a.length > 9 && We(r, a, n, l, i),
                   a?.length > 25)
                 )
                   for (let e in n) {
                     const t = n[e];
                     r.jsondata.sale_sections.push({
-                      ...(0, Re.Sm)("items", "#SteamCharts_Monthly_Rank_" + e),
+                      ...(0, Be.Sm)("items", "#SteamCharts_Monthly_Rank_" + e),
                       capsules: t.map((e) => ({
                         id: e,
                         type: l.has(e) ? "dlc" : "game",
@@ -9768,14 +9769,14 @@
                       border_width: 1,
                       default_subtitle:
                         "#SteamCharts_Monthly_Rank_" + e + "_subtitle",
-                      sale_section_classname: Oe(Number.parseInt(e)),
+                      sale_section_classname: Ue(Number.parseInt(e)),
                       prefer_assets_without_overrides: i,
                     });
                   }
                 else {
                   const e = Object.values(a).flat();
                   r.jsondata.sale_sections.push({
-                    ...(0, Re.Sm)("items", "#SteamCharts_Monthly_Rank_All"),
+                    ...(0, Be.Sm)("items", "#SteamCharts_Monthly_Rank_All"),
                     capsules: e.map((e) => ({
                       id: e,
                       type: l.has(e) ? "dlc" : "game",
@@ -9785,19 +9786,19 @@
                     single_item_style: a?.length < 9 ? "library" : "bordered",
                     show_as_carousel: !1,
                     use_random_order: !0,
-                    sale_section_classname: Ue().AllTiers,
+                    sale_section_classname: Pe().AllTiers,
                     prefer_assets_without_overrides: i,
                   });
                 }
                 return (
-                  He(r, o, s, l, i),
-                  Fe(r, a, t, l, i),
+                  Fe(r, o, s, l, i),
+                  Oe(r, a, t, l, i),
                   r.jsondata.sale_sections.push({
-                    ...(0, Re.Sm)(
+                    ...(0, Be.Sm)(
                       "social_share",
                       "#EventDisplay_Share_WithFriendsHeader",
                     ),
-                    social_share: (0, Re.r3)(),
+                    social_share: (0, Be.r3)(),
                   }),
                   r
                 );
@@ -9821,18 +9822,18 @@
           } = e,
           o = Ve(n, i, a, r, t),
           l = (0, Ee.sf)(Y.TS.LANGUAGE),
-          c = (0, Re.oR)();
+          c = (0, Be.oR)();
         return !o || c
           ? null === o
             ? (0, s.jsx)("div", {
-                className: Ge.ErrorStylesWithIcon,
+                className: Re.ErrorStylesWithIcon,
                 children: (0, Ce.we)("#Error_ErrorCommunicatingWithNetwork"),
               })
             : (0, s.jsx)(ye.t, {
                 string: (0, Ce.we)("#Loading"),
                 position: "center",
               })
-          : (0, s.jsx)(Le._, {
+          : (0, s.jsx)(Ge._, {
               eventModel: o,
               language: l,
               bIsPreview: !1,
@@ -12714,9 +12715,9 @@
           queryFn: () => {
             try {
               return (function (e, t, a) {
-                const n = (0, Re.U)(Be.yT, "" + e),
+                const n = (0, Be.U)(ze.yT, "" + e),
                   s = !0,
-                  r = { ...(0, Re.Sm)("tabs", ""), tabs: [] };
+                  r = { ...(0, Be.Sm)("tabs", ""), tabs: [] };
                 return (
                   a.forEach((e, t) => {
                     r.tabs.push({
@@ -12736,7 +12737,7 @@
                       d = new Set(c),
                       u = [...c, ...o];
                     n.jsondata.sale_sections.push({
-                      ...(0, Re.Sm)("text_section", ""),
+                      ...(0, Be.Sm)("text_section", ""),
                       text_section_contents: [
                         (0, Ce.we)(a.strTabSubTitleToken, e, e + 1),
                       ],
@@ -12747,7 +12748,7 @@
                     for (let e in l) {
                       const t = l[e];
                       n.jsondata.sale_sections.push({
-                        ...(0, Re.Sm)("items", "#SteamCharts_Yearly_Rank_" + e),
+                        ...(0, Be.Sm)("items", "#SteamCharts_Yearly_Rank_" + e),
                         capsules: t.map((e) => ({
                           id: e,
                           type: d.has(e) ? "dlc" : "game",
@@ -12762,7 +12763,7 @@
                         default_subtitle:
                           "#SteamCharts_Yearly_Rank_" + e + "_subtitle",
                         show_on_tabs: [r.tabs[i].unique_id],
-                        sale_section_classname: Oe(Number.parseInt(e)),
+                        sale_section_classname: Ue(Number.parseInt(e)),
                         prefer_assets_without_overrides: s,
                         show_deck_compability_details: Boolean(
                           a.bShowDeckCompat,
@@ -12771,7 +12772,7 @@
                         prefer_demo_store_page: Boolean(a.bShowDemoInfo),
                       });
                     }
-                    He(
+                    Fe(
                       n,
                       u,
                       c,
@@ -12781,7 +12782,7 @@
                       Boolean(a.bShowDeckCompat),
                       Boolean(a.bShowDemoInfo),
                     ),
-                      ze(
+                      We(
                         n,
                         o,
                         l,
@@ -12791,7 +12792,7 @@
                         Boolean(a.bShowDeckCompat),
                         Boolean(a.bShowDemoInfo),
                       ),
-                      Fe(
+                      Oe(
                         n,
                         o,
                         t,
@@ -12803,7 +12804,7 @@
                       );
                   }),
                   n.jsondata.sale_sections.push({
-                    ...(0, Re.Sm)("text_section", ""),
+                    ...(0, Be.Sm)("text_section", ""),
                     text_section_contents: [
                       (0, Ce.we)("#SteamCharts_Yearly_FAQ") +
                         "\n" +
@@ -12811,11 +12812,11 @@
                     ],
                   }),
                   n.jsondata.sale_sections.push({
-                    ...(0, Re.Sm)(
+                    ...(0, Be.Sm)(
                       "social_share",
                       "#EventDisplay_Share_WithFriendsHeader",
                     ),
-                    social_share: (0, Re.r3)(),
+                    social_share: (0, Be.r3)(),
                   }),
                   n
                 );
@@ -12833,18 +12834,18 @@
         const { rgTabsData: t, nYear: a, facets: n } = e,
           r = xn(a, n, t),
           i = (0, Ee.sf)(Y.TS.LANGUAGE),
-          o = (0, Re.oR)();
+          o = (0, Be.oR)();
         return !r || o
           ? null === r
             ? (0, s.jsx)("div", {
-                className: Ge.ErrorStylesWithIcon,
+                className: Re.ErrorStylesWithIcon,
                 children: (0, Ce.we)("#Error_ErrorCommunicatingWithNetwork"),
               })
             : (0, s.jsx)(ye.t, {
                 string: (0, Ce.we)("#Loading"),
                 position: "center",
               })
-          : (0, s.jsx)(Le._, {
+          : (0, s.jsx)(Ge._, {
               eventModel: r,
               language: i,
               bIsPreview: !1,

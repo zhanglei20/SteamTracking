@@ -197,13 +197,6 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -219,6 +212,7 @@
         broadcast_whitelist: [],
       };
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -269,13 +263,6 @@
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
       const _ = 593110,
         _ = [_, 766, 221410],
-        _ = 39049601,
-        _ = 41316928,
-        _ = 4397053,
-        _ = 4,
-        _ = 20,
-        _ = 45559995,
-        _ = 45902273,
         _ = [12, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
@@ -1648,7 +1635,7 @@
         BIsNextFest() {
           const _ = this.jsondata.sale_vanity_id;
           return (
-            new _._(this.clanSteamID).GetAccountID() == _ &&
+            new _._(this.clanSteamID).GetAccountID() == _._ &&
             _ &&
             _.toLowerCase().startsWith("nextfest")
           );

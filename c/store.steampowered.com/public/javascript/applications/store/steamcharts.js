@@ -9082,9 +9082,10 @@
                   ),
                 [_, _, _],
               ),
+              _ = _.useMemo(() => _._.GetCuratorClanIDParam(_), [_]),
               _ = _.useMemo(
-                () => _._.AddNavParamToURL(_.GetStorePageURL(), _),
-                [_, _],
+                () => _._.AddNavParamToURL(_.GetStorePageURL(), _, _),
+                [_, _, _],
               ),
               _ = (0, _._)(),
               _ = _.useCallback(() => {
@@ -10528,7 +10529,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
         let _ = _().PlatinumSection;
@@ -10692,6 +10692,7 @@
           prefer_demo_store_page: Boolean(_),
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_, _, _, _, _) {
         const { data: _ } = (0, _._)({
           queryKey: ["useMonthEventModel", _],

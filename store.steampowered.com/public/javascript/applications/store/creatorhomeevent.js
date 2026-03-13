@@ -5223,11 +5223,14 @@
           children: (0, a.jsx)(C, {
             eventModel: s,
             children: (0, a.jsx)(S.oJ, {
-              children: (0, a.jsx)(u._, {
-                promotionName: n,
-                language: t,
-                eventModel: s,
-                bIsPreview: v,
+              children: (0, a.jsx)(S.Ay, {
+                curator_clanid: s?.clanSteamID?.GetAccountID(),
+                children: (0, a.jsx)(u._, {
+                  promotionName: n,
+                  language: t,
+                  eventModel: s,
+                  bIsPreview: v,
+                }),
               }),
             }),
           }),
