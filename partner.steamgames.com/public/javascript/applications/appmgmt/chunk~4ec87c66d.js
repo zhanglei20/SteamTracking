@@ -13028,18 +13028,26 @@
                 this.BHasTakeoverIDs() ||
                 this.BHasContentHubTakeoverIDs() ||
                 this.BHasSteamChinaTakeoverID() ||
-                this.BHasContentHubTakeoverIDs()
+                this.BHasContentHubTakeoverIDs() ||
+                ["takeover", "hub_takeover", "steamchina_takeover"].includes(
+                  this.GetFeaturingIntention(),
+                )
               );
             case "takeunder_art":
             case "takeunder_mobile_art":
-              return this.BHasTakeunderIDs();
+              return (
+                this.BHasTakeunderIDs() ||
+                ["takeunder", "regional_takeunder"].includes(
+                  this.GetFeaturingIntention(),
+                )
+              );
             case "sale_header":
             case "sale_logo":
             case "capsule":
             case "product_banner":
             case "product_mobile_banner":
             case "localized_title_image":
-              return this.BHasAssociatedSaleEvent();
+              return this.BHasAssociatedSaleEvent() || this.BRequiresSalePage();
             case "app_header_capsule":
             case "app_main_capsule":
               return this.BHasAdvertisingAppID();
@@ -14427,6 +14435,7 @@
               last_modified_account: _.iA.accountid,
               admin_accounts: [_.iA.accountid],
               last_modified_time: D,
+              requires_sale_page: Boolean(e.bSalePagePlanned),
               create_time: D,
             };
           u && (w.spotlight_ids = [u]),
@@ -41595,6 +41604,20 @@
           className: v().AssetNeedsColumn,
           children: [
             (0, a.jsx)("h3", { children: "Required Assets" }),
+            (0, a.jsxs)("div", {
+              children: [
+                (0, a.jsx)("p", {
+                  children:
+                    "What are all of these theses? Why do we need them?",
+                }),
+                (0, a.jsx)("a", {
+                  href: "https://confluence.valve.org/spaces/SteamBiz/pages/456000086/Asset+Types+and+Purpose",
+                  target: "_blank",
+                  children: "Learn More.",
+                }),
+              ],
+            }),
+            (0, a.jsx)("br", {}),
             h.cV
               .filter((e) => !r.I8.includes(e) && !r.Ue.includes(e))
               .map((e) =>
@@ -66486,12 +66509,13 @@
           [ee, te] = m.useState(!1),
           [se, ae] = m.useState(!1),
           [ne, ie] = m.useState(void 0),
-          [re, oe] = m.useState(0),
-          { fnCreateDiscountEvent: le } = (0, r.ur)(),
-          [ce, de] = m.useState("assetrequest" != v),
-          [me, ue] = (0, m.useState)(!0),
+          [re, oe] = m.useState(void 0),
+          [le, ce] = m.useState(0),
+          { fnCreateDiscountEvent: de } = (0, r.ur)(),
+          [me, ue] = m.useState("assetrequest" != v),
           [pe, he] = (0, m.useState)(!0),
-          [_e, ge] = (0, m.useState)(() => {
+          [_e, ge] = (0, m.useState)(!0),
+          [Se, ve] = (0, m.useState)(() => {
             switch (v) {
               case "midweek":
                 return 11;
@@ -66503,21 +66527,21 @@
                 return 1;
             }
           }),
-          [Se, ve] = (0, m.useState)(!1),
-          [fe, ye] = (0, m.useState)("important" == v),
-          [xe, be] = m.useState("important" == v);
+          [fe, ye] = (0, m.useState)(!1),
+          [xe, be] = (0, m.useState)("important" == v),
+          [De, we] = m.useState("important" == v);
         (0, m.useEffect)(() => {
-          ve("important" == v), ye("important" == v);
+          ye("important" == v), be("important" == v);
         }, [v]);
-        const [De, we] = (0, m.useState)(null),
-          [je, Ie] = (0, m.useState)(!1),
-          [Ce] = (0, p.G6)((0, u.M9)(Q), (0, u.pk)(Q), {
+        const [je, Ie] = (0, m.useState)(null),
+          [Ce, Te] = (0, m.useState)(!1),
+          [Ae] = (0, p.G6)((0, u.M9)(Q), (0, u.pk)(Q), {
             include_assets: !0,
             include_all_purchase_options: !0,
             include_platforms: !0,
           }),
-          Te = (0, m.useCallback)(
-            (e, t, s, a, n, i, r, o, l, c, d, m, u) => {
+          Be = (0, m.useCallback)(
+            (e, t, s, a, n, i, r, o, l, c, d, m, u, p) => {
               Y({
                 type: e,
                 strName: t,
@@ -66531,9 +66555,10 @@
                 strMarketingMessageID: c,
                 strTakeoverID: d,
                 strTakeunderID: m,
+                bSalePagePlanned: p,
               }).then((e) => {
                 e
-                  ? (we(e),
+                  ? (Ie(e),
                     u ||
                       (window.location.href =
                         j.TS.PARTNER_BASE_URL +
@@ -66546,11 +66571,11 @@
             },
             [Y],
           ),
-          Ae = Boolean("vacation" == v);
-        let Be = null;
+          ke = Boolean("vacation" == v);
+        let Me = null;
         return (
-          je &&
-            (Be =
+          Ce &&
+            (Me =
               "All slots are already reserved. Please be thoughtful if you are adding a new entry."),
           (0, a.jsx)(f.o0, {
             strTitle: "Create Promotion Planning Entry",
@@ -66566,7 +66591,7 @@
               0 == O.trim().length ||
               se ||
               !(0, I.tm)(v, z, W) ||
-              (Q && !Ce && !V),
+              (Q && !Ae && !V),
             onOK: async () => {
               ae(!0);
               let e = null,
@@ -66575,21 +66600,21 @@
                 a = null,
                 r = null,
                 o = null;
-              if (ce && 0 != re && !ee && !Ae) {
+              if (me && 0 != le && !ee && !ke) {
                 let t = W;
                 if (i.Qo.has(v)) {
                   const e = i.Qo.get(v);
                   t = z + e.nDaysDiscountEvent * w.Kp.PerDay;
                 }
-                const s = (0, A.m)(v, z, Ce, Q);
-                await le(
+                const s = (0, A.m)(v, z, Ae, Q);
+                await de(
                   z,
                   t,
                   s,
                   s,
                   i.ZL.get(v),
-                  [re],
-                  Q.appid ? [Q.appid] : Ce?.GetIncludedAppIDs(),
+                  [le],
+                  Q.appid ? [Q.appid] : Ae?.GetIncludedAppIDs(),
                 )
                   .then((t) => (e = t.id))
                   .catch((e) => {
@@ -66600,7 +66625,7 @@
                       ie(o);
                   });
               }
-              if (me && (Ce || V) && !ee && !Ae) {
+              if (pe && (Ae || V) && !ee && !ke) {
                 const e = (0, P.s)(
                   O,
                   "Weekend Deal",
@@ -66610,8 +66635,8 @@
                     ? "#spotlight_midweek_madness"
                     : "#spotlight_weekend_deal",
                   "#promo_ends_custom",
-                  Ce
-                    ? { id: Ce.GetID(), storeItemType: Ce.GetStoreItemType() }
+                  Ae
+                    ? { id: Ae.GetID(), storeItemType: Ae.GetStoreItemType() }
                     : { id: (0, u.M9)(Q), storeItemType: (0, u._P)(Q) },
                 );
                 await $(e)
@@ -66626,8 +66651,8 @@
                     ie("Spotlight Creation Failed: " + (0, x.H)(e).strErrorMsg),
                   );
               }
-              if (pe && (Ce || V) && !ee && !Ae) {
-                const e = (0, B.D)(O, _e, z, W, "#msg_action_details", Ce);
+              if (_e && (Ae || V) && !ee && !ke) {
+                const e = (0, B.D)(O, Se, z, W, "#msg_action_details", Ae);
                 await X(e, !0)
                   .then((e) => {
                     e
@@ -66644,9 +66669,9 @@
                     ),
                   );
               }
-              !Se ||
+              !fe ||
                 ee ||
-                Ae ||
+                ke ||
                 (await J(n.ii.k_ConfigPage_Takeover, O, z, W)
                   .then((e) => {
                     e
@@ -66661,9 +66686,9 @@
                         (0, x.H)(e).strErrorMsg,
                     ),
                   )),
-                !fe ||
+                !xe ||
                   ee ||
-                  Ae ||
+                  ke ||
                   (await J(n.ii.k_ConfigPage_Takeunder, O, z, W)
                     .then((e) => {
                       e
@@ -66678,20 +66703,21 @@
                           (0, x.H)(e).strErrorMsg,
                       ),
                     )),
-                Te(
+                Be(
                   v,
                   O,
                   z,
                   W,
                   e,
-                  re,
-                  Q && !Ae ? (0, u.M9)(Q) : void 0,
-                  Q && !Ae ? (0, u.pk)(Q) : void 0,
+                  le,
+                  Q && !ke ? (0, u.M9)(Q) : void 0,
+                  Q && !ke ? (0, u.pk)(Q) : void 0,
                   t,
                   s,
                   a,
                   r,
                   o,
+                  re || "saleevent" == v || "themesale" == v,
                 );
             },
             children: (0, a.jsxs)("div", {
@@ -66705,12 +66731,12 @@
                   }),
                 Boolean(ne) &&
                   (0, a.jsx)("div", { className: _.ErrorStyles, children: ne }),
-                Boolean(Be) &&
+                Boolean(Me) &&
                   (0, a.jsx)("div", {
                     className: _.WarningStylesBackground,
-                    children: Be,
+                    children: Me,
                   }),
-                Boolean(De) &&
+                Boolean(je) &&
                   (0, a.jsxs)(a.Fragment, {
                     children: [
                       (0, a.jsx)("p", {
@@ -66720,7 +66746,7 @@
                         href:
                           j.TS.PARTNER_BASE_URL +
                           "promotion" +
-                          k.PromotionRoutes.PromotionPlanEditor(De),
+                          k.PromotionRoutes.PromotionPlanEditor(je),
                         children: "Open New Plan in Editor",
                       }),
                     ],
@@ -66729,7 +66755,7 @@
                 (0, a.jsx)(L, {
                   type: v,
                   setType: (e) => {
-                    "assetrequest" == e && de(!1), R(e);
+                    "assetrequest" == e && ue(!1), R(e);
                   },
                 }),
                 (0, a.jsx)(h.pd, {
@@ -66740,13 +66766,20 @@
                   value: O,
                   onChange: (e) => F(e?.currentTarget?.value || ""),
                 }),
+                ("midweek" == v || "weekenddeal" == v) &&
+                  (0, a.jsx)(h.Yh, {
+                    label:
+                      "Is this going to need a sale page? Publisher, Developer or franchise sales?",
+                    checked: re,
+                    onChange: oe,
+                  }),
                 (0, a.jsx)(U, {
                   type: v,
                   rtStartTime: z,
                   setStartTime: q,
                   rtEndTime: W,
                   setEndTime: H,
-                  fnSetSlotFull: Ie,
+                  fnSetSlotFull: Te,
                 }),
                 Boolean(
                   ("midweek" == v || "weekenddeal" == v) &&
@@ -66764,7 +66797,7 @@
                       }),
                     ],
                   }),
-                Boolean(!Ae) &&
+                Boolean(!ke) &&
                   (0, a.jsxs)(a.Fragment, {
                     children: [
                       (0, a.jsx)(h.JU, {
@@ -66775,7 +66808,7 @@
                           id: (0, u.M9)(Q),
                           itemType: (0, u.pk)(Q),
                         }),
-                      Boolean(Q && !Ce) &&
+                      Boolean(Q && !Ae) &&
                         (0, a.jsxs)(a.Fragment, {
                           children: [
                             (0, a.jsx)("div", {
@@ -66808,9 +66841,9 @@
                                 children: [
                                   (0, a.jsx)(h.Yh, {
                                     label: "Create discount event",
-                                    checked: ce && 0 != re,
-                                    onChange: de,
-                                    disabled: 0 == re || "assetrequest" == v,
+                                    checked: me && 0 != le,
+                                    onChange: ue,
+                                    disabled: 0 == le || "assetrequest" == v,
                                     tooltip:
                                       "Uncheck the box to skip creating the discount event. You can create a discount event separately and associate with the daily deal. The discount event being present will let us find the package discount associated with the daily deal.",
                                   }),
@@ -66818,37 +66851,37 @@
                                     label: "Create Spotlight",
                                     tooltip:
                                       "Create a spotlight for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                                    onChange: ue,
-                                    checked: me,
+                                    onChange: he,
+                                    checked: pe,
                                   }),
                                   (0, a.jsx)(h.Yh, {
                                     label: "Create Marketing Message",
                                     tooltip:
                                       "Create a Marketing Message for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                                    onChange: he,
-                                    checked: pe,
+                                    onChange: ge,
+                                    checked: _e,
                                   }),
-                                  pe &&
-                                    (0, a.jsx)(N.Bl, { type: _e, setType: ge }),
+                                  _e &&
+                                    (0, a.jsx)(N.Bl, { type: Se, setType: ve }),
                                   (0, a.jsx)(h.Yh, {
                                     label: "Create Frontpage Takeover",
                                     tooltip:
                                       "Create a Fronpage Takeover for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                                    onChange: ve,
-                                    checked: Se,
+                                    onChange: ye,
+                                    checked: fe,
                                   }),
                                   (0, a.jsx)(h.Yh, {
                                     label: "Create Takeunder",
                                     tooltip:
                                       "Create a Takeunder for the same duration as the plan. This can be edited seperately or created and linked afterwards.",
-                                    onChange: ye,
-                                    checked: fe,
+                                    onChange: be,
+                                    checked: xe,
                                   }),
                                   (0, a.jsx)(E.H, {
                                     nStoreItemID: (0, u.M9)(Q),
                                     eStoreItemType: (0, u.pk)(Q),
-                                    nPartnerID: re,
-                                    setPartnerID: oe,
+                                    nPartnerID: le,
+                                    setPartnerID: ce,
                                   }),
                                   !1,
                                 ],

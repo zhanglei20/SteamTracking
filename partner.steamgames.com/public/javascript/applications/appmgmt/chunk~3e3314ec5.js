@@ -599,7 +599,9 @@
               if (3 == r.data.eState) {
                 this.m_mapPriceProposals.delete(e);
                 for (const r of this.m_rgKnownPriceKeys)
-                  this.m_mapPackagePrice.get(e).set(r, n.prices[r]);
+                  this.m_mapPackagePrice.has(e) ||
+                    this.m_mapPackagePrice.set(e, new Map()),
+                    this.m_mapPackagePrice.get(e).set(r, n.prices[r]);
               } else
                 (n.eState = r.data.eState),
                   (n.proposalKey = r.data.proposalKey),

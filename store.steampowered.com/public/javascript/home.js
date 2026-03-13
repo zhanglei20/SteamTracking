@@ -724,7 +724,7 @@ GHomepage = {
 		}
 
 		GDynamicStore.DecorateDynamicItems( $CapTarget );
-		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 0, false, null, $Parent.hasClass( 'v2' ) );
+		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), 5, false, null, $Parent.hasClass( 'v2' ) );
 
 		$Parent.css( 'minHeight', '' );
 	},

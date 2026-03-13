@@ -13383,18 +13383,26 @@
                 this.BHasTakeoverIDs() ||
                 this.BHasContentHubTakeoverIDs() ||
                 this.BHasSteamChinaTakeoverID() ||
-                this.BHasContentHubTakeoverIDs()
+                this.BHasContentHubTakeoverIDs() ||
+                ["takeover", "hub_takeover", "steamchina_takeover"].includes(
+                  this.GetFeaturingIntention(),
+                )
               );
             case "takeunder_art":
             case "takeunder_mobile_art":
-              return this.BHasTakeunderIDs();
+              return (
+                this.BHasTakeunderIDs() ||
+                ["takeunder", "regional_takeunder"].includes(
+                  this.GetFeaturingIntention(),
+                )
+              );
             case "sale_header":
             case "sale_logo":
             case "capsule":
             case "product_banner":
             case "product_mobile_banner":
             case "localized_title_image":
-              return this.BHasAssociatedSaleEvent();
+              return this.BHasAssociatedSaleEvent() || this.BRequiresSalePage();
             case "app_header_capsule":
             case "app_main_capsule":
               return this.BHasAdvertisingAppID();
@@ -14762,6 +14770,7 @@
               last_modified_account: _._.accountid,
               admin_accounts: [_._.accountid],
               last_modified_time: _,
+              requires_sale_page: Boolean(_.bSalePagePlanned),
               create_time: _,
             };
           _ && (_.spotlight_ids = [_]),
@@ -44487,6 +44496,20 @@
             (0, _.jsx)("h3", {
               children: "Required Assets",
             }),
+            (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("p", {
+                  children:
+                    "What are all of these theses? Why do we need them?",
+                }),
+                (0, _.jsx)("a", {
+                  href: "https://confluence.valve.org/spaces/SteamBiz/pages/456000086/Asset+Types+and+Purpose",
+                  target: "_blank",
+                  children: "Learn More.",
+                }),
+              ],
+            }),
+            (0, _.jsx)("br", {}),
             _._.filter((_) => !_._.includes(_) && !_._.includes(_)).map((_) =>
               (0, _.jsx)(
                 "div",
@@ -72001,6 +72024,7 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
           [_, _] = _.useState(0),
           { fnCreateDiscountEvent: _ } = (0, _._)(),
           [_, _] = _.useState("assetrequest" != _),
@@ -72032,7 +72056,7 @@
             include_platforms: !0,
           }),
           _ = (0, _.useCallback)(
-            (_, _, _, _, _, _, _, _, _, _, _, _, _) => {
+            (_, _, _, _, _, _, _, _, _, _, _, _, _, _) => {
               _({
                 type: _,
                 strName: _,
@@ -72046,6 +72070,7 @@
                 strMarketingMessageID: _,
                 strTakeoverID: _,
                 strTakeunderID: _,
+                bSalePagePlanned: _,
               }).then((_) => {
                 _
                   ? (_(_),
@@ -72213,6 +72238,7 @@
                   _,
                   _,
                   _,
+                  _ || "saleevent" == _ || "themesale" == _,
                 );
             },
             children: (0, _.jsxs)("div", {
@@ -72268,6 +72294,13 @@
                   value: _,
                   onChange: (_) => _(_?.currentTarget?.value || ""),
                 }),
+                ("midweek" == _ || "weekenddeal" == _) &&
+                  (0, _.jsx)(_._, {
+                    label:
+                      "Is this going to need a sale page? Publisher, Developer or franchise sales?",
+                    checked: _,
+                    onChange: _,
+                  }),
                 (0, _.jsx)(_, {
                   type: _,
                   rtStartTime: _,

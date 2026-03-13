@@ -3974,58 +3974,68 @@
       }
       const B = { include_release: !0, include_platforms: !0 };
       function N(e) {
-        var t, a, i;
-        const n = new Array(),
-          o = r.A.Get().GetApp(e.id);
-        if (o) {
-          o.BHasDemo() && n.push("Has Demo"),
-            o.BIsComingSoon() && n.push("Coming Soon"),
-            o.BIsEarlyAccess() && n.push("Early Access");
-          const e = o.GetPlatforms();
-          e.steamos_linux && n.push("Linux"),
-            e.mac && n.push("Mac"),
+        var t, a, i, n, o, s;
+        const l = new Array(),
+          d = r.A.Get().GetApp(e.id);
+        if (d) {
+          d.BHasDemo() && l.push("Has Demo"),
+            d.BIsComingSoon() && l.push("Coming Soon"),
+            d.BIsEarlyAccess() && l.push("Early Access");
+          const e = d.GetPlatforms();
+          e.steamos_linux && l.push("Linux"),
+            e.mac && l.push("Mac"),
             (null === (t = e.vr_support) || void 0 === t ? void 0 : t.vrhmd) &&
-              n.push("VR"),
+              l.push("VR"),
             (null === (a = e.vr_support) || void 0 === a
               ? void 0
-              : a.vrhmd_only) && n.push("VR Only"),
+              : a.vrhmd_only) && l.push("VR Only"),
             (2 != e.steam_deck_compat_category &&
               3 != e.steam_deck_compat_category) ||
-              n.push("Steam Deck Playable"),
-            3 == e.steam_deck_compat_category && n.push("Steam Deck Verified"),
-            (null === (i = o.GetBestPurchaseOption()) || void 0 === i
+              l.push("Steam Deck Playable"),
+            3 == e.steam_deck_compat_category && l.push("Steam Deck Verified"),
+            (((null === (i = d.GetBestPurchaseOption()) || void 0 === i
               ? void 0
-              : i.discount_pct) && n.push("Discounted"),
-            o.BIsFree() && n.push("Free");
-          const s = o.GetAppType();
-          11 === s && n.push("Soundtrack"),
-            4 == s && n.push("DLC"),
-            12 == s && n.push("PlayTest"),
-            o.HasContentDescriptorID(3) && n.push("Adult Only Sexual Content"),
-            o.HasContentDescriptorID(4) &&
-              n.push("Gratuitous/Frequent Nudity or Sexual Content"),
-            o.HasContentDescriptorID(1) && n.push("Nudity or Sexual Content"),
-            o.HasContentDescriptorID(2) && n.push("Violence or Gore"),
-            o.BHasStoreCategory(28) &&
-              (n.push("Full Controller"), n.push("Xbox Controller")),
-            o.BHasStoreCategory(18) && n.push("Xbox Controller"),
-            (o.BHasStoreCategory(55) || o.BHasStoreCategory(56)) &&
-              n.push("PS4 Controller"),
-            (o.BHasStoreCategory(57) || o.BHasStoreCategory(58)) &&
-              n.push("PS5 Controller"),
-            o.BHasStoreCategory(59) && n.push("Steam Input API"),
-            o.BHasStoreCategory(60) && n.push("Gamepad Preferred"),
-            o.BHasStoreCategory(9) && n.push("Coop"),
-            (o.BHasStoreCategory(41) ||
-              o.BHasStoreCategory(42) ||
-              o.BHasStoreCategory(43) ||
-              o.BHasStoreCategory(44)) &&
-              n.push("Remote Play"),
-            o.BHasStoreCategory(44) && n.push("Remote Play Together"),
-            o.BHasStoreCategory(61) && n.push("HDR"),
-            o.BHasTrailers(!1) && n.push("Has Trailer");
+              : i.discount_pct) &&
+              (null === (n = d.GetBestPurchaseOption()) || void 0 === n
+                ? void 0
+                : n.discount_pct) > 0) ||
+              ((null === (o = d.GetBestPurchaseOption()) || void 0 === o
+                ? void 0
+                : o.bundle_discount_pct) &&
+                (null === (s = d.GetBestPurchaseOption()) || void 0 === s
+                  ? void 0
+                  : s.bundle_discount_pct) > 0)) &&
+              l.push("Discounted"),
+            d.BIsFree() && l.push("Free");
+          const r = d.GetAppType();
+          11 === r && l.push("Soundtrack"),
+            4 == r && l.push("DLC"),
+            12 == r && l.push("PlayTest"),
+            d.HasContentDescriptorID(3) && l.push("Adult Only Sexual Content"),
+            d.HasContentDescriptorID(4) &&
+              l.push("Gratuitous/Frequent Nudity or Sexual Content"),
+            d.HasContentDescriptorID(1) && l.push("Nudity or Sexual Content"),
+            d.HasContentDescriptorID(2) && l.push("Violence or Gore"),
+            d.BHasStoreCategory(28) &&
+              (l.push("Full Controller"), l.push("Xbox Controller")),
+            d.BHasStoreCategory(18) && l.push("Xbox Controller"),
+            (d.BHasStoreCategory(55) || d.BHasStoreCategory(56)) &&
+              l.push("PS4 Controller"),
+            (d.BHasStoreCategory(57) || d.BHasStoreCategory(58)) &&
+              l.push("PS5 Controller"),
+            d.BHasStoreCategory(59) && l.push("Steam Input API"),
+            d.BHasStoreCategory(60) && l.push("Gamepad Preferred"),
+            d.BHasStoreCategory(9) && l.push("Coop"),
+            (d.BHasStoreCategory(41) ||
+              d.BHasStoreCategory(42) ||
+              d.BHasStoreCategory(43) ||
+              d.BHasStoreCategory(44)) &&
+              l.push("Remote Play"),
+            d.BHasStoreCategory(44) && l.push("Remote Play Together"),
+            d.BHasStoreCategory(61) && l.push("HDR"),
+            d.BHasTrailers(!1) && l.push("Has Trailer");
         } else console.log("Could not load storeinfo for", e.type, e.id);
-        return n;
+        return l;
       }
       function L(e) {
         const t = A(e);

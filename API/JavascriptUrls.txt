@@ -2238,6 +2238,7 @@ https://confluence.valve.org/display/etc...
 https://confluence.valve.org/display/~adils/Steam+Season+Passes
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://confluence.valve.org/pages/viewpage.action?pageId=320176134
+https://confluence.valve.org/spaces/SteamBiz/pages/456000086/Asset+Types+and+Purpose
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/

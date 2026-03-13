@@ -4073,7 +4073,7 @@
         include_platforms: !0,
       };
       function _(_) {
-        var _, _, _;
+        var _, _, _, _, _, _;
         const _ = new Array(),
           _ = _._.Get().GetApp(_._);
         if (_) {
@@ -4092,9 +4092,19 @@
               3 != _.steam_deck_compat_category) ||
               _.push("Steam Deck Playable"),
             3 == _.steam_deck_compat_category && _.push("Steam Deck Verified"),
-            (null === (_ = _.GetBestPurchaseOption()) || void 0 === _
+            (((null === (_ = _.GetBestPurchaseOption()) || void 0 === _
               ? void 0
-              : _.discount_pct) && _.push("Discounted"),
+              : _.discount_pct) &&
+              (null === (_ = _.GetBestPurchaseOption()) || void 0 === _
+                ? void 0
+                : _.discount_pct) > 0) ||
+              ((null === (_ = _.GetBestPurchaseOption()) || void 0 === _
+                ? void 0
+                : _.bundle_discount_pct) &&
+                (null === (_ = _.GetBestPurchaseOption()) || void 0 === _
+                  ? void 0
+                  : _.bundle_discount_pct) > 0)) &&
+              _.push("Discounted"),
             _.BIsFree() && _.push("Free");
           const _ = _.GetAppType();
           11 === _ && _.push("Soundtrack"),
