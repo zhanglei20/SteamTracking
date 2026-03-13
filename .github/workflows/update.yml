@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: '0 */3 * * *'
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force update (pass "force" argument to update script)'
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: update
@@ -77,7 +83,7 @@ jobs:
           BEFORE=$(git rev-parse HEAD)
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          bash update.sh
+          bash update.sh ${{ inputs.force == true && 'force' || '' }}
           if [[ "$(git rev-parse HEAD)" != "$BEFORE" ]]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
