@@ -1,16 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-LOCKFILE=.support/update.lock
-
-if [[ -f "${LOCKFILE}" ]] && kill -0 "$(cat "${LOCKFILE}" || true)" 2>/dev/null; then
-	echo Still running
-	exit 1
-fi
-
-mkdir -p "$(dirname "${LOCKFILE}")"
-echo $$ > "${LOCKFILE}"
-
 git_commit_message() {
 	local all_changed_files
 	all_changed_files=$(git status --porcelain)
@@ -33,5 +23,3 @@ git add -A
 MESSAGE=$(git_commit_message)
 git commit -a -m "${MESSAGE}" || true
 git push
-
-rm "${LOCKFILE}"

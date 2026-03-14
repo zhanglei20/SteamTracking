@@ -705,11 +705,14 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 							{
 								$ETag = trim( $Test[ 1 ] );
 
-								if( !isset( $this->ETags[ $Request ] ) || !in_array( $ETag, $this->ETags[ $Request ], true ) )
+								$AlreadyHaveETag = isset( $this->ETags[ $Request ] ) && in_array( $ETag, $this->ETags[ $Request ], true );
+
+								if( !$AlreadyHaveETag )
 								{
-									$this->ETags[ $Request ][ time() ] = $ETag;
+									$this->ETags[ $Request ][] = $ETag;
 								}
-								else
+
+								if( $AlreadyHaveETag && file_exists( $Request ) )
 								{
 									$HandleResponse = false;
 									$this->Log( '{green}ETag Matched{normal} - ' . $URL );
@@ -770,24 +773,12 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 			$this->Requests[ (int)$Handle ] = $File;
 
-			if( $this->UseCache )
+			if( $this->UseCache && isset( $this->ETags[ $File ] ) && file_exists( $File ) )
 			{
-				// If we have an ETag saved, add If-None-Match header
-				if( isset( $this->ETags[ $File ] ) )
-				{
-					$Options[ CURLOPT_HTTPHEADER ] =
-					[
-						'If-None-Match: ' . implode( ', ', $this->ETags[ $File ] ),
-						'If-Modified-Since: ' . gmdate( 'D, d M Y H:i:s \G\M\T', array_key_last( $this->ETags[ $File ] ) ),
-					];
-				}
-				else if( file_exists( $File ) )
-				{
-					$Options[ CURLOPT_HTTPHEADER ] =
-					[
-						'If-Modified-Since: ' . gmdate( 'D, d M Y H:i:s \G\M\T', filemtime( $File ) ),
-					];
-				}
+				$Options[ CURLOPT_HTTPHEADER ] =
+				[
+					'If-None-Match: ' . implode( ', ', $this->ETags[ $File ] ),
+				];
 			}
 
 			curl_setopt_array( $Handle, $Options );
