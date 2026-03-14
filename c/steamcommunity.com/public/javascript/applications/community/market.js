@@ -2195,6 +2195,7 @@
             bIsMarket: __webpack_require__,
             bInteractable: _ = !0,
             bIncludeMarketInfo: _ = !0,
+            bHideActionsForUnique: _ = !1,
             steamidOwner: _,
             strSelectItemAction: _,
           } = _,
@@ -2243,6 +2244,7 @@
                     ? (0, _.jsx)(_, {
                         description: _.description,
                         asset: _.asset,
+                        bHideActionsForUnique: _,
                       })
                     : (0, _.jsx)(_, {
                         description: _.description,
@@ -2313,7 +2315,12 @@
       }
       function _(_) {
         var _;
-        const { description: __webpack_require__, asset: _ } = _;
+        const {
+            description: __webpack_require__,
+            asset: _,
+            bHideActionsForUnique: _,
+          } = _,
+          _ = !(_ && !__webpack_require__.commodity);
         return (0, _.jsx)(_.Root, {
           description: __webpack_require__,
           asset: _,
@@ -2350,7 +2357,7 @@
                     hrefGame: `${_._.COMMUNITY_BASE_URL}market/search?appid=${null !== (_ = __webpack_require__.appid) && void 0 !== _ ? _ : 0}`,
                   }),
                   (0, _.jsx)(_.Descriptions, {}),
-                  (0, _.jsx)(_.MarketActions, {}),
+                  _ && (0, _.jsx)(_.MarketActions, {}),
                 ],
               }),
             ],
