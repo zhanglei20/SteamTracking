@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   update:
-    if: github.repository_owner == 'SteamTracking'
+    if: github.repository_owner == 'SteamTracking' || github.event_name != 'schedule'
     runs-on: ubuntu-latest
 
     steps:
