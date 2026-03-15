@@ -38,13 +38,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version: 'current'
           cache: 'npm'
 
       - name: Setup Go
         uses: actions/setup-go@v6
         with:
           go-version: 'stable'
+          cache: false
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
@@ -69,6 +70,14 @@ jobs:
           restore-keys: |
             cache-
 
+      - name: Restore etags cache
+        uses: actions/cache/restore@v5
+        with:
+          path: .support/etags.json
+          key: etags-
+          restore-keys: |
+            etags-
+
       - name: Run update
         id: update
         env:
@@ -82,13 +91,19 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Save etags cache
+        uses: actions/cache/save@v5
+        with:
+          path: .support/etags.json
+          key: etags-${{ hashFiles('.support/etags.json') }}
+
       - name: Save cache
         uses: actions/cache/save@v5
         with:
           path: |
             .support
             store.steampowered.com/ssr
-          key: cache-${{ hashFiles('.support/**', 'store.steampowered.com/ssr/**') }}
+          key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**') }}
 
       - name: Dispatch to ValveProtobufs
         if: steps.update.outputs.changed == 'true'
