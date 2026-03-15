@@ -20,6 +20,7 @@ class ClientExtractor
 	{
 		$this->AppStart = hrtime( true );
 
+		$this->BuildTools();
 		$this->CleanupExistingFiles();
 		$this->ExtractArchives();
 		$this->DumpProtobufs();
@@ -29,6 +30,30 @@ class ClientExtractor
 		$this->DeleteDirectory( self::LINUX_BINS_DIR );
 
 		$this->Log( '{green}Done extracting client' );
+	}
+
+	private function BuildTools() : void
+	{
+		$this->Log( 'Building tools' );
+
+		$ProtobufDumperProject = self::ROOT_DIR . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/ProtobufDumper.csproj';
+
+		$this->RunCommand( 'dotnet clean --configuration Release ' . escapeshellarg( $ProtobufDumperProject ) );
+		$this->RunCommand( 'dotnet publish --configuration Release -p:PublishSingleFile=true --runtime linux-x64 --self-contained ' . escapeshellarg( $ProtobufDumperProject ) );
+
+		$DumpStringsDir = self::ROOT_DIR . '/DumpStrings';
+
+		$this->RunCommand( 'cd ' . escapeshellarg( $DumpStringsDir ) . ' && go build' );
+	}
+
+	private function RunCommand( string $Command ) : void
+	{
+		system( $Command, $ReturnCode );
+
+		if( $ReturnCode !== 0 )
+		{
+			throw new RuntimeException( 'Command failed with code ' . $ReturnCode . ': ' . $Command );
+		}
 	}
 
 	private function DeleteDirectory( string $Dir ) : void

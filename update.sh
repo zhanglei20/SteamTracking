@@ -9,7 +9,7 @@ git_commit_message() {
 	num_files=$(echo "${all_changed_files}" | wc -l)
 
 	local non_c_files
-	non_c_files=$(echo "${all_changed_files}" | grep -v "^.. c/")
+	non_c_files=$(echo "${all_changed_files}" | grep -v "^.. c/" || true)
 
 	local file_list
 	file_list=$(echo "${non_c_files}" | awk '{print $2}' | xargs -r -n1 basename | sed '{:q;N;s/\n/, /g;t q}')

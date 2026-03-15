@@ -171,22 +171,19 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 			if( $this->ExtractClientArchives )
 			{
-				$this->Log( '{lightblue}Building tools' );
-				system( 'bash build.sh' );
-
 				$this->Log( '{lightblue}Extracting client archives' );
 				$this->DumpJavascriptFiles = true;
 
-				system( escapeshellarg( PHP_BINARY ) . ' tools/extract_client.php' );
+				$this->RunCommand( escapeshellarg( PHP_BINARY ) . ' tools/extract_client.php' );
 			}
 
 			if( $this->DumpJavascriptFiles )
 			{
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
-				system( 'node dump_javascript_protobufs.mjs' );
-				system( 'node dump_javascript_urls.mjs' );
-				system( 'node tools/dump_javascript_svg.mjs' );
+				$this->RunCommand( 'node dump_javascript_protobufs.mjs' );
+				$this->RunCommand( 'node dump_javascript_urls.mjs' );
+				$this->RunCommand( 'node tools/dump_javascript_svg.mjs' );
 			}
 
 			$this->Log( '{lightblue}Done' );
@@ -306,28 +303,30 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				foreach( $ApkLinks as &$ApkLink )
 				{
 					$ApkLink = preg_replace( '/^https:\/\/[^\/]+\//', 'https://media.steampowered.com/', $ApkLink );
-
-					if( preg_match( '/\/apps\/([\w-]+)\//', $ApkLink, $AppName ) === 1 )
-					{
-						$this->URLsToFetch[ ] =
-						[
-							'URL'  => $ApkLink,
-							'File' => '.support/archives/' . $AppName[ 1 ] . '.apk',
-						];
-					}
-					else if( str_contains( $ApkLink, '/steamlink/android/' ) )
-					{
-						$this->URLsToFetch[ ] =
-						[
-							'URL'  => $ApkLink,
-							'File' => '.support/archives/steamlink.apk',
-						];
-					}
 				}
 
 				unset( $ApkLink );
 
 				$Data = implode( "\n", $ApkLinks ) . "\n";
+
+				$FilePath = __DIR__ . '/' . $File;
+
+				if( file_exists( $FilePath ) && $Data === file_get_contents( $FilePath ) )
+				{
+					return false;
+				}
+
+				foreach( $ApkLinks as $ApkLink )
+				{
+					if( str_contains( $ApkLink, '/apps/steam-android/' ) )
+					{
+						$this->URLsToFetch[ ] =
+						[
+							'URL'  => $ApkLink,
+							'File' => '.support/archives/steam-android.apk',
+						];
+					}
+				}
 			}
 			else if( $File === 'SSR' )
 			{
@@ -419,7 +418,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 				if( file_exists( '.support/archives/index.android.bundle' ) )
 				{
-					system( './tools/hermes.py .support/archives/index.android.bundle Random/SteamApkStrings.txt' );
+					$this->RunCommand( './tools/hermes.py .support/archives/index.android.bundle Random/SteamApkStrings.txt' );
 					unlink( '.support/archives/index.android.bundle' );
 				}
 
@@ -527,7 +526,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			}
 
 			$OriginalFile = $File;
-			$File = __DIR__ . DIRECTORY_SEPARATOR . $File;
+			$File = __DIR__ . '/' . $File;
 
 			$Folder = dirname( $File );
 
@@ -857,7 +856,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessManifests( array $KnownUrls ) : array
 		{
-			system( 'node generate_manifest_urls.mjs' );
+			$this->RunCommand( 'node generate_manifest_urls.mjs' );
 
 			$URLsToFetch = [];
 			$KnownFilenames = [];
@@ -982,7 +981,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessSSRFiles() : array
 		{
-			system( 'node generate_ssr_urls.mjs' );
+			$this->RunCommand( 'node generate_ssr_urls.mjs' );
 
 			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_ssr.txt';
 
@@ -1089,6 +1088,16 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			$this->Log( '{lightred}Unknown SSR path: ' . $File );
 
 			return null;
+		}
+
+		private function RunCommand( string $Command ) : void
+		{
+			system( $Command, $ReturnCode );
+
+			if( $ReturnCode !== 0 )
+			{
+				throw new RuntimeException( 'Command failed with code ' . $ReturnCode . ': ' . $Command );
+			}
 		}
 
 		private function Log( string $String ) : void
