@@ -1598,21 +1598,18 @@
         for (; _; ) {
           if (_(_)) {
             const _ = window.getComputedStyle(_);
+            if ("fixed" == _.position || "sticky" == _.position) break;
             if (
               !(
                 (_ && "x" != _) ||
-                ("scroll" != _.overflowX &&
-                  "auto" != _.overflowX &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowX && "auto" != _.overflowX)
               )
             )
               break;
             if (
               !(
                 (_ && "y" != _) ||
-                ("scroll" != _.overflowY &&
-                  "auto" != _.overflowY &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowY && "auto" != _.overflowY)
               )
             )
               break;
@@ -1761,11 +1758,11 @@
           _ = 0,
           _ = _;
         for (; _; ) {
-          if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
+          if ("ownerDocument" in _) {
             const _ = window.getComputedStyle(_);
             if ("fixed" === _.position || "sticky" === _.position) break;
           }
-          _ = _.offsetParent;
+          (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
         }
         for (_ = _?.parentElement; _; ) {
           const { scrollTop: _, scrollLeft: _ } = _(_);

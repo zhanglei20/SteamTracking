@@ -4078,11 +4078,11 @@
           r = 0,
           i = e;
         for (; i; ) {
-          if (((t += i.offsetTop), (r += i.offsetLeft), "ownerDocument" in i)) {
+          if ("ownerDocument" in i) {
             const e = window.getComputedStyle(i);
             if ("fixed" === e.position || "sticky" === e.position) break;
           }
-          i = i.offsetParent;
+          (t += i.offsetTop), (r += i.offsetLeft), (i = i.offsetParent);
         }
         for (i = e?.parentElement; i; ) {
           const { scrollTop: e, scrollLeft: n } = D(i);
@@ -33258,21 +33258,18 @@
         for (; r; ) {
           if (i(r)) {
             const e = window.getComputedStyle(r);
+            if ("fixed" == e.position || "sticky" == e.position) break;
             if (
               !(
                 (t && "x" != t) ||
-                ("scroll" != e.overflowX &&
-                  "auto" != e.overflowX &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowX && "auto" != e.overflowX)
               )
             )
               break;
             if (
               !(
                 (t && "y" != t) ||
-                ("scroll" != e.overflowY &&
-                  "auto" != e.overflowY &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowY && "auto" != e.overflowY)
               )
             )
               break;
@@ -67918,7 +67915,9 @@
           return (
             i.push(r.ownerDocument.documentElement),
             (i = i.filter(
-              (e) => e.scrollHeight > e.getBoundingClientRect().height,
+              (e) =>
+                e.scrollHeight > e.getBoundingClientRect().height &&
+                "visible" !== window.getComputedStyle(e).overflowY,
             )),
             i.forEach((e) => e.classList.add(sr.SuppressScrollOnBody)),
             () => i.forEach((e) => e.classList.remove(sr.SuppressScrollOnBody))
@@ -72243,7 +72242,7 @@
             g = n.useCallback(() => {
               m.current?.TakeFocus(), i(void 0);
             }, []),
-            { onCancelButton: p } = (function (e) {
+            { fnReturnFocusToPage: p } = (function (e) {
               const [t, r] = n.useState();
               (0, n.useEffect)(() => {
                 const t = e.current;
@@ -72280,7 +72279,7 @@
                 }
                 return !1;
               }, [t]);
-              return { onCancelButton: t ? i : void 0 };
+              return { fnReturnFocusToPage: t ? i : void 0 };
             })(m),
             h = n.useCallback(() => {
               i(void 0), d();
@@ -72307,6 +72306,7 @@
                 bShowBackdrop: c || !!r,
                 closePopoverAndSearch: h,
                 refPage: t,
+                onMoveDown: p,
                 children: [
                   nr.TS.IN_MOBILE_WEBVIEW
                     ? (0, l.jsx)(Ea, {})
@@ -72365,33 +72365,34 @@
             bShowBackdrop: t,
             closePopoverAndSearch: r,
             refPage: i,
-            children: a,
+            onMoveDown: a,
+            children: o,
           } = e,
-          o = (0, s.Qn)(),
-          [c, u] = n.useState("visible"),
-          [d, m] = n.useState(),
-          [g, p] = n.useState(t),
-          [h, _] = n.useState(!1),
-          [f, b] = n.useState(!1),
-          B = n.useRef(void 0);
-        B.current || (B.current = new WeakMap()),
+          c = (0, s.Qn)(),
+          [u, d] = n.useState("visible"),
+          [m, g] = n.useState(),
+          [p, h] = n.useState(t),
+          [_, f] = n.useState(!1),
+          [b, B] = n.useState(!1),
+          w = n.useRef(void 0);
+        w.current || (w.current = new WeakMap()),
           (0, n.useLayoutEffect)(() => {
-            u("visible");
+            d("visible");
           }, [t]),
           (0, n.useEffect)(() => {
-            "visible" === c && (B.current = new WeakMap());
-          }, [c]);
-        const w = n.useCallback(() => p(t), [t]),
-          y = n.useCallback((e) => {
-            const t = B.current,
+            "visible" === u && (w.current = new WeakMap());
+          }, [u]);
+        const y = n.useCallback(() => h(t), [t]),
+          M = n.useCallback((e) => {
+            const t = w.current,
               r = t.get(e),
               i = "scrollTop" in e ? e.scrollTop : e.scrollY;
-            if ((b(i > 0), void 0 !== r)) {
+            if ((B(i > 0), void 0 !== r)) {
               const e = i - r;
-              if (e > 90 && i > 400) u((e) => ("hidden" != e ? "hide" : e));
+              if (e > 90 && i > 400) d((e) => ("hidden" != e ? "hide" : e));
               else {
                 if (!(e < -30)) return;
-                u((e) => ("visible" != e ? "show" : e));
+                d((e) => ("visible" != e ? "show" : e));
               }
             }
             t.set(e, i);
@@ -72399,27 +72400,27 @@
         (0, Tt.l6)(
           window,
           "scroll",
-          n.useCallback((e) => y(window), [y]),
+          n.useCallback((e) => M(window), [M]),
         );
-        const M = (0, zr.P)(
+        const C = (0, zr.P)(
             n.useCallback(
               (e) => {
                 const t = e.currentTarget;
-                (0, tr.kD)(t) && y(t);
+                (0, tr.kD)(t) && M(t);
               },
-              [y],
+              [M],
             ),
           ),
-          C = n.useCallback((e) => _(e), []);
+          S = n.useCallback((e) => f(e), []);
         (0, n.useEffect)(() => {
-          if (!o || h || !t) return;
+          if (!c || _ || !t) return;
           const e = window.setTimeout(() => r(), 1);
           return () => window.clearTimeout(e);
-        }, [o, h, t, r]),
+        }, [c, _, t, r]),
           (0, n.useEffect)(() => {
-            h && u((e) => ("visible" != e ? "show" : e));
-          }, [h]);
-        const S = (function (e, t) {
+            _ && d((e) => ("visible" != e ? "show" : e));
+          }, [_]);
+        const v = (function (e, t) {
             const [r, i] = n.useState(),
               s = n.useCallback((e) => {
                 i(
@@ -72448,56 +72449,57 @@
               }, [e, r, t]),
               (0, Rr.wY)(s)
             );
-          })(i, o),
-          v = (0, Rr.wY)(
+          })(i, c),
+          R = (0, Rr.wY)(
             n.useCallback((e) => {
-              m(e.contentBoxSize[0].blockSize);
+              g(e.contentBoxSize[0].blockSize);
             }, []),
           ),
-          R = "visible" != c && !t,
-          z = Mr()(
+          z = "visible" != u && !t,
+          x = Mr()(
             Cr.StoreMenu,
-            R && Cr.HideTransition,
+            z && Cr.HideTransition,
             nr.TS.IN_MOBILE_WEBVIEW && Cr.MobileWebview,
-            "hide" == c && Cr.Hide,
-            "hidden" == c && Cr.Hidden,
-            "show" == c && Cr.Show,
+            "hide" == u && Cr.Hide,
+            "hidden" == u && Cr.Hidden,
+            "show" == u && Cr.Show,
           );
-        let x;
-        "hide" == c
-          ? (x = () => u((e) => ("hide" == e ? "hidden" : e)))
-          : "show" == c && (x = () => u((e) => ("show" == e ? "visible" : e)));
-        const j = n.useMemo(
-          () => ({ nBackdropHeight: d, bBackdropActive: t }),
-          [d, t],
+        let j;
+        "hide" == u
+          ? (j = () => d((e) => ("hide" == e ? "hidden" : e)))
+          : "show" == u && (j = () => d((e) => ("show" == e ? "visible" : e)));
+        const I = n.useMemo(
+          () => ({ nBackdropHeight: m, bBackdropActive: t }),
+          [m, t],
         );
         return (0, l.jsx)("div", {
           className: Mr()(
             Cr.StoreMenuContainer,
             !t && Cr.BackdropClosed,
-            (g || t) && Cr.BackdropVisible,
+            (p || t) && Cr.BackdropVisible,
           ),
-          ref: M,
+          ref: C,
           children: (0, l.jsxs)("div", {
             className: Mr()(
               Cr.StoreMenuBackdropContainer,
-              f && Cr.ContainerScrolled,
-              (g || t) && Cr.BackdropVisible,
+              b && Cr.ContainerScrolled,
+              (p || t) && Cr.BackdropVisible,
             ),
             children: [
               (0, l.jsx)(We.q, {
                 children: (0, l.jsx)(Be.Z, {
-                  className: z,
-                  ref: S,
-                  onAnimationEnd: x,
-                  onFocusWithin: C,
-                  children: (0, l.jsx)(lr.Provider, { value: j, children: a }),
+                  className: x,
+                  ref: v,
+                  onAnimationEnd: j,
+                  onFocusWithin: S,
+                  onMoveDown: a,
+                  children: (0, l.jsx)(lr.Provider, { value: I, children: o }),
                 }),
               }),
               (0, l.jsx)("div", {
                 className: Mr()(Cr.Backdrop, t && Cr.Active),
-                onTransitionEnd: w,
-                ref: v,
+                onTransitionEnd: y,
+                ref: R,
                 onClick: r,
               }),
             ],

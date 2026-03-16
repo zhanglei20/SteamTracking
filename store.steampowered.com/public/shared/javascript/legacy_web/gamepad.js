@@ -283,13 +283,13 @@
       "use strict";
       n(745);
     },
-    711: (e, t, n) => {
+    320: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => Nt });
       var o,
         i = n(669),
         s = n.n(i),
-        r = n(383);
+        r = n(498);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -352,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(321),
-        p = n(354),
-        _ = n(653),
-        f = n(988);
+        g = n(353),
+        p = n(874),
+        _ = n(597),
+        f = n(636);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -753,8 +753,8 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(64),
-        y = n(888);
+        D = n(0),
+        y = n(728);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -1522,21 +1522,18 @@
         for (; n; ) {
           if (ce(n)) {
             const e = window.getComputedStyle(n);
+            if ("fixed" == e.position || "sticky" == e.position) break;
             if (
               !(
                 (t && "x" != t) ||
-                ("scroll" != e.overflowX &&
-                  "auto" != e.overflowX &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowX && "auto" != e.overflowX)
               )
             )
               break;
             if (
               !(
                 (t && "y" != t) ||
-                ("scroll" != e.overflowY &&
-                  "auto" != e.overflowY &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowY && "auto" != e.overflowY)
               )
             )
               break;
@@ -1671,11 +1668,11 @@
           n = 0,
           o = e;
         for (; o; ) {
-          if (((t += o.offsetTop), (n += o.offsetLeft), "ownerDocument" in o)) {
+          if ("ownerDocument" in o) {
             const e = window.getComputedStyle(o);
             if ("fixed" === e.position || "sticky" === e.position) break;
           }
-          o = o.offsetParent;
+          (t += o.offsetTop), (n += o.offsetLeft), (o = o.offsetParent);
         }
         for (o = e?.parentElement; o; ) {
           const { scrollTop: e, scrollLeft: i } = ye(o);
@@ -4807,7 +4804,7 @@
         },
       };
     },
-    354: (e, t, n) => {
+    874: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4820,12 +4817,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    988: (e, t, n) => {
+    636: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(321),
-        s = n(354);
+        i = n(353),
+        s = n(874);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

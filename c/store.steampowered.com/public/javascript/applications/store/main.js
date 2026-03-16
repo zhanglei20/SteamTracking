@@ -4501,11 +4501,11 @@
           _ = 0,
           _ = _;
         for (; _; ) {
-          if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
+          if ("ownerDocument" in _) {
             const _ = window.getComputedStyle(_);
             if ("fixed" === _.position || "sticky" === _.position) break;
           }
-          _ = _.offsetParent;
+          (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
         }
         for (_ = _?.parentElement; _; ) {
           const { scrollTop: _, scrollLeft: _ } = _(_);
@@ -36550,21 +36550,18 @@
         for (; _; ) {
           if (_(_)) {
             const _ = window.getComputedStyle(_);
+            if ("fixed" == _.position || "sticky" == _.position) break;
             if (
               !(
                 (_ && "x" != _) ||
-                ("scroll" != _.overflowX &&
-                  "auto" != _.overflowX &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowX && "auto" != _.overflowX)
               )
             )
               break;
             if (
               !(
                 (_ && "y" != _) ||
-                ("scroll" != _.overflowY &&
-                  "auto" != _.overflowY &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowY && "auto" != _.overflowY)
               )
             )
               break;
@@ -74766,7 +74763,9 @@
           return (
             _.push(_.ownerDocument.documentElement),
             (_ = _.filter(
-              (_) => _.scrollHeight > _.getBoundingClientRect().height,
+              (_) =>
+                _.scrollHeight > _.getBoundingClientRect().height &&
+                "visible" !== window.getComputedStyle(_).overflowY,
             )),
             _.forEach((_) => _.classList.add(_.SuppressScrollOnBody)),
             () => _.forEach((_) => _.classList.remove(_.SuppressScrollOnBody))
@@ -80170,7 +80169,7 @@
             _ = _.useCallback(() => {
               _.current?.TakeFocus(), _(void 0);
             }, []),
-            { onCancelButton: _ } = (function (_) {
+            { fnReturnFocusToPage: _ } = (function (_) {
               const [_, __webpack_require__] = _.useState();
               (0, _.useEffect)(() => {
                 const _ = _.current;
@@ -80218,7 +80217,7 @@
                 return !1;
               }, [_]);
               return {
-                onCancelButton: _ ? _ : void 0,
+                fnReturnFocusToPage: _ ? _ : void 0,
               };
             })(_),
             _ = _.useCallback(() => {
@@ -80246,6 +80245,7 @@
                 bShowBackdrop: _ || !!__webpack_require__,
                 closePopoverAndSearch: _,
                 refPage: _,
+                onMoveDown: _,
                 children: [
                   _._.IN_MOBILE_WEBVIEW
                     ? (0, _.jsx)(_, {})
@@ -80306,6 +80306,7 @@
             bShowBackdrop: _,
             closePopoverAndSearch: __webpack_require__,
             refPage: _,
+            onMoveDown: _,
             children: _,
           } = _,
           _ = (0, _._)(),
@@ -80435,6 +80436,7 @@
                   ref: _,
                   onAnimationEnd: _,
                   onFocusWithin: _,
+                  onMoveDown: _,
                   children: (0, _.jsx)(_.Provider, {
                     value: _,
                     children: _,

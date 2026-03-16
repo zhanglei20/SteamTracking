@@ -2025,14 +2025,11 @@ function _(_, _) {
     if (_(_)) {
       let _ = window.getComputedStyle(_);
       if (
+        _.position == "fixed" ||
+        _.position == "sticky" ||
         ((!_ || _ == "x") &&
-          (_.overflowX == "scroll" ||
-            _.overflowX == "auto" ||
-            _.position == "fixed")) ||
-        ((!_ || _ == "y") &&
-          (_.overflowY == "scroll" ||
-            _.overflowY == "auto" ||
-            _.position == "fixed"))
+          (_.overflowX == "scroll" || _.overflowX == "auto")) ||
+        ((!_ || _ == "y") && (_.overflowY == "scroll" || _.overflowY == "auto"))
       )
         break;
     }
@@ -2267,11 +2264,11 @@ function _(_) {
     _ = 0,
     _ = _;
   for (; _; ) {
-    if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
+    if ("ownerDocument" in _) {
       let _ = window.getComputedStyle(_);
       if (_.position === "fixed" || _.position === "sticky") break;
     }
-    _ = _.offsetParent;
+    (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
   }
   for (_ = _?.parentElement; _; ) {
     let { scrollTop: _, scrollLeft: _ } = _(_);
