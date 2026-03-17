@@ -560,7 +560,7 @@
   transition-delay: .125s;
 }
 .gamepadui_svg_library_IbexDiagramFrontPanelTransparencyEffect_1SoIo.gamepadui_svg_library_ShowXRay_dX_dr {
-  opacity: 0.125;
+  opacity: 0;
   transition-delay: 0s;
 }
 .gamepadui_svg_library_ActivatableFill_3D14G {
@@ -11233,8 +11233,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   border-color: #f0f;
 }
 .qrlogin_LoginQR_xlEVp.qrlogin_QRLoginDeck_J3DO- {
-  width: 8em;
-  height: 8em;
+  width: 25vmin;
+  height: 25vmin;
   padding: 1em;
   border-color: #23262e;
   border-radius: 0;
@@ -31331,7 +31331,7 @@ div:hover > .BBCodeCollapseControl {
   top: 0;
   left: 0;
 }
-.trailerplayer_TrailerPlayer_ByTa3 {
+.trailerplayer_TrailerPlayer_3LAiT {
   position: absolute;
   top: 0;
   right: 0;
@@ -31343,12 +31343,12 @@ div:hover > .BBCodeCollapseControl {
   align-items: center;
   justify-content: center;
 }
-.trailerplayer_TrailerPlayer_ByTa3 video {
+.trailerplayer_TrailerPlayer_3LAiT video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.trailerplayer_LoadingThrobber_36zgL {
+.trailerplayer_LoadingThrobber_15ccz {
   position: absolute;
   top: 0;
   right: 0;
@@ -31358,11 +31358,11 @@ div:hover > .BBCodeCollapseControl {
   opacity: 0;
   transition: opacity 250ms ease-in-out 0ms;
 }
-.trailerplayer_LoadingThrobber_36zgL.trailerplayer_FadeIn_3wB3k {
+.trailerplayer_LoadingThrobber_15ccz.trailerplayer_FadeIn_1yORK {
   opacity: 1;
   transition: opacity 500ms ease-in-out 0ms;
 }
-.trailerplayer_UserInputNeeded_1Y1AA {
+.trailerplayer_UserInputNeeded_3FEle {
   position: absolute;
   top: 0;
   right: 0;
@@ -31370,7 +31370,7 @@ div:hover > .BBCodeCollapseControl {
   left: 0;
   background-size: cover;
 }
-.trailerplayer_UserInputNeeded_1Y1AA .trailerplayer_UserInputGlass_2VuwT {
+.trailerplayer_UserInputNeeded_3FEle .trailerplayer_UserInputGlass_2JXx1 {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.7);
   position: absolute;
@@ -31382,26 +31382,26 @@ div:hover > .BBCodeCollapseControl {
   justify-content: center;
   align-items: center;
 }
-.trailerplayer_UserInputNeeded_1Y1AA .trailerplayer_UserInputGlass_2VuwT > svg {
+.trailerplayer_UserInputNeeded_3FEle .trailerplayer_UserInputGlass_2JXx1 > svg {
   height: 100px;
   width: 100px;
   transition: transform .3s ease-out, opacity .2s ease-out;
   padding: 5px;
 }
-.trailerplayer_UserInputNeeded_1Y1AA
-  .trailerplayer_UserInputGlass_2VuwT
+.trailerplayer_UserInputNeeded_3FEle
+  .trailerplayer_UserInputGlass_2JXx1
   > svg
   > path {
   transform: translateX(1px);
   color: #fff;
 }
-.trailerplayer_UserInputNeeded_1Y1AA
-  .trailerplayer_UserInputGlass_2VuwT.trailerplayer_Animate__9eb3
+.trailerplayer_UserInputNeeded_3FEle
+  .trailerplayer_UserInputGlass_2JXx1.trailerplayer_Animate_1QnLb
   > svg {
   transform: scale(1.8);
   opacity: 0;
 }
-.trailerplayerdesktop_BackgroundClick_vXKdK {
+.trailerplayerdesktop_BackgroundClick_XOCTh {
   position: absolute;
   top: 0;
   right: 0;
@@ -31409,11 +31409,11 @@ div:hover > .BBCodeCollapseControl {
   left: 0;
   pointer-events: none;
 }
-.trailerplayerdesktop_BackgroundClick_vXKdK.trailerplayerdesktop_Enabled_pG-0I {
+.trailerplayerdesktop_BackgroundClick_XOCTh.trailerplayerdesktop_Enabled_1LJKR {
   pointer-events: auto;
   background-color: transparent;
 }
-.trailerplayerdesktop_BackgroundClick_vXKdK .trailerplayerdesktop_Icon_2U9kj {
+.trailerplayerdesktop_BackgroundClick_XOCTh .trailerplayerdesktop_Icon_2nf0N {
   width: 100px;
   color: #fff;
   position: absolute;
@@ -31421,12 +31421,12 @@ div:hover > .BBCodeCollapseControl {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  animation-name: trailerplayerdesktop_BackgroundClickAnimation_2XYeZ;
+  animation-name: trailerplayerdesktop_BackgroundClickAnimation_8Lmw8;
   animation-duration: .3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
-@keyframes trailerplayerdesktop_BackgroundClickAnimation_2XYeZ {
+@keyframes trailerplayerdesktop_BackgroundClickAnimation_8Lmw8 {
   from {
     opacity: 0.5;
     transform: translate(-50%, -50%) scale(0.6);
@@ -31442,19 +31442,19 @@ div:hover > .BBCodeCollapseControl {
     transform: translate(-50%, -50%) scale(1.2);
   }
 }
-.trailerplayerdesktop_PlayerControls_-qTM6 {
+.trailerplayerdesktop_PlayerControls_2OChk {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.trailerplayerdesktop_PlayerControls_-qTM6:not(
-    .trailerplayerdesktop_ShowControls_1Cnj-
+.trailerplayerdesktop_PlayerControls_2OChk:not(
+    .trailerplayerdesktop_ShowControls_1VqUj
   ) {
-  animation: trailerplayerdesktop_DelayHideCursor_3n201 300ms forwards;
+  animation: trailerplayerdesktop_DelayHideCursor_xjgCc 300ms forwards;
 }
-@keyframes trailerplayerdesktop_DelayHideCursor_3n201 {
+@keyframes trailerplayerdesktop_DelayHideCursor_xjgCc {
   from {
     cursor: auto;
   }
@@ -31462,24 +31462,24 @@ div:hover > .BBCodeCollapseControl {
     cursor: none;
   }
 }
-.trailerplayerdesktop_ControlGroup_39Fc5 {
+.trailerplayerdesktop_ControlGroup_26opW {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.trailerplayerdesktop_ControlGroup_39Fc5
-  .trailerplayerdesktop_BehindControlsFade_2vmUy {
+.trailerplayerdesktop_ControlGroup_26opW
+  .trailerplayerdesktop_BehindControlsFade_3TlT2 {
   opacity: 0;
 }
-.trailerplayerdesktop_PlayerControls_-qTM6.trailerplayerdesktop_ShowControls_1Cnj-
-  .trailerplayerdesktop_ControlGroup_39Fc5
-  .trailerplayerdesktop_BehindControlsFade_2vmUy {
+.trailerplayerdesktop_PlayerControls_2OChk.trailerplayerdesktop_ShowControls_1VqUj
+  .trailerplayerdesktop_ControlGroup_26opW
+  .trailerplayerdesktop_BehindControlsFade_3TlT2 {
   opacity: 1;
   transition: opacity 300ms ease-in-out;
 }
-.trailerplayerdesktop_TitleRow_2WpHh {
+.trailerplayerdesktop_TitleRow_2WV2b {
   position: absolute;
   top: 0;
   left: 0;
@@ -31490,45 +31490,45 @@ div:hover > .BBCodeCollapseControl {
   border-radius: 0px 0px 4px 0px;
   pointer-events: none;
 }
-.trailerplayerdesktop_LowerControls_aKceK {
+.trailerplayerdesktop_LowerControls_3gCTp {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 0px 10px 6px 10px;
 }
-.trailerplayerdesktop_LowerControls_aKceK
-  .trailerplayerdesktop_ButtonRow_2gDbG {
+.trailerplayerdesktop_LowerControls_3gCTp
+  .trailerplayerdesktop_ButtonRow_1lG6i {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.trailerplayerdesktop_LowerControls_aKceK
-  .trailerplayerdesktop_ButtonRow_2gDbG
-  .trailerplayerdesktop_LeftGroup_ppGte,
-.trailerplayerdesktop_LowerControls_aKceK
-  .trailerplayerdesktop_ButtonRow_2gDbG
-  .trailerplayerdesktop_RightGroup_2iPvk {
+.trailerplayerdesktop_LowerControls_3gCTp
+  .trailerplayerdesktop_ButtonRow_1lG6i
+  .trailerplayerdesktop_LeftGroup_z0zTz,
+.trailerplayerdesktop_LowerControls_3gCTp
+  .trailerplayerdesktop_ButtonRow_1lG6i
+  .trailerplayerdesktop_RightGroup_3KYUS {
   display: flex;
   flex-direction: row;
   gap: 14px;
 }
-.trailerplayerdesktop_TitleRow_2WpHh {
+.trailerplayerdesktop_TitleRow_2WV2b {
   transform: translateY(-110%);
 }
-.trailerplayerdesktop_LowerControls_aKceK {
+.trailerplayerdesktop_LowerControls_3gCTp {
   transform: translateY(100%);
 }
-.trailerplayerdesktop_TitleRow_2WpHh,
-.trailerplayerdesktop_LowerControls_aKceK {
+.trailerplayerdesktop_TitleRow_2WV2b,
+.trailerplayerdesktop_LowerControls_3gCTp {
   transition: transform 300ms ease-in-out;
 }
-.trailerplayerdesktop_TitleRow_2WpHh.trailerplayerdesktop_ShowControls_1Cnj-,
-.trailerplayerdesktop_ShowControls_1Cnj-
-  .trailerplayerdesktop_LowerControls_aKceK {
+.trailerplayerdesktop_TitleRow_2WV2b.trailerplayerdesktop_ShowControls_1VqUj,
+.trailerplayerdesktop_ShowControls_1VqUj
+  .trailerplayerdesktop_LowerControls_3gCTp {
   transform: translateY(0);
 }
-.trailerplayerdesktop_BehindControlsFade_2vmUy {
+.trailerplayerdesktop_BehindControlsFade_3TlT2 {
   position: absolute;
   top: 50%;
   right: 0;
@@ -31537,44 +31537,44 @@ div:hover > .BBCodeCollapseControl {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent 80%);
   pointer-events: none;
 }
-.trailerplayerdesktop_VolumeControls_1j6rW {
+.trailerplayerdesktop_VolumeControls_3AYQc {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.DesktopUI .trailerplayerdesktop_VolumeControls_1j6rW .SliderControl {
+.DesktopUI .trailerplayerdesktop_VolumeControls_3AYQc .SliderControl {
   min-width: 84px;
 }
-.trailerplayerdesktop_VolumeSlider_mowMY {
+.trailerplayerdesktop_VolumeSlider_HqVrl {
   padding: 0 0 0 8px;
   transform: translateX(0px);
 }
-.trailerplayerdesktop_VolumeSlider_mowMY .SliderTrack {
+.trailerplayerdesktop_VolumeSlider_HqVrl .SliderTrack {
   height: 4px;
   --left-track-color: #b8bcbf;
   background: #ffffff22;
   box-shadow: inset 0 0 2px #00000033;
 }
-.trailerplayerdesktop_VolumeSlider_mowMY .SliderControl {
+.trailerplayerdesktop_VolumeSlider_HqVrl .SliderControl {
   --slider-handle-width: 12px;
   transform: all .3s ease-in-out;
 }
-.trailerplayerdesktop_VolumeSlider_mowMY .SliderControl:hover .SliderHandle {
+.trailerplayerdesktop_VolumeSlider_HqVrl .SliderControl:hover .SliderHandle {
   height: 14px;
   width: 14px;
   background: #eee;
 }
-.trailerplayerdesktop_VolumeSlider_mowMY .SliderControl:hover .SliderTrack {
+.trailerplayerdesktop_VolumeSlider_HqVrl .SliderControl:hover .SliderTrack {
   --left-track-color: #eeeeee;
 }
-.trailerplayerdesktop_VolumeSlider_mowMY .SliderHandle {
+.trailerplayerdesktop_VolumeSlider_HqVrl .SliderHandle {
   height: 12px;
   width: 12px;
   margin-top: 6px;
   margin-bottom: 6px;
   background: #eee;
 }
-.trailerplayerdesktop_MenuLayer_3eOkj {
+.trailerplayerdesktop_MenuLayer_1OFXT {
   position: absolute;
   top: 0;
   right: 0;
@@ -31585,14 +31585,14 @@ div:hover > .BBCodeCollapseControl {
   transition: opacity 150ms ease-in, transform 150ms ease-out;
   pointer-events: none;
 }
-.trailerplayerdesktop_MenuLayer_3eOkj:empty {
+.trailerplayerdesktop_MenuLayer_1OFXT:empty {
   opacity: 0;
   transform: translateY(10px);
 }
-.trailerplayerdesktop_MenuLayer_3eOkj > * {
+.trailerplayerdesktop_MenuLayer_1OFXT > * {
   pointer-events: auto;
 }
-.trailerplayershared_PlaybackButton_3XkD6 {
+.trailerplayershared_PlaybackButton_19irS {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31606,18 +31606,18 @@ div:hover > .BBCodeCollapseControl {
   width: 26px;
   height: 26px;
 }
-.trailerplayershared_PlaybackButton_3XkD6 > svg {
+.trailerplayershared_PlaybackButton_19irS > svg {
   width: 100%;
   height: 100%;
 }
-.trailerplayershared_PlaybackButton_3XkD6:hover {
+.trailerplayershared_PlaybackButton_19irS:hover {
   color: #eee;
 }
-.trailerplayershared_PlaybackButton_3XkD6:hover:active {
+.trailerplayershared_PlaybackButton_19irS:hover:active {
   color: #8b929a;
   transform: scale(0.96);
 }
-.trailerplayershared_PlaybackTime_Ul_JQ {
+.trailerplayershared_PlaybackTime_OEPT8 {
   font-size: 14px;
   font-family: "Motiva Sans", monospace;
   text-align: center;
@@ -31628,16 +31628,16 @@ div:hover > .BBCodeCollapseControl {
   display: inline-flex;
   gap: 4px;
 }
-.trailerplayershared_PlaybackTime_Ul_JQ .trailerplayershared_TimeDash_d5YtA {
+.trailerplayershared_PlaybackTime_OEPT8 .trailerplayershared_TimeDash_1kRok {
   color: #b8bcbf;
 }
-.trailerplayershared_SettingsButton_DpzfS {
+.trailerplayershared_SettingsButton_3ds1F {
   transition: transform .3s ease-in-out;
 }
-.trailerplayershared_SettingsButton_DpzfS.trailerplayershared_Rotated_KQCO7 {
+.trailerplayershared_SettingsButton_3ds1F.trailerplayershared_Rotated_3JIjy {
   transform: rotate(90deg);
 }
-.trailerplayershared_SettingsMenu_fXwjI {
+.trailerplayershared_SettingsMenu_2KpxN {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -31658,7 +31658,7 @@ div:hover > .BBCodeCollapseControl {
   white-space: nowrap;
   user-select: none;
 }
-.trailerplayershared_SettingsMenu_fXwjI .trailerplayershared_MenuItem_1-NP1 {
+.trailerplayershared_SettingsMenu_2KpxN .trailerplayershared_MenuItem_1m5_C {
   cursor: pointer;
   padding: 4px 6px;
   border-radius: 2px;
@@ -31666,77 +31666,77 @@ div:hover > .BBCodeCollapseControl {
   gap: 24px;
   justify-content: space-between;
 }
-.trailerplayershared_SettingsMenu_fXwjI
-  .trailerplayershared_MenuItem_1-NP1.trailerplayershared_Checked_2BiCJ
+.trailerplayershared_SettingsMenu_2KpxN
+  .trailerplayershared_MenuItem_1m5_C.trailerplayershared_Checked_1g618
   svg {
   max-width: 18px;
 }
-.trailerplayershared_SettingsMenu_fXwjI
-  .trailerplayershared_MenuItem_1-NP1:hover {
+.trailerplayershared_SettingsMenu_2KpxN
+  .trailerplayershared_MenuItem_1m5_C:hover {
   background-color: #1a9fff;
 }
-.trailerplayershared_SettingsMenu_fXwjI .trailerplayershared_Separator_2T8HG {
+.trailerplayershared_SettingsMenu_2KpxN .trailerplayershared_Separator_2kzb- {
   height: 10px;
   position: relative;
   width: 100%;
 }
-.trailerplayershared_SettingsMenu_fXwjI
-  .trailerplayershared_Separator_2T8HG::before,
-.trailerplayershared_SettingsMenu_fXwjI
-  .trailerplayershared_Separator_2T8HG::after {
+.trailerplayershared_SettingsMenu_2KpxN
+  .trailerplayershared_Separator_2kzb-::before,
+.trailerplayershared_SettingsMenu_2KpxN
+  .trailerplayershared_Separator_2kzb-::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   height: 1px;
 }
-.trailerplayershared_SettingsMenu_fXwjI
-  .trailerplayershared_Separator_2T8HG::before {
+.trailerplayershared_SettingsMenu_2KpxN
+  .trailerplayershared_Separator_2kzb-::before {
   top: 6px;
   background-color: rgba(0, 0, 0, 0.65);
 }
-.trailerplayershared_SettingsMenu_fXwjI
-  .trailerplayershared_Separator_2T8HG::after {
+.trailerplayershared_SettingsMenu_2KpxN
+  .trailerplayershared_Separator_2kzb-::after {
   top: 7px;
   background-color: rgba(255, 255, 255, 0.35);
 }
-.trailerplayershared_Timeline_2eh4i {
+.trailerplayershared_Timeline_11VWk {
   position: relative;
   padding-top: 14px;
   padding-bottom: 8px;
   touch-action: none;
 }
-.trailerplayershared_Timeline_2eh4i * {
+.trailerplayershared_Timeline_11VWk * {
   touch-action: none;
 }
-.trailerplayershared_Timeline_2eh4i.trailerplayershared_Hovered_1p3RP {
+.trailerplayershared_Timeline_11VWk.trailerplayershared_Hovered_EwEQt {
   cursor: pointer;
 }
-.trailerplayershared_Timeline_2eh4i .trailerplayershared_TimelineBar_3ezjd {
+.trailerplayershared_Timeline_11VWk .trailerplayershared_TimelineBar_1Ni5K {
   position: relative;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.trailerplayershared_Timeline_2eh4i .trailerplayershared_Bar_1CCfD {
+.trailerplayershared_Timeline_11VWk .trailerplayershared_Bar_2QdTy {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
 }
-.trailerplayershared_Timeline_2eh4i .trailerplayershared_Buffered_3f4Y1 {
+.trailerplayershared_Timeline_11VWk .trailerplayershared_Buffered_1YR-8 {
   background-color: rgba(255, 255, 255, 0.2);
 }
-.trailerplayershared_Timeline_2eh4i .trailerplayershared_Played_3ezyM {
+.trailerplayershared_Timeline_11VWk .trailerplayershared_Played_1AHwg {
   background-color: #1a9fff;
 }
-.trailerplayershared_Timeline_2eh4i .trailerplayershared_HoverTick_1DhQ7 {
+.trailerplayershared_Timeline_11VWk .trailerplayershared_HoverTick_1A7Sq {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 2px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.trailerplayershared_Timeline_2eh4i .trailerplayershared_Hover_2Zd33 {
+.trailerplayershared_Timeline_11VWk .trailerplayershared_Hover_3NkJI {
   position: absolute;
   bottom: calc(100% + 0px);
   display: flex;
@@ -31746,16 +31746,16 @@ div:hover > .BBCodeCollapseControl {
   user-select: none;
   pointer-events: none;
 }
-.trailerplayershared_Timeline_2eh4i
-  .trailerplayershared_Hover_2Zd33
-  .trailerplayershared_HoverImage_2ZYpY {
+.trailerplayershared_Timeline_11VWk
+  .trailerplayershared_Hover_3NkJI
+  .trailerplayershared_HoverImage_3rdLq {
   background-color: #fff;
   border: 3px solid #fff;
   border-radius: 2px;
 }
-.trailerplayershared_Timeline_2eh4i
-  .trailerplayershared_Hover_2Zd33
-  .trailerplayershared_HoverTime_qSkn0 {
+.trailerplayershared_Timeline_11VWk
+  .trailerplayershared_Hover_3NkJI
+  .trailerplayershared_HoverTime_2IuTn {
   background-color: #fff;
   border-radius: 2px;
   padding: 6px 12px;
@@ -31767,9 +31767,9 @@ div:hover > .BBCodeCollapseControl {
   line-height: 20px;
   text-align: center;
 }
-.trailerplayershared_Timeline_2eh4i
-  .trailerplayershared_Hover_2Zd33
-  .trailerplayershared_HoverTime_qSkn0::after {
+.trailerplayershared_Timeline_11VWk
+  .trailerplayershared_Hover_3NkJI
+  .trailerplayershared_HoverTime_2IuTn::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -31780,7 +31780,7 @@ div:hover > .BBCodeCollapseControl {
   border-radius: 0px 0px 2px 0px;
   transform: translate3d(-50%, -50%, 0) rotate(45deg);
 }
-.trailerplayershared_FatalErrorMessage_1pJhZ {
+.trailerplayershared_FatalErrorMessage_1h9dq {
   position: absolute;
   top: 0;
   right: 0;
@@ -31793,11 +31793,11 @@ div:hover > .BBCodeCollapseControl {
   font-family: "Motiva Sans", sans-serif;
   font-size: 16px;
 }
-.trailerplayershared_FatalErrorMessage_1pJhZ span {
+.trailerplayershared_FatalErrorMessage_1h9dq span {
   text-align: center;
   width: 60%;
 }
-.trailerplayershared_TitleRow_3CLbN {
+.trailerplayershared_TitleRow_2zDVM {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -31809,27 +31809,27 @@ div:hover > .BBCodeCollapseControl {
   white-space: nowrap;
   user-select: none;
 }
-.trailerplayershared_TitleRow_3CLbN .trailerplayershared_Category_18O6p {
+.trailerplayershared_TitleRow_2zDVM .trailerplayershared_Category_ArOIQ {
   font-weight: 500;
   color: #dcdedf;
 }
-.trailerplayershared_TitleRow_3CLbN .trailerplayershared_Separator_2T8HG {
+.trailerplayershared_TitleRow_2zDVM .trailerplayershared_Separator_2kzb- {
   border-left: 1px solid #67707b;
   height: 1em;
 }
-.trailerplayershared_TitleRow_3CLbN .trailerplayershared_Title_plWqY {
+.trailerplayershared_TitleRow_2zDVM .trailerplayershared_Title_2MXuC {
   text-overflow: ellipsis;
   text-wrap: nowrap;
   overflow: hidden;
 }
-.trailerplayertouch_PlayerControls_2vG-2 {
+.trailerplayertouch_PlayerControls_QC2HL {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.trailerplayertouch_ControlGroup_2tyea {
+.trailerplayertouch_ControlGroup_1Zjkr {
   position: absolute;
   top: 0;
   right: 0;
@@ -31840,8 +31840,8 @@ div:hover > .BBCodeCollapseControl {
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
 }
-.trailerplayertouch_ControlGroup_2tyea
-  .trailerplayertouch_GlassBackground_3Gg0K {
+.trailerplayertouch_ControlGroup_1Zjkr
+  .trailerplayertouch_GlassBackground_nsW0U {
   position: absolute;
   top: 0;
   right: 0;
@@ -31850,19 +31850,19 @@ div:hover > .BBCodeCollapseControl {
   background-color: rgba(0, 0, 0, 0.3);
   pointer-events: none;
 }
-.trailerplayertouch_ControlGroup_2tyea.trailerplayertouch_ShowControls_1-uJm {
+.trailerplayertouch_ControlGroup_1Zjkr.trailerplayertouch_ShowControls_o2JML {
   opacity: 1;
 }
-.trailerplayertouch_ControlGroup_2tyea * {
+.trailerplayertouch_ControlGroup_1Zjkr * {
   pointer-events: none;
 }
-.trailerplayertouch_ControlGroup_2tyea.trailerplayertouch_ShowControls_1-uJm
-  *:not(.trailerplayertouch_GlassBackground_3Gg0K):not(
-    .trailerplayertouch_SeekThumbnail_Ngi4I
+.trailerplayertouch_ControlGroup_1Zjkr.trailerplayertouch_ShowControls_o2JML
+  *:not(.trailerplayertouch_GlassBackground_nsW0U):not(
+    .trailerplayertouch_SeekThumbnail_3Lf63
   ) {
   pointer-events: auto;
 }
-.trailerplayertouch_TitleRow_WqIiy {
+.trailerplayertouch_TitleRow_3QewJ {
   position: absolute;
   top: 0;
   left: 0;
@@ -31873,14 +31873,14 @@ div:hover > .BBCodeCollapseControl {
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
 }
-.trailerplayertouch_TitleRow_WqIiy.trailerplayertouch_ControlsVisible_2rhiB {
+.trailerplayertouch_TitleRow_3QewJ.trailerplayertouch_ControlsVisible_1MfhN {
   opacity: 1;
 }
-.trailerplayertouch_TitleRow_WqIiy.trailerplayertouch_FadeIn_38rU1 {
+.trailerplayertouch_TitleRow_3QewJ.trailerplayertouch_FadeIn_AOhmd {
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
-.trailerplayertouch_SeekThumbnail_Ngi4I {
+.trailerplayertouch_SeekThumbnail_3Lf63 {
   position: absolute;
   top: 0;
   right: 0;
@@ -31893,16 +31893,16 @@ div:hover > .BBCodeCollapseControl {
   align-items: center;
   justify-content: center;
 }
-.trailerplayertouch_CenterControls_e9Voq {
+.trailerplayertouch_CenterControls_3xPwk {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.trailerplayertouch_CenterControls_e9Voq.trailerplayertouch_Hide_2WyZa {
+.trailerplayertouch_CenterControls_3xPwk.trailerplayertouch_Hide_3RM5e {
   display: none;
 }
-.trailerplayertouch_CenteredPlayToggle_1-CqX {
+.trailerplayertouch_CenteredPlayToggle_10wZ2 {
   color: #fff;
   width: 44px;
   height: 44px;
@@ -31910,36 +31910,36 @@ div:hover > .BBCodeCollapseControl {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
 }
-.trailerplayertouch_LowerControls_2zXAY {
+.trailerplayertouch_LowerControls_1ORAy {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 0px 10px 6px 10px;
 }
-.trailerplayertouch_LowerControls_2zXAY .trailerplayertouch_ButtonRow_2nDAS {
+.trailerplayertouch_LowerControls_1ORAy .trailerplayertouch_ButtonRow_2ry9O {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.trailerplayertouch_LowerControls_2zXAY
-  .trailerplayertouch_ButtonRow_2nDAS
-  .trailerplayertouch_LeftGroup_2BJQL,
-.trailerplayertouch_LowerControls_2zXAY
-  .trailerplayertouch_ButtonRow_2nDAS
-  .trailerplayertouch_RightGroup_2DMfX {
+.trailerplayertouch_LowerControls_1ORAy
+  .trailerplayertouch_ButtonRow_2ry9O
+  .trailerplayertouch_LeftGroup_36BWZ,
+.trailerplayertouch_LowerControls_1ORAy
+  .trailerplayertouch_ButtonRow_2ry9O
+  .trailerplayertouch_RightGroup_2H5-N {
   display: flex;
   flex-direction: row;
   gap: 14px;
 }
-.trailerplayergamepad_PlayerControls_3tW3Q {
+.trailerplayergamepad_PlayerControls_1gzSo {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.trailerplayergamepad_ControlGroup_3rbHw {
+.trailerplayergamepad_ControlGroup_3l5hd {
   position: absolute;
   top: 0;
   right: 0;
@@ -31949,17 +31949,17 @@ div:hover > .BBCodeCollapseControl {
   transition: opacity 250ms ease-in-out;
   pointer-events: none;
 }
-.trailerplayergamepad_ControlGroup_3rbHw.trailerplayergamepad_ShowControls_3ysE_ {
+.trailerplayergamepad_ControlGroup_3l5hd.trailerplayergamepad_ShowControls_wc2Yi {
   opacity: 1;
 }
-.trailerplayergamepad_ControlGroup_3rbHw * {
+.trailerplayergamepad_ControlGroup_3l5hd * {
   pointer-events: none;
 }
-.trailerplayergamepad_ControlGroup_3rbHw.trailerplayergamepad_ShowControls_3ysE_
+.trailerplayergamepad_ControlGroup_3l5hd.trailerplayergamepad_ShowControls_wc2Yi
   * {
   pointer-events: auto;
 }
-.trailerplayergamepad_TitleRow_3-16p {
+.trailerplayergamepad_TitleRow_3CfRJ {
   position: absolute;
   top: 0;
   left: 0;
@@ -31970,38 +31970,38 @@ div:hover > .BBCodeCollapseControl {
   opacity: 0;
   transition: opacity 250ms ease-in-out;
 }
-.trailerplayergamepad_TitleRow_3-16p.trailerplayergamepad_ShowControls_3ysE_ {
+.trailerplayergamepad_TitleRow_3CfRJ.trailerplayergamepad_ShowControls_wc2Yi {
   opacity: 1;
 }
-.trailerplayergamepad_TitleRow_3-16p .trailerplayergamepad_RowLimit_1Og_Q {
+.trailerplayergamepad_TitleRow_3CfRJ .trailerplayergamepad_RowLimit_20H25 {
   position: relative;
   max-width: 80%;
   padding: 4px 8px;
 }
-.trailerplayergamepad_LowerControls_3fTNY {
+.trailerplayergamepad_LowerControls_27tm2 {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 0px 18px 10px 18px;
 }
-.trailerplayergamepad_LowerControls_3fTNY
-  .trailerplayergamepad_ButtonRow_3AhvK {
+.trailerplayergamepad_LowerControls_27tm2
+  .trailerplayergamepad_ButtonRow_14qF7 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.trailerplayergamepad_LowerControls_3fTNY
-  .trailerplayergamepad_ButtonRow_3AhvK
-  .trailerplayergamepad_LeftGroup_L1I7a,
-.trailerplayergamepad_LowerControls_3fTNY
-  .trailerplayergamepad_ButtonRow_3AhvK
-  .trailerplayergamepad_RightGroup_2iK1t {
+.trailerplayergamepad_LowerControls_27tm2
+  .trailerplayergamepad_ButtonRow_14qF7
+  .trailerplayergamepad_LeftGroup_1GQnq,
+.trailerplayergamepad_LowerControls_27tm2
+  .trailerplayergamepad_ButtonRow_14qF7
+  .trailerplayergamepad_RightGroup_PAxgH {
   display: flex;
   flex-direction: row;
   gap: 14px;
 }
-.trailerplayergamepad_BehindControlsFade_qGMBd {
+.trailerplayergamepad_BehindControlsFade_1ZwIx {
   position: absolute;
   top: 50%;
   right: 0;

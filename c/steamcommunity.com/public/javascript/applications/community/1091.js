@@ -7,7 +7,7 @@
 	"language": "brazilian",
 	"LoginRedirect_Dialog_Title": "Iniciar a sessão",
 	"LoginRedirect_Dialog_Description": "Inicie a sessão para adicionar este item à sua lista de desejos, segui-lo ou ignorá-lo. Clicar em OK redirecionará você para a página de início de sessão.",
-	"Wishlist_NotSignedIn": "Inicie a sessão ou abra esta página no aplicativo do Steam para adicionar à lista de desejos, seguir, comprar e ver recomendações.",
+	"Wishlist_NotSignedIn": "Inicie a sessão ou abra esta página no aplicativo do Steam para adicionar à lista de desejos, seguir e comprar.",
 	"Dummy": "dummy"
 }`);
     },

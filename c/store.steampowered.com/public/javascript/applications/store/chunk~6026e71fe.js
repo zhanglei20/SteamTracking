@@ -5584,68 +5584,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        static s_PersonalCalendarStore;
-        static Get() {
-          return (
-            _.s_PersonalCalendarStore ||
-              ((_.s_PersonalCalendarStore = new _()),
-              _.s_PersonalCalendarStore.Init(),
-              (window.g_SubscriptionStore = _.s_PersonalCalendarStore)),
-            _.s_PersonalCalendarStore
-          );
-        }
-        async GetCalendarRecommendations(_, _, _, _, _) {
-          return _._.fetchQuery(_(_, _, _, _, _));
-        }
-        Init() {}
-      }
-      function _(_, _, _, _, _) {
-        return (0, _._)(_(_, _, _, _, _));
-      }
-      function _(_, _, _, _, _) {
-        return {
-          queryKey: ["personalcalendar", _, _, _, _, _],
-          queryFn: async () => {
-            const _ = {
-                tag: _,
-                daysbackward: _,
-                daysforward: _,
-                weekaligned: _ ? 1 : 0,
-                maxresults: _,
-                sessionid: _._.SESSIONID,
-              },
-              _ = await _().get(
-                `${_._.STORE_BASE_URL}personalcalendarold/getrecommendations`,
-                {
-                  params: _,
-                  timeout: 2e4,
-                },
-              );
-            return {
-              appReleasesByDay: _.data.appReleasesByDay,
-              dayWeekTimestamps: _.data.dayWeekTimestamps,
-              maxResultCount: _.data.maxResultCount,
-              userTags: _.data.userTags,
-              usesWishlists: _.data.usesWishlists,
-              resultMessage: _.data.resultMessage,
-            };
-          },
-          placeholderData: (_) => _,
-        };
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -8854,6 +8792,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -8897,7 +8836,10 @@
         }
         return null;
       }
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
+        const _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID()),
+          _ = (0, _._)(_, _);
         return {
           nSaleTagID: _.BUsesContentHubForItemSource()
             ? void 0
@@ -8911,8 +8853,7 @@
           nOptInTagID: _.jsondata.optin_tagid,
           nPruneTagID: _.jsondata.optin_prune_tagid,
           bOptInOnly: _.jsondata.optin_only,
-          nCreatorClanAccountId:
-            36 == _.GetEventType() ? _.clanSteamID.GetAccountID() : void 0,
+          nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
         };
       }
       function _(_, _) {
@@ -9008,6 +8949,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (_._.IN_CLIENT ? "library-" : (0, _._)() + "-") + _;
@@ -9073,30 +9017,34 @@
       }
       async function _(_, _, _) {
         const _ = new Set(_.GetTabAppIDs());
-        if (
-          (_.GetSaleSections()
-            .filter((_) => (0, _._)(_.section_type))
-            .forEach((_) => {
-              _.ShouldShowSection(_) &&
-                _.capsules.forEach((_) => {
-                  !_(_) ||
-                    (!_.diable_tab_id_filtering &&
-                      _.BIsTabFilteringEnabled()) ||
-                    _.add(_._);
-                });
-            }),
+        _.GetSaleSections()
+          .filter((_) => (0, _._)(_.section_type))
+          .forEach((_) => {
+            _.ShouldShowSection(_) &&
+              _.capsules.forEach((_) => {
+                !_(_) ||
+                  (!_.diable_tab_id_filtering && _.BIsTabFilteringEnabled()) ||
+                  _.add(_._);
+              });
+          }),
           __webpack_require__?.forEach((_) => {
             const _ = _.capsule;
             !_(_) ||
               (_.BIsTabFilteringEnabled() && !_.ShouldShowCapsule(_)) ||
               _.add(_._);
-          }),
-          36 == _.GetEventType())
-        ) {
-          const _ = await _._.fetchQuery(
-            (0, _._)(_.clanSteamID.GetAccountID()),
-          );
-          _?.GetAppIDList().forEach((_) => _.add(_));
+          });
+        const _ = _.clanSteamID.GetAccountID(),
+          _ = _._.GetClanInfoByClanAccountID(_);
+        if ((0, _._)(_, _)) {
+          const _ = await _._.fetchQuery((0, _._)(_));
+          _?.GetAppIDList().forEach((_) => {
+            (_.BIsTabFilteringEnabled() &&
+              !_.ShouldShowCapsule({
+                type: "game",
+                _: _,
+              })) ||
+              _.add(_);
+          });
         }
         return _;
       }
@@ -9147,15 +9095,32 @@
       }
       async function _(_, _, _) {
         if (!_?.length) return _;
-        if (36 == _.GetEventType()) {
-          const _ = await _._.fetchQuery(
-            (0, _._)(_.clanSteamID.GetAccountID()),
-          );
+        const _ = _.clanSteamID.GetAccountID(),
+          _ = _._.GetClanInfoByClanAccountID(_);
+        if ((0, _._)(_, _)) {
+          const _ = await _._.fetchQuery((0, _._)(_));
           if (!_) return [];
           const _ = new Set(_.GetAppIDList());
-          _ = __webpack_require__.filter(
-            (_) => 0 == (0, _._)(_.type) && _.has(_._),
-          );
+          _ = __webpack_require__.filter((_) => {
+            if (_) {
+              if ("sub" == _.type || "bundle" == _.type) {
+                const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type)),
+                  _ = 36 == _.GetEventType();
+                return (
+                  !!_ &&
+                  (_
+                    ? __webpack_require__
+                        .GetIncludedAppIDs()
+                        .every((_) => _.has(_))
+                    : __webpack_require__
+                        .GetIncludedAppIDs()
+                        .some((_) => _.has(_)))
+                );
+              }
+              return _.has(_._);
+            }
+            return !1;
+          });
         }
         return _;
       }
@@ -9361,6 +9326,8 @@
           } = _,
           { data: _ } = (0, _._)(_),
           _ = (0, _.useRef)(null);
+        if (!_) return null;
+        const _ = _.purchase_options;
         return _
           ? (0, _.jsx)(_._, {
               nodeRef: _,
@@ -10551,6 +10518,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_rgMyWishlistOnSale = null;
@@ -10868,8 +10837,10 @@
                   ? "saleaction/ajaxpreviewgetsaledynamicappqueryforuser"
                   : "saleaction/ajaxgetsaledynamicappqueryforuser"));
             const _ = _._.BConfirmedAdultContentAgeGate()
-              ? []
-              : _._.excluded_content_descriptors;
+                ? []
+                : _._.excluded_content_descriptors,
+              _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID()),
+              _ = (0, _._)(_, _);
             let _ = null;
             const _ = {
               _: _._.COUNTRY,
@@ -10901,7 +10872,7 @@
               optin_only:
                 Boolean(_) || Boolean(_?.jsondata?.optin_only) || void 0,
               controller_category: Number(_) || void 0,
-              bUseCreatorHomeApps: 36 == _?.GetEventType(),
+              bUseCreatorHomeApps: _,
               bAllowDemos: 36 == _?.GetEventType(),
             };
             if (
@@ -14322,8 +14293,44 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      class _ {
+        static s_PersonalCalendarStore;
+        static Get() {
+          return (
+            _.s_PersonalCalendarStore ||
+              ((_.s_PersonalCalendarStore = new _()),
+              _.s_PersonalCalendarStore.Init(),
+              (window.g_SubscriptionStore = _.s_PersonalCalendarStore)),
+            _.s_PersonalCalendarStore
+          );
+        }
+        async GetCalendarRecommendations(_) {
+          return _._.fetchQuery(_(_));
+        }
+        Init() {}
+      }
+      function _(_) {
+        return {
+          queryKey: ["personalcalendar", _],
+          queryFn: async () => {
+            const _ = {
+                tag: _,
+              },
+              _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
+                params: _,
+                timeout: 2e4,
+              });
+            return {
+              arrAppInfos: _.data.arrAppInfos,
+              strResultMessage: _.data.strResultMessage,
+              arrUserTags: _.data.arrUserTags,
+              bUsesWishlistedGames: _.data.bUsesWishlistedGames,
+            };
+          },
+          placeholderData: (_) => _,
+        };
+      }
       function _(_, _) {
         return _ ? _.filter((_) => _.ShouldShowOnTab(_)) : _;
       }
@@ -14679,24 +14686,16 @@
                 }
               );
             }
-            if ("nearby_recommended" == _) {
-              const _ = _.calendar_section_data?.forward ? 28 : 0,
-                _ = _.calendar_section_data?.forward
-                  ? 0
-                  : _.calendar_section_data.day_count,
-                _ = await _._.Get().GetCalendarRecommendations(0, 50, _, _, !1);
-              let _ = [];
-              for (const _ of _.dayWeekTimestamps.flat())
-                for (const _ of Object.values(_.appReleasesByDay[_] ?? []))
-                  _.push({
-                    _: _.appid,
-                    type: "game",
-                  });
+            if ("nearby_recommended" == _)
               return {
-                capsules: _,
+                capsules: (
+                  await _.Get().GetCalendarRecommendations(0)
+                ).arrAppInfos.map((_) => ({
+                  _: _.nAppID,
+                  type: "game",
+                })),
                 bMoreRemaining: !1,
               };
-            }
             if (_(_))
               try {
                 let _ = new Array();
@@ -15060,7 +15059,6 @@
           _ = _(_, _, _, [..._]);
         } else _ = _(_, _, _, [..._.capsules]);
         if (_.signal.aborted) return _;
-        if (((_ = await (0, _._)(_, _, _)), _.signal.aborted)) return _;
         (_ = (0, _._)(_, _, _)),
           _ && (_ = _(_)),
           _.BUsesContentHubForItemSource() ||
@@ -15089,6 +15087,7 @@
         }
         const _ = (0, _._)(_);
         if ((await (0, _._)(_, _._, _), _.signal.aborted)) return _;
+        if (((_ = await (0, _._)(_, _, _)), _.signal.aborted)) return _;
         let _,
           _ = new Array();
         if (_.enable_faceted_browsing) {
@@ -16388,7 +16387,6 @@
               });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -18884,6 +18882,8 @@
           const _ = _._.BConfirmedAdultContentAgeGate()
               ? []
               : _._.excluded_content_descriptors,
+            _ = _._.GetClanInfoByClanAccountID(_?.clanSteamID?.GetAccountID()),
+            _ = (0, _._)(_, _),
             _ =
               _._.STORE_BASE_URL +
               (_
@@ -18918,7 +18918,7 @@
               optin_prune_tagid: _?.jsondata?.optin_prune_tagid || void 0,
               optin_only: _?.jsondata?.optin_only || void 0,
               controller_category: Number(_.eControllerCategory) || void 0,
-              bUseCreatorHomeApps: 36 == _?.GetEventType(),
+              bUseCreatorHomeApps: _,
               bAllowDemos: 36 == _?.GetEventType(),
             };
           let _ = null;

@@ -2874,10 +2874,17 @@ HelpRequestPage = {
 				var $DialogContents = $J( '#help_request_email_verification' ).clone();
 
 				var strEmailInstructions = '';
+				var strDialogTitle = 'Contact Steam Support';
 				if ( $J( form ).find( '#create_help_request_email_address' ).length )
+				{
 					strEmailInstructions = 'We just need to make sure you will receive our emails when we respond to your request.  We\'ve sent an email to:' + '<span class="help_request_email_validation_hightlight"> ' + $J( form ).find( '#create_help_request_email_address' ).val() + '</span>';
+					strDialogTitle = 'Confirm your email address';
+				}
 				else
+				{
 					strEmailInstructions = 'We just need to validate you have access to the new email address you want to use.  We\'ve sent an email to:' + '<span class="help_request_email_validation_hightlight"> ' + $J( form ).find( '#extended_string_new_email' ).val() + '</span>';
+					strDialogTitle = 'Confirm your email address';
+				}
 				$DialogContents.find( '#validate_email_instructions' ).append( strEmailInstructions );
 				if ( data.validation_failed )
 				{
@@ -2888,7 +2895,7 @@ HelpRequestPage = {
 				if ( data.validation_id )
 					$J( 'input[name="validation_id"]' ).val( data.validation_id );
 
-				var $Dialog = ShowConfirmDialog( 'Contact Steam Support', $DialogContents.show(), 'Send' )
+				var $Dialog = ShowConfirmDialog( strDialogTitle, $DialogContents.show(), 'Send' )
 					.done( function( innerData )
 					{
 						$J( 'input[name="validation_code"]' ).val( $DialogContents.find( 'input[name="validation_code"]' ).val() );

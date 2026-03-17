@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Comment rendre mon produit gratuit ?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Si votre produit est déjà disponible à l'achat et que vous souhaitez le rendre gratuit, cliquez %1$s pour en savoir plus et faire une demande d'aide.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "ici",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Befejeztük a(z) %1$s kapcsán beküldött vitatásod felülvizsgálatát.",
 	"moderatedcontent_dispute_sanctioned_2": "Gondos újraértékelést követően eredeti döntésünk fenntartása mellett döntöttünk. A tartalom eltávolítva vagy korlátozva marad, és minden kapcsolódó fiókszintű intézkedés érvényben marad. Erre az eredményre a tartalom kontextusban újraértékelése, a vitatásodban adott kiegészítő információk figyelembe vétele, és a vonatkozó platformszabályok és jogi normák alapján jutottunk.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Ha nem értesz egyet ezzel az eredménnyel, jogodban áll hitelesített, bíróságon kívüli vitarendező testületen keresztül megoldást keresni, vagy illetékes bíróságon kérni bírósági jogorvoslatot.",
+	"anonymousreport_title": "E tartalom jelentése",
+	"anonymousreport_description": "Nem helyénvaló vagy jogsértő tartalom jelentéséhez jelentkezz be a Steam Közösségbe.",
+	"anonymousreport_footer": "Ha nem tudsz bejelentkezni, <1>küldhetsz névtelen jelentést</1>.",
+	"anonymousreport_footer_action": "küldhetsz névtelen jelentést",
+	"anonymousreport_signin": "Bejelentkezés",
+	"anonymousreport_join": "csatlakozás a Steamhez",
+	"anonymousreport_createaccount": "Fiók létrehozása",
+	"anonymousreport_signin_or_join": "%1$s vagy %2$s",
 	"nocomma": ""
 }`);
     },

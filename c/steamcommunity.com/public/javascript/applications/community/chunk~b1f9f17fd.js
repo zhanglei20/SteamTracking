@@ -4598,7 +4598,7 @@
         return (
           28 == _
             ? (_ = (0, _._)("#EventEditor_TitleActionNews"))
-            : 36 == _ && (_ = (0, _._)("#EventEditor_TitleAction_Page")),
+            : _ && (_ = (0, _._)("#EventEditor_TitleAction_Page")),
           (0, _.jsxs)("div", {
             className: _().PreviewBarContainer,
             children: [
@@ -4726,78 +4726,76 @@
                 : void 0,
             [_, _],
           );
-        if (_ || _)
-          return (0, _.jsx)(_._, {
-            string: (0, _._)("#Loading"),
-          });
-        if (_) {
-          _.GetEventType();
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsxs)("div", {
-              className: _().PreviewSalesPageContainer,
-              children: [
-                (0, _.jsx)(_, {
-                  appid_or_vanity_str: _,
-                  gid: _.gid,
-                  bShowPreviewEvent: !0,
-                  eventCopyForPreview: _,
-                  fnOnChangeHubType: (_) => _(_),
-                  fnOnChangeCategory: _,
-                  fnOnChangeTagID: _,
+        return _ || _
+          ? (0, _.jsx)(_._, {
+              string: (0, _._)("#Loading"),
+            })
+          : _
+            ? (0, _.jsx)(_._, {
+                children: (0, _.jsxs)("div", {
+                  className: _().PreviewSalesPageContainer,
+                  children: [
+                    (0, _.jsx)(_, {
+                      appid_or_vanity_str: _,
+                      gid: _.gid,
+                      bShowPreviewEvent: !0,
+                      eventCopyForPreview: _,
+                      fnOnChangeHubType: (_) => _(_),
+                      fnOnChangeCategory: _,
+                      fnOnChangeTagID: _,
+                    }),
+                    (0, _.jsx)("div", {
+                      style: {
+                        position: "relative",
+                      },
+                      children: (0, _.jsx)(_._, {
+                        eventModel: _,
+                        bIsPreview: !0,
+                        language: _,
+                        backgroundImageEditModel: _,
+                        addtionalAdminButtons: _,
+                      }),
+                    }),
+                  ],
                 }),
-                (0, _.jsx)("div", {
-                  style: {
-                    position: "relative",
-                  },
+              })
+            : (0, _.jsx)(_._, {
+                children: (0, _.jsx)(_._, {
+                  location: 2,
                   children: (0, _.jsx)(_._, {
-                    eventModel: _,
-                    bIsPreview: !0,
-                    language: _,
-                    backgroundImageEditModel: _,
-                    addtionalAdminButtons: _,
+                    event: _,
+                    titleBar: (0, _.jsx)(_, {
+                      appid_or_vanity_str: _,
+                      gid: _.gid,
+                      bShowPreviewSale: _.BHasSaleEnabled(),
+                    }),
+                    lang: _,
+                    nOverrideStartTime: _.nOverrideStartTime,
+                    nOverrideEndTime: _.nOverrideEndTime,
+                    partnerEventStore: _._,
+                    emoticonStore: _._,
+                    adminPanel: (0, _.jsx)(_._, {
+                      eventModel: _,
+                      partnerEventStore: _._,
+                      addtionalAdminButtons: [
+                        (0, _.jsx)(
+                          _._,
+                          {
+                            editModel: _,
+                          },
+                          _.GetUniqueKey(),
+                        ),
+                      ],
+                    }),
+                    otherEventRow: (0, _.jsx)(_._, {
+                      clanAccountID: _.clanSteamID.GetAccountID(),
+                      gidAnnouncement: _.AnnouncementGID,
+                      partnerEventStore: _._,
+                      bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
+                    }),
                   }),
                 }),
-              ],
-            }),
-          });
-        }
-        return (0, _.jsx)(_._, {
-          children: (0, _.jsx)(_._, {
-            location: 2,
-            children: (0, _.jsx)(_._, {
-              event: _,
-              titleBar: (0, _.jsx)(_, {
-                appid_or_vanity_str: _,
-                gid: _.gid,
-                bShowPreviewSale: _.BHasSaleEnabled(),
-              }),
-              lang: _,
-              nOverrideStartTime: _.nOverrideStartTime,
-              nOverrideEndTime: _.nOverrideEndTime,
-              partnerEventStore: _._,
-              emoticonStore: _._,
-              adminPanel: (0, _.jsx)(_._, {
-                eventModel: _,
-                partnerEventStore: _._,
-                addtionalAdminButtons: [
-                  (0, _.jsx)(
-                    _._,
-                    {
-                      editModel: _,
-                    },
-                    _.GetUniqueKey(),
-                  ),
-                ],
-              }),
-              otherEventRow: (0, _.jsx)(_._, {
-                clanAccountID: _.clanSteamID.GetAccountID(),
-                gidAnnouncement: _.AnnouncementGID,
-                partnerEventStore: _._,
-                bViewAllShowInfiniteScroll: !_.BIsOGGEvent(),
-              }),
-            }),
-          }),
-        });
+              });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -14318,6 +14316,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const {
@@ -19418,6 +19417,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (_._.IN_CLIENT ? "library-" : (0, _._)() + "-") + _;
@@ -19483,31 +19485,36 @@
       }
       async function _(_, _, _) {
         const _ = new Set(_.GetTabAppIDs());
-        if (
-          (_.GetSaleSections()
-            .filter((_) => (0, _._)(_.section_type))
-            .forEach((_) => {
-              _.ShouldShowSection(_) &&
-                _.capsules.forEach((_) => {
-                  !_(_) ||
-                    (!_.diable_tab_id_filtering &&
-                      _.BIsTabFilteringEnabled()) ||
-                    _.add(_._);
-                });
-            }),
+        _.GetSaleSections()
+          .filter((_) => (0, _._)(_.section_type))
+          .forEach((_) => {
+            _.ShouldShowSection(_) &&
+              _.capsules.forEach((_) => {
+                !_(_) ||
+                  (!_.diable_tab_id_filtering && _.BIsTabFilteringEnabled()) ||
+                  _.add(_._);
+              });
+          }),
           null == _ ||
             __webpack_require__.forEach((_) => {
               const _ = _.capsule;
               !_(_) ||
                 (_.BIsTabFilteringEnabled() && !_.ShouldShowCapsule(_)) ||
                 _.add(_._);
-            }),
-          36 == _.GetEventType())
-        ) {
-          const _ = await _._.fetchQuery(
-            (0, _._)(_.clanSteamID.GetAccountID()),
-          );
-          null == _ || _.GetAppIDList().forEach((_) => _.add(_));
+            });
+        const _ = _.clanSteamID.GetAccountID(),
+          _ = _._.GetClanInfoByClanAccountID(_);
+        if ((0, _._)(_, _)) {
+          const _ = await _._.fetchQuery((0, _._)(_));
+          null == _ ||
+            _.GetAppIDList().forEach((_) => {
+              (_.BIsTabFilteringEnabled() &&
+                !_.ShouldShowCapsule({
+                  type: "game",
+                  _: _,
+                })) ||
+                _.add(_);
+            });
         }
         return _;
       }
@@ -19568,15 +19575,32 @@
       }
       async function _(_, _, _) {
         if (!(null == _ ? void 0 : _.length)) return _;
-        if (36 == _.GetEventType()) {
-          const _ = await _._.fetchQuery(
-            (0, _._)(_.clanSteamID.GetAccountID()),
-          );
+        const _ = _.clanSteamID.GetAccountID(),
+          _ = _._.GetClanInfoByClanAccountID(_);
+        if ((0, _._)(_, _)) {
+          const _ = await _._.fetchQuery((0, _._)(_));
           if (!_) return [];
           const _ = new Set(_.GetAppIDList());
-          _ = __webpack_require__.filter(
-            (_) => 0 == (0, _._)(_.type) && _.has(_._),
-          );
+          _ = __webpack_require__.filter((_) => {
+            if (_) {
+              if ("sub" == _.type || "bundle" == _.type) {
+                const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type)),
+                  _ = 36 == _.GetEventType();
+                return (
+                  !!_ &&
+                  (_
+                    ? __webpack_require__
+                        .GetIncludedAppIDs()
+                        .every((_) => _.has(_))
+                    : __webpack_require__
+                        .GetIncludedAppIDs()
+                        .some((_) => _.has(_)))
+                );
+              }
+              return _.has(_._);
+            }
+            return !1;
+          });
         }
         return _;
       }
@@ -21664,6 +21688,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         constructor() {
@@ -21984,8 +22010,10 @@
                   ? "saleaction/ajaxpreviewgetsaledynamicappqueryforuser"
                   : "saleaction/ajaxgetsaledynamicappqueryforuser"));
             const _ = _._.BConfirmedAdultContentAgeGate()
-              ? []
-              : _._.excluded_content_descriptors;
+                ? []
+                : _._.excluded_content_descriptors,
+              _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID()),
+              _ = (0, _._)(_, _);
             let _ = null;
             const _ = {
               _: _._.COUNTRY,
@@ -22034,8 +22062,7 @@
                 ) ||
                 void 0,
               controller_category: Number(_) || void 0,
-              bUseCreatorHomeApps:
-                36 == (null == _ ? void 0 : _.GetEventType()),
+              bUseCreatorHomeApps: _,
               bAllowDemos: 36 == (null == _ ? void 0 : _.GetEventType()),
             };
             if (
@@ -24854,6 +24881,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled",
@@ -25260,7 +25288,7 @@
               checked: __webpack_require__,
               className: _().AutoplayCheckbox,
               style: _,
-              label: (0, _._)("#StoreTrailer_AutoPlayVideos"),
+              label: _._.Localize("#StoreTrailer_AutoPlayVideos"),
               onChange: _,
             },
             _.GetAppID(),
@@ -26409,37 +26437,27 @@
             _.s_PersonalCalendarStore
           );
         }
-        async GetCalendarRecommendations(_, _, _, _, _) {
-          return _._.fetchQuery(_(_, _, _, _, _));
+        async GetCalendarRecommendations(_) {
+          return _._.fetchQuery(_(_));
         }
         Init() {}
       }
-      function _(_, _, _, _, _) {
+      function _(_) {
         return {
-          queryKey: ["personalcalendar", _, _, _, _, _],
+          queryKey: ["personalcalendar", _],
           queryFn: async () => {
             const _ = {
                 tag: _,
-                daysbackward: _,
-                daysforward: _,
-                weekaligned: _ ? 1 : 0,
-                maxresults: _,
-                sessionid: _._.SESSIONID,
               },
-              _ = await _().get(
-                `${_._.STORE_BASE_URL}personalcalendarold/getrecommendations`,
-                {
-                  params: _,
-                  timeout: 2e4,
-                },
-              );
+              _ = await _().get(`${_._.STORE_BASE_URL}personalcalendardata`, {
+                params: _,
+                timeout: 2e4,
+              });
             return {
-              appReleasesByDay: _.data.appReleasesByDay,
-              dayWeekTimestamps: _.data.dayWeekTimestamps,
-              maxResultCount: _.data.maxResultCount,
-              userTags: _.data.userTags,
-              usesWishlists: _.data.usesWishlists,
-              resultMessage: _.data.resultMessage,
+              arrAppInfos: _.data.arrAppInfos,
+              strResultMessage: _.data.strResultMessage,
+              arrUserTags: _.data.arrUserTags,
+              bUsesWishlistedGames: _.data.bUsesWishlistedGames,
             };
           },
           placeholderData: (_) => _,
@@ -26687,7 +26705,7 @@
           _ = (0, _._)(_, _, _);
         if ((0, _._)(_)) {
           const _ = await (async function (_, _, _, _, _, _, _, _, _, _ = 0) {
-            var _, _, _, _, _, _;
+            var _, _, _;
             const _ = (0, _._)(_),
               {
                 smart_section_max_apps: _,
@@ -26833,36 +26851,16 @@
                 }
               );
             }
-            if ("nearby_recommended" == _) {
-              const _ = (
-                  null === (_ = _.calendar_section_data) || void 0 === _
-                    ? void 0
-                    : _.forward
-                )
-                  ? 28
-                  : 0,
-                _ = (
-                  null === (_ = _.calendar_section_data) || void 0 === _
-                    ? void 0
-                    : _.forward
-                )
-                  ? 0
-                  : _.calendar_section_data.day_count,
-                _ = await _.Get().GetCalendarRecommendations(0, 50, _, _, !1);
-              let _ = [];
-              for (const _ of _.dayWeekTimestamps.flat())
-                for (const _ of Object.values(
-                  null !== (_ = _.appReleasesByDay[_]) && void 0 !== _ ? _ : [],
-                ))
-                  _.push({
-                    _: _.appid,
-                    type: "game",
-                  });
+            if ("nearby_recommended" == _)
               return {
-                capsules: _,
+                capsules: (
+                  await _.Get().GetCalendarRecommendations(0)
+                ).arrAppInfos.map((_) => ({
+                  _: _.nAppID,
+                  type: "game",
+                })),
                 bMoreRemaining: !1,
               };
-            }
             if ((0, _._)(_))
               try {
                 let _ = new Array();
@@ -27253,7 +27251,6 @@
           _ = _(_, _, _, [..._]);
         } else _ = _(_, _, _, [..._.capsules]);
         if (_.signal.aborted) return _;
-        if (((_ = await (0, _._)(_, _, _)), _.signal.aborted)) return _;
         (_ = (0, _._)(_, _, _)),
           _ && (_ = _(_)),
           _.BUsesContentHubForItemSource() ||
@@ -27285,6 +27282,7 @@
         }
         const _ = (0, _._)(_);
         if ((await (0, _._)(_, _._, _), _.signal.aborted)) return _;
+        if (((_ = await (0, _._)(_, _, _)), _.signal.aborted)) return _;
         let _,
           _ = new Array();
         if (_.enable_faceted_browsing) {
@@ -27490,7 +27488,7 @@
                           return null === (_ = _._.Get().GetApp(_._)) ||
                             void 0 === _
                             ? void 0
-                            : _.BHasTrailers(_);
+                            : _.BHasTrailers("blocked" == _);
                         }));
                     const _ = _.slice(_, _ + _).map((_) => _._);
                     if (1 == (await _._.Get().QueueMultipleAppRequests(_, _))) {
@@ -28761,7 +28759,6 @@
               });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -31457,7 +31454,7 @@
           return _(this.DedupeItems(_));
         }
         async InternalGetItems(_, _, _, _, _, _, _, _) {
-          var _, _, _, _, _, _, _, _;
+          var _, _, _, _, _, _, _, _, _;
           if (_) return _(_, _, _, _, _, _, _);
           const _ = this.GetItemBrowserQueryKeyForConfig(_, _, _, _),
             _ = this.GetItemBrowserQueryKey(_, _, _, _);
@@ -31488,6 +31485,12 @@
           const _ = _._.BConfirmedAdultContentAgeGate()
               ? []
               : _._.excluded_content_descriptors,
+            _ = _._.GetClanInfoByClanAccountID(
+              null === (_ = null == _ ? void 0 : _.clanSteamID) || void 0 === _
+                ? void 0
+                : _.GetAccountID(),
+            ),
+            _ = (0, _._)(_, _),
             _ =
               _._.STORE_BASE_URL +
               (_
@@ -31542,8 +31545,7 @@
                   ? void 0
                   : _.optin_only) || void 0,
               controller_category: Number(_.eControllerCategory) || void 0,
-              bUseCreatorHomeApps:
-                36 == (null == _ ? void 0 : _.GetEventType()),
+              bUseCreatorHomeApps: _,
               bAllowDemos: 36 == (null == _ ? void 0 : _.GetEventType()),
             };
           let _ = null;

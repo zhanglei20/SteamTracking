@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "We have completed our review of your dispute on %1$s.",
 	"moderatedcontent_dispute_sanctioned_2": "After careful reassessment, we have decided to uphold our original decision. The content will remain removed or restricted, and any related account-level measures will remain in place. This outcome was reached following a review of the content in its context, the information provided in your dispute, and the relevant platform rules and legal requirements.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "If you disagree with this outcome, you may seek resolution through a certified out-of-court dispute settlement body, or to pursue judicial redress before a competent court.",
+	"anonymousreport_title": "Report this Content",
+	"anonymousreport_description": "Sign in to the Steam Community to report inappropriate or illegal content.",
+	"anonymousreport_footer": "If you cannot sign in, you may <1>file an anonymous report</1>.",
+	"anonymousreport_footer_action": "file an anonymous report",
+	"anonymousreport_signin": "Sign In",
+	"anonymousreport_join": "Join Steam",
+	"anonymousreport_createaccount": "Create Account",
+	"anonymousreport_signin_or_join": "%1$s or %2$s",
 	"nocomma": ""
 }`);
     },

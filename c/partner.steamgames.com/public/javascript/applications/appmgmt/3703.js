@@ -37,6 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Switching to Free?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "If your game has already released and you need to switch from paid to free, click %1$s to learn more and request assistance.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "here",
+	"SinglePackagePricing_Right_Convert_Title": "Entering custom prices",
+	"SinglePackagePricing_Right_Custom_Desc": "You can enter your own prices for each currency by editing the text box directly.",
+	"SinglePackagePricing_Right_Convert_Desc": "You can also use this button to calculate each currency based on the selected conversion method and your entered custom USD.",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

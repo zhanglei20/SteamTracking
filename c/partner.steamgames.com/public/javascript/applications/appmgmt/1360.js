@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Přecházíte na bezplatnou verzi?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Pokud byla Vaše aplikace již vydána a Vy ji nyní chcete změnit z placené na bezplatnou, navštivte %1$s, kde se dozvíte více informací a budete moci zažádat o pomoc.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "tuto stránku",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

@@ -1905,11 +1905,13 @@
           default:
             return _(_)
               ? _(_.substring(0, 3))
-              : ((0, _._)(
-                  !1,
-                  `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
-                ),
-                _._.k_ECurrencyCodeInvalid);
+              : Number.isInteger(Number(_))
+                ? Number(_)
+                : ((0, _._)(
+                    !1,
+                    `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
+                  ),
+                  _._.k_ECurrencyCodeInvalid);
         }
       }
       function _(_) {

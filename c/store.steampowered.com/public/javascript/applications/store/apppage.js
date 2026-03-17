@@ -991,25 +991,24 @@
         9: !0,
       };
       function _(_, _) {
-        const _ = {
-          remaining: {
-            ..._,
-          },
-          extracted: {},
-        };
-        for (const _ of _) {
-          const _ = _.prop;
-          _ in _.remaining &&
-            ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
-        }
-        return _;
-      }
-      function _(_, _) {
         return (function (_, _, _) {
           const _ = [],
             _ = {},
             _ = {},
-            { extracted: _, remaining: _ } = _(_, _);
+            { extracted: _, remaining: _ } = (function (_, _) {
+              const _ = {
+                remaining: {
+                  ..._,
+                },
+                extracted: {},
+              };
+              for (const _ of _) {
+                const _ = _.prop;
+                _ in _.remaining &&
+                  ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
+              }
+              return _;
+            })(_, _);
           for (const _ of _) {
             if (!(_.prop in _)) continue;
             let _ = _[_.prop];
@@ -1078,6 +1077,9 @@
       }
       function _(_, _) {
         return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
+      }
+      function _(_) {
+        return _.startsWith("text") ? `var(--color-${_})` : _(_);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -4751,6 +4753,7 @@
         }, [_, _]);
       }
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let { trailers: _, screenshots: __webpack_require__ } = _;
@@ -4818,7 +4821,7 @@
                   )
                 : null,
           ),
-          _ = _ ? "" : "#TrailerPlayer_FullScreen_Tooltip",
+          _ = _ ? "" : _._.Localize("#TrailerPlayer_FullScreen_Tooltip"),
           _ = (0, _._)(_.TheaterDialog, _ && _.Fullscreen);
         return (0, _.jsx)("div", {
           ref: _.refTheater,
@@ -4835,7 +4838,7 @@
                 className: _.GamepadCarousel,
                 "flow-children": "row",
                 navEntryPreferPosition: _._.MAINTAIN_X,
-                onOptionsActionDescription: (0, _._)(_),
+                onOptionsActionDescription: _,
                 onOptionsButton: _,
                 onCancelButton: _ ? _ : void 0,
                 onGamepadDirection: _,
@@ -4989,19 +4992,19 @@
         if (!_.webmMax) return null;
         let _ = _.poster || "",
           _ = _.bMuted
-            ? "#TrailerPlayer_Unmute_Tooltip"
-            : "#TrailerPlayer_Mute_Tooltip",
+            ? _._.Localize("#TrailerPlayer_Unmute_Tooltip")
+            : _._.Localize("#TrailerPlayer_Mute_Tooltip"),
           _ = _.bPaused
-            ? "#TrailerPlayer_Play_Tooltip"
-            : "#TrailerPlayer_Pause_Tooltip",
+            ? _._.Localize("#TrailerPlayer_Play_Tooltip")
+            : _._.Localize("#TrailerPlayer_Pause_Tooltip"),
           _ = (0, _._)(_.CarouselItem, _.SingleFileTrailer);
         return (0, _.jsx)(_._, {
           className: _,
           onActivate: _,
-          onOKActionDescription: (0, _._)(_),
+          onOKActionDescription: _,
           ..._,
           onSecondaryButton: _,
-          onSecondaryActionDescription: (0, _._)(_),
+          onSecondaryActionDescription: _,
           onButtonDown: _,
           children: (0, _.jsx)("video", {
             ref: _,
@@ -9018,6 +9021,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

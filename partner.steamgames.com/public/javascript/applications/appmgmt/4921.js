@@ -7,7 +7,7 @@
   {
     94921: (a) => {
       a.exports = JSON.parse(
-        '{"language":"turkish","LoginRedirect_Dialog_Title":"Giriş Yap","LoginRedirect_Dialog_Description":"Bu öğeyi istek listenize eklemek, takip etmek veya yok sayıldı olarak işaretlemek için giriş yapın. Tamam\'a tıklamak sizi giriş yapma sayfasına yönlendirecektir.","Wishlist_NotSignedIn":"Giriş yaparak veya bu sayfayı Steam uygulamasında açarak tavsiyeleri görün, istek listenize ekleyin, takip edin ve satın alın.","Dummy":"dummy"}',
+        '{"language":"turkish","LoginRedirect_Dialog_Title":"Giriş Yap","LoginRedirect_Dialog_Description":"Bu öğeyi istek listenize eklemek, takip etmek veya yok sayıldı olarak işaretlemek için giriş yapın. Tamam\'a tıklamak sizi giriş yapma sayfasına yönlendirecektir.","Wishlist_NotSignedIn":"Giriş yaparak veya bu sayfayı Steam uygulamasında açarak istek listenize ekleyin, takip edin veya satın alın.","Dummy":"dummy"}',
       );
     },
   },

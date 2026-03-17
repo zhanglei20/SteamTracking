@@ -134,6 +134,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        DescriptionText: "_2yUdCFZzHG88b4NJfKsilX",
+        AnonymousNotice: "_2nf3Oc6BPDa2m1x00QidHg",
+        SignInButtonContainer: "_1BnHE1R4158RM38jmASodM",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         ContentReportDialog: "_1nRygtq_ihqZUjZS4TYN8n",
         BlockList: "_26Mh3pOoHvN94uQqD5U12q",
         BlockListItem: "_2tqpD1Hr0c3LCAUSe4r3Yp",
@@ -1795,9 +1802,10 @@
           for (const { button: _, fnCallback: __webpack_require__ } of this
             .m_rgGlobalButtonHandlers)
             if (_ == _.detail.button && !1 !== __webpack_require__(_))
-              return !0;
-          for (const _ of this.m_rgOnUnhandledButton) if (_(_)) return !0;
-          return !1;
+              return !1;
+          for (const _ of this.m_rgOnUnhandledButton)
+            if (!1 !== _(_)) return !1;
+          return !0;
         }
         HandleButtonDownEventAsLogicalEvent(_) {
           let { bUnhandled: _, bHadLogicalEventMapping: __webpack_require__ } =
@@ -1806,7 +1814,7 @@
             _(
               `Logical gamepad Event fired: ${_._[_.detail.button]}, had logical event: ${__webpack_require__}, was handled: ${!_}`,
             ),
-            _ && (_ = !this.TryRootButtonListeners(_)),
+            _ && (_ = this.TryRootButtonListeners(_)),
             _ && (_ = this.m_Controller.FireUnhandledGamepadEventCallbacks(_)),
             _.stopPropagation(),
             _
@@ -2835,7 +2843,85 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_, ..._) {
+        const _ = [],
+          _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+        let _,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          (_ += _[0].length), __webpack_require__.push(_[1]);
+          const _ = parseInt(_[2]),
+            _ = _[3] || "",
+            _ = _(_, ..._),
+            _ = (_ >= 1 && _ <= _.length ? _[_ - 1] : null)
+              ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
+              : _;
+          __webpack_require__.push(_);
+        }
+        return (
+          __webpack_require__.push(_.substr(_)),
+          _.createElement(_.Fragment, null, ..._)
+        );
+      }
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!1);
+        (0, _.useEffect)(() => {
+          document
+            .getElementById(_.anchorId)
+            .addEventListener("click", () => __webpack_require__(!0));
+        }, [_.anchorId]);
+        const _ = `/login/?redir=${encodeURIComponent(window.location.href)}`,
+          _ = `${_._.STORE_BASE_URL}/join/`,
+          _ = `${_._.HELP_BASE_URL}wizard/HelpWithAnonymousContentReport`;
+        return _
+          ? (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsxs)(_._, {
+                closeModal: () => __webpack_require__(!1),
+                title: _._.Localize("#anonymousreport_title"),
+                children: [
+                  (0, _.jsx)(_._, {
+                    className: _.DescriptionText,
+                    children: _._.Localize("#anonymousreport_description"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    className: _.AnonymousNotice,
+                    children: _(
+                      _._.Localize("#anonymousreport_footer"),
+                      (0, _.jsx)(_._, {
+                        href: _,
+                      }),
+                    ),
+                  }),
+                  (0, _.jsxs)(_._, {
+                    className: _.SignInButtonContainer,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        href: _,
+                        children: (0, _.jsx)(_._, {
+                          children: _._.Localize("#anonymousreport_signin"),
+                        }),
+                      }),
+                      (0, _.jsx)(_._, {
+                        href: _,
+                        children: (0, _.jsx)(_._, {
+                          children: _._.Localize(
+                            "#anonymousreport_createaccount",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
@@ -3590,6 +3676,10 @@
                   (0, _.jsx)(_._, {
                     ..._,
                   }),
+                "forum-post-content-moderation-anonymous-report-dialog": (_) =>
+                  (0, _.jsx)(_, {
+                    ..._,
+                  }),
               },
             }),
           ],
@@ -3623,7 +3713,6 @@
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = [];
@@ -3634,7 +3723,6 @@
         );
       }
       __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
       __webpack_require__("chunkid");
@@ -3934,6 +4022,27 @@
           children: _,
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 4145017,
+        _ = 39049601,
+        _ = 41316928,
+        _ = 4,
+        _ = 20,
+        _ = 45559995,
+        _ = 45902273,
+        _ = [_, 35143931, _, _, _];
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -6654,11 +6763,11 @@
           _ = 0,
           _ = _;
         for (; _; ) {
-          if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
+          if ("ownerDocument" in _) {
             const _ = window.getComputedStyle(_);
             if ("fixed" === _.position || "sticky" === _.position) break;
           }
-          _ = _.offsetParent;
+          (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
         }
         for (_ = null == _ ? void 0 : _.parentElement; _; ) {
           const { scrollTop: _, scrollLeft: _ } = _(_);
@@ -8890,6 +8999,141 @@
           ],
         };
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__
+          ._("chunkid")
+          .then(__webpack_require__._.bind(__webpack_require__, 61970, 19))),
+        (_.brazilian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 80308, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 51715, 19))),
+        (_.czech = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 66865, 19))),
+        (_.danish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 18579, 19))),
+        (_.dutch = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 46220, 19))),
+        (_.english = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 3818, 19))),
+        (_.finnish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 79841, 19))),
+        (_.french = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 4586, 19))),
+        (_.german = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 80916, 19))),
+        (_.greek = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 98150, 19))),
+        (_.hungarian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 63839, 19))),
+        (_.indonesian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 2934, 19))),
+        (_.italian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 20738, 19))),
+        (_.japanese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 96509, 19))),
+        (_.koreana = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 87261, 19))),
+        (_.latam = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 37429, 19))),
+        (_.norwegian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 41814, 19))),
+        (_.polish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 83187, 19))),
+        (_.portuguese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 3519, 19))),
+        (_.romanian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 10765, 19))),
+        (_.russian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 62391, 19))),
+        (_.sc_schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 2525, 19))),
+        (_.schinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 99774, 19))),
+        (_.spanish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 42082, 19))),
+        (_.swedish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 52747, 19))),
+        (_.tchinese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 56997, 19))),
+        (_.thai = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 90392, 19))),
+        (_.turkish = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 27194, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 38396, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__
+            ._("chunkid")
+            .then(__webpack_require__._.bind(__webpack_require__, 88157, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -29624,6 +29868,11 @@
                     _: !0,
                     _: !0,
                   },
+                  purchase_description: {
+                    _: 72,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -29743,7 +29992,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.included_apps || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+            _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -29759,6 +30008,12 @@
                   },
                   included_packages: {
                     _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  included_bundles: {
+                    _: 3,
                     _: _,
                     _: !0,
                     _: !0,
@@ -35479,21 +35734,18 @@
         for (; _; ) {
           if (_(_)) {
             const _ = window.getComputedStyle(_);
+            if ("fixed" == _.position || "sticky" == _.position) break;
             if (
               !(
                 (_ && "x" != _) ||
-                ("scroll" != _.overflowX &&
-                  "auto" != _.overflowX &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowX && "auto" != _.overflowX)
               )
             )
               break;
             if (
               !(
                 (_ && "y" != _) ||
-                ("scroll" != _.overflowY &&
-                  "auto" != _.overflowY &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowY && "auto" != _.overflowY)
               )
             )
               break;
@@ -36693,14 +36945,7 @@
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              ..._(_, _),
-              staleTime: 6e5,
-            };
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
@@ -36710,7 +36955,11 @@
             : (function (_, _) {
                 return {
                   ..._(_, _),
-                  select: (_) => (_ ? _[0] : null),
+                  select: (_) =>
+                    (null == _ ? void 0 : _.purchase_options) &&
+                    _.purchase_options.length > 0
+                      ? _.purchase_options[0]
+                      : null,
                   staleTime: 6e5,
                 };
               })(_, _),
@@ -36777,9 +37026,6 @@
       function _(_, _) {
         return _(_, _, "include_platforms", "platforms");
       }
-      function _(_, _) {
-        return _(_, _, "include_all_purchase_options", "purchase_options");
-      }
       function _(_) {
         return (
           !!_ &&
@@ -36817,10 +37063,26 @@
         };
       }
       function _(_, _) {
+        const _ = "include_all_purchase_options";
+        return {
+          queryKey: _(_, _),
+          queryFn: async () => {
+            const _ = await _(_, _, _);
+            return {
+              purchase_options: _.purchase_options,
+              invalid_purchase_options: _.invalid_purchase_options,
+              accessories: _.accessories,
+            };
+          },
+          staleTime: 6e5,
+          enabled: _(_),
+        };
+      }
+      function _(_, _) {
         return ["StoreItem", _ && (0, _._)(_), _];
       }
       function _(_, _, _) {
-        var _, _, _, _;
+        var _, _, _, _, _, _;
         const _ = (0, _._)(_);
         _ &&
           (!(function (_, _, _) {
@@ -36875,7 +37137,11 @@
             })(_, _, _),
           _.include_all_purchase_options &&
             (function (_, _, _) {
-              _(_, _, _, "include_all_purchase_options", "purchase_options");
+              _.setQueryData(_(_, "include_all_purchase_options"), {
+                purchase_options: _.purchase_options,
+                invalid_purchase_options: _.invalid_purchase_options,
+                accessories: _.accessories,
+              });
             })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -36892,6 +37158,13 @@
                   ? void 0
                   : _.included_packages) ||
               void 0 === _ ||
+              _.forEach((_) => _(_, _, _.included_item_data_request)),
+            null ===
+              (_ =
+                null === (_ = _.included_items) || void 0 === _
+                  ? void 0
+                  : _.included_bundles) ||
+              void 0 === _ ||
               _.forEach((_) => _(_, _, _.included_item_data_request))));
       }
       const _ = [
@@ -36903,6 +37176,7 @@
         "game_rating",
         "purchase_options",
         "accessories",
+        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
@@ -38024,10 +38298,12 @@
 	"verifiedprogram": 100756,
 	"trailercarousel": 100757
 }`);
+      var _ = __webpack_require__("chunkid");
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _.AddNavParamToURL(_, _);
+          const _ = _.GetSNRLinkParam(_, __webpack_require__),
+            _ = _.GetCuratorClanIDParam(_);
+          return _.AddNavParamToURL(_, _, _);
         }
         static ParseSNR(_) {
           const _ = _.split("_") || [];
@@ -38040,7 +38316,7 @@
             depth: _[5] ? Number(_[5]) : void 0,
           };
         }
-        static GetLinkParam(_, _ = null) {
+        static GetSNRLinkParam(_, _ = null) {
           var _;
           let _ = _.ComputeLinkPrefix(
             _.domain,
@@ -38052,13 +38328,20 @@
           const _ = _.EncodeEventComponent(_.feature);
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
-        static AddNavParamToURL(_, _) {
+        static GetCuratorClanIDParam(_) {
+          var _;
+          return null !== (_ = _.curator_clanid) && void 0 !== _ ? _ : null;
+        }
+        static AddNavParamToURL(_, _, _) {
           if (!_ || 0 == _.length) return _;
           try {
             const _ = new URL((0, _._)(_)),
               _ = new URLSearchParams(_.search);
             return (
               _.set("snr", encodeURIComponent(null != _ ? _ : "")),
+              _ &&
+                !_._.includes(_) &&
+                _.set("curator_clanid", encodeURIComponent(null != _ ? _ : "")),
               _.origin + _.pathname + "?" + _.toString() + _.hash
             );
           } catch (_) {
@@ -38141,6 +38424,7 @@
               __webpack_require__.submethod,
               __webpack_require__.feature,
               __webpack_require__.depth,
+              __webpack_require__.curator_clanid,
             ],
           );
         return (0, _.jsx)(_.Provider, {
@@ -38175,7 +38459,7 @@
         const _ = _();
         return _.useMemo(
           () =>
-            _._.GetLinkParam(
+            _._.GetSNRLinkParam(
               {
                 ..._,
                 feature: _ || _.feature,
@@ -38186,14 +38470,15 @@
         );
       }
       function _(_, _, _, _) {
-        const _ = _._.GetLinkParam(
-          {
-            ..._,
-            feature: _ || _.feature,
-          },
-          _,
-        );
-        return _._.AddNavParamToURL(_, _);
+        const _ = _._.GetSNRLinkParam(
+            {
+              ..._,
+              feature: _ || _.feature,
+            },
+            _,
+          ),
+          _ = _._.GetCuratorClanIDParam(_);
+        return _._.AddNavParamToURL(_, _, _);
       }
       function _(_) {
         const { href: _, ...__webpack_require__ } = _,
@@ -44301,8 +44586,9 @@
         }, [_, _, _, _]);
       }
       function _(_, _, __webpack_require__ = null) {
-        const _ = _(_, __webpack_require__);
-        return _._.AddNavParamToURL(_, _);
+        const _ = _(_, __webpack_require__),
+          _ = _ ? _._.GetCuratorClanIDParam(_) : null;
+        return _._.AddNavParamToURL(_, _, _);
       }
       function _(_, _, _, _ = null) {
         const _ = _(_, _, _);
@@ -44345,13 +44631,14 @@
           );
         }
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _._.AddNavParamToURL(_, _);
+          const _ = _.GetLinkParam(_, __webpack_require__),
+            _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
+          return _._.AddNavParamToURL(_, _, _);
         }
         static GetLinkParam(_, _ = null) {
           let _, _;
           if ("string" != typeof _) {
-            if (_.domain) return _._.GetLinkParam(_, _);
+            if (_.domain) return _._.GetSNRLinkParam(_, _);
             _ = _.feature || "";
           }
           if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
@@ -51748,6 +52035,11 @@
                     _: 4,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  steamid: {
+                    _: 5,
+                    _: _._.readUint64String,
+                    _: _._.writeUint64String,
                   },
                 },
               }),
@@ -65954,138 +66246,10 @@
             request: _,
           };
         })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 61970, 19))),
-        (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 80308, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51715, 19))),
-        (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66865, 19))),
-        (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 18579, 19))),
-        (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 46220, 19))),
-        (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3818, 19))),
-        (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 79841, 19))),
-        (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4586, 19))),
-        (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 80916, 19))),
-        (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98150, 19))),
-        (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 63839, 19))),
-        (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 2934, 19))),
-        (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 20738, 19))),
-        (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96509, 19))),
-        (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 87261, 19))),
-        (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 37429, 19))),
-        (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 41814, 19))),
-        (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83187, 19))),
-        (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3519, 19))),
-        (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 10765, 19))),
-        (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 62391, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 2525, 19))),
-        (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 99774, 19))),
-        (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 42082, 19))),
-        (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 52747, 19))),
-        (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 56997, 19))),
-        (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 90392, 19))),
-        (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27194, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 38396, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 88157, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
-      var _;
       !(function (_) {
         (_[(_.k_EContentModerationAction_None = 0)] =
           "k_EContentModerationAction_None"),
@@ -66347,157 +66511,163 @@
       function _(_) {
         switch (_) {
           case 0:
-            return _.Localize("#ContentReportReason_Invalid");
+            return _._.Localize("#ContentReportReason_Invalid");
           case 1:
-            return _.Localize("#ContentReportReason_None");
+            return _._.Localize("#ContentReportReason_None");
           case 2:
-            return _.Localize("#ContentReportReason_Unknown");
+            return _._.Localize("#ContentReportReason_Unknown");
           case 3:
-            return _.Localize("#ContentReportReason_Harassment");
+            return _._.Localize("#ContentReportReason_Harassment");
           case 4:
-            return _.Localize("#ContentReportReason_BullyingAndIntimidation");
+            return _._.Localize("#ContentReportReason_BullyingAndIntimidation");
           case 5:
-            return _.Localize("#ContentReportReason_Stalking");
+            return _._.Localize("#ContentReportReason_Stalking");
           case 6:
-            return _.Localize("#ContentReportReason_Doxxing");
+            return _._.Localize("#ContentReportReason_Doxxing");
           case 7:
-            return _.Localize("#ContentReportReason_OtherHarassment");
+            return _._.Localize("#ContentReportReason_OtherHarassment");
           case 8:
-            return _.Localize("#ContentReportReason_EncouragingViolence");
+            return _._.Localize("#ContentReportReason_EncouragingViolence");
           case 9:
-            return _.Localize("#ContentReportReason_EncouragingSelfHarm");
+            return _._.Localize("#ContentReportReason_EncouragingSelfHarm");
           case 10:
-            return _.Localize("#ContentReportReason_EncouragingSuicide");
+            return _._.Localize("#ContentReportReason_EncouragingSuicide");
           case 11:
-            return _.Localize("#ContentReportReason_OtherViolenceOrSelfHarm");
+            return _._.Localize("#ContentReportReason_OtherViolenceOrSelfHarm");
           case 63:
-            return _.Localize("#ContentReportReason_CredibleThreatOfViolence");
+            return _._.Localize(
+              "#ContentReportReason_CredibleThreatOfViolence",
+            );
           case 12:
-            return _.Localize("#ContentReportReason_PhishingOrAccountTheft");
+            return _._.Localize("#ContentReportReason_PhishingOrAccountTheft");
           case 13:
-            return _.Localize("#ContentReportReason_AttemptedScamming");
+            return _._.Localize("#ContentReportReason_AttemptedScamming");
           case 14:
-            return _.Localize("#ContentReportReason_LinkingToMaliciousContent");
+            return _._.Localize(
+              "#ContentReportReason_LinkingToMaliciousContent",
+            );
           case 15:
-            return _.Localize("#ContentReportReason_Impersonation");
+            return _._.Localize("#ContentReportReason_Impersonation");
           case 16:
-            return _.Localize("#ContentReportReason_OtherScamsAndTheft");
+            return _._.Localize("#ContentReportReason_OtherScamsAndTheft");
           case 17:
-            return _.Localize("#ContentReportReason_EncouragingTerrorism");
+            return _._.Localize("#ContentReportReason_EncouragingTerrorism");
           case 18:
-            return _.Localize("#ContentReportReason_OrganizingTerrorism");
+            return _._.Localize("#ContentReportReason_OrganizingTerrorism");
           case 19:
-            return _.Localize("#ContentReportReason_OtherTerrorism");
+            return _._.Localize("#ContentReportReason_OtherTerrorism");
           case 20:
-            return _.Localize("#ContentReportReason_TargetedAbuse");
+            return _._.Localize("#ContentReportReason_TargetedAbuse");
           case 21:
-            return _.Localize("#ContentReportReason_NamingAndShaming");
+            return _._.Localize("#ContentReportReason_NamingAndShaming");
           case 22:
-            return _.Localize("#ContentReportReason_Discrimination");
+            return _._.Localize("#ContentReportReason_Discrimination");
           case 23:
-            return _.Localize("#ContentReportReason_OtherAbuse");
+            return _._.Localize("#ContentReportReason_OtherAbuse");
           case 24:
-            return _.Localize("#ContentReportReason_Trolling");
+            return _._.Localize("#ContentReportReason_Trolling");
           case 25:
-            return _.Localize("#ContentReportReason_Baiting");
+            return _._.Localize("#ContentReportReason_Baiting");
           case 26:
-            return _.Localize("#ContentReportReason_Derailing");
+            return _._.Localize("#ContentReportReason_Derailing");
           case 27:
-            return _.Localize("#ContentReportReason_OtherDisruptive");
+            return _._.Localize("#ContentReportReason_OtherDisruptive");
           case 28:
-            return _.Localize("#ContentReportReason_Spam");
+            return _._.Localize("#ContentReportReason_Spam");
           case 29:
-            return _.Localize("#ContentReportReason_Begging");
+            return _._.Localize("#ContentReportReason_Begging");
           case 30:
-            return _.Localize("#ContentReportReason_Reposting");
+            return _._.Localize("#ContentReportReason_Reposting");
           case 31:
-            return _.Localize("#ContentReportReason_OtherOffTopic");
+            return _._.Localize("#ContentReportReason_OtherOffTopic");
           case 32:
-            return _.Localize("#ContentReportReason_CSAMSexualContent");
+            return _._.Localize("#ContentReportReason_CSAMSexualContent");
           case 33:
-            return _.Localize("#ContentReportReason_CSAMGroomingOrEnticement");
+            return _._.Localize(
+              "#ContentReportReason_CSAMGroomingOrEnticement",
+            );
           case 34:
-            return _.Localize("#ContentReportReason_CSAMOther");
+            return _._.Localize("#ContentReportReason_CSAMOther");
           case 35:
-            return _.Localize("#ContentReportReason_NudityOrSexualContent");
+            return _._.Localize("#ContentReportReason_NudityOrSexualContent");
           case 36:
-            return _.Localize("#ContentReportReason_NonConsensualMaterial");
+            return _._.Localize("#ContentReportReason_NonConsensualMaterial");
           case 37:
-            return _.Localize("#ContentReportReason_Advertising");
+            return _._.Localize("#ContentReportReason_Advertising");
           case 38:
-            return _.Localize("#ContentReportReason_ReferralLinks");
+            return _._.Localize("#ContentReportReason_ReferralLinks");
           case 39:
-            return _.Localize("#ContentReportReason_Gambling");
+            return _._.Localize("#ContentReportReason_Gambling");
           case 40:
-            return _.Localize("#ContentReportReason_Raffles");
+            return _._.Localize("#ContentReportReason_Raffles");
           case 41:
-            return _.Localize("#ContentReportReason_OtherCommercialActivity");
+            return _._.Localize("#ContentReportReason_OtherCommercialActivity");
           case 42:
-            return _.Localize("#ContentReportReason_InauthenticReview");
+            return _._.Localize("#ContentReportReason_InauthenticReview");
           case 43:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_HiddenAdvertisementOrCommercialCommunication",
             );
           case 44:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_MisleadingInformationAboutGoodsOrServices",
             );
           case 45:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_MisleadingInformationAboutConsumerRights",
             );
           case 46:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_NoncomplianceWithPricingRegulations",
             );
           case 47:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_RightToBeForgottenViolation",
             );
           case 48:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_MissingProcessingGroundForData",
             );
           case 49:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_OtherDataProtectionAndPrivacyViolation",
             );
           case 50:
-            return _.Localize("#ContentReportReason_GenderedHarassment");
+            return _._.Localize("#ContentReportReason_GenderedHarassment");
           case 51:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_GenderedBullyingAndIntimidation",
             );
           case 52:
-            return _.Localize("#ContentReportReason_GenderedStalking");
+            return _._.Localize("#ContentReportReason_GenderedStalking");
           case 53:
-            return _.Localize("#ContentReportReason_GenderedDoxxing");
+            return _._.Localize("#ContentReportReason_GenderedDoxxing");
           case 54:
-            return _.Localize("#ContentReportReason_GenderedOtherHarassment");
+            return _._.Localize("#ContentReportReason_GenderedOtherHarassment");
           case 55:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_GenderedEncouragingViolence",
             );
           case 56:
-            return _.Localize("#ContentReportReason_GenderedTargetedAbuse");
+            return _._.Localize("#ContentReportReason_GenderedTargetedAbuse");
           case 57:
-            return _.Localize("#ContentReportReason_CSAMFakedSexualContent");
+            return _._.Localize("#ContentReportReason_CSAMFakedSexualContent");
           case 58:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_GenderedNonConsensualMaterial",
             );
           case 59:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_FakedGenderedNonConsensualMaterial",
             );
           case 60:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_FakedNonConsensualMaterial",
             );
           case 62:
-            return _.Localize("#ContentReportReason_QuotesModeratedContent");
+            return _._.Localize("#ContentReportReason_QuotesModeratedContent");
           case 61:
-            return _.Localize(
+            return _._.Localize(
               "#ContentReportReason_NegativeEffectonDiscourseOrElections",
             );
           default:
@@ -66703,7 +66873,7 @@
               _(_),
               _(_)
                 ? (_.strOverrideReasonNameLocToken
-                    ? _(_.Localize(_.strOverrideReasonNameLocToken))
+                    ? _(_._.Localize(_.strOverrideReasonNameLocToken))
                     : _(null),
                   _("submit"))
                 : _(_) &&
@@ -66728,20 +66898,20 @@
           _(_)
             ? 1 === _.children.length && !_.bForceLocToken && _(_.children[0])
               ? (_ = _(_.children[0].value))
-              : ((_ = _.Localize(_.strLocToken)),
+              : ((_ = _._.Localize(_.strLocToken)),
                 (_ = _.strDescriptionLocToken
-                  ? _.Localize(_.strDescriptionLocToken)
+                  ? _._.Localize(_.strDescriptionLocToken)
                   : void 0))
             : _(_)
-              ? ((_ = _.Localize(_.strLocToken)),
+              ? ((_ = _._.Localize(_.strLocToken)),
                 (_ = _.strDescriptionLocToken
-                  ? _.Localize(_.strDescriptionLocToken)
+                  ? _._.Localize(_.strDescriptionLocToken)
                   : void 0))
               : ((_ = _.strOverrideReasonNameLocToken
-                  ? _.Localize(_.strOverrideReasonNameLocToken)
+                  ? _._.Localize(_.strOverrideReasonNameLocToken)
                   : _(_.value)),
                 (_ = _.strDescriptionLocToken
-                  ? _.Localize(_.strDescriptionLocToken)
+                  ? _._.Localize(_.strDescriptionLocToken)
                   : void 0));
           const _ = _(_) || _.bShowRightArrow;
           return _(_)
@@ -66769,10 +66939,10 @@
         return (
           (_ =
             "submitted" === _
-              ? _.Localize("#ContentReportSubmitted_Title")
+              ? _._.Localize("#ContentReportSubmitted_Title")
               : "error" === _
-                ? _.Localize("#ContentReportSubmissionError_Title")
-                : _.Localize("#ReportContent_Title")),
+                ? _._.Localize("#ContentReportSubmissionError_Title")
+                : _._.Localize("#ReportContent_Title")),
           (0, _.jsx)(_.Fragment, {
             children: (0, _.jsx)(_._, {
               active: _.showDialog,
@@ -66791,7 +66961,7 @@
                             children: _.landingDescription,
                           }),
                         (0, _.jsx)("p", {
-                          children: _.Localize("#ReportContent_PickAReason"),
+                          children: _._.Localize("#ReportContent_PickAReason"),
                         }),
                         (0, _.jsx)(_._, {
                           focusableIfEmpty: !0,
@@ -66806,7 +66976,7 @@
                                 _(__webpack_require__.slice(0, -1)),
                               children: [
                                 "« ",
-                                _.Localize("#ReportContent_Back"),
+                                _._.Localize("#ReportContent_Back"),
                               ],
                             }),
                           }),
@@ -66815,7 +66985,7 @@
                             className: _().BottomButtons,
                             children: (0, _.jsx)(_._, {
                               onClick: () => _.setShowDialog(!1),
-                              children: _.Localize("#moderation_cancel"),
+                              children: _._.Localize("#moderation_cancel"),
                             }),
                           }),
                       ],
@@ -66824,10 +66994,10 @@
                     (0, _.jsxs)(_.Fragment, {
                       children: [
                         (0, _.jsx)("p", {
-                          children: _.Localize("#ReportContent_Attestation"),
+                          children: _._.Localize("#ReportContent_Attestation"),
                         }),
                         (0, _.jsx)(_._, {
-                          children: _.Localize(
+                          children: _._.Localize(
                             "#reportforumpost_reasonforreport",
                             _ || _(_),
                           ),
@@ -66841,7 +67011,7 @@
                               _().Textarea,
                               _().DetailedReasonTextArea,
                             ),
-                            placeholder: _.Localize(
+                            placeholder: _._.Localize(
                               "#ReportContent_DetailsPlaceholder",
                             ),
                           }),
@@ -66850,7 +67020,7 @@
                           className: _().NamePanel,
                           children: [
                             (0, _.jsx)(_._, {
-                              children: _.Localize(
+                              children: _._.Localize(
                                 "#ReportContent_YourNamePlaceholder",
                               ),
                             }),
@@ -66873,7 +67043,7 @@
                               },
                               children: [
                                 "« ",
-                                _.Localize("#ReportContent_Back"),
+                                _._.Localize("#ReportContent_Back"),
                               ],
                             }),
                             (0, _.jsx)(_._, {
@@ -66916,7 +67086,7 @@
                                   .then(() => _.onSubmitted && _.onSubmitted())
                                   .catch(() => _("error"));
                               },
-                              children: _.Localize(
+                              children: _._.Localize(
                                 "#ReportContent_ReportButton",
                               ),
                             }),
@@ -66926,13 +67096,13 @@
                     }),
                   "submitted" === _ &&
                     (0, _.jsx)("p", {
-                      children: _.Localize(
+                      children: _._.Localize(
                         "#ContentReportSubmitted_Description",
                       ),
                     }),
                   "error" === _ &&
                     (0, _.jsx)("p", {
-                      children: _.Localize(
+                      children: _._.Localize(
                         "#ContentReportSubmissionError_Description",
                       ),
                     }),
@@ -66940,7 +67110,7 @@
                     (0, _.jsxs)(_._, {
                       children: [
                         (0, _.jsx)("p", {
-                          children: _.Localize(_.strWarningBeforeNav),
+                          children: _._.Localize(_.strWarningBeforeNav),
                         }),
                         (0, _.jsxs)(_._, {
                           className: _().BottomButtons,
@@ -66952,7 +67122,7 @@
                               },
                               children: [
                                 "« ",
-                                _.Localize("#ReportContent_Back"),
+                                _._.Localize("#ReportContent_Back"),
                               ],
                             }),
                             (0, _.jsx)(_._, {
@@ -86449,6 +86619,7 @@
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
           CLIENT_SESSION: 0,
+          NOW: 0,
         },
         _ = {
           logged_in: !1,
@@ -86667,7 +86838,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 38803), _((_._ = _));
+      return (_ = 80131), _((_._ = _));
       var _;
     });
     _._();

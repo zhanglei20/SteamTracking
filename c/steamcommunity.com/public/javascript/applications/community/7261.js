@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "%1$s 관련 이의 제기 요청에 대한 검토를 완료했습니다.",
 	"moderatedcontent_dispute_sanctioned_2": "신중하게 다시 검토한 끝에 기존 결정을 유지하기로 했습니다. 해당 콘텐츠는 삭제 또는 제한된 상태로 유지되며 계정 수준에 적용된 관련 조치도 그대로 유지됩니다. 이는 콘텐츠의 맥락, 이의 제기 시 제공해 주신 정보, 관련 플랫폼 규정 및 법적 요건을 종합적으로 검토한 결과입니다.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "검토 결과에 동의하지 않을 경우, 공인된 비사법적 분쟁 해결 기관을 통해 해결을 요청할 권리와 관할 법원에 사법적 구제를 요청할 권리가 있습니다.",
+	"anonymousreport_title": "이 콘텐츠 신고",
+	"anonymousreport_description": "부적절하거나 불법적인 콘텐츠를 신고하려면 Steam 커뮤니티에 로그인하세요.",
+	"anonymousreport_footer": "로그인할 수 없는 경우에는 <1>익명으로 신고</1>할 수 있습니다.",
+	"anonymousreport_footer_action": "익명으로 신고",
+	"anonymousreport_signin": "로그인",
+	"anonymousreport_join": "Steam 가입",
+	"anonymousreport_createaccount": "계정 만들기",
+	"anonymousreport_signin_or_join": "%1$s 또는 %2$s",
 	"nocomma": ""
 }`);
     },

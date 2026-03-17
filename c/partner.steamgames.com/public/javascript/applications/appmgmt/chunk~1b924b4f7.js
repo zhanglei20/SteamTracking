@@ -75,6 +75,7 @@
     chunkid: (module) => {
       module.exports = {
         PriceGuidelinesPicker: "_2skmsPR7jCBo5xHN2v_E6A",
+        SelectionIndicator: "krnfTfrwAOa14We87yU4k",
         GuidelinesPanel: "_29sQa7P4ANi-KFpS_lkroj",
         GuidelinesDescription: "_3poXK_qmmnRcHLvBGFqi8h",
         GuidelinesGrid: "_1Kz7R_x889mAnYo3uORnzL",
@@ -99,385 +100,11 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            direction: _,
-            ignoreHorizontal: __webpack_require__,
-            ignoreVertical: _,
-            dismissOnClick: _,
-            interactionMode: _ = 0,
-          } = _,
-          _ = (0, _.useRef)(null),
-          _ = (0, _.useRef)(!1),
-          _ = (0, _.useRef)(!1),
-          _ = (0, _.useRef)(null),
-          [_, _] = (0, _.useState)(!1),
-          [_, _] = (0, _.useMemo)(
-            () =>
-              (function (_) {
-                const [_, __webpack_require__] = (0, _._)(_, "-");
-                return "left" === _ || "right" === _
-                  ? [void 0, _]
-                  : [_, __webpack_require__];
-              })(_),
-            [_],
-          ),
-          _ = (0, _.useCallback)(() => {
-            if (!_.current || !_.current) return;
-            const _ = _.current.getBoundingClientRect();
-            let _ = _;
-            const _ = _.current.matches(":dir(rtl)");
-            _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left")),
-              _.current.style.setProperty("--parentWidth", `${_.width}px`),
-              _.current.style.setProperty("--parentHeight", `${_.height}px`),
-              __webpack_require__ ||
-                ("left" === _
-                  ? _
-                    ? ((_.current.style.left = "unset"),
-                      (_.current.style.right =
-                        document.documentElement.clientWidth - _.right + "px"))
-                    : ((_.current.style.left = "unset"),
-                      (_.current.style.right =
-                        document.documentElement.clientWidth - _.left + "px"))
-                  : "right" === _
-                    ? _
-                      ? ((_.current.style.left = `${_.left}px`),
-                        (_.current.style.right = "unset"))
-                      : ((_.current.style.left = `${_.right}px`),
-                        (_.current.style.right = "unset"))
-                    : void 0 === _ &&
-                      (_
-                        ? ((_.current.style.left = "unset"),
-                          (_.current.style.right =
-                            document.documentElement.clientWidth -
-                            _.right +
-                            "px"))
-                        : ((_.current.style.left = `${_.left}px`),
-                          (_.current.style.right = "unset")))),
-              _ ||
-                ("down" === _
-                  ? ((_.current.style.top = `${_.bottom}px`),
-                    (_.current.style.bottom = "unset"),
-                    _.current.style.setProperty(
-                      "--availableHeight",
-                      document.documentElement.clientHeight - _.bottom + "px",
-                    ))
-                  : "up" === _
-                    ? ((_.current.style.top = "unset"),
-                      (_.current.style.bottom =
-                        document.documentElement.clientHeight - _.top + "px"),
-                      _.current.style.setProperty(
-                        "--availableHeight",
-                        `${_.top}px`,
-                      ))
-                    : void 0 === _ &&
-                      ((_.current.style.top = `${_.top}px`),
-                      (_.current.style.bottom = "unset"),
-                      _.current.style.setProperty(
-                        "--availableHeight",
-                        document.documentElement.clientHeight - _.top + "px",
-                      )));
-          }, [_, __webpack_require__, _, _]),
-          _ = (0, _.useMemo)(() => {
-            if (_.current) return (0, _._)(_.current);
-          }, [_.current]);
-        (0, _.useEffect)(
-          () =>
-            _
-              ? (_.current?.showPopover(),
-                _?.addEventListener("scroll", _),
-                () => _?.removeEventListener("scroll", _))
-              : ("true" !=
-                  window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
-                  _.current?.hidePopover(),
-                () => {}),
-          [_, _, _],
-        );
-        const _ = (0, _.useCallback)(() => {
-            _(), _(!0), (_.current = !0);
-          }, [_]),
-          _ = (0, _.useCallback)(() => {
-            (_.current = !1), _.current || _(!1);
-          }, []),
-          _ = (0, _.useCallback)(() => {
-            (_.current = !0), _(!0);
-          }, []),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) && _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) && _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(() => {
-            (_.current = !1), _.current || _(!1);
-          }, []),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) && _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(() => {
-            _(), _();
-          }, [_, _]),
-          _ = (0, _.useCallback)(
-            (_) => {
-              "Enter" === _.key && (_.preventDefault(), _ ? _() : _());
-            },
-            [_, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.currentTarget.contains(_.relatedTarget) ||
-                _.current?.contains(_.relatedTarget) ||
-                _();
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              2 === _ && _();
-            },
-            [_, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              const _ =
-                  _.relatedTarget && !_.currentTarget.contains(_.relatedTarget),
-                _ = !_.relatedTarget && !_.current;
-              (_ || _) && (_(), _(!1));
-            },
-            [_],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) &&
-                (_ && _ ? _() : _.current && _());
-            },
-            [_, _, _, _],
-          ),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.current?.contains(_.target) &&
-                ("Enter" === _.key && _ && _ ? _() : _(),
-                "Escape" === _.key && _ && (_(), _.stopPropagation()));
-            },
-            [_, _, _, _],
-          );
-        let _;
-        0 !== _ || _
-          ? 1 === _ && (_ = _ ? _ : _)
-          : (_ = (_) => {
-              _.preventDefault(), _();
-            });
-        const _ = {
-            "aria-expanded": _,
-            role: "button",
-            onMouseEnter: 0 === _ ? _ : void 0,
-            onMouseLeave: 0 === _ ? _ : void 0,
-            onClick: _,
-            ref: _,
-            onKeyDown: _,
-            onFocus: _,
-            onBlur: _,
-          },
-          _ = {
-            popover: "manual",
-            ref: _,
-            onMouseEnter: _,
-            onMouseLeave: _,
-            onFocus: _,
-            onBlur: _,
-            onClick: _,
-            onKeyDown: _,
-            className: _.PopoverMenu,
-          };
-        return (
-          (0, _.useImperativeHandle)(
-            _.ref,
-            () => ({
-              show: _,
-              hide: _,
-              close: _,
-            }),
-            [_, _, _],
-          ),
-          {
-            isShowingMenu: _,
-            triggerProps: _,
-            menuProps: _,
-            closeMenu: _,
-          }
-        );
-      }
-      !(async function () {
-        if (
-          "undefined" == typeof HTMLElement ||
-          "object" != typeof HTMLElement.prototype ||
-          !("popover" in HTMLElement.prototype)
-        ) {
-          (
-            await __webpack_require__
-              ._("chunkid")
-              .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
-          ).apply();
-        }
-      })();
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, _) {
-        return (_) => {
-          _?.(_), _?.(_);
-        };
-      }
-      function _(_) {
-        const {
-            direction: _,
-            interactionMode: __webpack_require__ = 0,
-            ignoreHorizontal: _,
-            ignoreVertical: _,
-            dismissOnClick: _,
-            menuTarget: _,
-            className: _,
-            children: _,
-            renderWhenClosed: _ = !0,
-            ..._
-          } = _,
-          {
-            isShowingMenu: _,
-            triggerProps: _,
-            menuProps: _,
-            closeMenu: _,
-          } = _(_),
-          _ = _.useRef(null),
-          _ = _.useRef(null);
-        return (
-          _.useEffect(() => {
-            _
-              ? _.current?.TakeFocus()
-              : _.current?.BFocusWithin() && _.current?.TakeFocus();
-          }, [_]),
-          (0, _.jsxs)(_.Fragment, {
-            children: [
-              _.cloneElement(_, {
-                ..._,
-                onMouseEnter: _(_.props.onMouseEnter, _.onMouseEnter),
-                onMouseLeave: _(_.props.onMouseLeave, _.onMouseLeave),
-                navRef: _,
-              }),
-              (0, _.jsx)(_._, {
-                ..._,
-                ..._,
-                className: _()(_.className, _),
-                navRef: _,
-                onCancel: _,
-                onFocusWithin: (_) => !_ && _(),
-                childFocusDisabled: !_,
-                children: (0, _.jsx)(_._, {
-                  children: (_ || _) && _,
-                }),
-              }),
-            ],
-          })
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const _ = (0, _.jsx)("button", {
-            className: _().PriceGuidelinesPicker,
-            children: (0, _.jsx)(_.GB9, {}),
-          }),
-          _ = _.useRef(null);
-        return (0, _.jsx)(_, {
-          menuTarget: _,
-          direction: "down",
-          interactionMode: 1,
-          ref: _,
-          children: (0, _.jsx)(_, {
-            onSelect: () => _.current?.close(),
-            ..._,
-          }),
-        });
-      }
-      function _(_) {
-        const {
-            fnGetUSDPriceInCents: _,
-            fnOnUpdate: __webpack_require__,
-            strDescription: _,
-            bCanSetToFree: _,
-            nPackageID: _,
-            onSelect: _,
-            appids: _,
-          } = _,
-          _ = (0, _._)(),
-          _ = _();
-        if (!_) return null;
-        const _ = _.GetUSDPricePointsInCents();
-        return (0, _.jsxs)("div", {
-          className: _().GuidelinesPanel,
-          children: [
-            (0, _.jsx)("div", {
-              className: _().GuidelinesDescription,
-              children: _ || _._.Localize("#PricingGuideline_Default"),
-            }),
-            (0, _.jsxs)("div", {
-              className: _().GuidelinesGrid,
-              children: [
-                void 0 !== _ &&
-                  (0, _.jsx)(
-                    "div",
-                    {
-                      className: _().GridElement,
-                      children: (0, _.jsx)(_._, {
-                        nPackageID: _,
-                        strButtonOverride: _._.Localize(
-                          "#FreeOnDemand_InlineOption",
-                        ),
-                        appids: _,
-                      }),
-                    },
-                    "settofree",
-                  ),
-                _.map((_) =>
-                  (0, _.jsx)(
-                    "button",
-                    {
-                      onClick: () => {
-                        _(), __webpack_require__(_);
-                      },
-                      className: (0, _._)({
-                        [_().GridElement]: !0,
-                        [_().CurrentPrice]: _ == _,
-                      }),
-                      children: (0, _._)(_, _._.k_ECurrencyCodeUSD),
-                    },
-                    _,
-                  ),
-                ),
-              ],
-            }),
-          ],
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -641,7 +268,7 @@
               className: _().PricePrefix,
               children: _ && _,
             }),
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
               menuTarget: (0, _.jsx)("div", {
                 className: _().EditablePrice,
                 children: (0, _.jsx)(_._, {
@@ -693,7 +320,7 @@
             bCanSetToFree: _,
           } = _,
           { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           fnGetUSDPriceInCents: () => (0, _._)(_, "USD"),
           fnOnUpdate: (_) => _(_, _),
           strDescription: (0, _._)(
@@ -1312,6 +939,307 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            direction: _,
+            ignoreHorizontal: __webpack_require__,
+            ignoreVertical: _,
+            dismissOnClick: _,
+            interactionMode: _ = 0,
+          } = _,
+          _ = (0, _.useRef)(null),
+          _ = (0, _.useRef)(!1),
+          _ = (0, _.useRef)(!1),
+          _ = (0, _.useRef)(null),
+          [_, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useMemo)(
+            () =>
+              (function (_) {
+                const [_, __webpack_require__] = (0, _._)(_, "-");
+                return "left" === _ || "right" === _
+                  ? [void 0, _]
+                  : [_, __webpack_require__];
+              })(_),
+            [_],
+          ),
+          _ = (0, _.useCallback)(() => {
+            if (!_.current || !_.current) return;
+            const _ = _.current.getBoundingClientRect();
+            let _ = _;
+            const _ = _.current.matches(":dir(rtl)");
+            _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left")),
+              _.current.style.setProperty("--parentWidth", `${_.width}px`),
+              _.current.style.setProperty("--parentHeight", `${_.height}px`),
+              __webpack_require__ ||
+                ("left" === _
+                  ? _
+                    ? ((_.current.style.left = "unset"),
+                      (_.current.style.right =
+                        document.documentElement.clientWidth - _.right + "px"))
+                    : ((_.current.style.left = "unset"),
+                      (_.current.style.right =
+                        document.documentElement.clientWidth - _.left + "px"))
+                  : "right" === _
+                    ? _
+                      ? ((_.current.style.left = `${_.left}px`),
+                        (_.current.style.right = "unset"))
+                      : ((_.current.style.left = `${_.right}px`),
+                        (_.current.style.right = "unset"))
+                    : void 0 === _ &&
+                      (_
+                        ? ((_.current.style.left = "unset"),
+                          (_.current.style.right =
+                            document.documentElement.clientWidth -
+                            _.right +
+                            "px"))
+                        : ((_.current.style.left = `${_.left}px`),
+                          (_.current.style.right = "unset")))),
+              _ ||
+                ("down" === _
+                  ? ((_.current.style.top = `${_.bottom}px`),
+                    (_.current.style.bottom = "unset"),
+                    _.current.style.setProperty(
+                      "--availableHeight",
+                      document.documentElement.clientHeight - _.bottom + "px",
+                    ))
+                  : "up" === _
+                    ? ((_.current.style.top = "unset"),
+                      (_.current.style.bottom =
+                        document.documentElement.clientHeight - _.top + "px"),
+                      _.current.style.setProperty(
+                        "--availableHeight",
+                        `${_.top}px`,
+                      ))
+                    : void 0 === _ &&
+                      ((_.current.style.top = `${_.top}px`),
+                      (_.current.style.bottom = "unset"),
+                      _.current.style.setProperty(
+                        "--availableHeight",
+                        document.documentElement.clientHeight - _.top + "px",
+                      )));
+          }, [_, __webpack_require__, _, _]),
+          _ = (0, _.useMemo)(() => {
+            if (_.current) return (0, _._)(_.current);
+          }, [_.current]);
+        (0, _.useEffect)(
+          () =>
+            _
+              ? (_.current?.showPopover(),
+                _?.addEventListener("scroll", _),
+                () => _?.removeEventListener("scroll", _))
+              : ("true" !=
+                  window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
+                  _.current?.hidePopover(),
+                () => {}),
+          [_, _, _],
+        );
+        const _ = (0, _.useCallback)(() => {
+            _(), _(!0), (_.current = !0);
+          }, [_]),
+          _ = (0, _.useCallback)(() => {
+            (_.current = !1), _.current || _(!1);
+          }, []),
+          _ = (0, _.useCallback)(() => {
+            (_.current = !0), _(!0);
+          }, []),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) && _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) && _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(() => {
+            (_.current = !1), _.current || _(!1);
+          }, []),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) && _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(() => {
+            _(), _();
+          }, [_, _]),
+          _ = (0, _.useCallback)(
+            (_) => {
+              "Enter" === _.key && (_.preventDefault(), _ ? _() : _());
+            },
+            [_, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.currentTarget.contains(_.relatedTarget) ||
+                _.current?.contains(_.relatedTarget) ||
+                _();
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              2 === _ && _();
+            },
+            [_, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              const _ =
+                  _.relatedTarget && !_.currentTarget.contains(_.relatedTarget),
+                _ = !_.relatedTarget && !_.current;
+              (_ || _) && (_(), _(!1));
+            },
+            [_],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) &&
+                (_ && _ ? _() : _.current && _());
+            },
+            [_, _, _, _],
+          ),
+          _ = (0, _.useCallback)(
+            (_) => {
+              _.current?.contains(_.target) &&
+                ("Enter" === _.key && _ && _ ? _() : _(),
+                "Escape" === _.key && _ && (_(), _.stopPropagation()));
+            },
+            [_, _, _, _],
+          );
+        let _;
+        0 !== _ || _
+          ? 1 === _ && (_ = _ ? _ : _)
+          : (_ = (_) => {
+              _.preventDefault(), _();
+            });
+        const _ = {
+            "aria-expanded": _,
+            role: "button",
+            onMouseEnter: 0 === _ ? _ : void 0,
+            onMouseLeave: 0 === _ ? _ : void 0,
+            onClick: _,
+            ref: _,
+            onKeyDown: _,
+            onFocus: _,
+            onBlur: _,
+          },
+          _ = {
+            popover: "manual",
+            ref: _,
+            onMouseEnter: _,
+            onMouseLeave: _,
+            onFocus: _,
+            onBlur: _,
+            onClick: _,
+            onKeyDown: _,
+            className: _.PopoverMenu,
+          };
+        return (
+          (0, _.useImperativeHandle)(
+            _.ref,
+            () => ({
+              show: _,
+              hide: _,
+              close: _,
+            }),
+            [_, _, _],
+          ),
+          {
+            isShowingMenu: _,
+            triggerProps: _,
+            menuProps: _,
+            closeMenu: _,
+          }
+        );
+      }
+      !(async function () {
+        if (
+          "undefined" == typeof HTMLElement ||
+          "object" != typeof HTMLElement.prototype ||
+          !("popover" in HTMLElement.prototype)
+        ) {
+          (
+            await __webpack_require__
+              ._("chunkid")
+              .then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+          ).apply();
+        }
+      })();
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        return (_) => {
+          _?.(_), _?.(_);
+        };
+      }
+      function _(_) {
+        const {
+            direction: _,
+            interactionMode: __webpack_require__ = 0,
+            ignoreHorizontal: _,
+            ignoreVertical: _,
+            dismissOnClick: _,
+            menuTarget: _,
+            className: _,
+            children: _,
+            renderWhenClosed: _ = !0,
+            ..._
+          } = _,
+          {
+            isShowingMenu: _,
+            triggerProps: _,
+            menuProps: _,
+            closeMenu: _,
+          } = _(_),
+          _ = _.useRef(null),
+          _ = _.useRef(null);
+        return (
+          _.useEffect(() => {
+            _
+              ? _.current?.TakeFocus()
+              : _.current?.BFocusWithin() && _.current?.TakeFocus();
+          }, [_]),
+          (0, _.jsxs)(_.Fragment, {
+            children: [
+              _.cloneElement(_, {
+                ..._,
+                onMouseEnter: _(_.props.onMouseEnter, _.onMouseEnter),
+                onMouseLeave: _(_.props.onMouseLeave, _.onMouseLeave),
+                navRef: _,
+              }),
+              (0, _.jsx)(_._, {
+                ..._,
+                ..._,
+                className: _()(_.className, _),
+                navRef: _,
+                onCancel: _,
+                onFocusWithin: (_) => !_ && _(),
+                childFocusDisabled: !_,
+                children: (0, _.jsx)(_._, {
+                  children: (_ || _) && _,
+                }),
+              }),
+            ],
+          })
+        );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -1441,6 +1369,7 @@
                 onClick: () => {
                   _?.(), _();
                 },
+                color: "dull",
                 children: _ || _._.Localize("#FreeOnDemand_Button"),
               }),
             }),
@@ -1616,6 +1545,136 @@
           (0, _._)("bCanSetFree", "application_config"),
         );
         return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = (0, _.jsx)("button", {
+          className: _().PriceGuidelinesPicker,
+          children: (0, _.jsx)(_.GB9, {}),
+        });
+        return (0, _.jsx)(_, {
+          menuTarget: _,
+          ..._,
+        });
+      }
+      function _(_) {
+        const { strButton: _, strTooltip: __webpack_require__ } = _,
+          _ = (0, _.jsxs)(_._, {
+            onClick: () => {},
+            children: [
+              (0, _.jsx)(_._, {
+                toolTipContent: __webpack_require__,
+                children: (0, _.jsx)("span", {
+                  children: _,
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().SelectionIndicator,
+                  "DialogDropDown_Arrow",
+                ),
+                children: (0, _.jsx)(_.GB9, {}),
+              }),
+            ],
+          });
+        return (0, _.jsx)(_, {
+          menuTarget: _,
+          ..._,
+        });
+      }
+      function _(_) {
+        const { menuTarget: _ } = _,
+          _ = _.useRef(null);
+        return (0, _.jsx)(_._, {
+          menuTarget: _,
+          direction: "down",
+          interactionMode: 1,
+          ref: _,
+          children: (0, _.jsx)(_, {
+            onSelect: () => _.current?.close(),
+            ..._,
+          }),
+        });
+      }
+      function _(_) {
+        const {
+            fnGetUSDPriceInCents: _,
+            fnOnUpdate: __webpack_require__,
+            strDescription: _,
+            bCanSetToFree: _,
+            nPackageID: _,
+            onSelect: _,
+            appids: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = _();
+        if (!_) return null;
+        const _ = _.GetUSDPricePointsInCents();
+        return (0, _.jsxs)("div", {
+          className: _().GuidelinesPanel,
+          children: [
+            (0, _.jsx)("div", {
+              className: _().GuidelinesDescription,
+              children: _ || _._.Localize("#PricingGuideline_Default"),
+            }),
+            (0, _.jsxs)("div", {
+              className: _().GuidelinesGrid,
+              children: [
+                void 0 !== _ &&
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: _().GridElement,
+                      children: (0, _.jsx)(_._, {
+                        nPackageID: _,
+                        strButtonOverride: _._.Localize(
+                          "#FreeOnDemand_InlineOption",
+                        ),
+                        appids: _,
+                      }),
+                    },
+                    "settofree",
+                  ),
+                _.map((_) =>
+                  (0, _.jsx)(
+                    "button",
+                    {
+                      onClick: () => {
+                        _(), __webpack_require__(_);
+                      },
+                      className: (0, _._)({
+                        [_().GridElement]: !0,
+                        [_().CurrentPrice]: _ == _,
+                      }),
+                      children: (0, _._)(_, _._.k_ECurrencyCodeUSD),
+                    },
+                    _,
+                  ),
+                ),
+              ],
+            }),
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

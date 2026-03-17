@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "轉為免費？",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "如果您的遊戲已發行，但需要從付費轉為免費，請點擊%1$s以了解詳情並請求協助。",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "此處",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

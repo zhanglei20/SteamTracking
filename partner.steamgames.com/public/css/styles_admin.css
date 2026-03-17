@@ -3041,7 +3041,6 @@ div.image_all_ages_appropriate
 }
 
 .trailer_missing_source {
-	margin-top: auto;
 	display: inline-block;
 
 	padding: 2px 4px;
@@ -3055,6 +3054,20 @@ div.image_all_ages_appropriate
 .trailer_missing_source .ttip {
 	color: black;
 	vertical-align: text-top;
+}
+
+.movie_preview {
+	display: inline-block;
+
+	padding: 2px 4px;
+	font-size: 12px;
+}
+
+.trailer_bottom_left {
+	margin-top: auto;
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
 }
 
 .movie_screenshot

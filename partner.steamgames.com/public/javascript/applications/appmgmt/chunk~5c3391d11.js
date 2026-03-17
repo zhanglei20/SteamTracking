@@ -87,8 +87,8 @@
       });
       var s = r(7850),
         o = r(90626),
-        l = r(52038),
-        i = r(12155),
+        i = r(52038),
+        l = r(12155),
         a = r(57866),
         n = (r(61859), r(78327)),
         c = r(39777);
@@ -117,20 +117,20 @@
           if (!t) return null;
           const o = x(t);
           return (0, s.jsxs)("div", {
-            className: (0, l.A)(a.SteamDeckCompatInfo, r),
+            className: (0, i.A)(a.SteamDeckCompatInfo, r),
             children: [
-              (0, s.jsx)(i.lRD, {}),
+              (0, s.jsx)(l.lRD, {}),
               (0, s.jsx)(o, { className: a.SteamDeckCompatIcon }),
             ],
           });
         },
-        g = { 1: i.jIP, 2: i.aVR, 3: i.o5Q, 0: i.WX$ },
-        h = { 0: i.WX$, 1: i.jIP, 2: i.ZjT };
+        g = { 1: l.jIP, 2: l.aVR, 3: l.o5Q, 0: l.WX$ },
+        h = { 0: l.WX$, 1: l.jIP, 2: l.ZjT };
       function x(e) {
-        return g[e] || i.WX$;
+        return g[e] || l.WX$;
       }
       function f(e) {
-        return h[e] || i.WX$;
+        return h[e] || l.WX$;
       }
     },
     54906: (e, t, r) => {
@@ -144,8 +144,8 @@
       });
       var s = r(7850),
         o = r(45699),
-        l = r(76217),
-        i = r(64753),
+        i = r(76217),
+        l = r(64753),
         a = r(39777),
         n = r(90626),
         c = r(91822),
@@ -258,10 +258,10 @@
       function k(e) {
         const { id: t } = e,
           { data: r } = (0, a.J$)(t),
-          { data: l } = (0, a.qI)(t),
-          [n, C, u] = (0, i.uD)();
-        if (!r || !l || 0 !== r.item_type) return null;
-        const d = l.steam_deck_compat_category || 0;
+          { data: i } = (0, a.qI)(t),
+          [n, C, u] = (0, l.uD)();
+        if (!r || !i || 0 !== r.item_type) return null;
+        const d = i.steam_deck_compat_category || 0;
         return (0, s.jsxs)("div", {
           className: (0, b.A)(y().LearnMoreCtn, "LearnMoreCtn"),
           children: [
@@ -298,18 +298,18 @@
               t
             );
           })(t),
-          i = n.useId();
+          l = n.useId();
         return (0, s.jsx)(w.eV, {
-          "aria-labelledby": i,
+          "aria-labelledby": l,
           modalClassName: "DeckVerifiedModalDialog",
           closeModal: r,
           onCancel: r,
           children: (0, s.jsx)(f.nB, {
-            children: (0, s.jsx)(l.Z, {
+            children: (0, s.jsx)(i.Z, {
               focusable: !1,
               "flow-children": "column",
               children: o
-                ? (0, s.jsx)(v.default, { titleId: i, results: o })
+                ? (0, s.jsx)(v.default, { titleId: l, results: o })
                 : (0, s.jsx)(_.t, {
                     size: "medium",
                     position: "center",
@@ -367,7 +367,7 @@
         return null;
       }
       function B(e) {
-        const { id: t, category: r, appName: o, descriptionToken: l } = e;
+        const { id: t, category: r, appName: o, descriptionToken: i } = e;
         if (0 == r)
           return (0, s.jsx)("div", {
             id: t,
@@ -379,19 +379,19 @@
                 )
               : (0, j.we)("#SteamDeckVerified_DescriptionHeader_Unknown"),
           });
-        let i = "",
+        let l = "",
           a = null;
         switch (r) {
           case 3:
-            (i = "#SteamDeckVerified_DescriptionHeader_Verified"),
+            (l = "#SteamDeckVerified_DescriptionHeader_Verified"),
               (a = y().Verified);
             break;
           case 2:
-            (i = "#SteamDeckVerified_DescriptionHeader_Playable"),
+            (l = "#SteamDeckVerified_DescriptionHeader_Playable"),
               (a = y().Playable);
             break;
           case 1:
-            (i = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
+            (l = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (a = y().Unsupported);
         }
         const n = (0, s.jsx)("span", {
@@ -400,7 +400,7 @@
           }),
           c = (0, s.jsx)("span", {
             className: y().CompatibilityDetailRatingSummary,
-            children: (0, j.we)(l || i),
+            children: (0, j.we)(i || l),
           }),
           C = o
             ? (0, j.PP)(
@@ -417,7 +417,7 @@
         });
       }
       function S(e) {
-        const { id: t, category: r, appName: o, descriptionToken: l } = e;
+        const { id: t, category: r, appName: o, descriptionToken: i } = e;
         if (0 == r)
           return (0, s.jsx)("div", {
             className: y().CompatibilityDetailRatingSummary,
@@ -428,15 +428,15 @@
                 )
               : (0, j.we)("#SteamOSCompatibility_DescriptionHeader_Unknown"),
           });
-        let i = "",
+        let l = "",
           a = null;
         switch (r) {
           case 2:
-            (i = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
+            (l = "#SteamOSCompatibility_DescriptionHeader_Compatible"),
               (a = y().Compatible);
             break;
           case 1:
-            (i = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
+            (l = "#SteamOSCompatibility_DescriptionHeader_Unsupported"),
               (a = y().Unsupported);
         }
         const n = (0, s.jsx)("span", {
@@ -445,7 +445,7 @@
           }),
           c = (0, s.jsx)("span", {
             className: y().CompatibilityDetailRatingSummary,
-            children: (0, j.we)(l || i),
+            children: (0, j.we)(i || l),
           }),
           C = o
             ? (0, j.PP)(
@@ -489,8 +489,8 @@
       r.r(t), r.d(t, { default: () => me });
       var s,
         o = r(7850),
-        l = r(76217),
-        i = r(75204),
+        i = r(76217),
+        l = r(75204),
         a = r(90626),
         n = r(91822),
         c = r(34629),
@@ -2096,8 +2096,8 @@
       var re,
         se = r(12155),
         oe = r(78327),
-        le = r(84811),
-        ie = r(38135),
+        ie = r(84811),
+        le = r(38135),
         ae = r(56545),
         ne = r(80613),
         ce = r.n(ne),
@@ -2297,7 +2297,7 @@
           results: t,
           titleId: r,
           descriptionId: s,
-          appName: i,
+          appName: l,
           buttonProps: a,
           autoFocus: c,
           onOpenBlogPost: C,
@@ -2340,11 +2340,11 @@
               ? (0, o.jsx)(x.cP, {
                   id: s,
                   category: t.steamos_resolved_category,
-                  appName: i,
+                  appName: l,
                 })
-              : (0, o.jsx)(x.UN, { category: t.resolved_category, appName: i }),
+              : (0, o.jsx)(x.UN, { category: t.resolved_category, appName: l }),
             n = f ? h : g;
-          return (0, o.jsxs)(l.Z, {
+          return (0, o.jsxs)(i.Z, {
             autoFocus: c,
             focusableIfEmpty: c,
             noFocusRing: !0,
@@ -2376,22 +2376,22 @@
         if (f || d) {
           const r = (0, n.z5)(t.resolved_category),
             s = (0, n._R)(t.steamos_resolved_category),
-            l = (e) =>
+            i = (e) =>
               window.sessionStorage.setItem(
                 "steamdeckcompatibility",
                 `?tab=${e.key}`,
               ),
-            i = [
+            l = [
               {
                 name: (0, o.jsxs)("div", {
                   className: w().pillContent,
                   children: ["Steam Deck", (0, o.jsx)(r, {})],
                 }),
                 key: "steamdeck",
-                contents: (0, o.jsx)(le.tH, {
+                contents: (0, o.jsx)(ie.tH, {
                   children: (0, o.jsx)(xe, { ...e, deckBlogContent: g }),
                 }),
-                onClick: l,
+                onClick: i,
               },
               {
                 name: (0, o.jsxs)("div", {
@@ -2399,17 +2399,18 @@
                   children: ["SteamOS", (0, o.jsx)(s, {})],
                 }),
                 key: "steamos",
-                contents: (0, o.jsx)(le.tH, {
+                contents: (0, o.jsx)(ie.tH, {
                   children: (0, o.jsx)(he, { ...e, deckBlogContent: h }),
                 }),
-                onClick: l,
+                onClick: i,
               },
             ];
-          return (0, o.jsx)(ie.V, {
-            tabs: i,
+          return (0, o.jsx)(le.V, {
+            tabs: l,
             classNameCtn: w().CompatibilityTabs,
             classNameTabContent: w().CompatibilityTabContent,
             startingTab: f ? "steamos" : "steamdeck",
+            preferredFocus: !0,
           });
         }
         return (0, o.jsx)(xe, { ...e, deckBlogContent: g });
@@ -2436,7 +2437,7 @@
               void 0 !== h?.current?.clientHeight &&
               m(h?.current?.scrollHeight > h?.current?.clientHeight);
           }, []),
-          (0, o.jsxs)(l.Z, {
+          (0, o.jsxs)(i.Z, {
             className: x
               ? w().CompatibilityDetailsContainer
               : w().CompatibilityDetailsContainerDesktop,
@@ -2462,12 +2463,12 @@
                 ],
               }),
               u,
-              (0, o.jsx)(i.Qg, {
+              (0, o.jsx)(l.Qg, {
                 ref: h,
                 className: g()
                   ? w().CompatibilityDetailsInterior_Scroll
                   : w().CompatibilityDetailsInterior_NoScroll,
-                children: (0, o.jsx)(l.Z, {
+                children: (0, o.jsx)(i.Z, {
                   autoFocus: s,
                   focusableIfEmpty: s || g(),
                   noFocusRing: !0,
@@ -2479,15 +2480,15 @@
         );
       }
       function he(e) {
-        const { titleId: t, descriptionId: r, results: s, appName: l } = e,
-          i =
+        const { titleId: t, descriptionId: r, results: s, appName: i } = e,
+          l =
             s.steamos_resolved_items &&
             -1 !==
               s.steamos_resolved_items?.findIndex((e) => 1 == e.display_type),
           a = (0, o.jsx)(x.cP, {
             id: r,
             category: s.steamos_resolved_category ?? 0,
-            appName: l,
+            appName: i,
           }),
           n = (0, o.jsx)(x.aw, { category: s.steamos_resolved_category ?? 0 }),
           c = s.steamos_resolved_items && s.steamos_resolved_items?.length > 0;
@@ -2523,7 +2524,7 @@
                       e.loc_token + e.display_type,
                     ),
                   ),
-              i &&
+              l &&
                 (0, o.jsx)("div", {
                   className: w().CompatibilityNotes,
                   children: s.steamos_resolved_items
@@ -2549,12 +2550,12 @@
         });
       }
       function xe(e) {
-        const { titleId: t, descriptionId: r, results: s, appName: l } = e,
-          i = -1 !== s.resolved_items?.findIndex((e) => 1 == e.display_type),
+        const { titleId: t, descriptionId: r, results: s, appName: i } = e,
+          l = -1 !== s.resolved_items?.findIndex((e) => 1 == e.display_type),
           a = (0, o.jsx)(x.UN, {
             id: r,
             category: s.resolved_category,
-            appName: l,
+            appName: i,
           }),
           n = (0, o.jsx)(x.Ez, { category: s.resolved_category }),
           c = s.resolved_items && s.resolved_items?.length > 0;
@@ -2590,7 +2591,7 @@
                       e.loc_token + e.display_type,
                     ),
                   ),
-              i &&
+              l &&
                 s.resolved_items &&
                 (0, o.jsx)("div", {
                   className: w().CompatibilityNotes,
@@ -2616,9 +2617,9 @@
       }
       function fe(e) {
         const { blogURL: t, eHWCompatibiltyDisplay: r } = e,
-          l = (0, oe.Qn)();
+          i = (0, oe.Qn)();
         if (!t) return null;
-        if (l) {
+        if (i) {
           const e =
             2 == r
               ? (0, b.we)("#SteamOS_DescriptionHeader_DeveloperBlog")
@@ -2634,7 +2635,7 @@
             ],
           });
         }
-        const i =
+        const l =
           2 == r
             ? (0, b.we)("#SteamOS_DescriptionHeader_DeveloperBlog_Desktop")
             : (0, b.we)(
@@ -2643,7 +2644,7 @@
         return (0, o.jsxs)("div", {
           className: w().CompatibilityDetailRatingSummary,
           children: [
-            i,
+            l,
             (0, o.jsx)("a", {
               href: t,
               className: w().DeveloperBlockLinkDesktop,
@@ -2709,11 +2710,11 @@
     },
     38135: (e, t, r) => {
       "use strict";
-      r.d(t, { V: () => H, a: () => f });
+      r.d(t, { V: () => v, a: () => w });
       var s = r(34629),
         o = r(7850),
-        l = r(90626),
-        i = r(75844),
+        i = r(90626),
+        l = r(75844),
         a = r(92757),
         n = r(52038),
         c = r(61859),
@@ -2723,8 +2724,9 @@
         p = r(32754),
         m = r(51272),
         g = r(76217),
-        h = r(6419);
-      class x extends l.Component {
+        h = r(6419),
+        x = r(23310);
+      class f extends i.Component {
         state = { activeTab: "" };
         componentDidMount() {
           this.props.startingTab
@@ -2751,8 +2753,10 @@
         render() {
           const e = this.props.tabs.filter((e) => !e.hidden);
           if (!e.length) return null;
-          const t = e.find((e) => e.key === this.state.activeTab) || e[0];
-          let r = this.props.preferredFocus;
+          const t = e.find((e) => e.key === this.state.activeTab) || e[0],
+            r = this.props.preferredFocus
+              ? (this.props.startingTab ?? e[0].key)
+              : void 0;
           return (0, o.jsxs)(o.Fragment, {
             children: [
               (0, o.jsx)(g.Z, {
@@ -2760,15 +2764,18 @@
                   d().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
+                navEntryPreferPosition: this.props.preferredFocus
+                  ? x.iU.PREFERRED_CHILD
+                  : x.iU.FIRST,
                 children: e.map((e, s) =>
                   (0, o.jsx)(
-                    w,
+                    H,
                     {
                       tab: e,
                       OnTabClick: this.OnTabClick,
                       classNameTab: this.props.classNameTab,
                       active: e.key === t.key,
-                      preferredFocus: r && 0 == s,
+                      preferredFocus: r === e.key,
                     },
                     e.key,
                   ),
@@ -2783,7 +2790,7 @@
           });
         }
       }
-      function f(e) {
+      function w(e) {
         const { statusType: t = "success", children: r } = e;
         let s = "";
         return (
@@ -2798,14 +2805,14 @@
           })
         );
       }
-      (0, s.Cg)([h.o], x.prototype, "OnTabClick", null);
-      const w = (0, i.PA)(function (e) {
+      (0, s.Cg)([h.o], f.prototype, "OnTabClick", null);
+      const H = (0, l.PA)(function (e) {
           const {
             tab: t,
             OnTabClick: r,
             classNameTab: s,
-            active: l,
-            preferredFocus: i,
+            active: i,
+            preferredFocus: l,
           } = e;
           return (0, o.jsx)(m.e7, {
             condition: Boolean(t.statusToolTip || t.tooltip),
@@ -2817,12 +2824,12 @@
             children: (0, o.jsxs)(g.Z, {
               className: (0, n.A)(
                 d().GraphicalAssetsTab,
-                l && d().Active,
-                l && "ActiveTab",
+                i && d().Active,
+                i && "ActiveTab",
                 s,
               ),
               onActivate: () => r(t),
-              preferredFocus: i,
+              preferredFocus: l,
               children: [
                 Boolean(t.vo_warning) &&
                   (0, o.jsx)(p.he, {
@@ -2838,7 +2845,7 @@
             }),
           });
         }),
-        H = (0, a.y)(x);
+        v = (0, a.y)(f);
     },
   },
 ]);

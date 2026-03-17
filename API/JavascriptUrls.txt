@@ -262,7 +262,7 @@ ${COMMUNITY_BASE_URL}market/${}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}market/appaccessories/${}
 ${COMMUNITY_BASE_URL}market/appfilters/${}
 ${COMMUNITY_BASE_URL}market/listings/${}/${}
-${COMMUNITY_BASE_URL}market/listings/${}/${}?sellorderassetid=${}
+${COMMUNITY_BASE_URL}market/listings/${}/${}${_ ? `?sellorderassetid=${}` : ""}
 ${COMMUNITY_BASE_URL}market/priceoverview/?${}
 ${COMMUNITY_BASE_URL}market/search?appid=${_ ? _ : 0}
 ${COMMUNITY_BASE_URL}market/steamitemfiltersicon/${}
@@ -454,6 +454,7 @@ ${HELP_BASE_URL}wizard/HelpRecoverFamilyMember?childid=${}
 ${HELP_BASE_URL}wizard/HelpRequest/${ticket}
 ${HELP_BASE_URL}wizard/HelpRequests
 ${HELP_BASE_URL}wizard/HelpWithAccountStolen
+${HELP_BASE_URL}wizard/HelpWithAnonymousContentReport
 ${HELP_BASE_URL}wizard/HelpWithLimitedAccount
 ${HELP_BASE_URL}wizard/HelpWithLogin
 ${HELP_BASE_URL}wizard/HelpWithLogin?redir=${}
@@ -1254,6 +1255,7 @@ ${STORE_BASE_URL}/curator/${}/admin/ajaxgetcreatorhomeevents
 ${STORE_BASE_URL}/curator/${}/admin/ajaxselectcreatorhome
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
+${STORE_BASE_URL}/join/
 ${STORE_BASE_URL}/userreviews/ajaxgetvotes/
 ${STORE_BASE_URL}/userreviews/rate/${}
 ${STORE_BASE_URL}/userreviews/votetag/${}
@@ -1480,6 +1482,7 @@ ${STORE_BASE_URL}parental/ajaxunlock/
 ${STORE_BASE_URL}parental/requestrecovery
 ${STORE_BASE_URL}personalcalendar
 ${STORE_BASE_URL}personalcalendar/
+${STORE_BASE_URL}personalcalendardata
 ${STORE_BASE_URL}personalcalendarold/getrecommendations
 ${STORE_BASE_URL}phone/add
 ${STORE_BASE_URL}phone/manage

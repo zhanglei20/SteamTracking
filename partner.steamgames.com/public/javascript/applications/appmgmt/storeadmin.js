@@ -8635,45 +8635,44 @@
             !1
           );
         }
-        async AcceptProposal(e, t, s, n) {
-          let a = null;
+        async AcceptProposal(e, t, s) {
+          let n = null;
           try {
-            const r = new FormData();
-            r.append("sessionid", At.TS.SESSIONID),
-              r.append("packageid", "" + e),
-              r.append("json", "1"),
-              r.append("proposalkey", "" + s),
-              r.append("partner_will_publish", t ? "1" : "0"),
-              r.append("force", n ? "1" : "0");
-            const i = `${At.TS.PARTNER_BASE_URL}packages/approvepricing`,
-              o = await We().post(i, r, { withCredentials: !0 });
-            if (200 == o.status && 1 == o.data?.success)
+            const a = new FormData();
+            a.append("sessionid", At.TS.SESSIONID),
+              a.append("packageid", "" + e),
+              a.append("json", "1"),
+              a.append("proposalkey", "" + s),
+              a.append("partner_will_publish", t ? "1" : "0");
+            const r = `${At.TS.PARTNER_BASE_URL}packages/approvepricing`,
+              i = await We().post(r, a, { withCredentials: !0 });
+            if (200 == i.status && 1 == i.data?.success)
               return (
                 console.log(
                   `Proposal for package ${e} successfully accepted`,
-                  o.data.output,
+                  i.data.output,
                 ),
                 this.m_rgMapProposal.delete(e),
                 this.m_proposalAddRemoveCallback.Dispatch(this.GetProposals()),
                 null
               );
-            if (((a = (0, jt.H)(o)), o?.data?.output))
+            if (((n = (0, jt.H)(i)), i?.data?.output))
               return (
                 console.log(
                   "CPriceProposalReviewRequiredStore::AcceptProposal message information:",
-                  o.data.output,
-                  a.strErrorMsg,
+                  i.data.output,
+                  n.strErrorMsg,
                 ),
-                o.data.output
+                i.data.output
               );
           } catch (e) {
-            a = (0, jt.H)(e);
+            n = (0, jt.H)(e);
           }
           return (
             console.error(
               "CPriceProposalReviewRequiredStore::AcceptProposal failed with " +
-                a.strErrorMsg,
-              a,
+                n.strErrorMsg,
+              n,
             ),
             "generic failure"
           );
@@ -8718,7 +8717,7 @@
         Dt = s(76501),
         Tt = s(48479);
       const It = { include_release: !0 };
-      var Nt = s(29903);
+      var Nt = s(10754);
       function Lt(e) {
         const t = new Array();
         return (
@@ -8821,7 +8820,7 @@
                 (0, n.jsxs)(C.$n, {
                   onClick: async () => {
                     l(!0),
-                      i(t.packageid, t.partner_will_publish, t.proposal_key, !0)
+                      i(t.packageid, t.partner_will_publish, t.proposal_key)
                         .then(d)
                         .finally(() => l(!1));
                   },
@@ -9604,7 +9603,7 @@
                   className: Rt.Title,
                   children: ["Unexpected ", s.length, " currencies: "],
                 }),
-                s.map(Dt.t_).join(", "),
+                s.join(", "),
               ],
             })
           : null;
@@ -9786,9 +9785,7 @@
           ? (0, n.jsxs)("div", {
               children: [
                 "Package has Country price overrides for Countries:",
-                t.proposed_prices.country_amounts
-                  .map((e) => (0, Dt.t_)(e.name))
-                  .join(","),
+                t.proposed_prices.country_amounts.map((e) => e.name).join(","),
               ],
             })
           : null;

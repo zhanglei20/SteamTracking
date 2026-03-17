@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Zmieniasz wersję gry na bezpłatną?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Jeśli twoja gra została już wydana i potrzebujesz zmienić wersję płatną na bezpłatną, kliknij %1$s, by dowiedzieć się więcej i poprosić o pomoc.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "tutaj",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

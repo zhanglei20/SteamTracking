@@ -1648,7 +1648,6 @@
         ),
         we = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(4568),
             r.e(5659),
@@ -1668,7 +1667,6 @@
         ),
         be = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -1706,7 +1704,6 @@
         ),
         Ce = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -1744,7 +1741,6 @@
         ),
         Me = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -1782,7 +1778,6 @@
         ),
         Se = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -1825,7 +1820,6 @@
         ),
         ye = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(4134),
             r.e(8008),
@@ -1843,7 +1837,6 @@
         ),
         Be = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -1873,7 +1866,6 @@
         ),
         xe = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(4568),
             r.e(5659),
@@ -1894,7 +1886,6 @@
         Re = n.lazy(() => r.e(5027).then(r.bind(r, 26193))),
         Ie = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -1942,7 +1933,6 @@
         ),
         je = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -1980,7 +1970,6 @@
         ),
         De = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(8008),
@@ -1992,7 +1981,6 @@
         ),
         Le = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(9681),
             r.e(7224),
             r.e(5659),
@@ -2009,7 +1997,6 @@
         ),
         Oe = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(9681),
             r.e(4134),
@@ -2057,7 +2044,6 @@
         ),
         Ee = n.lazy(() =>
           Promise.all([
-            r.e(4941),
             r.e(120),
             r.e(4568),
             r.e(8102),
@@ -2085,7 +2071,6 @@
           (n.Fragment,
           n.lazy(() =>
             Promise.all([
-              r.e(4941),
               r.e(120),
               r.e(9681),
               r.e(4134),
@@ -4681,11 +4666,11 @@
           r = 0,
           n = e;
         for (; n; ) {
-          if (((t += n.offsetTop), (r += n.offsetLeft), "ownerDocument" in n)) {
+          if ("ownerDocument" in n) {
             const e = window.getComputedStyle(n);
             if ("fixed" === e.position || "sticky" === e.position) break;
           }
-          n = n.offsetParent;
+          (t += n.offsetTop), (r += n.offsetLeft), (n = n.offsetParent);
         }
         for (n = e?.parentElement; n; ) {
           const { scrollTop: e, scrollLeft: i } = z(n);
@@ -11468,6 +11453,11 @@
                   assets_without_overrides: { n: 60, c: C },
                   user_filter_failure: { n: 70, c: oe },
                   links: { n: 71, c: F, r: !0, q: !0 },
+                  purchase_description: {
+                    n: 72,
+                    br: o.qM.readString,
+                    bw: o.gp.writeString,
+                  },
                 },
               }),
             d.sm_m
@@ -11589,7 +11579,7 @@
         constructor(e = null) {
           super(),
             h.prototype.included_apps || o.Sg(h.M()),
-            i.Message.initialize(this, e, 0, -1, [1, 2], null);
+            i.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -11601,6 +11591,7 @@
                 fields: {
                   included_apps: { n: 1, c: d, r: !0, q: !0 },
                   included_packages: { n: 2, c: d, r: !0, q: !0 },
+                  included_bundles: { n: 3, c: d, r: !0, q: !0 },
                 },
               }),
             h.sm_m
@@ -16855,21 +16846,18 @@
         for (; r; ) {
           if (n(r)) {
             const e = window.getComputedStyle(r);
+            if ("fixed" == e.position || "sticky" == e.position) break;
             if (
               !(
                 (t && "x" != t) ||
-                ("scroll" != e.overflowX &&
-                  "auto" != e.overflowX &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowX && "auto" != e.overflowX)
               )
             )
               break;
             if (
               !(
                 (t && "y" != t) ||
-                ("scroll" != e.overflowY &&
-                  "auto" != e.overflowY &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowY && "auto" != e.overflowY)
               )
             )
               break;
@@ -17575,7 +17563,7 @@
         lv: () => f,
         qI: () => v,
         rK: () => R,
-        us: () => L,
+        us: () => D,
         vB: () => F,
         wl: () => h,
         xz: () => S,
@@ -17587,10 +17575,10 @@
         a = r(63664);
       function l(e) {
         const t = (0, a.eG)();
-        return (0, i.I)(L(t, e));
+        return (0, i.I)(D(t, e));
       }
       function c(e) {
-        return d(e, L);
+        return d(e, D);
       }
       function u(e) {
         return d(e, y, "include_assets");
@@ -17629,31 +17617,30 @@
         const t = (0, a.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return j(e, t, "include_basic_info", "basic_info");
+            return T(e, t, "include_basic_info", "basic_info");
           })(t, e),
         );
       }
       function p(e) {
         const t = (0, a.eG)();
-        return (0, i.I)(O(t, e));
+        return (0, i.I)(L(t, e));
       }
       function g(e) {
         const t = (0, a.eG)();
-        return (0, i.I)(
-          (function (e, t) {
-            return { ...I(e, t), staleTime: 6e5 };
-          })(t, e),
-        );
+        return (0, i.I)(O(t, e));
       }
       function _(e) {
         const t = (0, a.eG)();
         return (0, i.I)(
           e && "bundleid" in e
-            ? O(t, e)
+            ? L(t, e)
             : (function (e, t) {
                 return {
-                  ...I(e, t),
-                  select: (e) => (e ? e[0] : null),
+                  ...O(e, t),
+                  select: (e) =>
+                    e?.purchase_options && e.purchase_options.length > 0
+                      ? e.purchase_options[0]
+                      : null,
                   staleTime: 6e5,
                 };
               })(t, e),
@@ -17667,7 +17654,7 @@
         const t = (0, a.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return j(e, t, "include_screenshots", "screenshots");
+            return T(e, t, "include_screenshots", "screenshots");
           })(t, e),
         );
       }
@@ -17675,7 +17662,7 @@
         const t = (0, a.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return j(e, t, "include_trailers", "trailers");
+            return T(e, t, "include_trailers", "trailers");
           })(t, e),
         );
       }
@@ -17683,7 +17670,7 @@
         const t = (0, a.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return j(e, t, "include_reviews", "reviews");
+            return T(e, t, "include_reviews", "reviews");
           })(t, e),
         );
       }
@@ -17691,7 +17678,7 @@
         const t = (0, a.eG)();
         return (0, i.I)(
           (function (e, t) {
-            return j(e, t, "include_release", "release");
+            return T(e, t, "include_release", "release");
           })(t, e),
         );
       }
@@ -17704,10 +17691,10 @@
         return (0, i.I)(R(t, e));
       }
       function y(e, t) {
-        return j(e, t, "include_assets", "assets");
+        return T(e, t, "include_assets", "assets");
       }
       function B(e, t) {
-        return j(
+        return T(
           e,
           t,
           "include_assets_without_overrides",
@@ -17715,15 +17702,12 @@
         );
       }
       function x(e, t) {
-        return j(e, t, "top_tags", "tags");
+        return T(e, t, "top_tags", "tags");
       }
       function R(e, t) {
-        return j(e, t, "include_platforms", "platforms");
+        return T(e, t, "include_platforms", "platforms");
       }
-      function I(e, t) {
-        return j(e, t, "include_all_purchase_options", "purchase_options");
-      }
-      function T(e) {
+      function I(e) {
         return (
           !!e &&
           ("appid" in e && !e.appid
@@ -17732,30 +17716,46 @@
               ((0, n.wT)(!1, "Invalid bundleid passed to useStoreItem"), !1))
         );
       }
-      function j(e, t, r, n) {
+      function T(e, t, r, n) {
         return {
           queryKey: k(t, r),
           queryFn: async () => (await A(e, t, r))[n] || null,
           staleTime: 216e5,
-          enabled: T(t),
+          enabled: I(t),
         };
       }
-      function D(e, t, r, n, i) {
+      function j(e, t, r, n, i) {
         e.setQueryData(k(t, n), r[i] ?? null);
       }
-      function L(e, t) {
+      function D(e, t) {
         return {
           queryKey: k(t, "default_info"),
           queryFn: async () => z(await A(e, t, "default_info")),
           staleTime: 216e5,
-          enabled: T(t),
+          enabled: I(t),
+        };
+      }
+      function L(e, t) {
+        return {
+          ...D(e, t),
+          select: (e) => e.best_purchase_option || null,
+          staleTime: 6e5,
         };
       }
       function O(e, t) {
+        const r = "include_all_purchase_options";
         return {
-          ...L(e, t),
-          select: (e) => e.best_purchase_option || null,
+          queryKey: k(t, r),
+          queryFn: async () => {
+            const n = await A(e, t, r);
+            return {
+              purchase_options: n.purchase_options,
+              invalid_purchase_options: n.invalid_purchase_options,
+              accessories: n.accessories,
+            };
+          },
           staleTime: 6e5,
+          enabled: I(t),
         };
       }
       function k(e, t) {
@@ -17769,23 +17769,23 @@
           })(e, n, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              D(e, t, r, "include_basic_info", "basic_info");
+              j(e, t, r, "include_basic_info", "basic_info");
             })(e, n, t),
           r.include_assets &&
             (function (e, t, r) {
-              D(e, t, r, "include_assets", "assets");
+              j(e, t, r, "include_assets", "assets");
             })(e, n, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              D(e, t, r, "include_screenshots", "screenshots");
+              j(e, t, r, "include_screenshots", "screenshots");
             })(e, n, t),
           r.include_trailers &&
             (function (e, t, r) {
-              D(e, t, r, "include_trailers", "trailers");
+              j(e, t, r, "include_trailers", "trailers");
             })(e, n, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              D(
+              j(
                 e,
                 t,
                 r,
@@ -17795,28 +17795,32 @@
             })(e, n, t),
           r.include_reviews &&
             (function (e, t, r) {
-              D(e, t, r, "include_reviews", "reviews");
+              j(e, t, r, "include_reviews", "reviews");
             })(e, n, t),
           r.include_release &&
             (function (e, t, r) {
-              D(e, t, r, "include_release", "release");
+              j(e, t, r, "include_release", "release");
             })(e, n, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              D(e, t, r, "top_tags", "tags");
+              j(e, t, r, "top_tags", "tags");
             })(e, n, t),
           r.include_platforms &&
             (function (e, t, r) {
-              D(e, t, r, "include_platforms", "platforms");
+              j(e, t, r, "include_platforms", "platforms");
             })(e, n, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              D(e, t, r, "apply_user_filters", "user_filter_failure");
+              j(e, t, r, "apply_user_filters", "user_filter_failure");
             })(e, n, t),
           r.include_all_purchase_options &&
             (function (e, t, r) {
-              D(e, t, r, "include_all_purchase_options", "purchase_options");
+              e.setQueryData(k(t, "include_all_purchase_options"), {
+                purchase_options: r.purchase_options,
+                invalid_purchase_options: r.invalid_purchase_options,
+                accessories: r.accessories,
+              });
             })(e, n, t),
           r.include_included_items &&
             r.included_item_data_request &&
@@ -17824,6 +17828,9 @@
               F(e, t, r.included_item_data_request),
             ),
             t.included_items?.included_packages?.forEach((t) =>
+              F(e, t, r.included_item_data_request),
+            ),
+            t.included_items?.included_bundles?.forEach((t) =>
               F(e, t, r.included_item_data_request),
             )));
       }
@@ -17836,6 +17843,7 @@
         "game_rating",
         "purchase_options",
         "accessories",
+        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
@@ -37202,6 +37210,7 @@
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
           CLIENT_SESSION: 0,
+          NOW: 0,
         },
         s = {
           logged_in: !1,

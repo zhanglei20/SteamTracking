@@ -698,8 +698,7 @@
         S = r(78327);
       class z {
         static s_VODStore;
-        m_LoadingOAuth = null;
-        m_transport;
+        m_transport = null;
         m_mapBookmarks = new Map();
         SetBookmarkForApp(e, t) {
           this.ValidateBookmarkData(t)
@@ -729,25 +728,23 @@
           }
         }
         GetBookmarkPlayTimeInSeconds(e) {
-          if (this.m_mapBookmarks.has(e)) {
-            let t = this.m_mapBookmarks.get(e).playback_position_in_seconds();
-            if (Number.isInteger(t)) return t;
+          let t = this.m_mapBookmarks.get(e);
+          if (t) {
+            let e = t.playback_position_in_seconds();
+            if (Number.isInteger(e)) return e;
           }
           return 0;
         }
         async SendBookMarkedTimeToServer(e, t, r, a, s) {
           if (!S.iA.logged_in) return;
-          if (
-            !this.m_transport &&
-            (await this.m_LoadingOAuth, !this.m_transport)
-          )
+          if (!this.m_transport)
             return void console.warn(
               "CVideoBookmarkStore:SetBookMark no auth token / transport",
             );
           const n = m.w.Init(M);
-          if (this.m_mapBookmarks.has(e)) {
-            let o = this.m_mapBookmarks.get(e),
-              m = !1;
+          let o = this.m_mapBookmarks.get(e);
+          if (o) {
+            let m = !1;
             o.app_id() != e && ((m = !0), o.set_app_id(e)),
               o.playback_position_in_seconds() != t &&
                 ((m = !0), o.set_playback_position_in_seconds(t)),
@@ -786,13 +783,10 @@
               1 == r.data.success &&
               r.data.webapi_token
             )
-              return (
-                (this.m_transport = new c.D(
-                  S.TS.WEBAPI_BASE_URL,
-                  r.data.webapi_token,
-                ).GetServiceTransport()),
-                this.m_transport
-              );
+              return void (this.m_transport = new c.D(
+                S.TS.WEBAPI_BASE_URL,
+                r.data.webapi_token,
+              ).GetServiceTransport());
           } catch (e) {
             let t = (0, w.H)(e);
             console.error(
@@ -801,7 +795,6 @@
               t,
             );
           }
-          return null;
         }
       }
       class h {

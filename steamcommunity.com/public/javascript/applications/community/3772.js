@@ -2323,14 +2323,14 @@
           (0, s.jsx)(Ct.iY, { emoticonStore: Et.A, OnSelected: e.OnSelected })
         );
       }
-      var St = o(70078),
-        Dt = o(14703),
-        yt = o(4796),
-        Tt = o(63287),
-        Nt = o.n(Tt),
-        Ut = o(7913),
-        Gt = o(82102),
-        Pt = o(69484);
+      var St = o(14703),
+        Dt = o(4796),
+        yt = o(63287),
+        Tt = o.n(yt),
+        Nt = o(7913),
+        Ut = o(82102),
+        Gt = o(69484),
+        Pt = o(27939);
       function At(e) {
         const { hideModal: t, fnUpdateSession: o, clanAccountID: n } = e,
           [l, i] = (0, m.useState)(() => qt(!0, null));
@@ -2343,7 +2343,7 @@
               i(qt(!0, null)), t();
             },
             children: (0, s.jsx)("div", {
-              className: Nt().DialogCtn,
+              className: Tt().DialogCtn,
               children: (0, s.jsx)(Vt, {
                 clanAccountID: n,
                 userPollDef: l,
@@ -2373,7 +2373,7 @@
             },
             closeModal: t,
             children: (0, s.jsx)("div", {
-              className: Nt().DialogCtn,
+              className: Tt().DialogCtn,
               children: (0, s.jsx)(Vt, {
                 userPollDef: i,
                 clanAccountID: n,
@@ -2386,15 +2386,15 @@
       function Bt(e) {
         switch (e) {
           default:
-          case Dt.$t.k_EPollResult_NotVisible:
+          case St.$t.k_EPollResult_NotVisible:
             return (0, C.we)("#UserPolls_Visibility_None");
-          case Dt.$t.k_EPollResult_Visible_After_End:
+          case St.$t.k_EPollResult_Visible_After_End:
             return (0, C.we)("#UserPolls_Visibility_End");
-          case Dt.$t.k_EPollResult_Visible_After_Vote:
+          case St.$t.k_EPollResult_Visible_After_Vote:
             return (0, C.we)("#UserPolls_Visibility_Voter");
-          case Dt.$t.k_EPollResult_Visible_After_Vote_Or_End:
+          case St.$t.k_EPollResult_Visible_After_Vote_Or_End:
             return (0, C.we)("#UserPolls_Visibility_Voter_or_End");
-          case Dt.$t.k_EPollResult_Visible_On_Demand:
+          case St.$t.k_EPollResult_Visible_On_Demand:
             return (0, C.we)("#UserPolls_Visibility_OnDemand");
         }
       }
@@ -2402,7 +2402,7 @@
         const { userPollDef: t, fnSetDef: o } = e,
           n = (0, Te.E)(),
           [l] = (0, we.q3)(() => [t.results_visibility_settings]),
-          i = Object.values(Dt.$t).map((e) => ({ data: e, label: Bt(e) }));
+          i = Object.values(St.$t).map((e) => ({ data: e, label: Bt(e) }));
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(v.pd, {
@@ -2423,7 +2423,7 @@
             (0, s.jsx)(Ft, { ...e }),
             (0, s.jsx)(v.JU, { children: (0, C.we)("#UserPolls_Visibility") }),
             (0, s.jsx)("div", {
-              className: Nt().PollArea,
+              className: Tt().PollArea,
               children: (0, s.jsx)(v.m, {
                 strDropDownClassName: Ue.DropDownScroll,
                 rgOptions: i,
@@ -2443,7 +2443,7 @@
       function zt(e) {
         const { clanAccountID: t, userPollDef: o, fnSetDef: n } = e,
           l = (0, st.LU)(),
-          i = (0, Dt.rR)(l.GetClanSteamID()),
+          i = (0, St.rR)(l.GetClanSteamID()),
           [a] = (0, we.q3)(() => [o.user_poll_background]),
           r = (0, m.useCallback)(
             (e, t, s, l, i) => {
@@ -2455,7 +2455,7 @@
                   "user_poll_background" === i,
                   "Unexpected artwork type " + i,
                 );
-              const a = (0, Gt.G)(e, t);
+              const a = (0, Ut.G)(e, t);
               a.image && n({ ...o, user_poll_background: a.image });
             },
             [n, o],
@@ -2466,14 +2466,14 @@
               children: (0, C.we)("#UserPolls_BackgroundImage"),
             }),
             (0, s.jsxs)("div", {
-              className: Nt().PollArea,
+              className: Tt().PollArea,
               children: [
                 (0, s.jsx)("p", {
                   children: (0, C.we)("#UserPolls_BackgroundImage_desc"),
                 }),
-                (0, s.jsx)(Ut.a, {
+                (0, s.jsx)(Nt.a, {
                   rgRealmList: l.GetIncludedRealmList(),
-                  rgSupportArtwork: Dt.YX,
+                  rgSupportArtwork: St.YX,
                   strUploadAjaxURL: i,
                   fnOnUploadSuccess: r,
                   elOverrideDragAndDropText: (0, C.we)(
@@ -2482,7 +2482,7 @@
                   bTwoPhaseUpload: !0,
                   bDirectTempStorageUpload: !0,
                 }),
-                Boolean(a) && (0, s.jsx)("img", { src: (0, Pt.F)(t, a) }),
+                Boolean(a) && (0, s.jsx)("img", { src: (0, Gt.F)(t, a) }),
               ],
             }),
           ],
@@ -2490,19 +2490,19 @@
       }
       function Rt(e) {
         switch (e) {
-          case Dt.BY.k_EPollVoter_AnyUser:
+          case St.BY.k_EPollVoter_AnyUser:
             return (0, C.we)("#UserPolls_Voters_Anyone");
-          case Dt.BY.k_EPollVoter_UserGameInLibrary:
+          case St.BY.k_EPollVoter_UserGameInLibrary:
             return (0, C.we)("#UserPolls_Voters_Owners");
-          case Dt.BY.k_EPollVoter_MinPlayTime:
+          case St.BY.k_EPollVoter_MinPlayTime:
             return (0, C.we)("#UserPolls_Voters_Players");
-          case Dt.BY.k_EPollVoter_MemberOfGroup:
+          case St.BY.k_EPollVoter_MemberOfGroup:
             return (0, C.we)("#UserPolls_Voters_Members");
         }
       }
       function Ft(e) {
         const { clanAccountID: t, userPollDef: o, fnSetDef: n } = e,
-          [l, i] = (0, yt.TB)(t),
+          [l, i] = (0, Dt.TB)(t),
           [a, r] = (0, we.q3)(() => [
             o.voter_min_playtime_seconds,
             o.voter_eligibility,
@@ -2510,25 +2510,25 @@
           d = (0, m.useMemo)(() => {
             const e = [
               {
-                label: Rt(Dt.BY.k_EPollVoter_AnyUser),
-                data: Dt.BY.k_EPollVoter_AnyUser,
+                label: Rt(St.BY.k_EPollVoter_AnyUser),
+                data: St.BY.k_EPollVoter_AnyUser,
               },
             ];
             return (
-              i && i.is_ogg && t != St.II
+              i && i.is_ogg && t != Pt.II
                 ? (e.push({
-                    label: Rt(Dt.BY.k_EPollVoter_UserGameInLibrary),
-                    data: Dt.BY.k_EPollVoter_UserGameInLibrary,
+                    label: Rt(St.BY.k_EPollVoter_UserGameInLibrary),
+                    data: St.BY.k_EPollVoter_UserGameInLibrary,
                   }),
                   e.push({
-                    label: Rt(Dt.BY.k_EPollVoter_MinPlayTime),
-                    data: Dt.BY.k_EPollVoter_MinPlayTime,
+                    label: Rt(St.BY.k_EPollVoter_MinPlayTime),
+                    data: St.BY.k_EPollVoter_MinPlayTime,
                   }))
                 : !i ||
-                  (i.is_ogg && t != St.II) ||
+                  (i.is_ogg && t != Pt.II) ||
                   e.push({
-                    label: Rt(Dt.BY.k_EPollVoter_MemberOfGroup),
-                    data: Dt.BY.k_EPollVoter_MemberOfGroup,
+                    label: Rt(St.BY.k_EPollVoter_MemberOfGroup),
+                    data: St.BY.k_EPollVoter_MemberOfGroup,
                   }),
               e
             );
@@ -2537,7 +2537,7 @@
           children: [
             (0, s.jsx)(v.JU, { children: (0, C.we)("#UserPolls_Voters") }),
             (0, s.jsxs)("div", {
-              className: Nt().PollArea,
+              className: Tt().PollArea,
               children: [
                 (0, s.jsx)(v.m, {
                   strDropDownClassName: Ue.DropDownScroll,
@@ -2546,7 +2546,7 @@
                   onChange: (e) => {
                     if (e.data != o.voter_eligibility) {
                       let t = { ...o, voter_eligibility: e.data };
-                      e.data == Dt.BY.k_EPollVoter_MinPlayTime &&
+                      e.data == St.BY.k_EPollVoter_MinPlayTime &&
                         (t.voter_min_playtime_seconds = 5 * Kt),
                         n(t);
                     }
@@ -2554,9 +2554,9 @@
                   bDisableMouseOverlay: !0,
                   contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
                 }),
-                Boolean(r == Dt.BY.k_EPollVoter_MinPlayTime) &&
+                Boolean(r == St.BY.k_EPollVoter_MinPlayTime) &&
                   (0, s.jsx)("div", {
-                    className: Nt().OptionInset,
+                    className: Tt().OptionInset,
                     children: (0, s.jsx)(v.pd, {
                       type: "number",
                       label: (0, C.we)("#UserPolls_MinPlayTime"),
@@ -2595,7 +2595,7 @@
           children: [
             (0, s.jsx)(v.JU, { children: (0, C.we)("#UserPolls_Starts") }),
             (0, s.jsxs)("div", {
-              className: Nt().PollArea,
+              className: Tt().PollArea,
               children: [
                 (0, s.jsxs)("div", {
                   className: (0, fe.A)(Ue.FlexRowContainer, Ue.RadioOption),
@@ -2624,7 +2624,7 @@
                 }),
                 Boolean(l) &&
                   (0, s.jsx)("div", {
-                    className: Nt().OptionInset,
+                    className: Tt().OptionInset,
                     children: (0, s.jsx)(v.pd, {
                       type: "number",
                       value: l / Ht,
@@ -2679,7 +2679,7 @@
                 }),
                 Boolean(n) &&
                   (0, s.jsxs)("div", {
-                    className: (0, fe.A)(Nt().OptionInset, Ue.FlexRowContainer),
+                    className: (0, fe.A)(Tt().OptionInset, Ue.FlexRowContainer),
                     children: [
                       (0, s.jsx)(Ge.K, {
                         strDescription: "",
@@ -2723,8 +2723,8 @@
             localized_poll_description: (0, Y.$Y)([], 31, null),
             poll_end_days_since_start: Yt * Ht,
             poll_end_time: void 0,
-            results_visibility_settings: Dt.$t.k_EPollResult_Visible_On_Demand,
-            voter_eligibility: Dt.BY.k_EPollVoter_AnyUser,
+            results_visibility_settings: St.$t.k_EPollResult_Visible_On_Demand,
+            voter_eligibility: St.BY.k_EPollVoter_AnyUser,
           };
         }
         return t
@@ -2760,7 +2760,7 @@
               a($t(t, n)), o();
             },
             children: (0, s.jsx)("div", {
-              className: Nt().DialogCtn,
+              className: Tt().DialogCtn,
               children: (0, s.jsx)(v.pd, {
                 type: "text",
                 label: (0, C.we)("#UserPolls_Option_Title"),
@@ -2936,7 +2936,7 @@
                   ),
                 ),
                 (0, s.jsxs)("div", {
-                  className: Nt().AdminOptions,
+                  className: Tt().AdminOptions,
                   children: [
                     (0, s.jsx)(Wt.wl, {
                       className: "",

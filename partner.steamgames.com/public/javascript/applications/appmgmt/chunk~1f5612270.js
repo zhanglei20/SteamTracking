@@ -66,329 +66,34 @@
         PriceChangeSaveWarningArrow: "B3-IB6jhKQuhRCYOH9Zd5",
       };
     },
-    61738: (e, s, r) => {
-      var n = {
-        "./af": 30911,
-        "./af.js": 30911,
-        "./ar": 63595,
-        "./ar-dz": 99358,
-        "./ar-dz.js": 99358,
-        "./ar-kw": 46830,
-        "./ar-kw.js": 46830,
-        "./ar-ly": 26067,
-        "./ar-ly.js": 26067,
-        "./ar-ma": 64154,
-        "./ar-ma.js": 64154,
-        "./ar-ps": 90753,
-        "./ar-ps.js": 90753,
-        "./ar-sa": 53616,
-        "./ar-sa.js": 53616,
-        "./ar-tn": 19026,
-        "./ar-tn.js": 19026,
-        "./ar.js": 63595,
-        "./az": 87043,
-        "./az.js": 87043,
-        "./be": 28437,
-        "./be.js": 28437,
-        "./bg": 29843,
-        "./bg.js": 29843,
-        "./bm": 39421,
-        "./bm.js": 39421,
-        "./bn": 41300,
-        "./bn-bd": 54487,
-        "./bn-bd.js": 54487,
-        "./bn.js": 41300,
-        "./bo": 40827,
-        "./bo.js": 40827,
-        "./br": 35120,
-        "./br.js": 35120,
-        "./bs": 41991,
-        "./bs.js": 41991,
-        "./ca": 47504,
-        "./ca.js": 47504,
-        "./cs": 98346,
-        "./cs.js": 98346,
-        "./cv": 17525,
-        "./cv.js": 17525,
-        "./cy": 80872,
-        "./cy.js": 80872,
-        "./da": 48787,
-        "./da.js": 48787,
-        "./de": 30199,
-        "./de-at": 33461,
-        "./de-at.js": 33461,
-        "./de-ch": 97995,
-        "./de-ch.js": 97995,
-        "./de.js": 30199,
-        "./dv": 14682,
-        "./dv.js": 14682,
-        "./el": 52549,
-        "./el.js": 52549,
-        "./en-au": 5706,
-        "./en-au.js": 5706,
-        "./en-ca": 50584,
-        "./en-ca.js": 50584,
-        "./en-gb": 41685,
-        "./en-gb.js": 41685,
-        "./en-ie": 32050,
-        "./en-ie.js": 32050,
-        "./en-il": 35545,
-        "./en-il.js": 35545,
-        "./en-in": 42551,
-        "./en-in.js": 42551,
-        "./en-nz": 10620,
-        "./en-nz.js": 10620,
-        "./en-sg": 16222,
-        "./en-sg.js": 16222,
-        "./eo": 88124,
-        "./eo.js": 88124,
-        "./es": 59784,
-        "./es-do": 30300,
-        "./es-do.js": 30300,
-        "./es-mx": 47292,
-        "./es-mx.js": 47292,
-        "./es-us": 36469,
-        "./es-us.js": 36469,
-        "./es.js": 59784,
-        "./et": 56349,
-        "./et.js": 56349,
-        "./eu": 6782,
-        "./eu.js": 6782,
-        "./fa": 86749,
-        "./fa.js": 86749,
-        "./fi": 52469,
-        "./fi.js": 52469,
-        "./fil": 2989,
-        "./fil.js": 2989,
-        "./fo": 50743,
-        "./fo.js": 50743,
-        "./fr": 34916,
-        "./fr-ca": 96853,
-        "./fr-ca.js": 96853,
-        "./fr-ch": 81566,
-        "./fr-ch.js": 81566,
-        "./fr.js": 34916,
-        "./fy": 82949,
-        "./fy.js": 82949,
-        "./ga": 80932,
-        "./ga.js": 80932,
-        "./gd": 82671,
-        "./gd.js": 82671,
-        "./gl": 95687,
-        "./gl.js": 95687,
-        "./gom-deva": 67330,
-        "./gom-deva.js": 67330,
-        "./gom-latn": 7021,
-        "./gom-latn.js": 7021,
-        "./gu": 78728,
-        "./gu.js": 78728,
-        "./he": 28211,
-        "./he.js": 28211,
-        "./hi": 15487,
-        "./hi.js": 15487,
-        "./hr": 94106,
-        "./hr.js": 94106,
-        "./hu": 14147,
-        "./hu.js": 14147,
-        "./hy-am": 23862,
-        "./hy-am.js": 23862,
-        "./id": 78825,
-        "./id.js": 78825,
-        "./is": 57612,
-        "./is.js": 57612,
-        "./it": 9497,
-        "./it-ch": 75653,
-        "./it-ch.js": 75653,
-        "./it.js": 9497,
-        "./ja": 2209,
-        "./ja.js": 2209,
-        "./jv": 85668,
-        "./jv.js": 85668,
-        "./ka": 6904,
-        "./ka.js": 6904,
-        "./kk": 2138,
-        "./kk.js": 2138,
-        "./km": 81660,
-        "./km.js": 81660,
-        "./kn": 88613,
-        "./kn.js": 88613,
-        "./ko": 57894,
-        "./ko.js": 57894,
-        "./ku": 28468,
-        "./ku-kmr": 57123,
-        "./ku-kmr.js": 57123,
-        "./ku.js": 28468,
-        "./ky": 91808,
-        "./ky.js": 91808,
-        "./lb": 47070,
-        "./lb.js": 47070,
-        "./lo": 56505,
-        "./lo.js": 56505,
-        "./lt": 53656,
-        "./lt.js": 53656,
-        "./lv": 83746,
-        "./lv.js": 83746,
-        "./me": 42486,
-        "./me.js": 42486,
-        "./mi": 82,
-        "./mi.js": 82,
-        "./mk": 14792,
-        "./mk.js": 14792,
-        "./ml": 10845,
-        "./ml.js": 10845,
-        "./mn": 46939,
-        "./mn.js": 46939,
-        "./mr": 5575,
-        "./mr.js": 5575,
-        "./ms": 81424,
-        "./ms-my": 43179,
-        "./ms-my.js": 43179,
-        "./ms.js": 81424,
-        "./mt": 30341,
-        "./mt.js": 30341,
-        "./my": 72834,
-        "./my.js": 72834,
-        "./nb": 75292,
-        "./nb.js": 75292,
-        "./ne": 23753,
-        "./ne.js": 23753,
-        "./nl": 53922,
-        "./nl-be": 77542,
-        "./nl-be.js": 77542,
-        "./nl.js": 53922,
-        "./nn": 81304,
-        "./nn.js": 81304,
-        "./oc-lnc": 41156,
-        "./oc-lnc.js": 41156,
-        "./pa-in": 17851,
-        "./pa-in.js": 17851,
-        "./pl": 66636,
-        "./pl.js": 66636,
-        "./pt": 13252,
-        "./pt-br": 95189,
-        "./pt-br.js": 95189,
-        "./pt.js": 13252,
-        "./ro": 5451,
-        "./ro.js": 5451,
-        "./ru": 981,
-        "./ru.js": 981,
-        "./sd": 49139,
-        "./sd.js": 49139,
-        "./se": 24684,
-        "./se.js": 24684,
-        "./si": 85448,
-        "./si.js": 85448,
-        "./sk": 61682,
-        "./sk.js": 61682,
-        "./sl": 17595,
-        "./sl.js": 17595,
-        "./sq": 61360,
-        "./sq.js": 61360,
-        "./sr": 45897,
-        "./sr-cyrl": 80616,
-        "./sr-cyrl.js": 80616,
-        "./sr.js": 45897,
-        "./ss": 15034,
-        "./ss.js": 15034,
-        "./sv": 78213,
-        "./sv.js": 78213,
-        "./sw": 47494,
-        "./sw.js": 47494,
-        "./ta": 48387,
-        "./ta.js": 48387,
-        "./te": 90951,
-        "./te.js": 90951,
-        "./tet": 83675,
-        "./tet.js": 83675,
-        "./tg": 99753,
-        "./tg.js": 99753,
-        "./th": 59844,
-        "./th.js": 59844,
-        "./tk": 84429,
-        "./tk.js": 84429,
-        "./tl-ph": 54645,
-        "./tl-ph.js": 54645,
-        "./tlh": 56946,
-        "./tlh.js": 56946,
-        "./tr": 8630,
-        "./tr.js": 8630,
-        "./tzl": 79480,
-        "./tzl.js": 79480,
-        "./tzm": 13839,
-        "./tzm-latn": 36313,
-        "./tzm-latn.js": 36313,
-        "./tzm.js": 13839,
-        "./ug-cn": 26648,
-        "./ug-cn.js": 26648,
-        "./uk": 24192,
-        "./uk.js": 24192,
-        "./ur": 8335,
-        "./ur.js": 8335,
-        "./uz": 21351,
-        "./uz-latn": 60785,
-        "./uz-latn.js": 60785,
-        "./uz.js": 21351,
-        "./vi": 9541,
-        "./vi.js": 9541,
-        "./x-pseudo": 309,
-        "./x-pseudo.js": 309,
-        "./yo": 21512,
-        "./yo.js": 21512,
-        "./zh-cn": 98562,
-        "./zh-cn.js": 98562,
-        "./zh-hk": 7374,
-        "./zh-hk.js": 7374,
-        "./zh-mo": 87107,
-        "./zh-mo.js": 87107,
-        "./zh-tw": 34518,
-        "./zh-tw.js": 34518,
-      };
-      function i(e) {
-        var s = a(e);
-        return r(s);
-      }
-      function a(e) {
-        if (!r.o(n, e)) {
-          var s = new Error("Cannot find module '" + e + "'");
-          throw ((s.code = "MODULE_NOT_FOUND"), s);
-        }
-        return n[e];
-      }
-      (i.keys = function () {
-        return Object.keys(n);
-      }),
-        (i.resolve = a),
-        (e.exports = i),
-        (i.id = 61738);
-    },
-    95582: (e, s, r) => {
+    95582: (e, i, r) => {
       "use strict";
-      r.d(s, { i: () => u });
+      r.d(i, { i: () => u });
       var n = r(7850),
-        i = r(83800),
-        a = r(17084),
-        t = r(9154),
-        o = r(61859),
+        a = r(83800),
+        s = r(17084),
+        o = r(9154),
+        t = r(61859),
         l = r(78327),
         c = r(14578),
         d = r.n(c);
       function u(e) {
-        const { closeModal: s, fnOnApply: r, singlePackage: c } = e,
-          u = (0, a._A)();
-        return (0, n.jsxs)(t.o0, {
-          closeModal: s,
+        const { closeModal: i, fnOnApply: r, singlePackage: c } = e,
+          u = (0, s._A)();
+        return (0, n.jsxs)(o.o0, {
+          closeModal: i,
           bAlertDialog: !0,
-          strTitle: (0, o.we)("#PricingDashboard_ApplyGuidelines_Header"),
+          strTitle: (0, t.we)("#PricingDashboard_ApplyGuidelines_Header"),
           onOK: () => {
             u(), r && r();
           },
           strOKButtonText: c
-            ? (0, o.we)("#PricingDashboard_ApplyGuidelines_Button_Single")
-            : (0, o.we)("#PricingDashboard_ApplyGuidelines_Button"),
+            ? (0, t.we)("#PricingDashboard_ApplyGuidelines_Button_Single")
+            : (0, t.we)("#PricingDashboard_ApplyGuidelines_Button"),
           children: [
             (0, n.jsx)("div", {
               className: d().Instructions,
-              children: (0, o.we)(
+              children: (0, t.we)(
                 "#PricingDashboard_ApplyGuidelines_Instructions",
               ),
             }),
@@ -396,265 +101,265 @@
             (0, n.jsx)("a", {
               href: l.TS.PARTNER_BASE_URL + "doc/store/pricing#5",
               target: "_blank",
-              children: (0, o.we)("#PricingDashboard_ApplyGuidelines_Link"),
+              children: (0, t.we)("#PricingDashboard_ApplyGuidelines_Link"),
             }),
             (0, n.jsx)("br", {}),
             (0, n.jsx)("br", {}),
             !c &&
               (0, n.jsx)("div", {
                 className: d().Instructions,
-                children: (0, o.we)(
+                children: (0, t.we)(
                   "#PricingDashboard_ApplyGuidelines_Instructions2",
                 ),
               }),
             (0, n.jsx)("div", {
               className: d().Instructions,
-              children: (0, o.we)(
+              children: (0, t.we)(
                 "#PricingDashboard_ApplyGuidelines_Assurance",
               ),
             }),
             (0, n.jsx)("br", {}),
-            (0, n.jsx)(i.J, { bHideTour: !0 }),
+            (0, n.jsx)(a.J, { bHideTour: !0 }),
           ],
         });
       }
     },
-    61311: (e, s, r) => {
+    61311: (e, i, r) => {
       "use strict";
-      r.d(s, { t: () => g });
+      r.d(i, { t: () => _ });
       var n = r(7850),
-        i = r(96745),
-        a = r(17084),
-        t = r(90626),
-        o = r(16676),
+        a = r(96745),
+        s = r(17084),
+        o = r(90626),
+        t = r(16676),
         l = r(12155),
         c = r(32754),
         d = r(52038),
         u = r(61859),
-        h = r(29903),
-        P = r(18715),
-        j = r.n(P);
-      function g(e) {
-        const { rgLocalPriceOverrides: s } = e,
-          [r, i] = t.useState(s.length < 9);
+        P = r(10754),
+        h = r(18715),
+        g = r.n(h);
+      function _(e) {
+        const { rgLocalPriceOverrides: i } = e,
+          [r, a] = o.useState(i.length < 9);
         return (0, n.jsx)("div", {
-          className: j().SeeDetailsSection,
+          className: g().SeeDetailsSection,
           children: r
             ? (0, n.jsx)("div", {
-                className: j().PriceOverrideSummaryList,
-                children: s.map((e) =>
+                className: g().PriceOverrideSummaryList,
+                children: i.map((e) =>
                   (0, n.jsx)(
-                    v,
+                    b,
                     { override: e },
                     `${e.packageID}_${e.strPriceKey}`,
                   ),
                 ),
               })
-            : (0, n.jsx)(o.$n, {
-                onClick: () => i(!0),
-                className: j().SeeDetailsButton,
+            : (0, n.jsx)(t.$n, {
+                onClick: () => a(!0),
+                className: g().SeeDetailsButton,
                 children: (0, u.we)("#PackageGrid_SeePendingChanges"),
               }),
         });
       }
-      function v(e) {
-        const { override: s } = e,
+      function b(e) {
+        const { override: i } = e,
           {
             packageID: r,
-            strPriceKey: t,
-            nPriceInCents: o,
+            strPriceKey: o,
+            nPriceInCents: t,
             nOldPriceInCents: u,
-          } = s,
-          P = (0, i.ww)(r),
-          [g, v, b] = (0, a.Wx)(u, t),
-          [_, m, w] = (0, a.Wx)(o, t),
-          p = (0, a.XK)(t),
-          { nMinPriceInCents: x, nMaxPriceInCents: D } = (0, a.tn)(r, t),
-          f = o < x || (!!D && o > D);
+          } = i,
+          h = (0, a.ww)(r),
+          [_, b, v] = (0, s.Wx)(u, o),
+          [x, p, D] = (0, s.Wx)(t, o),
+          w = (0, s.XK)(o),
+          { nMinPriceInCents: j, nMaxPriceInCents: m } = (0, s.tn)(r, o),
+          C = t < j || (!!m && t > m);
         return (0, n.jsxs)("div", {
-          className: (0, d.A)(j().PriceOverrideSummary),
+          className: (0, d.A)(g().PriceOverrideSummary),
           children: [
             (0, n.jsx)(c.he, {
-              toolTipContent: p,
+              toolTipContent: w,
               direction: "top",
-              className: j().Currency,
-              strTooltipClassname: j().HoverToolTip,
-              children: t,
+              className: g().Currency,
+              strTooltipClassname: g().HoverToolTip,
+              children: o,
             }),
             (0, n.jsx)(c.he, {
-              toolTipContent: `${r}: ${P}`,
+              toolTipContent: `${r}: ${h}`,
               direction: "overlay",
-              className: j().PackageName,
-              strTooltipClassname: j().HoverToolTip,
-              children: P,
+              className: g().PackageName,
+              strTooltipClassname: g().HoverToolTip,
+              children: h,
             }),
-            f
-              ? (0, n.jsx)(h.T6, { packageID: r, strPriceKey: t })
-              : (0, n.jsx)(h.Gy, { nPriceInCents: o, nSavedPriceInCents: u }),
+            C
+              ? (0, n.jsx)(P.T6, { packageID: r, strPriceKey: o })
+              : (0, n.jsx)(P.Gy, { nPriceInCents: t, nSavedPriceInCents: u }),
             (0, n.jsxs)("div", {
-              className: j().OldPriceCtn,
+              className: g().OldPriceCtn,
               children: [
-                (0, n.jsx)("div", { className: j().PricePrefix, children: g }),
-                (0, n.jsx)("span", { className: j().OldPrice, children: v }),
-                (0, n.jsx)("div", { className: j().PriceSuffix, children: b }),
+                (0, n.jsx)("div", { className: g().PricePrefix, children: _ }),
+                (0, n.jsx)("span", { className: g().OldPrice, children: b }),
+                (0, n.jsx)("div", { className: g().PriceSuffix, children: v }),
               ],
             }),
             (0, n.jsx)("span", {
-              className: j().ChangeArrow,
+              className: g().ChangeArrow,
               children: (0, n.jsx)(l.i3G, { angle: 90 }),
             }),
             (0, n.jsxs)("div", {
-              className: j().NewPriceCtn,
+              className: g().NewPriceCtn,
               children: [
-                (0, n.jsx)("div", { className: j().PricePrefix, children: g }),
-                (0, n.jsx)("span", { className: j().NewPrice, children: m }),
-                (0, n.jsx)("div", { className: j().PriceSuffix, children: b }),
+                (0, n.jsx)("div", { className: g().PricePrefix, children: _ }),
+                (0, n.jsx)("span", { className: g().NewPrice, children: p }),
+                (0, n.jsx)("div", { className: g().PriceSuffix, children: v }),
               ],
             }),
           ],
         });
       }
     },
-    74267: (e, s, r) => {
+    74267: (e, i, r) => {
       "use strict";
-      r.d(s, { O: () => h });
+      r.d(i, { O: () => P });
       var n = r(7850),
-        i = r(90626),
-        a = r(85274),
-        t = r.n(a),
-        o = r(12155),
+        a = r(90626),
+        s = r(85274),
+        o = r.n(s),
+        t = r(12155),
         l = r(52038),
         c = r(49771),
         d = r(6336);
       const u = new c.MX("price-grid-cell-popout-elements");
-      function h(e) {
-        let { hoverKey: s, className: r, renderHover: a } = e,
-          c = (0, l.A)(t().MoreDots, r),
-          h = i.useRef(void 0),
-          P = i.useCallback(() => {
-            u.HideElement(h.current.ownerDocument, s);
-          }, [s]);
+      function P(e) {
+        let { hoverKey: i, className: r, renderHover: s } = e,
+          c = (0, l.A)(o().MoreDots, r),
+          P = a.useRef(void 0),
+          h = a.useCallback(() => {
+            u.HideElement(P.current.ownerDocument, i);
+          }, [i]);
         return (0, n.jsx)("div", {
-          ref: h,
+          ref: P,
           tabIndex: -1,
           className: c,
           onFocus: (e) => {
             e.target.focus();
             let r = (0, n.jsx)(d.g, {
-              target: h.current,
+              target: P.current,
               direction: "top",
               bEnablePointerEvents: !0,
               nBodyDistance: 0,
-              onClick: P,
-              children: a(),
+              onClick: h,
+              children: s(),
             });
-            u.ShowElement(h.current.ownerDocument, r, s);
+            u.ShowElement(P.current.ownerDocument, r, i);
           },
           onBlur: () => {
-            u.HideElement(h.current.ownerDocument, s, 100);
+            u.HideElement(P.current.ownerDocument, i, 100);
           },
-          children: (0, n.jsx)(o.faJ, {}),
+          children: (0, n.jsx)(t.faJ, {}),
         });
       }
     },
-    86762: (e, s, r) => {
+    86762: (e, i, r) => {
       "use strict";
-      r.d(s, { m: () => I });
+      r.d(i, { m: () => O });
       var n,
-        i,
-        a = r(7850),
-        t = r(17084),
-        o = r(29903),
+        a,
+        s = r(7850),
+        o = r(17084),
+        t = r(10754),
         l = r(41103),
         c = r(61859),
         d = r(52038),
         u = r(32754),
-        h = r(74267),
-        P = r(12917),
-        j = r.n(P),
-        g = r(90626),
-        v = r(9154),
-        b = r(22797),
-        _ = r(51272),
-        m = r(18715),
-        w = r.n(m),
-        p = r(48996),
-        x = r(44165),
-        D = r(87924),
-        f = r(61311);
-      function C(e) {
-        const { closeModal: s, packageID: r } = e,
-          o = (0, t.FX)(r),
-          l = o.some((e) => e.nPriceInCents > e.nOldPriceInCents),
-          d = (function (e, s) {
-            let [r, n] = g.useState(void 0);
-            const a = (0, p.zq)(),
-              t = (0, x.P_)(60);
+        P = r(74267),
+        h = r(12917),
+        g = r.n(h),
+        _ = r(90626),
+        b = r(9154),
+        v = r(22797),
+        x = r(51272),
+        p = r(18715),
+        D = r.n(p),
+        w = r(48996),
+        j = r(44165),
+        m = r(87924),
+        C = r(61311);
+      function f(e) {
+        const { closeModal: i, packageID: r } = e,
+          t = (0, o.FX)(r),
+          l = t.some((e) => e.nPriceInCents > e.nOldPriceInCents),
+          d = (function (e, i) {
+            let [r, n] = _.useState(void 0);
+            const s = (0, w.zq)(),
+              o = (0, j.P_)(60);
             if (
-              (g.useEffect(() => {
-                s &&
+              (_.useEffect(() => {
+                i &&
                   (n(void 0),
-                  a([e], void 0, 6e4).then(async (e) => {
+                  s([e], void 0, 6e4).then(async (e) => {
                     n(e);
                   }));
-              }, [s, e, n, a]),
-              !s)
+              }, [i, e, n, s]),
+              !i)
             )
-              return i.OK;
-            if (null == r) return i.Loading;
-            if (1 != r) return i.FailedToLoad;
-            const o = (0, p.qN)(e);
-            return o.every((e) => e.rtStartDate > t + D.nu || e.rtEndDate < t)
-              ? i.OK
-              : i.RequiresCooldown;
+              return a.OK;
+            if (null == r) return a.Loading;
+            if (1 != r) return a.FailedToLoad;
+            const t = (0, w.qN)(e);
+            return t.every((e) => e.rtStartDate > o + m.nu || e.rtEndDate < o)
+              ? a.OK
+              : a.RequiresCooldown;
           })(r, l),
-          { fnPublish: u, ePublishState: h } = (function (e) {
-            const s = (0, t.h4)(),
-              [r, i] = g.useState(n.Idle);
-            let a = g.useCallback(async () => {
-              i(n.Loading);
-              1 == (await s(e)).success ? i(n.OK) : i(n.Failed);
-            }, [i, s, e]);
-            return { fnPublish: a, ePublishState: r };
+          { fnPublish: u, ePublishState: P } = (function (e) {
+            const i = (0, o.h4)(),
+              [r, a] = _.useState(n.Idle);
+            let s = _.useCallback(async () => {
+              a(n.Loading);
+              1 == (await i(e)).success ? a(n.OK) : a(n.Failed);
+            }, [a, i, e]);
+            return { fnPublish: s, ePublishState: r };
           })(r);
-        let P;
-        if (d == i.FailedToLoad)
-          P = (0, c.oW)(
+        let h;
+        if (d == a.FailedToLoad)
+          h = (0, c.oW)(
             "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
-            (0, a.jsx)("div", {}),
-            (0, a.jsx)("div", {}),
+            (0, s.jsx)("div", {}),
+            (0, s.jsx)("div", {}),
           );
-        else if (d == i.RequiresCooldown) {
-          let e = (0, a.jsx)(_.uU, {
+        else if (d == a.RequiresCooldown) {
+          let e = (0, s.jsx)(x.uU, {
             href: "https://partner.steamgames.com/doc/store/pricing",
           });
-          P = (0, a.jsxs)(a.Fragment, {
+          h = (0, s.jsxs)(s.Fragment, {
             children: [
-              (0, a.jsx)("div", {
+              (0, s.jsx)("div", {
                 children: (0, c.we)(
                   "#PricingDashboard_PriceProposal_Publish_CooldownError1",
                 ),
               }),
-              (0, a.jsx)("div", {
+              (0, s.jsx)("div", {
                 children: (0, c.oW)(
                   "#PricingDashboard_PriceProposal_Publish_CooldownError2",
                   e,
                 ),
               }),
-              (0, a.jsx)("div", {
+              (0, s.jsx)("div", {
                 children: (0, c.we)(
                   "#PricingDashboard_PriceProposal_Publish_CooldownError3",
                 ),
               }),
-              (0, a.jsx)("div", {
-                children: (0, a.jsxs)("ol", {
+              (0, s.jsx)("div", {
+                children: (0, s.jsxs)("ol", {
                   children: [
-                    (0, a.jsx)("li", {
+                    (0, s.jsx)("li", {
                       children: (0, c.we)(
                         "#PricingDashboard_PriceProposal_Publish_CooldownError3a",
                       ),
                     }),
-                    (0, a.jsx)("li", {
+                    (0, s.jsx)("li", {
                       children: (0, c.we)(
                         "#PricingDashboard_PriceProposal_Publish_CooldownError3b",
                       ),
@@ -665,62 +370,62 @@
             ],
           });
         } else
-          h == n.Failed &&
-            (P = (0, c.oW)(
+          P == n.Failed &&
+            (h = (0, c.oW)(
               "#PricingDashboard_PriceProposal_Publish_FailedToPublish",
-              (0, a.jsx)("div", {}),
-              (0, a.jsx)("div", {}),
+              (0, s.jsx)("div", {}),
+              (0, s.jsx)("div", {}),
             ));
-        if (P) {
+        if (h) {
           let e = (0, c.we)("#PricingDashboard_PriceProposal_Publish_Title");
           return (
-            d == i.RequiresCooldown &&
+            d == a.RequiresCooldown &&
               (e = (0, c.we)(
                 "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
               )),
-            (0, a.jsx)(v.o0, {
+            (0, s.jsx)(b.o0, {
               strTitle: e,
               bAlertDialog: !0,
-              onOK: s,
-              onCancel: s,
-              closeModal: s,
-              children: (0, a.jsx)("div", {
-                className: w().PublishErrorDialog,
-                children: P,
+              onOK: i,
+              onCancel: i,
+              closeModal: i,
+              children: (0, s.jsx)("div", {
+                className: D().PublishErrorDialog,
+                children: h,
               }),
             })
           );
         }
-        let j = d == i.Loading || h == n.Loading;
-        return (0, a.jsxs)(v.o0, {
+        let g = d == a.Loading || P == n.Loading;
+        return (0, s.jsxs)(b.o0, {
           strTitle: (0, c.we)("#PricingDashboard_PriceProposal_Publish_Title"),
           bAlertDialog: !1,
           strOKButtonText: (0, c.we)(
             "#PricingDashboard_PriceProposal_Publish_Button",
           ),
-          bOKDisabled: j,
-          bCancelDisabled: j,
+          bOKDisabled: g,
+          bCancelDisabled: g,
           bDestructiveWarning: !0,
           onOK: u,
-          onCancel: s,
-          closeModal: s,
+          onCancel: i,
+          closeModal: i,
           children: [
-            j && (0, a.jsx)(b.t, { position: "center" }),
-            !j &&
-              (0, a.jsxs)(a.Fragment, {
+            g && (0, s.jsx)(v.t, { position: "center" }),
+            !g &&
+              (0, s.jsxs)(s.Fragment, {
                 children: [
                   (0, c.Yp)(
                     "#PricingDashboard_PriceProposal_Publish_Explanation",
-                    o.length,
+                    t.length,
                   ),
                   l &&
-                    (0, a.jsx)("div", {
-                      className: w().PublishWarning,
+                    (0, s.jsx)("div", {
+                      className: D().PublishWarning,
                       children: (0, c.we)(
                         "#PricingDashboard_PriceProposal_Publish_CooldownWarning",
                       ),
                     }),
-                  (0, a.jsx)(f.t, { rgLocalPriceOverrides: o }),
+                  (0, s.jsx)(C.t, { rgLocalPriceOverrides: t }),
                 ],
               }),
           ],
@@ -738,129 +443,129 @@
             (e[(e.OK = 2)] = "OK"),
             (e[(e.FailedToLoad = 3)] = "FailedToLoad"),
             (e[(e.RequiresCooldown = 4)] = "RequiresCooldown");
-        })(i || (i = {}));
+        })(a || (a = {}));
       var N = r(64753),
-        k = r(16676),
-        O = r(96434),
-        S = r.n(O);
-      function I(e) {
-        const { packageID: s, bShowCancel: r } = e,
-          n = (0, t.XB)(s),
-          i = (0, t.d$)(s),
-          P = i && (0, o.mK)(i.rtSubmitted),
-          [g, v] = (0, l.Hl)(i?.submitterID),
-          b = v ? v.persona_name : i?.submitterID;
-        let _ = "PackageMore_" + s,
-          m = null,
-          w = null,
-          p = null;
+        S = r(16676),
+        I = r(96434),
+        T = r.n(I);
+      function O(e) {
+        const { packageID: i, bShowCancel: r } = e,
+          n = (0, o.XB)(i),
+          a = (0, o.d$)(i),
+          h = a && (0, t.mK)(a.rtSubmitted),
+          [_, b] = (0, l.Hl)(a?.submitterID),
+          v = b ? b.persona_name : a?.submitterID;
+        let x = "PackageMore_" + i,
+          p = null,
+          D = null,
+          w = null;
         n
-          ? ((m = j().NeedsReview),
-            (p = (0, c.we)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
-            (w = (0, c.we)("#PricingDashboard_PriceProposal_NeedsReview")))
-          : 1 == i?.eState && i.bPartnerWillPublish
-            ? ((m = j().PartnerWillPublish),
-              (p = (0, c.we)(
-                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
-                b,
-                P,
-              )),
+          ? ((p = g().NeedsReview),
+            (w = (0, c.we)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
+            (D = (0, c.we)("#PricingDashboard_PriceProposal_NeedsReview")))
+          : 1 == a?.eState && a.bPartnerWillPublish
+            ? ((p = g().PartnerWillPublish),
               (w = (0, c.we)(
+                "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
+                v,
+                h,
+              )),
+              (D = (0, c.we)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
               )))
-            : 1 != i?.eState || i.bPartnerWillPublish
-              ? 4 == i?.eState
-                ? ((m = j().ApprovedCanPublish),
-                  (p = (0, c.we)(
+            : 1 != a?.eState || a.bPartnerWillPublish
+              ? 4 == a?.eState
+                ? ((p = g().ApprovedCanPublish),
+                  (w = (0, c.we)(
                     "#PricingDashboard_PriceProposal_Approved_ttip",
                   )),
-                  (w = (0, a.jsx)(T, { packageID: s })))
-                : ((m = j().NoProposalsInFlight),
-                  (p = (0, c.we)(
+                  (D = (0, s.jsx)(k, { packageID: i })))
+                : ((p = g().NoProposalsInFlight),
+                  (w = (0, c.we)(
                     "#PricingDashboard_PriceProposal_NoneInFlight_ttip",
                   )),
-                  (w = (0, c.we)(
+                  (D = (0, c.we)(
                     "#PricingDashboard_PriceProposal_NoneInFlight",
                   )))
-              : ((m = j().AutoPublish),
-                (p = (0, c.we)(
+              : ((p = g().AutoPublish),
+                (w = (0, c.we)(
                   "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish_ttip",
-                  b,
-                  P,
+                  v,
+                  h,
                 )),
-                (w = (0, a.jsxs)("div", {
+                (D = (0, s.jsxs)("div", {
                   children: [
                     (0, c.we)(
                       "#PricingDashboard_PriceProposal_WaitingForReview",
                     ),
-                    (0, a.jsx)("br", {}),
-                    (0, a.jsx)("span", {
+                    (0, s.jsx)("br", {}),
+                    (0, s.jsx)("span", {
                       children: (0, c.we)(
                         "#PricingDashboard_PriceProposal_WaitingForReview_AutoPublish",
                       ),
                     }),
                   ],
                 })));
-        let x = r && (n || !!i);
-        return (0, a.jsxs)("div", {
-          className: (0, d.A)(j().ProposalState, m),
+        let j = r && (n || !!a);
+        return (0, s.jsxs)("div", {
+          className: (0, d.A)(g().ProposalState, p),
           children: [
-            (0, a.jsxs)(u.he, {
-              toolTipContent: p,
-              className: j().StateText,
+            (0, s.jsxs)(u.he, {
+              toolTipContent: w,
+              className: g().StateText,
               children: [
-                (0, a.jsx)("div", { className: j().ProposalStateKey }),
-                w,
+                (0, s.jsx)("div", { className: g().ProposalStateKey }),
+                D,
               ],
             }),
-            x &&
-              (0, a.jsx)(h.O, {
-                hoverKey: _,
-                className: j().PackageMore,
-                renderHover: () => (0, a.jsx)(y, { packageID: s }),
+            j &&
+              (0, s.jsx)(P.O, {
+                hoverKey: x,
+                className: g().PackageMore,
+                renderHover: () => (0, s.jsx)(y, { packageID: i }),
               }),
           ],
         });
       }
-      function T(e) {
-        const { packageID: s } = e,
-          [r, n, i] = (0, N.uD)();
-        return (0, a.jsxs)(a.Fragment, {
+      function k(e) {
+        const { packageID: i } = e,
+          [r, n, a] = (0, N.uD)();
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, a.jsx)(k.jn, {
+            (0, s.jsx)(S.jn, {
               onClick: n,
               children: (0, c.we)(
                 "#PricingDashboard_PriceProposal_PublishDialog_Button",
               ),
             }),
-            (0, a.jsx)(v.EN, {
+            (0, s.jsx)(b.EN, {
               active: r,
-              children: (0, a.jsx)(C, { packageID: s, closeModal: i }),
+              children: (0, s.jsx)(f, { packageID: i, closeModal: a }),
             }),
           ],
         });
       }
       function y(e) {
-        const { packageID: s } = e,
-          r = (0, t.XB)(s);
-        let n = (0, t.T_)(s);
-        const i = (0, t.d$)(s);
-        let o = (0, t.fr)(s);
-        return (0, a.jsx)("div", {
-          className: S().PricePopout,
-          children: (0, a.jsxs)("div", {
-            className: S().DetailRow,
+        const { packageID: i } = e,
+          r = (0, o.XB)(i);
+        let n = (0, o.T_)(i);
+        const a = (0, o.d$)(i);
+        let t = (0, o.fr)(i);
+        return (0, s.jsx)("div", {
+          className: T().PricePopout,
+          children: (0, s.jsxs)("div", {
+            className: T().DetailRow,
             children: [
               r &&
-                (0, a.jsx)("div", {
-                  className: S().DetailLabel,
+                (0, s.jsx)("div", {
+                  className: T().DetailLabel,
                   onClick: n,
                   children: (0, c.we)("#PricingDashboard_RevertAllPackage"),
                 }),
-              !!i &&
-                (0, a.jsx)("div", {
-                  className: S().DetailLabel,
-                  onClick: o,
+              !!a &&
+                (0, s.jsx)("div", {
+                  className: T().DetailLabel,
+                  onClick: t,
                   children: (0, c.we)("#PricingDashboard_CancelPriceProposal"),
                 }),
             ],
@@ -868,160 +573,160 @@
         });
       }
     },
-    40818: (e, s, r) => {
+    40818: (e, i, r) => {
       "use strict";
-      r.d(s, { Zg: () => I, BL: () => k, cK: () => O });
+      r.d(i, { Zg: () => O, BL: () => S, cK: () => I });
       var n = r(7850),
-        i = r(64753),
-        a = r(48996),
-        t = r(96745),
-        o = r(17084),
+        a = r(64753),
+        s = r(48996),
+        o = r(96745),
+        t = r(17084),
         l = r(90626),
         c = r(44165),
         d = r(16676),
         u = r(9154),
-        h = r(738),
-        P = r(12155),
-        j = r(22797),
-        g = r(51272),
-        v = r(4434),
-        b = r(52038),
-        _ = r(56011),
-        m = r(61859),
-        w = r(14771),
-        p = r(61311);
-      function x(e) {
-        const { closeModal: s } = e,
-          r = (0, o.Ci)(),
-          i = (0, o.NC)();
+        P = r(738),
+        h = r(12155),
+        g = r(22797),
+        _ = r(51272),
+        b = r(4434),
+        v = r(52038),
+        x = r(56011),
+        p = r(61859),
+        D = r(14771),
+        w = r(61311);
+      function j(e) {
+        const { closeModal: i } = e,
+          r = (0, t.Ci)(),
+          a = (0, t.NC)();
         return (0, n.jsxs)(u.o0, {
-          strTitle: (0, m.we)("#PackageGrid_DiscardChangesTitle"),
-          strOKButtonText: (0, m.we)("#PackageGrid_DiscardChangesButton"),
-          onOK: i,
+          strTitle: (0, p.we)("#PackageGrid_DiscardChangesTitle"),
+          strOKButtonText: (0, p.we)("#PackageGrid_DiscardChangesButton"),
+          onOK: a,
           bDestructiveWarning: !0,
-          closeModal: s,
+          closeModal: i,
           children: [
-            (0, m.Yp)("#PricingDashboard_DiscardChangesExplanation", r.length),
-            (0, n.jsx)(p.t, { rgLocalPriceOverrides: r }),
+            (0, p.Yp)("#PricingDashboard_DiscardChangesExplanation", r.length),
+            (0, n.jsx)(w.t, { rgLocalPriceOverrides: r }),
           ],
         });
       }
-      var D = r(18715),
-        f = r.n(D);
-      const C = 30,
+      var m = r(18715),
+        C = r.n(m);
+      const f = 30,
         N = 40;
-      function k(e) {
-        const { bReloadPageOnSave: s } = e,
-          r = (0, o.Ci)();
-        let a = r?.length ?? 0,
-          t = a > 0;
-        const [l, c, h] = (0, i.uD)(),
-          [P, j, g] = (0, i.uD)();
+      function S(e) {
+        const { bReloadPageOnSave: i } = e,
+          r = (0, t.Ci)();
+        let s = r?.length ?? 0,
+          o = s > 0;
+        const [l, c, P] = (0, a.uD)(),
+          [h, g, _] = (0, a.uD)();
         return (0, n.jsxs)("div", {
-          className: (0, b.A)(f().ToolbarInfo, t && f().Visible),
+          className: (0, v.A)(C().ToolbarInfo, o && C().Visible),
           children: [
             (0, n.jsx)("div", {
-              className: f().ChangeCount,
-              children: (0, m.Yp)("#PackageGrid_PendingChangeCount", a),
+              className: C().ChangeCount,
+              children: (0, p.Yp)("#PackageGrid_PendingChangeCount", s),
             }),
             (0, n.jsxs)("div", {
-              className: f().Buttons,
+              className: C().Buttons,
               children: [
                 (0, n.jsx)(d.$n, {
                   onClick: c,
-                  disabled: 0 == a,
-                  className: (0, b.A)(f().Button, f().SaveButton),
-                  children: (0, m.we)("#PackageGrid_SaveChangesDialogButton"),
+                  disabled: 0 == s,
+                  className: (0, v.A)(C().Button, C().SaveButton),
+                  children: (0, p.we)("#PackageGrid_SaveChangesDialogButton"),
                 }),
                 (0, n.jsx)(u.EN, {
                   active: l,
-                  children: (0, n.jsx)(I, {
-                    closeModal: h,
-                    bReloadPageOnSave: s,
+                  children: (0, n.jsx)(O, {
+                    closeModal: P,
+                    bReloadPageOnSave: i,
                   }),
                 }),
                 (0, n.jsx)(d.$n, {
-                  className: f().Button,
-                  onClick: j,
-                  children: (0, m.we)(
+                  className: C().Button,
+                  onClick: g,
+                  children: (0, p.we)(
                     "#PackageGrid_DiscardChangesDialogButton",
                   ),
                 }),
                 (0, n.jsx)(u.EN, {
-                  active: P,
-                  children: (0, n.jsx)(x, { closeModal: g }),
+                  active: h,
+                  children: (0, n.jsx)(j, { closeModal: _ }),
                 }),
               ],
             }),
           ],
         });
       }
-      function O() {
+      function I() {
         return l.useCallback(
-          (e, s) =>
-            (0, h.pg)((0, n.jsx)(I, { strContinueUrl: s }), (0, _.uX)(e)),
+          (e, i) =>
+            (0, P.pg)((0, n.jsx)(O, { strContinueUrl: i }), (0, x.uX)(e)),
           [],
         );
       }
-      function S(e) {
+      function T(e) {
         return e
           .filter((e) => e.nPriceInCents > e.nOldPriceInCents)
           .map((e) => e.packageID);
       }
-      function I(e) {
-        const { closeModal: s, strContinueUrl: r, bReloadPageOnSave: i } = e,
-          P = (0, o.Ci)(),
-          j = (0, o.NC)(),
-          [v, b] = l.useState(void 0),
-          _ = (function (e) {
-            let [s, r] = l.useState(void 0);
-            const n = (0, a.zq)(),
-              i = (0, c.P_)(60);
+      function O(e) {
+        const { closeModal: i, strContinueUrl: r, bReloadPageOnSave: a } = e,
+          h = (0, t.Ci)(),
+          g = (0, t.NC)(),
+          [b, v] = l.useState(void 0),
+          x = (function (e) {
+            let [i, r] = l.useState(void 0);
+            const n = (0, s.zq)(),
+              a = (0, c.P_)(60);
             return (
               l.useEffect(() => {
                 r(void 0);
-                let s = S(e);
-                s.length > 0
-                  ? n(s, void 0, 6e4).then((e) => {
+                let i = T(e);
+                i.length > 0
+                  ? n(i, void 0, 6e4).then((e) => {
                       r(e);
                     })
                   : r(1);
               }, [r, e, n]),
               l.useMemo(() => {
-                if (void 0 === s) return null;
-                if (1 != s) return { days: 0, loadFailed: !0 };
+                if (void 0 === i) return null;
+                if (1 != i) return { days: 0, loadFailed: !0 };
                 let r = Number.MAX_SAFE_INTEGER,
-                  n = S(e);
+                  n = T(e);
                 for (let e of n) {
-                  const s = (0, a.qN)(e);
-                  for (const e of s) {
-                    if (e.rtStartDate < i) continue;
-                    let s = Math.floor((e.rtStartDate - i) / w.Kp.PerDay);
-                    r = Math.min(r, s);
+                  const i = (0, s.qN)(e);
+                  for (const e of i) {
+                    if (e.rtStartDate < a) continue;
+                    let i = Math.floor((e.rtStartDate - a) / D.Kp.PerDay);
+                    r = Math.min(r, i);
                   }
                 }
                 return { days: r, loadFailed: !1 };
-              }, [s, i, e])
+              }, [i, a, e])
             );
-          })(P);
-        if (!_) return null;
-        const x = !!r,
-          D = (0, m.we)(
-            x
+          })(h);
+        if (!x) return null;
+        const j = !!r,
+          m = (0, p.we)(
+            j
               ? "#PackageGrid_NavigationWarning_Title"
               : "#PricingDashboard_SavePricesTitle",
           ),
-          C = (0, m.Yp)("#PricingDashboard_SavePricesExplanation", P.length);
-        if (_.loadFailed)
+          f = (0, p.Yp)("#PricingDashboard_SavePricesExplanation", h.length);
+        if (x.loadFailed)
           return (0, n.jsx)(u.o0, {
-            strTitle: D,
+            strTitle: m,
             bAlertDialog: !0,
-            onOK: s,
-            onCancel: s,
-            closeModal: s,
+            onOK: i,
+            onCancel: i,
+            closeModal: i,
             children: (0, n.jsx)("div", {
-              className: f().PublishErrorDialog,
-              children: (0, m.oW)(
+              className: C().PublishErrorDialog,
+              children: (0, p.oW)(
                 "#PricingDashboard_SavePrices_FailedToLoad",
                 (0, n.jsx)("div", {}),
                 (0, n.jsx)("div", {}),
@@ -1029,104 +734,104 @@
             }),
           });
         let N = !1,
-          k = !1,
-          O = !1,
-          I = new Set();
-        for (const e of P) {
-          const { nMinPriceInCents: s, nMaxPriceInCents: r } = (0, o.tn)(
+          S = !1,
+          I = !1,
+          O = new Set();
+        for (const e of h) {
+          const { nMinPriceInCents: i, nMaxPriceInCents: r } = (0, t.tn)(
             e.packageID,
             e.strPriceKey,
           );
-          (N = N || e.nPriceInCents < s),
-            (k = k || (!!r && e.nPriceInCents > r)),
-            (O = O || e.nPriceInCents > e.nOldPriceInCents),
-            I.add(e.packageID);
+          (N = N || e.nPriceInCents < i),
+            (S = S || (!!r && e.nPriceInCents > r)),
+            (I = I || e.nPriceInCents > e.nOldPriceInCents),
+            O.add(e.packageID);
         }
-        let E,
-          W = (0, o.ww)(I);
-        if (W.length > 0) {
-          let e = W.map((e) => (0, t.ww)(e));
-          E = (0, m.we)("#PricingDashboad_RequiredPrices", e.join(", "));
+        let W,
+          A = (0, t.ww)(O);
+        if (A.length > 0) {
+          let e = A.map((e) => (0, o.ww)(e));
+          W = (0, p.we)("#PricingDashboad_RequiredPrices", e.join(", "));
         }
-        const A = N || k,
-          M = A || void 0 === v || 0 != W.length,
+        const E = N || S,
+          M = E || void 0 === b || 0 != A.length,
           F = (e) => {
             r
               ? (window.location.href = r)
-              : i && !e && window.location.reload();
+              : a && !e && window.location.reload();
           },
-          R = () => {
-            void 0 !== v
+          K = () => {
+            void 0 !== b
               ? (e.closeModal(),
-                (0, h.pg)(
-                  (0, n.jsx)(B, { bAutoPublish: v, fnOnSuccess: F }),
+                (0, P.pg)(
+                  (0, n.jsx)(B, { bAutoPublish: b, fnOnSuccess: F }),
                   window,
                 ))
               : console.error(
                   "Pricing:SaveChangesDialog auto publish undefined",
                 );
           };
-        let K = (0, n.jsx)(g.uU, {
+        let R = (0, n.jsx)(_.uU, {
           href: "https://partner.steamgames.com/doc/store/pricing",
         });
         return (0, n.jsx)(u.eV, {
-          title: D,
-          onOK: R,
+          title: m,
+          onOK: K,
           onCancel: e.closeModal,
-          bDestructiveWarning: x,
-          closeModal: s,
+          bDestructiveWarning: j,
+          closeModal: i,
           children: (0, n.jsxs)(d.nB, {
-            className: f().SaveDialogBody,
+            className: C().SaveDialogBody,
             children: [
               (0, n.jsxs)(d.a3, {
-                className: f().SaveDialogBodyText,
+                className: C().SaveDialogBodyText,
                 children: [
-                  x &&
+                  j &&
                     (0, n.jsx)("div", {
-                      className: f().NavigationWarning,
-                      children: (0, m.we)("#PackageGrid_NavigationWarning"),
+                      className: C().NavigationWarning,
+                      children: (0, p.we)("#PackageGrid_NavigationWarning"),
                     }),
-                  C,
-                  A &&
+                  f,
+                  E &&
                     (0, n.jsxs)("div", {
-                      className: f().PricePreviewWarning,
+                      className: C().PricePreviewWarning,
                       children: [
                         " ",
-                        (0, m.oW)("#PricingDashboard_PreviewWarning", K),
+                        (0, p.oW)("#PricingDashboard_PreviewWarning", R),
                         " ",
                       ],
                     }),
-                  E &&
+                  W &&
                     (0, n.jsxs)("div", {
-                      className: f().PricePreviewWarning,
-                      children: [" ", E, " "],
+                      className: C().PricePreviewWarning,
+                      children: [" ", W, " "],
                     }),
-                  (0, n.jsx)(p.t, { rgLocalPriceOverrides: P }),
-                  (0, n.jsx)(T, { priceIncrease: O, nextDiscount: _.days }),
+                  (0, n.jsx)(w.t, { rgLocalPriceOverrides: h }),
+                  (0, n.jsx)(k, { priceIncrease: I, nextDiscount: x.days }),
                   (0, n.jsx)(y, {
-                    value: v,
-                    onChange: b,
-                    nextDiscount: _.days,
+                    value: b,
+                    onChange: v,
+                    nextDiscount: x.days,
                   }),
                 ],
               }),
               (0, n.jsx)(d.wi, {
-                children: x
+                children: j
                   ? (0, n.jsx)(d.VQ, {
-                      strOKText: (0, m.we)("#Button_Save"),
-                      onOK: R,
+                      strOKText: (0, p.we)("#Button_Save"),
+                      onOK: K,
                       bOKDisabled: M,
-                      strUpdateText: (0, m.we)(
+                      strUpdateText: (0, p.we)(
                         "#PackageGrid_NavigateWithoutSavingButton",
                       ),
                       onUpdate: () => {
-                        j(), e.closeModal(), F(!0);
+                        g(), e.closeModal(), F(!0);
                       },
                       onCancel: e.closeModal,
                     })
                   : (0, n.jsx)(d.CB, {
-                      strOKText: (0, m.we)("#Button_Save"),
-                      onOK: R,
+                      strOKText: (0, p.we)("#Button_Save"),
+                      onOK: K,
                       bOKDisabled: M,
                       onCancel: e.closeModal,
                     }),
@@ -1135,221 +840,130 @@
           }),
         });
       }
-      function T(e) {
-        let s,
-          { priceIncrease: r, nextDiscount: i } = e;
+      function k(e) {
+        let i,
+          { priceIncrease: r, nextDiscount: a } = e;
         return r
-          ? ((s =
-              i < C
-                ? (0, m.we)(
+          ? ((i =
+              a < f
+                ? (0, p.we)(
                     "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
-                    C,
+                    f,
                   )
-                : i < N
-                  ? (0, m.we)(
+                : a < N
+                  ? (0, p.we)(
                       "#PricingDashboard_SavePrice_FutureDiscountSoon",
-                      i,
-                      C,
+                      a,
+                      f,
                     )
-                  : (0, m.we)(
+                  : (0, p.we)(
                       "#PricingDashboard_SavePrice_CooldownWarning",
-                      C,
+                      f,
                     )),
             (0, n.jsxs)("div", {
-              className: f().PriceChangeSaveWarning,
+              className: C().PriceChangeSaveWarning,
               children: [
                 (0, n.jsx)("div", {
-                  className: f().PriceChangeSaveWarningArrow,
-                  children: (0, n.jsx)(P.i3G, { angle: 0 }),
+                  className: C().PriceChangeSaveWarningArrow,
+                  children: (0, n.jsx)(h.i3G, { angle: 0 }),
                 }),
                 (0, n.jsxs)("div", {
-                  className: f().HigherPriceWarning,
-                  children: [" ", s, " "],
+                  className: C().HigherPriceWarning,
+                  children: [" ", i, " "],
                 }),
               ],
             }))
           : null;
       }
       function y(e) {
-        let { value: s, onChange: r } = e,
-          i = e.nextDiscount <= C;
+        let { value: i, onChange: r } = e,
+          a = e.nextDiscount <= f;
         return (0, n.jsxs)("div", {
-          className: f().AutoPublishCheckBox,
+          className: C().AutoPublishCheckBox,
           children: [
             (0, n.jsx)(d.Od, {
-              className: f().RadioButtons,
-              checked: !1 === s,
+              className: C().RadioButtons,
+              checked: !1 === i,
               onChange: () => r(!1),
-              label: (0, m.we)("#PricingDashboard_AutoPublish_Disabled"),
+              label: (0, p.we)("#PricingDashboard_AutoPublish_Disabled"),
             }),
             (0, n.jsx)(d.Od, {
-              className: f().RadioButtons,
-              checked: !0 === s,
-              disabled: i,
+              className: C().RadioButtons,
+              checked: !0 === i,
+              disabled: a,
               onChange: () => r(!0),
-              label: (0, m.we)("#PricingDashboard_AutoPublish_Enabled"),
+              label: (0, p.we)("#PricingDashboard_AutoPublish_Enabled"),
             }),
           ],
         });
       }
       function B(e) {
-        const { closeModal: s, bAutoPublish: r, fnOnSuccess: i } = e,
-          a = (0, o.Ci)(),
-          t = (0, o.Bt)(),
-          c = (0, v.m)("SaveProgressDialog"),
-          [d, h] = l.useState(0),
-          [P, g] = l.useState(null),
-          b = !r;
+        const { closeModal: i, bAutoPublish: r, fnOnSuccess: a } = e,
+          s = (0, t.Ci)(),
+          o = (0, t.Bt)(),
+          c = (0, b.m)("SaveProgressDialog"),
+          [d, P] = l.useState(0),
+          [h, _] = l.useState(null),
+          v = !r;
         return (
           l.useEffect(() => {
             (async () => {
-              const e = Array.from(new Set(a.map((e) => e.packageID)));
-              for (let s = 0; s < e.length; s++) {
-                h(s);
-                const r = e[s],
-                  n = await t(r, b, c);
+              const e = Array.from(new Set(s.map((e) => e.packageID)));
+              for (let i = 0; i < e.length; i++) {
+                P(i);
+                const r = e[i],
+                  n = await o(r, v, c);
                 if (c.token.reason) return;
                 if (1 != n.success)
-                  return void g(
-                    n.msg ?? (0, m.we)("#PricingDashboard_SavePricesError"),
+                  return void _(
+                    n.msg ?? (0, p.we)("#PricingDashboard_SavePricesError"),
                   );
               }
-              h(e.length), i(), s();
+              P(e.length), a(), i();
             })();
           }, []),
           (0, n.jsx)(u.o0, {
-            strTitle: (0, m.we)("#PackageGrid_SaveInProgress"),
-            bAlertDialog: !!P,
-            strOKButtonText: P
-              ? (0, m.we)("#Button_Close")
-              : (0, m.we)("#Button_OK"),
-            onOK: P ? s : i,
+            strTitle: (0, p.we)("#PackageGrid_SaveInProgress"),
+            bAlertDialog: !!h,
+            strOKButtonText: h
+              ? (0, p.we)("#Button_Close")
+              : (0, p.we)("#Button_OK"),
+            onOK: h ? i : a,
             onCancel: () => {
               c.cancel("cancelled by user");
             },
-            closeModal: s,
+            closeModal: i,
             bDestructiveWarning: !0,
             children:
-              P ??
-              (0, n.jsx)(j.t, {
+              h ??
+              (0, n.jsx)(g.t, {
                 position: "center",
-                string: (0, m.we)("#PricingDashboard_Progress", d),
+                string: (0, p.we)("#PricingDashboard_Progress", d),
               }),
           })
         );
       }
     },
-    83800: (e, s, r) => {
+    83800: (e, i, r) => {
       "use strict";
-      r.d(s, { J: () => n });
+      r.d(i, { J: () => n });
       r(7850), r(90626);
       const n = (e) => null;
     },
-    44165: (e, s, r) => {
+    4434: (e, i, r) => {
       "use strict";
-      r.d(s, { HD: () => u, P_: () => h, f1: () => b, sB: () => v });
-      var n = r(34629),
-        i = r(14947),
-        a = r(19367),
-        t = r.n(a),
-        o = r(90626),
-        l = r(4434),
-        c = r(78327);
-      class d {
-        constructor() {
-          (0, i.Gn)(this);
-        }
-        bOpenEventLandingPage = !1;
-        bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
-        get bRequireAllEventsLoadedInTimeBlock() {
-          return !1;
-        }
-        get bIncludeCurators() {
-          return !0;
-        }
-        GetTimeNowWithOverride() {
-          return this.nOverrideDateNow
-            ? this.nOverrideDateNow
-            : Math.floor(Date.now() / 1e3);
-        }
-        GetTimeNowWithOverrideAsDate() {
-          return this.nOverrideDateNow
-            ? new Date(1e3 * this.nOverrideDateNow)
-            : new Date();
-        }
-        BHasTimeOverride() {
-          return Boolean(this.nOverrideDateNow);
-        }
-        ParseDevOverrides(e) {
-          if (!e || 0 == e.length) return;
-          const s = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
-          if (
-            s.has("t") &&
-            ("dev" == c.TS.WEB_UNIVERSE || "beta" == c.TS.WEB_UNIVERSE)
-          ) {
-            const e = s.get("t");
-            let r = /^\d+$/.test(e ?? "")
-              ? t().unix(Number.parseInt(e ?? "0"))
-              : t()(e);
-            (this.nOverrideDateNow = Math.floor(r.unix())),
-              console.log(
-                "CEventCalendarDevFeatures overriding partner event time: " +
-                  this.nOverrideDateNow +
-                  " " +
-                  r.format(),
-              );
-          }
-        }
-      }
-      (0, n.Cg)([i.sH], d.prototype, "nOverrideDateNow", void 0);
-      const u = new d();
-      function h(e = 1) {
-        const [s, r] = o.useState(() => g()),
-          n = (0, l.m)("useTimeNowWithOverride"),
-          i = o.useCallback(() => {
-            n.token.reason || r(g());
-          }, []);
-        return (
-          o.useEffect(() => {
-            const s = 1e3 * e,
-              r = s - (Date.now() % s),
-              n = window.setTimeout(i, r);
-            return () => {
-              window.clearTimeout(n);
-            };
-          }, [s, e, i]),
-          s
-        );
-      }
-      window.g_EventCalendarDevFeatures = u;
-      const P = new Date(),
-        j = Math.floor(P.getTime() / 1e3);
-      function g() {
-        const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - j) : e;
-      }
-      function v() {
-        return u.nOverrideDateNow ?? j;
-      }
-      function b() {
-        return o.useMemo(() => v(), []);
-      }
-    },
-    4434: (e, s, r) => {
-      "use strict";
-      r.d(s, { m: () => t });
+      r.d(i, { m: () => o });
       var n = r(41735),
-        i = r.n(n),
-        a = r(90626);
-      function t(e) {
-        const s = a.useRef(i().CancelToken.source());
+        a = r.n(n),
+        s = r(90626);
+      function o(e) {
+        const i = s.useRef(a().CancelToken.source());
         return (
-          a.useEffect(() => {
-            const r = s.current;
+          s.useEffect(() => {
+            const r = i.current;
             return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
-          s.current
+          i.current
         );
       }
     },

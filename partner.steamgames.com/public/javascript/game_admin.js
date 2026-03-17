@@ -1107,7 +1107,7 @@ function CheckMovieConvertStatus( movieContainer )
 	.done( function( data ) {
 		if ( data.success )
 		{
-			SetMovieConvertState( movieContainer, data.state, data.queue_pos );
+			SetMovieConvertState( movieContainer, data.state, data.queue_pos, data.converted_trailer_path );
 			if ( data.screenshot )
 			{
 				var screenshot = movieContainer.find( '.movie_screenshot' )[0];
@@ -1128,7 +1128,7 @@ function CheckMovieConvertStatus( movieContainer )
 	} );
 }
 
-function SetMovieConvertState( movieContainer, state, queue_pos )
+function SetMovieConvertState( movieContainer, state, queue_pos, convertTrailerPath )
 {
 	var status = movieContainer.find( '.movie_upload_status' )[0];
 	var movieUploadUI = movieContainer.find( '.movie_upload_ui' )[0];
@@ -1136,11 +1136,20 @@ function SetMovieConvertState( movieContainer, state, queue_pos )
 	var movieUploading = movieContainer.find( '.movie_uploading' )[0];
 	var movieUploadedUI = movieContainer.find( '.movie_uploaded_ui' )[0];
 
+	var moviePreview = movieContainer.find( '.movie_preview' )[0];
+	moviePreview.hide();
+
 	var bSchedule = false;
 	if ( state == 'published' )
 	{
 		movieUploadUI.hide();
 		movieUploadedUI.show();
+
+		if ( convertTrailerPath )
+		{
+			moviePreview.setAttribute( 'href', convertTrailerPath );
+			moviePreview.show();
+		}
 	}
 	else if ( state == 'converting' || state == 'publishing' )
 	{

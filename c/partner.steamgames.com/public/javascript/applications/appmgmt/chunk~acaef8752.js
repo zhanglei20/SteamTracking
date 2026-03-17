@@ -159,7 +159,7 @@
           "marketingmessage_art_eventcapsule",
           "marketingmessage_art_2_eventcapsule",
         ],
-        _ = ["spotlight_art"],
+        _ = ["spotlight_art", "spotlight_art_hero"],
         _ = [..._, ..._, ..._, ..._, ..._, ..._, ..._];
       function _(_) {
         return Array.isArray(_) ? _[0] : _;
@@ -394,8 +394,13 @@
             rgAcceptableTypes: _,
           },
           spotlight_art: {
-            width: [306, 374],
-            height: [260, 448],
+            width: 306,
+            height: 260,
+            rgAcceptableTypes: _,
+          },
+          spotlight_art_hero: {
+            width: 374,
+            height: 448,
             rgAcceptableTypes: _,
           },
           old_spotlight_art: {

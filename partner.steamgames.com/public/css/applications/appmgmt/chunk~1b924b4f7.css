@@ -1427,6 +1427,12 @@ div._36qS74l1tXSXwGdyfIFQ-G {
 ._2skmsPR7jCBo5xHN2v_E6A:hover {
   background-color: #d3d3d3;
 }
+.krnfTfrwAOa14We87yU4k.DialogDropDown_Arrow {
+  margin-left: 16px;
+}
+.krnfTfrwAOa14We87yU4k.DialogDropDown_Arrow svg {
+  fill: #fff;
+}
 .CompactMode ._2skmsPR7jCBo5xHN2v_E6A {
   width: 18px;
   padding: 4px 2px;
@@ -1446,20 +1452,21 @@ div._36qS74l1tXSXwGdyfIFQ-G {
   gap: 4px;
 }
 ._1r_b9RJn1Ca6KSjtSm7RPF {
+  font-family: "Motiva Sans", Sans-serif;
   box-sizing: border-box;
   padding: 3px 6px;
   width: 100%;
   text-align: right;
   font-size: 13px;
-  color: #c4c4c4;
+  color: #fff;
   background: #444850;
+  border: none;
+  border-radius: 2px;
 }
 ._1r_b9RJn1Ca6KSjtSm7RPF._3wZdsoh1-V6RQ2rsPkj-ga {
-  color: #000;
   background: #39a5df;
 }
 ._1r_b9RJn1Ca6KSjtSm7RPF._3wZdsoh1-V6RQ2rsPkj-ga:hover {
-  color: #000;
   background: #90d3f7;
 }
 ._1r_b9RJn1Ca6KSjtSm7RPF:hover {

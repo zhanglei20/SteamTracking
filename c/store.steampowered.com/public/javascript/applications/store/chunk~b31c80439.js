@@ -2825,6 +2825,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
         m_elVideo = null;
@@ -3134,7 +3135,7 @@
           let _ = [];
           return (
             _.push({
-              _: "auto",
+              _: _._,
               displayName: "Auto",
               selected: !0,
             }),
@@ -4035,20 +4036,22 @@
             let _ = new _._(this.m_elVideo);
             _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
               (this.m_player = _),
-              this.m_player.PlayMPD(
+              _.PlayMPD(
                 _.m_data.url,
                 _.m_data.hls_url,
                 _.m_strCDNAuthUrlParameters,
               );
-          } else
-            (this.m_player = new _(this.m_elVideo)),
-              this.m_player.PlayWebRTC(
+          } else {
+            let _ = new _(this.m_elVideo);
+            (this.m_player = _),
+              _.PlayWebRTC(
                 this.m_steamIDBroadcast,
                 _.m_ulViewerToken,
                 _.m_data.webrtc_session_id,
                 _.m_data.webrtc_turn_server,
                 _.m_data.webrtc_offer_sdp,
               );
+          }
           this.SetVolume(this.m_nVolume), this.m_player.SetMuted(this.m_bMuted);
           let _ = this.m_player.GetDASHPlayerStats();
           _ &&
@@ -4057,7 +4060,6 @@
               _._.steamid,
               _.m_ulBroadcastID,
               _.m_ulViewerToken,
-              _.m_strCDNAuthUrlParameters,
             ),
             (this.m_BroadcastInfo = _.StartInfo(this.m_steamIDBroadcast));
         }
@@ -4066,7 +4068,7 @@
           let _ = new _._(this.m_elVideo);
           _.SetAlwaysStartWithSubtitles(this.m_bStartWithSubtitles),
             (this.m_player = _),
-            this.m_player.PlayMPD(_.m_data.clip_url),
+            _.PlayMPD(_.m_data.clip_url),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
@@ -4078,7 +4080,7 @@
             _._.logged_in &&
               _.m_nAppIDVOD &&
               _.SetBookmarkAdapter(new _._(_.m_nAppIDVOD)),
-            this.m_player.PlayMPD(_.m_manifestURL),
+            _.PlayMPD(_.m_manifestURL),
             this.SetVolume(this.m_nVolume),
             this.m_player.SetMuted(this.m_bMuted);
         }
@@ -5198,6 +5200,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("TrailerAppVideo"),
         _ = "bGameHighlightAutoplayDisabled",
@@ -5600,7 +5603,7 @@
               checked: __webpack_require__,
               className: _().AutoplayCheckbox,
               style: _,
-              label: (0, _._)("#StoreTrailer_AutoPlayVideos"),
+              label: _._.Localize("#StoreTrailer_AutoPlayVideos"),
               onChange: _,
             },
             _.GetAppID(),

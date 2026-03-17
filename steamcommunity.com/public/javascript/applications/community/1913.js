@@ -4,9 +4,9 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [1913],
   {
-    71913: (e) => {
-      e.exports = JSON.parse(
-        '{"language":"italian","LoginRedirect_Dialog_Title":"Accedi","LoginRedirect_Dialog_Description":"Accedi per aggiungere questo articolo alla tua Lista dei desideri, seguirlo o contrassegnarlo come ignorato. Cliccando su OK tornerai alla pagina di accesso.","Wishlist_NotSignedIn":"Accedi o apri questa pagina nell\'applicazione di Steam per aggiungere alla Lista dei desideri, seguire, acquistare e vedere le raccomandazioni.","Dummy":"dummy"}',
+    71913: (i) => {
+      i.exports = JSON.parse(
+        '{"language":"italian","LoginRedirect_Dialog_Title":"Accedi","LoginRedirect_Dialog_Description":"Accedi per aggiungere questo articolo alla tua Lista dei desideri, seguirlo o contrassegnarlo come ignorato. Cliccando su OK tornerai alla pagina di accesso.","Wishlist_NotSignedIn":"Accedi o apri questa pagina nell\'applicazione di Steam per aggiungere alla Lista dei desideri, seguire o acquistare.","Dummy":"dummy"}',
       );
     },
   },

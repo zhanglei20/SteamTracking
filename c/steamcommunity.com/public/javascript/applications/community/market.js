@@ -526,13 +526,10 @@
         );
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { children: _, ...__webpack_require__ } = _,
-          [_, _] = (0, _._)(),
           _ = _.useRef(null),
-          _ = !(0, _._)(!_, 250),
           _ = _.useCallback(() => `${_}px`, []),
           _ = _.useCallback((_) => {
             const _ = _.current;
@@ -546,15 +543,22 @@
           }, []),
           _ = (0, _._)("wheel", _, {
             passive: !1,
-          });
+          }),
+          [_, _] = _.useState(!1);
         return (0, _.jsxs)(_._.Root, {
-          open: _ && _,
+          open: _,
+          onOpenChange: _,
           width: _,
           placement: "right",
+          interactions: {
+            hover: (_) => ({
+              ..._,
+              delay: 250,
+            }),
+          },
           children: [
             (0, _.jsx)(_._.Anchor, {
               children: _.cloneElement(_, {
-                ..._,
                 ref: _,
               }),
             }),
@@ -1097,6 +1101,8 @@
       function _() {
         return _.useContext(_).bInteractable;
       }
+      var _,
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { action: _ } = _,
           _ = _();
@@ -1319,7 +1325,6 @@
           children: _.name,
         });
       }
-      var _;
       !(function (_) {
         (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
           (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -1379,7 +1384,7 @@
             hashName: _,
             bCanInteract: _,
             bItemSealed: _,
-            ulAssetID: _,
+            assetid: _,
           } = _,
           { data: _, isLoading: _ } =
             ((_ = _),
@@ -1418,7 +1423,7 @@
                 direction: "column",
                 children: (0, _.jsx)(_._, {
                   color: "dull",
-                  href: `${_._.COMMUNITY_BASE_URL}market/listings/${__webpack_require__}/${encodeURIComponent(_)}?sellorderassetid=${_}`,
+                  href: `${_._.COMMUNITY_BASE_URL}market/listings/${__webpack_require__}/${encodeURIComponent(_)}${_ ? `?sellorderassetid=${_}` : ""}`,
                   size: "1",
                   children: _("#SellOnMarket_ViewListing"),
                 }),
@@ -2115,7 +2120,6 @@
                   );
               }
             })(_._.country_code),
-            _ = _.assetid,
             _ = !!_.sealed && 1 == _.sealed_type;
           if (!_.marketable && 1 != _.sealed_type) return null;
           const _ = _.market_hash_name || _.market_name || _.name;
@@ -2126,7 +2130,7 @@
                 hashName: _,
                 bCanInteract: _,
                 bItemSealed: _,
-                ulAssetID: _,
+                assetid: null == _ ? void 0 : _.assetid,
               })
             : null;
         },
@@ -2761,6 +2765,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
@@ -2825,6 +2830,7 @@
                 open: _,
                 onOpenChange: __webpack_require__,
                 placement: _,
+                interactions: _ = {},
               } = _;
               let _ = _;
               0;
@@ -2835,11 +2841,24 @@
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
                 }),
-                _ = (0, _._)(_.context),
                 _ = (0, _._)(_.context, {
-                  keyboardHandlers: !_,
+                  enabled: !!_.click,
                 }),
+                _ = (0, _._)(_.context, {
+                  enabled: !!_.focus,
+                }),
+                _ = {
+                  handleClose: (0, _._)(),
+                },
+                _ = "function" == typeof _.hover ? _.hover(_) : _,
+                _ = (0, _._)(_.context, {
+                  enabled: !!_.hover,
+                  ..._,
+                }),
+                _ = (0, _._)(_.context),
                 { getFloatingProps: _, getReferenceProps: _ } = (0, _._)([
+                  _,
+                  _,
                   _,
                   _,
                 ]);
@@ -2874,7 +2893,8 @@
         Positioner: function (_) {
           const { children: _, className: __webpack_require__, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
+            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]),
+            _ = (0, _._)();
           if (!_)
             return (
               console.error(
@@ -2883,12 +2903,21 @@
               null
             );
           if (!_.open) return null;
-          const _ = _.Children.only(_);
-          return (0, _.cloneElement)(_, {
-            ref: _,
-            style: _.floating.floatingStyles,
-            className: __webpack_require__,
-            ..._.getFloatingProps(),
+          const _ = _.Children.only(_),
+            _ = (0, _.cloneElement)(_, {
+              ref: _,
+              style: _.floating.floatingStyles,
+              className: __webpack_require__,
+              ..._.getFloatingProps(),
+            });
+          return (0, _.jsx)(_._, {
+            root: null == _ ? void 0 : _.targetElement,
+            children: (0, _.jsx)(_._, {
+              context: _.floating.context,
+              initialFocus: -1,
+              returnFocus: !1,
+              children: _,
+            }),
           });
         },
       };
@@ -3468,7 +3497,8 @@
           },
         },
       );
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
         const {
@@ -3572,22 +3602,26 @@
         _ = function (_) {
           const { children: _, render: __webpack_require__, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]);
+            _ = (0, _._)([_, null == _ ? void 0 : _.floating.refs.setFloating]),
+            _ = (0, _._)();
           return _
             ? _.open
               ? (0, _.jsx)(_._, {
-                  context: _.floating.context,
-                  initialFocus: _.initialFocus,
-                  returnFocus: !1,
-                  children: (0, _.jsx)(_, {
-                    ref: _,
-                    style: _.floating.floatingStyles,
-                    ..._.getFloatingProps(),
-                    render: __webpack_require__,
-                    children: (0, _.jsx)(_._, {
-                      elementsRef: _.elementsRef,
-                      labelsRef: _.labelsRef,
-                      children: _,
+                  root: null == _ ? void 0 : _.targetElement,
+                  children: (0, _.jsx)(_._, {
+                    context: _.floating.context,
+                    initialFocus: _.initialFocus,
+                    returnFocus: !1,
+                    children: (0, _.jsx)(_, {
+                      ref: _,
+                      style: _.floating.floatingStyles,
+                      ..._.getFloatingProps(),
+                      render: __webpack_require__,
+                      children: (0, _.jsx)(_._, {
+                        elementsRef: _.elementsRef,
+                        labelsRef: _.labelsRef,
+                        children: _,
+                      }),
                     }),
                   }),
                 })
@@ -4116,13 +4150,18 @@
               refPopover: _,
               refScrollElement: _,
             } = _("<ComboboxVirtualizedOptions>"),
-            _ = (0, _._)({
-              count: _ && _.current ? _.length : 0,
-              getScrollElement: () => _.current,
-              enabled: _,
-              measureElement: _._,
-              ..._,
-            });
+            [_, _] = (0, _.useState)(!1),
+            _ = _ && !!_.current && !!_.current;
+          (0, _.useEffect)(() => {
+            _ !== _ && _(_);
+          }, [_, _]);
+          const _ = (0, _._)({
+            count: _ ? _.length : Math.min(_.length, 3),
+            getScrollElement: () => _.current,
+            enabled: _,
+            measureElement: _._,
+            ..._,
+          });
           return (0, _.jsx)(_, {
             children: (0, _.jsx)(_, {
               value: _,
@@ -5838,6 +5877,70 @@
       function _(_, _, _) {
         return ((_ - _) / (_ - _)) * 100;
       }
+      function _(_) {
+        const {
+            value: _,
+            onValueChange: __webpack_require__,
+            valueToString: _,
+            valueFromString: _,
+            checkValidText: _,
+            onBlur: _,
+            ..._
+          } = _,
+          [_, _] = (0, _.useState)(null),
+          _ = null != _ ? _ : void 0 === _ ? "" : _(_);
+        return (0, _.jsx)(_, {
+          value: _,
+          onTextChange: (_) => {
+            const _ = _(_);
+            null !== _ && _ === _(_)
+              ? (_(null), __webpack_require__(_))
+              : (_ && !_(_, _)) || _(_);
+          },
+          onBlur: (_) => {
+            if (null !== _) {
+              const _ = _(_);
+              null !== _ && __webpack_require__(_), _(null);
+            }
+            _ && _(_);
+          },
+          ..._,
+        });
+      }
+      function _(_) {
+        const { defaultValue: _ = 0, currency: __webpack_require__, ..._ } = _;
+        return (0, _.jsx)(_, {
+          valueToString: (_) =>
+            (function (_, _) {
+              return void 0 === _
+                ? ""
+                : _ === 1 / 0
+                  ? _
+                  : _
+                    ? Math.round(_ / 100).toString()
+                    : (_ / 100).toFixed(2);
+            })(_, __webpack_require__.bWholeUnitsOnly),
+          valueFromString: (_) =>
+            (function (_, _, _) {
+              return _ === _
+                ? 1 / 0
+                : "" === _
+                  ? _
+                  : _
+                    ? 100 * parseInt(_)
+                    : Math.round(100 * parseFloat(_));
+            })(_, _, __webpack_require__.bWholeUnitsOnly),
+          checkValidText: (_, _) => !_ || (null !== _ && !isNaN(_)),
+          beforeContent: __webpack_require__.bSuffixSymbol
+            ? void 0
+            : __webpack_require__.strSymbol,
+          afterContent: __webpack_require__.bSuffixSymbol
+            ? __webpack_require__.strSymbol
+            : void 0,
+          ..._,
+        });
+      }
+      const _ = "∞";
       const _ = (0, _.createContext)(null);
       function _(_) {
         const { state: _, onStateChange: __webpack_require__ } = _;
@@ -5944,7 +6047,7 @@
                       (0, _.jsx)(_, {
                         currency: _,
                         value: _,
-                        onChange: _(0),
+                        onValueChange: _(0),
                         placeholder: _.Localize(
                           "#AdvancedSearch_MinPricePlaceholder",
                         ),
@@ -5957,7 +6060,7 @@
                       (0, _.jsx)(_, {
                         currency: _,
                         value: _,
-                        onChange: _(1),
+                        onValueChange: _(1),
                         placeholder: _.Localize(
                           "#AdvancedSearch_MaxPricePlaceholder",
                         ),
@@ -5974,53 +6077,13 @@
         );
       }
       function _(_) {
-        const {
-            value: _,
-            onChange: __webpack_require__,
-            placeholder: _,
-            currency: _,
-            defaultValue: _ = 0,
-          } = _,
-          [_, _] = (0, _.useState)(null),
-          _ = null != _ ? _ : _(_, _.bWholeUnitsOnly);
         return (0, _.jsx)(_._, {
           flexGrow: "1",
           children: (0, _.jsx)(_, {
             variant: "inset-focus",
-            value: _,
-            onTextChange: (_) => {
-              const _ = _(_, _.bWholeUnitsOnly);
-              _ === _(_, _.bWholeUnitsOnly)
-                ? (null !== _ && _(null), __webpack_require__(_))
-                : ("" !== _ && isNaN(_(_, _.bWholeUnitsOnly))) || _(_);
-            },
-            onBlur: () => {
-              _
-                ? (__webpack_require__(_(_, _.bWholeUnitsOnly)), _(null))
-                : "" === _ && (__webpack_require__(_), _(null));
-            },
-            beforeContent: _.bSuffixSymbol ? void 0 : _.strSymbol,
-            afterContent: _.bSuffixSymbol ? _.strSymbol : void 0,
-            placeholder: _,
+            ..._,
           }),
         });
-      }
-      const _ = "∞";
-      function _(_, _) {
-        return void 0 === _
-          ? ""
-          : _ === 1 / 0
-            ? _
-            : _
-              ? Math.round(_ / 100).toString()
-              : (_ / 100).toFixed(2);
-      }
-      function _(_, _) {
-        return _ === _
-          ? 1 / 0
-          : _
-            ? 100 * parseInt(_)
-            : Math.round(100 * parseFloat(_));
       }
       const _ = 3;
       function _(_, _) {
@@ -9683,7 +9746,7 @@
           });
         const _ = (function (_) {
           return (function (_) {
-            return 2 === _._.EUNIVERSE ? 730 === _ || 710 === _ : 730 === _;
+            return 2 === _._.EUNIVERSE ? 710 === _ : 730 === _;
           })(_) && 1 === _._.EUNIVERSE
             ? _
             : _;

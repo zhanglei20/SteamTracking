@@ -2312,6 +2312,10 @@
             return (0, _._)("#Library_DeviceType_PC");
           case 544:
             return (0, _._)("#Library_DeviceType_SteamDeck");
+          case 546:
+            return (0, _._)("#Library_DeviceType_SteamMachine");
+          case 5001:
+            return (0, _._)("#Library_DeviceType_SteamFrame");
           default:
             return;
         }
@@ -2670,8 +2674,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2685,7 +2689,7 @@
             bHideReleaseDate: _,
             bHideIfDemo: _,
           } = _,
-          _ = (0, _._)(),
+          _ = _._.NOW,
           { data: _ } = (0, _._)(__webpack_require__),
           { data: _ } = (0, _._)(__webpack_require__),
           { data: _ } = (0, _._)(__webpack_require__);
@@ -3604,6 +3608,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3632,14 +3637,17 @@
         const { data: _ } = _();
         return void 0 === _ ? void 0 : _.has(_);
       }
-      function _() {
+      function _(_) {
         const _ = (0, _._)(),
           _ = _._.accountid;
-        return (_) => {
-          _.setQueryData(_(_), (_) => {
-            if (_) return new Set([..._.values(), ..._]);
-          });
-        };
+        return _.useCallback(
+          (_) => {
+            _.setQueryData(_(_), (_) =>
+              _ ? new Set([..._.values(), ..._]) : _ ? new Set(_) : void 0,
+            );
+          },
+          [_, _, _],
+        );
       }
       function _(_) {
         return ["AccountOwnedApps", _ ?? 0];
@@ -7294,6 +7302,7 @@
             classNameCtn: _().CompatibilityTabs,
             classNameTabContent: _().CompatibilityTabContent,
             startingTab: _ ? "steamos" : "steamdeck",
+            preferredFocus: !0,
           });
         }
         return (0, _.jsx)(_, {
@@ -7639,6 +7648,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -7675,8 +7685,10 @@
         render() {
           const _ = this.props.tabs.filter((_) => !_.hidden);
           if (!_.length) return null;
-          const _ = _.find((_) => _.key === this.state.activeTab) || _[0];
-          let _ = this.props.preferredFocus;
+          const _ = _.find((_) => _.key === this.state.activeTab) || _[0],
+            _ = this.props.preferredFocus
+              ? (this.props.startingTab ?? _[0].key)
+              : void 0;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -7684,6 +7696,9 @@
                   _().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
+                navEntryPreferPosition: this.props.preferredFocus
+                  ? _._.PREFERRED_CHILD
+                  : _._.FIRST,
                 children: _.map((_, _) =>
                   (0, _.jsx)(
                     _,
@@ -7692,7 +7707,7 @@
                       OnTabClick: this.OnTabClick,
                       classNameTab: this.props.classNameTab,
                       active: _.key === _.key,
-                      preferredFocus: _ && 0 == _,
+                      preferredFocus: _ === _.key,
                     },
                     _.key,
                   ),

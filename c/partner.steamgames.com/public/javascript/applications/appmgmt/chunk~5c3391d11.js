@@ -2492,6 +2492,7 @@
             classNameCtn: _().CompatibilityTabs,
             classNameTabContent: _().CompatibilityTabContent,
             startingTab: _ ? "steamos" : "steamdeck",
+            preferredFocus: !0,
           });
         }
         return (0, _.jsx)(_, {
@@ -2838,6 +2839,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ extends _.Component {
         state = {
@@ -2874,8 +2876,10 @@
         render() {
           const _ = this.props.tabs.filter((_) => !_.hidden);
           if (!_.length) return null;
-          const _ = _.find((_) => _.key === this.state.activeTab) || _[0];
-          let _ = this.props.preferredFocus;
+          const _ = _.find((_) => _.key === this.state.activeTab) || _[0],
+            _ = this.props.preferredFocus
+              ? (this.props.startingTab ?? _[0].key)
+              : void 0;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -2883,6 +2887,9 @@
                   _().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
+                navEntryPreferPosition: this.props.preferredFocus
+                  ? _._.PREFERRED_CHILD
+                  : _._.FIRST,
                 children: _.map((_, _) =>
                   (0, _.jsx)(
                     _,
@@ -2891,7 +2898,7 @@
                       OnTabClick: this.OnTabClick,
                       classNameTab: this.props.classNameTab,
                       active: _.key === _.key,
-                      preferredFocus: _ && 0 == _,
+                      preferredFocus: _ === _.key,
                     },
                     _.key,
                   ),

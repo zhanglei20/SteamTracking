@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "转为免费游戏吗？",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "如果您的游戏已发行，但您想将其从付费转为免费，请点击%1$s，了解更多信息并请求协助。",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "此处",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "打开包含一组常用价格等级的对话框，以便在以下所有币种中设置这些价格等级。",
 	"empty_no_trailing_comma": ""
 }`);
     },

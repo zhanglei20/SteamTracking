@@ -32,15 +32,15 @@
         Subtitle: "_3Bvm26qCLKO-h1yHVlFGsS",
       };
     },
-    57876: (e, t, n) => {
+    57876: (e, t, r) => {
       "use strict";
-      n.d(t, { Xh: () => u, cU: () => c, tf: () => o, wl: () => d });
-      var r = n(22837),
-        s = n(30894),
-        i = n(16021),
-        l = n(62792),
-        a = n(78327);
-      const u = {
+      r.d(t, { Xh: () => i, cU: () => o, tf: () => u, wl: () => c });
+      var n = r(22837),
+        s = r(30894),
+        a = r(16021),
+        l = r(62792),
+        d = r(78327);
+      const i = {
         include_assets: !0,
         include_release: !0,
         include_platforms: !0,
@@ -51,7 +51,7 @@
         include_screenshots: !0,
         include_supported_languages: !0,
       };
-      class c {
+      class o {
         m_setAlreadyAdded = new Set();
         Reset() {
           this.m_setAlreadyAdded = new Set();
@@ -85,69 +85,69 @@
           }
         }
       }
-      const d = 4;
-      function o(e, t, n, r, s, a) {
-        const u = new Array(),
-          c = new Array(),
+      const c = 4;
+      function u(e, t, r, n, s, d) {
+        const i = new Array(),
           o = new Array(),
+          u = new Array(),
           p = new Array();
-        if (!e || 0 == e.length) return u;
+        if (!e || 0 == e.length) return i;
         const m = [
           l.by.k_RejectSupportedLanguage,
           l.by.k_RejectAlreadyDisplayed,
           l.by.k_RejectNoTrailer,
         ];
-        for (let a of e) {
-          let e = a.id,
-            d = l.by.k_NotRejected;
-          switch (a.item_type) {
+        for (let d of e) {
+          let e = d.id,
+            c = l.by.k_NotRejected;
+          switch (d.item_type) {
             case "sub":
-              const s = i.A.Get().GetPackage(e);
+              const s = a.A.Get().GetPackage(e);
               if (1 !== s?.GetIncludedAppIDs()?.length) {
-                d = h(e, t, r, !0);
+                c = h(e, t, n, !0);
                 break;
               }
               e = s.GetIncludedAppIDs()[0];
             case "app":
-              d = y(e, t, n, r, !0);
+              c = y(e, t, r, n, !0);
               break;
             case "bundle":
-              d = I(e, t, r, !0);
+              c = B(e, t, n, !0);
           }
           if (
-            (d == l.by.k_NotRejected
-              ? ((a.rejected = l.by.k_NotRejected),
-                u.push({ ...a, priority: 1 }))
-              : m.includes(d)
-                ? ((a.rejected = l.by.k_NotRejected), c.push(a))
-                : ((a.rejected = d),
-                  d == l.by.k_RejectIgnoredGame ? o.push(a) : p.push(a)),
-            u.length > s)
+            (c == l.by.k_NotRejected
+              ? ((d.rejected = l.by.k_NotRejected),
+                i.push({ ...d, priority: 1 }))
+              : m.includes(c)
+                ? ((d.rejected = l.by.k_NotRejected), o.push(d))
+                : ((d.rejected = c),
+                  c == l.by.k_RejectIgnoredGame ? u.push(d) : p.push(d)),
+            i.length > s)
           )
             break;
         }
         return (
-          u.length < s &&
-            (_(u, c, a, 2),
-            u.length < a &&
+          i.length < s &&
+            (_(i, o, d, 2),
+            i.length < d &&
               t.enforce_minimum &&
-              (_(u, o, a, 3), _(u, p, a, d))),
-          u
+              (_(i, u, d, 3), _(i, p, d, c))),
+          i
         );
       }
-      function _(e, t, n, r) {
-        for (let s = 0; e.length < n && s < t.length; ++s)
-          e.push({ ...t[s], priority: r });
+      function _(e, t, r, n) {
+        for (let s = 0; e.length < r && s < t.length; ++s)
+          e.push({ ...t[s], priority: n });
       }
       function p(e, t) {
-        const n = s.Fm.Get();
-        if (t.only_current_platform && n.BHasPlatformPreferenceSet()) {
+        const r = s.Fm.Get();
+        if (t.only_current_platform && r.BHasPlatformPreferenceSet()) {
           if (
             !(
-              (e.GetPlatforms()?.windows && n.BIsPreferredPlatform("win")) ||
-              (e.GetPlatforms()?.mac && n.BIsPreferredPlatform("mac")) ||
+              (e.GetPlatforms()?.windows && r.BIsPreferredPlatform("win")) ||
+              (e.GetPlatforms()?.mac && r.BIsPreferredPlatform("mac")) ||
               (e.GetPlatforms()?.steamos_linux &&
-                n.BIsPreferredPlatform("linux"))
+                r.BIsPreferredPlatform("linux"))
             )
           )
             return l.by.k_RejectWrongPlatform;
@@ -156,437 +156,241 @@
           ? l.by.k_RejectNoComingSoon
           : !t.virtual_reality && e.GetPlatforms()?.vr_support.vrhmd_only
             ? l.by.k_RejectNoVR
-            : e.GetAllCreatorClanIDs()?.some((e) => n.BIsIgnoringCurator(e))
+            : e.GetAllCreatorClanIDs()?.some((e) => r.BIsIgnoringCurator(e))
               ? l.by.k_RejectCreatorClan
               : l.by.k_NotRejected;
       }
       function m(e, t) {
         if (t.localized) {
-          const t = (0, r.sf)(a.TS.LANGUAGE);
+          const t = (0, n.sf)(d.TS.LANGUAGE);
           if (!e.GetAllLanguagesWithSomeSupport()?.includes(t))
             return l.by.k_RejectSupportedLanguage;
         }
         return l.by.k_NotRejected;
       }
-      function y(e, t, n, r, a) {
-        const u = i.A.Get().GetApp(e);
-        if (!u) return l.by.k_RejectNotLoaded;
-        const c = p(u, t);
-        if (c != l.by.k_NotRejected) return c;
-        const d = s.Fm.Get();
-        if (d.BIsGameIgnored(e)) return l.by.k_RejectIgnoredGame;
-        if (d.BExcludeTagIDs(u.GetTagIDs())) return l.by.k_RejectIgnoreGameTags;
-        if (d.BExcludesContentDescriptor(u.GetContentDescriptorIDs()))
+      function y(e, t, r, n, d) {
+        const i = a.A.Get().GetApp(e);
+        if (!i) return l.by.k_RejectNotLoaded;
+        const o = p(i, t);
+        if (o != l.by.k_NotRejected) return o;
+        const c = s.Fm.Get();
+        if (c.BIsGameIgnored(e)) return l.by.k_RejectIgnoredGame;
+        if (c.BExcludeTagIDs(i.GetTagIDs())) return l.by.k_RejectIgnoreGameTags;
+        if (c.BExcludesContentDescriptor(i.GetContentDescriptorIDs()))
           return l.by.k_RejectIgnoreContentDescriptors;
-        if (!t.early_access && u.BIsEarlyAccess())
+        if (!t.early_access && i.BIsEarlyAccess())
           return l.by.k_RejectEarlyAccess;
-        const o = u.GetAppType();
-        return t.software || 6 != o
-          ? t.games_already_in_library && d.BIsGameOwned(e)
+        const u = i.GetAppType();
+        return t.software || 6 != u
+          ? t.games_already_in_library && c.BIsGameOwned(e)
             ? l.by.k_RejectInLibrary
-            : t.games_not_in_library && !d.BIsGameOwned(e)
+            : t.games_not_in_library && !c.BIsGameOwned(e)
               ? l.by.k_RejectNotInLibrary
-              : !t.video && [7, 8, 9].includes(o)
+              : !t.video && [7, 8, 9].includes(u)
                 ? l.by.k_RejectVideo
-                : t.has_discount && !u.GetBestPurchaseOption().discount_pct
+                : t.has_discount && !i.GetBestPurchaseOption().discount_pct
                   ? l.by.k_RejectNoDiscount
-                  : "adultonly" != n &&
+                  : "adultonly" != r &&
                       t.no_ao_content &&
-                      (u.HasContentDescriptorID(3) ||
-                        u.HasContentDescriptorID(4))
+                      (i.HasContentDescriptorID(3) ||
+                        i.HasContentDescriptorID(4))
                     ? l.by.k_RejectAO
-                    : 1 == o &&
+                    : 1 == u &&
                         t.games_already_in_library &&
-                        d.BIsGameOwned(u.GetParentAppID())
+                        c.BIsGameOwned(i.GetParentAppID())
                       ? l.by.k_RejectInLibrary
-                      : a
-                        ? (1 == o && r.BHasAppID(u.GetParentAppID())) ||
-                          r.BHasAppID(e)
+                      : d
+                        ? (1 == u && n.BHasAppID(i.GetParentAppID())) ||
+                          n.BHasAppID(e)
                           ? l.by.k_RejectAlreadyDisplayed
-                          : t.has_trailer && !u.BHasTrailers(!1)
+                          : t.has_trailer && !i.BHasTrailers(!1)
                             ? l.by.k_RejectNoTrailer
-                            : m(u, t)
+                            : m(i, t)
                         : l.by.k_NotRejected
           : l.by.k_RejectSoftware;
       }
       function b(e, t) {
-        const n = s.Fm.Get();
-        let r = !1;
+        const r = s.Fm.Get();
+        let n = !1;
         for (let t of e) {
-          if (n.BIsGameIgnored(t)) return l.by.k_RejectIgnoredGame;
-          n.BIsGameOwned(t) && (r = !0);
+          if (r.BIsGameIgnored(t)) return l.by.k_RejectIgnoredGame;
+          r.BIsGameOwned(t) && (n = !0);
         }
-        return t.games_not_in_library && r
+        return t.games_not_in_library && n
           ? l.by.k_RejectInLibrary
-          : t.games_not_in_library && !r
+          : t.games_not_in_library && !n
             ? l.by.k_RejectNotInLibrary
             : l.by.k_NotRejected;
       }
-      function h(e, t, n, r) {
-        const a = i.A.Get().GetPackage(e);
-        if (!a) return l.by.k_RejectNotLoaded;
-        const u = p(a, t);
-        if (u != l.by.k_NotRejected) return u;
-        const c = b(a.GetIncludedAppIDs(), t);
-        if (c != l.by.k_NotRejected) return c;
-        const d = s.Fm.Get();
-        return t.games_already_in_library && d.BOwnsPackage(e)
+      function h(e, t, r, n) {
+        const d = a.A.Get().GetPackage(e);
+        if (!d) return l.by.k_RejectNotLoaded;
+        const i = p(d, t);
+        if (i != l.by.k_NotRejected) return i;
+        const o = b(d.GetIncludedAppIDs(), t);
+        if (o != l.by.k_NotRejected) return o;
+        const c = s.Fm.Get();
+        return t.games_already_in_library && c.BOwnsPackage(e)
           ? l.by.k_RejectInLibrary
-          : d.BIsPackageIgnored(e)
+          : c.BIsPackageIgnored(e)
             ? l.by.k_RejectIgnoredGame
-            : r
-              ? n.BHasPackageID(e)
+            : n
+              ? r.BHasPackageID(e)
                 ? l.by.k_RejectAlreadyDisplayed
-                : m(a, t)
+                : m(d, t)
               : l.by.k_NotRejected;
       }
-      function I(e, t, n, r) {
-        const s = i.A.Get().GetBundle(e);
+      function B(e, t, r, n) {
+        const s = a.A.Get().GetBundle(e);
         if (!s) return l.by.k_RejectNotLoaded;
-        const a = p(s, t);
-        if (a != l.by.k_NotRejected) return a;
-        const u = b(s.GetIncludedAppIDs(), t);
-        return u != l.by.k_NotRejected
-          ? u
-          : r
-            ? n.BHasBundleID(e)
+        const d = p(s, t);
+        if (d != l.by.k_NotRejected) return d;
+        const i = b(s.GetIncludedAppIDs(), t);
+        return i != l.by.k_NotRejected
+          ? i
+          : n
+            ? r.BHasBundleID(e)
               ? l.by.k_RejectAlreadyDisplayed
               : m(s, t)
             : l.by.k_NotRejected;
       }
     },
-    55263: (e, t, n) => {
+    54847: (e, t, r) => {
       "use strict";
-      n.d(t, {
-        G6: () => u,
-        Gg: () => o,
-        MS: () => y,
-        Ow: () => d,
-        YM: () => b,
-        mZ: () => _,
-        t7: () => c,
-        zX: () => m,
-      });
-      var r = n(41735),
-        s = n.n(r),
-        i = n(90626),
-        l = n(84933),
-        a = n(16021);
-      function u(e, t, n, r) {
-        const u = (0, i.useRef)(void 0),
-          c = (0, i.useRef)(void 0),
-          d = (0, l.CH)();
-        u.current = e;
-        const [o, _] = (0, i.useState)(void 0),
-          {
-            include_assets: p,
-            include_release: m,
-            include_platforms: y,
-            include_all_purchase_options: b,
-            include_screenshots: h,
-            include_trailers: I,
-            include_ratings: f,
-            include_tag_count: g,
-            include_reviews: B,
-            include_basic_info: S,
-            include_supported_languages: j,
-            include_full_description: G,
-            include_included_items: k,
-            include_assets_without_overrides: A,
-            apply_user_filters: v,
-            include_links: R,
-          } = n;
-        if (
-          ((0, i.useEffect)(() => {
-            const n = {
-              include_assets: p,
-              include_release: m,
-              include_platforms: y,
-              include_all_purchase_options: b,
-              include_screenshots: h,
-              include_trailers: I,
-              include_ratings: f,
-              include_tag_count: g,
-              include_reviews: B,
-              include_basic_info: S,
-              include_supported_languages: j,
-              include_full_description: G,
-              include_included_items: k,
-              include_assets_without_overrides: A,
-              apply_user_filters: v,
-              include_links: R,
-            };
-            let i = null;
-            return (
-              !e ||
-                e < 0 ||
-                a.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== o && r && r == c.current) ||
-                (r !== c.current && (_(void 0), (c.current = r)),
-                (i = s().CancelToken.source()),
-                a.A.Get()
-                  .QueueStoreItemRequest(e, t, n)
-                  .then((t) => {
-                    i?.token.reason || u.current !== e || _(1 == t), d();
-                  })),
-              () => i?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [e, t, r, o, p, m, y, b, h, I, f, g, B, S, j, G, k, A, v, R, d]),
-          !e)
-        )
-          return [null, 2];
-        if (!1 === o) return [void 0, 2];
-        if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!a.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const w = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return w ? [w, 3] : [null, 2];
-      }
-      function c(e, t, n) {
-        return u(e, 0, t, n);
-      }
-      function d(e, t, n) {
-        return u(e, 2, t, n);
-      }
-      function o(e, t, n) {
-        return u(e, 1, t, n);
-      }
-      function _(e, t, n) {
-        const [r, s] = u(e, t, n);
-        let i;
-        1 != r?.GetStoreItemType() ||
-          r.GetAssets()?.GetHeaderURL() ||
-          1 != r?.GetIncludedAppIDs().length ||
-          (i = r.GetIncludedAppIDs()[0]);
-        const [l, a] = c(i, n);
-        return i && l?.BIsVisible() ? [l, a] : [r, s];
-      }
-      function p(e, t, n, r) {
-        const u = (0, l.CH)(),
-          {
-            include_assets: c,
-            include_release: d,
-            include_platforms: o,
-            include_all_purchase_options: _,
-            include_screenshots: p,
-            include_trailers: m,
-            include_ratings: y,
-            include_tag_count: b,
-            include_reviews: h,
-            include_basic_info: I,
-            include_supported_languages: f,
-            include_full_description: g,
-            include_included_items: B,
-            include_assets_without_overrides: S,
-            apply_user_filters: j,
-            include_links: G,
-          } = n;
-        if (
-          ((0, i.useEffect)(() => {
-            if (!e || 0 == e.length) return;
-            const n = {
-                include_assets: c,
-                include_release: d,
-                include_platforms: o,
-                include_all_purchase_options: _,
-                include_screenshots: p,
-                include_trailers: m,
-                include_ratings: y,
-                include_tag_count: b,
-                include_reviews: h,
-                include_basic_info: I,
-                include_supported_languages: f,
-                include_full_description: g,
-                include_included_items: B,
-                include_assets_without_overrides: S,
-                apply_user_filters: j,
-                include_links: G,
-              },
-              r = e.filter(
-                (e) =>
-                  !(
-                    a.A.Get().BHasStoreItem(e, t, n) ||
-                    a.A.Get().BIsStoreItemMissing(e, t)
-                  ),
-              );
-            if (0 == r.length) return;
-            const i = s().CancelToken.source(),
-              l = r.map((e) => a.A.Get().QueueStoreItemRequest(e, t, n));
-            return (
-              Promise.all(l).then(() => {
-                i.token.reason || u();
-              }),
-              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [e, t, r, u, c, d, o, _, p, m, y, b, h, I, f, g, B, S, j, G]),
-          !e)
-        )
-          return 2;
-        if (
-          !e.every(
-            (e) =>
-              a.A.Get().BHasStoreItem(e, t, n) ||
-              a.A.Get().BIsStoreItemMissing(e, t),
-          )
-        )
-          return 1;
-        return e.every((e) =>
-          a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
-        )
-          ? 3
-          : 2;
-      }
-      function m(e, t, n) {
-        return p(e, 0, t, n);
-      }
-      function y(e, t, n) {
-        return p(e, 2, t, n);
-      }
-      function b() {
-        i.useEffect(
-          () => (
-            a.A.Get().SetReturnUnavailableItems(!0),
-            () => a.A.Get().SetReturnUnavailableItems(!1)
-          ),
-          [],
-        );
-      }
-    },
-    54847: (e, t, n) => {
-      "use strict";
-      n.d(t, { p: () => c });
-      var r = n(7850),
-        s = n(39777),
-        i = n(35380),
-        l = n(41399),
-        a = n(18654),
-        u = n.n(a);
-      function c(e) {
-        const { id: t, type: n } = e,
-          a = (0, i.rt)({ id: t, type: n }),
-          { data: c } = (0, s.J$)(a);
-        return (0, r.jsx)("div", {
-          className: u().SaleItemBrowserRow,
-          children: (0, r.jsx)(l.p, {
+      r.d(t, { p: () => o });
+      var n = r(7850),
+        s = r(39777),
+        a = r(35380),
+        l = r(41399),
+        d = r(18654),
+        i = r.n(d);
+      function o(e) {
+        const { id: t, type: r } = e,
+          d = (0, a.rt)({ id: t, type: r }),
+          { data: o } = (0, s.J$)(d);
+        return (0, n.jsx)("div", {
+          className: i().SaleItemBrowserRow,
+          children: (0, n.jsx)(l.p, {
             ...e,
             bShowReviewSummary: !0,
-            bShowDemoButton: e.bShowDemoButton || 1 == c?.type,
+            bShowDemoButton: e.bShowDemoButton || 1 == o?.type,
             bPreferDemoStorePage: e.bPreferDemoStorePage,
           }),
         });
       }
     },
-    93135: (e, t, n) => {
+    93135: (e, t, r) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => P });
-      var r = n(7850),
-        s = n(39777),
-        i = n(15631),
-        l = n.n(i),
-        a = n(42834);
-      function u(e) {
+      r.r(t), r.d(t, { default: () => P });
+      var n = r(7850),
+        s = r(39777),
+        a = r(15631),
+        l = r.n(a),
+        d = r(42834);
+      function i(e) {
         const { id: t } = e,
-          { data: n } = (0, s.J$)(t),
-          { data: i } = (0, s.lv)(t);
-        if (!i || !n) return null;
-        const u =
-          (0, a.b0)(i, "library_hero_2x") ??
-          (0, a.b0)(i, "library_hero") ??
-          (0, a.b0)(i, "raw_page_background");
-        return u
-          ? (0, r.jsxs)(r.Fragment, {
+          { data: r } = (0, s.J$)(t),
+          { data: a } = (0, s.lv)(t);
+        if (!a || !r) return null;
+        const i =
+          (0, d.b0)(a, "library_hero_2x") ??
+          (0, d.b0)(a, "library_hero") ??
+          (0, d.b0)(a, "raw_page_background");
+        return i
+          ? (0, n.jsxs)(n.Fragment, {
               children: [
-                (0, r.jsx)("div", {
+                (0, n.jsx)("div", {
                   className: l().BackgroundImageCtn,
-                  children: (0, r.jsx)("img", { src: u, alt: n.name }),
+                  children: (0, n.jsx)("img", { src: i, alt: r.name }),
                 }),
-                (0, r.jsx)("div", {
+                (0, n.jsx)("div", {
                   className: l().BackgroundImageBlurCtn,
-                  children: (0, r.jsx)("img", { src: u, alt: n.name }),
+                  children: (0, n.jsx)("img", { src: i, alt: r.name }),
                 }),
               ],
             })
           : null;
       }
-      var c = n(35380),
-        d = n(51078),
-        o = n(3740),
-        _ = n(67082),
-        p = n.n(_);
+      var o = r(35380),
+        c = r(51078),
+        u = r(3740),
+        _ = r(67082),
+        p = r.n(_);
       function m(e) {
-        const { appid: t, elPageSort: n, strPageSubTitle: i } = e,
-          l = (0, c.$5)(t),
-          { data: u } = (0, s.J$)(l),
+        const { appid: t, elPageSort: r, strPageSubTitle: a } = e,
+          l = (0, o.$5)(t),
+          { data: i } = (0, s.J$)(l),
           { data: _ } = (0, s.lv)(l),
-          { strStoreURL: m } = (0, d.x)(u);
-        return u
-          ? (0, r.jsxs)("div", {
+          { strStoreURL: m } = (0, c.x)(i);
+        return i
+          ? (0, n.jsxs)("div", {
               className: p().AppHeader,
               children: [
-                (0, r.jsx)("div", {
+                (0, n.jsx)("div", {
                   className: p().CapsuleSizer,
-                  children: (0, r.jsx)("a", {
+                  children: (0, n.jsx)("a", {
                     href: m,
                     children:
                       _ &&
-                      (0, r.jsx)("img", {
-                        src: (0, a.b0)(_, "header"),
-                        alt: u.name || "",
+                      (0, n.jsx)("img", {
+                        src: (0, d.b0)(_, "header"),
+                        alt: i.name || "",
                       }),
                   }),
                 }),
-                (0, r.jsxs)("div", {
+                (0, n.jsxs)("div", {
                   className: p().TitleGroup,
                   children: [
-                    i &&
-                      (0, r.jsx)("div", {
+                    a &&
+                      (0, n.jsx)("div", {
                         className: p().SubTitle,
-                        children: i,
+                        children: a,
                       }),
-                    (0, r.jsx)("a", {
+                    (0, n.jsx)("a", {
                       href: m,
                       className: p().Title,
-                      children: u.name || "",
+                      children: i.name || "",
                     }),
-                    (0, r.jsx)("div", {
+                    (0, n.jsx)("div", {
                       className: p().Price,
-                      children: (0, r.jsx)(o.N, { id: l }),
+                      children: (0, n.jsx)(u.N, { id: l }),
                     }),
                   ],
                 }),
-                Boolean(n) &&
-                  (0, r.jsx)("div", {
+                Boolean(r) &&
+                  (0, n.jsx)("div", {
                     className: p().SortOptions,
-                    children: n,
+                    children: r,
                   }),
               ],
             })
           : null;
       }
       var y,
-        b = n(90626),
-        h = n(57876),
-        I = n(30894),
-        f = n(75279),
-        g = n(16021),
-        B = n(55263),
-        S = n(63090),
-        j = n(84811),
-        G = n(54847),
-        k = n(32630),
-        A = n(22797),
-        v = n(52038),
-        R = n(61859),
-        w = n(24484),
-        N = n(31960),
-        D = n.n(N);
+        b = r(90626),
+        h = r(57876),
+        B = r(30894),
+        I = r(75279),
+        j = r(16021),
+        g = r(55263),
+        f = r(63090),
+        S = r(84811),
+        k = r(54847),
+        G = r(32630),
+        A = r(22797),
+        N = r(52038),
+        R = r(61859),
+        D = r(24484),
+        w = r(31960),
+        x = r.n(w);
       function P(e) {
         const {
             match: {
               params: { appid: t },
             },
           } = e,
-          n = Number.parseInt(t),
-          [s] = (0, B.t7)(n, h.Xh);
+          r = Number.parseInt(t),
+          [s] = (0, g.t7)(r, h.Xh);
         return (
           (0, b.useEffect)(() => {
             if (s) {
@@ -597,110 +401,110 @@
                 window.history.replaceState({}, "", e);
             }
           }, [s]),
-          (0, r.jsx)(k.Ay, {
+          (0, n.jsx)(G.Ay, {
             method: "bundlelist",
-            children: (0, r.jsx)(j.tH, {
-              children: (0, r.jsx)(x, { storeItem: s }),
+            children: (0, n.jsx)(S.tH, {
+              children: (0, n.jsx)(L, { storeItem: s }),
             }),
           })
         );
       }
-      function x(e) {
+      function L(e) {
         const { storeItem: t } = e,
-          n = (0, f.DJ)(t),
-          [s, i] = (0, b.useState)(y.k_BundleSort_Price),
+          r = (0, I.DJ)(t),
+          [s, a] = (0, b.useState)(y.k_BundleSort_Price),
           l = (function (e) {
             const t = (0, b.useMemo)(
-                () => (0, w.Tc)("bundle_list", "application_config"),
+                () => (0, D.Tc)("bundle_list", "application_config"),
                 [],
               ),
-              [n] = (0, I.L2)(),
-              r = (0, B.MS)(t, h.Xh),
+              [r] = (0, B.L2)(),
+              n = (0, g.MS)(t, h.Xh),
               s = (0, b.useMemo)(() => {
-                if (!t || (3 != r && 2 != r)) return null;
+                if (!t || (3 != n && 2 != n)) return null;
                 {
-                  let n = t;
+                  let r = t;
                   switch (
-                    (2 == r &&
-                      (n = t.filter((e) => {
-                        const t = g.A.Get().GetBundle(e);
+                    (2 == n &&
+                      (r = t.filter((e) => {
+                        const t = j.A.Get().GetBundle(e);
                         return t?.BIsVisible();
                       })),
                     e)
                   ) {
                     case y.k_BundleSort_Name:
-                      return [...n].sort((e, t) => {
-                        const n = g.A.Get().GetBundle(e),
-                          r = g.A.Get().GetBundle(t);
-                        return n.GetName().localeCompare(r.GetName());
+                      return [...r].sort((e, t) => {
+                        const r = j.A.Get().GetBundle(e),
+                          n = j.A.Get().GetBundle(t);
+                        return r.GetName().localeCompare(n.GetName());
                       });
                     case y.k_BundleSort_Price:
-                      return [...n].sort((e, t) => {
-                        const n = g.A.Get().GetBundle(e),
-                          r = g.A.Get().GetBundle(t);
+                      return [...r].sort((e, t) => {
+                        const r = j.A.Get().GetBundle(e),
+                          n = j.A.Get().GetBundle(t);
                         return (
-                          n.GetBestPurchasePriceInCents() -
-                          r.GetBestPurchasePriceInCents()
+                          r.GetBestPurchasePriceInCents() -
+                          n.GetBestPurchasePriceInCents()
                         );
                       });
                     default:
-                      return n;
+                      return r;
                   }
                 }
-              }, [e, r, t]);
-            if (s && !n) {
+              }, [e, n, t]);
+            if (s && !r) {
               const e = new Array(),
                 t = new Array(),
-                n = new Array();
+                r = new Array();
               return (
-                s.forEach((r) => {
-                  const s = g.A.Get().GetBundle(r);
-                  s.GetIncludedAppIDs().some((e) => !I.Fm.Get().BOwnsApp(e))
+                s.forEach((n) => {
+                  const s = j.A.Get().GetBundle(n);
+                  s.GetIncludedAppIDs().some((e) => !B.Fm.Get().BOwnsApp(e))
                     ? s.GetBestPurchaseOption().must_purchase_as_set
-                      ? n.push(r)
-                      : t.push(r)
-                    : e.push(r);
+                      ? r.push(n)
+                      : t.push(n)
+                    : e.push(n);
                 }),
                 {
                   rgOwnedBundleIDList: e,
                   rgCompleteTheSetBundleIDList: t,
-                  rgMustPurchaseTogetherBundleIDList: n,
+                  rgMustPurchaseTogetherBundleIDList: r,
                 }
               );
             }
             return null;
           })(s);
         return t && l
-          ? (0, r.jsxs)("div", {
-              className: D().Ctn,
+          ? (0, n.jsxs)("div", {
+              className: x().Ctn,
               children: [
-                (0, r.jsx)(u, { id: n }),
-                (0, r.jsxs)("div", {
-                  className: (0, v.A)("page_content"),
+                (0, n.jsx)(i, { id: r }),
+                (0, n.jsxs)("div", {
+                  className: (0, N.A)("page_content"),
                   children: [
-                    (0, r.jsx)(m, {
+                    (0, n.jsx)(m, {
                       appid: t.GetAppID(),
-                      elPageSort: (0, r.jsx)(T, {
+                      elPageSort: (0, n.jsx)(T, {
                         eBundleSort: s,
-                        fnSetSort: i,
+                        fnSetSort: a,
                       }),
                       strPageSubTitle: (0, R.we)("#BundleList_SubTitle"),
                     }),
                     l.rgCompleteTheSetBundleIDList?.length > 0 &&
-                      (0, r.jsxs)("div", {
-                        className: D().BundlesInLibrary,
+                      (0, n.jsxs)("div", {
+                        className: x().BundlesInLibrary,
                         children: [
-                          (0, r.jsx)("div", {
-                            className: D().Title,
+                          (0, n.jsx)("div", {
+                            className: x().Title,
                             children: (0, R.we)("#BundleList_CompleteTheSet"),
                           }),
-                          (0, r.jsx)("div", {
-                            className: D().Subtitle,
+                          (0, n.jsx)("div", {
+                            className: x().Subtitle,
                             children: (0, R.we)(
                               "#BundleList_CompleteTheSetSubtitle",
                             ),
                           }),
-                          (0, r.jsx)(L, {
+                          (0, n.jsx)(v, {
                             appId: t.GetAppID(),
                             bundleSort: s,
                             rgBundleIDs: l.rgCompleteTheSetBundleIDList,
@@ -708,22 +512,22 @@
                         ],
                       }),
                     l.rgMustPurchaseTogetherBundleIDList?.length > 0 &&
-                      (0, r.jsxs)("div", {
-                        className: D().BundlesInLibrary,
+                      (0, n.jsxs)("div", {
+                        className: x().BundlesInLibrary,
                         children: [
-                          (0, r.jsx)("div", {
-                            className: D().Title,
+                          (0, n.jsx)("div", {
+                            className: x().Title,
                             children: (0, R.we)(
                               "#BundleList_MustPurchaseAsSet",
                             ),
                           }),
-                          (0, r.jsx)("div", {
-                            className: D().Subtitle,
+                          (0, n.jsx)("div", {
+                            className: x().Subtitle,
                             children: (0, R.we)(
                               "#BundleList_MustPurchaseAsSetSubtitle",
                             ),
                           }),
-                          (0, r.jsx)(L, {
+                          (0, n.jsx)(v, {
                             appId: t.GetAppID(),
                             bundleSort: s,
                             rgBundleIDs: l.rgMustPurchaseTogetherBundleIDList,
@@ -731,20 +535,20 @@
                         ],
                       }),
                     l.rgOwnedBundleIDList?.length > 0 &&
-                      (0, r.jsxs)("div", {
-                        className: D().BundlesInLibrary,
+                      (0, n.jsxs)("div", {
+                        className: x().BundlesInLibrary,
                         children: [
-                          (0, r.jsx)("div", {
-                            className: D().Title,
+                          (0, n.jsx)("div", {
+                            className: x().Title,
                             children: (0, R.we)("#BundleList_AllInLibrary"),
                           }),
-                          (0, r.jsx)("div", {
-                            className: D().Subtitle,
+                          (0, n.jsx)("div", {
+                            className: x().Subtitle,
                             children: (0, R.we)(
                               "#BundleList_AllInLibrarySubtitle",
                             ),
                           }),
-                          (0, r.jsx)(L, {
+                          (0, n.jsx)(v, {
                             appId: t.GetAppID(),
                             bundleSort: s,
                             rgBundleIDs: l.rgOwnedBundleIDList,
@@ -755,25 +559,25 @@
                 }),
               ],
             })
-          : (0, r.jsx)(A.t, {
+          : (0, n.jsx)(A.t, {
               string: (0, R.we)("#Loading"),
               position: "center",
             });
       }
-      function L(e) {
-        const { rgBundleIDs: t, bundleSort: n, appId: s } = e;
-        return (0, r.jsx)("div", {
-          className: D().BundlesList,
+      function v(e) {
+        const { rgBundleIDs: t, bundleSort: r, appId: s } = e;
+        return (0, n.jsx)("div", {
+          className: x().BundlesList,
           children: t.map((e) =>
-            (0, r.jsx)(C, { bundleId: e, appId: s }, "bundleDisplay_" + e),
+            (0, n.jsx)(C, { bundleId: e, appId: s }, "bundleDisplay_" + e),
           ),
         });
       }
       function C(e) {
-        const { bundleId: t, appId: n } = e;
-        return (0, r.jsx)("div", {
-          className: D().BundleRow,
-          children: (0, r.jsx)(G.p, {
+        const { bundleId: t, appId: r } = e;
+        return (0, n.jsx)("div", {
+          className: x().BundleRow,
+          children: (0, n.jsx)(k.p, {
             id: t,
             type: "bundle",
             bShowDeckCompatibilityDialog: !1,
@@ -782,7 +586,7 @@
         });
       }
       function T(e) {
-        const { eBundleSort: t, fnSetSort: n } = e,
+        const { eBundleSort: t, fnSetSort: r } = e,
           s = (0, b.useMemo)(
             () => [
               {
@@ -796,15 +600,15 @@
             ],
             [],
           );
-        return (0, r.jsx)(S.ZU, {
+        return (0, n.jsx)(f.ZU, {
           selectedOption: t,
           renderButtonValue: (e) =>
-            (0, r.jsxs)("div", {
+            (0, n.jsxs)("div", {
               children: [(0, R.we)("#BundleList_SortBy"), " ", e],
             }),
           rgOptions: s,
           strDefaultLabel: (0, R.we)("#BundleList_SortBy"),
-          onChange: ({ data: e }) => n(e),
+          onChange: ({ data: e }) => r(e),
         });
       }
       !(function (e) {

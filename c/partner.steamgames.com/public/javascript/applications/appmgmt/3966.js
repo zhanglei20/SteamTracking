@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Преминаване към безплатно?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Ако играта Ви вече е издадена и се нуждаете да преминете от платено към безплатно ценообразуване, кликнете %1$s, за да научите още и изискате съдействие.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "тук",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

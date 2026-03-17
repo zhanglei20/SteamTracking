@@ -4874,6 +4874,8 @@
             return "Marketing Message Event Capsule 2";
           case "spotlight_art":
             return "Spotlight Banner";
+          case "spotlight_art_hero":
+            return "Spotlight Vertical Capsule";
           case "takeover_art":
             return "Takeover Banner";
           case "takeover_webm_art":
@@ -5253,6 +5255,183 @@
         (0, _._)([_._.bound], _.prototype, "SetImage", null),
         (0, _._)([_._], _.prototype, "ClearAllAssetObjects", null),
         (0, _._)([_._], _.prototype, "DeleteAssetObjectLang", null),
+        (0, _._)([_._], _.prototype, "RevertChanges", null);
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        switch (_) {
+          case "spotlight_art":
+            return "image";
+          case "spotlight_art_hero":
+            return "hero_image";
+          default:
+            return;
+        }
+      }
+      class _ {
+        m_oSpotlight = null;
+        m_originalSpotlight = null;
+        m_bDirty = !1;
+        m_callback = new _._();
+        constructor(_) {
+          (0, _._)(this), this.Reset(_);
+        }
+        Reset(_) {
+          (this.m_oSpotlight = JSON.parse(JSON.stringify(_))),
+            (this.m_originalSpotlight = JSON.parse(JSON.stringify(_))),
+            (this.m_bDirty = !1);
+        }
+        BIsDirty() {
+          return this.m_bDirty;
+        }
+        GetCallback() {
+          return this.m_callback;
+        }
+        GetModel() {
+          return this.m_oSpotlight;
+        }
+        GetName() {
+          return this.m_oSpotlight.name;
+        }
+        GetType() {
+          return this.m_oSpotlight.type;
+        }
+        GetCreator() {
+          return this.m_oSpotlight.creator;
+        }
+        GetAssociationID() {
+          return this.m_oSpotlight.association;
+        }
+        GetAssociationType() {
+          return this.m_oSpotlight.association_type;
+        }
+        GetStartDate() {
+          return this.m_oSpotlight.visibility?.startdate || 0;
+        }
+        GetEndDate() {
+          return this.m_oSpotlight.visibility?.enddate || 0;
+        }
+        BIsVisible() {
+          return this.m_oSpotlight.visibility?.visible;
+        }
+        GetTitle() {
+          return this.m_oSpotlight.title;
+        }
+        GetAssetCount() {
+          return (0, _._)(this.m_oSpotlight.image);
+        }
+        GetLocalizedAltText(_) {
+          return (
+            this.m_oSpotlight.accessibility_label ||
+              (this.m_oSpotlight.accessibility_label = {}),
+            this.GetKVLang(this.m_oSpotlight.accessibility_label, _)
+          );
+        }
+        GetAssetParams() {
+          let _ = {};
+          return (
+            this.m_oSpotlight.accessibility_label &&
+              (_.accessibility_label = {
+                ...this.m_oSpotlight.accessibility_label,
+              }),
+            _
+          );
+        }
+        GetAssetUpdateTime() {
+          return this.m_oSpotlight.asset_mtime;
+        }
+        GetImage(_, _) {
+          return this.GetKVLang(this.m_oSpotlight[_], _);
+        }
+        GetCurImage(_) {
+          return this.GetKVLang(
+            this.m_oSpotlight[_],
+            _._.Get().GetCurEditLanguage(),
+          );
+        }
+        GetAssetsObject(_) {
+          return this.m_oSpotlight[_];
+        }
+        BHasHubTarget(_) {
+          return (
+            !(
+              !this.m_oSpotlight.location ||
+              !this.m_oSpotlight.location.hubTargets
+            ) && this.m_oSpotlight.location.hubTargets?.includes(_)
+          );
+        }
+        GetHubTargets() {
+          return this.m_oSpotlight.location &&
+            this.m_oSpotlight.location.hubTargets
+            ? this.m_oSpotlight.location.hubTargets
+            : [];
+        }
+        GetID() {
+          return this.m_oSpotlight._;
+        }
+        SetDirty(_) {
+          this.m_bDirty = _;
+        }
+        SetCurImage(_, _) {
+          this.SetImage(_._.Get().GetCurEditLanguage(), _, _), this.Dispatch();
+        }
+        SetImage(_, _, _) {
+          this.m_oSpotlight[_] || (this.m_oSpotlight[_] = {}),
+            Array.isArray(this.m_oSpotlight[_]) && (this.m_oSpotlight[_] = {}),
+            this.SetKVLang(this.m_oSpotlight[_], _, _),
+            (this.m_oSpotlight.asset_mtime = Math.floor(Date.now() / 1e3)),
+            this.Dispatch();
+        }
+        ClearAllAssetObjects(_) {
+          (this.m_oSpotlight[_] = {}), this.Dispatch();
+        }
+        DeleteAssetObjectLang(_, _) {
+          const _ = (0, _._)(_);
+          this.m_oSpotlight[_]?.[_] &&
+            (delete this.m_oSpotlight[_][_], this.Dispatch());
+        }
+        SetLocalizedAltText(_, _) {
+          this.m_oSpotlight.accessibility_label ||
+            (this.m_oSpotlight.accessibility_label = {}),
+            this.SetKVLang(this.m_oSpotlight.accessibility_label, _, _),
+            this.Dispatch();
+        }
+        SetKVLang(_, _, _) {
+          (0, _._)(_, _, _) && this.SetDirty(!0);
+        }
+        GetKVLang(_, _) {
+          return (0, _._)(_, _);
+        }
+        Dispatch() {
+          (this.m_bDirty = !0), this.m_callback.Dispatch(this);
+        }
+        RevertChanges() {
+          (this.m_oSpotlight = JSON.parse(
+            JSON.stringify(this.m_originalSpotlight),
+          )),
+            (this.m_bDirty = !1),
+            this.m_callback.Dispatch(this);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_bDirty", void 0),
+        (0, _._)([_._], _.prototype, "GetLocalizedAltText", null),
+        (0, _._)([_._], _.prototype, "SetCurImage", null),
+        (0, _._)([_._.bound], _.prototype, "SetImage", null),
+        (0, _._)([_._], _.prototype, "ClearAllAssetObjects", null),
+        (0, _._)([_._], _.prototype, "DeleteAssetObjectLang", null),
+        (0, _._)([_._.bound], _.prototype, "SetLocalizedAltText", null),
         (0, _._)([_._], _.prototype, "RevertChanges", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -12468,7 +12647,7 @@
         BIsSpotlightArtApproved() {
           return Boolean(
             this.m_oInput.approvals_provided?.find(
-              (_) => "spotlight_art" == _.type,
+              (_) => "spotlight_art_hero" == _.type,
             ),
           );
         }
@@ -13372,6 +13551,7 @@
             case "marketingmessage_art_2_eventcapsule":
               return this.BHasMarketingMessages(_);
             case "spotlight_art":
+            case "spotlight_art_hero":
               return this.BHasSpotlightIDs();
             case "takeover_art":
             case "takeover_mobile_art":
@@ -15353,6 +15533,91 @@
           }, [_, _, _, _]),
           _
         );
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_mapEditModel = new Map();
+        m_callback = new Map();
+        InitSpotlightToEdit(_, _, __webpack_require__ = !1) {
+          if (this.m_mapEditModel.has(_) && !__webpack_require__)
+            this.m_mapEditModel.get(_).Reset(_);
+          else {
+            const _ = new _._(_);
+            this.m_mapEditModel.set(_, _),
+              _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
+              __webpack_require__ && this.GetCallback(_).Dispatch(_);
+          }
+          return this.m_mapEditModel.get(_);
+        }
+        BHasSpotlightToEdit(_) {
+          return this.m_mapEditModel.has(_);
+        }
+        GetSpotlightToEdit(_) {
+          return this.m_mapEditModel.get(_);
+        }
+        ClearEditModel(_) {
+          this.m_mapEditModel.delete(_);
+        }
+        GetCallback(_) {
+          return (
+            this.m_callback.has(_) || this.m_callback.set(_, new _._()),
+            this.m_callback.get(_)
+          );
+        }
+        static s_Singleton;
+        static Get() {
+          return (
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              "dev" == _._.WEB_UNIVERSE &&
+                (window.g_SpotlightEditStore = _.s_Singleton)),
+            _.s_Singleton
+          );
+        }
+        constructor() {}
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          [__webpack_require__, _] = _.useState(() =>
+            _.Get().GetSpotlightToEdit(_),
+          ),
+          _ = (0, _._)(_);
+        return (
+          _.useEffect(() => {
+            _ &&
+              !_.Get().BHasSpotlightToEdit(_._) &&
+              _.Get().InitSpotlightToEdit(_._, _),
+              _(_.Get().GetSpotlightToEdit(_?._));
+          }, [_]),
+          (0, _._)(_.Get().GetCallback(_), (_) => {
+            _(_), _();
+          }),
+          __webpack_require__
+        );
+      }
+      function _(_, _) {
+        const _ = new Map();
+        return _
+          ? (_._.forEach((_) => {
+              const _ = _?.GetAssetsObject((0, _._)(_));
+              __webpack_require__.set(_, (0, _._)(_));
+            }),
+            _)
+          : _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -45646,90 +45911,184 @@
       function _(_) {
         const { planIdentify: _ } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _._)(() => [
-            __webpack_require__.BIsSpotlightArtRequest(),
-            __webpack_require__.BHasPreviewArtOfType("spotlight_art"),
-          ]);
+          [_, _, _] = (0, _._)(() => {
+            let _ = 0;
+            return (
+              __webpack_require__.BHasPreviewArtOfType("spotlight_art") && _++,
+              __webpack_require__.BHasPreviewArtOfType("spotlight_art_hero") &&
+                _++,
+              [__webpack_require__.BIsSpotlightArtRequest(), _, 2]
+            );
+          });
         return _
           ? (0, _.jsxs)("div", {
               className: _().AssetSection,
               children: [
-                (0, _.jsx)(_._, {
+                (0, _.jsxs)(_._, {
                   className: _().TitleBar,
-                  title: (0, _._)(
-                    "#AssetRequest_Spotlight_Title",
-                    _ ? "1/1" : "0/1",
-                  ),
-                  children: (0, _.jsxs)("div", {
-                    className: _().SectionCtn,
-                    children: [
-                      (0, _.jsxs)("div", {
+                  title: (0, _._)("#AssetRequest_Spotlight_Title", _ + "/" + _),
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _().SectionCtn,
+                      children: (0, _.jsx)("div", {
                         className: _().AssetSpecs,
-                        children: [
-                          (0, _.jsx)(_, {
-                            strTemplateURL:
-                              "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
-                            strDocURL:
-                              "https://partner.steamgames.com/doc/store/assets/promos",
-                            strTemplateName: (0, _._)(
-                              "#AssetRequest_General_DropBox",
-                            ),
-                          }),
-                          (0, _.jsx)("div", {
-                            children: (0, _._)(
-                              "#AssetRequest_General_Size",
-                              306,
-                              260,
-                            ),
-                          }),
-                          (0, _.jsx)("br", {}),
-                          (0, _.jsx)("div", {
-                            children: (0, _._)("#AssetRequest_Spotlight_Usage"),
-                          }),
-                          (0, _.jsx)("br", {}),
-                          (0, _.jsxs)("ul", {
+                        children: (0, _.jsx)(_, {
+                          strTemplateURL:
+                            "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
+                          strDocURL:
+                            "https://partner.steamgames.com/doc/store/assets/promos",
+                          strTemplateName: (0, _._)(
+                            "#AssetRequest_General_DropBox",
+                          ),
+                        }),
+                      }),
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().SectionCtn,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().AssetSpecs,
+                          children: (0, _.jsxs)("div", {
+                            className: _().AssetTypeCtn,
                             children: [
-                              (0, _.jsx)("li", {
+                              (0, _.jsx)("div", {
+                                className: _().AssetTitle,
                                 children: (0, _._)(
-                                  "#AssetRequest_Spotlight_Design",
+                                  "#AssetRequest_ArtType_spotlight_art_hero",
                                 ),
                               }),
-                              (0, _.jsx)("li", {
+                              (0, _.jsx)("div", {
                                 children: (0, _._)(
-                                  "#AssetRequest_Spotlight_Design2",
+                                  "#AssetRequest_General_Size",
+                                  374,
+                                  448,
                                 ),
                               }),
-                              (0, _.jsx)("li", {
+                              (0, _.jsx)("br", {}),
+                              (0, _.jsx)("div", {
                                 children: (0, _._)(
-                                  "#AssetRequest_Spotlight_Design3",
+                                  "#AssetRequest_SpotlightHero_Usage",
                                 ),
                               }),
-                              (0, _.jsx)("li", {
-                                children: (0, _._)(
-                                  "#AssetRequest_Spotlight_Design4",
-                                ),
+                              (0, _.jsx)("br", {}),
+                              (0, _.jsxs)("ul", {
+                                children: [
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_SpotlightHero_Design",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_SpotlightHero_Design1",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_SpotlightHero_Design2",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_SpotlightHero_Design3",
+                                    ),
+                                  }),
+                                ],
                               }),
                             ],
                           }),
-                        ],
-                      }),
-                      (0, _.jsx)("div", {
-                        className: _().AssetUploadPreviewCtn,
-                        children: (0, _.jsxs)("div", {
-                          className: _().AssetUploadPreview,
-                          children: [
-                            (0, _.jsx)(_, {
-                              planID: _._,
-                              promoAssetType: "spotlight_art",
-                            }),
-                            (0, _.jsx)(_, {
-                              planIdentify: _,
-                            }),
-                          ],
                         }),
-                      }),
-                    ],
-                  }),
+                        (0, _.jsx)("div", {
+                          className: _().AssetUploadPreviewCtn,
+                          children: (0, _.jsxs)("div", {
+                            className: _().AssetUploadPreview,
+                            children: [
+                              (0, _.jsx)(_, {
+                                planID: _._,
+                                promoAssetType: "spotlight_art_hero",
+                              }),
+                              (0, _.jsx)(_, {
+                                planIdentify: _,
+                                promoAssetType: "spotlight_art_hero",
+                              }),
+                            ],
+                          }),
+                        }),
+                      ],
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: _().SectionCtn,
+                      children: [
+                        (0, _.jsx)("div", {
+                          className: _().AssetSpecs,
+                          children: (0, _.jsxs)("div", {
+                            className: _().AssetTypeCtn,
+                            children: [
+                              (0, _.jsx)("div", {
+                                className: _().AssetTitle,
+                                children: (0, _._)(
+                                  "#AssetRequest_ArtType_spotlight_art",
+                                ),
+                              }),
+                              (0, _.jsx)("div", {
+                                children: (0, _._)(
+                                  "#AssetRequest_General_Size",
+                                  306,
+                                  260,
+                                ),
+                              }),
+                              (0, _.jsx)("br", {}),
+                              (0, _.jsx)("div", {
+                                children: (0, _._)(
+                                  "#AssetRequest_Spotlight_Usage",
+                                ),
+                              }),
+                              (0, _.jsx)("br", {}),
+                              (0, _.jsxs)("ul", {
+                                children: [
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_Spotlight_Design",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_Spotlight_Design2",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_Spotlight_Design3",
+                                    ),
+                                  }),
+                                  (0, _.jsx)("li", {
+                                    children: (0, _._)(
+                                      "#AssetRequest_Spotlight_Design4",
+                                    ),
+                                  }),
+                                ],
+                              }),
+                            ],
+                          }),
+                        }),
+                        (0, _.jsx)("div", {
+                          className: _().AssetUploadPreviewCtn,
+                          children: (0, _.jsxs)("div", {
+                            className: _().AssetUploadPreview,
+                            children: [
+                              (0, _.jsx)(_, {
+                                planID: _._,
+                                promoAssetType: "spotlight_art",
+                              }),
+                              (0, _.jsx)(_, {
+                                planIdentify: _,
+                              }),
+                            ],
+                          }),
+                        }),
+                      ],
+                    }),
+                  ],
                 }),
                 (0, _.jsx)("br", {}),
               ],
@@ -47187,7 +47546,8 @@
               __webpack_require__.BIsMarketingMessageEventCapsuleRequest(),
             __webpack_require__.BIsMarketingMessageArtRequest_2() ||
               __webpack_require__.BIsMarketingMessageEventCapsuleRequest_2(),
-            __webpack_require__.BHasPreviewArtOfType("spotlight_art"),
+            __webpack_require__.BHasPreviewArtOfType("spotlight_art") &&
+              __webpack_require__.BHasPreviewArtOfType("spotlight_art_hero"),
             __webpack_require__.BHasPreviewArtOfType("marketingmessage_art") ||
               __webpack_require__.BHasPreviewArtOfType(
                 "marketingmessage_art_eventcapsule",
@@ -54563,240 +54923,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_oSpotlight = null;
-        m_originalSpotlight = null;
-        m_bDirty = !1;
-        m_callback = new _._();
-        constructor(_) {
-          (0, _._)(this), this.Reset(_);
-        }
-        Reset(_) {
-          (this.m_oSpotlight = JSON.parse(JSON.stringify(_))),
-            (this.m_originalSpotlight = JSON.parse(JSON.stringify(_))),
-            (this.m_bDirty = !1);
-        }
-        BIsDirty() {
-          return this.m_bDirty;
-        }
-        GetCallback() {
-          return this.m_callback;
-        }
-        GetModel() {
-          return this.m_oSpotlight;
-        }
-        GetName() {
-          return this.m_oSpotlight.name;
-        }
-        GetType() {
-          return this.m_oSpotlight.type;
-        }
-        GetCreator() {
-          return this.m_oSpotlight.creator;
-        }
-        GetAssociationID() {
-          return this.m_oSpotlight.association;
-        }
-        GetAssociationType() {
-          return this.m_oSpotlight.association_type;
-        }
-        GetStartDate() {
-          return this.m_oSpotlight.visibility?.startdate || 0;
-        }
-        GetEndDate() {
-          return this.m_oSpotlight.visibility?.enddate || 0;
-        }
-        BIsVisible() {
-          return this.m_oSpotlight.visibility?.visible;
-        }
-        GetTitle() {
-          return this.m_oSpotlight.title;
-        }
-        GetAssetCount() {
-          return (0, _._)(this.m_oSpotlight.image);
-        }
-        GetLocalizedAltText(_) {
-          return (
-            this.m_oSpotlight.accessibility_label ||
-              (this.m_oSpotlight.accessibility_label = {}),
-            this.GetKVLang(this.m_oSpotlight.accessibility_label, _)
-          );
-        }
-        GetAssetParams() {
-          let _ = {};
-          return (
-            this.m_oSpotlight.accessibility_label &&
-              (_.accessibility_label = {
-                ...this.m_oSpotlight.accessibility_label,
-              }),
-            _
-          );
-        }
-        GetAssetUpdateTime() {
-          return this.m_oSpotlight.asset_mtime;
-        }
-        GetImage(_) {
-          return this.GetKVLang(this.m_oSpotlight.image, _);
-        }
-        GetCurImage() {
-          return this.GetKVLang(
-            this.m_oSpotlight.image,
-            _._.Get().GetCurEditLanguage(),
-          );
-        }
-        GetAssetsObject() {
-          return this.m_oSpotlight.image;
-        }
-        BHasHubTarget(_) {
-          return (
-            !(
-              !this.m_oSpotlight.location ||
-              !this.m_oSpotlight.location.hubTargets
-            ) && this.m_oSpotlight.location.hubTargets?.includes(_)
-          );
-        }
-        GetHubTargets() {
-          return this.m_oSpotlight.location &&
-            this.m_oSpotlight.location.hubTargets
-            ? this.m_oSpotlight.location.hubTargets
-            : [];
-        }
-        GetID() {
-          return this.m_oSpotlight._;
-        }
-        SetDirty(_) {
-          this.m_bDirty = _;
-        }
-        SetCurImage(_) {
-          this.SetImage(_._.Get().GetCurEditLanguage(), _), this.Dispatch();
-        }
-        SetImage(_, _) {
-          this.m_oSpotlight.image || (this.m_oSpotlight.image = {}),
-            Array.isArray(this.m_oSpotlight.image) &&
-              (this.m_oSpotlight.image = {}),
-            this.SetKVLang(this.m_oSpotlight.image, _, _),
-            (this.m_oSpotlight.asset_mtime = Math.floor(Date.now() / 1e3)),
-            this.Dispatch();
-        }
-        ClearAllAssetObjects() {
-          (this.m_oSpotlight.image = {}), this.Dispatch();
-        }
-        DeleteAssetObjectLang(_) {
-          const _ = (0, _._)(_);
-          this.m_oSpotlight.image?.[_] &&
-            (delete this.m_oSpotlight.image[_], this.Dispatch());
-        }
-        SetLocalizedAltText(_, _) {
-          this.m_oSpotlight.accessibility_label ||
-            (this.m_oSpotlight.accessibility_label = {}),
-            this.SetKVLang(this.m_oSpotlight.accessibility_label, _, _),
-            this.Dispatch();
-        }
-        SetKVLang(_, _, _) {
-          (0, _._)(_, _, _) && this.SetDirty(!0);
-        }
-        GetKVLang(_, _) {
-          return (0, _._)(_, _);
-        }
-        Dispatch() {
-          (this.m_bDirty = !0), this.m_callback.Dispatch(this);
-        }
-        RevertChanges() {
-          (this.m_oSpotlight = JSON.parse(
-            JSON.stringify(this.m_originalSpotlight),
-          )),
-            (this.m_bDirty = !1),
-            this.m_callback.Dispatch(this);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_bDirty", void 0),
-        (0, _._)([_._], _.prototype, "GetLocalizedAltText", null),
-        (0, _._)([_._], _.prototype, "SetCurImage", null),
-        (0, _._)([_._.bound], _.prototype, "SetImage", null),
-        (0, _._)([_._], _.prototype, "ClearAllAssetObjects", null),
-        (0, _._)([_._], _.prototype, "DeleteAssetObjectLang", null),
-        (0, _._)([_._.bound], _.prototype, "SetLocalizedAltText", null),
-        (0, _._)([_._], _.prototype, "RevertChanges", null);
-      var _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapEditModel = new Map();
-        m_callback = new Map();
-        InitSpotlightToEdit(_, _, __webpack_require__ = !1) {
-          if (this.m_mapEditModel.has(_) && !__webpack_require__)
-            this.m_mapEditModel.get(_).Reset(_);
-          else {
-            const _ = new _(_);
-            this.m_mapEditModel.set(_, _),
-              _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-              __webpack_require__ && this.GetCallback(_).Dispatch(_);
-          }
-          return this.m_mapEditModel.get(_);
-        }
-        BHasSpotlightToEdit(_) {
-          return this.m_mapEditModel.has(_);
-        }
-        GetSpotlightToEdit(_) {
-          return this.m_mapEditModel.get(_);
-        }
-        ClearEditModel(_) {
-          this.m_mapEditModel.delete(_);
-        }
-        GetCallback(_) {
-          return (
-            this.m_callback.has(_) || this.m_callback.set(_, new _._()),
-            this.m_callback.get(_)
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SpotlightEditStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(() =>
-            _.Get().GetSpotlightToEdit(_),
-          ),
-          _ = (0, _._)(_);
-        return (
-          _.useEffect(() => {
-            _ &&
-              !_.Get().BHasSpotlightToEdit(_._) &&
-              _.Get().InitSpotlightToEdit(_._, _),
-              _(_.Get().GetSpotlightToEdit(_?._));
-          }, [_]),
-          (0, _._)(_.Get().GetCallback(_), (_) => {
-            _(_), _();
-          }),
-          __webpack_require__
-        );
-      }
-      function _(_, _) {
-        const _ = new Map();
-        if (!_) return _;
-        if (!_ || _.includes("spotlight_art")) {
-          let _ = 0;
-          const _ = _?.GetAssetsObject();
-          for (let _ = 0; _ < 31; ++_) _ && _[(0, _._)(_)] && (_ += 1);
-          __webpack_require__.set("spotlight_art", _);
-        }
-        return _;
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { promotionPlanID: _, _: __webpack_require__ } = _,
-          _ = _(__webpack_require__);
+          _ = (0, _._)(__webpack_require__);
         return void 0 === _
           ? (0, _.jsx)(_._, {
               size: "medium",
@@ -54844,7 +54975,7 @@
       }
       function _(_) {
         const { oEditableSpotlight: _ } = _,
-          _ = (0, _.useMemo)(() => ["spotlight_art"], []),
+          _ = _._,
           _ = (0, _.useMemo)(() => [_._.k_ESteamRealmGlobal], []),
           _ = (0, _.useCallback)(
             (_, _, _, _, _, _, _) => {
@@ -54853,12 +54984,13 @@
                   null != _ && _ >= 0 && _ < 31,
                   "Unexpected value for elang: " + _,
                 ),
+                console.log("OnUploadSuccess: ", _, _, _, _, _, _, _),
                 _)
               ) {
                 case "image/gif":
                 case "image/jpeg":
                 case "image/png":
-                  _.SetImage(_, _);
+                  _.SetImage(_, _, (0, _._)(_));
                   break;
                 default:
                   console.log(
@@ -54911,8 +55043,30 @@
                         " (.jpg,.png,.gif)",
                       ],
                     }),
+                    (0, _.jsx)("br", {}),
                     (0, _.jsx)(_, {
                       oEditableSpotlight: _,
+                      assetType: "image",
+                    }),
+                    (0, _.jsx)("br", {}),
+                    (0, _.jsxs)("div", {
+                      children: [
+                        (0, _.jsx)("h3", {
+                          children: "Spotlight Vertical Capsule",
+                        }),
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: "374px by 448px",
+                            }),
+                            " (.jpg,.png)",
+                          ],
+                        }),
+                        (0, _.jsx)(_, {
+                          oEditableSpotlight: _,
+                          assetType: "hero_image",
+                        }),
+                      ],
                     }),
                   ],
                 }),
@@ -54925,36 +55079,38 @@
         });
       }
       function _(_) {
-        const { oEditableSpotlight: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
-            _.GetAssetsObject(),
+        const { oEditableSpotlight: _, assetType: __webpack_require__ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.GetAssetsObject(__webpack_require__),
             _.GetID(),
             _.GetAssetUpdateTime(),
           ]),
-          _ = Object.keys(__webpack_require__ || {})
+          _ = Object.keys(_ || {})
             .sort()
             .map((_) => (0, _._)(_)),
           _ = (0, _.useCallback)(
             (_) => {
               const _ = (0, _._)(_);
-              return __webpack_require__ && __webpack_require__[_]
+              return _ && _[_]
                 ? (function (_, _, _, _) {
                     if (!_) return null;
                     const _ = _ ? "?t=" + _ : "",
                       _ = (0, _._)(_);
                     return `${_._.MEDIA_CDN_URL}steam/spotlights/${_}/${_[_]}${_}`;
-                  })(_, _, _, __webpack_require__)
+                  })(_, _, _, _)
                 : null;
             },
-            [_, _, __webpack_require__],
+            [_, _, _],
           );
         return (0, _.jsx)("div", {
           className: _().MarketingMessage,
           children: (0, _.jsx)(_._, {
             rgAssetLangs: _,
             fnGetAssetUrl: _,
-            fnDeletAssetLang: (_) => _.DeleteAssetObjectLang(_),
-            fnDeleteAllAssets: () => _.ClearAllAssetObjects(),
+            fnDeletAssetLang: (_) =>
+              _.DeleteAssetObjectLang(__webpack_require__, _),
+            fnDeleteAllAssets: () =>
+              _.ClearAllAssetObjects(__webpack_require__),
             bVerifyAssets: !0,
           }),
         });
@@ -54962,7 +55118,7 @@
       function _(_) {
         const { oEditableSpotlight: _, promotionPlanID: __webpack_require__ } =
             _,
-          _ = _(_)?.get("spotlight_art");
+          _ = (0, _._)(_);
         return (0, _.jsxs)("div", {
           className: _().RightCol,
           children: [
@@ -54972,9 +55128,23 @@
                 (0, _.jsx)(_._, {
                   children: "Asset Progress",
                 }),
-                (0, _.jsxs)("div", {
-                  children: [_, " / ", _._],
-                }),
+                _._.map((_) =>
+                  (0, _.jsxs)(
+                    "div",
+                    {
+                      className:
+                        _.get(_) != _._ ? _().EventElementRequired : null,
+                      children: [
+                        (0, _._)("#AssetRequest_ArtType_" + _),
+                        ": ",
+                        _.get(_),
+                        " / ",
+                        _._,
+                      ],
+                    },
+                    "as_count_" + _,
+                  ),
+                ),
               ],
             }),
             (0, _.jsxs)("div", {
@@ -55024,7 +55194,12 @@
           },
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       class _ {
         m_oTakeover = null;
         m_originalTakeover = null;
@@ -57099,9 +57274,10 @@
               bShowInternalControls: _,
               promotionPlanID: _.GetID(),
             }),
-          !_.BHasSpotlightIDs(0) ||
-            (__webpack_require__ &&
-              !__webpack_require__.includes("spotlight_art")) ||
+          _.BHasSpotlightIDs(0) &&
+            (!__webpack_require__ ||
+              __webpack_require__.includes("spotlight_art") ||
+              __webpack_require__.includes("spotlight_art_hero")) &&
             _.push({
               artworkType: "spotlight_art",
               _: _.GetSpotlightIDs(0),
@@ -57403,7 +57579,8 @@
       }
       function _(_) {
         const { rgArtworkToDisplay: _, _: __webpack_require__ } = _,
-          _ = _(_(__webpack_require__), _);
+          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
           rgAssetCounts: _,
         });
@@ -73428,6 +73605,7 @@
                       case "marketingmessage_art_2_eventcapsule":
                         return "MM Event";
                       case "spotlight_art":
+                      case "spotlight_art_hero":
                         return "Spotlight";
                     }
                     return "uknown";
@@ -74149,6 +74327,7 @@
           _
         );
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
           _ = (0, _._)(),
@@ -74311,12 +74490,17 @@
         const _ = (0, _._)(),
           _ = (0, _._)(),
           _ = _(),
-          _ = _.BIsDirty() || __webpack_require__.BIsDirty() || _?.BIsDirty(),
+          _ = (0, _._)(_.GetSpotlightIDs(0)),
+          _ =
+            _.BIsDirty() ||
+            __webpack_require__.BIsDirty() ||
+            _?.BIsDirty() ||
+            _?.BIsDirty(),
           _ = _.GetModel();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
-              children: ["Is Dirty: ", _],
+              children: ["Is Dirty: ", _ ? "Yes" : "No"],
             }),
             (0, _.jsx)("h1", {
               children: "Admin Model:",
@@ -74340,6 +74524,12 @@
             }),
             (0, _.jsx)("h1", {
               children: "Partner Promotion Plan Request",
+            }),
+            (0, _.jsx)(_._, {
+              data: _?.GetModel() || {},
+            }),
+            (0, _.jsx)("h1", {
+              children: "Spotlight Plan",
             }),
             (0, _.jsx)(_._, {
               data: _?.GetModel() || {},
@@ -80645,6 +80835,7 @@
         (0, _._)([_._], _.prototype, "DeployCapsuleIfPossible", null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = new _._("SalePage"),
         _ = 50;
@@ -80800,6 +80991,8 @@
           const _ = _._.BConfirmedAdultContentAgeGate()
               ? []
               : _._.excluded_content_descriptors,
+            _ = _._.GetClanInfoByClanAccountID(_?.clanSteamID?.GetAccountID()),
+            _ = (0, _._)(_, _),
             _ =
               _._.STORE_BASE_URL +
               (_
@@ -80834,7 +81027,7 @@
               optin_prune_tagid: _?.jsondata?.optin_prune_tagid || void 0,
               optin_only: _?.jsondata?.optin_only || void 0,
               controller_category: Number(_.eControllerCategory) || void 0,
-              bUseCreatorHomeApps: 36 == _?.GetEventType(),
+              bUseCreatorHomeApps: _,
               bAllowDemos: 36 == _?.GetEventType(),
             };
           let _ = null;
@@ -85144,6 +85337,8 @@
           } = _,
           { data: _ } = (0, _._)(_),
           _ = (0, _.useRef)(null);
+        if (!_) return null;
+        const _ = _.purchase_options;
         return _
           ? (0, _.jsx)(_._, {
               nodeRef: _,
@@ -86316,15 +86511,32 @@
               (_ = _.filter((_) => !_ || _.ShouldShowCapsule(_))),
             (_ = await (async function (_, _, _) {
               if (!_?.length) return _;
-              if (36 == _.GetEventType()) {
-                const _ = await _._.fetchQuery(
-                  (0, _._)(_.clanSteamID.GetAccountID()),
-                );
+              const _ = _.clanSteamID.GetAccountID(),
+                _ = _._.GetClanInfoByClanAccountID(_);
+              if ((0, _._)(_, _)) {
+                const _ = await _._.fetchQuery((0, _._)(_));
                 if (!_) return [];
                 const _ = new Set(_.GetAppIDList());
-                _ = __webpack_require__.filter(
-                  (_) => 0 == (0, _._)(_.type) && _.has(_._),
-                );
+                _ = __webpack_require__.filter((_) => {
+                  if (_) {
+                    if ("sub" == _.type || "bundle" == _.type) {
+                      const _ = _._.Get().GetStoreItem(_._, (0, _._)(_.type)),
+                        _ = 36 == _.GetEventType();
+                      return (
+                        !!_ &&
+                        (_
+                          ? __webpack_require__
+                              .GetIncludedAppIDs()
+                              .every((_) => _.has(_))
+                          : __webpack_require__
+                              .GetIncludedAppIDs()
+                              .some((_) => _.has(_)))
+                      );
+                    }
+                    return _.has(_._);
+                  }
+                  return !1;
+                });
               }
               return _;
             })(_, 0, _));
@@ -108641,11 +108853,12 @@
         }
       }
       (0, _._)([_._], _.prototype, "m_mapDiscoveryQueues", void 0);
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ =
+          (__webpack_require__("chunkid"),
+          __webpack_require__("chunkid"),
+          __webpack_require__("chunkid"));
       _.createContext({});
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
@@ -108660,7 +108873,10 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_, _) {
+        const _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID()),
+          _ = (0, _._)(_, _);
         return {
           nSaleTagID: _.BUsesContentHubForItemSource()
             ? void 0
@@ -108674,8 +108890,7 @@
           nOptInTagID: _.jsondata.optin_tagid,
           nPruneTagID: _.jsondata.optin_prune_tagid,
           bOptInOnly: _.jsondata.optin_only,
-          nCreatorClanAccountId:
-            36 == _.GetEventType() ? _.clanSteamID.GetAccountID() : void 0,
+          nCreatorClanAccountId: _ ? _.clanSteamID.GetAccountID() : void 0,
         };
       }
       class _ {

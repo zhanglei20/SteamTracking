@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "We hebben onze beoordeling van je bezwaar over %1$s afgerond.",
 	"moderatedcontent_dispute_sanctioned_2": "Na zorgvuldige heroverweging is besloten om onze oorspronkelijke beslissing te handhaven. De inhoud blijft verwijderd of beperkt en eventuele maatregelen voor het account blijven in stand. We zijn tot deze beslissing gekomen door de inhoud in de betreffende context te beoordelen, waarbij rekening is gehouden met de aanvullende informatie die je in je bezwaar hebt gedeeld en de toepasselijke regels van dit platform, alsmede juridische normen.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Als je het hier niet mee eens bent, kun je deze kwestie voorleggen aan een erkend orgaan voor buitengerechtelijke geschillenbeslechting of bij een bevoegde rechtbank in hoger beroep gaan.",
+	"anonymousreport_title": "Report this Content",
+	"anonymousreport_description": "Sign in to the Steam Community to report inappropriate or illegal content.",
+	"anonymousreport_footer": "If you cannot sign in, you may <1>file an anonymous report</1>.",
+	"anonymousreport_footer_action": "file an anonymous report",
+	"anonymousreport_signin": "Sign In",
+	"anonymousreport_join": "Join Steam",
+	"anonymousreport_createaccount": "Account aanmaken",
+	"anonymousreport_signin_or_join": "%1$s or %2$s",
 	"nocomma": ""
 }`);
     },

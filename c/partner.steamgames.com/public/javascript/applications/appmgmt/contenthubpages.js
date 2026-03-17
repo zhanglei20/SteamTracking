@@ -168,8 +168,8 @@
           },
         },
       );
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       (0, _.createContext)(null);
       function _(_) {
         const { gutter: _ = 0, placement: __webpack_require__ } = _,
@@ -255,22 +255,26 @@
         _ = function (_) {
           const { children: _, render: __webpack_require__, ref: _ } = _,
             _ = (0, _.useContext)(_),
-            _ = (0, _._)([_, _?.floating.refs.setFloating]);
+            _ = (0, _._)([_, _?.floating.refs.setFloating]),
+            _ = (0, _._)();
           return _
             ? _.open
               ? (0, _.jsx)(_._, {
-                  context: _.floating.context,
-                  initialFocus: _.initialFocus,
-                  returnFocus: !1,
-                  children: (0, _.jsx)(_, {
-                    ref: _,
-                    style: _.floating.floatingStyles,
-                    ..._.getFloatingProps(),
-                    render: __webpack_require__,
-                    children: (0, _.jsx)(_._, {
-                      elementsRef: _.elementsRef,
-                      labelsRef: _.labelsRef,
-                      children: _,
+                  root: _?.targetElement,
+                  children: (0, _.jsx)(_._, {
+                    context: _.floating.context,
+                    initialFocus: _.initialFocus,
+                    returnFocus: !1,
+                    children: (0, _.jsx)(_, {
+                      ref: _,
+                      style: _.floating.floatingStyles,
+                      ..._.getFloatingProps(),
+                      render: __webpack_require__,
+                      children: (0, _.jsx)(_._, {
+                        elementsRef: _.elementsRef,
+                        labelsRef: _.labelsRef,
+                        children: _,
+                      }),
                     }),
                   }),
                 })

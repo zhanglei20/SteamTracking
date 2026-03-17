@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Ürününüzü Ücretsiz Hâle Mi Getiriyorsunuz?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Oyununuz zaten yayınlandıysa ve ücretliden ücretsiz hâle getirmek istiyorsanız daha fazla bilgi edinmek ve yardım talep etmek için %1$s tıklayın.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "buraya",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

@@ -736,9 +736,9 @@ License: MIT
                             row: v.length,
                             index: u,
                           }),
-                        B()
+                        A()
                       );
-                    if (I === _ - 1) return B(o.substring(u, I).replace(T, d));
+                    if (I === _ - 1) return A(o.substring(u, I).replace(T, d));
                     if (d === h && o[I + 1] === h) I++;
                     else if (d === h || 0 === I || o[I - 1] !== h) {
                       -1 !== R && R < I + 1 && (R = o.indexOf(t, I + 1));
@@ -761,7 +761,7 @@ License: MIT
                       ) {
                         if (
                           (E.push(o.substring(u, I).replace(T, d)),
-                          A(I + 1 + O + w),
+                          B(I + 1 + O + w),
                           (R = o.indexOf(t, u)),
                           (I = o.indexOf(d, u)),
                           y && (M(), p))
@@ -787,11 +787,11 @@ License: MIT
                   E.push(o.substring(u, R)), (u = R + b), (R = o.indexOf(t, u));
                 else {
                   if (-1 === j) break;
-                  if ((E.push(o.substring(u, j)), A(j + w), y && (M(), p)))
+                  if ((E.push(o.substring(u, j)), B(j + w), y && (M(), p)))
                     return L();
                   if (s && v.length >= s) return L(!0);
                 }
-              return B();
+              return A();
               function N(e) {
                 v.push(e), (D = u);
               }
@@ -803,7 +803,7 @@ License: MIT
                   ? e.length
                   : t;
               }
-              function B(e) {
+              function A(e) {
                 return (
                   m ||
                     (void 0 === e && (e = o.substring(u)),
@@ -814,7 +814,7 @@ License: MIT
                   L()
                 );
               }
-              function A(e) {
+              function B(e) {
                 (u = e), N(E), (E = []), (j = o.indexOf(r, u));
               }
               function L(i) {
@@ -1243,19 +1243,19 @@ License: MIT
         a = r(17083),
         o = r(92757),
         c = r(14932),
-        l = r(16676),
-        d = r(90626),
-        h = r(14578),
-        u = r.n(h),
-        p = r(96745),
-        f = r(17084),
-        g = r(87641),
-        m = r(9154),
-        _ = r(738),
-        b = r(51272),
-        w = r(56011),
-        k = r(61859),
-        x = r(78327),
+        l = r(96745),
+        d = r(17084),
+        h = r(87641),
+        u = r(90626),
+        p = r(14336),
+        f = r(16676),
+        g = r(738),
+        m = r(51272),
+        _ = r(56011),
+        b = r(61859),
+        w = r(78327),
+        k = r(14578),
+        x = r.n(k),
         y = r(84811),
         v = r(32754),
         C = r(52038),
@@ -1263,17 +1263,20 @@ License: MIT
         D = r(74267),
         P = r(22886),
         S = r.n(P),
-        R = r(29903),
+        R = r(10754),
         j = r(96434),
         T = r.n(j),
         I = r(40818),
         O = r(16666),
         N = r(66051),
         F = r(64238),
-        B = r.n(F),
-        A = r(95034),
-        L = (r(64641), r(42691), r(40441), r(83800));
-      function M(e) {
+        A = r.n(F),
+        B = r(95034),
+        L = (r(64641), r(42691), r(40441), r(83800)),
+        M = r(64753),
+        U = r(9154),
+        G = r(95582);
+      function z(e) {
         const {
             bCompactMode: t,
             setCompactMode: r,
@@ -1283,66 +1286,69 @@ License: MIT
             bFilterToBelowMinPrice: o,
             setFilterToBelowMinPrice: c,
           } = e,
-          h = (0, d.useMemo)(
-            () => n.filter((e) => (0, f.Y5)(e.packageID)).length,
+          l = (0, u.useMemo)(
+            () => n.filter((e) => (0, d.Y5)(e.packageID)).length,
             [n],
           );
-        let u = d.useCallback(
+        let h = u.useCallback(
           (e) => {
             a(e.data);
           },
           [a],
         );
-        const p = d.useMemo(
-          () => [
-            {
-              label: (0, k.we)("#PricingDashboard_ShowOnlyReleasedPackages"),
-              data: "released",
-            },
-            {
-              label: (0, k.we)("#PricingDashboard_ShowAllPackages"),
-              data: "all",
-            },
-            {
-              label: (0, k.we)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
-              data: "unreleased",
-            },
-            {
-              label: (0, k.we)("#PricingDashboard_ShowOnlyChangedPackages"),
-              data: "changed",
-            },
-            {
-              label: (0, k.we)("#PricingDashboard_ShowProposedChanges"),
-              data: "proposed",
-            },
-          ],
-          [],
-        );
+        const p = u.useMemo(
+            () => [
+              {
+                label: (0, b.we)("#PricingDashboard_ShowOnlyReleasedPackages"),
+                data: "released",
+              },
+              {
+                label: (0, b.we)("#PricingDashboard_ShowAllPackages"),
+                data: "all",
+              },
+              {
+                label: (0, b.we)(
+                  "#PricingDashboard_ShowOnlyUnreleasedPackages",
+                ),
+                data: "unreleased",
+              },
+              {
+                label: (0, b.we)("#PricingDashboard_ShowOnlyChangedPackages"),
+                data: "changed",
+              },
+              {
+                label: (0, b.we)("#PricingDashboard_ShowProposedChanges"),
+                data: "proposed",
+              },
+            ],
+            [],
+          ),
+          [g, m, _] = (0, M.uD)();
         return (0, i.jsxs)("div", {
           className: S().GridHeaderButtons,
           children: [
-            (0, i.jsx)(l.ZU, {
+            (0, i.jsx)(f.ZU, {
               rgOptions: p,
               selectedOption: s,
               strDropDownClassName: S().Test,
-              onChange: u,
+              onChange: h,
               contextMenuPositionOptions: { bMatchWidth: !1 },
             }),
-            Boolean(h || o) &&
+            Boolean(l || o) &&
               (0, i.jsx)("div", {
                 className: (0, C.A)(S().OptionCtn, S().PriceLowOption),
-                children: (0, i.jsx)(l.Yh, {
+                children: (0, i.jsx)(f.Yh, {
                   checked: o,
                   onChange: c,
-                  label: (0, k.we)("#PricingDashboard_FilterToLowPrice", h),
+                  label: (0, b.we)("#PricingDashboard_FilterToLowPrice", l),
                 }),
               }),
             (0, i.jsx)("div", {
               className: (0, C.A)(S().OptionCtn, S().CompactOption),
-              children: (0, i.jsx)(l.Yh, {
+              children: (0, i.jsx)(f.Yh, {
                 checked: t,
                 onChange: r,
-                label: (0, k.we)(
+                label: (0, b.we)(
                   "#PricingDashboard_ShowCompactModeCheckBoxLabel",
                 ),
               }),
@@ -1351,11 +1357,26 @@ License: MIT
               className: (0, C.A)(S().OptionCtn),
               children: (0, i.jsx)(L.J, {}),
             }),
+            (0, i.jsxs)("div", {
+              className: (0, C.A)(S().OptionCtn),
+              children: [
+                (0, i.jsx)(f.jn, {
+                  onClick: m,
+                  children: (0, b.we)(
+                    "#PricingDashboard_ApplyGuidelinesDialog_Button",
+                  ),
+                }),
+                (0, i.jsx)(U.EN, {
+                  active: g,
+                  children: (0, i.jsx)(G.i, { closeModal: _ }),
+                }),
+              ],
+            }),
           ],
         });
       }
-      var U = r(86762);
-      function G(e) {
+      var W = r(86762);
+      function K(e) {
         return e.contains_game && e.contains_dlc
           ? "BOTH"
           : e.contains_game
@@ -1364,11 +1385,11 @@ License: MIT
               ? "DLC"
               : null;
       }
-      function z(e) {
+      function H(e) {
         const { column: t } = e,
           r = t.id,
-          n = (0, f.XK)(r),
-          s = (0, f.YB)(r);
+          n = (0, d.XK)(r),
+          s = (0, d.YB)(r);
         return (0, i.jsxs)("div", {
           className: S().CurrencyHeader,
           children: [
@@ -1392,76 +1413,76 @@ License: MIT
               (0, i.jsx)(D.O, {
                 hoverKey: r,
                 className: S().CurrencyMore,
-                renderHover: () => (0, i.jsx)(q, { priceKey: r }),
+                renderHover: () => (0, i.jsx)(Y, { priceKey: r }),
               }),
           ],
         });
       }
-      function W(e) {
+      function V(e) {
         const { row: t } = e;
-        return (0, i.jsx)(U.m, {
+        return (0, i.jsx)(W.m, {
           packageID: t.original.packageID,
           bShowCancel: !0,
         });
       }
-      function K(e) {
+      function q(e) {
         const t = (0, E.sF)(),
           r = (0, E.uv)(),
           i = (0, E.NP)(),
           n = (0, E.ZN)(),
           s = (0, E.mE)(!1),
-          a = d.useMemo(
+          a = u.useMemo(
             () =>
               (0, O.FB)().accessor("proposalState", {
-                header: (0, k.we)(
+                header: (0, b.we)(
                   "#PricingDashboard_Column_PriceProposalState",
                 ),
                 enableSorting: !1,
-                cell: W,
+                cell: V,
                 size: 200,
                 meta: {
-                  strHeaderTooltip: (0, k.we)(
+                  strHeaderTooltip: (0, b.we)(
                     "#PricingDashboard_Column_PriceProposalState_ttip",
                   ),
                 },
               }),
             [],
           ),
-          { rgSupportedPriceKeys: o } = (0, f.T7)();
-        return d.useMemo(() => {
+          { rgSupportedPriceKeys: o } = (0, d.T7)();
+        return u.useMemo(() => {
           const c = [t, r, i, n, s, a];
           for (const t of o)
             c.push({
               accessorKey: t,
               size: e ? 72 : 200,
               enableSorting: !1,
-              header: z,
+              header: H,
               cell: R.sh,
             });
           return c;
         }, [t, r, i, n, s, a, o, e]);
       }
-      function H(e) {
-        const t = (0, f.Ci)(),
+      function Z(e) {
+        const t = (0, d.Ci)(),
           r = t?.length ?? 0;
         return (0, i.jsx)("div", {
           className: (0, C.A)(S().PricingGridCtn, r > 0 && "PendingVisible"),
-          children: (0, i.jsx)(V, { ...e }),
+          children: (0, i.jsx)(Q, { ...e }),
         });
       }
-      const V = d.memo(function (e) {
+      const Q = u.memo(function (e) {
         const { packageData: t } = e,
-          [r, n] = d.useState(!1),
-          s = d.useRef(null),
-          [a, o] = (0, A.QD)("filter", "released");
-        "dev" == x.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = s);
-        const [c, l] = (0, A.QD)("filter_below_min_price", !1),
-          h = new URLSearchParams(window.location.search),
-          u = h.has(p.xi) ? decodeURIComponent(h.get(p.xi)) : "",
-          g = K(r),
+          [r, n] = u.useState(!1),
+          s = u.useRef(null),
+          [a, o] = (0, B.QD)("filter", "released");
+        "dev" == w.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = s);
+        const [c, h] = (0, B.QD)("filter_below_min_price", !1),
+          p = new URLSearchParams(window.location.search),
+          f = p.has(l.xi) ? decodeURIComponent(p.get(l.xi)) : "",
+          g = q(r),
           m = (function (e, t, r) {
-            const { rgSupportedPriceKeys: i } = (0, f.T7)();
-            return d.useMemo(() => {
+            const { rgSupportedPriceKeys: i } = (0, d.T7)();
+            return u.useMemo(() => {
               const n = [];
               for (const s of e) {
                 const e = /^-?[0-9]+$/.test(r.strSearchStringFromURL)
@@ -1469,15 +1490,15 @@ License: MIT
                   : 0;
                 if (s.packageid !== e) {
                   if ("changed" == t) {
-                    if (!(0, f.iy)(s.packageid)) continue;
+                    if (!(0, d.iy)(s.packageid)) continue;
                   } else if ("proposed" == t) {
-                    if (!(0, f.RO)(s.packageid)) continue;
+                    if (!(0, d.RO)(s.packageid)) continue;
                   } else if ("released" == t) {
                     if (!s.released) continue;
                   } else if ("unreleased" == t && s.released) continue;
                   if (
                     r?.bFilterToOnlyBelowMinimumPrice &&
-                    !(0, f.Y5)(s.packageid)
+                    !(0, d.Y5)(s.packageid)
                   )
                     continue;
                 }
@@ -1485,16 +1506,16 @@ License: MIT
                 a ||
                   (a =
                     s.appids.length > 1
-                      ? (0, k.we)(
+                      ? (0, b.we)(
                           "#PackageGrid_MultipleBaseGamesFoundForPackage",
                         )
-                      : (0, k.we)("#PackageGrid_NoBaseGameFoundForPackage"));
+                      : (0, b.we)("#PackageGrid_NoBaseGameFoundForPackage"));
                 const o = {
                   appids: s.appids.sort(),
                   appName: a,
                   packageID: s.packageid,
                   packageName: s.package_name || "",
-                  packageType: G(s),
+                  packageType: K(s),
                   released: s.released,
                 };
                 for (const e of i) o[e] = e;
@@ -1504,25 +1525,25 @@ License: MIT
             }, [r, e, i, t]);
           })(t, a, {
             bFilterToOnlyBelowMinimumPrice: c,
-            strSearchStringFromURL: u,
+            strSearchStringFromURL: f,
           }),
-          _ = (0, p.pV)(),
-          b = () => _(s.current),
-          w = (0, f.Zz)(),
+          _ = (0, l.pV)(),
+          k = () => _(s.current),
+          x = (0, d.Zz)(),
           v = (0, I.cK)();
         return (
-          ("dev" != x.TS.WEB_UNIVERSE && "beta" != x.TS.WEB_UNIVERSE) ||
+          ("dev" != w.TS.WEB_UNIVERSE && "beta" != w.TS.WEB_UNIVERSE) ||
             console.log("Rendering grid", g),
           (0, i.jsxs)(i.Fragment, {
             children: [
-              (0, i.jsx)(M, {
+              (0, i.jsx)(z, {
                 bCompactMode: r,
                 setCompactMode: n,
                 rgGridData: m,
                 strPackageFilter: a,
                 setPackageFilter: o,
                 bFilterToBelowMinPrice: c,
-                setFilterToBelowMinPrice: l,
+                setFilterToBelowMinPrice: h,
               }),
               (0, i.jsx)("div", {
                 className: S().PricingGridWrapper,
@@ -1531,11 +1552,11 @@ License: MIT
                   children: (0, i.jsxs)(y.tH, {
                     children: [
                       (0, i.jsx)(E.rK, {
-                        fnBLocalChangesExist: w,
+                        fnBLocalChangesExist: x,
                         fnWarnUser: v,
                         children: (0, i.jsx)(N.k, {
                           ref: s,
-                          className: B()(
+                          className: A()(
                             S().PricingGridTable,
                             "noGlobalButtonStyle",
                           ),
@@ -1549,7 +1570,7 @@ License: MIT
                           initialExpanded: !0,
                           initialSorting: [{ id: "appName", desc: !1 }],
                           initialColumnFilters: [
-                            { id: "packageName", value: u },
+                            { id: "packageName", value: f },
                           ],
                           initialGrouping: ["appName"],
                           initialColumnVisibility: {
@@ -1565,8 +1586,8 @@ License: MIT
                               "USD",
                             ],
                           },
-                          onGroupingChange: b,
-                          onVisibleRowsChange: b,
+                          onGroupingChange: k,
+                          onVisibleRowsChange: k,
                           renderGroup: E.IR,
                         }),
                       }),
@@ -1579,10 +1600,10 @@ License: MIT
           })
         );
       });
-      function q(e) {
+      function Y(e) {
         const { priceKey: t } = e,
-          r = (0, f.XK)(t);
-        let n = (0, f.mP)(t);
+          r = (0, d.XK)(t);
+        let n = (0, d.mP)(t);
         return (0, i.jsx)("div", {
           className: T().PricePopout,
           children: (0, i.jsx)("div", {
@@ -1590,73 +1611,73 @@ License: MIT
             children: (0, i.jsx)("div", {
               className: T().DetailLabel,
               onClick: n,
-              children: (0, k.we)("#PricingDashboard_RevertAllCurrency", r),
+              children: (0, b.we)("#PricingDashboard_RevertAllCurrency", r),
             }),
           }),
         });
       }
-      var Z = r(19367),
-        Q = r.n(Z),
-        Y = r(22797),
-        J = r(9161),
-        X = r(57581),
-        $ = r.n(X);
-      function ee(e) {
+      var J = r(19367),
+        X = r.n(J),
+        $ = r(22797),
+        ee = r(9161),
+        te = r(57581),
+        re = r.n(te);
+      function ie(e) {
         const { closeModal: t } = e,
-          r = (0, p.vs)(),
-          n = Q()().format("YYYY-MM-DDTHH-mm-ss"),
-          s = (0, p.zt)(),
-          a = (0, p.Yr)(),
+          r = (0, l.vs)(),
+          n = X()().format("YYYY-MM-DDTHH-mm-ss"),
+          s = (0, l.zt)(),
+          a = (0, l.Yr)(),
           o = `prices_all_${r}_${n}.csv`,
           c = `prices_${r}_${n}.csv`,
           d = 0 == a.length;
-        return (0, i.jsxs)(m.o0, {
+        return (0, i.jsxs)(U.o0, {
           bAllowFullSize: !1,
           closeModal: t,
           bAlertDialog: !0,
-          strTitle: (0, k.we)("#PricingDashboard_ImportExportHeader"),
+          strTitle: (0, b.we)("#PricingDashboard_ImportExportHeader"),
           children: [
-            (0, k.we)("#PricingDashboard_ImportExport_GeneralInstructions"),
+            (0, b.we)("#PricingDashboard_ImportExport_GeneralInstructions"),
             (0, i.jsx)("br", {}),
             (0, i.jsx)("a", {
-              href: x.TS.PARTNER_BASE_URL + "doc/store/pricing/csv",
+              href: w.TS.PARTNER_BASE_URL + "doc/store/pricing/csv",
               target: "_blank",
-              children: (0, k.we)("#PricingDashboard_ImportExport_DocLink"),
+              children: (0, b.we)("#PricingDashboard_ImportExport_DocLink"),
             }),
             (0, i.jsx)("br", {}),
             (0, i.jsx)("br", {}),
             (0, i.jsx)("h3", {
-              children: (0, k.we)("#PricingDashboard_SubtitleExport"),
+              children: (0, b.we)("#PricingDashboard_SubtitleExport"),
             }),
             (0, i.jsx)("div", {
-              className: $().Instructions,
-              children: (0, k.we)(
+              className: re().Instructions,
+              children: (0, b.we)(
                 "#PricingDashboard_ImportExport_DownloadInstructions",
               ),
             }),
             (0, i.jsxs)("div", {
-              className: $().ButtonRows,
+              className: re().ButtonRows,
               children: [
                 a.length != s.length &&
                   (0, i.jsxs)("div", {
-                    className: $().OptionCtn,
+                    className: re().OptionCtn,
                     children: [
                       (0, i.jsx)("span", {
-                        className: $().OptionDesc,
-                        children: (0, k.we)(
+                        className: re().OptionDesc,
+                        children: (0, b.we)(
                           "#PricingDashboard_ImportExport_DownloadVisible_Desc",
                         ),
                       }),
-                      (0, i.jsxs)(l.$n, {
-                        className: $().Button,
+                      (0, i.jsxs)(f.$n, {
+                        className: re().Button,
                         disabled: d,
-                        onClick: () => te(a, c),
+                        onClick: () => ne(a, c),
                         children: [
-                          (0, k.we)(
+                          (0, b.we)(
                             "#PricingDashboard_ImportExport_DownloadVisible_Button",
                           ),
                           (0, i.jsx)("span", {
-                            children: (0, k.we)(
+                            children: (0, b.we)(
                               "#PricingDashboard_PackageCount",
                               a.length,
                             ),
@@ -1666,24 +1687,24 @@ License: MIT
                     ],
                   }),
                 (0, i.jsxs)("div", {
-                  className: $().OptionCtn,
+                  className: re().OptionCtn,
                   children: [
                     (0, i.jsx)("span", {
-                      className: $().OptionDesc,
-                      children: (0, k.we)(
+                      className: re().OptionDesc,
+                      children: (0, b.we)(
                         "#PricingDashboard_ImportExport_DownloadAll_Desc",
                       ),
                     }),
-                    (0, i.jsxs)(l.$n, {
-                      className: $().Button,
+                    (0, i.jsxs)(f.$n, {
+                      className: re().Button,
                       disabled: d,
-                      onClick: () => te(s, o),
+                      onClick: () => ne(s, o),
                       children: [
-                        (0, k.we)(
+                        (0, b.we)(
                           "#PricingDashboard_ImportExport_DownloadAll_Button",
                         ),
                         (0, i.jsx)("span", {
-                          children: (0, k.we)(
+                          children: (0, b.we)(
                             "#PricingDashboard_PackageCount",
                             s.length,
                           ),
@@ -1697,33 +1718,33 @@ License: MIT
             (0, i.jsx)("br", {}),
             (0, i.jsx)("br", {}),
             (0, i.jsx)("h3", {
-              children: (0, k.we)("#PricingDashboard_SubtitleImport"),
+              children: (0, b.we)("#PricingDashboard_SubtitleImport"),
             }),
             (0, i.jsx)("div", {
-              className: $().Instructions,
-              children: (0, k.we)(
+              className: re().Instructions,
+              children: (0, b.we)(
                 "#PricingDashboard_ImportExport_UploadInstructions",
               ),
             }),
             (0, i.jsx)("div", {
-              className: $().ButtonRows,
+              className: re().ButtonRows,
               children: (0, i.jsxs)("div", {
-                className: $().OptionCtn,
+                className: re().OptionCtn,
                 children: [
                   (0, i.jsx)("span", {
-                    className: $().OptionDesc,
-                    children: (0, k.we)(
+                    className: re().OptionDesc,
+                    children: (0, b.we)(
                       "#PricingDashboard_ImportExport_Upload_Desc",
                     ),
                   }),
-                  (0, i.jsx)(l.$n, {
-                    className: $().Button,
+                  (0, i.jsx)(f.$n, {
+                    className: re().Button,
                     disabled: d,
                     children: (0, i.jsxs)("label", {
-                      className: $().ImportButtonLabel,
+                      className: re().ImportButtonLabel,
                       htmlFor: "import-price-input",
                       children: [
-                        (0, k.we)(
+                        (0, b.we)(
                           "#PricingDashboard_ImportExport_Upload_Button",
                         ),
                         (0, i.jsx)("input", {
@@ -1733,11 +1754,11 @@ License: MIT
                           onChange: (e) =>
                             (async function (e, t) {
                               if (e.target.files.length >= 1) {
-                                const r = (0, w.uX)(e),
+                                const r = (0, _.uX)(e),
                                   n = e.target.files[0],
-                                  s = await J.g.ParseCSVFile(n);
-                                (0, _.mK)(
-                                  (0, i.jsx)(ie, {
+                                  s = await ee.g.ParseCSVFile(n);
+                                (0, g.mK)(
+                                  (0, i.jsx)(ae, {
                                     strFilename: n.name,
                                     parseResult: s,
                                   }),
@@ -1756,36 +1777,36 @@ License: MIT
           ],
         });
       }
-      function te(e, t) {
+      function ne(e, t) {
         const r = [],
-          i = (0, f.U3)(),
-          n = [(0, k.we)("#PackageGrid_Column_PackageName"), "ID"];
+          i = (0, d.U3)(),
+          n = [(0, b.we)("#PackageGrid_Column_PackageName"), "ID"];
         for (const e of i) n.push(e);
         r.push(n);
         for (const t of e) {
-          const e = [(0, p.ww)(t), t.toString()];
+          const e = [(0, l.ww)(t), t.toString()];
           for (const r of i) {
-            const i = (0, f.FR)(t, r),
+            const i = (0, d.FR)(t, r),
               n = i ? (i / 100).toString() : "";
             e.push(n);
           }
           r.push(e);
         }
-        J.g.WriteCSVToFile(r, t);
+        ee.g.WriteCSVToFile(r, t);
       }
-      function re(e, t) {
+      function se(e, t) {
         let r = Number(e);
         return Number.isNaN(r) ? null : Math.round(100 * r);
       }
-      function ie(e) {
+      function ae(e) {
         const { closeModal: t, strFilename: r, parseResult: n } = e,
-          s = (0, p.zt)(),
-          a = (0, f.U3)(),
-          o = (0, f.hm)(),
-          [c, l] = d.useState(null),
-          [h, u] = d.useState();
+          s = (0, l.zt)(),
+          a = (0, d.U3)(),
+          o = (0, d.hm)(),
+          [c, h] = u.useState(null),
+          [p, f] = u.useState();
         if (
-          (d.useEffect(() => {
+          (u.useEffect(() => {
             const { rgPriceChanges: e, nPackagesImported: t } = (function (
               e,
               t,
@@ -1801,7 +1822,7 @@ License: MIT
                   n.push(e);
                   for (const n of r) {
                     const r = t[n],
-                      s = !!r?.length && re(r);
+                      s = !!r?.length && se(r);
                     if (!r?.length || Number.isNaN(s)) continue;
                     const o = i(e, n, s);
                     o && a.push(o);
@@ -1810,59 +1831,59 @@ License: MIT
               }
               return { rgPriceChanges: a, nPackagesImported: n.length };
             })(n, s, a, o);
-            l(e), u(t);
+            h(e), f(t);
           }, [n, s, a, o]),
           null === c)
         )
-          return (0, i.jsx)(Y.t, { position: "center" });
-        const g = c.length > 0,
-          b = g
-            ? (0, k.we)("#PackageGrid_SaveChangesDialogButton")
-            : (0, k.we)("#Button_Close");
-        return (0, i.jsxs)(m.o0, {
-          strTitle: (0, k.we)(
+          return (0, i.jsx)($.t, { position: "center" });
+        const m = c.length > 0,
+          _ = m
+            ? (0, b.we)("#PackageGrid_SaveChangesDialogButton")
+            : (0, b.we)("#Button_Close");
+        return (0, i.jsxs)(U.o0, {
+          strTitle: (0, b.we)(
             "#PricingDashboard_ImportExport_UploadProgressTitle",
           ),
-          strDescription: (0, k.we)(
+          strDescription: (0, b.we)(
             "#PricingDashboard_ImportExport_UploadProgressDetails",
-            h,
+            p,
           ),
-          bAlertDialog: !g,
-          strOKButtonText: b,
+          bAlertDialog: !m,
+          strOKButtonText: _,
           onOK: () => {
-            g && (0, _.pg)((0, i.jsx)(I.Zg, {}), window);
+            m && (0, g.pg)((0, i.jsx)(I.Zg, {}), window);
           },
-          strCancelButtonText: (0, k.we)("#Button_OK"),
+          strCancelButtonText: (0, b.we)("#Button_OK"),
           closeModal: t,
           children: [
             (0, i.jsx)("div", {
-              className: $().ParseResultCount,
-              children: (0, k.we)(
+              className: re().ParseResultCount,
+              children: (0, b.we)(
                 "#PricingDashboard_ImportExport_UploadResults",
                 c.length,
               ),
             }),
-            g &&
-              (0, k.we)(
+            m &&
+              (0, b.we)(
                 "#PricingDashboard_ImportExport_UploadNextStepInstructions",
               ),
             !!n.errors?.length &&
               (0, i.jsxs)(i.Fragment, {
                 children: [
                   (0, i.jsx)("div", {
-                    className: $().ErrorHeader,
-                    children: (0, k.we)(
+                    className: re().ErrorHeader,
+                    children: (0, b.we)(
                       "#PricingDashboard_ImportExport_UploadErrorsHeader",
                       n.errors?.length,
                     ),
                   }),
                   (0, i.jsx)("div", {
-                    className: $().ParseErrors,
+                    className: re().ParseErrors,
                     children: n.errors.map((e, t) =>
                       (0, i.jsx)(
                         "div",
                         {
-                          className: $().Error,
+                          className: re().Error,
                           children: `${e.row ?? "-"} ${e.message}`,
                         },
                         `${e.message}-${t}`,
@@ -1874,57 +1895,44 @@ License: MIT
           ],
         });
       }
-      var ne = r(14336),
-        se = r(64753),
-        ae = r(95582);
       function oe(e) {
-        (0, g.h)((0, f.Zz)());
-        const t = (0, p.uw)(),
-          r = x.TS.PARTNER_BASE_URL + "doc/store/pricing",
-          n = x.TS.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
-          s = (0, f.v4)(),
-          a = (0, d.useMemo)(
+        (0, h.h)((0, d.Zz)());
+        const t = (0, l.uw)(),
+          r = w.TS.PARTNER_BASE_URL + "doc/store/pricing",
+          n = w.TS.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
+          s = (0, d.v4)(),
+          a = (0, u.useMemo)(
             () => Array.from(new Set(s.map((e) => e.submitterID))),
             [s],
-          ),
-          [o, c, h] = ((0, ne.DW)(a), (0, se.uD)());
+          );
+        (0, p.DW)(a);
         return (0, i.jsxs)("div", {
-          className: u().DashboardPage,
+          className: x().DashboardPage,
           children: [
             (0, i.jsxs)("div", {
-              className: u().DashTitle,
+              className: x().DashTitle,
               children: [
-                (0, k.we)("#PricingDashboard_Title"),
-                (0, i.jsx)("div", { className: u().FeedbackLinkCtn }),
+                (0, b.we)("#PricingDashboard_Title"),
+                (0, i.jsx)("div", { className: x().FeedbackLinkCtn }),
                 (0, i.jsxs)("div", {
-                  className: u().ButtonGroup,
+                  className: x().ButtonGroup,
                   children: [
-                    (0, i.jsx)(l.jn, {
-                      onClick: c,
-                      children: (0, k.we)(
-                        "#PricingDashboard_ApplyGuidelinesDialog_Button",
-                      ),
-                    }),
-                    (0, i.jsx)(m.EN, {
-                      active: o,
-                      children: (0, i.jsx)(ae.i, { closeModal: h }),
-                    }),
-                    (0, i.jsx)(l.$n, {
+                    (0, i.jsx)(f.$n, {
                       onClick: (e) =>
-                        (0, _.pg)((0, i.jsx)(ee, {}), (0, w.uX)(e)),
-                      children: (0, k.we)(
+                        (0, g.pg)((0, i.jsx)(ie, {}), (0, _.uX)(e)),
+                      children: (0, b.we)(
                         "#PricingDashboard_ImportExportButton",
                       ),
                     }),
-                    (0, i.jsx)(l.$n, {
-                      onClick: (e) => (0, b.EP)(e, r),
-                      children: (0, k.we)(
+                    (0, i.jsx)(f.$n, {
+                      onClick: (e) => (0, m.EP)(e, r),
+                      children: (0, b.we)(
                         "#PricingDashboard_DocumentationButton",
                       ),
                     }),
-                    (0, i.jsx)(l.$n, {
-                      onClick: (e) => (0, b.EP)(e, n),
-                      children: (0, k.we)("#PricingDashboard_ContactUsButton"),
+                    (0, i.jsx)(f.$n, {
+                      onClick: (e) => (0, m.EP)(e, n),
+                      children: (0, b.we)("#PricingDashboard_ContactUsButton"),
                     }),
                   ],
                 }),
@@ -1932,13 +1940,13 @@ License: MIT
             }),
             0 == t.length &&
               (0, i.jsx)("div", {
-                className: u().ErrorMessage,
-                children: (0, k.we)("#PricingDashboard_Error_NoPackages"),
+                className: x().ErrorMessage,
+                children: (0, b.we)("#PricingDashboard_Error_NoPackages"),
               }),
             t.length > 0 &&
               (0, i.jsxs)(i.Fragment, {
                 children: [
-                  (0, i.jsx)(H, { packageData: t }),
+                  (0, i.jsx)(Z, { packageData: t }),
                   (0, i.jsx)(I.BL, { bReloadPageOnSave: !1 }),
                 ],
               }),

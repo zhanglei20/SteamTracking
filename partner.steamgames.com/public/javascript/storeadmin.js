@@ -272,7 +272,7 @@ function PopulateClusterViaAppIDs( elemAppIDTextArea, elIncludedList, clusterNam
 {
 	$J( '#appids_' + clusterName + '_area' ).slideUp();
 
-	const rgAppIDs = elemAppIDTextArea.val().split( '\n' );
+	const rgAppIDs = elemAppIDTextArea.val().trim().split( '\n' );
 
 	if ( rgAppIDs.length < 1 || elemAppIDTextArea.val().length < 1 )
 		return;

@@ -8,7 +8,7 @@
 	"language": "swedish",
 	"LoginRedirect_Dialog_Title": "Logga in",
 	"LoginRedirect_Dialog_Description": "Logga in för att lägga till på önskelistan, följa eller ignorera produkten. Om du klickar på OK skickas du vidare till inloggningssidan.",
-	"Wishlist_NotSignedIn": "Logga in eller öppna den här sidan i Steam-appen för att lägga till på önskelistan, följa, köpa och se rekommendationer",
+	"Wishlist_NotSignedIn": "Logga in eller öppna den här sidan i Steam-appen för att lägga till på önskelistan, följa eller köpa.",
 	"Dummy": "dummy"
 }`);
     },

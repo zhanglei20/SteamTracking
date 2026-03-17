@@ -1410,6 +1410,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_, 2),
@@ -1838,7 +1841,8 @@
           if (((_ = _ || {}), !_)) throw new Error("No node provided");
           return !1 !== _.call(_, _) && _(_, _);
         },
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _.useRef(void 0),
           _ = _.useCallback((_) => {
@@ -2260,6 +2264,297 @@
           _
         );
       }
+      const _ = _("safe-polygon");
+      function _(_, _, _) {
+        return _ && !_(_)
+          ? 0
+          : "number" == typeof _
+            ? _
+            : null == _
+              ? void 0
+              : _[_];
+      }
+      function _(_, _) {
+        void 0 === _ && (_ = {});
+        const {
+            open: __webpack_require__,
+            onOpenChange: _,
+            dataRef: _,
+            events: _,
+            elements: _,
+          } = _,
+          {
+            enabled: _ = !0,
+            delay: _ = 0,
+            handleClose: _ = null,
+            mouseOnly: _ = !1,
+            restMs: _ = 0,
+            move: _ = !0,
+          } = _,
+          _ = _(),
+          _ = _(),
+          _ = _(_),
+          _ = _(_),
+          _ = _(__webpack_require__),
+          _ = _.useRef(),
+          _ = _.useRef(-1),
+          _ = _.useRef(),
+          _ = _.useRef(-1),
+          _ = _.useRef(!0),
+          _ = _.useRef(!1),
+          _ = _.useRef(() => {}),
+          _ = _.useRef(!1),
+          _ = _.useCallback(() => {
+            var _;
+            const _ = null == (_ = _.current.openEvent) ? void 0 : _.type;
+            return (
+              (null == _ ? void 0 : _.includes("mouse")) && "mousedown" !== _
+            );
+          }, [_]);
+        _.useEffect(() => {
+          if (_)
+            return (
+              _._("openchange", _),
+              () => {
+                _.off("openchange", _);
+              }
+            );
+          function _(_) {
+            let { open: _ } = _;
+            _ || (_(_), _(_), (_.current = !0), (_.current = !1));
+          }
+        }, [_, _]),
+          _.useEffect(() => {
+            if (!_) return;
+            if (!_.current) return;
+            if (!__webpack_require__) return;
+            function _(_) {
+              _() && _(!1, _, "hover");
+            }
+            const _ = _(_.floating).documentElement;
+            return (
+              _.addEventListener("mouseleave", _),
+              () => {
+                _.removeEventListener("mouseleave", _);
+              }
+            );
+          }, [_.floating, __webpack_require__, _, _, _, _]);
+        const _ = _.useCallback(
+            function (_, _, _) {
+              void 0 === _ && (_ = !0), void 0 === _ && (_ = "hover");
+              const _ = _(_.current, "close", _.current);
+              _ && !_.current
+                ? (_(_), (_.current = window.setTimeout(() => _(!1, _, _), _)))
+                : _ && (_(_), _(!1, _, _));
+            },
+            [_, _],
+          ),
+          _ = _(() => {
+            _.current(), (_.current = void 0);
+          }),
+          _ = _(() => {
+            if (_.current) {
+              const _ = _(_.floating).body;
+              (_.style.pointerEvents = ""),
+                _.removeAttribute(_),
+                (_.current = !1);
+            }
+          }),
+          _ = _(
+            () =>
+              !!_.current.openEvent &&
+              ["click", "mousedown"].includes(_.current.openEvent.type),
+          );
+        _.useEffect(() => {
+          if (_ && (0, _._)(_.domReference)) {
+            var _;
+            const _ = _.domReference;
+            return (
+              __webpack_require__ && _.addEventListener("mouseleave", _),
+              null == (_ = _.floating) || _.addEventListener("mouseleave", _),
+              _ &&
+                _.addEventListener("mousemove", _, {
+                  once: !0,
+                }),
+              _.addEventListener("mouseenter", _),
+              _.addEventListener("mouseleave", _),
+              () => {
+                var _;
+                __webpack_require__ && _.removeEventListener("mouseleave", _),
+                  null == (_ = _.floating) ||
+                    _.removeEventListener("mouseleave", _),
+                  _ && _.removeEventListener("mousemove", _),
+                  _.removeEventListener("mouseenter", _),
+                  _.removeEventListener("mouseleave", _);
+              }
+            );
+          }
+          function _(_) {
+            if (
+              (_(_),
+              (_.current = !1),
+              (_ && !_(_.current)) || (_ > 0 && !_(_.current, "open")))
+            )
+              return;
+            const _ = _(_.current, "open", _.current);
+            _
+              ? (_.current = window.setTimeout(() => {
+                  _.current || _(!0, _, "hover");
+                }, _))
+              : __webpack_require__ || _(!0, _, "hover");
+          }
+          function _(_) {
+            if (_()) return;
+            _.current();
+            const _ = _(_.floating);
+            if (
+              (_(_), (_.current = !1), _.current && _.current.floatingContext)
+            ) {
+              __webpack_require__ || _(_),
+                (_.current = _.current({
+                  ..._.current.floatingContext,
+                  tree: _,
+                  _: _.clientX,
+                  _: _.clientY,
+                  onClose() {
+                    _(), _(), _() || _(_, !0, "safe-polygon");
+                  },
+                }));
+              const _ = _.current;
+              return (
+                _.addEventListener("mousemove", _),
+                void (_.current = () => {
+                  _.removeEventListener("mousemove", _);
+                })
+              );
+            }
+            ("touch" !== _.current || !_(_.floating, _.relatedTarget)) && _(_);
+          }
+          function _(_) {
+            _() ||
+              (_.current.floatingContext &&
+                (null == _.current ||
+                  _.current({
+                    ..._.current.floatingContext,
+                    tree: _,
+                    _: _.clientX,
+                    _: _.clientY,
+                    onClose() {
+                      _(), _(), _() || _(_);
+                    },
+                  })(_)));
+          }
+        }, [
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          __webpack_require__,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _,
+        ]),
+          _(() => {
+            var _;
+            if (
+              _ &&
+              __webpack_require__ &&
+              null != (_ = _.current) &&
+              _.__options.blockPointerEvents &&
+              _()
+            ) {
+              _.current = !0;
+              const _ = _.floating;
+              if ((0, _._)(_.domReference) && _) {
+                var _;
+                const _ = _(_.floating).body;
+                __webpack_require__.setAttribute(_, "");
+                const _ = _.domReference,
+                  _ =
+                    null == _ ||
+                    null == (_ = _.nodesRef.current.find((_) => _._ === _)) ||
+                    null == (_ = _.context)
+                      ? void 0
+                      : _.elements.floating;
+                return (
+                  _ && (_.style.pointerEvents = ""),
+                  (_.style.pointerEvents = "none"),
+                  (_.style.pointerEvents = "auto"),
+                  (_.style.pointerEvents = "auto"),
+                  () => {
+                    (_.style.pointerEvents = ""),
+                      (_.style.pointerEvents = ""),
+                      (_.style.pointerEvents = "");
+                  }
+                );
+              }
+            }
+          }, [_, __webpack_require__, _, _, _, _, _]),
+          _(() => {
+            __webpack_require__ ||
+              ((_.current = void 0), (_.current = !1), _(), _());
+          }, [__webpack_require__, _, _]),
+          _.useEffect(
+            () => () => {
+              _(), _(_), _(_), _();
+            },
+            [_, _.domReference, _, _],
+          );
+        const _ = _.useMemo(() => {
+            function _(_) {
+              _.current = _.pointerType;
+            }
+            return {
+              onPointerDown: _,
+              onPointerEnter: _,
+              onMouseMove(_) {
+                const { nativeEvent: _ } = _;
+                function _() {
+                  _.current || _.current || _(!0, _, "hover");
+                }
+                (_ && !_(_.current)) ||
+                  __webpack_require__ ||
+                  0 === _ ||
+                  (_.current && _.movementX ** 2 + _.movementY ** 2 < 2) ||
+                  (_(_),
+                  "touch" === _.current
+                    ? _()
+                    : ((_.current = !0),
+                      (_.current = window.setTimeout(_, _))));
+              },
+            };
+          }, [_, _, __webpack_require__, _, _]),
+          _ = _.useMemo(
+            () => ({
+              onMouseEnter() {
+                _(_);
+              },
+              onMouseLeave(_) {
+                _() || _(_.nativeEvent, !1);
+              },
+            }),
+            [_, _],
+          );
+        return _.useMemo(
+          () =>
+            _
+              ? {
+                  reference: _,
+                  floating: _,
+                }
+              : {},
+          [_, _, _],
+        );
+      }
       let _ = 0;
       function _(_, _) {
         void 0 === _ && (_ = {});
@@ -2408,6 +2703,19 @@
           _ = _.relatedTarget;
         return !_ || !_(_, _);
       }
+      function _(_) {
+        _(_, _()).forEach((_) => {
+          (_.dataset.tabindex = _.getAttribute("tabindex") || ""),
+            _.setAttribute("tabindex", "-1");
+        });
+      }
+      function _(_) {
+        _.querySelectorAll("[data-tabindex]").forEach((_) => {
+          const _ = _.dataset.tabindex;
+          delete _.dataset.tabindex,
+            _ ? _.setAttribute("tabindex", _) : _.removeAttribute("tabindex");
+        });
+      }
       const _ = {
           border: 0,
           clip: "rect(0 0 0 0)",
@@ -2439,7 +2747,156 @@
             ..._,
           });
         }),
-        _ = _.createContext(null);
+        _ = _.createContext(null),
+        _ = _("portal");
+      function _(_) {
+        const {
+            children: _,
+            _: __webpack_require__,
+            root: _,
+            preserveTabOrder: _ = !0,
+          } = _,
+          _ = (function (_) {
+            void 0 === _ && (_ = {});
+            const { _: _, root: __webpack_require__ } = _,
+              _ = _(),
+              _ = _(),
+              [_, _] = _.useState(null),
+              _ = _.useRef(null);
+            return (
+              _(
+                () => () => {
+                  null == _ || _.remove(),
+                    queueMicrotask(() => {
+                      _.current = null;
+                    });
+                },
+                [_],
+              ),
+              _(() => {
+                if (!_) return;
+                if (_.current) return;
+                const _ = _ ? document.getElementById(_) : null;
+                if (!_) return;
+                const _ = document.createElement("div");
+                (_._ = _),
+                  __webpack_require__.setAttribute(_, ""),
+                  _.appendChild(_),
+                  (_.current = _),
+                  _(_);
+              }, [_, _]),
+              _(() => {
+                if (null === __webpack_require__) return;
+                if (!_) return;
+                if (_.current) return;
+                let _ =
+                  __webpack_require__ || (null == _ ? void 0 : _.portalNode);
+                _ && !(0, _._)(_) && (_ = _.current), (_ = _ || document.body);
+                let _ = null;
+                _ &&
+                  ((_ = document.createElement("div")),
+                  (_._ = _),
+                  _.appendChild(_));
+                const _ = document.createElement("div");
+                (_._ = _),
+                  _.setAttribute(_, ""),
+                  (_ = _ || _),
+                  _.appendChild(_),
+                  (_.current = _),
+                  _(_);
+              }, [_, __webpack_require__, _, _]),
+              _
+            );
+          })({
+            _: __webpack_require__,
+            root: _,
+          }),
+          [_, _] = _.useState(null),
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = _.useRef(null),
+          _ = null == _ ? void 0 : _.modal,
+          _ = null == _ ? void 0 : _.open,
+          _ = !!_ && !_.modal && _.open && _ && !(!_ && !_);
+        return (
+          _.useEffect(() => {
+            if (_ && _ && !_)
+              return (
+                _.addEventListener("focusin", _, !0),
+                _.addEventListener("focusout", _, !0),
+                () => {
+                  _.removeEventListener("focusin", _, !0),
+                    _.removeEventListener("focusout", _, !0);
+                }
+              );
+            function _(_) {
+              if (_ && _(_)) {
+                ("focusin" === _.type ? _ : _)(_);
+              }
+            }
+          }, [_, _, _]),
+          _.useEffect(() => {
+            _ && (_ || _(_));
+          }, [_, _]),
+          (0, _.jsxs)(_.Provider, {
+            value: _.useMemo(
+              () => ({
+                preserveTabOrder: _,
+                beforeOutsideRef: _,
+                afterOutsideRef: _,
+                beforeInsideRef: _,
+                afterInsideRef: _,
+                portalNode: _,
+                setFocusManagerState: _,
+              }),
+              [_, _],
+            ),
+            children: [
+              _ &&
+                _ &&
+                (0, _.jsx)(_, {
+                  "data-type": "outside",
+                  ref: _,
+                  onFocus: (_) => {
+                    if (_(_, _)) {
+                      var _;
+                      null == (_ = _.current) || _.focus();
+                    } else {
+                      const _ = _() || (null == _ ? void 0 : _.domReference);
+                      null == _ || _.focus();
+                    }
+                  },
+                }),
+              _ &&
+                _ &&
+                (0, _.jsx)("span", {
+                  "aria-owns": _._,
+                  style: _,
+                }),
+              _ && _.createPortal(_, _),
+              _ &&
+                _ &&
+                (0, _.jsx)(_, {
+                  "data-type": "outside",
+                  ref: _,
+                  onFocus: (_) => {
+                    if (_(_, _)) {
+                      var _;
+                      null == (_ = _.current) || _.focus();
+                    } else {
+                      const _ = _() || (null == _ ? void 0 : _.domReference);
+                      null == _ || _.focus(),
+                        (null == _ ? void 0 : _.closeOnFocusOut) &&
+                          (null == _ ||
+                            _.onOpenChange(!1, _.nativeEvent, "focus-out"));
+                    }
+                  },
+                }),
+            ],
+          })
+        );
+      }
       const _ = () => _.useContext(_),
         _ = "data-floating-ui-focusable";
       function _(_) {
@@ -4338,6 +4795,259 @@
           [_, _, _],
         );
       }
+      function _(_, _) {
+        const [__webpack_require__, _] = _;
+        let _ = !1;
+        const _ = _.length;
+        for (let _ = 0, _ = _ - 1; _ < _; _ = _++) {
+          const [_, _] = _[_] || [0, 0],
+            [_, _] = _[_] || [0, 0];
+          _ >= _ != _ >= _ &&
+            __webpack_require__ <= ((_ - _) * (_ - _)) / (_ - _) + _ &&
+            (_ = !_);
+        }
+        return _;
+      }
+      function _(_) {
+        void 0 === _ && (_ = {});
+        const {
+          buffer: _ = 0.5,
+          blockPointerEvents: __webpack_require__ = !1,
+          requireIntent: _ = !0,
+        } = _;
+        let _,
+          _ = !1,
+          _ = null,
+          _ = null,
+          _ = performance.now();
+        const _ = (_) => {
+          let {
+            _: __webpack_require__,
+            _: _,
+            placement: _,
+            elements: _,
+            onClose: _,
+            nodeId: _,
+            tree: _,
+          } = _;
+          return function (_) {
+            function _() {
+              clearTimeout(_), _();
+            }
+            if (
+              (clearTimeout(_),
+              !_.domReference ||
+                !_.floating ||
+                null == _ ||
+                null == __webpack_require__ ||
+                null == _)
+            )
+              return;
+            const { clientX: _, clientY: _ } = _,
+              _ = [_, _],
+              _ = _(_),
+              _ = "mouseleave" === _.type,
+              _ = _(_.floating, _),
+              _ = _(_.domReference, _),
+              _ = _.domReference.getBoundingClientRect(),
+              _ = _.floating.getBoundingClientRect(),
+              _ = _.split("-")[0],
+              _ = __webpack_require__ > _.right - _.width / 2,
+              _ = _ > _.bottom - _.height / 2,
+              _ = (function (_, _) {
+                return (
+                  _[0] >= _._ &&
+                  _[0] <= _._ + _.width &&
+                  _[1] >= _._ &&
+                  _[1] <= _._ + _.height
+                );
+              })(_, _),
+              _ = _.width > _.width,
+              _ = _.height > _.height,
+              _ = (_ ? _ : _).left,
+              _ = (_ ? _ : _).right,
+              _ = (_ ? _ : _).top,
+              _ = (_ ? _ : _).bottom;
+            if (_ && ((_ = !0), !_)) return;
+            if ((_ && (_ = !1), _ && !_)) return void (_ = !0);
+            if (
+              _ &&
+              (0, _._)(_.relatedTarget) &&
+              _(_.floating, _.relatedTarget)
+            )
+              return;
+            if (
+              _ &&
+              _(_.nodesRef.current, _).some((_) => {
+                let { context: _ } = _;
+                return null == _ ? void 0 : _.open;
+              })
+            )
+              return;
+            if (
+              ("top" === _ && _ >= _.bottom - 1) ||
+              ("bottom" === _ && _ <= _.top + 1) ||
+              ("left" === _ && __webpack_require__ >= _.right - 1) ||
+              ("right" === _ && __webpack_require__ <= _.left + 1)
+            )
+              return _();
+            let _ = [];
+            switch (_) {
+              case "top":
+                _ = [
+                  [_, _.top + 1],
+                  [_, _.bottom - 1],
+                  [_, _.bottom - 1],
+                  [_, _.top + 1],
+                ];
+                break;
+              case "bottom":
+                _ = [
+                  [_, _.top + 1],
+                  [_, _.bottom - 1],
+                  [_, _.bottom - 1],
+                  [_, _.top + 1],
+                ];
+                break;
+              case "left":
+                _ = [
+                  [_.right - 1, _],
+                  [_.right - 1, _],
+                  [_.left + 1, _],
+                  [_.left + 1, _],
+                ];
+                break;
+              case "right":
+                _ = [
+                  [_.right - 1, _],
+                  [_.right - 1, _],
+                  [_.left + 1, _],
+                  [_.left + 1, _],
+                ];
+            }
+            if (!_([_, _], _)) {
+              if (_ && !_) return _();
+              if (!_ && _) {
+                const _ = (function (_, _) {
+                  const _ = performance.now(),
+                    _ = _ - _;
+                  if (null === _ || null === _ || 0 === _)
+                    return (_ = _), (_ = _), (_ = _), null;
+                  const _ = _ - _,
+                    _ = _ - _,
+                    _ = Math.sqrt(_ * _ + _ * _);
+                  return (_ = _), (_ = _), (_ = _), _ / _;
+                })(_.clientX, _.clientY);
+                if (null !== _ && _ < 0.1) return _();
+              }
+              _(
+                [_, _],
+                (function (_) {
+                  let [__webpack_require__, _] = _;
+                  switch (_) {
+                    case "top":
+                      return [
+                        [
+                          _
+                            ? __webpack_require__ + _ / 2
+                            : _
+                              ? __webpack_require__ + 4 * _
+                              : __webpack_require__ - 4 * _,
+                          _ + _ + 1,
+                        ],
+                        [
+                          _
+                            ? __webpack_require__ - _ / 2
+                            : _
+                              ? __webpack_require__ + 4 * _
+                              : __webpack_require__ - 4 * _,
+                          _ + _ + 1,
+                        ],
+                        ...[
+                          [_.left, _ || _ ? _.bottom - _ : _.top],
+                          [
+                            _.right,
+                            _ ? (_ ? _.bottom - _ : _.top) : _.bottom - _,
+                          ],
+                        ],
+                      ];
+                    case "bottom":
+                      return [
+                        [
+                          _
+                            ? __webpack_require__ + _ / 2
+                            : _
+                              ? __webpack_require__ + 4 * _
+                              : __webpack_require__ - 4 * _,
+                          _ - _,
+                        ],
+                        [
+                          _
+                            ? __webpack_require__ - _ / 2
+                            : _
+                              ? __webpack_require__ + 4 * _
+                              : __webpack_require__ - 4 * _,
+                          _ - _,
+                        ],
+                        ...[
+                          [_.left, _ || _ ? _.top + _ : _.bottom],
+                          [_.right, _ ? (_ ? _.top + _ : _.bottom) : _.top + _],
+                        ],
+                      ];
+                    case "left": {
+                      const _ = [
+                          __webpack_require__ + _ + 1,
+                          _ ? _ + _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
+                        ],
+                        _ = [
+                          __webpack_require__ + _ + 1,
+                          _ ? _ - _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
+                        ];
+                      return [
+                        ...[
+                          [_ || _ ? _.right - _ : _.left, _.top],
+                          [
+                            _ ? (_ ? _.right - _ : _.left) : _.right - _,
+                            _.bottom,
+                          ],
+                        ],
+                        _,
+                        _,
+                      ];
+                    }
+                    case "right":
+                      return [
+                        [
+                          __webpack_require__ - _,
+                          _ ? _ + _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
+                        ],
+                        [
+                          __webpack_require__ - _,
+                          _ ? _ - _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
+                        ],
+                        ...[
+                          [_ || _ ? _.left + _ : _.right, _.top],
+                          [
+                            _ ? (_ ? _.left + _ : _.right) : _.left + _,
+                            _.bottom,
+                          ],
+                        ],
+                      ];
+                  }
+                })([__webpack_require__, _]),
+              )
+                ? !_ && _ && (_ = window.setTimeout(_, 40))
+                : _();
+            }
+          };
+        };
+        return (
+          (_.__options = {
+            blockPointerEvents: __webpack_require__,
+          }),
+          _
+        );
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -4357,8 +5067,8 @@
           #t;
           #n;
           #r;
-          #i;
           #o;
+          #i;
           #s;
           #u;
           constructor(_, _, _) {
@@ -4366,13 +5076,13 @@
               (this.#e = _),
               (this.#r = _),
               (this.#n = []),
-              (this.#i = []),
+              (this.#o = []),
               (this.#t = []),
               this.setQueries(_);
           }
           onSubscribe() {
             1 === this.listeners.size &&
-              this.#i.forEach((_) => {
+              this.#o.forEach((_) => {
                 _.subscribe((_) => {
                   this.#c(_, _);
                 });
@@ -4383,7 +5093,7 @@
           }
           destroy() {
             (this.listeners = new Set()),
-              this.#i.forEach((_) => {
+              this.#o.forEach((_) => {
                 _.destroy();
               });
           }
@@ -4391,8 +5101,8 @@
             (this.#n = _),
               (this.#r = _),
               _._.batch(() => {
-                const _ = this.#i,
-                  _ = this.#a(this.#n);
+                const _ = this.#o,
+                  _ = this.#l(this.#n);
                 _.forEach((_) =>
                   _.observer.setOptions(_.defaultedQueryOptions, _),
                 );
@@ -4400,7 +5110,7 @@
                   _ = _.map((_) => _.getCurrentResult()),
                   _ = _.some((_, _) => _ !== _[_]);
                 (_.length !== _.length || _) &&
-                  ((this.#i = _),
+                  ((this.#o = _),
                   (this.#t = _),
                   this.hasListeners() &&
                     (_(_, _).forEach((_) => {
@@ -4411,26 +5121,26 @@
                         this.#c(_, _);
                       });
                     }),
-                    this.#l()));
+                    this.#a()));
               });
           }
           getCurrentResult() {
             return this.#t;
           }
           getQueries() {
-            return this.#i.map((_) => _.getCurrentQuery());
+            return this.#o.map((_) => _.getCurrentQuery());
           }
           getObservers() {
-            return this.#i;
+            return this.#o;
           }
           getOptimisticResult(_, _) {
-            const _ = this.#a(_).map((_) =>
+            const _ = this.#l(_).map((_) =>
               _.observer.getOptimisticResult(_.defaultedQueryOptions),
             );
             return [_, (_) => this.#f(_ ?? _, _), () => this.#d(_, _)];
           }
           #d(_, _) {
-            const _ = this.#a(_);
+            const _ = this.#l(_);
             return __webpack_require__.map((_, _) => {
               const _ = _[_];
               return _.defaultedQueryOptions.notifyOnChangeProps
@@ -4444,15 +5154,15 @@
           }
           #f(_, _) {
             return _
-              ? ((this.#o && this.#t === this.#u && _ === this.#s) ||
+              ? ((this.#i && this.#t === this.#u && _ === this.#s) ||
                   ((this.#s = _),
                   (this.#u = this.#t),
-                  (this.#o = (0, _._)(this.#o, _(_)))),
-                this.#o)
+                  (this.#i = (0, _._)(this.#i, _(_)))),
+                this.#i)
               : _;
           }
-          #a(_) {
-            const _ = new Map(this.#i.map((_) => [_.options.queryHash, _])),
+          #l(_) {
+            const _ = new Map(this.#o.map((_) => [_.options.queryHash, _])),
               _ = [];
             return (
               _.forEach((_) => {
@@ -4472,17 +5182,17 @@
             );
           }
           #c(_, _) {
-            const _ = this.#i.indexOf(_);
+            const _ = this.#o.indexOf(_);
             -1 !== _ &&
               ((this.#t = (function (_, _, _) {
                 const _ = _.slice(0);
                 return (_[_] = _), _;
               })(this.#t, _, _)),
-              this.#l());
+              this.#a());
           }
-          #l() {
+          #a() {
             if (this.hasListeners()) {
-              this.#o !==
+              this.#i !==
                 this.#f(this.#d(this.#t, this.#n), this.#r?.combine) &&
                 _._.batch(() => {
                   this.listeners.forEach((_) => {

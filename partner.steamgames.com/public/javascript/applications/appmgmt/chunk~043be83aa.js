@@ -610,7 +610,13 @@
     },
     41324: (s, e, r) => {
       "use strict";
-      r.d(e, { Fd: () => m, ti: () => n, To: () => c, mz: () => a });
+      r.d(e, {
+        Fd: () => m,
+        ti: () => n,
+        To: () => c,
+        w7: () => l,
+        mz: () => a,
+      });
       var p = r(10430);
       const o = p.IE.reduce((s, e, r) => ((s[e] = r), s), {});
       function t(s, e) {
@@ -705,6 +711,9 @@
       }
       function c(s, e) {
         return s.startsWith("text") ? `var(--color-${s}-${e})` : m(s);
+      }
+      function l(s) {
+        return s.startsWith("text") ? `var(--color-${s})` : m(s);
       }
     },
     20187: (s, e, r) => {

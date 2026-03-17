@@ -28,6 +28,10 @@ a.nohover:hover {
 	text-decoration: none;
 }
 
+b {
+	font-weight: bold;
+}
+
 textarea
 {
 			font-family: "Motiva Sans", Sans-serif;

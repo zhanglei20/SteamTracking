@@ -1405,7 +1405,8 @@ GHomepage = {
 			let $ReasonMain = $J('<div/>').addClass('main').addClass('default');
 			if ( rgItemData.early_access )
 			{
-				strStatus = 'Early Access Now Available';
+				let $EarlyAccessReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( 'Now available in <strong>Early Access</strong>' );
+				$EarlyAccessReason.appendTo( $ReasonMain );
 			}
 			else if ( rgItemData.popular_new_on_steam )
 			{
@@ -1413,7 +1414,14 @@ GHomepage = {
 			}
 			else if ( rgItemData && rgItemData.coming_soon )
 			{
-				strStatus = 'Pre-Purchase Now';
+				let $PrePurchaseReason =  $J( '<div/>', { 'class': 'main_reason' } ).html( '<strong>Pre-Purchase</strong> now' );
+				if ( rgItemData.coming_soon_string )
+				{
+					const $ComingSoonString = $J( '<div/>', { 'class': 'reason_subtext' } ).text( rgItemData.coming_soon_string );
+					$PrePurchaseReason.append( $ComingSoonString );
+				}
+
+				$PrePurchaseReason.appendTo( $ReasonMain );
 			}
 			else if ( rgItemData && rgItemData.video )
 			{
@@ -3845,14 +3853,25 @@ GHomepage = {
 			{
 				if ( GHomepage.rgAltBackgroundDef.strPageBackgroundWebM && !GDynamicStore.s_preferences.disable_microtrailers )
 				{
-					$J('.fullscreen-bg__video').attr('src', GHomepage.rgAltBackgroundDef.strPageBackgroundWebM );
-					$J('.fullscreen-bg__video').attr('poster', GHomepage.rgAltBackgroundDef.strPageBackgroundURL );
-					$J('.fullscreen-bg__video').get( 0 ).play();
+					let elVideo = $J('.fullscreen-bg__video')[0];
+					if ( elVideo )
+					{
+						let $HomeBody = $J('.home_page_body_ctn' );
+						$HomeBody.addClass( 'transition_header' );
+						elVideo.addEventListener( "transitionend", function fnLoadData() {
+							elVideo.src = GHomepage.rgAltBackgroundDef.strPageBackgroundWebM;
+							elVideo.poster = GHomepage.rgAltBackgroundDef.strPageBackgroundURL;
+							elVideo.load();
+							elVideo.addEventListener( "canplay", function fnPlayVideo() {
+								$HomeBody.removeClass( 'transition_header') ;
+								elVideo.play();
+							}, { once: true } );
+						}, { once: true } );
+					}
 				}
 
 				$J('.page_background_holder').css('background-image', 'url(' + GHomepage.rgAltBackgroundDef.strPageBackgroundURL + ')');
 			}
-
 			$J( '.page_background_overlay' ).addClass( 'alternate' );
 		}
 		else

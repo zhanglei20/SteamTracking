@@ -1752,50 +1752,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1866,6 +1826,42 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -1904,7 +1900,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -1930,7 +1925,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -1960,12 +1954,10 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2023,7 +2015,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2071,6 +2062,16 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
@@ -2084,19 +2085,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2105,7 +2093,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2159,7 +2146,6 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2187,7 +2173,6 @@
           (_.Fragment,
           _.lazy(() =>
             Promise.all([
-              __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
               __webpack_require__._("chunkid"),
@@ -5082,11 +5067,11 @@
           _ = 0,
           _ = _;
         for (; _; ) {
-          if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
+          if ("ownerDocument" in _) {
             const _ = window.getComputedStyle(_);
             if ("fixed" === _.position || "sticky" === _.position) break;
           }
-          _ = _.offsetParent;
+          (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
         }
         for (_ = _?.parentElement; _; ) {
           const { scrollTop: _, scrollLeft: _ } = _(_);
@@ -12585,6 +12570,11 @@
                     _: !0,
                     _: !0,
                   },
+                  purchase_description: {
+                    _: 72,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -12706,7 +12696,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.included_apps || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+            _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -12724,6 +12714,12 @@
                   },
                   included_packages: {
                     _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  included_bundles: {
+                    _: 3,
                     _: _,
                     _: !0,
                     _: !0,
@@ -18583,21 +18579,18 @@
         for (; _; ) {
           if (_(_)) {
             const _ = window.getComputedStyle(_);
+            if ("fixed" == _.position || "sticky" == _.position) break;
             if (
               !(
                 (_ && "x" != _) ||
-                ("scroll" != _.overflowX &&
-                  "auto" != _.overflowX &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowX && "auto" != _.overflowX)
               )
             )
               break;
             if (
               !(
                 (_ && "y" != _) ||
-                ("scroll" != _.overflowY &&
-                  "auto" != _.overflowY &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowY && "auto" != _.overflowY)
               )
             )
               break;
@@ -19419,14 +19412,7 @@
       }
       function _(_) {
         const _ = (0, _._)();
-        return (0, _._)(
-          (function (_, _) {
-            return {
-              ..._(_, _),
-              staleTime: 6e5,
-            };
-          })(_, _),
-        );
+        return (0, _._)(_(_, _));
       }
       function _(_) {
         const _ = (0, _._)();
@@ -19436,7 +19422,10 @@
             : (function (_, _) {
                 return {
                   ..._(_, _),
-                  select: (_) => (_ ? _[0] : null),
+                  select: (_) =>
+                    _?.purchase_options && _.purchase_options.length > 0
+                      ? _.purchase_options[0]
+                      : null,
                   staleTime: 6e5,
                 };
               })(_, _),
@@ -19503,9 +19492,6 @@
       function _(_, _) {
         return _(_, _, "include_platforms", "platforms");
       }
-      function _(_, _) {
-        return _(_, _, "include_all_purchase_options", "purchase_options");
-      }
       function _(_) {
         return (
           !!_ &&
@@ -19539,6 +19525,22 @@
           ..._(_, _),
           select: (_) => _.best_purchase_option || null,
           staleTime: 6e5,
+        };
+      }
+      function _(_, _) {
+        const _ = "include_all_purchase_options";
+        return {
+          queryKey: _(_, _),
+          queryFn: async () => {
+            const _ = await _(_, _, _);
+            return {
+              purchase_options: _.purchase_options,
+              invalid_purchase_options: _.invalid_purchase_options,
+              accessories: _.accessories,
+            };
+          },
+          staleTime: 6e5,
+          enabled: _(_),
         };
       }
       function _(_, _) {
@@ -19599,7 +19601,11 @@
             })(_, _, _),
           _.include_all_purchase_options &&
             (function (_, _, _) {
-              _(_, _, _, "include_all_purchase_options", "purchase_options");
+              _.setQueryData(_(_, "include_all_purchase_options"), {
+                purchase_options: _.purchase_options,
+                invalid_purchase_options: _.invalid_purchase_options,
+                accessories: _.accessories,
+              });
             })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -19607,6 +19613,9 @@
               _(_, _, _.included_item_data_request),
             ),
             _.included_items?.included_packages?.forEach((_) =>
+              _(_, _, _.included_item_data_request),
+            ),
+            _.included_items?.included_bundles?.forEach((_) =>
               _(_, _, _.included_item_data_request),
             )));
       }
@@ -19619,6 +19628,7 @@
         "game_rating",
         "purchase_options",
         "accessories",
+        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
@@ -40471,6 +40481,7 @@
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
           CLIENT_SESSION: 0,
+          NOW: 0,
         },
         _ = {
           logged_in: !1,

@@ -90,6 +90,7 @@ var CLSTAMP = "steamdb";
       USE_LONGEST_LOC_STRING: !1,
       SILENT_STARTUP: !1,
       CLIENT_SESSION: 0,
+      NOW: 0,
     },
     _ = {
       logged_in: !1,

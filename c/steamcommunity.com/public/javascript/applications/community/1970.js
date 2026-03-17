@@ -208,7 +208,11 @@
 	"moderatormessage_count_contentremoval": "إخطارات إزالة المحتوى: %1$s",
 	"reportforumpost_reason_notfound": "أخرى",
 	"reportedcontent_error": "حدث خطأ. يرجى المحاولة مرة أخرى لاحقًا.",
-	"moderatedcontent_submit_dispute_title": "إدارة النزاعات"
+	"moderatedcontent_submit_dispute_title": "إدارة النزاعات",
+	"anonymousreport_signin": "تسجيل الدخول",
+	"anonymousreport_join": "انضم إلى Steam",
+	"anonymousreport_createaccount": "إنشاء حساب",
+	"anonymousreport_signin_or_join": "%1$s أو %2$s"
 }`);
     },
   },

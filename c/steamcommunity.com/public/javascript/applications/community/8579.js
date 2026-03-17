@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Vi har afsluttet vores gennemgang af din indsigelse angående %1$s.",
 	"moderatedcontent_dispute_sanctioned_2": "Efter en ny grundig vurdering har vi besluttet at fastholde vores oprindelige beslutning. Indholdet forbliver fjernet eller begrænset, og relaterede foranstaltninger på kontoniveau gælder fortsat. Denne afgørelse blev nået efter en gennemgang af indholdet i dets kontekst, informationen i din indsigelse og de relevante platformsregler og juridiske standarder.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Hvis du er uenig i afgørelsen, kan du finde en løsning gennem en anerkendt udenretslig tvistbilæggelsesmyndighed eller søge retslig afhjælpning ved en kompetent domstol.",
+	"anonymousreport_title": "Rapportér dette indhold",
+	"anonymousreport_description": "Log på Steam-fællesskabet for at rapportere upassende eller ulovligt indhold.",
+	"anonymousreport_footer": "Hvis du ikke kan logge på, kan du <1>rapportere indholdet anonymt</1>..",
+	"anonymousreport_footer_action": "rapportere indholdet anonymt",
+	"anonymousreport_signin": "Log ind",
+	"anonymousreport_join": "Tilmeld dig Steam",
+	"anonymousreport_createaccount": "Opret konto",
+	"anonymousreport_signin_or_join": "%1$s eller %2$s",
 	"nocomma": ""
 }`);
     },

@@ -5301,6 +5301,7 @@
           return this.m_timelineMask.GetTimelineStartTime(_);
         }
         ConvertGlobalMSToClipOrNone(_) {
+          if (!this.m_timelineMask) return null;
           const _ = this.m_timelineMask.GetTimelineOffsetFromGlobal(_, 0);
           if (!_) return null;
           const { nTimelineOffsetMS: __webpack_require__, strTimelineID: _ } =
@@ -6336,12 +6337,14 @@
               (0, _.jsx)(_._, {
                 onSelected: () => {
                   const {
-                    strTimelineID: _,
-                    nTimelineOffsetMS: __webpack_require__,
-                  } = _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
+                      strTimelineID: _,
+                      nTimelineOffsetMS: __webpack_require__,
+                    } = _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS),
+                    _ = _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_),
+                    _ = (0, _._)(__webpack_require__.valMS + _);
                   !(function (_, _, _) {
                     null != _() && _().TakeScreenshot(_, _, _.valMS);
-                  })(_.GetGameID(), _, __webpack_require__);
+                  })(_.GetGameID(), _, _);
                 },
                 className: _.TimelineContextMenuItem,
                 children: (0, _.jsxs)("div", {

@@ -128,6 +128,13 @@
         HoverPositionOuter: "_2_lmTz0tA4NOSle5WaO1PZ",
       };
     },
+    31047: (e) => {
+      e.exports = {
+        DescriptionText: "_2yUdCFZzHG88b4NJfKsilX",
+        AnonymousNotice: "_2nf3Oc6BPDa2m1x00QidHg",
+        SignInButtonContainer: "_1BnHE1R4158RM38jmASodM",
+      };
+    },
     15339: (e) => {
       e.exports = {
         ContentReportDialog: "_1nRygtq_ihqZUjZS4TYN8n",
@@ -915,7 +922,7 @@
       }
       (n.keys = () => Object.keys(i)), (n.id = 68042), (e.exports = n);
     },
-    38803: (e, t, r) => {
+    80131: (e, t, r) => {
       "use strict";
       r(23808), r(83977);
       var i = r(90626),
@@ -1709,9 +1716,10 @@
         TryRootButtonListeners(e) {
           for (const { button: t, fnCallback: r } of this
             .m_rgGlobalButtonHandlers)
-            if (t == e.detail.button && !1 !== r(e)) return !0;
-          for (const t of this.m_rgOnUnhandledButton) if (t(e)) return !0;
-          return !1;
+            if (t == e.detail.button && !1 !== r(e)) return !1;
+          for (const t of this.m_rgOnUnhandledButton)
+            if (!1 !== t(e)) return !1;
+          return !0;
         }
         HandleButtonDownEventAsLogicalEvent(e) {
           let { bUnhandled: t, bHadLogicalEventMapping: r } = (0, _e.IA)(e);
@@ -1719,7 +1727,7 @@
             ze(
               `Logical gamepad Event fired: ${Be.pR[e.detail.button]}, had logical event: ${r}, was handled: ${!t}`,
             ),
-            t && (t = !this.TryRootButtonListeners(e)),
+            t && (t = this.TryRootButtonListeners(e)),
             t && (t = this.m_Controller.FireUnhandledGamepadEventCallbacks(e)),
             e.stopPropagation(),
             t
@@ -2705,9 +2713,82 @@
       }
       var Ve = r(7860),
         Ze = r(18663),
-        Ke = r(47132),
-        $e = r(96146);
-      const Qe = i.lazy(() =>
+        Ke = r(38455),
+        $e = r(96146),
+        Qe = r(9154),
+        Ye = r(31047),
+        Xe = r(8527),
+        Je = r(63275);
+      function et(e, ...t) {
+        const r = [],
+          n = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+        let s,
+          a = 0;
+        for (; (s = n.exec(e)); ) {
+          (a += s[0].length), r.push(s[1]);
+          const e = parseInt(s[2]),
+            n = s[3] || "",
+            o = et(n, ...t),
+            l = (e >= 1 && e <= t.length ? t[e - 1] : null)
+              ? i.cloneElement(t[e - 1], {}, n ? o : null)
+              : n;
+          r.push(l);
+        }
+        return r.push(e.substr(a)), i.createElement(i.Fragment, null, ...r);
+      }
+      function tt(e) {
+        const [t, r] = (0, i.useState)(!1);
+        (0, i.useEffect)(() => {
+          document
+            .getElementById(e.anchorId)
+            .addEventListener("click", () => r(!0));
+        }, [e.anchorId]);
+        const s = `/login/?redir=${encodeURIComponent(window.location.href)}`,
+          a = `${Xe.TS.STORE_BASE_URL}/join/`,
+          o = `${Xe.TS.HELP_BASE_URL}wizard/HelpWithAnonymousContentReport`;
+        return t
+          ? (0, n.jsx)(Qe.EN, {
+              active: t,
+              children: (0, n.jsxs)(Qe.eV, {
+                closeModal: () => r(!1),
+                title: Je.u.Localize("#anonymousreport_title"),
+                children: [
+                  (0, n.jsx)(f.Z, {
+                    className: Ye.DescriptionText,
+                    children: Je.u.Localize("#anonymousreport_description"),
+                  }),
+                  (0, n.jsx)(f.Z, {
+                    className: Ye.AnonymousNotice,
+                    children: et(
+                      Je.u.Localize("#anonymousreport_footer"),
+                      (0, n.jsx)(W.Ii, { href: o }),
+                    ),
+                  }),
+                  (0, n.jsxs)(f.Z, {
+                    className: Ye.SignInButtonContainer,
+                    children: [
+                      (0, n.jsx)(W.Ii, {
+                        href: s,
+                        children: (0, n.jsx)(O.jn, {
+                          children: Je.u.Localize("#anonymousreport_signin"),
+                        }),
+                      }),
+                      (0, n.jsx)(W.Ii, {
+                        href: a,
+                        children: (0, n.jsx)(O.$n, {
+                          children: Je.u.Localize(
+                            "#anonymousreport_createaccount",
+                          ),
+                        }),
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            })
+          : null;
+      }
+      const rt = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2723,7 +2804,7 @@
             r.e(8138),
           ]).then(r.bind(r, 79487)),
         ),
-        Ye = i.lazy(() =>
+        it = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2752,7 +2833,7 @@
             r.e(4268),
           ]).then(r.bind(r, 5901)),
         ),
-        Xe = i.lazy(() =>
+        nt = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2780,9 +2861,9 @@
             r.e(8780),
             r.e(9855),
             r.e(6662),
-          ]).then(r.bind(r, 3675)),
+          ]).then(r.bind(r, 55395)),
         ),
-        Je = i.lazy(() =>
+        st = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2811,12 +2892,12 @@
             r.e(258),
           ]).then(r.bind(r, 98378)),
         ),
-        et = i.lazy(() =>
+        at = i.lazy(() =>
           Promise.all([r.e(5633), r.e(4317), r.e(5263), r.e(7561)]).then(
             r.bind(r, 80837),
           ),
         ),
-        tt = i.lazy(() =>
+        ot = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2845,7 +2926,7 @@
             r.e(2079),
           ]).then(r.bind(r, 35261)),
         ),
-        rt = i.lazy(() =>
+        lt = i.lazy(() =>
           Promise.all([
             r.e(2667),
             r.e(9773),
@@ -2854,8 +2935,8 @@
             r.e(1220),
           ]).then(r.bind(r, 47004)),
         ),
-        it = i.lazy(() => r.e(9129).then(r.bind(r, 50463))),
-        nt = i.lazy(() =>
+        ct = i.lazy(() => r.e(9129).then(r.bind(r, 50463))),
+        ut = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2878,7 +2959,7 @@
             r.e(3781),
           ]).then(r.bind(r, 70450)),
         ),
-        st = i.lazy(() =>
+        dt = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2902,7 +2983,7 @@
             r.e(8521),
           ]).then(r.bind(r, 67318)),
         ),
-        at = i.lazy(() =>
+        mt = i.lazy(() =>
           Promise.all([
             r.e(8589),
             r.e(7596),
@@ -2913,12 +2994,12 @@
             r.e(5836),
           ]).then(r.bind(r, 45048)),
         ),
-        ot = i.lazy(() =>
+        gt = i.lazy(() =>
           Promise.all([r.e(8589), r.e(4731), r.e(6966)]).then(r.bind(r, 42144)),
         ),
-        lt = i.lazy(() => r.e(349).then(r.bind(r, 36424))),
-        ct = i.lazy(() => r.e(2092).then(r.bind(r, 92598))),
-        ut = i.lazy(() =>
+        pt = i.lazy(() => r.e(349).then(r.bind(r, 36424))),
+        ht = i.lazy(() => r.e(2092).then(r.bind(r, 92598))),
+        _t = i.lazy(() =>
           Promise.all([
             r.e(9436),
             r.e(2006),
@@ -2929,7 +3010,7 @@
             r.e(976),
           ]).then(r.bind(r, 24830)),
         ),
-        dt = i.lazy(() =>
+        Bt = i.lazy(() =>
           Promise.all([
             r.e(9436),
             r.e(2006),
@@ -2940,12 +3021,12 @@
             r.e(6893),
           ]).then(r.bind(r, 32664)),
         ),
-        mt = i.lazy(() =>
+        bt = i.lazy(() =>
           Promise.all([r.e(9436), r.e(5329), r.e(8829), r.e(3156)]).then(
             r.bind(r, 63165),
           ),
         ),
-        gt = i.lazy(() =>
+        ft = i.lazy(() =>
           Promise.all([
             r.e(8415),
             r.e(3359),
@@ -2955,7 +3036,7 @@
             r.e(7331),
           ]).then(r.bind(r, 65423)),
         ),
-        pt = i.lazy(() =>
+        wt = i.lazy(() =>
           Promise.all([
             r.e(8415),
             r.e(3359),
@@ -2965,7 +3046,7 @@
             r.e(7331),
           ]).then(r.bind(r, 55435)),
         ),
-        ht = i.lazy(() =>
+        Mt = i.lazy(() =>
           Promise.all([
             r.e(8415),
             r.e(3359),
@@ -2975,29 +3056,29 @@
             r.e(7331),
           ]).then(r.bind(r, 37646)),
         ),
-        _t = i.Fragment,
-        Bt = () => (R.UF.IS_OGG ? "games" : "groups"),
-        bt = {
+        yt = i.Fragment,
+        vt = () => (R.UF.IS_OGG ? "games" : "groups"),
+        St = {
           DiagData: () => "/:anything*/diagdata",
           Login: () => "/login",
           LegacyLogin: () => "/login/home",
           OAuthLogin: () => "/oauth/loginform",
           OpenidLogin: () => "/openid/loginform",
           EventsInternal: () => "/(migrateevents|migrate)",
-          EventEditor: (e) => `/${Bt()}/${e}/partnerevents`,
-          EventReaders: (e) => `/${Bt()}/${e}/(events|announcements)`,
+          EventEditor: (e) => `/${vt()}/${e}/partnerevents`,
+          EventReaders: (e) => `/${vt()}/${e}/(events|announcements)`,
           HubPublishedFiles: (e) => `/app/${e}/(images|screenshots)/`,
           HubRoot: (e) => `/app/${e}(/workshop/)?`,
           HubUGC: (e) => `/app/${e}/videos/`,
           GroupRoot: (e) => `/groups/${e}/`,
           ProfileVanity: (e, t) => `/id/${e}${t ? `/${t}` : ""}`,
           ProfileSteamID: (e, t) => `/profiles/${e}${t ? `/${t}` : ""}`,
-          ProfileVanityGamesList: (e) => bt.ProfileVanity(e, "games"),
-          ProfileSteamIDGamesList: (e) => bt.ProfileSteamID(e, "games"),
+          ProfileVanityGamesList: (e) => St.ProfileVanity(e, "games"),
+          ProfileSteamIDGamesList: (e) => St.ProfileSteamID(e, "games"),
           ProfileVanityItemCollection: (e) =>
-            `${bt.ProfileVanity(e)}/itemcollection`,
+            `${St.ProfileVanity(e)}/itemcollection`,
           ProfileSteamIDItemCollection: (e) =>
-            `${bt.ProfileSteamID(e)}/itemcollection`,
+            `${St.ProfileSteamID(e)}/itemcollection`,
           UGCDetailsPage: () => "/:anything/filedetails",
           UserReviewRewardAppVanity: () =>
             "/id/:vanity_url/recommended/:appid/",
@@ -3015,9 +3096,9 @@
           QuestionsApp: () => "/questions/",
           ConferenceApp: () => "/(conference|steamworksvirtualconference)/",
           ProfileVanityNotifications: (e) =>
-            `${bt.ProfileVanity(e)}/notifications`,
+            `${St.ProfileVanity(e)}/notifications`,
           ProfileSteamIDNotifications: (e) =>
-            `${bt.ProfileSteamID(e)}/notifications`,
+            `${St.ProfileSteamID(e)}/notifications`,
           Market: () => "/market",
           MarketSearch: () => "/market/search",
           TradeOfferNew: () => "/tradeoffer/new/",
@@ -3025,13 +3106,13 @@
           ...{},
           CommunityHomeRoot: () => "/",
         };
-      class ft extends i.Component {
+      class Ct extends i.Component {
         render() {
           return (0, n.jsx)(a.Kd, {
-            basename: vt(),
-            children: (0, n.jsxs)(wt, {
+            basename: xt(),
+            children: (0, n.jsxs)(Rt, {
               children: [
-                (0, n.jsx)(Mt, {}),
+                (0, n.jsx)(zt, {}),
                 (0, n.jsxs)(i.Suspense, {
                   fallback: null,
                   children: [
@@ -3039,7 +3120,7 @@
                       children: [
                         (0, n.jsx)(o.qh, {
                           exact: !0,
-                          path: bt.DiagData(),
+                          path: St.DiagData(),
                           render: (e) =>
                             (0, i.createElement)(h.z, {
                               ...e,
@@ -3048,47 +3129,47 @@
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: [bt.Login(), bt.LegacyLogin(), bt.OAuthLogin()],
+                          path: [St.Login(), St.LegacyLogin(), St.OAuthLogin()],
                           children: (0, n.jsx)(re.X, {
-                            config: { login: (e) => (0, n.jsx)(ot, { ...e }) },
+                            config: { login: (e) => (0, n.jsx)(gt, { ...e }) },
                           }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            bt.Login(),
-                            bt.LegacyLogin(),
-                            bt.OpenidLogin(),
+                            St.Login(),
+                            St.LegacyLogin(),
+                            St.OpenidLogin(),
                           ],
                           children: (0, n.jsx)(re.X, {
-                            config: { login: (e) => (0, n.jsx)(ot, { ...e }) },
+                            config: { login: (e) => (0, n.jsx)(gt, { ...e }) },
                           }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.EventEditor(":appid_or_vanity_str"),
-                          component: Xe,
+                          path: St.EventEditor(":appid_or_vanity_str"),
+                          component: nt,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.EventsInternal(),
-                          component: Je,
+                          path: St.EventsInternal(),
+                          component: st,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.EventReaders(":appid_or_vanity_str"),
-                          component: Ye,
+                          path: St.EventReaders(":appid_or_vanity_str"),
+                          component: it,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.BroadcastApp(),
-                          component: tt,
+                          path: St.BroadcastApp(),
+                          component: ot,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.HubPublishedFiles(":appid"),
+                          path: St.HubPublishedFiles(":appid"),
                           render: (e) =>
                             (0, n.jsx)(re.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(Ye, {}),
+                                "apphub-events": () => (0, n.jsx)(it, {}),
                                 "apphub-ugcrewards": () =>
-                                  (0, n.jsx)(et, { ...e }),
+                                  (0, n.jsx)(at, { ...e }),
                                 "community-awards": () =>
-                                  (0, n.jsx)(et, { ...e }),
+                                  (0, n.jsx)(at, { ...e }),
                                 "community-app-social-media": (e) =>
                                   (0, n.jsx)(Ze.wo, { ...e }),
                                 "ugc-file-content-moderation-report-dialog": (
@@ -3101,112 +3182,112 @@
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.HubRoot(":appid"),
+                          path: St.HubRoot(":appid"),
                           render: (e) =>
                             (0, n.jsx)(re.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(Ye, {}),
+                                "apphub-events": () => (0, n.jsx)(it, {}),
                                 "apphub-ugcrewards": () =>
-                                  (0, n.jsx)(et, { ...e }),
+                                  (0, n.jsx)(at, { ...e }),
                                 "community-awards": () =>
-                                  (0, n.jsx)(et, { ...e }),
+                                  (0, n.jsx)(at, { ...e }),
                                 "community-app-social-media": (e) =>
                                   (0, n.jsx)(Ze.wo, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.GroupRoot(":groupid_or_vanity_str"),
+                          path: St.GroupRoot(":groupid_or_vanity_str"),
                           render: (e) =>
                             (0, n.jsx)(re.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(Ye, {}),
+                                "apphub-events": () => (0, n.jsx)(it, {}),
                                 "community-awards": () =>
-                                  (0, n.jsx)(et, { ...e }),
+                                  (0, n.jsx)(at, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.UserReviewRewardAppVanity(),
-                          render: (e) => (0, n.jsx)(et, { ...e }),
+                          path: St.UserReviewRewardAppVanity(),
+                          render: (e) => (0, n.jsx)(at, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.UserReviewRewardApp(),
-                          render: (e) => (0, n.jsx)(et, { ...e }),
+                          path: St.UserReviewRewardApp(),
+                          render: (e) => (0, n.jsx)(at, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.UserReviewsRewardVanity(),
-                          render: (e) => (0, n.jsx)(et, { ...e }),
+                          path: St.UserReviewsRewardVanity(),
+                          render: (e) => (0, n.jsx)(at, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.UserReviewsReward(),
-                          render: (e) => (0, n.jsx)(et, { ...e }),
+                          path: St.UserReviewsReward(),
+                          render: (e) => (0, n.jsx)(at, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            bt.DiscussionsAppGeneral(),
-                            bt.DiscussionsAppWorkshop(),
-                            bt.DiscussionsAppUGC(),
+                            St.DiscussionsAppGeneral(),
+                            St.DiscussionsAppWorkshop(),
+                            St.DiscussionsAppUGC(),
                           ],
                           render: (e) =>
                             (0, n.jsx)(re.X, {
                               config: {
                                 "community-awards": () =>
-                                  (0, n.jsx)(et, { ...e }),
+                                  (0, n.jsx)(at, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            bt.ManageFriendsApp(),
-                            bt.ManageFriendsProfileApp(),
+                            St.ManageFriendsApp(),
+                            St.ManageFriendsProfileApp(),
                           ],
                           render: () =>
                             (0, n.jsx)(re.X, {
                               config: {
-                                "manage-friends": () => (0, n.jsx)(it, {}),
+                                "manage-friends": () => (0, n.jsx)(ct, {}),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
                           path: [
-                            bt.ProfileVanityItemCollection(":vanity_url"),
-                            bt.ProfileSteamIDItemCollection(":steamid"),
+                            St.ProfileVanityItemCollection(":vanity_url"),
+                            St.ProfileSteamIDItemCollection(":steamid"),
                           ],
                           render: (e) =>
                             (0, n.jsx)(re.X, {
                               config: {
                                 "itemcollection-root": () =>
-                                  (0, n.jsx)(lt, { ...e }),
+                                  (0, n.jsx)(pt, { ...e }),
                               },
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.ProfileVanityNotifications(":vanity_url"),
-                          render: (e) => (0, n.jsx)(dt, { ...e }),
+                          path: St.ProfileVanityNotifications(":vanity_url"),
+                          render: (e) => (0, n.jsx)(Bt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.ProfileSteamIDNotifications(":steamid"),
-                          render: (e) => (0, n.jsx)(dt, { ...e }),
+                          path: St.ProfileSteamIDNotifications(":steamid"),
+                          render: (e) => (0, n.jsx)(Bt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.ProfileVanity(":vanity_url"),
-                          render: (e) => (0, n.jsx)(Qe, { ...e }),
+                          path: St.ProfileVanity(":vanity_url"),
+                          render: (e) => (0, n.jsx)(rt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.ProfileSteamID(":steamid"),
-                          render: (e) => (0, n.jsx)(Qe, { ...e }),
+                          path: St.ProfileSteamID(":steamid"),
+                          render: (e) => (0, n.jsx)(rt, { ...e }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.UGCDetailsPage(),
+                          path: St.UGCDetailsPage(),
                           render: (e) =>
                             (0, n.jsxs)(n.Fragment, {
                               children: [
-                                (0, n.jsx)(et, { ...e }),
+                                (0, n.jsx)(at, { ...e }),
                                 (0, n.jsx)(re.X, {
                                   config: {
                                     "game-recording-clip": (e) =>
-                                      (0, n.jsx)(mt, { ...e }),
+                                      (0, n.jsx)(bt, { ...e }),
                                     "ugc-file-content-moderation-report-dialog":
                                       (e) => (0, n.jsx)(Ke.Xi, { ...e }),
                                     "comment-content-moderation-report-dialog":
@@ -3217,39 +3298,39 @@
                             }),
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.GameNotes(),
-                          component: rt,
+                          path: St.GameNotes(),
+                          component: lt,
                         }),
-                        (0, n.jsx)(o.qh, { path: bt.FAQApp(), component: nt }),
+                        (0, n.jsx)(o.qh, { path: St.FAQApp(), component: ut }),
                         (0, n.jsx)(o.qh, {
-                          path: bt.QuestionsApp(),
-                          component: at,
-                        }),
-                        (0, n.jsx)(o.qh, {
-                          path: bt.ConferenceApp(),
-                          component: st,
+                          path: St.QuestionsApp(),
+                          component: mt,
                         }),
                         (0, n.jsx)(o.qh, {
-                          path: [bt.Market(), bt.MarketSearch()],
+                          path: St.ConferenceApp(),
+                          component: dt,
+                        }),
+                        (0, n.jsx)(o.qh, {
+                          path: [St.Market(), St.MarketSearch()],
                           children: (0, n.jsx)(re.X, {
                             config: {
-                              market: (e) => (0, n.jsx)(gt, { ...e }),
+                              market: (e) => (0, n.jsx)(ft, { ...e }),
                               marketsearchinput: (e) =>
-                                (0, n.jsx)(pt, { ...e }),
+                                (0, n.jsx)(wt, { ...e }),
                             },
                           }),
                         }),
                         !1,
                         (0, n.jsx)(o.qh, {
-                          path: bt.CommunityHomeRoot(),
+                          path: St.CommunityHomeRoot(),
                           render: (e) =>
                             (0, n.jsx)(re.X, {
                               config: {
-                                "apphub-events": () => (0, n.jsx)(Ye, {}),
+                                "apphub-events": () => (0, n.jsx)(it, {}),
                                 "apphub-ugcrewards": () =>
-                                  (0, n.jsx)(et, { ...e }),
+                                  (0, n.jsx)(at, { ...e }),
                                 "community-home-header-v2": () =>
-                                  (0, n.jsx)(ct, {}),
+                                  (0, n.jsx)(ht, {}),
                               },
                             }),
                         }),
@@ -3258,20 +3339,20 @@
                     }),
                     (0, n.jsx)(o.qh, {
                       path: [
-                        bt.ProfileVanity(":vanity_url", "inventory"),
-                        bt.ProfileSteamID(":steamid", "inventory"),
-                        bt.ProfileVanity(":vanity_url", "tradehistory"),
-                        bt.ProfileSteamID(":steamid", "tradehistory"),
-                        bt.Market(),
-                        bt.TradeOfferNew(),
-                        bt.TradeOfferView(":tradeid"),
+                        St.ProfileVanity(":vanity_url", "inventory"),
+                        St.ProfileSteamID(":steamid", "inventory"),
+                        St.ProfileVanity(":vanity_url", "tradehistory"),
+                        St.ProfileSteamID(":steamid", "tradehistory"),
+                        St.Market(),
+                        St.TradeOfferNew(),
+                        St.TradeOfferView(":tradeid"),
                       ],
                       children: (0, n.jsx)(re.X, {
                         config: {
                           iteminfo: (e) =>
                             (0, n.jsx)(i.Suspense, {
                               fallback: null,
-                              children: (0, n.jsx)(ht, { ...e }),
+                              children: (0, n.jsx)(Mt, { ...e }),
                             }),
                         },
                       }),
@@ -3283,11 +3364,11 @@
           });
         }
       }
-      function wt(e) {
+      function Rt(e) {
         return (0, n.jsx)(ie.Ay, {
           domain: "steamcommunity.com",
           children: (0, n.jsx)(R.ss, {
-            children: (0, n.jsx)(yt, {
+            children: (0, n.jsx)(jt, {
               children: (0, n.jsx)(Ve.s, {
                 children: (0, n.jsx)(p, {
                   children: (0, n.jsx)($e.Y, {
@@ -3301,7 +3382,7 @@
           }),
         });
       }
-      function Mt() {
+      function zt() {
         return (0, n.jsxs)(_.wC, {
           children: [
             (0, n.jsx)(i.Suspense, {
@@ -3309,7 +3390,7 @@
               children: (0, n.jsx)(re.X, {
                 config: {
                   "green-envelope": () =>
-                    (0, n.jsx)(ut, {
+                    (0, n.jsx)(_t, {
                       bResponsiveHeader: !1,
                       notifications: (0, R.Tc)(
                         "steam_notifications",
@@ -3317,7 +3398,7 @@
                       ),
                     }),
                   "green-envelope-responsive": () =>
-                    (0, n.jsx)(ut, {
+                    (0, n.jsx)(_t, {
                       bResponsiveHeader: !0,
                       notifications: (0, R.Tc)(
                         "steam_notifications",
@@ -3332,7 +3413,7 @@
                 footer: () =>
                   (0, n.jsx)(i.Suspense, {
                     fallback: null,
-                    children: (0, n.jsx)(_t, {}),
+                    children: (0, n.jsx)(yt, {}),
                   }),
               },
             }),
@@ -3349,12 +3430,14 @@
               config: {
                 "forum-post-content-moderation-report-dialog": (e) =>
                   (0, n.jsx)(Ke.yq, { ...e }),
+                "forum-post-content-moderation-anonymous-report-dialog": (e) =>
+                  (0, n.jsx)(tt, { ...e }),
               },
             }),
           ],
         });
       }
-      function yt(e) {
+      function jt(e) {
         const t = (0, C.bs)(s.P),
           r = (0, C.bs)(i.useCallback(() => new u.A(), [])),
           a = (0, i.useMemo)(
@@ -3370,60 +3453,59 @@
           }),
         });
       }
-      function vt() {
+      function xt() {
         let e = document.createElement("a");
         e.href = R.TS.COMMUNITY_BASE_URL;
         let t = e.pathname;
         return t.endsWith("/") || (t += "/"), t;
       }
-      var St = r(44844),
-        Ct = r(14947);
+      var It = r(44844),
+        Tt = r(14947);
       r(5977);
-      var Rt = r(96059),
-        zt = r(17204),
-        jt = r(8527);
-      function xt() {
+      var Ft = r(96059),
+        Ot = r(17204);
+      function Wt() {
         const e = [];
         return (
-          jt.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          jt.TS.IN_CLIENT && e.push("in_client"),
+          Xe.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          Xe.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      r(12155), r(9154), r(738), r(41775);
+      r(12155), r(738), r(41775);
       r(64641);
-      (0, Ct.jK)({ enforceActions: "never" }),
+      (0, Tt.jK)({ enforceActions: "never" }),
         (0, pe.oQ)(async () => {
-          Ft(),
-            (0, zt.aj)().Init(
+          Lt(),
+            (0, Ot.aj)().Init(
               "Community",
               CLSTAMP,
-              new Rt.D(R.TS.WEBAPI_BASE_URL).GetServiceTransport(),
-              { fnGetReportTags: xt },
+              new Ft.D(R.TS.WEBAPI_BASE_URL).GetServiceTransport(),
+              { fnGetReportTags: Wt },
             ),
-            await Ot();
+            await kt();
           const e =
             document.getElementById("react_root") ||
             document.getElementById("application_root");
           if (e) {
             const t = window;
             if (t.g_bCommunityReactInitialized) return void 0;
-            St.createRoot(e).render(i.createElement(ft, {})),
+            It.createRoot(e).render(i.createElement(Ct, {})),
               (t.g_bCommunityReactInitialized = !0);
           }
         });
-      let It,
-        Tt = !1;
-      function Ft() {
-        if (!Tt) {
+      let qt,
+        Ut = !1;
+      function Lt() {
+        if (!Ut) {
           (0, R.XJ)("application_config").config
-            ? (Ot(), (Tt = !0))
+            ? (kt(), (Ut = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function Ot() {
-        It ||
-          (It = (async function (e) {
+      async function kt() {
+        qt ||
+          (qt = (async function (e) {
             {
               const t = Z.A0.GetLanguageFallback(e),
                 i = e === t,
@@ -3439,22 +3521,22 @@
                 ]);
               Z.pf.AddTokens({ ...s, ...n, ...a }, { ...l, ...o, ...c });
             }
-            for (const e of Wt) Z.pf.AddTokens(e);
-            Wt = void 0;
+            for (const e of Dt) Z.pf.AddTokens(e);
+            Dt = void 0;
           })(R.TS.LANGUAGE)),
-          await It;
+          await qt;
       }
-      let Wt = [];
-      function qt(e, t, r) {
+      let Dt = [];
+      function Pt(e, t, r) {
         (0, Te.wT)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== Wt ? Wt.push(r) : Z.pf.AddTokens(r);
+          void 0 !== Dt ? Dt.push(r) : Z.pf.AddTokens(r);
       }
-      Ft(),
+      Lt(),
         (function () {
           const e = window;
           e.g_rgPendingLocManifests &&
-            e.g_rgPendingLocManifests.forEach((e) => qt(...e)),
-            (e.LocalizationManifestReady = qt),
+            e.g_rgPendingLocManifests.forEach((e) => Pt(...e)),
+            (e.LocalizationManifestReady = Pt),
             (e.g_rgPendingLocManifests = void 0);
         })();
     },
@@ -3621,6 +3703,27 @@
           { formFactorOverride: r } = u();
         return (0, i.jsx)(a.cr, { formFactor: r, children: t });
       }
+    },
+    27939: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        GU: () => n,
+        II: () => i,
+        Kd: () => a,
+        WN: () => u,
+        bv: () => s,
+        mW: () => o,
+        wv: () => l,
+        yT: () => c,
+      });
+      const i = 4145017,
+        n = 39049601,
+        s = 41316928,
+        a = 4,
+        o = 20,
+        l = 45559995,
+        c = 45902273,
+        u = [i, 35143931, n, a, s];
     },
     2160: (e, t, r) => {
       "use strict";
@@ -6054,11 +6157,11 @@
           r = 0,
           i = e;
         for (; i; ) {
-          if (((t += i.offsetTop), (r += i.offsetLeft), "ownerDocument" in i)) {
+          if ("ownerDocument" in i) {
             const e = window.getComputedStyle(i);
             if ("fixed" === e.position || "sticky" === e.position) break;
           }
-          i = i.offsetParent;
+          (t += i.offsetTop), (r += i.offsetLeft), (i = i.offsetParent);
         }
         for (i = null == e ? void 0 : e.parentElement; i; ) {
           const { scrollTop: e, scrollLeft: n } = L(i);
@@ -8182,6 +8285,46 @@
           ],
         };
       }
+    },
+    63275: (e, t, r) => {
+      "use strict";
+      r.d(t, { u: () => s });
+      var i = r(42475);
+      const n = {};
+      (n.arabic = () => r.e(1970).then(r.t.bind(r, 61970, 19))),
+        (n.brazilian = () => r.e(308).then(r.t.bind(r, 80308, 19))),
+        (n.bulgarian = () => r.e(1715).then(r.t.bind(r, 51715, 19))),
+        (n.czech = () => r.e(6865).then(r.t.bind(r, 66865, 19))),
+        (n.danish = () => r.e(8579).then(r.t.bind(r, 18579, 19))),
+        (n.dutch = () => r.e(6220).then(r.t.bind(r, 46220, 19))),
+        (n.english = () => r.e(3818).then(r.t.bind(r, 3818, 19))),
+        (n.finnish = () => r.e(9841).then(r.t.bind(r, 79841, 19))),
+        (n.french = () => r.e(4586).then(r.t.bind(r, 4586, 19))),
+        (n.german = () => r.e(916).then(r.t.bind(r, 80916, 19))),
+        (n.greek = () => r.e(8150).then(r.t.bind(r, 98150, 19))),
+        (n.hungarian = () => r.e(3839).then(r.t.bind(r, 63839, 19))),
+        (n.indonesian = () => r.e(2934).then(r.t.bind(r, 2934, 19))),
+        (n.italian = () => r.e(738).then(r.t.bind(r, 20738, 19))),
+        (n.japanese = () => r.e(6509).then(r.t.bind(r, 96509, 19))),
+        (n.koreana = () => r.e(7261).then(r.t.bind(r, 87261, 19))),
+        (n.latam = () => r.e(7429).then(r.t.bind(r, 37429, 19))),
+        (n.norwegian = () => r.e(1814).then(r.t.bind(r, 41814, 19))),
+        (n.polish = () => r.e(3187).then(r.t.bind(r, 83187, 19))),
+        (n.portuguese = () => r.e(3519).then(r.t.bind(r, 3519, 19))),
+        (n.romanian = () => r.e(765).then(r.t.bind(r, 10765, 19))),
+        (n.russian = () => r.e(2391).then(r.t.bind(r, 62391, 19))),
+        (n.sc_schinese = () => r.e(2525).then(r.t.bind(r, 2525, 19))),
+        (n.schinese = () => r.e(7393).then(r.t.bind(r, 99774, 19))),
+        (n.spanish = () => r.e(2082).then(r.t.bind(r, 42082, 19))),
+        (n.swedish = () => r.e(2747).then(r.t.bind(r, 52747, 19))),
+        (n.tchinese = () => r.e(6997).then(r.t.bind(r, 56997, 19))),
+        (n.thai = () => r.e(392).then(r.t.bind(r, 90392, 19))),
+        (n.turkish = () => r.e(7194).then(r.t.bind(r, 27194, 19))),
+        (n.ukrainian = () => r.e(6015).then(r.t.bind(r, 38396, 19))),
+        (n.vietnamese = () => r.e(8157).then(r.t.bind(r, 88157, 19)));
+      const s = (0, i.l)(async function (e) {
+        if (n[e]) return n[e]();
+      });
     },
     56545: (e, t, r) => {
       "use strict";
@@ -26967,6 +27110,11 @@
                   assets_without_overrides: { n: 60, c: w },
                   user_filter_failure: { n: 70, c: ae },
                   links: { n: 71, c: q, r: !0, q: !0 },
+                  purchase_description: {
+                    n: 72,
+                    br: a.qM.readString,
+                    bw: a.gp.writeString,
+                  },
                 },
               }),
             d.sm_m
@@ -27086,7 +27234,7 @@
         constructor(e = null) {
           super(),
             g.prototype.included_apps || a.Sg(g.M()),
-            n.Message.initialize(this, e, 0, -1, [1, 2], null);
+            n.Message.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
         static M() {
           return (
@@ -27096,6 +27244,7 @@
                 fields: {
                   included_apps: { n: 1, c: d, r: !0, q: !0 },
                   included_packages: { n: 2, c: d, r: !0, q: !0 },
+                  included_bundles: { n: 3, c: d, r: !0, q: !0 },
                 },
               }),
             g.sm_m
@@ -32209,21 +32358,18 @@
         for (; r; ) {
           if (i(r)) {
             const e = window.getComputedStyle(r);
+            if ("fixed" == e.position || "sticky" == e.position) break;
             if (
               !(
                 (t && "x" != t) ||
-                ("scroll" != e.overflowX &&
-                  "auto" != e.overflowX &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowX && "auto" != e.overflowX)
               )
             )
               break;
             if (
               !(
                 (t && "y" != t) ||
-                ("scroll" != e.overflowY &&
-                  "auto" != e.overflowY &&
-                  "fixed" != e.position)
+                ("scroll" != e.overflowY && "auto" != e.overflowY)
               )
             )
               break;
@@ -33266,7 +33412,7 @@
         lv: () => B,
         qI: () => v,
         rK: () => z,
-        us: () => F,
+        us: () => T,
         vB: () => q,
         wl: () => g,
         xz: () => y,
@@ -33278,10 +33424,10 @@
         o = r(7338);
       function l(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(F(t, e));
+        return (0, n.I)(T(t, e));
       }
       function c(e) {
-        return d(e, F);
+        return d(e, T);
       }
       function u(e) {
         return d(e, S, "include_assets");
@@ -33327,31 +33473,31 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return I(e, t, "include_basic_info", "basic_info");
+            return x(e, t, "include_basic_info", "basic_info");
           })(t, e),
         );
       }
       function p(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(O(t, e));
+        return (0, n.I)(F(t, e));
       }
       function h(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(
-          (function (e, t) {
-            return { ...j(e, t), staleTime: 6e5 };
-          })(t, e),
-        );
+        return (0, n.I)(O(t, e));
       }
       function _(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
           e && "bundleid" in e
-            ? O(t, e)
+            ? F(t, e)
             : (function (e, t) {
                 return {
-                  ...j(e, t),
-                  select: (e) => (e ? e[0] : null),
+                  ...O(e, t),
+                  select: (e) =>
+                    (null == e ? void 0 : e.purchase_options) &&
+                    e.purchase_options.length > 0
+                      ? e.purchase_options[0]
+                      : null,
                   staleTime: 6e5,
                 };
               })(t, e),
@@ -33365,7 +33511,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return I(e, t, "include_screenshots", "screenshots");
+            return x(e, t, "include_screenshots", "screenshots");
           })(t, e),
         );
       }
@@ -33373,7 +33519,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return I(e, t, "include_trailers", "trailers");
+            return x(e, t, "include_trailers", "trailers");
           })(t, e),
         );
       }
@@ -33381,7 +33527,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return I(e, t, "include_reviews", "reviews");
+            return x(e, t, "include_reviews", "reviews");
           })(t, e),
         );
       }
@@ -33389,7 +33535,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return I(e, t, "include_release", "release");
+            return x(e, t, "include_release", "release");
           })(t, e),
         );
       }
@@ -33402,10 +33548,10 @@
         return (0, n.I)(z(t, e));
       }
       function S(e, t) {
-        return I(e, t, "include_assets", "assets");
+        return x(e, t, "include_assets", "assets");
       }
       function C(e, t) {
-        return I(
+        return x(
           e,
           t,
           "include_assets_without_overrides",
@@ -33413,15 +33559,12 @@
         );
       }
       function R(e, t) {
-        return I(e, t, "top_tags", "tags");
+        return x(e, t, "top_tags", "tags");
       }
       function z(e, t) {
-        return I(e, t, "include_platforms", "platforms");
+        return x(e, t, "include_platforms", "platforms");
       }
-      function j(e, t) {
-        return I(e, t, "include_all_purchase_options", "purchase_options");
-      }
-      function x(e) {
+      function j(e) {
         return (
           !!e &&
           ("appid" in e && !e.appid
@@ -33430,94 +33573,114 @@
               ((0, i.wT)(!1, "Invalid bundleid passed to useStoreItem"), !1))
         );
       }
-      function I(e, t, r, i) {
+      function x(e, t, r, i) {
         return {
           queryKey: W(t, r),
           queryFn: async () => (await k(e, t, r))[i] || null,
           staleTime: 216e5,
-          enabled: x(t),
+          enabled: j(t),
         };
       }
-      function T(e, t, r, i, n) {
+      function I(e, t, r, i, n) {
         var s;
         e.setQueryData(W(t, i), null !== (s = r[n]) && void 0 !== s ? s : null);
       }
-      function F(e, t) {
+      function T(e, t) {
         return {
           queryKey: W(t, "default_info"),
           queryFn: async () => L(await k(e, t, "default_info")),
           staleTime: 216e5,
-          enabled: x(t),
+          enabled: j(t),
+        };
+      }
+      function F(e, t) {
+        return {
+          ...T(e, t),
+          select: (e) => e.best_purchase_option || null,
+          staleTime: 6e5,
         };
       }
       function O(e, t) {
+        const r = "include_all_purchase_options";
         return {
-          ...F(e, t),
-          select: (e) => e.best_purchase_option || null,
+          queryKey: W(t, r),
+          queryFn: async () => {
+            const i = await k(e, t, r);
+            return {
+              purchase_options: i.purchase_options,
+              invalid_purchase_options: i.invalid_purchase_options,
+              accessories: i.accessories,
+            };
+          },
           staleTime: 6e5,
+          enabled: j(t),
         };
       }
       function W(e, t) {
         return ["StoreItem", e && (0, a.ER)(e), t];
       }
       function q(e, t, r) {
-        var i, n, s, o;
-        const l = (0, a.Jz)(t);
-        l &&
+        var i, n, s, o, l, c;
+        const u = (0, a.Jz)(t);
+        u &&
           (!(function (e, t, r) {
             e.setQueryData(W(t, "default_info"), L(r));
-          })(e, l, t),
+          })(e, u, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              T(e, t, r, "include_basic_info", "basic_info");
-            })(e, l, t),
+              I(e, t, r, "include_basic_info", "basic_info");
+            })(e, u, t),
           r.include_assets &&
             (function (e, t, r) {
-              T(e, t, r, "include_assets", "assets");
-            })(e, l, t),
+              I(e, t, r, "include_assets", "assets");
+            })(e, u, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              T(e, t, r, "include_screenshots", "screenshots");
-            })(e, l, t),
+              I(e, t, r, "include_screenshots", "screenshots");
+            })(e, u, t),
           r.include_trailers &&
             (function (e, t, r) {
-              T(e, t, r, "include_trailers", "trailers");
-            })(e, l, t),
+              I(e, t, r, "include_trailers", "trailers");
+            })(e, u, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              T(
+              I(
                 e,
                 t,
                 r,
                 "include_assets_without_overrides",
                 "assets_without_overrides",
               );
-            })(e, l, t),
+            })(e, u, t),
           r.include_reviews &&
             (function (e, t, r) {
-              T(e, t, r, "include_reviews", "reviews");
-            })(e, l, t),
+              I(e, t, r, "include_reviews", "reviews");
+            })(e, u, t),
           r.include_release &&
             (function (e, t, r) {
-              T(e, t, r, "include_release", "release");
-            })(e, l, t),
+              I(e, t, r, "include_release", "release");
+            })(e, u, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              T(e, t, r, "top_tags", "tags");
-            })(e, l, t),
+              I(e, t, r, "top_tags", "tags");
+            })(e, u, t),
           r.include_platforms &&
             (function (e, t, r) {
-              T(e, t, r, "include_platforms", "platforms");
-            })(e, l, t),
+              I(e, t, r, "include_platforms", "platforms");
+            })(e, u, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              T(e, t, r, "apply_user_filters", "user_filter_failure");
-            })(e, l, t),
+              I(e, t, r, "apply_user_filters", "user_filter_failure");
+            })(e, u, t),
           r.include_all_purchase_options &&
             (function (e, t, r) {
-              T(e, t, r, "include_all_purchase_options", "purchase_options");
-            })(e, l, t),
+              e.setQueryData(W(t, "include_all_purchase_options"), {
+                purchase_options: r.purchase_options,
+                invalid_purchase_options: r.invalid_purchase_options,
+                accessories: r.accessories,
+              });
+            })(e, u, t),
           r.include_included_items &&
             r.included_item_data_request &&
             (null ===
@@ -33533,7 +33696,14 @@
                   ? void 0
                   : s.included_packages) ||
               void 0 === o ||
-              o.forEach((t) => q(e, t, r.included_item_data_request))));
+              o.forEach((t) => q(e, t, r.included_item_data_request)),
+            null ===
+              (c =
+                null === (l = t.included_items) || void 0 === l
+                  ? void 0
+                  : l.included_bundles) ||
+              void 0 === c ||
+              c.forEach((t) => q(e, t, r.included_item_data_request))));
       }
       const U = [
         "assets",
@@ -33544,6 +33714,7 @@
         "game_rating",
         "purchase_options",
         "accessories",
+        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
@@ -33865,47 +34036,56 @@
     },
     3578: (e, t, r) => {
       "use strict";
-      r.d(t, { R: () => a, A: () => s });
+      r.d(t, { R: () => o, A: () => a });
       var i = r(26205);
       const n = JSON.parse(
         '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756,"trailercarousel":100757}',
       );
-      class s {
+      var s = r(27939);
+      class a {
         static InstrumentLink(e, t, r = null) {
-          const i = s.GetLinkParam(t, r);
-          return s.AddNavParamToURL(e, i);
+          const i = a.GetSNRLinkParam(t, r),
+            n = a.GetCuratorClanIDParam(t);
+          return a.AddNavParamToURL(e, i, n);
         }
         static ParseSNR(e) {
           const t = e.split("_") || [];
           return {
-            domain: s.DecodeEventComponent(t[0]),
-            controller: s.DecodeEventComponent(t[1]),
-            method: s.DecodeEventComponent(t[2]),
-            submethod: s.DecodeEventComponent(t[3]),
-            feature: s.DecodeEventComponent(t[4]),
+            domain: a.DecodeEventComponent(t[0]),
+            controller: a.DecodeEventComponent(t[1]),
+            method: a.DecodeEventComponent(t[2]),
+            submethod: a.DecodeEventComponent(t[3]),
+            feature: a.DecodeEventComponent(t[4]),
             depth: t[5] ? Number(t[5]) : void 0,
           };
         }
-        static GetLinkParam(e, t = null) {
+        static GetSNRLinkParam(e, t = null) {
           var r;
-          let i = s.ComputeLinkPrefix(
+          let i = a.ComputeLinkPrefix(
             e.domain,
             e.controller,
             e.method,
             e.submethod,
           );
           t = null !== (r = null != t ? t : e.depth) && void 0 !== r ? r : null;
-          const n = s.EncodeEventComponent(e.feature);
+          const n = a.EncodeEventComponent(e.feature);
           return n && ((i += "_" + n), t && (i += "_" + t)), i;
         }
-        static AddNavParamToURL(e, t) {
+        static GetCuratorClanIDParam(e) {
+          var t;
+          return null !== (t = e.curator_clanid) && void 0 !== t ? t : null;
+        }
+        static AddNavParamToURL(e, t, r) {
           if (!e || 0 == e.length) return e;
           try {
-            const r = new URL((0, i.S)(e)),
-              n = new URLSearchParams(r.search);
+            const n = new URL((0, i.S)(e)),
+              a = new URLSearchParams(n.search);
             return (
-              n.set("snr", encodeURIComponent(null != t ? t : "")),
-              r.origin + r.pathname + "?" + n.toString() + r.hash
+              a.set("snr", encodeURIComponent(null != t ? t : "")),
+              r &&
+                !s.WN.includes(r) &&
+                a.set("curator_clanid", encodeURIComponent(null != r ? r : "")),
+              n.origin + n.pathname + "?" + a.toString() + n.hash
             );
           } catch (t) {
             return console.error(e, t), e;
@@ -33914,13 +34094,13 @@
         static ComputeLinkPrefix(e, t, r, i) {
           let n = "";
           return (
-            (n += s.EncodeEventComponent(e)),
+            (n += a.EncodeEventComponent(e)),
             (n += "_"),
-            (n += s.EncodeEventComponent(t)),
+            (n += a.EncodeEventComponent(t)),
             (n += "_"),
-            (n += s.EncodeEventComponent(r)),
+            (n += a.EncodeEventComponent(r)),
             (n += "_"),
-            (n += s.EncodeEventComponent(i)),
+            (n += a.EncodeEventComponent(i)),
             n
           );
         }
@@ -33935,20 +34115,20 @@
         static DecodeEventComponent(e) {
           const t = e && parseInt(e);
           if (t && n) for (const e in n) if (n[e] == t) return e;
-          return s.SanitizeEventComponent(e);
+          return a.SanitizeEventComponent(e);
         }
         static SanitizeEventComponent(e) {
           return e && e.match(/^[a-zA-Z0-9\-.]*$/) ? e : "";
         }
       }
-      function a(e) {
+      function o(e) {
         return {
           ...e,
-          domain: s.SanitizeEventComponent(e.domain),
-          controller: s.SanitizeEventComponent(e.controller),
-          method: s.SanitizeEventComponent(e.method),
-          submethod: s.SanitizeEventComponent(e.submethod),
-          feature: s.SanitizeEventComponent(e.feature),
+          domain: a.SanitizeEventComponent(e.domain),
+          controller: a.SanitizeEventComponent(e.controller),
+          method: a.SanitizeEventComponent(e.method),
+          submethod: a.SanitizeEventComponent(e.submethod),
+          feature: a.SanitizeEventComponent(e.feature),
           depth: e.depth || 0,
         };
       }
@@ -33984,6 +34164,7 @@
               r.submethod,
               r.feature,
               r.depth,
+              r.curator_clanid,
             ],
           );
         return (0, i.jsx)(o.Provider, { value: a, children: t });
@@ -34014,13 +34195,14 @@
       function p(e, t) {
         const r = d();
         return n.useMemo(
-          () => s.A.GetLinkParam({ ...r, feature: e || r.feature }, t),
+          () => s.A.GetSNRLinkParam({ ...r, feature: e || r.feature }, t),
           [r, e, t],
         );
       }
       function h(e, t, r, i) {
-        const n = s.A.GetLinkParam({ ...e, feature: r || e.feature }, i);
-        return s.A.AddNavParamToURL(t, n);
+        const n = s.A.GetSNRLinkParam({ ...e, feature: r || e.feature }, i),
+          a = s.A.GetCuratorClanIDParam(e);
+        return s.A.AddNavParamToURL(t, n, a);
       }
       function _(e) {
         const { href: t, ...r } = e,
@@ -39739,8 +39921,9 @@
         }, [n, e, t, r]);
       }
       function m(e, t, r = null) {
-        const i = p(t, r);
-        return n.A.AddNavParamToURL(e, i);
+        const i = p(t, r),
+          s = t ? n.A.GetCuratorClanIDParam(t) : null;
+        return n.A.AddNavParamToURL(e, i, s);
       }
       function g(e, t, r, i = null) {
         const n = m(e, t, i);
@@ -39782,13 +39965,14 @@
           );
         }
         static InstrumentLink(e, t, r = null) {
-          const i = h.GetLinkParam(t, r);
-          return n.A.AddNavParamToURL(e, i);
+          const i = h.GetLinkParam(t, r),
+            s = "string" != typeof t ? n.A.GetCuratorClanIDParam(t) : null;
+          return n.A.AddNavParamToURL(e, i, s);
         }
         static GetLinkParam(e, t = null) {
           let r, i;
           if ("string" != typeof e) {
-            if (e.domain) return n.A.GetLinkParam(e, t);
+            if (e.domain) return n.A.GetSNRLinkParam(e, t);
             r = e.feature || "";
           }
           if (!h.sm_strComputedLinkPrefix && !h.ComputeStaticLinkPrefix())
@@ -42771,9 +42955,9 @@
         }
       }
     },
-    47132: (e, t, r) => {
+    38455: (e, t, r) => {
       "use strict";
-      r.d(t, { b$: () => kn, yq: () => Dn, Xi: () => Ln });
+      r.d(t, { b$: () => Un, yq: () => Ln, Xi: () => qn });
       var i,
         n = r(7850),
         s = r(90626),
@@ -46607,6 +46791,11 @@
                     bw: _.gp.writeUint64String,
                   },
                   details: { n: 4, br: _.qM.readString, bw: _.gp.writeString },
+                  steamid: {
+                    n: 5,
+                    br: _.qM.readUint64String,
+                    bw: _.gp.writeUint64String,
+                  },
                 },
               }),
             Se.sm_m
@@ -59770,45 +59959,10 @@
             request: pn,
           };
         })(Rt || (Rt = {}));
-      var Mn = r(78327),
-        yn = r(81393),
-        vn = (r(51272), r(42475));
-      const Sn = {};
-      (Sn.arabic = () => r.e(1970).then(r.t.bind(r, 61970, 19))),
-        (Sn.brazilian = () => r.e(308).then(r.t.bind(r, 80308, 19))),
-        (Sn.bulgarian = () => r.e(1715).then(r.t.bind(r, 51715, 19))),
-        (Sn.czech = () => r.e(6865).then(r.t.bind(r, 66865, 19))),
-        (Sn.danish = () => r.e(8579).then(r.t.bind(r, 18579, 19))),
-        (Sn.dutch = () => r.e(6220).then(r.t.bind(r, 46220, 19))),
-        (Sn.english = () => r.e(3818).then(r.t.bind(r, 3818, 19))),
-        (Sn.finnish = () => r.e(9841).then(r.t.bind(r, 79841, 19))),
-        (Sn.french = () => r.e(4586).then(r.t.bind(r, 4586, 19))),
-        (Sn.german = () => r.e(916).then(r.t.bind(r, 80916, 19))),
-        (Sn.greek = () => r.e(8150).then(r.t.bind(r, 98150, 19))),
-        (Sn.hungarian = () => r.e(3839).then(r.t.bind(r, 63839, 19))),
-        (Sn.indonesian = () => r.e(2934).then(r.t.bind(r, 2934, 19))),
-        (Sn.italian = () => r.e(738).then(r.t.bind(r, 20738, 19))),
-        (Sn.japanese = () => r.e(6509).then(r.t.bind(r, 96509, 19))),
-        (Sn.koreana = () => r.e(7261).then(r.t.bind(r, 87261, 19))),
-        (Sn.latam = () => r.e(7429).then(r.t.bind(r, 37429, 19))),
-        (Sn.norwegian = () => r.e(1814).then(r.t.bind(r, 41814, 19))),
-        (Sn.polish = () => r.e(3187).then(r.t.bind(r, 83187, 19))),
-        (Sn.portuguese = () => r.e(3519).then(r.t.bind(r, 3519, 19))),
-        (Sn.romanian = () => r.e(765).then(r.t.bind(r, 10765, 19))),
-        (Sn.russian = () => r.e(2391).then(r.t.bind(r, 62391, 19))),
-        (Sn.sc_schinese = () => r.e(2525).then(r.t.bind(r, 2525, 19))),
-        (Sn.schinese = () => r.e(7393).then(r.t.bind(r, 99774, 19))),
-        (Sn.spanish = () => r.e(2082).then(r.t.bind(r, 42082, 19))),
-        (Sn.swedish = () => r.e(2747).then(r.t.bind(r, 52747, 19))),
-        (Sn.tchinese = () => r.e(6997).then(r.t.bind(r, 56997, 19))),
-        (Sn.thai = () => r.e(392).then(r.t.bind(r, 90392, 19))),
-        (Sn.turkish = () => r.e(7194).then(r.t.bind(r, 27194, 19))),
-        (Sn.ukrainian = () => r.e(6015).then(r.t.bind(r, 38396, 19))),
-        (Sn.vietnamese = () => r.e(8157).then(r.t.bind(r, 88157, 19)));
-      const Cn = (0, vn.l)(async function (e) {
-        if (Sn[e]) return Sn[e]();
-      });
-      var Rn;
+      var Mn,
+        yn = r(78327),
+        vn = r(81393),
+        Sn = (r(51272), r(63275));
       !(function (e) {
         (e[(e.k_EContentModerationAction_None = 0)] =
           "k_EContentModerationAction_None"),
@@ -59816,27 +59970,27 @@
             "k_EContentModerationAction_Sustain"),
           (e[(e.k_EContentModerationAction_MarkSuspicious = 2)] =
             "k_EContentModerationAction_MarkSuspicious");
-      })(Rn || (Rn = {}));
-      const zn = {
+      })(Mn || (Mn = {}));
+      const Cn = {
           url: "https://steamcommunity.com/dmca/create",
           strLocToken: "#ReportContent_CopyrightInfringement",
           strWarningBeforeNav: "#WarnBeforeNavigatingToCopyrightReportForm",
         },
-        jn = {
+        Rn = {
           url: "https://steamcommunity.com/trademark/createtrademarkcomplaint/",
           strLocToken: "#ReportContent_TrademarkComplaint",
           strWarningBeforeNav: "#WarnBeforeNavigatingToTrademarkReportForm",
         };
-      function xn(e) {
+      function zn(e) {
         return !!e && "children" in e;
       }
-      function In(e) {
+      function jn(e) {
         return !!e && "url" in e;
       }
-      function Tn(e) {
+      function xn(e) {
         return !!e && "value" in e;
       }
-      const Fn = [
+      const In = [
         {
           strLocToken: "#ContentReportReasonCategory_ScamsAndTheft",
           children: [
@@ -59942,178 +60096,190 @@
           children: [{ value: 62 }],
         },
       ];
-      function On(e, t) {
+      function Tn(e, t) {
         if (!t || 0 === t.size) return !1;
-        if (In(e)) return !1;
-        if (Tn(e)) return t.has(e.value);
-        for (const r of e.children) if (!On(r, t)) return !1;
+        if (jn(e)) return !1;
+        if (xn(e)) return t.has(e.value);
+        for (const r of e.children) if (!Tn(r, t)) return !1;
         return !0;
       }
-      function Wn(e) {
+      function Fn(e) {
         switch (e) {
           case 0:
-            return Cn.Localize("#ContentReportReason_Invalid");
+            return Sn.u.Localize("#ContentReportReason_Invalid");
           case 1:
-            return Cn.Localize("#ContentReportReason_None");
+            return Sn.u.Localize("#ContentReportReason_None");
           case 2:
-            return Cn.Localize("#ContentReportReason_Unknown");
+            return Sn.u.Localize("#ContentReportReason_Unknown");
           case 3:
-            return Cn.Localize("#ContentReportReason_Harassment");
+            return Sn.u.Localize("#ContentReportReason_Harassment");
           case 4:
-            return Cn.Localize("#ContentReportReason_BullyingAndIntimidation");
+            return Sn.u.Localize(
+              "#ContentReportReason_BullyingAndIntimidation",
+            );
           case 5:
-            return Cn.Localize("#ContentReportReason_Stalking");
+            return Sn.u.Localize("#ContentReportReason_Stalking");
           case 6:
-            return Cn.Localize("#ContentReportReason_Doxxing");
+            return Sn.u.Localize("#ContentReportReason_Doxxing");
           case 7:
-            return Cn.Localize("#ContentReportReason_OtherHarassment");
+            return Sn.u.Localize("#ContentReportReason_OtherHarassment");
           case 8:
-            return Cn.Localize("#ContentReportReason_EncouragingViolence");
+            return Sn.u.Localize("#ContentReportReason_EncouragingViolence");
           case 9:
-            return Cn.Localize("#ContentReportReason_EncouragingSelfHarm");
+            return Sn.u.Localize("#ContentReportReason_EncouragingSelfHarm");
           case 10:
-            return Cn.Localize("#ContentReportReason_EncouragingSuicide");
+            return Sn.u.Localize("#ContentReportReason_EncouragingSuicide");
           case 11:
-            return Cn.Localize("#ContentReportReason_OtherViolenceOrSelfHarm");
+            return Sn.u.Localize(
+              "#ContentReportReason_OtherViolenceOrSelfHarm",
+            );
           case 63:
-            return Cn.Localize("#ContentReportReason_CredibleThreatOfViolence");
+            return Sn.u.Localize(
+              "#ContentReportReason_CredibleThreatOfViolence",
+            );
           case 12:
-            return Cn.Localize("#ContentReportReason_PhishingOrAccountTheft");
+            return Sn.u.Localize("#ContentReportReason_PhishingOrAccountTheft");
           case 13:
-            return Cn.Localize("#ContentReportReason_AttemptedScamming");
+            return Sn.u.Localize("#ContentReportReason_AttemptedScamming");
           case 14:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_LinkingToMaliciousContent",
             );
           case 15:
-            return Cn.Localize("#ContentReportReason_Impersonation");
+            return Sn.u.Localize("#ContentReportReason_Impersonation");
           case 16:
-            return Cn.Localize("#ContentReportReason_OtherScamsAndTheft");
+            return Sn.u.Localize("#ContentReportReason_OtherScamsAndTheft");
           case 17:
-            return Cn.Localize("#ContentReportReason_EncouragingTerrorism");
+            return Sn.u.Localize("#ContentReportReason_EncouragingTerrorism");
           case 18:
-            return Cn.Localize("#ContentReportReason_OrganizingTerrorism");
+            return Sn.u.Localize("#ContentReportReason_OrganizingTerrorism");
           case 19:
-            return Cn.Localize("#ContentReportReason_OtherTerrorism");
+            return Sn.u.Localize("#ContentReportReason_OtherTerrorism");
           case 20:
-            return Cn.Localize("#ContentReportReason_TargetedAbuse");
+            return Sn.u.Localize("#ContentReportReason_TargetedAbuse");
           case 21:
-            return Cn.Localize("#ContentReportReason_NamingAndShaming");
+            return Sn.u.Localize("#ContentReportReason_NamingAndShaming");
           case 22:
-            return Cn.Localize("#ContentReportReason_Discrimination");
+            return Sn.u.Localize("#ContentReportReason_Discrimination");
           case 23:
-            return Cn.Localize("#ContentReportReason_OtherAbuse");
+            return Sn.u.Localize("#ContentReportReason_OtherAbuse");
           case 24:
-            return Cn.Localize("#ContentReportReason_Trolling");
+            return Sn.u.Localize("#ContentReportReason_Trolling");
           case 25:
-            return Cn.Localize("#ContentReportReason_Baiting");
+            return Sn.u.Localize("#ContentReportReason_Baiting");
           case 26:
-            return Cn.Localize("#ContentReportReason_Derailing");
+            return Sn.u.Localize("#ContentReportReason_Derailing");
           case 27:
-            return Cn.Localize("#ContentReportReason_OtherDisruptive");
+            return Sn.u.Localize("#ContentReportReason_OtherDisruptive");
           case 28:
-            return Cn.Localize("#ContentReportReason_Spam");
+            return Sn.u.Localize("#ContentReportReason_Spam");
           case 29:
-            return Cn.Localize("#ContentReportReason_Begging");
+            return Sn.u.Localize("#ContentReportReason_Begging");
           case 30:
-            return Cn.Localize("#ContentReportReason_Reposting");
+            return Sn.u.Localize("#ContentReportReason_Reposting");
           case 31:
-            return Cn.Localize("#ContentReportReason_OtherOffTopic");
+            return Sn.u.Localize("#ContentReportReason_OtherOffTopic");
           case 32:
-            return Cn.Localize("#ContentReportReason_CSAMSexualContent");
+            return Sn.u.Localize("#ContentReportReason_CSAMSexualContent");
           case 33:
-            return Cn.Localize("#ContentReportReason_CSAMGroomingOrEnticement");
+            return Sn.u.Localize(
+              "#ContentReportReason_CSAMGroomingOrEnticement",
+            );
           case 34:
-            return Cn.Localize("#ContentReportReason_CSAMOther");
+            return Sn.u.Localize("#ContentReportReason_CSAMOther");
           case 35:
-            return Cn.Localize("#ContentReportReason_NudityOrSexualContent");
+            return Sn.u.Localize("#ContentReportReason_NudityOrSexualContent");
           case 36:
-            return Cn.Localize("#ContentReportReason_NonConsensualMaterial");
+            return Sn.u.Localize("#ContentReportReason_NonConsensualMaterial");
           case 37:
-            return Cn.Localize("#ContentReportReason_Advertising");
+            return Sn.u.Localize("#ContentReportReason_Advertising");
           case 38:
-            return Cn.Localize("#ContentReportReason_ReferralLinks");
+            return Sn.u.Localize("#ContentReportReason_ReferralLinks");
           case 39:
-            return Cn.Localize("#ContentReportReason_Gambling");
+            return Sn.u.Localize("#ContentReportReason_Gambling");
           case 40:
-            return Cn.Localize("#ContentReportReason_Raffles");
+            return Sn.u.Localize("#ContentReportReason_Raffles");
           case 41:
-            return Cn.Localize("#ContentReportReason_OtherCommercialActivity");
+            return Sn.u.Localize(
+              "#ContentReportReason_OtherCommercialActivity",
+            );
           case 42:
-            return Cn.Localize("#ContentReportReason_InauthenticReview");
+            return Sn.u.Localize("#ContentReportReason_InauthenticReview");
           case 43:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_HiddenAdvertisementOrCommercialCommunication",
             );
           case 44:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_MisleadingInformationAboutGoodsOrServices",
             );
           case 45:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_MisleadingInformationAboutConsumerRights",
             );
           case 46:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_NoncomplianceWithPricingRegulations",
             );
           case 47:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_RightToBeForgottenViolation",
             );
           case 48:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_MissingProcessingGroundForData",
             );
           case 49:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_OtherDataProtectionAndPrivacyViolation",
             );
           case 50:
-            return Cn.Localize("#ContentReportReason_GenderedHarassment");
+            return Sn.u.Localize("#ContentReportReason_GenderedHarassment");
           case 51:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_GenderedBullyingAndIntimidation",
             );
           case 52:
-            return Cn.Localize("#ContentReportReason_GenderedStalking");
+            return Sn.u.Localize("#ContentReportReason_GenderedStalking");
           case 53:
-            return Cn.Localize("#ContentReportReason_GenderedDoxxing");
+            return Sn.u.Localize("#ContentReportReason_GenderedDoxxing");
           case 54:
-            return Cn.Localize("#ContentReportReason_GenderedOtherHarassment");
+            return Sn.u.Localize(
+              "#ContentReportReason_GenderedOtherHarassment",
+            );
           case 55:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_GenderedEncouragingViolence",
             );
           case 56:
-            return Cn.Localize("#ContentReportReason_GenderedTargetedAbuse");
+            return Sn.u.Localize("#ContentReportReason_GenderedTargetedAbuse");
           case 57:
-            return Cn.Localize("#ContentReportReason_CSAMFakedSexualContent");
+            return Sn.u.Localize("#ContentReportReason_CSAMFakedSexualContent");
           case 58:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_GenderedNonConsensualMaterial",
             );
           case 59:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_FakedGenderedNonConsensualMaterial",
             );
           case 60:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_FakedNonConsensualMaterial",
             );
           case 62:
-            return Cn.Localize("#ContentReportReason_QuotesModeratedContent");
+            return Sn.u.Localize("#ContentReportReason_QuotesModeratedContent");
           case 61:
-            return Cn.Localize(
+            return Sn.u.Localize(
               "#ContentReportReason_NegativeEffectonDiscourseOrElections",
             );
           default:
             return "";
         }
       }
-      var qn = r(37403),
-        Un = r(4869);
-      function Ln(e) {
+      var On = r(37403),
+        Wn = r(4869);
+      function qn(e) {
         const { publishedFileId: t } = e,
           [r, i] = (0, s.useState)(!1),
           a = (function (e) {
@@ -60121,12 +60287,12 @@
               mutationKey: ["report_ugc_file", e],
               mutationFn: async (t) => {
                 const r = new FormData();
-                r.append("sessionid", Mn.TS.SESSIONID),
+                r.append("sessionid", yn.TS.SESSIONID),
                   r.append("id", e),
                   r.append("description", t.text),
                   r.append("reason", t.reason.toString()),
                   await fetch(
-                    `${Mn.TS.COMMUNITY_BASE_URL}sharedfiles/reportitem`,
+                    `${yn.TS.COMMUNITY_BASE_URL}sharedfiles/reportitem`,
                     { method: "POST", body: r },
                   );
               },
@@ -60136,7 +60302,7 @@
           window[`reportUGC${t}`] = () => i(!0);
         }, [t, i]);
         const o = new Set([42]);
-        return (0, n.jsx)(Pn, {
+        return (0, n.jsx)(kn, {
           reportSubjectMutation: a,
           subjectType: 3,
           subjectGroupId: t,
@@ -60146,7 +60312,7 @@
           excludedReasons: o,
         });
       }
-      function kn(e) {
+      function Un(e) {
         const { publishedFileId: t, commentId: r } = e,
           [i, a] = (0, s.useState)(!1),
           o = (function (e, t) {
@@ -60154,14 +60320,14 @@
             return (0, A.n)({
               mutationKey: ["report_ugc_comment", t],
               mutationFn: async (i) => {
-                const n = g.w.Init(qn.eB);
+                const n = g.w.Init(On.eB);
                 n.Body().set_gidcomment(t),
                   n.Body().set_gidfeature(e),
                   n.Body().set_gidfeature2(E.kF),
                   n.Body().set_hide(!0),
                   n.Body().set_report_reason(i.reason),
                   n.Body().set_report_text(i.text);
-                await qn.BE.HideAndReportComment(r, n);
+                await On.BE.HideAndReportComment(r, n);
               },
             });
           })(t, r);
@@ -60169,7 +60335,7 @@
           window[`reportComment${r}`] = () => a(!0);
         }, [r, a]);
         const l = new Set([42]);
-        return (0, n.jsx)(Pn, {
+        return (0, n.jsx)(kn, {
           reportSubjectMutation: o,
           subjectType: 3,
           subjectGroupId: t,
@@ -60179,7 +60345,7 @@
           excludedReasons: l,
         });
       }
-      function Dn(e) {
+      function Ln(e) {
         const t = (function (e, t, r, n) {
             const s = (0, N.KV)();
             return (0, A.n)({
@@ -60204,7 +60370,7 @@
               .getElementById(e.anchorId)
               .addEventListener("click", () => a(!0));
           }, [e.anchorId]),
-          (0, n.jsx)(Pn, {
+          (0, n.jsx)(kn, {
             reportSubjectMutation: t,
             subjectType: 1,
             subjectGroupId: e.gidTopic,
@@ -60275,8 +60441,8 @@
                     strOverrideReasonNameLocToken:
                       "#reportforumpost_reason_cheating",
                   },
-                  zn,
-                  jn,
+                  Cn,
+                  Rn,
                 ],
                 bShowRightArrow: !0,
               },
@@ -60291,7 +60457,7 @@
         );
       }
       new Set([29, 28, 30, 31, 42, 46, 47, 48, 49, 43, 44, 45, 24, 25, 26, 27]);
-      function Pn(e) {
+      function kn(e) {
         var t;
         const [r, i] = (0, s.useState)([]),
           [a, u] = (0, s.useState)("reason"),
@@ -60302,58 +60468,58 @@
           b = (e) => {
             let t = [...r],
               n = e;
-            xn(e) && 1 === e.children.length && (n = e.children[0]),
+            zn(e) && 1 === e.children.length && (n = e.children[0]),
               t.push(n),
               i(t),
-              Tn(n)
+              xn(n)
                 ? (n.strOverrideReasonNameLocToken
-                    ? B(Cn.Localize(n.strOverrideReasonNameLocToken))
+                    ? B(Sn.u.Localize(n.strOverrideReasonNameLocToken))
                     : B(null),
                   u("submit"))
-                : In(n) &&
+                : jn(n) &&
                   (n.strWarningBeforeNav
                     ? u("anchorwarning")
                     : (window.location.href = n.url));
           };
         if (!e.showDialog) return null;
         const f = r.length ? r[r.length - 1] : null,
-          w = Tn(f) ? f.value : 0;
+          w = xn(f) ? f.value : 0;
         let M = [];
-        r.length && xn(f)
+        r.length && zn(f)
           ? (M = f.children)
           : 0 === r.length &&
-            (M = null !== (t = e.rgReportReasonTree) && void 0 !== t ? t : Fn);
-        const y = M.filter((t) => !On(t, e.excludedReasons)).map((e, t) => {
-          const r = Tn(e) ? e.value : e.strLocToken;
+            (M = null !== (t = e.rgReportReasonTree) && void 0 !== t ? t : In);
+        const y = M.filter((t) => !Tn(t, e.excludedReasons)).map((e, t) => {
+          const r = xn(e) ? e.value : e.strLocToken;
           let i,
             s = "";
-          xn(e)
-            ? 1 === e.children.length && !e.bForceLocToken && Tn(e.children[0])
-              ? (s = Wn(e.children[0].value))
-              : ((s = Cn.Localize(e.strLocToken)),
+          zn(e)
+            ? 1 === e.children.length && !e.bForceLocToken && xn(e.children[0])
+              ? (s = Fn(e.children[0].value))
+              : ((s = Sn.u.Localize(e.strLocToken)),
                 (i = e.strDescriptionLocToken
-                  ? Cn.Localize(e.strDescriptionLocToken)
+                  ? Sn.u.Localize(e.strDescriptionLocToken)
                   : void 0))
-            : In(e)
-              ? ((s = Cn.Localize(e.strLocToken)),
+            : jn(e)
+              ? ((s = Sn.u.Localize(e.strLocToken)),
                 (i = e.strDescriptionLocToken
-                  ? Cn.Localize(e.strDescriptionLocToken)
+                  ? Sn.u.Localize(e.strDescriptionLocToken)
                   : void 0))
               : ((s = e.strOverrideReasonNameLocToken
-                  ? Cn.Localize(e.strOverrideReasonNameLocToken)
-                  : Wn(e.value)),
+                  ? Sn.u.Localize(e.strOverrideReasonNameLocToken)
+                  : Fn(e.value)),
                 (i = e.strDescriptionLocToken
-                  ? Cn.Localize(e.strDescriptionLocToken)
+                  ? Sn.u.Localize(e.strDescriptionLocToken)
                   : void 0));
-          const a = xn(e) || e.bShowRightArrow;
-          return In(e)
+          const a = zn(e) || e.bShowRightArrow;
+          return jn(e)
             ? (0, n.jsx)(
-                Nn,
+                Dn,
                 { text: s, description: i, onClick: () => b(e) },
                 r,
               )
             : (0, n.jsx)(
-                Nn,
+                Dn,
                 {
                   text: s,
                   description: i,
@@ -60367,10 +60533,10 @@
         return (
           (v =
             "submitted" === a
-              ? Cn.Localize("#ContentReportSubmitted_Title")
+              ? Sn.u.Localize("#ContentReportSubmitted_Title")
               : "error" === a
-                ? Cn.Localize("#ContentReportSubmissionError_Title")
-                : Cn.Localize("#ReportContent_Title")),
+                ? Sn.u.Localize("#ContentReportSubmissionError_Title")
+                : Sn.u.Localize("#ReportContent_Title")),
           (0, n.jsx)(n.Fragment, {
             children: (0, n.jsx)(Xe.EN, {
               active: e.showDialog,
@@ -60389,7 +60555,7 @@
                             children: e.landingDescription,
                           }),
                         (0, n.jsx)("p", {
-                          children: Cn.Localize("#ReportContent_PickAReason"),
+                          children: Sn.u.Localize("#ReportContent_PickAReason"),
                         }),
                         (0, n.jsx)(Ye.Z, {
                           focusableIfEmpty: !0,
@@ -60403,7 +60569,7 @@
                               onClick: () => i(r.slice(0, -1)),
                               children: [
                                 "« ",
-                                Cn.Localize("#ReportContent_Back"),
+                                Sn.u.Localize("#ReportContent_Back"),
                               ],
                             }),
                           }),
@@ -60412,7 +60578,7 @@
                             className: o().BottomButtons,
                             children: (0, n.jsx)(c.$n, {
                               onClick: () => e.setShowDialog(!1),
-                              children: Cn.Localize("#moderation_cancel"),
+                              children: Sn.u.Localize("#moderation_cancel"),
                             }),
                           }),
                       ],
@@ -60421,12 +60587,12 @@
                     (0, n.jsxs)(n.Fragment, {
                       children: [
                         (0, n.jsx)("p", {
-                          children: Cn.Localize("#ReportContent_Attestation"),
+                          children: Sn.u.Localize("#ReportContent_Attestation"),
                         }),
                         (0, n.jsx)(Ye.Z, {
-                          children: Cn.Localize(
+                          children: Sn.u.Localize(
                             "#reportforumpost_reasonforreport",
-                            _ || Wn(w),
+                            _ || Fn(w),
                           ),
                         }),
                         (0, n.jsx)(Ye.Z, {
@@ -60438,7 +60604,7 @@
                               d().Textarea,
                               o().DetailedReasonTextArea,
                             ),
-                            placeholder: Cn.Localize(
+                            placeholder: Sn.u.Localize(
                               "#ReportContent_DetailsPlaceholder",
                             ),
                           }),
@@ -60447,7 +60613,7 @@
                           className: o().NamePanel,
                           children: [
                             (0, n.jsx)(Ye.Z, {
-                              children: Cn.Localize(
+                              children: Sn.u.Localize(
                                 "#ReportContent_YourNamePlaceholder",
                               ),
                             }),
@@ -60469,15 +60635,15 @@
                               },
                               children: [
                                 "« ",
-                                Cn.Localize("#ReportContent_Back"),
+                                Sn.u.Localize("#ReportContent_Back"),
                               ],
                             }),
                             (0, n.jsx)(c.jn, {
                               onClick: async () => {
                                 var t, i, n, s;
                                 const a = r.length ? r[r.length - 1] : null;
-                                if (!a || !Tn(a))
-                                  return void (0, yn.wT)(
+                                if (!a || !xn(a))
+                                  return void (0, vn.wT)(
                                     !1,
                                     "Content report submitted with invalid reason tree state",
                                   );
@@ -60505,7 +60671,7 @@
                                   .then(() => e.onSubmitted && e.onSubmitted())
                                   .catch(() => u("error"));
                               },
-                              children: Cn.Localize(
+                              children: Sn.u.Localize(
                                 "#ReportContent_ReportButton",
                               ),
                             }),
@@ -60515,13 +60681,13 @@
                     }),
                   "submitted" === a &&
                     (0, n.jsx)("p", {
-                      children: Cn.Localize(
+                      children: Sn.u.Localize(
                         "#ContentReportSubmitted_Description",
                       ),
                     }),
                   "error" === a &&
                     (0, n.jsx)("p", {
-                      children: Cn.Localize(
+                      children: Sn.u.Localize(
                         "#ContentReportSubmissionError_Description",
                       ),
                     }),
@@ -60529,7 +60695,7 @@
                     (0, n.jsxs)(Ye.Z, {
                       children: [
                         (0, n.jsx)("p", {
-                          children: Cn.Localize(f.strWarningBeforeNav),
+                          children: Sn.u.Localize(f.strWarningBeforeNav),
                         }),
                         (0, n.jsxs)(Ye.Z, {
                           className: o().BottomButtons,
@@ -60540,7 +60706,7 @@
                               },
                               children: [
                                 "« ",
-                                Cn.Localize("#ReportContent_Back"),
+                                Sn.u.Localize("#ReportContent_Back"),
                               ],
                             }),
                             (0, n.jsx)(c.jn, {
@@ -60559,7 +60725,7 @@
           })
         );
       }
-      function Nn(e) {
+      function Dn(e) {
         const { text: t, description: r, onClick: i } = e;
         return (0, n.jsxs)(Ye.Z, {
           focusable: !0,
@@ -60581,7 +60747,7 @@
             }),
             e.bShowRightArrow &&
               (0, n.jsx)("div", {
-                children: (0, n.jsx)(Un.cLJ, { direction: "right" }),
+                children: (0, n.jsx)(Wn.cLJ, { direction: "right" }),
               }),
           ],
         });
@@ -78803,6 +78969,7 @@
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
           CLIENT_SESSION: 0,
+          NOW: 0,
         },
         s = {
           logged_in: !1,
@@ -79007,7 +79174,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 38803), e((e.s = t));
+      return (t = 80131), e((e.s = t));
       var t;
     });
     e.O();

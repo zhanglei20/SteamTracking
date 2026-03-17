@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Am analizat contestația ta cu privire la conținut (%1$s).",
 	"moderatedcontent_dispute_sanctioned_2": "După o reevaluare atentă, am hotărât să ne menținem decizia inițială. Conținutul va rămâne eliminat sau restricționat, iar măsurile luate asupra contului vor rămâne active. Am ajuns la această hotărâre după ce am evaluat conținutul în contextul său, ținând cont de informațiile pe care ni le-ai furnizat în cadrul contestației și de regulile platformei și reglementările legale.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Dacă nu ești de acord cu această hotărâre, ai dreptul de a te adresa unui organism autorizat de soluționare extrajudiciară a litigiilor sau de a intenta o acțiune în fața unei instanțe competente.",
+	"anonymousreport_title": "Raportează acest conținut",
+	"anonymousreport_description": "Conectează-te la comunitatea Steam pentru a raporta conținut inadecvat sau ilegal.",
+	"anonymousreport_footer": "Dacă nu te poți conecta, poți <1>depune o sesizare anonimă</1>.",
+	"anonymousreport_footer_action": "depune o sesizare anonimă",
+	"anonymousreport_signin": "Conectează-te",
+	"anonymousreport_join": "înregistrează-te pe Steam",
+	"anonymousreport_createaccount": "Creează un cont",
+	"anonymousreport_signin_or_join": "%1$s sau %2$s",
 	"nocomma": ""
 }`);
     },

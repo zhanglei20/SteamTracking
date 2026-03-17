@@ -1635,7 +1635,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   transition-delay: .125s;
 }
 ._1SoIo_lz6BfTG8leoA-ltA.dX_drVcjsB7c-39llrEDd {
-  opacity: 0.125;
+  opacity: 0;
   transition-delay: 0s;
 }
 ._3D14Gr6XaDtndRA8ojG443 {
@@ -5399,6 +5399,25 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 }
 .ovujKSqZqv7MmjE0upPcI > div input._1PFmi6hYnRJ7C8r3naWGJw:hover {
   background: #23262e;
+}
+._2yUdCFZzHG88b4NJfKsilX {
+  color: #acb2b8;
+}
+._2nf3Oc6BPDa2m1x00QidHg {
+  font-size: 12px;
+  color: #acb2b8;
+  padding-top: 10px;
+}
+._2nf3Oc6BPDa2m1x00QidHg a {
+  text-decoration: underline;
+  color: inherit;
+}
+._1BnHE1R4158RM38jmASodM {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  gap: 10px;
 }
 :root {
   --font-family: "Motiva Sans", Twemoji, "Noto Sans", Helvetica, sans-serif;

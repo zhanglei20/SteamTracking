@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Ukończyliśmy ocenę utworzonego przez ciebie sporu dotyczącego treści (%1$s).",
 	"moderatedcontent_dispute_sanctioned_2": "Po dokładnym ponownym rozpatrzeniu sprawy podjęliśmy decyzję o podtrzymaniu naszej pierwotnej decyzji. Treści pozostaną usunięte lub ograniczone, a wszelkie powiązane środki podjęte na poziomie konta pozostaną w mocy. Rozwiązanie to zostało osiągnięte po ponownej analizie treści w ich kontekście, informacji zawartych w twoim sporze oraz mających zastosowanie zasad platformy oraz wymogów prawnych.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Jeśli nie zgadzasz się z tym rozwiązaniem, możesz ubiegać się o rozstrzygnięcie za pośrednictwem certyfikowanego pozasądowego organu ds. rozstrzygania sporów lub dochodzenia zadośćuczynienia na drodze sądowej przed właściwym sądem.",
+	"anonymousreport_title": "Zgłoś te treści",
+	"anonymousreport_description": "Zaloguj się do Społeczności Steam, aby zgłosić nieodpowiednie lub nielegalne treści.",
+	"anonymousreport_footer": "Jeśli nie możesz się zalogować, możesz <1>wypełnić anonimowe zgłoszenie</1>.",
+	"anonymousreport_footer_action": "wypełnić anonimowe zgłoszenie",
+	"anonymousreport_signin": "Zaloguj się",
+	"anonymousreport_join": "dołącz do Steam",
+	"anonymousreport_createaccount": "Utwórz konto",
+	"anonymousreport_signin_or_join": "%1$s lub %2$s",
 	"nocomma": ""
 }`);
     },

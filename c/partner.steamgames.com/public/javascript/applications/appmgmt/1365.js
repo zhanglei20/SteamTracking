@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Deseja tornar um jogo pago em gratuito?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Caso o jogo já tenha sido lançado na modalidade paga e precise torná-lo gratuito, clique %1$s para saber mais e pedir ajuda.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "aqui",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

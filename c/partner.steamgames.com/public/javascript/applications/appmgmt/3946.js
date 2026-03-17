@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Chuyển sang miễn phí?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Nếu trò chơi của bạn đã phát hành và bạn cần đổi từ trạng thái trả phí sang miễn phí, nhấp %1$s để tìm hiểu thêm và yêu cầu hỗ trợ.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "vào đây",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

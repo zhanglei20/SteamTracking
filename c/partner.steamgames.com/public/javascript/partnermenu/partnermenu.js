@@ -26873,6 +26873,10 @@ Error generating stack: ` +
     _,
     _,
     _,
+    _,
+    _,
+    _,
+    _,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -30475,6 +30479,277 @@ Error generating stack: ` +
           getClassName() {
             return "CSteamInputService_FirstSteamControllerConnection_Notification";
           }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.period_ms || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    period_ms: {
+                      _: 1,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    packets_sent: {
+                      _: 2,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    packet_retransmissions: {
+                      _: 3,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    interval_max_ms: {
+                      _: 4,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    rssi_measure: {
+                      _: 5,
+                      _: _.readInt32,
+                      _: _.writeInt32,
+                    },
+                    reason: {
+                      _: 6,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    rf_channel: {
+                      _: 7,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    backup_channel: {
+                      _: 8,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CTritonQosStatus";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    status: {
+                      _: 2,
+                      _: _,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_TritonQos_Notification";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
+              _.prototype.controller_index || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    controller_index: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    enable: {
+                      _: 2,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_EnableQosStatus_Request";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _
+              ? {
+                  $jspbMessageInstance: _,
+                }
+              : {};
+          }
+          static fromObject(_) {
+            return new _();
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _;
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {}
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CSteamInputService_EnableQosStatus_Response";
+          }
         });
       ((_) => {
         _.NotifyButtonStateChangedHandler = {
@@ -31332,6 +31607,63 @@ Error generating stack: ` +
           );
         }
         (_.SendMsgNotifyFirstSteamControllerConnection = _),
+          (_.NotifyTritonQosHandler = {
+            name: "SteamInputManager.NotifyTritonQos#1",
+            request: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultHandlerRegistry()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no default registry is available for request",
+                ),
+                null)
+              : _.RegisterServiceNotificationHandler(
+                  _.NotifyTritonQosHandler,
+                  _,
+                )
+          );
+        }
+        _.RegisterForNotifyTritonQos = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyTritonQos#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        _.NotifyTritonQos = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? (console.error(
+                  "Transport Error: no transport is available for request",
+                ),
+                !1)
+              : _.SendNotification(
+                  "SteamInputManager.NotifyTritonQos#1",
+                  _(_, _),
+                  {
+                    ePrivilege: 1,
+                    eClientExecutionSite: 2,
+                  },
+                )
+          );
+        }
+        (_.SendMsgNotifyTritonQos = _),
           (_.StartControllerStateFlowHandler = {
             name: "SteamInputManager.StartControllerStateFlow#1",
             request: _,
@@ -32075,7 +32407,46 @@ Error generating stack: ` +
                 })
           );
         }
-        _.SendMsgEnableDockedInput = _;
+        (_.SendMsgEnableDockedInput = _),
+          (_.EnableQosStatusHandler = {
+            name: "SteamInputManager.EnableQosStatus#1",
+            request: _,
+            response: _,
+          });
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.EnableQosStatus#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        _.EnableQosStatus = _;
+        function _(_, _) {
+          return (
+            (_ = _ || _().GetDefaultTransport()),
+            _ == null
+              ? new Promise((_, _) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    _("Transport Error: no transport is available for request");
+                })
+              : _.SendMsg("SteamInputManager.EnableQosStatus#1", _(_, _), _, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 2,
+                })
+          );
+        }
+        _.SendMsgEnableQosStatus = _;
       })((_ ||= {}));
     });
   var _,
@@ -32934,6 +33305,11 @@ Error generating stack: ` +
                       _: !0,
                       _: !0,
                     },
+                    purchase_description: {
+                      _: 72,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
                   },
                 }),
               _.sm_m
@@ -33059,7 +33435,7 @@ Error generating stack: ` +
           constructor(_ = null) {
             super(),
               _.prototype.included_apps || _(_._()),
-              _.Message.initialize(this, _, 0, -1, [1, 2], null);
+              _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
           }
           static sm_m;
           static sm_mbf;
@@ -33077,6 +33453,12 @@ Error generating stack: ` +
                     },
                     included_packages: {
                       _: 2,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    included_bundles: {
+                      _: 3,
                       _: _,
                       _: !0,
                       _: !0,
@@ -37350,6 +37732,7 @@ Error generating stack: ` +
         USE_LONGEST_LOC_STRING: !1,
         SILENT_STARTUP: !1,
         CLIENT_SESSION: 0,
+        NOW: 0,
       }),
         (_ = {
           logged_in: !1,
@@ -37427,6 +37810,219 @@ Error generating stack: ` +
         (_ = window.Config ? () => Promise.resolve() : _);
       window.Config && Object.assign(_, window.Config);
       window.UserConfig && Object.assign(_, window.UserConfig);
+    });
+  function _(_) {
+    return _.has(_);
+  }
+  function _(_) {
+    if (_ !== "english") return _ === "sc_schinese" ? "schinese" : "english";
+  }
+  var _,
+    _,
+    _,
+    _,
+    _ = _(() => {
+      "use strict";
+      (_ = [
+        "sc_schinese",
+        "schinese",
+        "tchinese",
+        "japanese",
+        "koreana",
+        "thai",
+        "arabic",
+        "bulgarian",
+        "czech",
+        "danish",
+        "german",
+        "english",
+        "spanish",
+        "latam",
+        "greek",
+        "french",
+        "italian",
+        "indonesian",
+        "hungarian",
+        "dutch",
+        "norwegian",
+        "polish",
+        "portuguese",
+        "brazilian",
+        "romanian",
+        "russian",
+        "finnish",
+        "swedish",
+        "turkish",
+        "vietnamese",
+        "ukrainian",
+      ]),
+        (_ = new Set(_));
+      (_ = new Map([
+        ["en", "english"],
+        ["de", "german"],
+        ["fr", "french"],
+        ["it", "italian"],
+        ["ko", "koreana"],
+        ["es-419", "latam"],
+        ["es", "spanish"],
+        ["zh", "schinese"],
+        ["zh-cn", "schinese"],
+        ["zh-tw", "tchinese"],
+        ["ru", "russian"],
+        ["ar", "arabic"],
+        ["th", "thai"],
+        ["ja", "japanese"],
+        ["pt-br", "brazilian"],
+        ["pt", "portuguese"],
+        ["pl", "polish"],
+        ["da", "danish"],
+        ["nl", "dutch"],
+        ["fi", "finnish"],
+        ["nb", "norwegian"],
+        ["no", "norwegian"],
+        ["sv", "swedish"],
+        ["hu", "hungarian"],
+        ["cs", "czech"],
+        ["ro", "romanian"],
+        ["tr", "turkish"],
+        ["bg", "bulgarian"],
+        ["el", "greek"],
+        ["uk", "ukrainian"],
+        ["vn", "vietnamese"],
+        ["vi", "vietnamese"],
+        ["id", "indonesian"],
+      ])),
+        (_ = new Map());
+      for (let [_, _] of _.entries()) _.set(_, _);
+      _.set("sc_schinese", _.get("schinese"));
+      _.set("korean", _.get("koreana"));
+    });
+  function _(_, ..._) {
+    return (
+      _.length == 0 ||
+        (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
+          if (_ <= _.length && _ >= 1) {
+            let _ = _[_ - 1];
+            return String(_ ?? "");
+          }
+          return _;
+        })),
+      _
+    );
+  }
+  var _ = _(() => {
+    "use strict";
+  });
+  function _() {
+    return (_ ??= Promise.all(_));
+  }
+  function _(_) {
+    (_ ??= new Set()), _.add(_), (_ = Promise.all(_));
+  }
+  var _,
+    _,
+    _ = _(() => {
+      "use strict";
+      _ ??= new Set();
+    });
+  function _(_) {
+    let _ = new Map();
+    async function _() {
+      await _();
+      let _ = _(),
+        _ = new Set([]);
+      for (let _ of _.languages) {
+        _.add(_.strLanguage);
+        let _ = _(_.strLanguage);
+        _ && _.add(_);
+      }
+      return Promise.all(
+        Array.from(_).map((_) =>
+          _(_).then((_) => {
+            if (!_) return;
+            let _ = new Map();
+            for (let [_, _] of Object.entries(_)) _.set("#" + _, _);
+            _.set(_, _);
+          }),
+        ),
+      );
+    }
+    let _ = _(),
+      _ = !1;
+    _.then(() => (_ = !0)), _(_);
+    function _(_, _) {
+      let [_, ..._] = _,
+        _ =
+          _.get(_.strLanguage)?.get(_) ??
+          _.get(_(_.strLanguage) ?? "english")?.get(_);
+      return (
+        _ ||
+        (_.length === 0
+          ? (console.error("Couldn't find localization key", _), _)
+          : _(_, _))
+      );
+    }
+    function _(_, ..._) {
+      let _ = _().languages,
+        _ = _(_, _);
+      return _(_, ..._);
+    }
+    return {
+      Localize(_, ..._) {
+        return _(_, ..._);
+      },
+      LocalizeReact(_, ..._) {
+        let _ = this.Localize(_);
+        if (_ === _) return _;
+        let _ = [],
+          _ = /(.*?)%(\d+)\$s/g,
+          _ = 0,
+          _;
+        for (; (_ = _.exec(_)); ) {
+          (_ += _[0].length), _.push(_[1]);
+          let _ = parseInt(_[2]);
+          _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
+        }
+        return (
+          _.push(_.slice(_)),
+          _.default.createElement(_.default.Fragment, null, ..._)
+        );
+      },
+      LocalizePlural(_, _, ..._) {
+        return _ === 1 || _ === "1" ? _(_, _, ..._) : _(_ + "_Plural", _, ..._);
+      },
+      LocalizeInSpecificLang(_, _, ..._) {
+        let _ = _(_, [_]);
+        return _(_, ..._);
+      },
+      Ready() {
+        return _;
+      },
+      IsReady() {
+        return _;
+      },
+    };
+  }
+  function _() {
+    if (!_(_.LANGUAGE)) throw `unknown language ${_.LANGUAGE}`;
+    return {
+      languages: [
+        {
+          strLanguage: _.LANGUAGE,
+          strISOCode: _.get(_.LANGUAGE),
+          eSource: 5,
+        },
+      ],
+    };
+  }
+  var _,
+    _ = _(() => {
+      "use strict";
+      _();
+      _ = _(_(), 1);
+      _();
+      _();
+      _();
     });
   var _ = _((_, _) => {
     "use strict";
@@ -38752,6 +39348,268 @@ Error generating stack: ` +
       _();
       _ = _;
     });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+    _();
+  });
+  var _,
+    _ = _(() => {
+      _ = "./clan_arabic-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_brazilian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_bulgarian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_czech-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_danish-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_dutch-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_english-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_finnish-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_french-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_german-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_greek-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_hungarian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_indonesian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_italian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_japanese-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_koreana-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_latam-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_norwegian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_polish-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_portuguese-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_romanian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_russian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_schinese-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_spanish-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_swedish-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_tchinese-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_thai-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_turkish-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_ukrainian-JENOEMAA.json";
+    });
+  var _,
+    _ = _(() => {
+      _ = "./clan_vietnamese-JENOEMAA.json";
+    });
+  async function _(_) {
+    if (_[_])
+      return (await fetch(new URL(_[_], document.currentScript.src))).json();
+  }
+  var _,
+    _ = _(() => {
+      "use strict";
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _();
+      _ = {};
+      _.arabic = _;
+      _.brazilian = _;
+      _.bulgarian = _;
+      _.czech = _;
+      _.danish = _;
+      _.dutch = _;
+      _.english = _;
+      _.finnish = _;
+      _.french = _;
+      _.german = _;
+      _.greek = _;
+      _.hungarian = _;
+      _.indonesian = _;
+      _.italian = _;
+      _.japanese = _;
+      _.koreana = _;
+      _.latam = _;
+      _.norwegian = _;
+      _.polish = _;
+      _.portuguese = _;
+      _.romanian = _;
+      _.russian = _;
+      _.schinese = _;
+      _.spanish = _;
+      _.swedish = _;
+      _.tchinese = _;
+      _.thai = _;
+      _.turkish = _;
+      _.ukrainian = _;
+      _.vietnamese = _;
+    });
+  var _,
+    _ = _(() => {
+      "use strict";
+      _();
+      _();
+      _ = _(_);
+    });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _,
+    _,
+    _,
+    _,
+    _,
+    _,
+    _ = _(() => {
+      "use strict";
+      (_ = 4145017),
+        (_ = 35143931),
+        (_ = 39049601),
+        (_ = 41316928),
+        (_ = 4),
+        (_ = [_, _, _, _, _]);
+    });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+    _();
+  });
+  var _ = _(() => {
+    "use strict";
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+    _();
+  });
   function _(_) {
     return _ in _;
   }
@@ -38760,10 +39618,12 @@ Error generating stack: ` +
       "use strict";
       _();
       _();
+      _();
       _ = class _ {
         static InstrumentLink(_, _, _ = null) {
-          let _ = _.GetLinkParam(_, _);
-          return _.AddNavParamToURL(_, _);
+          let _ = _.GetSNRLinkParam(_, _),
+            _ = _.GetCuratorClanIDParam(_);
+          return _.AddNavParamToURL(_, _, _);
         }
         static ParseSNR(_) {
           let _ = _.split("_") || [];
@@ -38776,7 +39636,7 @@ Error generating stack: ` +
             depth: _[5] ? Number(_[5]) : void 0,
           };
         }
-        static GetLinkParam(_, _ = null) {
+        static GetSNRLinkParam(_, _ = null) {
           let _ = _.ComputeLinkPrefix(
             _.domain,
             _.controller,
@@ -38787,13 +39647,19 @@ Error generating stack: ` +
           let _ = _.EncodeEventComponent(_.feature);
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
-        static AddNavParamToURL(_, _) {
+        static GetCuratorClanIDParam(_) {
+          return _.curator_clanid ?? null;
+        }
+        static AddNavParamToURL(_, _, _) {
           if (!_ || _.length == 0) return _;
           try {
             let _ = new URL(_(_)),
               _ = new URLSearchParams(_.search);
             return (
               _.set("snr", encodeURIComponent(_ ?? "")),
+              _ &&
+                !_.includes(_) &&
+                _.set("curator_clanid", encodeURIComponent(_ ?? "")),
               _.origin + _.pathname + "?" + _.toString() + _.hash
             );
           } catch (_) {
@@ -38841,7 +39707,16 @@ Error generating stack: ` +
           ..._,
           ..._,
         }),
-        [_, _.domain, _.controller, _.method, _.submethod, _.feature, _.depth],
+        [
+          _,
+          _.domain,
+          _.controller,
+          _.method,
+          _.submethod,
+          _.feature,
+          _.depth,
+          _.curator_clanid,
+        ],
       );
     return (0, _.jsx)(_.Provider, {
       value: _,
@@ -38852,14 +39727,15 @@ Error generating stack: ` +
     return _.default.useContext(_);
   }
   function _(_, _, _, _) {
-    let _ = _.GetLinkParam(
-      {
-        ..._,
-        feature: _ || _.feature,
-      },
-      _,
-    );
-    return _.AddNavParamToURL(_, _);
+    let _ = _.GetSNRLinkParam(
+        {
+          ..._,
+          feature: _ || _.feature,
+        },
+        _,
+      ),
+      _ = _.GetCuratorClanIDParam(_);
+    return _.AddNavParamToURL(_, _, _);
   }
   var _,
     _,
@@ -46959,199 +47835,6 @@ Error generating stack: ` +
   }
   _();
   _();
-  var _ = _(_(), 1);
-  var _ = [
-      "sc_schinese",
-      "schinese",
-      "tchinese",
-      "japanese",
-      "koreana",
-      "thai",
-      "arabic",
-      "bulgarian",
-      "czech",
-      "danish",
-      "german",
-      "english",
-      "spanish",
-      "latam",
-      "greek",
-      "french",
-      "italian",
-      "indonesian",
-      "hungarian",
-      "dutch",
-      "norwegian",
-      "polish",
-      "portuguese",
-      "brazilian",
-      "romanian",
-      "russian",
-      "finnish",
-      "swedish",
-      "turkish",
-      "vietnamese",
-      "ukrainian",
-    ],
-    _ = new Set(_);
-  function _(_) {
-    return _.has(_);
-  }
-  var _ = new Map([
-    ["en", "english"],
-    ["de", "german"],
-    ["fr", "french"],
-    ["it", "italian"],
-    ["ko", "koreana"],
-    ["es-419", "latam"],
-    ["es", "spanish"],
-    ["zh", "schinese"],
-    ["zh-cn", "schinese"],
-    ["zh-tw", "tchinese"],
-    ["ru", "russian"],
-    ["ar", "arabic"],
-    ["th", "thai"],
-    ["ja", "japanese"],
-    ["pt-br", "brazilian"],
-    ["pt", "portuguese"],
-    ["pl", "polish"],
-    ["da", "danish"],
-    ["nl", "dutch"],
-    ["fi", "finnish"],
-    ["nb", "norwegian"],
-    ["no", "norwegian"],
-    ["sv", "swedish"],
-    ["hu", "hungarian"],
-    ["cs", "czech"],
-    ["ro", "romanian"],
-    ["tr", "turkish"],
-    ["bg", "bulgarian"],
-    ["el", "greek"],
-    ["uk", "ukrainian"],
-    ["vn", "vietnamese"],
-    ["vi", "vietnamese"],
-    ["id", "indonesian"],
-  ]);
-  var _ = new Map();
-  for (let [_, _] of _.entries()) _.set(_, _);
-  _.set("sc_schinese", _.get("schinese"));
-  _.set("korean", _.get("koreana"));
-  function _(_) {
-    if (_ !== "english") return _ === "sc_schinese" ? "schinese" : "english";
-  }
-  function _(_, ..._) {
-    return (
-      _.length == 0 ||
-        (_ = _.replace(/%(?:(\d+)\$)?s/g, function (_, _) {
-          if (_ <= _.length && _ >= 1) {
-            let _ = _[_ - 1];
-            return String(_ ?? "");
-          }
-          return _;
-        })),
-      _
-    );
-  }
-  var _;
-  _ ??= new Set();
-  var _;
-  function _() {
-    return (_ ??= Promise.all(_));
-  }
-  function _(_) {
-    (_ ??= new Set()), _.add(_), (_ = Promise.all(_));
-  }
-  function _(_) {
-    let _ = new Map();
-    async function _() {
-      await _();
-      let _ = _(),
-        _ = new Set([]);
-      for (let _ of _.languages) {
-        _.add(_.strLanguage);
-        let _ = _(_.strLanguage);
-        _ && _.add(_);
-      }
-      return Promise.all(
-        Array.from(_).map((_) =>
-          _(_).then((_) => {
-            if (!_) return;
-            let _ = new Map();
-            for (let [_, _] of Object.entries(_)) _.set("#" + _, _);
-            _.set(_, _);
-          }),
-        ),
-      );
-    }
-    let _ = _(),
-      _ = !1;
-    _.then(() => (_ = !0)), _(_);
-    function _(_, _) {
-      let [_, ..._] = _,
-        _ =
-          _.get(_.strLanguage)?.get(_) ??
-          _.get(_(_.strLanguage) ?? "english")?.get(_);
-      return (
-        _ ||
-        (_.length === 0
-          ? (console.error("Couldn't find localization key", _), _)
-          : _(_, _))
-      );
-    }
-    function _(_, ..._) {
-      let _ = _().languages,
-        _ = _(_, _);
-      return _(_, ..._);
-    }
-    return {
-      Localize(_, ..._) {
-        return _(_, ..._);
-      },
-      LocalizeReact(_, ..._) {
-        let _ = this.Localize(_);
-        if (_ === _) return _;
-        let _ = [],
-          _ = /(.*?)%(\d+)\$s/g,
-          _ = 0,
-          _;
-        for (; (_ = _.exec(_)); ) {
-          (_ += _[0].length), _.push(_[1]);
-          let _ = parseInt(_[2]);
-          _ >= 1 && _ <= _.length && _.push(_[_ - 1]);
-        }
-        return (
-          _.push(_.slice(_)),
-          _.default.createElement(_.default.Fragment, null, ..._)
-        );
-      },
-      LocalizePlural(_, _, ..._) {
-        return _ === 1 || _ === "1" ? _(_, _, ..._) : _(_ + "_Plural", _, ..._);
-      },
-      LocalizeInSpecificLang(_, _, ..._) {
-        let _ = _(_, [_]);
-        return _(_, ..._);
-      },
-      Ready() {
-        return _;
-      },
-      IsReady() {
-        return _;
-      },
-    };
-  }
-  function _() {
-    if (!_(_.LANGUAGE)) throw `unknown language ${_.LANGUAGE}`;
-    return {
-      languages: [
-        {
-          strLanguage: _.LANGUAGE,
-          strISOCode: _.get(_.LANGUAGE),
-          eSource: 5,
-        },
-      ],
-    };
-  }
-  _();
   var _ = _(_(), 1),
     _ = _(_(), 1);
   _();
@@ -50125,6 +50808,7 @@ Error generating stack: ` +
         }
       });
   }
+  _();
   var _ = _(_(), 1);
   function _(_, ..._) {
     let _ = [],
@@ -50146,6 +50830,8 @@ Error generating stack: ` +
       _.default.createElement(_.default.Fragment, null, ..._)
     );
   }
+  _();
+  _();
   function _() {
     return _().languages[0];
   }
@@ -50447,6 +51133,7 @@ Error generating stack: ` +
     app_Music: "a4zRwGysHdY-",
     app_Beta: "w31VenuMaD4-",
   };
+  _();
   var _ = "./partner_menu_arabic-EMCXPSBA.json";
   var _ = "./partner_menu_brazilian-RIUUK5DA.json";
   var _ = "./partner_menu_bulgarian-H3CH2BAA.json";

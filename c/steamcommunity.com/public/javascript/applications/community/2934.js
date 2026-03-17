@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Kami telah menyelesaikan peninjauan kami terhadap sengketa atas %1$s.",
 	"moderatedcontent_dispute_sanctioned_2": "Setelah peninjauan menyeluruh, kami telah memutuskan untuk mempertahankan keputusan awal kami. Konten tersebut akan tetap dihapus atau dibatasi, dan tindakan tingkat akun akan tetap berlaku. Keputusan ini diambil setelah meninjau konten dalam konteksnya, informasi yang diberikan dalam sengketa yang kamu ajukan, serta aturan platform dan persyaratan hukum yang berlaku.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Jika kamu tidak setuju dengan hasil ini, kamu dapat mencari penyelesaian melalui badan penyelesaian sengketa di luar pengadilan yang bersertifikasi atau mengajukan banding ke pengadilan yang berwenang.",
+	"anonymousreport_title": "Laporkan Konten Ini",
+	"anonymousreport_description": "Login ke Komunitas Steam untuk melaporkan konten yang tidak pantas atau ilegal.",
+	"anonymousreport_footer": "Jika kamu tidak dapat login, kamu dapat <1>mengajukan laporan anonim</1>.",
+	"anonymousreport_footer_action": "mengajukan laporan anonim",
+	"anonymousreport_signin": "Login",
+	"anonymousreport_join": "Gabung ke Steam",
+	"anonymousreport_createaccount": "Buat Akun",
+	"anonymousreport_signin_or_join": "%1$s atau %2$s",
 	"nocomma": ""
 }`);
     },

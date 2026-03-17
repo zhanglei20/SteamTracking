@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Chúng tôi đã xem xét xong phản đối của bạn trong %1$s.",
 	"moderatedcontent_dispute_sanctioned_2": "Sau khi cẩn thận xem xét lại, chúng tôi quyết định giữ nguyên kết quả ban đầu. Nội dung vẫn sẽ bị xóa hoặc giới hạn, và tất cả hành động liên quan đến tài khoản sẽ không thay đổi. Kết quả này được đưa ra sau quá trình xem xét nội dung dựa theo bối cảnh, thông tin được cung cấp trong phản đối, các quy định nền tảng và yêu cầu pháp lý phù hợp.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Nếu không đồng ý với kết quả này, bạn có quyền tìm kiếm giải pháp thông qua cơ quan giải quyết tranh chấp ngoài tòa được chứng nhận, hoặc khởi kiện để được xét xử tại một tòa án có thẩm quyền.",
+	"anonymousreport_title": "Tố cáo nội dung này",
+	"anonymousreport_description": "Đăng nhập vào cộng đồng Steam để tố cáo nội dung không phù hợp hoặc bất hợp pháp.",
+	"anonymousreport_footer": "Nếu không thể đăng nhập, bạn có thể <1>gửi tố cáo ẩn danh</1>.",
+	"anonymousreport_footer_action": "gửi tố cáo ẩn danh",
+	"anonymousreport_signin": "Đăng nhập",
+	"anonymousreport_join": "Tham gia Steam",
+	"anonymousreport_createaccount": "Tạo tài khoản",
+	"anonymousreport_signin_or_join": "%1$s hoặc %2$s",
 	"nocomma": ""
 }`);
     },

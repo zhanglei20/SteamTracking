@@ -7,7 +7,7 @@
 	"language": "german",
 	"LoginRedirect_Dialog_Title": "Anmelden",
 	"LoginRedirect_Dialog_Description": "Melden Sie sich an, um dieses Produkt Ihrer Wunschliste hinzuzufügen, ihm zu folgen oder es als ignoriert zu markieren. Mit einem Klick auf „OK“ werden Sie zur Anmeldeseite weitergeleitet.",
-	"Wishlist_NotSignedIn": "Melden Sie sich an oder öffnen Sie diese Seite in der Steam-Desktopanwendung, um Ihre Wunschliste zu ergänzen, ein Follower zu werden, Käufe zu tätigen und Empfehlungen zu entdecken.",
+	"Wishlist_NotSignedIn": "Melden Sie sich an oder öffnen Sie diese Seite in der Steam-Desktopanwendung, um Ihre Wunschliste zu ergänzen, ein Follower zu werden und Käufe zu tätigen.",
 	"Dummy": "dummy"
 }`);
     },

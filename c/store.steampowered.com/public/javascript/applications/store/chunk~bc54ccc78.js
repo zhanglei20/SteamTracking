@@ -731,8 +731,7 @@
         _ = __webpack_require__("chunkid");
       class _ {
         static s_VODStore;
-        m_LoadingOAuth = null;
-        m_transport;
+        m_transport = null;
         m_mapBookmarks = new Map();
         SetBookmarkForApp(_, _) {
           this.ValidateBookmarkData(_)
@@ -762,25 +761,23 @@
           }
         }
         GetBookmarkPlayTimeInSeconds(_) {
-          if (this.m_mapBookmarks.has(_)) {
-            let _ = this.m_mapBookmarks.get(_).playback_position_in_seconds();
+          let _ = this.m_mapBookmarks.get(_);
+          if (_) {
+            let _ = _.playback_position_in_seconds();
             if (Number.isInteger(_)) return _;
           }
           return 0;
         }
         async SendBookMarkedTimeToServer(_, _, _, _, _) {
           if (!_._.logged_in) return;
-          if (
-            !this.m_transport &&
-            (await this.m_LoadingOAuth, !this.m_transport)
-          )
+          if (!this.m_transport)
             return void console.warn(
               "CVideoBookmarkStore:SetBookMark no auth token / transport",
             );
           const _ = _._.Init(_);
-          if (this.m_mapBookmarks.has(_)) {
-            let _ = this.m_mapBookmarks.get(_),
-              _ = !1;
+          let _ = this.m_mapBookmarks.get(_);
+          if (_) {
+            let _ = !1;
             _.app_id() != _ && ((_ = !0), _.set_app_id(_)),
               _.playback_position_in_seconds() != _ &&
                 ((_ = !0), _.set_playback_position_in_seconds(_)),
@@ -822,13 +819,10 @@
               1 == _.data.success &&
               _.data.webapi_token
             )
-              return (
-                (this.m_transport = new _._(
-                  _._.WEBAPI_BASE_URL,
-                  _.data.webapi_token,
-                ).GetServiceTransport()),
-                this.m_transport
-              );
+              return void (this.m_transport = new _._(
+                _._.WEBAPI_BASE_URL,
+                _.data.webapi_token,
+              ).GetServiceTransport());
           } catch (_) {
             let _ = (0, _._)(_);
             console.error(
@@ -837,7 +831,6 @@
               _,
             );
           }
-          return null;
         }
       }
       class _ {

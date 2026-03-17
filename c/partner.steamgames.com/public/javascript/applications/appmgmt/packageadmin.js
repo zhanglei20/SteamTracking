@@ -62,6 +62,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
@@ -211,13 +212,61 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.createContext({
+        depth: 0,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        const {
+            level: _ = "auto",
+            className: __webpack_require__,
+            color: _,
+          } = _,
+          _ = (function (_, _) {
+            if ("auto" === _ && 0 === _) return "h1";
+            const _ = "auto" === _ ? _.toString() : _;
+            if (!/^[1-6]$/.test(_))
+              return "auto" === _
+                ? (console.error(
+                    '<Section> nesting has exceeded "h6" for headings.',
+                  ),
+                  "h6")
+                : (console.error(
+                    `Attempt to render invalid heading level, "${_}".`,
+                  ),
+                  "h1");
+            return "h" + _;
+          })(_, (0, _.useContext)(_).depth);
+        return (0, _.jsx)(_, {
+          ...(0, _._)(
+            {
+              ..._,
+              className: _()((0, _._)(), _.Heading, __webpack_require__),
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        ..._._,
+        {
+          prop: "size",
+          responsive: !0,
+          className: (_) => _[`HeadingSize-${_}`],
+        },
+      ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -437,53 +486,6 @@
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext({
-        depth: 0,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            level: _ = "auto",
-            className: __webpack_require__,
-            color: _,
-          } = _,
-          _ = (function (_, _) {
-            if ("auto" === _ && 0 === _) return "h1";
-            const _ = "auto" === _ ? _.toString() : _;
-            if (!/^[1-6]$/.test(_))
-              return "auto" === _
-                ? (console.error(
-                    '<Section> nesting has exceeded "h6" for headings.',
-                  ),
-                  "h6")
-                : (console.error(
-                    `Attempt to render invalid heading level, "${_}".`,
-                  ),
-                  "h1");
-            return "h" + _;
-          })(_, (0, _.useContext)(_).depth);
-        return (0, _.jsx)(_, {
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()((0, _._)(), _.Heading, __webpack_require__),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`HeadingSize-${_}`],
-        },
-      ];
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { underline: _ = "auto", ...__webpack_require__ } = _;
@@ -506,7 +508,6 @@
         },
       ];
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { nPackageID: _ } = _;
@@ -631,33 +632,85 @@
           _ = (0, _._)();
         (0, _._)(_);
         const _ = (0, _._)(),
-          _ = Number.parseInt(_);
+          _ = Number.parseInt(_),
+          _ = (0, _._)();
         return (0, _.jsx)(_._, {
           children: (0, _.jsxs)(_._, {
             fnBLocalChangesExist: _,
             fnWarnUser: _,
             children: [
               (0, _.jsxs)("div", {
-                className: "adminLeftCol",
+                className: "adminTwoColCtn",
                 children: [
                   (0, _.jsx)("div", {
-                    className: "colSection",
-                    children: (0, _.jsx)(_, {}),
+                    className: "adminLeftCol",
+                    children: (0, _.jsx)("div", {
+                      className: "colSection",
+                      children: (0, _.jsx)(_, {}),
+                    }),
                   }),
-                  (0, _.jsx)(_, {
-                    nPackageID: _,
-                    appids: __webpack_require__.map(Number.parseInt),
+                  (0, _.jsx)("div", {
+                    className: "adminRightCol",
+                    children: (0, _.jsx)("div", {
+                      className: "panel",
+                      children: (0, _.jsx)(_, {
+                        nPackageID: _,
+                      }),
+                    }),
                   }),
                 ],
               }),
-              (0, _.jsx)("div", {
-                className: "adminRightCol",
-                children: (0, _.jsx)("div", {
-                  className: "panel",
-                  children: (0, _.jsx)(_, {
-                    nPackageID: _,
+              (0, _.jsxs)("div", {
+                className: "adminTwoColCtn",
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "adminLeftCol",
+                    children: (0, _.jsx)(_, {
+                      nPackageID: _,
+                      appids: __webpack_require__.map(Number.parseInt),
+                    }),
                   }),
-                }),
+                  (0, _.jsx)("div", {
+                    className: "adminRightCol",
+                    children: (0, _.jsxs)("div", {
+                      className: "panel",
+                      children: [
+                        (0, _.jsx)(_, {
+                          size: "6",
+                          children: _._.Localize(
+                            "#SinglePackagePricing_Right_Convert_Title",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: _._.Localize(
+                            "#SinglePackagePricing_Right_Custom_Desc",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          children: _._.Localize(
+                            "#SinglePackagePricing_Right_Convert_Desc",
+                          ),
+                        }),
+                        (0, _.jsxs)(_._, {
+                          direction: "column",
+                          paddingTop: "5",
+                          children: [
+                            (0, _.jsx)(_._, {
+                              size: "3",
+                              children: (0, _._)(
+                                "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
+                              ),
+                            }),
+                            (0, _.jsx)(_, {
+                              nPackageID: _,
+                              oPricingGuideline: _,
+                            }),
+                          ],
+                        }),
+                      ],
+                    }),
+                  }),
+                ],
               }),
             ],
           }),
@@ -822,13 +875,12 @@
                               children: [
                                 (0, _.jsx)(_._, {
                                   size: "3",
-                                  children: (0, _._)(
-                                    "#PricingDashboard_ApplyGuidelinesDialog_Context_Short",
+                                  children: _._.Localize(
+                                    "#PricingDashboard_Select_Price",
                                   ),
                                 }),
                                 (0, _.jsx)(_, {
-                                  nPackageID: _,
-                                  oPricingGuideline: _,
+                                  usdRow: _[_._.k_ECurrencyCodeUSD],
                                 }),
                               ],
                             }),
@@ -919,74 +971,46 @@
             });
       }
       function _(_) {
+        const { usdRow: _ } = _,
+          { fnApplyGuidelines: __webpack_require__ } = (0, _._)((0, _._)());
+        return (0, _.jsx)(_._, {
+          strButton: _._.Localize("#PricingDashboard_Select_Price_button"),
+          strTooltip: _._.Localize(
+            "#PricingDashboard_Select_Price_button_ttip",
+          ),
+          fnGetUSDPriceInCents: () => (0, _._)(_.packageID, "USD"),
+          fnOnUpdate: (_) => __webpack_require__(_.packageID, _),
+          strDescription: (0, _._)(
+            "#PricingDashboard_GuidelinesPickerDescription",
+          ),
+          appids: _.appids,
+          nPackageID: _.packageID,
+          bCanSetToFree: _.bCanSetToFree,
+        });
+      }
+      function _(_) {
         const { nPackageID: _, oPricingGuideline: __webpack_require__ } = _,
-          _ = (function (_, _) {
-            const _ = (0, _._)(),
-              _ = (0, _._)(_._.k_ECurrencyCodeUSD).toUpperCase(),
-              _ = (0, _._)(_, _).nPriceInCents;
-            let _ = !1;
-            if (_ && _ > 0) {
-              for (
-                let _ = _._.k_ECurrencyCodeGBP;
-                _ < _._.k_ECurrencyCodeMax;
-                ++_
-              ) {
-                if (!_.BIsSupportCurrencyAndOrRegion(_)) continue;
-                const _ = (0, _._)(_).toUpperCase(),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = _.GetScaledRecommendedPrice(_, _, void 0, _).price;
-                _ ||= _ != (_ ?? _ ?? _);
-              }
-              for (
-                let _ = _._.k_ERegionCodeCIS;
-                _ < _._.k_ERegionCodeMax;
-                ++_
-              ) {
-                if (!_.BIsSupportCurrencyAndOrRegion(_._.k_ECurrencyCodeUSD, _))
-                  continue;
-                const _ = (0, _._)(_._.k_ECurrencyCodeUSD, _).toUpperCase(),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = (0, _._)(_, _),
-                  _ = _.GetScaledRecommendedPrice(
-                    _,
-                    _._.k_ECurrencyCodeUSD,
-                    _,
-                    _,
-                  ).price;
-                _ ||= _ != (_ ?? _ ?? _);
-              }
-            }
-            return _;
-          })(__webpack_require__, _),
           [_, _, _] = (0, _._)(),
           _ = (0, _._)();
-        return _
-          ? (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
-                  color: "dull",
-                  onClick: _,
-                  children: (0, _._)(
-                    "#PricingDashboard_ApplyGuidelinesDialog_Button",
-                  ),
-                }),
-                (0, _.jsx)(_._, {
-                  active: _,
-                  children: (0, _.jsx)(_._, {
-                    closeModal: _,
-                    fnOnApply: _,
-                    singlePackage: !0,
-                  }),
-                }),
-              ],
-            })
-          : (0, _.jsx)(_.Fragment, {
-              children:
-                "Your pricing already matches selected conversion method",
-            });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              color: "dull",
+              onClick: _,
+              children: (0, _._)(
+                "#PricingDashboard_ApplyGuidelinesDialog_Button",
+              ),
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                closeModal: _,
+                fnOnApply: _,
+                singlePackage: !0,
+              }),
+            }),
+          ],
+        });
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {

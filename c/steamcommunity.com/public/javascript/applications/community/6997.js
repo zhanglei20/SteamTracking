@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "我們已完成您對%1$s的審查。",
 	"moderatedcontent_dispute_sanctioned_2": "經過仔細的重新評估後，我們決定維持原先判斷。此內容將維持被刪除或被限制的狀態，而相關的帳戶層級處罰也保持不變。此結果是根據審查該內容及其情境、您提出的爭議中提供的資訊，及相關的平台規定和法律要求所得出。",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "如果您不同意這項結果，您可透過經認證的法庭外爭端解決機構尋求解決方案，或向具有司法管轄權的法庭尋求司法救濟。",
+	"anonymousreport_title": "檢舉此內容",
+	"anonymousreport_description": "登入 Steam 社群以檢舉不當或非法內容。",
+	"anonymousreport_footer": "若您無法登入，可以<1>提交匿名檢舉</1>。",
+	"anonymousreport_footer_action": "匿名提交檢舉",
+	"anonymousreport_signin": "登入",
+	"anonymousreport_join": "加入 Steam",
+	"anonymousreport_createaccount": "建立帳戶",
+	"anonymousreport_signin_or_join": "%1$s或%2$s",
 	"nocomma": ""
 }`);
     },

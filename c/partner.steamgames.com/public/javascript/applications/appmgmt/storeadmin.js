@@ -9579,7 +9579,7 @@
             !1
           );
         }
-        async AcceptProposal(_, _, _, _) {
+        async AcceptProposal(_, _, _) {
           let _ = null;
           try {
             const _ = new FormData();
@@ -9587,8 +9587,7 @@
               _.append("packageid", "" + _),
               _.append("json", "1"),
               _.append("proposalkey", "" + _),
-              _.append("partner_will_publish", _ ? "1" : "0"),
-              _.append("force", _ ? "1" : "0");
+              _.append("partner_will_publish", _ ? "1" : "0");
             const _ = `${_._.PARTNER_BASE_URL}packages/approvepricing`,
               _ = await _().post(_, _, {
                 withCredentials: !0,
@@ -9783,7 +9782,7 @@
                 (0, _.jsxs)(_._, {
                   onClick: async () => {
                     _(!0),
-                      _(_.packageid, _.partner_will_publish, _.proposal_key, !0)
+                      _(_.packageid, _.partner_will_publish, _.proposal_key)
                         .then(_)
                         .finally(() => _(!1));
                   },
@@ -10689,7 +10688,7 @@
                   className: _.Title,
                   children: ["Unexpected ", _.length, " currencies: "],
                 }),
-                __webpack_require__.map(_._).join(", "),
+                __webpack_require__.join(", "),
               ],
             })
           : null;
@@ -10884,9 +10883,7 @@
           ? (0, _.jsxs)("div", {
               children: [
                 "Package has Country price overrides for Countries:",
-                _.proposed_prices.country_amounts
-                  .map((_) => (0, _._)(_.name))
-                  .join(","),
+                _.proposed_prices.country_amounts.map((_) => _.name).join(","),
               ],
             })
           : null;

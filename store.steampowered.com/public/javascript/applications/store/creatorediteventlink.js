@@ -43,288 +43,92 @@
         SVGIcon: "_3jIkQOyf1K28G5lxJiiDkV",
       };
     },
-    55263: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        G6: () => c,
-        Gg: () => d,
-        MS: () => h,
-        Ow: () => u,
-        YM: () => v,
-        mZ: () => _,
-        t7: () => a,
-        zX: () => S,
-      });
-      var s = n(41735),
-        r = n.n(s),
-        i = n(90626),
-        o = n(84933),
-        l = n(16021);
-      function c(e, t, n, s) {
-        const c = (0, i.useRef)(void 0),
-          a = (0, i.useRef)(void 0),
-          u = (0, o.CH)();
-        c.current = e;
-        const [d, _] = (0, i.useState)(void 0),
-          {
-            include_assets: m,
-            include_release: S,
-            include_platforms: h,
-            include_all_purchase_options: v,
-            include_screenshots: g,
-            include_trailers: E,
-            include_ratings: f,
-            include_tag_count: p,
-            include_reviews: I,
-            include_basic_info: w,
-            include_supported_languages: j,
-            include_full_description: C,
-            include_included_items: b,
-            include_assets_without_overrides: k,
-            apply_user_filters: D,
-            include_links: L,
-          } = n;
-        if (
-          ((0, i.useEffect)(() => {
-            const n = {
-              include_assets: m,
-              include_release: S,
-              include_platforms: h,
-              include_all_purchase_options: v,
-              include_screenshots: g,
-              include_trailers: E,
-              include_ratings: f,
-              include_tag_count: p,
-              include_reviews: I,
-              include_basic_info: w,
-              include_supported_languages: j,
-              include_full_description: C,
-              include_included_items: b,
-              include_assets_without_overrides: k,
-              apply_user_filters: D,
-              include_links: L,
-            };
-            let i = null;
-            return (
-              !e ||
-                e < 0 ||
-                l.A.Get().BHasStoreItem(e, t, n) ||
-                (void 0 !== d && s && s == a.current) ||
-                (s !== a.current && (_(void 0), (a.current = s)),
-                (i = r().CancelToken.source()),
-                l.A.Get()
-                  .QueueStoreItemRequest(e, t, n)
-                  .then((t) => {
-                    i?.token.reason || c.current !== e || _(1 == t), u();
-                  })),
-              () => i?.cancel("useStoreItemCache: unmounting")
-            );
-          }, [e, t, s, d, m, S, h, v, g, E, f, p, I, w, j, C, b, k, D, L, u]),
-          !e)
-        )
-          return [null, 2];
-        if (!1 === d) return [void 0, 2];
-        if (l.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
-        if (!l.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const x = l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return x ? [x, 3] : [null, 2];
-      }
-      function a(e, t, n) {
-        return c(e, 0, t, n);
-      }
-      function u(e, t, n) {
-        return c(e, 2, t, n);
-      }
-      function d(e, t, n) {
-        return c(e, 1, t, n);
-      }
-      function _(e, t, n) {
-        const [s, r] = c(e, t, n);
-        let i;
-        1 != s?.GetStoreItemType() ||
-          s.GetAssets()?.GetHeaderURL() ||
-          1 != s?.GetIncludedAppIDs().length ||
-          (i = s.GetIncludedAppIDs()[0]);
-        const [o, l] = a(i, n);
-        return i && o?.BIsVisible() ? [o, l] : [s, r];
-      }
-      function m(e, t, n, s) {
-        const c = (0, o.CH)(),
-          {
-            include_assets: a,
-            include_release: u,
-            include_platforms: d,
-            include_all_purchase_options: _,
-            include_screenshots: m,
-            include_trailers: S,
-            include_ratings: h,
-            include_tag_count: v,
-            include_reviews: g,
-            include_basic_info: E,
-            include_supported_languages: f,
-            include_full_description: p,
-            include_included_items: I,
-            include_assets_without_overrides: w,
-            apply_user_filters: j,
-            include_links: C,
-          } = n;
-        if (
-          ((0, i.useEffect)(() => {
-            if (!e || 0 == e.length) return;
-            const n = {
-                include_assets: a,
-                include_release: u,
-                include_platforms: d,
-                include_all_purchase_options: _,
-                include_screenshots: m,
-                include_trailers: S,
-                include_ratings: h,
-                include_tag_count: v,
-                include_reviews: g,
-                include_basic_info: E,
-                include_supported_languages: f,
-                include_full_description: p,
-                include_included_items: I,
-                include_assets_without_overrides: w,
-                apply_user_filters: j,
-                include_links: C,
-              },
-              s = e.filter(
-                (e) =>
-                  !(
-                    l.A.Get().BHasStoreItem(e, t, n) ||
-                    l.A.Get().BIsStoreItemMissing(e, t)
-                  ),
-              );
-            if (0 == s.length) return;
-            const i = r().CancelToken.source(),
-              o = s.map((e) => l.A.Get().QueueStoreItemRequest(e, t, n));
-            return (
-              Promise.all(o).then(() => {
-                i.token.reason || c();
-              }),
-              () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
-            );
-          }, [e, t, s, c, a, u, d, _, m, S, h, v, g, E, f, p, I, w, j, C]),
-          !e)
-        )
-          return 2;
-        if (
-          !e.every(
-            (e) =>
-              l.A.Get().BHasStoreItem(e, t, n) ||
-              l.A.Get().BIsStoreItemMissing(e, t),
-          )
-        )
-          return 1;
-        return e.every((e) =>
-          l.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t),
-        )
-          ? 3
-          : 2;
-      }
-      function S(e, t, n) {
-        return m(e, 0, t, n);
-      }
-      function h(e, t, n) {
-        return m(e, 2, t, n);
-      }
-      function v() {
-        i.useEffect(
-          () => (
-            l.A.Get().SetReturnUnavailableItems(!0),
-            () => l.A.Get().SetReturnUnavailableItems(!1)
-          ),
-          [],
-        );
-      }
-    },
     71298: (e, t, n) => {
       "use strict";
-      n.d(t, { Hh: () => u, vs: () => a });
-      var s = n(7850),
-        r = n(90626),
-        i = n(51706),
-        o = n(56330),
-        l = n(61859),
-        c = n(22797);
-      function a(e) {
-        const [t, n] = (0, r.useState)(() => Boolean(e)),
-          [s, i] = (0, r.useState)(!1),
-          [o, l] = (0, r.useState)(!1),
-          [c, a] = (0, r.useState)(null),
-          [u, d] = (0, r.useState)(null),
-          [_, m] = (0, r.useState)(null),
-          [S, h] = (0, r.useState)(null),
-          [v, g] = (0, r.useState)(null);
+      n.d(t, { Hh: () => d, vs: () => c });
+      var r = n(7850),
+        s = n(90626),
+        o = n(51706),
+        i = n(56330),
+        a = n(61859),
+        l = n(22797);
+      function c(e) {
+        const [t, n] = (0, s.useState)(() => Boolean(e)),
+          [r, o] = (0, s.useState)(!1),
+          [i, a] = (0, s.useState)(!1),
+          [l, c] = (0, s.useState)(null),
+          [d, u] = (0, s.useState)(null),
+          [_, S] = (0, s.useState)(null),
+          [m, E] = (0, s.useState)(null),
+          [h, v] = (0, s.useState)(null);
         return {
           bLoading: t,
-          bError: s,
-          bSuccess: o,
-          strError: c,
-          strSuccess: u,
-          elSuccess: S,
+          bError: r,
+          bSuccess: i,
+          strError: l,
+          strSuccess: d,
+          elSuccess: m,
           elError: _,
-          strThrobber: v,
+          strThrobber: h,
           fnSetLoading: n,
-          fnSetError: i,
-          fnSetSuccess: l,
-          fnSetStrError: a,
-          fnSetStrSuccess: d,
-          fnSetElSuccess: h,
-          fnSetElError: m,
-          fnSetThrobber: g,
+          fnSetError: o,
+          fnSetSuccess: a,
+          fnSetStrError: c,
+          fnSetStrSuccess: u,
+          fnSetElSuccess: E,
+          fnSetElError: S,
+          fnSetThrobber: v,
         };
       }
-      function u(e) {
+      function d(e) {
         const {
             strDialogTitle: t,
             state: n,
-            closeModal: r,
-            strThrobber: a,
+            closeModal: s,
+            strThrobber: c,
           } = e,
           {
-            bLoading: u,
-            bError: d,
+            bLoading: d,
+            bError: u,
             bSuccess: _,
-            strError: m,
-            strSuccess: S,
-            elSuccess: h,
-            elError: v,
-            strThrobber: g,
+            strError: S,
+            strSuccess: m,
+            elSuccess: E,
+            elError: h,
+            strThrobber: v,
           } = n;
-        return d || m || v
-          ? (0, s.jsxs)(i.o0, {
+        return u || S || h
+          ? (0, r.jsxs)(o.o0, {
               strTitle: t,
               bAlertDialog: !0,
-              closeModal: r,
-              className: o.SuccessErrorDialog,
+              closeModal: s,
+              className: i.SuccessErrorDialog,
               children: [
-                Boolean(m) &&
-                  (0, s.jsx)("div", {
-                    className: o.ErrorStylesWithIcon,
+                Boolean(S) &&
+                  (0, r.jsx)("div", {
+                    className: i.ErrorStylesWithIcon,
                     children:
-                      m || (0, l.we)("#Error_ErrorCommunicatingWithNetwork"),
+                      S || (0, a.we)("#Error_ErrorCommunicatingWithNetwork"),
                   }),
-                Boolean(v) && v,
+                Boolean(h) && h,
               ],
             })
-          : _ || S || h
-            ? (0, s.jsx)(i.o0, {
+          : _ || m || E
+            ? (0, r.jsx)(o.o0, {
                 strTitle: t,
-                strDescription: S || (0, l.we)("#EventDisplay_Share_Success"),
+                strDescription: m || (0, a.we)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
-                closeModal: r,
-                className: o.SuccessErrorDialog,
-                children: (0, s.jsx)(s.Fragment, { children: Boolean(h) && h }),
+                closeModal: s,
+                className: i.SuccessErrorDialog,
+                children: (0, r.jsx)(r.Fragment, { children: Boolean(E) && E }),
               })
-            : (0, s.jsx)(i.o0, {
+            : (0, r.jsx)(o.o0, {
                 strTitle: t,
-                className: o.SuccessErrorDialog,
+                className: i.SuccessErrorDialog,
                 bProgressDialog: !0,
                 closeModal: () => {},
-                children: (0, s.jsx)(c.t, {
-                  string: a || g || (0, l.we)("#Loading"),
+                children: (0, r.jsx)(l.t, {
+                  string: c || v || (0, a.we)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
@@ -333,142 +137,142 @@
     },
     87731: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => x });
-      var s = n(7850),
-        r = n(90626),
-        i = n(78327),
-        o = n(41735),
-        l = n.n(o),
-        c = n(61859),
-        a = n(22837),
-        u = n(17720),
-        d = n(80902),
+      n.r(t), n.d(t, { default: () => f });
+      var r = n(7850),
+        s = n(90626),
+        o = n(78327),
+        i = n(41735),
+        a = n.n(i),
+        l = n(61859),
+        c = n(22837),
+        d = n(17720),
+        u = n(80902),
         _ = n(51614),
-        m = n(6379),
-        S = n(84933),
-        h = n(22797),
-        v = n(93474),
-        g = n.n(v),
-        E = n(75113),
-        f = n(12155),
-        p = n(81393),
-        I = n(32754),
-        w = n(53835),
-        j = n(78395),
-        C = n(71298),
-        b = n(21869),
-        k = n(8092),
-        D = n(52038),
-        L = n(26408);
-      function x(e) {
+        S = n(6379),
+        m = n(84933),
+        E = n(22797),
+        h = n(93474),
+        v = n.n(h),
+        g = n(75113),
+        j = n(12155),
+        w = n(81393),
+        x = n(32754),
+        D = n(53835),
+        C = n(78395),
+        L = n(71298),
+        I = n(21869),
+        b = n(8092),
+        k = n(52038),
+        p = n(26408);
+      function f(e) {
         const { clanAccountID: t } = e,
-          n = (0, S.YR)(() => new u.b(t, i.TS.EUNIVERSE, 7, 0)),
+          n = (0, m.YR)(() => new d.b(t, o.TS.EUNIVERSE, 7, 0)),
           {
-            bIsFetching: o,
-            rgEventModels: a,
+            bIsFetching: i,
+            rgEventModels: c,
             fnRefetch: _,
           } = (function (e) {
             const {
               data: t,
               isFetching: n,
-              refetch: s,
-            } = (0, d.I)({
+              refetch: r,
+            } = (0, u.I)({
               queryKey: [
                 "DraftAndHiddenPartnerEvents",
                 e.ConvertTo64BitString(),
               ],
               queryFn: async () => {
                 const t =
-                    i.TS.STORE_BASE_URL +
+                    o.TS.STORE_BASE_URL +
                     "/curator/" +
                     e.GetAccountID() +
                     "/admin/ajaxgetcreatorhomeevents",
-                  n = { l: i.TS.LANGUAGE },
-                  s = await l()
+                  n = { l: o.TS.LANGUAGE },
+                  r = await a()
                     .get(t, { params: n })
                     .catch(() => {}),
-                  r = new Array();
-                r.push(
-                  ...s.data.creatorhome_event_gids.map((t) =>
-                    m.MX.LoadHiddenPartnerEvent(e, t),
+                  s = new Array();
+                s.push(
+                  ...r.data.creatorhome_event_gids.map((t) =>
+                    S.MX.LoadHiddenPartnerEvent(e, t),
                   ),
                 );
-                return await Promise.all(r);
+                return await Promise.all(s);
               },
             });
-            return { bIsFetching: n, rgEventModels: t, fnRefetch: s };
+            return { bIsFetching: n, rgEventModels: t, fnRefetch: r };
           })(n),
-          v = `${i.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
-          { creatorHome: E, isFetching: f, refetch: p } = (0, k.FV)(t),
-          j = E?.GetLinkedEventGID(),
-          C = j && a?.some((e) => j == e.GID),
-          b = o || f,
-          D = () => {
-            _(), p();
+          h = `${o.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
+          { creatorHome: g, isFetching: j, refetch: w } = (0, b.FV)(t),
+          C = g?.GetLinkedEventGID(),
+          L = C && c?.some((e) => C == e.GID),
+          I = i || j,
+          k = () => {
+            _(), w();
           },
-          L = r.useMemo(
-            () => [...(a ?? [])].sort((e, t) => t.startTime - e.startTime),
-            [a],
+          p = s.useMemo(
+            () => [...(c ?? [])].sort((e, t) => t.startTime - e.startTime),
+            [c],
           ),
-          x = L.filter((e) => j && j == e.GID),
-          A = L.filter((e) => !j || j != e.GID);
-        return (0, s.jsxs)(s.Fragment, {
+          f = p.filter((e) => C && C == e.GID),
+          H = p.filter((e) => !C || C != e.GID);
+        return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, s.jsx)(I.he, {
-              toolTipContent: (0, c.we)("#CreatorHome_EventLink_Create_ttip"),
+            (0, r.jsx)(x.he, {
+              toolTipContent: (0, l.we)("#CreatorHome_EventLink_Create_ttip"),
               style: { width: "25%" },
-              children: (0, s.jsx)(w.jn, {
-                onClick: () => window.location.assign(v),
-                children: (0, c.we)("#CreatorHome_EventLink_Create"),
+              children: (0, r.jsx)(D.jn, {
+                onClick: () => window.location.assign(h),
+                children: (0, l.we)("#CreatorHome_EventLink_Create"),
               }),
             }),
-            (0, s.jsx)("h4", {
-              children: (0, c.we)("#CreatorHome_EventLink_Title"),
+            (0, r.jsx)("h4", {
+              children: (0, l.we)("#CreatorHome_EventLink_Title"),
             }),
-            (0, s.jsx)("p", {
-              children: (0, c.we)("#CreatorHome_EventLink_Desc"),
+            (0, r.jsx)("p", {
+              children: (0, l.we)("#CreatorHome_EventLink_Desc"),
             }),
-            (0, s.jsx)("br", {}),
-            (0, s.jsxs)("div", {
-              className: g().ListsCtn,
+            (0, r.jsx)("br", {}),
+            (0, r.jsxs)("div", {
+              className: v().ListsCtn,
               children: [
-                !C &&
-                  (0, s.jsxs)(s.Fragment, {
+                !L &&
+                  (0, r.jsxs)(r.Fragment, {
                     children: [
-                      (0, s.jsx)("h5", {
-                        children: (0, c.we)(
+                      (0, r.jsx)("h5", {
+                        children: (0, l.we)(
                           "#CreatorHome_EventLink_ActiveListTitle",
                         ),
                       }),
-                      (0, s.jsx)("p", {
-                        children: (0, c.we)(
+                      (0, r.jsx)("p", {
+                        children: (0, l.we)(
                           "#CreatorHome_EventLink_BasicActive",
                         ),
                       }),
                     ],
                   }),
-                b && (0, s.jsx)(h.t, {}),
-                !b &&
-                  (0, s.jsxs)(s.Fragment, {
+                I && (0, r.jsx)(E.t, {}),
+                !I &&
+                  (0, r.jsxs)(r.Fragment, {
                     children: [
-                      x.length > 0 &&
-                        (0, s.jsxs)(s.Fragment, {
+                      f.length > 0 &&
+                        (0, r.jsxs)(r.Fragment, {
                           children: [
-                            (0, s.jsx)("h5", {
-                              children: (0, c.we)(
+                            (0, r.jsx)("h5", {
+                              children: (0, l.we)(
                                 "#CreatorHome_EventLink_ActiveListTitle",
                               ),
                             }),
-                            (0, s.jsx)("div", {
-                              className: g().EntryList,
-                              children: x.map((e) =>
-                                (0, s.jsx)(
+                            (0, r.jsx)("div", {
+                              className: v().EntryList,
+                              children: f.map((e) =>
+                                (0, r.jsx)(
                                   y,
                                   {
-                                    creatorHome: E,
+                                    creatorHome: g,
                                     clanSteamID: n,
                                     eventModel: e,
-                                    refetch: D,
+                                    refetch: k,
                                   },
                                   e.GID,
                                 ),
@@ -476,24 +280,24 @@
                             }),
                           ],
                         }),
-                      A.length > 0 &&
-                        (0, s.jsxs)(s.Fragment, {
+                      H.length > 0 &&
+                        (0, r.jsxs)(r.Fragment, {
                           children: [
-                            (0, s.jsx)("h5", {
-                              children: (0, c.we)(
+                            (0, r.jsx)("h5", {
+                              children: (0, l.we)(
                                 "#CreatorHome_EventLink_InactiveListTitle",
                               ),
                             }),
-                            (0, s.jsx)("div", {
-                              className: g().EntryList,
-                              children: A.map((e) =>
-                                (0, s.jsx)(
+                            (0, r.jsx)("div", {
+                              className: v().EntryList,
+                              children: H.map((e) =>
+                                (0, r.jsx)(
                                   y,
                                   {
-                                    creatorHome: E,
+                                    creatorHome: g,
                                     clanSteamID: n,
                                     eventModel: e,
-                                    refetch: D,
+                                    refetch: k,
                                   },
                                   e.GID,
                                 ),
@@ -509,183 +313,183 @@
         });
       }
       function y(e) {
-        const { clanSteamID: t, creatorHome: n, eventModel: o, refetch: u } = e,
-          [d, m] = r.useState(!1),
-          S = (0, _.n)({
+        const { clanSteamID: t, creatorHome: n, eventModel: i, refetch: d } = e,
+          [u, S] = s.useState(!1),
+          m = (0, _.n)({
             mutationFn: async (e) => {
               const t =
-                  i.TS.STORE_BASE_URL +
+                  o.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxdeletecreatorhomeevent",
                 n = new FormData();
-              n.append("sessionid", i.TS.SESSIONID), n.append("gid", e.gid);
-              const s = await l().post(t, n, { withCredentials: !0 });
-              return 1 == s?.data?.success;
+              n.append("sessionid", o.TS.SESSIONID), n.append("gid", e.gid);
+              const r = await a().post(t, n, { withCredentials: !0 });
+              return 1 == r?.data?.success;
             },
           }),
-          [h, v] = r.useState(!1),
-          [p, I] = r.useState(!1),
-          w = (0, _.n)({
+          [E, h] = s.useState(!1),
+          [w, x] = s.useState(!1),
+          D = (0, _.n)({
             mutationFn: async (e) => {
               const t =
-                  i.TS.STORE_BASE_URL +
+                  o.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxselectcreatorhome",
                 n = new FormData();
-              n.append("sessionid", i.TS.SESSIONID), n.append("gid", e.gid);
-              const s = await l().post(t, n, { withCredentials: !0 });
-              return 1 == s?.data?.success;
+              n.append("sessionid", o.TS.SESSIONID), n.append("gid", e.gid);
+              const r = await a().post(t, n, { withCredentials: !0 });
+              return 1 == r?.data?.success;
             },
           }),
-          j = n?.GetLinkedEventGID(),
-          C = j && j == o.GID,
-          b = !C && o.BIsVisibleEvent(),
-          k = `${i.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${o.GID}?redir=${window.location.href}`;
-        return (0, s.jsxs)(s.Fragment, {
+          C = n?.GetLinkedEventGID(),
+          L = C && C == i.GID,
+          I = !L && i.BIsVisibleEvent(),
+          b = `${o.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${i.GID}?redir=${window.location.href}`;
+        return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, s.jsx)(A, {
-              active: d,
-              mutateAsync: () => S.mutateAsync({ clanSteamID: t, gid: o.GID }),
+            (0, r.jsx)(H, {
+              active: u,
+              mutateAsync: () => m.mutateAsync({ clanSteamID: t, gid: i.GID }),
               onClose: (e) => {
-                m(!1), e && u();
+                S(!1), e && d();
               },
-              strTitle: (0, c.we)("#Button_Delete"),
-              strDescription: (0, c.we)(
+              strTitle: (0, l.we)("#Button_Delete"),
+              strDescription: (0, l.we)(
                 "#CreatorHome_EventLink_Delete_Dialog_Desc",
               ),
-              strError: (0, c.we)("#CreatorHome_EventLink_Delete_Dialog_Error"),
+              strError: (0, l.we)("#CreatorHome_EventLink_Delete_Dialog_Error"),
             }),
-            (0, s.jsx)(A, {
-              active: h,
-              mutateAsync: () => w.mutateAsync({ clanSteamID: t, gid: o.GID }),
+            (0, r.jsx)(H, {
+              active: E,
+              mutateAsync: () => D.mutateAsync({ clanSteamID: t, gid: i.GID }),
               onClose: (e) => {
-                v(!1), e && u();
+                h(!1), e && d();
               },
-              strTitle: (0, c.we)("#CreatorHome_EventLink_Select"),
-              strDescription: (0, c.we)(
+              strTitle: (0, l.we)("#CreatorHome_EventLink_Select"),
+              strDescription: (0, l.we)(
                 "#CreatorHome_EventLink_Select_Dialog_Desc",
               ),
-              strError: (0, c.we)("#CreatorHome_EventLink_Select_Dialog_Error"),
+              strError: (0, l.we)("#CreatorHome_EventLink_Select_Dialog_Error"),
             }),
-            (0, s.jsx)(A, {
-              active: p,
-              mutateAsync: () => w.mutateAsync({ clanSteamID: t, gid: "0" }),
+            (0, r.jsx)(H, {
+              active: w,
+              mutateAsync: () => D.mutateAsync({ clanSteamID: t, gid: "0" }),
               onClose: (e) => {
-                I(!1), e && u();
+                x(!1), e && d();
               },
-              strTitle: (0, c.we)("#CreatorHome_EventLink_Clear"),
-              strDescription: (0, c.we)(
+              strTitle: (0, l.we)("#CreatorHome_EventLink_Clear"),
+              strDescription: (0, l.we)(
                 "#CreatorHome_EventLink_Clear_Dialog_Desc",
               ),
-              strError: (0, c.we)("#CreatorHome_EventLink_Clear_Dialog_Error"),
+              strError: (0, l.we)("#CreatorHome_EventLink_Clear_Dialog_Error"),
             }),
-            (0, s.jsxs)("div", {
-              className: (0, D.A)(g().Entry, C && g().Active),
+            (0, r.jsxs)("div", {
+              className: (0, k.A)(v().Entry, L && v().Active),
               children: [
-                (0, s.jsxs)("div", {
-                  className: g().HeaderRow,
+                (0, r.jsxs)("div", {
+                  className: v().HeaderRow,
                   children: [
-                    (0, s.jsx)("span", {
-                      className: g().Label,
-                      children: o.GetNameWithFallback((0, a.sf)(i.TS.LANGUAGE)),
+                    (0, r.jsx)("span", {
+                      className: v().Label,
+                      children: i.GetNameWithFallback((0, c.sf)(o.TS.LANGUAGE)),
                     }),
-                    !o.BIsVisibleEvent() &&
-                      (0, s.jsxs)("span", {
-                        className: g().UnpublishedState,
+                    !i.BIsVisibleEvent() &&
+                      (0, r.jsxs)("span", {
+                        className: v().UnpublishedState,
                         children: [
-                          (0, s.jsx)("span", {
-                            children: (0, c.we)(
+                          (0, r.jsx)("span", {
+                            children: (0, l.we)(
                               "#CreatorHome_EventLink_Unpublished",
                             ),
                           }),
-                          (0, s.jsx)(L.o, {
-                            tooltip: (0, c.we)(
+                          (0, r.jsx)(p.o, {
+                            tooltip: (0, l.we)(
                               "#CreatorHome_EventLink_Unpublished_ttip",
                             ),
                             small: !0,
                           }),
                         ],
                       }),
-                    o.BIsVisibleEvent() &&
-                      !C &&
-                      (0, s.jsxs)("span", {
-                        className: g().PublishedAndNotSelectedState,
+                    i.BIsVisibleEvent() &&
+                      !L &&
+                      (0, r.jsxs)("span", {
+                        className: v().PublishedAndNotSelectedState,
                         children: [
-                          (0, s.jsx)("span", {
-                            children: (0, c.we)(
+                          (0, r.jsx)("span", {
+                            children: (0, l.we)(
                               "#CreatorHome_EventLink_PublishedAndNotSelected",
                             ),
                           }),
-                          (0, s.jsx)(L.o, {
-                            tooltip: (0, c.we)(
+                          (0, r.jsx)(p.o, {
+                            tooltip: (0, l.we)(
                               "#CreatorHome_EventLink_PublishedAndNotSelected_ttip",
                             ),
                             small: !0,
                           }),
                         ],
                       }),
-                    b
-                      ? (0, s.jsx)(H, {
-                          eventModel: o,
-                          label: (0, c.we)("#CreatorHome_EventLink_Select"),
-                          icon: (0, s.jsx)(f.FEq, {}),
-                          onClick: () => v(!0),
-                          tooltip: (0, c.we)(
+                    I
+                      ? (0, r.jsx)(T, {
+                          eventModel: i,
+                          label: (0, l.we)("#CreatorHome_EventLink_Select"),
+                          icon: (0, r.jsx)(j.FEq, {}),
+                          onClick: () => h(!0),
+                          tooltip: (0, l.we)(
                             "#CreatorHome_EventLink_Select_ttip",
                           ),
                         })
-                      : !C &&
-                        (0, s.jsxs)("div", {
-                          className: g().MustPublish,
+                      : !L &&
+                        (0, r.jsxs)("div", {
+                          className: v().MustPublish,
                           children: [
-                            (0, c.we)("#CreatorHome_EventLink_MustPublish"),
-                            (0, s.jsx)(L.o, {
-                              tooltip: (0, c.we)(
+                            (0, l.we)("#CreatorHome_EventLink_MustPublish"),
+                            (0, r.jsx)(p.o, {
+                              tooltip: (0, l.we)(
                                 "#CreatorHome_EventLink_MustPublish_ttip",
                               ),
                               small: !0,
                             }),
                           ],
                         }),
-                    C &&
-                      (0, s.jsx)(H, {
-                        eventModel: o,
-                        label: (0, c.we)("#CreatorHome_EventLink_Clear"),
-                        icon: (0, s.jsx)(f.FEq, { filled: !0 }),
-                        onClick: () => I(!0),
-                        tooltip: (0, c.we)("#CreatorHome_EventLink_Clear_ttip"),
+                    L &&
+                      (0, r.jsx)(T, {
+                        eventModel: i,
+                        label: (0, l.we)("#CreatorHome_EventLink_Clear"),
+                        icon: (0, r.jsx)(j.FEq, { filled: !0 }),
+                        onClick: () => x(!0),
+                        tooltip: (0, l.we)("#CreatorHome_EventLink_Clear_ttip"),
                       }),
                   ],
                 }),
-                (0, s.jsxs)("div", {
-                  className: g().ActionsRow,
+                (0, r.jsxs)("div", {
+                  className: v().ActionsRow,
                   children: [
-                    (0, s.jsx)(H, {
-                      eventModel: o,
-                      label: (0, c.we)("#Button_Edit"),
-                      icon: (0, s.jsx)(f.ffu, {}),
-                      route: E.PH.k_eCommunityEdit,
+                    (0, r.jsx)(T, {
+                      eventModel: i,
+                      label: (0, l.we)("#Button_Edit"),
+                      icon: (0, r.jsx)(j.ffu, {}),
+                      route: g.PH.k_eCommunityEdit,
                     }),
-                    (0, s.jsx)(H, {
-                      eventModel: o,
-                      label: (0, c.we)("#Button_Preview"),
-                      icon: (0, s.jsx)(f.Exy, {}),
-                      route: E.PH.k_eCommunityPreviewSale,
+                    (0, r.jsx)(T, {
+                      eventModel: i,
+                      label: (0, l.we)("#Button_Preview"),
+                      icon: (0, r.jsx)(j.Exy, {}),
+                      route: g.PH.k_eCommunityPreviewSale,
                     }),
-                    (0, s.jsx)(H, {
-                      eventModel: o,
-                      label: (0, c.we)("#Button_Clone"),
-                      icon: (0, s.jsx)(f.rI_, {}),
-                      onClick: () => window.location.assign(k),
+                    (0, r.jsx)(T, {
+                      eventModel: i,
+                      label: (0, l.we)("#Button_Clone"),
+                      icon: (0, r.jsx)(j.rI_, {}),
+                      onClick: () => window.location.assign(b),
                     }),
-                    !C &&
-                      (0, s.jsx)(H, {
-                        eventModel: o,
-                        label: (0, c.we)("#Button_Delete"),
-                        icon: (0, s.jsx)(f.lMJ, {}),
-                        onClick: () => m(!0),
+                    !L &&
+                      (0, r.jsx)(T, {
+                        eventModel: i,
+                        label: (0, l.we)("#Button_Delete"),
+                        icon: (0, r.jsx)(j.lMJ, {}),
+                        onClick: () => S(!0),
                       }),
                   ],
                 }),
@@ -694,63 +498,63 @@
           ],
         });
       }
-      function A(e) {
+      function H(e) {
         const {
             active: t,
             mutateAsync: n,
-            onClose: r,
-            strTitle: i,
-            strDescription: o,
-            strError: l,
+            onClose: s,
+            strTitle: o,
+            strDescription: i,
+            strError: a,
           } = e,
-          c = (0, C.vs)();
+          l = (0, L.vs)();
         if (t)
-          return c.bLoading
-            ? (0, s.jsx)(b.E, {
+          return l.bLoading
+            ? (0, r.jsx)(I.E, {
                 active: !0,
-                children: (0, s.jsx)(C.Hh, { state: c, strDialogTitle: i }),
+                children: (0, r.jsx)(L.Hh, { state: l, strDialogTitle: o }),
               })
-            : (0, s.jsx)(b.E, {
+            : (0, r.jsx)(I.E, {
                 active: !0,
-                children: (0, s.jsx)(j.o0, {
-                  strTitle: i,
-                  strDescription: o,
-                  onCancel: () => r(!1),
-                  bOKDisabled: c.bLoading,
+                children: (0, r.jsx)(C.o0, {
+                  strTitle: o,
+                  strDescription: i,
+                  onCancel: () => s(!1),
+                  bOKDisabled: l.bLoading,
                   onOK: async () => {
-                    c.fnSetLoading(!0);
+                    l.fnSetLoading(!0);
                     try {
-                      (await n()) ? r(!0) : c.fnSetElError(l);
+                      (await n()) ? s(!0) : l.fnSetElError(a);
                     } catch (e) {
-                      c.fnSetElError(l);
+                      l.fnSetElError(a);
                     }
                   },
                 }),
               });
       }
-      function H(e) {
+      function T(e) {
         const {
           eventModel: t,
           label: n,
-          tooltip: r,
-          icon: i,
-          route: o,
-          onClick: l,
+          tooltip: s,
+          icon: o,
+          route: i,
+          onClick: a,
         } = e;
-        (0, p.wT)(o || l, "Must specify route or onClick");
-        const c =
-          l ||
+        (0, w.wT)(i || a, "Must specify route or onClick");
+        const l =
+          a ||
           (() => {
-            const e = o ? (0, E.yh)(t, null, o, "absolute") : void 0;
+            const e = i ? (0, g.yh)(t, null, i, "absolute") : void 0;
             window.location.assign(e);
           });
-        return (0, s.jsxs)("div", {
-          className: g().ManageButton,
-          onClick: c,
+        return (0, r.jsxs)("div", {
+          className: v().ManageButton,
+          onClick: l,
           children: [
-            (0, s.jsx)("div", { className: g().SVGIcon, children: i }),
+            (0, r.jsx)("div", { className: v().SVGIcon, children: o }),
             n,
-            r && (0, s.jsx)(L.o, { tooltip: r, small: !0 }),
+            s && (0, r.jsx)(p.o, { tooltip: s, small: !0 }),
           ],
         });
       }

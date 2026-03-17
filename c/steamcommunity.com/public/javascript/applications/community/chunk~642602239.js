@@ -3939,16 +3939,9 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4013,14 +4006,6 @@
       const _ = 593110,
         _ = 1675200,
         _ = [_, 766, 221410],
-        _ = 4145017,
-        _ = 39049601,
-        _ = 41316928,
-        _ = 4,
-        _ = 20,
-        _ = 45559995,
-        _ = 45902273,
-        _ = [_, 35143931, _, _, _],
         _ = [12, 34];
       function _(_) {
         return !_.some((_) => _ == _.GetEventType()) && !_.BHasTag("curator");
@@ -5607,7 +5592,7 @@
         BIsNextFest() {
           const _ = this.jsondata.sale_vanity_id;
           return (
-            new _._(this.clanSteamID).GetAccountID() == _ &&
+            new _._(this.clanSteamID).GetAccountID() == _._ &&
             _ &&
             _.toLowerCase().startsWith("nextfest")
           );
@@ -8541,7 +8526,11 @@
         GetAppImportantUpdate(_) {
           return (
             this.HintLoadImportantUpdates().catch((_) => {
-              console.log("UpdatedApps failed to load: ", _.response.data);
+              var _;
+              console.log(
+                "UpdatedApps failed to load: ",
+                null === (_ = _.response) || void 0 === _ ? void 0 : _.data,
+              );
             }),
             this.m_mapUpdatedApps && this.m_mapUpdatedApps.get(_)
           );
@@ -10675,12 +10664,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext({
         bCanUseLink: !1,
       });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),

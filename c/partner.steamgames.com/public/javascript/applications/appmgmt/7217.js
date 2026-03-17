@@ -8,7 +8,7 @@
 	"language": "english",
 	"LoginRedirect_Dialog_Title": "Sign In",
 	"LoginRedirect_Dialog_Description": "Sign in to add this item to your wishlist, follow it, or mark it as ignored. Clicking OK will redirect to the sign in page.",
-	"Wishlist_NotSignedIn": "Sign in or open this page in the Steam App to wishlist, follow, purchase and see recommendations",
+	"Wishlist_NotSignedIn": "Sign in or open this page in the Steam App to wishlist, follow, or purchase.",
 	"Dummy": "dummy"
 }`);
     },

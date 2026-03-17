@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Dokončili jsme kontrolu Vašeho zpochybnění týkajícího se rozhodnutí ohledně obsahu (%1$s).",
 	"moderatedcontent_dispute_sanctioned_2": "Po pečlivém přehodnocení si stojíme za naším původním rozhodnutím. Obsah tedy zůstane smazaný nebo omezený a stejně tak na Vašem účtu zůstanou veškeré související postihy. K tomuto rozhodnutí jsme dospěli po opětovné kontrole obsahu v jeho kontextu a s přihlédnutím k dodatečným informacím poskytnutým ve zpochybnění a příslušným pravidlům služby Steam a právním normám.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Pokud s naším rozhodnutím nesouhlasíte, můžete požádat o řešení prostřednictvím certifikovaného orgánu pro mimosoudní řešení sporů nebo se domáhat soudní nápravy u příslušného soudu.",
+	"anonymousreport_title": "Nahlášení obsahu",
+	"anonymousreport_description": "Pro nahlášení nevhodného nebo nelegálního obsahu se přihlaste ke svému účtu služby Steam.",
+	"anonymousreport_footer": "Pokud se nemůžete přihlásit, <1>vytvořte anonymní nahlášení</1>.",
+	"anonymousreport_footer_action": "vytvořte anonymní nahlášení",
+	"anonymousreport_signin": "Přihlaste se",
+	"anonymousreport_join": "si vytvořte účet",
+	"anonymousreport_createaccount": "Vytvořit účet",
+	"anonymousreport_signin_or_join": "%1$s, nebo %2$s",
 	"nocomma": ""
 }`);
     },

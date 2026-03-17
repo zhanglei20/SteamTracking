@@ -161,7 +161,7 @@
           "marketingmessage_art_eventcapsule",
           "marketingmessage_art_2_eventcapsule",
         ],
-        c = ["spotlight_art"],
+        c = ["spotlight_art", "spotlight_art_hero"],
         h = [...s, ...n, ...o, ...a, ...r, ...l, ...c];
       function d(e) {
         return Array.isArray(e) ? e[0] : e;
@@ -367,11 +367,8 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: m,
           },
-          spotlight_art: {
-            width: [306, 374],
-            height: [260, 448],
-            rgAcceptableTypes: u,
-          },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: u },
+          spotlight_art_hero: { width: 374, height: 448, rgAcceptableTypes: m },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: u },
           marketingmessage_art: {
             width: 570,

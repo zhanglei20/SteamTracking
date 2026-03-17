@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "無料に変更するには？",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "リリース済みのゲームを有料から無料に変更する方法の確認、およびヘルプのリクエストは%1$sをクリックしてください。",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "こちら",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

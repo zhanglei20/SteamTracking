@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "ต้องการสลับเป็นแบบฟรีหรือไม่?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "หากเกมของคุณวางจำหน่ายแล้ว แต่คุณต้องการสลับจากแบบชำระเงินเป็นแบบฟรี โปรดคลิก%1$sเพื่อเรียนรู้เพิ่มเติมและขอความช่วยเหลือ",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "ที่นี่",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

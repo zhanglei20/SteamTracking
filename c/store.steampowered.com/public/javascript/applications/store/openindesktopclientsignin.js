@@ -3,55 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        Button: "_0BH1ydyFmSnUvoVK2hIc",
-        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
-        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
-        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
-        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
-        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
-        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
-        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
-        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
-        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
-        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
-        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
-        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
-        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
-        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
-        "Size-3": "_389OPmdZoebw42_AlsUFxi",
-        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
-        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
-        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
-        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
-        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Text: "f6hU22EA7Z8peFWZVBJU",
-        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
-        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
-        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
-        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
-        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
-        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
-        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
-        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
-        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
-        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
-        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
-        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
-        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
-        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
         Truncate: "_1FVRWG5uD8VhzoEiOZWrEo",
         "Underline-always": "_3ASRyX4FTT_eMM5S5yrkwK",
@@ -71,234 +22,10 @@
         BannerButton: "_1jso7z80FWGn42k1HP0_cf",
       };
     },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-          size: _ = "3",
-          loading: __webpack_require__ = !0,
-          children: _,
-          color: _,
-          variant: _,
-          ..._
-        } = _;
-        return _ || !__webpack_require__
-          ? (0, _.jsxs)(_._, {
-              position: "relative",
-              ..._,
-              width: "fit-content",
-              children: [
-                (0, _.jsx)("div", {
-                  "data-visibility": !__webpack_require__,
-                  className: _.ChildContainer,
-                  children: _,
-                }),
-                __webpack_require__ &&
-                  (0, _.jsx)(_._, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, _.jsx)(_, {
-                      size: _,
-                      color: _,
-                      variant: _,
-                    }),
-                  }),
-              ],
-            })
-          : (0, _.jsx)(_, {
-              size: _,
-              color: _,
-              variant: _,
-              ..._,
-            });
-      }
-      function _(_) {
-        const {
-          className: _,
-          color: __webpack_require__,
-          ..._
-        } = (0, _._)(_, _);
-        return (0, _.jsx)("div", {
-          "data-accent-color": __webpack_require__,
-          className: _()(_, _.Spinner),
-          ..._,
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`Size-${_}`],
-        },
-        {
-          prop: "variant",
-          className: (_) => _[`Variant-${_}`],
-        },
-      ];
-      const _ = [
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`Size-${_}`],
-          },
-          {
-            prop: "variant",
-            className: (_) => _[`Variant-${_}`],
-          },
-          {
-            prop: "color",
-            dataProperty: (_) => ["accent-color", `${_}`],
-          },
-          {
-            prop: "width",
-            className: _.Width,
-            cssProperty: "--width",
-            responsive: !0,
-          },
-          {
-            prop: "minWidth",
-            className: _.MinWidth,
-            cssProperty: "--min-width",
-            responsive: !0,
-          },
-        ],
-        _ = function (_) {
-          const {
-              variant: _ = "default",
-              size: __webpack_require__ = "2",
-              minWidth: _ = "fit-content",
-              color: _,
-              loading: _,
-              children: _,
-              onClick: _,
-              icon: _,
-              ..._
-            } = _,
-            _ = _
-              ? (0, _.jsx)(_, {
-                  size: __webpack_require__,
-                  color: _,
-                  variant: "bright",
-                  children: _,
-                })
-              : _,
-            _ = _ ? void 0 : _;
-          return (0, _.jsx)("button", {
-            type: "button",
-            ...(0, _._)(
-              {
-                ..._,
-                variant: _,
-                size: __webpack_require__,
-                minWidth: _,
-                color: _,
-                className: _()(_.Button, _ && _.Icon),
-                onClick: _,
-              },
-              _,
-            ),
-            children: _,
-          });
-        };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            _: _ = "span",
-            ref: __webpack_require__,
-            className: _,
-            ..._
-          } = _,
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: __webpack_require__,
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()(_.Text, _),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ...[
-          {
-            prop: "weight",
-            responsive: !0,
-            className: _.TextWeight,
-            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_, _.contrast ?? "body"),
-            ],
-          },
-          {
-            prop: "contrast",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_.color ?? "text-body", _),
-            ],
-          },
-          {
-            prop: "truncate",
-            className: _.Truncate,
-          },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: _.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: _.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`TextSize-${_}`],
-        },
-      ];
+    chunkid: (module) => {
+      module.exports = {
+        WishlistModalOverride: "_3zojRjiXppBm0x5n5HgAZ1",
+      };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -1054,7 +781,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       const _ = (0, _._)(function (_) {
           const {
               fnOpenInSteamClient: _,
@@ -1075,31 +806,40 @@
                 active: _,
                 children: (0, _.jsxs)(_._, {
                   strTitle: (0, _._)("#OpenInDesktopAppBanner_NotSignedIn"),
+                  className: _().WishlistModalOverride,
                   strDescription: _._.Localize("#Wishlist_NotSignedIn"),
                   closeModal: _,
                   bAlertDialog: !0,
                   children: [
-                    (0, _.jsx)("br", {}),
-                    (0, _.jsx)("br", {}),
-                    (0, _.jsx)(_._, {
-                      onClick: _,
-                      children: (0, _._)(
-                        "#OpenInDesktopAppBanner_OpenAppButton",
-                      ),
-                    }),
-                    (0, _.jsx)(_._, {
-                      onClick: _._,
-                      children: _._.Localize("#Login_SignIn"),
+                    (0, _.jsxs)(_._, {
+                      direction: "row",
+                      gap: "4",
+                      paddingTop: "4",
+                      paddingBottom: "4",
+                      children: [
+                        (0, _.jsx)(_._, {
+                          onClick: _,
+                          children: (0, _._)(
+                            "#OpenInDesktopAppBanner_OpenAppButton",
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          color: "dull",
+                          onClick: _._,
+                          children: _._.Localize("#Login_SignIn"),
+                        }),
+                      ],
                     }),
                     !_ &&
-                      (0, _.jsxs)(_.Fragment, {
-                        children: [
-                          (0, _.jsx)("br", {}),
-                          (0, _.jsx)(_._, {
-                            href: `${_._.STORE_BASE_URL}about`,
-                            children: (0, _._)("#Button_InstallSteam"),
-                          }),
-                        ],
+                      (0, _.jsx)(_.Fragment, {
+                        children: (0, _.jsx)(_._, {
+                          children: (0, _._)(
+                            "#GotSteam_NeedSteam",
+                            (0, _.jsx)(_._, {
+                              href: `${_._.STORE_BASE_URL}about`,
+                            }),
+                          ),
+                        }),
                       }),
                   ],
                 }),

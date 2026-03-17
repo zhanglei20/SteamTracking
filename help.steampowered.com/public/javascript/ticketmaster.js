@@ -301,6 +301,14 @@ function SubmitReplyForm_Internal( form, extraFormData )
 		return;
 	}
 
+	var regexProcessReplacementText = /(?:^| )⭈[\w\-]+(?: |$)/i;
+
+	if ( regexProcessReplacementText.exec( strReply ) )
+	{
+		ShowAlertDialog( 'Ticketmaster', 'There is still incomplete replacement text in your reply.  Please remove or correct the replacement text.' );
+		return;
+	}
+
 		$Form.find( 'button' ).addClass( 'btn_disabled' ).prop( 'disabled', true );
 
 		//var strData = $Form.serialize() + "&" + $J.param( { reply_body: strReply } );

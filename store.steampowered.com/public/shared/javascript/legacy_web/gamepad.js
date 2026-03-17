@@ -283,13 +283,13 @@
       "use strict";
       n(745);
     },
-    320: (e, t, n) => {
+    930: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => Nt });
       var o,
         i = n(669),
         s = n.n(i),
-        r = n(498);
+        r = n(126);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -352,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(353),
-        p = n(874),
-        _ = n(597),
-        f = n(636);
+        g = n(167),
+        p = n(552),
+        _ = n(587),
+        f = n(762);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -598,6 +598,7 @@
         USE_LONGEST_LOC_STRING: !1,
         SILENT_STARTUP: !1,
         CLIENT_SESSION: 0,
+        NOW: 0,
       };
       class N extends r.nh {
         m_lastButtonDown = r.pR.INVALID;
@@ -753,8 +754,8 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(0),
-        y = n(728);
+        D = n(598),
+        y = n(430);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -2960,7 +2961,7 @@
               this.m_Parent?.Element,
             ),
             u(this.m_Parent?.Element, "vgp_onbuttondown", e.detail),
-            !1
+            !0
           );
         }
         SetDOMFocusAndScroll(e, t) {
@@ -3311,9 +3312,10 @@
         TryRootButtonListeners(e) {
           for (const { button: t, fnCallback: n } of this
             .m_rgGlobalButtonHandlers)
-            if (t == e.detail.button && !1 !== n(e)) return !0;
-          for (const t of this.m_rgOnUnhandledButton) if (t(e)) return !0;
-          return !1;
+            if (t == e.detail.button && !1 !== n(e)) return !1;
+          for (const t of this.m_rgOnUnhandledButton)
+            if (!1 !== t(e)) return !1;
+          return !0;
         }
         HandleButtonDownEventAsLogicalEvent(e) {
           let { bUnhandled: t, bHadLogicalEventMapping: n } = (function (e) {
@@ -3338,7 +3340,7 @@
             Xe(
               `Logical gamepad Event fired: ${r.pR[e.detail.button]}, had logical event: ${n}, was handled: ${!t}`,
             ),
-            t && (t = !this.TryRootButtonListeners(e)),
+            t && (t = this.TryRootButtonListeners(e)),
             t && (t = this.m_Controller.FireUnhandledGamepadEventCallbacks(e)),
             e.stopPropagation(),
             t
@@ -4804,7 +4806,7 @@
         },
       };
     },
-    874: (e, t, n) => {
+    552: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4817,12 +4819,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    636: (e, t, n) => {
+    762: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(353),
-        s = n(874);
+        i = n(167),
+        s = n(552);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

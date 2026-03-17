@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Infolge Ihrer Beschwerde wurde folgender Inhalt erneut geprüft: %1$s.",
 	"moderatedcontent_dispute_sanctioned_2": "Nach einer erneuten sorgfältigen Überprüfung wurde beschlossen, die ursprüngliche Entscheidung aufrechtzuerhalten. Der gelöschte Inhalt wird nicht wiederhergestellt oder von den verhängten Einschränkungen befreit. Zudem bleiben alle damit verbundenen Maßnahmen auf Accountebene bestehen. Diese Entscheidung wurde basierend auf den von Ihnen angegebenen Informationen, den Ergebnissen der Kontextüberprüfung sowie unter Berücksichtigung der entsprechenden Plattformrichtlinien und der einschlägigen Normen getroffen.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Wenn Sie dieser Entscheidung nicht zustimmen, haben Sie das Recht, eine außergerichtliche Streitbeilegung durch eine anerkannte Verbraucherschlichtungsstelle anzustreben oder vor einem zuständigen Gericht Rechtsschutz zu suchen.",
+	"anonymousreport_title": "Diesen Inhalt melden",
+	"anonymousreport_description": "Melden Sie sich in der Steam-Community an, um unangemessene oder illegale Inhalte zu melden.",
+	"anonymousreport_footer": "Falls Sie sich nicht anmelden können, können Sie <1>eine anonyme Meldung einreichen</1>.",
+	"anonymousreport_footer_action": "eine anonyme Meldung einreichen",
+	"anonymousreport_signin": "Anmelden",
+	"anonymousreport_join": "Steam-Account einrichten",
+	"anonymousreport_createaccount": "Account erstellen",
+	"anonymousreport_signin_or_join": "%1$s oder %2$s",
 	"nocomma": ""
 }`);
     },

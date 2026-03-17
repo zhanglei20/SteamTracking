@@ -3,55 +3,6 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [1349, 8843],
   {
-    69041: (e) => {
-      e.exports = {
-        Button: "_0BH1ydyFmSnUvoVK2hIc",
-        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
-        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
-        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
-        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
-        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
-        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
-        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
-        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
-        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
-        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
-        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
-      };
-    },
-    73406: (e) => {
-      e.exports = {
-        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
-        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
-        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
-        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
-        "Size-3": "_389OPmdZoebw42_AlsUFxi",
-        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
-        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
-        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
-        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
-        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
-      };
-    },
-    65274: (e) => {
-      e.exports = {
-        Text: "f6hU22EA7Z8peFWZVBJU",
-        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
-        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
-        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
-        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
-        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
-        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
-        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
-        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
-        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
-        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
-        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
-        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
-        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
-        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
-      };
-    },
     50122: (e) => {
       e.exports = {
         TextLink: "_1DLGHwAfYnbFVIwbZjO2cn",
@@ -73,198 +24,25 @@
         BannerButton: "_1jso7z80FWGn42k1HP0_cf",
       };
     },
-    53965: (e, n, t) => {
-      "use strict";
-      t.d(n, { $: () => b });
-      var i = t(7850),
-        s = t(64238),
-        r = t.n(s),
-        o = t(69041),
-        a = t(75659),
-        c = t(41324),
-        l = t(73406),
-        d = t(90534),
-        h = t(53971);
-      function p(e) {
-        const {
-          size: n = "3",
-          loading: t = !0,
-          children: s,
-          color: r,
-          variant: o,
-          ...a
-        } = e;
-        return s || !t
-          ? (0, i.jsxs)(d.az, {
-              position: "relative",
-              ...a,
-              width: "fit-content",
-              children: [
-                (0, i.jsx)("div", {
-                  "data-visibility": !t,
-                  className: l.ChildContainer,
-                  children: s,
-                }),
-                t &&
-                  (0, i.jsx)(h.s, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, i.jsx)(u, { size: n, color: r, variant: o }),
-                  }),
-              ],
-            })
-          : (0, i.jsx)(u, { size: n, color: r, variant: o, ...a });
-      }
-      function u(e) {
-        const { className: n, color: t, ...s } = (0, c.mz)(e, m);
-        return (0, i.jsx)("div", {
-          "data-accent-color": t,
-          className: r()(n, l.Spinner),
-          ...s,
-        });
-      }
-      const m = [
-        ...a.L,
-        { prop: "size", responsive: !0, className: (e) => l[`Size-${e}`] },
-        { prop: "variant", className: (e) => l[`Variant-${e}`] },
-      ];
-      const _ = [
-          ...a.L,
-          { prop: "size", responsive: !0, className: (e) => o[`Size-${e}`] },
-          { prop: "variant", className: (e) => o[`Variant-${e}`] },
-          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
-          {
-            prop: "width",
-            className: o.Width,
-            cssProperty: "--width",
-            responsive: !0,
-          },
-          {
-            prop: "minWidth",
-            className: o.MinWidth,
-            cssProperty: "--min-width",
-            responsive: !0,
-          },
-        ],
-        b = function (e) {
-          const {
-              variant: n = "default",
-              size: t = "2",
-              minWidth: s = "fit-content",
-              color: a,
-              loading: l,
-              children: d,
-              onClick: h,
-              icon: u,
-              ...m
-            } = e,
-            b = l
-              ? (0, i.jsx)(p, {
-                  size: t,
-                  color: a,
-                  variant: "bright",
-                  children: d,
-                })
-              : d,
-            S = l ? void 0 : h;
-          return (0, i.jsx)("button", {
-            type: "button",
-            ...(0, c.mz)(
-              {
-                ...m,
-                variant: n,
-                size: t,
-                minWidth: s,
-                color: a,
-                className: r()(o.Button, u && o.Icon),
-                onClick: S,
-              },
-              _,
-            ),
-            children: b,
-          });
-        };
-    },
-    20187: (e, n, t) => {
-      "use strict";
-      t.d(n, { Ae: () => d, EY: () => l });
-      var i = t(7850),
-        s = t(41324),
-        r = t(75659),
-        o = t(64238),
-        a = t.n(o),
-        c = t(65274);
-      function l(e) {
-        const { as: n = "span", ref: t, className: r, ...o } = e,
-          l = n;
-        return (0, i.jsx)(l, {
-          ref: t,
-          ...(0, s.mz)({ ...o, className: a()(c.Text, r) }, d),
-        });
-      }
-      const d = [
-        ...[
-          {
-            prop: "weight",
-            responsive: !0,
-            className: c.TextWeight,
-            cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: c.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (e, n) => [
-              "--text-color",
-              (0, s.To)(e, n.contrast ?? "body"),
-            ],
-          },
-          {
-            prop: "contrast",
-            cssProperty: (e, n) => [
-              "--text-color",
-              (0, s.To)(n.color ?? "text-body", e),
-            ],
-          },
-          { prop: "truncate", className: c.Truncate },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: c.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: c.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        ...r.L,
-        { prop: "size", responsive: !0, className: (e) => c[`TextSize-${e}`] },
-      ];
+    11131: (e) => {
+      e.exports = { WishlistModalOverride: "_3zojRjiXppBm0x5n5HgAZ1" };
     },
     28491: (e, n, t) => {
       "use strict";
       t.d(n, { Y: () => a });
       var i = t(7850),
         s = t(20187),
-        r = t(41324),
-        o = t(50122);
+        o = t(41324),
+        r = t(50122);
       function a(e) {
         const { underline: n = "auto", ...t } = e;
         return (0, i.jsx)("a", {
-          ...(0, r.mz)({ ...t, underline: n, className: o.TextLink }, c),
+          ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, c),
         });
       }
       const c = [
         ...s.Ae,
-        { prop: "underline", className: (e) => o[`Underline-${e}`] },
+        { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];
     },
     84547: (e, n, t) => {
@@ -272,15 +50,15 @@
       t.d(n, { E: () => d, l: () => h });
       var i = t(7850),
         s = t(78395),
-        r = t(62151),
-        o = t(8527),
+        o = t(62151),
+        r = t(8527),
         a = t(64753),
         c = t(21869);
       function l(e) {
         const { closeModal: n } = e;
         return (0, i.jsx)(s.o0, {
-          strTitle: r.F5.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: r.F5.Localize("#LoginRedirect_Dialog_Description"),
+          strTitle: o.F5.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: o.F5.Localize("#LoginRedirect_Dialog_Description"),
           closeModal: n,
           onOK: () => {
             h();
@@ -298,12 +76,12 @@
         };
       }
       function h() {
-        window.location.href = `${o.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
+        window.location.href = `${r.TS.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
       }
     },
     62151: (e, n, t) => {
       "use strict";
-      t.d(n, { F5: () => r });
+      t.d(n, { F5: () => o });
       var i = t(42475);
       const s = {};
       (s.arabic = () => t.e(3695).then(t.t.bind(t, 93695, 19))),
@@ -336,13 +114,13 @@
         (s.turkish = () => t.e(4921).then(t.t.bind(t, 94921, 19))),
         (s.ukrainian = () => t.e(1667).then(t.t.bind(t, 11667, 19))),
         (s.vietnamese = () => t.e(4528).then(t.t.bind(t, 74528, 19)));
-      const r = (0, i.l)(async function (e) {
+      const o = (0, i.l)(async function (e) {
         if (s[e]) return s[e]();
       });
     },
     55672: (e, n, t) => {
       "use strict";
-      t.d(n, { Z: () => r });
+      t.d(n, { Z: () => o });
       var i = t(42475);
       const s = {};
       (s.arabic = () => t.e(3710).then(t.t.bind(t, 8476, 19))),
@@ -376,16 +154,16 @@
         (s.turkish = () => t.e(9152).then(t.t.bind(t, 34792, 19))),
         (s.ukrainian = () => t.e(2954).then(t.t.bind(t, 27246, 19))),
         (s.vietnamese = () => t.e(6149).then(t.t.bind(t, 59863, 19)));
-      const r = (0, i.l)(async function (e) {
+      const o = (0, i.l)(async function (e) {
         if (s[e]) return s[e]();
       });
     },
     62381: (e, n, t) => {
       "use strict";
-      t.d(n, { W: () => o });
+      t.d(n, { W: () => r });
       var i = t(30470);
       let s = { success: !0, result: 1 };
-      class r {
+      class o {
         m_mapWaitingCallbacks = new Map();
         m_socket;
         m_iCallSeq = 1;
@@ -499,8 +277,8 @@
           );
         }
       }
-      let o = new (class {
-        m_connection = new r();
+      let r = new (class {
+        m_connection = new o();
         FailureResult(e = 2) {
           let n = { success: !1, result: e };
           return (
@@ -585,25 +363,25 @@
             .catch(() => this.FailureResult());
         }
       })();
-      window.ClientConnectionAPI = o;
+      window.ClientConnectionAPI = r;
     },
     51706: (e, n, t) => {
       "use strict";
       t.d(n, {
         mt: () => l,
         o0: () => h.o0,
-        eV: () => p.eV,
+        eV: () => u.eV,
         KG: () => h.KG,
         Ee: () => h.Ee,
         x_: () => a.x_,
         of: () => d,
         pY: () => h.pY,
-        EN: () => o.E,
+        EN: () => r.E,
       });
       var i = t(7850),
         s = t(90626),
-        r = t(53835),
-        o = t(21869),
+        o = t(53835),
+        r = t(21869),
         a = t(2654);
       t(72739),
         t(48902),
@@ -631,17 +409,17 @@
             children: d,
             ...h
           } = e,
-          { headerId: p, context: u } = c({ labelledBy: e["aria-labelledby"] });
-        return (0, i.jsx)(r.t6.Provider, {
-          value: u,
-          children: (0, i.jsx)(o.E, {
+          { headerId: u, context: p } = c({ labelledBy: e["aria-labelledby"] });
+        return (0, i.jsx)(o.t6.Provider, {
+          value: p,
+          children: (0, i.jsx)(r.E, {
             active: n,
             children: (0, i.jsx)(a.x_, {
               onEscKeypress: t,
               className: l,
-              children: (0, i.jsx)(r.UC, {
+              children: (0, i.jsx)(o.UC, {
                 role: "dialog",
-                "aria-labelledby": p,
+                "aria-labelledby": u,
                 className: s,
                 ...h,
                 children: d,
@@ -652,35 +430,35 @@
       }
       function d(e) {
         const { className: n, children: t } = e;
-        return (0, i.jsx)(o.E, {
+        return (0, i.jsx)(r.E, {
           active: !0,
           children: (0, i.jsx)("div", { className: n, children: t }),
         });
       }
       t(81194);
       var h = t(78395),
-        p = t(10411);
+        u = t(10411);
       t(76222);
     },
     71009: (e, n, t) => {
       "use strict";
       t.r(n),
         t.d(n, {
-          OpenInDesktopClient: () => p,
+          OpenInDesktopClient: () => u,
           default: () => m,
-          useOpenWebInSteamClient: () => u,
+          useOpenWebInSteamClient: () => p,
         });
       var i = t(7850),
         s = t(90626),
-        r = t(30470),
-        o = t(84811),
+        o = t(30470),
+        r = t(84811),
         a = t(62381),
         c = t(97824),
         l = t(78327),
         d = t(2627),
         h = t(61859);
-      const p = (0, o.Nr)(function (e) {
-        const { fnOpenInSteamClient: n } = u();
+      const u = (0, r.Nr)(function (e) {
+        const { fnOpenInSteamClient: n } = p();
         return (0, i.jsx)("div", {
           className: c.OpenInBannerContainer,
           children: (0, i.jsxs)("div", {
@@ -713,12 +491,12 @@
           }),
         });
       });
-      function u() {
+      function p() {
         const [e, n] = s.useState(22);
         s.useEffect(() => {
-          r.TS.IN_CLIENT ||
-            r.TS.IN_MOBILE ||
-            r.TS.IN_MOBILE_WEBVIEW ||
+          o.TS.IN_CLIENT ||
+            o.TS.IN_MOBILE ||
+            o.TS.IN_MOBILE_WEBVIEW ||
             a.W.BClientConnectedAndSupportsMessage("OpenSteamURL").then((e) => {
               n(e ? 1 : 2);
             });
@@ -736,67 +514,80 @@
         }, [e]);
         return { eClientConnectedState: e, fnOpenInSteamClient: t };
       }
-      const m = p;
+      const m = u;
     },
     26240: (e, n, t) => {
       "use strict";
-      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => b, default: () => S });
+      t.r(n), t.d(n, { OpenInDesktopOrSignIn: () => f, default: () => I });
       var i = t(7850),
         s = t(53965),
-        r = t(28491),
-        o = t(62151),
-        a = t(84547),
-        c = t(55672),
-        l = t(84811),
-        d = t(51706),
-        h = t(71009),
-        p = t(32754),
-        u = t(61859),
-        m = t(84933),
-        _ = t(30470);
-      const b = (0, l.Nr)(function (e) {
+        o = t(53971),
+        r = t(20187),
+        a = t(28491),
+        c = t(62151),
+        l = t(84547),
+        d = t(55672),
+        h = t(84811),
+        u = t(51706),
+        p = t(71009),
+        m = t(32754),
+        b = t(61859),
+        _ = t(84933),
+        C = t(30470),
+        g = t(11131),
+        S = t.n(g);
+      const f = (0, h.Nr)(function (e) {
           const { fnOpenInSteamClient: n, eClientConnectedState: t } = (0,
-            h.useOpenWebInSteamClient)(),
-            l = 1 == t,
-            [b, S, C] = (0, m.uD)();
+            p.useOpenWebInSteamClient)(),
+            h = 1 == t,
+            [g, f, I] = (0, _.uD)();
           return (0, i.jsxs)(i.Fragment, {
             children: [
-              (0, i.jsx)(p.Gq, {
-                toolTipContent: c.Z.Localize("#AddToWishlist_ttip"),
+              (0, i.jsx)(m.Gq, {
+                toolTipContent: d.Z.Localize("#AddToWishlist_ttip"),
                 children: (0, i.jsx)(s.$, {
-                  onClick: S,
-                  children: (0, u.we)("#AddToYourWishlist"),
+                  onClick: f,
+                  children: (0, b.we)("#AddToYourWishlist"),
                 }),
               }),
-              (0, i.jsx)(d.EN, {
-                active: b,
-                children: (0, i.jsxs)(d.o0, {
-                  strTitle: (0, u.we)("#OpenInDesktopAppBanner_NotSignedIn"),
-                  strDescription: o.F5.Localize("#Wishlist_NotSignedIn"),
-                  closeModal: C,
+              (0, i.jsx)(u.EN, {
+                active: g,
+                children: (0, i.jsxs)(u.o0, {
+                  strTitle: (0, b.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                  className: S().WishlistModalOverride,
+                  strDescription: c.F5.Localize("#Wishlist_NotSignedIn"),
+                  closeModal: I,
                   bAlertDialog: !0,
                   children: [
-                    (0, i.jsx)("br", {}),
-                    (0, i.jsx)("br", {}),
-                    (0, i.jsx)(s.$, {
-                      onClick: n,
-                      children: (0, u.we)(
-                        "#OpenInDesktopAppBanner_OpenAppButton",
-                      ),
+                    (0, i.jsxs)(o.s, {
+                      direction: "row",
+                      gap: "4",
+                      paddingTop: "4",
+                      paddingBottom: "4",
+                      children: [
+                        (0, i.jsx)(s.$, {
+                          onClick: n,
+                          children: (0, b.we)(
+                            "#OpenInDesktopAppBanner_OpenAppButton",
+                          ),
+                        }),
+                        (0, i.jsx)(s.$, {
+                          color: "dull",
+                          onClick: l.l,
+                          children: d.Z.Localize("#Login_SignIn"),
+                        }),
+                      ],
                     }),
-                    (0, i.jsx)(s.$, {
-                      onClick: a.l,
-                      children: c.Z.Localize("#Login_SignIn"),
-                    }),
-                    !l &&
-                      (0, i.jsxs)(i.Fragment, {
-                        children: [
-                          (0, i.jsx)("br", {}),
-                          (0, i.jsx)(r.Y, {
-                            href: `${_.TS.STORE_BASE_URL}about`,
-                            children: (0, u.we)("#Button_InstallSteam"),
-                          }),
-                        ],
+                    !h &&
+                      (0, i.jsx)(i.Fragment, {
+                        children: (0, i.jsx)(r.EY, {
+                          children: (0, b.oW)(
+                            "#GotSteam_NeedSteam",
+                            (0, i.jsx)(a.Y, {
+                              href: `${C.TS.STORE_BASE_URL}about`,
+                            }),
+                          ),
+                        }),
                       }),
                   ],
                 }),
@@ -804,7 +595,7 @@
             ],
           });
         }),
-        S = b;
+        I = f;
     },
   },
 ]);

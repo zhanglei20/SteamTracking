@@ -3301,404 +3301,323 @@
         (0, _._)([_._], _.prototype, "OnDeleteClickAndVerify", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) => {
-          var _, _;
-          const { eventModel: _ } = _;
-          if (!(null == _ ? void 0 : _.jsondata)) return null;
-          const _ = _(_.jsondata, 3);
-          _.sort((_, _) => _.size - _.size);
-          return (0, _.jsxs)("div", {
-            className: _.MetaDataCtn,
-            children: [
-              (0, _.jsxs)("div", {
-                children: [
-                  "Total Size: ",
-                  null ===
-                    (_ =
-                      null === (_ = JSON.stringify(_.jsondata)) || void 0 === _
-                        ? void 0
-                        : _.length) || void 0 === _
-                    ? void 0
-                    : __webpack_require__.toLocaleString((0, _._)()),
-                ],
-              }),
-              _.slice(0, 10).map((_) =>
-                (0, _.jsxs)(
-                  "div",
-                  {
-                    children: [_.key, ": ", (0, _._)(_.size)],
-                  },
-                  _.key,
-                ),
+        var _, _;
+        const { eventModel: _ } = _;
+        if (!(null == _ ? void 0 : _.jsondata)) return null;
+        const _ = _(_.jsondata, 3);
+        _.sort((_, _) => _.size - _.size);
+        return (0, _.jsxs)("div", {
+          className: _.MetaDataCtn,
+          children: [
+            (0, _.jsxs)("div", {
+              children: [
+                "Total Size: ",
+                null ===
+                  (_ =
+                    null === (_ = JSON.stringify(_.jsondata)) || void 0 === _
+                      ? void 0
+                      : _.length) || void 0 === _
+                  ? void 0
+                  : __webpack_require__.toLocaleString((0, _._)()),
+              ],
+            }),
+            _.slice(0, 10).map((_) =>
+              (0, _.jsxs)(
+                "div",
+                {
+                  children: [_.key, ": ", (0, _._)(_.size)],
+                },
+                _.key,
               ),
-            ],
-          });
-        },
-        _ = (0, _._)((_) => {
-          const { match: _ } = _,
-            [__webpack_require__, _] = _.useState(!1),
-            [_, _] = _.useState(""),
-            [_, _] = _.useState(""),
-            [_, _] = _.useState(!1),
-            [_, _] = _.useState(0),
-            _ = _.useRef(void 0),
-            _ = _.useMemo(() => new _._(_._.CLANSTEAMID), []),
-            _ = _.useMemo(() => new _._(), []),
-            _ = _.useMemo(() => _().CancelToken.source(), []),
-            {
-              bIsFetching: _,
-              nHiddenEventCount: _,
-              rgEventModels: _,
-              fnRefetch: _,
-            } = (0, _._)(_, !__webpack_require__),
-            {
-              rgClanEventData: _,
-              bHasNextPage: _,
-              fnFetchNextPage: _,
-              bIsFetching: _,
-              bIsFetchingNextPage: _,
-              clanEventSummaryStatus: _,
-              clanEventSummaryLoadError: _,
-              fnRefetch: _,
-            } = (0, _._)(_, 10, _);
-          _.useEffect(
-            () => (_(), _(), () => _.cancel("EventListView to unload")),
-            [_, _, _],
-          );
-          const _ = (function (_, _) {
-              const [__webpack_require__, _] = _.useState(!0);
-              return (
-                (0, _._)(() => _(!1), 4e3),
-                _.useEffect(() => {
-                  _ || _ || _(!1);
-                }, [_, _]),
-                __webpack_require__
-              );
-            })(_, _),
-            _ = (0, _._)(_),
-            _ = _.useMemo(() => {
-              (0, _._)(
-                !_ || _.every((_) => null != _),
-                "draftClanEvents has a null event",
-              );
-              const _ = (_) => _ || 36 != _.GetEventType(),
-                _ = new Map(),
-                _ =
-                  null == _
-                    ? void 0
-                    : _.pages.flatMap((_) => _).map((_) => (0, _._)(_, _)),
-                _ = null == _ ? void 0 : __webpack_require__.filter(_);
-              null == _ || _.forEach((_) => _.set(_.GID, _));
-              const _ = null == _ ? void 0 : _.filter(_);
-              null == _ || _.forEach((_) => _.set(_.GID, _));
-              const _ =
-                (null != _ ? _ : []).length + (null != _ ? _ : []).length;
-              return (
-                _(
-                  _ - (null != _ ? _ : []).length - (null != _ ? _ : []).length,
-                ),
-                Array.from(_.values())
-              );
-            }, [_, null == _ ? void 0 : _.pages, _, _]);
+            ),
+          ],
+        });
+      };
+      var _ = __webpack_require__("chunkid");
+      const _ = (0, _._)((_) => {
+        const { match: _ } = _,
+          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(""),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(0),
+          _ = _.useRef(void 0),
+          _ = _.useMemo(() => new _._(_._.CLANSTEAMID), []),
+          _ = _.useMemo(() => new _._(), []),
+          _ = _.useMemo(() => _().CancelToken.source(), []),
+          {
+            bIsFetching: _,
+            nHiddenEventCount: _,
+            rgEventModels: _,
+            fnRefetch: _,
+          } = (0, _._)(_, !__webpack_require__),
+          {
+            rgClanEventData: _,
+            bHasNextPage: _,
+            fnFetchNextPage: _,
+            bIsFetching: _,
+            bIsFetchingNextPage: _,
+            clanEventSummaryStatus: _,
+            clanEventSummaryLoadError: _,
+            fnRefetch: _,
+          } = (0, _._)(_, 10, _);
+        _.useEffect(
+          () => (_(), _(), () => _.cancel("EventListView to unload")),
+          [_, _, _],
+        );
+        const _ = (function (_, _) {
+            const [__webpack_require__, _] = _.useState(!0);
+            return (
+              (0, _._)(() => _(!1), 4e3),
+              _.useEffect(() => {
+                _ || _ || _(!1);
+              }, [_, _]),
+              __webpack_require__
+            );
+          })(_, _),
+          _ = (0, _._)(_),
+          _ = _.useMemo(() => {
+            (0, _._)(
+              !_ || _.every((_) => null != _),
+              "draftClanEvents has a null event",
+            );
+            const _ = (_) => _ || 36 != _.GetEventType(),
+              _ = new Map(),
+              _ =
+                null == _
+                  ? void 0
+                  : _.pages.flatMap((_) => _).map((_) => (0, _._)(_, _)),
+              _ = null == _ ? void 0 : __webpack_require__.filter(_);
+            null == _ || _.forEach((_) => _.set(_.GID, _));
+            const _ = null == _ ? void 0 : _.filter(_);
+            null == _ || _.forEach((_) => _.set(_.GID, _));
+            const _ = (null != _ ? _ : []).length + (null != _ ? _ : []).length;
+            return (
+              _(_ - (null != _ ? _ : []).length - (null != _ ? _ : []).length),
+              Array.from(_.values())
+            );
+          }, [_, null == _ ? void 0 : _.pages, _, _]);
+        _.useEffect(() => {
+          const _ = _.filter((_) =>
+            Boolean(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
+          ).map((_) => _.GID);
+          _.length > 0 && _._.LoadStatsForEvents(_, _, _);
+        }, [_, _, _]),
           _.useEffect(() => {
-            const _ = _.filter((_) =>
-              Boolean(_ && _.BIsVisibleEvent() && _.BIsPartnerEvent()),
-            ).map((_) => _.GID);
-            _.length > 0 && _._.LoadStatsForEvents(_, _, _);
-          }, [_, _, _]),
-            _.useEffect(() => {
-              if ("error" == _) {
-                const _ = (0, _._)(_);
-                (0, _._)(
-                  (0, _.jsx)(_._, {
-                    children: (0, _._)(
-                      "#Error_Description",
-                      _.errorCode,
-                      _.strErrorMsg,
-                    ),
-                  }),
-                  window,
+            if ("error" == _) {
+              const _ = (0, _._)(_);
+              (0, _._)(
+                (0, _.jsx)(_._, {
+                  children: (0, _._)(
+                    "#Error_Description",
+                    _.errorCode,
+                    _.strErrorMsg,
+                  ),
+                }),
+                window,
+              );
+            }
+          }, [_, _]);
+        const _ = (_, _) => {
+            var _;
+            const _ = [];
+            let _ = _;
+            if ((null == _ ? void 0 : _.length) > 0) {
+              (_ = _.slice().filter((_) => {
+                var _;
+                return (
+                  _.visibility_state === _ &&
+                  !(
+                    Boolean(_) &&
+                    !(null ===
+                      (_ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE))) ||
+                    void 0 === _
+                      ? void 0
+                      : __webpack_require__.toLocaleLowerCase().includes(_))
+                  )
                 );
-              }
-            }, [_, _]);
-          const _ = (_, _) => {
-              var _;
-              const _ = [];
-              let _ = _;
-              if ((null == _ ? void 0 : _.length) > 0) {
-                (_ = _.slice().filter((_) => {
-                  var _;
-                  return (
-                    _.visibility_state === _ &&
-                    !(
-                      Boolean(_) &&
-                      !(null ===
-                        (_ = _.GetNameWithFallback((0, _._)(_._.LANGUAGE))) ||
-                      void 0 === _
-                        ? void 0
-                        : __webpack_require__.toLocaleLowerCase().includes(_))
-                    )
-                  );
-                })),
-                  _.sort(
-                    (_, _) => (
-                      (0, _._)(
-                        _ !== _,
-                        `Unexpected duplicates in the list: ${_} ${_}`,
-                      ),
-                      _.BShowLibrarySpotlight(!0) &&
-                      !_.BShowLibrarySpotlight(!0)
-                        ? -1
-                        : !_.BShowLibrarySpotlight(!0) &&
-                            _.BShowLibrarySpotlight(!0)
-                          ? 1
-                          : _.startTime - _.startTime
+              })),
+                _.sort(
+                  (_, _) => (
+                    (0, _._)(
+                      _ !== _,
+                      `Unexpected duplicates in the list: ${_} ${_}`,
                     ),
-                  );
-                for (const _ of _)
-                  _.push(
-                    (0, _.jsx)(
-                      _,
-                      {
-                        appid_or_vanity_str: _.params.appid_or_vanity_str,
-                        gid: _.GID,
-                        eventModel: _,
-                        bShowEventMetaDataSizes: __webpack_require__,
-                        refresh: () => {
-                          _(), _();
-                        },
-                      },
-                      _.GID,
-                    ),
-                  );
-              }
-              for (
-                let _ = 0;
-                _ <
-                _ -
-                  (null !== (_ = null == _ ? void 0 : _.length) && void 0 !== _
-                    ? _
-                    : 0);
-                _++
-              )
-                _.push(
-                  (0, _.jsx)(
-                    "div",
-                    {
-                      className: _.TileContainer,
-                      children: (0, _.jsx)(_._, {
-                        capsules_per_row: [1],
-                        is_event_dash_row: !0,
-                      }),
-                    },
-                    `tile_${_}_ghost_${_}`,
+                    _.BShowLibrarySpotlight(!0) && !_.BShowLibrarySpotlight(!0)
+                      ? -1
+                      : !_.BShowLibrarySpotlight(!0) &&
+                          _.BShowLibrarySpotlight(!0)
+                        ? 1
+                        : _.startTime - _.startTime
                   ),
                 );
-              return _;
-            },
-            _ = _.useCallback(
-              (_) => {
-                _ && !_ && _();
-              },
-              [_, _],
-            );
-          _.useEffect(() => {
-            _.Schedule(200, () =>
-              _(null == _ ? void 0 : _.trim().toLocaleLowerCase()),
-            );
-          }, [_, _]);
-          const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
-            _ = _(_._.k_EEventStateStaged),
-            _ = _(_._.k_EEventStateUnlisted),
-            _ = _(_._.k_EEventStateVisible),
-            _ = _.useMemo(() => {
-              if (!_) return;
-              if (_ || !_) return _;
-              const _ = _.length >= 10 ? _.length - 10 : _.length,
-                _ = (0, _.jsx)(
-                  _._,
-                  {
-                    trigger: "repeated",
-                    onVisibilityChange: _,
-                  },
-                  "visibilityTracker",
-                );
-              return [..._.slice(0, _), _, ..._.slice(_)];
-            }, [_, _, _, _]),
-            _ = _.length > 0 || _.length > 0 || _.length > 0 || _.length > 0;
-          return (0, _.jsx)(_._, {
-            children: (0, _.jsxs)("div", {
-              ref: _,
-              children: [
-                (0, _.jsxs)("div", {
-                  className: (0, _._)("maincontent", _().EventDashboardCtn),
-                  children: [
-                    (0, _.jsx)(_, {
+              for (const _ of _)
+                _.push(
+                  (0, _.jsx)(
+                    _,
+                    {
                       appid_or_vanity_str: _.params.appid_or_vanity_str,
+                      gid: _.GID,
+                      eventModel: _,
+                      bShowEventMetaDataSizes: __webpack_require__,
+                      refresh: () => {
+                        _(), _();
+                      },
+                    },
+                    _.GID,
+                  ),
+                );
+            }
+            for (
+              let _ = 0;
+              _ <
+              _ -
+                (null !== (_ = null == _ ? void 0 : _.length) && void 0 !== _
+                  ? _
+                  : 0);
+              _++
+            )
+              _.push(
+                (0, _.jsx)(
+                  "div",
+                  {
+                    className: _.TileContainer,
+                    children: (0, _.jsx)(_._, {
+                      capsules_per_row: [1],
+                      is_event_dash_row: !0,
                     }),
-                    (0, _.jsxs)(_._, {
-                      requireAdmin: !0,
-                      clanSteamID: _,
-                      children: [
-                        (0, _.jsxs)("div", {
-                          className: (0, _._)(
-                            "maincontent",
-                            _().EventDashboardCtn,
-                            _().EventDashAdminToolsCtn,
-                            _().FlexRowContainer,
-                          ),
+                  },
+                  `tile_${_}_ghost_${_}`,
+                ),
+              );
+            return _;
+          },
+          _ = _.useCallback(
+            (_) => {
+              _ && !_ && _();
+            },
+            [_, _],
+          );
+        _.useEffect(() => {
+          _.Schedule(200, () =>
+            _(null == _ ? void 0 : _.trim().toLocaleLowerCase()),
+          );
+        }, [_, _]);
+        const _ = _(_._.k_EEventStateUnpublished, _ ? _ : 0),
+          _ = _(_._.k_EEventStateStaged),
+          _ = _(_._.k_EEventStateUnlisted),
+          _ = _(_._.k_EEventStateVisible),
+          _ = _.useMemo(() => {
+            if (!_) return;
+            if (_ || !_) return _;
+            const _ = _.length >= 10 ? _.length - 10 : _.length,
+              _ = (0, _.jsx)(
+                _._,
+                {
+                  trigger: "repeated",
+                  onVisibilityChange: _,
+                },
+                "visibilityTracker",
+              );
+            return [..._.slice(0, _), _, ..._.slice(_)];
+          }, [_, _, _, _]),
+          _ = _.length > 0 || _.length > 0 || _.length > 0 || _.length > 0;
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsxs)("div", {
+            ref: _,
+            children: [
+              (0, _.jsxs)("div", {
+                className: (0, _._)("maincontent", _().EventDashboardCtn),
+                children: [
+                  (0, _.jsx)(_, {
+                    appid_or_vanity_str: _.params.appid_or_vanity_str,
+                  }),
+                  (0, _.jsxs)(_._, {
+                    requireAdmin: !0,
+                    clanSteamID: _,
+                    children: [
+                      (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          "maincontent",
+                          _().EventDashboardCtn,
+                          _().EventDashAdminToolsCtn,
+                          _().FlexRowContainer,
+                        ),
+                        children: [
+                          (0, _.jsx)(_._, {
+                            label: "Show Event Metadata Size",
+                            tooltip:
+                              "Surfaces the size of the biggest sections in the event's metadata",
+                            onChange: _,
+                            checked: __webpack_require__,
+                          }),
+                          (0, _.jsx)(_._, {
+                            onClick: (_) =>
+                              (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
+                            children: "Show Publishing Audit History",
+                          }),
+                        ],
+                      }),
+                      Boolean(_.GetAccountID() == _._) &&
+                        (0, _.jsxs)(_.Fragment, {
                           children: [
-                            (0, _.jsx)(_._, {
-                              label: "Show Event Metadata Size",
-                              tooltip:
-                                "Surfaces the size of the biggest sections in the event's metadata",
-                              onChange: _,
-                              checked: __webpack_require__,
+                            (0, _.jsx)("a", {
+                              href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
+                              target: "_blank",
+                              children: "Content Hub Graphana Stats Page",
                             }),
-                            (0, _.jsx)(_._, {
-                              onClick: (_) =>
-                                (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
-                              children: "Show Publishing Audit History",
+                            (0, _.jsx)("br", {}),
+                            (0, _.jsx)("a", {
+                              href: `${_._.COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale`,
+                              children:
+                                "Open 'Default Contnet Hub Sale Page Editor'",
                             }),
                           ],
                         }),
-                        Boolean(_.GetAccountID() == _._) &&
-                          (0, _.jsxs)(_.Fragment, {
-                            children: [
-                              (0, _.jsx)("a", {
-                                href: "https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m",
-                                target: "_blank",
-                                children: "Content Hub Graphana Stats Page",
-                              }),
-                              (0, _.jsx)("br", {}),
-                              (0, _.jsx)("a", {
-                                href: `${_._.COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale`,
-                                children:
-                                  "Open 'Default Contnet Hub Sale Page Editor'",
-                              }),
-                            ],
-                          }),
-                      ],
-                    }),
-                  ],
+                    ],
+                  }),
+                ],
+              }),
+              (_ || _ || _.length > 0) &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _().EventDashboardCtn,
+                    _().EventDashboardSearchCtn,
+                    "maincontent",
+                  ),
+                  children: (0, _.jsx)(_._, {
+                    type: "text",
+                    label: (0, _._)("#EventCalendar_UniversalSearch"),
+                    value: _,
+                    onChange: (_) => _(_.target.value),
+                  }),
                 }),
-                (_ || _ || _.length > 0) &&
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(
-                      _().EventDashboardCtn,
-                      _().EventDashboardSearchCtn,
-                      "maincontent",
-                    ),
-                    children: (0, _.jsx)(_._, {
-                      type: "text",
-                      label: (0, _._)("#EventCalendar_UniversalSearch"),
-                      value: _,
-                      onChange: (_) => _(_.target.value),
+              !_ &&
+                _ > 0 &&
+                (0, _.jsx)("div", {
+                  className: (0, _._)(_().EventDashboardCtn, "maincontent"),
+                  children: (0, _.jsx)(_._, {
+                    requireAdmin: !0,
+                    clanSteamID: _,
+                    children: (0, _.jsx)("a", {
+                      onClick: () => _(!0),
+                      children: `Show ${_} hidden Creator Home events`,
                     }),
                   }),
-                !_ &&
-                  _ > 0 &&
-                  (0, _.jsx)("div", {
-                    className: (0, _._)(_().EventDashboardCtn, "maincontent"),
-                    children: (0, _.jsx)(_._, {
-                      requireAdmin: !0,
-                      clanSteamID: _,
-                      children: (0, _.jsx)("a", {
-                        onClick: () => _(!0),
-                        children: `Show ${_} hidden Creator Home events`,
-                      }),
-                    }),
-                  }),
-                _ &&
-                  (0, _.jsx)(_._, {
-                    position: "center",
-                    string: (0, _._)("#Loading"),
-                  }),
-                !_ &&
-                  (0, _.jsxs)("div", {
-                    className: _().MainLists,
-                    children: [
-                      _.length > 0 &&
-                        !_ &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().Section, _().Unpublished),
-                          children: (0, _.jsxs)("div", {
-                            className: (0, _._)(
-                              "maincontent",
-                              "eventlist",
-                              _().EventDashboardCtn,
-                            ),
-                            children: [
-                              (0, _.jsxs)("div", {
-                                className: _().DisplaySectionHeader,
-                                children: [
-                                  (0, _._)("#EventDisplay_Unpublished_Title"),
-                                  (0, _.jsx)(_._, {
-                                    tooltip: (0, _._)(
-                                      "#EventDisplay_Unpublished_SubTitle",
-                                    ),
-                                  }),
-                                ],
-                              }),
-                              _.length > 0 && _,
-                            ],
-                          }),
-                        }),
-                      _.length > 0 &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().Section, _().Staged),
-                          children: (0, _.jsxs)("div", {
-                            className: (0, _._)(
-                              "maincontent",
-                              "eventlist",
-                              _().EventDashboardCtn,
-                            ),
-                            children: [
-                              (0, _.jsxs)("div", {
-                                className: _().DisplaySectionHeader,
-                                children: [
-                                  (0, _._)("#EventDisplay_Stage_Title"),
-                                  (0, _.jsx)(_._, {
-                                    tooltip: (0, _._)(
-                                      "#EventDisplay_Stage_SubTitle",
-                                    ),
-                                  }),
-                                ],
-                              }),
-                              _.length > 0 && _,
-                            ],
-                          }),
-                        }),
-                      _.length > 0 &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().Section, _().Staged),
-                          children: (0, _.jsxs)("div", {
-                            className: (0, _._)(
-                              "maincontent",
-                              "eventlist",
-                              _().EventDashboardCtn,
-                            ),
-                            children: [
-                              (0, _.jsxs)("div", {
-                                className: _().DisplaySectionHeader,
-                                children: [
-                                  (0, _._)("#EventDisplay_Unlisted_Title"),
-                                  (0, _.jsx)(_._, {
-                                    tooltip: (0, _._)(
-                                      "#EventDisplay_Unlisted_SubTitle",
-                                    ),
-                                  }),
-                                ],
-                              }),
-                              _.length > 0 && _,
-                            ],
-                          }),
-                        }),
+                }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  position: "center",
+                  string: (0, _._)("#Loading"),
+                }),
+              !_ &&
+                (0, _.jsxs)("div", {
+                  className: _().MainLists,
+                  children: [
+                    _.length > 0 &&
+                      !_ &&
                       (0, _.jsx)("div", {
-                        className: (0, _._)(
-                          _().Section,
-                          _().DisplaySectionHeaderContainer,
-                          _().Visible,
-                        ),
+                        className: (0, _._)(_().Section, _().Unpublished),
                         children: (0, _.jsxs)("div", {
                           className: (0, _._)(
                             "maincontent",
@@ -3706,48 +3625,126 @@
                             _().EventDashboardCtn,
                           ),
                           children: [
-                            (0, _.jsx)("div", {
+                            (0, _.jsxs)("div", {
                               className: _().DisplaySectionHeader,
-                              children: (0, _._)("#EventDisplay_Visible_Title"),
+                              children: [
+                                (0, _._)("#EventDisplay_Unpublished_Title"),
+                                (0, _.jsx)(_._, {
+                                  tooltip: (0, _._)(
+                                    "#EventDisplay_Unpublished_SubTitle",
+                                  ),
+                                }),
+                              ],
                             }),
-                            (0, _.jsx)("div", {
-                              className: _().DisplaySectionSubHeader,
-                              children: (0, _._)(
-                                "#EventDisplay_Visible_Title_WithRange",
-                              ),
-                            }),
-                            _,
-                            !_ &&
-                              !_ &&
-                              (0, _.jsx)("div", {
-                                children: (0, _._)("#EventDisplay_NoPublic"),
-                              }),
-                            (_ || (_ && _)) &&
-                              (0, _.jsx)(_._, {
-                                position: "center",
-                                string: (0, _._)("#Loading"),
-                              }),
-                            !_ &&
-                              (0, _.jsx)("div", {
-                                children: (0, _._)(
-                                  "#EventDisplay_AllPublicShown",
-                                ),
-                              }),
-                            _ &&
-                              (0, _.jsx)("div", {
-                                children: (0, _._)(
-                                  "#EventDisplay_HitErrorInfiniteScroll",
-                                ),
-                              }),
+                            _.length > 0 && _,
                           ],
                         }),
                       }),
-                    ],
-                  }),
-              ],
-            }),
-          });
+                    _.length > 0 &&
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(_().Section, _().Staged),
+                        children: (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            "maincontent",
+                            "eventlist",
+                            _().EventDashboardCtn,
+                          ),
+                          children: [
+                            (0, _.jsxs)("div", {
+                              className: _().DisplaySectionHeader,
+                              children: [
+                                (0, _._)("#EventDisplay_Stage_Title"),
+                                (0, _.jsx)(_._, {
+                                  tooltip: (0, _._)(
+                                    "#EventDisplay_Stage_SubTitle",
+                                  ),
+                                }),
+                              ],
+                            }),
+                            _.length > 0 && _,
+                          ],
+                        }),
+                      }),
+                    _.length > 0 &&
+                      (0, _.jsx)("div", {
+                        className: (0, _._)(_().Section, _().Staged),
+                        children: (0, _.jsxs)("div", {
+                          className: (0, _._)(
+                            "maincontent",
+                            "eventlist",
+                            _().EventDashboardCtn,
+                          ),
+                          children: [
+                            (0, _.jsxs)("div", {
+                              className: _().DisplaySectionHeader,
+                              children: [
+                                (0, _._)("#EventDisplay_Unlisted_Title"),
+                                (0, _.jsx)(_._, {
+                                  tooltip: (0, _._)(
+                                    "#EventDisplay_Unlisted_SubTitle",
+                                  ),
+                                }),
+                              ],
+                            }),
+                            _.length > 0 && _,
+                          ],
+                        }),
+                      }),
+                    (0, _.jsx)("div", {
+                      className: (0, _._)(
+                        _().Section,
+                        _().DisplaySectionHeaderContainer,
+                        _().Visible,
+                      ),
+                      children: (0, _.jsxs)("div", {
+                        className: (0, _._)(
+                          "maincontent",
+                          "eventlist",
+                          _().EventDashboardCtn,
+                        ),
+                        children: [
+                          (0, _.jsx)("div", {
+                            className: _().DisplaySectionHeader,
+                            children: (0, _._)("#EventDisplay_Visible_Title"),
+                          }),
+                          (0, _.jsx)("div", {
+                            className: _().DisplaySectionSubHeader,
+                            children: (0, _._)(
+                              "#EventDisplay_Visible_Title_WithRange",
+                            ),
+                          }),
+                          _,
+                          !_ &&
+                            !_ &&
+                            (0, _.jsx)("div", {
+                              children: (0, _._)("#EventDisplay_NoPublic"),
+                            }),
+                          (_ || (_ && _)) &&
+                            (0, _.jsx)(_._, {
+                              position: "center",
+                              string: (0, _._)("#Loading"),
+                            }),
+                          !_ &&
+                            (0, _.jsx)("div", {
+                              children: (0, _._)(
+                                "#EventDisplay_AllPublicShown",
+                              ),
+                            }),
+                          _ &&
+                            (0, _.jsx)("div", {
+                              children: (0, _._)(
+                                "#EventDisplay_HitErrorInfiniteScroll",
+                              ),
+                            }),
+                        ],
+                      }),
+                    }),
+                  ],
+                }),
+            ],
+          }),
         });
+      });
       const _ = (0, _._)((_) => {
           const { appid_or_vanity_str: _ } = _,
             _ = new _._(_._.CLANSTEAMID),
@@ -7287,7 +7284,98 @@
         ]),
         (_.MapPubRights = _.ConstructPubRightsMap());
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _ } = _,
+          [__webpack_require__] = (0, _._)(() => [
+            _.GetEventModel().jsondata.sale_named_section_background_styles,
+          ]),
+          [_, _, _] = (0, _._)(),
+          [_, _] = (0, _.useState)(void 0);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: _,
+              children: (0, _._)("#Sale_ManageBackgroundStyles"),
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsxs)(_._, {
+                strTitle: (0, _._)("#Sale_ManageBackgroundStyles"),
+                strDescription: (0, _._)("#Sale_ManageBackgroundStyles_desc"),
+                bAlertDialog: !0,
+                closeModal: _,
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: () => {
+                      const _ = {};
+                      do {
+                        _.background_style_identifier =
+                          "CustomBackground_" +
+                          Math.floor(1 + 1e5 * Math.random());
+                      } while (
+                        __webpack_require__ &&
+                        __webpack_require__.find(
+                          (_) =>
+                            _.background_style_identifier ==
+                            _.background_style_identifier,
+                        )
+                      );
+                      (_.GetEventModel().jsondata.sale_named_section_background_styles =
+                        __webpack_require__
+                          ? [
+                              ..._.GetEventModel().jsondata
+                                .sale_named_section_background_styles,
+                              _,
+                            ]
+                          : [_]),
+                        _.SetDirty(_._.jsondata_sales);
+                    },
+                    children: _._.Localize("#Button_Create"),
+                  }),
+                  __webpack_require__ && 0 != __webpack_require__.length
+                    ? (0, _.jsx)("ul", {
+                        children: __webpack_require__.map((_, _) =>
+                          (0, _.jsx)(
+                            "ol",
+                            {
+                              onClick: () => _(_),
+                              children: (0, _.jsx)("p", {
+                                children: _.background_style_identifier,
+                              }),
+                            },
+                            _.background_style_identifier,
+                          ),
+                        ),
+                      })
+                    : (0, _.jsx)("p", {
+                        children: (0, _._)("#Sale_ManageBackgroundStyles_none"),
+                      }),
+                  void 0 !== _ &&
+                    (0, _.jsxs)(_.Fragment, {
+                      children: [
+                        (0, _.jsx)("hr", {}),
+                        (0, _.jsx)(_._, {
+                          children: (0, _._)(
+                            "#Sale_ManageBackgroundStyles_edit",
+                            __webpack_require__[_].background_style_identifier,
+                          ),
+                        }),
+                        (0, _.jsx)(_._, {
+                          editModel: _,
+                          backgroundSection: __webpack_require__[_],
+                          bHasBackgroundImageControls: !0,
+                        }),
+                      ],
+                    }),
+                ],
+              }),
+            }),
+          ],
+        });
+      }
       function _(_) {
         const { salePage: _, updateLandingPage: __webpack_require__ } = _,
           _ = _._.GetEditModel(),
@@ -7374,6 +7462,9 @@
                   children: (0, _.jsx)(_._, {
                     editModel: _,
                   }),
+                }),
+                (0, _.jsx)(_, {
+                  editModel: _,
                 }),
               ],
             }),
@@ -9688,6 +9779,7 @@
           });
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -10093,7 +10185,6 @@
             });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -11866,17 +11957,17 @@
             __webpack_require__.GetEventModel().GID,
           ]),
           { data: _ } = (0, _._)((0, _._)(_.GetAccountID())),
-          _ = 36 == _,
           {
             bLoading: _,
             strExternalSaleEventType: _,
             fnSetExternalSaleEventType: _,
-          } = (0, _._)(_.GetAccountID(), _);
+          } = (0, _._)(_.GetAccountID(), _),
+          _ = (0, _._)(__webpack_require__.GetEventModel());
         if (_)
           return (0, _.jsx)(_._, {
             size: "small",
           });
-        const _ = _ || "locked_publisher" == _ || "locked_franchise" == _;
+        const _ = 36 == _;
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)(_, {
             strSectionId: "SalePageEdit_TaggedItems",

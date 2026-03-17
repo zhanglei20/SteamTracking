@@ -6122,7 +6122,11 @@
             })(_, _, _),
           _.include_all_purchase_options &&
             (function (_, _, _) {
-              _(_, _, _, "include_all_purchase_options", "purchase_options");
+              _.setQueryData(_(_, "include_all_purchase_options"), {
+                purchase_options: _.purchase_options,
+                invalid_purchase_options: _.invalid_purchase_options,
+                accessories: _.accessories,
+              });
             })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
@@ -6130,6 +6134,9 @@
               _(_, _, _.included_item_data_request),
             ),
             _.included_items?.included_packages?.forEach((_) =>
+              _(_, _, _.included_item_data_request),
+            ),
+            _.included_items?.included_bundles?.forEach((_) =>
               _(_, _, _.included_item_data_request),
             )));
       }
@@ -6142,6 +6149,7 @@
         "game_rating",
         "purchase_options",
         "accessories",
+        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
@@ -17754,6 +17762,7 @@
         localized_broadcast_right_image: new Array(31),
         broadcast_whitelist: [],
       };
+      var _ = __webpack_require__("chunkid");
       class _ {
         m_curLocImageGroup = null;
         m_curLocImageGroupType = null;
@@ -17959,7 +17968,6 @@
       );
       const _ = 99999;
       new Set([9, 11, 20, 21, 22, 23, 24, 25, 26, 27, 31, 35]);
-      const _ = 39049601;
       var _;
       !(function (_) {
         (_[(_.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
@@ -19170,7 +19178,7 @@
         BIsNextFest() {
           const _ = this.jsondata.sale_vanity_id;
           return (
-            new _._(this.clanSteamID).GetAccountID() == _ &&
+            new _._(this.clanSteamID).GetAccountID() == _._ &&
             _ &&
             _.toLowerCase().startsWith("nextfest")
           );
@@ -20285,7 +20293,7 @@
         GetAppImportantUpdate(_) {
           return (
             this.HintLoadImportantUpdates().catch((_) => {
-              console.log("UpdatedApps failed to load: ", _.response.data);
+              console.log("UpdatedApps failed to load: ", _.response?.data);
             }),
             this.m_mapUpdatedApps && this.m_mapUpdatedApps.get(_)
           );
@@ -21414,9 +21422,9 @@
             );
           case _.k_eStoreSalePage:
             return _.jsondata.bSaleEnabled
-              ? 45559995 == _.clanSteamID.GetAccountID()
+              ? _.clanSteamID.GetAccountID() == _._
                 ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
-                : 45902273 == _.clanSteamID.GetAccountID()
+                : _.clanSteamID.GetAccountID() == _._
                   ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
                   : _
                     ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
@@ -32789,6 +32797,19 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 39049601,
+        _ = 45559995,
+        _ = 45902273,
+        _ = [4145017, 35143931, _, 4, 41316928];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       var _;
       function _(_) {
         return _ === _.k_ESteamRealmChina;
@@ -34753,21 +34774,18 @@
         for (; _; ) {
           if (_(_)) {
             const _ = window.getComputedStyle(_);
+            if ("fixed" == _.position || "sticky" == _.position) break;
             if (
               !(
                 (_ && "x" != _) ||
-                ("scroll" != _.overflowX &&
-                  "auto" != _.overflowX &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowX && "auto" != _.overflowX)
               )
             )
               break;
             if (
               !(
                 (_ && "y" != _) ||
-                ("scroll" != _.overflowY &&
-                  "auto" != _.overflowY &&
-                  "fixed" != _.position)
+                ("scroll" != _.overflowY && "auto" != _.overflowY)
               )
             )
               break;
@@ -34916,11 +34934,11 @@
           _ = 0,
           _ = _;
         for (; _; ) {
-          if (((_ += _.offsetTop), (_ += _.offsetLeft), "ownerDocument" in _)) {
+          if ("ownerDocument" in _) {
             const _ = window.getComputedStyle(_);
             if ("fixed" === _.position || "sticky" === _.position) break;
           }
-          _ = _.offsetParent;
+          (_ += _.offsetTop), (_ += _.offsetLeft), (_ = _.offsetParent);
         }
         for (_ = _?.parentElement; _; ) {
           const { scrollTop: _, scrollLeft: _ } = _(_);
@@ -54021,6 +54039,11 @@
                     _: !0,
                     _: !0,
                   },
+                  purchase_description: {
+                    _: 72,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -54142,7 +54165,7 @@
         constructor(_ = null) {
           super(),
             _.prototype.included_apps || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [1, 2], null);
+            _.Message.initialize(this, _, 0, -1, [1, 2, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -54160,6 +54183,12 @@
                   },
                   included_packages: {
                     _: 2,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  included_bundles: {
+                    _: 3,
                     _: _,
                     _: !0,
                     _: !0,
@@ -60987,10 +61016,12 @@
 	"verifiedprogram": 100756,
 	"trailercarousel": 100757
 }`);
+      var _ = __webpack_require__("chunkid");
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _.AddNavParamToURL(_, _);
+          const _ = _.GetSNRLinkParam(_, __webpack_require__),
+            _ = _.GetCuratorClanIDParam(_);
+          return _.AddNavParamToURL(_, _, _);
         }
         static ParseSNR(_) {
           const _ = _.split("_") || [];
@@ -61003,7 +61034,7 @@
             depth: _[5] ? Number(_[5]) : void 0,
           };
         }
-        static GetLinkParam(_, _ = null) {
+        static GetSNRLinkParam(_, _ = null) {
           let _ = _.ComputeLinkPrefix(
             _.domain,
             _.controller,
@@ -61014,13 +61045,19 @@
           const _ = _.EncodeEventComponent(_.feature);
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
-        static AddNavParamToURL(_, _) {
+        static GetCuratorClanIDParam(_) {
+          return _.curator_clanid ?? null;
+        }
+        static AddNavParamToURL(_, _, _) {
           if (!_ || 0 == _.length) return _;
           try {
             const _ = new URL((0, _._)(_)),
               _ = new URLSearchParams(_.search);
             return (
               _.set("snr", encodeURIComponent(_ ?? "")),
+              _ &&
+                !_._.includes(_) &&
+                _.set("curator_clanid", encodeURIComponent(_ ?? "")),
               _.origin + _.pathname + "?" + _.toString() + _.hash
             );
           } catch (_) {
@@ -61088,6 +61125,7 @@
               __webpack_require__.submethod,
               __webpack_require__.feature,
               __webpack_require__.depth,
+              __webpack_require__.curator_clanid,
             ],
           );
         return (0, _.jsx)(_.Provider, {
@@ -61103,14 +61141,15 @@
         return _.useMemo(() => _ && _(_, _, _, _), [_, _, _, _]);
       }
       function _(_, _, _, _) {
-        const _ = _._.GetLinkParam(
-          {
-            ..._,
-            feature: _ || _.feature,
-          },
-          _,
-        );
-        return _._.AddNavParamToURL(_, _);
+        const _ = _._.GetSNRLinkParam(
+            {
+              ..._,
+              feature: _ || _.feature,
+            },
+            _,
+          ),
+          _ = _._.GetCuratorClanIDParam(_);
+        return _._.AddNavParamToURL(_, _, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -63095,13 +63134,14 @@
           );
         }
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _._.AddNavParamToURL(_, _);
+          const _ = _.GetLinkParam(_, __webpack_require__),
+            _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
+          return _._.AddNavParamToURL(_, _, _);
         }
         static GetLinkParam(_, _ = null) {
           let _, _;
           if ("string" != typeof _) {
-            if (_.domain) return _._.GetLinkParam(_, _);
+            if (_.domain) return _._.GetSNRLinkParam(_, _);
             _ = _.feature || "";
           }
           if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
@@ -75253,6 +75293,7 @@
           USE_LONGEST_LOC_STRING: !1,
           SILENT_STARTUP: !1,
           CLIENT_SESSION: 0,
+          NOW: 0,
         },
         _ = {
           logged_in: !1,

@@ -611,6 +611,7 @@
         USE_LONGEST_LOC_STRING: !1,
         SILENT_STARTUP: !1,
         CLIENT_SESSION: 0,
+        NOW: 0,
       };
       class _ extends _._ {
         m_lastButtonDown = _._.INVALID;
@@ -3116,7 +3117,7 @@
               this.m_Parent?.Element,
             ),
             _(this.m_Parent?.Element, "vgp_onbuttondown", _.detail),
-            !1
+            !0
           );
         }
         SetDOMFocusAndScroll(_, _) {
@@ -3478,9 +3479,10 @@
           for (const { button: _, fnCallback: __webpack_require__ } of this
             .m_rgGlobalButtonHandlers)
             if (_ == _.detail.button && !1 !== __webpack_require__(_))
-              return !0;
-          for (const _ of this.m_rgOnUnhandledButton) if (_(_)) return !0;
-          return !1;
+              return !1;
+          for (const _ of this.m_rgOnUnhandledButton)
+            if (!1 !== _(_)) return !1;
+          return !0;
         }
         HandleButtonDownEventAsLogicalEvent(_) {
           let { bUnhandled: _, bHadLogicalEventMapping: __webpack_require__ } =
@@ -3504,7 +3506,7 @@
             _(
               `Logical gamepad Event fired: ${_._[_.detail.button]}, had logical event: ${__webpack_require__}, was handled: ${!_}`,
             ),
-            _ && (_ = !this.TryRootButtonListeners(_)),
+            _ && (_ = this.TryRootButtonListeners(_)),
             _ && (_ = this.m_Controller.FireUnhandledGamepadEventCallbacks(_)),
             _.stopPropagation(),
             _

@@ -37,6 +37,9 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Vrei să oferi jocul gratis?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Dacă jocul tău a fost deja lansat și vrei să faci trecerea de la un joc disponibil contra cost la unul gratuit, apasă %1$s pentru a afla mai multe și a solicita asistență.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "aici",
+	"PricingDashboard_Select_Price": "Select From Price Tiers",
+	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
 	"empty_no_trailing_comma": ""
 }`);
     },

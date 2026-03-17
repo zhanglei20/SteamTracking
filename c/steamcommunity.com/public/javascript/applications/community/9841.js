@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "Olemme saattaneet kiistautuksen (%1$s) käsittelyn päätökseen.",
 	"moderatedcontent_dispute_sanctioned_2": "Tarkasteltuamme tilannetta huolellisesti uudelleen olemme päättäneet pitäytyä alkuperäisessä päätöksessä. Sisältö pysyy poistettuna tai rajoitettuna, ja kaikki tähän päätökseen liittyvät tiliin kohdistuneet toimenpiteet jäävät ennalleen. Sisältö tarkistettiin uudelleen sen asiayhteydessä, huomioimalla kiistautuspyynnössä annetut lisätiedot sekä asiaan liittyvät alustan säännöt ja lakisääteiset vaatimukset.",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "Jos olet eri mieltä, sinulla on oikeus hakea ratkaisua virallisen tuomioistuimen ulkopuolisen riidanratkaisuelimen kautta tai hakea oikeudellista korvausta toimivaltaisessa tuomioistuimessa.",
+	"anonymousreport_title": "Ilmianna sisältö",
+	"anonymousreport_description": "Kirjaudu Steam-yhteisöön ilmoittaaksesi sopimattomasta tai laittomasta sisällöstä.",
+	"anonymousreport_footer": "Jos et pysty kirjautumaan sisään, voit <1>tehdä nimettömän ilmiannon</1>.",
+	"anonymousreport_footer_action": "tehdä nimettömän ilmiannon",
+	"anonymousreport_signin": "Kirjaudu",
+	"anonymousreport_join": "luo Steam-tili",
+	"anonymousreport_createaccount": "Luo tili",
+	"anonymousreport_signin_or_join": "%1$s tai %2$s",
 	"nocomma": ""
 }`);
     },

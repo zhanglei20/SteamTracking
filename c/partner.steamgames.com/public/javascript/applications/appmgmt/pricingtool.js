@@ -1294,16 +1294,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1324,7 +1324,10 @@
           (__webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
           __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"));
+          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             bCompactMode: _,
@@ -1346,30 +1349,31 @@
           [_],
         );
         const _ = _.useMemo(
-          () => [
-            {
-              label: (0, _._)("#PricingDashboard_ShowOnlyReleasedPackages"),
-              data: "released",
-            },
-            {
-              label: (0, _._)("#PricingDashboard_ShowAllPackages"),
-              data: "all",
-            },
-            {
-              label: (0, _._)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
-              data: "unreleased",
-            },
-            {
-              label: (0, _._)("#PricingDashboard_ShowOnlyChangedPackages"),
-              data: "changed",
-            },
-            {
-              label: (0, _._)("#PricingDashboard_ShowProposedChanges"),
-              data: "proposed",
-            },
-          ],
-          [],
-        );
+            () => [
+              {
+                label: (0, _._)("#PricingDashboard_ShowOnlyReleasedPackages"),
+                data: "released",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowAllPackages"),
+                data: "all",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowOnlyUnreleasedPackages"),
+                data: "unreleased",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowOnlyChangedPackages"),
+                data: "changed",
+              },
+              {
+                label: (0, _._)("#PricingDashboard_ShowProposedChanges"),
+                data: "proposed",
+              },
+            ],
+            [],
+          ),
+          [_, _, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           className: _().GridHeaderButtons,
           children: [
@@ -1404,6 +1408,23 @@
             (0, _.jsx)("div", {
               className: (0, _._)(_().OptionCtn),
               children: (0, _.jsx)(_._, {}),
+            }),
+            (0, _.jsxs)("div", {
+              className: (0, _._)(_().OptionCtn),
+              children: [
+                (0, _.jsx)(_._, {
+                  onClick: _,
+                  children: (0, _._)(
+                    "#PricingDashboard_ApplyGuidelinesDialog_Button",
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_._, {
+                    closeModal: _,
+                  }),
+                }),
+              ],
             }),
           ],
         });
@@ -1953,9 +1974,6 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
       function _(_) {
         (0, _._)((0, _._)());
         const _ = (0, _._)(),
@@ -1965,8 +1983,8 @@
           _ = (0, _.useMemo)(
             () => Array.from(new Set(_.map((_) => _.submitterID))),
             [_],
-          ),
-          [_, _, _] = ((0, _._)(_), (0, _._)());
+          );
+        (0, _._)(_);
         return (0, _.jsxs)("div", {
           className: _().DashboardPage,
           children: [
@@ -1980,18 +1998,6 @@
                 (0, _.jsxs)("div", {
                   className: _().ButtonGroup,
                   children: [
-                    (0, _.jsx)(_._, {
-                      onClick: _,
-                      children: (0, _._)(
-                        "#PricingDashboard_ApplyGuidelinesDialog_Button",
-                      ),
-                    }),
-                    (0, _.jsx)(_._, {
-                      active: _,
-                      children: (0, _.jsx)(_._, {
-                        closeModal: _,
-                      }),
-                    }),
                     (0, _.jsx)(_._, {
                       onClick: (_) => (0, _._)((0, _.jsx)(_, {}), (0, _._)(_)),
                       children: (0, _._)(

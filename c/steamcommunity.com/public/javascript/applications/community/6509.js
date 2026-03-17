@@ -308,6 +308,14 @@
 	"moderatedcontent_dispute_sanctioned_1": "%1$sに関する異議申し立てのレビューが完了しました。",
 	"moderatedcontent_dispute_sanctioned_2": "慎重に再度レビューした結果、当初の決定を維持することになりました。該当するコンテンツは引き続き削除または制限されたままになり、関連するアカウントレベルの措置も引き続き適用されます。この決定は、当該コンテンツの文脈、異議申し立てでご提供いただいた情報、および関連するプラットフォームの規則と法的要件を検討した結果です。",
 	"moderatedcontent_dispute_sanctioned_2_eu_addendum": "この結果に同意されない場合は、認定された法廷外の紛争解決機関を通じて解決を求める権利、または管轄裁判所に司法上の救済を求める権利もあります。",
+	"anonymousreport_title": "このコンテンツを報告",
+	"anonymousreport_description": "不適切または違法なコンテンツを報告するには、Steamコミュニティにサインインしてください。",
+	"anonymousreport_footer": "サインインできない場合は、<1>匿名で報告</1>することができます。",
+	"anonymousreport_footer_action": "匿名で報告",
+	"anonymousreport_signin": "サインイン",
+	"anonymousreport_join": "Steamに登録",
+	"anonymousreport_createaccount": "アカウントを作成",
+	"anonymousreport_signin_or_join": "%1$sまたは%2$s",
 	"nocomma": ""
 }`);
     },

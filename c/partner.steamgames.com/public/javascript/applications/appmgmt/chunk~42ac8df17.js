@@ -460,6 +460,25 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      const _ = 39049601,
+        _ = 41316928,
+        _ = 4,
+        _ = 20,
+        _ = 45559995,
+        _ = 45902273,
+        _ = [4145017, 35143931, _, _, _];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       const _ = {
           name: "cookieSettings",
@@ -8462,6 +8481,10 @@
             return (0, _._)("#Library_DeviceType_PC");
           case 544:
             return (0, _._)("#Library_DeviceType_SteamDeck");
+          case 546:
+            return (0, _._)("#Library_DeviceType_SteamMachine");
+          case 5001:
+            return (0, _._)("#Library_DeviceType_SteamFrame");
           default:
             return;
         }
@@ -9064,8 +9087,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9079,7 +9102,7 @@
             bHideReleaseDate: _,
             bHideIfDemo: _,
           } = _,
-          _ = (0, _._)(),
+          _ = _._.NOW,
           { data: _ } = (0, _._)(__webpack_require__),
           { data: _ } = (0, _._)(__webpack_require__),
           { data: _ } = (0, _._)(__webpack_require__);
@@ -10474,10 +10497,12 @@
 	"verifiedprogram": 100756,
 	"trailercarousel": 100757
 }`);
+      var _ = __webpack_require__("chunkid");
       class _ {
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _.AddNavParamToURL(_, _);
+          const _ = _.GetSNRLinkParam(_, __webpack_require__),
+            _ = _.GetCuratorClanIDParam(_);
+          return _.AddNavParamToURL(_, _, _);
         }
         static ParseSNR(_) {
           const _ = _.split("_") || [];
@@ -10490,7 +10515,7 @@
             depth: _[5] ? Number(_[5]) : void 0,
           };
         }
-        static GetLinkParam(_, _ = null) {
+        static GetSNRLinkParam(_, _ = null) {
           let _ = _.ComputeLinkPrefix(
             _.domain,
             _.controller,
@@ -10501,13 +10526,19 @@
           const _ = _.EncodeEventComponent(_.feature);
           return _ && ((_ += "_" + _), _ && (_ += "_" + _)), _;
         }
-        static AddNavParamToURL(_, _) {
+        static GetCuratorClanIDParam(_) {
+          return _.curator_clanid ?? null;
+        }
+        static AddNavParamToURL(_, _, _) {
           if (!_ || 0 == _.length) return _;
           try {
             const _ = new URL((0, _._)(_)),
               _ = new URLSearchParams(_.search);
             return (
               _.set("snr", encodeURIComponent(_ ?? "")),
+              _ &&
+                !_._.includes(_) &&
+                _.set("curator_clanid", encodeURIComponent(_ ?? "")),
               _.origin + _.pathname + "?" + _.toString() + _.hash
             );
           } catch (_) {
@@ -10588,6 +10619,7 @@
               __webpack_require__.submethod,
               __webpack_require__.feature,
               __webpack_require__.depth,
+              __webpack_require__.curator_clanid,
             ],
           );
         return (0, _.jsx)(_.Provider, {
@@ -10617,7 +10649,7 @@
         const _ = _();
         return _.useMemo(
           () =>
-            _._.GetLinkParam(
+            _._.GetSNRLinkParam(
               {
                 ..._,
                 feature: _ || _.feature,
@@ -10628,14 +10660,15 @@
         );
       }
       function _(_, _, _, _) {
-        const _ = _._.GetLinkParam(
-          {
-            ..._,
-            feature: _ || _.feature,
-          },
-          _,
-        );
-        return _._.AddNavParamToURL(_, _);
+        const _ = _._.GetSNRLinkParam(
+            {
+              ..._,
+              feature: _ || _.feature,
+            },
+            _,
+          ),
+          _ = _._.GetCuratorClanIDParam(_);
+        return _._.AddNavParamToURL(_, _, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -10703,6 +10736,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -10731,14 +10765,17 @@
         const { data: _ } = _();
         return void 0 === _ ? void 0 : _.has(_);
       }
-      function _() {
+      function _(_) {
         const _ = (0, _._)(),
           _ = _._.accountid;
-        return (_) => {
-          _.setQueryData(_(_), (_) => {
-            if (_) return new Set([..._.values(), ..._]);
-          });
-        };
+        return _.useCallback(
+          (_) => {
+            _.setQueryData(_(_), (_) =>
+              _ ? new Set([..._.values(), ..._]) : _ ? new Set(_) : void 0,
+            );
+          },
+          [_, _, _],
+        );
       }
       function _(_) {
         return ["AccountOwnedApps", _ ?? 0];
@@ -11369,8 +11406,9 @@
         }, [_, _, _, _]);
       }
       function _(_, _, __webpack_require__ = null) {
-        const _ = _(_, __webpack_require__);
-        return _._.AddNavParamToURL(_, _);
+        const _ = _(_, __webpack_require__),
+          _ = _ ? _._.GetCuratorClanIDParam(_) : null;
+        return _._.AddNavParamToURL(_, _, _);
       }
       function _(_, _, _, _ = null) {
         const _ = _(_, _, _);
@@ -11418,13 +11456,14 @@
           );
         }
         static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__);
-          return _._.AddNavParamToURL(_, _);
+          const _ = _.GetLinkParam(_, __webpack_require__),
+            _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
+          return _._.AddNavParamToURL(_, _, _);
         }
         static GetLinkParam(_, _ = null) {
           let _, _;
           if ("string" != typeof _) {
-            if (_.domain) return _._.GetLinkParam(_, _);
+            if (_.domain) return _._.GetSNRLinkParam(_, _);
             _ = _.feature || "";
           }
           if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
@@ -16503,7 +16542,7 @@
           })(_),
           _ = (0, _._)(_),
           _ = (0, _._)(),
-          _ = _._.GetLinkParam(_),
+          _ = _._.GetSNRLinkParam(_),
           { mutateAsync: _ } = _(_, !_, _),
           _ = _.useCallback(async () => {
             const { appid: _ } = _;
