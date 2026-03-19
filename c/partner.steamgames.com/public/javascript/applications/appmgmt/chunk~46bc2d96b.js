@@ -2218,12 +2218,10 @@
               (_, _) => _.rtStartDate - _.rtStartDate,
             ),
             _ = (0, _._)(),
-            _ = Math.max(
-              _,
-              _.GetReleaseDateRTime() + _,
-              (0, _._)(_) + _,
-              this.GetFurthestCooldownFromPastDiscounts(_),
-            ),
+            _ = _.GetReleaseDateRTime(),
+            _ = (0, _._)(_),
+            _ = this.GetFurthestCooldownFromPastDiscounts(_),
+            _ = Math.max(_, (_ ?? 0) + _, _ + _, _),
             _ = [],
             _ = new Set();
           let _ = _;

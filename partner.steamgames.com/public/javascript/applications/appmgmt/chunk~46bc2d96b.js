@@ -2064,42 +2064,40 @@
               (t, e) => t.rtStartDate - e.rtStartDate,
             ),
             i = (0, u.sB)(),
-            o = Math.max(
-              i,
-              e.GetReleaseDateRTime() + S,
-              (0, _.zL)(t) + S,
-              this.GetFurthestCooldownFromPastDiscounts(s),
-            ),
-            r = [],
-            l = new Set();
-          let d = o;
+            o = e.GetReleaseDateRTime(),
+            r = (0, _.zL)(t),
+            l = this.GetFurthestCooldownFromPastDiscounts(s),
+            d = Math.max(i, (o ?? 0) + S, r + S, l),
+            g = [],
+            m = new Set();
+          let h = d;
           for (let e = 0; e < s.length; e++) {
             const n = s[e];
             if (0 == n.nDiscountPct) continue;
-            if (n.rtStartDate < o) continue;
+            if (n.rtStartDate < d) continue;
             const i = (0, a.E7)(n.discountEventID);
-            let u = n.rtStartDate - S;
-            const p = "unique" == i?.collision_type;
-            if (p && ((u = n.rtStartDate + k), e + 1 < s.length)) {
+            let o = n.rtStartDate - S;
+            const r = "unique" == i?.collision_type;
+            if (r && ((o = n.rtStartDate + k), e + 1 < s.length)) {
               const t = s[e + 1],
                 n = (0, _.Z6)(t.discountEventID);
               "unique" != n?.collision_type &&
-                (u = Math.min(u, t.rtStartDate - S));
+                (o = Math.min(o, t.rtStartDate - S));
             }
-            if (d + D.Kp.PerDay < u) {
+            if (h + D.Kp.PerDay < o) {
               const e = {
                 bIsAvailable: !0,
-                rtStartDate: d,
-                rtEndDate: u,
+                rtStartDate: h,
+                rtEndDate: o,
                 rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
                   t,
-                  d,
-                  u,
+                  h,
+                  o,
                 ),
               };
-              r.push(e), e.rgDiscountEventIDs.forEach((t) => l.add(t));
+              g.push(e), e.rgDiscountEventIDs.forEach((t) => m.add(t));
             }
-            const g = {
+            const l = {
               bIsAvailable: !1,
               rtStartDate: n.rtStartDate,
               rtEndDate: n.rtEndDate,
@@ -2107,45 +2105,45 @@
               rgDiscountEventIDs: [n.discountEventID],
             };
             if (
-              (r.push(g),
-              l.add(n.discountEventID),
-              (d = n.rtEndDate + S),
-              p && ((d = n.rtEndDate - k), e - 1 >= 0))
+              (g.push(l),
+              m.add(n.discountEventID),
+              (h = n.rtEndDate + S),
+              r && ((h = n.rtEndDate - k), e - 1 >= 0))
             ) {
               const t = s[e - 1],
                 n = (0, _.Z6)(t.discountEventID);
               "unique" != n?.collision_type &&
-                (d = Math.max(d, t.rtEndDate + S));
+                (h = Math.max(h, t.rtEndDate + S));
             }
-            const m = (0, c.M)(d);
-            m - d <= 2 * D.Kp.PerHour && (d = m);
+            const u = (0, c.M)(h);
+            u - h <= 2 * D.Kp.PerHour && (h = u);
           }
-          const g = (0, c.M)(i + D.Kp.PerYear / 2);
-          if (d + D.Kp.PerDay < g) {
+          const f = (0, c.M)(i + D.Kp.PerYear / 2);
+          if (h + D.Kp.PerDay < f) {
             const e = {
               bIsAvailable: !0,
-              rtStartDate: d,
-              rtEndDate: g,
+              rtStartDate: h,
+              rtEndDate: f,
               rgDiscountEventIDs: this.GetAvailableDiscountEventsInRange(
                 t,
-                d,
-                g,
+                h,
+                f,
               ),
             };
-            r.push(e), e.rgDiscountEventIDs.forEach((t) => l.add(t));
+            g.push(e), e.rgDiscountEventIDs.forEach((t) => m.add(t));
           }
-          const m = (0, _.E1)().filter(
+          const E = (0, _.E1)().filter(
             (e) =>
               "unique" == e.collision_type &&
-              !l.has(e.id) &&
+              !m.has(e.id) &&
               1 ==
                 this.m_mapPackageStateForDiscountEvents.get(t).get(e.id).eState,
           );
-          for (const t of m)
-            for (let e = 0; e < r.length; e++)
+          for (const t of E)
+            for (let e = 0; e < g.length; e++)
               if (
-                r[e].rtStartDate <= t.start_date &&
-                (e == r.length - 1 || t.start_date < r[e + 1].rtStartDate)
+                g[e].rtStartDate <= t.start_date &&
+                (e == g.length - 1 || t.start_date < g[e + 1].rtStartDate)
               ) {
                 const n = {
                   bIsAvailable: !0,
@@ -2154,10 +2152,10 @@
                   rtEndDate: t.end_date,
                   rgDiscountEventIDs: [t.id],
                 };
-                r.splice(e + 1, 0, n);
+                g.splice(e + 1, 0, n);
                 break;
               }
-          return r;
+          return g;
         }
       }
       function G(t, e, n) {
