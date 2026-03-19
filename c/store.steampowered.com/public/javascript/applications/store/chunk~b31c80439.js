@@ -5782,7 +5782,8 @@
           ],
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _._)()
           ? (0, _.jsxs)(_, {
@@ -5822,6 +5823,7 @@
             ..._
           } = _,
           { showDiscoveryQueue: _, bQueueVisible: _ } = (0, _._)(_, _),
+          _ = (0, _._)(),
           [_, _] = (function (_, _) {
             const { data: __webpack_require__ } = (0, _._)({
               queryKey: ["DiscoveryQueueLoader", _, _],
@@ -5850,6 +5852,7 @@
               __webpack_require__?.exhausted,
             ];
           })(_, _.storePageFilter),
+          _ = _ || Boolean(_.data?.preferences?.disable_animated_marketing),
           _ = _.useCallback(() => {
             !_ && _();
           }, [_, _]),

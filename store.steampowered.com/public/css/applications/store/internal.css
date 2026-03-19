@@ -1452,6 +1452,7 @@ a:link {
 }
 ._1PUg8GjnBeN7rBK-dcyQFl {
   filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.2));
+  overscroll-behavior: contain;
 }
 ._20oF9tLSfptitLraDOp6X6 {
   color: var(--color-text-body-subtitle);

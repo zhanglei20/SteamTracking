@@ -133,9 +133,8 @@
       n.d(t, {
         G6: () => c,
         Gg: () => _,
-        MS: () => v,
         Ow: () => u,
-        YM: () => x,
+        YM: () => v,
         mZ: () => d,
         t7: () => o,
         zX: () => m,
@@ -311,10 +310,7 @@
       function m(e, t, n) {
         return p(e, 0, t, n);
       }
-      function v(e, t, n) {
-        return p(e, 2, t, n);
-      }
-      function x() {
+      function v() {
         s.useEffect(
           () => (
             a.A.Get().SetReturnUnavailableItems(!0),

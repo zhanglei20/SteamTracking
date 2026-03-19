@@ -3463,7 +3463,7 @@
       "use strict";
       n.d(t, { o: () => m });
       var r = n(7850),
-        i = n(53835),
+        i = n(56283),
         o = n(51706),
         a = n(738),
         s = n(12155),
@@ -3895,7 +3895,7 @@
         }
       }
       (0, d.Cg)([_.oI], g.prototype, "LoadAppCompabitilityResult", null);
-      var f = n(53835),
+      var f = n(56283),
         w = n(51706),
         v = n(12155),
         x = n(27581),

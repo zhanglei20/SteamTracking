@@ -814,6 +814,66 @@ div.youraccount_history_home>div.account_wallet {
 .account_table tr:nth-child(odd) {
 	background-color: rgba(0,0,0,0.1);
 }
+
+.wallet_alert_table_ctn {
+	margin-bottom: 80px;
+}
+
+.wallet_alert_table {
+	border-collapse: collapse;
+	width: 40%;
+}
+
+.wallet_alert_table th {
+	text-align: center;
+	text-transform: uppercase;
+	background-color: rgb(177, 141, 22);
+	color: #fff;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 2px 14px;
+	font-weight: normal;
+}
+
+.wallet_alert_table th.expired {
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #690009;
+	color: #fff;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 2px 14px;
+	font-weight: normal;
+}
+
+.wallet_alert_table tr {
+	border-bottom: 1px solid #000000;
+	line-height: 18px;
+}
+
+.wallet_alert_table td {
+	padding: 5px 14px;
+}
+
+.wallet_alert_table tr > *:last-child {
+	text-align: right;
+}
+
+.wallet_alert_table a:hover {
+	color: #fff;
+}
+
+.wallet_alert_table tr:nth-child(even) {
+	background-color: rgba(0,0,0,0.2);
+}
+.wallet_alert_table tr:nth-child(odd) {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.wallet_alert_table {
+	border-collapse: collapse;
+}
+
 .cached_payment_method_name
 {
 	width: 100%;

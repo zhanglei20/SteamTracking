@@ -1380,7 +1380,7 @@
         return `${e}economy/sticker${a ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var u = a(78327),
-        _ = a(53835),
+        _ = a(56283),
         g = a(76217),
         x = a(88006),
         v = a(19418);
@@ -2295,7 +2295,7 @@
       a.d(t, { r: () => u, z: () => h });
       var s = a(7850),
         n = a(90626),
-        r = a(53835),
+        r = a(56283),
         i = a(84811),
         o = a(51706),
         l = a(61859),
@@ -3075,7 +3075,7 @@
         (0, p.Cg)([v.oI], G.prototype, "FocusTextInput", null),
         (0, p.Cg)([v.oI], G.prototype, "GetTextAreaRef", null),
         (0, p.Cg)([v.oI], G.prototype, "GetTextAreaCurrent", null);
-      var D = a(53835),
+      var D = a(56283),
         E = a(283),
         M = a(95695),
         Y = a.n(M),
@@ -4780,7 +4780,7 @@
         l = a(75844),
         c = a(6144),
         d = a(61859),
-        m = a(53835),
+        m = a(56283),
         h = a(12155),
         p = a(81315),
         u = a.n(p),
@@ -6539,7 +6539,7 @@
       var se = a(92757),
         ne = a(1035),
         re = a(27144),
-        ie = a(53835),
+        ie = a(56283),
         oe = a(84811),
         le = a(95034),
         ce = a(95695),
