@@ -4456,7 +4456,7 @@
         l = s(75844),
         d = s(6144),
         c = s(61859),
-        u = s(53835),
+        u = s(56283),
         p = s(12155),
         h = s(81315),
         m = s.n(h),
@@ -4929,7 +4929,7 @@
         l = s(12155),
         d = s(2627),
         c = s(61859),
-        u = s(53835),
+        u = s(56283),
         p = s(52038),
         h = s(79359),
         m = s(78327),
@@ -5347,7 +5347,7 @@
     },
     38405: (e, t, s) => {
       "use strict";
-      s.d(t, { g: () => x });
+      s.d(t, { g: () => V });
       var i = s(7850),
         o = s(65946),
         a = s(90626),
@@ -5490,20 +5490,21 @@
           ],
         });
       }
-      var T = s(90511);
-      function x(e) {
+      var T = s(90511),
+        x = s(2589);
+      function V(e) {
         return (0, d.G)()
-          ? (0, i.jsxs)(V, {
+          ? (0, i.jsxs)(B, {
               children: [
-                (0, i.jsx)(A, {}),
+                (0, i.jsx)(R, {}),
                 p.iA.logged_in
-                  ? (0, i.jsx)(B, { ...e })
-                  : (0, i.jsx)(O, { ...e }),
+                  ? (0, i.jsx)(M, { ...e })
+                  : (0, i.jsx)(A, { ...e }),
               ],
             })
           : null;
       }
-      function V(e) {
+      function B(e) {
         const [t, s] = (0, n.L2)();
         let r = (0, o.q3)(() => s.ExcludedContentDescriptor),
           d = a.useMemo(() => ({ content_descriptors_excluded: r }), [r]);
@@ -5511,14 +5512,15 @@
           ? null
           : (0, i.jsx)(l.E2, { defaultOptions: d, children: e.children });
       }
-      function B(e) {
+      function M(e) {
         const {
             eStoreDiscoveryQueueType: t,
             strQueueDescriptionOverride: s,
             ...o
           } = e,
           { showDiscoveryQueue: n, bQueueVisible: l } = (0, T.GV)(t, o),
-          [d, c] = (function (e, t) {
+          d = (0, x.lI)(),
+          [c, u] = (function (e, t) {
             const { data: s } = (0, C.I)({
               queryKey: ["DiscoveryQueueLoader", e, t],
               queryFn: async () => {
@@ -5535,23 +5537,24 @@
             });
             return [s?.rgDiscoveryApps, s?.exhausted];
           })(t, o.storePageFilter),
-          u = a.useCallback(() => {
-            !c && n();
-          }, [c, n]),
-          m = a.useId();
+          m = l || Boolean(d.data?.preferences?.disable_animated_marketing),
+          g = a.useCallback(() => {
+            !u && n();
+          }, [u, n]),
+          S = a.useId();
         return (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(P, {
-            "aria-labelledby": m,
-            onClick: u,
-            arrDiscoveryApps: d,
-            bDisableAnimation: l,
+            "aria-labelledby": S,
+            onClick: g,
+            arrDiscoveryApps: c,
+            bDisableAnimation: m,
             className: _().DiscoveryQueueWidget,
             children:
-              !c && (0, i.jsx)(M, { id: m, strQueueDescriptionOverride: s }),
+              !u && (0, i.jsx)(O, { id: S, strQueueDescriptionOverride: s }),
           }),
         });
       }
-      function M(e) {
+      function O(e) {
         const { strQueueDescriptionOverride: t, id: s } = e,
           o = t ?? (0, u.we)("#DiscoveryQueue_WidgetHeader");
         return (0, i.jsxs)("div", {
@@ -5569,7 +5572,7 @@
           ],
         });
       }
-      function O(e) {
+      function A(e) {
         const t = (function (e) {
             let { data: t } = (0, l.PG)(
               "DiscoveryQueueWidget",
@@ -5612,7 +5615,7 @@
           }),
         });
       }
-      function A() {
+      function R() {
         const e = (0, g.Qt)(2, p.TS.LANGUAGE, !0),
           t = (0, p.Qn)();
         if (!e.data?.definition || 0 == (e.data?.reward_items?.length ?? 0))
@@ -5636,7 +5639,7 @@
           (0, i.jsxs)("div", {
             className: _().SaleTopSection,
             children: [
-              (0, i.jsx)(R, { rgRewardItems: o }),
+              (0, i.jsx)(L, { rgRewardItems: o }),
               (0, i.jsxs)("div", {
                 className: _().SaleTextCtn,
                 children: [
@@ -5665,7 +5668,7 @@
           })
         );
       }
-      function R(e) {
+      function L(e) {
         const { rgRewardItems: t } = e,
           s = t.map((e) => {
             if (!e.community_definition || !e.community_definition.item_name)

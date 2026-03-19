@@ -238,7 +238,7 @@ GHomepage = {
 			GHomepage.eGamingDeviceType = rgParams.eGamingDeviceType || 0;
 			GHomepage.bIsSeasonalSale = rgParams.bIsSeasonalSale || false;
 			GHomepage.rgSteamAwardDefs = rgParams.rgSteamAwardDefs || [];
-			GHomepage.rgAltBackgroundDef = rgParams.rgAltBackgroundDef || [];
+			GHomepage.rgBackgroundDef = rgParams.rgBackgroundDef || [];
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -3838,46 +3838,55 @@ GHomepage = {
 	},
 	ToggleAlternateTakeover: function()
 	{
-		if ( !GHomepage.rgAltBackgroundDef )
+		if ( !GHomepage.rgBackgroundDef )
 			return;
 
-		if ( !V_GetCookie( 'enable_home_alt_takeover' ) )
-		{
-			V_SetCookie('enable_home_alt_takeover', 1, 14 );
+		const $AlternateBackgroundDef = GHomepage.rgBackgroundDef.alternate;
+		const $DefaultBackgroundDef = GHomepage.rgBackgroundDef.default;
 
+		const fnUpdateTakeover = ( strPageBackgroundURL, strBackgroundWebm, strPageBackgroundMobileURL ) =>
+		{
+			let elStaticBackgroundHolder = $J('.page_background_holder');
 			if ( window.innerWidth <= 500 )
 			{
-				$J('.page_background_holder').css('background-image', 'url(' + GHomepage.rgAltBackgroundDef.strPageBackgroundMobileURL + ')');
+				elStaticBackgroundHolder.css('background-image', 'url(' + strPageBackgroundMobileURL + ')');
 			}
 			else
 			{
-				if ( GHomepage.rgAltBackgroundDef.strPageBackgroundWebM && !GDynamicStore.s_preferences.disable_microtrailers )
+				elStaticBackgroundHolder.css('background-image', 'url(' + strPageBackgroundURL + ')');
+				
+				if ( strBackgroundWebm && !GDynamicStore.s_preferences.disable_animated_marketing )
 				{
 					let elVideo = $J('.fullscreen-bg__video')[0];
 					if ( elVideo )
 					{
-						let $HomeBody = $J('.home_page_body_ctn' );
-						$HomeBody.addClass( 'transition_header' );
-						elVideo.addEventListener( "transitionend", function fnLoadData() {
-							elVideo.src = GHomepage.rgAltBackgroundDef.strPageBackgroundWebM;
-							elVideo.poster = GHomepage.rgAltBackgroundDef.strPageBackgroundURL;
+						let $HomeBody = $J('.home_page_body_ctn');
+						$HomeBody.addClass('transition_header');
+						elVideo.addEventListener("transitionend", function fnLoadData()
+						{
+							elVideo.src = strBackgroundWebm;
+							elVideo.poster = strPageBackgroundURL;
 							elVideo.load();
-							elVideo.addEventListener( "canplay", function fnPlayVideo() {
-								$HomeBody.removeClass( 'transition_header') ;
+							elVideo.addEventListener("canplay", function fnPlayVideo()
+							{
+								$HomeBody.removeClass('transition_header');
 								elVideo.play();
 							}, { once: true } );
-						}, { once: true } );
+						}, { once: true });
 					}
 				}
-
-				$J('.page_background_holder').css('background-image', 'url(' + GHomepage.rgAltBackgroundDef.strPageBackgroundURL + ')');
 			}
-			$J( '.page_background_overlay' ).addClass( 'alternate' );
+		}
+
+		if ( !V_GetCookie( 'enable_home_alt_takeover' ) )
+		{
+			V_SetCookie('enable_home_alt_takeover', 1, 14 );
+			fnUpdateTakeover( $AlternateBackgroundDef.strPageBackgroundURL, $AlternateBackgroundDef.strPageBackgroundWebM, $AlternateBackgroundDef.strPageBackgroundMobileURL );
 		}
 		else
 		{
 			V_SetCookie('enable_home_alt_takeover', 0, -1 );
-			location.reload();
+			fnUpdateTakeover( $DefaultBackgroundDef.strPageBackgroundURL, $DefaultBackgroundDef.strPageBackgroundWebM, $DefaultBackgroundDef.strPageBackgroundMobileURL );
 		}
 	},
 };

@@ -6443,8 +6443,6 @@
             ],
             _ = [];
           _.push(__webpack_require__("chunkid")),
-            _.push(__webpack_require__("chunkid")),
-            _.push(__webpack_require__("chunkid")),
             _.push(__webpack_require__("chunkid"));
           const _ = [],
             _ = [_, _];
@@ -19175,7 +19173,7 @@
         "./loyalty_english.json": [48903, 5961],
         "./loyalty_finnish.json": [84523, 3730],
         "./loyalty_french.json": [99565, 3449],
-        "./loyalty_german.json": [77228, 5831],
+        "./loyalty_german.json": [54847, 5831],
         "./loyalty_greek.json": [24175, 3397],
         "./loyalty_hungarian.json": [76042, 4156],
         "./loyalty_indonesian.json": [19341, 5189],
@@ -19223,7 +19221,7 @@
         "./loyalty_english.json": [48903, 5961],
         "./loyalty_finnish.json": [84523, 3730],
         "./loyalty_french.json": [99565, 3449],
-        "./loyalty_german.json": [77228, 5831],
+        "./loyalty_german.json": [54847, 5831],
         "./loyalty_greek.json": [24175, 3397],
         "./loyalty_hungarian.json": [76042, 4156],
         "./loyalty_indonesian.json": [19341, 5189],

@@ -3652,6 +3652,21 @@ enum UnnamedEnumad5f244ec47c479c
 	k_MediaUsageConfirmation = 11;
 }
 
+enum UnnamedEnumad6b0ba9e64c3c66
+{
+	AnyController = 0;
+	XboxController = 1;
+	Ps3Controller = 2;
+	Ps4Controller = 3;
+	Ps5Controller = 4;
+	SwitchController = 5;
+	SteamController = 6;
+	SteamDeckNeptune = 7;
+	SteamDeckGalileo = 8;
+	Switch2Controller = 9;
+	SteamControllerTriton = 10;
+}
+
 enum UnnamedEnumad989ac806e57514
 {
 	None = 0;

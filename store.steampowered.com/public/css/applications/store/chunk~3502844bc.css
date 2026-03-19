@@ -18,6 +18,10 @@
 ._0BH1ydyFmSnUvoVK2hIc:hover {
   background: var(--hover-background, var(--background));
 }
+._0BH1ydyFmSnUvoVK2hIc:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
 ._0BH1ydyFmSnUvoVK2hIc:disabled {
   opacity: 0.35;
 }

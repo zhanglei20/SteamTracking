@@ -5896,10 +5896,7 @@
               },
             ],
             j = [];
-          j.push(i(3558940)),
-            j.push(i(4061350)),
-            j.push(i(3558930)),
-            j.push(i(3558920));
+          j.push(i(4374420)), j.push(i(3558940));
           const v = [],
             S = [j, I];
           for (let e = 0; e < Math.max(S[0].length, S[1].length); e++)
@@ -17188,7 +17185,7 @@
         "./loyalty_english.json": [48903, 5961],
         "./loyalty_finnish.json": [84523, 3730],
         "./loyalty_french.json": [99565, 3449],
-        "./loyalty_german.json": [77228, 5831],
+        "./loyalty_german.json": [54847, 5831],
         "./loyalty_greek.json": [24175, 3397],
         "./loyalty_hungarian.json": [76042, 4156],
         "./loyalty_indonesian.json": [19341, 5189],
@@ -17234,7 +17231,7 @@
         "./loyalty_english.json": [48903, 5961],
         "./loyalty_finnish.json": [84523, 3730],
         "./loyalty_french.json": [99565, 3449],
-        "./loyalty_german.json": [77228, 5831],
+        "./loyalty_german.json": [54847, 5831],
         "./loyalty_greek.json": [24175, 3397],
         "./loyalty_hungarian.json": [76042, 4156],
         "./loyalty_indonesian.json": [19341, 5189],

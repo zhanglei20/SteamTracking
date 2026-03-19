@@ -182,7 +182,7 @@
         return `${e}economy/sticker${s ? "static" : ""}/${encodeURIComponent(t)}`;
       }
       var p = s(78327),
-        x = s(53835),
+        x = s(56283),
         j = s(76217),
         C = s(88006),
         N = s(19418);
