@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Zaakceptowano zaproszenie do gry %1$s%2$s",
     "ChatRoom_GameInvite_AcceptOnPC": "Możesz zaakceptować to zaproszenie ze swojego komputera.",
     "ChatRoom_GameInvite_UnreleasedGame": "Niewydana gra",
+    "ChatRoom_PlayestInvite_ViewInvite": "Zobacz zaproszenie",
+    "ChatRoom_PlayestInvite_Invite": "%1$s zaprasza cię do dołączenia do Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Zaproszono użytkownika %1$s do playtestu %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Zaproszono użytkownika %1$s do playtestu %2$s%3$s",
     "ChatRoom_GameInviteRemotePlay_Invite": "Użytkownik %1$s zaprosił cię poprzez Remote Play Together",
     "ChatRoom_GameInviteRemotePlay_Accept": "Połącz",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "Użytkownik %1$s zaprosił cię do gry %2$s%3$s poprzez Steam Remote Play",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "Naprawiono błąd powodujący, że okna czatu i znajomych nie wyświetlały się w nakładce w systemach Linux i macOS.",
     "BBCode_Loading": "Wczytywanie",
     "BBCode_Failed": "Nie udało się wczytać",
-    "broadcastDetails_Playing": "Gra w",
-    "ChatRoom_PlayestInvite_ViewInvite": "Zobacz zaproszenie",
-    "ChatRoom_PlayestInvite_Invite": "%1$s zaprasza cię do dołączenia do Steam Playtest",
-    "ChatRoom_PlaytestInvite_YouInvited": "Zaproszono użytkownika %1$s do playtestu %2$s%3$s",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Zaproszono użytkownika %1$s do playtestu %2$s%3$s"
+    "broadcastDetails_Playing": "Gra w"
 }

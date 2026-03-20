@@ -406,7 +406,7 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: u },
+          takeunder_art: { width: 1200, height: 190, rgAcceptableTypes: u },
           takeunder_mobile_art: {
             width: 500,
             height: 160,

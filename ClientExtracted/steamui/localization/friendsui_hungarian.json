@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Elfogadtál egy meghívást %1$s%2$s játszására",
     "ChatRoom_GameInvite_AcceptOnPC": "Ezt a meghívást a számítógépedről fogadhatod el.",
     "ChatRoom_GameInvite_UnreleasedGame": "Kiadatlan játék",
+    "ChatRoom_PlayestInvite_ViewInvite": "Meghívó megnézése",
+    "ChatRoom_PlayestInvite_Invite": "%1$s meghívott egy Steam Playtestbe.",
+    "ChatRoom_PlaytestInvite_YouInvited": "Meghívtad %1$s felhasználót a(z) %2$s%3$s Steam Playtestbe.",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Meghívtad %1$s felhasználót a(z) %2$s%3$s Steam Playtestjébe.",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s meghívott Remote Play Together használatával",
     "ChatRoom_GameInviteRemotePlay_Accept": "Kapcsolódás",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s meghívott Steam Remote Playen keresztül játszani a(z) %2$s%3$s játékkal",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "Javítottuk, hogy a barát- és csevegésablakok Linuxon és macOS-en nem jelentek meg a játékbeli átfedésen.",
     "BBCode_Loading": "Betöltés",
     "BBCode_Failed": "Nem sikerült betölteni",
-    "broadcastDetails_Playing": "Ezzel játszik:",
-    "ChatRoom_PlayestInvite_ViewInvite": "Meghívó megnézése",
-    "ChatRoom_PlayestInvite_Invite": "%1$s meghívott egy Steam Playtestbe.",
-    "ChatRoom_PlaytestInvite_YouInvited": "Meghívtad %1$s felhasználót a(z) %2$s%3$s Steam Playtestbe.",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Meghívtad %1$s felhasználót a(z) %2$s%3$s Steam Playtestjébe."
+    "broadcastDetails_Playing": "Ezzel játszik:"
 }

@@ -469,7 +469,6 @@ enum EGameIDType
 	k_EGameIDTypeApp = 0;
 	k_EGameIDTypeGameMod = 1;
 	k_EGameIDTypeShortcut = 2;
-	k_EGameIDTypeP2P = 3;
 }
 
 enum eGamepadButtonBitMask
@@ -1217,16 +1216,6 @@ enum UnnamedEnum001b037885a2ecde
 {
 	Above = 0;
 	Below = 1;
-}
-
-enum UnnamedEnum0088a21d353911da
-{
-	Achievements = 0;
-	Controller = 1;
-	Guides = 2;
-	Notes = 3;
-	Browser = 4;
-	GR = 5;
 }
 
 enum UnnamedEnum008b8bff579bf723

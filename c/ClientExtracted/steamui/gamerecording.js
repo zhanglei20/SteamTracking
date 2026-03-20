@@ -28,6 +28,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clipToUpload: _, finishUpload: __webpack_require__ } = _,
@@ -36,18 +37,14 @@
           { fnUploadClip: _ } = (0, _._)(),
           [_, _] = _.useState();
         if (!_) return null;
-        return _.createElement(
-          "div",
-          {
-            className: _.ClipUploadStatus,
-          },
-          _.createElement(_._, {
-            clipID: _.clip_id,
-          }),
-          !_ &&
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsxs)("div", {
+          className: _.ClipUploadStatus,
+          children: [
+            (0, _.jsx)(_._, {
+              clipID: _.clip_id,
+            }),
+            !_ &&
+              (0, _.jsx)(_._, {
                 onClick: async () => {
                   _(!0);
                   const { eResult: _, strURL: _ } = await _(
@@ -58,14 +55,14 @@
                   );
                   __webpack_require__(_), _(!1);
                 },
-              },
-              "Upload",
-            ),
-          _ &&
-            _.createElement(_, {
-              clipToUpload: _,
-            }),
-        );
+                children: "Upload",
+              }),
+            _ &&
+              (0, _.jsx)(_, {
+                clipToUpload: _,
+              }),
+          ],
+        });
       }
       function _(_) {
         const { clipToUpload: _ } = _,
@@ -87,30 +84,23 @@
           _ = {
             width: __webpack_require__ + "%",
           };
-        return _.createElement(
-          "div",
-          {
-            className: "chatFileUploadProgressContainer",
-          },
-          _.createElement(
-            "div",
-            {
+        return (0, _.jsxs)("div", {
+          className: "chatFileUploadProgressContainer",
+          children: [
+            (0, _.jsx)("div", {
               className: "chatFileUploadProgressName",
-            },
-            _,
-          ),
-          _.createElement(
-            "div",
-            {
+              children: _,
+            }),
+            (0, _.jsx)("div", {
               className:
                 "chatFileUploadProgressBarContainer DialogProgressBar_ProgressBarContainer",
-            },
-            _.createElement("div", {
-              className: "DialogProgressBar_Value",
-              style: _,
+              children: (0, _.jsx)("div", {
+                className: "DialogProgressBar_Value",
+                style: _,
+              }),
             }),
-          ),
-        );
+          ],
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -122,6 +112,7 @@
         });
       var _,
         _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1781,49 +1772,42 @@
             });
           })(_);
         return _.data
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               clip: _.data,
               mode: _._.ChatClip,
             })
-          : _.createElement(
-              "div",
-              {
-                style: {
-                  color: "white",
-                },
+          : (0, _.jsx)("div", {
+              style: {
+                color: "white",
               },
-              "Loading...",
-            );
+              children: "Loading...",
+            });
       }
       const _ = function (_) {
         const { previewURL: _ } = _,
           [__webpack_require__, _] = _.useState(!1);
         return __webpack_require__
-          ? _.createElement(_, {
+          ? (0, _.jsx)(_, {
               ..._,
             })
-          : _.createElement(
-              "div",
-              {
-                className: _.ClipPreview,
-                onClick: () => {
-                  _(!0);
-                },
+          : (0, _.jsxs)("div", {
+              className: _.ClipPreview,
+              onClick: () => {
+                _(!0);
               },
-              _.createElement("img", {
-                className: _.Thumbnail,
-                src: _,
-              }),
-              _.createElement(
-                "div",
-                {
-                  className: _.PlayContainer,
-                },
-                _.createElement(_.Play, {
-                  className: _.Button,
+              children: [
+                (0, _.jsx)("img", {
+                  className: _.Thumbnail,
+                  src: _,
                 }),
-              ),
-            );
+                (0, _.jsx)("div", {
+                  className: _.PlayContainer,
+                  children: (0, _.jsx)(_.Play, {
+                    className: _.Button,
+                  }),
+                }),
+              ],
+            });
       };
       function _(_, _) {
         return {
@@ -1855,37 +1839,28 @@
       function _(_) {
         const { clip: _, mode: __webpack_require__ } = _,
           { loader: _, fnGetManifest: _ } = _(_);
-        return _.createElement(
-          _.Fragment,
-          null,
-          _.createElement(
-            _._,
-            {
-              loader: _,
-              fnGetManifest: _,
-              mode: __webpack_require__,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _.ClipDetails,
-              },
-              _.createElement(
-                "div",
-                {
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsx)(_._, {
+            loader: _,
+            fnGetManifest: _,
+            mode: __webpack_require__,
+            children: (0, _.jsxs)("div", {
+              className: _.ClipDetails,
+              children: [
+                (0, _.jsx)("div", {
                   className: _.VideoContainer,
-                },
-                _.createElement(_._, {
-                  positionAbsolute: !1,
-                  autoPlay: __webpack_require__ != _._.ChatClip,
+                  children: (0, _.jsx)(_._, {
+                    positionAbsolute: !1,
+                    autoPlay: __webpack_require__ != _._.ChatClip,
+                  }),
                 }),
-              ),
-              _.createElement(_._, {
-                loader: _,
-              }),
-            ),
-          ),
-        );
+                (0, _.jsx)(_._, {
+                  loader: _,
+                }),
+              ],
+            }),
+          }),
+        });
       }
     },
   },

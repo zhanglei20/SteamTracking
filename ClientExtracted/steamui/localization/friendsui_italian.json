@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Hai accettato un invito a giocare a %1$s%2$s",
     "ChatRoom_GameInvite_AcceptOnPC": "Puoi accettare questo invito dal tuo PC.",
     "ChatRoom_GameInvite_UnreleasedGame": "Gioco non rilasciato",
+    "ChatRoom_PlayestInvite_ViewInvite": "Vedi invito",
+    "ChatRoom_PlayestInvite_Invite": "%1$s ti ha invitato a uno Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Hai invitato %1$s allo Steam Playtest per %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Hai invitato %1$s allo Steam Playtest per %2$s%3$s",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s ti ha invitato a giocare usando Remote Play Together",
     "ChatRoom_GameInviteRemotePlay_Accept": "Connetti",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s ti ha invitato a giocare a %2$s%3$s attraverso Steam Remote Play",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "È stato risolto un problema con le finestre degli amici e delle chat che non comparivano nell'overlay in gioco su Linux e macOS.",
     "BBCode_Loading": "Caricamento",
     "BBCode_Failed": "Caricamento non riuscito",
-    "broadcastDetails_Playing": "Riproduzione",
-    "ChatRoom_PlayestInvite_ViewInvite": "Vedi invito",
-    "ChatRoom_PlayestInvite_Invite": "%1$s ti ha invitato a uno Steam Playtest",
-    "ChatRoom_PlaytestInvite_YouInvited": "Hai invitato %1$s allo Steam Playtest per %2$s%3$s",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Hai invitato %1$s allo Steam Playtest per %2$s%3$s"
+    "broadcastDetails_Playing": "Riproduzione"
 }

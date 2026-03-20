@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Aceitaste um convite para jogar %1$s%2$s",
     "ChatRoom_GameInvite_AcceptOnPC": "Podes aceitar este convite no teu PC.",
     "ChatRoom_GameInvite_UnreleasedGame": "um jogo não lançado",
+    "ChatRoom_PlayestInvite_ViewInvite": "Ver convite",
+    "ChatRoom_PlayestInvite_Invite": "%1$s convidou-te para um Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Convidaste %1$s para o Steam Playtest %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Convidaste %1$s para o Steam Playtest de %2$s%3$s",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s convidou-te para jogar via Remote Play Together",
     "ChatRoom_GameInviteRemotePlay_Accept": "Conectar",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s convidou-te para jogar %2$s%3$s via Steam Remote Play",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "Foi resolvido um problema em que as janelas do chat e dos amigos não apareciam no Painel Steam durante jogos no Linux e no macOS.",
     "BBCode_Loading": "A carregar",
     "BBCode_Failed": "Erro ao carregar",
-    "broadcastDetails_Playing": "A jogar",
-    "ChatRoom_PlayestInvite_ViewInvite": "Ver convite",
-    "ChatRoom_PlayestInvite_Invite": "%1$s convidou-te para um Steam Playtest",
-    "ChatRoom_PlaytestInvite_YouInvited": "Convidaste %1$s para o Steam Playtest %2$s%3$s",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Convidaste %1$s para o Steam Playtest de %2$s%3$s"
+    "broadcastDetails_Playing": "A jogar"
 }

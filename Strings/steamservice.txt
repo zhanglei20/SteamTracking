@@ -707,6 +707,7 @@ $ffn
 %sYesterday
 %sobjcopy
 %sstalled cross-thread pipe%s.
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 &&Lj66lZ??~A
 &'&)&5&;&?&K&S&Y&e&i&o&{&
 &1j@U
@@ -1119,7 +1120,6 @@ $ffn
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )TpH
 )Urz
-)\n$k_EMsgAISGetCouponDefinitionResponse
 )\n$k_EMsgAMClaimUnownedUserGiftResponse
 )\n$k_EMsgAMFriendsInCommonCountResponse
 )\n$k_EMsgAMGetAccountFlagsForWGSpoofing
@@ -1654,6 +1654,7 @@ $ffn
 /proc/net/route
 /proc/self/exe
 /proc/self/fd
+/proc/self/maps
 /proc/version
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
@@ -1697,16 +1698,16 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
-0123456789.
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
 0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:35:44
+01:56:42
 08bX
 0?0L
 0A/8
@@ -1745,7 +1746,6 @@ $ffn
 1!1'1-191C1E1K1]1a1g1m1s1
 1.5.6
 10.0.0.0/8
-10.4.252.0/24
 100 127.0.0.1 stale
 1000
 1024
@@ -2090,6 +2090,7 @@ $ffn
 14ISSLConnection
 1536
 15000
+155.133.240.0/23
 15CEC25519KeyBase
 15CJobPromiseBase
 15CMetricsFactory
@@ -2130,7 +2131,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18000000
 18446744073709551615
 18CBaseFrameFunction
 18CFutureSharedStateIbE
@@ -2154,6 +2154,7 @@ $ffn
 18IRegistryInterface
 18IUDPSocketCallback
 18IWorkThreadFactory
+192.69.96.0/22
 19CClientInstallUtils
 19CCuratorPreferences
 19CHTTPClientResponse
@@ -2200,6 +2201,8 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+208.64.200.0/22
+208.78.164.0/22
 20CCDDBAppDetailCommon
 20CClientModuleManager
 20CClientSecureDesktop
@@ -2286,6 +2289,7 @@ $ffn
 3-WH
 30!]^JV
 3072
+30000
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -2405,8 +2409,9 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-64CK\vH
 65536
+60000000
+64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2601,7 +2606,9 @@ $ffn
 @!@%@+@1@?@C@E@]@a@g@m@
 @0pp
 @EnableUDPHistory
-@MaxOutstandingSendThreadItem
+@MaxOutstandingSendThreadItemFatalAssert
+@MaxOutstandingSendThreadItemFatalAssertSecondsAtLimit
+@MaxOutstandingSendThreadItemSleep
 @bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 @bEnableFrameFuncOverageWarnings
 @bEnableHTTP2OnAllCHTTPClients
@@ -3735,6 +3742,7 @@ CJobMgr::BRouteMsgToJob() - job
 CJobMgr::BRunNewJobsFromNetMessages
 CJobMgr::DumpJobCategoryData - job type %s is waiting on a lock with no owning job
 CJobMgr::PassMsgToJob() job %s received unexpected message %s when paused for %s\n
+CJobMgr::SetWaitDetails
 CJobMgr::TimeoutJob
 CJobMgr::m_WorkThreadPool
 CKeyValuesSystem
@@ -3859,7 +3867,8 @@ CMetrics::AsJson
 CMetrics::Increment_double
 CMetrics::Increment_int
 CMetricsPayload: Measurement_StatisticSet JSON serialization is not implemented
-CMetricsPayload::RecordMetric
+CMetricsPayload::RecordMetric_Dimension
+CMetricsPayload::RecordMetric_Measurement
 CMetricsSymbol::sm_symbolTable
 CMsgAuthTicket
 CMsgBase_t : packet too small
@@ -5833,7 +5842,7 @@ Hour
 Hours
 Hp!v
 HqI9x
-HttpClientConnection (%p) now connected through %X \n
+HttpClientConnection (%p) now initiating TCP connection through %X \n
 Hung transaction cancelled
 Hungarian
 Hw~J
@@ -6401,7 +6410,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 13 2026
+Mar 20 2026
 Marathi
 March
 Mask Algorithm:
@@ -7375,7 +7384,6 @@ PollResponseAsync
 Poly1305
 Polynomial:
 Portuguese
-Post DNS resolve
 PostRecv
 PostedAnnouncement
 Pragma
@@ -8090,6 +8098,8 @@ SetEnumValue
 SetFloat
 SetInt32
 SetInt64
+SetJobWaitDetailsConst
+SetJobWaitDetailsFormat
 SetProtonEnvironment
 SetRawDataAndWipeInput( tmp, cbData )
 SetRepeatedBool
@@ -8348,6 +8358,7 @@ T5w?30d
 T61STRING
 TB)I
 TCP disconnect\n
+TCP send queue for send thread was above fatal limit %d for more than %d seconds, killing process.
 TELETEXSTRING
 TLS 1.3, client CertificateVerify
 TLS 1.3, server CertificateVerify
@@ -9591,7 +9602,6 @@ Zulu
 \vHCK/
 \vZ\nyVR
 \v\vTSG
-\vfGTrJ
 \vjFF\r
 \vow5
 \vssh-ed25519
@@ -10670,6 +10680,7 @@ check_name_constraints
 check_padding_md
 check_policy
 check_suiteb_cipher_list
+checking cache
 checksum_error
 cherokee
 china
@@ -10814,6 +10825,7 @@ connect error
 connect_duration
 connected
 connecting
+connecting/sending request
 connectio
 connection
 connection type not set
@@ -10898,6 +10910,7 @@ controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
 controller_steamos_handheld
+controller_switch2_pro
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -11584,6 +11597,7 @@ dmp1 not congruent to d
 dmq1
 dmq1 not congruent to d
 dnQualifier
+dns/proxy discovery done
 dnsName
 dns_failed
 do_EC_KEY_print
@@ -12988,7 +13002,6 @@ inhibitAnyPolicy
 inhibitPolicyMapping
 init fail
 init failed
-initial wait
 initialization error
 initials
 inlen == 0
@@ -13305,7 +13318,6 @@ k_EMsgAIGetAppGCFlags
 k_EMsgAIGetAppGCFlagsResponse
 k_EMsgAIGetAppList
 k_EMsgAIGetAppListResponse
-k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
@@ -16350,6 +16362,7 @@ protocol is shutdown
 protocol version
 protocolInformation
 proxy certificates not allowed, please set the appropriate flag
+proxy discovery
 proxy path length constraint exceeded
 proxy subject name violation
 proxy-authenticat
@@ -16374,7 +16387,6 @@ pstrFormat != NULL
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pstrValue
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
@@ -16880,7 +16892,6 @@ sendRouter
 send_duration
 sendfile64
 sending
-sending request
 sendmsg
 sendto
 seq_num
@@ -17634,6 +17645,7 @@ this != pLock->m_pJob
 this != pLock->m_pJobWaitingQueueTail
 this == g_pJobCur
 thisUpdate
+threaded work (proxy/dns)
 threads
 throw
 ticket
@@ -18514,7 +18526,10 @@ wait details: [%s] - %s
 wait for time
 waitid
 waiting
+waiting due to max in flight per host
 waiting for lock
+waiting on HTTP/2 support discovery for connection
+waiting on cache busy
 waitpid
 wap-wsg
 wap-wsg-idm-ecid-wtls1

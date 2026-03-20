@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Ai acceptat o invitație de a te juca %1$s%2$s",
     "ChatRoom_GameInvite_AcceptOnPC": "Poți accepta această invitație de pe PC-ul tău.",
     "ChatRoom_GameInvite_UnreleasedGame": "Joc nelansat",
+    "ChatRoom_PlayestInvite_ViewInvite": "Vezi invitația",
+    "ChatRoom_PlayestInvite_Invite": "%1$s te-a invitat la un playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Ai invitat pe %1$s la playtestul %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Ai invitat pe %1$s la un playtest pentru %2$s%3$s",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s te-a invitat să jucați utilizând Remote Play Together",
     "ChatRoom_GameInviteRemotePlay_Accept": "Conectează-te",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s te-a invitat să joci %2$s%3$s utilizând Steam Remote Play",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "S-a reparat faptul că ferestrele pentru prieteni și chat nu erau afișate în interfața din joc pe Linux și macOS.",
     "BBCode_Loading": "Se încarcă",
     "BBCode_Failed": "Nu s-a putut încărca",
-    "broadcastDetails_Playing": "Se joacă",
-    "ChatRoom_PlayestInvite_ViewInvite": "Vezi invitația",
-    "ChatRoom_PlayestInvite_Invite": "%1$s te-a invitat la un playtest",
-    "ChatRoom_PlaytestInvite_YouInvited": "Ai invitat pe %1$s la playtestul %2$s%3$s",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Ai invitat pe %1$s la un playtest pentru %2$s%3$s"
+    "broadcastDetails_Playing": "Se joacă"
 }

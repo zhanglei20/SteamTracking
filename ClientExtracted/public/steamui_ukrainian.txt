@@ -2270,7 +2270,7 @@
 "Steam_NoLongerOwnsGame_Info"		"До цієї гри більше немає безкоштовного доступу."
 
 "steam_menu_systemreport"		"Системний звіт"
-"steam_menu_systeminfo"			"Відомості системи"
+"steam_menu_systeminfo"			"Відомості про систему"
 "steam_systeminfo_title"			"Steam — Відомості про систему"
 "steam_systeminfo_surveylink"	"Порівняйте своє обладнання з обладнанням інших користувачів Steam"
 

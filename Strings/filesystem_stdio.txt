@@ -43,6 +43,7 @@ $ORIGIN
 %s/.steam/steam
 %s/steamXXXXXX
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
@@ -89,6 +90,7 @@ $ORIGIN
 /dev/disk/by-uuid
 /etc/mtab
 /proc/mounts
+/proc/self/maps
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_32
@@ -497,7 +499,6 @@ V_strnicmp
 V_strnistr
 V_vsnprintf
 V_vsnprintfRet
-WAE\r
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 WeakRandomUint32
@@ -925,7 +926,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once

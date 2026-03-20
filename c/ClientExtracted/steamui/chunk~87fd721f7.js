@@ -9,6 +9,38 @@
         BroadcastPlaceholderImg: "_3hxn99MT14hFUCrUp6zbsf",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        LinkRegionDragBox: "Rtlc-BB1aJFRIM1lH4zN1",
+        EdgeDown: "i9zrHPy0-LgZONeZE4fgG",
+        LinkRegionGridBox: "_1Ob4AvWwUMx67yR7owjqse",
+        LinkRegionEdge: "_2stP4WlwIxd0-9GjYyI7vF",
+        TopLeft: "Clgi---P85XXv25yLZwB0",
+        Top: "_2Z9VyBAzofV3JvK__dECbX",
+        TopRight: "_2-8DbI8PAEkk6i_0CoUeKM",
+        Left: "_3ZwUw4ojIRguwHHAcn2Y4y",
+        Middle: "_1HecozzoSZfUZSci9dLkxN",
+        LinkRegionDelete: "_3Hb3w5_ECwPKcEr5QSAsNk",
+        LinkRegionSettings: "VazMl4niFnodlVJhHIGlL",
+        Right: "_3h5fKwHq9Uj2VGs8qxxtLl",
+        BottomLeft: "_2CQe0cOBOLqq6y6KAUXqH3",
+        Bottom: "sIHlK9sN2255-irERXD_V",
+        BottomRight: "_3lnwjSWK9Gh1dFkD46NTpP",
+        topleft: "_3W096h6Ka6U7sOZVa9lXQo",
+        top: "_1iRW1Msfh60zHqD-xe4EAk",
+        topright: "_1Yrl7AkNVVGwbM2vyL8yY1",
+        left: "_2iBrmAEyXuaKAeZ-g-4CPF",
+        right: "_15t6A4l27DY4KRL1aAUTTS",
+        bottomleft: "_3SdBcnCBApw0fQ886qgsUx",
+        bottom: "_2kzZ9Ilwo92sEI9LXTtZjN",
+        bottomright: "_2AKXkFPsIBpG-HeeN58Rti",
+        middle: "_1CS75ZrrDXna6xatw5ZvPR",
+        LinkRegionButtonContainer: "_1ZJ42NPmBFvIcOai51ZKv3",
+        DialogButton: "nN2Q1qGmO2BGMhVnIVMce",
+        LinkRegionInfo: "_3TiV7d40PX30wy8UghFCaJ",
+        LinkText: "_2TAc2iPcWUHTtwlg7urHv8",
+      };
+    },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports),
@@ -44,16 +76,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _() {
-        return _.createElement(
-          "div",
-          {
-            className: "STV_ReplayBanner",
-          },
-          (0, _._)("#DASHPlayerControls_IsReplay"),
-        );
+        return (0, _.jsx)("div", {
+          className: "STV_ReplayBanner",
+          children: (0, _._)("#DASHPlayerControls_IsReplay"),
+        });
       }
       const _ = (0, _._)((_) => {
         let _ = _.video;
@@ -69,43 +99,36 @@
         if (_ && _ != _._.Error && _.GetUserInputNeeded()) return null;
         if (_ == _._.Ready) return null;
         let _ = _ == _._.Loading;
-        return _.createElement(
-          "div",
-          {
-            className: "BroadcastVideoWatchState",
-            style: {
-              filter: "hue-rotate(40deg)",
-            },
+        return (0, _.jsxs)("div", {
+          className: "BroadcastVideoWatchState",
+          style: {
+            filter: "hue-rotate(40deg)",
           },
-          _ && _.createElement(_._, null),
-          !_ &&
-            _.createElement(
-              "div",
-              {
+          children: [
+            _ && (0, _.jsx)(_._, {}),
+            !_ &&
+              (0, _.jsx)("div", {
                 className: "BroadcastVideoWatchState_Text",
-              },
-              _,
-            ),
-        );
+                children: _,
+              }),
+          ],
+        });
       });
       class _ extends _.Component {
         OnClick() {
           _.BroadcastWatchStore.UserInputClickVideo(this.props.video);
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastVideoUserInputNeeded",
-              onClick: this.OnClick,
-            },
-            _.createElement(_.jGG, null),
-            _.createElement(
-              "span",
-              null,
-              (0, _._)("#DASHPlayerControls_ClickToPlay"),
-            ),
-          );
+          return (0, _.jsxs)("div", {
+            className: "BroadcastVideoUserInputNeeded",
+            onClick: this.OnClick,
+            children: [
+              (0, _.jsx)(_.jGG, {}),
+              (0, _.jsx)("span", {
+                children: (0, _._)("#DASHPlayerControls_ClickToPlay"),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnClick", null);
@@ -118,127 +141,99 @@
         }
         render() {
           let _ = this.props.stats;
-          return _.createElement(
-            "div",
-            {
-              className: "dash_video_stats",
-            },
-            _.createElement(
-              "button",
-              {
+          return (0, _.jsxs)("div", {
+            className: "dash_video_stats",
+            children: [
+              (0, _.jsx)("button", {
                 className: "dash_stat_close_button",
                 onClick: this.HideStats,
-              },
-              _.createElement(_.sED, null),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BufferingResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBufferingResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_PlaybackResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPlaybackResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_HtmlResolution"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetHTMLVideoResolutionToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_ContentServer"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetContentServerToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_StallEvents"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetStalledEventsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_FailedDownloads"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetFailedDownloadsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_TimeToFirstFrame"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetTimeToFirstFrameToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_PlaybackRate"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPlaybackRateForDisplay(),
-              ),
-            ),
-            _.createElement(_, {
-              stats: _,
-            }),
-          );
+                children: (0, _.jsx)(_.sED, {}),
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BufferingResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBufferingResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_PlaybackResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPlaybackResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_HtmlResolution"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetHTMLVideoResolutionToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_ContentServer"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetContentServerToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_StallEvents"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetStalledEventsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_FailedDownloads"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetFailedDownloadsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_TimeToFirstFrame"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetTimeToFirstFrameToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_PlaybackRate"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPlaybackRateForDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsx)(_, {
+                stats: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "HideStats", null), (_ = (0, _._)([_._], _));
@@ -265,20 +260,19 @@
                   ? _.GetBufferedVideoSegmentForDisplay(_)
                   : _.GetBufferedAudioSegmentForDisplay(_);
               __webpack_require__.push(
-                _.createElement(
+                (0, _.jsxs)(
                   "div",
                   {
-                    key: _ + _,
+                    children: [
+                      _,
+                      " ",
+                      (0, _.jsx)("span", {
+                        className: "videoStatsValue",
+                        children: _,
+                      }),
+                    ],
                   },
-                  _,
-                  " ",
-                  _.createElement(
-                    "span",
-                    {
-                      className: "videoStatsValue",
-                    },
-                    _,
-                  ),
+                  _ + _,
                 ),
               );
             }
@@ -289,12 +283,12 @@
                 : "#DASHPlayerStats_AudioNoRangeInformation",
             );
             __webpack_require__.push(
-              _.createElement(
+              (0, _.jsx)(
                 "div",
                 {
-                  key: _ + "none",
+                  children: _,
                 },
-                _,
+                _ + "none",
               ),
             );
           }
@@ -302,173 +296,134 @@
         }
         render() {
           let _ = this.props.stats;
-          return _.createElement(
-            "div",
-            {
-              className: "dash_video_quick_stats",
-            },
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BytesReceived"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBytesReceivedToDisplay(),
-              ),
-            ),
-            this.props.stats.BHasFrameInformation() &&
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#DASHPlayerStats_DroppedFrames"),
-                " ",
-                _.createElement(
-                  "span",
-                  {
+          return (0, _.jsxs)("div", {
+            className: "dash_video_quick_stats",
+            children: [
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BytesReceived"),
+                  " ",
+                  (0, _.jsx)("span", {
                     className: "videoStatsValue",
-                  },
-                  _.GetDroppedFramesToDisplay(),
-                ),
-              ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_VideoBuffered"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetVideoBufferedToDisplay(),
-                " ",
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_AudioBuffered"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetAudioBufferedToDisplay(),
-                " ",
-              ),
-            ),
-            this.createBufferedRange(!0),
-            this.createBufferedRange(!1),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthRequired"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwidthRequiredToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthVideo"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwithVideoToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_BandwidthNums"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetBandwidthStatsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_DownloadNums"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetDownloadTimeStatsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_ActiveDownloads"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetActiveDownloadsToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_VideoDownloadProgress"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetVideoDownloadProgressToDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_DroppingFrames"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetPersistentFrameDropsForDisplay(),
-              ),
-            ),
-            _.createElement(
-              "div",
-              null,
-              (0, _._)("#DASHPlayerStats_CurrentFPS"),
-              " ",
-              _.createElement(
-                "span",
-                {
-                  className: "videoStatsValue",
-                },
-                _.GetCurrentFPSForDisplay(),
-              ),
-            ),
-          );
+                    children: _.GetBytesReceivedToDisplay(),
+                  }),
+                ],
+              }),
+              this.props.stats.BHasFrameInformation() &&
+                (0, _.jsxs)("div", {
+                  children: [
+                    (0, _._)("#DASHPlayerStats_DroppedFrames"),
+                    " ",
+                    (0, _.jsx)("span", {
+                      className: "videoStatsValue",
+                      children: _.GetDroppedFramesToDisplay(),
+                    }),
+                  ],
+                }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_VideoBuffered"),
+                  " ",
+                  (0, _.jsxs)("span", {
+                    className: "videoStatsValue",
+                    children: [_.GetVideoBufferedToDisplay(), " "],
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_AudioBuffered"),
+                  " ",
+                  (0, _.jsxs)("span", {
+                    className: "videoStatsValue",
+                    children: [_.GetAudioBufferedToDisplay(), " "],
+                  }),
+                ],
+              }),
+              this.createBufferedRange(!0),
+              this.createBufferedRange(!1),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthRequired"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwidthRequiredToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthVideo"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwithVideoToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_BandwidthNums"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetBandwidthStatsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_DownloadNums"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetDownloadTimeStatsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_ActiveDownloads"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetActiveDownloadsToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_VideoDownloadProgress"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetVideoDownloadProgressToDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_DroppingFrames"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetPersistentFrameDropsForDisplay(),
+                  }),
+                ],
+              }),
+              (0, _.jsxs)("div", {
+                children: [
+                  (0, _._)("#DASHPlayerStats_CurrentFPS"),
+                  " ",
+                  (0, _.jsx)("span", {
+                    className: "videoStatsValue",
+                    children: _.GetCurrentFPSForDisplay(),
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -554,19 +509,21 @@
           let _,
             _,
             _ = 0,
-            _ = _.createElement("div", {
-              key: "separator",
-              className: "settingsMenuSeparator",
-            });
+            _ = (0, _.jsx)(
+              "div",
+              {
+                className: "settingsMenuSeparator",
+              },
+              "separator",
+            );
           if (
             (this.state.bSettingsOpen &&
               ((_ = !0),
               (_ = this.props.video.GetVideoRepresentations()),
               (_ = _.map((_) =>
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: _._,
                     onClick: () => {
                       this.props.video.SetVideoRepresentation(_),
                         this.setState({
@@ -574,20 +531,23 @@
                         });
                     },
                     bChecked: _.selected,
+                    children: _.displayName,
                   },
-                  _.displayName,
+                  _._,
                 ),
               )),
               _.push(_),
               _.push(
-                _.createElement(
+                (0, _.jsxs)(
                   _._,
                   {
-                    key: "statsToggle",
                     onClick: this.OnShowStats,
+                    children: [
+                      (0, _._)("#Broadcast_VideoContext_ToggleStats"),
+                      "\t",
+                    ],
                   },
-                  (0, _._)("#Broadcast_VideoContext_ToggleStats"),
-                  "\t",
+                  "statsToggle",
                 ),
               ),
               (_ = 0 - (21 * _.length + 32))),
@@ -596,10 +556,9 @@
             (_ = !0),
               (_ = []),
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: "none",
                     onClick: () => {
                       this.props.video.SetSubtitles(null),
                         this.setState({
@@ -608,17 +567,17 @@
                     },
                     className: "NoSubtitles",
                     bChecked: !1,
+                    children: (0, _._)("#Broadcast_None"),
                   },
-                  (0, _._)("#Broadcast_None"),
+                  "none",
                 ),
               );
             for (let _ = 0; _ < this.props.video.ListSubtitles().length; _++) {
               const _ = this.props.video.ListSubtitles()[_];
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: _.language,
                     onClick: () => {
                       this.props.video.SetSubtitles(_.language),
                         this.setState({
@@ -626,8 +585,9 @@
                         });
                     },
                     bChecked: "showing" === _.mode,
+                    children: _.label,
                   },
-                  _.label,
+                  _.language,
                 ),
               );
             }
@@ -635,51 +595,41 @@
           }
           const _ =
             this.props.video.BHasPlayer() && this.props.video.BHasTimedText();
-          return _.createElement(
-            "div",
-            {
-              className: "STV_BroadcastSettings",
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            className: "STV_BroadcastSettings",
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className:
                     "videoControlButton" + (_ ? " ClosedCaptionsActive" : ""),
                   onClick: this.OnSubtitlesClick,
                   ref: this.m_elSubtitlesButton,
-                },
-                _.createElement(_.N8C, null),
-              ),
-            _.createElement(
-              "div",
-              {
+                  children: (0, _.jsx)(_.N8C, {}),
+                }),
+              (0, _.jsx)("div", {
                 className:
                   "videoControlButton VideoSettings " +
                   (_ ? " VideoSettingsOpen" : ""),
                 onClick: this.OnVideoControlClick,
                 ref: this.bindSettingsButton,
-              },
-              _.createElement(_.wB_, null),
-            ),
-            _.createElement(_, {
-              video: __webpack_require__,
-            }),
-            _ &&
-              _.map((_) =>
-                _.createElement(
-                  "div",
-                  {
-                    key: _.key,
-                    className: "videoControlButton videoControlFitWidth",
-                  },
-                  _,
+                children: (0, _.jsx)(_.wB_, {}),
+              }),
+              (0, _.jsx)(_, {
+                video: __webpack_require__,
+              }),
+              _ &&
+                _.map((_) =>
+                  (0, _.jsx)(
+                    "div",
+                    {
+                      className: "videoControlButton videoControlFitWidth",
+                      children: _,
+                    },
+                    _.key,
+                  ),
                 ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+              _ &&
+                (0, _.jsx)("div", {
                   ref: this.BindSettingsPanel,
                   className: "STV_BroadcastSettingsPanel",
                   style: {
@@ -687,19 +637,13 @@
                     top: this.m_SettingsButtonPos[1],
                     marginTop: _,
                   },
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                  },
-                  _,
-                ),
-              ),
-            _ &&
-              _.createElement(
-                "div",
-                {
+                    children: _,
+                  }),
+                }),
+              _ &&
+                (0, _.jsx)("div", {
                   ref: this.m_elSubtitlesPanel,
                   className: "STV_BroadcastSettingsPanel SubtitlesMenu",
                   style: {
@@ -708,16 +652,13 @@
                     top: this.m_SubtitlesButtonPos[1],
                     marginTop: _,
                   },
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsx)("div", {
                     className: "STV_BroadcastSettingsMenuItems",
-                  },
-                  _,
-                ),
-              ),
-          );
+                    children: _,
+                  }),
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnVideoControlClick", null),
@@ -726,12 +667,13 @@
         (0, _._)([_._], _.prototype, "bindSettingsButton", null),
         (0, _._)([_._], _.prototype, "BindSettingsPanel", null),
         (0, _._)([_._], _.prototype, "OnShowStats", null);
+      const _ = !0;
       let _ = class extends _.Component {
         constructor(_) {
           super(_), (0, _._)(this);
         }
         k_nHideSliderTimeout = 1500;
-        m_bShowSlider = true;
+        m_bShowSlider = _;
         m_schHideSlider = new _._();
         m_bChildDragging = !1;
         m_bMouseOver = !1;
@@ -759,7 +701,7 @@
             this.m_bChildDragging ||
             this.m_schHideSlider.Schedule(
               this.k_nHideSliderTimeout,
-              () => (this.m_bShowSlider = true),
+              () => (this.m_bShowSlider = _),
             );
         }
         render() {
@@ -778,32 +720,25 @@
           return (
             this.m_bShowSlider && (_ += " ShowVolumeSlider"),
             _ && (_ += " muted"),
-            _.createElement(
-              "div",
-              {
-                className: _,
-                onMouseEnter: this.OnMouseEnter,
-                onMouseLeave: this.OnMouseLeave,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "BroadcastVolumeControl_FixedLayout",
-                },
-                _.createElement(
-                  "div",
-                  {
+            (0, _.jsx)("div", {
+              className: _,
+              onMouseEnter: this.OnMouseEnter,
+              onMouseLeave: this.OnMouseLeave,
+              children: (0, _.jsxs)("div", {
+                className: "BroadcastVolumeControl_FixedLayout",
+                children: [
+                  (0, _.jsx)("div", {
                     className: _,
                     onClick: this.ToggleMute,
-                  },
-                  _.createElement(_.fSs, null),
-                ),
-                _.createElement(_, {
-                  video: _,
-                  onDrag: this.OnChildDrag,
-                }),
-              ),
-            )
+                    children: (0, _.jsx)(_.fSs, {}),
+                  }),
+                  (0, _.jsx)(_, {
+                    video: _,
+                    onDrag: this.OnChildDrag,
+                  }),
+                ],
+              }),
+            })
           );
         }
       };
@@ -872,24 +807,23 @@
             _ = {
               width: `${_}%`,
             };
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastVolumeSlider",
-              onMouseDown: this.OnMouseDown,
-            },
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Track",
-            }),
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Fill",
-              style: _,
-            }),
-            _.createElement("div", {
-              className: "BroadcastVolumeSlider_Thumb",
-              style: _,
-            }),
-          );
+          return (0, _.jsxs)("div", {
+            className: "BroadcastVolumeSlider",
+            onMouseDown: this.OnMouseDown,
+            children: [
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Track",
+              }),
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Fill",
+                style: _,
+              }),
+              (0, _.jsx)("div", {
+                className: "BroadcastVolumeSlider_Thumb",
+                style: _,
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -1094,7 +1028,9 @@
         OnContextMenu(_) {
           this.state.bFullscreen ||
             ((0, _._)(
-              _.createElement(_._, null, this.GetContextMenuItems()),
+              (0, _.jsx)(_._, {
+                children: this.GetContextMenuItems(),
+              }),
               _,
             ),
             _.preventDefault());
@@ -1122,31 +1058,31 @@
           let _ = _.GetBroadcastInfo();
           return (
             _.push(
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: "togglestats",
                   bChecked: this.state.bShowStats,
                   onSelected: (_) => {
                     this.ToggleStatsView(_);
                   },
+                  children: (0, _._)("#Broadcast_VideoContext_ToggleStats"),
                 },
-                (0, _._)("#Broadcast_VideoContext_ToggleStats"),
+                "togglestats",
               ),
             ),
             _ &&
               "0" != _.m_strAppId &&
               Number.parseInt(_.m_strAppId) != _._ &&
               _.push(
-                _.createElement(
+                (0, _.jsx)(
                   _._,
                   {
-                    key: "visitstore",
                     onSelected: (_) => {
                       this.ShowStorePage(_);
                     },
+                    children: (0, _._)("#Broadcast_VideoContext_OpenStore"),
                   },
-                  (0, _._)("#Broadcast_VideoContext_OpenStore"),
+                  "visitstore",
                 ),
               ),
             _
@@ -1204,108 +1140,110 @@
             !this.state.bFullscreen &&
               this.props.onTheaterMode &&
               _.push(
-                _.createElement("div", {
-                  key: "ChatPosToggle ChatTheaterToggle",
-                  onClick: this.props.onTheaterMode,
-                  title: (0, _._)("#Broadcast_View_Theater"),
-                  className: "BroadcastTheaterToggle",
-                }),
+                (0, _.jsx)(
+                  "div",
+                  {
+                    onClick: this.props.onTheaterMode,
+                    title: (0, _._)("#Broadcast_View_Theater"),
+                    className: "BroadcastTheaterToggle",
+                  },
+                  "ChatPosToggle ChatTheaterToggle",
+                ),
               ),
             _.push(
-              _.createElement("div", {
-                key: "FullscreenToggle",
-                title: (0, _._)("#Broadcast_View_Fullscreen"),
-                onClick: this.OnToggleFullscreen,
-                className: "BroadcastFullscreenToggle",
-              }),
+              (0, _.jsx)(
+                "div",
+                {
+                  title: (0, _._)("#Broadcast_View_Fullscreen"),
+                  onClick: this.OnToggleFullscreen,
+                  className: "BroadcastFullscreenToggle",
+                },
+                "FullscreenToggle",
+              ),
             );
           const _ = _ && !this.BHideVideoControls(),
             _ = _ && !this.state.bFullscreen,
             _ =
               this.props.fnRenderBroadcastContext &&
               this.props.fnRenderBroadcastContext();
-          return _.createElement(
-            "div",
-            {
-              ref: this.BindBroadcastPlayerRef,
-              className: _,
-              onMouseMove: this.OnMouseMove,
-              onClick: this.OnMouseMove,
-              onMouseLeave: this.OnMouseLeave,
-              onContextMenu: this.OnContextMenu,
-              onMouseDown: this.OnMouseDown,
-            },
-            _ &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)("div", {
+            ref: this.BindBroadcastPlayerRef,
+            className: _,
+            onMouseMove: this.OnMouseMove,
+            onClick: this.OnMouseMove,
+            onMouseLeave: this.OnMouseLeave,
+            onContextMenu: this.OnContextMenu,
+            onMouseDown: this.OnMouseDown,
+            children: [
+              _ &&
+                (0, _.jsx)("div", {
                   className: _().BroadcastContext,
-                },
-                _,
-              ),
-            _ && _.createElement(_, null),
-            this.props.showVideoBackgroundBlur &&
-              _.createElement(_._, {
-                className: "videoBlur",
-                elementRef: this.m_elVideo,
-                updateRate: 33,
-                width: 320,
-                height: 180,
-                reductionFactor: 10,
-                blurAmount: 5,
+                  children: _,
+                }),
+              _ && (0, _.jsx)(_, {}),
+              this.props.showVideoBackgroundBlur &&
+                (0, _.jsx)(_._, {
+                  className: "videoBlur",
+                  elementRef: this.m_elVideo,
+                  updateRate: 33,
+                  width: 320,
+                  height: 180,
+                  reductionFactor: 10,
+                  blurAmount: 5,
+                }),
+              (0, _.jsx)("video", {
+                className: "videoSrc",
+                ref: this.BindVideoRef,
+                muted: this.props.bMuted ?? !0,
+                autoPlay: !0,
+                playsInline: !0,
+                controls: !1,
+                onVolumeChange: this.props.fnVolumeChanged,
+                onClick: this.props.fnVideoClick,
               }),
-            _.createElement("video", {
-              className: "videoSrc",
-              ref: this.BindVideoRef,
-              muted: this.props.bMuted ?? !0,
-              autoPlay: !0,
-              playsInline: !0,
-              controls: !1,
-              onVolumeChange: this.props.fnVolumeChanged,
-              onClick: this.props.fnVideoClick,
-            }),
-            this.props.linkRegions
-              ? _.createElement(_, {
-                  linkRegions: this.props.linkRegions,
-                  editMode: this.props.editMode,
-                  onSaveLinkRegions: this.props.onSaveLinkRegions,
-                })
-              : null,
-            this.props.linkElement,
-            _ &&
-              _.createElement("img", {
-                loading: "lazy",
-                className: (0, _._)(
-                  _().BroadcastPlaceholderImg,
-                  "BroadcastPlaceholderImg",
-                ),
-                src: this.state.strInitialCapsuleImageUrl,
-              }),
-            _ &&
-              _.createElement(_, {
-                video: _,
-                actions: _,
-                onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
-                onShowStats: this.ToggleStatsView,
-                bIncludeClipEditor: this.props.bIncludeClipEditor,
-              }),
-            _ &&
-              _.createElement(_, {
-                onClick: this.props.onRequestClose,
-              }),
-            _ &&
-              _.createElement(_, {
-                stats: _.GetDASHPlayerStats(),
-                closeStats: this.CloseStats,
-              }),
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(_, {
+              this.props.linkRegions
+                ? (0, _.jsx)(_, {
+                    linkRegions: this.props.linkRegions,
+                    editMode: this.props.editMode,
+                    onSaveLinkRegions: this.props.onSaveLinkRegions,
+                  })
+                : null,
+              this.props.linkElement,
+              _ &&
+                (0, _.jsx)("img", {
+                  loading: "lazy",
+                  className: (0, _._)(
+                    _().BroadcastPlaceholderImg,
+                    "BroadcastPlaceholderImg",
+                  ),
+                  src: this.state.strInitialCapsuleImageUrl,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                  actions: _,
+                  onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
+                  onShowStats: this.ToggleStatsView,
+                  bIncludeClipEditor: this.props.bIncludeClipEditor,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  onClick: this.props.onRequestClose,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  stats: _.GetDASHPlayerStats(),
+                  closeStats: this.CloseStats,
+                }),
+              (0, _.jsx)(_, {
                 video: _,
               }),
-          );
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "BindBroadcastPlayerRef", null),
@@ -1330,62 +1268,56 @@
           const { video: _ } = this.props;
           if (!_) return null;
           let _ = _.has_segments;
-          return _.createElement(
-            "div",
-            {
-              className: "videoControls",
-            },
-            _.createElement(_, {
-              steamID: this.props.video.GetBroadcastSteamID(),
-              bHideThumbnail: !0,
-              bVerticalBroadcastChat: !0,
-              onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
-            }),
-            _.createElement(
-              "div",
-              {
-                className: "videoControlsBottom" + (_ ? "" : " noSegments"),
-              },
-              _.createElement(_, {
-                video: _,
-                bIncludeClipEditor: this.props.bIncludeClipEditor,
+          return (0, _.jsxs)("div", {
+            className: "videoControls",
+            children: [
+              (0, _.jsx)(_, {
+                steamID: this.props.video.GetBroadcastSteamID(),
+                bHideThumbnail: !0,
+                bVerticalBroadcastChat: !0,
+                onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
               }),
-              _.createElement(
-                "div",
-                {
-                  className: "STV_BroadcastController",
-                },
-                _.createElement("div", {
-                  className: "videoControlsButtons LeftSpacer",
-                }),
-                _.createElement(_, {
-                  video: _,
-                }),
-                _.createElement(_, {
-                  video: _,
-                }),
-                _.createElement(_, {
-                  video: _,
-                  actions: this.props.actions,
-                  onShowStats: this.props.onShowStats,
-                }),
-              ),
-            ),
-          );
+              (0, _.jsxs)("div", {
+                className: "videoControlsBottom" + (_ ? "" : " noSegments"),
+                children: [
+                  (0, _.jsx)(_, {
+                    video: _,
+                    bIncludeClipEditor: this.props.bIncludeClipEditor,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: "STV_BroadcastController",
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "videoControlsButtons LeftSpacer",
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        video: _,
+                        actions: this.props.actions,
+                        onShowStats: this.props.onShowStats,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
       class _ extends _.PureComponent {
         render() {
           return this.props.onClick
-            ? _.createElement(
-                "div",
-                {
-                  className: "STV_BroadcastClose",
-                  onClick: this.props.onClick,
-                },
-                _.createElement(_.sED, null),
-              )
+            ? (0, _.jsx)("div", {
+                className: "STV_BroadcastClose",
+                onClick: this.props.onClick,
+                children: (0, _.jsx)(_.sED, {}),
+              })
             : null;
         }
       }
@@ -1399,64 +1331,55 @@
         render() {
           let _ = this.props.video,
             _ = _.CanSeek();
-          return _.createElement(
-            "div",
-            {
-              className: "videoControlsButtons PlayControls",
-            },
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "videoControlButton videoControlJump controlFlip",
-                  onClick: this.OnJumpBackward,
-                },
-                _.createElement(_.tID, {
-                  bHidePostArrow: !0,
-                  bHidePreArrow: !0,
-                  bShowJumpAheadBox: !0,
-                  bFlipHorizontal: !0,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: "jumpAheadValue",
-                  },
-                  _,
-                ),
-              ),
-            _.createElement(_, {
-              video: _,
-            }),
-            _ &&
-              _.createElement(
-                "div",
-                {
-                  className: "videoControlButton videoControlJump",
-                  onClick: this.OnJumpForward,
-                },
-                _.createElement(_.tID, {
-                  bHidePostArrow: !0,
-                  bHidePreArrow: !0,
-                  bShowJumpAheadBox: !0,
-                  bFlipHorizontal: !1,
-                }),
-                _.createElement(
-                  "div",
-                  {
-                    className: "jumpAheadValue",
-                  },
-                  _,
-                ),
-              ),
-            _ &&
-              _.createElement(_, {
+          return (0, _.jsxs)("div", {
+            className: "videoControlsButtons PlayControls",
+            children: [
+              (0, _.jsx)(_, {
                 video: _,
               }),
-          );
+              _ &&
+                (0, _.jsxs)("div", {
+                  className: "videoControlButton videoControlJump controlFlip",
+                  onClick: this.OnJumpBackward,
+                  children: [
+                    (0, _.jsx)(_.tID, {
+                      bHidePostArrow: !0,
+                      bHidePreArrow: !0,
+                      bShowJumpAheadBox: !0,
+                      bFlipHorizontal: !0,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "jumpAheadValue",
+                      children: _,
+                    }),
+                  ],
+                }),
+              (0, _.jsx)(_, {
+                video: _,
+              }),
+              _ &&
+                (0, _.jsxs)("div", {
+                  className: "videoControlButton videoControlJump",
+                  onClick: this.OnJumpForward,
+                  children: [
+                    (0, _.jsx)(_.tID, {
+                      bHidePostArrow: !0,
+                      bHidePreArrow: !0,
+                      bShowJumpAheadBox: !0,
+                      bFlipHorizontal: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: "jumpAheadValue",
+                      children: _,
+                    }),
+                  ],
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  video: _,
+                }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "OnJumpBackward", null),
@@ -1464,39 +1387,34 @@
       const _ = (0, _._)((_) => {
         if (_.video.IsBroadcastClip() || _.video.IsBroadcastVOD()) return null;
         let _ = _.video.IsOnLiveEdge();
-        return _.createElement(
-          "div",
-          {
-            className: "videoControlsButtons GoLive",
-          },
-          _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton videoControlGoLive" +
-                (_ ? " isLiveEdge" : ""),
-              onClick: _
-                ? null
-                : (_) => {
-                    _.video.JumpToLiveEdge();
-                  },
-            },
-            _.createElement(_.tID, {
-              bHidePreArrow: !0,
-              bHidePostArrow: !0,
-              bFlipHorizontal: !1,
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("div", {
+          className: "videoControlsButtons GoLive",
+          children: (0, _.jsxs)("div", {
+            className:
+              "videoControlButton videoControlGoLive" +
+              (_ ? " isLiveEdge" : ""),
+            onClick: _
+              ? null
+              : (_) => {
+                  _.video.JumpToLiveEdge();
+                },
+            children: [
+              (0, _.jsx)(_.tID, {
+                bHidePreArrow: !0,
+                bHidePostArrow: !0,
+                bFlipHorizontal: !1,
+              }),
+              (0, _.jsx)("div", {
                 className: "jumpGoLive",
-              },
-              (0, _._)(
-                _ ? "#DASHPlayerControls_IsLive" : "#DASHPlayerControls_GoLive",
-              ),
-            ),
-          ),
-        );
+                children: (0, _._)(
+                  _
+                    ? "#DASHPlayerControls_IsLive"
+                    : "#DASHPlayerControls_GoLive",
+                ),
+              }),
+            ],
+          }),
+        });
       });
       let _ = class extends _.Component {
         OnTogglePlayPause() {
@@ -1504,14 +1422,11 @@
         }
         render() {
           let _ = this.props.video.IsPaused();
-          return _.createElement(
-            "div",
-            {
-              className: "videoControlButton buttonPlayPause",
-              onClick: this.OnTogglePlayPause,
-            },
-            _ ? _.createElement(_.jGG, null) : _.createElement(_.vRz, null),
-          );
+          return (0, _.jsx)("div", {
+            className: "videoControlButton buttonPlayPause",
+            onClick: this.OnTogglePlayPause,
+            children: _ ? (0, _.jsx)(_.jGG, {}) : (0, _.jsx)(_.vRz, {}),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnTogglePlayPause", null),
@@ -1540,20 +1455,17 @@
         }
         render() {
           let _ = this.props.video.BHasMarkersOrSegments();
-          return _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton jumpToMarker controlFlip" +
-                (_ ? "" : " noMarkersOrSegments") +
-                (this.has_previous_marker ? "" : " noMarkersInDirection"),
-              onClick: this.OnJumpToPreviousMarkerClicked,
-            },
-            _.createElement(_.tID, {
+          return (0, _.jsx)("div", {
+            className:
+              "videoControlButton jumpToMarker controlFlip" +
+              (_ ? "" : " noMarkersOrSegments") +
+              (this.has_previous_marker ? "" : " noMarkersInDirection"),
+            onClick: this.OnJumpToPreviousMarkerClicked,
+            children: (0, _.jsx)(_.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !0,
             }),
-          );
+          });
         }
       };
       (0, _._)([_._], _.prototype, "video", void 0),
@@ -1584,20 +1496,17 @@
         }
         render() {
           let _ = this.props.video.BHasMarkersOrSegments();
-          return _.createElement(
-            "div",
-            {
-              className:
-                "videoControlButton jumpToMarker" +
-                (_ ? "" : " noMarkersOrSegments") +
-                (this.has_next_marker ? "" : " noMarkersInDirection"),
-              onClick: this.OnJumpToNextMarkerClicked,
-            },
-            _.createElement(_.tID, {
+          return (0, _.jsx)("div", {
+            className:
+              "videoControlButton jumpToMarker" +
+              (_ ? "" : " noMarkersOrSegments") +
+              (this.has_next_marker ? "" : " noMarkersInDirection"),
+            onClick: this.OnJumpToNextMarkerClicked,
+            children: (0, _.jsx)(_.tID, {
               bHidePostArrow: !0,
               bFlipHorizontal: !1,
             }),
-          );
+          });
         }
       };
       (0, _._)([_._], _.prototype, "video", void 0),
@@ -1605,26 +1514,20 @@
         (0, _._)([_._], _.prototype, "OnJumpToNextMarkerClicked", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) =>
-        _.createElement(
-          "div",
-          {
-            className: "timelineMarker",
-            title: _.label,
-            style: {
-              left: _.pos + "%",
-            },
-            onMouseEnter: () => _.onMouseEnter(_.pos),
-            onMouseLeave: _.onMouseLeave,
-            onMouseDown: _.onMouseDown ? _.onMouseDown : void 0,
+        (0, _.jsx)("div", {
+          className: "timelineMarker",
+          title: _.label,
+          style: {
+            left: _.pos + "%",
           },
-          _.createElement(
-            "div",
-            {
-              className: "timelineMarkerIcon",
-            },
-            _.createElement(_.Dp6, null),
-          ),
-        );
+          onMouseEnter: () => _.onMouseEnter(_.pos),
+          onMouseLeave: _.onMouseLeave,
+          onMouseDown: _.onMouseDown ? _.onMouseDown : void 0,
+          children: (0, _.jsx)("div", {
+            className: "timelineMarkerIcon",
+            children: (0, _.jsx)(_.Dp6, {}),
+          }),
+        });
       function _(_) {
         let _ = _.startPos,
           _ = _.endPos,
@@ -1632,40 +1535,36 @@
           _ = 1;
         return (
           _ < 0 && ((_ = (_ - _) / 10), (_ = 0), (_ = " hideFront")),
-          _.createElement(
-            "div",
-            {
-              className: "STV_timelineSegment" + _,
-              style: {
-                left: _ + "%",
-                width: _ - _ + "%",
-                opacity: _,
-              },
-              onClick: _.onClick,
+          (0, _.jsxs)("div", {
+            className: "STV_timelineSegment" + _,
+            style: {
+              left: _ + "%",
+              width: _ - _ + "%",
+              opacity: _,
             },
-            _.createElement("div", {
-              className: "STV_timelineSegmentFrontFill",
-              style: {
-                borderColor: "rgb(" + _.color + ")",
-              },
-            }),
-            _.createElement(
-              "div",
-              {
+            onClick: _.onClick,
+            children: [
+              (0, _.jsx)("div", {
+                className: "STV_timelineSegmentFrontFill",
+                style: {
+                  borderColor: "rgb(" + _.color + ")",
+                },
+              }),
+              (0, _.jsx)("div", {
                 className: "STV_timelineSegmentLabel",
                 style: {
                   color: "rgb(" + _.color + ")",
                 },
-              },
-              _.label,
-            ),
-            _.createElement("div", {
-              className: "STV_timelineSegmentBackFill",
-              style: {
-                borderColor: "rgb(" + _.color + ")",
-              },
-            }),
-          )
+                children: _.label,
+              }),
+              (0, _.jsx)("div", {
+                className: "STV_timelineSegmentBackFill",
+                style: {
+                  borderColor: "rgb(" + _.color + ")",
+                },
+              }),
+            ],
+          })
         );
       }
       let _ = class extends _.Component {
@@ -1833,13 +1732,16 @@
             _ < 0 ||
               _ > 100 ||
               _.push(
-                _.createElement(_, {
-                  key: _,
-                  pos: _,
-                  label: _.strTemplateName,
-                  onMouseEnter: this.OnMarkerMouseEnter,
-                  onMouseLeave: this.OnMarkerMouseLeave,
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    pos: _,
+                    label: _.strTemplateName,
+                    onMouseEnter: this.OnMarkerMouseEnter,
+                    onMouseLeave: this.OnMarkerMouseLeave,
+                  },
+                  _,
+                ),
               );
           });
           let _ = [];
@@ -1849,14 +1751,17 @@
             let _ = _.GetPercentOffsetFromTime(_.nTimeEnd, _._.Timeline);
             _ < 0 ||
               _.push(
-                _.createElement(_, {
-                  key: _,
-                  startPos: _,
-                  endPos: _,
-                  label: _.strTemplateName,
-                  color: _.color,
-                  onClick: (_) => this.OnSegmentClick(_.nTimeStart),
-                }),
+                (0, _.jsx)(
+                  _,
+                  {
+                    startPos: _,
+                    endPos: _,
+                    label: _.strTemplateName,
+                    color: _.color,
+                    onClick: (_) => this.OnSegmentClick(_.nTimeStart),
+                  },
+                  _,
+                ),
               );
           });
           const _ = _.GetPercentOffsetFromTime(
@@ -1866,141 +1771,120 @@
             _ = _.GetPercentOffsetFromTime(_.m_editorEndTime, _._.Timeline),
             _ = this.props.bIncludeClipEditor
               ? [
-                  _.createElement(_, {
-                    key: "start",
-                    pos: _,
-                    label: (0, _._)("#DASHPlayerControls_Start"),
-                    onMouseEnter: this.OnMarkerMouseEnter,
-                    onMouseLeave: this.OnMarkerMouseLeave,
-                    onMouseDown: (_) => this.OnMouseDown(_, "start"),
-                  }),
-                  _.createElement(_, {
-                    key: "end",
-                    pos: _,
-                    label: (0, _._)("#DASHPlayerControls_End"),
-                    onMouseEnter: this.OnMarkerMouseEnter,
-                    onMouseLeave: this.OnMarkerMouseLeave,
-                    onMouseDown: (_) => this.OnMouseDown(_, "end"),
-                  }),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      pos: _,
+                      label: (0, _._)("#DASHPlayerControls_Start"),
+                      onMouseEnter: this.OnMarkerMouseEnter,
+                      onMouseLeave: this.OnMarkerMouseLeave,
+                      onMouseDown: (_) => this.OnMouseDown(_, "start"),
+                    },
+                    "start",
+                  ),
+                  (0, _.jsx)(
+                    _,
+                    {
+                      pos: _,
+                      label: (0, _._)("#DASHPlayerControls_End"),
+                      onMouseEnter: this.OnMarkerMouseEnter,
+                      onMouseLeave: this.OnMarkerMouseLeave,
+                      onMouseDown: (_) => this.OnMouseDown(_, "end"),
+                    },
+                    "end",
+                  ),
                 ]
               : [];
-          return _.createElement(
-            "div",
-            {
-              className: "videoTimelineMain",
-              tabIndex: 0,
-              onKeyDown: this.OnKeyDown,
-            },
-            _.createElement(
-              "div",
-              {
-                className: _,
-              },
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsx)("div", {
+            className: "videoTimelineMain",
+            tabIndex: 0,
+            onKeyDown: this.OnKeyDown,
+            children: (0, _.jsxs)("div", {
+              className: _,
+              children: [
+                (0, _.jsx)("div", {
                   className: "DialogLabel",
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   className: "STV_timelineSegmentsContainer",
-                },
-                _,
-              ),
-              _.createElement(
-                "div",
-                {
+                  children: _,
+                }),
+                (0, _.jsx)("div", {
                   onMouseDown: this.OnMouseDown,
                   onMouseMove: this.OnMouseHoverMove,
                   onMouseLeave: this.OnMouseHoverLeave,
                   ref: this.m_elSlider,
-                },
-                _.createElement(
-                  "div",
-                  {
+                  children: (0, _.jsxs)("div", {
                     className: "VideoTimelineSlider",
-                  },
-                  _.createElement("div", {
-                    className: "STV_timelineValue",
-                    style: _,
-                  }),
-                  _.createElement("div", {
-                    className: "STV_timelineGhostValue",
-                    style: _,
-                  }),
-                  _.createElement("div", {
-                    className: "STV_timelineNoVideo",
-                    style: _,
-                  }),
-                  _,
-                  _,
-                  Boolean(this.state.hoverX) &&
-                    _.createElement(
-                      "div",
-                      {
-                        key: "grabbertime",
-                        style: {
-                          position: "absolute",
-                          left: this.state.hoverX - 75,
-                          bottom: "30px",
-                        },
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          style: {
-                            position: "relative",
-                            display: "flex",
-                            justifyContent: "center",
-                          },
-                        },
-                        this.state.thumbnailURL &&
-                          _.createElement("img", {
-                            style: {
-                              width: "150px",
-                            },
-                            src: this.state.thumbnailURL,
-                          }),
-                        _.createElement(
-                          "span",
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineValue",
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineGhostValue",
+                        style: _,
+                      }),
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineNoVideo",
+                        style: _,
+                      }),
+                      _,
+                      _,
+                      Boolean(this.state.hoverX) &&
+                        (0, _.jsx)(
+                          "div",
                           {
-                            className: "STV_timelineGrabberValue",
                             style: {
                               position: "absolute",
-                              bottom: "4px",
+                              left: this.state.hoverX - 75,
+                              bottom: "30px",
                             },
+                            children: (0, _.jsxs)("div", {
+                              style: {
+                                position: "relative",
+                                display: "flex",
+                                justifyContent: "center",
+                              },
+                              children: [
+                                this.state.thumbnailURL &&
+                                  (0, _.jsx)("img", {
+                                    style: {
+                                      width: "150px",
+                                    },
+                                    src: this.state.thumbnailURL,
+                                  }),
+                                (0, _.jsx)("span", {
+                                  className: "STV_timelineGrabberValue",
+                                  style: {
+                                    position: "absolute",
+                                    bottom: "4px",
+                                  },
+                                  children: _,
+                                }),
+                              ],
+                            }),
                           },
-                          _,
+                          "grabbertime",
                         ),
-                      ),
-                    ),
-                  _.createElement(
-                    "div",
-                    {
-                      className: "STV_timelineGrabber_Wrapper",
-                      style: _,
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: "STV_timelineGrabber" + _,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: "STV_timelineGrabberArrow",
-                        },
-                        _.createElement(_.apU, null),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          );
+                      (0, _.jsx)("div", {
+                        className: "STV_timelineGrabber_Wrapper",
+                        style: _,
+                        children: (0, _.jsx)("div", {
+                          className: "STV_timelineGrabber" + _,
+                          children: (0, _.jsx)("div", {
+                            className: "STV_timelineGrabberArrow",
+                            children: (0, _.jsx)(_.apU, {}),
+                          }),
+                        }),
+                      }),
+                    ],
+                  }),
+                }),
+              ],
+            }),
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnMouseDown", null),
@@ -2037,7 +1921,7 @@
         RenderStreamSwitcher() {
           const _ = this.props.steamID;
           return _._.stream[_]
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 value: _,
                 options: _._.stream,
                 onChange: this.props.onLocalStreamChange,
@@ -2059,96 +1943,78 @@
             this.props.bVerticalBroadcastChat &&
             _ &&
             _._.gidEvent;
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastDetails",
-            },
-            !this.props.bHideThumbnail &&
-              _.createElement(_._, {
-                className: "broadcastDetailsThumbBlur",
-                src: _.m_strThumbnailUrl,
-                draggable: !1,
-                duration: 2500,
-              }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastDetails",
+            children: [
+              !this.props.bHideThumbnail &&
+                (0, _.jsx)(_._, {
+                  className: "broadcastDetailsThumbBlur",
+                  src: _.m_strThumbnailUrl,
+                  draggable: !1,
+                  duration: 2500,
+                }),
+              (0, _.jsxs)("div", {
                 className: "BroadcastDetailsHeader",
-              },
-              _ &&
-                _.m_strAppTitle &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "displayColumn",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: "Info",
-                    },
-                    _.createElement(
-                      "span",
-                      {
-                        className: "AppTitle",
-                      },
-                      _.m_strAppTitle,
-                    ),
-                    _.m_strTitle &&
-                      _.createElement(
-                        "span",
-                        {
-                          className: "BroadcastTitle",
-                        },
-                        " - ",
-                        _.m_strTitle,
-                      ),
-                    this.props.onLocalStreamChange &&
-                      this.RenderStreamSwitcher(),
-                  ),
+                children: [
                   _ &&
-                    _.createElement(
-                      "div",
-                      {
-                        className: "BroadcastDetailsHeader_ViewerCount",
-                      },
-                      _.createElement(_.y_e, null),
-                      (0, _._)("#Broadcast_ViewerCount", _),
-                    ),
-                ),
+                    _.m_strAppTitle &&
+                    (0, _.jsxs)("div", {
+                      className: "displayColumn",
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: "Info",
+                          children: [
+                            (0, _.jsx)("span", {
+                              className: "AppTitle",
+                              children: _.m_strAppTitle,
+                            }),
+                            _.m_strTitle &&
+                              (0, _.jsxs)("span", {
+                                className: "BroadcastTitle",
+                                children: [" - ", _.m_strTitle],
+                              }),
+                            this.props.onLocalStreamChange &&
+                              this.RenderStreamSwitcher(),
+                          ],
+                        }),
+                        _ &&
+                          (0, _.jsxs)("div", {
+                            className: "BroadcastDetailsHeader_ViewerCount",
+                            children: [
+                              (0, _.jsx)(_.y_e, {}),
+                              (0, _._)("#Broadcast_ViewerCount", _),
+                            ],
+                          }),
+                      ],
+                    }),
+                  _ &&
+                    this.props.onOpenLinkInNewWindow &&
+                    (0, _.jsx)("div", {
+                      className: "Actions",
+                      children: (0, _.jsx)("div", {
+                        onClick: (_) =>
+                          this.props.onOpenLinkInNewWindow(_, _._.link),
+                        className: "BroadcastLink",
+                        children: _._.linkName,
+                      }),
+                    }),
+                ],
+              }),
               _ &&
-                this.props.onOpenLinkInNewWindow &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "Actions",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      onClick: (_) =>
-                        this.props.onOpenLinkInNewWindow(_, _._.link),
-                      className: "BroadcastLink",
-                    },
-                    _._.linkName,
-                  ),
-                ),
-            ),
-            _ &&
-              _.createElement(_._, {
-                gidEvent: _._.gidEvent,
-              }),
-            _ &&
-              _.createElement(_._, {
-                _:
-                  _._.bValid && _._.stream && _._.stream[_.m_steamIDBroadcast]
-                    ? _._.appID
-                    : parseInt(_.m_strAppId),
-                type: "game",
-                bPreferAssetWithoutOverride: !1,
-              }),
-          );
+                (0, _.jsx)(_._, {
+                  gidEvent: _._.gidEvent,
+                }),
+              _ &&
+                (0, _.jsx)(_._, {
+                  _:
+                    _._.bValid && _._.stream && _._.stream[_.m_steamIDBroadcast]
+                      ? _._.appID
+                      : parseInt(_.m_strAppId),
+                  type: "game",
+                  bPreferAssetWithoutOverride: !1,
+                }),
+            ],
+          });
         }
       };
       _ = (0, _._)([_._], _);
@@ -2160,36 +2026,39 @@
               onChange: _,
             } = this.props,
             _ = Object.keys(_).map((_) =>
-              _.createElement(
+              (0, _.jsx)(
                 _._,
                 {
-                  key: _,
                   onSelected: () => _(_),
                   bChecked: _ === __webpack_require__,
+                  children: (0, _._)(_[_]),
                 },
-                (0, _._)(_[_]),
+                _,
               ),
             );
-          (0, _._)(_.createElement(_._, null, _), _);
+          (0, _._)(
+            (0, _.jsx)(_._, {
+              children: _,
+            }),
+            _,
+          );
         }
         render() {
           const { value: _, options: _ } = this.props,
             _ = _[_];
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastLanguage",
-              onClick: this.showContextMenu,
-            },
-            _.createElement("span", null, " - ", (0, _._)(_)),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastLanguage",
+            onClick: this.showContextMenu,
+            children: [
+              (0, _.jsxs)("span", {
+                children: [" - ", (0, _._)(_)],
+              }),
+              (0, _.jsx)("div", {
                 className: "ContextMenuButton",
-              },
-              _.createElement(_.GB9, null),
-            ),
-          );
+                children: (0, _.jsx)(_.GB9, {}),
+              }),
+            ],
+          });
         }
       }
       (0, _._)([_._], _.prototype, "showContextMenu", null);
@@ -2277,87 +2146,73 @@
             );
         }
         render() {
-          return _.createElement(
-            "div",
-            {
-              className: "LinkOverlayContainer",
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "LinkOverlayContainer",
+            children: [
+              (0, _.jsxs)("div", {
                 className: "LinkOverlayValidRegion",
-              },
-              !this.props.editMode && this.props.linkRegions
-                ? this.props.linkRegions.map((_) => {
-                    const _ = (0, _._)(_.url);
-                    return _.createElement(
-                      _._,
-                      {
-                        key: _.link_index,
-                        href: _.url,
-                        bForceExternal: _,
-                        bUseLinkFilter: _,
-                      },
-                      _.createElement(
-                        "div",
-                        {
-                          className: "LinkRegion",
-                          style: {
-                            left: _.left + "%",
-                            top: _.top + "%",
-                            width: _.width + "%",
-                            height: _.height + "%",
-                          },
-                        },
-                        _.createElement(
-                          "div",
+                children: [
+                  !this.props.editMode && this.props.linkRegions
+                    ? this.props.linkRegions.map((_) => {
+                        const _ = (0, _._)(_.url);
+                        return (0, _.jsx)(
+                          _._,
                           {
-                            className: "LinkRegionText",
+                            href: _.url,
+                            bForceExternal: _,
+                            bUseLinkFilter: _,
+                            children: (0, _.jsx)("div", {
+                              className: "LinkRegion",
+                              style: {
+                                left: _.left + "%",
+                                top: _.top + "%",
+                                width: _.width + "%",
+                                height: _.height + "%",
+                              },
+                              children: (0, _.jsxs)("div", {
+                                className: "LinkRegionText",
+                                children: [_.link_description, " "],
+                              }),
+                            }),
                           },
-                          _.link_description,
-                          " ",
-                        ),
+                          _.link_index,
+                        );
+                      })
+                    : null,
+                  this.props.editMode &&
+                    this.state.sizableRegion.map((_, _) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          index: _,
+                          deleteFn: this.DeleteRegion,
+                          updateFn: this.UpdatePanel,
+                          xPosPct: _.xPosPct,
+                          yPosPct: _.yPosPct,
+                          widthPct: _.widthPct,
+                          heightPct: _.heightPct,
+                          link_url: _.link_url,
+                          link_description: _.link_description,
+                        },
+                        100 * _ + _.xPosPct,
                       ),
-                    );
-                  })
-                : null,
-              this.props.editMode &&
-                this.state.sizableRegion.map((_, _) =>
-                  _.createElement(_._, {
-                    key: 100 * _ + _.xPosPct,
-                    index: _,
-                    deleteFn: this.DeleteRegion,
-                    updateFn: this.UpdatePanel,
-                    xPosPct: _.xPosPct,
-                    yPosPct: _.yPosPct,
-                    widthPct: _.widthPct,
-                    heightPct: _.heightPct,
-                    link_url: _.link_url,
-                    link_description: _.link_description,
-                  }),
-                ),
-              this.props.editMode &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "AddLinkRegion",
-                    onClick: this.AddLinkRegion,
-                  },
-                  (0, _._)("#SteamTV_AddLinkRegion"),
-                ),
-            ),
-            _.createElement(
-              "div",
-              {
+                    ),
+                  this.props.editMode &&
+                    (0, _.jsx)("div", {
+                      className: "AddLinkRegion",
+                      onClick: this.AddLinkRegion,
+                      children: (0, _._)("#SteamTV_AddLinkRegion"),
+                    }),
+                ],
+              }),
+              (0, _.jsx)("div", {
                 className: "LinkOverlayInvalidRegion",
-              },
-              _.createElement(
-                "div",
-                null,
-                (0, _._)("#SteamTV_LinkRegionReserved"),
-              ),
-            ),
-          );
+                children: (0, _.jsx)("div", {
+                  children: (0, _._)("#SteamTV_LinkRegionReserved"),
+                }),
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "AddLinkRegion", null),
@@ -2365,6 +2220,493 @@
         (0, _._)([_._], _.prototype, "OnSaveRegions", null),
         (0, _._)([_._], _.prototype, "DeleteRegion", null),
         (0, _._)([_._], _.prototype, "UpdatePanel", null),
+        (_ = (0, _._)([_._], _));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.topleft = "topleft"),
+          (_.top = "top"),
+          (_.topright = "topright"),
+          (_.left = "left"),
+          (_.middle = "middle"),
+          (_.right = "right"),
+          (_.bottomleft = "bottomleft"),
+          (_.bottom = "bottom"),
+          (_.bottomright = "bottomright");
+      })(_ || (_ = {}));
+      let _ = class extends _.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new _._();
+        m_strDescription = "";
+        m_aspectRatio = 1;
+        componentWillUnmount() {
+          this.m_listeners.Unregister();
+        }
+        constructor(_) {
+          super(_),
+            (this.state = {
+              curLeftPosPct: this.props.xPosPct,
+              curTopPosPct: this.props.yPosPct,
+              curRightPosPct: 100 - (this.props.widthPct + this.props.xPosPct),
+              curBottomPosPct:
+                100 - (this.props.yPosPct + this.props.heightPct),
+              curWidthPct: this.props.widthPct,
+              curHeightPct: this.props.heightPct,
+              EdgeDown: void 0,
+              text_link_url: this.props.link_url,
+              text_link_description: this.props.link_description,
+              bEditingLink: !1,
+              valid_link: this.validateUrl(this.props.link_url),
+            }),
+            (this.m_strDescription = this.props.link_description ?? ""),
+            (this.m_aspectRatio =
+              this.props.heightPct > 0 && this.props.widthPct > 0
+                ? this.props.widthPct / this.props.heightPct
+                : 1);
+        }
+        LinkRegionBoxRef(_) {
+          this.m_elLinkRegionBox = _;
+        }
+        OnMouseDown(_, _) {
+          this.m_elLinkRegionBox?.parentElement &&
+            this.m_elLinkRegionBox.ownerDocument.defaultView &&
+            ((this.m_fnMouseUp = (_) => {
+              this.OnMouseUp(_, _);
+            }),
+            (this.m_fnMouseMove = (_) => {
+              this.OnMouseMove(_, _);
+            }),
+            this.setState({
+              EdgeDown: _,
+            }),
+            (this.m_rectLinkRegion =
+              this.m_elLinkRegionBox.parentElement.getBoundingClientRect()),
+            (this.m_nLocalOffsetXPct =
+              ((_.clientX - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+              this.state.curLeftPosPct),
+            (this.m_nLocalOffsetYPct =
+              ((_.clientY - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+              this.state.curTopPosPct),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mousemove",
+              this.m_fnMouseMove,
+            ),
+            this.m_listeners.AddEventListener(
+              this.m_elLinkRegionBox.ownerDocument.defaultView,
+              "mouseup",
+              this.m_fnMouseUp,
+            )),
+            _.preventDefault(),
+            _.stopPropagation();
+        }
+        OnMouseMove(_, _) {
+          if (void 0 !== this.state.EdgeDown) {
+            switch ((_.shiftKey && this.m_fnMouseUp(), _)) {
+              case _.left:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.right:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.top:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                });
+                break;
+              case _.bottom:
+                this.UpdateState({
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.topleft:
+                this.UpdateState({
+                  curTopPosPct: this.CalcBottomEdge(_.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                });
+                break;
+              case _.topright:
+                this.UpdateState({
+                  curTopPosPct: this.CalcTopEdge(_.clientY),
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                });
+                break;
+              case _.bottomleft:
+                this.UpdateState({
+                  curLeftPosPct: this.CalcLeftEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.bottomright:
+                this.UpdateState({
+                  curRightPosPct: this.CalcRightEdge(_.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(_.clientY),
+                });
+                break;
+              case _.middle: {
+                const _ = (0, _._)(
+                    this.CalcLeftEdge(_.clientX),
+                    0,
+                    100 - this.state.curWidthPct,
+                  ),
+                  _ = 100 - (_ + this.state.curWidthPct),
+                  _ = (0, _._)(
+                    this.CalcTopEdge(_.clientY),
+                    0,
+                    100 - this.state.curHeightPct,
+                  ),
+                  _ = {
+                    curLeftPosPct: _,
+                    curRightPosPct: _,
+                    curTopPosPct: _,
+                    curBottomPosPct: 100 - (_ + this.state.curHeightPct),
+                  };
+                this.setState(_);
+                break;
+              }
+            }
+            _.preventDefault(), _.stopPropagation();
+          }
+        }
+        IsValidPct(_) {
+          return _ >= 0 && _ <= 100;
+        }
+        UpdateState(_) {
+          let _ =
+              void 0 !== _.curTopPosPct
+                ? _.curTopPosPct
+                : this.state.curTopPosPct,
+            _ =
+              void 0 !== _.curBottomPosPct
+                ? _.curBottomPosPct
+                : this.state.curBottomPosPct,
+            _ =
+              void 0 !== _.curLeftPosPct
+                ? _.curLeftPosPct
+                : this.state.curLeftPosPct,
+            _ =
+              void 0 !== _.curRightPosPct
+                ? _.curRightPosPct
+                : this.state.curRightPosPct,
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.widthMinPct || 0,
+              this.props.widthMaxPct || 100,
+            ),
+            _ = (0, _._)(
+              100 - _ - _,
+              this.props.heightMinPct || 0,
+              this.props.heightMaxPct || 100,
+            );
+          this.props.bLockAspectRatio &&
+            (void 0 !== _.curLeftPosPct || void 0 !== _.curRightPosPct
+              ? (_ = _ / this.m_aspectRatio)
+              : (_ = _ * this.m_aspectRatio)),
+            void 0 !== _.curLeftPosPct
+              ? (_ = 100 - _ - _)
+              : (_ = 100 - (_ + _)),
+            void 0 !== _.curTopPosPct ? (_ = 100 - _ - _) : (_ = 100 - (_ + _));
+          const _ = 100 - _ - _,
+            _ = 100 - _ - _;
+          this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.IsValidPct(_) &&
+            this.setState({
+              curLeftPosPct: _,
+              curRightPosPct: _,
+              curTopPosPct: _,
+              curBottomPosPct: _,
+            });
+        }
+        GetXPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.left) /
+                (this.m_rectLinkRegion.right - this.m_rectLinkRegion.left)) *
+                100 -
+                (this.m_nLocalOffsetXPct ?? 0)
+            : 0;
+        }
+        GetYPercent(_) {
+          return this.m_rectLinkRegion
+            ? ((_ - this.m_rectLinkRegion.top) /
+                (this.m_rectLinkRegion.bottom - this.m_rectLinkRegion.top)) *
+                100 -
+                (this.m_nLocalOffsetYPct ?? 0)
+            : 0;
+        }
+        CalcLeftEdge(_) {
+          return (0, _._)(this.GetXPercent(_), 0, 100);
+        }
+        CalcRightEdge(_) {
+          return (0, _._)(
+            100 - (this.GetXPercent(_) + this.state.curWidthPct),
+            0,
+            100,
+          );
+        }
+        CalcTopEdge(_) {
+          return (0, _._)(this.GetYPercent(_), 0, 100);
+        }
+        CalcBottomEdge(_) {
+          return (0, _._)(
+            100 - (this.GetYPercent(_) + this.state.curHeightPct),
+            0,
+            100,
+          );
+        }
+        OnMouseUp(_, _) {
+          this.setState({
+            curWidthPct:
+              100 - this.state.curRightPosPct - this.state.curLeftPosPct,
+          }),
+            this.setState({
+              curHeightPct:
+                100 - this.state.curBottomPosPct - this.state.curTopPosPct,
+            }),
+            this.setState({
+              EdgeDown: void 0,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            }),
+            this.m_listeners.Unregister();
+        }
+        async HandleDelete() {
+          this.props.deleteFn && this.props.deleteFn(this.props.index);
+        }
+        OnSetLinkURLChange(_) {
+          this.setState({
+            text_link_url: _.target.value,
+            valid_link: this.validateUrl(_.target.value),
+          });
+        }
+        OnSetLinkDescriptionChange(_) {
+          this.setState({
+            text_link_description: _.target.value,
+          });
+        }
+        validateUrl(_) {
+          return (
+            null != _ &&
+            /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i.test(
+              _,
+            )
+          );
+        }
+        OnSaveLink() {
+          (this.m_strDescription = this.state.text_link_description ?? ""),
+            this.setState({
+              bEditingLink: !this.state.bEditingLink,
+            }),
+            this.props.updateFn(this.props.index, {
+              xPosPct: this.state.curLeftPosPct,
+              yPosPct: this.state.curTopPosPct,
+              widthPct: this.state.curWidthPct,
+              heightPct: this.state.curHeightPct,
+              link_url: this.state.text_link_url,
+              link_description: this.state.text_link_description,
+            });
+        }
+        OnEditLink() {
+          this.setState({
+            bEditingLink: !this.state.bEditingLink,
+          });
+        }
+        render() {
+          let _ = {
+              left: this.state.curLeftPosPct + "%",
+              top: this.state.curTopPosPct + "%",
+              right: this.state.curRightPosPct + "%",
+              bottom: this.state.curBottomPosPct + "%",
+            },
+            _ = _().LinkRegionDragBox;
+          return (
+            null != this.state.EdgeDown &&
+              (_ += ` ${_().EdgeDown} ` + _()[this.state.EdgeDown]),
+            (0, _.jsxs)("div", {
+              className: _,
+              style: _,
+              ref: this.LinkRegionBoxRef,
+              draggable: !1,
+              children: [
+                (0, _.jsxs)("div", {
+                  className: _().LinkRegionGridBox,
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Top}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.top);
+                      },
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().TopRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.topright);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Left}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.left);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Middle}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.middle);
+                      },
+                      draggable: !1,
+                      children: [
+                        this.props.deleteFn &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionDelete,
+                            onClick: this.HandleDelete,
+                            children: (0, _.jsx)(_.sED, {}),
+                          }),
+                        !this.props.bDisableLink &&
+                          (0, _.jsx)("div", {
+                            className: _().LinkRegionSettings,
+                            onClick: this.OnEditLink,
+                            children: (0, _.jsx)(_.xv8, {}),
+                          }),
+                        (0, _.jsxs)("div", {
+                          className: _().LinkText,
+                          children: [" ", this.m_strDescription, " "],
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Right}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.right);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomLeft}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomleft);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().Bottom}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottom);
+                      },
+                      draggable: !1,
+                    }),
+                    (0, _.jsx)("div", {
+                      className: `${_().LinkRegionEdge} ${_().BottomRight}`,
+                      onMouseDown: (_) => {
+                        this.OnMouseDown(_, _.bottomright);
+                      },
+                      draggable: !1,
+                    }),
+                  ],
+                }),
+                this.state.bEditingLink &&
+                  (0, _.jsxs)("div", {
+                    className: _().LinkRegionInfo,
+                    children: [
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_url",
+                        value: this.state.text_link_url,
+                        label: (0, _._)("#SteamTV_LinkURL"),
+                        placeholder: "https://www.example.com",
+                        onChange: this.OnSetLinkURLChange,
+                        mustBeURL: !0,
+                      }),
+                      (0, _.jsx)(_._, {
+                        className: _().LinkRegionInput,
+                        type: "text",
+                        name: "link_description",
+                        value: this.state.text_link_description,
+                        label: (0, _._)("#SteamTV_LinkDescription"),
+                        placeholder: (0, _._)(
+                          "#SteamTV_LinkDescription_Placeholder",
+                        ),
+                        onChange: this.OnSetLinkDescriptionChange,
+                      }),
+                      (0, _.jsxs)("div", {
+                        className: _().LinkRegionButtonContainer,
+                        children: [
+                          (0, _.jsxs)(_._, {
+                            disabled: !this.state.valid_link,
+                            onClick: this.OnSaveLink,
+                            children: [" ", (0, _._)("#Button_OK"), " "],
+                          }),
+                          (0, _.jsxs)(_._, {
+                            onClick: this.OnEditLink,
+                            children: [" ", (0, _._)("#Button_Cancel")],
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+              ],
+            })
+          );
+        }
+      };
+      (0, _._)([_._], _.prototype, "LinkRegionBoxRef", null),
+        (0, _._)([_._], _.prototype, "OnMouseDown", null),
+        (0, _._)([_._], _.prototype, "OnMouseMove", null),
+        (0, _._)([_._], _.prototype, "OnMouseUp", null),
+        (0, _._)([_._], _.prototype, "HandleDelete", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkURLChange", null),
+        (0, _._)([_._], _.prototype, "OnSetLinkDescriptionChange", null),
+        (0, _._)([_._], _.prototype, "OnSaveLink", null),
+        (0, _._)([_._], _.prototype, "OnEditLink", null),
         (_ = (0, _._)([_._], _));
     },
   },

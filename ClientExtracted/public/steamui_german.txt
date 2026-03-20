@@ -1873,7 +1873,7 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 "Steam_CloudFile_SyncState_Unknown"	"Unbekannt"
 
 "Steam_PublishFile_Title"						"Datei mit der Community teilen: %filename%"
-"Steam_PublishFile_Description"			"Diese Datei mit der Steam Community teilen?"
+"Steam_PublishFile_Description"			"Diese Datei mit der Steam-Community teilen?"
 "Steam_PublishFile_TitleLabel"			"Titel:"
 "Steam_PublishFile_DescriptionLabel"	"Beschreibung:"
 "Steam_PublishFile_VisibilityLabel"	"Sichtbarkeit:"
@@ -1882,12 +1882,12 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 "Steam_PublishFile_Visibility_Public"	"Öffentlich"
 "Steam_PublishFile_TargetAppLabel" "Veröffentlichen für:"
 "Steam_PublishFile_ConfirmButton"		"Abschicken"
-"Steam_PublishFile_Success_VisibilityPrivate"		"Gratulation! Sie haben Ihre Datei in der Cloud gespeichert. Sie können den Link zu dieser Datei nun mit jedem teilen, sie wird für den Rest der Steam Community aber nicht öffentlich aufrufbar sein."
+"Steam_PublishFile_Success_VisibilityPrivate"		"Glückwunsch! Sie haben Ihre Datei in der Cloud gespeichert. Sie können den Link zu dieser Datei nun mit jedem teilen, sie wird für den Rest der Steam-Community aber nicht öffentlich aufrufbar sein."
 "Steam_PublishFile_Success_VisibilityFriendsOnly"		"Gratulation! Sie teilen Ihre Datei mit Ihren Freunden und jedem, dem Sie den Link zu dieser Datei mitteilen."
-"Steam_PublishFile_Success_VisibilityPublic"		"Gratulation! Sie haben Ihre Datei mit dem Rest der Steam Community geteilt."
+"Steam_PublishFile_Success_VisibilityPublic"		"Glückwunsch! Sie haben Ihre Datei mit dem Rest der Steam-Community geteilt."
 "Steam_PublishFile_Success"		"Bitte beachten Sie, dass Sie diese Datei zu diesem Zeitpunkt gespeichert haben. Alle weiteren Änderungen, die Sie teilen möchten, müssen erneut veröffentlicht werden. Wenn Sie denselben Titel verwenden, erhält jeder, der diese Datei beobachtet, automatisch die neu veröffentlichte Version."
-"Steam_PublishFile_Progress"  "Datei wird in der Steam Community veröffentlicht …"
-"Steam_PublishFile_Failed"		"Beim Veröffentlichen Ihrer Datei in der Steam Community ist ein Problem aufgetreten. Bitte versuchen Sie es später erneut."
+"Steam_PublishFile_Progress"  "Datei wird in der Steam-Community veröffentlicht …"
+"Steam_PublishFile_Failed"		"Beim Veröffentlichen Ihrer Datei in der Steam-Community ist ein Problem aufgetreten. Bitte versuchen Sie es später erneut."
 "Steam_PublishFile_Failed_DuplicateName"	"Es gibt bereits eine Datei mit dem von Ihnen angegebenen Namen. Bitte wählen Sie einen anderen Namen oder wählen Sie in den Veröffentlichungsoptionen \"Überschreiben\" aus."
 "Steam_PublishFile_Failed_AccessDenied"		"Sie müssen im Besitz dieses Programmes sein, um Dateien dafür veröffentlichen zu können. Bitte erwerben Sie dieses Produkt, bevor Sie versuchen eine Datei zu veröffentlichen."
 "Steam_PublishFile_Failed_SyncError"	"Beim Update Ihrer Dateien mit der Steam Cloud ist ein Synchronisationsfehler aufgetreten. Eventuell müssen Sie Konflikte zwischen Ihrer lokalen Kopie und der in der Steam Cloud gespeicherten Kopie auflösen, bevor Sie die Veröffentlichung erneut versuchen können."
@@ -2850,7 +2850,7 @@ Sie müssen sich von OS X abmelden, damit diese Änderung wirksam wird."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "Besucherpass wird versendet …"
 "Steam_SendGuestPass_InvitingFriend$type=guestpass"	"Ihr Besucherpass wir an %search% gesendet.\nBitte warten …"
-"Steam_SendGuestPass_NoFriends"			"Sie haben bisher noch keine Freunde in der Steam Community!
+"Steam_SendGuestPass_NoFriends"			"Sie haben bisher noch keine Freunde in der Steam-Community.
 Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "Steam_GuestPassAccept_TitleOK$type=guestpass"	"Besucherpass bereit"
@@ -3287,7 +3287,7 @@ Die Beta wurde beendet – bitte starten Sie Steam neu, um zur aktuellen Version
 "Steam_GuestPassRedeemed_TextRevoked$type=gift"	"Ihr Freund, der Ihnen dieses Geschenk gesendet hat, hat es zurückgezogen und Ihnen einen neuen Einlösecode geschickt. Wenn Ihnen die neue Version geschickt wurde, erhalten Sie eine weitere E-Mail mit dem aktuellen Code."
 
 "Steam_SendGuestPass_RefreshingList"	"Liste wird aktualisiert …"
-"Steam_SendGuestPass_AllFriendsOwnProduct"	"Alle Ihre Freunde in der Steam Community besitzen dieses Produkt bereits.
+"Steam_SendGuestPass_AllFriendsOwnProduct"	"Alle Ihre Freunde in der Steam-Community besitzen dieses Produkt bereits.
 Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "Steam_GuestPass_GiftSection"	"GESCHENKE"
@@ -3848,7 +3848,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_Rental_Body_Activated"	"Der Zeitraum, in dem Sie %gamename% anschauen können, wurde aktiviert. Sie können das Video jetzt bis %expiration% anschauen."
 
 "steam_community_files"		"Workshop"
-"steam_community_files_info"		"Erstellen, entdecken & spielen Sie Inhalte, die von der Steam Community erschaffen wurden."
+"steam_community_files_info"		"Entdecken und spielen Sie Inhalte, die von der Steam-Community erschaffen wurden, oder erstellen Sie selbst welche."
 "steam_community_files_info_error"		"Die Verbindung zum Steam Workshop kann zurzeit nicht hergestellt werden."
 "steam_community_files_view_all"		"Workshop durchstöbern"
 "steam_paginationtext"	"Ergebnisse %start%–%end% von %total%"
@@ -3920,7 +3920,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "steam_menu_friends_add" "Freund hinzufügen"
 "steam_menu_friends_settings" "Einstellungen anzeigen"
 "steam_menu_friends_players" "Spieler"
-"friends_searchOnline"	"Mitglieder der Steam Community suchen"
+"friends_searchOnline"	"Mitglieder der Steam-Community suchen"
 "steam_send_guestpass"		"Besucherpass senden"
 "steam_stats"		"Statistiken"
 "steam_links"			"Links"
@@ -4010,7 +4010,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "steam_ClosedBeta_Message" "Diese Version von Steam befindet sich derzeit in einer geschlossenen Betaphase.\nMelden Sie sich mit einem eingetragenen Account an, um fortzufahren."
 
 "Overlay_GlobalSettingDisabled_Title" 	"Fehler"
-"Overlay_GlobalSettingDisabled_Body"	"Sie haben die Steam Community im Spiel in Ihren Steam-Einstellungen deaktiviert.\n\nBitte aktivieren Sie zuerst diese Option, um dann die Communityeinstellungen pro Spiel vornehmen zu können."
+"Overlay_GlobalSettingDisabled_Body"	"Sie haben die Steam-Community im Spiel in Ihren Steam-Einstellungen deaktiviert.\n\nBitte aktivieren Sie zuerst diese Option, um dann die Communityeinstellungen pro Spiel vornehmen zu können."
 
 "steam_voice_unknowncodec"	"Unbekannter Sprachcodec des Gesprächpartners - Gespräch beendet. Ihr Gesprächspartner verwendet eine neuere Version des Steam-Clients."
 "steam_voice_datacorrupted"	"Fehlerhafte Sprachdaten vom Gesprächspartner erhalten - Gespräch beendet."
@@ -4020,7 +4020,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 
 "SteamUI_ValveSurvey_Summary_Software"	"Installierte Software:"
 "steam_systeminfo_info"			"Steam hat die folgende Hard- und Software in Ihrem System gefunden:"
-"SteamUI_ValveSurvey_OverviewTitle" 	"Bitte nehmen Sie sich einen Moment Zeit, an dieser kurzen Umfrage teilzunehmen. Jeden Monat sammelt Steam Informationen zu Hardware und Software, die unsere Nutzer verwenden. Diese Umfragedaten sind äußerst hilfreich und erleichtern uns die Entscheidungen zu Technologieinvestments und führen zu besseren Produkten.\nDie gesammelten Daten sind anonym und nicht zu Ihrem Steamaccount rückverfolgbar."
+"SteamUI_ValveSurvey_OverviewTitle" 	"Bitte nehmen Sie sich einen Moment Zeit, an dieser kurzen Umfrage teilzunehmen. Jeden Monat sammelt Steam Informationen zu Hardware und Software, die unsere Nutzer verwenden. Diese Umfragedaten sind äußerst hilfreich und erleichtern uns die Entscheidungen zu Technologieinvestments und führen zu besseren Produkten.\nDie gesammelten Daten sind anonym und nicht zu Ihrem Steam-Account rückverfolgbar."
 
 "steam_statuslabel"	"Status"
 
@@ -4750,7 +4750,7 @@ Senden Sie einem Bekannten ein Geschenk und werden Sie Freunde auf Steam."
 "Steam_Screenshots_ViewOnline" "Online anzeigen"
 "Steam_Screenshots_Caption" "„%imagecaption%“"
 "Steam_Screenshots_UploadQuota" "Uploadgröße: %imagesize%, verbleibender Speicherplatz: %storagesize%"
-"Steam_Screenshots_UploadProgress" "Screenshot wird zur Steam Community hochgeladen …"
+"Steam_Screenshots_UploadProgress" "Screenshot wird zur Steam-Community hochgeladen …"
 
 
 "VR_Error_Title"				"Fehler beim Starten von SteamVR"

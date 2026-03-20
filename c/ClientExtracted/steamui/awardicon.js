@@ -22,6 +22,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -34,43 +35,39 @@
           _.count || 0,
           _.localized_title,
         );
-        return _.createElement(
-          _._,
-          {
-            className: (0, _._)(_().InfoContainer, _().IconContainer),
-            toolTipContent: _,
-          },
-          _.createElement("img", {
-            className: _().IconImg,
-            src: (0, _._)(_.reaction_type, !1),
-          }),
-          _.count &&
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsxs)(_._, {
+          className: (0, _._)(_().InfoContainer, _().IconContainer),
+          toolTipContent: _,
+          children: [
+            (0, _.jsx)("img", {
+              className: _().IconImg,
+              src: (0, _._)(_.reaction_type, !1),
+            }),
+            _.count &&
+              (0, _.jsx)("div", {
                 className: _().ReactionCount,
-              },
-              _.count,
-            ),
-        );
+                children: _.count,
+              }),
+          ],
+        });
       }
       class _ extends _.PureComponent {
         render() {
           let _ = [];
           for (const _ of this.props.reactions)
             _.push(
-              _.createElement(_, {
-                key: _.reaction_type,
-                reaction: _,
-              }),
+              (0, _.jsx)(
+                _,
+                {
+                  reaction: _,
+                },
+                _.reaction_type,
+              ),
             );
-          return _.createElement(
-            "div",
-            {
-              className: _().IconList,
-            },
-            _,
-          );
+          return (0, _.jsx)("div", {
+            className: _().IconList,
+            children: _,
+          });
         }
       }
     },

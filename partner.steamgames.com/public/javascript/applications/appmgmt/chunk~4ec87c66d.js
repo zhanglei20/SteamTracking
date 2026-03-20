@@ -5215,7 +5215,7 @@
           case "spotlight_art":
             return "image";
           case "spotlight_art_hero":
-            return "hero_image";
+            return "vertical_capsule";
           default:
             return;
         }
@@ -43330,8 +43330,8 @@
                         (0, a.jsx)("div", {
                           children: (0, S.we)(
                             "#AssetRequest_General_Size",
-                            940,
-                            150,
+                            1200,
+                            190,
                           ),
                         }),
                         (0, a.jsx)("br", {}),
@@ -51192,19 +51192,23 @@
                 (0, a.jsxs)(m.tH, {
                   children: [
                     (0, a.jsx)("br", {}),
-                    (0, a.jsx)("h3", { children: "Static Assets Only" }),
+                    (0, a.jsx)("h4", { children: "Static Assets Only" }),
                     (0, a.jsxs)("div", {
                       children: [
-                        (0, a.jsx)("span", { children: "306px x 260px" }),
-                        " (.jpg,.png,.gif)",
+                        (0, a.jsx)("h3", { children: "Spotlight Banner" }),
+                        (0, a.jsxs)("div", {
+                          children: [
+                            (0, a.jsx)("span", { children: "306px x 260px" }),
+                            " (.jpg, .png)",
+                          ],
+                        }),
+                        (0, a.jsx)(Ee, {
+                          oEditableSpotlight: t,
+                          assetType: "image",
+                        }),
+                        (0, a.jsx)("br", {}),
                       ],
                     }),
-                    (0, a.jsx)("br", {}),
-                    (0, a.jsx)(Ee, {
-                      oEditableSpotlight: t,
-                      assetType: "image",
-                    }),
-                    (0, a.jsx)("br", {}),
                     (0, a.jsxs)("div", {
                       children: [
                         (0, a.jsx)("h3", {
@@ -51218,7 +51222,7 @@
                         }),
                         (0, a.jsx)(Ee, {
                           oEditableSpotlight: t,
-                          assetType: "hero_image",
+                          assetType: "vertical_capsule",
                         }),
                       ],
                     }),
@@ -51248,7 +51252,7 @@
                     if (!a) return null;
                     const n = s ? "?t=" + s : "",
                       i = (0, we.Lg)(t);
-                    return `${j.TS.MEDIA_CDN_URL}steam/spotlights/${e}/${a[i]}${n}`;
+                    return `${j.TS.STORE_ITEM_BASE_URL}steam/spotlights/${e}/${a[i]}${n}`;
                   })(i, e, r, n)
                 : null;
             },
@@ -52040,7 +52044,7 @@
                     if (!i) return null;
                     const r = a ? "?t=" + a : "",
                       o = (0, we.Lg)(s);
-                    return `${j.TS.MEDIA_CDN_URL}steam/clusters/${(0, n.gw)(e)}/${t}/${i[o]}${r}`;
+                    return `${j.TS.STORE_ITEM_BASE_URL}steam/clusters/${(0, n.gw)(e)}/${t}/${i[o]}${r}`;
                   })(d, r, e, l, i)
                 : null;
             },
@@ -52474,7 +52478,7 @@
                           }),
                           (0, a.jsxs)("div", {
                             children: [
-                              (0, a.jsx)("span", { children: "940 by 150px" }),
+                              (0, a.jsx)("span", { children: "1200 by 190px" }),
                               " (.jpg,.png,.gif)",
                             ],
                           }),
@@ -52529,7 +52533,7 @@
                     if (!i) return null;
                     const r = a ? "?t=" + a : "",
                       o = (0, we.Lg)(s);
-                    return `${j.TS.MEDIA_CDN_URL}steam/clusters/${(0, n.gw)(e)}/${t}/${i[o]}${r}`;
+                    return `${j.TS.STORE_ITEM_BASE_URL}steam/clusters/${(0, n.gw)(e)}/${t}/${i[o]}${r}`;
                   })(d, r, e, l, i)
                 : null;
             },

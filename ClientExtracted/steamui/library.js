@@ -1,4 +1,4 @@
-var CLSTAMP = "10520954";
+var CLSTAMP = "10538461";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -45,8 +45,6 @@ var CLSTAMP = "10520954";
           BodyNoScroll: "_1Xs5dtPK2K37sd1U9BLX3S",
           BodyNoScrollDialog: "_3jhMIr8hczcBK_fOVtEVOK",
           OverlayModal: "_24YFXIVY7CC2quNzCN7015",
-          GamepadOnlyModalWrapper: "_1GlTsstfPZWsQc4umFIvrX",
-          GamepadOnlyPanelWrapper: "_1aY-rmUi48QSw7U1ZWa5DZ",
           ModalDialog: "_32QRvPPBL733SpNR9x0Gp3",
         };
       },
@@ -140,6 +138,27 @@ var CLSTAMP = "10520954";
           Dot3: "_3uYAQK6LkmahQL1pnY1BhX",
         };
       },
+      89400: (e, t, n) => {
+        "use strict";
+        n.d(t, {
+          GU: () => r,
+          Kd: () => o,
+          Ro: () => s,
+          WN: () => u,
+          bv: () => i,
+          mW: () => a,
+          wv: () => c,
+          yT: () => l,
+        });
+        const r = 39049601,
+          i = 41316928,
+          s = 4397053,
+          o = 4,
+          a = 20,
+          c = 45559995,
+          l = 45902273,
+          u = [4145017, 35143931, r, o, i];
+      },
       28987: (e, t, n) => {
         "use strict";
         var r;
@@ -173,34 +192,34 @@ var CLSTAMP = "10520954";
           return 5 == e || 6 == e;
         }
         n.d(t, {
-          $6: () => H,
-          DO: () => F,
+          $6: () => P,
+          DO: () => E,
           H2: () => Y,
-          ID: () => T,
+          ID: () => j,
           IV: () => w,
-          Iy: () => m,
+          Iy: () => d,
           JP: () => f,
-          Lg: () => I,
+          Lg: () => R,
           ME: () => B,
           Rh: () => $,
           S$: () => r,
-          SS: () => U,
-          Sx: () => V,
+          SS: () => W,
+          Sx: () => U,
           TQ: () => L,
           U5: () => h,
           WU: () => Z,
           aP: () => i,
           ak: () => S,
-          ck: () => A,
+          ck: () => D,
           cw: () => l,
-          ey: () => O,
-          fL: () => D,
+          ey: () => F,
+          fL: () => O,
           g5: () => p,
           iE: () => X,
           im: () => o,
-          jH: () => z,
-          jr: () => N,
-          kF: () => E,
+          jH: () => N,
+          jr: () => A,
+          kF: () => y,
           ke: () => s,
           lc: () => K,
           lm: () => g,
@@ -208,15 +227,15 @@ var CLSTAMP = "10520954";
           oe: () => M,
           qh: () => C,
           qx: () => u,
-          rm: () => d,
+          rm: () => m,
           s5: () => b,
-          sf: () => R,
-          tg: () => W,
+          sf: () => T,
+          tg: () => H,
           w1: () => a,
           wK: () => _,
-          wr: () => y,
-          ww: () => x,
-          x6: () => k,
+          wr: () => x,
+          ww: () => k,
+          x6: () => I,
           y4: () => c,
         });
         const s = 1,
@@ -225,8 +244,8 @@ var CLSTAMP = "10520954";
           c = 750,
           l = 753,
           u = 769,
-          m = 799,
-          d = 241100,
+          d = 799,
+          m = 241100,
           h = 202355,
           p = 250820,
           g = 330050,
@@ -240,13 +259,13 @@ var CLSTAMP = "10520954";
         function S(e) {
           return e == p || e == g;
         }
-        function y(e) {
+        function x(e) {
           return e == w || e == b || e == C || e == u;
         }
-        const E = "18446744073709551615",
+        const y = "18446744073709551615",
           B = 0,
           L = 2147483647;
-        function x(e, t = "en") {
+        function k(e, t = "en") {
           switch (e) {
             case 0:
               return "en";
@@ -314,8 +333,8 @@ var CLSTAMP = "10520954";
               return t;
           }
         }
-        const k = (e) => ("koreana" === e ? "korean" : e);
-        function I(e, t = "") {
+        const I = (e) => ("koreana" === e ? "korean" : e);
+        function R(e, t = "") {
           switch (e) {
             case 0:
               return "english";
@@ -383,7 +402,7 @@ var CLSTAMP = "10520954";
               return t;
           }
         }
-        function R(e, t = 0) {
+        function T(e, t = 0) {
           switch (e) {
             case "english":
               return 0;
@@ -452,7 +471,7 @@ var CLSTAMP = "10520954";
               return t;
           }
         }
-        function T(e) {
+        function j(e) {
           switch (e) {
             default:
               break;
@@ -464,7 +483,7 @@ var CLSTAMP = "10520954";
           }
           return !1;
         }
-        function F(e) {
+        function E(e) {
           switch (e) {
             default:
               break;
@@ -475,7 +494,7 @@ var CLSTAMP = "10520954";
           }
           return !1;
         }
-        function O(e) {
+        function F(e) {
           switch (e) {
             case 0:
               return "invalid";
@@ -491,7 +510,7 @@ var CLSTAMP = "10520954";
               return "push";
           }
         }
-        function D(e) {
+        function O(e) {
           switch (e) {
             case 0:
               return "vgui";
@@ -513,7 +532,7 @@ var CLSTAMP = "10520954";
               return "unknown";
           }
         }
-        var A, N, z, P, H, W, U, V, G, j, q, Z, K, $, Y, X;
+        var D, A, N, z, P, H, W, U, V, G, q, Z, K, $, Y, X;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -529,7 +548,7 @@ var CLSTAMP = "10520954";
               "k_EConnectivityTestResult_WifiDisabled"),
             (e[(e.k_EConnectivityTestResult_NoLAN = 6)] =
               "k_EConnectivityTestResult_NoLAN");
-        })(A || (A = {})),
+        })(D || (D = {})),
           (function (e) {
             (e[(e.k_ENetFakeLocalSystemState_Normal = 0)] =
               "k_ENetFakeLocalSystemState_Normal"),
@@ -543,7 +562,7 @@ var CLSTAMP = "10520954";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(N || (N = {})),
+          })(A || (A = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -557,7 +576,7 @@ var CLSTAMP = "10520954";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(z || (z = {})),
+          })(N || (N = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -567,7 +586,7 @@ var CLSTAMP = "10520954";
                 "k_EFloatingGamepadTextInputModeModeEmail"),
               (e[(e.k_EFloatingGamepadTextInputModeModeNumeric = 3)] =
                 "k_EFloatingGamepadTextInputModeModeNumeric");
-          })(P || (P = {})),
+          })(z || (z = {})),
           (function (e) {
             (e[(e.k_EAppUpdateContentType_Content = 0)] =
               "k_EAppUpdateContentType_Content"),
@@ -577,7 +596,7 @@ var CLSTAMP = "10520954";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(H || (H = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.k_EAppUpdateProgress_VerifyingInstalledFiles = 0)] =
               "k_EAppUpdateProgress_VerifyingInstalledFiles"),
@@ -595,7 +614,7 @@ var CLSTAMP = "10520954";
                 "k_EAppUpdateProgress_Committing"),
               (e[(e.k_EAppUpdateProgress_Max = 7)] =
                 "k_EAppUpdateProgress_Max");
-          })(W || (W = {})),
+          })(H || (H = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -603,19 +622,19 @@ var CLSTAMP = "10520954";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(U || (U = {})),
+          })(W || (W = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
               (e[(e.k_EActivateGameOverlayToWebPageMode_Modal = 1)] =
                 "k_EActivateGameOverlayToWebPageMode_Modal");
-          })(V || (V = {})),
+          })(U || (U = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(G || (G = {})),
+          })(V || (V = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -641,7 +660,7 @@ var CLSTAMP = "10520954";
                 "k_ECommunityProfileItemProperty_MovieWebMSmall"),
               (e[(e.k_ECommunityProfileItemProperty_MovieMP4Small = 11)] =
                 "k_ECommunityProfileItemProperty_MovieMP4Small");
-          })(j || (j = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.k_ERaiseGameWindowResult_NotRunning = 1)] =
               "k_ERaiseGameWindowResult_NotRunning"),
@@ -674,8 +693,7 @@ var CLSTAMP = "10520954";
           (function (e) {
             (e[(e.k_EGameIDTypeApp = 0)] = "k_EGameIDTypeApp"),
               (e[(e.k_EGameIDTypeGameMod = 1)] = "k_EGameIDTypeGameMod"),
-              (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut"),
-              (e[(e.k_EGameIDTypeP2P = 3)] = "k_EGameIDTypeP2P");
+              (e[(e.k_EGameIDTypeShortcut = 2)] = "k_EGameIDTypeShortcut");
           })($ || ($ = {})),
           (function (e) {
             (e[(e.k_EInstallMgrStateNone = 0)] = "k_EInstallMgrStateNone"),
@@ -771,60 +789,62 @@ var CLSTAMP = "10520954";
               (e[(e.OverlayGamepadUI = 1)] = "OverlayGamepadUI"),
               (e[(e.Keyboard = 2)] = "Keyboard"),
               (e[(e.ControllerConfigurator = 3)] = "ControllerConfigurator"),
-              (e[(e.VR = 4)] = "VR"),
+              (e[(e.MainVRGamepadUI = 4)] = "MainVRGamepadUI"),
               (e[(e.MainDesktopUI = 5)] = "MainDesktopUI"),
               (e[(e.DesktopLogin = 6)] = "DesktopLogin"),
               (e[(e.OverlayDesktopUI = 7)] = "OverlayDesktopUI"),
               (e[(e.SteamChinaReviewLauncher = 8)] =
-                "SteamChinaReviewLauncher");
+                "SteamChinaReviewLauncher"),
+              (e[(e.OverlayVRGamepadUI = 9)] = "OverlayVRGamepadUI");
           })(a || (a = {}));
       },
       90242: (e, t, n) => {
         "use strict";
         n.d(t, {
-          BA: () => u,
-          EI: () => d,
-          Ii: () => l,
-          O7: () => p,
-          b$: () => s,
+          BA: () => d,
+          EI: () => h,
+          Ii: () => u,
+          O7: () => g,
+          b$: () => o,
           dO: () => m,
-          fu: () => a,
-          lv: () => h,
-          ml: () => o,
+          fu: () => c,
+          lv: () => p,
+          ml: () => a,
         });
-        var r = n(63696),
-          i = n(28869);
-        function s() {
-          return r.createRef();
+        var r = n(62540),
+          i = n(63696),
+          s = n(28869);
+        function o() {
+          return i.createRef();
         }
-        const o = (0, i.HR)("div", { bDOMElementFocusByDefault: !1 }),
-          a = (0, i.HR)("button", {
+        const a = (0, s.HR)("div", { bDOMElementFocusByDefault: !1 }),
+          c = (0, s.HR)("button", {
             bActivateByDefault: (e) => "submit" === e.type,
           }),
-          c = (0, i.HR)("a", {
+          l = (0, s.HR)("a", {
             bActivateByDefault: !0,
             bDOMElementFocusByDefault: !1,
           }),
-          l = r.forwardRef(function (e, t) {
+          u = i.forwardRef(function (e, t) {
             const { href: n = "#", ...i } = e;
-            return r.createElement(c, { ref: t, href: n, ...i });
+            return (0, r.jsx)(l, { ref: t, href: n, ...i });
           }),
-          u = (0, i.v0)("input"),
-          m = (0, i.v0)("textarea"),
-          d = (0, i.HR)("img", { bDOMElementFocusByDefault: !1 });
-        (0, i.HR)("label", {
+          d = (0, s.v0)("input"),
+          m = (0, s.v0)("textarea"),
+          h = (0, s.HR)("img", { bDOMElementFocusByDefault: !1 });
+        (0, s.HR)("label", {
           bActivateByDefault: !0,
           bDOMElementFocusByDefault: !1,
         }),
-          (0, i.HR)("section", { bFocusableByDefault: !1 }),
-          (0, i.HR)("form", { bFocusableByDefault: !1 });
-        function h(e) {
+          (0, s.HR)("section", { bFocusableByDefault: !1 }),
+          (0, s.HR)("form", { bFocusableByDefault: !1 });
+        function p(e) {
           const { Component: t, children: n } = e,
-            s = r.useMemo(() => ({ Component: t }), [t]);
-          return r.createElement(i.Mg, { value: s }, n);
+            o = i.useMemo(() => ({ Component: t }), [t]);
+          return (0, r.jsx)(s.Mg, { value: o, children: n });
         }
-        function p(e, t, n = !1) {
-          r.useEffect(() => {
+        function g(e, t, n = !1) {
+          i.useEffect(() => {
             const r = e.current;
             r && (t ? r.Activate(n) : r.Deactivate());
           }, [t, n, e]);
@@ -832,328 +852,332 @@ var CLSTAMP = "10520954";
       },
       35560: (e, t, n) => {
         "use strict";
-        n.d(t, { QI: () => c, VQ: () => o, Vu: () => a });
-        var r = n(63696),
-          i = n(42898);
-        const s = r.createContext(void 0);
-        function o(e) {
+        n.d(t, { QI: () => l, VQ: () => a, Vu: () => c });
+        var r = n(62540),
+          i = n(63696),
+          s = n(42898);
+        const o = i.createContext(void 0);
+        function a(e) {
           const { controller: t } = e;
           return (
-            r.useEffect(() => {
+            i.useEffect(() => {
               t.Init();
             }, [t]),
-            r.createElement(s.Provider, { value: t }, e.children)
+            (0, r.jsx)(o.Provider, { value: t, children: e.children })
           );
         }
-        function a() {
-          return r.useContext(s);
-        }
         function c() {
-          return (0, i.gc)(a()?.GetShowDebugFocusRing()) ?? !1;
+          return i.useContext(o);
+        }
+        function l() {
+          return (0, s.gc)(c()?.GetShowDebugFocusRing()) ?? !1;
         }
       },
       84252: (e, t, n) => {
         "use strict";
-        n.d(t, { B2: () => m, qR: () => g });
-        var r = n(42898),
-          i = n(28864),
-          s = n(63696),
-          o = n(28869),
-          a = n(79734),
-          c = n(35560),
-          l = n(3524),
-          u = n(87481);
-        const m = s.forwardRef(function (e, t) {
+        n.d(t, { B2: () => m, qR: () => f });
+        var r = n(62540),
+          i = n(42898),
+          s = n(28864),
+          o = n(63696),
+          a = n(28869),
+          c = n(79734),
+          l = n(35560),
+          u = n(3524),
+          d = n(87481);
+        const m = o.forwardRef(function (e, t) {
           const {
               navID: n,
-              onActivated: r,
-              onDeactivated: i,
-              navTreeRef: a,
-              enabled: l,
+              onActivated: i,
+              onDeactivated: s,
+              navTreeRef: o,
+              enabled: c,
               modal: u,
-              virtualFocus: m,
-              parentEmbeddedNavTree: h,
-              onGlobalButtonDown: p,
-              disableFocusClasses: g,
-              disabledRoot: f,
-              "flow-children": _,
-              ...w
+              virtualFocus: d,
+              historyMode: m,
+              parentEmbeddedNavTree: p,
+              onGlobalButtonDown: g,
+              disableFocusClasses: f,
+              disabledRoot: _,
+              "flow-children": w,
+              ...b
             } = e,
-            { elemProps: b, navOptions: C, gamepadEvents: v } = (0, o.sl)(w);
-          return (0, c.Vu)()
-            ? s.createElement(
-                d,
-                {
-                  navID: n,
-                  onActivated: r,
-                  onDeactivated: i,
-                  navTreeRef: a,
-                  enabled: l,
-                  modal: u,
-                  virtualFocus: m,
-                  parentEmbeddedNavTree: h,
-                  onGlobalButtonDown: p,
-                  disableFocusClasses: g,
-                  disabledRoot: f,
-                  "flow-children": _,
-                  ...C,
-                  ...v,
-                },
-                s.createElement("div", { ...b, ref: t }),
-              )
-            : s.createElement("div", { ...b, ref: t });
+            { elemProps: C, navOptions: v, gamepadEvents: M } = (0, a.sl)(b);
+          return (0, l.Vu)()
+            ? (0, r.jsx)(h, {
+                navID: n,
+                onActivated: i,
+                onDeactivated: s,
+                navTreeRef: o,
+                enabled: c,
+                modal: u,
+                virtualFocus: d,
+                historyMode: m,
+                parentEmbeddedNavTree: p,
+                onGlobalButtonDown: g,
+                disableFocusClasses: f,
+                disabledRoot: _,
+                "flow-children": w,
+                ...v,
+                ...M,
+                children: (0, r.jsx)("div", { ...C, ref: t }),
+              })
+            : (0, r.jsx)("div", { ...C, ref: t });
         });
-        function d(e) {
+        function h(e) {
           const {
               navID: t,
               onActivated: n,
               onDeactivated: m,
-              navTreeRef: d,
-              enabled: h = !0,
-              modal: g = !1,
-              virtualFocus: f = !1,
-              historyMode: _,
-              children: w,
-              parentEmbeddedNavTree: b,
-              onGlobalButtonDown: C,
-              disableFocusClasses: v = !1,
-              disabledRoot: M = !1,
-              "flow-children": S,
+              navTreeRef: h,
+              enabled: p = !0,
+              modal: f = !1,
+              virtualFocus: _ = !1,
+              historyMode: w,
+              children: b,
+              parentEmbeddedNavTree: C,
+              onGlobalButtonDown: v,
+              disableFocusClasses: M = !1,
+              disabledRoot: S = !1,
+              "flow-children": x,
               ...y
             } = e,
-            { elemProps: E, navOptions: B, gamepadEvents: L } = (0, o.sl)(y),
-            { refDiv: x, tree: k } = (function (e) {
+            { elemProps: B, navOptions: L, gamepadEvents: k } = (0, a.sl)(y),
+            { refDiv: I, tree: R } = (function (e) {
               const {
                   navID: t,
                   parentEmbeddedNavTree: n,
                   disabledRoot: r,
-                  enabled: a,
-                  navTreeRef: u,
-                  onGlobalButtonDown: m,
-                  ...d
+                  enabled: i,
+                  navTreeRef: c,
+                  onGlobalButtonDown: d,
+                  ...m
                 } = e,
-                h = (0, c.Vu)(),
-                p = (0, l.nN)() || h.GetDefaultContext(),
-                g = s.useContext(o.TJ),
-                [f] = s.useState(() =>
+                h = (0, l.Vu)(),
+                p = (0, u.nN)() || h.GetDefaultContext(),
+                g = o.useContext(a.TJ),
+                [f] = o.useState(() =>
                   h.NewGamepadNavigationTree(p, t, n ?? g?.Tree, {
-                    ...d,
+                    ...m,
                     bIsEmbeddedInLegacyTree: !!n,
                   }),
                 );
-              let _ = s.useRef(null);
+              let _ = o.useRef(null);
               return (
-                f.SetOnGlobalButtonDown(m),
-                s.useEffect(
+                f.SetOnGlobalButtonDown(d),
+                o.useEffect(
                   () => f.RegisterNavigationItem(f.Root, _.current),
                   [f, _],
                 ),
-                s.useEffect(() => {
-                  f.SetIsEnabled(a);
-                }, [f, a]),
-                s.useEffect(() => {
+                o.useEffect(() => {
+                  f.SetIsEnabled(i);
+                }, [f, i]),
+                o.useEffect(() => {
                   if (!r)
                     return h.RegisterGamepadNavigationTree(
                       f,
                       _.current.ownerDocument.defaultView,
                     );
                 }, [h, f, r]),
-                s.useEffect(
-                  () => ((0, i.cZ)(u, f), () => (0, i.cZ)(u, null)),
-                  [u, f],
+                o.useEffect(
+                  () => ((0, s.cZ)(c, f), () => (0, s.cZ)(c, null)),
+                  [c, f],
                 ),
                 { refDiv: _, tree: f }
               );
             })({
               navID: t,
-              parentEmbeddedNavTree: b,
-              disabledRoot: M,
-              enabled: h,
-              onGlobalButtonDown: C,
-              navTreeRef: d,
-              virtualFocus: f,
-              modal: g,
-              historyMode: _,
+              parentEmbeddedNavTree: C,
+              disabledRoot: S,
+              enabled: p,
+              onGlobalButtonDown: v,
+              navTreeRef: h,
+              virtualFocus: _,
+              modal: f,
+              historyMode: w,
             });
-          (0, r.hL)(k.OnActivateCallbacks, n),
-            (0, r.hL)(k.OnDeactivateCallbacks, m),
-            (0, u.KF)(L, x, k),
-            s.useLayoutEffect(() => {
-              const e = (0, a.O)(S);
-              k.Root.SetProperties({ ...B, layout: e });
+          (0, i.hL)(R.OnActivateCallbacks, n),
+            (0, i.hL)(R.OnDeactivateCallbacks, m),
+            (0, d.KF)(k, I, R),
+            o.useLayoutEffect(() => {
+              const e = (0, c.O)(x);
+              R.Root.SetProperties({ ...L, layout: e });
             });
-          const I = (0, i.Ue)(x, w.props.ref);
-          return s.createElement(
-            p,
-            { tree: M ? null : k, disableFocusClasses: v || M },
-            s.createElement(
-              o.TJ.Provider,
-              { value: M ? null : k.Root },
-              s.cloneElement(w, { id: t, "data-react-nav-root": t, ref: I }),
-            ),
-          );
+          const T = (0, s.Ue)(I, b.props.ref);
+          return (0, r.jsx)(g, {
+            tree: S ? null : R,
+            disableFocusClasses: M || S,
+            children: (0, r.jsx)(a.TJ.Provider, {
+              value: S ? null : R.Root,
+              children: o.cloneElement(b, {
+                id: t,
+                "data-react-nav-root": t,
+                ref: T,
+              }),
+            }),
+          });
         }
-        const h = s.createContext({
+        const p = o.createContext({
           bActiveTree: !1,
           bActiveTreeWithinContext: !1,
           bDisableFocusClasses: !1,
           bIsMounted: !1,
         });
-        function p(e) {
-          const { tree: t, disableFocusClasses: n = !1, children: i } = e,
-            [o, a] = s.useState(t?.BIsActive() || !1),
-            [c, l] = s.useState(t?.BIsActiveWithinContext() || !1),
-            u = (0, r.gc)(t?.SubscribableIsMounted) ?? !1;
-          s.useEffect(
+        function g(e) {
+          const { tree: t, disableFocusClasses: n = !1, children: s } = e,
+            [a, c] = o.useState(t?.BIsActive() || !1),
+            [l, u] = o.useState(t?.BIsActiveWithinContext() || !1),
+            d = (0, i.gc)(t?.SubscribableIsMounted) ?? !1;
+          o.useEffect(
             () =>
               t
-                ? (a(t.BIsActive()),
-                  l(t.BIsActiveWithinContext()),
+                ? (c(t.BIsActive()),
+                  u(t.BIsActiveWithinContext()),
                   t.OnActiveStateChangedCallbacks.Register(() => {
-                    a(t.BIsActive()), l(t.BIsActiveWithinContext());
+                    c(t.BIsActive()), u(t.BIsActiveWithinContext());
                   }).Unregister)
-                : (a(!1), void l(!1)),
+                : (c(!1), void u(!1)),
             [t],
           );
-          const m = s.useMemo(
+          const m = o.useMemo(
             () => ({
-              bActiveTree: o,
-              bActiveTreeWithinContext: c,
+              bActiveTree: a,
+              bActiveTreeWithinContext: l,
               bDisableFocusClasses: n,
-              bIsMounted: u,
+              bIsMounted: d,
             }),
-            [o, n, c, u],
+            [a, n, l, d],
           );
-          return s.createElement(h.Provider, { value: m }, i);
+          return (0, r.jsx)(p.Provider, { value: m, children: s });
         }
-        function g() {
-          return s.useContext(h);
+        function f() {
+          return o.useContext(p);
         }
       },
       3524: (e, t, n) => {
         "use strict";
-        n.d(t, { b5: () => l, bJ: () => d, nN: () => m });
-        var r = n(42898),
-          i = n(90606),
-          s = n(28864),
-          o = n(63696),
-          a = n(35560);
-        const c = o.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
-        function l(e) {
+        n.d(t, { b5: () => u, bJ: () => h, nN: () => m });
+        var r = n(62540),
+          i = n(42898),
+          s = n(90606),
+          o = n(28864),
+          a = n(63696),
+          c = n(35560);
+        const l = a.createContext({ focusNavWindow: null, bSupportsFocus: !0 });
+        function u(e) {
           const {
               ownerWindow: t,
               refFocusNavContext: n,
-              children: i,
-              suppressGamepadInput: l = !1,
+              children: s,
+              suppressGamepadInput: u = !1,
             } = e,
-            m = (0, a.Vu)(),
-            d = o.useContext(c),
-            [h] = o.useState(() => d.focusNavWindow || m.CreateContext(t, l)),
-            p = (0, r.gc)(m.NavigationSourceSupportsFocus) ?? !1;
-          o.useEffect(
+            m = (0, c.Vu)(),
+            h = a.useContext(l),
+            [p] = a.useState(() => h.focusNavWindow || m.CreateContext(t, u)),
+            g = (0, i.gc)(m.NavigationSourceSupportsFocus) ?? !1;
+          a.useEffect(
             () => (
-              h.OnMount(t),
-              t.document.hasFocus() && h.OnActivate(t),
+              p.OnMount(t),
+              t.document.hasFocus() && p.OnActivate(t),
               () => {
-                h.Destroy(t);
+                p.Destroy(t);
               }
             ),
-            [h, t],
+            [p, t],
           ),
-            (0, s.D5)(n, h);
-          const g = o.useMemo(
-            () => ({ focusNavWindow: h, bSupportsFocus: p }),
-            [h, p],
+            (0, o.D5)(n, p);
+          const f = a.useMemo(
+            () => ({ focusNavWindow: p, bSupportsFocus: g }),
+            [p, g],
           );
-          return o.createElement(
-            c.Provider,
-            { value: g },
-            o.createElement(u, { ownerWindow: t, context: h }),
-            i,
-          );
+          return (0, r.jsxs)(l.Provider, {
+            value: f,
+            children: [(0, r.jsx)(d, { ownerWindow: t, context: p }), s],
+          });
         }
-        function u(e) {
+        function d(e) {
           const { ownerWindow: t, context: n } = e,
-            r = o.useMemo(() => () => n.OnActivate(t), [n, t]),
-            s = o.useMemo(() => () => n.OnDeactivate(t), [n, t]);
+            r = a.useMemo(() => () => n.OnActivate(t), [n, t]),
+            i = a.useMemo(() => () => n.OnDeactivate(t), [n, t]);
           return (
-            (0, i.l6)(t, "touchstart", r, { capture: !0 }),
-            (0, i.l6)(t, "mousedown", r, { capture: !0 }),
-            (0, i.l6)(t, "focus", r),
-            (0, i.l6)(t.document, "focusin", r),
-            (0, i.l6)(t, "blur", s),
+            (0, s.l6)(t, "touchstart", r, { capture: !0 }),
+            (0, s.l6)(t, "mousedown", r, { capture: !0 }),
+            (0, s.l6)(t, "focus", r),
+            (0, s.l6)(t.document, "focusin", r),
+            (0, s.l6)(t, "blur", i),
             null
           );
         }
         function m() {
-          return o.useContext(c)?.focusNavWindow;
+          return a.useContext(l)?.focusNavWindow;
         }
-        function d(e = !0) {
-          return o.useContext(c)?.bSupportsFocus ?? e;
+        function h(e = !0) {
+          return a.useContext(l)?.bSupportsFocus ?? e;
         }
       },
       28869: (e, t, n) => {
         "use strict";
         n.d(t, {
-          C7: () => C,
-          sl: () => v,
-          D0: () => S,
-          Mg: () => B,
-          sQ: () => w,
-          HR: () => x,
-          v0: () => k,
-          TJ: () => _,
-          qp: () => b,
+          C7: () => v,
+          sl: () => M,
+          D0: () => x,
+          Mg: () => L,
+          sQ: () => b,
+          HR: () => I,
+          v0: () => R,
+          TJ: () => w,
+          qp: () => C,
         });
-        var r = n(42898),
-          i = n(28864),
-          s = n(4452),
-          o = n.n(s),
-          a = n(63696),
-          c = n(10975),
-          l = n(54644),
-          u = n(3524),
+        var r = n(62540),
+          i = n(42898),
+          s = n(28864),
+          o = n(4452),
+          a = n.n(o),
+          c = n(63696),
+          l = n(10975),
+          u = n(54644),
+          d = n(3524),
           m = n(87481),
-          d = n(20893),
-          h = n(61050),
-          p = n(79734),
-          g = n(41537);
-        var f = n(84252);
-        const _ = a.createContext(null),
-          w = a.createContext(h.CZ);
-        function b(e) {
+          h = n(20893),
+          p = n(61050),
+          g = n(79734),
+          f = n(41537);
+        var _ = n(84252);
+        const w = c.createContext(null),
+          b = c.createContext(p.CZ);
+        function C(e) {
           const { navRef: t, ...n } = e,
-            r = a.useRef(null),
-            s = (0, a.useContext)(_),
-            o = (0, a.useContext)(w),
-            c = (function (e, t) {
-              let n = a.useRef(null);
+            r = c.useRef(null),
+            i = (0, c.useContext)(w),
+            o = (0, c.useContext)(b),
+            a = (function (e, t) {
+              let n = c.useRef(null);
               return (
                 !e ||
                   (n.current && n.current.m_Parent == e) ||
                   (n.current = e.Tree.CreateNode(e, t)),
                 n.current
               );
-            })(s, o);
+            })(i, o);
           return (
-            a.useLayoutEffect(() => {
-              c && c.SetProperties(n);
+            c.useLayoutEffect(() => {
+              a && a.SetProperties(n);
             }),
-            a.useLayoutEffect(() => {
-              if (!s) return;
-              const e = s.Tree.RegisterNavigationItem(c, r.current);
+            c.useLayoutEffect(() => {
+              if (!i) return;
+              const e = i.Tree.RegisterNavigationItem(a, r.current);
               return () => {
                 e();
               };
-            }, [s, c, r]),
-            a.useLayoutEffect(() => {
-              if (c && t)
-                return (0, i.cZ)(t, c.CreateHandle()), () => (0, i.cZ)(t, null);
-            }, [c, t]),
-            { ref: r, node: c }
+            }, [i, a, r]),
+            c.useLayoutEffect(() => {
+              if (a && t)
+                return (0, s.cZ)(t, a.CreateHandle()), () => (0, s.cZ)(t, null);
+            }, [a, t]),
+            { ref: r, node: a }
           );
         }
-        function C(e) {
+        function v(e) {
           const {
               onButtonDown: t,
               onButtonUp: n,
@@ -1165,8 +1189,8 @@ var CLSTAMP = "10520954";
               onGamepadFocus: c,
               onGamepadBlur: l,
               onMenuButton: u,
-              onOKActionDescription: m,
-              onCancelActionDescription: h,
+              onOKActionDescription: d,
+              onCancelActionDescription: m,
               onSecondaryActionDescription: p,
               onOptionsActionDescription: g,
               onMenuActionDescription: f,
@@ -1186,9 +1210,9 @@ var CLSTAMP = "10520954";
             void 0 !== l && (b.onGamepadBlur = l);
           return {
             gamepadEvents: b,
-            actionDescriptions: (0, d.Y3)({
-              onOKActionDescription: m,
-              onCancelActionDescription: h,
+            actionDescriptions: (0, h.Y3)({
+              onOKActionDescription: d,
+              onCancelActionDescription: m,
               onSecondaryActionDescription: p,
               onOptionsActionDescription: g,
               onMenuActionDescription: f,
@@ -1197,7 +1221,7 @@ var CLSTAMP = "10520954";
             props: w,
           };
         }
-        function v(e) {
+        function M(e) {
           const {
               autoFocus: t,
               preferredFocus: n,
@@ -1209,8 +1233,8 @@ var CLSTAMP = "10520954";
               navKey: c,
               noFocusRing: l,
               focusable: u,
-              navRef: m,
-              actionDescriptionMap: d,
+              navRef: d,
+              actionDescriptionMap: m,
               onMoveUp: h,
               onMoveRight: p,
               onMoveDown: g,
@@ -1218,11 +1242,11 @@ var CLSTAMP = "10520954";
               navEntryPreferPosition: _,
               scrollIntoViewWhenChildFocused: w,
               fnScrollIntoViewHandler: b,
-              scrollIntoViewType: v,
+              scrollIntoViewType: C,
               resetNavOnEntry: M,
               ...S
             } = e,
-            { gamepadEvents: y, actionDescriptions: E, props: B } = C(S);
+            { gamepadEvents: x, actionDescriptions: y, props: B } = v(S);
           return {
             elemProps: B,
             navOptions: {
@@ -1236,7 +1260,7 @@ var CLSTAMP = "10520954";
               navKey: c,
               noFocusRing: l,
               focusable: u,
-              navRef: m,
+              navRef: d,
               onMoveUp: h,
               onMoveRight: p,
               onMoveDown: g,
@@ -1244,125 +1268,124 @@ var CLSTAMP = "10520954";
               navEntryPreferPosition: _,
               scrollIntoViewWhenChildFocused: w,
               fnScrollIntoViewHandler: b,
-              scrollIntoViewType: v,
+              scrollIntoViewType: C,
               resetNavOnEntry: M,
-              actionDescriptionMap: { ...d, ...E },
+              actionDescriptionMap: { ...m, ...y },
             },
-            gamepadEvents: y,
+            gamepadEvents: x,
           };
         }
-        function M(e) {
+        function S(e) {
           return function (t) {
             const {
                 focusClassName: n,
-                focusWithinClassName: i,
+                focusWithinClassName: r,
                 bFocusableByDefault: s,
-                className: c,
+                className: o,
                 divRef: l,
-                node: m,
-                tabIndex: d,
+                node: u,
+                tabIndex: m,
                 children: h,
                 ...p
               } = t,
-              g = (0, u.bJ)(),
-              _ = (0, r.gc)(m.SubscribableHasFocus) && g,
-              w = (0, r.gc)(m.SubscribableFocusWithin) && g,
+              g = (0, d.bJ)(),
+              f = (0, i.gc)(u.SubscribableHasFocus) && g,
+              w = (0, i.gc)(u.SubscribableFocusWithin) && g,
               {
                 bActiveTree: b,
                 bActiveTreeWithinContext: C,
                 bDisableFocusClasses: v,
                 bIsMounted: M,
-              } = (0, f.qR)(),
+              } = (0, _.qR)(),
               S = b && !v,
-              y = M && !C && (void 0 !== d || s);
-            return a.createElement(
+              x = M && !C && (void 0 !== m || s);
+            return c.createElement(
               e,
               {
                 ...p,
-                className: o()(c, _ && S && n, w && S && i),
-                tabIndex: y ? -1 : d,
+                className: a()(o, f && S && n, w && S && r),
+                tabIndex: x ? -1 : m,
                 ref: l,
               },
               h,
             );
           };
         }
-        const S = M("div");
+        const x = S("div");
         function y(e) {
           return (
-            c.eZ.PlayNavSound(c.PN.DefaultOk),
-            (0, l.kD)(e.currentTarget) && e.currentTarget.click(),
+            l.eZ.PlayNavSound(l.PN.DefaultOk),
+            (0, u.kD)(e.currentTarget) && e.currentTarget.click(),
             !0
           );
         }
-        const E = a.createContext(void 0),
-          B = E.Provider;
-        function L(e, t, n, r, s) {
+        const B = c.createContext(void 0),
+          L = B.Provider;
+        function k(e, t, n, i, o) {
           const {
               elemProps: {
-                focusClassName: c,
-                children: l,
-                "flow-children": u,
-                ...d
+                focusClassName: l,
+                children: u,
+                "flow-children": d,
+                ...h
               },
-              navOptions: h,
-              gamepadEvents: g,
-            } = v(n),
+              navOptions: p,
+              gamepadEvents: f,
+            } = M(n),
             {
-              bFocusableByDefault: f = !0,
-              bActivateByDefault: w = !1,
-              bDOMElementFocusByDefault: C = f,
-            } = s || {};
-          void 0 === h.focusable && !d.disabled && f && (h.focusable = !0);
-          const M = (0, p.O)(u),
-            { ref: S, node: B } = b({ layout: M, ...h });
-          g.onOKButton ||
-            ((("onClick" in d && d.onClick) || (w && (!0 === w || w(d)))) &&
-              (g.onOKButton = y)),
-            h.focusable && !C
-              ? (d.tabIndex = d.tabIndex || 0)
-              : !h.focusable && C && (d.tabIndex = d.tabIndex ?? -1),
-            (0, m.Ui)(g, S);
-          const L = (0, i.Ue)(r, S),
-            x = (0, a.useContext)(E)?.Component;
-          let k = { ...d };
+              bFocusableByDefault: _ = !0,
+              bActivateByDefault: b = !1,
+              bDOMElementFocusByDefault: v = _,
+            } = o || {};
+          void 0 === p.focusable && !h.disabled && _ && (p.focusable = !0);
+          const S = (0, g.O)(d),
+            { ref: x, node: L } = C({ layout: S, ...p });
+          f.onOKButton ||
+            ((("onClick" in h && h.onClick) || (b && (!0 === b || b(h)))) &&
+              (f.onOKButton = y)),
+            p.focusable && !v
+              ? (h.tabIndex = h.tabIndex || 0)
+              : !p.focusable && v && (h.tabIndex = h.tabIndex ?? -1),
+            (0, m.Ui)(f, x);
+          const k = (0, s.Ue)(i, x),
+            I = (0, c.useContext)(B)?.Component;
+          let R = { ...h };
           return (
-            "onClick" in d && (k.role ??= "button"),
-            B
-              ? ((k = {
-                  ...k,
-                  divRef: L,
-                  node: B,
-                  focusClassName: o()(c, "gpfocus"),
+            "onClick" in h && (R.role ??= "button"),
+            L
+              ? ((R = {
+                  ...R,
+                  divRef: k,
+                  node: L,
+                  focusClassName: a()(l, "gpfocus"),
                   focusWithinClassName: "gpfocuswithin",
-                  bFocusableByDefault: C,
-                  className: o()(d.className, "Focusable"),
+                  bFocusableByDefault: v,
+                  className: a()(h.className, "Focusable"),
                 }),
-                a.createElement(
-                  _.Provider,
-                  { value: B },
-                  x
-                    ? a.createElement(x, { ...k, Component: t }, l)
-                    : a.createElement(t, k, l),
-                ))
-              : a.createElement(
+                (0, r.jsx)(w.Provider, {
+                  value: L,
+                  children: I
+                    ? c.createElement(I, { ...R, Component: t }, u)
+                    : c.createElement(t, R, u),
+                }))
+              : c.createElement(
                   e,
-                  { ...k, ref: r, className: o()(d.className, "Focusable") },
-                  l,
+                  { ...R, ref: i, className: a()(h.className, "Focusable") },
+                  u,
                 )
           );
         }
-        function x(e, t) {
-          const n = M(e);
-          return a.forwardRef(function (r, i) {
-            return L(e, n, r, i, t);
+        function I(e, t) {
+          const n = S(e);
+          return c.forwardRef(function (r, i) {
+            return k(e, n, r, i, t);
           });
         }
-        function k(e) {
-          const t = M(e);
-          return a.forwardRef(function (n, r) {
+        function R(e) {
+          const t = S(e);
+          return c.forwardRef(function (n, r) {
             const {
-                virtualKeyboardProps: s,
+                virtualKeyboardProps: i,
                 props: { refKeyboardHandle: o, ...a },
               } = (function (e) {
                 const {
@@ -1388,15 +1411,16 @@ var CLSTAMP = "10520954";
                   props: c,
                 };
               })(n),
-              c = (0, g.Cz)(s, o),
-              l = (0, i.Ue)(r, c);
-            return L(e, t, a, l);
+              c = (0, f.Cz)(i, o),
+              l = (0, s.Ue)(r, c);
+            return k(e, t, a, l);
           });
         }
       },
       87481: (e, t, n) => {
         "use strict";
         n.d(t, { KF: () => l, Ui: () => a });
+        n(62540);
         var r = n(63696),
           i = n(83599),
           s = n(20893);
@@ -1477,66 +1501,66 @@ var CLSTAMP = "10520954";
       },
       69164: (e, t, n) => {
         "use strict";
-        n.d(t, { Z: () => p, r: () => h });
-        var r = n(28864),
-          i = n(4452),
-          s = n.n(i),
-          o = n(63696),
-          a = n(28869),
-          c = n(4690),
-          l = n(79734),
-          u = n(3524),
+        n.d(t, { Z: () => g, r: () => p });
+        var r = n(62540),
+          i = n(28864),
+          s = n(4452),
+          o = n.n(s),
+          a = n(63696),
+          c = n(28869),
+          l = n(4690),
+          u = n(79734),
+          d = n(3524),
           m = n(87481);
-        const d = o.createContext({ Component: a.D0 });
-        function h(e) {
-          const { Component: t, children: n } = e,
-            r = o.useMemo(() => ({ Component: t }), [t]);
-          return o.createElement(d.Provider, { value: r }, n);
-        }
+        const h = a.createContext({ Component: c.D0 });
         function p(e) {
+          const { Component: t, children: n } = e,
+            i = a.useMemo(() => ({ Component: t }), [t]);
+          return (0, r.jsx)(h.Provider, { value: i, children: n });
+        }
+        function g(e) {
           const {
               "flow-children": t,
               onActivate: n,
-              onCancel: i,
-              focusClassName: h,
-              focusWithinClassName: p,
-              ...g
+              onCancel: s,
+              focusClassName: p,
+              focusWithinClassName: g,
+              ...f
             } = e,
-            { elemProps: f, navOptions: _, gamepadEvents: w } = (0, a.sl)(g);
-          let b = {};
-          const C = (0, l.O)(t);
-          C != c.xj.NONE && (b.layout = C),
+            { elemProps: _, navOptions: w, gamepadEvents: b } = (0, c.sl)(f);
+          let C = {};
+          const v = (0, u.O)(t);
+          v != l.xj.NONE && (C.layout = v),
             n &&
-              ((f.onClick = f.onClick || n),
-              (w.onOKButton = w.onOKButton || n)),
-            w.onOKButton &&
-              void 0 === _.focusable &&
-              void 0 === _.focusableIfEmpty &&
-              (_.focusable = !0),
-            i && (w.onCancelButton = w.onCancelButton || i);
-          const { ref: v, node: M } = (0, a.qp)({ ...b, ..._ }),
-            S = (0, u.bJ)();
-          (f.className = s()(f.className, "Panel", S && "Focusable")),
-            (0, m.Ui)(w, v);
-          const y = (0, r.Ue)(v, e.ref);
-          (!_.focusable && !_.focusableIfEmpty) ||
-            (M && M.Tree.BUseVirtualFocus()) ||
-            (f.tabIndex = f.tabIndex || 0),
-            _.focusable && (n || w.onOKButton) && (f.role ??= "button");
-          const E = (0, o.useContext)(d).Component;
-          return o.createElement(
-            a.TJ.Provider,
-            { value: M },
-            M
-              ? o.createElement(E, {
-                  ...f,
+              ((_.onClick = _.onClick || n),
+              (b.onOKButton = b.onOKButton || n)),
+            b.onOKButton &&
+              void 0 === w.focusable &&
+              void 0 === w.focusableIfEmpty &&
+              (w.focusable = !0),
+            s && (b.onCancelButton = b.onCancelButton || s);
+          const { ref: M, node: S } = (0, c.qp)({ ...C, ...w }),
+            x = (0, d.bJ)();
+          (_.className = o()(_.className, "Panel", x && "Focusable")),
+            (0, m.Ui)(b, M);
+          const y = (0, i.Ue)(M, e.ref);
+          (!w.focusable && !w.focusableIfEmpty) ||
+            (S && S.Tree.BUseVirtualFocus()) ||
+            (_.tabIndex = _.tabIndex || 0),
+            w.focusable && (n || b.onOKButton) && (_.role ??= "button");
+          const B = (0, a.useContext)(h).Component;
+          return (0, r.jsx)(c.TJ.Provider, {
+            value: S,
+            children: S
+              ? (0, r.jsx)(B, {
+                  ..._,
                   divRef: y,
-                  node: M,
-                  focusClassName: s()(h, "gpfocus"),
-                  focusWithinClassName: s()(p, "gpfocuswithin"),
+                  node: S,
+                  focusClassName: o()(p, "gpfocus"),
+                  focusWithinClassName: o()(g, "gpfocuswithin"),
                 })
-              : o.createElement("div", { ...f, ref: y }),
-          );
+              : (0, r.jsx)("div", { ..._, ref: y }),
+          });
         }
       },
       20893: (e, t, n) => {
@@ -1553,8 +1577,8 @@ var CLSTAMP = "10520954";
           Y3: () => M,
           cC: () => S,
           cR: () => p,
-          f: () => d,
-          hr: () => m,
+          f: () => m,
+          hr: () => d,
           nt: () => c,
           tV: () => f,
           u8: () => g,
@@ -1567,7 +1591,8 @@ var CLSTAMP = "10520954";
           (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
             (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
             (e[(e.APPLICATION = 2)] = "APPLICATION"),
-            (e[(e.BROWSER = 3)] = "BROWSER");
+            (e[(e.BROWSER = 3)] = "BROWSER"),
+            (e[(e.AUTOFOCUS = 4)] = "AUTOFOCUS");
         })(r || (r = {}));
         let o = {
           [s.pR.OK]: "vgp_onok",
@@ -1594,10 +1619,10 @@ var CLSTAMP = "10520954";
         function u(e, t) {
           return a(e, "vgp_onok", v(t));
         }
-        function m(e, t) {
+        function d(e, t) {
           return a(e, "vgp_oncancel", v(t));
         }
-        function d(e, t) {
+        function m(e, t) {
           return a(e, "vgp_onsecondaryaction", v(t));
         }
         function h(e, t) {
@@ -1903,7 +1928,7 @@ var CLSTAMP = "10520954";
       },
       54102: (e, t, n) => {
         "use strict";
-        n.d(t, { Gt: () => m, LU: () => l, Ze: () => c, nv: () => u });
+        n.d(t, { Gt: () => d, LU: () => l, Ze: () => c, nv: () => u });
         var r = n(85688),
           i = n(20893);
         const s = new (n(83599).wd)("FocusHistory"),
@@ -1916,18 +1941,21 @@ var CLSTAMP = "10520954";
           static SerializeNavState(e, t = !0, n = !0) {
             return {
               root: a.SerializeNavNode(e, t, n),
-              bHadFocus: e.BFocusWithin(),
+              bHadFocus: e.BFocusWithin() && e.Tree.BIsActiveWithinContext(),
             };
           }
           static SerializeNavNode(e, t = !0, n = !0) {
-            let r = null;
+            let r;
             const [i, s] = e.GetChildren();
+            i.length &&
+              -1 != s &&
+              t &&
+              (r = i.map((e, t) => a.SerializeNavNode(e, t == s || n, n)));
+            const o = { rgChildren: r };
             return (
-              i.length &&
-                -1 != s &&
-                t &&
-                (r = i.map((e, t) => a.SerializeNavNode(e, t == s || n, n))),
-              { sNavKey: e.NavKey, iActiveChild: s, rgChildren: r }
+              e.NavKey && (o.sNavKey = e.NavKey),
+              -1 != s && (o.iActiveChild = s),
+              o
             );
           }
           static RestoreSerializedNavState(e, t, n = 0) {
@@ -1938,7 +1966,7 @@ var CLSTAMP = "10520954";
             });
           }
           static RestoreSerializedNavNode(e, t, n = 0) {
-            const { sNavKey: i, iActiveChild: c, rgChildren: l } = t;
+            const { sNavKey: i, iActiveChild: c = -1, rgChildren: l } = t;
             i && (0, r.wT)(i == e.NavKey, "navkey mismatch"),
               e.SetActiveChild(c);
             const u = s.IsDebugEnabled()
@@ -1974,12 +2002,12 @@ var CLSTAMP = "10520954";
                   n && e.SetActiveChild(t.indexOf(n));
               }
               let i = 0,
-                m = 0;
-              for (; i < t.length && m < l.length; ) {
+                d = 0;
+              for (; i < t.length && d < l.length; ) {
                 for (; i < t.length && t[i].NavKey; ) i++;
-                for (; m < l.length && l[m].sNavKey; ) m++;
-                if (i >= t.length || m >= l.length) break;
-                a.RestoreSerializedNavNode(t[i], l[m], n + 1), i++, m++;
+                for (; d < l.length && l[d].sNavKey; ) d++;
+                if (i >= t.length || d >= l.length) break;
+                a.RestoreSerializedNavNode(t[i], l[d], n + 1), i++, d++;
               }
             }
           }
@@ -2004,7 +2032,7 @@ var CLSTAMP = "10520954";
               );
           }
         }
-        class m extends a {
+        class d extends a {
           m_mapHistory = new Map();
           SaveState(e) {
             this.m_mapHistory.set(e, a.SerializeNavState(this.m_root));
@@ -2026,11 +2054,11 @@ var CLSTAMP = "10520954";
           CZ: () => p,
           G4: () => f,
           UR: () => l,
-          _V: () => d,
+          _V: () => m,
           ix: () => u,
           kI: () => c,
           ko: () => g,
-          lr: () => m,
+          lr: () => d,
           xb: () => h,
         });
         var r = n(61657),
@@ -2123,14 +2151,14 @@ var CLSTAMP = "10520954";
             r < 0 ? 0 : r
           );
         }
-        function m(e, t) {
+        function d(e, t) {
           return "x" == e
             ? { min: t.left, max: t.right }
             : { min: t.top, max: t.bottom };
         }
-        function d(e, t, n) {
+        function m(e, t, n) {
           const r = t[e],
-            i = m(e, n);
+            i = d(e, n);
           return r < i.min ? i.min - r : r > i.max ? r - i.max : 0;
         }
         function h(e) {
@@ -2191,8 +2219,8 @@ var CLSTAMP = "10520954";
           Bp: () => L,
           $C: () => B,
           xj: () => S,
-          iU: () => y,
-          Yo: () => E,
+          iU: () => x,
+          Yo: () => y,
         });
         var r = n(34629),
           i = n(61657),
@@ -2202,8 +2230,8 @@ var CLSTAMP = "10520954";
           c = n(93960),
           l = n(79769),
           u = n(83599),
-          m = n(87197),
-          d = n(20893),
+          d = n(87197),
+          m = n(20893),
           h = n(61050),
           p = n(54644);
         function g(e, t, n) {
@@ -2317,7 +2345,7 @@ var CLSTAMP = "10520954";
           C = n(13099);
         const v = new u.wd("FocusNavigationMovement"),
           M = v.Debug;
-        var S, y, E, B;
+        var S, x, y, B;
         !(function (e) {
           (e[(e.NONE = 0)] = "NONE"),
             (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -2333,13 +2361,13 @@ var CLSTAMP = "10520954";
               (e[(e.MAINTAIN_X = 2)] = "MAINTAIN_X"),
               (e[(e.MAINTAIN_Y = 3)] = "MAINTAIN_Y"),
               (e[(e.PREFERRED_CHILD = 4)] = "PREFERRED_CHILD");
-          })(y || (y = {})),
+          })(x || (x = {})),
           (function (e) {
             (e[(e.Standard = 0)] = "Standard"),
               (e[(e.NoTransform = 1)] = "NoTransform"),
               (e[(e.NoTransformSparseContent = 2)] =
                 "NoTransformSparseContent");
-          })(E || (E = {})),
+          })(y || (y = {})),
           (function (e) {
             (e[(e.INVALID = 0)] = "INVALID"),
               (e[(e.FORWARD = 1)] = "FORWARD"),
@@ -2388,7 +2416,7 @@ var CLSTAMP = "10520954";
             return this.m_Parent;
           }
           SetProperties(e) {
-            const t = !(0, m.e)(
+            const t = !(0, d.e)(
                 this.m_Properties?.actionDescriptionMap,
                 e?.actionDescriptionMap,
               ),
@@ -2404,11 +2432,11 @@ var CLSTAMP = "10520954";
                     this.m_FocusableIfEmptyAncestor,
                   ),
               this.m_Properties.noFocusRing && !r && this.BHasFocus()
-                ? this.m_FocusRing?.OnBlur(d.D$.APPLICATION, this, this)
+                ? this.m_FocusRing?.OnBlur(m.D$.APPLICATION, this, this)
                 : !this.m_Properties.noFocusRing &&
                   r &&
                   this.BHasFocus() &&
-                  this.m_FocusRing?.OnFocus(d.D$.APPLICATION, this, this),
+                  this.m_FocusRing?.OnFocus(m.D$.APPLICATION, this, this),
               this.m_element && this.RegisterDOMEvents();
           }
           BWantsAutoFocus() {
@@ -2464,7 +2492,11 @@ var CLSTAMP = "10520954";
               }
             return this.m_Parent
               ? this.m_Parent.BuildConsolidatedActionDescriptionMap(e)
-              : e;
+              : this.m_Tree.GetParentEmbeddedNavTree()
+                ? this.m_Tree
+                    .GetParentEmbeddedNavTree()
+                    .Root.BuildConsolidatedActionDescriptionMap(e)
+                : e;
           }
           AddChild(e) {
             this.m_rgChildren.push(e),
@@ -2542,7 +2574,7 @@ var CLSTAMP = "10520954";
                     this,
                   )
                 : this.BHasFocus() &&
-                  this.m_Tree.TransferFocus(d.D$.APPLICATION, null)),
+                  this.m_Tree.TransferFocus(m.D$.APPLICATION, null)),
               this.UnregisterDOMEvents(),
               this.m_Parent
                 ? this.m_Parent.RemoveChild(this)
@@ -2561,7 +2593,7 @@ var CLSTAMP = "10520954";
                 this.m_Properties.onMoveDown ||
                 this.m_Properties.onMoveLeft) &&
               this.m_rgNavigationHandlers.push(
-                (0, d.u8)(this.m_element, this.OnNavigationEvent),
+                (0, m.u8)(this.m_element, this.OnNavigationEvent),
               ),
               (this.m_Properties?.focusable ||
                 this.m_Properties?.focusableIfEmpty ||
@@ -2657,16 +2689,16 @@ var CLSTAMP = "10520954";
                       this.m_element,
                       e.m_element,
                     ),
-                    void this.m_Tree.TransferFocus(d.D$.BROWSER, e)
+                    void this.m_Tree.TransferFocus(m.D$.BROWSER, e)
                   );
               }
-              this.m_Tree.TransferFocus(d.D$.BROWSER, this);
+              this.m_Tree.TransferFocus(m.D$.BROWSER, this);
             }
           }
           OnDOMBlur(e) {
             this.BHasFocus() &&
               this.m_element?.ownerDocument.hasFocus() &&
-              this.m_Tree.TransferFocus(d.D$.BROWSER, null);
+              this.m_Tree.TransferFocus(m.D$.BROWSER, null);
           }
           UpdateParentActiveChild() {
             this.m_Parent &&
@@ -2743,12 +2775,12 @@ var CLSTAMP = "10520954";
                     a >= this.m_rgChildren.length ||
                     c == S.ROW_REVERSE ||
                     c == S.COLUMN_REVERSE ||
-                    i == y.LAST
+                    i == x.LAST
                       ? this.m_rgChildren.length - 1
                       : 0),
-                i == y.MAINTAIN_X
+                i == x.MAINTAIN_X
                   ? (u = "x")
-                  : i == y.MAINTAIN_Y
+                  : i == x.MAINTAIN_Y
                     ? (u = "y")
                     : c == S.GEOMETRIC && n && (u = s.xr[n]),
                 (u || t) && n)
@@ -2762,7 +2794,7 @@ var CLSTAMP = "10520954";
                       n,
                     );
                   M(
-                    `Taking focus while preserving ${i && y[i]} preserved: ${u} movement: ${n}, node:`,
+                    `Taking focus while preserving ${i && x[i]} preserved: ${u} movement: ${n}, node:`,
                     s,
                   ),
                     (l = this.FindClosestFocusableNodeToRect(e, s));
@@ -2771,17 +2803,24 @@ var CLSTAMP = "10520954";
                     n = t == B.BACKWARD ? this.m_rgChildren.length : -1;
                   l = this.FindNextFocusableChildInDirection(n, t, e);
                 }
-              } else if (i == y.PREFERRED_CHILD) {
-                for (const t of this.m_rgChildren)
-                  if (
-                    ((l = t.BWantsPreferredFocus()
-                      ? t.FindFocusableNode(e)
-                      : void 0),
-                    l)
-                  )
-                    return l;
+              } else if (i == x.PREFERRED_CHILD) {
+                let t = this.m_rgChildren;
+                for (; t.length; ) {
+                  let n = [];
+                  for (const r of t) {
+                    if (
+                      ((l = r.BWantsPreferredFocus()
+                        ? r.FindFocusableNode(e)
+                        : void 0),
+                      l)
+                    )
+                      return l;
+                    n.push(...r.m_rgChildren);
+                  }
+                  t = n;
+                }
               } else
-                i == y.LAST &&
+                i == x.LAST &&
                   (l = this.FindNextFocusableChildInDirection(
                     a + 1,
                     B.BACKWARD,
@@ -2884,7 +2923,7 @@ var CLSTAMP = "10520954";
             }
             if (r) {
               const n = (0, h.G4)(e);
-              if (this.GetScrollIntoViewType() == E.NoTransformSparseContent) {
+              if (this.GetScrollIntoViewType() == y.NoTransformSparseContent) {
                 const e = r.Element?.ownerDocument.defaultView;
                 if (e) {
                   const i =
@@ -2915,7 +2954,7 @@ var CLSTAMP = "10520954";
                     );
                 }
               }
-              return this.m_Tree.TransferFocus(d.D$.GAMEPAD, r, n), !0;
+              return this.m_Tree.TransferFocus(m.D$.GAMEPAD, r, n), !0;
             }
             return !1;
           }
@@ -2924,7 +2963,7 @@ var CLSTAMP = "10520954";
               ? this.m_Properties.scrollIntoViewType
               : this.m_Parent
                 ? this.m_Parent.GetScrollIntoViewType()
-                : E.Standard;
+                : y.Standard;
           }
           GetRelativeDirection(e) {
             return this.ComputeRelativeDirection(e, this.GetLayout());
@@ -3213,7 +3252,7 @@ var CLSTAMP = "10520954";
                   M(
                     `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                   ),
-              (0, b.ZQ)(this, t);
+              this.m_Tree.BIsActive() && (0, b.ZQ)(this, t);
           }
         }
         (0, r.Cg)([c.o], L.prototype, "OnDOMFocus", null),
@@ -3247,7 +3286,7 @@ var CLSTAMP = "10520954";
       },
       77517: (e, t, n) => {
         "use strict";
-        n.d(t, { QE: () => w, ZQ: () => _, Pl: () => E });
+        n.d(t, { QE: () => w, ZQ: () => _, Pl: () => y });
         var r = n(34629),
           i = n(49412),
           s = n(93960),
@@ -3357,8 +3396,8 @@ var CLSTAMP = "10520954";
           }
         }
         var u = n(83599),
-          m = n(4690);
-        const d = new u.wd("ScrollSnap").Debug;
+          d = n(4690);
+        const m = new u.wd("ScrollSnap").Debug;
         let h = !1;
         const p = 1.4;
         let g;
@@ -3388,7 +3427,7 @@ var CLSTAMP = "10520954";
             let { node: i, eScrollType: s } = r.pop(),
               o = 0 == r.length;
             if (
-              (void 0 === s && (s = h ? m.Yo.NoTransform : m.Yo.Standard),
+              (void 0 === s && (s = h ? d.Yo.NoTransform : d.Yo.Standard),
               i?.m_Properties?.fnScrollIntoViewHandler)
             ) {
               if (!1 !== i.m_Properties.fnScrollIntoViewHandler(e, t, i))
@@ -3396,8 +3435,8 @@ var CLSTAMP = "10520954";
             }
             const a = i.m_element,
               c =
-                s == m.Yo.NoTransform ||
-                s == m.Yo.NoTransformSparseContent ||
+                s == d.Yo.NoTransform ||
+                s == d.Yo.NoTransformSparseContent ||
                 !o;
             if (t) {
               const t = c ? w(a) : a.getBoundingClientRect();
@@ -3409,19 +3448,19 @@ var CLSTAMP = "10520954";
                 t.top > a.ownerDocument.defaultView.innerHeight + i) &&
                 ((r = !0),
                 s ||
-                  d(
+                  m(
                     `Disabling smooth scrolling, ${t.bottom} < ${-i}, ${t.top} > ${a.ownerDocument.defaultView.innerHeight} + ${i} `,
                   ));
               let o = r ? "auto" : "smooth";
               r && (g = performance.now()),
                 e.Tree.Controller.BIsRestoringHistory() && (o = "auto"),
                 c
-                  ? E(n, a, o)
+                  ? y(n, a, o)
                   : a.scrollIntoView({ behavior: o, block: "nearest" });
             } else
-              d("No previous element for scrolling, will jump"),
+              m("No previous element for scrolling, will jump"),
                 c
-                  ? E(n, a, "auto")
+                  ? y(n, a, "auto")
                   : a?.scrollIntoView({
                       behavior: "auto",
                       block: "nearest",
@@ -3445,14 +3484,16 @@ var CLSTAMP = "10520954";
             if (
               ((t += r.offsetTop), (n += r.offsetLeft), "ownerDocument" in r)
             ) {
-              if ("fixed" === window.getComputedStyle(r).position) break;
+              const e = window.getComputedStyle(r);
+              if ("fixed" === e.position || "sticky" === e.position) break;
             }
             r = r.offsetParent;
           }
           for (r = e?.parentElement; r; ) {
-            const { scrollTop: e, scrollLeft: i } = k(r);
+            const { scrollTop: e, scrollLeft: i } = I(r);
             if (((t -= e), (n -= i), "ownerDocument" in r)) {
-              if ("fixed" === window.getComputedStyle(r).position) break;
+              const e = window.getComputedStyle(r);
+              if ("fixed" === e.position || "sticky" === e.position) break;
             }
             r = r.parentElement;
           }
@@ -3471,14 +3512,14 @@ var CLSTAMP = "10520954";
         function C(e, t, n, r) {
           let [i, s, o] = b(e, r),
             [a, c, l] = b(t, r),
-            [u, m] = b(n, r);
+            [u, d] = b(n, r);
           if (i < a && s > c) return 0;
-          const d = i - u,
-            h = s + m,
+          const m = i - u,
+            h = s + d,
             p = o > l;
-          return (d < a && !p) || (h > c && p)
-            ? d - a
-            : (d < a && p) || (h > c && !p)
+          return (m < a && !p) || (h > c && p)
+            ? m - a
+            : (m < a && p) || (h > c && !p)
               ? h - c
               : 0;
         }
@@ -3525,14 +3566,14 @@ var CLSTAMP = "10520954";
             bottom: Math.max(0, t.bottom - n.bottom),
           };
         }
-        function y(e) {
+        function x(e) {
           return e > -1 && e < 1;
         }
-        function E(e, t, n, r, s) {
-          d(
+        function y(e, t, n, r, s) {
+          m(
             "----------------------------------------------------------------------------------",
           ),
-            d("Scrolling Into View:", t);
+            m("Scrolling Into View:", t);
           let a = [],
             c = t,
             l = w(t),
@@ -3542,13 +3583,13 @@ var CLSTAMP = "10520954";
             e || (e = (0, o.qf)(c));
             let t = M(c),
               n = S(e, w(e)),
-              m = x(e),
+              d = k(e),
               h = { element: e, left: 0, top: 0 };
             if (
-              (d(
+              (m(
                 "Checking scroll div",
                 e,
-                `scroll y:${m.scrollTop} of ${m.MaxScrollTop()}, x:${m.scrollLeft} of ${m.MaxScrollLeft()}, adjusted =>`,
+                `scroll y:${d.scrollTop} of ${d.MaxScrollTop()}, x:${d.scrollLeft} of ${d.MaxScrollLeft()}, adjusted =>`,
                 n,
                 "target => ",
                 l,
@@ -3558,27 +3599,27 @@ var CLSTAMP = "10520954";
                 ((h.top = C(l, n, t, "y")),
                 (h.top = i.OQ(
                   h.top,
-                  -m.scrollTop,
-                  m.MaxScrollTop() - m.scrollTop,
+                  -d.scrollTop,
+                  d.MaxScrollTop() - d.scrollTop,
                 )),
                 s &&
                   ((h.top =
                     Math.min(u, Math.abs(h.top)) * (h.top < 0 ? -1 : 1)),
                   (u -= Math.abs(h.top))),
-                d(`- checked y: ${h.top}`)),
+                m(`- checked y: ${h.top}`)),
               (r && "x" != r) ||
                 !(0, o.aF)(e, "x") ||
                 ((h.left = C(l, n, t, "x")),
                 (h.left = i.OQ(
                   h.left,
-                  -m.scrollLeft,
-                  m.MaxScrollLeft() - m.scrollLeft,
+                  -d.scrollLeft,
+                  d.MaxScrollLeft() - d.scrollLeft,
                 )),
                 s &&
                   ((h.left =
                     Math.min(u, Math.abs(h.left)) * (h.left < 0 ? -1 : 1)),
                   (u -= Math.abs(h.left))),
-                d(`- checked x: ${h.left}`)),
+                m(`- checked x: ${h.left}`)),
               a.push(h),
               s && !u)
             )
@@ -3594,18 +3635,18 @@ var CLSTAMP = "10520954";
                 left: l.left - h.left,
               });
           }
-          let m = !1;
+          let d = !1;
           for (let e of a) {
-            if (y(e.left) && y(e.top)) continue;
-            let t = x(e.element),
+            if (x(e.left) && x(e.top)) continue;
+            let t = k(e.element),
               r = t.scrollTop + e.top,
               s = t.scrollLeft + e.left;
             (s = i.OQ(s, 0, t.MaxScrollLeft())),
               (r = i.OQ(r, 0, t.MaxScrollTop())),
-              (y(t.scrollLeft - s) && y(t.scrollTop - r)) ||
+              (x(t.scrollLeft - s) && x(t.scrollTop - r)) ||
                 (t.scrollTo({ left: s, top: r, behavior: n }),
-                m || (d("Scrolling:"), (m = !0)),
-                d(
+                d || (m("Scrolling:"), (d = !0)),
+                m(
                   `- ${e.top},${e.left} => ${r}, ${s}, behavior: ${n}`,
                   e.element,
                 ));
@@ -3723,11 +3764,11 @@ var CLSTAMP = "10520954";
         }
         (0, r.Cg)([s.o], B.prototype, "ResetScrollState", null);
         const L = new WeakMap();
-        function x(e) {
+        function k(e) {
           let t = L.get(e);
           return t || ((t = new B(e)), L.set(e, t)), t;
         }
-        function k(e) {
+        function I(e) {
           const t = L.get(e);
           return t
             ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
@@ -3737,49 +3778,30 @@ var CLSTAMP = "10520954";
       15181: (e, t, n) => {
         "use strict";
         n.d(t, {
-          C3: () => l,
-          Nw: () => d,
-          W7: () => o,
-          _k: () => c,
-          ru: () => m,
-          s1: () => a,
+          C3: () => a,
+          Nw: () => u,
+          W7: () => s,
+          _k: () => o,
+          ru: () => l,
         });
         var r = n(20893),
-          i = n(61657),
-          s = n(4690);
-        function o(e) {
+          i = n(4690);
+        function s(e) {
           return !!e.is_repeat;
         }
-        function a(e) {
-          return (t) => {
-            if (t.currentTarget == t.target) return !1;
-            switch (t.detail.button) {
-              case i.pR.DIR_UP:
-                return !!e.bPreventMovementUp;
-              case i.pR.DIR_RIGHT:
-                return !!e.bPreventMovementRight;
-              case i.pR.DIR_DOWN:
-                return !!e.bPreventMovementDown;
-              case i.pR.DIR_LEFT:
-                return !!e.bPreventMovementLeft;
-              default:
-                return !1;
-            }
-          };
-        }
-        const c = Object.seal({ onMoveUp: u, onMoveDown: u }),
-          l = Object.seal({ onMoveRight: u, onMoveLeft: u });
-        function u(e, t) {
+        const o = Object.seal({ onMoveUp: c, onMoveDown: c }),
+          a = Object.seal({ onMoveRight: c, onMoveLeft: c });
+        function c(e, t) {
           if (e.is_repeat) return !1;
           const n = t.GetRelativeDirection(e.button);
-          return n == s.$C.FORWARD
+          return n == i.$C.FORWARD
             ? t.BFocusFirstChild(r.D$.GAMEPAD)
-            : n == s.$C.BACKWARD && t.BFocusLastChild(r.D$.GAMEPAD);
+            : n == i.$C.BACKWARD && t.BFocusLastChild(r.D$.GAMEPAD);
         }
-        function m() {
+        function l() {
           return !0;
         }
-        function d(e) {
+        function u(e) {
           return e.Element.checkVisibility();
         }
       },
@@ -3815,7 +3837,7 @@ var CLSTAMP = "10520954";
               a.current && document.activeElement == a.current,
           });
           const u = l(c.current),
-            m = i.useCallback(
+            d = i.useCallback(
               (e) => {
                 (document.hasFocus() || document.activeElement != a.current) &&
                   (e.currentTarget == a.current
@@ -3826,7 +3848,7 @@ var CLSTAMP = "10520954";
               },
               [u],
             ),
-            d = (0, r.QS)(
+            m = (0, r.QS)(
               (e) => {
                 a.current = e;
                 const t = [];
@@ -3847,11 +3869,11 @@ var CLSTAMP = "10520954";
                       e.removeEventListener("click", u.ShowVirtualKeyboard),
                     ),
                     t.push((0, s.VX)(e, u.ShowVirtualKeyboard)),
-                    t.push((0, s.W1)(e, m))),
+                    t.push((0, s.W1)(e, d))),
                   () => t.forEach((e) => e())
                 );
               },
-              [m, u],
+              [d, u],
             );
           return (
             i.useLayoutEffect(
@@ -3871,7 +3893,7 @@ var CLSTAMP = "10520954";
               ),
               [u, t],
             ),
-            d
+            m
           );
         }
         function l(e) {
@@ -3930,10 +3952,10 @@ var CLSTAMP = "10520954";
         function u(e, t) {
           return e.filter((e) => t !== e);
         }
-        function m(e) {
+        function d(e) {
           return (e ?? []).filter(Boolean);
         }
-        function d(e, t) {
+        function m(e, t) {
           let n = 0,
             r = e.length - 1;
           for (; n <= r; ) {
@@ -3950,7 +3972,7 @@ var CLSTAMP = "10520954";
           return r;
         }
         function h(e, t, n) {
-          const r = d(e, (e) => n(t, e));
+          const r = m(e, (e) => n(t, e));
           e.splice(r + 1, 0, t);
         }
         function p(e, t) {
@@ -3981,7 +4003,7 @@ var CLSTAMP = "10520954";
           $D: () => l,
           $Y: () => g,
           Ew: () => f,
-          Le: () => m,
+          Le: () => d,
           Nv: () => _,
           R5: () => s,
           Wp: () => c,
@@ -3989,7 +4011,7 @@ var CLSTAMP = "10520954";
           fW: () => r,
           hT: () => p,
           il: () => u,
-          rJ: () => d,
+          rJ: () => m,
           x9: () => a,
           yY: () => i,
           zl: () => o,
@@ -4415,7 +4437,7 @@ var CLSTAMP = "10520954";
         "use strict";
         n.d(t, {
           BT: () => c,
-          Sg: () => m,
+          Sg: () => d,
           Uq: () => a,
           gp: () => s,
           i0: () => u,
@@ -4531,18 +4553,18 @@ var CLSTAMP = "10520954";
               );
           }
         }
-        function m(e) {
+        function d(e) {
           const t = e.proto;
           for (const n in e.fields) {
             const i = e.fields[n],
               { n: s, c: o, r: a, d: c, q: l } = i;
             Object.prototype.hasOwnProperty.call(i, "d")
-              ? (t.prototype[n] = d(r.Message.getFieldWithDefault, s, c))
+              ? (t.prototype[n] = m(r.Message.getFieldWithDefault, s, c))
               : (t.prototype[n] = o
                   ? a
-                    ? d(r.Message.getRepeatedWrapperField, o, s)
+                    ? m(r.Message.getRepeatedWrapperField, o, s)
                     : h(o, s)
-                  : d(r.Message.getField, s)),
+                  : m(r.Message.getField, s)),
               (t.prototype[`set_${n}`] = p(
                 o
                   ? a
@@ -4554,7 +4576,7 @@ var CLSTAMP = "10520954";
               a && (t.prototype[`add_${n}`] = g(s, o));
           }
         }
-        function d(e, ...t) {
+        function m(e, ...t) {
           return function () {
             return e(this, ...t);
           };
@@ -4584,9 +4606,9 @@ var CLSTAMP = "10520954";
         n.d(t, {
           LH: () => c,
           Lu: () => w,
-          O2: () => d,
+          O2: () => m,
           TT: () => u,
-          WV: () => m,
+          WV: () => d,
           gF: () => l,
           h2: () => p,
           kK: () => o,
@@ -5120,20 +5142,20 @@ var CLSTAMP = "10520954";
             return "CMsgAuthTicket";
           }
         }
-        class m extends r.Message {
+        class d extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              m.prototype.appid || s.Sg(m.M()),
+              d.prototype.appid || s.Sg(d.M()),
               r.Message.initialize(this, e, 0, -1, [17, 18], null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              m.sm_m ||
-                (m.sm_m = {
-                  proto: m,
+              d.sm_m ||
+                (d.sm_m = {
+                  proto: d,
                   fields: {
                     appid: { n: 1, br: s.qM.readUint32, bw: s.gp.writeUint32 },
                     name: { n: 2, br: s.qM.readString, bw: s.gp.writeString },
@@ -5199,75 +5221,6 @@ var CLSTAMP = "10520954";
                     },
                   },
                 }),
-              m.sm_m
-            );
-          }
-          static MBF() {
-            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
-          }
-          toObject(e = !1) {
-            return m.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(m.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(m.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new m();
-            return m.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(m.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(m.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CCDDBAppDetailCommon";
-          }
-        }
-        r.Message;
-        r.Message;
-        class d extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              d.prototype.language || s.Sg(d.M()),
-              r.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              d.sm_m ||
-                (d.sm_m = {
-                  proto: d,
-                  fields: {
-                    language: {
-                      n: 1,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    localized_string: {
-                      n: 2,
-                      br: s.qM.readString,
-                      bw: s.gp.writeString,
-                    },
-                  },
-                }),
               d.sm_m
             );
           }
@@ -5302,6 +5255,75 @@ var CLSTAMP = "10520954";
             var e = new (i().BinaryWriter)();
             return (
               d.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CCDDBAppDetailCommon";
+          }
+        }
+        r.Message;
+        r.Message;
+        class m extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              m.prototype.language || s.Sg(m.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              m.sm_m ||
+                (m.sm_m = {
+                  proto: m,
+                  fields: {
+                    language: {
+                      n: 1,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    localized_string: {
+                      n: 2,
+                      br: s.qM.readString,
+                      bw: s.gp.writeString,
+                    },
+                  },
+                }),
+              m.sm_m
+            );
+          }
+          static MBF() {
+            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
+          }
+          toObject(e = !1) {
+            return m.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(m.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(m.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new m();
+            return m.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(m.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(m.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -5859,13 +5881,13 @@ var CLSTAMP = "10520954";
         n.d(t, {
           Ce: () => w,
           Fh: () => b,
-          IC: () => m,
+          IC: () => d,
           Np: () => S,
           P8: () => f,
           Pn: () => v,
           QP: () => C,
-          Ql: () => E,
-          We: () => y,
+          Ql: () => y,
+          We: () => x,
           XN: () => u,
           Yi: () => M,
           el: () => l,
@@ -6225,7 +6247,7 @@ var CLSTAMP = "10520954";
                       br: s.qM.readUint32,
                       bw: s.gp.writeUint32,
                     },
-                    friends: { n: 2, c: m, r: !0, q: !0 },
+                    friends: { n: 2, c: d, r: !0, q: !0 },
                   },
                 }),
               u.sm_m
@@ -6268,20 +6290,20 @@ var CLSTAMP = "10520954";
             return "CMsgClientPersonaState";
           }
         }
-        class m extends r.Message {
+        class d extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              m.prototype.friendid || s.Sg(m.M()),
+              d.prototype.friendid || s.Sg(d.M()),
               r.Message.initialize(this, e, 0, -1, [71, 82], null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              m.sm_m ||
-                (m.sm_m = {
-                  proto: m,
+              d.sm_m ||
+                (d.sm_m = {
+                  proto: d,
                   fields: {
                     friendid: {
                       n: 1,
@@ -6378,7 +6400,7 @@ var CLSTAMP = "10520954";
                       br: s.qM.readBytes,
                       bw: s.gp.writeBytes,
                     },
-                    clan_data: { n: 64, c: d },
+                    clan_data: { n: 64, c: m },
                     clan_tag: {
                       n: 65,
                       br: s.qM.readString,
@@ -6443,73 +6465,6 @@ var CLSTAMP = "10520954";
                     },
                   },
                 }),
-              m.sm_m
-            );
-          }
-          static MBF() {
-            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
-          }
-          toObject(e = !1) {
-            return m.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(m.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(m.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new m();
-            return m.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(m.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(m.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientPersonaState_Friend";
-          }
-        }
-        class d extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              d.prototype.ogg_app_id || s.Sg(d.M()),
-              r.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              d.sm_m ||
-                (d.sm_m = {
-                  proto: d,
-                  fields: {
-                    ogg_app_id: {
-                      n: 1,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    chat_group_id: {
-                      n: 2,
-                      br: s.qM.readUint64String,
-                      bw: s.gp.writeUint64String,
-                    },
-                  },
-                }),
               d.sm_m
             );
           }
@@ -6544,6 +6499,73 @@ var CLSTAMP = "10520954";
             var e = new (i().BinaryWriter)();
             return (
               d.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientPersonaState_Friend";
+          }
+        }
+        class m extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              m.prototype.ogg_app_id || s.Sg(m.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              m.sm_m ||
+                (m.sm_m = {
+                  proto: m,
+                  fields: {
+                    ogg_app_id: {
+                      n: 1,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    chat_group_id: {
+                      n: 2,
+                      br: s.qM.readUint64String,
+                      bw: s.gp.writeUint64String,
+                    },
+                  },
+                }),
+              m.sm_m
+            );
+          }
+          static MBF() {
+            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
+          }
+          toObject(e = !1) {
+            return m.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(m.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(m.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new m();
+            return m.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(m.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(m.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -7266,20 +7288,20 @@ var CLSTAMP = "10520954";
             return "CMsgClientRemoveFriendFromGroup";
           }
         }
-        class y extends r.Message {
+        class x extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              y.prototype.eresult || s.Sg(y.M()),
+              x.prototype.eresult || s.Sg(x.M()),
               r.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              y.sm_m ||
-                (y.sm_m = {
-                  proto: y,
+              x.sm_m ||
+                (x.sm_m = {
+                  proto: x,
                   fields: {
                     eresult: {
                       n: 1,
@@ -7288,20 +7310,59 @@ var CLSTAMP = "10520954";
                     },
                   },
                 }),
-              y.sm_m
+              x.sm_m
             );
           }
           static MBF() {
-            return y.sm_mbf || (y.sm_mbf = s.w0(y.M())), y.sm_mbf;
+            return x.sm_mbf || (x.sm_mbf = s.w0(x.M())), x.sm_mbf;
+          }
+          toObject(e = !1) {
+            return x.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(x.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(x.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new x();
+            return x.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(x.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(x.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              x.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientRemoveFriendFromGroupResponse";
+          }
+        }
+        class y extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(), r.Message.initialize(this, e, 0, -1, void 0, null);
           }
           toObject(e = !1) {
             return y.toObject(e, this);
           }
           static toObject(e, t) {
-            return s.BT(y.M(), e, t);
+            return e ? { $jspbMessageInstance: t } : {};
           }
           static fromObject(e) {
-            return s.Uq(y.M(), e);
+            return new y();
           }
           static deserializeBinary(e) {
             let t = new (i().BinaryReader)(e),
@@ -7309,56 +7370,17 @@ var CLSTAMP = "10520954";
             return y.deserializeBinaryFromReader(n, t);
           }
           static deserializeBinaryFromReader(e, t) {
-            return s.zj(y.MBF(), e, t);
+            return e;
           }
           serializeBinary() {
             var e = new (i().BinaryWriter)();
             return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(y.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              y.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientRemoveFriendFromGroupResponse";
-          }
-        }
-        class E extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(), r.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          toObject(e = !1) {
-            return E.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return e ? { $jspbMessageInstance: t } : {};
-          }
-          static fromObject(e) {
-            return new E();
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new E();
-            return E.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return e;
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
           static serializeBinaryToWriter(e, t) {}
           serializeBase64String() {
             var e = new (i().BinaryWriter)();
             return (
-              E.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              y.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -7381,8 +7403,8 @@ var CLSTAMP = "10520954";
                   proto: B,
                   fields: {
                     emoticons: { n: 1, c: L, r: !0, q: !0 },
-                    stickers: { n: 2, c: x, r: !0, q: !0 },
-                    effects: { n: 3, c: k, r: !0, q: !0 },
+                    stickers: { n: 2, c: k, r: !0, q: !0 },
+                    effects: { n: 3, c: I, r: !0, q: !0 },
                   },
                 }),
               B.sm_m
@@ -7500,81 +7522,6 @@ var CLSTAMP = "10520954";
             return "CMsgClientEmoticonList_Emoticon";
           }
         }
-        class x extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              x.prototype.name || s.Sg(x.M()),
-              r.Message.initialize(this, e, 0, -1, void 0, null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              x.sm_m ||
-                (x.sm_m = {
-                  proto: x,
-                  fields: {
-                    name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
-                    count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
-                    time_received: {
-                      n: 3,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    appid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                    time_last_used: {
-                      n: 5,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                    use_count: {
-                      n: 6,
-                      br: s.qM.readUint32,
-                      bw: s.gp.writeUint32,
-                    },
-                  },
-                }),
-              x.sm_m
-            );
-          }
-          static MBF() {
-            return x.sm_mbf || (x.sm_mbf = s.w0(x.M())), x.sm_mbf;
-          }
-          toObject(e = !1) {
-            return x.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(x.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(x.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new x();
-            return x.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(x.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(x.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              x.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientEmoticonList_Sticker";
-          }
-        }
         class k extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
@@ -7597,12 +7544,17 @@ var CLSTAMP = "10520954";
                       br: s.qM.readUint32,
                       bw: s.gp.writeUint32,
                     },
-                    infinite_use: {
-                      n: 4,
-                      br: s.qM.readBool,
-                      bw: s.gp.writeBool,
+                    appid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                    time_last_used: {
+                      n: 5,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
                     },
-                    appid: { n: 5, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                    use_count: {
+                      n: 6,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
                   },
                 }),
               k.sm_m
@@ -7642,6 +7594,76 @@ var CLSTAMP = "10520954";
             );
           }
           getClassName() {
+            return "CMsgClientEmoticonList_Sticker";
+          }
+        }
+        class I extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              I.prototype.name || s.Sg(I.M()),
+              r.Message.initialize(this, e, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              I.sm_m ||
+                (I.sm_m = {
+                  proto: I,
+                  fields: {
+                    name: { n: 1, br: s.qM.readString, bw: s.gp.writeString },
+                    count: { n: 2, br: s.qM.readInt32, bw: s.gp.writeInt32 },
+                    time_received: {
+                      n: 3,
+                      br: s.qM.readUint32,
+                      bw: s.gp.writeUint32,
+                    },
+                    infinite_use: {
+                      n: 4,
+                      br: s.qM.readBool,
+                      bw: s.gp.writeBool,
+                    },
+                    appid: { n: 5, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                  },
+                }),
+              I.sm_m
+            );
+          }
+          static MBF() {
+            return I.sm_mbf || (I.sm_mbf = s.w0(I.M())), I.sm_mbf;
+          }
+          toObject(e = !1) {
+            return I.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(I.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(I.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new I();
+            return I.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(I.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(I.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              I.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
             return "CMsgClientEmoticonList_Effect";
           }
         }
@@ -7651,9 +7673,9 @@ var CLSTAMP = "10520954";
         n.d(t, {
           Q_: () => l,
           Sb: () => c,
-          c1: () => d,
+          c1: () => m,
           dX: () => p,
-          ji: () => m,
+          ji: () => d,
           l9: () => h,
           s5: () => a,
         });
@@ -7923,20 +7945,20 @@ var CLSTAMP = "10520954";
           }
         }
         r.Message;
-        class m extends r.Message {
+        class d extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              m.prototype.protocol_version || s.Sg(m.M()),
+              d.prototype.protocol_version || s.Sg(d.M()),
               r.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              m.sm_m ||
-                (m.sm_m = {
-                  proto: m,
+              d.sm_m ||
+                (d.sm_m = {
+                  proto: d,
                   fields: {
                     protocol_version: {
                       n: 1,
@@ -8224,60 +8246,60 @@ var CLSTAMP = "10520954";
                     },
                   },
                 }),
-              m.sm_m
+              d.sm_m
             );
           }
           static MBF() {
-            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
+            return d.sm_mbf || (d.sm_mbf = s.w0(d.M())), d.sm_mbf;
           }
           toObject(e = !1) {
-            return m.toObject(e, this);
+            return d.toObject(e, this);
           }
           static toObject(e, t) {
-            return s.BT(m.M(), e, t);
+            return s.BT(d.M(), e, t);
           }
           static fromObject(e) {
-            return s.Uq(m.M(), e);
+            return s.Uq(d.M(), e);
           }
           static deserializeBinary(e) {
             let t = new (i().BinaryReader)(e),
-              n = new m();
-            return m.deserializeBinaryFromReader(n, t);
+              n = new d();
+            return d.deserializeBinaryFromReader(n, t);
           }
           static deserializeBinaryFromReader(e, t) {
-            return s.zj(m.MBF(), e, t);
+            return s.zj(d.MBF(), e, t);
           }
           serializeBinary() {
             var e = new (i().BinaryWriter)();
-            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, t) {
-            s.i0(m.M(), e, t);
+            s.i0(d.M(), e, t);
           }
           serializeBase64String() {
             var e = new (i().BinaryWriter)();
             return (
-              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              d.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
             return "CMsgClientLogon";
           }
         }
-        class d extends r.Message {
+        class m extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              d.prototype.eresult || s.Sg(d.M()),
+              m.prototype.eresult || s.Sg(m.M()),
               r.Message.initialize(this, e, 0, -1, void 0, null);
           }
           static sm_m;
           static sm_mbf;
           static M() {
             return (
-              d.sm_m ||
-                (d.sm_m = {
-                  proto: d,
+              m.sm_m ||
+                (m.sm_m = {
+                  proto: m,
                   fields: {
                     eresult: {
                       n: 1,
@@ -8413,40 +8435,40 @@ var CLSTAMP = "10520954";
                     },
                   },
                 }),
-              d.sm_m
+              m.sm_m
             );
           }
           static MBF() {
-            return d.sm_mbf || (d.sm_mbf = s.w0(d.M())), d.sm_mbf;
+            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
           }
           toObject(e = !1) {
-            return d.toObject(e, this);
+            return m.toObject(e, this);
           }
           static toObject(e, t) {
-            return s.BT(d.M(), e, t);
+            return s.BT(m.M(), e, t);
           }
           static fromObject(e) {
-            return s.Uq(d.M(), e);
+            return s.Uq(m.M(), e);
           }
           static deserializeBinary(e) {
             let t = new (i().BinaryReader)(e),
-              n = new d();
-            return d.deserializeBinaryFromReader(n, t);
+              n = new m();
+            return m.deserializeBinaryFromReader(n, t);
           }
           static deserializeBinaryFromReader(e, t) {
-            return s.zj(d.MBF(), e, t);
+            return s.zj(m.MBF(), e, t);
           }
           serializeBinary() {
             var e = new (i().BinaryWriter)();
-            return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
           }
           static serializeBinaryToWriter(e, t) {
-            s.i0(d.M(), e, t);
+            s.i0(m.M(), e, t);
           }
           serializeBase64String() {
             var e = new (i().BinaryWriter)();
             return (
-              d.serializeBinaryToWriter(this, e), e.getResultBase64String()
+              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -8630,7 +8652,7 @@ var CLSTAMP = "10520954";
         "use strict";
         n.d(t, {
           rs: () => l,
-          sZ: () => m,
+          sZ: () => d,
           Fk: () => p,
           sw: () => o,
           HW: () => a,
@@ -8999,68 +9021,12 @@ var CLSTAMP = "10520954";
             return "CMsgClientAMGetPersonaNameHistory_IdInstance";
           }
         }
-        class m extends r.Message {
-          static ImplementsStaticInterface() {}
-          constructor(e = null) {
-            super(),
-              m.prototype.responses || s.Sg(m.M()),
-              r.Message.initialize(this, e, 0, -1, [2], null);
-          }
-          static sm_m;
-          static sm_mbf;
-          static M() {
-            return (
-              m.sm_m ||
-                (m.sm_m = {
-                  proto: m,
-                  fields: { responses: { n: 2, c: d, r: !0, q: !0 } },
-                }),
-              m.sm_m
-            );
-          }
-          static MBF() {
-            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
-          }
-          toObject(e = !1) {
-            return m.toObject(e, this);
-          }
-          static toObject(e, t) {
-            return s.BT(m.M(), e, t);
-          }
-          static fromObject(e) {
-            return s.Uq(m.M(), e);
-          }
-          static deserializeBinary(e) {
-            let t = new (i().BinaryReader)(e),
-              n = new m();
-            return m.deserializeBinaryFromReader(n, t);
-          }
-          static deserializeBinaryFromReader(e, t) {
-            return s.zj(m.MBF(), e, t);
-          }
-          serializeBinary() {
-            var e = new (i().BinaryWriter)();
-            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
-          }
-          static serializeBinaryToWriter(e, t) {
-            s.i0(m.M(), e, t);
-          }
-          serializeBase64String() {
-            var e = new (i().BinaryWriter)();
-            return (
-              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
-            );
-          }
-          getClassName() {
-            return "CMsgClientAMGetPersonaNameHistoryResponse";
-          }
-        }
         class d extends r.Message {
           static ImplementsStaticInterface() {}
           constructor(e = null) {
             super(),
-              d.prototype.eresult || s.Sg(d.M()),
-              r.Message.initialize(this, e, 0, -1, [3], null);
+              d.prototype.responses || s.Sg(d.M()),
+              r.Message.initialize(this, e, 0, -1, [2], null);
           }
           static sm_m;
           static sm_mbf;
@@ -9069,20 +9035,7 @@ var CLSTAMP = "10520954";
               d.sm_m ||
                 (d.sm_m = {
                   proto: d,
-                  fields: {
-                    eresult: {
-                      n: 1,
-                      d: 2,
-                      br: s.qM.readInt32,
-                      bw: s.gp.writeInt32,
-                    },
-                    steamid: {
-                      n: 2,
-                      br: s.qM.readFixed64String,
-                      bw: s.gp.writeFixed64String,
-                    },
-                    names: { n: 3, c: h, r: !0, q: !0 },
-                  },
+                  fields: { responses: { n: 2, c: m, r: !0, q: !0 } },
                 }),
               d.sm_m
             );
@@ -9118,6 +9071,75 @@ var CLSTAMP = "10520954";
             var e = new (i().BinaryWriter)();
             return (
               d.serializeBinaryToWriter(this, e), e.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "CMsgClientAMGetPersonaNameHistoryResponse";
+          }
+        }
+        class m extends r.Message {
+          static ImplementsStaticInterface() {}
+          constructor(e = null) {
+            super(),
+              m.prototype.eresult || s.Sg(m.M()),
+              r.Message.initialize(this, e, 0, -1, [3], null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              m.sm_m ||
+                (m.sm_m = {
+                  proto: m,
+                  fields: {
+                    eresult: {
+                      n: 1,
+                      d: 2,
+                      br: s.qM.readInt32,
+                      bw: s.gp.writeInt32,
+                    },
+                    steamid: {
+                      n: 2,
+                      br: s.qM.readFixed64String,
+                      bw: s.gp.writeFixed64String,
+                    },
+                    names: { n: 3, c: h, r: !0, q: !0 },
+                  },
+                }),
+              m.sm_m
+            );
+          }
+          static MBF() {
+            return m.sm_mbf || (m.sm_mbf = s.w0(m.M())), m.sm_mbf;
+          }
+          toObject(e = !1) {
+            return m.toObject(e, this);
+          }
+          static toObject(e, t) {
+            return s.BT(m.M(), e, t);
+          }
+          static fromObject(e) {
+            return s.Uq(m.M(), e);
+          }
+          static deserializeBinary(e) {
+            let t = new (i().BinaryReader)(e),
+              n = new m();
+            return m.deserializeBinaryFromReader(n, t);
+          }
+          static deserializeBinaryFromReader(e, t) {
+            return s.zj(m.MBF(), e, t);
+          }
+          serializeBinary() {
+            var e = new (i().BinaryWriter)();
+            return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          }
+          static serializeBinaryToWriter(e, t) {
+            s.i0(m.M(), e, t);
+          }
+          serializeBase64String() {
+            var e = new (i().BinaryWriter)();
+            return (
+              m.serializeBinaryToWriter(this, e), e.getResultBase64String()
             );
           }
           getClassName() {
@@ -9663,9 +9685,9 @@ var CLSTAMP = "10520954";
         n.d(t, {
           AX: () => u,
           ML: () => s,
-          OP: () => m,
+          OP: () => d,
           Qi: () => c,
-          aA: () => d,
+          aA: () => m,
           b$: () => h,
           l6: () => a,
           o4: () => l,
@@ -9735,7 +9757,7 @@ var CLSTAMP = "10520954";
             c = [o("mousedown", s), o("touchstart", a)];
           return (0, i.Ue)(...c);
         }
-        function m() {
+        function d() {
           const [e, t] = r.useState(!1);
           return [
             e,
@@ -9752,27 +9774,27 @@ var CLSTAMP = "10520954";
             },
           ];
         }
-        function d(e = "vertical") {
+        function m(e = "vertical") {
           const t = "vertical" == e,
             [n, s] = r.useState(),
             [a, c] = r.useState(!0),
             [l, u] = r.useState(!0),
-            m = r.useCallback(() => {
+            d = r.useCallback(() => {
               const e = (t ? n?.scrollTop : n?.scrollLeft) ?? 0,
                 r =
                   ((t ? n?.scrollHeight : n?.scrollWidth) ?? 0) - e ==
                   ((t ? n?.clientHeight : n?.clientWidth) ?? 0);
               c(0 == e), u(r);
             }, [t, n]),
-            d = r.useCallback((e) => s(e), []),
+            m = r.useCallback((e) => s(e), []),
             h = r.useCallback(
               (e) => {
-                m();
+                d();
               },
-              [m],
+              [d],
             );
-          r.useLayoutEffect(m, [m]);
-          const p = r.useCallback(() => m(), [m]),
+          r.useLayoutEffect(d, [d]);
+          const p = r.useCallback(() => d(), [d]),
             g =
               ((f = p),
               (_ = { subtree: !0, childList: !0 }),
@@ -9789,7 +9811,7 @@ var CLSTAMP = "10520954";
           return {
             bScrolledToBeginning: a,
             bScrolledToEnd: l,
-            ref: (0, i.Ue)(w, d, g),
+            ref: (0, i.Ue)(w, m, g),
           };
         }
         function h(e) {
@@ -9808,29 +9830,29 @@ var CLSTAMP = "10520954";
           $$: () => l,
           CH: () => p,
           DF: () => B,
-          L$: () => m,
+          L$: () => d,
           ML: () => s.ML,
           OP: () => s.OP,
           Qi: () => s.Qi,
-          SK: () => d,
-          Sz: () => y,
+          SK: () => m,
+          Sz: () => x,
           Z3: () => a,
           _g: () => f,
           aA: () => s.aA,
           bB: () => u,
-          bs: () => x,
+          bs: () => k,
           dh: () => w,
           eV: () => c,
           gc: () => v,
           hL: () => _,
           l6: () => s.l6,
           o4: () => s.o4,
-          ob: () => k,
+          ob: () => I,
           uD: () => L,
-          uH: () => E,
+          uH: () => y,
           uN: () => S,
           vJ: () => h,
-          wm: () => I,
+          wm: () => R,
           x2: () => M,
           xA: () => s.xA,
           xM: () => g,
@@ -9876,7 +9898,7 @@ var CLSTAMP = "10520954";
           const { msInterval: t, bEnabled: n = !0 } = e;
           l(p(), t, [], n);
         }
-        function m(e, t, n = !0, i = !1) {
+        function d(e, t, n = !0, i = !1) {
           const s = r.useRef(t);
           s.current = t;
           const [o, a] = r.useState(!1),
@@ -9887,22 +9909,22 @@ var CLSTAMP = "10520954";
             u = r.useCallback(() => {
               window.clearTimeout(c.current);
             }, []),
-            m = r.useCallback(() => {
+            d = r.useCallback(() => {
               a(!1), u(), (c.current = window.setTimeout(l, e));
             }, [u, e, l]),
-            d = r.useCallback(() => {
-              n && m();
-            }, [n, m]);
+            m = r.useCallback(() => {
+              n && d();
+            }, [n, d]);
           return (
-            r.useEffect(d, [e, d]),
+            r.useEffect(m, [e, m]),
             r.useEffect(() => u, [u]),
             r.useEffect(() => {
-              o && i && m();
-            }, [o, i, m]),
-            { bTimerCompleted: o, fnStopTimer: u, fnRestartTimer: m }
+              o && i && d();
+            }, [o, i, d]),
+            { bTimerCompleted: o, fnStopTimer: u, fnRestartTimer: d }
           );
         }
-        function d(e, t = []) {
+        function m(e, t = []) {
           const [n, i] = r.useState(e <= 0);
           return r.useEffect(() => i(!1), t), a(() => i(!0), e, t), n;
         }
@@ -10008,16 +10030,16 @@ var CLSTAMP = "10520954";
             l = r.useCallback(() => {
               o(e), c(!1);
             }, [e, o]),
-            { fnStopTimer: u, fnRestartTimer: d } = m(n, l, !1),
+            { fnStopTimer: u, fnRestartTimer: m } = d(n, l, !1),
             h = r.useCallback(
               (e) => {
-                d(), o(e), c(!0), i.current && i.current(e);
+                m(), o(e), c(!0), i.current && i.current(e);
               },
-              [o, d],
+              [o, m],
             );
           return [a ? s : e, h, l];
         }
-        function y(e) {
+        function x(e) {
           const t = r.useRef(null);
           return (
             r.useEffect(() => {
@@ -10026,7 +10048,7 @@ var CLSTAMP = "10520954";
             t.current
           );
         }
-        function E(e, t) {
+        function y(e, t) {
           const [n, i] = r.useState(e);
           return (
             r.useEffect(() => {
@@ -10040,7 +10062,7 @@ var CLSTAMP = "10520954";
           );
         }
         function B(e, t) {
-          return E(e, t) || e;
+          return y(e, t) || e;
         }
         function L(e = !1) {
           const [t, n] = r.useState(e);
@@ -10050,7 +10072,7 @@ var CLSTAMP = "10520954";
             r.useCallback(() => n(!1), []),
           ];
         }
-        function x(e) {
+        function k(e) {
           const t = r.useRef(void 0);
           return r.useCallback(
             () => (
@@ -10061,7 +10083,7 @@ var CLSTAMP = "10520954";
             [e],
           );
         }
-        function k() {
+        function I() {
           const [e, t] = r.useState(() => (0, i.x0)());
           return {
             ...e,
@@ -10071,7 +10093,7 @@ var CLSTAMP = "10520954";
             }, []),
           };
         }
-        function I(e) {
+        function R(e) {
           const t = r.useRef(e);
           return (
             (t.current.length !== e.length ||
@@ -10202,10 +10224,10 @@ var CLSTAMP = "10520954";
         "use strict";
         n.d(t, {
           KV: () => l,
-          TR: () => d,
+          TR: () => m,
           VQ: () => c,
           rW: () => u,
-          rX: () => m,
+          rX: () => d,
           zv: () => h,
         });
         var r = n(63696),
@@ -10248,8 +10270,8 @@ var CLSTAMP = "10520954";
         const l = () => a().useActiveSteamInterface()?.GetServiceTransport(),
           u = () =>
             a().useActiveSteamInterface().GetAnonymousServiceTransport(),
-          m = () => a().useStorage(),
-          d = () => a().useActiveSteamInterface(),
+          d = () => a().useStorage(),
+          m = () => a().useActiveSteamInterface(),
           h = () => {
             const { useActiveCMInterface: e } = a();
             if (!e)
@@ -10498,45 +10520,54 @@ var CLSTAMP = "10520954";
       },
       49810: (e, t, n) => {
         "use strict";
-        n.d(t, { R: () => o, A: () => s });
+        n.d(t, { R: () => a, A: () => o });
         var r = n(17372);
         const i = JSON.parse(
           '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"creator":18,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"wishlist":25,"stats":26,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"category":49,"steamdeck":50,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"recommendations":70,"categories":71,"hardware":72,"waystoplay":73,"specialsections":74,"more":75,"big-category-link":76,"small-category-link":77,"package-purchase-recommendations":78,"popular":79,"recent":80,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"wishlist-capsule":318,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"demo-parent-app-link":415,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"curatorlistcapsule":1062,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"turnbasedrpg":1582,"arcaderhythm":1583,"greatondeck":1584,"remoteplaylanding":1585,"fightingmartialarts":1586,"actionfps":1587,"hackandslash":1588,"actionrunjump":1589,"shmup":1590,"adventure":1591,"action":1592,"adventurerpg":1593,"hiddenobject":1594,"metroidvania":1595,"puzzlematching":1596,"storyrich":1597,"visualnovel":1598,"casual":1559,"querypaginated":1600,"n_section":1601,"rpgjrpg":1602,"rpgpartybased":1603,"roguelikeroguelite":1604,"rpgaction":1605,"rpg":1606,"rpgstrategytactics":1607,"rpgturnbased":1608,"simulation":1609,"simbuildingautomation":1610,"simdating":1611,"simfarmingcrafting":1612,"simhobbysim":1613,"simlife":1614,"simphysicssandbox":1615,"simspaceflight":1616,"strategy":1617,"strategycardboard":1618,"strategycitiessettlements":1619,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"strategygrand4x":1625,"strategymilitary":1626,"strategyrealtime":1627,"towerdefense":1628,"strategyturnbased":1629,"sportsandracing":1630,"sports":1631,"sportsfishinghunting":1632,"sportsindividual":1633,"racing":1634,"racingsim":1635,"sportssim":1636,"sportsteam":1637,"anime":1638,"horror":1639,"mysterydetective":1640,"explorationopenworld":1641,"sciencefiction":1642,"space":1643,"survival":1644,"multiplayercoop":1645,"multiplayerlan":1646,"multiplayerlocalparty":1647,"multiplayermmo":1648,"multiplayer":1649,"multiplayeronlinecompetitive":1650,"singleplayer":1651,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"nextfest":6000,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"salesmartdailyactiveuserdemo":7006,"salesmartmostplayeddemo":7007,"salesmartdecktopplayed":7008,"salesmartcategory":7009,"vrhardwarelanding":7010,"monthlytopreleases":7011,"bestofyear":7012,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735,"salesmartwr":100736,"salesmartwishlist_allsale":100737,"salesmartir_allsale":100738,"autopopulatetag":100739,"autopopulatecategory":100740,"salesmartrecentevents":100741,"seasonpassproductpage":100742,"itemcollections":100743,"crosspromotesalepage":100744,"mm-auto-render":100745,"salequiz":100746,"templatemediacontent":100747,"templatefaq":100748,"templatetechspec":100749,"topnewreleases":100750,"newreleases":100751,"salebrowsetrendingfree":100752,"trendingfree":100753,"reactroot":100754,"bundlelist":100755,"verifiedprogram":100756,"trailercarousel":100757}',
         );
-        class s {
+        var s = n(89400);
+        class o {
           static InstrumentLink(e, t, n = null) {
-            const r = s.GetLinkParam(t, n);
-            return s.AddNavParamToURL(e, r);
+            const r = o.GetSNRLinkParam(t, n),
+              i = o.GetCuratorClanIDParam(t);
+            return o.AddNavParamToURL(e, r, i);
           }
           static ParseSNR(e) {
             const t = e.split("_") || [];
             return {
-              domain: s.DecodeEventComponent(t[0]),
-              controller: s.DecodeEventComponent(t[1]),
-              method: s.DecodeEventComponent(t[2]),
-              submethod: s.DecodeEventComponent(t[3]),
-              feature: s.DecodeEventComponent(t[4]),
+              domain: o.DecodeEventComponent(t[0]),
+              controller: o.DecodeEventComponent(t[1]),
+              method: o.DecodeEventComponent(t[2]),
+              submethod: o.DecodeEventComponent(t[3]),
+              feature: o.DecodeEventComponent(t[4]),
               depth: t[5] ? Number(t[5]) : void 0,
             };
           }
-          static GetLinkParam(e, t = null) {
-            let n = s.ComputeLinkPrefix(
+          static GetSNRLinkParam(e, t = null) {
+            let n = o.ComputeLinkPrefix(
               e.domain,
               e.controller,
               e.method,
               e.submethod,
             );
             t = t ?? e.depth ?? null;
-            const r = s.EncodeEventComponent(e.feature);
+            const r = o.EncodeEventComponent(e.feature);
             return r && ((n += "_" + r), t && (n += "_" + t)), n;
           }
-          static AddNavParamToURL(e, t) {
+          static GetCuratorClanIDParam(e) {
+            return e.curator_clanid ?? null;
+          }
+          static AddNavParamToURL(e, t, n) {
+            if (!e || 0 == e.length) return e;
             try {
-              const n = new URL((0, r.S)(e)),
-                i = new URLSearchParams(n.search);
+              const i = new URL((0, r.S)(e)),
+                o = new URLSearchParams(i.search);
               return (
-                i.set("snr", encodeURIComponent(t ?? "")),
-                n.origin + n.pathname + "?" + i.toString() + n.hash
+                o.set("snr", encodeURIComponent(t ?? "")),
+                n &&
+                  !s.WN.includes(n) &&
+                  o.set("curator_clanid", encodeURIComponent(n ?? "")),
+                i.origin + i.pathname + "?" + o.toString() + i.hash
               );
             } catch (t) {
               return console.error(e, t), e;
@@ -10545,13 +10576,13 @@ var CLSTAMP = "10520954";
           static ComputeLinkPrefix(e, t, n, r) {
             let i = "";
             return (
-              (i += s.EncodeEventComponent(e)),
+              (i += o.EncodeEventComponent(e)),
               (i += "_"),
-              (i += s.EncodeEventComponent(t)),
+              (i += o.EncodeEventComponent(t)),
               (i += "_"),
-              (i += s.EncodeEventComponent(n)),
+              (i += o.EncodeEventComponent(n)),
               (i += "_"),
-              (i += s.EncodeEventComponent(r)),
+              (i += o.EncodeEventComponent(r)),
               i
             );
           }
@@ -10566,20 +10597,20 @@ var CLSTAMP = "10520954";
           static DecodeEventComponent(e) {
             const t = e && parseInt(e);
             if (t && i) for (const e in i) if (i[e] == t) return e;
-            return s.SanitizeEventComponent(e);
+            return o.SanitizeEventComponent(e);
           }
           static SanitizeEventComponent(e) {
             return e && e.match(/^[a-zA-Z0-9\-.]*$/) ? e : "";
           }
         }
-        function o(e) {
+        function a(e) {
           return {
             ...e,
-            domain: s.SanitizeEventComponent(e.domain),
-            controller: s.SanitizeEventComponent(e.controller),
-            method: s.SanitizeEventComponent(e.method),
-            submethod: s.SanitizeEventComponent(e.submethod),
-            feature: s.SanitizeEventComponent(e.feature),
+            domain: o.SanitizeEventComponent(e.domain),
+            controller: o.SanitizeEventComponent(e.controller),
+            method: o.SanitizeEventComponent(e.method),
+            submethod: o.SanitizeEventComponent(e.submethod),
+            feature: o.SanitizeEventComponent(e.feature),
             depth: e.depth || 0,
           };
         }
@@ -10587,69 +10618,72 @@ var CLSTAMP = "10520954";
       92059: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Fh: () => h,
-          Gd: () => l,
-          aL: () => u,
-          bV: () => d,
-          n9: () => c,
-          nn: () => a,
+          Fh: () => p,
+          Gd: () => u,
+          aL: () => d,
+          bV: () => h,
+          n9: () => l,
+          nn: () => c,
           ru: () => m,
         });
-        var r = n(63696),
-          i = n(49810),
-          s = n(14628);
-        const o = r.createContext({});
-        r.createContext(void 0);
-        function a(e) {
+        var r = n(62540),
+          i = n(63696),
+          s = n(49810),
+          o = n(14628);
+        const a = i.createContext({});
+        i.createContext(void 0);
+        function c(e) {
           const { children: t, ...n } = e,
-            i = c(),
-            s = r.useMemo(
-              () => ({ ...i, ...n }),
+            s = l(),
+            o = i.useMemo(
+              () => ({ ...s, ...n }),
               [
-                i,
+                s,
                 n.domain,
                 n.controller,
                 n.method,
                 n.submethod,
                 n.feature,
                 n.depth,
+                n.curator_clanid,
               ],
             );
-          return r.createElement(o.Provider, { value: s }, t);
+          return (0, r.jsx)(a.Provider, { value: o, children: t });
         }
-        function c() {
-          return r.useContext(o);
+        function l() {
+          return i.useContext(a);
         }
-        function l(e, t) {
+        function u(e, t) {
           return (function (e, t, n) {
             return {
               ...e,
               feature: t || e.feature,
               depth: n || e.depth,
-              countrycode: s.TS.COUNTRY,
-              is_client: s.TS.IN_CLIENT,
+              countrycode: o.TS.COUNTRY,
+              is_client: o.TS.IN_CLIENT,
             };
-          })(c(), e, t);
+          })(l(), e, t);
         }
-        function u(e, t, n) {
-          const i = c();
-          return r.useMemo(() => e && d(i, e, t, n), [e, i, t, n]);
+        function d(e, t, n) {
+          const r = l();
+          return i.useMemo(() => e && h(r, e, t, n), [e, r, t, n]);
         }
         function m(e, t) {
-          const n = c();
-          return r.useMemo(
-            () => i.A.GetLinkParam({ ...n, feature: e || n.feature }, t),
+          const n = l();
+          return i.useMemo(
+            () => s.A.GetSNRLinkParam({ ...n, feature: e || n.feature }, t),
             [n, e, t],
           );
         }
-        function d(e, t, n, r) {
-          const s = i.A.GetLinkParam({ ...e, feature: n || e.feature }, r);
-          return i.A.AddNavParamToURL(t, s);
+        function h(e, t, n, r) {
+          const i = s.A.GetSNRLinkParam({ ...e, feature: n || e.feature }, r),
+            o = s.A.GetCuratorClanIDParam(e);
+          return s.A.AddNavParamToURL(t, i, o);
         }
-        function h(e) {
+        function p(e) {
           const { href: t, ...n } = e,
-            i = u(t);
-          return r.createElement("a", { ...n, href: i });
+            i = d(t);
+          return (0, r.jsx)("a", { ...n, href: i });
         }
       },
       12368: (e, t, n) => {
@@ -10666,22 +10700,6 @@ var CLSTAMP = "10520954";
           }
           async StoreObject(e, t) {
             return this.StoreString(e, JSON.stringify(t));
-          }
-        }
-      },
-      73870: (e, t, n) => {
-        "use strict";
-        n.d(t, { A: () => i });
-        var r = n(12368);
-        class i extends r.P {
-          GetString(e) {
-            return Promise.resolve(localStorage.getItem(e));
-          }
-          StoreString(e, t) {
-            return localStorage.setItem(e, t), Promise.resolve();
-          }
-          RemoveObject(e) {
-            return localStorage.removeItem(e), Promise.resolve();
           }
         }
       },
@@ -11119,17 +11137,17 @@ var CLSTAMP = "10520954";
       11131: (e, t, n) => {
         "use strict";
         n.d(t, {
-          Ad: () => k,
+          Ad: () => I,
           Dr: () => i,
-          K9: () => I,
-          Of: () => T,
+          K9: () => R,
+          Of: () => j,
           R7: () => L,
-          VR: () => F,
+          VR: () => E,
           Wf: () => r,
-          c4: () => E,
+          c4: () => y,
           gs: () => B,
-          k5: () => y,
-          kc: () => x,
+          k5: () => x,
+          kc: () => k,
           yq: () => S,
         });
         var r,
@@ -11140,8 +11158,8 @@ var CLSTAMP = "10520954";
           c = n(89193),
           l = n(63696),
           u = n(17385),
-          m = n(736),
-          d = n(85688),
+          d = n(736),
+          m = n(85688),
           h = n(81255),
           p = n(54644),
           g = n(46108),
@@ -11205,12 +11223,12 @@ var CLSTAMP = "10520954";
               );
           }
         }
-        function y() {
+        function x() {
           const { ownerWindow: e } = L(),
-            t = T.GetPopupForWindow(e);
+            t = j.GetPopupForWindow(e);
           return t?.browser_info || u.m;
         }
-        function E() {
+        function y() {
           const e = L(),
             t = l.useCallback(
               () => e.ownerWindow.SteamClient.Window.GetWindowDetails(),
@@ -11263,12 +11281,12 @@ var CLSTAMP = "10520954";
           })(i || (i = {}));
         const B = l.createContext({ ownerWindow: window }),
           L = () => l.useContext(B);
-        function x(e) {
+        function k(e) {
           const { ownerWindow: t, children: n } = e,
             r = l.useMemo(() => ({ ownerWindow: t }), [t]);
           return l.createElement(B.Provider, { value: r }, n);
         }
-        class k {
+        class I {
           m_strName;
           m_strTitle;
           m_rgParams;
@@ -11281,7 +11299,7 @@ var CLSTAMP = "10520954";
           m_bFocused = !1;
           constructor(e, t) {
             (0, c.Gn)(this),
-              (0, d.wT)(
+              (0, m.wT)(
                 e,
                 "Name is required.  This is an internal name, different from title.",
               ),
@@ -11333,14 +11351,14 @@ var CLSTAMP = "10520954";
             let n,
               i,
               s,
-              a = T.GetExistingPopup(this.m_strName);
+              a = j.GetExistingPopup(this.m_strName);
             (a && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               a
                 ? ((i = a.m_element),
                   (n = a.m_popup),
                   (s = a.m_renderWhenReady),
-                  T.RemoveTrackedPopup(a),
+                  j.RemoveTrackedPopup(a),
                   a.ReleasePopup(),
                   n?.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                   n?.removeEventListener("unload", a.OnUnload),
@@ -11350,7 +11368,7 @@ var CLSTAMP = "10520954";
                   n?.removeEventListener("drop", a.OnDrop),
                   n?.removeEventListener("dragover", a.OnDragOver),
                   n?.removeEventListener("message", this.OnMessage))
-                : (({ popup: n, element: i } = R.CreatePopup(this.m_strName, {
+                : (({ popup: n, element: i } = T.CreatePopup(this.m_strName, {
                     ...this.m_rgParams,
                     title: this.m_strTitle,
                   })),
@@ -11381,7 +11399,7 @@ var CLSTAMP = "10520954";
                     this.m_element &&
                     this.RenderInternal(this.m_popup, this.m_element, t);
                 })),
-              T.AddTrackedPopup(this),
+              j.AddTrackedPopup(this),
               a &&
                 (this.OnCreateInternal(),
                 t != o.iE.k_EWindowBringToFrontInvalid && this.Focus(t)));
@@ -11429,7 +11447,7 @@ var CLSTAMP = "10520954";
           }
           OnUnload(e) {
             this.RemoveEventListeners(),
-              T.RemoveTrackedPopup(this),
+              j.RemoveTrackedPopup(this),
               this.OnClose(),
               (this.m_popup = void 0);
           }
@@ -11462,7 +11480,7 @@ var CLSTAMP = "10520954";
           }
           Close() {
             this.m_popup &&
-              ((0, m.Fj)(this.m_popup.window, "Window.Close")
+              ((0, d.Fj)(this.m_popup.window, "Window.Close")
                 ? this.m_popup.window.SteamClient.Window.Close()
                 : this.m_popup.window.close());
           }
@@ -11501,19 +11519,19 @@ var CLSTAMP = "10520954";
             return this.m_bFocused;
           }
           GetWindowRestoreDetails() {
-            return (0, m.Fj)(this.m_popup, "Window.GetWindowRestoreDetails") &&
+            return (0, d.Fj)(this.m_popup, "Window.GetWindowRestoreDetails") &&
               !this.m_popup.closed
               ? this.m_popup.SteamClient.Window.GetWindowRestoreDetails()
               : Promise.resolve("");
           }
           IsMinimized() {
-            return (0, m.Fj)(this.m_popup, "Window.IsWindowMinimized") &&
+            return (0, d.Fj)(this.m_popup, "Window.IsWindowMinimized") &&
               !this.m_popup.closed
               ? this.m_popup.SteamClient.Window.IsWindowMinimized()
               : Promise.resolve(!1);
           }
           IsMaximized() {
-            return (0, m.Fj)(this.m_popup, "Window.IsWindowMaximized") &&
+            return (0, d.Fj)(this.m_popup, "Window.IsWindowMaximized") &&
               !this.m_popup.closed
               ? this.m_popup.SteamClient.Window.IsWindowMaximized()
               : Promise.resolve(!1);
@@ -11533,16 +11551,16 @@ var CLSTAMP = "10520954";
           OnFocus() {}
           OnBlur() {}
         }
-        (0, s.Cg)([c.sH], k.prototype, "m_bFocused", void 0),
-          (0, s.Cg)([w.o], k.prototype, "OnMessage", null),
-          (0, s.Cg)([w.o], k.prototype, "RenderInternal", null),
-          (0, s.Cg)([w.o], k.prototype, "OnCreateInternal", null),
-          (0, s.Cg)([w.o], k.prototype, "OnResizeEvent", null),
-          (0, s.Cg)([w.o], k.prototype, "OnBeforeUnloadEvent", null),
-          (0, s.Cg)([w.o], k.prototype, "OnUnload", null),
-          (0, s.Cg)([w.o], k.prototype, "OnFocusInternal", null),
-          (0, s.Cg)([w.o], k.prototype, "OnBlurInternal", null);
-        class I extends k {
+        (0, s.Cg)([c.sH], I.prototype, "m_bFocused", void 0),
+          (0, s.Cg)([w.o], I.prototype, "OnMessage", null),
+          (0, s.Cg)([w.o], I.prototype, "RenderInternal", null),
+          (0, s.Cg)([w.o], I.prototype, "OnCreateInternal", null),
+          (0, s.Cg)([w.o], I.prototype, "OnResizeEvent", null),
+          (0, s.Cg)([w.o], I.prototype, "OnBeforeUnloadEvent", null),
+          (0, s.Cg)([w.o], I.prototype, "OnUnload", null),
+          (0, s.Cg)([w.o], I.prototype, "OnFocusInternal", null),
+          (0, s.Cg)([w.o], I.prototype, "OnBlurInternal", null);
+        class R extends I {
           m_strSavedDimensionsKey;
           m_strInitialSavedDimensionsKey;
           m_strInitialRestoreDetails;
@@ -11568,14 +11586,14 @@ var CLSTAMP = "10520954";
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  T.SetRestoreDetails(
+                  j.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires,
                   ))
                 : ((this.m_strInitialSavedDimensionsKey =
                     this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = T.GetRestoreDetails(
+                  (e.strRestoreDetails = j.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                   ))),
               e
@@ -11605,7 +11623,7 @@ var CLSTAMP = "10520954";
                     this.m_strSavedDimensionsKey &&
                     t &&
                     !n &&
-                    (T.SetRestoreDetails(e, t, this.m_bExpires),
+                    (j.SetRestoreDetails(e, t, this.m_bExpires),
                     (this.m_rgParams.strRestoreDetails = t),
                     (this.m_strInitialSavedDimensionsKey = e),
                     this.OnResizeComplete(t));
@@ -11618,12 +11636,12 @@ var CLSTAMP = "10520954";
           }
           OnClose() {}
           SaveWindowPosition(e) {
-            T.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            j.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }
         }
-        (0, s.Cg)([w.o], I.prototype, "QueryAndStoreWindowPosition", null);
-        class R {
+        (0, s.Cg)([w.o], R.prototype, "QueryAndStoreWindowPosition", null);
+        class T {
           m_bShuttingDown = !1;
           m_mapPopups = c.sH.map([], { deep: !1 });
           m_rgShutdownCallbacks = [];
@@ -11638,9 +11656,9 @@ var CLSTAMP = "10520954";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Mar 12 2026 : 18:30:12",
-                BUILD_TIME_UTC: "Mar 13 2026 : 01:30:12",
-                BUILD_RTIME_UTC: 1773365412,
+                BUILD_TIME_LOCAL: "Mar 19 2026 : 17:02:06",
+                BUILD_TIME_UTC: "Mar 20 2026 : 00:02:06",
+                BUILD_RTIME_UTC: 1773964926,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -11664,7 +11682,7 @@ var CLSTAMP = "10520954";
                   this.m_mapPopups.clear();
               });
               let e = document.querySelector("head");
-              (0, d.wT)(e, "Couldn't find head element"),
+              (0, m.wT)(e, "Couldn't find head element"),
                 e &&
                   ((this.m_DynamicCSSObserver = new MutationObserver(() => {
                     const e = p.yU();
@@ -11786,13 +11804,13 @@ var CLSTAMP = "10520954";
               );
             let u = "";
             t.html_class && (u = `class="${t.html_class}"`);
-            let m = "";
-            t.body_class && (m = `class="${t.body_class}"`);
             let d = "";
-            t.body_role && (d = `role="${t.body_role}"`);
+            t.body_class && (d = `class="${t.body_class}"`);
+            let m = "";
+            t.body_role && (m = `role="${t.body_role}"`);
             let h = "";
             t.popup_class && (h = `class="${t.popup_class}"`);
-            let g = `<!DOCTYPE html><html ${u}><head><title></title></head><body ${m} ${d}><div id="popup_target" ${h}></div></body></html>`;
+            let g = `<!DOCTYPE html><html ${u}><head><title></title></head><body ${d} ${m}><div id="popup_target" ${h}></div></body></html>`;
             return (
               l.document.write(g),
               (l.document.title = s),
@@ -11880,12 +11898,12 @@ var CLSTAMP = "10520954";
         }
         (0, s.Cg)(
           [w.o, (0, h.s)(100)],
-          R.prototype,
+          T.prototype,
           "DebouncedSaveSavedDimensionStore",
           null,
         );
-        const T = new R();
-        function F(e) {
+        const j = new T();
+        function E(e) {
           const [t] = l.useState(() => new WeakMap());
           (0, l.useEffect)(() => {
             const n = (n) => {
@@ -11896,41 +11914,42 @@ var CLSTAMP = "10520954";
                 const n = t.get(e);
                 n && (n(), t.delete(e));
               },
-              { Unregister: i } = T.AddPopupCreatedCallback(n),
-              { Unregister: s } = T.AddPopupDestroyedCallback(r);
+              { Unregister: i } = j.AddPopupCreatedCallback(n),
+              { Unregister: s } = j.AddPopupDestroyedCallback(r);
             return (
-              Array.from(T.GetPopups()).forEach(n),
+              Array.from(j.GetPopups()).forEach(n),
               () => {
-                i(), s(), Array.from(T.GetPopups()).forEach(r);
+                i(), s(), Array.from(j.GetPopups()).forEach(r);
               }
             );
           }, [t, e]);
         }
-        window.g_PopupManager = T;
+        window.g_PopupManager = j;
       },
       67808: (e, t, n) => {
         "use strict";
-        n.d(t, { W: () => o, p: () => a });
-        var r = n(63696),
-          i = n(53833);
-        const s = r.createContext({ body_class: "" });
-        function o() {
-          return r.useContext(s);
+        n.d(t, { W: () => a, p: () => c });
+        var r = n(62540),
+          i = n(63696),
+          s = n(53833);
+        const o = i.createContext({ body_class: "" });
+        function a() {
+          return i.useContext(o);
         }
-        function a(e) {
+        function c(e) {
           const { body_class: t, children: n } = e,
-            i = o(),
-            a = r.useMemo(() => ({ body_class: c(i.body_class, t) }), [i, t]);
-          return r.createElement(s.Provider, { value: a }, n);
+            s = a(),
+            c = i.useMemo(() => ({ body_class: l(s.body_class, t) }), [s, t]);
+          return (0, r.jsx)(o.Provider, { value: c, children: n });
         }
-        function c(e, t) {
+        function l(e, t) {
           const n = e ? e.split(/\s/) : [];
-          return n.push(...(t ? t.split(/\s/) : [])), i.Ew(n).join(" ");
+          return n.push(...(t ? t.split(/\s/) : [])), s.Ew(n).join(" ");
         }
       },
       63439: (e, t, n) => {
         "use strict";
-        n.d(t, { Cb: () => u, OJ: () => m, h3: () => h });
+        n.d(t, { Cb: () => u, OJ: () => d, h3: () => h });
         var r = n(63696),
           i = n(11131),
           s = n(67808),
@@ -12005,13 +12024,13 @@ var CLSTAMP = "10520954";
                 : void 0,
           };
         }
-        function m(e, t, n) {
+        function d(e, t, n) {
           const i = r.useRef(void 0),
             [c, l] = r.useState(void 0),
             u = (0, s.W)();
           return (
             i.current ||
-              (i.current = new d(
+              (i.current = new m(
                 e,
                 (function (e, t) {
                   return {
@@ -12045,7 +12064,7 @@ var CLSTAMP = "10520954";
             { popup: i.current.window, element: c, popupObj: i.current }
           );
         }
-        class d extends i.Ad {
+        class m extends i.Ad {
           m_callbacks;
           m_fnReadyToRender;
           constructor(e, t, n) {
@@ -12180,61 +12199,62 @@ var CLSTAMP = "10520954";
       },
       92251: (e, t, n) => {
         "use strict";
-        n.d(t, { g: () => a });
-        var r = n(63696),
-          i = n(90765),
-          s = n(24793),
-          o = n.n(s);
-        function a(e) {
+        n.d(t, { g: () => c });
+        var r = n(62540),
+          i = n(63696),
+          s = n(90765),
+          o = n(24793),
+          a = n.n(o);
+        function c(e) {
           const {
               target: t,
               visibilityObserver: n,
-              className: s,
-              style: a,
-              bEnablePointerEvents: l,
-              direction: u = "right",
+              className: o,
+              style: c,
+              bEnablePointerEvents: u,
+              direction: d = "right",
               nBodyAlignment: m = 0.5,
-              nBodyDistance: d = 8,
-              nAllowOffscreenPx: h = 10,
-              nMaxLateralMoveOnScreen: p,
-              onNoSpace: g,
-              bTopmost: f,
-              children: _,
-              ...w
+              nBodyDistance: h = 8,
+              nAllowOffscreenPx: p = 10,
+              nMaxLateralMoveOnScreen: g,
+              onNoSpace: f,
+              bTopmost: _,
+              children: w,
+              ...b
             } = e,
-            [b, C] = r.useState(void 0),
-            [v, M] = r.useState(void 0),
-            [S, y] = r.useState(!1),
-            [E, B] = r.useState(!1),
-            [L, x] = r.useState(null),
-            k = r.useCallback(() => {
+            [C, v] = i.useState(void 0),
+            [M, S] = i.useState(void 0),
+            [x, y] = i.useState(!1),
+            [B, L] = i.useState(!1),
+            [k, I] = i.useState(null),
+            R = i.useCallback(() => {
               let e = t;
-              if (!L || !e) return;
-              if (S && n && !n.visible) return;
+              if (!k || !e) return;
+              if (x && n && !n.visible) return;
               let r = e.ownerDocument.defaultView;
               if (!r || r.closed) return;
-              const i = L.querySelector(".hover_arrow.left"),
-                s = L.querySelector(".hover_arrow.right"),
-                o = L.querySelector(".hover_arrow.top"),
-                a = L.querySelector(".hover_arrow.bottom"),
-                l = e.getBoundingClientRect(),
-                f = L.getBoundingClientRect(),
-                _ = "overlay" == u || "overlay-center" == u;
+              const i = k.querySelector(".hover_arrow.left"),
+                s = k.querySelector(".hover_arrow.right"),
+                o = k.querySelector(".hover_arrow.top"),
+                a = k.querySelector(".hover_arrow.bottom"),
+                c = e.getBoundingClientRect(),
+                u = k.getBoundingClientRect(),
+                _ = "overlay" == d || "overlay-center" == d;
               i && i.setAttribute("style", "display: none;"),
                 s && s.setAttribute("style", "display: none;"),
                 o && o.setAttribute("style", "display: none;"),
                 a && a.setAttribute("style", "display: none;");
-              let w = u;
+              let w = d;
               e.matches(":dir(rtl)") &&
                 ("left" === w ? (w = "right") : "right" === w && (w = "left"));
               let {
-                  nLeft: E,
-                  nTop: x,
-                  nOverflow: k,
-                  nLateralOverflow: I,
-                } = c(w, m, d, l, f, r.innerWidth, r.innerHeight),
-                R = u;
-              if (k > (h ?? 10) && !_) {
+                  nLeft: b,
+                  nTop: B,
+                  nOverflow: I,
+                  nLateralOverflow: R,
+                } = l(w, m, h, c, u, r.innerWidth, r.innerHeight),
+                T = d;
+              if (I > (p ?? 10) && !_) {
                 const e = (function (e) {
                     switch (e) {
                       case "right":
@@ -12250,125 +12270,119 @@ var CLSTAMP = "10520954";
                       case "overlay-center":
                         return "overlay-center";
                     }
-                  })(R),
+                  })(T),
                   {
                     nLeft: t,
                     nTop: n,
                     nOverflow: i,
                     nLateralOverflow: s,
-                  } = c(e, m, d, l, f, r.innerWidth, r.innerHeight);
+                  } = l(e, m, h, c, u, r.innerWidth, r.innerHeight);
                 if (
-                  (i < k && ((R = e), (E = t), (x = n), (k = i), (I = s)),
-                  k > (h ?? 10))
+                  (i < I && ((T = e), (b = t), (B = n), (I = i), (R = s)),
+                  I > (p ?? 10))
                 )
                   return (
                     console.log(
                       "Not showing hover because it didn't fit in the main or alt direction",
                     ),
-                    L.setAttribute("style", "display: none;"),
-                    B(!0),
-                    void g?.()
+                    k.setAttribute("style", "display: none;"),
+                    L(!0),
+                    void f?.()
                   );
               }
-              0 === p ||
+              0 === g ||
                 _ ||
-                ([x, E] = (function (e, t, n, r, i) {
+                ([B, b] = (function (e, t, n, r, i) {
                   let s = Math.max(t[0], t[1]);
                   void 0 !== e && (s = Math.min(e, s));
                   s = Math.max(0, s);
                   const o = t[0] > t[1] ? s : -s;
                   "left" === n || "right" === n ? (r += o) : (i += o);
                   return [r, i];
-                })(p, I, w, x, E));
-              let T = null;
-              switch (R) {
+                })(g, R, w, B, b));
+              let j = null;
+              switch (T) {
                 case "left":
-                  T = s;
+                  j = s;
                   break;
                 case "right":
-                  T = i;
+                  j = i;
                   break;
                 case "top":
-                  T = a;
+                  j = a;
                   break;
                 case "bottom":
-                  T = o;
+                  j = o;
               }
-              T && T.setAttribute("style", ""),
-                E != b && C(E),
-                x != v && M(x),
-                S || y(!0);
-            }, [t, L, S, n, u, m, d, h, p, b, v, g]);
-          r.useEffect(() => k(), [k]);
-          let I = Object.assign({ left: b, top: v }, a),
-            R = !n || n.visible;
-          return r.createElement(
-            "div",
-            {
-              className: (0, i.A)(
-                o().HoverPositionOuter,
-                f && o().HoverAboveModal,
-              ),
-            },
-            r.createElement(
-              "div",
-              {
-                ...w,
-                className: (0, i.A)(
-                  o().HoverPosition,
-                  R && S && o().Ready,
-                  E && o().NoSpace,
-                  l && o().EnablePointerEvents,
-                  s,
-                ),
-                style: I,
-                ref: x,
-              },
-              _,
+              j && j.setAttribute("style", ""),
+                b != C && v(b),
+                B != M && S(B),
+                x || y(!0);
+            }, [t, k, x, n, d, m, h, p, g, C, M, f]);
+          i.useEffect(() => R(), [R]);
+          let T = Object.assign({ left: C, top: M }, c),
+            j = !n || n.visible;
+          return (0, r.jsx)("div", {
+            className: (0, s.A)(
+              a().HoverPositionOuter,
+              _ && a().HoverAboveModal,
             ),
-          );
+            children: (0, r.jsx)("div", {
+              ...b,
+              className: (0, s.A)(
+                a().HoverPosition,
+                j && x && a().Ready,
+                B && a().NoSpace,
+                u && a().EnablePointerEvents,
+                o,
+              ),
+              style: T,
+              ref: I,
+              children: w,
+            }),
+          });
         }
-        function c(e, t, n, r, i, s, o) {
+        function l(e, t, n, r, i, s, o) {
           const a = s,
             c = o;
-          let u, m, d, h;
+          let l, d, m, h;
           switch (e) {
             case "right":
-              (u = r.right + n),
-                (m = l(r.top, r.height, i.height, t)),
-                (d = Math.max(0, u + i.width - a)),
-                (h = [Math.max(0, 0 - m), Math.max(0, m + i.height - c)]);
+              (l = r.right + n),
+                (d = u(r.top, r.height, i.height, t)),
+                (m = Math.max(0, l + i.width - a)),
+                (h = [Math.max(0, 0 - d), Math.max(0, d + i.height - c)]);
               break;
             case "left":
-              (u = r.left - n - i.width),
-                (m = l(r.top, r.height, i.height, t)),
-                (d = Math.max(0, 0 - u)),
-                (h = [Math.max(0, 0 - m), Math.max(0, m + i.height - c)]);
+              (l = r.left - n - i.width),
+                (d = u(r.top, r.height, i.height, t)),
+                (m = Math.max(0, 0 - l)),
+                (h = [Math.max(0, 0 - d), Math.max(0, d + i.height - c)]);
               break;
             case "bottom":
-              (u = l(r.left, r.width, i.width, t)),
-                (m = r.bottom + n),
-                (d = Math.max(0, m + i.height - c)),
-                (h = [Math.max(0, 0 - u), Math.max(0, u + i.width - a)]);
+              (l = u(r.left, r.width, i.width, t)),
+                (d = r.bottom + n),
+                (m = Math.max(0, d + i.height - c)),
+                (h = [Math.max(0, 0 - l), Math.max(0, l + i.width - a)]);
               break;
             case "top":
-              (u = l(r.left, r.width, i.width, t)),
-                (m = r.top - n - i.height),
-                (d = Math.max(0, 0 - m)),
-                (h = [Math.max(0, 0 - u), Math.max(0, u + i.width - a)]);
+              (l = u(r.left, r.width, i.width, t)),
+                (d = r.top - n - i.height),
+                (m = Math.max(0, 0 - d)),
+                (h = [Math.max(0, 0 - l), Math.max(0, l + i.width - a)]);
               break;
             case "overlay":
-              (u = r.left), (m = r.top), (d = 0), (h = [0, 0]);
+              (l = r.left), (d = r.top), (m = 0), (h = [0, 0]);
               break;
             case "overlay-center":
-              (u = r.left + 0.5 * r.width - 0.5 * i.width),
-                (m = r.top + 0.5 * r.height - 0.5 * i.height),
-                (d = 0),
+              (l = r.left + 0.5 * r.width - 0.5 * i.width),
+                (d = r.top + 0.5 * r.height - 0.5 * i.height),
+                (m = 0),
                 (h = [0, 0]);
           }
-          return { nLeft: u, nTop: m, nOverflow: d, nLateralOverflow: h };
+          return { nLeft: l, nTop: d, nOverflow: m, nLateralOverflow: h };
         }
-        function l(e, t, n, r) {
+        function u(e, t, n, r) {
           return Math.max(0, Math.min(1, r)) * (t - n) + e;
         }
       },
@@ -12561,10 +12575,10 @@ var CLSTAMP = "10520954";
           Dn: () => g,
           It: () => h,
           L3: () => p,
-          OZ: () => m,
+          OZ: () => d,
           f2: () => f,
           k2: () => u,
-          wJ: () => d,
+          wJ: () => m,
         });
         var r = n(92059),
           i = n(49810),
@@ -12576,7 +12590,7 @@ var CLSTAMP = "10520954";
         function u(e, t = "", n = null) {
           return _.InstrumentLink(e, t, n);
         }
-        function m(e, t, n) {
+        function d(e, t, n) {
           const i = (0, r.n9)();
           return c.useMemo(() => {
             const s = (0, o.wm)(e).toLowerCase(),
@@ -12585,12 +12599,13 @@ var CLSTAMP = "10520954";
             return s === c || s === l ? (0, r.bV)(i, e, t, n) : e;
           }, [i, e, t, n]);
         }
-        function d(e, t, n = null) {
-          const r = p(t, n);
-          return i.A.AddNavParamToURL(e, r);
+        function m(e, t, n = null) {
+          const r = p(t, n),
+            s = t ? i.A.GetCuratorClanIDParam(t) : null;
+          return i.A.AddNavParamToURL(e, r, s);
         }
         function h(e, t, n, r = null) {
-          const i = d(e, t, r);
+          const i = m(e, t, r);
           if (n && Object.keys(n).length > 0)
             try {
               const e = new URL((0, l.S)(i)),
@@ -12638,13 +12653,14 @@ var CLSTAMP = "10520954";
             );
           }
           static InstrumentLink(e, t, n = null) {
-            const r = _.GetLinkParam(t, n);
-            return i.A.AddNavParamToURL(e, r);
+            const r = _.GetLinkParam(t, n),
+              s = "string" != typeof t ? i.A.GetCuratorClanIDParam(t) : null;
+            return i.A.AddNavParamToURL(e, r, s);
           }
           static GetLinkParam(e, t = null) {
             let n, r;
             if ("string" != typeof e) {
-              if (e.domain) return i.A.GetLinkParam(e, t);
+              if (e.domain) return i.A.GetSNRLinkParam(e, t);
               n = e.feature || "";
             }
             if (!_.sm_strComputedLinkPrefix && !_.ComputeStaticLinkPrefix())
@@ -12690,7 +12706,7 @@ var CLSTAMP = "10520954";
       },
       73788: (e, t, n) => {
         "use strict";
-        n.d(t, { ij: () => v, pn: () => I });
+        n.d(t, { ij: () => v, pn: () => j });
         var r = n(34629),
           i = n(37322),
           s = n(72476),
@@ -12699,10 +12715,10 @@ var CLSTAMP = "10520954";
           c = n(16583),
           l = n(82755),
           u = n(89193);
-        function m(e) {
+        function d(e) {
           return "unknown EMsg ( " + e + " )";
         }
-        var d = n(94195),
+        var m = n(94195),
           h = n(49395),
           p = n(85688),
           g = n(79769),
@@ -12901,13 +12917,13 @@ var CLSTAMP = "10520954";
               } else
                 console.error(
                   "CMInterface RECV could not parse message of type " +
-                    m(e.GetEMsg()) +
+                    d(e.GetEMsg()) +
                     " " +
                     e.GetEMsg(),
                 );
             } catch (t) {
               console.error(
-                `CMInterface RECV exception thrown while processing message of type ${m(e.GetEMsg())}`,
+                `CMInterface RECV exception thrown while processing message of type ${d(e.GetEMsg())}`,
                 t,
               ),
                 e.DEBUG_LogToConsole();
@@ -12979,14 +12995,14 @@ var CLSTAMP = "10520954";
             0;
           }
           async InternalAdjustClock() {
-            let e = o.w.Init(d.Sb, 9802);
+            let e = o.w.Init(m.Sb, 9802);
             return (
               e
                 .Body()
                 .set_client_request_timestamp(
                   Math.floor(performance.now()).toString(),
                 ),
-              this.SendMsgAndAwaitResponse(e, d.Q_).then((e) => {
+              this.SendMsgAndAwaitResponse(e, m.Q_).then((e) => {
                 let t = performance.now(),
                   n = new Date(),
                   r = parseInt(e.Body().client_request_timestamp()),
@@ -13251,10 +13267,12 @@ var CLSTAMP = "10520954";
           );
         var M = n(53048),
           S = n(29218),
-          y = n(44846),
-          E = n(83957),
-          B = n.n(E);
-        class L {
+          x = n(44846),
+          y = n(83957),
+          B = n.n(y);
+        const L = !1,
+          k = (e) => L;
+        class I {
           m_CMList = { rgCMList: [], rtLastLoaded: 0 };
           m_Storage;
           m_InitPromise;
@@ -13319,7 +13337,7 @@ var CLSTAMP = "10520954";
           }
           async GetCMListFromWebAPI() {
             try {
-              const n = await ((e = x),
+              const n = await ((e = R),
                 (t = 1e4),
                 () =>
                   new Promise((n, r) => {
@@ -13354,12 +13372,12 @@ var CLSTAMP = "10520954";
               t = [];
             const n = {};
             for (const r of this.m_CMList.rgCMList) {
-              const i = k(r),
+              const i = T(r),
                 o = !i || r.rtLastCheck < e;
               o && t.length < 20 && t.push(r),
                 (o && !s.TS.IN_MOBILE) || (i && i < 1e4 && (n[r.strHost] = r));
             }
-            t.length;
+            k(t.length);
             let r = !1;
             return new Promise((e, i) => {
               let o,
@@ -13372,10 +13390,9 @@ var CLSTAMP = "10520954";
                   ) {
                     const n = Object.keys(t)
                       .map((e) => t[e])
-                      .sort((e, t) => k(e) - k(t));
+                      .sort((e, t) => T(e) - T(t));
                     if (
-                      (n.length,
-                      n.length && n[0].strHost,
+                      (k((n.length, n.length && n[0].strHost)),
                       (r = !0),
                       this.WriteCMListToLocalStorage(),
                       o && window.clearTimeout(o),
@@ -13391,35 +13408,36 @@ var CLSTAMP = "10520954";
               (0 === t.length ||
                 Object.keys(n).some((e) => this.BCMOkToUse(n[e], c)) ||
                 (s.TS.IN_MOBILE && Object.keys(n).length)) &&
-                (Object.keys(n).length && s.TS.IN_MOBILE, l(n)),
+                (Object.keys(n).length ? (s.TS.IN_MOBILE, k()) : k(), l(n)),
                 r ||
                   ((o = window.setTimeout(() => {
                     (c = "timeout"),
                       !r &&
                         Object.keys(n).some((e) => this.BCMOkToUse(n[e], c)) &&
-                        l(n);
+                        (k(), l(n));
                   }, 400)),
                   (a = window.setTimeout(() => {
-                    (c = "seriouslytimeout"), l(n);
+                    (c = "seriouslytimeout"), k(), l(n);
                   }, 12e3)));
               let u,
-                m = 0,
                 d = 0,
+                m = 0,
                 h = (e) => {
                   !r && this.BCMOkToUse(e, c)
                     ? l({ [e.strHost]: e })
                     : (n[e.strHost] = e),
                     (!r && u()) ||
-                      (0 == --d &&
+                      (0 == --m &&
                         (r
-                          ? this.WriteCMListToLocalStorage()
-                          : this.BCMOkToUse(e, "seriouslytimeout")
-                            ? l({ [e.strHost]: e })
-                            : ((n[e.strHost] = e), l(n))));
+                          ? (k(), this.WriteCMListToLocalStorage())
+                          : (k(),
+                            this.BCMOkToUse(e, "seriouslytimeout")
+                              ? l({ [e.strHost]: e })
+                              : ((n[e.strHost] = e), l(n)))));
                 };
               u = () => {
-                if (m < t.length) {
-                  let e = t[m++];
+                if (d < t.length) {
+                  let e = t[d++];
                   return (
                     this.PingCM(e).then(() => {
                       h(e);
@@ -13429,7 +13447,7 @@ var CLSTAMP = "10520954";
                 }
                 return !1;
               };
-              for (let e = 0; e < 4; e++) u() && d++;
+              for (let e = 0; e < 4; e++) u() && m++;
             });
           }
           GetCMWithFewestDisconnects() {
@@ -13445,7 +13463,7 @@ var CLSTAMP = "10520954";
                 n.nConnectFailures < e.nConnectFailures) &&
                 (e = n);
             }
-            return e && this.FixDevHost(e.strHost), e;
+            return k(e && this.FixDevHost(e.strHost)), e;
           }
           BCMOkToUse(e, t) {
             if (!e) return !1;
@@ -13458,40 +13476,43 @@ var CLSTAMP = "10520954";
             );
           }
           async PingCM(e) {
-            let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/",
-              n = performance.now();
+            let t = "https://" + this.FixDevHost(e.strHost) + "/cmping/";
+            k();
+            let n = performance.now();
             const r = B().CancelToken.source();
             let i = window.setTimeout(() => {
-              e.strHost, r.cancel();
+              k(e.strHost), r.cancel();
             }, 1e3);
             try {
               let s = await B().head(t, { cancelToken: r.token });
-              e.strHost, window.clearTimeout(i);
+              k(e.strHost), window.clearTimeout(i);
               let o = performance.now() - n,
                 a = s.headers["x-steam-cmload"]
                   ? parseInt(s.headers["x-steam-cmload"])
                   : void 0;
-              e.strHost, (e.msPing = o), (e.nCMLoad = a);
+              k(e.strHost), (e.msPing = o), (e.nCMLoad = a);
             } catch (t) {
-              B().isCancel(t) ? e.strHost : window.clearTimeout(i),
+              B().isCancel(t) ? k(e.strHost) : window.clearTimeout(i),
                 (e.msPing = 1e4),
                 (e.nCMLoad = 0);
             }
             return (e.rtLastCheck = new Date().getTime() / 1e3), e.msPing;
           }
         }
-        async function x() {
-          const e = `${s.TS.WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${self.origin}`,
-            t = (await B().get(e)).data,
+        async function R() {
+          const e = `${s.TS.WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${self.origin}`;
+          k();
+          const t = (await B().get(e)).data,
             n = (t && t.response && t.response.serverlist) || [];
           return (
-            n.length, n.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
+            k(n.length),
+            n.map((e, t) => ({ strHost: e.endpoint, nPriority: t }))
           );
         }
-        function k(e) {
+        function T(e) {
           return (e.msPing || 0) + (e.nCMLoad || 0);
         }
-        class I extends w {
+        class j extends w {
           m_Session = {
             m_bWaitingForLogonResponse: !1,
             m_nSessionID: 0,
@@ -13505,7 +13526,7 @@ var CLSTAMP = "10520954";
           m_iIntervalHeartbeat;
           m_iCallSeq = 1;
           m_mapWaitingCallbacks = new Map();
-          m_CMList = new L();
+          m_CMList = new I();
           constructor(e) {
             super(), (0, u.Gn)(this), this.m_CMList.Init(e);
           }
@@ -13627,7 +13648,7 @@ var CLSTAMP = "10520954";
               ));
           }
           SendHeartbeat() {
-            let e = o.w.Init(d.s5, 703);
+            let e = o.w.Init(m.s5, 703);
             this.Send(e);
           }
           OnConnect() {
@@ -13683,7 +13704,7 @@ var CLSTAMP = "10520954";
             if (
               e.BIsValid() &&
               e.Hdr().jobid_target() &&
-              e.Hdr().jobid_target() !== y.kF
+              e.Hdr().jobid_target() !== x.kF
             ) {
               let t = parseInt(e.Hdr().jobid_target());
               if (this.m_mapWaitingCallbacks.has(t)) {
@@ -13709,7 +13730,7 @@ var CLSTAMP = "10520954";
           }
           LogOnResponseHandler = this.messageHandlers.RegisterEMessageAction(
             751,
-            d.c1,
+            m.c1,
             (e) => {
               let t = e.Body().eresult();
               (this.m_Session.m_bWaitingForLogonResponse = !1),
@@ -13736,7 +13757,7 @@ var CLSTAMP = "10520954";
             },
           );
           ClientAccountInfoHandler =
-            this.messageHandlers.RegisterEMessageAction(768, d.dX, (e) => {
+            this.messageHandlers.RegisterEMessageAction(768, m.dX, (e) => {
               (this.m_unAccountFlags = e.Body().account_flags() || 0),
                 (this.m_strIPCountry = e.Body().ip_country() || ""),
                 (this.m_strPersonaName = e.Body().persona_name() || "");
@@ -13755,7 +13776,7 @@ var CLSTAMP = "10520954";
             }
           }
         }
-        (0, r.Cg)([u.XI], I.prototype, "DecodeAndDispatchMultiMsg", null);
+        (0, r.Cg)([u.XI], j.prototype, "DecodeAndDispatchMultiMsg", null);
       },
       25265: (e, t, n) => {
         "use strict";
@@ -14010,49 +14031,50 @@ var CLSTAMP = "10520954";
         n.d(t, {
           $b: () => P,
           Dy: () => A,
-          Fd: () => L,
-          IK: () => B,
-          K5: () => x,
-          P: () => M,
-          Vs: () => k,
+          Fd: () => k,
+          IK: () => L,
+          K5: () => I,
+          P: () => S,
+          Vs: () => R,
           Y8: () => z,
           aE: () => F,
-          ai: () => R,
+          ai: () => j,
           fd: () => W,
-          il: () => T,
-          kt: () => E,
+          il: () => E,
+          kt: () => B,
           tz: () => y,
         });
         var r = n(34629),
-          i = n(90242),
-          s = n(69164),
-          o = n(4690),
-          a = n(15181),
-          c = n(41230),
-          l = n(63696),
-          u = n(31084),
+          i = n(62540),
+          s = n(90242),
+          o = n(69164),
+          a = n(4690),
+          c = n(15181),
+          l = n(41230),
+          u = n(63696),
+          d = n(31084),
           m = n(736),
-          d = n(32263),
-          h = n(50376),
-          p = n(90765),
-          g = n(81255),
-          f = n(54644),
-          _ = n(46108),
-          w = n(51115),
-          b = n(72476),
-          C = n(24892),
-          v = n.n(C);
-        const M = l.createContext(null);
-        let S = class extends l.Component {
-          static contextType = M;
-          m_navRef = (0, i.b$)();
+          h = n(32263),
+          p = n(50376),
+          g = n(90765),
+          f = n(81255),
+          _ = n(54644),
+          w = n(46108),
+          b = n(51115),
+          C = n(72476),
+          v = n(24892),
+          M = n.n(v);
+        const S = u.createContext(null);
+        let x = class extends u.Component {
+          static contextType = S;
+          m_navRef = (0, s.b$)();
           get instance() {
             return this.context.instance;
           }
           componentDidMount() {
             this.instance.SetLabel(this.props.label),
               this.m_navRef.current?.TakeFocus(),
-              (0, w.cZ)(this.props.refInstance, this.instance);
+              (0, b.cZ)(this.props.refInstance, this.instance);
           }
           componentDidUpdate(e) {
             e.label !== this.props.label &&
@@ -14078,104 +14100,100 @@ var CLSTAMP = "10520954";
               className: t,
               label: n,
               onCancel: r,
-              cancelText: i,
-              refInstance: c,
+              cancelText: s,
+              refInstance: l,
               bForceDesktopPresentation: u,
-              footer: m,
-              role: d = "menu",
+              footer: d,
+              role: m = "menu",
               labelId: h,
-              style: g = {},
+              style: p = {},
               refScrollable: f,
-              ...w
+              ..._
             } = this.props;
-            const b = this.context.styles ?? v();
-            let C = i ?? "#Button_Cancel";
+            const b = this.context.styles ?? M();
+            let C = s ?? "#Button_Cancel";
             if (1 != this.context.presentation || u)
-              return l.createElement(
-                "div",
-                {
-                  ref: f,
-                  style: g,
-                  ...w,
-                  className: (0, p.A)(
-                    {
-                      [b.contextMenuContents]: !0,
-                      [b.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                      [b.ForceDesktop]: u,
-                    },
-                    t,
-                  ),
-                },
-                e,
-              );
+              return (0, i.jsx)("div", {
+                ref: f,
+                style: p,
+                ..._,
+                className: (0, g.A)(
+                  {
+                    [b.contextMenuContents]: !0,
+                    [b.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                    [b.ForceDesktop]: u,
+                  },
+                  t,
+                ),
+                children: e,
+              });
             {
-              const i = () => {
+              const s = () => {
                 r && r(), this.instance.Hide();
               };
               return (
-                (g.overflowY = this.instance.BIsSubMenuVisible()
+                (p.overflowY = this.instance.BIsSubMenuVisible()
                   ? "hidden"
                   : void 0),
-                l.createElement(
-                  s.Z,
-                  {
-                    ...w,
-                    className: (0, p.A)(
-                      b.contextMenuContents,
-                      { [b.hasSubMenu]: this.instance.BIsSubMenuVisible() },
-                      t,
-                    ),
-                    "flow-children": "column",
-                    onMoveLeft: this.HideIfSubmenu,
-                    onCancel: this.instance.BIsSubMenu() ? this.HideMenu : i,
-                    style: g,
-                    navEntryPreferPosition: o.iU.PREFERRED_CHILD,
-                    navRef: this.m_navRef,
-                    ref: f,
-                    role: d,
-                    "aria-labelledby": n ? h : void 0,
-                    ...a._k,
-                  },
-                  e,
-                  n &&
-                    l.createElement(
-                      "div",
-                      { id: h, style: { display: "none" } },
-                      n,
-                    ),
-                  !this.instance.BIsSubMenu() &&
-                    l.createElement(
-                      l.Fragment,
-                      null,
-                      l.createElement(x, null),
-                      l.createElement(
-                        E,
-                        { className: b.Cancel, onSelected: i },
-                        (0, _.we)(C),
-                      ),
-                      m,
-                    ),
-                  this.instance.BIsSubMenuVisible() &&
-                    l.createElement("div", {
-                      className: b.contextMenuFade,
-                      onClick: () => this.instance.HideSubMenu(),
-                    }),
-                )
+                (0, i.jsxs)(o.Z, {
+                  ..._,
+                  className: (0, g.A)(
+                    b.contextMenuContents,
+                    { [b.hasSubMenu]: this.instance.BIsSubMenuVisible() },
+                    t,
+                  ),
+                  "flow-children": "column",
+                  onMoveLeft: this.HideIfSubmenu,
+                  onCancel: this.instance.BIsSubMenu() ? this.HideMenu : s,
+                  style: p,
+                  navEntryPreferPosition: a.iU.PREFERRED_CHILD,
+                  navRef: this.m_navRef,
+                  ref: f,
+                  role: m,
+                  "aria-labelledby": n ? h : void 0,
+                  ...c._k,
+                  children: [
+                    e,
+                    n &&
+                      (0, i.jsx)("div", {
+                        id: h,
+                        style: { display: "none" },
+                        children: n,
+                      }),
+                    !this.instance.BIsSubMenu() &&
+                      (0, i.jsxs)(i.Fragment, {
+                        children: [
+                          (0, i.jsx)(I, {}),
+                          (0, i.jsx)(B, {
+                            className: b.Cancel,
+                            onSelected: s,
+                            children: (0, w.we)(C),
+                          }),
+                          d,
+                        ],
+                      }),
+                    this.instance.BIsSubMenuVisible() &&
+                      (0, i.jsx)("div", {
+                        className: b.contextMenuFade,
+                        onClick: () => this.instance.HideSubMenu(),
+                      }),
+                  ],
+                })
               );
             }
           }
         };
         function y(e) {
-          const t = l.useId();
-          return l.createElement(S, { labelId: t, ...e });
+          const t = u.useId();
+          return (0, i.jsx)(x, { labelId: t, ...e });
         }
-        (0, r.Cg)([w.oI], S.prototype, "HideIfSubmenu", null),
-          (0, r.Cg)([w.oI], S.prototype, "HideMenu", null),
-          (S = (0, r.Cg)([c.PA], S));
-        class E extends l.PureComponent {
-          static contextType = M;
-          m_ref = l.createRef();
-          m_refDiv = l.createRef();
+        (0, r.Cg)([b.oI], x.prototype, "HideIfSubmenu", null),
+          (0, r.Cg)([b.oI], x.prototype, "HideMenu", null),
+          (x = (0, r.Cg)([l.PA], x));
+        class B extends u.PureComponent {
+          static contextType = S;
+          m_ref = u.createRef();
+          m_refDiv = u.createRef();
           get element() {
             return this.m_refDiv.current;
           }
@@ -14209,94 +14227,94 @@ var CLSTAMP = "10520954";
                 onMoveRight: n,
                 ...r
               } = this.props,
-              i = this.context?.styles ?? v();
+              s = this.context?.styles ?? M();
             return 1 == this.context.presentation
-              ? l.createElement(
-                  s.Z,
-                  {
-                    noFocusRing: !0,
-                    preferredFocus: this.props.selected,
-                    ref: this.m_refDiv,
-                    navRef: this.m_ref,
-                    onMouseEnter: this.OnMouseEnter,
-                    ...r,
-                    className: (0, p.A)(
-                      this.props.className,
-                      i.contextMenuItem,
-                      "contextMenuItem",
-                      this.props.disabled && "disabled",
-                      this.props.selected && i.Selected,
-                      "positive" == this.props.tone && i.Positive,
-                      "emphasis" == this.props.tone && i.Emphasis,
-                      "destructive" == this.props.tone && i.Destructive,
-                    ),
-                    focusClassName: i.Focused,
-                    onClick: this.props.disabled ? void 0 : this.OnClick,
-                    focusable: !this.props.disabled,
-                    onOKButton: this.OnOKButton,
-                    onMoveRight: n,
-                    unselectable: this.props.unselectable,
-                    role: r.role ?? "menuitem",
-                    "aria-selected": this.props.selected,
-                  },
-                  this.props.children,
-                )
-              : l.createElement(
-                  d.D,
-                  {
-                    ref: this.m_refDiv,
-                    onMouseEnter: this.OnMouseEnter,
-                    ...r,
-                    onClick: this.OnClick,
-                    unselectable: this.props.unselectable,
-                    className: this.props.className,
-                    role: r.role ?? "menuitem",
-                    "aria-selected": this.props.selected,
-                  },
-                  this.props.children,
-                );
+              ? (0, i.jsx)(o.Z, {
+                  noFocusRing: !0,
+                  preferredFocus: this.props.selected,
+                  ref: this.m_refDiv,
+                  navRef: this.m_ref,
+                  onMouseEnter: this.OnMouseEnter,
+                  ...r,
+                  className: (0, g.A)(
+                    this.props.className,
+                    s.contextMenuItem,
+                    "contextMenuItem",
+                    this.props.disabled && "disabled",
+                    this.props.selected && s.Selected,
+                    "positive" == this.props.tone && s.Positive,
+                    "emphasis" == this.props.tone && s.Emphasis,
+                    "destructive" == this.props.tone && s.Destructive,
+                  ),
+                  focusClassName: s.Focused,
+                  onClick: this.props.disabled ? void 0 : this.OnClick,
+                  focusable: !this.props.disabled,
+                  onOKButton: this.OnOKButton,
+                  onMoveRight: n,
+                  unselectable: this.props.unselectable,
+                  role: r.role ?? "menuitem",
+                  "aria-selected": this.props.selected,
+                  children: this.props.children,
+                })
+              : (0, i.jsx)(h.D, {
+                  ref: this.m_refDiv,
+                  onMouseEnter: this.OnMouseEnter,
+                  ...r,
+                  onClick: this.OnClick,
+                  unselectable: this.props.unselectable,
+                  className: this.props.className,
+                  role: r.role ?? "menuitem",
+                  "aria-selected": this.props.selected,
+                  children: this.props.children,
+                });
           }
         }
-        (0, r.Cg)([w.oI], E.prototype, "OnClick", null),
-          (0, r.Cg)([w.oI], E.prototype, "OnOKButton", null),
-          (0, r.Cg)([w.oI], E.prototype, "OnMouseEnter", null),
-          (0, r.Cg)([w.oI], E.prototype, "Focus", null);
-        class B extends l.PureComponent {
+        (0, r.Cg)([b.oI], B.prototype, "OnClick", null),
+          (0, r.Cg)([b.oI], B.prototype, "OnOKButton", null),
+          (0, r.Cg)([b.oI], B.prototype, "OnMouseEnter", null),
+          (0, r.Cg)([b.oI], B.prototype, "Focus", null);
+        class L extends u.PureComponent {
           render() {
             const { bChecked: e, children: t, className: n, ...r } = this.props;
-            return l.createElement(
-              E,
-              { ...r, className: (0, p.A)(n, e && "menuChecked") },
-              l.createElement("div", { className: "contextMenuCheckMark" }),
-              t,
-            );
+            return (0, i.jsxs)(B, {
+              ...r,
+              className: (0, g.A)(n, e && "menuChecked"),
+              children: [
+                (0, i.jsx)("div", { className: "contextMenuCheckMark" }),
+                t,
+              ],
+            });
           }
         }
-        class L extends l.PureComponent {
+        class k extends u.PureComponent {
           render() {
             const { icon: e, children: t, ...n } = this.props;
-            return l.createElement(
-              E,
-              { ...n },
-              l.createElement("div", { className: v().IconContainer }, e),
-              t,
-            );
+            return (0, i.jsxs)(B, {
+              ...n,
+              children: [
+                (0, i.jsx)("div", {
+                  className: M().IconContainer,
+                  children: e,
+                }),
+                t,
+              ],
+            });
           }
         }
-        function x(e) {
-          const t = l.useContext(M).styles ?? v();
-          return l.createElement("div", {
+        function I(e) {
+          const t = u.useContext(S).styles ?? M();
+          return (0, i.jsx)("div", {
             className: t.ContextMenuSeparator,
             role: "separator",
           });
         }
-        const k = (e) => {
-          const t = (0, b.Qn)();
-          return l.createElement(I, { ...e, bInGamepadUI: t });
+        const R = (e) => {
+          const t = (0, C.Qn)();
+          return (0, i.jsx)(T, { ...e, bInGamepadUI: t });
         };
-        class I extends l.PureComponent {
-          static contextType = M;
-          m_refItem = l.createRef();
+        class T extends u.PureComponent {
+          static contextType = S;
+          m_refItem = u.createRef();
           constructor(e) {
             super(e), (this.state = { bActive: !1 });
           }
@@ -14324,14 +14342,11 @@ var CLSTAMP = "10520954";
             );
           }
           RenderSubMenu() {
-            return l.createElement(
-              y,
-              {
-                onMouseEnter: this.OnSubMenuMouseEnter,
-                label: this.props.label,
-              },
-              this.props.children,
-            );
+            return (0, i.jsx)(y, {
+              onMouseEnter: this.OnSubMenuMouseEnter,
+              label: this.props.label,
+              children: this.props.children,
+            });
           }
           OnMouseEnter(e) {
             0 == this.context.presentation && this.ShowSubMenu(e.currentTarget);
@@ -14349,42 +14364,36 @@ var CLSTAMP = "10520954";
               selectedWithin: t,
               children: n,
               className: r,
-              bInGamepadUI: i,
-              ...s
+              bInGamepadUI: s,
+              ...o
             } = this.props;
-            const o = this.context.styles ?? v();
-            return l.createElement(
-              E,
-              {
-                ...s,
-                ref: this.m_refItem,
-                onClick: this.OnClick,
-                selected: t && !this.state.bActive,
-                className: (0, p.A)(
-                  r,
-                  o.SubMenu,
-                  this.state.bActive && o.active,
-                ),
-                onMouseEnter: this.OnMouseEnter,
-                bInteractableItem: !0,
-                onMoveRight: () => this.ShowSubMenu(),
-              },
-              l.createElement("div", { className: o.Label }, e),
-              l.createElement(
-                "div",
-                { className: o.Arrow },
-                l.createElement(h.GB9, null),
-              ),
-            );
+            const a = this.context.styles ?? M();
+            return (0, i.jsxs)(B, {
+              ...o,
+              ref: this.m_refItem,
+              onClick: this.OnClick,
+              selected: t && !this.state.bActive,
+              className: (0, g.A)(r, a.SubMenu, this.state.bActive && a.active),
+              onMouseEnter: this.OnMouseEnter,
+              bInteractableItem: !0,
+              onMoveRight: () => this.ShowSubMenu(),
+              children: [
+                (0, i.jsx)("div", { className: a.Label, children: e }),
+                (0, i.jsx)("div", {
+                  className: a.Arrow,
+                  children: (0, i.jsx)(p.GB9, {}),
+                }),
+              ],
+            });
           }
         }
-        (0, r.Cg)([w.oI], I.prototype, "OnSubMenuMouseEnter", null),
-          (0, r.Cg)([w.oI], I.prototype, "OnSubMenuHidden", null),
-          (0, r.Cg)([w.oI], I.prototype, "ShowSubMenu", null),
-          (0, r.Cg)([w.oI], I.prototype, "RenderSubMenu", null),
-          (0, r.Cg)([w.oI], I.prototype, "OnMouseEnter", null),
-          (0, r.Cg)([w.oI], I.prototype, "OnClick", null);
-        let R = class extends l.Component {
+        (0, r.Cg)([b.oI], T.prototype, "OnSubMenuMouseEnter", null),
+          (0, r.Cg)([b.oI], T.prototype, "OnSubMenuHidden", null),
+          (0, r.Cg)([b.oI], T.prototype, "ShowSubMenu", null),
+          (0, r.Cg)([b.oI], T.prototype, "RenderSubMenu", null),
+          (0, r.Cg)([b.oI], T.prototype, "OnMouseEnter", null),
+          (0, r.Cg)([b.oI], T.prototype, "OnClick", null);
+        let j = class extends u.Component {
           m_elMenu = void 0;
           m_cReenteranceGuard = 1;
           m_mutationObserver;
@@ -14430,7 +14439,7 @@ var CLSTAMP = "10520954";
                     this.OnWindowResize,
                   )),
               (this.m_elMenu = e || void 0),
-              b.TS.IN_CLIENT && this.props.popup && this.m_elMenu
+              C.TS.IN_CLIENT && this.props.popup && this.m_elMenu
                 ? this.m_elMenu.ownerDocument.fonts.ready.then(() => {
                     this.PositionMenu();
                   })
@@ -14449,7 +14458,7 @@ var CLSTAMP = "10520954";
           }
           OnBlur(e) {
             if (
-              (!e.relatedTarget || !f.id(e.currentTarget, e.relatedTarget)) &&
+              (!e.relatedTarget || !_.id(e.currentTarget, e.relatedTarget)) &&
               (!e.relatedTarget ||
                 !this.props.instance.BIsElementInMenuHierarchy(
                   e.relatedTarget,
@@ -14480,7 +14489,7 @@ var CLSTAMP = "10520954";
               this.state.ready &&
               this.props.instance.visible &&
               (this.props.popup ||
-                !f.id(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+                !_.id(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
             ) {
               let e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
               e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -14499,21 +14508,21 @@ var CLSTAMP = "10520954";
               c = 0,
               l = 0,
               u = s.innerWidth,
-              m = s.innerHeight,
-              d = r?.getBoundingClientRect();
+              d = s.innerHeight,
+              m = r?.getBoundingClientRect();
             if (i)
               if (
                 (t.bScreenCoordinates ||
                   void 0 === o ||
                   void 0 === a ||
                   ((o += s.screenLeft), (a += s.screenTop)),
-                d && (d = f.pd(s, d)),
+                m && (m = _.pd(s, m)),
                 t.targetMonitor)
               )
                 (c = t.targetMonitor.nScreenLeft),
                   (l = t.targetMonitor.nScreenTop),
                   (u = t.targetMonitor.nScreenWidth),
-                  (m = t.targetMonitor.nScreenHeight);
+                  (d = t.targetMonitor.nScreenHeight);
               else {
                 let e = s.screen,
                   t = 0,
@@ -14523,7 +14532,7 @@ var CLSTAMP = "10520954";
                   (c = t),
                   (l = n),
                   (u = e.availWidth),
-                  (m = e.availHeight);
+                  (d = e.availHeight);
               }
             (t.bOverlapHorizontal || t.bOverlapVertical) && (o = a = void 0);
             const h = n.getBoundingClientRect();
@@ -14536,56 +14545,56 @@ var CLSTAMP = "10520954";
                 menuHeight: void 0,
                 menuMinWidth: void 0,
               },
-              g = o ?? d.left,
-              _ = o ?? d.right,
+              g = o ?? m.left,
+              f = o ?? m.right,
               w = h.width;
-            t.bMatchWidth && ((w = _ - g), (p.menuWidth = w)),
-              t.bGrowToElementWidth && (p.menuMinWidth = Math.max(w, _ - g));
-            let b = (t.bOverlapHorizontal ? _ : g) - c - w,
+            t.bMatchWidth && ((w = f - g), (p.menuWidth = w)),
+              t.bGrowToElementWidth && (p.menuMinWidth = Math.max(w, f - g));
+            let b = (t.bOverlapHorizontal ? f : g) - c - w,
               C = b > 0,
-              v = c + u - (t.bOverlapHorizontal ? g : _) - w,
+              v = c + u - (t.bOverlapHorizontal ? g : f) - w,
               M = v > 0,
               S = t.bPreferPopLeft;
             r?.matches(":dir(rtl)") && (S = !S);
-            let y = (S || !M) && C;
+            let x = (S || !M) && C;
             C ||
               M ||
-              ((y = C > M),
-              t.bFitToWindow && ((w += (y ? b : v) - 8), (p.menuWidth = w))),
-              y
-                ? (p.menuRight = u - (t.bOverlapHorizontal ? _ : g))
-                : (p.menuLeft = t.bOverlapHorizontal ? g : _);
-            let E = a ?? d.top,
-              B = a ?? d.bottom,
+              ((x = C > M),
+              t.bFitToWindow && ((w += (x ? b : v) - 8), (p.menuWidth = w))),
+              x
+                ? (p.menuRight = u - (t.bOverlapHorizontal ? f : g))
+                : (p.menuLeft = t.bOverlapHorizontal ? g : f);
+            let y = a ?? m.top,
+              B = a ?? m.bottom,
               L = n.scrollHeight;
-            t.bMatchHeight && ((L = B - E), (p.menuHeight = L));
-            let x = (t.bOverlapVertical ? B : E) - l - L,
-              k = x > 0,
-              I = l + m - (t.bOverlapVertical ? E : B) - L,
-              R = I > 0,
-              T = (t.bPreferPopTop || !R) && k && !t.bDisablePopTop;
-            if (!k && !R) {
+            t.bMatchHeight && ((L = B - y), (p.menuHeight = L));
+            let k = (t.bOverlapVertical ? B : y) - l - L,
+              I = k > 0,
+              R = l + d - (t.bOverlapVertical ? y : B) - L,
+              T = R > 0,
+              j = (t.bPreferPopTop || !T) && I && !t.bDisablePopTop;
+            if (!I && !T) {
               const e =
                 void 0 !== t.bShiftToFitWindow
                   ? t.bShiftToFitWindow
                   : !!t.bFitToWindow && !t.bOverlapHorizontal;
-              (T = x > I && !t.bDisablePopTop),
-                e && (T ? (p.menuTop = 4) : (p.menuBottom = 4)),
+              (j = k > R && !t.bDisablePopTop),
+                e && (j ? (p.menuTop = 4) : (p.menuBottom = 4)),
                 t.bFitToWindow &&
-                  (e ? (L = Math.min(L, m - 8)) : (L += T ? x : I),
+                  (e ? (L = Math.min(L, d - 8)) : (L += j ? k : R),
                   (p.menuHeight = L - 8));
             }
             void 0 === p.menuBottom &&
               void 0 === p.menuTop &&
-              (T
-                ? (p.menuBottom = m - (t.bOverlapVertical ? B : E))
-                : (p.menuTop = t.bOverlapVertical ? E : B)),
+              (j
+                ? (p.menuBottom = d - (t.bOverlapVertical ? B : y))
+                : (p.menuTop = t.bOverlapVertical ? y : B)),
               i
                 ? (p.menuHeight || (p.menuHeight = h.height),
                   p.menuWidth || (p.menuWidth = h.width),
                   p.menuBottom &&
                     !p.menuTop &&
-                    ((p.menuTop = m - p.menuBottom - p.menuHeight),
+                    ((p.menuTop = d - p.menuBottom - p.menuHeight),
                     (p.menuBottom = void 0)),
                   p.menuRight &&
                     !p.menuLeft &&
@@ -14679,7 +14688,7 @@ var CLSTAMP = "10520954";
                     (e.width = this.state.menuWidth),
                   void 0 !== this.state.menuMinWidth &&
                     (e.minWidth = this.state.menuMinWidth));
-            let t = this.props.options.strClassName || v().contextMenu;
+            let t = this.props.options.strClassName || M().contextMenu;
             return (
               (this.props.options.bCreateHidden ||
                 (this.props.instance.visible && this.state.ready)) &&
@@ -14687,67 +14696,62 @@ var CLSTAMP = "10520954";
               this.props.instance.visible &&
                 this.state.ready &&
                 (t += " ready"),
-              (t += " " + v().ContextMenuPosition),
-              this.props.options.bStandalone && (t += " " + v().Standalone),
-              l.createElement(
-                "div",
-                {
-                  className: t,
-                  ref: this.BindMenuElement,
-                  style: e,
-                  onBlur: this.OnBlur,
-                  onKeyDown: this.OnKeyDown,
-                  tabIndex: 0,
-                },
-                this.props.children,
-              )
+              (t += " " + M().ContextMenuPosition),
+              this.props.options.bStandalone && (t += " " + M().Standalone),
+              (0, i.jsx)("div", {
+                className: t,
+                ref: this.BindMenuElement,
+                style: e,
+                onBlur: this.OnBlur,
+                onKeyDown: this.OnKeyDown,
+                tabIndex: 0,
+                children: this.props.children,
+              })
             );
           }
         };
-        function T(e) {
-          return l.createElement("div", {
-            className: v().ContextMenuMouseOverlay,
-          });
+        function E(e) {
+          return (0, i.jsx)("div", { className: M().ContextMenuMouseOverlay });
         }
         function F(e) {
           let t = [],
-            n = f.uX(e),
+            n = _.uX(e),
             r = n.getSelection(),
-            i = r && r.rangeCount > 0 && r.toString().length > 0,
-            s = e.target,
-            o = !1;
-          const a = e.clientY,
-            c = e.clientX;
+            s = r && r.rangeCount > 0 && r.toString().length > 0,
+            o = e.target,
+            a = !1;
+          const c = e.clientY,
+            l = e.clientX;
           if (
-            (s &&
-              "tagName" in s &&
-              (("INPUT" != s.tagName && "TEXTAREA" != s.tagName) || (o = !0)),
-            b.TS.IN_CLIENT &&
-              o &&
+            (o &&
+              "tagName" in o &&
+              (("INPUT" != o.tagName && "TEXTAREA" != o.tagName) || (a = !0)),
+            C.TS.IN_CLIENT &&
+              a &&
               (0, m.Fj)(n, "Browser.GetSpellingSuggestions"))
           ) {
             let [e, ...r] = n.SteamClient.Browser.GetSpellingSuggestions(),
-              i = s;
+              s = o;
             if (
-              (i &&
+              (s &&
                 r.forEach((e, r) => {
                   t.push(
-                    l.createElement(
-                      E,
+                    (0, i.jsx)(
+                      B,
                       {
-                        key: `spelling_${r}_${e}`,
                         onSelected: () => {
-                          i.setRangeText(e),
+                          s.setRangeText(e),
                             (function (e, t) {
                               let n = t.createEvent("HTMLEvents");
                               n.initEvent("change", !0, !1), e.dispatchEvent(n);
-                            })(i, n.document),
-                            i.setSelectionRange(i.selectionEnd, i.selectionEnd),
-                            s.focus();
+                            })(s, n.document),
+                            s.setSelectionRange(s.selectionEnd, s.selectionEnd),
+                            o.focus();
                         },
-                        className: v().NoSeparation,
+                        className: M().NoSeparation,
+                        children: e,
                       },
-                      e,
+                      `spelling_${r}_${e}`,
                     ),
                   );
                 }),
@@ -14756,112 +14760,113 @@ var CLSTAMP = "10520954";
               const r = 30;
               (e = e.trim()),
                 t.push(
-                  l.createElement(
-                    E,
+                  (0, i.jsx)(
+                    B,
                     {
-                      key: `addtodictionary_${e}`,
                       onSelected: () =>
                         n.SteamClient.Browser.AddWordToDictionary(e),
+                      children: (0, w.we)(
+                        "#ContextMenu_AddToDictionary",
+                        e.length < r ? e : e.substring(0, r) + "...",
+                      ),
                     },
-                    (0, _.we)(
-                      "#ContextMenu_AddToDictionary",
-                      e.length < r ? e : e.substring(0, r) + "...",
-                    ),
+                    `addtodictionary_${e}`,
                   ),
                 );
             }
           }
           if (
-            ((n.document.queryCommandEnabled("cut") || (i && o)) &&
+            ((n.document.queryCommandEnabled("cut") || (s && a)) &&
               t.push(
-                l.createElement(
-                  E,
+                (0, i.jsx)(
+                  B,
                   {
-                    key: "cut",
                     onSelected: () => {
                       n.document.execCommand("cut");
                     },
+                    children: (0, w.we)("#ContextMenu_Cut"),
                   },
-                  (0, _.we)("#ContextMenu_Cut"),
+                  "cut",
                 ),
               ),
-            (n.document.queryCommandEnabled("copy") || i) &&
+            (n.document.queryCommandEnabled("copy") || s) &&
               t.push(
-                l.createElement(
-                  E,
+                (0, i.jsx)(
+                  B,
                   {
-                    key: "copy",
                     onSelected: () => {
                       n.document.execCommand("copy");
                     },
-                    className: v().NoSeparation,
+                    className: M().NoSeparation,
+                    children: (0, w.we)("#ContextMenu_Copy"),
                   },
-                  (0, _.we)("#ContextMenu_Copy"),
+                  "copy",
                 ),
               ),
-            b.TS.IN_CLIENT &&
-              o &&
+            C.TS.IN_CLIENT &&
+              a &&
               (0, m.Fj)(n, "Browser.Paste") &&
               t.push(
-                l.createElement(
-                  E,
+                (0, i.jsx)(
+                  B,
                   {
-                    key: "paste",
                     onSelected: () => {
-                      s.focus(), n.SteamClient.Browser.Paste();
+                      o.focus(), n.SteamClient.Browser.Paste();
                     },
-                    className: v().NoSeparation,
+                    className: M().NoSeparation,
+                    children: (0, w.we)("#ContextMenu_Paste"),
                   },
-                  (0, _.we)("#ContextMenu_Paste"),
+                  "paste",
                 ),
               ),
-            b.TS.IN_CLIENT && b.TS.DEV_MODE)
+            C.TS.IN_CLIENT && C.TS.DEV_MODE)
           ) {
             const e = [];
             (0, m.Fj)(n, "Browser.OpenDevTools") &&
               e.push(
-                l.createElement(
-                  E,
+                (0, i.jsx)(
+                  B,
                   {
-                    key: "opendevtools",
                     onSelected: () => {
-                      s.focus(), n.SteamClient.Browser.OpenDevTools();
+                      o.focus(), n.SteamClient.Browser.OpenDevTools();
                     },
+                    children: "Open Dev Tools",
                   },
-                  "Open Dev Tools",
+                  "opendevtools",
                 ),
               ),
               (0, m.Fj)(n, "Browser.InspectElement") &&
                 e.push(
-                  l.createElement(
-                    E,
+                  (0, i.jsx)(
+                    B,
                     {
-                      key: "inspectelement",
                       onSelected: () => {
-                        s.focus(), n.SteamClient.Browser.InspectElement(a, c);
+                        o.focus(), n.SteamClient.Browser.InspectElement(c, l);
                       },
-                      className: v().NoSeparation,
+                      className: M().NoSeparation,
+                      children: "Inspect Element",
                     },
-                    "Inspect Element",
+                    "inspectelement",
                   ),
                 ),
               e.length > 0 &&
-                (t.push(l.createElement(x, { key: "devtools-separator" })),
-                t.push(...e));
+                (t.push((0, i.jsx)(I, {}, "devtools-separator")), t.push(...e));
           }
           if (t.length)
-            (0, u.lX)(l.createElement(y, null, t), e, { bRootContextMenu: !0 });
+            (0, d.lX)((0, i.jsx)(y, { children: t }), e, {
+              bRootContextMenu: !0,
+            });
           else {
             if (e.shiftKey) return;
             e.preventDefault(), e.stopPropagation();
           }
         }
-        (0, r.Cg)([w.oI], R.prototype, "BindMenuElement", null),
-          (0, r.Cg)([w.oI, (0, g.s)(100)], R.prototype, "OnMenuMutation", null),
-          (0, r.Cg)([w.oI], R.prototype, "OnWindowResize", null),
-          (0, r.Cg)([w.oI], R.prototype, "OnBlur", null),
-          (0, r.Cg)([w.oI], R.prototype, "OnKeyDown", null),
-          (R = (0, r.Cg)([c.PA], R));
+        (0, r.Cg)([b.oI], j.prototype, "BindMenuElement", null),
+          (0, r.Cg)([b.oI, (0, f.s)(100)], j.prototype, "OnMenuMutation", null),
+          (0, r.Cg)([b.oI], j.prototype, "OnWindowResize", null),
+          (0, r.Cg)([b.oI], j.prototype, "OnBlur", null),
+          (0, r.Cg)([b.oI], j.prototype, "OnKeyDown", null),
+          (j = (0, r.Cg)([l.PA], j));
         const O = "EnableContextMenuBlurDelay3";
         function D() {
           return (
@@ -14870,11 +14875,11 @@ var CLSTAMP = "10520954";
         }
         function A() {
           const e = null != window.localStorage,
-            [t, n] = l.useState(D());
+            [t, n] = u.useState(D());
           return [
             e,
             t,
-            l.useCallback((e) => {
+            u.useCallback((e) => {
               if (!window.localStorage)
                 return void console.error(
                   `Attempt to change setting with no localStorage available: ${O}`,
@@ -14905,115 +14910,116 @@ var CLSTAMP = "10520954";
       },
       15123: (e, t, n) => {
         "use strict";
-        n.d(t, { D: () => l, h: () => u });
-        var r = n(63696),
-          i = n(31084),
-          s = n(21937),
-          o = n(11131),
-          a = n(51115);
-        const c = r.createContext(null);
-        function l(e) {
+        n.d(t, { D: () => u, h: () => d });
+        var r = n(62540),
+          i = n(63696),
+          s = n(31084),
+          o = n(21937),
+          a = n(11131),
+          c = n(51115);
+        const l = i.createContext(null);
+        function u(e) {
           const {
               refContextMenuManager: t,
               bRegisterMenuManager: n = !0,
-              children: l,
+              children: u,
             } = e,
-            u = (0, o.R7)(),
-            m = u?.ownerWindow || window,
-            d = r.useRef(void 0);
+            d = (0, a.R7)(),
+            m = d?.ownerWindow || window,
+            h = i.useRef(void 0);
           return (
-            d.current || (d.current = new s.z()),
-            r.useLayoutEffect(() => {
+            h.current || (h.current = new o.z()),
+            i.useLayoutEffect(() => {
               if (n)
                 return (
-                  i.XX.SetMenuManager(m, d.current),
-                  () => i.XX.SetMenuManager(m, void 0)
+                  s.XX.SetMenuManager(m, h.current),
+                  () => s.XX.SetMenuManager(m, void 0)
                 );
             }, [m, n]),
-            r.useLayoutEffect(
-              () => ((0, a.cZ)(t, d.current), () => (0, a.cZ)(t, void 0)),
+            i.useLayoutEffect(
+              () => ((0, c.cZ)(t, h.current), () => (0, c.cZ)(t, void 0)),
               [t],
             ),
-            r.createElement(c.Provider, { value: d.current }, l)
+            (0, r.jsx)(l.Provider, { value: h.current, children: u })
           );
         }
-        function u() {
-          return r.useContext(c);
+        function d() {
+          return i.useContext(l);
         }
       },
       88808: (e, t, n) => {
         "use strict";
-        n.d(t, { k: () => _ });
-        var r = n(44846),
-          i = n(63696),
-          s = n(78325),
-          o = n(11131),
-          a = n(63439),
-          c = n(88750),
-          l = n(24892),
-          u = n.n(l),
+        n.d(t, { k: () => w });
+        var r = n(62540),
+          i = n(44846),
+          s = n(63696),
+          o = n(78325),
+          a = n(11131),
+          c = n(63439),
+          l = n(88750),
+          u = n(24892),
+          d = n.n(u),
           m = n(15123),
-          d = n(42318),
-          h = n(91435),
-          p = n(90765),
-          g = n(54644),
-          f = n(51115);
-        function _(e) {
-          const { managerOverride: t, bSuppressMouseOverlay: n } = e,
-            r = (0, f.CH)(),
-            s = (0, o.k5)(),
-            a = (0, m.h)(),
-            l = t ?? a;
-          (0, f.hL)(l.OnMenusChanged, r);
-          const u = !n && l.BShouldRenderMouseOverlay(),
-            h = l.GetAllMenus();
-          return i.createElement(
-            i.Fragment,
-            null,
-            u && i.createElement(c.il, null),
-            h.map((e) =>
-              i.createElement(
-                d.tH,
-                { key: e.key },
-                i.createElement(w, { instance: e, browserInfo: s }),
-              ),
-            ),
-          );
-        }
+          h = n(42318),
+          p = n(91435),
+          g = n(90765),
+          f = n(54644),
+          _ = n(51115);
         function w(e) {
-          const { instance: t, browserInfo: n, children: r } = e,
-            s = (0, h.yk)(),
-            a = (0, o.R7)().ownerWindow,
-            l = i.useRef(void 0);
-          void 0 === l.current &&
-            (l.current =
-              (t.options.bForcePopup ||
-                a.innerWidth < 400 ||
-                s?.BOnlyPopups()) &&
-              !!a.SteamClient?.Window);
-          const m = i.useMemo(
-              () => ({ instance: t, styles: u(), presentation: 0 }),
-              [t],
-            ),
-            d = r || t.ReactElement;
-          return i.createElement(
-            c.P.Provider,
-            { value: m },
-            l.current
-              ? i.createElement(C, { instance: t, browserInfo: n, children: d })
-              : i.createElement(b, { instance: t, children: d }),
-          );
+          const { managerOverride: t, bSuppressMouseOverlay: n } = e,
+            i = (0, _.CH)(),
+            s = (0, a.k5)(),
+            o = (0, m.h)(),
+            c = t ?? o;
+          (0, _.hL)(c.OnMenusChanged, i);
+          const u = !n && c.BShouldRenderMouseOverlay(),
+            d = c.GetAllMenus();
+          return (0, r.jsxs)(r.Fragment, {
+            children: [
+              u && (0, r.jsx)(l.il, {}),
+              d.map((e) =>
+                (0, r.jsx)(
+                  h.tH,
+                  { children: (0, r.jsx)(b, { instance: e, browserInfo: s }) },
+                  e.key,
+                ),
+              ),
+            ],
+          });
         }
         function b(e) {
-          const { instance: t, children: n } = e;
-          return i.createElement(c.ai, { ...t.position }, n);
+          const { instance: t, browserInfo: n, children: i } = e,
+            o = (0, p.yk)(),
+            c = (0, a.R7)().ownerWindow,
+            u = s.useRef(void 0);
+          void 0 === u.current &&
+            (u.current =
+              (t.options.bForcePopup ||
+                c.innerWidth < 400 ||
+                o?.BOnlyPopups()) &&
+              !!c.SteamClient?.Window);
+          const m = s.useMemo(
+              () => ({ instance: t, styles: d(), presentation: 0 }),
+              [t],
+            ),
+            h = i || t.ReactElement;
+          return (0, r.jsx)(l.P.Provider, {
+            value: m,
+            children: u.current
+              ? (0, r.jsx)(v, { instance: t, browserInfo: n, children: h })
+              : (0, r.jsx)(C, { instance: t, children: h }),
+          });
         }
         function C(e) {
-          const { instance: t, browserInfo: n, children: l } = e,
-            m = i.useRef(null),
-            d = (0, o.R7)().ownerWindow,
-            f = d.SteamClient.Browser.GetBrowserID(),
-            _ = i.useCallback(
+          const { instance: t, children: n } = e;
+          return (0, r.jsx)(l.ai, { ...t.position, children: n });
+        }
+        function v(e) {
+          const { instance: t, browserInfo: n, children: u } = e,
+            m = s.useRef(null),
+            h = (0, a.R7)().ownerWindow,
+            _ = h.SteamClient.Browser.GetBrowserID(),
+            w = s.useCallback(
               (e) => {
                 const { options: n, position: r } = t,
                   i = r.element;
@@ -15025,75 +15031,77 @@ var CLSTAMP = "10520954";
                     height: 1,
                   };
                 else {
-                  let t = g.pd(d, i.getBoundingClientRect());
+                  let t = f.pd(h, i.getBoundingClientRect());
                   (e.dimensions = {
                     left: t.right,
                     top: t.top,
                     width: 2,
                     height: 1,
                   }),
-                    (e.availscreenwidth = d.screen.availWidth),
-                    (e.availscreenheight = d.screen.availHeight);
+                    (e.availscreenwidth = h.screen.availWidth),
+                    (e.availscreenheight = h.screen.availHeight);
                 }
                 return e;
               },
-              [d, t],
+              [h, t],
             );
-          let w = t.options.bStandalone
-            ? (0, o.yq)(o.Dr.StandaloneContextMenu)
-            : (0, o.yq)(o.Dr.PopupContextMenu);
-          t.options.bCreateHidden && (w |= o.Wf.Hidden),
-            t.options.bAlwaysOnTop && (w |= o.Wf.AlwaysOnTop);
-          const { popupObj: b, element: C } = (0, a.OJ)(
+          let b = t.options.bStandalone
+            ? (0, a.yq)(a.Dr.StandaloneContextMenu)
+            : (0, a.yq)(a.Dr.PopupContextMenu);
+          t.options.bCreateHidden && (b |= a.Wf.Hidden),
+            t.options.bAlwaysOnTop && (b |= a.Wf.AlwaysOnTop);
+          const { popupObj: C, element: v } = (0, c.OJ)(
             "contextmenu_" + t.key,
             {
               title: t.options.title || "Menu",
-              html_class: (0, p.A)(
-                u().ContextMenuPopup,
+              html_class: (0, g.A)(
+                d().ContextMenuPopup,
                 "client_chat_frame",
-                t.options.bStandalone && u().Standalone,
+                t.options.bStandalone && d().Standalone,
               ),
-              popup_class: u().PopupTarget,
-              body_class: (0, p.A)(
-                u().ContextMenuPopupBody,
+              popup_class: d().PopupTarget,
+              body_class: (0, g.A)(
+                d().ContextMenuPopupBody,
                 "ContextMenuPopupBody",
               ),
               replace_existing_popup: !1,
               target_browser: n,
-              window_opener_id: f,
+              window_opener_id: _,
               bHideOnClose: !0,
-              eCreationFlags: w,
+              eCreationFlags: b,
             },
-            { updateParamsBeforeShow: _ },
+            { updateParamsBeforeShow: w },
           );
           return (
-            (0, i.useEffect)(() => {
-              if (b)
+            (0, s.useEffect)(() => {
+              if (C)
                 if (t.visible) {
                   m.current && m.current.PositionMenu(),
                     m.current && m.current.PositionPopupWindow();
                   let e = t.options.bNoFocusWhenShown
-                    ? r.iE.k_EWindowBringToFrontWithoutForcingOS
-                    : r.iE.k_EWindowBringToFrontAndForceOS;
+                    ? i.iE.k_EWindowBringToFrontWithoutForcingOS
+                    : i.iE.k_EWindowBringToFrontAndForceOS;
                   t.TakeFocus(e);
                 } else
                   t.options.bRetainOnHide &&
                     window.setTimeout(() => {
-                      b.window?.SteamClient.Window.HideWindow();
+                      C.window?.SteamClient.Window.HideWindow();
                     }, 30);
-            }, [b, t, t.visible]),
-            (0, h.uH)(b.window),
-            i.useEffect(() => {
-              t.SetPopup(b);
-            }, [t, b]),
-            C
-              ? s.createPortal(
-                  i.createElement(
-                    c.ai,
-                    { ref: m, ...t.position, parentWin: d, popup: b },
-                    l,
-                  ),
-                  C,
+            }, [C, t, t.visible]),
+            (0, p.uH)(C.window),
+            s.useEffect(() => {
+              t.SetPopup(C);
+            }, [t, C]),
+            v
+              ? o.createPortal(
+                  (0, r.jsx)(l.ai, {
+                    ref: m,
+                    ...t.position,
+                    parentWin: h,
+                    popup: C,
+                    children: u,
+                  }),
+                  v,
                 )
               : null
           );
@@ -15101,54 +15109,58 @@ var CLSTAMP = "10520954";
       },
       32263: (e, t, n) => {
         "use strict";
-        n.d(t, { D: () => a, n: () => c });
-        var r = n(63696),
-          i = n(90765),
-          s = n(24892),
-          o = n.n(s);
-        const a = r.forwardRef((e, t) => {
-          const { className: n, contextMenuStyles: s, disabled: a, ...c } = e;
-          return r.createElement("div", {
+        n.d(t, { D: () => c, n: () => l });
+        var r = n(62540),
+          i = n(63696),
+          s = n(90765),
+          o = n(24892),
+          a = n.n(o);
+        const c = i.forwardRef((e, t) => {
+          const { className: n, contextMenuStyles: i, disabled: o, ...c } = e;
+          return (0, r.jsx)("div", {
             ...c,
             ref: t,
-            className: (0, i.A)(
+            className: (0, s.A)(
               n,
-              (s || o()).contextMenuItem,
+              (i || a()).contextMenuItem,
               "contextMenuItem",
-              a && "disabled",
+              o && "disabled",
             ),
           });
         });
-        function c(e) {
-          const { bChecked: t, children: n, className: s, ...o } = e;
-          return r.createElement(
-            a,
-            { ...o, className: (0, i.A)(s, t && "menuChecked") },
-            r.createElement("div", { className: "contextMenuCheckMark" }),
-            n,
-          );
+        function l(e) {
+          const { bChecked: t, children: n, className: i, ...o } = e;
+          return (0, r.jsxs)(c, {
+            ...o,
+            className: (0, s.A)(i, t && "menuChecked"),
+            children: [
+              (0, r.jsx)("div", { className: "contextMenuCheckMark" }),
+              n,
+            ],
+          });
         }
-        a.displayName = "MenuItem";
+        c.displayName = "MenuItem";
       },
       42318: (e, t, n) => {
         "use strict";
-        n.d(t, { Nr: () => o, tH: () => c, wC: () => a });
+        n.d(t, { Nr: () => a, tH: () => l, wC: () => c });
         var r = n(34629),
-          i = n(63696),
-          s = n(51115);
-        function o(e) {
+          i = n(62540),
+          s = n(63696),
+          o = n(51115);
+        function a(e) {
           return function (t) {
-            return i.createElement(c, null, i.createElement(e, { ...t }));
+            return (0, i.jsx)(l, { children: (0, i.jsx)(e, { ...t }) });
           };
         }
-        function a(e) {
-          return i.createElement(
-            i.Fragment,
-            null,
-            i.Children.map(e.children, (e) => i.createElement(c, null, e)),
-          );
+        function c(e) {
+          return (0, i.jsx)(i.Fragment, {
+            children: s.Children.map(e.children, (e) =>
+              (0, i.jsx)(l, { children: e }),
+            ),
+          });
         }
-        class c extends i.Component {
+        class l extends s.Component {
           state = {};
           constructor(e) {
             super(e), (this.state.lastErrorKey = e.errorKey);
@@ -15158,7 +15170,7 @@ var CLSTAMP = "10520954";
             this.sm_ErrorReportingStore = e;
           }
           componentDidCatch(e, t) {
-            const n = c.sm_ErrorReportingStore;
+            const n = l.sm_ErrorReportingStore;
             n
               ? n
                   .ReportError(e, {
@@ -15187,151 +15199,134 @@ var CLSTAMP = "10520954";
                 ? "function" == typeof t
                   ? t(r.error)
                   : t
-                : c.sm_ErrorReportingStore &&
-                    c.sm_ErrorReportingStore.reporting_enabled
-                  ? i.createElement(u, {
+                : l.sm_ErrorReportingStore &&
+                    l.sm_ErrorReportingStore.reporting_enabled
+                  ? (0, i.jsx)(d, {
                       error: r,
                       identifierHash: s,
-                      store: c.sm_ErrorReportingStore,
+                      store: l.sm_ErrorReportingStore,
                       onRefresh: this.Reset,
                     })
-                  : i.createElement(l, { error: r, onDismiss: this.Reset })
+                  : (0, i.jsx)(u, { error: r, onDismiss: this.Reset })
               : e || null;
           }
         }
-        (0, r.Cg)([s.oI], c.prototype, "Reset", null);
-        const l = ({ error: e, onDismiss: t }) => {
+        (0, r.Cg)([o.oI], l.prototype, "Reset", null);
+        const u = ({ error: e, onDismiss: t }) => {
             let n = e.error ? e.error.stack : "Stack missing",
               r = e.info ? e.info.componentStack : "",
               s = (e.error && e.error.message) || "unknown error";
-            return i.createElement(
-              m,
-              null,
-              i.createElement(d, null, 'Error: "', s, '"'),
-              "   ",
-              i.createElement(
-                "span",
-                {
+            return (0, i.jsxs)(m, {
+              children: [
+                (0, i.jsxs)(h, { children: ['Error: "', s, '"'] }),
+                "   ",
+                (0, i.jsx)("span", {
                   style: { textDecoration: "underline", cursor: "pointer" },
                   onClick: t,
-                },
-                "(x) Dismiss",
-              ),
-              i.createElement("br", null),
-              i.createElement(h, null, n),
-              i.createElement(
-                h,
-                null,
-                "The error occurred while rendering:",
-                r,
-              ),
-            );
+                  children: "(x) Dismiss",
+                }),
+                (0, i.jsx)("br", {}),
+                (0, i.jsx)(p, { children: n }),
+                (0, i.jsxs)(p, {
+                  children: ["The error occurred while rendering:", r],
+                }),
+              ],
+            });
           },
-          u = (e) => {
+          d = (e) => {
             const { error: t, onRefresh: n, identifierHash: r, store: s } = e,
               o = (t.error && t.error.message) || "unknown error",
               a = `${s.product}_${s.version}_${r}`;
-            return i.createElement(
-              m,
-              null,
-              i.createElement(
-                d,
-                null,
-                "Something went wrong while displaying this content. ",
-                i.createElement(
-                  "span",
-                  {
-                    style: { textDecoration: "underline", cursor: "pointer" },
-                    onClick: n,
-                  },
-                  "Refresh",
-                ),
-              ),
-              i.createElement(h, null, "Error Reference: ", a),
-              i.createElement(h, null, o),
-            );
+            return (0, i.jsxs)(m, {
+              children: [
+                (0, i.jsxs)(h, {
+                  children: [
+                    "Something went wrong while displaying this content. ",
+                    (0, i.jsx)("span", {
+                      style: { textDecoration: "underline", cursor: "pointer" },
+                      onClick: n,
+                      children: "Refresh",
+                    }),
+                  ],
+                }),
+                (0, i.jsxs)(p, { children: ["Error Reference: ", a] }),
+                (0, i.jsx)(p, { children: o }),
+              ],
+            });
           },
           m = ({ children: e }) =>
-            i.createElement(
-              "div",
-              {
-                style: {
-                  overflow: "auto",
-                  marginLeft: "15px",
-                  color: "white",
-                  fontSize: "16px",
-                  userSelect: "auto",
-                  backgroundColor: "black",
-                },
-                className: "ErrorBoundary",
+            (0, i.jsx)("div", {
+              style: {
+                overflow: "auto",
+                marginLeft: "15px",
+                color: "white",
+                fontSize: "16px",
+                userSelect: "auto",
+                backgroundColor: "black",
               },
-              e,
-            ),
-          d = ({ children: e }) =>
-            i.createElement(
-              "h1",
-              {
-                style: {
-                  fontSize: "20px",
-                  display: "inline-block",
-                  marginTop: "15px",
-                  userSelect: "auto",
-                },
-              },
-              e,
-            ),
+              className: "ErrorBoundary",
+              children: e,
+            }),
           h = ({ children: e }) =>
-            i.createElement(
-              "pre",
-              {
-                style: { marginTop: "15px", opacity: 0.7, userSelect: "auto" },
+            (0, i.jsx)("h1", {
+              style: {
+                fontSize: "20px",
+                display: "inline-block",
+                marginTop: "15px",
+                userSelect: "auto",
               },
-              e,
-            );
+              children: e,
+            }),
+          p = ({ children: e }) =>
+            (0, i.jsx)("pre", {
+              style: { marginTop: "15px", opacity: 0.7, userSelect: "auto" },
+              children: e,
+            });
       },
       36437: (e, t, n) => {
         "use strict";
-        n.d(t, { L: () => E, Y: () => y });
-        var r = n(63696);
-        function i(e) {
-          const [t, n] = (0, r.useState)(!0);
+        n.d(t, { L: () => B, Y: () => y });
+        var r = n(62540),
+          i = n(63696);
+        function s(e) {
+          const [t, n] = (0, i.useState)(!0);
           return (
-            (0, r.useEffect)(() => {
-              (0, r.startTransition)(() => {
+            (0, i.useEffect)(() => {
+              (0, i.startTransition)(() => {
                 n(!0);
               });
             }, []),
             t ? e.children : (e.fallback ?? null)
           );
         }
-        var s = n(11131),
-          o = n(42318),
-          a = n(78325),
-          c = n(90606),
-          l = n(63439),
-          u = n(88750),
+        var o = n(11131),
+          a = n(42318),
+          c = n(78325),
+          l = n(90606),
+          u = n(63439),
+          d = n(88750),
           m = n(91435),
-          d = n(27773),
-          h = n(72476);
-        function p(e) {
+          h = n(27773),
+          p = n(72476);
+        function g(e) {
           const { Modal: t } = e,
-            { name: n, modalProps: i, options: o } = t,
-            p = (0, s.R7)().ownerWindow,
-            { popup: g, element: f } = (0, l.OJ)(
+            { name: n, modalProps: s, options: a } = t,
+            g = (0, o.R7)().ownerWindow,
+            { popup: f, element: _ } = (0, u.OJ)(
               n,
               {
-                title: i.strTitle,
+                title: s.strTitle,
                 html_class:
                   "client_chat_frame fullheight ModalDialogPopup LegacyPopup " +
-                  (i.className || ""),
+                  (s.className || ""),
                 body_class: "fullheight ModalDialogBody",
                 popup_class: "fullheight popup_chat_frame",
                 owner_window: void 0,
                 replace_existing_popup: !0,
-                target_browser: i.browserContext,
-                availscreenwidth: p.screen.availWidth,
-                availscreenheight: p.screen.availHeight,
-                bModal: i.bHideMainWindowForPopouts,
+                target_browser: s.browserContext,
+                availscreenwidth: g.screen.availWidth,
+                availscreenheight: g.screen.availHeight,
+                bModal: s.bHideMainWindowForPopouts,
               },
               {
                 updateParamsBeforeShow: (e) =>
@@ -15341,7 +15336,7 @@ var CLSTAMP = "10520954";
                       o,
                       a = t.popupWidth || 500,
                       c = t.popupHeight || 400;
-                    if (h.TS.IN_CLIENT && r?.SteamClient?.Browser?.GetBrowserID)
+                    if (p.TS.IN_CLIENT && r?.SteamClient?.Browser?.GetBrowserID)
                       o = r.SteamClient.Browser.GetBrowserID();
                     else {
                       let e = r.screen;
@@ -15358,90 +15353,82 @@ var CLSTAMP = "10520954";
                       center_on_window: n.bCenterOnWindow ? r : void 0,
                       window_opener_id: o,
                     };
-                  })(e, i, o, p),
-                onClose: () => i.fnOnClose && i.fnOnClose(),
+                  })(e, s, a, g),
+                onClose: () => s.fnOnClose && s.fnOnClose(),
               },
             ),
-            _ = r.useCallback(() => {
-              i.bHideMainWindowForPopouts &&
-                g?.SteamClient.Window.BringToFront();
-            }, [i.bHideMainWindowForPopouts, g]);
-          (0, c.l6)(p, "click", _);
-          const w = o?.bHideActions,
-            b =
-              "number" == typeof o?.nDragAreaHeight
-                ? { height: o.nDragAreaHeight }
+            w = i.useCallback(() => {
+              s.bHideMainWindowForPopouts &&
+                f?.SteamClient.Window.BringToFront();
+            }, [s.bHideMainWindowForPopouts, f]);
+          (0, l.l6)(g, "click", w);
+          const b = a?.bHideActions,
+            C =
+              "number" == typeof a?.nDragAreaHeight
+                ? { height: a.nDragAreaHeight }
                 : void 0;
-          return f
-            ? a.createPortal(
-                r.createElement(
-                  s.kc,
-                  { ownerWindow: g },
-                  r.createElement(
-                    "div",
-                    { className: "PopupFullWindow", onContextMenu: u.aE },
-                    r.createElement(d.c, {
-                      hideMin: !0,
-                      hideMax: !0,
-                      popup: g,
-                      hideActions: w,
-                      style: b,
-                    }),
-                    r.createElement(
-                      m.EO,
-                      {
-                        browserInfo: i.browserContext,
-                        bCenterPopupsOnWindow: o.bCenterOnWindow,
-                      },
-                      t.element,
-                    ),
-                  ),
-                ),
-                f,
+          return _
+            ? c.createPortal(
+                (0, r.jsx)(o.kc, {
+                  ownerWindow: f,
+                  children: (0, r.jsxs)("div", {
+                    className: "PopupFullWindow",
+                    onContextMenu: d.aE,
+                    children: [
+                      (0, r.jsx)(h.c, {
+                        hideMin: !0,
+                        hideMax: !0,
+                        popup: f,
+                        hideActions: b,
+                        style: C,
+                      }),
+                      (0, r.jsx)(m.EO, {
+                        browserInfo: s.browserContext,
+                        bCenterPopupsOnWindow: a.bCenterOnWindow,
+                        children: t.element,
+                      }),
+                    ],
+                  }),
+                }),
+                _,
               )
             : null;
         }
-        function g(e) {
+        function f(e) {
           const { ModalManager: t } = e,
-            [n, i] = r.useState(void 0),
-            [s, o] = r.useState(!0),
-            a = r.useRef(0),
-            c = r.useCallback(() => {
-              r.startTransition(() => {
-                o(!0);
+            [n, s] = i.useState(void 0),
+            [o, a] = i.useState(!0),
+            c = i.useCallback(() => {
+              i.startTransition(() => {
+                a(!0);
               });
             }, []);
-          r.useEffect(
+          i.useEffect(
             () => t.RegisterMeasureModalCallback(c).Unregister,
             [t, c],
           ),
-            r.useLayoutEffect(() => {
+            i.useLayoutEffect(() => {
               n ||
-                r.startTransition(() => {
-                  i(t.TakeMeasureModalRequest()), o(!1);
+                i.startTransition(() => {
+                  s(t.TakeMeasureModalRequest()), a(!1);
                 });
-            }, [t, n, s]);
-          const l = r.useCallback((e) => {
-            a.current++,
-              r.startTransition(() => {
-                i((t) => (t === e ? void 0 : t));
-              });
+            }, [t, n, o]);
+          const l = i.useCallback((e) => {
+            i.startTransition(() => {
+              s((t) => (t === e ? void 0 : t));
+            });
           }, []);
           return n
-            ? r.createElement(f, {
-                key: a.current,
-                onMeasureComplete: l,
-                request: n,
-              })
+            ? (0, r.jsx)(_, { onMeasureComplete: l, request: n }, n.id)
             : null;
         }
-        function f(e) {
-          const [t, n] = r.useState(),
-            i = (0, s.R7)().ownerWindow;
+        function _(e) {
+          const [t, n] = i.useState(),
+            s = (0, o.R7)().ownerWindow;
           return (
-            r.useLayoutEffect(() => {
-              const e = i.document.body,
-                t = i.document.createElement("div");
+            i.useLayoutEffect(() => {
+              const e = s.document.body,
+                t = s.document.createElement("div");
               return (
                 (t.style.position = "absolute"),
                 (t.style.visibility = "hidden"),
@@ -15451,247 +15438,237 @@ var CLSTAMP = "10520954";
                   e.removeChild(t);
                 }
               );
-            }, [i]),
+            }, [s]),
             t
-              ? a.createPortal(r.createElement(_, { ...e, elContainer: t }), t)
+              ? c.createPortal((0, r.jsx)(w, { ...e, elContainer: t }), t)
               : null
           );
         }
-        function _(e) {
-          const { elContainer: t, onMeasureComplete: n, request: i } = e;
+        function w(e) {
+          const { elContainer: t, onMeasureComplete: n, request: s } = e;
           return (
-            r.useEffect(() => {
+            i.useEffect(() => {
               let e = !1;
               const r = (t) => {
-                e || (i.fnResults(t), n(i), (e = !0));
+                e || (s.fnResults(t), n(s), (e = !0));
               };
               return (
                 (async function (e, t) {
                   t && (await t);
                   let n = document;
-                  h.TS.IN_STEAMUI && n.fonts && (await n.fonts.ready);
+                  p.TS.IN_STEAMUI && n.fonts && (await n.fonts.ready);
                   const r = e.getBoundingClientRect(),
                     i = Math.ceil(r.height),
                     s = Math.ceil(r.width);
                   return { height: i, width: s };
-                })(t, i.promiseContentReady).then(r),
+                })(t, s.promiseContentReady).then(r),
                 () => r(void 0)
               );
-            }, [t, n, i]),
-            r.createElement(o.tH, null, i.rctToMeasure)
+            }, [t, n, s]),
+            (0, r.jsx)(a.tH, { children: s.rctToMeasure })
           );
         }
-        var w = n(90765),
-          b = n(51115),
-          C = n(21440),
-          v = n(3673),
-          M = n(55993),
-          S = n(98995);
+        var b = n(90765),
+          C = n(51115),
+          v = n(21440),
+          M = n(3673),
+          S = n(55993),
+          x = n(98995);
         function y(e) {
-          r.useEffect(() => {
+          i.useEffect(() => {
             if (e)
               return (
-                document.body.classList.add(M.BodyNoScrollDialog),
-                () => document.body.classList.remove(M.BodyNoScrollDialog)
+                document.body.classList.add(S.BodyNoScrollDialog),
+                () => document.body.classList.remove(S.BodyNoScrollDialog)
               );
           }, [e]);
         }
-        function E(e) {
+        function B(e) {
           let {
             ModalManager: t,
             bRegisterModalManager: n = !0,
-            DialogWrapper: o,
-            rctActiveContextMenus: a,
-            bUseDialogElement: c = !0,
-            style: l,
-            ...u
+            DialogWrapper: a,
+            rctActiveContextMenus: c,
+            bUseDialogElement: l = !0,
+            style: u,
+            ...d
           } = e;
           const m = t.modals,
-            d = m && !!m.length,
-            h = t.active_modal;
-          y(d),
+            h = m && !!m.length,
+            p = t.active_modal;
+          y(h),
             (function (e) {
-              const t = (0, s.R7)().ownerWindow,
-                n = (0, b.CH)(),
-                i = r.useCallback(() => {
+              const t = (0, o.R7)().ownerWindow,
+                n = (0, C.CH)(),
+                r = i.useCallback(() => {
                   t?.SteamClient?.Window && t.SteamClient.Window.BringToFront();
                 }, [t]);
-              r.useEffect(() => e.RegisterOverlay(n), [e, n]),
-                r.useEffect(
-                  () => e.RegisterOnModalShownCallback(i).Unregister,
-                  [e, i],
+              i.useEffect(() => e.RegisterOverlay(n), [e, n]),
+                i.useEffect(
+                  () => e.RegisterOnModalShownCallback(r).Unregister,
+                  [e, r],
                 );
             })(t);
-          const p = (function (e, t) {
-            return (0, b.QS)(
+          const g = (function (e, t) {
+            return (0, C.QS)(
               (n) => {
                 if (!n || !t) return;
                 const r = n.ownerDocument.defaultView;
-                return v.BR.RegisterModalManager(e, r);
+                return M.BR.RegisterModalManager(e, r);
               },
               [e],
             );
           })(t, n);
-          let f = null,
-            _ = !c;
+          let _ = null,
+            w = !l;
           return (
             m && m.length
-              ? (f = m.map((e) => {
-                  const t = e == h,
+              ? (_ = m.map((e) => {
+                  const t = e == p,
                     n = {
                       key: e.key,
                       active: t,
-                      rctActiveContextMenus: t && c ? a : void 0,
+                      rctActiveContextMenus: t && l ? c : void 0,
                     };
-                  return e instanceof C._F
-                    ? r.createElement(L, {
+                  return e instanceof v._F
+                    ? (0, i.createElement)(k, {
                         ...n,
                         key: n.key,
                         modal: e,
-                        Component: o ?? x,
+                        Component: a ?? I,
                       })
-                    : e instanceof C.$9
-                      ? r.createElement(B, {
+                    : e instanceof v.$9
+                      ? (0, i.createElement)(L, {
                           ...n,
                           key: n.key,
                           modal: e,
-                          bUseDialogElement: c,
+                          bUseDialogElement: l,
                         })
                       : void 0;
                 }))
-              : ((_ = !0), (l = { ...l, display: "none" })),
-            r.createElement(
-              r.Fragment,
-              null,
-              r.createElement(
-                i,
-                null,
-                r.createElement(
-                  "div",
-                  {
-                    ...u,
-                    style: l,
-                    ref: p,
-                    className: (0, w.A)(u.className, "FullModalOverlay"),
-                  },
-                  r.createElement("div", {
-                    className: "ModalOverlayContent ModalOverlayBackground",
-                  }),
-                  f,
-                ),
-                _ && a,
-              ),
-              r.createElement(g, { ModalManager: t }),
-              r.createElement(I, { ModalManager: t }),
-            )
+              : ((w = !0), (u = { ...u, display: "none" })),
+            (0, r.jsxs)(r.Fragment, {
+              children: [
+                (0, r.jsxs)(s, {
+                  children: [
+                    (0, r.jsxs)("div", {
+                      ...d,
+                      style: u,
+                      ref: g,
+                      className: (0, b.A)(d.className, "FullModalOverlay"),
+                      children: [
+                        (0, r.jsx)("div", {
+                          className:
+                            "ModalOverlayContent ModalOverlayBackground",
+                        }),
+                        _,
+                      ],
+                    }),
+                    w && c,
+                  ],
+                }),
+                (0, r.jsx)(f, { ModalManager: t }),
+                (0, r.jsx)(T, { ModalManager: t }),
+              ],
+            })
           );
         }
-        function B(e) {
+        function L(e) {
           const {
             modal: t,
             rctActiveContextMenus: n,
-            active: i,
-            bUseDialogElement: s,
+            active: s,
+            bUseDialogElement: o,
           } = e;
-          r.useEffect(() => {
-            if (i)
+          i.useEffect(() => {
+            if (s)
               return (
-                t.SetActive(i),
+                t.SetActive(s),
                 () => {
                   t.SetActive(!1);
                 }
               );
-          }, [t, i]);
-          const a = r.createElement(
-            o.tH,
-            null,
-            r.createElement("div", {
-              className: (0, w.A)(
-                "ModalOverlayContent",
-                i ? "active" : "inactive",
-              ),
-              ref: t.RefModalElement,
-            }),
-            n,
-          );
-          return s ? r.createElement(k, { active: i }, a) : a;
+          }, [t, s]);
+          const c = (0, r.jsxs)(a.tH, {
+            children: [
+              (0, r.jsx)("div", {
+                className: (0, b.A)(
+                  "ModalOverlayContent",
+                  s ? "active" : "inactive",
+                ),
+                ref: t.RefModalElement,
+              }),
+              n,
+            ],
+          });
+          return o ? (0, r.jsx)(R, { active: s, children: c }) : c;
         }
-        function L(e) {
+        function k(e) {
           const {
               modal: t,
               active: n,
               rctActiveContextMenus: i,
               Component: s,
             } = e,
-            a = (0, b.CH)();
+            o = (0, C.CH)();
           return (
-            (0, b.hL)(t.ModalUpdatedCallback, a),
-            r.createElement(
-              o.tH,
-              null,
-              r.createElement(
-                s,
-                {
-                  className: (0, w.A)(
-                    "ModalOverlayContent",
-                    n ? "active" : "inactive",
-                  ),
-                  active: n,
-                  modalKey: t.key,
-                },
-                i,
-                t.element,
-              ),
-            )
-          );
-        }
-        function x(e) {
-          const { className: t, active: n, children: i } = e;
-          return r.createElement(
-            k,
-            { active: n },
-            r.createElement(
-              S.C$,
-              null,
-              r.createElement("div", { className: t, tabIndex: -1 }, i),
-            ),
-          );
-        }
-        function k(e) {
-          const { active: t, children: n } = e,
-            i = r.useRef(null),
-            [s, o] = r.useState(!1);
-          return (
-            r.useLayoutEffect(() => {
-              t && !s ? o(!0) : !t && s && i.current?.close();
-            }, [t, s]),
-            r.useLayoutEffect(() => {
-              s && i.current.showModal();
-            }, [s]),
-            r.createElement(
-              "dialog",
-              {
-                ref: i,
-                className: M.ModalDialog,
-                onClose: () => o(!1),
-                onCancel: (e) => e.preventDefault(),
-              },
-              n,
-            )
+            (0, C.hL)(t.ModalUpdatedCallback, o),
+            (0, r.jsx)(a.tH, {
+              children: (0, r.jsxs)(s, {
+                className: (0, b.A)(
+                  "ModalOverlayContent",
+                  n ? "active" : "inactive",
+                ),
+                active: n,
+                modalKey: t.key,
+                children: [i, t.element],
+              }),
+            })
           );
         }
         function I(e) {
-          const { ModalManager: t } = e,
-            n = (0, b.CH)();
+          const { className: t, active: n, children: i } = e;
+          return (0, r.jsx)(R, {
+            active: n,
+            children: (0, r.jsx)(x.C$, {
+              children: (0, r.jsx)("div", {
+                className: t,
+                tabIndex: -1,
+                children: i,
+              }),
+            }),
+          });
+        }
+        function R(e) {
+          const { active: t, children: n } = e,
+            s = i.useRef(null),
+            [o, a] = i.useState(!1);
           return (
-            (0, b.hL)(t.LegacyPopupModalCountChangedCallbacks, n),
-            r.createElement(
-              r.Fragment,
-              null,
-              t.legacy_popup_modals.map((e) =>
-                r.createElement(p, { key: e.key, Modal: e }),
+            i.useLayoutEffect(() => {
+              t && !o ? a(!0) : !t && o && s.current?.close();
+            }, [t, o]),
+            i.useLayoutEffect(() => {
+              o && s.current.showModal();
+            }, [o]),
+            (0, r.jsx)("dialog", {
+              ref: s,
+              className: S.ModalDialog,
+              onClose: () => a(!1),
+              onCancel: (e) => e.preventDefault(),
+              children: n,
+            })
+          );
+        }
+        function T(e) {
+          const { ModalManager: t } = e,
+            n = (0, C.CH)();
+          return (
+            (0, C.hL)(t.LegacyPopupModalCountChangedCallbacks, n),
+            (0, r.jsx)(r.Fragment, {
+              children: t.legacy_popup_modals.map((e) =>
+                (0, r.jsx)(g, { Modal: e }, e.key),
               ),
-            )
+            })
           );
         }
       },
@@ -15762,82 +15739,81 @@ var CLSTAMP = "10520954";
       },
       91435: (e, t, n) => {
         "use strict";
-        n.d(t, { EO: () => d, oJ: () => p, uH: () => g, yk: () => h });
-        var r = n(28864),
-          i = n(63696),
-          s = n(78325),
-          o = n(15123),
-          a = n(88808),
-          c = n(42318),
-          l = n(36437),
-          u = n(3673);
-        const m = i.createContext({}),
-          d = i.memo(function (e) {
+        n.d(t, { EO: () => h, oJ: () => g, uH: () => f, yk: () => p });
+        var r = n(62540),
+          i = n(28864),
+          s = n(63696),
+          o = n(78325),
+          a = n(15123),
+          c = n(88808),
+          l = n(42318),
+          u = n(36437),
+          d = n(3673);
+        const m = s.createContext({}),
+          h = s.memo(function (e) {
             const {
                 children: t,
                 bRenderOverlayAtRoot: n,
-                refModalManager: d,
-                DialogWrapper: h,
-                bUseDialogElement: p = !0,
-                ContextMenuComponent: g = a.k,
-                refContextMenuManager: f,
-                browserInfo: _,
-                bUsePopups: w,
-                bOnlyPopups: b,
-                bCenterPopupsOnWindow: C,
-                bRegisterManagersWithWindow: v = !0,
-                ...M
+                refModalManager: h,
+                DialogWrapper: p,
+                bUseDialogElement: g = !0,
+                ContextMenuComponent: f = c.k,
+                refContextMenuManager: _,
+                browserInfo: w,
+                bUsePopups: b,
+                bOnlyPopups: C,
+                bCenterPopupsOnWindow: v,
+                bRegisterManagersWithWindow: M = !0,
+                ...S
               } = e,
-              S = i.useRef(void 0);
-            S.current || (S.current = new u.SZ());
-            let y = i.createElement(l.L, {
-              ...M,
-              DialogWrapper: h,
-              ModalManager: S.current,
-              bUseDialogElement: p,
-              bRegisterModalManager: v,
-              rctActiveContextMenus: i.createElement(g, null),
+              x = s.useRef(void 0);
+            x.current || (x.current = new d.SZ());
+            let y = (0, r.jsx)(u.L, {
+              ...S,
+              DialogWrapper: p,
+              ModalManager: x.current,
+              bUseDialogElement: g,
+              bRegisterModalManager: M,
+              rctActiveContextMenus: (0, r.jsx)(f, {}),
             });
             e.bRenderOverlayAtRoot &&
               "undefined" != typeof document &&
               "body" in document &&
-              (y = s.createPortal(y, document.body)),
-              (0, r.D5)(d, S.current),
-              void 0 !== w && S.current?.SetUsePopups(w),
-              void 0 !== C && S.current?.SetCenterPopupsOnWindow(C),
-              void 0 !== b && S.current?.SetOnlyPopups(b),
-              S.current.SetBrowserInfo(_);
-            const E = i.useMemo(
-              () => ({ ModalManager: S.current, DialogWrapper: h }),
-              [h],
+              (y = o.createPortal(y, document.body)),
+              (0, i.D5)(h, x.current),
+              void 0 !== b && x.current?.SetUsePopups(b),
+              void 0 !== v && x.current?.SetCenterPopupsOnWindow(v),
+              void 0 !== C && x.current?.SetOnlyPopups(C),
+              x.current.SetBrowserInfo(w);
+            const B = s.useMemo(
+              () => ({ ModalManager: x.current, DialogWrapper: p }),
+              [p],
             );
-            return i.createElement(
-              m.Provider,
-              { value: E },
-              i.createElement(
-                o.D,
-                { refContextMenuManager: f, bRegisterMenuManager: v },
-                i.createElement(c.tH, null, y),
-                e.children,
-              ),
-            );
+            return (0, r.jsx)(m.Provider, {
+              value: B,
+              children: (0, r.jsxs)(a.D, {
+                refContextMenuManager: _,
+                bRegisterMenuManager: M,
+                children: [(0, r.jsx)(l.tH, { children: y }), e.children],
+              }),
+            });
           });
-        function h() {
-          return i.useContext(m).ModalManager;
-        }
         function p() {
-          return i.useContext(m).DialogWrapper;
+          return s.useContext(m).ModalManager;
         }
-        function g(e) {
-          const t = h();
-          i.useEffect(() => {
-            if (e) return u.BR.RegisterModalManager(t, e);
+        function g() {
+          return s.useContext(m).DialogWrapper;
+        }
+        function f(e) {
+          const t = p();
+          s.useEffect(() => {
+            if (e) return d.BR.RegisterModalManager(t, e);
           }, [e, t]);
         }
       },
       3673: (e, t, n) => {
         "use strict";
-        n.d(t, { BR: () => u, Ju: () => d, SZ: () => l, tx: () => m });
+        n.d(t, { BR: () => u, Ju: () => m, SZ: () => l, tx: () => d });
         var r = n(63696),
           i = n(85688),
           s = n(79769),
@@ -15854,6 +15830,7 @@ var CLSTAMP = "10520954";
           m_OnModalHiddenCallbacks = new s.lu();
           m_cMountedOverlays = 0;
           m_rgMeasureModalRequests = [];
+          m_nMeasureRequestID = 0;
           m_OnMeasureModal = new s.lu();
           m_rgLegacyPopupModals = [];
           m_OnLegacyPopupModalCountChanged = new s.lu();
@@ -15992,6 +15969,7 @@ var CLSTAMP = "10520954";
           }
           RequestModalMeasure(e, t, n) {
             this.m_rgMeasureModalRequests.push({
+              id: this.m_nMeasureRequestID++,
               rctToMeasure: e,
               fnResults: t,
               promiseContentReady: n,
@@ -16070,11 +16048,11 @@ var CLSTAMP = "10520954";
             this.m_mapModalManager.delete(e);
           }
         })();
-        function m(e) {
+        function d(e) {
           return u.GetModalManager(e);
         }
-        function d(e = window) {
-          const t = (0, c.yk)() || m(e),
+        function m(e = window) {
+          const t = (0, c.yk)() || d(e),
             [n, i] = r.useState(t.modals.length > 0),
             s = r.useCallback(
               (e) => {
@@ -16088,501 +16066,464 @@ var CLSTAMP = "10520954";
       50376: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $$j: () => at,
+          $$j: () => ct,
           $4X: () => Pt,
-          $Qn: () => st,
-          $rC: () => w,
-          $vK: () => _n,
-          Aj0: () => Re,
+          $Qn: () => ot,
+          $rC: () => b,
+          $vK: () => wn,
+          Aj0: () => je,
           B1N: () => Nt,
-          BQz: () => fn,
+          BQz: () => _n,
           BeN: () => P,
-          Bir: () => on,
-          Bki: () => hn,
-          CE1: () => xt,
+          Bir: () => an,
+          Bki: () => pn,
+          CE1: () => It,
           CeX: () => me,
-          Cip: () => ft,
+          Cip: () => _t,
           Cv4: () => m,
-          DK4: () => C,
+          DK4: () => v,
           DQe: () => mn,
           Dp6: () => He,
           EQ9: () => y,
-          ETd: () => Jt,
-          Em3: () => Ie,
-          F2T: () => _e,
-          FWt: () => I,
-          GB9: () => b,
-          GSe: () => ke,
+          ETd: () => en,
+          Em3: () => Te,
+          F2T: () => we,
+          FWt: () => T,
+          GB9: () => C,
+          GSe: () => Re,
           Gkr: () => Wt,
           Gq2: () => A,
-          GrD: () => Ct,
-          Gv$: () => K,
-          IFd: () => sn,
+          GrD: () => vt,
+          Gv$: () => $,
+          IFd: () => on,
           IGf: () => An,
-          IOc: () => ne,
-          IrQ: () => he,
-          Jlk: () => ae,
+          IOc: () => re,
+          IrQ: () => pe,
+          Jlk: () => ce,
           Jru: () => On,
           K7s: () => We,
-          KKS: () => Ke,
-          KOs: () => B,
-          L0X: () => ge,
+          KKS: () => $e,
+          KOs: () => L,
+          L0X: () => fe,
           LeN: () => z,
-          MFH: () => lt,
-          MUh: () => qe,
-          MbF: () => Rn,
-          MvQ: () => Se,
-          MxO: () => $,
-          N8C: () => Qe,
+          MFH: () => ut,
+          MUh: () => Ze,
+          MbF: () => jn,
+          MvQ: () => xe,
+          MxO: () => Y,
+          N8C: () => Je,
           NCC: () => Ht,
           NtH: () => zt,
-          OSJ: () => En,
+          OSJ: () => Bn,
           OWN: () => D,
-          OeC: () => te,
-          OiG: () => tt,
+          OeC: () => ne,
+          OiG: () => nt,
           P7C: () => Fe,
-          P7r: () => Xe,
-          PN3: () => T,
-          PRY: () => Ee,
-          PZP: () => R,
-          Q38: () => h,
-          QHH: () => oe,
+          P7r: () => Qe,
+          PN3: () => E,
+          PRY: () => Be,
+          PZP: () => j,
+          Q38: () => p,
+          QHH: () => ae,
           QQ4: () => Ue,
-          QcV: () => dt,
+          QcV: () => ht,
           Qte: () => Oe,
           RO3: () => V,
           ROZ: () => Ae,
-          Rkk: () => p,
-          SYj: () => jt,
+          Rkk: () => g,
+          SYj: () => qt,
           T4m: () => At,
-          UTF: () => kt,
-          U_V: () => ct,
-          V5W: () => xe,
-          VR: () => je,
-          VSd: () => Mn,
-          Vgk: () => gn,
-          Vt2: () => wn,
-          WOg: () => bt,
-          WX$: () => Qt,
-          Wy0: () => ht,
-          X: () => x,
-          X4B: () => ce,
-          XH_: () => nn,
-          XTb: () => E,
-          Xjb: () => ve,
-          Xz0: () => pt,
+          UTF: () => Rt,
+          U_V: () => lt,
+          V5W: () => Ie,
+          VR: () => qe,
+          VSd: () => Sn,
+          Vgk: () => fn,
+          Vt2: () => bn,
+          WOg: () => Ct,
+          WX$: () => Jt,
+          Wy0: () => pt,
+          X: () => I,
+          X4B: () => le,
+          XH_: () => rn,
+          XTb: () => B,
+          Xjb: () => Me,
+          Xz0: () => gt,
           YJl: () => U,
-          YNO: () => L,
-          Yb3: () => rn,
+          YNO: () => k,
+          Yb3: () => sn,
           Yoo: () => Fn,
-          YuU: () => $e,
+          YuU: () => Ye,
           ZPc: () => Ot,
-          ZWw: () => Me,
-          ZjT: () => Zt,
-          ZnA: () => pn,
-          _2Q: () => Ze,
-          _V3: () => de,
-          _VW: () => vt,
-          _h6: () => St,
+          ZWw: () => Se,
+          ZjT: () => Kt,
+          ZnA: () => gn,
+          _2Q: () => Ke,
+          _V3: () => he,
+          _VW: () => Mt,
+          _h6: () => xt,
           _r0: () => yt,
-          a3E: () => it,
+          a3E: () => st,
           aPd: () => F,
-          aVR: () => Yt,
-          aeP: () => be,
-          agV: () => xn,
+          aVR: () => Xt,
+          aeP: () => Ce,
+          agV: () => In,
           apU: () => Pe,
           az8: () => Dn,
-          b8_: () => cn,
-          bKN: () => kn,
+          b8_: () => ln,
+          bKN: () => Rn,
           bPr: () => Ve,
-          bcZ: () => Kt,
-          bfp: () => Et,
-          c_I: () => ue,
-          ccb: () => Cn,
-          d1w: () => an,
-          dI9: () => ln,
-          dJT: () => rt,
-          eJJ: () => gt,
-          eNX: () => nt,
-          eSy: () => v,
-          eTF: () => le,
-          emH: () => Tn,
-          f2R: () => Tt,
-          f5X: () => et,
-          f5w: () => q,
-          fSs: () => Q,
-          faJ: () => _t,
-          ffu: () => ot,
+          bcZ: () => $t,
+          bfp: () => Bt,
+          c_I: () => de,
+          ccb: () => vn,
+          d1w: () => cn,
+          dI9: () => un,
+          dJT: () => it,
+          eJJ: () => ft,
+          eNX: () => rt,
+          eSy: () => M,
+          eTF: () => ue,
+          emH: () => En,
+          f2R: () => Et,
+          f5X: () => tt,
+          f5w: () => Z,
+          fSs: () => J,
+          faJ: () => wt,
+          ffu: () => at,
           fpT: () => W,
-          g$j: () => bn,
-          gxp: () => se,
+          g$j: () => Cn,
+          gxp: () => oe,
           gzV: () => Ut,
           h20: () => ye,
-          h28: () => wt,
-          hz4: () => Ce,
-          i3G: () => pe,
+          h28: () => bt,
+          hz4: () => ve,
+          i3G: () => ge,
           i6V: () => ze,
-          iSZ: () => d,
-          ilR: () => Mt,
-          jGG: () => re,
-          jIP: () => Xt,
-          jZW: () => Rt,
-          jZl: () => Je,
-          jdP: () => Bn,
-          jlt: () => tn,
+          iSZ: () => h,
+          ilR: () => St,
+          jGG: () => ie,
+          jIP: () => Qt,
+          jZW: () => jt,
+          jZl: () => et,
+          jdP: () => Ln,
+          jlt: () => nn,
           kPc: () => mt,
           koA: () => Nn,
-          l8x: () => we,
-          lMJ: () => Be,
-          lRD: () => qt,
-          m59: () => _,
+          l8x: () => be,
+          lMJ: () => Le,
+          lRD: () => Zt,
+          m59: () => w,
           mrd: () => O,
-          nGC: () => ee,
-          nm_: () => dn,
-          o5Q: () => $t,
-          ofN: () => Sn,
+          nGC: () => te,
+          nm_: () => hn,
+          o5Q: () => Yt,
+          ofN: () => xn,
           oy: () => yn,
-          pDR: () => X,
-          qcc: () => Ye,
+          pDR: () => Q,
+          qcc: () => Xe,
           qnF: () => Dt,
           qzq: () => Ne,
-          rNt: () => vn,
+          rNt: () => Mn,
           rfv: () => Ge,
-          sDU: () => In,
-          sED: () => k,
-          sdo: () => Z,
+          sDU: () => Tn,
+          sED: () => R,
+          sdo: () => K,
           t$Q: () => H,
-          tID: () => Te,
-          tIO: () => Ln,
+          tID: () => Ee,
+          tIO: () => kn,
           tcj: () => N,
-          tmR: () => S,
-          twC: () => Bt,
-          u9R: () => J,
-          uMb: () => fe,
-          vRz: () => ie,
-          vdG: () => un,
-          vjL: () => ut,
+          tmR: () => x,
+          twC: () => Lt,
+          u9R: () => ee,
+          uMb: () => _e,
+          vRz: () => se,
+          vdG: () => dn,
+          vjL: () => dt,
           vrn: () => Ft,
-          wB_: () => g,
-          wVV: () => It,
-          wbc: () => f,
-          xTY: () => en,
-          xv8: () => Y,
+          wB_: () => f,
+          wVV: () => Tt,
+          wbc: () => _,
+          xTY: () => tn,
+          xv8: () => X,
           yFA: () => G,
-          yUp: () => j,
+          yUp: () => q,
           y_e: () => De,
-          ypD: () => Lt,
-          zD7: () => M,
-          zHo: () => Le,
+          ypD: () => kt,
+          zD7: () => S,
+          zHo: () => ke,
         });
-        var r = n(63696),
-          i = n(90765),
-          s = n(49412),
-          o = n(64664),
-          a = n.n(o),
-          c = n(72476),
-          l = n(47742),
-          u = n(67784);
+        var r = n(62540),
+          i = n(63696),
+          s = n(90765),
+          o = n(49412),
+          a = n(64664),
+          c = n.n(a),
+          l = n(72476),
+          u = n(47742),
+          d = n(67784);
         function m(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M16.48 35.05V29.35L16.51 29.34C13.4035 28.995 10.5086 27.5974 8.30636 25.3795C6.10411 23.1615 4.72712 20.2568 4.40423 17.1479C4.08134 14.039 4.83199 10.9133 6.53143 8.29011C8.23087 5.66691 10.7768 3.70423 13.7461 2.72822C16.7153 1.7522 19.9292 1.82163 22.8536 2.92496C25.7779 4.02829 28.2367 6.09909 29.8213 8.79322C31.4058 11.4874 32.0208 14.6426 31.564 17.7346C31.1071 20.8266 29.606 23.6692 27.31 25.79L16.48 35.05ZM10.36 15.65L15.77 21.05L25.39 11.43L23 9.04999L15.77 16.28L12.75 13.26L10.36 15.65Z",
               fill: "currentColor",
             }),
-          );
-        }
-        function d(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M12.1092 5.08403C10.1429 5.9916 8.17647 6.59664 6.05882 7.05042C5.45378 7.20168 5 7.65546 5 8.2605C5 10.7601 5.1405 13.0255 5.42149 15.0936L11.9012 17.7474C12.5174 17.31 13.2569 17.0601 14.058 17.0601H14.2737L17.5089 12.28V12.2175C17.5089 9.34319 19.8198 7 22.6545 7C25.4891 7 27.8 9.34319 27.8 12.2175C27.8 15.0918 25.4891 17.435 22.6545 17.435H22.5312L17.9095 20.7779V20.9654C17.9095 23.1211 16.184 24.8707 14.058 24.8707C12.1785 24.8707 10.6071 23.496 10.2682 21.7152L6.54029 20.2858C6.87867 21.3813 7.2728 22.4118 7.72269 23.3866C9.68908 27.4706 13.0168 30.7983 17.7059 33.6723C18.0084 33.8235 18.1597 33.8235 18.4622 33.8235C18.7647 33.8235 19.0672 33.8235 19.2185 33.6723C23.9076 30.6471 27.2353 27.4706 29.2017 23.3866C31.1681 19.4538 32.0756 14.6134 32.0756 8.2605C32.0756 7.65546 31.6427 7.13983 31.0168 7.05042C28.8992 6.7479 26.7815 5.9916 24.9664 5.08403C23 4.02521 21.0336 2.81513 19.3697 1.30252C19.2185 1.15126 18.8025 1 18.5 1C18.1975 1 18 1 17.7059 1.30252C16.042 2.81513 14.0756 4.02521 12.1092 5.08403Z",
-            }),
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M11.439 22.2463C11.7163 22.8712 12.2401 23.4023 12.918 23.6835C14.397 24.3083 16.0916 23.5898 16.7078 22.0901C17.0159 21.3716 17.0159 20.5592 16.7078 19.8719C16.3997 19.1533 15.8451 18.591 15.1364 18.2785C14.4278 17.9661 13.6883 17.9974 13.0104 18.2473L14.7359 18.9659C15.8143 19.4033 16.3381 20.6842 15.8759 21.7777C15.4445 22.8712 14.1813 23.4023 13.1029 22.9337L11.439 22.2463Z",
-            }),
-            r.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M19.2344 12.2175C19.2344 14.1233 20.7749 15.6854 22.6545 15.6854C24.534 15.6854 26.0745 14.1233 26.0745 12.2175C26.0745 10.3117 24.534 8.74958 22.6545 8.74958C20.7749 8.74958 19.2344 10.3117 19.2344 12.2175ZM25.2428 12.2174C25.2428 13.6668 24.0841 14.8418 22.6547 14.8418C21.2253 14.8418 20.0665 13.6668 20.0665 12.2174C20.0665 10.768 21.2253 9.59307 22.6547 9.59307C24.0841 9.59307 25.2428 10.768 25.2428 12.2174Z",
-            }),
-          );
+          });
         }
         function h(e) {
-          const [t, n] = (0, l.l)();
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 15 23",
-              fill: "none",
-              ...e,
-            },
-            r.createElement(
-              "g",
-              { clipPath: n },
-              r.createElement("path", {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                d: "M12.1092 5.08403C10.1429 5.9916 8.17647 6.59664 6.05882 7.05042C5.45378 7.20168 5 7.65546 5 8.2605C5 10.7601 5.1405 13.0255 5.42149 15.0936L11.9012 17.7474C12.5174 17.31 13.2569 17.0601 14.058 17.0601H14.2737L17.5089 12.28V12.2175C17.5089 9.34319 19.8198 7 22.6545 7C25.4891 7 27.8 9.34319 27.8 12.2175C27.8 15.0918 25.4891 17.435 22.6545 17.435H22.5312L17.9095 20.7779V20.9654C17.9095 23.1211 16.184 24.8707 14.058 24.8707C12.1785 24.8707 10.6071 23.496 10.2682 21.7152L6.54029 20.2858C6.87867 21.3813 7.2728 22.4118 7.72269 23.3866C9.68908 27.4706 13.0168 30.7983 17.7059 33.6723C18.0084 33.8235 18.1597 33.8235 18.4622 33.8235C18.7647 33.8235 19.0672 33.8235 19.2185 33.6723C23.9076 30.6471 27.2353 27.4706 29.2017 23.3866C31.1681 19.4538 32.0756 14.6134 32.0756 8.2605C32.0756 7.65546 31.6427 7.13983 31.0168 7.05042C28.8992 6.7479 26.7815 5.9916 24.9664 5.08403C23 4.02521 21.0336 2.81513 19.3697 1.30252C19.2185 1.15126 18.8025 1 18.5 1C18.1975 1 18 1 17.7059 1.30252C16.042 2.81513 14.0756 4.02521 12.1092 5.08403Z",
+              }),
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                d: "M11.439 22.2463C11.7163 22.8712 12.2401 23.4023 12.918 23.6835C14.397 24.3083 16.0916 23.5898 16.7078 22.0901C17.0159 21.3716 17.0159 20.5592 16.7078 19.8719C16.3997 19.1533 15.8451 18.591 15.1364 18.2785C14.4278 17.9661 13.6883 17.9974 13.0104 18.2473L14.7359 18.9659C15.8143 19.4033 16.3381 20.6842 15.8759 21.7777C15.4445 22.8712 14.1813 23.4023 13.1029 22.9337L11.439 22.2463Z",
+              }),
+              (0, r.jsx)("path", {
                 fill: "currentColor",
                 fillRule: "evenodd",
                 clipRule: "evenodd",
-                d: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
+                d: "M19.2344 12.2175C19.2344 14.1233 20.7749 15.6854 22.6545 15.6854C24.534 15.6854 26.0745 14.1233 26.0745 12.2175C26.0745 10.3117 24.534 8.74958 22.6545 8.74958C20.7749 8.74958 19.2344 10.3117 19.2344 12.2175ZM25.2428 12.2174C25.2428 13.6668 24.0841 14.8418 22.6547 14.8418C21.2253 14.8418 20.0665 13.6668 20.0665 12.2174C20.0665 10.768 21.2253 9.59307 22.6547 9.59307C24.0841 9.59307 25.2428 10.768 25.2428 12.2174Z",
               }),
-            ),
-            r.createElement(
-              "defs",
-              null,
-              r.createElement(
-                "clipPath",
-                { id: t },
-                r.createElement("rect", {
-                  fill: "currentColor",
-                  width: "15",
-                  height: "23",
-                }),
-              ),
-            ),
-          );
+            ],
+          });
         }
         function p(e) {
-          const { className: t } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(t, "SVGIcon_Button SVGIcon_Hyperlink"),
-              "data-name": "Layer 1",
-              viewBox: "0 0 100 100",
-              x: "0px",
-              y: "0px",
-            },
-            r.createElement(
-              "g",
-              { "data-name": "Group" },
-              r.createElement("path", {
-                "data-name": "Path",
-                d: "M50.86,20.23l-9,9,4.24,4.24,9-9c6.35-6.35,16.09-6.93,21.73-1.3s5,15.38-1.3,21.73l-9,9,4.24,4.24,9-9c8.69-8.69,9.27-22.24,1.3-30.21S59.55,11.55,50.86,20.23Z",
+          const [t, n] = (0, u.l)();
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 15 23",
+            fill: "none",
+            ...e,
+            children: [
+              (0, r.jsx)("g", {
+                clipPath: n,
+                children: (0, r.jsx)("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M6.9955 11.5L15 3.4955L11.5045 -1.52793e-07L0.00450275 11.5L11.5045 23L15 19.5045L6.9955 11.5Z",
+                }),
               }),
-              r.createElement("path", {
-                "data-name": "Path",
-                d: "M44.89,75.53a17.22,17.22,0,0,1-11.28,5.13A13.23,13.23,0,0,1,19.34,66.39a17.22,17.22,0,0,1,5.13-11.28l9-9-4.24-4.24-9,9a23.21,23.21,0,0,0-6.88,15.22c0,.37,0,.74,0,1.11A19.19,19.19,0,0,0,33.91,86.66a23.21,23.21,0,0,0,15.22-6.88l9-9-4.24-4.24Z",
+              (0, r.jsx)("defs", {
+                children: (0, r.jsx)("clipPath", {
+                  id: t,
+                  children: (0, r.jsx)("rect", {
+                    fill: "currentColor",
+                    width: "15",
+                    height: "23",
+                  }),
+                }),
               }),
-              r.createElement("rect", {
-                "data-name": "Path",
-                className: "Link1",
-                x: "28.75",
-                y: "47",
-                width: "42.48",
-                height: "6",
-                transform: "translate(-20.71 50) rotate(-45)",
-              }),
-            ),
-          );
+            ],
+          });
         }
         function g(e) {
-          const t = (0, i.A)("SVGIcon_Button", "SVGIcon_Settings", e.className);
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: t,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "-305.5 396.5 256 256",
-              enableBackground: "new -305.5 396.5 256 256",
-            },
-            r.createElement("path", {
+          const { className: t } = e;
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(t, "SVGIcon_Button SVGIcon_Hyperlink"),
+            "data-name": "Layer 1",
+            viewBox: "0 0 100 100",
+            x: "0px",
+            y: "0px",
+            children: (0, r.jsxs)("g", {
+              "data-name": "Group",
+              children: [
+                (0, r.jsx)("path", {
+                  "data-name": "Path",
+                  d: "M50.86,20.23l-9,9,4.24,4.24,9-9c6.35-6.35,16.09-6.93,21.73-1.3s5,15.38-1.3,21.73l-9,9,4.24,4.24,9-9c8.69-8.69,9.27-22.24,1.3-30.21S59.55,11.55,50.86,20.23Z",
+                }),
+                (0, r.jsx)("path", {
+                  "data-name": "Path",
+                  d: "M44.89,75.53a17.22,17.22,0,0,1-11.28,5.13A13.23,13.23,0,0,1,19.34,66.39a17.22,17.22,0,0,1,5.13-11.28l9-9-4.24-4.24-9,9a23.21,23.21,0,0,0-6.88,15.22c0,.37,0,.74,0,1.11A19.19,19.19,0,0,0,33.91,86.66a23.21,23.21,0,0,0,15.22-6.88l9-9-4.24-4.24Z",
+                }),
+                (0, r.jsx)("rect", {
+                  "data-name": "Path",
+                  className: "Link1",
+                  x: "28.75",
+                  y: "47",
+                  width: "42.48",
+                  height: "6",
+                  transform: "translate(-20.71 50) rotate(-45)",
+                }),
+              ],
+            }),
+          });
+        }
+        function f(e) {
+          const t = (0, s.A)("SVGIcon_Button", "SVGIcon_Settings", e.className);
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: t,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "-305.5 396.5 256 256",
+            enableBackground: "new -305.5 396.5 256 256",
+            children: (0, r.jsx)("path", {
               d: "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function f(e) {
-          return r.createElement(
-            "svg",
-            {
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ...e,
-            },
-            r.createElement("path", {
+        function _(e) {
+          return (0, r.jsx)("svg", {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M22 6H2V27H12L18 34L24 27H34V21H27C24.2386 21 22 18.7614 22 16V6ZM8.11107 18.5787C8.5222 18.8534 9.00555 19 9.5 19C9.8283 19 10.1534 18.9353 10.4567 18.8097C10.76 18.6841 11.0356 18.4999 11.2678 18.2678C11.4999 18.0356 11.6841 17.76 11.8097 17.4567C11.9353 17.1534 12 16.8283 12 16.5C12 16.0055 11.8534 15.5222 11.5787 15.1111C11.304 14.7 10.9135 14.3795 10.4567 14.1903C9.99989 14.0011 9.49723 13.9516 9.01227 14.048C8.52732 14.1445 8.08186 14.3826 7.73223 14.7322C7.3826 15.0819 7.1445 15.5273 7.04804 16.0123C6.95157 16.4972 7.00108 16.9999 7.1903 17.4567C7.37952 17.9135 7.69995 18.304 8.11107 18.5787ZM16.6111 18.5787C17.0222 18.8534 17.5055 19 18 19C18.3283 19 18.6534 18.9353 18.9567 18.8097C19.26 18.6841 19.5356 18.4999 19.7678 18.2678C19.9999 18.0356 20.1841 17.76 20.3097 17.4567C20.4353 17.1534 20.5 16.8283 20.5 16.5C20.5 16.0055 20.3534 15.5222 20.0787 15.1111C19.804 14.7 19.4135 14.3795 18.9567 14.1903C18.4999 14.0011 17.9972 13.9516 17.5123 14.048C17.0273 14.1445 16.5819 14.3826 16.2322 14.7322C15.8826 15.0819 15.6445 15.5273 15.548 16.0123C15.4516 16.4972 15.5011 16.9999 15.6903 17.4567C15.8795 17.9135 16.2 18.304 16.6111 18.5787Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function _() {
-          return (0, c.Qn)()
-            ? r.createElement(
-                "svg",
-                {
-                  width: "36",
-                  height: "36",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                },
-                r.createElement("path", {
+        function w() {
+          return (0, l.Qn)()
+            ? (0, r.jsx)("svg", {
+                width: "36",
+                height: "36",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                children: (0, r.jsx)("path", {
                   fillRule: "evenodd",
                   clipRule: "evenodd",
                   d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.75356 22.4214 7.27057 24.6546 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM27 14.572V17.428L24.63 17.86C24.4791 18.3905 24.2677 18.9018 24 19.384L25.374 21.34L23.352 23.362L21.384 22C20.9023 22.2718 20.391 22.4872 19.86 22.642L19.428 25H16.572L16.14 22.63C15.6096 22.4791 15.0982 22.2677 14.616 22L12.648 23.374L10.626 21.352L12 19.384C11.7282 18.9023 11.5128 18.391 11.358 17.86L9 17.428V14.572L11.358 14.14C11.5128 13.609 11.7282 13.0977 12 12.616L10.626 10.648L12.648 8.626L14.616 10C15.0977 9.72818 15.609 9.51276 16.14 9.358L16.572 7H19.428L19.86 9.358C20.391 9.51276 20.9023 9.72818 21.384 10L23.352 8.626L25.362 10.648L24 12.616C24.2718 13.0977 24.4872 13.609 24.642 14.14L27 14.572ZM16.3333 18.4944C16.8266 18.8241 17.4067 19 18 19C18.394 19 18.7841 18.9224 19.1481 18.7716C19.512 18.6209 19.8427 18.3999 20.1213 18.1213C20.3999 17.8427 20.6209 17.512 20.7716 17.1481C20.9224 16.7841 21 16.394 21 16C21 15.4067 20.8241 14.8266 20.4944 14.3333C20.1648 13.8399 19.6962 13.4554 19.1481 13.2284C18.5999 13.0013 17.9967 12.9419 17.4147 13.0576C16.8328 13.1734 16.2982 13.4591 15.8787 13.8787C15.4591 14.2982 15.1734 14.8328 15.0576 15.4147C14.9419 15.9967 15.0013 16.5999 15.2284 17.1481C15.4554 17.6962 15.8399 18.1648 16.3333 18.4944Z",
                   fill: "currentColor",
                 }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: (0, i.A)(
-                    "SVGIcon_Button SVGIcon_ChatSettings",
-                    a().FlipInRTL,
-                  ),
-                  version: "1.1",
-                  x: "0px",
-                  y: "0px",
-                  viewBox: "0 0 600 600",
-                },
-                r.createElement(
-                  "g",
-                  null,
-                  r.createElement("path", {
-                    d: "M256,0C126.6,0,21.3,104.7,21.3,233.7c0,65.9,26.5,125.4,74.7,168.3v99.3c0,3.8,2,7.4,5.3,9.2c1.7,1,3.5,1.5,5.3,1.5   c1.8,0,3.7-0.5,5.4-1.5l85.8-50.3c18.9,4.8,38.4,7.3,58.1,7.3c129.4,0,234.7-104.9,234.7-233.7C490.7,104.7,385.4,0,256,0z    M405.3,254.1L370,260c-3,13.5-8.3,26-15.5,37.3l20.8,29.2L347.8,354l-29.2-20.8c-11.3,7.2-23.8,12.5-37.3,15.5l-5.9,35.3h-39   l-5.9-35.3c-13.5-3-26-8.3-37.3-15.5L164.2,354l-27.5-27.5l20.8-29.2C150.3,286,145,273.5,142,260l-35.3-5.9v-39l35.3-5.9   c3-13.5,8.3-26,15.5-37.3l-20.8-29.2l27.5-27.5l29.2,20.8c11.3-7.2,23.8-12.5,37.3-15.5l5.9-35.3h39l5.9,35.3   c13.5,3,26,8.3,37.3,15.5l29.2-20.8l27.5,27.5L354.5,172c7.2,11.3,12.5,23.8,15.5,37.3l35.3,5.9V254.1z",
-                  }),
-                  r.createElement("circle", {
-                    cx: "256",
-                    cy: "234.6",
-                    r: "45.9",
-                  }),
-                ),
-              );
-        }
-        function w() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              className: "SVGIcon_Button SVGIcon_CopyToClipboard",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polyline", {
-              fill: "none",
-              className: "line",
-              strokeWidth: "12",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              points:
-                "178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 ",
-            }),
-            r.createElement("polygon", {
-              fill: "none",
-              className: "line",
-              strokeWidth: "12",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              points: "155,133 83,60.75 11,60.75 11,247.75 155,247.75 ",
-            }),
-            r.createElement("polyline", {
-              fill: "none",
-              className: "line",
-              strokeWidth: "12",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              points: "83,60.75 83,133 155,133 ",
-            }),
-            r.createElement("polyline", {
-              fill: "none",
-              className: "line",
-              strokeWidth: "12",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              points: "175,10.25 175,82.5 247,82.5 ",
-            }),
-          );
-        }
-        function b(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_DownArrowContextMenu",
-              "data-name": "Layer 1",
-              viewBox: "0 0 128 128",
-              x: "0px",
-              y: "0px",
-              ...e,
-            },
-            r.createElement("polygon", {
-              points:
-                "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49",
-            }),
-          );
-        }
-        function C(e) {
-          return r.createElement(
-            "svg",
-            {
-              style: { transform: `rotate(${e.angle}deg)` },
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              width: "24.833px",
-              height: "21.917px",
-              viewBox: "0 0 24.833 21.917",
-            },
-            r.createElement("polygon", {
-              points:
-                "12.5,14.873 3.302,5.723 1.185,7.848 12.5,19.103 23.814,7.848 21.697,5.723 ",
-            }),
-          );
-        }
-        function v(e) {
-          let t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
-          return (
-            e.className && (t += ` ${e.className}`),
-            r.createElement(
-              "svg",
-              {
+              })
+            : (0, r.jsx)("svg", {
                 xmlns: "http://www.w3.org/2000/svg",
-                className: t,
+                className: (0, s.A)(
+                  "SVGIcon_Button SVGIcon_ChatSettings",
+                  c().FlipInRTL,
+                ),
                 version: "1.1",
                 x: "0px",
                 y: "0px",
-                viewBox: "0 0 100 100",
-              },
-              r.createElement(
-                "g",
-                { transform: "translate(0,-952.36218)" },
-                r.createElement("path", {
+                viewBox: "0 0 600 600",
+                children: (0, r.jsxs)("g", {
+                  children: [
+                    (0, r.jsx)("path", {
+                      d: "M256,0C126.6,0,21.3,104.7,21.3,233.7c0,65.9,26.5,125.4,74.7,168.3v99.3c0,3.8,2,7.4,5.3,9.2c1.7,1,3.5,1.5,5.3,1.5   c1.8,0,3.7-0.5,5.4-1.5l85.8-50.3c18.9,4.8,38.4,7.3,58.1,7.3c129.4,0,234.7-104.9,234.7-233.7C490.7,104.7,385.4,0,256,0z    M405.3,254.1L370,260c-3,13.5-8.3,26-15.5,37.3l20.8,29.2L347.8,354l-29.2-20.8c-11.3,7.2-23.8,12.5-37.3,15.5l-5.9,35.3h-39   l-5.9-35.3c-13.5-3-26-8.3-37.3-15.5L164.2,354l-27.5-27.5l20.8-29.2C150.3,286,145,273.5,142,260l-35.3-5.9v-39l35.3-5.9   c3-13.5,8.3-26,15.5-37.3l-20.8-29.2l27.5-27.5l29.2,20.8c11.3-7.2,23.8-12.5,37.3-15.5l5.9-35.3h39l5.9,35.3   c13.5,3,26,8.3,37.3,15.5l29.2-20.8l27.5,27.5L354.5,172c7.2,11.3,12.5,23.8,15.5,37.3l35.3,5.9V254.1z",
+                    }),
+                    (0, r.jsx)("circle", { cx: "256", cy: "234.6", r: "45.9" }),
+                  ],
+                }),
+              });
+        }
+        function b() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            className: "SVGIcon_Button SVGIcon_CopyToClipboard",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                className: "line",
+                strokeWidth: "12",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points:
+                  "178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 ",
+              }),
+              (0, r.jsx)("polygon", {
+                fill: "none",
+                className: "line",
+                strokeWidth: "12",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points: "155,133 83,60.75 11,60.75 11,247.75 155,247.75 ",
+              }),
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                className: "line",
+                strokeWidth: "12",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points: "83,60.75 83,133 155,133 ",
+              }),
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                className: "line",
+                strokeWidth: "12",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points: "175,10.25 175,82.5 247,82.5 ",
+              }),
+            ],
+          });
+        }
+        function C(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_DownArrowContextMenu",
+            "data-name": "Layer 1",
+            viewBox: "0 0 128 128",
+            x: "0px",
+            y: "0px",
+            ...e,
+            children: (0, r.jsx)("polygon", {
+              points:
+                "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49",
+            }),
+          });
+        }
+        function v(e) {
+          return (0, r.jsx)("svg", {
+            style: { transform: `rotate(${e.angle}deg)` },
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            width: "24.833px",
+            height: "21.917px",
+            viewBox: "0 0 24.833 21.917",
+            children: (0, r.jsx)("polygon", {
+              points:
+                "12.5,14.873 3.302,5.723 1.185,7.848 12.5,19.103 23.814,7.848 21.697,5.723 ",
+            }),
+          });
+        }
+        function M(e) {
+          let t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
+          return (
+            e.className && (t += ` ${e.className}`),
+            (0, r.jsx)("svg", {
+              xmlns: "http://www.w3.org/2000/svg",
+              className: t,
+              version: "1.1",
+              x: "0px",
+              y: "0px",
+              viewBox: "0 0 100 100",
+              children: (0, r.jsx)("g", {
+                transform: "translate(0,-952.36218)",
+                children: (0, r.jsx)("path", {
                   className: "ColorSelector",
                   d: "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
                   fill: "currentColor",
@@ -16592,1960 +16533,1833 @@ var CLSTAMP = "10520954";
                   display: "inline",
                   overflow: "visible",
                 }),
-              ),
-            )
+              }),
+            })
           );
         }
-        function M() {
-          return r.createElement(
-            "svg",
-            {
-              className: "SVGIcon_Button SVGIcon_Clock",
-              version: "1.1",
-              x: "0px",
-              y: "0px",
-              width: "20px",
-              height: "20px",
-              viewBox: "0 0 20 20",
-            },
-            r.createElement("path", {
+        function S() {
+          return (0, r.jsx)("svg", {
+            className: "SVGIcon_Button SVGIcon_Clock",
+            version: "1.1",
+            x: "0px",
+            y: "0px",
+            width: "20px",
+            height: "20px",
+            viewBox: "0 0 20 20",
+            children: (0, r.jsx)("path", {
               d: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
             }),
-          );
+          });
         }
-        function S(e) {
+        function x(e) {
           let t = "SVGIcon_Button SVGIcon_Microphone";
           return (
             e.className && (t += ` ${e.className}`),
-            r.createElement(
-              "svg",
-              {
-                version: "1.1",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: t,
-                x: "0px",
-                y: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "-127.5 664.5 256 256",
-              },
-              r.createElement(
-                "g",
-                { className: "MicBase" },
-                r.createElement(
-                  "g",
-                  null,
-                  r.createElement(
-                    "g",
-                    null,
-                    r.createElement("path", {
-                      d: "M-64.7,826.3c-0.5-2.9-0.8-5.8-0.8-8.7v-38.2h11.2v36.5L-64.7,826.3z",
+            (0, r.jsxs)("svg", {
+              version: "1.1",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: t,
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "-127.5 664.5 256 256",
+              children: [
+                (0, r.jsxs)("g", {
+                  className: "MicBase",
+                  children: [
+                    (0, r.jsxs)("g", {
+                      children: [
+                        (0, r.jsxs)("g", {
+                          children: [
+                            (0, r.jsx)("path", {
+                              d: "M-64.7,826.3c-0.5-2.9-0.8-5.8-0.8-8.7v-38.2h11.2v36.5L-64.7,826.3z",
+                            }),
+                            (0, r.jsx)("path", {
+                              d: "M-54.8,779.9v35.8l-9.6,9.6c-0.4-2.6-0.6-5.1-0.6-7.6v-37.7H-54.8 M-53.8,778.9H-66v38.7c0,3.3,0.4,6.5,1,9.7l11.2-11.2 V778.9L-53.8,778.9z",
+                            }),
+                          ],
+                        }),
+                        (0, r.jsxs)("g", {
+                          children: [
+                            (0, r.jsx)("path", {
+                              d: "M56.8,817.6c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1h-35.2 c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6v-38.7H56.8V817.6z",
+                            }),
+                            (0, r.jsx)("path", {
+                              d: "M69,778.9H56.8v38.7c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1 h-35.2c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6V778.9L69,778.9z",
+                            }),
+                          ],
+                        }),
+                      ],
                     }),
-                    r.createElement("path", {
-                      d: "M-54.8,779.9v35.8l-9.6,9.6c-0.4-2.6-0.6-5.1-0.6-7.6v-37.7H-54.8 M-53.8,778.9H-66v38.7c0,3.3,0.4,6.5,1,9.7l11.2-11.2 V778.9L-53.8,778.9z",
+                    (0, r.jsx)("g", {
+                      children: (0, r.jsx)("path", {
+                        d: "M40.6,712.5c0-21.6-17.5-39.1-39.1-39.1c-21.6,0-39.1,17.5-39.1,39.1v87.4l10-10v-72.4h0v-5c0-16.1,13.1-29.1,29.1-29.1 c16.1,0,29.1,13.1,29.1,29.1v5v14.1l10-10V712.5z",
+                      }),
                     }),
-                  ),
-                  r.createElement(
-                    "g",
-                    null,
-                    r.createElement("path", {
-                      d: "M56.8,817.6c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1h-35.2 c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6v-38.7H56.8V817.6z",
+                    (0, r.jsxs)("g", {
+                      children: [
+                        (0, r.jsx)("path", {
+                          d: "M-4.7,835.4c-2.2-0.5-4.4-1.2-6.4-2.2C-9.1,834.2-6.9,834.9-4.7,835.4z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-0.1,836c-0.2,0-0.4,0-0.6,0C-0.6,836-0.4,836-0.1,836z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M30.6,806.9C30.6,806.9,30.6,806.9,30.6,806.9v-16.6",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-11.9,832.8c0.2,0.1,0.5,0.2,0.7,0.3C-11.4,833-11.7,832.9-11.9,832.8L-11.9,832.8z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-1.7,835.9c-0.3,0-0.5-0.1-0.8-0.1C-2.3,835.8-2,835.8-1.7,835.9z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-3.3,835.7c-0.3-0.1-0.6-0.1-1-0.2C-3.9,835.6-3.6,835.6-3.3,835.7z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M30.6,776.1v14.1v16.6c0,0,0,0,0,0s0,0,0,0c0,16.1-13,29.1-29.1,29.1c-0.5,0-1.1,0-1.6,0c-0.2,0-0.4,0-0.6,0 c-0.3,0-0.6,0-1-0.1c-0.3,0-0.5-0.1-0.8-0.1c-0.2,0-0.5-0.1-0.7-0.1c-0.3-0.1-0.6-0.1-1-0.2c-0.2,0-0.3-0.1-0.5-0.1 c-2.2-0.5-4.4-1.2-6.4-2.2c0,0-0.1,0-0.1,0c-0.2-0.1-0.5-0.2-0.7-0.3l0,0c-3-1.6-5.7-3.6-8-6.1l-7.1,7.1 c7.1,7.6,17.3,12.3,28.5,12.3c21.6,0,39.1-17.5,39.1-39.1v-40.8L30.6,776.1z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-0.8,836c-0.3,0-0.6-0.1-1-0.1C-1.4,835.9-1.1,835.9-0.8,836z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M1.5,836.1c-0.5,0-1.1,0-1.6,0C0.4,836,0.9,836.1,1.5,836.1z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-2.6,835.8c-0.2,0-0.5-0.1-0.7-0.1C-3,835.7-2.8,835.7-2.6,835.8z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M1.5,836.1c16.1,0,29.1-13,29.1-29.1c0,0,0,0,0,0C30.6,823,17.6,836.1,1.5,836.1z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-4.2,835.5c-0.2,0-0.3-0.1-0.5-0.1C-4.5,835.4-4.4,835.5-4.2,835.5z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M-11.1,833.2C-11.1,833.2-11.2,833.2-11.1,833.2C-11.2,833.2-11.1,833.2-11.1,833.2z",
+                        }),
+                      ],
                     }),
-                    r.createElement("path", {
-                      d: "M69,778.9H56.8v38.7c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1 h-35.2c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6V778.9L69,778.9z",
-                    }),
-                  ),
-                ),
-                r.createElement(
-                  "g",
-                  null,
-                  r.createElement("path", {
-                    d: "M40.6,712.5c0-21.6-17.5-39.1-39.1-39.1c-21.6,0-39.1,17.5-39.1,39.1v87.4l10-10v-72.4h0v-5c0-16.1,13.1-29.1,29.1-29.1 c16.1,0,29.1,13.1,29.1,29.1v5v14.1l10-10V712.5z",
-                  }),
-                ),
-                r.createElement(
-                  "g",
-                  null,
-                  r.createElement("path", {
-                    d: "M-4.7,835.4c-2.2-0.5-4.4-1.2-6.4-2.2C-9.1,834.2-6.9,834.9-4.7,835.4z",
-                  }),
-                  r.createElement("path", {
-                    d: "M-0.1,836c-0.2,0-0.4,0-0.6,0C-0.6,836-0.4,836-0.1,836z",
-                  }),
-                  r.createElement("path", {
-                    d: "M30.6,806.9C30.6,806.9,30.6,806.9,30.6,806.9v-16.6",
-                  }),
-                  r.createElement("path", {
-                    d: "M-11.9,832.8c0.2,0.1,0.5,0.2,0.7,0.3C-11.4,833-11.7,832.9-11.9,832.8L-11.9,832.8z",
-                  }),
-                  r.createElement("path", {
-                    d: "M-1.7,835.9c-0.3,0-0.5-0.1-0.8-0.1C-2.3,835.8-2,835.8-1.7,835.9z",
-                  }),
-                  r.createElement("path", {
-                    d: "M-3.3,835.7c-0.3-0.1-0.6-0.1-1-0.2C-3.9,835.6-3.6,835.6-3.3,835.7z",
-                  }),
-                  r.createElement("path", {
-                    d: "M30.6,776.1v14.1v16.6c0,0,0,0,0,0s0,0,0,0c0,16.1-13,29.1-29.1,29.1c-0.5,0-1.1,0-1.6,0c-0.2,0-0.4,0-0.6,0 c-0.3,0-0.6,0-1-0.1c-0.3,0-0.5-0.1-0.8-0.1c-0.2,0-0.5-0.1-0.7-0.1c-0.3-0.1-0.6-0.1-1-0.2c-0.2,0-0.3-0.1-0.5-0.1 c-2.2-0.5-4.4-1.2-6.4-2.2c0,0-0.1,0-0.1,0c-0.2-0.1-0.5-0.2-0.7-0.3l0,0c-3-1.6-5.7-3.6-8-6.1l-7.1,7.1 c7.1,7.6,17.3,12.3,28.5,12.3c21.6,0,39.1-17.5,39.1-39.1v-40.8L30.6,776.1z",
-                  }),
-                  r.createElement("path", {
-                    d: "M-0.8,836c-0.3,0-0.6-0.1-1-0.1C-1.4,835.9-1.1,835.9-0.8,836z",
-                  }),
-                  r.createElement("path", {
-                    d: "M1.5,836.1c-0.5,0-1.1,0-1.6,0C0.4,836,0.9,836.1,1.5,836.1z",
-                  }),
-                  r.createElement("path", {
-                    d: "M-2.6,835.8c-0.2,0-0.5-0.1-0.7-0.1C-3,835.7-2.8,835.7-2.6,835.8z",
-                  }),
-                  r.createElement("path", {
-                    d: "M1.5,836.1c16.1,0,29.1-13,29.1-29.1c0,0,0,0,0,0C30.6,823,17.6,836.1,1.5,836.1z",
-                  }),
-                  r.createElement("path", {
-                    d: "M-4.2,835.5c-0.2,0-0.3-0.1-0.5-0.1C-4.5,835.4-4.4,835.5-4.2,835.5z",
-                  }),
-                  r.createElement("path", {
-                    d: "M-11.1,833.2C-11.1,833.2-11.2,833.2-11.1,833.2C-11.2,833.2-11.1,833.2-11.1,833.2z",
-                  }),
-                ),
-              ),
-              r.createElement(
-                "g",
-                { className: "MicFill" },
-                r.createElement(
-                  "g",
-                  null,
-                  r.createElement("path", {
-                    d: "M-53.8,816.1L-65,827.3c2.2,10.8,7.9,20.5,16.2,28.3l8.6-8.6c-8.5-7.9-13.6-18.2-13.6-29.4V816.1L-53.8,816.1z",
-                  }),
-                ),
-                r.createElement(
-                  "g",
-                  null,
-                  r.createElement("path", {
-                    d: "M1.5,834.6c-15.2,0-27.6-12.4-27.6-27.6v-94.5c0-15.2,12.4-27.6,27.6-27.6c15.2,0,27.6,12.4,27.6,27.6v94.5 C29.1,822.2,16.7,834.6,1.5,834.6z",
-                  }),
-                  r.createElement("path", {
-                    d: "M1.5,696.3c8.9,0,16.1,7.2,16.1,16.1v94.5c0,8.9-7.2,16.1-16.1,16.1c-8.9,0-16.1-7.2-16.1-16.1v-94.5 C-14.6,703.6-7.4,696.3,1.5,696.3 M1.5,673.3c-21.6,0-39.1,17.5-39.1,39.1v94.5c0,21.6,17.5,39.1,39.1,39.1s39.1-17.5,39.1-39.1 v-94.5C40.6,690.8,23.1,673.3,1.5,673.3L1.5,673.3z",
-                  }),
-                ),
-              ),
-              r.createElement(
-                "g",
-                { className: "MicStrike", fill: "none", strokeWidth: "1" },
-                r.createElement("line", {
-                  x1: "-82.5",
-                  y1: "866.5",
-                  x2: "83.5",
-                  y2: "700.4",
+                  ],
                 }),
-              ),
-            )
+                (0, r.jsxs)("g", {
+                  className: "MicFill",
+                  children: [
+                    (0, r.jsx)("g", {
+                      children: (0, r.jsx)("path", {
+                        d: "M-53.8,816.1L-65,827.3c2.2,10.8,7.9,20.5,16.2,28.3l8.6-8.6c-8.5-7.9-13.6-18.2-13.6-29.4V816.1L-53.8,816.1z",
+                      }),
+                    }),
+                    (0, r.jsxs)("g", {
+                      children: [
+                        (0, r.jsx)("path", {
+                          d: "M1.5,834.6c-15.2,0-27.6-12.4-27.6-27.6v-94.5c0-15.2,12.4-27.6,27.6-27.6c15.2,0,27.6,12.4,27.6,27.6v94.5 C29.1,822.2,16.7,834.6,1.5,834.6z",
+                        }),
+                        (0, r.jsx)("path", {
+                          d: "M1.5,696.3c8.9,0,16.1,7.2,16.1,16.1v94.5c0,8.9-7.2,16.1-16.1,16.1c-8.9,0-16.1-7.2-16.1-16.1v-94.5 C-14.6,703.6-7.4,696.3,1.5,696.3 M1.5,673.3c-21.6,0-39.1,17.5-39.1,39.1v94.5c0,21.6,17.5,39.1,39.1,39.1s39.1-17.5,39.1-39.1 v-94.5C40.6,690.8,23.1,673.3,1.5,673.3L1.5,673.3z",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+                (0, r.jsx)("g", {
+                  className: "MicStrike",
+                  fill: "none",
+                  strokeWidth: "1",
+                  children: (0, r.jsx)("line", {
+                    x1: "-82.5",
+                    y1: "866.5",
+                    x2: "83.5",
+                    y2: "700.4",
+                  }),
+                }),
+              ],
+            })
           );
         }
         function y(e) {
           const { off: t, ...n } = e;
           return t
-            ? r.createElement(
-                "svg",
-                {
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ...n,
-                },
-                r.createElement("path", {
-                  d: "M14.6999 25.42L18.0799 22.05L33.0599 7.06005L30.9399 4.94005L23.9999 11.88V8.05005C23.9999 6.45875 23.3678 4.93263 22.2426 3.80741C21.1174 2.68219 19.5912 2.05005 17.9999 2.05005C16.4086 2.05005 14.8825 2.68219 13.7573 3.80741C12.6321 4.93263 11.9999 6.45875 11.9999 8.05005V16.05C12.0021 17.0575 12.2579 18.0482 12.7437 18.9308C13.2296 19.8134 13.9298 20.5594 14.7799 21.1L11.9999 23.84C10.6491 22.6903 9.65647 21.1771 9.13994 19.48L5.34994 20.6201C6.05673 22.9386 7.39296 25.0157 9.20994 26.6201L4.93994 30.9401L7.05994 33.0601L14.6999 25.42Z",
-                  fill: "currentColor",
-                }),
-                r.createElement("path", {
-                  d: "M18.3299 26L14.7399 29.58C15.1551 29.6912 15.5757 29.7813 15.9999 29.85V34.01H19.9999V29.89C22.4663 29.5004 24.7732 28.4243 26.6566 26.785C28.54 25.1456 29.9239 23.0091 30.6499 20.6201L26.8199 19.48C26.2501 21.3098 25.1284 22.9186 23.6084 24.0858C22.0885 25.2531 20.2448 25.9217 18.3299 26Z",
-                  fill: "currentColor",
-                }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ...n,
-                },
-                r.createElement("path", {
-                  d: "M30.65 20.6201L26.82 19.48C26.25 21.376 25.0842 23.0378 23.4955 24.2191C21.9068 25.4004 19.9797 26.0383 18 26.0383C16.0202 26.0383 14.0931 25.4004 12.5044 24.2191C10.9157 23.0378 9.74999 21.376 9.17998 19.48L5.34998 20.6201C6.07599 23.0091 7.45988 25.1456 9.3433 26.785C11.2267 28.4243 13.5336 29.5004 16 29.89V34.05H20V29.89C22.4664 29.5004 24.7732 28.4243 26.6567 26.785C28.5401 25.1456 29.924 23.0091 30.65 20.6201Z",
-                  fill: "currentColor",
-                }),
-                r.createElement("path", {
-                  d: "M18 22.05C19.5913 22.05 21.1174 21.4179 22.2426 20.2927C23.3678 19.1675 24 17.6413 24 16.05V8.05005C24 6.45875 23.3678 4.93263 22.2426 3.80741C21.1174 2.68219 19.5913 2.05005 18 2.05005C16.4087 2.05005 14.8826 2.68219 13.7573 3.80741C12.6321 4.93263 12 6.45875 12 8.05005V16.05C12 17.6413 12.6321 19.1675 13.7573 20.2927C14.8826 21.4179 16.4087 22.05 18 22.05Z",
-                  fill: "currentColor",
-                }),
-              );
+            ? (0, r.jsxs)("svg", {
+                viewBox: "0 0 36 36",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                ...n,
+                children: [
+                  (0, r.jsx)("path", {
+                    d: "M14.6999 25.42L18.0799 22.05L33.0599 7.06005L30.9399 4.94005L23.9999 11.88V8.05005C23.9999 6.45875 23.3678 4.93263 22.2426 3.80741C21.1174 2.68219 19.5912 2.05005 17.9999 2.05005C16.4086 2.05005 14.8825 2.68219 13.7573 3.80741C12.6321 4.93263 11.9999 6.45875 11.9999 8.05005V16.05C12.0021 17.0575 12.2579 18.0482 12.7437 18.9308C13.2296 19.8134 13.9298 20.5594 14.7799 21.1L11.9999 23.84C10.6491 22.6903 9.65647 21.1771 9.13994 19.48L5.34994 20.6201C6.05673 22.9386 7.39296 25.0157 9.20994 26.6201L4.93994 30.9401L7.05994 33.0601L14.6999 25.42Z",
+                    fill: "currentColor",
+                  }),
+                  (0, r.jsx)("path", {
+                    d: "M18.3299 26L14.7399 29.58C15.1551 29.6912 15.5757 29.7813 15.9999 29.85V34.01H19.9999V29.89C22.4663 29.5004 24.7732 28.4243 26.6566 26.785C28.54 25.1456 29.9239 23.0091 30.6499 20.6201L26.8199 19.48C26.2501 21.3098 25.1284 22.9186 23.6084 24.0858C22.0885 25.2531 20.2448 25.9217 18.3299 26Z",
+                    fill: "currentColor",
+                  }),
+                ],
+              })
+            : (0, r.jsxs)("svg", {
+                viewBox: "0 0 36 36",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                ...n,
+                children: [
+                  (0, r.jsx)("path", {
+                    d: "M30.65 20.6201L26.82 19.48C26.25 21.376 25.0842 23.0378 23.4955 24.2191C21.9068 25.4004 19.9797 26.0383 18 26.0383C16.0202 26.0383 14.0931 25.4004 12.5044 24.2191C10.9157 23.0378 9.74999 21.376 9.17998 19.48L5.34998 20.6201C6.07599 23.0091 7.45988 25.1456 9.3433 26.785C11.2267 28.4243 13.5336 29.5004 16 29.89V34.05H20V29.89C22.4664 29.5004 24.7732 28.4243 26.6567 26.785C28.5401 25.1456 29.924 23.0091 30.65 20.6201Z",
+                    fill: "currentColor",
+                  }),
+                  (0, r.jsx)("path", {
+                    d: "M18 22.05C19.5913 22.05 21.1174 21.4179 22.2426 20.2927C23.3678 19.1675 24 17.6413 24 16.05V8.05005C24 6.45875 23.3678 4.93263 22.2426 3.80741C21.1174 2.68219 19.5913 2.05005 18 2.05005C16.4087 2.05005 14.8826 2.68219 13.7573 3.80741C12.6321 4.93263 12 6.45875 12 8.05005V16.05C12 17.6413 12.6321 19.1675 13.7573 20.2927C14.8826 21.4179 16.4087 22.05 18 22.05Z",
+                    fill: "currentColor",
+                  }),
+                ],
+              });
         }
-        function E(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "24",
-              height: "24",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_Submit",
-                a().FlipInRTL,
-              ),
-              ...e,
-            },
-            r.createElement("path", {
+        function B(e) {
+          return (0, r.jsx)("svg", {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button SVGIcon_Submit", c().FlipInRTL),
+            ...e,
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M4.16683 8.982C4.10732 8.3908 3.83847 7.42693 4.15486 7.17995C4.46877 6.93489 4.7797 6.90487 5.90123 7.31306L31.1931 17.2282C32.2693 17.6503 32.2686 18.335 31.1931 18.7564L5.90123 28.6715C4.77972 29.1235 4.46864 29.0497 4.15487 28.8049C3.83836 28.5579 4.0953 27.5939 4.15484 27.0028L4.7797 21.2151C4.89862 20.0374 5.92644 18.9801 7.0706 18.854L15.467 18.4429C24.1686 17.9924 24.1686 17.9924 15.467 17.5419L7.0706 17.1313C5.92423 17.0053 4.89825 15.9476 4.7797 14.7706L4.16683 8.982Z",
               fill: "currentColor",
             }),
-          );
-        }
-        function B() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_ResizeIcon",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
-                fill: "#020202",
-                d: "M115.512,137.263l21.6-21.6c0,0,25.5,25.5,45.8,45.8l35-35v91.6h-91.6l35-35 C141.012,162.763,115.512,137.263,115.512,137.263z",
-              }),
-              r.createElement("path", {
-                fill: "#020202",
-                d: "M108.312,129.763c-20.3-20.3-35.8-35.8-35.8-35.8l21.6-21.601c0,0,15.5,15.5,35.8,35.801L108.312,129.763z",
-              }),
-              r.createElement("path", {
-                fill: "#020202",
-                d: "M54.312,75.763c-20.3-20.3-15.8-15.8-15.8-15.8l21.6-21.601c0,0-4.5-4.5,15.8,15.801L54.312,75.763z",
-              }),
-            ),
-          );
+          });
         }
         function L() {
-          return r.createElement(
-            "svg",
-            {
-              fill: "#FFFFFF",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Popout",
-              viewBox: "0 0 8 8",
-              x: "0px",
-              y: "0px",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_ResizeIcon",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsxs)("g", {
+              children: [
+                (0, r.jsx)("path", {
+                  fill: "#020202",
+                  d: "M115.512,137.263l21.6-21.6c0,0,25.5,25.5,45.8,45.8l35-35v91.6h-91.6l35-35 C141.012,162.763,115.512,137.263,115.512,137.263z",
+                }),
+                (0, r.jsx)("path", {
+                  fill: "#020202",
+                  d: "M108.312,129.763c-20.3-20.3-35.8-35.8-35.8-35.8l21.6-21.601c0,0,15.5,15.5,35.8,35.801L108.312,129.763z",
+                }),
+                (0, r.jsx)("path", {
+                  fill: "#020202",
+                  d: "M54.312,75.763c-20.3-20.3-15.8-15.8-15.8-15.8l21.6-21.601c0,0-4.5-4.5,15.8,15.801L54.312,75.763z",
+                }),
+              ],
+            }),
+          });
+        }
+        function k() {
+          return (0, r.jsx)("svg", {
+            fill: "#FFFFFF",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Popout",
+            viewBox: "0 0 8 8",
+            x: "0px",
+            y: "0px",
+            children: (0, r.jsx)("path", {
               d: "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z",
             }),
-          );
+          });
         }
-        function x(e) {
-          return r.createElement(
-            "svg",
-            {
-              fill: "#FFFFFF",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_X",
-              version: "1.1",
-              x: "0px",
-              y: "0px",
-              viewBox: "-165 95 100 100",
-              ...e,
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("polygon", {
+        function I(e) {
+          return (0, r.jsx)("svg", {
+            fill: "#FFFFFF",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_X",
+            version: "1.1",
+            x: "0px",
+            y: "0px",
+            viewBox: "-165 95 100 100",
+            ...e,
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("polygon", {
                 points:
                   "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2",
               }),
-            ),
-          );
-        }
-        function k(e) {
-          const { color: t = "#FFFFFF", ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button",
-                "SVGIcon_X_Line",
-                e.className,
-              ),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              ...n,
-            },
-            r.createElement("line", {
-              fill: "none",
-              stroke: t,
-              strokeWidth: "45",
-              strokeMiterlimit: "10",
-              x1: "212",
-              y1: "212",
-              x2: "44",
-              y2: "44",
             }),
-            r.createElement("line", {
-              fill: "none",
-              stroke: t,
-              strokeWidth: "45",
-              strokeMiterlimit: "10",
-              x1: "44",
-              y1: "212",
-              x2: "212",
-              y2: "44",
-            }),
-          );
-        }
-        function I(e) {
-          const { className: t } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_Button SVGIcon_Plus", t),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("line", {
-              className: "horizontalLine",
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "45",
-              strokeLinecap: "square",
-              strokeMiterlimit: "10",
-              x1: "73.333",
-              y1: "128",
-              x2: "183.333",
-              y2: "128",
-            }),
-            r.createElement("line", {
-              className: "verticalLine",
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "45",
-              strokeLinecap: "square",
-              strokeMiterlimit: "10",
-              x1: "128.333",
-              y1: "73.335",
-              x2: "128.333",
-              y2: "183.333",
-            }),
-          );
+          });
         }
         function R(e) {
-          const { className: t } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 12 12",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM8.85703 6.95227H6.95227V8.85703H5.0475V6.95227H3.14274V5.0475H5.0475V3.14274H6.95227V5.0475H8.85703V6.95227Z",
-            }),
-          );
+          const { color: t = "#FFFFFF", ...n } = e;
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              "SVGIcon_Button",
+              "SVGIcon_X_Line",
+              e.className,
+            ),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            ...n,
+            children: [
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: t,
+                strokeWidth: "45",
+                strokeMiterlimit: "10",
+                x1: "212",
+                y1: "212",
+                x2: "44",
+                y2: "44",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: t,
+                strokeWidth: "45",
+                strokeMiterlimit: "10",
+                x1: "44",
+                y1: "212",
+                x2: "212",
+                y2: "44",
+              }),
+            ],
+          });
         }
         function T(e) {
           const { className: t } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 12 12",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM6.00009 9.14281V7.97879C6.00009 7.48484 5.80443 7.01112 5.45615 6.66185C5.10787 6.31258 4.63549 6.11636 4.14295 6.11636C3.65041 6.11636 3.17803 6.31258 2.82975 6.66185C2.48147 7.01112 2.28581 7.48484 2.28581 7.97879V9.14281H6.00009ZM4.72332 5.24139C4.55153 5.3565 4.34956 5.41794 4.14295 5.41794C4.00568 5.41825 3.8697 5.39136 3.74282 5.33882C3.61594 5.28628 3.50066 5.20913 3.40359 5.11179C3.30653 5.01445 3.22959 4.89884 3.1772 4.77159C3.12481 4.64435 3.098 4.50799 3.09831 4.37032C3.09831 4.16313 3.15957 3.96058 3.27436 3.7883C3.38915 3.61602 3.5523 3.48174 3.74318 3.40245C3.93407 3.32316 4.14411 3.30241 4.34675 3.34283C4.54939 3.38326 4.73553 3.48303 4.88162 3.62955C5.02772 3.77606 5.12721 3.96273 5.16752 4.16594C5.20783 4.36916 5.18714 4.5798 5.10807 4.77123C5.02901 4.96266 4.89511 5.12627 4.72332 5.24139ZM8.52066 5.77217C8.76478 5.86581 8.98645 6.01006 9.17116 6.19551C9.34357 6.3686 9.48028 6.57406 9.57349 6.80015C9.6667 7.02624 9.71457 7.26853 9.71438 7.51318V8.6772H6.92866V7.97879C6.93046 7.39391 6.74762 6.82346 6.40634 6.34916C6.56949 6.14438 6.77391 5.97645 7.00622 5.85634C7.23854 5.73622 7.49351 5.66664 7.75448 5.65214C8.01545 5.63764 8.27654 5.67854 8.52066 5.77217ZM8.43761 4.77578C8.26582 4.89089 8.06385 4.95233 7.85724 4.95233C7.71996 4.95264 7.58399 4.92575 7.45711 4.87321C7.33023 4.82068 7.21494 4.74352 7.11788 4.64618C7.02081 4.54884 6.94388 4.43323 6.89149 4.30598C6.8391 4.17874 6.81229 4.04238 6.81259 3.90472C6.81259 3.69752 6.87386 3.49497 6.98865 3.32269C7.10343 3.15041 7.26658 3.01613 7.45747 2.93684C7.64835 2.85755 7.85839 2.8368 8.06104 2.87723C8.26368 2.91765 8.44981 3.01743 8.59591 3.16394C8.74201 3.31045 8.8415 3.49712 8.88181 3.70034C8.92211 3.90355 8.90143 4.11419 8.82236 4.30562C8.74329 4.49705 8.6094 4.66067 8.43761 4.77578Z",
-            }),
-          );
-        }
-        function F(e) {
-          const { className: t } = e,
-            [n, i] = (0, l.l)();
-          return r.createElement(
-            "svg",
-            {
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement(
-              "g",
-              { clipPath: i },
-              r.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M-0.000488281 3.00495C-0.000488281 1.34536 1.34487 0 3.00446 0H32.9946C34.6541 0 35.9995 1.34536 35.9995 3.00495V32.995C35.9995 34.6546 34.6541 36 32.9946 36H3.00446C1.34487 36 -0.000488281 34.6546 -0.000488281 32.995V3.00495ZM20.0447 5.10424H15.9546V14.7327L12.5024 11.2806L9.61032 14.1727L17.9997 22.562L26.389 14.1727L23.4969 11.2806L20.0447 14.7328V5.10424ZM9.19346 21.7984H5.10338V30.062H30.8959V21.7984H26.8058V25.972H9.19346V21.7984Z",
-                fill: "currentColor",
-              }),
-            ),
-            r.createElement(
-              "defs",
-              null,
-              r.createElement(
-                "clipPath",
-                { id: n },
-                r.createElement("rect", {
-                  width: "36",
-                  height: "36",
-                  fill: "currentColor",
-                }),
-              ),
-            ),
-          );
-        }
-        function O(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_VoiceRoom",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.75356 22.4214 7.27057 24.6546 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM14.25 9.79997C14.25 8.80541 14.6451 7.85158 15.3483 7.14832C16.0516 6.44506 17.0054 6.04997 18 6.04997C18.9945 6.04997 19.9484 6.44506 20.6516 7.14832C21.3549 7.85158 21.75 8.80541 21.75 9.79997V14.8C21.75 15.7945 21.3549 16.7484 20.6516 17.4516C19.9484 18.1549 18.9945 18.55 18 18.55C17.0054 18.55 16.0516 18.1549 15.3483 17.4516C14.6451 16.7484 14.25 15.7945 14.25 14.8V9.79997ZM19.25 23.45V26.05H16.75V23.45C15.2086 23.2066 13.7667 22.5346 12.5891 21.5107C11.4114 20.4869 10.5454 19.1525 10.09 17.66L12.49 16.94C12.8494 18.1186 13.5778 19.1505 14.568 19.8838C15.5582 20.6171 16.7578 21.0129 17.99 21.0129C19.2221 21.0129 20.4217 20.6171 21.4119 19.8838C22.4021 19.1505 23.1306 18.1186 23.49 16.94L25.89 17.66C25.4361 19.1498 24.5731 20.4824 23.3992 21.5059C22.2254 22.5295 20.7878 23.2031 19.25 23.45Z",
-              fill: "currentColor",
-            }),
-          );
-        }
-        function D() {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 26 26",
-              fill: "none",
-              className: a().FlipInRTL,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M7.69668 14.4444L11.0087 17.7564L8.9659 19.7992L2.16675 13L8.9659 6.20086L11.0087 8.24362L7.69672 11.5556L16.4873 11.5556V14.4444H7.69668Z",
-            }),
-            r.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M16.6113 20.9444H20.2225L20.2225 5.05555H16.6113L16.6113 2.16666L23.1113 2.16666L23.1113 23.8333H16.6113V20.9444Z",
-            }),
-          );
-        }
-        function A() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_ExitIcon",
-                a().FlipInRTL,
-              ),
-              x: "0px",
-              y: "0px",
-              width: "64px",
-              height: "64px",
-              viewBox: "0 0 64 64",
-              enableBackground: "new 0 0 64 64",
-            },
-            r.createElement(
-              "g",
-              { className: "Arrow" },
-              r.createElement("polyline", {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button SVGIcon_Plus", t),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("line", {
+                className: "horizontalLine",
                 fill: "none",
-                strokeWidth: "2",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
+                stroke: "currentColor",
+                strokeWidth: "45",
+                strokeLinecap: "square",
                 strokeMiterlimit: "10",
-                points: "41,30.7 14.5,30.7 23.5,19.4 ",
+                x1: "73.333",
+                y1: "128",
+                x2: "183.333",
+                y2: "128",
               }),
-              r.createElement("polyline", {
-                fill: "none",
-                strokeWidth: "2",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "10",
-                points: "41,30.7 14.5,30.7 23.5,42 ",
-              }),
-            ),
-            r.createElement(
-              "g",
-              null,
-              r.createElement("polyline", {
-                className: "ExitDoor",
-                strokeLinecap: "round",
-                strokeMiterlimit: "1",
-                strokeWidth: "2px",
-                fill: "none",
-                points:
-                  "32.5,22.1 32.5,17.7 47.7,17.7 47.7,43.8 32.5,43.8 32.5,39.5",
-              }),
-            ),
-          );
-        }
-        function N() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_TextRoom",
-                a().FlipInRTL,
-              ),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              stroke: "#000",
-              strokeWidth: "10px",
-            },
-            r.createElement(
-              "g",
-              { className: "ScratchPad" },
-              r.createElement("path", {
-                fill: "none",
-                strokeWidth: "0",
-                strokeMiterlimit: "10",
-                d: "M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z",
-              }),
-              r.createElement("line", {
-                fill: "none",
-                strokeWidth: "0",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                x1: "74.495",
-                y1: "27.313",
-                x2: "74.495",
-                y2: "54.063",
-              }),
-              r.createElement("line", {
-                fill: "none",
-                strokeWidth: "0",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                x1: "124.495",
-                y1: "27.313",
-                x2: "124.495",
-                y2: "54.063",
-              }),
-              r.createElement("line", {
-                fill: "none",
-                strokeWidth: "0",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                x1: "174.745",
-                y1: "27.313",
-                x2: "174.745",
-                y2: "54.063",
-              }),
-            ),
-            r.createElement("line", {
-              className: "TextLines",
-              x1: "71.6",
-              y1: "115.4",
-              x2: "179.4",
-              y2: "115.4",
-            }),
-            r.createElement("line", {
-              className: "TextLines",
-              x1: "71.6",
-              y1: "145.8",
-              x2: "143.3",
-              y2: "145.8",
-            }),
-            r.createElement("line", {
-              className: "TextLines",
-              x1: "71.6",
-              y1: "175.9",
-              x2: "179.4",
-              y2: "175.9",
-            }),
-            r.createElement("line", {
-              className: "TextLines",
-              x1: "73.7",
-              y1: "82.7",
-              x2: "166.8",
-              y2: "82.7",
-            }),
-          );
-        }
-        function z(e) {
-          const { off: t, ...n } = e;
-          return t
-            ? r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...n,
-                },
-                r.createElement("path", {
-                  d: "M31.06 13L27.82 16.24C27.9314 16.8338 27.9916 17.436 28 18.04C28.001 19.0585 27.8424 20.0707 27.53 21.04H24L21 29.04L26 32.04C31.07 25.77 31.74 20.69 31.74 20.69C31.9114 19.8205 31.9985 18.9364 32 18.05C32.0008 16.3231 31.6821 14.611 31.06 13Z",
-                  fill: "currentColor",
-                }),
-                r.createElement("path", {
-                  d: "M33.06 6.76005L30.94 4.64005L27.65 7.93005C25.6668 6.04325 23.1741 4.77921 20.48 4.2943C17.786 3.80939 15.0089 4.12489 12.4923 5.20176C9.97574 6.27863 7.83004 8.06963 6.32066 10.3532C4.81129 12.6368 4.00447 15.3127 4 18.05C4.00415 18.94 4.09458 19.8275 4.27 20.7C4.8128 23.3864 5.8541 25.9472 7.34 28.25L3.94 31.64L6.06 33.76L33.06 6.76005ZM12.69 22.89L12 21.05H8.47C8.15762 20.0807 7.99903 19.0685 8 18.05C8.00457 16.104 8.57689 14.2015 9.6468 12.5759C10.7167 10.9503 12.2377 9.67215 14.0233 8.89825C15.8089 8.12435 17.7815 7.88828 19.6993 8.21899C21.6171 8.54969 23.3967 9.4328 24.82 10.76L12.69 22.89Z",
-                  fill: "currentColor",
-                }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...n,
-                },
-                r.createElement("path", {
-                  d: "M32 18.05C32 14.337 30.525 10.7761 27.8995 8.15055C25.274 5.52504 21.713 4.05005 18 4.05005C14.287 4.05005 10.726 5.52504 8.1005 8.15055C5.475 10.7761 4 14.337 4 18.05C4.00415 18.94 4.09457 19.8275 4.27 20.7001C4.27 20.7001 4.93 25.78 10 32.05L15 29.05L12 21.05H8.47C8.15762 20.0807 7.99903 19.0685 8 18.05C8 15.3979 9.05357 12.8543 10.9289 10.979C12.8043 9.10362 15.3478 8.05005 18 8.05005C20.6522 8.05005 23.1957 9.10362 25.0711 10.979C26.9464 12.8543 28 15.3979 28 18.05C28.001 19.0685 27.8424 20.0807 27.53 21.05H24L21 29.05L26 32.05C31.07 25.78 31.74 20.7001 31.74 20.7001C31.9121 19.8272 31.9991 18.9397 32 18.05Z",
-                  fill: "currentColor",
-                }),
-              );
-        }
-        function P(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "24",
-              height: "24",
-              viewBox: "0 0 24 24",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ...e,
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M21.1334 10.5001C21.1353 8.73644 20.6267 7.00996 19.6688 5.52915C19.5205 5.29997 19.3625 5.0782 19.1953 4.86435L17.452 6.60766L16.0589 5.21472L17.8215 3.45216C17.1909 2.93055 16.4899 2.49338 15.7354 2.15523C14.126 1.43394 12.3422 1.19403 10.5995 1.46448C8.8567 1.73492 7.22951 2.50415 5.91442 3.67927C4.59933 4.85438 3.65259 6.38512 3.18854 8.08659C2.72449 9.78807 2.76298 11.5875 3.29937 13.2676C3.83575 14.9477 4.84709 16.4365 6.21123 17.5543C7.57537 18.6721 9.23396 19.3711 10.9867 19.5667V23.3667L18.2067 17.1934C19.1298 16.3399 19.8664 15.3047 20.37 14.1528C20.8737 13.0009 21.1336 11.7573 21.1334 10.5001ZM14.4972 9.56583L16.3388 7.72437L14.9458 6.33143L13.1041 8.17289L14.4972 9.56583ZM7.33337 15.3334L7.33337 9.42369H9.30347L9.30347 11.9688L11.9907 9.2858L13.3816 10.6766L10.6983 13.3635H13.2437V15.3334H7.33337Z",
-              fill: "currentColor",
-            }),
-          );
-        }
-        function H(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ...e,
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.44737 21.4623 6.2191 22.9133 7.22063 24.1901L9.32215 22.0886L11.4117 24.178L9.28472 26.305C9.29539 26.3138 9.30608 26.3226 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM24.5 9V17.8646H21.5449V14.0469L17.5141 18.0714L15.4277 15.9853L19.4526 11.9549H15.6346V9H24.5ZM13.7543 17.6514L10.9918 20.4136L13.0814 22.503L15.8439 19.7408L13.7543 17.6514Z",
-              fill: "currentColor",
-            }),
-          );
-        }
-        function W(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ...e,
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.75356 22.4214 7.27057 24.6546 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM18 26.75C24.0751 26.75 29 21.8251 29 15.75C29 9.67487 24.0751 4.75 18 4.75C11.9249 4.75 7 9.67487 7 15.75C7 21.8251 11.9249 26.75 18 26.75Z",
-              fill: "currentColor",
-            }),
-            r.createElement("path", {
-              d: "M16.3333 21H13V11H16.3333V21ZM23 11H19.6667V21H23V11Z",
-              fill: "currentColor",
-            }),
-          );
-        }
-        function U(e) {
-          return (0, c.Qn)()
-            ? r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_Group",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...e,
-                },
-                r.createElement("path", {
-                  d: "M7.71001 20.11C7.23859 21.3527 6.99798 22.6709 7.00001 24V30H1.23001V25.38C1.23001 24.6726 1.3695 23.9722 1.64049 23.3189C1.91149 22.6655 2.30867 22.0719 2.80931 21.5722C3.30995 21.0725 3.90422 20.6764 4.5581 20.4067C5.21199 20.1369 5.91266 19.9987 6.62001 20C6.98607 20.001 7.35115 20.0378 7.71001 20.11ZM6.50001 10C5.80778 10 5.13109 10.2053 4.55552 10.5899C3.97994 10.9744 3.53134 11.5211 3.26643 12.1606C3.00153 12.8002 2.93221 13.5039 3.06726 14.1828C3.20231 14.8618 3.53565 15.4854 4.02514 15.9749C4.51462 16.4644 5.13826 16.7977 5.81719 16.9328C6.49613 17.0678 7.19986 16.9985 7.8394 16.7336C8.47894 16.4687 9.02557 16.0201 9.41016 15.4445C9.79474 14.8689 10 14.1922 10 13.5C10 12.5717 9.63126 11.6815 8.97488 11.0251C8.31851 10.3688 7.42827 10 6.50001 10ZM13.5 9.5C13.5 8.60999 13.7639 7.73996 14.2584 6.99994C14.7529 6.25991 15.4557 5.68314 16.2779 5.34254C17.1002 5.00195 18.005 4.91283 18.8779 5.08647C19.7508 5.2601 20.5527 5.68868 21.182 6.31802C21.8113 6.94736 22.2399 7.74918 22.4135 8.6221C22.5872 9.49501 22.4981 10.3998 22.1575 11.2221C21.8169 12.0443 21.2401 12.7471 20.5001 13.2416C19.7601 13.7361 18.89 14 18 14C17.4087 14.0013 16.8229 13.8858 16.2764 13.6601C15.7298 13.4345 15.2332 13.103 14.8151 12.6849C14.397 12.2668 14.0655 11.7702 13.8399 11.2236C13.6142 10.6771 13.4987 10.0913 13.5 9.5ZM25 24V30H11V24C11 22.1435 11.7375 20.363 13.0503 19.0503C14.363 17.7375 16.1435 17 18 17C19.8565 17 21.637 17.7375 22.9498 19.0503C24.2625 20.363 25 22.1435 25 24ZM35 25.38V30H29V24C29.0038 22.6921 28.77 21.3944 28.31 20.17C28.7376 20.0576 29.1779 20.0004 29.62 20C31.0469 20 32.4153 20.5668 33.4242 21.5758C34.4332 22.5847 35 23.9531 35 25.38ZM29.5 17C28.8078 17 28.1311 16.7947 27.5555 16.4101C26.9799 16.0256 26.5313 15.4789 26.2664 14.8394C26.0015 14.1999 25.9322 13.4961 26.0673 12.8172C26.2023 12.1383 26.5357 11.5146 27.0251 11.0251C27.5146 10.5356 28.1383 10.2023 28.8172 10.0673C29.4961 9.9322 30.1999 10.0015 30.8394 10.2664C31.4789 10.5313 32.0256 10.9799 32.4102 11.5555C32.7947 12.1311 33 12.8078 33 13.5C33 14.4283 32.6313 15.3185 31.9749 15.9749C31.3185 16.6313 30.4283 17 29.5 17Z",
-                  fill: "currentColor",
-                }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  version: "1.1",
-                  id: "Layer_5",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_Group",
-                  x: "0px",
-                  y: "0px",
-                  width: "256px",
-                  height: "256px",
-                  viewBox: "0 0 256 256",
-                },
-                r.createElement(
-                  "g",
-                  { transform: "translate(0,-952.36218)" },
-                  r.createElement("path", {
-                    d: "M58.6,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1\tC86.7,983,74,970.4,58.6,970.4z M202.1,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C230.2,983,217.6,970.4,202.1,970.4z M130.4,986c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C158.5,998.6,145.8,986,130.4,986z M242.8,1110.6c0-0.1,0-17.9,0-18l-0.1-16.1c0-22.4-18.2-40.6-40.6-40.6 c-17.8,0-30,7.7-36.3,18.8c-2,3.5-3.4,7.3-4.5,11.1c-7.5-8.7-18.6-14.3-31-14.3s-23.5,5.6-31,14.3c-1.1-3.9-2.5-7.6-4.5-11.1 c-6.3-11.1-18.4-18.8-36.3-18.8c-22.4,0-40.6,18.2-40.6,40.6v46.8c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2 c3.4,0,6.2-2.8,6.2-6.2v-31.2h9.4v9.4c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2H146c3.4,0,6.2-2.8,6.2-6.2v-31.2 h12.5c3.4,0,6.2-2.8,6.2-6.2v-9.4h9.4v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2c3.4,0,6.2-2.8,6.2-6.2v-31.2h12.5c3.4,0,6.3-2.7,6.3-6.2\tV1110.6z",
-                  }),
-                ),
-              );
-        }
-        function V(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_RecentChats",
-              viewBox: "0 0 22 22",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M0.333252 0.666626V8.66663V11.3333L3.66659 8.66663H14.9999V0.666626H0.333252ZM6.99992 11.3333V19.3333H18.3333L21.6666 22V19.3333V11.3333H6.99992Z",
-            }),
-          );
-        }
-        function G(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_ScratchPad",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M28 6V2H24V6H12V2H8V6H4V32H26C27.5913 32 29.1174 31.3679 30.2426 30.2426C31.3679 29.1174 32 27.5913 32 26V6H28ZM18 25H10V21H18V25ZM26 17H10V13H26V17Z",
-              fill: "currentColor",
-            }),
-          );
-        }
-        function j(e) {
-          let t = "SVGIcon_Button SVGIcon_Pin";
-          return (
-            e.bPinned && (t += " Pinned"),
-            r.createElement(
-              "svg",
-              {
-                version: "1.1",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: t,
-                x: "0px",
-                y: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "0 0 256 256",
-              },
-              r.createElement("path", {
-                className: "point",
-                d: "M134.787,129.241v52.051v26.025c0.041,4.334-0.092,8.677,0.094,13.009c-1.493,4.332-3.129,8.675-5.239,13.009 c-2.109-4.334-3.734-8.677-5.237-13.009c0.186-4.333,0.05-8.677,0.092-33.009v-26.025v-32.051v-5.146h10.291V129.241z",
-              }),
-              r.createElement("path", {
-                className: "head",
-                d: "M186.55,151.049H73.351l-5.146-5.146c0-23.791,11.186-40.359,30.871-46.091V39.394 c-6.843-3.478-17.164-10.034-17.154-27.312l5.146-5.146h85.167l5.146,5.146c0,17.227-9.828,23.803-16.537,27.292v60.521 c19.664,6.062,30.852,22.609,30.852,46.01L186.55,151.049z",
-              }),
-              r.createElement("line", {
-                className: "ground",
-                opacity: e.bPinned ? 1 : 0,
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "16",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                x1: "33.833",
-                y1: "238.5",
-                x2: "221.834",
-                y2: "238.5",
-              }),
-            )
-          );
-        }
-        function q(e) {
-          const { className: t } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_Button SVGIcon_PlusCircle", t),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            !e.nocircle &&
-              r.createElement("circle", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeMiterlimit: "10",
-                cx: "128",
-                cy: "128",
-                r: "95.333",
-              }),
-            r.createElement("line", {
-              className: "horizontalLine",
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              x1: "73.333",
-              y1: "128",
-              x2: "183.333",
-              y2: "128",
-            }),
-            !e.minus &&
-              r.createElement("line", {
+              (0, r.jsx)("line", {
                 className: "verticalLine",
                 fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
+                stroke: "currentColor",
+                strokeWidth: "45",
+                strokeLinecap: "square",
                 strokeMiterlimit: "10",
                 x1: "128.333",
                 y1: "73.335",
                 x2: "128.333",
                 y2: "183.333",
               }),
+            ],
+          });
+        }
+        function j(e) {
+          const { className: t } = e;
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 12 12",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM8.85703 6.95227H6.95227V8.85703H5.0475V6.95227H3.14274V5.0475H5.0475V3.14274H6.95227V5.0475H8.85703V6.95227Z",
+            }),
+          });
+        }
+        function E(e) {
+          const { className: t } = e;
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 12 12",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M1 0C0.447715 0 0 0.447715 0 1V11C0 11.5523 0.447715 12 1 12H11C11.5523 12 12 11.5523 12 11V1C12 0.447715 11.5523 0 11 0H1ZM6.00009 9.14281V7.97879C6.00009 7.48484 5.80443 7.01112 5.45615 6.66185C5.10787 6.31258 4.63549 6.11636 4.14295 6.11636C3.65041 6.11636 3.17803 6.31258 2.82975 6.66185C2.48147 7.01112 2.28581 7.48484 2.28581 7.97879V9.14281H6.00009ZM4.72332 5.24139C4.55153 5.3565 4.34956 5.41794 4.14295 5.41794C4.00568 5.41825 3.8697 5.39136 3.74282 5.33882C3.61594 5.28628 3.50066 5.20913 3.40359 5.11179C3.30653 5.01445 3.22959 4.89884 3.1772 4.77159C3.12481 4.64435 3.098 4.50799 3.09831 4.37032C3.09831 4.16313 3.15957 3.96058 3.27436 3.7883C3.38915 3.61602 3.5523 3.48174 3.74318 3.40245C3.93407 3.32316 4.14411 3.30241 4.34675 3.34283C4.54939 3.38326 4.73553 3.48303 4.88162 3.62955C5.02772 3.77606 5.12721 3.96273 5.16752 4.16594C5.20783 4.36916 5.18714 4.5798 5.10807 4.77123C5.02901 4.96266 4.89511 5.12627 4.72332 5.24139ZM8.52066 5.77217C8.76478 5.86581 8.98645 6.01006 9.17116 6.19551C9.34357 6.3686 9.48028 6.57406 9.57349 6.80015C9.6667 7.02624 9.71457 7.26853 9.71438 7.51318V8.6772H6.92866V7.97879C6.93046 7.39391 6.74762 6.82346 6.40634 6.34916C6.56949 6.14438 6.77391 5.97645 7.00622 5.85634C7.23854 5.73622 7.49351 5.66664 7.75448 5.65214C8.01545 5.63764 8.27654 5.67854 8.52066 5.77217ZM8.43761 4.77578C8.26582 4.89089 8.06385 4.95233 7.85724 4.95233C7.71996 4.95264 7.58399 4.92575 7.45711 4.87321C7.33023 4.82068 7.21494 4.74352 7.11788 4.64618C7.02081 4.54884 6.94388 4.43323 6.89149 4.30598C6.8391 4.17874 6.81229 4.04238 6.81259 3.90472C6.81259 3.69752 6.87386 3.49497 6.98865 3.32269C7.10343 3.15041 7.26658 3.01613 7.45747 2.93684C7.64835 2.85755 7.85839 2.8368 8.06104 2.87723C8.26368 2.91765 8.44981 3.01743 8.59591 3.16394C8.74201 3.31045 8.8415 3.49712 8.88181 3.70034C8.92211 3.90355 8.90143 4.11419 8.82236 4.30562C8.74329 4.49705 8.6094 4.66067 8.43761 4.77578Z",
+            }),
+          });
+        }
+        function F(e) {
+          const { className: t } = e,
+            [n, i] = (0, u.l)();
+          return (0, r.jsxs)("svg", {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("g", {
+                clipPath: i,
+                children: (0, r.jsx)("path", {
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M-0.000488281 3.00495C-0.000488281 1.34536 1.34487 0 3.00446 0H32.9946C34.6541 0 35.9995 1.34536 35.9995 3.00495V32.995C35.9995 34.6546 34.6541 36 32.9946 36H3.00446C1.34487 36 -0.000488281 34.6546 -0.000488281 32.995V3.00495ZM20.0447 5.10424H15.9546V14.7327L12.5024 11.2806L9.61032 14.1727L17.9997 22.562L26.389 14.1727L23.4969 11.2806L20.0447 14.7328V5.10424ZM9.19346 21.7984H5.10338V30.062H30.8959V21.7984H26.8058V25.972H9.19346V21.7984Z",
+                  fill: "currentColor",
+                }),
+              }),
+              (0, r.jsx)("defs", {
+                children: (0, r.jsx)("clipPath", {
+                  id: n,
+                  children: (0, r.jsx)("rect", {
+                    width: "36",
+                    height: "36",
+                    fill: "currentColor",
+                  }),
+                }),
+              }),
+            ],
+          });
+        }
+        function O(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_VoiceRoom",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.75356 22.4214 7.27057 24.6546 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM14.25 9.79997C14.25 8.80541 14.6451 7.85158 15.3483 7.14832C16.0516 6.44506 17.0054 6.04997 18 6.04997C18.9945 6.04997 19.9484 6.44506 20.6516 7.14832C21.3549 7.85158 21.75 8.80541 21.75 9.79997V14.8C21.75 15.7945 21.3549 16.7484 20.6516 17.4516C19.9484 18.1549 18.9945 18.55 18 18.55C17.0054 18.55 16.0516 18.1549 15.3483 17.4516C14.6451 16.7484 14.25 15.7945 14.25 14.8V9.79997ZM19.25 23.45V26.05H16.75V23.45C15.2086 23.2066 13.7667 22.5346 12.5891 21.5107C11.4114 20.4869 10.5454 19.1525 10.09 17.66L12.49 16.94C12.8494 18.1186 13.5778 19.1505 14.568 19.8838C15.5582 20.6171 16.7578 21.0129 17.99 21.0129C19.2221 21.0129 20.4217 20.6171 21.4119 19.8838C22.4021 19.1505 23.1306 18.1186 23.49 16.94L25.89 17.66C25.4361 19.1498 24.5731 20.4824 23.3992 21.5059C22.2254 22.5295 20.7878 23.2031 19.25 23.45Z",
+              fill: "currentColor",
+            }),
+          });
+        }
+        function D() {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 26 26",
+            fill: "none",
+            className: c().FlipInRTL,
+            children: [
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                d: "M7.69668 14.4444L11.0087 17.7564L8.9659 19.7992L2.16675 13L8.9659 6.20086L11.0087 8.24362L7.69672 11.5556L16.4873 11.5556V14.4444H7.69668Z",
+              }),
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M16.6113 20.9444H20.2225L20.2225 5.05555H16.6113L16.6113 2.16666L23.1113 2.16666L23.1113 23.8333H16.6113V20.9444Z",
+              }),
+            ],
+          });
+        }
+        function A() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              "SVGIcon_Button SVGIcon_ExitIcon",
+              c().FlipInRTL,
+            ),
+            x: "0px",
+            y: "0px",
+            width: "64px",
+            height: "64px",
+            viewBox: "0 0 64 64",
+            enableBackground: "new 0 0 64 64",
+            children: [
+              (0, r.jsxs)("g", {
+                className: "Arrow",
+                children: [
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    strokeWidth: "2",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "10",
+                    points: "41,30.7 14.5,30.7 23.5,19.4 ",
+                  }),
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    strokeWidth: "2",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "10",
+                    points: "41,30.7 14.5,30.7 23.5,42 ",
+                  }),
+                ],
+              }),
+              (0, r.jsx)("g", {
+                children: (0, r.jsx)("polyline", {
+                  className: "ExitDoor",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "1",
+                  strokeWidth: "2px",
+                  fill: "none",
+                  points:
+                    "32.5,22.1 32.5,17.7 47.7,17.7 47.7,43.8 32.5,43.8 32.5,39.5",
+                }),
+              }),
+            ],
+          });
+        }
+        function N() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              "SVGIcon_Button SVGIcon_TextRoom",
+              c().FlipInRTL,
+            ),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            stroke: "#000",
+            strokeWidth: "10px",
+            children: [
+              (0, r.jsxs)("g", {
+                className: "ScratchPad",
+                children: [
+                  (0, r.jsx)("path", {
+                    fill: "none",
+                    strokeWidth: "0",
+                    strokeMiterlimit: "10",
+                    d: "M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    strokeWidth: "0",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    x1: "74.495",
+                    y1: "27.313",
+                    x2: "74.495",
+                    y2: "54.063",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    strokeWidth: "0",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    x1: "124.495",
+                    y1: "27.313",
+                    x2: "124.495",
+                    y2: "54.063",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    strokeWidth: "0",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    x1: "174.745",
+                    y1: "27.313",
+                    x2: "174.745",
+                    y2: "54.063",
+                  }),
+                ],
+              }),
+              (0, r.jsx)("line", {
+                className: "TextLines",
+                x1: "71.6",
+                y1: "115.4",
+                x2: "179.4",
+                y2: "115.4",
+              }),
+              (0, r.jsx)("line", {
+                className: "TextLines",
+                x1: "71.6",
+                y1: "145.8",
+                x2: "143.3",
+                y2: "145.8",
+              }),
+              (0, r.jsx)("line", {
+                className: "TextLines",
+                x1: "71.6",
+                y1: "175.9",
+                x2: "179.4",
+                y2: "175.9",
+              }),
+              (0, r.jsx)("line", {
+                className: "TextLines",
+                x1: "73.7",
+                y1: "82.7",
+                x2: "166.8",
+                y2: "82.7",
+              }),
+            ],
+          });
+        }
+        function z(e) {
+          const { off: t, ...n } = e;
+          return t
+            ? (0, r.jsxs)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...n,
+                children: [
+                  (0, r.jsx)("path", {
+                    d: "M31.06 13L27.82 16.24C27.9314 16.8338 27.9916 17.436 28 18.04C28.001 19.0585 27.8424 20.0707 27.53 21.04H24L21 29.04L26 32.04C31.07 25.77 31.74 20.69 31.74 20.69C31.9114 19.8205 31.9985 18.9364 32 18.05C32.0008 16.3231 31.6821 14.611 31.06 13Z",
+                    fill: "currentColor",
+                  }),
+                  (0, r.jsx)("path", {
+                    d: "M33.06 6.76005L30.94 4.64005L27.65 7.93005C25.6668 6.04325 23.1741 4.77921 20.48 4.2943C17.786 3.80939 15.0089 4.12489 12.4923 5.20176C9.97574 6.27863 7.83004 8.06963 6.32066 10.3532C4.81129 12.6368 4.00447 15.3127 4 18.05C4.00415 18.94 4.09458 19.8275 4.27 20.7C4.8128 23.3864 5.8541 25.9472 7.34 28.25L3.94 31.64L6.06 33.76L33.06 6.76005ZM12.69 22.89L12 21.05H8.47C8.15762 20.0807 7.99903 19.0685 8 18.05C8.00457 16.104 8.57689 14.2015 9.6468 12.5759C10.7167 10.9503 12.2377 9.67215 14.0233 8.89825C15.8089 8.12435 17.7815 7.88828 19.6993 8.21899C21.6171 8.54969 23.3967 9.4328 24.82 10.76L12.69 22.89Z",
+                    fill: "currentColor",
+                  }),
+                ],
+              })
+            : (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...n,
+                children: (0, r.jsx)("path", {
+                  d: "M32 18.05C32 14.337 30.525 10.7761 27.8995 8.15055C25.274 5.52504 21.713 4.05005 18 4.05005C14.287 4.05005 10.726 5.52504 8.1005 8.15055C5.475 10.7761 4 14.337 4 18.05C4.00415 18.94 4.09457 19.8275 4.27 20.7001C4.27 20.7001 4.93 25.78 10 32.05L15 29.05L12 21.05H8.47C8.15762 20.0807 7.99903 19.0685 8 18.05C8 15.3979 9.05357 12.8543 10.9289 10.979C12.8043 9.10362 15.3478 8.05005 18 8.05005C20.6522 8.05005 23.1957 9.10362 25.0711 10.979C26.9464 12.8543 28 15.3979 28 18.05C28.001 19.0685 27.8424 20.0807 27.53 21.05H24L21 29.05L26 32.05C31.07 25.78 31.74 20.7001 31.74 20.7001C31.9121 19.8272 31.9991 18.9397 32 18.05Z",
+                  fill: "currentColor",
+                }),
+              });
+        }
+        function P(e) {
+          return (0, r.jsx)("svg", {
+            width: "24",
+            height: "24",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+            children: (0, r.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M21.1334 10.5001C21.1353 8.73644 20.6267 7.00996 19.6688 5.52915C19.5205 5.29997 19.3625 5.0782 19.1953 4.86435L17.452 6.60766L16.0589 5.21472L17.8215 3.45216C17.1909 2.93055 16.4899 2.49338 15.7354 2.15523C14.126 1.43394 12.3422 1.19403 10.5995 1.46448C8.8567 1.73492 7.22951 2.50415 5.91442 3.67927C4.59933 4.85438 3.65259 6.38512 3.18854 8.08659C2.72449 9.78807 2.76298 11.5875 3.29937 13.2676C3.83575 14.9477 4.84709 16.4365 6.21123 17.5543C7.57537 18.6721 9.23396 19.3711 10.9867 19.5667V23.3667L18.2067 17.1934C19.1298 16.3399 19.8664 15.3047 20.37 14.1528C20.8737 13.0009 21.1336 11.7573 21.1334 10.5001ZM14.4972 9.56583L16.3388 7.72437L14.9458 6.33143L13.1041 8.17289L14.4972 9.56583ZM7.33337 15.3334L7.33337 9.42369H9.30347L9.30347 11.9688L11.9907 9.2858L13.3816 10.6766L10.6983 13.3635H13.2437V15.3334H7.33337Z",
+              fill: "currentColor",
+            }),
+          });
+        }
+        function H(e) {
+          return (0, r.jsx)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+            children: (0, r.jsx)("path", {
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.44737 21.4623 6.2191 22.9133 7.22063 24.1901L9.32215 22.0886L11.4117 24.178L9.28472 26.305C9.29539 26.3138 9.30608 26.3226 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM24.5 9V17.8646H21.5449V14.0469L17.5141 18.0714L15.4277 15.9853L19.4526 11.9549H15.6346V9H24.5ZM13.7543 17.6514L10.9918 20.4136L13.0814 22.503L15.8439 19.7408L13.7543 17.6514Z",
+              fill: "currentColor",
+            }),
+          });
+        }
+        function W(e) {
+          return (0, r.jsxs)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.75356 22.4214 7.27057 24.6546 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM18 26.75C24.0751 26.75 29 21.8251 29 15.75C29 9.67487 24.0751 4.75 18 4.75C11.9249 4.75 7 9.67487 7 15.75C7 21.8251 11.9249 26.75 18 26.75Z",
+                fill: "currentColor",
+              }),
+              (0, r.jsx)("path", {
+                d: "M16.3333 21H13V11H16.3333V21ZM23 11H19.6667V21H23V11Z",
+                fill: "currentColor",
+              }),
+            ],
+          });
+        }
+        function U(e) {
+          return (0, l.Qn)()
+            ? (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Group",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+                children: (0, r.jsx)("path", {
+                  d: "M7.71001 20.11C7.23859 21.3527 6.99798 22.6709 7.00001 24V30H1.23001V25.38C1.23001 24.6726 1.3695 23.9722 1.64049 23.3189C1.91149 22.6655 2.30867 22.0719 2.80931 21.5722C3.30995 21.0725 3.90422 20.6764 4.5581 20.4067C5.21199 20.1369 5.91266 19.9987 6.62001 20C6.98607 20.001 7.35115 20.0378 7.71001 20.11ZM6.50001 10C5.80778 10 5.13109 10.2053 4.55552 10.5899C3.97994 10.9744 3.53134 11.5211 3.26643 12.1606C3.00153 12.8002 2.93221 13.5039 3.06726 14.1828C3.20231 14.8618 3.53565 15.4854 4.02514 15.9749C4.51462 16.4644 5.13826 16.7977 5.81719 16.9328C6.49613 17.0678 7.19986 16.9985 7.8394 16.7336C8.47894 16.4687 9.02557 16.0201 9.41016 15.4445C9.79474 14.8689 10 14.1922 10 13.5C10 12.5717 9.63126 11.6815 8.97488 11.0251C8.31851 10.3688 7.42827 10 6.50001 10ZM13.5 9.5C13.5 8.60999 13.7639 7.73996 14.2584 6.99994C14.7529 6.25991 15.4557 5.68314 16.2779 5.34254C17.1002 5.00195 18.005 4.91283 18.8779 5.08647C19.7508 5.2601 20.5527 5.68868 21.182 6.31802C21.8113 6.94736 22.2399 7.74918 22.4135 8.6221C22.5872 9.49501 22.4981 10.3998 22.1575 11.2221C21.8169 12.0443 21.2401 12.7471 20.5001 13.2416C19.7601 13.7361 18.89 14 18 14C17.4087 14.0013 16.8229 13.8858 16.2764 13.6601C15.7298 13.4345 15.2332 13.103 14.8151 12.6849C14.397 12.2668 14.0655 11.7702 13.8399 11.2236C13.6142 10.6771 13.4987 10.0913 13.5 9.5ZM25 24V30H11V24C11 22.1435 11.7375 20.363 13.0503 19.0503C14.363 17.7375 16.1435 17 18 17C19.8565 17 21.637 17.7375 22.9498 19.0503C24.2625 20.363 25 22.1435 25 24ZM35 25.38V30H29V24C29.0038 22.6921 28.77 21.3944 28.31 20.17C28.7376 20.0576 29.1779 20.0004 29.62 20C31.0469 20 32.4153 20.5668 33.4242 21.5758C34.4332 22.5847 35 23.9531 35 25.38ZM29.5 17C28.8078 17 28.1311 16.7947 27.5555 16.4101C26.9799 16.0256 26.5313 15.4789 26.2664 14.8394C26.0015 14.1999 25.9322 13.4961 26.0673 12.8172C26.2023 12.1383 26.5357 11.5146 27.0251 11.0251C27.5146 10.5356 28.1383 10.2023 28.8172 10.0673C29.4961 9.9322 30.1999 10.0015 30.8394 10.2664C31.4789 10.5313 32.0256 10.9799 32.4102 11.5555C32.7947 12.1311 33 12.8078 33 13.5C33 14.4283 32.6313 15.3185 31.9749 15.9749C31.3185 16.6313 30.4283 17 29.5 17Z",
+                  fill: "currentColor",
+                }),
+              })
+            : (0, r.jsx)("svg", {
+                version: "1.1",
+                id: "Layer_5",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Group",
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 256 256",
+                children: (0, r.jsx)("g", {
+                  transform: "translate(0,-952.36218)",
+                  children: (0, r.jsx)("path", {
+                    d: "M58.6,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1\tC86.7,983,74,970.4,58.6,970.4z M202.1,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C230.2,983,217.6,970.4,202.1,970.4z M130.4,986c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C158.5,998.6,145.8,986,130.4,986z M242.8,1110.6c0-0.1,0-17.9,0-18l-0.1-16.1c0-22.4-18.2-40.6-40.6-40.6 c-17.8,0-30,7.7-36.3,18.8c-2,3.5-3.4,7.3-4.5,11.1c-7.5-8.7-18.6-14.3-31-14.3s-23.5,5.6-31,14.3c-1.1-3.9-2.5-7.6-4.5-11.1 c-6.3-11.1-18.4-18.8-36.3-18.8c-22.4,0-40.6,18.2-40.6,40.6v46.8c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2 c3.4,0,6.2-2.8,6.2-6.2v-31.2h9.4v9.4c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2H146c3.4,0,6.2-2.8,6.2-6.2v-31.2 h12.5c3.4,0,6.2-2.8,6.2-6.2v-9.4h9.4v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2c3.4,0,6.2-2.8,6.2-6.2v-31.2h12.5c3.4,0,6.3-2.7,6.3-6.2\tV1110.6z",
+                  }),
+                }),
+              });
+        }
+        function V(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_RecentChats",
+            viewBox: "0 0 22 22",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M0.333252 0.666626V8.66663V11.3333L3.66659 8.66663H14.9999V0.666626H0.333252ZM6.99992 11.3333V19.3333H18.3333L21.6666 22V19.3333V11.3333H6.99992Z",
+            }),
+          });
+        }
+        function G(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_ScratchPad",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M28 6V2H24V6H12V2H8V6H4V32H26C27.5913 32 29.1174 31.3679 30.2426 30.2426C31.3679 29.1174 32 27.5913 32 26V6H28ZM18 25H10V21H18V25ZM26 17H10V13H26V17Z",
+              fill: "currentColor",
+            }),
+          });
+        }
+        function q(e) {
+          let t = "SVGIcon_Button SVGIcon_Pin";
+          return (
+            e.bPinned && (t += " Pinned"),
+            (0, r.jsxs)("svg", {
+              version: "1.1",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: t,
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+              children: [
+                (0, r.jsx)("path", {
+                  className: "point",
+                  d: "M134.787,129.241v52.051v26.025c0.041,4.334-0.092,8.677,0.094,13.009c-1.493,4.332-3.129,8.675-5.239,13.009 c-2.109-4.334-3.734-8.677-5.237-13.009c0.186-4.333,0.05-8.677,0.092-33.009v-26.025v-32.051v-5.146h10.291V129.241z",
+                }),
+                (0, r.jsx)("path", {
+                  className: "head",
+                  d: "M186.55,151.049H73.351l-5.146-5.146c0-23.791,11.186-40.359,30.871-46.091V39.394 c-6.843-3.478-17.164-10.034-17.154-27.312l5.146-5.146h85.167l5.146,5.146c0,17.227-9.828,23.803-16.537,27.292v60.521 c19.664,6.062,30.852,22.609,30.852,46.01L186.55,151.049z",
+                }),
+                (0, r.jsx)("line", {
+                  className: "ground",
+                  opacity: e.bPinned ? 1 : 0,
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "16",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "10",
+                  x1: "33.833",
+                  y1: "238.5",
+                  x2: "221.834",
+                  y2: "238.5",
+                }),
+              ],
+            })
           );
         }
         function Z(e) {
-          return (0, c.Qn)()
-            ? r.createElement(
-                "svg",
-                {
-                  width: "36",
-                  height: "36",
-                  viewBox: "0 0 36 36",
+          const { className: t } = e;
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button SVGIcon_PlusCircle", t),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              !e.nocircle &&
+                (0, r.jsx)("circle", {
                   fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ...e,
-                },
-                r.createElement("path", {
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M5.63604 19.636C7.32387 17.9482 9.61305 17 12 17C12.4664 17 12.9292 17.0362 13.3844 17.1071C13.1338 18.0289 13 18.9988 13 20C13 25.0351 16.383 29.2801 21 30.5859V31H3V26C3 23.6131 3.94821 21.3239 5.63604 19.636ZM14.7779 13.1573C13.9556 13.7068 12.9889 14 12 14C10.6739 14 9.40215 13.4732 8.46447 12.5355C7.52678 11.5979 7 10.3261 7 9C7 8.0111 7.29324 7.0444 7.84265 6.22215C8.39206 5.39991 9.17295 4.75904 10.0866 4.3806C11.0002 4.00217 12.0055 3.90315 12.9755 4.09608C13.9454 4.289 14.8363 4.76521 15.5355 5.46447C16.2348 6.16373 16.711 7.05465 16.9039 8.02455C17.0969 8.99446 16.9978 9.99979 16.6194 10.9134C16.241 11.827 15.6001 12.6079 14.7779 13.1573Z",
-                  fill: "currentColor",
+                  strokeWidth: "10",
+                  strokeMiterlimit: "10",
+                  cx: "128",
+                  cy: "128",
+                  r: "95.333",
                 }),
-                r.createElement("path", {
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M24 28C28.4183 28 32 24.4183 32 20C32 15.5817 28.4183 12 24 12C19.5817 12 16 15.5817 16 20C16 24.4183 19.5817 28 24 28ZM22.5 21.5V26H25.5V21.5H30V18.5H25.5V14H22.5V18.5H18V21.5H22.5Z",
-                  fill: "currentColor",
+              (0, r.jsx)("line", {
+                className: "horizontalLine",
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                x1: "73.333",
+                y1: "128",
+                x2: "183.333",
+                y2: "128",
+              }),
+              !e.minus &&
+                (0, r.jsx)("line", {
+                  className: "verticalLine",
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "10",
+                  x1: "128.333",
+                  y1: "73.335",
+                  x2: "128.333",
+                  y2: "183.333",
                 }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  version: "1.1",
-                  id: "Layer_1",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_AddFriend",
-                  x: "0px",
-                  y: "0px",
-                  width: "256px",
-                  height: "256px",
-                  viewBox: "0 0 256 256",
-                },
-                r.createElement(
-                  "g",
-                  {
+            ],
+          });
+        }
+        function K(e) {
+          return (0, l.Qn)()
+            ? (0, r.jsxs)("svg", {
+                width: "36",
+                height: "36",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                ...e,
+                children: [
+                  (0, r.jsx)("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M5.63604 19.636C7.32387 17.9482 9.61305 17 12 17C12.4664 17 12.9292 17.0362 13.3844 17.1071C13.1338 18.0289 13 18.9988 13 20C13 25.0351 16.383 29.2801 21 30.5859V31H3V26C3 23.6131 3.94821 21.3239 5.63604 19.636ZM14.7779 13.1573C13.9556 13.7068 12.9889 14 12 14C10.6739 14 9.40215 13.4732 8.46447 12.5355C7.52678 11.5979 7 10.3261 7 9C7 8.0111 7.29324 7.0444 7.84265 6.22215C8.39206 5.39991 9.17295 4.75904 10.0866 4.3806C11.0002 4.00217 12.0055 3.90315 12.9755 4.09608C13.9454 4.289 14.8363 4.76521 15.5355 5.46447C16.2348 6.16373 16.711 7.05465 16.9039 8.02455C17.0969 8.99446 16.9978 9.99979 16.6194 10.9134C16.241 11.827 15.6001 12.6079 14.7779 13.1573Z",
+                    fill: "currentColor",
+                  }),
+                  (0, r.jsx)("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M24 28C28.4183 28 32 24.4183 32 20C32 15.5817 28.4183 12 24 12C19.5817 12 16 15.5817 16 20C16 24.4183 19.5817 28 24 28ZM22.5 21.5V26H25.5V21.5H30V18.5H25.5V14H22.5V18.5H18V21.5H22.5Z",
+                    fill: "currentColor",
+                  }),
+                ],
+              })
+            : (0, r.jsxs)("svg", {
+                version: "1.1",
+                id: "Layer_1",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_AddFriend",
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 256 256",
+                children: [
+                  (0, r.jsx)("g", {
                     className: "friendHead",
                     transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-                  },
-                  r.createElement("circle", {
-                    cx: "86.296",
-                    cy: "47.419",
-                    r: "33.526",
-                    fill: "currentcolor",
+                    children: (0, r.jsx)("circle", {
+                      cx: "86.296",
+                      cy: "47.419",
+                      r: "33.526",
+                      fill: "currentcolor",
+                    }),
                   }),
-                ),
-                r.createElement("path", {
-                  className: "friendBody",
-                  d: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
-                  fill: "currentColor",
-                }),
-                r.createElement("path", {
-                  className: "plusCircle",
-                  d: "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z",
-                  fill: "currentColor",
-                }),
-              );
+                  (0, r.jsx)("path", {
+                    className: "friendBody",
+                    d: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
+                    fill: "currentColor",
+                  }),
+                  (0, r.jsx)("path", {
+                    className: "plusCircle",
+                    d: "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z",
+                    fill: "currentColor",
+                  }),
+                ],
+              });
         }
-        function K() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_4",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_FriendRequest",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              {
+        function $() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_4",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_FriendRequest",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("g", {
                 className: "friendHead",
                 transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-              },
-              r.createElement("circle", {
-                cx: "85.923",
-                cy: "47.419",
-                r: "33.526",
+                children: (0, r.jsx)("circle", {
+                  cx: "85.923",
+                  cy: "47.419",
+                  r: "33.526",
+                }),
               }),
-            ),
-            r.createElement("path", {
-              className: "friendBody",
-              d: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
-            }),
-            r.createElement("path", {
-              className: "friendBodyFull",
-              d: "M176.504,217.922v-42.624c0-35.443-17.002-64.217-57.483-64.217H106.96h-1.017H94.898 c-40.48,0.001-57.484,28.774-57.484,64.217v42.624c0,0,0,22.197,69.544,22.197C177.521,240.121,176.504,217.922,176.504,217.922z",
-            }),
-            r.createElement("path", {
-              className: "friendArm",
-              d: "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z",
-            }),
-            r.createElement("path", {
-              className: "redCircle",
-              d: "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z",
-            }),
-          );
+              (0, r.jsx)("path", {
+                className: "friendBody",
+                d: "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z",
+              }),
+              (0, r.jsx)("path", {
+                className: "friendBodyFull",
+                d: "M176.504,217.922v-42.624c0-35.443-17.002-64.217-57.483-64.217H106.96h-1.017H94.898 c-40.48,0.001-57.484,28.774-57.484,64.217v42.624c0,0,0,22.197,69.544,22.197C177.521,240.121,176.504,217.922,176.504,217.922z",
+              }),
+              (0, r.jsx)("path", {
+                className: "friendArm",
+                d: "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z",
+              }),
+              (0, r.jsx)("path", {
+                className: "redCircle",
+                d: "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z",
+              }),
+            ],
+          });
         }
-        function $(e) {
-          return (0, c.Qn)()
-            ? r.createElement(
-                "svg",
-                {
-                  width: "36",
-                  height: "36",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  className: "SVGIcon_Button SVGIcon_Invite",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ...e,
-                },
-                r.createElement("path", {
-                  d: "M5.5 7C5.5 6.20888 5.7346 5.43552 6.17412 4.77772C6.61365 4.11992 7.23836 3.60723 7.96927 3.30448C8.70017 3.00173 9.50444 2.92252 10.2804 3.07686C11.0563 3.2312 11.769 3.61216 12.3284 4.17157C12.8878 4.73098 13.2688 5.44372 13.4231 6.21964C13.5775 6.99556 13.4983 7.79983 13.1955 8.53074C12.8928 9.26164 12.3801 9.88635 11.7223 10.3259C11.0645 10.7654 10.2911 11 9.5 11C8.43913 11 7.42172 10.5786 6.67157 9.82843C5.92143 9.07828 5.5 8.06087 5.5 7ZM9.5 14C7.51088 14 5.60322 14.7902 4.1967 16.1967C2.79018 17.6032 2 19.5109 2 21.5V26H5.2L6 35H13L13.8 26H17V21.5C17 19.5109 16.2098 17.6032 14.8033 16.1967C13.3968 14.7902 11.4891 14 9.5 14Z",
-                  fill: "currentColor",
-                }),
-                r.createElement("path", {
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M34.959 9.48904C34.9608 7.85167 34.4886 6.24879 33.5993 4.87399C32.7099 3.49918 31.4416 2.41125 29.9474 1.7416C28.4533 1.07195 26.7972 0.849212 25.1792 1.1003C23.5612 1.35138 22.0505 2.06555 20.8295 3.15654C19.6086 4.24753 18.7296 5.66868 18.2988 7.24834C17.868 8.82801 17.9037 10.4986 18.4017 12.0584C18.8997 13.6182 19.8386 15.0005 21.1051 16.0383C22.3716 17.0761 23.9114 17.725 25.5387 17.9066V21.4346L32.2418 15.7032C33.0989 14.9108 33.7827 13.9497 34.2503 12.8803C34.7179 11.8109 34.9592 10.6562 34.959 9.48904ZM24.8116 11.2173V14.6231H28.2173V11.2173H31.6231V7.81157H28.2173V4.4058H24.8116V7.81157H21.4058V11.2173H24.8116Z",
-                  fill: "currentColor",
-                }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  version: "1.1",
-                  id: "Layer_5",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: (0, i.A)(
-                    "SVGIcon_Button SVGIcon_Invite",
-                    a().FlipInRTL,
-                  ),
-                  x: "0px",
-                  y: "0px",
-                  width: "256px",
-                  height: "255.999px",
-                  viewBox: "0 0 256 255.999",
-                },
-                r.createElement("path", {
-                  d: "M165.678,20.535c-17.251,0-31.386,14.135-31.386,31.386c0,17.252,14.135,31.386,31.386,31.386 c17.251,0,31.386-14.134,31.386-31.386C197.063,34.67,182.929,20.535,165.678,20.535z",
-                }),
-                r.createElement("path", {
-                  d: "M165.678,93.121c24.995,0,45.335,20.34,45.335,45.335v52.31c0,3.853-3.123,6.975-6.975,6.975h-13.95v34.874 c0,3.852-3.123,6.974-6.974,6.975h-34.874c-3.852-0.001-6.974-3.123-6.975-6.975v-34.874h-13.95c-3.852,0-6.974-3.123-6.974-6.975 v-52.31C120.343,113.461,140.683,93.121,165.678,93.121z",
-                }),
-                r.createElement(
-                  "g",
-                  { className: "invitePlus" },
-                  r.createElement("line", {
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "22",
-                    strokeMiterlimit: "10",
-                    x1: "14",
-                    y1: "128",
-                    x2: "101.5",
-                    y2: "128",
+        function Y(e) {
+          return (0, l.Qn)()
+            ? (0, r.jsxs)("svg", {
+                width: "36",
+                height: "36",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                className: "SVGIcon_Button SVGIcon_Invite",
+                xmlns: "http://www.w3.org/2000/svg",
+                ...e,
+                children: [
+                  (0, r.jsx)("path", {
+                    d: "M5.5 7C5.5 6.20888 5.7346 5.43552 6.17412 4.77772C6.61365 4.11992 7.23836 3.60723 7.96927 3.30448C8.70017 3.00173 9.50444 2.92252 10.2804 3.07686C11.0563 3.2312 11.769 3.61216 12.3284 4.17157C12.8878 4.73098 13.2688 5.44372 13.4231 6.21964C13.5775 6.99556 13.4983 7.79983 13.1955 8.53074C12.8928 9.26164 12.3801 9.88635 11.7223 10.3259C11.0645 10.7654 10.2911 11 9.5 11C8.43913 11 7.42172 10.5786 6.67157 9.82843C5.92143 9.07828 5.5 8.06087 5.5 7ZM9.5 14C7.51088 14 5.60322 14.7902 4.1967 16.1967C2.79018 17.6032 2 19.5109 2 21.5V26H5.2L6 35H13L13.8 26H17V21.5C17 19.5109 16.2098 17.6032 14.8033 16.1967C13.3968 14.7902 11.4891 14 9.5 14Z",
+                    fill: "currentColor",
                   }),
-                  r.createElement("line", {
-                    fill: "none",
-                    stroke: "#ffffff",
-                    strokeWidth: "22",
-                    strokeMiterlimit: "10",
-                    x1: "57.75",
-                    y1: "84.25",
-                    x2: "57.75",
-                    y2: "171.75",
+                  (0, r.jsx)("path", {
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M34.959 9.48904C34.9608 7.85167 34.4886 6.24879 33.5993 4.87399C32.7099 3.49918 31.4416 2.41125 29.9474 1.7416C28.4533 1.07195 26.7972 0.849212 25.1792 1.1003C23.5612 1.35138 22.0505 2.06555 20.8295 3.15654C19.6086 4.24753 18.7296 5.66868 18.2988 7.24834C17.868 8.82801 17.9037 10.4986 18.4017 12.0584C18.8997 13.6182 19.8386 15.0005 21.1051 16.0383C22.3716 17.0761 23.9114 17.725 25.5387 17.9066V21.4346L32.2418 15.7032C33.0989 14.9108 33.7827 13.9497 34.2503 12.8803C34.7179 11.8109 34.9592 10.6562 34.959 9.48904ZM24.8116 11.2173V14.6231H28.2173V11.2173H31.6231V7.81157H28.2173V4.4058H24.8116V7.81157H21.4058V11.2173H24.8116Z",
+                    fill: "currentColor",
                   }),
+                ],
+              })
+            : (0, r.jsxs)("svg", {
+                version: "1.1",
+                id: "Layer_5",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: (0, s.A)(
+                  "SVGIcon_Button SVGIcon_Invite",
+                  c().FlipInRTL,
                 ),
-              );
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "255.999px",
+                viewBox: "0 0 256 255.999",
+                children: [
+                  (0, r.jsx)("path", {
+                    d: "M165.678,20.535c-17.251,0-31.386,14.135-31.386,31.386c0,17.252,14.135,31.386,31.386,31.386 c17.251,0,31.386-14.134,31.386-31.386C197.063,34.67,182.929,20.535,165.678,20.535z",
+                  }),
+                  (0, r.jsx)("path", {
+                    d: "M165.678,93.121c24.995,0,45.335,20.34,45.335,45.335v52.31c0,3.853-3.123,6.975-6.975,6.975h-13.95v34.874 c0,3.852-3.123,6.974-6.974,6.975h-34.874c-3.852-0.001-6.974-3.123-6.975-6.975v-34.874h-13.95c-3.852,0-6.974-3.123-6.974-6.975 v-52.31C120.343,113.461,140.683,93.121,165.678,93.121z",
+                  }),
+                  (0, r.jsxs)("g", {
+                    className: "invitePlus",
+                    children: [
+                      (0, r.jsx)("line", {
+                        fill: "none",
+                        stroke: "#ffffff",
+                        strokeWidth: "22",
+                        strokeMiterlimit: "10",
+                        x1: "14",
+                        y1: "128",
+                        x2: "101.5",
+                        y2: "128",
+                      }),
+                      (0, r.jsx)("line", {
+                        fill: "none",
+                        stroke: "#ffffff",
+                        strokeWidth: "22",
+                        strokeMiterlimit: "10",
+                        x1: "57.75",
+                        y1: "84.25",
+                        x2: "57.75",
+                        y2: "171.75",
+                      }),
+                    ],
+                  }),
+                ],
+              });
         }
-        function Y() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_5",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Paperclip",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
+        function X() {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_5",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Paperclip",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
               d: "M167.768,62.647 l-0.012,123.052c0,24.729-19.334,44.856-43.096,44.866c-23.765-0.006-43.099-20.134-43.096-44.872L81.557,48.851 c0-15.345,14.483-27.827,29.83-27.83c15.342,0.003,27.827,12.488,27.833,27.833l-0.002,139.245 c0.003,6.376-8.546,12.925-14.925,12.925c0,0-13.929-0.166-13.929-12.928l0.003-124.839",
             }),
-          );
+          });
         }
-        function X(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+        function Q(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               d: "M25.1181 30.1923C23.8364 31.4691 22.2052 32.3377 20.4303 32.6884C18.6554 33.0391 16.8165 32.8562 15.1454 32.1628C13.4744 31.4693 12.0462 30.2965 11.0411 28.7922C10.0359 27.2879 9.49891 25.5196 9.49776 23.7104L9.49776 7.91381C9.65271 6.56298 10.2991 5.31635 11.3139 4.41135C12.3286 3.50635 13.6408 3.00623 15.0005 3.00623C16.3601 3.00623 17.6723 3.50635 18.6871 4.41135C19.7018 5.31635 20.3482 6.56298 20.5032 7.9138L20.5032 23.9715H16.8086L16.7955 7.91381C16.7858 7.43731 16.5922 6.98305 16.2552 6.64605C15.9182 6.30905 15.4639 6.11542 14.9874 6.10568C14.5109 6.11542 14.0567 6.30905 13.7197 6.64605C13.3827 6.98305 13.189 7.43732 13.1793 7.91381L13.1858 23.717C13.2181 25.1446 13.8079 26.5028 14.829 27.5011C15.8501 28.4993 17.2214 29.0582 18.6494 29.0582C20.0773 29.0582 21.4486 28.4993 22.4697 27.5011C23.4908 26.5028 24.0806 25.1446 24.1129 23.717V6.45816L27.8271 6.42553L27.8075 23.717C27.8046 26.1465 26.8373 28.4755 25.1181 30.1923Z",
             }),
-          );
+          });
         }
-        function Q(e) {
+        function J(e) {
           const { muted: t, className: n } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_Button", "SVGIcon_Volume", n),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "255.999px",
-              viewBox: "0 0 256 255.999",
-            },
-            r.createElement(
-              "g",
-              { className: "Speaker" },
-              r.createElement("path", {
-                d: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button", "SVGIcon_Volume", n),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "255.999px",
+            viewBox: "0 0 256 255.999",
+            children: [
+              (0, r.jsx)("g", {
+                className: "Speaker",
+                children: (0, r.jsx)("path", {
+                  d: "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z",
+                }),
               }),
-            ),
-            !t &&
-              r.createElement(
-                "g",
-                { className: "SoundWaves" },
-                r.createElement("path", {
-                  className: "SoundWavesHighest",
-                  d: "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
+              !t &&
+                (0, r.jsxs)("g", {
+                  className: "SoundWaves",
+                  children: [
+                    (0, r.jsx)("path", {
+                      className: "SoundWavesHighest",
+                      d: "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: "SoundWavesHigh",
+                      d: "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: "SoundWavesMed",
+                      d: "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: "SoundWavesLow",
+                      d: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
+                    }),
+                  ],
                 }),
-                r.createElement("path", {
-                  className: "SoundWavesHigh",
-                  d: "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z",
-                }),
-                r.createElement("path", {
-                  className: "SoundWavesMed",
-                  d: "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z",
-                }),
-                r.createElement("path", {
-                  className: "SoundWavesLow",
-                  d: "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z",
-                }),
-              ),
-            r.createElement(
-              "g",
-              { className: "SoundX" },
-              r.createElement("line", {
-                fill: "none",
-                strokeWidth: t ? 10 : 0,
-                stroke: "#fff",
-                strokeMiterlimit: "10",
-                x1: "137",
-                y1: "170.667",
-                x2: "223.167",
-                y2: "84.5",
+              (0, r.jsxs)("g", {
+                className: "SoundX",
+                children: [
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    strokeWidth: t ? 10 : 0,
+                    stroke: "#fff",
+                    strokeMiterlimit: "10",
+                    x1: "137",
+                    y1: "170.667",
+                    x2: "223.167",
+                    y2: "84.5",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    strokeWidth: t ? 10 : 0,
+                    stroke: "#fff",
+                    strokeMiterlimit: "10",
+                    x1: "137",
+                    y1: "84.5",
+                    x2: "223.167",
+                    y2: "170.667",
+                  }),
+                ],
               }),
-              r.createElement("line", {
-                fill: "none",
-                strokeWidth: t ? 10 : 0,
-                stroke: "#fff",
-                strokeMiterlimit: "10",
-                x1: "137",
-                y1: "84.5",
-                x2: "223.167",
-                y2: "170.667",
-              }),
-            ),
-          );
+            ],
+          });
         }
-        function J() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_NewChatGroup",
-                a().FlipInRTL,
-              ),
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              className: "Bubble",
-              strokeWidth: "12",
-              strokeMiterlimit: "10",
-              d: "M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z",
-            }),
-            r.createElement("line", {
-              strokeWidth: "22",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              x1: "83.5",
-              y1: "128.886",
-              x2: "176.184",
-              y2: "128.886",
-            }),
-            r.createElement("line", {
-              strokeWidth: "22",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              x1: "129.842",
-              y1: "82.544",
-              x2: "129.842",
-              y2: "175.228",
-            }),
-          );
+        function ee() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              "SVGIcon_Button SVGIcon_NewChatGroup",
+              c().FlipInRTL,
+            ),
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                className: "Bubble",
+                strokeWidth: "12",
+                strokeMiterlimit: "10",
+                d: "M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z",
+              }),
+              (0, r.jsx)("line", {
+                strokeWidth: "22",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                x1: "83.5",
+                y1: "128.886",
+                x2: "176.184",
+                y2: "128.886",
+              }),
+              (0, r.jsx)("line", {
+                strokeWidth: "22",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                x1: "129.842",
+                y1: "82.544",
+                x2: "129.842",
+                y2: "175.228",
+              }),
+            ],
+          });
         }
-        function ee(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ...e,
-            },
-            r.createElement("path", {
+        function te(e) {
+          return (0, r.jsx)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M31.7 15.75C31.703 13.1045 30.94 10.5148 29.5031 8.2936C28.0663 6.07238 26.0171 4.31465 23.603 3.23272C21.189 2.15079 18.5133 1.79092 15.8991 2.19659C13.285 2.60226 10.8442 3.75611 8.87157 5.51878C6.89893 7.28145 5.47882 9.57755 4.78275 12.1298C4.08667 14.682 4.14441 17.3811 4.94899 19.9013C5.75356 22.4214 7.27057 24.6546 9.31678 26.3313C11.363 28.008 13.8509 29.0565 16.48 29.35V35.05L27.31 25.79C28.6947 24.5098 29.7995 22.9569 30.555 21.2291C31.3105 19.5012 31.7003 17.6358 31.7 15.75ZM16.25 17.75V23H19.75V17.75H25V14.25H19.75V9H16.25V14.25H11V17.75H16.25Z",
               fill: "currentColor",
             }),
-          );
-        }
-        function te() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Crown",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
-                d: "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z",
-              }),
-            ),
-          );
+          });
         }
         function ne() {
-          return r.createElement(
-            "svg",
-            { width: "50px", height: "25px", viewBox: "0 0 50 25" },
-            r.createElement("path", {
-              d: "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Crown",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("path", {
+                d: "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z",
+              }),
             }),
-          );
+          });
         }
         function re() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Play",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            width: "50px",
+            height: "25px",
+            viewBox: "0 0 50 25",
+            children: (0, r.jsx)("path", {
+              d: "M46 0H4C1.8 0 0 1.8 0 4v17c0 2.2 1.8 4 4 4h42c2.2 0 4-1.8 4-4V4c0-2.2-1.8-4-4-4zM21 18.916V5.084L32.805 12 21 18.916z",
+            }),
+          });
+        }
+        function ie() {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Play",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
               className: "playTriangle",
               d: "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z",
             }),
-          );
-        }
-        function ie() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Pause",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z",
-            }),
-            r.createElement("path", {
-              d: "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z",
-            }),
-          );
+          });
         }
         function se() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_SortBy",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { className: "time" },
-              r.createElement("circle", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeMiterlimit: "10",
-                cx: "91.735",
-                cy: "128.014",
-                r: "64",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Pause",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                d: "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z",
               }),
-              r.createElement("polyline", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                points: "91.735,90.833 91.735,128.014 116.58,152.086 \t",
+              (0, r.jsx)("path", {
+                d: "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z",
               }),
-            ),
-            r.createElement(
-              "g",
-              { className: "alphabet" },
-              r.createElement("polyline", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "10",
-                points: "70.268,109.934 94.483,63.635 119.77,109.934",
-              }),
-              r.createElement("line", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "10",
-                x1: "77.458",
-                y1: "97.861",
-                x2: "112.135",
-                y2: "97.861",
-              }),
-              r.createElement("polyline", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "10",
-                points:
-                  "70.045,145.379 119.547,145.379 70.045,192.032 119.547,192.032",
-              }),
-            ),
-            r.createElement(
-              "g",
-              { className: "Arrow" },
-              r.createElement("polyline", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "10",
-                points: "199.735,63.66 199.735,192.366 171.207,163.675",
-              }),
-              r.createElement("polyline", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "10",
-                points: "199.735,63.66 199.735,192.366 228.266,163.675",
-              }),
-            ),
-          );
+            ],
+          });
         }
         function oe() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_SortBy",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { className: "time" },
-              r.createElement("circle", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeMiterlimit: "10",
-                cx: "91.735",
-                cy: "128.014",
-                r: "64",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_SortBy",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsxs)("g", {
+                className: "time",
+                children: [
+                  (0, r.jsx)("circle", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeMiterlimit: "10",
+                    cx: "91.735",
+                    cy: "128.014",
+                    r: "64",
+                  }),
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    points: "91.735,90.833 91.735,128.014 116.58,152.086 \t",
+                  }),
+                ],
               }),
-              r.createElement("polyline", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                points: "91.735,90.833 91.735,128.014 116.58,152.086 \t",
+              (0, r.jsxs)("g", {
+                className: "alphabet",
+                children: [
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "10",
+                    points: "70.268,109.934 94.483,63.635 119.77,109.934",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "10",
+                    x1: "77.458",
+                    y1: "97.861",
+                    x2: "112.135",
+                    y2: "97.861",
+                  }),
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "10",
+                    points:
+                      "70.045,145.379 119.547,145.379 70.045,192.032 119.547,192.032",
+                  }),
+                ],
               }),
-            ),
-          );
+              (0, r.jsxs)("g", {
+                className: "Arrow",
+                children: [
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "10",
+                    points: "199.735,63.66 199.735,192.366 171.207,163.675",
+                  }),
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "10",
+                    points: "199.735,63.66 199.735,192.366 228.266,163.675",
+                  }),
+                ],
+              }),
+            ],
+          });
         }
-        function ae(e) {
+        function ae() {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_SortBy",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsxs)("g", {
+              className: "time",
+              children: [
+                (0, r.jsx)("circle", {
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeMiterlimit: "10",
+                  cx: "91.735",
+                  cy: "128.014",
+                  r: "64",
+                }),
+                (0, r.jsx)("polyline", {
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "10",
+                  points: "91.735,90.833 91.735,128.014 116.58,152.086 \t",
+                }),
+              ],
+            }),
+          });
+        }
+        function ce(e) {
           const { color: t = "#fff", ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Check",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              strokeWidth: "24",
-              stroke: t,
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              ...n,
-            },
-            r.createElement("polyline", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Check",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            strokeWidth: "24",
+            stroke: t,
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            ...n,
+            children: (0, r.jsx)("polyline", {
               fill: "none",
               points: "49.5,147.75 95,210.75 206.5,45.25 ",
             }),
-          );
-        }
-        function ce(e) {
-          let t = e.highlightColor || "#00ccff",
-            n = e.color || "#2d73ff";
-          const [i, s] = (0, l.l)(),
-            [o, a] = (0, l.l)(),
-            [c] = (0, r.useState)(Math.random().toString());
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_DialogCheck",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "defs",
-              null,
-              r.createElement(
-                "linearGradient",
-                { id: i, x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-                r.createElement("stop", { offset: "0%", stopColor: t }),
-                r.createElement("stop", { offset: "100%", stopColor: n }),
-              ),
-              r.createElement(
-                "filter",
-                { id: o, x: "0", y: "0", width: "200%", height: "200%" },
-                r.createElement("feOffset", {
-                  result: "offOut",
-                  in: "SourceAlpha",
-                  dx: "20",
-                  dy: "20",
-                }),
-                r.createElement("feGaussianBlur", {
-                  result: "blurOut",
-                  in: "offOut",
-                  stdDeviation: "10",
-                }),
-                r.createElement("feBlend", {
-                  in: "SourceGraphic",
-                  in2: "blurOut",
-                  mode: "normal",
-                }),
-              ),
-            ),
-            r.createElement("path", {
-              fill: "none",
-              stroke: s,
-              strokeWidth: "24",
-              strokeLinecap: "round",
-              strokeLinejoin: "miter",
-              strokeMiterlimit: "10",
-              d: "M206.5,45.25L95,210.75l-45.5-63",
-              strokeDasharray: "365.19 365.19",
-              strokeDashoffset: "0.00",
-            }),
-            r.createElement("path", {
-              fill: "none",
-              opacity: ".2",
-              filter: a,
-              stroke: s,
-              strokeWidth: "24",
-              strokeLinecap: "round",
-              strokeLinejoin: "miter",
-              strokeMiterlimit: "10",
-              d: "M206.5,45.25L95,210.75l-45.5-63",
-              strokeDasharray: "365.19 365.19",
-              strokeDashoffset: "0.00",
-            }),
-          );
+          });
         }
         function le(e) {
+          let t = e.highlightColor || "#00ccff",
+            n = e.color || "#2d73ff";
+          const [s, o] = (0, u.l)(),
+            [a, c] = (0, u.l)(),
+            [l] = (0, i.useState)(Math.random().toString());
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_DialogCheck",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsxs)("defs", {
+                children: [
+                  (0, r.jsxs)("linearGradient", {
+                    id: s,
+                    x1: "0%",
+                    y1: "0%",
+                    x2: "100%",
+                    y2: "100%",
+                    children: [
+                      (0, r.jsx)("stop", { offset: "0%", stopColor: t }),
+                      (0, r.jsx)("stop", { offset: "100%", stopColor: n }),
+                    ],
+                  }),
+                  (0, r.jsxs)("filter", {
+                    id: a,
+                    x: "0",
+                    y: "0",
+                    width: "200%",
+                    height: "200%",
+                    children: [
+                      (0, r.jsx)("feOffset", {
+                        result: "offOut",
+                        in: "SourceAlpha",
+                        dx: "20",
+                        dy: "20",
+                      }),
+                      (0, r.jsx)("feGaussianBlur", {
+                        result: "blurOut",
+                        in: "offOut",
+                        stdDeviation: "10",
+                      }),
+                      (0, r.jsx)("feBlend", {
+                        in: "SourceGraphic",
+                        in2: "blurOut",
+                        mode: "normal",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: o,
+                strokeWidth: "24",
+                strokeLinecap: "round",
+                strokeLinejoin: "miter",
+                strokeMiterlimit: "10",
+                d: "M206.5,45.25L95,210.75l-45.5-63",
+                strokeDasharray: "365.19 365.19",
+                strokeDashoffset: "0.00",
+              }),
+              (0, r.jsx)("path", {
+                fill: "none",
+                opacity: ".2",
+                filter: c,
+                stroke: o,
+                strokeWidth: "24",
+                strokeLinecap: "round",
+                strokeLinejoin: "miter",
+                strokeMiterlimit: "10",
+                d: "M206.5,45.25L95,210.75l-45.5-63",
+                strokeDasharray: "365.19 365.19",
+                strokeDashoffset: "0.00",
+              }),
+            ],
+          });
+        }
+        function ue(e) {
           const { className: t, color: n = "#020202" } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_Button", "SVGIcon_Caution", t),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { className: "triangle" },
-              r.createElement("path", {
-                stroke: n,
-                strokeWidth: "16",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                d: "M127.9,76.632",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button", "SVGIcon_Caution", t),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsxs)("g", {
+                className: "triangle",
+                children: [
+                  (0, r.jsx)("path", {
+                    stroke: n,
+                    strokeWidth: "16",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    d: "M127.9,76.632",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "none",
+                    stroke: n,
+                    strokeWidth: "11",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeMiterlimit: "5",
+                    d: "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606",
+                  }),
+                  (0, r.jsx)("path", { fill: n, d: "M127.9,208.12" }),
+                ],
               }),
-              r.createElement("path", {
-                fill: "none",
-                stroke: n,
-                strokeWidth: "11",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                strokeMiterlimit: "5",
-                d: "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606",
+              (0, r.jsxs)("g", {
+                className: "exclamation",
+                children: [
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    stroke: n,
+                    strokeWidth: "16",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    x1: "127.9",
+                    y1: "76.632",
+                    x2: "127.9",
+                    y2: "160.07",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: n,
+                    d: "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12",
+                  }),
+                ],
               }),
-              r.createElement("path", { fill: n, d: "M127.9,208.12" }),
-            ),
-            r.createElement(
-              "g",
-              { className: "exclamation" },
-              r.createElement("line", {
-                fill: "none",
-                stroke: n,
-                strokeWidth: "16",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                x1: "127.9",
-                y1: "76.632",
-                x2: "127.9",
-                y2: "160.07",
-              }),
-              r.createElement("path", {
-                fill: n,
-                d: "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12",
-              }),
-            ),
-          );
-        }
-        function ue() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Lock",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              className: "topLock",
-              d: "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z",
-            }),
-            r.createElement("path", {
-              className: "baseLock",
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "22",
-              strokeMiterlimit: "10",
-              d: "M84.813,172.74V73.688l0,0 c0-23.85,19.335-43.188,43.187-43.188l0,0c23.852,0,43.188,19.337,43.188,43.188l0,0v23.885",
-            }),
-          );
-        }
-        function me() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Video",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              className: "videoPlayButton",
-              d: "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z",
-            }),
-            r.createElement("path", {
-              d: "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z",
-            }),
-          );
+            ],
+          });
         }
         function de() {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              className: "SVGIcon_Button SVGIcon_Image",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 100 100",
-              enableBackground: "new 0 0 100 100",
-            },
-            r.createElement("path", {
-              stroke: "#ffffff",
-              fill: "#ffffff",
-              d: "M83.086,12.091H16.913C10.344,12.091,5,17.435,5,24.004v51.992l0.005,0.102c0.056,6.514,5.396,11.813,11.908,11.813h66.173  c6.531,0,11.874-5.314,11.906-11.764L95,24.004C95,17.435,89.654,12.091,83.086,12.091z M83.086,82.989H16.913  c-3.516,0-6.488-2.653-6.93-6.106l18.899-20.615c1.226-1.34,2.85-2.076,4.574-2.076c1.723,0,3.347,0.736,4.574,2.078l19.611,21.393  c0.885,0.961,2.508,1.029,3.473,0.148c1-0.916,1.068-2.476,0.152-3.478l-4.113-4.485l8.406-8.918  c1.258-1.332,2.926-2.064,4.696-2.064c1.772,0,3.44,0.732,4.696,2.064l15.061,15.973C89.564,80.346,86.594,82.989,83.086,82.989z   M90.08,69.801L78.532,57.555c-2.194-2.328-5.132-3.609-8.275-3.609c-3.142,0-6.08,1.281-8.272,3.609l-8.164,8.656l-12.162-13.27  c-2.171-2.366-5.084-3.67-8.201-3.67c-3.119,0-6.031,1.304-8.202,3.67L9.92,69.673V24.004c0-3.856,3.137-6.994,6.993-6.994h66.173  c3.857,0,6.994,3.137,6.994,6.994V69.801z",
-            }),
-            r.createElement("path", {
-              stroke: "#ffffff",
-              fill: "#ffffff",
-              d: "M68.907,22.489c-6.569,0-11.914,5.344-11.914,11.914c0,6.569,5.345,11.913,11.914,11.913  c6.567,0,11.913-5.344,11.913-11.913C80.82,27.833,75.477,22.489,68.907,22.489z M68.907,41.396c-3.856,0-6.993-3.137-6.993-6.993  s3.137-6.994,6.993-6.994c3.854,0,6.991,3.138,6.991,6.994S72.764,41.396,68.907,41.396z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Lock",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                className: "topLock",
+                d: "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z",
+              }),
+              (0, r.jsx)("path", {
+                className: "baseLock",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "22",
+                strokeMiterlimit: "10",
+                d: "M84.813,172.74V73.688l0,0 c0-23.85,19.335-43.188,43.187-43.188l0,0c23.852,0,43.188,19.337,43.188,43.188l0,0v23.885",
+              }),
+            ],
+          });
         }
-        function he(e) {
-          return (0, c.Qn)()
-            ? r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_Bell",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...e,
-                },
-                r.createElement("path", {
+        function me() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Video",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                className: "videoPlayButton",
+                d: "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z",
+              }),
+            ],
+          });
+        }
+        function he() {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            className: "SVGIcon_Button SVGIcon_Image",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 100 100",
+            enableBackground: "new 0 0 100 100",
+            children: [
+              (0, r.jsx)("path", {
+                stroke: "#ffffff",
+                fill: "#ffffff",
+                d: "M83.086,12.091H16.913C10.344,12.091,5,17.435,5,24.004v51.992l0.005,0.102c0.056,6.514,5.396,11.813,11.908,11.813h66.173  c6.531,0,11.874-5.314,11.906-11.764L95,24.004C95,17.435,89.654,12.091,83.086,12.091z M83.086,82.989H16.913  c-3.516,0-6.488-2.653-6.93-6.106l18.899-20.615c1.226-1.34,2.85-2.076,4.574-2.076c1.723,0,3.347,0.736,4.574,2.078l19.611,21.393  c0.885,0.961,2.508,1.029,3.473,0.148c1-0.916,1.068-2.476,0.152-3.478l-4.113-4.485l8.406-8.918  c1.258-1.332,2.926-2.064,4.696-2.064c1.772,0,3.44,0.732,4.696,2.064l15.061,15.973C89.564,80.346,86.594,82.989,83.086,82.989z   M90.08,69.801L78.532,57.555c-2.194-2.328-5.132-3.609-8.275-3.609c-3.142,0-6.08,1.281-8.272,3.609l-8.164,8.656l-12.162-13.27  c-2.171-2.366-5.084-3.67-8.201-3.67c-3.119,0-6.031,1.304-8.202,3.67L9.92,69.673V24.004c0-3.856,3.137-6.994,6.993-6.994h66.173  c3.857,0,6.994,3.137,6.994,6.994V69.801z",
+              }),
+              (0, r.jsx)("path", {
+                stroke: "#ffffff",
+                fill: "#ffffff",
+                d: "M68.907,22.489c-6.569,0-11.914,5.344-11.914,11.914c0,6.569,5.345,11.913,11.914,11.913  c6.567,0,11.913-5.344,11.913-11.913C80.82,27.833,75.477,22.489,68.907,22.489z M68.907,41.396c-3.856,0-6.993-3.137-6.993-6.993  s3.137-6.994,6.993-6.994c3.854,0,6.991,3.138,6.991,6.994S72.764,41.396,68.907,41.396z",
+              }),
+            ],
+          });
+        }
+        function pe(e) {
+          return (0, l.Qn)()
+            ? (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Bell",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+                children: (0, r.jsx)("path", {
                   fillRule: "evenodd",
                   clipRule: "evenodd",
                   d: "M32 24V26H4V24L8 19V12C8 9.34784 9.05357 6.8043 10.9289 4.92893C12.8043 3.05357 15.3478 2 18 2C20.6522 2 23.1957 3.05357 25.0711 4.92893C26.9464 6.8043 28 9.34784 28 12V19L32 24ZM18 34C19.2396 33.9986 20.4483 33.6133 21.46 32.897C22.4718 32.1807 23.2368 31.1687 23.65 30H12.35C12.7632 31.1687 13.5282 32.1807 14.54 32.897C15.5517 33.6133 16.7604 33.9986 18 34Z",
                   fill: "currentColor",
                 }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  version: "1.1",
-                  id: "base",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: "SVGIcon_Button SVGIcon_Bell",
-                  x: "0px",
-                  y: "0px",
-                  width: "256px",
-                  height: "256px",
-                  viewBox: "0 0 256 256",
-                },
-                r.createElement("path", {
+              })
+            : (0, r.jsx)("svg", {
+                version: "1.1",
+                id: "base",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: "SVGIcon_Button SVGIcon_Bell",
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 256 256",
+                children: (0, r.jsx)("path", {
                   d: "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z",
                 }),
-              );
-        }
-        function pe(e) {
-          return r.createElement(
-            "svg",
-            {
-              style: { transform: `rotate(${e.angle}deg)` },
-              version: "1.1",
-              id: "arrowBase",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Arrow",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polyline", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              points: "128,247.688 128,8.313 181.061,61.674 ",
-            }),
-            r.createElement("polyline", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              points: "128,247.688 128,8.313 74.939,61.674 ",
-            }),
-          );
+              });
         }
         function ge(e) {
+          return (0, r.jsxs)("svg", {
+            style: { transform: `rotate(${e.angle}deg)` },
+            version: "1.1",
+            id: "arrowBase",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Arrow",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points: "128,247.688 128,8.313 181.061,61.674 ",
+              }),
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points: "128,247.688 128,8.313 74.939,61.674 ",
+              }),
+            ],
+          });
+        }
+        function fe(e) {
           const { direction: t, ...n } = e;
           switch (t) {
             case "up":
-              return r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "36px",
-                  height: "36px",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...n,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                width: "36px",
+                height: "36px",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...n,
+                children: (0, r.jsx)("path", {
                   d: "M26.23 17.31L20.5 11.58V33.54H15.5V11.58L9.76998 17.31L6.22998 13.77L18 2.00001L29.77 13.77L26.23 17.31Z",
                   fill: e.fill || "currentColor",
                 }),
-              );
+              });
             case "down":
-              return r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "36px",
-                  height: "36px",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...n,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                width: "36px",
+                height: "36px",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...n,
+                children: (0, r.jsx)("path", {
                   d: "M26.23 18.23L20.5 23.96V2H15.5V23.96L9.76998 18.23L6.22998 21.77L18 33.54L29.77 21.77L26.23 18.23Z",
                   fill: e.fill || "currentColor",
                 }),
-              );
+              });
             case "left":
-              return r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "36px",
-                  height: "36px",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...n,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                width: "36px",
+                height: "36px",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...n,
+                children: (0, r.jsx)("path", {
                   d: "M17.54 9.53998L11.81 15.27L33.77 15.27V20.27H11.81L17.54 26L14 29.54L2.23002 17.77L14 5.99998L17.54 9.53998Z",
                   fill: e.fill || "currentColor",
                 }),
-              );
+              });
             case "right":
-              return r.createElement(
-                "svg",
-                {
-                  viewBox: "0 0 36 36",
-                  width: "36px",
-                  height: "36px",
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ...n,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                viewBox: "0 0 36 36",
+                width: "36px",
+                height: "36px",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                ...n,
+                children: (0, r.jsx)("path", {
                   d: "M18.46 9.54004L24.19 15.27L2.22998 15.27L2.22998 20.27H24.19L18.46 26L22 29.54L33.77 17.77L22 6.00004L18.46 9.54004Z",
                   fill: e.fill || "currentColor",
                 }),
-              );
+              });
           }
         }
-        function fe(e) {
+        function _e(e) {
           const { angle: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_CutArrow",
-                a().HasHorizontalDirection,
-              ),
-              style: { transform: `rotate(${t || 0}deg)` },
-              x: "0px",
-              y: "0px",
-              width: "50px",
-              height: "100px",
-              viewBox: "0 0 50 100",
-              fill: e.fill || "#ffffff",
-              ...n,
-            },
-            r.createElement("polygon", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_CutArrow", c().HasHorizontalDirection),
+            style: { transform: `rotate(${t || 0}deg)` },
+            x: "0px",
+            y: "0px",
+            width: "50px",
+            height: "100px",
+            viewBox: "0 0 50 100",
+            fill: e.fill || "#ffffff",
+            ...n,
+            children: (0, r.jsx)("polygon", {
               points:
                 "0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 ",
             }),
-          );
+          });
         }
-        function _e(e) {
-          const { angle: t, singlearrow: n, ...s } = e;
-          return r.createElement(
-            "svg",
-            {
-              style: { transform: `rotate(${t}deg)` },
-              version: "1.1",
-              id: "arrowBase",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_DoubleArrow",
-                a().HasHorizontalDirection,
-              ),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              ...s,
-            },
-            r.createElement("polyline", {
-              className: "Arrow1",
-              fill: "none",
-              stroke: e.fill || "#ffffff",
-              strokeWidth: "23",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
-            }),
-            !n &&
-              r.createElement("polyline", {
-                className: "Arrow2",
+        function we(e) {
+          const { angle: t, singlearrow: n, ...i } = e;
+          return (0, r.jsxs)("svg", {
+            style: { transform: `rotate(${t}deg)` },
+            version: "1.1",
+            id: "arrowBase",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              "SVGIcon_Button SVGIcon_DoubleArrow",
+              c().HasHorizontalDirection,
+            ),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            ...i,
+            children: [
+              (0, r.jsx)("polyline", {
+                className: "Arrow1",
                 fill: "none",
                 stroke: e.fill || "#ffffff",
                 strokeWidth: "23",
                 strokeLinecap: "round",
                 strokeMiterlimit: "10",
-                points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
+                points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
               }),
-          );
+              !n &&
+                (0, r.jsx)("polyline", {
+                  className: "Arrow2",
+                  fill: "none",
+                  stroke: e.fill || "#ffffff",
+                  strokeWidth: "23",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "10",
+                  points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
+                }),
+            ],
+          });
         }
-        function we(e) {
+        function be(e) {
           const { angle: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              style: { transform: `rotate(${t}deg)` },
-              xmlns: "http://www.w3.org/2000/svg",
-              className: a().HasHorizontalDirection,
-              viewBox: "0 0 32 32",
-              fill: "none",
-              ...n,
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            style: { transform: `rotate(${t}deg)` },
+            xmlns: "http://www.w3.org/2000/svg",
+            className: c().HasHorizontalDirection,
+            viewBox: "0 0 32 32",
+            fill: "none",
+            ...n,
+            children: (0, r.jsx)("path", {
               fill: e.fill || "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M16.0855 15.5837L8.88892 8.38708L12.0316 5.24438L22.3709 15.5837L12.0316 25.923L8.88892 22.7803L16.0855 15.5837Z",
             }),
-          );
-        }
-        function be() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "arrowBase",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_DoubleArrow",
-                a().HasHorizontalDirection,
-              ),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polyline", {
-              className: "Arrow1",
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "23",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
-            }),
-            r.createElement("polyline", {
-              className: "Arrow2",
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "23",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
-            }),
-          );
+          });
         }
         function Ce() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Maximize",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("rect", {
-              x: "24",
-              y: "42.167",
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "18",
-              strokeMiterlimit: "10",
-              width: "208",
-              height: "171.667",
-            }),
-            r.createElement("line", {
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "42",
-              strokeMiterlimit: "10",
-              x1: "24",
-              y1: "54.01",
-              x2: "232",
-              y2: "54.01",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "arrowBase",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              "SVGIcon_Button SVGIcon_DoubleArrow",
+              c().HasHorizontalDirection,
+            ),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polyline", {
+                className: "Arrow1",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "23",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                points: "135.65,21.667 30.081,127.235 137.18,234.333 ",
+              }),
+              (0, r.jsx)("polyline", {
+                className: "Arrow2",
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "23",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                points: "224.389,21.667 118.821,127.235 225.92,234.333 ",
+              }),
+            ],
+          });
         }
         function ve() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Minimize",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("line", {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Maximize",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("rect", {
+                x: "24",
+                y: "42.167",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "18",
+                strokeMiterlimit: "10",
+                width: "208",
+                height: "171.667",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "42",
+                strokeMiterlimit: "10",
+                x1: "24",
+                y1: "54.01",
+                x2: "232",
+                y2: "54.01",
+              }),
+            ],
+          });
+        }
+        function Me() {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Minimize",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("line", {
               fill: "none",
               stroke: "currentColor",
               strokeWidth: "18",
@@ -18555,1473 +18369,1409 @@ var CLSTAMP = "10520954";
               x2: "232",
               y2: "209.01",
             }),
-          );
-        }
-        function Me() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Restore",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polyline", {
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "12",
-              strokeMiterlimit: "10",
-              points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
-            }),
-            r.createElement("rect", {
-              x: "24",
-              y: "90.861",
-              fill: "none",
-              stroke: "currentColor",
-              strokeWidth: "18",
-              strokeMiterlimit: "10",
-              width: "149",
-              height: "122.973",
-            }),
-          );
+          });
         }
         function Se() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Reload",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "30",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              d: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
-            }),
-            r.createElement("polygon", {
-              points: "147.639,108.361 245.755,10.166 245.834,108.361 ",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Restore",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "12",
+                strokeMiterlimit: "10",
+                points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 ",
+              }),
+              (0, r.jsx)("rect", {
+                x: "24",
+                y: "90.861",
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: "18",
+                strokeMiterlimit: "10",
+                width: "149",
+                height: "122.973",
+              }),
+            ],
+          });
+        }
+        function xe() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Reload",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "30",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                d: "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895",
+              }),
+              (0, r.jsx)("polygon", {
+                points: "147.639,108.361 245.755,10.166 245.834,108.361 ",
+              }),
+            ],
+          });
         }
         function ye() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Trade",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z",
-            }),
-            r.createElement("path", {
-              d: "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Trade",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                d: "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z",
+              }),
+            ],
+          });
         }
-        function Ee(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+        function Be(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               d: "M7 14H29L27 32H9L7 14ZM24 6L22 2H14L12 6H4V10H32V6H24Z",
               fill: "currentColor",
             }),
-          );
-        }
-        function Be() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Trash",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { className: "base" },
-              r.createElement("path", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909",
-              }),
-            ),
-            r.createElement(
-              "g",
-              { className: "lines" },
-              r.createElement("path", {
-                className: "line1",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M128,68.12v137.197",
-              }),
-              r.createElement("path", {
-                className: "line2",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M83.613,68.12 l4.035,137.197",
-              }),
-              r.createElement("path", {
-                className: "line3",
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M172.387,68.12 l-4.035,137.197",
-              }),
-            ),
-            r.createElement(
-              "g",
-              { className: "lid" },
-              r.createElement("path", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M27.121,38.577H228.88",
-              }),
-              r.createElement("path", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                d: "M87.648,38.577l4.319-10.796c2.072-5.181,8.292-9.379,13.84-9.379h44.386 c5.572,0,11.761,4.18,13.841,9.379l4.319,10.796",
-              }),
-            ),
-          );
+          });
         }
         function Le() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              style: {
-                overflow: "visible",
-                width: "100%",
-                height: "100%",
-                maxWidth: "320px",
-                maxHeight: "320px",
-              },
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { className: "base" },
-              r.createElement("path", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Trash",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("g", {
+                className: "base",
+                children: (0, r.jsx)("path", {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  d: "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909",
+                }),
               }),
-            ),
-            r.createElement(
-              "g",
-              { className: "lines" },
-              r.createElement("path", {
-                className: "line1",
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M128,68.12v137.197",
+              (0, r.jsxs)("g", {
+                className: "lines",
+                children: [
+                  (0, r.jsx)("path", {
+                    className: "line1",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M128,68.12v137.197",
+                  }),
+                  (0, r.jsx)("path", {
+                    className: "line2",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M83.613,68.12 l4.035,137.197",
+                  }),
+                  (0, r.jsx)("path", {
+                    className: "line3",
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M172.387,68.12 l-4.035,137.197",
+                  }),
+                ],
               }),
-              r.createElement("path", {
-                className: "line2",
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M83.613,68.12 l4.035,137.197",
+              (0, r.jsxs)("g", {
+                className: "lid",
+                children: [
+                  (0, r.jsx)("path", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M27.121,38.577H228.88",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    d: "M87.648,38.577l4.319-10.796c2.072-5.181,8.292-9.379,13.84-9.379h44.386 c5.572,0,11.761,4.18,13.841,9.379l4.319,10.796",
+                  }),
+                ],
               }),
-              r.createElement("path", {
-                className: "line3",
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M172.387,68.12 l-4.035,137.197",
-              }),
-            ),
-            r.createElement(
-              "g",
-              { className: "lid" },
-              r.createElement("path", {
-                fill: "none",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeLinejoin: "round",
-                d: "M27.121,38.577H228.88",
-              }),
-              r.createElement("path", {
-                fill: "none",
-                strokeWidth: "10",
-                d: "M87.648,38.577l4.319-10.796c2.072-5.181,8.292-9.379,13.84-9.379h44.386 c5.572,0,11.761,4.18,13.841,9.379l4.319,10.796",
-              }),
-            ),
-          );
+            ],
+          });
         }
-        function xe(e) {
-          const { angle: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              style: { transform: `rotate(${e.angle}deg)` },
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_FlatArrow",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              ...n,
+        function ke() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: {
+              overflow: "visible",
+              width: "100%",
+              height: "100%",
+              maxWidth: "320px",
+              maxHeight: "320px",
             },
-            r.createElement("polygon", {
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("g", {
+                className: "base",
+                children: (0, r.jsx)("path", {
+                  fill: "none",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  d: "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909",
+                }),
+              }),
+              (0, r.jsxs)("g", {
+                className: "lines",
+                children: [
+                  (0, r.jsx)("path", {
+                    className: "line1",
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M128,68.12v137.197",
+                  }),
+                  (0, r.jsx)("path", {
+                    className: "line2",
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M83.613,68.12 l4.035,137.197",
+                  }),
+                  (0, r.jsx)("path", {
+                    className: "line3",
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M172.387,68.12 l-4.035,137.197",
+                  }),
+                ],
+              }),
+              (0, r.jsxs)("g", {
+                className: "lid",
+                children: [
+                  (0, r.jsx)("path", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M27.121,38.577H228.88",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "none",
+                    strokeWidth: "10",
+                    d: "M87.648,38.577l4.319-10.796c2.072-5.181,8.292-9.379,13.84-9.379h44.386 c5.572,0,11.761,4.18,13.841,9.379l4.319,10.796",
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
+        function Ie(e) {
+          const { angle: t, ...n } = e;
+          return (0, r.jsx)("svg", {
+            style: { transform: `rotate(${e.angle}deg)` },
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_FlatArrow",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            ...n,
+            children: (0, r.jsx)("polygon", {
               points: "13.913,141 128,59 242.087,141 ",
               fill: e.fill || "#ffffff",
             }),
-          );
+          });
         }
-        function ke(e) {
-          let { bPending: t, bShowArm: n, className: s, ...o } = e;
-          return (0, c.Qn)({ bSuppressAssert: !0 })
-            ? r.createElement(
-                "svg",
-                {
-                  className: (0, i.A)(
-                    "SVGIcon_Button",
-                    "SVGIcon_FriendIcon",
-                    s,
-                  ),
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  ...o,
-                },
-                r.createElement("path", {
-                  d: "M18 17C15.6131 17 13.3239 17.9482 11.636 19.636C9.94821 21.3239 9 23.6131 9 26V31H27V26C27 23.6131 26.0518 21.3239 24.364 19.636C22.6761 17.9482 20.3869 17 18 17ZM18 14C18.9889 14 19.9556 13.7068 20.7779 13.1573C21.6001 12.6079 22.241 11.827 22.6194 10.9134C22.9978 9.99979 23.0969 8.99446 22.9039 8.02455C22.711 7.05465 22.2348 6.16373 21.5355 5.46447C20.8363 4.76521 19.9454 4.289 18.9755 4.09608C18.0055 3.90315 17.0002 4.00217 16.0866 4.3806C15.173 4.75904 14.3921 5.39991 13.8427 6.22215C13.2932 7.0444 13 8.0111 13 9C13 10.3261 13.5268 11.5979 14.4645 12.5355C15.4021 13.4732 16.6739 14 18 14Z",
-                  fill: "currentColor",
-                }),
-                r.createElement("path", {
-                  className: "WavingArm",
-                  opacity: n ? "1" : "0",
-                  d: "M4.67541 11.8555C5.6007 10.8308 7.18156 10.7501 8.20635 11.6754L18.9515 21.3773L15.6007 25.0884L4.85556 15.3865C3.83077 14.4612 3.75011 12.8803 4.67541 11.8555V11.8555Z",
-                  fill: "currentColor",
-                  strokeWidth: "0",
-                }),
-                r.createElement("path", {
-                  opacity: n ? "1" : "0",
-                  d: "M32.3573 11.8876C33.2626 12.93 33.1515 14.509 32.109 15.4144L23.2784 23.083L20 19.3078L28.8305 11.6392C29.873 10.7339 31.452 10.8451 32.3573 11.8876Z",
-                  fill: "currentColor",
-                  strokeWidth: "0",
-                }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  version: "1.1",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: (0, i.A)(
-                    "SVGIcon_Button",
-                    "SVGIcon_FriendIcon",
-                    t ? " SVGIcon_FriendIcon_Pending" : "",
-                    s,
-                  ),
-                  x: "0px",
-                  y: "0px",
-                  width: "256px",
-                  height: "256px",
-                  viewBox: "0 0 256 256",
-                },
-                r.createElement(
-                  "g",
-                  { className: "Outline" },
-                  r.createElement(
-                    "g",
-                    {
-                      transform:
-                        "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-                    },
-                    r.createElement("path", {
-                      d: "M102.239,90.394c-22.556,0-40.906-18.351-40.906-40.906c0-22.556,18.35-40.906,40.906-40.906s40.906,18.35,40.906,40.906 C143.145,72.043,124.795,90.394,102.239,90.394z",
-                    }),
-                  ),
-                  r.createElement("path", {
-                    d: "M127.453,250.212c-30.208,0-52.086-4.188-65.028-12.45c-12.507-7.983-13.141-17.484-13.141-19.308v-41.781 c0-20.554,5.356-38.104,15.489-50.754c11.63-14.519,29.216-22.193,50.858-22.194h23.646c21.643,0,39.229,7.674,50.858,22.193 c10.133,12.65,15.488,30.201,15.488,50.754v41.751c0.011,2.202-0.586,8.058-6.43,14.175 c-11.164,11.687-35.301,17.613-71.732,17.613C127.458,250.212,127.458,250.212,127.453,250.212z",
-                  }),
-                  r.createElement("path", {
-                    className: "WavingArm",
-                    opacity: t ? "1" : "0",
-                    d: "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z",
-                  }),
-                ),
-                r.createElement(
-                  "g",
-                  { className: "foreground" },
-                  r.createElement(
-                    "g",
-                    {
-                      transform:
-                        "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
-                    },
-                    r.createElement("circle", {
-                      fill: "currentColor",
-                      cx: "102.239",
-                      cy: "49.488",
-                      r: "33.446",
-                    }),
-                  ),
-                  r.createElement("path", {
+        function Re(e) {
+          let { bPending: t, bShowArm: n, className: i, ...o } = e;
+          return (0, l.Qn)({ bSuppressAssert: !0 })
+            ? (0, r.jsxs)("svg", {
+                className: (0, s.A)("SVGIcon_Button", "SVGIcon_FriendIcon", i),
+                viewBox: "0 0 36 36",
+                fill: "none",
+                xmlns: "http://www.w3.org/2000/svg",
+                ...o,
+                children: [
+                  (0, r.jsx)("path", {
+                    d: "M18 17C15.6131 17 13.3239 17.9482 11.636 19.636C9.94821 21.3239 9 23.6131 9 26V31H27V26C27 23.6131 26.0518 21.3239 24.364 19.636C22.6761 17.9482 20.3869 17 18 17ZM18 14C18.9889 14 19.9556 13.7068 20.7779 13.1573C21.6001 12.6079 22.241 11.827 22.6194 10.9134C22.9978 9.99979 23.0969 8.99446 22.9039 8.02455C22.711 7.05465 22.2348 6.16373 21.5355 5.46447C20.8363 4.76521 19.9454 4.289 18.9755 4.09608C18.0055 3.90315 17.0002 4.00217 16.0866 4.3806C15.173 4.75904 14.3921 5.39991 13.8427 6.22215C13.2932 7.0444 13 8.0111 13 9C13 10.3261 13.5268 11.5979 14.4645 12.5355C15.4021 13.4732 16.6739 14 18 14Z",
                     fill: "currentColor",
-                    d: "M195.624,218.454v-41.781c0-34.743-16.666-62.948-56.347-62.948h-11.822h-0.997h-10.826 c-39.68,0.001-56.348,28.205-56.348,62.948v41.781c0,0,0,21.758,68.169,21.758C196.62,240.214,195.624,218.454,195.624,218.454z",
                   }),
-                  r.createElement("path", {
+                  (0, r.jsx)("path", {
                     className: "WavingArm",
-                    opacity: t ? "1" : "0",
-                    d: "M41.167,76.833c6.53-0.734,39.348,39.127,50.007,47.647c10.659,8.52,21.327,16.686,15.16,25.353 s-20.646,16.74-36.167,2.5 s-48.516-48.801-47.167-54S31.599,77.909,41.167,76.833z",
+                    opacity: n ? "1" : "0",
+                    d: "M4.67541 11.8555C5.6007 10.8308 7.18156 10.7501 8.20635 11.6754L18.9515 21.3773L15.6007 25.0884L4.85556 15.3865C3.83077 14.4612 3.75011 12.8803 4.67541 11.8555V11.8555Z",
+                    fill: "currentColor",
+                    strokeWidth: "0",
                   }),
+                  (0, r.jsx)("path", {
+                    opacity: n ? "1" : "0",
+                    d: "M32.3573 11.8876C33.2626 12.93 33.1515 14.509 32.109 15.4144L23.2784 23.083L20 19.3078L28.8305 11.6392C29.873 10.7339 31.452 10.8451 32.3573 11.8876Z",
+                    fill: "currentColor",
+                    strokeWidth: "0",
+                  }),
+                ],
+              })
+            : (0, r.jsxs)("svg", {
+                version: "1.1",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: (0, s.A)(
+                  "SVGIcon_Button",
+                  "SVGIcon_FriendIcon",
+                  t ? " SVGIcon_FriendIcon_Pending" : "",
+                  i,
                 ),
-              );
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 256 256",
+                children: [
+                  (0, r.jsxs)("g", {
+                    className: "Outline",
+                    children: [
+                      (0, r.jsx)("g", {
+                        transform:
+                          "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
+                        children: (0, r.jsx)("path", {
+                          d: "M102.239,90.394c-22.556,0-40.906-18.351-40.906-40.906c0-22.556,18.35-40.906,40.906-40.906s40.906,18.35,40.906,40.906 C143.145,72.043,124.795,90.394,102.239,90.394z",
+                        }),
+                      }),
+                      (0, r.jsx)("path", {
+                        d: "M127.453,250.212c-30.208,0-52.086-4.188-65.028-12.45c-12.507-7.983-13.141-17.484-13.141-19.308v-41.781 c0-20.554,5.356-38.104,15.489-50.754c11.63-14.519,29.216-22.193,50.858-22.194h23.646c21.643,0,39.229,7.674,50.858,22.193 c10.133,12.65,15.488,30.201,15.488,50.754v41.751c0.011,2.202-0.586,8.058-6.43,14.175 c-11.164,11.687-35.301,17.613-71.732,17.613C127.458,250.212,127.458,250.212,127.453,250.212z",
+                      }),
+                      (0, r.jsx)("path", {
+                        className: "WavingArm",
+                        opacity: t ? "1" : "0",
+                        d: "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z",
+                      }),
+                    ],
+                  }),
+                  (0, r.jsxs)("g", {
+                    className: "foreground",
+                    children: [
+                      (0, r.jsx)("g", {
+                        transform:
+                          "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)",
+                        children: (0, r.jsx)("circle", {
+                          fill: "currentColor",
+                          cx: "102.239",
+                          cy: "49.488",
+                          r: "33.446",
+                        }),
+                      }),
+                      (0, r.jsx)("path", {
+                        fill: "currentColor",
+                        d: "M195.624,218.454v-41.781c0-34.743-16.666-62.948-56.347-62.948h-11.822h-0.997h-10.826 c-39.68,0.001-56.348,28.205-56.348,62.948v41.781c0,0,0,21.758,68.169,21.758C196.62,240.214,195.624,218.454,195.624,218.454z",
+                      }),
+                      (0, r.jsx)("path", {
+                        className: "WavingArm",
+                        opacity: t ? "1" : "0",
+                        d: "M41.167,76.833c6.53-0.734,39.348,39.127,50.007,47.647c10.659,8.52,21.327,16.686,15.16,25.353 s-20.646,16.74-36.167,2.5 s-48.516-48.801-47.167-54S31.599,77.909,41.167,76.833z",
+                      }),
+                    ],
+                  }),
+                ],
+              });
         }
-        function Ie(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_FavoriteFriends",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+        function Te(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_FavoriteFriends",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               d: "M18 34.05H2C2 31.9283 2.84285 29.8935 4.34315 28.3932C5.84344 26.8929 7.87827 26.05 10 26.05C12.1217 26.05 14.1566 26.8929 15.6569 28.3932C17.1571 29.8935 18 31.9283 18 34.05ZM10 23.05C10.89 23.05 11.76 22.7861 12.5001 22.2917C13.2401 21.7972 13.8169 21.0944 14.1575 20.2721C14.4981 19.4499 14.5872 18.5451 14.4135 17.6721C14.2399 16.7992 13.8113 15.9974 13.182 15.3681C12.5526 14.7387 11.7508 14.3101 10.8779 14.1365C10.005 13.9629 9.10019 14.052 8.27792 14.3926C7.45566 14.7332 6.75285 15.31 6.25839 16.05C5.76392 16.79 5.5 17.66 5.5 18.55C5.49868 19.1414 5.61418 19.7271 5.83986 20.2737C6.06554 20.8202 6.39695 21.3168 6.81508 21.735C7.23321 22.1531 7.72981 22.4845 8.27637 22.7102C8.82293 22.9359 9.40868 23.0514 10 23.05ZM31.66 28.39C30.186 26.916 28.1949 26.0755 26.1105 26.0474C24.0261 26.0194 22.0131 26.8061 20.5 28.24C21.4889 30.0165 22.0054 32.0169 22 34.05H34C34.0008 32.9992 33.7946 31.9584 33.3931 30.9873C32.9916 30.0161 32.4027 29.1336 31.66 28.39ZM21.5 18.55C21.5 19.4401 21.7639 20.3101 22.2584 21.0501C22.7529 21.7901 23.4557 22.3669 24.2779 22.7075C25.1002 23.0481 26.005 23.1372 26.8779 22.9636C27.7508 22.7899 28.5526 22.3614 29.182 21.732C29.8113 21.1027 30.2399 20.3009 30.4135 19.428C30.5872 18.555 30.4981 17.6502 30.1575 16.828C29.8169 16.0057 29.2401 15.3029 28.5001 14.8084C27.76 14.314 26.89 14.05 26 14.05C25.4087 14.0487 24.8229 14.1642 24.2764 14.3899C23.7298 14.6156 23.2332 14.947 22.8151 15.3651C22.397 15.7833 22.0655 16.2799 21.8399 16.8264C21.6142 17.373 21.4987 17.9587 21.5 18.55ZM20.83 6.91005L23.65 4.16005L19.75 3.59005L18 0.0500488L16.25 3.59005L12.35 4.16005L15.17 6.91005L14.51 10.81L18 9.00005L21.49 10.84L20.83 6.91005Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function Re() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_DoNotDisturb",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("circle", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "24",
-              strokeMiterlimit: "10",
-              cx: "128",
-              cy: "128",
-              r: "101.5",
-            }),
-            r.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "24",
-              strokeMiterlimit: "10",
-              x1: "73",
-              y1: "128",
-              x2: "183",
-              y2: "128",
-            }),
-          );
+        function je() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_DoNotDisturb",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("circle", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "24",
+                strokeMiterlimit: "10",
+                cx: "128",
+                cy: "128",
+                r: "101.5",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "24",
+                strokeMiterlimit: "10",
+                x1: "73",
+                y1: "128",
+                x2: "183",
+                y2: "128",
+              }),
+            ],
+          });
         }
-        function Te(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              style: { transform: `scaleX(${e.bFlipHorizontal ? -1 : 1})` },
-              className: "SVGIcon_Button SVGIcon_MediaControls",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              className: "Arrow",
-              d: "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003",
-            }),
-            r.createElement("polyline", {
-              className: "preArrowBox",
-              opacity: e.bHidePreArrow ? "0" : "1",
-              points:
-                "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t",
-            }),
-            r.createElement("polyline", {
-              className: "jumpAheadBox",
-              opacity: e.bShowJumpAheadBox ? "1" : "0",
-              points:
-                "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t",
-            }),
-            r.createElement("polyline", {
-              className: "postArrowBox",
-              opacity: e.bHidePostArrow ? "0" : "1",
-              points:
-                "209.29,54.763 249.167,54.763 249.167,201.236 209.29,201.236 \t",
-            }),
-          );
+        function Ee(e) {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            style: { transform: `scaleX(${e.bFlipHorizontal ? -1 : 1})` },
+            className: "SVGIcon_Button SVGIcon_MediaControls",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                className: "Arrow",
+                d: "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003",
+              }),
+              (0, r.jsx)("polyline", {
+                className: "preArrowBox",
+                opacity: e.bHidePreArrow ? "0" : "1",
+                points:
+                  "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t",
+              }),
+              (0, r.jsx)("polyline", {
+                className: "jumpAheadBox",
+                opacity: e.bShowJumpAheadBox ? "1" : "0",
+                points:
+                  "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t",
+              }),
+              (0, r.jsx)("polyline", {
+                className: "postArrowBox",
+                opacity: e.bHidePostArrow ? "0" : "1",
+                points:
+                  "209.29,54.763 249.167,54.763 249.167,201.236 209.29,201.236 \t",
+              }),
+            ],
+          });
         }
         function Fe() {
-          const [e, t] = (0, l.l)(),
-            [n, s] = (0, l.l)();
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_SteamTV", a().SteamTVIcon),
-              x: "0px",
-              y: "0px",
-              width: "1024px",
-              height: "256px",
-              viewBox: "0 0 1024 256",
-            },
-            r.createElement(
-              "defs",
-              null,
-              r.createElement(
-                "linearGradient",
-                { id: e, x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
-                r.createElement("stop", {
-                  offset: "0%",
-                  stopColor: "rgb(55, 102, 251)",
-                }),
-                r.createElement("stop", {
-                  offset: "100%",
-                  stopColor: "rgb(91, 106, 219)",
-                }),
-              ),
-              r.createElement(
-                "linearGradient",
-                { id: n, x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
-                r.createElement("stop", {
-                  offset: "0%",
-                  stopColor: "rgb(91, 106, 219)",
-                }),
-                r.createElement("stop", {
-                  offset: "100%",
-                  stopColor: "rgb(125, 110, 188)",
-                }),
-              ),
-            ),
-            r.createElement(
-              "g",
-              { id: "logo", className: a().SteamTVLogo },
-              r.createElement("circle", {
-                className: "logoBG",
-                opacity: "0",
-                fill: "#000000",
-                cx: "156.586",
-                cy: "128",
-                r: "125.914",
+          const [e, t] = (0, u.l)(),
+            [n, i] = (0, u.l)();
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_SteamTV", c().SteamTVIcon),
+            x: "0px",
+            y: "0px",
+            width: "1024px",
+            height: "256px",
+            viewBox: "0 0 1024 256",
+            children: [
+              (0, r.jsxs)("defs", {
+                children: [
+                  (0, r.jsxs)("linearGradient", {
+                    id: e,
+                    x1: "0%",
+                    y1: "0%",
+                    x2: "100%",
+                    y2: "0%",
+                    children: [
+                      (0, r.jsx)("stop", {
+                        offset: "0%",
+                        stopColor: "rgb(55, 102, 251)",
+                      }),
+                      (0, r.jsx)("stop", {
+                        offset: "100%",
+                        stopColor: "rgb(91, 106, 219)",
+                      }),
+                    ],
+                  }),
+                  (0, r.jsxs)("linearGradient", {
+                    id: n,
+                    x1: "0%",
+                    y1: "0%",
+                    x2: "100%",
+                    y2: "0%",
+                    children: [
+                      (0, r.jsx)("stop", {
+                        offset: "0%",
+                        stopColor: "rgb(91, 106, 219)",
+                      }),
+                      (0, r.jsx)("stop", {
+                        offset: "100%",
+                        stopColor: "rgb(125, 110, 188)",
+                      }),
+                    ],
+                  }),
+                ],
               }),
-              r.createElement("path", {
-                fill: t,
-                d: "M156.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.016,1.934,0.051l29.226-42.355c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.239,20.745,46.239,46.241c0,25.494-20.741,46.241-46.239,46.241 c-0.352,0-0.698-0.01-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.14-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.991-34.026-27.87l-46.993-19.429c14.55,51.464,61.831,89.19,117.957,89.19 c67.713,0,122.605-54.893,122.605-122.604C278.978,60.244,224.086,5.355,156.374,5.355",
+              (0, r.jsxs)("g", {
+                id: "logo",
+                className: c().SteamTVLogo,
+                children: [
+                  (0, r.jsx)("circle", {
+                    className: "logoBG",
+                    opacity: "0",
+                    fill: "#000000",
+                    cx: "156.586",
+                    cy: "128",
+                    r: "125.914",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: t,
+                    d: "M156.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.016,1.934,0.051l29.226-42.355c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.239,20.745,46.239,46.241c0,25.494-20.741,46.241-46.239,46.241 c-0.352,0-0.698-0.01-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.14-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.991-34.026-27.87l-46.993-19.429c14.55,51.464,61.831,89.19,117.957,89.19 c67.713,0,122.605-54.893,122.605-122.604C278.978,60.244,224.086,5.355,156.374,5.355",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "rgb(67, 104, 241)",
+                    d: "M111.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.028c2.674-6.416,2.694-13.5,0.04-19.929c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.648-13.196-2.552-19.198-0.291l15.561,6.436c9.776,4.074,14.396,15.299,10.324,25.072 C132.031,190.841,120.801,195.464,111.026,191.387",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "rgb(79, 105, 230)",
+                    d: "M227.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.812,13.821-30.812,30.809 c0,16.988,13.824,30.806,30.812,30.806C213.818,127.165,227.639,113.347,227.639,96.359 M173.736,96.306 c0-12.783,10.364-23.142,23.145-23.142c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.361,23.142-23.145,23.142 C184.1,119.447,173.736,109.089,173.736,96.306",
+                  }),
+                ],
               }),
-              r.createElement("path", {
-                fill: "rgb(67, 104, 241)",
-                d: "M111.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.028c2.674-6.416,2.694-13.5,0.04-19.929c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.648-13.196-2.552-19.198-0.291l15.561,6.436c9.776,4.074,14.396,15.299,10.324,25.072 C132.031,190.841,120.801,195.464,111.026,191.387",
+              (0, r.jsxs)("g", {
+                id: "steam",
+                className: c().SteamTVSteam,
+                children: [
+                  (0, r.jsx)("path", {
+                    fill: "rgb(92, 106, 218)",
+                    d: "M404.52,91.9l-7.968,14.006c-6.138-4.287-14.455-6.862-21.717-6.862c-8.299,0-13.437,3.43-13.437,9.586 c0,7.473,9.124,9.212,22.682,14.082c14.574,5.149,22.948,11.21,22.948,24.558c0,18.264-14.359,28.519-34.998,28.519 c-10.063,0-22.195-2.595-31.53-8.265l5.815-15.539c7.579,4.008,16.644,6.381,24.722,6.381c10.897,0,16.071-4.021,16.071-9.96 c0-6.802-7.893-8.843-20.641-13.06c-14.521-4.856-24.586-11.213-24.586-25.992c0-16.658,13.34-26.225,32.538-26.225 C387.797,83.128,398.551,87.367,404.52,91.9",
+                  }),
+                  (0, r.jsx)("polygon", {
+                    fill: "rgb(99, 107, 211)",
+                    points:
+                      "468.163,100.753 468.163,174.252 449.402,174.252 449.402,100.753 422.166,100.753 422.166,84.663 495.315,84.663 495.315,100.753 \t",
+                  }),
+                  (0, r.jsx)("polygon", {
+                    fill: "rgb(108, 108, 203)",
+                    points:
+                      "533.512,100.706 533.512,120.896 569.417,120.896 569.417,136.982 533.512,136.982 533.512,158.014 575.173,158.014 575.173,174.253 514.757,174.253 514.757,84.665 575.173,84.665 575.173,100.706",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "rgb(117, 109, 195)",
+                    d: "M617.054,156.857l-5.932,17.396h-19.67l33.593-89.594h18.888l34.539,89.594h-20.336l-6.061-17.396H617.054z M634.378,106.035l-12.23,35.87h24.723L634.378,106.035z",
+                  }),
+                  (0, r.jsx)("polygon", {
+                    fill: "rgb(125, 110, 188)",
+                    points:
+                      "773.403,119.291 748.888,171.645 738.302,171.645 714.182,119.758 714.182,174.253 696.212,174.253 696.212,84.665 714.138,84.665 744.251,149.33 773.285,84.665 791.374,84.665 791.374,174.253 773.406,174.253",
+                  }),
+                ],
               }),
-              r.createElement("path", {
-                fill: "rgb(79, 105, 230)",
-                d: "M227.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.812,13.821-30.812,30.809 c0,16.988,13.824,30.806,30.812,30.806C213.818,127.165,227.639,113.347,227.639,96.359 M173.736,96.306 c0-12.783,10.364-23.142,23.145-23.142c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.361,23.142-23.145,23.142 C184.1,119.447,173.736,109.089,173.736,96.306",
+              (0, r.jsxs)("g", {
+                id: "tv",
+                className: c().SteamTVTV,
+                children: [
+                  (0, r.jsx)("polygon", {
+                    fill: "rgb(125, 110, 188)",
+                    points:
+                      "853.961,92.664 823.506,92.664 823.506,84.147 893.835,84.147 893.835,92.664 863.51,92.664 863.51,174.479 853.961,174.479",
+                  }),
+                  (0, r.jsx)("polygon", {
+                    fill: "rgb(125, 110, 188)",
+                    points:
+                      "909.835,84.147 920.286,84.147 950.612,165.831 980.033,84.147 990.487,84.147 956.421,174.479 944.159,174.479",
+                  }),
+                ],
               }),
-            ),
-            r.createElement(
-              "g",
-              { id: "steam", className: a().SteamTVSteam },
-              r.createElement("path", {
-                fill: "rgb(92, 106, 218)",
-                d: "M404.52,91.9l-7.968,14.006c-6.138-4.287-14.455-6.862-21.717-6.862c-8.299,0-13.437,3.43-13.437,9.586 c0,7.473,9.124,9.212,22.682,14.082c14.574,5.149,22.948,11.21,22.948,24.558c0,18.264-14.359,28.519-34.998,28.519 c-10.063,0-22.195-2.595-31.53-8.265l5.815-15.539c7.579,4.008,16.644,6.381,24.722,6.381c10.897,0,16.071-4.021,16.071-9.96 c0-6.802-7.893-8.843-20.641-13.06c-14.521-4.856-24.586-11.213-24.586-25.992c0-16.658,13.34-26.225,32.538-26.225 C387.797,83.128,398.551,87.367,404.52,91.9",
-              }),
-              r.createElement("polygon", {
-                fill: "rgb(99, 107, 211)",
-                points:
-                  "468.163,100.753 468.163,174.252 449.402,174.252 449.402,100.753 422.166,100.753 422.166,84.663 495.315,84.663 495.315,100.753 \t",
-              }),
-              r.createElement("polygon", {
-                fill: "rgb(108, 108, 203)",
-                points:
-                  "533.512,100.706 533.512,120.896 569.417,120.896 569.417,136.982 533.512,136.982 533.512,158.014 575.173,158.014 575.173,174.253 514.757,174.253 514.757,84.665 575.173,84.665 575.173,100.706",
-              }),
-              r.createElement("path", {
-                fill: "rgb(117, 109, 195)",
-                d: "M617.054,156.857l-5.932,17.396h-19.67l33.593-89.594h18.888l34.539,89.594h-20.336l-6.061-17.396H617.054z M634.378,106.035l-12.23,35.87h24.723L634.378,106.035z",
-              }),
-              r.createElement("polygon", {
-                fill: "rgb(125, 110, 188)",
-                points:
-                  "773.403,119.291 748.888,171.645 738.302,171.645 714.182,119.758 714.182,174.253 696.212,174.253 696.212,84.665 714.138,84.665 744.251,149.33 773.285,84.665 791.374,84.665 791.374,174.253 773.406,174.253",
-              }),
-            ),
-            r.createElement(
-              "g",
-              { id: "tv", className: a().SteamTVTV },
-              r.createElement("polygon", {
-                fill: "rgb(125, 110, 188)",
-                points:
-                  "853.961,92.664 823.506,92.664 823.506,84.147 893.835,84.147 893.835,92.664 863.51,92.664 863.51,174.479 853.961,174.479",
-              }),
-              r.createElement("polygon", {
-                fill: "rgb(125, 110, 188)",
-                points:
-                  "909.835,84.147 920.286,84.147 950.612,165.831 980.033,84.147 990.487,84.147 956.421,174.479 944.159,174.479",
-              }),
-            ),
-          );
+            ],
+          });
         }
         function Oe(e) {
-          const t = (0, i.A)(
+          const t = (0, s.A)(
             "SVGIcon_Button",
             "SVGIcon_SteamLogo",
             e && e.className,
           );
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              fill: "#FFFFFF",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 256 256",
-              ...e,
-              className: t,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
-            }),
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
-            }),
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            fill: "#FFFFFF",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 256 256",
+            ...e,
+            className: t,
+            children: [
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                d: "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355",
+              }),
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                d: "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387",
+              }),
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                d: "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306",
+              }),
+            ],
+          });
         }
         function De() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Viewers",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              className: "frontGuy",
-              fill: "#666666",
-              d: "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z",
-            }),
-            r.createElement("path", {
-              className: "backGuy",
-              fill: "rgb(144, 153, 161)",
-              d: "M84.204,34.396c-20.068,0-36.385,15.38-36.385,38.074v29.258c0,20.818,27.945,24.382,28.32,24.944 c-12.378,3.189-36.01,9.565-47.638,18.006c-9.753,7.127-13.504,21.006-15.379,26.632c-0.75,2.251-1.876,6.002-1.876,8.253  c0,0,0,11.44,0,23.257c0,11.815,15.004,19.13,20.819,19.13h104.279c5.814,0,20.818-6.564,20.818-19.13c0-12.566,0-23.257,0-23.257 c0-2.438-1.125-6.564-2.063-8.815c-5.063-12.566-5.438-18.942-15.566-26.069c-11.628-8.065-34.885-14.067-47.076-17.443 c0.375-0.563,28.133-4.876,28.133-25.695V72.469C120.59,49.775,104.272,34.396,84.204,34.396L84.204,34.396z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Viewers",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                className: "frontGuy",
+                fill: "#666666",
+                d: "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z",
+              }),
+              (0, r.jsx)("path", {
+                className: "backGuy",
+                fill: "rgb(144, 153, 161)",
+                d: "M84.204,34.396c-20.068,0-36.385,15.38-36.385,38.074v29.258c0,20.818,27.945,24.382,28.32,24.944 c-12.378,3.189-36.01,9.565-47.638,18.006c-9.753,7.127-13.504,21.006-15.379,26.632c-0.75,2.251-1.876,6.002-1.876,8.253  c0,0,0,11.44,0,23.257c0,11.815,15.004,19.13,20.819,19.13h104.279c5.814,0,20.818-6.564,20.818-19.13c0-12.566,0-23.257,0-23.257 c0-2.438-1.125-6.564-2.063-8.815c-5.063-12.566-5.438-18.942-15.566-26.069c-11.628-8.065-34.885-14.067-47.076-17.443 c0.375-0.563,28.133-4.876,28.133-25.695V72.469C120.59,49.775,104.272,34.396,84.204,34.396L84.204,34.396z",
+              }),
+            ],
+          });
         }
         function Ae(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_5",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_ChatBubble",
-                a().FlipInRTL,
-              ),
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 64 64",
-              role: "presentation",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_5",
+            className: (0, s.A)(
+              "SVGIcon_Button SVGIcon_ChatBubble",
+              c().FlipInRTL,
+            ),
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 64 64",
+            role: "presentation",
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("path", {
                 d: "M33,5C18.7,5,7.1,16.6,7.1,30.9c0,5.2,1.5,10.1,4.2,14.1c-0.6,3.7-4.5,10.5-6.2,13.5c-1.3,2.2,11.4-3.8,16.3-4.5c3.5,1.8,7.5,2.8,11.7,2.8c14.3,0,25.9-11.6,25.9-25.9S47.3,5,33,5z",
               }),
-            ),
-          );
+            }),
+          });
         }
         function Ne() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_5",
-              className: "SVGIcon_Button SVGIcon_Globe",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 64 64",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_5",
+            className: "SVGIcon_Button SVGIcon_Globe",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 64 64",
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("path", {
                 d: "M32.5,5C17.9,5,6,16.9,6,31.5C6,46.1,17.9,58,32.5,58S59,46.1,59,31.5C59,16.9,47.1,5,32.5,5 M32.5,54.7c-1.2,0-2.5-0.1-3.7-0.3c-1.1-1.1-2.1-2.8-3-4.8c-0.8-1.8-1.4-3.8-2-6c2.7-0.3,5.6-0.5,8.6-0.5c3,0,5.9,0.2,8.6,0.5c-0.5,2.2-1.2,4.2-2,6c-0.9,2-1.9,3.7-3,4.8C35,54.6,33.7,54.7,32.5,54.7 M32.5,41.4c-3.2,0-6.2,0.2-9,0.5c-0.6-3-0.9-6.2-1-9.6h19.9c0,3.4-0.4,6.6-1,9.6C38.7,41.6,35.7,41.4,32.5,41.4 M32.5,8.3c1.2,0,2.5,0.1,3.7,0.3c1.1,1.1,2.1,2.8,3,4.8c0.8,1.8,1.4,3.8,2,6c-2.7,0.3-5.6,0.5-8.6,0.5c-3,0-5.9-0.2-8.6-0.5c0.5-2.2,1.2-4.2,2-6c0.9-2,1.9-3.7,3-4.8C30,8.4,31.3,8.3,32.5,8.3 M32.5,21.6c3.2,0,6.2-0.2,9-0.5c0.6,3,0.9,6.2,1,9.6H22.6c0-3.4,0.4-6.6,1-9.6C26.3,21.4,29.3,21.6,32.5,21.6 M44.1,30.7c0-3.5-0.4-6.8-1-9.8c3.4-0.5,6.4-1.1,8.8-2c2.3,3.5,3.6,7.5,3.7,11.8H44.1z M20.9,30.7H9.3c0.1-4.2,1.4-8.3,3.7-11.8c2.5,0.8,5.5,1.5,8.8,2C21.3,23.9,21,27.2,20.9,30.7 M20.9,32.3c0,3.5,0.4,6.8,1,9.8c-3.4,0.5-6.4,1.1-8.8,2c-2.3-3.5-3.6-7.5-3.7-11.8H20.9z M44.1,32.3h11.6c-0.1,4.2-1.4,8.3-3.7,11.8c-2.5-0.8-5.5-1.5-8.8-2C43.7,39.1,44,35.8,44.1,32.3 M51,17.5c-0.1,0-0.2,0.1-0.3,0.1c-2.3,0.7-5,1.3-7.9,1.7c-0.9-4.1-2.3-7.6-4-10.1c3.8,1.1,7.3,3.1,10.2,5.9C49.6,15.9,50.3,16.6,51,17.5 M26.3,9.2c-1.7,2.5-3.1,6-4,10.1c-2.9-0.4-5.6-1-7.9-1.7c-0.1,0-0.2-0.1-0.3-0.1c0.6-0.8,1.3-1.6,2.1-2.4C19,12.2,22.5,10.2,26.3,9.2 M14,45.5c0.1,0,0.2-0.1,0.3-0.1c2.3-0.7,5-1.3,7.9-1.7c0.9,4.1,2.3,7.6,4,10.1c-3.8-1.1-7.3-3.1-10.2-5.9C15.4,47.1,14.7,46.4,14,45.5 M38.7,53.8c1.7-2.5,3.1-6,4-10.1c2.9,0.4,5.6,1,7.9,1.7c0.1,0,0.2,0.1,0.3,0.1c-0.6,0.8-1.3,1.6-2.1,2.4C46,50.8,42.5,52.8,38.7,53.8",
               }),
-            ),
-          );
+            }),
+          });
         }
         function ze() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_5",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 64 64",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_5",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 64 64",
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("path", {
                 d: "M40.6,32.7l15.1-15.1c2.6-2.6,2.6-6.7,0-9.3c-2.6-2.6-6.7-2.6-9.3,0L31.3,23.4L16.2,8.3c-2.6-2.6-6.7-2.6-9.3,0c-2.6,2.6-2.6,6.7,0,9.3L22,32.7L6.9,47.8c-2.6,2.6-2.6,6.7,0,9.3c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9L31.3,42l15.1,15.1c1.3,1.3,3,1.9,4.7,1.9s3.4-0.6,4.7-1.9c2.6-2.6,2.6-6.7,0-9.3L40.6,32.7z",
               }),
-            ),
-          );
+            }),
+          });
         }
         function Pe() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_STVTimelineGrabber",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { className: "leftarrow", opacity: "0" },
-              r.createElement("polygon", {
-                points: "127.817,4.403 4,128 127.817,251.598",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_STVTimelineGrabber",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("g", {
+                className: "leftarrow",
+                opacity: "0",
+                children: (0, r.jsx)("polygon", {
+                  points: "127.817,4.403 4,128 127.817,251.598",
+                }),
               }),
-            ),
-            r.createElement(
-              "g",
-              { className: "rightarrow", opacity: "0" },
-              r.createElement("polygon", {
-                points: "127.816,4.403 251.633,128 127.816,251.598",
+              (0, r.jsx)("g", {
+                className: "rightarrow",
+                opacity: "0",
+                children: (0, r.jsx)("polygon", {
+                  points: "127.816,4.403 251.633,128 127.816,251.598",
+                }),
               }),
-            ),
-            r.createElement(
-              "g",
-              { className: "grabber" },
-              r.createElement("polygon", {
-                points:
-                  "145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403",
+              (0, r.jsx)("g", {
+                className: "grabber",
+                children: (0, r.jsx)("polygon", {
+                  points:
+                    "145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403",
+                }),
               }),
-            ),
-          );
+            ],
+          });
         }
         function He() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_STVTimelineMarker",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polygon", {
-              className: "pointer",
-              points:
-                "128,154.979 46.374,230.548 46.374,253.333 209.626,253.333 209.626,230.548 \t",
-            }),
-            r.createElement("rect", {
-              className: "line",
-              x: "116.271",
-              y: "3.168",
-              width: "23.459",
-              height: "137.332",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_STVTimelineMarker",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polygon", {
+                className: "pointer",
+                points:
+                  "128,154.979 46.374,230.548 46.374,253.333 209.626,253.333 209.626,230.548 \t",
+              }),
+              (0, r.jsx)("rect", {
+                className: "line",
+                x: "116.271",
+                y: "3.168",
+                width: "23.459",
+                height: "137.332",
+              }),
+            ],
+          });
         }
         function We(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_HideShowChat",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { id: "hidechat", opacity: e.showChat ? "0" : "1" },
-              r.createElement("polyline", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                points:
-                  "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_HideShowChat",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsxs)("g", {
+                id: "hidechat",
+                opacity: e.showChat ? "0" : "1",
+                children: [
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    points:
+                      "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011",
+                  }),
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    points:
+                      "109.427,59.011 225.299,59.011 225.299,189.834 207,189.834",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    x1: "49.786",
+                    y1: "15.012",
+                    x2: "214.409",
+                    y2: "233.723",
+                  }),
+                ],
               }),
-              r.createElement("polyline", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                points:
-                  "109.427,59.011 225.299,59.011 225.299,189.834 207,189.834",
+              (0, r.jsx)("g", {
+                id: "showchat",
+                opacity: e.showChat ? "1" : "0",
+                children: (0, r.jsx)("polygon", {
+                  fill: "none",
+                  stroke: "#ffffff",
+                  strokeWidth: "10",
+                  strokeLinecap: "round",
+                  strokeMiterlimit: "10",
+                  points:
+                    "116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 225.299,59.011 225.299,189.834",
+                }),
               }),
-              r.createElement("line", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                x1: "49.786",
-                y1: "15.012",
-                x2: "214.409",
-                y2: "233.723",
+              (0, r.jsxs)("g", {
+                id: "textlines",
+                opacity: e.showChat ? "1" : "0",
+                children: [
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeMiterlimit: "10",
+                    x1: "72.333",
+                    y1: "124.75",
+                    x2: "194.167",
+                    y2: "124.75",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeMiterlimit: "10",
+                    x1: "72.333",
+                    y1: "155.75",
+                    x2: "194.167",
+                    y2: "155.75",
+                  }),
+                  (0, r.jsx)("line", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeMiterlimit: "10",
+                    x1: "72.333",
+                    y1: "93.75",
+                    x2: "179.926",
+                    y2: "93.75",
+                  }),
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    points:
+                      "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011 ",
+                  }),
+                  (0, r.jsx)("polyline", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "10",
+                    strokeLinecap: "round",
+                    strokeMiterlimit: "10",
+                    points:
+                      "109.427,59.011 225.299,59.011 225.299,189.834 207,189.834",
+                  }),
+                ],
               }),
-            ),
-            r.createElement(
-              "g",
-              { id: "showchat", opacity: e.showChat ? "1" : "0" },
-              r.createElement("polygon", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                points:
-                  "116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 225.299,59.011 225.299,189.834",
-              }),
-            ),
-            r.createElement(
-              "g",
-              { id: "textlines", opacity: e.showChat ? "1" : "0" },
-              r.createElement("line", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeMiterlimit: "10",
-                x1: "72.333",
-                y1: "124.75",
-                x2: "194.167",
-                y2: "124.75",
-              }),
-              r.createElement("line", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeMiterlimit: "10",
-                x1: "72.333",
-                y1: "155.75",
-                x2: "194.167",
-                y2: "155.75",
-              }),
-              r.createElement("line", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeMiterlimit: "10",
-                x1: "72.333",
-                y1: "93.75",
-                x2: "179.926",
-                y2: "93.75",
-              }),
-              r.createElement("polyline", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                points:
-                  "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011 ",
-              }),
-              r.createElement("polyline", {
-                fill: "none",
-                stroke: "#ffffff",
-                strokeWidth: "10",
-                strokeLinecap: "round",
-                strokeMiterlimit: "10",
-                points:
-                  "109.427,59.011 225.299,59.011 225.299,189.834 207,189.834",
-              }),
-            ),
-          );
+            ],
+          });
         }
         function Ue() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_ShowBothChats",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("circle", {
-              opacity: "0",
-              fill: "#FFFFFF",
-              strokeWidth: "0",
-              cx: "166.241",
-              cy: "161.906",
-              r: "75.259",
-            }),
-            r.createElement("polyline", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "8",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points:
-                "92.367,155.634 51.311,183 51.311,150.296 23.834,150.296 23.834,19.473 140.5,19.473 140.5,91.5",
-            }),
-            r.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "8",
-              strokeMiterlimit: "10",
-              x1: "48.529",
-              y1: "82.167",
-              x2: "113.379",
-              y2: "82.167",
-            }),
-            r.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "8",
-              strokeMiterlimit: "10",
-              x1: "48.529",
-              y1: "113.167",
-              x2: "113.379",
-              y2: "113.167",
-            }),
-            r.createElement("line", {
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "8",
-              strokeMiterlimit: "10",
-              x1: "48.529",
-              y1: "51.167",
-              x2: "99.138",
-              y2: "51.167",
-            }),
-            r.createElement("path", {
-              d: "M166.241,82.167c-43.933,0-79.74,35.807-79.74,79.74c0,43.932,35.808,79.739,79.74,79.739 c43.932,0,79.739-35.808,79.739-79.739C245.98,117.975,210.173,82.167,166.241,82.167 M166.241,231.717 c-3.611,0-7.522-0.301-11.134-0.902c-3.31-3.311-6.318-8.426-9.027-14.444c-2.407-5.416-4.212-11.434-6.018-18.054  8.124-0.902,16.851-1.505,25.878-1.505c9.026,0,17.753,0.603,25.877,1.505c-1.504,6.62-3.61,12.638-6.018,18.054 c-2.708,6.019-5.718,11.134-9.027,14.444C173.764,231.416,169.852,231.717,166.241,231.717 M166.241,191.696 c-9.629,0-18.656,0.602-27.082,1.505c-1.805-9.027-2.708-18.656-3.009-28.887h59.88c0,10.23-1.203,19.859-3.009,28.887 C184.896,192.298,175.87,191.696,166.241,191.696 M166.241,92.097c3.61,0,7.522,0.301,11.133,0.903 c3.311,3.31,6.319,8.425,9.027,14.443c2.407,5.416,4.213,11.435,6.019,18.055c-8.125,0.902-16.851,1.504-25.878,1.504  s-17.753-0.602-25.878-1.504c1.505-6.62,3.611-12.639,6.019-18.055c2.708-6.018,5.717-11.133,9.026-14.443 \tC158.719,92.398,162.63,92.097,166.241,92.097 M166.241,132.117c9.629,0,18.655-0.602,27.081-1.504 \tc1.806,9.026,2.708,18.655,3.009,28.887h-59.88c0-10.231,1.204-19.86,3.01-28.887 \tC147.585,131.516,156.612,132.117,166.241,132.117 M201.146,159.5c0-10.532-1.203-20.462-3.009-29.488 c10.23-1.505,19.258-3.311,26.479-6.019c6.921,10.531,10.833,22.567,11.134,35.507H201.146z M131.336,159.5H96.432 c0.301-12.639,4.212-24.976,11.133-35.507c7.522,2.407,16.55,4.514,26.479,6.019C132.54,139.038,131.637,148.968,131.336,159.5 M131.336,164.314c0,10.531,1.204,20.461,3.01,29.488c-10.231,1.505-19.259,3.31-26.48,6.018 c-6.921-10.531-10.832-22.567-11.133-35.506H131.336z M201.146,164.314h34.905c-0.301,12.638-4.213,24.975-11.134,35.506 c-7.522-2.406-16.55-4.513-26.479-6.018C199.942,184.775,200.845,174.846,201.146,164.314 M221.908,119.78 c-0.301,0-0.602,0.301-0.903,0.301c-6.92,2.106-15.045,3.912-23.771,5.115c-2.708-12.337-6.921-22.868-12.036-30.391 c11.434,3.31,21.966,9.328,30.691,17.753C217.695,114.966,219.802,117.072,221.908,119.78 M147.585,94.806 c-5.115,7.522-9.328,18.054-12.036,30.391c-8.727-1.203-16.851-3.009-23.771-5.115c-0.301,0-0.602-0.301-0.902-0.301 c1.805-2.407,3.911-4.814,6.318-7.222C125.619,103.833,136.15,97.814,147.585,94.806 M110.574,204.033 c0.301,0,0.602-0.301,0.902-0.301c6.921-2.106,15.045-3.912,23.771-5.115c2.708,12.337,6.921,22.869,12.036,30.392 c-11.435-3.311-21.966-9.328-30.692-17.754C114.786,208.848,112.68,206.742,110.574,204.033 M184.896,229.009 c5.116-7.522,9.329-18.055,12.036-30.392c8.727,1.203,16.852,3.009,23.771,5.115c0.301,0,0.603,0.301,0.903,0.301 c-1.806,2.407-3.912,4.814-6.319,7.222C206.863,219.981,196.331,226,184.896,229.009",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_ShowBothChats",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("circle", {
+                opacity: "0",
+                fill: "#FFFFFF",
+                strokeWidth: "0",
+                cx: "166.241",
+                cy: "161.906",
+                r: "75.259",
+              }),
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "8",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                points:
+                  "92.367,155.634 51.311,183 51.311,150.296 23.834,150.296 23.834,19.473 140.5,19.473 140.5,91.5",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "8",
+                strokeMiterlimit: "10",
+                x1: "48.529",
+                y1: "82.167",
+                x2: "113.379",
+                y2: "82.167",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "8",
+                strokeMiterlimit: "10",
+                x1: "48.529",
+                y1: "113.167",
+                x2: "113.379",
+                y2: "113.167",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: "#ffffff",
+                strokeWidth: "8",
+                strokeMiterlimit: "10",
+                x1: "48.529",
+                y1: "51.167",
+                x2: "99.138",
+                y2: "51.167",
+              }),
+              (0, r.jsx)("path", {
+                d: "M166.241,82.167c-43.933,0-79.74,35.807-79.74,79.74c0,43.932,35.808,79.739,79.74,79.739 c43.932,0,79.739-35.808,79.739-79.739C245.98,117.975,210.173,82.167,166.241,82.167 M166.241,231.717 c-3.611,0-7.522-0.301-11.134-0.902c-3.31-3.311-6.318-8.426-9.027-14.444c-2.407-5.416-4.212-11.434-6.018-18.054  8.124-0.902,16.851-1.505,25.878-1.505c9.026,0,17.753,0.603,25.877,1.505c-1.504,6.62-3.61,12.638-6.018,18.054 c-2.708,6.019-5.718,11.134-9.027,14.444C173.764,231.416,169.852,231.717,166.241,231.717 M166.241,191.696 c-9.629,0-18.656,0.602-27.082,1.505c-1.805-9.027-2.708-18.656-3.009-28.887h59.88c0,10.23-1.203,19.859-3.009,28.887 C184.896,192.298,175.87,191.696,166.241,191.696 M166.241,92.097c3.61,0,7.522,0.301,11.133,0.903 c3.311,3.31,6.319,8.425,9.027,14.443c2.407,5.416,4.213,11.435,6.019,18.055c-8.125,0.902-16.851,1.504-25.878,1.504  s-17.753-0.602-25.878-1.504c1.505-6.62,3.611-12.639,6.019-18.055c2.708-6.018,5.717-11.133,9.026-14.443 \tC158.719,92.398,162.63,92.097,166.241,92.097 M166.241,132.117c9.629,0,18.655-0.602,27.081-1.504 \tc1.806,9.026,2.708,18.655,3.009,28.887h-59.88c0-10.231,1.204-19.86,3.01-28.887 \tC147.585,131.516,156.612,132.117,166.241,132.117 M201.146,159.5c0-10.532-1.203-20.462-3.009-29.488 c10.23-1.505,19.258-3.311,26.479-6.019c6.921,10.531,10.833,22.567,11.134,35.507H201.146z M131.336,159.5H96.432 c0.301-12.639,4.212-24.976,11.133-35.507c7.522,2.407,16.55,4.514,26.479,6.019C132.54,139.038,131.637,148.968,131.336,159.5 M131.336,164.314c0,10.531,1.204,20.461,3.01,29.488c-10.231,1.505-19.259,3.31-26.48,6.018 c-6.921-10.531-10.832-22.567-11.133-35.506H131.336z M201.146,164.314h34.905c-0.301,12.638-4.213,24.975-11.134,35.506 c-7.522-2.406-16.55-4.513-26.479-6.018C199.942,184.775,200.845,174.846,201.146,164.314 M221.908,119.78 c-0.301,0-0.602,0.301-0.903,0.301c-6.92,2.106-15.045,3.912-23.771,5.115c-2.708-12.337-6.921-22.868-12.036-30.391 c11.434,3.31,21.966,9.328,30.691,17.753C217.695,114.966,219.802,117.072,221.908,119.78 M147.585,94.806 c-5.115,7.522-9.328,18.054-12.036,30.391c-8.727-1.203-16.851-3.009-23.771-5.115c-0.301,0-0.602-0.301-0.902-0.301 c1.805-2.407,3.911-4.814,6.318-7.222C125.619,103.833,136.15,97.814,147.585,94.806 M110.574,204.033 c0.301,0,0.602-0.301,0.902-0.301c6.921-2.106,15.045-3.912,23.771-5.115c2.708,12.337,6.921,22.869,12.036,30.392 c-11.435-3.311-21.966-9.328-30.692-17.754C114.786,208.848,112.68,206.742,110.574,204.033 M184.896,229.009 c5.116-7.522,9.329-18.055,12.036-30.392c8.727,1.203,16.852,3.009,23.771,5.115c0.301,0,0.603,0.301,0.903,0.301 c-1.806,2.407-3.912,4.814-6.319,7.222C206.863,219.981,196.331,226,184.896,229.009",
+              }),
+            ],
+          });
         }
         function Ve() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_BigPicture",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_BigPicture",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               d: "M213.771,68.659c-4.108-7.066-46.007-7.231-49.293-7.231H128H91.522c-3.286,0-45.186,0.165-49.293,7.231 c-19.555,29.248-27.385,100.263-27.276,104.01c0.238,8.294,2.11,24.583,16.595,35.162c9.201,6.72,22.183,8.709,29.083,3.614 c4.989-3.682,11.995-19.224,19.061-32.204c7.064-12.981,9.202-11.174,12.98-12.159c3.78-0.986,36.066-0.74,36.066-0.74 s30.809-0.247,34.588,0.74c3.777,0.985,5.915-0.822,12.98,12.159c7.064,12.98,14.07,28.522,19.061,32.204 c6.9,5.095,19.882,3.106,29.083-3.614c14.485-10.58,16.356-26.868,16.595-35.162C241.154,168.922,233.325,97.906,213.771,68.659z M67.251,128.14c-14.974,0-27.112-12.137-27.112-27.111c0-14.975,12.137-27.112,27.112-27.112 c14.973,0,27.111,12.137,27.111,27.112C94.362,116.003,82.224,128.14,67.251,128.14z M188.749,128.14 c-14.974,0-27.111-12.137-27.111-27.111c0-14.975,12.138-27.112,27.111-27.112c14.973,0,27.111,12.137,27.111,27.112 C215.86,116.003,203.722,128.14,188.749,128.14z",
             }),
-          );
+          });
         }
         function Ge(e) {
           const { className: t } = e;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_Button", "SVGIcon_MobilePhone", t),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button", "SVGIcon_MobilePhone", t),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
               d: "M165.693,45.186H91.368c-7.963,0-14.41,6.447-14.41,14.41V210.9c0,7.964,6.447,14.41,14.41,14.41h74.134 c7.965,0,14.41-6.447,14.41-14.41V59.596C180.102,51.633,173.657,45.186,165.693,45.186z M113.172,57.509h30.717 c1.707,0,3.223,1.327,3.223,3.224c0,1.896-1.328,3.223-3.223,3.223h-30.717c-1.707,0-3.223-1.328-3.223-3.223 C109.949,58.837,111.465,57.509,113.172,57.509z M128.529,213.554c-4.551,0-8.152-3.603-8.152-8.153c0-4.55,3.604-8.152,8.152-8.152 s8.151,3.603,8.151,8.152C136.682,209.761,133.081,213.554,128.529,213.554z M169.105,186.819h-81.15V74.384h81.15V186.819 L169.105,186.819z",
             }),
-          );
-        }
-        function je(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
-              fill: "currentColor",
-            }),
-            r.createElement("path", {
-              d: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
-              fill: "currentColor",
-            }),
-          );
+          });
         }
         function qe(e) {
-          const [t, n] = (0, l.l)();
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_Button", "SVGIcon_VRIcon"),
-              ...e,
-            },
-            r.createElement(
-              "g",
-              { clipPath: n },
-              r.createElement("path", {
-                fillRule: "evenodd",
-                clipRule: "evenodd",
-                d: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
+          return (0, r.jsxs)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                d: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
                 fill: "currentColor",
               }),
-            ),
-            r.createElement(
-              "defs",
-              null,
-              r.createElement(
-                "clipPath",
-                { id: t },
-                r.createElement("rect", {
-                  width: "36",
-                  height: "36",
-                  fill: "currentColor",
-                  transform: "translate(0.400879 0.825195)",
-                }),
-              ),
-            ),
-          );
+              (0, r.jsx)("path", {
+                d: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
+                fill: "currentColor",
+              }),
+            ],
+          });
         }
         function Ze(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button",
-              ...e,
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M31.4096 7H1V23.5601H21.9066V19.8801H7.65209V18.0401H21.9066V17.7641C21.9066 17.2208 21.9876 16.6959 22.1387 16.2001H20.9563V14.36H22.8569V14.7117C23.7116 13.4671 25.0741 12.5776 26.6581 12.3204V10.68H28.5587V12.244H31.4096V7ZM5.75149 10.68H3.8509V12.52H5.75149V10.68ZM3.8509 18.0401H5.75149V19.8801H3.8509V18.0401ZM7.65209 14.36H3.8509V16.2001H7.65209V14.36ZM7.65209 10.68H9.55269V12.52H7.65209V10.68ZM11.4533 10.68H13.3539V12.52H11.4533V10.68ZM11.4533 14.36H9.55269V16.2001H11.4533V14.36ZM15.2545 10.68H17.1551V12.52H15.2545V10.68ZM15.2545 14.36H13.3539V16.2001H15.2545V14.36ZM17.1551 14.36H19.0557V16.2001H17.1551V14.36ZM20.9563 10.68H19.0557V12.52H20.9563V10.68ZM24.7575 10.68H22.8569V12.52H24.7575V10.68Z",
-              fill: "white",
-            }),
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M27.9783 15.4332C26.3164 15.4332 24.9691 16.7376 24.9691 18.3466V25.1444C24.9691 27.8261 27.2146 30 29.9845 30C32.7545 30 35 27.8261 35 25.1444V18.3466C35 16.7376 33.6527 15.4332 31.9907 15.4332H27.9783ZM29.9845 17.861C29.4305 17.861 28.9814 18.2958 28.9814 18.8321V20.7744C28.9814 21.3107 29.4305 21.7455 29.9845 21.7455C30.5385 21.7455 30.9876 21.3107 30.9876 20.7744V18.8321C30.9876 18.2958 30.5385 17.861 29.9845 17.861Z",
-              fill: "white",
-            }),
-          );
+          const [t, n] = (0, u.l)();
+          return (0, r.jsxs)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button", "SVGIcon_VRIcon"),
+            ...e,
+            children: [
+              (0, r.jsx)("g", {
+                clipPath: n,
+                children: (0, r.jsx)("path", {
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
+                  fill: "currentColor",
+                }),
+              }),
+              (0, r.jsx)("defs", {
+                children: (0, r.jsx)("clipPath", {
+                  id: t,
+                  children: (0, r.jsx)("rect", {
+                    width: "36",
+                    height: "36",
+                    fill: "currentColor",
+                    transform: "translate(0.400879 0.825195)",
+                  }),
+                }),
+              }),
+            ],
+          });
         }
-        function Ke() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_3",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Twitter",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M250.151,128.021c0,67.418-54.604,122.022-122.022,122.022S6.107,195.439,6.107,128.021C6.107,60.604,60.712,6,128.129,6 S250.151,60.604,250.151,128.021z M105.799,192.389c54.117,0,83.707-44.842,83.707-83.707c0-1.282,0-2.563-0.062-3.783 c5.736-4.148,10.739-9.335,14.705-15.252c-5.247,2.318-10.922,3.905-16.901,4.637c6.103-3.661,10.738-9.396,12.936-16.29 c-5.675,3.355-11.959,5.796-18.67,7.138c-5.369-5.734-12.995-9.273-21.477-9.273c-16.228,0-29.406,13.179-29.406,29.407 c0,2.318,0.243,4.576,0.793,6.711c-24.466-1.22-46.125-12.934-60.646-30.75c-2.501,4.332-3.965,9.396-3.965,14.765 c0,10.189,5.186,19.218,13.117,24.465c-4.819-0.122-9.334-1.464-13.3-3.661c0,0.122,0,0.244,0,0.366 c0,14.275,10.128,26.113,23.611,28.857c-2.44,0.672-5.064,1.039-7.748,1.039c-1.892,0-3.723-0.184-5.553-0.551 c3.722,11.714,14.581,20.195,27.455,20.44c-10.067,7.868-22.757,12.566-36.546,12.566c-2.379,0-4.697-0.122-7.016-0.427 C73.707,187.507,89.204,192.389,105.799,192.389",
-            }),
-          );
+        function Ke(e) {
+          return (0, r.jsxs)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M31.4096 7H1V23.5601H21.9066V19.8801H7.65209V18.0401H21.9066V17.7641C21.9066 17.2208 21.9876 16.6959 22.1387 16.2001H20.9563V14.36H22.8569V14.7117C23.7116 13.4671 25.0741 12.5776 26.6581 12.3204V10.68H28.5587V12.244H31.4096V7ZM5.75149 10.68H3.8509V12.52H5.75149V10.68ZM3.8509 18.0401H5.75149V19.8801H3.8509V18.0401ZM7.65209 14.36H3.8509V16.2001H7.65209V14.36ZM7.65209 10.68H9.55269V12.52H7.65209V10.68ZM11.4533 10.68H13.3539V12.52H11.4533V10.68ZM11.4533 14.36H9.55269V16.2001H11.4533V14.36ZM15.2545 10.68H17.1551V12.52H15.2545V10.68ZM15.2545 14.36H13.3539V16.2001H15.2545V14.36ZM17.1551 14.36H19.0557V16.2001H17.1551V14.36ZM20.9563 10.68H19.0557V12.52H20.9563V10.68ZM24.7575 10.68H22.8569V12.52H24.7575V10.68Z",
+                fill: "white",
+              }),
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M27.9783 15.4332C26.3164 15.4332 24.9691 16.7376 24.9691 18.3466V25.1444C24.9691 27.8261 27.2146 30 29.9845 30C32.7545 30 35 27.8261 35 25.1444V18.3466C35 16.7376 33.6527 15.4332 31.9907 15.4332H27.9783ZM29.9845 17.861C29.4305 17.861 28.9814 18.2958 28.9814 18.8321V20.7744C28.9814 21.3107 29.4305 21.7455 29.9845 21.7455C30.5385 21.7455 30.9876 21.3107 30.9876 20.7744V18.8321C30.9876 18.2958 30.5385 17.861 29.9845 17.861Z",
+                fill: "white",
+              }),
+            ],
+          });
         }
         function $e() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_YouTube",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M243.402,70.101c-2.775-10.309-10.906-18.439-21.217-21.217c-18.838-5.152-94.185-5.152-94.185-5.152 s-75.348,0-94.185,4.957c-10.112,2.775-18.44,11.104-21.216,21.413C7.644,88.94,7.644,128,7.644,128s0,39.257,4.957,57.896 c2.775,10.313,10.905,18.439,21.216,21.219c19.036,5.154,94.185,5.154,94.185,5.154s75.347,0,94.185-4.957 c10.311-2.771,18.441-10.906,21.217-21.217c4.953-18.838,4.953-57.898,4.953-57.898S248.557,88.94,243.402,70.101z M104.008,164.088 V91.912L166.668,128L104.008,164.088z",
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_3",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Twitter",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
+              d: "M250.151,128.021c0,67.418-54.604,122.022-122.022,122.022S6.107,195.439,6.107,128.021C6.107,60.604,60.712,6,128.129,6 S250.151,60.604,250.151,128.021z M105.799,192.389c54.117,0,83.707-44.842,83.707-83.707c0-1.282,0-2.563-0.062-3.783 c5.736-4.148,10.739-9.335,14.705-15.252c-5.247,2.318-10.922,3.905-16.901,4.637c6.103-3.661,10.738-9.396,12.936-16.29 c-5.675,3.355-11.959,5.796-18.67,7.138c-5.369-5.734-12.995-9.273-21.477-9.273c-16.228,0-29.406,13.179-29.406,29.407 c0,2.318,0.243,4.576,0.793,6.711c-24.466-1.22-46.125-12.934-60.646-30.75c-2.501,4.332-3.965,9.396-3.965,14.765 c0,10.189,5.186,19.218,13.117,24.465c-4.819-0.122-9.334-1.464-13.3-3.661c0,0.122,0,0.244,0,0.366 c0,14.275,10.128,26.113,23.611,28.857c-2.44,0.672-5.064,1.039-7.748,1.039c-1.892,0-3.723-0.184-5.553-0.551 c3.722,11.714,14.581,20.195,27.455,20.44c-10.067,7.868-22.757,12.566-36.546,12.566c-2.379,0-4.697-0.122-7.016-0.427 C73.707,187.507,89.204,192.389,105.799,192.389",
             }),
-          );
+          });
         }
         function Ye() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_3",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_TwitchTV",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M28.176,8.026L11.763,49.97v171.427h58.358v31.003h32.826l31.003-31.003h47.414l63.829-63.829V8.026H28.176z M223.311,146.625l-36.474,36.474h-58.359l-31.002,31.003v-31.003H48.237V29.91h175.074V146.625z M186.837,71.855v63.829h-21.885 V71.855H186.837z M128.478,71.855v63.829h-21.883V71.855H128.478z",
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_YouTube",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
+              d: "M243.402,70.101c-2.775-10.309-10.906-18.439-21.217-21.217c-18.838-5.152-94.185-5.152-94.185-5.152 s-75.348,0-94.185,4.957c-10.112,2.775-18.44,11.104-21.216,21.413C7.644,88.94,7.644,128,7.644,128s0,39.257,4.957,57.896 c2.775,10.313,10.905,18.439,21.216,21.219c19.036,5.154,94.185,5.154,94.185,5.154s75.347,0,94.185-4.957 c10.311-2.771,18.441-10.906,21.217-21.217c4.953-18.838,4.953-57.898,4.953-57.898S248.557,88.94,243.402,70.101z M104.008,164.088 V91.912L166.668,128L104.008,164.088z",
             }),
-          );
+          });
         }
         function Xe() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_CSGO",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_3",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_TwitchTV",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
+              d: "M28.176,8.026L11.763,49.97v171.427h58.358v31.003h32.826l31.003-31.003h47.414l63.829-63.829V8.026H28.176z M223.311,146.625l-36.474,36.474h-58.359l-31.002,31.003v-31.003H48.237V29.91h175.074V146.625z M186.837,71.855v63.829h-21.885 V71.855H186.837z M128.478,71.855v63.829h-21.883V71.855H128.478z",
+            }),
+          });
+        }
+        function Qe() {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_CSGO",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M236.979,138.059c0.548,0.078,6.91,0.101,7.772,0.032 c1.215-0.095,1.396,0.068,1.388,0.708c-0.01,0.397,0.012,3.039-2.365,7.32c-3.301,5.948-12.079,10.436-12.55,10.672 c-0.47,0.233-0.53,0.484-0.136,0.75c0.434,0.295,8.068,1.454,9.084,1.611c1.017,0.154,0.637,1.001,0.637,1.001 s-0.704,2.621-2.895,5.36c-2.189,2.738-9.311,6.123-8.583,6.123c0.731,0,7.187,0.159,6.181,1.422 c-3.019,3.786-13.603,9.528-18.43,13.813c-13.388,11.885-13.217,12.864-15.52,15.09c-0.983-3.298-3.02-12.658-3.02-12.658 l-6.105-11.467c4.413,0.18,6.364,0.081,8.952,0.081c9.214,0,17.525-2.185,22.234-5.841l2.371-1.843l-2.911-0.728 c-2.131-0.528-7.121-1.782-11.896-2.979c2.184-0.104,10.803-1.299,14.413-5.339c0.136-0.151,0.276-0.321,0.406-0.494l1.245-1.664 l-2.404-0.735c-2.607-0.799-5.948-1.682-8.517-2.335c3.173-1.572,7.585-3.942,10.048-6.088c4.83-4.203,7.226-9.709,7.322-9.943 l0.9-2.098l-10.772,0.318c1.503-1.483,3.218-3.197,3.939-3.991c1.43-1.571,4.053-6.221,4.198-9.896l0.072-1.787l-1.763,0.288 c-1.979,0.322-5.301,1.279-8.179,2.173c2.025-2.193,4.296-4.767,5.46-6.484c2.687-3.964,2.76-8.371,2.597-12.916l-0.104-2.881 l-2.261,1.79c-2.559,2.028-7.595,5.031-11.097,7.047c1.538-3.644,3.54-8.752,3.813-11.276c0.5-4.681-0.248-10.196-0.248-10.196 l-10.76,9.394c0.885-1.953,1.684-4.013,2.117-5.832c1.735-7.29,0.055-17.892-0.021-18.338l-0.452-2.807l-7.777,7.739 c0.722-3.535,1.465-8.253,1.23-11.789c-0.426-6.321-2.278-10.517-2.359-10.694l-1.01-2.251l-6.465,8.577 c0.231-4.285,0.27-10.24-0.948-13.547c-1.934-5.262-3.651-8.007-3.723-8.121l-1.232-1.958l-3.057,4.85 c0.018-2.967-0.11-6.475-0.69-8.68c-1.202-4.543-2.825-6.396-3.002-6.592l-1.325-1.433l-1.623,2.705 c-0.278-3.19-1.112-7.084-3.343-9.478l-0.814-0.872l-1.012,0.623c-0.327,0.201-0.714,0.497-1.104,0.823 c-0.154-1.135-0.365-2.451-0.639-3.691c0.563-4.733,1.186-10.03,1.206-10.452c0.027-0.547,0.274-0.767,1.017-0.391 c0.898,0.452,3.156,2.064,5.187,6.133c2.036,4.067,3.132,11.324,3.117,12.044c-0.009,0.383,0.291,0.757,0.438,0.151 c0.145-0.607,0.478-7.591,0.623-8.312c0.081-0.383,0.199-0.484,0.737-0.212c0.496,0.249,2.959,2.181,4.899,6.463 c1.179,2.599,1.634,11.946,1.574,12.653c-0.106,1.278,0.313,0.891,0.339,0.883c-0.009,0.013-0.025,0.04-0.03,0.049 c0.03-0.041,0.036-0.049,0.03-0.049c0.573-0.841,4.21-8.99,4.519-9.377c0.313-0.39,0.521-0.395,0.835,0.002 c0.262,0.33,2.095,1.717,4.049,10.088c1.902,8.135,1.949,11.542,1.848,12.682c-0.08,0.86,0.339,0.993,0.731,0.524 c0.389-0.47,5.104-9.201,5.497-9.515c0.389-0.313,0.613-0.309,0.927,0.161c0.312,0.469,2.718,4.762,3.684,11.448 c0.861,5.947,0.608,13.599,0.375,14.381c-0.235,0.782-0.135,1.077,0.493,0.53c0.623-0.548,10.299-8.412,11.004-9.038 c0.703-0.627,1.18-0.65,1.34-0.046c0.172,0.654,0.822,8.654,0.275,15.225c-0.549,6.571-2.626,12.752-2.94,13.145 c-0.312,0.391,0.087,0.712,0.478,0.555c0.394-0.157,11.902-10.018,12.645-10.402c0.711-0.367,1.043,0.005,1.105,0.507 c0.068,0.544,0.966,3.098-0.419,11.269c-0.959,5.65-3.54,11.876-3.855,12.033c-0.313,0.157-0.077,0.336,0.234,0.259 c0.315-0.079,8.324-3.488,8.872-3.567c0.546-0.079,0.671,0.339,0.514,0.808c-0.158,0.469-0.458,6.273-2.534,11.639 c-2.603,6.732-6.056,11.001-6.056,11.001s-0.252,0.519,0.217,0.519s9.266-0.186,9.813-0.263c0.547-0.079,0.627,0.156,0.547,0.704 c-0.077,0.547,0.858,9.116-8.624,14.601C236.524,137.734,236.432,137.979,236.979,138.059z M174.473,24.823 c1.981,3.34,2.018,9.248,1.836,11.469l-0.52,6.238l5.25-8.744c0.395,0.843,0.85,2.003,1.25,3.524 c1.02,3.877,0.422,13.082,0.417,13.173l-0.384,5.752l6.435-10.212c0.628,1.27,1.45,3.097,2.32,5.459 c1.466,3.983,0.772,13.806,0.381,17.257l-0.602,5.308l9.568-12.69c0.493,1.707,1.058,4.21,1.259,7.227 c0.39,5.821-2.272,15.731-2.299,15.83l-1.428,5.26l11.125-11.068c0.377,3.586,0.772,9.774-0.304,14.302 c-1.2,5.057-5.778,12.588-5.823,12.664l-1.806,3.992l16.878-14.09c-0.116,1.366-0.262,2.944-0.423,4.435 c-0.312,2.935-3.954,11.389-5.335,14.399l-1.827,4.002l3.856-2.115c0.381-0.208,8.027-4.41,12.979-7.778 c-0.039,3.484-0.537,6.042-2.139,8.4c-2.189,3.234-9.05,10.198-9.118,10.268l-4.352,4.408l5.861-2.004 c0.08-0.025,6.868-2.34,11.188-3.41c-0.675,2.445-2.208,5.125-3.11,6.118c-1.319,1.449-6.429,6.429-6.48,6.482l-2.682,2.614 l13.475-0.404c-1.06,1.837-2.89,4.549-5.457,6.783c-3.727,3.244-12.956,7.341-13.048,7.383l-3.952,1.746l4.201,1.008 c0.062,0.015,5.637,1.354,10.266,2.67c-3.412,2.191-9.291,3.081-10.948,3.138c-2.06,0.072-11.075,0.125-11.075,0.125l-11.51,0.069 l11.162,2.804c0,0,12.587,3.164,19.486,4.894c-4.398,2.216-10.717,3.493-17.657,3.493c-3.102,0-10.335-0.284-15.048-0.483 c4.064,6.069,7.041,11.004,7.992,13.681c2.813,7.915,6.777,28.269,6.889,48.907c0.039,6.572-1.081,11.649-9.022,11.649 c-0.288,0-0.597-0.038-0.908-0.092c-1.846,0.339-4.351,0.595-5.438-0.095c-1.805-1.149-3.163-2.627-3.544-3.957 c-0.383-1.334-1.146-9.374-3.106-20.675c-1.92-11.046-4.038-19.431-4.237-19.525c-1.535-0.731-9.358-18.45-9.358-18.45 l-37.23-47.615c0,0-20.737,23.917-37.455,47.8c-0.867,1.235-5.994,11.251-9.275,17.989c-0.212,0.437-0.181,0.475-0.281,0.808 c-0.604,2.015-2.396,9.525-4.039,18.994c-1.962,11.301-2.725,19.341-3.105,20.675c-0.384,1.33-1.74,2.808-3.546,3.957 c-1.085,0.689-3.592,0.434-5.437,0.095c-0.313,0.054-0.621,0.092-0.909,0.092c-7.941,0-9.061-5.077-9.024-11.649 c0.114-20.639,4.078-40.992,6.892-48.907c0.95-2.677,3.926-7.611,7.993-13.681c-4.714,0.199-11.946,0.483-15.051,0.483 c-6.939,0-13.26-1.277-17.653-3.493c6.896-1.729,19.486-4.894,19.486-4.894l11.159-2.804l-11.508-0.069 c0,0-9.019-0.053-11.076-0.125c-1.66-0.057-7.537-0.946-10.949-3.138c4.629-1.315,10.202-2.655,10.264-2.67l4.201-1.008l-3.95-1.746 c-0.094-0.042-9.324-4.139-13.049-7.383c-2.566-2.234-4.397-4.946-5.458-6.783l13.477,0.404l-2.684-2.614 c-0.05-0.054-5.16-5.033-6.48-6.482c-0.9-0.993-2.436-3.673-3.108-6.118c4.319,1.069,11.108,3.384,11.188,3.41l5.861,2.004 l-4.352-4.408c-0.069-0.069-6.928-7.033-9.12-10.268c-1.601-2.358-2.099-4.916-2.139-8.4c4.953,3.368,12.601,7.57,12.98,7.778 l3.858,2.115l-1.829-4.002c-1.379-3.011-5.022-11.465-5.334-14.399c-0.161-1.491-0.305-3.068-0.421-4.435l16.877,14.09l-1.806-3.992 c-0.046-0.076-4.622-7.607-5.821-12.664c-1.078-4.528-0.682-10.716-0.307-14.302L58.57,89.672l-1.426-5.26 c-0.025-0.098-2.688-10.008-2.3-15.83c0.203-3.017,0.767-5.52,1.26-7.227l9.566,12.69l-0.601-5.308 c-0.391-3.451-1.083-13.274,0.381-17.257c0.871-2.362,1.693-4.189,2.32-5.459l6.435,10.212l-0.382-5.752 c-0.006-0.091-0.604-9.295,0.416-13.173c0.401-1.521,0.854-2.681,1.251-3.524l5.249,8.744l-0.52-6.238 c-0.181-2.221-0.144-8.129,1.836-11.469c0.596,0.522,1.248,1.148,1.67,1.575l2.215,2.245l0.276-3.142 c0.162-1.838,0.783-7.003,1.703-8.813c1.342-2.635,4.69-3.91,7.104-4.505c-6.691,13.614-36.889,77.59-36.889,122.937 c0,23.658,16.206,23.931,16.368,23.931c4.881,0,6.947-7.914,6.947-11.063V133.45c0-2.744,1.148-2.744,1.835-2.744 c5.807,0,10.48,3.196,13.855,6.69c8.813-11.615,15.81-20.526,15.81-20.526s0.16-0.182,0.248-0.345 c-1.03-2.443-7.165-16.995-7.165-16.995l1.708-43.717c0,0-0.278-3.797,1.044-6.052c1.314-2.245,4.247-3.175,4.247-3.175 l13.307,41.443c0,0-4.107,0.866-4.107,5.585c0,2.982,2.658,4.99,6.227,5.013c3.572-0.022,6.227-2.031,6.227-5.013 c0-4.719-4.109-5.585-4.109-5.585l13.311-41.443c0,0,2.93,0.93,4.245,3.175c1.322,2.255,1.043,6.052,1.043,6.052l1.709,43.717 l-7.309,17.34c0,0,6.997,8.911,15.809,20.526c3.375-3.494,8.048-6.69,13.855-6.69c0.687,0,1.833,0,1.833,2.744v14.538 c0,3.148,2.068,11.063,6.95,11.063c0.159,0,16.367-0.272,16.367-23.931c0-45.347-30.197-109.322-36.888-122.937 c2.412,0.595,5.761,1.87,7.104,4.505c0.92,1.809,1.541,6.975,1.705,8.813l0.275,3.142l2.213-2.245 C173.226,25.972,173.875,25.345,174.473,24.823z M176.157,181.396c-1.644-2.189-41.07-55.856-41.07-55.856l-6.723,8.809 l-0.946-1.233l-0.829-1.082l-5.053-6.594l-0.095,0.101c0,0-39.427,53.667-41.07,55.856c-1.643,2.191-4.777,6.708-6.058,9.322 c-1.279,2.614-8.946,39.306-8.946,42.592c0,2.005,0.041,8.618,0.071,13.47c1.536,0.2,3.411,0.761,4.357,0.125 c1.624-1.093,2.363-2.323,2.491-3.372c0.128-1.048,1.367-12.969,2.69-20.812c1.779-10.547,4.571-19.005,4.415-18.97 c3.213-6.672,8.966-17.938,9.887-19.252c17.808-25.439,38.994-49.947,38.994-49.947s21.166,24.502,38.978,49.947 c0.921,1.313,6.672,12.58,9.888,19.252c-0.158-0.035,2.635,8.423,4.414,18.97c1.322,7.843,2.562,19.764,2.688,20.812 c0.131,1.049,0.87,2.279,2.493,3.372c0.944,0.636,2.818,0.075,4.355-0.125c0.032-4.852,0.073-11.465,0.073-13.47 c0-3.286-7.667-39.978-8.948-42.592C180.936,188.104,177.801,183.588,176.157,181.396z M82.538,21.517l-1.014-0.623l-0.813,0.872 c-2.231,2.394-3.063,6.287-3.342,9.478l-1.624-2.705l-1.323,1.433c-0.179,0.197-1.801,2.049-3.004,6.592 c-0.581,2.205-0.709,5.712-0.689,8.68l-3.057-4.85l-1.234,1.958c-0.072,0.114-1.787,2.859-3.722,8.121 c-1.22,3.307-1.179,9.262-0.949,13.547l-6.463-8.577l-1.012,2.251c-0.08,0.177-1.934,4.373-2.359,10.694 c-0.234,3.536,0.51,8.253,1.231,11.789l-7.778-7.739l-0.453,2.807c-0.073,0.446-1.754,11.048-0.02,18.338 c0.433,1.819,1.231,3.879,2.117,5.832l-10.759-9.394c0,0-0.749,5.515-0.248,10.196c0.271,2.523,2.272,7.632,3.813,11.276 c-3.503-2.016-8.539-5.019-11.099-7.047l-2.259-1.79l-0.106,2.881c-0.162,4.545-0.087,8.952,2.6,12.916 c1.161,1.717,3.433,4.291,5.459,6.484c-2.877-0.894-6.201-1.851-8.179-2.173l-1.763-0.288l0.071,1.787 c0.148,3.675,2.771,8.324,4.198,9.896c0.723,0.794,2.436,2.508,3.941,3.991L21.93,137.83l0.896,2.098 c0.1,0.234,2.493,5.74,7.324,9.943c2.464,2.146,6.876,4.516,10.047,6.088c-2.57,0.653-5.908,1.536-8.518,2.335l-2.402,0.735 l1.246,1.664c0.13,0.173,0.27,0.343,0.407,0.494c3.608,4.04,12.229,5.234,14.412,5.339c-4.774,1.197-9.767,2.451-11.896,2.979 l-2.911,0.728l2.371,1.843c4.708,3.656,13.02,5.841,22.233,5.841c2.588,0,4.539,0.099,8.954-0.081l-6.105,11.467 c0,0-2.038,9.36-3.02,12.658c-2.304-2.226-2.133-3.205-15.52-15.09c-4.829-4.284-15.411-10.026-18.429-13.813 c-1.005-1.263,5.449-1.422,6.179-1.422c0.73,0-6.393-3.385-8.582-6.123c-2.191-2.739-2.895-5.36-2.895-5.36s-0.38-0.847,0.637-1.001 c1.018-0.157,8.65-1.316,9.084-1.611c0.395-0.266,0.332-0.517-0.137-0.75c-0.469-0.236-9.248-4.724-12.548-10.672 c-2.375-4.281-2.357-6.923-2.364-7.32c-0.01-0.64,0.17-0.803,1.385-0.708c0.862,0.068,7.226,0.046,7.774-0.032 c0.546-0.08,0.453-0.324,0.019-0.576c-9.483-5.484-8.546-14.054-8.624-14.601c-0.079-0.548,0-0.783,0.548-0.704 c0.546,0.077,9.342,0.263,9.812,0.263c0.469,0,0.218-0.519,0.218-0.519s-3.452-4.27-6.056-11.001 c-2.077-5.366-2.377-11.169-2.533-11.639c-0.157-0.469-0.034-0.887,0.514-0.808c0.549,0.079,8.558,3.488,8.87,3.567 c0.313,0.077,0.548-0.103,0.235-0.259c-0.314-0.157-2.896-6.383-3.855-12.033c-1.384-8.17-0.488-10.725-0.42-11.269 c0.063-0.502,0.397-0.874,1.105-0.507c0.743,0.385,12.255,10.245,12.646,10.402c0.391,0.157,0.79-0.164,0.477-0.555 c-0.313-0.392-2.392-6.574-2.938-13.145c-0.548-6.571,0.1-14.571,0.274-15.225c0.161-0.604,0.635-0.581,1.339,0.046 c0.704,0.626,10.381,8.489,11.006,9.038c0.625,0.547,0.727,0.252,0.492-0.53c-0.235-0.782-0.484-8.435,0.375-14.381 c0.965-6.686,3.372-10.979,3.685-11.448s0.536-0.474,0.927-0.161c0.391,0.313,5.106,9.045,5.497,9.515 c0.391,0.469,0.809,0.336,0.732-0.524c-0.104-1.14-0.057-4.547,1.845-12.682c1.956-8.371,3.789-9.758,4.052-10.088 c0.313-0.396,0.521-0.392,0.833-0.002c0.309,0.387,3.945,8.536,4.519,9.377c-0.005,0,0,0.008,0.031,0.049 c-0.007-0.009-0.022-0.036-0.031-0.049c0.025,0.008,0.446,0.395,0.34-0.883c-0.058-0.707,0.396-10.055,1.574-12.653 c1.941-4.282,4.404-6.214,4.899-6.463c0.54-0.272,0.658-0.171,0.737,0.212c0.146,0.721,0.478,7.705,0.625,8.312 c0.146,0.606,0.444,0.232,0.437-0.151c-0.015-0.72,1.081-7.977,3.115-12.044c2.033-4.069,4.292-5.681,5.188-6.133 c0.742-0.376,0.989-0.156,1.018,0.391c0.022,0.422,0.645,5.719,1.206,10.452c-0.272,1.24-0.484,2.556-0.639,3.691 C83.251,22.014,82.866,21.718,82.538,21.517z M127.35,141.814c-1.158,12.032-4.978,23.045-6.326,29.486 c-1.643,7.849-4.788,18.061-6.793,20.931c-4.433,6.343-18.036,18.547-20.403,19.732c-1.094,0.547-6.376-4.115-6.56-4.846 c-0.182-0.728,2.883-3.993,2.154-3.627c-0.731,0.364-4.104,0.906-5.06,0.87c-0.753-0.026,0.633-2.728,0.633-2.728 s-1.484,2.217-3.021,2.947c-0.03,0.015,9.433-18.119,9.433-18.119S127.52,140.043,127.35,141.814z M119.7,169.39l3.104-10.647 l-1.869-0.559l-3.152,10.656L119.7,169.39z M114.072,167.242l4.687-10.051l-1.764-0.838l-4.735,10.055L114.072,167.242z  M126.961,159.319l-0.82,11.06l-1.991-0.139l0.867-11.079L126.961,159.319z M131.727,170.391l-1.986,0.167l-0.828-11.078 l1.944-0.144L131.727,170.391z M164.422,186.462c0,0,9.463,18.134,9.434,18.119c-1.54-0.73-3.021-2.947-3.021-2.947 s1.384,2.701,0.633,2.728c-0.957,0.036-4.33-0.506-5.06-0.87c-0.731-0.366,2.334,2.899,2.153,3.627 c-0.185,0.73-5.467,5.393-6.56,4.846c-2.368-1.186-15.973-13.39-20.404-19.732c-2.007-2.87-5.149-13.082-6.792-20.931 c-1.349-6.441-4.621-17.127-5.778-29.16C128.854,140.373,164.422,186.462,164.422,186.462z M142.029,167.242l1.813-0.834 l-4.735-10.055l-1.762,0.838L142.029,167.242z M136.402,169.39l1.917-0.55l-3.152-10.656l-1.868,0.559L136.402,169.39z",
             }),
-          );
-        }
-        function Qe() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_ClosedCaption",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              className: "CCBox",
-              fill: "none",
-              stroke: "#000000",
-              strokeWidth: "10",
-              strokeMiterlimit: "10",
-              d: "M238,210c0,6.627-5.373,12-12,12H30 c-6.627,0-12-5.373-12-12V46c0-6.627,5.373-12,12-12h196c6.627,0,12,5.373,12,12V210z",
-            }),
-            r.createElement("path", {
-              className: "C1",
-              d: "M90.505,173.207c11.431,0,22.338-4.276,30.72-12.036c2.6-2.407,2.753-6.47,0.347-9.068c-2.41-2.604-6.47-2.757-9.072-0.349 c-5.998,5.559-13.811,8.62-21.995,8.62c-17.852,0-32.373-14.524-32.373-32.372c0-17.849,14.521-32.373,32.373-32.373 c8.177,0,15.981,3.055,21.979,8.603c2.603,2.407,6.662,2.25,9.072-0.353c2.407-2.602,2.249-6.662-0.353-9.068 c-8.375-7.751-19.276-12.019-30.694-12.019c-24.931,0-45.209,20.281-45.209,45.209C45.3,152.93,65.574,173.207,90.505,173.207z",
-            }),
-            r.createElement("path", {
-              className: "C1",
-              d: "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z",
-            }),
-          );
+          });
         }
         function Je() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Hidden",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              fill: "none",
-              stroke: "#FFFFFF",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              d: "M62.499,172.263 c-32.755-16.197-47.415-39.509-47.415-39.509",
-            }),
-            r.createElement("path", {
-              fill: "none",
-              stroke: "#FFFFFF",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              d: "M177.948,85.392 c48.213,14.998,68.451,47.362,68.451,47.362s-36.393,54.737-115.689,54.737c-17.938,0-33.591-2.671-47.096-6.832",
-            }),
-            r.createElement("path", {
-              fill: "none",
-              stroke: "#FFFFFF",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              d: "M15.084,132.754 c0,0,32.933-56.576,115.674-54.785c8.505,0.185,16.486,0.913,23.96,2.072",
-            }),
-            r.createElement("path", {
-              fill: "none",
-              stroke: "#FFFFFF",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              d: "M93.981,141.131 c-0.475-2.385-0.725-4.852-0.725-7.377c0-20.711,16.789-37.5,37.5-37.5c2.42,0,4.787,0.229,7.08,0.668",
-            }),
-            r.createElement("path", {
-              fill: "none",
-              stroke: "#FFFFFF",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              d: "M156.528,106.512 c7.223,6.836,11.729,16.513,11.729,27.242c0,20.711-16.789,37.5-37.5,37.5c-10.609,0-20.189-4.405-27.012-11.487",
-            }),
-            r.createElement("line", {
-              fill: "none",
-              stroke: "#FFFFFF",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              x1: "53.007",
-              y1: "210.504",
-              x2: "208.507",
-              y2: "55.004",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_ClosedCaption",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                className: "CCBox",
+                fill: "none",
+                stroke: "#000000",
+                strokeWidth: "10",
+                strokeMiterlimit: "10",
+                d: "M238,210c0,6.627-5.373,12-12,12H30 c-6.627,0-12-5.373-12-12V46c0-6.627,5.373-12,12-12h196c6.627,0,12,5.373,12,12V210z",
+              }),
+              (0, r.jsx)("path", {
+                className: "C1",
+                d: "M90.505,173.207c11.431,0,22.338-4.276,30.72-12.036c2.6-2.407,2.753-6.47,0.347-9.068c-2.41-2.604-6.47-2.757-9.072-0.349 c-5.998,5.559-13.811,8.62-21.995,8.62c-17.852,0-32.373-14.524-32.373-32.372c0-17.849,14.521-32.373,32.373-32.373 c8.177,0,15.981,3.055,21.979,8.603c2.603,2.407,6.662,2.25,9.072-0.353c2.407-2.602,2.249-6.662-0.353-9.068 c-8.375-7.751-19.276-12.019-30.694-12.019c-24.931,0-45.209,20.281-45.209,45.209C45.3,152.93,65.574,173.207,90.505,173.207z",
+              }),
+              (0, r.jsx)("path", {
+                className: "C1",
+                d: "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z",
+              }),
+            ],
+          });
         }
         function et() {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Download",
-              viewBox: "0 0 36 36",
-              fill: "none",
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M29 23V27H7V23H2V32H34V23H29Z",
-              fill: "currentColor",
-            }),
-            r.createElement(
-              "svg",
-              { x: "0", y: "0", width: "32", height: "25" },
-              r.createElement("path", {
-                className: "DownloadArrow",
-                d: "M20 14.1716L24.5858 9.58578L27.4142 12.4142L18 21.8284L8.58582 12.4142L11.4142 9.58578L16 14.1715V2H20V14.1716Z",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Hidden",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: "#FFFFFF",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                d: "M62.499,172.263 c-32.755-16.197-47.415-39.509-47.415-39.509",
+              }),
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: "#FFFFFF",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                d: "M177.948,85.392 c48.213,14.998,68.451,47.362,68.451,47.362s-36.393,54.737-115.689,54.737c-17.938,0-33.591-2.671-47.096-6.832",
+              }),
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: "#FFFFFF",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                d: "M15.084,132.754 c0,0,32.933-56.576,115.674-54.785c8.505,0.185,16.486,0.913,23.96,2.072",
+              }),
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: "#FFFFFF",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                d: "M93.981,141.131 c-0.475-2.385-0.725-4.852-0.725-7.377c0-20.711,16.789-37.5,37.5-37.5c2.42,0,4.787,0.229,7.08,0.668",
+              }),
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: "#FFFFFF",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                d: "M156.528,106.512 c7.223,6.836,11.729,16.513,11.729,27.242c0,20.711-16.789,37.5-37.5,37.5c-10.609,0-20.189-4.405-27.012-11.487",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                stroke: "#FFFFFF",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                x1: "53.007",
+                y1: "210.504",
+                x2: "208.507",
+                y2: "55.004",
+              }),
+            ],
+          });
+        }
+        function tt() {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Download",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            children: [
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M29 23V27H7V23H2V32H34V23H29Z",
                 fill: "currentColor",
               }),
-            ),
-          );
+              (0, r.jsx)("svg", {
+                x: "0",
+                y: "0",
+                width: "32",
+                height: "25",
+                children: (0, r.jsx)("path", {
+                  className: "DownloadArrow",
+                  d: "M20 14.1716L24.5858 9.58578L27.4142 12.4142L18 21.8284L8.58582 12.4142L11.4142 9.58578L16 14.1715V2H20V14.1716Z",
+                  fill: "currentColor",
+                }),
+              }),
+            ],
+          });
         }
-        function tt(e) {
+        function nt(e) {
           const { fullcolor: t, ...n } = e,
-            [i, s] = (0, l.l)(),
-            [o, a] = (0, l.l)();
+            [i, s] = (0, u.l)(),
+            [o, a] = (0, u.l)();
           return t
-            ? r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...n,
-                },
-                r.createElement("path", {
-                  stroke: s,
-                  fill: a,
-                  d: "M10.1777 10.0258L10.3929 9.80693V9.49999V5.52777H14.2857H14.6001L14.8205 5.30358L18 2.06976L21.1795 5.30358L21.3999 5.52777H21.7143H25.6071V9.50001V9.80696L25.8223 10.0258L28.5553 12.8055L25.8223 15.5853L25.6071 15.8041V16.1111V20.0833H21.7143H21.3999L21.1795 20.3075L18 23.5413L14.8205 20.3075L14.6001 20.0833H14.2857H10.3929V16.1111V15.8042L10.1777 15.5853L7.44464 12.8055L10.1777 10.0258ZM14.7399 28.0317L11.56 33.4221L9.85164 29.9469L9.6456 29.5278H9.17857H6.29474L8.68445 25.3611H12.1142L14.7399 28.0317ZM26.8214 29.5278H26.3544L26.1484 29.9469L24.44 33.4221L21.2601 28.0317L23.8858 25.3611H27.3155L29.7053 29.5278H26.8214Z",
-                  strokeWidth: "1.5",
-                }),
-                r.createElement("circle", {
-                  stroke: "#FFAB2C",
-                  fill: "#FFC82C",
-                  cx: "18",
-                  cy: "13",
-                  r: "5.5",
-                }),
-                r.createElement(
-                  "defs",
-                  null,
-                  r.createElement(
-                    "linearGradient",
-                    {
-                      id: o,
-                      x1: "7.08",
-                      y1: "3.72",
-                      x2: "33.6694",
-                      y2: "25.0697",
-                      gradientUnits: "userSpaceOnUse",
-                    },
-                    r.createElement("stop", { stopColor: "#0056D6" }),
-                    r.createElement("stop", {
-                      offset: "1",
-                      stopColor: "#1A9FFF",
-                    }),
-                  ),
-                  r.createElement(
-                    "linearGradient",
-                    {
-                      id: i,
-                      x1: "7.08",
-                      y1: "3.72",
-                      x2: "33.6694",
-                      y2: "25.0697",
-                      gradientUnits: "userSpaceOnUse",
-                    },
-                    r.createElement("stop", { stopColor: "#0056D6" }),
-                    r.createElement("stop", {
-                      offset: "1",
-                      stopColor: "#1A9FFF",
-                    }),
-                  ),
-                ),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...n,
-                },
-                r.createElement("path", {
-                  fill: "currentColor",
-                  fillRule: "evenodd",
-                  clipRule: "evenodd",
-                  d: "M9.64304 9.49988L6.39294 12.8055L9.64304 16.1112V20.8333H14.2858L18.0001 24.6111L21.7143 20.8333H26.3573V16.111L29.6072 12.8055L26.3573 9.50012V4.77777H21.7143L18.0001 1L14.2858 4.77777H9.64304V9.49988ZM22.6432 12.8056C22.6432 15.4136 20.5645 17.5278 18.0004 17.5278C15.4362 17.5278 13.3575 15.4136 13.3575 12.8056C13.3575 10.1976 15.4362 8.08334 18.0004 8.08334C20.5645 8.08334 22.6432 10.1976 22.6432 12.8056Z",
-                }),
-                r.createElement("path", {
-                  fill: "currentColor",
-                  d: "M5 30.2778L8.25 24.6111H12.4286L15.6786 27.9167L11.5 35L9.17857 30.2778H5Z",
-                }),
-                r.createElement("path", {
-                  fill: "currentColor",
-                  d: "M30.9999 30.2778L27.7499 24.6111H23.5713L20.3213 27.9167L24.4999 35L26.8213 30.2778H30.9999Z",
-                }),
-              );
-        }
-        function nt() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_PlayTime",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polyline", {
-              fill: "none",
-              stroke: "#000000",
-              strokeWidth: "16",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              points: "85.5,149.167 128,128 128,55.167 ",
-            }),
-            r.createElement("path", {
-              fill: "none",
-              stroke: "#000000",
-              strokeWidth: "16",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              d: "M128,17.5c61.027,0,110.5,49.473,110.5,110.5S189.027,238.5,128,238.5S17.5,189.027,17.5,128",
-            }),
-            r.createElement("circle", {
-              stroke: "#000000",
-              strokeWidth: "7",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              cx: "26.448",
-              cy: "85.833",
-              r: "5.5",
-            }),
-            r.createElement("circle", {
-              stroke: "#000000",
-              strokeWidth: "7",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              cx: "50.167",
-              cy: "50.5",
-              r: "5.5",
-            }),
-            r.createElement("circle", {
-              stroke: "#000000",
-              strokeWidth: "7",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              cx: "86",
-              cy: "26.667",
-              r: "5.5",
-            }),
-          );
+            ? (0, r.jsxs)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...n,
+                children: [
+                  (0, r.jsx)("path", {
+                    stroke: s,
+                    fill: a,
+                    d: "M10.1777 10.0258L10.3929 9.80693V9.49999V5.52777H14.2857H14.6001L14.8205 5.30358L18 2.06976L21.1795 5.30358L21.3999 5.52777H21.7143H25.6071V9.50001V9.80696L25.8223 10.0258L28.5553 12.8055L25.8223 15.5853L25.6071 15.8041V16.1111V20.0833H21.7143H21.3999L21.1795 20.3075L18 23.5413L14.8205 20.3075L14.6001 20.0833H14.2857H10.3929V16.1111V15.8042L10.1777 15.5853L7.44464 12.8055L10.1777 10.0258ZM14.7399 28.0317L11.56 33.4221L9.85164 29.9469L9.6456 29.5278H9.17857H6.29474L8.68445 25.3611H12.1142L14.7399 28.0317ZM26.8214 29.5278H26.3544L26.1484 29.9469L24.44 33.4221L21.2601 28.0317L23.8858 25.3611H27.3155L29.7053 29.5278H26.8214Z",
+                    strokeWidth: "1.5",
+                  }),
+                  (0, r.jsx)("circle", {
+                    stroke: "#FFAB2C",
+                    fill: "#FFC82C",
+                    cx: "18",
+                    cy: "13",
+                    r: "5.5",
+                  }),
+                  (0, r.jsxs)("defs", {
+                    children: [
+                      (0, r.jsxs)("linearGradient", {
+                        id: o,
+                        x1: "7.08",
+                        y1: "3.72",
+                        x2: "33.6694",
+                        y2: "25.0697",
+                        gradientUnits: "userSpaceOnUse",
+                        children: [
+                          (0, r.jsx)("stop", { stopColor: "#0056D6" }),
+                          (0, r.jsx)("stop", {
+                            offset: "1",
+                            stopColor: "#1A9FFF",
+                          }),
+                        ],
+                      }),
+                      (0, r.jsxs)("linearGradient", {
+                        id: i,
+                        x1: "7.08",
+                        y1: "3.72",
+                        x2: "33.6694",
+                        y2: "25.0697",
+                        gradientUnits: "userSpaceOnUse",
+                        children: [
+                          (0, r.jsx)("stop", { stopColor: "#0056D6" }),
+                          (0, r.jsx)("stop", {
+                            offset: "1",
+                            stopColor: "#1A9FFF",
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              })
+            : (0, r.jsxs)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...n,
+                children: [
+                  (0, r.jsx)("path", {
+                    fill: "currentColor",
+                    fillRule: "evenodd",
+                    clipRule: "evenodd",
+                    d: "M9.64304 9.49988L6.39294 12.8055L9.64304 16.1112V20.8333H14.2858L18.0001 24.6111L21.7143 20.8333H26.3573V16.111L29.6072 12.8055L26.3573 9.50012V4.77777H21.7143L18.0001 1L14.2858 4.77777H9.64304V9.49988ZM22.6432 12.8056C22.6432 15.4136 20.5645 17.5278 18.0004 17.5278C15.4362 17.5278 13.3575 15.4136 13.3575 12.8056C13.3575 10.1976 15.4362 8.08334 18.0004 8.08334C20.5645 8.08334 22.6432 10.1976 22.6432 12.8056Z",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "currentColor",
+                    d: "M5 30.2778L8.25 24.6111H12.4286L15.6786 27.9167L11.5 35L9.17857 30.2778H5Z",
+                  }),
+                  (0, r.jsx)("path", {
+                    fill: "currentColor",
+                    d: "M30.9999 30.2778L27.7499 24.6111H23.5713L20.3213 27.9167L24.4999 35L26.8213 30.2778H30.9999Z",
+                  }),
+                ],
+              });
         }
         function rt() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_3",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Filter",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_PlayTime",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polyline", {
+                fill: "none",
+                stroke: "#000000",
+                strokeWidth: "16",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points: "85.5,149.167 128,128 128,55.167 ",
+              }),
+              (0, r.jsx)("path", {
+                fill: "none",
+                stroke: "#000000",
+                strokeWidth: "16",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                d: "M128,17.5c61.027,0,110.5,49.473,110.5,110.5S189.027,238.5,128,238.5S17.5,189.027,17.5,128",
+              }),
+              (0, r.jsx)("circle", {
+                stroke: "#000000",
+                strokeWidth: "7",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                cx: "26.448",
+                cy: "85.833",
+                r: "5.5",
+              }),
+              (0, r.jsx)("circle", {
+                stroke: "#000000",
+                strokeWidth: "7",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                cx: "50.167",
+                cy: "50.5",
+                r: "5.5",
+              }),
+              (0, r.jsx)("circle", {
+                stroke: "#000000",
+                strokeWidth: "7",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                cx: "86",
+                cy: "26.667",
+                r: "5.5",
+              }),
+            ],
+          });
+        }
+        function it() {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_3",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Filter",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
               d: "M236.445,23.522c-1.085-2.35-3.438-3.855-6.025-3.855H25.58c-2.586,0-4.936,1.501-6.024,3.855 c-1.08,2.349-0.698,5.112,0.983,7.083l80.328,94.039v104.181c0,2.74,1.682,5.194,4.237,6.188c0.778,0.3,1.588,0.445,2.392,0.445 c1.832,0,3.626-0.762,4.91-2.17l41.012-45.13c1.111-1.219,1.724-2.811,1.724-4.459v-59.054l80.325-94.04 C237.144,28.634,237.526,25.867,236.445,23.522z",
             }),
-          );
+          });
         }
-        function it(e) {
+        function st(e) {
           const { percentComplete: t, startOffset: n } = e;
-          let o = s.Fu(t, 0, 100, 800, 0),
+          let i = o.Fu(t, 0, 100, 800, 0),
             a = n ? n + 270 : 270;
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_4",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                e.className,
-                "SVGIcon_Button SVGIcon_ProgressCircle",
-              ),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              style: { transform: `rotate(${a}deg)` },
-            },
-            r.createElement("circle", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_4",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              e.className,
+              "SVGIcon_Button SVGIcon_ProgressCircle",
+            ),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            style: { transform: `rotate(${a}deg)` },
+            children: (0, r.jsx)("circle", {
               cx: "128",
               cy: "128",
               r: "128",
@@ -20029,934 +19779,872 @@ var CLSTAMP = "10520954";
               strokeWidth: "10",
               fill: "#00000000",
               strokeDasharray: "800",
-              strokeDashoffset: o,
+              strokeDashoffset: i,
             }),
-          );
-        }
-        function st() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_ReadyToPlay",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "-305.5 396.5 256 256",
-            },
-            r.createElement("circle", {
-              fill: "none",
-              stroke: "#000000",
-              strokeWidth: "10",
-              strokeMiterlimit: "10",
-              cx: "-177.5",
-              cy: "520.5",
-              r: "64",
-            }),
-            r.createElement("path", {
-              d: "M-194.852,487.664c-3.918-2.299-7.07-0.511-7.07,4.004v57.665c0,4.515,3.152,6.303,7.07,4.003l47.699-28.619 c3.918-2.3,3.918-6.133,0-8.519L-194.852,487.664z",
-            }),
-          );
+          });
         }
         function ot() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Edit",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M16.757,233.795c-1.324,3.973,2.455,7.752,6.427,6.428l50.912-16.971l-40.368-40.367L16.757,233.795z",
-            }),
-            r.createElement("rect", {
-              x: "83.614",
-              y: "75.466",
-              transform:
-                "matrix(-0.7071 -0.7071 0.7071 -0.7071 93.7468 324.5916)",
-              width: "60.971",
-              height: "134.827",
-            }),
-            r.createElement("rect", {
-              x: "149.28",
-              y: "68.116",
-              transform:
-                "matrix(-0.7071 -0.7071 0.7071 -0.7071 252.0431 259.4951)",
-              width: "60.971",
-              height: "18.862",
-            }),
-            r.createElement("path", {
-              d: "M233.545,37.803l-14.368-14.369c-7.928-7.928-20.846-7.897-28.809,0.064l-14.305,14.307l43.112,43.111l14.306-14.305 C241.511,58.582,241.513,45.771,233.545,37.803z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_ReadyToPlay",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "-305.5 396.5 256 256",
+            children: [
+              (0, r.jsx)("circle", {
+                fill: "none",
+                stroke: "#000000",
+                strokeWidth: "10",
+                strokeMiterlimit: "10",
+                cx: "-177.5",
+                cy: "520.5",
+                r: "64",
+              }),
+              (0, r.jsx)("path", {
+                d: "M-194.852,487.664c-3.918-2.299-7.07-0.511-7.07,4.004v57.665c0,4.515,3.152,6.303,7.07,4.003l47.699-28.619 c3.918-2.3,3.918-6.133,0-8.519L-194.852,487.664z",
+              }),
+            ],
+          });
         }
         function at() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Information",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polyline", {
-              className: "I",
-              points:
-                "86.883,110.957 152.894,110.957 152.894,181.406 177.117,181.406 177.117,202.485 86.883,202.485 86.883,181.775 109.441,181.775 109.441,130.372 86.883,130.372 ",
-            }),
-            r.createElement("circle", {
-              className: "I",
-              cx: "128.47",
-              cy: "67.607",
-              r: "25.517",
-            }),
-            r.createElement("circle", {
-              fill: "none",
-              stroke: "#000000",
-              strokeWidth: "14",
-              strokeMiterlimit: "10",
-              cx: "128",
-              cy: "128",
-              r: "116.833",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Edit",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                d: "M16.757,233.795c-1.324,3.973,2.455,7.752,6.427,6.428l50.912-16.971l-40.368-40.367L16.757,233.795z",
+              }),
+              (0, r.jsx)("rect", {
+                x: "83.614",
+                y: "75.466",
+                transform:
+                  "matrix(-0.7071 -0.7071 0.7071 -0.7071 93.7468 324.5916)",
+                width: "60.971",
+                height: "134.827",
+              }),
+              (0, r.jsx)("rect", {
+                x: "149.28",
+                y: "68.116",
+                transform:
+                  "matrix(-0.7071 -0.7071 0.7071 -0.7071 252.0431 259.4951)",
+                width: "60.971",
+                height: "18.862",
+              }),
+              (0, r.jsx)("path", {
+                d: "M233.545,37.803l-14.368-14.369c-7.928-7.928-20.846-7.897-28.809,0.064l-14.305,14.307l43.112,43.111l14.306-14.305 C241.511,58.582,241.513,45.771,233.545,37.803z",
+              }),
+            ],
+          });
         }
-        function ct(e) {
-          return r.createElement(
-            "svg",
-            {
-              style: { height: e.height, width: e.height },
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_DynamicCollection",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("polyline", {
-              style: { opacity: 0.2 },
-              points:
-                "27.875,27.875 73.692,27.893 51.91,154.75 74.672,155 62.787,227.93 27.875,228.125",
-            }),
-            r.createElement("polyline", {
-              style: { opacity: 0.2 },
-              points:
-                "202.723,27.875 228.147,27.875 228.541,227.93 111.667,227.93 209.345,91.25 175.523,91.218",
-            }),
-            r.createElement("polygon", {
-              points:
-                "178.671,16.667 103.833,16.667 75.506,140.146 103.83,140.025 75.506,242.5 174.837,107.74 142.5,107.5",
-            }),
-          );
+        function ct() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Information",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polyline", {
+                className: "I",
+                points:
+                  "86.883,110.957 152.894,110.957 152.894,181.406 177.117,181.406 177.117,202.485 86.883,202.485 86.883,181.775 109.441,181.775 109.441,130.372 86.883,130.372 ",
+              }),
+              (0, r.jsx)("circle", {
+                className: "I",
+                cx: "128.47",
+                cy: "67.607",
+                r: "25.517",
+              }),
+              (0, r.jsx)("circle", {
+                fill: "none",
+                stroke: "#000000",
+                strokeWidth: "14",
+                strokeMiterlimit: "10",
+                cx: "128",
+                cy: "128",
+                r: "116.833",
+              }),
+            ],
+          });
         }
-        function lt() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)(
-                "SVGIcon_Button SVGIcon_SketchArrowTopLeft",
-                a().HasHorizontalDirection,
-              ),
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              d: "M5,52.991l10.823-27.306C68.038,201.104,124.475,254.751,251,220.579",
-            }),
-            r.createElement("line", {
-              fill: "none",
-              strokeWidth: "10",
-              strokeLinecap: "round",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "10",
-              x1: "15.823",
-              y1: "25.686",
-              x2: "40.363",
-              y2: "41.714",
-            }),
-          );
+        function lt(e) {
+          return (0, r.jsxs)("svg", {
+            style: { height: e.height, width: e.height },
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_DynamicCollection",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("polyline", {
+                style: { opacity: 0.2 },
+                points:
+                  "27.875,27.875 73.692,27.893 51.91,154.75 74.672,155 62.787,227.93 27.875,228.125",
+              }),
+              (0, r.jsx)("polyline", {
+                style: { opacity: 0.2 },
+                points:
+                  "202.723,27.875 228.147,27.875 228.541,227.93 111.667,227.93 209.345,91.25 175.523,91.218",
+              }),
+              (0, r.jsx)("polygon", {
+                points:
+                  "178.671,16.667 103.833,16.667 75.506,140.146 103.83,140.025 75.506,242.5 174.837,107.74 142.5,107.5",
+              }),
+            ],
+          });
         }
         function ut() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Patch",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M171.176,136.219c-5.516-5.516-14.166-5.948-20.223-1.406L92.125,75.984l-8.002-29.738c-0.324-1.406-1.73-3.027-3.028-3.785 L46.49,24.186c-1.298-0.648-3.136-0.433-4.218,0.648L25.295,41.813c-0.974,0.973-1.298,2.92-0.649,4.217l18.276,34.605 c0.648,1.297,2.379,2.596,3.785,3.027l29.739,8.003l58.828,58.828c-4.542,6.056-4.109,14.707,1.405,20.222l56.882,56.882 c6.056,6.056,15.896,6.056,21.845,0l12.544-12.544c6.056-6.056,6.056-15.788,0-21.845L171.176,136.219z",
-            }),
-            r.createElement("path", {
-              d: "M153.116,122.16c2.271-0.648,4.65-0.973,7.138-0.973c0.865,0,1.622,0,2.486,0.107l26.928-26.927 c12.328,2.92,25.846-0.324,35.361-9.948c9.517-9.625,12.869-23.034,9.949-35.254l-20.33,20.33l-21.845-5.84l-5.84-21.952 l20.331-20.33c-12.221-2.92-25.738,0.324-35.254,9.948c-9.625,9.625-12.869,23.143-9.949,35.362L129.866,98.91L153.116,122.16z",
-            }),
-            r.createElement("path", {
-              d: "M99.371,129.406l-32.226,32.226c-12.328-2.92-25.845,0.324-35.362,9.948c-9.517,9.625-12.869,23.034-9.949,35.254 l20.331-20.33l21.953,5.84l5.839,21.952l-20.331,20.33c12.22,2.92,25.737-0.324,35.254-9.949 c9.625-9.624,12.869-23.142,9.949-35.361l27.035-27.035c-0.325-3.136,0-6.38,0.865-9.517L99.371,129.406z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)(
+              "SVGIcon_Button SVGIcon_SketchArrowTopLeft",
+              c().HasHorizontalDirection,
+            ),
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                d: "M5,52.991l10.823-27.306C68.038,201.104,124.475,254.751,251,220.579",
+              }),
+              (0, r.jsx)("line", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                x1: "15.823",
+                y1: "25.686",
+                x2: "40.363",
+                y2: "41.714",
+              }),
+            ],
+          });
+        }
+        function dt() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Patch",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("path", {
+                d: "M171.176,136.219c-5.516-5.516-14.166-5.948-20.223-1.406L92.125,75.984l-8.002-29.738c-0.324-1.406-1.73-3.027-3.028-3.785 L46.49,24.186c-1.298-0.648-3.136-0.433-4.218,0.648L25.295,41.813c-0.974,0.973-1.298,2.92-0.649,4.217l18.276,34.605 c0.648,1.297,2.379,2.596,3.785,3.027l29.739,8.003l58.828,58.828c-4.542,6.056-4.109,14.707,1.405,20.222l56.882,56.882 c6.056,6.056,15.896,6.056,21.845,0l12.544-12.544c6.056-6.056,6.056-15.788,0-21.845L171.176,136.219z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M153.116,122.16c2.271-0.648,4.65-0.973,7.138-0.973c0.865,0,1.622,0,2.486,0.107l26.928-26.927 c12.328,2.92,25.846-0.324,35.361-9.948c9.517-9.625,12.869-23.034,9.949-35.254l-20.33,20.33l-21.845-5.84l-5.84-21.952 l20.331-20.33c-12.221-2.92-25.738,0.324-35.254,9.948c-9.625,9.625-12.869,23.143-9.949,35.362L129.866,98.91L153.116,122.16z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M99.371,129.406l-32.226,32.226c-12.328-2.92-25.845,0.324-35.362,9.948c-9.517,9.625-12.869,23.034-9.949,35.254 l20.331-20.33l21.953,5.84l5.839,21.952l-20.331,20.33c12.22,2.92,25.737-0.324,35.254-9.949 c9.625-9.624,12.869-23.142,9.949-35.361l27.035-27.035c-0.325-3.136,0-6.38,0.865-9.517L99.371,129.406z",
+              }),
+            ],
+          });
         }
         function mt(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_AppleLogo",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M138.365,26.557c16.139-21.272,38.578-21.376,38.578-21.376s3.336,19.999-12.696,39.266 c-17.12,20.572-36.58,17.206-36.58,17.206S124.012,45.473,138.365,26.557z",
-            }),
-            r.createElement("path", {
-              d: "M129.719,75.662c8.305,0,23.713-11.413,43.771-11.413c34.527,0,48.109,24.566,48.109,24.566s-26.565,13.583-26.565,46.54 c0,37.179,33.093,49.991,33.093,49.991s-23.134,65.112-54.38,65.112c-14.353,0-25.509-9.672-40.631-9.672 c-15.41,0-30.702,10.032-40.662,10.032c-28.533,0-64.581-61.765-64.581-111.414c0-48.849,30.512-74.474,59.13-74.474 C105.61,64.933,120.047,75.662,129.719,75.662z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_AppleLogo",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                d: "M138.365,26.557c16.139-21.272,38.578-21.376,38.578-21.376s3.336,19.999-12.696,39.266 c-17.12,20.572-36.58,17.206-36.58,17.206S124.012,45.473,138.365,26.557z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M129.719,75.662c8.305,0,23.713-11.413,43.771-11.413c34.527,0,48.109,24.566,48.109,24.566s-26.565,13.583-26.565,46.54 c0,37.179,33.093,49.991,33.093,49.991s-23.134,65.112-54.38,65.112c-14.353,0-25.509-9.672-40.631-9.672 c-15.41,0-30.702,10.032-40.662,10.032c-28.533,0-64.581-61.765-64.581-111.414c0-48.849,30.512-74.474,59.13-74.474 C105.61,64.933,120.047,75.662,129.719,75.662z",
+              }),
+            ],
+          });
         }
-        function dt(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "base",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_LinuxLogo",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-              ...e,
-            },
-            r.createElement("path", {
+        function ht(e) {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_LinuxLogo",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            ...e,
+            children: (0, r.jsx)("path", {
               d: "M234.16,207.854c-3.953-2.455-13.301-5.047-14.086-22.99c-3.539,3.146-3.13,19.863,6.746,23.182 c11.031,3.705,17.923,9.91-2.586,16.922c-13.577,4.645-15.887,6.074-26.637,15.021c-10.875,9.055-27.017,5.457-24.197-13.602 c1.469-9.934,2.313-18.141-0.158-26.773c-1.206-4.217-1.807-9.625-0.982-13.418c1.604-7.377,5.596-9.6,9.512-2.516 c2.457,4.441,3.315,9.641,12.111,10.064c13.819,0.66,16.555-13.354,20.973-13.99c2.944-0.428,5.889-8.764,3.646-22.25 c-2.403-14.438-10.897-37.234-21.791-48.795c-9.055-9.609-14.762-18.033-18.351-30.057c-3.017-10.103-4.7-19.936-4.079-29.335 c0.806-12.18-5.95-29.129-16.703-37.103c-6.73-4.993-17.287-7.667-26.841-7.562c-5.358,0.058-10.401,0.841-14.276,2.944 c-15.949,8.658-18.177,21.024-17.938,35.14c0.223,13.26,0.675,28.39,2.181,42.783c-1.782,6.609-11.068,19.138-17.013,26.762 c-7.993,7.896-12.03,23.157-17.203,36.491c-2.759,7.107-7.407,10.318-7.798,19.457c-0.108,2.555-0.021,9.168,2.423,7.277 c9.348-7.232,21.049,11,38.722,38.82c3.389,5.334,15.329,27.793-5.602,30.705c-7,0.979-18.271-4.07-29.192-6.742 c-9.812-2.398-19.775-3.822-25.352-5.391c-3.358-0.943-4.762-2.146-5.053-3.553c-0.773-3.729,4.075-8.955,4.321-13.369 c0.246-4.416-1.609-6.709-3.129-10.311c-1.522-3.609-1.919-6.313-0.701-7.859c0.948-1.205,2.873-1.707,6.005-1.4 c3.97,0.391,8.766-0.422,11.342-1.996c4.339-2.645,6.381-8.068,4.428-14.604c0,6.395-2.097,8.816-7.354,11.74 c-4.954,2.758-12.604,0.527-16.117,3.576c-4.229,3.672,1.509,13.146,1.04,20.104c-0.361,5.346-5.938,11.365-3.451,16.727 c2.502,5.395,14.17,5.979,26.336,8.523c17.293,3.619,27.375,9.912,35.365,10.211c11.656,0.432,13.441-11.531,31.743-11.693 c5.338-0.281,10.559-0.447,15.773-0.514c5.91-0.072,11.813-0.025,17.873,0.119c12.182,0.295,7.99,6.648,15.894,10.713 c6.667,3.426,18.654,2.072,21.522-0.664c3.88-3.701,14.298-12.604,22.28-16.625C227.758,227.004,251.121,218.375,234.16,207.854 z M170.973,212.664c-0.609,7.697-2.744,15.326-3.947,23.057c-4.075-0.154-3.679-3.139-2.37-7.322 c1.153-3.689,3.014-8.316,3.135-12.75c0.11-4.016-0.328-6.525-1.34-7.148c-1.013-0.623-2.599,0.643-4.787,4.168 c-4.677,7.529-14.802,10.84-24.258,12.023c-9.456,1.186-18.246,0.246-22.9-4.967c-1.592-1.783-4.232,0.486-4.546,0.959 c-0.42,0.635,1.541,1.865,3.019,4.578c2.159,3.959,4.212,9.969-0.902,12.711c0.061-13.943-4.352-14.76-8.862-23.277 c8.825-0.912,9.99-10.254,5.833-14.33c-3.424-3.359-22.319-17.387-27.251-22.902c-2.287-2.559-5.39-3.814-6.704-6.689 c-3.021-6.617-5.139-16.063-1.305-22.846c0.693-1.225,1.14-0.676,0.608,1.877c-3.01,14.473,6.413,26.293,8.486,20.23 c1.435-4.188,0.105-11.68,0.87-17.629c1.355-10.533,10.94-30.749,15.15-31.902c-6.494-12.026,7.613-21.441,7.441-31.997 c-0.113-6.864,6.029,8.439,12.202,11.685c6.894,3.623,14.472-6.829,25.228-12.131c3.043-1.501,6.945-3.225,6.685-4.504 c-1.265-6.171-14.129,7.613-25.618,8.078c-5.243,0.211-7.188-1.03-9.215-2.986c-6.123-5.918,0.624-0.979,9.729-2.626 c4.045-0.732,5.405-1.406,9.698-3.141c4.295-1.736,9.201-4.305,14.06-5.624c3.383-0.92,3.103-3.462,1.785-4.225 c-0.758-0.439-1.88-0.396-2.771,1.141c-2.085,3.604-11.887,5.688-14.945,6.623c-3.928,1.202-8.273,2.325-14.046,2.09 c-8.771-0.356-6.726-4.376-12.999-7.973c-1.839-1.054-1.343-3.824,1.103-6.269c1.28-1.282,4.79-2.005,6.53-4.919 c0.245-0.408,2.488-2.754,4.246-3.968c0.607-0.421,1.988-3.235,9.988-1.235l9.5,1c2.088,0.267,8.388,6.752,12.059,7.467 c12.047,2.345,3.195,9.25,4.761,17.61c1.766,9.442,7.984,6.948,13.573,31.949c1.17,1.522,5.797,2.964,10.309,22.17 c4.057,17.281-1.688,29.85,8.07,28.816c2.195-0.23,5.407-0.848,6.805-5.742c3.65-12.801-1.828-28.049-7.362-38.34 c-3.224-6-6.258-10.086-7.86-11.49c6.343,3.749,14.449,15.72,16.317,24.605c2.458,11.676,4.212,16.619,0.494,28.965 c2.146,1.074,7.483,3.34,7.483,5.889c-5.56-4.57-22.586-5.383-23.022,5.549c-2.904,0.059-5.098,0.295-6.969,2.514 C165.313,187.604,171.669,203.916,170.973,212.664z",
             }),
-          );
+          });
         }
-        function ht() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_3",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_LinuxLogo2",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              { id: "g4768_2_", transform: "translate(-6.9308024,-10)" },
-              r.createElement("g", { id: "g4763_2_" }),
-            ),
-            r.createElement("path", {
-              d: "M235.4,158.1c-14.6-33.7-46.9-69.7-49.3-80.3c-2-6.4-2.3-32.5-16.5-52.3c-11.8-13.8-25.2-23.1-42.7-23.1 c-17.4,0-32.5,8.7-43,23.1C69.7,45.2,69.4,70,67.4,77.8c-0.9,9.9-33.1,43.8-48,77.5c-6.8,15.3-11.1,27.4-9.3,30.6 c4.4,4,5.4-1.5,31.1-8.4c0.2,26.2,8.7,76,84.8,76c0.3,0,0.5,0,0.7,0c0.3,0,0.5,0,0.7,0c77.4,0,85.6-59.8,84.8-77.4 c-0.1-2.6,28,15.6,31.1,9.8C245.1,182.8,241.4,172,235.4,158.1z M182,213.8c-4.9,8.9-16.4,24.1-52.6,24.6c-0.9,0-1.7,0-2.6,0 c-0.9,0-1.7,0-2.6,0c-36.2-0.5-47.7-15.7-52.6-24.6c-15.9-28.5,0.1-83.4,10.1-109.2c5.7-14.7,12.9-23.5,22.1-28.3 c5.8,9.9,19.4,21.6,23.7,21.6c4.5,0,17.2-11,23.2-20.7c9,5.4,15.9,14.5,21.2,27.4C181,126.7,197.8,185.3,182,213.8z",
-            }),
-          );
-        }
-        function pt(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              className: "SVGIcon_Button SVGIcon_WindowsLogo",
-              width: "100%",
-              height: "100%",
-              viewBox: "0 0 128 128",
-              enableBackground: "new 0 0 128 128",
-              ...e,
-            },
-            r.createElement("rect", {
-              fill: "currentColor",
-              width: "60.834",
-              height: "60.835",
-            }),
-            r.createElement("rect", {
-              x: "67.165",
-              fill: "currentColor",
-              width: "60.835",
-              height: "60.835",
-            }),
-            r.createElement("rect", {
-              y: "67.164",
-              fill: "currentColor",
-              width: "60.834",
-              height: "60.836",
-            }),
-            r.createElement("rect", {
-              x: "67.165",
-              y: "67.164",
-              fill: "currentColor",
-              width: "60.835",
-              height: "60.836",
-            }),
-          );
+        function pt() {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_3",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_LinuxLogo2",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("g", {
+                id: "g4768_2_",
+                transform: "translate(-6.9308024,-10)",
+                children: (0, r.jsx)("g", { id: "g4763_2_" }),
+              }),
+              (0, r.jsx)("path", {
+                d: "M235.4,158.1c-14.6-33.7-46.9-69.7-49.3-80.3c-2-6.4-2.3-32.5-16.5-52.3c-11.8-13.8-25.2-23.1-42.7-23.1 c-17.4,0-32.5,8.7-43,23.1C69.7,45.2,69.4,70,67.4,77.8c-0.9,9.9-33.1,43.8-48,77.5c-6.8,15.3-11.1,27.4-9.3,30.6 c4.4,4,5.4-1.5,31.1-8.4c0.2,26.2,8.7,76,84.8,76c0.3,0,0.5,0,0.7,0c0.3,0,0.5,0,0.7,0c77.4,0,85.6-59.8,84.8-77.4 c-0.1-2.6,28,15.6,31.1,9.8C245.1,182.8,241.4,172,235.4,158.1z M182,213.8c-4.9,8.9-16.4,24.1-52.6,24.6c-0.9,0-1.7,0-2.6,0 c-0.9,0-1.7,0-2.6,0c-36.2-0.5-47.7-15.7-52.6-24.6c-15.9-28.5,0.1-83.4,10.1-109.2c5.7-14.7,12.9-23.5,22.1-28.3 c5.8,9.9,19.4,21.6,23.7,21.6c4.5,0,17.2-11,23.2-20.7c9,5.4,15.9,14.5,21.2,27.4C181,126.7,197.8,185.3,182,213.8z",
+              }),
+            ],
+          });
         }
         function gt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            className: "SVGIcon_Button SVGIcon_WindowsLogo",
+            width: "100%",
+            height: "100%",
+            viewBox: "0 0 128 128",
+            enableBackground: "new 0 0 128 128",
+            ...e,
+            children: [
+              (0, r.jsx)("rect", {
+                fill: "currentColor",
+                width: "60.834",
+                height: "60.835",
+              }),
+              (0, r.jsx)("rect", {
+                x: "67.165",
+                fill: "currentColor",
+                width: "60.835",
+                height: "60.835",
+              }),
+              (0, r.jsx)("rect", {
+                y: "67.164",
+                fill: "currentColor",
+                width: "60.834",
+                height: "60.836",
+              }),
+              (0, r.jsx)("rect", {
+                x: "67.165",
+                y: "67.164",
+                fill: "currentColor",
+                width: "60.835",
+                height: "60.836",
+              }),
+            ],
+          });
+        }
+        function ft(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               d: "M4 7.96434L15.4427 6.41076L15.4477 17.4142L4.01045 17.4791L4 7.96434ZM15.4373 18.682L15.4461 29.695L4.00888 28.1274L4.00824 18.6081L15.4373 18.682ZM16.8244 6.20752L31.9965 4V17.2742L16.8244 17.3943V6.20752ZM32 18.7855L31.9964 32L16.8244 29.8652L16.8031 18.7608L32 18.7855Z",
             }),
-          );
-        }
-        function ft() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
-                d: "M216.3,84.7c-18,0-32.7,14.7-32.7,32.7c0,0.1,0,0.3,0,0.4l-21.1,30.6c-3.4-0.1-6.8,0.4-10.1,1.8c-1.4,0.6-2.8,1.3-4,2.1 l-95.1-39.3c-1.6-7.4-6.7-13.9-14.2-17.1c-12.2-5.1-26.2,0.7-31.3,12.9c-5.1,12.2,0.7,26.2,12.9,31.3c5.9,2.5,12.4,2.5,18.3,0 c1.4-0.6,2.6-1.2,3.9-2l95.3,39.4c1.6,7.3,6.7,13.8,14.1,16.9c12.2,5.1,26.2-0.7,31.3-12.9c1.3-3.2,1.9-6.5,1.8-9.8l30.2-21.5 c0.2,0,0.5,0,0.7,0c18.1,0,32.7-14.7,32.7-32.7C249,99.4,234.3,84.7,216.3,84.7z M22.8,135.1c-7.1-2.9-11.3-9.8-11.3-17 c0-2.4,0.5-4.8,1.4-7.1c3.9-9.4,14.7-13.8,24.1-9.9c4.4,1.8,7.7,5.2,9.6,9.3l-10.9-4.5c-6.9-2.9-14.9,0.4-17.8,7.3 c-2.9,6.9,0.4,14.9,7.3,17.8l10.9,4.5C31.8,137,27.1,136.9,22.8,135.1z M178.5,179.4c-3.9,9.4-14.7,13.8-24.1,9.9 c-4.3-1.8-7.6-5.1-9.5-9l10.7,4.4c6.9,2.9,14.9-0.4,17.8-7.3c2.9-6.9-0.4-14.9-7.3-17.8l-11-4.6c4.2-1.6,9.1-1.7,13.6,0.2 c4.5,1.9,8.1,5.4,10,10C180.4,169.9,180.4,174.9,178.5,179.4z M216.3,139.3c-12,0-21.8-9.8-21.8-21.8c0-12,9.8-21.8,21.8-21.8 c12,0,21.8,9.8,21.8,21.8C238.1,129.5,228.3,139.3,216.3,139.3z M216.3,133.8c-9,0-16.4-7.3-16.4-16.4s7.3-16.4,16.4-16.4 c9.1,0,16.4,7.3,16.4,16.4S225.4,133.8,216.3,133.8z",
-              }),
-            ),
-          );
+          });
         }
         function _t() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("circle", { cx: "126", cy: "134", r: "20.6" }),
-            r.createElement("circle", { cx: "189.4", cy: "134", r: "20.6" }),
-            r.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
-          );
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("path", {
+                d: "M216.3,84.7c-18,0-32.7,14.7-32.7,32.7c0,0.1,0,0.3,0,0.4l-21.1,30.6c-3.4-0.1-6.8,0.4-10.1,1.8c-1.4,0.6-2.8,1.3-4,2.1 l-95.1-39.3c-1.6-7.4-6.7-13.9-14.2-17.1c-12.2-5.1-26.2,0.7-31.3,12.9c-5.1,12.2,0.7,26.2,12.9,31.3c5.9,2.5,12.4,2.5,18.3,0 c1.4-0.6,2.6-1.2,3.9-2l95.3,39.4c1.6,7.3,6.7,13.8,14.1,16.9c12.2,5.1,26.2-0.7,31.3-12.9c1.3-3.2,1.9-6.5,1.8-9.8l30.2-21.5 c0.2,0,0.5,0,0.7,0c18.1,0,32.7-14.7,32.7-32.7C249,99.4,234.3,84.7,216.3,84.7z M22.8,135.1c-7.1-2.9-11.3-9.8-11.3-17 c0-2.4,0.5-4.8,1.4-7.1c3.9-9.4,14.7-13.8,24.1-9.9c4.4,1.8,7.7,5.2,9.6,9.3l-10.9-4.5c-6.9-2.9-14.9,0.4-17.8,7.3 c-2.9,6.9,0.4,14.9,7.3,17.8l10.9,4.5C31.8,137,27.1,136.9,22.8,135.1z M178.5,179.4c-3.9,9.4-14.7,13.8-24.1,9.9 c-4.3-1.8-7.6-5.1-9.5-9l10.7,4.4c6.9,2.9,14.9-0.4,17.8-7.3c2.9-6.9-0.4-14.9-7.3-17.8l-11-4.6c4.2-1.6,9.1-1.7,13.6,0.2 c4.5,1.9,8.1,5.4,10,10C180.4,169.9,180.4,174.9,178.5,179.4z M216.3,139.3c-12,0-21.8-9.8-21.8-21.8c0-12,9.8-21.8,21.8-21.8 c12,0,21.8,9.8,21.8,21.8C238.1,129.5,228.3,139.3,216.3,139.3z M216.3,133.8c-9,0-16.4-7.3-16.4-16.4s7.3-16.4,16.4-16.4 c9.1,0,16.4,7.3,16.4,16.4S225.4,133.8,216.3,133.8z",
+              }),
+            }),
+          });
         }
         function wt() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 100 100",
-            },
-            r.createElement("circle", {
-              style: { fill: "currentColor" },
-              cx: "51.8",
-              cy: "22.5",
-              r: "6.5",
-            }),
-            r.createElement("circle", {
-              style: { fill: "currentColor" },
-              cx: "51.8",
-              cy: "48.3",
-              r: "6.5",
-            }),
-            r.createElement("circle", {
-              style: { fill: "currentColor" },
-              cx: "51.8",
-              cy: "74.2",
-              r: "6.5",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("circle", { cx: "126", cy: "134", r: "20.6" }),
+              (0, r.jsx)("circle", { cx: "189.4", cy: "134", r: "20.6" }),
+              (0, r.jsx)("circle", { cx: "62.6", cy: "134", r: "20.6" }),
+            ],
+          });
         }
         function bt() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: "SVGIcon_Button SVGIcon_Invalid",
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("path", {
-              d: "M128.5,27.4C74.1,27.4,30,71.5,30,125.9c0,54.4,44.1,98.5,98.5,98.5s98.5-44.1,98.5-98.5C226.9,71.5,182.9,27.4,128.5,27.4 z M206.8,125.9c0,17.7-5.9,34-15.8,47.2L81.3,63.3c13.1-9.9,29.5-15.8,47.2-15.8C171.7,47.5,206.8,82.6,206.8,125.9z M50.2,125.9 c0-17.7,5.9-34,15.8-47.2l109.7,109.7c-13.1,9.9-29.5,15.8-47.2,15.8C85.2,204.2,50.2,169.1,50.2,125.9z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 100 100",
+            children: [
+              (0, r.jsx)("circle", {
+                style: { fill: "currentColor" },
+                cx: "51.8",
+                cy: "22.5",
+                r: "6.5",
+              }),
+              (0, r.jsx)("circle", {
+                style: { fill: "currentColor" },
+                cx: "51.8",
+                cy: "48.3",
+                r: "6.5",
+              }),
+              (0, r.jsx)("circle", {
+                style: { fill: "currentColor" },
+                cx: "51.8",
+                cy: "74.2",
+                r: "6.5",
+              }),
+            ],
+          });
         }
         function Ct() {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 18 18",
-              version: "1.1",
-              x: "0px",
-              y: "0px",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              strokeLinejoin: "round",
-              strokeMiterlimit: "1.41421",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Invalid",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: (0, r.jsx)("path", {
+              d: "M128.5,27.4C74.1,27.4,30,71.5,30,125.9c0,54.4,44.1,98.5,98.5,98.5s98.5-44.1,98.5-98.5C226.9,71.5,182.9,27.4,128.5,27.4 z M206.8,125.9c0,17.7-5.9,34-15.8,47.2L81.3,63.3c13.1-9.9,29.5-15.8,47.2-15.8C171.7,47.5,206.8,82.6,206.8,125.9z M50.2,125.9 c0-17.7,5.9-34,15.8-47.2l109.7,109.7c-13.1,9.9-29.5,15.8-47.2,15.8C85.2,204.2,50.2,169.1,50.2,125.9z",
+            }),
+          });
+        }
+        function vt() {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 18 18",
+            version: "1.1",
+            x: "0px",
+            y: "0px",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "1.41421",
+            children: (0, r.jsx)("path", {
               d: "M12.621,2.491c-0.021,0.019 -0.042,0.039 -0.063,0.06l-5.125,5.201c-0.579,0.587 -0.575,1.527 -0.001,2.109l0.691,0.702c0.576,0.584 1.505,0.582 2.079,-0.001l5.126,-5.201c0.021,-0.021 0.04,-0.042 0.059,-0.063l1.573,1.595c0.573,0.582 1.04,0.386 1.04,-0.439l0,-5.957c0,-0.276 -0.219,-0.497 -0.49,-0.497l-5.87,0c-0.82,0 -1.008,0.473 -0.434,1.056l1.415,1.435Zm-9.618,-2.491c-1.665,0 -3.003,1.344 -3.003,3.003l0,11.994c0,1.665 1.344,3.003 3.003,3.003l11.994,0c1.665,0 3.003,-1.344 3.003,-3.003l0,-7.746l0,4.249l-3,-2.488l0,4.492c0,0.826 -0.671,1.496 -1.496,1.496l-9.008,0c-0.826,0 -1.496,-0.671 -1.496,-1.496l0,-9.008c0,-0.826 0.671,-1.496 1.496,-1.496l4.504,0l-2.5,-3l4.249,0l-7.746,0Z",
             }),
-          );
-        }
-        function vt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 100 100",
-              x: "0px",
-              y: "0px",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
-              fill: "currentColor",
-            }),
-            r.createElement("path", {
-              d: "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z",
-              fill: "currentColor",
-            }),
-            r.createElement("path", {
-              d: "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z",
-              fill: "currentColor",
-            }),
-          );
+          });
         }
         function Mt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 100 100",
+            x: "0px",
+            y: "0px",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                d: "M50,7A43,43,0,1,1,7,50,43,43,0,0,1,50,7m0-7a50,50,0,1,0,50,50A50,50,0,0,0,50,0h0Z",
+                fill: "currentColor",
+              }),
+              (0, r.jsx)("path", {
+                d: "M50.79,25a45.51,45.51,0,0,1,5.29.87c5.33,1.51,8.5,5.77,8.9,11.43a10.4,10.4,0,0,1-4.21,9.5c-1.42,1.1-2.91,2.1-4.34,3.18a7.06,7.06,0,0,0-3.18,6.3,4,4,0,0,1-2.88,4,4.42,4.42,0,0,1-5.18-1.55,4.19,4.19,0,0,1-.59-2.07A13.89,13.89,0,0,1,50.3,45,41.55,41.55,0,0,0,54.83,41,5,5,0,0,0,56,38.19c0.23-2.83-1.59-4.65-4.52-4.84-3.54-.23-6.52.69-8.6,3.82a4.19,4.19,0,0,1-4.35,2c-3-.5-4.29-2.94-3.06-5.75a12.84,12.84,0,0,1,6.25-6.2A21.71,21.71,0,0,1,50.79,25Z",
+                fill: "currentColor",
+              }),
+              (0, r.jsx)("path", {
+                d: "M53.78,69.88C53.8,73.09,52,75,48.85,75s-5.25-1.84-5.26-4.53c0-3.73,1.67-5.59,5-5.69C51.3,64.7,54.12,66.36,53.78,69.88Z",
+                fill: "currentColor",
+              }),
+            ],
+          });
+        }
+        function St(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M33.78 19.22L19.22 33.78L4 18.56V4H18.56L33.78 19.22Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function St(e) {
-          return (0, c.Qn)()
-            ? r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...e,
-                },
-                r.createElement("path", {
+        function xt(e) {
+          return (0, l.Qn)()
+            ? (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+                children: (0, r.jsx)("path", {
                   fillRule: "evenodd",
                   clipRule: "evenodd",
                   d: "M2 4V16V20L7 16H24V4H2ZM12 20V32H29L34 36V32V20H12Z",
                   fill: "currentColor",
                 }),
-              )
-            : r.createElement(
-                "svg",
-                {
-                  version: "1.1",
-                  id: "Layer_2",
-                  xmlns: "http://www.w3.org/2000/svg",
-                  className: e.className,
-                  x: "0px",
-                  y: "0px",
-                  width: "256px",
-                  height: "256px",
-                  viewBox: "0 0 409.6 409.6",
-                },
-                r.createElement("path", {
+              })
+            : (0, r.jsx)("svg", {
+                version: "1.1",
+                id: "Layer_2",
+                xmlns: "http://www.w3.org/2000/svg",
+                className: e.className,
+                x: "0px",
+                y: "0px",
+                width: "256px",
+                height: "256px",
+                viewBox: "0 0 409.6 409.6",
+                children: (0, r.jsx)("path", {
                   d: "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\n\t\t\t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z",
                 }),
-              );
+              });
         }
         function yt(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: e.className,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 409.6 409.6",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: e.className,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 409.6 409.6",
+            children: (0, r.jsx)("path", {
               d: "M275.1,153c-4.3-0.2-8,3.9-8.2,9.1l-5.8,136.5c-0.1,3.3-2.5,6.1-5.3,6.1H155.1c-2.7,0-5.1-2.8-5.3-6.1\n\t\t\t\t\t\tl-5.8-136.5c-0.2-5.2-3.9-9.3-8.2-9.1c-4.3,0.2-7.7,4.6-7.5,9.9l5.8,136.5c0.5,13.4,9.8,24.2,21,24.2h100.8\n\t\t\t\t\t\tc11.2,0,20.5-10.8,21-24.2l5.8-136.5C282.9,157.6,279.5,153.2,275.1,153z M211.8,276.1v-98.4c0-4.2-2.8-7.6-6.3-7.6\n\t\t\t\t\t\tc-3.5,0-6.3,3.4-6.3,7.6v98.4c0,4.2,2.8,7.6,6.3,7.6C209,283.7,211.8,280.3,211.8,276.1z M174.2,283.7c3.5-0.1,6.2-3.6,6.1-7.8\n\t\t\t\t\t\tl-3.1-98.4c-0.1-4.2-3-7.5-6.5-7.4c-3.5,0.1-6.2,3.6-6.1,7.8l3.1,98.4C167.8,280.5,170.7,283.8,174.2,283.7z M243.3,276.3l3.2-98.4\n\t\t\t\t\t\tc0.1-4.2-2.6-7.7-6.1-7.8c-3.5-0.1-6.4,3.2-6.5,7.4l-3.2,98.4c-0.1,4.2,2.6,7.7,6.1,7.8C240.3,283.8,243.2,280.5,243.3,276.3z\n\t\t\t\t\t\tM284.3,120.7h-40l-3-12.6c-2.6-11.1-12-19.6-21.6-19.6h-28.4c-9.6,0-19,8.5-21.6,19.6l-3,12.6h-40c-4.3,0-7.9,4.3-7.9,9.5\n\t\t\t\t\t\ts3.5,9.5,7.9,9.5h157.5c4.3,0,7.9-4.2,7.9-9.5S288.6,120.7,284.3,120.7z M183.1,120.7l1.8-7.4c0.7-3,3.9-5.9,6.4-5.9h28.4\n\t\t\t\t\t\tc2.6,0,5.7,2.9,6.4,5.9l1.8,7.4H183.1z",
             }),
-          );
-        }
-        function Et(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: e.className,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 409.6 409.6",
-            },
-            r.createElement("path", {
-              d: "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\n\t\t\t\tc-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\n\t\t\t\tl0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\n\t\t\t\tc0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\n\t\t\t\tl-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\n\t\t\t\tc-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\n\t\t\t\tc-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\n\t\t\t\tc-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z",
-            }),
-          );
+          });
         }
         function Bt(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: e.className,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("title", null, e.title),
-            r.createElement("path", {
-              d: "M126.16,44c-0.18-1.38-0.8-3.93-2.71-4.15c0,0-16.02-1.85-18.59,12.29c0,0-5.13,18.82,9.41,46.21l-15.08,0.64\n\t\t\tH68.51c-10.2,0-18.45,10.81-18.51,24.16h44.89c1.87,0,3.38,1.51,3.38,3.38c0,1.86-1.51,3.38-3.38,3.38H51.86l5.43,19.22h43.68\n\t\t\tc1.86,0,3.38,1.51,3.38,3.38c0,1.86-1.52,3.37-3.38,3.37H59.2l5.43,19.23h33.45c1.86,0,3.38,1.51,3.38,3.37\n\t\t\tc0,1.86-1.51,3.38-3.38,3.38H67.09c5.27,11.59,13.82,20.4,23.03,20.4h68.13l21.34-62.23C174.13,134.96,132.53,92.42,126.16,44z\n\t\t\t M208.44,154.04c-1.8-3.64-4.9-6.36-8.74-7.67l-7.55-2.57L170.86,206l7.56,2.59c3.84,1.32,7.99,1.05,11.64-0.74\n\t\t\tc3.65-1.79,6.36-4.89,7.67-8.73l11.45-33.45C210.49,161.82,210.23,157.69,208.44,154.04z",
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: e.className,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 409.6 409.6",
+            children: (0, r.jsx)("path", {
+              d: "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\n\t\t\t\tc-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\n\t\t\t\tl0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\n\t\t\t\tc0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\n\t\t\t\tl-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\n\t\t\t\tc-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\n\t\t\t\tc-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\n\t\t\t\tc-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z",
             }),
-          );
+          });
         }
         function Lt(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: e.className,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("title", null, e.title),
-            r.createElement("path", {
-              d: "M128.55,137.4c0-21,17.02-38.02,38.02-38.02c0,0,0.01,0,0.01,0c-7.68-19.04-26.32-32.47-48.11-32.47\n\t\t\t\t\t\t\t\t\t\t\t\tc-28.64,0-51.86,23.22-51.86,51.86c0,9.48,2.54,18.37,6.99,26.01c0.03,0.05,0.06,0.1,0.09,0.16l-6.85,29.66l32.69-7.54\n\t\t\t\t\t\t\t\t\t\t\t\tc5.87,2.3,12.26,3.57,18.94,3.57c8.06,0,15.68-1.84,22.49-5.12C133.34,158.55,128.55,148.53,128.55,137.4z",
-            }),
-            r.createElement("path", {
-              d: "M196.36,154.8c2.95-5.08,4.64-10.97,4.64-17.27c0-19.01-15.41-34.42-34.42-34.42s-34.42,15.41-34.42,34.42\n\t\t\t\t\t\tc0,19.01,15.41,34.42,34.42,34.42c4.44,0,8.68-0.84,12.57-2.37l21.7,5.01l-4.54-19.69C196.32,154.87,196.34,154.84,196.36,154.8z\n\t\t\t\t\t\tM167.05,157.78c-2.3,0-4.16-1.86-4.16-4.16c0-2.3,1.86-4.16,4.16-4.16c2.3,0,4.16,1.86,4.16,4.16\n\t\t\t\t\t\tC171.21,155.91,169.34,157.78,167.05,157.78z M171.21,140.62v0.52c0,2.3-1.86,4.16-4.16,4.16s-4.16-1.86-4.16-4.16v-4.16\n\t\t\t\t\t\tc0-2.3,1.86-4.16,4.16-4.16c3.32,0,6.24-1.94,6.24-4.16c0-2.22-2.91-4.16-6.24-4.16c-2.13,0-4.1,0.75-5.29,2.01\n\t\t\t\t\t\tc-1.57,1.67-4.2,1.76-5.88,0.19c-1.67-1.57-1.76-4.2-0.19-5.88c2.77-2.95,6.9-4.64,11.35-4.64c8.02,0,14.55,5.6,14.55,12.47\n\t\t\t\t\t\tC181.6,134.31,177.18,139.08,171.21,140.62z",
-            }),
-          );
-        }
-        function xt(e) {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_2",
-              xmlns: "http://www.w3.org/2000/svg",
-              className: e.className,
-              x: "0px",
-              y: "0px",
-              width: "256px",
-              height: "256px",
-              viewBox: "0 0 256 256",
-            },
-            r.createElement("title", null, e.title),
-            r.createElement("path", {
-              d: "M152.07,132.73c0,0,4.05,3.28,7.04,6.86s5.74,7.59,5.74,7.59c1.45-0.55,3.27-1.36,4.09-2.05l55.4-47.84\n\t\t\t\t\t\t\t\t\t\t\t\tl-14.19-16.04l-55.45,47.88C153.88,129.82,152.83,131.42,152.07,132.73z",
-            }),
-            r.createElement("path", {
-              d: "M192.74,71.58c0-1.97-1.61-3.58-3.58-3.58H49.56c-1.97,0-3.58,1.61-3.58,3.58v97.84\n\t\t\t\t\t\tc0,1.97,1.61,3.58,3.58,3.58h139.6c1.97,0,3.58-1.61,3.58-3.58v-40.11l-21.48,18.54c-1.95,1.65-5.95,2.98-6.41,3.12\n\t\t\t\t\t\tc-0.18,0.06-0.37,0.09-0.55,0.09c-0.5,0-1-0.21-1.34-0.6l-0.68-0.76c0,0.15,0,0.3-0.02,0.45c-0.14,1.25-0.97,2.3-2.16,2.75\n\t\t\t\t\t\tl-1.98,0.79c-0.12,0.05-0.25,0.08-0.38,0.1l-14.52,2.33c-0.36,0.12-0.73,0.18-1.1,0.18c-0.96,0-1.9-0.39-2.56-1.11\n\t\t\t\t\t\tc-0.99-1.09-1.16-2.62-0.45-3.87l2.95-6.95H67.76c-0.99,0-1.79-0.8-1.79-1.79c0-0.99,0.8-1.79,1.79-1.79h75.84l1.6-3.76\n\t\t\t\t\t\tc0.04-0.09,0.09-0.19,0.15-0.27c0.6-0.92,1.68-1.48,2.89-1.5c0.55-0.02,1.11,0.12,1.62,0.38l-1.29-1.46\n\t\t\t\t\t\tc-0.49-0.55-0.59-1.35-0.25-2c0.21-0.42,2.14-4.11,4.06-5.75l2.19-1.89h-86.8c-0.99,0-1.79-0.8-1.79-1.79\n\t\t\t\t\t\tc0-0.99,0.8-1.79,1.79-1.79h90.94l34.04-29.4V71.58z M170.97,104.69H67.76c-0.99,0-1.79-0.8-1.79-1.79c0-0.99,0.8-1.79,1.79-1.79\n\t\t\t\t\t\th103.21c0.99,0,1.79,0.8,1.79,1.79C172.76,103.89,171.95,104.69,170.97,104.69z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: e.className,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("title", { children: e.title }),
+              (0, r.jsx)("path", {
+                d: "M126.16,44c-0.18-1.38-0.8-3.93-2.71-4.15c0,0-16.02-1.85-18.59,12.29c0,0-5.13,18.82,9.41,46.21l-15.08,0.64\n\t\t\tH68.51c-10.2,0-18.45,10.81-18.51,24.16h44.89c1.87,0,3.38,1.51,3.38,3.38c0,1.86-1.51,3.38-3.38,3.38H51.86l5.43,19.22h43.68\n\t\t\tc1.86,0,3.38,1.51,3.38,3.38c0,1.86-1.52,3.37-3.38,3.37H59.2l5.43,19.23h33.45c1.86,0,3.38,1.51,3.38,3.37\n\t\t\tc0,1.86-1.51,3.38-3.38,3.38H67.09c5.27,11.59,13.82,20.4,23.03,20.4h68.13l21.34-62.23C174.13,134.96,132.53,92.42,126.16,44z\n\t\t\t M208.44,154.04c-1.8-3.64-4.9-6.36-8.74-7.67l-7.55-2.57L170.86,206l7.56,2.59c3.84,1.32,7.99,1.05,11.64-0.74\n\t\t\tc3.65-1.79,6.36-4.89,7.67-8.73l11.45-33.45C210.49,161.82,210.23,157.69,208.44,154.04z",
+              }),
+            ],
+          });
         }
         function kt(e) {
-          return r.createElement(
-            "svg",
-            {
-              height: "100px",
-              width: "100px",
-              version: "1.1",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 100 100",
-              enableBackground: "new 0 0 100 100",
-              fill: "currentColor",
-              ...e,
-            },
-            r.createElement(
-              "g",
-              { display: "none" },
-              r.createElement("rect", {
-                x: "-660.877",
-                y: "-37.172",
-                display: "inline",
-                width: "1370.931",
-                height: "1263.231",
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: e.className,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("title", { children: e.title }),
+              (0, r.jsx)("path", {
+                d: "M128.55,137.4c0-21,17.02-38.02,38.02-38.02c0,0,0.01,0,0.01,0c-7.68-19.04-26.32-32.47-48.11-32.47\n\t\t\t\t\t\t\t\t\t\t\t\tc-28.64,0-51.86,23.22-51.86,51.86c0,9.48,2.54,18.37,6.99,26.01c0.03,0.05,0.06,0.1,0.09,0.16l-6.85,29.66l32.69-7.54\n\t\t\t\t\t\t\t\t\t\t\t\tc5.87,2.3,12.26,3.57,18.94,3.57c8.06,0,15.68-1.84,22.49-5.12C133.34,158.55,128.55,148.53,128.55,137.4z",
               }),
-            ),
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
-                d: "M34.367,31.803c0.49,0.443,1.228,0.404,1.698-0.06c3.869-3.823,8.894-6.045,14.425-6.337   c11.044-0.495,20.558,7.281,22.518,17.866c0.133,0.717-0.429,1.379-1.157,1.413l-4.83,0.223c-1.092,0.05-1.578,1.397-0.769,2.133   l13.999,12.733c0.502,0.456,1.279,0.419,1.734-0.084L94.68,45.676c0.733-0.809,0.123-2.1-0.967-2.048l-6.486,0.309   c-1.82-18.94-18.238-33.327-37.455-32.439c-9.122,0.484-17.619,4.28-23.984,10.844c-0.48,0.495-0.439,1.299,0.072,1.762   L34.367,31.803z",
+              (0, r.jsx)("path", {
+                d: "M196.36,154.8c2.95-5.08,4.64-10.97,4.64-17.27c0-19.01-15.41-34.42-34.42-34.42s-34.42,15.41-34.42,34.42\n\t\t\t\t\t\tc0,19.01,15.41,34.42,34.42,34.42c4.44,0,8.68-0.84,12.57-2.37l21.7,5.01l-4.54-19.69C196.32,154.87,196.34,154.84,196.36,154.8z\n\t\t\t\t\t\tM167.05,157.78c-2.3,0-4.16-1.86-4.16-4.16c0-2.3,1.86-4.16,4.16-4.16c2.3,0,4.16,1.86,4.16,4.16\n\t\t\t\t\t\tC171.21,155.91,169.34,157.78,167.05,157.78z M171.21,140.62v0.52c0,2.3-1.86,4.16-4.16,4.16s-4.16-1.86-4.16-4.16v-4.16\n\t\t\t\t\t\tc0-2.3,1.86-4.16,4.16-4.16c3.32,0,6.24-1.94,6.24-4.16c0-2.22-2.91-4.16-6.24-4.16c-2.13,0-4.1,0.75-5.29,2.01\n\t\t\t\t\t\tc-1.57,1.67-4.2,1.76-5.88,0.19c-1.67-1.57-1.76-4.2-0.19-5.88c2.77-2.95,6.9-4.64,11.35-4.64c8.02,0,14.55,5.6,14.55,12.47\n\t\t\t\t\t\tC181.6,134.31,177.18,139.08,171.21,140.62z",
               }),
-              r.createElement("path", {
-                d: "M6.229,53.869h6.11c0.622,0,1.132,0.468,1.207,1.085c1.029,8.437,4.787,16.288,10.854,22.357   c7.249,7.217,16.85,11.23,27.047,11.23c9.778,0.07,19.009-3.568,26.131-10.258c0.502-0.471,0.502-1.276,0.015-1.763l-9.587-9.587   c-4.379,4.389-10.288,6.838-16.559,6.838c-6.224,0-12.068-2.506-16.541-6.934c-3.179-3.179-5.282-7.178-6.168-11.481   c-0.154-0.746,0.447-1.436,1.209-1.436h5.183c1.092,0,1.639-1.319,0.869-2.092L21.572,37.352c-0.478-0.48-1.255-0.481-1.734-0.003   L5.363,51.773C4.589,52.545,5.135,53.869,6.229,53.869z",
-              }),
-            ),
-          );
+            ],
+          });
         }
         function It(e) {
-          return r.createElement(
-            "svg",
-            { width: "100%", height: "100%", viewBox: "0 0 50 50" },
-            r.createElement("rect", {
-              x: "0",
-              y: "10",
-              width: "40",
-              height: "5",
-              rx: "5",
-            }),
-            r.createElement("rect", {
-              x: "0",
-              y: "20",
-              width: "40",
-              height: "5",
-              rx: "5",
-            }),
-            r.createElement("rect", {
-              x: "0",
-              y: "30",
-              width: "40",
-              height: "5",
-              rx: "5",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: e.className,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+            children: [
+              (0, r.jsx)("title", { children: e.title }),
+              (0, r.jsx)("path", {
+                d: "M152.07,132.73c0,0,4.05,3.28,7.04,6.86s5.74,7.59,5.74,7.59c1.45-0.55,3.27-1.36,4.09-2.05l55.4-47.84\n\t\t\t\t\t\t\t\t\t\t\t\tl-14.19-16.04l-55.45,47.88C153.88,129.82,152.83,131.42,152.07,132.73z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M192.74,71.58c0-1.97-1.61-3.58-3.58-3.58H49.56c-1.97,0-3.58,1.61-3.58,3.58v97.84\n\t\t\t\t\t\tc0,1.97,1.61,3.58,3.58,3.58h139.6c1.97,0,3.58-1.61,3.58-3.58v-40.11l-21.48,18.54c-1.95,1.65-5.95,2.98-6.41,3.12\n\t\t\t\t\t\tc-0.18,0.06-0.37,0.09-0.55,0.09c-0.5,0-1-0.21-1.34-0.6l-0.68-0.76c0,0.15,0,0.3-0.02,0.45c-0.14,1.25-0.97,2.3-2.16,2.75\n\t\t\t\t\t\tl-1.98,0.79c-0.12,0.05-0.25,0.08-0.38,0.1l-14.52,2.33c-0.36,0.12-0.73,0.18-1.1,0.18c-0.96,0-1.9-0.39-2.56-1.11\n\t\t\t\t\t\tc-0.99-1.09-1.16-2.62-0.45-3.87l2.95-6.95H67.76c-0.99,0-1.79-0.8-1.79-1.79c0-0.99,0.8-1.79,1.79-1.79h75.84l1.6-3.76\n\t\t\t\t\t\tc0.04-0.09,0.09-0.19,0.15-0.27c0.6-0.92,1.68-1.48,2.89-1.5c0.55-0.02,1.11,0.12,1.62,0.38l-1.29-1.46\n\t\t\t\t\t\tc-0.49-0.55-0.59-1.35-0.25-2c0.21-0.42,2.14-4.11,4.06-5.75l2.19-1.89h-86.8c-0.99,0-1.79-0.8-1.79-1.79\n\t\t\t\t\t\tc0-0.99,0.8-1.79,1.79-1.79h90.94l34.04-29.4V71.58z M170.97,104.69H67.76c-0.99,0-1.79-0.8-1.79-1.79c0-0.99,0.8-1.79,1.79-1.79\n\t\t\t\t\t\th103.21c0.99,0,1.79,0.8,1.79,1.79C172.76,103.89,171.95,104.69,170.97,104.69z",
+              }),
+            ],
+          });
         }
         function Rt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsxs)("svg", {
+            height: "100px",
+            width: "100px",
+            version: "1.1",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 100 100",
+            enableBackground: "new 0 0 100 100",
+            fill: "currentColor",
+            ...e,
+            children: [
+              (0, r.jsx)("g", {
+                display: "none",
+                children: (0, r.jsx)("rect", {
+                  x: "-660.877",
+                  y: "-37.172",
+                  display: "inline",
+                  width: "1370.931",
+                  height: "1263.231",
+                }),
+              }),
+              (0, r.jsxs)("g", {
+                children: [
+                  (0, r.jsx)("path", {
+                    d: "M34.367,31.803c0.49,0.443,1.228,0.404,1.698-0.06c3.869-3.823,8.894-6.045,14.425-6.337   c11.044-0.495,20.558,7.281,22.518,17.866c0.133,0.717-0.429,1.379-1.157,1.413l-4.83,0.223c-1.092,0.05-1.578,1.397-0.769,2.133   l13.999,12.733c0.502,0.456,1.279,0.419,1.734-0.084L94.68,45.676c0.733-0.809,0.123-2.1-0.967-2.048l-6.486,0.309   c-1.82-18.94-18.238-33.327-37.455-32.439c-9.122,0.484-17.619,4.28-23.984,10.844c-0.48,0.495-0.439,1.299,0.072,1.762   L34.367,31.803z",
+                  }),
+                  (0, r.jsx)("path", {
+                    d: "M6.229,53.869h6.11c0.622,0,1.132,0.468,1.207,1.085c1.029,8.437,4.787,16.288,10.854,22.357   c7.249,7.217,16.85,11.23,27.047,11.23c9.778,0.07,19.009-3.568,26.131-10.258c0.502-0.471,0.502-1.276,0.015-1.763l-9.587-9.587   c-4.379,4.389-10.288,6.838-16.559,6.838c-6.224,0-12.068-2.506-16.541-6.934c-3.179-3.179-5.282-7.178-6.168-11.481   c-0.154-0.746,0.447-1.436,1.209-1.436h5.183c1.092,0,1.639-1.319,0.869-2.092L21.572,37.352c-0.478-0.48-1.255-0.481-1.734-0.003   L5.363,51.773C4.589,52.545,5.135,53.869,6.229,53.869z",
+                  }),
+                ],
+              }),
+            ],
+          });
+        }
+        function Tt(e) {
+          return (0, r.jsxs)("svg", {
+            width: "100%",
+            height: "100%",
+            viewBox: "0 0 50 50",
+            children: [
+              (0, r.jsx)("rect", {
+                x: "0",
+                y: "10",
+                width: "40",
+                height: "5",
+                rx: "5",
+              }),
+              (0, r.jsx)("rect", {
+                x: "0",
+                y: "20",
+                width: "40",
+                height: "5",
+                rx: "5",
+              }),
+              (0, r.jsx)("rect", {
+                x: "0",
+                y: "30",
+                width: "40",
+                height: "5",
+                rx: "5",
+              }),
+            ],
+          });
+        }
+        function jt(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM9.00001 15C9.00001 14.4067 9.17595 13.8266 9.5056 13.3333C9.83524 12.8399 10.3038 12.4554 10.852 12.2284C11.4001 12.0013 12.0033 11.9419 12.5853 12.0576C13.1672 12.1734 13.7018 12.4591 14.1213 12.8787C14.5409 13.2982 14.8266 13.8328 14.9424 14.4147C15.0581 14.9967 14.9987 15.5999 14.7716 16.1481C14.5446 16.6962 14.1601 17.1648 13.6667 17.4944C13.1734 17.8241 12.5934 18 12 18C11.2044 18 10.4413 17.6839 9.87869 17.1213C9.31608 16.5587 9.00001 15.7956 9.00001 15ZM24 18C23.4067 18 22.8266 17.8241 22.3333 17.4944C21.8399 17.1648 21.4554 16.6962 21.2284 16.1481C21.0013 15.5999 20.9419 14.9967 21.0576 14.4147C21.1734 13.8328 21.4591 13.2982 21.8787 12.8787C22.2982 12.4591 22.8328 12.1734 23.4147 12.0576C23.9967 11.9419 24.5999 12.0013 25.1481 12.2284C25.6962 12.4554 26.1648 12.8399 26.4944 13.3333C26.8241 13.8266 27 14.4067 27 15C27 15.7956 26.6839 16.5587 26.1213 17.1213C25.5587 17.6839 24.7957 18 24 18ZM26.3149 23.6788C26.7672 22.8295 27 21.9193 27 21H18H9C9 21.9193 9.23279 22.8295 9.68508 23.6788C10.1374 24.5281 10.8003 25.2997 11.636 25.9497C12.4718 26.5998 13.4639 27.1154 14.5558 27.4672C15.6478 27.8189 16.8181 28 18 28C19.1819 28 20.3522 27.8189 21.4442 27.4672C22.5361 27.1154 23.5282 26.5998 24.364 25.9497C25.1997 25.2997 25.8626 24.5281 26.3149 23.6788Z",
             }),
-          );
+          });
         }
-        function Tt(e) {
+        function Et(e) {
           const { className: t, color: n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(t),
-              width: "13",
-              height: "21",
-              viewBox: "0 0 13 21",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
-              fill: n || "#ffc83d",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M5.80814 0.197492L5.19324 0.62086C4.96265 0.774812 4.69363 0.851788 4.38619 0.8133L3.92501 0.736324C3.42541 0.697836 2.96424 0.928764 2.73365 1.39062L2.4262 2.04492C2.27248 2.31433 2.08032 2.50677 1.8113 2.62224L1.38856 2.81468C0.92739 3.00712 0.658372 3.46897 0.696803 3.96932L0.735234 4.70059C0.773665 5.00849 0.696803 5.23942 0.504648 5.47035L0.23563 5.85523C-0.0718184 6.24011 -0.0718184 6.77894 0.197199 7.20231L0.619941 7.81812C0.773665 8.04904 0.812097 8.31846 0.812097 8.62636L0.735234 9.08822C0.696803 9.58856 0.92739 10.0504 1.38856 10.2813L2.04189 10.5893C2.31091 10.7432 2.50306 10.9356 2.61836 11.2051L2.77208 11.6284C3.00267 12.0903 3.42541 12.3597 3.96344 12.3212L4.69363 12.2827C4.96265 12.2442 5.23167 12.3212 5.46226 12.5137L5.84657 12.7831C6.23088 13.091 6.76891 13.091 7.19165 12.8216L7.80655 12.3982C8.03714 12.2442 8.30616 12.2057 8.57517 12.2057L9.03635 12.2827C9.53595 12.3212 10.0356 12.0903 10.2277 11.6284L10.5736 10.9741C10.6889 10.7047 10.881 10.5123 11.1501 10.3968L11.5728 10.2429C12.034 10.0119 12.3414 9.58856 12.303 9.04973L12.2646 8.31846C12.2261 8.04904 12.303 7.77963 12.4951 7.5487L12.7642 7.16382C13.0716 6.77894 13.0716 6.24011 12.8026 5.81674L12.3798 5.20093C12.2261 4.97 12.1493 4.70059 12.1877 4.43117L12.2646 3.96932C12.303 3.46897 12.0724 2.96863 11.6112 2.77619L10.9579 2.4298C10.6889 2.31433 10.4967 2.12189 10.3814 1.85248L10.1893 1.42911C9.99712 0.967252 9.53595 0.659348 9.03635 0.697836L8.30616 0.736324C7.99871 0.774812 7.76812 0.697836 7.53753 0.505396L7.15322 0.23598C6.76891 -0.0719243 6.23088 -0.0719243 5.80814 0.197492ZM6.4999 2.69921C4.38619 2.69921 2.65679 4.39268 2.65679 6.50952C2.65679 8.62636 4.38619 10.3583 6.4999 10.3583C8.6136 10.3583 10.3046 8.62636 10.3046 6.50952C10.3046 4.39268 8.6136 2.69921 6.4999 2.69921Z",
-            }),
-            r.createElement("path", {
-              fill: n || "#ffc83d",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M3.04084 12.7833V20.096L6.49963 17.6328L9.95843 20.096V12.7833C9.65098 12.8988 9.3051 12.9758 8.95922 12.9373L8.53648 12.8603C8.38276 12.8603 8.26746 12.8988 8.15217 12.9758L7.53727 13.3606C6.88394 13.784 6.07689 13.784 5.42356 13.3222L5.07768 13.0143C4.96239 12.9373 4.8471 12.9373 4.7318 12.9373L4.00161 12.9758C3.65573 12.9758 3.30985 12.9373 3.04084 12.7833Z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            className: (0, s.A)(t),
+            width: "13",
+            height: "21",
+            viewBox: "0 0 13 21",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("path", {
+                fill: n || "#ffc83d",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M5.80814 0.197492L5.19324 0.62086C4.96265 0.774812 4.69363 0.851788 4.38619 0.8133L3.92501 0.736324C3.42541 0.697836 2.96424 0.928764 2.73365 1.39062L2.4262 2.04492C2.27248 2.31433 2.08032 2.50677 1.8113 2.62224L1.38856 2.81468C0.92739 3.00712 0.658372 3.46897 0.696803 3.96932L0.735234 4.70059C0.773665 5.00849 0.696803 5.23942 0.504648 5.47035L0.23563 5.85523C-0.0718184 6.24011 -0.0718184 6.77894 0.197199 7.20231L0.619941 7.81812C0.773665 8.04904 0.812097 8.31846 0.812097 8.62636L0.735234 9.08822C0.696803 9.58856 0.92739 10.0504 1.38856 10.2813L2.04189 10.5893C2.31091 10.7432 2.50306 10.9356 2.61836 11.2051L2.77208 11.6284C3.00267 12.0903 3.42541 12.3597 3.96344 12.3212L4.69363 12.2827C4.96265 12.2442 5.23167 12.3212 5.46226 12.5137L5.84657 12.7831C6.23088 13.091 6.76891 13.091 7.19165 12.8216L7.80655 12.3982C8.03714 12.2442 8.30616 12.2057 8.57517 12.2057L9.03635 12.2827C9.53595 12.3212 10.0356 12.0903 10.2277 11.6284L10.5736 10.9741C10.6889 10.7047 10.881 10.5123 11.1501 10.3968L11.5728 10.2429C12.034 10.0119 12.3414 9.58856 12.303 9.04973L12.2646 8.31846C12.2261 8.04904 12.303 7.77963 12.4951 7.5487L12.7642 7.16382C13.0716 6.77894 13.0716 6.24011 12.8026 5.81674L12.3798 5.20093C12.2261 4.97 12.1493 4.70059 12.1877 4.43117L12.2646 3.96932C12.303 3.46897 12.0724 2.96863 11.6112 2.77619L10.9579 2.4298C10.6889 2.31433 10.4967 2.12189 10.3814 1.85248L10.1893 1.42911C9.99712 0.967252 9.53595 0.659348 9.03635 0.697836L8.30616 0.736324C7.99871 0.774812 7.76812 0.697836 7.53753 0.505396L7.15322 0.23598C6.76891 -0.0719243 6.23088 -0.0719243 5.80814 0.197492ZM6.4999 2.69921C4.38619 2.69921 2.65679 4.39268 2.65679 6.50952C2.65679 8.62636 4.38619 10.3583 6.4999 10.3583C8.6136 10.3583 10.3046 8.62636 10.3046 6.50952C10.3046 4.39268 8.6136 2.69921 6.4999 2.69921Z",
+              }),
+              (0, r.jsx)("path", {
+                fill: n || "#ffc83d",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M3.04084 12.7833V20.096L6.49963 17.6328L9.95843 20.096V12.7833C9.65098 12.8988 9.3051 12.9758 8.95922 12.9373L8.53648 12.8603C8.38276 12.8603 8.26746 12.8988 8.15217 12.9758L7.53727 13.3606C6.88394 13.784 6.07689 13.784 5.42356 13.3222L5.07768 13.0143C4.96239 12.9373 4.8471 12.9373 4.7318 12.9373L4.00161 12.9758C3.65573 12.9758 3.30985 12.9373 3.04084 12.7833Z",
+              }),
+            ],
+          });
         }
         function Ft(e) {
           const { className: t, ...n } = e,
-            [i, s] = (0, l.l)(),
-            [o, a] = (0, l.l)(),
-            [c, u] = (0, l.l)(),
-            [m, d] = (0, l.l)(),
-            [h, p] = (0, l.l)();
-          return r.createElement(
-            "svg",
-            {
-              className: t,
-              width: "32",
-              height: "32",
-              viewBox: "0 0 32 32",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "16",
-              fill: "#BDCCDB",
-            }),
-            r.createElement("circle", { cx: "16", cy: "16", r: "16", fill: s }),
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "14.2745",
-              fill: "#98A8B7",
-            }),
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "14.2745",
-              fill: a,
-            }),
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "14.2745",
-              stroke: "#7A92A9",
-            }),
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "11.1309",
-              fill: "#BDCCDB",
-            }),
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "11.1309",
-              fill: u,
-            }),
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "10.2107",
-              fill: "#5792C8",
-            }),
-            r.createElement("circle", {
-              cx: "16",
-              cy: "16",
-              r: "10.2107",
-              fill: d,
-            }),
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M20.6016 17.9523C22.8425 17.9523 24.6591 16.1357 24.6591 13.8948C24.6591 11.6539 22.8425 9.83727 20.6016 9.83727C18.3607 9.83727 16.5441 11.6539 16.5441 13.8948C16.5441 13.9609 16.5457 14.0266 16.5488 14.0919L14.0477 17.6314C14.0205 17.6306 13.9933 17.6303 13.966 17.6303C13.2606 17.6303 12.6127 17.8767 12.1038 18.2882L6.33398 15.9235C6.33398 17.4638 6.62381 19.1438 6.97803 19.5302C7.16531 19.7345 9.1256 20.4564 11.0502 21.127C11.3013 22.5093 12.5112 23.5574 13.966 23.5574C15.6027 23.5574 16.9296 22.2306 16.9296 20.5939C16.9296 20.5326 16.9277 20.4717 16.924 20.4113L20.2613 17.9382C20.3735 17.9475 20.487 17.9523 20.6016 17.9523ZM12.1995 21.5232C12.5338 22.1572 13.1994 22.5894 13.966 22.5894C15.0681 22.5894 15.9615 21.696 15.9615 20.5939C15.9615 19.4917 15.0681 18.5983 13.966 18.5983C13.7007 18.5983 13.4475 18.65 13.216 18.744L14.1914 19.1438L14.1886 19.1617C14.8832 19.2688 15.4151 19.8692 15.4151 20.5939C15.4151 21.3942 14.7663 22.043 13.966 22.043C13.8901 22.043 13.8157 22.0371 13.743 22.0259L13.7405 22.042L13.6136 21.9998C13.5414 21.9818 13.4713 21.9583 13.4038 21.9299C13.0402 21.8084 12.6309 21.6704 12.1995 21.5232ZM20.6016 16.5998C22.0956 16.5998 23.3066 15.3887 23.3066 13.8948C23.3066 12.4008 22.0956 11.1898 20.6016 11.1898C19.1077 11.1898 17.8966 12.4008 17.8966 13.8948C17.8966 15.3887 19.1077 16.5998 20.6016 16.5998ZM22.4 13.8948C22.4 14.888 21.5948 15.6932 20.6016 15.6932C19.6083 15.6932 18.8032 14.888 18.8032 13.8948C18.8032 12.9015 19.6083 12.0964 20.6016 12.0964C21.5948 12.0964 22.4 12.9015 22.4 13.8948Z",
-              fill: "#BDCCDB",
-            }),
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M20.6016 17.9523C22.8425 17.9523 24.6591 16.1357 24.6591 13.8948C24.6591 11.6539 22.8425 9.83727 20.6016 9.83727C18.3607 9.83727 16.5441 11.6539 16.5441 13.8948C16.5441 13.9609 16.5457 14.0266 16.5488 14.0919L14.0477 17.6314C14.0205 17.6306 13.9933 17.6303 13.966 17.6303C13.2606 17.6303 12.6127 17.8767 12.1038 18.2882L6.33398 15.9235C6.33398 17.4638 6.62381 19.1438 6.97803 19.5302C7.16531 19.7345 9.1256 20.4564 11.0502 21.127C11.3013 22.5093 12.5112 23.5574 13.966 23.5574C15.6027 23.5574 16.9296 22.2306 16.9296 20.5939C16.9296 20.5326 16.9277 20.4717 16.924 20.4113L20.2613 17.9382C20.3735 17.9475 20.487 17.9523 20.6016 17.9523ZM12.1995 21.5232C12.5338 22.1572 13.1994 22.5894 13.966 22.5894C15.0681 22.5894 15.9615 21.696 15.9615 20.5939C15.9615 19.4917 15.0681 18.5983 13.966 18.5983C13.7007 18.5983 13.4475 18.65 13.216 18.744L14.1914 19.1438L14.1886 19.1617C14.8832 19.2688 15.4151 19.8692 15.4151 20.5939C15.4151 21.3942 14.7663 22.043 13.966 22.043C13.8901 22.043 13.8157 22.0371 13.743 22.0259L13.7405 22.042L13.6136 21.9998C13.5414 21.9818 13.4713 21.9583 13.4038 21.9299C13.0402 21.8084 12.6309 21.6704 12.1995 21.5232ZM20.6016 16.5998C22.0956 16.5998 23.3066 15.3887 23.3066 13.8948C23.3066 12.4008 22.0956 11.1898 20.6016 11.1898C19.1077 11.1898 17.8966 12.4008 17.8966 13.8948C17.8966 15.3887 19.1077 16.5998 20.6016 16.5998ZM22.4 13.8948C22.4 14.888 21.5948 15.6932 20.6016 15.6932C19.6083 15.6932 18.8032 14.888 18.8032 13.8948C18.8032 12.9015 19.6083 12.0964 20.6016 12.0964C21.5948 12.0964 22.4 12.9015 22.4 13.8948Z",
-              fill: p,
-            }),
-            r.createElement(
-              "defs",
-              null,
-              r.createElement(
-                "linearGradient",
-                {
-                  id: i,
-                  x1: "8.4375",
-                  y1: "1.75",
-                  x2: "23.1875",
-                  y2: "22.9375",
-                  gradientUnits: "userSpaceOnUse",
-                },
-                r.createElement("stop", {
-                  stopColor: "white",
-                  stopOpacity: "0.54",
-                }),
-                r.createElement("stop", {
-                  offset: "1",
-                  stopColor: "white",
-                  stopOpacity: "0",
-                }),
-              ),
-              r.createElement(
-                "linearGradient",
-                {
-                  id: o,
-                  x1: "9",
-                  y1: "3.125",
-                  x2: "22.4375",
-                  y2: "24.625",
-                  gradientUnits: "userSpaceOnUse",
-                },
-                r.createElement("stop", {
-                  stopColor: "white",
-                  stopOpacity: "0.25",
-                }),
-                r.createElement("stop", {
-                  offset: "1",
-                  stopColor: "white",
-                  stopOpacity: "0",
-                }),
-              ),
-              r.createElement(
-                "linearGradient",
-                {
-                  id: c,
-                  x1: "10.3125",
-                  y1: "6.375",
-                  x2: "19.6875",
-                  y2: "23.125",
-                  gradientUnits: "userSpaceOnUse",
-                },
-                r.createElement("stop", {
-                  stopColor: "white",
-                  stopOpacity: "0.65",
-                }),
-                r.createElement("stop", {
-                  offset: "1",
-                  stopColor: "white",
-                  stopOpacity: "0",
-                }),
-              ),
-              r.createElement(
-                "linearGradient",
-                {
-                  id: m,
-                  x1: "10",
-                  y1: "8",
-                  x2: "20.5",
-                  y2: "26.2107",
-                  gradientUnits: "userSpaceOnUse",
-                },
-                r.createElement("stop", { stopColor: "#72A5D3" }),
-                r.createElement("stop", { offset: "1", stopColor: "#4F7294" }),
-              ),
-              r.createElement(
-                "linearGradient",
-                {
-                  id: h,
-                  x1: "12.1875",
-                  y1: "13.5625",
-                  x2: "18.5625",
-                  y2: "23.5574",
-                  gradientUnits: "userSpaceOnUse",
-                },
-                r.createElement("stop", {
-                  stopColor: "white",
-                  stopOpacity: "0.44",
-                }),
-                r.createElement("stop", {
-                  offset: "1",
-                  stopColor: "white",
-                  stopOpacity: "0",
-                }),
-              ),
-            ),
-          );
+            [i, s] = (0, u.l)(),
+            [o, a] = (0, u.l)(),
+            [c, l] = (0, u.l)(),
+            [d, m] = (0, u.l)(),
+            [h, p] = (0, u.l)();
+          return (0, r.jsxs)("svg", {
+            className: t,
+            width: "32",
+            height: "32",
+            viewBox: "0 0 32 32",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "16",
+                fill: "#BDCCDB",
+              }),
+              (0, r.jsx)("circle", { cx: "16", cy: "16", r: "16", fill: s }),
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "14.2745",
+                fill: "#98A8B7",
+              }),
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "14.2745",
+                fill: a,
+              }),
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "14.2745",
+                stroke: "#7A92A9",
+              }),
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "11.1309",
+                fill: "#BDCCDB",
+              }),
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "11.1309",
+                fill: l,
+              }),
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "10.2107",
+                fill: "#5792C8",
+              }),
+              (0, r.jsx)("circle", {
+                cx: "16",
+                cy: "16",
+                r: "10.2107",
+                fill: m,
+              }),
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M20.6016 17.9523C22.8425 17.9523 24.6591 16.1357 24.6591 13.8948C24.6591 11.6539 22.8425 9.83727 20.6016 9.83727C18.3607 9.83727 16.5441 11.6539 16.5441 13.8948C16.5441 13.9609 16.5457 14.0266 16.5488 14.0919L14.0477 17.6314C14.0205 17.6306 13.9933 17.6303 13.966 17.6303C13.2606 17.6303 12.6127 17.8767 12.1038 18.2882L6.33398 15.9235C6.33398 17.4638 6.62381 19.1438 6.97803 19.5302C7.16531 19.7345 9.1256 20.4564 11.0502 21.127C11.3013 22.5093 12.5112 23.5574 13.966 23.5574C15.6027 23.5574 16.9296 22.2306 16.9296 20.5939C16.9296 20.5326 16.9277 20.4717 16.924 20.4113L20.2613 17.9382C20.3735 17.9475 20.487 17.9523 20.6016 17.9523ZM12.1995 21.5232C12.5338 22.1572 13.1994 22.5894 13.966 22.5894C15.0681 22.5894 15.9615 21.696 15.9615 20.5939C15.9615 19.4917 15.0681 18.5983 13.966 18.5983C13.7007 18.5983 13.4475 18.65 13.216 18.744L14.1914 19.1438L14.1886 19.1617C14.8832 19.2688 15.4151 19.8692 15.4151 20.5939C15.4151 21.3942 14.7663 22.043 13.966 22.043C13.8901 22.043 13.8157 22.0371 13.743 22.0259L13.7405 22.042L13.6136 21.9998C13.5414 21.9818 13.4713 21.9583 13.4038 21.9299C13.0402 21.8084 12.6309 21.6704 12.1995 21.5232ZM20.6016 16.5998C22.0956 16.5998 23.3066 15.3887 23.3066 13.8948C23.3066 12.4008 22.0956 11.1898 20.6016 11.1898C19.1077 11.1898 17.8966 12.4008 17.8966 13.8948C17.8966 15.3887 19.1077 16.5998 20.6016 16.5998ZM22.4 13.8948C22.4 14.888 21.5948 15.6932 20.6016 15.6932C19.6083 15.6932 18.8032 14.888 18.8032 13.8948C18.8032 12.9015 19.6083 12.0964 20.6016 12.0964C21.5948 12.0964 22.4 12.9015 22.4 13.8948Z",
+                fill: "#BDCCDB",
+              }),
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M20.6016 17.9523C22.8425 17.9523 24.6591 16.1357 24.6591 13.8948C24.6591 11.6539 22.8425 9.83727 20.6016 9.83727C18.3607 9.83727 16.5441 11.6539 16.5441 13.8948C16.5441 13.9609 16.5457 14.0266 16.5488 14.0919L14.0477 17.6314C14.0205 17.6306 13.9933 17.6303 13.966 17.6303C13.2606 17.6303 12.6127 17.8767 12.1038 18.2882L6.33398 15.9235C6.33398 17.4638 6.62381 19.1438 6.97803 19.5302C7.16531 19.7345 9.1256 20.4564 11.0502 21.127C11.3013 22.5093 12.5112 23.5574 13.966 23.5574C15.6027 23.5574 16.9296 22.2306 16.9296 20.5939C16.9296 20.5326 16.9277 20.4717 16.924 20.4113L20.2613 17.9382C20.3735 17.9475 20.487 17.9523 20.6016 17.9523ZM12.1995 21.5232C12.5338 22.1572 13.1994 22.5894 13.966 22.5894C15.0681 22.5894 15.9615 21.696 15.9615 20.5939C15.9615 19.4917 15.0681 18.5983 13.966 18.5983C13.7007 18.5983 13.4475 18.65 13.216 18.744L14.1914 19.1438L14.1886 19.1617C14.8832 19.2688 15.4151 19.8692 15.4151 20.5939C15.4151 21.3942 14.7663 22.043 13.966 22.043C13.8901 22.043 13.8157 22.0371 13.743 22.0259L13.7405 22.042L13.6136 21.9998C13.5414 21.9818 13.4713 21.9583 13.4038 21.9299C13.0402 21.8084 12.6309 21.6704 12.1995 21.5232ZM20.6016 16.5998C22.0956 16.5998 23.3066 15.3887 23.3066 13.8948C23.3066 12.4008 22.0956 11.1898 20.6016 11.1898C19.1077 11.1898 17.8966 12.4008 17.8966 13.8948C17.8966 15.3887 19.1077 16.5998 20.6016 16.5998ZM22.4 13.8948C22.4 14.888 21.5948 15.6932 20.6016 15.6932C19.6083 15.6932 18.8032 14.888 18.8032 13.8948C18.8032 12.9015 19.6083 12.0964 20.6016 12.0964C21.5948 12.0964 22.4 12.9015 22.4 13.8948Z",
+                fill: p,
+              }),
+              (0, r.jsxs)("defs", {
+                children: [
+                  (0, r.jsxs)("linearGradient", {
+                    id: i,
+                    x1: "8.4375",
+                    y1: "1.75",
+                    x2: "23.1875",
+                    y2: "22.9375",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                      (0, r.jsx)("stop", {
+                        stopColor: "white",
+                        stopOpacity: "0.54",
+                      }),
+                      (0, r.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "white",
+                        stopOpacity: "0",
+                      }),
+                    ],
+                  }),
+                  (0, r.jsxs)("linearGradient", {
+                    id: o,
+                    x1: "9",
+                    y1: "3.125",
+                    x2: "22.4375",
+                    y2: "24.625",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                      (0, r.jsx)("stop", {
+                        stopColor: "white",
+                        stopOpacity: "0.25",
+                      }),
+                      (0, r.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "white",
+                        stopOpacity: "0",
+                      }),
+                    ],
+                  }),
+                  (0, r.jsxs)("linearGradient", {
+                    id: c,
+                    x1: "10.3125",
+                    y1: "6.375",
+                    x2: "19.6875",
+                    y2: "23.125",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                      (0, r.jsx)("stop", {
+                        stopColor: "white",
+                        stopOpacity: "0.65",
+                      }),
+                      (0, r.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "white",
+                        stopOpacity: "0",
+                      }),
+                    ],
+                  }),
+                  (0, r.jsxs)("linearGradient", {
+                    id: d,
+                    x1: "10",
+                    y1: "8",
+                    x2: "20.5",
+                    y2: "26.2107",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                      (0, r.jsx)("stop", { stopColor: "#72A5D3" }),
+                      (0, r.jsx)("stop", { offset: "1", stopColor: "#4F7294" }),
+                    ],
+                  }),
+                  (0, r.jsxs)("linearGradient", {
+                    id: h,
+                    x1: "12.1875",
+                    y1: "13.5625",
+                    x2: "18.5625",
+                    y2: "23.5574",
+                    gradientUnits: "userSpaceOnUse",
+                    children: [
+                      (0, r.jsx)("stop", {
+                        stopColor: "white",
+                        stopOpacity: "0.44",
+                      }),
+                      (0, r.jsx)("stop", {
+                        offset: "1",
+                        stopColor: "white",
+                        stopOpacity: "0",
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          });
         }
         function Ot() {
-          return r.createElement(
-            "svg",
-            {
-              height: "100px",
-              width: "100px",
-              fill: "#000000",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 101 101",
-              enableBackground: "new 0 0 101 101",
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
-                d: "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z",
-              }),
-              r.createElement("path", {
-                d: "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z",
-              }),
-              r.createElement("circle", {
-                cx: "26.695",
-                cy: "74.305",
-                r: "9.812",
-              }),
-            ),
-          );
+          return (0, r.jsx)("svg", {
+            height: "100px",
+            width: "100px",
+            fill: "#000000",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 101 101",
+            enableBackground: "new 0 0 101 101",
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            children: (0, r.jsxs)("g", {
+              children: [
+                (0, r.jsx)("path", {
+                  d: "M16.929,30.115 M84.446,84.262c0-37.271-30.323-67.613-67.587-67.613l0,0l0.069,13.467   c29.777,0.039,53.995,24.256,54.051,54.042L84.446,84.262z",
+                }),
+                (0, r.jsx)("path", {
+                  d: "M16.843,53.089 M61.472,84.262c0-24.616-20.026-44.639-44.628-44.639l0,0v13.466c17.182,0,31.161,13.984,31.161,31.173   H61.472z",
+                }),
+                (0, r.jsx)("circle", {
+                  cx: "26.695",
+                  cy: "74.305",
+                  r: "9.812",
+                }),
+              ],
+            }),
+          });
         }
         function Dt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 100 100",
-              ...e,
-            },
-            r.createElement("polygon", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 100 100",
+            ...e,
+            children: (0, r.jsx)("polygon", {
               stroke: "currentColor",
               fill: "currentColor",
               points:
@@ -20964,17 +20652,14 @@ var CLSTAMP = "10520954";
               strokeLinejoin: "round",
               strokeWidth: "5",
             }),
-          );
+          });
         }
         function At(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 100 100",
-              ...e,
-            },
-            r.createElement("polygon", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 100 100",
+            ...e,
+            children: (0, r.jsx)("polygon", {
               stroke: "currentColor",
               fill: "none",
               points:
@@ -20982,1024 +20667,874 @@ var CLSTAMP = "10520954";
               strokeLinejoin: "round",
               strokeWidth: "5",
             }),
-          );
+          });
         }
         function Nt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 1200 1200",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 1200 1200",
+            ...e,
+            children: (0, r.jsx)("path", {
               d: "m600 1086 449.68-447.79c120.42-119.95 120.42-314.34 0-434.26-120.37-119.95-315.61-119.95-436.03 0l-13.641 13.547-13.641-13.547c-120.42-119.95-315.66-119.95-436.03 0-120.42 119.91-120.42 314.29 0 434.26z",
             }),
-          );
+          });
         }
         function zt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 1200 1200",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 1200 1200",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               d: "M600,96c-277.2,0-504,226.8-504,504s226.8,504,504,504,504-226.8,504-504S877.2,96,600,96ZM600,222c83.2,0,158.8,26.5,220.5,70.6L292.6,820.5c-44.1-61.7-70.6-137.3-70.6-220.5,0-209.2,168.8-378,378-378ZM907.4,379.5c44.1,61.7,70.6,137.3,70.6,220.5,0,209.2-168.8,378-378,378s-158.8-26.5-220.5-70.6L907.4,379.5Z",
               strokeWidth: "0",
             }),
-          );
+          });
         }
         function Pt() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 32 32",
-              enableBackground: "new 0 0 32 32",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 32 32",
+            enableBackground: "new 0 0 32 32",
+            children: (0, r.jsx)("path", {
               fill: "white",
               d: "M24.68,19.53l6.9-5.69c0.98-0.81,0.47-2.39-0.81-2.46l-8.89-0.54c-0.54-0.03-1.01-0.37-1.21-0.88L17.4,1.61\n\t\t\tc-0.47-1.18-2.12-1.18-2.59,0l-3.27,8.32c-0.2,0.51-0.67,0.84-1.21,0.88l-8.92,0.54c-1.28,0.07-1.78,1.65-0.81,2.46l6.9,5.66\n\t\t\tc0.4,0.34,0.61,0.91,0.47,1.41l-2.26,8.65c-0.3,1.21,1.01,2.19,2.09,1.52l7.51-4.81c0.47-0.3,1.04-0.3,1.48,0l7.54,4.81\n\t\t\tc1.08,0.67,2.39-0.3,2.09-1.52l-2.26-8.62C24.07,20.4,24.24,19.86,24.68,19.53z",
             }),
-          );
+          });
         }
         function Ht() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 32 32",
-              enableBackground: "new 0 0 32 32",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 32 32",
+            enableBackground: "new 0 0 32 32",
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("path", {
                 fill: "white",
                 d: "M28.4,1.49H3.79c-1.99,0-3.6,1.61-3.6,3.6v14.88c0,1.99,1.61,3.6,3.6,3.6h2.37c0,1.61-0.38,3.7-1.51,5.88\n\t\t\tc-0.28,0.57-0.19,1.33,0.19,1.8c0.28,0.38,0.76,0.47,1.14,0.47c0.19,0,0.38,0,0.57-0.09c4.07-1.61,7.57-5.59,9.47-8.05h12.4\n\t\t\tc1.99,0,3.6-1.61,3.6-3.6V5.1C31.91,3.11,30.3,1.49,28.4,1.49z M8.23,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\n\t\t\ts2.37,1.04,2.37,2.37S9.56,14.97,8.23,14.97z M15.99,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S17.32,14.97,15.99,14.97z M23.85,14.97c-1.33,0-2.37-1.04-2.37-2.37s1.04-2.37,2.37-2.37\n\t\t\tc1.33,0,2.37,1.04,2.37,2.37S25.18,14.97,23.85,14.97z",
               }),
-            ),
-          );
+            }),
+          });
         }
         function Wt() {
-          return r.createElement(
-            "svg",
-            {
-              version: "1.1",
-              id: "Layer_1",
-              xmlns: "http://www.w3.org/2000/svg",
-              x: "0px",
-              y: "0px",
-              viewBox: "0 0 32 32",
-              enableBackground: "new 0 0 32 32",
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement("path", {
-                fill: "white",
-                d: "M23.32,28.28C23,25.55,20.68,23.52,18,23.52h-3.78c-2.73,0-5,2.03-5.33,4.76L8.56,30.8h15.09L23.32,28.28z",
-              }),
-              r.createElement("path", {
-                fill: "white",
-                d: "M16.08,22.15c2.82,0,5.1-2.28,5.1-5.1c0-2.82-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1\n\t\t\tC10.98,19.86,13.27,22.15,16.08,22.15z",
-              }),
-              r.createElement(
-                "g",
-                null,
-                r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 32 32",
+            enableBackground: "new 0 0 32 32",
+            children: (0, r.jsxs)("g", {
+              children: [
+                (0, r.jsx)("path", {
                   fill: "white",
-                  d: "M24.09,10.21c-0.94-1.22-2.18-2.23-3.57-2.9c-1.39-0.68-2.94-1.02-4.48-1.01l-0.02,0L16,6.3\n\t\t\t\tc-0.03,0-0.05,0-0.08,0c-1.52,0-3.04,0.35-4.4,1.01c-1.39,0.68-2.62,1.68-3.57,2.9c-0.94,1.22-1.6,2.67-1.91,4.18\n\t\t\t\tc-0.3,1.51-0.25,3.1,0.15,4.59c0.14,0.55,0.62,0.92,1.18,0.92c0.01,0,0.02,0,0.04,0h0.27l0.03-0.01c0.32-0.08,0.59-0.29,0.76-0.57\n\t\t\t\tl0.07-0.1c0.14-0.21,0.18-0.46,0.11-0.7L8.6,18.38c-0.18-0.62-0.27-1.27-0.29-1.92c0-4.24,3.45-7.68,7.69-7.68h0.04\n\t\t\t\tc4.24,0,7.69,3.45,7.69,7.68c-0.02,0.65-0.11,1.3-0.29,1.92l-0.04,0.15c-0.07,0.24-0.03,0.49,0.11,0.7l0.07,0.1\n\t\t\t\tc0.17,0.28,0.44,0.49,0.76,0.57l0.03,0.01l0.26,0c0.01,0,0.02,0,0.04,0c0.56,0,1.04-0.37,1.18-0.92c0.4-1.49,0.46-3.08,0.15-4.59\n\t\t\t\tC25.69,12.88,25.04,11.44,24.09,10.21z",
+                  d: "M23.32,28.28C23,25.55,20.68,23.52,18,23.52h-3.78c-2.73,0-5,2.03-5.33,4.76L8.56,30.8h15.09L23.32,28.28z",
                 }),
-                r.createElement("path", {
+                (0, r.jsx)("path", {
                   fill: "white",
-                  d: "M16.02,0.68c-8.83,0-15.99,7.16-16,15.99h0.01c-0.02,2.68,0.74,5.31,2.18,7.57l0,0.01l0.01,0.01\n\t\t\t\tc0.37,0.43,1,0.51,1.47,0.19c0.47-0.32,0.62-0.94,0.36-1.44l0,0l0,0c-1.19-1.89-1.81-4.09-1.79-6.32v0v0\n\t\t\t\tc0-7.6,6.16-13.76,13.76-13.76c7.6,0,13.76,6.16,13.76,13.76v0v0c0.03,2.24-0.59,4.43-1.79,6.32l0,0l0,0\n\t\t\t\tc-0.26,0.5-0.11,1.12,0.36,1.44c0.47,0.32,1.1,0.24,1.47-0.19l0.01-0.01l0-0.01c1.45-2.26,2.2-4.89,2.18-7.57h0.01\n\t\t\t\tC32.02,7.84,24.86,0.68,16.02,0.68",
+                  d: "M16.08,22.15c2.82,0,5.1-2.28,5.1-5.1c0-2.82-2.28-5.1-5.1-5.1s-5.1,2.28-5.1,5.1\n\t\t\tC10.98,19.86,13.27,22.15,16.08,22.15z",
                 }),
-              ),
-            ),
-          );
+                (0, r.jsxs)("g", {
+                  children: [
+                    (0, r.jsx)("path", {
+                      fill: "white",
+                      d: "M24.09,10.21c-0.94-1.22-2.18-2.23-3.57-2.9c-1.39-0.68-2.94-1.02-4.48-1.01l-0.02,0L16,6.3\n\t\t\t\tc-0.03,0-0.05,0-0.08,0c-1.52,0-3.04,0.35-4.4,1.01c-1.39,0.68-2.62,1.68-3.57,2.9c-0.94,1.22-1.6,2.67-1.91,4.18\n\t\t\t\tc-0.3,1.51-0.25,3.1,0.15,4.59c0.14,0.55,0.62,0.92,1.18,0.92c0.01,0,0.02,0,0.04,0h0.27l0.03-0.01c0.32-0.08,0.59-0.29,0.76-0.57\n\t\t\t\tl0.07-0.1c0.14-0.21,0.18-0.46,0.11-0.7L8.6,18.38c-0.18-0.62-0.27-1.27-0.29-1.92c0-4.24,3.45-7.68,7.69-7.68h0.04\n\t\t\t\tc4.24,0,7.69,3.45,7.69,7.68c-0.02,0.65-0.11,1.3-0.29,1.92l-0.04,0.15c-0.07,0.24-0.03,0.49,0.11,0.7l0.07,0.1\n\t\t\t\tc0.17,0.28,0.44,0.49,0.76,0.57l0.03,0.01l0.26,0c0.01,0,0.02,0,0.04,0c0.56,0,1.04-0.37,1.18-0.92c0.4-1.49,0.46-3.08,0.15-4.59\n\t\t\t\tC25.69,12.88,25.04,11.44,24.09,10.21z",
+                    }),
+                    (0, r.jsx)("path", {
+                      fill: "white",
+                      d: "M16.02,0.68c-8.83,0-15.99,7.16-16,15.99h0.01c-0.02,2.68,0.74,5.31,2.18,7.57l0,0.01l0.01,0.01\n\t\t\t\tc0.37,0.43,1,0.51,1.47,0.19c0.47-0.32,0.62-0.94,0.36-1.44l0,0l0,0c-1.19-1.89-1.81-4.09-1.79-6.32v0v0\n\t\t\t\tc0-7.6,6.16-13.76,13.76-13.76c7.6,0,13.76,6.16,13.76,13.76v0v0c0.03,2.24-0.59,4.43-1.79,6.32l0,0l0,0\n\t\t\t\tc-0.26,0.5-0.11,1.12,0.36,1.44c0.47,0.32,1.1,0.24,1.47-0.19l0.01-0.01l0-0.01c1.45-2.26,2.2-4.89,2.18-7.57h0.01\n\t\t\t\tC32.02,7.84,24.86,0.68,16.02,0.68",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          });
         }
         function Ut() {
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
-              d: "M17.9025 14.8777L17.1985 17.0887H18.6505L17.9025 14.8777Z",
-            }),
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M5.35 4.10857C13.549 1.29714 22.451 1.29714 30.65 4.10857L32 4.56857V18.9986C32 20.551 31.6385 22.0822 30.9443 23.4707C30.25 24.8593 29.242 26.0671 28 26.9986L18 34.4986L8 26.9986C6.75804 26.0671 5.75001 24.8593 5.05573 23.4707C4.36145 22.0822 4 20.551 4 18.9986V4.56857L5.35 4.10857ZM27.7468 12.2597C27.2702 12.1203 26.7752 12.0507 26.2618 12.0507C25.4625 12.0507 24.7585 12.2193 24.1498 12.5567C23.5412 12.894 23.0682 13.3707 22.7308 13.9867C22.4008 14.6027 22.2358 15.3177 22.2358 16.1317C22.2358 16.931 22.3972 17.635 22.7198 18.2437C23.0425 18.845 23.4972 19.3143 24.0838 19.6517C24.6778 19.9817 25.3598 20.1467 26.1298 20.1467C26.7532 20.1467 27.3178 20.0477 27.8238 19.8497C28.3372 19.6443 28.7405 19.3913 29.0338 19.0907L27.9778 17.5067C27.4718 17.91 26.9365 18.1117 26.3718 18.1117C25.8072 18.1117 25.3672 17.9393 25.0518 17.5947C24.7438 17.2427 24.5898 16.7587 24.5898 16.1427C24.5898 15.4827 24.7585 14.9767 25.0958 14.6247C25.4332 14.2653 25.8658 14.0857 26.3938 14.0857C26.6505 14.0857 26.9145 14.126 27.1858 14.2067C27.4645 14.2873 27.7028 14.401 27.9008 14.5477L28.9018 12.7987C28.6158 12.5713 28.2308 12.3917 27.7468 12.2597ZM11.9165 19.9487H9.76046L6.84546 12.2487H9.26546L10.8715 17.2977L12.4445 12.2487H14.8645L11.9165 19.9487ZM21.9835 19.9487H19.6185L19.2225 18.7937H16.6485L16.2745 19.9487H13.9755L16.8795 12.2487H18.9475L21.9835 19.9487Z",
-              fill: "currentcolor",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("path", {
+                d: "M17.9025 14.8777L17.1985 17.0887H18.6505L17.9025 14.8777Z",
+              }),
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M5.35 4.10857C13.549 1.29714 22.451 1.29714 30.65 4.10857L32 4.56857V18.9986C32 20.551 31.6385 22.0822 30.9443 23.4707C30.25 24.8593 29.242 26.0671 28 26.9986L18 34.4986L8 26.9986C6.75804 26.0671 5.75001 24.8593 5.05573 23.4707C4.36145 22.0822 4 20.551 4 18.9986V4.56857L5.35 4.10857ZM27.7468 12.2597C27.2702 12.1203 26.7752 12.0507 26.2618 12.0507C25.4625 12.0507 24.7585 12.2193 24.1498 12.5567C23.5412 12.894 23.0682 13.3707 22.7308 13.9867C22.4008 14.6027 22.2358 15.3177 22.2358 16.1317C22.2358 16.931 22.3972 17.635 22.7198 18.2437C23.0425 18.845 23.4972 19.3143 24.0838 19.6517C24.6778 19.9817 25.3598 20.1467 26.1298 20.1467C26.7532 20.1467 27.3178 20.0477 27.8238 19.8497C28.3372 19.6443 28.7405 19.3913 29.0338 19.0907L27.9778 17.5067C27.4718 17.91 26.9365 18.1117 26.3718 18.1117C25.8072 18.1117 25.3672 17.9393 25.0518 17.5947C24.7438 17.2427 24.5898 16.7587 24.5898 16.1427C24.5898 15.4827 24.7585 14.9767 25.0958 14.6247C25.4332 14.2653 25.8658 14.0857 26.3938 14.0857C26.6505 14.0857 26.9145 14.126 27.1858 14.2067C27.4645 14.2873 27.7028 14.401 27.9008 14.5477L28.9018 12.7987C28.6158 12.5713 28.2308 12.3917 27.7468 12.2597ZM11.9165 19.9487H9.76046L6.84546 12.2487H9.26546L10.8715 17.2977L12.4445 12.2487H14.8645L11.9165 19.9487ZM21.9835 19.9487H19.6185L19.2225 18.7937H16.6485L16.2745 19.9487H13.9755L16.8795 12.2487H18.9475L21.9835 19.9487Z",
+                fill: "currentcolor",
+              }),
+            ],
+          });
         }
         function Vt(e) {
-          return r.createElement(
-            "svg",
-            {
-              ...e,
-              height: "100px",
-              width: "100px",
-              fill: "#000000",
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 32 32",
-              x: "0px",
-              y: "0px",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            ...e,
+            height: "100px",
+            width: "100px",
+            fill: "#000000",
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 32 32",
+            x: "0px",
+            y: "0px",
+            children: (0, r.jsx)("path", {
               d: "M26.286 0c-3.142 0-5.714 2.572-5.714 5.714 0 0.512 0.074 1.006 0.202 1.479l-10.573 5.287c-1.049-1.332-2.67-2.194-4.487-2.194-3.142 0-5.714 2.572-5.714 5.714s2.572 5.714 5.714 5.714c1.815 0 3.437-0.862 4.486-2.193l10.574 5.287c-0.127 0.473-0.202 0.966-0.202 1.478 0 3.142 2.572 5.714 5.714 5.714s5.714-2.572 5.714-5.714c0-3.142-2.572-5.714-5.714-5.714-1.817 0-3.438 0.862-4.487 2.194l-10.573-5.287c0.128-0.473 0.202-0.967 0.202-1.479s-0.074-1.005-0.202-1.478l10.574-5.287c1.049 1.331 2.67 2.193 4.486 2.193 3.142 0 5.714-2.572 5.714-5.714s-2.572-5.714-5.714-5.714zM26.286 2.286c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM5.714 12.571c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429zM26.286 22.857c1.907 0 3.429 1.522 3.429 3.429s-1.522 3.429-3.429 3.429c-1.907 0-3.429-1.522-3.429-3.429s1.522-3.429 3.429-3.429z",
             }),
-          );
+          });
         }
         function Gt(e) {
-          return r.createElement(
-            "svg",
-            {
-              ...e,
-              fill: "#000000",
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 16 16",
-              x: "0px",
-              y: "0px",
-            },
-            r.createElement("path", {
-              d: "M8,11c-0.2,0-0.5-0.1-0.6-0.2c-0.2-0.2-0.3-0.3-0.3-0.6l0-7.7L5.7,3.6C5.5,3.8,5.3,3.9,5.1,3.9\n\t\t\t\t\tc-0.2,0-0.4-0.1-0.6-0.2C4.4,3.5,4.3,3.4,4.3,3.2c0-0.2,0.1-0.4,0.3-0.5l2.7-2.4C7.5,0.1,7.7,0,8,0s0.5,0.1,0.7,0.3l2.8,2.4\n\t\t\t\t\tc0.2,0.2,0.3,0.3,0.3,0.5c0,0.2-0.1,0.4-0.2,0.5c-0.1,0.1-0.3,0.2-0.6,0.2c-0.2,0-0.4-0.1-0.6-0.2L8.8,2.5l0,7.7\n\t\t\t\t\tc0,0.2-0.1,0.4-0.3,0.6C8.4,10.9,8.2,11,8,11z",
-            }),
-            r.createElement("path", {
-              d: "M4,16c-0.8,0-1.3-0.2-1.7-0.6c-0.4-0.4-0.6-0.9-0.6-1.7V7.9c0-0.7,0.2-1.3,0.6-1.7c0.4-0.4,1-0.6,1.7-0.6h1.9\n\t\t\t\tV7H4.1c-0.7,0-1,0.3-1,1v5.6c0,0.7,0.3,1,1,1h7.9c0.3,0,0.6-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7V8c0-0.3-0.1-0.6-0.3-0.7\n\t\t\t\tC12.5,7.1,12.2,7,11.9,7h-1.8V5.6H12c0.8,0,1.3,0.2,1.7,0.6c0.4,0.4,0.6,0.9,0.6,1.7v5.8c0,0.7-0.2,1.3-0.6,1.7\n\t\t\t\tc-0.4,0.4-1,0.6-1.7,0.6H4z",
-            }),
-          );
-        }
-        function jt(e) {
-          return (0, u.Ae)()
-            ? r.createElement(Gt, { ...e })
-            : r.createElement(Vt, { ...e });
+          return (0, r.jsxs)("svg", {
+            ...e,
+            fill: "#000000",
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 16 16",
+            x: "0px",
+            y: "0px",
+            children: [
+              (0, r.jsx)("path", {
+                d: "M8,11c-0.2,0-0.5-0.1-0.6-0.2c-0.2-0.2-0.3-0.3-0.3-0.6l0-7.7L5.7,3.6C5.5,3.8,5.3,3.9,5.1,3.9\n\t\t\t\t\tc-0.2,0-0.4-0.1-0.6-0.2C4.4,3.5,4.3,3.4,4.3,3.2c0-0.2,0.1-0.4,0.3-0.5l2.7-2.4C7.5,0.1,7.7,0,8,0s0.5,0.1,0.7,0.3l2.8,2.4\n\t\t\t\t\tc0.2,0.2,0.3,0.3,0.3,0.5c0,0.2-0.1,0.4-0.2,0.5c-0.1,0.1-0.3,0.2-0.6,0.2c-0.2,0-0.4-0.1-0.6-0.2L8.8,2.5l0,7.7\n\t\t\t\t\tc0,0.2-0.1,0.4-0.3,0.6C8.4,10.9,8.2,11,8,11z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M4,16c-0.8,0-1.3-0.2-1.7-0.6c-0.4-0.4-0.6-0.9-0.6-1.7V7.9c0-0.7,0.2-1.3,0.6-1.7c0.4-0.4,1-0.6,1.7-0.6h1.9\n\t\t\t\tV7H4.1c-0.7,0-1,0.3-1,1v5.6c0,0.7,0.3,1,1,1h7.9c0.3,0,0.6-0.1,0.7-0.3c0.2-0.2,0.3-0.4,0.3-0.7V8c0-0.3-0.1-0.6-0.3-0.7\n\t\t\t\tC12.5,7.1,12.2,7,11.9,7h-1.8V5.6H12c0.8,0,1.3,0.2,1.7,0.6c0.4,0.4,0.6,0.9,0.6,1.7v5.8c0,0.7-0.2,1.3-0.6,1.7\n\t\t\t\tc-0.4,0.4-1,0.6-1.7,0.6H4z",
+              }),
+            ],
+          });
         }
         function qt(e) {
+          return (0, d.Ae)()
+            ? (0, r.jsx)(Gt, { ...e })
+            : (0, r.jsx)(Vt, { ...e });
+        }
+        function Zt(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(a().SteamDeckCompatLogo, t),
-              ...n,
-              viewBox: "0 0 20 20",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            className: (0, s.A)(c().SteamDeckCompatLogo, t),
+            ...n,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, r.jsx)("path", {
               opacity: "0.84",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M7.77715 4.30197C10.9241 4.30197 13.4752 6.85305 13.4752 9.99997C13.4752 13.1469 10.9241 15.698 7.77715 15.698V18.8889C12.6864 18.8889 16.666 14.9092 16.666 9.99997C16.666 5.09078 12.6864 1.11108 7.77715 1.11108V4.30197ZM7.77756 13.8889C9.92533 13.8889 11.6664 12.1477 11.6664 9.99997C11.6664 7.8522 9.92533 6.11108 7.77756 6.11108C5.62979 6.11108 3.88867 7.8522 3.88867 9.99997C3.88867 12.1477 5.62979 13.8889 7.77756 13.8889Z",
               fill: "white",
             }),
-          );
+          });
         }
-        function Zt(e) {
+        function Kt(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(
-                a().SteamDeckCompatIcon,
-                a().SteamOSCompatCompatible,
-                t,
-              ),
-              ...n,
-              viewBox: "0 0 20 20",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            className: (0, s.A)(
+              c().SteamDeckCompatIcon,
+              c().SteamOSCompatCompatible,
+              t,
+            ),
+            ...n,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function Kt(e) {
+        function $t(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(
-                a().SteamDeckCompatIcon,
-                a().SteamOSCompatInformation,
-                t,
-              ),
-              ...n,
-              viewBox: "0 0 48 48",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            className: (0, s.A)(
+              c().SteamDeckCompatIcon,
+              c().SteamOSCompatInformation,
+              t,
+            ),
+            ...n,
+            viewBox: "0 0 48 48",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M24.0001 45.6002C35.9295 45.6002 45.6002 35.9295 45.6002 24.0001C45.6002 12.0708 35.9295 2.40015 24.0001 2.40015C12.0708 2.40015 2.40015 12.0708 2.40015 24.0001C2.40015 35.9295 12.0708 45.6002 24.0001 45.6002ZM20.6659 36H27.3326V22.6667H20.6659V36ZM21.777 19.3259C22.4348 19.7654 23.2081 20 23.9993 20C25.0601 20 26.0775 19.5786 26.8277 18.8285C27.5778 18.0783 27.9993 17.0609 27.9993 16C27.9993 15.2089 27.7647 14.4355 27.3251 13.7777C26.8856 13.1199 26.2609 12.6073 25.53 12.3045C24.7991 12.0018 23.9948 11.9225 23.2189 12.0769C22.443 12.2312 21.7302 12.6122 21.1708 13.1716C20.6114 13.731 20.2305 14.4437 20.0761 15.2197C19.9218 15.9956 20.001 16.7999 20.3037 17.5308C20.6065 18.2617 21.1192 18.8864 21.777 19.3259Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function $t(e) {
+        function Yt(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(
-                a().SteamDeckCompatIcon,
-                a().SteamDeckCompatVerified,
-                t,
-              ),
-              ...n,
-              viewBox: "0 0 20 20",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            className: (0, s.A)(
+              c().SteamDeckCompatIcon,
+              c().SteamDeckCompatVerified,
+              t,
+            ),
+            ...n,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function Yt(e) {
+        function Xt(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(
-                a().SteamDeckCompatIcon,
-                a().SteamDeckCompatPlayable,
-                t,
-              ),
-              ...n,
-              viewBox: "0 0 20 20",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            className: (0, s.A)(
+              c().SteamDeckCompatIcon,
+              c().SteamDeckCompatPlayable,
+              t,
+            ),
+            ...n,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.61079 9.44444V15H11.3886V9.44444H8.61079ZM9.07372 8.05245C9.34781 8.23558 9.67004 8.33333 9.99967 8.33333C10.4417 8.33333 10.8656 8.15774 11.1782 7.84518C11.4907 7.53262 11.6663 7.10869 11.6663 6.66667C11.6663 6.33703 11.5686 6.0148 11.3855 5.74072C11.2023 5.46663 10.942 5.25301 10.6375 5.12687C10.3329 5.00072 9.99783 4.96771 9.67452 5.03202C9.35122 5.09633 9.05425 5.25507 8.82116 5.48815C8.58808 5.72124 8.42934 6.01821 8.36503 6.34152C8.30072 6.66482 8.33373 6.99993 8.45988 7.30447C8.58602 7.60902 8.79964 7.86931 9.07372 8.05245Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function Xt(e) {
+        function Qt(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(
-                a().SteamDeckCompatIcon,
-                a().SteamDeckCompatUnsupported,
-                t,
-              ),
-              ...n,
-              viewBox: "0 0 20 20",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            className: (0, s.A)(
+              c().SteamDeckCompatIcon,
+              c().SteamDeckCompatUnsupported,
+              t,
+            ),
+            ...n,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M14.1931 15.6064C13.0246 16.4816 11.5733 17 10.001 17C6.13498 17 3.00098 13.866 3.00098 10C3.00098 8.42766 3.51938 6.97641 4.39459 5.80783L14.1931 15.6064ZM15.6074 14.1922C16.4826 13.0236 17.001 11.5723 17.001 10C17.001 6.13401 13.867 3 10.001 3C8.42864 3 6.97739 3.5184 5.80881 4.39362L15.6074 14.1922ZM19.001 10C19.001 14.9706 14.9715 19 10.001 19C5.03041 19 1.00098 14.9706 1.00098 10C1.00098 5.02944 5.03041 1 10.001 1C14.9715 1 19.001 5.02944 19.001 10Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function Qt(e) {
+        function Jt(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              className: (0, i.A)(
-                a().SteamDeckCompatIcon,
-                a().SteamDeckCompatUnknown,
-                t,
-              ),
-              ...n,
-              viewBox: "0 0 20 20",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            className: (0, s.A)(
+              c().SteamDeckCompatIcon,
+              c().SteamDeckCompatUnknown,
+              t,
+            ),
+            ...n,
+            viewBox: "0 0 20 20",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, r.jsx)("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M17.3972 11.2461L18.8767 11.4932C18.9578 11.0075 19 10.5087 19 10C19 9.49131 18.9578 8.99248 18.8767 8.50682L17.3972 8.75386C17.4647 9.15821 17.5 9.57442 17.5 10C17.5 10.4256 17.4647 10.8418 17.3972 11.2461ZM17.0295 7.3783L18.4348 6.8539C18.0814 5.90668 17.5729 5.03501 16.9403 4.26971L15.7842 5.22538C16.3119 5.86387 16.7354 6.59021 17.0295 7.3783ZM14.7746 4.21582L15.7303 3.05967C14.965 2.42708 14.0933 1.91864 13.1461 1.56519L12.6217 2.97054C13.4098 3.26461 14.1361 3.68805 14.7746 4.21582ZM11.2461 2.60281L11.4932 1.1233C11.0075 1.0422 10.5087 1 10 1C9.49131 1 8.99248 1.0422 8.50682 1.1233L8.75386 2.60281C9.15821 2.5353 9.57442 2.5 10 2.5C10.4256 2.5 10.8418 2.5353 11.2461 2.60281ZM7.3783 2.97054L6.8539 1.56519C5.90668 1.91864 5.03501 2.42708 4.26971 3.05967L5.22538 4.21582C5.86387 3.68805 6.59021 3.26461 7.3783 2.97054ZM4.21582 5.22538L3.05967 4.26971C2.42708 5.03501 1.91864 5.90668 1.56519 6.8539L2.97054 7.3783C3.26461 6.59022 3.68805 5.86387 4.21582 5.22538ZM1 10C1 9.49131 1.0422 8.99248 1.1233 8.50682L2.60281 8.75386C2.5353 9.15821 2.5 9.57442 2.5 10C2.5 10.4256 2.5353 10.8418 2.60281 11.2461L1.1233 11.4932C1.0422 11.0075 1 10.5087 1 10ZM2.97054 12.6217L1.56519 13.1461C1.91864 14.0933 2.42708 14.965 3.05967 15.7303L4.21582 14.7746C3.68805 14.1361 3.26461 13.4098 2.97054 12.6217ZM5.22538 15.7842L4.26971 16.9403C5.03501 17.5729 5.90668 18.0814 6.8539 18.4348L7.3783 17.0295C6.59022 16.7354 5.86387 16.3119 5.22538 15.7842ZM8.75386 17.3972L8.50682 18.8767C8.99248 18.9578 9.49131 19 10 19C10.5087 19 11.0075 18.9578 11.4932 18.8767L11.2461 17.3972C10.8418 17.4647 10.4256 17.5 10 17.5C9.57442 17.5 9.15821 17.4647 8.75386 17.3972ZM12.6217 17.0295L13.1461 18.4348C14.0933 18.0814 14.965 17.5729 15.7303 16.9403L14.7746 15.7842C14.1361 16.3119 13.4098 16.7354 12.6217 17.0295ZM15.7842 14.7746L16.9403 15.7303C17.5729 14.965 18.0814 14.0933 18.4348 13.1461L17.0295 12.6217C16.7354 13.4098 16.3119 14.1361 15.7842 14.7746ZM9.2425 14.7702C9.46679 14.92 9.73048 15 10.0002 15C10.362 15 10.7089 14.8563 10.9646 14.6006C11.2204 14.3448 11.3641 13.998 11.3641 13.6363C11.3641 13.3666 11.2841 13.1029 11.1343 12.8787C10.9844 12.6544 10.7714 12.4796 10.5222 12.3764C10.2729 12.2732 9.99872 12.2462 9.73415 12.2988C9.46958 12.3514 9.22656 12.4813 9.03582 12.672C8.84508 12.8628 8.71518 13.1057 8.66255 13.3703C8.60993 13.6348 8.63694 13.909 8.74016 14.1582C8.84339 14.4074 9.01821 14.6203 9.2425 14.7702ZM11.0981 10.3552C11.1722 10.2348 11.2765 10.1358 11.4005 10.068C11.8099 9.82315 12.1479 9.47526 12.3808 9.05903C12.6137 8.64279 12.7333 8.17276 12.7278 7.69584C12.7223 7.21892 12.5918 6.75179 12.3493 6.34105C12.1069 5.93031 11.7609 5.59033 11.346 5.35502C10.9311 5.11972 10.4617 4.99732 9.98466 5.00004C9.50764 5.00277 9.03969 5.13052 8.62748 5.37054C8.21527 5.61057 7.87321 5.95448 7.63545 6.36796C7.39769 6.78144 7.27253 7.25004 7.27246 7.72699H9.23191C9.23191 7.6261 9.25178 7.52621 9.29039 7.43301C9.32901 7.3398 9.3856 7.25511 9.45694 7.18378C9.52829 7.11244 9.61299 7.05586 9.70621 7.01725C9.79942 6.97865 9.89933 6.95878 10.0002 6.95878C10.1659 6.96387 10.3255 7.02207 10.4556 7.12479C10.5856 7.22751 10.6792 7.3693 10.7225 7.52925C10.7658 7.6892 10.7565 7.85883 10.6961 8.01311C10.6356 8.16739 10.5271 8.29816 10.3867 8.3861C9.97322 8.62846 9.63003 8.97429 9.39088 9.38955C9.15173 9.80482 9.02487 10.2752 9.02278 10.7544V11.3635H10.9777V10.7544C10.9825 10.6131 11.024 10.4755 11.0981 10.3552Z",
               fill: "currentColor",
             }),
-          );
+          });
         }
-        function Jt(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 22 20",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+        function en(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 22 20",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               d: "M5.55344 11.3334L7.94011 13.7267L6.06011 15.6067L0.446777 10.0001L6.06011 4.39341L7.94011 6.27341L5.55344 8.66675H13.6668V11.3334H5.55344ZM12.4334 0.666748H11.0001V3.33341H12.4334C14.2016 3.33341 15.8972 4.03579 17.1475 5.28604C18.3977 6.53628 19.1001 8.23197 19.1001 10.0001C19.1001 11.7682 18.3977 13.4639 17.1475 14.7141C15.8972 15.9644 14.2016 16.6667 12.4334 16.6667H11.0001V19.3334H12.4334C14.9088 19.3334 17.2828 18.3501 19.0331 16.5997C20.7834 14.8494 21.7668 12.4754 21.7668 10.0001C21.7668 7.52473 20.7834 5.15076 19.0331 3.40042C17.2828 1.65008 14.9088 0.666748 12.4334 0.666748Z",
             }),
-          );
+          });
         }
-        function en(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-              preserveAspectRatio: "xMidYMid meet",
-            },
-            r.createElement("path", {
+        function tn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            preserveAspectRatio: "xMidYMid meet",
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               d: "M18 3C15.0333 3 12.1332 3.87973 9.66645 5.52796C7.19972 7.17618 5.27713 9.51886 4.14181 12.2597C3.0065 15.0006 2.70945 18.0166 3.28823 20.9264C3.86701 23.8361 5.29562 26.5088 7.3934 28.6066C9.49119 30.7044 12.1639 32.133 15.0737 32.7118C17.9834 33.2906 20.9994 32.9935 23.7403 31.8582C26.4811 30.7229 28.8238 28.8003 30.472 26.3336C32.1203 23.8668 33 20.9667 33 18C33 16.0302 32.612 14.0796 31.8582 12.2597C31.1044 10.4399 29.9995 8.78628 28.6066 7.3934C27.2137 6.00052 25.5601 4.89563 23.7403 4.14181C21.9204 3.38799 19.9698 3 18 3ZM18 28.54L8.23001 18.77L11.77 15.23L15.5 19V8H20.5V19L24.23 15.27L27.77 18.81L18 28.54Z",
             }),
-          );
+          });
         }
-        function tn(e) {
+        function nn(e) {
           const { className: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: t,
-              ...n,
-              width: "50",
-              height: "50",
-              viewBox: "0 0 50 50",
-              fill: "none",
-            },
-            r.createElement("circle", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: t,
+            ...n,
+            width: "50",
+            height: "50",
+            viewBox: "0 0 50 50",
+            fill: "none",
+            children: (0, r.jsx)("circle", {
               fill: "currentColor",
               cx: "25",
               cy: "25",
               r: "25",
             }),
-          );
+          });
         }
-        function nn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 26 26",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+        function rn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 26 26",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M17.5133 4.65595C15.8046 6.36468 17.0366 9.2803 19.4284 9.28035C20.446 9.28035 21.0261 8.76331 21.2519 8.56209C21.2963 8.5225 21.327 8.49513 21.3447 8.48633C22.4018 7.42917 22.4024 5.71423 21.3441 4.65595C20.2817 3.59714 18.5699 3.59936 17.5133 4.65595ZM18.5553 7.44735C17.4045 6.30173 19.1522 4.54882 20.301 5.69597V5.69586C20.7836 6.18159 20.783 6.96269 20.301 7.44422C19.8189 7.92684 19.0348 7.92415 18.5553 7.44735ZM0.583974 13.873L14.455 0L24.4165 1.583L26 11.5449L12.1289 25.416C11.7368 25.805 11.2252 26 10.7156 26C10.2065 26 9.69489 25.805 9.30552 25.416L0.583974 16.6976C0.194954 16.305 0 15.7933 0 15.2843C0 14.7742 0.194948 14.2625 0.583974 13.873ZM9.26632 17.5853L8.88665 17.965C8.62416 18.2274 8.43667 18.5227 8.32418 18.8509C8.21403 19.1766 8.19645 19.5106 8.27145 19.8528C8.34879 20.1926 8.53979 20.5148 8.84446 20.8195C9.14445 21.1195 9.46318 21.307 9.80066 21.382C10.1428 21.457 10.4756 21.4382 10.7991 21.3257C11.1272 21.2132 11.4225 21.0257 11.6849 20.7633L12.0646 20.3836C12.3271 20.1211 12.5146 19.8281 12.6271 19.5047C12.7419 19.179 12.7618 18.8473 12.6868 18.5099C12.6142 18.17 12.4255 17.8478 12.1209 17.5431C11.8209 17.2431 11.4986 17.0545 11.1541 16.9771C10.8143 16.8998 10.4791 16.9162 10.1487 17.0263C9.82293 17.1365 9.5288 17.3228 9.26632 17.5853ZM9.6038 18.6821L9.98347 18.3024C10.2014 18.0845 10.4487 17.9427 10.7252 17.8771C11.0065 17.8115 11.2701 17.9017 11.5162 18.1478C11.7693 18.4009 11.8584 18.6634 11.7834 18.9352C11.7107 19.2047 11.5654 19.4485 11.3475 19.6664L10.9678 20.0461C10.7498 20.2641 10.5026 20.4082 10.226 20.4785C9.95417 20.5488 9.6952 20.4609 9.44912 20.2148C9.19601 19.9617 9.10344 19.6981 9.1714 19.4239C9.24171 19.1473 9.38584 18.9001 9.6038 18.6821ZM9.80066 9.87944L9.421 10.2591C9.15851 10.5216 8.97102 10.8169 8.85853 11.145C8.74837 11.4708 8.7308 11.8047 8.80579 12.1469C8.88313 12.4867 9.07414 12.809 9.37881 13.1136C9.6788 13.4136 9.99753 13.6011 10.335 13.6761C10.6772 13.7511 11.01 13.7324 11.3334 13.6199C11.6615 13.5074 11.9568 13.3199 12.2193 13.0574L12.599 12.6777C12.8614 12.4152 13.0489 12.1223 13.1614 11.7989C13.2763 11.4731 13.2962 11.1415 13.2212 10.804C13.1485 10.4642 12.9599 10.1419 12.6552 9.83725C12.3552 9.53727 12.033 9.34861 11.6885 9.27127C11.3486 9.19393 11.0135 9.21033 10.683 9.32048C10.3573 9.43063 10.0632 9.61695 9.80066 9.87944ZM10.1381 10.9763L10.5178 10.5966C10.7358 10.3786 10.983 10.2368 11.2596 10.1712C11.5408 10.1056 11.8045 10.1958 12.0506 10.4419C12.3037 10.695 12.3927 10.9575 12.3177 11.2294C12.2451 11.4989 12.0998 11.7426 11.8818 11.9606L11.5021 12.3403C11.2842 12.5582 11.0369 12.7023 10.7604 12.7726C10.4885 12.843 10.2295 12.7551 9.98347 12.509C9.73036 12.2559 9.63778 11.9922 9.70575 11.718C9.77606 11.4415 9.92019 11.1942 10.1381 10.9763ZM16.3675 13.7464L4.21814 15.9963L5.01966 16.7978L17.169 14.5479L16.3675 13.7464Z",
             }),
-          );
-        }
-        function rn(e) {
-          return r.createElement(
-            "svg",
-            {
-              width: "36",
-              height: "36",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M32.1215 7.97173H3.87823V23.2312C3.8266 23.2806 3.77545 23.3307 3.72479 23.3813C2.67314 24.433 1.88115 25.6958 1.39011 27.0701H0V3.95898H35.9997V27.0701H34.6116C34.5565 26.9156 34.4975 26.7624 34.4348 26.6105C33.9353 25.4024 33.2027 24.3045 32.2788 23.3796L32.2778 23.3785C32.2262 23.327 32.1741 23.276 32.1215 23.2257V7.97173ZM31.6574 27.0701C31.3177 26.4177 30.88 25.8198 30.3585 25.2977C30.3584 25.2976 30.3583 25.2976 30.3582 25.2975C30.8798 25.8197 31.3176 26.4176 31.6573 27.0701H31.6574ZM17.1787 27.0701C16.8413 26.4235 16.4051 25.8258 15.8799 25.3006C15.8798 25.3005 15.8797 25.3004 15.8797 25.3003C16.405 25.8256 16.8412 26.4234 17.1786 27.0701H17.1787Z",
-              fill: "currentColor",
-            }),
-            r.createElement("path", {
-              d: "M18.0011 30.4189H3.52539C3.52539 28.4993 4.28795 26.6583 5.64531 25.3009C7.00267 23.9436 8.84365 23.181 10.7633 23.181C12.6829 23.181 14.5238 23.9436 15.8812 25.3009C17.2386 26.6583 18.0011 28.4993 18.0011 30.4189ZM10.7633 20.4668C11.5685 20.4668 12.3556 20.228 13.0251 19.7807C13.6947 19.3333 14.2165 18.6975 14.5246 17.9535C14.8328 17.2096 14.9134 16.391 14.7563 15.6013C14.5992 14.8115 14.2115 14.0861 13.6421 13.5167C13.0727 12.9473 12.3473 12.5595 11.5575 12.4025C10.7678 12.2454 9.94917 12.326 9.20524 12.6341C8.4613 12.9423 7.82545 13.4641 7.37809 14.1336C6.93073 14.8032 6.69196 15.5903 6.69196 16.3955C6.69076 16.9305 6.79526 17.4605 6.99944 17.955C7.20362 18.4494 7.50346 18.8987 7.88175 19.277C8.26004 19.6553 8.70934 19.9552 9.20383 20.1593C9.69832 20.3635 10.2283 20.468 10.7633 20.4668ZM30.3598 25.2981C29.0262 23.9645 27.2248 23.204 25.3389 23.1787C23.4531 23.1533 21.6319 23.8651 20.263 25.1624C21.1577 26.7696 21.6249 28.5795 21.6201 30.4189H32.4768C32.4776 29.4681 32.291 28.5265 31.9278 27.6479C31.5645 26.7692 31.0317 25.9708 30.3598 25.2981ZM21.1677 16.3955C21.1677 17.2008 21.4065 17.9879 21.8538 18.6574C22.3012 19.3269 22.937 19.8488 23.681 20.1569C24.4249 20.4651 25.2435 20.5457 26.0333 20.3886C26.823 20.2315 27.5484 19.8438 28.1178 19.2744C28.6872 18.705 29.075 17.9796 29.2321 17.1898C29.3891 16.4 29.3085 15.5814 29.0004 14.8375C28.6922 14.0936 28.1704 13.4577 27.5009 13.0104C26.8314 12.563 26.0442 12.3242 25.239 12.3242C24.704 12.323 24.174 12.4275 23.6796 12.6317C23.1851 12.8359 22.7358 13.1357 22.3575 13.514C21.9792 13.8923 21.6793 14.3416 21.4752 14.8361C21.271 15.3306 21.1665 15.8605 21.1677 16.3955Z",
-              fill: "currentColor",
-            }),
-          );
+          });
         }
         function sn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 74 74",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsxs)("svg", {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M32.1215 7.97173H3.87823V23.2312C3.8266 23.2806 3.77545 23.3307 3.72479 23.3813C2.67314 24.433 1.88115 25.6958 1.39011 27.0701H0V3.95898H35.9997V27.0701H34.6116C34.5565 26.9156 34.4975 26.7624 34.4348 26.6105C33.9353 25.4024 33.2027 24.3045 32.2788 23.3796L32.2778 23.3785C32.2262 23.327 32.1741 23.276 32.1215 23.2257V7.97173ZM31.6574 27.0701C31.3177 26.4177 30.88 25.8198 30.3585 25.2977C30.3584 25.2976 30.3583 25.2976 30.3582 25.2975C30.8798 25.8197 31.3176 26.4176 31.6573 27.0701H31.6574ZM17.1787 27.0701C16.8413 26.4235 16.4051 25.8258 15.8799 25.3006C15.8798 25.3005 15.8797 25.3004 15.8797 25.3003C16.405 25.8256 16.8412 26.4234 17.1786 27.0701H17.1787Z",
+                fill: "currentColor",
+              }),
+              (0, r.jsx)("path", {
+                d: "M18.0011 30.4189H3.52539C3.52539 28.4993 4.28795 26.6583 5.64531 25.3009C7.00267 23.9436 8.84365 23.181 10.7633 23.181C12.6829 23.181 14.5238 23.9436 15.8812 25.3009C17.2386 26.6583 18.0011 28.4993 18.0011 30.4189ZM10.7633 20.4668C11.5685 20.4668 12.3556 20.228 13.0251 19.7807C13.6947 19.3333 14.2165 18.6975 14.5246 17.9535C14.8328 17.2096 14.9134 16.391 14.7563 15.6013C14.5992 14.8115 14.2115 14.0861 13.6421 13.5167C13.0727 12.9473 12.3473 12.5595 11.5575 12.4025C10.7678 12.2454 9.94917 12.326 9.20524 12.6341C8.4613 12.9423 7.82545 13.4641 7.37809 14.1336C6.93073 14.8032 6.69196 15.5903 6.69196 16.3955C6.69076 16.9305 6.79526 17.4605 6.99944 17.955C7.20362 18.4494 7.50346 18.8987 7.88175 19.277C8.26004 19.6553 8.70934 19.9552 9.20383 20.1593C9.69832 20.3635 10.2283 20.468 10.7633 20.4668ZM30.3598 25.2981C29.0262 23.9645 27.2248 23.204 25.3389 23.1787C23.4531 23.1533 21.6319 23.8651 20.263 25.1624C21.1577 26.7696 21.6249 28.5795 21.6201 30.4189H32.4768C32.4776 29.4681 32.291 28.5265 31.9278 27.6479C31.5645 26.7692 31.0317 25.9708 30.3598 25.2981ZM21.1677 16.3955C21.1677 17.2008 21.4065 17.9879 21.8538 18.6574C22.3012 19.3269 22.937 19.8488 23.681 20.1569C24.4249 20.4651 25.2435 20.5457 26.0333 20.3886C26.823 20.2315 27.5484 19.8438 28.1178 19.2744C28.6872 18.705 29.075 17.9796 29.2321 17.1898C29.3891 16.4 29.3085 15.5814 29.0004 14.8375C28.6922 14.0936 28.1704 13.4577 27.5009 13.0104C26.8314 12.563 26.0442 12.3242 25.239 12.3242C24.704 12.323 24.174 12.4275 23.6796 12.6317C23.1851 12.8359 22.7358 13.1357 22.3575 13.514C21.9792 13.8923 21.6793 14.3416 21.4752 14.8361C21.271 15.3306 21.1665 15.8605 21.1677 16.3955Z",
+                fill: "currentColor",
+              }),
+            ],
+          });
+        }
+        function on(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 74 74",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               d: "M37 10.3599C27.6285 10.3599 19.98 17.9072 19.98 27.1949C19.98 32.8877 22.3457 35.9972 24.3969 38.4564C26.2758 40.7094 27.8247 42.4021 28.0737 46.0414C27.2441 46.3582 26.64 47.1509 26.64 48.0764V52.5627C26.64 53.6047 27.407 54.5044 28.3975 54.7133L30.0394 61.0267C30.041 61.0337 30.0377 61.0429 30.0394 61.0499C30.2774 61.9874 30.836 62.8416 31.6119 63.2467C32.3935 63.6548 33.1174 63.6399 33.6931 63.6399H40.3069C40.8826 63.6399 41.6064 63.6548 42.3881 63.2467C43.164 62.8416 43.7226 61.9874 43.9606 61.0499C43.9623 61.0429 43.9589 61.0337 43.9606 61.0267L45.6025 54.7133C46.593 54.5045 47.36 53.6047 47.36 52.5627V48.0764C47.36 47.1509 46.7558 46.3582 45.9262 46.0414C46.1753 42.4021 47.7242 40.7094 49.6031 38.4564C51.6543 35.9967 54.02 32.8874 54.02 27.1949C54.02 17.9072 46.3715 10.3599 37 10.3599ZM37 13.3199C44.7909 13.3199 51.06 19.5266 51.06 27.1949C51.06 32.132 49.3557 34.1398 47.3369 36.5608C45.4799 38.7878 43.3032 41.4093 42.9662 45.8799H31.0337C30.6967 41.409 28.5201 38.7876 26.6631 36.5608C24.6443 34.1399 22.94 32.1324 22.94 27.1949C22.94 19.5266 29.209 13.3199 37 13.3199ZM29.6 48.8399H44.4V51.7999H29.6V48.8399ZM31.4731 54.7599H42.5269L41.0931 60.3099V60.333C41.0411 60.5428 41.0153 60.6064 41.0006 60.6336C41.0329 60.6168 40.8045 60.6799 40.3069 60.6799H33.6931C33.1954 60.6799 32.9671 60.6168 32.9994 60.6336C32.9847 60.6064 32.9589 60.5428 32.9069 60.333V60.3099L31.4731 54.7599Z",
             }),
-          );
-        }
-        function on(e) {
-          return r.createElement(
-            "svg",
-            {
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M17.998 9.82081C17.998 12.24 16.0368 14.2012 13.6176 14.2012C11.1984 14.2012 9.23724 12.24 9.23724 9.82081C9.23724 7.40159 11.1984 5.44043 13.6176 5.44043C16.0368 5.44043 17.998 7.40159 17.998 9.82081ZM6.31793 24.4221C6.31793 20.3901 9.58654 17.1215 13.6186 17.1215C14.8524 17.1215 16.0147 17.4275 17.0338 17.9679C17.2536 19.4972 18.0606 20.8369 19.219 21.751C16.1722 23.1386 14.0541 26.2102 14.0541 29.7765V30.7493H6.31793V24.4221ZM20.8293 23.2728C20.8885 23.6472 20.9192 24.0311 20.9192 24.4221V30.7493H16.0541V29.7765C16.0541 29.4275 16.0804 29.0847 16.131 28.7499C16.523 26.1552 18.3783 24.0403 20.8293 23.2728Z",
-              fill: "white",
-              fillOpacity: "0.3",
-            }),
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M22.8671 21.0156C25.0175 21.0156 26.7608 19.2723 26.7608 17.1219C26.7608 14.9715 25.0175 13.2282 22.8671 13.2282C20.7167 13.2282 18.9734 14.9715 18.9734 17.1219C18.9734 19.2723 20.7167 21.0156 22.8671 21.0156ZM22.8681 22.9625C19.1048 22.9625 16.0541 26.0132 16.0541 29.7765V30.7499H29.682V29.7765C29.682 26.0132 26.6313 22.9625 22.8681 22.9625Z",
-              fill: "white",
-            }),
-          );
+          });
         }
         function an(e) {
-          return r.createElement(
-            "svg",
-            {
-              viewBox: "0 0 36 36",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M20.6737 18.9768C20.4716 18.6971 20.2544 18.4292 20.0231 18.1741C19.6636 17.5852 19.4564 16.8931 19.4564 16.1527C19.4564 14.0072 21.1957 12.268 23.3411 12.268C25.4866 12.268 27.2258 14.0072 27.2258 16.1527C27.2258 18.2981 25.4866 20.0374 23.3411 20.0374C22.3082 20.0374 21.3695 19.6343 20.6737 18.9768ZM20.4271 30.7201H16.5438V28.7777C16.5438 26.1434 18.0421 23.8591 20.2331 22.7305C20.36 23.269 20.4271 23.8305 20.4271 24.4077V30.7201ZM22.4271 30.7201V24.4077C22.4271 23.6062 22.3255 22.8284 22.1345 22.0864C22.5264 22.0162 22.9299 21.9795 23.342 21.9795C27.0966 21.9795 30.1402 25.0232 30.1402 28.7777V30.7201H22.4271Z",
-              fill: "white",
-              fillOpacity: "0.3",
-            }),
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M13.1424 14.2104C15.5561 14.2104 17.5127 12.2538 17.5127 9.84018C17.5127 7.42654 15.5561 5.46991 13.1424 5.46991C10.7288 5.46991 8.77216 7.42654 8.77216 9.84018C8.77216 12.2538 10.7288 14.2104 13.1424 14.2104ZM13.1433 17.124C9.12062 17.124 5.85956 20.385 5.85956 24.4077V30.7203H20.4271V24.4077C20.4271 20.385 17.1661 17.124 13.1433 17.124Z",
-              fill: "white",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M17.998 9.82081C17.998 12.24 16.0368 14.2012 13.6176 14.2012C11.1984 14.2012 9.23724 12.24 9.23724 9.82081C9.23724 7.40159 11.1984 5.44043 13.6176 5.44043C16.0368 5.44043 17.998 7.40159 17.998 9.82081ZM6.31793 24.4221C6.31793 20.3901 9.58654 17.1215 13.6186 17.1215C14.8524 17.1215 16.0147 17.4275 17.0338 17.9679C17.2536 19.4972 18.0606 20.8369 19.219 21.751C16.1722 23.1386 14.0541 26.2102 14.0541 29.7765V30.7493H6.31793V24.4221ZM20.8293 23.2728C20.8885 23.6472 20.9192 24.0311 20.9192 24.4221V30.7493H16.0541V29.7765C16.0541 29.4275 16.0804 29.0847 16.131 28.7499C16.523 26.1552 18.3783 24.0403 20.8293 23.2728Z",
+                fill: "white",
+                fillOpacity: "0.3",
+              }),
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M22.8671 21.0156C25.0175 21.0156 26.7608 19.2723 26.7608 17.1219C26.7608 14.9715 25.0175 13.2282 22.8671 13.2282C20.7167 13.2282 18.9734 14.9715 18.9734 17.1219C18.9734 19.2723 20.7167 21.0156 22.8671 21.0156ZM22.8681 22.9625C19.1048 22.9625 16.0541 26.0132 16.0541 29.7765V30.7499H29.682V29.7765C29.682 26.0132 26.6313 22.9625 22.8681 22.9625Z",
+                fill: "white",
+              }),
+            ],
+          });
         }
         function cn(e) {
+          return (0, r.jsxs)("svg", {
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: [
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M20.6737 18.9768C20.4716 18.6971 20.2544 18.4292 20.0231 18.1741C19.6636 17.5852 19.4564 16.8931 19.4564 16.1527C19.4564 14.0072 21.1957 12.268 23.3411 12.268C25.4866 12.268 27.2258 14.0072 27.2258 16.1527C27.2258 18.2981 25.4866 20.0374 23.3411 20.0374C22.3082 20.0374 21.3695 19.6343 20.6737 18.9768ZM20.4271 30.7201H16.5438V28.7777C16.5438 26.1434 18.0421 23.8591 20.2331 22.7305C20.36 23.269 20.4271 23.8305 20.4271 24.4077V30.7201ZM22.4271 30.7201V24.4077C22.4271 23.6062 22.3255 22.8284 22.1345 22.0864C22.5264 22.0162 22.9299 21.9795 23.342 21.9795C27.0966 21.9795 30.1402 25.0232 30.1402 28.7777V30.7201H22.4271Z",
+                fill: "white",
+                fillOpacity: "0.3",
+              }),
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M13.1424 14.2104C15.5561 14.2104 17.5127 12.2538 17.5127 9.84018C17.5127 7.42654 15.5561 5.46991 13.1424 5.46991C10.7288 5.46991 8.77216 7.42654 8.77216 9.84018C8.77216 12.2538 10.7288 14.2104 13.1424 14.2104ZM13.1433 17.124C9.12062 17.124 5.85956 20.385 5.85956 24.4077V30.7203H20.4271V24.4077C20.4271 20.385 17.1661 17.124 13.1433 17.124Z",
+                fill: "white",
+              }),
+            ],
+          });
+        }
+        function ln(e) {
           const { direction: t, ...n } = e;
           switch (t) {
             case "up":
-              return r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...e,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+                children: (0, r.jsx)("path", {
                   fill: "currentColor",
                   d: "M31 15.6394L18.0204 3L5 15.6394L8.60376 19.1432L18.0204 10.0076L27.4166 19.1432L31 15.6394ZM27.3962 33L18.0204 23.8644L8.62412 33L5 29.4962L18.0204 16.8568L31 29.4962L27.3962 33Z",
                 }),
-              );
+              });
             case "down":
-              return r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...e,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+                children: (0, r.jsx)("path", {
                   fill: "currentColor",
                   d: "M31 20.3606L18.0204 33L5 20.3606L8.60376 16.8568L18.0204 25.9924L27.4166 16.8568L31 20.3606ZM27.3962 3L18.0204 12.1356L8.62412 3L5 6.50379L18.0204 19.1432L31 6.50379L27.3962 3Z",
                 }),
-              );
+              });
             case "left":
-              return r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...e,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+                children: (0, r.jsx)("path", {
                   d: "M14.23 30.75L1.45996 18L14.23 5.20999L17.77 8.74999L8.53996 18L17.77 27.23L14.23 30.75ZM31.77 27.21L22.54 18L31.77 8.76999L28.23 5.20999L15.46 18L28.23 30.75L31.77 27.21Z",
                   fill: "currentColor",
                 }),
-              );
+              });
             case "right":
-              return r.createElement(
-                "svg",
-                {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 36 36",
-                  fill: "none",
-                  ...e,
-                },
-                r.createElement("path", {
+              return (0, r.jsx)("svg", {
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 36 36",
+                fill: "none",
+                ...e,
+                children: (0, r.jsx)("path", {
                   d: "M19 30.75L31.77 18L19 5.20999L15.46 8.74999L24.69 18L15.46 27.23L19 30.75ZM1.46002 27.21L10.69 18L1.46002 8.76999L5.00002 5.20999L17.77 18L5.00002 30.75L1.46002 27.21Z",
                   fill: "currentColor",
                 }),
-              );
+              });
           }
         }
-        function ln(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
-              fill: "currentColor",
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M24.7412 4H11.2592V9.18512H24.7412V4ZM4 32H32L31.9999 9.3106L27.8525 5.16322L27.8508 12.2969H8.14738V4H4V32ZM25.4742 28.6735H10.5239V16.8117H25.4742L25.4756 22.7426L25.4742 28.6735Z",
-            }),
-            r.createElement("path", {
-              fill: "currentColor",
-              d: "M13.6357 25.5617V19.9235H22.3646V25.5617H13.6357Z",
-            }),
-          );
-        }
         function un(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 36 36",
-              fill: "none",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M24.7412 4H11.2592V9.18512H24.7412V4ZM4 32H32L31.9999 9.3106L27.8525 5.16322L27.8508 12.2969H8.14738V4H4V32ZM25.4742 28.6735H10.5239V16.8117H25.4742L25.4756 22.7426L25.4742 28.6735Z",
+              }),
+              (0, r.jsx)("path", {
+                fill: "currentColor",
+                d: "M13.6357 25.5617V19.9235H22.3646V25.5617H13.6357Z",
+              }),
+            ],
+          });
+        }
+        function dn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M2 8V4H15L17 8H2ZM34 12H2V32H34V12Z",
             }),
-          );
+          });
         }
         function mn(e) {
           const { className: t } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              className: (0, i.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
-              viewBox: "0 0 36 36",
-              fill: "none",
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, s.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
+            viewBox: "0 0 36 36",
+            fill: "none",
+            children: (0, r.jsx)("path", {
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
             }),
-          );
-        }
-        function dn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M805.7,241.8h-51.3l44.3-45.3c10.1-10.1,15.1-22.8,15.1-38.2s-5-28.2-15.1-38.2c-10.1-10.1-22.8-15.1-38.2-15.1s-28.5,5-39.2,15.1l-128.8,121.7h-153.9l-129.8-121.7c-10.1-10.1-22.8-15.1-38.2-15.1s-28.2,5-38.2,15.1c-10.1,10.1-15.1,22.8-15.1,38.2s5,28.2,15.1,38.2l44.3,45.3h-51.3c-46.3,1.3-84.3,17.1-114.2,47.3-29.9,30.2-45.5,68.1-46.8,113.7v348.1c1.3,49.6,16.9,89.8,46.8,120.2,29.9,30.4,67.9,46.5,114.2,47.8h573.5c46.3-1.3,84.5-16.9,114.7-46.8,30.2-29.9,45.6-67.9,46.3-114.2v-355.2c2-45.6-11.6-83.5-40.8-113.7s-66.9-46-113.2-47.3h-.2ZM851,751c-.7,16.1-6.5,29.9-17.6,41.3-11.1,11.4-24.7,17.1-40.8,17.1H232.2c-16.1,0-29.9-5.7-41.3-17.1-11.4-11.4-17.1-25.2-17.1-41.3v-341.1c.7-16.8,6.3-30.5,17.1-41.3s24.5-16.4,41.3-17.1h560.4c16.8.7,30.5,6.3,41.3,17.1s16.4,24.5,17.1,41.3v341.1h0ZM347.9,467.2c-16.1.7-29.7,6.5-40.8,17.6-11.1,11.1-16.9,24.7-17.6,40.8v58.4c.7,16.1,6.3,29.7,17.1,40.8,10.8,11.1,24.5,16.6,41.3,16.6s30.5-5.5,41.3-16.6,16.4-24.7,17.1-40.8v-58.4c-.7-16.1-6.5-29.7-17.6-40.8-11.1-11.1-24.7-16.9-40.8-17.6h0ZM683,467.2c-16.1.7-29.7,6.5-40.8,17.6s-16.9,24.7-17.6,40.8v58.4c.7,16.1,6.3,29.7,17.1,40.8s24.5,16.6,41.3,16.6,30.5-5.5,41.3-16.6,16.4-24.7,17.1-40.8v-58.4c-.7-16.1-6.5-29.7-17.6-40.8-11.1-11.1-24.7-16.9-40.8-17.6h0Z",
-            }),
-          );
+          });
         }
         function hn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M823,229.3c-58.9-27-121-46.1-184.9-56.9-8.7,15.6-16.6,31.7-23.7,48.1-68-10.2-137.1-10.2-205.1,0-7-16.4-14.9-32.5-23.7-48.1-63.9,10.9-126.1,30.1-185,57-117,173.1-148.7,341.9-132.8,508.3h0c68.5,50.6,145.2,89.1,226.7,113.8,18.4-24.7,34.6-50.9,48.6-78.3-26.5-9.9-52.1-22.1-76.5-36.5,6.4-4.7,12.7-9.4,18.7-14.1,143.6,67.5,309.7,67.5,453.3,0,6.1,5,12.4,9.8,18.7,14.1-24.4,14.4-50,26.7-76.6,36.6,13.9,27.4,30.2,53.6,48.6,78.2,81.6-24.6,158.3-63.1,226.9-113.7h0c18.6-193-31.8-360.2-133.2-508.5h0ZM363.2,635.4c-44.2,0-80.7-40.1-80.7-89.4s35.2-89.8,80.6-89.8,81.5,40.5,80.8,89.8c-.8,49.3-35.6,89.4-80.6,89.4h-.1ZM660.8,635.4c-44.3,0-80.6-40.1-80.6-89.4s35.2-89.8,80.6-89.8,81.3,40.5,80.6,89.8c-.8,49.3-35.5,89.4-80.6,89.4Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M805.7,241.8h-51.3l44.3-45.3c10.1-10.1,15.1-22.8,15.1-38.2s-5-28.2-15.1-38.2c-10.1-10.1-22.8-15.1-38.2-15.1s-28.5,5-39.2,15.1l-128.8,121.7h-153.9l-129.8-121.7c-10.1-10.1-22.8-15.1-38.2-15.1s-28.2,5-38.2,15.1c-10.1,10.1-15.1,22.8-15.1,38.2s5,28.2,15.1,38.2l44.3,45.3h-51.3c-46.3,1.3-84.3,17.1-114.2,47.3-29.9,30.2-45.5,68.1-46.8,113.7v348.1c1.3,49.6,16.9,89.8,46.8,120.2,29.9,30.4,67.9,46.5,114.2,47.8h573.5c46.3-1.3,84.5-16.9,114.7-46.8,30.2-29.9,45.6-67.9,46.3-114.2v-355.2c2-45.6-11.6-83.5-40.8-113.7s-66.9-46-113.2-47.3h-.2ZM851,751c-.7,16.1-6.5,29.9-17.6,41.3-11.1,11.4-24.7,17.1-40.8,17.1H232.2c-16.1,0-29.9-5.7-41.3-17.1-11.4-11.4-17.1-25.2-17.1-41.3v-341.1c.7-16.8,6.3-30.5,17.1-41.3s24.5-16.4,41.3-17.1h560.4c16.8.7,30.5,6.3,41.3,17.1s16.4,24.5,17.1,41.3v341.1h0ZM347.9,467.2c-16.1.7-29.7,6.5-40.8,17.6-11.1,11.1-16.9,24.7-17.6,40.8v58.4c.7,16.1,6.3,29.7,17.1,40.8,10.8,11.1,24.5,16.6,41.3,16.6s30.5-5.5,41.3-16.6,16.4-24.7,17.1-40.8v-58.4c-.7-16.1-6.5-29.7-17.6-40.8-11.1-11.1-24.7-16.9-40.8-17.6h0ZM683,467.2c-16.1.7-29.7,6.5-40.8,17.6s-16.9,24.7-17.6,40.8v58.4c.7,16.1,6.3,29.7,17.1,40.8s24.5,16.6,41.3,16.6,30.5-5.5,41.3-16.6,16.4-24.7,17.1-40.8v-58.4c-.7-16.1-6.5-29.7-17.6-40.8-11.1-11.1-24.7-16.9-40.8-17.6h0Z",
             }),
-          );
+          });
         }
         function pn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M512,66c-246.3,0-446,199.7-446,446s144,384.7,338.3,432.9v-296.6h-92v-136.3h92v-58.7c0-151.8,68.7-222.2,217.7-222.2s77,5.5,97,11.1v123.5c-10.5-1.1-28.8-1.7-51.5-1.7-73.1,0-101.4,27.7-101.4,99.7v48.2h145.7l-25,136.3h-120.7v306.4c220.8-26.7,392-214.7,392-442.7S758.3,66,512,66Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M823,229.3c-58.9-27-121-46.1-184.9-56.9-8.7,15.6-16.6,31.7-23.7,48.1-68-10.2-137.1-10.2-205.1,0-7-16.4-14.9-32.5-23.7-48.1-63.9,10.9-126.1,30.1-185,57-117,173.1-148.7,341.9-132.8,508.3h0c68.5,50.6,145.2,89.1,226.7,113.8,18.4-24.7,34.6-50.9,48.6-78.3-26.5-9.9-52.1-22.1-76.5-36.5,6.4-4.7,12.7-9.4,18.7-14.1,143.6,67.5,309.7,67.5,453.3,0,6.1,5,12.4,9.8,18.7,14.1-24.4,14.4-50,26.7-76.6,36.6,13.9,27.4,30.2,53.6,48.6,78.2,81.6-24.6,158.3-63.1,226.9-113.7h0c18.6-193-31.8-360.2-133.2-508.5h0ZM363.2,635.4c-44.2,0-80.7-40.1-80.7-89.4s35.2-89.8,80.6-89.8,81.5,40.5,80.8,89.8c-.8,49.3-35.6,89.4-80.6,89.4h-.1ZM660.8,635.4c-44.3,0-80.6-40.1-80.6-89.4s35.2-89.8,80.6-89.8,81.3,40.5,80.6,89.8c-.8,49.3-35.5,89.4-80.6,89.4Z",
             }),
-          );
+          });
         }
         function gn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M327.6,69.9c-47.4,2.2-79.7,9.8-108,20.9-29.3,11.4-54.1,26.7-78.8,51.5-24.7,24.8-39.9,49.6-51.2,78.9-11,28.3-18.4,60.7-20.5,108.1-2.1,47.4-2.6,62.6-2.3,183.5.2,120.9.8,136.1,3.1,183.6,2.3,47.4,9.8,79.7,20.9,108,11.4,29.3,26.7,54.1,51.5,78.8,24.8,24.7,49.6,39.9,79,51.2,28.3,10.9,60.7,18.4,108.1,20.5,47.4,2.1,62.6,2.6,183.5,2.3,120.9-.2,136.1-.8,183.6-3s79.7-9.8,108-20.9c29.3-11.5,54.1-26.7,78.8-51.5,24.7-24.8,39.9-49.6,51.2-79,11-28.3,18.4-60.7,20.5-108.1,2.1-47.5,2.6-62.7,2.3-183.6-.2-120.9-.8-136.1-3-183.5s-9.8-79.7-20.9-108c-11.4-29.3-26.7-54.1-51.5-78.8-24.8-24.7-49.6-39.9-79-51.2-28.3-11-60.7-18.4-108.1-20.5s-62.6-2.6-183.6-2.3-136.1.7-183.5,3.1M332.8,874.8c-43.4-1.9-67-9.1-82.7-15.1-20.8-8-35.6-17.7-51.3-33.2-15.7-15.5-25.3-30.4-33.4-51.1-6.1-15.7-13.4-39.3-15.5-82.7-2.2-46.9-2.7-61-2.9-179.9s.2-132.9,2.3-179.9c1.9-43.4,9.1-67,15.1-82.7,8-20.8,17.7-35.6,33.2-51.3,15.5-15.6,30.4-25.3,51.1-33.4,15.7-6.1,39.2-13.4,82.6-15.5,47-2.2,61-2.7,179.9-2.9,118.9-.3,133,.2,179.9,2.3,43.4,1.9,67,9.1,82.7,15.1,20.8,8,35.6,17.6,51.3,33.2,15.6,15.6,25.3,30.3,33.4,51.2,6.1,15.6,13.4,39.2,15.5,82.6,2.2,47,2.7,61,3,179.9.2,118.8-.2,133-2.3,179.9-1.9,43.4-9.1,67-15.1,82.7-8,20.8-17.7,35.6-33.2,51.3-15.5,15.6-30.4,25.3-51.1,33.4-15.7,6.1-39.2,13.4-82.6,15.5-47,2.2-61,2.7-179.9,2.9-118.9.3-132.9-.2-179.9-2.3M695.8,274c0,29.5,24,53.4,53.5,53.3s53.4-24,53.3-53.5c0-29.5-24-53.4-53.5-53.3,0,0,0,0,0,0-29.5,0-53.4,24-53.3,53.5M283.4,512.4c.2,126.3,102.8,228.4,229,228.2,126.2-.2,228.4-102.8,228.2-229.1-.2-126.3-102.8-228.4-229.1-228.2s-228.4,102.8-228.2,229.1M363.6,512.3c-.2-82,66.2-148.6,148.1-148.7,82-.2,148.6,66.2,148.7,148.1.2,82-66.2,148.6-148.1,148.7-82,.2-148.5-66.1-148.7-148.1h0",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M512,66c-246.3,0-446,199.7-446,446s144,384.7,338.3,432.9v-296.6h-92v-136.3h92v-58.7c0-151.8,68.7-222.2,217.7-222.2s77,5.5,97,11.1v123.5c-10.5-1.1-28.8-1.7-51.5-1.7-73.1,0-101.4,27.7-101.4,99.7v48.2h145.7l-25,136.3h-120.7v306.4c220.8-26.7,392-214.7,392-442.7S758.3,66,512,66Z",
             }),
-          );
+          });
         }
         function fn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M892.3,65.9H131.7c-36.4,0-65.9,29.5-65.9,65.9v760.5c0,36.4,29.5,65.9,65.9,65.9h760.5c36.4,0,65.9-29.5,65.9-65.9V131.7c0-36.4-29.5-65.9-65.9-65.9ZM331.8,826h-134.1v-426.1h134.1v426.1ZM264.7,340.8c-42.7,0-77.3-32.5-77.3-77s34.6-77,77.3-77,77.3,32.5,77.3,77-34.6,77-77.3,77ZM826.3,826.3h-134.1v-232.7c0-68.7-29.2-89.8-66.8-89.8s-78.8,30-78.8,91.6v231h-134.1v-426.1h129v59h1.7c13-26.2,58.3-71,127.5-71s155.7,44.4,155.7,174.6v263.6Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M327.6,69.9c-47.4,2.2-79.7,9.8-108,20.9-29.3,11.4-54.1,26.7-78.8,51.5-24.7,24.8-39.9,49.6-51.2,78.9-11,28.3-18.4,60.7-20.5,108.1-2.1,47.4-2.6,62.6-2.3,183.5.2,120.9.8,136.1,3.1,183.6,2.3,47.4,9.8,79.7,20.9,108,11.4,29.3,26.7,54.1,51.5,78.8,24.8,24.7,49.6,39.9,79,51.2,28.3,10.9,60.7,18.4,108.1,20.5,47.4,2.1,62.6,2.6,183.5,2.3,120.9-.2,136.1-.8,183.6-3s79.7-9.8,108-20.9c29.3-11.5,54.1-26.7,78.8-51.5,24.7-24.8,39.9-49.6,51.2-79,11-28.3,18.4-60.7,20.5-108.1,2.1-47.5,2.6-62.7,2.3-183.6-.2-120.9-.8-136.1-3-183.5s-9.8-79.7-20.9-108c-11.4-29.3-26.7-54.1-51.5-78.8-24.8-24.7-49.6-39.9-79-51.2-28.3-11-60.7-18.4-108.1-20.5s-62.6-2.6-183.6-2.3-136.1.7-183.5,3.1M332.8,874.8c-43.4-1.9-67-9.1-82.7-15.1-20.8-8-35.6-17.7-51.3-33.2-15.7-15.5-25.3-30.4-33.4-51.1-6.1-15.7-13.4-39.3-15.5-82.7-2.2-46.9-2.7-61-2.9-179.9s.2-132.9,2.3-179.9c1.9-43.4,9.1-67,15.1-82.7,8-20.8,17.7-35.6,33.2-51.3,15.5-15.6,30.4-25.3,51.1-33.4,15.7-6.1,39.2-13.4,82.6-15.5,47-2.2,61-2.7,179.9-2.9,118.9-.3,133,.2,179.9,2.3,43.4,1.9,67,9.1,82.7,15.1,20.8,8,35.6,17.6,51.3,33.2,15.6,15.6,25.3,30.3,33.4,51.2,6.1,15.6,13.4,39.2,15.5,82.6,2.2,47,2.7,61,3,179.9.2,118.8-.2,133-2.3,179.9-1.9,43.4-9.1,67-15.1,82.7-8,20.8-17.7,35.6-33.2,51.3-15.5,15.6-30.4,25.3-51.1,33.4-15.7,6.1-39.2,13.4-82.6,15.5-47,2.2-61,2.7-179.9,2.9-118.9.3-132.9-.2-179.9-2.3M695.8,274c0,29.5,24,53.4,53.5,53.3s53.4-24,53.3-53.5c0-29.5-24-53.4-53.5-53.3,0,0,0,0,0,0-29.5,0-53.4,24-53.3,53.5M283.4,512.4c.2,126.3,102.8,228.4,229,228.2,126.2-.2,228.4-102.8,228.2-229.1-.2-126.3-102.8-228.4-229.1-228.2s-228.4,102.8-228.2,229.1M363.6,512.3c-.2-82,66.2-148.6,148.1-148.7,82-.2,148.6,66.2,148.7,148.1.2,82-66.2,148.6-148.1,148.7-82,.2-148.5-66.1-148.7-148.1h0",
             }),
-          );
+          });
         }
         function _n(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M861.6,624.9c-8-25.6-18.8-55.5-29.8-84.2h0l-40.2-100.3c0-1.2.5-20.9.5-31.1,0-171.5-81-343.9-280.1-343.9S231.9,237.8,231.9,409.3s.5,29.9.5,31.1h0l-40.2,100.3h0c-11,28.7-21.9,58.6-29.8,84.2-38,122.2-25.7,172.8-16.3,173.9,20.1,2.4,78.2-92,78.2-92,0,54.7,28.2,126,89.1,177.6-22.8,7-50.7,17.8-68.6,31.1-16.1,11.9-14.1,24-11.2,28.9,12.8,21.5,218.9,13.8,278.4,7.1h0c59.5,6.7,265.7,14.5,278.4-7.1,2.9-4.9,4.9-17-11.2-28.9-18-13.3-45.9-24.1-68.7-31.1,60.9-51.5,89-122.9,89-177.5,0,0,58.1,94.4,78.2,92,9.4-1.1,21.7-51.7-16.3-173.9h.2Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M892.3,65.9H131.7c-36.4,0-65.9,29.5-65.9,65.9v760.5c0,36.4,29.5,65.9,65.9,65.9h760.5c36.4,0,65.9-29.5,65.9-65.9V131.7c0-36.4-29.5-65.9-65.9-65.9ZM331.8,826h-134.1v-426.1h134.1v426.1ZM264.7,340.8c-42.7,0-77.3-32.5-77.3-77s34.6-77,77.3-77,77.3,32.5,77.3,77-34.6,77-77.3,77ZM826.3,826.3h-134.1v-232.7c0-68.7-29.2-89.8-66.8-89.8s-78.8,30-78.8,91.6v231h-134.1v-426.1h129v59h1.7c13-26.2,58.3-71,127.5-71s155.7,44.4,155.7,174.6v263.6Z",
             }),
-          );
+          });
         }
         function wn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M829.1,381c-29.9,0-57.5,10.1-79.5,27.1-60-37.1-135.6-60.4-218.5-63.5v-.3c0-55.5,41.3-101.6,94.7-109.1,9.7,41.1,46.6,71.8,90.7,71.8s93.2-41.7,93.2-93.2-41.7-93.2-93.2-93.2-82.6,31.9-91.3,74.3c-75.4,8.1-134.3,72-134.3,149.5v.5c-82,3.5-156.8,26.8-216.3,63.6-22.1-17.1-49.8-27.3-79.8-27.3-72.2,0-130.6,58.5-130.6,130.6s30.8,97.5,75.2,118.3c4.3,151.6,169.6,273.6,372.8,273.6s368.7-122.1,372.8-273.9c44.1-21,74.6-65.9,74.6-118s-58.5-130.6-130.6-130.6h0Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M861.6,624.9c-8-25.6-18.8-55.5-29.8-84.2h0l-40.2-100.3c0-1.2.5-20.9.5-31.1,0-171.5-81-343.9-280.1-343.9S231.9,237.8,231.9,409.3s.5,29.9.5,31.1h0l-40.2,100.3h0c-11,28.7-21.9,58.6-29.8,84.2-38,122.2-25.7,172.8-16.3,173.9,20.1,2.4,78.2-92,78.2-92,0,54.7,28.2,126,89.1,177.6-22.8,7-50.7,17.8-68.6,31.1-16.1,11.9-14.1,24-11.2,28.9,12.8,21.5,218.9,13.8,278.4,7.1h0c59.5,6.7,265.7,14.5,278.4-7.1,2.9-4.9,4.9-17-11.2-28.9-18-13.3-45.9-24.1-68.7-31.1,60.9-51.5,89-122.9,89-177.5,0,0,58.1,94.4,78.2,92,9.4-1.1,21.7-51.7-16.3-173.9h.2Z",
             }),
-          );
+          });
         }
         function bn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M512,66c-246.3,0-446,199.7-446,446s199.7,446,446,446,446-199.7,446-446S758.3,66,512,66ZM718.7,369.3c-6.7,70.5-35.8,241.7-50.5,320.7-6.3,33.4-18.6,44.6-30.5,45.7-25.9,2.4-45.6-17.1-70.7-33.6-39.3-25.7-61.4-41.7-99.5-66.9-44-29-15.5-45,9.6-71,6.6-6.8,120.7-110.6,122.9-120,.3-1.2.5-5.6-2.1-7.9-2.6-2.3-6.5-1.5-9.2-.9-3.9.9-66.6,42.3-188.1,124.3-17.8,12.2-33.9,18.2-48.4,17.9-15.9-.3-46.6-9-69.3-16.4-27.9-9.1-50.1-13.9-48.2-29.3,1-8,12.1-16.2,33.2-24.6,130-56.6,216.7-94,260.1-112,123.9-51.5,149.6-60.5,166.4-60.8,3.7,0,11.9.8,17.3,5.2,4.5,3.7,5.8,8.6,6.3,12.1.6,3.5,1.3,11.4.7,17.6Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M829.1,381c-29.9,0-57.5,10.1-79.5,27.1-60-37.1-135.6-60.4-218.5-63.5v-.3c0-55.5,41.3-101.6,94.7-109.1,9.7,41.1,46.6,71.8,90.7,71.8s93.2-41.7,93.2-93.2-41.7-93.2-93.2-93.2-82.6,31.9-91.3,74.3c-75.4,8.1-134.3,72-134.3,149.5v.5c-82,3.5-156.8,26.8-216.3,63.6-22.1-17.1-49.8-27.3-79.8-27.3-72.2,0-130.6,58.5-130.6,130.6s30.8,97.5,75.2,118.3c4.3,151.6,169.6,273.6,372.8,273.6s368.7-122.1,372.8-273.9c44.1-21,74.6-65.9,74.6-118s-58.5-130.6-130.6-130.6h0Z",
             }),
-          );
+          });
         }
         function Cn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M534.1,714.7c0-74.7,0-149.3,0-224,0-16.4,0-16.4,16.4-16.4,24.6,0,49.2,0,73.9,0,12.4,0,13.3-.7,13.3-14,.1-41.7,0-83.5,0-125.2,0-84.8.1-169.7,0-254.5,0-6.6,1.8-9,8.6-8.9,27.6.3,55.1.1,82.7,0,6.2,0,9.1,1.8,9,8.8-.3,26.5,0,53,0,79.5,0,13.3.4,13.9,14,13.9,31.8.2,63.7.1,95.5.1,34.5,0,69,0,103.6-.3,6.5,0,8.4,2.1,8.3,8.3-.3,27.3-.6,54.6-.3,81.9,0,7.8-2.5,10-10.1,10-61.5-.2-123.1,0-184.6,0-5.9,0-11.8.4-17.7,0-6.8-.4-8.8,2.6-8.8,9.1,0,42.3,0,84.6-.1,126.8,0,17.7-.1,35.3.2,53,.2,10.1,2.2,11.7,12,11.7,64.2,0,128.4-.1,192.7-.3,15.4,0,15.5-.1,15.5,15.2,0,107.8.5,215.7-.3,323.5-.2,30-11.4,57.2-29.7,81.3-15.9,20.9-35.7,36.7-59.9,46.8-16.1,6.7-32.9,11-50.6,11-90.4,0-180.9,0-271.3.1-11.5,0-11.9,0-12-11.7-.3-36.4-.2-72.8-.2-109.2,0-38.8,0-77.6,0-116.4h0ZM634.5,712.9c0,42.8.1,85.6-.1,128.4,0,7.7,3,10.6,10.4,10.6,54.8-.1,109.7,0,164.5-.3,6.8,0,14.2-1,20.3-3.7,19-8.4,27.8-23.6,27.8-44.6-.2-72.8,0-145.5,0-218.3,0-9.7-.5-10.3-10.6-10.3-66.9-.1-133.8-.2-200.7-.3-9.9,0-11.6,1.7-11.6,11.7,0,42.3,0,84.5,0,126.8Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M512,66c-246.3,0-446,199.7-446,446s199.7,446,446,446,446-199.7,446-446S758.3,66,512,66ZM718.7,369.3c-6.7,70.5-35.8,241.7-50.5,320.7-6.3,33.4-18.6,44.6-30.5,45.7-25.9,2.4-45.6-17.1-70.7-33.6-39.3-25.7-61.4-41.7-99.5-66.9-44-29-15.5-45,9.6-71,6.6-6.8,120.7-110.6,122.9-120,.3-1.2.5-5.6-2.1-7.9-2.6-2.3-6.5-1.5-9.2-.9-3.9.9-66.6,42.3-188.1,124.3-17.8,12.2-33.9,18.2-48.4,17.9-15.9-.3-46.6-9-69.3-16.4-27.9-9.1-50.1-13.9-48.2-29.3,1-8,12.1-16.2,33.2-24.6,130-56.6,216.7-94,260.1-112,123.9-51.5,149.6-60.5,166.4-60.8,3.7,0,11.9.8,17.3,5.2,4.5,3.7,5.8,8.6,6.3,12.1.6,3.5,1.3,11.4.7,17.6Z",
             }),
-            r.createElement("path", {
-              d: "M488.8,390.4c0,101.2,0,202.3,0,303.5,0,16.5-.1,16.4-16.4,16.4-24.4,0-48.7,0-73.1.1-11,0-11.2,0-11.2-11,0-168.9,0-337.7,0-506.6,0-25.3,1.5-20.7-21.1-20.8-50.3-.2-100.6-.4-150.9.3-9,.1-18.3,3.1-26.7,6.5-17.1,6.8-22.3,21.8-23.6,38.7-.3,4.5-.1,9.1-.1,13.6,0,151.2,0,302.4,0,453.6,0,5.9-1.1,11.8-.8,17.6.4,7.2-3.4,8.5-9.4,8.4-16.9-.2-33.7-.2-50.6-.1-10.4,0-20.9,0-31.3.4-6,.2-8.4-1.7-8.4-8.3.1-65.8-.1-131.7-.2-197.5,0-92.3.3-184.6-.3-277-.2-30.8,5.4-59.6,21.6-85.8,24-38.8,58.9-62,104.2-68.5,12.9-1.8,26.1-2,39.2-2,82.2-.2,164.3-.1,246.5-.1,11.3,0,12.6,1,12.6,10.3,0,102.8,0,205.5,0,308.3Z",
-            }),
-            r.createElement("path", {
-              d: "M328.1,480.5c0,76-.5,152,.2,228,.4,37.7,15.9,69.6,42.1,96.8,12.2,12.7,26.1,22.9,41.7,30.6,18.8,9.3,38.7,14.9,60.1,14.8,19.8-.1,17.9-2,17.9,18.3,0,24.4-.4,48.7-.1,73.1,0,7.5-2.9,9.7-10,9.6-45.4-.8-88.1-10.6-127.7-34.1-26.1-15.5-48.8-34.3-68.3-57.4-5.7-6.8-6.8-6.7-12.7.4-30,36.3-67.3,62.6-111.5,78.1-27.5,9.6-56.2,14.7-85.8,13.7-8.8-.3-9.2-5.8-9.2-11.8,0-24.6,0-49.2.2-73.9.1-15.3.3-15.2,15.3-15.3,46.2-.4,83.7-19.2,112.9-54.6,22.6-27.3,33.8-58.9,33.7-94.5-.1-63.7.1-127.4.2-191.1.2-88.1.5-176.1.4-264.2,0-7.9,2.6-10.2,10.1-10.1,26.8.3,53.5.3,80.3,0,7.2,0,9.4,2.7,9.3,9.4-.2,22.5,0,45,0,67.4,0,55.7.6,111.3.6,167,.3,0-.1,0,.1,0Z",
-            }),
-          );
+          });
         }
         function vn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M785.4,244.2c-60.7-39.4-97.3-106.9-97.4-179.2h-153.7l-.3,616c-2.7,71.3-62.7,126.8-134,124.1-71.3-2.7-126.8-62.7-124.1-134,2.7-69.4,59.7-124.2,129.1-124.2,12.9,0,25.8,2.1,38.1,6v-156.9c-12.6-1.8-25.4-2.7-38.1-2.8-156,0-282.9,126.9-282.9,282.9.2,156.2,126.8,282.7,283,282.9,156,0,282.9-126.9,282.9-282.9v-312.3c62.3,44.8,137.1,68.9,213.8,68.8v-153.7c-41.4,0-81.8-12-116.4-34.6Z",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                d: "M534.1,714.7c0-74.7,0-149.3,0-224,0-16.4,0-16.4,16.4-16.4,24.6,0,49.2,0,73.9,0,12.4,0,13.3-.7,13.3-14,.1-41.7,0-83.5,0-125.2,0-84.8.1-169.7,0-254.5,0-6.6,1.8-9,8.6-8.9,27.6.3,55.1.1,82.7,0,6.2,0,9.1,1.8,9,8.8-.3,26.5,0,53,0,79.5,0,13.3.4,13.9,14,13.9,31.8.2,63.7.1,95.5.1,34.5,0,69,0,103.6-.3,6.5,0,8.4,2.1,8.3,8.3-.3,27.3-.6,54.6-.3,81.9,0,7.8-2.5,10-10.1,10-61.5-.2-123.1,0-184.6,0-5.9,0-11.8.4-17.7,0-6.8-.4-8.8,2.6-8.8,9.1,0,42.3,0,84.6-.1,126.8,0,17.7-.1,35.3.2,53,.2,10.1,2.2,11.7,12,11.7,64.2,0,128.4-.1,192.7-.3,15.4,0,15.5-.1,15.5,15.2,0,107.8.5,215.7-.3,323.5-.2,30-11.4,57.2-29.7,81.3-15.9,20.9-35.7,36.7-59.9,46.8-16.1,6.7-32.9,11-50.6,11-90.4,0-180.9,0-271.3.1-11.5,0-11.9,0-12-11.7-.3-36.4-.2-72.8-.2-109.2,0-38.8,0-77.6,0-116.4h0ZM634.5,712.9c0,42.8.1,85.6-.1,128.4,0,7.7,3,10.6,10.4,10.6,54.8-.1,109.7,0,164.5-.3,6.8,0,14.2-1,20.3-3.7,19-8.4,27.8-23.6,27.8-44.6-.2-72.8,0-145.5,0-218.3,0-9.7-.5-10.3-10.6-10.3-66.9-.1-133.8-.2-200.7-.3-9.9,0-11.6,1.7-11.6,11.7,0,42.3,0,84.5,0,126.8Z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M488.8,390.4c0,101.2,0,202.3,0,303.5,0,16.5-.1,16.4-16.4,16.4-24.4,0-48.7,0-73.1.1-11,0-11.2,0-11.2-11,0-168.9,0-337.7,0-506.6,0-25.3,1.5-20.7-21.1-20.8-50.3-.2-100.6-.4-150.9.3-9,.1-18.3,3.1-26.7,6.5-17.1,6.8-22.3,21.8-23.6,38.7-.3,4.5-.1,9.1-.1,13.6,0,151.2,0,302.4,0,453.6,0,5.9-1.1,11.8-.8,17.6.4,7.2-3.4,8.5-9.4,8.4-16.9-.2-33.7-.2-50.6-.1-10.4,0-20.9,0-31.3.4-6,.2-8.4-1.7-8.4-8.3.1-65.8-.1-131.7-.2-197.5,0-92.3.3-184.6-.3-277-.2-30.8,5.4-59.6,21.6-85.8,24-38.8,58.9-62,104.2-68.5,12.9-1.8,26.1-2,39.2-2,82.2-.2,164.3-.1,246.5-.1,11.3,0,12.6,1,12.6,10.3,0,102.8,0,205.5,0,308.3Z",
+              }),
+              (0, r.jsx)("path", {
+                d: "M328.1,480.5c0,76-.5,152,.2,228,.4,37.7,15.9,69.6,42.1,96.8,12.2,12.7,26.1,22.9,41.7,30.6,18.8,9.3,38.7,14.9,60.1,14.8,19.8-.1,17.9-2,17.9,18.3,0,24.4-.4,48.7-.1,73.1,0,7.5-2.9,9.7-10,9.6-45.4-.8-88.1-10.6-127.7-34.1-26.1-15.5-48.8-34.3-68.3-57.4-5.7-6.8-6.8-6.7-12.7.4-30,36.3-67.3,62.6-111.5,78.1-27.5,9.6-56.2,14.7-85.8,13.7-8.8-.3-9.2-5.8-9.2-11.8,0-24.6,0-49.2.2-73.9.1-15.3.3-15.2,15.3-15.3,46.2-.4,83.7-19.2,112.9-54.6,22.6-27.3,33.8-58.9,33.7-94.5-.1-63.7.1-127.4.2-191.1.2-88.1.5-176.1.4-264.2,0-7.9,2.6-10.2,10.1-10.1,26.8.3,53.5.3,80.3,0,7.2,0,9.4,2.7,9.3,9.4-.2,22.5,0,45,0,67.4,0,55.7.6,111.3.6,167,.3,0-.1,0,.1,0Z",
+              }),
+            ],
+          });
         }
         function Mn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M615.8,959c-134.7,0-234.6-69-234.6-234.6v-264.9h-122.3v-143.7c134.7-34.8,190.8-150.4,197-250.9h139.7v227.8h162.7v166.7h-162.7v230.7c0,69,34.8,93.2,90.4,93.2h79.1v175.7h-149.3Z",
-            }),
-          );
-        }
-        function Sn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M288.5,65l-159.6,159.6v574.7h191.6v159.6l159.6-159.6h127.7l287.4-287.4V65H288.5ZM831.3,480.1l-127.7,127.7h-127.7l-111.7,111.7v-111.7h-143.7V128.9h510.9v351.2Z",
-            }),
-            r.createElement("rect", {
-              x: "671.6",
-              y: "240.6",
-              width: "63.9",
-              height: "191.6",
-            }),
-            r.createElement("rect", {
-              x: "496",
-              y: "240.6",
-              width: "63.9",
-              height: "191.6",
-            }),
-          );
-        }
-        function yn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M595.2,443.5L920.9,65h-77.2l-282.8,328.7L335.1,65H74.6l341.5,497L74.6,959h77.2l298.6-347.1,238.5,347.1h260.5l-354.2-515.5h0ZM489.5,566.4l-34.6-49.5L179.6,123.1h118.5l222.2,317.8,34.6,49.5,288.8,413.1h-118.5l-235.7-337.1h0Z",
-            }),
-          );
-        }
-        function En(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M896.1,127.9c-62.8-62.9-164-62.9-366.3-62.9h-35.8c-202.3,0-303.4,0-366.3,62.9-62.9,62.8-62.9,164-62.9,366.3v35.8c0,202.3,0,303.4,62.9,366.3,62.8,62.9,164,62.9,366.3,62.9h35.8c202.3,0,303.4,0,366.3-62.9,62.9-62.8,62.9-164,62.9-366.3v-35.8c0-202.3,0-303.4-62.9-366.3ZM704.8,716.9c-22.3-70.8-77.2-125.6-150.6-133v133h-11.7c-201.7,0-324.1-139.9-328.9-372.5h102.2c3.2,170.8,80.9,243.2,140.5,258.1v-258.1h97.9v147.4c57.5-6.4,117.6-73.4,137.8-147.4h96.4c-15.5,91-80.9,158-127.2,185.7,46.3,22.4,120.8,80.9,149.6,186.8h-105.9Z",
-            }),
-          );
-        }
-        function Bn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M496.2,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M280.9,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M388.6,147.8c-178.9,0-323.8,121.4-323.8,271.2s43.7,155.4,111.7,204.8c5.7,4,8.9,10.5,8.9,17.8s-.8,4.9-.8,7.3c-5.7,20.2-13.8,53.4-14.6,55-.8,2.4-1.6,4.9-1.6,8.1,0,5.7,4.9,10.5,10.5,10.5s4-.8,6.5-1.6l70.4-41.3c5.7-3.2,11.3-4.9,17-4.9s6.5.8,9.7,1.6c33.2,9.7,68.8,14.6,105.2,14.6s12.1,0,17.8-.8c-7.3-21-10.5-43.7-10.5-66.4,0-136.8,131.9-247.7,294.6-247.7s7.3,0,13,.8c-24.3-130.3-153-229.1-314.1-229.1",
-            }),
-            r.createElement("path", {
-              d: "M779.5,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M599.8,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M866.1,794.5c56.7-41.3,93.1-102.8,93.1-170.8,0-124.7-120.6-225.8-269.5-225.8s-269.5,101.2-269.5,225.8,120.6,225.8,269.5,225.8,60.7-4,88.2-12.1c2.4-.8,4.9-.8,8.1-.8,4.9,0,9.7,1.6,14.6,4l59.1,34c1.6.8,3.2,1.6,4.9,1.6,4.9,0,8.9-4,8.9-8.9s-.8-4.9-1.6-6.5c0-1.6-7.3-28.3-12.1-45.3-.8-1.6-.8-4-.8-5.7-.8-6.5,2.4-12.1,7.3-15.4",
-            }),
-          );
-        }
-        function Ln(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M455.3,544.1c-70.6-18.3-150.3,16.8-181,79-31.2,63.4-1,133.8,70.3,156.8,73.8,23.8,160.9-12.6,191.1-81.2,29.7-67-7.5-135.8-80.4-154.6h0ZM401.4,706c-14.3,22.9-45.1,32.9-68.2,22.4-22.8-10.4-29.5-37-15.1-59.3,14.2-22.2,43.8-32.1,66.8-22.5,23.2,9.8,30.7,36.3,16.6,59.4h0ZM448.6,645.4c-5.2,8.9-16.7,13.2-25.6,9.4-8.8-3.6-11.6-13.6-6.6-22.3,5.2-8.7,16.2-12.9,25-9.4,9,3.3,12.2,13.4,7.3,22.3ZM795.3,441c15.5,5,32.1-3.5,37.2-19,12.2-37.9,4.6-81.3-24-113-27.6-30.6-69.5-44.2-109.9-35.6-15.9,3.4-26.1,19-22.7,35,0,0,0,0,0,0,3.4,15.9,19,26,34.9,22.6,0,0,0,0,.1,0,19.1-4,39.7,1.9,53.8,17.3,13.5,15,18,36.1,11.7,55.2-5.1,15.5,3.3,32.1,18.7,37.3,0,0,0,0,.1,0ZM898.7,227.5c-58.8-65.2-145.5-90.1-225.6-73.1-18.5,3.9-30.3,22-26.4,40.5,0,0,0,.1,0,.2,3.9,18.5,22.2,30.4,40.7,26.4,0,0,0,0,0,0,57-12.1,118.6,5.6,160.5,51.9,41.8,46.3,53.1,109.6,35.2,164.9-5.8,18,4,37.3,22.1,43.2,18,5.8,37.3-4,43.1-22h0c25-78.3,9.2-167.1-49.6-232.2h0ZM736.9,498.5c-12.6-3.7-21.2-6.3-14.6-22.9,14.3-36,15.8-67.1.3-89.1-29-41.6-108.6-39.3-199.8-1.1,0,0-28.6,12.5-21.4-10.2,14-45.1,11.9-82.8-10-104.7-49.4-49.5-181,1.9-293.8,114.6-84.4,84.5-133.4,174-133.4,251.5,0,148.1,189.9,238.2,375.7,238.2s405.6-141.5,405.6-253.9-57.2-106.3-108.6-122.3ZM440.5,821.7c-148.2,14.6-276.2-52.3-285.9-149.8-9.6-97.3,102.8-188.1,251-202.7,148.2-14.7,276.2,52.3,285.9,149.7,9.5,97.3-102.8,188.1-251,202.8Z",
-            }),
-          );
-        }
-        function xn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M941.3,294.9c-10.3-38.8-40.7-69.4-79.2-79.7-69.9-18.8-350.1-18.8-350.1-18.8,0,0-280.2,0-350.1,18.8-38.6,10.4-68.9,40.9-79.2,79.7-18.7,70.3-18.7,217.1-18.7,217.1,0,0,0,146.7,18.7,217.1,10.3,38.8,40.7,69.4,79.2,79.7,69.9,18.8,350.1,18.8,350.1,18.8,0,0,280.2,0,350.1-18.8,38.6-10.4,68.9-40.9,79.2-79.7,18.7-70.3,18.7-217.1,18.7-217.1,0,0,0-146.7-18.7-217.1ZM420.4,645.2v-266.4l234.2,133.2-234.2,133.2Z",
-            }),
-          );
-        }
-        function kn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
               d: "M785.4,244.2c-60.7-39.4-97.3-106.9-97.4-179.2h-153.7l-.3,616c-2.7,71.3-62.7,126.8-134,124.1-71.3-2.7-126.8-62.7-124.1-134,2.7-69.4,59.7-124.2,129.1-124.2,12.9,0,25.8,2.1,38.1,6v-156.9c-12.6-1.8-25.4-2.7-38.1-2.8-156,0-282.9,126.9-282.9,282.9.2,156.2,126.8,282.7,283,282.9,156,0,282.9-126.9,282.9-282.9v-312.3c62.3,44.8,137.1,68.9,213.8,68.8v-153.7c-41.4,0-81.8-12-116.4-34.6Z",
             }),
-          );
+          });
+        }
+        function Sn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M615.8,959c-134.7,0-234.6-69-234.6-234.6v-264.9h-122.3v-143.7c134.7-34.8,190.8-150.4,197-250.9h139.7v227.8h162.7v166.7h-162.7v230.7c0,69,34.8,93.2,90.4,93.2h79.1v175.7h-149.3Z",
+            }),
+          });
+        }
+        function xn(e) {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                d: "M288.5,65l-159.6,159.6v574.7h191.6v159.6l159.6-159.6h127.7l287.4-287.4V65H288.5ZM831.3,480.1l-127.7,127.7h-127.7l-111.7,111.7v-111.7h-143.7V128.9h510.9v351.2Z",
+              }),
+              (0, r.jsx)("rect", {
+                x: "671.6",
+                y: "240.6",
+                width: "63.9",
+                height: "191.6",
+              }),
+              (0, r.jsx)("rect", {
+                x: "496",
+                y: "240.6",
+                width: "63.9",
+                height: "191.6",
+              }),
+            ],
+          });
+        }
+        function yn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M595.2,443.5L920.9,65h-77.2l-282.8,328.7L335.1,65H74.6l341.5,497L74.6,959h77.2l298.6-347.1,238.5,347.1h260.5l-354.2-515.5h0ZM489.5,566.4l-34.6-49.5L179.6,123.1h118.5l222.2,317.8,34.6,49.5,288.8,413.1h-118.5l-235.7-337.1h0Z",
+            }),
+          });
+        }
+        function Bn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M896.1,127.9c-62.8-62.9-164-62.9-366.3-62.9h-35.8c-202.3,0-303.4,0-366.3,62.9-62.9,62.8-62.9,164-62.9,366.3v35.8c0,202.3,0,303.4,62.9,366.3,62.8,62.9,164,62.9,366.3,62.9h35.8c202.3,0,303.4,0,366.3-62.9,62.9-62.8,62.9-164,62.9-366.3v-35.8c0-202.3,0-303.4-62.9-366.3ZM704.8,716.9c-22.3-70.8-77.2-125.6-150.6-133v133h-11.7c-201.7,0-324.1-139.9-328.9-372.5h102.2c3.2,170.8,80.9,243.2,140.5,258.1v-258.1h97.9v147.4c57.5-6.4,117.6-73.4,137.8-147.4h96.4c-15.5,91-80.9,158-127.2,185.7,46.3,22.4,120.8,80.9,149.6,186.8h-105.9Z",
+            }),
+          });
+        }
+        function Ln(e) {
+          return (0, r.jsxs)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                d: "M496.2,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M280.9,371.2c-21,0-38-17-38-38.9s17-38.9,38-38.9,38,17,38,38.9-17,38.9-38,38.9M388.6,147.8c-178.9,0-323.8,121.4-323.8,271.2s43.7,155.4,111.7,204.8c5.7,4,8.9,10.5,8.9,17.8s-.8,4.9-.8,7.3c-5.7,20.2-13.8,53.4-14.6,55-.8,2.4-1.6,4.9-1.6,8.1,0,5.7,4.9,10.5,10.5,10.5s4-.8,6.5-1.6l70.4-41.3c5.7-3.2,11.3-4.9,17-4.9s6.5.8,9.7,1.6c33.2,9.7,68.8,14.6,105.2,14.6s12.1,0,17.8-.8c-7.3-21-10.5-43.7-10.5-66.4,0-136.8,131.9-247.7,294.6-247.7s7.3,0,13,.8c-24.3-130.3-153-229.1-314.1-229.1",
+              }),
+              (0, r.jsx)("path", {
+                d: "M779.5,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M599.8,584.8c-18.6,0-34-15.4-34-34s15.4-34,34-34,34,15.4,34,34-15.4,34-34,34M866.1,794.5c56.7-41.3,93.1-102.8,93.1-170.8,0-124.7-120.6-225.8-269.5-225.8s-269.5,101.2-269.5,225.8,120.6,225.8,269.5,225.8,60.7-4,88.2-12.1c2.4-.8,4.9-.8,8.1-.8,4.9,0,9.7,1.6,14.6,4l59.1,34c1.6.8,3.2,1.6,4.9,1.6,4.9,0,8.9-4,8.9-8.9s-.8-4.9-1.6-6.5c0-1.6-7.3-28.3-12.1-45.3-.8-1.6-.8-4-.8-5.7-.8-6.5,2.4-12.1,7.3-15.4",
+              }),
+            ],
+          });
+        }
+        function kn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M455.3,544.1c-70.6-18.3-150.3,16.8-181,79-31.2,63.4-1,133.8,70.3,156.8,73.8,23.8,160.9-12.6,191.1-81.2,29.7-67-7.5-135.8-80.4-154.6h0ZM401.4,706c-14.3,22.9-45.1,32.9-68.2,22.4-22.8-10.4-29.5-37-15.1-59.3,14.2-22.2,43.8-32.1,66.8-22.5,23.2,9.8,30.7,36.3,16.6,59.4h0ZM448.6,645.4c-5.2,8.9-16.7,13.2-25.6,9.4-8.8-3.6-11.6-13.6-6.6-22.3,5.2-8.7,16.2-12.9,25-9.4,9,3.3,12.2,13.4,7.3,22.3ZM795.3,441c15.5,5,32.1-3.5,37.2-19,12.2-37.9,4.6-81.3-24-113-27.6-30.6-69.5-44.2-109.9-35.6-15.9,3.4-26.1,19-22.7,35,0,0,0,0,0,0,3.4,15.9,19,26,34.9,22.6,0,0,0,0,.1,0,19.1-4,39.7,1.9,53.8,17.3,13.5,15,18,36.1,11.7,55.2-5.1,15.5,3.3,32.1,18.7,37.3,0,0,0,0,.1,0ZM898.7,227.5c-58.8-65.2-145.5-90.1-225.6-73.1-18.5,3.9-30.3,22-26.4,40.5,0,0,0,.1,0,.2,3.9,18.5,22.2,30.4,40.7,26.4,0,0,0,0,0,0,57-12.1,118.6,5.6,160.5,51.9,41.8,46.3,53.1,109.6,35.2,164.9-5.8,18,4,37.3,22.1,43.2,18,5.8,37.3-4,43.1-22h0c25-78.3,9.2-167.1-49.6-232.2h0ZM736.9,498.5c-12.6-3.7-21.2-6.3-14.6-22.9,14.3-36,15.8-67.1.3-89.1-29-41.6-108.6-39.3-199.8-1.1,0,0-28.6,12.5-21.4-10.2,14-45.1,11.9-82.8-10-104.7-49.4-49.5-181,1.9-293.8,114.6-84.4,84.5-133.4,174-133.4,251.5,0,148.1,189.9,238.2,375.7,238.2s405.6-141.5,405.6-253.9-57.2-106.3-108.6-122.3ZM440.5,821.7c-148.2,14.6-276.2-52.3-285.9-149.8-9.6-97.3,102.8-188.1,251-202.7,148.2-14.7,276.2,52.3,285.9,149.7,9.5,97.3-102.8,188.1-251,202.8Z",
+            }),
+          });
         }
         function In(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M258.2,170.6c102.7,77.1,213.2,233.5,253.8,317.4,40.6-83.9,151.1-240.3,253.8-317.4,74.1-55.6,194.2-98.7,194.2,38.3s-15.7,229.9-24.9,262.7c-32,114.3-148.5,143.4-252.2,125.8,181.2,30.8,227.3,133,127.8,235.2-189.1,194-271.7-48.7-292.9-110.9-3.9-11.4-5.7-16.7-5.7-12.2,0-4.5-1.8.8-5.7,12.2-21.2,62.2-103.9,304.9-292.9,110.9-99.6-102.2-53.5-204.3,127.8-235.2-103.7,17.6-220.2-11.5-252.2-125.8-9.2-32.9-24.9-235.4-24.9-262.7,0-137,120.1-93.9,194.2-38.3h0Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M941.3,294.9c-10.3-38.8-40.7-69.4-79.2-79.7-69.9-18.8-350.1-18.8-350.1-18.8,0,0-280.2,0-350.1,18.8-38.6,10.4-68.9,40.9-79.2,79.7-18.7,70.3-18.7,217.1-18.7,217.1,0,0,0,146.7,18.7,217.1,10.3,38.8,40.7,69.4,79.2,79.7,69.9,18.8,350.1,18.8,350.1,18.8,0,0,280.2,0,350.1-18.8,38.6-10.4,68.9-40.9,79.2-79.7,18.7-70.3,18.7-217.1,18.7-217.1,0,0,0-146.7-18.7-217.1ZM420.4,645.2v-266.4l234.2,133.2-234.2,133.2Z",
             }),
-          );
+          });
         }
         function Rn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
-              d: "M929.4,264.8c-13-95.3-96.9-170.4-196.5-185-16.8-2.5-80.4-11.4-227.9-11.4h-1.1c-147.5,0-179.1,9-195.9,11.4-96.8,14.2-185.2,81.6-206.6,178.1-10.3,47.5-11.4,100.2-9.5,148.5,2.7,69.3,3.3,138.4,9.6,207.4,4.4,45.8,12.1,91.3,23,136,20.4,82.7,102.9,151.4,183.7,179.5,86.6,29.3,179.6,34.1,268.8,14,9.8-2.3,19.5-4.9,29.1-7.9,21.6-6.8,47-14.4,65.7-27.8.3-.2.5-.4.6-.7.1-.3.2-.6.2-.9v-66.9c0-.3,0-.6-.2-.8-.1-.3-.3-.5-.6-.7-.2-.2-.5-.3-.8-.4-.3,0-.6,0-.9,0-57.1,13.5-115.7,20.3-174.4,20.2-101.1,0-128.3-47.5-136.1-67.2-6.3-17.1-10.2-34.9-11.8-53,0-.3,0-.6.2-.9.1-.3.3-.5.6-.7.2-.2.5-.3.8-.4.3,0,.6,0,.9,0,56.2,13.4,113.8,20.2,171.6,20.2,13.9,0,27.8,0,41.7-.4,58.1-1.6,119.4-4.6,176.6-15.6,1.4-.3,2.9-.5,4.1-.9,90.2-17.1,176.1-70.9,184.8-207.1.3-5.4,1.1-56.2,1.1-61.7,0-18.9,6.2-134.1-.9-204.9ZM790.6,604.7h-94.9v-229.8c0-48.4-20.4-73.1-61.8-73.1s-68.4,29.2-68.4,86.8v125.8h-94.3v-125.8c0-57.7-22.9-86.8-68.4-86.8s-61.8,24.7-61.8,73.1v229.8h-94.8v-236.8c0-48.4,12.5-86.8,37.5-115.3,25.8-28.4,59.6-43,101.5-43s85.2,18.5,109.7,55.4l23.6,39.2,23.6-39.2c24.5-36.9,61.2-55.4,109.6-55.4s75.7,14.6,101.6,43c25,28.5,37.5,66.9,37.5,115.3v236.8Z",
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M785.4,244.2c-60.7-39.4-97.3-106.9-97.4-179.2h-153.7l-.3,616c-2.7,71.3-62.7,126.8-134,124.1-71.3-2.7-126.8-62.7-124.1-134,2.7-69.4,59.7-124.2,129.1-124.2,12.9,0,25.8,2.1,38.1,6v-156.9c-12.6-1.8-25.4-2.7-38.1-2.8-156,0-282.9,126.9-282.9,282.9.2,156.2,126.8,282.7,283,282.9,156,0,282.9-126.9,282.9-282.9v-312.3c62.3,44.8,137.1,68.9,213.8,68.8v-153.7c-41.4,0-81.8-12-116.4-34.6Z",
             }),
-          );
+          });
         }
         function Tn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement("path", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M258.2,170.6c102.7,77.1,213.2,233.5,253.8,317.4,40.6-83.9,151.1-240.3,253.8-317.4,74.1-55.6,194.2-98.7,194.2,38.3s-15.7,229.9-24.9,262.7c-32,114.3-148.5,143.4-252.2,125.8,181.2,30.8,227.3,133,127.8,235.2-189.1,194-271.7-48.7-292.9-110.9-3.9-11.4-5.7-16.7-5.7-12.2,0-4.5-1.8.8-5.7,12.2-21.2,62.2-103.9,304.9-292.9,110.9-99.6-102.2-53.5-204.3,127.8-235.2-103.7,17.6-220.2-11.5-252.2-125.8-9.2-32.9-24.9-235.4-24.9-262.7,0-137,120.1-93.9,194.2-38.3h0Z",
+            }),
+          });
+        }
+        function jn(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
+              d: "M929.4,264.8c-13-95.3-96.9-170.4-196.5-185-16.8-2.5-80.4-11.4-227.9-11.4h-1.1c-147.5,0-179.1,9-195.9,11.4-96.8,14.2-185.2,81.6-206.6,178.1-10.3,47.5-11.4,100.2-9.5,148.5,2.7,69.3,3.3,138.4,9.6,207.4,4.4,45.8,12.1,91.3,23,136,20.4,82.7,102.9,151.4,183.7,179.5,86.6,29.3,179.6,34.1,268.8,14,9.8-2.3,19.5-4.9,29.1-7.9,21.6-6.8,47-14.4,65.7-27.8.3-.2.5-.4.6-.7.1-.3.2-.6.2-.9v-66.9c0-.3,0-.6-.2-.8-.1-.3-.3-.5-.6-.7-.2-.2-.5-.3-.8-.4-.3,0-.6,0-.9,0-57.1,13.5-115.7,20.3-174.4,20.2-101.1,0-128.3-47.5-136.1-67.2-6.3-17.1-10.2-34.9-11.8-53,0-.3,0-.6.2-.9.1-.3.3-.5.6-.7.2-.2.5-.3.8-.4.3,0,.6,0,.9,0,56.2,13.4,113.8,20.2,171.6,20.2,13.9,0,27.8,0,41.7-.4,58.1-1.6,119.4-4.6,176.6-15.6,1.4-.3,2.9-.5,4.1-.9,90.2-17.1,176.1-70.9,184.8-207.1.3-5.4,1.1-56.2,1.1-61.7,0-18.9,6.2-134.1-.9-204.9ZM790.6,604.7h-94.9v-229.8c0-48.4-20.4-73.1-61.8-73.1s-68.4,29.2-68.4,86.8v125.8h-94.3v-125.8c0-57.7-22.9-86.8-68.4-86.8s-61.8,24.7-61.8,73.1v229.8h-94.8v-236.8c0-48.4,12.5-86.8,37.5-115.3,25.8-28.4,59.6-43,101.5-43s85.2,18.5,109.7,55.4l23.6,39.2,23.6-39.2c24.5-36.9,61.2-55.4,109.6-55.4s75.7,14.6,101.6,43c25,28.5,37.5,66.9,37.5,115.3v236.8Z",
+            }),
+          });
+        }
+        function En(e) {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("path", {
               d: "M518.9,959h-.3c-133.4-.9-235.9-44.9-304.9-130.7-61.2-76.4-92.9-182.7-94-315.9v-.6c1.1-133.3,32.7-239.5,94-315.9,68.8-85.9,171.5-129.9,304.8-130.8h.5c102.3.7,187.8,27,254.3,78.1,62.5,48.1,106.5,116.6,130.7,203.7l-76,21.2c-41.1-147.5-145.2-222.9-309.3-224-108.4.8-190.3,34.9-243.6,101.2-49.8,62.1-75.5,151.9-76.5,266.9,1,115,26.7,204.7,76.6,266.9,53.3,66.4,135.3,100.5,243.6,101.2,97.7-.7,162.4-23.5,216.1-76.2,61.3-60.1,60.3-133.8,40.6-178.7-11.5-26.5-32.5-48.5-60.9-65.2-7.2,50.3-23.2,91.1-47.8,121.9-33,41-79.7,63.5-138.9,66.7-44.8,2.4-88-8.1-121.4-29.9-39.6-25.7-62.8-64.8-65.3-110.4-2.4-44.3,15.2-85.1,49.5-114.8,32.8-28.3,78.9-45,133.5-48.1,40.1-2.2,77.8-.4,112.5,5.3-4.6-27.6-13.9-49.6-27.9-65.4-19.1-21.8-48.7-32.9-87.9-33.2h-1.1c-31.5,0-74.2,8.7-101.4,49.2l-65.4-43.9c36.5-54.2,95.7-84,166.8-84h1.6c119,.7,189.9,73.6,196.9,200.7,4,1.7,8,3.5,12,5.3,55.5,26.1,96.1,65.6,117.5,114.3,29.7,67.9,32.5,178.4-57.7,266.7-68.9,67.4-152.5,97.9-271.1,98.7h-.3ZM556.3,523.5c-9,0-18.1.3-27.5.8-68.4,3.8-111,35.2-108.6,79.8,2.5,46.8,54.1,68.5,103.7,65.8,45.6-2.4,105-20.2,115-138.2-25.2-5.5-52.8-8.2-82.5-8.2Z",
             }),
-          );
+          });
         }
         function Fn(e) {
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              version: "1.1",
-              viewBox: "0 0 1024 1024",
-              ...e,
-            },
-            r.createElement(
-              "g",
-              null,
-              r.createElement(
-                "g",
-                { id: "Layer_1" },
-                r.createElement(
-                  "g",
-                  null,
-                  r.createElement("path", {
-                    d: "M236.8,355.7h-58.6c-.7,85.4-.3,170.9-.7,256.4.2.8.3,1.7.3,2.5-.2,5-4.4,8.8-9.4,8.6-10.3.6-20.6.3-30.9.3,6.9,17,14.4,33.8,22.1,50.4,19.5-.7,41.6,3.6,58.2-9.3,15.1-11.1,19.7-30.8,19.4-48.6,0-86.8.2-173.7-.4-260.5Z",
-                  }),
-                  r.createElement("path", {
-                    d: "M455.9,539.6c14.1-35.5,30.9-69.9,45.9-104.9-18.3-2.1-39,3.8-55.9-3.3,8.2-27.5,23-52.8,33.5-79.5-19.9,0-40.1-.3-60.2,0-14.6,33.4-29.6,66.8-44.8,100-4.3,9.9-9.5,23.1-.5,32.1,11.6,10.5,28.5,6.4,42.7,7.4-9.8,24.9-22.8,48.5-31.1,73.9-4.6,12.6,6.9,25.5,19.4,25.5,22.7,1.5,45.6.2,68.4.6,7.4-16.6,14.9-33.2,22.2-50-13.3,0-26.9.9-39.8-1.7Z",
-                  }),
-                  r.createElement("path", {
-                    d: "M959.8,585.9c-1.2-25.2,4.9-53.6-10.7-75.6-13.3-18.7-37.3-23.7-58.8-24.1-1.3-30,5.9-65.3-16.3-89.8-20.6-23.1-53.9-23.2-82.4-22.1v-22.4h-59.5l-.4,22.7h-39.5v59.9c13.2-.1,26.4,0,39.5.3.4,17.4.4,34.7,0,51.9-19.8.3-39.6.3-59.4.3v59.8h59.5v127.2h59.5c0-42.4,0-84.7,0-127.1,29,0,57.9-.4,86.9,0,10.1-.9,21.8,6.3,21.5,17.5.8,15.9.8,31.8,0,47.6.3,5.4-3.8,10-9.1,10.3-16.6,1.2-33.1,0-49.7.6,7.3,17.2,14.4,34.6,22.7,51.4,27.3-1.6,60.7,5.3,81.5-17.2,19.8-18.3,13.8-47.2,14.7-71.2ZM831.8,486.9h-40.2c-.3-17.5-.4-35-.4-52.5,12.9,1.8,30.1-5.2,39.9,5.2,1.6,15.8.6,31.6.6,47.3Z",
-                  }),
-                  r.createElement("path", {
-                    d: "M618.5,434.3h37.5v-59.9h-136.4c0,19.9,0,40,.1,60h37.4v179.5c-17.8.2-35.7.2-53.6.2-9.2,19.9-18.3,39.8-27.3,59.8h199.7v-59.8c-19.1-.2-38.3,0-57.4-.2v-179.6Z",
-                  }),
-                  r.createElement("path", {
-                    d: "M900.4,433.7c11.1,0,22.3.6,33.4-.4,17.9-1.6,31.3-22.5,24.2-39.3-5.6-18.4-30.6-26.5-45.7-14.1-16.7,12.5-11.2,35.8-12,53.8Z",
-                  }),
-                  r.createElement("path", {
-                    d: "M78.6,434.2c-3.1,39.2-6.2,78.6-8.9,117.5-.7,8.9-2.6,17.7-5.7,26.1,10.1,23.1,20.1,46.1,30.9,68.8,24.1-32.2,33-72.8,35.5-112.2,2.1-33.5,5.8-67,7.1-100.6-19.6.8-39.2.5-58.9.5Z",
-                  }),
-                  r.createElement("path", {
-                    d: "M345.2,551.5c-2.8-39.1-5.9-78.2-8.9-117.2h-59.5c2.9,36.4,5.3,73,8.4,109.3s12.6,73.5,34.8,103.2c10.6-22.8,20.8-45.8,30.8-68.8-3.2-8.5-5.1-17.4-5.7-26.4Z",
-                  }),
-                  r.createElement("path", {
-                    d: "M378.1,609.4c-9.3,19.9-18.4,39.9-27.5,60,30.4,9,62.7,2.8,93.9,4.5,9.2-19.9,18.4-39.9,27.3-59.9-31.3-1.2-63.1,3.3-93.7-4.6Z",
-                  }),
-                ),
-              ),
-            ),
-          );
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            version: "1.1",
+            viewBox: "0 0 1024 1024",
+            ...e,
+            children: (0, r.jsx)("g", {
+              children: (0, r.jsx)("g", {
+                id: "Layer_1",
+                children: (0, r.jsxs)("g", {
+                  children: [
+                    (0, r.jsx)("path", {
+                      d: "M236.8,355.7h-58.6c-.7,85.4-.3,170.9-.7,256.4.2.8.3,1.7.3,2.5-.2,5-4.4,8.8-9.4,8.6-10.3.6-20.6.3-30.9.3,6.9,17,14.4,33.8,22.1,50.4,19.5-.7,41.6,3.6,58.2-9.3,15.1-11.1,19.7-30.8,19.4-48.6,0-86.8.2-173.7-.4-260.5Z",
+                    }),
+                    (0, r.jsx)("path", {
+                      d: "M455.9,539.6c14.1-35.5,30.9-69.9,45.9-104.9-18.3-2.1-39,3.8-55.9-3.3,8.2-27.5,23-52.8,33.5-79.5-19.9,0-40.1-.3-60.2,0-14.6,33.4-29.6,66.8-44.8,100-4.3,9.9-9.5,23.1-.5,32.1,11.6,10.5,28.5,6.4,42.7,7.4-9.8,24.9-22.8,48.5-31.1,73.9-4.6,12.6,6.9,25.5,19.4,25.5,22.7,1.5,45.6.2,68.4.6,7.4-16.6,14.9-33.2,22.2-50-13.3,0-26.9.9-39.8-1.7Z",
+                    }),
+                    (0, r.jsx)("path", {
+                      d: "M959.8,585.9c-1.2-25.2,4.9-53.6-10.7-75.6-13.3-18.7-37.3-23.7-58.8-24.1-1.3-30,5.9-65.3-16.3-89.8-20.6-23.1-53.9-23.2-82.4-22.1v-22.4h-59.5l-.4,22.7h-39.5v59.9c13.2-.1,26.4,0,39.5.3.4,17.4.4,34.7,0,51.9-19.8.3-39.6.3-59.4.3v59.8h59.5v127.2h59.5c0-42.4,0-84.7,0-127.1,29,0,57.9-.4,86.9,0,10.1-.9,21.8,6.3,21.5,17.5.8,15.9.8,31.8,0,47.6.3,5.4-3.8,10-9.1,10.3-16.6,1.2-33.1,0-49.7.6,7.3,17.2,14.4,34.6,22.7,51.4,27.3-1.6,60.7,5.3,81.5-17.2,19.8-18.3,13.8-47.2,14.7-71.2ZM831.8,486.9h-40.2c-.3-17.5-.4-35-.4-52.5,12.9,1.8,30.1-5.2,39.9,5.2,1.6,15.8.6,31.6.6,47.3Z",
+                    }),
+                    (0, r.jsx)("path", {
+                      d: "M618.5,434.3h37.5v-59.9h-136.4c0,19.9,0,40,.1,60h37.4v179.5c-17.8.2-35.7.2-53.6.2-9.2,19.9-18.3,39.8-27.3,59.8h199.7v-59.8c-19.1-.2-38.3,0-57.4-.2v-179.6Z",
+                    }),
+                    (0, r.jsx)("path", {
+                      d: "M900.4,433.7c11.1,0,22.3.6,33.4-.4,17.9-1.6,31.3-22.5,24.2-39.3-5.6-18.4-30.6-26.5-45.7-14.1-16.7,12.5-11.2,35.8-12,53.8Z",
+                    }),
+                    (0, r.jsx)("path", {
+                      d: "M78.6,434.2c-3.1,39.2-6.2,78.6-8.9,117.5-.7,8.9-2.6,17.7-5.7,26.1,10.1,23.1,20.1,46.1,30.9,68.8,24.1-32.2,33-72.8,35.5-112.2,2.1-33.5,5.8-67,7.1-100.6-19.6.8-39.2.5-58.9.5Z",
+                    }),
+                    (0, r.jsx)("path", {
+                      d: "M345.2,551.5c-2.8-39.1-5.9-78.2-8.9-117.2h-59.5c2.9,36.4,5.3,73,8.4,109.3s12.6,73.5,34.8,103.2c10.6-22.8,20.8-45.8,30.8-68.8-3.2-8.5-5.1-17.4-5.7-26.4Z",
+                    }),
+                    (0, r.jsx)("path", {
+                      d: "M378.1,609.4c-9.3,19.9-18.4,39.9-27.5,60,30.4,9,62.7,2.8,93.9,4.5,9.2-19.9,18.4-39.9,27.3-59.9-31.3-1.2-63.1,3.3-93.7-4.6Z",
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          });
         }
         function On(e) {
-          return r.createElement(
-            "svg",
-            {
-              viewBox: "4 1 24 30",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              ...e,
-            },
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M16.2114 23.9054C18.1701 23.9054 19.7587 25.494 19.7587 27.4527C19.7587 29.4114 18.1701 31 16.2114 31C14.2526 31 12.6641 29.4114 12.6641 27.4527C12.6641 25.494 14.2527 23.9054 16.2114 23.9054Z",
-              fill: "currentColor",
-            }),
-            r.createElement("path", {
-              fillRule: "evenodd",
-              clipRule: "evenodd",
-              d: "M7.01091 9.7964C7.11325 7.49343 8.06952 5.32707 9.69945 3.69779C11.4318 1.96544 13.7608 1 16.2108 1C18.6611 1 20.9899 1.96534 22.7222 3.69779C24.4545 5.42937 25.42 7.75911 25.42 10.2092C25.42 11.8776 24.9663 13.5012 24.109 14.9322C23.2523 16.3624 22.0178 17.5368 20.5477 18.324C20.1242 18.5512 19.761 18.8723 19.5136 19.2866C19.2654 19.7001 19.1616 20.179 19.1616 20.6579V21.3933C19.1616 21.6584 18.9457 21.8743 18.6815 21.8743H13.7404C13.4761 21.8743 13.2602 21.6584 13.2602 21.3933V20.6579C13.2602 19.1043 13.6626 17.5963 14.4611 16.2636C15.2603 14.928 16.4065 13.8673 17.7764 13.1333C18.3057 12.85 18.7488 12.4238 19.0573 11.9085C19.365 11.394 19.5178 10.8078 19.5178 10.2092C19.5178 9.32859 19.1722 8.49295 18.5496 7.87046C17.9264 7.2479 17.0914 6.90227 16.2109 6.90227C15.3303 6.90227 14.4947 7.24788 13.8722 7.87046C13.312 8.43062 12.972 9.16814 12.9131 9.9582L12.8963 10.1818C12.8774 10.4363 12.6643 10.6313 12.4091 10.6271L7.47227 10.5422C7.3377 10.5394 7.22265 10.4889 7.13086 10.3907C7.03828 10.2926 6.99482 10.1748 7.00049 10.0402L7.01104 9.79628L7.01091 9.7964Z",
-              fill: "currentColor",
-            }),
-          );
+          return (0, r.jsxs)("svg", {
+            viewBox: "4 1 24 30",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            ...e,
+            children: [
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M16.2114 23.9054C18.1701 23.9054 19.7587 25.494 19.7587 27.4527C19.7587 29.4114 18.1701 31 16.2114 31C14.2526 31 12.6641 29.4114 12.6641 27.4527C12.6641 25.494 14.2527 23.9054 16.2114 23.9054Z",
+                fill: "currentColor",
+              }),
+              (0, r.jsx)("path", {
+                fillRule: "evenodd",
+                clipRule: "evenodd",
+                d: "M7.01091 9.7964C7.11325 7.49343 8.06952 5.32707 9.69945 3.69779C11.4318 1.96544 13.7608 1 16.2108 1C18.6611 1 20.9899 1.96534 22.7222 3.69779C24.4545 5.42937 25.42 7.75911 25.42 10.2092C25.42 11.8776 24.9663 13.5012 24.109 14.9322C23.2523 16.3624 22.0178 17.5368 20.5477 18.324C20.1242 18.5512 19.761 18.8723 19.5136 19.2866C19.2654 19.7001 19.1616 20.179 19.1616 20.6579V21.3933C19.1616 21.6584 18.9457 21.8743 18.6815 21.8743H13.7404C13.4761 21.8743 13.2602 21.6584 13.2602 21.3933V20.6579C13.2602 19.1043 13.6626 17.5963 14.4611 16.2636C15.2603 14.928 16.4065 13.8673 17.7764 13.1333C18.3057 12.85 18.7488 12.4238 19.0573 11.9085C19.365 11.394 19.5178 10.8078 19.5178 10.2092C19.5178 9.32859 19.1722 8.49295 18.5496 7.87046C17.9264 7.2479 17.0914 6.90227 16.2109 6.90227C15.3303 6.90227 14.4947 7.24788 13.8722 7.87046C13.312 8.43062 12.972 9.16814 12.9131 9.9582L12.8963 10.1818C12.8774 10.4363 12.6643 10.6313 12.4091 10.6271L7.47227 10.5422C7.3377 10.5394 7.22265 10.4889 7.13086 10.3907C7.03828 10.2926 6.99482 10.1748 7.00049 10.0402L7.01104 9.79628L7.01091 9.7964Z",
+                fill: "currentColor",
+              }),
+            ],
+          });
         }
         function Dn(e) {
           const { fill: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 10 10",
-              width: "10",
-              height: "10",
-              fill: "none",
-              ...n,
-            },
-            r.createElement("circle", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 10 10",
+            width: "10",
+            height: "10",
+            fill: "none",
+            ...n,
+            children: (0, r.jsx)("circle", {
               cx: "5",
               cy: "5",
               r: "4",
               fill: e.fill || "currentColor",
             }),
-          );
+          });
         }
         function An(e) {
           const { fill: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 16 8",
-              width: "16",
-              height: "8",
-              fill: "none",
-              ...n,
-            },
-            r.createElement("rect", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 16 8",
+            width: "16",
+            height: "8",
+            fill: "none",
+            ...n,
+            children: (0, r.jsx)("rect", {
               x: "0",
               y: "0",
               width: "16",
@@ -22007,44 +21542,42 @@ var CLSTAMP = "10520954";
               rx: "4",
               fill: e.fill || "currentColor",
             }),
-          );
+          });
         }
         function Nn(e) {
           const { fill: t, ...n } = e;
-          return r.createElement(
-            "svg",
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 10 10",
-              width: "10",
-              height: "10",
-              fill: "none",
-              ...n,
-            },
-            r.createElement("rect", {
+          return (0, r.jsx)("svg", {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 10 10",
+            width: "10",
+            height: "10",
+            fill: "none",
+            ...n,
+            children: (0, r.jsx)("rect", {
               x: "1",
               y: "1",
               width: "8",
               height: "8",
               fill: e.fill || "currentColor",
             }),
-          );
+          });
         }
       },
       72905: (e, t, n) => {
         "use strict";
-        n.d(t, { Ay: () => o });
-        var r = n(63696),
-          i = n(45328),
-          s = (n(72476), n(92059));
+        n.d(t, { Ay: () => a });
+        var r = n(62540),
+          i = n(63696),
+          s = n(45328),
+          o = (n(72476), n(92059));
         n(49246);
-        function o(e) {
+        function a(e) {
           const { children: t, ...n } = e,
-            o = (0, s.n9)(),
-            a = r.useMemo(
-              () => ({ ...i.Ay.GetDefaultParams(), ...o, ...n }),
+            a = (0, o.n9)(),
+            c = i.useMemo(
+              () => ({ ...s.Ay.GetDefaultParams(), ...a, ...n }),
               [
-                o,
+                a,
                 n.domain,
                 n.controller,
                 n.method,
@@ -22053,12 +21586,13 @@ var CLSTAMP = "10520954";
                 n.depth,
               ],
             );
-          return r.createElement(s.nn, { ...a }, t);
+          return (0, r.jsx)(o.nn, { ...c, children: t });
         }
       },
       49246: (e, t, n) => {
         "use strict";
         n.d(t, { w: () => s });
+        n(62540);
         var r = n(63696);
         const i = r.createContext({});
         function s() {
@@ -22080,428 +21614,427 @@ var CLSTAMP = "10520954";
       },
       26853: (e, t, n) => {
         "use strict";
-        n.d(t, { t: () => l });
-        var r = n(63696),
-          i = n(90765),
-          s = n(11804),
-          o = n.n(s);
-        var a = n(29285),
-          c = n(14628);
-        const l = r.memo(function (e) {
+        n.d(t, { t: () => u });
+        var r = n(62540),
+          i = n(63696),
+          s = n(90765),
+          o = n(11804),
+          a = n.n(o);
+        var c = n(29285),
+          l = n(14628);
+        const u = i.memo(function (e) {
           const {
             className: t,
             size: n,
-            string: s,
-            position: l,
+            string: o,
+            position: u,
             static: m,
-            msDelayAppear: d,
+            msDelayAppear: h,
           } = e;
-          let h = [o().LoadingWrapper, "SteamLogoThrobber", u(n)];
-          const [p, g] = r.useState(!d),
-            f = !(0, a.q)();
+          let p = [a().LoadingWrapper, "SteamLogoThrobber", d(n)];
+          const [g, f] = i.useState(!h),
+            _ = !(0, c.q)();
           return (
-            (0, r.useEffect)(() => {
-              if (p) return;
-              const e = setTimeout(() => g(!0), d);
+            (0, i.useEffect)(() => {
+              if (g) return;
+              const e = setTimeout(() => f(!0), h);
               return () => clearTimeout(e);
-            }, [d, p]),
-            void 0 === s && h.push(o().noString),
-            t && h.push(t),
-            m && h.push(o().Static),
-            r.createElement(
-              "div",
-              {
-                className: (0, i.A)(
-                  "center" == l && o().throbber_center_wrapper,
-                  !!d && o().ThrobberDelayAppear,
-                  p && o().Visible,
-                ),
-              },
-              p &&
-                f &&
-                r.createElement(
-                  "div",
-                  { className: h.join(" ") },
-                  r.createElement(
-                    "div",
-                    { className: o().NewThrobber },
-                    r.createElement("img", {
-                      src: (0, c.YJ)("/images/steam_spinner.png"),
+            }, [h, g]),
+            void 0 === o && p.push(a().noString),
+            t && p.push(t),
+            m && p.push(a().Static),
+            (0, r.jsxs)("div", {
+              className: (0, s.A)(
+                "center" == u && a().throbber_center_wrapper,
+                !!h && a().ThrobberDelayAppear,
+                g && a().Visible,
+              ),
+              children: [
+                g &&
+                  _ &&
+                  (0, r.jsx)("div", {
+                    className: p.join(" "),
+                    children: (0, r.jsx)("div", {
+                      className: a().NewThrobber,
+                      children: (0, r.jsx)("img", {
+                        src: (0, l.YJ)("/images/steam_spinner.png"),
+                      }),
                     }),
-                  ),
-                ),
-              Boolean(s) &&
-                r.createElement("div", { className: o().ThrobberText }, s),
-            )
+                  }),
+                Boolean(o) &&
+                  (0, r.jsx)("div", {
+                    className: a().ThrobberText,
+                    children: o,
+                  }),
+              ],
+            })
           );
         });
-        r.memo(function (e) {
+        i.memo(function (e) {
           const {
             className: t,
             size: n,
-            string: s,
-            position: a,
-            static: c,
-            msDelayAppear: l,
+            string: o,
+            position: c,
+            static: l,
+            msDelayAppear: u,
           } = e;
-          let d = [o().LoadingWrapper, "SteamLogoThrobber", u(n)];
-          const [h, p] = r.useState(!l);
+          let h = [a().LoadingWrapper, "SteamLogoThrobber", d(n)];
+          const [p, g] = i.useState(!u);
           return (
-            (0, r.useEffect)(() => {
-              if (h) return;
-              const e = setTimeout(() => p(!0), l);
+            (0, i.useEffect)(() => {
+              if (p) return;
+              const e = setTimeout(() => g(!0), u);
               return () => clearTimeout(e);
-            }, [l, h]),
-            void 0 === s && d.push(o().noString),
-            t && d.push(t),
-            c && d.push(o().Static),
-            r.createElement(
-              "div",
-              {
-                className: (0, i.A)(
-                  "center" == a && o().throbber_center_wrapper,
-                  !!l && o().ThrobberDelayAppear,
-                  h && o().Visible,
-                ),
-              },
-              h &&
-                r.createElement(
-                  "div",
-                  { className: d.join(" ") },
-                  r.createElement(
-                    "div",
-                    { className: o().Throbber },
-                    r.createElement(m, { className: o().base }),
-                    r.createElement(m, { className: o().blur }),
-                  ),
-                ),
-              Boolean(s) &&
-                r.createElement("div", { className: o().ThrobberText }, s),
-            )
+            }, [u, p]),
+            void 0 === o && h.push(a().noString),
+            t && h.push(t),
+            l && h.push(a().Static),
+            (0, r.jsxs)("div", {
+              className: (0, s.A)(
+                "center" == c && a().throbber_center_wrapper,
+                !!u && a().ThrobberDelayAppear,
+                p && a().Visible,
+              ),
+              children: [
+                p &&
+                  (0, r.jsx)("div", {
+                    className: h.join(" "),
+                    children: (0, r.jsxs)("div", {
+                      className: a().Throbber,
+                      children: [
+                        (0, r.jsx)(m, { className: a().base }),
+                        (0, r.jsx)(m, { className: a().blur }),
+                      ],
+                    }),
+                  }),
+                Boolean(o) &&
+                  (0, r.jsx)("div", {
+                    className: a().ThrobberText,
+                    children: o,
+                  }),
+              ],
+            })
           );
         });
-        function u(e) {
+        function d(e) {
           switch (e) {
             case "small":
-              return o().throbber_small;
+              return a().throbber_small;
             case "medium":
-              return o().throbber_medium;
+              return a().throbber_medium;
             case "xlarge":
-              return o().throbber_xlarge;
+              return a().throbber_xlarge;
             case "xxlarge":
-              return o().throbber_xxlarge;
+              return a().throbber_xxlarge;
             default:
-              return o().throbber_large;
+              return a().throbber_large;
           }
         }
         function m(e) {
           let t = "SVGIcon_Button SVGIcon_Throbber ";
           return (
             e.className && (t += e.className),
-            r.createElement(
-              "svg",
-              {
-                version: "1.1",
-                id: "base",
-                xmlns: "http://www.w3.org/2000/svg",
-                className: t,
-                x: "0px",
-                y: "0px",
-                width: "256px",
-                height: "256px",
-                viewBox: "0 0 256 256",
-              },
-              r.createElement(
-                "g",
-                { className: o().partCircle },
-                r.createElement("path", {
-                  className: o().roundOuter,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+            (0, r.jsxs)("svg", {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: t,
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+              children: [
+                (0, r.jsxs)("g", {
+                  className: a().partCircle,
+                  children: [
+                    (0, r.jsx)("path", {
+                      className: a().roundOuter,
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundOuter,
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M201.432,101.166",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundOuter,
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                    }),
+                  ],
                 }),
-                r.createElement("path", {
-                  className: o().roundOuter,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M201.432,101.166",
+                (0, r.jsxs)("g", {
+                  className: a().mainOutline,
+                  children: [
+                    (0, r.jsx)("path", {
+                      className: a().roundFill,
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundOuterOutline,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber01,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber02,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber03,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber04,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber05,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber06,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber07,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber08,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber09,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber10,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber11,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber12,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber13,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber14,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                    (0, r.jsx)("path", {
+                      className: a().roundThrobber15,
+                      strokeLinecap: "butt",
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "6",
+                      strokeMiterlimit: "10",
+                      d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                    }),
+                  ],
                 }),
-                r.createElement("path", {
-                  className: o().roundOuter,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754",
+                (0, r.jsx)("g", {
+                  className: a().bottomCircle,
+                  children: (0, r.jsx)("path", {
+                    fill: "#ffffff",
+                    d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
+                  }),
                 }),
-              ),
-              r.createElement(
-                "g",
-                { className: o().mainOutline },
-                r.createElement("path", {
-                  className: o().roundFill,
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
+                (0, r.jsx)("g", {
+                  className: a().topCircle,
+                  children: (0, r.jsx)("circle", {
+                    fill: "none",
+                    stroke: "#ffffff",
+                    strokeWidth: "6",
+                    strokeMiterlimit: "10",
+                    cx: "161.731",
+                    cy: "101.274",
+                    r: "23.019",
+                  }),
                 }),
-                r.createElement("path", {
-                  className: o().roundOuterOutline,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber01,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber02,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber03,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber04,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber05,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber06,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber07,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber08,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber09,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber10,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber11,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber12,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber13,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber14,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-                r.createElement("path", {
-                  className: o().roundThrobber15,
-                  strokeLinecap: "butt",
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z",
-                }),
-              ),
-              r.createElement(
-                "g",
-                { className: o().bottomCircle },
-                r.createElement("path", {
-                  fill: "#ffffff",
-                  d: "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579",
-                }),
-              ),
-              r.createElement(
-                "g",
-                { className: o().topCircle },
-                r.createElement("circle", {
-                  fill: "none",
-                  stroke: "#ffffff",
-                  strokeWidth: "6",
-                  strokeMiterlimit: "10",
-                  cx: "161.731",
-                  cy: "101.274",
-                  r: "23.019",
-                }),
-              ),
-            )
+              ],
+            })
           );
         }
       },
       27773: (e, t, n) => {
         "use strict";
-        n.d(t, { c: () => h, g: () => d });
-        var r = n(63696),
-          i = n(736),
-          s = n(50376),
-          o = n(90765),
-          a = n(90685),
-          c = n(72476);
-        function l(e) {
-          const { popup: t, onMaximize: n, bOSX: c } = e,
-            l = (0, a.GD)(t),
-            u = r.useCallback(() => {
+        n.d(t, { c: () => p, g: () => h });
+        var r = n(62540),
+          i = n(63696),
+          s = n(736),
+          o = n(50376),
+          a = n(90765),
+          c = n(90685),
+          l = n(72476);
+        function u(e) {
+          const { popup: t, onMaximize: n, bOSX: l } = e,
+            u = (0, c.GD)(t),
+            d = i.useCallback(() => {
               n
                 ? n()
-                : (0, i.Fj)(t, "Window.ToggleMaximize") &&
+                : (0, s.Fj)(t, "Window.ToggleMaximize") &&
                   t.SteamClient.Window.ToggleMaximize();
             }, [t, n]);
-          return r.createElement(
-            d,
-            {
-              className: (0, o.A)(
-                l ? "restoreButton" : "maximizeButton",
-                "windowControlButton",
-              ),
-              onClick: u,
-            },
-            !c &&
-              (l ? r.createElement(s.ZWw, null) : r.createElement(s.hz4, null)),
-          );
+          return (0, r.jsx)(h, {
+            className: (0, a.A)(
+              u ? "restoreButton" : "maximizeButton",
+              "windowControlButton",
+            ),
+            onClick: d,
+            children: !l && (u ? (0, r.jsx)(o.ZWw, {}) : (0, r.jsx)(o.hz4, {})),
+          });
         }
-        function u(e) {
-          const { popup: t, onMinimize: n, bOSX: i } = e,
-            o = r.useCallback(() => {
+        function d(e) {
+          const { popup: t, onMinimize: n, bOSX: s } = e,
+            a = i.useCallback(() => {
               t.SteamClient.Window.Minimize();
             }, [t]);
-          return r.createElement(
-            d,
-            {
-              className: "minimizeButton windowControlButton",
-              onClick: n ?? o,
-            },
-            !i && r.createElement(s.Xjb, null),
-          );
+          return (0, r.jsx)(h, {
+            className: "minimizeButton windowControlButton",
+            onClick: n ?? a,
+            children: !s && (0, r.jsx)(o.Xjb, {}),
+          });
         }
         function m(e) {
-          const { popup: t, onClose: n, bOSX: o } = e,
-            a = r.useCallback(() => {
+          const { popup: t, onClose: n, bOSX: a } = e,
+            c = i.useCallback(() => {
               t &&
-                ((0, i.Fj)(t, "Window.Close")
+                ((0, s.Fj)(t, "Window.Close")
                   ? t.SteamClient.Window.Close()
                   : t.close());
             }, [t]);
-          return r.createElement(
-            d,
-            { className: "closeButton windowControlButton", onClick: n ?? a },
-            !o && r.createElement(s.sED, null),
-          );
+          return (0, r.jsx)(h, {
+            className: "closeButton windowControlButton",
+            onClick: n ?? c,
+            children: !a && (0, r.jsx)(o.sED, {}),
+          });
         }
-        function d(e) {
-          const { className: t, onClick: n, children: i } = e,
-            s = r.useCallback(
+        function h(e) {
+          const { className: t, onClick: n, children: s } = e,
+            o = i.useCallback(
               (e) => {
                 n && (e.stopPropagation(), n(e));
               },
               [n],
             );
-          return r.createElement(
-            "div",
-            { className: (0, o.A)("title-area-icon", t), onClick: s },
-            r.createElement("div", { className: "title-area-icon-inner" }, i),
-          );
+          return (0, r.jsx)("div", {
+            className: (0, a.A)("title-area-icon", t),
+            onClick: o,
+            children: (0, r.jsx)("div", {
+              className: "title-area-icon-inner",
+              children: s,
+            }),
+          });
         }
-        function h(e) {
+        function p(e) {
           const {
               className: t,
               style: n,
               hideActions: i,
               hideClose: s,
-              hideMin: d,
+              hideMin: o,
               hideMax: h,
-              bOSX: p = (0, c.Pr)(),
+              bOSX: p = (0, l.Pr)(),
               bForceWindowFocused: g,
               onMinimize: f,
               onMaximize: _,
@@ -22510,156 +22043,147 @@ var CLSTAMP = "10520954";
               popup: C,
               children: v,
             } = e,
-            M = (0, a.jt)(C);
-          return r.createElement(
-            "div",
-            {
-              className: (0, o.A)(
-                "TitleBar",
-                "title-area",
-                p && "OSX",
-                (M || g) && "WindowFocus",
-                t,
-              ),
-              style: n,
-            },
-            r.createElement("div", { className: "title-area-highlight" }),
-            r.createElement("div", { className: "title-area-children" }, v),
-            !i &&
-              r.createElement(
-                r.Fragment,
-                null,
-                b &&
-                  r.createElement(
-                    "div",
-                    { className: "title-bar-actions extra-actions" },
-                    b,
-                  ),
-                r.createElement(
-                  "div",
-                  { className: "title-bar-actions window-controls" },
-                  !s && r.createElement(m, { popup: C, onClose: w, bOSX: p }),
-                  !h &&
-                    r.createElement(l, { popup: C, onMaximize: _, bOSX: p }),
-                  !d &&
-                    r.createElement(u, { popup: C, onMinimize: f, bOSX: p }),
-                ),
-              ),
-          );
+            M = (0, c.jt)(C);
+          return (0, r.jsxs)("div", {
+            className: (0, a.A)(
+              "TitleBar",
+              "title-area",
+              p && "OSX",
+              (M || g) && "WindowFocus",
+              t,
+            ),
+            style: n,
+            children: [
+              (0, r.jsx)("div", { className: "title-area-highlight" }),
+              (0, r.jsx)("div", {
+                className: "title-area-children",
+                children: v,
+              }),
+              !i &&
+                (0, r.jsxs)(r.Fragment, {
+                  children: [
+                    b &&
+                      (0, r.jsx)("div", {
+                        className: "title-bar-actions extra-actions",
+                        children: b,
+                      }),
+                    (0, r.jsxs)("div", {
+                      className: "title-bar-actions window-controls",
+                      children: [
+                        !s && (0, r.jsx)(m, { popup: C, onClose: w, bOSX: p }),
+                        !h &&
+                          (0, r.jsx)(u, { popup: C, onMaximize: _, bOSX: p }),
+                        !o &&
+                          (0, r.jsx)(d, { popup: C, onMinimize: f, bOSX: p }),
+                      ],
+                    }),
+                  ],
+                }),
+            ],
+          });
         }
       },
       98995: (e, t, n) => {
         "use strict";
         n.d(t, {
-          C$: () => p,
-          Gq: () => w,
-          I2: () => E,
+          C$: () => g,
+          Gq: () => b,
+          I2: () => B,
           MA: () => y,
-          Vr: () => x,
-          ep: () => h,
-          fS: () => v,
-          gK: () => d,
-          he: () => g,
-          m9: () => f,
-          t1: () => S,
-          zQ: () => M,
-          zs: () => _,
+          Vr: () => I,
+          ep: () => p,
+          fS: () => M,
+          gK: () => h,
+          he: () => f,
+          m9: () => _,
+          t1: () => x,
+          zQ: () => S,
+          zs: () => w,
         });
-        var r = n(63696),
-          i = n(78325),
-          s = n(90242),
-          o = n(92251),
-          a = n(90765),
-          c = n(46108),
-          l = n(57447),
-          u = n.n(l);
-        const m = r.createContext({}),
-          d = () => r.useContext(m);
-        function h(e) {
-          const { targetElement: t, children: n } = e,
-            i = r.useMemo(() => ({ targetElement: t }), [t]);
-          return r.createElement(m.Provider, { value: i }, n);
-        }
+        var r = n(62540),
+          i = n(63696),
+          s = n(78325),
+          o = n(90242),
+          a = n(92251),
+          c = n(90765),
+          l = n(46108),
+          u = n(57447),
+          d = n.n(u);
+        const m = i.createContext({}),
+          h = () => i.useContext(m);
         function p(e) {
-          const [t, n] = r.useState(null),
-            i = r.useMemo(() => ({ targetElement: t }), [t]);
-          return r.createElement(
-            m.Provider,
-            { value: i },
-            r.createElement("div", { ref: n }),
-            e.children,
-          );
+          const { targetElement: t, children: n } = e,
+            s = i.useMemo(() => ({ targetElement: t }), [t]);
+          return (0, r.jsx)(m.Provider, { value: s, children: n });
         }
         function g(e) {
-          const { divProps: t, tooltipProps: n } = b({
-            ...e,
-            toolTipContent: e.toolTipContent
-              ? r.createElement(M, null, C(e.toolTipContent))
-              : null,
+          const [t, n] = i.useState(null),
+            s = i.useMemo(() => ({ targetElement: t }), [t]);
+          return (0, r.jsxs)(m.Provider, {
+            value: s,
+            children: [(0, r.jsx)("div", { ref: n }), e.children],
           });
-          return r.createElement(
-            s.ml,
-            {
-              className: "tool-tip-source",
-              noFocusRing: !0,
-              focusable: e.bNavStop ?? !!t.onClick,
-              ...t,
-            },
-            r.createElement(B, { ...n }),
-            e.children,
-          );
         }
         function f(e) {
-          const { divProps: t, tooltipProps: n } = b(e);
-          return r.createElement(
-            s.ml,
-            {
-              className: "tool-tip-source",
-              noFocusRing: !0,
-              focusable: e.bNavStop ?? !!t.onClick,
-              ...t,
-            },
-            r.createElement(B, { ...n }),
-            e.children,
-          );
+          const { divProps: t, tooltipProps: n } = C({
+            ...e,
+            toolTipContent: e.toolTipContent
+              ? (0, r.jsx)(S, { children: v(e.toolTipContent) })
+              : null,
+          });
+          return (0, r.jsxs)(o.ml, {
+            className: "tool-tip-source",
+            noFocusRing: !0,
+            focusable: e.bNavStop ?? !!t.onClick,
+            ...t,
+            children: [(0, r.jsx)(L, { ...n }), e.children],
+          });
         }
         function _(e) {
-          const { divProps: t, tooltipProps: n } = b(e);
-          return r.createElement(
-            "rect",
-            { ...t },
-            r.createElement(B, { ...n }),
-            e.children,
-          );
+          const { divProps: t, tooltipProps: n } = C(e);
+          return (0, r.jsxs)(o.ml, {
+            className: "tool-tip-source",
+            noFocusRing: !0,
+            focusable: e.bNavStop ?? !!t.onClick,
+            ...t,
+            children: [(0, r.jsx)(L, { ...n }), e.children],
+          });
         }
         function w(e) {
-          const { children: t } = e,
-            { divProps: n, tooltipProps: i } = b({
-              ...e,
-              toolTipContent: e.toolTipContent
-                ? r.createElement(M, null, C(e.toolTipContent))
-                : null,
-            });
-          return r.createElement(
-            r.Fragment,
-            null,
-            r.cloneElement(t, { ...n, ...t.props }),
-            r.createElement(B, { ...i }),
-          );
+          const { divProps: t, tooltipProps: n } = C(e);
+          return (0, r.jsxs)("rect", {
+            ...t,
+            children: [(0, r.jsx)(L, { ...n }), e.children],
+          });
         }
         function b(e) {
+          const { children: t } = e,
+            { divProps: n, tooltipProps: s } = C({
+              ...e,
+              toolTipContent: e.toolTipContent
+                ? (0, r.jsx)(S, { children: v(e.toolTipContent) })
+                : null,
+            });
+          return (0, r.jsxs)(r.Fragment, {
+            children: [
+              i.cloneElement(t, { ...n, ...t.props }),
+              (0, r.jsx)(L, { ...s }),
+            ],
+          });
+        }
+        function C(e) {
           const {
               toolTipContent: t,
               nDelayShowMS: n = 300,
-              bDisabled: i,
+              bDisabled: r,
               direction: s,
               nBodyAlignment: o,
               nBodyDistance: a,
               nAllowOffscreenPx: c,
               nMaxLateralMoveOnScreen: l,
               strTooltipClassname: u,
-              bNavStop: m,
-              bTopmost: d,
+              bNavStop: d,
+              bTopmost: m,
               usePointerEvents: h,
               children: p,
               onMouseLeave: g,
@@ -22672,112 +22196,115 @@ var CLSTAMP = "10520954";
               nAllowOffscreenPx: c,
               nMaxLateralMoveOnScreen: l,
               className: u,
-              bTopmost: d,
+              bTopmost: m,
             },
-            [w, b] = r.useState(!1),
-            [C, v] = r.useState(),
-            M = r.useCallback(
+            [w, b] = i.useState(!1),
+            [C, v] = i.useState(),
+            M = i.useCallback(
               (e) => {
                 (h && "pointerType" in e && "mouse" != e.pointerType) ||
                   (b(!0), v(e.currentTarget));
               },
               [h],
             ),
-            S = r.useCallback(() => {
+            S = i.useCallback(() => {
               b(!1);
-            }, []),
-            y = {
-              active: w && !i,
-              target: C,
-              nDelayShowMS: n,
-              hoverPositionProps: _,
-              children: t,
-            };
-          let E = { ...f };
+            }, []);
+          i.useEffect(() => {
+            r && w && b(!1);
+          }, [r, w]);
+          const x = {
+            active: w && !r,
+            target: C,
+            nDelayShowMS: n,
+            hoverPositionProps: _,
+            children: t,
+          };
+          let y = { ...f };
           return (
             h
-              ? ((E.onPointerEnter = M), (E.onPointerLeave = S))
-              : ((E.onMouseEnter = M), (E.onMouseLeave = S)),
+              ? ((y.onPointerEnter = M), (y.onPointerLeave = S))
+              : ((y.onMouseEnter = M), (y.onMouseLeave = S)),
             {
-              divProps: E,
+              divProps: y,
               stateHandlers: { setTarget: v, setHovered: b },
-              tooltipProps: y,
+              tooltipProps: x,
             }
           );
         }
-        function C(e) {
-          return "string" == typeof e ? c.pf.LocalizeIfToken(e, !0) : e;
-        }
         function v(e) {
-          const { divProps: t, tooltipProps: n, stateHandlers: i } = b(e);
+          return "string" == typeof e ? l.pf.LocalizeIfToken(e, !0) : e;
+        }
+        function M(e) {
+          const { divProps: t, tooltipProps: n, stateHandlers: i } = C(e);
           return {
             divProps: t,
             stateHandlers: i,
-            tooltip: r.createElement(B, { ...n }),
+            tooltip: (0, r.jsx)(L, { ...n }),
           };
         }
-        function M(e) {
-          return r.createElement("div", {
+        function S(e) {
+          return (0, r.jsx)("div", {
             ...e,
-            className: (0, a.A)(u().TextToolTip, e.className),
+            className: (0, c.A)(d().TextToolTip, e.className),
           });
         }
-        function S(e) {
+        function x(e) {
           const { className: t, ...n } = e;
-          return r.createElement("div", {
-            className: (0, a.A)(u().ToolTipCustom, t),
+          return (0, r.jsx)("div", {
+            className: (0, c.A)(d().ToolTipCustom, t),
             ...n,
           });
         }
         function y(e) {
           const { className: t, center: n, ...i } = e;
-          return r.createElement("div", {
-            className: (0, a.A)(u().ToolTipTitle, n ? u().Center : "", t),
+          return (0, r.jsx)("div", {
+            className: (0, c.A)(d().ToolTipTitle, n ? d().Center : "", t),
             ...i,
           });
         }
-        function E(e) {
+        function B(e) {
           const { className: t, ...n } = e;
-          return r.createElement("div", {
-            className: (0, a.A)(u().ToolTipInsetContent, t),
+          return (0, r.jsx)("div", {
+            className: (0, c.A)(d().ToolTipInsetContent, t),
             ...n,
           });
         }
-        function B(e) {
+        function L(e) {
           const {
               active: t,
               target: n,
-              nDelayShowMS: s = 300,
-              hoverPositionProps: a,
-              children: c,
+              nDelayShowMS: o = 300,
+              hoverPositionProps: c,
+              children: l,
             } = e,
-            [l, u] = r.useState(t),
-            m = d();
+            [u, d] = i.useState(t),
+            m = h();
           if (
-            (r.useEffect(() => {
+            (i.useEffect(() => {
               if (t) {
-                if (s) {
-                  const e = window.setTimeout(() => u(!0), s);
+                if (o) {
+                  const e = window.setTimeout(() => d(!0), o);
                   return () => window.clearTimeout(e);
                 }
-                u(!0);
-              } else u(!1);
+                d(!0);
+              } else d(!1);
             }, [t]),
-            !l)
+            !u)
           )
             return null;
-          if (!c || !n) return null;
-          const { targetElement: h } = m;
-          return i.createPortal(
-            r.createElement(o.g, { target: n, ...a }, c),
-            h ?? n.ownerDocument.body,
+          if (!l || !n) return null;
+          const { targetElement: p } = m;
+          return s.createPortal(
+            (0, r.jsx)(a.g, { target: n, ...c, children: l }),
+            p ?? n.ownerDocument.body,
           );
         }
-        const L = "DEBUG_StickyHovers";
-        function x(e) {
+        const k = "DEBUG_StickyHovers";
+        function I(e) {
           e
-            ? window.sessionStorage.setItem(L, "true")
-            : window.sessionStorage.removeItem(L);
+            ? window.sessionStorage.setItem(k, "true")
+            : window.sessionStorage.removeItem(k);
         }
       },
       34742: (e, t, n) => {
@@ -22816,7 +22343,7 @@ var CLSTAMP = "10520954";
           Jc: () => u,
           Ji: () => p,
           LU: () => h,
-          YX: () => d,
+          YX: () => m,
           e0: () => g,
           lu: () => o.l,
         });
@@ -22864,7 +22391,7 @@ var CLSTAMP = "10520954";
         function u(e, t) {
           return new l(e, t);
         }
-        class m extends a {
+        class d extends a {
           m_fnMap;
           m_originalSubscribableValue;
           m_mappedSubscribableValue;
@@ -22896,8 +22423,8 @@ var CLSTAMP = "10520954";
               (this.m_bMappedValueStale = !1);
           }
         }
-        function d(e, t, n) {
-          return new m(e, t, n);
+        function m(e, t, n) {
+          return new d(e, t, n);
         }
         class h {
           m_schTimer;
@@ -23048,37 +22575,37 @@ var CLSTAMP = "10520954";
       54644: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $e: () => k,
-          BA: () => O,
-          IB: () => y,
-          Kf: () => I,
+          $e: () => I,
+          BA: () => F,
+          IB: () => x,
+          Kf: () => R,
           MS: () => S,
           NO: () => s,
-          No: () => d,
+          No: () => m,
           OG: () => w,
-          Oe: () => T,
+          Oe: () => j,
           PX: () => L,
           SY: () => h,
           TN: () => a,
-          TV: () => E,
+          TV: () => y,
           UQ: () => l,
           WC: () => c,
           YQ: () => b,
-          _f: () => x,
+          _f: () => k,
           a_: () => p,
           bZ: () => u,
           ew: () => _,
           gr: () => C,
           id: () => o,
           kD: () => i,
-          lc: () => F,
+          lc: () => E,
           pE: () => B,
-          pd: () => m,
+          pd: () => d,
           qf: () => f,
           tl: () => M,
           uX: () => g,
           ww: () => v,
-          yU: () => R,
+          yU: () => T,
         });
         var r = n(736);
         function i(e) {
@@ -23152,7 +22679,7 @@ var CLSTAMP = "10520954";
             Math.sqrt(n * n + r * r)
           );
         }
-        function m(e, t) {
+        function d(e, t) {
           return {
             top: e.screenTop + t.top,
             bottom: e.screenTop + t.bottom,
@@ -23160,7 +22687,7 @@ var CLSTAMP = "10520954";
             right: e.screenLeft + t.right,
           };
         }
-        function d(e) {
+        function m(e) {
           return e.right - e.left;
         }
         function h(e) {
@@ -23262,10 +22789,10 @@ var CLSTAMP = "10520954";
                   ? t.mozCancelFullScreen()
                   : t.msExitFullscreen && t.msExitFullscreen();
         }
-        function y(e) {
+        function x(e) {
           return "INPUT" === e.nodeName;
         }
-        function E(e, t) {
+        function y(e, t) {
           switch (e) {
             case "TEXTAREA":
               return !0;
@@ -23305,7 +22832,7 @@ var CLSTAMP = "10520954";
           for (; r && r !== e && !r.hasAttribute(n); ) r = r.parentElement;
           return r || e;
         }
-        function x(e, t) {
+        function k(e, t) {
           let n = e?.parentElement;
           for (; n; ) {
             if (i(n)) {
@@ -23332,20 +22859,20 @@ var CLSTAMP = "10520954";
           }
           return i(n) ? n : null;
         }
-        function k(e, t) {
+        function I(e, t) {
           const n = [];
           let r = e;
-          for (; (r = x(r, t)); ) n.push(r);
+          for (; (r = k(r, t)); ) n.push(r);
           return n;
         }
-        function I(e, t) {
+        function R(e, t) {
           let n = e;
           for (; n; ) {
             if (t(n)) return n;
             n = n.parentElement;
           }
         }
-        function R() {
+        function T() {
           return (function (e) {
             const t = {};
             return (
@@ -23356,10 +22883,10 @@ var CLSTAMP = "10520954";
             );
           })(document);
         }
-        function T(e, t) {
-          F(e.document, t, !0);
+        function j(e, t) {
+          E(e.document, t, !0);
         }
-        function F(e, t, n) {
+        function E(e, t, n) {
           const r = Object.assign({}, t),
             i = e.getElementsByTagName("head")[0],
             s = i.getElementsByTagName("link"),
@@ -23380,7 +22907,7 @@ var CLSTAMP = "10520954";
           }
           return i.prepend(...a), a;
         }
-        function O(e, t) {
+        function F(e, t) {
           let n = e ?? null;
           for (; n && !n.contains(t); ) n = n.parentElement;
           return n;
@@ -23389,9 +22916,8 @@ var CLSTAMP = "10520954";
       46108: (e, t, n) => {
         "use strict";
         n.d(t, {
-          $w: () => u.$w,
           $z: () => u.$z,
-          A0: () => m,
+          A0: () => d,
           Hq: () => u.Hq,
           NT: () => M,
           Nm: () => u.Nm,
@@ -23400,11 +22926,10 @@ var CLSTAMP = "10520954";
           TW: () => u.TW,
           Yp: () => C,
           _l: () => u._l,
-          bi: () => y,
-          c9: () => d,
-          cc: () => u.cc,
+          bi: () => x,
+          c9: () => m,
           gR: () => u.gR,
-          l4: () => E,
+          l4: () => y,
           lQ: () => u.lQ,
           oW: () => _,
           pN: () => B,
@@ -23422,7 +22947,7 @@ var CLSTAMP = "10520954";
           c = n(85688),
           l = n(79769),
           u = n(11010);
-        class m {
+        class d {
           m_mapTokens = new Map();
           m_mapFallbackTokens = new Map();
           m_cbkTokensChanged = new l.lu();
@@ -23496,7 +23021,7 @@ var CLSTAMP = "10520954";
               }),
               e)
             ) {
-              m.GetLanguageListForRealms(e).forEach((e) => {
+              d.GetLanguageListForRealms(e).forEach((e) => {
                 -1 == t.indexOf(e) && t.push(e);
               });
             }
@@ -23524,10 +23049,10 @@ var CLSTAMP = "10520954";
             let r = this.m_mapTokens.get(e.substring(1));
             if (void 0 !== r) return r;
             !t &&
-              m.sm_ErrorReportingStore &&
+              d.sm_ErrorReportingStore &&
               !n &&
               this.m_bReportIndividualMissingTokens &&
-              m.sm_ErrorReportingStore.ReportError(
+              d.sm_ErrorReportingStore.ReportError(
                 new Error(
                   `Unable to find localization token '${e}' for language '${o.TS.LANGUAGE}', ${this.m_mapTokens.size} tokens in map`,
                 ),
@@ -23544,7 +23069,7 @@ var CLSTAMP = "10520954";
             const t = (0, i.sf)(o.TS.LANGUAGE),
               n = e.find((e) => e.language == t);
             if (n) return n.localized_string;
-            const r = m.GetELanguageFallback(t),
+            const r = d.GetELanguageFallback(t),
               s = e.find((e) => e.language == r);
             return s?.localized_string ?? "";
           }
@@ -23552,7 +23077,7 @@ var CLSTAMP = "10520954";
             return Boolean(t.find((t) => t.language == e));
           }
         }
-        function d(e) {
+        function m(e) {
           return null != L.LocalizeString(e, !0);
         }
         function h(e, ...t) {
@@ -23639,7 +23164,7 @@ var CLSTAMP = "10520954";
           }
           static GetWithFallback(e, t) {
             if (e) {
-              return M.Get(e, t) || M.Get(e, m.GetELanguageFallback(t));
+              return M.Get(e, t) || M.Get(e, d.GetELanguageFallback(t));
             }
             return null;
           }
@@ -23681,7 +23206,7 @@ var CLSTAMP = "10520954";
             sc_schinese: "zh-cn",
             koreana: "ko",
           },
-          y = {
+          x = {
             "en-US": 0,
             "de-DE": 1,
             "fr-FR": 2,
@@ -23713,7 +23238,7 @@ var CLSTAMP = "10520954";
             "vi-VN": 28,
             "id-ID": 30,
           };
-        function E() {
+        function y() {
           return S[o.TS.LANGUAGE] || null;
         }
         function B(e) {
@@ -23737,15 +23262,15 @@ var CLSTAMP = "10520954";
             n
           );
         }
-        const L = new m();
+        const L = new d();
         window.LocalizationManager = L;
       },
       11010: (e, t, n) => {
         "use strict";
         n.d(t, {
           $w: () => B,
-          $z: () => m,
-          CC: () => d,
+          $z: () => d,
+          CC: () => m,
           Hq: () => c,
           KC: () => p,
           Nm: () => a,
@@ -23753,14 +23278,13 @@ var CLSTAMP = "10520954";
           R2: () => T,
           TW: () => l,
           Vx: () => u,
-          _9: () => E,
+          _9: () => y,
           _l: () => f,
           a8: () => r,
-          cc: () => L,
-          dt: () => D,
+          dt: () => F,
           gR: () => b,
           lQ: () => w,
-          qZ: () => A,
+          qZ: () => O,
           sq: () => I,
           u6: () => R,
           vl: () => k,
@@ -23878,7 +23402,7 @@ var CLSTAMP = "10520954";
                   o.getFullYear() != r.getFullYear() ||
                   n
                 )
-                  return `${m(e)} - ${m(t)}`;
+                  return `${d(e)} - ${d(t)}`;
                 const a = { month: "short", day: "numeric" },
                   c =
                     r.toLocaleDateString(s.pf.GetPreferredLocales(), a) + " - ";
@@ -23891,14 +23415,14 @@ var CLSTAMP = "10520954";
                 return c + i.toLocaleDateString(s.pf.GetPreferredLocales(), a);
               })(e, t);
         }
-        function m(e, t) {
+        function d(e, t) {
           const n = { year: "numeric", month: "short", day: "numeric", ...t };
           return new Date(1e3 * e).toLocaleDateString(
             s.pf.GetPreferredLocales(),
             n,
           );
         }
-        function d(e) {
+        function m(e) {
           return I(new Date(1e3 * e));
         }
         !(function (e) {
@@ -23935,7 +23459,7 @@ var CLSTAMP = "10520954";
         function f(e, t, n = !0, r = !0, o = !1) {
           const a = new Date(),
             c = new Date(1e3 * e);
-          if (c.getFullYear() != a.getFullYear()) return m(e);
+          if (c.getFullYear() != a.getFullYear()) return d(e);
           r && i.tB(new Date().setHours(24, 0, 0, 0) - a.getTime());
           const l = new Date();
           if ((l.setHours(0, 0, 0, 0), n))
@@ -23948,18 +23472,18 @@ var CLSTAMP = "10520954";
               return (0, s.we)("#Time_Yesterday");
           const u = { month: t ? "long" : "short", day: "numeric" };
           o && (u.weekday = "long");
-          const d = c.setHours(0, 0, 0, 0) + u.month;
-          let h = g.get(d);
+          const m = c.setHours(0, 0, 0, 0) + u.month;
+          let h = g.get(m);
           return (
             h ||
             ((h = c.toLocaleDateString(s.pf.GetPreferredLocales(), u)),
-            g.set(d, h),
+            g.set(m, h),
             h)
           );
         }
         function _(e, t, n, r) {
           return (
-            E(new Date(1e3 * e), !1, !1) +
+            y(new Date(1e3 * e), !1, !1) +
             " " +
             p(e, { bForce24HourClock: t }, { timeZone: r }) +
             " " +
@@ -23984,7 +23508,7 @@ var CLSTAMP = "10520954";
             if (!a.bGranularFutureTime)
               return (
                 i.tB(n.getTime() - r.getTime()),
-                n.getFullYear() == r.getFullYear() ? x(n) : I(n)
+                n.getFullYear() == r.getFullYear() ? L(n) : I(n)
               );
             i.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
             let e = new Date();
@@ -23997,7 +23521,20 @@ var CLSTAMP = "10520954";
                   n < e
                     ? (0, s.we)("#Time_Tomorrow")
                     : (e.setDate(e.getDate() + 5),
-                      n < e ? L(n) : B(n, !0, a.bAbbreviateDayOfWeek)))
+                      n < e
+                        ? (function (e) {
+                            let t = C.get(e.getDay());
+                            return (
+                              t ||
+                              ((t = e.toLocaleDateString(
+                                s.pf.GetPreferredLocales(),
+                                { weekday: "long" },
+                              )),
+                              C.set(e.getDay(), t),
+                              t)
+                            );
+                          })(n)
+                        : B(n, !0, a.bAbbreviateDayOfWeek)))
             );
           }
           i.tB(new Date().setHours(24, 0, 0, 0) - r.getTime());
@@ -24040,7 +23577,7 @@ var CLSTAMP = "10520954";
               ? (0, s.we)("#TimeSince_1Week")
               : (0, s.we)("#TimeSince_XWeeks", e);
           }
-          return n.getFullYear() == r.getFullYear() ? x(n) : I(n);
+          return n.getFullYear() == r.getFullYear() ? L(n) : I(n);
         }
         function b(e) {
           const t = new Date(1e3 * e),
@@ -24053,7 +23590,7 @@ var CLSTAMP = "10520954";
             t >= r
               ? (0, s.we)("#Time_Recent")
               : t.getFullYear() == n.getFullYear()
-                ? x(t)
+                ? L(t)
                 : n.getMonth() < 6 && t.getFullYear() == n.getFullYear() - 1
                   ? I(t)
                   : k(t)
@@ -24063,9 +23600,9 @@ var CLSTAMP = "10520954";
           v = new Map(),
           M = new Map(),
           S = new Map(),
-          y = new Map();
+          x = new Map();
         new Map();
-        function E(e, t = !1, n = !0) {
+        function y(e, t = !1, n = !0) {
           const r = {
               weekday: n ? "long" : "short",
               day: "numeric",
@@ -24073,11 +23610,11 @@ var CLSTAMP = "10520954";
               year: "numeric",
             },
             i = e.setHours(0, 0, 0, 0) + r.weekday + r.month;
-          let o = y.get(i);
+          let o = x.get(i);
           return (
             o ||
             ((o = e.toLocaleDateString(s.pf.GetPreferredLocales(), r)),
-            y.set(i, o),
+            x.set(i, o),
             o)
           );
         }
@@ -24088,26 +23625,15 @@ var CLSTAMP = "10520954";
               month: t ? "long" : "short",
             },
             i = e.setHours(0, 0, 0, 0) + r.weekday + r.month;
-          let o = y.get(i);
+          let o = x.get(i);
           return (
             o ||
             ((o = e.toLocaleDateString(s.pf.GetPreferredLocales(), r)),
-            y.set(i, o),
+            x.set(i, o),
             o)
           );
         }
         function L(e) {
-          let t = C.get(e.getDay());
-          return (
-            t ||
-            ((t = e.toLocaleDateString(s.pf.GetPreferredLocales(), {
-              weekday: "long",
-            })),
-            C.set(e.getDay(), t),
-            t)
-          );
-        }
-        function x(e) {
           let t = v.get(e.getMonth());
           return (
             t ||
@@ -24213,11 +23739,11 @@ var CLSTAMP = "10520954";
                       )
           );
         }
-        function F(e, t, n) {
+        function j(e, t, n) {
           for (; e.length < t; ) e = n + e;
           return e;
         }
-        function O(e) {
+        function E(e) {
           return (
             (void 0 === e || isNaN(e)) && (e = 0),
             {
@@ -24228,9 +23754,9 @@ var CLSTAMP = "10520954";
             }
           );
         }
-        function D(e, t, n) {
+        function F(e, t, n) {
           let r = e < 0;
-          const i = O((e = r ? 0 - e : e)),
+          const i = E((e = r ? 0 - e : e)),
             o = i.fraction.toFixed(2).split(".")[1],
             a = t ?? !0;
           let c = !a || "00" == o;
@@ -24243,15 +23769,15 @@ var CLSTAMP = "10520954";
           let l = "";
           if (i.hours) {
             const e = i.hours.toString(),
-              t = F(i.minutes.toString(), 2, "0"),
-              n = F(i.seconds.toString(), 2, "0"),
+              t = j(i.minutes.toString(), 2, "0"),
+              n = j(i.seconds.toString(), 2, "0"),
               r = a
                 ? "#Duration_Abbreviation_HourMinuteSecondMillisecond"
                 : "#Duration_Abbreviation_HourMinuteSecond";
             l = (0, s.we)(r, e, t, n, o);
           } else if (i.minutes) {
             const e = i.minutes.toString(),
-              t = F(i.seconds.toString(), 2, "0"),
+              t = j(i.seconds.toString(), 2, "0"),
               n = a
                 ? "#Duration_Abbreviation_MinuteSecondMillisecond"
                 : "#Duration_Abbreviation_MinuteSecond";
@@ -24268,10 +23794,10 @@ var CLSTAMP = "10520954";
             l
           );
         }
-        function A(e, t, n) {
+        function O(e, t, n) {
           let r = e < 0;
-          const i = O((e = r ? 0 - e : e)),
-            o = F(i.seconds.toString(), 2, "0"),
+          const i = E((e = r ? 0 - e : e)),
+            o = j(i.seconds.toString(), 2, "0"),
             a = i.fraction.toFixed(2).split(".")[1],
             c = t ?? !0;
           let l = !c || "00" == a;
@@ -24283,7 +23809,7 @@ var CLSTAMP = "10520954";
             (r = !1);
           let u = "";
           if (i.hours) {
-            const e = F(i.minutes.toString(), 2, "0"),
+            const e = j(i.minutes.toString(), 2, "0"),
               t = c
                 ? "#Duration_HourMinuteSecondMillisecond"
                 : "#Duration_HourMinuteSecond";
@@ -24303,25 +23829,24 @@ var CLSTAMP = "10520954";
       },
       83599: (e, t, n) => {
         "use strict";
-        n.d(t, { $b: () => r, fi: () => l, wd: () => c });
+        n.d(t, { $b: () => r, fi: () => c, wd: () => a });
         var r,
           i = n(34629),
           s = n(93960),
-          o = n(73870),
-          a = n(90039);
+          o = n(90039);
         !(function (e) {
           (e[(e.Debug = 0)] = "Debug"),
             (e[(e.Info = 1)] = "Info"),
             (e[(e.Warning = 2)] = "Warning"),
             (e[(e.Error = 3)] = "Error");
         })(r || (r = {}));
-        class c {
+        class a {
           m_sName;
           m_fnIdGenerator = void 0;
           constructor(e, t) {
             (this.m_sName = e),
               (this.m_fnIdGenerator = t),
-              l.Get().RegisterLogName(e);
+              c.Get().RegisterLogName(e);
           }
           Debug(...e) {
             this.Log(r.Debug, ...e);
@@ -24339,37 +23864,35 @@ var CLSTAMP = "10520954";
             e || this.Log(r.Error, "Assertion failed:", ...t);
           }
           IsDebugEnabled() {
-            return l.Get().IsDebugLogEnabled(this.m_sName);
+            return c.Get().IsDebugLogEnabled(this.m_sName);
           }
           Log(e, ...t) {
-            const n = l.Get().IsDebugLogEnabled(this.m_sName);
+            const n = c.Get().IsDebugLogEnabled(this.m_sName);
             if (e == r.Debug && !n) return;
             let i = this.m_sName;
             const s = this.m_fnIdGenerator?.() ?? null;
             null != s && (i += " (" + s + ")");
-            u(e, n, l.Get().IncludeBacktraceInLog, i, this.m_sName, ...t);
+            l(e, n, c.Get().IncludeBacktraceInLog, i, this.m_sName, ...t);
           }
         }
-        (0, i.Cg)([s.o], c.prototype, "Debug", null),
-          (0, i.Cg)([s.o], c.prototype, "Info", null),
-          (0, i.Cg)([s.o], c.prototype, "Warning", null),
-          (0, i.Cg)([s.o], c.prototype, "Error", null),
-          (0, i.Cg)([s.o], c.prototype, "Assert", null);
-        class l {
+        (0, i.Cg)([s.o], a.prototype, "Debug", null),
+          (0, i.Cg)([s.o], a.prototype, "Info", null),
+          (0, i.Cg)([s.o], a.prototype, "Warning", null),
+          (0, i.Cg)([s.o], a.prototype, "Error", null),
+          (0, i.Cg)([s.o], a.prototype, "Assert", null);
+        class c {
           static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
           static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
-          static s_Singleton = null;
-          m_Storage = null;
           m_setKnownDebugLogs = new Set();
           m_setEnabledDebugLogs = new Set();
           m_bIncludeBacktraceInLog = !1;
-          m_SettingsChangedCallback = new a.l();
-          m_bLoading = !1;
+          m_SettingsChangedCallback = new o.l();
+          m_bLoading = !0;
           constructor() {
-            (this.m_Storage = new o.A()), this.LoadSettings();
+            this.LoadSettings();
           }
           LogAsLogManager(...e) {
-            u(
+            l(
               r.Info,
               !0,
               this.IncludeBacktraceInLog,
@@ -24379,17 +23902,21 @@ var CLSTAMP = "10520954";
             );
           }
           async LoadSettings() {
-            (this.m_bLoading = !0),
-              (this.m_bIncludeBacktraceInLog =
-                !!(await this.m_Storage?.GetObject(
-                  l.k_IncludeBacktraceInLog_StorageKey,
-                )));
-            const e = await this.m_Storage?.GetObject(
-              l.k_EnabledLogNames_StorageKey,
+            const e = (e) => {
+              try {
+                const t = localStorage.getItem(e);
+                return t ? JSON.parse(t) : void 0;
+              } catch {
+                return;
+              }
+            };
+            this.m_bIncludeBacktraceInLog = !!e(
+              c.k_IncludeBacktraceInLog_StorageKey,
             );
-            if (Array.isArray(e)) {
-              this.m_setEnabledDebugLogs = new Set(e);
-              for (const t of e) this.m_setKnownDebugLogs.add(t);
+            const t = e(c.k_EnabledLogNames_StorageKey);
+            if (Array.isArray(t)) {
+              this.m_setEnabledDebugLogs = new Set(t);
+              for (const e of t) this.m_setKnownDebugLogs.add(e);
               this.LogAsLogManager(
                 "Loaded debug enabled log names. Will print log messages for:",
                 Array.from(this.m_setEnabledDebugLogs),
@@ -24398,28 +23925,34 @@ var CLSTAMP = "10520954";
             (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
           }
           async SaveSettings() {
-            await this.m_Storage?.StoreObject(
-              l.k_EnabledLogNames_StorageKey,
-              Array.from(this.m_setEnabledDebugLogs),
+            localStorage.setItem(
+              c.k_EnabledLogNames_StorageKey,
+              JSON.stringify(Array.from(this.m_setEnabledDebugLogs)),
             ),
-              await this.m_Storage?.StoreObject(
-                l.k_IncludeBacktraceInLog_StorageKey,
-                this.m_bIncludeBacktraceInLog,
+              localStorage.setItem(
+                c.k_IncludeBacktraceInLog_StorageKey,
+                JSON.stringify(this.m_bIncludeBacktraceInLog),
               ),
               this.LogAsLogManager(
                 "Saved enabled debug log names. Will print log messages for:",
                 Array.from(this.m_setEnabledDebugLogs),
               );
           }
-          PrintEnabledLogs() {
-            this.LogAsLogManager(
-              "Will print log messages for:",
-              Array.from(this.m_setEnabledDebugLogs),
-            );
+          PrintEnabledLogs(...e) {
+            e &&
+              e.length > 0 &&
+              console.warn(
+                `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
+              ),
+              this.LogAsLogManager(
+                "Will print log messages for:",
+                Array.from(this.m_setEnabledDebugLogs),
+              );
           }
           static Get() {
             return (
-              null == l.s_Singleton && (l.s_Singleton = new l()), l.s_Singleton
+              null == window.g_LogManager && (window.g_LogManager = new c()),
+              window.g_LogManager
             );
           }
           get Loading() {
@@ -24441,11 +23974,19 @@ var CLSTAMP = "10520954";
             this.SetDebugLogEnabled(e, !this.IsDebugLogEnabled(e));
           }
           async SetDebugLogEnabled(e, t) {
-            t
-              ? this.m_setEnabledDebugLogs.add(e)
-              : this.m_setEnabledDebugLogs.delete(e),
-              this.m_SettingsChangedCallback.Dispatch(),
-              await this.SaveSettings();
+            this.IsLogName(e)
+              ? (t
+                  ? this.m_setEnabledDebugLogs.add(e)
+                  : this.m_setEnabledDebugLogs.delete(e),
+                this.m_SettingsChangedCallback.Dispatch(),
+                await this.SaveSettings())
+              : console.warn(
+                  `No log named "${e}", available logs:`,
+                  this.GetLogNames(),
+                );
+          }
+          async SetDebugLogsEnabled(e, ...t) {
+            t.forEach((t) => this.SetDebugLogEnabled(t, e));
           }
           async SetAllDebugLogsEnabled(e) {
             (this.m_setEnabledDebugLogs = e
@@ -24465,13 +24006,16 @@ var CLSTAMP = "10520954";
               this.m_SettingsChangedCallback.Dispatch(),
               await this.SaveSettings();
           }
+          GetLogNames() {
+            return Array.from(this.LogNames).sort();
+          }
         }
-        function u(e, t, n, i, s, ...o) {
+        function l(e, t, n, i, s, ...o) {
           const a = (function (e) {
               let t = 0;
               for (let n = 0; n < e.length; n++)
                 t = e.charCodeAt(n) + ((t << 5) - t);
-              return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
+              return [255 & t, (t >> 8) & 255, (t >> 16) & 255];
             })(s).map((e, t) =>
               Math.round(
                 Math.max(
@@ -24499,17 +24043,17 @@ var CLSTAMP = "10520954";
               })(e) +
               " " +
               u);
-          const m =
+          const d =
               o.length >= 1 && "string" == typeof o[0] && o[0].includes("%c"),
-            d = m && o.shift();
+            m = d && o.shift();
           let h;
           if (
             ((h = t
               ? [
-                  `%c${u}%c:${m ? " %c" + d : ""}`,
+                  `%c${u}%c:${d ? " %c" + m : ""}`,
                   `color: ${c ? "black" : "white"}; background: rgb(${a.join(",")}); padding: 0 1ch; border-radius: 3px;`,
                   "color: transparent; margin-right: -1ch",
-                  ...(m ? [""] : []),
+                  ...(d ? [""] : []),
                   ...o,
                 ]
               : o),
@@ -24533,31 +24077,21 @@ var CLSTAMP = "10520954";
                   : console.error(...h);
             }
         }
-        const m = () => [...l.Get().LogNames].sort(),
-          d = (e, t) => {
-            l.Get().IsLogName(e)
-              ? l.Get().SetDebugLogEnabled(e, t)
-              : console.warn(`No log named "${e}", available logs:`, m());
-          };
-        (window.DebugLogEnable = (...e) => e.forEach((e) => d(e, !0))),
-          (window.DebugLogDisable = (...e) => e.forEach((e) => d(e, !1))),
-          (window.DebugLogEnableAll = () => l.Get().SetAllDebugLogsEnabled(!0)),
+        (window.DebugLogEnable = (...e) =>
+          c.Get().SetDebugLogsEnabled(!0, ...e)),
+          (window.DebugLogDisable = (...e) =>
+            c.Get().SetDebugLogsEnabled(!1, ...e)),
+          (window.DebugLogEnableAll = () => c.Get().SetAllDebugLogsEnabled(!0)),
           (window.DebugLogDisableAll = () =>
-            l.Get().SetAllDebugLogsEnabled(!1)),
+            c.Get().SetAllDebugLogsEnabled(!1)),
           (window.DebugLogEnableBacktrace = () =>
-            l.Get().SetIncludeBacktraceInLog(!0)),
+            c.Get().SetIncludeBacktraceInLog(!0)),
           (window.DebugLogDisableBacktrace = () =>
-            l.Get().SetIncludeBacktraceInLog(!1)),
-          (window.DebugLogNames = m),
-          (window.DebugLogEnabled = (...e) => {
-            e.length > 0 &&
-              console.warn(
-                `Use DebugLogEnable( '${e.join("', '")}' ) to enable a log. This function tells you what's enabled.`,
-              ),
-              l.Get().PrintEnabledLogs();
-          }),
+            c.Get().SetIncludeBacktraceInLog(!1)),
+          (window.DebugLogNames = () => c.Get().GetLogNames()),
+          (window.DebugLogEnabled = (...e) => c.Get().PrintEnabledLogs(...e)),
           (window.EnableSteamConsole = (e = !0) =>
-            l.Get().SetDebugLogEnabled("SteamClient", e));
+            c.Get().SetDebugLogEnabled("SteamClient", e));
       },
       87197: (e, t, n) => {
         "use strict";
@@ -24579,14 +24113,14 @@ var CLSTAMP = "10520954";
           md: () => s.md,
           Fd: () => s.Fd,
           XB: () => i.XB,
-          oI: () => d.o,
+          oI: () => m.o,
           xP: () => r.xP,
           cZ: () => i.cZ,
           hL: () => r.hL,
           dh: () => r.dh,
           uN: () => r.uN,
           o4: () => r.o4,
-          w6: () => m,
+          w6: () => d,
           ML: () => r.ML,
           xA: () => r.xA,
           CH: () => r.CH,
@@ -24670,7 +24204,7 @@ var CLSTAMP = "10520954";
             [e],
           );
         }
-        function m(e) {
+        function d(e) {
           const t = o.useRef(!0),
             n = o.useRef(void 0),
             r = o.useRef(void 0),
@@ -24689,17 +24223,17 @@ var CLSTAMP = "10520954";
           o.useLayoutEffect(() => {
             t.current && (u(), (t.current = !1));
           });
-          const m = (0, s.wY)(u);
-          return (0, i.Ue)(l, m);
+          const d = (0, s.wY)(u);
+          return (0, i.Ue)(l, d);
         }
-        var d = n(93960);
+        var m = n(93960);
       },
       99251: (e, t, n) => {
         "use strict";
         n.d(t, {
           BL: () => l,
-          Fd: () => m,
-          md: () => d,
+          Fd: () => d,
+          md: () => m,
           p1: () => u,
           wY: () => c,
         });
@@ -24745,11 +24279,11 @@ var CLSTAMP = "10520954";
         function u() {
           return c((0, s.CH)());
         }
-        function m(e, ...t) {
+        function d(e, ...t) {
           const n = new e.ownerDocument.defaultView.ResizeObserver(...t);
           return n.observe(e), n;
         }
-        function d(e, ...t) {
+        function m(e, ...t) {
           const n = new e.ownerDocument.defaultView.IntersectionObserver(...t);
           return n.observe(e), n;
         }
@@ -24817,8 +24351,8 @@ var CLSTAMP = "10520954";
           DZ: () => h,
           IT: () => o,
           L$: () => a,
-          Ln: () => d,
-          NT: () => m,
+          Ln: () => m,
+          NT: () => d,
           Ps: () => u,
           Qz: () => s,
           ZF: () => c,
@@ -24944,7 +24478,7 @@ var CLSTAMP = "10520954";
             return "";
           }
         }
-        function m(e, t) {
+        function d(e, t) {
           return (
             r.TS.IN_STEAMUI &&
               !e.startsWith("steam://") &&
@@ -24954,7 +24488,7 @@ var CLSTAMP = "10520954";
             e
           );
         }
-        function d(e) {
+        function m(e) {
           return "steam://close" == e || "steam://close/" == e;
         }
         function h(e) {
@@ -25064,11 +24598,11 @@ var CLSTAMP = "10520954";
           Fd: () => c.Fd,
           GP: () => o.GP,
           Hn: () => S,
-          IW: () => y,
+          IW: () => x,
           NQ: () => L,
           Pr: () => v,
           QO: () => l,
-          Qn: () => d,
+          Qn: () => m,
           TL: () => _,
           TS: () => o.TS,
           Tc: () => c.Tc,
@@ -25081,12 +24615,12 @@ var CLSTAMP = "10520954";
           iA: () => o.iA,
           oS: () => c.oS,
           rP: () => u,
-          rf: () => E,
-          ss: () => m,
+          rf: () => y,
+          ss: () => d,
           td: () => C,
           uI: () => f,
-          xv: () => x,
-          yK: () => k,
+          xv: () => k,
+          yK: () => I,
         });
         var r = n(63696),
           i = n(28987),
@@ -25105,21 +24639,21 @@ var CLSTAMP = "10520954";
               t
             );
           };
-        function m(e) {
+        function d(e) {
           const { IN_GAMEPADUI: t, IN_DESKTOPUI: n, IN_VR: i, children: s } = e,
             c = u({ bSuppressAssert: !0 }),
-            m = (0, a.OO)()?.startsWith("Gamepad VR"),
-            d = r.useMemo(
+            d = (0, a.OO)()?.startsWith("Gamepad VR"),
+            m = r.useMemo(
               () => ({
                 IN_GAMEPADUI: t ?? c?.IN_GAMEPADUI ?? o.TS.IN_GAMEPADUI,
                 IN_DESKTOPUI: n ?? c?.IN_DESKTOPUI ?? !1,
-                IN_VR: i ?? c?.IN_VR ?? m,
+                IN_VR: i ?? c?.IN_VR ?? d,
               }),
-              [c, t, n, i, m],
+              [c, t, n, i, d],
             );
-          return r.createElement(l.Provider, { value: d }, s);
+          return r.createElement(l.Provider, { value: m }, s);
         }
-        function d(e) {
+        function m(e) {
           const t = u(e);
           return t?.IN_GAMEPADUI;
         }
@@ -25132,7 +24666,7 @@ var CLSTAMP = "10520954";
           return t?.IN_VR;
         }
         function g(e) {
-          return d(e) ? 4 : 7;
+          return m(e) ? 4 : 7;
         }
         function f() {
           return o.TS.ON_DECK;
@@ -25163,17 +24697,17 @@ var CLSTAMP = "10520954";
         function S() {
           return o.TS.IN_CHROMEOS;
         }
-        function y(e) {
+        function x(e) {
           return e?.IN_GAMEPADUI;
         }
-        function E() {
+        function y() {
           return o.TS.ON_STEAMOS;
         }
         function B(e, t) {
           return 0 != t.length && e.startsWith(t);
         }
         const L = "unknown";
-        function x() {
+        function k() {
           if (!window || !window.location || !window.location.href)
             return console.warn("Unable to determine base url!"), L;
           const e = window.location.href;
@@ -25199,22 +24733,8 @@ var CLSTAMP = "10520954";
                               ? "https://steamloopback.host"
                               : "";
         }
-        function k() {
-          const e = window.location.href;
-          return B(e, o.TS.STORE_BASE_URL) || B(e, o.TS.STORE_CHECKOUT_BASE_URL)
-            ? "store"
-            : B(e, o.TS.COMMUNITY_BASE_URL)
-              ? "community"
-              : B(e, o.TS.PARTNER_BASE_URL)
-                ? "partnerweb"
-                : B(e, o.TS.HELP_BASE_URL)
-                  ? "help"
-                  : B(e, o.TS.STEAMTV_BASE_URL)
-                    ? "steamtv"
-                    : B(e, o.TS.STATS_BASE_URL) ||
-                        B(e, o.TS.INTERNAL_STATS_BASE_URL)
-                      ? "stats"
-                      : "";
+        function I() {
+          return "steamui";
         }
       },
       43691: (e, t, n) => {
@@ -25290,6 +24810,7 @@ var CLSTAMP = "10520954";
             USE_LONGEST_LOC_STRING: !1,
             SILENT_STARTUP: !1,
             CLIENT_SESSION: 0,
+            NOW: 0,
           },
           s = {
             logged_in: !1,
@@ -25329,7 +24850,7 @@ var CLSTAMP = "10520954";
           Fd: () => g,
           KC: () => c,
           Tc: () => p,
-          bd: () => d,
+          bd: () => m,
           bf: () => l,
           oS: () => h,
         });
@@ -25352,16 +24873,16 @@ var CLSTAMP = "10520954";
           return (0, i.lc)("sessionid", e, 0), e;
         }
         let u = new Set(),
-          m = !1;
-        function d() {
-          return m
+          d = !1;
+        function m() {
+          return d
             ? Promise.resolve()
             : new Promise((e) => {
                 u.add(e);
               });
         }
         function h() {
-          m || ((m = !0), u.forEach((e) => e()));
+          d || ((d = !0), u.forEach((e) => e()));
         }
         function p(e, t = o) {
           return f(e, t, !0);
@@ -25377,9 +24898,9 @@ var CLSTAMP = "10520954";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Mar 12 2026 : 18:30:12",
-                    BUILD_TIME_UTC: "Mar 13 2026 : 01:30:12",
-                    BUILD_RTIME_UTC: 1773365412,
+                    BUILD_TIME_LOCAL: "Mar 19 2026 : 17:02:06",
+                    BUILD_TIME_UTC: "Mar 20 2026 : 00:02:06",
+                    BUILD_RTIME_UTC: 1773964926,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -25414,7 +24935,7 @@ var CLSTAMP = "10520954";
       },
       67784: (e, t, n) => {
         "use strict";
-        n.d(t, { $W: () => m, Ae: () => u, MP: () => d, OO: () => h });
+        n.d(t, { $W: () => d, Ae: () => u, MP: () => m, OO: () => h });
         let r = !1,
           i = !1,
           s = !1,
@@ -25425,10 +24946,10 @@ var CLSTAMP = "10520954";
         function u() {
           return r || g(), c;
         }
-        function m() {
+        function d() {
           return u() || (r || g(), a);
         }
-        function d() {
+        function m() {
           if ((r || g(), !i && !s)) return 0;
           if ("undefined" != typeof navigator && navigator.userAgent) {
             let e = navigator.userAgent.match(
@@ -25548,126 +25069,116 @@ var CLSTAMP = "10520954";
       },
       69823: (e, t, n) => {
         "use strict";
-        n.d(t, { Q: () => R });
-        var r = n(63696),
-          i = n(7470),
-          s = n(90095),
-          o = n(90765),
-          a = n(3586),
-          c = n.n(a),
-          l = n(26853),
-          u = n(72476),
+        n.d(t, { Q: () => j });
+        var r = n(62540),
+          i = n(63696),
+          s = n(7470),
+          o = n(90095),
+          a = n(90765),
+          c = n(3586),
+          l = n.n(c),
+          u = n(26853),
+          d = n(72476),
           m = n(80986),
-          d = n(46108),
-          h = n(44846),
-          p = n(28987),
-          g = n(37905);
-        const f = "steam-dev-configparams";
-        function _(e) {
+          h = n(46108),
+          p = n(44846),
+          g = n(28987),
+          f = n(37905);
+        const _ = "steam-dev-configparams";
+        function w(e) {
           return "true" === e || ("false" !== e && (Number(e) || e));
         }
-        var w = n(73788),
-          b = n(21371),
-          C = n(42318),
-          v = n(46382),
-          M = n(51115),
-          S = n(88696),
+        var b = n(73788),
+          C = n(21371),
+          v = n(42318),
+          M = n(46382),
+          S = n(51115),
+          x = n(88696),
           y = n(85688),
-          E = n(91435),
-          B = n(24295),
-          L = n(72905);
-        const x = r.lazy(() =>
+          B = n(91435),
+          L = n(24295),
+          k = n(72905);
+        const I = i.lazy(() =>
             Promise.all([n.e(8732), n.e(9858)]).then(n.bind(n, 26326)),
           ),
-          k = r.lazy(() =>
+          R = i.lazy(() =>
             Promise.all([n.e(8732), n.e(9858), n.e(3714)]).then(
               n.bind(n, 61855),
             ),
           ),
-          I = "is-first-client-load";
-        function R() {
-          return "false" !== sessionStorage.getItem(I);
+          T = "is-first-client-load";
+        function j() {
+          return "false" !== sessionStorage.getItem(T);
         }
-        function T() {
-          return r.createElement(
-            "div",
-            { className: (0, o.A)(c().Container, c().PreloadThrobber) },
-            r.createElement(l.t, { size: "xlarge", static: !0 }),
-            r.createElement(
-              "div",
-              { className: c().ThreeDots },
-              r.createElement("div", {
-                className: (0, o.A)(c().Dot, c().Dot1),
+        function E() {
+          return (0, r.jsxs)("div", {
+            className: (0, a.A)(l().Container, l().PreloadThrobber),
+            children: [
+              (0, r.jsx)(u.t, { size: "xlarge", static: !0 }),
+              (0, r.jsxs)("div", {
+                className: l().ThreeDots,
+                children: [
+                  (0, r.jsx)("div", { className: (0, a.A)(l().Dot, l().Dot1) }),
+                  (0, r.jsx)("div", { className: (0, a.A)(l().Dot, l().Dot2) }),
+                  (0, r.jsx)("div", { className: (0, a.A)(l().Dot, l().Dot3) }),
+                ],
               }),
-              r.createElement("div", {
-                className: (0, o.A)(c().Dot, c().Dot2),
-              }),
-              r.createElement("div", {
-                className: (0, o.A)(c().Dot, c().Dot3),
-              }),
-            ),
-          );
+            ],
+          });
         }
         function F(e) {
           const { cm: t } = e;
           let n = null;
           return (
-            u.TS.IN_LOGIN || u.TS.IN_LOGIN_REFRESH
-              ? (n = r.createElement(
-                  r.Suspense,
-                  { fallback: r.createElement(T, null) },
-                  r.createElement(
-                    C.tH,
-                    null,
-                    r.createElement(
-                      L.Ay,
-                      { domain: "steamclient" },
-                      r.createElement(
-                        u.ss,
-                        { IN_DESKTOPUI: !1, IN_GAMEPADUI: !1, IN_VR: !1 },
-                        r.createElement(
-                          E.EO,
-                          null,
-                          r.createElement(x, { cm: t }),
-                        ),
-                      ),
-                    ),
-                  ),
-                ))
+            d.TS.IN_LOGIN || d.TS.IN_LOGIN_REFRESH
+              ? (n = (0, r.jsx)(i.Suspense, {
+                  fallback: (0, r.jsx)(E, {}),
+                  children: (0, r.jsx)(v.tH, {
+                    children: (0, r.jsx)(k.Ay, {
+                      domain: "steamclient",
+                      children: (0, r.jsx)(d.ss, {
+                        IN_DESKTOPUI: !1,
+                        IN_GAMEPADUI: !1,
+                        IN_VR: !1,
+                        children: (0, r.jsx)(B.EO, {
+                          children: (0, r.jsx)(I, { cm: t }),
+                        }),
+                      }),
+                    }),
+                  }),
+                }))
               : ((0, y.wT)(
-                  u.TS.IN_STEAMUI_SHARED_CONTEXT,
+                  d.TS.IN_STEAMUI_SHARED_CONTEXT,
                   "nosteamuisharedjscontext is no longer supported!",
                 ),
-                (n = r.createElement(
-                  r.Suspense,
-                  { fallback: null },
-                  r.createElement(k, { cm: t }),
-                ))),
-            r.createElement(
-              b.s,
-              { debug: !0, steamUI: !0 },
-              r.createElement(O, { cm: t }, n),
-            )
+                (n = (0, r.jsx)(i.Suspense, {
+                  fallback: null,
+                  children: (0, r.jsx)(R, { cm: t }),
+                }))),
+            (0, r.jsx)(C.s, {
+              debug: !0,
+              steamUI: !0,
+              children: (0, r.jsx)(O, { cm: t, children: n }),
+            })
           );
         }
         function O(e) {
           const { cm: t, children: n } = e,
-            i = r.useCallback(() => t, [t]),
-            o = (0, M.bs)(() => new S.A()),
-            a = (0, s.q3)(() => t.steamid.ConvertTo64BitString()),
-            c = r.useMemo(() => ({ useActiveAccount: () => a }), [a]);
-          return r.createElement(
-            B.Rh,
-            { value: c },
-            r.createElement(
-              v.VQ,
-              { useActiveCMInterface: i, useStorage: o },
-              n,
-            ),
-          );
+            s = i.useCallback(() => t, [t]),
+            a = (0, S.bs)(() => new x.A()),
+            c = (0, o.q3)(() => t.steamid.ConvertTo64BitString()),
+            l = i.useMemo(() => ({ useActiveAccount: () => c }), [c]);
+          return (0, r.jsx)(L.Rh, {
+            value: l,
+            children: (0, r.jsx)(M.VQ, {
+              useActiveCMInterface: s,
+              useStorage: a,
+              children: n,
+            }),
+          });
         }
         (function () {
-          (window.cm = new w.ij()),
+          (window.cm = new b.ij()),
             (function () {
               let e = "";
               if (
@@ -25675,44 +25186,44 @@ var CLSTAMP = "10520954";
                   (e) => -1 != window.location.pathname.indexOf(e),
                 )
                   ? ((e = window.location.search),
-                    sessionStorage.setItem(f, e),
+                    sessionStorage.setItem(_, e),
                     console.log("Storing new config params", e))
-                  : ((e = sessionStorage.getItem(f)),
+                  : ((e = sessionStorage.getItem(_)),
                     console.log("Loading previous config params", e)),
                 e)
               ) {
                 const t = m.parse(e.slice(1));
                 for (const e in t)
-                  -1 !== Object.getOwnPropertyNames(u.TS).indexOf(e)
-                    ? (u.TS[e] = _(t[e]))
-                    : -1 !== Object.getOwnPropertyNames(u.iA).indexOf(e)
-                      ? (u.iA[e] = _(t[e]))
-                      : -1 !== Object.getOwnPropertyNames(g.w).indexOf(e)
-                        ? (g.w[e] = _(t[e]))
+                  -1 !== Object.getOwnPropertyNames(d.TS).indexOf(e)
+                    ? (d.TS[e] = w(t[e]))
+                    : -1 !== Object.getOwnPropertyNames(d.iA).indexOf(e)
+                      ? (d.iA[e] = w(t[e]))
+                      : -1 !== Object.getOwnPropertyNames(f.w).indexOf(e)
+                        ? (f.w[e] = w(t[e]))
                         : console.error("Got unknown config property", e);
-                const n = (0, d.l4)();
+                const n = (0, h.l4)();
                 console.log("setting locale:", n),
                   n &&
                     (document.documentElement.setAttribute("lang", n),
-                    d.pf.SetPreferredLocales([n]));
+                    h.pf.SetPreferredLocales([n]));
               }
-              u.TS.EREALM == p.TU.k_ESteamRealmUnknown &&
-                (u.TS.EREALM = (0, h.ID)(u.TS.LAUNCHER_TYPE)
-                  ? p.TU.k_ESteamRealmChina
-                  : p.TU.k_ESteamRealmGlobal),
-                u.iA.country_code || (u.iA.country_code = u.TS.COUNTRY);
+              d.TS.EREALM == g.TU.k_ESteamRealmUnknown &&
+                (d.TS.EREALM = (0, p.ID)(d.TS.LAUNCHER_TYPE)
+                  ? g.TU.k_ESteamRealmChina
+                  : g.TU.k_ESteamRealmGlobal),
+                d.iA.country_code || (d.iA.country_code = d.TS.COUNTRY);
             })(),
-            (u.TS.IN_STEAMUI = !0),
+            (d.TS.IN_STEAMUI = !0),
             (function () {
               let e = !0;
-              if (sessionStorage.getItem(I) && u.TS.CLIENT_SESSION > 0) {
+              if (sessionStorage.getItem(T) && d.TS.CLIENT_SESSION > 0) {
                 const t = 30;
-                Date.now() / 1e3 > u.TS.CLIENT_SESSION + t && (e = !1);
+                Date.now() / 1e3 > d.TS.CLIENT_SESSION + t && (e = !1);
               }
-              sessionStorage.setItem(I, e ? "true" : "false");
+              sessionStorage.setItem(T, e ? "true" : "false");
             })();
           const e = document.getElementById("root");
-          i.createRoot(e).render(r.createElement(F, { cm: window.cm }));
+          s.createRoot(e).render((0, r.jsx)(F, { cm: window.cm }));
         })();
       },
     },
@@ -25916,235 +25427,266 @@ var CLSTAMP = "10520954";
       })[e] || e) +
       ".js?contenthash=" +
       {
-        48: "bae5c5c474f6024c760c",
-        72: "0d6d938097f459339b39",
-        89: "18d4e6cc9c8ad39f9e55",
-        106: "4aafef34d61ad1403a9a",
-        129: "ac6447c5703ce81e9584",
-        139: "da2844e98f2ae6f969a7",
+        48: "e47e4f540b067a8b55df",
+        62: "e6198c6d4330f42a66ff",
+        72: "da44e82e585c3b02e00a",
+        87: "ee3d7ae2155c7eaed229",
+        89: "0679e3127b09597af700",
+        106: "b951a4c594ed13ba7dc2",
+        129: "0202f1c1a3f51024375d",
+        139: "9a31b0166b0025ee9195",
         195: "2c9adc0759f4541d3fb3",
-        246: "4af0e0eab6c1d94e021e",
-        248: "82cfaa19f8267d09bd1c",
-        297: "f3689f2ac3037110e554",
+        246: "38f35309fec55ba20af1",
+        248: "bbe4a29cb2a352cf8b31",
+        297: "b9d98871945644b76f3c",
         309: "f3ae0f63cf256a537017",
-        347: "5b7f429ff9cf157de4ac",
-        542: "bea76700cc91e4ae84f4",
-        615: "9a5f9dafbd8176014184",
-        674: "e0fe013b4c2c5daa055c",
+        347: "6070e5ccbb26203b01ac",
+        498: "2554ed9d23c13bb08cdd",
+        542: "a1c9105c42b76df264a8",
+        615: "23eb96cdfce34ebf371a",
         716: "666de33917d80425274c",
-        740: "62d4c0a6552ef68d8fbc",
-        786: "48f6b9840b17681176ba",
-        823: "f2940e18a1adebc1d26a",
+        740: "e771d39a7df0e25c2868",
+        786: "4bb1cffcda61cc74a96b",
+        823: "39445c679b53c5ceb73a",
         876: "25eede417d42c0cd26d1",
-        901: "2ac9ee5cd7e9f3609cbb",
-        1005: "9529e1453545f94ce67c",
+        901: "fdf1043e9380c5f165d2",
+        1005: "5372b8ed9858af7396fa",
+        1007: "80c2025153ab31c7c4a6",
         1012: "ebbaa97b86764aacb98f",
-        1065: "9da7cc8705267cd65a0c",
-        1093: "1813af8ccdbb34561767",
-        1160: "23972ac1128e9803e7d4",
-        1220: "e4438f17b7ca0167731a",
+        1065: "1720fc2e8e21008c4f01",
+        1093: "9038f657966d3f7e10f4",
+        1160: "f7ea3dbc4dc1f0c7f527",
+        1195: "ff3787af5a7a99a5fbf2",
+        1220: "19bfffdd8d7044eb36ab",
         1275: "11e4a8e286f3edd19d2b",
-        1323: "ff84deba9f3ba6a5c010",
-        1389: "f39cb24b034c7e3e091e",
+        1323: "43a2175d04a1a9640f5e",
+        1389: "265405af7f90b59efe22",
         1391: "0e40d57987ac9fbef65e",
-        1423: "b7b2bebea74eca91a2b6",
-        1463: "71d344c3062679ef24f0",
-        1478: "ccfb07799260fe205108",
-        1511: "38eb2f6777166d18c3a0",
-        1573: "376cff998aa4907ca975",
-        1648: "3cfa8a0f1c340bdf2879",
+        1423: "187dba43bde2bb3c58b6",
+        1463: "8c3003a7c1ab34ce03cf",
+        1478: "cf54c2323c57e27901fb",
+        1511: "b63d4421e78664b1b165",
+        1573: "577bb15708bfc059dd57",
+        1648: "9d5215c9c000a8474ca6",
         1663: "69583c6318b737ea4d67",
-        1730: "e8339451f68080699746",
+        1730: "360341c78229d44ad643",
         1779: "cce298019232951c5632",
-        1822: "da48ab07a6ae5d973232",
+        1822: "6508a0374a2e67915288",
         1879: "62d6403013b08cb655c3",
-        2021: "4a858446338f07493693",
-        2056: "c0d34b8857bf92985e87",
+        2021: "1a056fa00782fba8c7dc",
+        2026: "60a7f6173e420142f3d4",
+        2056: "6631e50b63d0b20b85a0",
+        2082: "d9ef7c6a9c408ecd17fc",
         2101: "432742a8a4f0cce8eb12",
-        2128: "c4947ebc3626fe613432",
-        2188: "fe336207d9c34ca328d2",
-        2199: "f123537be53242221d07",
+        2128: "df2d04b65cefedf660f1",
+        2188: "2fcc19abbb0d09d4efa0",
+        2199: "2b759480cb203b1871f7",
         2225: "dc3d09d21b6992daad2e",
-        2263: "2fc9ef16157d3a605299",
-        2266: "9cfd03e764d0e8bfeca4",
+        2263: "8f13610834351001a6f9",
+        2266: "67f11d3083c260122e21",
         2320: "76cef2b5dd91f317cb3f",
-        2438: "56de7ed9c523d3231a4e",
+        2438: "76d5715e25648de1b440",
         2448: "c1f0b015f00cac957233",
-        2481: "7944bb25d465a0e971fa",
+        2481: "03c7cf3ab74d83fbd7f2",
         2515: "9a062cc85cb096b00e67",
         2539: "0f9b65120876cd1969bc",
         2561: "6db2bec65809cb85a76c",
-        2611: "2ef16451c7f742923870",
-        2640: "2706bb071a0a5d96a993",
-        2646: "62a316708fd82e9d9a1b",
-        2664: "6651b9727b8293079166",
-        2737: "951a4ddc58450d358971",
-        2761: "d1688153ee0a241c7652",
-        2783: "d7f472cf5b7bcabf359a",
+        2611: "f9524140f601be23197f",
+        2640: "d9ded060cd6c4dc29609",
+        2646: "1361acdc726528721719",
+        2664: "f8dfc74567eccb5518b0",
+        2737: "a0c97147d6e305b2a35e",
+        2761: "e1a5d3ec403da0bac362",
+        2774: "5e91b75e6da0425951a4",
+        2783: "f4c41c100afa2dbc4807",
         2862: "6d6dfd8b8af302f8846e",
-        2867: "780925cb6e8d6927a813",
-        2880: "4597f095674ec73cac34",
-        2889: "dae816ed9202127cea31",
-        2916: "6b458913ab8eb2e37889",
-        2917: "3cbd39823e627e126718",
+        2867: "f52f831deaa1012146c4",
+        2880: "68ed9ef162eb7fbc5419",
+        2889: "55178ea6a04b6843a96e",
+        2916: "ac9f0e39080834163a5e",
+        2917: "af63a9f5020f480be5dc",
         2952: "5cc53fdb04ed91186e12",
-        2959: "1215737acfde57b79070",
+        2959: "fc34cc19da80fdbefa32",
         2984: "cdb6f5e43526a559784c",
-        3081: "15a7b40189a944a4df14",
-        3087: "d25241b2e4babe6e3193",
+        3081: "df119116f7f1fa993830",
+        3087: "8755b5b24cf156fca13e",
+        3152: "ada636664b405b4935dd",
         3180: "8e8aa27ac0cac69a5efc",
-        3228: "2f818506f1c8d4c827e8",
-        3299: "3603d8534d5274214990",
+        3228: "b6201dc8a24511c12c2c",
+        3299: "279215fd2677ecfda4dd",
         3350: "25be1c0cde58ecd53fec",
-        3366: "db71dd15278a3134ce56",
+        3366: "6b81b81a16bac161871f",
         3473: "aa2e2c813e7588319881",
-        3518: "6edea4ba1ede2685e311",
-        3569: "884a0cafaac5f3d0b635",
+        3518: "2a32a90b360e53541d53",
+        3569: "7d6a9036580d53905cf6",
         3583: "f831ab7edbd9ffa591ac",
-        3594: "e1d1880c1d3dbacf6aea",
-        3669: "ab782b5954aef80b03fb",
-        3714: "881895eeb4fe05a95108",
-        3716: "a753bbe121e44f1bfcb2",
+        3594: "d1263207a969daec3996",
+        3669: "bfc647d5057f173d1b48",
+        3685: "87ea0675f93baef31c32",
+        3714: "35131182e33f6898f2f5",
+        3716: "285dcf7d2fa40401c176",
         3744: "775ac7cdb21bac1fe37c",
-        3823: "d09dd23eb3899cf03a26",
-        3869: "961422e57aa811c50a89",
+        3770: "f0cde3a65ba1503e5bc2",
+        3823: "8f0ad68ae40444916e4e",
+        3845: "8197aaa8cca964647735",
+        3869: "44a6ed36310af367e8fc",
         3899: "5ffcf512ba617d848f61",
-        4026: "7297395cf3abacc234cb",
-        4031: "c783a7124a5669062544",
-        4102: "858030fc25f71f91214b",
-        4109: "17f35e5f4bbf004e2fc1",
+        4026: "0a24c2b15af8d2ea87bf",
+        4031: "ef65b8988594167a7cf7",
+        4102: "17ccb88dff83bc95d034",
+        4109: "711d3a169b3ff4a22f20",
         4139: "712b259cac8237357271",
         4175: "92d7ba0916b98d8e27c3",
-        4224: "e1b8ab03b8c3e8f84558",
+        4224: "2cb30c4afad3f6ef16ad",
         4259: "aa37b751e98aeca3b305",
-        4273: "b1557d00442229008e3d",
-        4321: "79560e129f4396350d65",
-        4340: "a86d716bc3009dda5d9a",
+        4273: "bab9edb6169bbdb7a535",
+        4321: "64492c7db9b7d23cdfeb",
+        4340: "3704eff011e0bc651ebf",
         4475: "125e6435ae309d0db57e",
-        4481: "67a94eddac9c648e840b",
+        4481: "e2a200a50393510edb5c",
+        4635: "7543699c4c704caf8e7f",
         4768: "17a7d7c4e34e0266ba4b",
-        4807: "3d9f460c4653cc304e21",
-        4827: "8f7df01b646a64d4cffa",
+        4807: "d0016f207c276b3e8ca0",
+        4827: "0742a741960e8c7eba36",
         4839: "b1ca14b72a083777a78d",
-        4842: "63a2be9d989cd6c43076",
-        4910: "e9ce4fe3ab92e6bf5bc2",
+        4842: "b222206e7f49cb0d2b09",
+        4910: "d0fb04e54d2cc57850ef",
         4925: "ed69214de5d337886985",
         4933: "696e5de7324513db0a18",
-        4952: "a1ed1ca8059033128681",
+        4952: "f3124a181a7b5579322f",
+        5027: "4d46f3a18b70ae5a27fc",
         5173: "976ad1b3dcd79bb87b9c",
         5181: "c49352f8e35656f9e939",
         5269: "60207428bd2868248c3a",
-        5318: "a91b7eb78fc8019b5c86",
-        5550: "c5cce0927b7badf490ce",
-        5553: "a76d5a3b3f837465c5a1",
-        5592: "5b68d37f9b975537ffde",
-        5643: "c7c5330eb53bb01491f8",
+        5318: "dd935ef052d41ed94ce2",
+        5550: "be8058d1ad068788d58f",
+        5553: "d3698944969b6d9680a5",
+        5592: "f5c369d273d45e00f3d6",
+        5643: "e421c4b65f045f9bda60",
         5704: "379467b643925dea1061",
-        5716: "d751d95a0e656d3ce774",
-        5776: "8007d9b18d0dc93a6508",
-        5803: "bfde47ee76816ce673c7",
-        5864: "899709c14dba3a4c378e",
-        5890: "354a92db16fb88cf4fc9",
-        5935: "7f23106b73f10c9e6cb5",
-        6089: "b1fbeeab718409cb5fb5",
-        6120: "214ac41ef4066771eb01",
-        6197: "feec9190a8b06475e075",
-        6203: "45679e16d1a1cd8ad5d7",
-        6345: "c75c212d01a87575e3b4",
-        6409: "adad79cf73d323b45443",
-        6430: "cd4602b72111a6f2e488",
-        6472: "79b252b0b0486eac48ee",
-        6577: "78dfe8ea2fb6c532f4a7",
-        6656: "6b7f17cb4ff1f3b3aea2",
+        5716: "8f46e26535116e93cfa1",
+        5776: "8003b1c504f516261fbe",
+        5803: "7c56e9e94fd0ba2d7b0b",
+        5864: "e173c1e3fea38e4d90ce",
+        5890: "2c6b0686bdb4e37effb8",
+        5935: "c119ac04daf961dc395b",
+        5963: "8ec728a1437b65cf8b26",
+        6089: "301181bffbcf5d2556dd",
+        6100: "583d5e86887bc65b7157",
+        6120: "5f2de4729b1d56c1ad97",
+        6197: "8af0717e4fcd0746d10b",
+        6203: "bf0f8c8787171194ba0a",
+        6277: "ed34816efbc0b4170acc",
+        6313: "cb1e5cde29e6b8852765",
+        6345: "d77e54ee3f3a40eb2ebe",
+        6409: "4d4cefb04f4e4e3da9de",
+        6430: "6546ab43c14f021f62af",
+        6472: "f511fcadf5cfb049d183",
+        6577: "07747ce5689c15b4ed91",
+        6656: "94d08fb8967393a2b597",
         6696: "aa3651f32fddca6c18ee",
-        6752: "5bbcf2d79b2d3753735c",
+        6702: "fde48b327a1017aeeb89",
+        6741: "2ad1f8d0880f9a6a70d6",
+        6752: "75db707fc6a6e6167a95",
         6785: "69a9f0b91f21affb7342",
-        6793: "7d5b75d1383c5d63a73f",
+        6793: "62478be505afc53ca746",
         6810: "891c059117c6b984347f",
         6865: "b48073424ca49ee76f2a",
+        6873: "8ac4ff2601bcbe691cf8",
         6884: "0f06d2665dc521b8f26a",
-        6888: "3a406a9b169a04e2fd5d",
-        6890: "df439ed97ffc6e90f392",
-        6896: "a2ed42c3efd37ba02ba7",
-        6974: "f7ae8045d1d5ef5bad4c",
-        7075: "fdeec4b8c99d447aa264",
+        6888: "9e383b3cf0e563ec532e",
+        6890: "7d2c0e483858fa9d40f0",
+        6896: "8911b02c243ec4c6b01a",
+        6974: "a6f3805beaeaae9dc562",
+        6988: "f6b4f718557733ca73ee",
+        7075: "b708b922f0939b56e650",
         7151: "45f70eb6851f2ac45f0d",
-        7155: "c61995e1d248b43c213e",
-        7169: "79e188b9040404c6701e",
+        7155: "3e290167a99ad20d8206",
+        7169: "9bad3d16c56475a8d6eb",
         7306: "94d65d257f8b7e645038",
-        7314: "cd275e4f681acbbfc5b8",
+        7314: "9212ce12ca386591d521",
         7316: "18e5e6b118a1b52fddc2",
         7376: "1a70f0da1467e92dd08f",
-        7408: "b0e9712fa16d9ff06c09",
-        7442: "8f8851a0b77d0831f4d8",
-        7462: "52ace9199689821be1eb",
+        7408: "974006f23720af31d708",
+        7442: "396c8ac743cd88837387",
+        7462: "ab6c3f7c3622d7e67e02",
         7503: "658123cceab17e7f1fa9",
-        7533: "08397fdb3345b9c89d24",
+        7521: "d3f0eafb9119a188d4db",
+        7533: "8065de60acdec35adf0e",
         7569: "5c6a8bfaf01e13e9762b",
-        7634: "5423ea161f7511155f81",
-        7653: "905853b6166ee2687210",
-        7657: "886d87d9024a80598e1c",
-        7696: "9ca49d620e4f6743d8a0",
+        7634: "6fd1a679fbceb938008d",
+        7653: "cdb7e346b9450cba5be5",
+        7657: "064970428d95de47f905",
+        7696: "abfaf8f110d5bdc58ced",
+        7698: "8697023fff850e95299d",
+        7767: "bf8c059131908a7cbd79",
         7770: "aceefbb364a30f3f02c4",
         7824: "bc3d4917fa38d194e03f",
-        7836: "dbc16ad1dd19f1606385",
-        7912: "74c30a0f074a23085c3f",
-        7993: "687ae49b868eba032863",
+        7836: "7464e58919efac313e11",
+        7912: "6d1a2906ffe04aa0c599",
+        7993: "8f11c861568973fc80a1",
         7996: "4a4ce77e9c751bf1a989",
         8054: "3625a349f6c042e8307f",
-        8118: "e575e680db903faef7fa",
-        8159: "7e4cfee1b07db8b66568",
-        8209: "197593d52cede90e5533",
-        8263: "d1c01ce5be78465c8ed4",
-        8280: "268181aad1cd7ab1994f",
+        8118: "e1a7cd2b0e52dd5c1b78",
+        8159: "0b3fa632a997904083c6",
+        8209: "5dfc60ca1089544ecc67",
+        8263: "b3dd7a358e5d482491aa",
+        8280: "93936d356d8860f50169",
         8286: "1f5be36130bf4017cada",
-        8291: "20f039cea3ef452936b9",
-        8332: "792acb9ab25dfc0561d2",
-        8396: "7dc220e80977be722d02",
-        8416: "03eb0d5fc01bda499573",
-        8443: "244c6903a0f0668a8988",
-        8445: "a349be01341c9fc70fbc",
-        8478: "89707ac0ffb085fd89be",
+        8291: "3cc3f4318f754a53fded",
+        8332: "943dbb8d28e7a6f6784a",
+        8396: "e2f567f1977527d3e087",
+        8410: "a07a7333205e67852b78",
+        8416: "534a17b692182493e17c",
+        8443: "4680b87de627c726e45e",
+        8445: "e06b22d6f4a143145f07",
+        8478: "206814ef449a4d214897",
         8484: "90cf9e56abd4e4060277",
-        8491: "7d9ffc96825a7f4c5816",
+        8491: "f80ae535c35fca243324",
         8495: "1ef294d92fa8f7a899f7",
-        8522: "83890462020120d52180",
-        8534: "4586f3e24c3b1e599d5c",
+        8522: "3452e126090b35ba1eff",
+        8534: "981c47ea27d6bfb2a807",
         8545: "1aa2273a0a3161924d55",
-        8674: "c2973ea6c833243cacd5",
-        8699: "ee20f1260c3a7846c05c",
-        8732: "d033c9d6ffdf8af8bbd7",
-        8830: "8078ee2f3c0f612f0115",
-        8839: "5ad9d081a76080874883",
-        8841: "3b630d9407ab5c32c322",
-        8855: "2c261b0cf72766ebf68d",
-        8872: "63a49071520e1e44c234",
+        8636: "67ec5e9082b9fbfd1ec6",
+        8674: "81fed034c165de901459",
+        8699: "830f7e358e9dfc743b27",
+        8732: "296853997ea112599a59",
+        8830: "8624f8b8b4d22a97f24b",
+        8839: "aaaf5f9dcaf096eebf05",
+        8841: "cb3464f6ec129f7b52fb",
+        8855: "d2f5cbcb012152c24c92",
+        8872: "fd54e88e03ce9535651c",
         8906: "12513bcd136de3092c2a",
         8948: "79956ac4e87cfd5cf067",
         8970: "c432673605747d241ec4",
-        9053: "6f2f07a9071989118b82",
+        9053: "cbdc5f4100735081191e",
         9063: "77f0c9977cc1aecd1944",
-        9106: "23b2452e9d42b62a7a7f",
-        9129: "a7362dedd0472bd26aa9",
+        9106: "fa9d407dc07619ee6c4b",
+        9129: "0464d9577e4c92af13f4",
+        9130: "a063ce39bf338d00074b",
         9134: "370830da314eb8247bf6",
-        9171: "276e4c67aa373881bd4a",
-        9298: "233438b205f0b29c3e69",
-        9368: "0a4d5e4a6ea4c0f66bd1",
-        9386: "bbc40909a21d2d781ab4",
+        9171: "a22075caf53ffc4a585c",
+        9298: "3946e9bb26d169326773",
+        9368: "ff3b5413739ac2ed4caf",
+        9386: "f0a6bd190f4a4e54718a",
+        9413: "2180960dc00e2f8afa77",
         9418: "29e9fa15a9fc8e62a893",
+        9441: "55cc908598876090cca2",
         9448: "3b188192ff202b472e99",
-        9462: "a88e6eaf2fc6f32074e1",
-        9483: "efaceb4d61ec9b2e7f73",
-        9672: "7dfd324f169be3b1a619",
+        9460: "39297bed7c66b45d6578",
+        9462: "7b977c4108a105f53e81",
+        9483: "c29d4ffb657e923c85cd",
+        9661: "5590c9134f604faa1cf2",
+        9672: "bf6412233629c21494c5",
         9711: "2ed989ee7251a5d19c6f",
         9779: "59ef76674166d4b9e52e",
-        9858: "94448f0330104528a7e1",
-        9869: "b2ece828c2dad9ed96d4",
-        9882: "e2ec58e438cb767bcc9c",
-        9887: "804b4ecca67f7ff084fe",
-        9902: "687ccd0d6e13cf864303",
-        9963: "c622e7da3b5c16d61d1d",
-        9988: "14bf502e3e40a580949f",
+        9858: "ff89043ed73f0f939eb5",
+        9869: "c020bbfe73c8d6ce654d",
+        9882: "8a60cff50ccf41dea182",
+        9887: "5e3875813a6a21c2c7fe",
+        9902: "5412b6529f6220135404",
+        9963: "b122dd3b1f0a1e5db1a8",
+        9988: "c096fc14bf0b1d9c4a17",
       }[e]),
     (a.miniCssF = (e) =>
       "css/" +
@@ -26180,12 +25722,12 @@ var CLSTAMP = "10520954";
             u < l.length;
             u++
           ) {
-            var m = l[u];
+            var d = l[u];
             if (
-              m.getAttribute("src") == e ||
-              m.getAttribute("data-webpack") == i + n
+              d.getAttribute("src") == e ||
+              d.getAttribute("data-webpack") == i + n
             ) {
-              o = m;
+              o = d;
               break;
             }
           }
@@ -26197,7 +25739,7 @@ var CLSTAMP = "10520954";
           o.setAttribute("data-webpack", i + n),
           (o.src = e)),
           (r[e] = [t]);
-        var d = (t, n) => {
+        var m = (t, n) => {
             (o.onerror = o.onload = null), clearTimeout(h);
             var i = r[e];
             if (
@@ -26209,11 +25751,11 @@ var CLSTAMP = "10520954";
               return t(n);
           },
           h = setTimeout(
-            d.bind(null, void 0, { type: "timeout", target: o }),
+            m.bind(null, void 0, { type: "timeout", target: o }),
             12e4,
           );
-        (o.onerror = d.bind(null, o.onerror)),
-          (o.onload = d.bind(null, o.onload)),
+        (o.onerror = m.bind(null, o.onerror)),
+          (o.onload = m.bind(null, o.onload)),
           c && document.head.appendChild(o);
       }
     }),
@@ -26296,12 +25838,12 @@ var CLSTAMP = "10520954";
             ? r.push(t[n])
             : 0 !== t[n] &&
               {
-                674: 1,
                 1220: 1,
                 7462: 1,
                 7653: 1,
                 8396: 1,
                 9129: 1,
+                9441: 1,
                 9672: 1,
                 9858: 1,
                 9882: 1,

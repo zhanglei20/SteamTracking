@@ -320,6 +320,7 @@ $\n k_SystemAudioPortDirection_Input
 %s_mutex
 %s_server
 %s_written
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_ECloudStoragePersistStateDeleted
@@ -352,6 +353,7 @@ $\n k_SystemAudioPortDirection_Input
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
+'\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -408,6 +410,7 @@ $\n k_SystemAudioPortDirection_Input
 (\r"P\n\rCMsgMouseDown
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
+(\r"\\n&CMsgSetBrowserViewDomainRequestMapping
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
@@ -629,12 +632,13 @@ $\n k_SystemAudioPortDirection_Input
 -\n\rrasterization
 -\n\rsecurity_info
 -\n\rskia_graphite
--allowbrowserviewunderlay
+-allowbrowserviewunderlays
 -arch
 -buildid=%u
 -cachedir=%s
--cef-allow-browser-underlay
+-cef-allow-browser-underlays
 -cef-disable-breakpad
+-cef-disable-browser-underlays
 -cef-disable-gpu
 -cef-disable-gpu-compositing
 -cef-disable-gpu-sandbox
@@ -655,7 +659,7 @@ $\n k_SystemAudioPortDirection_Input
 -cef-enable-low-delay-live-stream
 -cef-enable-vaapi
 -cef-force-accessibility
--cef-force-browser-underlay
+-cef-force-browser-underlays
 -cef-force-gpu
 -cef-force-gpu-blocklist
 -cef-force-hw-video-decode
@@ -689,7 +693,7 @@ $\n k_SystemAudioPortDirection_Input
 -enable-keyring
 -force-opaque-background
 -force-sandbox
--forcebrowserviewunderlay
+-forcebrowserviewunderlays
 -gamepadui
 -html-perf-monitor
 -inf
@@ -706,7 +710,7 @@ $\n k_SystemAudioPortDirection_Input
 -restart-on-ui-mode-change
 -startcount=%d
 -steamdeck
--steamdeckdisplaynosizescale
+-steamdeckdisplay
 -steamframe
 -steamid=%llu
 -steammachinedisplay
@@ -774,7 +778,6 @@ $\n k_SystemAudioPortDirection_Input
 .\n*k_ESteamDeckCompatibilityFeedback_Disagree
 .\n*k_ESteamOSCompatibilityCategory_Compatible
 .\n*k_EnhancedMarketAppearanceStatus_Completed
-.cef-enable-remote-debugging
 .cpl
 .dummy
 .foo = value".
@@ -829,6 +832,7 @@ $\n k_SystemAudioPortDirection_Input
 /dev/null
 /etc/mtab
 /proc/mounts
+/proc/self/maps
 /tmp
 /tmp/disk-free.XXXXXX
 /tmp/steam_chrome_shmem_uid%d_spid%u
@@ -845,6 +849,7 @@ $\n k_SystemAudioPortDirection_Input
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
 0\n,k_EContentModerationSanction_CommunityBanned
+0\n,k_EContentModerationSanction_KickedFromGroup
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
@@ -859,14 +864,14 @@ $\n k_SystemAudioPortDirection_Input
 10CUtlMemoryI13ModuleCount_tE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIj16BrowserDetails_ti8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIP19HTMLCommandBuffer_tE
 10CUtlMemoryIPK11CFileWriterE
 10CUtlMemoryIhE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlRBTreeIN7CUtlMapIj16BrowserDetails_ti8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
 10CUtlString
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 10CUtlVectorIP19HTMLCommandBuffer_t10CUtlMemoryIS1_EE
@@ -920,6 +925,7 @@ $\n k_SystemAudioPortDirection_Input
 15CMsgFullRepaint
 15CMsgHideToolTip
 15CMsgShowToolTip
+16BrowserDetails_t
 16CHTMLProtoBufMsgI11CMsgBuildIDE
 16CHTMLProtoBufMsgI11CMsgJSAlertE
 16CHTMLProtoBufMsgI13CMsgHidePopupE
@@ -1001,6 +1007,7 @@ $\n k_SystemAudioPortDirection_Input
 16CHTMLProtoBufMsgI33CMsgVerticalScrollBarSizeResponseE
 16CHTMLProtoBufMsgI35CMsgHorizontalScrollBarSizeResponseE
 16CHTMLProtoBufMsgI35CMsgZoomToElementAtPositionResponseE
+16CHTMLProtoBufMsgI38CMsgSetBrowserViewDomainRequestMappingE
 16CHTMLProtoBufMsgI9CMsgCloseE
 16CMsgAckScreenDPI
 16CMsgBrowserReady
@@ -1053,6 +1060,7 @@ $\n k_SystemAudioPortDirection_Input
 19CUtlNoEscConversion
 19HTMLCommandBuffer_t
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentModerationSanction_HarassmentBanned
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -1165,6 +1173,7 @@ $\n k_SystemAudioPortDirection_Input
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgZoomToElementAtPositionResponse
+38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
@@ -1207,7 +1216,7 @@ $\n k_SystemAudioPortDirection_Input
 7CCookie
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
 7CUtlMapI10CUtlStringxi8CDefLessE
-7CUtlMapIjN15CHTMLController16BrowserDetails_tEi8CDefLessE
+7CUtlMapIj16BrowserDetails_ti8CDefLessE
 7\n*k_EChildProcessQueryExitCode_ErrorFileSave
 7\n*k_EWindowsUpdateInstallationImpact_Unknown
 7\n3k_EContentReportSubjectAction_EscalatedForTerrorism
@@ -1988,7 +1997,7 @@ Couldn't parse default value "
 Couldn't write %s: %s\n
 Coupon has expired
 Create process failed
-CreateBrowser id:%u type:%u flags:%u: (%d, %d) %dx%d
+CreateBrowser id:%u type:%d flags:%x (%d, %d) %dx%d
 CreateInterface
 CreateResponse: id:%u handle:%u
 CreateSimpleProcess
@@ -2074,6 +2083,7 @@ Disabled/Software
 Disabled/Unknown
 Disables hevc support
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
+Disables support for BrowserView underlays
 Disconnected By Remote Host
 Discover
 Discussion Posts
@@ -3002,7 +3012,6 @@ MutableRepeatedMessage
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv119__foreign_exceptionE
 N15CHTMLController12CIPCTaskPostE
-N15CHTMLController16BrowserDetails_tE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
 N17CFileWriterThread19CFileWriterWorkItemE
@@ -4107,7 +4116,6 @@ Zulu
 \n\nTYPE_INT64
 \n\nbgoforward
 \n\nbool_value
-\n\nborderless
 \n\nboxed_type
 \n\ncache_miss
 \n\ncertExpiry
@@ -4174,7 +4182,6 @@ Zulu
 \n\tmodifiers
 \n\tnCertBits
 \n\tname_part
-\n\toffscreen
 \n\tpageTitle
 \n\tpage_size
 \n\tpagescale
@@ -4438,6 +4445,7 @@ broadcastgamedata
 broadcastmanifests
 broadcastorigin
 browser
+browserDetails.pBrowser && browserDetails.eBrowserType != EBrowserType_Unknown
 browser_handle
 bsuccess
 btowc
@@ -4616,6 +4624,7 @@ controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
 controller_steamos_handheld
+controller_switch2_pro
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -5453,14 +5462,9 @@ m_pSpaceAvail
 m_pToChromeStream
 m_pthreadWatcher
 m_queueItemsPending.Count() == 0
-m_sCustomCSS
-m_sInitialURL
 m_sMasterEventName
 m_sMasterSharedMemoryName
-m_sUserAgent
-m_sVROverlayKey
 m_sWideVineDir
-m_sWindowIcon
 m_strDirectory
 m_strFileName
 m_strFileNamePrevious
@@ -5647,7 +5651,6 @@ parsing_failed
 partial
 path
 patterns
-pchVROverlayKey && pchVROverlayKey[0]
 pclose
 peering
 perfectworld
@@ -5687,7 +5690,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pt-BR
 pt-br
 pt_BR
@@ -5743,6 +5745,7 @@ reliance
 rename
 renew
 repeated
+request_domain
 request_space %llu
 requested to join a private group
 requesting_url
@@ -5874,8 +5877,13 @@ steampipe
 steampipepeering
 steamworks_drm
 store
+strCustomCSS
 strHTMLCacheDir
+strInitialURL
 strProxy
+strUserAgent
+strVROverlayKey
+strWindowIcon
 strcasecmp
 strcasestr
 strchr

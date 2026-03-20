@@ -2270,7 +2270,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_NoLongerOwnsGame_Info"		"Questo gioco non è più disponibile gratuitamente."
 
 "steam_menu_systemreport"		"Rapporto di sistema"
-"steam_menu_systeminfo"			"Informazioni sul sistema"
+"steam_menu_systeminfo"			"Informazioni di sistema"
 "steam_systeminfo_title"			"Steam - Informazioni sul sistema"
 "steam_systeminfo_surveylink"	"Confronta il tuo hardware con quello degli altri utenti di Steam"
 

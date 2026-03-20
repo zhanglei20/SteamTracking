@@ -4792,7 +4792,6 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_WindowsCompat_Description" "Windows is currently running Steam in Windows Compatibility Mode which can cause issues with some Steam features and running games. Please follow the instructions below to remove compatibility mode."
 "Steam_WindowsCompat_DoNotShowAgain" "Do not show again"
 "Steam_WindowsCompat_SupportLinkDesc" "How do I disable Compatibility Mode?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Close Steam"
 "Steam_WindowsCompat_RestartSteam" "Restart Steam"
 "Steam_WindowsCompat_Continue" "Continue"
@@ -4873,11 +4872,12 @@ Set a category for these games to help you find them quickly and organize your L
 "RescueDialog_ExitSteam" "Exit Steam"
 
 "TransportDialog_Title" "Unexpected Transport Error"
-"TransportDialog_Explanation" "Steam encountered an unexpected error during startup (0x%errorCount%). Click <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/7516-B23C-D572-5B0E>here</a> for more information."
+"TransportDialog_Explanation" "Steam encountered an unexpected error during startup (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Choose one of the following options:"
 "TransportDialog_RestartSteam" "Restart Steam"
 "TransportDialog_RestartSteamWebHelper" "Restart steamwebhelper"
 "TransportDialog_ContinueAnyway" "VO: Continue Anyway"
+"TransportDialog_SupportLinkDesc" "More information"
 "TransportDialog_ExitSteam" "Exit Steam"
 
 "DownloadRegion_default"				 "Unknown"

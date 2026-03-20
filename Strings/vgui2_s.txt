@@ -376,6 +376,7 @@ $\nY8O
 %sToday
 %sTomorrow
 %sYesterday
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 %x:%x.%x "%x" "%x" "%x"
 &6FVfv
 &bzi
@@ -475,7 +476,6 @@ $\nY8O
 -nodpiscale
 -pid
 -steamdeckdisplay
--steamdeckdisplaynosizescale
 -steammachinedisplay
 -vguifocus
 -vguimessages
@@ -595,6 +595,7 @@ $\nY8O
 /name
 /proc/%d/environ
 /proc/mounts
+/proc/self/maps
 /sbin/lsof
 /sys/bus/iio/devices
 /sys/class/backlight/
@@ -644,10 +645,10 @@ $\nY8O
 /yQA
 0)KEY_0
 00003333
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789
 0123456789ABCDEF
 0123456789abcdef
 0F`8
@@ -801,6 +802,7 @@ $\nY8O
 12CDynamicFuncIPFbP18SDL_GLContextStateEE
 12CDynamicFuncIPFbPKcS1_EE
 12CDynamicFuncIPFbjEE
+12CDynamicFuncIPFbjPKcbEE
 12CDynamicFuncIPFfjEE
 12CDynamicFuncIPFiP9_XDisplayEE
 12CDynamicFuncIPFiP9_XDisplayPmPiEE
@@ -2137,6 +2139,7 @@ Logic problem? szsrc =
 Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
 Lowered '%s' -> '%s'\n
 Luxembourgish
+Ly:iI
 M8MF
 MEDIUM
 MGiI
@@ -2563,6 +2566,7 @@ Row has too many bytes to allocate in memory
 RunCommand
 RunCommandGetOutput
 Russian
+SDL.display.HDR_enabled
 SDL_CreateWindow
 SDL_DestroyWindow
 SDL_GL_CreateContext
@@ -2573,9 +2577,11 @@ SDL_GL_GetProcAddress
 SDL_GL_MakeCurrent
 SDL_GL_ResetAttributes
 SDL_GL_SetAttribute
+SDL_GetBooleanProperty
 SDL_GetDisplayContentScale
 SDL_GetDisplayForRect
 SDL_GetDisplayName
+SDL_GetDisplayProperties
 SDL_GetHint
 SDL_GetJoystickNameForID
 SDL_GetJoysticks
@@ -4846,7 +4852,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pstrValue
 pt-BR
 pt-br

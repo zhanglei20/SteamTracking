@@ -2273,8 +2273,8 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_P2POptions_FolderLabel"		"Carpeta de descargas Peer-to-peer (\"Freloads\"):"
 "Steam_P2POptions_UploadSpeedLabel"	"Limitar velocidad de carga a:"
 "Steam_P2POptions_SharingLabel"		"Compartir con software Peer-to-peer:"
-"Steam_P2POptions_SharingHelpText_StopImmediately"	"(Cuando se haya descargado el 100 % de un archivo, se dejará de compartir inmediatamente.)"
-"Steam_P2POptions_SharingHelpText_UntilRatio"	"(Cuando se haya descargado el 100 % de un archivo, se seguirá compartiendo hasta que hayas compartido el archivo una vez.)"
+"Steam_P2POptions_SharingHelpText_StopImmediately"	"(Cuando tengas el archivo completo, la carga se detendrá inmediatamente.)"
+"Steam_P2POptions_SharingHelpText_UntilRatio"	"(Cuando tengas el archivo completo, la carga continuará hasta que hayas compartido el archivo una vez.)"
 "Steam_P2POptions_SharingHelpText_Manual"	"(Cuando se haya descargado el 100 % de un archivo, se seguirá compartiendo hasta que lo desactives manualmente o te unas a una partida)"
 
 "Steam_P2POptions_SharingCB_StopImmediately"	"Dejar de compartir los archivos en cuanto se descarguen por completo"
@@ -4020,8 +4020,8 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "steam_statuslabel"	"Estado"
 
-"steam_screenshotsupload_title" "Subida de capturas"
-"steam_screenshotsuploading_title" "Subiendo..."
+"steam_screenshotsupload_title" "Carga de capturas"
+"steam_screenshotsuploading_title" "Cargando..."
 "steam_upload_a_screenshot" "¿Cargar la captura?"
 "steam_upload_screenshots" "¿Cargar %upload_screenshot_count% capturas?"
 "steam_upload_size" "Tamaño de la carga:"
@@ -4036,8 +4036,8 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_published" "Publicada"
 "steam_public" "Pública"
 "steam_friendsonly" "Solo amigos"
-"steam_screenshot_upload_info" "Subiendo captura a Steam Cloud"
-"steam_screenshots_upload_info" "Subiendo %upload_screenshot_count% capturas a Steam Cloud"
+"steam_screenshot_upload_info" "Cargando captura a Steam Cloud"
+"steam_screenshots_upload_info" "Cargando %upload_screenshot_count% capturas a Steam Cloud"
 "steam_also_delete_from_cloud" "Eliminar de Steam Cloud también"
 "steam_screenshots_error_info" "Se ha producido un error al cargar %ScreenshotsErrors% capturas. Es posible que Steam Cloud no esté disponible temporalmente."
 "steam_screenshots_error_accountban" "No se te permite cargar contenido a este punto de encuentro debido a un bloqueo activo en tu cuenta."
@@ -4368,8 +4368,8 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_StreamingSource_Installed"    				"Retransmisión desde %ClientName%"
 "SteamUI_StreamingSource_NotInstalled" 				"Instalar en %ClientName%"
 
-"SteamUI_StreamClient_Failed_Title"	"El cliente de retransmisión ha fallado"
-"SteamUI_StreamClient_Failed"		"El cliente de retransmisión se ha cerrado inesperadamente (%error%)"
+"SteamUI_StreamClient_Failed_Title"	"El cliente de transmisión ha fallado"
+"SteamUI_StreamClient_Failed"		"El cliente de transmisión se ha cerrado inesperadamente (%error%)"
 "SteamUI_StreamClient_Failed_Connect"	"No se ha podido conectar al ordenador remoto."
 "SteamUI_StreamClient_Failed_Proto"	"Las versiones de Steam instaladas en el equipo local y el remoto no coinciden."
 "SteamUI_StreamClient_Failed_Auth"	"La autenticación ha fallado."
@@ -4746,7 +4746,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Screenshots_ViewOnline" "Ver online"
 "Steam_Screenshots_Caption" "«%imagecaption%»"
 "Steam_Screenshots_UploadQuota" "Tamaño de la carga: %imagesize%, espacio restante: %storagesize%"
-"Steam_Screenshots_UploadProgress" "Subiendo captura a la comunidad de Steam..."
+"Steam_Screenshots_UploadProgress" "Cargando captura a la comunidad de Steam..."
 
 
 "VR_Error_Title"				"Error al iniciar SteamVR"

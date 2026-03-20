@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Bạn đã chấp nhận lời mời chơi %1$s%2$s",
     "ChatRoom_GameInvite_AcceptOnPC": "Bạn có thể nhận lời mời này từ PC của mình.",
     "ChatRoom_GameInvite_UnreleasedGame": "Trò chưa phát hành",
+    "ChatRoom_PlayestInvite_ViewInvite": "Xem thư mời",
+    "ChatRoom_PlayestInvite_Invite": "%1$s đã mời bạn tham gia đợt Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Bạn đã mời %1$s vào Steam Playtest %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Bạn đã mời %1$s vào Steam Playtest cho %2$s%3$s",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s mời bạn dùng Remote Play Together",
     "ChatRoom_GameInviteRemotePlay_Accept": "Kết nối",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s đã mời bạn chơi %2$s%3$s qua Steam Remote Play",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "Sửa lỗi cửa sổ bạn bè và trò chuyện không hiển thị bên trong lớp phủ của trò chơi trên Linux và macOS.",
     "BBCode_Loading": "Đang tải",
     "BBCode_Failed": "Tải thất bại",
-    "broadcastDetails_Playing": "Đang chơi",
-    "ChatRoom_PlayestInvite_ViewInvite": "Xem thư mời",
-    "ChatRoom_PlayestInvite_Invite": "%1$s đã mời bạn tham gia đợt Steam Playtest",
-    "ChatRoom_PlaytestInvite_YouInvited": "Bạn đã mời %1$s vào Steam Playtest %2$s%3$s",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Bạn đã mời %1$s vào Steam Playtest cho %2$s%3$s"
+    "broadcastDetails_Playing": "Đang chơi"
 }
