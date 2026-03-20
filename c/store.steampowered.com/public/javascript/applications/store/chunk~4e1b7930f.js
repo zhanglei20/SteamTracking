@@ -13237,7 +13237,7 @@
           })(_),
           _ = _.context.event,
           _ = (0, _._)(_, _.language, _?.rtime32_last_modified);
-        if (void 0 === _) return _.children || "";
+        if (void 0 === _ || null == _) return _.children || "";
         _ = "string" == typeof _ ? _ : _[1];
         const _ = (function (_, _, _) {
           let _;

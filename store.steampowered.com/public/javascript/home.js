@@ -3849,12 +3849,12 @@ GHomepage = {
 			let elStaticBackgroundHolder = $J('.page_background_holder');
 			if ( window.innerWidth <= 500 )
 			{
-				elStaticBackgroundHolder.css('background-image', 'url(' + strPageBackgroundMobileURL + ')');
+				$J('.page_background_holder_mobile').css('background-image', 'url(' + strPageBackgroundMobileURL + ')');
 			}
 			else
 			{
-				elStaticBackgroundHolder.css('background-image', 'url(' + strPageBackgroundURL + ')');
-				
+				$J('.page_background_holder').css('background-image', 'url(' + strPageBackgroundURL + ')');
+
 				if ( strBackgroundWebm && !GDynamicStore.s_preferences.disable_animated_marketing )
 				{
 					let elVideo = $J('.fullscreen-bg__video')[0];
