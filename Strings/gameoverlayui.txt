@@ -67,6 +67,7 @@
 !(cascadeMenu && checkable)
 != and not NULL
 !AxU
+!BStringEquals( pathAlreadyLoaded.GetUTF8Path(), pathSDKModulePath.GetUTF8Path() )
 !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !\n\finitial_left
 !is_large()
@@ -495,6 +496,7 @@ $\nY8O
 %s_written
 %store%
 %storehttps%
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n"k_EBroadcastEncoderBestPerformance
 &\n"k_ECloudStoragePersistStateDeleted
@@ -528,6 +530,7 @@ $\nY8O
 '\n#k_EBrowserFeatureStatus_DisabledOff
 '\n#k_EBrowserGPUStatus_DisabledUnknown
 '\n#k_EChildProcessQueryCommand_Invalid
+'\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -591,6 +594,7 @@ $\nY8O
 (\r"P\n\rCMsgMouseDown
 (\r"P\n\rCMsgMouseMove
 (\r"Y\n\rCMsgSizePopup
+(\r"\\n&CMsgSetBrowserViewDomainRequestMapping
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"q\n\vCMsgKeyChar
 (\r"w\n\vCMsgKeyDown
@@ -826,7 +830,6 @@ $\nY8O
 -pid
 -quicklogin
 -steamdeckdisplay
--steamdeckdisplaynosizescale
 -steammachinedisplay
 -steampid
 -toggle-overlay-html-mode
@@ -1015,6 +1018,7 @@ $\nY8O
 /name
 /proc/meminfo
 /proc/mounts
+/proc/self/maps
 /proc/stat
 /sbin/lsof
 /sys/bus/iio/devices
@@ -1065,18 +1069,19 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789
 0123456789ABCDEF
 0123456789abcdef
-01:36:05
+01:56:55
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EBrowserGPUStatus_DisabledChildCommandLine
 0\n,k_EContentModerationSanction_CommunityBanned
+0\n,k_EContentModerationSanction_KickedFromGroup
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
@@ -1496,6 +1501,7 @@ $\nY8O
 19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLess25CDefRBTreeBalanceListenerIiES1_EE
 19CUtlQueueDeprecatedIiE
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentModerationSanction_HarassmentBanned
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -1637,6 +1643,7 @@ $\nY8O
 33CMsgVerticalScrollBarSizeResponse
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgZoomToElementAtPositionResponse
+38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EContentReportReason_CSAMGroomingOrEnticement
 3\n/k_EContentReportReason_CredibleThreatOfViolence
@@ -4322,7 +4329,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 13 2026
+Mar 20 2026
 Marathi
 March
 MarkerKey
@@ -6226,7 +6233,6 @@ Zulu
 \n\nTYPE_INT64
 \n\nbgoforward
 \n\nbool_value
-\n\nborderless
 \n\nboxed_type
 \n\ncache_miss
 \n\ncertExpiry
@@ -6293,7 +6299,6 @@ Zulu
 \n\tmodifiers
 \n\tnCertBits
 \n\tname_part
-\n\toffscreen
 \n\tpageTitle
 \n\tpage_size
 \n\tpagescale
@@ -6896,6 +6901,7 @@ controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
 controller_steamos_handheld
+controller_switch2_pro
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -8663,7 +8669,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pstrValue
 pszArg0 && *pszArg0
 pt-BR
@@ -8747,6 +8752,7 @@ repeated subpattern is too long
 repeating a DEFINE group is not allowed
 replace
 reply
+request_domain
 request_space %llu
 requested to join a private group
 requesting_url

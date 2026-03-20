@@ -5275,7 +5275,7 @@
           case "spotlight_art":
             return "image";
           case "spotlight_art_hero":
-            return "hero_image";
+            return "vertical_capsule";
           default:
             return;
         }
@@ -46314,8 +46314,8 @@
                         (0, _.jsx)("div", {
                           children: (0, _._)(
                             "#AssetRequest_General_Size",
-                            940,
-                            150,
+                            1200,
+                            190,
                           ),
                         }),
                         (0, _.jsx)("br", {}),
@@ -55032,23 +55032,29 @@
                 (0, _.jsxs)(_._, {
                   children: [
                     (0, _.jsx)("br", {}),
-                    (0, _.jsx)("h3", {
+                    (0, _.jsx)("h4", {
                       children: "Static Assets Only",
                     }),
                     (0, _.jsxs)("div", {
                       children: [
-                        (0, _.jsx)("span", {
-                          children: "306px x 260px",
+                        (0, _.jsx)("h3", {
+                          children: "Spotlight Banner",
                         }),
-                        " (.jpg,.png,.gif)",
+                        (0, _.jsxs)("div", {
+                          children: [
+                            (0, _.jsx)("span", {
+                              children: "306px x 260px",
+                            }),
+                            " (.jpg, .png)",
+                          ],
+                        }),
+                        (0, _.jsx)(_, {
+                          oEditableSpotlight: _,
+                          assetType: "image",
+                        }),
+                        (0, _.jsx)("br", {}),
                       ],
                     }),
-                    (0, _.jsx)("br", {}),
-                    (0, _.jsx)(_, {
-                      oEditableSpotlight: _,
-                      assetType: "image",
-                    }),
-                    (0, _.jsx)("br", {}),
                     (0, _.jsxs)("div", {
                       children: [
                         (0, _.jsx)("h3", {
@@ -55064,7 +55070,7 @@
                         }),
                         (0, _.jsx)(_, {
                           oEditableSpotlight: _,
-                          assetType: "hero_image",
+                          assetType: "vertical_capsule",
                         }),
                       ],
                     }),
@@ -55096,7 +55102,7 @@
                     if (!_) return null;
                     const _ = _ ? "?t=" + _ : "",
                       _ = (0, _._)(_);
-                    return `${_._.MEDIA_CDN_URL}steam/spotlights/${_}/${_[_]}${_}`;
+                    return `${_._.STORE_ITEM_BASE_URL}steam/spotlights/${_}/${_[_]}${_}`;
                   })(_, _, _, _)
                 : null;
             },
@@ -55917,7 +55923,7 @@
                     if (!_) return null;
                     const _ = _ ? "?t=" + _ : "",
                       _ = (0, _._)(_);
-                    return `${_._.MEDIA_CDN_URL}steam/clusters/${(0, _._)(_)}/${_}/${_[_]}${_}`;
+                    return `${_._.STORE_ITEM_BASE_URL}steam/clusters/${(0, _._)(_)}/${_}/${_[_]}${_}`;
                   })(_, _, _, _, _)
                 : null;
             },
@@ -56371,7 +56377,7 @@
                           (0, _.jsxs)("div", {
                             children: [
                               (0, _.jsx)("span", {
-                                children: "940 by 150px",
+                                children: "1200 by 190px",
                               }),
                               " (.jpg,.png,.gif)",
                             ],
@@ -56431,7 +56437,7 @@
                     if (!_) return null;
                     const _ = _ ? "?t=" + _ : "",
                       _ = (0, _._)(_);
-                    return `${_._.MEDIA_CDN_URL}steam/clusters/${(0, _._)(_)}/${_}/${_[_]}${_}`;
+                    return `${_._.STORE_ITEM_BASE_URL}steam/clusters/${(0, _._)(_)}/${_}/${_[_]}${_}`;
                   })(_, _, _, _, _)
                 : null;
             },

@@ -18,48 +18,40 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = ({ group: _, onClick: _ }) => {
         const _ = _.watching_broadcast_steamid;
-        return _.createElement(
-          "button",
-          {
-            className:
-              "ChatRoomListGroupItem NoChannels WatchPartyGroup DialogButton watchHowButton",
-            onClick: _,
-          },
-          _.createElement(
-            "div",
-            {
-              className: "ChatRoomListGroupItem_header",
-            },
-            _.createElement(_._, {
-              group: _,
-              small: !0,
-            }),
-            _.createElement(
-              "div",
-              {
+        return (0, _.jsx)("button", {
+          className:
+            "ChatRoomListGroupItem NoChannels WatchPartyGroup DialogButton watchHowButton",
+          onClick: _,
+          children: (0, _.jsxs)("div", {
+            className: "ChatRoomListGroupItem_header",
+            children: [
+              (0, _.jsx)(_._, {
+                group: _,
+                small: !0,
+              }),
+              (0, _.jsxs)("div", {
                 className: "groupNameStatusContainer",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "chatRoomName",
-                },
-                _.name,
-              ),
-              _ &&
-                _.createElement(
-                  "div",
-                  {
-                    className: "chatRoomDetails",
-                  },
-                  (0, _._)("#Broadcast_WatchParty_Viewers_NoneActive"),
-                ),
-            ),
-          ),
-        );
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "chatRoomName",
+                    children: _.name,
+                  }),
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: "chatRoomDetails",
+                      children: (0, _._)(
+                        "#Broadcast_WatchParty_Viewers_NoneActive",
+                      ),
+                    }),
+                ],
+              }),
+            ],
+          }),
+        });
       };
       class _ extends _.Component {
         CreateWatchParty(_ = !1) {
@@ -73,7 +65,7 @@
           const _ = _ && _ ? [_.accountid] : [];
           !(function (_, _, _, _) {
             (0, _._)(
-              _.createElement(_._, {
+              (0, _.jsx)(_._, {
                 browserContext: _,
                 bHideChatNameEntry: !1,
                 vecInvitePlayers: _,
@@ -126,100 +118,84 @@
               _.BCanIAssociateBroadcast(),
             ),
             _ = _;
-          return _.createElement(
-            "div",
-            {
-              className: "chatModalCover",
-            },
-            _.createElement(
-              _._,
-              {
-                onEscKeypress: _,
-              },
-              _.createElement(
-                _._,
-                {
-                  className: "watchPartyDialog",
-                },
-                _.createElement(
-                  _._,
-                  null,
-                  _.createElement(
-                    "div",
-                    {
-                      className: "watchPartyPrompt",
-                    },
-                    (0, _._)("#Broadcast_WatchPrompt"),
-                  ),
-                  _.createElement(
-                    _._,
-                    null,
-                    !this.props.bIsNewSteamTVDialog &&
-                      _.createElement(
-                        _._,
-                        {
-                          svgicon: _.Gv$,
-                          className: "watchHowButton",
-                          onClick: this.WatchAlone,
-                        },
-                        (0, _._)("#Broadcast_WatchAlone"),
-                      ),
-                    _ &&
-                      _.createElement(
-                        _._,
-                        {
-                          className: "watchHowButton",
-                          onClick: () => this.CreateWatchParty(!0),
-                        },
-                        _.createElement(_._, {
-                          friend: _,
-                          context: null,
-                          bLarge: !1,
-                        }),
-                        (0, _._)(
-                          "#Broadcast_WatchWith",
-                          _.createElement(
-                            "span",
-                            {
-                              className: "highlight",
-                            },
-                            " ",
-                            _.display_name,
-                          ),
-                        ),
-                      ),
-                    0 !== _.length &&
-                      _.createElement(
-                        _.Fragment,
-                        null,
-                        _.createElement(
-                          _._,
-                          null,
-                          (0, _._)("#Broadcast_WatchWithExistingWatchParty"),
-                        ),
-                        __webpack_require__.map((_) =>
-                          _.createElement(_, {
-                            key: _.unique_id,
-                            group: _,
-                            onClick: () => this.UpgradeExisting(_),
+          return (0, _.jsx)("div", {
+            className: "chatModalCover",
+            children: (0, _.jsx)(_._, {
+              onEscKeypress: _,
+              children: (0, _.jsxs)(_._, {
+                className: "watchPartyDialog",
+                children: [
+                  (0, _.jsxs)(_._, {
+                    children: [
+                      (0, _.jsx)("div", {
+                        className: "watchPartyPrompt",
+                        children: (0, _._)("#Broadcast_WatchPrompt"),
+                      }),
+                      (0, _.jsxs)(_._, {
+                        children: [
+                          !this.props.bIsNewSteamTVDialog &&
+                            (0, _.jsx)(_._, {
+                              svgicon: _.Gv$,
+                              className: "watchHowButton",
+                              onClick: this.WatchAlone,
+                              children: (0, _._)("#Broadcast_WatchAlone"),
+                            }),
+                          _ &&
+                            (0, _.jsxs)(_._, {
+                              className: "watchHowButton",
+                              onClick: () => this.CreateWatchParty(!0),
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  friend: _,
+                                  context: null,
+                                  bLarge: !1,
+                                }),
+                                (0, _._)(
+                                  "#Broadcast_WatchWith",
+                                  (0, _.jsxs)("span", {
+                                    className: "highlight",
+                                    children: [" ", _.display_name],
+                                  }),
+                                ),
+                              ],
+                            }),
+                          0 !== _.length &&
+                            (0, _.jsxs)(_.Fragment, {
+                              children: [
+                                (0, _.jsx)(_._, {
+                                  children: (0, _._)(
+                                    "#Broadcast_WatchWithExistingWatchParty",
+                                  ),
+                                }),
+                                __webpack_require__.map((_) =>
+                                  (0, _.jsx)(
+                                    _,
+                                    {
+                                      group: _,
+                                      onClick: () => this.UpgradeExisting(_),
+                                    },
+                                    _.unique_id,
+                                  ),
+                                ),
+                              ],
+                            }),
+                          (0, _.jsx)(_._, {
+                            className: "watchHowButton newWatchGroup",
+                            svgicon: _.u9R,
+                            onClick: () => this.CreateWatchParty(!1),
+                            children: (0, _._)(
+                              "#Broadcast_LinkBroadcastToGroup_New",
+                            ),
                           }),
-                        ),
-                      ),
-                    _.createElement(
-                      _._,
-                      {
-                        className: "watchHowButton newWatchGroup",
-                        svgicon: _.u9R,
-                        onClick: () => this.CreateWatchParty(!1),
-                      },
-                      (0, _._)("#Broadcast_LinkBroadcastToGroup_New"),
-                    ),
-                  ),
-                ),
-                _.createElement(_._, null),
-              ),
-            ),
-          );
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_._, {}),
+                ],
+              }),
+            }),
+          });
         }
       }
       (0, _._)([_._], _.prototype, "WatchAlone", null),
@@ -341,68 +317,63 @@
           const _ = this.props.app;
           let _ = this.m_broadcastInfo,
             _ = _();
-          return _.createElement(
-            _,
-            null,
-            _.BReadyToRender() &&
-              _.createElement(
-                "div",
-                {
+          return (0, _.jsxs)(_, {
+            children: [
+              _.BReadyToRender() &&
+                (0, _.jsxs)("div", {
                   className:
                     "StandalonePlayer" +
                     (this.state.bTheaterMode ? " TheaterMode" : ""),
-                },
-                _.createElement(_._, {
-                  className: "FullpageBroadcastBackdrop",
-                  src: _.m_strThumbnailUrl,
-                  draggable: !1,
-                  duration: 2500,
+                  children: [
+                    (0, _.jsx)(_._, {
+                      className: "FullpageBroadcastBackdrop",
+                      src: _.m_strThumbnailUrl,
+                      draggable: !1,
+                      duration: 2500,
+                    }),
+                    (0, _.jsxs)("div", {
+                      className: "BroadcastTab",
+                      children: [
+                        (0, _.jsxs)("div", {
+                          className: "StandalonePlayerHeader",
+                          children: [
+                            (0, _.jsx)("div", {
+                              className: "STV_Logo",
+                              children: (0, _.jsx)(_.P7C, {}),
+                            }),
+                            (0, _.jsxs)("div", {
+                              className:
+                                "BroadcastTab_HeaderRow" +
+                                (this.state.bChatCollapsed
+                                  ? " ChatCollapsed"
+                                  : ""),
+                              children: [
+                                (0, _.jsx)(_, {
+                                  onClick: () => (window.location.href = _()),
+                                }),
+                                (0, _.jsx)(_, {
+                                  onClick: this.ToggleChat,
+                                  hideIcon: this.state.bChatCollapsed,
+                                }),
+                              ],
+                            }),
+                          ],
+                        }),
+                        (0, _.jsx)(_, {
+                          steamID: _.GetSteamIDWatched(),
+                          watchLocation: _,
+                          bHideChat: this.state.bChatCollapsed,
+                          onTheaterMode: this.ToggleTheaterMode,
+                        }),
+                      ],
+                    }),
+                  ],
                 }),
-                _.createElement(
-                  "div",
-                  {
-                    className: "BroadcastTab",
-                  },
-                  _.createElement(
-                    "div",
-                    {
-                      className: "StandalonePlayerHeader",
-                    },
-                    _.createElement(
-                      "div",
-                      {
-                        className: "STV_Logo",
-                      },
-                      _.createElement(_.P7C, null),
-                    ),
-                    _.createElement(
-                      "div",
-                      {
-                        className:
-                          "BroadcastTab_HeaderRow" +
-                          (this.state.bChatCollapsed ? " ChatCollapsed" : ""),
-                      },
-                      _.createElement(_, {
-                        onClick: () => (window.location.href = _()),
-                      }),
-                      _.createElement(_, {
-                        onClick: this.ToggleChat,
-                        hideIcon: this.state.bChatCollapsed,
-                      }),
-                    ),
-                  ),
-                  _.createElement(_, {
-                    steamID: _.GetSteamIDWatched(),
-                    watchLocation: _,
-                    bHideChat: this.state.bChatCollapsed,
-                    onTheaterMode: this.ToggleTheaterMode,
-                  }),
-                ),
-              ),
-            _.createElement(_, {
-              app: _,
-            }),
-          );
+              (0, _.jsx)(_, {
+                app: _,
+              }),
+            ],
+          });
         }
       };
       function _() {
@@ -414,76 +385,58 @@
           _ = _.useCallback(() => _._?.CMInterface, []),
           _ = (0, _._)(_.useCallback(() => new _._(), [])),
           _ = (0, _._)(_);
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            null,
-            _.createElement(
-              _._,
-              null,
-              _._.logged_in
-                ? _.createElement(
-                    _._,
-                    {
-                      useActiveCMInterface: _,
-                      useStorage: _,
-                    },
-                    _,
-                  )
-                : _.createElement(
-                    _._,
-                    {
-                      useActiveSteamInterface: _,
-                      useStorage: _,
-                    },
-                    _,
-                  ),
-            ),
-          ),
-        );
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)(_._, {
+            children: (0, _.jsx)(_._, {
+              children: _._.logged_in
+                ? (0, _.jsx)(_._, {
+                    useActiveCMInterface: _,
+                    useStorage: _,
+                    children: _,
+                  })
+                : (0, _.jsx)(_._, {
+                    useActiveSteamInterface: _,
+                    useStorage: _,
+                    children: _,
+                  }),
+            }),
+          }),
+        });
       }
       (0, _._)([_._], _.prototype, "ToggleChat", null),
         (0, _._)([_._], _.prototype, "ToggleTheaterMode", null),
         (_ = (0, _._)([_._], _));
       let _ = (0, _._)(({ app: _ }) =>
         _.BIsPerformingLogonCheck()
-          ? _.createElement(
-              "div",
-              null,
-              _.createElement("iframe", {
+          ? (0, _.jsx)("div", {
+              children: (0, _.jsx)("iframe", {
                 style: {
                   display: "none",
                 },
                 src: _.GetLoginURL(),
               }),
-            )
+            })
           : null,
       );
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: "BroadcastButton WatchWithFriends",
-            onClick: _.onClick,
-          },
-          _.createElement(_.y_e, null),
-          (0, _._)("#Broadcast_WatchWithFriends"),
-        );
+        return (0, _.jsxs)("div", {
+          className: "BroadcastButton WatchWithFriends",
+          onClick: _.onClick,
+          children: [
+            (0, _.jsx)(_.y_e, {}),
+            (0, _._)("#Broadcast_WatchWithFriends"),
+          ],
+        });
       }
       function _(_) {
-        return _.createElement(
-          "div",
-          {
-            className: "ToggleBroadcastChat",
-            title: (0, _._)("#Broadcast_ToggleChat"),
-            onClick: _.onClick,
-          },
-          _.createElement(_.K7s, {
+        return (0, _.jsx)("div", {
+          className: "ToggleBroadcastChat",
+          title: (0, _._)("#Broadcast_ToggleChat"),
+          onClick: _.onClick,
+          children: (0, _.jsx)(_.K7s, {
             showChat: _.hideIcon,
           }),
-        );
+        });
       }
       function _() {
         return _._.STEAM_TV ? 1 : 3;
@@ -523,7 +476,7 @@
             _ = _.GetSteamID().ConvertTo64BitString();
           let _ = _();
           const _ = _.m_bShowWatchPromptDialog
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 closeModal: () => _.HideWatchPromptDialog(),
                 broadcastAccountId: _.GetSteamID().GetAccountID(),
                 broadcastTabId: _.GetUniqueID(),
@@ -532,56 +485,47 @@
                 ownerWindow: _,
               })
             : null;
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastTab",
-              style: __webpack_require__,
-            },
-            _.createElement(_._, {
-              className: "FullpageBroadcastBackdrop",
-              src: this.m_broadcastInfo.m_strThumbnailUrl,
-              draggable: !1,
-              duration: 2500,
-            }),
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastTab",
+            style: __webpack_require__,
+            children: [
+              (0, _.jsx)(_._, {
+                className: "FullpageBroadcastBackdrop",
+                src: this.m_broadcastInfo.m_strThumbnailUrl,
+                draggable: !1,
+                duration: 2500,
+              }),
+              (0, _.jsxs)("div", {
                 className: "BroadcastTab_OverBackground",
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "BroadcastTabHeaderContainer",
-                },
-                _.createElement(
-                  "div",
-                  {
-                    className:
-                      "BroadcastTab_HeaderRow" +
-                      (this.state.bChatCollapsed ? " ChatCollapsed" : ""),
-                  },
-                  _.createElement(_, {
-                    onClick: this.OnWatchWithFriends,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: "BroadcastTabHeaderContainer",
+                    children: (0, _.jsxs)("div", {
+                      className:
+                        "BroadcastTab_HeaderRow" +
+                        (this.state.bChatCollapsed ? " ChatCollapsed" : ""),
+                      children: [
+                        (0, _.jsx)(_, {
+                          onClick: this.OnWatchWithFriends,
+                        }),
+                        (0, _.jsx)(_, {
+                          onClick: this.ToggleChat,
+                          hideIcon: this.state.bChatCollapsed,
+                        }),
+                      ],
+                    }),
                   }),
-                  _.createElement(_, {
-                    onClick: this.ToggleChat,
-                    hideIcon: this.state.bChatCollapsed,
+                  (0, _.jsx)(_, {
+                    steamID: _,
+                    watchLocation: _,
+                    bHideChat: this.state.bChatCollapsed,
+                    onTheaterMode: this.ToggleTheaterMode,
+                    children: _,
                   }),
-                ),
-              ),
-              _.createElement(
-                _,
-                {
-                  steamID: _,
-                  watchLocation: _,
-                  bHideChat: this.state.bChatCollapsed,
-                  onTheaterMode: this.ToggleTheaterMode,
-                },
-                _,
-              ),
-            ),
-          );
+                ],
+              }),
+            ],
+          });
         }
       };
       (0, _._)([_._], _.prototype, "OnWatchWithFriends", null),
@@ -684,76 +628,64 @@
           const _ = this.CalculateBroadcastSectionStyles(!1);
           (_.flexGrow = this.props.bHideChat ? 1 : null),
             _._.bValid &&
-              (_ = _.createElement(_, {
+              (_ = (0, _.jsx)(_, {
                 info: _._,
               }));
-          const _ = _.createElement(
-              "div",
-              {
-                className: "LoginDiv",
-              },
-              _.createElement(
-                "a",
-                {
-                  className: _().ChatLoginButton,
-                  href: `${_._.STORE_BASE_URL}login?steamtv=1&allow_password=1`,
-                },
-                (0, _._)("#BroadcastChat_Login"),
-              ),
-            ),
+          const _ = (0, _.jsx)("div", {
+              className: "LoginDiv",
+              children: (0, _.jsx)("a", {
+                className: _().ChatLoginButton,
+                href: `${_._.STORE_BASE_URL}login?steamtv=1&allow_password=1`,
+                children: (0, _._)("#BroadcastChat_Login"),
+              }),
+            }),
             _ = _.BroadcastWatchStore.GetBroadcast(_)
               ? _.BroadcastWatchStore.GetBroadcast(_).m_ulBroadcastID
               : "0";
-          return _.createElement(
-            "div",
-            {
-              className: "BroadcastContainer",
-            },
-            _.createElement(
-              "div",
-              {
+          return (0, _.jsxs)("div", {
+            className: "BroadcastContainer",
+            children: [
+              (0, _.jsxs)("div", {
                 className: "BroadcastContainerSection",
                 ref: this.m_refBroadcastContainer,
                 style: _,
-              },
-              _.createElement(
-                "div",
-                {
-                  className: "BroadcastContainerSectionVideoContainer",
-                },
-                _ &&
-                  _.createElement(_.default, {
-                    key: _,
-                    steamIDBroadcast: _,
-                    watchLocation: this.props.watchLocation,
-                    onTheaterMode: this.props.onTheaterMode,
+                children: [
+                  (0, _.jsxs)("div", {
+                    className: "BroadcastContainerSectionVideoContainer",
+                    children: [
+                      _ &&
+                        (0, _.jsx)(
+                          _.default,
+                          {
+                            steamIDBroadcast: _,
+                            watchLocation: this.props.watchLocation,
+                            onTheaterMode: this.props.onTheaterMode,
+                          },
+                          _,
+                        ),
+                      !_ && _,
+                      (0, _.jsx)("div", {
+                        className: "videoContainerSizer",
+                      }),
+                    ],
                   }),
-                !_ && _,
-                _.createElement("div", {
-                  className: "videoContainerSizer",
-                }),
-              ),
-              _,
-              _.createElement(
-                "div",
-                {
-                  className: "BroadcastDetailsSection",
-                },
-                _.createElement(_.BroadcastDetails, {
-                  steamID: _,
-                  onLocalStreamChange: this.OnLocalStreamChange,
-                  bVerticalBroadcastChat: !0,
-                }),
-              ),
-            ),
-            !this.props.bHideChat &&
-              _.createElement("div", {
-                className: "BroadcastChatDivider horizontal",
-                onMouseDown: this.OnGrabberMouseDown,
+                  _,
+                  (0, _.jsx)("div", {
+                    className: "BroadcastDetailsSection",
+                    children: (0, _.jsx)(_.BroadcastDetails, {
+                      steamID: _,
+                      onLocalStreamChange: this.OnLocalStreamChange,
+                      bVerticalBroadcastChat: !0,
+                    }),
+                  }),
+                ],
               }),
-            _.createElement(
-              "div",
-              {
+              !this.props.bHideChat &&
+                (0, _.jsx)("div", {
+                  className: "BroadcastChatDivider horizontal",
+                  onMouseDown: this.OnGrabberMouseDown,
+                }),
+              (0, _.jsxs)("div", {
                 className: "BroadcastChatDiv",
                 style: {
                   display: this.props.bHideChat ? "none" : "flex",
@@ -761,22 +693,24 @@
                   width: "100%",
                   minWidth: "300px",
                 },
-              },
-              _.createElement(_._, {
-                emoticonStore: _._ ? _._.ChatStore.EmoticonStore : null,
-                broadcastID: _,
-                steamID: _,
-                watchLocation: this.props.watchLocation,
-                hidden: this.props.bHideChat,
+                children: [
+                  (0, _.jsx)(_._, {
+                    emoticonStore: _._ ? _._.ChatStore.EmoticonStore : null,
+                    broadcastID: _,
+                    steamID: _,
+                    watchLocation: this.props.watchLocation,
+                    hidden: this.props.bHideChat,
+                  }),
+                  _._ && _._.logged_in ? null : _,
+                ],
               }),
-              _._ && _._.logged_in ? null : _,
-            ),
-          );
+            ],
+          });
         }
       };
       function _(_) {
         let _ = `url( "${_._.CHAT_BASE_URL + _.info.offlineImage}" )`;
-        return _.createElement("div", {
+        return (0, _.jsx)("div", {
           style: {
             backgroundImage: _,
           },
@@ -801,7 +735,7 @@
           let _ = {};
           return (
             this.props.isActive || (_.display = "none"),
-            _.createElement(_, {
+            (0, _.jsx)(_, {
               style: _,
               broadcastView: _,
               popup: this.props.popup,
@@ -818,6 +752,7 @@
           default: () => _,
         });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (
@@ -836,47 +771,45 @@
         _,
       ) {
         const _ = _ || _;
-        return _.createElement(
-          "div",
-          {
-            ref: _,
-            style: {
-              display: "flex",
-              flexDirection: "column",
-              ..._,
-            },
+        return (0, _.jsxs)("div", {
+          ref: _,
+          style: {
+            display: "flex",
+            flexDirection: "column",
+            ..._,
           },
-          _.createElement(
-            "div",
-            {
+          children: [
+            (0, _.jsxs)("div", {
               className: "BroadcastSection",
-            },
-            _.createElement(_.default, {
-              key: _,
-              steamIDBroadcast: _,
-              watchLocation: __webpack_require__,
-              bWebRTC: _,
-              onRequestClose: _,
-              actions: _,
-              onTheaterMode: _,
-              onOpenLinkInNewWindow: _._,
+              children: [
+                (0, _.jsx)(
+                  _.default,
+                  {
+                    steamIDBroadcast: _,
+                    watchLocation: __webpack_require__,
+                    bWebRTC: _,
+                    onRequestClose: _,
+                    actions: _,
+                    onTheaterMode: _,
+                    onOpenLinkInNewWindow: _._,
+                  },
+                  _,
+                ),
+                (0, _.jsx)("div", {
+                  className: "videoContainerSizer",
+                }),
+              ],
             }),
-            _.createElement("div", {
-              className: "videoContainerSizer",
-            }),
-          ),
-          _.createElement(
-            "div",
-            {
+            (0, _.jsx)("div", {
               className: "BroadcastDetailsSection",
-            },
-            _.createElement(_.BroadcastDetails, {
-              steamID: _,
-              onLocalStreamChange: _,
-              bVerticalBroadcastChat: _,
+              children: (0, _.jsx)(_.BroadcastDetails, {
+                steamID: _,
+                onLocalStreamChange: _,
+                bVerticalBroadcastChat: _,
+              }),
             }),
-          ),
-        );
+          ],
+        });
       });
     },
   },

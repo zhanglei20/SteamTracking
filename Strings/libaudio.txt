@@ -44,6 +44,7 @@ $ORIGIN
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: command exited unexpectedly: %s\n
 %s: failed to run command: %s\n
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 ( CMilesAudioOutputStream * ) m_vecAudioOutputStreams[i]
 ( CMilesAudioSound * ) m_vecAudioSounds[i]
 (%zu) Descend: %s, (%s), %s\n
@@ -88,6 +89,7 @@ $ORIGIN
 /dev/disk/by-uuid
 /etc/mtab
 /proc/mounts
+/proc/self/maps
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_32
@@ -1082,7 +1084,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once

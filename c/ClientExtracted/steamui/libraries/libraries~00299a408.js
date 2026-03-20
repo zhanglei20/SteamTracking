@@ -1382,18 +1382,18 @@ var CLSTAMP = "steamdb";
         var _ = _.indexOf("=");
         return -1 === _ && (_ = _), [_, _ === _ ? 0 : 4 - (_ % 4)];
       }
+      function _(_) {
+        return (
+          _[(_ >> 18) & 63] + _[(_ >> 12) & 63] + _[(_ >> 6) & 63] + _[63 & _]
+        );
+      }
       function _(_, _, _) {
-        for (var _, _, _ = [], _ = _; _ < _; _ += 3)
+        for (var _, _ = [], _ = _; _ < _; _ += 3)
           (_ =
             ((_[_] << 16) & 16711680) +
             ((_[_ + 1] << 8) & 65280) +
             (255 & _[_ + 2])),
-            _.push(
-              _[((_ = _) >> 18) & 63] +
-                _[(_ >> 12) & 63] +
-                _[(_ >> 6) & 63] +
-                _[63 & _],
-            );
+            _.push(_(_));
         return _.join("");
       }
       (_["-".charCodeAt(0)] = 62), (_["_".charCodeAt(0)] = 63);
@@ -2434,7 +2434,7 @@ var CLSTAMP = "steamdb";
               var _ = this, _ = this.paused_;
               this.depsToLoad_.length && !_;
             )
-              !(function () {
+              (function () {
                 var _ = !1,
                   _ = _.depsToLoad_.shift(),
                   _ = !1;
@@ -7988,7 +7988,7 @@ var CLSTAMP = "steamdb";
             (_ >>>= 0),
             _ &&
               ((_ = ~_ >>> 0),
-              4294967295 < (_ = 1 + (~_ >>> 0)) &&
+              4294967295 < (_ = (~_ >>> 0) + 1) &&
                 ((_ = 0), 4294967295 < ++_ && (_ = 0))),
             (jspb.utils.split64Low = _),
             (jspb.utils.split64High = _);
@@ -8266,7 +8266,7 @@ var CLSTAMP = "steamdb";
             for (; _ < _ && _[_++] == _; )
               for (_++; ; ) {
                 var _ = _[_++];
-                if (0 == (128 & _)) break;
+                if (!(128 & _)) break;
               }
           else
             for (; _ < _; ) {
@@ -8275,7 +8275,7 @@ var CLSTAMP = "steamdb";
                 _++, (_ >>= 7);
               }
               if (_[_++] != _) break;
-              for (_++; 0 != (128 & (_ = _[_++])); );
+              for (_++; 128 & (_ = _[_++]); );
             }
           return _;
         }),
@@ -8322,7 +8322,7 @@ var CLSTAMP = "steamdb";
             _++;
             for (
               var _ = 0, _ = 1;
-              (_ += (127 & (_ = _[_++])) * _), (_ *= 128), 0 != (128 & _);
+              (_ += (127 & (_ = _[_++])) * _), (_ *= 128), 128 & _;
             );
             _ += _;
           }
@@ -8554,7 +8554,7 @@ var CLSTAMP = "steamdb";
           return (
             (this.cursor_ += 2),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (_ << 0) | (_ << 8)
+            _ | (_ << 8)
           );
         }),
         (jspb.BinaryDecoder.prototype.readUint32 = function () {
@@ -8565,7 +8565,7 @@ var CLSTAMP = "steamdb";
           return (
             (this.cursor_ += 4),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            ((_ << 0) | (_ << 8) | (_ << 16) | (_ << 24)) >>> 0
+            (_ | (_ << 8) | (_ << 16) | (_ << 24)) >>> 0
           );
         }),
         (jspb.BinaryDecoder.prototype.readUint64 = function () {
@@ -8592,7 +8592,7 @@ var CLSTAMP = "steamdb";
           return (
             (this.cursor_ += 2),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (((_ << 0) | (_ << 8)) << 16) >> 16
+            ((_ | (_ << 8)) << 16) >> 16
           );
         }),
         (jspb.BinaryDecoder.prototype.readInt32 = function () {
@@ -8603,7 +8603,7 @@ var CLSTAMP = "steamdb";
           return (
             (this.cursor_ += 4),
             jspb.asserts.assert(this.cursor_ <= this.end_),
-            (_ << 0) | (_ << 8) | (_ << 16) | (_ << 24)
+            _ | (_ << 8) | (_ << 16) | (_ << 24)
           );
         }),
         (jspb.BinaryDecoder.prototype.readInt64 = function () {
@@ -9862,7 +9862,7 @@ var CLSTAMP = "steamdb";
           return new jspb.arith.Int64(this._, this._);
         }),
         (jspb.arith.Int64.prototype.toString = function () {
-          var _ = 0 != (2147483648 & this._),
+          var _ = !!(2147483648 & this._),
             _ = new jspb.arith.UInt64(this._, this._);
           return (
             _ && (_ = new jspb.arith.UInt64(0, 0).sub(_)),
@@ -14293,7 +14293,7 @@ var CLSTAMP = "steamdb";
       function _(_, _, _, _) {
         var _, _;
         return (
-          (function (_, _, _, _) {
+          (function (_, _) {
             _.annotationType_;
             0;
           })(0, this),
@@ -14590,7 +14590,7 @@ var CLSTAMP = "steamdb";
         );
       }
       function _(_, _, _, _, _) {
-        var _ = (function (_, _, _, _) {
+        var _ = (function (_, _) {
           var _ = !1,
             _ = 0;
           0;
@@ -15168,7 +15168,7 @@ var CLSTAMP = "steamdb";
         _.inBatch++;
       }
       function _() {
-        if (0 == --_.inBatch) {
+        if (0 === --_.inBatch) {
           _();
           for (var _ = _.pendingUnobservations, _ = 0; _ < _.length; _++) {
             var _ = _[_];
@@ -15553,7 +15553,7 @@ var CLSTAMP = "steamdb";
               _)
             ) {
               var _ = _();
-              0 == --_.__mobxInstanceCount && (_.__mobxGlobals = void 0),
+              0 === --_.__mobxInstanceCount && (_.__mobxGlobals = void 0),
                 (_ = new _());
             }
           })();
@@ -17503,10 +17503,10 @@ var CLSTAMP = "steamdb";
           case "[object String]":
             return "" + _ == "" + _;
           case "[object Number]":
-            return +_ != +_ ? +_ != +_ : 0 == +_ ? 1 / +_ == 1 / _ : +_ == +_;
+            return +_ != +_ ? +_ != +_ : 0 === +_ ? 1 / +_ == 1 / _ : +_ === +_;
           case "[object Date]":
           case "[object Boolean]":
-            return +_ == +_;
+            return +_ === +_;
           case "[object Symbol]":
             return (
               "undefined" != typeof Symbol &&
@@ -17598,21 +17598,17 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = Object.prototype.toString,
-        _ = 0,
-        _ = -1,
-        _ = 0,
-        _ = 8;
+        _ = Object.prototype.toString;
       function _(_) {
         if (!(this instanceof _)) return new _(_);
         this.options = _.assign(
           {
-            level: _,
-            method: _,
+            level: -1,
+            method: 8,
             chunkSize: 16384,
             windowBits: 15,
             memLevel: 8,
-            strategy: _,
+            strategy: 0,
             _: "",
           },
           _ || {},
@@ -17638,7 +17634,7 @@ var CLSTAMP = "steamdb";
           _.memLevel,
           _.strategy,
         );
-        if (_ !== _) throw new Error(_[_]);
+        if (0 !== _) throw new Error(_[_]);
         if (
           (_.header && _.deflateSetHeader(this.strm, _.header), _.dictionary)
         ) {
@@ -17650,7 +17646,7 @@ var CLSTAMP = "steamdb";
                 : "[object ArrayBuffer]" === _.call(_.dictionary)
                   ? new Uint8Array(_.dictionary)
                   : _.dictionary),
-            (_ = _.deflateSetDictionary(this.strm, _)) !== _)
+            0 !== (_ = _.deflateSetDictionary(this.strm, _)))
           )
             throw new Error(_[_]);
           this._dict_set = !0;
@@ -17679,7 +17675,7 @@ var CLSTAMP = "steamdb";
           if (
             (0 === _.avail_out &&
               ((_.output = new _.Buf8(_)), (_.next_out = 0), (_.avail_out = _)),
-            1 !== (_ = _.deflate(_, _)) && _ !== _)
+            1 !== (_ = _.deflate(_, _)) && 0 !== _)
           )
             return this.onEnd(_), (this.ended = !0), !1;
           (0 !== _.avail_out && (0 !== _.avail_in || (4 !== _ && 2 !== _))) ||
@@ -17691,14 +17687,14 @@ var CLSTAMP = "steamdb";
           ? ((_ = _.deflateEnd(this.strm)),
             this.onEnd(_),
             (this.ended = !0),
-            _ === _)
-          : 2 !== _ || (this.onEnd(_), (_.avail_out = 0), !0);
+            0 === _)
+          : 2 !== _ || (this.onEnd(0), (_.avail_out = 0), !0);
       }),
         (_.prototype.onData = function (_) {
           this.chunks.push(_);
         }),
         (_.prototype.onEnd = function (_) {
-          _ === _ &&
+          0 === _ &&
             ("string" === this.options._
               ? (this.result = this.chunks.join(""))
               : (this.result = _.flattenChunks(this.chunks))),
@@ -17746,8 +17742,7 @@ var CLSTAMP = "steamdb";
             (_.windowBits += 32),
           _.windowBits > 15 &&
             _.windowBits < 48 &&
-            0 == (15 & _.windowBits) &&
-            (_.windowBits |= 15),
+            (15 & _.windowBits || (_.windowBits |= 15)),
           (this.err = 0),
           (this.msg = ""),
           (this.ended = !1),
@@ -18023,17 +18018,14 @@ var CLSTAMP = "steamdb";
     chunkid: (module) => {
       "use strict";
       module.exports = function (_, _, _, _) {
-        for (
-          var _ = (65535 & _) | 0, _ = ((_ >>> 16) & 65535) | 0, _ = 0;
-          0 !== _;
-        ) {
+        for (var _ = 65535 & _, _ = (_ >>> 16) & 65535, _ = 0; 0 !== _; ) {
           _ -= _ = _ > 2e3 ? 2e3 : _;
           do {
             _ = (_ + (_ = (_ + _[_++]) | 0)) | 0;
           } while (--_);
           (_ %= 65521), (_ %= 65521);
         }
-        return _ | (_ << 16) | 0;
+        return _ | (_ << 16);
       };
     },
     chunkid: (module) => {
@@ -18095,31 +18087,12 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = 0,
-        _ = 4,
-        _ = 0,
         _ = -2,
-        _ = -1,
-        _ = 4,
-        _ = 2,
-        _ = 8,
-        _ = 9,
-        _ = 286,
-        _ = 30,
-        _ = 19,
-        _ = 2 * _ + 1,
-        _ = 15,
-        _ = 3,
         _ = 258,
-        _ = _ + _ + 1,
-        _ = 42,
+        _ = 262,
         _ = 103,
         _ = 113,
-        _ = 666,
-        _ = 1,
-        _ = 2,
-        _ = 3,
-        _ = 4;
+        _ = 666;
       function _(_, _) {
         return (_.msg = _[_]), _;
       }
@@ -18158,6 +18131,22 @@ var CLSTAMP = "steamdb";
       function _(_, _) {
         (_.pending_buf[_.pending++] = (_ >>> 8) & 255),
           (_.pending_buf[_.pending++] = 255 & _);
+      }
+      function _(_, _, _, _) {
+        var _ = _.avail_in;
+        return (
+          _ > _ && (_ = _),
+          0 === _
+            ? 0
+            : ((_.avail_in -= _),
+              _.arraySet(_, _.input, _.next_in, _, _),
+              1 === _.state.wrap
+                ? (_.adler = _(_.adler, _, _, _))
+                : 2 === _.state.wrap && (_.adler = _(_.adler, _, _, _)),
+              (_.next_in += _),
+              (_.total_in += _),
+              _)
+        );
       }
       function _(_, _) {
         var _,
@@ -18199,16 +18188,11 @@ var CLSTAMP = "steamdb";
               (_ = _[_ + _ - 1]), (_ = _[_ + _]);
             }
           }
-        } while ((_ = _[_ & _]) > _ && 0 != --_);
+        } while ((_ = _[_ & _]) > _ && 0 !== --_);
         return _ <= _.lookahead ? _ : _.lookahead;
       }
       function _(_) {
         var _,
-          _,
-          _,
-          _,
-          _,
-          _,
           _,
           _,
           _,
@@ -18235,25 +18219,9 @@ var CLSTAMP = "steamdb";
           }
           if (0 === _.strm.avail_in) break;
           if (
-            ((_ = _.strm),
-            (_ = _.window),
-            (_ = _.strstart + _.lookahead),
-            (_ = _),
-            (_ = void 0),
-            (_ = _.avail_in) > _ && (_ = _),
-            (_ =
-              0 === _
-                ? 0
-                : ((_.avail_in -= _),
-                  _.arraySet(_, _.input, _.next_in, _, _),
-                  1 === _.state.wrap
-                    ? (_.adler = _(_.adler, _, _, _))
-                    : 2 === _.state.wrap && (_.adler = _(_.adler, _, _, _)),
-                  (_.next_in += _),
-                  (_.total_in += _),
-                  _)),
+            ((_ = _(_.strm, _.window, _.strstart + _.lookahead, _)),
             (_.lookahead += _),
-            _.lookahead + _.insert >= _)
+            _.lookahead + _.insert >= 3)
           )
             for (
               _ = _.strstart - _.insert,
@@ -18262,53 +18230,53 @@ var CLSTAMP = "steamdb";
                   ((_.ins_h << _.hash_shift) ^ _.window[_ + 1]) & _.hash_mask;
               _.insert &&
               ((_.ins_h =
-                ((_.ins_h << _.hash_shift) ^ _.window[_ + _ - 1]) &
+                ((_.ins_h << _.hash_shift) ^ _.window[_ + 3 - 1]) &
                 _.hash_mask),
               (_.prev[_ & _.w_mask] = _.head[_.ins_h]),
               (_.head[_.ins_h] = _),
               _++,
               _.insert--,
-              !(_.lookahead + _.insert < _));
+              !(_.lookahead + _.insert < 3));
             );
         } while (_.lookahead < _ && 0 !== _.strm.avail_in);
       }
       function _(_, _) {
         for (var _, _; ; ) {
           if (_.lookahead < _) {
-            if ((_(_), _.lookahead < _ && _ === _)) return _;
+            if ((_(_), _.lookahead < _ && 0 === _)) return 1;
             if (0 === _.lookahead) break;
           }
           if (
             ((_ = 0),
-            _.lookahead >= _ &&
+            _.lookahead >= 3 &&
               ((_.ins_h =
-                ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + _ - 1]) &
+                ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + 3 - 1]) &
                 _.hash_mask),
               (_ = _.prev[_.strstart & _.w_mask] = _.head[_.ins_h]),
               (_.head[_.ins_h] = _.strstart)),
             0 !== _ &&
               _.strstart - _ <= _.w_size - _ &&
               (_.match_length = _(_, _)),
-            _.match_length >= _)
+            _.match_length >= 3)
           )
             if (
               ((_ = _._tr_tally(
                 _,
                 _.strstart - _.match_start,
-                _.match_length - _,
+                _.match_length - 3,
               )),
               (_.lookahead -= _.match_length),
-              _.match_length <= _.max_lazy_match && _.lookahead >= _)
+              _.match_length <= _.max_lazy_match && _.lookahead >= 3)
             ) {
               _.match_length--;
               do {
                 _.strstart++,
                   (_.ins_h =
-                    ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + _ - 1]) &
+                    ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + 3 - 1]) &
                     _.hash_mask),
                   (_ = _.prev[_.strstart & _.w_mask] = _.head[_.ins_h]),
                   (_.head[_.ins_h] = _.strstart);
-              } while (0 != --_.match_length);
+              } while (0 !== --_.match_length);
               _.strstart++;
             } else
               (_.strstart += _.match_length),
@@ -18321,68 +18289,68 @@ var CLSTAMP = "steamdb";
             (_ = _._tr_tally(_, 0, _.window[_.strstart])),
               _.lookahead--,
               _.strstart++;
-          if (_ && (_(_, !1), 0 === _.strm.avail_out)) return _;
+          if (_ && (_(_, !1), 0 === _.strm.avail_out)) return 1;
         }
         return (
-          (_.insert = _.strstart < _ - 1 ? _.strstart : _ - 1),
-          _ === _
-            ? (_(_, !0), 0 === _.strm.avail_out ? _ : _)
+          (_.insert = _.strstart < 2 ? _.strstart : 2),
+          4 === _
+            ? (_(_, !0), 0 === _.strm.avail_out ? 3 : 4)
             : _.last_lit && (_(_, !1), 0 === _.strm.avail_out)
-              ? _
-              : _
+              ? 1
+              : 2
         );
       }
       function _(_, _) {
         for (var _, _, _; ; ) {
           if (_.lookahead < _) {
-            if ((_(_), _.lookahead < _ && _ === _)) return _;
+            if ((_(_), _.lookahead < _ && 0 === _)) return 1;
             if (0 === _.lookahead) break;
           }
           if (
             ((_ = 0),
-            _.lookahead >= _ &&
+            _.lookahead >= 3 &&
               ((_.ins_h =
-                ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + _ - 1]) &
+                ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + 3 - 1]) &
                 _.hash_mask),
               (_ = _.prev[_.strstart & _.w_mask] = _.head[_.ins_h]),
               (_.head[_.ins_h] = _.strstart)),
             (_.prev_length = _.match_length),
             (_.prev_match = _.match_start),
-            (_.match_length = _ - 1),
+            (_.match_length = 2),
             0 !== _ &&
               _.prev_length < _.max_lazy_match &&
               _.strstart - _ <= _.w_size - _ &&
               ((_.match_length = _(_, _)),
               _.match_length <= 5 &&
                 (1 === _.strategy ||
-                  (_.match_length === _ &&
+                  (3 === _.match_length &&
                     _.strstart - _.match_start > 4096)) &&
-                (_.match_length = _ - 1)),
-            _.prev_length >= _ && _.match_length <= _.prev_length)
+                (_.match_length = 2)),
+            _.prev_length >= 3 && _.match_length <= _.prev_length)
           ) {
-            (_ = _.strstart + _.lookahead - _),
+            (_ = _.strstart + _.lookahead - 3),
               (_ = _._tr_tally(
                 _,
                 _.strstart - 1 - _.prev_match,
-                _.prev_length - _,
+                _.prev_length - 3,
               )),
               (_.lookahead -= _.prev_length - 1),
               (_.prev_length -= 2);
             do {
               ++_.strstart <= _ &&
                 ((_.ins_h =
-                  ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + _ - 1]) &
+                  ((_.ins_h << _.hash_shift) ^ _.window[_.strstart + 3 - 1]) &
                   _.hash_mask),
                 (_ = _.prev[_.strstart & _.w_mask] = _.head[_.ins_h]),
                 (_.head[_.ins_h] = _.strstart));
-            } while (0 != --_.prev_length);
+            } while (0 !== --_.prev_length);
             if (
               ((_.match_available = 0),
-              (_.match_length = _ - 1),
+              (_.match_length = 2),
               _.strstart++,
               _ && (_(_, !1), 0 === _.strm.avail_out))
             )
-              return _;
+              return 1;
           } else if (_.match_available) {
             if (
               ((_ = _._tr_tally(_, 0, _.window[_.strstart - 1])) && _(_, !1),
@@ -18390,19 +18358,19 @@ var CLSTAMP = "steamdb";
               _.lookahead--,
               0 === _.strm.avail_out)
             )
-              return _;
+              return 1;
           } else (_.match_available = 1), _.strstart++, _.lookahead--;
         }
         return (
           _.match_available &&
             ((_ = _._tr_tally(_, 0, _.window[_.strstart - 1])),
             (_.match_available = 0)),
-          (_.insert = _.strstart < _ - 1 ? _.strstart : _ - 1),
-          _ === _
-            ? (_(_, !0), 0 === _.strm.avail_out ? _ : _)
+          (_.insert = _.strstart < 2 ? _.strstart : 2),
+          4 === _
+            ? (_(_, !0), 0 === _.strm.avail_out ? 3 : 4)
             : _.last_lit && (_(_, !1), 0 === _.strm.avail_out)
-              ? _
-              : _
+              ? 1
+              : 2
         );
       }
       function _(_, _, _, _, _) {
@@ -18422,7 +18390,7 @@ var CLSTAMP = "steamdb";
           (this.wrap = 0),
           (this.gzhead = null),
           (this.gzindex = 0),
-          (this.method = _),
+          (this.method = 8),
           (this.last_flush = -1),
           (this.w_size = 0),
           (this.w_bits = 0),
@@ -18450,21 +18418,21 @@ var CLSTAMP = "steamdb";
           (this.strategy = 0),
           (this.good_match = 0),
           (this.nice_match = 0),
-          (this.dyn_ltree = new _.Buf16(2 * _)),
-          (this.dyn_dtree = new _.Buf16(2 * (2 * _ + 1))),
-          (this.bl_tree = new _.Buf16(2 * (2 * _ + 1))),
+          (this.dyn_ltree = new _.Buf16(1146)),
+          (this.dyn_dtree = new _.Buf16(122)),
+          (this.bl_tree = new _.Buf16(78)),
           _(this.dyn_ltree),
           _(this.dyn_dtree),
           _(this.bl_tree),
           (this.l_desc = null),
           (this.d_desc = null),
           (this.bl_desc = null),
-          (this.bl_count = new _.Buf16(_ + 1)),
-          (this.heap = new _.Buf16(2 * _ + 1)),
+          (this.bl_count = new _.Buf16(16)),
+          (this.heap = new _.Buf16(573)),
           _(this.heap),
           (this.heap_len = 0),
           (this.heap_max = 0),
-          (this.depth = new _.Buf16(2 * _ + 1)),
+          (this.depth = new _.Buf16(573)),
           _(this.depth),
           (this.l_buf = 0),
           (this.lit_bufsize = 0),
@@ -18481,22 +18449,22 @@ var CLSTAMP = "steamdb";
         var _;
         return _ && _.state
           ? ((_.total_in = _.total_out = 0),
-            (_.data_type = _),
+            (_.data_type = 2),
             ((_ = _.state).pending = 0),
             (_.pending_out = 0),
             _.wrap < 0 && (_.wrap = -_.wrap),
-            (_.status = _.wrap ? _ : _),
+            (_.status = _.wrap ? 42 : _),
             (_.adler = 2 === _.wrap ? 0 : 1),
-            (_.last_flush = _),
+            (_.last_flush = 0),
             _._tr_init(_),
-            _)
+            0)
           : _(_, _);
       }
       function _(_) {
         var _,
           _ = _(_);
         return (
-          _ === _ &&
+          0 === _ &&
             (((_ = _.state).window_size = 2 * _.w_size),
             _(_.head),
             (_.max_lazy_match = _[_.level].max_lazy),
@@ -18507,7 +18475,7 @@ var CLSTAMP = "steamdb";
             (_.block_start = 0),
             (_.lookahead = 0),
             (_.insert = 0),
-            (_.match_length = _.prev_length = _ - 1),
+            (_.match_length = _.prev_length = 2),
             (_.match_available = 0),
             (_.ins_h = 0)),
           _
@@ -18517,17 +18485,17 @@ var CLSTAMP = "steamdb";
         if (!_) return _;
         var _ = 1;
         if (
-          (_ === _ && (_ = 6),
+          (-1 === _ && (_ = 6),
           _ < 0 ? ((_ = 0), (_ = -_)) : _ > 15 && ((_ = 2), (_ -= 16)),
           _ < 1 ||
-            _ > _ ||
-            _ !== _ ||
+            _ > 9 ||
+            8 !== _ ||
             _ < 8 ||
             _ > 15 ||
             _ < 0 ||
             _ > 9 ||
             _ < 0 ||
-            _ > _)
+            _ > 4)
         )
           return _(_, _);
         8 === _ && (_ = 9);
@@ -18543,7 +18511,7 @@ var CLSTAMP = "steamdb";
           (_.hash_bits = _ + 7),
           (_.hash_size = 1 << _.hash_bits),
           (_.hash_mask = _.hash_size - 1),
-          (_.hash_shift = ~~((_.hash_bits + _ - 1) / _)),
+          (_.hash_shift = ~~((_.hash_bits + 3 - 1) / 3)),
           (_.window = new _.Buf8(2 * _.w_size)),
           (_.head = new _.Buf16(_.hash_size)),
           (_.prev = new _.Buf16(_.w_size)),
@@ -18563,7 +18531,7 @@ var CLSTAMP = "steamdb";
           var _ = 65535;
           for (_ > _.pending_buf_size - 5 && (_ = _.pending_buf_size - 5); ; ) {
             if (_.lookahead <= 1) {
-              if ((_(_), 0 === _.lookahead && _ === _)) return _;
+              if ((_(_), 0 === _.lookahead && 0 === _)) return 1;
               if (0 === _.lookahead) break;
             }
             (_.strstart += _.lookahead), (_.lookahead = 0);
@@ -18575,18 +18543,18 @@ var CLSTAMP = "steamdb";
               _(_, !1),
               0 === _.strm.avail_out)
             )
-              return _;
+              return 1;
             if (
               _.strstart - _.block_start >= _.w_size - _ &&
               (_(_, !1), 0 === _.strm.avail_out)
             )
-              return _;
+              return 1;
           }
           return (
             (_.insert = 0),
-            _ === _
-              ? (_(_, !0), 0 === _.strm.avail_out ? _ : _)
-              : (_.strstart > _.block_start && (_(_, !1), _.strm.avail_out), _)
+            4 === _
+              ? (_(_, !0), 0 === _.strm.avail_out ? 3 : 4)
+              : (_.strstart > _.block_start && (_(_, !1), _.strm.avail_out), 1)
           );
         }),
         new _(4, 4, 8, 4, _),
@@ -18600,7 +18568,7 @@ var CLSTAMP = "steamdb";
         new _(32, 258, 258, 4096, _),
       ]),
         (module_exports.deflateInit = function (_, _) {
-          return _(_, _, _, 15, 8, 0);
+          return _(_, _, 8, 15, 8, 0);
         }),
         (module_exports.deflateInit2 = _),
         (module_exports.deflateReset = _),
@@ -18609,7 +18577,7 @@ var CLSTAMP = "steamdb";
           return _ && _.state
             ? 2 !== _.state.wrap
               ? _
-              : ((_.state.gzhead = _), _)
+              : ((_.state.gzhead = _), 0)
             : _;
         }),
         (module_exports.deflate = function (_, _) {
@@ -18619,14 +18587,14 @@ var CLSTAMP = "steamdb";
             ((_ = _.state),
             !_.output ||
               (!_.input && 0 !== _.avail_in) ||
-              (_.status === _ && _ !== _))
+              (_.status === _ && 4 !== _))
           )
             return _(_, 0 === _.avail_out ? -5 : _);
           if (
             ((_.strm = _),
             (_ = _.last_flush),
             (_.last_flush = _),
-            _.status === _)
+            42 === _.status)
           )
             if (2 === _.wrap)
               (_.adler = 0),
@@ -18679,7 +18647,7 @@ var CLSTAMP = "steamdb";
                     _(_, 3),
                     (_.status = _));
             else {
-              var _ = (_ + ((_.w_bits - 8) << 4)) << 8;
+              var _ = (8 + ((_.w_bits - 8) << 4)) << 8;
               (_ |=
                 (_.strategy >= 2 || _.level < 2
                   ? 0
@@ -18782,21 +18750,21 @@ var CLSTAMP = "steamdb";
                 : (_.status = _)),
             0 !== _.pending)
           ) {
-            if ((_(_), 0 === _.avail_out)) return (_.last_flush = -1), _;
-          } else if (0 === _.avail_in && _(_) <= _(_) && _ !== _)
+            if ((_(_), 0 === _.avail_out)) return (_.last_flush = -1), 0;
+          } else if (0 === _.avail_in && _(_) <= _(_) && 4 !== _)
             return _(_, -5);
           if (_.status === _ && 0 !== _.avail_in) return _(_, -5);
           if (
             0 !== _.avail_in ||
             0 !== _.lookahead ||
-            (_ !== _ && _.status !== _)
+            (0 !== _ && _.status !== _)
           ) {
             var _ =
               2 === _.strategy
                 ? (function (_, _) {
                     for (var _; ; ) {
                       if (0 === _.lookahead && (_(_), 0 === _.lookahead)) {
-                        if (_ === _) return _;
+                        if (0 === _) return 1;
                         break;
                       }
                       if (
@@ -18806,27 +18774,27 @@ var CLSTAMP = "steamdb";
                         _.strstart++,
                         _ && (_(_, !1), 0 === _.strm.avail_out))
                       )
-                        return _;
+                        return 1;
                     }
                     return (
                       (_.insert = 0),
-                      _ === _
-                        ? (_(_, !0), 0 === _.strm.avail_out ? _ : _)
+                      4 === _
+                        ? (_(_, !0), 0 === _.strm.avail_out ? 3 : 4)
                         : _.last_lit && (_(_, !1), 0 === _.strm.avail_out)
-                          ? _
-                          : _
+                          ? 1
+                          : 2
                     );
                   })(_, _)
                 : 3 === _.strategy
                   ? (function (_, _) {
                       for (var _, _, _, _, _ = _.window; ; ) {
                         if (_.lookahead <= _) {
-                          if ((_(_), _.lookahead <= _ && _ === _)) return _;
+                          if ((_(_), _.lookahead <= _ && 0 === _)) return 1;
                           if (0 === _.lookahead) break;
                         }
                         if (
                           ((_.match_length = 0),
-                          _.lookahead >= _ &&
+                          _.lookahead >= 3 &&
                             _.strstart > 0 &&
                             (_ = _[(_ = _.strstart - 1)]) === _[++_] &&
                             _ === _[++_] &&
@@ -18849,8 +18817,8 @@ var CLSTAMP = "steamdb";
                               (_.match_length = _.lookahead);
                         }
                         if (
-                          (_.match_length >= _
-                            ? ((_ = _._tr_tally(_, 1, _.match_length - _)),
+                          (_.match_length >= 3
+                            ? ((_ = _._tr_tally(_, 1, _.match_length - 3)),
                               (_.lookahead -= _.match_length),
                               (_.strstart += _.match_length),
                               (_.match_length = 0))
@@ -18859,22 +18827,22 @@ var CLSTAMP = "steamdb";
                               _.strstart++),
                           _ && (_(_, !1), 0 === _.strm.avail_out))
                         )
-                          return _;
+                          return 1;
                       }
                       return (
                         (_.insert = 0),
-                        _ === _
-                          ? (_(_, !0), 0 === _.strm.avail_out ? _ : _)
+                        4 === _
+                          ? (_(_, !0), 0 === _.strm.avail_out ? 3 : 4)
                           : _.last_lit && (_(_, !1), 0 === _.strm.avail_out)
-                            ? _
-                            : _
+                            ? 1
+                            : 2
                       );
                     })(_, _)
                   : _[_.level].func(_, _);
-            if (((_ !== _ && _ !== _) || (_.status = _), _ === _ || _ === _))
-              return 0 === _.avail_out && (_.last_flush = -1), _;
+            if (((3 !== _ && 4 !== _) || (_.status = _), 1 === _ || 3 === _))
+              return 0 === _.avail_out && (_.last_flush = -1), 0;
             if (
-              _ === _ &&
+              2 === _ &&
               (1 === _
                 ? _._tr_align(_)
                 : 5 !== _ &&
@@ -18886,10 +18854,10 @@ var CLSTAMP = "steamdb";
               _(_),
               0 === _.avail_out)
             )
-              return (_.last_flush = -1), _;
+              return (_.last_flush = -1), 0;
           }
-          return _ !== _
-            ? _
+          return 4 !== _
+            ? 0
             : _.wrap <= 0
               ? 1
               : (2 === _.wrap
@@ -18904,12 +18872,12 @@ var CLSTAMP = "steamdb";
                   : (_(_, _.adler >>> 16), _(_, 65535 & _.adler)),
                 _(_),
                 _.wrap > 0 && (_.wrap = -_.wrap),
-                0 !== _.pending ? _ : 1);
+                0 !== _.pending ? 0 : 1);
         }),
         (module_exports.deflateEnd = function (_) {
           var _;
           return _ && _.state
-            ? (_ = _.state.status) !== _ &&
+            ? 42 !== (_ = _.state.status) &&
               69 !== _ &&
               73 !== _ &&
               91 !== _ &&
@@ -18917,7 +18885,7 @@ var CLSTAMP = "steamdb";
               _ !== _ &&
               _ !== _
               ? _(_, _)
-              : ((_.state = null), _ === _ ? _(_, -3) : _)
+              : ((_.state = null), _ === _ ? _(_, -3) : 0)
             : _;
         }),
         (module_exports.deflateSetDictionary = function (_, _) {
@@ -18933,7 +18901,7 @@ var CLSTAMP = "steamdb";
           if (!_ || !_.state) return _;
           if (
             2 === (_ = (_ = _.state).wrap) ||
-            (1 === _ && _.status !== _) ||
+            (1 === _ && 42 !== _.status) ||
             _.lookahead
           )
             return _;
@@ -18957,31 +18925,31 @@ var CLSTAMP = "steamdb";
               _.next_in = 0,
               _.input = _,
               _(_);
-            _.lookahead >= _;
+            _.lookahead >= 3;
           ) {
-            (_ = _.strstart), (_ = _.lookahead - (_ - 1));
+            (_ = _.strstart), (_ = _.lookahead - 2);
             do {
               (_.ins_h =
-                ((_.ins_h << _.hash_shift) ^ _.window[_ + _ - 1]) &
+                ((_.ins_h << _.hash_shift) ^ _.window[_ + 3 - 1]) &
                 _.hash_mask),
                 (_.prev[_ & _.w_mask] = _.head[_.ins_h]),
                 (_.head[_.ins_h] = _),
                 _++;
             } while (--_);
-            (_.strstart = _), (_.lookahead = _ - 1), _(_);
+            (_.strstart = _), (_.lookahead = 2), _(_);
           }
           return (
             (_.strstart += _.lookahead),
             (_.block_start = _.strstart),
             (_.insert = _.lookahead),
             (_.lookahead = 0),
-            (_.match_length = _.prev_length = _ - 1),
+            (_.match_length = _.prev_length = 2),
             (_.match_available = 0),
             (_.next_in = _),
             (_.input = _),
             (_.avail_in = _),
             (_.wrap = _),
-            _
+            0
           );
         }),
         (module_exports.deflateInfo = "pako deflate (from Nodeca project)");
@@ -19057,100 +19025,102 @@ var CLSTAMP = "steamdb";
               _[_++] = 65535 & _;
             else {
               if (!(16 & _)) {
-                if (0 == (64 & _)) {
-                  _ = _[(65535 & _) + (_ & ((1 << _) - 1))];
-                  continue _;
-                }
-                if (32 & _) {
-                  _.mode = 12;
-                  break _;
-                }
-                (_.msg = "invalid literal/length code"), (_.mode = 30);
-                break _;
-              }
-              (_ = 65535 & _),
-                (_ &= 15) &&
-                  (_ < _ && ((_ += _[_++] << _), (_ += 8)),
-                  (_ += _ & ((1 << _) - 1)),
-                  (_ >>>= _),
-                  (_ -= _)),
-                _ < 15 &&
-                  ((_ += _[_++] << _), (_ += 8), (_ += _[_++] << _), (_ += 8)),
-                (_ = _[_ & _]);
-              _: for (;;) {
-                if (
-                  ((_ >>>= _ = _ >>> 24),
-                  (_ -= _),
-                  !(16 & (_ = (_ >>> 16) & 255)))
-                ) {
-                  if (0 == (64 & _)) {
-                    _ = _[(65535 & _) + (_ & ((1 << _) - 1))];
-                    continue _;
+                if (64 & _) {
+                  if (32 & _) {
+                    _.mode = 12;
+                    break _;
                   }
-                  (_.msg = "invalid distance code"), (_.mode = 30);
+                  (_.msg = "invalid literal/length code"), (_.mode = 30);
                   break _;
                 }
-                if (
-                  ((_ = 65535 & _),
-                  _ < (_ &= 15) &&
+                _ = _[(65535 & _) + (_ & ((1 << _) - 1))];
+                continue _;
+              }
+              for (
+                _ = 65535 & _,
+                  (_ &= 15) &&
+                    (_ < _ && ((_ += _[_++] << _), (_ += 8)),
+                    (_ += _ & ((1 << _) - 1)),
+                    (_ >>>= _),
+                    (_ -= _)),
+                  _ < 15 &&
                     ((_ += _[_++] << _),
-                    (_ += 8) < _ && ((_ += _[_++] << _), (_ += 8))),
-                  (_ += _ & ((1 << _) - 1)) > _)
+                    (_ += 8),
+                    (_ += _[_++] << _),
+                    (_ += 8)),
+                  _ = _[_ & _];
+                ;
+              ) {
+                if (
+                  ((_ >>>= _ = _ >>> 24), (_ -= _), 16 & (_ = (_ >>> 16) & 255))
                 ) {
-                  (_.msg = "invalid distance too far back"), (_.mode = 30);
-                  break _;
-                }
-                if (((_ >>>= _), (_ -= _), _ > (_ = _ - _))) {
-                  if ((_ = _ - _) > _ && _.sane) {
+                  if (
+                    ((_ = 65535 & _),
+                    _ < (_ &= 15) &&
+                      ((_ += _[_++] << _),
+                      (_ += 8) < _ && ((_ += _[_++] << _), (_ += 8))),
+                    (_ += _ & ((1 << _) - 1)) > _)
+                  ) {
                     (_.msg = "invalid distance too far back"), (_.mode = 30);
                     break _;
                   }
-                  if (((_ = 0), (_ = _), 0 === _)) {
-                    if (((_ += _ - _), _ < _)) {
+                  if (((_ >>>= _), (_ -= _), _ > (_ = _ - _))) {
+                    if ((_ = _ - _) > _ && _.sane) {
+                      (_.msg = "invalid distance too far back"), (_.mode = 30);
+                      break _;
+                    }
+                    if (((_ = 0), (_ = _), 0 === _)) {
+                      if (((_ += _ - _), _ < _)) {
+                        _ -= _;
+                        do {
+                          _[_++] = _[_++];
+                        } while (--_);
+                        (_ = _ - _), (_ = _);
+                      }
+                    } else if (_ < _) {
+                      if (((_ += _ + _ - _), (_ -= _) < _)) {
+                        _ -= _;
+                        do {
+                          _[_++] = _[_++];
+                        } while (--_);
+                        if (((_ = 0), _ < _)) {
+                          _ -= _ = _;
+                          do {
+                            _[_++] = _[_++];
+                          } while (--_);
+                          (_ = _ - _), (_ = _);
+                        }
+                      }
+                    } else if (((_ += _ - _), _ < _)) {
                       _ -= _;
                       do {
                         _[_++] = _[_++];
                       } while (--_);
                       (_ = _ - _), (_ = _);
                     }
-                  } else if (_ < _) {
-                    if (((_ += _ + _ - _), (_ -= _) < _)) {
-                      _ -= _;
-                      do {
-                        _[_++] = _[_++];
-                      } while (--_);
-                      if (((_ = 0), _ < _)) {
-                        _ -= _ = _;
-                        do {
-                          _[_++] = _[_++];
-                        } while (--_);
-                        (_ = _ - _), (_ = _);
-                      }
-                    }
-                  } else if (((_ += _ - _), _ < _)) {
-                    _ -= _;
+                    for (; _ > 2; )
+                      (_[_++] = _[_++]),
+                        (_[_++] = _[_++]),
+                        (_[_++] = _[_++]),
+                        (_ -= 3);
+                    _ && ((_[_++] = _[_++]), _ > 1 && (_[_++] = _[_++]));
+                  } else {
+                    _ = _ - _;
                     do {
-                      _[_++] = _[_++];
-                    } while (--_);
-                    (_ = _ - _), (_ = _);
+                      (_[_++] = _[_++]),
+                        (_[_++] = _[_++]),
+                        (_[_++] = _[_++]),
+                        (_ -= 3);
+                    } while (_ > 2);
+                    _ && ((_[_++] = _[_++]), _ > 1 && (_[_++] = _[_++]));
                   }
-                  for (; _ > 2; )
-                    (_[_++] = _[_++]),
-                      (_[_++] = _[_++]),
-                      (_[_++] = _[_++]),
-                      (_ -= 3);
-                  _ && ((_[_++] = _[_++]), _ > 1 && (_[_++] = _[_++]));
-                } else {
-                  _ = _ - _;
-                  do {
-                    (_[_++] = _[_++]),
-                      (_[_++] = _[_++]),
-                      (_[_++] = _[_++]),
-                      (_ -= 3);
-                  } while (_ > 2);
-                  _ && ((_[_++] = _[_++]), _ > 1 && (_[_++] = _[_++]));
+                  break;
                 }
-                break;
+                if (64 & _) {
+                  (_.msg = "invalid distance code"), (_.mode = 30);
+                  break _;
+                }
+                _ = _[(65535 & _) + (_ & ((1 << _) - 1))];
               }
             }
             break;
@@ -19173,15 +19143,9 @@ var CLSTAMP = "steamdb";
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = 1,
-        _ = 2,
-        _ = 0,
         _ = -2,
-        _ = 1,
         _ = 12,
-        _ = 30,
-        _ = 852,
-        _ = 592;
+        _ = 30;
       function _(_) {
         return (
           ((_ >>> 24) & 255) +
@@ -19234,18 +19198,18 @@ var CLSTAMP = "steamdb";
             (_.total_in = _.total_out = _.total = 0),
             (_.msg = ""),
             _.wrap && (_.adler = 1 & _.wrap),
-            (_.mode = _),
+            (_.mode = 1),
             (_.last = 0),
             (_.havedict = 0),
             (_.dmax = 32768),
             (_.head = null),
             (_.hold = 0),
             (_.bits = 0),
-            (_.lencode = _.lendyn = new _.Buf32(_)),
-            (_.distcode = _.distdyn = new _.Buf32(_)),
+            (_.lencode = _.lendyn = new _.Buf32(852)),
+            (_.distcode = _.distdyn = new _.Buf32(592)),
             (_.sane = 1),
             (_.back = -1),
-            _)
+            0)
           : _;
       }
       function _(_) {
@@ -19275,7 +19239,7 @@ var CLSTAMP = "steamdb";
           ? ((_ = new _()),
             (_.state = _),
             (_.window = null),
-            (_ = _(_, _)) !== _ && (_.state = null),
+            0 !== (_ = _(_, _)) && (_.state = null),
             _)
           : _;
       }
@@ -19291,14 +19255,14 @@ var CLSTAMP = "steamdb";
           for (; _ < 280; ) _.lens[_++] = 7;
           for (; _ < 288; ) _.lens[_++] = 8;
           for (
-            _(_, _.lens, 0, 288, _, 0, _.work, {
+            _(1, _.lens, 0, 288, _, 0, _.work, {
               bits: 9,
             }),
               _ = 0;
             _ < 32;
           )
             _.lens[_++] = 5;
-          _(_, _.lens, 0, 32, _, 0, _.work, {
+          _(2, _.lens, 0, 32, _, 0, _.work, {
             bits: 5,
           }),
             (_ = !1);
@@ -19380,10 +19344,10 @@ var CLSTAMP = "steamdb";
             (_ = _.bits),
             (_ = _),
             (_ = _),
-            (_ = _);
+            (_ = 0);
           _: for (;;)
             switch (_.mode) {
-              case _:
+              case 1:
                 if (0 === _.wrap) {
                   _.mode = 13;
                   break;
@@ -19756,7 +19720,7 @@ var CLSTAMP = "steamdb";
                   (_ = {
                     bits: _.lenbits,
                   }),
-                  (_ = _(_, _.lens, 0, _.nlen, _.lencode, 0, _.work, _)),
+                  (_ = _(1, _.lens, 0, _.nlen, _.lencode, 0, _.work, _)),
                   (_.lenbits = _.bits),
                   _)
                 ) {
@@ -19769,7 +19733,7 @@ var CLSTAMP = "steamdb";
                   (_ = {
                     bits: _.distbits,
                   }),
-                  (_ = _(_, _.lens, _.nlen, _.ndist, _.distcode, 0, _.work, _)),
+                  (_ = _(2, _.lens, _.nlen, _.ndist, _.distcode, 0, _.work, _)),
                   (_.distbits = _.bits),
                   _)
                 ) {
@@ -19809,7 +19773,7 @@ var CLSTAMP = "steamdb";
                   if (0 === _) break _;
                   _--, (_ += _[_++] << _), (_ += 8);
                 }
-                if (_ && 0 == (240 & _)) {
+                if (_ && !(240 & _)) {
                   for (
                     _ = _, _ = _, _ = _;
                     (_ =
@@ -19864,7 +19828,7 @@ var CLSTAMP = "steamdb";
                   if (0 === _) break _;
                   _--, (_ += _[_++] << _), (_ += 8);
                 }
-                if (0 == (240 & _)) {
+                if (!(240 & _)) {
                   for (
                     _ = _, _ = _, _ = _;
                     (_ =
@@ -19999,21 +19963,19 @@ var CLSTAMP = "steamdb";
                   (_.last ? 64 : 0) +
                   (_.mode === _ ? 128 : 0) +
                   (20 === _.mode || 15 === _.mode ? 256 : 0)),
-                ((0 === _ && 0 === _) || 4 === _) && _ === _ && (_ = -5),
+                ((0 === _ && 0 === _) || 4 === _) && 0 === _ && (_ = -5),
                 _)
           );
         }),
         (module_exports.inflateEnd = function (_) {
           if (!_ || !_.state) return _;
           var _ = _.state;
-          return _.window && (_.window = null), (_.state = null), _;
+          return _.window && (_.window = null), (_.state = null), 0;
         }),
         (module_exports.inflateGetHeader = function (_, _) {
           var _;
-          return _ && _.state
-            ? 0 == (2 & (_ = _.state).wrap)
-              ? _
-              : ((_.head = _), (_.done = !1), _)
+          return _ && _.state && 2 & (_ = _.state).wrap
+            ? ((_.head = _), (_.done = !1), 0)
             : _;
         }),
         (module_exports.inflateSetDictionary = function (_, _) {
@@ -20026,7 +19988,7 @@ var CLSTAMP = "steamdb";
                 ? -3
                 : _(_, _, _, _)
                   ? ((_.mode = 31), -4)
-                  : ((_.havedict = 1), _)
+                  : ((_.havedict = 1), 0)
             : _;
         }),
         (module_exports.inflateInfo = "pako inflate (from Nodeca project)");
@@ -20117,11 +20079,11 @@ var CLSTAMP = "steamdb";
             (_ = 1 << (_ - _)),
             (_ = _ = 1 << _);
           do {
-            _[_ + (_ >> _) + (_ -= _)] = (_ << 24) | (_ << 16) | _ | 0;
+            _[_ + (_ >> _) + (_ -= _)] = (_ << 24) | (_ << 16) | _;
           } while (0 !== _);
           for (_ = 1 << (_ - 1); _ & _; ) _ >>= 1;
           if (
-            (0 !== _ ? ((_ &= _ - 1), (_ += _)) : (_ = 0), _++, 0 == --_[_])
+            (0 !== _ ? ((_ &= _ - 1), (_ += _)) : (_ = 0), _++, 0 === --_[_])
           ) {
             if (_ === _) break;
             _ = _[_ + _[_]];
@@ -20134,13 +20096,11 @@ var CLSTAMP = "steamdb";
               _++, (_ <<= 1);
             if (((_ += 1 << _), (1 === _ && _ > 852) || (2 === _ && _ > 592)))
               return 1;
-            _[(_ = _ & _)] = (_ << 24) | (_ << 16) | (_ - _) | 0;
+            _[(_ = _ & _)] = (_ << 24) | (_ << 16) | (_ - _);
           }
         }
         return (
-          0 !== _ && (_[_ + _] = ((_ - _) << 24) | (64 << 16) | 0),
-          (_.bits = _),
-          0
+          0 !== _ && (_[_ + _] = ((_ - _) << 24) | (64 << 16)), (_.bits = _), 0
         );
       };
     },
@@ -20160,26 +20120,14 @@ var CLSTAMP = "steamdb";
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      var _ = __webpack_require__("chunkid"),
-        _ = 0,
-        _ = 1;
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         for (var _ = _.length; --_ >= 0; ) _[_] = 0;
       }
-      var _ = 0,
-        _ = 29,
-        _ = 256,
-        _ = _ + 1 + _,
+      var _ = 256,
+        _ = 286,
         _ = 30,
-        _ = 19,
-        _ = 2 * _ + 1,
         _ = 15,
-        _ = 16,
-        _ = 7,
-        _ = 256,
-        _ = 16,
-        _ = 17,
-        _ = 18,
         _ = [
           0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4,
           4, 5, 5, 5, 5, 0,
@@ -20190,15 +20138,15 @@ var CLSTAMP = "steamdb";
         ],
         _ = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7],
         _ = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
-        _ = new Array(2 * (_ + 2));
+        _ = new Array(576);
       _(_);
-      var _ = new Array(2 * _);
+      var _ = new Array(60);
       _(_);
       var _ = new Array(512);
       _(_);
       var _ = new Array(256);
       _(_);
-      var _ = new Array(_);
+      var _ = new Array(29);
       _(_);
       var _,
         _,
@@ -20223,11 +20171,11 @@ var CLSTAMP = "steamdb";
           (_.pending_buf[_.pending++] = (_ >>> 8) & 255);
       }
       function _(_, _, _) {
-        _.bi_valid > _ - _
+        _.bi_valid > 16 - _
           ? ((_.bi_buf |= (_ << _.bi_valid) & 65535),
             _(_, _.bi_buf),
-            (_.bi_buf = _ >> (_ - _.bi_valid)),
-            (_.bi_valid += _ - _))
+            (_.bi_buf = _ >> (16 - _.bi_valid)),
+            (_.bi_valid += _ - 16))
           : ((_.bi_buf |= (_ << _.bi_valid) & 65535), (_.bi_valid += _));
       }
       function _(_, _, _) {
@@ -20243,7 +20191,7 @@ var CLSTAMP = "steamdb";
       function _(_, _, _) {
         var _,
           _,
-          _ = new Array(_ + 1),
+          _ = new Array(16),
           _ = 0;
         for (_ = 1; _ <= _; _++) _[_] = _ = (_ + _[_ - 1]) << 1;
         for (_ = 0; _ <= _; _++) {
@@ -20255,8 +20203,8 @@ var CLSTAMP = "steamdb";
         var _;
         for (_ = 0; _ < _; _++) _.dyn_ltree[2 * _] = 0;
         for (_ = 0; _ < _; _++) _.dyn_dtree[2 * _] = 0;
-        for (_ = 0; _ < _; _++) _.bl_tree[2 * _] = 0;
-        (_.dyn_ltree[2 * _] = 1),
+        for (_ = 0; _ < 19; _++) _.bl_tree[2 * _] = 0;
+        (_.dyn_ltree[512] = 1),
           (_.opt_len = _.static_len = 0),
           (_.last_lit = _.matches = 0);
       }
@@ -20302,7 +20250,7 @@ var CLSTAMP = "steamdb";
                   _(_, (_ = _(--_)), _),
                   0 !== (_ = _[_]) && _(_, (_ -= _[_]), _));
           } while (_ < _.last_lit);
-        _(_, _, _);
+        _(_, 256, _);
       }
       function _(_, _) {
         var _,
@@ -20313,7 +20261,7 @@ var CLSTAMP = "steamdb";
           _ = _.stat_desc.has_stree,
           _ = _.stat_desc.elems,
           _ = -1;
-        for (_.heap_len = 0, _.heap_max = _, _ = 0; _ < _; _++)
+        for (_.heap_len = 0, _.heap_max = 573, _ = 0; _ < _; _++)
           0 !== _[2 * _]
             ? ((_.heap[++_.heap_len] = _ = _), (_.depth[_] = 0))
             : (_[2 * _ + 1] = 0);
@@ -20357,7 +20305,7 @@ var CLSTAMP = "steamdb";
             for (_ = 0; _ <= _; _++) _.bl_count[_] = 0;
             for (
               _[2 * _.heap[_.heap_max] + 1] = 0, _ = _.heap_max + 1;
-              _ < _;
+              _ < 573;
               _++
             )
               (_ = _[2 * _[2 * (_ = _.heap[_]) + 1] + 1] + 1) > _ &&
@@ -20408,10 +20356,10 @@ var CLSTAMP = "steamdb";
               (_ < _
                 ? (_.bl_tree[2 * _] += _)
                 : 0 !== _
-                  ? (_ !== _ && _.bl_tree[2 * _]++, _.bl_tree[2 * _]++)
+                  ? (_ !== _ && _.bl_tree[2 * _]++, _.bl_tree[32]++)
                   : _ <= 10
-                    ? _.bl_tree[2 * _]++
-                    : _.bl_tree[2 * _]++,
+                    ? _.bl_tree[34]++
+                    : _.bl_tree[36]++,
               (_ = 0),
               (_ = _),
               0 === _
@@ -20433,15 +20381,15 @@ var CLSTAMP = "steamdb";
             if (_ < _)
               do {
                 _(_, _, _.bl_tree);
-              } while (0 != --_);
+              } while (0 !== --_);
             else
               0 !== _
                 ? (_ !== _ && (_(_, _, _.bl_tree), _--),
-                  _(_, _, _.bl_tree),
+                  _(_, 16, _.bl_tree),
                   _(_, _ - 3, 2))
                 : _ <= 10
-                  ? (_(_, _, _.bl_tree), _(_, _ - 3, 3))
-                  : (_(_, _, _.bl_tree), _(_, _ - 11, 7));
+                  ? (_(_, 17, _.bl_tree), _(_, _ - 3, 3))
+                  : (_(_, 18, _.bl_tree), _(_, _ - 11, 7));
             (_ = 0),
               (_ = _),
               0 === _
@@ -20454,7 +20402,7 @@ var CLSTAMP = "steamdb";
       _(_);
       var _ = !1;
       function _(_, _, _, _) {
-        _(_, (_ << 1) + (_ ? 1 : 0), 3),
+        _(_, 0 + (_ ? 1 : 0), 3),
           (function (_, _, _, _) {
             _(_),
               _ && (_(_, _), _(_, ~_)),
@@ -20470,8 +20418,8 @@ var CLSTAMP = "steamdb";
               _,
               _,
               _,
-              _ = new Array(_ + 1);
-            for (_ = 0, _ = 0; _ < _ - 1; _++)
+              _ = new Array(16);
+            for (_ = 0, _ = 0; _ < 28; _++)
               for (_[_] = _, _ = 0; _ < 1 << _[_]; _++) _[_++] = _;
             for (_[_ - 1] = _, _ = 0, _ = 0; _ < 16; _++)
               for (_[_] = _, _ = 0; _ < 1 << _[_]; _++) _[_++] = _;
@@ -20483,11 +20431,11 @@ var CLSTAMP = "steamdb";
             for (; _ <= 255; ) (_[2 * _ + 1] = 9), _++, _[9]++;
             for (; _ <= 279; ) (_[2 * _ + 1] = 7), _++, _[7]++;
             for (; _ <= 287; ) (_[2 * _ + 1] = 8), _++, _[8]++;
-            for (_(_, _ + 1, _), _ = 0; _ < _; _++)
+            for (_(_, 287, _), _ = 0; _ < _; _++)
               (_[2 * _ + 1] = 5), (_[2 * _] = _(_, 5));
-            (_ = new _(_, _, _ + 1, _, _)),
+            (_ = new _(_, _, 257, _, _)),
               (_ = new _(_, _, 0, _, _)),
-              (_ = new _(new Array(0), _, 0, _, _));
+              (_ = new _(new Array(0), _, 0, 19, 7));
           })(),
           (_ = !0)),
           (_.l_desc = new _(_.dyn_ltree, _)),
@@ -20508,16 +20456,16 @@ var CLSTAMP = "steamdb";
                   var _,
                     _ = 4093624447;
                   for (_ = 0; _ <= 31; _++, _ >>>= 1)
-                    if (1 & _ && 0 !== _.dyn_ltree[2 * _]) return _;
+                    if (1 & _ && 0 !== _.dyn_ltree[2 * _]) return 0;
                   if (
                     0 !== _.dyn_ltree[18] ||
                     0 !== _.dyn_ltree[20] ||
                     0 !== _.dyn_ltree[26]
                   )
-                    return _;
+                    return 1;
                   for (_ = 32; _ < _; _++)
-                    if (0 !== _.dyn_ltree[2 * _]) return _;
-                  return _;
+                    if (0 !== _.dyn_ltree[2 * _]) return 1;
+                  return 0;
                 })(_)),
               _(_, _.l_desc),
               _(_, _.d_desc),
@@ -20527,7 +20475,7 @@ var CLSTAMP = "steamdb";
                   _(_, _.dyn_ltree, _.l_desc.max_code),
                     _(_, _.dyn_dtree, _.d_desc.max_code),
                     _(_, _.bl_desc),
-                    _ = _ - 1;
+                    _ = 18;
                   _ >= 3 && 0 === _.bl_tree[2 * _[_] + 1];
                   _--
                 );
@@ -20572,7 +20520,7 @@ var CLSTAMP = "steamdb";
         }),
         (module_exports._tr_align = function (_) {
           _(_, 2, 3),
-            _(_, _, _),
+            _(_, 256, _),
             (function (_) {
               16 === _.bi_valid
                 ? (_(_, _.bi_buf), (_.bi_buf = 0), (_.bi_valid = 0))
@@ -20734,7 +20682,7 @@ var CLSTAMP = "steamdb";
         else {
           _ = _;
           do {
-            0 != (4098 & (_ = _).flags) && (_ = _.return), (_ = _.return);
+            !!(4098 & (_ = _).flags) && (_ = _.return), (_ = _.return);
           } while (_);
         }
         return 3 === _.tag ? _ : null;
@@ -21013,15 +20961,16 @@ var CLSTAMP = "steamdb";
             ? 0
             : 0 !== _ &&
                 _ !== _ &&
-                0 == (_ & _) &&
-                ((_ = _ & -_) >= (_ = _ & -_) ||
-                  (32 === _ && 0 != (4194048 & _)))
+                0 === (_ & _) &&
+                ((_ = _ & -_) >= (_ = _ & -_) || (32 === _ && 4194048 & _))
               ? _
               : _
         );
       }
       function _(_, _) {
-        return 0 == (_.pendingLanes & ~(_.suspendedLanes & ~_.pingedLanes) & _);
+        return (
+          0 === (_.pendingLanes & ~(_.suspendedLanes & ~_.pingedLanes) & _)
+        );
       }
       function _(_, _) {
         switch (_) {
@@ -21055,11 +21004,11 @@ var CLSTAMP = "steamdb";
       }
       function _() {
         var _ = _;
-        return 0 == (4194048 & (_ <<= 1)) && (_ = 256), _;
+        return !(4194048 & (_ <<= 1)) && (_ = 256), _;
       }
       function _() {
         var _ = _;
-        return 0 == (62914560 & (_ <<= 1)) && (_ = 4194304), _;
+        return !(62914560 & (_ <<= 1)) && (_ = 4194304), _;
       }
       function _(_) {
         for (var _ = [], _ = 0; 31 > _; _++) _.push(_);
@@ -21127,7 +21076,7 @@ var CLSTAMP = "steamdb";
       function _(_) {
         return 2 < (_ &= -_)
           ? 8 < _
-            ? 0 != (134217727 & _)
+            ? 134217727 & _
               ? 32
               : 268435456
             : 8
@@ -23066,8 +23015,8 @@ var CLSTAMP = "steamdb";
         _ = null;
         for (var _ = _, _ = !1; null !== _; ) {
           if (!_)
-            if (0 != (524288 & _.flags)) _ = !0;
-            else if (0 != (262144 & _.flags)) break;
+            if (524288 & _.flags) _ = !0;
+            else if (262144 & _.flags) break;
           if (10 === _.tag) {
             var _ = _.alternate;
             if (null === _) throw Error(_(387));
@@ -23170,7 +23119,7 @@ var CLSTAMP = "steamdb";
         _ = 0,
         _ = null;
       function _() {
-        if (0 == --_ && null !== _) {
+        if (0 === --_ && null !== _) {
           null !== _ && (_.status = "fulfilled");
           var _ = _;
           (_ = null), (_ = 0), (_ = null);
@@ -23313,7 +23262,7 @@ var CLSTAMP = "steamdb";
       function _(_, _, _) {
         var _ = _.updateQueue;
         if (null === _) return null;
-        if (((_ = _.shared), 0 != (2 & _))) {
+        if (((_ = _.shared), 2 & _)) {
           var _ = _.pending;
           return (
             null === _ ? (_.next = _) : ((_.next = _.next), (_.next = _)),
@@ -23326,10 +23275,7 @@ var CLSTAMP = "steamdb";
         return _(_, _, _, _), _(_);
       }
       function _(_, _, _) {
-        if (
-          null !== (_ = _.updateQueue) &&
-          ((_ = _.shared), 0 != (4194048 & _))
-        ) {
+        if (null !== (_ = _.updateQueue) && ((_ = _.shared), 4194048 & _)) {
           var _ = _.lanes;
           (_ |= _ &= _.pendingLanes), (_.lanes = _), _(_, _);
         }
@@ -23804,7 +23750,7 @@ var CLSTAMP = "steamdb";
             null === _)
           )
             throw Error(_(349));
-          _ || 0 != (124 & _) || _(_, _, _);
+          _ || 124 & _ || _(_, _, _);
         }
         return _;
       }
@@ -24173,7 +24119,7 @@ var CLSTAMP = "steamdb";
         return (_.memoizedState = [_, _]), _;
       }
       function _(_, _, _) {
-        return void 0 === _ || 0 != (1073741824 & _)
+        return void 0 === _ || 1073741824 & _
           ? (_.memoizedState = _)
           : ((_.memoizedState = _), (_ = _()), (_.lanes |= _), (_ |= _), _);
       }
@@ -24182,9 +24128,9 @@ var CLSTAMP = "steamdb";
           ? _
           : null !== _.current
             ? ((_ = _(_, _, _)), _(_, _) || (_ = !0), _)
-            : 0 == (42 & _)
-              ? ((_ = !0), (_.memoizedState = _))
-              : ((_ = _()), (_.lanes |= _), (_ |= _), _);
+            : 42 & _
+              ? ((_ = _()), (_.lanes |= _), (_ |= _), _)
+              : ((_ = !0), (_.memoizedState = _));
       }
       function _(_, _, _, _, _) {
         var _ = _._;
@@ -24399,7 +24345,7 @@ var CLSTAMP = "steamdb";
           (_.pending = _);
       }
       function _(_, _, _) {
-        if (0 != (4194048 & _)) {
+        if (4194048 & _) {
           var _ = _.lanes;
           (_ |= _ &= _.pendingLanes), (_.lanes = _), _(_, _);
         }
@@ -24521,7 +24467,7 @@ var CLSTAMP = "steamdb";
               _ = __webpack_require__();
             } else {
               if (((_ = _()), null === _)) throw Error(_(349));
-              0 != (124 & _) || _(_, _, _);
+              124 & _ || _(_, _, _);
             }
             _.memoizedState = _;
             var _ = {
@@ -25077,7 +25023,7 @@ var CLSTAMP = "steamdb";
             )
               return _;
           } else if (19 === _.tag && void 0 !== _.memoizedProps.revealOrder) {
-            if (0 != (128 & _.flags)) return _;
+            if (128 & _.flags) return _;
           } else if (null !== _.child) {
             (_.child.return = _), (_ = _.child);
             continue;
@@ -25300,7 +25246,7 @@ var CLSTAMP = "steamdb";
           if (_(_, _) && _.ref === _.ref) {
             if (((_ = !1), (_.pendingProps = _ = _), !_(_, _)))
               return (_.lanes = _.lanes), _(_, _, _);
-            0 != (131072 & _.flags) && (_ = !0);
+            131072 & _.flags && (_ = !0);
           }
         }
         return _(_, _, _, _, _);
@@ -25310,7 +25256,7 @@ var CLSTAMP = "steamdb";
           _ = _.children,
           _ = null !== _ ? _.memoizedState : null;
         if ("hidden" === _.mode) {
-          if (0 != (128 & _.flags)) {
+          if (128 & _.flags) {
             if (((_ = null !== _ ? _.baseLanes | _ : _), null !== _)) {
               for (_ = _.child = _.child, _ = 0; null !== _; )
                 (_ = _ | _.lanes | _.childLanes), (_ = _.sibling);
@@ -25318,7 +25264,7 @@ var CLSTAMP = "steamdb";
             } else (_.childLanes = 0), (_.child = null);
             return _(_, _, _, _);
           }
-          if (0 == (536870912 & _))
+          if (!(536870912 & _))
             return (
               (_.lanes = _.childLanes = 536870912),
               _(_, _, null !== _ ? _.baseLanes | _ : _, _)
@@ -25534,7 +25480,7 @@ var CLSTAMP = "steamdb";
         return (
           (_ = _),
           _(_, _),
-          (_ = 0 != (128 & _.flags)),
+          (_ = !!(128 & _.flags)),
           _ || _
             ? ((_ = _.stateNode),
               (_ =
@@ -25574,13 +25520,12 @@ var CLSTAMP = "steamdb";
         var _,
           _ = _.pendingProps,
           _ = !1,
-          _ = 0 != (128 & _.flags);
+          _ = !!(128 & _.flags);
         if (
           ((_ = _) ||
-            (_ =
-              (null === _ || null !== _.memoizedState) && 0 != (2 & _.current)),
+            (_ = (null === _ || null !== _.memoizedState) && !!(2 & _.current)),
           _ && ((_ = !0), (_.flags &= -129)),
-          (_ = 0 != (32 & _.flags)),
+          (_ = !!(32 & _.flags)),
           (_.flags &= -33),
           null === _)
         ) {
@@ -25691,15 +25636,14 @@ var CLSTAMP = "steamdb";
               }),
               (_ = _(_, _, _));
           } else if (
-            (_ || _(_, _, _, !1), (_ = 0 != (_ & _.childLanes)), _ || _)
+            (_ || _(_, _, _, !1), (_ = 0 !== (_ & _.childLanes)), _ || _)
           ) {
             if (
               null !== (_ = _) &&
               0 !==
                 (_ =
-                  0 !=
-                  ((_ = 0 != (42 & (_ = _ & -_)) ? 1 : _(_)) &
-                    (_.suspendedLanes | _))
+                  0 !==
+                  ((_ = 42 & (_ = _ & -_) ? 1 : _(_)) & (_.suspendedLanes | _))
                     ? 0
                     : _) &&
               _ !== _.retryLane
@@ -25835,10 +25779,10 @@ var CLSTAMP = "steamdb";
         var _ = _.pendingProps,
           _ = _.revealOrder,
           _ = _.tail;
-        if ((_(_, _, _.children, _), 0 != (2 & (_ = _.current))))
+        if ((_(_, _, _.children, _), 2 & (_ = _.current)))
           (_ = (1 & _) | 2), (_.flags |= 128);
         else {
-          if (null !== _ && 0 != (128 & _.flags))
+          if (null !== _ && 128 & _.flags)
             _: for (_ = _.child; null !== _; ) {
               if (13 === _.tag) null !== _.memoizedState && _(_, _, _);
               else if (19 === _.tag) _(_, _, _);
@@ -25887,10 +25831,10 @@ var CLSTAMP = "steamdb";
         if (
           (null !== _ && (_.dependencies = _.dependencies),
           (_ |= _.lanes),
-          0 == (_ & _.childLanes))
+          0 === (_ & _.childLanes))
         ) {
           if (null === _) return null;
-          if ((_(_, _, _, !1), 0 == (_ & _.childLanes))) return null;
+          if ((_(_, _, _, !1), 0 === (_ & _.childLanes))) return null;
         }
         if (null !== _ && _.child !== _.child) throw Error(_(153));
         if (null !== _.child) {
@@ -25905,13 +25849,13 @@ var CLSTAMP = "steamdb";
         return _.child;
       }
       function _(_, _) {
-        return 0 != (_.lanes & _) || !(null === (_ = _.dependencies) || !_(_));
+        return 0 !== (_.lanes & _) || !(null === (_ = _.dependencies) || !_(_));
       }
       function _(_, _, _) {
         if (null !== _)
           if (_.memoizedProps !== _.pendingProps) _ = !0;
           else {
-            if (!_(_, _) && 0 == (128 & _.flags))
+            if (!(_(_, _) || 128 & _.flags))
               return (
                 (_ = !1),
                 (function (_, _, _) {
@@ -25936,17 +25880,17 @@ var CLSTAMP = "steamdb";
                       if (null !== _)
                         return null !== _.dehydrated
                           ? (_(_), (_.flags |= 128), null)
-                          : 0 != (_ & _.child.childLanes)
+                          : 0 !== (_ & _.child.childLanes)
                             ? _(_, _, _)
                             : (_(_),
                               null !== (_ = _(_, _, _)) ? _.sibling : null);
                       _(_);
                       break;
                     case 19:
-                      var _ = 0 != (128 & _.flags);
+                      var _ = !!(128 & _.flags);
                       if (
-                        ((_ = 0 != (_ & _.childLanes)) ||
-                          (_(_, _, _, !1), (_ = 0 != (_ & _.childLanes))),
+                        ((_ = 0 !== (_ & _.childLanes)) ||
+                          (_(_, _, _, !1), (_ = 0 !== (_ & _.childLanes))),
                         _)
                       ) {
                         if (_) return _(_, _, _);
@@ -25971,9 +25915,9 @@ var CLSTAMP = "steamdb";
                   return _(_, _, _);
                 })(_, _, _)
               );
-            _ = 0 != (131072 & _.flags);
+            _ = !!(131072 & _.flags);
           }
-        else (_ = !1), _ && 0 != (1048576 & _.flags) && _(_, _, _.index);
+        else (_ = !1), _ && 1048576 & _.flags && _(_, _, _.index);
         switch (((_.lanes = 0), _.tag)) {
           case 16:
             _: {
@@ -26291,7 +26235,7 @@ var CLSTAMP = "steamdb";
                   }),
                   _(_),
                   _(0, _, _))
-                : (0 != (_.lanes & _) && (_(_, _), _(_, null, null, _), _()),
+                : (0 !== (_.lanes & _) && (_(_, _), _(_, null, null, _), _()),
                   (_ = _.memoizedState),
                   (_ = _.memoizedState),
                   _.parent !== _
@@ -26318,14 +26262,14 @@ var CLSTAMP = "steamdb";
         _.flags |= 4;
       }
       function _(_, _) {
-        if ("stylesheet" !== _.type || 0 != (4 & _.state.loading))
+        if ("stylesheet" !== _.type || 4 & _.state.loading)
           _.flags &= -16777217;
         else if (((_.flags |= 16777216), !_(_))) {
           if (
             null !== (_ = _.current) &&
             ((4194048 & _) === _
               ? null !== _
-              : ((62914560 & _) !== _ && 0 == (536870912 & _)) || _ !== _)
+              : ((62914560 & _) !== _ && !(536870912 & _)) || _ !== _)
           )
             throw ((_ = _), _);
           _.flags |= 8192;
@@ -26405,7 +26349,7 @@ var CLSTAMP = "steamdb";
                 (_(_)
                   ? _(_)
                   : null === _ ||
-                    (_.memoizedState.isDehydrated && 0 == (256 & _.flags)) ||
+                    (_.memoizedState.isDehydrated && !(256 & _.flags)) ||
                     ((_.flags |= 1024), _())),
               _(_),
               null
@@ -26570,7 +26514,7 @@ var CLSTAMP = "steamdb";
                   _[_] = _;
                 } else
                   _(),
-                    0 == (128 & _.flags) && (_.memoizedState = null),
+                    !(128 & _.flags) && (_.memoizedState = null),
                     (_.flags |= 4);
                 _(_), (_ = !1);
               } else
@@ -26581,7 +26525,7 @@ var CLSTAMP = "steamdb";
                   (_ = !0);
               if (!_) return 256 & _.flags ? (_(_), _) : (_(_), null);
             }
-            if ((_(_), 0 != (128 & _.flags))) return (_.lanes = _), _;
+            if ((_(_), 128 & _.flags)) return (_.lanes = _), _;
             if (
               ((_ = null !== _),
               (_ = null !== _ && null !== _.memoizedState),
@@ -26610,10 +26554,10 @@ var CLSTAMP = "steamdb";
             return _(_.type), _(_), null;
           case 19:
             if ((_(_), null === (_ = _.memoizedState))) return _(_), null;
-            if (((_ = 0 != (128 & _.flags)), null === (_ = _.rendering)))
+            if (((_ = !!(128 & _.flags)), null === (_ = _.rendering)))
               if (_) _(_, !1);
               else {
-                if (0 !== _ || (null !== _ && 0 != (128 & _.flags)))
+                if (0 !== _ || (null !== _ && 128 & _.flags))
                   for (_ = _.child; null !== _; ) {
                     if (null !== (_ = _(_))) {
                       for (
@@ -26681,8 +26625,8 @@ var CLSTAMP = "steamdb";
                 ? (null !== _.memoizedState) !== _ && (_.flags |= 8192)
                 : _ && (_.flags |= 8192),
               _
-                ? 0 != (536870912 & _) &&
-                  0 == (128 & _.flags) &&
+                ? !!(536870912 & _) &&
+                  !(128 & _.flags) &&
                   (_(_), 6 & _.subtreeFlags && (_.flags |= 8192))
                 : _(_),
               null !== (_ = _.updateQueue) && _(_, _.retryQueue),
@@ -26724,7 +26668,7 @@ var CLSTAMP = "steamdb";
             return (
               _(_),
               _(),
-              0 != (65536 & (_ = _.flags)) && 0 == (128 & _)
+              65536 & (_ = _.flags) && !(128 & _)
                 ? ((_.flags = (-65537 & _) | 128), _)
                 : null
             );
@@ -27332,7 +27276,7 @@ var CLSTAMP = "steamdb";
               (_ = (null !== _ && null !== _.memoizedState) || _), (_ = _);
               var _ = _;
               (_ = _),
-                (_ = _) && !_ ? _(_, _, 0 != (8772 & _.subtreeFlags)) : _(_, _),
+                (_ = _) && !_ ? _(_, _, !!(8772 & _.subtreeFlags)) : _(_, _),
                 (_ = _),
                 (_ = _);
             }
@@ -27898,7 +27842,7 @@ var CLSTAMP = "steamdb";
         }
       }
       function _(_, _, _) {
-        for (_ = _ && 0 != (8772 & _.subtreeFlags), _ = _.child; null !== _; ) {
+        for (_ = _ && !!(8772 & _.subtreeFlags), _ = _.child; null !== _; ) {
           var _ = _.alternate,
             _ = _,
             _ = _,
@@ -28033,7 +27977,7 @@ var CLSTAMP = "steamdb";
                 : 2 & _._visibility
                   ? _(_, _, _, _)
                   : ((_._visibility |= 2),
-                    _(_, _, _, _, 0 != (10256 & _.subtreeFlags))),
+                    _(_, _, _, _, !!(10256 & _.subtreeFlags))),
               2048 & _ && _(_, _);
             break;
           case 24:
@@ -28041,10 +27985,7 @@ var CLSTAMP = "steamdb";
         }
       }
       function _(_, _, _, _, _) {
-        for (
-          _ = _ && 0 != (10256 & _.subtreeFlags), _ = _.child;
-          null !== _;
-        ) {
+        for (_ = _ && !!(10256 & _.subtreeFlags), _ = _.child; null !== _; ) {
           var _ = _,
             _ = _,
             _ = _,
@@ -28110,10 +28051,12 @@ var CLSTAMP = "steamdb";
                   if (null === _) throw Error(_(475));
                   var _ = _;
                   if (
-                    "stylesheet" === _.type &&
-                    ("string" != typeof _.media ||
-                      !1 !== matchMedia(_.media).matches) &&
-                    0 == (4 & _.state.loading)
+                    !(
+                      "stylesheet" !== _.type ||
+                      ("string" == typeof _.media &&
+                        !1 === matchMedia(_.media).matches) ||
+                      4 & _.state.loading
+                    )
                   ) {
                     if (null === _.instance) {
                       var _ = _(_.href),
@@ -28142,7 +28085,7 @@ var CLSTAMP = "steamdb";
                     null === _.stylesheets && (_.stylesheets = new Map()),
                       _.stylesheets.set(_, _),
                       (_ = _.state.preload) &&
-                        0 == (3 & _.state.loading) &&
+                        !(3 & _.state.loading) &&
                         (_.count++,
                         (_ = _.bind(_)),
                         _.addEventListener("load", _),
@@ -28177,7 +28120,7 @@ var CLSTAMP = "steamdb";
       }
       function _(_) {
         var _ = _.deletions;
-        if (0 != (16 & _.flags)) {
+        if (16 & _.flags) {
           if (null !== _)
             for (var _ = 0; _ < _.length; _++) {
               var _ = _[_];
@@ -28211,7 +28154,7 @@ var CLSTAMP = "steamdb";
       }
       function _(_) {
         var _ = _.deletions;
-        if (0 != (16 & _.flags)) {
+        if (16 & _.flags) {
           if (null !== _)
             for (var _ = 0; _ < _.length; _++) {
               var _ = _[_];
@@ -28316,14 +28259,14 @@ var CLSTAMP = "steamdb";
         _ = 0,
         _ = null;
       function _() {
-        if (0 != (2 & _) && 0 !== _) return _ & -_;
+        if (2 & _ && 0 !== _) return _ & -_;
         if (null !== _._) {
           return 0 !== _ ? _ : _();
         }
         return _();
       }
       function _() {
-        0 === _ && (_ = 0 == (536870912 & _) || _ ? _() : 536870912);
+        0 === _ && (_ = 536870912 & _ && !_ ? 536870912 : _());
         var _ = _.current;
         return null !== _ && (_.flags |= 32), _;
       }
@@ -28331,15 +28274,14 @@ var CLSTAMP = "steamdb";
         ((_ !== _ || (2 !== _ && 9 !== _)) && null === _.cancelPendingCommit) ||
           (_(_, 0), _(_, _, _, !1)),
           _(_, _),
-          (0 != (2 & _) && _ === _) ||
-            (_ === _ && (0 == (2 & _) && (_ |= _), 4 === _ && _(_, _, _, !1)),
+          (2 & _ && _ === _) ||
+            (_ === _ && (!(2 & _) && (_ |= _), 4 === _ && _(_, _, _, !1)),
             _(_));
       }
       function _(_, _, _) {
-        if (0 != (6 & _)) throw Error(_(327));
+        if (6 & _) throw Error(_(327));
         for (
-          var _ =
-              (!_ && 0 == (124 & _) && 0 == (_ & _.expiredLanes)) || _(_, _),
+          var _ = (!_ && !(124 & _) && 0 === (_ & _.expiredLanes)) || _(_, _),
             _ = _
               ? (function (_, _) {
                   var _ = _;
@@ -28502,7 +28444,7 @@ var CLSTAMP = "steamdb";
       function _(_, _, _, _, _, _, _, _, _, _, _, _, _, _) {
         if (
           ((_.timeoutHandle = -1),
-          (8192 & (_ = _.subtreeFlags) || 16785408 == (16785408 & _)) &&
+          (8192 & (_ = _.subtreeFlags) || !(16785408 & ~_)) &&
             ((_ = {
               stylesheets: null,
               count: 0,
@@ -28591,7 +28533,7 @@ var CLSTAMP = "steamdb";
         0 !== _ && _(_, _, _);
       }
       function _() {
-        return 0 != (6 & _) || (_(0, !1), !1);
+        return !!(6 & _) || (_(0, !1), !1);
       }
       function _() {
         if (null !== _) {
@@ -28618,7 +28560,7 @@ var CLSTAMP = "steamdb";
           (_ = _ = _ = _ = _ = _ = 0),
           (_ = _ = null),
           (_ = !1),
-          0 != (8 & _) && (_ |= 32 & _);
+          8 & _ && (_ |= 32 & _);
         var _ = _.entangledLanes;
         if (0 !== _)
           for (_ = _.entanglements, _ &= _; 0 < _; ) {
@@ -28657,7 +28599,7 @@ var CLSTAMP = "steamdb";
       function _() {
         (_ = 4),
           _ || ((4194048 & _) !== _ && null !== _.current) || (_ = !0),
-          (0 == (134217727 & _) && 0 == (134217727 & _)) ||
+          (!(134217727 & _) && !(134217727 & _)) ||
             null === _ ||
             _(_, _, _, !1);
       }
@@ -28794,7 +28736,7 @@ var CLSTAMP = "steamdb";
               if (_)
                 return (
                   null !== (_ = _.current)
-                    ? (0 == (65536 & _.flags) && (_.flags |= 256),
+                    ? (!(65536 & _.flags) && (_.flags |= 256),
                       (_.flags |= 65536),
                       (_.lanes = _),
                       _ !== _ &&
@@ -28848,11 +28790,13 @@ var CLSTAMP = "steamdb";
                     if (
                       ((_ = _.type),
                       (_ = _.stateNode),
-                      0 == (128 & _.flags) &&
-                        ("function" == typeof _.getDerivedStateFromError ||
-                          (null !== _ &&
-                            "function" == typeof _.componentDidCatch &&
-                            (null === _ || !_.has(_)))))
+                      !(
+                        128 & _.flags ||
+                        ("function" != typeof _.getDerivedStateFromError &&
+                          (null === _ ||
+                            "function" != typeof _.componentDidCatch ||
+                            (null !== _ && _.has(_))))
+                      ))
                     )
                       return (
                         (_.flags |= 65536),
@@ -28876,7 +28820,7 @@ var CLSTAMP = "steamdb";
         32768 & _.flags
           ? (_ || 1 === _
               ? (_ = !0)
-              : _ || 0 != (536870912 & _)
+              : _ || 536870912 & _
                 ? (_ = !1)
                 : ((_ = _ = !0),
                   (2 === _ || 9 === _ || 3 === _ || 6 === _) &&
@@ -28888,7 +28832,7 @@ var CLSTAMP = "steamdb";
       function _(_) {
         var _ = _;
         do {
-          if (0 != (32768 & _.flags)) return void _(_, _);
+          if (32768 & _.flags) return void _(_, _);
           _ = _.return;
           var _ = _(_.alternate, _, _);
           if (null !== _) return void (_ = _);
@@ -28916,7 +28860,7 @@ var CLSTAMP = "steamdb";
         do {
           _();
         } while (0 !== _);
-        if (0 != (6 & _)) throw Error(_(327));
+        if (6 & _) throw Error(_(327));
         if (null !== _) {
           if (_ === _.current) throw Error(_(177));
           if (
@@ -28959,15 +28903,15 @@ var CLSTAMP = "steamdb";
             (_ = _),
             (_ = _),
             (_ = _),
-            0 != (10256 & _.subtreeFlags) || 0 != (10256 & _.flags)
+            10256 & _.subtreeFlags || 10256 & _.flags
               ? ((_.callbackNode = null),
                 (_.callbackPriority = 0),
                 _(_, function () {
                   return _(), null;
                 }))
               : ((_.callbackNode = null), (_.callbackPriority = 0)),
-            (_ = 0 != (13878 & _.flags)),
-            0 != (13878 & _.subtreeFlags) || _)
+            (_ = !!(13878 & _.flags)),
+            13878 & _.subtreeFlags || _)
           ) {
             (_ = _._), (_._ = null), (_ = _._), (_._ = 2), (_ = _), (_ |= 4);
             try {
@@ -29050,8 +28994,7 @@ var CLSTAMP = "steamdb";
                   null !== _;
                 )
                   if (
-                    ((_ = (_ = _).child),
-                    0 != (1024 & _.subtreeFlags) && null !== _)
+                    ((_ = (_ = _).child), 1024 & _.subtreeFlags && null !== _)
                   )
                     (_.return = _), (_ = _);
                   else
@@ -29068,7 +29011,7 @@ var CLSTAMP = "steamdb";
                         case 17:
                           break;
                         case 1:
-                          if (0 != (1024 & _) && null !== _) {
+                          if (1024 & _ && null !== _) {
                             (_ = void 0),
                               (_ = _),
                               (_ = _.memoizedProps),
@@ -29084,7 +29027,7 @@ var CLSTAMP = "steamdb";
                           }
                           break;
                         case 3:
-                          if (0 != (1024 & _))
+                          if (1024 & _)
                             if (
                               9 ===
                               (_ = (_ = _.stateNode.containerInfo).nodeType)
@@ -29102,7 +29045,7 @@ var CLSTAMP = "steamdb";
                               }
                           break;
                         default:
-                          if (0 != (1024 & _)) throw Error(_(163));
+                          if (1024 & _) throw Error(_(163));
                       }
                       if (null !== (_ = _.sibling)) {
                         (_.return = _.return), (_ = _);
@@ -29123,8 +29066,8 @@ var CLSTAMP = "steamdb";
           _ = 0;
           var _ = _,
             _ = _,
-            _ = 0 != (13878 & _.flags);
-          if (0 != (13878 & _.subtreeFlags) || _) {
+            _ = !!(13878 & _.flags);
+          if (13878 & _.subtreeFlags || _) {
             (_ = _._), (_._ = null);
             var _ = _._;
             _._ = 2;
@@ -29208,8 +29151,8 @@ var CLSTAMP = "steamdb";
           _ = 0;
           var _ = _,
             _ = _,
-            _ = 0 != (8772 & _.flags);
-          if (0 != (8772 & _.subtreeFlags) || _) {
+            _ = !!(8772 & _.flags);
+          if (8772 & _.subtreeFlags || _) {
             (_ = _._), (_._ = null);
             var _ = _._;
             _._ = 2;
@@ -29231,7 +29174,7 @@ var CLSTAMP = "steamdb";
             _ = _,
             _ = _,
             _ = _;
-          0 != (10256 & _.subtreeFlags) || 0 != (10256 & _.flags)
+          10256 & _.subtreeFlags || 10256 & _.flags
             ? (_ = 5)
             : ((_ = 0), (_ = _ = null), _(_, _.pendingLanes));
           var _ = _.pendingLanes;
@@ -29242,7 +29185,7 @@ var CLSTAMP = "steamdb";
             _ && "function" == typeof _.onCommitFiberRoot)
           )
             try {
-              _.onCommitFiberRoot(_, _, void 0, 128 == (128 & _.current.flags));
+              _.onCommitFiberRoot(_, _, void 0, !(128 & ~_.current.flags));
             } catch (_) {}
           if (null !== _) {
             (_ = _._), (_ = _._), (_._ = 2), (_._ = null);
@@ -29257,10 +29200,10 @@ var CLSTAMP = "steamdb";
               (_._ = _), (_._ = _);
             }
           }
-          0 != (3 & _) && _(),
+          3 & _ && _(),
             _(_),
             (_ = _.pendingLanes),
-            0 != (4194090 & _) && 0 != (42 & _)
+            4194090 & _ && 42 & _
               ? _ === _
                 ? _++
                 : ((_ = 0), (_ = _))
@@ -29269,7 +29212,7 @@ var CLSTAMP = "steamdb";
         }
       }
       function _(_, _) {
-        0 == (_.pooledCacheLanes &= _) &&
+        0 === (_.pooledCacheLanes &= _) &&
           null != (_ = _.pooledCache) &&
           ((_.pooledCache = null), _(_));
       }
@@ -29288,8 +29231,7 @@ var CLSTAMP = "steamdb";
           (_._ = 32 > _ ? 32 : _), (_._ = null), (_ = _), (_ = null);
           var _ = _,
             _ = _;
-          if (((_ = 0), (_ = _ = null), (_ = 0), 0 != (6 & _)))
-            throw Error(_(331));
+          if (((_ = 0), (_ = _ = null), (_ = 0), 6 & _)) throw Error(_(331));
           var _ = _;
           if (
             ((_ |= 4),
@@ -29353,7 +29295,7 @@ var CLSTAMP = "steamdb";
           _ === _ &&
             (_ & _) === _ &&
             (4 === _ || (3 === _ && (62914560 & _) === _ && 300 > _() - _)
-              ? 0 == (2 & _) && _(_, 0)
+              ? !(2 & _) && _(_, 0)
               : (_ |= _),
             _ === _ && (_ = 0)),
           _(_);
@@ -29399,7 +29341,7 @@ var CLSTAMP = "steamdb";
           _ ||
             ((_ = !0),
             _(function () {
-              0 != (6 & _) ? _(_, _) : _();
+              6 & _ ? _(_, _) : _();
             }));
       }
       function _(_, _) {
@@ -29425,14 +29367,15 @@ var CLSTAMP = "steamdb";
                   0 !== _ && ((_ = !0), _(_, _));
                 } else
                   (_ = _),
-                    0 ==
-                      (3 &
-                        (_ = _(
-                          _,
-                          _ === _ ? _ : 0,
-                          null !== _.cancelPendingCommit ||
-                            -1 !== _.timeoutHandle,
-                        ))) ||
+                    !(
+                      3 &
+                      (_ = _(
+                        _,
+                        _ === _ ? _ : 0,
+                        null !== _.cancelPendingCommit ||
+                          -1 !== _.timeoutHandle,
+                      ))
+                    ) ||
                       _(_, _) ||
                       ((_ = !0), _(_, _));
               _ = _.next;
@@ -29461,7 +29404,7 @@ var CLSTAMP = "steamdb";
             ? ((_.next = null),
               null === _ ? (_ = _) : (_.next = _),
               null === _ && (_ = _))
-            : ((_ = _), (0 !== _ || 0 != (3 & _)) && (_ = !0)),
+            : ((_ = _), (0 !== _ || 3 & _) && (_ = !0)),
             (_ = _);
         }
         _(_, !1);
@@ -29478,7 +29421,7 @@ var CLSTAMP = "steamdb";
             _ = 1 << _,
             _ = _[_];
           -1 === _
-            ? (0 != (_ & _) && 0 == (_ & _)) || (_[_] = _(_, _))
+            ? (0 !== (_ & _) && 0 === (_ & _)) || (_[_] = _(_, _))
             : _ <= _ && (_.expiredLanes |= _),
             (_ &= ~_);
         }
@@ -29499,7 +29442,7 @@ var CLSTAMP = "steamdb";
             (_.callbackNode = null),
             (_.callbackPriority = 0)
           );
-        if (0 == (3 & _) || _(_, _)) {
+        if (!(3 & _) || _(_, _)) {
           if ((_ = _ & -_) === _.callbackPriority) return _;
           switch ((null !== _ && _(_), _(_))) {
             case 2:
@@ -29635,7 +29578,7 @@ var CLSTAMP = "steamdb";
             .concat(_),
         );
       function _(_, _) {
-        _ = 0 != (4 & _);
+        _ = !!(4 & _);
         for (var _ = 0; _ < _.length; _++) {
           var _ = _[_],
             _ = _.event;
@@ -29730,7 +29673,7 @@ var CLSTAMP = "steamdb";
       }
       function _(_, _, _, _, _) {
         var _ = _;
-        if (0 == (1 & _) && 0 == (2 & _) && null !== _)
+        if (!(1 & _ || 2 & _ || null === _))
           _: for (;;) {
             if (null === _) return;
             var _ = _.tag;
@@ -29843,7 +29786,7 @@ var CLSTAMP = "steamdb";
                 case "beforetoggle":
                   _ = _;
               }
-              var _ = 0 != (4 & _),
+              var _ = !!(4 & _),
                 _ = !_ && ("scroll" === _ || "scrollend" === _),
                 _ = _ ? (null !== _ ? _ + "Capture" : null) : _;
               _ = [];
@@ -29868,7 +29811,7 @@ var CLSTAMP = "steamdb";
                 }));
             }
           }
-          if (0 == (7 & _)) {
+          if (!(7 & _)) {
             if (
               ((_ = "mouseout" === _ || "pointerout" === _),
               (!(_ = "mouseover" === _ || "pointerover" === _) ||
@@ -31256,7 +31199,7 @@ var CLSTAMP = "steamdb";
           }
         else
           "stylesheet" === _.type &&
-            0 == (4 & _.state.loading) &&
+            !(4 & _.state.loading) &&
             ((_ = _.instance), (_.state.loading |= 4), _(_, _.precedence, _));
         return _.instance;
       }
@@ -31328,7 +31271,7 @@ var CLSTAMP = "steamdb";
         );
       }
       function _(_) {
-        return "stylesheet" !== _.type || 0 != (3 & _.state.loading);
+        return !!("stylesheet" !== _.type || 3 & _.state.loading);
       }
       var _ = null;
       function _() {}
@@ -31538,7 +31481,7 @@ var CLSTAMP = "steamdb";
                           var _ = 1 << (31 - _(_));
                           (_.entanglements[1] |= _), (_ &= ~_);
                         }
-                        _(_), 0 == (6 & _) && ((_ = _() + 500), _(0, !1));
+                        _(_), !(6 & _) && ((_ = _() + 500), _(0, !1));
                       }
                     }
                     break;
@@ -32203,7 +32146,8 @@ var CLSTAMP = "steamdb";
     },
     chunkid: (_, _) => {
       "use strict";
-      var _ = Symbol.for("react.transitional.element");
+      var _ = Symbol.for("react.transitional.element"),
+        _ = Symbol.for("react.fragment");
       function _(_, _, _) {
         var _ = null;
         if (
@@ -32224,7 +32168,7 @@ var CLSTAMP = "steamdb";
           }
         );
       }
-      Symbol.for("react.fragment"), (_.jsx = _);
+      (_.Fragment = _), (_.jsx = _), (_.jsxs = _);
     },
     chunkid: (_, _) => {
       "use strict";
@@ -35081,7 +35025,7 @@ var CLSTAMP = "steamdb";
             return this._(_) ? 64 : this.neg().getNumBitsAbs();
           for (
             var _ = 0 != this.high ? this.high : this.low, _ = 31;
-            _ > 0 && 0 == (_ & (1 << _));
+            _ > 0 && !(_ & (1 << _));
             _--
           );
           return 0 != this.high ? _ + 33 : _ + 1;
@@ -35097,10 +35041,10 @@ var CLSTAMP = "steamdb";
           return this.unsigned || this.high >= 0;
         }),
         (_.isOdd = function () {
-          return 1 == (1 & this.low);
+          return !(1 & ~this.low);
         }),
         (_.isEven = function () {
-          return 0 == (1 & this.low);
+          return !(1 & this.low);
         }),
         (_.equals = function (_) {
           return (

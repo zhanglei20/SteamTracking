@@ -898,7 +898,7 @@
 "SteamUI_ValveSurvey_Summary_NoTouchInputDevices"			"Sem input táctil"
 
 "SteamUI_ValveSurvey_Summary_CPUVendor"						"Fornecedor da CPU:  %s1"
-"SteamUI_ValveSurvey_Summary_CPUBrand"						"Marca da CPU:  %s1"
+"SteamUI_ValveSurvey_Summary_CPUBrand"						"CPU:  %s1"
 "SteamUI_ValveSurvey_Summary_CPUSpeed"						"Velocidade: %s1 Mhz"
 "SteamUI_ValveSurvey_Summary_RAM"							"RAM: %s1 MB"
 
@@ -1775,7 +1775,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "steam_store"		"Loja"
 "steam_mygames"		"Jogos"
 "steam_tools"		"Ferramentas"
-"steam_about"		"Sobre o Steam"
+"steam_about"		"Acerca do Steam"
 
 "steam_menu_minigameslist"	"Mudar para mini-lista de jogos"
 "steam_menu_fullgameslist"	"Mudar para vista global"
@@ -1887,7 +1887,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_PublishFile_Failed_AccessDenied"		"Tens de ter este programa de modo a puderes publicar ficheiros nele. Por favor, adquire este produto antes de tentares publicar um ficheiro."
 "Steam_PublishFile_Failed_SyncError"	"Ocorreu um erro de sincronização ao atualizar o teu ficheiro com a Steam Cloud. Poderás ter de resolver conflitos entre a tua cópia local e a cópia guardada na Steam Cloud antes de tentares publicar de novo."
 
-"Steam_About_Title"				"Sobre o Steam"
+"Steam_About_Title"				"Acerca do Steam"
 "Steam_About_Info"				"Aplicação Steam"
 "Steam_About_Build"				"Criado: %build_date%, às %build_time%"
 "Steam_About_InterfaceVer"			"API Steam: v%build_interface%"
@@ -2267,7 +2267,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 
 "steam_menu_systemreport"		"Relatório de sistema"
 "steam_menu_systeminfo"			"Informações do sistema"
-"steam_systeminfo_title"			"Steam - Informações do Sistema"
+"steam_systeminfo_title"			"Steam - Informações do sistema"
 "steam_systeminfo_surveylink"	"Compara o teu hardware com o de outros utilizadores do Steam"
 
 "Steam_P2P"				"P2P"

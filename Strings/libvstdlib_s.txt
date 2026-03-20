@@ -67,6 +67,7 @@ $\nY8O
 %s/.steam/steam
 %s/steamXXXXXX
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 &AElig;
 &Aacute;
 &Acirc;
@@ -244,6 +245,7 @@ $\nY8O
 /etc/slackware-release
 /etc/yellowdog-release
 /proc/mounts
+/proc/self/maps
 /proc/version
 /tmp
 /tmp/disk-free.XXXXXX
@@ -1938,7 +1940,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once

@@ -65,6 +65,7 @@
 !(cascadeMenu && checkable)
 !1AQaq
 !AxU
+!BStringEquals( pathAlreadyLoaded.GetUTF8Path(), pathSDKModulePath.GetUTF8Path() )
 !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
 !\n\finitial_left
 !is_large()
@@ -443,6 +444,8 @@ $\nY8O
 %\n!k_EStartupMovieVariant_DeckOrange
 %\n!k_EStorageBlockContentType_Crypto
 %\n!k_EStreamControlTouchConfigActive
+%\n!k_EStreamHostDisplaySettingClient
+%\n!k_EStreamHostDisplaySettingCustom
 %\n!k_ESystemServiceState_Unavailable
 %\n!k_SystemAudioPortDirection_Output
 %\n!k_SystemAudioPortType_Video32RGBA
@@ -487,6 +490,7 @@ $\nY8O
 %s_collapsed
 %s_hidden
 %s_url
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 &6FVfv
 &\n!k_EPersonaStateFlag_ClientTypeWeb
 &\n!k_EStreamControlVRConnectionReady
@@ -535,6 +539,7 @@ $\nY8O
 '\n#k_EChildProcessQueryCommand_Invalid
 '\n#k_EClientNotificationType_AsyncGame
 '\n#k_EClientNotificationType_MajorSale
+'\n#k_EContentModerationSanction_Warned
 '\n#k_EContentModeratorLevel_Supervisor
 '\n#k_EContentReportSubjectType_Invalid
 '\n#k_EContentReportSubjectType_UGCFile
@@ -617,6 +622,7 @@ $\nY8O
 (\r"R\n\fCAudioFormat
 (\r"W\n%CClientNotificationBatteryTemperature
 (\r"Y\n\rCMsgSizePopup
+(\r"\\n&CMsgSetBrowserViewDomainRequestMapping
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"f\n%CClientNotificationGameRecordingError
 (\r"i\n:CClientNotificationFamilySharingDeviceAuthorizationChanged
@@ -879,7 +885,6 @@ $\nY8O
 -----CJSArray-----\n
 -----CJSObject-----\n
 -0123456789
--\n%enable_hardware_encoding_amd_OBSOLETE
 -\n(k_EPersonaStateFlag_LaunchTypeCompatTool
 -\n(k_EStreamControlStopNeptuneData_OBSOLETE
 -\n(k_EStreamControlTouchActionSetLayerAdded
@@ -920,7 +925,6 @@ $\nY8O
 -quicklogin
 -silent
 -steamdeckdisplay
--steamdeckdisplaynosizescale
 -steammachinedisplay
 -toggle-overlay-html-mode
 -vguimessages
@@ -988,7 +992,8 @@ $\nY8O
 .EStreamControllerConfigMsg
 .EStreamFrameEvent
 .EStreamFrameResult
-.EStreamHostPlayAudioPreference:
+.EStreamHostDisplaySetting
+.EStreamHostPlayAudioPreference
 .EStreamMouseButton"K\n
 .EStreamMouseButton"\\n
 .EStreamMouseWheelDirection
@@ -1005,7 +1010,6 @@ $\nY8O
 .ParentalPlaytimeDay"j\n%ParentalTemporaryPlaytimeRestrictions
 .ParentalPlaytimeRestrictions
 .Too many IDATs found
-.\n&dynamically_adjust_resolution_OBSOLETE
 .\n&excluded_community_content_descriptors
 .\n)k_EStreamControlStartNeptuneData_OBSOLETE
 .\n*k_EAsyncGameSessionUserStateReadyForAction
@@ -1060,7 +1064,6 @@ $\nY8O
 /P8i
 /ValveIPCSHM_%d
 /\n enable_touch_controller_OBSOLETE
-/\n'enable_hardware_encoding_intel_OBSOLETE
 /\n*k_EStreamControlEnableNeptuneData_OBSOLETE
 /\n*k_EStreamControlTouchActionSetLayerRemoved
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
@@ -1162,6 +1165,7 @@ $\nY8O
 /dev/disk/by-uuid
 /etc/mtab
 /proc/mounts
+/proc/self/maps
 /tmp
 /tmp/disk-free.XXXXXX
 /ubuntu12_32
@@ -1175,15 +1179,14 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
-01/01/00
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+01/01/00
 0123456789ABCDEF
 0123456789abcdef
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
-0\n(enable_hardware_encoding_nvidia_OBSOLETE
 0\n+k_EStreamControlDisableNeptuneData_OBSOLETE
 0\n+k_EStreamControlSetInputTemporarilyDisabled
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1194,6 +1197,7 @@ $\nY8O
 0\n,k_EClientNotificationType_GameRecordingStart
 0\n,k_EClientNotificationType_RequestedGameAdded
 0\n,k_EContentModerationSanction_CommunityBanned
+0\n,k_EContentModerationSanction_KickedFromGroup
 0\n,k_EContentReportReason_GenderedTargetedAbuse
 0\n,k_EContentReportReason_NonConsensualMaterial
 0\n,k_EContentReportReason_NudityOrSexualContent
@@ -1656,6 +1660,7 @@ $\nY8O
 1\n-k_EClientNotificationType_OverlaySplashScreen
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
+1\n-k_EContentModerationSanction_HarassmentBanned
 1\n-k_EContentModerationSanction_MarkAsSuspicious
 1\n-k_EContentReportReason_CSAMFakedSexualContent
 1\n-k_EContentReportReason_PhishingOrAccountTheft
@@ -1921,6 +1926,7 @@ $\nY8O
 37ParentalTemporaryPlaytimeRestrictions
 38CClientNotificationOverlaySplashScreen
 38CClientNotificationTimedTrialRemaining
+38CMsgSetBrowserViewDomainRequestMapping
 3\n&k_EWindowsUpdateRebootBehavior_Unknown
 3\n/k_EClientNotificationType_ClaimSteamDeckRewards
 3\n/k_EClientNotificationType_FamilyPurchaseRequest
@@ -3133,6 +3139,7 @@ EStreamDiscoveryMessage
 EStreamFrameEvent
 EStreamFrameResult
 EStreamFramerateLimiter
+EStreamHostDisplaySetting
 EStreamHostPlayAudioPreference
 EStreamMouseButton
 EStreamMouseWheelDirection
@@ -5166,7 +5173,6 @@ Zulu
 \n\nauthorized
 \n\nbgoforward
 \n\nbool_value
-\n\nborderless
 \n\nboxed_type
 \n\ncache_miss
 \n\ncertExpiry
@@ -5262,7 +5268,6 @@ Zulu
 \n\tmodifiers
 \n\tnCertBits
 \n\tname_part
-\n\toffscreen
 \n\tpageTitle
 \n\tpage_size
 \n\tpagescale
@@ -5716,7 +5721,6 @@ center
 certName
 certerror
 certname
-change_desktop_resolution
 changed
 channel
 channels
@@ -5840,6 +5844,11 @@ cursor
 custom_
 custom_%d
 custom_commands
+custom_display_device
+custom_display_hdr
+custom_display_refresh_rate
+custom_display_resolution_x
+custom_display_resolution_y
 czech
 dQy/
 da_DK
@@ -5890,7 +5899,10 @@ disable_steam_store
 disabled
 disk-free command failed\n
 diskSize
+display_hdr_setting
 display_height
+display_refresh_rate_setting
+display_resolution_setting
 divider
 dl_iterate_phdr
 dlclose
@@ -6848,6 +6860,7 @@ k_EStreamFramerateSlowDisplay
 k_EStreamFramerateSlowEncode
 k_EStreamFramerateSlowGame
 k_EStreamFramerateSlowNetwork
+k_EStreamHostDisplaySettingNone
 k_EStreamHostPlayAudioAlways
 k_EStreamHostPlayAudioDefault
 k_EStreamInputEventHandled
@@ -7598,7 +7611,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pt-BR
 pt-br
 pt_BR
@@ -7658,6 +7670,7 @@ rename
 repeated
 replace
 reply
+request_domain
 request_space %llu
 requesting_url
 required

@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "%1$s%2$s oynamak için daveti kabul ettiniz",
     "ChatRoom_GameInvite_AcceptOnPC": "Bu daveti bilgisayarınızdan kabul edebilirsiniz.",
     "ChatRoom_GameInvite_UnreleasedGame": "çıkmamış bir oyun",
+    "ChatRoom_PlayestInvite_ViewInvite": "Daveti Görüntüle",
+    "ChatRoom_PlayestInvite_Invite": "%1$s sizi bir Steam Playtest'e davet etti",
+    "ChatRoom_PlaytestInvite_YouInvited": "%1$s adlı kişiyi %2$s%3$s Steam Playtest'ine davet ettiniz",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "%1$s adlı kişiyi %2$s%3$s için Steam Playtest'e davet ettiniz",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s sizi Remote Play Together ile davet etti",
     "ChatRoom_GameInviteRemotePlay_Accept": "Bağlan",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s sizi Steam Remote Play ile %2$s%3$s oynamak için davet etti",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "Linux ve macOS'teki oyun içi arayüzlerde arkadaşlar ve sohbet pencerelerinin görünmemesi hatası giderildi.",
     "BBCode_Loading": "Yükleniyor",
     "BBCode_Failed": "Yüklenemedi",
-    "broadcastDetails_Playing": "Oynuyor:",
-    "ChatRoom_PlayestInvite_ViewInvite": "Daveti Görüntüle",
-    "ChatRoom_PlayestInvite_Invite": "%1$s sizi bir Steam Playtest'e davet etti",
-    "ChatRoom_PlaytestInvite_YouInvited": "%1$s adlı kişiyi %2$s%3$s Steam Playtest'ine davet ettiniz",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "%1$s adlı kişiyi %2$s%3$s için Steam Playtest'e davet ettiniz"
+    "broadcastDetails_Playing": "Oynuyor:"
 }

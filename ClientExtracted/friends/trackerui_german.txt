@@ -219,7 +219,7 @@
 "Friends_Chat_MemberIgnored"						"(Blockiert)"	
 
 "Friends_Chat_InviteToChatRoom"							"In Chat einladen"
-"Friends_Chat_InviteToChatRoom_Title"					"Steam Community - Chateinladung"
+"Friends_Chat_InviteToChatRoom_Title"					"Steam-Community – Chateinladung"
 "Friends_Chat_InviteToChatRoom_Info"					"Sie wurden von %patron% eingeladen, am %chat% Chat teilzunehmen."
 "Friends_Chat_InviteToPrivateChatRoom_Info"				"Sie wurden eingeladen, einem privaten Chat mit %patron% beizutreten."
 "Friends_Chat_InviteReceivedTime"						"Einladung erhalten: %date%, %time%"
@@ -384,7 +384,7 @@
 "Friends_FlashWindowAlways"		"Immer"
 "Friends_FlashWindowMinimized"		"Nur wenn minimiert"
 "Friends_FlashWindowNever"		"Niemals"
-"Friends_ViewSteamCommunityProfile"	"Mein Steam Communityprofil anzeigen"
+"Friends_ViewSteamCommunityProfile"	"Mein Steam-Communityprofil anzeigen"
 "Friends_ChangeAvatar"				"Ändern"
 "Friends_NameTooShort_Title"			"Freunde – Profilname zu kurz"
 "Friends_NameTooShort_Info"			"Feld 'Profilname' muss mindestens zwei Zeichen enthalten."
@@ -489,8 +489,8 @@
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"Diese Meldung nicht mehr anzeigen."
 "Friends_BlockCommunicationWarning_Block"	"Spieler blockieren"
 "Friends_BlockCommunicationWArning_Cancel"	"Abbrechen"
-"Friends_BlockCommunicationResult"	"%username% wurde geblockt!\n\nRufen Sie Ihre Geblockt-Liste in der Steam Community auf, um diesen Spieler zu entblocken."
-"Friends_BlockCommunicationResultUnblock"	"%username% wurde entblockt!\n\\Sie können Ihre Geblockt-Liste in der Steam Community aufrufen."
+"Friends_BlockCommunicationResult"	"%username% wurde geblockt!\n\nRufen Sie Ihre Geblockt-Liste in der Steam-Community auf, um diesen Spieler zu entblocken."
+"Friends_BlockCommunicationResultUnblock"	"%username% wurde entblockt!\n\\Sie können Ihre Geblockt-Liste in der Steam-Community aufrufen."
 "Friends_BlockCommunicationResult_YourBlockedList"	"Meine Geblockt-Liste anzeigen"
 "Friends_DefaultBlockCommunicationError" 			"Beim Blockieren von %username% ist ein Problem aufgetreten."
 
@@ -558,7 +558,7 @@
 "Friends_ScreenshotErrorNotification_Info" "Fehler beim Speichern des Screenshots"
 
 "Limited_OpenChat"	"Offener Chat"
-"Friends_SteamCommunity"	"Steam Community"
+"Friends_SteamCommunity"	"Steam-Community"
 "Limited_Explanation"	"Ihr Account erfüllt nicht die Voraussetzungen, um diese Funktion zu nutzen."
 "Limited_ForDetails"	"Besuchen Sie den Steam-Support, um weitere Informationen zu erhalten."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"

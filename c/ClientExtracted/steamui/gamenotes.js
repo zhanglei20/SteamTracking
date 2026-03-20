@@ -24,6 +24,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { popup: _ } = _,
@@ -36,11 +37,11 @@
               );
           }, [_, __webpack_require__]),
           void 0 === _.noteid
-            ? _.createElement(_, {
+            ? (0, _.jsx)(_, {
                 popup: _,
                 refPopup: _,
               })
-            : _.createElement(_, {
+            : (0, _.jsx)(_, {
                 popup: _,
                 refPopup: _,
               })
@@ -49,43 +50,38 @@
       function _(_) {
         const { popup: _, refPopup: __webpack_require__ } = _,
           _ = (0, _._)("#GameNotes_NoteForGame", _.display_name);
-        return _.createElement(
-          _._,
-          {
-            body_class: _.GameNotesPopup,
-          },
-          _.createElement(
-            _._,
-            {
-              strName: _._,
-              strTitle: _,
-              onDismiss: () => _.close(),
-              popupWidth: 500,
-              popupHeight: 500,
-              resizable: !0,
-              refPopup: __webpack_require__,
-              className: "TODO",
-            },
-            _.createElement(_._, null, _),
-            _.createElement(
-              _._,
-              {
+        return (0, _.jsx)(_._, {
+          body_class: _.GameNotesPopup,
+          children: (0, _.jsxs)(_._, {
+            strName: _._,
+            strTitle: _,
+            onDismiss: () => _.close(),
+            popupWidth: 500,
+            popupHeight: 500,
+            resizable: !0,
+            refPopup: __webpack_require__,
+            className: "TODO",
+            children: [
+              (0, _.jsx)(_._, {
+                children: _,
+              }),
+              (0, _.jsx)(_._, {
                 mode: "single",
                 closePopup: () => _.close(),
-              },
-              _.createElement(_, {
-                noteParent: _.noteParent,
-                noteid: _.noteid,
+                children: (0, _.jsx)(_, {
+                  noteParent: _.noteParent,
+                  noteid: _.noteid,
+                }),
               }),
-            ),
-          ),
-        );
+            ],
+          }),
+        });
       }
       function _(_) {
         const { noteParent: _, noteid: __webpack_require__ } = _,
           { data: _ } = (0, _._)(_, __webpack_require__);
         return _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               note: _,
             })
           : null;
@@ -94,35 +90,26 @@
         const { popup: _, refPopup: __webpack_require__ } = _,
           _ = _.noteParent,
           _ = _.useMemo(() => [(0, _._)(_)], [_]);
-        return _.createElement(
-          _._,
-          {
-            strName: _._,
-            strTitle: _.display_name,
-            onDismiss: () => _.close(),
-            popupWidth: 900,
-            popupHeight: 830,
-            resizable: !0,
-            refPopup: __webpack_require__,
-            className: "TODO",
-          },
-          _.createElement(
-            _._,
-            {
-              initialEntries: _,
-            },
-            _.createElement(
-              _._,
-              {
-                mode: "page",
-                closePopup: () => _.close(),
-              },
-              _.createElement(_.default, {
+        return (0, _.jsx)(_._, {
+          strName: _._,
+          strTitle: _.display_name,
+          onDismiss: () => _.close(),
+          popupWidth: 900,
+          popupHeight: 830,
+          resizable: !0,
+          refPopup: __webpack_require__,
+          className: "TODO",
+          children: (0, _.jsx)(_._, {
+            initialEntries: _,
+            children: (0, _.jsx)(_._, {
+              mode: "page",
+              closePopup: () => _.close(),
+              children: (0, _.jsx)(_.default, {
                 noteParent: _,
               }),
-            ),
-          ),
-        );
+            }),
+          }),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -139,6 +126,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         const { data: _, isLoading: _ } = (0, _._)(),
@@ -147,50 +135,48 @@
             [_],
           );
         return _
-          ? _.createElement(_._, {
+          ? (0, _.jsx)(_._, {
               msDelayAppear: 300,
             })
-          : _.createElement(
-              "div",
-              null,
-              _.createElement("h1", null, (0, _._)("#UserGameNotes_NotesList")),
-              _.createElement(
-                "ul",
-                null,
-                __webpack_require__.map((_) =>
-                  _.createElement(_, {
-                    key: _.appid || _.shortcut_name,
-                    game: _,
-                  }),
-                ),
-              ),
-            );
+          : (0, _.jsxs)("div", {
+              children: [
+                (0, _.jsx)("h1", {
+                  children: (0, _._)("#UserGameNotes_NotesList"),
+                }),
+                (0, _.jsx)("ul", {
+                  children: __webpack_require__.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        game: _,
+                      },
+                      _.appid || _.shortcut_name,
+                    ),
+                  ),
+                }),
+              ],
+            });
       }
       function _(_) {
         const { game: _ } = _;
-        return _.createElement(
-          "li",
-          null,
-          _.createElement(
-            _._,
-            {
-              _: (0, _._)(
-                _.appid
-                  ? {
-                      appid: _.appid,
-                    }
-                  : {
-                      shortcut: _.shortcut_name,
-                    },
-              ),
-            },
-            _.appid
-              ? _.createElement(_, {
+        return (0, _.jsx)("li", {
+          children: (0, _.jsx)(_._, {
+            _: (0, _._)(
+              _.appid
+                ? {
+                    appid: _.appid,
+                  }
+                : {
+                    shortcut: _.shortcut_name,
+                  },
+            ),
+            children: _.appid
+              ? (0, _.jsx)(_, {
                   appid: _.appid,
                 })
               : _.shortcut_name,
-          ),
-        );
+          }),
+        });
       }
       function _(_) {
         const { appid: _ } = _,
@@ -198,38 +184,27 @@
         return _?.name;
       }
       function _(_) {
-        return _.createElement(
-          _._,
-          null,
-          _.createElement(
-            _._,
-            {
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)(_._, {
               path: _._.List(),
-            },
-            _.createElement(_, null),
-          ),
-          _.createElement(
-            _._,
-            {
-              path: _._.AppNotes(":appid", ":noteid?"),
-            },
-            _.createElement(_._, null),
-          ),
-          _.createElement(
-            _._,
-            {
-              path: _._.ShortcutNotes(":shortcut_name", ":noteid?"),
-            },
-            _.createElement(_._, null),
-          ),
-          _.createElement(
-            _._,
-            null,
-            _.createElement(_._, {
-              _: `${(0, _._)(_.noteParent)}`,
+              children: (0, _.jsx)(_, {}),
             }),
-          ),
-        );
+            (0, _.jsx)(_._, {
+              path: _._.AppNotes(":appid", ":noteid?"),
+              children: (0, _.jsx)(_._, {}),
+            }),
+            (0, _.jsx)(_._, {
+              path: _._.ShortcutNotes(":shortcut_name", ":noteid?"),
+              children: (0, _.jsx)(_._, {}),
+            }),
+            (0, _.jsx)(_._, {
+              children: (0, _.jsx)(_._, {
+                _: `${(0, _._)(_.noteParent)}`,
+              }),
+            }),
+          ],
+        });
       }
     },
   },

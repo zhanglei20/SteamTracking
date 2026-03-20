@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Sie haben eine Einladung zum Spielen von %1$s%2$s angenommen",
     "ChatRoom_GameInvite_AcceptOnPC": "Sie können diese Einladung von Ihrem Computer annehmen.",
     "ChatRoom_GameInvite_UnreleasedGame": "einem unveröffentlichten Spiel",
+    "ChatRoom_PlayestInvite_ViewInvite": "Einladung anzeigen",
+    "ChatRoom_PlayestInvite_Invite": "%1$s hat Sie zu einem Steam Playtest eingeladen",
+    "ChatRoom_PlaytestInvite_YouInvited": "Sie haben %1$s zu einem Steam Playtest von %2$s%3$s eingeladen",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Sie haben %1$s zu einem Steam Playtest von %2$s%3$s eingeladen",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s hat Sie zu Remote Play Together eingeladen",
     "ChatRoom_GameInviteRemotePlay_Accept": "Verbinden",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s hat Sie eingeladen, %2$s%3$s über Steam Remote Play zu spielen",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "Fehler behoben, durch den Freunde- und Chatfenster im In-Game-Overlay unter Linux und macOS nicht angezeigt wurden.",
     "BBCode_Loading": "Ladevorgang läuft",
     "BBCode_Failed": "Konnte nicht geladen werden",
-    "broadcastDetails_Playing": "Spielt",
-    "ChatRoom_PlayestInvite_ViewInvite": "Einladung anzeigen",
-    "ChatRoom_PlayestInvite_Invite": "%1$s hat Sie zu einem Steam Playtest eingeladen",
-    "ChatRoom_PlaytestInvite_YouInvited": "Sie haben %1$s zu einem Steam Playtest von %2$s%3$s eingeladen",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Sie haben %1$s zu einem Steam Playtest von %2$s%3$s eingeladen"
+    "broadcastDetails_Playing": "Spielt"
 }

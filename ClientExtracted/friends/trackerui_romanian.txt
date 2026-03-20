@@ -559,7 +559,7 @@
 
 "Limited_OpenChat"	"Comunicare Deschisă"
 "Friends_SteamCommunity"	"Comunitatea Steam"
-"Limited_Explanation"	"Contul tău nu îndeplinește cerințele pentru a utiliza această facilitate."
+"Limited_Explanation"	"Contul tău nu îndeplinește cerințele pentru a utiliza această caracteristică."
 "Limited_ForDetails"	"Vizitează Asistența Steam pentru mai multe informații."
 "Limited_ForDetails_URL"	"https://help.steampowered.com/wizard/HelpWithLimitedAccount"
 

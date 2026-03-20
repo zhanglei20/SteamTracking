@@ -738,7 +738,7 @@
 "Steam_Settings_Broadcast_RecordMic" "Grabar mi micrófono"
 "Steam_Settings_Broadcast_ConfigMic" "Configurar micrófono"
 "Steam_Settings_Broadcast_EnableHardwareSupport" "Activar soporte por hardware *"
-"Steam_Settings_Broadcast_ShowDebugInfo" "Mostrar estadísticas de subida"
+"Steam_Settings_Broadcast_ShowDebugInfo" "Mostrar estadísticas de carga"
 "Steam_Settings_Broadcast_ShowReminderBanner" "Mostrar siempre estado 'En directo'"
 "Steam_Settings_Broadcast_ShowChat" "Mostrar el chat de los espectadores en el juego:"
 "Steam_Settings_Broadcast_StatusHeader" "Estado de la retransmisión:"
@@ -776,7 +776,7 @@
 "Broadcast_RecordingError_Razer" "Steam no ha podido grabar el audio para esta retransmisión. Por favor, visita el artículo de soporte de abajo y lee la sección \"Razer Audio Hardware\" para ayudarte a resolver este problema."
 "Broadcast_RecordingError_URL_Razer" "https://support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541#2"
 
-"Broadcast_UploadError_Notification" "La subida de la retransmisión se ha detenido (%reason%)."
+"Broadcast_UploadError_Notification" "La carga de la retransmisión se ha detenido (%reason%)."
 "Broadcast_Upload_Result_0"  "error desconocido"
 "Broadcast_Upload_Result_1"  "Aceptar"
 "Broadcast_Upload_Result_2"  "inicialización fallida"

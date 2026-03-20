@@ -75,6 +75,9 @@
  +0000
  - %s [locked by %s - %s / %s (%lums)]
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
+ --enable-duplicate-detection
+ --force
+ --label '%s'
  -child-update-ui
  -child-update-ui-socket %d
  -foreground
@@ -160,6 +163,7 @@
 ! !K+hcF&db
 !"Don't poll on UDP sockets dude"
 !"Not implemented"
+!"Unable to get home directory"
 !"couldn't read cpu information from /proc/cpuinfo"
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 !( m_nFlags & FCVAR_NEVER_AS_STRING )
@@ -237,6 +241,7 @@
 !strchr(filename, '\n') && !strchr(filename, '\r')
 !tI)i
 !tX)i
+!vecEntryFields.IsEmpty()
 " because it is missing required fields:
 " conflicts with field "
 " conflicts with the existing symbol "
@@ -476,6 +481,7 @@ $3br
 $4DTdt
 $Cw!R
 $F09Y
+$HOME/
 $ORIGIN
 $O\tdwR\rox\\r*
 $XI(6
@@ -705,12 +711,17 @@ $ffn
 %s %2d %02d:%02d:%02d %d%s
 %s %2d %02d:%02d:%02d%.*s %d%s
 %s %s %s %s
+%s %s >%s %s
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
 %s %s(%llu) / %s
 %s (%1.2fms)
 %s (emsg=%d)
 %s - locked by 0x%p
+%s --device %s
+%s --slot %d
+%s --supports-duplicate-detection
+%s -P -F upnR -i TCP@%s
 %s < %.*s < ...%s
 %s HTTP Client
 %s JobFunc < %s
@@ -753,6 +764,7 @@ $ffn
 %s/%s/%s.previous.txt
 %s/%s/%s.txt
 %s/%s/%smetrics.bin
+%s/.local/share/applications
 %s/.steam/
 %s/.steam/%s
 %s/.steam/steam
@@ -769,9 +781,31 @@ $ffn
 %s: '%s', '%s'
 %s: (%d bit)\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
+%s: child exec failed: %d\n
+%s: child terminated unexpectedly: sig:%d\n
+%s: command exited unexpectedly: %s\n
+%s: command exited unexpectedly\n
+%s: command failed: %d\n
+%s: exec failed: %d\n
+%s: exiting\n
+%s: failed to build environment for process launch\n
+%s: failed to re-execute steam\n
+%s: failed to run command: %s\n
+%s: failed to wait for child process: %d\n
+%s: fork failed: %d\n
+%s: lseek %s: %s\n
+%s: lseek start failed: %s\n
+%s: mkstemp %s: errno %s\n
 %s: no such process %d\n
 %s: pending command too large, truncating
+%s: re-launching steam in SteamRT runtime\n
 %s: read failed: %s\n
+%s: received re-exec request with code: %d steamrt: %d\n
+%s: restarting steam in current environment\n
+%s: sending host environment restart request\n
+%s: set hostname to %s\n
+%s: set timezone to %s\n
+%s: steam requested a restart, re-launching on host\n
 %s: waitid failed: '%s'
 %s: waitid failed: '%s'. Possibly leaking a zombie.\n
 %s:%d: OpenSSL internal error: %s\n
@@ -782,6 +816,7 @@ $ffn
 %sTomorrow
 %sYesterday
 %u%% complete
+%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 &&Lj66lZ??~A
 &'&)&5&;&?&K&S&Y&e&i&o&{&
 &'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
@@ -1177,6 +1212,7 @@ $ffn
 (elem == Count()) || IsValidIndex(elem)
 (fS{ggRcjh
 (h`H1pqA
+(home_dir != NULL) && (home_dir[0] != '\0')
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
 (int)(intp)m_hParam != -1
 (iub & (m_nSizeWithStack-1)) == 0
@@ -1205,7 +1241,6 @@ $ffn
 )9IYiy
 )TpH
 )Urz
-)\n$k_EMsgAISGetCouponDefinitionResponse
 )\n$k_EMsgAMClaimUnownedUserGiftResponse
 )\n$k_EMsgAMFriendsInCommonCountResponse
 )\n$k_EMsgAMGetAccountFlagsForWGSpoofing
@@ -1286,7 +1321,9 @@ $ffn
 *Z20BSetRegistryValueStr11ERegKeyRoot10StringViewS0_S0_EUlS_E_
 *Z21BSetRegistryValueUint11ERegKeyRoot10StringViewS0_jEUlS_E_
 *Z23BSetRegistryValueUint6411ERegKeyRoot10StringViewS0_yEUlS_E_
+*ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN4CNet26CallbackDeleteOnCompletionEvE39CUnbufferedSendCallbackDeleteOnComplete
+*ZNK24CChildEnvironmentBuilder22GetFilteredEnvironmentER10CUtlVectorI10CUtlString10CUtlMemoryIS1_EEEUlRKS1_E_
 *ZNK6ConVar26GetCommaSeparatedSetOfIntsEvEUlRK10CUtlStringE_
 *ZNK6ConVar29GetCommaSeparatedSetOfStringsEvEUlRK10CUtlStringE_
 *\n"queue_head_position_at_reservation
@@ -1455,6 +1492,8 @@ $ffn
 ---FS:  close %s %p %i\n
 ---FS:  read %s %llu %p\n
 ---FS:  write %s %llu %p\n
+--disable
+--enable
 --error
 --title
 --warning
@@ -1573,7 +1612,6 @@ $ffn
 -steamconsole
 -steamdeck
 -steamdeckdisplay
--steamdeckdisplaynosizescale
 -steamframe
 -steammachinedisplay
 -steamos
@@ -1617,6 +1655,7 @@ $ffn
 .EBanContentCheckResult
 .EProtoClanEventType
 .HCK\v
+.LTRS
 .PLACEHOLDER_VALUE
 .Too many IDATs found
 .\n)k_EMsgAMGetClanPermissionSettingsResponse
@@ -1700,6 +1739,7 @@ $ffn
 /\n*k_EMsgDRMWorkerProcessValidateFileResponse
 /\n*k_EMsgGCHRecurringSubscriptionStatusChange
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
+/bin/lsof
 /bin/sh
 /client/
 /data/src/common/clientdirectories.h
@@ -1715,6 +1755,7 @@ $ffn
 /data/src/common/crypto_textencode.cpp
 /data/src/common/cumulativetimer.h
 /data/src/common/enum_names.cpp
+/data/src/common/environmenthelpers.cpp
 /data/src/common/environmentmanager.cpp
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/framefunction.cpp
@@ -1735,6 +1776,7 @@ $ffn
 /data/src/common/keyvaluesignature.cpp
 /data/src/common/language.cpp
 /data/src/common/linux_setenvwrapper.h
+/data/src/common/linuxhelpers.cpp
 /data/src/common/logfile.cpp
 /data/src/common/logger.cpp
 /data/src/common/messageobjects.cpp
@@ -1754,6 +1796,7 @@ $ffn
 /data/src/common/opensslconnection.cpp
 /data/src/common/opensslwrapper.cpp
 /data/src/common/platform_sockets_posix.cpp
+/data/src/common/platformhelpers.cpp
 /data/src/common/registry.cpp
 /data/src/common/scheduledfunction.cpp
 /data/src/common/scheduledfunction.h
@@ -1860,6 +1903,7 @@ $ffn
 /fxLf
 /index.html
 /logs
+/name
 /proc/%d/status
 /proc/%u/comm
 /proc/cpuinfo
@@ -1868,25 +1912,55 @@ $ffn
 /proc/net/route
 /proc/self/exe
 /proc/self/fd
+/proc/self/maps
 /proc/version
+/sbin/lsof
+/sys/bus/iio/devices
+/sys/class/drm/card0/card0-eDP-1/edid
+/sys/class/hwmon
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/devices/virtual/dmi/id/product_name
+/sys/devices/virtual/dmi/id/product_serial
 /sys/devices/virtual/dmi/id/sys_vendor
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
 /tenfoot/resource/images/bootstrapper.jpg
 /tmp
 /tmp/
+/tmp/cmd-stderr.XXXXXX
+/tmp/cmd-stdout.XXXXXX
 /tmp/disk-free.XXXXXX
 /ubuntu12_32
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
+/usr/bin/lsof
+/usr/bin/steam_serialnumber.sh
+/usr/bin/steamos-polkit-helpers/jupiter-biosupdate
+/usr/bin/steamos-polkit-helpers/jupiter-check-support
+/usr/bin/steamos-polkit-helpers/jupiter-dock-updater
+/usr/bin/steamos-polkit-helpers/jupiter-fan-control %s
+/usr/bin/steamos-polkit-helpers/jupiter-get-als-gain
+/usr/bin/steamos-polkit-helpers/steamos-disable-wireless-power-management
+/usr/bin/steamos-polkit-helpers/steamos-factory-reset-config
+/usr/bin/steamos-polkit-helpers/steamos-format-device
+/usr/bin/steamos-polkit-helpers/steamos-format-sdcard
+/usr/bin/steamos-polkit-helpers/steamos-priv-write "%s" "%s"
+/usr/bin/steamos-polkit-helpers/steamos-reboot-other
+/usr/bin/steamos-polkit-helpers/steamos-set-hostname
+/usr/bin/steamos-polkit-helpers/steamos-set-timezone
+/usr/bin/steamos-polkit-helpers/steamos-trim-devices
+/usr/bin/steamos-polkit-helpers/steamos-update
+/usr/lib/jupiter-dock-updater/jupiter-dock-updater-mock.sh
 /usr/local/ssl
 /usr/local/ssl/cert.pem
 /usr/local/ssl/certs
 /usr/local/ssl/ct_log_list.cnf
 /usr/local/ssl/private
+/usr/sbin/lsof
+/usr/share/applications/steam.desktop
+/usr/share/applications/steambeta.desktop
 /var/lib/dbus/machine-id
+/var/run/reboot-required
 /wo4:
 /wpad.dat
 /yQA
@@ -1914,19 +1988,21 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
+1000
+1024
 00003333
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:35:44
-01:35:51
-01:35:52
+01:56:42
+01:56:49
+01:56:50
 08bX
 0?0L
 0A/8
@@ -1966,10 +2042,7 @@ $ffn
 1.5.6
 1.6.37
 10.0.0.0/8
-10.4.252.0/24
 100 127.0.0.1 stale
-1000
-1024
 10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
@@ -2309,6 +2382,7 @@ $ffn
 14ISSLConnection
 1536
 15000
+155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
 15CEC25519KeyBase
@@ -2359,7 +2433,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18000000
 18446744073709551615
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
@@ -2380,6 +2453,7 @@ $ffn
 18CUtlCharConversion
 18IUDPSocketCallback
 18IWorkThreadFactory
+192.69.96.0/22
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -2430,6 +2504,8 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+208.64.200.0/22
+208.78.164.0/22
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2494,6 +2570,7 @@ $ffn
 28IStreamParserMessageCallback
 29CNetConnectionDestroyWorkItem
 29CSteamUpdaterPreprocessThread
+2>/dev/null
 2GJH
 2Ht\l
 2T26
@@ -2520,6 +2597,7 @@ $ffn
 3-WH
 30!]^JV
 3072
+30000
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
 30819D300D06092A864886F70D010101050003818B0030818702818100AAA1281C05F4EFD6207BA11B78BA957C43B3760BD2B8AC8BA664B5BA237FC4475A16B9AABCB94EB72D0B9DEC12B6C113F896A11938CBD33EEEF70BB3DB09B37488FD95FCE9706A75EB6D8060B756CAD693981492404228649BDE9BD63148873BB23CD2894998F34975CA8E5191642E5F437C8A6F6C546A57C7DB859A0189FD35020111
@@ -2650,8 +2728,9 @@ $ffn
 6-nn
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
-64CK\vH
 65536
+60000000
+64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2745,7 +2824,6 @@ $ffn
 9CUtlQueueIP12CProtoBufMsgI8CMsgSpewEE
 9CUtlQueueIP9CLogEventE
 9CWorkItem
-9Htb
 9IGv
 9IMemAlloc
 9IValidate
@@ -2835,6 +2913,7 @@ $ffn
 =trF6,#
 > or is NULL
 >#>)>/>3>A>W>c>e>w>
+>/dev/null
 >0PFJ
 >= or is NULL
 >I{TrEX
@@ -2854,7 +2933,9 @@ $ffn
 @!@%@+@1@?@C@E@]@a@g@m@
 @0pp
 @EnableUDPHistory
-@MaxOutstandingSendThreadItem
+@MaxOutstandingSendThreadItemFatalAssert
+@MaxOutstandingSendThreadItemFatalAssertSecondsAtLimit
+@MaxOutstandingSendThreadItemSleep
 @bCallerDeadlineAbortJobDisableWhenHTTPReqStart
 @bEnableFrameFuncOverageWarnings
 @bEnableHTTP2OnAllCHTTPClients
@@ -3492,6 +3573,8 @@ BVerifyInstalledFiles: bad symlink %s
 BVerifyInstalledFiles: bad symlink ( %s -> %s, expected non-symlink )
 BVerifyInstalledFiles: bad symlink ( %s -> %s, should link to %s )
 BVerifyInstalledFiles: can't read %s\n
+BWriteValueToFileAsUser
+BWriteValuetoFileAsRoot
 BYield()
 BYieldingFileIo
 BYieldingGetFreeDiskSpace
@@ -4067,6 +4150,7 @@ CJobMgr::BRouteMsgToJob() - job
 CJobMgr::BRunNewJobsFromNetMessages
 CJobMgr::DumpJobCategoryData - job type %s is waiting on a lock with no owning job
 CJobMgr::PassMsgToJob() job %s received unexpected message %s when paused for %s\n
+CJobMgr::SetWaitDetails
 CJobMgr::TimeoutJob
 CJobMgr::m_WorkThreadPool
 CKeyValuesSystem
@@ -4193,7 +4277,8 @@ CMetrics::AsJson
 CMetrics::Increment_double
 CMetrics::Increment_int
 CMetricsPayload: Measurement_StatisticSet JSON serialization is not implemented
-CMetricsPayload::RecordMetric
+CMetricsPayload::RecordMetric_Dimension
+CMetricsPayload::RecordMetric_Measurement
 CMetricsSymbol::sm_symbolTable
 CMsgAuthTicket
 CMsgBase_t : packet too small
@@ -4927,6 +5012,7 @@ DES-EDE3-ECB
 DES-EDE3-OFB
 DES-OFB
 DES3
+DESKTOP
 DESX
 DESX-CBC
 DH PARAMETERS
@@ -5004,8 +5090,10 @@ DIq*\tW
 DLOPEN Error:%s\n
 DNS:
 DO NOT PARSE: fields may be stripped and missing.\n
+DOCUMENTS
 DONT_BREAK_ON_ASSERT
 DOWNGRD
+DOWNLOAD
 DRCHV
 DSA PARAMETERS
 DSA PRIVATE KEY
@@ -5112,6 +5200,7 @@ Destination buffer is wrong
 Destroy window
 Details
 DetectNow failed
+Detected leaked fd
 Device Corrupt
 Device Error
 Device Not Found
@@ -5456,6 +5545,9 @@ EPublishedFileQueryType
 EPurchaseResultDetail
 EPurchaseStatus
 ERROR
+ERROR: %s: failed to set hostname\n
+ERROR: %s: failed to set timezone\n
+ERROR: %s\n
 ERROR: selector [%d] invalid\n
 ERROR: unsafe call to clearenv count:%d
 ERROR: unsafe call to putenv count:%d var:'%s'
@@ -5637,11 +5729,18 @@ Error reporting not implemented.
 Error while parsing option value for "
 Error while parsing text KeyValues for resource %s
 Error writing file
+Error: %s: empty address field
+Error: %s: failed to make file writeable %s\n
+Error: %s: failed to write to %s: %s\n
+Error: %s: invalid address
+Error: %s: popen failed
+Error: %s: steamos-priv-write failed %s: %s\n
 Error: %s\n
 Error: XRRFreeCrtcInfo() is not available\n
 Error: XRRFreeOutputInfo() is not available\n
 Error: XRRGetCrtcInfo() is not available\n
 Error: XRRGetOutputInfo() is not available\n
+Error: failed to disable wireless power management: %d\n
 Error: failed to forward message to bootstrap log: %s\n
 Error: invalid command: %d
 Error: parent failed to provide a valid IPC socket\n
@@ -5661,6 +5760,7 @@ EventTime
 EventType
 Exception validating current work item
 Excluded
+ExecVPENoReturn
 Execute: %s\n
 Exhausted list of download hosts
 Existing cancelled license
@@ -5822,11 +5922,14 @@ Failed to make temporary folder to unzip into
 Failed to open install file list
 Failed to open package
 Failed to parse input
+Failed to parse lsof source port
 Failed to parse provided range request header
+Failed to re-launch steam inside the steam runtime environment. Proceeding in host environment, but functionality may be degraded.
 Failed to read package (%s)
 Failed to remove log event from threadsafe queue!
 Failed to remove temporary unzip folder
 Failed to remove temporary unzip folder, continuing anyway
+Failed to run early setup - proceeding anyways\n
 Failed to save manifest
 Failed to set thread local value
 Failed to start Addl Log Instance for prefix %s
@@ -5925,6 +6028,7 @@ ForceUpdateNextRestart
 ForceUpdateNextRestart: %p\n
 Forced Off
 Forcing a fatal error
+ForkAndRunProcess
 Found
 Found invalid proto option data for:
 Found pending update
@@ -6097,6 +6201,7 @@ GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
 GetFloat
 GetFloatFromString() did not get correct peCS parameter
+GetIPCConnectionDetails
 GetInt32
 GetInt64
 GetInt64FromString() did not get correct peCS parameter
@@ -6267,7 +6372,7 @@ Hour
 Hours
 Hp!v
 HqI9x
-HttpClientConnection (%p) now connected through %X \n
+HttpClientConnection (%p) now initiating TCP connection through %X \n
 Huffman code size table overflow
 Huffman table 0x%02x was not defined
 Humper
@@ -6574,6 +6679,7 @@ Invalid status code in response received by HTTP client from %s (%s): %s\n
 Invalid stream state
 Invalid strings::Substitute() format string: "
 Invalid symbol name:
+Invalid system directory %d
 Invalid tax address
 Invalid thread id during thread Start()
 Invalid time specified for tIME chunk
@@ -6751,6 +6857,9 @@ LANCache
 LANPeer
 LB hCon  Socket  Flags  Local address    Remote address   Mode    State         Last recv (ms)  Sends pending\n
 LBN6
+LD_LIBRARY_PATH
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}"
+LD_LIBRARY_PATH="${SYSTEM_LD_LIBRARY_PATH-${LD_LIBRARY_PATH}}" PATH="${SYSTEM_PATH-${PATH}}" sudo -n jupiter-biosupdate
 LEGACY_GOST_PKCS12
 LINUX
 LINUX32
@@ -6876,6 +6985,7 @@ MMfU33
 MNG features are not allowed in a PNG datastream
 MOL Points
 MQC,ARD
+MUSIC
 M\rLAI)haL<|p\t\t
 Mac OS
 MacOS
@@ -6953,7 +7063,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 13 2026
+Mar 20 2026
 Marathi
 March
 Mask Algorithm:
@@ -7703,6 +7813,7 @@ PEM_write_bio
 PEM_write_bio_PrivateKey_traditional
 PERMISSION_DENIED
 PFR19CNullMetricsFactoryvE
+PICTURES
 PING: stream_id != 0
 PINIT
 PKCS #7 SIGNED DATA
@@ -7871,6 +7982,7 @@ PUSH_PROMISE: stream_id == 0
 PUT
 Package file %s missing or incorrect size, not installing update\n
 Package file %s missing or incorrect size\n
+Package id 0
 Package requires an invitation for a reservation to purchase
 PackageCount
 PackageID
@@ -7965,7 +8077,6 @@ Polish
 Poly1305
 Polynomial:
 Portuguese
-Post DNS resolve
 PostCode
 PostRecv
 PostTime
@@ -8071,6 +8182,7 @@ R##Fe
 R1h58
 R5=D
 R;vM;
+RADV_FORCE_VRS_CONFIG_FILE
 RAND_DRBG_generate
 RAND_DRBG_instantiate
 RAND_DRBG_new
@@ -8267,6 +8379,7 @@ RecvMsgDirect
 RecvPlaintext
 Red Pagos
 RedCompra
+ReexecSteamLinux
 Refundable
 Refunded
 Refunded to wallet
@@ -8368,6 +8481,8 @@ Routing Domain Identifiers
 Row has too many bytes to allocate in memory
 Rs$c~B
 RuPay
+RunCommand
+RunCommandGetOutput
 RunFrame - UserCanceled: %d
 RunOnce
 RunUntilCompleted
@@ -8640,9 +8755,12 @@ STEAM_BIGPICTURE
 STEAM_BOOTSTRAP_LOG_VERBOSE
 STEAM_CLIENT_CONFIG_FILE
 STEAM_CLIENT_LOG_FOLDER
+STEAM_ENABLE_DYNAMIC_BACKLIGHT
 STEAM_GAME
 STEAM_RUNTIME
+STEAM_STEAMRT_RECURSION_GUARD
 STEAM_UPDATEUI_PNG_BACKGROUND
+STEAM_USE_DYNAMIC_VRS
 STORE lib
 STORE routines
 STREAM_CLOSED
@@ -8751,8 +8869,11 @@ SetDouble
 SetEnum
 SetEnumValue
 SetFloat
+SetHostname
 SetInt32
 SetInt64
+SetJobWaitDetailsConst
+SetJobWaitDetailsFormat
 SetRawDataAndWipeInput( tmp, cbData )
 SetRepeatedBool
 SetRepeatedDouble
@@ -8764,6 +8885,7 @@ SetRepeatedString
 SetRepeatedUInt32
 SetRepeatedUInt64
 SetString
+SetTimezone
 SetUInt32
 SetUInt64
 Sets Steam client beta branch
@@ -8921,7 +9043,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Mar 13 2026 01:35:51
+Startup - updater built Mar 20 2026 01:56:49
 State
 StaticFileWriterThread()
 Steam
@@ -9035,6 +9157,7 @@ T5w?30d
 T61STRING
 TB)I
 TCP disconnect\n
+TCP send queue for send thread was above fatal limit %d for more than %d seconds, killing process.
 TELETEXSTRING
 TLS 1.3, client CertificateVerify
 TLS 1.3, server CertificateVerify
@@ -9319,6 +9442,8 @@ Target buffer for V_URLEncode should be 3x source length, plus one for terminati
 Target buffer too short to terminate\n
 Target buffer too short\n
 Tatar
+Tctl
+Tdie
 Telugu
 TempAppCmdLine
 Temporary Redirect
@@ -9532,6 +9657,8 @@ Unexpected end of string.
 Unexpected error
 Unexpected failure while serializing option submessage
 Unexpected marker 0x%02x
+Unexpected number of glibc version components
+Unexpected number of glibc version components: %d
 Unexpected result from V_SplitString()
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s.  Code is bad.\n
 Unhandled pending I/O type %d
@@ -9676,6 +9803,7 @@ VALVE_CRYPTO_dbg_free
 VALVE_CRYPTO_dbg_malloc
 VALVE_CRYPTO_dbg_realloc
 VERSION=
+VIDEOS
 VIDEOTEXSTRING
 VISIBLE
 VISIBLESTRING
@@ -9768,6 +9896,13 @@ WARNING
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
 WARNING: setlocale('%s') failed, using locale: '%s'. International characters may not work.\n
 WARNING: unable to link %s and %s because one or more is a ConCommand.\n
+WARNING: using plain als gain get\n
+WARNING: using plain factory reset\n
+WARNING: using plain jupiter-biosupdate\n
+WARNING: using plain reboot other\n
+WARNING: using plain set-hostname\n
+WARNING: using plain set-timezone\n
+WARNING: using plain steamos-update\n
 WIN32
 WIN64
 WIN7
@@ -9815,6 +9950,8 @@ WalletCur
 Warning
 Warning parsing text-format
 Warning: %s
+Warning: %s: lsof is required to run steam and it may not be available - please install
+Warning: %s: unexpected number of address fields
 Warning: failed to init crash handler: failed to create crash handler\n
 Warning: failed to init crash handler: no factory\n
 Warning: failed to set thread priority: foreign thread unsupported\n
@@ -9885,6 +10022,7 @@ Write Failed
 Write failed on temporary file --- out of disk space?
 Write to EMS failed
 Write to XMS failed
+WriteToEnvFD: write failed, aborted: %s
 Writing zero-length unknown chunk
 Wrong JPEG library version: library is %d, caller expects %d
 Wrong Price
@@ -10056,6 +10194,8 @@ XCreateGC
 XCreateIC
 XCreateRegion
 XCreateWindow
+XDG_
+XDG_CONFIG_HOME
 XDefaultRootWindow
 XDefineCursor
 XDeleteContext
@@ -10544,6 +10684,7 @@ Zulu
 ^oEZ_
 _55j
 _Accum
+_DIR
 _ExitOnFatalAssert\n
 _Fract
 _GLOBAL_
@@ -10630,7 +10771,9 @@ __xstat64
 _english.txt
 _exit
 _g@Cg
+_input
 _jbF~T
+_label
 _longjmp
 _rDd
 _setjmp
@@ -10700,6 +10843,7 @@ access-control-allow-origin
 accessor_ == other.accessor_
 account
 account flags changed
+acpitz
 acpt_state
 active
 actual_hostname
@@ -10986,6 +11130,7 @@ assertion failed: temp-(sh.arena_size >> slist) == sh_find_my_buddy(temp, slist)
 assertion failed: temp->next == NULL || WITHIN_ARENA(temp->next)
 associatedDomain
 associatedName
+asusec
 async file read
 async file write
 async_ctx_new
@@ -11576,6 +11721,7 @@ check_name_constraints
 check_padding_md
 check_policy
 check_suiteb_cipher_list
+checking cache
 checksum_error
 cherokee
 china
@@ -11731,6 +11877,7 @@ connect error
 connect_duration
 connected
 connecting
+connecting/sending request
 connectio
 connection
 connection type not set
@@ -11776,6 +11923,7 @@ content-typ
 content-type
 contentEncryptionAlgorithm
 contentType
+content_adaptive_brightness
 content_descriptorid
 content_descriptorids
 content_descriptors_to_exclude
@@ -11814,6 +11962,7 @@ controller_steamcontroller_gordon
 controller_steamcontroller_headcrab
 controller_steamcontroller_unknown
 controller_steamos_handheld
+controller_switch2_pro
 controller_switch_joycon_left
 controller_switch_joycon_pair
 controller_switch_joycon_right
@@ -11862,6 +12011,7 @@ copy_email
 copy_issuer
 copying %s -> %s\n
 core id
+coretemp
 coroutines.Base() == NULL
 costParameter
 could not bind to the requested symbol name
@@ -12528,6 +12678,7 @@ dmp1 not congruent to d
 dmq1
 dmq1 not congruent to d
 dnQualifier
+dns/proxy discovery done
 dnsName
 dns_failed
 do_EC_KEY_print
@@ -12568,6 +12719,7 @@ done!\n
 double
 download
 download_completed
+dpkg-query -s steamos-updatelevel | grep Version | cut -d' ' -f2
 drbg already initialized
 drbg not initialised
 drbg_bytes
@@ -12736,6 +12888,8 @@ ecdsa_with_SHA3-256
 ecdsa_with_SHA3-384
 ecdsa_with_SHA3-512
 echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"\n
+echo "%s" | sudo -n tee "%s"
+echo %s | tee %s
 echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!\n
 echo_console
 eckey_param2type
@@ -12817,6 +12971,7 @@ enum
 enums_clientserver.proto
 enums_clientserver.proto*
 enveloped-data
+environ
 epoch
 epoll_create
 epoll_ctl
@@ -12899,6 +13054,7 @@ execl
 execl failed, errno %d\n
 execv
 execvp
+execvpe
 existingLen < k_cchMaxString && cubInput * 2 < k_cchMaxString - existingLen
 exit
 exp master
@@ -13016,6 +13172,7 @@ ffdhe6144
 ffdhe8192
 fflush
 fflush()
+fgetc
 fgets
 fi_FI
 field
@@ -13061,6 +13218,7 @@ finished
 finnish
 fips mode not supported
 fips_mode
+firmware_node/path
 first num too large
 first octet invalid
 fixed point overflow ignored
@@ -13125,6 +13283,7 @@ fscanf disk-free output failed\n
 fseek
 fseeko64
 fstat
+fsync
 fsync %s failed, errno = %d\n
 ftell
 ftello64
@@ -13547,6 +13706,7 @@ https_proxy
 httpserver
 hu_HU
 hungarian
+hwmon*
 hxi(j
 h~0Q.
 i + 1 < blk->n
@@ -13964,6 +14124,7 @@ igbo
 ignored in grayscale PNG
 ignoring out of range rgb_to_gray coefficients
 ihD5
+iio:device*
 ilRdV
 illegal Suite B digest
 illegal bitstring format
@@ -14000,6 +14161,7 @@ in == last
 in error state
 in use
 in use by IDAT
+in_illuminance_raw
 inappropriate fallback
 incoming
 incompatible objects
@@ -14033,7 +14195,6 @@ inhibitAnyPolicy
 inhibitPolicyMapping
 init fail
 init failed
-initial wait
 initialization error
 initials
 inlen == 0
@@ -14329,6 +14490,7 @@ jurisdictionLocalityName
 jurisdictionST
 jurisdictionStateOrProvinceName
 jwK\v\n
+k10temp
 k2U\v
 k53i
 kDHE
@@ -14410,7 +14572,6 @@ k_EMsgAIGetAppGCFlags
 k_EMsgAIGetAppGCFlagsResponse
 k_EMsgAIGetAppList
 k_EMsgAIGetAppListResponse
-k_EMsgAISGetCouponDefinition
 k_EMsgAISGetPackageChangeNumber
 k_EMsgAMAccountPS3Unlink
 k_EMsgAMAcctAllowedToPurchase
@@ -15603,6 +15764,7 @@ lchown
 ld-linux.so.2
 leading_comments
 leading_detached_comments
+led_brightness
 left the group
 legacy_
 legacy_renegotiation
@@ -15726,8 +15888,13 @@ lost rgb to gray
 lost/gained channels
 lower
 lpHP
+lsb_release -d -s
 lseek
 lseek64
+lsof
+lsof reported an empty address field
+lsof reported an unexpected address: %s
+ltrf216a
 lumen
 luxembourgish
 lvs&4
@@ -16815,6 +16982,8 @@ operation not supported on this type
 operaton not initialized
 operator
 operator""
+operator()
+opt3001
 option json_name is not allowed on extension fields.
 optional
 optionalSignature
@@ -17035,6 +17204,7 @@ pStr1 != NULL
 pStr2 != NULL
 pT6w.
 pTCPConnection->m_cOutstandingSends > 0
+pTemperature is a required paramater
 pThread
 pToken
 pTracker->Find( pKey ) != NULL
@@ -17132,6 +17302,8 @@ pchNeedle != NULL
 pchOut
 pchSteam2ID
 pchTLSServerName == NULL
+pchVar
+pchVar && pchValue
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 pclose
 pcubDecodedData
@@ -17395,6 +17567,8 @@ privateExponent:
 privateKey
 privateKeyUsagePeriod
 privilegeWithdrawn
+privileged write polkit:%s -> %s\n
+privileged write: %s -> %s\n
 problems getting password
 process_include
 process_pci_value
@@ -17421,6 +17595,7 @@ protocol is shutdown
 protocol version
 protocolInformation
 proxy certificates not allowed, please set the appropriate flag
+proxy discovery
 proxy path length constraint exceeded
 proxy subject name violation
 proxy-authenticat
@@ -17444,7 +17619,6 @@ pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
-pstrReplacement
 pstrValue
 pszName
 pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
@@ -17526,6 +17700,7 @@ putc
 putenv
 puts
 putwc
+pv-run.sh
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
@@ -17984,7 +18159,6 @@ sendRouter
 send_duration
 sendfile64
 sending
-sending request
 sendmsg
 sendto
 seq_num
@@ -18232,6 +18406,7 @@ short line
 shortcut
 should retry
 show_broadcast
+shred --remove %s
 shutdown
 shutdown while in init
 sig invalid mime type
@@ -18571,17 +18746,21 @@ steamclient
 steamclient.so
 steamcmd
 steamconsole.so
+steamdeck-hwmon
 steamdeck_
+steamdeck_hwmon
 steamdeck_stable
 steamglobal
 steamhdl
 steamid
 steammessages_base.proto
+steamos-update: using duplicate detection: %d\n
 steampal_
 steampal_stable_9a24a2bf68596b860cb6710d9ea307a76c29a04d
 steampipe
 steampipepeering
 steamrow
+steamrt
 steamservice.so
 steamui.so
 steamwebhelper
@@ -18665,6 +18844,15 @@ subtreeMaximumQuality
 subtreeMinimumQuality
 subtype mismatch
 success
+sudo -n /usr/bin/steam_serialnumber.sh
+sudo -n /usr/lib/hwsupport/format-sdcard.sh
+sudo -n chmod a+w "%s"
+sudo -n dmidecode -t 11 | grep "String %d" | cut -d ":" -f 2
+sudo -n hostnamectl set-hostname
+sudo -n steamos-factory-reset-config
+sudo -n steamos-reboot --reboot-other
+sudo -n steamos-update
+sudo -n timedatectl set-timezone
 superseded
 suppPubInfo
 supplied row stride too small
@@ -18731,6 +18919,8 @@ telexNumber
 teliasonera
 telugu
 telus
+temp*
+temp1_input
 template parameter object for
 tencent
 tenfoot.so
@@ -18767,6 +18957,7 @@ this != pLock->m_pJob
 this != pLock->m_pJobWaitingQueueTail
 this == g_pJobCur
 thisUpdate
+threaded work (proxy/dns)
 threads
 throw
 ticket
@@ -19497,7 +19688,10 @@ wait details: [%s] - %s
 wait for time
 waitid
 waiting
+waiting due to max in flight per host
 waiting for lock
+waiting on HTTP/2 support discovery for connection
+waiting on cache busy
 waitpid
 wap-wsg
 wap-wsg-idm-ecid-wtls1
@@ -19554,6 +19748,7 @@ welsh
 wfDJ@
 wg_token
 wge6
+which lsof >/dev/null 2>&1
 while
 whirlpool
 win10
@@ -19649,6 +19844,7 @@ x931
 x=9v
 xUN'
 x`tm6
+xdg-user-dir %s
 xdigit
 xerror_handler: X failed, continuing\n
 xhosa
@@ -19678,6 +19874,8 @@ zC`G;
 zTXt
 zTXt: invalid compression type
 zTXt: invalid keyword
+zenity --error --text='%s' --width=450
+zenpower
 zh-cn
 zh-tw
 zh-xc

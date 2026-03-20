@@ -47,4 +47,7 @@
 	"origin_switch_r_gyro_yaw"					"Right JoyCon Gyro Yaw"
 	"origin_switch_r_gyro_roll"					"Right JoyCon Gyro Roll"
 	"origin_switch_button_dpad_move"			"D-Pad Movement"
+	"origin_switch_button_gl"					"GL Button"
+	"origin_switch_button_gr"					"GR Button"
+	"origin_switch_button_button_c"				"C Button"
 }

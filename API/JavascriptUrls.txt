@@ -870,9 +870,7 @@ ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/${LANGUAGE}/${}
 ${MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${}
 ${MEDIA_CDN_URL}appmgmt/artassets/capsule_dlc.png
 ${MEDIA_CDN_URL}steam/
-${MEDIA_CDN_URL}steam/clusters/${}/${}/${}${}
 ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
-${MEDIA_CDN_URL}steam/spotlights/${}/${}${}
 ${MEDIA_CDN_URL}store/
 ${MEDIA_CDN_URL}store/promo/steamawards2025/trophy_220.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
@@ -1627,6 +1625,8 @@ ${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ITEM_BASE_URL}${filename}
 ${STORE_ITEM_BASE_URL}${}
 ${STORE_ITEM_BASE_URL}steam/apps/${}/portrait.png
+${STORE_ITEM_BASE_URL}steam/clusters/${}/${}/${}${}
+${STORE_ITEM_BASE_URL}steam/spotlights/${}/${}${}
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${STORE_URL}app/730/CounterStrike_2/
@@ -2091,6 +2091,7 @@ https://avatars.fastly.steamstatic.com/${strAvatarHash}${}.jpg
 https://avatars.fastly.steamstatic.com/${strHash}${strSize}.jpg
 https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
 https://blog.counter-strike.net/
+https://bouncinglogo.steamscreensavers.host/index.html
 https://calendar.google.com/calendar/render?action=TEMPLATE
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.mp4
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.webm

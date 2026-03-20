@@ -1073,6 +1073,10 @@
     "ChatRoom_GameInvite_Accepted": "Приехте покана да играете %1$s%2$s",
     "ChatRoom_GameInvite_AcceptOnPC": "Можете да приемете тази покана от своя компютър.",
     "ChatRoom_GameInvite_UnreleasedGame": "Неиздадена игра",
+    "ChatRoom_PlayestInvite_ViewInvite": "Преглед на покана",
+    "ChatRoom_PlayestInvite_Invite": "%1$s Ви покани към Steam Playtest",
+    "ChatRoom_PlaytestInvite_YouInvited": "Поканихте %1$s към Steam Playtest %2$s%3$s",
+    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Поканихте %1$s към Steam Playtest за %2$s%3$s",
     "ChatRoom_GameInviteRemotePlay_Invite": "%1$s Ви покани, използвайки Steam Remote Play Together",
     "ChatRoom_GameInviteRemotePlay_Accept": "Свързване",
     "ChatRoom_GameInviteRemotePlay_Dismissed": "%1$s Ви покани да играете %2$s%3$s чрез Steam Remote Play",
@@ -1204,9 +1208,5 @@
     "changeLog_UpdateItem57": "Поправено е, че списъкът с приятели и чат прозорците не се изобразяваха в игралния Steam слой под Linux и macOS.",
     "BBCode_Loading": "Зареждане",
     "BBCode_Failed": "Неуспешно зареждане",
-    "broadcastDetails_Playing": "Играе",
-    "ChatRoom_PlayestInvite_ViewInvite": "Преглед на покана",
-    "ChatRoom_PlayestInvite_Invite": "%1$s Ви покани към Steam Playtest",
-    "ChatRoom_PlaytestInvite_YouInvited": "Поканихте %1$s към Steam Playtest %2$s%3$s",
-    "ChatRoom_PlaytestInvite_YouInvited_FullApp": "Поканихте %1$s към Steam Playtest за %2$s%3$s"
+    "broadcastDetails_Playing": "Играе"
 }
