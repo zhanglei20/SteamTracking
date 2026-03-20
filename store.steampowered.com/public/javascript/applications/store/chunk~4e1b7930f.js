@@ -12067,7 +12067,7 @@
           })(r),
           c = e.context.event,
           u = (0, U.z)(t, e.language, c?.rtime32_last_modified);
-        if (void 0 === u) return e.children || "";
+        if (void 0 === u || null == u) return e.children || "";
         t = "string" == typeof u ? u : u[1];
         const p = (function (e, t, r) {
           let i;
