@@ -3918,6 +3918,22 @@ function HandleTradeActionMenu( elActionMenuButton, item, user )
 			elNewAction.addClass( 'popup_menu_item' );
 
 			var strLink = rgAction.link.replace( "%assetid%", item.id ).replace( "%contextid%", item.contextid ).replace( "%owner_steamid%", user.GetSteamId() );
+			if ( item.asset_properties && item.asset_properties instanceof Array )
+			{
+				item.asset_properties.forEach( prop =>
+				{
+					var propValue = '';
+					if ( prop.float_value !== undefined )
+						propValue = prop.float_value.toString();
+					else if ( prop.int_value !== undefined )
+						propValue = prop.int_value.toString();
+					else if ( prop.string_value !== undefined )
+						propValue = prop.string_value;
+					strLink = strLink.replace( `%propid:${prop.propertyid}%`, propValue );
+				} );
+			}
+			strLink = strLink.replace( /%propid:[0-9]+%/, '' );
+
 			elNewAction.attr( 'href', strLink );
 
 			if ( rgAction.link.substr( 0, 6 ) != "steam:" )
@@ -4238,6 +4254,15 @@ function ContinueFullInventoryRequestIfNecessary( transport, mergedResponse, str
 					if ( rgItem.tags )
 					{
 						mergedResponse.rgInventory[itemid].tags = mergedResponse.rgInventory[itemid].tags.clone();
+					}
+
+					// Merge asset properties into the inventory
+					if ( transport.responseJSON.rgAssetProperties )
+					{
+						if ( transport.responseJSON.rgAssetProperties[rgItem.id] )
+						{
+							mergedResponse.rgInventory[itemid].asset_properties = transport.responseJSON.rgAssetProperties[rgItem.id].slice();
+						}
 					}
 				}
 			}

@@ -7623,7 +7623,9 @@
               SaleSectionCarouselPadding: !Boolean(_),
               ItemCount_4: 4 == _[0],
               [_.ListOfCreators]:
-                _ && "creator_list_of_lists" == _.section.section_type,
+                _ &&
+                _.section &&
+                "creator_list_of_lists" == _.section.section_type,
             }),
             useTestScrollbar: !0,
             bLazyRenderChildren: !0,
@@ -10823,10 +10825,15 @@
                   ? "saleaction/ajaxpreviewgetsaledynamicappqueryforuser"
                   : "saleaction/ajaxgetsaledynamicappqueryforuser"));
             const _ = _._.BConfirmedAdultContentAgeGate()
-                ? []
-                : _._.excluded_content_descriptors,
-              _ = _._.GetClanInfoByClanAccountID(_.clanSteamID.GetAccountID()),
+              ? []
+              : _._.excluded_content_descriptors;
+            let _ = !1;
+            if (_) {
+              const _ = _._.GetClanInfoByClanAccountID(
+                _.clanSteamID.GetAccountID(),
+              );
               _ = (0, _._)(_, _);
+            }
             let _ = null;
             const _ = {
               _: _._.COUNTRY,
