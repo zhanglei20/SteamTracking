@@ -7047,7 +7047,9 @@
               SaleSectionCarouselPadding: !Boolean(_),
               ItemCount_4: 4 == I[0],
               [L.ListOfCreators]:
-                t && "creator_list_of_lists" == t.section.section_type,
+                t &&
+                t.section &&
+                "creator_list_of_lists" == t.section.section_type,
             }),
             useTestScrollbar: !0,
             bLazyRenderChildren: !0,
@@ -9977,12 +9979,17 @@
                   ? "saleaction/ajaxpreviewgetsaledynamicappqueryforuser"
                   : "saleaction/ajaxgetsaledynamicappqueryforuser"));
             const o = M.Fm.BConfirmedAdultContentAgeGate()
-                ? []
-                : y.iA.excluded_content_descriptors,
-              l = z.ac.GetClanInfoByClanAccountID(s.clanSteamID.GetAccountID()),
-              w = (0, U.Ns)(s, l);
-            let x = null;
-            const I = {
+              ? []
+              : y.iA.excluded_content_descriptors;
+            let l = !1;
+            if (s) {
+              const e = z.ac.GetClanInfoByClanAccountID(
+                s.clanSteamID.GetAccountID(),
+              );
+              l = (0, U.Ns)(s, e);
+            }
+            let w = null;
+            const x = {
               cc: y.TS.COUNTRY,
               l: y.TS.LANGUAGE,
               rgExcludedContentDescriptors: o,
@@ -10012,33 +10019,33 @@
               optin_only:
                 Boolean(b) || Boolean(s?.jsondata?.optin_only) || void 0,
               controller_category: Number(g) || void 0,
-              bUseCreatorHomeApps: w,
+              bUseCreatorHomeApps: l,
               bAllowDemos: 36 == s?.GetEventType(),
             };
             if (
-              ((x = await A().get(e, {
-                params: I,
+              ((w = await A().get(e, {
+                params: x,
                 withCredentials: a,
                 cancelToken: f?.token,
               })),
-              200 != x?.status || 1 != x.data?.success || !x.data?.appids)
+              200 != w?.status || 1 != w.data?.success || !w.data?.appids)
             )
               throw new Error(
                 "query failed, status=" +
-                  x?.status +
+                  w?.status +
                   " success: " +
-                  x?.data?.success,
+                  w?.data?.success,
               );
-            for (const e of x.data.appids)
+            for (const e of w.data.appids)
               v.setAppIDs.has(e) || (v.appids.push(e), v.setAppIDs.add(e));
-            for (const e of x.data.store_item_keys)
+            for (const e of w.data.store_item_keys)
               v.setStoreItemKeys.has(e) ||
                 (v.store_item_keys.push(e), v.setStoreItemKeys.add(e));
-            (v.faceting = x.data.faceting),
-              (v.multifaceting = x.data.multifaceting),
-              (v.possible_has_more = x.data.possible_has_more),
-              (v.solr_index = x.data.solr_index),
-              (v.match_count = x.data.match_count);
+            (v.faceting = w.data.faceting),
+              (v.multifaceting = w.data.multifaceting),
+              (v.possible_has_more = w.data.possible_has_more),
+              (v.solr_index = w.data.solr_index),
+              (v.match_count = w.data.match_count);
           }
           this.m_mapSaleGameListsByFlavor.set(e, v);
           const w = v.possible_has_more || l + o < v.appids.length;
