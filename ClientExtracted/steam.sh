@@ -70,6 +70,7 @@ if has_beta_optin; then
 				log "Restarting SteamRT3 Steam by request"
 				exec "$0" "$@"
 			fi
+			exit $STATUS
 		fi
 	fi
 fi
