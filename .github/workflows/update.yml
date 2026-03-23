@@ -2,7 +2,10 @@ name: Track Steam Updates
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 9,12,15,18,21 * * MON-FRI'
+      timezone: "America/Los_Angeles"
+    - cron: '0 0,12 * * SAT,SUN'
+      timezone: "America/Los_Angeles"
   workflow_dispatch:
     inputs:
       force:
