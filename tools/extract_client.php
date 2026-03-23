@@ -147,10 +147,32 @@ class ClientExtractor
 				{
 					$Stat = $Zip->statIndex( $i );
 
-					if( $Stat !== false )
+					if( $Stat === false )
 					{
-						$FileListings[] = $Stat;
+						continue;
 					}
+
+					if( str_contains( $Stat[ 'name' ], '\\' ) )
+					{
+						$OldPath = $ExtractDir . '/' . $Stat[ 'name' ];
+						$FixedName = str_replace( '\\', '/', $Stat[ 'name' ] );
+						$NewPath = $ExtractDir . '/' . $FixedName;
+
+						if( file_exists( $OldPath ) )
+						{
+							$NewDir = dirname( $NewPath );
+
+							if( !is_dir( $NewDir ) )
+							{
+								mkdir( $NewDir, 0755, true );
+							}
+
+							rename( $OldPath, $NewPath );
+							$this->Log( 'Fixed backslash path: ' . $Stat[ 'name' ] );
+						}
+					}
+
+					$FileListings[] = $Stat;
 				}
 
 				$Zip->close();
