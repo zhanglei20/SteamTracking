@@ -111,7 +111,7 @@ jobs:
           key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**', 'partner.steamgames.com/ssr/**') }}
 
       - name: Dispatch to ValveProtobufs
-        if: steps.update.outputs.changed == 'true'
+        if: steps.update.outputs.changed == 'true' && env.GH_TOKEN != ''
         run: gh api repos/SteamTracking/Protobufs/dispatches -f event_type=sync
         env:
           GH_TOKEN: ${{ secrets.DISPATCH_TOKEN }}
