@@ -38,8 +38,10 @@ class ClientExtractor
 
 		$ProtobufDumperProject = __DIR__ . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/ProtobufDumper.csproj';
 
+		$Runtime = PHP_OS_FAMILY === 'Windows' ? 'win-x64' : 'linux-x64';
+
 		$this->RunCommand( 'dotnet clean --configuration Release ' . escapeshellarg( $ProtobufDumperProject ) );
-		$this->RunCommand( 'dotnet publish --configuration Release -p:PublishSingleFile=true --runtime linux-x64 --self-contained ' . escapeshellarg( $ProtobufDumperProject ) );
+		$this->RunCommand( 'dotnet publish --configuration Release -p:PublishSingleFile=true --runtime ' . $Runtime . ' --self-contained ' . escapeshellarg( $ProtobufDumperProject ) );
 
 		$DumpStringsDir = __DIR__ . '/DumpStrings';
 
@@ -245,7 +247,7 @@ class ClientExtractor
 	{
 		$this->Log( 'Dumping strings' );
 
-		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings';
+		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings' . ( PHP_OS_FAMILY === 'Windows' ? '.exe' : '' );
 		$UbuntuDir = self::LINUX_BINS_DIR . '/ubuntu12_32';
 		$SteamBinary = self::CLIENT_EXTRACTED_DIR . '/ubuntu12_32/steam';
 
