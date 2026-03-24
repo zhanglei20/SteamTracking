@@ -991,8 +991,13 @@
             rgAcceptableTypes: _,
           },
           spotlight_art: {
-            width: [306, 374],
-            height: [260, 448],
+            width: 306,
+            height: 260,
+            rgAcceptableTypes: _,
+          },
+          spotlight_art_hero: {
+            width: 374,
+            height: 448,
             rgAcceptableTypes: _,
           },
           old_spotlight_art: {
@@ -1041,8 +1046,8 @@
             rgAcceptableTypes: [4],
           },
           takeunder_art: {
-            width: 940,
-            height: 150,
+            width: 1200,
+            height: 190,
             rgAcceptableTypes: _,
           },
           takeunder_mobile_art: {

@@ -4788,7 +4788,6 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "Steam_WindowsCompat_Description" "Windows draait Steam momenteel via de Windows-compatibiliteitsmodus, wat problemen kan veroorzaken met sommige Steam-functies en het spelen van spellen. Volg de instructies hieronder om de compatibiliteitsmodus uit te schakelen."
 "Steam_WindowsCompat_DoNotShowAgain" "Niet meer tonen"
 "Steam_WindowsCompat_SupportLinkDesc" "Hoe schakel ik compatibiliteitsmodus uit?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Steam afsluiten"
 "Steam_WindowsCompat_RestartSteam" "Steam herstarten"
 "Steam_WindowsCompat_Continue" "Doorgaan"
@@ -4869,11 +4868,12 @@ Stel een categorie in voor dit spel, zodat je het snel kunt vinden en je spellen
 "RescueDialog_ExitSteam" "Sluit Steam af"
 
 "TransportDialog_Title" "Onverwachte transportfout"
-"TransportDialog_Explanation" "Er is een onverwachte fout opgetreden tijdens het opstarten van Steam (0x%errorCount%). Klik <a href=steam://openurl_external/https://help.steampowered.com/nl/faqs/view/7516-B23C-D572-5B0E>hier</a> voor meer informatie."
+"TransportDialog_Explanation" "Er is een onverwachte fout opgetreden tijdens het opstarten van Steam (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Kies een van de volgende opties:"
 "TransportDialog_RestartSteam" "Herstart Steam"
 "TransportDialog_RestartSteamWebHelper" "Herstart steamwebhelper"
 "TransportDialog_ContinueAnyway" "(Alleen Valve) Toch doorgaan"
+"TransportDialog_SupportLinkDesc" "Meer informatie"
 "TransportDialog_ExitSteam" "Sluit Steam af"
 
 "DownloadRegion_default"				 "Onbekend"

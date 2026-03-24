@@ -28,7 +28,7 @@
 !m_data.HasError()
 !m_fnGlobalChangeCallback || !callback
 !m_pInt
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 "10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
 "type mismatch! call is<type>() before get<type>()" && is<array>()
@@ -175,9 +175,9 @@ $\nY8O
 &yacute;
 &yen;
 &yuml;
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (anonymous namespace)
 (int)(intp)m_hParam != -1
 (main)
@@ -682,6 +682,11 @@ KRED
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
 KeyValues::ReadAsBinary - Set name
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues::ReadAsBinary - TYPE_COLOR
@@ -698,6 +703,7 @@ KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n

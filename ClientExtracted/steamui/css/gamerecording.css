@@ -6,7 +6,7 @@
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
-  box-shadow: 0 10px 32px 0px #000000ab;
+  box-shadow: 0 10px 32px 0px rgba(0, 0, 0, 0.6705882353);
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;

@@ -220,11 +220,11 @@
 !m_sFrameCur.m_pubPayload
 !m_vecLocks.HasElement( pLock )
 !nghttp2_ksl_it_begin(it)
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pKeyCallback
 !pLock->BIsLocked()
 !pParent->m_bInDeleteQueue
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pTracker->IsClaimed( pKey )
 !pWorkItem->BIsRunning()
 !pszString || pszString[nChars] == '\0'
@@ -1060,6 +1060,7 @@ $ffn
 'nU_O_M
 'prB2
 's~h9g
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 ( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
 ( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
@@ -1069,6 +1070,7 @@ $ffn
 ( m_cubRecvMsg + pHdr->m_cbPkt ) <= k_cubMaxMsgNetworkSize
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 ( m_nTotalWeights+nWeight) > m_nTotalWeights
+( unsigned )elem <= ( unsigned )m_Size
 (!(1(=(?(I(Q([(](a(g(u(
 (%p) Aborting HTTP connection and all requests on it due to lack of SSL certificate verification\n
 (%p) Aborting HTTP request because BAsyncSend() failed (AsyncSendCurrentRequest)\n
@@ -1102,7 +1104,6 @@ $ffn
 (%p) no more requests allowed on HTTP session (%s)\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 ((idx) < (context)->hd_table.len + 61)
 ((size_t)((&iframe->lbuf)->end - (&iframe->lbuf)->last)) > 0
 ((size_t)((buf)->end - (buf)->last)) >= 2 + altsvc->origin_len + altsvc->field_value_len
@@ -1209,7 +1210,6 @@ $ffn
 (anonymous namespace)
 (cannot determine missing fields for lite message)
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
-(elem == Count()) || IsValidIndex(elem)
 (fS{ggRcjh
 (h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
@@ -1230,7 +1230,6 @@ $ffn
 (uint64)bufferCompressed.TellPut() + LZMA_PROPS_SIZE + cbDataOut + 4 + 4 + 2 <= (uint64)INT_MAX
 (uint64)bufferCompressed.TellPut() + cbDataOut + 4 + 8 + 3 <= (uint64)INT_MAX
 (unknown)
-(unsigned)elem <= (unsigned)m_Size
 (unspecified)
 (wMww
 (|YGNk
@@ -1991,15 +1990,10 @@ $ffn
 00003333
 00:00:00
 01/01/00
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-04:47:05
-04:47:12
 08bX
 0?0L
 0A/8
@@ -2043,6 +2037,9 @@ $ffn
 1000
 1024
 10000
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2531,6 +2528,9 @@ $ffn
 21CScheduledFunctionMgr
 21CUtlCStringConversion
 21UserSystemInformation
+22:30:51
+22:30:59
+22:31:00
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2596,6 +2596,13 @@ $ffn
 3-WH
 30!]^JV
 3072
+3333
+4000
+4096
+5000
+6144
+8000
+8192
 30000
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819D300D06092A864886F70D010101050003818B00308187028181009957897BBA6BF554958165AE91669D08C2D35DC2803CC6929C233862D48626877CABA0DAE1DA4186142B546CBB74AD117795EC13EAE021793C2DDD26031B16E0F9DADC9E23F8288E57A2D8593EA7402158B451F1C39632C9987FA6C84DEC057D8B88526B5C629B2CD0C0C5516B15CB1E46415E8ABB9B8FC05546DF2D4AD55F6D020111
@@ -2641,7 +2648,6 @@ $ffn
 32:B\n
 32CWorkItemThreadedDeleteCacheFile
 32UserContentDescriptorPreferences
-3333
 3333UUUU
 33CHTTPDefaultRedirectEnableHandler
 33fU
@@ -2658,7 +2664,6 @@ $ffn
 3DES
 3DES(168)
 3HLhx
-3QY&
 3Wk1^
 3YH_!
 3\n.k_EMsgAMGetClanDetailsForForumCreationResponse
@@ -2671,8 +2676,6 @@ $ffn
 3rUZ
 3x&>Z
 3|rN>
-4000
-4096
 41CHTTPDefaultRedirectEnableHandlerInternal
 41CNetConnectionImmediateDisconnectWorkItem
 42CClientMetrics_ClientBootstrap_RequestInfo
@@ -2702,7 +2705,6 @@ $ffn
 4i5U6B738%9
 4tpD
 5-535;5A5Q5e5o5q5w5{5}5
-5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
 524288
@@ -2726,11 +2728,10 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
-6144
-64CK\vH
 65536
+60000000
+64CK\vH
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2778,8 +2779,6 @@ $ffn
 7~8A
 8.K%G
 8/A0
-8000
-8192
 82\n:XPH
 83L3
 83N6
@@ -3318,6 +3317,8 @@ Android 6.x
 Android 7.x
 Android 8.x
 Android 9.x
+AndroidExternalData
+AndroidSteamPackageRoot
 Announcement
 Anonymous Game Server
 Anonymous User
@@ -5554,6 +5555,7 @@ ERROR: unsafe call to putenv count:%d var:'%s'
 ERROR: unsafe call to setenv count:%d var:'%s'\n
 ERROR: unsafe call to unsetenv count:%d var:'%s'\n
 ERegKeyRoot
+ERemoteStorageFileRoot
 ERemoteStoragePlatform
 EResult
 ESessionDisposition
@@ -6158,6 +6160,7 @@ Game Server
 Game Voucher
 GameCode
 GameCodeFromKey
+GameInstall
 GameItemID
 GameManagedItems
 GameServer
@@ -6803,6 +6806,11 @@ KeyRangeID
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
 KeyValues::ReadAsBinary - Set name
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues::ReadAsBinary - TYPE_COLOR
@@ -6819,6 +6827,7 @@ KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -6920,6 +6929,9 @@ Linux 5.4
 Linux 5.x
 Linux 6.x
 Linux 7.x
+LinuxHome
+LinuxXdgConfigHome
+LinuxXdgDataHome
 Lithuanian
 Live Broadcast
 Lj&&lZ66~A??
@@ -6988,6 +7000,10 @@ MQC,ARD
 MUSIC
 M\rLAI)haL<|p\t\t
 Mac OS
+MacAppSupport
+MacCaches
+MacDocuments
+MacHome
 MacOS
 MacOS 10.10
 MacOS 10.11
@@ -7063,7 +7079,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 20 2026
+Mar 23 2026
 Marathi
 March
 Mask Algorithm:
@@ -9043,7 +9059,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Mar 20 2026 04:47:12
+Startup - updater built Mar 23 2026 22:30:59
 State
 StaticFileWriterThread()
 Steam
@@ -9079,6 +9095,7 @@ SteamBox
 SteamCache
 SteamCallbacks
 SteamChina_SChinese
+SteamCloudDocuments
 SteamDeck
 SteamDllMainEx
 SteamID
@@ -9089,6 +9106,7 @@ SteamUniverse
 SteamUpdateUI: An X Error occurred\n
 SteamUpdater
 SteamUser
+SteamUserBaseStorage
 Steamworks Access Invite
 SteamworksAccessInvites
 Steamworks_DispatchCallback
@@ -9988,6 +10006,12 @@ When we send a message expecting a reply from a job with a deadline, set the tim
 Whitelist
 Who was your childhood hero?
 WifiDisabled
+WinAppDataLocal
+WinAppDataLocalLow
+WinAppDataRoaming
+WinMyDocuments
+WinProgramData
+WinSavedGames
 Windows
 Windows 10
 Windows 11
@@ -10009,6 +10033,7 @@ Windows ME
 Windows NT
 Windows Vista
 Windows XP
+WindowsHome
 Wolof
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify\n
@@ -16036,7 +16061,7 @@ m_hConnection != 0xdddddddd
 m_hSocket == INVALID_SOCKET
 m_hashMap
 m_heap
-m_heap.IsValidIndex(index)
+m_heap.IsValidIndex( index )
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000
 m_iRefs >= 0 && m_iRefs < 0x0ffffff

@@ -74,9 +74,9 @@
 !m_SelectedItems.HasElement( itemID )
 !m_data.HasError()
 !m_pInt
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pCmd->has_hwnd_browser()
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 !sm_bShutDown
 !sm_bShuttingDown
@@ -406,6 +406,7 @@ $\nY8O
 %\n!k_ECompromiseDetectionType_Manual
 %\n!k_EContentReportReason_Harassment
 %\n!k_EContentReportReason_OtherAbuse
+%\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
@@ -539,10 +540,12 @@ $\nY8O
 '\n#k_EPersonaStateFlag_HasRichPresence
 '\n#k_EProfileCustomizationTypeMyGuides
 '\n#k_EProvideDeckFeedbackPreference_No
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
+( elem == Count() ) || IsValidIndex( elem )
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+( unsigned )elem <= ( unsigned )m_Size
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (*MARK) must have an argument
 (*VERB) not recognized or malformed
 (1 + n) * 3 <= vecsize
@@ -635,11 +638,9 @@ $\nY8O
 (anonymous namespace)
 (cannot determine missing fields for lite message)
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
-(elem == Count()) || IsValidIndex(elem)
 (home_dir != NULL) && (home_dir[0] != '\0')
 (merge
 (null)
-(unsigned)elem <= (unsigned)m_Size
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )\n$k_EPersonaStateFlag_ClientTypeMobile
@@ -1069,13 +1070,12 @@ $\nY8O
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0000000000000000000000000000000000000000
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789ABCDEF
 0123456789abcdef
-04:47:17
 0F`8
 0\n#k_EAsyncGameSessionUserStateUnknown
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
@@ -1556,6 +1556,7 @@ $\nY8O
 21CPurchaseLineItemInfo
 21CUtlCStringConversion
 21CreateDirectoryDialog
+22:31:07
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -1900,6 +1901,8 @@ American Express
 Amex (BoaCompra)
 Amharic
 Android
+AndroidExternalData
+AndroidSteamPackageRoot
 AnimatingImagePanel
 AnimationController
 Announcement
@@ -3102,6 +3105,7 @@ ERROR
 ERROR: %s: failed to set hostname\n
 ERROR: %s: failed to set timezone\n
 ERegKeyRoot
+ERemoteStorageFileRoot
 ERemoteStoragePlatform
 EResolutionAutomation
 EResult
@@ -3543,6 +3547,7 @@ GameFPSLabel
 GameFPSValue
 GameFPSValueWarning
 GameFPSValueWarningDesaturated
+GameInstall
 GameItemID
 GameManagedItems
 GameOverlay exiting due to missing PID argument\n
@@ -4111,6 +4116,11 @@ KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
 KeyValues::ReadAsBinary - Set name
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues::ReadAsBinary - TYPE_COLOR
@@ -4127,6 +4137,7 @@ KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -4202,6 +4213,9 @@ LinePay
 Linear_B
 Linkaja
 Linux
+LinuxHome
+LinuxXdgConfigHome
+LinuxXdgDataHome
 ListImage
 ListItemSelected
 ListPanel
@@ -4286,6 +4300,10 @@ MP4 Media File (*.mp4)
 MPEG Media File (*.mpeg)
 MPEG Media File (*.mpg)
 MUSIC
+MacAppSupport
+MacCaches
+MacDocuments
+MacHome
 MacOS
 Macedonian
 Maestro
@@ -4329,7 +4347,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 20 2026
+Mar 23 2026
 Marathi
 March
 MarkerKey
@@ -5540,6 +5558,7 @@ SteamBootstrapper_GetEUniverse
 SteamBox
 SteamCache
 SteamChina_SChinese
+SteamCloudDocuments
 SteamDeck
 SteamID
 SteamOSGeneric
@@ -5576,10 +5595,13 @@ SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamUniverse
+SteamUserBaseStorage
 SteamVProf::CVProfManager::CleanupUnusedProfiles()
 SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
 SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 SteamVProf::CVProfManager::StopProfilingAllThreads()
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+SteamVProf::CVProfile::ExitScope()
 SteamVProf::CVProfile::MarkFrame(char const*)
 Steam_BGetCallback
 Steam_FreeLastCallback
@@ -6121,10 +6143,17 @@ What is your mother's maiden name?
 Whitelist
 Who was your childhood hero?
 WifiDisabled
+WinAppDataLocal
+WinAppDataLocalLow
+WinAppDataRoaming
 WinAppMain
+WinMyDocuments
+WinProgramData
+WinSavedGames
 WindowMaximized
 WindowRestored
 Windows
+WindowsHome
 Wolof
 Workshop
 Workshop Items
@@ -9358,7 +9387,6 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 vulkan
-v}fu
 w+OQvr
 wXR\r
 waiting

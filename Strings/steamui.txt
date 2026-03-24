@@ -459,14 +459,14 @@
 !nghttp2_ksl_it_begin(it)
 !pApp->IsDLC() && !pApp->IsComingSoonOnly()
 !pApp->IsThirdPartyMod() && !pApp->IsShortcut()
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pCmd->has_hwnd_browser()
 !pKeyCallback
 !pLock->BIsLocked()
 !pNonJobFunc && !pWebSocketConnectionCallback
 !pPacket->GetCRCFlag()
 !pParent->m_bInDeleteQueue
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pWebSocketConnectionCallback
 !pWorkItem->BIsRunning()
 !pbufDebugText || ( pbufDebugText->TellPut() == 0 && pbufDebugText->TellGet() == 0 )
@@ -1982,6 +1982,7 @@ ${LANGUAGE}
 %\n!k_ECompromiseDetectionType_Manual
 %\n!k_EContentReportReason_Harassment
 %\n!k_EContentReportReason_OtherAbuse
+%\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EFrameRateReportEnabled_Enabled
@@ -2827,13 +2828,16 @@ ${LANGUAGE}
 'system\InGameOverlayScreenshotPlaySound
 's~h9g
 '}KdR
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
 ( eNewState > m_eInstallState )|| ( eNewState == k_EInstallMgrStateReadFromMedia && m_eInstallState == k_EInstallMgrStateShowChangeMedia ) || ( eNewState == k_EInstallMgrStateShowEULAs && m_eInstallState == k_EInstallMgrStateShowEULAs ) || ( eNewState == k_EInstallMgrStateNone )
+( elem == Count() ) || IsValidIndex( elem )
 ( id & k_nMessageTypeID_Mask ) == k_nMessageTypeID_EMsg
 ( m_AssocHandles[nAssocIdx].nFlags & k_nAssocClosed ) == 0
 ( m_cubRecvMsg + pHdr->m_cbPkt ) <= k_cubMaxMsgNetworkSize
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 ( m_pingEntries.Count() % 2 ) == 0
+( unsigned )elem <= ( unsigned )m_Size
 (!((uintptr_t)(src_height) & ((2)-1)))
 (!((uintptr_t)(src_width) & ((2)-1)))
 (!(1(=(?(I(Q([(](a(g(u(
@@ -2874,7 +2878,6 @@ ${LANGUAGE}
 (%s) content-encoding: %s not yet implemented (%s)\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (( int )pData->m_Header.m_unWidth == Output.m_Header.m_unWidth && ( int )pData->m_Header.m_unHeight == Output.m_Header.m_unHeight)
 ((idx) < (context)->hd_table.len + 61)
 ((size_t)((&iframe->lbuf)->end - (&iframe->lbuf)->last)) > 0
@@ -3865,7 +3868,6 @@ ${LANGUAGE}
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
-(elem == Count()) || IsValidIndex(elem)
 (fS{ggRcjh
 (fixme)
 (h`H1pqA
@@ -3894,7 +3896,6 @@ ${LANGUAGE}
 (uint64)bufferCompressed.TellPut() + cbDataOut + 4 + 8 + 3 <= (uint64)INT_MAX
 (uint8*)pHeader == pFrame->GetFrameData()
 (unknown)
-(unsigned)elem <= (unsigned)m_Size
 (unspecified)
 (void *)m_pObject != NULL
 (wMww
@@ -4325,6 +4326,7 @@ ${LANGUAGE}
 *23CInternalLambdaWorkItemIZ31YieldingResolveHostNameWithPortPKcbEUlvE0_vE
 *23CInternalLambdaWorkItemIZ31YldThreadedRunFunctorAndReleasePKcP8CFunctorP15CWorkThreadPoolEUlvE_vE
 *23CInternalLambdaWorkItemIZN12CUDisksDrive8YldAdoptEPKcS2_bEUlvE_iE
+*23CInternalLambdaWorkItemIZN15CLEDDeviceSysfs20YldAnimateBrightnessEfyEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN15CLEDDeviceSysfs22YldReadIndexedPropertyEi10StringViewS1_EUlvE_10CUtlStringE
 *23CInternalLambdaWorkItemIZN15CLEDDeviceSysfs23YldWriteIndexedPropertyEi10StringViewS1_EUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN18CLibraryAssetCache26BYldMoveFileAndUpdateCacheEj17ELibraryAssetTypePKcS3_EUlvE_bE
@@ -4405,6 +4407,7 @@ ${LANGUAGE}
 *ZN14CLEDController10InitializeEvEUlRK30CLEDManager_SetEnabled_RequestR31CLEDManager_SetEnabled_ResponseE0_
 *ZN14CLEDController10InitializeEvEUlRK33CLEDManager_SetBrightness_RequestR34CLEDManager_SetBrightness_ResponseE4_
 *ZN14CLEDController16OnPostLogonStateEP16PostLogonState_tEUlvE_
+*ZN14CLEDController19YldEnumerateDevicesEvEUlvE_
 *ZN14CLEDController23RequestEnumerateDevicesEvEUlvE_
 *ZN15CSteamOSManager27OnControllerActionTriggeredEP27ControllerActionTriggered_tEUlvE_
 *ZN15CSteamOSManager32OnScreenReaderInterfaceConnectedEvEUlvE_
@@ -4460,7 +4463,9 @@ ${LANGUAGE}
 *ZN22CSteamOSControllerStub10InitializeEvEUlRK28CSteamOSSLS_GetState_RequestR29CSteamOSSLS_GetState_ResponseE0_
 *ZN22CSteamOSControllerStub10InitializeEvEUlRK32CSteamOSManager_GetState_RequestR33CSteamOSManager_GetState_ResponseE_
 *ZN22CSystemAudioController10InitializeEvE38CWebUIAudioPlaySpeakerTestOnChannelJob
-*ZN22CSystemAudioController10InitializeEvEUlRK39CAudio_PlaySpeakerTestOnChannel_RequestR40CAudio_PlaySpeakerTestOnChannel_ResponseE0_
+*ZN22CSystemAudioController10InitializeEvEUlRK39CAudio_PlaySpeakerTestOnChannel_RequestR40CAudio_PlaySpeakerTestOnChannel_ResponseE2_
+*ZN22CSystemAudioController10InitializeEvEUlbE0_
+*ZN22CSystemAudioController10InitializeEvEUlbE1_
 *ZN22CSystemAudioController10InitializeEvEUlbE_
 *ZN22CSystemAudioController27YldPlaySpeakerTestOnChannelERK39CAudio_PlaySpeakerTestOnChannel_RequestRK40CAudio_PlaySpeakerTestOnChannel_ResponseEUlbE_
 *ZN22CSystemAudioController9InitAudioEvEUlbbE_
@@ -7262,11 +7267,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -13581,6 +13586,7 @@ AMF_VIDEO_ENCODER_AV1_PROFILE
 AMF_VIDEO_ENCODER_AV1_QUALITY_PRESET
 AMF_VIDEO_ENCODER_AV1_QUERY_TIMEOUT
 AMF_VIDEO_ENCODER_AV1_RATE_CONTROL_METHOD
+AMF_VIDEO_ENCODER_AV1_RATE_CONTROL_SKIP_FRAME
 AMF_VIDEO_ENCODER_AV1_TARGET_BITRATE
 AMF_VIDEO_ENCODER_AV1_USAGE
 AMF_VIDEO_ENCODER_B_PIC_PATTERN
@@ -13608,6 +13614,7 @@ AMF_VIDEO_ENCODER_HEVC_PROFILE
 AMF_VIDEO_ENCODER_HEVC_QUALITY_PRESET
 AMF_VIDEO_ENCODER_HEVC_QUERY_TIMEOUT
 AMF_VIDEO_ENCODER_HEVC_RATE_CONTROL_METHOD
+AMF_VIDEO_ENCODER_HEVC_RATE_CONTROL_SKIP_FRAME_ENABLE
 AMF_VIDEO_ENCODER_HEVC_SLICES_PER_FRAME
 AMF_VIDEO_ENCODER_HEVC_TARGET_BITRATE
 AMF_VIDEO_ENCODER_HEVC_USAGE
@@ -13627,6 +13634,7 @@ AMF_VIDEO_ENCODER_PROFILE
 AMF_VIDEO_ENCODER_QUALITY_PRESET
 AMF_VIDEO_ENCODER_QUERY_TIMEOUT
 AMF_VIDEO_ENCODER_RATE_CONTROL_METHOD
+AMF_VIDEO_ENCODER_RATE_CONTROL_SKIP_FRAME_ENABLE
 AMF_VIDEO_ENCODER_SLICES_PER_FRAME
 AMF_VIDEO_ENCODER_TARGET_BITRATE
 AMF_VIDEO_ENCODER_USAGE
@@ -14101,6 +14109,8 @@ Android
 Android420ToABGR
 Android420ToARGB
 Android420ToARGBMatrix
+AndroidExternalData
+AndroidSteamPackageRoot
 AnimatingImagePanel
 AnimationController
 Announcement
@@ -14150,7 +14160,8 @@ Applied SDR network config.  %s\n
 ApplyBrightnessLevel
 ApplyButtonEnable
 ApplyChanges
-ApplyLEDDevicesUserSettings
+ApplyLEDDeviceDefaultSettings
+ApplyLEDDeviceUserSettings
 ApplyMandatoryUpdate
 ApplySchemeSettings did not chain back to base class: %s
 Applying the HDR detection workaround for the galileo internal display
@@ -14351,6 +14362,8 @@ Audio recorder
 Audio source [%s]: Signal levels:
 Audio source [%s]: init=%lld, adjustment=%lld, through=%lld, last_start=%lld, mixed=%lld, drop_before=%lld, drop_after=%lld
 Audio.PlaySpeakerTestOnChannel#1
+Audio/Spatialize
+Audio/SpatializeSurround
 AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
@@ -16208,6 +16221,7 @@ CLEDController::OnPostLogonState
 CLEDController[%x]: set enabled: %d
 CLEDDeviceSysfs::ThreadedReadProperty
 CLEDDeviceSysfs::ThreadedWriteProperty
+CLEDDeviceSysfs::YldAnimateBrightness
 CLEDManager_GetState_Request"D\n
 CLEDManager_GetState_Response
 CLEDManager_SetColor_Request
@@ -17586,7 +17600,6 @@ CValveControllerManager::OnGameConfigFolderChanged
 CValveControllerManager::OnGameLauncherModeEnabled
 CValveControllerManager::OnPostLogonState
 CValveControllerManager::OnReceivedControllerConfigSets
-CValveControllerManager::OnReceivedControllerPersonalization
 CValveControllerManager::OnReceivedControllerPersonalizationCfg
 CValveControllerManager::OnRemoteClientInputSettingsChange
 CValveControllerManager::OnRemotePlayPersonalization
@@ -19427,6 +19440,7 @@ ERemoteClientBroadcastMsg
 ERemoteClientPairWifiAPResult
 ERemoteClientService
 ERemoteDeviceStreamingResult
+ERemoteStorageFileRoot
 ERemoteStoragePlatform
 EResolutionAutomation
 EResult
@@ -21456,6 +21470,7 @@ GameControllerInput
 GameControllerPID
 GameControllerVID
 GameInfo
+GameInstall
 GameInviteNotification
 GameItemID
 GameList
@@ -23431,6 +23446,11 @@ KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
 KeyValues::ReadAsBinary - Set name
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues::ReadAsBinary - TYPE_COLOR
@@ -23447,6 +23467,7 @@ KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -23650,6 +23671,9 @@ Links
 Linux
 LinuxHelpers
 LinuxHelpers::RunFrame();
+LinuxHome
+LinuxXdgConfigHome
+LinuxXdgDataHome
 ListDownloadModeHandles
 ListImage
 ListItemSelected
@@ -23839,6 +23863,10 @@ M\n\nNotifyText
 M\n\nRenameRole
 M\n\vReviewLabel
 M\rLAI)haL<|p\t\t
+MacAppSupport
+MacCaches
+MacDocuments
+MacHome
 MacOS
 Macedonian
 MachineStorage.DeleteKey
@@ -23899,7 +23927,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 20 2026 04:47:21
+Mar 23 2026 22:31:09
 Marathi
 March
 MarkMessageClicked
@@ -25358,7 +25386,6 @@ N23CValveControllerManager46CCallbackInternal_OnControllerShowBindingPanelE
 N23CValveControllerManager48CCallbackInternal_OnReceivedControllerConfigSetsE
 N23CValveControllerManager49CCallbackInternal_OnStreamClientControllerMessageE
 N23CValveControllerManager51CCallbackInternal_OnRemoteClientInputSettingsChangeE
-N23CValveControllerManager53CCallbackInternal_OnReceivedControllerPersonalizationE
 N23CValveControllerManager56CCallbackInternal_OnReceivedControllerPersonalizationCfgE
 N24CDynamicBitrateEstimator30CDynamicBitrateEstimatorThreadE
 N24CFamilySharingController34CCallbackInternal_OnPostLogonStateE
@@ -28098,7 +28125,7 @@ ResolutionOverride
 ResolutionOverrideInternalDisplay
 ResolutionX
 ResolutionY
-Resolve login request: %d - %s
+Resolve login request: %s - %s
 Resolving %s
 Resource\warning.wav
 RespondToPairingPrompt
@@ -29580,6 +29607,7 @@ SteamChina.GetCustomLauncherAppID
 SteamChina_SChinese
 SteamClient023
 SteamClientService
+SteamCloudDocuments
 SteamConfigurator3rdPartyNative
 SteamControllerConfigDetails
 SteamControllerInput
@@ -29931,6 +29959,7 @@ SteamUI_ValveSurvey_Summary_XServerVendorName
 SteamUI_ValveSurvey_Summary_XServerVendorRelease
 SteamUI_ValveSurvey_Summary_XWindowManagerName
 SteamUser
+SteamUserBaseStorage
 SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
 SteamVProf::CVProfManager::CleanupUnusedProfiles()
 SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
@@ -30968,11 +30997,11 @@ UI Request: change user
 UI Request: clear auto login user
 UI Request: connect
 UI Request: flip to login
-UI Request: forget password
+UI Request: forget password %s
 UI Request: go offline
 UI Request: go online
 UI Request: reconnect
-UI Request: remove user
+UI Request: remove user %s
 UI Request: sign out and restart
 UI Request: starting login refresh
 UI lib
@@ -31934,6 +31963,12 @@ WifiBackend
 WifiDebugModeState
 WifiDisabled
 WifiPowerManagementState
+WinAppDataLocal
+WinAppDataLocalLow
+WinAppDataRoaming
+WinMyDocuments
+WinProgramData
+WinSavedGames
 Window title set to %s\n
 Window.SetGamepadUIAutoDisplayScale
 Window.SetGamepadUIManualDisplayScaleFactor
@@ -31942,6 +31977,7 @@ WindowRestored
 Windowed
 Windows
 WindowsEndSession
+WindowsHome
 Wired
 Wireless
 Wolof
@@ -39816,7 +39852,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenF\l
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -44196,6 +44232,7 @@ json_name = "
 jsondata
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
+jt{B#
 jumplist_flags
 jupiter
 jupiter-initial-firmware-update check returned: %d
@@ -47104,7 +47141,7 @@ m_hashMap
 m_hashRemotePlayTogetherGroups
 m_hashRemotePlayTogetherGroups.Find( pCallback->m_unGroupID ) == m_hashRemotePlayTogetherGroups.InvalidIndex()
 m_heap
-m_heap.IsValidIndex(index)
+m_heap.IsValidIndex( index )
 m_iBrowser == -1 && idx != -1
 m_iCurrentAppIndex == -1
 m_iHTMLTextureID
@@ -50581,6 +50618,7 @@ publisher_group_id
 pulContext
 punct
 purchase
+purchase_description_bbcode
 purchase_option_name
 purchase_options
 purchase_platform
@@ -51012,6 +51050,7 @@ resource/overlay_%language%.txt
 resource/overlay_english.txt
 resource/platform_%language%.txt
 resource/speaker_test.wav
+resource/speaker_test_lfe.wav
 resource/steam_splash_fallback.tga
 resource/steamscheme.res
 resource/styles/steam.styles
@@ -54889,6 +54928,8 @@ vpaes_set_decrypt_key
 vpaes_set_encrypt_key
 vparams
 vr/game_theater
+vr_audio_spatialize
+vr_audio_spatialize_surround
 vr_connection_params
 vr_connection_ready
 vr_devices

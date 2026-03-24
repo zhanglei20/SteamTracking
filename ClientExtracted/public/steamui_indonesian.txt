@@ -4792,7 +4792,6 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_WindowsCompat_Description" "Windows sedang menjalankan Steam dalam Mode Kompatibilitas Windows, di mana permasalahan pada beberapa fitur Steam dan game yang berjalan dapat terjadi. Mohon ikuti instruksi di bawah ini untuk menonaktifkan mode kompatibilitas."
 "Steam_WindowsCompat_DoNotShowAgain" "Jangan perlihatkan lagi"
 "Steam_WindowsCompat_SupportLinkDesc" "Bagaimana cara menonaktifkan Mode Kompatibilitas?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Tutup Steam"
 "Steam_WindowsCompat_RestartSteam" "Restart Steam"
 "Steam_WindowsCompat_Continue" "Lanjut"
@@ -4873,11 +4872,12 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "RescueDialog_ExitSteam" "Keluar dari Steam"
 
 "TransportDialog_Title" "Eror Pengiriman Tidak Terduga"
-"TransportDialog_Explanation" "Steam mengalami eror tidak terduga saat memulai (0x%errorCount%). Klik <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/7516-B23C-D572-5B0E>di sini</a> untuk info lebih lanjut."
+"TransportDialog_Explanation" "Steam mengalami kesalahan tak terduga saat memulai (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Pilih salah satu opsi berikut:"
 "TransportDialog_RestartSteam" "Restart Steam"
 "TransportDialog_RestartSteamWebHelper" "Restart steamwebhelper"
 "TransportDialog_ContinueAnyway" "Khusus Valve: Tetap Lanjutkan"
+"TransportDialog_SupportLinkDesc" "Info lebih lanjut"
 "TransportDialog_ExitSteam" "Keluar dari Steam"
 
 "DownloadRegion_default"				 "Tidak diketahui"

@@ -4778,7 +4778,6 @@
 "Steam_WindowsCompat_Description" "Τα Windows εκτελούν το Steam σε λειτουργία συμβατότητας που μπορεί να προκαλέσει προβλήματα με κάποια χαρακτηριστικά του Steam και κάποια παιχνίδια. Ακολουθήστε τις οδηγίες παρακάτω για να αφαιρέσετε τη λειτουργία συμβατότητας."
 "Steam_WindowsCompat_DoNotShowAgain" "Να μην εμφανιστεί ξανά"
 "Steam_WindowsCompat_SupportLinkDesc" "Πώς μπορώ να απενεργοποιήσω τη λειτουργία συμβατότητας;"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Κλείσιμο Steam"
 "Steam_WindowsCompat_RestartSteam" "Επανεκκίνηση Steam"
 "Steam_WindowsCompat_Continue" "Συνέχεια"
@@ -4859,11 +4858,12 @@
 "RescueDialog_ExitSteam" "Έξοδος από το Steam"
 
 "TransportDialog_Title" "Απρόσμενο σφάλμα μεταφοράς"
-"TransportDialog_Explanation" "Το Steam αντιμετώπισε ένα απρόσμενο σφάλμα κατά την εκκίνηση (0x%errorCount%). Κάντε κλικ <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>εδώ</a> για περισσότερες πληροφορίες."
+"TransportDialog_Explanation" "Το Steam αντιμετώπισε ένα απρόσμενο σφάλμα κατά την εκκίνηση (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Επιλέξτε μία από τις ακόλουθες επιλογές:"
 "TransportDialog_RestartSteam" "Επανεκκίνηση Steam"
 "TransportDialog_RestartSteamWebHelper" "Επανεκκίνηση steamwebhelper"
 "TransportDialog_ContinueAnyway" "Μόνο Valve: Συνέχεια οπωσδήποτε"
+"TransportDialog_SupportLinkDesc" "Περισσότερες πληροφορίες"
 "TransportDialog_ExitSteam" "Έξοδος από το Steam"
 
 "DownloadRegion_default"				 "Άγνωστο"

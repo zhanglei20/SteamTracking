@@ -4785,7 +4785,6 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "Steam_WindowsCompat_Description" "Steam est actuellement en cours d'exécution via le mode Compatibilité de Windows. Ce paramètre peut provoquer des problèmes avec certaines fonctionnalités de Steam et dans l'exécution des jeux. Veuillez suivre les instructions ci-dessous pour enlever le mode de comptabilité."
 "Steam_WindowsCompat_DoNotShowAgain" "Ne plus afficher"
 "Steam_WindowsCompat_SupportLinkDesc" "Comment puis-je désactiver le mode Compatibilité ?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Fermer Steam"
 "Steam_WindowsCompat_RestartSteam" "Redémarrer Steam"
 "Steam_WindowsCompat_Continue" "Continuer"
@@ -4866,11 +4865,12 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "RescueDialog_ExitSteam" "Quitter Steam"
 
 "TransportDialog_Title" "Erreur de transport inattendue"
-"TransportDialog_Explanation" "Steam a rencontré une erreur inattendue au démarrage (0x%errorCount%). Cliquez <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>ici</a> pour plus d'informations."
+"TransportDialog_Explanation" "Steam a rencontré une erreur inattendue au démarrage (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Choisissez l'une des options suivantes :"
 "TransportDialog_RestartSteam" "Redémarrer Steam"
 "TransportDialog_RestartSteamWebHelper" "Redémarrer steamwebhelper"
 "TransportDialog_ContinueAnyway" "(Valve uniquement) Continuer quand même"
+"TransportDialog_SupportLinkDesc" "En savoir plus"
 "TransportDialog_ExitSteam" "Quitter Steam"
 
 "DownloadRegion_default"				 "Inconnu"

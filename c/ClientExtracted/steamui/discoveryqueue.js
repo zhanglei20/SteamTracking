@@ -22,6 +22,17 @@
         AutoplayCheckboxCtn: "_2HvO_RKtxiyyhZsELjYyq5",
         AOWarning: "_19l-UjQZVVGNK5SKnOrmJB",
         Text: "VoAJhMdtQTylTg3G03nJo",
+        BackgroundAnimation: "_1BygdMVbHp4UClANjStGo9",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3pIKV-kCrU2q99tCLoOD-6",
+        "ItemFocusAnim-darkerGrey": "OgzJ6LmEUtmpf0GQsD7Vo",
+        "ItemFocusAnim-darkGrey": "_3GG7KC5ZHbAn80ZwU94AGH",
+        "ItemFocusAnim-grey": "_2vCJ0TzuZNRRjxTZxrTZgc",
+        "ItemFocusAnim-translucent-white-10": "_3LSZycr3qnPrQPVjt2oj-9",
+        "ItemFocusAnim-translucent-white-20": "_11GiQCMBciJ1pGPTXHvO8M",
+        "ItemFocusAnimBorder-darkGrey": "_91lIqOTiAbr65tckrg_vR",
+        "ItemFocusAnim-green": "_-5UaqlbdsHtfbyb7FWN_w",
+        focusAnimation: "_1IiLzess48eakf_rL9Akg5",
+        hoverAnimation: "_24-OSWrZDqPoBKHcbF0kAl",
         "capsule-trans-out": "hckHU2LXCJNx0X37OqCsx",
       };
     },
@@ -110,6 +121,17 @@
         SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
         RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
         SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
+        BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
+        "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
+        "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
+        "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
+        "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
+        "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
+        "ItemFocusAnim-translucent-white-20": "_1fugsBQAve_CPDYfcK5fou",
+        "ItemFocusAnimBorder-darkGrey": "_1X5xeHixS4XJusrPGRQ4nL",
+        "ItemFocusAnim-green": "guH2fAOEkfwuIvOhn0oHl",
+        focusAnimation: "_2XCqyPQ8Leg6L1dwSjpULK",
+        hoverAnimation: "zU1NJEk7QqOdsECL2PI2d",
       };
     },
     chunkid: (module) => {
@@ -120,6 +142,17 @@
         ProgressDotActive: "_3z2pS3DFn3MEl5ZPw6lsa9",
         ProgressDotSelected: "_1qJVCZsv51RtfBGao-PV8V",
         ProgressDotClickable: "jKfeFH4S6YhaeZ7RCZ8BN",
+        BackgroundAnimation: "_3B8qOyTqC7rzOP_X5kvWK-",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2wYIdqvoWTU_8MPGJtV4j",
+        "ItemFocusAnim-darkerGrey": "_5noNLXRGVi51cgI8nYBAm",
+        "ItemFocusAnim-darkGrey": "_6iLF1QqShrpEW0UiF0x2o",
+        "ItemFocusAnim-grey": "PuZXrV7q9vI7p-jK9x2pN",
+        "ItemFocusAnim-translucent-white-10": "_2RwwslrDVdOXePDy6QCEkZ",
+        "ItemFocusAnim-translucent-white-20": "_1VijReQZ-moslCOSkJYKIt",
+        "ItemFocusAnimBorder-darkGrey": "_1HaTvS9ANJY56lTVTb35I3",
+        "ItemFocusAnim-green": "_3mF4OtweD7vY2bcN6piLTq",
+        focusAnimation: "rpa_zF1YXxbH3-m1-AI6Q",
+        hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
       };
     },
     chunkid: (module) => {
@@ -137,6 +170,17 @@
         UndoIgnoreButton: "_177VX9-0Tj1sNozNrm8bN1",
         UndoButton: "_3HOpXzFuRFY1WwrPL-fxOi",
         Disabled: "_3xyNp4rGNpDJtxvww4ZCOR",
+        BackgroundAnimation: "_3qHy0ZfVKo5p8TWje-jtAG",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2ysW7cifFEEfft88AcXQ77",
+        "ItemFocusAnim-darkerGrey": "_1sDFTD6HQbSYSYfAeHxdfc",
+        "ItemFocusAnim-darkGrey": "_3o-jWjx0jwVTFKTTeS0T03",
+        "ItemFocusAnim-grey": "_1hRqeCN67Ga45VdF6Q6cgA",
+        "ItemFocusAnim-translucent-white-10": "_2f5q2Audp6Dn4k8WoktvHn",
+        "ItemFocusAnim-translucent-white-20": "_2L4JhmA2KdmiV1hmrVpwNz",
+        "ItemFocusAnimBorder-darkGrey": "_2ro1AA5m-5Tf_VM-0cgpCg",
+        "ItemFocusAnim-green": "_3afkw6jZdesN7ExtcThnbC",
+        focusAnimation: "_1qzDlpOQ22S_QgdcDvd8p-",
+        hoverAnimation: "_2Gx-a0BFgKfjo6ksSg7G1d",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -747,12 +791,21 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        let { children: _ } = _;
+        const [__webpack_require__, _] = (0, _.useState)(0.8),
+          [_, _] = (0, _.useState)(!0);
+        return (0, _.jsx)(_._, {
+          playerVolume: __webpack_require__,
+          setPlayerVolume: _,
+          audioMuted: _,
+          setAudioMuted: _,
+          children: _,
+        });
+      }
       const _ = new _._("TrailerAppVideo"),
-        _ = "bGameHighlightAutoplayDisabled",
-        _ = "discovery-queue-volume",
-        _ = "discovery-queue-mute";
+        _ = "bGameHighlightAutoplayDisabled";
       function _(_) {
         const {
             storeItem: _,
@@ -1104,18 +1157,6 @@
               onPlayPauseChange: _,
             }),
           }),
-        });
-      }
-      function _(_) {
-        let { children: _ } = _;
-        const [__webpack_require__, _] = (0, _._)(_, 0.8),
-          [_, _] = (0, _._)(_, !0);
-        return (0, _.jsx)(_._, {
-          playerVolume: __webpack_require__,
-          setPlayerVolume: _,
-          audioMuted: _,
-          setAudioMuted: _,
-          children: _,
         });
       }
       function _(_, _) {

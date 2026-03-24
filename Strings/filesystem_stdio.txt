@@ -44,11 +44,11 @@ $ORIGIN
 %s/steamXXXXXX
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
+( unsigned )elem <= ( unsigned )m_Size
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (anonymous namespace)
-(unsigned)elem <= (unsigned)m_Size
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 ---------------\n
@@ -149,6 +149,7 @@ $ORIGIN
 17CStreamReaderBase
 18CUtlCharConversion
 19CUtlNoEscConversion
+1LT3B
 21CUtlCStringConversion
 24CDirWatcherPollingThread
 27CFileSystemStdIODLLValidate

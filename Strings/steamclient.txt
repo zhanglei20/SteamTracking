@@ -678,7 +678,7 @@
 !msgStatsIn.has_quality_e2e()
 !nghttp2_ksl_it_begin(it)
 !p2p_transport->HasChannel(name)
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pChunk->m_bEncrypted || pChunk->m_unCompressedSize <= pInfo->unOriginalSize
 !pClient->m_listRelaySessions.IsEmpty()
 !pConn->m_bConnectionInitiatedRemotely
@@ -718,7 +718,7 @@
 !pTask->m_pNextTaskForTarget
 !pTask->m_pNextTaskInQueue
 !pTask->m_pPrevTaskForTarget
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pUser->GetSiteLicenseClient().GetRemoteClientManager().BRunningAsSiteLicenseProvider()
 !pWebSocketConnectionCallback
 !pWorkItem->BIsRunning()
@@ -2202,6 +2202,7 @@ $steammessages_parental_objects.proto"
 %\n!k_ECompromiseDetectionType_Manual
 %\n!k_EContentReportReason_Harassment
 %\n!k_EContentReportReason_OtherAbuse
+%\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
@@ -3267,6 +3268,7 @@ $steammessages_parental_objects.proto"
 'prB2
 's~h9g
 ( !BInterfaceRequiresUser( ubClientInterface ) && hSteamUser == 0 ) || ( BInterfaceRequiresUser( ubClientInterface ) )
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 ( (int)eType & ((int)eType-1) ) == 0
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
 ( cByteDelta > 0 ) || ( quotaUsage.m_ulUsedBytes > (uint64)(-cByteDelta) )
@@ -3289,6 +3291,7 @@ $steammessages_parental_objects.proto"
 ( nLatestRecvSeqNum & nMask ) == nLowerBits
 ( pCfg->m_nRevision > 0 ) == !pCfg->m_sJSON.IsEmpty()
 ( pUploadEntry->unCodeOffset + pUploadEntry->unCodeSize ) <= nSizeAllocated
+( unsigned )elem <= ( unsigned )m_Size
 ( usecNow & ~k_nTimestampMask ) == 0
 ( usecRef & ~k_nTimestampMask ) == 0
 (!(1(=(?(I(Q([(](a(g(u(
@@ -3329,7 +3332,6 @@ $steammessages_parental_objects.proto"
 (%s) content-encoding: %s not yet implemented (%s)\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (((size_t)&m0) % 16) == 0
 (((size_t)&m1) % 16) == 0
 (((size_t)&out) % 16) == 0
@@ -3421,6 +3423,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1VVP
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -4424,7 +4427,6 @@ $steammessages_parental_objects.proto"
 (char *)psRead == pUncompressed + ((nSamples - nSamplesRemaining)*sizeof(short))
 (compatTool: %s)
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
-(elem == Count()) || IsValidIndex(elem)
 (fS{ggRcjh
 (h`H1pqA
 (home_dir != NULL) && (home_dir[0] != '\0')
@@ -4468,7 +4470,6 @@ $steammessages_parental_objects.proto"
 (uint8 *)pEncryptedDataAndTag + cbEncryptedWithoutTag == pOut
 (unknown)
 (unsigned int) s->pollidx < count
-(unsigned)elem <= (unsigned)m_Size
 (unspecified)
 (void *)m_pObject != NULL
 (wMww
@@ -7888,6 +7889,8 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
+0000000000000000000000000000000000000000
+0000000000000000
 0.0333
 0.050
 0.13.15.106
@@ -7934,8 +7937,6 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
-0000000000000000000000000000000000000000
-0000000000000000
 00000001
 00003333
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -8433,8 +8434,8 @@ $steammessages_parental_objects.proto"
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E6Node_tEE
-10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerESt8equal_toIS1_ENS1_4HashES1_E12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerESt8equal_toIS1_ENS1_4HashES1_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE12HashBucket_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE6Node_tEE
 10CUtlMemoryIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tEE
@@ -9078,7 +9079,7 @@ $steammessages_parental_objects.proto"
 10CUtlVectorIN11CServerList28RefreshServerBySDRLocation_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_S1_E12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS1_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_S1_E12HashBucket_tE10CUtlMemoryISC_EE
-10CUtlVectorIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerESt8equal_toIS1_ENS1_4HashES1_E12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIN11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_7CUtlPtrI5CLockE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES7_S9_10StringViewE12HashBucket_tE10CUtlMemoryISE_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS1_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS1_E11HashFunctorIS1_EE15ElementBucket_tES6_S8_10StringViewE12HashBucket_tE10CUtlMemoryISD_EE
 10CUtlVectorIN11CUtlHashMapI10CUtlStringS1_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE12HashBucket_tE10CUtlMemoryIS6_EE
@@ -9361,7 +9362,7 @@ $steammessages_parental_objects.proto"
 11CSwitchMode
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_9CSmartPtrI21COpenSSLCachedSessionE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_S0_E
 11CUtlHashMapI10CIPAndPortN14CUtlHashMapLRUIS0_N11CHTTPClient17ProxyCacheEntry_tE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_S0_E
-11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerESt8equal_toIS0_ENS0_4HashES0_E
+11CUtlHashMapI10CIPAndPortPN25SteamNetworkingSocketsLib11RelayServerE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_7CUtlPtrI5CLockE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES6_S8_10StringViewE
 11CUtlHashMapI10CUtlStringN14CUtlHashMapLRUIS0_N20COfflineMessageCache13CachedMessageE10CDefEqualsIS0_E11HashFunctorIS0_EE15ElementBucket_tES5_S7_10StringViewE
 11CUtlHashMapI10CUtlStringS0_27CDefCaselessUtlStringEquals28HashFunctorUtlStringCaseless10StringViewE
@@ -10827,7 +10828,7 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI20CRemoteClientManager16AppInfoChanged_tE
 17CInternalCallbackI20CRemoteClientManager17LicensesUpdated_tE
 17CInternalCallbackI20CRemoteClientManager21VRLinkInviteChanged_tE
-17CInternalCallbackI20CRemoteClientManager25NetworkDevicesRefreshed_tE
+17CInternalCallbackI20CRemoteClientManager26NetworkDeviceStateChange_tE
 17CInternalCallbackI20CRemoteClientManager27FocusedSteamWindowChanged_tE
 17CInternalCallbackI20CRemoteClientManager27SystemResumingFromSuspend_tE
 17CInternalCallbackI20CRemoteClientManager28LoadControllerConfigResult_tE
@@ -11453,11 +11454,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+20000
+2000000
 200M
 2019
 2048
-20000
-2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16278,7 +16279,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9HD7\
 9IClientVR
 9IGv
 9ISteamUGC
@@ -18494,7 +18494,7 @@ Bugs
 Buhid
 Build for workshop item has no content
 Build need at least one file to be merged
-BuildAndSendMessage: tried to send message size %d, too large, ignoring\n
+BuildAndSendMessage: tried to send message size %zd, too large, ignoring\n
 BuildBackup
 BuildDepotDependency
 BuildFileListing
@@ -27383,7 +27383,7 @@ ISteamTimeline::SetGamePhaseAttribute received a group that does not appear to b
 ISteamTimeline::SetGamePhaseAttribute received an attribute value that does not appear to be valid UTF8
 ISteamTimeline::SetGamePhaseAttribute requires the caller to provide a group
 ISteamTimeline::SetGamePhaseAttribute requires the caller to provide an attribute value
-ISteamTimeline::SetGamePhaseID received a phase ID %d characters in length. The maximum length is %d characters.
+ISteamTimeline::SetGamePhaseID received a phase ID %u characters in length. The maximum length is %u characters.
 ISteamTimeline::SetGamePhaseID received a phase ID that does not appear to be valid UTF8
 ISteamTimeline::SetGamePhaseID requires the caller to provide phase ID
 ISteamTimeline::SetTimelineTooltip received a description that does not appear to be valid UTF8
@@ -28453,6 +28453,11 @@ KeyRangeID
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
 KeyValues::ReadAsBinary - Set name
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues::ReadAsBinary - TYPE_COLOR
@@ -28469,6 +28474,7 @@ KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -32641,7 +32647,7 @@ PreparingForShutdown
 PreparingForSleep
 PrepopulatePrecompiledCache
 PrepopulatePrecompiledCache - %s or %s is missing.
-PrepopulatePrecompiledCache - unable to create.
+PrepopulatePrecompiledCache - unable to create %s
 Preset "%s" id "%d" also used for "%s".
 Preset "%s" id "%d" is invalid.
 Preset_1%06d
@@ -38339,7 +38345,7 @@ Write to XMS failed
 WriteLegacyCDKey
 WritePrecompiledCache
 WritePrecompiledCache - %s or %s is missing.
-WritePrecompiledCache - unable to create.
+WritePrecompiledCache - unable to create %s
 WriteScreenshot
 WriteToDiskAsync
 WriteToEnvFD: write failed, aborted: %s
@@ -52334,7 +52340,7 @@ m_hashSessionData
 m_hashVRHeadsetStreamingOverride
 m_hashValues
 m_heap
-m_heap.IsValidIndex(index)
+m_heap.IsValidIndex( index )
 m_host
 m_iCallback >= 0
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
@@ -57057,6 +57063,7 @@ pulContext
 punct
 purchase
 purchase_country_code
+purchase_description_bbcode
 purchase_option_name
 purchase_options
 purchase_platform
@@ -59069,7 +59076,7 @@ stderr
 stdin
 stdout
 steam
-steam Mar 20 2026 04:47:16
+steam Mar 23 2026 22:31:07
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -59845,7 +59852,6 @@ time_to_last_byte_ms
 time_to_send_req_ms
 time_transferred
 time_update_start
-timebuildupdated
 timed_trial_add_playtime
 timed_trial_add_playtime <appId> <seconds>: add trial app playtime (developer only)
 timed_trial_reset_playtime

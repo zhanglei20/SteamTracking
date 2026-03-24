@@ -103,8 +103,8 @@
 !m_InDispatcher
 !m_data.HasError()
 !m_pInt
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 !style->IsDirty()
 !texture->m_id2X
@@ -383,9 +383,10 @@ $\nY8O
 &context == &m_DefaultInputContext
 '"KEY_APOSTROPHE
 '7GWgw
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
+( unsigned )elem <= ( unsigned )m_Size
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (8HXhx
 (\v2 .google.protobuf.DescriptorProto
 (\v2!.google.protobuf.EnumValueOptions"
@@ -417,7 +418,6 @@ $\nY8O
 (no class)
 (no name)
 (null panel)
-(unsigned)elem <= (unsigned)m_Size
 )", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
 ).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
 )9IYiy
@@ -645,9 +645,9 @@ $\nY8O
 /yQA
 0)KEY_0
 00003333
+00:00:00
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
 01/01/00
 0123456789ABCDEF
 0123456789abcdef
@@ -2076,6 +2076,11 @@ KeyTyped
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
 KeyValues::ReadAsBinary - Set name
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues::ReadAsBinary - TYPE_COLOR
@@ -2092,6 +2097,7 @@ KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -2139,7 +2145,6 @@ Logic problem? szsrc =
 Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
 Lowered '%s' -> '%s'\n
 Luxembourgish
-Ly:iI
 M8MF
 MEDIUM
 MGiI
@@ -2812,6 +2817,8 @@ SteamThreadTools::CThreadMutex::CThreadMutex()
 SteamThreadTools::CThreadMutex::~CThreadMutex()
 SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+SteamVProf::CVProfile::ExitScope()
 String field
 String literals cannot cross line boundaries.
 StringAfterPrefix
@@ -2978,6 +2985,7 @@ VGuiModuleLoader004
 VIDEOS
 VISTA
 VProfInternalEnterScopeCurrentThread
+VProfInternalGetProfileForCurrentThread
 VTT for
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_AppendSlash
@@ -3962,6 +3970,7 @@ g_System
 g_VGui
 g_VGuiSetup
 g_VProfProfilesRunningCount
+g_VProfile
 g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 g_main_context_iteration

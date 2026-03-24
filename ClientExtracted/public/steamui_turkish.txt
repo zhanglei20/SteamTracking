@@ -4787,7 +4787,6 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "Steam_WindowsCompat_Description" "Windows şu anda Steam'i, bazı Steam özelliklerinin ve çalışan oyunların sorunlar çıkarabileceği Windows Uyumluluk Modunda çalıştırıyor. Uyumluluk modunu kaldırmak için aşağıdaki yönergeleri takip edin."
 "Steam_WindowsCompat_DoNotShowAgain" "Bir daha gösterme"
 "Steam_WindowsCompat_SupportLinkDesc" "Uyumluluk Modunu nasıl devre dışı bırakabilirim?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Steam'i kapat"
 "Steam_WindowsCompat_RestartSteam" "Steam'i Yeniden Başlat"
 "Steam_WindowsCompat_Continue" "Devam et"
@@ -4868,11 +4867,12 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "RescueDialog_ExitSteam" "Steam'den çık"
 
 "TransportDialog_Title" "Beklenmeyen İletim Hatası"
-"TransportDialog_Explanation" "Steam başlatılırken beklenmeyen bir hatayla karşılaştı (0x%errorCount%). Daha fazla bilgi için <a href=steam://openurl_external/https://help.steampowered.com/en/faqs/view/7516-B23C-D572-5B0E>buraya</a> tıklayın."
+"TransportDialog_Explanation" "Steam başlatılırken beklenmeyen bir hatayla karşılaştı (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Seçeneklerden birini seçin:"
 "TransportDialog_RestartSteam" "Steam'i yeniden başlat"
 "TransportDialog_RestartSteamWebHelper" "Steamwebhelper'ı yeniden başlat"
 "TransportDialog_ContinueAnyway" "Sadece Valve: Yine de devam et"
+"TransportDialog_SupportLinkDesc" "Daha fazla bilgi"
 "TransportDialog_ExitSteam" "Steam'den çık"
 
 "DownloadRegion_default"				 "Bilinmiyor"

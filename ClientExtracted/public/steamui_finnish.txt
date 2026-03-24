@@ -4784,7 +4784,6 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_WindowsCompat_Description" "Steam on käytössä Windowsin yhteensopivuustilassa, josta saattaa seurata Steamin ominaisuuksien ja pelien toimivuuden ongelmia. Seuraa alla näkyviä ohjeita yhteensopivuustilan poistamiseksi."
 "Steam_WindowsCompat_DoNotShowAgain" "Älä näytä uudelleen"
 "Steam_WindowsCompat_SupportLinkDesc" "Miten poistan yhteensopivuustilan käytöstä?"
-"Steam_WindowsCompat_SupportLink" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
 "Steam_WindowsCompat_CloseSteam" "Sulje Steam"
 "Steam_WindowsCompat_RestartSteam" "Käynnistä Steam uudelleen"
 "Steam_WindowsCompat_Continue" "Jatka"
@@ -4865,11 +4864,12 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "RescueDialog_ExitSteam" "Sulje Steam."
 
 "TransportDialog_Title" "Odottamaton siirtovirhe"
-"TransportDialog_Explanation" "Steam havaitsi odottamattoman virheen käynnistyksen aikana (0x%errorCount%). Klikkaa <a href=steam://openurl_external/https://help.steampowered.com/faqs/view/7516-B23C-D572-5B0E>tästä</a> saadaksesi lisätietoja."
+"TransportDialog_Explanation" "Steam kohtasi käynnistyksen aikana odottamattoman virheen (0x%errorCount%)."
 "TransportDialog_RadioHeader" "Valitse jokin seuraavista vaihtoehdoista:"
 "TransportDialog_RestartSteam" "Käynnistä Steam uudelleen"
 "TransportDialog_RestartSteamWebHelper" "Käynnistä steamwebhelper uudelleen"
 "TransportDialog_ContinueAnyway" "Vain Valve: jatka siitä huolimatta"
+"TransportDialog_SupportLinkDesc" "Lisätietoja"
 "TransportDialog_ExitSteam" "Sulje Steam"
 
 "DownloadRegion_default"				 "Tuntematon"

@@ -284,6 +284,7 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_ECompromiseDetectionType_Manual
 %\n!k_EContentReportReason_Harassment
 %\n!k_EContentReportReason_OtherAbuse
+%\n!k_EContentReportResolution_Broken
 %\n!k_EContentReportResolution_Purged
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingType_NotRecording
@@ -362,9 +363,9 @@ $\n k_SystemAudioPortDirection_Input
 '\n#k_EPersonaStateFlag_HasRichPresence
 '\n#k_EProfileCustomizationTypeMyGuides
 '\n#k_EProvideDeckFeedbackPreference_No
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 (DEPRECATED) Friends-of-friends-only
 (DEPRECATED) Logged-in users only
 (\n$k_EBroadcastPermissionFriendsAllowed
@@ -1350,6 +1351,8 @@ American Express
 Amex (BoaCompra)
 Amharic
 Android
+AndroidExternalData
+AndroidSteamPackageRoot
 Announcement
 Anonymous Game Server
 Anonymous User
@@ -2239,6 +2242,7 @@ EPurchaseResultDetail
 EPurchaseStatus
 ERROR
 ERegKeyRoot
+ERemoteStorageFileRoot
 ERemoteStoragePlatform
 EResolutionAutomation
 EResult
@@ -2539,6 +2543,7 @@ Game Managed Item
 Game Release
 Game Server
 Game Voucher
+GameInstall
 GameManagedItems
 GameServer
 GameStop
@@ -2870,6 +2875,9 @@ LimitedLocal
 LinePay
 Linkaja
 Linux
+LinuxHome
+LinuxXdgConfigHome
+LinuxXdgDataHome
 Lithuanian
 Live Broadcast
 LoadFileRangeIntoBuffer_Internal
@@ -2892,6 +2900,10 @@ Low Violence
 Lowered '%s' -> '%s'\n
 Luxembourgish
 MOL Points
+MacAppSupport
+MacCaches
+MacDocuments
+MacHome
 MacOS
 Macedonian
 Maestro
@@ -3674,6 +3686,7 @@ SteamChina_SChinese
 SteamChrome_MasterStream
 SteamChrome_MasterStream_Event_uid%d_spid%u
 SteamChrome_MasterStream_uid%d_spid%u
+SteamCloudDocuments
 SteamDeck
 SteamOSGeneric
 SteamRealPath
@@ -3703,6 +3716,7 @@ SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamUniverse
 SteamUser
+SteamUserBaseStorage
 SteamVProf::CVProfile::MarkFrame(char const*)
 Steamworks Access Invite
 SteamworksAccessInvites
@@ -4036,8 +4050,15 @@ What is your mother's maiden name?
 Whitelist
 Who was your childhood hero?
 WifiDisabled
+WinAppDataLocal
+WinAppDataLocalLow
+WinAppDataRoaming
+WinMyDocuments
+WinProgramData
 WinRetrieveSuggestionsOnlyOnDemand
+WinSavedGames
 Windows
+WindowsHome
 Wolof
 Workshop
 Workshop Items

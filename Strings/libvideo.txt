@@ -213,12 +213,12 @@
 !m_vecLocks.HasElement( pLock )
 !m_vecMainThreadDel.HasElement( del )
 !nghttp2_ksl_it_begin(it)
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+!pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pKeyCallback
 !pLock->BIsLocked()
 !pParent->m_bInDeleteQueue
 !pPlayer->BInThreadPool()
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+!pToCopy || ( pToCopy + num <= Base() ) || ( pToCopy >= ( Base() + Count() ) )
 !pTracker->IsClaimed( pKey )
 !pWorkItem->BIsRunning()
 !pszString || pszString[nChars] == '\0'
@@ -948,6 +948,7 @@ $ffn
 'nU_O_M
 'prB2
 's~h9g
+( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 ( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
 ( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
@@ -990,7 +991,6 @@ $ffn
 (%p) no more requests allowed on HTTP session (%s)\n
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 ((LPBUFFEREDISTREAM)parser->reader)->pos<((LPBUFFEREDISTREAM)parser->reader)->bytesavail
 ((idx) < (context)->hd_table.len + 61)
 ((size_t)((&iframe->lbuf)->end - (&iframe->lbuf)->last)) > 0
@@ -1097,7 +1097,6 @@ $ffn
 (dy & 0x1ffff) == 0
 (dy & 0x3ffff) == 0
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
-(elem == Count()) || IsValidIndex(elem)
 (fS{ggRcjh
 (h`H1pqA
 (int) m_treePostParamNameHashes.Count() == (int) m_vecPostParams.Count()
@@ -1706,19 +1705,15 @@ $ffn
 0 Umv
 0.15
 0.8.3
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-1000
-1024
-10000
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-04:47:05
 08bX
 0?0L
 0A/8
@@ -1757,6 +1752,9 @@ $ffn
 1.5.6
 10.0.0.0/8
 100 127.0.0.1 stale
+1000
+1024
+10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2240,6 +2238,7 @@ $ffn
 21CUtlCStringConversion
 21UserSystemInformation
 21VideoRepresentation_t
+22:30:51
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2362,6 +2361,7 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
+524288
 52F*
 55Ly
 55j_WW
@@ -2386,7 +2386,6 @@ $ffn
 6144
 64CK\vH
 65536
-524288
 60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
@@ -3087,6 +3086,8 @@ Android 9.x
 Android420ToABGR
 Android420ToARGB
 Android420ToARGBMatrix
+AndroidExternalData
+AndroidSteamPackageRoot
 Announcement
 Anonymous Game Server
 Anonymous User
@@ -5169,6 +5170,7 @@ ERROR
 ERROR: selector [%d] invalid\n
 ERR_getErrorString
 ERegKeyRoot
+ERemoteStorageFileRoot
 ERemoteStoragePlatform
 EResult
 ESessionDisposition
@@ -5723,6 +5725,7 @@ Game Managed Item
 Game Release
 Game Server
 Game Voucher
+GameInstall
 GameManagedItems
 GameServer
 GameStop
@@ -6468,6 +6471,11 @@ Key type %d doesn't know how to load from buffer
 KeyValues
 KeyValues Error: %s in file %s [offset: %d]\n
 KeyValues don't support #include anymore, file "%s"
+KeyValues::FindKey( StringView ... )
+KeyValues::FindKey( hks )
+KeyValues::FindKey( hks, bCreate )
+KeyValues::MergeFromBuffer
+KeyValues::ReadAsBinary
 KeyValues::ReadAsBinary - Set name
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues::ReadAsBinary - TYPE_COLOR
@@ -6484,6 +6492,7 @@ KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RecursiveSaveToBufferAsJSON: TODO, missing code for saving binary data.\n
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 KeyValues::RemoveSubKey
+KeyValues::WriteAsBinary
 KeyValues::WriteAsBinary() called with a text buffer\n
 KeyValues::WriteAsBinary() called with an invalid buffer\n
 KeyValues::WriteAsBinary() overflowed buffer (%d bytes)\n
@@ -6583,6 +6592,9 @@ Linux 5.4
 Linux 5.x
 Linux 6.x
 Linux 7.x
+LinuxHome
+LinuxXdgConfigHome
+LinuxXdgDataHome
 Lithuanian
 Live Broadcast
 Lj&&lZ66~A??
@@ -6641,6 +6653,10 @@ MOL Points
 MPD element not root of document
 M\rLAI)haL<|p\t\t
 Mac OS
+MacAppSupport
+MacCaches
+MacDocuments
+MacHome
 MacOS
 MacOS 10.10
 MacOS 10.11
@@ -6711,7 +6727,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 20 2026
+Mar 23 2026
 Marathi
 March
 Mask Algorithm:
@@ -8808,9 +8824,11 @@ SteamBox
 SteamCache
 SteamCallbacks
 SteamChina_SChinese
+SteamCloudDocuments
 SteamDeck
 SteamOSGeneric
 SteamRealPath
+SteamUserBaseStorage
 Steamworks Access Invite
 SteamworksAccessInvites
 Steamworks_DispatchCallback
@@ -9650,6 +9668,12 @@ Whitespace not allowed here
 Whitespace required
 Who was your childhood hero?
 WifiDisabled
+WinAppDataLocal
+WinAppDataLocalLow
+WinAppDataRoaming
+WinMyDocuments
+WinProgramData
+WinSavedGames
 Windows
 Windows 10
 Windows 11
@@ -9671,6 +9695,7 @@ Windows ME
 Windows NT
 Windows Vista
 Windows XP
+WindowsHome
 Wolof
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify\n
@@ -13087,7 +13112,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenfD
+ggen
 givenName
 global constructors keyed to
 global destructors keyed to
@@ -15592,7 +15617,7 @@ m_hConnection != 0xdddddddd
 m_hSocket == INVALID_SOCKET
 m_hashMap
 m_heap
-m_heap.IsValidIndex(index)
+m_heap.IsValidIndex( index )
 m_iAudioTrack >= 0
 m_iHistory < V_ARRAYSIZE( m_rgunMicroSecRunHistory )
 m_iRefs > 0 && m_iRefs < 0x1000000

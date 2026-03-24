@@ -153,7 +153,7 @@ Failed to create socket for shared fd id: 0x%llx\n
 Failed to create socket for shared fd: %d\n
 Failed to create uv plane\n
 Failed to create y plane\n
-Failed to increase file count limit. Currently: %lu\n
+Failed to increase file count limit. Currently: %llu\n
 Failed to initialize client address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd id: 0x%llx\n
 Failed to initialize server address for shared fd: %d\n
