@@ -1,10 +1,12 @@
 .cZP-58cHflQCLG6CHvwKG {
   border-top: 1px solid #bbed08;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%
-    ), #25282e;
+    ),
+    #25282e;
   width: 100%;
   display: flex;
   flex-direction: column;

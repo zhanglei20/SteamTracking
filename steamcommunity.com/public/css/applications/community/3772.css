@@ -81,7 +81,7 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  transition: opacity .25s;
+  transition: opacity 0.25s;
   display: flex;
   flex-direction: row-reverse;
   z-index: 10;
@@ -160,7 +160,7 @@ button.DialogButton._36RM9HiLN49wfehWU79FHe ._3nwxvp5yLdVg3iJ1eAi63z {
   right: 8px;
   top: 8px;
   opacity: 1;
-  transition: opacity .25s;
+  transition: opacity 0.25s;
   display: flex;
   flex-direction: row-reverse;
   z-index: 1;
@@ -206,7 +206,7 @@ button.DialogButton.JBYdBhACB7UzXP4l_tpF2 svg {
   right: 8px;
   top: 8px;
   opacity: 1;
-  transition: opacity .25s;
+  transition: opacity 0.25s;
   display: flex;
   flex-direction: row-reverse;
   z-index: 1;

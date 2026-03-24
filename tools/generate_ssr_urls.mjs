@@ -1,4 +1,4 @@
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { readdir, readFile, writeFile } from "node:fs/promises";
 import { extname, join, resolve as pathResolve } from "node:path";
 import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";

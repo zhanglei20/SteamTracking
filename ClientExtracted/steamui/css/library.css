@@ -20,7 +20,7 @@ button.DialogButton {
   cursor: pointer;
   width: 100%;
   transition-property: opacity, background, color, box-shadow;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
   background: #3d4450;
   background-position: 99% 1%;
@@ -235,11 +235,13 @@ div.ModalPosition_TopBar {
 }
 .DialogContent,
 .DialogContentTransition {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%
-    ), #25282e;
+    ),
+    #25282e;
   user-select: none;
 }
 @media (prefers-contrast: more) {
@@ -374,7 +376,7 @@ div.ModalPosition_TopBar {
 .SettingsDialogSubHeader {
   font-size: 15px;
   font-weight: 500;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   line-height: 36px;
   text-transform: uppercase;
   user-select: none;
@@ -608,7 +610,7 @@ div.ModalPosition_TopBar {
   margin-inline-end: 4px;
   flex-grow: 4;
   box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.4);
-  border: .5px solid rgba(139, 153, 170, 0.4);
+  border: 0.5px solid rgba(139, 153, 170, 0.4);
   border-style: inset;
 }
 .DialogTextInputBase:disabled,
@@ -733,7 +735,7 @@ button.DialogButton.GreenPlay:active.gpfocus {
     rgb(74, 122, 22) 60%
   );
   background-position: 40%;
-  transition-duration: .04s;
+  transition-duration: 0.04s;
 }
 button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.2);
@@ -743,7 +745,7 @@ button.DialogButton:enabled:active:hover,
 button.DialogButton:enabled:active.gpfocus {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
-  transition-duration: .04s;
+  transition-duration: 0.04s;
 }
 @media (prefers-contrast: more) {
   button.DialogButton:enabled:active,
@@ -767,7 +769,7 @@ button.DialogButton.Primary:enabled:hover:active,
 button.DialogButton.Primary:enabled:active.gpfocus {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 40%;
-  transition-duration: .04s;
+  transition-duration: 0.04s;
 }
 button.DialogButton:hover,
 button.DialogButton.gpfocus {
@@ -805,7 +807,7 @@ button.TextButton {
   border-bottom: 1px dotted rgba(0, 0, 0, 0);
 }
 button.TextButton .SVGIcon_Button {
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   margin-inline-end: 2px;
 }
 button.TextButton:hover,
@@ -1070,7 +1072,7 @@ button.TextButton.gpfocus {
   border-start-start-radius: 5px;
   border-end-start-radius: 5px;
   width: 0px;
-  transition: width .2s linear;
+  transition: width 0.2s linear;
 }
 .DialogProgressBar_Value:dir(rtl) {
   border-top-right-radius: 5px;
@@ -1163,13 +1165,13 @@ button.TextButton.gpfocus {
   height: 22px;
   background-color: rgba(0, 0, 0, 0.2666666667);
   padding: 0;
-  box-shadow: inset 1px .5px 3px rgba(1, 1, 1, 0.4);
+  box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
   cursor: pointer;
   border-radius: 2px;
 }
 .DialogCheckbox .SVGIcon_DialogCheck {
   opacity: 0;
-  transition: opacity .1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
   width: 18px;
   height: 18px;
   margin-top: 9%;
@@ -1179,9 +1181,9 @@ button.TextButton.gpfocus {
   stroke-width: 40px;
   stroke-dashoffset: -270;
   transition-property: stroke-dashoffset;
-  transition-duration: .18s;
+  transition-duration: 0.18s;
   transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
-  transition-delay: .3s;
+  transition-delay: 0.3s;
 }
 .DialogCheckbox.Active .SVGIcon_DialogCheck path {
   stroke-dashoffset: 90;
@@ -1236,10 +1238,10 @@ button.TextButton.gpfocus {
   border-radius: 50%;
   margin: 0;
   padding: 0;
-  box-shadow: inset .5px 1px 3px rgba(1, 1, 1, 0.4);
+  box-shadow: inset 0.5px 1px 3px rgba(1, 1, 1, 0.4);
   display: flex;
   justify-content: center;
-  transition: background-color .08s ease-in-out;
+  transition: background-color 0.08s ease-in-out;
 }
 .DialogRoundCheckboxField_Container {
   cursor: pointer;
@@ -1280,7 +1282,7 @@ button.TextButton.gpfocus {
   transform: scale(0);
   opacity: 0;
   transition-property: opacity, scale, box-shadow;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
 }
 .DialogRoundCheckboxField_Control.Active .DialogRoundCheckboxField_InnerCircle {
@@ -1308,12 +1310,12 @@ button.TextButton.gpfocus {
 .copiedAnimation.animationComplete {
   opacity: 0;
   transition-duration: 1s;
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
 .copiedAnimation.animationPlaying {
   opacity: 1;
   transition-property: transform, opacity;
-  transition-duration: 0s, .6s;
+  transition-duration: 0s, 0.6s;
 }
 ._FixedHeight {
   flex-shrink: 0;
@@ -1382,7 +1384,7 @@ body.in_global_drag .title-area {
   position: absolute;
   top: 0;
   opacity: 0;
-  transition: opacity .18s ease-in-out;
+  transition: opacity 0.18s ease-in-out;
   pointer-events: none;
   user-select: none;
 }
@@ -1414,7 +1416,7 @@ body.in_global_drag .title-area {
     rgba(0, 0, 0, 0) 100%
   );
   opacity: 0;
-  transition: opacity .18s ease-in-out;
+  transition: opacity 0.18s ease-in-out;
   pointer-events: none;
   user-select: none;
 }
@@ -1463,7 +1465,7 @@ body.in_global_drag .title-area {
 .title-area-icon:hover .SVGIcon_Button line,
 .title-area-icon:hover .SVGIcon_Button polyline {
   stroke: white;
-  transition: stroke .15s ease-out;
+  transition: stroke 0.15s ease-out;
 }
 .ModalDialogPopup .maximizeRestoreButton {
   display: none;
@@ -1596,12 +1598,12 @@ body.in_global_drag .title-area {
 .throbber > div:nth-child(2) {
   margin-inline-start: 12%;
   transform: scaleX(1) scaleY(0.6);
-  animation-delay: .16s;
+  animation-delay: 0.16s;
 }
 .throbber > div:nth-child(3) {
   margin-inline-start: 12%;
   transform: scaleX(1) scaleY(0.6);
-  animation-delay: .32s;
+  animation-delay: 0.32s;
 }
 .WaitingForInterFaceReadyContainer {
   width: 100%;
@@ -1714,7 +1716,7 @@ body.in_global_drag .title-area {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: stroke .15s ease-out;
+  transition: stroke 0.15s ease-out;
 }
 .DesktopUI .title-bar-actions,
 .friendsui-container .title-bar-actions {
@@ -1737,12 +1739,12 @@ body.in_global_drag .title-area {
 .DesktopUI .title-area-icon:hover,
 .friendsui-container .title-area-icon:hover {
   background: #3d4450;
-  transition: background .15s ease-out;
+  transition: background 0.15s ease-out;
 }
 .DesktopUI .title-area-icon.closeButton:hover,
 .friendsui-container .title-area-icon.closeButton:hover {
   background: #e22a27;
-  transition: background .15s ease-out;
+  transition: background 0.15s ease-out;
 }
 .DesktopUI .title-area-icon.minimizeButton svg,
 .friendsui-container .title-area-icon.minimizeButton svg {
@@ -1855,7 +1857,7 @@ body.in_global_drag .title-area {
   backdrop-filter: blur(16px);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   transition-property: background-color, box-shadow, transform;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease;
 }
 #dota_react_root .ModalPosition_Dismiss .closeButton:hover {
@@ -1871,7 +1873,7 @@ body.in_global_drag .title-area {
   stroke: rgb(169 178 182);
   stroke-width: 32px;
   transition-property: stroke;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease;
 }
 #dota_react_root
@@ -1973,12 +1975,12 @@ span:focus {
 ._2mu1wGa9DBwSPaacW6GVmk
   ._1yjvY9uXrBBn0NDCja0oD8
   .Wd5cq7v-s4aBAMuERx6Il._3Pd3-EOqHE1pbatRwqKCMp {
-  animation-delay: .25s;
+  animation-delay: 0.25s;
 }
 ._2mu1wGa9DBwSPaacW6GVmk
   ._1yjvY9uXrBBn0NDCja0oD8
   .Wd5cq7v-s4aBAMuERx6Il._3uYAQK6LkmahQL1pnY1BhX {
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 @keyframes Vo179IEU6N5e6421ih5zK {
   0% {
@@ -2074,7 +2076,7 @@ span:focus {
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -2205,7 +2207,7 @@ span:focus {
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -2459,8 +2461,9 @@ dialog ._2yAm5LY_eu-Vg_52l0HFlM {
   overflow-x: hidden;
 }
 .GreenEnvelopeMenu {
-  box-shadow: inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px, inset
-    rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
+  box-shadow:
+    inset rgba(61, 68, 80, 0.75) 1px 1px 1px 0px,
+    inset rgba(61, 68, 80, 0.25) -1px -1px 1px 0px;
   border: 1px solid #000;
   padding: 1px;
 }
@@ -2644,7 +2647,7 @@ html._14wqdluDeDnnEcg3OSLEmd body {
 .IjIBR_wDDi2N77Oz4KAT4 {
   box-sizing: border-box;
   width: 100%;
-  border-bottom: .2px solid #67707b;
+  border-bottom: 0.2px solid #67707b;
   margin: 0px;
   padding: 0px;
 }
@@ -2926,7 +2929,7 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   position: absolute;
   z-index: 100;
   opacity: 0;
-  transition: opacity .25s;
+  transition: opacity 0.25s;
   pointer-events: none;
 }
 ._3vg1vYU7iTWqONciv9cuJN._1Ye_0niF2UqB8uQTbm8B6B {
@@ -2966,8 +2969,9 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   color: #17181c;
   text-shadow: 1px 1px 2px hsla(0, 0%, 100%, 0.3);
   padding: 5px 8px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3333333333), 2px 2px 16px 1px
-    rgba(0, 0, 0, 0.3333333333);
+  box-shadow:
+    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
+    2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
   max-width: 300px;
   user-select: none;
   overflow: hidden;
@@ -2987,8 +2991,9 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   border-radius: 2px;
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3333333333), 2px 2px 16px 1px
-    rgba(0, 0, 0, 0.3333333333);
+  box-shadow:
+    1px 1px 8px rgba(0, 0, 0, 0.3333333333),
+    2px 2px 16px 1px rgba(0, 0, 0, 0.3333333333);
   max-width: 300px;
   user-select: none;
 }

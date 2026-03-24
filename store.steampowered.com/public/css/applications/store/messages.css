@@ -22,7 +22,8 @@ html.responsive
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at top left,
       rgba(74, 81, 92, 0.4) 0%,
       rgba(75, 81, 92, 0) 60%,
@@ -104,7 +105,7 @@ html.responsive
   background: rgba(198, 212, 223, 0.5);
   border-radius: 1px;
   cursor: pointer;
-  transition: background .2s;
+  transition: background 0.2s;
 }
 .ZQrtMhZB1tpkd2bgBXyIF.cwA5j4AsP5OB7WjWuOlFv,
 .ZQrtMhZB1tpkd2bgBXyIF:hover {
@@ -241,7 +242,7 @@ html.responsive
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -372,7 +373,7 @@ html.responsive
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -600,7 +601,9 @@ A:active {
   width: fit-content;
   flex-grow: 1;
   line-height: 19px;
-  transition: box-shadow .25s ease-out, background-color .25s ease-out;
+  transition:
+    box-shadow 0.25s ease-out,
+    background-color 0.25s ease-out;
 }
 ._3J3L60oPKSSmfBrQoNzGka:hover {
   background-color: #427d9f;
@@ -707,7 +710,7 @@ A:active {
   position: relative;
   box-shadow: 0 6px 10px #000a;
   font-size: 0px;
-  transition: box-shadow .15s ease-out;
+  transition: box-shadow 0.15s ease-out;
 }
 ._3R5wv6ya3QU6VH7qq2819z._1M-oJo6Qwi_taE9-LcUQXw {
   pointer-events: none;
@@ -736,7 +739,7 @@ A:active {
   max-width: 570px;
   width: calc(100vh - 150px);
   transition-property: filter, transform, box-shadow;
-  transition-duration: .25s;
+  transition-duration: 0.25s;
   transition-timing-function: ease-out;
 }
 ._3R5wv6ya3QU6VH7qq2819z video {
@@ -797,7 +800,7 @@ A:active {
     rgba(10, 10, 10, 0) 65%,
     rgba(10, 10, 10, 0.8) 100%
   );
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   opacity: 0.5;
 }
 ._6Tfttc004NhLDjbTDS9PC ._20PKe9KJTJC5SAbLi4Dy-Y {
@@ -884,7 +887,7 @@ A:active {
   span {
   display: block;
   text-transform: uppercase;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   font-size: 13px;
   color: #fff;
   font-weight: 200;
@@ -1090,7 +1093,7 @@ A:active {
   height: auto;
   position: relative;
   left: 0px;
-  transition: transform .4s ease-out;
+  transition: transform 0.4s ease-out;
   top: 0px;
   display: block;
 }
@@ -1172,7 +1175,7 @@ A:active {
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: background-color .24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
 }
 .ENbI1gFgvIca6HSKAbfiJ {
   margin: 10px 20px;
@@ -1188,8 +1191,10 @@ A:active {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
-    ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
+    color 0.24s ease-in-out;
 }
 .items_in_row_4 .ENbI1gFgvIca6HSKAbfiJ {
   line-height: 16px;
@@ -1208,8 +1213,10 @@ A:active {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
-    ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
+    color 0.24s ease-in-out;
 }
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK {
   display: flex;
@@ -1494,7 +1501,7 @@ A:active {
     rgba(10, 10, 10, 0) 65%,
     rgba(10, 10, 10, 0.8) 100%
   );
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   opacity: 0.5;
 }
 ._3H7i0ChQjoGWieNRcKmYea .CapsuleBottomBar {
@@ -1515,7 +1522,7 @@ div.StoreSaleWidgetTitle {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: box-shadow .25s ease-out;
+  transition: box-shadow 0.25s ease-out;
 }
 .BasicUI ._24bJJZ8-xr8Et4DVUrr17J {
   padding-top: 56.25%;
@@ -1536,7 +1543,7 @@ div.StoreSaleWidgetTitle {
   position: absolute;
   fill: #fff;
   opacity: 0.8;
-  transition: opacity .25s ease-out;
+  transition: opacity 0.25s ease-out;
 }
 .BasicUI ._24bJJZ8-xr8Et4DVUrr17J svg {
   width: 50px;

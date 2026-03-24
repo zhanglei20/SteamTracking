@@ -3321,7 +3321,7 @@
                   '\', this)" type="text/javascript" ' +
                   (goog.Dependency.defer_ ? "defer" : "") +
                   n +
-                  "></script>"),
+                  "><\/script>"),
                   t.write(
                     goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createHTML(n)
@@ -3374,10 +3374,10 @@
               if (goog.isDocumentLoading_()) {
                 var n = function (e, r) {
                   (e = r
-                    ? '<script type="module" crossorigin>' + r + "</script>"
+                    ? '<script type="module" crossorigin>' + r + "<\/script>"
                     : '<script type="module" crossorigin src="' +
                       e +
-                      '"></script>'),
+                      '"><\/script>'),
                     t.write(
                       goog.TRUSTED_TYPES_POLICY_
                         ? goog.TRUSTED_TYPES_POLICY_.createHTML(e)
@@ -3527,7 +3527,7 @@
                             goog.protectScriptTag_(
                               'goog.Dependency.callback_("' + t + '");',
                             ) +
-                            "</script>";
+                            "<\/script>";
                         e.write(
                           goog.TRUSTED_TYPES_POLICY_
                             ? goog.TRUSTED_TYPES_POLICY_.createHTML(n)
@@ -25016,7 +25016,7 @@
                         break;
                       case "script":
                         ((e = o.createElement("div")).innerHTML =
-                          "<script></script>"),
+                          "<script><\/script>"),
                           (e = e.removeChild(e.firstChild));
                         break;
                       case "select":

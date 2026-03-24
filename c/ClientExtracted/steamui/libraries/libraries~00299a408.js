@@ -2658,7 +2658,7 @@ var CLSTAMP = "steamdb";
                   '\', this)" type="text/javascript" ' +
                   (goog.Dependency.defer_ ? "defer" : "") +
                   _ +
-                  "></script>"),
+                  "><\/script>"),
                   _.write(
                     goog.TRUSTED_TYPES_POLICY_
                       ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -2711,10 +2711,10 @@ var CLSTAMP = "steamdb";
               if (goog.isDocumentLoading_()) {
                 var _ = function (_, _) {
                   (_ = _
-                    ? '<script type="module" crossorigin>' + _ + "</script>"
+                    ? '<script type="module" crossorigin>' + _ + "<\/script>"
                     : '<script type="module" crossorigin src="' +
                       _ +
-                      '"></script>'),
+                      '"><\/script>'),
                     _.write(
                       goog.TRUSTED_TYPES_POLICY_
                         ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -2867,7 +2867,7 @@ var CLSTAMP = "steamdb";
                             goog.protectScriptTag_(
                               'goog.Dependency.callback_("' + _ + '");',
                             ) +
-                            "</script>";
+                            "<\/script>";
                         _.write(
                           goog.TRUSTED_TYPES_POLICY_
                             ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -26416,7 +26416,7 @@ var CLSTAMP = "steamdb";
                         break;
                       case "script":
                         ((_ = _.createElement("div")).innerHTML =
-                          "<script></script>"),
+                          "<script><\/script>"),
                           (_ = _.removeChild(_.firstChild));
                         break;
                       case "select":

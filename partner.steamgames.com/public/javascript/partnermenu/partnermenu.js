@@ -9583,7 +9583,7 @@ Error generating stack: ` +
                       break;
                     case "script":
                       (t = s.createElement("div")),
-                        (t.innerHTML = "<script></script>"),
+                        (t.innerHTML = "<script><\/script>"),
                         (t = t.removeChild(t.firstChild));
                       break;
                     case "select":
@@ -16233,7 +16233,7 @@ Error generating stack: ` +
               `', this)" type="text/javascript" ` +
               (goog.Dependency.defer_ ? "defer" : "") +
               i +
-              "></script>"),
+              "><\/script>"),
               n.write(
                 goog.TRUSTED_TYPES_POLICY_
                   ? goog.TRUSTED_TYPES_POLICY_.createHTML(i)
@@ -16277,8 +16277,8 @@ Error generating stack: ` +
       (goog.Es6ModuleDependency.prototype.load = function (t) {
         function n(m, y) {
           (m = y
-            ? '<script type="module" crossorigin>' + y + "</script>"
-            : '<script type="module" crossorigin src="' + m + '"></script>'),
+            ? '<script type="module" crossorigin>' + y + "<\/script>"
+            : '<script type="module" crossorigin src="' + m + '"><\/script>'),
             i.write(
               goog.TRUSTED_TYPES_POLICY_
                 ? goog.TRUSTED_TYPES_POLICY_.createHTML(m)
@@ -16397,7 +16397,7 @@ Error generating stack: ` +
               goog.protectScriptTag_(
                 'goog.Dependency.callback_("' + R + '");',
               ) +
-              "</script>";
+              "<\/script>";
           y.write(
             goog.TRUSTED_TYPES_POLICY_
               ? goog.TRUSTED_TYPES_POLICY_.createHTML(P)

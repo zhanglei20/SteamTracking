@@ -1028,7 +1028,7 @@ td.rdtYear:hover {
   font-size: 17px;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   font-weight: 300;
   margin-top: 12px;
 }
@@ -1116,7 +1116,7 @@ div.rSTyUxh3-fZYKih45mKb1 {
     rgba(255, 255, 255, 0.1) 10%,
     rgba(255, 255, 255, 0) 80%
   );
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   will-change: transform;
 }
 @media screen and (max-height: 360px) {
@@ -1143,7 +1143,7 @@ div.rSTyUxh3-fZYKih45mKb1 {
 }
 .tQZ7I-5Bxpp4zpDf48imu {
   font-size: 18px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
 }
@@ -1165,7 +1165,7 @@ div.rSTyUxh3-fZYKih45mKb1 {
   background-color: #19232f;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   overflow: auto;
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   will-change: transform;
 }
 .client ._15YLDKm80opUF5Tivo7UK- {
@@ -1259,7 +1259,7 @@ html.responsive.touch ._15YLDKm80opUF5Tivo7UK- ._1nf0vlWuKk9Qn7ncHC5uhq {
   line-height: 30px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   word-wrap: break-word;
   word-break: break-word;
 }
@@ -1283,7 +1283,7 @@ html.responsive.touch ._15YLDKm80opUF5Tivo7UK- ._1nf0vlWuKk9Qn7ncHC5uhq {
   background-color: #575e69;
   padding: 1px;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: #fff;
   line-height: 16px;
 }
@@ -1304,7 +1304,7 @@ html.responsive.touch ._15YLDKm80opUF5Tivo7UK- ._1nf0vlWuKk9Qn7ncHC5uhq {
   border-radius: 3px;
   background-color: #575e69;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   padding: 8px;
   margin-top: 4px;
 }
@@ -1420,7 +1420,7 @@ html.responsive.touch
   padding-bottom: 8px;
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   color: #a7aeb4;
 }
 ._15YLDKm80opUF5Tivo7UK-
@@ -1529,7 +1529,7 @@ html.force_desktop
   width: 48px;
   height: 62px;
   padding: 10px 8px 20px;
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   will-change: transform;
 }
 ._3cMvc6AfC8k2OaILY81XXB path {
@@ -1633,7 +1633,7 @@ html.responsive.touch
   }
 }
 ._1e3WbBz7-mqMKmK8HnpzFF ._3yqpPRFLwr6ETVDgLGT37s {
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   min-height: 100vh;
   width: 100%;
   max-width: 1200px;
@@ -2108,7 +2108,7 @@ html.responsive.touch
 ._3U5MYaJE0i8UYZ_pUzyNk7 {
   margin-top: 3vh;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 ._3U5MYaJE0i8UYZ_pUzyNk7 ._3X16Tg0OrHJJL36_8dwlHo {
   color: #a7aeb4;
@@ -2196,7 +2196,7 @@ html.responsive.touch
 }
 ._1LTVIwFRYJjiwzhWzSVOd4 .DialogLabel {
   color: #a7aeb4;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   margin-bottom: 7px;
   margin-top: 2vh;
 }
@@ -2206,7 +2206,7 @@ html.responsive.touch
   height: 52px;
   width: 100%;
   background-color: #33373f;
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   will-change: transform;
   display: flex;
   align-items: center;
@@ -2230,7 +2230,7 @@ html.responsive.touch
   top: 52px;
   background-color: #33373f;
   opacity: 0;
-  transition: opacity .15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
   will-change: transform;
   z-index: 51;
   width: 100%;
@@ -2263,7 +2263,8 @@ html.responsive.touch
   max-width: 100%;
   overflow-x: scroll;
   overflow-y: clip;
-  -webkit-mask-image: linear-gradient(
+  -webkit-mask-image:
+    linear-gradient(
       to left,
       transparent 2px,
       black 16px,
@@ -2277,7 +2278,8 @@ html.responsive.touch
       black 50%,
       transparent 51%
     );
-  mask-image: linear-gradient(
+  mask-image:
+    linear-gradient(
       to left,
       transparent 2px,
       black 16px,
@@ -2351,7 +2353,7 @@ html:not(.touch)
   padding: 60px 0px;
   background: linear-gradient(90deg, #10a2d7, #2b74fe);
   color: #fff;
-  transition: transform .15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
   will-change: transform;
 }
 .nydHEEVdYQNQyocchG2Kr._21ANYFXCED2fJk0gtzrBci {
@@ -2576,7 +2578,7 @@ html:not(.touch)
   border-radius: 2px;
   margin-right: 12px;
   font-weight: 600;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 11px;
   line-height: 16px;
@@ -2591,7 +2593,7 @@ html:not(.touch)
 ._1E3Anhs34BXsWWWqH4RNPL ._4-fqVd8yRSHEAjj7Hkx_V {
   color: #909da7;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   font-size: 11px;
 }
 ._1E3Anhs34BXsWWWqH4RNPL .vfv1QjSe1vEobRaHWlf3 {
@@ -2632,7 +2634,7 @@ html:not(.touch)
   font-weight: 500;
   padding-top: 10px;
   text-transform: uppercase;
-  letter-spacing: .07em;
+  letter-spacing: 0.07em;
 }
 ._1E3Anhs34BXsWWWqH4RNPL ._2xxMBw-_ndXEC-SIBejGuu {
   display: flex;
@@ -2679,7 +2681,7 @@ html:not(.touch)
 }
 ._1E3Anhs34BXsWWWqH4RNPL ._1LkWXJVxWYdKiKf2Mxq3zs {
   font-weight: 400;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 11px;
   line-height: 16px;
@@ -2717,7 +2719,11 @@ html:not(.touch)
 @media screen and (max-width: 700px) {
   ._1E3Anhs34BXsWWWqH4RNPL._2mVdtaB_oY5b1fladlbBaM ._3xvUZtQ1j-pu-l2xy-lFAq {
     height: unset;
-    background: linear-gradient(to bottom, #5e594a 50%, rgba(62, 57, 50, 0) 90%);
+    background: linear-gradient(
+      to bottom,
+      #5e594a 50%,
+      rgba(62, 57, 50, 0) 90%
+    );
   }
   ._1E3Anhs34BXsWWWqH4RNPL._2mVdtaB_oY5b1fladlbBaM
     ._3xvUZtQ1j-pu-l2xy-lFAq
@@ -2900,7 +2906,7 @@ html:not(.touch)
   );
   overflow: hidden;
   box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0);
-  transition: box-shadow .24s ease-in-out;
+  transition: box-shadow 0.24s ease-in-out;
 }
 ._1E3Anhs34BXsWWWqH4RNPL ._3xvUZtQ1j-pu-l2xy-lFAq:hover {
   cursor: pointer;
@@ -2992,7 +2998,9 @@ html:not(.touch)
   .d8bPiEt0DUII_mRqek_ht {
   filter: blur(0px);
   opacity: 1;
-  transition: filter .24s ease-in-out, opacity .24s ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    opacity 0.24s ease-in-out;
   height: 0;
   padding-top: 56.25%;
   background: #2d3138 center / cover no-repeat;
@@ -3027,7 +3035,9 @@ html:not(.touch)
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition: opacity .24s ease-in-out, transform .24s ease-in-out;
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out;
 }
 ._1E3Anhs34BXsWWWqH4RNPL
   ._3xvUZtQ1j-pu-l2xy-lFAq
@@ -3695,7 +3705,7 @@ html:not(.touch)
     ._1M8-Pa3b3WboayCgd5VBJT {
     font-size: 20px;
     font-weight: 500;
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
     line-height: 1.3;
     margin-bottom: 4px;
   }
@@ -3881,7 +3891,7 @@ html:not(.touch)
   height: 250px;
 }
 ._3bVwKmAuh70AH8XVDnyf5z img {
-  transition: opacity .24s ease-in-out;
+  transition: opacity 0.24s ease-in-out;
   opacity: 0.6;
   display: block;
 }
@@ -3911,7 +3921,9 @@ html:not(.touch)
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition: opacity .24s ease-in-out, transform .24s ease-in-out;
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out;
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover img {
   opacity: 1;
@@ -4351,7 +4363,7 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   padding: 8px 12px;
   color: #0e141b;
   right: unset;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .NVuxjpTCUClP-4RsNDDvk:hover {
   box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
@@ -4388,7 +4400,7 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   width: 0;
   height: 0;
   padding: 7px 0;
-  transition: padding-right .2s ease-out;
+  transition: padding-right 0.2s ease-out;
   font-size: 13px;
 }
 .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi._2XN3sBlgsLE3n5WrKOkWxi {
@@ -4480,7 +4492,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   padding: 8px 12px;
   color: #0e141b;
   right: unset;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .BwHJdoHlv8wy5OypqL_b7 .FollowButton {
   text-shadow: none;

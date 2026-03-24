@@ -277,7 +277,7 @@ html:not(.client) .events_listing ._1XLRr8eh1ip-E17C8Jzrmc {
   font-size: 12px;
   line-height: 18px;
   transition-property: opacity, background, color, box-shadow;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -424,7 +424,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
   border-radius: 3px;
   padding: 8px;
   box-sizing: border-box;
-  transition: filter .1s ease-in-out;
+  transition: filter 0.1s ease-in-out;
 }
 ._2pA5CW91XQQDfo6yZEdPd- > *:not(:first-child) {
   margin-inline-start: 8px;
@@ -490,16 +490,16 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 }
 ._240i58XQ0w78YFrd_p-9UY {
   animation-name: _2jG5NuuER4JaHKuO9nA4KF;
-  animation-duration: .32s;
+  animation-duration: 0.32s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
   transition-property: transform, background-color, box-shadow;
-  transition-duration: .21s;
+  transition-duration: 0.21s;
   transition-timing-function: ease-out;
 }
 ._240i58XQ0w78YFrd_p-9UY svg {
   transition-property: transform;
-  transition-duration: .21s;
+  transition-duration: 0.21s;
   transition-timing-function: ease-out;
 }
 ._240i58XQ0w78YFrd_p-9UY:active {
@@ -1024,7 +1024,7 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 ._3n6v2rFCMX3yWMfZrlCn6g .khWz0kU5EooSG60KYdU1K .H5jrPn7OY-0ToSesPTrI6 {
   text-transform: uppercase;
   margin-bottom: 4px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   margin-left: 15px;
 }
 ._3n6v2rFCMX3yWMfZrlCn6g .khWz0kU5EooSG60KYdU1K .JVE9ORqYtUCERl3y2i7_X {
@@ -2179,7 +2179,9 @@ html.responsive.gamepad ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   margin-bottom: 0px;
   transform: scale(1);
   filter: saturate(0.85);
-  transition: transform .21s ease-in-out, filter .21s ease-in-out;
+  transition:
+    transform 0.21s ease-in-out,
+    filter 0.21s ease-in-out;
 }
 ._2bT8irkKNnA5sxFG3MUXzH:hover {
   filter: saturate(1);
@@ -2325,7 +2327,7 @@ html.responsive.gamepad ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   height: auto;
   position: relative;
   left: 0px;
-  transition: transform .4s ease-out;
+  transition: transform 0.4s ease-out;
   top: 0px;
   display: block;
 }
@@ -2407,7 +2409,7 @@ html.responsive.gamepad ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: background-color .24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
 }
 .ENbI1gFgvIca6HSKAbfiJ {
   margin: 10px 20px;
@@ -2423,8 +2425,10 @@ html.responsive.gamepad ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
-    ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
+    color 0.24s ease-in-out;
 }
 .items_in_row_4 .ENbI1gFgvIca6HSKAbfiJ {
   line-height: 16px;
@@ -2443,8 +2447,10 @@ html.responsive.gamepad ._2KsEbGy9kiSDeQpcqEc9DG ._3Sy57gZmUNuNdOI8qtPQVs {
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
-    ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
+    color 0.24s ease-in-out;
 }
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK {
   display: flex;

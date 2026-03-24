@@ -81,7 +81,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -212,7 +212,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -605,7 +605,7 @@ body.item_collection_page {
   color: #c5cbd8;
   text-transform: uppercase;
   font-weight: 300;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   display: flex;
   align-items: center;
 }
@@ -621,13 +621,13 @@ body.item_collection_page {
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #c5cbd8;
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 100;
-  letter-spacing: .0625rem;
+  letter-spacing: 0.0625rem;
   line-height: 1.125rem;
   padding: 2px 8px;
   margin-left: 8px;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .aaosYB-OO-EJn70ocmC-J .v75cc6-VG2tzRr_W4eQ12:hover {
   color: #fff;

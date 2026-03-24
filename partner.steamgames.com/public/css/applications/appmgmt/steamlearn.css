@@ -71,7 +71,7 @@
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -188,10 +188,10 @@
   display: flex;
   flex-direction: column;
   padding: 6px 10px;
-  transition-property: filter, max-height, min-height, padding-top,
-    padding-bottom, margin-bottom;
+  transition-property:
+    filter, max-height, min-height, padding-top, padding-bottom, margin-bottom;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   margin-bottom: 8px;
   overflow: hidden;
   cursor: pointer;
@@ -390,7 +390,7 @@
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -674,7 +674,7 @@
 .json-diff-viewer tr.expand-line button {
   padding: 0;
   border: none;
-  margin: 0 .5em;
+  margin: 0 0.5em;
   background: transparent;
   color: #2196f3;
   cursor: pointer;
@@ -795,7 +795,7 @@
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -959,7 +959,7 @@
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1166,7 +1166,7 @@
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1630,7 +1630,7 @@
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1877,7 +1877,10 @@
 }
 .react-flow__edge-path {
   stroke: var(--xy-edge-stroke, var(--xy-edge-stroke-default));
-  stroke-width: var(--xy-edge-stroke-width, var(--xy-edge-stroke-width-default));
+  stroke-width: var(
+    --xy-edge-stroke-width,
+    var(--xy-edge-stroke-width-default)
+  );
   fill: none;
 }
 .react-flow__connection-path {
@@ -1907,7 +1910,7 @@
 }
 .react-flow__edge.animated path {
   stroke-dasharray: 5;
-  animation: dashdraw .5s linear infinite;
+  animation: dashdraw 0.5s linear infinite;
 }
 .react-flow__edge.animated path.react-flow__edge-interaction {
   stroke-dasharray: none;
@@ -1924,7 +1927,10 @@
 .react-flow__edge.selected .react-flow__edge-path,
 .react-flow__edge.selectable:focus .react-flow__edge-path,
 .react-flow__edge.selectable:focus-visible .react-flow__edge-path {
-  stroke: var(--xy-edge-stroke-selected, var(--xy-edge-stroke-selected-default));
+  stroke: var(
+    --xy-edge-stroke-selected,
+    var(--xy-edge-stroke-selected-default)
+  );
 }
 .react-flow__edge-textwrapper {
   pointer-events: all;
@@ -1940,7 +1946,7 @@
 }
 .react-flow__connection .animated {
   stroke-dasharray: 5;
-  animation: dashdraw .5s linear infinite;
+  animation: dashdraw 0.5s linear infinite;
 }
 svg.react-flow__connectionline {
   z-index: 1001;
@@ -2497,7 +2503,7 @@ svg.react-flow__connectionline {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2546,11 +2552,13 @@ svg.react-flow__connectionline {
   border: 2px solid #000;
   color: #fff;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at top left,
       rgba(98, 106, 118, 0.4) 0%,
       rgba(117, 139, 177, 0) 60%
-    ), #2c2f34;
+    ),
+    #2c2f34;
   display: flex;
   flex-direction: column;
   min-width: 240px;
@@ -2604,19 +2612,17 @@ svg.react-flow__connectionline {
   filter: sepia(1) hue-rotate(310deg) saturate(10) brightness(2);
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc._2bCs4m3v-pseMt93DMa_n8 .meAbe3Sy_IJ4PngdGme2- {
-  background: radial-gradient(
-      circle at top left,
-      rgba(40, 122, 245, 0.4) 0%,
-      #0e2247 60%
-    ), #2c2f34;
+  background:
+    radial-gradient(circle at top left, rgba(40, 122, 245, 0.4) 0%, #0e2247 60%),
+    #2c2f34;
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc._8VekS4xaLWJVFcgGdyfiV .meAbe3Sy_IJ4PngdGme2- {
-  background: radial-gradient(circle at top left, #736548 0%, #574b32 60%),
-    #2c2f34;
+  background:
+    radial-gradient(circle at top left, #736548 0%, #574b32 60%), #2c2f34;
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc._1-nxqgklmKGuYo-Bi5zbk9 .meAbe3Sy_IJ4PngdGme2- {
-  background: radial-gradient(circle at top left, #5d7348 0%, #415732 60%),
-    #2c2f34;
+  background:
+    radial-gradient(circle at top left, #5d7348 0%, #415732 60%), #2c2f34;
 }
 ._3Eq1xKY1WwNcrWb8SNq8tc ._3Rx6PQCCOXnDRoU__IULtr {
   width: 100%;
@@ -3047,7 +3053,7 @@ div.react-flow__handle-right {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3379,7 +3385,7 @@ div.react-flow__handle-right {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3559,7 +3565,7 @@ div.react-flow__handle-right {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3694,7 +3700,7 @@ div.react-flow__handle-right {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3869,7 +3875,7 @@ div.react-flow__handle-right {
   flex-direction: column;
   overflow: hidden;
   transition-property: height;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   padding-left: 30px;
 }
@@ -3909,7 +3915,7 @@ div.react-flow__handle-right {
   height: 100%;
   background-color: #535353;
   transition-property: width;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 ._1_188Z8mN56wt5ykoDyWA5 ._3yfLac5uYSfmnvttqIy033 ._3cmDGnLwTwr4eTkH72PKfI {
@@ -3940,7 +3946,7 @@ div.react-flow__handle-right {
   height: 100%;
   background-color: #686868;
   transition-property: width;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 .EXtlCRbfkdi5Km4xSLu7a {
@@ -4263,7 +4269,7 @@ div.react-flow__handle-right {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4353,7 +4359,7 @@ div.react-flow__handle-right {
   text-transform: uppercase;
   transition-property: color, background-color;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
 }
 ._1NMSBccwO5Cu5ny71e3aeE
   .-ib5B3TS_O8YpuRfQ3_iP
@@ -4494,7 +4500,7 @@ div.react-flow__handle-right {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4632,7 +4638,7 @@ div.react-flow__handle-right {
   user-select: none;
   transition-property: color, background-color, opacity;
   transition-timing-function: ease-in-out;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   display: flex;
   flex-direction: column;
   align-items: center;

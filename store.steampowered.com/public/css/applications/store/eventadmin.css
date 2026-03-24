@@ -801,7 +801,7 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   padding: 8px 12px;
   color: #0e141b;
   right: unset;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .NVuxjpTCUClP-4RsNDDvk:hover {
   box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
@@ -838,7 +838,7 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   width: 0;
   height: 0;
   padding: 7px 0;
-  transition: padding-right .2s ease-out;
+  transition: padding-right 0.2s ease-out;
   font-size: 13px;
 }
 .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi._2XN3sBlgsLE3n5WrKOkWxi {
@@ -930,7 +930,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   padding: 8px 12px;
   color: #0e141b;
   right: unset;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .BwHJdoHlv8wy5OypqL_b7 .FollowButton {
   text-shadow: none;

@@ -370,7 +370,7 @@
   font-weight: 500;
   z-index: 1;
   transform: translate(-50%, 120px);
-  transition: transform .3s ease-in;
+  transition: transform 0.3s ease-in;
 }
 ._1bPMNcsgqa-akKYfelwilP.CLKT9CFoyEByzdSrgSzE2 {
   transform: translate(-50%, 0);

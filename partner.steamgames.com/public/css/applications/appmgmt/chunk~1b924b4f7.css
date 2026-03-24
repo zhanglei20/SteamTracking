@@ -12,7 +12,7 @@
   font-family: var(--font-family);
   background: var(--background);
   transition-property: opacity, background, color, box-shadow;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
 }
 ._0BH1ydyFmSnUvoVK2hIc:hover {
@@ -1149,7 +1149,9 @@
   background: var(--popover-background, #3d4450);
   box-shadow: var(--popover-shadow, 3px 3px 5px -3px #000);
   opacity: 0;
-  transition: display 150ms allow-discrete, opacity 150ms linear;
+  transition:
+    display 150ms allow-discrete,
+    opacity 150ms linear;
   border: none;
 }
 ._2i2FUBZKGyiP5Sb6tuASpO:not(:popover-open):not(.\:popover-open) {
@@ -1297,7 +1299,9 @@
   );
   color: #e0e1e6;
   padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  box-shadow:
+    1px 1px 8px #0005,
+    2px 2px 16px 1px #0005;
   user-select: none;
 }
 ._3P_fJH02fBcdGM2etenWu7 {

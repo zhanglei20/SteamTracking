@@ -1,6 +1,6 @@
 ._3cEK5JKL6FSqY5FgD_4hFA {
   opacity: 1;
-  transition: opacity .2s ease .1s;
+  transition: opacity 0.2s ease 0.1s;
   display: block;
   top: 4px;
   right: 4px;
@@ -27,7 +27,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   user-select: none;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 ._3HELOo0qFfDrRZ9Sa1GXeF ._2YhOhoyYNbue9fEPMYPiq2 {
   font-weight: 600;
@@ -112,7 +112,7 @@
   height: auto;
   position: relative;
   z-index: 1;
-  transition: filter .2s ease-in-out;
+  transition: filter 0.2s ease-in-out;
   filter: blur(0px);
 }
 ._30BxsjSFrUWCBKntWK9hPg .ETHkFxrlPF1znTFXFtjtK {
@@ -127,7 +127,7 @@
   left: 0;
   right: 0;
   opacity: 0;
-  transition: opacity .2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   background: #324966ab;
   gap: 12px;
 }
@@ -179,7 +179,7 @@
   width: 100%;
   height: 100%;
   transition-property: transform, opacity;
-  transition-duration: .21s;
+  transition-duration: 0.21s;
   transition-timing-function: ease-out;
 }
 .h0pphNa_Fdu4JUevL5V9y img {
@@ -201,7 +201,7 @@
   border: 1px solid #aaa3;
   opacity: 0.75;
   transition-property: opacity;
-  transition-duration: .16s;
+  transition-duration: 0.16s;
   transition-timing-function: ease-in-out;
 }
 .h0pphNa_Fdu4JUevL5V9y:hover ._2sJlIVAVWZ2I2iA6IO4pOv {
@@ -217,7 +217,7 @@
   margin-left: 18px;
   margin-top: 15px;
   transition-property: fill;
-  transition-duration: .16s;
+  transition-duration: 0.16s;
   transition-timing-function: ease-in-out;
 }
 ._3mzKCP4FLx7fUVeKrhZ1nn {
@@ -234,7 +234,7 @@
   opacity: 0;
   pointer-events: none;
   transition-property: opacity;
-  transition-duration: .26s;
+  transition-duration: 0.26s;
   transition-timing-function: ease-in-out;
 }
 ._3mzKCP4FLx7fUVeKrhZ1nn._3D99vg3-OLr6XsvxrtzhZa {
@@ -349,7 +349,9 @@
 ._3FEleXPlKpZDafxKEN4uFE ._2JXx1zI7R3I4jr4qLUrfCV > svg {
   height: 100px;
   width: 100px;
-  transition: transform .3s ease-out, opacity .2s ease-out;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.2s ease-out;
   padding: 5px;
 }
 ._3FEleXPlKpZDafxKEN4uFE ._2JXx1zI7R3I4jr4qLUrfCV > svg > path {
@@ -383,7 +385,7 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   animation-name: _8Lmw8N5QKhPfKCkJ0JiiP;
-  animation-duration: .3s;
+  animation-duration: 0.3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
@@ -509,7 +511,7 @@
 }
 .HqVrl-7SIPNdZd1uHcMK1 .SliderControl {
   --slider-handle-width: 12px;
-  transform: all .3s ease-in-out;
+  transform: all 0.3s ease-in-out;
 }
 .HqVrl-7SIPNdZd1uHcMK1 .SliderControl:hover .SliderHandle {
   height: 14px;
@@ -534,7 +536,9 @@
   left: 0;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 150ms ease-in, transform 150ms ease-out;
+  transition:
+    opacity 150ms ease-in,
+    transform 150ms ease-out;
   pointer-events: none;
 }
 ._1OFXTlU4FVAAUE-TYyLlPK:empty {
@@ -555,7 +559,7 @@
   justify-content: center;
   text-align: center;
   transition-property: color;
-  transition-duration: .08s;
+  transition-duration: 0.08s;
   transition-timing-function: ease-out;
   color: #b8bcbf;
   overflow: visible;
@@ -589,7 +593,7 @@
   color: #b8bcbf;
 }
 ._3ds1FPfTQmWS0YwAlGMj-c {
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 ._3ds1FPfTQmWS0YwAlGMj-c._3JIjyte4XlKU6XqBieb3QS {
   transform: rotate(90deg);
@@ -925,7 +929,7 @@
   right: 10px;
   width: 20px;
   opacity: 0;
-  transition: opacity .2s ease-in;
+  transition: opacity 0.2s ease-in;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   padding: 5px 5px 1px 5px;

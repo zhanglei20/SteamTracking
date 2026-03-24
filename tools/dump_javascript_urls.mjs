@@ -161,6 +161,7 @@ function FormatNode(node, noWrap = false) {
 		str.push(...FormatNode(node.left, true));
 		str.push(...FormatNode(node.right, true));
 	} else {
+		// biome-ignore lint: noTemplateCurlyInString
 		str.push("${}");
 	}
 

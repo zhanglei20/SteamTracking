@@ -72,7 +72,7 @@
   font-style: italic;
 }
 p._3lnqGBzYap-Z2T81XBiBUU {
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 ._DE_6XhnSqABczbJ55rNJ p._3lnqGBzYap-Z2T81XBiBUU,
 ._2Hj1tfDjpLvBVTHTqAVcYB p._3lnqGBzYap-Z2T81XBiBUU,
@@ -304,7 +304,7 @@ th._3rLIt0O8F7iG6B2RmC3cYa:first-of-type {
   height: 12px;
   fill: #aebac2;
   transition: transform;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
 }
 ._2cmZMzZlRrszDBF97Di0cD .uAvfe31kBh5TZrse069d1:hover {
   color: #fff;
@@ -445,7 +445,7 @@ a._3nRRZ1AKPWQnyWTcT1RDt9 {
   padding: 8px 20px;
   display: inline-block;
   border-radius: 28px;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 a._3nRRZ1AKPWQnyWTcT1RDt9:hover {
   box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
@@ -576,7 +576,7 @@ iframe._1j2vixiqbbe8GqxA-cmlhA {
 ._3uA0hv9La9Do6XtRycM0RX button.CarouselBtnLeft {
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0.1;
-  transition: opacity .2s ease-in;
+  transition: opacity 0.2s ease-in;
   height: 50%;
   top: 25%;
 }
@@ -867,7 +867,7 @@ a._26nnhy-kEQVG1EJvwt-YOG
 html:not(.touch)
   .vPo2jxLA9iAVrt49Ic3c1._1YjsRp8XbwoXVWYYvWD7iv
   ._19p2Qdr48bduJICtjBoXVv {
-  transition: padding-right .2s ease-out;
+  transition: padding-right 0.2s ease-out;
 }
 .vPo2jxLA9iAVrt49Ic3c1._1YjsRp8XbwoXVWYYvWD7iv:hover ._1Tp8K4gynWBOBpC9tS_xXV,
 ._3YUEYUcuh0PTxYsV6Fecqq
@@ -1105,8 +1105,11 @@ html:not(.touch)
 ._1DsumfIa3MlkzUV9EXY5W9._3BESV4eFnr4EnaSaJSdk6T ._2n0EiKMGRP-r_BI5tDtttu {
   font-size: 14px;
   font-weight: 500;
-  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000, 1px 1px
-    2px #000;
+  text-shadow:
+    -1px -1px 4px #000,
+    1px -1px 4px #000,
+    -1px 1px 2px #000,
+    1px 1px 2px #000;
 }
 ._1DsumfIa3MlkzUV9EXY5W9.rpZ9bKyFXYvNQvgtKn5GV ._2n0EiKMGRP-r_BI5tDtttu {
   filter: brightness(0.75);
@@ -1117,12 +1120,12 @@ html:not(.touch)
   z-index: 1;
 }
 ._1DsumfIa3MlkzUV9EXY5W9 .VmQTOrz5MPOWte5C9K7YS {
-  animation-delay: .2s;
+  animation-delay: 0.2s;
   margin-top: 2px;
   z-index: 2;
 }
 ._1DsumfIa3MlkzUV9EXY5W9 ._29mtadjX8N6pRn5TX1nA0o {
-  animation-delay: .4s;
+  animation-delay: 0.4s;
   margin-top: 4px;
   z-index: 3;
 }
@@ -1194,7 +1197,7 @@ html:not(.touch)
   margin: 0px 0px;
   transform: scale(0.86, 0.86) translateX(0px);
   transition-property: transform;
-  transition-duration: .34s;
+  transition-duration: 0.34s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0;
@@ -1324,7 +1327,7 @@ html:not(.touch)
   height: calc(100% - 2px);
   width: calc(100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter .24s ease-in-out;
+  transition: filter 0.24s ease-in-out;
 }
 ._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {
@@ -1561,7 +1564,7 @@ img._1ZQW1wV5cNj3sDpibfbUqs {
   width: 20px;
   height: 20px;
   transition-property: width, height, margin-top, margin-bottom;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
 }
 img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
@@ -1623,11 +1626,11 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
 }
 .emoticon_hover_arrow.left {
   background-position: left top;
-  left: .5px;
+  left: 0.5px;
 }
 .emoticon_hover_arrow.right {
   background-position: right top;
-  right: .5px;
+  right: 0.5px;
 }
 .hover_arrow {
   position: absolute;
@@ -2013,7 +2016,7 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   min-height: 46px;
   margin-bottom: 2px;
   background: #24272b;
-  transition: background .3s ease;
+  transition: background 0.3s ease;
 }
 ._3Ule3rolhZJiBN4yNNtk1s .RVIs84dAE6wHcjH9tkinc:not(.jaQN2IyN4P8LZXJ6P11qy) {
   background: linear-gradient(136deg, #0056d6 1%, #1a9fff 60%);
@@ -2071,9 +2074,9 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   flex-direction: column;
   margin-left: 8px;
   box-shadow: #000 0px 0px 4px inset;
-  transition-property: width, max-width, min-width, border-radius,
-    background-position;
-  transition-duration: .3s, .3s, .3s, .6s;
+  transition-property:
+    width, max-width, min-width, border-radius, background-position;
+  transition-duration: 0.3s, 0.3s, 0.3s, 0.6s;
   background: radial-gradient(
     128px 128px at 20% 50%,
     #1da834 0%,
@@ -2091,7 +2094,7 @@ img._1ZQW1wV5cNj3sDpibfbUqs._20l1z3ShpHQ9njRDYgy1I5 {
   margin-top: 12px;
   margin-bottom: -18px;
   opacity: 1;
-  transition: opacity .3s ease-out;
+  transition: opacity 0.3s ease-out;
   white-space: nowrap;
   user-select: none;
 }

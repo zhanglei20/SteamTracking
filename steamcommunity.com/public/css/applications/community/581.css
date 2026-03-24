@@ -36,7 +36,7 @@
 .vquL9mspYzz2tBtxrzqw9 {
   color: #adaeaf;
   transition-property: padding-left, color;
-  transition-duration: .15s;
+  transition-duration: 0.15s;
   transition-timing-function: ease-out;
   line-height: 26px;
   cursor: pointer;
@@ -149,7 +149,7 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   pointer-events: none;
 }
 ._1UhmxrINvvaNnHzhCPoill ._28TC1EYm0jlWPjyk89xXCL._3bfDVSvzMDkk4s1j0Vw8jI {
-  animation: oABTo2lkoYYI5YMYaeq_Q .5s ease-out;
+  animation: oABTo2lkoYYI5YMYaeq_Q 0.5s ease-out;
 }
 @keyframes oABTo2lkoYYI5YMYaeq_Q {
   0% {
@@ -164,7 +164,9 @@ span._2_0t_pDYqkDefMC0gDZV8G {
 }
 ._1UhmxrINvvaNnHzhCPoill ._61nYWo98IhSjR8PWtQX9O {
   pointer-events: none;
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3), 0 -6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0 12px 16px rgba(0, 0, 0, 0.3),
+    0 -6px 12px rgba(0, 0, 0, 0.15);
 }
 .riuelIz655g_IBddWfLQ- {
   cursor: grab;

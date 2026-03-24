@@ -28,7 +28,7 @@
   height: 250px;
 }
 ._3bVwKmAuh70AH8XVDnyf5z img {
-  transition: opacity .24s ease-in-out;
+  transition: opacity 0.24s ease-in-out;
   opacity: 0.6;
   display: block;
 }
@@ -58,7 +58,9 @@
   border-radius: 2px;
   padding: 0 6px;
   opacity: 0;
-  transition: opacity .24s ease-in-out, transform .24s ease-in-out;
+  transition:
+    opacity 0.24s ease-in-out,
+    transform 0.24s ease-in-out;
 }
 ._3bVwKmAuh70AH8XVDnyf5z:hover img {
   opacity: 1;
@@ -211,7 +213,7 @@
   height: auto;
   position: relative;
   left: 0px;
-  transition: transform .4s ease-out;
+  transition: transform 0.4s ease-out;
   top: 0px;
   display: block;
 }
@@ -293,7 +295,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  transition: background-color .24s ease-in-out;
+  transition: background-color 0.24s ease-in-out;
 }
 .ENbI1gFgvIca6HSKAbfiJ {
   margin: 10px 20px;
@@ -309,8 +311,10 @@
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
-    ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
+    color 0.24s ease-in-out;
 }
 .items_in_row_4 .ENbI1gFgvIca6HSKAbfiJ {
   line-height: 16px;
@@ -329,8 +333,10 @@
   z-index: 2;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: filter .24s ease-in-out, transform .24s ease-in-out, color .24s
-    ease-in-out;
+  transition:
+    filter 0.24s ease-in-out,
+    transform 0.24s ease-in-out,
+    color 0.24s ease-in-out;
 }
 ._1MwNf8slOG9lOvAeOshmuu._1ruRSreC31IK4kUGUcSRDK {
   display: flex;
@@ -458,7 +464,7 @@
 }
 ._3cEK5JKL6FSqY5FgD_4hFA {
   opacity: 1;
-  transition: opacity .2s ease .1s;
+  transition: opacity 0.2s ease 0.1s;
   display: block;
   top: 4px;
   right: 4px;
@@ -606,7 +612,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -737,7 +743,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -927,7 +933,7 @@
   right: 10px;
   width: 20px;
   opacity: 0;
-  transition: opacity .2s ease-in;
+  transition: opacity 0.2s ease-in;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   padding: 5px 5px 1px 5px;
@@ -969,7 +975,7 @@
   margin-top: 20px;
   max-width: 100%;
   transform: scale(1);
-  transition: transform .21s ease-in-out;
+  transition: transform 0.21s ease-in-out;
 }
 ._1wbf-cPcI2i7efNOekBbhu:hover {
   transform: scale(1.03);

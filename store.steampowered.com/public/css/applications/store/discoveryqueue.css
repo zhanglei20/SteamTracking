@@ -130,7 +130,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber path {
   stroke: #67c1f5;
   animation-name: _1O-cWE6nuIVO3x6-Onw0IU;
-  animation-duration: .7s;
+  animation-duration: 0.7s;
   stroke-linecap: butt;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -261,7 +261,7 @@
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._2tXgejjqNKy6cSX1Lv7PrG {
   animation-delay: 0s;
   opacity: 0.06;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
 }
 ._2wAKy-0ZkO_vhbiQCP9MgE .SVGIcon_Throbber ._1-oUJqmCLOoGqVJz5dgj6J {
   animation-delay: -0.1s;
@@ -376,7 +376,7 @@
   margin: 0px 0px;
   transform: scale(0.86, 0.86) translateX(0px);
   transition-property: transform;
-  transition-duration: .34s;
+  transition-duration: 0.34s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0;
@@ -506,7 +506,7 @@
   height: calc(100% - 2px);
   width: calc(100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter .24s ease-in-out;
+  transition: filter 0.24s ease-in-out;
 }
 ._3h-QRJGxnVOIExtHD1R0f2.GamepadMode,
 .GamepadMode ._3h-QRJGxnVOIExtHD1R0f2 {
@@ -554,7 +554,7 @@
   align-items: center;
   color: #e5e5e5;
   cursor: pointer;
-  transition: color .1s ease;
+  transition: color 0.1s ease;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 400;
@@ -572,7 +572,7 @@
   height: 24px;
   width: 24px;
   fill: #fff;
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .ZyOLslFdmnVjR1OGpRaue {
   width: 80px;
@@ -594,7 +594,7 @@
 }
 ._3cEK5JKL6FSqY5FgD_4hFA {
   opacity: 1;
-  transition: opacity .2s ease .1s;
+  transition: opacity 0.2s ease 0.1s;
   display: block;
   top: 4px;
   right: 4px;
@@ -687,7 +687,7 @@
   right: 10px;
   width: 20px;
   opacity: 0;
-  transition: opacity .2s ease-in;
+  transition: opacity 0.2s ease-in;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   padding: 5px 5px 1px 5px;
@@ -723,7 +723,9 @@
   margin-bottom: 0px;
   transform: scale(1);
   filter: saturate(0.85);
-  transition: transform .21s ease-in-out, filter .21s ease-in-out;
+  transition:
+    transform 0.21s ease-in-out,
+    filter 0.21s ease-in-out;
 }
 ._2bT8irkKNnA5sxFG3MUXzH:hover {
   filter: saturate(1);
@@ -761,7 +763,7 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   user-select: none;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 ._3HELOo0qFfDrRZ9Sa1GXeF ._2YhOhoyYNbue9fEPMYPiq2 {
   font-weight: 600;
@@ -846,7 +848,9 @@
 ._3FEleXPlKpZDafxKEN4uFE ._2JXx1zI7R3I4jr4qLUrfCV > svg {
   height: 100px;
   width: 100px;
-  transition: transform .3s ease-out, opacity .2s ease-out;
+  transition:
+    transform 0.3s ease-out,
+    opacity 0.2s ease-out;
   padding: 5px;
 }
 ._3FEleXPlKpZDafxKEN4uFE ._2JXx1zI7R3I4jr4qLUrfCV > svg > path {
@@ -880,7 +884,7 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   animation-name: _8Lmw8N5QKhPfKCkJ0JiiP;
-  animation-duration: .3s;
+  animation-duration: 0.3s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
@@ -1006,7 +1010,7 @@
 }
 .HqVrl-7SIPNdZd1uHcMK1 .SliderControl {
   --slider-handle-width: 12px;
-  transform: all .3s ease-in-out;
+  transform: all 0.3s ease-in-out;
 }
 .HqVrl-7SIPNdZd1uHcMK1 .SliderControl:hover .SliderHandle {
   height: 14px;
@@ -1031,7 +1035,9 @@
   left: 0;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 150ms ease-in, transform 150ms ease-out;
+  transition:
+    opacity 150ms ease-in,
+    transform 150ms ease-out;
   pointer-events: none;
 }
 ._1OFXTlU4FVAAUE-TYyLlPK:empty {
@@ -1047,7 +1053,7 @@
   justify-content: center;
   text-align: center;
   transition-property: color;
-  transition-duration: .08s;
+  transition-duration: 0.08s;
   transition-timing-function: ease-out;
   color: #b8bcbf;
   overflow: visible;
@@ -1081,7 +1087,7 @@
   color: #b8bcbf;
 }
 ._3ds1FPfTQmWS0YwAlGMj-c {
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 ._3ds1FPfTQmWS0YwAlGMj-c._3JIjyte4XlKU6XqBieb3QS {
   transform: rotate(90deg);

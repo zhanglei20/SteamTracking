@@ -1,6 +1,6 @@
 .Fjfz2cC73ckcYluf8xJXh {
   background: var(--color-dull-8);
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   outline: none;
 }
 .Fjfz2cC73ckcYluf8xJXh:hover {
@@ -42,7 +42,7 @@
 }
 ._1nAGBiWu7n1ggCy-E5i035 img {
   cursor: pointer;
-  transition: transform .1s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 }
 ._1nAGBiWu7n1ggCy-E5i035 img:hover {
   filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.2));
@@ -298,7 +298,7 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   content: "";
   width: var(--track-width);
   height: var(--track-height);
-  transition: transform .2s ease-out;
+  transition: transform 0.2s ease-out;
   position: absolute;
   left: 0;
   top: 0;
@@ -525,7 +525,7 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   font-family: var(--font-family);
   background: var(--background);
   transition-property: opacity, background, color, box-shadow;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
 }
 ._0BH1ydyFmSnUvoVK2hIc:hover {
@@ -994,7 +994,7 @@ textarea._1vE-LsK6l_D_5yjbywZV1p {
   width: 16px;
   color: #1aa0ff80;
   transition-property: scale, color;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
 }
 ._3vaVGwEWyzdBk2qShNHAXp:hover svg {

@@ -58,7 +58,7 @@ try {
 		sourceType: "module",
 		ecmaFeatures: { jsx: true },
 	});
-} catch (err) {
+} catch (_err) {
 	try {
 		// Try again with 'script' source type if 'module' fails
 		ast = parse(sourceCode, {
@@ -98,7 +98,7 @@ function normalizeAst(ast) {
 
 	// Find webpack modules and parameters
 	traverse(ast, {
-		enter: (node, parent) => {
+		enter: (node) => {
 			if (
 				node.type === Syntax.Property &&
 				node.key &&
@@ -428,7 +428,7 @@ function normalizeAst(ast) {
 			}
 		},
 
-		leave: (node, parent) => {
+		leave: (node) => {
 			// Remove scopes when leaving function nodes
 			if (
 				node.type === Syntax.FunctionExpression ||

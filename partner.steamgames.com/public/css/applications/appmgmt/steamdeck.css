@@ -7,12 +7,12 @@
   color: #fff;
   font-weight: 400;
   font-size: 14px;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   font-family: "Motiva Sans", Arial, sans-serif;
 }
 .BasicUI ._3yxJH3baj7mwTTYzBIyi_Z {
   font-weight: 700 !important;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   font-size: 12px;
 }
 .Cek1s5Ixk2xYmkqjjESD0,
@@ -23,7 +23,7 @@
   justify-content: space-between;
   background-color: #3b5a7280;
   align-items: center;
-  transition: background-color .2s ease;
+  transition: background-color 0.2s ease;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -87,7 +87,7 @@
   border-radius: 2px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.32);
   transition-property: color, background-color, border-radius;
-  transition-duration: .1s;
+  transition-duration: 0.1s;
   transition-timing-function: ease;
   display: flex;
 }
@@ -357,7 +357,7 @@
   cursor: pointer;
   border-bottom: 4px solid transparent;
   transition-property: border-bottom-color;
-  transition-duration: .25s;
+  transition-duration: 0.25s;
   font-size: 14px;
   letter-spacing: 1px;
   color: #fff;

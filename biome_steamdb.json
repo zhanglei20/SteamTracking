@@ -1,19 +1,15 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+	"root": false,
+	"$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
 	"files": {
-		"include": [
-			"tools/*.mjs",
-			"./*.mjs"
-		]
+		"includes": ["**/tools/**/*.mjs", "**/*.mjs"]
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
 		"lineWidth": 120
 	},
-	"organizeImports": {
-		"enabled": true
-	},
+	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"linter": {
 		"enabled": true,
 		"rules": {

@@ -218,7 +218,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 12px;
-  transition: height .5s;
+  transition: height 0.5s;
   background-color: #0e141b;
 }
 ._2LyGIHuQ8SFKb5T262YUvg.GamepadMode,
@@ -263,13 +263,13 @@
   background-color: #1a9fff;
 }
 ._3Qa1urRRWR4tjkBSNaO8Wi._3Qa1urRRWR4tjkBSNaO8Wi svg {
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   height: 18px;
   margin-top: 4px;
 }
 ._3Qa1urRRWR4tjkBSNaO8Wi._3Qa1urRRWR4tjkBSNaO8Wi.r0ToHd0tmv46GM00Lr0a_ svg {
   transform: rotateZ(180deg);
-  transition: transform .2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .O_QQdR2Hi2oq9k3mKRAQl {
   display: flex;
@@ -1192,7 +1192,7 @@ button.vDtJqUVxjZtCpsN9muEoX.DialogButton.-ycr5X2s8Env2lwBiW1Gf.gpfocus {
   align-items: center;
   color: #8f98a0;
   width: fit-content;
-  transition: color .1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 ._34chYS1nDoOgMNeYQ2KpPQ ._1wt3faSKMXs0FgGEy9uvMF:hover {
   color: #fff;

@@ -162,7 +162,7 @@
   color: #fff;
   line-height: 26px;
   margin: 0;
-  margin-block-end: .2em;
+  margin-block-end: 0.2em;
   flex: 1;
 }
 ._3YSNlqOERJPDvATbhSyba4 .huv5kmY_qRW6CUhP41AX4 .NxUN-s-MoparNLrvqVXsN {
@@ -196,7 +196,7 @@
 }
 ._1AC_XZBw0R_ud0pPAJ1Nln h1 {
   font-size: 11px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: normal;
   text-transform: uppercase;
   color: #90aabb;
@@ -746,7 +746,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 ._2ilpH-HpvuSm6s5MWX5bA- ._2_vbZB-J_M1GH9js-PXnEj ._2yJ4jvaS0kUJdPVIPR_gld {
   font-size: 30px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .BasicUI
@@ -791,7 +791,9 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   flex-direction: column;
   align-items: center;
   position: relative;
-  transition: background-color .2s ease, border-radius .2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-radius 0.2s ease;
 }
 @media screen and (max-width: 910px) {
   ._2ilpH-HpvuSm6s5MWX5bA- .JYQgsMzgbFLgarphirEoQ ._3M92hj6aELzceURcKR7WFu {
@@ -930,7 +932,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   ._3M92hj6aELzceURcKR7WFu
   ._2iEkqauHWZiCAOo0cWqnPP {
   color: #66c0f4;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 .BasicUI
   ._2ilpH-HpvuSm6s5MWX5bA-
@@ -945,7 +947,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   ._3k_jxlKBddOAxgSknpHNTq {
   font-weight: 500;
   font-size: 12px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 .BasicUI
   ._2ilpH-HpvuSm6s5MWX5bA-
@@ -1042,7 +1044,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   color: #66c0f4;
   text-transform: uppercase;
   font-size: 12px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 ._2ilpH-HpvuSm6s5MWX5bA-
   ._164mmLkSJ91cXzABhIrlZq
@@ -1050,7 +1052,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   ._209Gyxysjz0vcGVVWuh_Xc
   ._1O3FSoJxkQYLv1MB6H7QNy {
   font-size: 16px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
 ._2ilpH-HpvuSm6s5MWX5bA- ._164mmLkSJ91cXzABhIrlZq ._1hgRCff96-fQY4zKEKUkac {
   display: flex;
@@ -1150,7 +1152,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   column-gap: 24px;
   padding: 10px;
   position: relative;
-  transition: opacity .2s ease-out;
+  transition: opacity 0.2s ease-out;
   opacity: 0;
 }
 @media screen and (max-width: 910px) {
@@ -1202,7 +1204,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: opacity .3s ease-in;
+  transition: opacity 0.3s ease-in;
   opacity: 0;
   pointer-events: none;
 }
@@ -1235,7 +1237,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 ._1WCEAVbVX-TuOWAkFll4DS {
   font-weight: 500;
   font-size: 12px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 ._1WCEAVbVX-TuOWAkFll4DS ._3-jpV0SaW4qH2i8S7BXeAB {
   width: 16px;
@@ -1274,7 +1276,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   display: flex;
   justify-content: end;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
-  transition: border .3s ease;
+  transition: border 0.3s ease;
   border: 2px solid #2b4155;
 }
 ._28-JzhtXHYEcY9I5iFk3YP:hover {
@@ -1296,7 +1298,7 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: .03em;
+  letter-spacing: 0.03em;
   padding-top: 2px;
   margin-bottom: 2px;
 }
@@ -1344,7 +1346,8 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
   }
 }
 .raNwGKfW_4_WgrvVN7dq_ {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner.png?v=2")
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner.png?v=2")
     center no-repeat,
     linear-gradient(
       90deg,
@@ -1364,14 +1367,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .raNwGKfW_4_WgrvVN7dq_ {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner_mobile.png?v=1")
-      center / contain no-repeat, #3e3274;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_adventurer_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #3e3274;
     background-position: top;
   }
 }
 .EwXMZcXfMhx8IXHsX2jwt {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner.png?v=2")
-    center no-repeat, #f8aba5;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner.png?v=2")
+    center no-repeat,
+    #f8aba5;
   background-position: top;
 }
 .EwXMZcXfMhx8IXHsX2jwt ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1383,14 +1390,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .EwXMZcXfMhx8IXHsX2jwt {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner_mobile.png?v=1")
-      center / contain no-repeat, #f8aba5;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_anime_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #f8aba5;
     background-position: top;
   }
 }
 .IXTWgAQld_EMABNkCGbWH {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner.png?v=2")
-    center no-repeat, linear-gradient(90deg, #ff8031 54.5%, #de3748 78.5%);
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner.png?v=2")
+    center no-repeat,
+    linear-gradient(90deg, #ff8031 54.5%, #de3748 78.5%);
   background-position: top;
 }
 .IXTWgAQld_EMABNkCGbWH ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1402,14 +1413,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .IXTWgAQld_EMABNkCGbWH {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner_mobile.png?v=1")
-      center / contain no-repeat, #ff8031;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_apocalypse_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #ff8031;
     background-position: top;
   }
 }
 .LNbx62cQQ_D4Ln0UFRSZR {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner.png?v=2")
-    center no-repeat, #fff;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner.png?v=2")
+    center no-repeat,
+    #fff;
   background-position: top;
 }
 .LNbx62cQQ_D4Ln0UFRSZR ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1421,14 +1436,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .LNbx62cQQ_D4Ln0UFRSZR {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner_mobile.png?v=1")
-      center / contain no-repeat, #fff;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_astronaut_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #fff;
     background-position: top;
   }
 }
 ._3PDsNvk9wHPIT_meJVEv39 {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner.png?v=2")
-    center no-repeat, linear-gradient(90deg, #f1d1d4 46.5%, #eaeceb 79%);
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner.png?v=2")
+    center no-repeat,
+    linear-gradient(90deg, #f1d1d4 46.5%, #eaeceb 79%);
   background-position: top;
 }
 ._3PDsNvk9wHPIT_meJVEv39 ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1440,14 +1459,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._3PDsNvk9wHPIT_meJVEv39 {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner_mobile.png?v=1")
-      center / contain no-repeat, #f1d1d4;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_beach_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #f1d1d4;
     background-position: top;
   }
 }
 ._3diT7BTktlk0puAWr6yL9w {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner.png?v=2")
-    center no-repeat, #fef1e9;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner.png?v=2")
+    center no-repeat,
+    #fef1e9;
   background-position: top;
 }
 ._3diT7BTktlk0puAWr6yL9w ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1459,14 +1482,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._3diT7BTktlk0puAWr6yL9w {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner_mobile.png?v=1")
-      center / contain no-repeat, #fef1e9;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bed_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #fef1e9;
     background-position: top;
   }
 }
 .lZhhgVZvpy277i5CIZsxv {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner.png?v=2")
-    center no-repeat, linear-gradient(90deg, #115352 32.5%, #017f7e 57.5%);
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner.png?v=2")
+    center no-repeat,
+    linear-gradient(90deg, #115352 32.5%, #017f7e 57.5%);
   background-position: top;
 }
 .lZhhgVZvpy277i5CIZsxv ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1478,14 +1505,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .lZhhgVZvpy277i5CIZsxv {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner_mobile.png?v=1")
-      center / contain no-repeat, #017f7e;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_bus_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #017f7e;
     background-position: top;
   }
 }
 ._3uXZSulc-St3wA_mxmp0A_ {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner.png?v=3")
-    center no-repeat, linear-gradient(90deg, #abe2ba 75.5%, #fcf2b7 100%);
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner.png?v=3")
+    center no-repeat,
+    linear-gradient(90deg, #abe2ba 75.5%, #fcf2b7 100%);
   background-position: top;
 }
 ._3uXZSulc-St3wA_mxmp0A_ ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1497,14 +1528,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._3uXZSulc-St3wA_mxmp0A_ {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner_mobile.png?v=1")
-      center / contain no-repeat, #abe2ba;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_busstop_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #abe2ba;
     background-position: top;
   }
 }
 .yBV0Z8rYkNE2hhalghMvt {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner.png?v=2")
-    center no-repeat, #18183e;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner.png?v=2")
+    center no-repeat,
+    #18183e;
   background-position: top;
 }
 .yBV0Z8rYkNE2hhalghMvt ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1516,14 +1551,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .yBV0Z8rYkNE2hhalghMvt {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner_mobile.png?v=1")
-      center / contain no-repeat, #171128;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #171128;
     background-position: top;
   }
 }
 ._2Z4fMLt-xMQ9mMYQ6F8Apk {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner.png?v=2")
-    center no-repeat, #01346d;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner.png?v=2")
+    center no-repeat,
+    #01346d;
   background-position: top;
 }
 ._2Z4fMLt-xMQ9mMYQ6F8Apk ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1535,14 +1574,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._2Z4fMLt-xMQ9mMYQ6F8Apk {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner_mobile.png?v=1")
-      center / contain no-repeat, #01346d;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_car_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #01346d;
     background-position: top;
   }
 }
 .ZNsKNiDvYdo0fdE1DD7M0 {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner.png?v=2")
-    center no-repeat, #2f294d;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner.png?v=2")
+    center no-repeat,
+    #2f294d;
   background-position: top;
 }
 .ZNsKNiDvYdo0fdE1DD7M0 ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1554,14 +1597,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .ZNsKNiDvYdo0fdE1DD7M0 {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner_mobile.png?v=1")
-      center / contain no-repeat, #2f294d;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_city_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #2f294d;
     background-position: top;
   }
 }
 .f5iMmXzfk0F0i8JDhk-0G {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner.png?v=2")
-    center no-repeat, #e5e59b;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner.png?v=2")
+    center no-repeat,
+    #e5e59b;
   background-position: top;
 }
 .f5iMmXzfk0F0i8JDhk-0G ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1573,14 +1620,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .f5iMmXzfk0F0i8JDhk-0G {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner_mobile.png?v=1")
-      center / contain no-repeat, #e5e59b;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_family_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #e5e59b;
     background-position: top;
   }
 }
 ._34SPdiHy-XcKAe7xr1tUCM {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner.png?v=2")
-    center no-repeat, #c5b730;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner.png?v=2")
+    center no-repeat,
+    #c5b730;
   background-position: top;
 }
 ._34SPdiHy-XcKAe7xr1tUCM ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1592,14 +1643,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._34SPdiHy-XcKAe7xr1tUCM {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner_mobile.png?v=1")
-      center / contain no-repeat, #c5b730;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #c5b730;
     background-position: top;
   }
 }
 ._3LVfeJCSquA6caK-yXajmH {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner.png?v=2")
-    center no-repeat, #161a3d;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner.png?v=2")
+    center no-repeat,
+    #161a3d;
   background-position: top;
 }
 ._3LVfeJCSquA6caK-yXajmH ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1611,14 +1666,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._3LVfeJCSquA6caK-yXajmH {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner_mobile.png?v=1")
-      center / contain no-repeat, #161a3d;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_knight_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #161a3d;
     background-position: top;
   }
 }
 ._1YxR3MFhDWSooqc0R5jKLw {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner.png?v=2")
-    center no-repeat, #3d4a90;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner.png?v=2")
+    center no-repeat,
+    #3d4a90;
   background-position: top;
 }
 ._1YxR3MFhDWSooqc0R5jKLw ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1630,14 +1689,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._1YxR3MFhDWSooqc0R5jKLw {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner_mobile.png?v=1")
-      center / contain no-repeat, #3d4a90;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_miner_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #3d4a90;
     background-position: top;
   }
 }
 ._2z91XhCKqvwmYqkRndpTq3 {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner.png?v=2")
-    center no-repeat, #fea190;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner.png?v=2")
+    center no-repeat,
+    #fea190;
   background-position: top;
 }
 ._2z91XhCKqvwmYqkRndpTq3 ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1649,14 +1712,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._2z91XhCKqvwmYqkRndpTq3 {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner_mobile.png?v=1")
-      center / contain no-repeat, #fea190;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_porch_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #fea190;
     background-position: top;
   }
 }
 ._1jvo4urjLahEQx0CgrItEb {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner.png?v=2")
-    center no-repeat, #2b2227;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner.png?v=2")
+    center no-repeat,
+    #2b2227;
   background-position: top;
 }
 ._1jvo4urjLahEQx0CgrItEb ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1668,14 +1735,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._1jvo4urjLahEQx0CgrItEb {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner_mobile.png?v=1")
-      center / contain no-repeat, #2b2227;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_robot_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #2b2227;
     background-position: top;
   }
 }
 ._2v6byLboEtxj9hPQ_kgSJz {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner.png?v=2")
-    center no-repeat, #3279ad;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner.png?v=2")
+    center no-repeat,
+    #3279ad;
   background-position: top;
 }
 ._2v6byLboEtxj9hPQ_kgSJz ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1687,14 +1758,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._2v6byLboEtxj9hPQ_kgSJz {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner_mobile.png?v=1")
-      center / contain no-repeat, #3279ad;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_superhero_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #3279ad;
     background-position: top;
   }
 }
 .urO4erFoFvnP14FJ41NMD {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner.png?v=2")
-    center no-repeat, #1d3132;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner.png?v=2")
+    center no-repeat,
+    #1d3132;
   background-position: top;
 }
 .urO4erFoFvnP14FJ41NMD ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1706,14 +1781,18 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   .urO4erFoFvnP14FJ41NMD {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner_mobile.png?v=1")
-      center / contain no-repeat, #1d3132;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_woodsman_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #1d3132;
     background-position: top;
   }
 }
 ._3OCIBFe-fNBm1tXmL490m4 {
-  background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner.png?v=2")
-    center no-repeat, #220445;
+  background:
+    url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner.png?v=2")
+    center no-repeat,
+    #220445;
   background-position: top;
 }
 ._3OCIBFe-fNBm1tXmL490m4 ._2whUPn_CZ5_BidCN9GODA5 {
@@ -1725,8 +1804,10 @@ button.DialogButton._1hwFIOidJj1HaD2_cI4NRD {
 }
 @media screen and (max-width: 500px) {
   ._3OCIBFe-fNBm1tXmL490m4 {
-    background: url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner_mobile.png?v=1")
-      center / contain no-repeat, #220445;
+    background:
+      url("https://cdn.fastly.steamstatic.com/store/steamdeck/topplayedbanners/deck_zombies_banner_mobile.png?v=1")
+      center / contain no-repeat,
+      #220445;
     background-position: top;
   }
 }
@@ -1897,7 +1978,7 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   padding: 8px 12px;
   color: #0e141b;
   right: unset;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .NVuxjpTCUClP-4RsNDDvk:hover {
   box-shadow: 0px 6px 12px rgba(11, 27, 41, 0.2);
@@ -1934,7 +2015,7 @@ html.responsive.touch ._1dm-6uzq_x5Gqo421G3a1r .WishlistButtonText {
   width: 0;
   height: 0;
   padding: 7px 0;
-  transition: padding-right .2s ease-out;
+  transition: padding-right 0.2s ease-out;
   font-size: 13px;
 }
 .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi._2XN3sBlgsLE3n5WrKOkWxi {
@@ -2026,7 +2107,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   padding: 8px 12px;
   color: #0e141b;
   right: unset;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .BwHJdoHlv8wy5OypqL_b7 .FollowButton {
   text-shadow: none;
@@ -2438,7 +2519,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   margin: 0px 0px;
   transform: scale(0.86, 0.86) translateX(0px);
   transition-property: transform;
-  transition-duration: .34s;
+  transition-duration: 0.34s;
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0;
@@ -2569,7 +2650,7 @@ html.touch .c-TDTqD2D5mBLfTqn3fSV ._2PmgMkPwEgmuCJVZLTGSPi,
   height: calc(100% - 2px);
   width: calc(100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter .24s ease-in-out;
+  transition: filter 0.24s ease-in-out;
 }
 [data-status-position="border"] ._3qaudpkfSKoxlwfA-deQLX {
   border-color: transparent;

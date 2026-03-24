@@ -7,7 +7,7 @@
   --text-color: #ffffff;
   --text-muted-color: #dbdbdb;
   --padding: 0 var(--spacing-2);
-  transition: box-shadow .2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
 }
 :where(._1fNVqPb5rhUOTSV5nEBHdl)._1K_Ve980-qBq8l1-cZJdw1 {
@@ -89,7 +89,7 @@
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH) {
   background-color: var(--bg-color, var(--color-debug));
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   cursor: pointer;
   position: relative;
   color: var(--text-color);
@@ -1034,7 +1034,7 @@
 :where(._2aNlsjcdOdHOtP8uACA3bM)[data-selected="false"] {
   cursor: pointer;
   color: var(--text-muted-color);
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM)[data-selected="true"] {
   color: var(--text-color);

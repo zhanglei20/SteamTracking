@@ -140,7 +140,7 @@ b {
   padding-left: 0px;
   text-transform: uppercase;
   font-size: 14px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   font-weight: 400;
   display: flex;
   justify-content: start;
@@ -362,7 +362,7 @@ b {
 ._1ABCOz8DSrl-YJdh1xD-m0 {
   color: #dfe3e6;
   transition-property: background, color, box-shadow;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
@@ -383,7 +383,7 @@ b {
   align-items: center;
   color: #dfe3e6;
   transition-property: background, color, box-shadow;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-out;
   background: #3d4450;
   padding: 6px 25px 6px 25px;
@@ -693,7 +693,7 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   justify-content: space-between;
   align-items: end;
   font-weight: 400;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   font-size: 18px;
   color: #fff;
   text-transform: uppercase;
@@ -725,16 +725,20 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   color: #000;
   border-radius: 3px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  transition: opacity .2s ease-out, transform .2s ease-out;
+  transition:
+    opacity 0.2s ease-out,
+    transform 0.2s ease-out;
 }
 ._2WMiQ5MbP_ReyaX5DOpoUD ._1_lNQ4U_L9dnN9dgC8h-m_ img {
   max-width: 100%;
   border-radius: 3px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  transition: box-shadow .2s ease-out;
+  transition: box-shadow 0.2s ease-out;
 }
 ._2WMiQ5MbP_ReyaX5DOpoUD ._1_lNQ4U_L9dnN9dgC8h-m_:hover img {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 5px rgba(0, 0, 0, 0.7);
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.5),
+    0 0 5px rgba(0, 0, 0, 0.7);
 }
 ._2WMiQ5MbP_ReyaX5DOpoUD
   ._1_lNQ4U_L9dnN9dgC8h-m_:hover
@@ -777,7 +781,9 @@ span._3nqxIgL0a0DbPZHRZRzWsp {
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
-  transition: --GradientColor1 .3s ease-in, --GradientColor2 .3s ease-in;
+  transition:
+    --GradientColor1 0.3s ease-in,
+    --GradientColor2 0.3s ease-in;
 }
 .c4K67QJ5cG4Zr1eb4H_Fu:hover {
   --GradientColor1: #0094a2;

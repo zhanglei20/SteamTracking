@@ -6,13 +6,6 @@ enum AudioPlayback
 	AudioPlayback_Idle = 3;
 }
 
-enum BundleSort
-{
-	k_BundleSort_Name = 1;
-	k_BundleSort_Price = 2;
-	k_BundleSort_Popular = 3;
-}
-
 enum by
 {
 	by_player = 1;
@@ -3906,13 +3899,6 @@ enum UnnamedEnumc3e92156fdf20f6c
 	k_ParentalFeature = 0;
 	k_ParentalPlaytime = 1;
 	k_PurchaseRequest = 2;
-}
-
-enum UnnamedEnumc4470fbad2c31445
-{
-	Show = 0;
-	Only = 1;
-	Hide = 2;
 }
 
 enum UnnamedEnumc44bf4cf244e5406
