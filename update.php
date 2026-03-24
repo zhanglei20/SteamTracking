@@ -181,8 +181,8 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			{
 				$this->Log( '{lightblue}Dumping web protobufs' );
 
-				$this->RunCommand( 'node dump_javascript_protobufs.mjs' );
-				$this->RunCommand( 'node dump_javascript_urls.mjs' );
+				$this->RunCommand( 'node tools/dump_javascript_protobufs.mjs' );
+				$this->RunCommand( 'node tools/dump_javascript_urls.mjs' );
 				$this->RunCommand( 'node tools/dump_javascript_svg.mjs' );
 			}
 
@@ -597,7 +597,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 						}
 
 						system(
-							'node generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ) .
+							'node tools/generate_clean_js.mjs ' . escapeshellarg( $File ) . ' ' . escapeshellarg( $CleanFile ) .
 							' && npm run prettier ' . escapeshellarg( $CleanFile )
 						);
 					}
@@ -856,7 +856,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessManifests( array $KnownUrls ) : array
 		{
-			$this->RunCommand( 'node generate_manifest_urls.mjs' );
+			$this->RunCommand( 'node tools/generate_manifest_urls.mjs' );
 
 			$URLsToFetch = [];
 			$KnownFilenames = [];
@@ -981,7 +981,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 		 */
 		private function ProcessSSRFiles() : array
 		{
-			$this->RunCommand( 'node generate_ssr_urls.mjs' );
+			$this->RunCommand( 'node tools/generate_ssr_urls.mjs' );
 
 			$ManifestUrlsPath = __DIR__ . '/.support/urls_from_ssr.txt';
 

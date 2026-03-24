@@ -3,38 +3,39 @@ import { join as pathJoin, resolve as pathResolve } from "node:path";
 import { Syntax, VisitorKeys } from "estraverse";
 
 const __dirname = import.meta.dirname;
+const rootDir = pathResolve(__dirname, "..");
 
 // https://github.com/estools/estraverse/pull/120
 Syntax.StaticBlock = "StaticBlock";
 VisitorKeys.StaticBlock = ["body"];
 
 const pathsToRecurse = [
-	pathResolve(__dirname, "ClientExtracted/"),
-	pathResolve(__dirname, "help.steampowered.com/"),
-	pathResolve(__dirname, "partner.steamgames.com/"),
-	pathResolve(__dirname, "steamcommunity.com/"),
-	pathResolve(__dirname, "store.steampowered.com/"),
-	pathResolve(__dirname, "checkout.steampowered.com/"),
-	pathResolve(__dirname, "www.dota2.com/"),
-	pathResolve(__dirname, "www.counter-strike.net/"),
-	pathResolve(__dirname, "www.playdeadlock.com/"),
+	pathResolve(rootDir, "ClientExtracted/"),
+	pathResolve(rootDir, "help.steampowered.com/"),
+	pathResolve(rootDir, "partner.steamgames.com/"),
+	pathResolve(rootDir, "steamcommunity.com/"),
+	pathResolve(rootDir, "store.steampowered.com/"),
+	pathResolve(rootDir, "checkout.steampowered.com/"),
+	pathResolve(rootDir, "www.dota2.com/"),
+	pathResolve(rootDir, "www.counter-strike.net/"),
+	pathResolve(rootDir, "www.playdeadlock.com/"),
 ];
 
 // Should this just be a recursive search for all webpack files?
 const paths = [
-	pathResolve(__dirname, "ClientExtracted/clientui/"),
-	pathResolve(__dirname, "ClientExtracted/steamui/"),
-	pathResolve(__dirname, "help.steampowered.com/public/javascript/applications/help/"),
-	pathResolve(__dirname, "partner.steamgames.com/public/javascript/applications/appmgmt/"),
-	pathResolve(__dirname, "steamcommunity.com/public/javascript/applications/community/"),
-	pathResolve(__dirname, "steamcommunity.com/public/javascript/webui/"),
-	pathResolve(__dirname, "store.steampowered.com/public/javascript/applications/interactive_recommender/"),
-	pathResolve(__dirname, "store.steampowered.com/public/javascript/applications/store/"),
-	pathResolve(__dirname, "store.steampowered.com/public/shared/javascript/legacy_web/"),
-	pathResolve(__dirname, "www.dota2.com/public/javascript/applications/dpc/"),
-	pathResolve(__dirname, "www.dota2.com/public/javascript/dota_react/"),
-	pathResolve(__dirname, "www.counter-strike.net/public/javascript/csgo_react/"),
-	pathResolve(__dirname, "www.playdeadlock.com/public/javascript/react/"),
+	pathResolve(rootDir, "ClientExtracted/clientui/"),
+	pathResolve(rootDir, "ClientExtracted/steamui/"),
+	pathResolve(rootDir, "help.steampowered.com/public/javascript/applications/help/"),
+	pathResolve(rootDir, "partner.steamgames.com/public/javascript/applications/appmgmt/"),
+	pathResolve(rootDir, "steamcommunity.com/public/javascript/applications/community/"),
+	pathResolve(rootDir, "steamcommunity.com/public/javascript/webui/"),
+	pathResolve(rootDir, "store.steampowered.com/public/javascript/applications/interactive_recommender/"),
+	pathResolve(rootDir, "store.steampowered.com/public/javascript/applications/store/"),
+	pathResolve(rootDir, "store.steampowered.com/public/shared/javascript/legacy_web/"),
+	pathResolve(rootDir, "www.dota2.com/public/javascript/applications/dpc/"),
+	pathResolve(rootDir, "www.dota2.com/public/javascript/dota_react/"),
+	pathResolve(rootDir, "www.counter-strike.net/public/javascript/csgo_react/"),
+	pathResolve(rootDir, "www.playdeadlock.com/public/javascript/react/"),
 ];
 
 /**

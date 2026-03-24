@@ -5,27 +5,28 @@ import { Syntax, traverse } from "estraverse";
 import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
 
 const __dirname = import.meta.dirname;
+const rootDir = pathResolve(__dirname, "..");
 
 const files = [
 	{
-		file: pathResolve(__dirname, "store.steampowered.com/public/javascript/applications/store/manifest.js"),
+		file: pathResolve(rootDir, "store.steampowered.com/public/javascript/applications/store/manifest.js"),
 		cdn: "https://store.steampowered.com/public/",
 	},
 	{
-		file: pathResolve(__dirname, "steamcommunity.com/public/javascript/applications/community/manifest.js"),
+		file: pathResolve(rootDir, "steamcommunity.com/public/javascript/applications/community/manifest.js"),
 		cdn: "https://steamcommunity.com/public/",
 	},
 	{
-		file: pathResolve(__dirname, "help.steampowered.com/public/javascript/applications/help/manifest.js"),
+		file: pathResolve(rootDir, "help.steampowered.com/public/javascript/applications/help/manifest.js"),
 		cdn: "https://help.steampowered.com/public/",
 	},
 	{
-		file: pathResolve(__dirname, "partner.steamgames.com/public/javascript/applications/appmgmt/manifest.js"),
+		file: pathResolve(rootDir, "partner.steamgames.com/public/javascript/applications/appmgmt/manifest.js"),
 		cdn: "https://partner.steamgames.com/public/",
 	},
 	/* different AST
 	{
-		file: pathResolve(__dirname, "partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js"),
+		file: pathResolve(rootDir, "partner.steamgames.com/public/javascript/webui/storeadmin/storeadmin.js"),
 		cdn: "https://partner.steamgames.com/public/",
 	},
 	*/
@@ -35,7 +36,7 @@ const urls = new Set();
 let oldUrls = [];
 
 try {
-	oldUrls = (await readFile(pathResolve(__dirname, ".support/urls_from_manifests.txt"), { encoding: "utf8" }))
+	oldUrls = (await readFile(pathResolve(rootDir, ".support/urls_from_manifests.txt"), { encoding: "utf8" }))
 		.trim()
 		.split("\n");
 } catch {
@@ -145,4 +146,4 @@ console.log("Found", urls.size, "urls");
 
 const strings = [...urls.values()].sort().join("\n") + "\n";
 
-await writeFile(pathResolve(__dirname, ".support/urls_from_manifests.txt"), strings);
+await writeFile(pathResolve(rootDir, ".support/urls_from_manifests.txt"), strings);

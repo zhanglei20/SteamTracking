@@ -46,7 +46,7 @@ console.log("Found", allStrings.size, "strings");
 const filteredStrings = [...allStrings.values()].filter((url) => !url.startsWith("https://swarm.valve.org/changes/"));
 const strings = filteredStrings.sort().join("\n") + "\n";
 
-await writeFile(pathResolve(__dirname, "API/JavascriptUrls.txt"), strings);
+await writeFile(pathResolve(__dirname, "../API/JavascriptUrls.txt"), strings);
 
 function IsLeftSideBaseUrlExpression(node) {
 	return node.left.type === Syntax.BinaryExpression

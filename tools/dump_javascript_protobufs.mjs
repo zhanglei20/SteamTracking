@@ -7,6 +7,7 @@ import { Syntax, traverse } from "estraverse";
 import { GetFilesToParse } from "./dump_javascript_paths.mjs";
 
 const __dirname = import.meta.dirname;
+const rootDir = pathResolve(__dirname, "..");
 
 /**
  * @typedef {Object} Field
@@ -76,7 +77,7 @@ const __dirname = import.meta.dirname;
  * @property {Map<string, string>} exportedIds
  */
 
-const outputPath = pathResolve(__dirname, "ProtobufsWebui/");
+const outputPath = pathResolve(rootDir, "ProtobufsWebui/");
 const files = await GetFilesToParse();
 
 const NotImplemented = "NotImplemented";
@@ -352,7 +353,7 @@ message NotImplemented {
 
 	console.log("Found", mergedEnums.size, "enums");
 
-	const stream = createWriteStream(pathResolve(__dirname, "Structs/webui_enums.steamd"), {
+	const stream = createWriteStream(pathResolve(rootDir, "Structs/webui_enums.steamd"), {
 		flags: "w",
 		encoding: "utf8",
 	});

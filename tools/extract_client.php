@@ -36,12 +36,12 @@ class ClientExtractor
 	{
 		$this->Log( 'Building tools' );
 
-		$ProtobufDumperProject = self::ROOT_DIR . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/ProtobufDumper.csproj';
+		$ProtobufDumperProject = __DIR__ . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/ProtobufDumper.csproj';
 
 		$this->RunCommand( 'dotnet clean --configuration Release ' . escapeshellarg( $ProtobufDumperProject ) );
 		$this->RunCommand( 'dotnet publish --configuration Release -p:PublishSingleFile=true --runtime linux-x64 --self-contained ' . escapeshellarg( $ProtobufDumperProject ) );
 
-		$DumpStringsDir = self::ROOT_DIR . '/DumpStrings';
+		$DumpStringsDir = __DIR__ . '/DumpStrings';
 
 		$this->RunCommand( 'cd ' . escapeshellarg( $DumpStringsDir ) . ' && go build' );
 	}
@@ -199,11 +199,11 @@ class ClientExtractor
 	{
 		$this->Log( 'Dumping protobufs' );
 
-		$ProtobufDumper = self::ROOT_DIR . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/linux-x64/publish/ProtobufDumper';
+		$ProtobufDumper = __DIR__ . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/linux-x64/publish/ProtobufDumper';
 
 		if( PHP_OS_FAMILY === 'Windows' )
 		{
-			$ProtobufDumper = self::ROOT_DIR . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/win-x64/publish/ProtobufDumper.exe';
+			$ProtobufDumper = __DIR__ . '/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/win-x64/publish/ProtobufDumper.exe';
 		}
 
 		$Binaries =
@@ -245,7 +245,7 @@ class ClientExtractor
 	{
 		$this->Log( 'Dumping strings' );
 
-		$DumpStrings = self::ROOT_DIR . '/DumpStrings/DumpStrings';
+		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings';
 		$UbuntuDir = self::LINUX_BINS_DIR . '/ubuntu12_32';
 		$SteamBinary = self::CLIENT_EXTRACTED_DIR . '/ubuntu12_32/steam';
 
@@ -341,7 +341,7 @@ class ClientExtractor
 	{
 		$this->Log( 'Prettifying javascript' );
 
-		$GenerateClean = self::ROOT_DIR . '/generate_clean_js.mjs';
+		$GenerateClean = __DIR__ . '/generate_clean_js.mjs';
 		$Directories =
 		[
 			self::CLIENT_EXTRACTED_DIR . '/steamui',

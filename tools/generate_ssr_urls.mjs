@@ -5,10 +5,11 @@ import { Syntax, traverse } from "estraverse";
 import "./dump_javascript_paths.mjs"; // fixing estraverse Syntax and VisitorKeys
 
 const __dirname = import.meta.dirname;
+const rootDir = pathResolve(__dirname, "..");
 
 const folders = [
 	{
-		folder: pathResolve(__dirname, "store.steampowered.com/ssr"),
+		folder: pathResolve(rootDir, "store.steampowered.com/ssr"),
 		cdn: "https://cdn.fastly.steamstatic.com/store/ssr/",
 	},
 ];
@@ -87,4 +88,4 @@ console.log("Found", urls.size, "SSR urls");
 
 const strings = [...urls.values()].sort().join("\n") + "\n";
 
-await writeFile(pathResolve(__dirname, ".support/urls_from_ssr.txt"), strings);
+await writeFile(pathResolve(rootDir, ".support/urls_from_ssr.txt"), strings);
