@@ -6,6 +6,13 @@ enum AudioPlayback
 	AudioPlayback_Idle = 3;
 }
 
+enum BundleSort
+{
+	k_BundleSort_Name = 1;
+	k_BundleSort_Price = 2;
+	k_BundleSort_Popular = 3;
+}
+
 enum by
 {
 	by_player = 1;
@@ -3368,6 +3375,36 @@ enum UnnamedEnum8ff352285a57e444
 	Suggest = 2;
 }
 
+enum UnnamedEnum904a3ce99bfd1fb9
+{
+	None = 0;
+	Minimized = 1;
+	Hidden = 2;
+	TooltipHint = 4;
+	NoTaskbarIcon = 8;
+	Resizable = 16;
+	NoScalePosition = 32;
+	NoScaleSize = 64;
+	Maximized = 128;
+	Composited = 256;
+	NotFocusable = 512;
+	FullScreen = 1024;
+	Fullscreen_Exclusive = 2048;
+	ApplyBrowserScaleToDimensions = 4096;
+	AlwaysOnTop = 8192;
+	NoWindowShadow = 16384;
+	NoMinimize = 32768;
+	PopUpMenuHint = 65536;
+	IgnoreSavedSize = 131072;
+	NoRoundedCorners = 262144;
+	ForceRoundedCorners = 524288;
+	OverrideRedirect = 1048576;
+	IgnoreSteamDisplayScale = 2097152;
+	TransparentParentWindow = 4194304;
+	DisableDPIScale = 8388608;
+	ForceBrowserVisible = 16777216;
+}
+
 enum UnnamedEnum940ff890eb1bf26e
 {
 	POPULAR = 1;
@@ -3899,6 +3936,13 @@ enum UnnamedEnumc3e92156fdf20f6c
 	k_ParentalFeature = 0;
 	k_ParentalPlaytime = 1;
 	k_PurchaseRequest = 2;
+}
+
+enum UnnamedEnumc4470fbad2c31445
+{
+	Show = 0;
+	Only = 1;
+	Hide = 2;
 }
 
 enum UnnamedEnumc44bf4cf244e5406

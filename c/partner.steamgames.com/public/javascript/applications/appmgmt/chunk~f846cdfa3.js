@@ -1425,6 +1425,7 @@
           `/admin/store/pageclusteredit/frontpage_china/${_}`,
         ContentHubEditor: (_, _) =>
           `/admin/store/pageclusteredit/content_hub_${_}/${_}`,
+        StoreAdminCreatorHome: () => "/admin/creatorhome",
       };
       const _ = ["edit", "diff", "revert", "prepare", "publish"],
         _ = [

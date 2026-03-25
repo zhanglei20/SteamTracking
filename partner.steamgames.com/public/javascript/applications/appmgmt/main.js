@@ -971,6 +971,7 @@
         StoreGameAdminRoot: () => "/admin/game/",
         StoreAdminRoot: () => "/admin/store/",
         StoreAdminReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
+        CreatorHomeAdminPage: () => "/admin/creatorhome/",
         AppCommunityItem: (e = ":appid", t = ":itemtype") =>
           `/apps/communityitems/${e}/${t}`,
         AppLandingPage: (e = ":appid") => `/apps/landing/${e}`,
@@ -1685,6 +1686,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -1722,6 +1724,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -1759,6 +1762,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -1796,6 +1800,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -1851,6 +1856,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -1904,6 +1910,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -1951,6 +1958,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -1988,6 +1996,7 @@
             r.e(1480),
             r.e(9161),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(2012),
             r.e(7352),
@@ -2015,6 +2024,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -2055,6 +2065,7 @@
             r.e(9646),
             r.e(1158),
             r.e(1917),
+            r.e(7368),
             r.e(9150),
             r.e(6627),
             r.e(2012),
@@ -2083,8 +2094,11 @@
               r.e(9150),
               r.e(906),
             ]).then(r.bind(r, 15898)),
-          ));
-      function Ae(e) {
+          )),
+        Ae = n.lazy(() =>
+          Promise.all([r.e(7368), r.e(7108)]).then(r.bind(r, 3191)),
+        );
+      function Ne(e) {
         const t = (0, _.Tc)("publisherid", "application_config"),
           r = n.useMemo(
             () => ({ country: _.TS.COUNTRY, language: _.TS.LANGUAGE }),
@@ -2097,7 +2111,7 @@
           children: (0, i.jsx)(c.O.Provider, {
             value: parseInt(t),
             children: (0, i.jsx)(L.s, {
-              children: (0, i.jsx)(Ue, {
+              children: (0, i.jsx)(He, {
                 children: (0, i.jsx)(s.V3, {
                   context: r,
                   children: (0, i.jsx)(me, {
@@ -2109,7 +2123,7 @@
           }),
         });
       }
-      function Ne(e) {
+      function Pe(e) {
         let { children: t } = e,
           r = (0, O.OU)([l.B.PricingTools(), l.B.PromotionTools()]);
         return (0, i.jsx)("div", {
@@ -2117,7 +2131,7 @@
           children: t,
         });
       }
-      function Pe(e) {
+      function We(e) {
         const [t, r] = n.useState(!1);
         return (
           n.useEffect(() => {
@@ -2130,8 +2144,8 @@
           t
             ? (0, i.jsx)(S.Kd, {
                 basename: (0, l.C)(),
-                children: (0, i.jsx)(Ae, {
-                  children: (0, i.jsx)(Ne, {
+                children: (0, i.jsx)(Ne, {
+                  children: (0, i.jsx)(Pe, {
                     children: (0, i.jsx)(n.Suspense, {
                       fallback: null,
                       children: (0, i.jsxs)(v.dO, {
@@ -2190,6 +2204,17 @@
                           (0, i.jsx)(v.qh, {
                             path: l.B.BundlesEditor(),
                             component: Be,
+                          }),
+                          (0, i.jsx)(v.qh, {
+                            path: l.B.CreatorHomeAdminPage(),
+                            children: (0, i.jsx)(T.X, {
+                              config: {
+                                "admin-creatorhome": (e) =>
+                                  (0, i.jsx)(Ae, {
+                                    creatorHomes: e.creator_homes,
+                                  }),
+                              },
+                            }),
                           }),
                           (0, i.jsx)(v.qh, {
                             path: l.B.AppCommunityItem(),
@@ -2389,12 +2414,12 @@
             : null
         );
       }
-      function We() {
+      function Ue() {
         const e = (0, _.Fd)("loyalty_webapi_token", "application_config");
         return new x.D(_.TS.WEBAPI_BASE_URL, e);
       }
-      function Ue(e) {
-        const t = (0, D.bs)(We),
+      function He(e) {
+        const t = (0, D.bs)(Ue),
           r = (0, D.bs)(n.useCallback(() => new B.A(), []));
         return (0, i.jsx)(y.VQ, {
           useActiveSteamInterface: t,
@@ -2402,34 +2427,34 @@
           children: e.children,
         });
       }
-      var He = r(14947),
-        Ve = r(44844),
-        qe = r(17204),
-        Ge = r(81393),
-        Ze = (r(5977), r(8527));
-      function Ke() {
+      var Ve = r(14947),
+        qe = r(44844),
+        Ge = r(17204),
+        Ze = r(81393),
+        Ke = (r(5977), r(8527));
+      function Ye() {
         const e = [];
         return (
-          Ze.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
-          Ze.TS.IN_CLIENT && e.push("in_client"),
+          Ke.TS.IN_MOBILE_WEBVIEW && e.push("in_mobile_app"),
+          Ke.TS.IN_CLIENT && e.push("in_client"),
           e
         );
       }
-      var Ye = r(92724);
-      (0, He.jK)({ enforceActions: "never" }),
+      var Xe = r(92724);
+      (0, Ve.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           const e = document.getElementById("application_root"),
             t = e ? "application_config" : void 0;
           (0, _.XJ)(t);
           const i = new x.D(_.TS.WEBAPI_BASE_URL).GetServiceTransport();
-          (0, qe.aj)().Init("Partner", CLSTAMP, i, { fnGetReportTags: Ke }),
+          (0, Ge.aj)().Init("Partner", CLSTAMP, i, { fnGetReportTags: Ye }),
             await (async function (e) {
               const [t, n, i, s] = await Promise.all([
                   r(14919)(`./shared_${e}.json`),
                   r(6527)(`./marketing_${e}.json`),
                   r(16791)(`./sales_${e}.json`).then((e) => e.default),
                   r(3075)(`./main_${e}.json`),
-                  (0, Ye.u)(),
+                  (0, Xe.u)(),
                 ]),
                 o = { ...s.default },
                 a = g.A0.GetLanguageFallback(e);
@@ -2450,7 +2475,7 @@
                   g.pf.AddTokens(i, null);
             })(_.TS.LANGUAGE),
             e
-              ? Ve.createRoot(e).render(n.createElement(Pe, {}))
+              ? qe.createRoot(e).render(n.createElement(We, {}))
               : (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -2466,13 +2491,13 @@
                           );
                         break;
                       default:
-                        (0, Ge.wT)(!1, `unknown component: "${i}"`);
+                        (0, Ze.wT)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })();
         }),
         (window.LocalizationManifestReady = function (e, t, r) {
-          (0, Ge.wT)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, Ze.wT)("manifest" === t, `Expected manifest not "${t}"`),
             g.pf.InitDirect(r);
         });
     },
