@@ -350,15 +350,19 @@
           )
             return _._.k_RejectWrongPlatform;
         }
-        return !_.prepurchase && _.BIsComingSoon()
-          ? _._.k_RejectNoComingSoon
-          : !_.virtual_reality && _.GetPlatforms()?.vr_support.vrhmd_only
-            ? _._.k_RejectNoVR
-            : _.GetAllCreatorClanIDs()?.some((_) =>
-                  __webpack_require__.BIsIgnoringCurator(_),
-                )
-              ? _._.k_RejectCreatorClan
-              : _._.k_NotRejected;
+        if (!_.prepurchase && _.BIsComingSoon())
+          return _._.k_RejectNoComingSoon;
+        const _ = _.GetPlatforms();
+        return !_.virtual_reality &&
+          _ &&
+          _.vr_support &&
+          _.vr_support.vrhmd_only
+          ? _._.k_RejectNoVR
+          : _.GetAllCreatorClanIDs()?.some((_) =>
+                __webpack_require__.BIsIgnoringCurator(_),
+              )
+            ? _._.k_RejectCreatorClan
+            : _._.k_NotRejected;
       }
       function _(_, _) {
         if (_.localized) {
@@ -381,33 +385,32 @@
         if (!_.early_access && _.BIsEarlyAccess())
           return _._.k_RejectEarlyAccess;
         const _ = _.GetAppType();
-        return _.software || 6 != _
-          ? _.games_already_in_library && _.BIsGameOwned(_)
+        if (!_.software && 6 == _) return _._.k_RejectSoftware;
+        if (_.games_already_in_library && _.BIsGameOwned(_))
+          return _._.k_RejectInLibrary;
+        if (_.games_not_in_library && !_.BIsGameOwned(_))
+          return _._.k_RejectNotInLibrary;
+        if (!_.video && [7, 8, 9].includes(_)) return _._.k_RejectVideo;
+        if (_.has_discount) {
+          const _ = _.GetBestPurchaseOption();
+          if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
+        }
+        return "adultonly" != _ &&
+          _.no_ao_content &&
+          (_.HasContentDescriptorID(3) || _.HasContentDescriptorID(4))
+          ? _._.k_RejectAO
+          : 1 == _ &&
+              _.games_already_in_library &&
+              _.BIsGameOwned(_.GetParentAppID() || 0)
             ? _._.k_RejectInLibrary
-            : _.games_not_in_library && !_.BIsGameOwned(_)
-              ? _._.k_RejectNotInLibrary
-              : !_.video && [7, 8, 9].includes(_)
-                ? _._.k_RejectVideo
-                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
-                  ? _._.k_RejectNoDiscount
-                  : "adultonly" != _ &&
-                      _.no_ao_content &&
-                      (_.HasContentDescriptorID(3) ||
-                        _.HasContentDescriptorID(4))
-                    ? _._.k_RejectAO
-                    : 1 == _ &&
-                        _.games_already_in_library &&
-                        _.BIsGameOwned(_.GetParentAppID())
-                      ? _._.k_RejectInLibrary
-                      : _
-                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
-                          _.BHasAppID(_)
-                          ? _._.k_RejectAlreadyDisplayed
-                          : _.has_trailer && !_.BHasTrailers(!1)
-                            ? _._.k_RejectNoTrailer
-                            : _(_, _)
-                        : _._.k_NotRejected
-          : _._.k_RejectSoftware;
+            : _
+              ? (1 == _ && _.BHasAppID(_.GetParentAppID() || 0)) ||
+                _.BHasAppID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _.has_trailer && !_.BHasTrailers(!1)
+                  ? _._.k_RejectNoTrailer
+                  : _(_, _)
+              : _._.k_NotRejected;
       }
       function _(_, _) {
         const _ = _._.Get();
@@ -454,6 +457,198 @@
               ? _._.k_RejectAlreadyDisplayed
               : _(_, _)
             : _._.k_NotRejected;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, _, _) {
+        const _ = (0, _.useRef)(void 0),
+          _ = (0, _.useRef)(void 0),
+          _ = (0, _._)();
+        _.current = _;
+        const [_, _] = (0, _.useState)(void 0),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            const _ = {
+              include_assets: _,
+              include_release: _,
+              include_platforms: _,
+              include_all_purchase_options: _,
+              include_screenshots: _,
+              include_trailers: _,
+              include_ratings: _,
+              include_tag_count: _,
+              include_reviews: _,
+              include_basic_info: _,
+              include_supported_languages: _,
+              include_full_description: _,
+              include_included_items: _,
+              include_assets_without_overrides: _,
+              apply_user_filters: _,
+              include_links: _,
+            };
+            let _ = null;
+            return (
+              !_ ||
+                _ < 0 ||
+                _._.Get().BHasStoreItem(_, _, _) ||
+                (void 0 !== _ && _ && _ == _.current) ||
+                (_ !== _.current && (_(void 0), (_.current = _)),
+                (_ = _().CancelToken.source()),
+                _._.Get()
+                  .QueueStoreItemRequest(_, _, _)
+                  .then((_) => {
+                    _?.token.reason || _.current !== _ || _(1 == _), _();
+                  })),
+              () => _?.cancel("useStoreItemCache: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return [null, 2];
+        if (!1 === _) return [void 0, 2];
+        if (_._.Get().BIsStoreItemMissing(_, _)) return [void 0, 2];
+        if (!_._.Get().BHasStoreItem(_, _, _)) return [void 0, 1];
+        const _ = _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _);
+        return _ ? [_, 3] : [null, 2];
+      }
+      function _(_, _, _) {
+        return _(_, 0, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, 2, _, _);
+      }
+      function _(_, _, _) {
+        return _(_, 1, _, _);
+      }
+      function _(_, _, _) {
+        const [_, _] = _(_, _, _);
+        let _;
+        1 != _?.GetStoreItemType() ||
+          _.GetAssets()?.GetHeaderURL() ||
+          1 != _?.GetIncludedAppIDs().length ||
+          (_ = _.GetIncludedAppIDs()[0]);
+        const [_, _] = _(_, _);
+        return _ && _?.BIsVisible() ? [_, _] : [_, _];
+      }
+      function _(_, _, _, _) {
+        const _ = (0, _._)(),
+          {
+            include_assets: _,
+            include_release: _,
+            include_platforms: _,
+            include_all_purchase_options: _,
+            include_screenshots: _,
+            include_trailers: _,
+            include_ratings: _,
+            include_tag_count: _,
+            include_reviews: _,
+            include_basic_info: _,
+            include_supported_languages: _,
+            include_full_description: _,
+            include_included_items: _,
+            include_assets_without_overrides: _,
+            apply_user_filters: _,
+            include_links: _,
+          } = _;
+        if (
+          ((0, _.useEffect)(() => {
+            if (!_ || 0 == _.length) return;
+            const _ = {
+                include_assets: _,
+                include_release: _,
+                include_platforms: _,
+                include_all_purchase_options: _,
+                include_screenshots: _,
+                include_trailers: _,
+                include_ratings: _,
+                include_tag_count: _,
+                include_reviews: _,
+                include_basic_info: _,
+                include_supported_languages: _,
+                include_full_description: _,
+                include_included_items: _,
+                include_assets_without_overrides: _,
+                apply_user_filters: _,
+                include_links: _,
+              },
+              _ = _.filter(
+                (_) =>
+                  !(
+                    _._.Get().BHasStoreItem(_, _, _) ||
+                    _._.Get().BIsStoreItemMissing(_, _)
+                  ),
+              );
+            if (0 == _.length) return;
+            const _ = _().CancelToken.source(),
+              _ = _.map((_) => _._.Get().QueueStoreItemRequest(_, _, _));
+            return (
+              Promise.all(_).then(() => {
+                _.token.reason || _();
+              }),
+              () => _.cancel("useStoreItemCacheMultiplePackages: unmounting")
+            );
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
+          !_)
+        )
+          return 2;
+        if (
+          !_.every(
+            (_) =>
+              _._.Get().BHasStoreItem(_, _, _) ||
+              _._.Get().BIsStoreItemMissing(_, _),
+          )
+        )
+          return 1;
+        return _.every((_) =>
+          _._.Get().GetStoreItemWithLegacyVisibilityCheck(_, _),
+        )
+          ? 3
+          : 2;
+      }
+      function _(_, _, _) {
+        return _(_, 0, _, _);
+      }
+      function _() {
+        _.useEffect(
+          () => (
+            _._.Get().SetReturnUnavailableItems(!0),
+            () => _._.Get().SetReturnUnavailableItems(!1)
+          ),
+          [],
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1660,7 +1855,12 @@
           });
         },
         Option: function (_) {
-          const { value: _, children: __webpack_require__, disabled: _ } = _,
+          const {
+              value: _,
+              children: __webpack_require__,
+              disabled: _,
+              ..._
+            } = _,
             {
               onItemSelectionChange: _,
               multiselect: _,
@@ -1673,6 +1873,7 @@
             onSelect: () => _(_),
             selected: _,
             disabled: _,
+            ..._,
             children: [
               _ &&
                 (0, _.jsxs)(_._, {

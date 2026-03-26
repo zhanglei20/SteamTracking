@@ -4,11 +4,12 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [261],
   {
-    36837: (e, t, n) => {
-      n.d(t, { f: () => s });
-      var a = n(78327);
-      class s {
-        m_HomeView;
+    62734: (e, t, n) => {
+      n.d(t, { f: () => i });
+      var a = n(81393);
+      var s = n(78327);
+      class i {
+        m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -17,19 +18,22 @@
         }
         static s_globalSingletonStore;
         static Get() {
+          var e;
           return (
-            s.s_globalSingletonStore ||
-              ((s.s_globalSingletonStore = new s()),
-              "dev" == a.TS.WEB_UNIVERSE &&
-                (window.g_HomeViewSetting = s.s_globalSingletonStore)),
-            s.s_globalSingletonStore
+            i.s_globalSingletonStore ||
+              ((e = "CHomeViewStore.s_globalSingletonStore"),
+              (0, a.wT)(!0, "Unexpected code running in SSR Server: " + e),
+              (i.s_globalSingletonStore = new i()),
+              "dev" == s.TS.WEB_UNIVERSE &&
+                (window.g_HomeViewSetting = i.s_globalSingletonStore)),
+            i.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === a.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
-          const e = (0, a.Tc)("home_view_setting", "application_config");
+          "dev" === s.TS.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          const e = (0, s.Tc)("home_view_setting", "application_config");
           this.ValidateHomeViewData(e) && this.SetHomeViewSetting(e);
-          const t = (0, a.Tc)(
+          const t = (0, s.Tc)(
             "home_view_setting_override",
             "application_config",
           );
@@ -54,16 +58,18 @@
           );
         }
         SetHomeViewSettingOverride(e) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ...e?.all,
-            ...e?.maincap,
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ...e?.all,
+                ...e?.maincap,
+              })
+            : (this.m_HomeView = { home: { ...e?.all, ...e?.maincap } });
         }
       }
     },
     95886: (e, t, n) => {
-      n.d(t, { Zr: () => b, dP: () => H, v0: () => F });
+      n.d(t, { Zr: () => T, dP: () => F, v0: () => H });
       var a = n(34629),
         s = n(41735),
         i = n.n(s),
@@ -76,8 +82,8 @@
         p = n(6379),
         u = n(16021),
         h = n(99032),
-        _ = n(81393),
-        g = n(68797),
+        g = n(81393),
+        _ = n(68797),
         v = n(6419),
         S = n(61859),
         C = n(78327),
@@ -505,7 +511,7 @@
             : this.m_backwardRequestInFlight;
         }
         SetRequestInFlight(e, t) {
-          (0, _.wT)(
+          (0, g.wT)(
             !t || !this.GetRequestInFlight(e),
             "Already have a request in flight for",
             e,
@@ -583,7 +589,7 @@
               })
               .catch((t) => {
                 this.SetRequestInFlight(e, null);
-                let n = (0, g.H)(t);
+                let n = (0, _.H)(t);
                 return (
                   console.error(
                     "LoadAdditionalEvents hit error " + n.strErrorMsg,
@@ -602,7 +608,7 @@
         BInternalInsertCalendarEventItem(e) {
           if (!e.unique_id)
             return (
-              (0, _.wT)(
+              (0, g.wT)(
                 !1,
                 "Attmpted to register a calendar event item with an invalid unique id!",
               ),
@@ -643,7 +649,7 @@
           null != n || null != a
             ? (await A.S.Get().UpdateCommunitionSetting(t, n, a),
               E.V.RecordAppInteractionEvent(n, E.E.k_eMuted))
-            : (0, _.wT)(
+            : (0, g.wT)(
                 !1,
                 "Both clan id and account id are missing, cannot change communication status",
               );
@@ -809,8 +815,8 @@
       (0, a.Cg)([r.EW.struct], D.prototype, "viewFilteredEvents", null),
         (0, a.Cg)([r.EW.struct], D.prototype, "filteredAndCheckedEvents", null);
       const k = r.sH.box(null),
-        T = new Map();
-      function b(e, t) {
+        b = new Map();
+      function T(e, t) {
         let n = "";
         return (
           e.appids &&
@@ -834,17 +840,17 @@
               e.category_or_language +
               "_" +
               e.tag_name),
-          k.get() !== n && (k.set(n), T.has(n) || T.set(n, new B(e, t))),
+          k.get() !== n && (k.set(n), b.has(n) || b.set(n, new B(e, t))),
           n
         );
       }
-      function F() {
-        return null == k.get() && b({}), T.get(k.get());
-      }
       function H() {
+        return null == k.get() && T({}), b.get(k.get());
+      }
+      function F() {
         return null !== k.get();
       }
-      window.g_EventCalendarMap = T;
+      window.g_EventCalendarMap = b;
     },
     67540: (e, t, n) => {
       n.d(t, { d: () => l, g: () => a });
@@ -1132,8 +1138,8 @@
         p = n(51706),
         u = n(88843),
         h = n(64641),
-        _ = n.n(h),
-        g = n(22797),
+        g = n.n(h),
+        _ = n(22797),
         v = n(68797),
         S = n(78327),
         C = n(8527),
@@ -1223,9 +1229,9 @@
             return (0, s.jsx)(p.EN, {
               active: !0,
               children: (0, s.jsx)("div", {
-                className: _().FlexCenter,
+                className: g().FlexCenter,
                 style: { height: "400px" },
-                children: (0, s.jsx)(g.t, {}),
+                children: (0, s.jsx)(_.t, {}),
               }),
             });
           const {
@@ -1270,7 +1276,7 @@
       y = (0, a.Cg)([o.PA], y);
     },
     35685: (e, t, n) => {
-      n.d(t, { kH: () => z, rN: () => U, uY: () => W, zA: () => q });
+      n.d(t, { kH: () => q, rN: () => U, uY: () => W, zA: () => z });
       var a = n(7850),
         s = n(22837),
         i = n(41735),
@@ -1283,8 +1289,8 @@
         p = n(62641),
         u = n(17720),
         h = n(7221),
-        _ = n(4796),
-        g = n(95886),
+        g = n(4796),
+        _ = n(95886),
         v = n(60746),
         S = n(8107),
         C = n(75113),
@@ -1298,18 +1304,18 @@
         B = n(52038),
         D = n(61859),
         k = n(78327),
-        T = n(84811),
-        b = n(22797),
-        F = n(33924),
-        H = n.n(F),
+        b = n(84811),
+        T = n(22797),
+        H = n(33924),
+        F = n.n(H),
         N = n(706),
         M = n(18654),
         x = n.n(M),
         R = n(84518),
         j = n(38535),
         L = n(39777),
-        P = n(35380),
-        V = n(42834);
+        V = n(35380),
+        P = n(42834);
       const U = (0, o.PA)((e) => {
           const {
               clanAccountID: t,
@@ -1320,7 +1326,7 @@
             } = e,
             l = u.b.InitFromClanID(t),
             p = (0, d.useRef)(null),
-            [h, g] = (0, d.useState)(null),
+            [h, _] = (0, d.useState)(null),
             [I, f] = (0, d.useState)(!0),
             [w, y] = (0, d.useState)(!1);
           if (
@@ -1332,7 +1338,7 @@
                   const e = r().CancelToken.source();
                   p.current = e.cancel;
                   const a = u.b.InitFromClanID(t);
-                  await _.ac.LoadClanInfoForClanSteamID(a);
+                  await g.ac.LoadClanInfoForClanSteamID(a);
                   let o = await s.LoadAdjacentPartnerEventsByAnnouncement(
                     n,
                     a,
@@ -1350,8 +1356,9 @@
                     G.fW(e);
                     const t = e
                       .slice(0, 3)
-                      .map((e) => s.GetClanEventFromAnnouncementGID(e));
-                    if ((g(t), f(!1), i)) {
+                      .map((e) => s.GetClanEventFromAnnouncementGID(e))
+                      .filter((e) => !!e);
+                    if ((_(t), f(!1), i)) {
                       let e = v.KN.Get().GetTracker(),
                         a = !1;
                       if (s.BHasClanAnnouncementGID(n)) {
@@ -1389,12 +1396,12 @@
             ),
             I)
           )
-            return (0, a.jsx)(b.t, { position: "center", size: "medium" });
+            return (0, a.jsx)(T.t, { position: "center", size: "medium" });
           if (0 == h.length) return (0, a.jsx)("div", {});
-          const A = _.ac.GetClanInfoByClanAccountID(t);
-          return (0, a.jsx)(T.tH, {
+          const A = g.ac.GetClanInfoByClanAccountID(t);
+          return (0, a.jsx)(b.tH, {
             children: (0, a.jsxs)("div", {
-              className: (0, B.A)(H().OtherEventsCtn, "OtherEventsCtn"),
+              className: (0, B.A)(F().OtherEventsCtn, "OtherEventsCtn"),
               children: [
                 (0, a.jsxs)("div", {
                   className: E().EventSectionTitleCtn,
@@ -1428,7 +1435,7 @@
                   ],
                 }),
                 (0, a.jsx)(c.Z, {
-                  className: H().OtherEvents,
+                  className: F().OtherEvents,
                   "flow-children": "column",
                   navEntryPreferPosition: m.iU.PREFERRED_CHILD,
                   children: h.map((e) =>
@@ -1459,7 +1466,7 @@
             bHidePrices: m,
           } = e,
           u = (0, j.Zj)(t.appid),
-          [_, v, S, I, E, f] = (0, l.q3)(() => {
+          [g, v, S, I, E, f] = (0, l.q3)(() => {
             const e = r || (0, s.sf)(k.TS.LANGUAGE),
               a = Boolean(void 0 !== n)
                 ? n
@@ -1478,23 +1485,23 @@
           }),
           [y, A] = (0, d.useState)(void 0),
           G =
-            !y || (_ !== y && E !== y)
-              ? { src: _, onLoad: () => A(_), onError: () => A(E) }
+            !y || (g !== y && E !== y)
+              ? { src: g, onLoad: () => A(g), onError: () => A(E) }
               : { src: y };
         if (!t)
-          return (0, a.jsx)("div", { className: H().OtherEvents_EventCtn });
-        const D = (0, g.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
-          T = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
-        let b = f;
+          return (0, a.jsx)("div", { className: F().OtherEvents_EventCtn });
+        const D = (0, _.v0)().GetStoreInitializationTimestamp().getTime() / 1e3,
+          b = t ? t.GetStartTimeAndDateUnixSeconds() : 0;
+        let T = f;
         return (
-          f && (f.length > O || v.length > O) && (b = void 0),
+          f && (f.length > O || v.length > O) && (T = void 0),
           (0, a.jsxs)(a.Fragment, {
             children: [
               (0, a.jsxs)(C.tj, {
                 className: (0, B.A)(
-                  H().OtherEvents_EventCtn,
+                  F().OtherEvents_EventCtn,
                   "OtherEvents_EventCtn",
-                  H().HoversEnabled,
+                  F().HoversEnabled,
                 ),
                 eventModel: t,
                 route: c || C.PH.k_eView,
@@ -1502,55 +1509,55 @@
                 preferredFocus: !0,
                 children: [
                   (0, a.jsxs)("div", {
-                    className: H().EventSummaryContainer,
+                    className: F().EventSummaryContainer,
                     children: [
                       (0, a.jsx)("div", {
-                        className: H().EventSummaryType,
+                        className: F().EventSummaryType,
                         children: S,
                       }),
                       (0, a.jsx)("div", {
-                        className: H().EventSummaryText,
+                        className: F().EventSummaryText,
                         children: I,
                       }),
                     ],
                   }),
                   (0, a.jsx)("div", {
-                    className: H().OtherEvents_BGImage,
+                    className: F().OtherEvents_BGImage,
                     style: {
                       backgroundColor: "#ffffff",
                       backgroundImage: y ? `url(${(0, p.j3)(y)})` : "none",
                     },
                   }),
                   (0, a.jsxs)("div", {
-                    className: H().OtherEvents_ContentCtn,
+                    className: F().OtherEvents_ContentCtn,
                     children: [
                       (0, a.jsx)("div", {
                         className: (0, B.A)(
-                          H().OtherEvents_MainImageCtn,
-                          u && H().MaskImages,
+                          F().OtherEvents_MainImageCtn,
+                          u && F().MaskImages,
                         ),
                         children: (0, a.jsx)("img", {
                           ...G,
-                          className: H().OtherEvents_MainImage,
+                          className: F().OtherEvents_MainImage,
                           alt: "",
                         }),
                       }),
                       (0, a.jsxs)("div", {
-                        className: H().OtherEvents_TextCtn,
+                        className: F().OtherEvents_TextCtn,
                         children: [
                           (0, a.jsx)("div", {
-                            className: H().OtherEvents_TextTitle,
+                            className: F().OtherEvents_TextTitle,
                             children: v,
                           }),
-                          Boolean(b) &&
+                          Boolean(T) &&
                             (0, a.jsx)("div", {
-                              className: H().OtherEvents_SubTitle,
-                              children: b,
+                              className: F().OtherEvents_SubTitle,
+                              children: T,
                             }),
-                          Boolean(T > D)
+                          Boolean(b > D)
                             ? (0, a.jsx)("div", {
                                 className: (0, B.A)(
-                                  H().UpcomingCtn,
+                                  F().UpcomingCtn,
                                   "UpcomingCtn",
                                 ),
                                 children: (0, a.jsx)(w.K4, {
@@ -1571,14 +1578,14 @@
                 ],
               }),
               Boolean(i && t.appid) &&
-                (0, a.jsx)(q, { appid: t.appid, bHidePrice: m }),
+                (0, a.jsx)(z, { appid: t.appid, bHidePrice: m }),
             ],
           })
         );
       }
-      function q(e) {
+      function z(e) {
         const { appid: t, bHidePrice: n } = e,
-          s = (0, P.$5)(t),
+          s = (0, V.$5)(t),
           { data: i } = (0, L.J$)(s),
           { data: r } = (0, L.lv)(s),
           { data: o } = (0, L.Q_)(s),
@@ -1589,7 +1596,7 @@
         return (0, a.jsx)(R.A, {
           appID: t,
           children: (0, a.jsxs)(c.Z, {
-            className: (0, B.A)(H().AppCapsuleCtn, "AppCapsuleCtn"),
+            className: (0, B.A)(F().AppCapsuleCtn, "AppCapsuleCtn"),
             ...(0, f.S)(i, l, d, !1),
             children: [
               (0, a.jsx)(N.Q, {
@@ -1599,15 +1606,15 @@
                   style: { minWidth: "320px" },
                 },
                 children: (0, a.jsx)("img", {
-                  className: (0, B.A)(H().AppCapsuleImage, H().CapsuleShadow),
-                  src: (0, V.b0)(r, "small_capsule"),
+                  className: (0, B.A)(F().AppCapsuleImage, F().CapsuleShadow),
+                  src: (0, P.b0)(r, "small_capsule"),
                   alt: i.name,
                 }),
               }),
               Boolean(!n && !i.is_free) &&
                 (0, a.jsxs)("span", {
                   className: (0, B.A)(
-                    H().AppCapsulePrice,
+                    F().AppCapsulePrice,
                     Boolean(o?.discount_pct) ? x().Discounted : "",
                   ),
                   children: [
@@ -1633,11 +1640,11 @@
           }),
         });
       }
-      function z(e) {
+      function q(e) {
         const { event: t, imageURLOverride: n, onClick: i } = e,
           r = (0, j.Zj)(t.appid),
           o = (0, s.sf)(k.TS.LANGUAGE),
-          [d, c, m] = (0, l.q3)(() =>
+          [d, c, m, p, u] = (0, l.q3)(() =>
             t
               ? [
                   void 0 !== n
@@ -1649,38 +1656,40 @@
                       ),
                   t.GetNameWithFallback(o),
                   t.GetCategoryAsString(),
+                  t.GetSubTitleWithLanguageFallback(o),
+                  t.GetSummaryWithFallback(o),
                 ]
-              : [void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0, void 0],
           );
         return t
           ? (0, a.jsxs)(C.tj, {
-              className: H().OtherEvents_EventCtn + " " + H().HorizontalEvent,
+              className: F().OtherEvents_EventCtn + " " + F().HorizontalEvent,
               eventModel: t,
               route: C.PH.k_eView,
               onClick: i,
               children: [
                 (0, a.jsx)("div", {
-                  className: H().OtherEvents_ContentCtn,
+                  className: F().OtherEvents_ContentCtn,
                   children: (0, a.jsx)("div", {
                     className: (0, B.A)(
-                      H().OtherEvents_MainImageCtn,
-                      r && H().MaskImages,
+                      F().OtherEvents_MainImageCtn,
+                      r && F().MaskImages,
                     ),
                     children: (0, a.jsx)("img", {
                       src: d,
-                      className: H().OtherEvents_MainImage,
+                      className: F().OtherEvents_MainImage,
                       alt: "",
                     }),
                   }),
                 }),
                 (0, a.jsxs)("div", {
-                  className: H().OtherEvents_TextCtn,
+                  className: F().OtherEvents_TextCtn,
                   children: [
                     (0, a.jsxs)("div", {
-                      className: H().HorizontalDescriptionCtn,
+                      className: F().HorizontalDescriptionCtn,
                       children: [
                         (0, a.jsx)("div", {
-                          className: H().HorizontalDescription,
+                          className: F().HorizontalDescription,
                           children: m,
                         }),
                         (0, a.jsx)(w.K4, {
@@ -1690,24 +1699,34 @@
                       ],
                     }),
                     (0, a.jsx)("div", {
-                      className: H().HorizontalTitle,
+                      className: F().HorizontalTitle,
                       children: c,
                     }),
+                    p &&
+                      (0, a.jsx)("div", {
+                        className: F().HorizontalSubTitle,
+                        children: p,
+                      }),
+                    u &&
+                      (0, a.jsx)("div", {
+                        className: F().HorizontalSummary,
+                        children: u,
+                      }),
                   ],
                 }),
               ],
             })
-          : (0, a.jsx)("div", { className: H().OtherEvents_EventCtn });
+          : (0, a.jsx)("div", { className: F().OtherEvents_EventCtn });
       }
     },
     99032: (e, t, n) => {
       n.d(t, {
         AX: () => S,
-        H2: () => _,
+        H2: () => g,
         Li: () => v,
         S7: () => p,
         a9: () => C,
-        jy: () => g,
+        jy: () => _,
         nt: () => h,
         sd: () => m,
         tJ: () => u,
@@ -1718,7 +1737,7 @@
         r = n(30894),
         o = n(16021),
         l = n(78327),
-        d = n(36837),
+        d = n(62734),
         c = n(81393);
       function m(e) {
         return o.A.Get().BIsStoreItemMissing(e.id, (0, s.SW)(e.type));
@@ -1743,7 +1762,7 @@
           t.GetAllLanguagesWithSomeSupport(),
         );
       }
-      async function _(e, t, n) {
+      async function g(e, t, n) {
         if (!e || 0 == e.length) return [];
         const a = e.filter((e) => (0, i.fp)(e.type)).map((e) => e.id),
           s = e.filter((e) => "sub" === e.type).map((e) => e.id),
@@ -1790,7 +1809,7 @@
           return t && !t.GetParentAppID();
         });
       }
-      const g = {
+      const _ = {
         include_tag_count: 20,
         include_basic_info: !0,
         include_supported_languages: !0,
@@ -1820,7 +1839,7 @@
         let d = 0,
           c = 0;
         const m = [];
-        await _(e, a.Xh, t);
+        await g(e, a.Xh, t);
         for (const a of e) {
           const e = o.A.Get().GetStoreItem(a.id, (0, s.SW)(a.type));
           if (!e) {

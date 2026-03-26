@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "待售数量：%1$s",
 	"Bucket_PriceFrom": "起价：%1$s",
 	"AccessorySearch_AttachedAccessoryType": "已附加的%1$s",
+	"FilterResults_Placeholder": "筛选结果…",
 	"AdvancedSearch_Header": "高级搜索",
 	"AdvancedSearch_Link": "高级搜索",
 	"MarketSearch_Placeholder": "搜索物品…",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "最低",
 	"AssetProperty_Range_MaxPlaceholder": "最高",
 	"Accessories_FieldSectionLabel": "配件",
-	"Listing_EnhancedAppearance_Missing": "此上架物品尚无独特的或优化过的图片。此处显示的图片可能会与上架的物品稍有不同。"
+	"Item_CountryBuySellRestricted": "购买和销售此类物品的功能在您所在国家/地区已禁用，因此您无法购买物品。",
+	"Item_CountryBuyRestricted": "购买此类物品的功能在您所在国家/地区已禁用，因此您无法购买此物品。",
+	"Listing_EnhancedAppearance_Missing": "此上架物品尚无独特的或优化过的图片。此处显示的图片可能会与上架的物品稍有不同。",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

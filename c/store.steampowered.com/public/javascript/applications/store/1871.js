@@ -16,7 +16,7 @@
 	"Review_Source_Counted": "Esta reseña se cuenta en la puntuación global porque el usuario compró el juego directamente en Steam u obtuvo una licencia gratuita de un juego gratuito.",
 	"Review_Source_NotCounted": "Esta reseña no se tiene en cuenta para la puntuación global de reseñas porque el usuario activó el producto mediante una clave de Steam, se lo regalaron o tenía una licencia gratuita temporal.",
 	"Review_Majority_Deck": "Al momento de escribir la reseña, esta persona había jugado el juego principalmente en Steam Deck (%1$s horas)",
-	"Review_PostedOn": "Publicada el %1$s",
+	"Review_PostedOn": "Publicada: %1$s",
 	"Review_WasHelpful": "¿Te ha sido útil esta reseña?",
 	"Review_RateFunny": "Divertida",
 	"Review_GiveAward": "Premiar",

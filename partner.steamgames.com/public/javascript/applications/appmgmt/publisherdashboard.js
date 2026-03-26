@@ -241,7 +241,7 @@
     },
     53724: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => kn });
+      n.r(t), n.d(t, { default: () => zn });
       var s = n(7850),
         a = n(90626),
         i = n(78327),
@@ -4144,7 +4144,7 @@
         });
       }
       var St = n(4130),
-        Ct = n(28185),
+        Ct = n(99950),
         Mt = n(20587);
       function At(e) {
         const { saleDesc: t } = e;
@@ -6016,55 +6016,60 @@
       function jn(e) {
         const { app: t } = e,
           n = t.appid,
-          { data: a } = (0, yn.J$)({ appid: n }),
-          { data: r } = (0, yn.lv)({ appid: n }),
-          o = i.TS.PARTNER_BASE_URL + "apps/landing/" + n,
-          l = (function (e, t) {
+          { data: a } = (0, yn.lv)({ appid: n }),
+          r = i.TS.PARTNER_BASE_URL + "apps/landing/" + n,
+          o = (function (e, t) {
             if (e?.asset_url_format && e[t])
               return (
                 En.TS.BASE_URL_SHARED_CDN +
                 "/store_item_assets/" +
                 e.asset_url_format.replace("${FILENAME}", e[t])
               );
-          })(r, "header");
+          })(a, "header");
         return (0, s.jsxs)("div", {
           className: fn.AppTile,
           children: [
-            l &&
+            o &&
               (0, s.jsx)(g.he, {
                 toolTipContent: t.name,
                 children: (0, s.jsx)("div", {
                   className: fn.AppTileImage,
                   children: (0, s.jsx)("a", {
-                    href: o,
+                    href: r,
                     target: "_blank",
-                    children: (0, s.jsx)("img", { src: l }),
+                    children: (0, s.jsx)("img", { src: o }),
                   }),
                 }),
               }),
-            !l &&
+            !o &&
               (0, s.jsx)("div", {
                 className: fn.AppTileImagePlaceholder,
                 children: (0, s.jsx)("a", {
-                  href: o,
+                  href: r,
                   target: "_blank",
                   children: t.name,
                 }),
               }),
-            (0, s.jsxs)("div", {
-              className: fn.AppLabels,
-              children: [
-                (0, s.jsx)(Sn, { appType: t.type }),
-                (0, s.jsx)(Cn, {
-                  releaseState: t.releasestate,
-                  hasStoreItem: a?.visible,
-                }),
-              ],
-            }),
+            (0, s.jsx)(Sn, { app: t }),
           ],
         });
       }
       function Sn(e) {
+        const { app: t } = e,
+          n = t.appid,
+          { data: a } = (0, yn.J$)({ appid: n });
+        return (0, s.jsxs)("div", {
+          className: fn.AppLabels,
+          children: [
+            (0, s.jsx)(Cn, { appType: t.type }),
+            (0, s.jsx)(Mn, {
+              releaseState: t.releasestate,
+              hasStoreItem: a?.visible,
+            }),
+          ],
+        });
+      }
+      function Cn(e) {
         const { appType: t } = e;
         let n = null,
           a = null;
@@ -6089,7 +6094,7 @@
             })
         );
       }
-      function Cn(e) {
+      function Mn(e) {
         const { releaseState: t, hasStoreItem: n } = e,
           a = (0, se.pc)(t, n);
         return (
@@ -6100,10 +6105,10 @@
           })
         );
       }
-      var Mn = n(75493),
-        An = n(60746),
-        Bn = n(60103);
-      function Nn(e) {
+      var An = n(75493),
+        Bn = n(60746),
+        Nn = n(60103);
+      function Un(e) {
         return (0, s.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 60 39",
@@ -6137,7 +6142,7 @@
           ],
         });
       }
-      function Un(e) {
+      function In(e) {
         return (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 55 37",
@@ -6149,7 +6154,7 @@
           }),
         });
       }
-      function In(e) {
+      function Pn(e) {
         return (0, s.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 42 35",
@@ -6161,7 +6166,7 @@
           }),
         });
       }
-      function Pn(e) {
+      function Fn(e) {
         const t = (function (e) {
             const t = (0, i.Tc)("rgDailyDealInvitations", "application_config");
             if (!(e || (t && 0 != t.length))) return [];
@@ -6177,7 +6182,7 @@
                 title: (0, d.we)(
                   "#Dashboard_ImportantActions_DailyDeals_Title",
                 ),
-                image: (0, s.jsx)(Nn, {}),
+                image: (0, s.jsx)(Un, {}),
                 description: a
                   ? (0, d.we)(
                       "#Dashboard_ImportantActions_DailyDeals_Desc_Expiring",
@@ -6202,7 +6207,7 @@
                   title: (0, d.we)(
                     "#Dashboard_ImportantActions_CommRights_Title",
                   ),
-                  image: (0, s.jsx)(Un, {}),
+                  image: (0, s.jsx)(In, {}),
                   description: (0, d.we)(
                     "#Dashboard_ImportantActions_CommRights_Desc",
                   ),
@@ -6220,7 +6225,7 @@
                   title: (0, d.we)(
                     "#Dashboard_ImportantActions_MailingAddr_Title",
                   ),
-                  image: (0, s.jsx)(In, {}),
+                  image: (0, s.jsx)(Pn, {}),
                   description: (0, d.we)(
                     "#Dashboard_ImportantActions_MailingAddr_Desc",
                   ),
@@ -6238,7 +6243,7 @@
                   title: (0, d.we)(
                     "#Dashboard_ImportantActions_PhoneNumber_Title",
                   ),
-                  image: (0, s.jsx)(Un, {}),
+                  image: (0, s.jsx)(In, {}),
                   description: (0, d.we)(
                     "#Dashboard_ImportantActions_PhoneNumber_Desc",
                   ),
@@ -6264,7 +6269,7 @@
                 title: (0, d.we)(
                   "#Dashboard_ImportantActions_BankingExpiring_Title",
                 ),
-                image: (0, s.jsx)(Nn, {}),
+                image: (0, s.jsx)(Un, {}),
                 description: (0, d.we)(
                   "#Dashboard_ImportantActions_BankingExpiring_Desc",
                   r,
@@ -6286,32 +6291,32 @@
           const e = t.concat(n);
           return (
             e.sort((e, t) => {
-              const n = Fn(e.priority),
-                s = Fn(t.priority);
+              const n = Ln(e.priority),
+                s = Ln(t.priority);
               return n !== s ? s - n : 0;
             }),
             e
           );
         }, [t, n]);
       }
-      function Fn(e) {
+      function Ln(e) {
         return 1 === e ? 1 : 0;
       }
-      function Ln(e) {
+      function Gn(e) {
         const [t] = (0, X.QD)("testactions", !1),
-          n = Pn(t);
+          n = Fn(t);
         return 0 == n.length
           ? null
           : (0, s.jsx)(m, {
               title: (0, d.we)("#Dashboard_ImportantActions_Title"),
               count: n.length,
               children: (0, s.jsx)("div", {
-                className: Bn.ImportantActions,
-                children: n.map((e) => (0, s.jsx)(Gn, { ...e }, e.id)),
+                className: Nn.ImportantActions,
+                children: n.map((e) => (0, s.jsx)(kn, { ...e }, e.id)),
               }),
             });
       }
-      function Gn(e) {
+      function kn(e) {
         const {
           title: t,
           image: n,
@@ -6322,18 +6327,18 @@
           action: d,
         } = e;
         return (0, s.jsxs)("div", {
-          className: (0, l.A)(Bn.ImportantAction, 1 == r && Bn.Urgent),
+          className: (0, l.A)(Nn.ImportantAction, 1 == r && Nn.Urgent),
           children: [
             (0, s.jsxs)("div", {
-              className: Bn.Header,
+              className: Nn.Header,
               children: [
-                (0, s.jsx)("div", { className: Bn.Image, children: n }),
+                (0, s.jsx)("div", { className: Nn.Image, children: n }),
                 (0, s.jsxs)("div", {
-                  className: Bn.Body,
+                  className: Nn.Body,
                   children: [
-                    (0, s.jsx)("div", { className: Bn.Title, children: t }),
+                    (0, s.jsx)("div", { className: Nn.Title, children: t }),
                     (0, s.jsxs)("div", {
-                      className: Bn.Description,
+                      className: Nn.Description,
                       children: [a, i && (0, s.jsx)(Q.o, { tooltip: i })],
                     }),
                   ],
@@ -6341,7 +6346,7 @@
               ],
             }),
             (0, s.jsx)("button", {
-              className: (0, l.A)(Bn.Button),
+              className: (0, l.A)(Nn.Button),
               onClick: () => {
                 "function" == typeof d && d(), window.open(d, "_blank");
               },
@@ -6350,8 +6355,8 @@
           ],
         });
       }
-      function kn(e) {
-        const t = (0, Mn.V)(),
+      function zn(e) {
+        const t = (0, An.V)(),
           n = (0, i.Tc)("bShowWarnings", "application_config"),
           r = (0, i.Tc)("bTestData", "application_config"),
           o = (0, i.Tc)("bPartnerOnboarding", "application_config"),
@@ -6365,7 +6370,7 @@
                     i.iA.accountid,
                     Number.isNaN(e) ? 0 : e,
                   );
-                  await Promise.all([An.KN.InitGlobal(), t]), n(!1);
+                  await Promise.all([Bn.KN.InitGlobal(), t]), n(!1);
                 })();
               }, [e]),
               t
@@ -6383,7 +6388,7 @@
               })
             : (0, s.jsxs)(wn.m, {
                 children: [
-                  (0, s.jsx)(Ln, {}),
+                  (0, s.jsx)(Gn, {}),
                   (0, s.jsx)(bn, {}),
                   (0, s.jsx)(sn, {
                     partnerId: t,

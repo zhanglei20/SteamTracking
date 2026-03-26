@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Cantidad a la venta: %1$s",
 	"Bucket_PriceFrom": "De %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s conectado",
+	"FilterResults_Placeholder": "Filtrar resultados...",
 	"AdvancedSearch_Header": "Búsqueda avanzada",
 	"AdvancedSearch_Link": "Búsqueda avanzada",
 	"MarketSearch_Placeholder": "Buscar un artículo...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Mín.",
 	"AssetProperty_Range_MaxPlaceholder": "Máx.",
 	"Accessories_FieldSectionLabel": "Accesorios",
-	"Listing_EnhancedAppearance_Missing": "Esta lista aún no incluye imágenes únicas o mejoradas. La imagen que aparece aquí puede variar ligeramente del artículo de la lista."
+	"Item_CountryBuySellRestricted": "No puedes comprar este artículo porque la compra y venta de este tipo de artículo está desactivada en tu país.",
+	"Item_CountryBuyRestricted": "No puedes comprar este artículo porque no está disponible en tu país.",
+	"Listing_EnhancedAppearance_Missing": "Esta lista aún no incluye imágenes únicas o mejoradas. La imagen que aparece aquí puede variar ligeramente del artículo de la lista.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

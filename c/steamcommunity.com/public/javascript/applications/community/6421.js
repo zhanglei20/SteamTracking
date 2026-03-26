@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Количество за продан: %1$s",
 	"Bucket_PriceFrom": "От %1$s",
 	"AccessorySearch_AttachedAccessoryType": "Прикачено: %1$s",
+	"FilterResults_Placeholder": "Филтриране на резултати…",
 	"AdvancedSearch_Header": "Разширено търсене",
 	"AdvancedSearch_Link": "Разширено търсене",
 	"MarketSearch_Placeholder": "Търсене за артикул…",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Мин.",
 	"AssetProperty_Range_MaxPlaceholder": "Макс.",
 	"Accessories_FieldSectionLabel": "Аксесоари",
-	"Listing_EnhancedAppearance_Missing": "Тази обява все още няма уникални или подобрени изображения. Възможно е тукашното показвано изображение да се различава незначително от обявения артикул."
+	"Item_CountryBuySellRestricted": "Не можете да закупите този артикул. Това е така, защото покупката и продажбата на този тип артикули е преустановена в държавата Ви.",
+	"Item_CountryBuyRestricted": "Не можете да закупите този артикул. Това е така, защото покупката на този тип артикули е преустановена в държавата Ви.",
+	"Listing_EnhancedAppearance_Missing": "Тази обява все още няма уникални или подобрени изображения. Възможно е тукашното показвано изображение да се различава незначително от обявения артикул.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

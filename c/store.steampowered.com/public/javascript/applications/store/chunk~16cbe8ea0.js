@@ -55,6 +55,17 @@
         PostedBy: "_2VqeQaZVaUkkEWaiLkmqmT",
         ReminderContainer: "_3Vf2MkZ_LWIoNVv36RwJtO",
         ReadMoreCnt: "_1YmaiDiNhC33cL5DKj05KQ",
+        BackgroundAnimation: "_2-llXPi4w88rsWfJFYSLHB",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2eejrtSFYCSnzH8C6-WC3a",
+        "ItemFocusAnim-darkerGrey": "oMlqiiSY2Eqr2ln_FmAg4",
+        "ItemFocusAnim-darkGrey": "_3lAc02j3vPGIoXryYyGTZR",
+        "ItemFocusAnim-grey": "_388VkzVpUFRuQ1HZEymCy",
+        "ItemFocusAnim-translucent-white-10": "tK-6xcUa6TrN9X1V5zj25",
+        "ItemFocusAnim-translucent-white-20": "_1UaaS_yXA7SqNdxVDXCD9W",
+        "ItemFocusAnimBorder-darkGrey": "_1V7Z378RTDEmk3dXXGXsQa",
+        "ItemFocusAnim-green": "_2ldXxMP_HINQZvEbjgDdbf",
+        focusAnimation: "_3zr66n761wV-ZHFKw_Yvbn",
+        hoverAnimation: "_1MvZ2haWg8XTcl8VHKnoS0",
       };
     },
     chunkid: (module) => {
@@ -223,6 +234,17 @@
         MarketLinkhover: "Q7KDk8kBk01MxhM_KZoqt",
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
         VerticalLocalDateAndTime: "_1mp7jCbQZOXCcY5CmAu7xm",
+        BackgroundAnimation: "_1xHuE1YWHzo9e7B1OqN4Dz",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1PpoZpEVTivfMT68wHupWE",
+        "ItemFocusAnim-darkerGrey": "BhYCYOXuISCFgViVdx82C",
+        "ItemFocusAnim-darkGrey": "_3-sdX5Fyzkkq2BZueyW6A0",
+        "ItemFocusAnim-grey": "u2Oxu-B6ki5Zla6SoVKlU",
+        "ItemFocusAnim-translucent-white-10": "_2XZ5VZk3TBgBcW1e2vrQtB",
+        "ItemFocusAnim-translucent-white-20": "N3Z3Av7icrzbAFAW5wJn",
+        "ItemFocusAnimBorder-darkGrey": "mVRKuA_tcspbL8RU6xrzn",
+        "ItemFocusAnim-green": "_3s1RoQM5wahq4m_-EHP-Ke",
+        focusAnimation: "MEjRS-LUv7kC4BFYk_9hq",
+        hoverAnimation: "_3tstCrFD5IJZbVa-dMQbne",
       };
     },
     chunkid: (module) => {
@@ -2326,7 +2348,6 @@
         _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
         Promise.all([
-          __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),
           __webpack_require__._("chunkid"),

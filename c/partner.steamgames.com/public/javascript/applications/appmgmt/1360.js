@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Přecházíte na bezplatnou verzi?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Pokud byla Vaše aplikace již vydána a Vy ji nyní chcete změnit z placené na bezplatnou, navštivte %1$s, kde se dozvíte více informací a budete moci zažádat o pomoc.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "tuto stránku",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Zadání vlastních cen",
+	"SinglePackagePricing_Right_Custom_Desc": "Přímo do textových polí můžete zadat své vlastní ceny pro jednotlivé měny.",
+	"SinglePackagePricing_Right_Convert_Desc": "Případně můžete použít toto tlačítko, které ceny pro jednotlivé měny vypočte na základě vybrané metody převodu a zadané vlastní ceny v USD.",
+	"PricingDashboard_Select_Price": "Vyberte jednu z cenových hladin",
+	"PricingDashboard_Select_Price_button": "Vyberte základní cenu v USD",
+	"PricingDashboard_Select_Price_button_ttip": "Otevře dialogové okno se seznamem častých cenových hladin a umožní jejich nastavení napříč všemi měnami níže.",
 	"empty_no_trailing_comma": ""
 }`);
     },

@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Кількість для продажу: %1$s",
 	"Bucket_PriceFrom": "Від %1$s",
 	"AccessorySearch_AttachedAccessoryType": "Прикріплено: %1$s",
+	"FilterResults_Placeholder": "Фільтрувати результати…",
 	"AdvancedSearch_Header": "Розширений пошук",
 	"AdvancedSearch_Link": "Розширений пошук",
 	"MarketSearch_Placeholder": "Шукати предмет…",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Мін.",
 	"AssetProperty_Range_MaxPlaceholder": "Макс.",
 	"Accessories_FieldSectionLabel": "Аксесуари",
-	"Listing_EnhancedAppearance_Missing": "Для цієї пропозиції ще не додано унікального чи покращеного зображення. Предмет може трохи відрізнятися від того, який показаний на цьому зображенні."
+	"Item_CountryBuySellRestricted": "Ви не можете придбати цей предмет, оскільки купівля і продаж предметів цього типу заборонені у вашій країні.",
+	"Item_CountryBuyRestricted": "Ви не можете придбати цей предмет, оскільки купівля предметів цього типу заборонена у вашій країні.",
+	"Listing_EnhancedAppearance_Missing": "Для цієї пропозиції ще не додано унікального чи покращеного зображення. Предмет може трохи відрізнятися від того, який показаний на цьому зображенні.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

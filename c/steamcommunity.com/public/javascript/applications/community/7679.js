@@ -77,7 +77,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
@@ -400,8 +399,8 @@
             rgAcceptableTypes: [4],
           },
           takeunder_art: {
-            width: 940,
-            height: 150,
+            width: 1200,
+            height: 190,
             rgAcceptableTypes: _,
           },
           takeunder_mobile_art: {

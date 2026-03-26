@@ -63,6 +63,17 @@
         EditorInput: "_1Ve4VFO2EEkeNZdel_Asky",
         NewNoteButton: "_3Sjbkvk647UKKVLX6J7gsW",
         CloseWindowButton: "vKXl-xWkUZL5iNvaT5mzW",
+        BackgroundAnimation: "K5kB32gMVsnDCBwxYDm4r",
+        "ItemFocusAnim-darkerGrey-nocolor": "_39HD17cQ23IvuK35ytuPef",
+        "ItemFocusAnim-darkerGrey": "_1UnKhkmcATwZcT0qX1VO-I",
+        "ItemFocusAnim-darkGrey": "bif353VzxtsbctKKtWLUm",
+        "ItemFocusAnim-grey": "_1lXo0Q4biCUQ5CPs1x9v8z",
+        "ItemFocusAnim-translucent-white-10": "_3jeaGvKmUWZNHnBKV71gwe",
+        "ItemFocusAnim-translucent-white-20": "_1S31mEHMzu94gIf5W00vQ5",
+        "ItemFocusAnimBorder-darkGrey": "_3qGIi9phn_i9vlXbBfE2N4",
+        "ItemFocusAnim-green": "PKY6xp7_WNHMI65Uc8yJ_",
+        focusAnimation: "_1AiJFdtfIMUo0maxXZuGYY",
+        hoverAnimation: "_2FZZ9Hxx9YxFh9K9vrhe9t",
       };
     },
     chunkid: (module) => {

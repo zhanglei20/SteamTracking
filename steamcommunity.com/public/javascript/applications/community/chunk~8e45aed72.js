@@ -2380,7 +2380,7 @@
     },
     17909: (e, t, r) => {
       "use strict";
-      r.d(t, { u: () => y });
+      r.d(t, { u: () => b });
       var i = r(7850),
         a = r(90626),
         s = r(2160),
@@ -2394,8 +2394,9 @@
         g = r(87540),
         B = r(16516),
         _ = r.n(B),
-        f = r(74410);
-      const p = new Map([
+        f = r(74410),
+        p = r(40414);
+      const y = new Map([
           ...Array.from(d.W4.entries()),
           ...Array.from(d.N2.entries()),
           [
@@ -2443,7 +2444,7 @@
                     null === (a = null == e ? void 0 : e.args) || void 0 === a
                       ? void 0
                       : a.alt,
-                  c = (0, d.z5)(m, e.language, Number.parseInt(o));
+                  c = (0, p.z)(m, e.language, Number.parseInt(o));
                 return null == c
                   ? null
                   : "string" == typeof c
@@ -2484,7 +2485,7 @@
             },
           ],
         ]),
-        y = (e) => {
+        b = (e) => {
           const { text: t, bShowErrorInfo: r, version: s } = e,
             n = a.useCallback(
               (e) =>
@@ -2504,7 +2505,7 @@
                 ),
               [],
             ),
-            l = a.useRef(new u.B(p, n, m.TS.LANGUAGE));
+            l = a.useRef(new u.B(y, n, m.TS.LANGUAGE));
           return (0, i.jsx)("div", {
             className: _().FAQContainer,
             children: l.current.ParseBBCode(t, {

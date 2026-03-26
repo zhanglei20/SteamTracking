@@ -13,6 +13,17 @@
         RareAchievementNoAnimation: "_1a4bwiE4yUR3XXBKI6mKqt",
         RareAchievementIconGlow: "_1Z2eJs9-zNTKcWKy4M-oDE",
         HiddenLabel: "_1ABm6sfuqiZZDSL9z8mW1a",
+        BackgroundAnimation: "_2jC4Eqt8IrbRbM81zvxlnW",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3jGCeVy7OzY5pw0Rpx0z8-",
+        "ItemFocusAnim-darkerGrey": "_2Jqi29kzJtRTafvIOPyvAW",
+        "ItemFocusAnim-darkGrey": "T-2rsbY05mXhgaIQkf73x",
+        "ItemFocusAnim-grey": "_1WGat3-0-TCDKEtg7LEoB5",
+        "ItemFocusAnim-translucent-white-10": "RkktEhJT7jnAfvbEiNBBH",
+        "ItemFocusAnim-translucent-white-20": "_30c3lgfOmK8HMV6u21SQ42",
+        "ItemFocusAnimBorder-darkGrey": "_1vYqEdzDmOIRAIgDNUHfBt",
+        "ItemFocusAnim-green": "CrI_goODkSlbs2jjXglfz",
+        focusAnimation: "_3xzftt0SCqsMfNLxtA825Q",
+        hoverAnimation: "_10Y0xofBXAPurniv6K3_YV",
       };
     },
     chunkid: (module) => {
@@ -32,6 +43,17 @@
         FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
         FilterInput: "_2l4z-U60lABvd9XWArGjAf",
         AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
+        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
+        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
+        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
+        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
+        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
+        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
+        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
+        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
+        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
       };
     },
     chunkid: (module) => {
@@ -74,7 +96,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -172,7 +193,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",
@@ -209,7 +229,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         MonthGridOverallCtn: "_2xKPi7RhodSVa0iEsscEfN",
         MonthGroupCtn: "DMCZIDNqrSb2BeQ4d5kAj",
         FirstPlayCtn: "rjWoTavA51H_s5xhADpI_",
@@ -220,7 +239,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         ImagesCtn: "_1qcMwZqiAwD0aa-bpPRDPD",
         AllImagesCtn: "_3mYNn3Asuzn5ilIQ-_jjEu",
         AllImages: "RxFaOYvEjQF0lVUfJj_zJ",
@@ -415,7 +433,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         YearInReviewContainer: "_1FBH84bAF1zr-VjJo8y2YI",
         YearInReviewContent: "_2Mj4nu3kK3ic2TFv5uwGTw",
         TopAreaSizer: "_3kunV-qalJTBLAvNB9lUDg",
@@ -557,7 +574,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         ShareOptions: "_1GTNKoqExpB4ypMhkppYXI",
         ShareTitle: "_3vsN5FX9Q4iAxSRJi52ii6",
         ShareColumns: "_17-suJNiK6Qevk_3Uw1027",
@@ -637,7 +653,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        narrowWidth: "500px",
         Section: "_3Q6xYLon3xp6vd3Bt-DtpC",
         Windows: "_1vF9utiJ4zPDJltOokxCPu",
         Linux: "_2sto6qgDyyfXZSaNXVLH2S",
@@ -933,6 +948,17 @@
         ViewPageButton: "_2IfJlTSfJ9B2O7GrLSHZEu",
         Description: "_3OaR0S3fMP3IqzGQkLo2LL",
         OtherYearLink: "e2J3CJVLkCcWuogJlnJqA",
+        BackgroundAnimation: "_14OuUh1QjZE3TsW4NZNR2T",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34-QNskZMB7mEWsqhnZP6b",
+        "ItemFocusAnim-darkerGrey": "_2mYgNS2XvBpQoFx7GpbaE8",
+        "ItemFocusAnim-darkGrey": "_2wJw5tkwjDagaHTwWVdn1u",
+        "ItemFocusAnim-grey": "_1flpMlWbeXKOl-WYA3Xem3",
+        "ItemFocusAnim-translucent-white-10": "_2Du1mKAGG_7kB5hkqpPOqX",
+        "ItemFocusAnim-translucent-white-20": "_1mHlVprPR_Qin9oSqFmQwX",
+        "ItemFocusAnimBorder-darkGrey": "_1dQDG_S6sUmSjy1GFP6ybp",
+        "ItemFocusAnim-green": "_1X5ahFc-n3nVkWAsUpG49I",
+        focusAnimation: "_1ddfD3xnl7ZxtZ7TYShOPs",
+        hoverAnimation: "_2A0Chr-r6KVC7bWMKjWlOP",
       };
     },
     chunkid: (module) => {
@@ -1016,6 +1042,17 @@
         ViewPageButton: "_3Jien5Efkr3B0IQgbOMC0u",
         Description: "_30TBldURmofivWIf4LDybD",
         OtherYearLink: "LDdWtcd3cqcEwlnIqnp0m",
+        BackgroundAnimation: "Uwk2oDOlH9H45uB6SckjX",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1HzbepuV2ne3fOiiw4M6L2",
+        "ItemFocusAnim-darkerGrey": "_3jhvEXbsQ8rwLbzgIG2YKY",
+        "ItemFocusAnim-darkGrey": "_3E-Kmphz35Z5zxRRLBBv__",
+        "ItemFocusAnim-grey": "_1MX1VV5l2Txw56HFd3WETD",
+        "ItemFocusAnim-translucent-white-10": "_6H60CwBcO9kk4y1pOFm21",
+        "ItemFocusAnim-translucent-white-20": "_31Gmo3sGiGSz9BuXbnqa54",
+        "ItemFocusAnimBorder-darkGrey": "_2BlrdTd8j7eGp87-nNi7Md",
+        "ItemFocusAnim-green": "_3TnQtlMvVkjLUwNdMvKkKA",
+        focusAnimation: "_3xy4OMg8IMNU-GS54X-fou",
+        hoverAnimation: "_3TsGkEqTE3pjbkbIFVAmfi",
       };
     },
     chunkid: (module) => {

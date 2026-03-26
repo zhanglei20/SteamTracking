@@ -2305,7 +2305,7 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.nIndex = 0;
 	this.bIsAnimating = false;
 	this.bAllowWideScreenMode = bAllowWideScreenMode;
-	this.bPreloadNearbyItems = bPreloadNearbyItems || this.bAllowWideScreenMode;
+	this.bPreloadNearbyItems = bPreloadNearbyItems || this.bIsWideScreenMode();
 
 	this.$elArrowLeft = $J('.arrow.left', this.$elContainer);
 	this.$elArrowRight = $J('.arrow.right', this.$elContainer);
@@ -2317,6 +2317,11 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	if ( window.UseGamepadScreenMode && window.UseGamepadScreenMode() )
 	{
 		PreloadImages( $elContainer );
+	}
+
+	if ( this.bIsWideScreenMode() )
+	{
+		this.$elContainer.addClass( 'carousel_wide_mode' );
 	}
 
 	// get ready to preload images when we scroll.  Delay this a bit because these are low priority
@@ -2341,7 +2346,7 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 		{
 			instance.timerAdvance = setInterval ( function ()
 			{
-				if( !instance.bIsResponsive() )
+				if( !instance.bIsResponsive() && !window.UseGamepadScreenMode() )
 					instance.Advance ();
 			}, nSpeed * 1000 );
 		}
@@ -2530,6 +2535,11 @@ CGenericCarousel.prototype.bIsResponsive = function( )
 	return window.UseSmallScreenMode && window.UseSmallScreenMode();
 }
 
+CGenericCarousel.prototype.bIsWideScreenMode = function( )
+{
+	return this.bAllowWideScreenMode && window.UseWideScreenMode && window.UseWideScreenMode() && !window.UseGamepadScreenMode();
+}
+
 CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 {
 		if( this.bIsResponsive() && !window.UseGamepadScreenMode() )
@@ -2544,7 +2554,7 @@ CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 	if( nNextIndex == this.nIndex || nNextIndex === false )
 		return;
 
-	if ( this.bAllowWideScreenMode && window.UseWideScreenMode && window.UseWideScreenMode() )
+	if ( this.bIsWideScreenMode() )
 	{
 		const bGoForward = nNewIndex !== -1;
 		return this.WideModeAdvance( nNextIndex, bGoForward ) ;

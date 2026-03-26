@@ -324,18 +324,22 @@
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: ["communitypreferences"],
-          queryFn: async () => {
-            const _ = _._.Init(_._),
-              _ = await _._.GetCommunityPreferences(_, _);
-            if (1 != __webpack_require__.GetEResult())
-              throw new Error(
-                `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
-              );
-            return __webpack_require__.Body();
-          },
-        });
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: ["communitypreferences"],
+              queryFn: async () => {
+                const _ = _._.Init(_._),
+                  _ = await _._.GetCommunityPreferences(_, _);
+                if (1 != __webpack_require__.GetEResult())
+                  throw new Error(
+                    `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
+                  );
+                return __webpack_require__.Body();
+              },
+            };
+          })(_),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

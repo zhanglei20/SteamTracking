@@ -7,7 +7,551 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = ["x1", "y1", "x2", "y2", "key"],
+        _ = ["offset"];
+      function _(_) {
+        return (
+          (_ =
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+              ? function (_) {
+                  return typeof _;
+                }
+              : function (_) {
+                  return _ &&
+                    "function" == typeof Symbol &&
+                    _.constructor === Symbol &&
+                    _ !== Symbol.prototype
+                    ? "symbol"
+                    : typeof _;
+                }),
+          _(_)
+        );
+      }
+      function _(_, _) {
+        var _ = Object.keys(_);
+        if (Object.getOwnPropertySymbols) {
+          var _ = Object.getOwnPropertySymbols(_);
+          _ &&
+            (_ = _.filter(function (_) {
+              return Object.getOwnPropertyDescriptor(_, _).enumerable;
+            })),
+            _.push.apply(_, _);
+        }
+        return _;
+      }
+      function _(_) {
+        for (var _ = 1; _ < arguments.length; _++) {
+          var _ = null != arguments[_] ? arguments[_] : {};
+          _ % 2
+            ? _(Object(_), !0).forEach(function (_) {
+                _(_, _, _[_]);
+              })
+            : Object.getOwnPropertyDescriptors
+              ? Object.defineProperties(_, Object.getOwnPropertyDescriptors(_))
+              : _(Object(_)).forEach(function (_) {
+                  Object.defineProperty(
+                    _,
+                    _,
+                    Object.getOwnPropertyDescriptor(_, _),
+                  );
+                });
+        }
+        return _;
+      }
+      function _(_, _, _) {
+        var _;
+        return (
+          (_ = (function (_, _) {
+            if ("object" != _(_) || !_) return _;
+            var _ = _[Symbol.toPrimitive];
+            if (void 0 !== _) {
+              var _ = __webpack_require__.call(_, _ || "default");
+              if ("object" != _(_)) return _;
+              throw new TypeError(
+                "@@toPrimitive must return a primitive value.",
+              );
+            }
+            return ("string" === _ ? String : Number)(_);
+          })(_, "string")),
+          (_ = "symbol" == _(_) ? _ : _ + "") in _
+            ? Object.defineProperty(_, _, {
+                value: _,
+                enumerable: !0,
+                configurable: !0,
+                writable: !0,
+              })
+            : (_[_] = _),
+          _
+        );
+      }
+      function _() {
+        return (
+          (_ = Object.assign
+            ? Object.assign.bind()
+            : function (_) {
+                for (var _ = 1; _ < arguments.length; _++) {
+                  var _ = arguments[_];
+                  for (var _ in _)
+                    Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
+                }
+                return _;
+              }),
+          _.apply(this, arguments)
+        );
+      }
+      function _(_, _) {
+        if (null == _) return {};
+        var _,
+          _,
+          _ = (function (_, _) {
+            if (null == _) return {};
+            var _ = {};
+            for (var _ in _)
+              if (Object.prototype.hasOwnProperty.call(_, _)) {
+                if (_.indexOf(_) >= 0) continue;
+                _[_] = _[_];
+              }
+            return _;
+          })(_, _);
+        if (Object.getOwnPropertySymbols) {
+          var _ = Object.getOwnPropertySymbols(_);
+          for (_ = 0; _ < _.length; _++)
+            (_ = _[_]),
+              _.indexOf(_) >= 0 ||
+                (Object.prototype.propertyIsEnumerable.call(_, _) &&
+                  (_[_] = _[_]));
+        }
+        return _;
+      }
+      var _ = function (_) {
+        var _ = _.fill;
+        if (!_ || "none" === _) return null;
+        var _ = _.fillOpacity,
+          _ = _._,
+          _ = _._,
+          _ = _.width,
+          _ = _.height,
+          _ = _._;
+        return _.createElement("rect", {
+          _: _,
+          _: _,
+          _: _,
+          width: _,
+          height: _,
+          stroke: "none",
+          fill: _,
+          fillOpacity: _,
+          className: "recharts-cartesian-grid-bg",
+        });
+      };
+      function _(_, _) {
+        var _;
+        if (_.isValidElement(_)) _ = _.cloneElement(_, _);
+        else if (_()(_)) _ = _(_);
+        else {
+          var _ = _._,
+            _ = _._,
+            _ = _._,
+            _ = _._,
+            _ = _.key,
+            _ = _(_, _),
+            _ = (0, _._)(_, !1),
+            _ = (_.offset, _(_, _));
+          _ = _.createElement(
+            "line",
+            _({}, _, {
+              _: _,
+              _: _,
+              _: _,
+              _: _,
+              fill: "none",
+              key: _,
+            }),
+          );
+        }
+        return _;
+      }
+      function _(_) {
+        var _ = _._,
+          _ = _.width,
+          _ = _.horizontal,
+          _ = void 0 === _ || _,
+          _ = _.horizontalPoints;
+        if (!_ || !_ || !_.length) return null;
+        var _ = _.map(function (_, _) {
+          var _ = _(
+            _({}, _),
+            {},
+            {
+              _: _,
+              _: _,
+              _: _ + _,
+              _: _,
+              key: "line-".concat(_),
+              index: _,
+            },
+          );
+          return _(_, _);
+        });
+        return _.createElement(
+          "g",
+          {
+            className: "recharts-cartesian-grid-horizontal",
+          },
+          _,
+        );
+      }
+      function _(_) {
+        var _ = _._,
+          _ = _.height,
+          _ = _.vertical,
+          _ = void 0 === _ || _,
+          _ = _.verticalPoints;
+        if (!_ || !_ || !_.length) return null;
+        var _ = _.map(function (_, _) {
+          var _ = _(
+            _({}, _),
+            {},
+            {
+              _: _,
+              _: _,
+              _: _,
+              _: _ + _,
+              key: "line-".concat(_),
+              index: _,
+            },
+          );
+          return _(_, _);
+        });
+        return _.createElement(
+          "g",
+          {
+            className: "recharts-cartesian-grid-vertical",
+          },
+          _,
+        );
+      }
+      function _(_) {
+        var _ = _.horizontalFill,
+          _ = _.fillOpacity,
+          _ = _._,
+          _ = _._,
+          _ = _.width,
+          _ = _.height,
+          _ = _.horizontalPoints,
+          _ = _.horizontal;
+        if (!(void 0 === _ || _) || !_ || !_.length) return null;
+        var _ = _.map(function (_) {
+          return Math.round(_ + _ - _);
+        }).sort(function (_, _) {
+          return _ - _;
+        });
+        _ !== _[0] && _.unshift(0);
+        var _ = _.map(function (_, _) {
+          var _ = !_[_ + 1] ? _ + _ - _ : _[_ + 1] - _;
+          if (_ <= 0) return null;
+          var _ = _ % _.length;
+          return _.createElement("rect", {
+            key: "react-".concat(_),
+            _: _,
+            _: _,
+            height: _,
+            width: _,
+            stroke: "none",
+            fill: _[_],
+            fillOpacity: _,
+            className: "recharts-cartesian-grid-bg",
+          });
+        });
+        return _.createElement(
+          "g",
+          {
+            className: "recharts-cartesian-gridstripes-horizontal",
+          },
+          _,
+        );
+      }
+      function _(_) {
+        var _ = _.vertical,
+          _ = void 0 === _ || _,
+          _ = _.verticalFill,
+          _ = _.fillOpacity,
+          _ = _._,
+          _ = _._,
+          _ = _.width,
+          _ = _.height,
+          _ = _.verticalPoints;
+        if (!_ || !_ || !_.length) return null;
+        var _ = _.map(function (_) {
+          return Math.round(_ + _ - _);
+        }).sort(function (_, _) {
+          return _ - _;
+        });
+        _ !== _[0] && _.unshift(0);
+        var _ = _.map(function (_, _) {
+          var _ = !_[_ + 1] ? _ + _ - _ : _[_ + 1] - _;
+          if (_ <= 0) return null;
+          var _ = _ % _.length;
+          return _.createElement("rect", {
+            key: "react-".concat(_),
+            _: _,
+            _: _,
+            width: _,
+            height: _,
+            stroke: "none",
+            fill: _[_],
+            fillOpacity: _,
+            className: "recharts-cartesian-grid-bg",
+          });
+        });
+        return _.createElement(
+          "g",
+          {
+            className: "recharts-cartesian-gridstripes-vertical",
+          },
+          _,
+        );
+      }
+      var _ = function (_, _) {
+          var _ = _.xAxis,
+            _ = _.width,
+            _ = _.height,
+            _ = _.offset;
+          return (0, _._)(
+            (0, _._)(
+              _(
+                _(_({}, _._.defaultProps), _),
+                {},
+                {
+                  ticks: (0, _._)(_, !0),
+                  viewBox: {
+                    _: 0,
+                    _: 0,
+                    width: _,
+                    height: _,
+                  },
+                },
+              ),
+            ),
+            _.left,
+            _.left + _.width,
+            _,
+          );
+        },
+        _ = function (_, _) {
+          var _ = _.yAxis,
+            _ = _.width,
+            _ = _.height,
+            _ = _.offset;
+          return (0, _._)(
+            (0, _._)(
+              _(
+                _(_({}, _._.defaultProps), _),
+                {},
+                {
+                  ticks: (0, _._)(_, !0),
+                  viewBox: {
+                    _: 0,
+                    _: 0,
+                    width: _,
+                    height: _,
+                  },
+                },
+              ),
+            ),
+            _.top,
+            _.top + _.height,
+            _,
+          );
+        },
+        _ = {
+          horizontal: !0,
+          vertical: !0,
+          horizontalPoints: [],
+          verticalPoints: [],
+          stroke: "#ccc",
+          fill: "none",
+          verticalFill: [],
+          horizontalFill: [],
+        };
+      function _(_) {
+        var _,
+          _,
+          _,
+          _,
+          _,
+          _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _(
+            _({}, _),
+            {},
+            {
+              stroke: null !== (_ = _.stroke) && void 0 !== _ ? _ : _.stroke,
+              fill: null !== (_ = _.fill) && void 0 !== _ ? _ : _.fill,
+              horizontal:
+                null !== (_ = _.horizontal) && void 0 !== _ ? _ : _.horizontal,
+              horizontalFill:
+                null !== (_ = _.horizontalFill) && void 0 !== _
+                  ? _
+                  : _.horizontalFill,
+              vertical:
+                null !== (_ = _.vertical) && void 0 !== _ ? _ : _.vertical,
+              verticalFill:
+                null !== (_ = _.verticalFill) && void 0 !== _
+                  ? _
+                  : _.verticalFill,
+              _: (0, _._)(_._) ? _._ : _.left,
+              _: (0, _._)(_._) ? _._ : _.top,
+              width: (0, _._)(_.width) ? _.width : _.width,
+              height: (0, _._)(_.height) ? _.height : _.height,
+            },
+          ),
+          _ = _._,
+          _ = _._,
+          _ = _.width,
+          _ = _.height,
+          _ = _.syncWithTicks,
+          _ = _.horizontalValues,
+          _ = _.verticalValues,
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        if (
+          !(0, _._)(_) ||
+          _ <= 0 ||
+          !(0, _._)(_) ||
+          _ <= 0 ||
+          !(0, _._)(_) ||
+          _ !== +_ ||
+          !(0, _._)(_) ||
+          _ !== +_
+        )
+          return null;
+        var _ = _.verticalCoordinatesGenerator || _,
+          _ = _.horizontalCoordinatesGenerator || _,
+          _ = _.horizontalPoints,
+          _ = _.verticalPoints;
+        if ((!_ || !_.length) && _()(_)) {
+          var _ = _ && _.length,
+            _ = _(
+              {
+                yAxis: _
+                  ? _(
+                      _({}, _),
+                      {},
+                      {
+                        ticks: _ ? _ : _.ticks,
+                      },
+                    )
+                  : void 0,
+                width: _,
+                height: _,
+                offset: _,
+              },
+              !!_ || _,
+            );
+          (0, _._)(
+            Array.isArray(_),
+            "horizontalCoordinatesGenerator should return Array but instead it returned [".concat(
+              _(_),
+              "]",
+            ),
+          ),
+            Array.isArray(_) && (_ = _);
+        }
+        if ((!_ || !_.length) && _()(_)) {
+          var _ = _ && _.length,
+            _ = _(
+              {
+                xAxis: _
+                  ? _(
+                      _({}, _),
+                      {},
+                      {
+                        ticks: _ ? _ : _.ticks,
+                      },
+                    )
+                  : void 0,
+                width: _,
+                height: _,
+                offset: _,
+              },
+              !!_ || _,
+            );
+          (0, _._)(
+            Array.isArray(_),
+            "verticalCoordinatesGenerator should return Array but instead it returned [".concat(
+              _(_),
+              "]",
+            ),
+          ),
+            Array.isArray(_) && (_ = _);
+        }
+        return _.createElement(
+          "g",
+          {
+            className: "recharts-cartesian-grid",
+          },
+          _.createElement(_, {
+            fill: _.fill,
+            fillOpacity: _.fillOpacity,
+            _: _._,
+            _: _._,
+            width: _.width,
+            height: _.height,
+            _: _._,
+          }),
+          _.createElement(
+            _,
+            _({}, _, {
+              offset: _,
+              horizontalPoints: _,
+              xAxis: _,
+              yAxis: _,
+            }),
+          ),
+          _.createElement(
+            _,
+            _({}, _, {
+              offset: _,
+              verticalPoints: _,
+              xAxis: _,
+              yAxis: _,
+            }),
+          ),
+          _.createElement(
+            _,
+            _({}, _, {
+              horizontalPoints: _,
+            }),
+          ),
+          _.createElement(
+            _,
+            _({}, _, {
+              verticalPoints: _,
+            }),
+          ),
+        );
+      }
+      _.displayName = "CartesianGrid";
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -834,570 +1378,7 @@
           }
           return _;
         });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = ["x1", "y1", "x2", "y2", "key"],
-        _ = ["offset"];
-      function _(_) {
-        return (
-          (_ =
-            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
-              ? function (_) {
-                  return typeof _;
-                }
-              : function (_) {
-                  return _ &&
-                    "function" == typeof Symbol &&
-                    _.constructor === Symbol &&
-                    _ !== Symbol.prototype
-                    ? "symbol"
-                    : typeof _;
-                }),
-          _(_)
-        );
-      }
-      function _(_, _) {
-        var _ = Object.keys(_);
-        if (Object.getOwnPropertySymbols) {
-          var _ = Object.getOwnPropertySymbols(_);
-          _ &&
-            (_ = _.filter(function (_) {
-              return Object.getOwnPropertyDescriptor(_, _).enumerable;
-            })),
-            _.push.apply(_, _);
-        }
-        return _;
-      }
-      function _(_) {
-        for (var _ = 1; _ < arguments.length; _++) {
-          var _ = null != arguments[_] ? arguments[_] : {};
-          _ % 2
-            ? _(Object(_), !0).forEach(function (_) {
-                _(_, _, _[_]);
-              })
-            : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(_, Object.getOwnPropertyDescriptors(_))
-              : _(Object(_)).forEach(function (_) {
-                  Object.defineProperty(
-                    _,
-                    _,
-                    Object.getOwnPropertyDescriptor(_, _),
-                  );
-                });
-        }
-        return _;
-      }
-      function _(_, _, _) {
-        var _;
-        return (
-          (_ = (function (_, _) {
-            if ("object" != _(_) || !_) return _;
-            var _ = _[Symbol.toPrimitive];
-            if (void 0 !== _) {
-              var _ = __webpack_require__.call(_, _ || "default");
-              if ("object" != _(_)) return _;
-              throw new TypeError(
-                "@@toPrimitive must return a primitive value.",
-              );
-            }
-            return ("string" === _ ? String : Number)(_);
-          })(_, "string")),
-          (_ = "symbol" == _(_) ? _ : _ + "") in _
-            ? Object.defineProperty(_, _, {
-                value: _,
-                enumerable: !0,
-                configurable: !0,
-                writable: !0,
-              })
-            : (_[_] = _),
-          _
-        );
-      }
-      function _() {
-        return (
-          (_ = Object.assign
-            ? Object.assign.bind()
-            : function (_) {
-                for (var _ = 1; _ < arguments.length; _++) {
-                  var _ = arguments[_];
-                  for (var _ in _)
-                    Object.prototype.hasOwnProperty.call(_, _) && (_[_] = _[_]);
-                }
-                return _;
-              }),
-          _.apply(this, arguments)
-        );
-      }
-      function _(_, _) {
-        if (null == _) return {};
-        var _,
-          _,
-          _ = (function (_, _) {
-            if (null == _) return {};
-            var _ = {};
-            for (var _ in _)
-              if (Object.prototype.hasOwnProperty.call(_, _)) {
-                if (_.indexOf(_) >= 0) continue;
-                _[_] = _[_];
-              }
-            return _;
-          })(_, _);
-        if (Object.getOwnPropertySymbols) {
-          var _ = Object.getOwnPropertySymbols(_);
-          for (_ = 0; _ < _.length; _++)
-            (_ = _[_]),
-              _.indexOf(_) >= 0 ||
-                (Object.prototype.propertyIsEnumerable.call(_, _) &&
-                  (_[_] = _[_]));
-        }
-        return _;
-      }
-      var _ = function (_) {
-        var _ = _.fill;
-        if (!_ || "none" === _) return null;
-        var _ = _.fillOpacity,
-          _ = _._,
-          _ = _._,
-          _ = _.width,
-          _ = _.height,
-          _ = _._;
-        return _.createElement("rect", {
-          _: _,
-          _: _,
-          _: _,
-          width: _,
-          height: _,
-          stroke: "none",
-          fill: _,
-          fillOpacity: _,
-          className: "recharts-cartesian-grid-bg",
-        });
-      };
-      function _(_, _) {
-        var _;
-        if (_.isValidElement(_)) _ = _.cloneElement(_, _);
-        else if (_()(_)) _ = _(_);
-        else {
-          var _ = _._,
-            _ = _._,
-            _ = _._,
-            _ = _._,
-            _ = _.key,
-            _ = _(_, _),
-            _ = (0, _._)(_, !1),
-            _ = (_.offset, _(_, _));
-          _ = _.createElement(
-            "line",
-            _({}, _, {
-              _: _,
-              _: _,
-              _: _,
-              _: _,
-              fill: "none",
-              key: _,
-            }),
-          );
-        }
-        return _;
-      }
-      function _(_) {
-        var _ = _._,
-          _ = _.width,
-          _ = _.horizontal,
-          _ = void 0 === _ || _,
-          _ = _.horizontalPoints;
-        if (!_ || !_ || !_.length) return null;
-        var _ = _.map(function (_, _) {
-          var _ = _(
-            _({}, _),
-            {},
-            {
-              _: _,
-              _: _,
-              _: _ + _,
-              _: _,
-              key: "line-".concat(_),
-              index: _,
-            },
-          );
-          return _(_, _);
-        });
-        return _.createElement(
-          "g",
-          {
-            className: "recharts-cartesian-grid-horizontal",
-          },
-          _,
-        );
-      }
-      function _(_) {
-        var _ = _._,
-          _ = _.height,
-          _ = _.vertical,
-          _ = void 0 === _ || _,
-          _ = _.verticalPoints;
-        if (!_ || !_ || !_.length) return null;
-        var _ = _.map(function (_, _) {
-          var _ = _(
-            _({}, _),
-            {},
-            {
-              _: _,
-              _: _,
-              _: _,
-              _: _ + _,
-              key: "line-".concat(_),
-              index: _,
-            },
-          );
-          return _(_, _);
-        });
-        return _.createElement(
-          "g",
-          {
-            className: "recharts-cartesian-grid-vertical",
-          },
-          _,
-        );
-      }
-      function _(_) {
-        var _ = _.horizontalFill,
-          _ = _.fillOpacity,
-          _ = _._,
-          _ = _._,
-          _ = _.width,
-          _ = _.height,
-          _ = _.horizontalPoints,
-          _ = _.horizontal;
-        if (!(void 0 === _ || _) || !_ || !_.length) return null;
-        var _ = _.map(function (_) {
-          return Math.round(_ + _ - _);
-        }).sort(function (_, _) {
-          return _ - _;
-        });
-        _ !== _[0] && _.unshift(0);
-        var _ = _.map(function (_, _) {
-          var _ = !_[_ + 1] ? _ + _ - _ : _[_ + 1] - _;
-          if (_ <= 0) return null;
-          var _ = _ % _.length;
-          return _.createElement("rect", {
-            key: "react-".concat(_),
-            _: _,
-            _: _,
-            height: _,
-            width: _,
-            stroke: "none",
-            fill: _[_],
-            fillOpacity: _,
-            className: "recharts-cartesian-grid-bg",
-          });
-        });
-        return _.createElement(
-          "g",
-          {
-            className: "recharts-cartesian-gridstripes-horizontal",
-          },
-          _,
-        );
-      }
-      function _(_) {
-        var _ = _.vertical,
-          _ = void 0 === _ || _,
-          _ = _.verticalFill,
-          _ = _.fillOpacity,
-          _ = _._,
-          _ = _._,
-          _ = _.width,
-          _ = _.height,
-          _ = _.verticalPoints;
-        if (!_ || !_ || !_.length) return null;
-        var _ = _.map(function (_) {
-          return Math.round(_ + _ - _);
-        }).sort(function (_, _) {
-          return _ - _;
-        });
-        _ !== _[0] && _.unshift(0);
-        var _ = _.map(function (_, _) {
-          var _ = !_[_ + 1] ? _ + _ - _ : _[_ + 1] - _;
-          if (_ <= 0) return null;
-          var _ = _ % _.length;
-          return _.createElement("rect", {
-            key: "react-".concat(_),
-            _: _,
-            _: _,
-            width: _,
-            height: _,
-            stroke: "none",
-            fill: _[_],
-            fillOpacity: _,
-            className: "recharts-cartesian-grid-bg",
-          });
-        });
-        return _.createElement(
-          "g",
-          {
-            className: "recharts-cartesian-gridstripes-vertical",
-          },
-          _,
-        );
-      }
-      var _ = function (_, _) {
-          var _ = _.xAxis,
-            _ = _.width,
-            _ = _.height,
-            _ = _.offset;
-          return (0, _._)(
-            (0, _._)(
-              _(
-                _(_({}, _._.defaultProps), _),
-                {},
-                {
-                  ticks: (0, _._)(_, !0),
-                  viewBox: {
-                    _: 0,
-                    _: 0,
-                    width: _,
-                    height: _,
-                  },
-                },
-              ),
-            ),
-            _.left,
-            _.left + _.width,
-            _,
-          );
-        },
-        _ = function (_, _) {
-          var _ = _.yAxis,
-            _ = _.width,
-            _ = _.height,
-            _ = _.offset;
-          return (0, _._)(
-            (0, _._)(
-              _(
-                _(_({}, _._.defaultProps), _),
-                {},
-                {
-                  ticks: (0, _._)(_, !0),
-                  viewBox: {
-                    _: 0,
-                    _: 0,
-                    width: _,
-                    height: _,
-                  },
-                },
-              ),
-            ),
-            _.top,
-            _.top + _.height,
-            _,
-          );
-        },
-        _ = {
-          horizontal: !0,
-          vertical: !0,
-          horizontalPoints: [],
-          verticalPoints: [],
-          stroke: "#ccc",
-          fill: "none",
-          verticalFill: [],
-          horizontalFill: [],
-        };
-      function _(_) {
-        var _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = _(
-            _({}, _),
-            {},
-            {
-              stroke: null !== (_ = _.stroke) && void 0 !== _ ? _ : _.stroke,
-              fill: null !== (_ = _.fill) && void 0 !== _ ? _ : _.fill,
-              horizontal:
-                null !== (_ = _.horizontal) && void 0 !== _ ? _ : _.horizontal,
-              horizontalFill:
-                null !== (_ = _.horizontalFill) && void 0 !== _
-                  ? _
-                  : _.horizontalFill,
-              vertical:
-                null !== (_ = _.vertical) && void 0 !== _ ? _ : _.vertical,
-              verticalFill:
-                null !== (_ = _.verticalFill) && void 0 !== _
-                  ? _
-                  : _.verticalFill,
-              _: (0, _._)(_._) ? _._ : _.left,
-              _: (0, _._)(_._) ? _._ : _.top,
-              width: (0, _._)(_.width) ? _.width : _.width,
-              height: (0, _._)(_.height) ? _.height : _.height,
-            },
-          ),
-          _ = _._,
-          _ = _._,
-          _ = _.width,
-          _ = _.height,
-          _ = _.syncWithTicks,
-          _ = _.horizontalValues,
-          _ = _.verticalValues,
-          _ = (0, _._)(),
-          _ = (0, _._)();
-        if (
-          !(0, _._)(_) ||
-          _ <= 0 ||
-          !(0, _._)(_) ||
-          _ <= 0 ||
-          !(0, _._)(_) ||
-          _ !== +_ ||
-          !(0, _._)(_) ||
-          _ !== +_
-        )
-          return null;
-        var _ = _.verticalCoordinatesGenerator || _,
-          _ = _.horizontalCoordinatesGenerator || _,
-          _ = _.horizontalPoints,
-          _ = _.verticalPoints;
-        if ((!_ || !_.length) && _()(_)) {
-          var _ = _ && _.length,
-            _ = _(
-              {
-                yAxis: _
-                  ? _(
-                      _({}, _),
-                      {},
-                      {
-                        ticks: _ ? _ : _.ticks,
-                      },
-                    )
-                  : void 0,
-                width: _,
-                height: _,
-                offset: _,
-              },
-              !!_ || _,
-            );
-          (0, _._)(
-            Array.isArray(_),
-            "horizontalCoordinatesGenerator should return Array but instead it returned [".concat(
-              _(_),
-              "]",
-            ),
-          ),
-            Array.isArray(_) && (_ = _);
-        }
-        if ((!_ || !_.length) && _()(_)) {
-          var _ = _ && _.length,
-            _ = _(
-              {
-                xAxis: _
-                  ? _(
-                      _({}, _),
-                      {},
-                      {
-                        ticks: _ ? _ : _.ticks,
-                      },
-                    )
-                  : void 0,
-                width: _,
-                height: _,
-                offset: _,
-              },
-              !!_ || _,
-            );
-          (0, _._)(
-            Array.isArray(_),
-            "verticalCoordinatesGenerator should return Array but instead it returned [".concat(
-              _(_),
-              "]",
-            ),
-          ),
-            Array.isArray(_) && (_ = _);
-        }
-        return _.createElement(
-          "g",
-          {
-            className: "recharts-cartesian-grid",
-          },
-          _.createElement(_, {
-            fill: _.fill,
-            fillOpacity: _.fillOpacity,
-            _: _._,
-            _: _._,
-            width: _.width,
-            height: _.height,
-            _: _._,
-          }),
-          _.createElement(
-            _,
-            _({}, _, {
-              offset: _,
-              horizontalPoints: _,
-              xAxis: _,
-              yAxis: _,
-            }),
-          ),
-          _.createElement(
-            _,
-            _({}, _, {
-              offset: _,
-              verticalPoints: _,
-              xAxis: _,
-              yAxis: _,
-            }),
-          ),
-          _.createElement(
-            _,
-            _({}, _, {
-              horizontalPoints: _,
-            }),
-          ),
-          _.createElement(
-            _,
-            _({}, _, {
-              verticalPoints: _,
-            }),
-          ),
-        );
-      }
-      _.displayName = "CartesianGrid";
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (
@@ -1559,9 +1540,6 @@
           type: "number",
         });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2288,7 +2266,7 @@
         _ = __webpack_require__("chunkid"),
         _ = (0, _._)({
           chartName: "ComposedChart",
-          GraphicalChild: [_._, _._, _._, _],
+          GraphicalChild: [_._, _, _._, _],
           axisComponents: [
             {
               axisType: "xAxis",

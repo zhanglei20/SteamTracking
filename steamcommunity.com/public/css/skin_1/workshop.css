@@ -173,19 +173,11 @@ a:hover {
 }
 
 #profileBlock {
-	width:638px;
 	margin: 5px 0px 0px 0px;
-	float: left;
+	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 7px;
-}
-
-/* on pages that have been updated to be responsive, make sure leftcol fits next to the right column */
-html.responsive #profileBlock {
-	width: auto;
-	max-width: 638px;
-	float: none;
 }
 
 #profileBlock p {

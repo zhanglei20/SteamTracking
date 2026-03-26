@@ -573,44 +573,6 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_) {
-        return (
-          !!_ &&
-          ("game" === _ ||
-            "dlc" === _ ||
-            "software" === _ ||
-            "music" === _ ||
-            "application" === _ ||
-            "demo" === _ ||
-            "hardware" === _ ||
-            "mod" === _ ||
-            "video" == _ ||
-            "beta" === _ ||
-            "advertising" === _)
-        );
-      }
-      function _(_) {
-        return (
-          null != _ &&
-          (0 == _ ||
-            4 == _ ||
-            6 == _ ||
-            11 == _ ||
-            1 == _ ||
-            10 == _ ||
-            2 == _ ||
-            7 == _ ||
-            12 == _ ||
-            14 == _)
-        );
-      }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -927,7 +889,7 @@
                 if (!_ || 0 == _.length || !_) return _(!1);
                 (async () => {
                   const _ = await Promise.all(
-                    _.map((_) =>
+                    _.filter((_) => !!_).map((_) =>
                       _.fetchQuery(
                         (0, _._)(_, {
                           appid: _,
@@ -1639,18 +1601,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "bundle" == _
-          ? "bundle"
-          : "sub" == _
-            ? "sub"
-            : ((0, _._)(_), "app");
-      }
       function _(_) {
         return 2 == _ ? "bundle" : 1 == _ ? "sub" : "app";
       }

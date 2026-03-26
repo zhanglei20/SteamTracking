@@ -777,6 +777,17 @@
         PurchaseOnlyNamePlatformCtn: "_2se3YP407MZoUhOQNUq3iZ",
         PurchaseOnlyActionCtn: "m8h0cksva38onSt9vDraW",
         PurchaseAndPlatformCtn: "_3xpkvUfVoGX-QZFAF9bHX1",
+        BackgroundAnimation: "_21xdD3y0DJeYvUehUMcPwg",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3rNPhT088-82kayyY9jWT9",
+        "ItemFocusAnim-darkerGrey": "HqpHRy29WMHs-c-YLSIrq",
+        "ItemFocusAnim-darkGrey": "_2-jSn0eV92zh4AG5bspmdQ",
+        "ItemFocusAnim-grey": "_1pfDYeJhusNZse6yV1ylkM",
+        "ItemFocusAnim-translucent-white-10": "BNT9Di7wydWf5sVgthF_S",
+        "ItemFocusAnim-translucent-white-20": "_1QPxw8wOP6YhLlQW4sIJE0",
+        "ItemFocusAnimBorder-darkGrey": "_3mWm9Hgt668bAAVs1xVbYf",
+        "ItemFocusAnim-green": "_1xGreWqJx-NR2CIsj6pfW7",
+        focusAnimation: "_3lmbTG6XwECS6W6OOXg1GG",
+        hoverAnimation: "_2PjejhtUq-V0Ljvu91OxDn",
       };
     },
     91291: (e) => {
@@ -788,6 +799,17 @@
         TwoWidthSideInfo: "_2qz5D65VkY796Xw-al9f_a",
         Reason: "_2h0GKAYcXRP10ryZHFn79d",
         StoreSaleItemRelease: "wJ7ZiTc09km2kH4mSsZ9j",
+        BackgroundAnimation: "_2_vb1-Pr1-2Gblfyxj023k",
+        "ItemFocusAnim-darkerGrey-nocolor": "op3gqmHyESfHpHgPheRVq",
+        "ItemFocusAnim-darkerGrey": "_12l58v9-cJk-169Qesl-e5",
+        "ItemFocusAnim-darkGrey": "_2uLjKVdzQQCodi_XH5ZPfi",
+        "ItemFocusAnim-grey": "_3Za5duiaOuAcNrQJeEpjxD",
+        "ItemFocusAnim-translucent-white-10": "_3wyVPtc4dD1Msi7wqRvJq3",
+        "ItemFocusAnim-translucent-white-20": "_2v6guEab39IMo3I1kfiwXc",
+        "ItemFocusAnimBorder-darkGrey": "_3SS0MMDROpRbR_hYLVjAcl",
+        "ItemFocusAnim-green": "_3qjU-9ZS6bDpjjMAOYUhGm",
+        focusAnimation: "_3-bYSIZZNIWgiOR__mB2jd",
+        hoverAnimation: "_39oPHCcA4NgTm53rnykAtP",
       };
     },
     71477: (e) => {
@@ -891,6 +913,17 @@
         SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
         RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
         SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
+        BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
+        "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
+        "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
+        "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
+        "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
+        "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
+        "ItemFocusAnim-translucent-white-20": "_1fugsBQAve_CPDYfcK5fou",
+        "ItemFocusAnimBorder-darkGrey": "_1X5xeHixS4XJusrPGRQ4nL",
+        "ItemFocusAnim-green": "guH2fAOEkfwuIvOhn0oHl",
+        focusAnimation: "_2XCqyPQ8Leg6L1dwSjpULK",
+        hoverAnimation: "zU1NJEk7QqOdsECL2PI2d",
       };
     },
     64734: (e) => {
@@ -8912,25 +8945,26 @@
             editModel: t,
             backgroundSection: a,
             bHasBackgroundImageControls: r,
+            bDisallowNamedStyles: c,
           } = e,
-          [c, _, m, j] = (0, d.q3)(() => [
+          [_, m, j, D] = (0, d.q3)(() => [
             t.GetEventModel(),
             t.GetClanSteamID(),
             t.GetAppID(),
             t.GetIncludedRealmList(),
           ]),
-          D = (0, u.zO)(_, "sale_section_background"),
-          E = (e) => {
+          E = (0, u.zO)(m, "sale_section_background"),
+          M = (e) => {
             (0, b.pg)(
               (0, i.jsx)(o.X, {
                 loc_images: e
                   ? a.localized_sale_product_mobile_banner_override
                   : a.localized_sale_product_banner_override,
                 partnerEventStore: C.mh,
-                appid: m,
-                eventModel: c,
-                clanSteamID: _,
-                realms: j,
+                appid: j,
+                eventModel: _,
+                clanSteamID: m,
+                realms: D,
                 fnSetImageURL: (t, i, n = 0) => {
                   const o = I.z.GetHashAndExt(i);
                   e
@@ -9021,8 +9055,8 @@
                     ],
                     onDropFiles: async (e) => {
                       if (e && e.length > 0) {
-                        if (await D.AddImage(e[0], 0)) {
-                          const e = (await D.UploadAllImages())[0].uploadResult,
+                        if (await E.AddImage(e[0], 0)) {
+                          const e = (await E.UploadAllImages())[0].uploadResult,
                             i = I.z.GetHashAndExt(e);
                           (a.background_image = i),
                             t.SetDirty(n.IQ.jsondata_sales);
@@ -9048,7 +9082,7 @@
                     children: [
                       (0, i.jsxs)(p.$n, {
                         onClick: (e) => {
-                          e.preventDefault(), e.stopPropagation(), E(!1);
+                          e.preventDefault(), e.stopPropagation(), M(!1);
                         },
                         className: S.EventEditorTextTitle,
                         children: [
@@ -9062,7 +9096,7 @@
                       }),
                       (0, i.jsxs)(p.$n, {
                         onClick: (e) => {
-                          e.preventDefault(), e.stopPropagation(), E(!0);
+                          e.preventDefault(), e.stopPropagation(), M(!0);
                         },
                         className: S.EventEditorTextTitle,
                         children: [
@@ -30157,30 +30191,43 @@
         o = a(73745);
       const s = (e) => null != e;
       function l(e, t) {
-        const [a, n] = i.useState(() => window.localStorage.getItem(e)),
+        const [a, n] = i.useState(() => {
+            var t;
+            return null !== (t = window.localStorage.getItem(e)) && void 0 !== t
+              ? t
+              : void 0;
+          }),
           l = i.useRef(e),
           d = i.useCallback(
             (t) => {
-              const a = s(t) ? String(t) : null;
-              window.localStorage.setItem(e, a),
+              const a = s(t) ? String(t) : void 0;
+              void 0 === a
+                ? window.localStorage.removeItem(e)
+                : window.localStorage.setItem(e, a),
                 n(a),
                 r.Get().GetLocalStoreChangeCallback(e).Dispatch(a);
             },
             [e, n],
           );
         i.useEffect(() => {
+          var t;
           e != l.current &&
-            (n(window.localStorage.getItem(e)), (l.current = e));
+            (n(
+              null !== (t = window.localStorage.getItem(e)) && void 0 !== t
+                ? t
+                : void 0,
+            ),
+            (l.current = e));
         }, [e]);
         const c = e == l.current ? a : window.localStorage.getItem(e);
         let _ = t;
         return (
           s(c) &&
-            (_ = s(t)
+            (s(t)
               ? "boolean" == typeof t
-                ? t.constructor("false" !== c)
-                : t.constructor(c)
-              : c),
+                ? (_ = t.constructor("false" !== c))
+                : null != t && null != t && (_ = t.constructor(c))
+              : (_ = c)),
           (0, o.hL)(r.Get().GetLocalStoreChangeCallback(e), n),
           [_, d]
         );
@@ -33241,7 +33288,7 @@
         s = a(14947),
         l = a(70078),
         r = a(96059),
-        d = a(28714),
+        d = a(38677),
         c = a(78327),
         _ = a(83561),
         u = a(72839);
@@ -35399,7 +35446,7 @@
       }
       var G = a(25489),
         B = a(3967),
-        N = a(49397),
+        N = a(72249),
         L = a(38886),
         O = a(10224),
         P = a(14042),
@@ -35837,7 +35884,9 @@
               SaleSectionCarouselPadding: !Boolean(u),
               ItemCount_4: 4 == j[0],
               [P.ListOfCreators]:
-                t && "creator_list_of_lists" == t.section.section_type,
+                t &&
+                t.section &&
+                "creator_list_of_lists" == t.section.section_type,
             }),
             useTestScrollbar: !0,
             bLazyRenderChildren: !0,
@@ -36355,9 +36404,9 @@
         );
       }
     },
-    28714: (e, t, a) => {
+    38677: (e, t, a) => {
       "use strict";
-      a.d(t, { kv: () => ce, XT: () => re, lx: () => de });
+      a.d(t, { kv: () => he, XT: () => pe, lx: () => me });
       var i = a(7850),
         n = a(90626),
         o = a(75933),
@@ -36612,19 +36661,48 @@
           include_release: !0,
           include_platforms: !0,
         };
-      function W(e) {
+      var W = a(22837),
+        Y = a(75487);
+      function X(e, t, a) {
+        return {
+          queryKey: K(t),
+          queryFn: async () => {
+            if (!t)
+              return {
+                preferences: { primary_language: (0, W.sf)(q.TS.LANGUAGE) },
+                content_descriptor_preferences: {
+                  content_descriptors_to_exclude: $.map((e) => ({
+                    content_descriptorid: e,
+                  })),
+                },
+              };
+            const i = g.w.Init(Y.xf);
+            i.Body().set_country_code(a);
+            const n = await Y.nd.GetStorePreferences(e, i);
+            if (!n.BSuccess())
+              throw `Error loading store preferences: ${n.GetErrorMessage()}`;
+            return n.Body().toObject();
+          },
+          staleTime: 36e5,
+        };
+      }
+      const $ = [4, 3];
+      function K(e) {
+        return ["StorePreferencesQueryKey", null != e ? e : 0];
+      }
+      function J(e) {
         return (0, D.G)()
-          ? (0, i.jsxs)(Y, {
+          ? (0, i.jsxs)(Z, {
               children: [
-                (0, i.jsx)(J, {}),
+                (0, i.jsx)(ie, {}),
                 M.iA.logged_in
-                  ? (0, i.jsx)(X, { ...e })
-                  : (0, i.jsx)(K, { ...e }),
+                  ? (0, i.jsx)(ee, { ...e })
+                  : (0, i.jsx)(ae, { ...e }),
               ],
             })
           : null;
       }
-      function Y(e) {
+      function Z(e) {
         const [t, a] = (0, p.L2)();
         let o = (0, u.q3)(() => a.ExcludedContentDescriptor),
           s = n.useMemo(() => ({ content_descriptors_excluded: o }), [o]);
@@ -36632,20 +36710,27 @@
           ? null
           : (0, i.jsx)(x, { defaultOptions: s, children: e.children });
       }
-      function X(e) {
+      function ee(e) {
+        var t, a;
         const {
-            eStoreDiscoveryQueueType: t,
-            strQueueDescriptionOverride: a,
-            ...o
+            eStoreDiscoveryQueueType: o,
+            strQueueDescriptionOverride: l,
+            ...r
           } = e,
-          { showDiscoveryQueue: l, bQueueVisible: r } = (function (e, t) {
+          { showDiscoveryQueue: d, bQueueVisible: c } = (function (e, t) {
             const { showDiscoveryQueue: a, ...i } = n.useContext(V);
             return {
               ...i,
               showDiscoveryQueue: n.useCallback(() => a(e, t), [a, e, t]),
             };
-          })(t, o),
-          [d, c] = (function (e, t) {
+          })(o, r),
+          _ = (function () {
+            const e = (0, f.KV)(),
+              t = q.iA.accountid,
+              a = q.iA.country_code;
+            return (0, h.I)(X(e, t, a));
+          })(),
+          [u, p] = (function (e, t) {
             const { data: a } = (0, h.I)({
               queryKey: ["DiscoveryQueueLoader", e, t],
               queryFn: async () => {
@@ -36667,24 +36752,35 @@
               null == a ? void 0 : a.rgDiscoveryApps,
               null == a ? void 0 : a.exhausted,
             ];
-          })(t, o.storePageFilter),
-          _ = n.useCallback(() => {
-            !c && l();
-          }, [c, l]),
-          u = n.useId();
+          })(o, r.storePageFilter),
+          g =
+            c ||
+            Boolean(
+              null ===
+                (a =
+                  null === (t = _.data) || void 0 === t
+                    ? void 0
+                    : t.preferences) || void 0 === a
+                ? void 0
+                : a.disable_animated_marketing,
+            ),
+          S = n.useCallback(() => {
+            !p && d();
+          }, [p, d]),
+          v = n.useId();
         return (0, i.jsx)(i.Fragment, {
           children: (0, i.jsx)(R, {
-            "aria-labelledby": u,
-            onClick: _,
-            arrDiscoveryApps: d,
-            bDisableAnimation: r,
+            "aria-labelledby": v,
+            onClick: S,
+            arrDiscoveryApps: u,
+            bDisableAnimation: g,
             className: k().DiscoveryQueueWidget,
             children:
-              !c && (0, i.jsx)($, { id: u, strQueueDescriptionOverride: a }),
+              !p && (0, i.jsx)(te, { id: v, strQueueDescriptionOverride: l }),
           }),
         });
       }
-      function $(e) {
+      function te(e) {
         const { strQueueDescriptionOverride: t, id: a } = e,
           n = null != t ? t : (0, E.we)("#DiscoveryQueue_WidgetHeader");
         return (0, i.jsxs)("div", {
@@ -36702,7 +36798,7 @@
           ],
         });
       }
-      function K(e) {
+      function ae(e) {
         const t = (function (e) {
             let { data: t } = T(
               "DiscoveryQueueWidget",
@@ -36745,7 +36841,7 @@
           }),
         });
       }
-      function J() {
+      function ie() {
         var e, t, a, n, o, s;
         const l = (0, G.Qt)(2, M.TS.LANGUAGE, !0),
           r = (0, M.Qn)();
@@ -36788,7 +36884,7 @@
           (0, i.jsxs)("div", {
             className: k().SaleTopSection,
             children: [
-              (0, i.jsx)(Z, { rgRewardItems: c }),
+              (0, i.jsx)(ne, { rgRewardItems: c }),
               (0, i.jsxs)("div", {
                 className: k().SaleTextCtn,
                 children: [
@@ -36820,7 +36916,7 @@
           })
         );
       }
-      function Z(e) {
+      function ne(e) {
         const { rgRewardItems: t } = e,
           a = t.map((e) => {
             if (!e.community_definition || !e.community_definition.item_name)
@@ -36840,17 +36936,17 @@
           children: B.Nv(a),
         });
       }
-      var ee = a(52393),
-        te = a(26323),
-        ae = a(39733),
-        ie = a(57834),
-        ne = a.n(ie),
-        oe = a(61336);
-      function se(e) {
+      var oe = a(52393),
+        se = a(26323),
+        le = a(39733),
+        re = a(57834),
+        de = a.n(re),
+        ce = a(61336);
+      function _e(e) {
         var t, a, n;
         const { badgeRewardSection: o, relativeQueueCompleted: s } = e,
           { badge_progress: l } = o,
-          r = (0, ae.pt)(null == l ? void 0 : l.event_badgeid);
+          r = (0, le.pt)(null == l ? void 0 : l.event_badgeid);
         if (!M.iA.logged_in) return null;
         const d = ((null == r ? void 0 : r.level) || 0) + s,
           c =
@@ -36872,16 +36968,16 @@
                 ? void 0
                 : n[l.levels.length - 1].level) || 1;
           return (0, i.jsxs)("div", {
-            className: ne().TradingCardCtn,
+            className: de().TradingCardCtn,
             children: [
               (0, i.jsx)("img", {
-                className: ne().TradingCardImage,
-                src: e.badge_icon_url ? (0, oe.L$)(e.badge_icon_url) : void 0,
+                className: de().TradingCardImage,
+                src: e.badge_icon_url ? (0, ce.L$)(e.badge_icon_url) : void 0,
               }),
               (0, i.jsx)("div", {
-                className: ne().TradingCardColumn,
+                className: de().TradingCardColumn,
                 children: (0, i.jsx)("div", {
-                  className: ne().TradingCardText,
+                  className: de().TradingCardText,
                   children: (0, E.we)(
                     e.level == t
                       ? "#DiscoveryQueue_BadgeGrant_Final"
@@ -36894,9 +36990,9 @@
         }
         return null;
       }
-      var le = a(4796);
-      function re(e, t) {
-        const a = le.ac.GetClanInfoByClanAccountID(
+      var ue = a(4796);
+      function pe(e, t) {
+        const a = ue.ac.GetClanInfoByClanAccountID(
             e.clanSteamID.GetAccountID(),
           ),
           i = (0, c.Ns)(e, a);
@@ -36916,19 +37012,19 @@
           nCreatorClanAccountId: i ? e.clanSteamID.GetAccountID() : void 0,
         };
       }
-      function de(e, t) {
+      function me(e, t) {
         return {
-          storePageFilter: re(e, t.prioritize_discounts),
+          storePageFilter: pe(e, t.prioritize_discounts),
           eStoreDiscoveryQueueType:
             (null == t ? void 0 : t.discovery_queue_type) || 0,
         };
       }
-      function ce(e) {
+      function he(e) {
         var t, a;
         const { event: r, section: c, language: u } = e,
           p = (0, M.Qn)(),
           { storePageFilter: m, eStoreDiscoveryQueueType: h } = n.useMemo(
-            () => de(r, c),
+            () => me(r, c),
             [r, c],
           ),
           g = E.A0.GetELanguageFallback(u),
@@ -36966,7 +37062,7 @@
           placeholderHeight: "100vh",
           rootMargin: o.$m,
           className: (0, I.A)(
-            ee.SaleSection,
+            oe.SaleSection,
             d().SaleSectionCtn,
             "DiscoveryQueueCSS",
           ),
@@ -36974,17 +37070,17 @@
           children: [
             Boolean(b) &&
               (0, i.jsx)("div", {
-                className: te.Exhausted,
+                className: se.Exhausted,
                 children: (0, E.we)("#DiscoveryQueue_SalePage_Exhausted"),
               }),
             Boolean(!b) &&
-              (0, i.jsx)(W, {
+              (0, i.jsx)(J, {
                 eStoreDiscoveryQueueType: h,
                 storePageFilter: m,
                 strQueueDescriptionOverride: S,
                 fnDisplaySummaryReward: Boolean(v)
                   ? (e) =>
-                      (0, i.jsx)(se, {
+                      (0, i.jsx)(_e, {
                         relativeQueueCompleted: e,
                         badgeRewardSection: v,
                       })
@@ -36996,9 +37092,9 @@
         });
       }
     },
-    49397: (e, t, a) => {
+    72249: (e, t, a) => {
       "use strict";
-      a.d(t, { k: () => $, y: () => X });
+      a.d(t, { k: () => Q, y: () => V });
       var i = a(7850),
         n = a(10224),
         o = a(78327),
@@ -37022,36 +37118,27 @@
           }),
         });
       }
-      var u = a(14987),
-        p = a(60014),
-        m = a(75844),
-        h = a(90626),
-        g = a(55963),
-        S = a(73371),
-        v = a.n(S),
-        b = a(96006),
-        f = a(94191),
-        y = a(71381),
-        w = a(57876),
-        x = a(17690),
-        C = a(62792),
-        T = a(55263),
-        j = a(70300);
-      class D {}
-      D.instance_count = 0;
-      var I = a(94095),
-        E = a(90421),
-        M = a(12424),
-        A = a(78588),
-        k = a(8893),
-        G = a(54492),
-        B = a(52038),
-        N = a(61859),
-        L = a(87771),
-        O = a(20433),
-        P = a(52541),
-        F = a(63741);
-      function R(e) {
+      var u = a(71381),
+        p = a(20433),
+        m = a(94191),
+        h = a(78588),
+        g = a(94636),
+        S = a(90421),
+        v = a(24267),
+        b = a(12424),
+        f = a(96006),
+        y = a(8893),
+        w = a(16261),
+        x = a(5309),
+        C = a(14987),
+        T = a(60014),
+        j = a(75844),
+        D = a(90626),
+        I = a(55963),
+        E = a(87771),
+        M = a(52541),
+        A = a(63741);
+      function k(e) {
         const {
             id: t,
             bPurchaseOptionsExpanded: a,
@@ -37059,11 +37146,11 @@
             bPreferAssetWithoutOverride: o,
           } = e,
           { data: r } = (0, l.is)(t),
-          d = (0, h.useRef)(null);
+          d = (0, D.useRef)(null);
         if (!r) return null;
         const _ = r.purchase_options;
         return _
-          ? (0, i.jsx)(F.A, {
+          ? (0, i.jsx)(A.A, {
               nodeRef: d,
               in: a,
               mountOnEnter: !0,
@@ -37093,7 +37180,7 @@
                             bPreferAssetWithoutOverride: o,
                           }),
                         },
-                        "purchaseitem_" + (0, P.ER)(t) + "_" + e.packageid,
+                        "purchaseitem_" + (0, M.ER)(t) + "_" + e.packageid,
                       ),
                     ),
                   }),
@@ -37102,7 +37189,7 @@
                     className: c().BundleShowButton,
                     children: (0, i.jsx)("button", {
                       className: c().ShowContentsButton,
-                      children: (0, N.we)("#Button_Close"),
+                      children: w.Z.Localize("#Button_Close"),
                     }),
                   }),
                 ],
@@ -37110,113 +37197,65 @@
             })
           : null;
       }
-      var H = a(94636),
-        z = a(24267);
-      const U = (0, m.PA)((e) => {
-        var t, a, n;
-        const {
-            myInstance: o,
-            setIsHovered: s,
-            displayStoreItem: d,
-            displayID: _,
-            hoverType: m,
-            nHoverId: S,
-            displayInfo: P,
-          } = (function (e, t) {
-            const { id: a, type: i } = e,
-              n = t ? { ...w.Xh, ...t } : w.Xh,
-              [o, s] = (0, h.useMemo)(() => {
-                const e = { id: a, type: i };
-                return [e, (0, r.Sh)(e)];
-              }, [a, i]),
-              [l] = (0, T.G6)(a, (0, C.SW)(i), n),
-              [d, c] = (0, h.useMemo)(() => {
-                var e;
-                const t = {
-                  id:
-                    null !==
-                      (e =
-                        (null == l ? void 0 : l.GetParentAppID()) !=
-                        (null == l ? void 0 : l.GetID())
-                          ? null == l
-                            ? void 0
-                            : l.GetParentAppID()
-                          : x.sc) && void 0 !== e
-                      ? e
-                      : x.sc,
-                  type: "game",
-                };
-                return [t, (0, r.Sh)(t)];
-              }, [l]),
-              [_] = (0, T.t7)(d.id, n),
-              [u] = (0, h.useState)(++D.instance_count),
-              [p, m] = (0, h.useState)(!1),
-              g = (0, j.qr)(i);
-            return {
-              myInstance: u,
-              bIsHovered: p,
-              setIsHovered: m,
-              displayInfo: o,
-              displayID: s,
-              displayStoreItem: l,
-              baseGameStoreItem: _,
-              baseGameInfo: d,
-              baseGameID: c,
-              hoverType: g,
-              nHoverId: a,
-            };
-          })(e, { include_all_purchase_options: !0 }),
+      var G = a(94095),
+        B = a(70300),
+        N = a(73371),
+        L = a.n(N),
+        O = a(54492),
+        P = a(52038);
+      const F = (0, j.PA)((e) => {
+        const { id: t, type: a } = e,
+          n = (0, r.zl)(t, a),
           {
-            bHidePrice: F,
-            bShowDemoButton: U,
-            bPreferDemoStorePage: q,
-            bShowPurchaseOptionsButton: V,
-            bUseSubscriptionLayout: Q,
-            bPreferAssetWithoutOverride: W,
+            bHidePrice: o,
+            bShowDemoButton: s,
+            bPreferDemoStorePage: d,
+            bShowPurchaseOptionsButton: _,
+            bUseSubscriptionLayout: j,
+            bPreferAssetWithoutOverride: M,
           } = e,
-          [Y, X] = h.useState(!1),
-          $ = () => X(!Y),
-          { data: K } = (0, l.J$)(_),
-          J = (0, u._)(_),
-          Z = (0, p.n9)();
-        if (!d || !K)
-          return (0, i.jsx)(y.h, {
+          [A, N] = D.useState(!1),
+          F = () => N(!A),
+          { data: R } = (0, l.U2)(n),
+          { data: H } = (0, l.wl)(n),
+          { data: z } = (0, l.by)(n),
+          { data: U } = (0, l.xz)(n),
+          q = (0, C._)(n),
+          V = (0, T.n9)();
+        if (!R || !H)
+          return (0, i.jsx)(u.h, {
             capsules_per_row: [1],
             is_expanded_display: !0,
           });
-        const ee = (0, g.L3)(Z),
-          te =
-            (q &&
-              d.HasDemoStandaloneStorePage() &&
-              d.GetDemoStandaloneStorePageAppIDs()[0],
-            0 == K.item_type);
+        const Q = (0, I.L3)(V),
+          W = 0 == R.item_type;
         return (0, i.jsx)("div", {
-          className: (0, B.A)(
+          className: (0, P.A)(
             c().StoreSaleWidgetContainer,
             c().LibraryAssetExpandedDisplay,
             "LibraryAssetExpandedDisplay",
           ),
-          children: (0, i.jsxs)(j.oj, {
-            appid: te ? K.appid : void 0,
+          children: (0, i.jsxs)(B.oj, {
+            appid: W ? R.appid : void 0,
             children: [
               (0, i.jsxs)("div", {
                 className: c().StoreSaleWidgetLibraryAssetExtendedTop,
                 children: [
                   (0, i.jsx)("div", {
-                    className: (0, B.A)(c().StoreSaleWidgetLeft),
-                    children: (0, i.jsx)(O.u, {
-                      id: _,
-                      fnHoverState: s,
+                    className: (0, P.A)(c().StoreSaleWidgetLeft),
+                    children: (0, i.jsx)(p.u, {
+                      id: n,
+                      bPreferDemoStorePage: d,
                       children: (0, i.jsxs)("div", {
                         className: c().StoreSaleWidgetImage,
                         children: [
-                          (0, i.jsx)(f.V, { appids: J }),
-                          (0, i.jsx)(A.a, {
-                            id: _,
+                          (0, i.jsx)(m.V, { appids: q }),
+                          (0, i.jsx)(h.a, {
+                            id: n,
                             imageType: "library",
-                            bPreferAssetWithoutOverride: W,
+                            bPreferAssetWithoutOverride: M,
                           }),
-                          (0, i.jsx)(G.J, { id: _ }),
+                          (0, i.jsx)(O.J, { id: n }),
                         ],
                       }),
                     }),
@@ -37224,14 +37263,14 @@
                   (0, i.jsxs)("div", {
                     className: c().StoreSaleWidgetCrossCenterRight,
                     children: [
-                      te &&
-                        (0, i.jsx)(H.E, {
-                          id: _,
-                          classOverride: (0, B.A)(
-                            v().WishlistButtonNotTop,
+                      W &&
+                        (0, i.jsx)(g.E, {
+                          id: n,
+                          classOverride: (0, P.A)(
+                            L().WishlistButtonNotTop,
                             "WishlistButton",
                           ),
-                          snr: ee,
+                          snr: Q,
                         }),
                       (0, i.jsxs)("div", {
                         className: c().StoreSaleWidgetContents,
@@ -37239,61 +37278,57 @@
                           (0, i.jsxs)("div", {
                             className: c().StoreSaleWidgetCenter,
                             children: [
-                              (null === (t = d.GetShortDescription()) ||
-                              void 0 === t
-                                ? void 0
-                                : t.length) > 0 &&
+                              H.short_description &&
+                                H.short_description.length > 0 &&
                                 (0, i.jsx)("div", {
-                                  className: (0, B.A)(
+                                  className: (0, P.A)(
                                     c().StoreSaleWidgetShortDesc,
                                     "StoreSaleWidgetShortDesc",
                                   ),
-                                  children: d.GetShortDescription(),
+                                  children: H.short_description,
                                 }),
-                              (0, i.jsx)(E.n, {
-                                rgTagIDs: d.GetTagIDs(),
-                                instanceNum: o,
+                              (0, i.jsx)(S.n, {
+                                rgTagIDs: U
+                                  ? U.slice(0, 10).map((e) => e.tagid || 0)
+                                  : [],
+                                instanceNum: 0,
+                                bNoStoreLinks: !1,
                               }),
                               (0, i.jsxs)("div", {
                                 className: c().StoreMetaDataCtn,
                                 children: [
                                   (0, i.jsx)("div", {
                                     className: c().StoreSaleItemRelease,
-                                    children: (0, N.PP)(
+                                    children: w.Z.LocalizeReact(
                                       "#Sale_ReleaseDate",
                                       (0, i.jsx)("span", {
-                                        children:
-                                          d.GetFormattedSteamReleaseDate(),
+                                        children: (0, x.CC)(z),
                                       }),
                                     ),
                                   }),
-                                  Boolean(
-                                    null === (a = d.GetDeveloperNames()) ||
-                                      void 0 === a
-                                      ? void 0
-                                      : a.length,
-                                  ) &&
+                                  H.developers &&
+                                    H.developers.length > 0 &&
                                     (0, i.jsxs)("div", {
                                       className: c().StoreSaleItemDev,
                                       children: [
-                                        (0, N.we)("#CreatorHome_DevelopedBy"),
+                                        w.Z.Localize(
+                                          "#CreatorHome_DevelopedBy",
+                                        ),
                                         (0, i.jsx)("span", {
-                                          children: d.GetDeveloperNames()[0],
+                                          children: H.developers[0].name,
                                         }),
                                       ],
                                     }),
-                                  Boolean(
-                                    null === (n = d.GetPublisherNames()) ||
-                                      void 0 === n
-                                      ? void 0
-                                      : n.length,
-                                  ) &&
+                                  H.publishers &&
+                                    H.publishers.length > 0 &&
                                     (0, i.jsxs)("div", {
                                       className: c().StoreSaleItemDev,
                                       children: [
-                                        (0, N.we)("#CreatorHome_PublishedBy"),
+                                        w.Z.Localize(
+                                          "#CreatorHome_PublishedBy",
+                                        ),
                                         (0, i.jsx)("span", {
-                                          children: d.GetPublisherNames()[0],
+                                          children: H.publishers[0].name,
                                         }),
                                       ],
                                     }),
@@ -37303,8 +37338,8 @@
                           }),
                           (0, i.jsx)("div", {
                             className: c().StoreSaleLibraryAssetWidgetRight,
-                            children: (0, i.jsx)(L.Yg, {
-                              id: _,
+                            children: (0, i.jsx)(E.Yg, {
+                              id: n,
                               bPopOutTrailerPlayback: !0,
                             }),
                           }),
@@ -37312,58 +37347,56 @@
                       }),
                       (0, i.jsx)("div", {
                         className: c().StoreSaleItemReview,
-                        children: (0, i.jsx)(z.J, { id: _ }),
+                        children: (0, i.jsx)(v.J, { id: n }),
                       }),
                       (0, i.jsx)("div", {
                         className: c().CapsuleBottomBar,
-                        children: Boolean(Q && te)
-                          ? (0, i.jsx)(M.E, {
-                              appid: d.GetAppID(),
-                              bIsMuted: !1,
-                            })
-                          : (0, i.jsxs)(i.Fragment, {
-                              children: [
-                                (0, i.jsx)(b.Q, { id: _ }),
-                                (0, i.jsx)(I.w, {
-                                  id: _,
-                                  bShowDemoButton: U,
-                                  bHidePrice: F,
-                                  bShowPurchaseOptionsButton: V,
-                                  fnOnPurchaseOptionsClick: $,
-                                  bHideWishlistButton: !d.BIsComingSoon(),
-                                }),
-                              ],
-                            }),
+                        children:
+                          j && W
+                            ? (0, i.jsx)(b.E, { appid: R.appid, bIsMuted: !1 })
+                            : (0, i.jsxs)(i.Fragment, {
+                                children: [
+                                  (0, i.jsx)(f.Q, { id: n }),
+                                  (0, i.jsx)(G.w, {
+                                    id: n,
+                                    bShowDemoButton: s,
+                                    bHidePrice: o,
+                                    bShowPurchaseOptionsButton: _,
+                                    fnOnPurchaseOptionsClick: F,
+                                    bHideWishlistButton: R.is_coming_soon,
+                                  }),
+                                ],
+                              }),
                       }),
                       (0, i.jsxs)("div", {
                         className: c().StoreSaleWidgetBgTint,
                         children: [
-                          (0, i.jsx)(k.G, {
-                            id: _,
-                            bPreferAssetWithoutOverride: W,
+                          (0, i.jsx)(y.G, {
+                            id: n,
+                            bPreferAssetWithoutOverride: M,
                           }),
-                          (0, i.jsx)(G.J, { id: _ }),
+                          (0, i.jsx)(O.J, { id: n }),
                         ],
                       }),
                     ],
                   }),
                 ],
               }),
-              (0, i.jsx)(R, {
-                id: _,
-                bPurchaseOptionsExpanded: Y,
-                fnCollapseOptions: $,
-                bPreferAssetWithoutOverride: W,
+              (0, i.jsx)(k, {
+                id: n,
+                bPurchaseOptionsExpanded: A,
+                fnCollapseOptions: F,
+                bPreferAssetWithoutOverride: M,
               }),
             ],
           }),
         });
       });
-      var q = a(76217),
-        V = a(23310),
-        Q = a(91822),
-        W = a(62307);
-      function Y(e) {
+      var R = a(76217),
+        H = a(23310),
+        z = a(91822),
+        U = a(62307);
+      function q(e) {
         const {
             id: t,
             type: a,
@@ -37377,38 +37410,38 @@
           { data: u } = (0, l.J$)(_),
           { data: p } = (0, l.qI)(_),
           m = 0 == (null == u ? void 0 : u.item_type);
-        return (0, i.jsx)(j.oj, {
+        return (0, i.jsx)(B.oj, {
           appid: m ? u.id : void 0,
-          children: (0, i.jsxs)(q.Z, {
+          children: (0, i.jsxs)(R.Z, {
             "flow-children": "grid",
-            navEntryPreferPosition: V.iU.PREFERRED_CHILD,
+            navEntryPreferPosition: H.iU.PREFERRED_CHILD,
             autoFocus: c,
             navKey: "purchase_only_" + (null == u ? void 0 : u.id),
             children: [
               "\t",
               (0, i.jsxs)("div", {
-                className: W.PurchaseOnlyCtn,
+                className: U.PurchaseOnlyCtn,
                 children: [
                   (0, i.jsx)("div", {
-                    className: W.PurchaseOnlyNameCtn,
+                    className: U.PurchaseOnlyNameCtn,
                     children: (0, i.jsx)("div", {
-                      className: W.Name,
+                      className: U.Name,
                       children: null == u ? void 0 : u.name,
                     }),
                   }),
                   (0, i.jsxs)("div", {
-                    className: W.PurchaseAndPlatformCtn,
+                    className: U.PurchaseAndPlatformCtn,
                     children: [
                       Boolean(!s && 10 != (null == u ? void 0 : u.type)) &&
                         (0, i.jsxs)("div", {
-                          className: W.OS,
+                          className: U.OS,
                           children: [
-                            (0, i.jsx)(b.Q, { id: _ }),
+                            (0, i.jsx)(f.Q, { id: _ }),
                             Boolean(
                               d && 0 == (null == u ? void 0 : u.item_type) && p,
                             ) &&
-                              (0, i.jsx)(Q.$o, {
-                                className: W.DeckCompatIcon,
+                              (0, i.jsx)(z.$o, {
+                                className: U.DeckCompatIcon,
                                 category:
                                   null == p
                                     ? void 0
@@ -37416,9 +37449,9 @@
                               }),
                           ],
                         }),
-                      (0, i.jsx)(I.w, {
+                      (0, i.jsx)(G.w, {
                         id: _,
-                        className: W.PurchaseOnlyActionCtn,
+                        className: U.PurchaseOnlyActionCtn,
                         bShowDemoButton: n,
                         bShowCartButton: !0,
                         bHidePrice: o,
@@ -37433,11 +37466,11 @@
           }),
         });
       }
-      function X(e) {
+      function V(e) {
         const { displayStyle: t, requestCompact: a, ...l } = e,
           { type: r } = e,
           d = (0, o.Qn)();
-        if ("purchaseonlydisplay" === t) return (0, i.jsx)(Y, { ...l });
+        if ("purchaseonlydisplay" === t) return (0, i.jsx)(q, { ...l });
         if (d) return (0, i.jsx)(s.p, { ...l });
         if (a && !(0, n.c5)()) return (0, i.jsx)(_, { ...l });
         if ("bundle" == r || "sub" == r) return (0, i.jsx)(s.p, { ...l });
@@ -37446,12 +37479,12 @@
         switch (t) {
           case "library":
           case "animated":
-            return (0, i.jsx)(U, { ...l });
+            return (0, i.jsx)(F, { ...l });
           default:
             return (0, i.jsx)(s.p, { ...l, bShowReviewSummary: !0 });
         }
       }
-      function $(e, t) {
+      function Q(e, t) {
         return "purchaseonlydisplay" !== e && !t && !(0, n.c5)();
       }
     },

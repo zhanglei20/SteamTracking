@@ -2546,6 +2546,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         _.preventDefault();
@@ -2588,6 +2590,7 @@
               children: _,
               onClick: _,
               icon: _,
+              gamepadFocusable: _ = !0,
               ..._
             } = _,
             _ = _
@@ -2598,8 +2601,9 @@
                   children: _,
                 })
               : _,
-            _ = _ ? void 0 : _;
-          return (0, _.jsx)("button", {
+            _ = _ ? void 0 : _,
+            _ = _ && _._.IN_GAMEPADUI ? _._ : "button";
+          return (0, _.jsx)(_, {
             type: "button",
             ...(0, _._)(
               {
@@ -2623,10 +2627,12 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
+              gamepadFocusable: _ = !0,
               ..._
             } = _,
-            _ = _ ? _ : void 0;
-          return (0, _.jsx)("a", {
+            _ = _ ? _ : void 0,
+            _ = _ && _._.IN_GAMEPADUI ? _._ : "a";
+          return (0, _.jsx)(_, {
             ...(0, _._)(
               {
                 onClick: _,
@@ -3377,7 +3383,8 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { extracted: _, remaining: __webpack_require__ } = (0, _._)(_),
           {
@@ -3394,6 +3401,7 @@
             inputRef: _,
             ref: _,
             disabled: _,
+            gamepadFocusable: _ = !0,
             ..._
           } = __webpack_require__,
           _ = {
@@ -3415,14 +3423,15 @@
             ref: _,
             disabled: _,
           },
-          _ = (0, _.useRef)(null);
+          _ = (0, _.useRef)(null),
+          _ = _ && _._.IN_GAMEPADUI ? _._ : "input";
         return (0, _.jsx)(_._, {
           cursor: "text",
           ..._,
           onClick: (_) => {
             _.current && _.target !== _.current && _.current.focus();
           },
-          children: (0, _.jsx)("input", {
+          children: (0, _.jsx)(_, {
             ref: (0, _._)(_, _),
             type: "text",
             ..._,
@@ -4304,8 +4313,7 @@
             filter: _,
             filterPlaceholder: _,
           }),
-          _ = null != _,
-          _ = _(_);
+          _ = null != _;
         return (0, _.jsxs)(_.Root, {
           state: _,
           ..._,
@@ -4314,7 +4322,7 @@
               children: [
                 _ &&
                   (0, _.jsx)(_.Value, {
-                    children: _,
+                    children: _(_),
                   }),
                 !_ &&
                   (0, _.jsx)(_.Placeholder, {
@@ -4521,7 +4529,12 @@
           });
         },
         Option: function (_) {
-          const { value: _, children: __webpack_require__, disabled: _ } = _,
+          const {
+              value: _,
+              children: __webpack_require__,
+              disabled: _,
+              ..._
+            } = _,
             {
               onItemSelectionChange: _,
               multiselect: _,
@@ -4534,6 +4547,7 @@
             onSelect: () => _(_),
             selected: _,
             disabled: _,
+            ..._,
             children: [
               _ &&
                 (0, _.jsxs)(_._, {
@@ -5877,6 +5891,7 @@
       function _(_, _, _) {
         return ((_ - _) / (_ - _)) * 100;
       }
+      const _ = Symbol("CoercingTextInputNotParseable");
       function _(_) {
         const {
             value: _,
@@ -5893,14 +5908,14 @@
           value: _,
           onTextChange: (_) => {
             const _ = _(_);
-            null !== _ && _ === _(_)
+            _ !== _ && _ === _(_)
               ? (_(null), __webpack_require__(_))
               : (_ && !_(_, _)) || _(_);
           },
           onBlur: (_) => {
             if (null !== _) {
               const _ = _(_);
-              null !== _ && __webpack_require__(_), _(null);
+              _ !== _ && __webpack_require__(_), _(null);
             }
             _ && _(_);
           },
@@ -5930,7 +5945,7 @@
                     ? 100 * parseInt(_)
                     : Math.round(100 * parseFloat(_));
             })(_, _, __webpack_require__.bWholeUnitsOnly),
-          checkValidText: (_, _) => !_ || (null !== _ && !isNaN(_)),
+          checkValidText: (_, _) => !_ || (_ !== _ && !isNaN(_)),
           beforeContent: __webpack_require__.bSuffixSymbol
             ? void 0
             : __webpack_require__.strSymbol,
@@ -6023,7 +6038,10 @@
             min: _[0],
             max: _[1],
             onValueChange: (_) => {
-              _(!0), __webpack_require__(_);
+              _(!0);
+              const [_, _] = _,
+                _ = [_(_) ? 0 : _, _(_) ? _ : _];
+              __webpack_require__(_);
             },
             onValueSettled: _,
           }),
@@ -7711,6 +7729,7 @@
           rgToggles: _,
           rgConditional: _.flatMap((_) => {
             const _ = _[_.facet];
+            if (!_) return [];
             if ("Quality" === _.name) {
               const _ = _.tags && _.tags.strange,
                 _ = _.tags && _.tags.tournament;
@@ -7842,14 +7861,9 @@
       function _(_, _) {
         if ("string" == typeof _) return _.Localize(_);
         const _ = _[_.facet];
-        return (
-          (0, _._)(
-            _ && _.tags && _.tags[_.tag],
-            "Could not find tag for label!",
-            _,
-          ),
-          _.tags[_.tag].localized_name
-        );
+        return _ && _.tags && _.tags[_.tag]
+          ? _.tags[_.tag].localized_name
+          : (console.error("Could not find tag for label!", _), _.tag);
       }
       function _(_) {
         const {
@@ -8837,7 +8851,7 @@
           _ = (0, _._)("sm"),
           _ = _ ? _.rgAppData && _.rgAppData[_] : _.filterInGame.app;
         return (0, _.jsx)(_._.Provider, {
-          value: _,
+          value: !!_,
           children: (0, _.jsx)(_.Provider, {
             value: _,
             children: (0, _.jsx)(_.Provider, {
@@ -10090,7 +10104,8 @@
             (0, _._)(_, `Invalid size: ${_}`);
         }
         return (
-          _._.STORE_ITEM_BASE_URL + _.filename.replace(/\.[^.*]$/, `${_}$&`)
+          _._.STORE_ITEM_BASE_URL +
+          _.filename.replace(/\.([^.]+)(\?.*)?$/, `${_}.$1$2`)
         );
       }
       function _(_) {

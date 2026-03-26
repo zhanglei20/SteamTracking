@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Ürününüzü Ücretsiz Hâle Mi Getiriyorsunuz?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Oyununuz zaten yayınlandıysa ve ücretliden ücretsiz hâle getirmek istiyorsanız daha fazla bilgi edinmek ve yardım talep etmek için %1$s tıklayın.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "buraya",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Özel fiyatlar girmek",
+	"SinglePackagePricing_Right_Custom_Desc": "Metin kutusunu düzenleyerek her para birimi için kendi fiyatlarınızı girebilirsiniz.",
+	"SinglePackagePricing_Right_Convert_Desc": "Bu butonu kullanarak her para birimindeki fiyatı, seçili dönüştürme yöntemine ve girdiğiniz özel USD fiyatına göre hesaplayabilirsiniz.",
+	"PricingDashboard_Select_Price": "Fiyat Kademesi Seçin",
+	"PricingDashboard_Select_Price_button": "USD Taban Fiyatı Seç",
+	"PricingDashboard_Select_Price_button_ttip": "Bir dizi standart fiyat kademesini içeren bir pencere açarak aşağıdaki para birimlerinin tümü için ayarlama yapın.",
 	"empty_no_trailing_comma": ""
 }`);
     },

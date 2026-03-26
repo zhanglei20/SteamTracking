@@ -114,6 +114,17 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     12443: (e) => {
@@ -154,19 +165,19 @@
             include_assets: p,
             include_release: m,
             include_platforms: v,
-            include_all_purchase_options: x,
-            include_screenshots: f,
-            include_trailers: S,
+            include_all_purchase_options: S,
+            include_screenshots: x,
+            include_trailers: f,
             include_ratings: k,
             include_tag_count: g,
             include_reviews: h,
-            include_basic_info: b,
+            include_basic_info: I,
             include_supported_languages: E,
-            include_full_description: C,
-            include_included_items: B,
-            include_assets_without_overrides: I,
-            apply_user_filters: T,
-            include_links: j,
+            include_full_description: b,
+            include_included_items: A,
+            include_assets_without_overrides: C,
+            apply_user_filters: B,
+            include_links: T,
           } = n;
         if (
           ((0, s.useEffect)(() => {
@@ -174,19 +185,19 @@
               include_assets: p,
               include_release: m,
               include_platforms: v,
-              include_all_purchase_options: x,
-              include_screenshots: f,
-              include_trailers: S,
+              include_all_purchase_options: S,
+              include_screenshots: x,
+              include_trailers: f,
               include_ratings: k,
               include_tag_count: g,
               include_reviews: h,
-              include_basic_info: b,
+              include_basic_info: I,
               include_supported_languages: E,
-              include_full_description: C,
-              include_included_items: B,
-              include_assets_without_overrides: I,
-              apply_user_filters: T,
-              include_links: j,
+              include_full_description: b,
+              include_included_items: A,
+              include_assets_without_overrides: C,
+              apply_user_filters: B,
+              include_links: T,
             };
             let s = null;
             return (
@@ -203,15 +214,15 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, _, p, m, v, x, f, S, k, g, h, b, E, C, B, I, T, j, u]),
+          }, [e, t, i, _, p, m, v, S, x, f, k, g, h, I, E, b, A, C, B, T, u]),
           !e)
         )
           return [null, 2];
         if (!1 === _) return [void 0, 2];
         if (a.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!a.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const A = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return A ? [A, 3] : [null, 2];
+        const j = a.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return j ? [j, 3] : [null, 2];
       }
       function o(e, t, n) {
         return c(e, 0, t, n);
@@ -242,15 +253,15 @@
             include_screenshots: p,
             include_trailers: m,
             include_ratings: v,
-            include_tag_count: x,
-            include_reviews: f,
-            include_basic_info: S,
+            include_tag_count: S,
+            include_reviews: x,
+            include_basic_info: f,
             include_supported_languages: k,
             include_full_description: g,
             include_included_items: h,
-            include_assets_without_overrides: b,
+            include_assets_without_overrides: I,
             apply_user_filters: E,
-            include_links: C,
+            include_links: b,
           } = n;
         if (
           ((0, s.useEffect)(() => {
@@ -263,15 +274,15 @@
                 include_screenshots: p,
                 include_trailers: m,
                 include_ratings: v,
-                include_tag_count: x,
-                include_reviews: f,
-                include_basic_info: S,
+                include_tag_count: S,
+                include_reviews: x,
+                include_basic_info: f,
                 include_supported_languages: k,
                 include_full_description: g,
                 include_included_items: h,
-                include_assets_without_overrides: b,
+                include_assets_without_overrides: I,
                 apply_user_filters: E,
-                include_links: C,
+                include_links: b,
               },
               i = e.filter(
                 (e) =>
@@ -289,7 +300,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, c, o, u, _, d, p, m, v, x, f, S, k, g, h, b, E, C]),
+          }, [e, t, i, c, o, u, _, d, p, m, v, S, x, f, k, g, h, I, E, b]),
           !e)
         )
           return 2;
@@ -322,7 +333,7 @@
     },
     18663: (e, t, n) => {
       "use strict";
-      n.d(t, { D1: () => b, lS: () => f, lz: () => g, nK: () => k });
+      n.d(t, { D1: () => I, lS: () => x, lz: () => g, nK: () => k });
       var i = n(7850),
         r = n(90626);
       function s(e) {
@@ -388,15 +399,15 @@
         p = n(78327),
         m = n(32754),
         v = n(12443),
-        x = n.n(v);
-      function f(e) {
+        S = n.n(v);
+      function x(e) {
         const { appid: t } = e;
         return (0, i.jsx)("div", {
-          className: x().AppSocialLinksCtn,
-          children: (0, i.jsx)(S, { appid: t }),
+          className: S().AppSocialLinksCtn,
+          children: (0, i.jsx)(f, { appid: t }),
         });
       }
-      function S(e) {
+      function f(e) {
         const { appid: t } = e,
           [n] = (0, l.t7)(t, { include_basic_info: !0, include_links: !0 });
         if (!n) return null;
@@ -411,7 +422,7 @@
                   ),
                   children: (0, _.we)("#EventDisplay_SocialTitle"),
                 }),
-                (0, i.jsx)(b, { id: "" + t, rgSocialMedia: r }),
+                (0, i.jsx)(I, { id: "" + t, rgSocialMedia: r }),
               ],
             })
           : null;
@@ -446,17 +457,17 @@
                   ),
                   children: (0, _.we)("#EventDisplay_Sale_SocialTitle"),
                 }),
-                (0, i.jsx)(b, { id: t, rgSocialMedia: r }),
+                (0, i.jsx)(I, { id: t, rgSocialMedia: r }),
               ],
             })
           : null;
       }
       const h = [6, 23, 18, 8, 9, 19, 24];
-      function b(e) {
+      function I(e) {
         const { id: t, rgSocialMedia: n, className: r } = e,
           s = (0, p.Y2)();
         return (0, i.jsx)("div", {
-          className: (0, u.A)(x().AppSocialLinks, r),
+          className: (0, u.A)(S().AppSocialLinks, r),
           children: n
             .filter((e) => !s || h.includes(e.link_type || 0))
             .map((e) =>
@@ -467,7 +478,7 @@
                     "app_social_link_" + t + "_" + e.link_type,
                   )
                 : (0, i.jsx)(
-                    C,
+                    b,
                     { social: e },
                     "app_social_text_" + t + "_" + e.link_type + "_" + e.text,
                   ),
@@ -483,35 +494,35 @@
               rel: "noopener noreferrer",
               children: (0, i.jsx)(m.he, {
                 toolTipContent: t.url,
-                children: (0, i.jsx)(B, { social: t }),
+                children: (0, i.jsx)(A, { social: t }),
               }),
             })
           : null;
       }
-      function C(e) {
+      function b(e) {
         const { social: t } = e;
         return (0, i.jsxs)("div", {
-          className: x().AppSocialLinkWithText,
+          className: S().AppSocialLinkWithText,
           children: [
             (0, i.jsx)(m.he, {
               toolTipContent: t.text,
-              children: (0, i.jsx)(B, { social: t }),
+              children: (0, i.jsx)(A, { social: t }),
             }),
             (0, i.jsx)("div", {
-              className: x().AppSocialText,
+              className: S().AppSocialText,
               children: t.text,
             }),
           ],
         });
       }
-      function B(e) {
+      function A(e) {
         const { social: t } = e;
-        return (0, i.jsx)(I, {
+        return (0, i.jsx)(C, {
           linkType: t.link_type || 0,
-          className: x().AppSocialLinkIcon,
+          className: S().AppSocialLinkIcon,
         });
       }
-      function I(e) {
+      function C(e) {
         const { linkType: t, ...n } = e;
         switch (t) {
           case 1:

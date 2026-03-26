@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Myynnissä oleva määrä: %1$s",
 	"Bucket_PriceFrom": "Alkaen %1$s",
 	"AccessorySearch_AttachedAccessoryType": "Lisätty %1$s",
+	"FilterResults_Placeholder": "Suodata tulokset",
 	"AdvancedSearch_Header": "Tarkennettu haku",
 	"AdvancedSearch_Link": "Tarkennettu haku",
 	"MarketSearch_Placeholder": "Hae esinettä",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min",
 	"AssetProperty_Range_MaxPlaceholder": "Max",
 	"Accessories_FieldSectionLabel": "Lisävarusteet",
-	"Listing_EnhancedAppearance_Missing": "Tällä listauksella ei ole vielä yksilöllisiä tai parannettuja kuvia. Tässä esitetty kuva voi olla hieman erilainen listattuun esineeseen nähden."
+	"Item_CountryBuySellRestricted": "Et voi ostaa tuotetta, koska tämäntyyppisten tuotteiden ostaminen ja myynti ei ole käytössä maassasi.",
+	"Item_CountryBuyRestricted": "Et voi ostaa tuotetta, koska tämäntyyppisten tuotteiden ostaminen ei ole käytössä maassasi.",
+	"Listing_EnhancedAppearance_Missing": "Tällä listauksella ei ole vielä yksilöllisiä tai parannettuja kuvia. Tässä esitetty kuva voi olla hieman erilainen listattuun esineeseen nähden.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

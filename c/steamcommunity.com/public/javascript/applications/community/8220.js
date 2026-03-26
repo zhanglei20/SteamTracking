@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Ποσότητα προς πώληση: %1$s",
 	"Bucket_PriceFrom": "Από: %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s: Έγινε προσάρτηση",
+	"FilterResults_Placeholder": "Φιλτράρισμα αποτελεσμάτων…",
 	"AdvancedSearch_Header": "Σύνθετη αναζήτηση",
 	"AdvancedSearch_Link": "Σύνθετη αναζήτηση",
 	"MarketSearch_Placeholder": "Αναζήτηση αντικειμένου…",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Ελάχ.",
 	"AssetProperty_Range_MaxPlaceholder": "Μέγ.",
 	"Accessories_FieldSectionLabel": "Αξεσουάρ",
-	"Listing_EnhancedAppearance_Missing": "Αυτή η καταχώριση δεν έχει ακόμα συγκεκριμένες ή βελτιωμένες εικόνες. Η εικόνα που εμφανίζεται εδώ μπορεί να διαφέρει ελαφρώς από το καταχωρισμένο αντικείμενο."
+	"Item_CountryBuySellRestricted": "Δεν μπορείτε να αγοράσετε αυτό το αντικείμενο επειδή η αγοραπωλησία αυτού του τύπου αντικειμένου είναι απενεργοποιημένη στη χώρα σας.",
+	"Item_CountryBuyRestricted": "Δεν μπορείτε να αγοράσετε αυτό το αντικείμενο επειδή η αγορά αυτού του τύπου αντικειμένου είναι απενεργοποιημένη στη χώρα σας.",
+	"Listing_EnhancedAppearance_Missing": "Αυτή η καταχώριση δεν έχει ακόμα συγκεκριμένες ή βελτιωμένες εικόνες. Η εικόνα που εμφανίζεται εδώ μπορεί να διαφέρει ελαφρώς από το καταχωρισμένο αντικείμενο.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

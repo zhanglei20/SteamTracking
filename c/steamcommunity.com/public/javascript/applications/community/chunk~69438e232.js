@@ -53,6 +53,17 @@
         ReviewScorePercentage: "_2jmj3hWBpHbR2XUcZaAXFp",
         ReviewScoreLabel: "uEsfJ0VAuX37ItihZkK2J",
         GameHoverCreatorFollowButtonCtn: "_1RMWITT8PsJOgR4SoIR3Sw",
+        BackgroundAnimation: "_2-NF7UzSGK3WLmqugAW3EM",
+        "ItemFocusAnim-darkerGrey-nocolor": "bfQTK-Cop8MYUAa9j7rQb",
+        "ItemFocusAnim-darkerGrey": "_1_wN_hVuLwcfYlTDIE-HTs",
+        "ItemFocusAnim-darkGrey": "_32cDe-nAMlG7JYrA6niEGN",
+        "ItemFocusAnim-grey": "_2LnPTi1cPqqxqvII8cqnlh",
+        "ItemFocusAnim-translucent-white-10": "-jNJst4AtmAMI-o6ETEiC",
+        "ItemFocusAnim-translucent-white-20": "_1dwebsW8iZHHqsEF46LGhs",
+        "ItemFocusAnimBorder-darkGrey": "wiEMwKtkhMy1kSbxfOR43",
+        "ItemFocusAnim-green": "PJqmv3PnTw0P2SQBGF3nn",
+        focusAnimation: "_2mMG8YO1MWnzaegzgcISk2",
+        hoverAnimation: "_2aCSOFWsYITdHt3aWn3-vu",
       };
     },
     chunkid: (module) => {
@@ -61,6 +72,17 @@
         IgnoreButton: "_2TD7UsjzdR3Zr5ZOZ09n1J",
         IgnoreButtonText: "_2L6vwdfaFPRJ1zesEu6_Bf",
         IgnoreLoadingText: "uh8VGMa5zc623SZkB_hEQ",
+        BackgroundAnimation: "_10sTNSs7WhNZPw6GdPTOJX",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1MdU34KFhJRKlGMaHngbls",
+        "ItemFocusAnim-darkerGrey": "G_fmZBeNGKwyXP6EjOOZ_",
+        "ItemFocusAnim-darkGrey": "_20-FW4mkUJEpsgtwPjoMD6",
+        "ItemFocusAnim-grey": "_1QVohJAkrDR6QXMK3fZLMu",
+        "ItemFocusAnim-translucent-white-10": "_2vttABcjIJHbd-xXLvTfgb",
+        "ItemFocusAnim-translucent-white-20": "_2uyItrki6ohcX2MO3FPcKx",
+        "ItemFocusAnimBorder-darkGrey": "_8sJgPArY-c3-X6w3X3la9",
+        "ItemFocusAnim-green": "_3ZGmJEBxcg9Rgo7ObB8qJ0",
+        focusAnimation: "_23SWPBJXy3Zmgp6Guu_3nw",
+        hoverAnimation: "_3BrzCFDf-VVWJEnHMnE5xt",
       };
     },
     chunkid: (module) => {
@@ -101,7 +123,8 @@
     chunkid: (module) => {
       module.exports = {
         CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
-        GrowOnHover: "_3vM0bLXsqCpCxuhpyYYpcJ",
+        GrowOnHoverSmall: "YoLbM_PjSF7Lk-_QYDToT",
+        GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
       };
     },
     chunkid: (module) => {
@@ -253,6 +276,17 @@
         noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
         gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
         PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
+        BackgroundAnimation: "_2hlRK2hm0pHy1YSxwknFCj",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3Ye-Lgym31_-ibnmbFywrn",
+        "ItemFocusAnim-darkerGrey": "_1klcEk0V0JFATe7imIRZ1C",
+        "ItemFocusAnim-darkGrey": "_2BtPOA0wSbFULgc-Zh-0_x",
+        "ItemFocusAnim-grey": "_24LF-yODOtVFSuejuQ_xu2",
+        "ItemFocusAnim-translucent-white-10": "uTNXVgYo8JPxZgJyTl9LQ",
+        "ItemFocusAnim-translucent-white-20": "ItJlj151fY2eNJEBeWVOA",
+        "ItemFocusAnimBorder-darkGrey": "_2blFzc6unV1uJG63OhTkyP",
+        "ItemFocusAnim-green": "_3CaU0PXdB2ThLG-Q0foVrK",
+        focusAnimation: "_1EZdMwnQzoxjAOoFpXHuZ_",
+        hoverAnimation: "kfeP_UGfxsZwzWvFD4ytm",
       };
     },
     chunkid: (module) => {
@@ -281,6 +315,17 @@
         pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
         innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
         DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
+        BackgroundAnimation: "_25VCY5c_WxOmDf5rM9ytzl",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3Wd6R5ArXmgfz1dMwANtD7",
+        "ItemFocusAnim-darkerGrey": "_2mepLvzcUGS8PS7_cO5A4C",
+        "ItemFocusAnim-darkGrey": "_3NRkgxBrOQc_fQX1HvTkk3",
+        "ItemFocusAnim-grey": "SAxIC6YdDjzPzIqw_aS4s",
+        "ItemFocusAnim-translucent-white-10": "_-1Vlo_3w2uf9fF1-AU1F4",
+        "ItemFocusAnim-translucent-white-20": "_7B6-9HPzoer1QOmgjEAWS",
+        "ItemFocusAnimBorder-darkGrey": "GRKCpstf6SP8ly-oMKYX3",
+        "ItemFocusAnim-green": "_2cBvKmN3c2ILRdjHTpBZUQ",
+        focusAnimation: "_3eJJYrpdNOdlU26_C9wlMp",
+        hoverAnimation: "BiWwdgbiMRC3pAc-R3rqS",
       };
     },
     chunkid: (module) => {
@@ -346,6 +391,17 @@
         CompatibilityTabContent: "_3c5UMEMwi7F5tnSJiw26TQ",
         CompatibilityTabs: "_1ALZVqWCl2J8DJg4XxemH1",
         pillContent: "_1M5TZawv5Y4CRNXAISchG2",
+        BackgroundAnimation: "_2FyGcNFIRkW3k-FdDagwCV",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1yIgtU9bZ6s1FD5YwYN7Ux",
+        "ItemFocusAnim-darkerGrey": "DhRlb0k8yiOildRAPKbUv",
+        "ItemFocusAnim-darkGrey": "_2FbbkQw3hYI7YAtytr5IDn",
+        "ItemFocusAnim-grey": "_2suu44WFaHB4fkFfIvCI7U",
+        "ItemFocusAnim-translucent-white-10": "_2j1TKoZjmYdt4yBTKkRCgR",
+        "ItemFocusAnim-translucent-white-20": "_1qTgWOW3x6-b_CW5qQoSSo",
+        "ItemFocusAnimBorder-darkGrey": "_1Lxbh0NQsK7RWCdF8QEIej",
+        "ItemFocusAnim-green": "_1ZB1uzf3hgyFkekpi0xZg5",
+        focusAnimation: "WewegkENW7QZMuoX3r_v8",
+        hoverAnimation: "NCIvCtzfGkBvu5KDz_CE1",
       };
     },
     chunkid: (module) => {
@@ -409,6 +465,17 @@
         PostedBy: "_2VqeQaZVaUkkEWaiLkmqmT",
         ReminderContainer: "_3Vf2MkZ_LWIoNVv36RwJtO",
         ReadMoreCnt: "_1YmaiDiNhC33cL5DKj05KQ",
+        BackgroundAnimation: "_2-llXPi4w88rsWfJFYSLHB",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2eejrtSFYCSnzH8C6-WC3a",
+        "ItemFocusAnim-darkerGrey": "oMlqiiSY2Eqr2ln_FmAg4",
+        "ItemFocusAnim-darkGrey": "_3lAc02j3vPGIoXryYyGTZR",
+        "ItemFocusAnim-grey": "_388VkzVpUFRuQ1HZEymCy",
+        "ItemFocusAnim-translucent-white-10": "tK-6xcUa6TrN9X1V5zj25",
+        "ItemFocusAnim-translucent-white-20": "_1UaaS_yXA7SqNdxVDXCD9W",
+        "ItemFocusAnimBorder-darkGrey": "_1V7Z378RTDEmk3dXXGXsQa",
+        "ItemFocusAnim-green": "_2ldXxMP_HINQZvEbjgDdbf",
+        focusAnimation: "_3zr66n761wV-ZHFKw_Yvbn",
+        hoverAnimation: "_1MvZ2haWg8XTcl8VHKnoS0",
       };
     },
     chunkid: (module) => {
@@ -698,6 +765,17 @@
         MarketLinkhover: "Q7KDk8kBk01MxhM_KZoqt",
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
         VerticalLocalDateAndTime: "_1mp7jCbQZOXCcY5CmAu7xm",
+        BackgroundAnimation: "_1xHuE1YWHzo9e7B1OqN4Dz",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1PpoZpEVTivfMT68wHupWE",
+        "ItemFocusAnim-darkerGrey": "BhYCYOXuISCFgViVdx82C",
+        "ItemFocusAnim-darkGrey": "_3-sdX5Fyzkkq2BZueyW6A0",
+        "ItemFocusAnim-grey": "u2Oxu-B6ki5Zla6SoVKlU",
+        "ItemFocusAnim-translucent-white-10": "_2XZ5VZk3TBgBcW1e2vrQtB",
+        "ItemFocusAnim-translucent-white-20": "N3Z3Av7icrzbAFAW5wJn",
+        "ItemFocusAnimBorder-darkGrey": "mVRKuA_tcspbL8RU6xrzn",
+        "ItemFocusAnim-green": "_3s1RoQM5wahq4m_-EHP-Ke",
+        focusAnimation: "MEjRS-LUv7kC4BFYk_9hq",
+        hoverAnimation: "_3tstCrFD5IJZbVa-dMQbne",
       };
     },
     chunkid: (module) => {
@@ -767,6 +845,17 @@
         DefaultCreatorCtn: "_3KzJ1sfvwr94TVth1tZA9",
         EventSectionViewAllCtn: "_1B6gV2QA_GwFQvK3wA5qWs",
         SaleSectionBackgroundImageGroupEdit: "_2a4meRP6BAw2re4BFrrwtA",
+        BackgroundAnimation: "_1iEXo2C5dYh1sLdEds2zo_",
+        "ItemFocusAnim-darkerGrey-nocolor": "_6ALY2cB6oP10XwjHy38XP",
+        "ItemFocusAnim-darkerGrey": "_15R1kTQu4fktTozfpKwx_x",
+        "ItemFocusAnim-darkGrey": "_3yxHI8TA-jq3Ka361SNOoS",
+        "ItemFocusAnim-grey": "HdE5j3QJ5wzLUrUd8A9S6",
+        "ItemFocusAnim-translucent-white-10": "_3Pg_mdzZKHlcgBMGWoeuM-",
+        "ItemFocusAnim-translucent-white-20": "OZ_TTGcJc45o9tMuXjaVs",
+        "ItemFocusAnimBorder-darkGrey": "_36t4Gu0DFfDO9-hIb82st6",
+        "ItemFocusAnim-green": "_30VQHyiQ7SgMZgv2Q9RwMo",
+        focusAnimation: "_1bLCgV4sZsGIHim8xs3go9",
+        hoverAnimation: "_3--MfPAMg27VUuOckksz2m",
       };
     },
     chunkid: (module) => {
@@ -805,6 +894,17 @@
         VideoLargeContainer: "_3mzKCP4FLx7fUVeKrhZ1nn",
         VideoPopupContainers: "_2LqAoKcZgpOtpoj5_URVNJ",
         VideoLarge: "_3zPl6O67BYIiFOlq7FxlJP",
+        BackgroundAnimation: "TqTKL7i3GSFlH_ZgPVf1z",
+        "ItemFocusAnim-darkerGrey-nocolor": "cm_5koVmrBLuCZgPBCMie",
+        "ItemFocusAnim-darkerGrey": "PnVMlqvX5SCAvSN6U3hb9",
+        "ItemFocusAnim-darkGrey": "_3y6HrP9DK-Ttsri2UnKeJ4",
+        "ItemFocusAnim-grey": "_3adXp5-v5skt9f-KA1WB_8",
+        "ItemFocusAnim-translucent-white-10": "_1981I-jlGsaAi65IqAxEdm",
+        "ItemFocusAnim-translucent-white-20": "_1ukTwVbofcJj1v0AVkiuc3",
+        "ItemFocusAnimBorder-darkGrey": "_2LVjWAaAuOqf5tKQMJ99XC",
+        "ItemFocusAnim-green": "_1VtcP5LWUyNvo0_5bYQYEx",
+        focusAnimation: "n40ksCk7VHLZG8f1e517V",
+        hoverAnimation: "YiXS6irpqMezE03xkO2Un",
       };
     },
     chunkid: (module) => {
@@ -937,6 +1037,17 @@
         CapsuleName: "_31P1R5vTMyJ5RwWAfVoKYG",
         DiscountIconCtn: "_3Qt9S4lxTBuJqoY2PidC5h",
         MaxActionButtonWidth: "_3GOwBXz8cR_9njnfMGlp7b",
+        BackgroundAnimation: "_1k6sq680iiVKySIMXNcHkL",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34Tp7N_mW2y7TOcBFxCQVo",
+        "ItemFocusAnim-darkerGrey": "WQW1YbFeZjtPKckWVFjzB",
+        "ItemFocusAnim-darkGrey": "_3T33tEqMtzz3ijG8DkMXYZ",
+        "ItemFocusAnim-grey": "_1VqQfVz7N0T1g4AHmuCQu8",
+        "ItemFocusAnim-translucent-white-10": "jiBNibpWxZkJeyBzbrB5j",
+        "ItemFocusAnim-translucent-white-20": "_1y2_IkearpG-2NoiPwZu0U",
+        "ItemFocusAnimBorder-darkGrey": "_1LiqE1tXtbXey4AKzgFJfX",
+        "ItemFocusAnim-green": "_34pf2FqL7CWP6V9VNzPEIS",
+        focusAnimation: "_1wLvhANps-c7yKLact-7v8",
+        hoverAnimation: "_2FuCM99jbjgMa0JFZoisSA",
       };
     },
     chunkid: (module) => {
@@ -1181,6 +1292,47 @@
       }
       function _(_) {
         return ["vanitytoclanid", _];
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, __webpack_require__ = 0) {
+        return _(_, _, __webpack_require__);
+      }
+      async function _(_, _, __webpack_require__ = 0) {
+        return _(_, _, __webpack_require__);
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        if (!_ || 0 == _.length) return null;
+        if (null == _ ? void 0 : _.startsWith(_._))
+          return _._.ReplacementTokenToClanImageURL(_);
+        if (null == _ ? void 0 : _.startsWith(_._)) {
+          const _ = new Array(),
+            _ = _._.GetBaseURL(),
+            _ = _.substring(_._.length + 1),
+            _ = parseInt(_.substring(0, _.indexOf("/"))),
+            _ = _.substring(_.indexOf("/") + 1),
+            _ = _._.GetHashFromHashAndExt(_),
+            _ = _._.GetExtStringFromHashAndExt(_);
+          if (null != _) {
+            let _ = (0, _._)(_);
+            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__),
+              4 == _ &&
+                ((_ = (0, _._)((0, _._)(_))),
+                _.push(
+                  _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+                ));
+          }
+          return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
+        }
+        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -3999,6 +4151,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -10715,9 +10868,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             _: _,
@@ -10733,7 +10886,7 @@
         let _ = _.summary_unfiltered || _.summary_filtered,
           _ = "#ReviewScore_UserReviewScoreAria",
           _ = !1;
-        const _ = (0, _._)("#Language_" + _._.LANGUAGE);
+        const _ = _._.Localize("#Language_" + _._.LANGUAGE);
         if (
           (_._.Get().BShowFilteredUserReviewScores() &&
             (_.summary_language_specific
@@ -10757,12 +10910,12 @@
             children: [
               (0, _.jsx)("div", {
                 className: _().ReviewScoreLabel,
-                "aria-label": (0, _._)(_, _.review_score_label, _),
+                "aria-label": _._.Localize(_, _.review_score_label, _),
                 children: _.review_score_label,
               }),
               (0, _.jsxs)("div", {
                 className: _().ReviewScoreCount,
-                "aria-label": (0, _._)(
+                "aria-label": _._.Localize(
                   "#GameHover_UserReviewCount",
                   _.review_count.toLocaleString((0, _._)()),
                 ),
@@ -10771,12 +10924,12 @@
                   __webpack_require__
                     ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
                     : _
-                      ? (0, _._)(
+                      ? _._.Localize(
                           "#GameHover_UserReviewCount_Lang",
                           _.review_count.toLocaleString((0, _._)()),
                           _,
                         )
-                      : (0, _._)(
+                      : _._.Localize(
                           "#GameHover_UserReviewCount",
                           _.review_count.toLocaleString((0, _._)()),
                         ),
@@ -10786,7 +10939,7 @@
               !__webpack_require__ &&
                 (0, _.jsxs)("div", {
                   className: _().ReviewScoreHeader,
-                  children: [" ", (0, _._)("#GameHover_UserReviewsHeader")],
+                  children: [" ", _._.Localize("#GameHover_UserReviewsHeader")],
                 }),
             ],
           });
@@ -10816,7 +10969,7 @@
             Boolean(_)
               ? (0, _.jsx)(_._, {
                   bTopmost: !0,
-                  toolTipContent: (0, _._)(
+                  toolTipContent: _._.Localize(
                     _,
                     _.percent_positive,
                     _.review_count,
@@ -10846,8 +10999,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const {
             _: _,
@@ -10911,7 +11064,7 @@
                     _ && _().WishlistLoadingText,
                     "WishlistButtonText",
                   ),
-                  children: (0, _._)(
+                  children: _._.Localize(
                     _ ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist",
                   ),
                 }),
@@ -11063,7 +11216,6 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -13693,6 +13845,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = {
         bFitToWindow: !0,
@@ -14220,6 +14373,7 @@
           ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
         const { _: __webpack_require__, className: _ } = _,
@@ -14234,10 +14388,10 @@
           _ = _.length > 0,
           _ = _ || 1 === _.type,
           _ = _
-            ? (0, _._)("#Sale_InstallDemo_ttip", _.name || "")
+            ? _._.Localize("#Sale_InstallDemo_ttip", _.name || "")
             : _
-              ? (0, _._)("#Sale_CannotInstallDemo_ttip", _.name || "")
-              : (0, _._)("#Loading");
+              ? _._.Localize("#Sale_CannotInstallDemo_ttip", _.name || "")
+              : _._.Localize("#Loading");
         if ((0, _._)()) {
           if (_ && _) {
             const _ = 1 === _.type ? _.appid : _[0];
@@ -14264,8 +14418,8 @@
               },
               className: (0, _._)(_, _().DemoButton, !_ && _().DisabledButton),
               children: _
-                ? (0, _._)("#Sale_InstallDemo")
-                : (0, _._)("#Sale_DemoNotFound"),
+                ? _._.Localize("#Sale_InstallDemo")
+                : _._.Localize("#Sale_DemoNotFound"),
             });
       }
     },
@@ -14679,7 +14833,7 @@
                 if (!_ || 0 == _.length || !_) return _(!1);
                 (async () => {
                   const _ = await Promise.all(
-                    _.map((_) =>
+                    _.filter((_) => !!_).map((_) =>
                       _.fetchQuery(
                         (0, _._)(_, {
                           appid: _,
@@ -14810,7 +14964,7 @@
                 Boolean(!_) &&
                   (0, _.jsx)("div", {
                     className: (0, _._)(_().TagTitle, "WidgetTagTitle"),
-                    children: (0, _._)("#GameHover_Tags"),
+                    children: _._.Localize("#GameHover_Tags"),
                   }),
                 Boolean((null == _ ? void 0 : _.length) > 0)
                   ? (0, _.jsx)("div", {
@@ -14827,7 +14981,7 @@
                       ),
                     })
                   : (0, _.jsx)("div", {
-                      children: (0, _._)("#Broadcast_None"),
+                      children: _._.Localize("#Broadcast_None"),
                     }),
               ],
             })
@@ -15013,141 +15167,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 8476, 19))),
-        (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 99574, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 43789, 19))),
-        (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 815, 19))),
-        (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4289, 19))),
-        (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 54978, 19))),
-        (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 33800, 19))),
-        (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3907, 19))),
-        (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45040, 19))),
-        (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94750, 19))),
-        (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69668, 19))),
-        (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45233, 19))),
-        (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 90200, 19))),
-        (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31864, 19))),
-        (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7263, 19))),
-        (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 30295, 19))),
-        (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 50559, 19))),
-        (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 86512, 19))),
-        (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 52889, 19))),
-        (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72269, 19))),
-        (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 34419, 19))),
-        (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75777, 19))),
-        (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 23723, 19))),
-        (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 85436, 19))),
-        (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 76736, 19))),
-        (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94625, 19))),
-        (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15191, 19))),
-        (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4230, 19))),
-        (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 34792, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27246, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 59863, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -15255,7 +15274,8 @@
             (0, _._)(_, `Invalid size: ${_}`);
         }
         return (
-          _._.STORE_ITEM_BASE_URL + _.filename.replace(/\.[^.*]$/, `${_}$&`)
+          _._.STORE_ITEM_BASE_URL +
+          _.filename.replace(/\.([^.]+)(\?.*)?$/, `${_}.$1$2`)
         );
       }
       function _(_) {
@@ -15345,8 +15365,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15357,7 +15379,7 @@
         _ = __webpack_require__._(_);
       function _(_) {
         var _, _;
-        const { _: _, active: _, bIsHoverMode: _, bGrowOnHover: _ } = _,
+        const { _: _, active: _, bIsHoverMode: _, eGrowOnHover: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = _.useRef(0),
           _ = _.useRef(null);
@@ -15381,9 +15403,17 @@
                 },
               })
             : null;
+        let _;
+        switch (_) {
+          case _.k_ETrailerGrowAmount_Small:
+            _ = _().GrowOnHoverSmall;
+            break;
+          case _.k_ETrailerGrowAmount_Medium:
+            _ = _().GrowOnHoverMedium;
+        }
         const _ = _[0];
         return (0, _.jsx)("video", {
-          className: _()(_().CapsuleMicroTrailer, _ && _().GrowOnHover),
+          className: _()(_().CapsuleMicroTrailer, _),
           loop: !0,
           muted: !0,
           controls: !1,
@@ -15409,6 +15439,13 @@
                 ),
         });
       }
+      !(function (_) {
+        (_[(_.k_ETrailerGrowAmount_None = 0)] = "k_ETrailerGrowAmount_None"),
+          (_[(_.k_ETrailerGrowAmount_Small = 1)] =
+            "k_ETrailerGrowAmount_Small"),
+          (_[(_.k_ETrailerGrowAmount_Medium = 2)] =
+            "k_ETrailerGrowAmount_Medium");
+      })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -18938,7 +18975,7 @@
           });
       }
       function _(_, _) {
-        var _, _, _, _, _;
+        var _, _, _, _;
         const _ = _._.Get();
         if (_.only_current_platform && _.BHasPlatformPreferenceSet()) {
           if (
@@ -18959,20 +18996,21 @@
           )
             return _._.k_RejectWrongPlatform;
         }
-        return !_.prepurchase && _.BIsComingSoon()
-          ? _._.k_RejectNoComingSoon
-          : !_.virtual_reality &&
-              (null === (_ = _.GetPlatforms()) || void 0 === _
-                ? void 0
-                : _.vr_support.vrhmd_only)
-            ? _._.k_RejectNoVR
-            : (
-                  null === (_ = _.GetAllCreatorClanIDs()) || void 0 === _
-                    ? void 0
-                    : _.some((_) => _.BIsIgnoringCurator(_))
-                )
-              ? _._.k_RejectCreatorClan
-              : _._.k_NotRejected;
+        if (!_.prepurchase && _.BIsComingSoon())
+          return _._.k_RejectNoComingSoon;
+        const _ = _.GetPlatforms();
+        return !_.virtual_reality &&
+          _ &&
+          _.vr_support &&
+          _.vr_support.vrhmd_only
+          ? _._.k_RejectNoVR
+          : (
+                null === (_ = _.GetAllCreatorClanIDs()) || void 0 === _
+                  ? void 0
+                  : _.some((_) => _.BIsIgnoringCurator(_))
+              )
+            ? _._.k_RejectCreatorClan
+            : _._.k_NotRejected;
       }
       function _(_, _) {
         var _;
@@ -19000,33 +19038,32 @@
         if (!_.early_access && _.BIsEarlyAccess())
           return _._.k_RejectEarlyAccess;
         const _ = _.GetAppType();
-        return _.software || 6 != _
-          ? _.games_already_in_library && _.BIsGameOwned(_)
+        if (!_.software && 6 == _) return _._.k_RejectSoftware;
+        if (_.games_already_in_library && _.BIsGameOwned(_))
+          return _._.k_RejectInLibrary;
+        if (_.games_not_in_library && !_.BIsGameOwned(_))
+          return _._.k_RejectNotInLibrary;
+        if (!_.video && [7, 8, 9].includes(_)) return _._.k_RejectVideo;
+        if (_.has_discount) {
+          const _ = _.GetBestPurchaseOption();
+          if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
+        }
+        return "adultonly" != _ &&
+          _.no_ao_content &&
+          (_.HasContentDescriptorID(3) || _.HasContentDescriptorID(4))
+          ? _._.k_RejectAO
+          : 1 == _ &&
+              _.games_already_in_library &&
+              _.BIsGameOwned(_.GetParentAppID() || 0)
             ? _._.k_RejectInLibrary
-            : _.games_not_in_library && !_.BIsGameOwned(_)
-              ? _._.k_RejectNotInLibrary
-              : !_.video && [7, 8, 9].includes(_)
-                ? _._.k_RejectVideo
-                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
-                  ? _._.k_RejectNoDiscount
-                  : "adultonly" != _ &&
-                      _.no_ao_content &&
-                      (_.HasContentDescriptorID(3) ||
-                        _.HasContentDescriptorID(4))
-                    ? _._.k_RejectAO
-                    : 1 == _ &&
-                        _.games_already_in_library &&
-                        _.BIsGameOwned(_.GetParentAppID())
-                      ? _._.k_RejectInLibrary
-                      : _
-                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
-                          _.BHasAppID(_)
-                          ? _._.k_RejectAlreadyDisplayed
-                          : _.has_trailer && !_.BHasTrailers(!1)
-                            ? _._.k_RejectNoTrailer
-                            : _(_, _)
-                        : _._.k_NotRejected
-          : _._.k_RejectSoftware;
+            : _
+              ? (1 == _ && _.BHasAppID(_.GetParentAppID() || 0)) ||
+                _.BHasAppID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _.has_trailer && !_.BHasTrailers(!1)
+                  ? _._.k_RejectNoTrailer
+                  : _(_, _)
+              : _._.k_NotRejected;
       }
       function _(_, _) {
         const _ = _._.Get();
@@ -19198,13 +19235,33 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return (0, _.useMemo)(
-          () => _(_),
+          () =>
+            (function (_) {
+              if (!_ || !_._) return;
+              if (!_.type)
+                return {
+                  appid: _._,
+                };
+              switch (_.type) {
+                case "sub":
+                  return {
+                    packageid: _._,
+                  };
+                case "bundle":
+                  return {
+                    bundleid: _._,
+                  };
+                default:
+                  return {
+                    appid: _._,
+                  };
+              }
+            })(_),
           [null == _ ? void 0 : _._, null == _ ? void 0 : _.type],
         );
       }
@@ -19229,28 +19286,6 @@
             })(_, _),
           [_, _],
         );
-      }
-      function _(_) {
-        if (_ && _._) {
-          if (!_.type)
-            return {
-              appid: _._,
-            };
-          switch (_.type) {
-            case "sub":
-              return {
-                packageid: _._,
-              };
-            case "bundle":
-              return {
-                bundleid: _._,
-              };
-            default:
-              return {
-                appid: _._,
-              };
-          }
-        }
       }
       function _(_) {
         return (0, _.useMemo)(() => {
@@ -19534,6 +19569,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
         BHasHomeView() {
           return Boolean(this.m_HomeView);
@@ -19545,16 +19581,20 @@
             : _.home;
         }
         static Get() {
+          var _;
           return (
             _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
+              ((_ = "CHomeViewStore.s_globalSingletonStore"),
+              (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
+              (_.s_globalSingletonStore = new _()),
               "dev" == _._.WEB_UNIVERSE &&
                 (window.g_HomeViewSetting = _.s_globalSingletonStore)),
             _.s_globalSingletonStore
           );
         }
         constructor() {
-          "dev" === _._.WEB_UNIVERSE && (window.g_HomeViewStore = this);
+          (this.m_HomeView = void 0),
+            "dev" === _._.WEB_UNIVERSE && (window.g_HomeViewStore = this);
           const _ = (0, _._)("home_view_setting", "application_config");
           this.ValidateHomeViewData(_) && this.SetHomeViewSetting(_);
           const _ = (0, _._)(
@@ -19582,11 +19622,18 @@
           );
         }
         SetHomeViewSettingOverride(_) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ...(null == _ ? void 0 : _.all),
-            ...(null == _ ? void 0 : _.maincap),
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ...(null == _ ? void 0 : _.all),
+                ...(null == _ ? void 0 : _.maincap),
+              })
+            : (this.m_HomeView = {
+                home: {
+                  ...(null == _ ? void 0 : _.all),
+                  ...(null == _ ? void 0 : _.maincap),
+                },
+              });
         }
       }
     },
@@ -19618,7 +19665,9 @@
           (_[(_.SwitchController = 5)] = "SwitchController"),
           (_[(_.SteamController = 6)] = "SteamController"),
           (_[(_.SteamDeckNeptune = 7)] = "SteamDeckNeptune"),
-          (_[(_.SteamDeckGalileo = 8)] = "SteamDeckGalileo");
+          (_[(_.SteamDeckGalileo = 8)] = "SteamDeckGalileo"),
+          (_[(_.Switch2Controller = 9)] = "Switch2Controller"),
+          (_[(_.SteamControllerTriton = 10)] = "SteamControllerTriton");
       })(_ || (_ = {}));
       const _ = {
           any_controller: _.AnyController,
@@ -19630,6 +19679,8 @@
           steam_controller: _.SteamController,
           steam_deck_neptune: _.SteamDeckNeptune,
           steam_deck_galileo: _.SteamDeckGalileo,
+          switch2_controller: _.Switch2Controller,
+          steam_controller_triton: _.SteamControllerTriton,
         },
         _ = "unUserdataVersion";
       class _ {
@@ -37491,6 +37542,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _() {
         return _.useMemo(
@@ -37590,8 +37642,12 @@
           ),
           _ = _(_),
           _ = _.context.event,
-          _ = _._(_, _.language, null == _ ? void 0 : _.rtime32_last_modified);
-        if (void 0 === _) return _.children || "";
+          _ = (0, _._)(
+            _,
+            _.language,
+            null == _ ? void 0 : _.rtime32_last_modified,
+          );
+        if (void 0 === _ || null == _) return _.children || "";
         _ = "string" == typeof _ ? _ : _[1];
         const _ = (function (_, _, _) {
           let _;
@@ -39781,6 +39837,7 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       let _ = null;
       function _(_) {
@@ -39790,7 +39847,7 @@
           (0, _._)(_.args, "src") ||
           (null === (_ = _.children) || void 0 === _ ? void 0 : _.toString());
         _ || (_ = (0, _._)(_.args));
-        const _ = _._(
+        const _ = (0, _._)(
           _,
           _.language,
           null == _ ? void 0 : _.rtime32_last_modified,
@@ -43244,7 +43301,7 @@
             _.forEach((_, _) => {
               if ((__webpack_require__ || _ > 0) && _.length < 3) {
                 const _ = (0, _._)(_, "thumb"),
-                  _ = (0, _._)(_, "full"),
+                  _ = (0, _._)(_, "600x338"),
                   _ = _.length;
                 _.push(
                   (0, _.jsx)(
@@ -43584,38 +43641,32 @@
         var _;
         const { _: __webpack_require__, bHideInLibraryApps: _ } = _,
           { data: _ } = (0, _._)(__webpack_require__),
-          [_, _] = _.useState(null),
           _ = 2 == (null == _ ? void 0 : _.item_type),
-          { data: _ } = (0, _._)();
-        if (
-          (_.useEffect(() => {
-            _ &&
-              (1 == _.item_type || 2 == _.item_type
-                ? _(
-                    (_.included_appids || [])
-                      .filter(
-                        (_) => !_ || !_ || !(null == _ ? void 0 : _.has(_)),
-                      )
-                      .map((_) => ({
-                        appid: _,
-                      })),
-                  )
-                : console.error(
-                    "ContentsPreviewList unexpected store item type: ",
+          { data: _ } = (0, _._)(),
+          _ = _.useMemo(() => {
+            if (_)
+              return 1 === _.item_type || 2 === _.item_type
+                ? (_.included_appids || [])
+                    .filter((_) => !_ || !_ || !(null == _ ? void 0 : _.has(_)))
+                    .map((_) => ({
+                      appid: _,
+                    }))
+                : (console.error(
+                    "ContentsPreviewList unexpected store item type:",
                     _.item_type,
-                  ));
-          }, [_, _, _, _]),
-          !_ || 0 == _.length)
-        )
-          return null;
+                  ),
+                  null);
+          }, [_, _, _, _]);
+        if (!_ || 0 == _.length) return null;
         const _ = _.length;
-        let _ = (0, _._)("#Sale_ContentPreview", _);
+        let _ = _._.LocalizePlural("#Sale_ContentPreview", _);
         if (_ && _) {
           const _ =
             (null === (_ = _.included_appids) || void 0 === _
               ? void 0
               : _.length) || 0;
-          _ != _ && (_ = (0, _._)("#Sale_Bundle_CompletePartialSet", _ - _, _));
+          _ != _ &&
+            (_ = _._.Localize("#Sale_Bundle_CompletePartialSet", _ - _, _));
         }
         return (0, _.jsxs)("div", {
           className: _().BundleContentPreview,
@@ -43626,7 +43677,7 @@
                 _ &&
                   (0, _.jsx)("span", {
                     className: _().BundleTag,
-                    children: (0, _._)("#AppType_bundle"),
+                    children: _._.Localize("#AppType_bundle"),
                   }),
                 _,
               ],
@@ -43686,6 +43737,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -43803,7 +43855,7 @@
                             _: _,
                             active: _ && _,
                             bIsHoverMode: !0,
-                            bGrowOnHover: !0,
+                            eGrowOnHover: _._.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),
@@ -44665,18 +44717,9 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_) {
-        return "bundle" == _
-          ? "bundle"
-          : "sub" == _
-            ? "sub"
-            : ((0, _._)(_), "app");
-      }
       function _(_) {
         return 2 == _ ? "bundle" : 1 == _ ? "sub" : "app";
       }

@@ -6496,9 +6496,6 @@
           { data: _ } = (0, _._)({
             appid: _,
           }),
-          { data: _ } = (0, _._)({
-            appid: _,
-          }),
           _ = _._.PARTNER_BASE_URL + "apps/landing/" + _,
           _ = (function (_, _) {
             if (_?.asset_url_format && _[_])
@@ -6534,17 +6531,27 @@
                   children: _.name,
                 }),
               }),
-            (0, _.jsxs)("div", {
-              className: _.AppLabels,
-              children: [
-                (0, _.jsx)(_, {
-                  appType: _.type,
-                }),
-                (0, _.jsx)(_, {
-                  releaseState: _.releasestate,
-                  hasStoreItem: _?.visible,
-                }),
-              ],
+            (0, _.jsx)(_, {
+              app: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { app: _ } = _,
+          _ = _.appid,
+          { data: _ } = (0, _._)({
+            appid: _,
+          });
+        return (0, _.jsxs)("div", {
+          className: _.AppLabels,
+          children: [
+            (0, _.jsx)(_, {
+              appType: _.type,
+            }),
+            (0, _.jsx)(_, {
+              releaseState: _.releasestate,
+              hasStoreItem: _?.visible,
             }),
           ],
         });

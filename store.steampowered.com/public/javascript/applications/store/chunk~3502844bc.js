@@ -289,7 +289,7 @@
     },
     53965: (s, e, r) => {
       "use strict";
-      r.d(e, { $: () => u });
+      r.d(e, { $: () => N });
       var p = r(7850),
         o = r(64238),
         i = r.n(o),
@@ -332,19 +332,21 @@
           : (0, p.jsx)(d, { size: e, color: i, variant: t, ...a });
       }
       function d(s) {
-        const { className: e, color: r, ...o } = (0, n.mz)(s, x);
+        const { className: e, color: r, ...o } = (0, n.mz)(s, u);
         return (0, p.jsx)("div", {
           "data-accent-color": r,
           className: i()(e, c.Spinner),
           ...o,
         });
       }
-      const x = [
+      const u = [
         ...a.L,
         { prop: "size", responsive: !0, className: (s) => c[`Size-${s}`] },
         { prop: "variant", className: (s) => c[`Variant-${s}`] },
       ];
-      const v = [
+      var x = r(45699),
+        v = r(8527);
+      const f = [
           ...a.L,
           { prop: "size", responsive: !0, className: (s) => t[`Size-${s}`] },
           { prop: "variant", className: (s) => t[`Variant-${s}`] },
@@ -362,7 +364,7 @@
             responsive: !0,
           },
         ],
-        u = function (s) {
+        N = function (s) {
           const {
               variant: e = "default",
               size: r = "2",
@@ -372,9 +374,10 @@
               children: l,
               onClick: m,
               icon: d,
-              ...x
+              gamepadFocusable: u = !0,
+              ...N
             } = s,
-            u = c
+            y = c
               ? (0, p.jsx)(_, {
                   size: r,
                   color: a,
@@ -382,22 +385,23 @@
                   children: l,
                 })
               : l,
-            f = c ? void 0 : m;
-          return (0, p.jsx)("button", {
+            g = c ? void 0 : m,
+            h = u && v.TS.IN_GAMEPADUI ? x.fu : "button";
+          return (0, p.jsx)(h, {
             type: "button",
             ...(0, n.mz)(
               {
-                ...x,
+                ...N,
                 variant: e,
                 size: r,
                 minWidth: o,
                 color: a,
                 className: i()(t.Button, d && t.Icon),
-                onClick: f,
+                onClick: g,
               },
-              v,
+              f,
             ),
-            children: u,
+            children: y,
           });
         };
     },
@@ -425,75 +429,84 @@
         o = r(8871),
         i = r(90626),
         t = r(7745),
-        a = r(90665);
-      function n(s) {
-        const { children: e, "flow-children": r, ...n } = s;
-        r && (n.layout = (0, t.O)(r));
-        const { ref: c, node: l } = (0, a.qp)(n),
-          m = (0, o.Ue)(c, e.props?.ref);
+        a = r(90665),
+        n = r(74882);
+      function c(s) {
+        const { children: e, "flow-children": r, ...c } = s,
+          { gamepadEvents: l } = (0, a.C7)(s);
+        r && (c.layout = (0, t.O)(r)),
+          l.onOKButton ||
+            ("onClick" in e.props && e.props.onClick && (l.onOKButton = a._K));
+        const { ref: m, node: _ } = (0, a.qp)(c);
+        (0, n.Ui)(l, m);
+        const d = (0, o.Ue)(m, e.props?.ref);
         return (0, p.jsx)(a.TJ.Provider, {
-          value: l,
-          children: i.cloneElement(e, { ...e.props, ref: m }),
+          value: _,
+          children: i.cloneElement(e, { ...e.props, ref: d }),
         });
       }
-      var c = r(41324),
-        l = r(75659),
-        m = r(64238),
-        _ = r.n(m),
-        d = r(68875);
+      var l = r(41324),
+        m = r(75659),
+        _ = r(64238),
+        d = r.n(_),
+        u = r(68875);
       function x(s) {
         const { as: e = "div", ref: r, ...o } = s,
-          i = (0, c.mz)({ ...o, className: _()(s.className, d.Flex) }, v),
-          t = e;
-        return (0, p.jsx)(n, { children: (0, p.jsx)(t, { ref: r, ...i }) });
+          i = (0, l.mz)({ ...o, className: d()(s.className, u.Flex) }, v),
+          t = !o.disabled && !!o.onClick,
+          a = e;
+        return (0, p.jsx)(c, {
+          focusable: t,
+          children: (0, p.jsx)(a, { ref: r, ...i }),
+        });
       }
       const v = [
-        ...l.h,
+        ...m.h,
         {
           prop: "direction",
           responsive: !0,
-          className: d.Direction,
+          className: u.Direction,
           cssProperty: "--direction",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: d.Justify,
-          cssProperty: (s) => ["--justify", u(s)],
+          className: u.Justify,
+          cssProperty: (s) => ["--justify", f(s)],
         },
         {
           prop: "align",
           responsive: !0,
-          className: d.Align,
+          className: u.Align,
           cssProperty: "--align",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: d.Gap,
+          className: u.Gap,
           cssProperty: (s) => ["--gap", `var(--spacing-${s})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: d.GapX,
+          className: u.GapX,
           cssProperty: (s) => ["--gap-x", `var(--spacing-${s})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: d.GapY,
+          className: u.GapY,
           cssProperty: (s) => ["--gap-y", `var(--spacing-${s})`],
         },
         {
           prop: "wrap",
           responsive: !0,
-          className: d.Wrap,
+          className: u.Wrap,
           cssProperty: "--wrap",
         },
-        { prop: "inline", responsive: !0, className: d.Inline },
+        { prop: "inline", responsive: !0, className: u.Inline },
       ];
-      function u(s) {
+      function f(s) {
         return /^(between|around|evenly)$/.test(s) ? `space-${s}` : s;
       }
     },

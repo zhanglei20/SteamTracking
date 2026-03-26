@@ -3139,15 +3139,33 @@
       const _ = new _("FocusHistory").Debug;
       function _(_) {
         const _ = (_) => {
-            _(`preserving state and suppressing focus for tree ${_._}`);
-            const _ = "replace" == _.navigationType ? void 0 : _(_.Root);
-            window.navigation.updateCurrentEntry({
-              state: {
-                ...window.navigation.currentEntry?.getState(),
-                [_(_)]: _,
-              },
-            }),
-              _.DeferredFocus.SuppressFocus();
+            _(
+              `preserving state and suppressing focus for tree ${_._} for navigation type ${_.navigationType}`,
+            );
+            const _ = window.navigation.currentEntry?.getState() ?? {};
+            if ("replace" != _.navigationType) {
+              const _ = _(_.Root);
+              window.navigation.updateCurrentEntry({
+                state: {
+                  ..._,
+                  [_(_)]: _,
+                },
+              });
+            } else
+              _[_] &&
+                _.intercept({
+                  async handler() {
+                    const _ = window.navigation.currentEntry?.getState() ?? {};
+                    window.navigation.updateCurrentEntry({
+                      state: {
+                        ..._,
+                        [_]: !0,
+                      },
+                    });
+                  },
+                  focusReset: "manual",
+                });
+            _.DeferredFocus.SuppressFocus();
           },
           _ = (_) => {
             _(_)
@@ -3202,8 +3220,9 @@
                   `Wait for page enabled, suppressing focus in ${_._} until we hear that page is ready`,
                 ),
                   _.DeferredFocus.SuppressFocus();
-                const _ = () => {
-                    _(_)
+                const _ = _(_),
+                  _ = () => {
+                    _(_, _)
                       ? _.DeferredFocus.Reset()
                       : _.DeferredFocus.ExecuteQueuedFocus();
                   },
@@ -3214,11 +3233,8 @@
           _.GetUnregisterFunc()
         );
       }
-      function _(_) {
-        const _ = (function (_) {
-          const _ = window.navigation.currentEntry?.getState();
-          return _?.[_(_)];
-        })(_);
+      function _(_, _) {
+        const _ = _ ?? _(_);
         return (
           _(
             `Restoring focus state for ${_._}, ${_ ? "history available" : "no history"}`,
@@ -3228,6 +3244,10 @@
       }
       function _(_) {
         return `FocusHistory_${_._}`;
+      }
+      function _(_) {
+        const _ = window.navigation.currentEntry?.getState();
+        return _?.[_(_)];
       }
       let _;
       const _ = "FocusHistoryWaitForPage";
@@ -4534,7 +4554,11 @@
           : _ == _.BACKWARD && _.BFocusLastChild(_.GAMEPAD);
       }
       function _(_) {
-        return _ ? Function("event", _) : null;
+        if (_) {
+          const _ = Function("event", _);
+          return (_) => _.apply(_.currentTarget, [_]);
+        }
+        return null;
       }
       function _() {
         return !0;

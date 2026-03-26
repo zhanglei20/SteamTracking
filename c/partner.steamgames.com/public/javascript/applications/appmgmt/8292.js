@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Skifter du fra betalt til gratis?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Hvis dit spil allerede er udkommet, og du gerne vil skifte fra betalt til gratis, så klik %1$s for at lære mere og bede om hjælp.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "her",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Indtastning af tilpassede priser",
+	"SinglePackagePricing_Right_Custom_Desc": "Du kan indtaste dine egne priser for hver valuta ved at redigere tekstfeltet direkte.",
+	"SinglePackagePricing_Right_Convert_Desc": "Du kan også bruge denne knap til at beregne hver valuta baseret på den valgte omregningsmetode og den tilpassede USD-pris, der er angivet.",
+	"PricingDashboard_Select_Price": "Vælg blandt prisniveauer",
+	"PricingDashboard_Select_Price_button": "Vælg grundpris i USD",
+	"PricingDashboard_Select_Price_button_ttip": "Åbn et vindue med et sæt fælles prisniveauer, så de kan angives for alle valutaer nedenfor.",
 	"empty_no_trailing_comma": ""
 }`);
     },

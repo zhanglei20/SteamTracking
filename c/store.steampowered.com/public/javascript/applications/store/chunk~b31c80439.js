@@ -77,6 +77,17 @@
         AutoplayCheckboxCtn: "_2HvO_RKtxiyyhZsELjYyq5",
         AOWarning: "_19l-UjQZVVGNK5SKnOrmJB",
         Text: "VoAJhMdtQTylTg3G03nJo",
+        BackgroundAnimation: "_1BygdMVbHp4UClANjStGo9",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3pIKV-kCrU2q99tCLoOD-6",
+        "ItemFocusAnim-darkerGrey": "OgzJ6LmEUtmpf0GQsD7Vo",
+        "ItemFocusAnim-darkGrey": "_3GG7KC5ZHbAn80ZwU94AGH",
+        "ItemFocusAnim-grey": "_2vCJ0TzuZNRRjxTZxrTZgc",
+        "ItemFocusAnim-translucent-white-10": "_3LSZycr3qnPrQPVjt2oj-9",
+        "ItemFocusAnim-translucent-white-20": "_11GiQCMBciJ1pGPTXHvO8M",
+        "ItemFocusAnimBorder-darkGrey": "_91lIqOTiAbr65tckrg_vR",
+        "ItemFocusAnim-green": "_-5UaqlbdsHtfbyb7FWN_w",
+        focusAnimation: "_1IiLzess48eakf_rL9Akg5",
+        hoverAnimation: "_24-OSWrZDqPoBKHcbF0kAl",
         "capsule-trans-out": "hckHU2LXCJNx0X37OqCsx",
       };
     },
@@ -181,6 +192,17 @@
         SaleRewardsCtn: "u42zSEWdGrvBDimhV4QNI",
         RewardStatusCtn: "_2C1i6xEuF431h_KHPB53zS",
         SaleRewardAppTitle: "_1-pK3SWEOk30eo-q0EKyH7",
+        BackgroundAnimation: "_3tn052OQVu3Bbdx7lAg8v3",
+        "ItemFocusAnim-darkerGrey-nocolor": "WFiTs9SPGUObvgDncLEFm",
+        "ItemFocusAnim-darkerGrey": "_18LH9gSLwgTgUzIl1C0-pq",
+        "ItemFocusAnim-darkGrey": "_3BW-wlgbU7_7zOW8-2d7OI",
+        "ItemFocusAnim-grey": "_2PCW9DVf1EkOJw0pwtlWSj",
+        "ItemFocusAnim-translucent-white-10": "A-_kb_s9v8pLyRrldCupj",
+        "ItemFocusAnim-translucent-white-20": "_1fugsBQAve_CPDYfcK5fou",
+        "ItemFocusAnimBorder-darkGrey": "_1X5xeHixS4XJusrPGRQ4nL",
+        "ItemFocusAnim-green": "guH2fAOEkfwuIvOhn0oHl",
+        focusAnimation: "_2XCqyPQ8Leg6L1dwSjpULK",
+        hoverAnimation: "zU1NJEk7QqOdsECL2PI2d",
       };
     },
     chunkid: (module) => {
@@ -191,6 +213,17 @@
         ProgressDotActive: "_3z2pS3DFn3MEl5ZPw6lsa9",
         ProgressDotSelected: "_1qJVCZsv51RtfBGao-PV8V",
         ProgressDotClickable: "jKfeFH4S6YhaeZ7RCZ8BN",
+        BackgroundAnimation: "_3B8qOyTqC7rzOP_X5kvWK-",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2wYIdqvoWTU_8MPGJtV4j",
+        "ItemFocusAnim-darkerGrey": "_5noNLXRGVi51cgI8nYBAm",
+        "ItemFocusAnim-darkGrey": "_6iLF1QqShrpEW0UiF0x2o",
+        "ItemFocusAnim-grey": "PuZXrV7q9vI7p-jK9x2pN",
+        "ItemFocusAnim-translucent-white-10": "_2RwwslrDVdOXePDy6QCEkZ",
+        "ItemFocusAnim-translucent-white-20": "_1VijReQZ-moslCOSkJYKIt",
+        "ItemFocusAnimBorder-darkGrey": "_1HaTvS9ANJY56lTVTb35I3",
+        "ItemFocusAnim-green": "_3mF4OtweD7vY2bcN6piLTq",
+        focusAnimation: "rpa_zF1YXxbH3-m1-AI6Q",
+        hoverAnimation: "_2WTZTfL3dbXnfZM3Ly10Jo",
       };
     },
     chunkid: (module) => {
@@ -208,7 +241,39 @@
         UndoIgnoreButton: "_177VX9-0Tj1sNozNrm8bN1",
         UndoButton: "_3HOpXzFuRFY1WwrPL-fxOi",
         Disabled: "_3xyNp4rGNpDJtxvww4ZCOR",
+        BackgroundAnimation: "_3qHy0ZfVKo5p8TWje-jtAG",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2ysW7cifFEEfft88AcXQ77",
+        "ItemFocusAnim-darkerGrey": "_1sDFTD6HQbSYSYfAeHxdfc",
+        "ItemFocusAnim-darkGrey": "_3o-jWjx0jwVTFKTTeS0T03",
+        "ItemFocusAnim-grey": "_1hRqeCN67Ga45VdF6Q6cgA",
+        "ItemFocusAnim-translucent-white-10": "_2f5q2Audp6Dn4k8WoktvHn",
+        "ItemFocusAnim-translucent-white-20": "_2L4JhmA2KdmiV1hmrVpwNz",
+        "ItemFocusAnimBorder-darkGrey": "_2ro1AA5m-5Tf_VM-0cgpCg",
+        "ItemFocusAnim-green": "_3afkw6jZdesN7ExtcThnbC",
+        focusAnimation: "_1qzDlpOQ22S_QgdcDvd8p-",
+        hoverAnimation: "_2Gx-a0BFgKfjo6ksSg7G1d",
       };
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        let { children: _ } = _;
+        const [__webpack_require__, _] = (0, _.useState)(0.8),
+          [_, _] = (0, _.useState)(!0);
+        return (0, _.jsx)(_._, {
+          playerVolume: __webpack_require__,
+          setPlayerVolume: _,
+          audioMuted: _,
+          setAudioMuted: _,
+          children: _,
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -2575,62 +2640,6 @@
         (0, _._)([_._], _.prototype, "DeleteRegion", null),
         (0, _._)([_._], _.prototype, "UpdatePanel", null),
         (_ = (0, _._)([_._], _));
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (_) => null != _;
-      function _(_, _) {
-        const [__webpack_require__, _] = _.useState(() =>
-            window.localStorage.getItem(_),
-          ),
-          _ = _.useRef(_),
-          _ = _.useCallback(
-            (_) => {
-              const _ = _(_) ? String(_) : null;
-              window.localStorage.setItem(_, _),
-                _(_),
-                _.Get().GetLocalStoreChangeCallback(_).Dispatch(_);
-            },
-            [_, _],
-          );
-        _.useEffect(() => {
-          _ != _.current &&
-            (_(window.localStorage.getItem(_)), (_.current = _));
-        }, [_]);
-        const _ =
-          _ == _.current ? __webpack_require__ : window.localStorage.getItem(_);
-        let _ = _;
-        return (
-          _(_) &&
-            (_ = _(_)
-              ? "boolean" == typeof _
-                ? _.constructor("false" !== _)
-                : _.constructor(_)
-              : _),
-          (0, _._)(_.Get().GetLocalStoreChangeCallback(_), _),
-          [_, _]
-        );
-      }
-      class _ {
-        m_mapChangeCallback = new Map();
-        GetLocalStoreChangeCallback(_) {
-          return (
-            this.m_mapChangeCallback.has(_) ||
-              this.m_mapChangeCallback.set(_, new _._()),
-            this.m_mapChangeCallback.get(_)
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return _.s_Singleton || (_.s_Singleton = new _()), _.s_Singleton;
-        }
-      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -5180,441 +5189,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = new _._("TrailerAppVideo"),
-        _ = "bGameHighlightAutoplayDisabled",
-        _ = "discovery-queue-volume",
-        _ = "discovery-queue-mute";
-      function _(_) {
-        const {
-            storeItem: _,
-            bCurrentlyActive: __webpack_require__,
-            autoPlayCookieName: _,
-            bPlayWithBroadcastPlayer: _,
-            showScreenshotInsteadOfMainCap: _,
-            autoplayCheckboxPosition: _,
-            refTogglePlayPause: _,
-            bShowAOAutoPlayWarning: _,
-            ..._
-          } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(),
-          _ = (function (_, _) {
-            const _ = _?.GetAllTrailers().GetAllTrailers("blocked" == _);
-            return _ && _.length > 0 ? _[0] : void 0;
-          })(_, _),
-          _ = (_ ?? !0) && _ && !_.BIsAllAges() && "masked" == _,
-          _ = (0, _._)(),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(0),
-          _ = _.useRef(void 0),
-          _ = _.useRef(void 0),
-          [_, _] = _.useState(),
-          { bCookieLoaded: _ } = (function (_, _, _) {
-            const _ = _.useCallback(() => {
-              const _ = (0, _._)(_ ?? _),
-                _ = !(!_ || "true" !== _.toLowerCase());
-              __webpack_require__(!_);
-            }, [_, _]);
-            return (function (_, _) {
-              const [_, _] = _.useState(!1);
-              return (
-                _.useEffect(() => (_ && (_(), _(!0)), () => _(!1)), [_, _]),
-                {
-                  bCookieLoaded: _,
-                }
-              );
-            })(_, _);
-          })(_, __webpack_require__, _),
-          _ = _;
-        _.useEffect(() => {
-          __webpack_require__ && _ && (_ || _) && !_ && _(!0);
-        }, [_, _, __webpack_require__, _, _]),
-          _.useEffect(() => {
-            _ && _ && _ && _();
-          }, [_, _, _, _]);
-        const _ = (function (_, _, _, _, _) {
-          return _.useCallback(() => {
-            0 == _
-              ? _(!0)
-              : 1 == _ && _.current
-                ? _.current.paused
-                  ? _.current.play()
-                  : _.current.pause()
-                : 2 == _ && _.current
-                  ? _.current.IsPaused()
-                    ? _.current.Play()
-                    : _.current.Pause()
-                  : 2 == _ && _ && _.TogglePlayPause();
-          }, [_, _, _, _, _]);
-        })(_, _, _, _, _);
-        _.useEffect(() => {
-          _ && (_.current = _);
-        }, [_, _]);
-        const _ = _.GetScreenshots("allowed" != _),
-          _ = _ && _.length > 0 ? _[0] : _.GetAssets().GetMainCapsuleURL();
-        return (0, _.jsxs)(_._, {
-          className: _().AppCarouselTrailerCtn,
-          onMouseEnter: () => _(!0),
-          onMouseLeave: () => _(!1),
-          children: [
-            (0, _.jsx)("img", {
-              className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
-              src: _,
-              onClick: _,
-            }),
-            !_ &&
-              (0, _.jsx)(_, {
-                storeItem: _,
-                bAutoplayVideos: _,
-                autoplayCheckboxPosition: _,
-                fnSetAutoPlayVideos: (_) => {
-                  (0, _._)(_ ?? _, String(!_), 3650), _(_), _(_);
-                },
-              }),
-            (0, _.jsx)(_._, {
-              name: _.GetName(),
-              trailerCategory: _?.GetTrailerCategory(),
-              trailerDisplay: _,
-              mouseOver: _,
-            }),
-            (0, _.jsx)(_, {
-              eTrailerDisplay: _,
-              setTrailerDisplay: _,
-              featuredTrailer: _,
-              refMicroTrailer: _,
-              refMainTrailer: _,
-              loadedAndActive: _ && __webpack_require__,
-              setVideoShouldStart: _,
-              bMouseOverVideo: _,
-              storeItem: _,
-              broadcastVideo: _,
-              fnSetBroadcastVideo: _,
-              fnTogglePlayPause: _,
-              bAutoplayVideos: _,
-              bVideoShouldStart: _,
-              bPlayWithBroadcastPlayer: _,
-              ..._,
-            }),
-            _ &&
-              _ &&
-              (0, _.jsxs)("div", {
-                className: _().AOWarning,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _().Text,
-                    children: (0, _._)("#StoreTrailer_AOWarning_1"),
-                  }),
-                  (0, _.jsx)("div", {
-                    className: _().Text,
-                    children: (0, _._)("#StoreTrailer_AOWarning_2"),
-                  }),
-                ],
-              }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            storeItem: _,
-            featuredTrailer: __webpack_require__,
-            bPlayWithBroadcastPlayer: _,
-            bSkipMicroTrailer: _,
-            nFadeRatio: _,
-            fnPlayPause: _,
-            bRequestPause: _,
-            fnComplete: _,
-            eTrailerDisplay: _,
-            setTrailerDisplay: _,
-            refMainTrailer: _,
-            refMicroTrailer: _,
-            loadedAndActive: _,
-            setVideoShouldStart: _,
-            broadcastVideo: _,
-            fnSetBroadcastVideo: _,
-            fnTogglePlayPause: _,
-            bAutoplayVideos: _,
-            bVideoShouldStart: _,
-          } = _,
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          [_, _] = _.useState(!1),
-          _ = (0, _._)(),
-          _ = _?.GetMicroTrailer("blocked" == _),
-          _ = !!_ || !!__webpack_require__;
-        _.useEffect(() => {
-          let _ = !1;
-          _ && _ && _ && (_ = 0 === _ || (1 === _ && !_) || (2 === _ && !_)),
-            _(_),
-            _?.(_ && _);
-        }, [_, _, _, _, _, _, _, _]),
-          (function (_, _) {
-            _.useEffect(() => {
-              const _ = _.current;
-              if (!_) return;
-              const _ = () => _(!0),
-                _ = () => _(!1);
-              return (
-                __webpack_require__.addEventListener("play", _),
-                __webpack_require__.addEventListener("pause", _),
-                () => {
-                  __webpack_require__.removeEventListener("play", _),
-                    __webpack_require__.removeEventListener("pause", _);
-                }
-              );
-            }, [_, _]);
-          })(_, _),
-          _.useEffect(() => {
-            _ ||
-              (_(0),
-              _(!1),
-              _(!1),
-              _.current && (_.current.pause(), (_.current.currentTime = 0)),
-              _.current && (_.current.Pause(), _.current.SeekToStart()));
-          }, [_, _, _, _]);
-        const _ = _.useRef(!1);
-        return (
-          _.useEffect(() => {
-            if (_ && 0 === _)
-              if ((_(!0), _))
-                if (_.current) {
-                  _.Debug("Starting microtrailer"), _(1);
-                  const _ = () =>
-                    (function (_, _, _) {
-                      if (_.current) return;
-                      (_.current = !0),
-                        _.Debug("Starting main trailer"),
-                        _(2),
-                        __webpack_require__.Play();
-                    })(_, _, _.current);
-                  _ || !_.current
-                    ? _()
-                    : (_(!0),
-                      (_.current.onended = _),
-                      (_ = _.current),
-                      (_ = "microtrailer"),
-                      (__webpack_require__ = () => _(!1)),
-                      _.play().catch((_) => {
-                        __webpack_require__(),
-                          _.Warning(`Failed to play ${_}: `, _);
-                      }));
-                } else
-                  _ && (_.Debug("Starting broadcast player"), _(2), _.Play());
-              else _.Debug("Showing image");
-            var _, _, _;
-          }, [_, _, _, _, _, _, _, _, _]),
-          (function (_, _) {
-            _.useEffect(() => {
-              if (!_.current || !_.current.onended) return;
-              if (!_) return;
-              let _ = _.current.onended,
-                _ = setTimeout(() => {
-                  __webpack_require__();
-                }, 6e3);
-              return () => clearTimeout(_);
-            }, [_, _]);
-          })(_, _),
-          _.useEffect(() => {
-            _ || _(!1);
-          }, [_, _]),
-          _.useEffect(() => {
-            const _ = (0, _._)(() => {
-              _(_?.GetUserInputNeeded()), _(!_?.IsPaused());
-            });
-            return () => _();
-          }, [_]),
-          (function (_, _, _, _, _, _, _) {
-            const [_, _] = _.useState(!1);
-            _.useEffect(() => {
-              _ && !_
-                ? 1 == _ && _ && _
-                  ? (__webpack_require__.pause(), _(!0))
-                  : 2 == _ && _ && _
-                    ? (_.Pause(), _(!0))
-                    : 2 == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
-                : !_ &&
-                  _ &&
-                  (1 == _ && _
-                    ? __webpack_require__.play()
-                    : 2 == _ && _
-                      ? _.Play()
-                      : 2 == _ && _ && _.IsPaused() && _.Play(),
-                  _(!1));
-            }, [_, _, _, _, _, _, _, _]);
-          })(_, _, _.current, _, _.current, _, _),
-          _ && _.BIsVisible()
-            ? (__webpack_require__ || _) &&
-              (0, _.jsxs)(_.Fragment, {
-                children: [
-                  _ &&
-                    !_ &&
-                    (0, _.jsx)(_._, {
-                      focusable: !0,
-                      onClick: _,
-                      className: _().PlayButton,
-                      children: (0, _.jsx)(_.IOc, {}),
-                    }),
-                  _ &&
-                    (0, _.jsxs)("video", {
-                      className: _(!0, _),
-                      ref: _,
-                      preload: "auto",
-                      playsInline: !0,
-                      muted: !0,
-                      onClick: _,
-                      children: [
-                        (0, _.jsx)("source", {
-                          src: _.strWebMURL,
-                          type: "video/webm",
-                        }),
-                        Boolean(!_._.IN_CLIENT) &&
-                          (0, _.jsx)("source", {
-                            src: _.strMP4URL,
-                            type: "video/mp4",
-                          }),
-                      ],
-                    }),
-                  __webpack_require__ &&
-                    !_ &&
-                    (0, _.jsx)(_, {
-                      ref: _,
-                      trailer: __webpack_require__,
-                      eTrailerDisplay: _,
-                      fadeRatio: _,
-                      onPlayPauseChange: _,
-                      onPlaybackEnd: _,
-                    }),
-                  _ &&
-                    (0, _.jsx)(_.default, {
-                      classes: _(!1, _),
-                      nAppIDVOD: _.GetAppID(),
-                      watchLocation: 15,
-                      fnOnVideoEnd: _,
-                      fnVideoClick: _,
-                      fnSetBroadcastVideo: _,
-                      bStartWithSubtitles: !0,
-                      bStartMuted: !0,
-                    }),
-                ],
-              })
-            : null
-        );
-      }
-      function _(_) {
-        let {
-          ref: _,
-          trailer: __webpack_require__,
-          eTrailerDisplay: _,
-          fadeRatio: _,
-          onPlayPauseChange: _,
-          onPlaybackEnd: _,
-        } = _;
-        (0, _.useEffect)(() => {
-          if (void 0 !== _ && _.current) {
-            let _ = _.current.GetVolume() * _;
-            const _ = !0;
-            _.current.SetVolume(_, _);
-          }
-        }, [_, _]);
-        let _ = 2 != _,
-          _ = _(!1, _);
-        return (0, _.jsx)(_, {
-          children: (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)(_._, {
-              ref: _,
-              dashManifests: __webpack_require__.GetTrailersDash(),
-              hlsManifest: __webpack_require__.GetTrailerHls(),
-              screenshot: "",
-              altText: "",
-              forcePause: _,
-              muteWhenAutoplayBlocked: !0,
-              onPlaybackEnd: _,
-              onPlayPauseChange: _,
-            }),
-          }),
-        });
-      }
-      function _(_) {
-        let { children: _ } = _;
-        const [__webpack_require__, _] = (0, _._)(_, 0.8),
-          [_, _] = (0, _._)(_, !0);
-        return (0, _.jsx)(_._, {
-          playerVolume: __webpack_require__,
-          setPlayerVolume: _,
-          audioMuted: _,
-          setAudioMuted: _,
-          children: _,
-        });
-      }
-      function _(_, _) {
-        return (0, _._)({
-          [_().AppVideo]: !0,
-          [_().PlayFullTrailer]: 2 == _,
-          [_().PlayMicrotrailer]: 1 == _,
-          [_().NoTrailer]: 0 == _,
-          [_().Microtrailer]: _,
-          [_().Trailer]: !_,
-        });
-      }
-      function _(_) {
-        const {
-            storeItem: _,
-            bAutoplayVideos: __webpack_require__,
-            fnSetAutoPlayVideos: _,
-            autoplayCheckboxPosition: _,
-          } = _,
-          _ = {
-            [_ || "top"]: 0,
-          };
-        return (0, _.jsx)("div", {
-          onClick: (_) => {
-            _.preventDefault(), _.stopPropagation();
-          },
-          className: _().AutoplayCheckboxCtn,
-          children: (0, _.jsx)(
-            _._,
-            {
-              controlled: !0,
-              checked: __webpack_require__,
-              className: _().AutoplayCheckbox,
-              style: _,
-              label: _._.Localize("#StoreTrailer_AutoPlayVideos"),
-              onChange: _,
-            },
-            _.GetAppID(),
-          ),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -6107,10 +5681,416 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("TrailerAppVideo"),
+        _ = "bGameHighlightAutoplayDisabled";
+      function _(_) {
+        const {
+            storeItem: _,
+            bCurrentlyActive: __webpack_require__,
+            autoPlayCookieName: _,
+            bPlayWithBroadcastPlayer: _,
+            showScreenshotInsteadOfMainCap: _,
+            autoplayCheckboxPosition: _,
+            refTogglePlayPause: _,
+            bShowAOAutoPlayWarning: _,
+            ..._
+          } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(),
+          _ = (function (_, _) {
+            const _ = _?.GetAllTrailers().GetAllTrailers("blocked" == _);
+            return _ && _.length > 0 ? _[0] : void 0;
+          })(_, _),
+          _ = (_ ?? !0) && _ && !_.BIsAllAges() && "masked" == _,
+          _ = (0, _._)(),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(0),
+          _ = _.useRef(void 0),
+          _ = _.useRef(void 0),
+          [_, _] = _.useState(),
+          { bCookieLoaded: _ } = (function (_, _, _) {
+            const _ = _.useCallback(() => {
+              const _ = (0, _._)(_ ?? _),
+                _ = !(!_ || "true" !== _.toLowerCase());
+              __webpack_require__(!_);
+            }, [_, _]);
+            return (function (_, _) {
+              const [_, _] = _.useState(!1);
+              return (
+                _.useEffect(() => (_ && (_(), _(!0)), () => _(!1)), [_, _]),
+                {
+                  bCookieLoaded: _,
+                }
+              );
+            })(_, _);
+          })(_, __webpack_require__, _),
+          _ = _;
+        _.useEffect(() => {
+          __webpack_require__ && _ && (_ || _) && !_ && _(!0);
+        }, [_, _, __webpack_require__, _, _]),
+          _.useEffect(() => {
+            _ && _ && _ && _();
+          }, [_, _, _, _]);
+        const _ = (function (_, _, _, _, _) {
+          return _.useCallback(() => {
+            0 == _
+              ? _(!0)
+              : 1 == _ && _.current
+                ? _.current.paused
+                  ? _.current.play()
+                  : _.current.pause()
+                : 2 == _ && _.current
+                  ? _.current.IsPaused()
+                    ? _.current.Play()
+                    : _.current.Pause()
+                  : 2 == _ && _ && _.TogglePlayPause();
+          }, [_, _, _, _, _]);
+        })(_, _, _, _, _);
+        _.useEffect(() => {
+          _ && (_.current = _);
+        }, [_, _]);
+        const _ = _.GetScreenshots("allowed" != _),
+          _ = _ && _.length > 0 ? _[0] : _.GetAssets().GetMainCapsuleURL();
+        return (0, _.jsxs)(_._, {
+          className: _().AppCarouselTrailerCtn,
+          onMouseEnter: () => _(!0),
+          onMouseLeave: () => _(!1),
+          children: [
+            (0, _.jsx)("img", {
+              className: (0, _._)(_().AppMainCap, 0 != _ && _().Hidden),
+              src: _,
+              onClick: _,
+            }),
+            !_ &&
+              (0, _.jsx)(_, {
+                storeItem: _,
+                bAutoplayVideos: _,
+                autoplayCheckboxPosition: _,
+                fnSetAutoPlayVideos: (_) => {
+                  (0, _._)(_ ?? _, String(!_), 3650), _(_), _(_);
+                },
+              }),
+            (0, _.jsx)(_._, {
+              name: _.GetName(),
+              trailerCategory: _?.GetTrailerCategory(),
+              trailerDisplay: _,
+              mouseOver: _,
+            }),
+            (0, _.jsx)(_, {
+              eTrailerDisplay: _,
+              setTrailerDisplay: _,
+              featuredTrailer: _,
+              refMicroTrailer: _,
+              refMainTrailer: _,
+              loadedAndActive: _ && __webpack_require__,
+              setVideoShouldStart: _,
+              bMouseOverVideo: _,
+              storeItem: _,
+              broadcastVideo: _,
+              fnSetBroadcastVideo: _,
+              fnTogglePlayPause: _,
+              bAutoplayVideos: _,
+              bVideoShouldStart: _,
+              bPlayWithBroadcastPlayer: _,
+              ..._,
+            }),
+            _ &&
+              _ &&
+              (0, _.jsxs)("div", {
+                className: _().AOWarning,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _().Text,
+                    children: (0, _._)("#StoreTrailer_AOWarning_1"),
+                  }),
+                  (0, _.jsx)("div", {
+                    className: _().Text,
+                    children: (0, _._)("#StoreTrailer_AOWarning_2"),
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            storeItem: _,
+            featuredTrailer: __webpack_require__,
+            bPlayWithBroadcastPlayer: _,
+            bSkipMicroTrailer: _,
+            nFadeRatio: _,
+            fnPlayPause: _,
+            bRequestPause: _,
+            fnComplete: _,
+            eTrailerDisplay: _,
+            setTrailerDisplay: _,
+            refMainTrailer: _,
+            refMicroTrailer: _,
+            loadedAndActive: _,
+            setVideoShouldStart: _,
+            broadcastVideo: _,
+            fnSetBroadcastVideo: _,
+            fnTogglePlayPause: _,
+            bAutoplayVideos: _,
+            bVideoShouldStart: _,
+          } = _,
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
+          _ = (0, _._)(),
+          _ = _?.GetMicroTrailer("blocked" == _),
+          _ = !!_ || !!__webpack_require__;
+        _.useEffect(() => {
+          let _ = !1;
+          _ && _ && _ && (_ = 0 === _ || (1 === _ && !_) || (2 === _ && !_)),
+            _(_),
+            _?.(_ && _);
+        }, [_, _, _, _, _, _, _, _]),
+          (function (_, _) {
+            _.useEffect(() => {
+              const _ = _.current;
+              if (!_) return;
+              const _ = () => _(!0),
+                _ = () => _(!1);
+              return (
+                __webpack_require__.addEventListener("play", _),
+                __webpack_require__.addEventListener("pause", _),
+                () => {
+                  __webpack_require__.removeEventListener("play", _),
+                    __webpack_require__.removeEventListener("pause", _);
+                }
+              );
+            }, [_, _]);
+          })(_, _),
+          _.useEffect(() => {
+            _ ||
+              (_(0),
+              _(!1),
+              _(!1),
+              _.current && (_.current.pause(), (_.current.currentTime = 0)),
+              _.current && (_.current.Pause(), _.current.SeekToStart()));
+          }, [_, _, _, _]);
+        const _ = _.useRef(!1);
+        return (
+          _.useEffect(() => {
+            if (_ && 0 === _)
+              if ((_(!0), _))
+                if (_.current) {
+                  _.Debug("Starting microtrailer"), _(1);
+                  const _ = () =>
+                    (function (_, _, _) {
+                      if (_.current) return;
+                      (_.current = !0),
+                        _.Debug("Starting main trailer"),
+                        _(2),
+                        __webpack_require__.Play();
+                    })(_, _, _.current);
+                  _ || !_.current
+                    ? _()
+                    : (_(!0),
+                      (_.current.onended = _),
+                      (_ = _.current),
+                      (_ = "microtrailer"),
+                      (__webpack_require__ = () => _(!1)),
+                      _.play().catch((_) => {
+                        __webpack_require__(),
+                          _.Warning(`Failed to play ${_}: `, _);
+                      }));
+                } else
+                  _ && (_.Debug("Starting broadcast player"), _(2), _.Play());
+              else _.Debug("Showing image");
+            var _, _, _;
+          }, [_, _, _, _, _, _, _, _, _]),
+          (function (_, _) {
+            _.useEffect(() => {
+              if (!_.current || !_.current.onended) return;
+              if (!_) return;
+              let _ = _.current.onended,
+                _ = setTimeout(() => {
+                  __webpack_require__();
+                }, 6e3);
+              return () => clearTimeout(_);
+            }, [_, _]);
+          })(_, _),
+          _.useEffect(() => {
+            _ || _(!1);
+          }, [_, _]),
+          _.useEffect(() => {
+            const _ = (0, _._)(() => {
+              _(_?.GetUserInputNeeded()), _(!_?.IsPaused());
+            });
+            return () => _();
+          }, [_]),
+          (function (_, _, _, _, _, _, _) {
+            const [_, _] = _.useState(!1);
+            _.useEffect(() => {
+              _ && !_
+                ? 1 == _ && _ && _
+                  ? (__webpack_require__.pause(), _(!0))
+                  : 2 == _ && _ && _
+                    ? (_.Pause(), _(!0))
+                    : 2 == _ && _ && !_.IsPaused() && (_.Pause(), _(!0))
+                : !_ &&
+                  _ &&
+                  (1 == _ && _
+                    ? __webpack_require__.play()
+                    : 2 == _ && _
+                      ? _.Play()
+                      : 2 == _ && _ && _.IsPaused() && _.Play(),
+                  _(!1));
+            }, [_, _, _, _, _, _, _, _]);
+          })(_, _, _.current, _, _.current, _, _),
+          _ && _.BIsVisible()
+            ? (__webpack_require__ || _) &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  _ &&
+                    !_ &&
+                    (0, _.jsx)(_._, {
+                      focusable: !0,
+                      onClick: _,
+                      className: _().PlayButton,
+                      children: (0, _.jsx)(_.IOc, {}),
+                    }),
+                  _ &&
+                    (0, _.jsxs)("video", {
+                      className: _(!0, _),
+                      ref: _,
+                      preload: "auto",
+                      playsInline: !0,
+                      muted: !0,
+                      onClick: _,
+                      children: [
+                        (0, _.jsx)("source", {
+                          src: _.strWebMURL,
+                          type: "video/webm",
+                        }),
+                        Boolean(!_._.IN_CLIENT) &&
+                          (0, _.jsx)("source", {
+                            src: _.strMP4URL,
+                            type: "video/mp4",
+                          }),
+                      ],
+                    }),
+                  __webpack_require__ &&
+                    !_ &&
+                    (0, _.jsx)(_, {
+                      ref: _,
+                      trailer: __webpack_require__,
+                      eTrailerDisplay: _,
+                      fadeRatio: _,
+                      onPlayPauseChange: _,
+                      onPlaybackEnd: _,
+                    }),
+                  _ &&
+                    (0, _.jsx)(_.default, {
+                      classes: _(!1, _),
+                      nAppIDVOD: _.GetAppID(),
+                      watchLocation: 15,
+                      fnOnVideoEnd: _,
+                      fnVideoClick: _,
+                      fnSetBroadcastVideo: _,
+                      bStartWithSubtitles: !0,
+                      bStartMuted: !0,
+                    }),
+                ],
+              })
+            : null
+        );
+      }
+      function _(_) {
+        let {
+          ref: _,
+          trailer: __webpack_require__,
+          eTrailerDisplay: _,
+          fadeRatio: _,
+          onPlayPauseChange: _,
+          onPlaybackEnd: _,
+        } = _;
+        (0, _.useEffect)(() => {
+          if (void 0 !== _ && _.current) {
+            let _ = _.current.GetVolume() * _;
+            const _ = !0;
+            _.current.SetVolume(_, _);
+          }
+        }, [_, _]);
+        let _ = 2 != _,
+          _ = _(!1, _);
+        return (0, _.jsx)(_._, {
+          children: (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)(_._, {
+              ref: _,
+              dashManifests: __webpack_require__.GetTrailersDash(),
+              hlsManifest: __webpack_require__.GetTrailerHls(),
+              screenshot: "",
+              altText: "",
+              forcePause: _,
+              muteWhenAutoplayBlocked: !0,
+              onPlaybackEnd: _,
+              onPlayPauseChange: _,
+            }),
+          }),
+        });
+      }
+      function _(_, _) {
+        return (0, _._)({
+          [_().AppVideo]: !0,
+          [_().PlayFullTrailer]: 2 == _,
+          [_().PlayMicrotrailer]: 1 == _,
+          [_().NoTrailer]: 0 == _,
+          [_().Microtrailer]: _,
+          [_().Trailer]: !_,
+        });
+      }
+      function _(_) {
+        const {
+            storeItem: _,
+            bAutoplayVideos: __webpack_require__,
+            fnSetAutoPlayVideos: _,
+            autoplayCheckboxPosition: _,
+          } = _,
+          _ = {
+            [_ || "top"]: 0,
+          };
+        return (0, _.jsx)("div", {
+          onClick: (_) => {
+            _.preventDefault(), _.stopPropagation();
+          },
+          className: _().AutoplayCheckboxCtn,
+          children: (0, _.jsx)(
+            _._,
+            {
+              controlled: !0,
+              checked: __webpack_require__,
+              className: _().AutoplayCheckbox,
+              style: _,
+              label: _._.Localize("#StoreTrailer_AutoPlayVideos"),
+              onChange: _,
+            },
+            _.GetAppID(),
+          ),
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -6164,7 +6144,7 @@
                   appID: _,
                 }),
                 (0, _.jsx)(
-                  _._,
+                  _,
                   {
                     storeItem: _,
                     bCurrentlyActive: __webpack_require__ && !_,

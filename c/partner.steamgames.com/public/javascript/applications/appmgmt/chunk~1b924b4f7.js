@@ -545,6 +545,8 @@
           className: (_) => _[`Variant-${_}`],
         },
       ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         _.preventDefault();
       }
@@ -586,6 +588,7 @@
               children: _,
               onClick: _,
               icon: _,
+              gamepadFocusable: _ = !0,
               ..._
             } = _,
             _ = _
@@ -596,8 +599,9 @@
                   children: _,
                 })
               : _,
-            _ = _ ? void 0 : _;
-          return (0, _.jsx)("button", {
+            _ = _ ? void 0 : _,
+            _ = _ && _._.IN_GAMEPADUI ? _._ : "button";
+          return (0, _.jsx)(_, {
             type: "button",
             ...(0, _._)(
               {
@@ -621,10 +625,12 @@
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
+              gamepadFocusable: _ = !0,
               ..._
             } = _,
-            _ = _ ? _ : void 0;
-          return (0, _.jsx)("a", {
+            _ = _ ? _ : void 0,
+            _ = _ && _._.IN_GAMEPADUI ? _._ : "a";
+          return (0, _.jsx)(_, {
             ...(0, _._)(
               {
                 onClick: _,
@@ -1034,7 +1040,11 @@
             _
               ? (_.current?.showPopover(),
                 _?.addEventListener("scroll", _),
-                () => _?.removeEventListener("scroll", _))
+                window.addEventListener("scroll", _),
+                () => {
+                  _?.removeEventListener("scroll", _),
+                    window.addEventListener("scroll", _);
+                })
               : ("true" !=
                   window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
                   _.current?.hidePopover(),

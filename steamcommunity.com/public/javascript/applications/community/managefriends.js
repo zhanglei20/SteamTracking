@@ -26,6 +26,17 @@
         Success: "zNkywkFbUJio86FBwBWwx",
         FriendCodeSelector: "_3nmSpgo_T_V0-Er7h8J2Ar",
         SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
+        BackgroundAnimation: "_3yBb7Zq-JsZsUC7j0xfwNs",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3mEJMPBWqIai6TZ5Asmwzc",
+        "ItemFocusAnim-darkerGrey": "_1bq8dQKi1_Y3Cx4SqKPEbe",
+        "ItemFocusAnim-darkGrey": "qqYMXWoOu5it3a3atTegO",
+        "ItemFocusAnim-grey": "ULAazkgE1qcpwKYFDQ6cA",
+        "ItemFocusAnim-translucent-white-10": "_2_8edxNWb8zuaY6iv3wJSx",
+        "ItemFocusAnim-translucent-white-20": "_1TV5evTLXXGDV16o8ltkb7",
+        "ItemFocusAnimBorder-darkGrey": "_2N1KfmpWvdxv64J5Rs82CX",
+        "ItemFocusAnim-green": "_3UU3hyYWsBPGsxljxX3hbB",
+        focusAnimation: "_2u4UlTYeTMTUGVGicBx0My",
+        hoverAnimation: "_16_WHz1Oh5Jy0J3qvG4rto",
       };
     },
     50463: (e, t, i) => {
@@ -60,7 +71,7 @@
     },
     19369: (e, t, i) => {
       "use strict";
-      i.d(t, { jl: () => w, Bv: () => k });
+      i.d(t, { jl: () => F, Bv: () => k });
       var s = i(34629),
         n = i(7850),
         a = i(90626),
@@ -74,15 +85,15 @@
         _ = i(78327),
         m = i(17720),
         p = i(56011),
-        S = i(14947),
-        v = i(85044),
+        v = i(14947),
+        S = i(85044),
         f = i(81393);
       i(68797);
       class g {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map()),
-            (0, S.Gn)(this);
+            (0, v.Gn)(this);
         }
         async LoadProfiles(e, t) {
           (0, f.wT)(
@@ -106,9 +117,9 @@
             200 == a.status &&
             a.data.forEach((e) => {
               (e.avatar_hash = e.avatar_url),
-                (e.avatar_url_medium = (0, v.t)(e.avatar_url, "medium")),
-                (e.avatar_url_full = (0, v.t)(e.avatar_url, "full")),
-                (e.avatar_url = (0, v.t)(e.avatar_url)),
+                (e.avatar_url_medium = (0, S.t)(e.avatar_url, "medium")),
+                (e.avatar_url_full = (0, S.t)(e.avatar_url, "full")),
+                (e.avatar_url = (0, S.t)(e.avatar_url)),
                 this.m_mapProfiles.set(e.steamid, e),
                 this.m_mapProfilesLoading.delete(e.steamid);
             });
@@ -149,7 +160,7 @@
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      (0, s.Cg)([S.sH], g.prototype, "m_mapProfiles", void 0);
+      (0, s.Cg)([v.sH], g.prototype, "m_mapProfiles", void 0);
       const C = new g();
       var I = i(12155),
         x = i(45699);
@@ -264,7 +275,7 @@
                     className: u().Body,
                     children: (0, c.we)("#ManageFriends_EnterFriendCode"),
                   }),
-                  (0, n.jsx)(w, {
+                  (0, n.jsx)(F, {
                     onButtonClick: this.OnAddFriend,
                     buttonText: (0, c.we)("#ManageFriends_SendInvite"),
                     bDisableForSelf: !0,
@@ -363,7 +374,7 @@
         (0, s.Cg)([r.oI], k.prototype, "OnSearchChange", null),
         (0, s.Cg)([r.oI], k.prototype, "OnSearchKeyDown", null),
         (0, s.Cg)([r.oI], k.prototype, "OnSearchSubmit", null);
-      class w extends a.Component {
+      class F extends a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -428,7 +439,7 @@
                   "#ManageFriends_EnterFriendCodePlaceholder",
                 ),
               }),
-              (0, n.jsx)(F, {
+              (0, n.jsx)(w, {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
                 bShowStatus: this.props.bShowStatus,
@@ -444,10 +455,10 @@
           });
         }
       }
-      (0, s.Cg)([r.oI], w.prototype, "OnFriendCodeChange", null),
-        (0, s.Cg)([r.oI], w.prototype, "LoadProfile", null),
-        (0, s.Cg)([r.oI], w.prototype, "OnActionClick", null);
-      const F = (e) => {
+      (0, s.Cg)([r.oI], F.prototype, "OnFriendCodeChange", null),
+        (0, s.Cg)([r.oI], F.prototype, "LoadProfile", null),
+        (0, s.Cg)([r.oI], F.prototype, "OnActionClick", null);
+      const w = (e) => {
         const {
             searchResult: t,
             invite_status: i,

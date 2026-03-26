@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "ต้องการสลับเป็นแบบฟรีหรือไม่?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "หากเกมของคุณวางจำหน่ายแล้ว แต่คุณต้องการสลับจากแบบชำระเงินเป็นแบบฟรี โปรดคลิก%1$sเพื่อเรียนรู้เพิ่มเติมและขอความช่วยเหลือ",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "ที่นี่",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "การกรอกราคาแบบกำหนดเอง",
+	"SinglePackagePricing_Right_Custom_Desc": "คุณสามารถกรอกราคาของคุณสำหรับแต่ละสกุลเงินเองได้ด้วยการแก้ไขกล่องข้อความโดยตรง",
+	"SinglePackagePricing_Right_Convert_Desc": "นอกจากนี้คุณยังสามารถใช้ปุ่มนี้เพื่อคำนวณสกุลเงินแต่ละสกุลเงินได้ โดยอ้างอิงจากวิธีแปลงที่เลือกไว้และเงินดอลลาร์สหรัฐที่คุณกรอกไว้",
+	"PricingDashboard_Select_Price": "เลือกจากระดับราคา",
+	"PricingDashboard_Select_Price_button": "เลือกราคาฐานในสกุลเงินดอลลาร์สหรัฐ",
+	"PricingDashboard_Select_Price_button_ttip": "เปิดหน้าต่างข้อความที่มีชุดระดับราคาที่พบได้บ่อย เพื่อให้สามารถตั้งค่าระดับราคาเหล่านั้นได้ในสกุลเงินทั้งหมดด้านล่าง",
 	"empty_no_trailing_comma": ""
 }`);
     },

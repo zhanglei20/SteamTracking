@@ -39,7 +39,7 @@
         "duration-app-launch": "800ms",
         narrowWidth: "500px",
         strBarForegroundColor: "#1a9fff",
-        strBarBackgroundColor: "rgba(255,255,255,.1)",
+        strBarBackgroundColor: "hsla(0,0%,100%,.1)",
         ThrobberContainer: "_1dfVPvR3jkg7V5wYeWqGje",
         PlaytimeHistoryBrowser: "_3Q_itK0y9iym9Rf_hRp2U4",
         PlaytimeHistoryDay: "_1tN3Fqg4eB8P5q6VnP8zsU",
@@ -59,6 +59,17 @@
         AppListTooltip: "_2gqejUUMCHd51lF8qlQ1ns",
         AppImage: "_3Jl4YQadMqVmN9rTlDoxsJ",
         Loaded: "emNZdRnzXbk4gR0vRINf8",
+        BackgroundAnimation: "_1skXl8WnIZKGbIikWx5BQ-",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1-51lPwmuvdjQkvcL4mg0p",
+        "ItemFocusAnim-darkerGrey": "_2zLHr0TQ3Cw2_wBzgQqi1u",
+        "ItemFocusAnim-darkGrey": "_1R0sxt2GyuTiRYm0lI8lJv",
+        "ItemFocusAnim-grey": "_34M9qiJoSUi5SHy4MZsgPR",
+        "ItemFocusAnim-translucent-white-10": "MIFiVCx0d1Zy-bjTA_w1X",
+        "ItemFocusAnim-translucent-white-20": "Re5K2D0jN-MNmc8WhESaT",
+        "ItemFocusAnimBorder-darkGrey": "_238UxDx4xOQoNJYxliEhdt",
+        "ItemFocusAnim-green": "_2LrzaGXXvD_v3bx9bHNk0E",
+        focusAnimation: "_24chPJqOvTQQi5ZL5IGWlg",
+        hoverAnimation: "_3u4E9lRS_kkm8hY_-pJOTk",
       };
     },
     chunkid: (module) => {
@@ -166,6 +177,17 @@
         ThrobberContainer: "_12k1ELQW10xFpZWSrbnaad",
         FriendSelectorPlaceholder: "_2r46bpLc_qpnLHbnayzmSG",
         Error: "rE1IiJak5Yg84H2WpLPYJ",
+        BackgroundAnimation: "_2gMFjtI3Npavu3drgAC-AR",
+        "ItemFocusAnim-darkerGrey-nocolor": "_15Cg2WWyrbx6rCN-pmv59J",
+        "ItemFocusAnim-darkerGrey": "_2rRq8Gy9yiXoX8z6rDNWVn",
+        "ItemFocusAnim-darkGrey": "_2WHt-XB4uzgTCI4w5ZfQM7",
+        "ItemFocusAnim-grey": "_3vZZjLOqYQmrrgAPi_7AiJ",
+        "ItemFocusAnim-translucent-white-10": "y9mw3g-UiKMQ_H2lckG0Q",
+        "ItemFocusAnim-translucent-white-20": "dOJ_xBzYKLq_t7kNPf5pU",
+        "ItemFocusAnimBorder-darkGrey": "_1SidwQ9O2E2VOFjgEURpzO",
+        "ItemFocusAnim-green": "E8HfymaSbnYz0P9nwLk64",
+        focusAnimation: "hEfJZd3QktV9Zsg-tsoEe",
+        hoverAnimation: "I-3xyBNE4dVX5NZUEtdk5",
       };
     },
     chunkid: (module) => {
@@ -310,6 +332,17 @@
         ContentDescriptorDescription: "_1CzqDvlI9BiZ34y76ZxiDP",
         ContentDescriptorToggle: "_2BQ5kejzl2IpMdjad_8Zmd",
         ContentDescriptorExampleApp: "_2Dst3UKiLxmHuFByhiTRzj",
+        BackgroundAnimation: "_3d47hDyXHjImQ-0sBNKN4m",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2Va_HlTCtMyS00qHlQAUEM",
+        "ItemFocusAnim-darkerGrey": "_3p3wgY2eTPLi2hqQpaK9p2",
+        "ItemFocusAnim-darkGrey": "_2i-dF3_dt4Ic_OSaazxG3w",
+        "ItemFocusAnim-grey": "_3SyVw-_Wu7fZM8KhSrs9rO",
+        "ItemFocusAnim-translucent-white-10": "_20DNPKptIqSEKzhV0GH0xW",
+        "ItemFocusAnim-translucent-white-20": "_3sKISgTqXMmXihaUvMOYeZ",
+        "ItemFocusAnimBorder-darkGrey": "_1YBr5gruJDFH9r8hJ30BPR",
+        "ItemFocusAnim-green": "_1EQrVuWmXvELpyS3EgWgn3",
+        focusAnimation: "_31hEvRiEdPzD2TCl1Dqyxd",
+        hoverAnimation: "_3elDD1evSEYwuNdPRRVKeQ",
       };
     },
     chunkid: (module) => {
@@ -643,18 +676,22 @@
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: ["communitypreferences"],
-          queryFn: async () => {
-            const _ = _._.Init(_._),
-              _ = await _._.GetCommunityPreferences(_, _);
-            if (1 != __webpack_require__.GetEResult())
-              throw new Error(
-                `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
-              );
-            return __webpack_require__.Body();
-          },
-        });
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: ["communitypreferences"],
+              queryFn: async () => {
+                const _ = _._.Init(_._),
+                  _ = await _._.GetCommunityPreferences(_, _);
+                if (1 != __webpack_require__.GetEResult())
+                  throw new Error(
+                    `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
+                  );
+                return __webpack_require__.Body();
+              },
+            };
+          })(_),
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -1167,6 +1204,7 @@
             );
           return (0, _.jsx)(_._, {
             ref: __webpack_require__ ? _.measureElement : void 0,
+            navKey: `VirtualizedListIndex-${_}`,
             "data-index": _,
             fnScrollIntoViewHandler: _,
             scrollIntoViewWhenChildFocused: "force",

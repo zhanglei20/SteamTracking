@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "無料に変更するには？",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "リリース済みのゲームを有料から無料に変更する方法の確認、およびヘルプのリクエストは%1$sをクリックしてください。",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "こちら",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "カスタム価格を入力",
+	"SinglePackagePricing_Right_Custom_Desc": "テキストボックスを直接編集することで、通貨ごとに個別の価格を入力できます。",
+	"SinglePackagePricing_Right_Convert_Desc": "また、このボタンを使用して、選択した換算方法と、入力したカスタムUSD価格に基づいて各通貨の価格を計算することもできます。",
+	"PricingDashboard_Select_Price": "価格帯から選択",
+	"PricingDashboard_Select_Price_button": "USDベース価格を選択",
+	"PricingDashboard_Select_Price_button_ttip": "一般的な価格帯を含むダイアログを開き、以下のすべての通貨に対する価格を設定します。",
 	"empty_no_trailing_comma": ""
 }`);
     },

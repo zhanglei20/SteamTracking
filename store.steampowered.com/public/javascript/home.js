@@ -1680,9 +1680,9 @@ GHomepage = {
 					else
 					{
 						var rgData = rgLookup.item;
-						$elInfoDiv = $J('<div>',{'class': 'tab_preview'});
+						$elInfoDiv = $J('<div>',{'class': 'tab_preview', 'data-gp-focus-disabled': 'true' } );
 
-						let $elTopDetailsCtn = $J('<div>',{'class': 'tab_preview_details'});
+						let $elTopDetailsCtn = $J('<div>',{'class': 'tab_preview_details' });
 
 						$elTopDetailsCtn.append($J('<span>', {'class': 'tab_title'}).html( rgData.name ));
 
@@ -3197,7 +3197,8 @@ GHomepage = {
 				$J( this ).on( 'mouseenter vgp_onfocus', fnPlay );
 				$J( this ).on( 'mouseleave vgp_onblur', fnPause );
 
-				window.setTimeout( fnPlay, 1 );
+				const nWaitToFirstPlayMs = window.UseGamepadScreenMode() ? 500 : 1;
+				window.setTimeout( fnPlay, nWaitToFirstPlayMs );
 			});
 		}
 	},
@@ -4668,6 +4669,31 @@ var g_bDisableAutoloader = false;
 						var newElement = $(data);
 
 						GDynamicStore.DecorateDynamicItems(newElement);
+						GHomepage.AddMicrotrailersToStaticCaps( $J( newElement ).find( '.home_content_items' ) );
+
+						if ( !window.UseGamepadScreenMode() )
+						{
+							$J( '.home_content_single_ctn', newElement ).each( function ( index, e )
+							{
+								let elScreenshotDisplay = $J( e ).find( '.capsule_image_ctn' );
+								let $ScreenshotThumbs = $J( e ).find( '.screenshot.thumbnail' );
+								$ScreenshotThumbs.on( 'mouseover vgp_onfocus', function () {
+									const strScreenshotSrc = $J( this ).attr( 'src' );
+									const idxScreenshot = $J( this ).data( 'screenshot-index' );
+									let elCurrentScreenshot = elScreenshotDisplay.children( '.screenshot_' + idxScreenshot );
+									if ( !elCurrentScreenshot.length )
+									{
+										elCurrentScreenshot = $J( '<div/>', { 'class': 'screenshot_preview screenshot_' + idxScreenshot } ).css( 'background-image', 'url(' + strScreenshotSrc + ')' );
+										elScreenshotDisplay.append( elCurrentScreenshot );
+									}
+									elCurrentScreenshot.addClass( 'hover_active' );
+								} );
+								$ScreenshotThumbs.on( 'mouseleave vgp_onblur', function () {
+									elScreenshotDisplay.children( '.screenshot_preview.hover_active' ).removeClass( 'hover_active' );
+								} );
+							} );
+						}
+
 						GHomepage.AddMicrotrailersToStaticCaps( $J( newElement ).find( '.home_content_items' ) );
 
 						$('.gamelink.ds_owned', newElement).parent().parent().hide();

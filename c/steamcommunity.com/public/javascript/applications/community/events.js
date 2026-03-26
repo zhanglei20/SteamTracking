@@ -12,6 +12,17 @@
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+        BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
+        "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
+        "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
+        "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
+        "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
+        "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
+        "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
+        "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
+        focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
+        hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

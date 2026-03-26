@@ -51,6 +51,17 @@
         FullReviewLink: "_3_8G-9J9Ck495Bbx1AtzXb",
         FullReviewAnchor: "_3pWCNXNZaWp_KqFU6n38sy",
         FullReviewDomain: "_2R37NZqjmxkImiPnoElHtm",
+        BackgroundAnimation: "_3mJ9erLLVEMyDp_3pY3KTp",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1ulNFI0sHkRk8TBa3fDFoS",
+        "ItemFocusAnim-darkerGrey": "OAwSuqlAeZPXQNLFz_zLx",
+        "ItemFocusAnim-darkGrey": "_16cDR36DBbspxGZ8MxxB4Z",
+        "ItemFocusAnim-grey": "oS4oWYqe5S8U6CukOBsBi",
+        "ItemFocusAnim-translucent-white-10": "_1jj4yrDY55YFShmQZ8VANk",
+        "ItemFocusAnim-translucent-white-20": "TqUMJDChgbfs4XXKTa2UZ",
+        "ItemFocusAnimBorder-darkGrey": "_35LQt0hozt0Fu6IHh1i9gW",
+        "ItemFocusAnim-green": "_2cU5wBvJhWpmq45gjPgBx_",
+        focusAnimation: "XfHabgjmzuwMo5SRyzbkv",
+        hoverAnimation: "_2qskIW3iRVBxrrqQ3Sel07",
       };
     },
     chunkid: (module) => {
@@ -215,6 +226,44 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        return (
+          !!_ &&
+          ("game" === _ ||
+            "dlc" === _ ||
+            "software" === _ ||
+            "music" === _ ||
+            "application" === _ ||
+            "demo" === _ ||
+            "hardware" === _ ||
+            "mod" === _ ||
+            "video" == _ ||
+            "beta" === _ ||
+            "advertising" === _)
+        );
+      }
+      function _(_) {
+        return (
+          null != _ &&
+          (0 == _ ||
+            4 == _ ||
+            6 == _ ||
+            11 == _ ||
+            1 == _ ||
+            10 == _ ||
+            2 == _ ||
+            7 == _ ||
+            12 == _ ||
+            14 == _)
+        );
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -349,15 +398,19 @@
           )
             return _._.k_RejectWrongPlatform;
         }
-        return !_.prepurchase && _.BIsComingSoon()
-          ? _._.k_RejectNoComingSoon
-          : !_.virtual_reality && _.GetPlatforms()?.vr_support.vrhmd_only
-            ? _._.k_RejectNoVR
-            : _.GetAllCreatorClanIDs()?.some((_) =>
-                  __webpack_require__.BIsIgnoringCurator(_),
-                )
-              ? _._.k_RejectCreatorClan
-              : _._.k_NotRejected;
+        if (!_.prepurchase && _.BIsComingSoon())
+          return _._.k_RejectNoComingSoon;
+        const _ = _.GetPlatforms();
+        return !_.virtual_reality &&
+          _ &&
+          _.vr_support &&
+          _.vr_support.vrhmd_only
+          ? _._.k_RejectNoVR
+          : _.GetAllCreatorClanIDs()?.some((_) =>
+                __webpack_require__.BIsIgnoringCurator(_),
+              )
+            ? _._.k_RejectCreatorClan
+            : _._.k_NotRejected;
       }
       function _(_, _) {
         if (_.localized) {
@@ -380,33 +433,32 @@
         if (!_.early_access && _.BIsEarlyAccess())
           return _._.k_RejectEarlyAccess;
         const _ = _.GetAppType();
-        return _.software || 6 != _
-          ? _.games_already_in_library && _.BIsGameOwned(_)
+        if (!_.software && 6 == _) return _._.k_RejectSoftware;
+        if (_.games_already_in_library && _.BIsGameOwned(_))
+          return _._.k_RejectInLibrary;
+        if (_.games_not_in_library && !_.BIsGameOwned(_))
+          return _._.k_RejectNotInLibrary;
+        if (!_.video && [7, 8, 9].includes(_)) return _._.k_RejectVideo;
+        if (_.has_discount) {
+          const _ = _.GetBestPurchaseOption();
+          if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
+        }
+        return "adultonly" != _ &&
+          _.no_ao_content &&
+          (_.HasContentDescriptorID(3) || _.HasContentDescriptorID(4))
+          ? _._.k_RejectAO
+          : 1 == _ &&
+              _.games_already_in_library &&
+              _.BIsGameOwned(_.GetParentAppID() || 0)
             ? _._.k_RejectInLibrary
-            : _.games_not_in_library && !_.BIsGameOwned(_)
-              ? _._.k_RejectNotInLibrary
-              : !_.video && [7, 8, 9].includes(_)
-                ? _._.k_RejectVideo
-                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
-                  ? _._.k_RejectNoDiscount
-                  : "adultonly" != _ &&
-                      _.no_ao_content &&
-                      (_.HasContentDescriptorID(3) ||
-                        _.HasContentDescriptorID(4))
-                    ? _._.k_RejectAO
-                    : 1 == _ &&
-                        _.games_already_in_library &&
-                        _.BIsGameOwned(_.GetParentAppID())
-                      ? _._.k_RejectInLibrary
-                      : _
-                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
-                          _.BHasAppID(_)
-                          ? _._.k_RejectAlreadyDisplayed
-                          : _.has_trailer && !_.BHasTrailers(!1)
-                            ? _._.k_RejectNoTrailer
-                            : _(_, _)
-                        : _._.k_NotRejected
-          : _._.k_RejectSoftware;
+            : _
+              ? (1 == _ && _.BHasAppID(_.GetParentAppID() || 0)) ||
+                _.BHasAppID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _.has_trailer && !_.BHasTrailers(!1)
+                  ? _._.k_RejectNoTrailer
+                  : _(_, _)
+              : _._.k_NotRejected;
       }
       function _(_, _) {
         const _ = _._.Get();
@@ -507,8 +559,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
-        m_HomeView;
+        m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -517,9 +570,12 @@
         }
         static s_globalSingletonStore;
         static Get() {
+          var _;
           return (
             _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
+              ((_ = "CHomeViewStore.s_globalSingletonStore"),
+              (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
+              (_.s_globalSingletonStore = new _()),
               "dev" == _._.WEB_UNIVERSE &&
                 (window.g_HomeViewSetting = _.s_globalSingletonStore)),
             _.s_globalSingletonStore
@@ -554,11 +610,18 @@
           );
         }
         SetHomeViewSettingOverride(_) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ..._?.all,
-            ..._?.maincap,
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ..._?.all,
+                ..._?.maincap,
+              })
+            : (this.m_HomeView = {
+                home: {
+                  ..._?.all,
+                  ..._?.maincap,
+                },
+              });
         }
       }
     },

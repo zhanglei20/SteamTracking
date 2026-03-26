@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Jadikan Gratis?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Jika game-mu sudah dirilis dan kamu ingin mengalihkannya dari berbayar ke gratis, klik %1$s untuk mempelajari lebih lanjut dan meminta bantuan.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "di sini",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Masukkan harga kustom",
+	"SinglePackagePricing_Right_Custom_Desc": "Kamu dapat memasukkan hargamu sendiri untuk setiap mata uang dengan mengedit kotak teks secara langsung.",
+	"SinglePackagePricing_Right_Convert_Desc": "Kamu juga dapat menggunakan tombol ini untuk menghitung setiap mata uang berdasarkan metode konversi yang dipilih dan USD kustom yang dimasukkan.",
+	"PricingDashboard_Select_Price": "Pilih dari Tingkat Harga",
+	"PricingDashboard_Select_Price_button": "Pilih Harga Dasar dalam USD",
+	"PricingDashboard_Select_Price_button_ttip": "Buka dialog yang berisi serangkaian tingkatan harga umum untuk memungkinkan pengaturan harga di semua mata uang di bawah ini.",
 	"empty_no_trailing_comma": ""
 }`);
     },

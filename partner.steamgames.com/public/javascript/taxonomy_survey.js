@@ -2973,6 +2973,7 @@ function renderEndpage(bForceOptimized=false)
 	var text = getQText(endStrText);
 	var title = getQTitle("end_title");
 	var topTagsText = getQText("top_tags");
+	var similarTaggedItems = 'Similarly Tagged Games';
 
 	var opTagProfile = null;
 
@@ -3036,7 +3037,7 @@ function renderEndpage(bForceOptimized=false)
 			<p id="question_text" class="question_text">'+text+'</p>\
 			<div id="neighborhood" class="neighborhood">\
 				<div>\
-				<h3 id="neighborhood_title"/>Similarly Tagged Games</h3>\
+				<h3 id="neighborhood_title"/>'+similarTaggedItems+'</h3>\
 				<div id="canarypixel" class="canarypixel">.</div>\
 				<img id="neighborhood_hourglass" class="hourglass" src="https://partner.steamgames.com/public/images/hourglass.png"/>\
 				</div>\

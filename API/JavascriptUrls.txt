@@ -123,6 +123,8 @@ ${CHAT_BASE_URL}profiles/${steamid64}/ajaxsetpersonaname/
 ${CHAT_BASE_URL}public/images/broadcast/cs2_major2025_bud_icon.png
 ${CHAT_BASE_URL}public/images/broadcast/yule_30x30.png
 ${CLAN_CDN_ASSET_URL}images/
+${CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png
+${CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png
 ${CLAN_CDN_ASSET_URL}images/clan/${}/${}
 ${CLAN_CDN_ASSET_URL}locimages/
 ${COMMUNITY_ASSETS_BASE_URL}images/items/${}/${}
@@ -1767,6 +1769,7 @@ ${cdnURL}labs/diving_bell/arrow.png
 ${cdnURL}labs/diving_bell/startover.svg
 ${clanurl}${url}
 ${createObjectURL}${}
+${frame_io_url}${}
 ${g_sBaseURL}/
 ${g_sBaseURL}join/ajaxcheckemailverified
 ${g_sBaseURL}join/ajaxverifyemail
@@ -2006,7 +2009,9 @@ ${webm_url}${_ ? _ : _}
 ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home
+${youtube_trailer_public_url}${}
 /wishlist/id/${profile_url}/
+/wishlistnew/id/${profile_url}/
 Navigation type ${navigationType} can intercept ${canIntercept} path ${url} info: ${}
 [url=${HELP_BASE_URL}faqs/view/6C17-2BC1-2A01-9B76]${}[/url]
 http://
@@ -2210,8 +2215,6 @@ https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transi
 https://checkout.steampowered.com/qiwi/launchauth
 https://checkout.steampowered.com/recurringsubscription/renewsubscription/
 https://checkout.steampowered.com/recurringsubscription/updatesubscription/
-https://clan.akamai.steamstatic.com/images//39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png
-https://clan.akamai.steamstatic.com/images/41316928/846f603df6057b070667f2741730c2038648955d.png
 https://community.fastly.steamstatic.com/${m_strURL}
 https://community.fastly.steamstatic.com/economy/boosterpack/${appid}?l=english&single=1&v=2
 https://community.fastly.steamstatic.com/economy/boosterpackribbon/?l=english
@@ -2276,6 +2279,7 @@ https://confluence.valve.org/pages/viewpage.action?pageId=320176134
 https://confluence.valve.org/spaces/SteamBiz/pages/456000086/Asset+Types+and+Purpose
 https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards
 https://en.wikipedia.org/wiki/Main_Page
+https://f.io/m-TZSjwG...
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
 https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m
@@ -3033,6 +3037,7 @@ https://www.youtube.com/watch?v=
 https://www.youtube.com/watch?v=${strVideoID}
 https://www.youtube.com/watch?v=${strVideoID}${nStartSeconds ? _ : ""}
 https://www.youtube.com/watch?v=${}
+https://www.youtube.com/watch?v=1T76Ya-vNMc...
 https://www.youtube.com/watch?v=MZhBVH9UeAA
 https://youtu.be/
 https://youtube.com/user/dota2

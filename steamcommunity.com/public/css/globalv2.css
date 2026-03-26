@@ -624,6 +624,7 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 /* fix some bad workshop.css styles */
 .commentthread_pagedropdown select {
 	width: auto;
+	cursor: pointer;
 }
 
 .commentthread_pagelink:hover {

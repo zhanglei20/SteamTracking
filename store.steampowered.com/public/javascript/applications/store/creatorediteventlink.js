@@ -45,234 +45,538 @@
     },
     71298: (e, t, n) => {
       "use strict";
-      n.d(t, { Hh: () => d, vs: () => c });
+      n.d(t, { Hh: () => u, vs: () => l });
       var r = n(7850),
-        s = n(90626),
-        o = n(51706),
-        i = n(56330),
-        a = n(61859),
-        l = n(22797);
-      function c(e) {
-        const [t, n] = (0, s.useState)(() => Boolean(e)),
-          [r, o] = (0, s.useState)(!1),
-          [i, a] = (0, s.useState)(!1),
-          [l, c] = (0, s.useState)(null),
-          [d, u] = (0, s.useState)(null),
-          [_, S] = (0, s.useState)(null),
-          [m, E] = (0, s.useState)(null),
-          [h, v] = (0, s.useState)(null);
+        o = n(90626),
+        a = n(51706),
+        s = n(56330),
+        i = n(61859),
+        c = n(22797);
+      function l(e) {
+        const [t, n] = (0, o.useState)(() => Boolean(e)),
+          [r, a] = (0, o.useState)(!1),
+          [s, i] = (0, o.useState)(!1),
+          [c, l] = (0, o.useState)(null),
+          [u, m] = (0, o.useState)(null),
+          [d, _] = (0, o.useState)(null),
+          [S, v] = (0, o.useState)(null),
+          [w, p] = (0, o.useState)(null);
         return {
           bLoading: t,
           bError: r,
-          bSuccess: i,
-          strError: l,
-          strSuccess: d,
-          elSuccess: m,
-          elError: _,
-          strThrobber: h,
+          bSuccess: s,
+          strError: c,
+          strSuccess: u,
+          elSuccess: S,
+          elError: d,
+          strThrobber: w,
           fnSetLoading: n,
-          fnSetError: o,
-          fnSetSuccess: a,
-          fnSetStrError: c,
-          fnSetStrSuccess: u,
-          fnSetElSuccess: E,
-          fnSetElError: S,
-          fnSetThrobber: v,
+          fnSetError: a,
+          fnSetSuccess: i,
+          fnSetStrError: l,
+          fnSetStrSuccess: m,
+          fnSetElSuccess: v,
+          fnSetElError: _,
+          fnSetThrobber: p,
         };
       }
-      function d(e) {
+      function u(e) {
         const {
             strDialogTitle: t,
             state: n,
-            closeModal: s,
-            strThrobber: c,
+            closeModal: o,
+            strThrobber: l,
           } = e,
           {
-            bLoading: d,
-            bError: u,
-            bSuccess: _,
-            strError: S,
-            strSuccess: m,
-            elSuccess: E,
-            elError: h,
-            strThrobber: v,
+            bLoading: u,
+            bError: m,
+            bSuccess: d,
+            strError: _,
+            strSuccess: S,
+            elSuccess: v,
+            elError: w,
+            strThrobber: p,
           } = n;
-        return u || S || h
-          ? (0, r.jsxs)(o.o0, {
+        return m || _ || w
+          ? (0, r.jsxs)(a.o0, {
               strTitle: t,
               bAlertDialog: !0,
-              closeModal: s,
-              className: i.SuccessErrorDialog,
+              closeModal: o,
+              className: s.SuccessErrorDialog,
               children: [
-                Boolean(S) &&
+                Boolean(_) &&
                   (0, r.jsx)("div", {
-                    className: i.ErrorStylesWithIcon,
+                    className: s.ErrorStylesWithIcon,
                     children:
-                      S || (0, a.we)("#Error_ErrorCommunicatingWithNetwork"),
+                      _ || (0, i.we)("#Error_ErrorCommunicatingWithNetwork"),
                   }),
-                Boolean(h) && h,
+                Boolean(w) && w,
               ],
             })
-          : _ || m || E
-            ? (0, r.jsx)(o.o0, {
+          : d || S || v
+            ? (0, r.jsx)(a.o0, {
                 strTitle: t,
-                strDescription: m || (0, a.we)("#EventDisplay_Share_Success"),
+                strDescription: S || (0, i.we)("#EventDisplay_Share_Success"),
                 bAlertDialog: !0,
-                closeModal: s,
-                className: i.SuccessErrorDialog,
-                children: (0, r.jsx)(r.Fragment, { children: Boolean(E) && E }),
+                closeModal: o,
+                className: s.SuccessErrorDialog,
+                children: (0, r.jsx)(r.Fragment, { children: Boolean(v) && v }),
               })
-            : (0, r.jsx)(o.o0, {
+            : (0, r.jsx)(a.o0, {
                 strTitle: t,
-                className: i.SuccessErrorDialog,
+                className: s.SuccessErrorDialog,
                 bProgressDialog: !0,
                 closeModal: () => {},
-                children: (0, r.jsx)(l.t, {
-                  string: c || v || (0, a.we)("#Loading"),
+                children: (0, r.jsx)(c.t, {
+                  string: l || p || (0, i.we)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
               });
       }
     },
+    75113: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Bw: () => f,
+        EX: () => g,
+        Hx: () => L,
+        JP: () => b,
+        LJ: () => y,
+        OG: () => A,
+        PH: () => r,
+        T7: () => E,
+        qT: () => j,
+        tj: () => x,
+        yh: () => D,
+      });
+      var r,
+        o = n(7850),
+        a = n(90626),
+        s = n(92757),
+        i = n(45699),
+        c = n(81393),
+        l = n(78327),
+        u = n(16180),
+        m = n(55963),
+        d = n(61336),
+        _ = n(60014),
+        S = n(26161),
+        v = n(55263),
+        w = n(61859),
+        p = n(27939);
+      !(function (e) {
+        (e.k_eView = "view"),
+          (e.k_eViewWebSiteHub = "websitehub"),
+          (e.k_eCommunityView = "communityview"),
+          (e.k_eCommunityEdit = "edit"),
+          (e.k_eCommunityEditBroadcast = "editBroadcast"),
+          (e.k_eCommunityAdminPage = "admin"),
+          (e.k_eCommunityPublish = "publish"),
+          (e.k_eCommunityMigrate = "migrate"),
+          (e.k_eCommunityPreview = "preview"),
+          (e.k_eCommunityPreviewSale = "previewsale"),
+          (e.k_eCommunityAnnouncementHub = "community_announcehub"),
+          (e.k_eStoreView = "storeview"),
+          (e.k_eStoreNewsHub = "newshub"),
+          (e.k_eStoreOwnerPage = "store"),
+          (e.k_eStoreSalePage = "sale"),
+          (e.k_eStoreUsersNewsHub = "usernewshub");
+      })(r || (r = {}));
+      const k =
+        /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
+      function h(e, t) {
+        if (!t) return !1;
+        const n = "store" === (0, l.yK)(),
+          o = (function (e) {
+            const t = e.match(k);
+            return t?.[1];
+          })(window.location.href),
+          a = n && "news" == o,
+          s = 36 == t.GetEventType(),
+          i = "community" === (0, l.yK)(),
+          u = t.appid ? "games" : "groups",
+          m =
+            i &&
+            u == o &&
+            ((t.appid && t.appid === l.UF.APPID) ||
+              (!t.appid &&
+                t.clanSteamID.GetAccountID() === l.UF.CLANACCOUNTID));
+        switch (e) {
+          case r.k_eView:
+            return m || a;
+          case r.k_eCommunityView:
+          case r.k_eCommunityEdit:
+          case r.k_eCommunityEditBroadcast:
+          case r.k_eCommunityPublish:
+          case r.k_eCommunityMigrate:
+          case r.k_eCommunityPreview:
+          case r.k_eCommunityPreviewSale:
+          case r.k_eCommunityAnnouncementHub:
+            return m;
+          case r.k_eCommunityAdminPage:
+            return !s && m;
+          case r.k_eViewWebSiteHub:
+            return m || a;
+          case r.k_eStoreView:
+          case r.k_eStoreNewsHub:
+          case r.k_eStoreOwnerPage:
+          case r.k_eStoreUsersNewsHub:
+            return a;
+          case r.k_eStoreSalePage:
+            return !1;
+          default:
+            return (0, c.wT)(!1, "Unknown route specified for link: " + e), !1;
+        }
+      }
+      function b(e) {
+        const t =
+          l.TS.COMMUNITY_BASE_URL +
+          "gid/" +
+          e.clanSteamID.ConvertTo64BitString() +
+          "/announcements/share/" +
+          e.AnnouncementGID;
+        return {
+          strFacebookUrl: t + "?site=facebook&t=" + Math.random(),
+          strTwitterUrl: t + "?site=twitter",
+          strRedditUrl: t + "?site=reddit",
+        };
+      }
+      function g(e) {
+        return I(e, r.k_eStoreSalePage, "absolute");
+      }
+      function E(e) {
+        return I(e, r.k_eStoreView, "absolute");
+      }
+      function C(e, t, n) {
+        if (n)
+          return (
+            (e ? "/games/" + l.UF.VANITY_ID : "/groups/" + l.UF.VANITY_ID) + "/"
+          );
+        const r = e ? "ogg/" + e : "gid/" + t.ConvertTo64BitString();
+        return l.TS.COMMUNITY_BASE_URL + r + "/";
+      }
+      function y() {
+        return "news";
+      }
+      function I(e, t, n) {
+        const [r] = (0, v.t7)(e?.appid, { include_basic_info: !0 });
+        if (e) return D(e, r, t, n);
+      }
+      function D(e, t, n, o) {
+        const a = "relative" === o,
+          s = "community" === (0, l.yK)(),
+          i = a ? "/" : l.TS.STORE_BASE_URL,
+          u = C(e.appid, e.clanSteamID, a);
+        n === r.k_eView
+          ? (n = s ? r.k_eCommunityView : r.k_eStoreView)
+          : n === r.k_eViewWebSiteHub &&
+            (n = s ? r.k_eCommunityAnnouncementHub : r.k_eStoreNewsHub);
+        const m = e.GID ? e.GID : "",
+          d = e.AnnouncementGID ? e.AnnouncementGID : "",
+          _ =
+            e.BIsOGGEvent() &&
+            e.appid &&
+            t &&
+            e.BHasSaleUpdateLandingPageVanity(),
+          v = 36 == e.GetEventType();
+        switch (n) {
+          case r.k_eCommunityPublish:
+            return (
+              u +
+              (e.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + d
+                : "partnerevents/publish/" + m + "?tab=publishing")
+            );
+          case r.k_eCommunityEdit:
+            return (
+              u +
+              (e.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + d
+                : "partnerevents/edit/" + m)
+            );
+          case r.k_eCommunityEditBroadcast:
+            return (
+              u +
+              (e.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + d
+                : "partnerevents/edit/" + m) +
+              "?tab=broadcast"
+            );
+          case r.k_eCommunityMigrate:
+            return u + "partnerevents/migrate_announcement/" + d;
+          case r.k_eCommunityPreview:
+            return v
+              ? u + "partnerevents/previewsale/" + m
+              : u +
+                  (e.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + d
+                    : "partnerevents/preview/" + m);
+          case r.k_eCommunityPreviewSale:
+            return u + "partnerevents/previewsale/" + m;
+          case r.k_eCommunityAdminPage:
+            return v
+              ? `${i}curator/${e.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : u + "partnerevents";
+          case r.k_eCommunityAnnouncementHub:
+            return u + "announcements";
+          case r.k_eStoreNewsHub:
+            return (
+              i +
+              `news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}`
+            );
+          case r.k_eStoreOwnerPage:
+            return (
+              i +
+              (e.appid
+                ? "app/" + e.appid
+                : "curator/" + e.clanSteamID.GetAccountID())
+            );
+          case r.k_eStoreSalePage:
+            return e.jsondata.bSaleEnabled
+              ? e.clanSteamID.GetAccountID() == p.wv
+                ? `${i}charts/topnewreleases/${e.jsondata.sale_vanity_id}`
+                : e.clanSteamID.GetAccountID() == p.yT
+                  ? `${i}charts/bestofyear/${e.jsondata.sale_vanity_id}`
+                  : _
+                    ? `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`
+                    : v
+                      ? `${i}curator/${e.clanSteamID.GetAccountID()}`
+                      : i +
+                        (e.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            e.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        e.jsondata.sale_vanity_id
+              : i;
+          case r.k_eCommunityView:
+            return u + "announcements/detail/" + d;
+          case r.k_eStoreView:
+            if (e.clanSteamID.GetAccountID() == (0, S.H)())
+              return `${l.TS.STORE_BASE_URL}meetsteam/${m}`;
+            if (_)
+              return `${t.GetStorePageURL()}/${e.GetSaleUpdateLandingPageVanity()}`;
+            if (v) return `${i}curator/${e.clanSteamID.GetAccountID()}`;
+            return `${i}news/${e.appid ? `app/${e.appid}` : `group/${e.clanSteamID.GetAccountID()}`}/${e.bOldAnnouncement ? `old_view/${d}` : `view/${m}`}`;
+          case r.k_eStoreUsersNewsHub:
+            return `${i}news/`;
+          default:
+            return (0, c.wT)(!1, "Unknown route specified for link"), "";
+        }
+      }
+      function f(e, t, n) {
+        return I(
+          e,
+          t,
+          "forceAbsolute" === n || !h(t, e) ? "absolute" : "relative",
+        );
+      }
+      function j(e, t, n, r) {
+        return D(
+          e,
+          t,
+          n,
+          "forceAbsolute" === r || !h(n, e) ? "absolute" : "relative",
+        );
+      }
+      function A(e) {
+        const { eventModel: t, route: n, bPopup: r = !0 } = e,
+          i = h(n, t),
+          c = I(t, n, i ? "relative" : "absolute");
+        return (
+          a.useEffect(() => {
+            r ? window.open(c) : window.location.assign(c);
+          }, [r, c]),
+          i ? (0, o.jsx)(s.rd, { push: !0, to: c }) : null
+        );
+      }
+      function L(e, t, n) {
+        const r = C(e, t, !1);
+        return "admin" === n ? r + "partnerevents" : "";
+      }
+      function x(e) {
+        const { eventModel: t, preferredFocus: n } = e,
+          { bCanUseLink: c } = a.useContext(u.I),
+          l = (0, _.n9)(),
+          S = (0, s.W6)(),
+          v = c && h(e.route, t),
+          p = I(t, e.route, v ? "relative" : "absolute"),
+          k = !v && p ? (0, d.NT)(p) : p,
+          b = v || !k ? k : (0, m.wJ)(k, l),
+          g = I(t, r.k_eViewWebSiteHub, "absolute"),
+          E = Boolean(e.route != r.k_eViewWebSiteHub)
+            ? (0, w.we)("#EventBrowse_MoreEventsBtn")
+            : "",
+          C = a.useCallback(() => {
+            g && window.location.assign(g);
+          }, [g]);
+        return t
+          ? v
+            ? (0, o.jsx)(i.Ii, {
+                style: e.style,
+                className: e.className,
+                href: S.createHref({ pathname: b }),
+                onClick: (t) => {
+                  e.onClick?.(t), S.push(b), t.preventDefault();
+                },
+                onOptionsActionDescription: E,
+                onOptionsButton: E ? C : void 0,
+                preferredFocus: n,
+                children: e.children,
+              })
+            : (0, o.jsx)(i.Ii, {
+                href: b,
+                style: e.style,
+                className: e.className,
+                onClick: e.onClick,
+                preferredFocus: n,
+                onOptionsActionDescription: E,
+                onOptionsButton: E ? C : void 0,
+                children: e.children,
+              })
+          : null;
+      }
+    },
     87731: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => f });
+      n.r(t), n.d(t, { default: () => A });
       var r = n(7850),
-        s = n(90626),
-        o = n(78327),
-        i = n(41735),
-        a = n.n(i),
-        l = n(61859),
-        c = n(22837),
-        d = n(17720),
-        u = n(80902),
-        _ = n(51614),
-        S = n(6379),
-        m = n(84933),
-        E = n(22797),
-        h = n(93474),
-        v = n.n(h),
-        g = n(75113),
-        j = n(12155),
-        w = n(81393),
-        x = n(32754),
-        D = n(56283),
+        o = n(90626),
+        a = n(78327),
+        s = n(41735),
+        i = n.n(s),
+        c = n(61859),
+        l = n(22837),
+        u = n(17720),
+        m = n(80902),
+        d = n(51614),
+        _ = n(6379),
+        S = n(84933),
+        v = n(22797),
+        w = n(93474),
+        p = n.n(w),
+        k = n(75113),
+        h = n(12155),
+        b = n(81393),
+        g = n(32754),
+        E = n(56283),
         C = n(78395),
-        L = n(71298),
+        y = n(71298),
         I = n(21869),
-        b = n(8092),
-        k = n(52038),
-        p = n(26408);
-      function f(e) {
+        D = n(8092),
+        f = n(52038),
+        j = n(26408);
+      function A(e) {
         const { clanAccountID: t } = e,
-          n = (0, m.YR)(() => new d.b(t, o.TS.EUNIVERSE, 7, 0)),
+          n = (0, S.YR)(() => new u.b(t, a.TS.EUNIVERSE, 7, 0)),
           {
-            bIsFetching: i,
-            rgEventModels: c,
-            fnRefetch: _,
+            bIsFetching: s,
+            rgEventModels: l,
+            fnRefetch: d,
           } = (function (e) {
             const {
               data: t,
               isFetching: n,
               refetch: r,
-            } = (0, u.I)({
+            } = (0, m.I)({
               queryKey: [
                 "DraftAndHiddenPartnerEvents",
                 e.ConvertTo64BitString(),
               ],
               queryFn: async () => {
                 const t =
-                    o.TS.STORE_BASE_URL +
+                    a.TS.STORE_BASE_URL +
                     "/curator/" +
                     e.GetAccountID() +
                     "/admin/ajaxgetcreatorhomeevents",
-                  n = { l: o.TS.LANGUAGE },
-                  r = await a()
+                  n = { l: a.TS.LANGUAGE },
+                  r = await i()
                     .get(t, { params: n })
                     .catch(() => {}),
-                  s = new Array();
-                s.push(
+                  o = new Array();
+                o.push(
                   ...r.data.creatorhome_event_gids.map((t) =>
-                    S.MX.LoadHiddenPartnerEvent(e, t),
+                    _.MX.LoadHiddenPartnerEvent(e, t),
                   ),
                 );
-                return await Promise.all(s);
+                return await Promise.all(o);
               },
             });
             return { bIsFetching: n, rgEventModels: t, fnRefetch: r };
           })(n),
-          h = `${o.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
-          { creatorHome: g, isFetching: j, refetch: w } = (0, b.FV)(t),
-          C = g?.GetLinkedEventGID(),
-          L = C && c?.some((e) => C == e.GID),
-          I = i || j,
-          k = () => {
-            _(), w();
+          w = `${a.TS.COMMUNITY_BASE_URL}gid/${n.ConvertTo64BitString()}/partnerevents/create?type=creatorhome`,
+          { creatorHome: k, isFetching: h, refetch: b } = (0, D.FV)(t),
+          C = k?.GetLinkedEventGID(),
+          y = C && l?.some((e) => C == e.GID),
+          I = s || h,
+          f = () => {
+            d(), b();
           },
-          p = s.useMemo(
-            () => [...(c ?? [])].sort((e, t) => t.startTime - e.startTime),
-            [c],
+          j = o.useMemo(
+            () => [...(l ?? [])].sort((e, t) => t.startTime - e.startTime),
+            [l],
           ),
-          f = p.filter((e) => C && C == e.GID),
-          H = p.filter((e) => !C || C != e.GID);
+          A = j.filter((e) => C && C == e.GID),
+          x = j.filter((e) => !C || C != e.GID);
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(x.he, {
-              toolTipContent: (0, l.we)("#CreatorHome_EventLink_Create_ttip"),
+            (0, r.jsx)(g.he, {
+              toolTipContent: (0, c.we)("#CreatorHome_EventLink_Create_ttip"),
               style: { width: "25%" },
-              children: (0, r.jsx)(D.jn, {
-                onClick: () => window.location.assign(h),
-                children: (0, l.we)("#CreatorHome_EventLink_Create"),
+              children: (0, r.jsx)(E.jn, {
+                onClick: () => window.location.assign(w),
+                children: (0, c.we)("#CreatorHome_EventLink_Create"),
               }),
             }),
             (0, r.jsx)("h4", {
-              children: (0, l.we)("#CreatorHome_EventLink_Title"),
+              children: (0, c.we)("#CreatorHome_EventLink_Title"),
             }),
             (0, r.jsx)("p", {
-              children: (0, l.we)("#CreatorHome_EventLink_Desc"),
+              children: (0, c.we)("#CreatorHome_EventLink_Desc"),
             }),
             (0, r.jsx)("br", {}),
             (0, r.jsxs)("div", {
-              className: v().ListsCtn,
+              className: p().ListsCtn,
               children: [
-                !L &&
+                !y &&
                   (0, r.jsxs)(r.Fragment, {
                     children: [
                       (0, r.jsx)("h5", {
-                        children: (0, l.we)(
+                        children: (0, c.we)(
                           "#CreatorHome_EventLink_ActiveListTitle",
                         ),
                       }),
                       (0, r.jsx)("p", {
-                        children: (0, l.we)(
+                        children: (0, c.we)(
                           "#CreatorHome_EventLink_BasicActive",
                         ),
                       }),
                     ],
                   }),
-                I && (0, r.jsx)(E.t, {}),
+                I && (0, r.jsx)(v.t, {}),
                 !I &&
                   (0, r.jsxs)(r.Fragment, {
                     children: [
-                      f.length > 0 &&
+                      A.length > 0 &&
                         (0, r.jsxs)(r.Fragment, {
                           children: [
                             (0, r.jsx)("h5", {
-                              children: (0, l.we)(
+                              children: (0, c.we)(
                                 "#CreatorHome_EventLink_ActiveListTitle",
                               ),
                             }),
                             (0, r.jsx)("div", {
-                              className: v().EntryList,
-                              children: f.map((e) =>
+                              className: p().EntryList,
+                              children: A.map((e) =>
                                 (0, r.jsx)(
-                                  y,
+                                  L,
                                   {
-                                    creatorHome: g,
+                                    creatorHome: k,
                                     clanSteamID: n,
                                     eventModel: e,
-                                    refetch: k,
+                                    refetch: f,
                                   },
                                   e.GID,
                                 ),
@@ -280,24 +584,24 @@
                             }),
                           ],
                         }),
-                      H.length > 0 &&
+                      x.length > 0 &&
                         (0, r.jsxs)(r.Fragment, {
                           children: [
                             (0, r.jsx)("h5", {
-                              children: (0, l.we)(
+                              children: (0, c.we)(
                                 "#CreatorHome_EventLink_InactiveListTitle",
                               ),
                             }),
                             (0, r.jsx)("div", {
-                              className: v().EntryList,
-                              children: H.map((e) =>
+                              className: p().EntryList,
+                              children: x.map((e) =>
                                 (0, r.jsx)(
-                                  y,
+                                  L,
                                   {
-                                    creatorHome: g,
+                                    creatorHome: k,
                                     clanSteamID: n,
                                     eventModel: e,
-                                    refetch: k,
+                                    refetch: f,
                                   },
                                   e.GID,
                                 ),
@@ -312,118 +616,118 @@
           ],
         });
       }
-      function y(e) {
-        const { clanSteamID: t, creatorHome: n, eventModel: i, refetch: d } = e,
-          [u, S] = s.useState(!1),
-          m = (0, _.n)({
+      function L(e) {
+        const { clanSteamID: t, creatorHome: n, eventModel: s, refetch: u } = e,
+          [m, _] = o.useState(!1),
+          S = (0, d.n)({
             mutationFn: async (e) => {
               const t =
-                  o.TS.STORE_BASE_URL +
+                  a.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxdeletecreatorhomeevent",
                 n = new FormData();
-              n.append("sessionid", o.TS.SESSIONID), n.append("gid", e.gid);
-              const r = await a().post(t, n, { withCredentials: !0 });
+              n.append("sessionid", a.TS.SESSIONID), n.append("gid", e.gid);
+              const r = await i().post(t, n, { withCredentials: !0 });
               return 1 == r?.data?.success;
             },
           }),
-          [E, h] = s.useState(!1),
-          [w, x] = s.useState(!1),
-          D = (0, _.n)({
+          [v, w] = o.useState(!1),
+          [b, g] = o.useState(!1),
+          E = (0, d.n)({
             mutationFn: async (e) => {
               const t =
-                  o.TS.STORE_BASE_URL +
+                  a.TS.STORE_BASE_URL +
                   "/curator/" +
                   e.clanSteamID.GetAccountID() +
                   "/admin/ajaxselectcreatorhome",
                 n = new FormData();
-              n.append("sessionid", o.TS.SESSIONID), n.append("gid", e.gid);
-              const r = await a().post(t, n, { withCredentials: !0 });
+              n.append("sessionid", a.TS.SESSIONID), n.append("gid", e.gid);
+              const r = await i().post(t, n, { withCredentials: !0 });
               return 1 == r?.data?.success;
             },
           }),
           C = n?.GetLinkedEventGID(),
-          L = C && C == i.GID,
-          I = !L && i.BIsVisibleEvent(),
-          b = `${o.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${i.GID}?redir=${window.location.href}`;
+          y = C && C == s.GID,
+          I = !y && s.BIsVisibleEvent(),
+          D = `${a.TS.COMMUNITY_BASE_URL}gid/${t.ConvertTo64BitString()}/partnerevents/clone/${s.GID}?redir=${window.location.href}`;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(H, {
-              active: u,
-              mutateAsync: () => m.mutateAsync({ clanSteamID: t, gid: i.GID }),
+            (0, r.jsx)(x, {
+              active: m,
+              mutateAsync: () => S.mutateAsync({ clanSteamID: t, gid: s.GID }),
               onClose: (e) => {
-                S(!1), e && d();
+                _(!1), e && u();
               },
-              strTitle: (0, l.we)("#Button_Delete"),
-              strDescription: (0, l.we)(
+              strTitle: (0, c.we)("#Button_Delete"),
+              strDescription: (0, c.we)(
                 "#CreatorHome_EventLink_Delete_Dialog_Desc",
               ),
-              strError: (0, l.we)("#CreatorHome_EventLink_Delete_Dialog_Error"),
+              strError: (0, c.we)("#CreatorHome_EventLink_Delete_Dialog_Error"),
             }),
-            (0, r.jsx)(H, {
-              active: E,
-              mutateAsync: () => D.mutateAsync({ clanSteamID: t, gid: i.GID }),
+            (0, r.jsx)(x, {
+              active: v,
+              mutateAsync: () => E.mutateAsync({ clanSteamID: t, gid: s.GID }),
               onClose: (e) => {
-                h(!1), e && d();
+                w(!1), e && u();
               },
-              strTitle: (0, l.we)("#CreatorHome_EventLink_Select"),
-              strDescription: (0, l.we)(
+              strTitle: (0, c.we)("#CreatorHome_EventLink_Select"),
+              strDescription: (0, c.we)(
                 "#CreatorHome_EventLink_Select_Dialog_Desc",
               ),
-              strError: (0, l.we)("#CreatorHome_EventLink_Select_Dialog_Error"),
+              strError: (0, c.we)("#CreatorHome_EventLink_Select_Dialog_Error"),
             }),
-            (0, r.jsx)(H, {
-              active: w,
-              mutateAsync: () => D.mutateAsync({ clanSteamID: t, gid: "0" }),
+            (0, r.jsx)(x, {
+              active: b,
+              mutateAsync: () => E.mutateAsync({ clanSteamID: t, gid: "0" }),
               onClose: (e) => {
-                x(!1), e && d();
+                g(!1), e && u();
               },
-              strTitle: (0, l.we)("#CreatorHome_EventLink_Clear"),
-              strDescription: (0, l.we)(
+              strTitle: (0, c.we)("#CreatorHome_EventLink_Clear"),
+              strDescription: (0, c.we)(
                 "#CreatorHome_EventLink_Clear_Dialog_Desc",
               ),
-              strError: (0, l.we)("#CreatorHome_EventLink_Clear_Dialog_Error"),
+              strError: (0, c.we)("#CreatorHome_EventLink_Clear_Dialog_Error"),
             }),
             (0, r.jsxs)("div", {
-              className: (0, k.A)(v().Entry, L && v().Active),
+              className: (0, f.A)(p().Entry, y && p().Active),
               children: [
                 (0, r.jsxs)("div", {
-                  className: v().HeaderRow,
+                  className: p().HeaderRow,
                   children: [
                     (0, r.jsx)("span", {
-                      className: v().Label,
-                      children: i.GetNameWithFallback((0, c.sf)(o.TS.LANGUAGE)),
+                      className: p().Label,
+                      children: s.GetNameWithFallback((0, l.sf)(a.TS.LANGUAGE)),
                     }),
-                    !i.BIsVisibleEvent() &&
+                    !s.BIsVisibleEvent() &&
                       (0, r.jsxs)("span", {
-                        className: v().UnpublishedState,
+                        className: p().UnpublishedState,
                         children: [
                           (0, r.jsx)("span", {
-                            children: (0, l.we)(
+                            children: (0, c.we)(
                               "#CreatorHome_EventLink_Unpublished",
                             ),
                           }),
-                          (0, r.jsx)(p.o, {
-                            tooltip: (0, l.we)(
+                          (0, r.jsx)(j.o, {
+                            tooltip: (0, c.we)(
                               "#CreatorHome_EventLink_Unpublished_ttip",
                             ),
                             small: !0,
                           }),
                         ],
                       }),
-                    i.BIsVisibleEvent() &&
-                      !L &&
+                    s.BIsVisibleEvent() &&
+                      !y &&
                       (0, r.jsxs)("span", {
-                        className: v().PublishedAndNotSelectedState,
+                        className: p().PublishedAndNotSelectedState,
                         children: [
                           (0, r.jsx)("span", {
-                            children: (0, l.we)(
+                            children: (0, c.we)(
                               "#CreatorHome_EventLink_PublishedAndNotSelected",
                             ),
                           }),
-                          (0, r.jsx)(p.o, {
-                            tooltip: (0, l.we)(
+                          (0, r.jsx)(j.o, {
+                            tooltip: (0, c.we)(
                               "#CreatorHome_EventLink_PublishedAndNotSelected_ttip",
                             ),
                             small: !0,
@@ -431,65 +735,65 @@
                         ],
                       }),
                     I
-                      ? (0, r.jsx)(T, {
-                          eventModel: i,
-                          label: (0, l.we)("#CreatorHome_EventLink_Select"),
-                          icon: (0, r.jsx)(j.FEq, {}),
-                          onClick: () => h(!0),
-                          tooltip: (0, l.we)(
+                      ? (0, r.jsx)(H, {
+                          eventModel: s,
+                          label: (0, c.we)("#CreatorHome_EventLink_Select"),
+                          icon: (0, r.jsx)(h.FEq, {}),
+                          onClick: () => w(!0),
+                          tooltip: (0, c.we)(
                             "#CreatorHome_EventLink_Select_ttip",
                           ),
                         })
-                      : !L &&
+                      : !y &&
                         (0, r.jsxs)("div", {
-                          className: v().MustPublish,
+                          className: p().MustPublish,
                           children: [
-                            (0, l.we)("#CreatorHome_EventLink_MustPublish"),
-                            (0, r.jsx)(p.o, {
-                              tooltip: (0, l.we)(
+                            (0, c.we)("#CreatorHome_EventLink_MustPublish"),
+                            (0, r.jsx)(j.o, {
+                              tooltip: (0, c.we)(
                                 "#CreatorHome_EventLink_MustPublish_ttip",
                               ),
                               small: !0,
                             }),
                           ],
                         }),
-                    L &&
-                      (0, r.jsx)(T, {
-                        eventModel: i,
-                        label: (0, l.we)("#CreatorHome_EventLink_Clear"),
-                        icon: (0, r.jsx)(j.FEq, { filled: !0 }),
-                        onClick: () => x(!0),
-                        tooltip: (0, l.we)("#CreatorHome_EventLink_Clear_ttip"),
+                    y &&
+                      (0, r.jsx)(H, {
+                        eventModel: s,
+                        label: (0, c.we)("#CreatorHome_EventLink_Clear"),
+                        icon: (0, r.jsx)(h.FEq, { filled: !0 }),
+                        onClick: () => g(!0),
+                        tooltip: (0, c.we)("#CreatorHome_EventLink_Clear_ttip"),
                       }),
                   ],
                 }),
                 (0, r.jsxs)("div", {
-                  className: v().ActionsRow,
+                  className: p().ActionsRow,
                   children: [
-                    (0, r.jsx)(T, {
-                      eventModel: i,
-                      label: (0, l.we)("#Button_Edit"),
-                      icon: (0, r.jsx)(j.ffu, {}),
-                      route: g.PH.k_eCommunityEdit,
+                    (0, r.jsx)(H, {
+                      eventModel: s,
+                      label: (0, c.we)("#Button_Edit"),
+                      icon: (0, r.jsx)(h.ffu, {}),
+                      route: k.PH.k_eCommunityEdit,
                     }),
-                    (0, r.jsx)(T, {
-                      eventModel: i,
-                      label: (0, l.we)("#Button_Preview"),
-                      icon: (0, r.jsx)(j.Exy, {}),
-                      route: g.PH.k_eCommunityPreviewSale,
+                    (0, r.jsx)(H, {
+                      eventModel: s,
+                      label: (0, c.we)("#Button_Preview"),
+                      icon: (0, r.jsx)(h.Exy, {}),
+                      route: k.PH.k_eCommunityPreviewSale,
                     }),
-                    (0, r.jsx)(T, {
-                      eventModel: i,
-                      label: (0, l.we)("#Button_Clone"),
-                      icon: (0, r.jsx)(j.rI_, {}),
-                      onClick: () => window.location.assign(b),
+                    (0, r.jsx)(H, {
+                      eventModel: s,
+                      label: (0, c.we)("#Button_Clone"),
+                      icon: (0, r.jsx)(h.rI_, {}),
+                      onClick: () => window.location.assign(D),
                     }),
-                    !L &&
-                      (0, r.jsx)(T, {
-                        eventModel: i,
-                        label: (0, l.we)("#Button_Delete"),
-                        icon: (0, r.jsx)(j.lMJ, {}),
-                        onClick: () => S(!0),
+                    !y &&
+                      (0, r.jsx)(H, {
+                        eventModel: s,
+                        label: (0, c.we)("#Button_Delete"),
+                        icon: (0, r.jsx)(h.lMJ, {}),
+                        onClick: () => _(!0),
                       }),
                   ],
                 }),
@@ -498,63 +802,63 @@
           ],
         });
       }
-      function H(e) {
+      function x(e) {
         const {
             active: t,
             mutateAsync: n,
-            onClose: s,
-            strTitle: o,
-            strDescription: i,
-            strError: a,
+            onClose: o,
+            strTitle: a,
+            strDescription: s,
+            strError: i,
           } = e,
-          l = (0, L.vs)();
+          c = (0, y.vs)();
         if (t)
-          return l.bLoading
+          return c.bLoading
             ? (0, r.jsx)(I.E, {
                 active: !0,
-                children: (0, r.jsx)(L.Hh, { state: l, strDialogTitle: o }),
+                children: (0, r.jsx)(y.Hh, { state: c, strDialogTitle: a }),
               })
             : (0, r.jsx)(I.E, {
                 active: !0,
                 children: (0, r.jsx)(C.o0, {
-                  strTitle: o,
-                  strDescription: i,
-                  onCancel: () => s(!1),
-                  bOKDisabled: l.bLoading,
+                  strTitle: a,
+                  strDescription: s,
+                  onCancel: () => o(!1),
+                  bOKDisabled: c.bLoading,
                   onOK: async () => {
-                    l.fnSetLoading(!0);
+                    c.fnSetLoading(!0);
                     try {
-                      (await n()) ? s(!0) : l.fnSetElError(a);
+                      (await n()) ? o(!0) : c.fnSetElError(i);
                     } catch (e) {
-                      l.fnSetElError(a);
+                      c.fnSetElError(i);
                     }
                   },
                 }),
               });
       }
-      function T(e) {
+      function H(e) {
         const {
           eventModel: t,
           label: n,
-          tooltip: s,
-          icon: o,
-          route: i,
-          onClick: a,
+          tooltip: o,
+          icon: a,
+          route: s,
+          onClick: i,
         } = e;
-        (0, w.wT)(i || a, "Must specify route or onClick");
-        const l =
-          a ||
+        (0, b.wT)(s || i, "Must specify route or onClick");
+        const c =
+          i ||
           (() => {
-            const e = i ? (0, g.yh)(t, null, i, "absolute") : void 0;
+            const e = s ? (0, k.yh)(t, null, s, "absolute") : void 0;
             window.location.assign(e);
           });
         return (0, r.jsxs)("div", {
-          className: v().ManageButton,
-          onClick: l,
+          className: p().ManageButton,
+          onClick: c,
           children: [
-            (0, r.jsx)("div", { className: v().SVGIcon, children: o }),
+            (0, r.jsx)("div", { className: p().SVGIcon, children: a }),
             n,
-            s && (0, r.jsx)(p.o, { tooltip: s, small: !0 }),
+            o && (0, r.jsx)(j.o, { tooltip: o, small: !0 }),
           ],
         });
       }

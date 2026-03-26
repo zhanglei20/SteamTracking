@@ -265,6 +265,11 @@
     },
     chunkid: (module) => {
       module.exports = {
+        Spoiler: "_2HIF4E13yuhn3QbY2I5vlt",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         narrowWidth: "500px",
         FullScreenCarousel: "GWpeP0OynUHnroAJBEqtW",
         Carousel: "_3Ox4yOQ30uqXO-_SSU25-4",
@@ -405,6 +410,17 @@
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+        BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
+        "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
+        "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
+        "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
+        "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
+        "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
+        "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
+        "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
+        focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
+        hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
       };
     },
     chunkid: (module) => {
@@ -465,6 +481,17 @@
         PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
         PointsAmountIcon: "_3-jpV0SaW4qH2i8S7BXeAB",
         NotEnoughPoints: "_2VkAejyr5j-VMhlWHIoMvK",
+        BackgroundAnimation: "_1dGxeV63iL-VPsLfbtRDra",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3PwWfrjawpqtZMP71qH__f",
+        "ItemFocusAnim-darkerGrey": "_3pFUIQyasuCljjQdUfdQoh",
+        "ItemFocusAnim-darkGrey": "_2mlkZwUbL9iw-WNDhros9P",
+        "ItemFocusAnim-grey": "_25JEbaqvCWjTwa0yrCrTyb",
+        "ItemFocusAnim-translucent-white-10": "_2zTgffSnrFLo9cd9TVkw-0",
+        "ItemFocusAnim-translucent-white-20": "_1ohKSKUe9yYXmfwmAa1Wr2",
+        "ItemFocusAnimBorder-darkGrey": "_2QcwIQVbc3j-0vpunMVnrl",
+        "ItemFocusAnim-green": "_2Im3k1rcp859B-7DqgxyDg",
+        focusAnimation: "FanUWGtzO0vNKSd-zZ9gh",
+        hoverAnimation: "Yg3LLh88Vk89tuQCRoYjE",
       };
     },
     chunkid: (module) => {
@@ -494,6 +521,17 @@
         PurchaseNoticeImage: "_19Tk4I5-EL-sVXsUaa3hwU",
         Tilt: "_3dAAfHHQ8xq74OLmQXo9V4",
         VROnly: "_11BzgaR-a1UCE-aOC3bMCD",
+        BackgroundAnimation: "_1J1jrrETaG-3_8wMEeqpxY",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3yvzhClP6mJaghIH0GHKiv",
+        "ItemFocusAnim-darkerGrey": "_1czfyTnV7yzFQJdFsTmDJT",
+        "ItemFocusAnim-darkGrey": "_1_qHMTE8sRRjCMuxLoZMl2",
+        "ItemFocusAnim-grey": "jagchSyBiPamV4PALsowV",
+        "ItemFocusAnim-translucent-white-10": "_3ZVEkEzGePMK1PBQ_GpIb1",
+        "ItemFocusAnim-translucent-white-20": "_38eVNkJEvCSuIwBUyo7Qrg",
+        "ItemFocusAnimBorder-darkGrey": "_2C7zuRFt6F6RcgTOiWBVnr",
+        "ItemFocusAnim-green": "_1IMTjdceyCiJjpowdAaHgY",
+        focusAnimation: "_1tLo_FTRTZsAztlpw36eHl",
+        hoverAnimation: "_3oGieUcvOTZppk7m3PHA6L",
       };
     },
     chunkid: (module) => {
@@ -562,7 +600,6 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
-        "duration-app-launch": "800ms",
         ParentWidgetContainer: "_2fynndXXlBKZiRaoG9GuDP",
         ParentCapsuleImageContainer: "mcjC8_8ivZdyhU3QKlFrN",
         ParentCapsuleImage: "_2Ti5cIvl7SlIoK7eSIapbL",
@@ -589,6 +626,17 @@
         TwoWide: "_25IMXSN3XeXOPiu-sYHV1U",
         Placeholder: "_1tX6f_kWb07D_qLWgL7-Ah",
         SeeAllLink: "_1SnxJyZ5foWgNRCNLmKm6H",
+        BackgroundAnimation: "_1upvVPGAs4gPDPuPdiwYLw",
+        "ItemFocusAnim-darkerGrey-nocolor": "HZYxQObJqyV14ZPiEV6Lk",
+        "ItemFocusAnim-darkerGrey": "_2ezINEgZ6JsrAsAeqd9me7",
+        "ItemFocusAnim-darkGrey": "_1X6dhTonzVQgrOwVCmKMAA",
+        "ItemFocusAnim-grey": "_10lr_URcMaBKxQoDCDSiW9",
+        "ItemFocusAnim-translucent-white-10": "_2qAvXvRSJ5YY0wBBIwBCVs",
+        "ItemFocusAnim-translucent-white-20": "_1jA2vfdCnoLEOAQXduMla",
+        "ItemFocusAnimBorder-darkGrey": "_24pyz7i5duUDYEkH6dcM8a",
+        "ItemFocusAnim-green": "_1Z9fl4e9G4PQnLxyIHXNKG",
+        focusAnimation: "_268HCaPK9gD6A2Mw_o7sqP",
+        hoverAnimation: "DbNTwkzqEh5siXLRNvICD",
       };
     },
     chunkid: (module) => {
@@ -5903,6 +5951,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { category: _ } = _;
@@ -5936,7 +5985,7 @@
         let _ = {
           onOKButton: void 0,
           onOKActionDescription: null,
-          onCancelActionDescription: (0, _._)("#Button_Close"),
+          onCancelActionDescription: _._.Localize("#Button_Close"),
           onCancelButton: () => _(!1),
         };
         return (0, _.jsxs)("div", {
@@ -6270,7 +6319,14 @@
         },
       };
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
+      function _(_) {
+        return (0, _.jsx)("span", {
+          className: _().Spoiler,
+          children: _.children,
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -7213,6 +7269,9 @@
               ..._,
               ..._,
               ..._,
+              spoiler: {
+                Constructor: _,
+              },
               highlight: {
                 Constructor: _,
               },
@@ -9040,11 +9099,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),

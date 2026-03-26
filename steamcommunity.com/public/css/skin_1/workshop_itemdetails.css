@@ -1,4 +1,15 @@
 
+
+
+@media screen and ( min-width: 910px )
+{
+	#sharedfiles_content_ctn {
+		display: flex;
+		flex-direction: row-reverse;
+		padding-bottom: 30px;
+	}
+}
+
 .workshop_verify_item_submission {
     text-align: left;
     margin: 10px 0px 5px 0px;

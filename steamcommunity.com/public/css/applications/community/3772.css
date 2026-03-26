@@ -27,7 +27,7 @@
     outline-color: #fff;
   }
   100% {
-    outline-color: rgba(255, 255, 255, 0.1);
+    outline-color: hsla(0, 0%, 100%, 0.1);
   }
 }
 .SsgHukHcE1jf7p3W6Ta8g {
@@ -112,7 +112,7 @@
   position: relative;
 }
 ._29awDHhUWS3DKirluu8OGx .uUOCgnwAbXeUmKvdAccoH.XruR-YbySxPawieGNohW6:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: hsla(0, 0%, 100%, 0.05);
 }
 ._29awDHhUWS3DKirluu8OGx .uUOCgnwAbXeUmKvdAccoH ._3RALyudkR9YsufJ__hQRLZ img {
   width: 120px;
@@ -240,6 +240,6 @@ button.DialogButton.JBYdBhACB7UzXP4l_tpF2 svg {
 ._1Kt8VfgLBvg0tD86og8ps7 button.DialogButton {
   padding: 3px 6px;
   text-align: left;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.425);
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid hsla(0, 0%, 100%, 0.425);
 }

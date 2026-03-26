@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Množství k prodeji: %1$s",
 	"Bucket_PriceFrom": "Od %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s",
+	"FilterResults_Placeholder": "Filtrovat výsledky...",
 	"AdvancedSearch_Header": "Pokročilé vyhledávání",
 	"AdvancedSearch_Link": "Pokročilé vyhledávání",
 	"MarketSearch_Placeholder": "Hledat položku...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
 	"Accessories_FieldSectionLabel": "Připevněné položky",
-	"Listing_EnhancedAppearance_Missing": "Tato nabídka prozatím nemá unikátní nebo vylepšené obrázky. Skutečný vzhled položky se může od zde prezentovaného obrázku mírně lišit."
+	"Item_CountryBuySellRestricted": "Tuto položku si nemůžete zakoupit, protože ve Vaší zemi je zakázáno nakupovat a prodávat tento typ položek.",
+	"Item_CountryBuyRestricted": "Tuto položku si nemůžete zakoupit, protože ve Vaší zemi je zakázáno nakupovat tento typ položek.",
+	"Listing_EnhancedAppearance_Missing": "Tato nabídka prozatím nemá unikátní nebo vylepšené obrázky. Skutečný vzhled položky se může od zde prezentovaného obrázku mírně lišit.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

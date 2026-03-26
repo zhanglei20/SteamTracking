@@ -108,7 +108,7 @@ img {
 ::-webkit-scrollbar {
   height: 12px;
   width: 14px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   z-index: 12;
   overflow: visible;
 }
@@ -132,7 +132,7 @@ img {
 }
 ::selection {
   background: #54a5d4;
-  text-shadow: 1px 1px 2px #000000aa;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6666666667);
   color: #fff;
 }
 .vg0EOhKTLB3tLvshHMr7l {
@@ -230,14 +230,14 @@ img {
   padding: 4px;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   transition-property: background, box-shadow, padding-left;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
 .cNMZ-dcMVhaQJFes_Ivwo:focus {
   background: rgba(67, 73, 83, 0.6);
-  box-shadow: inset 1px 1px 8px #000a;
+  box-shadow: inset 1px 1px 8px rgba(0, 0, 0, 0.6666666667);
   padding-left: 6px;
   outline: none;
 }
@@ -250,13 +250,13 @@ img {
   cursor: default;
 }
 .react-select-container .react-select__control {
-  background: #dce8fb14;
-  border-color: transparent;
-  box-shadow: 0 0 0 transparent;
+  background: rgba(220, 232, 251, 0.0784313725);
+  border-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 .react-select-container .react-select__control:hover {
   background: #464d58;
-  border-color: transparent;
+  border-color: rgba(0, 0, 0, 0);
 }
 .react-select-container .react-select__control .react-select__single-value {
   color: #d9dde1;
@@ -1278,6 +1278,7 @@ img {
 }
 ._1PUg8GjnBeN7rBK-dcyQFl {
   filter: drop-shadow(4px 6px 4px rgba(0, 0, 0, 0.2));
+  overscroll-behavior: contain;
 }
 ._20oF9tLSfptitLraDOp6X6 {
   color: var(--color-text-body-subtitle);
@@ -1393,13 +1394,6 @@ img {
   background-color: var(--bg-color, var(--color-debug));
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
-  position: relative;
-  color: var(--text-color);
-  padding: var(--padding);
-  font-size: var(--font-size);
-  letter-spacing: var(--letter-spacing);
-  line-height: var(--line-height);
-  border-radius: 2px;
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._8JNTStqpIYaMWQJx6g6hK:hover {
   background-color: var(--bg-color-hover, var(--color-debug));
@@ -1418,6 +1412,15 @@ img {
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2I6xXve3oCxh8fra7SWTnq:focus-visible,
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2I6xXve3oCxh8fra7SWTnq:focus-within {
   outline: 1px solid #fff;
+}
+:where(._2gL71Yq-HzVI9oOGyWu3jH) {
+  position: relative;
+  color: var(--text-color);
+  padding: var(--padding);
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  border-radius: 2px;
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2e1xlPghh48rkP13ydQOPb {
   min-height: var(--control-height-1);
@@ -1602,9 +1605,6 @@ img {
   --bg-default: var(--color-dull-8);
   --bg-focus: var(--color-dull-9);
   --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
-  display: flex;
-  gap: var(--spacing-2);
-  --background-color: var(--bg-default);
 }
 ._1kIuUssJvopWbHik1IKMG6.zcrlDqGBY0Lrl7faLFoJI {
   --bg-default: var(--color-dull-9);
@@ -1615,6 +1615,11 @@ img {
   --bg-default: var(--color-dull-6);
   --bg-focus: var(--color-dull-8);
   --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
+}
+._1kIuUssJvopWbHik1IKMG6 {
+  display: flex;
+  gap: var(--spacing-2);
+  --background-color: var(--bg-default);
 }
 ._1kIuUssJvopWbHik1IKMG6:disabled {
   --icon-color: rgb(from var(--color-dull-11) r g b / 50%);

@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Преминаване към безплатно?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Ако играта Ви вече е издадена и се нуждаете да преминете от платено към безплатно ценообразуване, кликнете %1$s, за да научите още и изискате съдействие.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "тук",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Въвеждане на персонализирани цени",
+	"SinglePackagePricing_Right_Custom_Desc": "Можете да въведете Ваши собствени цени за всяка валута, като директно редактирате текстовото поле.",
+	"SinglePackagePricing_Right_Convert_Desc": "Също така можете да използвате този бутон, за да изчислите стойността на всяка валута спрямо избрания метод за конверсия и въведената от Вас персонализирана стойност в щатски долари.",
+	"PricingDashboard_Select_Price": "Избиране от поредици за цена",
+	"PricingDashboard_Select_Price_button": "Избиране на базова цена в щатски долари",
+	"PricingDashboard_Select_Price_button_ttip": "Отваря диалогов прозорец с набор от стандартни ценови поредици, за да се позволи задаването им във всички валути по-долу.",
 	"empty_no_trailing_comma": ""
 }`);
     },

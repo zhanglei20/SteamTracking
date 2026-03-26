@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Chuyển sang miễn phí?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Nếu trò chơi của bạn đã phát hành và bạn cần đổi từ trạng thái trả phí sang miễn phí, nhấp %1$s để tìm hiểu thêm và yêu cầu hỗ trợ.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "vào đây",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Nhập giá tùy chỉnh",
+	"SinglePackagePricing_Right_Custom_Desc": "Bạn có thể nhập giá của riêng mình cho từng loại tiền tệ bằng cách chỉnh sửa trực tiếp ô văn bản.",
+	"SinglePackagePricing_Right_Convert_Desc": "Bạn cũng có thể sử dụng nút này để tính toán từng loại tiền tệ dựa trên phương thức chuyển đổi đã chọn và mức giá USD tùy chỉnh đã nhập.",
+	"PricingDashboard_Select_Price": "Chọn từ các mức giá",
+	"PricingDashboard_Select_Price_button": "Chọn giá gốc theo USD",
+	"PricingDashboard_Select_Price_button_ttip": "Mở hộp thoại gồm tập hợp các mức giá chung để cho phép thiết lập trên tất cả các loại tiền tệ bên dưới.",
 	"empty_no_trailing_comma": ""
 }`);
     },

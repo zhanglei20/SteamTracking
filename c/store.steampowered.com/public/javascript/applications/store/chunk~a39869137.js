@@ -9,6 +9,44 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      function _(_) {
+        return (
+          !!_ &&
+          ("game" === _ ||
+            "dlc" === _ ||
+            "software" === _ ||
+            "music" === _ ||
+            "application" === _ ||
+            "demo" === _ ||
+            "hardware" === _ ||
+            "mod" === _ ||
+            "video" == _ ||
+            "beta" === _ ||
+            "advertising" === _)
+        );
+      }
+      function _(_) {
+        return (
+          null != _ &&
+          (0 == _ ||
+            4 == _ ||
+            6 == _ ||
+            11 == _ ||
+            1 == _ ||
+            10 == _ ||
+            2 == _ ||
+            7 == _ ||
+            12 == _ ||
+            14 == _)
+        );
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
@@ -3917,7 +3955,7 @@
                             _: _,
                             active: _ && _,
                             bIsHoverMode: !0,
-                            bGrowOnHover: !0,
+                            eGrowOnHover: _._.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),

@@ -158,6 +158,17 @@
         noContextMenu: "_1JE5G7_FNm2SRDEEnOWMVv",
         gameIsPrivateIcon: "_2gBKQXiTBLjeVVaqvc5QVh",
         PendingPersona: "_2sxXnGfkPxNgR6Lk1-SmfQ",
+        BackgroundAnimation: "_2hlRK2hm0pHy1YSxwknFCj",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3Ye-Lgym31_-ibnmbFywrn",
+        "ItemFocusAnim-darkerGrey": "_1klcEk0V0JFATe7imIRZ1C",
+        "ItemFocusAnim-darkGrey": "_2BtPOA0wSbFULgc-Zh-0_x",
+        "ItemFocusAnim-grey": "_24LF-yODOtVFSuejuQ_xu2",
+        "ItemFocusAnim-translucent-white-10": "uTNXVgYo8JPxZgJyTl9LQ",
+        "ItemFocusAnim-translucent-white-20": "ItJlj151fY2eNJEBeWVOA",
+        "ItemFocusAnimBorder-darkGrey": "_2blFzc6unV1uJG63OhTkyP",
+        "ItemFocusAnim-green": "_3CaU0PXdB2ThLG-Q0foVrK",
+        focusAnimation: "_1EZdMwnQzoxjAOoFpXHuZ_",
+        hoverAnimation: "kfeP_UGfxsZwzWvFD4ytm",
       };
     },
     chunkid: (module) => {
@@ -167,6 +178,17 @@
         MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
         SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
         VRIcon: "_368tz9TSOLGiG2mNMLScMz",
+        BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
+        "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
+        "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
+        "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
+        "ItemFocusAnim-translucent-white-20": "_2kvhksXgWA4vxGz5Oy1tV1",
+        "ItemFocusAnimBorder-darkGrey": "_3N1wGZIJ5QySTBWgyBavuM",
+        "ItemFocusAnim-green": "Vgab6fHUHvZ-iWKRJwy8h",
+        focusAnimation: "GvE_FaPqTf1D0HASx1C_0",
+        hoverAnimation: "_88lGefJsUDJUpRFJ3pUq7",
       };
     },
     chunkid: (module) => {
@@ -428,6 +450,17 @@
         VideoLargeContainer: "_3mzKCP4FLx7fUVeKrhZ1nn",
         VideoPopupContainers: "_2LqAoKcZgpOtpoj5_URVNJ",
         VideoLarge: "_3zPl6O67BYIiFOlq7FxlJP",
+        BackgroundAnimation: "TqTKL7i3GSFlH_ZgPVf1z",
+        "ItemFocusAnim-darkerGrey-nocolor": "cm_5koVmrBLuCZgPBCMie",
+        "ItemFocusAnim-darkerGrey": "PnVMlqvX5SCAvSN6U3hb9",
+        "ItemFocusAnim-darkGrey": "_3y6HrP9DK-Ttsri2UnKeJ4",
+        "ItemFocusAnim-grey": "_3adXp5-v5skt9f-KA1WB_8",
+        "ItemFocusAnim-translucent-white-10": "_1981I-jlGsaAi65IqAxEdm",
+        "ItemFocusAnim-translucent-white-20": "_1ukTwVbofcJj1v0AVkiuc3",
+        "ItemFocusAnimBorder-darkGrey": "_2LVjWAaAuOqf5tKQMJ99XC",
+        "ItemFocusAnim-green": "_1VtcP5LWUyNvo0_5bYQYEx",
+        focusAnimation: "n40ksCk7VHLZG8f1e517V",
+        hoverAnimation: "YiXS6irpqMezE03xkO2Un",
       };
     },
     chunkid: (module) => {
@@ -920,6 +953,42 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _, __webpack_require__ = 0) {
+        return _(_, _, __webpack_require__);
+      }
+      function _(_, _, __webpack_require__ = 0) {
+        if (!_ || 0 == _.length) return null;
+        if (_?.startsWith(_._)) return _._.ReplacementTokenToClanImageURL(_);
+        if (_?.startsWith(_._)) {
+          const _ = new Array(),
+            _ = _._.GetBaseURL(),
+            _ = _.substring(_._.length + 1),
+            _ = parseInt(_.substring(0, _.indexOf("/"))),
+            _ = _.substring(_.indexOf("/") + 1),
+            _ = _._.GetHashFromHashAndExt(_),
+            _ = _._.GetExtStringFromHashAndExt(_);
+          if (null != _) {
+            let _ = (0, _._)(_);
+            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__),
+              4 == _ &&
+                ((_ = (0, _._)((0, _._)(_))),
+                _.push(
+                  _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+                ));
+          }
+          return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
+        }
+        return _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _;
@@ -939,6 +1008,44 @@
         "schedule_track_art",
         "localized_background_art",
       ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return (
+          !!_ &&
+          ("game" === _ ||
+            "dlc" === _ ||
+            "software" === _ ||
+            "music" === _ ||
+            "application" === _ ||
+            "demo" === _ ||
+            "hardware" === _ ||
+            "mod" === _ ||
+            "video" == _ ||
+            "beta" === _ ||
+            "advertising" === _)
+        );
+      }
+      function _(_) {
+        return (
+          null != _ &&
+          (0 == _ ||
+            4 == _ ||
+            6 == _ ||
+            11 == _ ||
+            1 == _ ||
+            10 == _ ||
+            2 == _ ||
+            7 == _ ||
+            12 == _ ||
+            14 == _)
+        );
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -14367,13 +14474,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -14566,7 +14670,8 @@
                 const _ = _.children;
                 "string" == typeof _ && (0, _._)(_) && (_ = (0, _._)(_));
               }
-              const _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+              const _ =
+                  "button" == _(_.args, "style") ? _().LinkButton : void 0,
                 _ = _ && _(_.args, "buttoncolor");
               let _ = _(_.args, "id");
               _ &&
@@ -14943,7 +15048,7 @@
           {
             Constructor: function (_) {
               const _ = _(_.args),
-                _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                _ = "button" == _(_.args, "style") ? _().LinkButton : void 0,
                 _ = _ && _(_.args, "buttoncolor");
               return (0, _.jsx)(_, {
                 className: _,
@@ -15031,36 +15136,6 @@
           },
         ],
       ]);
-      function _(_, _, __webpack_require__ = 0) {
-        return _(_, _, __webpack_require__);
-      }
-      function _(_, _, __webpack_require__ = 0) {
-        if (_ && 0 != _.length) {
-          if (_?.startsWith(_._)) return _._.ReplacementTokenToClanImageURL(_);
-          if (_?.startsWith(_._)) {
-            const _ = new Array(),
-              _ = _._.GetBaseURL(),
-              _ = _.substring(_._.length + 1),
-              _ = parseInt(_.substring(0, _.indexOf("/"))),
-              _ = _.substring(_.indexOf("/") + 1),
-              _ = _._.GetHashFromHashAndExt(_),
-              _ = _._.GetExtStringFromHashAndExt(_);
-            if (null != _) {
-              let _ = (0, _._)(_);
-              _.push(
-                _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-              ),
-                4 == _ &&
-                  ((_ = (0, _._)((0, _._)(_))),
-                  _.push(
-                    _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-                  ));
-            }
-            return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
-          }
-          return _;
-        }
-      }
       function _(_, _) {
         return void 0 === _ ? _[""] : _[_];
       }
@@ -34030,6 +34105,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -34835,8 +34911,8 @@
             }
           })(_),
           _ = _.context.event,
-          _ = _._(_, _.language, _?.rtime32_last_modified);
-        if (void 0 === _) return _.children || "";
+          _ = (0, _._)(_, _.language, _?.rtime32_last_modified);
+        if (void 0 === _ || null == _) return _.children || "";
         _ = "string" == typeof _ ? _ : _[1];
         const _ = (function (_, _, _) {
           let _;
@@ -36429,7 +36505,7 @@
         const { showErrorInfo: _, event: __webpack_require__ } = _.context;
         let _ = (0, _._)(_.args, "src") || _.children?.toString();
         _ || (_ = (0, _._)(_.args));
-        const _ = _._(
+        const _ = (0, _._)(
           _,
           _.language,
           __webpack_require__?.rtime32_last_modified,
@@ -37733,6 +37809,7 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         return new _._(new _._(), 0);
@@ -38126,7 +38203,7 @@
           (_?.forEach((_, _) => {
             if ((_ || _ > 0) && _.length < 3) {
               const _ = (0, _._)(_, "thumb"),
-                _ = (0, _._)(_, "full"),
+                _ = (0, _._)(_, "600x338"),
                 _ = _.length;
               _.push(
                 (0, _.jsx)(
@@ -38446,33 +38523,29 @@
       function _(_) {
         const { _: _, bHideInLibraryApps: __webpack_require__ } = _,
           { data: _ } = (0, _._)(_),
-          [_, _] = _.useState(null),
           _ = 2 == _?.item_type,
-          { data: _ } = (0, _._)();
-        if (
-          (_.useEffect(() => {
-            _ &&
-              (1 == _.item_type || 2 == _.item_type
-                ? _(
-                    (_.included_appids || [])
-                      .filter((_) => !_ || !__webpack_require__ || !_?.has(_))
-                      .map((_) => ({
-                        appid: _,
-                      })),
-                  )
-                : console.error(
-                    "ContentsPreviewList unexpected store item type: ",
+          { data: _ } = (0, _._)(),
+          _ = _.useMemo(() => {
+            if (_)
+              return 1 === _.item_type || 2 === _.item_type
+                ? (_.included_appids || [])
+                    .filter((_) => !_ || !__webpack_require__ || !_?.has(_))
+                    .map((_) => ({
+                      appid: _,
+                    }))
+                : (console.error(
+                    "ContentsPreviewList unexpected store item type:",
                     _.item_type,
-                  ));
-          }, [_, __webpack_require__, _, _]),
-          !_ || 0 == _.length)
-        )
-          return null;
+                  ),
+                  null);
+          }, [_, __webpack_require__, _, _]);
+        if (!_ || 0 == _.length) return null;
         const _ = _.length;
-        let _ = (0, _._)("#Sale_ContentPreview", _);
+        let _ = _._.LocalizePlural("#Sale_ContentPreview", _);
         if (_ && _) {
           const _ = _.included_appids?.length || 0;
-          _ != _ && (_ = (0, _._)("#Sale_Bundle_CompletePartialSet", _ - _, _));
+          _ != _ &&
+            (_ = _._.Localize("#Sale_Bundle_CompletePartialSet", _ - _, _));
         }
         return (0, _.jsxs)("div", {
           className: _().BundleContentPreview,
@@ -38483,7 +38556,7 @@
                 _ &&
                   (0, _.jsx)("span", {
                     className: _().BundleTag,
-                    children: (0, _._)("#AppType_bundle"),
+                    children: _._.Localize("#AppType_bundle"),
                   }),
                 _,
               ],
@@ -38543,6 +38616,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -38645,7 +38719,7 @@
                             _: _,
                             active: _ && _,
                             bIsHoverMode: !0,
-                            bGrowOnHover: !0,
+                            eGrowOnHover: _._.k_ETrailerGrowAmount_Medium,
                           }),
                         ],
                       }),
@@ -39575,85 +39649,67 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        m_refImage = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              nImage: 0,
-              nPropChangeCounter: 0,
-            });
-        }
-        componentDidUpdate(_, _) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
-            this.setState({
-              nImage: 0,
-              nPropChangeCounter: _.nPropChangeCounter + 1,
-            });
-        }
-        get src() {
-          let _ = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (_ = this.props.rgSources[this.state.nImage]),
-            _ ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (_ =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            _
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(_) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              _,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
+      function _(_) {
+        const {
+            rgSources: _,
+            onIncrementalError: __webpack_require__,
+            onError: _,
+            strAltText: _,
+            ref: _,
+            ..._
+          } = _,
+          _ = _.useRef(null),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0);
+        _.useImperativeHandle(
+          _,
+          () => ({
+            imgRef: _,
+            nSourceIndex: _,
+            nSourceLength: _.length,
+          }),
+          [_, _, _],
+        );
+        const _ = _.useMemo(() => JSON.stringify(_), [_]);
+        _.useEffect(() => {
+          _(0), _((_) => _ + 1);
+        }, [_]);
+        const _ = _.useMemo(() => {
+            let _ = "";
+            return (
+              _ && _.length > _ && (_ = _[_]),
+              _ ||
+                (console.warn(
+                  "MultiSourceImage created with no image src",
+                  _,
+                  _,
+                ),
+                (_ =
+                  "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+              _
             );
-          let _ = this.state.nImage + 1;
-          _ >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(_),
-            _ < this.props.rgSources.length &&
-              this.setState({
-                nImage: _,
-              });
-        }
-        render() {
-          const {
-              rgSources: _,
-              onIncrementalError: _,
-              onError: __webpack_require__,
-              strAltText: _,
-              ..._
-            } = this.props,
-            _ = this.src,
-            _ = this.state.nPropChangeCounter;
-          return (0, _.jsx)(
-            "img",
-            {
-              ref: this.m_refImage,
-              ..._,
-              src: _,
-              onError: this.OnImageError,
-              alt: _,
+          }, [_, _, _]),
+          _ = _.useCallback(
+            (_) => {
+              __webpack_require__?.(_, _[_], _);
+              const _ = _ + 1;
+              _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            _,
+            [_, _, __webpack_require__, _],
           );
-        }
+        return (0, _.jsx)(
+          "img",
+          {
+            ref: _,
+            ..._,
+            src: _,
+            onError: _,
+            alt: _,
+          },
+          _,
+        );
       }
-      (0, _._)([_._], _.prototype, "OnImageError", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

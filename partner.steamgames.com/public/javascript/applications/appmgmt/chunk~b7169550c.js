@@ -515,41 +515,6 @@
         );
       }
     },
-    81886: (e, t, n) => {
-      "use strict";
-      function a(e) {
-        return (
-          !!e &&
-          ("game" === e ||
-            "dlc" === e ||
-            "software" === e ||
-            "music" === e ||
-            "application" === e ||
-            "demo" === e ||
-            "hardware" === e ||
-            "mod" === e ||
-            "video" == e ||
-            "beta" === e ||
-            "advertising" === e)
-        );
-      }
-      function r(e) {
-        return (
-          null != e &&
-          (0 == e ||
-            4 == e ||
-            6 == e ||
-            11 == e ||
-            1 == e ||
-            10 == e ||
-            2 == e ||
-            7 == e ||
-            12 == e ||
-            14 == e)
-        );
-      }
-      n.d(t, { fp: () => a, vm: () => r });
-    },
     40236: (e, t, n) => {
       "use strict";
       n.d(t, { OO: () => c, wY: () => o });
@@ -738,14 +703,14 @@
               }),
             ],
           });
-        const b = (0, d.N)(m, !0),
-          I = b.length - 1,
+        const I = (0, d.N)(m, !0),
+          b = I.length - 1,
           v = (e) => {
-            const t = b.indexOf(e);
-            t >= I && t < b.length - 1 && f(t + 1);
+            const t = I.indexOf(e);
+            t >= b && t < I.length - 1 && f(t + 1);
           };
-        if (h < b.length) {
-          const e = b[h];
+        if (h < I.length) {
+          const e = I[h];
           return (0, a.jsxs)("div", {
             className: o().LibraryFallbackAssetImageContainer,
             children: [
@@ -755,7 +720,7 @@
               }),
               (0, a.jsx)(c.o, {
                 lazyLoad: !0,
-                srcs: b,
+                srcs: I,
                 className: o().CapsuleImage,
                 alt: p.name,
                 onImageError: v,
@@ -809,8 +774,8 @@
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
       var _ = n(18654),
         y = n.n(_),
-        b = n(12155),
-        I = n(52038),
+        I = n(12155),
+        b = n(52038),
         v = n(94011);
       function S(e) {
         const { appids: t, hide_status_banners: n, show_early_access: i } = e,
@@ -828,7 +793,9 @@
                 if (!e || 0 == e.length || !t) return a(!1);
                 (async () => {
                   const n = await Promise.all(
-                    e.map((e) => r.fetchQuery((0, d.us)(s, { appid: e }))),
+                    e
+                      .filter((e) => !!e)
+                      .map((e) => r.fetchQuery((0, d.us)(s, { appid: e }))),
                   );
                   a(
                     n.some(
@@ -845,13 +812,13 @@
           })(t),
           C = _ && !n,
           L = S && !n,
-          w = !n && i;
+          E = !n && i;
         return (0, a.jsxs)("div", {
-          className: (0, I.A)(y().CapsuleDecorators, "CapsuleDecorators"),
+          className: (0, b.A)(y().CapsuleDecorators, "CapsuleDecorators"),
           children: [
             C &&
               (0, a.jsxs)("span", {
-                className: (0, I.A)(y().Banner, y().Blue),
+                className: (0, b.A)(y().Banner, y().Blue),
                 children: [
                   (0, a.jsx)("img", {
                     src: (0, r.YJ)(f),
@@ -865,11 +832,11 @@
               (0, a.jsxs)("span", {
                 className: y().Banner,
                 children: [
-                  (0, a.jsx)(b.qnF, { className: y().LinesImg }),
+                  (0, a.jsx)(I.qnF, { className: y().LinesImg }),
                   s.Z.Localize("#Sale_OnWishlist"),
                 ],
               }),
-            w && !C && !L && (0, a.jsx)(x, { appids: t }),
+            E && !C && !L && (0, a.jsx)(x, { appids: t }),
             A && (0, a.jsx)(v.K, {}),
           ],
         });
@@ -895,7 +862,7 @@
           })(t);
         return n
           ? (0, a.jsx)("span", {
-              className: (0, I.A)(y().Banner, y().EarlyAccessGradient),
+              className: (0, b.A)(y().Banner, y().EarlyAccessGradient),
               children: s.Z.Localize("#Sale_EarlyAccess"),
             })
           : null;
@@ -1170,7 +1137,7 @@
           });
         return n ? n.get(e) : null;
       }
-      const b = new (i())(
+      const I = new (i())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -1215,23 +1182,23 @@
             })(e),
           { cache: !1 },
         ),
-        I = "avatarandpersonas";
+        b = "avatarandpersonas";
       function v(e) {
         const { data: t, isLoading: n } = (0, c.I)({
-          queryKey: [I, e],
-          queryFn: () => b.load(e),
+          queryKey: [b, e],
+          queryFn: () => I.load(e),
         });
         return [t, n];
       }
       function S(e) {
         const t = (0, l.jE)(),
           { data: n, isLoading: a } = (0, c.I)({
-            queryKey: [I, e],
+            queryKey: [b, e],
             queryFn: async () => {
-              const n = await b.loadMany(e);
+              const n = await I.loadMany(e);
               return (
                 n.forEach((e) => {
-                  const n = [I, new u.b(e.steamid).GetAccountID()];
+                  const n = [b, new u.b(e.steamid).GetAccountID()];
                   t.setQueryData(n, e);
                 }),
                 n
@@ -1251,12 +1218,12 @@
         return a ? null : r;
       }
       function x(e) {
-        return f.L.getQueryData([I, e]);
+        return f.L.getQueryData([b, e]);
       }
     },
     1909: (e, t, n) => {
       "use strict";
-      n.d(t, { Ng: () => y, iN: () => b, yk: () => I });
+      n.d(t, { Ng: () => y, iN: () => I, yk: () => b });
       var a = n(34629),
         r = n(7850),
         s = n(75844),
@@ -1372,7 +1339,7 @@
           });
         }
       };
-      function b(e) {
+      function I(e) {
         const [t, n] = (0, i.q3)(() => [
           u.O.Get().GetHasLocalizationContext(),
           u.O.Get().GetCurEditLanguage(),
@@ -1385,7 +1352,7 @@
           strTooltip: t ? void 0 : (0, m.we)("#Localization_EditorNotInFocus"),
         });
       }
-      function I(e) {
+      function b(e) {
         const { fnLangHasData: t } = e;
         o.useEffect(
           () => (
@@ -1451,27 +1418,19 @@
     },
     70300: (e, t, n) => {
       "use strict";
-      n.d(t, { nz: () => o, oj: () => c, qr: () => i });
+      n.d(t, { nz: () => s, oj: () => i });
       var a = n(7850),
-        r = n(81886),
-        s = n(29379);
-      function i(e) {
-        return "bundle" == e
-          ? "bundle"
-          : "sub" == e
-            ? "sub"
-            : ((0, r.fp)(e), "app");
-      }
-      function o(e) {
+        r = n(29379);
+      function s(e) {
         return 2 == e ? "bundle" : 1 == e ? "sub" : "app";
       }
-      const c = (e) => {
+      const i = (e) => {
         const { appid: t } = e,
           n = (0, a.jsx)("div", {
             className: "ImpressionTrackedElement",
             children: e.children,
           });
-        return t ? (0, a.jsx)(s.A, { appID: t, children: n }) : n;
+        return t ? (0, a.jsx)(r.A, { appID: t, children: n }) : n;
       };
     },
     36814: (e, t, n) => {

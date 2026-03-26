@@ -72,6 +72,17 @@
         MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
         SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
         VRIcon: "_368tz9TSOLGiG2mNMLScMz",
+        BackgroundAnimation: "_3EMAF_7GAyPW8G7OSt8s0z",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3fWOpZpfDmwOCKEdw8xcqf",
+        "ItemFocusAnim-darkerGrey": "_2Tvf1f8cUg1eYlQg027B3W",
+        "ItemFocusAnim-darkGrey": "_1l7IyrCH5ez4PBO7R4h8RT",
+        "ItemFocusAnim-grey": "_3X7_M9NEYzjKEgQRMQevkQ",
+        "ItemFocusAnim-translucent-white-10": "_3YCxpOEfjLuLbB1hut87fZ",
+        "ItemFocusAnim-translucent-white-20": "_2kvhksXgWA4vxGz5Oy1tV1",
+        "ItemFocusAnimBorder-darkGrey": "_3N1wGZIJ5QySTBWgyBavuM",
+        "ItemFocusAnim-green": "Vgab6fHUHvZ-iWKRJwy8h",
+        focusAnimation: "GvE_FaPqTf1D0HASx1C_0",
+        hoverAnimation: "_88lGefJsUDJUpRFJ3pUq7",
       };
     },
     chunkid: (module) => {
@@ -100,6 +111,17 @@
         FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
         FilterInput: "_2l4z-U60lABvd9XWArGjAf",
         AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
+        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
+        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
+        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
+        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
+        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
+        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
+        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
+        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
+        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
       };
     },
     chunkid: (module) => {
@@ -125,7 +147,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        "duration-app-launch": "800ms",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -2785,14 +2806,10 @@
         _: () => _,
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2986,7 +3003,7 @@
                   "string" == typeof _ && (0, _._)(_) && (_ = (0, _._)(_));
                 }
                 const _ =
-                    "button" == _(_.args, "style") ? _().LinkButton : null,
+                    "button" == _(_.args, "style") ? _().LinkButton : void 0,
                   _ = _ && _(_.args, "buttoncolor");
                 let _ = _(_.args, "id");
                 _ &&
@@ -3376,7 +3393,7 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args),
-                  _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                  _ = "button" == _(_.args, "style") ? _().LinkButton : void 0,
                   _ = _ && _(_.args, "buttoncolor");
                 return (0, _.jsx)(_, {
                   className: _,
@@ -3464,40 +3481,6 @@
             },
           ],
         ]);
-      function _(_, _, __webpack_require__ = 0) {
-        return _(_, _, __webpack_require__);
-      }
-      async function _(_, _, __webpack_require__ = 0) {
-        return _(_, _, __webpack_require__);
-      }
-      function _(_, _, __webpack_require__ = 0) {
-        if (_ && 0 != _.length) {
-          if (null == _ ? void 0 : _.startsWith(_._))
-            return _._.ReplacementTokenToClanImageURL(_);
-          if (null == _ ? void 0 : _.startsWith(_._)) {
-            const _ = new Array(),
-              _ = _._.GetBaseURL(),
-              _ = _.substring(_._.length + 1),
-              _ = parseInt(_.substring(0, _.indexOf("/"))),
-              _ = _.substring(_.indexOf("/") + 1),
-              _ = _._.GetHashFromHashAndExt(_),
-              _ = _._.GetExtStringFromHashAndExt(_);
-            if (null != _) {
-              let _ = (0, _._)(_);
-              _.push(
-                _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-              ),
-                4 == _ &&
-                  ((_ = (0, _._)((0, _._)(_))),
-                  _.push(
-                    _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-                  ));
-            }
-            return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
-          }
-          return _;
-        }
-      }
       function _(_, _) {
         return void 0 === _ ? _[""] : _[_];
       }
@@ -11671,85 +11654,67 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor(_) {
-          super(_),
-            (this.m_refImage = _.createRef()),
-            (this.state = {
-              nImage: 0,
-              nPropChangeCounter: 0,
-            });
-        }
-        componentDidUpdate(_, _) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
-            this.setState({
-              nImage: 0,
-              nPropChangeCounter: _.nPropChangeCounter + 1,
-            });
-        }
-        get src() {
-          let _ = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (_ = this.props.rgSources[this.state.nImage]),
-            _ ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (_ =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            _
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(_) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              _,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
+      function _(_) {
+        const {
+            rgSources: _,
+            onIncrementalError: __webpack_require__,
+            onError: _,
+            strAltText: _,
+            ref: _,
+            ..._
+          } = _,
+          _ = _.useRef(null),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0);
+        _.useImperativeHandle(
+          _,
+          () => ({
+            imgRef: _,
+            nSourceIndex: _,
+            nSourceLength: _.length,
+          }),
+          [_, _, _],
+        );
+        const _ = _.useMemo(() => JSON.stringify(_), [_]);
+        _.useEffect(() => {
+          _(0), _((_) => _ + 1);
+        }, [_]);
+        const _ = _.useMemo(() => {
+            let _ = "";
+            return (
+              _ && _.length > _ && (_ = _[_]),
+              _ ||
+                (console.warn(
+                  "MultiSourceImage created with no image src",
+                  _,
+                  _,
+                ),
+                (_ =
+                  "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+              _
             );
-          let _ = this.state.nImage + 1;
-          _ >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(_),
-            _ < this.props.rgSources.length &&
-              this.setState({
-                nImage: _,
-              });
-        }
-        render() {
-          const {
-              rgSources: _,
-              onIncrementalError: _,
-              onError: __webpack_require__,
-              strAltText: _,
-              ..._
-            } = this.props,
-            _ = this.src,
-            _ = this.state.nPropChangeCounter;
-          return (0, _.jsx)(
-            "img",
-            {
-              ref: this.m_refImage,
-              ..._,
-              src: _,
-              onError: this.OnImageError,
-              alt: _,
+          }, [_, _, _]),
+          _ = _.useCallback(
+            (_) => {
+              null == __webpack_require__ || __webpack_require__(_, _[_], _);
+              const _ = _ + 1;
+              _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            _,
+            [_, _, __webpack_require__, _],
           );
-        }
+        return (0, _.jsx)(
+          "img",
+          {
+            ref: _,
+            ..._,
+            src: _,
+            onError: _,
+            alt: _,
+          },
+          _,
+        );
       }
-      (0, _._)([_._], _.prototype, "OnImageError", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

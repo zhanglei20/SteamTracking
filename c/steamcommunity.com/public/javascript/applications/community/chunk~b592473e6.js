@@ -29,6 +29,17 @@
         FileUploadDropFilesMessage: "I2CE9X_I0GBNYbJf7VYBg",
         TooltipWithShortcut: "zT2msZmm-jBeLe4Dt7smo",
         KeyCap: "_3mZEV9CXrIn4FITvJk3Xy-",
+        BackgroundAnimation: "_32I7Uh1ZWySd7VGW50f5IC",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3dzJEyM6opBkmIeARAGlYr",
+        "ItemFocusAnim-darkerGrey": "_2dbsn-sR5AlFKEgCU0FBbT",
+        "ItemFocusAnim-darkGrey": "_39KmlfhlZwkINJt9fdyKbw",
+        "ItemFocusAnim-grey": "_1X5Siupo5N_ZVuGesoYV0t",
+        "ItemFocusAnim-translucent-white-10": "_3aZcpOjRI-YzMZmhCRiFjd",
+        "ItemFocusAnim-translucent-white-20": "_310j_Q-iB-at4-cmQSi1Mt",
+        "ItemFocusAnimBorder-darkGrey": "_38WlDUfHs-IiaRcWKFpWyA",
+        "ItemFocusAnim-green": "_3Hq7gKwAuHvmYuBWXBx8mC",
+        focusAnimation: "_1k4kLxHBHs5edlnWmN-Cos",
+        hoverAnimation: "_3OZh2Bm4JsNC3bNfskysCA",
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {

@@ -195,7 +195,7 @@ function UserReview_Report( recommendationID, baseURL, callback )
 			}
 			else if ( results.success == 21 )
 			{
-				ShowAlertDialog( 'Error', '##UserReviews_Error_NotLoggedIn_Text' );
+				ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
 			}
 			else
 			{

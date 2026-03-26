@@ -477,6 +477,7 @@
                         (0, r.jsxs)(N.s, {
                           direction: "column",
                           paddingTop: "5",
+                          align: "start",
                           children: [
                             (0, r.jsx)(w.EY, {
                               size: "3",
@@ -772,7 +773,6 @@
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(T.$, {
-              color: "dull",
               onClick: t,
               children: (0, M.we)(
                 "#PricingDashboard_ApplyGuidelinesDialog_Button",

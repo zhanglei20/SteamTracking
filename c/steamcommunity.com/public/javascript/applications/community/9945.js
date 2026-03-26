@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Eladásra kínált mennyiség: %1$s",
 	"Bucket_PriceFrom": "%1$s kezdőártól",
 	"AccessorySearch_AttachedAccessoryType": "%1$s",
+	"FilterResults_Placeholder": "Eredmények szűrése...",
 	"AdvancedSearch_Header": "Bővített keresés",
 	"AdvancedSearch_Link": "Bővített keresés",
 	"MarketSearch_Placeholder": "Tárgy keresése...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
 	"Accessories_FieldSectionLabel": "Tartozékok",
-	"Listing_EnhancedAppearance_Missing": "Ez az ajánlat még nem tartalmaz egyedi vagy javított képet. Az itt mutatott kép enyhén eltérhet a felajánlott tárgytól."
+	"Item_CountryBuySellRestricted": "Nem vásárolhatod meg ezt a tételt, mert az ilyen típusú tételek adásvétele le van tiltva az országodban.",
+	"Item_CountryBuyRestricted": "Nem vásárolhatod meg ezt a tételt, mert az ilyen típusú tételek vásárlása le van tiltva az országodban.",
+	"Listing_EnhancedAppearance_Missing": "Ez az ajánlat még nem tartalmaz egyedi vagy javított képet. Az itt mutatott kép enyhén eltérhet a felajánlott tárgytól.",
+	"Listing_EnhancedAppearance_ShowBackground": "Háttér megjelenítése"
 }`);
     },
   },

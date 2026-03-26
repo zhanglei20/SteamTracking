@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Gratis maken?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Als je spel al is uitgebracht en je het van betaald naar gratis wilt omzetten, kun je %1$s klikken voor meer informatie en om hulp aan te vragen.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "hier",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Eigen prijzen invoeren",
+	"SinglePackagePricing_Right_Custom_Desc": "Je kunt voor elke valuta je eigen prijs invoeren door het tekstvak rechtstreeks te bewerken.",
+	"SinglePackagePricing_Right_Convert_Desc": "Je kunt ook deze knop gebruiken om elke valuta te laten berekenen op basis van de geselecteerde omrekenmethode en je ingevoerde prijs in USD.",
+	"PricingDashboard_Select_Price": "Prijsniveau selecteren",
+	"PricingDashboard_Select_Price_button": "USD-basisprijs selecteren",
+	"PricingDashboard_Select_Price_button_ttip": "Open een dialoogvenster met een aantal veelgebruikte prijsniveaus die je voor alle onderstaande valuta's kunt toepassen.",
 	"empty_no_trailing_comma": ""
 }`);
     },

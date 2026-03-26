@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Gostaria que o seu jogo passasse a ser gratuito?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Se o seu jogo já foi lançado e deseja que seja mudado de pago para gratuito, clique %1$s para mais informações e solicitar ajuda.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "aqui",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Introdução de preços personalizados",
+	"SinglePackagePricing_Right_Custom_Desc": "Pode introduzir os seus próprios preços para cada moeda ao editar a caixa de texto diretamente.",
+	"SinglePackagePricing_Right_Convert_Desc": "Também pode usar este botão para calcular cada moeda com base no método de conversão selecionado e no preço personalizado em USD que introduziu.",
+	"PricingDashboard_Select_Price": "Selecionar de patamares de preços",
+	"PricingDashboard_Select_Price_button": "Selecionar preço base em USD",
+	"PricingDashboard_Select_Price_button_ttip": "Clique neste botão para abrir uma janela com um conjunto dos patamares de preços mais comuns e assim defini-los em todas as moedas abaixo.",
 	"empty_no_trailing_comma": ""
 }`);
     },

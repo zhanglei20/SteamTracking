@@ -7,8 +7,9 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       class _ {
-        m_HomeView;
+        m_HomeView = void 0;
         BHasHomeView() {
           return Boolean(this.m_HomeView);
         }
@@ -17,9 +18,12 @@
         }
         static s_globalSingletonStore;
         static Get() {
+          var _;
           return (
             _.s_globalSingletonStore ||
-              ((_.s_globalSingletonStore = new _()),
+              ((_ = "CHomeViewStore.s_globalSingletonStore"),
+              (0, _._)(!0, "Unexpected code running in SSR Server: " + _),
+              (_.s_globalSingletonStore = new _()),
               "dev" == _._.WEB_UNIVERSE &&
                 (window.g_HomeViewSetting = _.s_globalSingletonStore)),
             _.s_globalSingletonStore
@@ -54,11 +58,18 @@
           );
         }
         SetHomeViewSettingOverride(_) {
-          this.m_HomeView.home = {
-            ...this.m_HomeView.home,
-            ..._?.all,
-            ..._?.maincap,
-          };
+          this.m_HomeView
+            ? (this.m_HomeView.home = {
+                ...this.m_HomeView.home,
+                ..._?.all,
+                ..._?.maincap,
+              })
+            : (this.m_HomeView = {
+                home: {
+                  ..._?.all,
+                  ..._?.maincap,
+                },
+              });
         }
       }
     },
@@ -1404,9 +1415,9 @@
                       (_) => _.GetAnnouncementGID() != __webpack_require__,
                     ).map((_) => _.AnnouncementGID);
                     _._(_);
-                    const _ = _.slice(0, 3).map((_) =>
-                      _.GetClanEventFromAnnouncementGID(_),
-                    );
+                    const _ = _.slice(0, 3)
+                      .map((_) => _.GetClanEventFromAnnouncementGID(_))
+                      .filter((_) => !!_);
                     if ((_(_), _(!1), _)) {
                       let _ = _._.Get().GetTracker(),
                         _ = !1;
@@ -1720,7 +1731,7 @@
           } = _,
           _ = (0, _._)(_.appid),
           _ = (0, _._)(_._.LANGUAGE),
-          [_, _, _] = (0, _._)(() =>
+          [_, _, _, _, _] = (0, _._)(() =>
             _
               ? [
                   void 0 !== __webpack_require__
@@ -1728,8 +1739,10 @@
                     : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
                   _.GetNameWithFallback(_),
                   _.GetCategoryAsString(),
+                  _.GetSubTitleWithLanguageFallback(_),
+                  _.GetSummaryWithFallback(_),
                 ]
-              : [void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0, void 0],
           );
         return _
           ? (0, _.jsxs)(_._, {
@@ -1772,6 +1785,16 @@
                       className: _().HorizontalTitle,
                       children: _,
                     }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().HorizontalSubTitle,
+                        children: _,
+                      }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().HorizontalSummary,
+                        children: _,
+                      }),
                   ],
                 }),
               ],

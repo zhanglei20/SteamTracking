@@ -283,13 +283,13 @@
       "use strict";
       n(745);
     },
-    57: (e, t, n) => {
+    415: (e, t, n) => {
       "use strict";
-      n.d(t, { InitializeGamepadNavigation: () => Nt });
+      n.d(t, { InitializeGamepadNavigation: () => Et });
       var o,
         i = n(669),
         s = n.n(i),
-        r = n(596);
+        r = n(953);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -352,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(747),
-        p = n(356),
-        _ = n(47),
-        f = n(502);
+        g = n(10),
+        p = n(222),
+        _ = n(217),
+        f = n(112);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -754,8 +754,8 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(90),
-        y = n(274);
+        D = n(620),
+        y = n(156);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -2979,15 +2979,27 @@
       const Ve = new k("FocusHistory").Debug;
       function He(e) {
         const t = (t) => {
-            Ve(`preserving state and suppressing focus for tree ${e.id}`);
-            const n = "replace" == t.navigationType ? void 0 : z(e.Root);
-            window.navigation.updateCurrentEntry({
-              state: {
-                ...window.navigation.currentEntry?.getState(),
-                [$e(e)]: n,
-              },
-            }),
-              e.DeferredFocus.SuppressFocus();
+            Ve(
+              `preserving state and suppressing focus for tree ${e.id} for navigation type ${t.navigationType}`,
+            );
+            const n = window.navigation.currentEntry?.getState() ?? {};
+            if ("replace" != t.navigationType) {
+              const t = z(e.Root);
+              window.navigation.updateCurrentEntry({
+                state: { ...n, [$e(e)]: t },
+              });
+            } else
+              n[Ye] &&
+                t.intercept({
+                  async handler() {
+                    const e = window.navigation.currentEntry?.getState() ?? {};
+                    window.navigation.updateCurrentEntry({
+                      state: { ...e, [Ye]: !0 },
+                    });
+                  },
+                  focusReset: "manual",
+                });
+            e.DeferredFocus.SuppressFocus();
           },
           n = (t) => {
             Ke(e)
@@ -3003,39 +3015,39 @@
             window.navigation.removeEventListener("navigatesuccess", n),
           ),
           (function () {
-            if (!je) {
-              je = new y.l();
+            if (!ze) {
+              ze = new y.l();
               const e = performance.now(),
                 t = (t) => {
                   "string" == typeof t.data &&
                     "FocusRestoreReady" == t.data &&
                     (Ve(
-                      `Got FocusRestoreReady event from page after ${performance.now() - e}ms, will record in history.  ${je.CountRegistered()} trees waiting.`,
+                      `Got FocusRestoreReady event from page after ${performance.now() - e}ms, will record in history.  ${ze.CountRegistered()} trees waiting.`,
                     ),
                     window.navigation.updateCurrentEntry({
                       state: {
                         ...window.navigation.currentEntry?.getState(),
-                        [ze]: !0,
+                        [Ye]: !0,
                       },
                     }),
-                    je.Dispatch(),
-                    je.ClearAllCallbacks(),
+                    ze.Dispatch(),
+                    ze.ClearAllCallbacks(),
                     window.clearTimeout(n));
                 };
               window.addEventListener("message", t);
               const n = window.setTimeout(() => {
-                je.CountRegistered() &&
+                ze.CountRegistered() &&
                   (console.warn(
                     "Waited 4000ms for FocusRestoreReady, proceeding",
                   ),
-                  je.Dispatch());
+                  ze.Dispatch());
               }, 4e3);
             }
           })(),
           (function () {
             const e = window.navigation.currentEntry?.getState();
             return (
-              Ve(`Wait for page? ${e?.[ze] ? "wait" : "no"} `, e), !!e?.[ze]
+              Ve(`Wait for page? ${e?.[Ye] ? "wait" : "no"} `, e), !!e?.[Ye]
             );
           })()
             ? (function (e, t) {
@@ -3044,38 +3056,40 @@
                   `Wait for page enabled, suppressing focus in ${e.id} until we hear that page is ready`,
                 ),
                   e.DeferredFocus.SuppressFocus();
-                const n = () => {
-                    Ke(e)
+                const n = je(e),
+                  o = () => {
+                    Ke(e, n)
                       ? e.DeferredFocus.Reset()
                       : e.DeferredFocus.ExecuteQueuedFocus();
                   },
-                  o = je.Register(n).Unregister;
-                t.Push(o);
+                  i = ze.Register(o).Unregister;
+                t.Push(i);
               })(e, o)
             : Ke(e),
           o.GetUnregisterFunc()
         );
       }
-      function Ke(e) {
-        const t = (function (e) {
-          const t = window.navigation.currentEntry?.getState();
-          return t?.[$e(e)];
-        })(e);
+      function Ke(e, t) {
+        const n = t ?? je(e);
         return (
           Ve(
-            `Restoring focus state for ${e.id}, ${t ? "history available" : "no history"}`,
+            `Restoring focus state for ${e.id}, ${n ? "history available" : "no history"}`,
           ),
-          !!t && (Y(e.Root, t, 0), !0)
+          !!n && (Y(e.Root, n, 0), !0)
         );
       }
       function $e(e) {
         return `FocusHistory_${e.id}`;
       }
-      let je;
-      const ze = "FocusHistoryWaitForPage";
-      const Ye = new k("FocusNavigation").Debug,
-        Xe = new k("GamepadEvents").Debug;
-      class qe {
+      function je(e) {
+        const t = window.navigation.currentEntry?.getState();
+        return t?.[$e(e)];
+      }
+      let ze;
+      const Ye = "FocusHistoryWaitForPage";
+      const Xe = new k("FocusNavigation").Debug,
+        qe = new k("GamepadEvents").Debug;
+      class Qe {
         m_Controller;
         m_context;
         m_window;
@@ -3152,8 +3166,8 @@
         }
         m_lastFocusNode;
         m_bWasActiveForLastFocusChange;
-        m_lastFocusNodeXMovement = new Qe();
-        m_lastFocusNodeYMovement = new Qe();
+        m_lastFocusNodeXMovement = new Je();
+        m_lastFocusNodeYMovement = new Je();
         GetLastFocusedNode() {
           return this.m_lastFocusNode;
         }
@@ -3337,7 +3351,7 @@
             );
           })(e);
           return (
-            Xe(
+            qe(
               `Logical gamepad Event fired: ${r.pR[e.detail.button]}, had logical event: ${n}, was handled: ${!t}`,
             ),
             t && (t = this.TryRootButtonListeners(e)),
@@ -3346,7 +3360,7 @@
             t
           );
         }
-        m_DeferredFocus = new Je(this);
+        m_DeferredFocus = new Ze(this);
         get DeferredFocus() {
           return this.m_DeferredFocus;
         }
@@ -3372,7 +3386,7 @@
             (this.m_bWasActiveForLastFocusChange || !this.BIsActive())
           )
             return;
-          Ye(
+          Xe(
             `Transfer focus in ${this.id}, source: ${e && o[e]}, from/to:`,
             i?.m_element,
             t?.m_element,
@@ -3419,7 +3433,7 @@
             this.m_context.OnFocusChangeComplete(a);
         }
       }
-      class Qe {
+      class Je {
         m_element;
         m_rect;
         SetNode(e) {
@@ -3435,7 +3449,7 @@
             : this.m_rect;
         }
       }
-      class Je {
+      class Ze {
         m_tree;
         m_target;
         m_interval;
@@ -3475,7 +3489,7 @@
           if (((this.m_bSuppressed = !1), this.m_target)) {
             const { node: e, bFocusDescendant: t } = this.m_target;
             (this.m_target = void 0),
-              Ye(
+              Xe(
                 `DeferredFocus in ${this.m_tree.id} - focusing ${t ? "descendant of" : "node"} ${e.NavKey}`,
               ),
               t
@@ -3485,8 +3499,8 @@
           }
         }
       }
-      const Ze = new k("FocusNavigation").Debug;
-      class et {
+      const et = new k("FocusNavigation").Debug;
+      class tt {
         m_rootWindow;
         m_activeWindow;
         m_activeBrowserView;
@@ -3526,12 +3540,12 @@
         }
         Destroy(e) {
           e == this.m_rootWindow
-            ? (Ze(`${this.LogName(e)} Destroying context for window`),
+            ? (et(`${this.LogName(e)} Destroying context for window`),
               (this.m_bMounted = !1),
               this.m_schDeferredActivate.Cancel(),
               this.SetActive(!1, e),
               this.m_controller.DestroyContext(this))
-            : Ze(`${this.LogName(e)} Child window destroyed`);
+            : et(`${this.LogName(e)} Child window destroyed`);
         }
         SetActive(e, t, n = void 0) {
           this.m_controller.BatchedUpdate(() => {
@@ -3551,7 +3565,7 @@
           (this.BIsActive() &&
             this.m_activeWindow == e &&
             void 0 === this.m_activeBrowserView) ||
-            (Ze(
+            (et(
               `${this.LogName(e)} Activating context, there are ${this.m_rgGamepadNavigationTrees.length} trees in this context`,
             ),
             this.SetActive(!0, e));
@@ -3560,19 +3574,19 @@
           (this.BIsActive() &&
             this.m_activeWindow == e &&
             this.m_activeBrowserView == t) ||
-            (Ze(`${this.LogName(e)} Browser View "${t}" activated in context`),
+            (et(`${this.LogName(e)} Browser View "${t}" activated in context`),
             this.SetActive(!0, e, t));
         }
         OnDeactivate(e) {
           this.m_activeWindow == e
-            ? (Ze(`${this.LogName(e)} Deactivate context for window`),
+            ? (et(`${this.LogName(e)} Deactivate context for window`),
               this.SetActive(!1, e))
-            : Ze(
+            : et(
                 `${this.LogName(e)} Blurred, but not deactivating because (${this.m_activeWindow?.name}) has focus.`,
               );
         }
         OnDeactivateBrowserView(e, t) {
-          Ze(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
+          et(`${this.LogName(e)} Browser View "${t}" deactivated in context`),
             this.m_activeBrowserView == t && this.SetActive(!1, e, t);
         }
         BIsGamepadInputSuppressed() {
@@ -3612,7 +3626,7 @@
           e && D.x9(this.m_rgGamepadNavigationTrees, e),
             (this.m_LastActiveNavTree = e),
             (e && e.BUseVirtualFocus()) || (this.m_LastActiveFocusNavTree = e),
-            Ze(
+            et(
               `${this.LogName(e?.Window)} Move from nav tree ${n?.id} to nav tree ${e?.id} ${t ? "taking focus" : "no focus"}`,
             ),
             n && this.m_rgGamepadNavigationTrees.push(n),
@@ -3632,7 +3646,7 @@
         }
         async UnregisterGamepadNavigationTree(e) {
           D.x9(this.m_rgGamepadNavigationTrees, e),
-            Ze(
+            et(
               `(${this.m_rootWindow.name}) Unregister tree ${e?.id} ${this.m_LastActiveFocusNavTree == e ? "(was active)" : "(inactive)"}`,
             ),
             e.SetIsEnabled(!1),
@@ -3682,17 +3696,17 @@
           return this.m_controller.NavigationSourceGlyphInfo;
         }
       }
-      const tt = new k("FocusNavigation").Debug,
-        nt = new k("FocusNavigation").Assert,
-        ot = "focus-nav-show-debug-focus-ring";
-      function it(e, t) {
+      const nt = new k("FocusNavigation").Debug,
+        ot = new k("FocusNavigation").Assert,
+        it = "focus-nav-show-debug-focus-ring";
+      function st(e, t) {
         return (
           e?.eActivationSourceType === t?.eActivationSourceType &&
           e?.nActiveGamepadIndex === t?.nActiveGamepadIndex &&
           e?.nLastActiveGamepadIndex === t?.nLastActiveGamepadIndex
         );
       }
-      class st {
+      class rt {
         m_rgGamepadInputSources = [];
         m_DefaultContext;
         m_rgAllContexts = [];
@@ -3706,7 +3720,7 @@
             nActiveGamepadIndex: -1,
             nLastActiveGamepadIndex: -1,
           },
-          it,
+          st,
         );
         m_navigationSourceSupportsFocus = (function (e, t, n) {
           return new P(e, t, n);
@@ -3724,10 +3738,10 @@
           window.FocusNavController = this;
         }
         Init() {
-          this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(ot));
+          this.m_bShowDebugFocusRing.Set("shown" == sessionStorage.getItem(it));
         }
         CreateContext(e, t) {
-          const n = new et(this, e, t);
+          const n = new tt(this, e, t);
           return this.m_rgAllContexts.push(n), n;
         }
         DestroyContext(e) {
@@ -3749,7 +3763,7 @@
             for (const e of this.m_rgAllContexts) {
               const t = e.FindNavTreeInFocusedWindow();
               if (t) {
-                tt(
+                nt(
                   `${e.LogName(t.Window)} Found a focused window; setting this context as active.`,
                 ),
                   (this.m_ActiveContext = e),
@@ -3761,7 +3775,7 @@
           return (
             !this.m_ActiveContext &&
               this.m_LastActiveContext &&
-              (tt(
+              (nt(
                 `Failed to find an active context, will fall back to ${this.m_LastActiveContext.LogName()}`,
               ),
               (this.m_ActiveContext = this.m_LastActiveContext),
@@ -3775,8 +3789,8 @@
           this.m_bShowDebugFocusRing.Set(e),
             (function (e) {
               e
-                ? sessionStorage.setItem(ot, "shown")
-                : sessionStorage.removeItem(ot);
+                ? sessionStorage.setItem(it, "shown")
+                : sessionStorage.removeItem(it);
             })(e);
         }
         GetShowDebugFocusRing() {
@@ -3874,7 +3888,7 @@
               !(
                 i.m_LastActiveNavTree.GetLastFocusedNode() ||
                 (t != r.Vz.GAMEPAD && t != r.Vz.KEYBOARD_SIMULATOR) ||
-                (tt(
+                (nt(
                   `GetEventTarget: Context ${i.LogName()} tree ${i.m_LastActiveNavTree.id} has no focused node, ${n ? "finding one" : "will not find one"}`,
                 ),
                 n && i.m_LastActiveNavTree.TakeFocus(o.GAMEPAD, !0),
@@ -3884,7 +3898,7 @@
               return [void 0, i];
             i.m_LastActiveNavTree.GetLastFocusedNode()
               ? (s = i.m_LastActiveNavTree?.GetLastFocusedNode()?.Element)
-              : tt(
+              : nt(
                   `GetEventTarget: Context ${i.LogName()} tree ${i.m_LastActiveNavTree.id} still has no focused node - will fall back to document.activeElement`,
                 );
           }
@@ -3915,11 +3929,11 @@
           if (this.m_fnCatchAllGamepadInput && this.m_fnCatchAllGamepadInput(t))
             return void (
               e &&
-              tt(
+              nt(
                 "Ignoring button press - gamepad input is suppressed by parent window",
               )
             );
-          nt(
+          ot(
             !!s == !!a,
             "Must set both overrideContext and overrideElement or neither",
           );
@@ -3929,7 +3943,7 @@
             !m?.BIsGamepadInputSuppressed() || c
               ? (this.ChangeNavigationSource(n, o, l, h),
                 e &&
-                  tt(
+                  nt(
                     `Firing ${r.pR[t]} in tree ${m?.m_LastActiveNavTree?.id} at `,
                     d,
                   ),
@@ -3940,7 +3954,7 @@
                     is_repeat: i,
                   }),
                 ))
-              : tt(
+              : nt(
                   `Suppressing ${r.pR[t]} input on element ${d?.className} because tree ${m?.m_LastActiveNavTree?.id} has it disabled`,
                 );
         }
@@ -4004,7 +4018,7 @@
           }
         }
         NewGamepadNavigationTree(e, t, n, o) {
-          return new qe(this, e, t, n, o);
+          return new Qe(this, e, t, n, o);
         }
         RegisterGamepadNavigationTree(e, t) {
           const n = e.WindowContext;
@@ -4026,21 +4040,21 @@
         OnGamepadNavigationTreeFocused(e, t, n = !1) {
           const i = e.WindowContext;
           i != this.m_ActiveContext &&
-            tt(`(${i.LogName(e.Window)}) Focus event in inactive window`),
+            nt(`(${i.LogName(e.Window)}) Focus event in inactive window`),
             e != i.m_LastActiveFocusNavTree &&
               e != i.m_LastActiveNavTree &&
               (i.m_LastActiveFocusNavTree?.GetParentEmbeddedNavTree() == e ||
               e.GetParentEmbeddedNavTree() == i.m_LastActiveFocusNavTree
                 ? t == o.AUTOFOCUS &&
                   i.m_LastActiveNavTree?.GetLastFocusedNode()
-                  ? tt(
+                  ? nt(
                       `There was an autofocus event in ${e.id}, but the active nav tree is ${i.m_LastActiveFocusNavTree?.id} and we already have something focused.  Source: ${t && o[t]}.`,
                     )
-                  : (tt(
+                  : (nt(
                       `There was a focus event in ${e.id}, allowing focus transfer to activate nav tree due to parent embedded relationship`,
                     ),
                     e.Activate())
-                : tt(
+                : nt(
                     `There was a focus event in ${e.id}, but the active nav tree is ${i.m_LastActiveFocusNavTree?.id} so it is being ignored.  Source: ${t && o[t]}.`,
                   ));
         }
@@ -4105,7 +4119,7 @@
           }
         }
       }
-      function rt(e) {
+      function at(e) {
         if (!e) return Me.NONE;
         switch (e) {
           case "column":
@@ -4129,14 +4143,14 @@
             );
         }
       }
-      (0, m.Cg)([g.o], st.prototype, "OnButtonDown", null),
-        (0, m.Cg)([g.o], st.prototype, "OnButtonUp", null),
-        (0, m.Cg)([g.o], st.prototype, "OnNavigationTypeChange", null);
-      const at = "VirtualKeyboardMessage";
-      function ct(e) {
-        return e && e.type === at;
+      (0, m.Cg)([g.o], rt.prototype, "OnButtonDown", null),
+        (0, m.Cg)([g.o], rt.prototype, "OnButtonUp", null),
+        (0, m.Cg)([g.o], rt.prototype, "OnNavigationTypeChange", null);
+      const ct = "VirtualKeyboardMessage";
+      function lt(e) {
+        return e && e.type === ct;
       }
-      class lt {
+      class ut {
         m_ownerWindow;
         constructor() {}
         Init(e) {
@@ -4170,13 +4184,13 @@
           this.SendMessage({ message: "HideVirtualKeyboard", msDelay: e });
         }
         OnBrowserViewMessage(e, t) {
-          e == at && this.InternalDispatchMessage(JSON.parse(t));
+          e == ct && this.InternalDispatchMessage(JSON.parse(t));
         }
         OnMessage(e) {
           this.InternalDispatchMessage(e.data);
         }
         InternalDispatchMessage(e) {
-          ct(e) && e.message;
+          lt(e) && e.message;
         }
         SendMessage(e) {
           const t = { type: "VirtualKeyboardMessage", ...e };
@@ -4194,11 +4208,11 @@
               this.m_ownerWindow.parent.postMessage(t, "*"));
         }
       }
-      (0, m.Cg)([g.o], lt.prototype, "ShowVirtualKeyboard", null),
-        (0, m.Cg)([g.o], lt.prototype, "ShowModalKeyboard", null),
-        (0, m.Cg)([g.o], lt.prototype, "HideVirtualKeyboard", null),
-        (0, m.Cg)([g.o], lt.prototype, "OnBrowserViewMessage", null),
-        (0, m.Cg)([g.o], lt.prototype, "OnMessage", null);
+      (0, m.Cg)([g.o], ut.prototype, "ShowVirtualKeyboard", null),
+        (0, m.Cg)([g.o], ut.prototype, "ShowModalKeyboard", null),
+        (0, m.Cg)([g.o], ut.prototype, "HideVirtualKeyboard", null),
+        (0, m.Cg)([g.o], ut.prototype, "OnBrowserViewMessage", null),
+        (0, m.Cg)([g.o], ut.prototype, "OnMessage", null);
       (0, m.Cg)(
         [g.o],
         class {
@@ -4212,9 +4226,9 @@
               e.on("message", this.OnMessage);
           }
           OnMessage(e, t, n) {
-            if (e == at) {
+            if (e == ct) {
               const e = JSON.parse(t);
-              if (ct(e))
+              if (lt(e))
                 switch (e.message) {
                   case "ShowVirtualKeyboard":
                     this.m_showKeyboard();
@@ -4231,9 +4245,9 @@
         "OnMessage",
         null,
       );
-      var ut = n(402),
-        ht = n.n(ut);
-      function dt(e) {
+      var ht = n(402),
+        dt = n.n(ht);
+      function mt(e) {
         let t = 0;
         e.children().each(function () {
           const e = s()(this),
@@ -4274,7 +4288,7 @@
               let t = s()("<div/>", {
                   "data-focusring": !0,
                   style: "position: absolute; pointer-events: none; ",
-                  class: ht().FocusRing,
+                  class: dt().FocusRing,
                 }),
                 d = u(e);
               h(t, d),
@@ -4309,43 +4323,47 @@
           OnForceMeasureFocusRing: () => i && i(),
         };
       }
-      function mt(e) {
+      function gt(e) {
         return !!e.is_repeat;
       }
-      Object.seal({ onMoveUp: gt, onMoveDown: gt }),
-        Object.seal({ onMoveRight: gt, onMoveLeft: gt });
-      function gt(e, t) {
+      Object.seal({ onMoveUp: pt, onMoveDown: pt }),
+        Object.seal({ onMoveRight: pt, onMoveLeft: pt });
+      function pt(e, t) {
         if (e.is_repeat) return !1;
         const n = t.GetRelativeDirection(e.button);
         return n == Ge.FORWARD
           ? t.BFocusFirstChild(o.GAMEPAD)
           : n == Ge.BACKWARD && t.BFocusLastChild(o.GAMEPAD);
       }
-      function pt(e) {
-        return e ? Function("event", e) : null;
+      function _t(e) {
+        if (e) {
+          const t = Function("event", e);
+          return (e) => t.apply(e.currentTarget, [e]);
+        }
+        return null;
       }
-      function _t() {
+      function ft() {
         return !0;
       }
-      function ft(e) {
+      function vt(e) {
         return "BlockMovement" == e
-          ? _t
+          ? ft
           : "RepeatNavigationBoundary" == e
-            ? mt
+            ? gt
             : e
               ? Function("detail", e)
               : null;
       }
-      function vt(e) {
+      function bt(e) {
         this.click(), e.stopPropagation();
       }
-      function bt(e) {
+      function Ct(e) {
         s()(this).find('a, input[type="checkbox"]')[0].click();
       }
-      function Ct(e, t) {
+      function At(e, t) {
         t ? s()(e).addClass("gpfocus") : s()(e).removeClass("gpfocus");
       }
-      function At(e) {
+      function wt(e) {
         const t = e.currentTarget;
         if (e.defaultPrevented || !b(t)) return !1;
         const n = e.detail.is_repeat ? 4.5 : 3.33,
@@ -4371,27 +4389,27 @@
         }
         return !1;
       }
-      const wt = new k("FocusNavigation").Debug;
-      var St;
+      const St = new k("FocusNavigation").Debug;
+      var Rt;
       !(function (e) {
         (e[(e.Unknown = 0)] = "Unknown"),
           (e[(e.NotNeeded = 1)] = "NotNeeded"),
           (e[(e.InReactTree = 2)] = "InReactTree");
-      })(St || (St = {}));
-      const Rt = new lt();
-      let It,
-        Ft = !1,
-        Tt = null;
-      function Nt(e) {
-        Ft ||
-          ((Tt = new st()),
-          (It = new v(Tt)),
-          It.RegisterForFocusChanged(Tt.GetDefaultContext()),
-          Rt.Init(window),
-          It.BIsGamepadInputExternallyControlled() || Tt.RegisterInputSource(e),
-          (It.BIsGamepadInputExternallyControlled() ||
+      })(Rt || (Rt = {}));
+      const It = new ut();
+      let Ft,
+        Tt = !1,
+        Nt = null;
+      function Et(e) {
+        Tt ||
+          ((Nt = new rt()),
+          (Ft = new v(Nt)),
+          Ft.RegisterForFocusChanged(Nt.GetDefaultContext()),
+          It.Init(window),
+          Ft.BIsGamepadInputExternallyControlled() || Nt.RegisterInputSource(e),
+          (Ft.BIsGamepadInputExternallyControlled() ||
             navigator.userAgent.includes("Valve Steam Gamepad")) &&
-            Tt.RegisterInputSource(new N(window)),
+            Nt.RegisterInputSource(new N(window)),
           (function (e) {
             s()("html").addClass("gpnav_active");
             const t = s()("body"),
@@ -4403,7 +4421,7 @@
               n.OnActivate(window),
             ),
               s()(window).on("blur", () => n.OnDeactivate(window));
-            const i = dt(t);
+            const i = mt(t);
             (o.Root.m_FocusRing = i),
               o.Root.SetProperties({
                 scrollIntoViewType: Pe.NoTransformSparseContent,
@@ -4411,24 +4429,24 @@
               o.SetIsEnabled(!0),
               o.OnActiveStateChangedCallbacks.Register((e) => {
                 const t = o.GetLastFocusedNode();
-                t?.Element && Ct(t.Element, e);
+                t?.Element && At(t.Element, e);
               }),
               Object.assign(window, {
-                legacyWebFocusNavController: Tt,
+                legacyWebFocusNavController: Nt,
                 __nav_tree_root: o,
-                __virtual_keyboard_client: Rt,
+                __virtual_keyboard_client: It,
               }),
-              Dt.set(document.body, o.Root),
-              Lt(document.body, o.Root),
-              xt(void 0, !0),
+              yt.set(document.body, o.Root),
+              Mt(document.body, o.Root),
+              kt(void 0, !0),
               e.RegisterGamepadNavigationTree(o, window),
               n.OnMount(window),
               window.document.hasFocus() && n.OnActivate(window);
             s()(document.body).on("vgp_onbuttondown", function (e) {
               o.OnRootButtonDown(e.originalEvent);
             }),
-              l(document.body, At);
-            new MutationObserver(Et).observe(document.body, {
+              l(document.body, wt);
+            new MutationObserver(Dt).observe(document.body, {
               childList: !0,
               subtree: !0,
             }),
@@ -4436,14 +4454,14 @@
                 fe = e;
               })(!0),
               (function () {
-                Object.assign(window, Ht),
+                Object.assign(window, Kt),
                   window.dispatchEvent(new CustomEvent("vgp_gamepadnavready"));
               })(),
               !1;
-          })(Tt)),
-          (Ft = !0);
+          })(Nt)),
+          (Tt = !0);
       }
-      function Et(e) {
+      function Dt(e) {
         for (const t of e) {
           const e = [],
             n = [];
@@ -4452,43 +4470,43 @@
             (t) => e.push(t),
             (e) => n.push(e),
           ),
-            e.length && xt(s()(e)),
-            n.length && Gt(s()(n));
+            e.length && kt(s()(e)),
+            n.length && xt(s()(n));
         }
       }
-      const Dt = new WeakMap(),
-        yt = new WeakMap();
-      let Ot = [];
-      function Lt(e, t) {
+      const yt = new WeakMap(),
+        Ot = new WeakMap();
+      let Lt = [];
+      function Mt(e, t) {
         if (t instanceof xe) {
           const n = t.GetDepth();
-          Ot[n] || (Ot[n] = []), Ot[n].push([e, t]);
+          Lt[n] || (Lt[n] = []), Lt[n].push([e, t]);
         }
-        Dt.set(e, t);
+        yt.set(e, t);
       }
-      function Mt(e, t) {
-        const n = yt.has(e) ? yt.get(e) : [];
-        n.push(t), yt.set(e, n);
-      }
-      function Bt(e) {
-        return "jquery" in e
-          ? Dt.get(e[0]) || St.Unknown
-          : Dt.get(e) || St.Unknown;
+      function Bt(e, t) {
+        const n = Ot.has(e) ? Ot.get(e) : [];
+        n.push(t), Ot.set(e, n);
       }
       function Pt(e) {
-        return "jquery" in e ? Dt.has(e[0]) : Dt.has(e);
+        return "jquery" in e
+          ? yt.get(e[0]) || Rt.Unknown
+          : yt.get(e) || Rt.Unknown;
       }
       function Gt(e) {
+        return "jquery" in e ? yt.has(e[0]) : yt.has(e);
+      }
+      function xt(e) {
         e.find("*")
           .addBack()
           .each(function () {
-            yt.get(this)?.forEach((e) => e()),
-              Dt.delete(this),
+            Ot.get(this)?.forEach((e) => e()),
               yt.delete(this),
-              s()(this).attr("data-nav-modal") && Vt(this);
+              Ot.delete(this),
+              s()(this).attr("data-nav-modal") && Ht(this);
           });
       }
-      function xt(e, t = !1) {
+      function kt(e, t = !1) {
         performance.now();
         const n =
           "a,button,textarea,input:not(input[type=hidden]),label:not([for]),[data-panel],[data-react-nav-root],[data-nav-modal]";
@@ -4496,25 +4514,25 @@
           .addBack(n)
           .each(function () {
             var e;
-            Pt((e = this)) || Ut(e);
+            Gt((e = this)) || Wt(e);
           }),
           (function () {
-            for (let e = Ot.length - 1; e >= 0; e--)
-              if (Ot[e])
-                for (let [t, n] of Ot[e]) {
-                  Mt(t, n.Tree.RegisterNavigationItem(n, t));
+            for (let e = Lt.length - 1; e >= 0; e--)
+              if (Lt[e])
+                for (let [t, n] of Lt[e]) {
+                  Bt(t, n.Tree.RegisterNavigationItem(n, t));
                   const e = s()(t).data("navTreeModal");
                   e &&
                     (s()(t).data(
                       "unregisterNavTree",
-                      Tt.RegisterGamepadNavigationTree(e, window),
+                      Nt.RegisterGamepadNavigationTree(e, window),
                     ),
                     e.Activate(!0));
                 }
-            Ot = [];
+            Lt = [];
           })();
       }
-      function kt(e) {
+      function Ut(e) {
         const t = s()(e.Element);
         return (
           !t.data("gpFocusDisabled") &&
@@ -4524,30 +4542,30 @@
             "hidden" !== t.css("overflow"))
         );
       }
-      function Ut(e) {
+      function Wt(e) {
         const t = s()(e),
-          n = Wt(e);
-        if (n instanceof We || n == St.InReactTree)
-          return Lt(e, St.InReactTree), St.InReactTree;
+          n = Vt(e);
+        if (n instanceof We || n == Rt.InReactTree)
+          return Mt(e, Rt.InReactTree), Rt.InReactTree;
         const i = n.Tree;
         let r,
           a = t.data("panel") || {},
-          u = kt;
+          u = Ut;
         if (
           (t.attr("data-nav-modal")
             ? (r = (function (e, t) {
-                const n = Tt.NewGamepadNavigationTree(
-                    Tt.GetDefaultContext(),
+                const n = Nt.NewGamepadNavigationTree(
+                    Nt.GetDefaultContext(),
                     "modal_dialog",
                     e,
                     { modal: !0 },
                   ),
-                  o = dt(s()(t));
+                  o = mt(s()(t));
                 return (
                   (n.Root.m_FocusRing = o),
                   n.Root.SetProperties({ focusableIfEmpty: !0 }),
                   s()(t).data("navTreeModal", n),
-                  Lt(t, n.Root),
+                  Mt(t, n.Root),
                   n.Root
                 );
               })(i, e))
@@ -4600,12 +4618,12 @@
             type: P,
             ...G
           } = a,
-          x = pt(I),
-          k = pt(F),
-          U = pt(T),
-          W = pt(N),
-          V = pt(E),
-          H = pt(M);
+          x = _t(I),
+          k = _t(F),
+          U = _t(T),
+          W = _t(N),
+          V = _t(E),
+          H = _t(M);
         P || (P = "Panel"),
           "PanelGroup" == P &&
             ({ onOKButtonHandler: x, onCancelButtonHandler: k } = (function (
@@ -4640,14 +4658,14 @@
               G,
             )),
           x &&
-            Mt(
+            Bt(
               t[0],
               (function (e, t) {
                 return c(e, "vgp_onok", h(t));
               })(t[0], x),
             ),
           k &&
-            Mt(
+            Bt(
               t[0],
               (function (e, t) {
                 return c(e, "vgp_oncancel", h(t));
@@ -4655,7 +4673,7 @@
             ),
           U &&
             A &&
-            Mt(
+            Bt(
               t[0],
               (function (e, t) {
                 return c(e, "vgp_onsecondaryaction", h(t));
@@ -4663,7 +4681,7 @@
             ),
           W &&
             w &&
-            Mt(
+            Bt(
               t[0],
               (function (e, t) {
                 return c(e, "vgp_onoptions", h(t));
@@ -4671,24 +4689,24 @@
             ),
           V &&
             S &&
-            Mt(
+            Bt(
               t[0],
               (function (e, t) {
                 return c(e, "vgp_onmenu", h(t));
               })(t[0], V),
             ),
-          H && Mt(t[0], l(t[0], H));
+          H && Bt(t[0], l(t[0], H));
         const K = (function (e, t, n, o) {
             const i = {};
             return (
-              e && (i.onMoveUp = ft(e)),
-              t && (i.onMoveRight = ft(t)),
-              n && (i.onMoveDown = ft(n)),
-              o && (i.onMoveLeft = ft(o)),
+              e && (i.onMoveUp = vt(e)),
+              t && (i.onMoveRight = vt(t)),
+              n && (i.onMoveDown = vt(n)),
+              o && (i.onMoveLeft = vt(o)),
               i
             );
           })(D, y, O, L),
-          $ = m ? rt(m) : Me.NONE;
+          $ = m ? at(m) : Me.NONE;
         $ != Me.NONE && (G.layout = $),
           p
             ? (G.navEntryPreferPosition = Be.MAINTAIN_X)
@@ -4697,27 +4715,27 @@
               : v && (G.navEntryPreferPosition = Be.PREFERRED_CHILD),
           g &&
             (!1 !== G.focusable && (G.focusable = !0),
-            t.on("vgp_onok", "firstChild" === g ? bt : vt),
+            t.on("vgp_onok", "firstChild" === g ? Ct : bt),
             t.attr("role") ||
               ("A" !== t.prop("tagName") && t.attr("role", "button")),
-            Mt(e, () => {
+            Bt(e, () => {
               t.off("vgp_onok");
             })),
           f &&
-            (t.on("vgp_onok.vkbindings", () => Rt.ShowVirtualKeyboard()),
-            t.on("click.vkbindings", () => Rt.ShowVirtualKeyboard()),
+            (t.on("vgp_onok.vkbindings", () => It.ShowVirtualKeyboard()),
+            t.on("click.vkbindings", () => It.ShowVirtualKeyboard()),
             t.on("blur.vkbindings", () => {
               document.hasFocus() &&
                 document.activeElement != e &&
-                Rt.HideVirtualKeyboard();
+                It.HideVirtualKeyboard();
             }),
-            Mt(e, () => {
+            Bt(e, () => {
               t.off(".vkbindings");
             })),
           G.focusable && void 0 === t.attr("tabIndex") && t.attr("tabIndex", 0),
-          G.focusable && r.SubscribableHasFocus.Subscribe((t) => Ct(e, t)),
+          G.focusable && r.SubscribableHasFocus.Subscribe((t) => At(e, t)),
           B &&
-            ((r.m_FocusRing = dt(t)),
+            ((r.m_FocusRing = mt(t)),
             "static" == t.css("position") && t.css("position", "relative"));
         const j = {
           fnCanTakeFocus: u,
@@ -4732,13 +4750,13 @@
           ...K,
           ...G,
         };
-        return r.SetProperties(j), Lt(e, r), r;
+        return r.SetProperties(j), Mt(e, r), r;
       }
-      function Wt(e) {
+      function Vt(e) {
         const t = e.parentElement;
         if (!t) return console.error("no parent"), null;
-        let n = Bt(t);
-        if (n == St.Unknown)
+        let n = Pt(t);
+        if (n == Rt.Unknown)
           n = (function (e) {
             let t = !1;
             switch (e.tagName) {
@@ -4754,13 +4772,13 @@
                   (n != Me.ROW && n != Me.ROW_REVERSE) || (t = !0);
                 }
             }
-            let n = St.NotNeeded;
-            return t ? (n = Ut(e)) : Lt(e, n), n;
+            let n = Rt.NotNeeded;
+            return t ? (n = Wt(e)) : Mt(e, n), n;
           })(t);
-        else if (n == St.InReactTree) return n;
-        return n instanceof xe ? n : Wt(t);
+        else if (n == Rt.InReactTree) return n;
+        return n instanceof xe ? n : Vt(t);
       }
-      function Vt(e) {
+      function Ht(e) {
         const t = s()(e).data("unregisterNavTree");
         console.assert(t, "missing unregister binding"),
           t(),
@@ -4768,45 +4786,45 @@
           s()(e).removeData("unregisterNavTree"),
           s()(e).removeClass("navTreeModal");
       }
-      const Ht = {
-        InstrumentFocusElements: xt,
+      const Kt = {
+        InstrumentFocusElements: kt,
         ForceUpdateFocusElements: function (e) {
-          Gt(s()(e)), xt(s()(e));
+          xt(s()(e)), kt(s()(e));
         },
         GPNavFocusChild: function (e) {
-          let t = Bt(e[0]);
+          let t = Pt(e[0]);
           return (
-            t instanceof xe || (t = Wt(e[0])),
+            t instanceof xe || (t = Vt(e[0])),
             t instanceof xe && t.BTakeFocus(o.APPLICATION),
             !1
           );
         },
         GPOnShowingModalWindow: function (e) {
-          wt("Showing element as modal", e);
+          St("Showing element as modal", e);
           const t = s()(e),
-            n = Pt(t);
+            n = Gt(t);
           return (
             n &&
-              (wt(
+              (St(
                 "Element already in DOM tree, forcibly re-instrumenting elements so they are parented to modal",
               ),
-              Gt(t)),
+              xt(t)),
             t.attr("data-nav-modal", "true"),
-            n && xt(t),
-            () => Vt(e)
+            n && kt(t),
+            () => Ht(e)
           );
         },
         GPShowVirtualKeyboard: function (e = !0) {
-          e ? Rt.ShowVirtualKeyboard() : Rt.HideVirtualKeyboard();
+          e ? It.ShowVirtualKeyboard() : It.HideVirtualKeyboard();
         },
         GPNavUpdateActionDescriptions: function (e, t) {
-          const n = Bt(e);
+          const n = Pt(e);
           n instanceof xe &&
             n.SetProperties({ ...n.m_Properties, actionDescriptionMap: d(t) });
         },
       };
     },
-    356: (e, t, n) => {
+    222: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4819,12 +4837,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    502: (e, t, n) => {
+    112: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(747),
-        s = n(356);
+        i = n(10),
+        s = n(222);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

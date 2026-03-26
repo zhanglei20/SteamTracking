@@ -295,6 +295,17 @@
         FollowButton: "c-TDTqD2D5mBLfTqn3fSV",
         FollowButtonText: "_2PmgMkPwEgmuCJVZLTGSPi",
         FollowLoadingText: "_2XN3sBlgsLE3n5WrKOkWxi",
+        BackgroundAnimation: "uyy8KyiiqaQ8u9bMDwblz",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1ZwgsD1DzopaHZlXaaWS7B",
+        "ItemFocusAnim-darkerGrey": "_1sm-Ag9q7YyfjTirEAUKbD",
+        "ItemFocusAnim-darkGrey": "J6U-QgbF3DbDkS-3DeQdU",
+        "ItemFocusAnim-grey": "_377hQ8s9afH681BN_ZEsfJ",
+        "ItemFocusAnim-translucent-white-10": "_3ztC4gHbTuhtfBA2YmQnsW",
+        "ItemFocusAnim-translucent-white-20": "pjQnWETBI391eZg-gLCoU",
+        "ItemFocusAnimBorder-darkGrey": "_35tkELTOnZffhYZXF6IM5p",
+        "ItemFocusAnim-green": "ubgODmIok4_aHDeaT6Dpl",
+        focusAnimation: "_3hPkc-RJEDgRJ0ItWpPsP9",
+        hoverAnimation: "_3cu-nLm0UDnrFRy4HkVrO8",
       };
     },
     chunkid: (module) => {
@@ -347,10 +358,20 @@
       module.exports = {
         "duration-app-launch": "800ms",
         storeMenuResponsiveModeWidth: "730px",
-        narrowWidth: "500px",
         SuppressScrollOnBody: "_1FFwlWIoDrtb0qdN9YUwHs",
         WishlistHoverCtn: "GXjJQihysg6S5INBKClED",
         BBCodeWishlistButton: "_1dm-6uzq_x5Gqo421G3a1r",
+        BackgroundAnimation: "Auhol3RHXIE3fQUoyOoWR",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2b6SJAbnZzhfHFRjTpAhNy",
+        "ItemFocusAnim-darkerGrey": "XywxBIK9eHokhhsZGNBan",
+        "ItemFocusAnim-darkGrey": "_3eSI5prhRv2g28mH4BvfI1",
+        "ItemFocusAnim-grey": "SwPqPFwuEkTnSchUdaYfU",
+        "ItemFocusAnim-translucent-white-10": "oXUFMy_wfkldK82-xV12m",
+        "ItemFocusAnim-translucent-white-20": "_3s81IjXe5IWP8-T018RCQq",
+        "ItemFocusAnimBorder-darkGrey": "_1Zq30UmvKFxqjOzEaqp0l",
+        "ItemFocusAnim-green": "_3G3OfrZkx3Nt3Q_A9oFTkP",
+        focusAnimation: "N5bN0xQL6oj7EZSzAeJ-B",
+        hoverAnimation: "_2MUmffXlPUO3g7xxum02Qa",
       };
     },
     chunkid: (module) => {
@@ -376,6 +397,17 @@
         Success: "zNkywkFbUJio86FBwBWwx",
         FriendCodeSelector: "_3nmSpgo_T_V0-Er7h8J2Ar",
         SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
+        BackgroundAnimation: "_3yBb7Zq-JsZsUC7j0xfwNs",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3mEJMPBWqIai6TZ5Asmwzc",
+        "ItemFocusAnim-darkerGrey": "_1bq8dQKi1_Y3Cx4SqKPEbe",
+        "ItemFocusAnim-darkGrey": "qqYMXWoOu5it3a3atTegO",
+        "ItemFocusAnim-grey": "ULAazkgE1qcpwKYFDQ6cA",
+        "ItemFocusAnim-translucent-white-10": "_2_8edxNWb8zuaY6iv3wJSx",
+        "ItemFocusAnim-translucent-white-20": "_1TV5evTLXXGDV16o8ltkb7",
+        "ItemFocusAnimBorder-darkGrey": "_2N1KfmpWvdxv64J5Rs82CX",
+        "ItemFocusAnim-green": "_3UU3hyYWsBPGsxljxX3hbB",
+        focusAnimation: "_2u4UlTYeTMTUGVGicBx0My",
+        hoverAnimation: "_16_WHz1Oh5Jy0J3qvG4rto",
       };
     },
     chunkid: (module) => {
@@ -7367,6 +7399,7 @@
                           editModel: _,
                           backgroundSection: __webpack_require__[_],
                           bHasBackgroundImageControls: !0,
+                          bDisallowNamedStyles: !0,
                         }),
                       ],
                     }),
@@ -7463,8 +7496,11 @@
                     editModel: _,
                   }),
                 }),
-                (0, _.jsx)(_, {
-                  editModel: _,
+                (0, _.jsx)(_._, {
+                  clanSteamID: _.GetClanSteamID(),
+                  children: (0, _.jsx)(_, {
+                    editModel: _,
+                  }),
                 }),
               ],
             }),
@@ -7654,7 +7690,8 @@
         });
       }
       function _(_) {
-        const _ = _._.GetEditModel();
+        const _ = _._.GetEditModel(),
+          _ = (0, _._)(() => _.GetEventModel().jsondata.sale_discount_event_id);
         return (0, _.jsxs)(_._, {
           requireAdmin: !0,
           clanSteamID: _.GetClanSteamID(),
@@ -7754,6 +7791,12 @@
                   )
                 : (0, _._)("#Sale_CreateDiscountEvent"),
             }),
+            !!_ &&
+              (0, _.jsx)("a", {
+                href: `${_._.PARTNER_BASE_URL}admin/editdiscountevent/${_}`,
+                target: "_blank",
+                children: "Edit Discount Event",
+              }),
           ],
         });
       }

@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "จำนวนที่วางจำหน่าย: %1$s",
 	"Bucket_PriceFrom": "จาก %1$s",
 	"AccessorySearch_AttachedAccessoryType": "มาพร้อม%1$s",
+	"FilterResults_Placeholder": "กรองผลลัพธ์...",
 	"AdvancedSearch_Header": "การค้นหาขั้นสูง",
 	"AdvancedSearch_Link": "การค้นหาขั้นสูง",
 	"MarketSearch_Placeholder": "ค้นหาไอเท็ม...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "ต่ำสุด",
 	"AssetProperty_Range_MaxPlaceholder": "สูงสุด",
 	"Accessories_FieldSectionLabel": "อุปกรณ์เสริม",
-	"Listing_EnhancedAppearance_Missing": "รายการนี้ยังไม่มีภาพที่เป็นเอกลักษณ์หรือที่ปรับแต่งแล้ว ภาพที่แสดงที่นี่อาจแตกต่างจากผลิตภัณฑ์ที่แสดงในรายการแล้วเล็กน้อย"
+	"Item_CountryBuySellRestricted": "คุณไม่สามารถสั่งซื้อไอเท็มนี้ได้ เนื่องจากการซื้อและการขายไอเท็มประเภทนี้ได้ถูกปิดการใช้งานในประเทศของคุณ",
+	"Item_CountryBuyRestricted": "คุณไม่สามารถสั่งซื้อไอเท็มนี้ได้ เนื่องจากการซื้อและการขายไอเท็มประเภทนี้ได้ถูกปิดการใช้งานในประเทศของคุณ",
+	"Listing_EnhancedAppearance_Missing": "รายการนี้ยังไม่มีภาพที่เป็นเอกลักษณ์หรือที่ปรับแต่งแล้ว ภาพที่แสดงที่นี่อาจแตกต่างจากผลิตภัณฑ์ที่แสดงในรายการแล้วเล็กน้อย",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

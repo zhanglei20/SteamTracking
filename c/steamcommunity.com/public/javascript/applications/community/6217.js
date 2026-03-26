@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Antal till salu: %1$s",
 	"Bucket_PriceFrom": "Från %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s fasthängt",
+	"FilterResults_Placeholder": "Filtrera resultat ...",
 	"AdvancedSearch_Header": "Avancerad sökning",
 	"AdvancedSearch_Link": "Avancerad sökning",
 	"MarketSearch_Placeholder": "Sök efter en artikel ...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
 	"Accessories_FieldSectionLabel": "Tillbehör",
-	"Listing_EnhancedAppearance_Missing": "Den här annonsen har ännu inga unika eller förbättrade bilder. Bilden som visas här kan skilja sig något från artikeln som annonseras."
+	"Item_CountryBuySellRestricted": "Du kan inte köpa detta föremål eftersom köp och försäljning av denna typ av föremål är inaktiverat i ditt land.",
+	"Item_CountryBuyRestricted": "Du kan inte köpa detta föremål eftersom köp av denna typ av föremål är inaktiverat i ditt land.",
+	"Listing_EnhancedAppearance_Missing": "Den här annonsen har ännu inga unika eller förbättrade bilder. Bilden som visas här kan skilja sig något från artikeln som annonseras.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

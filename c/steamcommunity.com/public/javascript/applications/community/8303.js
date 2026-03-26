@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "판매 수량: %1$s개",
 	"Bucket_PriceFrom": "시작 가격: %1$s",
 	"AccessorySearch_AttachedAccessoryType": "부착된 %1$s",
+	"FilterResults_Placeholder": "검색 결과 필터링...",
 	"AdvancedSearch_Header": "고급 검색",
 	"AdvancedSearch_Link": "고급 검색",
 	"MarketSearch_Placeholder": "아이템 검색...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "최소",
 	"AssetProperty_Range_MaxPlaceholder": "최대",
 	"Accessories_FieldSectionLabel": "액세서리",
-	"Listing_EnhancedAppearance_Missing": "이 판매 등록 아이템은 아직 고유 이미지 또는 보정된 이미지가 없습니다. 여기에 표시된 이미지는 실제 아이템과 약간 다를 수 있습니다."
+	"Item_CountryBuySellRestricted": "고객님의 국가에서는 이러한 유형의 아이템을 구매하거나 판매할 수 없으므로 이 아이템을 구매할 수 없습니다.",
+	"Item_CountryBuyRestricted": "고객님의 국가에서는 이러한 유형의 아이템을 구매할 수 없으므로 이 아이템을 구매할 수 없습니다.",
+	"Listing_EnhancedAppearance_Missing": "이 판매 등록 아이템은 아직 고유 이미지 또는 보정된 이미지가 없습니다. 여기에 표시된 이미지는 실제 아이템과 약간 다를 수 있습니다.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

@@ -366,6 +366,8 @@
           className: (_) => _[`Variant-${_}`],
         },
       ];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = [
           ..._._,
           {
@@ -404,6 +406,7 @@
               children: _,
               onClick: _,
               icon: _,
+              gamepadFocusable: _ = !0,
               ..._
             } = _,
             _ = _
@@ -414,8 +417,9 @@
                   children: _,
                 })
               : _,
-            _ = _ ? void 0 : _;
-          return (0, _.jsx)("button", {
+            _ = _ ? void 0 : _,
+            _ = _ && _._.IN_GAMEPADUI ? _._ : "button";
+          return (0, _.jsx)(_, {
             type: "button",
             ...(0, _._)(
               {
@@ -470,12 +474,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, "flow-children": __webpack_require__, ..._ } = _;
-        __webpack_require__ && (_.layout = (0, _._)(__webpack_require__));
-        const { ref: _, node: _ } = (0, _._)(_),
-          _ = (0, _._)(_, _.props?.ref);
+        const { children: _, "flow-children": __webpack_require__, ..._ } = _,
+          { gamepadEvents: _ } = (0, _._)(_);
+        __webpack_require__ && (_.layout = (0, _._)(__webpack_require__)),
+          _.onOKButton ||
+            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
+        const { ref: _, node: _ } = (0, _._)(_);
+        (0, _._)(_, _);
+        const _ = (0, _._)(_, _.props?.ref);
         return (0, _.jsx)(_._.Provider, {
           value: _,
           children: _.cloneElement(_, {
@@ -498,8 +507,10 @@
             },
             _,
           ),
+          _ = !_.disabled && !!_.onClick,
           _ = _;
         return (0, _.jsx)(_, {
+          focusable: _,
           children: (0, _.jsx)(_, {
             ref: __webpack_require__,
             ..._,

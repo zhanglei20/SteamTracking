@@ -373,6 +373,17 @@
         ForceDesktop: "_3qIuY9S_vXm3IQS-uE9SRS",
         PopoutSubMenu: "Baq37ml_4RsqEDikF0aIo",
         PopoutSubMenuItems: "_2fZ_eG4hoUgJoNBzVAW8wq",
+        BackgroundAnimation: "_3mu2U32Y_2WuSVGodurd6a",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1oGSmxXXFpN5G7Jn9ZvEQS",
+        "ItemFocusAnim-darkerGrey": "_3lg1LMj3mXezJ7ascb4yGV",
+        "ItemFocusAnim-darkGrey": "_2wO0UJLCBVNzypL_1QtVVs",
+        "ItemFocusAnim-grey": "_7GGFchhgqc71nZ8eL_lya",
+        "ItemFocusAnim-translucent-white-10": "_3ZLBhyvDidB4Rfz45C_SYe",
+        "ItemFocusAnim-translucent-white-20": "_3tuAQj0tTIvILlQs8SVJ6O",
+        "ItemFocusAnimBorder-darkGrey": "_2ndsTZA8rKNYYxX6q4X62O",
+        "ItemFocusAnim-green": "_3dGZBujqGTb6MvSpwfXt-u",
+        focusAnimation: "_1eQxz4PDgw0-4zeOxZc9zb",
+        hoverAnimation: "uLTwa30_-yxoQKi5qqCAw",
       };
     },
     chunkid: (module) => {
@@ -478,6 +489,17 @@
       module.exports = {
         "duration-app-launch": "800ms",
         DropDownControlButton: "v8oJcDOQF6xmlVTw4VhOr",
+        BackgroundAnimation: "_39ftBgrwHL79vzBWzTUNIg",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1uRxKXzp4hyFG853DRpRmG",
+        "ItemFocusAnim-darkerGrey": "gmgYjyVXiyoE4dXuiyvRe",
+        "ItemFocusAnim-darkGrey": "_wAkIFq95RDIO0BaFscJ-",
+        "ItemFocusAnim-grey": "_2EU0bFj-iDnGzS3y22Pm1n",
+        "ItemFocusAnim-translucent-white-10": "zCo-rS_8G4PFjVNj2HddR",
+        "ItemFocusAnim-translucent-white-20": "_3dLS4qNfRaL3VlHxF0assn",
+        "ItemFocusAnimBorder-darkGrey": "_2qWT6FmefGsz6vW4GyAN1d",
+        "ItemFocusAnim-green": "VJdx426NYwPhzacwDjqUy",
+        focusAnimation: "_1VSndovYnDm2jbIx6FU3Nq",
+        hoverAnimation: "_2tJDT6WmelyKdUlLq2gtna",
       };
     },
     chunkid: (module) => {
@@ -585,6 +607,8 @@
         "ItemFocusAnim-translucent-white-20": "_1iqNj4v83-vYdxWouoYIbw",
         "ItemFocusAnimBorder-darkGrey": "_2Pzyj6rGS2MYa48LGSbRdv",
         "ItemFocusAnim-green": "_2C-5CyKHqs57xJb0nU1LnG",
+        focusAnimation: "_3aA7B5vDTJc5xq6IfXhQ2H",
+        hoverAnimation: "_12ndx-pa_lUGfXXWOFQVSY",
       };
     },
     chunkid: (module) => {
@@ -613,6 +637,17 @@
         Transparent: "_1ahzMoQaAT-POqYjqcQSCt",
         HidePageListButton: "_3LLH_F43MTu6UtG4Z3kudv",
         ReturnToPageListButton: "_1cWmu5TUWFAVHlv1EVaF8e",
+        BackgroundAnimation: "_31dp93HtW4YaAIrv5kQNht",
+        "ItemFocusAnim-darkerGrey-nocolor": "_34v5-JW2L6fQ4YmSbk9AaR",
+        "ItemFocusAnim-darkerGrey": "_2hiPwZ5sHjd1palQvy9OrL",
+        "ItemFocusAnim-darkGrey": "_8LuF4KlRbCw_drO7e2TC7",
+        "ItemFocusAnim-grey": "_2xSXLf_M9pyhcs0Up0YB3t",
+        "ItemFocusAnim-translucent-white-10": "_3XpUY5O65d5iC8QOTibOTo",
+        "ItemFocusAnim-translucent-white-20": "TtpwXKTKHcg8dU-yHafz8",
+        "ItemFocusAnimBorder-darkGrey": "_1XsIqwGv6cpC9wDe_vUw01",
+        "ItemFocusAnim-green": "Sv4pIC9tV5_-yNVWid_iZ",
+        focusAnimation: "W2aVTuNiYbD-L-tBboMKB",
+        hoverAnimation: "_2L5cxouAMAylE7_T3HQoRf",
       };
     },
     chunkid: (module) => {
@@ -830,6 +865,17 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     chunkid: (module) => {
@@ -1010,6 +1056,17 @@
         SteamTVSteam: "_1GjVGP2qdwSOEBKimtRG0k",
         SteamTVTV: "_12AVA1wr7SWXg9INaLfBzD",
         FlipInRTL: "AMU5Zvf1pJLZGVqbpGcUC",
+        BackgroundAnimation: "amz8jVfJ2MOIPnaUYMOgI",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3pY66EiNnfad09UHGMqtd4",
+        "ItemFocusAnim-darkerGrey": "_2JoqRmzZpoTtL_KIVWXd0a",
+        "ItemFocusAnim-darkGrey": "NmpWlMoGlon2VMO2kUZxr",
+        "ItemFocusAnim-grey": "_1uq0bG0F5JVFzWlPHYMXB7",
+        "ItemFocusAnim-translucent-white-10": "_3xDNjaNkQ-uP0-lcJ8G7gP",
+        "ItemFocusAnim-translucent-white-20": "vYKrwRtlsPCKPnSf3CU-7",
+        "ItemFocusAnimBorder-darkGrey": "_3h8yQpj5B4lqfo4rvQXD4p",
+        "ItemFocusAnim-green": "_2JSjyAe00zqEy25fUVQS5H",
+        focusAnimation: "_19xVMCOSnHPfsYR_llwrJD",
+        hoverAnimation: "_26wdGOzkKTLjBLc0bu8-gV",
       };
     },
     chunkid: (module) => {
@@ -6124,8 +6181,7 @@
             (function (_, _, _) {
               _.setQueryData(_(_, "include_all_purchase_options"), {
                 purchase_options: _.purchase_options,
-                invalid_purchase_options: _.invalid_purchase_options,
-                accessories: _.accessories,
+                package_groups: _.package_groups,
               });
             })(_, _, _),
           _.include_included_items &&
@@ -6148,8 +6204,6 @@
         "reviews",
         "game_rating",
         "purchase_options",
-        "accessories",
-        "invalid_purchase_options",
         "screenshots",
         "trailers",
         "supported_languages",
@@ -6158,6 +6212,7 @@
         "links",
         "platforms",
         "release",
+        "package_groups",
       ];
       function _(_) {
         const _ = {
@@ -6528,8 +6583,8 @@
             (_[(_.TooltipHint = 4)] = "TooltipHint"),
             (_[(_.NoTaskbarIcon = 8)] = "NoTaskbarIcon"),
             (_[(_.Resizable = 16)] = "Resizable"),
-            (_[(_.ScalePosition = 32)] = "ScalePosition"),
-            (_[(_.ScaleSize = 64)] = "ScaleSize"),
+            (_[(_.NoScalePosition = 32)] = "NoScalePosition"),
+            (_[(_.NoScaleSize = 64)] = "NoScaleSize"),
             (_[(_.Maximized = 128)] = "Maximized"),
             (_[(_.Composited = 256)] = "Composited"),
             (_[(_.NotFocusable = 512)] = "NotFocusable"),
@@ -7818,7 +7873,6 @@
         const { ModalManager: _ } = _,
           [__webpack_require__, _] = _.useState(void 0),
           [_, _] = _.useState(!0),
-          _ = _.useRef(0),
           _ = _.useCallback(() => {
             _.startTransition(() => {
               _(!0);
@@ -7832,10 +7886,9 @@
               });
           }, [_, __webpack_require__, _]);
         const _ = _.useCallback((_) => {
-          _.current++,
-            _.startTransition(() => {
-              _((_) => (_ === _ ? void 0 : _));
-            });
+          _.startTransition(() => {
+            _((_) => (_ === _ ? void 0 : _));
+          });
         }, []);
         return __webpack_require__
           ? (0, _.jsx)(
@@ -7844,7 +7897,7 @@
                 onMeasureComplete: _,
                 request: __webpack_require__,
               },
-              _.current,
+              __webpack_require__._,
             )
           : null;
       }
@@ -7978,6 +8031,7 @@
         m_OnModalHiddenCallbacks = new _._();
         m_cMountedOverlays = 0;
         m_rgMeasureModalRequests = [];
+        m_nMeasureRequestID = 0;
         m_OnMeasureModal = new _._();
         m_rgLegacyPopupModals = [];
         m_OnLegacyPopupModalCountChanged = new _._();
@@ -8048,10 +8102,6 @@
             this.OnModalCountChanged("hide");
         }
         ShowModalInternal(_) {
-          (0, _._)(
-            !this.m_bOnlyPopups,
-            "Attempting to show modal in popup-only modal manager; will not display.",
-          );
           const _ = new _(_);
           this.m_rgModals.push(_);
           const _ = {
@@ -8114,6 +8164,7 @@
         }
         RequestModalMeasure(_, _, _) {
           this.m_rgMeasureModalRequests.push({
+            _: this.m_nMeasureRequestID++,
             rctToMeasure: _,
             fnResults: _,
             promiseContentReady: _,
@@ -15216,82 +15267,66 @@
               alt: _,
             });
       }
-      class _ extends _.Component {
-        m_refImage = _.createRef();
-        constructor(_) {
-          super(_),
-            (this.state = {
-              nImage: 0,
-              nPropChangeCounter: 0,
-            });
-        }
-        componentDidUpdate(_, _) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(_.rgSources) &&
-            this.setState({
-              nImage: 0,
-              nPropChangeCounter: _.nPropChangeCounter + 1,
-            });
-        }
-        get src() {
-          let _ = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (_ = this.props.rgSources[this.state.nImage]),
-            _ ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (_ =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            _
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(_) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              _,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
+      function _(_) {
+        const {
+            rgSources: _,
+            onIncrementalError: __webpack_require__,
+            onError: _,
+            strAltText: _,
+            ref: _,
+            ..._
+          } = _,
+          _ = _.useRef(null),
+          [_, _] = _.useState(0),
+          [_, _] = _.useState(0);
+        _.useImperativeHandle(
+          _,
+          () => ({
+            imgRef: _,
+            nSourceIndex: _,
+            nSourceLength: _.length,
+          }),
+          [_, _, _],
+        );
+        const _ = _.useMemo(() => JSON.stringify(_), [_]);
+        _.useEffect(() => {
+          _(0), _((_) => _ + 1);
+        }, [_]);
+        const _ = _.useMemo(() => {
+            let _ = "";
+            return (
+              _ && _.length > _ && (_ = _[_]),
+              _ ||
+                (console.warn(
+                  "MultiSourceImage created with no image src",
+                  _,
+                  _,
+                ),
+                (_ =
+                  "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+              _
             );
-          let _ = this.state.nImage + 1;
-          _ >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(_),
-            _ < this.props.rgSources.length &&
-              this.setState({
-                nImage: _,
-              });
-        }
-        render() {
-          const {
-              rgSources: _,
-              onIncrementalError: _,
-              onError: __webpack_require__,
-              strAltText: _,
-              ..._
-            } = this.props,
-            _ = this.src,
-            _ = this.state.nPropChangeCounter;
-          return (0, _.jsx)(
-            "img",
-            {
-              ref: this.m_refImage,
-              ..._,
-              src: _,
-              onError: this.OnImageError,
-              alt: _,
+          }, [_, _, _]),
+          _ = _.useCallback(
+            (_) => {
+              __webpack_require__?.(_, _[_], _);
+              const _ = _ + 1;
+              _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            _,
+            [_, _, __webpack_require__, _],
           );
-        }
+        return (0, _.jsx)(
+          "img",
+          {
+            ref: _,
+            ..._,
+            src: _,
+            onError: _,
+            alt: _,
+          },
+          _,
+        );
       }
-      (0, _._)([_._], _.prototype, "OnImageError", null);
       class _ {
         reactNodes = [];
         AppendText(_, _ = !1) {
@@ -15640,218 +15675,10 @@
               : null;
         }
       }
-      var _,
-        _ = __webpack_require__("chunkid"),
+      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      !(function (_) {
-        (_.full = ""),
-          (_.background_main = "_960x311"),
-          (_.background_mini = "_480x156"),
-          (_.capsule_main = "_400x225"),
-          (_.spotlight_main = "_1054x230");
-      })(_ || (_ = {}));
-      const _ = [
-        "localized_image_group",
-        "link_capsule",
-        "product_mobile_banner_override",
-        "product_banner_override",
-        "sale_section_title",
-        "schedule_track_art",
-        "localized_background_art",
-      ];
-      const _ = "{STEAM_CLAN_IMAGE}",
-        _ = "{STEAM_CLAN_LOC_IMAGE}";
-      var _ = __webpack_require__("chunkid");
-      const _ = {
-        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
-        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
-        ReplacementTokenToClanImageURL(_) {
-          return (_ = _.replace(_, this.GetBaseURL())).replace(
-            "http://",
-            "https://",
-          );
-        },
-        ExtractHashFromBBCodeURL(_) {
-          const _ =
-            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
-              _,
-            );
-          return _?.groups
-            ? [_.groups.filename, parseInt(_.groups.clanid)]
-            : [void 0, void 0];
-        },
-        GetExtensionString: (_) =>
-          (null != _.file_type
-            ? (function (_) {
-                switch (_) {
-                  case 1:
-                    return ".jpg";
-                  case 2:
-                    return ".gif";
-                  case 3:
-                    return ".png";
-                  case 5:
-                    return ".webm";
-                  case 4:
-                    return ".mp4";
-                  case 7:
-                    return ".srt";
-                  case 6:
-                    return ".vtt";
-                  case 10:
-                    return ".webp";
-                }
-              })(_.file_type)
-            : null) ?? ".jpg",
-        GetHashAndExt(_) {
-          return _ ? _.image_hash + this.GetExtensionString(_) : null;
-        },
-        GetThumbHashAndExt(_) {
-          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
-        },
-        GetHashFromHashAndExt(_) {
-          let _ = _.substring(_.lastIndexOf("."));
-          return _.substring(0, _.length - _.length);
-        },
-        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _.full) {
-          return this.GenerateURLFromHashAndExtAndLang(
-            _,
-            _,
-            __webpack_require__,
-            -1,
-            void 0,
-          );
-        },
-        GenerateURLFromHashAndExtAndLang(
-          _,
-          _,
-          __webpack_require__ = _.full,
-          _,
-          _,
-        ) {
-          _ instanceof _._ && (_ = _.GetAccountID());
-          let _ = this.GetBaseURL();
-          const _ = null != _ && -1 != _;
-          if (__webpack_require__ != _.full || _) {
-            let _ = _.substring(_.lastIndexOf(".")),
-              _ = _.substring(0, _.length - _.length);
-            return _ && 0 != _ && "localized_image_group" == _
-              ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
-              : _ + _ + "/" + _ + __webpack_require__ + _;
-          }
-          return _ + _ + "/" + _;
-        },
-        GetHashAndExtFromURL(_) {
-          let _ = this.GetBaseURL();
-          return _?.startsWith(_)
-            ? -1 == (_ = _.substring(_.length)).indexOf("/")
-              ? null
-              : (_ = _.substring(_.indexOf("/") + 1))
-            : null;
-        },
-        GenerateEditableURLFromHashAndExt(_, _, _) {
-          let _ =
-            _._.COMMUNITY_BASE_URL +
-            "gid/" +
-            _.ConvertTo64BitString() +
-            "/showclanimage/?image_hash_and_ext=" +
-            _;
-          return _ && (_ += "&lang=" + _), _;
-        },
-        GetMimeType: (_) =>
-          (function (_) {
-            const _ = _.toLowerCase();
-            return _.endsWith(".jpg") || _.endsWith(".jpeg")
-              ? "image/jpeg"
-              : _.endsWith(".png")
-                ? "image/png"
-                : _.endsWith(".gif")
-                  ? "image/gif"
-                  : _.endsWith(".mp4")
-                    ? "video/mp4"
-                    : _.endsWith(".webm")
-                      ? "video/webm"
-                      : _.endsWith(".srt")
-                        ? "text/srt"
-                        : _.endsWith(".vtt")
-                          ? "text/vtt"
-                          : _.endsWith(".webp")
-                            ? "image/webp"
-                            : void 0;
-          })(_),
-        async AsyncGetImageResolution(_, _, _, _, _) {
-          const _ =
-              _ +
-              this.GetExtensionString({
-                file_type: _,
-              }),
-            _ = this.GenerateEditableURLFromHashAndExt(_, _);
-          return await this.AsyncGetImageResolutionInternal(_, _, _);
-        },
-        async AsyncGetImageResolutionInternal(_, _, _) {
-          const _ = (function () {
-            let _, _;
-            return {
-              promise: new Promise((_, _) => {
-                (_ = _), (_ = _);
-              }),
-              resolve: _,
-              reject: _,
-            };
-          })();
-          let _ = new Image();
-          (_.crossOrigin = "anonymous"),
-            (_.onerror = (_) => {
-              const _ = {
-                success: 2,
-              };
-              _ ||
-                ((_.err_msg =
-                  "Load fail on url " +
-                  _ +
-                  " with error: " +
-                  (0, _._)(_).strErrorMsg),
-                console.error(_.err_msg)),
-                (_.success = 2),
-                _.resolve(_);
-            }),
-            (_.onload = () => {
-              const _ = {
-                success: 2,
-              };
-              (_.width = _.width),
-                (_.height = _.height),
-                (0, _._)(
-                  _.width > 0 && _.height > 0,
-                  "unexpected image resolution discovered for strURL: " + _,
-                ),
-                (_.success = 1),
-                _.resolve(_);
-            }),
-            (_.src = _),
-            _.token.promise.catch(() => {
-              const _ = {
-                success: 2,
-              };
-              return (_.onload = () => {}), (_.success = 52), _;
-            });
-          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
-          let _;
-          try {
-            _ = await Promise.race([_, _.promise]);
-          } catch {
-            _ = {
-              success: 16,
-              err_msg: "We timed out processing images",
-            };
-          }
-          return _;
-        },
-        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
-      };
       class _ {
         constructor() {
           (0, _._)(this);
@@ -17761,6 +17588,214 @@
         localized_broadcast_left_image: new Array(31),
         localized_broadcast_right_image: new Array(31),
         broadcast_whitelist: [],
+      };
+      var _,
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.full = ""),
+          (_.background_main = "_960x311"),
+          (_.background_mini = "_480x156"),
+          (_.capsule_main = "_400x225"),
+          (_.spotlight_main = "_1054x230");
+      })(_ || (_ = {}));
+      const _ = [
+        "localized_image_group",
+        "link_capsule",
+        "product_mobile_banner_override",
+        "product_banner_override",
+        "sale_section_title",
+        "schedule_track_art",
+        "localized_background_art",
+      ];
+      const _ = "{STEAM_CLAN_IMAGE}",
+        _ = "{STEAM_CLAN_LOC_IMAGE}";
+      const _ = {
+        GetBaseURL: () => `${_._.CLAN_CDN_ASSET_URL}images/`,
+        GetBaseURLV2: () => `${_._.CLAN_CDN_ASSET_URL}locimages/`,
+        ReplacementTokenToClanImageURL(_) {
+          return (_ = _.replace(_, this.GetBaseURL())).replace(
+            "http://",
+            "https://",
+          );
+        },
+        ExtractHashFromBBCodeURL(_) {
+          const _ =
+            /\/(?<clanid>[0-9]+)\/(?<filename>[0-9a-f]*)(?<extension>\.[^\.]*)$/.exec(
+              _,
+            );
+          return _?.groups
+            ? [_.groups.filename, parseInt(_.groups.clanid)]
+            : [void 0, void 0];
+        },
+        GetExtensionString: (_) =>
+          (null != _.file_type
+            ? (function (_) {
+                switch (_) {
+                  case 1:
+                    return ".jpg";
+                  case 2:
+                    return ".gif";
+                  case 3:
+                    return ".png";
+                  case 5:
+                    return ".webm";
+                  case 4:
+                    return ".mp4";
+                  case 7:
+                    return ".srt";
+                  case 6:
+                    return ".vtt";
+                  case 10:
+                    return ".webp";
+                }
+              })(_.file_type)
+            : null) ?? ".jpg",
+        GetHashAndExt(_) {
+          return _ ? _.image_hash + this.GetExtensionString(_) : null;
+        },
+        GetThumbHashAndExt(_) {
+          return _ ? _.thumbnail_hash + this.GetExtensionString(_) : null;
+        },
+        GetHashFromHashAndExt(_) {
+          let _ = _.substring(_.lastIndexOf("."));
+          return _.substring(0, _.length - _.length);
+        },
+        GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
+        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _.full) {
+          return this.GenerateURLFromHashAndExtAndLang(
+            _,
+            _,
+            __webpack_require__,
+            -1,
+            void 0,
+          );
+        },
+        GenerateURLFromHashAndExtAndLang(
+          _,
+          _,
+          __webpack_require__ = _.full,
+          _,
+          _,
+        ) {
+          _ instanceof _._ && (_ = _.GetAccountID());
+          let _ = this.GetBaseURL();
+          const _ = null != _ && -1 != _;
+          if (__webpack_require__ != _.full || _) {
+            let _ = _.substring(_.lastIndexOf(".")),
+              _ = _.substring(0, _.length - _.length);
+            return _ && 0 != _ && "localized_image_group" == _
+              ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
+              : _ + _ + "/" + _ + __webpack_require__ + _;
+          }
+          return _ + _ + "/" + _;
+        },
+        GetHashAndExtFromURL(_) {
+          let _ = this.GetBaseURL();
+          return _?.startsWith(_)
+            ? -1 == (_ = _.substring(_.length)).indexOf("/")
+              ? null
+              : (_ = _.substring(_.indexOf("/") + 1))
+            : null;
+        },
+        GenerateEditableURLFromHashAndExt(_, _, _) {
+          let _ =
+            _._.COMMUNITY_BASE_URL +
+            "gid/" +
+            _.ConvertTo64BitString() +
+            "/showclanimage/?image_hash_and_ext=" +
+            _;
+          return _ && (_ += "&lang=" + _), _;
+        },
+        GetMimeType: (_) =>
+          (function (_) {
+            const _ = _.toLowerCase();
+            return _.endsWith(".jpg") || _.endsWith(".jpeg")
+              ? "image/jpeg"
+              : _.endsWith(".png")
+                ? "image/png"
+                : _.endsWith(".gif")
+                  ? "image/gif"
+                  : _.endsWith(".mp4")
+                    ? "video/mp4"
+                    : _.endsWith(".webm")
+                      ? "video/webm"
+                      : _.endsWith(".srt")
+                        ? "text/srt"
+                        : _.endsWith(".vtt")
+                          ? "text/vtt"
+                          : _.endsWith(".webp")
+                            ? "image/webp"
+                            : void 0;
+          })(_),
+        async AsyncGetImageResolution(_, _, _, _, _) {
+          const _ =
+              _ +
+              this.GetExtensionString({
+                file_type: _,
+              }),
+            _ = this.GenerateEditableURLFromHashAndExt(_, _);
+          return await this.AsyncGetImageResolutionInternal(_, _, _);
+        },
+        async AsyncGetImageResolutionInternal(_, _, _) {
+          const _ = (function () {
+            let _, _;
+            return {
+              promise: new Promise((_, _) => {
+                (_ = _), (_ = _);
+              }),
+              resolve: _,
+              reject: _,
+            };
+          })();
+          let _ = new Image();
+          (_.crossOrigin = "anonymous"),
+            (_.onerror = (_) => {
+              const _ = {
+                success: 2,
+              };
+              _ ||
+                ((_.err_msg =
+                  "Load fail on url " +
+                  _ +
+                  " with error: " +
+                  (0, _._)(_).strErrorMsg),
+                console.error(_.err_msg)),
+                (_.success = 2),
+                _.resolve(_);
+            }),
+            (_.onload = () => {
+              const _ = {
+                success: 2,
+              };
+              (_.width = _.width),
+                (_.height = _.height),
+                (0, _._)(
+                  _.width > 0 && _.height > 0,
+                  "unexpected image resolution discovered for strURL: " + _,
+                ),
+                (_.success = 1),
+                _.resolve(_);
+            }),
+            (_.src = _),
+            _.token.promise.catch(() => {
+              const _ = {
+                success: 2,
+              };
+              return (_.onload = () => {}), (_.success = 52), _;
+            });
+          const _ = new Promise((_, _) => setTimeout(() => _(), 1e4));
+          let _;
+          try {
+            _ = await Promise.race([_, _.promise]);
+          } catch {
+            _ = {
+              success: 16,
+              err_msg: "We timed out processing images",
+            };
+          }
+          return _;
+        },
+        BIsClanImageVideo: (_) => 4 == _.file_type || 5 == _.file_type,
       };
       var _ = __webpack_require__("chunkid");
       class _ {
@@ -30674,7 +30709,7 @@
                   "string" == typeof _ && (0, _._)(_) && (_ = _(_));
                 }
                 const _ =
-                    "button" == _(_.args, "style") ? _().LinkButton : null,
+                    "button" == _(_.args, "style") ? _().LinkButton : void 0,
                   _ = _ && _(_.args, "buttoncolor");
                 let _ = _(_.args, "id");
                 _ &&
@@ -31095,7 +31130,7 @@
             {
               Constructor: function (_) {
                 const _ = _(_.args),
-                  _ = "button" == _(_.args, "style") ? _().LinkButton : null,
+                  _ = "button" == _(_.args, "style") ? _().LinkButton : void 0,
                   _ = _ && _(_.args, "buttoncolor");
                 return (0, _.jsx)(_, {
                   className: _,
@@ -31223,33 +31258,6 @@
             },
           ],
         ]);
-      function _(_, _, __webpack_require__ = 0) {
-        if (_ && 0 != _.length) {
-          if (_?.startsWith(_)) return _.ReplacementTokenToClanImageURL(_);
-          if (_?.startsWith(_)) {
-            const _ = new Array(),
-              _ = _.GetBaseURL(),
-              _ = _.substring(23),
-              _ = parseInt(_.substring(0, _.indexOf("/"))),
-              _ = _.substring(_.indexOf("/") + 1),
-              _ = _.GetHashFromHashAndExt(_),
-              _ = _.GetExtStringFromHashAndExt(_);
-            if (null != _) {
-              let _ = (0, _._)(_);
-              _.push(
-                _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-              ),
-                4 == _ &&
-                  ((_ = (0, _._)((0, _._)(_))),
-                  _.push(
-                    _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-                  ));
-            }
-            return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
-          }
-          return _;
-        }
-      }
       function _(_, _) {
         return void 0 === _ ? _[""] : _[_];
       }
@@ -31770,6 +31778,30 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
+      function _(_, _, __webpack_require__ = 0) {
+        if (!_ || 0 == _.length) return null;
+        if (_?.startsWith(_)) return _.ReplacementTokenToClanImageURL(_);
+        if (_?.startsWith(_)) {
+          const _ = new Array(),
+            _ = _.GetBaseURL(),
+            _ = _.substring(23),
+            _ = parseInt(_.substring(0, _.indexOf("/"))),
+            _ = _.substring(_.indexOf("/") + 1),
+            _ = _.GetHashFromHashAndExt(_),
+            _ = _.GetExtStringFromHashAndExt(_);
+          if (null != _) {
+            let _ = (0, _._)(_);
+            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__),
+              4 == _ &&
+                ((_ = (0, _._)((0, _._)(_))),
+                _.push(
+                  _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
+                ));
+          }
+          return _.push(_.GenerateURLFromHashAndExt(_, _)), _;
+        }
+        return _;
+      }
       const _ = new Map([
           ...Array.from(_.entries()),
           ...Array.from(_.entries()),
@@ -53805,7 +53837,7 @@
               _,
               0,
               -1,
-              [11, 12, 20, 21, 25, 41, 42, 44, 52, 71],
+              [11, 12, 20, 21, 25, 41, 52, 71, 74],
               null,
             );
         }
@@ -53961,21 +53993,9 @@
                     _: !0,
                     _: !0,
                   },
-                  accessories: {
-                    _: 42,
-                    _: _,
-                    _: !0,
-                    _: !0,
-                  },
                   self_purchase_option: {
                     _: 43,
                     _: _,
-                  },
-                  invalid_purchase_options: {
-                    _: 44,
-                    _: _,
-                    _: !0,
-                    _: !0,
                   },
                   screenshots: {
                     _: 50,
@@ -54015,7 +54035,7 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
-                  full_description: {
+                  full_description_bbcode: {
                     _: 58,
                     _: _._.readString,
                     _: _._.writeString,
@@ -54039,10 +54059,16 @@
                     _: !0,
                     _: !0,
                   },
-                  purchase_description: {
+                  purchase_description_bbcode: {
                     _: 72,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  package_groups: {
+                    _: 74,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -54762,6 +54788,11 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  edition_comparison: {
+                    _: 17,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                 },
               }),
             _.sm_m
@@ -55226,6 +55257,16 @@
                   must_purchase_as_set: {
                     _: 48,
                     _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  package_group: {
+                    _: 49,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  is_edition: {
+                    _: 50,
                     _: _._.readBool,
                     _: _._.writeBool,
                   },
@@ -56075,6 +56116,86 @@
         }
         getClassName() {
           return "StoreItem_Link";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.name || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  name: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  heading: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  display_type: {
+                    _: 3,
+                    _: _._.readEnum,
+                    _: _._.writeEnum,
+                  },
+                  dropdown_title: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  dropdown_description_bbcode: {
+                    _: 5,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_PackageGroup";
         }
       }
       class _ extends _.Message {
@@ -74983,8 +75104,8 @@
         _: () => _,
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       function _(_) {
         if (void 0 === _)
           return console.error("Cannot GetHostname on empty URL"), "";
@@ -75003,6 +75124,7 @@
         return _
           ? (1 == _._.EUNIVERSE &&
               ("http:" == _.substring(0, 5) && (_ = "https:" + _.substring(5)),
+              (0, _._)(_._.MEDIA_CDN_URL, "Media CDN not setup"),
               (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ = (_ =
                 (_ = _.replace(
                   /https:\/\/media.steampowered.com\//g,
@@ -75451,7 +75573,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 8553), _((_._ = _));
+      return (_ = 8189), _((_._ = _));
       var _;
     });
     _._();

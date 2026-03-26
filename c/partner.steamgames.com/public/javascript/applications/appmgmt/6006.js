@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "轉為免費？",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "如果您的遊戲已發行，但需要從付費轉為免費，請點擊%1$s以了解詳情並請求協助。",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "此處",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "輸入自訂價格",
+	"SinglePackagePricing_Right_Custom_Desc": "您可以直接編輯文字方塊，為每種貨幣輸入各自的定價。",
+	"SinglePackagePricing_Right_Convert_Desc": "您也可使用此按鈕，根據所選的轉換方式和您輸入的自訂美元定價來計算各貨幣的定價。",
+	"PricingDashboard_Select_Price": "從價格等級中選擇",
+	"PricingDashboard_Select_Price_button": "選擇美元基本定價",
+	"PricingDashboard_Select_Price_button_ttip": "開啟內含一組常見價格等級的對話框，允許將之用於設定下列所有幣種內的價格。",
 	"empty_no_trailing_comma": ""
 }`);
     },

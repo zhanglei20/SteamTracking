@@ -205,6 +205,17 @@
         PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
         Error: "mSSEDpLo6ibX1Ed5anQD_",
         GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
+        BackgroundAnimation: "_3jOnURPodgSJ0VVO2lchIh",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2J2q_u-IE_3MWcK8YJwYX5",
+        "ItemFocusAnim-darkerGrey": "hml57jb3ouTfP1qbnI4_V",
+        "ItemFocusAnim-darkGrey": "_3ILf95Fdqnqg9OfLO3lrZH",
+        "ItemFocusAnim-grey": "_159SLrXx_wC4ZI3ZLaz1A_",
+        "ItemFocusAnim-translucent-white-10": "_2LlOq5G2PXnoXnElUH9sZS",
+        "ItemFocusAnim-translucent-white-20": "oskDWTSKtzqVUSfD5nKvN",
+        "ItemFocusAnimBorder-darkGrey": "_22jWCdivanrS6yxyLk3zMH",
+        "ItemFocusAnim-green": "_3JEJrM-AMsqF1VHbRBXYvZ",
+        focusAnimation: "KS3LLxXLFm_S6AWOrqeVo",
+        hoverAnimation: "_9UqiMHhWNZyuE_A0XwG9N",
       };
     },
     37999: (e) => {
@@ -403,7 +414,7 @@
     },
     92513: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => A, usePartnerDeadlines: () => D });
+      i.r(t), i.d(t, { default: () => P, usePartnerDeadlines: () => D });
       var n = i(7850),
         a = i(90626),
         s = i(84811),
@@ -424,8 +435,8 @@
         g = i.n(j),
         S = i(51272),
         b = i(26408),
-        N = i(52038),
-        _ = i(61859),
+        _ = i(52038),
+        N = i(61859),
         w = i(91675);
       const T = { include_assets: !0, include_release: !0 };
       function C() {
@@ -474,7 +485,7 @@
                   children: [
                     "Season Passes ",
                     (0, n.jsx)("button", {
-                      className: (0, N.A)(g().Button),
+                      className: (0, _.A)(g().Button),
                       style: { float: "right", marginRight: "16px" },
                       onClick: (e) =>
                         (0, S.EP)(
@@ -584,14 +595,14 @@
             }),
             (0, n.jsxs)("td", {
               children: [
-                (0, _.TW)(i?.GetReleaseDateRTime()),
+                (0, N.TW)(i?.GetReleaseDateRTime()),
                 (0, n.jsx)("span", { children: " - " }),
                 (0, w.KC)(i?.GetReleaseDateRTime(), { bForce24HourClock: !1 }),
               ],
             }),
             (0, n.jsxs)("td", {
               children: [
-                (0, _.TW)(t.data.due_date),
+                (0, N.TW)(t.data.due_date),
                 (0, n.jsx)("span", { children: " - " }),
                 (0, w.KC)(t.data.due_date, { bForce24HourClock: !1 }),
               ],
@@ -682,7 +693,7 @@
                         Array.from(o?.values()).map((e, t) =>
                           e.length > 0
                             ? (0, n.jsx)(
-                                P,
+                                A,
                                 { actionID: e[0].gid, rgDeadlines: e },
                                 "aid_" + t,
                               )
@@ -702,7 +713,7 @@
           ],
         });
       }
-      function P(e) {
+      function A(e) {
         const { actionID: t, rgDeadlines: i } = e;
         return i.length
           ? (0, n.jsxs)(n.Fragment, {
@@ -734,7 +745,7 @@
           ],
         });
       }
-      function A(e) {
+      function P(e) {
         const [t, i] = a.useState((9).toString()),
           o = [
             { label: "Season Pass Milestone", data: (9).toString() },
@@ -804,7 +815,7 @@
       "use strict";
       i.r(t),
         i.d(t, {
-          ContactTaxIdentityDialog: () => A,
+          ContactTaxIdentityDialog: () => P,
           default: () => D,
           k_rgTemplateNameOptionsList: () => R,
         });
@@ -832,7 +843,7 @@
           className: (0, h.A)(d().NotificationContainer, c().SectionCtn),
           children: [
             (0, n.jsx)("div", { children: a }),
-            (0, n.jsx)(_, { ...e }),
+            (0, n.jsx)(N, { ...e }),
           ],
         });
       }
@@ -851,7 +862,7 @@
       }
       let S = -1,
         b = -1;
-      function N(e) {
+      function _(e) {
         const { requirement: t } = e,
           [i, s] = (0, a.useState)(""),
           [o, r] = (0, a.useState)(!1),
@@ -887,7 +898,7 @@
           ],
         });
       }
-      function _(e) {
+      function N(e) {
         const { requirement: t } = e,
           i = JSON.parse(t.deadline.data.description_jsondata),
           a = i.Parameters?.Dropbox_FileRequest_Url;
@@ -1004,7 +1015,7 @@
           "Renewal-W8-Initial",
           "Renewal-W8-Partner-Urgent",
         ],
-        P = {
+        A = {
           AddressCorrection: {
             component: function (e) {
               return (0, n.jsxs)("div", {
@@ -1039,7 +1050,7 @@
                       "The address must also include the correct postcode / zip if your country uses them.",
                     ],
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -1058,7 +1069,7 @@
                       "Please ensure that the images are high quality, in color and are clear and in focus with no information cropped out or blocked.",
                     ],
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1128,7 +1139,7 @@
                       ],
                     }),
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1175,7 +1186,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1361,7 +1372,7 @@
                           }),
                         ],
                       }),
-                      (0, n.jsx)(_, { ...e }),
+                      (0, n.jsx)(N, { ...e }),
                     ],
                   }),
                 ],
@@ -1395,7 +1406,7 @@
                     children:
                       "Show your full face, and you holding the same Identification document that you have previously provided. Please remove all hats, glasses, and other facial obstructions",
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1427,7 +1438,7 @@
                       "Certification of tax Residency for Tax Treaty Purposes",
                     ],
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1472,7 +1483,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1512,7 +1523,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1559,7 +1570,7 @@
                       }),
                     ],
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1684,7 +1695,7 @@
                     children:
                       "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -1727,7 +1738,7 @@
                     children:
                       "When you have all necessary KYC and tax information prepared, you may retake the full interview by clicking the button below.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -1802,7 +1813,7 @@
                       "Please do not give us the address of your bank or utility company.",
                     ],
                   }),
-                  (0, n.jsx)(_, { ...e }),
+                  (0, n.jsx)(N, { ...e }),
                 ],
               });
             },
@@ -1846,7 +1857,7 @@
                         children:
                           "You must to correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
                       }),
-                      (0, n.jsx)(N, { ...e }),
+                      (0, n.jsx)(_, { ...e }),
                     ],
                   }),
                 ],
@@ -1886,7 +1897,7 @@
                     children:
                       "When you have all necessary tax information prepared, you may retake the full tax interview by clicking the button below.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -1921,7 +1932,7 @@
                     className: d().SectionBody,
                     children: [
                       "You must correct your tax information and provide us with correct details about yourself in order for us to verify and validate your tax information. Please click the button below to restart the tax information interview.",
-                      (0, n.jsx)(N, { ...e }),
+                      (0, n.jsx)(_, { ...e }),
                     ],
                   }),
                 ],
@@ -1953,7 +1964,7 @@
                         children:
                           "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
                       }),
-                      (0, n.jsx)(N, { ...e }),
+                      (0, n.jsx)(_, { ...e }),
                     ],
                   }),
                 }),
@@ -1977,7 +1988,7 @@
                       (0, n.jsxs)("li", {
                         children: [
                           "If your Steamworks partner legal name is correct, please retake the tax interview by clicking the button below, and then provide the requested documents in the same name that you used to sign up for your Steamworks partner account (Your current partner name is shown above in the blue bar).",
-                          (0, n.jsx)(N, { ...e }),
+                          (0, n.jsx)(_, { ...e }),
                         ],
                       }),
                     ],
@@ -2051,7 +2062,7 @@
                     children:
                       "You will need to retake the tax interview using your valid taxpayer identification number.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -2100,7 +2111,7 @@
                     children:
                       "You will need to retake the tax interview using your valid taxpayer identification number.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -2127,7 +2138,7 @@
                     children:
                       "You will need to take a tax interview which should take less than 10 minutes to complete.  Note this interview will need to be completed by a Steamworks user with Actual Authority rights.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -2159,7 +2170,7 @@
                     children:
                       "To correct your information, you will need to retake the tax interview using your valid taxpayer identification number.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -2227,7 +2238,7 @@
                       i +
                       " , your tax information will be changed to an invalid status. In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -2287,7 +2298,7 @@
                     children:
                       "In order for us to pay monthly royalties, we must have valid tax and banking information on file. Therefore, please retake the tax interview as soon as possible to avoid interruptions in payments.",
                   }),
-                  (0, n.jsx)(N, { ...e }),
+                  (0, n.jsx)(_, { ...e }),
                 ],
               });
             },
@@ -2311,7 +2322,7 @@
           );
         return [e, n, t, i, o];
       }
-      function A(e) {
+      function P(e) {
         const { closeModal: t, subject: i, publisherid: s } = e,
           [o, r] = a.useState(""),
           [l, c] = a.useState("");
@@ -2438,7 +2449,7 @@
                           y.length > 0 &&
                           y.map((e, t) =>
                             (0, n.jsx)(
-                              E,
+                              F,
                               {
                                 requirement: {
                                   deadline: e,
@@ -2499,7 +2510,7 @@
                           children: (0, n.jsx)(m.jn, {
                             onClick: (e) =>
                               (0, C.pg)(
-                                (0, n.jsx)(A, { subject: j, publisherid: l }),
+                                (0, n.jsx)(P, { subject: j, publisherid: l }),
                                 (0, I.uX)(e),
                               ),
                             className: d().NotificationButton,
@@ -2551,7 +2562,7 @@
                 ],
               }),
               (0, n.jsx)("br", {}),
-              (0, n.jsx)(E, {
+              (0, n.jsx)(F, {
                 requirement: {
                   deadline: c,
                   index: 0,
@@ -2563,13 +2574,13 @@
           })
         );
       }
-      function E(e) {
+      function F(e) {
         const { requirement: t } = e,
           i = JSON.parse(t.deadline.data.description_jsondata),
           [, a] = k(),
           s = new Date(i?.CreatedOn);
         if ("ActionComplete" == i.TemplateName) return null;
-        if (!P[i.TemplateName])
+        if (!A[i.TemplateName])
           return (0, n.jsxs)("div", {
             className: (0, h.A)(d().NotificationContainer, c().SectionCtn),
             children: [
@@ -2580,7 +2591,7 @@
               (0, n.jsx)("div", { children: "Message Not Available" }),
             ],
           });
-        const o = P[i.TemplateName].component;
+        const o = A[i.TemplateName].component;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)("div", {
@@ -2625,8 +2636,8 @@
             include_tag_count: g,
             include_reviews: S,
             include_basic_info: b,
-            include_supported_languages: N,
-            include_full_description: _,
+            include_supported_languages: _,
+            include_full_description: N,
             include_included_items: w,
             include_assets_without_overrides: T,
             apply_user_filters: C,
@@ -2645,8 +2656,8 @@
               include_tag_count: g,
               include_reviews: S,
               include_basic_info: b,
-              include_supported_languages: N,
-              include_full_description: _,
+              include_supported_languages: _,
+              include_full_description: N,
               include_included_items: w,
               include_assets_without_overrides: T,
               apply_user_filters: C,
@@ -2667,7 +2678,7 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, u, m, p, x, f, y, v, j, g, S, b, N, _, w, T, C, I, c]),
+          }, [e, t, n, u, m, p, x, f, y, v, j, g, S, b, _, N, w, T, C, I, c]),
           !e)
         )
           return [null, 2];
@@ -2703,8 +2714,8 @@
             include_full_description: g,
             include_included_items: S,
             include_assets_without_overrides: b,
-            apply_user_filters: N,
-            include_links: _,
+            apply_user_filters: _,
+            include_links: N,
           } = i;
         if (
           ((0, s.useEffect)(() => {
@@ -2724,8 +2735,8 @@
                 include_full_description: g,
                 include_included_items: S,
                 include_assets_without_overrides: b,
-                apply_user_filters: N,
-                include_links: _,
+                apply_user_filters: _,
+                include_links: N,
               },
               n = e.filter(
                 (e) =>
@@ -2743,7 +2754,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, d, l, c, u, h, m, p, x, f, y, v, j, g, S, b, N, _]),
+          }, [e, t, n, d, l, c, u, h, m, p, x, f, y, v, j, g, S, b, _, N]),
           !e)
         )
           return 2;

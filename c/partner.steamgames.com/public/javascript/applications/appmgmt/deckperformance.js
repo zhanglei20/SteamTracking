@@ -39,6 +39,14 @@
         Mixed: "A1X2rsLuGVPickr5Ay4NO",
         DoNotAgree: "_3VdYc55Bz4LkZ1ABZOJB6S",
         Beta: "_1jNEwMKIFCwXh-4DQ7m6-a",
+        FeedbackSummaryTable: "_3LG2xiBJ11-gUCa2URMnOh",
+        FeedbackPerformance: "_1RmBbSb73HqJGS6dNMtvst",
+        FeedbackLegibility: "_2p3PivHhvkmywVnWGm9N9o",
+        FeedbackStability: "_2pt1VafEKP9iTeTSzZSzMN",
+        FeedbackInput: "_24ZtoEB6cRFTE5Jdaj7Pdv",
+        FeedbackOther: "_3fBvrj-Tz2MUdgTtvZ5pXt",
+        FeedbackTableHeader: "_319-NqR7LCiXHwG7vQdOAK",
+        FeedbackChartContainer: "_2DbhtcavqjsNhrVSLbD9wI",
       };
     },
     chunkid: (module) => {
@@ -662,29 +670,31 @@
         const { dataprops: _ } = _;
         return _?.framerate || _?.feedback
           ? (0, _.jsx)(_._, {
-              children: (0, _.jsxs)("div", {
-                className: _.PerformanceContainer,
-                children: [
-                  (0, _.jsxs)("h1", {
-                    children: [
-                      (0, _._)("#GamePerformanceStats_Header"),
-                      (0, _.jsx)("span", {
-                        className: _.Beta,
-                        children: (0, _._)("#NewToolTitleSuffix_Beta"),
+              children: (0, _.jsx)(_._, {
+                children: (0, _.jsxs)("div", {
+                  className: _.PerformanceContainer,
+                  children: [
+                    (0, _.jsxs)("h1", {
+                      children: [
+                        (0, _._)("#GamePerformanceStats_Header"),
+                        (0, _.jsx)("span", {
+                          className: _.Beta,
+                          children: (0, _._)("#NewToolTitleSuffix_Beta"),
+                        }),
+                      ],
+                    }),
+                    Boolean(_?.framerate) &&
+                      (0, _.jsx)(_, {
+                        appId: Number(_.appId),
+                        frameRateData: _.framerate,
                       }),
-                    ],
-                  }),
-                  Boolean(_?.framerate) &&
-                    (0, _.jsx)(_, {
-                      appId: _.appId,
-                      frameRateData: _.framerate,
-                    }),
-                  Boolean(_?.feedback) &&
-                    (0, _.jsx)(_, {
-                      appId: _.appId,
-                      feedbackData: _.feedback,
-                    }),
-                ],
+                    Boolean(_?.feedback) &&
+                      (0, _.jsx)(_, {
+                        appId: Number(_.appId),
+                        feedbackData: _.feedback,
+                      }),
+                  ],
+                }),
               }),
             })
           : null;
@@ -707,7 +717,34 @@
               ],
             }),
           });
-        const _ = Number(_.total.agree) + Number(_.total.disagree),
+        const _ = [
+            {
+              fill: "#ffc82c",
+              key: "disagree_performance",
+              name: (0, _._)("#GamePerformanceStats_Performance"),
+            },
+            {
+              fill: "#59bf40",
+              key: "disagree_legibility",
+              name: (0, _._)("#GamePerformanceStats_Legibility"),
+            },
+            {
+              fill: "#1a9fff",
+              key: "disagree_stability",
+              name: (0, _._)("#GamePerformanceStats_Stability"),
+            },
+            {
+              fill: "#ad66bb",
+              key: "disagree_input",
+              name: (0, _._)("#GamePerformanceStats_Input"),
+            },
+            {
+              fill: "#dcdedf",
+              key: "disagree_other",
+              name: (0, _._)("#GamePerformanceStats_Other"),
+            },
+          ],
+          _ = Number(_.total.agree) + Number(_.total.disagree),
           _ = (Number(_.total.agree) / _) * 100;
         return (0, _.jsxs)("div", {
           className: _.FeedbackContainer,
@@ -726,6 +763,7 @@
                   children: (0, _._)(
                     "#GamePerformanceStats_NumberOfReports",
                     (0, _._)(_),
+                    _.daily.length,
                   ),
                 }),
                 (0, _.jsx)("div", {
@@ -733,34 +771,25 @@
                   children: (0, _._)(
                     "#GamePerformanceStats_WhyDisagree",
                     (0, _.jsx)("span", {
-                      className: _.DescriptionEmphasis,
                       children: (0, _._)("#GamePerformanceStats_DidNotAgree"),
                     }),
                     (0, _.jsx)("span", {
-                      className: _.DescriptionEmphasis,
                       children: (0, _._)(
                         "#SteamDeckVerified_Category_Verified",
                       ),
                     }),
                   ),
                 }),
-                _._.is_valve_email &&
-                  (0, _.jsxs)("div", {
-                    className: _.DescriptionDetails,
-                    children: [
-                      (0, _.jsx)("span", {
-                        children: "(VO)",
-                      }),
-                      _.toFixed(0),
-                      "% Agree",
-                    ],
-                  }),
+                (0, _.jsx)(_, {
+                  feedback: _,
+                }),
               ],
             }),
             (0, _.jsx)(_._, {
               width: "100%",
               minWidth: 600,
-              height: 300,
+              minHeight: 300,
+              className: _.FeedbackChartContainer,
               children: (0, _.jsxs)(_._, {
                 style: {
                   width: "100%",
@@ -780,33 +809,7 @@
                   (0, _.jsx)(_._, {
                     labelFormatter: _,
                   }),
-                  [
-                    {
-                      fill: "#ffc82c",
-                      key: "disagree_performance",
-                      name: "Performance",
-                    },
-                    {
-                      fill: "#59bf40",
-                      key: "disagree_legibility",
-                      name: "Legibility",
-                    },
-                    {
-                      fill: "#1a9fff",
-                      key: "disagree_stability",
-                      name: "Stability",
-                    },
-                    {
-                      fill: "#ad66bb",
-                      key: "disagree_input",
-                      name: "Input",
-                    },
-                    {
-                      fill: "#dcdedf",
-                      key: "disagree_other",
-                      name: "Other",
-                    },
-                  ].map((_) =>
+                  __webpack_require__.map((_) =>
                     (0, _.jsx)(
                       _._,
                       {
@@ -821,6 +824,7 @@
                       _.key,
                     ),
                   ),
+                  (0, _.jsx)(_._, {}),
                 ],
               }),
             }),
@@ -870,7 +874,14 @@
             }),
           });
         const _ = __webpack_require__.frame_rate_clusters[0],
-          _ = Number(_.mean_frame_rate).toFixed(0);
+          _ = Number(_.mean_frame_rate).toFixed(0),
+          _ = (0, _.jsx)("span", {
+            className: _.FrameRateValue,
+            children: (0, _._)("#GamePerformanceStats_FPS", _),
+          }),
+          _ = _?.GetName()
+            ? (0, _._)("#GamePerformanceStats_AverageFrameRate", _.GetName(), _)
+            : (0, _._)("#GamePerformanceStats_AverageFrameRate_ThisGame", _);
         return (0, _.jsxs)("div", {
           className: _.FrameRateContainer,
           children: [
@@ -884,22 +895,18 @@
                   ),
                 }),
                 (0, _.jsx)("div", {
-                  children: (0, _._)(
-                    "#GamePerformanceStats_AverageFrameRate",
-                    _?.GetName() ?? (0, _._)("#GamePerformanceStats_ThisGame"),
-                    (0, _.jsx)("span", {
-                      className: _.FrameRateValue,
-                      children: (0, _._)("#GamePerformanceStats_FPS", _),
-                    }),
-                  ),
+                  children: _,
                 }),
                 (0, _.jsx)("div", {
                   className: _.DescriptionSection,
                   children: (0, _._)(
                     "#GamePerformanceStats_FrameRateDataBasedOn",
-                    (0, _._)(Number(_.report_count ?? 0)),
                     _.report_days,
                   ),
+                }),
+                (0, _.jsx)("div", {
+                  className: _.DescriptionSection,
+                  children: (0, _._)("#GamePerformanceStats_FrameRateMoreInfo"),
                 }),
               ],
             }),
@@ -936,13 +943,7 @@
                     name: "average",
                     stroke: "#4477EE",
                   }),
-                  Boolean(!1) &&
-                    (0, _.jsx)(_._, {
-                      type: "monotone",
-                      dataKey: "range",
-                      fill: "#cccccc",
-                      connectNulls: !0,
-                    }),
+                  !1,
                 ],
               }),
             }),
@@ -957,27 +958,31 @@
           _ = [
             [
               95,
-              "#GamePerformanceStats_Feedback",
+              "#GamePerformanceStats_Feedback_OverwhelminglyAgree",
               "#GamePerformanceStats_OverwhelminglyAgree",
               _.OverwhelminglyAgree,
+              _.toFixed(0),
             ],
             [
               80,
-              "#GamePerformanceStats_Feedback",
+              "#GamePerformanceStats_Feedback_StronglyAgree",
               "#GamePerformanceStats_StronglyAgree",
               _.StronglyAgree,
+              _.toFixed(0),
             ],
             [
               50,
-              "#GamePerformanceStats_Feedback_On",
+              "#GamePerformanceStats_Feedback_Mixed",
               "#GamePerformanceStats_Mixed",
               _.Mixed,
+              _.toFixed(0),
             ],
             [
               0,
-              "#GamePerformanceStats_Feedback",
+              "#GamePerformanceStats_Feedback_DoNotAgree",
               "#GamePerformanceStats_DoNotAgree",
               _.DoNotAgree,
+              (100 - _).toFixed(0),
             ],
           ];
         let _ = 0;
@@ -993,12 +998,73 @@
               className: _[_][3],
               children: (0, _._)(_[_][2]),
             }),
+            _[_][4],
             (0, _.jsx)("span", {
-              className: _.DescriptionEmphasis,
               children: (0, _._)("#SteamDeckVerified_Category_Verified"),
             }),
           ),
         });
+      }
+      function _(_) {
+        const { feedback: _ } = _;
+        let _ = new Array(
+          {
+            display: (0, _._)("#GamePerformanceStats_Input"),
+            value: _.total.disagree_input,
+            class: _.FeedbackInput,
+          },
+          {
+            display: (0, _._)("#GamePerformanceStats_Legibility"),
+            value: _.total.disagree_legibility,
+            class: _.FeedbackLegibility,
+          },
+          {
+            display: (0, _._)("#GamePerformanceStats_Performance"),
+            value: _.total.disagree_performance,
+            class: _.FeedbackPerformance,
+          },
+          {
+            display: (0, _._)("#GamePerformanceStats_Stability"),
+            value: _.total.disagree_stability,
+            class: _.FeedbackStability,
+          },
+          {
+            display: (0, _._)("#GamePerformanceStats_Other"),
+            value: _.total.disagree_other,
+            class: _.FeedbackOther,
+          },
+        );
+        return (
+          __webpack_require__.sort((_, _) =>
+            _.class == _.FeedbackOther ? 1 : _.value - _.value,
+          ),
+          (0, _.jsxs)("div", {
+            className: _.FeedbackSummaryTable,
+            children: [
+              (0, _.jsx)("div", {
+                className: _.FeedbackTableHeader,
+                children: (0, _._)("#GamePerformance_Reason"),
+              }),
+              (0, _.jsx)("div", {
+                className: _.FeedbackTableHeader,
+                children: (0, _._)("#GamePerformance_NumResponses"),
+              }),
+              __webpack_require__.map((_) =>
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      className: _.class,
+                      children: _.display,
+                    }),
+                    (0, _.jsx)("div", {
+                      children: _.value,
+                    }),
+                  ],
+                }),
+              ),
+            ],
+          })
+        );
       }
       const _ = (_) => {
         const {
@@ -1111,6 +1177,66 @@
       }
       function _() {
         return _.useMemo(() => _(), []);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const [_, __webpack_require__] = (0, _.useState)(!1),
+          [_] = (0, _.useState)(() =>
+            (function () {
+              const _ = (0, _._)(
+                "partnerbrowse_webapi_token",
+                "application_config",
+              );
+              (0, _._)(Boolean(_), "require partnerbrowse_webapi_token");
+              const _ = new _._(_._.WEBAPI_BASE_URL, _);
+              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
+                console.log(
+                  "DEV_DEBUG: Initializing CStoreItemCache with access token",
+                  _,
+                );
+              return _;
+            })(),
+          ),
+          _ = (0, _.useMemo)(
+            () => ({
+              country: _._.COUNTRY,
+              language: _._.LANGUAGE,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
+        return (
+          (0, _.useEffect)(
+            () => (
+              __webpack_require__(!0),
+              (function (_) {
+                return _._.Initialize(
+                  _.GetServiceTransport(),
+                  _._.is_partner_member,
+                );
+              })(_)
+            ),
+            [_],
+          ),
+          _
+            ? (0, _.createElement)(_._, {
+                context: _,
+                serviceTransportOverride: _.GetServiceTransport(),
+                children: _.children,
+              })
+            : null
+        );
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

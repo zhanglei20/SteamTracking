@@ -58,7 +58,7 @@
   font-size: 11px;
   line-height: 18px;
   padding: 1px 3px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
   margin-top: 2px;
 }
 ._1LlRFhVuQF26o2UG7Vg5s3 {
@@ -435,6 +435,108 @@ td.rdtYear:hover {
 .rdtPicker {
   color: #000;
 }
+@keyframes _2_vb1-Pr1-2Gblfyxj023k {
+  from {
+    background-position: 0 100%;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes op3gqmHyESfHpHgPheRVq {
+  from {
+    background: #3d4450;
+  }
+  to {
+    background: #23262e;
+  }
+}
+@keyframes _12l58v9-cJk-169Qesl-e5 {
+  from {
+    background: #3d4450;
+    color: #8b929a;
+  }
+  to {
+    background: #23262e;
+    color: #fff;
+  }
+}
+@keyframes _2uLjKVdzQQCodi_XH5ZPfi {
+  from {
+    background: hsla(0, 0%, 100%, 0.25);
+    color: #8b929a;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.15);
+    color: #fff;
+  }
+}
+@keyframes _3Za5duiaOuAcNrQJeEpjxD {
+  from {
+    background: #8b929a;
+    color: #fff;
+  }
+  to {
+    background: #67707b;
+    color: #fff;
+  }
+}
+@keyframes _3wyVPtc4dD1Msi7wqRvJq3 {
+  from {
+    background: hsla(0, 0%, 100%, 0.3);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.1);
+    color: #fff;
+  }
+}
+@keyframes _2v6guEab39IMo3I1kfiwXc {
+  from {
+    background: hsla(0, 0%, 100%, 0.5);
+    color: #fff;
+  }
+  to {
+    background: hsla(0, 0%, 100%, 0.2);
+    color: #fff;
+  }
+}
+@keyframes _3SS0MMDROpRbR_hYLVjAcl {
+  from {
+    border-color: #67707b;
+  }
+  to {
+    border-color: #3d4450;
+  }
+}
+@keyframes _3qjU-9ZS6bDpjjMAOYUhGm {
+  from {
+    background: #c9ffc9;
+    color: #8b929a;
+  }
+  to {
+    background: #59bf40;
+    color: #fff;
+  }
+}
+@keyframes _3-bYSIZZNIWgiOR__mB2jd {
+  0% {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+  100% {
+    background-position: -180% 0%;
+    opacity: 0.8;
+  }
+}
+@keyframes _39oPHCcA4NgTm53rnykAtP {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
 ._49thIpYeG08pUfNc1x_w9 {
   display: flex;
   flex-direction: row;
@@ -464,7 +566,7 @@ td.rdtYear:hover {
   justify-content: center;
   flex-grow: 1;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  background: rgba(255, 255, 255, 0.1);
+  background: hsla(0, 0%, 100%, 0.1);
   padding: 6px 12px;
 }
 ._2qz5D65VkY796Xw-al9f_a ._2h0GKAYcXRP10ryZHFn79d {
@@ -484,7 +586,7 @@ td.rdtYear:hover {
   font-size: 12px;
   line-height: 19px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: hsla(0, 0%, 100%, 0.4);
 }
 ._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
   max-height: 38px;
@@ -506,7 +608,7 @@ td.rdtYear:hover {
   margin: 0;
   border: none;
   border-radius: 3px;
-  box-shadow: inset 0px 0px 0px #0000;
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0);
   padding: 8px 10px;
 }
 .wC3_c2yhq3ppKA9AKQoTy.uHgjQHyNygSKukDngfNQO {
@@ -991,7 +1093,7 @@ td.rdtYear:hover {
 ._2yY3XT7VPyYBZS3FCEGgRS:after {
   bottom: 100%;
   left: 80%;
-  border: solid transparent;
+  border: solid rgba(0, 0, 0, 0);
   content: "";
   height: 0;
   width: 0;
@@ -1071,7 +1173,7 @@ Body.v6 ._2GHTaky49GZrPLyiOgKWB7 h2 {
   font-size: 20px;
 }
 .Kk38rrvnYm3-E2jJMahSH {
-  border-top: 1px solid rgba(255, 255, 255, 0.363);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.363);
   margin-top: 14px;
   padding-top: 4px;
 }
@@ -1204,7 +1306,7 @@ Body.v6 ._2GHTaky49GZrPLyiOgKWB7 h2 {
   display: flex;
   flex-direction: column;
   min-width: 230px;
-  background: rgba(255, 255, 255, 0.18);
+  background: hsla(0, 0%, 100%, 0.18);
   padding: 8px;
 }
 ._27ybiS1mMlsYotyoQGVmI_ ._1jOgBHcEXg1l6kSowBxwn6 {

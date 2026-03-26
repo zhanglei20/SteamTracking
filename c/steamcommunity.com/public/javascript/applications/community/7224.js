@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Antall til salgs: %1$s",
 	"Bucket_PriceFrom": "Fra %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s",
+	"FilterResults_Placeholder": "Filtrer resultater …",
 	"AdvancedSearch_Header": "Avansert søk",
 	"AdvancedSearch_Link": "Avansert søk",
 	"MarketSearch_Placeholder": "Søk etter en gjenstand …",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
 	"Accessories_FieldSectionLabel": "Tilbehør",
-	"Listing_EnhancedAppearance_Missing": "Denne annonsen har ennå ikke unike eller forbedrede bilder. Bildet som vises her, kan variere litt fra gjenstanden som er annonsert."
+	"Item_CountryBuySellRestricted": "Du kan ikke kjøpe denne gjenstanden, fordi kjøp og salg av denne gjenstandstypen ikke er tilgjengelig i landet ditt.",
+	"Item_CountryBuyRestricted": "Du kan ikke kjøpe denne gjenstanden, fordi kjøp av denne gjenstandstypen ikke er tilgjengelig i landet ditt.",
+	"Listing_EnhancedAppearance_Missing": "Denne annonsen har ennå ikke unike eller forbedrede bilder. Bildet som vises her, kan variere litt fra gjenstanden som er annonsert.",
+	"Listing_EnhancedAppearance_ShowBackground": "Vis bakgrunn"
 }`);
     },
   },

@@ -57,6 +57,7 @@
           );
         return (0, _.jsx)(_._, {
           ref: __webpack_require__ ? _.measureElement : void 0,
+          navKey: `VirtualizedListIndex-${_}`,
           "data-index": _,
           fnScrollIntoViewHandler: _,
           scrollIntoViewWhenChildFocused: "force",

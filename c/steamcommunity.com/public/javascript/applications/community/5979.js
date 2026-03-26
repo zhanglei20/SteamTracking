@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Cantitate de vânzare: %1$s",
 	"Bucket_PriceFrom": "De la %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s – atașat",
+	"FilterResults_Placeholder": "Filtrează rezultatele...",
 	"AdvancedSearch_Header": "Căutare avansată",
 	"AdvancedSearch_Link": "Căutare avansată",
 	"MarketSearch_Placeholder": "Caută un obiect...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
 	"Accessories_FieldSectionLabel": "Accesorii",
-	"Listing_EnhancedAppearance_Missing": "Această listare nu are încă imagini unice sau îmbunătățite. Obiectul din imaginea afișată aici poate fi ușor diferit de obiectul listat."
+	"Item_CountryBuySellRestricted": "Nu poți achiziționa acest obiect, deoarece cumpărarea și vânzarea acestui tip de obiect este dezactivată în țara ta.",
+	"Item_CountryBuyRestricted": "Nu poți achiziționa acest obiect deoarece cumpărarea obiectelor de acest tip este dezactivată în țara ta.",
+	"Listing_EnhancedAppearance_Missing": "Această listare nu are încă imagini unice sau îmbunătățite. Obiectul din imaginea afișată aici poate fi ușor diferit de obiectul listat.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

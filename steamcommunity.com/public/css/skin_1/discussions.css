@@ -78,8 +78,7 @@
 .discussions_forumlist_icon {
 	float: left;
 	width: 44px;
-	line-height: 67px;
-
+	line-height: 60px;
 	text-align: center;
 }
 
@@ -464,7 +463,7 @@ td.wordfilter_word {
 }
 td.wordfilter_word:before {
   content: '';
-  display: block; 
+  display: block;
   width: 200px;
 }
 td.wordfilter_word_already_filtered {

@@ -503,8 +503,12 @@
       function c(e) {
         const { as: s = "div", ref: r, ...p } = e,
           i = (0, n.mz)({ ...p, className: a()(e.className, l.Flex) }, m),
-          c = s;
-        return (0, o.jsx)(t.J, { children: (0, o.jsx)(c, { ref: r, ...i }) });
+          c = !p.disabled && !!p.onClick,
+          d = s;
+        return (0, o.jsx)(t.J, {
+          focusable: c,
+          children: (0, o.jsx)(d, { ref: r, ...i }),
+        });
       }
       const m = [
         ...p.h,
@@ -933,24 +937,29 @@
     },
     39479: (e, s, r) => {
       "use strict";
-      r.d(s, { J: () => a });
+      r.d(s, { J: () => l });
       var o = r(7850),
         t = r(8871),
         n = r(90626),
         p = r(7745),
-        i = r(90665);
-      function a(e) {
+        i = r(90665),
+        a = r(74882);
+      function l(e) {
         var s;
-        const { children: r, "flow-children": a, ...l } = e;
-        a && (l.layout = (0, p.O)(a));
-        const { ref: c, node: m } = (0, i.qp)(l),
-          d = (0, t.Ue)(
-            c,
-            null === (s = r.props) || void 0 === s ? void 0 : s.ref,
-          );
+        const { children: r, "flow-children": l, ...c } = e,
+          { gamepadEvents: m } = (0, i.C7)(e);
+        l && (c.layout = (0, p.O)(l)),
+          m.onOKButton ||
+            ("onClick" in r.props && r.props.onClick && (m.onOKButton = i._K));
+        const { ref: d, node: _ } = (0, i.qp)(c);
+        (0, a.Ui)(m, d);
+        const u = (0, t.Ue)(
+          d,
+          null === (s = r.props) || void 0 === s ? void 0 : s.ref,
+        );
         return (0, o.jsx)(i.TJ.Provider, {
-          value: m,
-          children: n.cloneElement(r, { ...r.props, ref: d }),
+          value: _,
+          children: n.cloneElement(r, { ...r.props, ref: u }),
         });
       }
     },

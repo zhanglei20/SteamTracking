@@ -91,13 +91,6 @@
   background-color: var(--bg-color, var(--color-debug));
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
-  position: relative;
-  color: var(--text-color);
-  padding: var(--padding);
-  font-size: var(--font-size);
-  letter-spacing: var(--letter-spacing);
-  line-height: var(--line-height);
-  border-radius: 2px;
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._8JNTStqpIYaMWQJx6g6hK:hover {
   background-color: var(--bg-color-hover, var(--color-debug));
@@ -116,6 +109,15 @@
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2I6xXve3oCxh8fra7SWTnq:focus-visible,
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2I6xXve3oCxh8fra7SWTnq:focus-within {
   outline: 1px solid #fff;
+}
+:where(._2gL71Yq-HzVI9oOGyWu3jH) {
+  position: relative;
+  color: var(--text-color);
+  padding: var(--padding);
+  font-size: var(--font-size);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  border-radius: 2px;
 }
 :where(._2gL71Yq-HzVI9oOGyWu3jH)._2e1xlPghh48rkP13ydQOPb {
   min-height: var(--control-height-1);
@@ -947,7 +949,6 @@
   inset: 0;
   background-color: var(--bg-highlight-color);
   z-index: -1;
-  transform: translateX(calc(100% * var(--selected-index)));
 }
 ._2OvUYpkiij1e7K-4vW8i9W:where(:nth-child(2)) {
   width: 100%;
@@ -1018,6 +1019,9 @@
 :where(._2aNlsjcdOdHOtP8uACA3bM[data-selected="true"]:nth-child(10))
   ~ ._2OvUYpkiij1e7K-4vW8i9W {
   --selected-index: 9;
+}
+._2OvUYpkiij1e7K-4vW8i9W {
+  transform: translateX(calc(100% * var(--selected-index)));
 }
 :where(._2aNlsjcdOdHOtP8uACA3bM) {
   display: flex;

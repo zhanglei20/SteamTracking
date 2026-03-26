@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Muutetaanko ilmaistuotteeksi?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Jos pelisi on jo julkaistu ja haluat muuttaa sen maksullisesta ilmaiseksi, lisätietoa löytyy %1$s.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "tästä",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Räätälöityjen hintojen syöttäminen",
+	"SinglePackagePricing_Right_Custom_Desc": "Voit syöttää oman hinnan kussakin valuutassa suoraan tekstikentässä.",
+	"SinglePackagePricing_Right_Convert_Desc": "Voit myös käyttää tätä painiketta hinnan laskemiseen jokaisessa valuutassa. Hinta riippuu valitusta muunnostavasta sekä syöttämästäsi Yhdysvaltain dollarihinnasta.",
+	"PricingDashboard_Select_Price": "Valitse hintataso",
+	"PricingDashboard_Select_Price_button": "Valitse USD-perushinta",
+	"PricingDashboard_Select_Price_button_ttip": "Avaa valintaikkunan, joka sisältää kaikille alla mainituille valuutoille valittavia yleisiä hintatasoja.",
 	"empty_no_trailing_comma": ""
 }`);
     },

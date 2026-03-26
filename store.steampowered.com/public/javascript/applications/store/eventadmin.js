@@ -20,6 +20,17 @@
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+        BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
+        "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
+        "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
+        "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
+        "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
+        "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
+        "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
+        "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
+        focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
+        hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
       };
     },
     71909: (e) => {
@@ -722,66 +733,12 @@
           return "CNews_GetNewsFeedByRepublishClan_Request";
         }
       }
-      class M extends h.Message {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            M.prototype.feeds || m.Sg(M.M()),
-            h.Message.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
-                fields: { feeds: { n: 1, c: p, r: !0, q: !0 } },
-              }),
-            M.sm_m
-          );
-        }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = m.w0(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return m.BT(M.M(), e, t);
-        }
-        static fromObject(e) {
-          return m.Uq(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new (u().BinaryReader)(e),
-            n = new M();
-          return M.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return m.zj(M.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new (u().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          m.i0(M.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new (u().BinaryWriter)();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CNews_GetNewsFeedByRepublishClan_Response";
-        }
-      }
       class E extends h.Message {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            E.prototype.post || m.Sg(E.M()),
-            h.Message.initialize(this, e, 0, -1, void 0, null);
+            E.prototype.feeds || m.Sg(E.M()),
+            h.Message.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -790,10 +747,7 @@
             E.sm_m ||
               (E.sm_m = {
                 proto: E,
-                fields: {
-                  post: { n: 1, c: g },
-                  draft: { n: 2, br: m.qM.readBool, bw: m.gp.writeBool },
-                },
+                fields: { feeds: { n: 1, c: p, r: !0, q: !0 } },
               }),
             E.sm_m
           );
@@ -828,6 +782,63 @@
         serializeBase64String() {
           var e = new (u().BinaryWriter)();
           return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CNews_GetNewsFeedByRepublishClan_Response";
+        }
+      }
+      class M extends h.Message {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            M.prototype.post || m.Sg(M.M()),
+            h.Message.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            M.sm_m ||
+              (M.sm_m = {
+                proto: M,
+                fields: {
+                  post: { n: 1, c: g },
+                  draft: { n: 2, br: m.qM.readBool, bw: m.gp.writeBool },
+                },
+              }),
+            M.sm_m
+          );
+        }
+        static MBF() {
+          return M.sm_mbf || (M.sm_mbf = m.w0(M.M())), M.sm_mbf;
+        }
+        toObject(e = !1) {
+          return M.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return m.BT(M.M(), e, t);
+        }
+        static fromObject(e) {
+          return m.Uq(M.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new (u().BinaryReader)(e),
+            n = new M();
+          return M.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return m.zj(M.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new (u().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          m.i0(M.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new (u().BinaryWriter)();
+          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CNews_PublishPartnerEvent_Request";
@@ -1078,12 +1089,12 @@
             return e.SendMsg(
               "News.GetNewsFeedByRepublishClan#1",
               (0, c.I8)(b, t),
-              M,
+              E,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
           (e.PublishPartnerEvent = function (e, t) {
-            return e.SendMsg("News.PublishPartnerEvent#1", (0, c.I8)(E, t), A, {
+            return e.SendMsg("News.PublishPartnerEvent#1", (0, c.I8)(M, t), A, {
               ePrivilege: 1,
             });
           }),
@@ -1299,7 +1310,7 @@
             n.set_received_for_free(e.post.received_for_free),
             n.set_received_compensation(e.post.received_compensation),
             n.set_blurb(e.post.blurb);
-          const a = c.w.Init(E);
+          const a = c.w.Init(M);
           a.Body().set_post(n), a.Body().set_draft(t);
           let r = await s.PublishPartnerEvent(I.Get().GetCuratorTransport(), a);
           return (
@@ -1571,8 +1582,8 @@
         w = n.n(S),
         C = n(12037),
         b = n(51706),
-        M = n(738),
-        E = n(22797),
+        E = n(738),
+        M = n(22797),
         A = n(51272),
         y = n(52038),
         f = n(56011),
@@ -1584,8 +1595,8 @@
         I = n(41338),
         P = n(56330),
         D = n.n(P),
-        G = n(61336),
-        F = n(91675);
+        F = n(61336),
+        G = n(91675);
       let L = class extends u.Component {
         state = { strRssURL: o.A.Get().GetDefaultAdmin().GetRSSUrl() };
         m_Admin = o.A.Get().GetDefaultAdmin();
@@ -1594,7 +1605,7 @@
         }
         OnCreateOrSaveFeed(e) {
           e.preventDefault(),
-            (0, M.pg)(
+            (0, E.pg)(
               (0, a.jsx)(N, {
                 strRSSUrl: this.state.strRssURL,
                 admin: this.m_Admin,
@@ -1872,7 +1883,7 @@
                   }),
                 }),
               this.state.bLoadingPreview &&
-                (0, a.jsx)(E.t, {
+                (0, a.jsx)(M.t, {
                   string: (0, R.we)("#Loading"),
                   size: "medium",
                   position: "center",
@@ -1921,7 +1932,7 @@
         OnToggleChannelAutomation(e) {
           e
             ? (this.setState({ strErrorMessage: void 0 }),
-              (0, M.pg)(
+              (0, E.pg)(
                 (0, a.jsx)(N, {
                   strRSSUrl: this.props.admin.GetRSSUrl(),
                   admin: this.props.admin,
@@ -1956,7 +1967,7 @@
             this.props.admin
               .CheckForNewUpdate()
               .then(() =>
-                (0, M.pg)(
+                (0, E.pg)(
                   (0, a.jsx)(b.o0, {
                     strTitle: (0, R.we)("#CuratorAdmin_RSSFeed_scannow"),
                     strDescription: (0, R.we)("#CuratorAdmin_RSSFeed_queued"),
@@ -1965,7 +1976,7 @@
                 ),
               )
               .catch((t) =>
-                (0, M.pg)(
+                (0, E.pg)(
                   (0, a.jsx)(b.KG, {
                     strTitle: (0, R.we)("#CuratorAdmin_RSSFeed_scannow"),
                     strDescription: (0, T.H)(t).strErrorMsg,
@@ -1980,7 +1991,7 @@
             ? (0, a.jsxs)("div", {
                 children: [
                   Boolean(this.state.strReasonWaiting) &&
-                    (0, a.jsx)(E.t, {
+                    (0, a.jsx)(M.t, {
                       size: "medium",
                       string: this.state.strReasonWaiting,
                     }),
@@ -2005,7 +2016,7 @@
                           !1,
                         ),
                         "  @ ",
-                        (0, F.KC)(this.props.admin.GetRSSLastRtimeChecked(), {
+                        (0, G.KC)(this.props.admin.GetRSSLastRtimeChecked(), {
                           bForce24HourClock: !1,
                         }),
                         " ",
@@ -2113,7 +2124,7 @@
         }
         OnPostNewsEvent(e) {
           const { newsData: t, fnGetRSSUrl: n } = this.props;
-          (0, M.pg)(
+          (0, E.pg)(
             (0, a.jsx)(N, {
               newsData: t,
               admin: this.props.admin,
@@ -2125,7 +2136,7 @@
         }
         OnUpdateNewsEvent(e) {
           const { newsData: t, fnGetRSSUrl: n } = this.props;
-          (0, M.pg)(
+          (0, E.pg)(
             (0, a.jsx)(N, {
               newsData: t,
               strRSSUrl: n(),
@@ -2153,7 +2164,7 @@
               const n = e[1].match(/<content[^>]*>[\s\S]*<\/content>/m);
               return n ? (0, I.EK)(n[0]) : e[0];
             })();
-          (0, M.pg)(
+          (0, E.pg)(
             (0, a.jsx)(b.o0, {
               bAlertDialog: !0,
               strTitle: (0, R.we)("#RSSManager_PostEvent_ViewRaw"),
@@ -2186,7 +2197,7 @@
             const e =
               n.GetVisibilityStartTimeAndDateUnixSeconds() ||
               n.GetPostTimeAndDateUnixSeconds();
-            m = (0, R.$z)(e) + " @ " + (0, F.KC)(e, { bForce24HourClock: !1 });
+            m = (0, R.$z)(e) + " @ " + (0, G.KC)(e, { bForce24HourClock: !1 });
           }
           return (0, a.jsxs)("div", {
             className: (0, y.A)(
@@ -2236,7 +2247,7 @@
                     ? (0, a.jsxs)(u.Fragment, {
                         children: [
                           Boolean(s)
-                            ? (0, a.jsx)(E.t, {
+                            ? (0, a.jsx)(M.t, {
                                 string: (0, R.we)("#Loading"),
                                 size: "small",
                                 position: "center",
@@ -2270,7 +2281,7 @@
                           h &&
                             (0, a.jsx)("a", {
                               className: (0, y.A)(w().Button, x.PreviewBtn),
-                              href: (0, G.k2)(
+                              href: (0, F.k2)(
                                 l.TS.STORE_BASE_URL +
                                   "app/" +
                                   e.post.appids[0] +
@@ -2500,7 +2511,7 @@
                 strTitle: this.GetStrTitle(),
                 strDescription: (0, R.we)("#RSSManager_PostEvent_InFlight"),
                 closeModal: this.props.closeModal,
-                children: (0, a.jsx)(E.t, { position: "center" }),
+                children: (0, a.jsx)(M.t, { position: "center" }),
               });
             case "create_post":
               return (0, a.jsx)(b.eV, {
@@ -2729,8 +2740,8 @@
         w = n(32541),
         C = n(738),
         b = n(12155),
-        M = n(22797),
-        E = n(32754),
+        E = n(22797),
+        M = n(32754),
         A = n(52038),
         y = n(56011),
         f = n(61859),
@@ -2749,7 +2760,7 @@
             }, []),
             t)
           )
-            return (0, s.jsx)(M.t, {
+            return (0, s.jsx)(E.t, {
               string: (0, f.we)("#Loading"),
               size: "medium",
             });
@@ -2784,7 +2795,7 @@
           const [t, n] = (0, m.useState)(!1),
             [a, r] = (0, m.useState)(void 0);
           return t
-            ? (0, s.jsx)(M.t, { string: (0, f.we)("#Loading"), size: "medium" })
+            ? (0, s.jsx)(E.t, { string: (0, f.we)("#Loading"), size: "medium" })
             : void 0 !== a
               ? Boolean(a.length > 0)
                 ? (0, s.jsx)(D, {
@@ -2809,7 +2820,7 @@
             [a, r] = (0, m.useState)(!1);
           let i = null;
           return (
-            a || (i = t.map((e) => (0, s.jsx)(G, { clanAccountID: e }, e))),
+            a || (i = t.map((e) => (0, s.jsx)(F, { clanAccountID: e }, e))),
             (0, s.jsxs)("div", {
               className: (0, A.A)(T().SectionContainer),
               children: [
@@ -2838,7 +2849,7 @@
             })
           );
         },
-        G = (0, u.PA)((e) => {
+        F = (0, u.PA)((e) => {
           const { clanAccountID: t } = e;
           return _.ac.BHasClanInfoLoadedByAccountID(t) &&
             r.A.Get().BHasClanIDLoaded(t)
@@ -2846,9 +2857,9 @@
                 clanInfo: _.ac.GetClanInfoByClanAccountID(t),
                 rssAdminInfo: r.A.Get().GetRSSAdminForClanAccountID(t),
               })
-            : (0, s.jsx)(F, { clanAccountID: t });
+            : (0, s.jsx)(G, { clanAccountID: t });
         }),
-        F = (e) => {
+        G = (e) => {
           const { clanAccountID: t } = e,
             n = "500px",
             a = (0, x.OO)(
@@ -2997,7 +3008,7 @@
           });
         },
         k = (e) =>
-          (0, s.jsx)(E.he, {
+          (0, s.jsx)(M.he, {
             toolTipContent: (0, f.we)("#RSSModeration_ReindexAndReload_ttip"),
             children: (0, s.jsx)(v.$n, {
               onClick: (t) => {
@@ -3076,7 +3087,7 @@
                                         "#EventEditor_ImportFromHTML_ConvertFinished",
                                       ),
                                     })
-                                  : (0, s.jsx)(M.t, {
+                                  : (0, s.jsx)(E.t, {
                                       size: "small",
                                       string: (0, f.we)("#Updating"),
                                     }),
@@ -3270,9 +3281,9 @@
         (0, O.Cg)([z.XI], V.prototype, "CompleteBackfill", null),
         (0, O.Cg)([z.XI], V.prototype, "CloseProgress", null);
       const Y = new V();
-      var Q = n(45559),
+      var X = n(45559),
         K = n(73744),
-        X = n(75113),
+        Q = n(75113),
         J = n(28954),
         Z = n(64953),
         $ = n(27666),
@@ -3550,13 +3561,13 @@
                         "div",
                         {
                           children: [
-                            (0, s.jsx)(X.tj, {
+                            (0, s.jsx)(Q.tj, {
                               eventModel: a,
-                              route: X.PH.k_eView,
+                              route: Q.PH.k_eView,
                               children: a.GetNameWithFallback(0),
                             }),
                             (0, s.jsx)("div", {
-                              className: Q.Error,
+                              className: X.Error,
                               children: n.strMessage,
                             }),
                           ],
@@ -3668,7 +3679,7 @@
                   ],
                 }),
               "started" == this.state.eBackfillState &&
-                (0, s.jsx)(M.t, {
+                (0, s.jsx)(E.t, {
                   size: "medium",
                   position: "center",
                   string: "Backfill In Progress",
@@ -3997,7 +4008,7 @@
           ),
         });
       }
-      function Me(e) {
+      function Ee(e) {
         const { modAction: t } = e,
           n =
             (0, f.TW)(t.m_rtWhen) +
@@ -4089,7 +4100,7 @@
             });
         }
       }
-      function Ee(e) {
+      function Me(e) {
         const [t, n] = m.useState(!0),
           { eventModel: a } = e;
         let r = a
@@ -4112,7 +4123,7 @@
                     const t = new pe();
                     return (
                       t.FromString(e),
-                      (0, s.jsx)(Me, { modAction: t }, n.GID + e)
+                      (0, s.jsx)(Ee, { modAction: t }, n.GID + e)
                     );
                   });
                 })(r),
@@ -4142,12 +4153,12 @@
         Ie = n(44165),
         Pe = n(35380);
       const De = n(87937),
-        Ge = {
+        Fe = {
           bExhaustedEventList: !1,
           bInfiniteScrollLoading: !0,
           nLastFetchCompletedMS: 0,
         };
-      let Fe = class extends m.Component {
+      let Ge = class extends m.Component {
         m_cancelSignal = l().CancelToken.source();
         m_refScroll = m.createRef();
         m_IntervalTimer = void 0;
@@ -4294,7 +4305,7 @@
             ge.Get().ClearAllSolrEvents(),
             q.Get().ClearAllSolrEvents(),
             this.setState(
-              { ...Ge },
+              { ...Fe },
               this.UpdateQueryParametersAndLoadMoreEvents,
             );
         }
@@ -4328,7 +4339,7 @@
               }),
               (0, s.jsx)(S.tH, { children: e }),
               this.state.bInfiniteScrollLoading &&
-                (0, s.jsx)(M.t, {
+                (0, s.jsx)(E.t, {
                   position: "center",
                   size: "medium",
                   string: (0, f.we)("#Loading"),
@@ -4337,19 +4348,19 @@
           });
         }
       };
-      (0, O.Cg)([N.oI], Fe.prototype, "HandleError", null),
-        (0, O.Cg)([N.oI], Fe.prototype, "LoadMorePublicEventWithDelay", null),
-        (0, O.Cg)([N.oI], Fe.prototype, "LoadMoreModerationEvents", null),
+      (0, O.Cg)([N.oI], Ge.prototype, "HandleError", null),
+        (0, O.Cg)([N.oI], Ge.prototype, "LoadMorePublicEventWithDelay", null),
+        (0, O.Cg)([N.oI], Ge.prototype, "LoadMoreModerationEvents", null),
         (0, O.Cg)(
           [N.oI],
-          Fe.prototype,
+          Ge.prototype,
           "UpdateQueryParametersAndLoadMoreEvents",
           null,
         ),
-        (0, O.Cg)([N.oI], Fe.prototype, "OnScroll", null),
-        (0, O.Cg)([N.oI], Fe.prototype, "RefetchAllEventTiles", null),
-        (Fe = (0, O.Cg)([u.PA], Fe));
-      const Le = (0, p.y)(Fe),
+        (0, O.Cg)([N.oI], Ge.prototype, "OnScroll", null),
+        (0, O.Cg)([N.oI], Ge.prototype, "RefetchAllEventTiles", null),
+        (Ge = (0, O.Cg)([u.PA], Ge));
+      const Le = (0, p.y)(Ge),
         ke = (0, u.PA)((e) => {
           const t = he.Get(),
             { fnRequireRefetchEvents: n } = e;
@@ -4357,7 +4368,7 @@
             children: [
               (0, s.jsx)("div", {
                 className: je.FilterContainer,
-                children: (0, s.jsx)(E.he, {
+                children: (0, s.jsx)(M.he, {
                   toolTipContent: (0, f.we)(
                     "#EventModeration_ShowCustomFilter_ttip",
                   ),
@@ -4541,7 +4552,7 @@
               className: (0, A.A)(fe().Button, je.Button, i),
               onClick: () => t(o),
               disabled: a,
-              children: [a && (0, s.jsx)(M.t, { size: "small" }), r],
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), r],
             })
           );
         }),
@@ -4559,7 +4570,7 @@
               className: (0, A.A)(fe().Button, je.Button),
               onClick: () => t(!r),
               disabled: a,
-              children: [a && (0, s.jsx)(M.t, { size: "small" }), i],
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), i],
             })
           );
         });
@@ -4578,7 +4589,7 @@
               className: (0, A.A)(fe().Button, je.Button),
               onClick: () => t(!r),
               disabled: a,
-              children: [a && (0, s.jsx)(M.t, { size: "small" }), i],
+              children: [a && (0, s.jsx)(E.t, { size: "small" }), i],
             })
           : null;
       }
@@ -4695,7 +4706,7 @@
         OnUpdateSeasonalTag(e) {
           const { solrData: t } = this.props;
           let n = H.O3.GetClanEventModel(t.unique_id);
-          (0, C.pg)((0, s.jsx)(Qe, { eventModel: n }), (0, y.uX)(e));
+          (0, C.pg)((0, s.jsx)(Xe, { eventModel: n }), (0, y.uX)(e));
         }
         render() {
           const { solrData: e } = this.props,
@@ -4791,7 +4802,7 @@
                               ),
                             }),
                           this.state.bLoadingEvent &&
-                            (0, s.jsx)(M.t, {
+                            (0, s.jsx)(E.t, {
                               size: "small",
                               string: (0, f.we)("#Loading"),
                             }),
@@ -4840,7 +4851,7 @@
                                     "#EventModTile_SeasonalTag",
                                   ),
                                 }),
-                              (0, s.jsx)(Ee, { eventModel: o }),
+                              (0, s.jsx)(Me, { eventModel: o }),
                             ],
                           }),
                       }),
@@ -5003,7 +5014,7 @@
                   ],
                 }),
               0 == this.state.nLocLanguages &&
-                (0, s.jsx)(M.t, {
+                (0, s.jsx)(E.t, {
                   size: "small",
                   string: (0, f.we)("#EventModTile_LoadingLocs"),
                 }),
@@ -5076,7 +5087,7 @@
           }, [e]),
           r)
         )
-          return (0, s.jsx)(M.t, {
+          return (0, s.jsx)(E.t, {
             size: "small",
             string: (0, f.we)("#EventModTile_AppInfoLoading"),
           });
@@ -5365,7 +5376,7 @@
                   className: je.CategoryChangeDialog,
                   children: [
                     (0, s.jsx)("br", {}),
-                    this.state.bUpdating && (0, s.jsx)(M.t, { size: "small" }),
+                    this.state.bUpdating && (0, s.jsx)(E.t, { size: "small" }),
                     this.state.strErrorMsg &&
                       (0, s.jsxs)("div", {
                         children: [
@@ -5390,7 +5401,7 @@
       (0, O.Cg)([N.oI], Ye.prototype, "ChangeCategoryForEvent", null),
         (0, O.Cg)([N.oI], Ye.prototype, "OnChangeSelection", null),
         (Ye = (0, O.Cg)([u.PA], Ye));
-      class Qe extends m.Component {
+      class Xe extends m.Component {
         state = {
           bUpdating: !1,
           bAccept: this.props.eventModel.BHasTag("halloween2019"),
@@ -5488,7 +5499,7 @@
                     htmlFor: "Cute",
                     children: "Cute Tag",
                   }),
-                  this.state.bUpdating && (0, s.jsx)(M.t, { size: "small" }),
+                  this.state.bUpdating && (0, s.jsx)(E.t, { size: "small" }),
                   this.state.strErrorMsg &&
                     (0, s.jsxs)("div", {
                       children: [
@@ -5503,10 +5514,10 @@
           });
         }
       }
-      (0, O.Cg)([N.oI], Qe.prototype, "ChangeAcceptance", null),
-        (0, O.Cg)([N.oI], Qe.prototype, "ChangeHorror", null),
-        (0, O.Cg)([N.oI], Qe.prototype, "ChangeCute", null),
-        (0, O.Cg)([N.oI], Qe.prototype, "ApplyAction", null);
+      (0, O.Cg)([N.oI], Xe.prototype, "ChangeAcceptance", null),
+        (0, O.Cg)([N.oI], Xe.prototype, "ChangeHorror", null),
+        (0, O.Cg)([N.oI], Xe.prototype, "ChangeCute", null),
+        (0, O.Cg)([N.oI], Xe.prototype, "ApplyAction", null);
       let Ke = class extends m.Component {
         state = { bLoadingEvent: !0 };
         m_cancelSignal = l().CancelToken.source();
@@ -5576,7 +5587,7 @@
             this.state.bLoadingApps ||
             this.state.bLoadingAssociatedDemoInfo
           )
-            return (0, s.jsx)(M.t, {
+            return (0, s.jsx)(E.t, {
               string:
                 (0, f.we)("#Loading") +
                 (this.state.bLoadingEvent
@@ -5813,7 +5824,7 @@
         }
       };
       Ke = (0, O.Cg)([u.PA], Ke);
-      var Xe = n(72034),
+      var Qe = n(72034),
         Je = n(81393),
         Ze = n(7338);
       function $e(e) {
@@ -5825,7 +5836,7 @@
                 "application_config",
               );
               (0, Je.wT)(Boolean(e), "require partnerbrowse_webapi_token");
-              const t = new Xe.D(i.TS.WEBAPI_BASE_URL, e);
+              const t = new Qe.D(i.TS.WEBAPI_BASE_URL, e);
               ("dev" != i.TS.WEB_UNIVERSE && "beta" != i.TS.WEB_UNIVERSE) ||
                 console.log(
                   "DEV_DEBUG: Initializing CStoreItemCache with access token",

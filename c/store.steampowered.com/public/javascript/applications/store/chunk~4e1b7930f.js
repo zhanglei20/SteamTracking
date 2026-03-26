@@ -114,6 +114,17 @@
         pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
         innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
         DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
+        BackgroundAnimation: "_25VCY5c_WxOmDf5rM9ytzl",
+        "ItemFocusAnim-darkerGrey-nocolor": "_3Wd6R5ArXmgfz1dMwANtD7",
+        "ItemFocusAnim-darkerGrey": "_2mepLvzcUGS8PS7_cO5A4C",
+        "ItemFocusAnim-darkGrey": "_3NRkgxBrOQc_fQX1HvTkk3",
+        "ItemFocusAnim-grey": "SAxIC6YdDjzPzIqw_aS4s",
+        "ItemFocusAnim-translucent-white-10": "_-1Vlo_3w2uf9fF1-AU1F4",
+        "ItemFocusAnim-translucent-white-20": "_7B6-9HPzoer1QOmgjEAWS",
+        "ItemFocusAnimBorder-darkGrey": "GRKCpstf6SP8ly-oMKYX3",
+        "ItemFocusAnim-green": "_2cBvKmN3c2ILRdjHTpBZUQ",
+        focusAnimation: "_3eJJYrpdNOdlU26_C9wlMp",
+        hoverAnimation: "BiWwdgbiMRC3pAc-R3rqS",
       };
     },
     chunkid: (module) => {
@@ -7216,15 +7227,19 @@
           )
             return _._.k_RejectWrongPlatform;
         }
-        return !_.prepurchase && _.BIsComingSoon()
-          ? _._.k_RejectNoComingSoon
-          : !_.virtual_reality && _.GetPlatforms()?.vr_support.vrhmd_only
-            ? _._.k_RejectNoVR
-            : _.GetAllCreatorClanIDs()?.some((_) =>
-                  __webpack_require__.BIsIgnoringCurator(_),
-                )
-              ? _._.k_RejectCreatorClan
-              : _._.k_NotRejected;
+        if (!_.prepurchase && _.BIsComingSoon())
+          return _._.k_RejectNoComingSoon;
+        const _ = _.GetPlatforms();
+        return !_.virtual_reality &&
+          _ &&
+          _.vr_support &&
+          _.vr_support.vrhmd_only
+          ? _._.k_RejectNoVR
+          : _.GetAllCreatorClanIDs()?.some((_) =>
+                __webpack_require__.BIsIgnoringCurator(_),
+              )
+            ? _._.k_RejectCreatorClan
+            : _._.k_NotRejected;
       }
       function _(_, _) {
         if (_.localized) {
@@ -7247,33 +7262,32 @@
         if (!_.early_access && _.BIsEarlyAccess())
           return _._.k_RejectEarlyAccess;
         const _ = _.GetAppType();
-        return _.software || 6 != _
-          ? _.games_already_in_library && _.BIsGameOwned(_)
+        if (!_.software && 6 == _) return _._.k_RejectSoftware;
+        if (_.games_already_in_library && _.BIsGameOwned(_))
+          return _._.k_RejectInLibrary;
+        if (_.games_not_in_library && !_.BIsGameOwned(_))
+          return _._.k_RejectNotInLibrary;
+        if (!_.video && [7, 8, 9].includes(_)) return _._.k_RejectVideo;
+        if (_.has_discount) {
+          const _ = _.GetBestPurchaseOption();
+          if (!_ || !_.discount_pct) return _._.k_RejectNoDiscount;
+        }
+        return "adultonly" != _ &&
+          _.no_ao_content &&
+          (_.HasContentDescriptorID(3) || _.HasContentDescriptorID(4))
+          ? _._.k_RejectAO
+          : 1 == _ &&
+              _.games_already_in_library &&
+              _.BIsGameOwned(_.GetParentAppID() || 0)
             ? _._.k_RejectInLibrary
-            : _.games_not_in_library && !_.BIsGameOwned(_)
-              ? _._.k_RejectNotInLibrary
-              : !_.video && [7, 8, 9].includes(_)
-                ? _._.k_RejectVideo
-                : _.has_discount && !_.GetBestPurchaseOption().discount_pct
-                  ? _._.k_RejectNoDiscount
-                  : "adultonly" != _ &&
-                      _.no_ao_content &&
-                      (_.HasContentDescriptorID(3) ||
-                        _.HasContentDescriptorID(4))
-                    ? _._.k_RejectAO
-                    : 1 == _ &&
-                        _.games_already_in_library &&
-                        _.BIsGameOwned(_.GetParentAppID())
-                      ? _._.k_RejectInLibrary
-                      : _
-                        ? (1 == _ && _.BHasAppID(_.GetParentAppID())) ||
-                          _.BHasAppID(_)
-                          ? _._.k_RejectAlreadyDisplayed
-                          : _.has_trailer && !_.BHasTrailers(!1)
-                            ? _._.k_RejectNoTrailer
-                            : _(_, _)
-                        : _._.k_NotRejected
-          : _._.k_RejectSoftware;
+            : _
+              ? (1 == _ && _.BHasAppID(_.GetParentAppID() || 0)) ||
+                _.BHasAppID(_)
+                ? _._.k_RejectAlreadyDisplayed
+                : _.has_trailer && !_.BHasTrailers(!1)
+                  ? _._.k_RejectNoTrailer
+                  : _(_, _)
+              : _._.k_NotRejected;
       }
       function _(_, _) {
         const _ = _._.Get();
@@ -8792,103 +8806,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_, _) {
-        return new (_())(
-          async (_) => {
-            const _ = [..._],
-              _ = await _._.GetPlayerLinkDetails(_, {
-                steamids: _,
-              }),
-              _ = new Map();
-            return (
-              _.Body()
-                .accounts()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  _.set(_.public_data.steamid, _);
-                }),
-              __webpack_require__.map((_) => _.get(_) ?? null)
-            );
-          },
-          {
-            maxBatchSize: 100,
-            cache: !1,
-            ..._,
-          },
-        );
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)(_(_, _, _));
-      }
-      function _(_) {
-        const _ = (0, _._)(),
-          _ = _.useContext(_);
-        return (0, _._)({
-          queries: _.map((_) => _(_, _, _)),
-        });
-      }
-      const _ = _.createContext({
-        loadPersonaState: async (_, _) => {
-          if (null == _) return null;
-          const _ = await (function (_) {
-            return (_ ??= _(_));
-          })(_).load(_._.InitFromAccountID(_).ConvertTo64BitString());
-          return (function (_, _) {
-            let _ = new _._(_);
-            const _ = _?.public_data,
-              _ = _?.private_data;
-            (_.m_bInitialized = !!_),
-              (_.m_ePersonaState = _?.persona_state ?? 0),
-              (_.m_strAvatarHash = _?.sha_digest_avatar
-                ? (0, _._)(_.sha_digest_avatar)
-                : _._),
-              (_.m_strPlayerName = _?.persona_name ?? _.ConvertTo64BitString()),
-              (_.m_strAccountName = _?.account_name),
-              _?.persona_state_flags &&
-                (_.m_unPersonaStateFlags = _?.persona_state_flags);
-            _?.game_id && (_.m_gameid = _?.game_id);
-            _?.game_server_ip_address &&
-              (_.m_unGameServerIP = _?.game_server_ip_address);
-            _?.lobby_steam_id && (_.m_game_lobby_id = _?.lobby_steam_id);
-            _?.game_extra_info && (_.m_strGameExtraInfo = _?.game_extra_info);
-            _?.profile_url && (_.m_strProfileURL = _.profile_url);
-            return _;
-          })(_._.InitFromAccountID(_), _);
-        },
-      });
-      function _() {
-        return _.useContext(_);
-      }
-      function _(_, _, _) {
-        const _ = "string" == typeof _ ? new _._(_).GetAccountID() : _;
-        return {
-          queryKey: ["PlayerSummary", _],
-          queryFn: () => _.loadPersonaState(_, _),
-          enabled: !!_,
-        };
-      }
-      let _;
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -9194,353 +9111,6 @@
         _.Get().SetTestAppCommunityItems(_, _);
       }
       (0, _._)([_._], _.prototype, "SetTestAppCommunityItems", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_claimState = {
-          bCanClaimNewItem: !1,
-          bAlreadyClaimedCurrentItem: !1,
-        };
-        m_claimedFreeItemDef;
-        m_rtNextClaimTime;
-        m_claimTimer;
-        m_SteamInterface = null;
-        m_canClaimPromise = null;
-        m_claimPromise = null;
-        m_claimStateChangeCallback = new _._();
-        m_testNextClaimFakeResponse = null;
-        m_bInTestMode = !1;
-        GetClaimItemState() {
-          return this.m_claimState;
-        }
-        GetClaimStateChangeCallback() {
-          return this.m_claimStateChangeCallback;
-        }
-        GetClaimedSaleRewardItemDef() {
-          return this.m_claimedFreeItemDef;
-        }
-        GetNextClaimTime() {
-          if (!this.m_rtNextClaimTime) return null;
-          return new Date(1e3 * this.m_rtNextClaimTime);
-        }
-        TEST_OverrideClaimState(_) {
-          (this.m_bInTestMode = !0),
-            (this.m_canClaimPromise = null),
-            (this.m_claimPromise = null),
-            _.bCanClaimNewItem
-              ? (this.m_testNextClaimFakeResponse = {
-                  bAlreadyClaimedCurrentItem: !0,
-                  bCanClaimNewItem: !1,
-                  rtNextClaimTime: Math.floor(Date.now() / 1e3) + 3600,
-                  appid: 2243810,
-                  community_item_type: 2,
-                  community_item_class: 11,
-                })
-              : (this.m_testNextClaimFakeResponse = null),
-            (this.m_claimState = _),
-            this.GetClaimStateChangeCallback().Dispatch(this.m_claimState);
-        }
-        async ActivateProfileModifier(_) {
-          const _ = _._.Init(_._);
-          _.Body().set_communityitemid(_.communityitemid),
-            _.Body().set_appid(_.appid),
-            _.Body().set_activate(!0);
-          const _ = await _._.ActivateProfileModifierItem(
-            this.m_SteamInterface.GetServiceTransport(),
-            _,
-          );
-          return (
-            1 != __webpack_require__.GetEResult() &&
-              console.error(
-                `Error when calling QuestService.ActivateProfileModifierItem: EResult=${__webpack_require__.GetEResult()}`,
-              ),
-            __webpack_require__.GetEResult()
-          );
-        }
-        async LoadCanUserClaimItem() {
-          return this.m_bInTestMode
-            ? this.m_claimState
-            : (this.m_canClaimPromise ||
-                (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
-              this.m_canClaimPromise);
-        }
-        async InternalLoadCanUserClaimItem() {
-          (0, _._)(
-            _._.logged_in,
-            "User must be logged to use CSaleItemClaimableRewardsStore",
-          );
-          const _ = _._.Init(_._);
-          _.Body().set_language(_._.LANGUAGE);
-          let _ = null;
-          try {
-            const _ = await _._.CanClaimItem(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (1 == __webpack_require__.GetEResult())
-              return (
-                (this.m_claimedFreeItemDef = Boolean(
-                  __webpack_require__.Body().reward_item()?.defid(),
-                )
-                  ? __webpack_require__.Body().reward_item()?.toObject()
-                  : null),
-                (this.m_claimState = {
-                  bCanClaimNewItem: !!__webpack_require__.Body().can_claim(),
-                  bAlreadyClaimedCurrentItem: Boolean(
-                    this.m_claimedFreeItemDef,
-                  ),
-                  appid: this.m_claimedFreeItemDef?.appid,
-                  community_item_type:
-                    this.m_claimedFreeItemDef?.community_item_type,
-                  community_item_class:
-                    this.m_claimedFreeItemDef?.community_item_class,
-                  rtNextClaimTime:
-                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
-                      ? __webpack_require__.Body().next_claim_time()
-                      : void 0,
-                }),
-                (this.m_rtNextClaimTime = __webpack_require__
-                  .Body()
-                  .next_claim_time()),
-                this.SetClaimTimer(),
-                this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                this.m_claimState
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleItemClaimableRewardsStore.InternalLoadCanUserClaimItem failed: error: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            {
-              bCanClaimNewItem: !1,
-              bAlreadyClaimedCurrentItem: !1,
-            }
-          );
-        }
-        async UserClaimItem() {
-          return (
-            this.m_testNextClaimFakeResponse &&
-              (console.log(
-                "CSaleItemClaimableRewardsStore - testing, pretending claim action succeeded",
-                (0, _._)(this.m_testNextClaimFakeResponse),
-              ),
-              (this.m_claimState = this.m_testNextClaimFakeResponse),
-              this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-              (this.m_rtNextClaimTime = this.m_claimState.rtNextClaimTime),
-              this.SetClaimTimer(),
-              (this.m_testNextClaimFakeResponse = null)),
-            this.m_bInTestMode
-              ? this.m_claimState
-              : (this.m_claimPromise ||
-                  (this.m_claimPromise = this.InternalUserClaimItem()),
-                this.m_claimPromise)
-          );
-        }
-        async InternalUserClaimItem() {
-          (0, _._)(
-            _._.logged_in,
-            "User must be logged to use CSaleItemClaimableRewardsStore",
-          ),
-            (0, _._)(
-              this.m_claimState.bCanClaimNewItem,
-              "Only should be called when we previously verified you can claim something. ",
-            );
-          const _ = _._.Init(_._);
-          _.Body().set_language(_._.LANGUAGE);
-          let _ = null;
-          try {
-            const _ = await _._.ClaimItem(
-              this.m_SteamInterface.GetServiceTransport(),
-              _,
-            );
-            if (1 == __webpack_require__.GetEResult())
-              return (
-                (this.m_claimedFreeItemDef =
-                  __webpack_require__.Body().reward_item()?.toObject() ?? {}),
-                (this.m_claimState = {
-                  bCanClaimNewItem: !1,
-                  bAlreadyClaimedCurrentItem: Boolean(
-                    this.m_claimedFreeItemDef,
-                  ),
-                  appid: this.m_claimedFreeItemDef.appid,
-                  community_item_type:
-                    this.m_claimedFreeItemDef.community_item_type,
-                  community_item_class:
-                    this.m_claimedFreeItemDef.community_item_class,
-                  rtNextClaimTime:
-                    (__webpack_require__.Body().next_claim_time() ?? 0) > 0
-                      ? __webpack_require__.Body().next_claim_time()
-                      : void 0,
-                }),
-                this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
-                (this.m_rtNextClaimTime = __webpack_require__
-                  .Body()
-                  .next_claim_time()),
-                this.SetClaimTimer(),
-                this.m_claimState
-              );
-            if (29 == __webpack_require__.GetEResult())
-              return (
-                (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
-                this.m_canClaimPromise
-              );
-            _ = (0, _._)(_);
-          } catch (_) {
-            _ = (0, _._)(_);
-          }
-          return (
-            console.error(
-              "CSaleItemClaimableRewardsStore.InternalUserClaimItem failed: error: " +
-                _?.strErrorMsg,
-              _,
-            ),
-            {
-              bCanClaimNewItem: !1,
-              bAlreadyClaimedCurrentItem: !1,
-            }
-          );
-        }
-        SetClaimTimer() {
-          if (this.m_claimTimer) return;
-          if (!this.m_rtNextClaimTime) return;
-          const _ = Date.now();
-          let _ = new Date(1e3 * this.m_rtNextClaimTime);
-          const _ = Math.max(0, Math.min(1, _.getTime() - _));
-          this.m_claimTimer = window.setTimeout(
-            () => {
-              (this.m_claimTimer = void 0),
-                Date.now() > _.getTime()
-                  ? ((this.m_canClaimPromise = null),
-                    (this.m_claimPromise = null),
-                    (this.m_claimedFreeItemDef = null),
-                    (this.m_claimState = {
-                      bCanClaimNewItem: !0,
-                      bAlreadyClaimedCurrentItem: !1,
-                      rtNextClaimTime: void 0,
-                    }),
-                    this.GetClaimStateChangeCallback().Dispatch(
-                      this.m_claimState,
-                    ))
-                  : this.SetClaimTimer();
-            },
-            _ > 3e5 ? _ / 2 : _,
-          );
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              _.s_Singleton.Init(),
-              "dev" == _._.WEB_UNIVERSE &&
-                (window.g_SaleItemClaimableRewardsStore = _.s_Singleton)),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {
-          const _ = (0, _._)("loyalty_webapi_token", "application_config");
-          (0, _._)(
-            _,
-            "CQuestCommunityInventoryStore: missing loyalty_webapi_token oauth permission",
-          ),
-            (this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _));
-        }
-      }
-      function _() {
-        const [_, _] = (0, _.useState)(_.Get().GetClaimItemState()),
-          [__webpack_require__, _] = (0, _.useState)(!0);
-        return (
-          (0, _.useEffect)(() => {
-            _.Get()
-              .LoadCanUserClaimItem()
-              .then(_)
-              .finally(() => _(!1));
-          }, []),
-          (0, _._)(_.Get().GetClaimStateChangeCallback(), _),
-          {
-            ..._,
-            bLoading: __webpack_require__,
-          }
-        );
-      }
-      function _() {
-        return {
-          fnClaimItem: _.Get().UserClaimItem,
-        };
-      }
-      function _() {
-        return {
-          fnSetClaimState: _.Get().TEST_OverrideClaimState,
-        };
-      }
-      async function _(_) {
-        return _.Get().ActivateProfileModifier(_);
-      }
-      function _(_, _, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`SaleRewardsGetDefinition_${_}_${_}_${_}`],
-          queryFn: async () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_sale_def_type(_),
-                _.Body().set_language(_),
-                _.Body().set_include_community_item_def(_),
-                (await _._.GetCurrentDefinition(_, _)).Body().toObject()
-              );
-            })(_, _, _, _),
-          staleTime: 1 / 0,
-        });
-      }
-      function _(_, _, _, _) {
-        const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: [`GetClaimedSaleRewards_${_}_${_}_${_}_${_}`],
-          queryFn: async () =>
-            (async function (_, _, _, _) {
-              const _ = _._.Init(_._);
-              return (
-                _.Body().set_sale_def_type(_),
-                _.Body().set_language(_),
-                _.Body().set_include_community_item_def(_),
-                (await _._.GetClaimedSaleRewards(_, _)).Body().toObject()
-              );
-            })(_, _, _, _),
-          staleTime: 1 / 0,
-        });
-      }
-      (0, _._)([_._], _.prototype, "TEST_OverrideClaimState", null),
-        (0, _._)([_._], _.prototype, "UserClaimItem", null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -13457,7 +13027,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = (_) => {
@@ -14753,6 +14322,318 @@
             bPreferAssetWithoutOverride: !1,
           }),
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      !(function (_) {
+        (_.k_eView = "view"),
+          (_.k_eViewWebSiteHub = "websitehub"),
+          (_.k_eCommunityView = "communityview"),
+          (_.k_eCommunityEdit = "edit"),
+          (_.k_eCommunityEditBroadcast = "editBroadcast"),
+          (_.k_eCommunityAdminPage = "admin"),
+          (_.k_eCommunityPublish = "publish"),
+          (_.k_eCommunityMigrate = "migrate"),
+          (_.k_eCommunityPreview = "preview"),
+          (_.k_eCommunityPreviewSale = "previewsale"),
+          (_.k_eCommunityAnnouncementHub = "community_announcehub"),
+          (_.k_eStoreView = "storeview"),
+          (_.k_eStoreNewsHub = "newshub"),
+          (_.k_eStoreOwnerPage = "store"),
+          (_.k_eStoreSalePage = "sale"),
+          (_.k_eStoreUsersNewsHub = "usernewshub");
+      })(_ || (_ = {}));
+      const _ =
+        /(?:steampowered\.com|community\.\S+\.steam\.dev|store\.\S+\.steam\.dev|valve\.org\/store|steam\.dev\/store|\.steamchina\.com|steamcommunity\.com|valve\.org\/community|steam\.dev\/community)\/(\w+)(\/|$)/i;
+      function _(_, _) {
+        if (!_) return !1;
+        const _ = "store" === (0, _._)(),
+          _ = (function (_) {
+            const _ = _.match(_);
+            return _?.[1];
+          })(window.location.href),
+          _ = _ && "news" == _,
+          _ = 36 == _.GetEventType(),
+          _ = "community" === (0, _._)(),
+          _ = _.appid ? "games" : "groups",
+          _ =
+            _ &&
+            _ == _ &&
+            ((_.appid && _.appid === _._.APPID) ||
+              (!_.appid && _.clanSteamID.GetAccountID() === _._.CLANACCOUNTID));
+        switch (_) {
+          case _.k_eView:
+            return _ || _;
+          case _.k_eCommunityView:
+          case _.k_eCommunityEdit:
+          case _.k_eCommunityEditBroadcast:
+          case _.k_eCommunityPublish:
+          case _.k_eCommunityMigrate:
+          case _.k_eCommunityPreview:
+          case _.k_eCommunityPreviewSale:
+          case _.k_eCommunityAnnouncementHub:
+            return _;
+          case _.k_eCommunityAdminPage:
+            return !_ && _;
+          case _.k_eViewWebSiteHub:
+            return _ || _;
+          case _.k_eStoreView:
+          case _.k_eStoreNewsHub:
+          case _.k_eStoreOwnerPage:
+          case _.k_eStoreUsersNewsHub:
+            return _;
+          case _.k_eStoreSalePage:
+            return !1;
+          default:
+            return (0, _._)(!1, "Unknown route specified for link: " + _), !1;
+        }
+      }
+      function _(_) {
+        const _ =
+          _._.COMMUNITY_BASE_URL +
+          "gid/" +
+          _.clanSteamID.ConvertTo64BitString() +
+          "/announcements/share/" +
+          _.AnnouncementGID;
+        return {
+          strFacebookUrl: _ + "?site=facebook&t=" + Math.random(),
+          strTwitterUrl: _ + "?site=twitter",
+          strRedditUrl: _ + "?site=reddit",
+        };
+      }
+      function _(_) {
+        return _(_, _.k_eStoreSalePage, "absolute");
+      }
+      function _(_) {
+        return _(_, _.k_eStoreView, "absolute");
+      }
+      function _(_, _, _) {
+        if (_)
+          return (
+            (_ ? "/games/" + _._.VANITY_ID : "/groups/" + _._.VANITY_ID) + "/"
+          );
+        const _ = _ ? "ogg/" + _ : "gid/" + _.ConvertTo64BitString();
+        return _._.COMMUNITY_BASE_URL + _ + "/";
+      }
+      function _() {
+        return "news";
+      }
+      function _(_, _, _) {
+        const [_] = (0, _._)(_?.appid, {
+          include_basic_info: !0,
+        });
+        if (_) return _(_, _, _, _);
+      }
+      function _(_, _, _, _) {
+        const _ = "relative" === _,
+          _ = "community" === (0, _._)(),
+          _ = _ ? "/" : _._.STORE_BASE_URL,
+          _ = _(_.appid, _.clanSteamID, _);
+        _ === _.k_eView
+          ? (_ = _ ? _.k_eCommunityView : _.k_eStoreView)
+          : _ === _.k_eViewWebSiteHub &&
+            (_ = _ ? _.k_eCommunityAnnouncementHub : _.k_eStoreNewsHub);
+        const _ = _.GID ? _.GID : "",
+          _ = _.AnnouncementGID ? _.AnnouncementGID : "",
+          _ =
+            _.BIsOGGEvent() &&
+            _.appid &&
+            _ &&
+            _.BHasSaleUpdateLandingPageVanity(),
+          _ = 36 == _.GetEventType();
+        switch (_) {
+          case _.k_eCommunityPublish:
+            return (
+              _ +
+              (_.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + _
+                : "partnerevents/publish/" + _ + "?tab=publishing")
+            );
+          case _.k_eCommunityEdit:
+            return (
+              _ +
+              (_.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + _
+                : "partnerevents/edit/" + _)
+            );
+          case _.k_eCommunityEditBroadcast:
+            return (
+              _ +
+              (_.bOldAnnouncement
+                ? "partnerevents/migrate_announcement/" + _
+                : "partnerevents/edit/" + _) +
+              "?tab=broadcast"
+            );
+          case _.k_eCommunityMigrate:
+            return _ + "partnerevents/migrate_announcement/" + _;
+          case _.k_eCommunityPreview:
+            return _
+              ? _ + "partnerevents/previewsale/" + _
+              : _ +
+                  (_.bOldAnnouncement
+                    ? "partnerevents/preview_old_announcement/" + _
+                    : "partnerevents/preview/" + _);
+          case _.k_eCommunityPreviewSale:
+            return _ + "partnerevents/previewsale/" + _;
+          case _.k_eCommunityAdminPage:
+            return _
+              ? `${_}curator/${_.clanSteamID.GetAccountID()}/admin/creatorhome_link`
+              : _ + "partnerevents";
+          case _.k_eCommunityAnnouncementHub:
+            return _ + "announcements";
+          case _.k_eStoreNewsHub:
+            return (
+              _ +
+              `news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}`
+            );
+          case _.k_eStoreOwnerPage:
+            return (
+              _ +
+              (_.appid
+                ? "app/" + _.appid
+                : "curator/" + _.clanSteamID.GetAccountID())
+            );
+          case _.k_eStoreSalePage:
+            return _.jsondata.bSaleEnabled
+              ? _.clanSteamID.GetAccountID() == _._
+                ? `${_}charts/topnewreleases/${_.jsondata.sale_vanity_id}`
+                : _.clanSteamID.GetAccountID() == _._
+                  ? `${_}charts/bestofyear/${_.jsondata.sale_vanity_id}`
+                  : _
+                    ? `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`
+                    : _
+                      ? `${_}curator/${_.clanSteamID.GetAccountID()}`
+                      : _ +
+                        (_.jsondata
+                          .sale_vanity_id_valve_approved_for_sale_subpath
+                          ? "sale/"
+                          : "curator/" +
+                            _.clanSteamID.GetAccountID() +
+                            "/sale/") +
+                        _.jsondata.sale_vanity_id
+              : _;
+          case _.k_eCommunityView:
+            return _ + "announcements/detail/" + _;
+          case _.k_eStoreView:
+            if (_.clanSteamID.GetAccountID() == (0, _._)())
+              return `${_._.STORE_BASE_URL}meetsteam/${_}`;
+            if (_)
+              return `${_.GetStorePageURL()}/${_.GetSaleUpdateLandingPageVanity()}`;
+            if (_) return `${_}curator/${_.clanSteamID.GetAccountID()}`;
+            return `${_}news/${_.appid ? `app/${_.appid}` : `group/${_.clanSteamID.GetAccountID()}`}/${_.bOldAnnouncement ? `old_view/${_}` : `view/${_}`}`;
+          case _.k_eStoreUsersNewsHub:
+            return `${_}news/`;
+          default:
+            return (0, _._)(!1, "Unknown route specified for link"), "";
+        }
+      }
+      function _(_, _, _) {
+        return _(
+          _,
+          _,
+          "forceAbsolute" === _ || !_(_, _) ? "absolute" : "relative",
+        );
+      }
+      function _(_, _, _, _) {
+        return _(
+          _,
+          _,
+          _,
+          "forceAbsolute" === _ || !_(_, _) ? "absolute" : "relative",
+        );
+      }
+      function _(_) {
+        const { eventModel: _, route: __webpack_require__, bPopup: _ = !0 } = _,
+          _ = _(__webpack_require__, _),
+          _ = _(_, __webpack_require__, _ ? "relative" : "absolute");
+        return (
+          _.useEffect(() => {
+            _ ? window.open(_) : window.location.assign(_);
+          }, [_, _]),
+          _
+            ? (0, _.jsx)(_._, {
+                push: !0,
+                _: _,
+              })
+            : null
+        );
+      }
+      function _(_, _, _) {
+        const _ = _(_, _, !1);
+        return "admin" === _ ? _ + "partnerevents" : "";
+      }
+      function _(_) {
+        const { eventModel: _, preferredFocus: __webpack_require__ } = _,
+          { bCanUseLink: _ } = _.useContext(_._),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = _ && _(_.route, _),
+          _ = _(_, _.route, _ ? "relative" : "absolute"),
+          _ = !_ && _ ? (0, _._)(_) : _,
+          _ = _ || !_ ? _ : (0, _._)(_, _),
+          _ = _(_, _.k_eViewWebSiteHub, "absolute"),
+          _ = Boolean(_.route != _.k_eViewWebSiteHub)
+            ? (0, _._)("#EventBrowse_MoreEventsBtn")
+            : "",
+          _ = _.useCallback(() => {
+            _ && window.location.assign(_);
+          }, [_]);
+        return _
+          ? _
+            ? (0, _.jsx)(_._, {
+                style: _.style,
+                className: _.className,
+                href: _.createHref({
+                  pathname: _,
+                }),
+                onClick: (_) => {
+                  _.onClick?.(_), _.push(_), _.preventDefault();
+                },
+                onOptionsActionDescription: _,
+                onOptionsButton: _ ? _ : void 0,
+                preferredFocus: __webpack_require__,
+                children: _.children,
+              })
+            : (0, _.jsx)(_._, {
+                href: _,
+                style: _.style,
+                className: _.className,
+                onClick: _.onClick,
+                preferredFocus: __webpack_require__,
+                onOptionsActionDescription: _,
+                onOptionsButton: _ ? _ : void 0,
+                children: _.children,
+              })
+          : null;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -16319,87 +16200,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        state = {
-          bRenderChildren: !1,
-          nPrevRenderWidth: 0,
-          nPrevRenderHeight: 0,
-        };
-        m_refContainer = _.createRef();
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(_) {
-          let _ = this.state.bRenderChildren;
-          if (_ == _) return;
-          if (_ && !this.BLoadAndUnload()) return;
-          let _ = 0,
-            _ = 0;
-          if (this.m_refContainer.current) {
-            const _ = this.m_refContainer.current.GetBoundingClientRect();
-            _ && ((_ = _.width), (_ = _.height));
-          }
-          this.setState({
-            bRenderChildren: _,
-            nPrevRenderWidth: _,
-            nPrevRenderHeight: _,
-          }),
-            _ && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const {
-              placeholderWidth: _,
-              placeholderHeight: _,
-              holdGampadFocus: __webpack_require__,
-              onRender: _,
-              style: _,
-              mode: _,
-              ..._
-            } = this.props,
-            _ = this.state.bRenderChildren;
-          let _ = _;
-          if (!_) {
-            const _ = this.state.nPrevRenderWidth || _,
-              _ = this.state.nPrevRenderHeight || _;
-            (void 0 === _ && void 0 === _) ||
-              (_ = {
-                ..._,
-                minHeight: _,
-                minWidth: _,
-              });
-          }
-          const _ = this.BLoadAndUnload() ? "repeated" : "once";
-          let _ = (0, _.jsx)(_._, {
-            ref: this.m_refContainer,
-            style: _,
-            ..._,
-            onVisibilityChange: this.OnVisibilityChange,
-            trigger: _,
-            children: _ && this.props.children,
-          });
-          return (
-            _ &&
-              (_ = (0, _.jsx)(_._, {
-                focusableIfEmpty: !0,
-                children: _,
-              })),
-            _
-          );
-        }
-      }
-      (0, _._)([_._], _.prototype, "OnVisibilityChange", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -16866,18 +16666,22 @@
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)();
-        return (0, _._)({
-          queryKey: ["communitypreferences"],
-          queryFn: async () => {
-            const _ = _._.Init(_._),
-              _ = await _._.GetCommunityPreferences(_, _);
-            if (1 != __webpack_require__.GetEResult())
-              throw new Error(
-                `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
-              );
-            return __webpack_require__.Body();
-          },
-        });
+        return (0, _._)(
+          (function (_) {
+            return {
+              queryKey: ["communitypreferences"],
+              queryFn: async () => {
+                const _ = _._.Init(_._),
+                  _ = await _._.GetCommunityPreferences(_, _);
+                if (1 != __webpack_require__.GetEResult())
+                  throw new Error(
+                    `Error from GetCommunityPreferences: ${__webpack_require__.GetEResult()} ${__webpack_require__.GetErrorMessage()}`,
+                  );
+                return __webpack_require__.Body();
+              },
+            };
+          })(_),
+        );
       }
     },
   },

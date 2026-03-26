@@ -88,10 +88,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
 }
 ._3r0tlX7BEcUjUC0nk5CW8i ._3nezXM-f76hluq1iA1sBte {
   margin-bottom: 10px;
+}
+._3r0tlX7BEcUjUC0nk5CW8i {
+  overflow: hidden;
 }
 ._3r0tlX7BEcUjUC0nk5CW8i._1VPtlX8LmlSvqpBchxC_7s {
   height: 0px;
@@ -498,7 +500,7 @@
   ._3RWed3mcqH6MmHhBgbkBGD {
   flex-grow: 1;
   height: 22px;
-  border: 0px solid transparent;
+  border: 0px solid rgba(0, 0, 0, 0);
   background-color: #1a1a1a;
   outline: none;
   color: #fff;

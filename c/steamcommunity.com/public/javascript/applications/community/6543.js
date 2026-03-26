@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "待售數量：%1$s",
 	"Bucket_PriceFrom": "%1$s 起",
 	"AccessorySearch_AttachedAccessoryType": "加裝%1$s",
+	"FilterResults_Placeholder": "篩選結果…",
 	"AdvancedSearch_Header": "進階搜尋",
 	"AdvancedSearch_Link": "進階搜尋",
 	"MarketSearch_Placeholder": "搜尋物品…",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "最低",
 	"AssetProperty_Range_MaxPlaceholder": "最高",
 	"Accessories_FieldSectionLabel": "配件",
-	"Listing_EnhancedAppearance_Missing": "此上架物品尚無獨有或強化的圖片。此處顯示的圖片可能與上架物品稍有出入。"
+	"Item_CountryBuySellRestricted": "您的所在國家 / 地區禁止買賣此類物品，因此您無法購買此物品。",
+	"Item_CountryBuyRestricted": "您的所在國家 / 地區禁止購買此類物品，因此您無法購買此物品。",
+	"Listing_EnhancedAppearance_Missing": "此上架物品尚無獨有或強化的圖片。此處顯示的圖片可能與上架物品稍有出入。",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

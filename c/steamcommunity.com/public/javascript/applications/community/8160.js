@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Satıştaki miktar: %1$s",
 	"Bucket_PriceFrom": "En düşük: %1$s",
 	"AccessorySearch_AttachedAccessoryType": "Takılı %1$s",
+	"FilterResults_Placeholder": "Sonuçları Filtrele...",
 	"AdvancedSearch_Header": "Gelişmiş Arama",
 	"AdvancedSearch_Link": "Gelişmiş Arama",
 	"MarketSearch_Placeholder": "Öğe ara...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
 	"Accessories_FieldSectionLabel": "Aksesuarlar",
-	"Listing_EnhancedAppearance_Missing": "Bu ilanda benzersiz veya geliştirilmiş görseller bulunmamaktadır. Burada gösterilen görsel, ilandaki öğeden biraz farklılık gösterebilir."
+	"Item_CountryBuySellRestricted": "Bu tür öğelerin alımı ya da satımı ülkenizde devre dışı olduğu için bu öğeyi satın alamazsınız.",
+	"Item_CountryBuyRestricted": "Bu tür öğelerin alımı ülkenizde devre dışı olduğu için bu öğeyi satın alamazsınız.",
+	"Listing_EnhancedAppearance_Missing": "Bu ilanda benzersiz veya geliştirilmiş görseller bulunmamaktadır. Burada gösterilen görsel, ilandaki öğeden biraz farklılık gösterebilir.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

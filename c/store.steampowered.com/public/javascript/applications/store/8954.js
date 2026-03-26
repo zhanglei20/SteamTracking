@@ -310,8 +310,8 @@
             rgAcceptableTypes: [4],
           },
           takeunder_art: {
-            width: 940,
-            height: 150,
+            width: 1200,
+            height: 190,
             rgAcceptableTypes: _,
           },
           takeunder_mobile_art: {

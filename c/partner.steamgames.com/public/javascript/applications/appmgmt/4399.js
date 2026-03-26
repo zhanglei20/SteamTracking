@@ -37,8 +37,11 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Αλλαγή σε δωρεάν;",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Εάν το παιχνίδι σας έχει ήδη κυκλοφορήσει και χρειάζεται να κάνετε αλλαγή από επί πληρωμή σε δωρεάν, κάντε κλικ %1$s για να μάθετε περισσότερα και να ζητήσετε βοήθεια.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "εδώ",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"SinglePackagePricing_Right_Convert_Title": "Εισαγωγή προσαρμοσμένων τιμών",
+	"SinglePackagePricing_Right_Custom_Desc": "Μπορείτε να εισαγάγετε τις δικές σας τιμές για κάθε νόμισμα με απευθείας επεξεργασία του πλαισίου κειμένου.",
+	"SinglePackagePricing_Right_Convert_Desc": "Μπορείτε επίσης να χρησιμοποιήσετε αυτό το κουμπί για να υπολογίσετε κάθε νόμισμα βάσει της επιλεγμένης μεθόδου μετατροπής και της προσαρμοσμένης τιμής σε USD που έχετε εισαγάγει.",
+	"PricingDashboard_Select_Price": "Επιλέξτε από τις βαθμίδες τιμών",
+	"PricingDashboard_Select_Price_button": "Επιλέξτε τη βασική τιμή σε USD",
 	"PricingDashboard_Select_Price_button_ttip": "Ανοίγει ένα παράθυρο διαλόγου με ένα σύνολο από συνήθεις βαθμίδες τιμών που επιτρέπει τη ρύθμισή τους σε όλα τα παρακάτω νομίσματα.",
 	"empty_no_trailing_comma": ""
 }`);

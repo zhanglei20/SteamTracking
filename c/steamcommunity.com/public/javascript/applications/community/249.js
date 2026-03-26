@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Количество в продаже: %1$s",
 	"Bucket_PriceFrom": "От %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s",
+	"FilterResults_Placeholder": "Отфильтровать результаты...",
 	"AdvancedSearch_Header": "Расширенный поиск",
 	"AdvancedSearch_Link": "Расширенный поиск",
 	"MarketSearch_Placeholder": "Поиск предмета...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Мин.",
 	"AssetProperty_Range_MaxPlaceholder": "Макс.",
 	"Accessories_FieldSectionLabel": "Аксессуары",
-	"Listing_EnhancedAppearance_Missing": "Для данного лота пока нет уникальных или улучшенных изображений. Показанное изображение может немного отличаться от того, как выглядит предмет."
+	"Item_CountryBuySellRestricted": "Этот предмет нельзя купить, так как покупка и продажа предметов такого типа не разрешена в вашей стране.",
+	"Item_CountryBuyRestricted": "Этот предмет нельзя купить, так как покупка предметов такого типа не разрешена в вашей стране.",
+	"Listing_EnhancedAppearance_Missing": "Для данного лота пока нет уникальных или улучшенных изображений. Показанное изображение может немного отличаться от того, как выглядит предмет.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

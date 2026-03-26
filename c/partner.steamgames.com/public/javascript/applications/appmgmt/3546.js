@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Vrei să oferi jocul gratis?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Dacă jocul tău a fost deja lansat și vrei să faci trecerea de la un joc disponibil contra cost la unul gratuit, apasă %1$s pentru a afla mai multe și a solicita asistență.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "aici",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Introducerea prețurilor personalizate",
+	"SinglePackagePricing_Right_Custom_Desc": "Poți introduce propriile prețuri pentru fiecare monedă, editând direct căsuța text.",
+	"SinglePackagePricing_Right_Convert_Desc": "De asemenea, poți utiliza acest buton pentru a calcula prețul pentru fiecare monedă în baza metodei de conversie selectate și a prețului personalizat introdus pentru USD.",
+	"PricingDashboard_Select_Price": "Selectează din nivelurile de preț",
+	"PricingDashboard_Select_Price_button": "Selectează prețul de bază în USD",
+	"PricingDashboard_Select_Price_button_ttip": "Deschide o fereastră de dialog cu un set de niveluri de preț normale care-ți permit să stabilești un preț pentru toate monedele de mai jos.",
 	"empty_no_trailing_comma": ""
 }`);
     },

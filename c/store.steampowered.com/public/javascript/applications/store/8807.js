@@ -68,7 +68,7 @@
 	"Menu_Section_Browse_Discounts": "Slevy a výprodeje",
 	"Menu_Section_Browse_Charts": "Žebříčky a statistiky",
 	"Menu_Section_Browse_Charts_Desc": "To nej za poslední týden, měsíc a rok.",
-	"Menu_Section_Browse_Discounts_YourWishlist": "Seznam přání",
+	"Menu_Section_Browse_Discounts_YourWishlist": "Z Vašeho seznamu přání",
 	"Menu_Section_Browse_Discounts_YourWishlist_Discounts": "%1$s ve slevě",
 	"Menu_Section_Browse_Discounts_SpecialEvents": "Speciální události",
 	"Menu_Section_Browse_Discounts_PopularTitles": "Populární",

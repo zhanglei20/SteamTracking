@@ -14,11 +14,22 @@
         LatestUpdateButtonCtn: "_2vEwZPNBe2qcTuxZf5cpiD",
         LatestUpdateIcon: "mq3ROvmcn5_HdCKG6JXDa",
         LatestUpdateButton: "_1TRFtE8IfXpDQ_loHnB_bU",
+        BackgroundAnimation: "_295HzH0_Gg7fchG1zO9Km7",
+        "ItemFocusAnim-darkerGrey-nocolor": "_291aUneSnsR7SSD43BPEYt",
+        "ItemFocusAnim-darkerGrey": "_3T-aeBZd_novjXZhPEqJ_L",
+        "ItemFocusAnim-darkGrey": "peNld_fsioxlGFxQfdd8I",
+        "ItemFocusAnim-grey": "_1433gddOHXCko3qPvXFRFS",
+        "ItemFocusAnim-translucent-white-10": "_3ZEmb3nXVV6Jl3vO3gd3n2",
+        "ItemFocusAnim-translucent-white-20": "EoCuk2lmX0KUPR7Ja5J0J",
+        "ItemFocusAnimBorder-darkGrey": "_3FtKchinLpLv8OXrbvS81w",
+        "ItemFocusAnim-green": "_23vh8vhEvEmJ5bnq2YZfx8",
+        focusAnimation: "wTWp1KqP_zaAfiOc2ovCo",
+        hoverAnimation: "_2knkM4Dk-kiPNpW81PgE0Y",
       };
     },
     5901: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => F });
+      n.r(t), n.d(t, { default: () => R });
       var a = n(90626),
         o = n(7850),
         s = n(43527),
@@ -34,20 +45,20 @@
       var c = n(92757),
         l = n(96059),
         d = n(51006),
-        p = n(60746),
-        u = n(91254),
+        u = n(60746),
+        p = n(91254),
         m = n(3919),
         h = (n(64641), n(97058)),
         v = n(78327),
         w = n(34629),
-        f = n(75844),
-        _ = n(73745),
+        _ = n(75844),
+        f = n(73745),
         S = n(8107),
-        E = n(22797),
-        I = n(4796),
+        I = n(22797),
+        E = n(4796),
         g = n(61859),
         D = n(14947);
-      let L = class extends a.Component {
+      let k = class extends a.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -74,15 +85,15 @@
               v.TS.COMMUNITY_BASE_URL + "groups",
             ),
             o = a
-              ? await I.ac.LoadOGGClanInfoForGroupVanity(
+              ? await E.ac.LoadOGGClanInfoForGroupVanity(
                   this.props.match.params.appid_or_vanity_str,
                 )
-              : await I.ac.LoadOGGClanInfoForIdentifier(
+              : await E.ac.LoadOGGClanInfoForIdentifier(
                   this.props.match.params.appid_or_vanity_str,
                 );
           if ((console.log("output: ", (0, D.HO)(o), a), o))
             if (o.partner_events_enabled) {
-              const t = await u.O3.LoadAdjacentPartnerEventsByAnnouncement(
+              const t = await p.O3.LoadAdjacentPartnerEventsByAnnouncement(
                 n,
                 o.clanSteamID,
                 o.appid,
@@ -118,22 +129,22 @@
                 announcementGID: this.state.announcementGID,
                 clanSteamID: this.state.clanSteamID,
                 closeModal: this.HideModal,
-                partnerEventStore: u.O3,
+                partnerEventStore: p.O3,
                 trackingLocation: this.props.trackingLocation,
                 showAppHeader: !0,
                 bPrimaryPageFeature: e,
               })
             : this.state.bLoadedLandingState
-              ? (0, o.jsx)(E.t, { string: (0, g.we)("#Loading") })
+              ? (0, o.jsx)(I.t, { string: (0, g.we)("#Loading") })
               : (0, o.jsx)("div", {});
         }
       };
-      (0, w.Cg)([_.oI], L.prototype, "HideModal", null),
-        (L = (0, w.Cg)([f.PA], L));
-      var b = n(45699),
-        x = n(76217),
-        C = n(23310);
-      function j(e, t) {
+      (0, w.Cg)([f.oI], k.prototype, "HideModal", null),
+        (k = (0, w.Cg)([_.PA], k));
+      var L = n(45699),
+        G = n(76217),
+        b = n(23310);
+      function x(e, t) {
         const n = (function () {
             const [e, t] = (0, a.useState)(location.search);
             return (
@@ -191,27 +202,27 @@
           );
         return [s, r];
       }
-      var k = n(55563),
-        G = n(35685),
+      var A = n(55563),
+        C = n(35685),
         P = n(12155),
-        A = n(9154),
-        M = n(34418);
-      function y(e) {
+        j = n(9154),
+        y = n(34418);
+      function M(e) {
         const {
             trackingLocation: t,
             strClassName: n,
             bViewAllShowInfiniteScroll: s,
           } = e,
-          [i, r, c] = (0, _.uD)(),
+          [i, r, c] = (0, f.uD)(),
           [l, d] = (0, a.useState)(null),
           [h, w] = (0, a.useState)(void 0),
-          f = (0, a.useCallback)(() => {
+          _ = (0, a.useCallback)(() => {
             d(null), c();
           }, [c]),
           S = (0, a.useCallback)(
             (e) => {
               if (t && e && e.BIsPartnerEvent()) {
-                const n = p.KN.Get().GetTracker();
+                const n = u.KN.Get().GetTracker();
                 n.MarkEventRead(e.GID, e.clanSteamID.GetAccountID(), t) &&
                   n.Flush();
               }
@@ -219,7 +230,7 @@
             },
             [t, r],
           ),
-          { last_update_event: E, rgEvents: I } = (function (e) {
+          { last_update_event: I, rgEvents: E } = (function (e) {
             const {
                 appid: t,
                 event_customization: n,
@@ -229,10 +240,10 @@
               } = e,
               [r, c] = (0, a.useState)(null),
               [l, d] = (0, a.useState)(null),
-              [m] = j("emgid", void 0);
+              [m] = x("emgid", void 0);
             return (
               (0, a.useEffect)(() => {
-                const e = (0, k.v)("EventWebRowEmbed");
+                const e = (0, A.v)("EventWebRowEmbed");
                 let a = !1;
                 if (
                   (function (e) {
@@ -249,7 +260,7 @@
                   (a = e.bPreLoaded), c(e.last_update_event);
                   const t = [];
                   e.announcementGIDList.forEach((e) => {
-                    const n = u.O3.GetClanEventFromAnnouncementGID(e);
+                    const n = p.O3.GetClanEventFromAnnouncementGID(e);
                     n && t.push(n);
                   }),
                     d(t);
@@ -265,7 +276,7 @@
                       n,
                     );
                     if ((d(e), s && e && e.length > 0)) {
-                      const t = p.KN.Get().GetTracker();
+                      const t = u.KN.Get().GetTracker();
                       e
                         .filter((e) => e.BIsPartnerEvent())
                         .forEach((e) =>
@@ -300,10 +311,10 @@
             );
           })({ ...e, fnEventShowModal: S }),
           D = (0, a.useCallback)(() => {
-            const { event_gid: e, announcement_gid: n, clan_account_id: a } = E,
-              o = p.KN.Get().GetTracker();
+            const { event_gid: e, announcement_gid: n, clan_account_id: a } = I,
+              o = u.KN.Get().GetTracker();
             t && e && o.MarkEventRead(e, a, t) && o.Flush(), w(n), d(null), r();
-          }, [E, r, t]);
+          }, [I, r, t]);
         (0, a.useEffect)(
           () => (
             (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
@@ -316,55 +327,55 @@
           ),
           [r],
         );
-        const L = !!E && !!E.rtime,
-          C =
-            L && !!E.announcement_gid && (!I || 0 == I.length)
-              ? E.announcement_gid
+        const k = !!I && !!I.rtime,
+          b =
+            k && !!I.announcement_gid && (!E || 0 == E.length)
+              ? I.announcement_gid
               : void 0,
           P = window.screen.width <= 500 ? 1 : 2;
-        return (0, o.jsxs)(x.Z, {
+        return (0, o.jsxs)(G.Z, {
           className: n,
           "flow-children": "row",
           children: [
-            (0, o.jsx)(A.EN, {
+            (0, o.jsx)(j.EN, {
               active: i,
               children: (0, o.jsx)(B, {
                 ...e,
                 announcementGID: h || (null == l ? void 0 : l.AnnouncementGID),
                 eventModel: l,
-                closeModal: f,
+                closeModal: _,
               }),
             }),
-            !!I &&
+            !!E &&
               (0, o.jsxs)("div", {
                 children: [
                   (0, o.jsx)("h2", {
                     children: (0, g.we)("#EventBrowse_RecentEvents"),
                   }),
                   !v.TS.IN_GAMEPADUI &&
-                    !!I &&
+                    !!E &&
                     (0, o.jsx)("div", {
-                      className: M.SectionButtonCtn,
+                      className: y.SectionButtonCtn,
                       children: s
-                        ? (0, o.jsx)(b.ml, {
-                            className: M.SectionButton,
-                            onClick: () => S(I[0]),
+                        ? (0, o.jsx)(L.ml, {
+                            className: y.SectionButton,
+                            onClick: () => S(E[0]),
                             children: (0, g.we)("#EventBrowse_MoreEventsBtn"),
                           })
                         : (0, o.jsx)(m.tj, {
-                            eventModel: I[0],
+                            eventModel: E[0],
                             route: m.PH.k_eViewWebSiteHub,
-                            className: M.SectionButton,
+                            className: y.SectionButton,
                             children: (0, g.we)("#EventBrowse_MoreEventsBtn"),
                           }),
                     }),
                   (0, o.jsx)("div", {
-                    className: M.EventsSummariesCtn,
-                    children: I.slice(0, P).map((e) => {
+                    className: y.EventsSummariesCtn,
+                    children: E.slice(0, P).map((e) => {
                       const t =
-                        1 === I.length && window.screen.width > 500
-                          ? G.kH
-                          : G.uY;
+                        1 === E.length && window.screen.width > 500
+                          ? C.kH
+                          : C.uY;
                       return (0, o.jsx)(
                         t,
                         {
@@ -379,17 +390,17 @@
                   }),
                 ],
               }),
-            L &&
-              !!C &&
+            k &&
+              !!b &&
               (0, o.jsx)(U, {
-                nUpdateTime: E.rtime,
-                announcementGID: C,
+                nUpdateTime: I.rtime,
+                announcementGID: b,
                 onClick: D,
               }),
-            L &&
-              !C &&
+            k &&
+              !b &&
               !v.TS.IN_GAMEPADUI &&
-              (0, o.jsx)(N, { nUpdateTime: E.rtime, onClick: D }),
+              (0, o.jsx)(N, { nUpdateTime: I.rtime, onClick: D }),
           ],
         });
       }
@@ -404,8 +415,8 @@
           } = e,
           c = (0, v.Qn)();
         return (0, o.jsx)(S.N, {
-          className: c ? void 0 : M.StoreHeaderAdjust,
-          eventClassName: c ? M.GamePadUIWidthAdjust : void 0,
+          className: c ? void 0 : y.StoreHeaderAdjust,
+          eventClassName: c ? y.GamePadUIWidthAdjust : void 0,
           appid: t,
           trackingLocation: a,
           announcementGID: s,
@@ -416,14 +427,14 @@
       }
       function N(e) {
         return (0, o.jsxs)("div", {
-          className: M.LatestUpdateButtonCtn,
+          className: y.LatestUpdateButtonCtn,
           children: [
             (0, o.jsx)("div", {
-              className: M.LatestUpdateIcon,
+              className: y.LatestUpdateIcon,
               children: (0, o.jsx)(P.UTF, { role: "presentation" }),
             }),
-            (0, o.jsx)(b.ml, {
-              className: M.LatestUpdateButton,
+            (0, o.jsx)(L.ml, {
+              className: y.LatestUpdateButton,
               onClick: e.onClick,
               children: (0, g.we)(
                 "#EventBrowse_LatestUpdateTime_Button",
@@ -435,37 +446,37 @@
       }
       function U(e) {
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
-          s = n ? u.O3.GetClanEventFromAnnouncementGID(n) : null,
+          s = n ? p.O3.GetClanEventFromAnnouncementGID(n) : null,
           i = (e) => {
             null == a || a(), e.stopPropagation(), e.preventDefault();
           },
-          r = window.screen.width > 500 ? G.kH : G.uY;
+          r = window.screen.width > 500 ? C.kH : C.uY;
         return (0, o.jsxs)("div", {
           children: [
             (0, o.jsx)("h2", {
               children: (0, g.we)("#EventBrowse_LastUpdateDate", (0, g._l)(t)),
             }),
             (0, o.jsx)("div", {
-              className: M.SectionButtonCtn,
+              className: y.SectionButtonCtn,
               children: (0, o.jsx)("div", {
-                className: M.SectionButton,
+                className: y.SectionButton,
                 onClick: i,
                 children: (0, g.we)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
             !!s &&
-              (0, o.jsx)(x.Z, {
-                className: M.EventsSummariesCtn,
+              (0, o.jsx)(G.Z, {
+                className: y.EventsSummariesCtn,
                 "flow-children": "column",
-                navEntryPreferPosition: C.iU.PREFERRED_CHILD,
+                navEntryPreferPosition: b.iU.PREFERRED_CHILD,
                 children: (0, o.jsx)(r, { event: s, onClick: i }),
               }),
           ],
         });
       }
-      var T = n(25888),
+      var F = n(25888),
         H = n(44165);
-      class R extends a.Component {
+      class T extends a.Component {
         render() {
           const { appid: e } = this.props;
           let t = H.HD.GetTimeNowWithOverrideAsDate(),
@@ -474,27 +485,27 @@
           return (0, o.jsx)("div", {
             className:
               "detailBox altFooter greenlight_home_box section announcements_row",
-            children: (0, o.jsx)(y, {
+            children: (0, o.jsx)(M, {
               appid: e,
-              partnerEventStore: T.mh,
+              partnerEventStore: F.mh,
               event_customization: {
                 require_tags: ["workshop"],
                 rtime_oldestevent: a,
               },
-              strClassName: M.Container,
+              strClassName: y.Container,
               trackingLocation: 6,
               bViewAllShowInfiniteScroll: !0,
             }),
           });
         }
       }
-      function F(e) {
+      function R(e) {
         const [t, n] = a.useState(!0);
         return (
           a.useEffect(() => {
             d.Vw.Init(new l.D(v.TS.WEBAPI_BASE_URL)),
-              u.O3.Init(),
-              Promise.all([p.KN.InitGlobal()]).then(() => n(!1));
+              p.O3.Init(),
+              Promise.all([u.KN.InitGlobal()]).then(() => n(!1));
           }, []),
           t
             ? null
@@ -515,7 +526,7 @@
                       path: s.g5.Listing(":appid_or_vanity_str"),
                       render: (e) =>
                         (0, o.jsx)(
-                          L,
+                          k,
                           { ...e, bPreventDismiss: !0, trackingLocation: 6 },
                           "InfScroll_NoDismissApp_" + e.match.params.appid,
                         ),
@@ -524,7 +535,7 @@
                       exact: !0,
                       path: s.g5.WorkshopHub(":appid(\\d+)"),
                       render: (e) =>
-                        (0, a.createElement)(R, {
+                        (0, a.createElement)(T, {
                           ...e,
                           appid: +e.match.params.appid,
                           key: "Workshop" + e.match.params.appid,
@@ -533,7 +544,7 @@
                     (0, o.jsx)(c.qh, {
                       path: s.g5.AppHub(":appid"),
                       render: (e) =>
-                        (0, a.createElement)(L, {
+                        (0, a.createElement)(k, {
                           ...e,
                           key: "InfScroll_App_" + e.match.params.appid,
                           trackingLocation: 6,
@@ -542,7 +553,7 @@
                     (0, o.jsx)(c.qh, {
                       path: s.g5.GroupHub(":group_vanity"),
                       render: (e) =>
-                        (0, a.createElement)(L, {
+                        (0, a.createElement)(k, {
                           ...e,
                           key: "InfScroll_App_" + e.match.params.group_vanity,
                           trackingLocation: 6,

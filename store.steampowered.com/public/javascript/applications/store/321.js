@@ -20,11 +20,21 @@
         FilterInputContainer: "EuFePPYFGrcf99uLXmBYN",
         FilterInput: "_2l4z-U60lABvd9XWArGjAf",
         AddonPickerMessage: "_2wUk7QR9TZiiKB4bX_9EgD",
+        BackgroundAnimation: "NB2T8xbO5KSdw1jQWC0aq",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1tzknOYTl338bweAg8VM66",
+        "ItemFocusAnim-darkerGrey": "_321Bw1yIABWsLJup9W__Gb",
+        "ItemFocusAnim-darkGrey": "_3Xhw1BWpHpkagZqxZOv8kb",
+        "ItemFocusAnim-grey": "_2OnCF3hKjr89wU_tfFaWX2",
+        "ItemFocusAnim-translucent-white-10": "_2uQtLVYFAkVIQ8Mzm6C5K3",
+        "ItemFocusAnim-translucent-white-20": "_2vYgLWggR0AEuxE9DPEEk2",
+        "ItemFocusAnimBorder-darkGrey": "PgPnyLUdsSEfTVdlxX2a9",
+        "ItemFocusAnim-green": "_26b32AeDG8ENv_LcSS6SPE",
+        focusAnimation: "NrCY5qgGbXyh_LeVWegvW",
+        hoverAnimation: "ECWcgkTWpWeZLs6-rszlL",
       };
     },
     90024: (e) => {
       e.exports = {
-        "duration-app-launch": "800ms",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -167,7 +177,7 @@
     },
     10820: (e, t, s) => {
       "use strict";
-      s.d(t, { Q4: () => b, iY: () => G, CE: () => O, iD: () => K });
+      s.d(t, { Q4: () => b, iY: () => G, CE: () => F, iD: () => K });
       var n = s(34629),
         i = s(7850),
         o = s(14947),
@@ -220,7 +230,7 @@
           return this.props.config.map(({ renderTab: e }, t) => {
             const s = this.state.activeIndex === t;
             return (0, i.jsx)(
-              f,
+              L,
               {
                 active: s,
                 onClick: () => this.setState({ activeIndex: t }),
@@ -244,7 +254,7 @@
           children: e.children,
         });
       }
-      function f(e) {
+      function L(e) {
         const { active: t, children: s, onClick: n } = e;
         return (0, i.jsx)(j.Z, {
           className: (0, m.A)(N.Tab, t && N.Active),
@@ -256,7 +266,7 @@
           }),
         });
       }
-      function L(e) {
+      function f(e) {
         const {
           items: t,
           renderItem: s,
@@ -286,21 +296,21 @@
           })
         );
       }
-      function w(e) {
+      function I(e) {
         const { title: t, onFilterChange: s, filter: n, onSubmit: o, ...r } = e;
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)(M, {
               children: (0, i.jsx)(k, {
                 title: t,
-                children: (0, i.jsx)(L, { ...r }),
+                children: (0, i.jsx)(f, { ...r }),
               }),
             }),
             (0, i.jsx)(A, { value: n, onChange: s, onSubmit: o }),
           ],
         });
       }
-      function I(e) {
+      function w(e) {
         const { onFilterChange: t, filter: s, sections: n, title: o } = e;
         return (0, i.jsxs)(i.Fragment, {
           children: [
@@ -314,7 +324,7 @@
                 n.map(({ title: e, ...t }) =>
                   (0, i.jsx)(
                     k,
-                    { title: e, children: (0, i.jsx)(L, { ...t }) },
+                    { title: e, children: (0, i.jsx)(f, { ...t }) },
                     e,
                   ),
                 ),
@@ -350,25 +360,25 @@
           }),
         });
       }
-      function T(e) {
+      function _(e) {
         const { className: t, ...s } = e;
         return (0, i.jsx)("div", {
           className: (0, m.A)(t, N.AddonPickerMessage),
           ...s,
         });
       }
-      var _ = s(42060),
-        g = s.n(_),
+      var T = s(42060),
+        g = s.n(T),
         D = s(51272),
         P = s(81962);
-      function v(e) {
+      function y(e) {
         return e.recent_emoticons;
       }
-      function y(e) {
+      function v(e) {
         return e.recent_stickers;
       }
       function z(e) {
-        return v(e).length + y(e).length > 0;
+        return y(e).length + v(e).length > 0;
       }
       const b = (0, r.PA)((e) => {
         const {
@@ -408,7 +418,7 @@
                   children: (0, i.jsx)(se, {}),
                 }),
               renderContent: () =>
-                (0, i.jsx)(R, {
+                (0, i.jsx)(O, {
                   store: t,
                   onEmoticonSelect: (e) => r(e.name),
                   onStickerSelect: (e) => a(e.name),
@@ -427,7 +437,7 @@
                       children: (0, i.jsx)(ee, {}),
                     }),
                   renderContent: () =>
-                    (0, i.jsx)(F, {
+                    (0, i.jsx)(B, {
                       store: t,
                       onItemSelect: (e) => r(e.name),
                       flairGroupID: n,
@@ -441,7 +451,7 @@
                       children: (0, i.jsx)($, {}),
                     }),
                   renderContent: () =>
-                    (0, i.jsx)(B, { store: t, onItemSelect: (e) => a(e.name) }),
+                    (0, i.jsx)(H, { store: t, onItemSelect: (e) => a(e.name) }),
                 },
                 {
                   renderTab: (e) =>
@@ -499,7 +509,7 @@
                     children: (0, i.jsx)(se, {}),
                   }),
                 renderContent: () =>
-                  (0, i.jsx)(R, {
+                  (0, i.jsx)(O, {
                     store: e,
                     onEmoticonSelect: (e) => t(e.name),
                     onStickerSelect: (e) => s(e.name),
@@ -518,7 +528,7 @@
                         children: (0, i.jsx)(ee, {}),
                       }),
                     renderContent: () =>
-                      (0, i.jsx)(F, {
+                      (0, i.jsx)(B, {
                         store: e,
                         onItemSelect: (e) => t(e.name),
                         flairGroupID: n,
@@ -532,7 +542,7 @@
                         children: (0, i.jsx)($, {}),
                       }),
                     renderContent: () =>
-                      (0, i.jsx)(B, {
+                      (0, i.jsx)(H, {
                         store: e,
                         onItemSelect: (e) => s(e.name),
                       }),
@@ -582,7 +592,7 @@
           });
         }
       }
-      class O extends c.Component {
+      class F extends c.Component {
         m_disposeEmoticonStore;
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
@@ -609,7 +619,7 @@
                       children: (0, i.jsx)(ee, {}),
                     }),
                   renderContent: () =>
-                    (0, i.jsx)(V, {
+                    (0, i.jsx)(W, {
                       store: this.props.emoticonStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
                       flairGroupID: this.props.strFlairGroupID,
@@ -620,7 +630,7 @@
           });
         }
       }
-      class R extends c.Component {
+      class O extends c.Component {
         state = { filter: "" };
         render() {
           const {
@@ -631,15 +641,15 @@
             { filter: n } = this.state,
             o = [];
           return (
-            v(e) &&
+            y(e) &&
               o.push({
                 title: (0, h.we)("#AddonPicker_RecentEmoticons"),
-                items: l.pN.FilterEmoticons(v(e), n),
+                items: l.pN.FilterEmoticons(y(e), n),
                 onItemSelect: t,
-                renderItem: (e) => (0, i.jsx)(Y, { emoticon: e }),
+                renderItem: (e) => (0, i.jsx)(V, { emoticon: e }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
-                  (0, i.jsx)(T, {
+                  (0, i.jsx)(_, {
                     children: n
                       ? (0, h.we)("#AddonPicker_NoResults")
                       : (0, h.we)(
@@ -648,15 +658,15 @@
                         ),
                   }),
               }),
-            y(e).length &&
+            v(e).length &&
               o.push({
                 title: (0, h.we)("#AddonPicker_RecentStickers"),
-                items: l.pN.FilterStickers(y(e), n),
+                items: l.pN.FilterStickers(v(e), n),
                 onItemSelect: s,
-                renderItem: (e) => (0, i.jsx)(W, { sticker: e }),
+                renderItem: (e) => (0, i.jsx)(Y, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
                 renderEmpty: () =>
-                  (0, i.jsx)(T, {
+                  (0, i.jsx)(_, {
                     children: n
                       ? (0, h.we)("#AddonPicker_NoResults")
                       : (0, h.we)(
@@ -665,7 +675,7 @@
                         ),
                   }),
               }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(w, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: o,
@@ -673,41 +683,41 @@
           );
         }
       }
-      class F extends c.Component {
+      class B extends c.Component {
         state = { filter: "" };
         render() {
           const { store: e, onItemSelect: t, flairGroupID: s } = this.props,
             { filter: n } = this.state,
             o = !n && s ? e.GetFlairListByGroupID(s) : e.emoticon_list,
             r = l.pN.FilterEmoticons(o, n).slice(0, 1e3);
-          return (0, i.jsx)(w, {
+          return (0, i.jsx)(I, {
             title: (0, h.we)("#AddonPicker_Emoticons"),
             items: r,
             onItemSelect: t,
-            renderItem: (e) => (0, i.jsx)(Y, { emoticon: e }),
+            renderItem: (e) => (0, i.jsx)(V, { emoticon: e }),
             keyExtractor: (e) => e.name,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
             onSubmit: () => t(r[0]),
             renderEmpty: () =>
               n
-                ? (0, i.jsx)(T, {
+                ? (0, i.jsx)(_, {
                     children: (0, h.we)("#AddonPicker_NoResults"),
                   })
-                : (0, i.jsx)(H, {}),
+                : (0, i.jsx)(R, {}),
           });
         }
       }
-      function H() {
+      function R() {
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(T, {
+            (0, i.jsx)(_, {
               children: (0, h.we)(
                 "#AddonPicker_NoneOwned",
                 (0, h.we)("#AddonPicker_Emoticons"),
               ),
             }),
-            (0, i.jsx)(T, {
+            (0, i.jsx)(_, {
               children: (0, h.PP)(
                 "#AddonPicker_AcquireAtPointsShopOrMarket",
                 (0, i.jsx)(D.uU, {
@@ -725,35 +735,35 @@
           ],
         });
       }
-      class B extends c.Component {
+      class H extends c.Component {
         state = { filter: "" };
         render() {
           const { store: e, onItemSelect: t } = this.props,
             { filter: s } = this.state,
             n = l.pN.FilterStickers(e.GetStickerList(), s);
-          return (0, i.jsx)(w, {
+          return (0, i.jsx)(I, {
             title: (0, h.we)("#EmoticonPicker_StickerHeading"),
             items: n,
             onItemSelect: t,
-            renderItem: (e) => (0, i.jsx)(W, { sticker: e }),
+            renderItem: (e) => (0, i.jsx)(Y, { sticker: e }),
             keyExtractor: ({ name: e }) => e,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: s,
             onSubmit: () => t(n[0]),
             renderEmpty: () =>
               s
-                ? (0, i.jsx)(T, {
+                ? (0, i.jsx)(_, {
                     children: (0, h.we)("#AddonPicker_NoResults"),
                   })
                 : (0, i.jsxs)(i.Fragment, {
                     children: [
-                      (0, i.jsx)(T, {
+                      (0, i.jsx)(_, {
                         children: (0, h.we)(
                           "#AddonPicker_NoneOwned",
                           (0, h.we)("#AddonPicker_Stickers"),
                         ),
                       }),
-                      (0, i.jsx)(T, {
+                      (0, i.jsx)(_, {
                         children: (0, h.PP)(
                           "#AddonPicker_AcquireAtPointsShop",
                           (0, i.jsx)(D.uU, {
@@ -775,30 +785,30 @@
           const { store: e, effectSettings: t, onItemSelect: s } = this.props,
             { filter: n } = this.state,
             o = e.GetEffectList().filter(({ name: e }) => e.indexOf(n) > -1);
-          return (0, i.jsx)(w, {
+          return (0, i.jsx)(I, {
             title: (0, h.we)("#EmoticonPicker_EffectHeading"),
             items: o,
             onItemSelect: s,
             renderItem: (e) =>
-              (0, i.jsx)(q, { effect: e, roomEffectSettings: t }),
+              (0, i.jsx)(X, { effect: e, roomEffectSettings: t }),
             keyExtractor: ({ name: e }) => e,
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
             onSubmit: () => s(o[0]),
             renderEmpty: () =>
               n
-                ? (0, i.jsx)(T, {
+                ? (0, i.jsx)(_, {
                     children: (0, h.we)("#AddonPicker_NoResults"),
                   })
                 : (0, i.jsxs)(i.Fragment, {
                     children: [
-                      (0, i.jsx)(T, {
+                      (0, i.jsx)(_, {
                         children: (0, h.we)(
                           "#AddonPicker_NoneOwned",
                           (0, h.we)("#AddonPicker_RoomEffects"),
                         ),
                       }),
-                      (0, i.jsx)(T, {
+                      (0, i.jsx)(_, {
                         children: (0, h.PP)(
                           "#AddonPicker_AcquireAtPointsShop",
                           (0, i.jsx)(D.uU, {
@@ -821,15 +831,15 @@
             { filter: n } = this.state,
             o = [];
           return (
-            v(e).length &&
+            y(e).length &&
               o.push({
                 title: (0, h.we)("#AddonPicker_RecentEmoticons"),
-                items: l.pN.FilterEmoticons(v(e), n),
+                items: l.pN.FilterEmoticons(y(e), n),
                 onItemSelect: t,
-                renderItem: (e) => (0, i.jsx)(Y, { emoticon: e }),
+                renderItem: (e) => (0, i.jsx)(V, { emoticon: e }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
-                  (0, i.jsx)(T, {
+                  (0, i.jsx)(_, {
                     children: n
                       ? (0, h.we)("#AddonPicker_NoResults")
                       : (0, h.we)(
@@ -838,7 +848,7 @@
                         ),
                   }),
               }),
-            (0, i.jsx)(I, {
+            (0, i.jsx)(w, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: n,
               sections: [
@@ -847,14 +857,14 @@
                   title: (0, h.we)("#AddonPicker_AllEmoticons"),
                   items: l.pN.FilterStickers(e.emoticon_list, n).slice(0, 1e3),
                   onItemSelect: t,
-                  renderItem: (e) => (0, i.jsx)(Y, { emoticon: e }),
+                  renderItem: (e) => (0, i.jsx)(V, { emoticon: e }),
                   keyExtractor: (e) => e.name,
                   renderEmpty: () =>
                     n
-                      ? (0, i.jsx)(T, {
+                      ? (0, i.jsx)(_, {
                           children: (0, h.we)("#AddonPicker_NoResults"),
                         })
-                      : (0, i.jsx)(H, {}),
+                      : (0, i.jsx)(R, {}),
                 },
               ],
             })
@@ -862,12 +872,12 @@
         }
       };
       Q = (0, n.Cg)([r.PA], Q);
-      let V = class extends c.Component {
+      let W = class extends c.Component {
         state = { filter: "" };
         render() {
           const { store: e, onItemSelect: t, flairGroupID: s } = this.props,
             { filter: n } = this.state;
-          return (0, i.jsx)(I, {
+          return (0, i.jsx)(w, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: n,
             sections: [
@@ -875,21 +885,21 @@
                 title: (0, h.we)("#ChatEntryButton_Flair"),
                 items: l.pN.FilterStickers(e.GetFlairListByGroupID(s), n),
                 onItemSelect: t,
-                renderItem: (e) => (0, i.jsx)(Y, { emoticon: e }),
+                renderItem: (e) => (0, i.jsx)(V, { emoticon: e }),
                 keyExtractor: (e) => e.name,
                 renderEmpty: () =>
                   n
-                    ? (0, i.jsx)(T, {
+                    ? (0, i.jsx)(_, {
                         children: (0, h.we)("#AddonPicker_NoResults"),
                       })
-                    : (0, i.jsx)(H, {}),
+                    : (0, i.jsx)(R, {}),
               },
             ],
           });
         }
       };
-      V = (0, n.Cg)([r.PA], V);
-      const Y = (e) => {
+      W = (0, n.Cg)([r.PA], W);
+      const V = (e) => {
         const { emoticon: t, large: s } = e,
           n = !t.last_used && t.time_received;
         return (0, i.jsxs)("div", {
@@ -900,7 +910,7 @@
           ],
         });
       };
-      class W extends c.Component {
+      class Y extends c.Component {
         state = { showHover: !1 };
         m_ref = c.createRef();
         render() {
@@ -938,7 +948,7 @@
           }),
         });
       });
-      class q extends c.Component {
+      class X extends c.Component {
         state = { showHover: !1 };
         m_ref = c.createRef();
         render() {
@@ -960,7 +970,7 @@
             children: [
               o.renderEffectIcon(),
               this.state.showHover &&
-                (0, i.jsx)(X, {
+                (0, i.jsx)(q, {
                   target: this.m_ref.current,
                   effect: e,
                   roomEffectSettings: t,
@@ -969,7 +979,7 @@
           });
         }
       }
-      const X = (0, r.PA)((e) => {
+      const q = (0, r.PA)((e) => {
         const {
             target: t,
             effect: { name: s, appid: n },

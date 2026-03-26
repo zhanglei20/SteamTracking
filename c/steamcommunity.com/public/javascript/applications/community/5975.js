@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "販売数量：%1$s",
 	"Bucket_PriceFrom": "%1$s～",
 	"AccessorySearch_AttachedAccessoryType": "装着中の%1$s",
+	"FilterResults_Placeholder": "結果を絞り込む...",
 	"AdvancedSearch_Header": "高度な検索",
 	"AdvancedSearch_Link": "高度な検索",
 	"MarketSearch_Placeholder": "アイテムを検索...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "最小",
 	"AssetProperty_Range_MaxPlaceholder": "最大",
 	"Accessories_FieldSectionLabel": "アクセサリー",
-	"Listing_EnhancedAppearance_Missing": "この出品にはまだ独自の画像や詳細な画像がありません。ここに表示されている画像は、出品されているアイテムと若干異なる場合があります。"
+	"Item_CountryBuySellRestricted": "お住まいの国ではこの種のアイテムの売買が無効化されているため、このアイテムは購入できません。",
+	"Item_CountryBuyRestricted": "お住まいの国ではこの種のアイテムの購入が無効化されているため、このアイテムは購入できません。",
+	"Listing_EnhancedAppearance_Missing": "この出品にはまだ独自の画像や詳細な画像がありません。ここに表示されている画像は、出品されているアイテムと若干異なる場合があります。",
+	"Listing_EnhancedAppearance_ShowBackground": "背景を表示"
 }`);
     },
   },

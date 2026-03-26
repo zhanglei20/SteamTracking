@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Jumlah yang dijual: %1$s",
 	"Bucket_PriceFrom": "Mulai %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s Terpasang",
+	"FilterResults_Placeholder": "Hasil Filter...",
 	"AdvancedSearch_Header": "Pencarian Lanjutan",
 	"AdvancedSearch_Link": "Pencarian Lanjutan",
 	"MarketSearch_Placeholder": "Cari Item...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
 	"Accessories_FieldSectionLabel": "Aksesori",
-	"Listing_EnhancedAppearance_Missing": "Iklan Penjualan ini belum memiliki gambar unik atau yang disempurnakan. Gambar yang ditampilkan di sini mungkin sedikit berbeda dengan item yang diiklankan."
+	"Item_CountryBuySellRestricted": "Kamu tidak dapat membeli item ini karena jual beli item ini tidak bisa dilakukan di negaramu.",
+	"Item_CountryBuyRestricted": "Kamu tidak dapat membeli item ini karena pembelian item ini tidak bisa dilakukan di negaramu.",
+	"Listing_EnhancedAppearance_Missing": "Iklan Penjualan ini belum memiliki gambar unik atau yang disempurnakan. Gambar yang ditampilkan di sini mungkin sedikit berbeda dengan item yang diiklankan.",
+	"Listing_EnhancedAppearance_ShowBackground": "Tampilkan latar"
 }`);
     },
   },

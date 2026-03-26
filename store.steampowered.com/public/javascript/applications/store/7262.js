@@ -12,41 +12,6 @@
     58855: (e) => {
       e.exports = { CompatIcon: "_3cEK5JKL6FSqY5FgD_4hFA" };
     },
-    81886: (e, a, t) => {
-      "use strict";
-      function r(e) {
-        return (
-          !!e &&
-          ("game" === e ||
-            "dlc" === e ||
-            "software" === e ||
-            "music" === e ||
-            "application" === e ||
-            "demo" === e ||
-            "hardware" === e ||
-            "mod" === e ||
-            "video" == e ||
-            "beta" === e ||
-            "advertising" === e)
-        );
-      }
-      function s(e) {
-        return (
-          null != e &&
-          (0 == e ||
-            4 == e ||
-            6 == e ||
-            11 == e ||
-            1 == e ||
-            10 == e ||
-            2 == e ||
-            7 == e ||
-            12 == e ||
-            14 == e)
-        );
-      }
-      t.d(a, { fp: () => r, vm: () => s });
-    },
     78588: (e, a, t) => {
       "use strict";
       t.d(a, { a: () => d });
@@ -79,12 +44,12 @@
             className: (0, l.A)(h, "CapsuleImageCtn"),
           });
         if (null == d) return null;
-        let b = (0, n.N)(d, "header" === t);
+        let A = (0, n.N)(d, "header" === t);
         return (0, r.jsx)("div", {
           className: (0, l.A)(h, "CapsuleImageCtn"),
           children: (0, r.jsx)(c.o, {
             lazyLoad: !0,
-            srcs: b,
+            srcs: A,
             className: (0, l.A)(u().CapsuleImage),
             width: m,
             height: _,
@@ -137,16 +102,16 @@
             "vertical",
             n,
           ),
-          [h, b] = i.useState(0);
+          [h, A] = i.useState(0);
         if (!p || !_)
           return (0, r.jsx)("div", {
             className: c().HeroCapsuleImageContainer,
           });
-        const { strStoreVerticalURL: A, strLibraryVerticalURL: f } = (0, d.M)(
+        const { strStoreVerticalURL: b, strLibraryVerticalURL: g } = (0, d.M)(
           _,
           p,
         );
-        if (A && (!t || !f))
+        if (b && (!t || !g))
           return (0, r.jsxs)("div", {
             className: (0, o.A)(
               c().HeroCapsuleImageContainer,
@@ -154,7 +119,7 @@
             ),
             children: [
               (0, r.jsx)("img", {
-                src: A,
+                src: b,
                 className: c().CapsuleImage,
                 alt: p.name,
               }),
@@ -166,7 +131,7 @@
                 }),
             ],
           });
-        if (f)
+        if (g)
           return (0, r.jsxs)("div", {
             className: (0, o.A)(
               c().LibraryFallbackAssetImageContainer,
@@ -176,23 +141,23 @@
             children: [
               (0, r.jsx)("div", {
                 className: c().FallbackBackground,
-                style: { backgroundImage: `url(${f})` },
+                style: { backgroundImage: `url(${g})` },
               }),
               (0, r.jsx)("img", {
-                src: f,
+                src: g,
                 className: c().CapsuleImage,
                 alt: p.name,
               }),
             ],
           });
-        const g = (0, d.N)(_, !0),
-          v = g.length - 1,
-          y = (e) => {
-            const a = g.indexOf(e);
-            a >= v && a < g.length - 1 && b(a + 1);
+        const y = (0, d.N)(_, !0),
+          f = y.length - 1,
+          v = (e) => {
+            const a = y.indexOf(e);
+            a >= f && a < y.length - 1 && A(a + 1);
           };
-        if (h < g.length) {
-          const e = g[h];
+        if (h < y.length) {
+          const e = y[h];
           return (0, r.jsxs)("div", {
             className: c().LibraryFallbackAssetImageContainer,
             children: [
@@ -202,10 +167,10 @@
               }),
               (0, r.jsx)(l.o, {
                 lazyLoad: !0,
-                srcs: g,
+                srcs: y,
                 className: c().CapsuleImage,
                 alt: p.name,
-                onImageError: y,
+                onImageError: v,
               }),
             ],
           });
@@ -252,18 +217,18 @@
       }
       var _ = t(58918),
         h = t(17376);
-      const b =
+      const A =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAKCAYAAABi8KSDAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUNDNzBFNTUyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUNDNzBFNTYyMUM0MTFFNDk1REVFODRBNUU5RjA2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5Q0M3MEU1MzIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5Q0M3MEU1NDIxQzQxMUU0OTVERUU4NEE1RTlGMDYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv3vUKAAAAAlSURBVHjaYvz//z8DsYARpFhISAivjnfv3jGSp3jUGeQ4AyDAADZHNe2nyOBrAAAAAElFTkSuQmCC";
-      var A = t(18654),
-        f = t.n(A),
-        g = t(12155),
-        v = t(52038),
-        y = t(94011);
+      var b = t(18654),
+        g = t.n(b),
+        y = t(12155),
+        f = t(52038),
+        v = t(94011);
       function I(e) {
         const { appids: a, hide_status_banners: t, show_early_access: n } = e,
           { data: l } = (0, _.$Y)(),
           { data: o } = (0, h.F0)(),
-          A = a.length > 0 && a.every((e) => l && l.has(e)),
+          b = a.length > 0 && a.every((e) => l && l.has(e)),
           I = a.length > 0 && a.every((e) => o && o.has(e)),
           j = (function (e) {
             const { data: a } = m(),
@@ -275,7 +240,9 @@
                 if (!e || 0 == e.length || !a) return r(!1);
                 (async () => {
                   const t = await Promise.all(
-                    e.map((e) => s.fetchQuery((0, d.us)(i, { appid: e }))),
+                    e
+                      .filter((e) => !!e)
+                      .map((e) => s.fetchQuery((0, d.us)(i, { appid: e }))),
                   );
                   r(
                     t.some(
@@ -290,19 +257,19 @@
               t
             );
           })(a),
-          k = A && !t,
+          k = b && !t,
           C = I && !t,
           D = !t && n;
         return (0, r.jsxs)("div", {
-          className: (0, v.A)(f().CapsuleDecorators, "CapsuleDecorators"),
+          className: (0, f.A)(g().CapsuleDecorators, "CapsuleDecorators"),
           children: [
             k &&
               (0, r.jsxs)("span", {
-                className: (0, v.A)(f().Banner, f().Blue),
+                className: (0, f.A)(g().Banner, g().Blue),
                 children: [
                   (0, r.jsx)("img", {
-                    src: (0, s.YJ)(b),
-                    className: f().LinesImg,
+                    src: (0, s.YJ)(A),
+                    className: g().LinesImg,
                     alt: i.Z.Localize("#Sale_InLibrary"),
                   }),
                   i.Z.Localize("#Sale_InLibrary"),
@@ -310,14 +277,14 @@
               }),
             C &&
               (0, r.jsxs)("span", {
-                className: f().Banner,
+                className: g().Banner,
                 children: [
-                  (0, r.jsx)(g.qnF, { className: f().LinesImg }),
+                  (0, r.jsx)(y.qnF, { className: g().LinesImg }),
                   i.Z.Localize("#Sale_OnWishlist"),
                 ],
               }),
             D && !k && !C && (0, r.jsx)(N, { appids: a }),
-            j && (0, r.jsx)(y.K, {}),
+            j && (0, r.jsx)(v.K, {}),
           ],
         });
       }
@@ -342,7 +309,7 @@
           })(a);
         return t
           ? (0, r.jsx)("span", {
-              className: (0, v.A)(f().Banner, f().EarlyAccessGradient),
+              className: (0, f.A)(g().Banner, g().EarlyAccessGradient),
               children: i.Z.Localize("#Sale_EarlyAccess"),
             })
           : null;
@@ -496,27 +463,19 @@
     },
     70300: (e, a, t) => {
       "use strict";
-      t.d(a, { nz: () => c, oj: () => l, qr: () => n });
+      t.d(a, { nz: () => i, oj: () => n });
       var r = t(7850),
-        s = t(81886),
-        i = t(84518);
-      function n(e) {
-        return "bundle" == e
-          ? "bundle"
-          : "sub" == e
-            ? "sub"
-            : ((0, s.fp)(e), "app");
-      }
-      function c(e) {
+        s = t(84518);
+      function i(e) {
         return 2 == e ? "bundle" : 1 == e ? "sub" : "app";
       }
-      const l = (e) => {
+      const n = (e) => {
         const { appid: a } = e,
           t = (0, r.jsx)("div", {
             className: "ImpressionTrackedElement",
             children: e.children,
           });
-        return a ? (0, r.jsx)(i.A, { appID: a, children: t }) : t;
+        return a ? (0, r.jsx)(s.A, { appID: a, children: t }) : t;
       };
     },
     54492: (e, a, t) => {

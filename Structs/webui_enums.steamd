@@ -947,6 +947,13 @@ enum ETradingCardActivity
 	k_ETradingCardActivity_BadgeCraft = 3;
 }
 
+enum ETrailerGrowAmount
+{
+	k_ETrailerGrowAmount_None = 0;
+	k_ETrailerGrowAmount_Small = 1;
+	k_ETrailerGrowAmount_Medium = 2;
+}
+
 enum ETwoFactorTokenSteamguardScheme
 {
 	k_ETwoFactorTokenSteamguardScheme_None = 0;
@@ -4199,19 +4206,6 @@ enum UnnamedEnumdb303c21506dd3e7
 	MouseDragging = 1;
 	TouchStart = 2;
 	TouchDragging = 3;
-}
-
-enum UnnamedEnumdd1b4ee475c337fd
-{
-	AnyController = 0;
-	XboxController = 1;
-	Ps3Controller = 2;
-	Ps4Controller = 3;
-	Ps5Controller = 4;
-	SwitchController = 5;
-	SteamController = 6;
-	SteamDeckNeptune = 7;
-	SteamDeckGalileo = 8;
 }
 
 enum UnnamedEnumddf21b2888ecc060

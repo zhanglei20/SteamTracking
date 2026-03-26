@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Antal til salg: %1$s",
 	"Bucket_PriceFrom": "Fra %1$s",
 	"AccessorySearch_AttachedAccessoryType": "Fastgjort %1$s",
+	"FilterResults_Placeholder": "Filtrer resultater...",
 	"AdvancedSearch_Header": "Avanceret søgning",
 	"AdvancedSearch_Link": "Avanceret søgning",
 	"MarketSearch_Placeholder": "Søg efter en genstand...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Maks.",
 	"Accessories_FieldSectionLabel": "Tilbehør",
-	"Listing_EnhancedAppearance_Missing": "Dette opslag har endnu ikke unikke eller forbedrede billeder. Billedet, som vises her, kan variere lidt fra emnet i opslaget."
+	"Item_CountryBuySellRestricted": "Du kan ikke købe dette emne, da køb og salg af denne emnetype ikke er tilgængeligt i dit land.",
+	"Item_CountryBuyRestricted": "Du kan ikke købe dette emne, fordi køb af denne emnetype ikke er tilgængeligt i dit land.",
+	"Listing_EnhancedAppearance_Missing": "Dette opslag har endnu ikke unikke eller forbedrede billeder. Billedet, som vises her, kan variere lidt fra emnet i opslaget.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

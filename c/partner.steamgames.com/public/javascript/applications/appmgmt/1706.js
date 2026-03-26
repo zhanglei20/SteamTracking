@@ -37,8 +37,11 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Ingyenesre váltasz?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Ha a játékod már ki van adva, és fizetősről ingyenesre kell váltanod, kattints %1$s, hogy többet tudj meg, és segítséget kérj.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "ide",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
+	"SinglePackagePricing_Right_Convert_Title": "Egyedi árak megadása",
+	"SinglePackagePricing_Right_Custom_Desc": "Minden pénznemhez megadhatod a saját áradat a szövegmező közvetlen szerkesztésével.",
+	"SinglePackagePricing_Right_Convert_Desc": "Használhatod ezt a gombot is az egyes pénznemek kiszámításához a választott átváltási módszer és az általad beírt egyedi USD ár alapján.",
+	"PricingDashboard_Select_Price": "Választás árszintekből",
+	"PricingDashboard_Select_Price_button": "USD alapár kiválasztása",
 	"PricingDashboard_Select_Price_button_ttip": "Nyiss egy párbeszédablakot a leggyakoribb árszintekkel az összes alábbi pénznemre való beállítás lehetővé tételéhez.",
 	"empty_no_trailing_comma": ""
 }`);

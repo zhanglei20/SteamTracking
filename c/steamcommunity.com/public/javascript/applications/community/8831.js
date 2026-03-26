@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Số lượng đăng bán: %1$s",
 	"Bucket_PriceFrom": "Từ %1$s",
 	"AccessorySearch_AttachedAccessoryType": "Kèm theo %1$s",
+	"FilterResults_Placeholder": "Lọc kết quả...",
 	"AdvancedSearch_Header": "Tìm kiếm nâng cao",
 	"AdvancedSearch_Link": "Tìm kiếm nâng cao",
 	"MarketSearch_Placeholder": "Tìm kiếm vật phẩm...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Tối thiểu",
 	"AssetProperty_Range_MaxPlaceholder": "Tối đa",
 	"Accessories_FieldSectionLabel": "Phụ kiện",
-	"Listing_EnhancedAppearance_Missing": "Mục đăng này chưa có ảnh độc nhất hoặc nổi bật. Ảnh hiện ở đây có thể khác một tí so với vật phẩm đăng bán."
+	"Item_CountryBuySellRestricted": "Bạn không thể mua vật phẩm này vì việc mua bán loại vật phẩm này bị vô hiệu tại quốc gia của bạn.",
+	"Item_CountryBuyRestricted": "Bạn không thể mua vật phẩm này vì việc mua bán loại vật phẩm này bị vô hiệu tại quốc gia của bạn.",
+	"Listing_EnhancedAppearance_Missing": "Mục đăng này chưa có ảnh độc nhất hoặc nổi bật. Ảnh hiện ở đây có thể khác một tí so với vật phẩm đăng bán.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

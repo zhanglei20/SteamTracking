@@ -61,6 +61,7 @@
 	"Search_ListingQuantity": "Aantal te koop: %1$s",
 	"Bucket_PriceFrom": "Van %1$s",
 	"AccessorySearch_AttachedAccessoryType": "%1$s aangesloten",
+	"FilterResults_Placeholder": "Resultaten filteren ...",
 	"AdvancedSearch_Header": "Geavanceerd zoeken",
 	"AdvancedSearch_Link": "Geavanceerd zoeken",
 	"MarketSearch_Placeholder": "Naar een voorwerp zoeken ...",
@@ -211,7 +212,10 @@
 	"AssetProperty_Range_MinPlaceholder": "Min.",
 	"AssetProperty_Range_MaxPlaceholder": "Max.",
 	"Accessories_FieldSectionLabel": "Accessoires",
-	"Listing_EnhancedAppearance_Missing": "Deze vermelding beschikt nog niet over unieke of verbeterde afbeeldingen. De hier weergegeven afbeelding kan enigszins afwijken van het daadwerkelijke voorwerp."
+	"Item_CountryBuySellRestricted": "Je kunt dit voorwerp niet kopen, omdat de aan- en verkoop van dit type voorwerp geblokkeerd is in jouw land.",
+	"Item_CountryBuyRestricted": "Je kunt dit voorwerp niet kopen, omdat de aankoop van dit type voorwerp geblokkeerd is in jouw land.",
+	"Listing_EnhancedAppearance_Missing": "Deze vermelding beschikt nog niet over unieke of verbeterde afbeeldingen. De hier weergegeven afbeelding kan enigszins afwijken van het daadwerkelijke voorwerp.",
+	"Listing_EnhancedAppearance_ShowBackground": "Show background"
 }`);
     },
   },

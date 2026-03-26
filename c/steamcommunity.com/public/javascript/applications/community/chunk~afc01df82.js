@@ -60,11 +60,23 @@
         HorizontalTitle: "B9-wlbaW3NhZ3FQPArnkW",
         HorizontalDescriptionCtn: "_3CQtWw7qMAWImOwd8J5xHi",
         HorizontalDescription: "_2hPZwxDYhaY3SllhjeFqb_",
+        HorizontalSubTitle: "_2AI_d0e9MNtxGsH_JgjoH1",
         AppCapsuleImage: "_3OzV3h4jW1bkLmB6TqbYmo",
         CapsuleShadow: "_2rjkJQtvus70aLmbfGoneD",
         AppCapsuleCtn: "_16au-uWHggl6G731aw_eHt",
         AppCapsuleImageHover: "IeC3X0McKdGC79BsC3VvM",
         AppCapsulePrice: "_2-l2M5GPuxKFwV8h1tc_fH",
+        BackgroundAnimation: "Y16cvm8njUOPVd_PmpdA8",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1j1Zq1Q5uh95fjL8OT7yFq",
+        "ItemFocusAnim-darkerGrey": "UsqG3DdFgxSCGRuytTYuR",
+        "ItemFocusAnim-darkGrey": "_2_svdWFQrIOwj-IleWJR6L",
+        "ItemFocusAnim-grey": "gRiBHgRbZcfRBpIsW5go-",
+        "ItemFocusAnim-translucent-white-10": "_22QzVhsdgPza1cZNDWO-Ro",
+        "ItemFocusAnim-translucent-white-20": "_3rSHMWnx0GUHozQy8Um38r",
+        "ItemFocusAnimBorder-darkGrey": "sY-qPtcI_nLtBk7YeEIXX",
+        "ItemFocusAnim-green": "_5ZL-w9izP-Xp-Qbmnd0lR",
+        focusAnimation: "_2cuFLB3zHIu7pq3jcknIIQ",
+        hoverAnimation: "F4ni-f-IW8RE49GOB7CLb",
       };
     },
     chunkid: (module) => {
@@ -222,6 +234,17 @@
         MajorEventSummary: "HPngOFPPykmeXFSxcC1Zv",
         MajorEvent_Ctn: "_2_kU7nUB6wwDu-LsbQZmNc",
         AppDetailsSpotlightContainer: "_1zDJ1bfFg-UkuAluUAoGKj",
+        BackgroundAnimation: "_2zmvTGYcnxB2bhgSNFXnSi",
+        "ItemFocusAnim-darkerGrey-nocolor": "_2DCLV3hUeBViGvq3yTsiQE",
+        "ItemFocusAnim-darkerGrey": "_1iMoXsAEHqrsXXcoaw1SIy",
+        "ItemFocusAnim-darkGrey": "_1_Uo-zxJJlBTZyvRjgeG4_",
+        "ItemFocusAnim-grey": "_3AjpDoqzZuBj6F7fMiO2Q-",
+        "ItemFocusAnim-translucent-white-10": "_3PpKBwmAjZpmyTB-ooDvNd",
+        "ItemFocusAnim-translucent-white-20": "_2k5z_bdbdZRy3o_pIFzFBF",
+        "ItemFocusAnimBorder-darkGrey": "DuzyT2w758OaPfDpfQkO6",
+        "ItemFocusAnim-green": "kF7es13166bQnCHSRaw6l",
+        focusAnimation: "_3lfKCkcI6nWWMWFgLOGbyh",
+        hoverAnimation: "_24fZDwdgB8kUq2hGCnbx88",
       };
     },
     chunkid: (module) => {
@@ -499,43 +522,31 @@
           },
           children: [
             _.prevSrc &&
-              (0, _.jsx)(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().LightboxImageContainer,
-                    _().LightboxPrevImage,
-                  ),
-                  children: _,
-                },
-                "lb-" + (null == _ ? void 0 : _.key),
-              ),
-            (0, _.jsx)(
-              "div",
-              {
+              (0, _.jsx)("div", {
                 className: (0, _._)(
                   _().LightboxImageContainer,
-                  _().LightboxMainImage,
+                  _().LightboxPrevImage,
                 ),
-                onClick: (_) => {
-                  "IMG" !== _.target.nodeName && _.onCloseRequest(_);
-                },
                 children: _,
-              },
-              "lb-" + _.key,
-            ),
-            _.nextSrc &&
-              (0, _.jsx)(
-                "div",
-                {
-                  className: (0, _._)(
-                    _().LightboxImageContainer,
-                    _().LightboxNextImage,
-                  ),
-                  children: _,
-                },
-                "lb-" + (null == _ ? void 0 : _.key),
+              }),
+            (0, _.jsx)("div", {
+              className: (0, _._)(
+                _().LightboxImageContainer,
+                _().LightboxMainImage,
               ),
+              onClick: (_) => {
+                "IMG" !== _.target.nodeName && _.onCloseRequest(_);
+              },
+              children: _,
+            }),
+            _.nextSrc &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().LightboxImageContainer,
+                  _().LightboxNextImage,
+                ),
+                children: _,
+              }),
             (0, _.jsxs)("div", {
               className: _().LightboxToolbar,
               children: [
@@ -1001,9 +1012,9 @@
                       (_) => _.GetAnnouncementGID() != __webpack_require__,
                     ).map((_) => _.AnnouncementGID);
                     _._(_);
-                    const _ = _.slice(0, 3).map((_) =>
-                      _.GetClanEventFromAnnouncementGID(_),
-                    );
+                    const _ = _.slice(0, 3)
+                      .map((_) => _.GetClanEventFromAnnouncementGID(_))
+                      .filter((_) => !!_);
                     if ((_(_), _(!1), _)) {
                       let _ = _._.Get().GetTracker(),
                         _ = !1;
@@ -1319,7 +1330,7 @@
           } = _,
           _ = (0, _._)(_.appid),
           _ = (0, _._)(_._.LANGUAGE),
-          [_, _, _] = (0, _._)(() =>
+          [_, _, _, _, _] = (0, _._)(() =>
             _
               ? [
                   void 0 !== __webpack_require__
@@ -1327,8 +1338,10 @@
                     : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
                   _.GetNameWithFallback(_),
                   _.GetCategoryAsString(),
+                  _.GetSubTitleWithLanguageFallback(_),
+                  _.GetSummaryWithFallback(_),
                 ]
-              : [void 0, void 0, void 0],
+              : [void 0, void 0, void 0, void 0, void 0],
           );
         return _
           ? (0, _.jsxs)(_._, {
@@ -1371,6 +1384,16 @@
                       className: _().HorizontalTitle,
                       children: _,
                     }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().HorizontalSubTitle,
+                        children: _,
+                      }),
+                    _ &&
+                      (0, _.jsx)("div", {
+                        className: _().HorizontalSummary,
+                        children: _,
+                      }),
                   ],
                 }),
               ],

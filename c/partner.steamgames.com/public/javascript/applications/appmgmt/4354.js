@@ -37,9 +37,12 @@
 	"SinglePackagePricing_Right_FAQ_switching": "Зробити безкоштовною?",
 	"SinglePackagePricing_Right_FAQ_switching_answer": "Якщо вашу гру вже випущено і вам треба змінити її на безкоштовну, натисніть %1$s, щоб дізнатися більше та отримати допомогу.",
 	"SinglePackagePricing_Right_FAQ_switching_answer_link": "тут",
-	"PricingDashboard_Select_Price": "Select From Price Tiers",
-	"PricingDashboard_Select_Price_button": "Select USD Base Price",
-	"PricingDashboard_Select_Price_button_ttip": "Open a dialog with a set of common price tiers to allow setting them across all of the currencies below.",
+	"SinglePackagePricing_Right_Convert_Title": "Введення власних цін",
+	"SinglePackagePricing_Right_Custom_Desc": "Ви можете ввести власні ціни в кожній валюті, окремо відредагувавши кожне поле.",
+	"SinglePackagePricing_Right_Convert_Desc": "Ви також можете натиснути цю кнопку, щоб розрахувати ціну в кожній валюті на основі вибраного методу конвертації та власної ціни в доларах США.",
+	"PricingDashboard_Select_Price": "Обрати з цінових рівнів",
+	"PricingDashboard_Select_Price_button": "Обрати базову ціну в доларах США",
+	"PricingDashboard_Select_Price_button_ttip": "Відкриває діалогове вікно з низкою поширених цінових рівнів і дозволяє встановити їх в усіх валютах нижче.",
 	"empty_no_trailing_comma": ""
 }`);
     },
