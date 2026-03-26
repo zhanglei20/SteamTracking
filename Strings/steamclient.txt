@@ -163,19 +163,12 @@
  - bytes  : %s read from disk at %s/sec, %s sent via network at %s/sec\n
  - chunks : %u pending, %u total sent, %u total requested\n
  - user %i : %s\n
- --bitrate %d
- --captureres %s
- --controller-overlay-hotkey
  --controller-overlay-hotkey none
  --enable-duplicate-detection
  --force
  --fullscreen
  --label '%s'
- --nohwaccel
  --openvr
- --performance-icons
- --performance-overlay
- --quality %d
  --relay %s
  --sdr_config "%s"
  --settingsdata
@@ -2747,6 +2740,7 @@ $steammessages_parental_objects.proto"
 %s\%u_preview.manifest.txt
 %s\App\%llu\%d\%d
 %s\Apps\%d
+%s\Apps\%d\betadate_%s
 %s\Apps\%d\betadesc_%s
 %s\Apps\%d\betahash_%s
 %s\Authorized
@@ -3423,7 +3417,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1VVP
+(16UP
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -7889,8 +7883,6 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
-0000000000000000000000000000000000000000
-0000000000000000
 0.0333
 0.050
 0.13.15.106
@@ -7937,13 +7929,15 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+0000000000000000000000000000000000000000
+0000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11454,11 +11448,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
-2000000
 200M
 2019
 2048
+20000
+2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -17648,7 +17642,6 @@ Attributes
 Audio
 Audio Behind
 Audio Init Failed
-AudioChannels
 AudioDeviceDescription
 AudioSinkList
 August
@@ -18227,6 +18220,7 @@ Bad ACK for firmware update start.
 Bad Access flag on shared mem create: %s: %u\n
 Bad Chat Name received in Chat Room Enter client message
 Bad FakeIP type %d
+Bad GameID passed to RequestUserStats(). You can only request stats for real apps
 Bad Gateway
 Bad IV size
 Bad MsgClientAuthList2_Deprecated_t
@@ -18284,7 +18278,6 @@ Banco Poplar
 Banco do Brasil Online
 Bandwidth Exceeded
 BandwidthLimit
-BandwidthLimitKBit
 Bangla
 Bank Asya
 Bank Transfer (Degica)
@@ -22570,7 +22563,6 @@ ControllerConfigResponse
 ControllerConfigUsage
 ControllerData.m_ulSerialNumber != STEAM_CONTROLLER_HANDLE_ALL_CONTROLLERS
 ControllerGyroEulerAngles
-ControllerOverlayHotkey
 ControllerPersonalization
 ControllerQuaternion
 ControllerSettingsChanged
@@ -24239,16 +24231,13 @@ Enable support for controllers requiring exclusive USB access
 Enable the minimum speed required to update the gyroscope response.
 Enable valid email domains in BIsValidEmailAddress
 EnableConfiguratorSupport
-EnableDebugOverlay
 EnableDeviceCallbacks
 EnableDiagnosticsUI
 EnableDockedInput
 EnableGameOverlay
 EnableGameOverlayForApp
-EnableHardwareDecodingV2
 EnableHeartbeats
 EnableParentalSettings
-EnablePerformanceIcons
 EnablePlatformCertificateVerification called on client without m_pSSLContext, won't work
 EnableQosStatus
 EnableQosStatus called to set the state that is already set. This is probably because
@@ -32855,7 +32844,6 @@ Qo\+e.q
 Qs(8%
 Qualcomm
 QualityOverride
-QualityPreference
 Quantization table 0x%02x was not defined
 Quantizing to %d = %d*%d*%d colors
 Quantizing to %d colors
@@ -33654,7 +33642,6 @@ ResetIdentity
 ResetInstallScript
 ResetVoiceRecording
 ResetVoiceRecording() (was recording: %d) (last get voice time: %d seconds ago)
-ResolutionLimit
 ResolutionOverride
 ResolutionOverrideInternalDisplay
 ResolutionX
@@ -38654,6 +38641,7 @@ X\n\vAllocateSDR
 X\n\vQueryPhases
 Xbox 360 Controller
 Xbox 360 Wireless Controller
+Xbox 360 Wireless Racing Wheel
 Xbox Adaptive Controller
 Xbox One Controller
 Xbox One Elite 2 Controller
@@ -51714,7 +51702,7 @@ lost/gained channels
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1609
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1759
 low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1964
-low-pri yield - /data/src/clientdll/appdatacache.cpp:885
+low-pri yield - /data/src/clientdll/appdatacache.cpp:884
 low-pri yield - /data/src/clientdll/autocloud.cpp:591
 low-pri yield - /data/src/clientdll/autocloud.cpp:670
 low-pri yield - /data/src/clientdll/autocloud.cpp:845
@@ -59076,7 +59064,7 @@ stderr
 stdin
 stdout
 steam
-steam Mar 23 2026 22:31:07
+steam Mar 25 2026 23:38:28
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

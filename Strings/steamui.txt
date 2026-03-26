@@ -5525,6 +5525,7 @@ ${LANGUAGE}
 -chromeosverbose
 -clientbeta
 -console
+-debugamf
 -debugoutputlogs
 -dev
 -devsites
@@ -7267,11 +7268,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -13570,6 +13571,7 @@ AMFInit
 AMFQueryVersion
 AMF_VIDEO_ENCODER_AV1_ALIGNMENT_MODE
 AMF_VIDEO_ENCODER_AV1_COLOR_BIT_DEPTH
+AMF_VIDEO_ENCODER_AV1_ENCODING_LATENCY_MODE
 AMF_VIDEO_ENCODER_AV1_ENFORCE_HRD
 AMF_VIDEO_ENCODER_AV1_FRAMERATE
 AMF_VIDEO_ENCODER_AV1_GOP_SIZE
@@ -13601,6 +13603,7 @@ AMF_VIDEO_ENCODER_HEVC_INPUT_COLOR_PRIMARIES
 AMF_VIDEO_ENCODER_HEVC_INPUT_COLOR_PROFILE
 AMF_VIDEO_ENCODER_HEVC_INPUT_HDR_METADATA
 AMF_VIDEO_ENCODER_HEVC_INPUT_TRANSFER_CHARACTERISTIC
+AMF_VIDEO_ENCODER_HEVC_LOWLATENCY_MODE
 AMF_VIDEO_ENCODER_HEVC_MAX_AU_SIZE
 AMF_VIDEO_ENCODER_HEVC_MAX_NUM_REFRAMES
 AMF_VIDEO_ENCODER_HEVC_MIN_QP_I
@@ -15699,6 +15702,7 @@ CGameStreamVideoStageAMF: Couldn't get H264 encoder capabilities, result = %d\n
 CGameStreamVideoStageAMF: Couldn't get input capabilities, result = %d\n
 CGameStreamVideoStageAMF: Encoder init failed, result = %d\n
 CGameStreamVideoStageAMF: GetOutputDataType() failed, result = %d\n
+CGameStreamVideoStageAMF: GetTrace() failed, result = %d\n
 CGameStreamVideoStageAMF: InitOpenCL() failed, result = %d\n
 CGameStreamVideoStageAMF: Output size %dx%d is larger than maximum supported size %dx%d, AMD hardware encoding disabled\n
 CGameStreamVideoStageAMF: QueryOutput() failed, no data\n
@@ -19694,6 +19698,7 @@ Empty Config
 Empty JPEG image (DNL not supported)
 Empty input file
 EmptyFragments
+Enable AMF video encoding debug log
 Enable HTTP/2 on all CHTTPClients automatically for SSL connections
 Enable PipeWire desktop capture
 Enable PipeWire desktop capture using DMA-BUF
@@ -23927,7 +23932,7 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 23 2026 22:31:09
+Mar 25 2026 23:38:29
 Marathi
 March
 MarkMessageClicked
@@ -32330,6 +32335,7 @@ X\n\vAllocateSDR
 X\n\vQueryPhases
 Xbox 360 Controller
 Xbox 360 Wireless Controller
+Xbox 360 Wireless Racing Wheel
 Xbox Adaptive Controller
 Xbox One Controller
 Xbox One Elite 2 Controller
@@ -39852,7 +39858,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen&hl
 ghost_
 gidlist
 gidparentcomment
@@ -44232,7 +44238,6 @@ json_name = "
 jsondata
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
-jt{B#
 jumplist_flags
 jupiter
 jupiter-initial-firmware-update check returned: %d

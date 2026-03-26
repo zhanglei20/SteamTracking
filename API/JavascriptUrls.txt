@@ -617,7 +617,6 @@ ${IMG_URL}heroes/wide/${}.png
 ${IMG_URL}heroes/wide/unknown.png
 ${IMG_URL}icons/${}.svg
 ${IMG_URL}icons/facets/${facet_icon}.png
-${IMG_URL}icons/facets/${icon}.png
 ${IMG_URL}icons/hero_${}.png
 ${IMG_URL}icons/hero_agility.png
 ${IMG_URL}icons/hero_intelligence.png
@@ -3241,7 +3240,6 @@ url( ${IMG_URL}/pastupdates/winterbp_social.jpg )
 url( ${IMG_URL}/pastupdates/wk_social.jpg )
 url( ${IMG_URL}/pastupdates/wr_social.png )
 url( ${IMG_URL}/pastupdates/wraith_social.jpg )
-url( ${IMG_URL}abilities/${_ ? _ : _}.png )
 url( ${IMG_URL}abilities/${name}.png )
 url( ${IMG_URL}abilities/${}.png
 url( ${IMG_URL}arrow_solid_left.png )
