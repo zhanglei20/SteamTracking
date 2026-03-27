@@ -633,7 +633,7 @@
         (0, _._)([_._], _.prototype, "InternalSetupValue", null);
       const _ = new _();
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _ ? _.GetClanInfoByClanAccountID(_) : void 0,
           ),
           [_, _] = (0, _.useState)(!!_ && !_.BHasClanInfoLoadedByAccountID(_));
@@ -661,10 +661,10 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(_.GetOGGClanInfo(_));
+        const [_, _] = (0, _.useState)(_.GetOGGClanInfo(_));
         return (
           (0, _.useEffect)(() => {
-            _ || _.LoadOGGClanInfoForGroupVanity(_).then(__webpack_require__);
+            _ || _.LoadOGGClanInfoForGroupVanity(_).then(_);
           }, [_, _]),
           _
         );
@@ -2469,16 +2469,11 @@
             if (this.ValidateCreatorHomeTitles(_))
               for (const [
                 _,
-                {
-                  title: __webpack_require__,
-                  description: _,
-                  listtileimage: _,
-                },
+                { title: _, description: _, listtileimage: _ },
               ] of Object.entries(null != _ ? _ : {}))
-                __webpack_require__ &&
+                _ &&
                   this.m_mapListInfo.set(_, {
-                    title:
-                      null != __webpack_require__ ? __webpack_require__ : "",
+                    title: null != _ ? _ : "",
                     description: (null == _ ? void 0 : _.length) ? _ : void 0,
                     imageUrl: (null == _ ? void 0 : _.length) ? _ : void 0,
                   });
@@ -2537,14 +2532,10 @@
         };
       }
       function _(_) {
-        const {
-          data: _,
-          isFetching: __webpack_require__,
-          refetch: _,
-        } = (0, _._)(_(_));
+        const { data: _, isFetching: _, refetch: _ } = (0, _._)(_(_));
         return {
           creatorHome: _,
-          isFetching: __webpack_require__,
+          isFetching: _,
           refetch: _,
         };
       }
@@ -2569,13 +2560,9 @@
         };
       }
       function _(_, _) {
-        const {
-          data: __webpack_require__,
-          isFetching: _,
-          refetch: _,
-        } = (0, _._)(_(_, _));
+        const { data: _, isFetching: _, refetch: _ } = (0, _._)(_(_, _));
         return {
-          lists: __webpack_require__,
+          lists: _,
           isFetching: _,
           refetch: _,
         };
@@ -3193,7 +3180,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _.Get().BIsPartnerEventPermissionsLoaded(_),
           ),
           _ = _._.InitFromClanID(_),

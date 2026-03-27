@@ -287,8 +287,8 @@
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
-          [__webpack_require__, _] = _.useState(!1);
-        return __webpack_require__
+          [_, _] = _.useState(!1);
+        return _
           ? null
           : (0, _.jsxs)("div", {
               className: _.broadcast_floating,
@@ -425,22 +425,14 @@
         });
       }
       const _ = (0, _._)((_) => {
-        const {
-            eventModel: _,
-            calendarEvent: __webpack_require__,
-            history: _,
-          } = _,
+        const { eventModel: _, calendarEvent: _, history: _ } = _,
           _ = (_) => {
             let _ = __webpack_require__.GetEntityName();
             (0, _._)(
               (0, _.jsx)(_._, {
                 strTitle: (0, _._)("#EventCalendar_MuteApp_Title", _),
                 strDescription: (0, _._)("#EventCalendar_MuteApp_details", _),
-                onOK: () =>
-                  (0, _._)().UpdateEventBlockFromCalendarEvent(
-                    __webpack_require__,
-                    !1,
-                  ),
+                onOK: () => (0, _._)().UpdateEventBlockFromCalendarEvent(_, !1),
                 children: (0, _.jsx)("a", {
                   href: _._.STORE_BASE_URL + "account/emailoptout/app",
                   target: _._.IN_CLIENT ? void 0 : "_blank",
@@ -451,10 +443,7 @@
             );
           },
           _ = () => {
-            (0, _._)().UpdateEventBlockFromCalendarEvent(
-              __webpack_require__,
-              !0,
-            );
+            (0, _._)().UpdateEventBlockFromCalendarEvent(_, !0);
           },
           _ = () => {
             const _ = _().MapClanEventTypeToGroup(_.GetEventType());
@@ -497,14 +486,13 @@
           onClick: (_) => {
             let _ = [];
             const _ = __webpack_require__.GetSource(),
-              _ = __webpack_require__.unique_id,
+              _ = _.unique_id,
               _ = (0, _._)(),
               _ = (0, _._)();
             _.BIsGlobalCalendar() &&
               (_ &&
                 _ & _._.k_eLibrary &&
-                (_().BIsGameSourceAllowed(_._.k_ERecent) &&
-                __webpack_require__.appInfo
+                (_().BIsGameSourceAllowed(_._.k_ERecent) && _.appInfo
                   ? (_.push(
                       (0, _.jsx)(
                         _._,
@@ -515,7 +503,7 @@
                             "#EventCalender_LastPlayed",
                             (0, _._)(
                               _._.GetTimeNowWithOverride() -
-                                __webpack_require__.appInfo.last_played,
+                                _.appInfo.last_played,
                             ),
                           ),
                         },
@@ -547,7 +535,7 @@
                 ),
               ),
               _._.logged_in &&
-                (_._.Get().BIsEventBlocked(__webpack_require__)
+                (_._.Get().BIsEventBlocked(_)
                   ? _.push(
                       (0, _.jsx)(
                         _._,
@@ -589,7 +577,7 @@
                 _.push(
                   (0, _.jsx)(_, {
                     eventModel: _,
-                    calendarEvent: __webpack_require__,
+                    calendarEvent: _,
                   }),
                 ),
               _.BIsSingleSourceCalendar() ||
@@ -631,7 +619,7 @@
         });
       });
       function _(_) {
-        const { eventModel: _, calendarEvent: __webpack_require__ } = _,
+        const { eventModel: _, calendarEvent: _ } = _,
           _ = (0, _._)(_.clanSteamID.GetAccountID()),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           _ = _.useCallback(async () => {
@@ -688,7 +676,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const _ = ["maxresdefault", "mqdefault", "default"],
-            [__webpack_require__, _] = _.useState(0);
+            [_, _] = _.useState(0);
           _.useEffect(() => _(0), [_.video]);
           const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
@@ -703,14 +691,9 @@
             });
           {
             const _ =
-                "https://img.youtube.com/vi/" +
-                _.video +
-                "/" +
-                _[__webpack_require__] +
-                ".jpg",
+                "https://img.youtube.com/vi/" + _.video + "/" + _[_] + ".jpg",
               _ = () => {
-                __webpack_require__ + 1 < _.length &&
-                  _(__webpack_require__ + 1);
+                _ + 1 < _.length && _(_ + 1);
               },
               _ = () => {
                 _.current && _.current.naturalHeight < 91 && _();
@@ -725,7 +708,7 @@
           }
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1);
+          const [_, _] = _.useState(!1);
           (0, _._)(!!_.preloadYoutubeScripts);
           const _ = (0, _._)("youtube");
           if (_ && _)
@@ -781,7 +764,7 @@
       function _(_) {
         const {
             eventModel: _,
-            calendarEvent: __webpack_require__,
+            calendarEvent: _,
             bSuppressHoverEffects: _,
             mode: _,
             bHideGameTitle: _,
@@ -790,11 +773,11 @@
           [_, _] = _.useState(!1);
         (0, _._)(_.GetAppIDOrReferenceAppID(), _),
           _.useEffect(() => {
-            if (__webpack_require__.clanInfo) {
-              let _ = _._.InitFromClanID(__webpack_require__.clanInfo.clanid);
+            if (_.clanInfo) {
+              let _ = _._.InitFromClanID(_.clanInfo.clanid);
               _._.LoadClanInfoForClanSteamID(_);
             }
-          }, [__webpack_require__.clanInfo]);
+          }, [_.clanInfo]);
         const _ = _._.Get(),
           _ = (0, _._)(_._.LANGUAGE),
           _ = "capsule",
@@ -855,7 +838,7 @@
                 });
               }
               return null;
-            })(_, __webpack_require__, _, _),
+            })(_, _, _, _),
           _ = _()[`EventType${_}`],
           _ = _.map((_) => _()[`Tag-${_}`]),
           _ = (0, _._)(
@@ -877,7 +860,7 @@
         const _ = (0, _._)(_),
           _ = (0, _.jsx)(_, {
             videoPreview: _,
-            calendarEvent: __webpack_require__,
+            calendarEvent: _,
             eventModel: _,
             mode: _,
             artworkType: _,
@@ -925,10 +908,7 @@
               children: (0, _.jsxs)("div", {
                 className: _().Tile,
                 onClick: (_) => {
-                  _._.RecordAppInteractionEvent(
-                    __webpack_require__.appid,
-                    _._.k_eClickThrough,
-                  ),
+                  _._.RecordAppInteractionEvent(_.appid, _._.k_eClickThrough),
                     _(_),
                     _.stopPropagation(),
                     _.preventDefault();
@@ -967,9 +947,9 @@
                                     (0, _.jsx)(_, {
                                       ..._,
                                     }),
-                                    __webpack_require__ &&
+                                    _ &&
                                       (0, _.jsx)(_, {
-                                        calendarEvent: __webpack_require__,
+                                        calendarEvent: _,
                                       }),
                                   ],
                                 }),
@@ -1028,7 +1008,7 @@
       function _(_) {
         const {
             videoPreview: _,
-            eventModel: __webpack_require__,
+            eventModel: _,
             calendarEvent: _,
             mode: _,
             artworkType: _,
@@ -1039,9 +1019,9 @@
           _ = !_ && "upcoming" !== _,
           [_, _, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetEventType(),
-            __webpack_require__.has_live_stream,
-            __webpack_require__.has_live_stream,
-            __webpack_require__.clanSteamID.GetAccountID(),
+            _.has_live_stream,
+            _.has_live_stream,
+            _.clanSteamID.GetAccountID(),
             _.GetGameCapsule(),
             __webpack_require__.BImageNeedScreenshotFallback(_, _),
           ]);
@@ -1131,7 +1111,7 @@
       const _ = (0, _._)((_) => {
           const {
               eventModel: _,
-              calendarEvent: __webpack_require__,
+              calendarEvent: _,
               bSuppressHoverEffects: _,
               history: _,
             } = _,
@@ -1168,15 +1148,9 @@
         }),
         _ = (0, _._)(_),
         _ = (0, _._)((_) => {
-          const {
-              eventModel: _,
-              calendarEvent: __webpack_require__,
-              className: _,
-            } = _,
+          const { eventModel: _, calendarEvent: _, className: _ } = _,
             _ = (0, _._)().GetStoreInitializationTimestamp().getTime() / 1e3,
-            _ = _
-              ? _.GetStartTimeAndDateUnixSeconds()
-              : __webpack_require__.start_time,
+            _ = _ ? _.GetStartTimeAndDateUnixSeconds() : _.start_time,
             _ = _ && (0, _._)(_.type) && _.GetEndTimeAndDateUnixSeconds();
           if (_ && _ < _ && _ < _) {
             const _ = _ - _,
@@ -1387,13 +1361,12 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { displayLocation: _, fnChangeModalEvent: __webpack_require__ } =
-            _,
+        const { displayLocation: _, fnChangeModalEvent: _ } = _,
           [_, _] = _.useState(null),
           [_, _] = (0, _._)("emgid", null),
           [_, _] = (0, _._)("emclan", null);
         return (
-          (0, _._)(__webpack_require__, (_, _) => {
+          (0, _._)(_, (_, _) => {
             _(_), _(_._.InitFromClanID(_).ConvertTo64BitString());
           }),
           _.useEffect(() => {
@@ -1472,9 +1445,9 @@
         });
       }
       function _(_) {
-        const { rgActiveEvents: _, rtNow: __webpack_require__ } = _,
+        const { rgActiveEvents: _, rtNow: _ } = _,
           _ = (0, _._)()
-            .GetCalendarItemsInTimeRange(__webpack_require__ + 1)
+            .GetCalendarItemsInTimeRange(_ + 1)
             .rgCalendarItems.filter((_) => !_.some((_) => _.GID == _.unique_id))
             .sort((_, _) => _.start_time - _.start_time);
         return 0 == _.length
@@ -1497,7 +1470,7 @@
                         bDisplayAsUpNext: Boolean(0 == _ && _.length >= 1),
                         calendarItem: _,
                         fnDisplayModalEvent: _.fnDisplayModalEvent,
-                        rtNow: __webpack_require__,
+                        rtNow: _,
                       },
                       _.unique_id,
                     ),
@@ -1509,7 +1482,7 @@
       function _(_) {
         const {
             calendarItem: _,
-            bDisplayAsUpNext: __webpack_require__,
+            bDisplayAsUpNext: _,
             fnDisplayModalEvent: _,
             rtNow: _,
           } = _,
@@ -1533,7 +1506,7 @@
                     children: (0, _._)(_, !0),
                   }),
                 (0, _.jsx)("div", {
-                  children: Boolean(__webpack_require__ && _)
+                  children: Boolean(_ && _)
                     ? (0, _._)(
                         "#Conference_StartInMin",
                         Math.max(1, Math.floor((_ - _) / 60)),
@@ -1561,8 +1534,7 @@
         });
       }
       function _(_) {
-        const { rgActiveEvents: _, fnDisplayModalEvent: __webpack_require__ } =
-          _;
+        const { rgActiveEvents: _, fnDisplayModalEvent: _ } = _;
         if (!_ || 0 == _.length) return null;
         const _ = _[0],
           _ = (0, _._)(_._.LANGUAGE),
@@ -1758,7 +1730,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { conferenceInfo: _, bShowYouTube: __webpack_require__ } = _,
+        const { conferenceInfo: _, bShowYouTube: _ } = _,
           [_, _] = _.useState(!1),
           _ = (0, _._)(_._.PerMinute) < _.rtStartTime - 30 * _._.PerMinute;
         return (0, _.jsxs)("div", {
@@ -1808,7 +1780,7 @@
             (0, _.jsxs)("div", {
               className: _.MainCol,
               children: [
-                __webpack_require__ &&
+                _ &&
                   (0, _.jsx)(_._, {
                     videoID: _.youtubeVideoID,
                     classNameAlign: "",
@@ -1834,7 +1806,7 @@
       }
       function _(_) {
         const { conferenceInfo: _ } = _,
-          [__webpack_require__, _] = _.useState(window.innerWidth > 910),
+          [_, _] = _.useState(window.innerWidth > 910),
           [_, _] = _.useState(!0),
           _ =
             _._.COMMUNITY_BASE_URL +
@@ -1856,7 +1828,7 @@
                   className: (0, _._)(
                     _.InnerChatTab,
                     _.ChatTab,
-                    __webpack_require__ ? _.Active : "",
+                    _ ? _.Active : "",
                   ),
                   children: [
                     (0, _.jsx)("div", {
@@ -1917,9 +1889,7 @@
             (0, _.jsxs)("div", {
               className: _.ChatStack,
               children: [
-                Boolean(
-                  (__webpack_require__ && _) || (!_ && !__webpack_require__),
-                ) &&
+                Boolean((_ && _) || (!_ && !_)) &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)("div", {
@@ -1937,12 +1907,12 @@
                       }),
                     ],
                   }),
-                Boolean(__webpack_require__ && !_) &&
+                Boolean(_ && !_) &&
                   (0, _.jsx)(_, {
                     conferenceInfo: _,
                     className: _.ChatCtn,
                   }),
-                Boolean(!__webpack_require__ && _) &&
+                Boolean(!_ && _) &&
                   (0, _.jsx)(_._, {
                     gidSession: _.globalQandASessionID,
                   }),
@@ -1957,16 +1927,12 @@
           return (0, _.jsx)("div", {
             children: (0, _._)("#Conference_NoAbout"),
           });
-        const {
-          title: __webpack_require__,
-          content: _,
-          timestamp: _,
-        } = _.faqAboutPage;
+        const { title: _, content: _, timestamp: _ } = _.faqAboutPage;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("div", {
               className: _.AboutTitle,
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)(_._, {
               text: _,
@@ -2180,14 +2146,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { event: _, closeModal: __webpack_require__ } = _;
+        const { event: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           initialEvent: _,
           bShowOnlyInitialEvent: !0,
           partnerEventStore: _._,
           emoticonStore: _._,
           showAppHeader: !0,
-          closeModal: __webpack_require__,
+          closeModal: _,
         });
       }
       function _(_, _) {
@@ -2219,11 +2185,7 @@
           _.currentTarget == _.target && this.props.fnClose();
         }
         render() {
-          const {
-            event: _,
-            langOverride: _,
-            isPreview: __webpack_require__,
-          } = this.props;
+          const { event: _, langOverride: _, isPreview: _ } = this.props;
           return (0, _.jsx)("div", {
             ref: this.m_refFocus,
             className: _.Main,
@@ -2235,7 +2197,7 @@
                 emoticonStore: _._,
                 partnerEventStore: _._.Get(),
                 langOverride: _,
-                isPreview: __webpack_require__,
+                isPreview: _,
                 bDisableBroadcastPlayer: !1,
               },
               _.GID,

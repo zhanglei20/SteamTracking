@@ -241,18 +241,15 @@
         !_.selection.empty &&
         (_ && _(_._.deleteSelection().scrollIntoView()), !0);
       function _(_, _) {
-        let { $cursor: __webpack_require__ } = _.selection;
-        return !__webpack_require__ ||
-          (_
-            ? !_.endOfTextblock("backward", _)
-            : __webpack_require__.parentOffset > 0)
+        let { $cursor: _ } = _.selection;
+        return !_ || (_ ? !_.endOfTextblock("backward", _) : _.parentOffset > 0)
           ? null
-          : __webpack_require__;
+          : _;
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         for (let _ = _; _; _ = "start" == _ ? _.firstChild : _.lastChild) {
           if (_.isTextblock) return !0;
-          if (__webpack_require__ && 1 != _.childCount) return !1;
+          if (_ && 1 != _.childCount) return !1;
         }
         return !1;
       }
@@ -265,14 +262,13 @@
         return null;
       }
       function _(_, _) {
-        let { $cursor: __webpack_require__ } = _.selection;
-        return !__webpack_require__ ||
+        let { $cursor: _ } = _.selection;
+        return !_ ||
           (_
             ? !_.endOfTextblock("forward", _)
-            : __webpack_require__.parentOffset <
-              __webpack_require__.parent.content.size)
+            : _.parentOffset < _.parent.content.size)
           ? null
-          : __webpack_require__;
+          : _;
       }
       function _(_) {
         if (!_.parent.type.spec.isolating)
@@ -286,21 +282,15 @@
       }
       function _(_) {
         for (let _ = 0; _ < _.edgeCount; _++) {
-          let { type: __webpack_require__ } = _.edge(_);
-          if (
-            __webpack_require__.isTextblock &&
-            !__webpack_require__.hasRequiredAttrs()
-          )
-            return __webpack_require__;
+          let { type: _ } = _.edge(_);
+          if (_.isTextblock && !__webpack_require__.hasRequiredAttrs())
+            return _;
         }
         return null;
       }
       const _ = (_, _) => {
-        let { $head: __webpack_require__, $anchor: _ } = _.selection;
-        if (
-          !__webpack_require__.parent.type.spec.code ||
-          !__webpack_require__.sameParent(_)
-        )
+        let { $head: _, $anchor: _ } = _.selection;
+        if (!_.parent.type.spec.code || !__webpack_require__.sameParent(_))
           return !1;
         let _ = __webpack_require__.node(-1),
           _ = __webpack_require__.indexAfter(-1),
@@ -314,21 +304,21 @@
         return !0;
       };
       const _ = (_, _) => {
-        let { $from: __webpack_require__, $to: _ } = _.selection;
+        let { $from: _, $to: _ } = _.selection;
         if (_.selection instanceof _._ && _.selection.node.isBlock)
           return !(
-            !__webpack_require__.parentOffset ||
-            !(0, _._)(_.doc, __webpack_require__.pos) ||
-            (_ && _(_._.split(__webpack_require__.pos).scrollIntoView()), 0)
+            !_.parentOffset ||
+            !(0, _._)(_.doc, _.pos) ||
+            (_ && _(_._.split(_.pos).scrollIntoView()), 0)
           );
-        if (!__webpack_require__.parent.isBlock) return !1;
+        if (!_.parent.isBlock) return !1;
         if (_) {
           let _ = _.parentOffset == _.parent.content.size,
             _ = _._;
           (_.selection instanceof _._ || _.selection instanceof _._) &&
             _.deleteSelection();
           let _ =
-              0 == __webpack_require__.depth
+              0 == _.depth
                 ? null
                 : _(
                     __webpack_require__
@@ -345,13 +335,13 @@
                     },
                   ]
                 : void 0,
-            _ = (0, _._)(_.doc, _.mapping.map(__webpack_require__.pos), 1, _);
+            _ = (0, _._)(_.doc, _.mapping.map(_.pos), 1, _);
           if (
             (_ ||
               _ ||
               !(0, _._)(
                 _.doc,
-                _.mapping.map(__webpack_require__.pos),
+                _.mapping.map(_.pos),
                 1,
                 _
                   ? [
@@ -369,10 +359,8 @@
                 ]),
               (_ = !0)),
             _ &&
-              (_.split(_.mapping.map(__webpack_require__.pos), 1, _),
-              !_ &&
-                !__webpack_require__.parentOffset &&
-                __webpack_require__.parent.type != _))
+              (_.split(_.mapping.map(_.pos), 1, _),
+              !_ && !_.parentOffset && _.parent.type != _))
           ) {
             let _ = _.mapping.map(__webpack_require__.before()),
               _ = _.doc.resolve(_);
@@ -732,11 +720,10 @@
       const _ = {
           Enter: _(
             (_, _) => {
-              let { $head: __webpack_require__, $anchor: _ } = _.selection;
+              let { $head: _, $anchor: _ } = _.selection;
               return (
                 !(
-                  !__webpack_require__.parent.type.spec.code ||
-                  !__webpack_require__.sameParent(_)
+                  !_.parent.type.spec.code || !__webpack_require__.sameParent(_)
                 ) && (_ && _(_._.insertText("\n").scrollIntoView()), !0)
               );
             },
@@ -761,14 +748,10 @@
               return !0;
             },
             (_, _) => {
-              let { $cursor: __webpack_require__ } = _.selection;
+              let { $cursor: _ } = _.selection;
+              if (!_ || _.parent.content.size) return !1;
               if (
-                !__webpack_require__ ||
-                __webpack_require__.parent.content.size
-              )
-                return !1;
-              if (
-                __webpack_require__.depth > 1 &&
+                _.depth > 1 &&
                 __webpack_require__.after() != __webpack_require__.end(-1)
               ) {
                 let _ = __webpack_require__.before();
@@ -893,9 +876,9 @@
           let _ = _.contentMatchAt(_.index()).defaultType;
           return _ && _.isTextblock;
         }
-        static findGapCursorFrom(_, _, __webpack_require__ = !1) {
+        static findGapCursorFrom(_, _, _ = !1) {
           _: for (;;) {
-            if (!__webpack_require__ && _.valid(_)) return _;
+            if (!_ && _.valid(_)) return _;
             let _ = _.pos,
               _ = null;
             for (let _ = _.depth; ; _--) {
@@ -998,23 +981,17 @@
           !(_.state.selection instanceof _)
         )
           return !1;
-        let { $from: __webpack_require__ } = _.state.selection,
-          _ = __webpack_require__.parent
+        let { $from: _ } = _.state.selection,
+          _ = _.parent
             .contentMatchAt(__webpack_require__.index())
             .findWrapping(_.state.schema.nodes.text);
         if (!_) return !1;
         let _ = _._.empty;
         for (let _ = _.length - 1; _ >= 0; _--)
           _ = _._.from(_[_].createAndFill(null, _));
-        let _ = _.state._.replace(
-          __webpack_require__.pos,
-          __webpack_require__.pos,
-          new _._(_, 0, 0),
-        );
+        let _ = _.state._.replace(_.pos, _.pos, new _._(_, 0, 0));
         return (
-          _.setSelection(_._.near(_.doc.resolve(__webpack_require__.pos + 1))),
-          _.dispatch(_),
-          !1
+          _.setSelection(_._.near(_.doc.resolve(_.pos + 1))), _.dispatch(_), !1
         );
       }
       function _(_) {
@@ -1164,12 +1141,12 @@
           _
         );
       }
-      function _(_, _, __webpack_require__ = !0) {
+      function _(_, _, _ = !0) {
         return (
           _.altKey && (_ = "Alt-" + _),
           _.ctrlKey && (_ = "Ctrl-" + _),
           _.metaKey && (_ = "Meta-" + _),
-          __webpack_require__ && _.shiftKey && (_ = "Shift-" + _),
+          _ && _.shiftKey && (_ = "Shift-" + _),
           _
         );
       }
@@ -1538,8 +1515,8 @@
         findDiffStart(_, _ = 0) {
           return _(this, _, _);
         }
-        findDiffEnd(_, _ = this.size, __webpack_require__ = _.size) {
-          return _(this, _, _, __webpack_require__);
+        findDiffEnd(_, _ = this.size, _ = _.size) {
+          return _(this, _, _, _);
         }
         findIndex(_, _ = -1) {
           if (0 == _) return _(0, _);
@@ -2126,11 +2103,11 @@
             ? this
             : this.copy(this.content.cut(_, _));
         }
-        slice(_, _ = this.content.size, __webpack_require__ = !1) {
+        slice(_, _ = this.content.size, _ = !1) {
           if (_ == _) return _.empty;
           let _ = this.resolve(_),
             _ = this.resolve(_),
-            _ = __webpack_require__ ? 0 : _.sharedDepth(_),
+            _ = _ ? 0 : _.sharedDepth(_),
             _ = _.start(_),
             _ = _.node(_).content.cut(_.pos - _, _.pos - _);
           return new _(_, _.depth - _, _.depth - _);
@@ -2140,20 +2117,18 @@
         }
         nodeAt(_) {
           for (let _ = this; ; ) {
-            let { index: __webpack_require__, offset: _ } =
-              _.content.findIndex(_);
-            if (((_ = _.maybeChild(__webpack_require__)), !_)) return null;
+            let { index: _, offset: _ } = _.content.findIndex(_);
+            if (((_ = _.maybeChild(_)), !_)) return null;
             if (_ == _ || _.isText) return _;
             _ -= _ + 1;
           }
         }
         childAfter(_) {
-          let { index: _, offset: __webpack_require__ } =
-            this.content.findIndex(_);
+          let { index: _, offset: _ } = this.content.findIndex(_);
           return {
             node: this.content.maybeChild(_),
             index: _,
-            offset: __webpack_require__,
+            offset: _,
           };
         }
         childBefore(_) {
@@ -2163,19 +2138,18 @@
               index: 0,
               offset: 0,
             };
-          let { index: _, offset: __webpack_require__ } =
-            this.content.findIndex(_);
-          if (__webpack_require__ < _)
+          let { index: _, offset: _ } = this.content.findIndex(_);
+          if (_ < _)
             return {
               node: this.content.child(_),
               index: _,
-              offset: __webpack_require__,
+              offset: _,
             };
           let _ = this.content.child(_ - 1);
           return {
             node: _,
             index: _ - 1,
-            offset: __webpack_require__ - _.nodeSize,
+            offset: _ - _.nodeSize,
           };
         }
         resolve(_) {
@@ -2235,18 +2209,8 @@
             );
           return _;
         }
-        canReplace(
-          _,
-          _,
-          __webpack_require__ = _.empty,
-          _ = 0,
-          _ = __webpack_require__.childCount,
-        ) {
-          let _ = this.contentMatchAt(_).matchFragment(
-              __webpack_require__,
-              _,
-              _,
-            ),
+        canReplace(_, _, _ = _.empty, _ = 0, _ = _.childCount) {
+          let _ = this.contentMatchAt(_).matchFragment(_, _, _),
             _ = _ && _.matchFragment(this.content, _);
           if (!_ || !_.validEnd) return !1;
           for (let _ = _; _ < _; _++)
@@ -2477,10 +2441,9 @@
             if (this.next[_].type == _) return this.next[_].next;
           return null;
         }
-        matchFragment(_, _ = 0, __webpack_require__ = _.childCount) {
+        matchFragment(_, _ = 0, _ = _.childCount) {
           let _ = this;
-          for (let _ = _; _ && _ < __webpack_require__; _++)
-            _ = _.matchType(_.child(_).type);
+          for (let _ = _; _ && _ < _; _++) _ = _.matchType(_.child(_).type);
           return _;
         }
         get inlineContent() {
@@ -2499,21 +2462,17 @@
               if (this.next[_].type == _.next[_].type) return !0;
           return !1;
         }
-        fillBefore(_, _ = !1, __webpack_require__ = 0) {
+        fillBefore(_, _ = !1, _ = 0) {
           let _ = [this];
           return (function _(_, _) {
-            let _ = _.matchFragment(_, __webpack_require__);
+            let _ = _.matchFragment(_, _);
             if (_ && (!_ || _.validEnd))
               return _.from(_.map((_) => _.createAndFill()));
             for (let _ = 0; _ < _.next.length; _++) {
-              let { type: _, next: __webpack_require__ } = _.next[_];
-              if (
-                !_.isText &&
-                !_.hasRequiredAttrs() &&
-                -1 == _.indexOf(__webpack_require__)
-              ) {
-                _.push(__webpack_require__);
-                let _ = _(__webpack_require__, _.concat(_));
+              let { type: _, next: _ } = _.next[_];
+              if (!_.isText && !_.hasRequiredAttrs() && -1 == _.indexOf(_)) {
+                _.push(_);
+                let _ = _(_, _.concat(_));
                 if (_) return _;
               }
             }
@@ -3518,22 +3477,14 @@
           let _ = this.findPlace(_.create(_));
           return _ && this.enterInner(_, _, !0, _), _;
         }
-        enterInner(_, _ = null, __webpack_require__ = !1, _) {
+        enterInner(_, _ = null, _ = !1, _) {
           this.closeExtra();
           let _ = this.top;
           _.applyPending(_), (_.match = _.match && _.match.matchType(_));
           let _ = _(_, _, _.options);
           4 & _.options && 0 == _.content.length && (_ |= 4),
             this.nodes.push(
-              new _(
-                _,
-                _,
-                _.activeMarks,
-                _.pendingMarks,
-                __webpack_require__,
-                null,
-                _,
-              ),
+              new _(_, _, _.activeMarks, _.pendingMarks, _, null, _),
             ),
             this.open++;
         }
@@ -3734,7 +3685,7 @@
           );
         }
         serializeNodeInner(_, _) {
-          let { dom: __webpack_require__, contentDOM: _ } = _.renderSpec(
+          let { dom: _, contentDOM: _ } = _.renderSpec(
             _(_),
             this.nodes[_.type.name](_),
           );
@@ -3745,7 +3696,7 @@
               );
             this.serializeFragment(_.content, _, _);
           }
-          return __webpack_require__;
+          return _;
         }
         serializeNode(_, _ = {}) {
           let _ = this.serializeNodeInner(_, _);
@@ -3755,11 +3706,11 @@
           }
           return _;
         }
-        serializeMark(_, _, __webpack_require__ = {}) {
+        serializeMark(_, _, _ = {}) {
           let _ = this.marks[_.type.name];
-          return _ && _.renderSpec(_(__webpack_require__), _(_, _));
+          return _ && _.renderSpec(_(_), _(_, _));
         }
-        static renderSpec(_, _, __webpack_require__ = null) {
+        static renderSpec(_, _, _ = null) {
           if ("string" == typeof _)
             return {
               dom: _.createTextNode(_),
@@ -3772,11 +3723,8 @@
           let _,
             _ = _[0],
             _ = _.indexOf(" ");
-          _ > 0 &&
-            ((__webpack_require__ = _.slice(0, _)), (_ = _.slice(_ + 1)));
-          let _ = __webpack_require__
-              ? _.createElementNS(__webpack_require__, _)
-              : _.createElement(_),
+          _ > 0 && ((_ = _.slice(0, _)), (_ = _.slice(_ + 1)));
+          let _ = _ ? _.createElementNS(_, _) : _.createElement(_),
             _ = _[1],
             _ = 1;
           if (
@@ -3807,11 +3755,7 @@
               };
             }
             {
-              let { dom: _, contentDOM: _ } = _.renderSpec(
-                _,
-                _,
-                __webpack_require__,
-              );
+              let { dom: _, contentDOM: _ } = _.renderSpec(_, _, _);
               if ((_.appendChild(_), _)) {
                 if (_) throw new RangeError("Multiple content holes");
                 _ = _;
@@ -4239,30 +4183,16 @@
               : (_.replaceRangeWith(_, _, _), _(_, _, _.isInline ? -1 : 1));
           }
         }
-        static findFrom(_, _, __webpack_require__ = !1) {
+        static findFrom(_, _, _ = !1) {
           let _ = _.parent.inlineContent
             ? new _(_)
-            : _(_.node(0), _.parent, _.pos, _.index(), _, __webpack_require__);
+            : _(_.node(0), _.parent, _.pos, _.index(), _, _);
           if (_) return _;
           for (let _ = _.depth - 1; _ >= 0; _--) {
             let _ =
               _ < 0
-                ? _(
-                    _.node(0),
-                    _.node(_),
-                    _.before(_ + 1),
-                    _.index(_),
-                    _,
-                    __webpack_require__,
-                  )
-                : _(
-                    _.node(0),
-                    _.node(_),
-                    _.after(_ + 1),
-                    _.index(_) + 1,
-                    _,
-                    __webpack_require__,
-                  );
+                ? _(_.node(0), _.node(_), _.before(_ + 1), _.index(_), _, _)
+                : _(_.node(0), _.node(_), _.after(_ + 1), _.index(_) + 1, _, _);
             if (_) return _;
           }
           return null;
@@ -4350,12 +4280,9 @@
             throw new RangeError("Invalid input for TextSelection.fromJSON");
           return new _(_.resolve(_.anchor), _.resolve(_.head));
         }
-        static create(_, _, __webpack_require__ = _) {
+        static create(_, _, _ = _) {
           let _ = _.resolve(_);
-          return new this(
-            _,
-            __webpack_require__ == _ ? _ : _.resolve(__webpack_require__),
-          );
+          return new this(_, _ == _ ? _ : _.resolve(_));
         }
         static between(_, _, _) {
           let _ = _.pos - _.pos;
@@ -4395,11 +4322,9 @@
           super(_, _), (this.node = _);
         }
         map(_, _) {
-          let { deleted: __webpack_require__, pos: _ } = _.mapResult(
-              this.anchor,
-            ),
+          let { deleted: _, pos: _ } = _.mapResult(this.anchor),
             _ = _.resolve(_);
-          return __webpack_require__ ? _.near(_) : new _(_);
+          return _ ? _.near(_) : new _(_);
         }
         content() {
           return new _._(_._.from(this.node), 0, 0);
@@ -4434,12 +4359,8 @@
           this.anchor = _;
         }
         map(_) {
-          let { deleted: _, pos: __webpack_require__ } = _.mapResult(
-            this.anchor,
-          );
-          return _
-            ? new _(__webpack_require__, __webpack_require__)
-            : new _(__webpack_require__);
+          let { deleted: _, pos: _ } = _.mapResult(this.anchor);
+          return _ ? new _(_, _) : new _(_);
         }
         resolve(_) {
           let _ = _.resolve(this.anchor),
@@ -6704,11 +6625,8 @@
       }
       _.empty = new _([]);
       class _ {
-        constructor(_ = [], _, __webpack_require__ = 0, _ = _.length) {
-          (this.maps = _),
-            (this.mirror = _),
-            (this.from = __webpack_require__),
-            (this._ = _);
+        constructor(_ = [], _, _ = 0, _ = _.length) {
+          (this.maps = _), (this.mirror = _), (this.from = _), (this._ = _);
         }
         slice(_ = 0, _ = this.maps.length) {
           return new _(this.maps, this.mirror, _, _);
@@ -7289,9 +7207,9 @@
         }
         return null;
       }
-      function _(_, _, __webpack_require__ = null, _ = _) {
+      function _(_, _, _ = null, _ = _) {
         let _ = (function (_, _) {
-            let { parent: __webpack_require__, startIndex: _, endIndex: _ } = _,
+            let { parent: _, startIndex: _, endIndex: _ } = _,
               _ = __webpack_require__.contentMatchAt(_).findWrapping(_);
             if (!_) return null;
             let _ = _.length ? _[0] : _;
@@ -7300,11 +7218,7 @@
           _ =
             _ &&
             (function (_, _) {
-              let {
-                  parent: __webpack_require__,
-                  startIndex: _,
-                  endIndex: _,
-                } = _,
+              let { parent: _, startIndex: _, endIndex: _ } = _,
                 _ = __webpack_require__.child(_),
                 _ = _.contentMatch.findWrapping(_.type);
               if (!_) return null;
@@ -7317,7 +7231,7 @@
           ? _.map(_)
               .concat({
                 type: _,
-                attrs: __webpack_require__,
+                attrs: _,
               })
               .concat(_.map(_))
           : null;
@@ -7328,9 +7242,9 @@
           attrs: null,
         };
       }
-      function _(_, _, __webpack_require__ = 1, _) {
+      function _(_, _, _ = 1, _) {
         let _ = _.resolve(_),
-          _ = _.depth - __webpack_require__,
+          _ = _.depth - _,
           _ = (_ && _[_.length - 1]) || _.parent;
         if (
           _ < 0 ||
@@ -7341,11 +7255,7 @@
           )
         )
           return !1;
-        for (
-          let _ = _.depth - 1, _ = __webpack_require__ - 2;
-          _ > _;
-          _--, _--
-        ) {
+        for (let _ = _.depth - 1, _ = _ - 2; _ > _; _--, _--) {
           let _ = _.node(_),
             _ = _.index(_);
           if (_.type.spec.isolating) return !1;
@@ -7397,13 +7307,11 @@
           }
         return null;
       }
-      function _(_, _, __webpack_require__ = _, _ = _._.empty) {
-        if (_ == __webpack_require__ && !_.size) return null;
+      function _(_, _, _ = _, _ = _._.empty) {
+        if (_ == _ && !_.size) return null;
         let _ = _.resolve(_),
-          _ = _.resolve(__webpack_require__);
-        return _(_, _, _)
-          ? new _(_, __webpack_require__, _)
-          : new _(_, _, _).fit();
+          _ = _.resolve(_);
+        return _(_, _, _) ? new _(_, _, _) : new _(_, _, _).fit();
       }
       function _(_, _, _) {
         return (
@@ -7509,52 +7417,37 @@
             }
         }
         openMore() {
-          let {
-              content: _,
-              openStart: _,
-              openEnd: __webpack_require__,
-            } = this.unplaced,
+          let { content: _, openStart: _, openEnd: _ } = this.unplaced,
             _ = _(_, _);
           return (
             !(!_.childCount || _.firstChild.isLeaf) &&
             ((this.unplaced = new _._(
               _,
               _ + 1,
-              Math.max(
-                __webpack_require__,
-                _.size + _ >= _.size - __webpack_require__ ? _ + 1 : 0,
-              ),
+              Math.max(_, _.size + _ >= _.size - _ ? _ + 1 : 0),
             )),
             !0)
           );
         }
         dropNode() {
-          let {
-              content: _,
-              openStart: _,
-              openEnd: __webpack_require__,
-            } = this.unplaced,
+          let { content: _, openStart: _, openEnd: _ } = this.unplaced,
             _ = _(_, _);
           if (_.childCount <= 1 && _ > 0) {
             let _ = _.size - _ <= _ + _.size;
-            this.unplaced = new _._(
-              _(_, _ - 1, 1),
-              _ - 1,
-              _ ? _ - 1 : __webpack_require__,
-            );
-          } else this.unplaced = new _._(_(_, _, 1), _, __webpack_require__);
+            this.unplaced = new _._(_(_, _ - 1, 1), _ - 1, _ ? _ - 1 : _);
+          } else this.unplaced = new _._(_(_, _, 1), _, _);
         }
         placeNodes({
           sliceDepth: _,
           frontierDepth: _,
-          parent: __webpack_require__,
+          parent: _,
           inject: _,
           wrap: _,
         }) {
           for (; this.depth > _; ) this.closeFrontierNode();
           if (_) for (let _ = 0; _ < _.length; _++) this.openFrontierNode(_[_]);
           let _ = this.unplaced,
-            _ = __webpack_require__ ? __webpack_require__.content : _.content,
+            _ = _ ? _.content : _.content,
             _ = _.openStart - _,
             _ = 0,
             _ = [],
@@ -7585,8 +7478,8 @@
             (this.frontier[_].match = _),
             _ &&
               _ < 0 &&
-              __webpack_require__ &&
-              __webpack_require__.type == this.frontier[this.depth].type &&
+              _ &&
+              _.type == this.frontier[this.depth].type &&
               this.frontier.length > 1 &&
               this.closeFrontierNode();
           for (let _ = 0, _ = _; _ < _; _++) {
@@ -7619,20 +7512,16 @@
               _.depth == this.depth)
           )
             return -1;
-          let { depth: __webpack_require__ } = this.$to,
-            _ = this.$to.after(__webpack_require__);
-          for (
-            ;
-            __webpack_require__ > 1 && _ == this.$to.end(--__webpack_require__);
-          )
-            ++_;
+          let { depth: _ } = this.$to,
+            _ = this.$to.after(_);
+          for (; _ > 1 && _ == this.$to.end(--_); ) ++_;
           return _;
         }
         findCloseLevel(_) {
           _: for (let _ = Math.min(this.depth, _.depth); _ >= 0; _--) {
-            let { match: __webpack_require__, type: _ } = this.frontier[_],
+            let { match: _, type: _ } = this.frontier[_],
               _ = _ < _.depth && _.end(_ + 1) == _.pos + (_.depth - (_ + 1)),
-              _ = _(_, _, _, __webpack_require__, _);
+              _ = _(_, _, _, _, _);
             if (_) {
               for (let _ = _ - 1; _ >= 0; _--) {
                 let { match: _, type: _ } = this.frontier[_],
@@ -7887,8 +7776,8 @@
             this.mapping.appendMap(_.getMap()),
             (this.doc = _);
         }
-        replace(_, _ = _, __webpack_require__ = _._.empty) {
-          let _ = _(this.doc, _, _, __webpack_require__);
+        replace(_, _ = _, _ = _._.empty) {
+          let _ = _(this.doc, _, _, _);
           return _ && this.step(_), this;
         }
         replaceWith(_, _, _) {
@@ -8166,7 +8055,7 @@
             this
           );
         }
-        setNodeMarkup(_, _, __webpack_require__ = null, _) {
+        setNodeMarkup(_, _, _ = null, _) {
           return (
             (function (_, _, _, _, _) {
               let _ = _.doc.nodeAt(_);
@@ -8187,7 +8076,7 @@
                   !0,
                 ),
               );
-            })(this, _, _, __webpack_require__, _),
+            })(this, _, _, _, _),
             this
           );
         }
@@ -9175,7 +9064,7 @@
                 };
           }
         }
-        parseRange(_, _, __webpack_require__ = 0) {
+        parseRange(_, _, _ = 0) {
           if (0 == this.children.length)
             return {
               node: this.contentDOM,
@@ -9186,7 +9075,7 @@
             };
           let _ = -1,
             _ = -1;
-          for (let _ = __webpack_require__, _ = 0; ; _++) {
+          for (let _ = _, _ = 0; ; _++) {
             let _ = this.children[_],
               _ = _ + _.size;
             if (-1 == _ && _ <= _) {
@@ -9248,10 +9137,10 @@
           return 0 == _.size || _.emptyChildAt(_);
         }
         domAfterPos(_) {
-          let { node: _, offset: __webpack_require__ } = this.domFromPos(_, 0);
-          if (1 != _.nodeType || __webpack_require__ == _.childNodes.length)
+          let { node: _, offset: _ } = this.domFromPos(_, 0);
+          if (1 != _.nodeType || _ == _.childNodes.length)
             throw new RangeError("No node after pos " + _);
-          return _.childNodes[__webpack_require__];
+          return _.childNodes[_];
         }
         setSelection(_, _, _, _ = !1) {
           let _ = Math.min(_, _),
@@ -9690,10 +9579,10 @@
                 })(this.dom));
         }
         localCompositionInfo(_, _) {
-          let { from: __webpack_require__, _: _ } = _.state.selection;
+          let { from: _, _: _ } = _.state.selection;
           if (
             !(_.state.selection instanceof _._) ||
-            __webpack_require__ < _ ||
+            _ < _ ||
             _ > _ + this.node.content.size
           )
             return null;
@@ -9726,7 +9615,7 @@
                   }
                 }
                 return -1;
-              })(this.node.content, _, __webpack_require__ - _, _ - _);
+              })(this.node.content, _, _ - _, _ - _);
             return _ < 0
               ? null
               : {
@@ -9741,10 +9630,7 @@
             text: "",
           };
         }
-        protectLocalComposition(
-          _,
-          { node: _, pos: __webpack_require__, text: _ },
-        ) {
+        protectLocalComposition(_, { node: _, pos: _, text: _ }) {
           if (this.getDesc(_)) return;
           let _ = _;
           for (; _.parentNode != this.contentDOM; _ = _.parentNode) {
@@ -9755,13 +9641,7 @@
           }
           let _ = new _(this, _, _, _);
           _.input.compositionNodes.push(_),
-            (this.children = _(
-              this.children,
-              __webpack_require__,
-              __webpack_require__ + _.length,
-              _,
-              _,
-            ));
+            (this.children = _(this.children, _, _ + _.length, _, _));
         }
         update(_, _, _, _) {
           return (
@@ -10459,15 +10339,9 @@
       }
       const _ = _ || (_ && _ < 63);
       function _(_, _) {
-        let { node: __webpack_require__, offset: _ } = _.docView.domFromPos(
-            _,
-            0,
-          ),
-          _ =
-            _ < __webpack_require__.childNodes.length
-              ? __webpack_require__.childNodes[_]
-              : null,
-          _ = _ ? __webpack_require__.childNodes[_ - 1] : null;
+        let { node: _, offset: _ } = _.docView.domFromPos(_, 0),
+          _ = _ < _.childNodes.length ? _.childNodes[_] : null,
+          _ = _ ? _.childNodes[_ - 1] : null;
         if (_ && _ && "false" == _.contentEditable) return _(_);
         if (
           !(
@@ -10536,7 +10410,7 @@
         }
       }
       function _(_, _) {
-        let { $anchor: __webpack_require__, $head: _ } = _.selection,
+        let { $anchor: _, $head: _ } = _.selection,
           _ = _ > 0 ? __webpack_require__.max(_) : __webpack_require__.min(_),
           _ = _.parent.inlineContent
             ? _.depth
@@ -10750,31 +10624,17 @@
       }
       function _(_, _) {
         if (!(_.state.selection instanceof _._)) return !0;
-        let {
-          $head: __webpack_require__,
-          $anchor: _,
-          empty: _,
-        } = _.state.selection;
+        let { $head: _, $anchor: _, empty: _ } = _.state.selection;
         if (!__webpack_require__.sameParent(_)) return !0;
         if (!_) return !1;
         if (_.endOfTextblock(_ > 0 ? "forward" : "backward")) return !0;
-        let _ =
-          !__webpack_require__.textOffset &&
-          (_ < 0
-            ? __webpack_require__.nodeBefore
-            : __webpack_require__.nodeAfter);
+        let _ = !_.textOffset && (_ < 0 ? _.nodeBefore : _.nodeAfter);
         if (_ && !_.isText) {
           let _ = _.state._;
           return (
             _ < 0
-              ? _.delete(
-                  __webpack_require__.pos - _.nodeSize,
-                  __webpack_require__.pos,
-                )
-              : _.delete(
-                  __webpack_require__.pos,
-                  __webpack_require__.pos + _.nodeSize,
-                ),
+              ? _.delete(_.pos - _.nodeSize, _.pos)
+              : _.delete(_.pos, _.pos + _.nodeSize),
             _.dispatch(_),
             !0
           );
@@ -11072,8 +10932,8 @@
       }
       const _ =
         /^(a|abbr|acronym|b|cite|code|del|em|i|ins|kbd|label|output|q|ruby|s|samp|span|strong|sub|sup|time|u|tt|var)$/i;
-      function _(_, _, __webpack_require__ = 0) {
-        for (let _ = _.length - 1; _ >= __webpack_require__; _--)
+      function _(_, _, _ = 0) {
+        for (let _ = _.length - 1; _ >= _; _--)
           _ = _[_].create(null, _._.from(_));
         return _;
       }
@@ -11881,15 +11741,10 @@
                 _.someProp("handleKeyDown", (_) => _(_, _(8, "Backspace"))))
               )
                 return;
-              let { $cursor: __webpack_require__ } = _.state.selection;
-              __webpack_require__ &&
-                __webpack_require__.pos > 0 &&
-                _.dispatch(
-                  _.state._.delete(
-                    __webpack_require__.pos - 1,
-                    __webpack_require__.pos,
-                  ).scrollIntoView(),
-                );
+              let { $cursor: _ } = _.state.selection;
+              _ &&
+                _.pos > 0 &&
+                _.dispatch(_.state._.delete(_.pos - 1, _.pos).scrollIntoView());
             }, 50);
           }
         });
@@ -13444,8 +13299,8 @@
           let _ = this.docView.descAt(_);
           return _ ? _.nodeDOM : null;
         }
-        posAtDOM(_, _, __webpack_require__ = -1) {
-          let _ = this.docView.posFromDOM(_, _, __webpack_require__);
+        posAtDOM(_, _, _ = -1) {
+          let _ = this.docView.posFromDOM(_, _, _);
           if (null == _)
             throw new RangeError("DOM position not inside the editor");
           return _;
@@ -14184,7 +14039,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       class _ {
-        constructor(_, _, __webpack_require__ = {}) {
+        constructor(_, _, _ = {}) {
           var _;
           (this.match = _),
             (this.match = _),
@@ -14202,8 +14057,8 @@
                     return _._.insertText(_, _, _);
                   })
                 : _),
-            (this.undoable = !1 !== __webpack_require__.undoable),
-            (this.inCode = __webpack_require__.inCode || !1);
+            (this.undoable = !1 !== _.undoable),
+            (this.inCode = _.inCode || !1);
         }
       }
       const _ = 500;
@@ -14296,12 +14151,9 @@
         new _(/"$/, "”"),
         new _(/(?:^|[\s\{\[\(\<'"\u2018\u201C])(')$/, "‘"),
         new _(/'$/, "’");
-      function _(_, _, __webpack_require__ = null, _) {
+      function _(_, _, _ = null, _) {
         return new _(_, (_, _, _, _) => {
-          let _ =
-              __webpack_require__ instanceof Function
-                ? __webpack_require__(_)
-                : __webpack_require__,
+          let _ = _ instanceof Function ? __webpack_require__(_) : _,
             _ = _._.delete(_, _),
             _ = _.doc.resolve(_).blockRange(),
             _ = _ && (0, _._)(_, _, _);
@@ -14318,13 +14170,10 @@
           );
         });
       }
-      function _(_, _, __webpack_require__ = null) {
+      function _(_, _, _ = null) {
         return new _(_, (_, _, _, _) => {
           let _ = _.doc.resolve(_),
-            _ =
-              __webpack_require__ instanceof Function
-                ? __webpack_require__(_)
-                : __webpack_require__;
+            _ = _ instanceof Function ? __webpack_require__(_) : _;
           return _.node(-1).canReplaceWith(_.index(-1), _.indexAfter(-1), _)
             ? _._.delete(_, _).setBlockType(_, _, _, _)
             : null;

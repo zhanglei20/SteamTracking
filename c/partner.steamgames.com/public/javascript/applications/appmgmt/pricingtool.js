@@ -1331,7 +1331,7 @@
       function _(_) {
         const {
             bCompactMode: _,
-            setCompactMode: __webpack_require__,
+            setCompactMode: _,
             rgGridData: _,
             strPackageFilter: _,
             setPackageFilter: _,
@@ -1399,7 +1399,7 @@
               className: (0, _._)(_().OptionCtn, _().CompactOption),
               children: (0, _.jsx)(_._, {
                 checked: _,
-                onChange: __webpack_require__,
+                onChange: _,
                 label: (0, _._)(
                   "#PricingDashboard_ShowCompactModeCheckBoxLabel",
                 ),
@@ -1529,14 +1529,14 @@
       }
       const _ = _.memo(function (_) {
         const { packageData: _ } = _,
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           _ = _.useRef(null),
           [_, _] = (0, _._)("filter", "released");
         "dev" == _._.WEB_UNIVERSE && (window.g_PricingGridTableRef = _);
         const [_, _] = (0, _._)("filter_below_min_price", !1),
           _ = new URLSearchParams(window.location.search),
           _ = _.has(_._) ? decodeURIComponent(_.get(_._)) : "",
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = (function (_, _, _) {
             const { rgSupportedPriceKeys: _ } = (0, _._)();
             return _.useMemo(() => {
@@ -1594,7 +1594,7 @@
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
-                bCompactMode: __webpack_require__,
+                bCompactMode: _,
                 setCompactMode: _,
                 rgGridData: _,
                 strPackageFilter: _,
@@ -1605,10 +1605,7 @@
               (0, _.jsx)("div", {
                 className: _().PricingGridWrapper,
                 children: (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().PricingGrid,
-                    __webpack_require__ && "CompactMode",
-                  ),
+                  className: (0, _._)(_().PricingGrid, _ && "CompactMode"),
                   children: (0, _.jsxs)(_._, {
                     children: [
                       (0, _.jsx)(_._, {
@@ -1869,11 +1866,7 @@
         return Number.isNaN(_) ? null : Math.round(100 * _);
       }
       function _(_) {
-        const {
-            closeModal: _,
-            strFilename: __webpack_require__,
-            parseResult: _,
-          } = _,
+        const { closeModal: _, strFilename: _, parseResult: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -2084,7 +2077,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           [_] = (0, _.useState)(() =>
             (function () {
               const _ = (0, _._)(

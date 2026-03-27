@@ -379,7 +379,7 @@
       }
       function _() {
         const [_, _] = (0, _.useState)(_.Get().GetClaimItemState()),
-          [__webpack_require__, _] = (0, _.useState)(!0);
+          [_, _] = (0, _.useState)(!0);
         return (
           (0, _.useEffect)(() => {
             _.Get()
@@ -390,7 +390,7 @@
           (0, _._)(_.Get().GetClaimStateChangeCallback(), _),
           {
             ..._,
-            bLoading: __webpack_require__,
+            bLoading: _,
           }
         );
       }
@@ -1338,7 +1338,7 @@
           const {
               placeholderWidth: _,
               placeholderHeight: _,
-              holdGampadFocus: __webpack_require__,
+              holdGampadFocus: _,
               onRender: _,
               style: _,
               mode: _,

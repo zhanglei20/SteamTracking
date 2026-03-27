@@ -393,7 +393,7 @@
       function _(_) {
         const {
             reservationPackageID: _,
-            event: __webpack_require__,
+            event: _,
             depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
@@ -453,7 +453,7 @@
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
-                      event: __webpack_require__,
+                      event: _,
                       reservationDef: _[0],
                       hardwareDetail: _,
                     }),
@@ -480,7 +480,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, color: __webpack_require__, bgcolor: _ } = _,
+        const { appid: _, color: _, bgcolor: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_),
           _ = (0, _._)(_);
@@ -495,7 +495,7 @@
               "WishlistButton",
             ),
             styleOverride: {
-              color: __webpack_require__,
+              color: _,
               backgroundColor: _,
             },
           }),
@@ -523,18 +523,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            appID: _,
-            classOverride: __webpack_require__,
-            styleOverride: _,
-          } = _,
+        const { appID: _, classOverride: _, styleOverride: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverFollowButton"),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           _ = (0, _._)(_),
           { mutateAsync: _ } = (0, _._)(_, !_, void 0);
         return (0, _.jsxs)(_._, {
-          className: (0, _._)(_().FollowButton, __webpack_require__),
+          className: (0, _._)(_().FollowButton, _),
           onClick: async (_) => {
             _.preventDefault(),
               _.stopPropagation(),
@@ -558,7 +554,7 @@
         });
       }
       function _(_) {
-        const { appid: _, color: __webpack_require__, bgcolor: _ } = _;
+        const { appid: _, color: _, bgcolor: _ } = _;
         (0, _._)();
         return (0, _.jsx)(_, {
           appID: _,
@@ -567,7 +563,7 @@
             _().BBCodeFollowButton,
           ),
           styleOverride: {
-            color: __webpack_require__,
+            color: _,
             backgroundColor: _,
           },
         });
@@ -676,18 +672,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { eventModel: _, nEventBadgeID: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { eventModel: _, nEventBadgeID: _ } = _,
+          _ = (0, _._)(_);
         if (_?.level > 0) {
           let _ = _.level;
           if (_?.BHasSaleEnabled()) {
             const _ = _.GetSaleSectionsByType("badge_progress");
             if (1 == _?.length) {
               const _ = _[0].badge_progress;
-              if (
-                _?.event_badgeid == __webpack_require__ &&
-                _?.granted_by_discovery_queue
-              ) {
+              if (_?.event_badgeid == _ && _?.granted_by_discovery_queue) {
                 const _ = _.levels[_.levels.length - 1].level;
                 return (0, _.jsx)(_, {
                   eventModel: _,
@@ -705,11 +698,7 @@
         return null;
       }
       function _(_) {
-        const {
-            eventModel: _,
-            nBadgeLevel: __webpack_require__,
-            nMaxLevel: _,
-          } = _,
+        const { eventModel: _, nBadgeLevel: _, nMaxLevel: _ } = _,
           _ = _.useMemo(() => {
             const _ = _.GetSaleSections().filter(
               (_) => "discoveryqueue" == _.section_type,
@@ -721,7 +710,7 @@
             [_, _],
           ),
           _ = (0, _._)(_, _),
-          _ = Math.min(__webpack_require__ + _, _);
+          _ = Math.min(_ + _, _);
         return (0, _.jsx)("span", {
           className: "DisplayBadgeProgress",
           children: (0, _._)(_),
@@ -738,7 +727,7 @@
           : null;
       }
       function _(_) {
-        const { nDoorIndex: _, children: __webpack_require__ } = _,
+        const { nDoorIndex: _, children: _ } = _,
           _ = (0, _._)(_),
           { fnOpenDoor: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
@@ -769,7 +758,7 @@
                       size: "small",
                     }),
                   Boolean(_) && (0, _.jsx)(_.Jlk, {}),
-                  __webpack_require__,
+                  _,
                 ],
               }),
         });
@@ -786,9 +775,9 @@
       const _ = (0, _._)(_._);
       function _(_) {
         const _ = Number.parseInt((0, _._)(_.args)),
-          { event: __webpack_require__, showErrorInfo: _ } = _.context;
+          { event: _, showErrorInfo: _ } = _.context;
         if (_) {
-          const _ = __webpack_require__?.jsondata?.sale_sections?.findIndex(
+          const _ = _?.jsondata?.sale_sections?.findIndex(
             (_) => _.unique_id == _,
           );
           if (_ >= 0) {
@@ -796,8 +785,8 @@
             return (0, _.jsx)(_._, {
               location: _ ? 2 : 0,
               children: (0, _.jsx)(_, {
-                event: __webpack_require__,
-                section: __webpack_require__.jsondata.sale_sections[_],
+                event: _,
+                section: _.jsondata.sale_sections[_],
                 activeTab: new _._(null, _),
                 language: _.language,
                 nSaleDayIndex: _,
@@ -822,7 +811,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanAccountID: _, color: __webpack_require__, bgcolor: _ } = _;
+        const { clanAccountID: _, color: _, bgcolor: _ } = _;
         (0, _._)();
         const [_, _] = _.useState(!1);
         return (0, _.jsx)("div", {
@@ -833,7 +822,7 @@
             nCreatorAccountID: _,
             classOverride: _().FollowGameButtonNotTop,
             styleOverride: {
-              color: __webpack_require__,
+              color: _,
               backgroundColor: _,
             },
             followType: "group",
@@ -939,11 +928,11 @@
           : null;
       }
       function _(_) {
-        const { nDoorIndex: _, bHide: __webpack_require__, children: _ } = _,
+        const { nDoorIndex: _, bHide: _, children: _ } = _,
           _ = (0, _._)(_);
         return null == _
           ? null
-          : (_ && !__webpack_require__) || (!_ && __webpack_require__)
+          : (_ && !_) || (!_ && _)
             ? (0, _.jsx)(_.Fragment, {
                 children: _.children,
               })
@@ -989,7 +978,7 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { event: _, showErrorInfo: __webpack_require__ } = _.context,
+        const { event: _, showErrorInfo: _ } = _.context,
           _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
@@ -1012,7 +1001,7 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const { bSalePage: _ } = _,
-          [__webpack_require__, _] = _.useState(_._.IsInitialized());
+          [_, _] = _.useState(_._.IsInitialized());
         return (
           _.useEffect(() => {
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),
@@ -1151,7 +1140,7 @@
             const _ = (0, _._)();
             _ && _.locale(_);
           }, []),
-          __webpack_require__ ? _.children : null
+          _ ? _.children : null
         );
       }
     },

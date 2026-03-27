@@ -292,7 +292,7 @@
           const {
               children: _,
               logoPosition: _,
-              editMode: __webpack_require__,
+              editMode: _,
               ..._
             } = this.props,
             _ = this.GetLogoPosition();
@@ -417,7 +417,7 @@
           const {
               rgLogoImages: _,
               editMode: _,
-              logoPosition: __webpack_require__,
+              logoPosition: _,
               className: _,
               classNameNoLogo: _,
               fnOnPositionChanged: _,
@@ -457,13 +457,13 @@
                     onLoad: this.OnLoaded,
                   }),
                   _ &&
-                    null !== __webpack_require__ &&
+                    null !== _ &&
                     (0, _.jsx)(
                       _,
                       {
                         strLogoImageURL: _[0],
                         editMode: _,
-                        logoPosition: __webpack_require__ || _,
+                        logoPosition: _ || _,
                         fnOnPositionChanged: _ && _,
                         fullscreen: this.props.bFullscreen,
                         children: (0, _.jsx)(_._, {
@@ -661,7 +661,7 @@
       function _(_) {
         const {
             logoPosition: _,
-            strLogoImageURL: __webpack_require__,
+            strLogoImageURL: _,
             children: _,
             fnOnPositionChanged: _,
             fullscreen: _,
@@ -705,7 +705,7 @@
                 }),
               _.editMode &&
                 (0, _.jsx)(_, {
-                  _: __webpack_require__,
+                  _: _,
                   pinType: _.pinnedPosition,
                   index: 0,
                   widthPct: _.nWidthPct,
@@ -784,19 +784,14 @@
             this.UpdateBoxPosition());
         }
         static getDerivedStateFromProps(_, _) {
-          const {
-            pinType: __webpack_require__,
-            widthPct: _,
-            heightPct: _,
-            _: _,
-          } = _;
+          const { pinType: _, widthPct: _, heightPct: _, _: _ } = _;
           if (_ && _._ == _) return null;
           const {
             nBottomPct: _,
             nTopPct: _,
             nLeftPct: _,
             nRightPct: _,
-          } = _(__webpack_require__, _, _);
+          } = _(_, _, _);
           return {
             _: _,
             curBottomPosPct: _,
@@ -806,7 +801,7 @@
             curWidthPct: _,
             curHeightPct: _,
             EdgeDown: null,
-            pinType: __webpack_require__,
+            pinType: _,
           };
         }
         LinkRegionBoxRef(_) {
@@ -851,7 +846,7 @@
           const {
             nBottomPct: _,
             nTopPct: _,
-            nLeftPct: __webpack_require__,
+            nLeftPct: _,
             nRightPct: _,
           } = _(
             this.m_pinType,
@@ -861,7 +856,7 @@
           this.setState({
             curBottomPosPct: _,
             curTopPosPct: _,
-            curLeftPosPct: __webpack_require__,
+            curLeftPosPct: _,
             curRightPosPct: _,
           });
         }
@@ -869,7 +864,7 @@
           if (void 0 === this.state.EdgeDown) return;
           _.shiftKey && this.m_fnMouseUp();
           let {
-            curTopPosPct: __webpack_require__,
+            curTopPosPct: _,
             curRightPosPct: _,
             curBottomPosPct: _,
             curLeftPosPct: _,
@@ -943,18 +938,18 @@
                 return 0;
               if ("CenterCenter" == this.props.pinType) {
                 let _ = Math.min(Math.max(_, 0), 45);
-                return (__webpack_require__ = _), _;
+                return (_ = _), _;
               }
               return _;
             };
           function _() {
-            _ = Math.min(_, 98 - __webpack_require__);
+            _ = Math.min(_, 98 - _);
           }
           function _() {
             _ = Math.min(_, 99 - _);
           }
           function _() {
-            __webpack_require__ = Math.min(__webpack_require__, 98 - _);
+            _ = Math.min(_, 98 - _);
           }
           function _() {
             _ = Math.min(_, 99 - _);
@@ -967,22 +962,16 @@
               (_ = _(_.clientX)), _();
               break;
             case _.top:
-              (__webpack_require__ = _(_.clientY)), _();
+              (_ = _(_.clientY)), _();
               break;
             case _.bottom:
               (_ = _(_.clientY)), _();
               break;
             case _.topleft:
-              (__webpack_require__ = _(_.clientY)),
-                (_ = _(_.clientX)),
-                _(),
-                _();
+              (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
               break;
             case _.topright:
-              (__webpack_require__ = _(_.clientY)),
-                (_ = _(_.clientX)),
-                _(),
-                _();
+              (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
               break;
             case _.bottomleft:
               (_ = _(_.clientY)), (_ = _(_.clientX)), _(), _();
@@ -993,8 +982,7 @@
             case _.middle:
               (_ = _(_.clientX)),
                 (_ = _(_.clientY)),
-                "CenterCenter" != this.state.pinType &&
-                  (__webpack_require__ = _(_.clientY)),
+                "CenterCenter" != this.state.pinType && (_ = _(_.clientY)),
                 "CenterCenter" != this.state.pinType &&
                   "BottomCenter" != this.state.pinType &&
                   "UpperCenter" != this.state.pinType &&
@@ -1004,12 +992,12 @@
                 _(),
                 _();
           }
-          (__webpack_require__ = (0, _._)(__webpack_require__, 0, 98)),
+          (_ = (0, _._)(_, 0, 98)),
             (_ = (0, _._)(_, 0, 98)),
             (_ = (0, _._)(_, 0, 99)),
             (_ = (0, _._)(_, 0, 99)),
             this.setState({
-              curTopPosPct: __webpack_require__,
+              curTopPosPct: _,
               curRightPosPct: _,
               curBottomPosPct: _,
               curLeftPosPct: _,
@@ -1139,12 +1127,12 @@
         (0, _._)([_._], _.prototype, "OnMouseUp", null),
         (0, _._)([_._], _.prototype, "OnResizeComplete", null);
       const _ = (_) => {
-        const { title: _, className: __webpack_require__ } = _;
+        const { title: _, className: _ } = _;
         let _ = 26;
         _.length > 8 && (_ = Math.max(_ - (_.length - 5) / 2, 5.8));
         const [_, _] = (0, _._)();
         return (0, _.jsxs)("svg", {
-          className: (0, _._)(_().SVGTitle, __webpack_require__),
+          className: (0, _._)(_().SVGTitle, _),
           viewBox: "0 0 300 14",
           children: [
             (0, _.jsx)("defs", {
@@ -1196,7 +1184,7 @@
         });
       };
       function _(_) {
-        const { title: _, children: __webpack_require__ } = _,
+        const { title: _, children: _ } = _,
           _ = _.useContext(_),
           _ = _.useRef(null);
         return (0, _.jsx)(_._, {
@@ -1219,7 +1207,7 @@
               }),
               (0, _.jsx)("div", {
                 className: _().Features,
-                children: __webpack_require__,
+                children: _,
               }),
             ],
           }),
@@ -1707,11 +1695,8 @@
             });
         }
         OnPositionChanged(_) {
-          const {
-            LogoEditorStore: _,
-            fnOnPositionChanged: __webpack_require__,
-          } = this.props;
-          _.SetLogoPosition(_), __webpack_require__ && __webpack_require__(_);
+          const { LogoEditorStore: _, fnOnPositionChanged: _ } = this.props;
+          _.SetLogoPosition(_), _ && __webpack_require__(_);
         }
         render() {
           const { LogoEditorStore: _ } = this.props;
@@ -1866,11 +1851,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = _.useRef(null);
         return (0, _.jsx)(_._, {
           nodeRef: _,
-          ...__webpack_require__,
+          ..._,
           children: _.children(_),
         });
       }
@@ -1885,7 +1870,7 @@
       function _(_) {
         const {
             rgSources: _,
-            onIncrementalError: __webpack_require__,
+            onIncrementalError: _,
             onError: _,
             strAltText: _,
             ref: _,
@@ -1928,7 +1913,7 @@
               const _ = _ + 1;
               _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           );
         return (0, _.jsx)(
           "img",

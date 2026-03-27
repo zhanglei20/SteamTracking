@@ -1465,8 +1465,8 @@
           (_.k_eCommunityPreview = "preview");
       })(_ || (_ = {}));
       const _ = (_) => {
-        const { route: _, faqid: __webpack_require__ } = _,
-          _ = _(_, __webpack_require__);
+        const { route: _, faqid: _ } = _,
+          _ = _(_, _);
         return _.bForceRedirect
           ? (0, _.jsx)(_._, {
               push: !0,
@@ -1529,13 +1529,13 @@
       const _ = "title",
         _ = "content";
       const _ = (_) => {
-          const { draft: _, eLanguage: __webpack_require__ } = _;
+          const { draft: _, eLanguage: _ } = _;
           return (0, _.jsxs)("div", {
             className: _.FlexRowContainer,
             children: [
               (0, _.jsx)(_, {
                 draft: _,
-                eLanguage: __webpack_require__,
+                eLanguage: _,
               }),
               (0, _.jsx)(_._, {
                 strToolTip: (0, _._)("#FAQEditor_Loc_Import_ttip"),
@@ -1608,23 +1608,23 @@
           });
         },
         _ = (_) => {
-          const { closeModal: _, direction: __webpack_require__, draft: _ } = _,
+          const { closeModal: _, direction: _, draft: _ } = _,
             [_, _] = _.useState(!1),
             [_, _] = _.useState(new Array()),
             _ =
               (_ || _.length,
               (0, _._)(
-                "import" == __webpack_require__
+                "import" == _
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
                   : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
               )),
             _ = (0, _._)(
-              "import" == __webpack_require__
+              "import" == _
                 ? "#EventEditor_Loc_Import_Crowdin_Confirm"
                 : "#EventEditor_Loc_Export_Crowdin_Confirm",
             ),
             _ =
-              "import" == __webpack_require__
+              "import" == _
                 ? (0, _.jsx)(_, {
                     draft: _,
                     rgAllLanguages: _,
@@ -1640,7 +1640,7 @@
             onOK: async () => {
               _(!0);
               try {
-                "import" == __webpack_require__
+                "import" == _
                   ? await _._.Get().ImportNonEnglishDraftsFromCrowdin(
                       _.GetFAQID(),
                       _,
@@ -1660,7 +1660,7 @@
           });
         },
         _ = (_) => {
-          const { draft: _, eLanguage: __webpack_require__ } = _;
+          const { draft: _, eLanguage: _ } = _;
           return (0, _.jsx)(_._, {
             toolTipContent: (0, _._)("#FAQEditor_Loc_Export_ttip"),
             children: (0, _.jsx)("div", {
@@ -1694,11 +1694,11 @@
                                   : "",
                               ));
                           return _;
-                        })(_, __webpack_require__),
+                        })(_, _),
                       bShowXML: !0,
                       bShowCSV: !0,
                       strFileNamePrefix: "faq",
-                      lang: __webpack_require__,
+                      lang: _,
                     }),
                   }),
                   (0, _._)(_),
@@ -1719,7 +1719,7 @@
         _ = (_) => {
           const {
               draft: _,
-              rgAllLanguages: __webpack_require__,
+              rgAllLanguages: _,
               rgLanguagesSelected: _,
               fnSelectLanguages: _,
             } = _,
@@ -1783,12 +1783,7 @@
         },
         _ = (_) => {
           var _;
-          const {
-              draft: __webpack_require__,
-              eLang: _,
-              bInitialState: _,
-              fnOnChecked: _,
-            } = _,
+          const { draft: _, eLang: _, bInitialState: _, fnOnChecked: _ } = _,
             _ = __webpack_require__.GetLastSavedDraftVersion(_),
             _ = _
               ? _._.InitFromAccountID(Number.parseInt(_.author_account_id))
@@ -1829,7 +1824,7 @@
           });
         };
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)(),
+        const [_, _] = (0, _._)(),
           [_, _] = _.useState(0),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
@@ -1944,7 +1939,7 @@
         });
       }
       function _(_) {
-        const { nProgressPct: _, strCurrentLabel: __webpack_require__ } = _;
+        const { nProgressPct: _, strCurrentLabel: _ } = _;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("div", {
@@ -1958,17 +1953,14 @@
             }),
             (0, _.jsx)("div", {
               className: _.CurrentFAQ,
-              children: (0, _._)(
-                "#FAQDashboard_CrowdinToolProgress",
-                __webpack_require__,
-              ),
+              children: (0, _._)("#FAQDashboard_CrowdinToolProgress", _),
             }),
           ],
         });
       }
       function _(_) {
         const { rgUpdatedLanguagesForAllFAQs: _ } = _,
-          [__webpack_require__, _] = (0, _._)();
+          [_, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           className: _.ImportResults,
           children: [
@@ -1977,7 +1969,7 @@
               children: (0, _._)("#FAQDashboard_CrowdinToolResultsLabel"),
             }),
             _.map((_, _) => {
-              const _ = __webpack_require__[_];
+              const _ = _[_];
               if (0 == _.length) return null;
               const _ = _.map((_) => (0, _._)(_)).join(",");
               return (0, _.jsx)(
@@ -2016,7 +2008,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
-          const { rtTimestamp: _, bShowAsWarning: __webpack_require__ } = _;
+          const { rtTimestamp: _, bShowAsWarning: _ } = _;
           if (!_)
             return (0, _.jsx)("div", {
               className: _().Never,
@@ -2025,14 +2017,14 @@
           const _ = Date.now() / 1e3 - _,
             _ = _ < 86400 ? (0, _._)(_, !1, !0) : (0, _._)(_);
           return (0, _.jsx)(_._, {
-            className: __webpack_require__ && _().Warning,
+            className: _ && _().Warning,
             rtFullDate: _,
             stylesmodule: _(),
             children: _,
           });
         },
         _ = (0, _._)((_) => {
-          const [_, __webpack_require__] = (0, _._)(),
+          const [_, _] = (0, _._)(),
             [_, _] = _.useState(1),
             _ = _.map((_) => {
               const _ = _.per_language_info.find((_) => 0 == _.language),
@@ -2097,7 +2089,7 @@
                       _[0],
                     ),
                   ),
-                  !__webpack_require__ &&
+                  !_ &&
                     (0, _.jsx)(_._, {
                       position: "center",
                       size: "xlarge",
@@ -2152,7 +2144,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState("");
+          const [_, _] = _.useState("");
           return (0, _.jsxs)(_._, {
             onOK: () => {
               _._.Get().CreateFAQ(_);
@@ -2234,7 +2226,7 @@
         _ = (_) => {
           const {
               strLabelLocToken: _,
-              bIsNameColumn: __webpack_require__,
+              bIsNameColumn: _,
               eThisColumn: _,
               eCurrentSortColumn: _,
               SetSortColumn: _,
@@ -2242,7 +2234,7 @@
             _ = (0, _._)(
               _().EntryColumn,
               _().ClickableHeader,
-              __webpack_require__ ? _().NameCol : _().DataCol,
+              _ ? _().NameCol : _().DataCol,
               _ == _ && _().Selected,
             );
           return (0, _.jsxs)(_._, {
@@ -2260,10 +2252,10 @@
           });
         },
         _ = (_) => {
-          const { nCount: _, nTotal: __webpack_require__, nGoal: _ } = _;
+          const { nCount: _, nTotal: _, nGoal: _ } = _;
           return (0, _.jsx)("div", {
             className: _ == _ ? _().GoodCount : _().BadCount,
-            children: _ + " / " + __webpack_require__,
+            children: _ + " / " + _,
           });
         },
         _ = (_) => {
@@ -2276,7 +2268,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__, _, _, _, _, _, _, _] = _.rgColumns,
+          const [_, _, _, _, _, _, _, _, _] = _.rgColumns,
             _ = _ + _,
             _ = _ + _;
           return (0, _.jsxs)(_, {
@@ -2288,7 +2280,7 @@
                 className: (0, _._)(_().EntryColumn, _().NameCol),
                 children: (0, _.jsx)("div", {
                   className: _().EntryInternalName,
-                  children: __webpack_require__,
+                  children: _,
                 }),
               }),
               (0, _.jsx)("div", {
@@ -2497,19 +2489,16 @@
           );
         },
         _ = (0, _._)((_) => {
-          const { draft: _, bDisabled: __webpack_require__ } = _,
+          const { draft: _, bDisabled: _ } = _,
             _ = _.BNeedsSaving();
           return (0, _.jsx)(_._, {
             toolTipContent: (0, _._)(
               _ ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
             ),
             children: (0, _.jsx)("div", {
-              className: (0, _._)(
-                _.EditPreviewButton,
-                __webpack_require__ && _.Disabled,
-              ),
+              className: (0, _._)(_.EditPreviewButton, _ && _.Disabled),
               onClick: (_) => {
-                __webpack_require__ ||
+                _ ||
                   (0, _._)(
                     _
                       ? (0, _.jsx)(_._, {
@@ -2529,7 +2518,7 @@
         }),
         _ = (_) => {
           var _;
-          const { draft: __webpack_require__ } = _,
+          const { draft: _ } = _,
             _ = () => _.closeModal && _.closeModal(),
             [_, _] = _.useState(!1),
             [_, _] = _.useState(void 0),
@@ -2574,7 +2563,7 @@
                   }),
                   (0, _.jsx)("br", {}),
                   (0, _.jsx)(_, {
-                    draft: __webpack_require__,
+                    draft: _,
                     rgAllLanguages: _,
                     rgLanguagesSelected: _,
                     fnSelectLanguages: _,
@@ -3001,10 +2990,8 @@
           );
         }),
         _ = (0, _._)((_) => {
-          const { info: _, rtEnglishUpdateTime: __webpack_require__ } = _,
-            _ =
-              !!__webpack_require__ &&
-              __webpack_require__ > _.last_update_timestamp,
+          const { info: _, rtEnglishUpdateTime: _ } = _,
+            _ = !!_ && _ > _.last_update_timestamp,
             _ = _.last_update_timestamp > _.last_publish_timestamp;
           return (0, _.jsxs)("tr", {
             children: [
@@ -3057,7 +3044,7 @@
           });
         }),
         _ = (_) => {
-          const { draft: _, closeModal: __webpack_require__ } = _,
+          const { draft: _, closeModal: _ } = _,
             [_, _] = _.useState(!0),
             [_, _] = _.useState(void 0);
           _.useEffect(() => {
@@ -3081,8 +3068,8 @@
           return (0, _.jsxs)(_._, {
             "aria-labelledby": _,
             bAllowFullSize: !0,
-            onCancel: __webpack_require__,
-            closeModal: __webpack_require__,
+            onCancel: _,
+            closeModal: _,
             children: [
               (0, _.jsx)(_._, {
                 _: _,
@@ -3125,7 +3112,7 @@
                 children:
                   !_ &&
                   (0, _.jsx)(_._, {
-                    onClick: __webpack_require__,
+                    onClick: _,
                     children: (0, _._)("#Button_OK"),
                   }),
               }),
@@ -3135,27 +3122,23 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)((_) => {
-          const { draft: _, bPreview: __webpack_require__ } = _,
+          const { draft: _, bPreview: _ } = _,
             _ = _.BHasPublished();
           return (0, _.jsx)(_._, {
             children: (0, _.jsxs)("div", {
               className: (0, _._)({
                 [_.EventEditorTopBarContainer]: !0,
-                [_.EventUnPublished]: !__webpack_require__ && !_,
-                [_.EventPublished]: !__webpack_require__ && _,
-                [_().FAQPreview]: __webpack_require__,
+                [_.EventUnPublished]: !_ && !_,
+                [_.EventPublished]: !_ && _,
+                [_().FAQPreview]: _,
               }),
               children: [
                 (0, _.jsx)(_, {
-                  route: __webpack_require__
-                    ? _.k_eCommunityEdit
-                    : _.k_eCommunityDashboard,
+                  route: _ ? _.k_eCommunityEdit : _.k_eCommunityDashboard,
                   faqid: _.GetFAQID(),
                   className: _().EditPreviewButton,
                   children: (0, _._)(
-                    __webpack_require__
-                      ? "#FAQEditor_EditFAQ"
-                      : "#EventDisplay_EventsDashBtn",
+                    _ ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
                   ),
                 }),
                 (0, _.jsxs)("div", {
@@ -3163,7 +3146,7 @@
                     (0, _.jsx)("div", {
                       className: _().EditorInternalNameLabel,
                       children: (0, _._)(
-                        __webpack_require__
+                        _
                           ? "#FAQEditor_InternalName_Preview"
                           : "#FAQEditor_InternalName",
                       ),
@@ -3197,7 +3180,7 @@
                       fnLastUpdateRTime: _.GetLastTimeLanguageUpdated,
                       realms: [_._.k_ESteamRealmGlobal, _._.k_ESteamRealmChina],
                     }),
-                    !__webpack_require__ &&
+                    !_ &&
                       (0, _.jsx)(_, {
                         route: _.k_eCommunityPreview,
                         faqid: _.GetFAQID(),
@@ -3211,7 +3194,7 @@
           });
         }),
         _ = (_) => {
-          const { closeModal: _, draft: __webpack_require__ } = _,
+          const { closeModal: _, draft: _ } = _,
             [_, _] = _.useState(__webpack_require__.GetFAQInternalName() || ""),
             [_, _] = _.useState(!1),
             [_, _] = _.useState(1),
@@ -3277,14 +3260,10 @@
           });
         },
         _ = (0, _._)((_) => {
-          const { draft: _, eLanguage: __webpack_require__ } = _,
+          const { draft: _, eLanguage: _ } = _,
             _ = _.GetFAQID(),
             [_, _] = (0, _._)(_),
-            _ =
-              _ &&
-              _.per_language_info.find(
-                (_) => _.language == __webpack_require__,
-              ),
+            _ = _ && _.per_language_info.find((_) => _.language == _),
             _ =
               _ &&
               ((_._.EREALM == _._.k_ESteamRealmGlobal &&
@@ -3321,7 +3300,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
           const { faqid: _ } = _,
-            [__webpack_require__, _] = (0, _._)(_),
+            [_, _] = (0, _._)(_),
             _ = _.useRef(void 0);
           if (!_)
             return (0, _.jsx)(_._, {
@@ -3329,7 +3308,7 @@
               size: "xlarge",
               string: (0, _._)("#Loading"),
             });
-          if (!__webpack_require__)
+          if (!_)
             return (0, _.jsx)(_, {
               strError: (0, _._)("#FAQEditor_NoFAQFound"),
             });
@@ -3337,7 +3316,7 @@
           return (0, _.jsxs)("div", {
             children: [
               (0, _.jsx)(_, {
-                draft: __webpack_require__,
+                draft: _,
               }),
               (0, _.jsxs)("div", {
                 className: _().FAQEditPage,
@@ -3345,7 +3324,7 @@
                   (0, _.jsx)("div", {
                     className: _().FAQMenuCtn,
                     children: (0, _.jsx)(_, {
-                      draft: __webpack_require__,
+                      draft: _,
                       eLanguage: _,
                     }),
                   }),
@@ -3360,18 +3339,18 @@
                             className: (0, _._)(_().LeftCol, _().LeftCol),
                             children: [
                               (0, _.jsx)(_, {
-                                draft: __webpack_require__,
+                                draft: _,
                                 eLanguage: _,
                               }),
                               (0, _.jsx)(_, {
                                 bbcodeEditorRef: _,
-                                draft: __webpack_require__,
+                                draft: _,
                                 eLanguage: _,
                               }),
                             ],
                           }),
                           (0, _.jsx)(_, {
-                            draft: __webpack_require__,
+                            draft: _,
                             bbcodeEditorRef: _,
                             className: (0, _._)(_().RightCol, _().RightCol),
                           }),
@@ -3382,7 +3361,7 @@
                 ],
               }),
               (0, _.jsx)(_, {
-                draft: __webpack_require__,
+                draft: _,
                 eLanguage: _,
               }),
             ],
@@ -3391,7 +3370,7 @@
         _ = (_) => {
           const _ = (0, _.useMemo)(() => new _._(_._.CLANSTEAMID), []);
           if (!Boolean(_._.CAN_UPLOAD_IMAGES)) return null;
-          const { draft: __webpack_require__, bbcodeEditorRef: _ } = _;
+          const { draft: _, bbcodeEditorRef: _ } = _;
           return (0, _.jsx)(_._, {
             children: (0, _.jsxs)("div", {
               className: _.className,
@@ -3407,7 +3386,7 @@
                     _.current && (0, _._)(null == _ ? void 0 : _.current, _, _),
                   fnSetImageURL: () => {},
                   rgRealmList: __webpack_require__.GetIncludedRealmList(),
-                  fnLangHasData: __webpack_require__.BHasSomeTextForLanguage,
+                  fnLangHasData: _.BHasSomeTextForLanguage,
                   fnGetImageHash: (_, _) => {
                     if (_._.includes(_)) {
                       const _ = _._.GetAllLocalizedGroupImages();
@@ -3422,7 +3401,7 @@
           });
         },
         _ = (0, _._)((_) => {
-          const { draft: _, eLanguage: __webpack_require__ } = _;
+          const { draft: _, eLanguage: _ } = _;
           return (0, _.jsxs)("div", {
             className: _().EditorTitleField,
             children: [
@@ -3433,22 +3412,17 @@
               (0, _.jsx)("input", {
                 type: "text",
                 className: _().EditorTitleFieldInput,
-                value: _.GetDraftTitle(__webpack_require__) || "",
+                value: _.GetDraftTitle(_) || "",
                 placeholder: (0, _._)("#FAQEditor_TitlePlaceHolder"),
                 onFocus: (_) => _.target.select(),
-                onChange: (_) =>
-                  _.SetDraftTitle(__webpack_require__, _.currentTarget.value),
+                onChange: (_) => _.SetDraftTitle(_, _.currentTarget.value),
                 maxLength: 120,
               }),
             ],
           });
         }),
         _ = (0, _._)((_) => {
-          const {
-            draft: _,
-            eLanguage: __webpack_require__,
-            bbcodeEditorRef: _,
-          } = _;
+          const { draft: _, eLanguage: _, bbcodeEditorRef: _ } = _;
           return (0, _.jsxs)("div", {
             className: _().EditorPane,
             children: [
@@ -3458,11 +3432,10 @@
               }),
               (0, _.jsx)(_._, {
                 ref: _,
-                fnGetCurText: () =>
-                  _.GetDraftContent(__webpack_require__) || "",
+                fnGetCurText: () => _.GetDraftContent(_) || "",
                 fnOnTextChange: (_) =>
-                  _.SetDraftContent(__webpack_require__, _.currentTarget.value),
-                fnSetText: (_) => _.SetDraftContent(__webpack_require__, _),
+                  _.SetDraftContent(_, _.currentTarget.value),
+                fnSetText: (_) => _.SetDraftContent(_, _),
                 strPlaceholder: (0, _._)("#FAQEditor_ContentPlaceHolder"),
                 bSupportHTMLImport: !0,
                 showFormatHelp: "PartnerEvents",
@@ -3492,7 +3465,7 @@
       const _ = (_) => {
           const {
               title: _,
-              content: __webpack_require__,
+              content: _,
               bIsPreview: _,
               elSideBars: _,
               version: _,
@@ -3550,7 +3523,7 @@
                             (0, _.jsx)("div", {
                               className: _.FAQContent,
                               children: (0, _.jsx)(_._, {
-                                text: __webpack_require__,
+                                text: _,
                                 bShowErrorInfo: _,
                                 version: _ || "0",
                               }),
@@ -3582,11 +3555,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const { faqContent: _ } = _,
-            [__webpack_require__, _] = (0, _._)(
-              _.faq_id,
-              _.version,
-              _.language,
-            );
+            [_, _] = (0, _._)(_.faq_id, _.version, _.language);
           return _._.Get().BHasFAQEdit()
             ? (0, _.jsxs)("div", {
                 className: (0, _._)(_.Section, _.ValveOnlyBackground),
@@ -3599,15 +3568,9 @@
                     className: _.InfoRow,
                     children: (0, _._)(
                       "#FAQViewer_Admin_LastUpdate",
-                      (
-                        null == __webpack_require__
-                          ? void 0
-                          : __webpack_require__.author_account_id
-                      )
+                      (null == _ ? void 0 : _.author_account_id)
                         ? (0, _.jsx)(_._, {
-                            accountID: Number.parseInt(
-                              __webpack_require__.author_account_id,
-                            ),
+                            accountID: Number.parseInt(_.author_account_id),
                           })
                         : (0, _._)("#FAQViewer_UnknownUser"),
                       (0, _.jsx)("span", {
@@ -3635,9 +3598,9 @@
         },
         _ = (_) => {
           const { faqContent: _ } = _,
-            [__webpack_require__, _] = (0, _._)(_.faq_id);
+            [_, _] = (0, _._)(_.faq_id);
           if (
-            !__webpack_require__ ||
+            !_ ||
             !_ ||
             __webpack_require__.GetLastTimeLanguageUpdated(_.language) <=
               _.timestamp
@@ -3746,25 +3709,25 @@
         _ = __webpack_require__._(_);
       const _ = (_) => {
           const { faqid: _ } = _,
-            [__webpack_require__, _] = (0, _._)(_, (0, _._)(_._.LANGUAGE));
+            [_, _] = (0, _._)(_, (0, _._)(_._.LANGUAGE));
           return _
-            ? __webpack_require__
+            ? _
               ? (0, _.jsx)(_, {
-                  title: __webpack_require__.title,
-                  content: __webpack_require__.content,
-                  version: __webpack_require__.version,
+                  title: _.title,
+                  content: _.content,
+                  version: _.version,
                   elSideBars: [
                     (0, _.jsx)(
                       _,
                       {
-                        faqContent: __webpack_require__,
+                        faqContent: _,
                       },
                       "sidebar",
                     ),
                     (0, _.jsx)(
                       _,
                       {
-                        faqContent: __webpack_require__,
+                        faqContent: _,
                       },
                       "adminbar",
                     ),
@@ -3808,14 +3771,14 @@
         },
         _ = (0, _._)((_) => {
           const { faqid: _ } = _,
-            [__webpack_require__, _] = (0, _._)(_),
+            [_, _] = (0, _._)(_),
             _ = _._.Get().GetCurEditLanguage();
           return _
-            ? __webpack_require__
+            ? _
               ? (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsx)(_, {
-                      draft: __webpack_require__,
+                      draft: _,
                       bPreview: !0,
                     }),
                     (0, _.jsx)(_, {
@@ -3831,7 +3794,7 @@
                         "" + __webpack_require__.GetLastTimeLanguageUpdated(_),
                     }),
                     (0, _.jsx)(_, {
-                      draft: __webpack_require__,
+                      draft: _,
                       eLanguage: _,
                     }),
                   ],
@@ -3859,7 +3822,7 @@
           PreviewFAQ: (_, _) => `/faqs/${_}/preview/${_}*`,
         },
         _ = (0, _._)((_) => {
-          const [_, __webpack_require__] = _.useState(!0);
+          const [_, _] = _.useState(!0);
           return (
             _.useEffect(() => {
               (async () => {

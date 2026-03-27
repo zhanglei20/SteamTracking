@@ -370,25 +370,17 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { text: _, children: __webpack_require__, className: _ } = _;
+        const { text: _, children: _, className: _ } = _;
         return (0, _.jsx)(_._, {
           "flow-children": "row",
           className: _()(_().LineItemDetailsRow, _ && _().Text, _),
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const {
-          placeholder: _,
-          className: __webpack_require__,
-          children: _,
-        } = _;
+        const { placeholder: _, className: _, children: _ } = _;
         return (0, _.jsx)(_._, {
-          className: _()(
-            _().LineItemWrapper,
-            _ && _().LineItemPlaceholder,
-            __webpack_require__,
-          ),
+          className: _()(_().LineItemWrapper, _ && _().LineItemPlaceholder, _),
           children: _,
         });
       }
@@ -670,10 +662,10 @@
         });
       }
       const _ = (_) => {
-        const { discountBlock: _, bIsSalePage: __webpack_require__ } = _;
+        const { discountBlock: _, bIsSalePage: _ } = _;
         if (!_) return null;
         const _ = _.hide_discount_percent_for_compliance;
-        return __webpack_require__
+        return _
           ? null == _.discount_max || _.discount_max <= 0
             ? null
             : null == _.discount_min || _.discount_min <= 0
@@ -807,7 +799,7 @@
       function _(_) {
         const {
             creatorID: _,
-            bShowTagline: __webpack_require__,
+            bShowTagline: _,
             bHideCreatorType: _,
             bSmallFormat: _,
             bHideFollowButton: _,
@@ -891,7 +883,7 @@
                                       className: _.CreatorNameName,
                                       children: _.GetName(),
                                     }),
-                                    Boolean(__webpack_require__) &&
+                                    Boolean(_) &&
                                       (0, _.jsx)("div", {
                                         className: (0, _._)(
                                           _.FlexColumnContainer,
@@ -959,7 +951,7 @@
         });
       }
       function _(_) {
-        const { appid: _, bSmallFormat: __webpack_require__ } = _,
+        const { appid: _, bSmallFormat: _ } = _,
           [_] = (0, _._)(_, {
             include_basic_info: !0,
           });
@@ -1002,7 +994,7 @@
           ? (0, _.jsx)(_._, {
               children: (0, _.jsx)(_, {
                 creatorID: _,
-                bSmallFormat: __webpack_require__,
+                bSmallFormat: _,
               }),
             })
           : null;
@@ -1138,8 +1130,8 @@
       }
       function _(_) {
         const [_] = (0, _._)(_.packageID, {}),
-          [__webpack_require__] = (0, _._)(_.compareID, {});
-        if (!_ || !__webpack_require__) return null;
+          [_] = (0, _._)(_.compareID, {});
+        if (!_ || !_) return null;
         const _ = (function (_, _) {
           if (
             !_?.GetBestPurchaseOption().final_price_in_cents ||
@@ -1158,7 +1150,7 @@
                   ))
             ).toFixed(0) + "%"
           );
-        })(_, __webpack_require__);
+        })(_, _);
         return void 0 === _
           ? null
           : (0, _.jsx)("span", {
@@ -1202,7 +1194,7 @@
       function _(_) {
         const {
           nLatestTime: _,
-          nEarliestTime: __webpack_require__,
+          nEarliestTime: _,
           fnGetTimeToUpdate: _,
           onError: _,
           strAlsoShowTimeZone: _,
@@ -1250,13 +1242,8 @@
           })(_, _, _, _, _),
           _ = !_ && _;
         let _, _;
-        if (
-          _ &&
-          __webpack_require__ &&
-          _ == __webpack_require__ &&
-          __webpack_require__ > _._.GetTimeNowWithOverride()
-        ) {
-          const _ = _().unix(__webpack_require__);
+        if (_ && _ && _ == _ && _ > _._.GetTimeNowWithOverride()) {
+          const _ = _().unix(_);
           (_ = {
             hours: {
               max: _.hour(),
@@ -1281,7 +1268,7 @@
           }),
             (_ = _);
         }
-        _ || !__webpack_require__ || _ || (_ = _().unix(__webpack_require__));
+        _ || !_ || _ || (_ = _().unix(_));
         const _ = _()._.guess(),
           _ = _().unix(_)._(_),
           _ = !!_ && _ != _ && _().unix(_)._(_),
@@ -1386,7 +1373,7 @@
                             ((0 != _.weekday() && 6 != _.weekday()) ||
                               (_ = !1));
                           return _;
-                        })(__webpack_require__, _, _, _),
+                        })(_, _, _, _),
                       initialValue: _,
                       inputProps: {
                         placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
@@ -1558,7 +1545,7 @@
         );
       }
       function _(_) {
-        const { redirectURL: _, guestOption: __webpack_require__ } = _,
+        const { redirectURL: _, guestOption: _ } = _,
           [_] = (0, _.useState)(
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
@@ -1578,7 +1565,7 @@
                 redirectUrl: _,
                 theme: "modal",
                 children:
-                  __webpack_require__ &&
+                  _ &&
                   (0, _.jsx)(_._, {
                     redirectURL: _,
                   }),
@@ -1602,7 +1589,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { item: _ } = _,
-          { data: __webpack_require__ } = (function (_) {
+          { data: _ } = (function (_) {
             const _ = (0, _._)();
             return (0, _._)({
               queryKey: ["GetHardwareItems", _],
@@ -1633,12 +1620,7 @@
               enabled: !!_,
             });
           })(1 == _.GetStoreItemType() ? _.GetID() : void 0);
-        return __webpack_require__
-          ? (0, _._)(
-              "#Cart_ShippingEstimate_DeliveryDate",
-              _(__webpack_require__),
-            )
-          : null;
+        return _ ? (0, _._)("#Cart_ShippingEstimate_DeliveryDate", _(_)) : null;
       }
       function _(_) {
         return (0, _._)(
@@ -1717,27 +1699,22 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          href: _,
-          children: __webpack_require__,
-          bAllowFocuseableAnchor: _,
-          ..._
-        } = _;
+        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
         return (0, _._)()
           ? (0, _.jsx)("div", {
               ..._,
-              children: __webpack_require__,
+              children: _,
             })
           : _
             ? (0, _.jsx)(_._, {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               })
             : (0, _.jsx)("a", {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               });
       }
     },
@@ -2028,15 +2005,12 @@
       function _(_) {
         const {
           lineItems: _ = [],
-          cartValidation: __webpack_require__,
+          cartValidation: _,
           LineItemContainer: _ = _,
         } = _;
         if (!_.length) return (0, _.jsx)(_, {});
-        const _ = __webpack_require__?.cart_items
-          ? __webpack_require__.cart_items.reduce(
-              (_, _) => ((_[_.line_item_id] = _), _),
-              {},
-            )
+        const _ = _?.cart_items
+          ? _.cart_items.reduce((_, _) => ((_[_.line_item_id] = _), _), {})
           : {};
         return (0, _.jsx)("div", {
           className: _().LineItemsCtn,
@@ -2048,7 +2022,7 @@
                     _,
                     {
                       item: _,
-                      loading: void 0 === __webpack_require__,
+                      loading: void 0 === _,
                       validatedItem: _[_.line_item_id],
                       LineItemContainer: _,
                     },
@@ -2103,8 +2077,8 @@
         },
       };
       function _(_) {
-        const { item: _, loading: __webpack_require__, ..._ } = _,
-          _ = __webpack_require__ ? _._ : _[_.type];
+        const { item: _, loading: _, ..._ } = _,
+          _ = _ ? _._ : _[_.type];
         return _
           ? (0, _.jsx)(_._, {
               fallback: (_) =>
@@ -2120,7 +2094,7 @@
           : (console.error(`Unknown line item type (${_.type})`), null);
       }
       function _(_) {
-        const { item: _, error: __webpack_require__ } = _,
+        const { item: _, error: _ } = _,
           _ = (0, _._)(_.line_item_id);
         return (0, _.jsxs)(_._, {
           className: _().ErrorLineItem,
@@ -2134,7 +2108,7 @@
                 }),
                 (0, _.jsx)("div", {
                   className: _().Muted,
-                  children: __webpack_require__.message,
+                  children: _.message,
                 }),
               ],
             }),
@@ -2159,11 +2133,7 @@
         });
       }
       function _(_) {
-        const {
-            lineItemID: _,
-            validatedItem: __webpack_require__,
-            storeItem: _,
-          } = _,
+        const { lineItemID: _, validatedItem: _, storeItem: _ } = _,
           _ = _(_),
           _ = (0, _._)(_),
           _ = _.isPending;
@@ -2201,7 +2171,7 @@
                       }),
                     }),
                     (0, _.jsx)(_, {
-                      validatedItem: __webpack_require__,
+                      validatedItem: _,
                     }),
                     (0, _.jsx)(_._, {
                       className: _().LineItemSpaceBetween,
@@ -2221,7 +2191,7 @@
       function _(_) {
         const {
             storeItem: _,
-            displayItem: __webpack_require__,
+            displayItem: _,
             lineItem: _,
             purchaseOption: _,
             validatedItem: _,
@@ -2256,7 +2226,7 @@
                 children: [
                   (0, _.jsx)(_, {
                     storeItem: _,
-                    displayItem: __webpack_require__,
+                    displayItem: _,
                     validatedItem: _,
                   }),
                   (0, _.jsxs)("div", {
@@ -2329,17 +2299,13 @@
         );
       }
       function _(_) {
-        const {
-            storeItem: _,
-            displayItem: __webpack_require__,
-            validatedItem: _,
-          } = _,
-          _ = _(__webpack_require__),
+        const { storeItem: _, displayItem: _, validatedItem: _ } = _,
+          _ = _(_),
           _ = _?.errors?.adult_content_restricted;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().LineItemColumn, _().LineItemCapsule),
           children: (0, _.jsx)(_._, {
-            item: __webpack_require__,
+            item: _,
             feature: "cart-items",
             noImpressionTracking: !0,
             children: (0, _.jsx)("img", {
@@ -2358,16 +2324,16 @@
         });
       }
       function _(_) {
-        const { purchaseOption: _, validatedItem: __webpack_require__ } = _;
+        const { purchaseOption: _, validatedItem: _ } = _;
         let _ = _?.formatted_original_price,
           _ = _?.formatted_final_price,
           _ = _?.discount_pct;
         return (
-          __webpack_require__ &&
-            __webpack_require__.original_price &&
-            ((_ = __webpack_require__.original_price.formatted_amount),
-            (_ = __webpack_require__.subtotal.formatted_amount),
-            (_ = (0, _._)(__webpack_require__))),
+          _ &&
+            _.original_price &&
+            ((_ = _.original_price.formatted_amount),
+            (_ = _.subtotal.formatted_amount),
+            (_ = (0, _._)(_))),
           (0, _.jsx)("div", {
             className: _().LineItemRightCol,
             children: (0, _.jsx)(_._, {
@@ -2377,8 +2343,7 @@
               discount_percent: _,
               bHideDiscountPercentForCompliance:
                 _.hide_discount_pct_for_compliance,
-              bDiscountFromCoupon:
-                !!__webpack_require__?.coupon_discount?.amount_in_cents,
+              bDiscountFromCoupon: !!_?.coupon_discount?.amount_in_cents,
             }),
           })
         );
@@ -2386,7 +2351,7 @@
       function _(_) {
         const {
             lineItem: _,
-            storeItem: __webpack_require__,
+            storeItem: _,
             purchaseOption: _,
             validatedItem: _,
             initialPurchaseOption: _,
@@ -2413,7 +2378,7 @@
                   })
                 : (0, _.jsx)(_, {
                     lineItem: _,
-                    storeItem: __webpack_require__,
+                    storeItem: _,
                     initialValue: _,
                     purchaseOption: _,
                   }),
@@ -2496,14 +2461,14 @@
         );
       }
       function _(_) {
-        const { validatedItem: _, children: __webpack_require__ } = _;
+        const { validatedItem: _, children: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().LineItemSpaceBetween),
           children: [
             (0, _.jsx)(_._, {
               lineItem: _,
             }),
-            __webpack_require__,
+            _,
           ],
         });
       }
@@ -2554,7 +2519,7 @@
       function _(_) {
         const {
             lineItem: _,
-            storeItem: __webpack_require__,
+            storeItem: _,
             initialValue: _,
             purchaseOption: _,
           } = _,
@@ -2697,24 +2662,24 @@
         },
       };
       function _(_) {
-        const { name_override: _, ...__webpack_require__ } = _,
-          { data: _ } = (0, _._)(_ ? void 0 : __webpack_require__),
+        const { name_override: _, ..._ } = _,
+          { data: _ } = (0, _._)(_ ? void 0 : _),
           _ = _ ?? _?.name;
         return (0, _.jsx)(_, {
-          ...__webpack_require__,
+          ..._,
           name: _,
           children: _,
         });
       }
       function _(_) {
-        const { name: _, children: __webpack_require__, ..._ } = _;
+        const { name: _, children: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           _: _,
           hoverProps: _,
           name: _,
           className: _().LineItemStoreHover,
           bShowWishlistButton: !1,
-          children: __webpack_require__,
+          children: _,
         });
       }
     },
@@ -2739,7 +2704,7 @@
         _ = __webpack_require__._(_);
       const _ = _.createContext(null);
       function _(_) {
-        const { validateCart: _, children: __webpack_require__ } = _,
+        const { validateCart: _, children: _ } = _,
           _ = (function (_) {
             return _.useMemo(() => {
               let _ = new Map(),
@@ -2810,7 +2775,7 @@
           })(_);
         return (0, _.jsx)(_.Provider, {
           value: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _() {
@@ -3046,18 +3011,14 @@
         );
       }
       function _(_) {
-        const {
-            purchase_state: _,
-            notice_text: __webpack_require__,
-            appids: _,
-          } = _,
+        const { purchase_state: _, notice_text: _, appids: _ } = _,
           _ = (function (_) {
             const _ = _.useContext(_);
             return _?.mapValidateNoticesToFootnote.get(_)?.index;
           })(_);
         return (0, _.jsxs)(_._, {
           children: [
-            __webpack_require__,
+            _,
             _ &&
               (0, _.jsx)("sup", {
                 children: _,
@@ -3085,7 +3046,7 @@
           : null;
       }
       function _(_) {
-        const { appid: _, last: __webpack_require__ } = _,
+        const { appid: _, last: _ } = _,
           [_] = (0, _._)(_, {
             include_basic_info: !0,
           });
@@ -3098,7 +3059,7 @@
                   noImpressionTracking: !0,
                   children: _.GetName(),
                 }),
-                !__webpack_require__ &&
+                !_ &&
                   (0, _.jsx)(_.Fragment, {
                     children: ", ",
                   }),
@@ -3161,14 +3122,9 @@
       }
       function _(_) {
         const { lineItem: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_.item_id),
+          { data: _ } = (0, _._)(_.item_id),
           { data: _ } = (0, _._)(_.item_id);
-        if (
-          !!_.gift_info?.accountid_giftee ||
-          !__webpack_require__ ||
-          !_ ||
-          (0, _._)(__webpack_require__, _)
-        )
+        if (!!_.gift_info?.accountid_giftee || !_ || !_ || (0, _._)(_, _))
           return null;
         const { purchase_option_name: _, packageid: _, bundleid: _ } = _,
           _ = _
@@ -3206,14 +3162,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          children: _,
-          name: __webpack_require__ = "GamepadWebRoot",
-          ..._
-        } = _;
+        const { children: _, name: _ = "GamepadWebRoot", ..._ } = _;
         return (0, _.jsx)(_._, {
           ..._,
-          navID: __webpack_require__,
+          navID: _,
           children: _,
         });
       }
@@ -3386,9 +3338,9 @@
             });
       }
       function _(_) {
-        const { cart: _, bMinimalDisplay: __webpack_require__ } = _,
+        const { cart: _, bMinimalDisplay: _ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(null),
+            const [_, _] = (0, _.useState)(null),
               _ = (0, _.useMemo)(
                 () =>
                   1 == _?.line_items?.length && _.line_items[0].packageid
@@ -3455,7 +3407,7 @@
                       },
                       bHideCreatorType: !0,
                       bSmallFormat: !0,
-                      bMinimalDisplay: __webpack_require__,
+                      bMinimalDisplay: _,
                     },
                     "creat" + _,
                   ),
@@ -3466,19 +3418,19 @@
       }
       function _(_, _ = []) {
         return _.filter(
-          ({ item_id: _, item: __webpack_require__ }) =>
+          ({ item_id: _, item: _ }) =>
             !_ ||
             (!_[_.appid] &&
-              (__webpack_require__?.appid
-                ? !_[__webpack_require__?.appid]
-                : !__webpack_require__?.included_appids ||
-                  __webpack_require__.included_appids.every((_) => !_[_]))),
+              (_?.appid
+                ? !_[_?.appid]
+                : !_?.included_appids ||
+                  _.included_appids.every((_) => !_[_]))),
         );
       }
       function _(_) {
-        const { cart: _, validatedCart: __webpack_require__ } = _,
+        const { cart: _, validatedCart: _ } = _,
           [_, _] = _.useState(void 0),
-          _ = (__webpack_require__?.cart_items || []).reduce(
+          _ = (_?.cart_items || []).reduce(
             (_, _) => _.concat(_.store_item.included_appids),
             [],
           );
@@ -3545,8 +3497,8 @@
         });
       }
       function _(_) {
-        const { data: _, isLoaded: __webpack_require__, type: _ } = _;
-        return !_ && __webpack_require__
+        const { data: _, isLoaded: _, type: _ } = _;
+        return !_ && _
           ? null
           : (0, _.jsx)(_._, {
               feature: `upsell-${_}`,
@@ -3578,12 +3530,12 @@
         });
       }
       function _(_) {
-        const { className: _, children: __webpack_require__ } = _;
+        const { className: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           "flow-children": "row",
           navEntryPreferPosition: _._.MAINTAIN_X,
           className: (0, _._)(_.UpsellRow, _),
-          children: __webpack_require__,
+          children: _,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -3592,8 +3544,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.memo(function (_) {
-        const { scheduledTime: _, onScheduledTimeChange: __webpack_require__ } =
-            _,
+        const { scheduledTime: _, onScheduledTimeChange: _ } = _,
           [_, _] = _.useState(null),
           _ = _ > 0;
         return (0, _.jsxs)(_, {
@@ -3632,7 +3583,7 @@
                   (0, _.jsx)(_._, {
                     children: (0, _.jsx)(_, {
                       scheduledTime: _,
-                      onScheduledTimeChange: __webpack_require__,
+                      onScheduledTimeChange: _,
                       setScheduledError: _,
                     }),
                   }),
@@ -3644,13 +3595,13 @@
       function _(_) {
         const {
           scheduledTime: _,
-          onScheduledTimeChange: __webpack_require__,
+          onScheduledTimeChange: _,
           setScheduledError: _,
         } = _;
         if ((0, _._)())
           return (0, _.jsx)(_, {
             scheduledTime: _,
-            onScheduledTimeChange: __webpack_require__,
+            onScheduledTimeChange: _,
             setScheduledError: _,
           });
         {
@@ -3660,7 +3611,7 @@
             className: _().GiftDatePicker,
             nEarliestTime: Date.now() / 1e3,
             fnGetTimeToUpdate: () => _,
-            fnSetTimeToUpdate: __webpack_require__,
+            fnSetTimeToUpdate: _,
             fnIsValidDateTime: _,
             onError: _,
           });
@@ -3676,7 +3627,7 @@
       function _(_) {
         const {
             scheduledTime: _,
-            onScheduledTimeChange: __webpack_require__,
+            onScheduledTimeChange: _,
             setScheduledError: _,
           } = _,
           _ = _.useMemo(() => {
@@ -3713,7 +3664,7 @@
           const _ = new Date(_, _, _, _, _, 0, 0).getTime() / 1e3,
             _ = _(_);
           !0 === _ ? (_(null), __webpack_require__(_)) : _(_);
-        }, [_, _, _, _, _, _, __webpack_require__, _]);
+        }, [_, _, _, _, _, _, _, _]);
         const _ = "US" == _._.COUNTRY && "english" == _._.LANGUAGE;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -3770,7 +3721,7 @@
         });
       }
       function _(_) {
-        const { year: _, setYear: __webpack_require__ } = _,
+        const { year: _, setYear: _ } = _,
           _ = _.useMemo(() => {
             const _ = new Date(),
               _ = new Intl.DateTimeFormat(_._.GetPreferredLocales(), {
@@ -3788,7 +3739,7 @@
         });
       }
       function _(_) {
-        const { month: _, setMonth: __webpack_require__ } = _,
+        const { month: _, setMonth: _ } = _,
           _ = _.useMemo(() => {
             const _ = new Intl.DateTimeFormat(_._.GetPreferredLocales(), {
               month: "short",
@@ -3805,9 +3756,9 @@
         });
       }
       function _(_) {
-        const { year: _, month: __webpack_require__, day: _, setDay: _ } = _,
+        const { year: _, month: _, day: _, setDay: _ } = _,
           _ = _.useMemo(() => {
-            const _ = new Date(_, __webpack_require__ + 1, 0).getDate(),
+            const _ = new Date(_, _ + 1, 0).getDate(),
               _ = new Intl.DateTimeFormat(_._.GetPreferredLocales(), {
                 day: "numeric",
               });
@@ -3818,7 +3769,7 @@
                 data: _,
               });
             return _;
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return (0, _.jsx)(_._, {
           selectedOption: _,
           onChange: (_) => _(_.data),
@@ -3826,7 +3777,7 @@
         });
       }
       function _(_) {
-        const { strAMPM: _, setAMPM: __webpack_require__ } = _,
+        const { strAMPM: _, setAMPM: _ } = _,
           _ = _.useMemo(() => {
             const _ = new Intl.DateTimeFormat(_._.GetPreferredLocales(), {
               hour: "numeric",
@@ -3964,7 +3915,7 @@
       function _(_) {
         const {
           storeItem: _,
-          lineItem: __webpack_require__,
+          lineItem: _,
           bShowGiftRecipientModal: _,
           fnOnDismiss: _,
         } = _;
@@ -3974,7 +3925,7 @@
           onDismiss: _,
           children: (0, _.jsx)(_, {
             onDismiss: _,
-            lineItem: __webpack_require__,
+            lineItem: _,
             storeItem: _,
           }),
         });
@@ -3982,20 +3933,20 @@
       const _ = _.memo(function (_) {
         const {
           rgFriendsForGifting: _,
-          isLoading: __webpack_require__,
+          isLoading: _,
           isError: _,
         } = _(_.storeItem);
         return (0, _.jsx)(_, {
           ..._,
           rgFriendsForGifting: _,
-          isLoading: __webpack_require__,
+          isLoading: _,
           isError: _,
         });
       });
       function _(_) {
         const {
             lineItem: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             rgFriendsForGifting: _,
             isLoading: _,
             isError: _,
@@ -4061,7 +4012,7 @@
             });
       }
       function _(_) {
-        const { loading: _, children: __webpack_require__ } = _;
+        const { loading: _, children: _ } = _;
         return (0, _.jsxs)(_._, {
           className: _().GiftRecipientPickerFormCtn,
           children: [
@@ -4074,12 +4025,12 @@
                 position: "center",
                 size: "large",
               }),
-            !_ && __webpack_require__,
+            !_ && _,
           ],
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__ } = _;
+        const { value: _, onChange: _ } = _;
         return (0, _.jsx)(_._, {
           autoFocus: !0,
           bShowClearAction: !0,
@@ -4098,7 +4049,7 @@
       function _(_) {
         const {
             selected: _,
-            onSelect: __webpack_require__,
+            onSelect: _,
             nickname: _,
             persona: _,
             ownership: _,
@@ -4106,7 +4057,7 @@
           _ = _.already_owns,
           _ = _.useCallback(() => {
             _ || __webpack_require__(_.m_steamid.ConvertTo64BitString());
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(
             _().GiftPickerFriendBlock,
@@ -4144,8 +4095,8 @@
       }
       function _(_) {
         const { ownership: _ } = _,
-          { already_owns: __webpack_require__, partial_owns_appids: _ } = _;
-        return __webpack_require__
+          { already_owns: _, partial_owns_appids: _ } = _;
+        return _
           ? (0, _.jsx)("div", {
               className: (0, _._)(_().OwnsGame),
               children: (0, _._)("#Cart_GiftRecipientModal_OwnsGameLabel"),
@@ -4164,12 +4115,8 @@
       }
       function _(_) {
         const { ownership: _ } = _,
-          {
-            already_owns: __webpack_require__,
-            wishes_for: _,
-            partial_wishes_for: _,
-          } = _;
-        return __webpack_require__
+          { already_owns: _, wishes_for: _, partial_wishes_for: _ } = _;
+        return _
           ? null
           : _
             ? (0, _.jsx)("div", {
@@ -4219,7 +4166,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { giftInfo: _, onChange: __webpack_require__ } = _,
+        const { giftInfo: _, onChange: _ } = _,
           _ = (0, _._)(_.accountid_giftee);
         return _.data
           ? (0, _.jsxs)(_, {
@@ -4243,7 +4190,7 @@
                 }),
                 (0, _.jsx)(_, {
                   giftInfo: _,
-                  onChange: __webpack_require__,
+                  onChange: _,
                 }),
               ],
             })
@@ -4274,7 +4221,7 @@
         });
       }
       function _(_) {
-        const { lineItem: _, storeItem: __webpack_require__ } = _,
+        const { lineItem: _, storeItem: _ } = _,
           [_, _] = _.useState(!1);
         return (0, _.jsxs)(_, {
           children: [
@@ -4287,13 +4234,13 @@
                 bShowGiftRecipientModal: _,
                 fnOnDismiss: () => _(!1),
                 lineItem: _,
-                storeItem: __webpack_require__,
+                storeItem: _,
               }),
           ],
         });
       }
       function _(_) {
-        const { lineItem: _, storeItem: __webpack_require__ } = _,
+        const { lineItem: _, storeItem: _ } = _,
           [_, _] = _.useState(!1),
           _ = (0, _._)(_.gift_info.accountid_giftee);
         return _.data
@@ -4328,7 +4275,7 @@
                     bShowGiftRecipientModal: _,
                     fnOnDismiss: () => _(!1),
                     lineItem: _,
-                    storeItem: __webpack_require__,
+                    storeItem: _,
                   }),
               ],
             })
@@ -4336,10 +4283,8 @@
       }
       function _(_) {
         const { lineItem: _ } = _,
-          [__webpack_require__, _] = _.useState(
-            _.gift_info?.time_scheduled_send,
-          ),
-          _ = _.useRef(__webpack_require__),
+          [_, _] = _.useState(_.gift_info?.time_scheduled_send),
+          _ = _.useRef(_),
           [_, _] = _.useState(_.gift_info?.gift_message?.message || ""),
           _ = _.useRef(_),
           [_, _] = _.useState(_.gift_info?.gift_message?.signature || ""),
@@ -4360,34 +4305,32 @@
           );
         return (
           (0, _.useEffect)(() => {
-            (_.current == __webpack_require__ &&
-              _.current == _ &&
-              _.current == _) ||
+            (_.current == _ && _.current == _ && _.current == _) ||
               (_({
                 accountid_giftee: _.gift_info?.accountid_giftee,
                 gift_message: {
                   message: _,
                   signature: _,
                 },
-                time_scheduled_send: __webpack_require__,
+                time_scheduled_send: _,
               }),
-              (_.current = __webpack_require__),
+              (_.current = _),
               (_.current = _),
               (_.current = _));
-          }, [_, _, __webpack_require__, _, _.gift_info?.accountid_giftee]),
+          }, [_, _, _, _, _.gift_info?.accountid_giftee]),
           (0, _.jsx)(_, {
             _: _.line_item_id,
             message: _,
             onMessageChange: _,
             signature: _,
             onSignatureChange: _,
-            scheduledTime: __webpack_require__,
+            scheduledTime: _,
             onScheduledTimeChange: _,
           })
         );
       }
       function _(_) {
-        const { giftInfo: _, onChange: __webpack_require__ } = _;
+        const { giftInfo: _, onChange: _ } = _;
         return (0, _.jsx)(_, {
           _: "cart",
           message: _.gift_message?.message || "",
@@ -4420,7 +4363,7 @@
       function _(_) {
         const {
             _: _,
-            message: __webpack_require__,
+            message: _,
             onMessageChange: _,
             signature: _,
             onSignatureChange: _,
@@ -4428,7 +4371,7 @@
             onScheduledTimeChange: _,
             onBlur: _,
           } = _,
-          _ = _ - __webpack_require__.length,
+          _ = _ - _.length,
           [_, _] = _.useState(!1),
           { data: _ } = (0, _._)(_._.accountid);
         return (0, _.jsxs)(_.Fragment, {
@@ -4447,7 +4390,7 @@
                 (0, _.jsx)(_._, {
                   nMinHeight: 50,
                   className: _().GiftNoteInput,
-                  value: __webpack_require__,
+                  value: _,
                   onBlur: _,
                   onChange: (_) => _(_.target.value),
                 }),
@@ -4540,13 +4483,8 @@
       }
       function _(_) {
         const { gifteeAccountID: _ } = _,
-          { isLoading: __webpack_require__, data: _ } = (0, _._)(!0);
-        if (
-          __webpack_require__ ||
-          _.is_not_member_of_any_group() ||
-          2 === _.role()
-        )
-          return null;
+          { isLoading: _, data: _ } = (0, _._)(!0);
+        if (_ || _.is_not_member_of_any_group() || 2 === _.role()) return null;
         const _ = _._.InitFromAccountID(
           _,
           _._.EUNIVERSE,
@@ -4571,7 +4509,7 @@
       function _(_) {
         const {
             lineItem: _,
-            storeItem: __webpack_require__,
+            storeItem: _,
             couponApplied: _,
             availableCoupons: _,
           } = _,
@@ -4617,11 +4555,7 @@
         });
       }
       function _(_) {
-        const {
-            couponApplied: _,
-            numAvailable: __webpack_require__,
-            onModifyClick: _,
-          } = _,
+        const { couponApplied: _, numAvailable: _, onModifyClick: _ } = _,
           _ = (0, _._)(
             _ ? "#Cart_CouponModify_Change" : "#Cart_CouponModify_Add",
           );
@@ -4636,10 +4570,7 @@
                   })
                 : null,
               (0, _.jsx)(_, {
-                children: (0, _._)(
-                  "#Cart_CouponAvailability",
-                  __webpack_require__,
-                ),
+                children: (0, _._)("#Cart_CouponAvailability", _),
               }),
               (0, _.jsx)("div", {
                 className: _.ModifyLink,
@@ -4653,17 +4584,17 @@
         });
       }
       function _(_) {
-        const { large_icon_url: _, title: __webpack_require__ } = _;
+        const { large_icon_url: _, title: _ } = _;
         return (0, _.jsx)("img", {
           className: _.CouponRepresentation,
           src: _,
-          title: __webpack_require__,
+          title: _,
         });
       }
       function _(_) {
         const {
             active: _,
-            onRequestClose: __webpack_require__,
+            onRequestClose: _,
             packageName: _,
             title: _,
             couponApplied: _,
@@ -4673,7 +4604,7 @@
           [_, _] = _.useState(_?.gidcoupon || "");
         return (0, _.jsxs)(_._, {
           active: _,
-          onDismiss: __webpack_require__,
+          onDismiss: _,
           children: [
             (0, _.jsx)(_._, {
               children: _,
@@ -4694,7 +4625,7 @@
               onSelectedChange: _,
             }),
             (0, _.jsx)(_._, {
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: () => {
                 __webpack_require__(), _(_ || _._);
               },
@@ -4706,7 +4637,7 @@
       function _(_) {
         const {
             availableCoupons: _,
-            couponApplied: __webpack_require__,
+            couponApplied: _,
             couponSelected: _,
             onSelectedChange: _,
           } = _,
@@ -4719,7 +4650,7 @@
               _,
               {
                 ..._,
-                applied: __webpack_require__ === _.gidcoupon,
+                applied: _ === _.gidcoupon,
                 selected: _ === _.gidcoupon,
                 inUse: _.includes(_.gidcoupon),
                 onSelected: (_) => _(_ ? _.gidcoupon : ""),
@@ -4732,14 +4663,14 @@
       function _(_) {
         const {
             applied: _,
-            inUse: __webpack_require__,
+            inUse: _,
             selected: _,
             large_icon_url: _,
             title: _,
             discount_pct: _,
             onSelected: _,
           } = _,
-          _ = !_ && __webpack_require__,
+          _ = !_ && _,
           _ = _ ? void 0 : () => _(!_);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.CouponListItem, _ && _.Disabled),
@@ -4781,9 +4712,9 @@
         });
       }
       function _(_) {
-        const { checked: _, hidden: __webpack_require__ } = _;
+        const { checked: _, hidden: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(_.Checkbox, __webpack_require__ && _.Hidden),
+          className: (0, _._)(_.Checkbox, _ && _.Hidden),
           children: _ && (0, _.jsx)(_._, {}),
         });
       }
@@ -4822,7 +4753,7 @@
       }
       function _(_) {
         const { rgCountryOptions: _ } = _,
-          [__webpack_require__, _] = _.useState(_._.COUNTRY),
+          [_, _] = _.useState(_._.COUNTRY),
           _ = _.useMemo(
             () =>
               Object.keys(_).map((_) => ({
@@ -4837,7 +4768,7 @@
               _(_.data);
           }, []);
         return (0, _.jsx)(_._, {
-          selectedOption: __webpack_require__,
+          selectedOption: _,
           onChange: _,
           rgOptions: _,
           contextMenuPositionOptions: {
@@ -4969,7 +4900,7 @@
       function _(_) {
         const {
             lineItem: _,
-            storeItem: __webpack_require__,
+            storeItem: _,
             validatedItem: _,
             availableCoupons: _,
             children: _,
@@ -4984,14 +4915,14 @@
                 _,
                 _ &&
                   (0, _.jsx)(_, {
-                    storeItem: __webpack_require__,
+                    storeItem: _,
                     lineItem: _,
                   }),
               ],
             }),
             _ &&
               (0, _.jsx)(_, {
-                storeItem: __webpack_require__,
+                storeItem: _,
                 lineItem: _,
                 couponApplied: _?.coupon_applied,
                 availableCoupons: _,
@@ -5000,15 +4931,8 @@
         });
       }
       const _ = (0, _._)(function (_) {
-        const {
-            strEstimatedTotal: _,
-            bCartIncludesGifts: __webpack_require__,
-          } = _,
-          {
-            bButtonDisabled: _,
-            nextStep: _,
-            bGuestAvailable: _,
-          } = _(__webpack_require__);
+        const { strEstimatedTotal: _, bCartIncludesGifts: _ } = _,
+          { bButtonDisabled: _, nextStep: _, bGuestAvailable: _ } = _(_);
         return (0, _.jsxs)("div", {
           className: _().CartSummaryCtn,
           children: [
@@ -5043,7 +4967,7 @@
                   bGuestOption: _,
                 }),
                 (0, _.jsx)(_, {
-                  disabled: _ || __webpack_require__,
+                  disabled: _ || _,
                 }),
                 (0, _.jsx)(_, {
                   bDisabled: _,
@@ -5087,21 +5011,17 @@
       function _(_) {
         const {
           bButtonDisabled: _,
-          nextStep: __webpack_require__,
+          nextStep: _,
           bGuestAvailable: _,
         } = _(_.bCartIncludesGifts);
         return (0, _.jsx)(_, {
           bDisabled: _,
-          nextStep: __webpack_require__,
+          nextStep: _,
           bGuestOption: _,
         });
       }
       function _(_) {
-        const {
-            bDisabled: _,
-            nextStep: __webpack_require__,
-            bGuestOption: _,
-          } = _,
+        const { bDisabled: _, nextStep: _, bGuestOption: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _] = (0, _._)(),
@@ -5116,13 +5036,13 @@
                 : "checkout" == _
                   ? (0, _._)("#Cart_ContinueButton_Payment")
                   : ((0, _._)(_, "unhandled step"), "");
-          })(__webpack_require__),
+          })(_),
           _ = (0, _._)(_().CartSummaryBtn, _().SummaryMarginBottom, _().Button);
         return (0, _.jsx)(_._, {
           disabled: _,
           className: _,
           onClick: () => {
-            switch (__webpack_require__) {
+            switch (_) {
               case "login":
                 if (_ != _._ && _) {
                   const _ =
@@ -5139,7 +5059,7 @@
                 location.href = _;
                 break;
               default:
-                (0, _._)(__webpack_require__, "unhandled step");
+                (0, _._)(_, "unhandled step");
             }
           },
           children: _,
@@ -5287,8 +5207,8 @@
         return (0, _._)(), (0, _._)(), null;
       }
       function _(_) {
-        const { cartID: _, initialStep: __webpack_require__ = "initial" } = _,
-          [_, _] = _.useState(__webpack_require__),
+        const { cartID: _, initialStep: _ = "initial" } = _,
+          [_, _] = _.useState(_),
           _ = (function (_) {
             if ("gifts" === _) return (0, _._)("#Cart_GiftOptions");
             return (0, _._)("#Cart_YourShoppingCart");
@@ -5298,18 +5218,14 @@
           title: _,
           step: _,
           onStepChange: _,
-          children: ({
-            cart: _,
-            validatedCart: _,
-            bCartIncludesGifts: __webpack_require__,
-          }) =>
+          children: ({ cart: _, validatedCart: _, bCartIncludesGifts: _ }) =>
             (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
                   children: (0, _.jsx)(_, {
                     isCartEmpty: !_ || 0 === _.line_items.length,
                     cart: _,
-                    bCartIncludesGifts: __webpack_require__,
+                    bCartIncludesGifts: _,
                   }),
                 }),
                 (0, _.jsx)(_._, {
@@ -5340,7 +5256,7 @@
       function _(_) {
         const {
             children: _,
-            cartID: __webpack_require__,
+            cartID: _,
             title: _,
             step: _,
             onStepChange: _,
@@ -5365,7 +5281,7 @@
             method: "display",
             submethod: _,
             children: (0, _.jsxs)(_._, {
-              cartID: __webpack_require__,
+              cartID: _,
               step: _,
               setStep: _,
               ..._,
@@ -5417,11 +5333,11 @@
         const _ = (function () {
           const _ = _.useRef(""),
             _ = (0, _._)(),
-            { data: __webpack_require__ } = (0, _._)(),
+            { data: _ } = (0, _._)(),
             _ = !_.current;
           let _ = _._,
             _ = -1;
-          if (_ && void 0 !== __webpack_require__) {
+          if (_ && void 0 !== _) {
             const _ = _.data?.line_items || [],
               _ = _.length
                 ? _.reduce((_, _) => (_.time_added > _.time_added ? _ : _))
@@ -5455,16 +5371,12 @@
         });
       }
       function _(_) {
-        const {
-          isCartEmpty: _,
-          cart: __webpack_require__,
-          bCartIncludesGifts: _,
-        } = _;
+        const { isCartEmpty: _, cart: _, bCartIncludesGifts: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             !_ &&
               (0, _.jsx)(_, {
-                cart: __webpack_require__,
+                cart: _,
               }),
             (0, _.jsxs)(_._, {
               "flow-children": "row",
@@ -5526,7 +5438,7 @@
       function _(_) {
         const {
             step: _,
-            setStep: __webpack_require__,
+            setStep: _,
             cartID: _,
             cartWideGiftInfo: _,
             onCartWideGiftInfoChange: _,
@@ -5535,11 +5447,11 @@
           _ = _.useMemo(
             () => ({
               step: _,
-              setStep: __webpack_require__,
+              setStep: _,
               cartWideGiftInfo: _,
               onCartWideGiftInfoChange: _,
             }),
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,

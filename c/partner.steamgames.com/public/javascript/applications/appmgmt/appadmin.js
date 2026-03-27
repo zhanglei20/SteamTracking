@@ -521,7 +521,7 @@
       const _ = 7,
         _ = 7;
       function _(_) {
-        const { demoAppID: _, parentAppId: __webpack_require__ } = _,
+        const { demoAppID: _, parentAppId: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(void 0),
           _ = (function (_, _) {
@@ -534,7 +534,7 @@
                 (_.related_items.standalone_demo_appid &&
                   _.related_items.standalone_demo_appid.includes(_)))
             );
-          })(_, __webpack_require__),
+          })(_, _),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(0),
           _ = _.useCallback(() => _((_) => _ + 1), []),
@@ -545,8 +545,7 @@
             (async () => {
               _(!1), _(void 0);
               const _ = _._.Init(_._);
-              _.Body().set_demo_appid(_),
-                _.Body().set_appid(__webpack_require__);
+              _.Body().set_demo_appid(_), _.Body().set_appid(_);
               const _ = await _._.GetWishlistDemoEmailStatus(_, _);
               _.signal.aborted ||
                 (_.BSuccess() &&
@@ -554,7 +553,7 @@
             })(),
             () => _.abort()
           );
-        }, [_, _, __webpack_require__, _]),
+        }, [_, _, _, _]),
           _.useEffect(() => {
             let _ = window.AppLandingRefreshCallbacks;
             _ || ((_ = new _._()), (window.AppLandingRefreshCallbacks = _));
@@ -585,7 +584,7 @@
               _ &&
                 (0, _.jsx)(_, {
                   demoAppID: _,
-                  parentAppId: __webpack_require__,
+                  parentAppId: _,
                   bSendEmailsSucceeded: _,
                   setSendEmailsSucceeded: _,
                   bIsDemoVisible: _,
@@ -594,7 +593,7 @@
                 !_ &&
                 (0, _.jsx)(_, {
                   demoAppID: _,
-                  parentAppId: __webpack_require__,
+                  parentAppId: _,
                 }),
               _ &&
                 _ &&
@@ -603,7 +602,7 @@
                 }),
               _ &&
                 (0, _.jsx)(_, {
-                  parentAppId: __webpack_require__,
+                  parentAppId: _,
                   timeStaged: _,
                   noticeVisibleToDate: _,
                 }),
@@ -614,7 +613,7 @@
       function _(_) {
         const {
             demoAppID: _,
-            parentAppId: __webpack_require__,
+            parentAppId: _,
             bIsDemoVisible: _,
             bSendEmailsSucceeded: _,
             setSendEmailsSucceeded: _,
@@ -626,14 +625,13 @@
             _(!1), _(!0);
             try {
               const _ = _._.Init(_._);
-              _.Body().set_demo_appid(_),
-                _.Body().set_appid(__webpack_require__);
+              _.Body().set_demo_appid(_), _.Body().set_appid(_);
               const _ = await _._.QueueWishlistDemoEmailToFire(_, _);
               _(_.BSuccess());
             } finally {
               _(!1);
             }
-          }, [_, __webpack_require__, _, _]),
+          }, [_, _, _, _]),
           { bLoading: _, rgWarnings: _ } = (function (_, _) {
             const _ = (0, _._)({
                 appid: _,
@@ -735,7 +733,7 @@
               bLoading: !1,
               rgWarnings: _,
             };
-          })(__webpack_require__, _),
+          })(_, _),
           _ = _.every((_) => !_.bCritical);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -864,20 +862,16 @@
         });
       }
       function _(_) {
-        const {
-            parentAppId: _,
-            timeStaged: __webpack_require__,
-            noticeVisibleToDate: _,
-          } = _,
+        const { parentAppId: _, timeStaged: _, noticeVisibleToDate: _ } = _,
           _ = (_) =>
             `${_.getFullYear()}-${String(_.getMonth() + 1).padStart(2, "0")}-${String(_.getDate()).padStart(2, "0")}`,
-          _ = _(new Date(1e3 * (__webpack_require__ - _ * _._.PerDay))),
+          _ = _(new Date(1e3 * (_ - _ * _._.PerDay))),
           _ = _(new Date()),
           _ = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
             month: "long",
             day: "numeric",
-          }).format(1e3 * __webpack_require__),
+          }).format(1e3 * _),
           _ = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
             month: "long",
@@ -929,16 +923,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { nPartnerID: _, nAppID: __webpack_require__ } = _;
+        const { nPartnerID: _, nAppID: _ } = _;
         return _._.is_support
           ? (0, _.jsx)(_, {
               nPartnerID: _,
-              nAppID: __webpack_require__,
+              nAppID: _,
             })
           : null;
       }
       function _(_) {
-        const { nPartnerID: _, nAppID: __webpack_require__ } = _,
+        const { nPartnerID: _, nAppID: _ } = _,
           [_, _] = (0, _.useState)(90),
           _ = (function (_, _, _) {
             const { isLoading: _, data: _ } = (0, _._)({
@@ -964,7 +958,7 @@
               enabled: !!_ && _ >= 1,
             });
             return _ ? null : _;
-          })(_, _, __webpack_require__);
+          })(_, _, _);
         return _ && 0 != _.daily_sales?.length
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_.AppDashboard, "valveOutline padded"),
@@ -1002,8 +996,7 @@
         },
       ];
       function _(_) {
-        const { nDaysInThePast: _, fnUpdateDaysInPast: __webpack_require__ } =
-          _;
+        const { nDaysInThePast: _, fnUpdateDaysInPast: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.ModuleCtn,
           children: [
@@ -1133,7 +1126,7 @@
           : null;
       }
       const _ = _.memo((_) => {
-        const { Data: _, nPeak: __webpack_require__ } = _,
+        const { Data: _, nPeak: _ } = _,
           _ = (0, _.useCallback)(
             (_, _) =>
               _.length > 20
@@ -1218,10 +1211,10 @@
         });
       });
       function _(_) {
-        const { _: _, _: __webpack_require__, payload: _ } = _,
+        const { _: _, _: _, payload: _ } = _,
           _ = _.tickFormatter(_.value, _.index);
         return (0, _.jsx)("g", {
-          transform: `translate(${_},${__webpack_require__})`,
+          transform: `translate(${_},${_})`,
           children: (0, _.jsx)("text", {
             _: 0,
             _: 0,
@@ -1326,7 +1319,7 @@
         return null;
       }
       function _(_) {
-        const { appid: _, usdRevenue: __webpack_require__, nPercentage: _ } = _,
+        const { appid: _, usdRevenue: _, nPercentage: _ } = _,
           [_] = (0, _._)(_, {});
         return (0, _.jsxs)("div", {
           className: _.ToolTipTableRow,
@@ -1337,7 +1330,7 @@
             }),
             (0, _.jsx)("div", {
               className: _.ToolTipTableCell,
-              children: (0, _._)(__webpack_require__),
+              children: (0, _._)(_),
             }),
             (0, _.jsxs)("div", {
               className: _.ToolTipTableCell,
@@ -1347,13 +1340,10 @@
         });
       }
       function _(_) {
-        const { nAppId: _, strAppType: __webpack_require__ } = _,
+        const { nAppId: _, strAppType: _ } = _,
           _ = (0, _._)();
         return (
-          ("Game" == __webpack_require__ ||
-            "Application" == __webpack_require__ ||
-            "DLC" == __webpack_require__ ||
-            "Music" == __webpack_require__) &&
+          ("Game" == _ || "Application" == _ || "DLC" == _ || "Music" == _) &&
           (0, _.jsx)(_, {
             nPartnerID: _,
             nAppID: _,
@@ -1361,16 +1351,12 @@
         );
       }
       function _(_) {
-        const {
-          nAppId: _,
-          nParentAppId: __webpack_require__,
-          strAppType: _,
-        } = _;
+        const { nAppId: _, nParentAppId: _, strAppType: _ } = _;
         return (
           "Demo" == _ &&
           (0, _.jsx)(_, {
             demoAppID: _,
-            parentAppId: __webpack_require__,
+            parentAppId: _,
           })
         );
       }
@@ -1378,7 +1364,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { rgAssetProperties: _, appid: __webpack_require__ } = _,
+        const { rgAssetProperties: _, appid: _ } = _,
           [_, _] = (0, _.useState)(""),
           [_, _] = (0, _.useState)(
             (function (_) {
@@ -1447,7 +1433,7 @@
                   _.append("sessionid", _._.SESSIONID),
                     _.append("asset_properties", JSON.stringify(_));
                   const _ = await fetch(
-                    `${_._.PARTNER_BASE_URL}apps/setassetpropertyschema/${__webpack_require__}`,
+                    `${_._.PARTNER_BASE_URL}apps/setassetpropertyschema/${_}`,
                     {
                       method: "POST",
                       body: _,
@@ -1470,12 +1456,7 @@
         });
       }
       function _(_) {
-        const {
-          schema: _,
-          index: __webpack_require__,
-          onUpdate: _,
-          onRemove: _,
-        } = _;
+        const { schema: _, index: _, onUpdate: _, onRemove: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.AssetPropertyRow,
           children: [
@@ -1567,14 +1548,14 @@
             }),
             (0, _.jsx)(_._, {
               className: _.RemoveButton,
-              onClick: () => _(__webpack_require__),
+              onClick: () => _(_),
               children: "Remove",
             }),
           ],
         });
       }
       function _(_) {
-        const { propertyType: _, onUpdateType: __webpack_require__ } = _;
+        const { propertyType: _, onUpdateType: _ } = _;
         return (0, _.jsx)("div", {
           className: _.PropertyType,
           children: (0, _.jsx)(_._, {
@@ -1620,15 +1601,12 @@
       function _(_) {
         const {
             rgCommonRedistAllPlatforms: _,
-            rgCommonRedistWindows: __webpack_require__,
+            rgCommonRedistWindows: _,
             rgCheckedDepots: _,
             nDetectedGameEngine: _,
           } = _,
           _ = (0, _.useMemo)(() => new Map(_), [_]),
-          _ = (0, _.useMemo)(
-            () => new Map(__webpack_require__),
-            [__webpack_require__],
-          ),
+          _ = (0, _.useMemo)(() => new Map(_), [_]),
           [_, _] = (0, _.useState)(
             (function (_, _, _) {
               const _ = new Map();
@@ -1728,12 +1706,7 @@
         });
       }
       function _(_) {
-        const {
-            name: _,
-            categories: __webpack_require__,
-            checkedState: _,
-            setChecked: _,
-          } = _,
+        const { name: _, categories: _, checkedState: _, setChecked: _ } = _,
           _ = (0, _.useMemo)(() => {
             let _ = [];
             return (
@@ -1753,7 +1726,7 @@
               ),
               _
             );
-          }, [__webpack_require__, _, _]);
+          }, [_, _, _]);
         return (0, _.jsxs)("div", {
           className: "section",
           children: [
@@ -1768,13 +1741,8 @@
         });
       }
       function _(_) {
-        const {
-            name: _,
-            category: __webpack_require__,
-            checkedState: _,
-            setChecked: _,
-          } = _,
-          _ = Object.entries(__webpack_require__.components).map(([_, _]) =>
+        const { name: _, category: _, checkedState: _, setChecked: _ } = _,
+          _ = Object.entries(_.components).map(([_, _]) =>
             (0, _.jsx)(
               "li",
               {
@@ -1800,15 +1768,8 @@
         });
       }
       function _(_) {
-        const {
-            name: _,
-            depotID: __webpack_require__,
-            checked: _,
-            setChecked: _,
-          } = _,
-          _ =
-            (228987 == __webpack_require__ || 228986 == __webpack_require__) &&
-            !_;
+        const { name: _, depotID: _, checked: _, setChecked: _ } = _,
+          _ = (228987 == _ || 228986 == _) && !_;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("input", {
@@ -1816,7 +1777,7 @@
               type: "checkbox",
               checked: _,
               disabled: _,
-              onChange: (_) => _(__webpack_require__, _.currentTarget.checked),
+              onChange: (_) => _(_, _.currentTarget.checked),
             }),
             (0, _.jsx)("label", {
               htmlFor: __webpack_require__.toString(),
@@ -2057,17 +2018,12 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            appID: _,
-            unItemType: __webpack_require__,
-            rgAssetDefinitions: _,
-          } = _,
+        const { appID: _, unItemType: _, rgAssetDefinitions: _ } = _,
           _ = _.useMemo(() => {
             const _ =
-              _._.PARTNER_BASE_URL +
-              `communityitems/ajaxuploadasset/${_}/${__webpack_require__}`;
+              _._.PARTNER_BASE_URL + `communityitems/ajaxuploadasset/${_}/${_}`;
             return new _(_, !0, _);
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         return (0, _.jsx)("div", {
           children: (0, _.jsx)(_._, {
             elOverrideDragAndDropText: (0, _._)(
@@ -2079,7 +2035,7 @@
               var _, _;
               _.some((_) => _.bSuccess) &&
                 ((_ = _),
-                (_ = __webpack_require__),
+                (_ = _),
                 _._.invalidateQueries({
                   queryKey: _(_, _),
                 }));
@@ -2227,20 +2183,16 @@
           },
         ],
         _ = _.createContext(null),
-        _ = ({
-          communityItem: _,
-          assetDefs: _,
-          children: __webpack_require__,
-        }) =>
+        _ = ({ communityItem: _, assetDefs: _, children: _ }) =>
           (0, _.jsx)(_.Provider, {
             value: {
               communityItem: _,
               assetDefs: _,
             },
-            children: __webpack_require__,
+            children: _,
           });
       function _(_) {
-        const { appID: _, unItemType: __webpack_require__ } = _,
+        const { appID: _, unItemType: _ } = _,
           _ = (function (_, _) {
             const _ = (0, _._)({
               queryKey: _(_, _),
@@ -2263,7 +2215,7 @@
               initialData: (0, _._)("item_def", "application_config"),
             });
             return _.isLoading ? null : _.data;
-          })(_, __webpack_require__);
+          })(_, _);
         if (!_) return null;
         const _ = new _(_),
           _ = 17 === _.ItemClass ? _ : null;
@@ -2357,8 +2309,7 @@
       }
       function _(_) {
         const { assetDef: _ } = _,
-          { communityItem: __webpack_require__, assetDefs: _ } =
-            _.useContext(_);
+          { communityItem: _, assetDefs: _ } = _.useContext(_);
         return (0, _.jsxs)("div", {
           className: _.AssetEntryCtn,
           children: [
@@ -2370,18 +2321,12 @@
               className: _.AssetPreviewCtn,
               children: _.is_video
                 ? (0, _.jsx)(_, {
-                    rgSources: _(
-                      _.asset_type,
-                      __webpack_require__.CommunityItemDef,
-                    ),
-                    unAppID: __webpack_require__.AppID,
+                    rgSources: _(_.asset_type, _.CommunityItemDef),
+                    unAppID: _.AppID,
                   })
                 : (0, _.jsx)(_, {
-                    rgSources: _(
-                      _.asset_type,
-                      __webpack_require__.CommunityItemDef,
-                    ),
-                    unAppID: __webpack_require__.AppID,
+                    rgSources: _(_.asset_type, _.CommunityItemDef),
+                    unAppID: _.AppID,
                   }),
             }),
           ],
@@ -2396,16 +2341,16 @@
         });
       }
       function _(_) {
-        const { rgSources: _, unAppID: __webpack_require__ } = _;
+        const { rgSources: _, unAppID: _ } = _;
         return _.length
           ? (0, _.jsx)("img", {
               className: _.AssetPreview,
-              src: _(__webpack_require__, _[0]),
+              src: _(_, _[0]),
             })
           : (0, _.jsx)(_, {});
       }
       function _(_) {
-        const { rgSources: _, unAppID: __webpack_require__ } = _,
+        const { rgSources: _, unAppID: _ } = _,
           _ = _.useRef(void 0);
         if (
           (_.useEffect(() => {
@@ -2418,7 +2363,7 @@
           (0, _.jsx)(
             "source",
             {
-              src: _(__webpack_require__, _),
+              src: _(_, _),
               type: (0, _._)(_),
             },
             `video_${_}`,
@@ -2438,7 +2383,7 @@
       function _(_) {
         const {
             unAppID: _,
-            bShowSteamChina: __webpack_require__,
+            bShowSteamChina: _,
             bHasCompletedContentSurvey: _,
           } = _,
           _ = {
@@ -2449,12 +2394,12 @@
             if (!_ || _.isLoading || !_.data) return ["", "", !1];
             let _ = [..._.data.restricted_countries];
             return (
-              __webpack_require__ || (_ = _.filter((_) => "XC" !== _)),
+              _ || (_ = _.filter((_) => "XC" !== _)),
               _.data.no_restrictions
                 ? ["", "", !1]
                 : [_?.join(", "), _.data.allowed_countries?.join(", "), !_]
             );
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         return _.length || _.length
           ? (0, _.jsxs)(_.Fragment, {
               children: [
@@ -2889,7 +2834,7 @@
       (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
       const _ = new _();
       function _(_ = 1) {
-        const [_, __webpack_require__] = _.useState(() => _()),
+        const [_, _] = _.useState(() => _()),
           _ = (0, _._)("useTimeNowWithOverride"),
           _ = _.useCallback(() => {
             _.token.reason || __webpack_require__(_());

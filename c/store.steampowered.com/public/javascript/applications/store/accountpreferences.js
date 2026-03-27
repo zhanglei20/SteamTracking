@@ -535,14 +535,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, closeModal: __webpack_require__ } = _,
+        const { _: _, closeModal: _ } = _,
           _ = _.useCallback(() => {
             _.Get().DeleteHardware(_.hardware_id), __webpack_require__();
-          }, [__webpack_require__, _.hardware_id]);
+          }, [_, _.hardware_id]);
         return (0, _.jsx)(_._, {
           bDisableBackgroundDismiss: !0,
           strTitle: (0, _._)("#SavedHardware_Delete_Confirm_Title"),
-          onCancel: __webpack_require__,
+          onCancel: _,
           onOK: _,
           strOKButtonText: (0, _._)("#SavedHardware_Delete"),
           children: (0, _._)(
@@ -552,16 +552,16 @@
         });
       }
       function _(_) {
-        const { _: _, closeModal: __webpack_require__ } = _,
+        const { _: _, closeModal: _ } = _,
           [_, _] = _.useState(_.friendly_name),
           _ = _.useCallback(() => {
             _.Get().RenameHardware(_.hardware_id, _.trim()),
               __webpack_require__();
-          }, [_, __webpack_require__, _.hardware_id]);
+          }, [_, _, _.hardware_id]);
         return (0, _.jsx)(_._, {
           bDisableBackgroundDismiss: !0,
           strTitle: (0, _._)("#SavedHardware_Rename_Confirm_Title"),
-          onCancel: __webpack_require__,
+          onCancel: _,
           onOK: _,
           bOKDisabled: 0 == _.trim().length,
           strOKButtonText: (0, _._)("#SavedHardware_Rename"),
@@ -1637,11 +1637,7 @@
         });
       }
       function _(_) {
-        const {
-          appStoreItem: _,
-          strAppName: __webpack_require__,
-          nAppID: _,
-        } = _;
+        const { appStoreItem: _, strAppName: _, nAppID: _ } = _;
         let _ = _?.GetDeveloperNames()?.length
             ? _.GetDeveloperNames()[0]
             : null,
@@ -1666,7 +1662,7 @@
                 children: [
                   (0, _.jsx)("div", {
                     className: _().AppName,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                   _ &&
                     (0, _.jsx)("div", {
@@ -1720,11 +1716,11 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)(_, {
+        const [_, _] = (0, _._)(_, {
           include_basic_info: !0,
           include_assets: !0,
         });
-        return _ && 3 == __webpack_require__ ? _ : null;
+        return _ && 3 == _ ? _ : null;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
@@ -2012,12 +2008,12 @@
         });
       });
       function _(_) {
-        const { rgDevices: _, elHeader: __webpack_require__ } = _;
+        const { rgDevices: _, elHeader: _ } = _;
         return 0 == _.length
           ? null
           : (0, _.jsxs)("div", {
               className: _.DeviceGroup,
-              children: [__webpack_require__ && __webpack_require__, _],
+              children: [_ && _, _],
             });
       }
       function _(_) {
@@ -2037,7 +2033,7 @@
       function _(_) {
         const {
             device: _,
-            bActiveNow: __webpack_require__,
+            bActiveNow: _,
             bCurrentDevice: _,
             strActiveCountry: _,
             className: _,
@@ -2097,11 +2093,7 @@
         return (0, _.jsxs)(
           _._,
           {
-            className: (0, _._)(
-              _.DeviceContainer,
-              __webpack_require__ && _.ActiveDevice,
-              _,
-            ),
+            className: (0, _._)(_.DeviceContainer, _ && _.ActiveDevice, _),
             navRef: _,
             onActivate: () => _(!_),
             children: [
@@ -2158,7 +2150,7 @@
                   }),
                   (0, _.jsx)(_, {
                     device: _,
-                    bActiveNow: __webpack_require__,
+                    bActiveNow: _,
                     msgTwoFactorStatus: _ && _,
                   }),
                   _ &&
@@ -2173,16 +2165,12 @@
         );
       }
       function _(_) {
-        const {
-          device: _,
-          bActiveNow: __webpack_require__,
-          msgTwoFactorStatus: _,
-        } = _;
+        const { device: _, bActiveNow: _, msgTwoFactorStatus: _ } = _;
         return _?.state > 0
           ? (0, _.jsx)(_, {
               msgTwoFactorUsage: _.usages?.length > 0 ? _.usages[0] : null,
             })
-          : __webpack_require__
+          : _
             ? null
             : (0, _.jsx)(_, {
                 device: _,
@@ -2367,7 +2355,7 @@
         }
       }
       function _(_) {
-        const { device: _, bHasAuthenticator: __webpack_require__ } = _,
+        const { device: _, bHasAuthenticator: _ } = _,
           _ = 5 == _.effective_token_state;
         let _ = null;
         if (2 == _.platform_type)
@@ -2414,7 +2402,7 @@
             : (0, _.jsx)(_.oEi, {
                 className: _.DeviceLogo,
               });
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)("div", {
               className: _.DeviceLogoBoundingBox,
               children: [
@@ -2600,7 +2588,7 @@
         });
       }
       function _(_) {
-        const { msgTwoFactorStatus: _, strFaqUrl: __webpack_require__ } = _,
+        const { msgTwoFactorStatus: _, strFaqUrl: _ } = _,
           _ = _.Get(),
           _ = _(_),
           _ = _(),
@@ -2681,7 +2669,7 @@
                       (0, _.jsx)("div", {
                         className: _.RightAligned,
                         children: (0, _.jsx)(_._, {
-                          href: __webpack_require__,
+                          href: _,
                           target: "_blank",
                           children: (0, _._)(
                             "#accountpreferences_account_security_view_faq",
@@ -2945,26 +2933,26 @@
         });
       }
       function _(_) {
-        const { strLabel: _, strText: __webpack_require__ } = _;
+        const { strLabel: _, strText: _ } = _;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("span", {
               className: _.AccountDetailLabel,
               children: _,
             }),
-            !!__webpack_require__ &&
+            !!_ &&
               (0, _.jsx)("span", {
-                children: __webpack_require__,
+                children: _,
               }),
           ],
         });
       }
       function _(_) {
-        const { strLabel: _, href: __webpack_require__, target: _ } = _;
+        const { strLabel: _, href: _, target: _ } = _;
         return (0, _.jsx)("div", {
           children: (0, _.jsx)(_._, {
             className: _.AccountActionButton,
-            href: __webpack_require__,
+            href: _,
             target: _,
             children: _,
           }),

@@ -1220,12 +1220,12 @@
           const {
             appid: _,
             clanSteamID: _,
-            announcementGID: __webpack_require__,
+            announcementGID: _,
             partnerEventStore: _,
             additionalParams: _,
           } = this.props;
           _.LoadAdjacentPartnerEventsByAnnouncement(
-            __webpack_require__,
+            _,
             _,
             _,
             0,
@@ -1270,7 +1270,7 @@
         }
         render() {
           const { bShowOnlyInitialEvent: _ } = this.props,
-            { bLoading: _, eventModel: __webpack_require__ } = this.state;
+            { bLoading: _, eventModel: _ } = this.state;
           if (_)
             return (0, _.jsx)(_._, {
               active: !0,
@@ -1295,16 +1295,12 @@
           } = this.props;
           let _;
           _._.IN_CLIENT &&
-            __webpack_require__?.appid &&
+            _?.appid &&
             (_._.Get().HintLoad(),
-            _._.Get().BOwnsApp(__webpack_require__.appid) &&
-              (_ = (_) =>
-                (0, _._)(
-                  _,
-                  "steam://nav/games/details/" + __webpack_require__.appid,
-                )));
+            _._.Get().BOwnsApp(_.appid) &&
+              (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
           const _ = (0, _.jsx)(_._, {
-            initialEvent: __webpack_require__,
+            initialEvent: _,
             appid: _,
             clanSteamID: _,
             partnerEventStore: _,
@@ -1378,7 +1374,7 @@
       const _ = (0, _._)((_) => {
           const {
               clanAccountID: _,
-              gidAnnouncement: __webpack_require__,
+              gidAnnouncement: _,
               partnerEventStore: _,
               trackingLocation: _,
               bViewAllShowInfiniteScroll: _,
@@ -1399,7 +1395,7 @@
                   const _ = _._.InitFromClanID(_);
                   await _._.LoadClanInfoForClanSteamID(_);
                   let _ = await _.LoadAdjacentPartnerEventsByAnnouncement(
-                    __webpack_require__,
+                    _,
                     _,
                     null,
                     4,
@@ -1411,9 +1407,9 @@
                   );
                   if (!_.token.reason) {
                     _ = _ || [];
-                    let _ = _.filter(
-                      (_) => _.GetAnnouncementGID() != __webpack_require__,
-                    ).map((_) => _.AnnouncementGID);
+                    let _ = _.filter((_) => _.GetAnnouncementGID() != _).map(
+                      (_) => _.AnnouncementGID,
+                    );
                     _._(_);
                     const _ = _.slice(0, 3)
                       .map((_) => _.GetClanEventFromAnnouncementGID(_))
@@ -1421,11 +1417,8 @@
                     if ((_(_), _(!1), _)) {
                       let _ = _._.Get().GetTracker(),
                         _ = !1;
-                      if (_.BHasClanAnnouncementGID(__webpack_require__)) {
-                        let _ =
-                          _.GetClanEventFromAnnouncementGID(
-                            __webpack_require__,
-                          );
+                      if (_.BHasClanAnnouncementGID(_)) {
+                        let _ = _.GetClanEventFromAnnouncementGID(_);
                         _ &&
                           _.BIsPartnerEvent() &&
                           _.BIsVisibleEvent() &&
@@ -1453,7 +1446,7 @@
                   _.current && _.current("PartnerEventRow: unmounting");
                 }
               ),
-              [_, __webpack_require__, _, _],
+              [_, _, _, _],
             ),
             _)
           )
@@ -1528,7 +1521,7 @@
       function _(_) {
         const {
             event: _,
-            imageURLOverride: __webpack_require__,
+            imageURLOverride: _,
             bShowAssociatedApp: _,
             langOverride: _,
             onClick: _,
@@ -1538,11 +1531,11 @@
           _ = (0, _._)(_.appid),
           [_, _, _, _, _, _] = (0, _._)(() => {
             const _ = _ || (0, _._)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.full);
             return [
               _,
@@ -1665,7 +1658,7 @@
         );
       }
       function _(_) {
-        const { appid: _, bHidePrice: __webpack_require__ } = _,
+        const { appid: _, bHidePrice: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -1694,7 +1687,7 @@
                   alt: _.name,
                 }),
               }),
-              Boolean(!__webpack_require__ && !_.is_free) &&
+              Boolean(!_ && !_.is_free) &&
                 (0, _.jsxs)("span", {
                   className: (0, _._)(
                     _().AppCapsulePrice,
@@ -1724,18 +1717,14 @@
         });
       }
       function _(_) {
-        const {
-            event: _,
-            imageURLOverride: __webpack_require__,
-            onClick: _,
-          } = _,
+        const { event: _, imageURLOverride: _, onClick: _ } = _,
           _ = (0, _._)(_.appid),
           _ = (0, _._)(_._.LANGUAGE),
           [_, _, _, _, _] = (0, _._)(() =>
             _
               ? [
-                  void 0 !== __webpack_require__
-                    ? __webpack_require__
+                  void 0 !== _
+                    ? _
                     : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
                   _.GetNameWithFallback(_),
                   _.GetCategoryAsString(),

@@ -21,12 +21,7 @@
         });
       }
       const _ = _.forwardRef(function (_, _) {
-        const {
-            onLeave: __webpack_require__,
-            onEnter: _,
-            options: _,
-            ..._
-          } = _,
+        const { onLeave: _, onEnter: _, options: _, ..._ } = _,
           _ = (0, _._)(_, _.options),
           _ = (0, _._)(_, _);
         return (0, _.jsx)("div", {
@@ -1139,9 +1134,9 @@
         }
       }
       function _(_) {
-        const { video: _, children: __webpack_require__ } = _;
+        const { video: _, children: _ } = _;
         return (0, _._)("youtube")
-          ? __webpack_require__
+          ? _
           : (0, _.jsx)("a", {
               href: `https://www.youtube.com/watch?v=${_}`,
               children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),

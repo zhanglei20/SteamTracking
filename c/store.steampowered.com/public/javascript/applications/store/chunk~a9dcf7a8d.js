@@ -120,129 +120,67 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 19764, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 19764, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 38110, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 38110, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24245, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 24245, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83527, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83527, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 38713, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 38713, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 38602, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 38602, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 32640, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 32640, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 37803, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 37803, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 38968, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 38968, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 28678, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 28678, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 19596, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 19596, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72521, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 72521, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 39008, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 39008, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98096, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98096, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 39367, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 39367, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27903, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27903, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 4759, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 4759, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84936, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84936, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 95937, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 95937, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 49797, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 49797, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 37323, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 37323, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 42489, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 42489, 19))),
         (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 31427, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 31427, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 93191, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 93191, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51208, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51208, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 65465, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 65465, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75119, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75119, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21390, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21390, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 46032, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46032, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 76534, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 76534, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 78159, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 78159, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -636,7 +574,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.forwardRef)(function (_, _) {
-        let { children: __webpack_require__, ..._ } = _,
+        let { children: _, ..._ } = _,
           _ = (0, _._)((_) => {
             if (!_) return;
             let _ = (_) => {
@@ -660,7 +598,7 @@
         return (0, _.jsx)("div", {
           ref: _,
           ..._,
-          children: __webpack_require__,
+          children: _,
         });
       });
       var _ = __webpack_require__("chunkid"),
@@ -670,12 +608,7 @@
       const _ = 200,
         _ = 5e3;
       function _(_) {
-        let {
-            player: _,
-            category: __webpack_require__,
-            title: _,
-            focus: _,
-          } = _,
+        let { player: _, category: _, title: _, focus: _ } = _,
           _ = (0, _.useRef)(null),
           _ = (0, _.useRef)(null),
           [_, _] = (0, _._)(_, _._),
@@ -767,7 +700,7 @@
               (0, _.jsx)(_, {
                 player: _,
                 controlsVisible: _,
-                category: __webpack_require__,
+                category: _,
                 title: _,
               }),
               (0, _.jsx)("div", {
@@ -779,13 +712,8 @@
         });
       }
       function _(_) {
-        let {
-            player: _,
-            controlsVisible: __webpack_require__,
-            category: _,
-            title: _,
-          } = _,
-          _ = (0, _._)("once", _, __webpack_require__);
+        let { player: _, controlsVisible: _, category: _, title: _ } = _,
+          _ = (0, _._)("once", _, _);
         if (0 == _ || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return (0, _.jsx)("div", {
@@ -797,7 +725,7 @@
         });
       }
       function _(_) {
-        let { player: _, enabled: __webpack_require__ } = _,
+        let { player: _, enabled: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_, "fullscreen"),
           {
@@ -855,7 +783,7 @@
               fnRemoveEvent: _,
             };
           })(_, _),
-          _ = (0, _._)(_().BackgroundClick, __webpack_require__ && _().Enabled);
+          _ = (0, _._)(_().BackgroundClick, _ && _().Enabled);
         return (0, _.jsx)("div", {
           ref: _,
           className: _,
@@ -873,11 +801,11 @@
         });
       }
       function _(_) {
-        let { event: _, removeEvent: __webpack_require__ } = _,
+        let { event: _, removeEvent: _ } = _,
           _ = _.nID,
           _ = (0, _.useCallback)(() => {
             __webpack_require__(_);
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _ = null;
         return (
           _.eState == _.Play
@@ -897,14 +825,11 @@
       }
       function _(_) {
         let _,
-          { player: __webpack_require__, refControlsHover: _ } = _,
-          [_, _, _, _] = (0, _._)(__webpack_require__),
+          { player: _, refControlsHover: _ } = _,
+          [_, _, _, _] = (0, _._)(_),
           [_, _] = (function (_) {
-            let [_, __webpack_require__] = (0, _.useState)(!1),
-              _ = (0, _.useCallback)(
-                () => __webpack_require__(!0),
-                [__webpack_require__],
-              );
+            let [_, _] = (0, _.useState)(!1),
+              _ = (0, _.useCallback)(() => __webpack_require__(!0), [_]);
             return (
               (0, _._)(_, "mouseleave", (_) => {
                 _.target == _.currentTarget && __webpack_require__(!1);
@@ -953,7 +878,7 @@
       const _ = 3e3,
         _ = 1e3;
       function _(_) {
-        let { player: _, category: __webpack_require__, title: _ } = _,
+        let { player: _, category: _, title: _ } = _,
           _ = (0, _.useRef)(null),
           [_, _] = (function (_, _, _) {
             let [_, _] = (function (_, _) {
@@ -1002,7 +927,7 @@
           _ = (0, _._)(_, _, _);
         _ = _ || _;
         let [_, _] = (function (_) {
-            let [_, __webpack_require__] = (0, _.useState)(null),
+            let [_, _] = (0, _.useState)(null),
               _ = (0, _.useRef)(!1),
               _ = (0, _.useRef)(null),
               _ = _.useCallback(
@@ -1014,7 +939,7 @@
                     (_.current = _),
                     __webpack_require__(_);
                 },
-                [_, __webpack_require__, _],
+                [_, _, _],
               );
             return [_, _];
           })(_),
@@ -1078,7 +1003,7 @@
               (0, _.jsx)(_, {
                 player: _,
                 controlsVisible: _,
-                category: __webpack_require__,
+                category: _,
                 title: _,
               }),
               (0, _.jsx)("div", {
@@ -1090,18 +1015,13 @@
         });
       }
       function _(_) {
-        let {
-            player: _,
-            controlsVisible: __webpack_require__,
-            category: _,
-            title: _,
-          } = _,
-          _ = (0, _._)("standard", _, __webpack_require__);
+        let { player: _, controlsVisible: _, category: _, title: _ } = _,
+          _ = (0, _._)("standard", _, _);
         if (0 == _ || !_) return null;
         let _ = (0, _._)(
           _().TitleRow,
-          _ && !__webpack_require__ && _().FadeIn,
-          __webpack_require__ && _().ControlsVisible,
+          _ && !_ && _().FadeIn,
+          _ && _().ControlsVisible,
         );
         return (0, _.jsx)("div", {
           className: _,
@@ -1118,7 +1038,7 @@
       }
       function _(_) {
         let { thumbnail: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
           _ = (0, _.useCallback)(
             (_) => {
               if (!_) return void _(null);
@@ -1136,9 +1056,9 @@
         let _ = {
           display: "none",
         };
-        if (__webpack_require__) {
-          let _ = __webpack_require__.width / _.nThumbnailWidth,
-            _ = __webpack_require__.height / _.nThumbnailHeight,
+        if (_) {
+          let _ = _.width / _.nThumbnailWidth,
+            _ = _.height / _.nThumbnailHeight,
             _ = Math.min(_, _);
           _ = {
             width: _.nThumbnailWidth * _ + "px",
@@ -1178,18 +1098,18 @@
       const _ = 3e3,
         _ = 1500;
       function _(_) {
-        let { player: _, category: __webpack_require__, title: _ } = _,
+        let { player: _, category: _, title: _ } = _,
           [_, _] = (function (_) {
-            let [_, __webpack_require__] = (0, _._)(),
+            let [_, _] = (0, _._)(),
               _ = (0, _.useRef)(!0),
               _ = (0, _._)(_);
             (0, _.useEffect)(() => {
               let _ = _.current;
               (_.current = !1), (!_ || _) && __webpack_require__(!0, _ ? 0 : _);
-            }, [_, __webpack_require__, _]);
+            }, [_, _, _]);
             let _ = (0, _.useCallback)(() => {
               __webpack_require__(!0, _);
-            }, [__webpack_require__]);
+            }, [_]);
             return [_, _];
           })(_, _._),
           _ = (0, _._)(_),
@@ -1297,7 +1217,7 @@
               (0, _.jsx)(_, {
                 player: _,
                 controlsVisible: _,
-                category: __webpack_require__,
+                category: _,
                 title: _,
               }),
               (0, _.jsx)("div", {
@@ -1309,13 +1229,8 @@
         });
       }
       function _(_) {
-        let {
-            player: _,
-            controlsVisible: __webpack_require__,
-            category: _,
-            title: _,
-          } = _,
-          _ = (0, _._)("standard", _, __webpack_require__);
+        let { player: _, controlsVisible: _, category: _, title: _ } = _,
+          _ = (0, _._)("standard", _, _);
         if (0 == _ || !_) return null;
         let _ = (0, _._)(_().TitleRow, _ && _().ShowControls);
         return (0, _.jsx)("div", {
@@ -1357,7 +1272,7 @@
       function _(_) {
         let {
           ref: _,
-          dashManifests: __webpack_require__,
+          dashManifests: _,
           hlsManifest: _,
           screenshot: _,
           forcePause: _,
@@ -1400,7 +1315,7 @@
             }, [_]),
             [_, _.current]
           );
-        })(__webpack_require__, _, _, _, _, _);
+        })(_, _, _, _, _, _);
         !(function (_, _) {
           (0, _.useImperativeHandle)(
             _,
@@ -1527,28 +1442,18 @@
         });
       }
       function _(_) {
-        let {
-            player: _,
-            uiMode: __webpack_require__,
-            category: _,
-            title: _,
-            focus: _,
-          } = _,
+        let { player: _, uiMode: _, category: _, title: _, focus: _ } = _,
           _ = (0, _._)();
         return (
-          (__webpack_require__ && "auto" != __webpack_require__) ||
-            (__webpack_require__ = (0, _._)()
-              ? "touch"
-              : _
-                ? "gamepad"
-                : "desktop"),
-          "touch" == __webpack_require__
+          (_ && "auto" != _) ||
+            (_ = (0, _._)() ? "touch" : _ ? "gamepad" : "desktop"),
+          "touch" == _
             ? (0, _.jsx)(_, {
                 player: _,
                 category: _,
                 title: _,
               })
-            : "gamepad" == __webpack_require__
+            : "gamepad" == _
               ? (0, _.jsx)(_, {
                   player: _,
                   category: _,
@@ -1564,7 +1469,7 @@
       }
       function _(_) {
         let { player: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)("norender"),
+          [_, _] = (0, _.useState)("norender"),
           _ = (0, _._)(() => _.IsBuffering());
         (0, _.useEffect)(() => {
           if (!_) return;
@@ -1579,11 +1484,8 @@
             let _ = window.setTimeout(() => _("norender"), 300);
             return () => window.clearTimeout(_);
           }, [_, _]);
-        let _ = "norender" != __webpack_require__,
-          _ = (0, _._)(
-            _().LoadingThrobber,
-            "fadein" == __webpack_require__ && _().FadeIn,
-          );
+        let _ = "norender" != _,
+          _ = (0, _._)(_().LoadingThrobber, "fadein" == _ && _().FadeIn);
         return (0, _.jsx)("div", {
           className: _,
           children:
@@ -1595,7 +1497,7 @@
         });
       }
       function _(_) {
-        let { player: _, screenshot: __webpack_require__ } = _,
+        let { player: _, screenshot: _ } = _,
           _ = (0, _._)(() => _.GetUserInputNeeded()),
           _ = (0, _._)(_, _),
           [_, _] = (0, _.useState)(!1),
@@ -1613,8 +1515,7 @@
           return null;
         let _ = {};
         return (
-          __webpack_require__ &&
-            (_.backgroundImage = `url('${__webpack_require__}')`),
+          _ && (_.backgroundImage = `url('${_}')`),
           (0, _.jsx)("div", {
             style: _,
             className: _().UserInputNeeded,
@@ -1639,7 +1540,7 @@
       function _(_) {
         let {
             autoplayEnabled: _,
-            setAutoplayEnabled: __webpack_require__,
+            setAutoplayEnabled: _,
             playerVolume: _,
             setPlayerVolume: _,
             audioMuted: _,
@@ -1649,13 +1550,13 @@
           _ = (0, _.useMemo)(
             () => ({
               m_bAutoplayEnabled: _,
-              m_fnSetAutoplayEnabled: __webpack_require__,
+              m_fnSetAutoplayEnabled: _,
               m_nPlayerVolume: _,
               m_fnSetPlayerVolume: _,
               m_bAudioMuted: _,
               m_fnSetAudioMuted: _,
             }),
-            [_, __webpack_require__, _, _, _, _],
+            [_, _, _, _, _, _],
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -1722,8 +1623,8 @@
         );
       }
       function _(_, _) {
-        let [__webpack_require__, _] = (function (_) {
-          let [_, __webpack_require__] = _(),
+        let [_, _] = (function (_) {
+          let [_, _] = _(),
             _ = (0, _.useRef)(void 0),
             _ = (0, _.useRef)(!1),
             _ = (0, _.useRef)({
@@ -1747,7 +1648,7 @@
                   ? __webpack_require__(!0, 0)
                   : __webpack_require__(!0, _);
               },
-              [_, _, __webpack_require__],
+              [_, _, _],
             ),
             _ =
               (_(_),
@@ -1830,7 +1731,7 @@
             },
           ];
         })(_);
-        return [__webpack_require__ || _, _];
+        return [_ || _, _];
       }
       function _(_) {
         return "touch" == _.pointerType ? _ : _;
@@ -1904,10 +1805,7 @@
         );
       }
       function _(_) {
-        let [_, __webpack_require__] = (0, _._)(() => [
-            _.GetMuted(),
-            _.GetVolume(),
-          ]),
+        let [_, _] = (0, _._)(() => [_.GetMuted(), _.GetVolume()]),
           _ = (0, _.useCallback)(
             (_) => {
               _.SetMute(!1), _.SetVolume(_);
@@ -1915,7 +1813,7 @@
             [_],
           ),
           _ = (0, _.useCallback)(() => _.SetMute(!_), [_, _]);
-        return [_, __webpack_require__, _, _];
+        return [_, _, _, _];
       }
       function _(_) {
         return (0, _._)(() => [
@@ -1998,16 +1896,11 @@
         _ = 130,
         _ = !1,
         _ = _.forwardRef(function (_, _) {
-          let {
-              tooltip: __webpack_require__,
-              onActivate: _,
-              size: _,
-              children: _,
-            } = _,
+          let { tooltip: _, onActivate: _, size: _, children: _ } = _,
             _ = (0, _._)(),
             _ = (0, _._)(_);
           return (0, _.jsx)(_._, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             direction: "top",
             usePointerEvents: !0,
             bDisabled: _,
@@ -2022,8 +1915,8 @@
         });
       function _(_) {
         let { player: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_),
-          _ = (0, _._)(__webpack_require__, !1),
+          [_, _] = (0, _._)(_),
+          _ = (0, _._)(_, !1),
           _ = (0, _._)(_, !1);
         return (0, _.jsxs)("div", {
           className: _().PlaybackTime,
@@ -2077,13 +1970,13 @@
       }
       function _(_) {
         let { player: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(() => _(!1), [_]),
           _ = (0, _.useRef)(null),
           _ = (0, _.useCallback)(() => {
             _((_) => !_);
           }, [_]),
-          _ = (0, _._)(_().SettingsButton, __webpack_require__ && _().Rotated);
+          _ = (0, _._)(_().SettingsButton, _ && _().Rotated);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -2094,7 +1987,7 @@
                 className: _,
               }),
             }),
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)(_, {
                 player: _,
                 refButton: _,
@@ -2104,7 +1997,7 @@
         });
       }
       function _(_) {
-        let { player: _, refButton: __webpack_require__, onClose: _ } = _,
+        let { player: _, refButton: _, onClose: _ } = _,
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)({
             nLeft: 0,
@@ -2117,7 +2010,7 @@
               if (((_.current = _), !_)) return;
               let _ = (_) => {
                 let _ = (0, _._)(_, _.target),
-                  _ = (0, _._)(__webpack_require__.current, _.target);
+                  _ = (0, _._)(_.current, _.target);
                 _ || _ || _();
               };
               return _.ownerDocument.defaultView
@@ -2129,15 +2022,14 @@
                     ))
                 : void 0;
             },
-            [_, _, __webpack_require__],
+            [_, _, _],
           );
         if (
           ((0, _.useLayoutEffect)(() => {
-            if (!_.current || !__webpack_require__.current || !_.current)
-              return;
+            if (!_.current || !_.current || !_.current) return;
             let _ = _.current.getBoundingClientRect(),
               _ = _.current.getBoundingClientRect(),
-              _ = __webpack_require__.current.getBoundingClientRect(),
+              _ = _.current.getBoundingClientRect(),
               _ = _.right - _.left,
               _ = _.right - _.left,
               _ = _.left - _.left + _ / 2,
@@ -2149,7 +2041,7 @@
               nLeft: _,
               nTop: _,
             });
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           !_.current)
         )
           return null;
@@ -2215,9 +2107,9 @@
         });
       }
       function _(_) {
-        let { onClick: _, checked: __webpack_require__, children: _ } = _,
+        let { onClick: _, checked: _, children: _ } = _,
           [_, _] = (0, _._)(),
-          _ = (0, _._)(_().MenuItem, __webpack_require__ && _().Checked),
+          _ = (0, _._)(_().MenuItem, _ && _().Checked),
           _ = "#2d73ff",
           _ = "#00ccff";
         return (
@@ -2228,7 +2120,7 @@
             ..._,
             children: [
               _,
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)(_.X4B, {
                   color: _,
                   highlightColor: _,
@@ -2238,15 +2130,11 @@
         );
       }
       function _(_) {
-        let {
-            player: _,
-            showHoverThumb: __webpack_require__,
-            onTouchSeek: _,
-          } = _,
+        let { player: _, showHoverThumb: _, onTouchSeek: _ } = _,
           _ = (0, _.useRef)(null),
           [_, _, _] = (0, _._)(_),
           [_, _] = (function (_, _) {
-            let [__webpack_require__, _] = (0, _.useState)(null),
+            let [_, _] = (0, _.useState)(null),
               _ = (0, _.useRef)(null),
               _ = (0, _.useRef)(null),
               _ = (0, _.useCallback)(
@@ -2321,7 +2209,7 @@
                 onPointerDown: _,
                 onLostPointerCapture: _,
               },
-              __webpack_require__,
+              _,
             ];
           })(_, _),
           _ = (0, _._)((_) => {
@@ -2404,17 +2292,13 @@
             (0, _.jsx)(_, {
               refTimeline: _,
               hoverState: _,
-              showHoverThumb: __webpack_require__,
+              showHoverThumb: _,
             }),
           ],
         });
       }
       function _(_) {
-        let {
-            refTimeline: _,
-            hoverState: __webpack_require__,
-            showHoverThumb: _,
-          } = _,
+        let { refTimeline: _, hoverState: _, showHoverThumb: _ } = _,
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)({
             nHoverLeft: 0,
@@ -2422,16 +2306,12 @@
           });
         if (
           ((0, _.useLayoutEffect)(() => {
-            if (!__webpack_require__ || !_.current || !_.current) return;
+            if (!_ || !_.current || !_.current) return;
             let _ = _.current.getBoundingClientRect(),
               _ = _.current.getBoundingClientRect(),
               _ = _.right - _.left,
               _ = _.right - _.left,
-              _ = _._(
-                __webpack_require__.nTickOffset - _ / 2,
-                0 + _,
-                _ - _ - _,
-              ),
+              _ = _._(_.nTickOffset - _ / 2, 0 + _, _ - _ - _),
               _ = (0, _._)(
                 _.current.ownerDocument.documentElement,
                 _.current,
@@ -2450,8 +2330,8 @@
                     bFitsInParent: _,
                   },
             );
-          }, [__webpack_require__, _, _, _]),
-          !__webpack_require__)
+          }, [_, _, _, _]),
+          !_)
         )
           return null;
         let _,
@@ -2459,7 +2339,7 @@
             left: _.nHoverLeft,
             visibility: _.bFitsInParent ? "visible" : "hidden",
           },
-          _ = _ ? __webpack_require__.thumbnail : null;
+          _ = _ ? _.thumbnail : null;
         if (_) {
           let _ = _ / _.nThumbnailHeight;
           _ = {
@@ -2483,7 +2363,7 @@
               }),
             (0, _.jsx)("span", {
               className: _().HoverTime,
-              children: (0, _._)(__webpack_require__.nPlaybackSeconds, !0),
+              children: (0, _._)(_.nPlaybackSeconds, !0),
             }),
           ],
         });
@@ -2524,14 +2404,10 @@
       }
       function _(_) {
         let { player: _ } = _,
-          [__webpack_require__, _, _, _] = (0, _._)(_),
-          _ = __webpack_require__
-            ? (0, _.jsx)(_.K9I, {})
-            : (0, _.jsx)(_._3Z, {}),
+          [_, _, _, _] = (0, _._)(_),
+          _ = _ ? (0, _.jsx)(_.K9I, {}) : (0, _.jsx)(_._3Z, {}),
           _ = _._.Localize(
-            __webpack_require__
-              ? "#TrailerPlayer_Unmute_Tooltip"
-              : "#TrailerPlayer_Mute_Tooltip",
+            _ ? "#TrailerPlayer_Unmute_Tooltip" : "#TrailerPlayer_Mute_Tooltip",
           );
         return (0, _.jsx)(_, {
           onActivate: _,
@@ -2554,7 +2430,7 @@
         });
       }
       function _(_) {
-        let { category: _, title: __webpack_require__ } = _,
+        let { category: _, title: _ } = _,
           _ = (0, _._)(_);
         return (0, _.jsxs)("div", {
           className: _().TitleRow,
@@ -2568,7 +2444,7 @@
             }),
             (0, _.jsx)("span", {
               className: _().Title,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
@@ -2703,7 +2579,7 @@
       function _(_) {
         const {
             name: _,
-            trailerCategory: __webpack_require__,
+            trailerCategory: _,
             trailerDisplay: _,
             mouseOver: _,
           } = _,
@@ -2718,13 +2594,11 @@
             const _ = setTimeout(() => _(!1), 3e3);
             return () => clearTimeout(_);
           }, [_, _]),
-          null == __webpack_require__ || 0 == _)
+          null == _ || 0 == _)
         )
           return;
         const _ =
-          1 == _
-            ? (0, _._)("#StoreTrailer_Title_TrailerPreview")
-            : (0, _._)(__webpack_require__);
+          1 == _ ? (0, _._)("#StoreTrailer_Title_TrailerPreview") : (0, _._)(_);
         return (0, _.jsx)("div", {
           className: (0, _._)({
             [_().TrailerTitle]: !0,
@@ -2778,16 +2652,14 @@
       function _(_) {
         let {
             iosVideoFallback: _,
-            supportsTheater: __webpack_require__,
+            supportsTheater: _,
             supportsFullscreen: _,
             children: _,
           } = _,
           _ = (0, _.useRef)(null),
           _ = (0, _.useRef)(null),
           [_, _] = (0, _.useState)("none");
-        (0, _._)("theater" == _),
-          (__webpack_require__ = !!__webpack_require__),
-          (_ = !!_);
+        (0, _._)("theater" == _), (_ = !!_), (_ = !!_);
         let _ = (0, _._)(
             (_) => {
               if (((_.current = _), !_)) return;
@@ -2848,18 +2720,18 @@
             [_],
           );
         (0, _.useEffect)(() => {
-          "theater" != _ || __webpack_require__ || _("none");
-        }, [_, _, __webpack_require__]);
+          "theater" != _ || _ || _("none");
+        }, [_, _, _]);
         let _ = (0, _.useMemo)(
           () => ({
             refFullscreen: _,
             refTheater: _,
             strMode: _,
-            bSupportsTheater: __webpack_require__,
+            bSupportsTheater: _,
             bSupportsFullscreen: _,
             fnSetMode: _,
           }),
-          [_, _, _, __webpack_require__, _, _],
+          [_, _, _, _, _, _],
         );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -2867,13 +2739,13 @@
         });
       }
       function _(_) {
-        let { drop: _, children: __webpack_require__ } = _;
+        let { drop: _, children: _ } = _;
         return _
           ? (0, _.jsx)(_.Provider, {
               value: void 0,
-              children: __webpack_require__,
+              children: _,
             })
-          : __webpack_require__;
+          : _;
       }
       function _() {
         return (0, _.useContext)(_);

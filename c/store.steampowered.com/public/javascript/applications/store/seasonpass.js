@@ -54,9 +54,9 @@
       };
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _._)();
-        return __webpack_require__ && _
+        return _ && _
           ? (0, _.jsx)("div", {
               className: _().StoreItemCtn,
               children: (0, _.jsx)("div", {
@@ -104,7 +104,7 @@
         return new _._(new _._(), 0);
       }
       function _(_) {
-        const { text: _, languageOverride: __webpack_require__ } = _,
+        const { text: _, languageOverride: _ } = _,
           [_] = (0, _.useState)(
             new _._(
               new Map([
@@ -118,7 +118,7 @@
                 ],
               ]),
               _,
-              __webpack_require__ || 0,
+              _ || 0,
             ),
           );
         return (0, _.jsx)(_.Fragment, {
@@ -276,7 +276,7 @@
           : null;
       }
       function _(_) {
-        const { milestone: _, baseGameAppID: __webpack_require__ } = _,
+        const { milestone: _, baseGameAppID: _ } = _,
           _ = _.milestone_desc?.length > 0;
         return (0, _.jsxs)("div", {
           className: _().SeasonPass,
@@ -302,13 +302,13 @@
             _ &&
               (0, _.jsx)(_, {
                 milestone: _,
-                baseGameAppID: __webpack_require__,
+                baseGameAppID: _,
               }),
           ],
         });
       }
       function _(_) {
-        const { milestone: _, baseGameAppID: __webpack_require__ } = _,
+        const { milestone: _, baseGameAppID: _ } = _,
           _ = _._.GetTokenWithFallback(_.milestone_desc),
           _ = _.appid || _.coming_soon_appid;
         return (0, _.jsxs)(_.Fragment, {
@@ -326,7 +326,7 @@
                 Boolean(_.shipped) &&
                   (0, _.jsx)(_, {
                     milestone: _,
-                    baseGameAppID: __webpack_require__,
+                    baseGameAppID: _,
                   }),
               ],
             }),
@@ -376,7 +376,7 @@
       }
       const _ = {};
       function _(_) {
-        const { milestone: _, baseGameAppID: __webpack_require__ } = _;
+        const { milestone: _, baseGameAppID: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -396,14 +396,14 @@
             Boolean(_.event_gid) &&
               (0, _.jsx)(_, {
                 milestone: _,
-                baseGameAppID: __webpack_require__,
+                baseGameAppID: _,
               }),
           ],
         });
       }
       function _(_) {
         const { milestone: _ } = _,
-          [__webpack_require__] = (0, _._)(_.appid, _);
+          [_] = (0, _._)(_.appid, _);
         return (0, _.jsx)("a", {
           href:
             __webpack_require__?.GetStorePageURL() ||
@@ -412,14 +412,14 @@
         });
       }
       function _(_) {
-        const { milestone: _, baseGameAppID: __webpack_require__ } = _,
+        const { milestone: _, baseGameAppID: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(_.event_gid);
         return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("a", {
-                  href: `${_._.STORE_BASE_URL}news/app/${__webpack_require__}/view/${_.event_gid}`,
+                  href: `${_._.STORE_BASE_URL}news/app/${_}/view/${_.event_gid}`,
                   onClick: (_) => {
                     _.preventDefault(), _.stopPropagation(), _(!0);
                   },
@@ -427,7 +427,7 @@
                 }),
                 Boolean(_) &&
                   (0, _.jsx)(_._, {
-                    appid: __webpack_require__,
+                    appid: _,
                     eventModel: _,
                     announcementGID: _.AnnouncementGID,
                     closeModal: () => _(!1),
@@ -439,7 +439,7 @@
               ],
             })
           : (0, _.jsx)("a", {
-              href: `${_._.STORE_BASE_URL}news/app/${__webpack_require__}/view/${_.event_gid}`,
+              href: `${_._.STORE_BASE_URL}news/app/${_}/view/${_.event_gid}`,
               children: (0, _._)("#SeasonPass_ReadEvent"),
             });
       }

@@ -53,13 +53,10 @@
         _ = __webpack_require__("chunkid");
       const _ = new _._(),
         _ = (0, _._)(function (_) {
-          const { bResponsiveHeader: _, notifications: __webpack_require__ } =
-            _;
+          const { bResponsiveHeader: _, notifications: _ } = _;
           _.useEffect(() => {
-            __webpack_require__ &&
-              !_.m_bLoaded &&
-              _.ProcessNewNotificationPayload(__webpack_require__);
-          }, [__webpack_require__]);
+            _ && !_.m_bLoaded && _.ProcessNewNotificationPayload(_);
+          }, [_]);
           const _ = (0, _._)();
           (0, _.useEffect)(() => {
             _.setTransport(_),
@@ -99,10 +96,9 @@
       function _() {
         const _ = _(),
           _ = (0, _._)(),
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
-          _ =
-            null == __webpack_require__ ? void 0 : __webpack_require__.settings;
+          _ = null == _ ? void 0 : _.settings;
         return _.notifications.filter(
           (_) => !(0, _._)(_.type, _, _) && !(0, _._)(_.item),
         );
@@ -168,7 +164,7 @@
       }
       const _ = (_) => {
           var _;
-          const { popupRef: __webpack_require__ } = _,
+          const { popupRef: _ } = _,
             _ = _.useRef(null),
             [_, _] = _.useState(!1);
           _.useEffect(() => {
@@ -191,11 +187,8 @@
             className: _().NotificationsMenu,
             onClick: () => {
               var _;
-              return null ===
-                (_ =
-                  null == __webpack_require__
-                    ? void 0
-                    : __webpack_require__.current) || void 0 === _
+              return null === (_ = null == _ ? void 0 : _.current) ||
+                void 0 === _
                 ? void 0
                 : _.Hide();
             },
@@ -475,7 +468,7 @@
           let {
             onVisibilityChange: _,
             rootMargin: _,
-            trigger: __webpack_require__,
+            trigger: _,
             horizontal: _,
             ..._
           } = this.props;

@@ -129,12 +129,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = ({
-        nPercent: _,
-        size: _ = 120,
-        strokeWidth: __webpack_require__ = 20,
-      }) => {
-        const _ = (_ - __webpack_require__) / 2,
+      const _ = ({ nPercent: _, size: _ = 120, strokeWidth: _ = 20 }) => {
+        const _ = (_ - _) / 2,
           _ = 2 * Math._ * _,
           _ = _ - (_ / 100) * _,
           _ = 100 == _;
@@ -155,7 +151,7 @@
                 _: _ / 2,
                 _: _,
                 stroke: "#0c131d",
-                strokeWidth: __webpack_require__,
+                strokeWidth: _,
                 fill: "none",
               }),
               (0, _.jsx)("circle", {
@@ -163,7 +159,7 @@
                 _: _ / 2,
                 _: _,
                 stroke: "#1a9fff",
-                strokeWidth: __webpack_require__,
+                strokeWidth: _,
                 fill: "none",
                 strokeDasharray: _,
                 strokeDashoffset: _,
@@ -1400,7 +1396,7 @@
       function _(_) {
         const {
             appID: _,
-            bShowAvatars: __webpack_require__,
+            bShowAvatars: _,
             storeItem: _,
             bHideDescription: _,
             bShowCuratorInfo: _,
@@ -1496,12 +1492,12 @@
             enabled: !!_ && _ && _.length > 0,
           }),
           _ = (0, _._)({
-            queryKey: ["PlayerSummaries", _, __webpack_require__],
+            queryKey: ["PlayerSummaries", _, _],
             queryFn: async () => {
               let _ = [],
                 _ = [],
                 _ = [];
-              const _ = __webpack_require__ ? 10 : 1;
+              const _ = _ ? 10 : 1;
               for (
                 let _ = 0;
                 _ < _.data.accountids_recommended?.length && _ < _;
@@ -1648,19 +1644,19 @@
                             header: (0, _._)("#DiscoveryQueue_RecommendedByIR"),
                           }),
                         (0, _.jsx)(_, {
-                          bShowAvatars: __webpack_require__,
+                          bShowAvatars: _,
                           count: _.data?.accountids_recommended?.length,
                           locToken: "#DiscoveryQueue_FriendsRecommended",
                           arrSteamIDs: _.data?.rgRecommendedFriends,
                         }),
                         (0, _.jsx)(_, {
-                          bShowAvatars: __webpack_require__,
+                          bShowAvatars: _,
                           count: _.data?.owns?.length,
                           locToken: "#DiscoveryQueue_FriendsOwned",
                           arrSteamIDs: _.data?.rgOwnedFriends,
                         }),
                         (0, _.jsx)(_, {
-                          bShowAvatars: __webpack_require__,
+                          bShowAvatars: _,
                           count: _.data?.in_wishlist?.length,
                           locToken: "#DiscoveryQueue_FriendsWishlisted",
                           arrSteamIDs: _.data?.rgWishlistFriends,
@@ -1709,8 +1705,8 @@
       }
       function _(_) {
         const { curator: _ } = _,
-          { creatorHome: __webpack_require__ } = (0, _._)(_?.clanAccountID);
-        return _ && __webpack_require__
+          { creatorHome: _ } = (0, _._)(_?.clanAccountID);
+        return _ && _
           ? (0, _.jsx)(_._, {
               href: __webpack_require__.GetCreatorHomeURL(null),
               children: (0, _.jsx)("img", {
@@ -1720,8 +1716,8 @@
           : null;
       }
       function _(_) {
-        const { lifetimePlaytime: _, storeItem: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { lifetimePlaytime: _, storeItem: _ } = _,
+          _ = (0, _._)(_);
         return (0, _.jsx)("div", {
           className: _().SimilarAppCtn,
           children: (0, _.jsx)(_._, {
@@ -1744,18 +1740,13 @@
         });
       }
       function _(_) {
-        const {
-          arrSteamIDs: _,
-          count: __webpack_require__,
-          locToken: _,
-          bShowAvatars: _,
-        } = _;
-        return __webpack_require__
-          ? 1 != __webpack_require__ || _
+        const { arrSteamIDs: _, count: _, locToken: _, bShowAvatars: _ } = _;
+        return _
+          ? 1 != _ || _
             ? (0, _.jsx)(_, {
                 header: (0, _._)(
                   _,
-                  __webpack_require__,
+                  _,
                   (0, _.jsx)("span", {
                     className: _().RelevantTextBold,
                   }),
@@ -1766,7 +1757,7 @@
                   (0, _.jsx)("div", {
                     className: _().FriendAvatarsCtn,
                     children:
-                      1 == __webpack_require__
+                      1 == _
                         ? (0, _.jsx)(_, {
                             steamid: _[0],
                           })
@@ -1787,13 +1778,12 @@
       }
       function _(_) {
         const { steamid: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__ && __webpack_require__.m_bInitialized
+          { data: _ } = (0, _._)(_);
+        return _ && _.m_bInitialized
           ? (0, _.jsx)("span", {
-              "data-miniprofile":
-                "s" + __webpack_require__.m_steamid.ConvertTo64BitString(),
+              "data-miniprofile": "s" + _.m_steamid.ConvertTo64BitString(),
               className: _().RelevantTextBold,
-              children: __webpack_require__.m_strPlayerName,
+              children: _.m_strPlayerName,
             })
           : null;
       }
@@ -1819,20 +1809,20 @@
       }
       function _(_) {
         const { steamid: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__
+          { data: _ } = (0, _._)(_);
+        return _
           ? (0, _.jsxs)(_._, {
               className: _().FriendBlockCtn,
               "data-miniprofile": "s" + _,
               children: [
                 (0, _.jsx)(_._, {
-                  persona: __webpack_require__,
+                  persona: _,
                   size: "Small",
                   statusPosition: "right",
                 }),
                 (0, _.jsx)(_._, {
                   className: _().PersonaStatus,
-                  persona: __webpack_require__,
+                  persona: _,
                   eFriendRelationship: 3,
                   bIsSelf: !1,
                   strNickname: null,
@@ -1845,7 +1835,7 @@
           : null;
       }
       function _(_) {
-        const { children: _, header: __webpack_require__ } = _;
+        const { children: _, header: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().RelevantItem,
           children: [
@@ -1858,7 +1848,7 @@
               children: [
                 (0, _.jsx)("div", {
                   className: _().ReleventText,
-                  children: __webpack_require__,
+                  children: _,
                 }),
                 _,
               ],
@@ -1873,7 +1863,7 @@
       function _(_) {
         const {
             appID: _,
-            nItemHeight: __webpack_require__,
+            nItemHeight: _,
             nItemWidth: _,
             selected: _,
             fnFocused: _,
@@ -1905,7 +1895,7 @@
           return console.warn("Error: missing store item for appid ", _), null;
         const _ = {
           width: _ || void 0,
-          height: __webpack_require__ || void 0,
+          height: _ || void 0,
         };
         return (0, _.jsxs)(_._, {
           "aria-labelledby": (0, _._)(
@@ -1979,7 +1969,7 @@
       function _(_) {
         const {
             appID: _,
-            bShowMinimizedDisplay: __webpack_require__,
+            bShowMinimizedDisplay: _,
             eStoreDiscoveryQueueType: _,
             storePageFilter: _,
             bPreferDemoStorePage: _,
@@ -2041,7 +2031,7 @@
                   _: _.reviewId,
                   children: (0, _.jsx)(_._, {
                     bShowTooltip: !0,
-                    bTruncateTotalReviews: __webpack_require__,
+                    bTruncateTotalReviews: _,
                     _: _,
                   }),
                 }),
@@ -2050,7 +2040,7 @@
                   className: _().AppRelevanceCtn,
                   children: (0, _.jsx)(_, {
                     bHideDescription: _,
-                    bShowAvatars: !__webpack_require__,
+                    bShowAvatars: !_,
                     storeItem: _,
                     appID: _,
                   }),
@@ -2133,10 +2123,10 @@
         });
       }
       function _(_) {
-        const { rgTagIDs: _, ariaLabelID: __webpack_require__ } = _,
+        const { rgTagIDs: _, ariaLabelID: _ } = _,
           _ = [...(0, _._)(_)].slice(0, 8);
         return (0, _.jsx)("div", {
-          _: __webpack_require__,
+          _: _,
           role: "list",
           className: _().AppTagsCtn,
           children: _.map((_) =>
@@ -2180,7 +2170,7 @@
         };
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)();
         return (
           (0, _.useEffect)(() => {
@@ -2196,7 +2186,7 @@
       function _(_) {
         const {
             eStoreDiscoveryQueueType: _,
-            fnCloseModal: __webpack_require__,
+            fnCloseModal: _,
             includeAppID: _,
             storePageFilter: _,
             bPreferDemoStorePage: _,
@@ -2370,10 +2360,9 @@
                       children: (0, _.jsx)(_._, {
                         focusable: !0,
                         className: _().QueueButton,
-                        onClick: __webpack_require__,
+                        onClick: _,
                         "aria-label": (0, _._)("#Button_Close"),
-                        onActivate: () =>
-                          __webpack_require__ && __webpack_require__(),
+                        onActivate: () => _ && __webpack_require__(),
                         children: (0, _.jsx)(_._, {}),
                       }),
                     }),
@@ -2441,7 +2430,7 @@
                             selectedIndex: _,
                             bPreferDemoStorePage: Boolean(_),
                             mapViewedAppCount: _,
-                            fnCloseModal: __webpack_require__,
+                            fnCloseModal: _,
                             fnLoadNextQueue: () => _(!1),
                             fnAdvance: _,
                             bSkipAppRequestPending: Boolean(0 != _),
@@ -2466,7 +2455,7 @@
       function _(_) {
         const {
             eStoreDiscoveryQueueType: _,
-            storePageFilter: __webpack_require__,
+            storePageFilter: _,
             rgAppIDs: _,
             index: _,
             bShowMinimizedDisplay: _,
@@ -2511,13 +2500,7 @@
           for (let _ = _ - 1; _ >= 0 && _[_] !== _; _--) _++;
           return (
             _.has(_) ||
-              _.set(
-                _,
-                _._.Get().GetTotalSkippedAppsForDiscoveryQueue(
-                  _,
-                  __webpack_require__,
-                ),
-              ),
+              _.set(_, _._.Get().GetTotalSkippedAppsForDiscoveryQueue(_, _)),
             (0, _.createElement)(_, {
               ..._,
               key: _,
@@ -2538,7 +2521,7 @@
         return (0, _.jsx)(_, {
           appAriaIDs: _,
           eStoreDiscoveryQueueType: _,
-          storePageFilter: __webpack_require__,
+          storePageFilter: _,
           selected: _,
           appID: _[_],
           bPreferDemoStorePage: _,
@@ -2552,7 +2535,7 @@
             appID: _[_],
             bShowMinimizedDisplay: _,
             eStoreDiscoveryQueueType: _,
-            storePageFilter: __webpack_require__,
+            storePageFilter: _,
             bPreferDemoStorePage: _,
             appAriaIDs: _,
           }),
@@ -2561,7 +2544,7 @@
       function _(_) {
         const {
             eStoreDiscoveryQueueType: _,
-            fnCloseModal: __webpack_require__,
+            fnCloseModal: _,
             summaryCardIndex: _,
             lastCard: _,
             selected: _,
@@ -2610,7 +2593,7 @@
           selected: _,
           fnFocused: _,
           fnOnContinue: _,
-          fnCloseModal: __webpack_require__,
+          fnCloseModal: _,
           bLoaded: _,
           children: [
             (0, _.jsxs)("div", {
@@ -2698,7 +2681,7 @@
                     children: [
                       (0, _.jsx)(_._, {
                         className: (0, _._)(_().QueueButton, _().Wide),
-                        onClick: __webpack_require__,
+                        onClick: _,
                         children: (0, _._)("#ActionButtonLabelDone"),
                       }),
                       !_ &&
@@ -2728,7 +2711,7 @@
       function _(_) {
         const {
             children: _,
-            selected: __webpack_require__,
+            selected: _,
             fnOnContinue: _,
             fnCloseModal: _,
             fnFocused: _,
@@ -2740,19 +2723,19 @@
           _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
-            __webpack_require__ &&
+            _ &&
               _.current &&
               _.current.focus({
                 preventScroll: !0,
               });
-          }, [__webpack_require__]),
+          }, [_]),
           (0, _.jsx)(_._, {
             ref: _,
             "aria-live": "polite",
             className: (0, _._)(
               _().SummaryCtn,
               _().DiscoveryQueueApp,
-              __webpack_require__ && _().Selected,
+              _ && _().Selected,
             ),
             onOptionsActionDescription: (0, _._)(
               "#DiscoveryQueue_ViewWishlist",
@@ -2788,14 +2771,11 @@
         });
       }
       function _(_) {
-        const {
-          bSkipAppRequestPending: _,
-          summaryCardIdx: __webpack_require__,
-        } = _;
+        const { bSkipAppRequestPending: _, summaryCardIdx: _ } = _;
         return _
           ? (0, _.jsx)(_, {})
           : (0, _.jsx)(_, {
-              summaryCardIdx: __webpack_require__,
+              summaryCardIdx: _,
             });
       }
       function _(_) {
@@ -2985,7 +2965,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
-          { showDiscoveryQueue: __webpack_require__ } = (0, _._)(0),
+          { showDiscoveryQueue: _ } = (0, _._)(0),
           _ = _.useCallback(() => {
             _._.logged_in
               ? __webpack_require__()
@@ -3002,7 +2982,7 @@
                   }),
                   window,
                 );
-          }, [__webpack_require__]);
+          }, [_]);
         return _
           ? (0, _.jsx)(_._, {
               children: (0, _.jsx)("a", {

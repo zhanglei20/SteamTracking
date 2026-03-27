@@ -6478,7 +6478,7 @@
             : (this.m_dictComponents = new Map(Object.entries(_))),
             (this.m_fnAccumulatorFactory = _);
         }
-        Parse(_, _, __webpack_require__ = !0) {
+        Parse(_, _, _ = !0) {
           const _ = (function (_, _) {
             const _ = [];
             let _ = {
@@ -6537,7 +6537,7 @@
                     text: _.text ?? "",
                   }));
             return _;
-          })(_ || "", __webpack_require__);
+          })(_ || "", _);
           return this.Parse_BuildElements(_, _);
         }
         Parse_BuildElements(_, _) {
@@ -6628,7 +6628,7 @@
           return __webpack_require__.GetElements();
         }
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const { type: _, text: _ = "" } = _;
         if (2 == _) {
           let _ = _.indexOf("=");
@@ -6730,7 +6730,7 @@
         UpdateOverrideLanguage(_) {
           this.m_renderingLanguage = _;
         }
-        ParseBBCode(_, _, __webpack_require__ = !0) {
+        ParseBBCode(_, _, _ = !0) {
           let _ = 0;
           const _ = this.Parse(
             _,
@@ -6745,7 +6745,7 @@
                 },
                 ..._,
               ),
-            __webpack_require__,
+            _,
           );
           return _.length > 1
             ? _.createElement(_.Fragment, null, ..._)
@@ -6869,7 +6869,7 @@
                 url: `${_._.BASE_URL}quiz`,
               },
             ],
-            [_, __webpack_require__] = (0, _.useState)(!1);
+            [_, _] = (0, _.useState)(!1);
           return (0, _.jsxs)("div", {
             className: _().HeropediaSelector,
             children: [
@@ -7017,7 +7017,7 @@
       const _ = ({
           heightClassName: _,
           headerPrefix: _,
-          headerText: __webpack_require__,
+          headerText: _,
           bodyText: _,
           postBody: _,
           justifyContent: _,
@@ -7073,7 +7073,7 @@
                         }),
                       ],
                     }),
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsxs)("div", {
                       className: (0, _._)(
                         _().Text,
@@ -7115,7 +7115,7 @@
                             ),
                             children: (0, _._)(_),
                           }),
-                        __webpack_require__ &&
+                        _ &&
                           (0, _.jsx)("div", {
                             className: (0, _._)(
                               _().TextStyleHeading,
@@ -7123,7 +7123,7 @@
                               _().TextColorGoldGlow,
                               _().Header,
                             ),
-                            children: (0, _._)(__webpack_require__),
+                            children: (0, _._)(_),
                           }),
                         _ &&
                           (0, _.jsx)("div", {
@@ -7238,7 +7238,7 @@
             ],
           }),
         _ = ({ audiofiles: _ }) => {
-          const [_, __webpack_require__] = (0, _.useState)(0);
+          const [_, _] = (0, _.useState)(0);
           return (0, _.jsx)("div", {
             className: _().PlayButton,
             onClick: () => {
@@ -7251,12 +7251,7 @@
             }),
           });
         },
-        _ = ({
-          index: _,
-          heroLeft: _,
-          heroRight: __webpack_require__,
-          video: _,
-        }) => {
+        _ = ({ index: _, heroLeft: _, heroRight: _, video: _ }) => {
           const _ = (0, _.useContext)(_._),
             _ = (0, _.useRef)(void 0);
           return (
@@ -7296,7 +7291,7 @@
                       }),
                     ],
                   }),
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)("img", {
                       className: (0, _._)(_().HeroImage, _().Right),
                       src: `${_._.IMG_URL}international2020/immortals/art/${_}.png`,
@@ -7308,7 +7303,7 @@
         },
         _ = ({ treasureID: _ }) => {
           const _ = (0, _.useContext)(_._),
-            [__webpack_require__, _] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -7325,9 +7320,7 @@
                     _().TextColorLightestGold,
                     _().ImmortalName,
                   ),
-                  children: (0, _._)(
-                    `#battlepass_immortal_${_}_${__webpack_require__ + 1}_name`,
-                  ),
+                  children: (0, _._)(`#battlepass_immortal_${_}_${_ + 1}_name`),
                 }),
                 (0, _.jsx)("div", {
                   className: (0, _._)(
@@ -7335,9 +7328,7 @@
                     _().TextColorLightestGrey,
                     _().ImmortalDesc,
                   ),
-                  children: (0, _._)(
-                    `#battlepass_immortal_${_}_${__webpack_require__ + 1}_desc`,
-                  ),
+                  children: (0, _._)(`#battlepass_immortal_${_}_${_ + 1}_desc`),
                 }),
               ],
             })
@@ -7346,7 +7337,7 @@
         _ = ({
           heroName: _,
           rare: _,
-          veryrare: __webpack_require__,
+          veryrare: _,
           ultrarare: _,
           cosmicallyrare: _,
         }) =>
@@ -7354,7 +7345,7 @@
             className: (0, _._)(
               _().ImmortalDot,
               _ && _().Rare,
-              __webpack_require__ && _().VeryRare,
+              _ && _().VeryRare,
               _ && _().UltraRare,
               _ && _().CosmicallyRare,
             ),
@@ -7364,7 +7355,7 @@
           }),
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -7398,7 +7389,7 @@
           }),
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -7473,7 +7464,7 @@
           }),
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -7506,7 +7497,7 @@
         },
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -7540,7 +7531,7 @@
           }),
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -7572,7 +7563,7 @@
               }),
             ],
           }),
-        _ = ({ audiofiles: _, name: _, level: __webpack_require__ }) =>
+        _ = ({ audiofiles: _, name: _, level: _ }) =>
           (0, _.jsxs)("div", {
             className: _().SoundPack,
             children: [
@@ -7590,7 +7581,7 @@
                     children: (0, _._)(_),
                   }),
                   (0, _.jsx)(_, {
-                    level: __webpack_require__,
+                    level: _,
                   }),
                 ],
               }),
@@ -7599,7 +7590,7 @@
         _ = ({
           shouldShow: _,
           showFunc: _,
-          className: __webpack_require__,
+          className: _,
           hasCloseButton: _,
           children: _,
         }) =>
@@ -7610,7 +7601,7 @@
             ),
             onClick: () => _(!1),
             children: (0, _.jsxs)("div", {
-              className: (0, _._)(_().PopupPanel, __webpack_require__),
+              className: (0, _._)(_().PopupPanel, _),
               onClick: (_) => _.stopPropagation(),
               children: [
                 _ &&
@@ -7628,7 +7619,7 @@
         _ = ({
           colorTopEdge: _,
           colorTop: _,
-          colorMiddle: __webpack_require__,
+          colorMiddle: _,
           colorBottom: _,
           level: _,
           discountPct: _,
@@ -7670,13 +7661,13 @@
                 ),
                 style: {
                   borderTop: `1px solid ${_}`,
-                  backgroundImage: `linear-gradient( ${_}, ${__webpack_require__} )`,
+                  backgroundImage: `linear-gradient( ${_}, ${_} )`,
                 },
                 children: (0, _._)("#battlepass_purchase_label", _),
               }),
             ],
           }),
-        _ = ({ heroName: _, name: _, level: __webpack_require__ }) =>
+        _ = ({ heroName: _, name: _, level: _ }) =>
           (0, _.jsxs)("div", {
             className: _().Taunt,
             children: [
@@ -7696,7 +7687,7 @@
                     children: (0, _._)(_),
                   }),
                   (0, _.jsx)(_, {
-                    level: __webpack_require__,
+                    level: _,
                   }),
                 ],
               }),
@@ -12033,7 +12024,7 @@
       const _ = ({
           strContentDir: _,
           strLocPrefix: _,
-          strPrimaryColor: __webpack_require__,
+          strPrimaryColor: _,
           strSecondaryColor: _,
           strTertiaryColor: _,
           arrImmortalTreasures: _,
@@ -12046,7 +12037,7 @@
             _ = {
               strContentDir: _,
               strLocPrefix: _,
-              strPrimaryColor: __webpack_require__,
+              strPrimaryColor: _,
               strSecondaryColor: _,
               strTertiaryColor: _,
             };
@@ -12196,7 +12187,7 @@
         _ = ({
           nIndex: _,
           bHeroLeft: _,
-          bHeroRight: __webpack_require__,
+          bHeroRight: _,
           strVideo: _,
           bGold: _,
           bEmblem: _,
@@ -12271,7 +12262,7 @@
                     }),
                   ],
                 }),
-                __webpack_require__ &&
+                _ &&
                   (0, _.jsx)("img", {
                     className: (0, _._)(_().HeroImage, _().Right),
                     src: `${_._.VIDEO_URL}${_.strContentDir}/immortals/${_}${_ ? "_gold" : ""}.png`,
@@ -12320,12 +12311,7 @@
             ],
           });
         },
-        _ = ({
-          strHeroName: _,
-          eRarity: _,
-          bSelected: __webpack_require__,
-          bEmblem: _,
-        }) => {
+        _ = ({ strHeroName: _, eRarity: _, bSelected: _, bEmblem: _ }) => {
           const _ = _(),
             _ = "emblem" == _ ? "emblem" : _;
           let _ = `${_._.IMG_URL}heroes/wide/${_}.png`;
@@ -12360,11 +12346,7 @@
         };
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
-      const _ = ({
-          textLabelColor: _,
-          strLocPrefix: _,
-          rgLevels: __webpack_require__,
-        }) => {
+      const _ = ({ textLabelColor: _, strLocPrefix: _, rgLevels: _ }) => {
           const _ = (0, _.useContext)(_._),
             [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
@@ -12387,21 +12369,13 @@
                     _().TextColorLighterGrey,
                     _().RiverVialDesc,
                   ),
-                  children: (0, _._)(
-                    "#ti11_bp_unlocks_at_level",
-                    __webpack_require__[_],
-                  ),
+                  children: (0, _._)("#ti11_bp_unlocks_at_level", _[_]),
                 }),
               ],
             })
           );
         },
-        _ = ({
-          vial: _,
-          level: _,
-          levelLabelColor: __webpack_require__,
-          strContentDir: _,
-        }) =>
+        _ = ({ vial: _, level: _, levelLabelColor: _, strContentDir: _ }) =>
           (0, _.jsxs)("div", {
             className: _().RiverVialDot,
             children: [
@@ -12410,10 +12384,7 @@
                 src: `${_._.IMG_URL}${_}/river_vials/river_vial_icon_${_}.png`,
               }),
               (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().TextStyleFootnote,
-                  _()[__webpack_require__],
-                ),
+                className: (0, _._)(_().TextStyleFootnote, _()[_]),
                 children: _,
               }),
             ],
@@ -12421,7 +12392,7 @@
         _ = ({
           strContentDir: _,
           strBackgroundPath: _,
-          strLocPrefix: __webpack_require__,
+          strLocPrefix: _,
           rgLevels: _,
           levelLabelColor: _,
           textLabelColor: _,
@@ -12496,7 +12467,7 @@
                   className: _().NameAndDescContainer,
                   children: (0, _.jsx)(_, {
                     textLabelColor: _,
-                    strLocPrefix: __webpack_require__,
+                    strLocPrefix: _,
                     rgLevels: _,
                   }),
                 }),
@@ -12540,7 +12511,7 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = 1e3 * _,
-          [__webpack_require__, _] = (0, _.useState)(_ - new Date().getTime());
+          [_, _] = (0, _.useState)(_ - new Date().getTime());
         return (
           (0, _.useEffect)(() => {
             const _ = setInterval(() => {
@@ -12548,7 +12519,7 @@
             }, 1e3);
             return () => clearInterval(_);
           }, [_]),
-          _(__webpack_require__)
+          _(_)
         );
       }
       const _ = (_) => ({
@@ -12564,20 +12535,14 @@
           }),
         _ = ({ timestampNoMs: _ }) => {
           const _ = _(_);
-          let {
-            days: __webpack_require__,
-            hours: _,
-            minutes: _,
-            seconds: _,
-          } = _;
+          let { days: _, hours: _, minutes: _, seconds: _ } = _;
           return (
-            __webpack_require__ + _ + _ + _ <= 0 &&
-              ((__webpack_require__ = 0), (_ = 0), (_ = 0), (_ = 0)),
+            _ + _ + _ + _ <= 0 && ((_ = 0), (_ = 0), (_ = 0), (_ = 0)),
             (0, _.jsxs)("div", {
               className: _().Countdown,
               children: [
                 (0, _.jsx)(_, {
-                  value: __webpack_require__,
+                  value: _,
                   label: "d ",
                 }),
                 (0, _.jsx)(_, {
@@ -12913,7 +12878,7 @@
       const _ = ({
           heightClassName: _,
           headerPrefix: _,
-          headerText: __webpack_require__,
+          headerText: _,
           bodyText: _,
           postBody: _,
           justifyContent: _,
@@ -12957,7 +12922,7 @@
                         }),
                       ],
                     }),
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsxs)("div", {
                       className: (0, _._)(
                         _().Text,
@@ -13001,14 +12966,14 @@
                             ),
                             children: (0, _._)(_),
                           }),
-                        __webpack_require__ &&
+                        _ &&
                           (0, _.jsx)("div", {
                             className: (0, _._)(
                               _().TextStyleHeading,
                               _().TextColorWhite,
                               _().Header,
                             ),
-                            children: (0, _._)(__webpack_require__),
+                            children: (0, _._)(_),
                           }),
                         _ &&
                           (0, _.jsx)("div", {
@@ -13075,7 +13040,7 @@
             ({
               colorTopEdge: _,
               colorTop: _,
-              colorBottom: __webpack_require__,
+              colorBottom: _,
               colorButtonLeft: _,
               colorButtonRight: _,
               level: _,
@@ -13085,7 +13050,7 @@
                 className: _().BuyBattlePassCapsule,
                 style: {
                   borderTop: `2px solid ${_}`,
-                  backgroundImage: `linear-gradient( ${_}${_(50)}, ${__webpack_require__}${_(75)} ), url( '${_._.IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
+                  backgroundImage: `linear-gradient( ${_}${_(50)}, ${_}${_(75)} ), url( '${_._.IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
                 },
                 children: [
                   (0, _.jsx)("img", {
@@ -13171,7 +13136,7 @@
           ({
             colorTopEdge: _,
             colorTop: _,
-            colorBottom: __webpack_require__,
+            colorBottom: _,
             colorButtonLeft: _,
             colorButtonRight: _,
             levels: _,
@@ -13181,7 +13146,7 @@
               className: _().BuyBattlePassLevelsCapsule,
               style: {
                 borderTop: `2px solid ${_}`,
-                backgroundImage: `linear-gradient( ${_}${_(50)}, ${__webpack_require__}${_(75)} ), url( '${_._.IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
+                backgroundImage: `linear-gradient( ${_}${_(50)}, ${_}${_(75)} ), url( '${_._.IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )`,
               },
               children: [
                 (0, _.jsx)("img", {
@@ -13232,7 +13197,7 @@
         },
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -13354,7 +13319,7 @@
           }),
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           return (
             (0, _.useEffect)(() => {
               function _() {
@@ -13453,12 +13418,7 @@
             })
           );
         },
-        _ = ({
-          heroName: _,
-          tauntNumber: _,
-          level: __webpack_require__,
-          isP2: _,
-        }) =>
+        _ = ({ heroName: _, tauntNumber: _, level: _, isP2: _ }) =>
           (0, _.jsxs)("div", {
             className: _ ? _().TauntDotP2 : _().TauntDot,
             children: [
@@ -13472,16 +13432,13 @@
                   _().TextColorLightestGrey,
                   _().TauntDotLevel,
                 ),
-                children: (0, _._)(
-                  "#battlepass_level_abbreviated",
-                  __webpack_require__,
-                ),
+                children: (0, _._)("#battlepass_level_abbreviated", _),
               }),
             ],
           }),
         _ = () => {
           const _ = (0, _.useContext)(_._),
-            [_, __webpack_require__] = (0, _.useState)(_.state.currentSlide);
+            [_, _] = (0, _.useState)(_.state.currentSlide);
           (0, _.useEffect)(() => {
             function _() {
               __webpack_require__(_.state.currentSlide);
@@ -13531,7 +13488,7 @@
             ],
           }),
         _ = ({ audiofiles: _ }) => {
-          const [_, __webpack_require__] = (0, _.useState)(0);
+          const [_, _] = (0, _.useState)(0);
           return (0, _.jsx)("div", {
             className: _().PlayButton,
             onClick: () => {
@@ -13547,13 +13504,13 @@
         _ = ({
           preTitle: _,
           title: _,
-          _: __webpack_require__,
+          _: _,
           subtitle: _,
           additionalStyles: _,
         }) =>
           (0, _.jsxs)("div", {
             className: (0, _._)(_().MajorHeaderDivider, _),
-            _: __webpack_require__,
+            _: _,
             children: [
               _ &&
                 (0, _.jsx)("div", {
@@ -17638,16 +17595,16 @@
           ? _.map((_) => ("*" == _ ? "\\*" : _)).join("|")
           : (_ || (_ = _(_)), _);
       }
-      function _(_, _ = null, __webpack_require__ = " ") {
+      function _(_, _ = null, _ = " ") {
         const _ = new RegExp(
           "\\[(" + _(_) + ")\\b[^\\]]*\\].*?\\[/\\1\\]",
           "gi",
         );
-        return _.replace(_, __webpack_require__);
+        return _.replace(_, _);
       }
-      function _(_, _ = null, __webpack_require__ = "") {
+      function _(_, _ = null, _ = "") {
         const _ = "\\[\\/?(?:" + _(_) + "){1,}.*?]";
-        return _.replace(new RegExp(_, "gi"), __webpack_require__);
+        return _.replace(new RegExp(_, "gi"), _);
       }
       var _ = __webpack_require__("chunkid");
       const _ = {
@@ -19355,8 +19312,8 @@
           if (!_ || "string" != typeof _) return null;
           const _ = _.split(".");
           if (3 !== _.length) return null;
-          const [__webpack_require__, _] = _,
-            _ = _(__webpack_require__),
+          const [_, _] = _,
+            _ = _(_),
             _ = _(_);
           return _ && _
             ? {
@@ -19386,10 +19343,10 @@
         m_fnRequestNewAccessToken;
         m_refreshAccessTokenPromise;
         m_dtLastExpireCheck = 0;
-        constructor(_, _, __webpack_require__ = !1, _) {
+        constructor(_, _, _ = !1, _) {
           (this.m_strWebAPIBaseURL = _),
             (this.m_webApiAccessToken = _),
-            (this.m_bJsonMode = __webpack_require__),
+            (this.m_bJsonMode = _),
             (this.m_fnRequestNewAccessToken = _),
             (this.m_bJWTToken = null != _(_)),
             (this.m_ServiceTransport = {
@@ -19767,15 +19724,11 @@
             if (this.ValidateCreatorHomeTitles(_))
               for (const [
                 _,
-                {
-                  title: __webpack_require__,
-                  description: _,
-                  listtileimage: _,
-                },
+                { title: _, description: _, listtileimage: _ },
               ] of Object.entries(_ ?? {}))
-                __webpack_require__ &&
+                _ &&
                   this.m_mapListInfo.set(_, {
-                    title: __webpack_require__ ?? "",
+                    title: _ ?? "",
                     description: _?.length ? _ : void 0,
                     imageUrl: _?.length ? _ : void 0,
                   });
@@ -34761,17 +34714,13 @@
                                   .localized_store_app_spotlight_mobile);
           return _;
         }
-        GetImageURL(_, _ = 0, __webpack_require__ = _._.full) {
+        GetImageURL(_, _ = 0, _ = _._.full) {
           const _ = this.GetImgArray(_),
             _ = _ && _.length > _ && null != _[_];
           return _ && _[_]?.startsWith("http")
             ? _[_]
             : _
-              ? _._.GenerateURLFromHashAndExt(
-                  this.clanSteamID,
-                  _[_] ?? "",
-                  __webpack_require__,
-                )
+              ? _._.GenerateURLFromHashAndExt(this.clanSteamID, _[_] ?? "", _)
               : void 0;
         }
         GetImageHash(_, _ = 0) {
@@ -34880,12 +34829,12 @@
             ? this.appid
             : this.jsondata?.referenced_appids?.[0];
         }
-        GetImageURLWithFallback(_, _, __webpack_require__ = _._.full, _ = !0) {
-          const _ = this.GetImageURL(_, _, __webpack_require__);
+        GetImageURLWithFallback(_, _, _ = _._.full, _ = !0) {
+          const _ = this.GetImageURL(_, _, _);
           if (_ && _.trim().length > 0) return _;
           const _ = _._.GetELanguageFallback(_);
           if (_ != _) {
-            const _ = this.GetImageURL(_, _, __webpack_require__);
+            const _ = this.GetImageURL(_, _, _);
             if (_ && _.trim().length > 0) return _;
           }
           const _ = _.GetClanInfoByClanAccountID(
@@ -35077,22 +35026,16 @@
                 ["p"],
                 " ",
               )),
-              (function (_, _, __webpack_require__ = !0) {
+              (function (_, _, _ = !0) {
                 let _ = _.trim();
                 if (
-                  ((_ = _.replace(
-                    __webpack_require__ ? /\s+/g : /[ \t]+/g,
-                    " ",
-                  )),
-                  _.length > _)
+                  ((_ = _.replace(_ ? /\s+/g : /[ \t]+/g, " ")), _.length > _)
                 ) {
                   _ = _.substring(0, _);
                   let _ = _.replace(/^(.*([.!?])) .*$/, "$1"),
                     _ = _.length;
                   (_ < 0.6 * _ || _ == _) && (_ = _.replace(/ [^ ]*$/, "...")),
-                    (_ = __webpack_require__
-                      ? _.replace(/(\r\n|\n|\r)/gm, "")
-                      : _);
+                    (_ = _ ? _.replace(/(\r\n|\n|\r)/gm, "") : _);
                 }
                 return _;
               })(
@@ -36358,19 +36301,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(
-          _,
-          _,
-          __webpack_require__ = 0,
-          _ = 0,
-          _,
-        ) {
+        async LoadPartnerEventsPageable(_, _, _ = 0, _ = 0, _) {
           let _ = new Array(),
             _ = _._.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
               clan_accountid: _ ? _.GetAccountID() : void 0,
               appid: _,
-              offset: __webpack_require__,
+              offset: _,
               count: _,
               _: _._.LANGUAGE,
               origin: self.origin,
@@ -36978,10 +36915,10 @@
       }
       const _ = (0, _._)((_) => {
           const _ = (0, _._)(),
-            [__webpack_require__, _] = (0, _.useState)(void 0),
+            [_, _] = (0, _.useState)(void 0),
             [_, _] = (0, _.useState)(0),
             _ = !!_.updates;
-          if (((0, _.useEffect)(() => _(0), [_]), !__webpack_require__))
+          if (((0, _.useEffect)(() => _(0), [_]), !_))
             return (
               _.LoadPartnerEventsPageable(
                 _._.InitFromClanID(0),
@@ -36997,7 +36934,7 @@
           const _ = (0, _._)(_._.LANGUAGE);
           let _,
             _ = 0;
-          for (const _ of __webpack_require__)
+          for (const _ of _)
             if (_(!1, _)) {
               _ = _.GID;
               const _ = new Date(1e3 * _.GetStartTimeAndDateUnixSeconds());
@@ -37067,10 +37004,10 @@
             _ = [],
             _ = [],
             _ = 0;
-          for (const _ of __webpack_require__) _(_, _) && (_ += 1);
+          for (const _ of _) _(_, _) && (_ += 1);
           let _ = 0,
             _ = 0;
-          for (const _ of __webpack_require__)
+          for (const _ of _)
             if (_(_, _) && ((_ += 1), !(_ <= 15 * _))) {
               if (((_ += 1), _ > 15)) break;
               _
@@ -37202,7 +37139,7 @@
         }),
         _ = (0, _._)((_) => {
           const _ = (0, _._)(),
-            [__webpack_require__, _] = (0, _.useState)(void 0),
+            [_, _] = (0, _.useState)(void 0),
             [_, _] = (0, _.useState)(void 0),
             [_, _] = (0, _.useState)(!1),
             _ = (0, _._)(),
@@ -37211,7 +37148,7 @@
             return (0, _.jsx)(_._, {
               _: _._.news(),
             });
-          if (!__webpack_require__)
+          if (!_)
             return (
               _.LoadPartnerEventsPageable(
                 _._.InitFromClanID(0),
@@ -37242,7 +37179,7 @@
           const _ = _.GetDescriptionWithFallback(_);
           _.GID == _ && (_ = _.replace("11", "39"));
           let _ = [];
-          for (const _ of __webpack_require__)
+          for (const _ of _)
             if (
               _ != _ &&
               (_(!1, _) &&
@@ -37350,7 +37287,7 @@
       function _(_) {
         const {
             customTooltip: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             className: _,
             icon: _,
             small: _,
@@ -37363,7 +37300,7 @@
             children: [" ", (0, _.jsx)(_._VW, {})],
           })),
           (0, _.jsx)(_, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             className: (0, _._)(
               _.HelperTooltip,
               "HelperTooltip",
@@ -37388,10 +37325,10 @@
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__, disabled: _ } = _;
+        const { value: _, onChange: _, disabled: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().Toggle, _ && _().Disabled),
-          onClick: () => !_ && __webpack_require__ && __webpack_require__(!_),
+          onClick: () => !_ && _ && __webpack_require__(!_),
           children: [
             (0, _.jsx)("div", {
               className: _().ToggleRail,
@@ -37420,11 +37357,11 @@
       }
       const _ = _.createContext(null),
         _ = _.forwardRef(function (_, _) {
-          const { _: __webpack_require__, className: _, ..._ } = _,
+          const { _: _, className: _, ..._ } = _,
             _ = _.useContext(_),
             _ = _?.setHeaderId,
             _ = _.useId(),
-            _ = __webpack_require__ || _;
+            _ = _ || _;
           return (
             _.useEffect(() => {
               _ && _(_);
@@ -37465,17 +37402,12 @@
         });
       }
       function _(_) {
-        let {
-            children: _,
-            bCenterVertically: __webpack_require__,
-            refElem: _,
-            ..._
-          } = _,
+        let { children: _, bCenterVertically: _, refElem: _, ..._ } = _,
           _ =
             "DialogContent _DialogLayout" +
             (_.className ? " " + _.className : "");
         return (
-          __webpack_require__ && (_ += " _DialogCenterVertically"),
+          _ && (_ += " _DialogCenterVertically"),
           (0, _.jsx)("div", {
             ..._,
             ref: _,
@@ -37501,26 +37433,17 @@
         }
       }
       function _(_) {
-        const {
-          classNameContent: _,
-          bCenterVertically: __webpack_require__,
-          ..._
-        } = _;
+        const { classNameContent: _, bCenterVertically: _, ..._ } = _;
         return (0, _.jsx)(_, {
           className: _,
-          bCenterVertically: __webpack_require__,
+          bCenterVertically: _,
           children: (0, _.jsx)(_, {
             ..._,
           }),
         });
       }
       function _(_) {
-        const {
-          label: _,
-          tooltip: __webpack_require__,
-          className: _,
-          children: _,
-        } = _;
+        const { label: _, tooltip: _, className: _, children: _ } = _;
         return (0, _.jsxs)("label", {
           className: (0, _._)("DialogInputLabelGroup", "_DialogLayout", _),
           children: [
@@ -37529,9 +37452,9 @@
                 children: [
                   _,
                   " ",
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)(_, {
-                      tooltip: __webpack_require__,
+                      tooltip: _,
                     }),
                   " ",
                 ],
@@ -37719,7 +37642,7 @@
           const {
             onChange: _,
             checked: _,
-            label: __webpack_require__,
+            label: _,
             description: _,
             tabIndex: _,
             disabled: _,
@@ -38201,7 +38124,7 @@
           const {
             label: _,
             description: _,
-            requiredLabel: __webpack_require__,
+            requiredLabel: _,
             bShowCopyAction: _,
             bShowClearAction: _,
             bAlwaysShowClearAction: _,
@@ -38386,7 +38309,7 @@
           const {
             label: _,
             description: _,
-            requiredLabel: __webpack_require__,
+            requiredLabel: _,
             bShowCopyAction: _,
             bShowClearAction: _,
             bAlwaysShowClearAction: _,
@@ -38698,14 +38621,14 @@
       function _(_) {
         const {
           label: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           strClassName: _,
           dropDownControlRef: _,
           ..._
         } = _;
         return (0, _.jsx)(_, {
           label: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           className: _,
           children: (0, _.jsx)(_, {
             menuLabel: _,
@@ -38950,7 +38873,7 @@
       function _(_) {
         const {
             rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             selectedValue: _,
           } = _,
@@ -38971,7 +38894,7 @@
           onKeyDown: _,
           children: (0, _.jsx)(_, {
             rgOptions: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
@@ -38979,7 +38902,7 @@
         });
       }
       function _(_) {
-        const { rgOptions: _, ...__webpack_require__ } = _;
+        const { rgOptions: _, ..._ } = _;
         return _.map((_, _) =>
           _(_)
             ? (0, _.jsx)(
@@ -38996,7 +38919,7 @@
               ? (0, _.jsx)(
                   _,
                   {
-                    ...__webpack_require__,
+                    ..._,
                     rgOptions: _.options,
                   },
                   _,
@@ -39004,7 +38927,7 @@
               : (0, _.jsx)(
                   _,
                   {
-                    ...__webpack_require__,
+                    ..._,
                     option: _,
                   },
                   _,
@@ -39014,7 +38937,7 @@
       function _(_) {
         const {
             option: _,
-            strDropDownItemClassName: __webpack_require__,
+            strDropDownItemClassName: _,
             onValueSelected: _,
             activeValue: _,
             setActiveValue: _,
@@ -39028,7 +38951,7 @@
           type: "button",
           className: (0, _._)(
             _().DialogDropDownMenu_Item,
-            __webpack_require__,
+            _,
             _.strOptionClass,
             _ && "ContextMenuAutoFocus",
           ),
@@ -39065,20 +38988,20 @@
           const {
             fnLoadOptions: _,
             strInitialDisplay: _,
-            initialValue: __webpack_require__,
+            initialValue: _,
             ..._
           } = this.props;
           let { rgOptions: _ } = this.state;
           return (
             void 0 === _ &&
-              (_ || __webpack_require__
+              (_ || _
                 ? ((_ = [
                     {
                       label: _,
-                      data: __webpack_require__,
+                      data: _,
                     },
                   ]),
-                  (_.selectedOption = __webpack_require__))
+                  (_.selectedOption = _))
                 : (_ = [])),
             (0, _.jsx)(_, {
               ..._,
@@ -39454,7 +39377,7 @@
         }
         ProcessDragMove(_) {
           _("ProcessDragMove", _, this.props.data);
-          const [_, __webpack_require__] = (function (_) {
+          const [_, _] = (function (_) {
             if ("touches" in _) {
               let _ = _;
               return [_.touches[0].clientX, _.touches[0].clientY];
@@ -39462,25 +39385,17 @@
             return [_.clientX, _.clientY];
           })(_);
           if (this.m_DragInfo.bStarted) {
-            if (
-              this.props.bEnableHTMLDrag &&
-              0 == _ &&
-              0 == __webpack_require__
-            )
-              return;
-            this.props.coordinator.OnDrag(this, _, __webpack_require__);
+            if (this.props.bEnableHTMLDrag && 0 == _ && 0 == _) return;
+            this.props.coordinator.OnDrag(this, _, _);
           } else
             Math.pow(_ - (this.m_DragInfo.startClientX ?? 0), 2) +
-              Math.pow(
-                __webpack_require__ - (this.m_DragInfo.startClientY ?? 0),
-                2,
-              ) >=
+              Math.pow(_ - (this.m_DragInfo.startClientY ?? 0), 2) >=
               25 &&
               ((this.m_DragInfo.bStarted = !0),
               this.forceUpdate(),
               this.props.fnOnDragStart && this.props.fnOnDragStart(),
               this.props.coordinator.OnDragStart(this),
-              this.props.coordinator.OnDrag(this, _, __webpack_require__));
+              this.props.coordinator.OnDrag(this, _, _));
         }
         OnMouseDown(_) {
           this.m_DragInfo.bStarted ||
@@ -39589,7 +39504,7 @@
           const {
             coordinator: _,
             data: _,
-            bEnableHTMLDrag: __webpack_require__,
+            bEnableHTMLDrag: _,
             strHTMLDragData: _,
             fnOnDragStart: _,
             fnOnDragEnd: _,
@@ -39605,11 +39520,11 @@
           return (
             this.m_DragInfo.bStarted
               ? ((_ = (0, _._)(_, _ || "DraggedOut")),
-                __webpack_require__ &&
+                _ &&
                   (_ = {
                     onDragEnd: this.OnHTMLDragEnd,
                   }))
-              : (_ = __webpack_require__
+              : (_ = _
                   ? {
                       onDragStart: this.OnHTMLDragStart,
                     }
@@ -39622,7 +39537,7 @@
               className: _,
               ..._,
               ..._,
-              draggable: __webpack_require__,
+              draggable: _,
               children: _,
             })
           );
@@ -39793,7 +39708,7 @@
           const {
               coordinator: _,
               fnBAcceptDraggable: _,
-              fnOnDrop: __webpack_require__,
+              fnOnDrop: _,
               fnOnDragEnter: _,
               fnOnDragLeave: _,
               className: _,
@@ -39831,14 +39746,14 @@
         _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.98 10.23L3.20996 25H32.75L17.98 10.23Z",
                 fill: "currentColor",
@@ -39849,7 +39764,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M17.98 26.54L3.20996 11.77H32.75L17.98 26.54Z",
                 fill: "currentColor",
@@ -39860,7 +39775,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M9.82497 18.385L24.595 3.61499L24.595 33.155L9.82497 18.385Z",
                 fill: "currentColor",
@@ -39871,7 +39786,7 @@
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
-              ...__webpack_require__,
+              ..._,
               children: (0, _.jsx)("path", {
                 _: "M26.135 18.385L11.365 33.155L11.365 3.61503L26.135 18.385Z",
                 fill: "currentColor",
@@ -39880,7 +39795,7 @@
         }
       }
       function _(_) {
-        const { direction: _, ...__webpack_require__ } = _;
+        const { direction: _, ..._ } = _;
         switch (_) {
           case "up":
             return (0, _.jsx)("svg", {
@@ -40026,13 +39941,9 @@
           });
         }
         render() {
-          const {
-              children: _,
-              fallback: _,
-              errorKey: __webpack_require__,
-            } = this.props,
+          const { children: _, fallback: _, errorKey: _ } = this.props,
             { error: _, identifierHash: _, lastErrorKey: _ } = this.state;
-          return _ && __webpack_require__ == _
+          return _ && _ == _
             ? void 0 !== _
               ? "function" == typeof _
                 ? _(_.error)
@@ -40082,12 +39993,7 @@
           });
         },
         _ = (_) => {
-          const {
-              error: _,
-              onRefresh: __webpack_require__,
-              identifierHash: _,
-              store: _,
-            } = _,
+          const { error: _, onRefresh: _, identifierHash: _, store: _ } = _,
             _ = (_.error && _.error.message) || "unknown error",
             _ = `${_.product}_${_.version}_${_}`;
           return (0, _.jsxs)(_, {
@@ -40100,7 +40006,7 @@
                       textDecoration: "underline",
                       cursor: "pointer",
                     },
-                    onClick: __webpack_require__,
+                    onClick: _,
                     children: "Refresh",
                   }),
                 ],
@@ -40172,7 +40078,7 @@
       function _(_) {
         const {
             stylesheet: _,
-            pages: __webpack_require__,
+            pages: _,
             iActivePage: _,
             onPageSelected: _,
             PageListItemComponent: _ = _,
@@ -40182,8 +40088,8 @@
         return __webpack_require__
           .filter((_, _) => {
             if (_ === _ || _ === _) {
-              for (let _ = _ + 1; _ < __webpack_require__.length; _++) {
-                const _ = __webpack_require__[_];
+              for (let _ = _ + 1; _ < _.length; _++) {
+                const _ = _[_];
                 if (_ !== _ && _ !== _ && _.visible) return !0;
               }
               return !1;
@@ -40239,7 +40145,7 @@
       function _(_) {
         const {
           title: _,
-          icon: __webpack_require__,
+          icon: _,
           active: _,
           className: _,
           onClick: _,
@@ -40250,10 +40156,10 @@
           onClick: _,
           ..._,
           children: [
-            __webpack_require__
+            _
               ? (0, _.jsx)("div", {
                   className: _().PageListItem_Icon,
-                  children: __webpack_require__,
+                  children: _,
                 })
               : null,
             (0, _.jsx)("div", {
@@ -40266,36 +40172,36 @@
       }
       (0, _._)([_._], _.prototype, "m_setPagedSettingsInstances", void 0);
       const _ = _.forwardRef(function (_, _) {
-        const { activePage: __webpack_require__, style: _, stylesheet: _ } = _,
+        const { activePage: _, style: _, stylesheet: _ } = _,
           _ = _.useContext(_),
-          _ = __webpack_require__?.padding ?? "standard";
+          _ = _?.padding ?? "standard";
         return (0, _.jsxs)(_, {
           style: _,
           className: (0, _._)(
             _?.PagedSettingsDialog_PageContent,
-            __webpack_require__?.pageClassName,
+            _?.pageClassName,
             "none" == _ && _?.NoPadding,
           ),
           refElem: _,
           role: "tabpanel",
-          "aria-labelledby": _ + __webpack_require__?.identifier,
-          _: _ + __webpack_require__?.identifier + "_Content",
+          "aria-labelledby": _ + _?.identifier,
+          _: _ + _?.identifier + "_Content",
           children: [
-            __webpack_require__?.header,
-            !__webpack_require__?.hideTitle &&
+            _?.header,
+            !_?.hideTitle &&
               (0, _.jsx)(_, {
-                children: __webpack_require__?.title,
+                children: _?.title,
               }),
             (0, _.jsx)(_, {
-              children: __webpack_require__?.content,
+              children: _?.content,
             }),
           ],
         });
       });
       function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
+        const { bTransparent: _, className: _, ..._ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(__webpack_require__, _().PageListSeparator, {
+          className: (0, _._)(_, _().PageListSeparator, {
             [_().Transparent]: _,
           }),
           ..._,
@@ -40303,11 +40209,7 @@
       }
       const _ = _.createContext(void 0),
         _ = _.forwardRef(function (_, _) {
-          const {
-              stylesheet: __webpack_require__ = _(),
-              pages: _,
-              onPageRequested: _,
-            } = _,
+          const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
             _ = _.useId(),
             _ = null == _.page,
             [_, _] = _.useState(() =>
@@ -40346,7 +40248,7 @@
             _ = _.showTitle ?? !0,
             _ = (0, _._)(
               "DialogContentTransition",
-              __webpack_require__.PagedSettingDialog_ContentColumn,
+              _.PagedSettingDialog_ContentColumn,
             );
           _.useEffect(() => {
             _.bAutoFocusPageContent && _.current?.TakeFocus();
@@ -40394,15 +40296,12 @@
           return (0, _.jsx)(_.Provider, {
             value: _,
             children: (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                __webpack_require__.PagedSettingsDialog,
-                _.className,
-              ),
+              className: (0, _._)(_.PagedSettingsDialog, _.className),
               ref: _,
               children: [
                 (0, _.jsxs)(_._, {
                   className: (0, _._)(
-                    __webpack_require__.PagedSettingsDialog_PageListColumn,
+                    _.PagedSettingsDialog_PageListColumn,
                     _.hideList && _().Hidden,
                     "PageListColumn",
                   ),
@@ -40415,8 +40314,7 @@
                   children: [
                     _ &&
                       (0, _.jsx)("div", {
-                        className:
-                          __webpack_require__.PagedSettingsDialog_Title,
+                        className: _.PagedSettingsDialog_Title,
                         children: _.title,
                       }),
                     _.topControls &&
@@ -40425,20 +40323,19 @@
                       }),
                     (0, _.jsx)(_._, {
                       className: (0, _._)(
-                        __webpack_require__.PagedSettingsDialog_PageList,
+                        _.PagedSettingsDialog_PageList,
                         _.disablePageListScrolling &&
-                          __webpack_require__.PagedSettingsDialog_PageList_DisableScrolling,
-                        _ &&
-                          __webpack_require__.PagedSettingsDialog_PageList_ShowTitle,
+                          _.PagedSettingsDialog_PageList_DisableScrolling,
+                        _ && _.PagedSettingsDialog_PageList_ShowTitle,
                         _.bNoHeaderPadding &&
-                          __webpack_require__.PageSettingsDialog_PageList_NoHeaderPadding,
+                          _.PageSettingsDialog_PageList_NoHeaderPadding,
                       ),
                       role: "tablist",
                       "aria-orientation": "vertical",
                       navEntryPreferPosition: _._.PREFERRED_CHILD,
                       ref: _,
                       children: (0, _.jsx)(_, {
-                        stylesheet: __webpack_require__,
+                        stylesheet: _,
                         pages: _,
                         iActivePage: _,
                         onPageSelected: _,
@@ -40468,7 +40365,7 @@
                       : (0, _.jsx)(_, {
                           ref: _,
                           activePage: _,
-                          stylesheet: __webpack_require__,
+                          stylesheet: _,
                         }),
                   ],
                 }),
@@ -40480,7 +40377,7 @@
       _.memo(function (_) {
         const {
             isActive: _,
-            refForPage: __webpack_require__,
+            refForPage: _,
             page: _,
             PageComponent: _,
             stylesheet: _,
@@ -40497,7 +40394,7 @@
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: (0, _.jsx)(_, {
-            ref: __webpack_require__,
+            ref: _,
             style: _,
             activePage: _,
             stylesheet: _,
@@ -40508,10 +40405,10 @@
         });
       });
       function _(_) {
-        const { hideList: _, toggleHideList: __webpack_require__ } = _;
+        const { hideList: _, toggleHideList: _ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().HidePageListButton, _ && _().ListHidden),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _
             ? (0, _.jsx)(_, {
                 direction: "right",
@@ -40601,13 +40498,9 @@
               this.InternalOnInput();
         }
         render() {
-          const {
-            nMinHeight: _,
-            nMaxHeight: _,
-            ...__webpack_require__
-          } = this.props;
+          const { nMinHeight: _, nMaxHeight: _, ..._ } = this.props;
           return (0, _.jsx)(_._, {
-            ...__webpack_require__,
+            ..._,
             ref: this.m_refTextArea,
             onKeyUp: this.OnKeyUp,
             onBlur: this.OnBlur,
@@ -40692,7 +40585,7 @@
       function _(_) {
         const {
             refContextMenuManager: _,
-            bRegisterMenuManager: __webpack_require__ = !0,
+            bRegisterMenuManager: _ = !0,
             children: _,
           } = _,
           _ = (0, _._)(),
@@ -40701,12 +40594,12 @@
         return (
           _.current || (_.current = new _._()),
           _.useLayoutEffect(() => {
-            if (__webpack_require__)
+            if (_)
               return (
                 _._.SetMenuManager(_, _.current),
                 () => _._.SetMenuManager(_, void 0)
               );
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _.useLayoutEffect(
             () => ((0, _._)(_, _.current), () => (0, _._)(_, void 0)),
             [_],
@@ -40864,16 +40757,13 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            managerOverride: _,
-            bSuppressMouseOverlay: __webpack_require__,
-          } = _,
+        const { managerOverride: _, bSuppressMouseOverlay: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = _.useContext(_),
           _ = _ ?? _;
         (0, _._)(_.OnMenusChanged, _);
-        const _ = !__webpack_require__ && _.BShouldRenderMouseOverlay(),
+        const _ = !_ && _.BShouldRenderMouseOverlay(),
           _ = _.GetAllMenus();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -40894,11 +40784,7 @@
         });
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _(),
           _ = (0, _._)().ownerWindow,
           _ = _.useRef(void 0);
@@ -40920,7 +40806,7 @@
           children: _.current
             ? (0, _.jsx)(_, {
                 instance: _,
-                browserInfo: __webpack_require__,
+                browserInfo: _,
                 children: _,
               })
             : (0, _.jsx)(_, {
@@ -40930,26 +40816,22 @@
         });
       }
       function _(_) {
-        const { instance: _, children: __webpack_require__ } = _;
+        const { instance: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           ..._.position,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const {
-            instance: _,
-            browserInfo: __webpack_require__,
-            children: _,
-          } = _,
+        const { instance: _, browserInfo: _, children: _ } = _,
           _ = _.useRef(null),
           _ = (0, _._)().ownerWindow,
           _ = _.SteamClient.Browser.GetBrowserID(),
           _ = _.useCallback(
             (_) => {
-              const { options: __webpack_require__, position: _ } = _,
+              const { options: _, position: _ } = _,
                 _ = _.element;
-              if (__webpack_require__.bScreenCoordinates)
+              if (_.bScreenCoordinates)
                 _.dimensions = {
                   left: _.clientX,
                   top: _.clientY,
@@ -40991,7 +40873,7 @@
               "ContextMenuPopupBody",
             ),
             replace_existing_popup: !1,
-            target_browser: __webpack_require__,
+            target_browser: _,
             window_opener_id: _,
             bHideOnClose: !0,
             eCreationFlags: _,
@@ -41040,7 +40922,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0);
+        const [_, _] = (0, _.useState)(!0);
         return (
           (0, _.useEffect)(() => {
             (0, _.startTransition)(() => {
@@ -41053,9 +40935,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { popup: _, onMaximize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMaximize: _, bOSX: _ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = _.useState(!1),
+            const [_, _] = _.useState(!1),
               _ = _.useCallback(() => {
                 (0, _._)(_, "Window.IsWindowMaximized")
                   ? _.SteamClient.Window.IsWindowMaximized().then((_) => {
@@ -41075,11 +40957,11 @@
             );
           })(_),
           _ = _.useCallback(() => {
-            __webpack_require__
+            _
               ? __webpack_require__()
               : (0, _._)(_, "Window.ToggleMaximize") &&
                 _.SteamClient.Window.ToggleMaximize();
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return (0, _.jsx)(_, {
           className: (0, _._)(
             _ ? "restoreButton" : "maximizeButton",
@@ -41090,18 +40972,18 @@
         });
       }
       function _(_) {
-        const { popup: _, onMinimize: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onMinimize: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _.SteamClient.Window.Minimize();
           }, [_]);
         return (0, _.jsx)(_, {
           className: "minimizeButton windowControlButton",
-          onClick: __webpack_require__ ?? _,
+          onClick: _ ?? _,
           children: !_ && (0, _.jsx)(_.Xjb, {}),
         });
       }
       function _(_) {
-        const { popup: _, onClose: __webpack_require__, bOSX: _ } = _,
+        const { popup: _, onClose: _, bOSX: _ } = _,
           _ = _.useCallback(() => {
             _ &&
               ((0, _._)(_, "Window.Close")
@@ -41110,18 +40992,17 @@
           }, [_]);
         return (0, _.jsx)(_, {
           className: "closeButton windowControlButton",
-          onClick: __webpack_require__ ?? _,
+          onClick: _ ?? _,
           children: !_ && (0, _.jsx)(_.sED, {}),
         });
       }
       function _(_) {
-        const { className: _, onClick: __webpack_require__, children: _ } = _,
+        const { className: _, onClick: _, children: _ } = _,
           _ = _.useCallback(
             (_) => {
-              __webpack_require__ &&
-                (_.stopPropagation(), __webpack_require__(_));
+              _ && (_.stopPropagation(), __webpack_require__(_));
             },
-            [__webpack_require__],
+            [_],
           );
         return (0, _.jsx)("div", {
           className: (0, _._)("title-area-icon", _),
@@ -41135,7 +41016,7 @@
       function _(_) {
         const {
             className: _,
-            style: __webpack_require__,
+            style: _,
             hideActions: _,
             hideClose: _,
             hideMin: _,
@@ -41150,7 +41031,7 @@
             children: _,
           } = _,
           _ = (function (_, _ = 100) {
-            const [__webpack_require__, _] = _.useState(!1),
+            const [_, _] = _.useState(!1),
               _ = _.useCallback(() => _(!0), [_]),
               _ = _.useCallback(() => _(!1), [_]);
             return (
@@ -41166,7 +41047,7 @@
                     : void 0,
                 [_, _, _],
               ),
-              (0, _._)(__webpack_require__, _)
+              (0, _._)(_, _)
             );
           })(_);
         return (0, _.jsxs)("div", {
@@ -41177,7 +41058,7 @@
             (_ || _) && "WindowFocus",
             _,
           ),
-          style: __webpack_require__,
+          style: _,
           children: [
             (0, _.jsx)("div", {
               className: "title-area-highlight",
@@ -41224,10 +41105,10 @@
       }
       function _(_) {
         const { Modal: _ } = _,
-          { name: __webpack_require__, modalProps: _, options: _ } = _,
+          { name: _, modalProps: _, options: _ } = _,
           _ = (0, _._)().ownerWindow,
           { popup: _, element: _ } = _(
-            __webpack_require__,
+            _,
             {
               title: _.strTitle,
               html_class:
@@ -41315,7 +41196,7 @@
       }
       function _(_) {
         const { ModalManager: _ } = _,
-          [__webpack_require__, _] = _.useState(void 0),
+          [_, _] = _.useState(void 0),
           [_, _] = _.useState(!0),
           _ = _.useCallback(() => {
             _.startTransition(() => {
@@ -41324,29 +41205,29 @@
           }, []);
         _.useEffect(() => _.RegisterMeasureModalCallback(_).Unregister, [_, _]),
           _.useLayoutEffect(() => {
-            __webpack_require__ ||
+            _ ||
               _.startTransition(() => {
                 _(_.TakeMeasureModalRequest()), _(!1);
               });
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         const _ = _.useCallback((_) => {
           _.startTransition(() => {
             _((_) => (_ === _ ? void 0 : _));
           });
         }, []);
-        return __webpack_require__
+        return _
           ? (0, _.jsx)(
               _,
               {
                 onMeasureComplete: _,
-                request: __webpack_require__,
+                request: _,
               },
-              __webpack_require__._,
+              _._,
             )
           : null;
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           _ = (0, _._)().ownerWindow;
         return (
           _.useLayoutEffect(() => {
@@ -41374,11 +41255,7 @@
         );
       }
       function _(_) {
-        const {
-          elContainer: _,
-          onMeasureComplete: __webpack_require__,
-          request: _,
-        } = _;
+        const { elContainer: _, onMeasureComplete: _, request: _ } = _;
         return (
           _.useEffect(() => {
             let _ = !1;
@@ -41400,7 +41277,7 @@
               })(_, _.promiseContentReady).then(_),
               () => _(void 0)
             );
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           (0, _.jsx)(_, {
             children: _.rctToMeasure,
           })
@@ -41419,7 +41296,7 @@
       function _(_) {
         let {
           ModalManager: _,
-          bRegisterModalManager: __webpack_require__ = !0,
+          bRegisterModalManager: _ = !0,
           DialogWrapper: _,
           rctActiveContextMenus: _,
           bUseDialogElement: _ = !0,
@@ -41451,7 +41328,7 @@
             },
             [_],
           );
-        })(_, __webpack_require__);
+        })(_, _);
         let _ = null,
           _ = !_;
         return (
@@ -41516,7 +41393,7 @@
       function _(_) {
         const {
           modal: _,
-          rctActiveContextMenus: __webpack_require__,
+          rctActiveContextMenus: _,
           active: _,
           bUseDialogElement: _,
         } = _;
@@ -41538,7 +41415,7 @@
               ),
               ref: _.RefModalElement,
             }),
-            __webpack_require__,
+            _,
           ],
         });
         return _
@@ -41551,7 +41428,7 @@
       function _(_) {
         const {
             modal: _,
-            active: __webpack_require__,
+            active: _,
             rctActiveContextMenus: _,
             Component: _,
           } = _,
@@ -41562,9 +41439,9 @@
             children: (0, _.jsxs)(_, {
               className: (0, _._)(
                 "ModalOverlayContent",
-                __webpack_require__ ? "active" : "inactive",
+                _ ? "active" : "inactive",
               ),
-              active: __webpack_require__,
+              active: _,
               modalKey: _.key,
               children: [_, _.element],
             }),
@@ -41572,9 +41449,9 @@
         );
       }
       function _(_) {
-        const { className: _, active: __webpack_require__, children: _ } = _;
+        const { className: _, active: _, children: _ } = _;
         return (0, _.jsx)(_, {
-          active: __webpack_require__,
+          active: _,
           children: (0, _.jsx)(_._, {
             children: (0, _.jsx)("div", {
               className: _,
@@ -41585,7 +41462,7 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
+        const { active: _, children: _ } = _,
           _ = _.useRef(null),
           [_, _] = _.useState(!1);
         return (
@@ -41600,7 +41477,7 @@
             className: _.ModalDialog,
             onClose: () => _(!1),
             onCancel: (_) => _.preventDefault(),
-            children: __webpack_require__,
+            children: _,
           })
         );
       }
@@ -41626,7 +41503,7 @@
         _ = _.memo(function (_) {
           const {
               children: _,
-              bRenderOverlayAtRoot: __webpack_require__,
+              bRenderOverlayAtRoot: _,
               refModalManager: _,
               DialogWrapper: _,
               bUseDialogElement: _ = !0,
@@ -42067,7 +41944,7 @@
       function _(_) {
         const {
             className: _,
-            modalClassName: __webpack_require__,
+            modalClassName: _,
             onCancel: _,
             closeModal: _,
             bOKDisabled: _,
@@ -42084,7 +41961,7 @@
           _ = (0, _._)();
         (0, _._)(
           _ || _,
-          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_} ${__webpack_require__}`,
+          `Either closeModal or onCancel should be passed to GenericDialog. Classes: ${_} ${_}`,
         );
         const _ = _.useCallback(() => {
             (_ && _()) || (_ && _());
@@ -42094,7 +41971,7 @@
           }, [_, _, _, _]);
         return (0, _.jsx)(_, {
           onEscKeypress: _,
-          className: __webpack_require__,
+          className: _,
           bDestructiveWarning: _,
           bDisableBackgroundDismiss: _,
           bHideCloseIcon: _,
@@ -42115,12 +41992,7 @@
         });
       }
       function _(_) {
-        const {
-            title: _,
-            titleClassName: __webpack_require__,
-            children: _,
-            ..._
-          } = _,
+        const { title: _, titleClassName: _, children: _, ..._ } = _,
           _ = _.useId();
         return (0, _.jsxs)(_, {
           "aria-labelledby": _ ? _ : "",
@@ -42129,7 +42001,7 @@
             _ &&
               (0, _.jsx)(_, {
                 _: _,
-                className: __webpack_require__,
+                className: _,
                 children: _,
               }),
             _,
@@ -42143,7 +42015,7 @@
           };
         }
         const {
-            strTitle: __webpack_require__,
+            strTitle: _,
             strDescription: _,
             strOKButtonText: _,
             strCancelButtonText: _,
@@ -42188,7 +42060,7 @@
         return (0, _.jsx)(_, {
           ..._,
           title:
-            __webpack_require__ ||
+            _ ||
             (0, _.jsx)(_.Fragment, {
               children: " ",
             }),
@@ -42253,15 +42125,15 @@
         return _ ? _ + "_Description" : void 0;
       }
       function _(_, _) {
-        const { label: __webpack_require__, description: _ } = _;
+        const { label: _, description: _ } = _;
         return {
-          "aria-labelledby": __webpack_require__ ? _(_) : void 0,
+          "aria-labelledby": _ ? _(_) : void 0,
           "aria-describedby": _ ? _(_) : void 0,
         };
       }
       const _ = _.forwardRef(function (_, _) {
         const {
-            accessibilityId: __webpack_require__,
+            accessibilityId: _,
             label: _,
             description: _,
             icon: _,
@@ -42370,7 +42242,7 @@
                 children: [
                   (0, _.jsxs)("div", {
                     className: _().FieldLabel,
-                    _: _(__webpack_require__),
+                    _: _(_),
                     children: [
                       _ &&
                         (0, _.jsx)("div", {
@@ -42422,7 +42294,7 @@
             _ &&
               (0, _.jsx)("div", {
                 className: _().FieldDescription,
-                _: _(__webpack_require__),
+                _: _(_),
                 children: _,
               }),
           ],
@@ -42437,7 +42309,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            label: _,
             description: _,
             explainer: _,
             icon: _,
@@ -42459,7 +42331,7 @@
           _ = _.useId();
         return (0, _.jsxs)(_, {
           accessibilityId: _,
-          label: __webpack_require__,
+          label: _,
           indentLevel: _,
           description: _,
           icon: _,
@@ -42488,7 +42360,7 @@
       });
       const _ = _.forwardRef(function (_, _) {
           const {
-              accessibilityId: __webpack_require__,
+              accessibilityId: _,
               label: _,
               description: _,
               explainer: _,
@@ -42507,7 +42379,7 @@
               accessibilityNameOrder: _,
               ..._
             } = _,
-            _ = (function (_, _, __webpack_require__ = ["label", "button"]) {
+            _ = (function (_, _, _ = ["label", "button"]) {
               const _ = _.useId(),
                 _ = _(_, _),
                 _ = {
@@ -42521,7 +42393,7 @@
                 (_["aria-describedby"] = _["aria-describedby"]),
                 _
               );
-            })(__webpack_require__, _, _);
+            })(_, _, _);
           return (0, _.jsx)(_, {
             ..._,
             ..._,
@@ -42531,7 +42403,7 @@
         }),
         _ = _.forwardRef(function (_, _) {
           const {
-              label: __webpack_require__,
+              label: _,
               description: _,
               icon: _,
               layout: _,
@@ -42543,7 +42415,7 @@
             _ = _.useId();
           return (0, _.jsx)(_, {
             accessibilityId: _,
-            label: __webpack_require__,
+            label: _,
             description: _,
             icon: _,
             bottomSeparator: _,
@@ -42568,7 +42440,7 @@
       function _(_) {
         const {
             childrenKey: _,
-            childrenClasses: __webpack_require__,
+            childrenClasses: _,
             children: _,
             directionClass: _,
             animate: _ = !0,
@@ -42583,7 +42455,7 @@
           children: (0, _.jsx)(
             _,
             {
-              childrenClasses: __webpack_require__,
+              childrenClasses: _,
               sizeClass: _,
               children: _,
             },
@@ -42594,7 +42466,7 @@
       function _(_) {
         const {
             sizeClass: _,
-            children: __webpack_require__,
+            children: _,
             childrenClasses: _,
             navKey: _,
             ..._
@@ -42723,23 +42595,19 @@
         });
       }
       function _(_) {
-        const { bTransparent: _, className: __webpack_require__, ..._ } = _;
+        const { bTransparent: _, className: _, ..._ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(__webpack_require__, _().Separator),
+          className: (0, _._)(_, _().Separator),
           ..._,
         });
       }
       _.forwardRef(function (_, _) {
-        const {
-            page: __webpack_require__,
-            bAutoFocusPageContent: _,
-            showTitle: _ = !1,
-          } = _,
+        const { page: _, bAutoFocusPageContent: _, showTitle: _ = !1 } = _,
           _ = _.useRef(null),
           _ = _.useRef(!0);
         _.useEffect(() => {
           (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
-        }, [__webpack_require__, _]);
+        }, [_, _]);
         return (0, _.jsx)(_.Provider, {
           value: _,
           children: (0, _.jsx)(_, {
@@ -42761,12 +42629,7 @@
         });
       });
       function _(_) {
-        const {
-            pages: _,
-            activePage: __webpack_require__,
-            refForPage: _,
-            PageComponent: _,
-          } = _,
+        const { pages: _, activePage: _, refForPage: _, PageComponent: _ } = _,
           _ = (function (_) {
             let _ = _.useRef(_),
               _ = _.useRef(_.None),
@@ -42775,12 +42638,7 @@
             let _ = _.None;
             _ < _ ? (_ = _.Down) : _ > _ && (_ = _._);
             return (_.current = _), (_.current = _), _;
-          })(
-            _.useMemo(
-              () => _.findIndex((_) => _ == __webpack_require__),
-              [_, __webpack_require__],
-            ),
-          ),
+          })(_.useMemo(() => _.findIndex((_) => _ == _), [_, _])),
           _ = (function (_, _) {
             const _ = _.useMemo(() => new Map(), []),
               _ = _.useRef(_);
@@ -42804,7 +42662,7 @@
               ),
               _
             );
-          })(__webpack_require__?.identifier, _);
+          })(_?.identifier, _);
         let _ =
           ((_ = _()),
           (_ = _) == _.Left
@@ -42818,20 +42676,20 @@
                   : "");
         var _, _;
         return (0, _.jsx)(_, {
-          childrenKey: __webpack_require__?.identifier,
+          childrenKey: _?.identifier,
           childrenClasses: _(_(), _().ContentTransition),
           directionClass: _,
           animate: _ != _.None,
           children:
-            __webpack_require__ &&
+            _ &&
             (0, _.jsx)(
               _,
               {
-                ref: _(__webpack_require__.identifier),
+                ref: _(_.identifier),
                 stylesheet: _(),
-                activePage: __webpack_require__,
+                activePage: _,
               },
-              __webpack_require__.identifier,
+              _.identifier,
             ),
         });
       }
@@ -42839,7 +42697,7 @@
         _ = __webpack_require__._(_);
       _.forwardRef(function (_, _) {
         const {
-            className: __webpack_require__,
+            className: _,
             opened: _,
             arrowClassName: _,
             "aria-label": _,
@@ -42852,10 +42710,7 @@
           children: [
             (0, _.jsx)(_, {
               _: _,
-              className: (0, _._)(
-                _().DropDownControlButton,
-                __webpack_require__,
-              ),
+              className: (0, _._)(_().DropDownControlButton, _),
               "aria-labelledby": _ || _,
               ..._,
               ref: _,
@@ -42885,7 +42740,7 @@
       });
       var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, ..._ } = _;
+        const { className: _, ..._ } = _;
         let _ = _.useRef(void 0),
           _ = (0, _._)(_, _);
         const [_, _] = _.useState(!1),
@@ -42893,7 +42748,7 @@
             _((_) => !_), window.setTimeout(() => _.current?.Focus(), 1);
           }, []);
         return (0, _.jsx)(_._, {
-          className: __webpack_require__,
+          className: _,
           onOptionsButton: _,
           onOptionsActionDescription: (0, _._)(
             _ ? "#Login_HidePassword" : "#Login_ShowPassword",
@@ -42917,7 +42772,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            label: __webpack_require__,
+            label: _,
             className: _,
             description: _,
             icon: _,
@@ -42929,7 +42784,7 @@
         return (0, _.jsx)(_, {
           accessibilityId: _,
           className: _,
-          label: __webpack_require__,
+          label: _,
           description: _,
           icon: _,
           bottomSeparator: _,
@@ -42943,7 +42798,7 @@
         });
       });
       _.forwardRef(function (_, _) {
-        const { className: __webpack_require__, value: _, ..._ } = _,
+        const { className: _, value: _, ..._ } = _,
           _ = _ ?? "";
         return (0, _.jsx)(_, {
           autoComplete: "off",
@@ -43111,7 +42966,7 @@
         _ = __webpack_require__("chunkid");
       const _ = new _._("FocusNavigation").Debug;
       function _(_) {
-        const { children: _, disableFocusRing: __webpack_require__, ..._ } = _,
+        const { children: _, disableFocusRing: _, ..._ } = _,
           [_, _] = _.useState({
             bFocusWithin: !1,
             navTarget: null,
@@ -43149,7 +43004,7 @@
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            !__webpack_require__ &&
+            !_ &&
               (0, _.jsx)(_, {
                 ..._,
                 ..._,
@@ -43165,7 +43020,7 @@
       function _(_) {
         const {
             rootClassName: _,
-            className: __webpack_require__,
+            className: _,
             bFocusWithin: _,
             navTarget: _,
             refMeasure: _,
@@ -43180,7 +43035,7 @@
               ref: _,
               children: (0, _.jsx)(_, {
                 refMeasure: _,
-                className: _()(__webpack_require__, _ && _().DebugFocusRing),
+                className: _()(_, _ && _().DebugFocusRing),
                 bFocusWithin: _ && (_ || _),
                 navTarget: _,
                 elContainer: _,
@@ -43192,7 +43047,7 @@
       function _(_) {
         const {
             className: _,
-            bFocusWithin: __webpack_require__,
+            bFocusWithin: _,
             navTarget: _,
             elContainer: _,
             bDebug: _,
@@ -43213,7 +43068,7 @@
         const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
           _ = _ && !_,
           _ = (function (_, _) {
-            const [__webpack_require__, _] = _.useState(!1);
+            const [_, _] = _.useState(!1);
             return (
               (0, _.useEffect)(() => {
                 if (_ && _) {
@@ -43242,7 +43097,7 @@
                   );
                 }
               }, [_, _]),
-              __webpack_require__
+              _
             );
           })(_, _),
           _ = _.useCallback(() => {
@@ -43269,7 +43124,7 @@
           _.useLayoutEffect(() => {
             _();
           }, [_]);
-        let _ = __webpack_require__;
+        let _ = _;
         return (
           _ && _ && (_.BWantsFocusRing() || (_ = !1)),
           _.useEffect(() => {
@@ -43295,14 +43150,14 @@
       function _(_) {
         const {
             className: _,
-            left: __webpack_require__,
+            left: _,
             top: _,
             height: _,
             width: _,
             target: _,
           } = _,
           _ = {
-            left: (__webpack_require__ ?? 0) - 0 + "px",
+            left: (_ ?? 0) - 0 + "px",
             top: (_ ?? 0) - 0 + "px",
             height: _ + "px",
             width: _ + "px",
@@ -43316,7 +43171,7 @@
         _ = __webpack_require__._(_);
       const _ = _.forwardRef(function (_, _) {
           const {
-            scrollDirection: __webpack_require__,
+            scrollDirection: _,
             scrollPaddingTop: _,
             scrollPaddingRight: _,
             scrollPaddingBottom: _,
@@ -43327,7 +43182,7 @@
             ..._
           } = _;
           let _;
-          switch (__webpack_require__) {
+          switch (_) {
             case "x":
               _ = _().ScrollX;
               break;
@@ -43375,16 +43230,12 @@
           });
         }),
         _ = _.forwardRef(function (_, _) {
-          const {
-              scrollStepPercent: __webpack_require__,
-              scrollBehavior: _,
-              ..._
-            } = _,
+          const { scrollStepPercent: _, scrollBehavior: _, ..._ } = _,
             _ = _.useRef(null),
             _ = _(
               _,
               _,
-              __webpack_require__,
+              _,
               _.useCallback((_) => _.currentTarget != _.target, []),
             ),
             _ = (0, _._)(_, _);
@@ -43396,14 +43247,9 @@
           });
         });
       _.forwardRef(function (_, _) {
-        const {
-          name: __webpack_require__,
-          msScrollRestoreDelay: _,
-          onScroll: _,
-          ..._
-        } = _;
+        const { name: _, msScrollRestoreDelay: _, onScroll: _, ..._ } = _;
         return (0, _.jsx)(_, {
-          name: __webpack_require__,
+          name: _,
           msScrollRestoreDelay: _,
           parentOnScroll: _,
           refDiv: _,
@@ -43416,14 +43262,9 @@
         });
       }),
         _.forwardRef(function (_, _) {
-          const {
-            name: __webpack_require__,
-            msScrollRestoreDelay: _,
-            onScroll: _,
-            ..._
-          } = _;
+          const { name: _, msScrollRestoreDelay: _, onScroll: _, ..._ } = _;
           return (0, _.jsx)(_, {
-            name: __webpack_require__,
+            name: _,
             msScrollRestoreDelay: _,
             parentOnScroll: _,
             refDiv: _,
@@ -43438,7 +43279,7 @@
       function _(_) {
         const {
             name: _,
-            msScrollRestoreDelay: __webpack_require__,
+            msScrollRestoreDelay: _,
             parentOnScroll: _,
             refDiv: _,
             children: _,
@@ -43450,13 +43291,8 @@
           _ = _.useRef(void 0);
         let _ = _.useCallback(
           (_) => {
-            const { scrollTop: _, scrollLeft: __webpack_require__ } =
-              _.currentTarget;
-            _(_),
-              (_.current = _),
-              _(__webpack_require__),
-              (_.current = __webpack_require__),
-              _ && _(_);
+            const { scrollTop: _, scrollLeft: _ } = _.currentTarget;
+            _(_), (_.current = _), _(_), (_.current = _), _ && _(_);
           },
           [_, _, _],
         );
@@ -43478,16 +43314,14 @@
               _.current.dispatchEvent(new UIEvent("scroll")));
           };
           (_ == _.current && _ == _.current) ||
-            (__webpack_require__
-              ? window.setTimeout(_, __webpack_require__)
-              : _());
-        }, [_, _, __webpack_require__]);
+            (_ ? window.setTimeout(_, _) : _());
+        }, [_, _, _]);
         const _ = (0, _._)(_, _);
         return _.useMemo(() => _(_, _), [_, _, _]);
       }
       const _ = _.forwardRef(function (_, _) {
         const {
-            onExplicitFocusLevelChanged: __webpack_require__,
+            onExplicitFocusLevelChanged: _,
             onOKButton: _,
             onCancelButton: _,
             navRef: _,
@@ -43499,7 +43333,7 @@
             navRefPanel: _,
             onOKButton: _,
             onCancelButton: _,
-            onExplicitFocusLevelChanged: __webpack_require__,
+            onExplicitFocusLevelChanged: _,
           }),
           _ = (0, _._)(_, _);
         return (0, _.jsx)(_._, {
@@ -43513,7 +43347,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            onOKButton: __webpack_require__,
+            onOKButton: _,
             onCancelButton: _,
             navRef: _,
             focusable: _,
@@ -43524,7 +43358,7 @@
           _ = _.useCallback((_, _) => _.FocusVisibleChild(), []),
           { fnOnOKButton: _, fnOnCancelButton: _ } = _({
             navRefPanel: _,
-            onOKButton: __webpack_require__,
+            onOKButton: _,
             onCancelButton: _,
             fnFocusChildren: _,
           }),
@@ -43542,7 +43376,7 @@
       function _(_) {
         let {
           navRefPanel: _,
-          onOKButton: __webpack_require__,
+          onOKButton: _,
           onCancelButton: _,
           onExplicitFocusLevelChanged: _,
           fnFocusChildren: _,
@@ -43553,9 +43387,9 @@
               const _ = _.current;
               return _?.BHasFocus() && _(_, _.detail.button)
                 ? (_ && _(!0), !0)
-                : !!__webpack_require__ && __webpack_require__(_);
+                : !!_ && __webpack_require__(_);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           ),
           _ = _.useCallback(
             (_) => {
@@ -44368,7 +44202,7 @@
           const {
               min: _,
               max: _,
-              value: __webpack_require__,
+              value: _,
               clampMax: _,
               clampMin: _,
               className: _,
@@ -44442,7 +44276,7 @@
                 "leftparen" == _ ? _().Left : _().Right,
                 "SliderHandleContainer",
               )));
-          const _ = _(__webpack_require__);
+          const _ = _(_);
           return (0, _.jsx)(_, {
             noFocusRing: !0,
             className: (0, _._)(
@@ -44470,7 +44304,7 @@
             "aria-label": _["aria-label"],
             children: (0, _.jsxs)(_._, {
               role: "slider",
-              "aria-valuenow": __webpack_require__,
+              "aria-valuenow": _,
               "aria-valuetext": _,
               ..._,
               className: (0, _._)(
@@ -44530,8 +44364,8 @@
                         }),
                       }),
                     this.validRange &&
-                      null != __webpack_require__ &&
-                      !isNaN(__webpack_require__) &&
+                      null != _ &&
+                      !isNaN(_) &&
                       this.showHandle &&
                       (0, _.jsx)("div", {
                         className: _,
@@ -44561,16 +44395,16 @@
       function _(_) {
         let {
             sliderValue: _,
-            notchCount: __webpack_require__,
+            notchCount: _,
             notchLabels: _,
             notchTicksVisible: _,
             renderNotch: _,
           } = _,
           _ = _ ?? [];
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         let _ = !1,
           _ = [];
-        for (let _ = 0; _ < __webpack_require__; ++_) {
+        for (let _ = 0; _ < _; ++_) {
           let _ = _.find((_) => _.notchIndex == _);
           _ && (_ = !0),
             _.push(
@@ -44580,7 +44414,7 @@
                   notchIndex: _,
                   sliderValue: _,
                   notchLabel: _,
-                  notchCount: __webpack_require__,
+                  notchCount: _,
                   notchTicksVisible: _,
                   renderNotch: _,
                 },
@@ -44614,11 +44448,7 @@
         });
       }
       function _(_) {
-        const {
-          alignLeftEnd: _,
-          alignRightEnd: __webpack_require__,
-          active: _,
-        } = _;
+        const { alignLeftEnd: _, alignRightEnd: _, active: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _.notchTicksVisible &&
@@ -44630,7 +44460,7 @@
                 className: (0, _._)(
                   _().SliderNotchLabel,
                   _ && _().AlignToLeft,
-                  __webpack_require__ && _().AlignToRight,
+                  _ && _().AlignToRight,
                 ),
                 children: _.notchLabel?.label,
               }),
@@ -44655,7 +44485,7 @@
         (0, _._)([_._], _.prototype, "OnContextMenu", null);
       _.forwardRef(function (_, _) {
         const {
-          label: __webpack_require__,
+          label: _,
           labelIndex: _,
           xOffset: _,
           onResize: _,
@@ -44683,13 +44513,13 @@
           },
           children: (0, _.jsx)("div", {
             className: _().CompoundSliderSubSliderLabelInternal,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       });
       const _ = _.forwardRef(function (_, _) {
         const {
-          value: __webpack_require__,
+          value: _,
           onChange: _,
           disabled: _,
           className: _,
@@ -44703,11 +44533,11 @@
           noFocusRing: !0,
           className: (0, _._)(_, _().Toggle, {
             [_().Disabled]: !!_,
-            [_()._]: !!__webpack_require__,
+            [_()._]: !!_,
           }),
           onClick: () => {
             if (!_ && _) {
-              const _ = !__webpack_require__;
+              const _ = !_;
               _(_), _._.PlayNavSound(_ ? _._.ToggleOn : _._.ToggleOff);
             }
           },
@@ -44715,7 +44545,7 @@
           navRef: _,
           focusable: _,
           role: "checkbox",
-          "aria-checked": !!__webpack_require__,
+          "aria-checked": !!_,
           children: [
             (0, _.jsx)("div", {
               className: _().ToggleRail,
@@ -44729,8 +44559,7 @@
       });
       function _(_) {
         const _ = !!_.disabled,
-          { actionDescriptions: __webpack_require__, gamepadEvents: _ } = (0,
-          _._)(_),
+          { actionDescriptions: _, gamepadEvents: _ } = (0, _._)(_),
           _ = _.useId(),
           { "aria-expanded": _, "aria-controls": _ } = _;
         return (0, _.jsx)(_, {
@@ -44747,7 +44576,7 @@
           highlightOnFocus: _.highlightOnFocus,
           inlineWrap: "keep-inline",
           onContextMenu: _.onContextMenu,
-          actionDescriptionMap: __webpack_require__,
+          actionDescriptionMap: _,
           onClick: _.onClick,
           indentLevel: _.indentLevel,
           ..._,
@@ -44763,7 +44592,7 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__ } = _,
+        const { active: _, children: _ } = _,
           _ = _() || _(window),
           _ = _.useContext(_).DialogWrapper,
           [_, _] = _.useState(null),
@@ -44791,7 +44620,7 @@
         )
           return null;
         let _ = (0, _.jsx)(_._, {
-          children: __webpack_require__,
+          children: _,
         });
         return (
           _ &&
@@ -44822,9 +44651,9 @@
       );
       function _(_) {
         const { labelledBy: _ } = _ || {},
-          [__webpack_require__, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0);
         return {
-          headerId: _ || __webpack_require__,
+          headerId: _ || _,
           context: _.useMemo(
             () => ({
               setHeaderId: _,
@@ -44836,7 +44665,7 @@
       function _(_) {
         const {
             active: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             className: _,
             modalClassName: _,
             children: _,
@@ -44850,7 +44679,7 @@
           children: (0, _.jsx)(_, {
             active: _,
             children: (0, _.jsx)(_, {
-              onEscKeypress: __webpack_require__,
+              onEscKeypress: _,
               className: _,
               children: (0, _.jsx)(_, {
                 role: "dialog",
@@ -45166,7 +44995,7 @@
           (_[(_.HIGHLIGHTED = 2)] = "HIGHLIGHTED");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1),
+          const [_, _] = (0, _.useState)(!1),
             _ = (0, _.useRef)(void 0),
             _ = _.options.findIndex((_) => _.selectedOption == _?.value);
           !(function (_, _) {
@@ -45363,7 +45192,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.memo((_) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1),
+          const [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(0 == _.nAccountID),
             _ = `${_._.IMG_URL}international2025/players/${_.nAccountID}.png`,
             _ = `${_._.IMG_URL}player_unknown.png`;
@@ -45482,7 +45311,7 @@
               }),
         ),
         _ = _.memo((_) => {
-          const [_, __webpack_require__] = (0, _.useState)(0),
+          const [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)(0 == _.nTeamID),
             _ = [
               `${_._.CDN_URL}apps/dota2/teamlogos/${_.nTeamID}.png`,
@@ -45515,11 +45344,11 @@
         }),
         _ = 244,
         _ = ({ bLeft: _, adjustDate: _ }) => {
-          const [__webpack_require__, _] = (0, _.useState)(!1),
+          const [_, _] = (0, _.useState)(!1),
             _ = (0, _.useRef)(null);
           return (
             (0, _.useEffect)(() => {
-              __webpack_require__
+              _
                 ? (_(_ ? -1 : 1),
                   _.current &&
                     (_.current.interval = setInterval(
@@ -45527,7 +45356,7 @@
                       400,
                     )))
                 : clearInterval(_.current?.interval);
-            }, [_.current?.interval, __webpack_require__, _, _]),
+            }, [_.current?.interval, _, _, _]),
             (0, _.jsx)("div", {
               className: (0, _._)(
                 _().ScrollArrow,
@@ -45601,7 +45430,7 @@
             ({
               nTeamID: _,
               strTeamInfo: _,
-              strTeamName: __webpack_require__,
+              strTeamName: _,
               bWinner: _,
               bShowTeams: _,
             }) =>
@@ -45615,7 +45444,7 @@
                   }),
                   (0, _.jsx)("div", {
                     className: _().TeamName,
-                    children: (0, _._)(__webpack_require__),
+                    children: (0, _._)(_),
                   }),
                   (0, _.jsx)("div", {
                     className: _().TeamInfo,
@@ -45628,7 +45457,7 @@
           ({
             nLeagueID: _,
             nNodeID: _,
-            arrTimestamps: __webpack_require__,
+            arrTimestamps: _,
             nOverrideTimestamp: _,
           }) => {
             const _ = _(),
@@ -48321,7 +48150,7 @@
         _ = (0, _._)((_) => {
           const _ = _(),
             {
-              nLeagueID: __webpack_require__,
+              nLeagueID: _,
               nNodeID: _,
               match: _,
               nGame: _,
@@ -48329,13 +48158,11 @@
               bExpanded: _,
             } = _,
             [_, _] = (0, _.useState)(_),
-            _ = _
-              ? _._.Get().GetMatchData(__webpack_require__, _?.match_id)
-              : void 0,
-            _ = _._.Get().GetLeagueNode(__webpack_require__, _),
+            _ = _ ? _._.Get().GetMatchData(_, _?.match_id) : void 0,
+            _ = _._.Get().GetLeagueNode(_, _),
             _ = _._.Get().getHeroList();
           _ && !_ && _(!0);
-          const _ = _._.Get().IsGameWatched(__webpack_require__, _, _),
+          const _ = _._.Get().IsGameWatched(_, _, _),
             _ = _._.Get().GetSpoilerBlockState(_) == _._.BLOCKED && !_,
             _ = _.vods.length > 0,
             _ = -1 != _.vods.findIndex((_) => _.series_game == _),
@@ -48370,8 +48197,7 @@
                   !_ &&
                     (0, _.jsx)("div", {
                       className: _().MarkWatchedButton,
-                      onClick: () =>
-                        _._.Get().SetGameWatched(__webpack_require__, _, _),
+                      onClick: () => _._.Get().SetGameWatched(_, _, _),
                       children: (0, _._)("#dpc_mark_watched"),
                     }),
                 ],
@@ -48432,7 +48258,7 @@
                       },
                       pathname: _._.dpc_watch(
                         (0, _._)(_),
-                        `${__webpack_require__}`,
+                        `${_}`,
                         `${_}`,
                         (0, _._)(_, _._.GAME),
                       ),
@@ -48525,7 +48351,7 @@
                     },
                     pathname: _._.dpc_watch(
                       (0, _._)(_),
-                      `${__webpack_require__}`,
+                      `${_}`,
                       `${_}`,
                       (0, _._)(_, _ ? _._.VOD : _._.GAME),
                     ),
@@ -48539,7 +48365,7 @@
         }),
         _ = (0, _._)(() => {
           const _ = _(),
-            [_, __webpack_require__] = (0, _.useState)(""),
+            [_, _] = (0, _.useState)(""),
             [_, _] = (0, _.useState)(_._.UNSET),
             [_, _] = (0, _.useState)(_._.UNSET),
             [_, _] = (0, _.useState)(0);
@@ -48608,7 +48434,7 @@
       const _ = (0, _._)(() => {
         const _ = _(),
           _ = _._.Get().GetEventInfo(_),
-          [__webpack_require__, _] = (0, _.useState)(0),
+          [_, _] = (0, _.useState)(0),
           _ = _._.Get().GetDPCStandings(_?.registration_period);
         return (0, _.jsxs)("div", {
           className: _().DPCTIStandingsPage,
@@ -48619,13 +48445,12 @@
                 children: (0, _._)("#dpc_ti_results_empty"),
               }),
             _?.results.map((_) => {
-              const _ = __webpack_require__ == _.team_id;
+              const _ = _ == _.team_id;
               return (0, _.jsxs)(
                 "div",
                 {
                   className: _().TeamEntry,
-                  onClick: () =>
-                    _(__webpack_require__ == _.team_id ? 0 : _.team_id),
+                  onClick: () => _(_ == _.team_id ? 0 : _.team_id),
                   children: [
                     (0, _.jsxs)("div", {
                       className: _().TeamBody,
@@ -49234,7 +49059,7 @@
           }),
         _ = (0, _._)((_) => {
           const _ = _(),
-            [__webpack_require__, _] = (0, _.useState)(!0),
+            [_, _] = (0, _.useState)(!0),
             [_, _] = (0, _.useState)(0),
             { nLeagueID: _, nNodeGroupID: _ } =
               _._.Get().GetEventPhaseNodeGroupID(
@@ -49266,25 +49091,20 @@
                   }),
                   (0, _.jsxs)("div", {
                     className: _().DayDisplayContainer,
-                    onClick: () => _(!__webpack_require__),
+                    onClick: () => _(!_),
                     children: [
                       (0, _.jsx)("div", {
                         className: _().DayDisplayLabel,
                         children: (0, _._)("#dpc_show_days"),
                       }),
                       (0, _.jsx)("div", {
-                        className: (0, _._)(
-                          _().DayDisplayValue,
-                          __webpack_require__ && _()._,
-                        ),
+                        className: (0, _._)(_().DayDisplayValue, _ && _()._),
                         children: (0, _._)(
-                          __webpack_require__
-                            ? "#dpc_show_days_on"
-                            : "#dpc_show_days_off",
+                          _ ? "#dpc_show_days_on" : "#dpc_show_days_off",
                         ),
                       }),
                       (0, _.jsx)(_, {
-                        bEnabled: __webpack_require__,
+                        bEnabled: _,
                         setEnabled: _,
                       }),
                     ],
@@ -49295,7 +49115,7 @@
                     children: (0, _.jsx)(_, {
                       nLeagueID: _,
                       nNodeGroupID: _,
-                      bShowingDays: __webpack_require__,
+                      bShowingDays: _,
                       nExpandedNodeID: _,
                       setExpandedNodeID: _,
                     }),
@@ -49303,10 +49123,7 @@
                 ],
               }),
               (0, _.jsx)("div", {
-                className: (0, _._)(
-                  _().DayLegend,
-                  __webpack_require__ && _().Show,
-                ),
+                className: (0, _._)(_().DayLegend, _ && _().Show),
                 children: _.map((_, _) =>
                   (0, _.jsxs)(
                     "div",
@@ -50069,7 +49886,7 @@
         }),
         _ = (0, _._)((_) => {
           const _ = _(),
-            { nLeagueID: __webpack_require__, nNodeGroupID: _ } =
+            { nLeagueID: _, nNodeGroupID: _ } =
               _._.Get().GetEventPhaseNodeGroupID(
                 _,
                 _.ePhase,
@@ -50088,21 +49905,16 @@
           }
           const _ =
             _._.Get()
-              .GetLeagueNodeGroupTeams(__webpack_require__, _)
-              ?.filter(
-                (_) =>
-                  null != _._.Get().GetTeamStanding(__webpack_require__, _, _),
-              ).length > 0;
+              .GetLeagueNodeGroupTeams(_, _)
+              ?.filter((_) => null != _._.Get().GetTeamStanding(_, _, _))
+              .length > 0;
           let _ = [];
           if (_) {
-            const _ = _._.Get().GetLeagueNodeGroupTeams(__webpack_require__, _);
+            const _ = _._.Get().GetLeagueNodeGroupTeams(_, _);
             let _ = 0,
               _ = _.length;
-            for (const _ of _._.Get().GetLeagueNodeGroupTeams(
-              __webpack_require__,
-              _,
-            )) {
-              const _ = _._.Get().GetTeamStanding(__webpack_require__, _, _);
+            for (const _ of _._.Get().GetLeagueNodeGroupTeams(_, _)) {
+              const _ = _._.Get().GetTeamStanding(_, _, _);
               _ &&
                 (_.wins >= _.nMaxWinsLosses && (_ = Math.max(_, _.standing)),
                 _.losses >= _.nMaxWinsLosses && (_ = Math.min(_, _.standing)));
@@ -50149,7 +49961,7 @@
         }),
         _ = (0, _._)((_) => {
           const _ = _(),
-            { nLeagueID: __webpack_require__, nNodeGroupID: _ } =
+            { nLeagueID: _, nNodeGroupID: _ } =
               _._.Get().GetEventPhaseNodeGroupID(
                 _,
                 _.ePhase,
@@ -50174,12 +49986,9 @@
             ),
             _ =
               _._.Get()
-                .GetLeagueNodeGroupTeams(__webpack_require__, _)
-                ?.filter(
-                  (_) =>
-                    null !=
-                    _._.Get().GetTeamStanding(__webpack_require__, _, _),
-                ).length > 0;
+                .GetLeagueNodeGroupTeams(_, _)
+                ?.filter((_) => null != _._.Get().GetTeamStanding(_, _, _))
+                .length > 0;
           return (0, _.jsxs)("div", {
             className: _().DPCStandingsRoundRobin,
             children: [
@@ -51517,27 +51326,26 @@
                 ],
               });
         }),
-        _ = (0, _._)(
-          ({ nTeamID: _, strName: _, strRegion: __webpack_require__ }) =>
-            (0, _.jsxs)("div", {
-              className: _().IternationalTeamListTeam,
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().GoldTeamLogo,
-                  style: {
-                    backgroundImage: `url( ${_._.IMG_URL}international2020/teams_gold/${_}.png )`,
-                  },
-                }),
-                (0, _.jsx)("div", {
-                  className: _().TeamName,
-                  children: _,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().TeamRegion,
-                  children: (0, _._)(__webpack_require__),
-                }),
-              ],
-            }),
+        _ = (0, _._)(({ nTeamID: _, strName: _, strRegion: _ }) =>
+          (0, _.jsxs)("div", {
+            className: _().IternationalTeamListTeam,
+            children: [
+              (0, _.jsx)("div", {
+                className: _().GoldTeamLogo,
+                style: {
+                  backgroundImage: `url( ${_._.IMG_URL}international2020/teams_gold/${_}.png )`,
+                },
+              }),
+              (0, _.jsx)("div", {
+                className: _().TeamName,
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _().TeamRegion,
+                children: (0, _._)(_),
+              }),
+            ],
+          }),
         ),
         _ = (0, _._)(() => {
           const _ = _();
@@ -52339,37 +52147,36 @@
                   ],
                 });
           })),
-        _ = (0, _._)(
-          ({ nTeamID: _, strName: _, strRegion: __webpack_require__ }) =>
-            (0, _.jsxs)("div", {
-              className: _().InternationalTeamListTeam,
-              "data-aos": "fade-up",
-              "data-aos-duration": "2500",
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().TeamName,
-                    _().TextColorWhite,
-                    _().TextStyleHeading,
-                  ),
-                  children: _,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().LavaTeamLogo,
-                  style: {
-                    backgroundImage: `url( ${_._.CDN_URL}apps/dota2/teamlogos/${_}.png )`,
-                  },
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().TeamRegion,
-                    _().TextColorYellowGradient,
-                    _().TextStyleSmallHeading,
-                  ),
-                  children: (0, _._)(__webpack_require__),
-                }),
-              ],
-            }),
+        _ = (0, _._)(({ nTeamID: _, strName: _, strRegion: _ }) =>
+          (0, _.jsxs)("div", {
+            className: _().InternationalTeamListTeam,
+            "data-aos": "fade-up",
+            "data-aos-duration": "2500",
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().TeamName,
+                  _().TextColorWhite,
+                  _().TextStyleHeading,
+                ),
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _().LavaTeamLogo,
+                style: {
+                  backgroundImage: `url( ${_._.CDN_URL}apps/dota2/teamlogos/${_}.png )`,
+                },
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().TeamRegion,
+                  _().TextColorYellowGradient,
+                  _().TextStyleSmallHeading,
+                ),
+                children: (0, _._)(_),
+              }),
+            ],
+          }),
         ),
         _ = (0, _._)(() => {
           const _ = _();
@@ -52981,36 +52788,32 @@
                   }),
                 });
           })),
-        _ = (0, _._)(
-          ({ nTeamID: _, strName: _, strRegion: __webpack_require__ }) =>
-            (0, _.jsxs)("div", {
-              className: _().InternationalTeamListTeam,
-              "data-aos": "fade-up",
-              "data-aos-duration": "2500",
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().TeamName,
-                    _().TextColorWhite,
-                    _().TextStyleHeading,
-                  ),
-                  children: _,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().LavaTeamLogo,
-                  style: {
-                    backgroundImage: `url( ${_._.CDN_URL}apps/dota2/teamlogos/${_}.png )`,
-                  },
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().TeamRegion,
-                    _().TextStyleSmallHeading,
-                  ),
-                  children: (0, _._)(__webpack_require__),
-                }),
-              ],
-            }),
+        _ = (0, _._)(({ nTeamID: _, strName: _, strRegion: _ }) =>
+          (0, _.jsxs)("div", {
+            className: _().InternationalTeamListTeam,
+            "data-aos": "fade-up",
+            "data-aos-duration": "2500",
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().TeamName,
+                  _().TextColorWhite,
+                  _().TextStyleHeading,
+                ),
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _().LavaTeamLogo,
+                style: {
+                  backgroundImage: `url( ${_._.CDN_URL}apps/dota2/teamlogos/${_}.png )`,
+                },
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().TeamRegion, _().TextStyleSmallHeading),
+                children: (0, _._)(_),
+              }),
+            ],
+          }),
         ),
         _ = (0, _._)(() => {
           const _ = _();
@@ -53597,36 +53400,32 @@
                   ],
                 });
           })),
-        _ = (0, _._)(
-          ({ nTeamID: _, strName: _, strRegion: __webpack_require__ }) =>
-            (0, _.jsxs)("div", {
-              className: _().InternationalTeamListTeam,
-              "data-aos": "fade-up",
-              "data-aos-duration": "2500",
-              children: [
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().TeamName,
-                    _().TextColorWhite,
-                    _().TextStyleHeading,
-                  ),
-                  children: _,
-                }),
-                (0, _.jsx)("div", {
-                  className: _().LavaTeamLogo,
-                  style: {
-                    backgroundImage: `url( ${_._.CDN_URL}apps/dota2/teamlogos/${_}.png )`,
-                  },
-                }),
-                (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().TeamRegion,
-                    _().TextStyleSmallHeading,
-                  ),
-                  children: (0, _._)(__webpack_require__),
-                }),
-              ],
-            }),
+        _ = (0, _._)(({ nTeamID: _, strName: _, strRegion: _ }) =>
+          (0, _.jsxs)("div", {
+            className: _().InternationalTeamListTeam,
+            "data-aos": "fade-up",
+            "data-aos-duration": "2500",
+            children: [
+              (0, _.jsx)("div", {
+                className: (0, _._)(
+                  _().TeamName,
+                  _().TextColorWhite,
+                  _().TextStyleHeading,
+                ),
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _().LavaTeamLogo,
+                style: {
+                  backgroundImage: `url( ${_._.CDN_URL}apps/dota2/teamlogos/${_}.png )`,
+                },
+              }),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().TeamRegion, _().TextStyleSmallHeading),
+                children: (0, _._)(_),
+              }),
+            ],
+          }),
         ),
         _ = (0, _._)(() => {
           const _ = _();
@@ -54242,41 +54041,40 @@
               }),
             });
           })),
-        _ = (0, _._)(
-          ({ nTeamID: _, strName: _, strRegion: __webpack_require__ }) =>
-            (0, _.jsxs)("div", {
-              className: _().InternationalTeamListTeam,
-              "data-aos": "fade-up",
-              "data-aos-duration": "2500",
-              children: [
-                (0, _.jsx)("div", {
-                  className: _().MagentaTeamLogo,
-                  style: {
-                    backgroundImage: `url( ${_._.IMG_URL}international2025/teamlogos/${_}.png )`,
-                  },
-                }),
-                (0, _.jsxs)("div", {
-                  className: (0, _._)(_().TeamTextContainer),
-                  children: [
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().TeamName,
-                        _().TextColorWhite,
-                        _().TextStyleHeading,
-                      ),
-                      children: _,
-                    }),
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(
-                        _().TeamRegion,
-                        _().TextStyleSmallHeading,
-                      ),
-                      children: (0, _._)(__webpack_require__),
-                    }),
-                  ],
-                }),
-              ],
-            }),
+        _ = (0, _._)(({ nTeamID: _, strName: _, strRegion: _ }) =>
+          (0, _.jsxs)("div", {
+            className: _().InternationalTeamListTeam,
+            "data-aos": "fade-up",
+            "data-aos-duration": "2500",
+            children: [
+              (0, _.jsx)("div", {
+                className: _().MagentaTeamLogo,
+                style: {
+                  backgroundImage: `url( ${_._.IMG_URL}international2025/teamlogos/${_}.png )`,
+                },
+              }),
+              (0, _.jsxs)("div", {
+                className: (0, _._)(_().TeamTextContainer),
+                children: [
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().TeamName,
+                      _().TextColorWhite,
+                      _().TextStyleHeading,
+                    ),
+                    children: _,
+                  }),
+                  (0, _.jsx)("div", {
+                    className: (0, _._)(
+                      _().TeamRegion,
+                      _().TextStyleSmallHeading,
+                    ),
+                    children: (0, _._)(_),
+                  }),
+                ],
+              }),
+            ],
+          }),
         ),
         _ = (0, _._)(() => {
           const _ = _();
@@ -54462,9 +54260,12 @@
         _ = __webpack_require__._(_);
       const _ = (0, _._)(() => {
         const _ = _(),
-          { nLeagueID: _, nNodeID: __webpack_require__ } =
-            _._.Get().GetNextLeagueNode(_, null, null),
-          _ = _._.Get().GetLeagueNode(_, __webpack_require__);
+          { nLeagueID: _, nNodeID: _ } = _._.Get().GetNextLeagueNode(
+            _,
+            null,
+            null,
+          ),
+          _ = _._.Get().GetLeagueNode(_, _);
         if (!_) return null;
         if (_._.Get().GetSpoilerBlockState(_) == _._.BLOCKED) return null;
         const _ = _._.Get().GetTeamNames(_.team_id_1),
@@ -54529,11 +54330,7 @@
               (0, _.jsx)("div", {
                 className: _().ScheduleButtonContainer,
                 children: (0, _.jsx)(_._, {
-                  _: _._.dpc_schedule(
-                    (0, _._)(_),
-                    `${_}`,
-                    `${__webpack_require__}`,
-                  ),
+                  _: _._.dpc_schedule((0, _._)(_), `${_}`, `${_}`),
                   className: _().ScheduleButton,
                   children: (0, _.jsx)("div", {
                     className: _().Label,
@@ -55030,7 +54827,7 @@
           ({
             nTeamID: _,
             bLeft: _,
-            bWinner: __webpack_require__,
+            bWinner: _,
             nWins: _,
             nPossibleWins: _,
             bShowRecord: _,
@@ -55055,7 +54852,7 @@
                 _().DPCSeriesDetailsHeaderTeam,
                 _ && _().Left,
                 !_ && _().Right,
-                __webpack_require__ && !_ && _().Winner,
+                _ && !_ && _().Winner,
                 _.bLarge && _().Large,
                 _.bShowChat && _().ShowChat,
               ),
@@ -55463,7 +55260,7 @@
           ({
             nTeamID: _,
             bLeft: _,
-            nSelectedAccountID: __webpack_require__,
+            nSelectedAccountID: _,
             setSelectedAccountID: _,
           }) => {
             const _ = _(),
@@ -55548,7 +55345,7 @@
                         (0, _.jsx)(
                           _,
                           {
-                            nSelectedAccountID: __webpack_require__,
+                            nSelectedAccountID: _,
                             setSelectedAccountID: _,
                             bLeft: _,
                             strName: _.strProName,
@@ -55572,7 +55369,7 @@
           ({
             bLeft: _,
             nHoveredAccountID: _,
-            setHoveredAccountID: __webpack_require__,
+            setHoveredAccountID: _,
             nSelectedAccountID: _,
             setSelectedAccountID: _,
             strName: _,
@@ -55603,10 +55400,10 @@
               ),
               onClick: () => _(_ == _ ? 0 : _),
               onMouseEnter: () => {
-                __webpack_require__ && __webpack_require__(_);
+                _ && __webpack_require__(_);
               },
               onMouseLeave: () => {
-                __webpack_require__ && __webpack_require__("chunkid");
+                _ && __webpack_require__("chunkid");
               },
               children: [
                 !_ &&
@@ -55807,7 +55604,7 @@
       })(_ || (_ = {}));
       const _ = (0, _._)(() => {
           const _ = _(),
-            [_, __webpack_require__] = (0, _.useState)(8),
+            [_, _] = (0, _.useState)(8),
             _ = _._.Get().GetFavoriteTeams(),
             _ = _._.Get().GetPopularTeams(),
             _ = _._.Get()
@@ -56384,7 +56181,7 @@
       const _ = (0, _._)(() => {
         const _ = _(),
           _ = _._.Get().GetEventInfo(_),
-          [__webpack_require__, _] = (0, _.useState)(_._.DIVISION_I);
+          [_, _] = (0, _.useState)(_._.DIVISION_I);
         if (_._.Get().GetEventType(_) != _._.LEAGUE) return null;
         if (_._.Get().GetSpoilerBlockState(_) == _._.BLOCKED) return null;
         if (_.is_event_upcoming) return null;
@@ -56414,14 +56211,14 @@
                 (0, _.jsx)(_, {
                   eStyle: _.NORMAL,
                   options: _,
-                  selectedOption: __webpack_require__,
+                  selectedOption: _,
                   setOption: _,
                 }),
               ],
             }),
             (0, _.jsx)(_, {
               ePhase: _._.OVERALL,
-              eDivision: __webpack_require__,
+              eDivision: _,
             }),
             (0, _.jsx)(_._, {
               bottom: !0,
@@ -59757,7 +59554,7 @@
                 _
               );
             })(),
-            [_, __webpack_require__] = (0, _.useState)(0),
+            [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)(_._.INVALID),
             _ = (0, _._)(),
@@ -59789,7 +59586,7 @@
                   eSeriesDisplay: _._.DETAILS,
                 }),
                 _._.Get().CacheDPCLeagueData(_));
-            }, [_, _, _, _, _, _, _, __webpack_require__, _]),
+            }, [_, _, _, _, _, _, _, _, _]),
             (0, _.useEffect)(() => {
               _.state?.bAutoScroll &&
                 (window.scrollTo({
@@ -59887,7 +59684,7 @@
         let _ = 5;
         return _ < 1300 && (_ = 4), _ < 1e3 && (_ = 3), _ < 600 && (_ = 2), _;
       }
-      const _ = ({ hero: _, hidden: _, pos: __webpack_require__ }) => {
+      const _ = ({ hero: _, hidden: _, pos: _ }) => {
           let _ = "";
           switch (_.primary_attr) {
             case 0:
@@ -59903,8 +59700,8 @@
               _ = "universal";
           }
           let _ = _();
-          const _ = Math.max(0, __webpack_require__ % _),
-            _ = Math.max(0, Math.floor(__webpack_require__ / _));
+          const _ = Math.max(0, _ % _),
+            _ = Math.max(0, Math.floor(_ / _));
           return (0, _.jsxs)(_._, {
             _: _._.hero(_.name_english_loc.replace(/ /g, "").toLowerCase()),
             className: (0, _._)(_().HeroIcon, _ && _().Hidden),
@@ -59941,7 +59738,7 @@
           });
         },
         _ = ({ heroList: _ }) => {
-          const [_, __webpack_require__] = (0, _.useState)(0),
+          const [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)(0),
             [_, _] = (0, _.useState)(""),
             _ = (_) => {
@@ -60311,7 +60108,7 @@
           );
         }),
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(void 0);
+          const [_, _] = (0, _.useState)(void 0);
           _ ||
             _.LoadPartnerEventsPageable(
               _._.InitFromClanID(0),
@@ -61401,7 +61198,7 @@
         ],
         _ = () => {
           const [_, _] = (0, _.useState)([]),
-            [__webpack_require__, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)([]),
@@ -61506,7 +61303,7 @@
             _ = (() => {
               const _ = [];
               return (
-                __webpack_require__.length > 0 &&
+                _.length > 0 &&
                   (_.length > 1 &&
                     _.push(
                       (0, _.jsxs)(
@@ -61646,7 +61443,7 @@
             _ = ({
               proName: _,
               accountId: _,
-              pos: __webpack_require__,
+              pos: _,
               fileName: _,
               timestamp: _,
             }) => {
@@ -61976,7 +61773,7 @@
                                               children: _.autographs.map(
                                                 (_, _) => {
                                                   const {
-                                                    name: __webpack_require__,
+                                                    name: _,
                                                     pro_name: _,
                                                     account_id: _,
                                                     file: _,
@@ -63478,12 +63275,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
-      const _ = ({
-          index: _,
-          video: _,
-          name: __webpack_require__,
-          onSlideIn: _,
-        }) => {
+      const _ = ({ index: _, video: _, name: _, onSlideIn: _ }) => {
           const _ = (0, _.useContext)(_._),
             _ = (0, _.useRef)(void 0),
             _ =
@@ -63495,12 +63287,12 @@
                 _ &&
                   _.current &&
                   (_.state.currentSlide == _
-                    ? (_.current.play(), _(__webpack_require__))
+                    ? (_.current.play(), _(_))
                     : Math.abs(_.state.currentSlide - _) > 2 &&
                       _.current.pause());
               }
               return _.subscribe(_), () => _.unsubscribe(_);
-            }, [_, _, __webpack_require__, _]),
+            }, [_, _, _, _]),
             (0, _.jsx)("div", {
               className: _().SlideContainer,
               children: _
@@ -63526,7 +63318,7 @@
           );
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(1),
+          const [_, _] = _.useState(1),
             _ = _.comparisons.length - 1;
           return (0, _.jsxs)("div", {
             className: _().ComparisonSelector,
@@ -64625,7 +64417,7 @@
         _ = ({
           shouldShow: _,
           showFunc: _,
-          className: __webpack_require__,
+          className: _,
           hasCloseButton: _,
           children: _,
         }) =>
@@ -64636,7 +64428,7 @@
             ),
             onClick: () => _(!1),
             children: (0, _.jsxs)("div", {
-              className: (0, _._)(_().PopupPanel, __webpack_require__),
+              className: (0, _._)(_().PopupPanel, _),
               onClick: (_) => _.stopPropagation(),
               children: [
                 _ &&
@@ -66321,8 +66113,8 @@
 	"trailercarousel": 100757
 }`);
       class _ {
-        static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetSNRLinkParam(_, __webpack_require__),
+        static InstrumentLink(_, _, _ = null) {
+          const _ = _.GetSNRLinkParam(_, _),
             _ = _.GetCuratorClanIDParam(_);
           return _.AddNavParamToURL(_, _, _);
         }
@@ -66509,13 +66301,13 @@
       function _(_) {
         const {
             videoID: _,
-            bShowVideoImmediately: __webpack_require__,
+            bShowVideoImmediately: _,
             bAutoPlay: _,
             nStartSeconds: _,
             classNameSize: _,
             classNameAlign: _,
           } = _,
-          [_, _] = (0, _.useState)(!__webpack_require__),
+          [_, _] = (0, _.useState)(!_),
           [_, _] = (0, _.useState)(!1),
           _ = _("YouTubeInlineSnippet"),
           [_, _] = (0, _.useState)({
@@ -66536,7 +66328,7 @@
                 ),
               );
         }, [_, _, _]);
-        if (((0, _._)(__webpack_require__ && !0), _)) {
+        if (((0, _._)(_ && !0), _)) {
           const _ = _.title,
             _ = _.views,
             _ = _.description;
@@ -67176,7 +66968,7 @@
       const _ = (0, _._)((_) => {
           const {
               dateAndTime: _,
-              bSingleLine: __webpack_require__,
+              bSingleLine: _,
               bOnlyTime: _,
               bOnlyDate: _,
             } = _,
@@ -67189,7 +66981,7 @@
                   ..._.stylesmodule,
                 }
               : _();
-          return __webpack_require__
+          return _
             ? (0, _.jsxs)("span", {
                 className: _ || _ ? _.DateAndTimeInline : _.DateAndTime,
                 children: [
@@ -67356,7 +67148,7 @@
           const {
               startDateAndTime: _,
               endDateAndTime: _,
-              bHideEndTime: __webpack_require__,
+              bHideEndTime: _,
             } = this.props,
             _ = this.props.stylesmodule
               ? {
@@ -67415,7 +67207,7 @@
                   ),
                 }),
               })),
-            __webpack_require__ || null == _ || _ < 1)
+            _ || null == _ || _ < 1)
           )
             return _;
           const _ = _ <= _ && _ <= _;
@@ -67780,7 +67572,7 @@
       function _(_) {
         const {
           length: _,
-          value: __webpack_require__,
+          value: _,
           onChange: _,
           onPaste: _,
           tone: _,
@@ -67864,7 +67656,7 @@
                 onClick: (_) => _.stopPropagation(),
                 onKeyDown: _,
                 onPaste: _,
-                value: __webpack_require__[_] ? __webpack_require__[_][0] : "",
+                value: _[_] ? _[_][0] : "",
                 autoComplete: "none",
                 autoFocus: 0 === _ && _,
                 disabled: _ || _,
@@ -73874,11 +73666,11 @@
               );
           }
         }
-        SetFailureState(_, _, __webpack_require__ = "") {
+        SetFailureState(_, _, _ = "") {
           (this.m_eStatus = 15),
             (this.m_eFailureState = _),
             (this.m_strErrorReference = _),
-            (this.m_strExtendedErrorMessage = __webpack_require__);
+            (this.m_strExtendedErrorMessage = _);
         }
         onAuthComplete = (_) => {
           this.m_eStatus = _.bSuccess ? 14 : 15;
@@ -73935,7 +73727,7 @@
       function _(_) {
         let {
           quality: _ = _._,
-          children: __webpack_require__,
+          children: _,
           className: _,
           activeBitColor: _ = [33, 35, 40],
           inactiveBitColor: _ = [255, 255, 255],
@@ -73943,20 +73735,20 @@
           typeNumber: _ = 6,
         } = _;
         const _ = (function (_, _ = {}) {
-          const { typeNumber: __webpack_require__, errorCorrectLevel: _ } = _,
+          const { typeNumber: _, errorCorrectLevel: _ } = _,
             [_, _] = (0, _.useState)();
           return (
             (0, _.useEffect)(() => {
               _(
                 _()(_, {
-                  typeNumber: __webpack_require__,
+                  typeNumber: _,
                   errorCorrectLevel: _,
                 }).modules,
               );
-            }, [_, __webpack_require__, _]),
+            }, [_, _, _]),
             _
           );
-        })(__webpack_require__, {
+        })(_, {
           typeNumber: _,
           errorCorrectLevel: _,
         });
@@ -74136,7 +73928,7 @@
       function _(_) {
         const {
             transport: _,
-            onComplete: __webpack_require__,
+            onComplete: _,
             onStatusChange: _,
             platform: _,
             deckStyling: _,
@@ -74150,7 +73942,7 @@
             reset: _,
             setTokenToRevoke: _,
           } = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(new _(_));
+            const [_, _] = (0, _.useState)(new _(_));
             return (
               (0, _.useEffect)(
                 () => (
@@ -74173,7 +73965,7 @@
             );
           })({
             transport: _,
-            onComplete: __webpack_require__,
+            onComplete: _,
             onDeviceDetails: _,
           });
         (0, _.useEffect)(() => _ && _(_), [_, _]);
@@ -74321,7 +74113,7 @@
         return (function (_) {
           const _ = (0, _.useRef)(_);
           _.current = _;
-          const [__webpack_require__, _] = (0, _.useState)(!0),
+          const [_, _] = (0, _.useState)(!0),
             _ = (0, _._)();
           return (
             (0, _.useEffect)(() => {
@@ -74358,7 +74150,7 @@
                       })
                   : _(!1);
             }, [_, _.search]),
-            __webpack_require__
+            _
           );
         })(_.redirectUrl)
           ? null
@@ -74366,8 +74158,8 @@
               ..._,
               creationRedirectUrl: _.redirectUrl,
               onSuccess: (_) => {
-                const { strRefreshToken: __webpack_require__ } = _;
-                _(__webpack_require__).then(
+                const { strRefreshToken: _ } = _;
+                _(_).then(
                   (_) => _.onComplete(_),
                   () => _.onComplete(_.k_PrimaryDomainFail),
                 );
@@ -74376,7 +74168,7 @@
             });
       }
       function _(_) {
-        const { embedded: _, children: __webpack_require__, ..._ } = _;
+        const { embedded: _, children: _, ..._ } = _;
         return (0, _.jsx)(_, {
           children: (0, _.jsx)(_.Provider, {
             value: _,
@@ -74386,7 +74178,7 @@
                 (0, _.jsx)(_, {
                   ..._,
                 }),
-                __webpack_require__,
+                _,
               ],
             }),
           }),
@@ -74406,7 +74198,7 @@
             });
       }
       function _(_) {
-        const { variant: _, redirectUrl: __webpack_require__ } = _;
+        const { variant: _, redirectUrl: _ } = _;
         if ("function" == typeof _)
           return (0, _.jsx)(_, {
             inline: !0,
@@ -74414,9 +74206,7 @@
             children: (0, _._)("#Login_CreateAccount"),
           });
         {
-          const _ = __webpack_require__
-            ? `?redir=${encodeURIComponent(__webpack_require__)}`
-            : "";
+          const _ = _ ? `?redir=${encodeURIComponent(_)}` : "";
           switch (_ ?? "normal") {
             default:
             case "normal":
@@ -74437,16 +74227,12 @@
         }
       }
       function _(_) {
-        const {
-          launcherType: _,
-          variant: __webpack_require__,
-          redirectUrl: _,
-        } = _;
+        const { launcherType: _, variant: _, redirectUrl: _ } = _;
         if (8 === _) return null;
-        if ("none" == __webpack_require__) return null;
+        if ("none" == _) return null;
         const _ = void 0 !== _;
         let _;
-        switch (__webpack_require__ ?? "normal") {
+        switch (_ ?? "normal") {
           default:
           case "normal":
             _ = "#Login_NoSteamAccount";
@@ -74462,14 +74248,14 @@
               children: (0, _._)(_),
             }),
             (0, _.jsx)(_, {
-              variant: __webpack_require__,
+              variant: _,
               redirectUrl: _,
             }),
           ],
         });
       }
       async function _() {
-        const [_, _, __webpack_require__, _] = await Promise.all([
+        const [_, _, _, _] = await Promise.all([
           SteamClient.System.GetOSType(),
           SteamClient.System.GetSystemInfo(),
           SteamClient?.Auth?.GetLocalHostname?.() ?? "",
@@ -74477,7 +74263,7 @@
         ]);
         return {
           os_type: _,
-          device_friendly_name: __webpack_require__,
+          device_friendly_name: _,
           machine_id: _,
           platform_type: 1,
           gaming_device_type: _.eGamingDeviceType,
@@ -74492,20 +74278,20 @@
       function _(_) {
         const {
             onSuccess: _,
-            secureComputer: __webpack_require__ = !0,
+            secureComputer: _ = !0,
             isProbablySharedPC: _ = !1,
           } = _,
           _ = (0, _.useCallback)(
             ({
               bSuccess: _,
-              strRefreshToken: __webpack_require__,
+              strRefreshToken: _,
               strAccessToken: _,
               strAccountName: _,
               strNewGuardData: _,
             }) => {
               _ &&
                 _({
-                  strRefreshToken: __webpack_require__,
+                  strRefreshToken: _,
                   strAccessToken: _,
                   strAccountName: _,
                   strNewGuardData: _,
@@ -74514,7 +74300,7 @@
             [_],
           ),
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(new _(_));
+            const [_, _] = (0, _.useState)(new _(_));
             return (
               (0, _.useEffect)(() => {
                 _?.SetOnLoginComplete(_.onComplete);
@@ -74556,9 +74342,7 @@
             _.refreshInfo?.account_name ?? _.defaultAccountName ?? "",
           ),
           [_, _] = (0, _.useState)(""),
-          [_, _] = (0, _.useState)(
-            __webpack_require__ && !_ && "0" != localStorage?.getItem(_),
-          ),
+          [_, _] = (0, _.useState)(_ && !_ && "0" != localStorage?.getItem(_)),
           _ = !(0 === _.eStatus || 1 === _.eStatus || 2 === _.eStatus);
         (0, _.useEffect)(() => {
           _.refreshInfo?.login_token_id &&
@@ -74590,7 +74374,7 @@
       function _(_) {
         const {
             transport: _,
-            onSuccess: __webpack_require__,
+            onSuccess: _,
             platform: _,
             autoFocus: _,
             refreshInfo: _,
@@ -74614,7 +74398,7 @@
           _ = _({
             transport: _,
             platform: _,
-            onSuccess: __webpack_require__,
+            onSuccess: _,
             refreshInfo: _,
             onDeviceDetails: _,
             onGetMachineAuth: _,
@@ -74844,7 +74628,7 @@
       function _(_) {
         const {
             onSubmit: _,
-            status: __webpack_require__,
+            status: _,
             autoFocus: _,
             refreshInfo: _,
             strAccountName: _,
@@ -74869,8 +74653,8 @@
               (0, _.useCallback)(() => _.current, [_])
             );
           })(),
-          _ = 1 === __webpack_require__ || 13 === __webpack_require__,
-          _ = 2 === __webpack_require__ && !_,
+          _ = 1 === _ || 13 === _,
+          _ = 2 === _ && !_,
           _ = _
             ? (0, _.jsx)(_, {
                 children: (0, _._)("#Login_CheckCredentials"),
@@ -75007,15 +74791,15 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1);
+        const [_, _] = (0, _.useState)(!1);
         return _
           ? (0, _.jsx)(_, {
               ..._,
               bShowHideButton: !0,
-              setShowQR: __webpack_require__,
+              setShowQR: _,
             })
           : (0, _.jsx)(_, {
-              setShowQR: __webpack_require__,
+              setShowQR: _,
             });
       }
       function _(_) {
@@ -75049,7 +74833,7 @@
       function _(_) {
         const {
           onQRStatusChange: _,
-          transport: __webpack_require__,
+          transport: _,
           onComplete: _,
           platform: _,
           refreshInfo: _,
@@ -75067,7 +74851,7 @@
               className: _()._,
               children: (0, _.jsx)(_, {
                 onStatusChange: _,
-                transport: __webpack_require__,
+                transport: _,
                 onComplete: _,
                 platform: _,
                 refreshInfo: _,
@@ -75094,14 +74878,8 @@
         });
       }
       function _(_) {
-        const {
-            label: _,
-            error: __webpack_require__,
-            tone: _,
-            autoFocus: _,
-            ..._
-          } = _,
-          _ = _ ?? (__webpack_require__ ? "danger" : void 0);
+        const { label: _, error: _, tone: _, autoFocus: _, ..._ } = _,
+          _ = _ ?? (_ ? "danger" : void 0);
         return (0, _.jsxs)("div", {
           className: _().TextField,
           children: [
@@ -75112,7 +74890,7 @@
               : _,
             (0, _.jsx)(_, {
               type: "error",
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)(_, {
               autoFocus: _,
@@ -75123,19 +74901,16 @@
         });
       }
       function _(_) {
-        const { children: _, highlight: __webpack_require__ } = _;
+        const { children: _, highlight: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().FieldLabel,
-            __webpack_require__ && _().Highlight,
-          ),
+          className: (0, _._)(_().FieldLabel, _ && _().Highlight),
           children: _,
         });
       }
       function _(_) {
         const {
           value: _,
-          onChange: __webpack_require__,
+          onChange: _,
           type: _ = "text",
           tone: _,
           className: _,
@@ -75152,19 +74927,16 @@
         });
       }
       function _(_) {
-        const { children: _, type: __webpack_require__ } = _;
+        const { children: _, type: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _().FieldHint,
-            "error" === __webpack_require__ && _().Error,
-          ),
+          className: (0, _._)(_().FieldHint, "error" === _ && _().Error),
           children: _,
         });
       }
       function _(_) {
-        const { label: _, onChange: __webpack_require__, value: _ } = _;
+        const { label: _, onChange: _, value: _ } = _;
         let _ = () => {
-          __webpack_require__ && __webpack_require__(!_);
+          _ && __webpack_require__(!_);
         };
         return (0, _.jsxs)("div", {
           className: _().CheckboxField,
@@ -75199,11 +74971,11 @@
         });
       }
       function _(_) {
-        const { refreshLogin: _, ...__webpack_require__ } = _;
+        const { refreshLogin: _, ..._ } = _;
         return _ && SteamClient.User?.StartShutdown
           ? (0, _.jsx)(_, {})
           : (0, _.jsx)(_, {
-              ...__webpack_require__,
+              ..._,
             });
       }
       function _(_) {
@@ -75239,25 +75011,15 @@
         });
       }
       function _(_) {
-        const {
-            className: _,
-            loading: __webpack_require__,
-            disabled: _,
-            children: _,
-            ..._
-          } = _,
-          _ = _ || __webpack_require__;
+        const { className: _, loading: _, disabled: _, children: _, ..._ } = _,
+          _ = _ || _;
         return (0, _.jsxs)("button", {
-          className: (0, _._)(
-            _().SubmitButton,
-            __webpack_require__ && _().Loading,
-            _,
-          ),
+          className: (0, _._)(_().SubmitButton, _ && _().Loading, _),
           disabled: _,
           ..._,
           children: [
             _,
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)("div", {
                 className: _().LoadingContainer,
                 children: (0, _.jsx)(_, {
@@ -75323,7 +75085,7 @@
       function _(_) {
         const {
             reset: _,
-            failure: __webpack_require__,
+            failure: _,
             onRequestOffline: _,
             errorReference: _,
             extendedErrorMessage: _,
@@ -75380,8 +75142,8 @@
             }
             _ && (_.description = _);
             return _;
-          })(__webpack_require__, _),
-          _ = _._.IN_STEAMUI && __webpack_require__ == _.Network;
+          })(_, _),
+          _ = _._.IN_STEAMUI && _ == _.Network;
         return (0, _.jsxs)(_, {
           compact: !0,
           children: [
@@ -75436,7 +75198,7 @@
       function _(_) {
         const {
             type: _,
-            onSubmitCode: __webpack_require__,
+            onSubmitCode: _,
             status: _,
             accountName: _,
             associatedLabel: _,
@@ -75618,9 +75380,9 @@
         });
       }
       function _(_) {
-        const { accountName: _, type: __webpack_require__ } = _,
+        const { accountName: _, type: _ } = _,
           _ =
-            "mobile" === __webpack_require__
+            "mobile" === _
               ? (0, _._)("#Login_MobileProtectingAccount")
               : (0, _._)("#Login_EmailProtectingAccount"),
           _ = _();
@@ -75709,11 +75471,7 @@
         });
       }
       function _(_) {
-        const {
-            type: _,
-            accountName: __webpack_require__,
-            onUseCodeOverride: _,
-          } = _,
+        const { type: _, accountName: _, onUseCodeOverride: _ } = _,
           _ = _(),
           _ = (0, _.jsx)(_, {
             type: "mobile",
@@ -75746,7 +75504,7 @@
             children: [
               (0, _.jsx)(_, {
                 type: _,
-                accountName: __webpack_require__,
+                accountName: _,
               }),
               (0, _.jsx)(_, {}),
               (0, _.jsxs)("div", {
@@ -75758,11 +75516,8 @@
         });
       }
       function _(_) {
-        const { children: _, align: __webpack_require__, inline: _ } = _,
-          _ = (0, _._)(
-            _().TextLink,
-            "center" === __webpack_require__ && _().TextAlignCenter,
-          );
+        const { children: _, align: _, inline: _ } = _,
+          _ = (0, _._)(_().TextLink, "center" === _ && _().TextAlignCenter);
         if ("href" in _) {
           const _ = _._.IN_STEAMUI
             ? `steam://openurl_external/${_.href}`
@@ -75783,17 +75538,17 @@
         }
       }
       function _(_) {
-        const { onSubmit: _, children: __webpack_require__, className: _ } = _;
+        const { onSubmit: _, children: _, className: _ } = _;
         return (0, _.jsx)("form", {
           onSubmit: (_) => (_.preventDefault(), _(), !1),
           className: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
         const {
             alignItems: _,
-            justifyContent: __webpack_require__,
+            justifyContent: _,
             gap: _,
             className: _,
             children: _,
@@ -75801,7 +75556,7 @@
           _ = (0, _._)(
             _().FlexCol,
             "center" === _ && _().AlignItemsCenter,
-            "center" === __webpack_require__ && _().JustifyContentCenter,
+            "center" === _ && _().JustifyContentCenter,
             _,
           ),
           _ = _
@@ -75818,14 +75573,14 @@
       function _(_) {
         const {
             children: _,
-            justifyContent: __webpack_require__,
+            justifyContent: _,
             alignItems: _,
             className: _,
           } = _,
           _ = {
             display: "flex",
             flexDirection: "row",
-            justifyContent: __webpack_require__,
+            justifyContent: _,
             alignItems: _,
           };
         return (0, _.jsx)("div", {
@@ -75835,15 +75590,12 @@
         });
       }
       function _(_) {
-        const { onChange: _, backupCode: __webpack_require__, ..._ } = _;
+        const { onChange: _, backupCode: _, ..._ } = _;
         return (0, _.jsx)(_, {
-          length: _(__webpack_require__),
-          backupCode: __webpack_require__,
+          length: _(_),
+          backupCode: _,
           onChange: (_) => {
-            _(
-              (_ = _.map((_) => _.toUpperCase())).join("").trim(),
-              __webpack_require__,
-            ) && _(_);
+            _((_ = _.map((_) => _.toUpperCase())).join("").trim(), _) && _(_);
           },
           autoFocus: !0,
           ..._,
@@ -75851,7 +75603,7 @@
         });
       }
       function _(_) {
-        const { children: _, spacing: __webpack_require__ = 0, align: _ } = _;
+        const { children: _, spacing: _ = 0, align: _ } = _;
         return (0, _.jsx)(_, {
           alignItems: _,
           children: _.Children.map(_, (_, _) =>
@@ -75860,7 +75612,7 @@
                   style:
                     _ > 0
                       ? {
-                          paddingTop: `${__webpack_require__}px`,
+                          paddingTop: `${_}px`,
                         }
                       : void 0,
                   children: _,
@@ -75870,7 +75622,7 @@
         });
       }
       function _(_) {
-        const { title: _, children: __webpack_require__, compact: _ } = _,
+        const { title: _, children: _, compact: _ } = _,
           _ = _();
         return (0, _.jsxs)(_, {
           gap: _._.IN_STEAMUI ? 0 : 32,
@@ -75889,7 +75641,7 @@
               : _,
             (0, _.jsx)("div", {
               className: _().FormContainer,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
@@ -75897,12 +75649,10 @@
       function _(_) {
         const {
           realm: _ = _._.EREALM,
-          launcherType: __webpack_require__ = _._.IN_STEAMUI
-            ? _._.LAUNCHER_TYPE
-            : void 0,
+          launcherType: _ = _._.IN_STEAMUI ? _._.LAUNCHER_TYPE : void 0,
           className: _ = _().HeaderLogo,
         } = _;
-        return 8 === __webpack_require__
+        return 8 === _
           ? (0, _.jsx)("div", {
               className: _,
             })
@@ -76068,7 +75818,7 @@
         });
       }
       function _(_) {
-        const { redirectURL: _, guestOption: __webpack_require__ } = _,
+        const { redirectURL: _, guestOption: _ } = _,
           [_] = (0, _.useState)(
             new _(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
@@ -76088,7 +75838,7 @@
                 redirectUrl: _,
                 theme: "modal",
                 children:
-                  __webpack_require__ &&
+                  _ &&
                   (0, _.jsx)(_, {
                     redirectURL: _,
                   }),
@@ -76254,11 +76004,9 @@
         }
       };
       function _(_) {
-        const { bPreviewMode: _, eventGID: __webpack_require__, ..._ } = _,
+        const { bPreviewMode: _, eventGID: _, ..._ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(() =>
-                _.GetClanEventModel(_),
-              ),
+            const [_, _] = (0, _.useState)(() => _.GetClanEventModel(_)),
               _ = _("usePartnerEventByEventGID");
             return (
               (0, _.useEffect)(() => {
@@ -76278,15 +76026,12 @@
               }, [_, _, _]),
               _
             );
-          })(__webpack_require__);
+          })(_);
         if (!_)
           return _
             ? (0, _.jsx)("div", {
                 className: _.ErrorDiv,
-                children: (0, _._)(
-                  "#EventDidplay_Reminder_EventNotVisible",
-                  __webpack_require__,
-                ),
+                children: (0, _._)("#EventDidplay_Reminder_EventNotVisible", _),
               })
             : null;
         const _ = (0, _._)(_._.LANGUAGE);
@@ -76306,7 +76051,7 @@
       const _ = (0, _._)((_) => {
         const {
             eventModel: _,
-            bShowStartTime: __webpack_require__,
+            bShowStartTime: _,
             bExpandLeft: _,
             bOnlyShowIcon: _,
             fnHasReminderSet: _,
@@ -76372,7 +76117,7 @@
           },
           _ = _.BHasValidatedEmail(),
           _ = _.BHasPushNotification(),
-          _ = __webpack_require__ && _.GetStartTimeAndDateUnixSeconds();
+          _ = _ && _.GetStartTimeAndDateUnixSeconds();
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsxs)("div", {
@@ -76618,7 +76363,7 @@
         (0, _._)([_._], _.prototype, "SetVolumePreference", null);
       const _ = (0, _.forwardRef)(function (_, _) {
         const {
-            video: __webpack_require__,
+            video: _,
             bAutoPlay: _,
             bControls: _,
             bLoop: _,
@@ -76631,18 +76376,14 @@
           _ = (0, _.useMemo)(
             () =>
               Boolean(
-                __webpack_require__.rgVideoTracks?.some(
+                _.rgVideoTracks?.some(
                   (_) => "subtitles" == _.sKind || "captions" == _.sKind,
                 ),
               ),
-            [__webpack_require__.rgVideoTracks],
+            [_.rgVideoTracks],
           ),
           [_, _] = _.useState(!1);
-        if (
-          !__webpack_require__.rgVideoSources ||
-          !__webpack_require__.rgVideoSources.length
-        )
-          return null;
+        if (!_.rgVideoSources || !_.rgVideoSources.length) return null;
         const _ = (function (_) {
           return !(
             !(0, _._)(_.sPoster) ||
@@ -76650,11 +76391,11 @@
               _.rgVideoSources.some((_) => !(0, _._)(_.sURL))) ||
             (_.rgVideoTracks && _.rgVideoTracks.some((_) => !(0, _._)(_.sURL)))
           );
-        })(__webpack_require__);
+        })(_);
         let _;
         (!_ || (_ && "public" == _._.WEB_UNIVERSE)) && (_ = "anonymous");
         const _ = _ || (_ && _.Get().BVolumePreferenceMuted()),
-          _ = __webpack_require__.sPoster ? _(__webpack_require__.sPoster) : "";
+          _ = _.sPoster ? _(_.sPoster) : "";
         return (0, _.jsxs)("video", {
           width: "100%",
           height: "auto",
@@ -76693,10 +76434,10 @@
           },
           children: [
             (0, _.jsx)(_, {
-              rgVideoSources: __webpack_require__.rgVideoSources,
+              rgVideoSources: _.rgVideoSources,
             }),
             (0, _.jsx)(_, {
-              rgVideoTracks: __webpack_require__.rgVideoTracks,
+              rgVideoTracks: _.rgVideoTracks,
             }),
           ],
         });
@@ -76743,7 +76484,7 @@
           : null;
       }
       function _(_) {
-        const { track: _, rgVideoTracks: __webpack_require__ } = _;
+        const { track: _, rgVideoTracks: _ } = _;
         let _ = _.eLanguage;
         if ((0, _._)())
           if (_._.IsELanguageValidInRealm(_, _._.k_ESteamRealmChina))
@@ -76909,7 +76650,7 @@
           "spoiler",
           {
             Constructor: function (_) {
-              let [_, __webpack_require__] = _.useState(!1),
+              let [_, _] = _.useState(!1),
                 _ = _.useCallback(() => {
                   __webpack_require__(!_);
                 }, [_]);
@@ -77176,7 +76917,7 @@
           {
             Constructor: function (_) {
               const _ = Boolean(_(_.args, "expanded")),
-                [__webpack_require__, _] = _.useState(_),
+                [_, _] = _.useState(_),
                 _ = _(_.args, "title"),
                 _ = _(_.args, "collapsed_str"),
                 _ = _(_.args, "expanded_str"),
@@ -77213,26 +76954,26 @@
                 className: (0, _._)({
                   [_().ExpandSectionBlock]: !0,
                   [_.style]: null != _.style,
-                  [_().ExpandSectionExpanded]: __webpack_require__,
-                  [_().ExpandSectionCollapsed]: !__webpack_require__,
-                  BBCodeExpanded: __webpack_require__,
-                  BBCodeCollapsed: !__webpack_require__,
+                  [_().ExpandSectionExpanded]: _,
+                  [_().ExpandSectionCollapsed]: !_,
+                  BBCodeExpanded: _,
+                  BBCodeCollapsed: !_,
                 }),
                 children: [
                   (0, _.jsxs)("div", {
                     className: _().ExpandSectionHeader,
-                    onClick: () => _(!__webpack_require__),
+                    onClick: () => _(!_),
                     children: [
-                      (0, _._)(__webpack_require__ ? _.expanded : _.collapsed),
+                      (0, _._)(_ ? _.expanded : _.collapsed),
                       (0, _.jsx)("div", {
                         className: _().EmbedArrow,
                         children: (0, _.jsx)(_.DK4, {
-                          angle: __webpack_require__ ? 180 : 0,
+                          angle: _ ? 180 : 0,
                         }),
                       }),
                     ],
                   }),
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)("div", {
                       className: _().ExpandSectionBody,
                       children: _.children,
@@ -77249,13 +76990,12 @@
           "remindme",
           {
             Constructor: function (_) {
-              const { event: _, showErrorInfo: __webpack_require__ } =
-                  _.context,
+              const { event: _, showErrorInfo: _ } = _.context,
                 _ = _(_.args);
               if (_)
                 return (0, _.jsx)(_, {
                   eventGID: _,
-                  bPreviewMode: __webpack_require__,
+                  bPreviewMode: _,
                 });
               if (_) {
                 const _ = (0, _._)(_._.LANGUAGE);
@@ -77525,7 +77265,7 @@
         );
       }
       const _ = (_) => {
-        const { href: _, ...__webpack_require__ } = _;
+        const { href: _, ..._ } = _;
         let _,
           _ = (function (_, _, _) {
             const _ = _();
@@ -77552,7 +77292,7 @@
           toolTipContent: _,
           direction: "top",
           children: (0, _.jsx)(_._, {
-            ...__webpack_require__,
+            ..._,
             href: _,
             rel: _,
             children: _.children,
@@ -80626,7 +80366,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         if (!_ || 0 == _.length) return null;
         if (_?.startsWith(_._)) return _._.ReplacementTokenToClanImageURL(_);
         if (_?.startsWith(_._)) {
@@ -80639,12 +80379,10 @@
             _ = _._.GetExtStringFromHashAndExt(_);
           if (null != _) {
             let _ = (0, _._)(_);
-            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__),
+            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _),
               4 == _ &&
                 ((_ = (0, _._)((0, _._)(_))),
-                _.push(
-                  _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-                ));
+                _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _));
           }
           return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
         }
@@ -80654,7 +80392,7 @@
       function _(_) {
         const {
             rgSources: _,
-            onIncrementalError: __webpack_require__,
+            onIncrementalError: _,
             onError: _,
             strAltText: _,
             ref: _,
@@ -80700,7 +80438,7 @@
               const _ = _ + 1;
               _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           );
         return (0, _.jsx)(
           "img",
@@ -81364,7 +81102,7 @@
       const _ = ({
         top: _,
         bottom: _,
-        left: __webpack_require__,
+        left: _,
         right: _,
         color: _,
         startPct: _,
@@ -81395,7 +81133,7 @@
               _().FadeContainer,
               _ && _().Top,
               _ && _().Bottom,
-              __webpack_require__ && _().Left,
+              _ && _().Left,
               _ && _().Right,
             ),
             style: _,
@@ -81410,7 +81148,7 @@
                   style: _,
                   className: _().Fade,
                 }),
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)("div", {
                   style: _,
                   className: _().Fade,
@@ -81472,7 +81210,7 @@
             "vietnamese",
             "latam",
           ],
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(_._.LANGUAGE);
         return _
@@ -81534,10 +81272,7 @@
                   }),
                 }),
                 (0, _.jsx)("div", {
-                  className: (0, _._)(
-                    _().LanguageList,
-                    __webpack_require__ && _().ShowLanguages,
-                  ),
+                  className: (0, _._)(_().LanguageList, _ && _().ShowLanguages),
                   onMouseEnter: () => _(!0),
                   onMouseLeave: () => _(!1),
                   children: _.map((_) =>
@@ -81559,7 +81294,7 @@
         _ = __webpack_require__("chunkid");
       const _ = ({ bOverlapping: _ }) => {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().MicroHeader, _ && _().Overlapping),
@@ -81578,9 +81313,9 @@
                       className: (0, _._)(
                         _().NavLink,
                         _().GameDropdown,
-                        __webpack_require__ && _().Active,
+                        _ && _().Active,
                       ),
-                      onClick: () => _(!__webpack_require__),
+                      onClick: () => _(!_),
                       onMouseEnter: () => _(!0),
                       onMouseLeave: () => _(!1),
                       children: [
@@ -81594,7 +81329,7 @@
                     (0, _.jsxs)("div", {
                       className: (0, _._)(
                         _().GameDropdownContents,
-                        !__webpack_require__ && _().Hidden,
+                        !_ && _().Hidden,
                       ),
                       onMouseEnter: () => _(!0),
                       onMouseLeave: () => _(!1),
@@ -82132,7 +81867,7 @@
           );
         },
         _ = ({ heroData: _ }) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1);
+          const [_, _] = (0, _.useState)(!1);
           if (!_) return null;
           let _ = "";
           switch (_.primary_attr) {
@@ -82974,7 +82709,7 @@
         },
         _ = 80,
         _ = (0, _._)(({ heroData: _ }) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1);
+          const [_, _] = (0, _.useState)(!1);
           if (!_) return null;
           const _ = _._.getSelectedAbilityIndex();
           let _,
@@ -83900,11 +83635,7 @@
           }),
         ),
         _ = (0, _._)(
-          ({
-            patchnotes: _,
-            headerClassName: _,
-            notesListClassName: __webpack_require__,
-          }) =>
+          ({ patchnotes: _, headerClassName: _, notesListClassName: _ }) =>
             (0, _.jsxs)("div", {
               className: (0, _._)(
                 _().UpdatesSection,
@@ -83931,7 +83662,7 @@
                     {
                       className: (0, _._)(
                         _().PatchNotesGeneral,
-                        __webpack_require__ || _().PatchNotesList,
+                        _ || _().PatchNotesList,
                       ),
                       children: [
                         _.title &&
@@ -83991,7 +83722,7 @@
           ({
             patchnotes: _,
             is_neutrals: _,
-            header: __webpack_require__,
+            header: _,
             headerClassName: _,
             notesListClassName: _,
           }) => {
@@ -84012,7 +83743,7 @@
                 (0, _.jsxs)("div", {
                   className: _ || _().PatchNotesList,
                   children: [
-                    __webpack_require__,
+                    _,
                     _?.map((_, _) => {
                       if (_.is_general_note) {
                         let _ = _.ability_notes?.map((_, _) =>
@@ -84060,7 +83791,7 @@
             });
           },
         ),
-        _ = (0, _._)(({ note: _, name: _, name_loc: __webpack_require__ }) =>
+        _ = (0, _._)(({ note: _, name: _, name_loc: _ }) =>
           (0, _.jsxs)("div", {
             className: _().PatchNoteItem,
             style: {
@@ -84081,7 +83812,7 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().ItemName,
-                        children: __webpack_require__,
+                        children: _,
                       }),
                       _.title &&
                         (0, _.jsx)("div", {
@@ -84126,11 +83857,7 @@
           }),
         ),
         _ = (0, _._)(
-          ({
-            patchnotes: _,
-            headerClassName: _,
-            notesListClassName: __webpack_require__,
-          }) => {
+          ({ patchnotes: _, headerClassName: _, notesListClassName: _ }) => {
             const _ = _._.Get().getHeroList(),
               _ = _?.slice().sort((_, _) => {
                 const _ = _.hero_id == _._._,
@@ -84160,7 +83887,7 @@
                   children: (0, _._)("#patchnotes_heroes"),
                 }),
                 (0, _.jsx)("div", {
-                  className: __webpack_require__ || _().PatchNotesList,
+                  className: _ || _().PatchNotesList,
                   children: _?.map((_, _) =>
                     (0, _.jsx)(
                       _,
@@ -84175,25 +83902,19 @@
             });
           },
         ),
-        _ = (0, _._)(
-          ({
-            patchnotes: _,
-            heroname: _,
-            heroClassName: __webpack_require__,
-          }) => {
-            const _ = _._.Get().getHeroList(),
-              _ = _?.heroes.find(
-                (_) => _.name.replace("npc_dota_hero_", "") == _,
-              ),
-              _ = _?.slice().find((_) => _.hero_id == _?._);
-            return _
-              ? (0, _.jsx)(_, {
-                  note: _,
-                  heroClassName: __webpack_require__,
-                })
-              : null;
-          },
-        ),
+        _ = (0, _._)(({ patchnotes: _, heroname: _, heroClassName: _ }) => {
+          const _ = _._.Get().getHeroList(),
+            _ = _?.heroes.find(
+              (_) => _.name.replace("npc_dota_hero_", "") == _,
+            ),
+            _ = _?.slice().find((_) => _.hero_id == _?._);
+          return _
+            ? (0, _.jsx)(_, {
+                note: _,
+                heroClassName: _,
+              })
+            : null;
+        }),
         _ = (0, _._)(({ note: _, heroClassName: _ }) => {
           const _ = _._.Get().getHeroList(),
             _ = _._.Get().getAbilityList();
@@ -84817,25 +84538,19 @@
           });
         }),
         _ =
-          ((0, _._)(
-            ({
-              patchnotes: _,
-              heroname: _,
-              heroClassName: __webpack_require__,
-            }) => {
-              const _ = _._.Get().getHeroList(),
-                _ = _?.heroes.find(
-                  (_) => _.name.replace("npc_dota_hero_", "") == _,
-                ),
-                _ = _?.slice().find((_) => _.hero_id == _?._);
-              return _
-                ? (0, _.jsx)(_, {
-                    note: _,
-                    heroClassName: __webpack_require__,
-                  })
-                : null;
-            },
-          ),
+          ((0, _._)(({ patchnotes: _, heroname: _, heroClassName: _ }) => {
+            const _ = _._.Get().getHeroList(),
+              _ = _?.heroes.find(
+                (_) => _.name.replace("npc_dota_hero_", "") == _,
+              ),
+              _ = _?.slice().find((_) => _.hero_id == _?._);
+            return _
+              ? (0, _.jsx)(_, {
+                  note: _,
+                  heroClassName: _,
+                })
+              : null;
+          }),
           (0, _._)(({ note: _, heroClassName: _ }) => {
             const _ = _._.Get().getHeroList(),
               _ = _._.Get().getAbilityList();
@@ -85023,11 +84738,7 @@
             });
           })),
         _ = (0, _._)(
-          ({
-            patchnotes: _,
-            headerClassName: _,
-            notesListClassName: __webpack_require__,
-          }) =>
+          ({ patchnotes: _, headerClassName: _, notesListClassName: _ }) =>
             (0, _.jsxs)("div", {
               className: (0, _._)(
                 _().UpdatesSection,
@@ -85039,7 +84750,7 @@
                   children: (0, _._)("#patchnotes_neutral_creeps"),
                 }),
                 (0, _.jsx)("div", {
-                  className: __webpack_require__ || _().PatchNotesList,
+                  className: _ || _().PatchNotesList,
                   children: _?.map((_, _) => {
                     if (_.is_general_note) {
                       let _ = _.neutral_creep_notes?.map((_, _) =>
@@ -85280,14 +84991,14 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_, _, __webpack_require__ = 0, _ = !0) {
+      function _(_, _, _ = 0, _ = !0) {
         const _ = document.getElementById(_),
           _ = document.getElementById(_);
         if (!_ || !_) return;
         const _ = _.getBoundingClientRect().top,
           _ = _.getBoundingClientRect().top;
         window.scrollTo({
-          top: _ - _ + __webpack_require__,
+          top: _ - _ + _,
           behavior: _ ? "smooth" : "auto",
         });
       }
@@ -85799,10 +85510,10 @@
           bDOMElementFocusByDefault: !1,
         }),
         _ = _.forwardRef(function (_, _) {
-          const { href: __webpack_require__ = "#", ..._ } = _;
+          const { href: _ = "#", ..._ } = _;
           return (0, _.jsx)(_, {
             ref: _,
-            href: __webpack_require__,
+            href: _,
             ..._,
           });
         }),
@@ -85855,7 +85566,7 @@
         _ = __webpack_require__("chunkid");
       _.forwardRef(function (_, _) {
         const {
-            navID: __webpack_require__,
+            navID: _,
             onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
@@ -85873,7 +85584,7 @@
           { elemProps: _, navOptions: _, gamepadEvents: _ } = (0, _._)(_);
         return (0, _._)()
           ? (0, _.jsx)(_, {
-              navID: __webpack_require__,
+              navID: _,
               onActivated: _,
               onDeactivated: _,
               navTreeRef: _,
@@ -85901,7 +85612,7 @@
       function _(_) {
         const {
             navID: _,
-            onActivated: __webpack_require__,
+            onActivated: _,
             onDeactivated: _,
             navTreeRef: _,
             enabled: _ = !0,
@@ -85920,7 +85631,7 @@
           { refDiv: _, tree: _ } = (function (_) {
             const {
                 navID: _,
-                parentEmbeddedNavTree: __webpack_require__,
+                parentEmbeddedNavTree: _,
                 disabledRoot: _,
                 enabled: _,
                 navTreeRef: _,
@@ -85931,15 +85642,10 @@
               _ = (0, _._)() || _.GetDefaultContext(),
               _ = _.useContext(_._),
               [_] = _.useState(() =>
-                _.NewGamepadNavigationTree(
-                  _,
-                  _,
-                  __webpack_require__ ?? _?.Tree,
-                  {
-                    ..._,
-                    bIsEmbeddedInLegacyTree: !!__webpack_require__,
-                  },
-                ),
+                _.NewGamepadNavigationTree(_, _, _ ?? _?.Tree, {
+                  ..._,
+                  bIsEmbeddedInLegacyTree: !!_,
+                }),
               );
             let _ = _.useRef(null);
             return (
@@ -85978,7 +85684,7 @@
             modal: _,
             historyMode: _,
           });
-        (0, _._)(_.OnActivateCallbacks, __webpack_require__),
+        (0, _._)(_.OnActivateCallbacks, _),
           (0, _._)(_.OnDeactivateCallbacks, _),
           (0, _._)(_, _, _),
           _.useLayoutEffect(() => {
@@ -86009,11 +85715,7 @@
         bIsMounted: !1,
       });
       function _(_) {
-        const {
-            tree: _,
-            disableFocusClasses: __webpack_require__ = !1,
-            children: _,
-          } = _,
+        const { tree: _, disableFocusClasses: _ = !1, children: _ } = _,
           [_, _] = _.useState(_?.BIsActive() || !1),
           [_, _] = _.useState(_?.BIsActiveWithinContext() || !1),
           _ = (0, _._)(_?.SubscribableIsMounted) ?? !1;
@@ -86032,10 +85734,10 @@
           () => ({
             bActiveTree: _,
             bActiveTreeWithinContext: _,
-            bDisableFocusClasses: __webpack_require__,
+            bDisableFocusClasses: _,
             bIsMounted: _,
           }),
-          [_, __webpack_require__, _, _],
+          [_, _, _, _],
         );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -86102,7 +85804,7 @@
         };
       });
       function _(_, _) {
-        const { onTextEntered: __webpack_require__, ..._ } = _,
+        const { onTextEntered: _, ..._ } = _,
           _ = _.useRef(null),
           _ = _.useRef({});
         Object.assign(_.current, {
@@ -86179,7 +85881,7 @@
       const _ = _.createContext(null),
         _ = _.createContext(_._);
       function _(_) {
-        const { navRef: _, ...__webpack_require__ } = _,
+        const { navRef: _, ..._ } = _,
           _ = _.useRef(null),
           _ = (0, _.useContext)(_),
           _ = (0, _.useContext)(_),
@@ -86194,7 +85896,7 @@
           })(_, _);
         return (
           _.useLayoutEffect(() => {
-            _ && _.SetProperties(__webpack_require__);
+            _ && _.SetProperties(_);
           }),
           _.useLayoutEffect(() => {
             if (!_) return;
@@ -86216,7 +85918,7 @@
       function _(_) {
         const {
             onButtonDown: _,
-            onButtonUp: __webpack_require__,
+            onButtonUp: _,
             onOKButton: _,
             onCancelButton: _,
             onSecondaryButton: _,
@@ -86235,8 +85937,7 @@
           } = _,
           _ = {};
         void 0 !== _ && (_.onButtonDown = _),
-          void 0 !== __webpack_require__ &&
-            (_.onButtonUp = __webpack_require__),
+          void 0 !== _ && (_.onButtonUp = _),
           void 0 !== _ && (_.onOKButton = _),
           void 0 !== _ && (_.onCancelButton = _),
           void 0 !== _ && (_.onSecondaryButton = _),
@@ -86261,7 +85962,7 @@
       function _(_) {
         const {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -86288,7 +85989,7 @@
           elemProps: _,
           navOptions: {
             autoFocus: _,
-            preferredFocus: __webpack_require__,
+            preferredFocus: _,
             disableNavSounds: _,
             fnCanTakeFocus: _,
             childFocusDisabled: _,
@@ -86318,7 +86019,7 @@
       function _(_) {
         return function (_) {
           const {
-              focusClassName: __webpack_require__,
+              focusClassName: _,
               focusWithinClassName: _,
               bFocusableByDefault: _,
               className: _,
@@ -86343,7 +86044,7 @@
             _,
             {
               ..._,
-              className: _()(_, _ && _ && __webpack_require__, _ && _ && _),
+              className: _()(_, _ && _ && _, _ && _ && _),
               tabIndex: _ ? -1 : _,
               ref: _,
             },
@@ -86578,7 +86279,7 @@
       function _(_) {
         const {
             "flow-children": _,
-            onActivate: __webpack_require__,
+            onActivate: _,
             onCancel: _,
             focusClassName: _,
             focusWithinClassName: _,
@@ -86588,9 +86289,8 @@
         let _ = {};
         const _ = (0, _._)(_);
         _ != _._.NONE && (_.layout = _),
-          __webpack_require__ &&
-            ((_.onClick = _.onClick || __webpack_require__),
-            (_.onOKButton = _.onOKButton || __webpack_require__)),
+          _ &&
+            ((_.onClick = _.onClick || _), (_.onOKButton = _.onOKButton || _)),
           _.onOKButton &&
             void 0 === _.focusable &&
             void 0 === _.focusableIfEmpty &&
@@ -86607,9 +86307,7 @@
         (!_.focusable && !_.focusableIfEmpty) ||
           (_ && _.Tree.BUseVirtualFocus()) ||
           (_.tabIndex = _.tabIndex || 0),
-          _.focusable &&
-            (__webpack_require__ || _.onOKButton) &&
-            (_.role ??= "button");
+          _.focusable && (_ || _.onOKButton) && (_.role ??= "button");
         const _ = (0, _.useContext)(_).Component;
         return (0, _.jsx)(_._.Provider, {
           value: _,
@@ -86702,7 +86400,7 @@
       function _(_) {
         const {
             onOKActionDescription: _,
-            onCancelActionDescription: __webpack_require__,
+            onCancelActionDescription: _,
             onSecondaryActionDescription: _,
             onOptionsActionDescription: _,
             onMenuActionDescription: _,
@@ -86713,8 +86411,7 @@
           };
         return (
           void 0 !== _ && (_[_._._] = _),
-          void 0 !== __webpack_require__ &&
-            (_[_._.CANCEL] = __webpack_require__),
+          void 0 !== _ && (_[_._.CANCEL] = _),
           void 0 !== _ && (_[_._.SECONDARY] = _),
           void 0 !== _ && (_[_._.OPTIONS] = _),
           void 0 !== _ && (_[_._.START] = _),
@@ -86793,25 +86490,19 @@
         constructor(_) {
           this.m_root = _;
         }
-        static SerializeNavState(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavState(_, _ = !0, _ = !0) {
           return {
-            root: _.SerializeNavNode(_, _, __webpack_require__),
+            root: _.SerializeNavNode(_, _, _),
             bHadFocus: _.BFocusWithin() && _.Tree.BIsActiveWithinContext(),
           };
         }
-        static SerializeNavNode(_, _ = !0, __webpack_require__ = !0) {
+        static SerializeNavNode(_, _ = !0, _ = !0) {
           let _;
           const [_, _] = _.GetChildren();
           _.length &&
             -1 != _ &&
             _ &&
-            (_ = _.map((_, _) =>
-              _.SerializeNavNode(
-                _,
-                _ == _ || __webpack_require__,
-                __webpack_require__,
-              ),
-            ));
+            (_ = _.map((_, _) => _.SerializeNavNode(_, _ == _ || _, _)));
           const _ = {
             rgChildren: _,
           };
@@ -86821,15 +86512,14 @@
             _
           );
         }
-        static RestoreSerializedNavState(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavState(_, _, _ = 0) {
           const { root: _, bHadFocus: _ } = _;
           _.Tree.Controller.RestoreHistoryTransaction(() => {
             _.RestoreSerializedNavNode(_, _),
-              (1 == __webpack_require__ || (0 == __webpack_require__ && _)) &&
-                _.BTakeFocus(_._.APPLICATION);
+              (1 == _ || (0 == _ && _)) && _.BTakeFocus(_._.APPLICATION);
           });
         }
-        static RestoreSerializedNavNode(_, _, __webpack_require__ = 0) {
+        static RestoreSerializedNavNode(_, _, _ = 0) {
           const { sNavKey: _, iActiveChild: _ = -1, rgChildren: _ } = _;
           _ && (0, _._)(_ == _.NavKey, "navkey mismatch"), _.SetActiveChild(_);
           const _ = _.IsDebugEnabled()
@@ -86838,7 +86528,7 @@
                 let _ = "";
                 for (let _ = 0; _ < _; _++) _ += "*";
                 return (_ += " "), _;
-              })(__webpack_require__)}`
+              })(_)}`
             : "";
           if (_ && _.length) {
             const [_] = _.GetChildren();
@@ -86953,8 +86643,8 @@
           var _;
         }
         RestoreFocusSnapshot(_, _ = 0) {
-          return (function (_, _, __webpack_require__ = 0) {
-            return _.RestoreSerializedNavState(_, _, __webpack_require__);
+          return (function (_, _, _ = 0) {
+            return _.RestoreSerializedNavState(_, _, _);
           })(this.m_node, _, _);
         }
         NavTree() {
@@ -87787,16 +87477,15 @@
         }
         SetProperties(_) {
           const _ =
-            ((__webpack_require__ = this.m_Properties?.actionDescriptionMap),
+            ((_ = this.m_Properties?.actionDescriptionMap),
             (_ = _?.actionDescriptionMap),
-            !(null == __webpack_require__ || null == _
-              ? __webpack_require__ === _
-              : "object" == typeof __webpack_require__ &&
+            !(null == _ || null == _
+              ? _ === _
+              : "object" == typeof _ &&
                 "object" == typeof _ &&
-                Object.keys(__webpack_require__).length ===
-                  Object.keys(_).length &&
-                Object.keys(__webpack_require__).every(
-                  (_) => _.hasOwnProperty(_) && __webpack_require__[_] === _[_],
+                Object.keys(_).length === Object.keys(_).length &&
+                Object.keys(_).every(
+                  (_) => _.hasOwnProperty(_) && _[_] === _[_],
                 )));
           var _, _;
           const _ = this.m_Properties?.focusableIfEmpty,
@@ -88080,16 +87769,15 @@
           const {
             focusable: _,
             focusableIfEmpty: _,
-            childFocusDisabled: __webpack_require__,
+            childFocusDisabled: _,
             fnCanTakeFocus: _,
           } = this.m_Properties;
           return this.m_bMounted
             ? _ && !_(this)
               ? "none"
-              : _ ||
-                  (_ && (__webpack_require__ || 0 == this.m_rgChildren.length))
+              : _ || (_ && (_ || 0 == this.m_rgChildren.length))
                 ? "self"
-                : !__webpack_require__ && this.m_rgChildren.length
+                : !_ && this.m_rgChildren.length
                   ? "children"
                   : "none"
             : "none";
@@ -88237,7 +87925,7 @@
           if (this.BTryInternalNavigation(_, _.detail.is_repeat ?? !1))
             return !0;
           const {
-            onMoveUp: __webpack_require__,
+            onMoveUp: _,
             onMoveRight: _,
             onMoveDown: _,
             onMoveLeft: _,
@@ -88245,7 +87933,7 @@
           let _ = !1;
           switch (_) {
             case _._.DIR_UP:
-              __webpack_require__ && (_ = __webpack_require__(_.detail, this));
+              _ && (_ = __webpack_require__(_.detail, this));
               break;
             case _._.DIR_RIGHT:
               _ && (_ = _(_.detail, this));
@@ -88767,15 +88455,15 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      function _(_, _, ...__webpack_require__) {
+      function _(_, _, ..._) {
         console.assert
-          ? 0 == __webpack_require__.length
+          ? 0 == _.length
             ? console.assert(!!_, _)
-            : console.assert(!!_, _, ...__webpack_require__)
-          : _ || console.warn(_, ...__webpack_require__);
+            : console.assert(!!_, _, ..._)
+          : _ || console.warn(_, ..._);
       }
-      function _(_, _, ...__webpack_require__) {
-        _(!1, _, ...__webpack_require__);
+      function _(_, _, ..._) {
+        _(!1, _, ..._);
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -89066,34 +88754,30 @@
         _ = _.BinaryWriter.prototype;
       function _(_) {
         const _ = {},
-          { fields: __webpack_require__ } = _;
-        for (const _ in __webpack_require__) {
-          const _ = __webpack_require__[_];
+          { fields: _ } = _;
+        for (const _ in _) {
+          const _ = _[_];
           _[_._] = _;
         }
         return _;
       }
       function _(_, _) {
-        const { proto: __webpack_require__, fields: _ } = _,
-          _ = new __webpack_require__();
+        const { proto: _, fields: _ } = _,
+          _ = new _();
         if (null == _) return _;
         for (const _ in _) {
-          const { _: __webpack_require__, _: _, _: _, _: _, _: _ } = _[_];
+          const { _: _, _: _, _: _, _: _, _: _ } = _[_];
           if (!Object.prototype.hasOwnProperty.call(_, _)) continue;
           const _ = _[_];
           _
             ? _
               ? _.Message.setRepeatedWrapperField(
                   _,
-                  __webpack_require__,
+                  _,
                   Array.isArray(_) ? _.map((_) => _.fromObject(_)) : [],
                 )
-              : _.Message.setWrapperField(
-                  _,
-                  __webpack_require__,
-                  _.fromObject(_),
-                )
-            : _.Message.setField(_, __webpack_require__, _);
+              : _.Message.setWrapperField(_, _, _.fromObject(_))
+            : _.Message.setField(_, _, _);
         }
         return _;
       }
@@ -89214,13 +88898,8 @@
         };
       }
       function _(_, _) {
-        return function (__webpack_require__ = !0) {
-          return _.Message.getWrapperField(
-            this,
-            _,
-            _,
-            __webpack_require__ ? 1 : 0,
-          );
+        return function (_ = !0) {
+          return _.Message.getWrapperField(this, _, _, _ ? 1 : 0);
         };
       }
       function _(_, _) {
@@ -90188,7 +89867,7 @@
       function _(_, _) {
         return (
           (function (_, _) {
-            const [__webpack_require__, _] = _.useState(_);
+            const [_, _] = _.useState(_);
             return (
               _.useEffect(() => {
                 if (!_) {
@@ -90197,7 +89876,7 @@
                 }
                 _(!0);
               }, [_, _]),
-              __webpack_require__
+              _
             );
           })(_, _) || _
         );
@@ -90295,7 +89974,7 @@
           return _;
         };
       function _(_) {
-        const { useStorage: _, children: __webpack_require__ } = _;
+        const { useStorage: _, children: _ } = _;
         let _, _;
         if ("useActiveCMInterface" in _) _ = _ = _.useActiveCMInterface;
         else {
@@ -90305,7 +89984,7 @@
                 _,
                 "neither useActiveCMInterface nor useActiveSteamInterface were provided",
               ),
-              __webpack_require__
+              _
             );
           _ = _.useActiveSteamInterface;
         }
@@ -90322,7 +90001,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       const _ = () => _().useActiveSteamInterface()?.GetServiceTransport();
@@ -91062,8 +90741,7 @@
         ["id", "indonesian"],
       ]);
       const _ = new Map();
-      for (const [module, module_exports] of _.entries())
-        _.set(module_exports, module);
+      for (const [_, _] of _.entries()) _.set(_, _);
       var _, _;
       function _() {
         return (0, _._)() ? _.Composited : _.None;
@@ -91169,7 +90847,7 @@
         }),
         _ = () => _.useContext(_);
       function _(_) {
-        const { ownerWindow: _, children: __webpack_require__ } = _,
+        const { ownerWindow: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               ownerWindow: _,
@@ -91181,7 +90859,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       class _ {
@@ -91202,7 +90880,7 @@
               "Name is required.  This is an internal name, different from title.",
             ),
             (this.m_strName = _);
-          const { title: __webpack_require__, eCreationFlags: _, ..._ } = _;
+          const { title: _, eCreationFlags: _, ..._ } = _;
           (this.m_rgParams = {
             ..._,
             eCreationFlags: _ ?? 0,
@@ -91213,7 +90891,7 @@
             (this.m_bCreateHidden = !!(
               this.m_rgParams.eCreationFlags & _.Hidden
             )),
-            (this.m_strTitle = __webpack_require__);
+            (this.m_strTitle = _);
         }
         UpdateParamsBeforeShow(_) {
           return _;
@@ -91976,7 +91654,7 @@
         static InitFromString(_) {
           let _ = new _();
           try {
-            let [__webpack_require__, _, _, _, _] =
+            let [_, _, _, _, _] =
                 _.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
               _ = Number(_),
               _ = Number(_),
@@ -92065,13 +91743,8 @@
       }
       function _(_, _) {
         if (!_) return !1;
-        const [__webpack_require__, _] = _.split(".", 2);
-        return (
-          __webpack_require__ &&
-          _ &&
-          _(_, __webpack_require__) &&
-          _ in _.SteamClient[__webpack_require__]
-        );
+        const [_, _] = _.split(".", 2);
+        return _ && _ && _(_, _) && _ in _.SteamClient[_];
       }
       __webpack_require__._(module_exports, {
         _: () => _,
@@ -92197,31 +91870,19 @@
           return _.substring(0, _.length - _.length);
         },
         GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _._.full) {
-          return this.GenerateURLFromHashAndExtAndLang(
-            _,
-            _,
-            __webpack_require__,
-            -1,
-            void 0,
-          );
+        GenerateURLFromHashAndExt(_, _, _ = _._.full) {
+          return this.GenerateURLFromHashAndExtAndLang(_, _, _, -1, void 0);
         },
-        GenerateURLFromHashAndExtAndLang(
-          _,
-          _,
-          __webpack_require__ = _._.full,
-          _,
-          _,
-        ) {
+        GenerateURLFromHashAndExtAndLang(_, _, _ = _._.full, _, _) {
           _ instanceof _._ && (_ = _.GetAccountID());
           let _ = this.GetBaseURL();
           const _ = null != _ && -1 != _;
-          if (__webpack_require__ != _._.full || _) {
+          if (_ != _._.full || _) {
             let _ = _.substring(_.lastIndexOf(".")),
               _ = _.substring(0, _.length - _.length);
             return _ && 0 != _ && "localized_image_group" == _
               ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
-              : _ + _ + "/" + _ + __webpack_require__ + _;
+              : _ + _ + "/" + _ + _ + _;
           }
           return _ + _ + "/" + _;
         },
@@ -92373,17 +92034,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.forwardRef((_, _) => {
-        const {
-          className: __webpack_require__,
-          contextMenuStyles: _,
-          disabled: _,
-          ..._
-        } = _;
+        const { className: _, contextMenuStyles: _, disabled: _, ..._ } = _;
         return (0, _.jsx)("div", {
           ..._,
           ref: _,
           className: (0, _._)(
-            __webpack_require__,
+            _,
             (_ || _()).contextMenuItem,
             "contextMenuItem",
             _ && "disabled",
@@ -92429,7 +92085,7 @@
           let {
             children: _,
             className: _,
-            label: __webpack_require__,
+            label: _,
             onCancel: _,
             cancelText: _,
             refInstance: _,
@@ -92483,17 +92139,17 @@
                 navRef: this.m_navRef,
                 ref: _,
                 role: _,
-                "aria-labelledby": __webpack_require__ ? _ : void 0,
+                "aria-labelledby": _ ? _ : void 0,
                 ..._,
                 children: [
                   _,
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)("div", {
                       _: _,
                       style: {
                         display: "none",
                       },
-                      children: __webpack_require__,
+                      children: _,
                     }),
                   !this.instance.BIsSubMenu() &&
                     (0, _.jsxs)(_.Fragment, {
@@ -92562,7 +92218,7 @@
           const {
               onSelected: _,
               bInteractableItem: _,
-              onMoveRight: __webpack_require__,
+              onMoveRight: _,
               ..._
             } = this.props,
             _ = this.context?.styles ?? _();
@@ -92588,7 +92244,7 @@
                 onClick: this.props.disabled ? void 0 : this.OnClick,
                 focusable: !this.props.disabled,
                 onOKButton: this.OnOKButton,
-                onMoveRight: __webpack_require__,
+                onMoveRight: _,
                 unselectable: this.props.unselectable,
                 role: _.role ?? "menuitem",
                 "aria-selected": this.props.selected,
@@ -92677,7 +92333,7 @@
           let {
             label: _,
             selectedWithin: _,
-            children: __webpack_require__,
+            children: _,
             className: _,
             bInGamepadUI: _,
             ..._
@@ -93226,7 +92882,7 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)();
+        const [_, _] = (0, _._)();
         return (0, _.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 15 23",
@@ -93234,7 +92890,7 @@
           ..._,
           children: [
             (0, _.jsx)("g", {
-              clipPath: __webpack_require__,
+              clipPath: _,
               children: (0, _.jsx)("path", {
                 fill: "currentColor",
                 fillRule: "evenodd",
@@ -93289,7 +92945,7 @@
         });
       }
       function _(_) {
-        const { color: _ = "#FFFFFF", ...__webpack_require__ } = _;
+        const { color: _ = "#FFFFFF", ..._ } = _;
         return (0, _.jsxs)("svg", {
           version: "1.1",
           _: "Layer_2",
@@ -93300,7 +92956,7 @@
           width: "256px",
           height: "256px",
           viewBox: "0 0 256 256",
-          ...__webpack_require__,
+          ..._,
           children: [
             (0, _.jsx)("line", {
               fill: "none",
@@ -93326,7 +92982,7 @@
         });
       }
       function _(_) {
-        const { color: _ = "#fff", ...__webpack_require__ } = _;
+        const { color: _ = "#fff", ..._ } = _;
         return (0, _.jsx)("svg", {
           version: "1.1",
           _: "base",
@@ -93342,7 +92998,7 @@
           strokeLinecap: "round",
           strokeLinejoin: "round",
           strokeMiterlimit: "10",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("polyline", {
             fill: "none",
             points: "49.5,147.75 95,210.75 206.5,45.25 ",
@@ -93638,17 +93294,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(0, _._)();
         return (
@@ -93690,17 +93342,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {
@@ -93999,7 +93647,7 @@
       function _(_) {
         const {
             target: _,
-            visibilityObserver: __webpack_require__,
+            visibilityObserver: _,
             className: _,
             style: _,
             bEnablePointerEvents: _,
@@ -94021,8 +93669,7 @@
           _ = _.useCallback(() => {
             let _ = _;
             if (!_ || !_) return;
-            if (_ && __webpack_require__ && !__webpack_require__.visible)
-              return;
+            if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
             const _ = _.querySelector(".hover_arrow.left"),
@@ -94065,17 +93712,12 @@
                 })(_),
                 {
                   nLeft: _,
-                  nTop: __webpack_require__,
+                  nTop: _,
                   nOverflow: _,
                   nLateralOverflow: _,
                 } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
               if (
-                (_ < _ &&
-                  ((_ = _),
-                  (_ = _),
-                  (_ = __webpack_require__),
-                  (_ = _),
-                  (_ = _)),
+                (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
                 _ > (_ ?? 10))
               )
                 return (
@@ -94115,7 +93757,7 @@
               _ != _ && _(_),
               _ != _ && _(_),
               _ || _(!0);
-          }, [_, _, _, __webpack_require__, _, _, _, _, _, _, _, _]);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _]);
         _.useEffect(() => _(), [_]);
         let _ = Object.assign(
             {
@@ -94124,7 +93766,7 @@
             },
             _,
           ),
-          _ = !__webpack_require__ || __webpack_require__.visible;
+          _ = !_ || _.visible;
         return (0, _.jsx)("div", {
           className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
           children: (0, _.jsx)("div", {
@@ -94196,7 +93838,7 @@
       const _ = _.createContext({}),
         _ = () => _.useContext(_);
       function _(_) {
-        const [_, __webpack_require__] = _.useState(null),
+        const [_, _] = _.useState(null),
           _ = _.useMemo(
             () => ({
               targetElement: _,
@@ -94207,14 +93849,14 @@
           value: _,
           children: [
             (0, _.jsx)("div", {
-              ref: __webpack_require__,
+              ref: _,
             }),
             _.children,
           ],
         });
       }
       function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _({
+        const { divProps: _, tooltipProps: _ } = _({
           ..._,
           toolTipContent: _.toolTipContent
             ? (0, _.jsx)(_, {
@@ -94229,14 +93871,14 @@
           ..._,
           children: [
             (0, _.jsx)(_, {
-              ...__webpack_require__,
+              ..._,
             }),
             _.children,
           ],
         });
       }
       function _(_) {
-        const { divProps: _, tooltipProps: __webpack_require__ } = _(_);
+        const { divProps: _, tooltipProps: _ } = _(_);
         return (0, _.jsxs)(_._, {
           className: "tool-tip-source",
           noFocusRing: !0,
@@ -94244,7 +93886,7 @@
           ..._,
           children: [
             (0, _.jsx)(_, {
-              ...__webpack_require__,
+              ..._,
             }),
             _.children,
           ],
@@ -94252,7 +93894,7 @@
       }
       function _(_) {
         const { children: _ } = _,
-          { divProps: __webpack_require__, tooltipProps: _ } = _({
+          { divProps: _, tooltipProps: _ } = _({
             ..._,
             toolTipContent: _.toolTipContent
               ? (0, _.jsx)(_, {
@@ -94263,7 +93905,7 @@
         return (0, _.jsxs)(_.Fragment, {
           children: [
             _.cloneElement(_, {
-              ...__webpack_require__,
+              ..._,
               ..._.props,
             }),
             (0, _.jsx)(_, {
@@ -94275,7 +93917,7 @@
       function _(_) {
         const {
             toolTipContent: _,
-            nDelayShowMS: __webpack_require__ = 300,
+            nDelayShowMS: _ = 300,
             bDisabled: _,
             direction: _,
             nBodyAlignment: _,
@@ -94317,7 +93959,7 @@
         const _ = {
           active: _ && !_,
           target: _,
-          nDelayShowMS: __webpack_require__,
+          nDelayShowMS: _,
           hoverPositionProps: _,
           children: _,
         };
@@ -94350,7 +93992,7 @@
       function _(_) {
         const {
             active: _,
-            target: __webpack_require__,
+            target: _,
             nDelayShowMS: _ = 300,
             hoverPositionProps: _,
             children: _,
@@ -94370,15 +94012,15 @@
           !_)
         )
           return null;
-        if (!_ || !__webpack_require__) return null;
+        if (!_ || !_) return null;
         const { targetElement: _ } = _;
         return _.createPortal(
           (0, _.jsx)(_, {
-            target: __webpack_require__,
+            target: _,
             ..._,
             children: _,
           }),
-          _ ?? __webpack_require__.ownerDocument.body,
+          _ ?? _.ownerDocument.body,
         );
       }
     },
@@ -95397,12 +95039,7 @@
         }, _);
       }
       const _ = _.forwardRef(function (_, _) {
-        const {
-            onLeave: __webpack_require__,
-            onEnter: _,
-            options: _,
-            ..._
-          } = _,
+        const { onLeave: _, onEnter: _, options: _, ..._ } = _,
           _ = _(_, _.options),
           _ = (0, _._)(_, _);
         return (0, _.jsx)("div", {
@@ -95601,9 +95238,9 @@
         }
       }
       function _(_) {
-        const { video: _, children: __webpack_require__ } = _;
+        const { video: _, children: _ } = _;
         return _("youtube")
-          ? __webpack_require__
+          ? _
           : (0, _.jsx)("a", {
               href: `https://www.youtube.com/watch?v=${_}`,
               children: (0, _._)("#EventCalendar_WatchYouTubeVideo"),

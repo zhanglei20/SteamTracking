@@ -508,37 +508,37 @@
       }
       function _() {
         const [_, _] = _.useState(_.Get().GetTags()),
-          [__webpack_require__, _] = _.useState(_.Get().GetCategories());
+          [_, _] = _.useState(_.Get().GetCategories());
         return (
           _.useEffect(() => {
-            (void 0 !== _ && void 0 !== __webpack_require__) ||
+            (void 0 !== _ && void 0 !== _) ||
               _.Get()
                 .HintLoad()
                 .then(() => {
                   _(_.Get().GetTags()), _(_.Get().GetCategories());
                 });
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           {
             rgTags: _,
-            rgCategories: __webpack_require__,
+            rgCategories: _,
           }
         );
       }
       function _() {
         const [_, _] = _.useState(_.Get().GetStoreTagMap()),
-          [__webpack_require__, _] = _.useState(_.Get().GetStoreCategoryMap());
+          [_, _] = _.useState(_.Get().GetStoreCategoryMap());
         return (
           _.useEffect(() => {
-            (void 0 !== _ && void 0 !== __webpack_require__) ||
+            (void 0 !== _ && void 0 !== _) ||
               _.Get()
                 .HintLoad()
                 .then(() => {
                   _(_.Get().GetStoreTagMap()), _(_.Get().GetStoreCategoryMap());
                 });
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           {
             mapStoreTags: _,
-            mapStoreCategories: __webpack_require__,
+            mapStoreCategories: _,
           }
         );
       }
@@ -787,7 +787,7 @@
       function _(_) {
         const {
           data: _,
-          isLoading: __webpack_require__,
+          isLoading: _,
           isError: _,
         } = (0, _._)({
           queryKey: ["contenthubsummary", _.type, _.handle],
@@ -807,8 +807,8 @@
           },
         });
         return {
-          rgTopApps: __webpack_require__ || _ || !_ ? null : _?.top_apps,
-          nTotalGames: __webpack_require__ || _ || !_ ? null : _?.total_games,
+          rgTopApps: _ || _ || !_ ? null : _?.top_apps,
+          nTotalGames: _ || _ || !_ ? null : _?.total_games,
           isError: _,
         };
       }
@@ -914,7 +914,7 @@
         const _ = (function (_) {
             const {
               data: _,
-              isLoading: __webpack_require__,
+              isLoading: _,
               isError: _,
             } = (0, _._)({
               queryKey: ["contenthubapplist", _.type, _.handle],
@@ -935,40 +935,31 @@
             });
             return _?.apps || null;
           })(_),
-          [__webpack_require__, _] = (0, _.useState)(
-            _.Get().GetContentHubSaleSummary(_),
-          );
+          [_, _] = (0, _.useState)(_.Get().GetContentHubSaleSummary(_));
         return (
           (0, _.useEffect)(() => {
-            _?.length &&
-              !__webpack_require__ &&
-              _.Get().LoadContentHubSaleSummary(_, _);
-          }, [_, _.type, _.handle, _, __webpack_require__]),
+            _?.length && !_ && _.Get().LoadContentHubSaleSummary(_, _);
+          }, [_, _.type, _.handle, _, _]),
           (0, _._)(_.Get().GetContentHubSummaryChangeCallback(_), _),
-          __webpack_require__
+          _
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
           _.Get().GetAppSummaryObject().GetAppSaleSummary(_),
         );
         return (
           (0, _._)(
             _.Get().GetAppSummaryObject().GetAppSaleSummaryChangeCallback(_),
-            __webpack_require__,
+            _,
           ),
           _
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _.Get().GetTopAppSummary(_),
-        );
+        const [_, _] = (0, _.useState)(_.Get().GetTopAppSummary(_));
         return (
-          (0, _._)(
-            _.Get().GetContentHubTopAppSaleSummaryChangeCallback(_),
-            __webpack_require__,
-          ),
+          (0, _._)(_.Get().GetContentHubTopAppSaleSummaryChangeCallback(_), _),
           _
         );
       }
@@ -1016,7 +1007,7 @@
         _ = 5e3,
         _ = 500;
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0),
+        const [_, _] = (0, _.useState)(!0),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(
             () => (_?.length > 0 ? _.filter((_) => Boolean(_.type)) : null),
@@ -1101,13 +1092,13 @@
             });
       }
       function _(_) {
-        const { category: _, bSaleSummary: __webpack_require__ } = _;
+        const { category: _, bSaleSummary: _ } = _;
         return (0, _.jsx)(_._, {
           placeholderHeight: 250,
           rootMargin: _,
           children: (0, _.jsx)(_, {
             category: _,
-            bSaleSummary: __webpack_require__,
+            bSaleSummary: _,
           }),
         });
       }
@@ -1127,7 +1118,7 @@
         );
       }
       function _(_) {
-        const { category: _, bSaleSummary: __webpack_require__ } = _,
+        const { category: _, bSaleSummary: _ } = _,
           { rgTopApps: _, nTotalGames: _ } = (0, _._)(_),
           _ = _ > 500 && _ <= _;
         return (0, _.jsxs)("div", {
@@ -1147,7 +1138,7 @@
                 (0, _.jsx)("div", {
                   className: _.SaleStats,
                   children:
-                    Boolean(__webpack_require__ && _) &&
+                    Boolean(_ && _) &&
                     (0, _.jsx)(_, {
                       category: _,
                     }),
@@ -1168,7 +1159,7 @@
                       {
                         info: _,
                         category: _,
-                        bSaleSummary: __webpack_require__ && _,
+                        bSaleSummary: _ && _,
                       },
                       _.appid,
                     ),
@@ -1190,7 +1181,7 @@
         });
       }
       function _(_) {
-        const { info: _, bSaleSummary: __webpack_require__ } = _,
+        const { info: _, bSaleSummary: _ } = _,
           _ = (0, _._)(_.appid),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -1219,7 +1210,7 @@
                 (0, _.jsxs)("div", {
                   children: [" Rank: ", _.long_term_sale_rank],
                 }),
-                Boolean(__webpack_require__) &&
+                Boolean(_) &&
                   (0, _.jsx)(_, {
                     ..._,
                   }),
@@ -1235,9 +1226,9 @@
             });
       }
       function _(_) {
-        const { info: _, category: __webpack_require__ } = _,
+        const { info: _, category: _ } = _,
           _ = (0, _._)(_.appid),
-          _ = (0, _._)(__webpack_require__);
+          _ = (0, _._)(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             Boolean(_) &&
@@ -1260,10 +1251,9 @@
         });
       }
       function _(_) {
-        const { mapStoreTags: _, mapStoreCategories: __webpack_require__ } = (0,
-          _._)(),
+        const { mapStoreTags: _, mapStoreCategories: _ } = (0, _._)(),
           { category: _ } = _;
-        return _ && __webpack_require__ && (_.any || _.must || _.mustnot)
+        return _ && _ && (_.any || _.must || _.mustnot)
           ? (0, _.jsxs)("div", {
               className: _.ThemeTags,
               children: [
@@ -1332,8 +1322,7 @@
           : null;
       }
       function _(_) {
-        const { mapStoreTags: _, mapStoreCategories: __webpack_require__ } = (0,
-          _._)(),
+        const { mapStoreTags: _, mapStoreCategories: _ } = (0, _._)(),
           { type: _, _: _ } = _;
         return "tagids" == _
           ? (0, _.jsxs)("span", {
@@ -1349,7 +1338,7 @@
             });
       }
       function _(_) {
-        const { saleSummary: _, topAppSummary: __webpack_require__ } = _;
+        const { saleSummary: _, topAppSummary: _ } = _;
         return _
           ? (0, _.jsx)("div", {
               className: _.ThemeRevenueCtn,
@@ -1397,16 +1386,14 @@
                               (0, _.jsx)("br", {}),
                               (0, _.jsxs)("span", {
                                 className:
-                                  (__webpack_require__.gross_sales_usd /
-                                    _.gross_sales_usd) *
+                                  (_.gross_sales_usd / _.gross_sales_usd) *
                                     100 >
                                   90
                                     ? _.SizeColorBig
                                     : _.SizeColorSweet,
                                 children: [
                                   (
-                                    (__webpack_require__.gross_sales_usd /
-                                      _.gross_sales_usd) *
+                                    (_.gross_sales_usd / _.gross_sales_usd) *
                                     100
                                   ).toFixed(2),
                                   "%",
@@ -1473,7 +1460,7 @@
       function _(_) {
         const {
             items: _,
-            render: __webpack_require__,
+            render: _,
             onDelete: _,
             onEdit: _,
             onReorder: _,

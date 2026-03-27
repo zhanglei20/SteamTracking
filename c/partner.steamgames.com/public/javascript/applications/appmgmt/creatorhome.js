@@ -23,7 +23,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { creatorHomes: _ } = _,
-          [__webpack_require__, _] = _.useState(!0),
+          [_, _] = _.useState(!0),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(0);
         return (
@@ -48,7 +48,7 @@
           _ && _
             ? (0, _.jsxs)(_._, {
                 children: [
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsxs)("span", {
                       children: [
                         (0, _.jsx)("span", {

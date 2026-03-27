@@ -177,7 +177,7 @@
           let {
             keyExtractor: _,
             style: _,
-            duration: __webpack_require__ = _,
+            duration: _ = _,
             className: _,
             children: _,
             childRef: _,
@@ -185,7 +185,7 @@
           } = this.props;
           const _ = {
             ...(_ || {}),
-            transitionDuration: __webpack_require__ / 1e3 + "s",
+            transitionDuration: _ / 1e3 + "s",
           };
           return (0, _.jsx)(_._, {
             ..._,
@@ -195,7 +195,7 @@
               {
                 nodeRef: _,
                 classNames: "crossfade-anim",
-                timeout: __webpack_require__,
+                timeout: _,
                 style: _,
                 children: _,
               },
@@ -205,7 +205,7 @@
         }
       }
       function _(_) {
-        const { src: _, ...__webpack_require__ } = _,
+        const { src: _, ..._ } = _,
           _ = {
             backgroundImage: `url(${_})`,
           },
@@ -214,7 +214,7 @@
           style: _,
           keyExtractor: () => _,
           childRef: _,
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("div", {
             ref: _,
             className: "crossfade-img",
@@ -657,7 +657,7 @@
         render() {
           let _ = !1,
             _ = !1;
-          const { video: __webpack_require__, actions: _ } = this.props;
+          const { video: _, actions: _ } = this.props;
           let _,
             _,
             _ = 0,
@@ -767,7 +767,7 @@
                 children: (0, _.jsx)(_.wB_, {}),
               }),
               (0, _.jsx)(_, {
-                video: __webpack_require__,
+                video: _,
               }),
               _ &&
                 _.map((_) =>
@@ -2191,17 +2191,13 @@
       _ = (0, _._)([_._], _);
       class _ extends _.Component {
         showContextMenu(_) {
-          const {
-              options: _,
-              value: __webpack_require__,
-              onChange: _,
-            } = this.props,
+          const { options: _, value: _, onChange: _ } = this.props,
             _ = Object.keys(_).map((_) =>
               (0, _.jsx)(
                 _._,
                 {
                   onSelected: () => _(_),
-                  bChecked: _ === __webpack_require__,
+                  bChecked: _ === _,
                   children: (0, _._)(_[_]),
                 },
                 _,
@@ -2767,12 +2763,10 @@
           }
           return this.PlayFromAvailableStreams(_, _);
         }
-        async PlayFromAvailableStreams(_, _, __webpack_require__ = !1) {
+        async PlayFromAvailableStreams(_, _, _ = !1) {
           const _ = new Set();
           for (;;) {
-            const _ = _.filter(
-                (_) => !(_.has(_) || (__webpack_require__ && _.nAppIDVOD)),
-              ),
+            const _ = _.filter((_) => !(_.has(_) || (_ && _.nAppIDVOD))),
               _ = this.GetAutoStartStream(_);
             if (!_) return null;
             if (await this.AttemptToPlayStream(_, _)) return _;
@@ -2949,9 +2943,9 @@
             (this.m_mapBroadcasterSteamIDData = new Map()),
             (0, _._)(this);
         }
-        static GetBBCodeParam(_, _, __webpack_require__ = "") {
+        static GetBBCodeParam(_, _, _ = "") {
           const _ = new RegExp(`\\W${_}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(_);
-          return _ ? _[1] : __webpack_require__;
+          return _ ? _[1] : _;
         }
         static ParseCalendarEventPresentersFromText(_) {
           const _ = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
@@ -4028,12 +4022,12 @@
             console.error(_);
           }
         }
-        DelayedGetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+        DelayedGetBroadcastManifest(_, _, _ = Date.now()) {
           _.m_schManifestTimeout.Schedule(5e3, () =>
-            this.GetBroadcastManifest(_, _, __webpack_require__),
+            this.GetBroadcastManifest(_, _, _),
           );
         }
-        async GetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+        async GetBroadcastManifest(_, _, _ = Date.now()) {
           _.SetState(_.Loading, "");
           let _ = {
               steamid: _.m_steamIDBroadcast,
@@ -4086,7 +4080,7 @@
               _.Loading,
               (0, _._)("#BroadcastWatch_WaitingForResponse"),
             );
-            let _ = Date.now() - __webpack_require__;
+            let _ = Date.now() - _;
             if (_ > 6e4)
               return void _.SetState(
                 _.Error,
@@ -4094,7 +4088,7 @@
               );
             let _ = _ > 3e4 ? _.retry : 5e3;
             _.m_schManifestTimeout.Schedule(_, () =>
-              this.GetBroadcastManifest(_, _, __webpack_require__),
+              this.GetBroadcastManifest(_, _, _),
             );
           } else
             "waiting_for_start" == _
@@ -4103,7 +4097,7 @@
                   (0, _._)("#BroadcastWatch_WaitingForStart"),
                 ),
                 _.m_schManifestTimeout.Schedule(_.retry, () =>
-                  this.GetBroadcastManifest(_, _, __webpack_require__),
+                  this.GetBroadcastManifest(_, _, _),
                 ))
               : "waiting_for_reconnect" == _
                 ? (_.SetState(
@@ -4111,7 +4105,7 @@
                     (0, _._)("#BroadcastWatch_WaitingForReconnect"),
                   ),
                   _.m_schManifestTimeout.Schedule(_.retry, () =>
-                    this.GetBroadcastManifest(_, _, __webpack_require__),
+                    this.GetBroadcastManifest(_, _, _),
                   ))
                 : "end" == _
                   ? _.SetState(
@@ -4211,13 +4205,13 @@
           _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
             this.m_activeVideo.StartVOD(_);
         }
-        BroadcastDownloadFailed(_, _ = !0, __webpack_require__ = _._.Invalid) {
+        BroadcastDownloadFailed(_, _ = !0, _ = _._.Invalid) {
           _.Stop();
           let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
           _ &&
             _.m_eWatchState != _.Loading &&
             (_.m_bWebRTC && _ && (_.m_bWebRTC = !1),
-            __webpack_require__ == _._.StreamGone
+            _ == _._.StreamGone
               ? this.DelayedGetBroadcastManifest(_, _.GetWatchLocation())
               : this.GetBroadcastManifest(_, _.GetWatchLocation()));
         }

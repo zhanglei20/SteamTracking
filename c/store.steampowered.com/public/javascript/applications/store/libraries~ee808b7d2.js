@@ -899,10 +899,10 @@
           (_.ENGINE = _._ = _([_, _])),
           typeof _ !== _
             ? (_.exports && (_ = _.exports = _), (_.UAParser = _))
-            : __webpack_require__.amdO
+            : _.amdO
               ? (_ = function () {
                   return _;
-                }.call(_, __webpack_require__, _, _)) === _ || (_.exports = _)
+                }.call(_, _, _, _)) === _ || (_.exports = _)
               : typeof _ !== _ && (_.UAParser = _);
         var _ = typeof _ !== _ && (_.jQuery || _.Zepto);
         if (_ && !_._) {

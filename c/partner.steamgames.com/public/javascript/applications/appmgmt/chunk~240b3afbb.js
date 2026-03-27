@@ -14,129 +14,67 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 6696, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 6696, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 58906, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 58906, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53473, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 53473, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83899, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83899, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84925, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84925, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69902, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69902, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 80716, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 80716, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 81663, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 81663, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48484, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 48484, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 66810, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 66810, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 13744, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 13744, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 62101, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 62101, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 68948, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 68948, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 2916, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 2916, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 40195, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40195, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84259, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84259, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 24475, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 24475, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 36884, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 36884, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 15269, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 15269, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96865, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 96865, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 71391, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71391, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 64933, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 64933, 19))),
         (_.sc_schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27503, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27503, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44768, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 44768, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 20876, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 20876, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75181, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75181, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89779, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89779, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98970, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98970, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 87996, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 87996, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 47306, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 47306, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72539, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 72539, 19)));
       const _ = (0, __webpack_require__("chunkid")._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -172,7 +110,7 @@
       }
       function _(_, _) {
         const {
-            fullmonthname: __webpack_require__ = !1,
+            fullmonthname: _ = !1,
             bUseRelativeNames: _ = !0,
             bIncludeDayName: _ = !1,
           } = _ ?? {},
@@ -180,7 +118,7 @@
           _ = new Date(1e3 * _);
         if (_.getFullYear() != _.getFullYear())
           return _(_, {
-            month: __webpack_require__ ? "long" : "short",
+            month: _ ? "long" : "short",
           });
         const _ = new Date();
         if ((_.setHours(0, 0, 0, 0), _))
@@ -192,7 +130,7 @@
           } else if ((_.setDate(_.getDate() - 1), _ >= _))
             return _.Localize("#Time_Yesterday");
         const _ = {
-          month: __webpack_require__ ? "long" : "short",
+          month: _ ? "long" : "short",
           day: "numeric",
         };
         return _ && (_.weekday = "long"), _.toLocaleDateString((0, _._)(), _);
@@ -324,8 +262,8 @@
         };
       }
       function _(_, _) {
-        const { data: __webpack_require__ } = _(_);
-        return __webpack_require__ && __webpack_require__[_];
+        const { data: _ } = _(_);
+        return _ && _[_];
       }
     },
   },

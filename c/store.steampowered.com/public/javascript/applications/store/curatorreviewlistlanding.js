@@ -883,16 +883,16 @@
       }
       function _(_) {
         const _ = _ && _._.GetClanInfoByClanAccountID(_),
-          [__webpack_require__, _] = (0, _.useState)(!!_);
+          [_, _] = (0, _.useState)(!!_);
         return (
           (0, _.useEffect)(() => {
-            if (__webpack_require__ && _) {
+            if (_ && _) {
               const _ = _._.InitFromClanID(_);
               _._.LoadClanInfoForClanSteamID(_).finally(() => {
                 _(!0);
               });
             }
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           _
         );
       }
@@ -937,10 +937,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { crumbs: _, className: __webpack_require__ } = _;
+        const { crumbs: _, className: _ } = _;
         return _ && 0 != _.length
           ? (0, _.jsxs)("div", {
-              className: (0, _._)(_.BreadContainer, __webpack_require__),
+              className: (0, _._)(_.BreadContainer, _),
               children: [
                 (0, _.jsx)(_._, {
                   className: "blockbg",
@@ -1210,7 +1210,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const _ = ["maxresdefault", "mqdefault", "default"],
-            [__webpack_require__, _] = _.useState(0);
+            [_, _] = _.useState(0);
           _.useEffect(() => _(0), [_.video]);
           const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
@@ -1225,14 +1225,9 @@
             });
           {
             const _ =
-                "https://img.youtube.com/vi/" +
-                _.video +
-                "/" +
-                _[__webpack_require__] +
-                ".jpg",
+                "https://img.youtube.com/vi/" + _.video + "/" + _[_] + ".jpg",
               _ = () => {
-                __webpack_require__ + 1 < _.length &&
-                  _(__webpack_require__ + 1);
+                _ + 1 < _.length && _(_ + 1);
               },
               _ = () => {
                 _.current && _.current.naturalHeight < 91 && _();
@@ -1247,7 +1242,7 @@
           }
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1);
+          const [_, _] = _.useState(!1);
           (0, _._)(!!_.preloadYoutubeScripts);
           const _ = (0, _._)("youtube");
           if (_ && _)
@@ -1319,14 +1314,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _?.BUsesContentHubForItemSource() ? new Set() : null,
           ),
           _ = (0, _._)("useFilteredAppViaContentHub");
         return (
           (0, _.useEffect)(() => {
             _?.BUsesContentHubForItemSource() &&
-              !__webpack_require__ &&
+              !_ &&
               (async function (_, _) {
                 const _ =
                     _._.STORE_BASE_URL +
@@ -1363,8 +1358,8 @@
               })(_, _).then((_) => {
                 _.token.reason || _(_);
               });
-          }, [__webpack_require__, _.token.reason, _, _]),
-          __webpack_require__
+          }, [_, _.token.reason, _, _]),
+          _
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -1389,7 +1384,7 @@
       function _(_) {
         const {
             posterURL: _,
-            videoid: __webpack_require__,
+            videoid: _,
             muted: _,
             autoplay: _,
             bIsClipID: _,
@@ -1428,8 +1423,8 @@
         const _ = _.indexOf("/");
         _ >= 0 && (_ = _.substring(0, _));
         let _ = _
-          ? `https://clips.twitch.tv/embed?clip=${__webpack_require__}`
-          : `https://player.twitch.tv/?video=${__webpack_require__}`;
+          ? `https://clips.twitch.tv/embed?clip=${_}`
+          : `https://player.twitch.tv/?video=${_}`;
         return (
           (_ += `&parent=${_}&autoplay=${_}&muted=${Boolean(_)}`),
           _ &&
@@ -1478,8 +1473,10 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { clanInfo: _ } = _,
-          { curator_link: __webpack_require__, curator_medium_avatar: _ } = (0,
-          _._)("curator_header", "application_config");
+          { curator_link: _, curator_medium_avatar: _ } = (0, _._)(
+            "curator_header",
+            "application_config",
+          );
         return (0, _.jsx)(_._, {
           className: "page_content_ctn",
           "flow-children": "column",
@@ -1493,7 +1490,7 @@
                 (0, _.jsx)("div", {
                   className: "curator_avatar_image",
                   children: (0, _.jsx)(_._, {
-                    href: __webpack_require__,
+                    href: _,
                     children: (0, _.jsx)("img", {
                       className: "curator_avatar",
                       src: _,
@@ -1509,7 +1506,7 @@
                     }),
                     (0, _.jsx)(_._, {
                       className: "pageheader curator_name",
-                      href: __webpack_require__,
+                      href: _,
                       children: (0, _._)(
                         "#SteamCurator_List_Header_List",
                         _.group_name,
@@ -1594,7 +1591,7 @@
       }
       function _(_) {
         const { listDetails: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(null),
+          [_, _] = (0, _.useState)(null),
           _ = new _._(_.sale_clan_steamid),
           { eventModel: _ } = (0, _._)(_.GetAccountID(), _.sale_clan_event_gid),
           _ = (0, _.useMemo)(
@@ -1614,19 +1611,19 @@
           }, [_, _, _]),
           (0, _.jsx)(_, {
             listDetails: _,
-            rgListItems: __webpack_require__,
+            rgListItems: _,
           })
         );
       }
       function _(_) {
-        const { listDetails: _, rgListItems: __webpack_require__ } = _,
+        const { listDetails: _, rgListItems: _ } = _,
           [_, _] = (0, _.useState)(0),
           [_, _] = (0, _.useState)(null),
           _ = (0, _._)("CuratorAppListDisplay");
         if (
           (_.useEffect(() => {
-            __webpack_require__ &&
-              (_(__webpack_require__?.length || 0),
+            _ &&
+              (_(_?.length || 0),
               _._.Get()
                 .HintLoad()
                 .then(() => {
@@ -1650,7 +1647,7 @@
                       _.token.reason || _([]);
                     });
                 }));
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           null == _)
         )
           return (0, _.jsx)(_._, {
@@ -1774,7 +1771,7 @@
         });
       }
       const _ = (0, _._)((_) => {
-        const { item: _, listDetails: __webpack_require__, bAutoFocus: _ } = _,
+        const { item: _, listDetails: _, bAutoFocus: _ } = _,
           _ = parseInt((0, _._)("curator_account_id", "application_config")),
           _ = (0, _._)(_),
           [_] = (0, _._)(_?.recommended_app?.appid, {
@@ -1798,13 +1795,13 @@
             recommendation_state: _,
           } = _.recommended_app,
           _ = _.is_creator_home && !_.is_ogg,
-          _ = __webpack_require__.list_jsondata.app_data?.[_],
+          _ = _.list_jsondata.app_data?.[_],
           _ = _ && (0, _._)(_),
           _ = _ && _(_),
           _ = _ != _._ && _,
           _ = _.BHasDemo(),
           _ = _?.img_url,
-          _ = `curator_clanid=${_.clanAccountID}&curator_listid=${__webpack_require__.listid}`,
+          _ = `curator_clanid=${_.clanAccountID}&curator_listid=${_.listid}`,
           _ = _.GetStorePageURL() + "/?curator_clanid=" + _.clanAccountID;
         return (0, _.jsxs)(_._, {
           className: _().CuratorReview,
@@ -1873,7 +1870,7 @@
       function _(_) {
         const {
             strVideoID: _,
-            nStartSeconds: __webpack_require__,
+            nStartSeconds: _,
             _: _,
             strImgOverrideUrl: _,
             bShowDemoButton: _,
@@ -1895,7 +1892,7 @@
                   })
                 : (0, _.jsx)(_._, {
                     video: _,
-                    startSeconds: __webpack_require__,
+                    startSeconds: _,
                     autoplay: !0,
                     autopause: !0,
                     showFullscreenBtn: !0,

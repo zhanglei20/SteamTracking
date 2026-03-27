@@ -66,12 +66,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            strImageToken: _,
-            language: __webpack_require__,
-            strAltText: _,
-          } = _,
-          _ = (0, _._)(_, __webpack_require__);
+        const { strImageToken: _, language: _, strAltText: _ } = _,
+          _ = (0, _._)(_, _);
         return _
           ? "string" == typeof _
             ? (0, _.jsx)("img", {
@@ -93,10 +89,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = 0) {
-        return _(_, _, __webpack_require__);
+      function _(_, _, _ = 0) {
+        return _(_, _, _);
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         if (!_ || 0 == _.length) return null;
         if (_?.startsWith(_._)) return _._.ReplacementTokenToClanImageURL(_);
         if (_?.startsWith(_._)) {
@@ -109,12 +105,10 @@
             _ = _._.GetExtStringFromHashAndExt(_);
           if (null != _) {
             let _ = (0, _._)(_);
-            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__),
+            _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _),
               4 == _ &&
                 ((_ = (0, _._)((0, _._)(_))),
-                _.push(
-                  _ + _ + "/" + _ + "/" + _ + _ + "?t=" + __webpack_require__,
-                ));
+                _.push(_ + _ + "/" + _ + "/" + _ + _ + "?t=" + _));
           }
           return _.push(_._.GenerateURLFromHashAndExt(_, _)), _;
         }
@@ -187,7 +181,7 @@
       function _(_) {
         const {
             _: _,
-            hoverClassName: __webpack_require__,
+            hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
             children: _,
@@ -218,7 +212,7 @@
           );
         return (0, _.jsx)("div", {
           ref: _,
-          className: __webpack_require__,
+          className: _,
           onMouseEnter: _,
           onMouseLeave: _,
           onFocus: _,
@@ -229,7 +223,7 @@
       function _(_) {
         const {
             _: _,
-            strExtraParams: __webpack_require__,
+            strExtraParams: _,
             fnOnClickOverride: _,
             strOverrideURL: _,
           } = _,
@@ -239,12 +233,12 @@
             _ ||
               (_ && "creatorid" in _
                 ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )
                 : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )),
@@ -274,7 +268,7 @@
       function _(_) {
         const {
           capsules_per_row: _,
-          is_generic: __webpack_require__,
+          is_generic: _,
           is_generic_trailer: _,
           is_event_dash_row: _,
           is_trailer_carousel: _,
@@ -286,7 +280,7 @@
           show_auto_advance_bar: _,
         } = _;
         if (!_) return null;
-        if (__webpack_require__)
+        if (_)
           return (0, _.jsx)("div", {
             className: _().GhostCtn,
             children: (0, _.jsx)("div", {
@@ -673,10 +667,10 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         let { children: _ } = _;
-        const [__webpack_require__, _] = (0, _.useState)(0.8),
+        const [_, _] = (0, _.useState)(0.8),
           [_, _] = (0, _.useState)(!0);
         return (0, _.jsx)(_._, {
-          playerVolume: __webpack_require__,
+          playerVolume: _,
           setPlayerVolume: _,
           audioMuted: _,
           setAudioMuted: _,
@@ -718,7 +712,7 @@
       function _(_) {
         const {
             _: _,
-            bPurchaseOptionsExpanded: __webpack_require__,
+            bPurchaseOptionsExpanded: _,
             fnCollapseOptions: _,
             bPreferAssetWithoutOverride: _,
           } = _,
@@ -729,7 +723,7 @@
         return _
           ? (0, _.jsx)(_._, {
               nodeRef: _,
-              _: __webpack_require__,
+              _: _,
               mountOnEnter: !0,
               unmountOnExit: !0,
               timeout: 2e3,
@@ -781,8 +775,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-        const { _: _, type: __webpack_require__ } = _,
-          _ = (0, _._)(_, __webpack_require__),
+        const { _: _, type: _ } = _,
+          _ = (0, _._)(_, _),
           {
             bHidePrice: _,
             bShowDemoButton: _,
@@ -1039,31 +1033,19 @@
           return _.substring(0, _.length - _.length);
         },
         GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _._.full) {
-          return this.GenerateURLFromHashAndExtAndLang(
-            _,
-            _,
-            __webpack_require__,
-            -1,
-            void 0,
-          );
+        GenerateURLFromHashAndExt(_, _, _ = _._.full) {
+          return this.GenerateURLFromHashAndExtAndLang(_, _, _, -1, void 0);
         },
-        GenerateURLFromHashAndExtAndLang(
-          _,
-          _,
-          __webpack_require__ = _._.full,
-          _,
-          _,
-        ) {
+        GenerateURLFromHashAndExtAndLang(_, _, _ = _._.full, _, _) {
           _ instanceof _._ && (_ = _.GetAccountID());
           let _ = this.GetBaseURL();
           const _ = null != _ && -1 != _;
-          if (__webpack_require__ != _._.full || _) {
+          if (_ != _._.full || _) {
             let _ = _.substring(_.lastIndexOf(".")),
               _ = _.substring(0, _.length - _.length);
             return _ && 0 != _ && "localized_image_group" == _
               ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
-              : _ + _ + "/" + _ + __webpack_require__ + _;
+              : _ + _ + "/" + _ + _ + _;
           }
           return _ + _ + "/" + _;
         },
@@ -1279,7 +1261,7 @@
       function _(_) {
         const {
             rgSources: _,
-            onIncrementalError: __webpack_require__,
+            onIncrementalError: _,
             onError: _,
             strAltText: _,
             ref: _,
@@ -1322,7 +1304,7 @@
               const _ = _ + 1;
               _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           );
         return (0, _.jsx)(
           "img",
@@ -1381,7 +1363,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { appid: _, strUrlOverride: __webpack_require__ } = _,
+        const { appid: _, strUrlOverride: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return (
@@ -1389,12 +1371,12 @@
             if (_) {
               const _ = `${_._.STORE_BASE_URL}${_.store_url_path}`.replace(
                 "/app/",
-                __webpack_require__ ?? "/verified/",
+                _ ?? "/verified/",
               );
               _ != window.location.href &&
                 window.history.replaceState({}, "", _);
             }
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           _ && _
             ? (0, _.jsx)(_._, {
                 method: "verifiedprogram",
@@ -1409,7 +1391,7 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = `${_._.CLAN_CDN_ASSET_URL}images/41316928/846f603df6057b070667f2741730c2038648955d.png`;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -1417,7 +1399,7 @@
               className: _().Headline,
               children: _._.LocalizeReact(
                 "#VerifiedProgram_DeckTitle",
-                __webpack_require__?.name,
+                _?.name,
                 (0, _.jsxs)("span", {
                   className: _().Verified,
                   children: [
@@ -1472,11 +1454,9 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        if (!__webpack_require__) return null;
-        const _ =
-          (0, _._)(__webpack_require__, "library_hero_2x") ??
-          (0, _._)(__webpack_require__, "library_hero");
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(_, "library_hero_2x") ?? (0, _._)(_, "library_hero");
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -1523,7 +1503,7 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)(_);
         if (!_) return null;
         const _ = `${_._.CLAN_CDN_ASSET_URL}images/39049601/8f21143ba4f6331e117568740aa286e975a5afb1.png`,
@@ -1542,7 +1522,7 @@
                       hlsManifest: _[0],
                       screenshot:
                         _.screenshot_full ?? _.screenshot_medium ?? "",
-                      altText: __webpack_require__?.name ?? "",
+                      altText: _?.name ?? "",
                       muteWhenAutoplayBlocked: !0,
                     }),
                   }),

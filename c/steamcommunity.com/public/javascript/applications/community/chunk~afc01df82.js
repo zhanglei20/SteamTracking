@@ -270,12 +270,10 @@
         },
         _ = _.createContext(_);
       function _(_) {
-        const { children: _, editModel: __webpack_require__ } = _,
+        const { children: _, editModel: _ } = _,
           { bClanImagesV2: _, setClanImagesV2: _ } = (function () {
             const _ = "storeUseClanImagesV2",
-              [_, __webpack_require__] = _.useState(
-                () => !!localStorage.getItem(_),
-              ),
+              [_, _] = _.useState(() => !!localStorage.getItem(_)),
               _ = _.useCallback((_) => {
                 _ ? localStorage.setItem(_, "1") : localStorage.removeItem(_),
                   __webpack_require__(_);
@@ -288,7 +286,7 @@
         return (0, _.jsx)(_.Provider, {
           value: {
             ..._,
-            editModel: __webpack_require__,
+            editModel: _,
             bClanImagesV2: _,
             setClanImagesV2: _,
           },
@@ -353,7 +351,7 @@
       const _ = (0, _._)((_) => {
         const {
             closeModal: _,
-            appid: __webpack_require__,
+            appid: _,
             partnerEventStore: _,
             primaryLocalizedImage: _,
             clanSteamID: _,
@@ -465,7 +463,7 @@
                           title: (0, _._)("#ImagePickerLoc_Title"),
                           realms: _,
                           fnLangHasData: _,
-                          appid: __webpack_require__,
+                          appid: _,
                           fnGetImageHashAndExt: _,
                           fnSetImageURL: _,
                           partnerEventStore: _,
@@ -585,7 +583,7 @@
       const _ = (0, _._)((_) => {
         const {
             clanSteamID: _,
-            appid: __webpack_require__,
+            appid: _,
             imageInsertCallBack: _,
             partnerEventStore: _,
             bHideDragAndDrop: _,
@@ -702,7 +700,7 @@
                   (0, _._)(
                     (0, _.jsx)(_, {
                       primaryLocalizedImage: _,
-                      appid: __webpack_require__,
+                      appid: _,
                       clanSteamID: _,
                       fnSetImageURL: _,
                       rgRealmList: _,
@@ -804,12 +802,12 @@
       function _(_) {
         const {
           bClanImagesV2: _,
-          bClanImagesV2Allowed: __webpack_require__,
+          bClanImagesV2Allowed: _,
           setClanImagesV2: _,
         } = (0, _._)();
         return (0, _.jsx)(_.Fragment, {
           children:
-            __webpack_require__ &&
+            _ &&
             _ &&
             (0, _.jsx)(_._, {
               className: _().EnableClanImagesV2,
@@ -820,7 +818,7 @@
         });
       }
       function _(_) {
-        const { uploader: _, onDismiss: __webpack_require__ } = _,
+        const { uploader: _, onDismiss: _ } = _,
           [_, _] = (0, _._)(() => [
             _.BAllDone(),
             !_.BAllDone() && !_.BHasError(),
@@ -866,7 +864,7 @@
                   }),
                   (0, _.jsx)("button", {
                     className: _().UploadButtonCancel,
-                    onClick: __webpack_require__,
+                    onClick: _,
                     children: (0, _._)("#Button_Cancel"),
                   }),
                   (0, _.jsx)("button", {
@@ -975,7 +973,7 @@
       const _ = (0, _._)((_) => {
           const {
               clanAccountID: _,
-              gidAnnouncement: __webpack_require__,
+              gidAnnouncement: _,
               partnerEventStore: _,
               trackingLocation: _,
               bViewAllShowInfiniteScroll: _,
@@ -996,7 +994,7 @@
                   const _ = _._.InitFromClanID(_);
                   await _._.LoadClanInfoForClanSteamID(_);
                   let _ = await _.LoadAdjacentPartnerEventsByAnnouncement(
-                    __webpack_require__,
+                    _,
                     _,
                     null,
                     4,
@@ -1008,9 +1006,9 @@
                   );
                   if (!_.token.reason) {
                     _ = _ || [];
-                    let _ = _.filter(
-                      (_) => _.GetAnnouncementGID() != __webpack_require__,
-                    ).map((_) => _.AnnouncementGID);
+                    let _ = _.filter((_) => _.GetAnnouncementGID() != _).map(
+                      (_) => _.AnnouncementGID,
+                    );
                     _._(_);
                     const _ = _.slice(0, 3)
                       .map((_) => _.GetClanEventFromAnnouncementGID(_))
@@ -1018,11 +1016,8 @@
                     if ((_(_), _(!1), _)) {
                       let _ = _._.Get().GetTracker(),
                         _ = !1;
-                      if (_.BHasClanAnnouncementGID(__webpack_require__)) {
-                        let _ =
-                          _.GetClanEventFromAnnouncementGID(
-                            __webpack_require__,
-                          );
+                      if (_.BHasClanAnnouncementGID(_)) {
+                        let _ = _.GetClanEventFromAnnouncementGID(_);
                         _ &&
                           _.BIsPartnerEvent() &&
                           _.BIsVisibleEvent() &&
@@ -1050,7 +1045,7 @@
                   _.current && _.current("PartnerEventRow: unmounting");
                 }
               ),
-              [_, __webpack_require__, _, _],
+              [_, _, _, _],
             ),
             _)
           )
@@ -1125,7 +1120,7 @@
       function _(_) {
         const {
             event: _,
-            imageURLOverride: __webpack_require__,
+            imageURLOverride: _,
             bShowAssociatedApp: _,
             langOverride: _,
             onClick: _,
@@ -1135,11 +1130,11 @@
           _ = (0, _._)(_.appid),
           [_, _, _, _, _, _] = (0, _._)(() => {
             const _ = _ || (0, _._)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.full);
             return [
               _,
@@ -1262,7 +1257,7 @@
         );
       }
       function _(_) {
-        const { appid: _, bHidePrice: __webpack_require__ } = _,
+        const { appid: _, bHidePrice: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -1291,7 +1286,7 @@
                   alt: _.name,
                 }),
               }),
-              Boolean(!__webpack_require__ && !_.is_free) &&
+              Boolean(!_ && !_.is_free) &&
                 (0, _.jsxs)("span", {
                   className: (0, _._)(
                     _().AppCapsulePrice,
@@ -1323,18 +1318,14 @@
         });
       }
       function _(_) {
-        const {
-            event: _,
-            imageURLOverride: __webpack_require__,
-            onClick: _,
-          } = _,
+        const { event: _, imageURLOverride: _, onClick: _ } = _,
           _ = (0, _._)(_.appid),
           _ = (0, _._)(_._.LANGUAGE),
           [_, _, _, _, _] = (0, _._)(() =>
             _
               ? [
-                  void 0 !== __webpack_require__
-                    ? __webpack_require__
+                  void 0 !== _
+                    ? _
                     : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
                   _.GetNameWithFallback(_),
                   _.GetCategoryAsString(),
@@ -1437,14 +1428,14 @@
       function _(_) {
         const {
             clanSteamID: _,
-            rgSupportArtwork: __webpack_require__,
+            rgSupportArtwork: _,
             localizedPrimaryImage: _,
             bAllowPreviousClanImageSelection: _,
             fnSetImageURL: _,
             rgRealmList: _,
           } = _,
           [_] = (0, _._)(() => [_._.Get().GetCurEditLanguage()]),
-          _ = (0, _._)(_, __webpack_require__, _),
+          _ = (0, _._)(_, _, _),
           _ = _.uploaderOverride || _,
           [_, _] = _.useState(!1),
           _ = _.useCallback(
@@ -1571,14 +1562,14 @@
       const _ = _.memo(function (_) {
         const {
           fileNameSearch: _,
-          clanAccountID: __webpack_require__,
+          clanAccountID: _,
           imageInsertCallBack: _,
           fnOnExpandImage: _,
           showImageActions: _ = !0,
           InternalOpenLocalizeImageGroup: _,
         } = _;
         return (0, _.jsx)(_, {
-          clanAccountID: __webpack_require__,
+          clanAccountID: _,
           fileNameSearch: _,
           children: (_, _) =>
             _.map((_) =>
@@ -1598,11 +1589,7 @@
         });
       });
       function _(_) {
-        const {
-            clanAccountID: _,
-            fileNameSearch: __webpack_require__,
-            children: _,
-          } = _,
+        const { clanAccountID: _, fileNameSearch: _, children: _ } = _,
           _ = (0, _._)(_),
           _ = __webpack_require__.trim().toLowerCase() || "",
           _ = _._.GetFilteredClanImagesList(_, _);
@@ -1644,13 +1631,13 @@
       function _(_) {
         const {
           clanAccountID: _,
-          fileNameSearch: __webpack_require__,
+          fileNameSearch: _,
           onImageSelected: _,
           selectedItem: _,
         } = _;
         return (0, _.jsx)(_, {
           clanAccountID: _,
-          fileNameSearch: __webpack_require__,
+          fileNameSearch: _,
           children: (_) =>
             (0, _.jsx)("div", {
               className: _().ClanImageGrid,
@@ -1671,7 +1658,7 @@
       function _(_) {
         const {
             clanImage: _,
-            searchStringHilight: __webpack_require__,
+            searchStringHilight: _,
             imageInsertCallBack: _,
             OnImageClick: _,
             showImageActions: _,
@@ -1706,7 +1693,7 @@
           },
           _ = () => {},
           _ = _.file_name ? _.file_name : "",
-          _ = (0, _._)(__webpack_require__, _, String(_.imageid), _().Hilight),
+          _ = (0, _._)(_, _, String(_.imageid), _().Hilight),
           _ = _._.BIsClanImageVideo(_),
           _ = _ && !_ && !_,
           _ = _ && !_ && !_,
@@ -1824,7 +1811,7 @@
       function _(_) {
         const {
             clanImage: _,
-            fnOnOpenLocalizedImageGroup: __webpack_require__,
+            fnOnOpenLocalizedImageGroup: _,
             bDeleting: _,
           } = _,
           _ = (0, _._)(_.clanAccountID);
@@ -1832,19 +1819,18 @@
           ? null
           : (0, _.jsx)("span", {
               className: (0, _._)(_().Localized, _().ValveOnlyBackground),
-              onClick: () =>
-                null == __webpack_require__ ? void 0 : __webpack_require__(_),
+              onClick: () => (null == _ ? void 0 : __webpack_require__(_)),
               children: "(VO) " + (0, _._)("#ImagePicker_Localized"),
             });
       }
       function _(_) {
-        const { clanImage: _, className: __webpack_require__ } = _;
+        const { clanImage: _, className: _ } = _;
         return _._.BIsClanImageVideo(_)
           ? (0, _.jsx)("video", {
               autoPlay: !0,
               loop: !0,
               muted: !0,
-              className: __webpack_require__,
+              className: _,
               children: (0, _.jsx)("source", {
                 src: _.url,
                 type: "video/" + (4 == _.file_type ? "mp4" : "webm"),
@@ -1853,11 +1839,7 @@
           : null;
       }
       function _(_) {
-        const {
-          clanImage: _,
-          onImageSelected: __webpack_require__,
-          selected: _,
-        } = _;
+        const { clanImage: _, onImageSelected: _, selected: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().ClanImageGridItem, _ && _().Selected),
           onClick: () => __webpack_require__(_, !1),
@@ -1883,25 +1865,20 @@
         });
       }
       function _(_) {
-        const {
-            clanSteamID: _,
-            closeModal: __webpack_require__,
-            OnClanImageSelected: _,
-          } = _,
+        const { clanSteamID: _, closeModal: _, OnClanImageSelected: _ } = _,
           _ = _.useCallback(
             (_, _) => {
-              null == _ || _(_, _),
-                null == __webpack_require__ || __webpack_require__();
+              null == _ || _(_, _), null == _ || __webpack_require__();
             },
-            [_, __webpack_require__],
+            [_, _],
           ),
           [_, _] = _.useState("");
         return (0, _.jsxs)(_._, {
           strTitle: (0, _._)("#ImagePicker_Images"),
           strDescription: (0, _._)("#ImagePicker_DoubleClickToSelect"),
           bAlertDialog: !0,
-          onOK: __webpack_require__,
-          onCancel: __webpack_require__,
+          onOK: _,
+          onCancel: _,
           children: [
             (0, _.jsx)(_._, {
               fnSetImageSearch: _,
@@ -1916,7 +1893,7 @@
         });
       }
       function _(_) {
-        const { clanSteamID: _, OnClanImageSelected: __webpack_require__ } = _;
+        const { clanSteamID: _, OnClanImageSelected: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().ImageUploadBar,
           children: [
@@ -1943,7 +1920,7 @@
                 (0, _._)(
                   (0, _.jsx)(_, {
                     clanSteamID: _,
-                    OnClanImageSelected: __webpack_require__,
+                    OnClanImageSelected: _,
                   }),
                   null !== (_ = (0, _._)(_)) && void 0 !== _ ? _ : window,
                 );
@@ -1967,7 +1944,7 @@
       function _(_) {
         const {
             onDropFiles: _,
-            renderDesciption: __webpack_require__,
+            renderDesciption: _,
             elAdditonalButtons: _,
             elOverrideDragAndDropText: _,
           } = _,
@@ -1983,7 +1960,7 @@
             "DragAndDropContainer",
           ),
           children: [
-            Boolean(__webpack_require__) && __webpack_require__(),
+            Boolean(_) && __webpack_require__(),
             (0, _.jsx)("div", {
               children: _ || (0, _._)("#ImagePicker_DragAndDrop"),
             }),
@@ -2075,7 +2052,7 @@
       function _(_) {
         const {
             imageUploader: _,
-            fnUploadComplete: __webpack_require__,
+            fnUploadComplete: _,
             elOverrideDragAndDropText: _,
             forceResolution: _,
             elAdditonalButtons: _,
@@ -2180,17 +2157,14 @@
               imageUploader: _,
               fnOnUploadImageRequested: async () => {
                 const _ = await _.UploadAllImages(_);
-                null == __webpack_require__ || __webpack_require__(_);
+                null == _ || __webpack_require__(_);
               },
             }),
           ],
         });
       }
       function _(_) {
-        const {
-            imageUploader: _,
-            fnOnUploadImageRequested: __webpack_require__,
-          } = _,
+        const { imageUploader: _, fnOnUploadImageRequested: _ } = _,
           [_] = (0, _._)(() => [_.GetUploadImages()]),
           _ = _.some((_) => "pending" == _.status),
           _ = _.some(
@@ -2210,7 +2184,7 @@
                 style: {
                   margin: "8px",
                 },
-                onClick: __webpack_require__,
+                onClick: _,
                 disabled: !_,
                 children: (0, _._)("#ImageUpload_Upload"),
               }),
@@ -2480,10 +2454,10 @@
             });
       }
       function _(_) {
-        const { asset: _, closeModal: __webpack_require__ } = _;
+        const { asset: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           bAlertDialog: !0,
-          closeModal: __webpack_require__,
+          closeModal: _,
           bAllowFullSize: !0,
           children: (0, _.jsx)("video", {
             controls: !0,
@@ -2547,7 +2521,7 @@
       function _(_) {
         const {
             event: _,
-            spotlightURLOverride: __webpack_require__,
+            spotlightURLOverride: _,
             fnHandleOpenEvent: _,
             fnImageFailureCallback: _,
             fnFilterImageURLsForKnownFailures: _,
@@ -2569,8 +2543,8 @@
           ]);
         let _ = new Array();
         (_ =
-          void 0 !== __webpack_require__
-            ? [__webpack_require__]
+          void 0 !== _
+            ? [_]
             : 2434320 == _.appid || 2 == _._.EUNIVERSE
               ? _
                 ? _.GetImageForSizeAsArrayWithFallback(
@@ -2664,7 +2638,7 @@
       function _(_) {
         var _;
         const {
-            langOverride: __webpack_require__,
+            langOverride: _,
             artworkType: _,
             fnOnLanguagePreviewChange: _,
             clanSteamID: _,
@@ -2676,15 +2650,8 @@
             fnLangHasData: _,
             fnGetImageHashAndExt: _,
           } = _,
-          _ = _(_, __webpack_require__),
-          _ = _
-            ? _._.GenerateURLFromHashAndExtAndLang(
-                _,
-                _,
-                _._.full,
-                __webpack_require__,
-              )
-            : "",
+          _ = _(_, _),
+          _ = _ ? _._.GenerateURLFromHashAndExtAndLang(_, _, _._.full, _) : "",
           [_] = (0, _._)(() => [_(_, _)]);
         return 0 == _
           ? (0, _.jsxs)("div", {
@@ -2700,7 +2667,7 @@
                   (0, _.jsx)(_, {
                     imgURL:
                       _._.IMG_URL + "events/defaults/default_img_header.jpg",
-                    lang: __webpack_require__,
+                    lang: _,
                     eventModel: _,
                     partnerEventStore: _,
                   }),
@@ -2712,7 +2679,7 @@
                   ].includes(_),
                 ) &&
                   (0, _.jsx)(_, {
-                    langOverride: __webpack_require__,
+                    langOverride: _,
                     artworkType: _,
                     eventModel: _,
                   }),
@@ -2728,12 +2695,12 @@
                   (0, _.jsx)(_, {
                     imgURL: _,
                     eventModel: _,
-                    langOverride: __webpack_require__,
+                    langOverride: _,
                   }),
                 "background" === _ &&
                   (0, _.jsx)(_, {
                     imgURL: _,
-                    lang: __webpack_require__,
+                    lang: _,
                     eventModel: _,
                     partnerEventStore: _,
                   }),
@@ -2741,19 +2708,19 @@
                   (0, _.jsx)(_, {
                     imgURL: _,
                     event: _,
-                    lang: __webpack_require__,
+                    lang: _,
                   }),
                 "localized_store_app_spotlight" === _ &&
                   (0, _.jsx)(_, {
                     imgURL: _,
                     event: _,
-                    lang: __webpack_require__,
+                    lang: _,
                   }),
                 "localized_store_app_spotlight_mobile" === _ &&
                   (0, _.jsx)(_, {
                     imgURL: _,
                     event: _,
-                    lang: __webpack_require__,
+                    lang: _,
                   }),
                 ("broadcast_left" === _ || "broadcast_right" === _) &&
                   (0, _.jsx)(_, {
@@ -2773,10 +2740,8 @@
                     className: _.PreviewImg,
                     src:
                       null !==
-                        (_ = _._.GetLocalizedImageGroupForEditAsURL(
-                          _,
-                          __webpack_require__,
-                        )) && void 0 !== _
+                        (_ = _._.GetLocalizedImageGroupForEditAsURL(_, _)) &&
+                      void 0 !== _
                         ? _
                         : void 0,
                   }),
@@ -2801,7 +2766,7 @@
                     imgURL: _,
                   }),
                 (0, _.jsx)(_._, {
-                  langOverride: __webpack_require__,
+                  langOverride: _,
                   clanSteamID: _,
                   fnOnLanguagePreviewChange: _,
                   fnOnRemoveImage: _,
@@ -2819,11 +2784,7 @@
             });
       }
       function _(_) {
-        const {
-            artworkType: _,
-            langOverride: __webpack_require__,
-            eventModel: _,
-          } = _,
+        const { artworkType: _, langOverride: _, eventModel: _ } = _,
           _ = _._[_],
           _ = _.useMemo(
             () =>
@@ -2871,17 +2832,13 @@
             [_.height, _.width, _],
           );
         return (0, _.jsx)(_, {
-          lang: __webpack_require__,
+          lang: _,
           imgURL: _,
           event: _,
         });
       }
       function _(_) {
-        const {
-            imgURL: _,
-            eventModel: __webpack_require__,
-            langOverride: _,
-          } = _,
+        const { imgURL: _, eventModel: _, langOverride: _ } = _,
           _ = (0, _._)();
         return (0, _.jsx)("div", {
           style: {
@@ -2889,31 +2846,27 @@
             width: "304px",
           },
           children: (0, _.jsx)(_._, {
-            event: __webpack_require__,
+            event: _,
             imageURLOverride: _,
             langOverride: null != _ ? _ : _,
           }),
         });
       }
       function _(_) {
-        const {
-            lang: _,
-            eventModel: __webpack_require__,
-            partnerEventStore: _,
-          } = _,
+        const { lang: _, eventModel: _, partnerEventStore: _ } = _,
           [_, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetNameWithFallback(_),
             __webpack_require__.GetDescriptionWithFallback(_),
             __webpack_require__.GetSubTitleWithLanguageFallback(_),
-            __webpack_require__.type,
-            __webpack_require__.AnnouncementGID,
+            _.type,
+            _.AnnouncementGID,
           ]);
         let _ = _
           ? (0, _.jsx)(_._, {
               text: _ || "",
               partnerEventStore: _,
               showErrorInfo: !1,
-              event: __webpack_require__,
+              event: _,
               languageOverride: _._.Get().GetCurEditLanguage(),
             })
           : (0, _._)("#selectimage_display_event_body");
@@ -2981,7 +2934,7 @@
                       children: (0, _.jsx)(
                         _._,
                         {
-                          event: __webpack_require__,
+                          event: _,
                           emoticonStore: _._,
                           partnerEventStore: _,
                           headerClassnames: "editor",
@@ -2999,10 +2952,10 @@
       }
       const _ = (_) => {
           var _;
-          const [__webpack_require__] = (0, _._)(_.event.appid, {
+          const [_] = (0, _._)(_.event.appid, {
             include_assets: !0,
           });
-          if (!__webpack_require__) return null;
+          if (!_) return null;
           const _ = __webpack_require__.GetName(),
             _ =
               null === (_ = __webpack_require__.GetAssets()) || void 0 === _
@@ -3569,21 +3522,20 @@
         });
       }
       function _(_) {
-        const { fnRemoveAllArtwork: _, closeModal: __webpack_require__ } = _;
+        const { fnRemoveAllArtwork: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: (0, _._)("#Sale_RemoveAll"),
           strDescription: (0, _._)("#ImageUpload_DeleteAll_Confirm"),
           onOK: () => {
-            null == _ || _(),
-              null == __webpack_require__ || __webpack_require__();
+            null == _ || _(), null == _ || __webpack_require__();
           },
-          onCancel: __webpack_require__,
+          onCancel: _,
         });
       }
       function _(_) {
         const {
             artworkType: _,
-            realms: __webpack_require__,
+            realms: _,
             clanSteamID: _,
             fnLangHasData: _,
             fnGetImageHashAndExt: _,
@@ -3650,7 +3602,7 @@
                 (0, _.jsx)(_, {
                   list: _,
                   fnOnArtworkLanguageChange: _,
-                  realms: __webpack_require__,
+                  realms: _,
                   fnLangHasData: _,
                 }),
                 (0, _.jsx)("div", {
@@ -3669,7 +3621,7 @@
                       fnOnArtworkLangChange: _ ? null : _,
                       artworkType: _,
                       fnOnRemoveImage: _ ? null : (_) => _(_, null, _),
-                      realms: __webpack_require__,
+                      realms: _,
                       fnLangHasData: _,
                       fnGetImageHashAndExt: _,
                       partnerEventStore: _,
@@ -3688,7 +3640,7 @@
       let _ = class extends _.Component {
         ShowLangChangeDialog(_, _) {
           const {
-            fnOnArtworkLanguageChange: __webpack_require__,
+            fnOnArtworkLanguageChange: _,
             realms: _,
             fnLangHasData: _,
           } = this.props;
@@ -3696,7 +3648,7 @@
             (0, _.jsx)(_._, {
               clanImage: _,
               lang: _,
-              fnOnArtworkLangChange: __webpack_require__,
+              fnOnArtworkLangChange: _,
               fnLangHasData: _,
               realms: _,
             }),
@@ -3783,7 +3735,7 @@
       function _(_) {
         const {
           clanSteamID: _,
-          fnGetImageHash: __webpack_require__,
+          fnGetImageHash: _,
           fnLangHasData: _,
           fnOnRemoveImage: _,
         } = _;
@@ -3813,7 +3765,7 @@
               )),
               _
             );
-          }, [__webpack_require__]),
+          }, [_]),
           [_, _, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           className: _().SelectImageLanguagesCtn,
@@ -3862,36 +3814,33 @@
       function _(_) {
         const {
             clanSteamID: _,
-            langData: __webpack_require__,
+            langData: _,
             langOverride: _,
             fnOnLanguagePreviewChange: _,
             fnOnArtworkLangChange: _,
             fnOnRemoveImage: _,
           } = _,
           [_, _] = (0, _._)(() => {
-            const _ = _._.GetClanImageByImageHash(
-              _,
-              __webpack_require__.imgHash,
-            );
+            const _ = _._.GetClanImageByImageHash(_, _.imgHash);
             let _ = "";
             _ &&
               (_ = _._.GenerateURLFromHashAndExtAndLang(
                 _,
                 _._.GetHashAndExt(_),
                 _._.full,
-                __webpack_require__.lang,
+                _.lang,
               ));
             let _ = _().LanguageSelectorSelected;
             return (
-              _ != __webpack_require__.lang &&
-                (_ = __webpack_require__.imgHash
+              _ != _.lang &&
+                (_ = _.imgHash
                   ? _().LanguageSelector
                   : _().LanguageSelectorNoData),
               [_, _]
             );
           });
         return (0, _.jsxs)("div", {
-          _: __webpack_require__.strLang,
+          _: _.strLang,
           className: _().LanguageContainer,
           onClick: (_) => {
             let _ = (0, _._)(_.currentTarget._);
@@ -3900,7 +3849,7 @@
           children: [
             (0, _.jsx)("div", {
               className: _,
-              children: __webpack_require__.locLang,
+              children: _.locLang,
             }),
             (0, _.jsxs)("span", {
               className: _().LanguageOptions,
@@ -3921,7 +3870,7 @@
                 !!_ &&
                   (0, _.jsx)(_, {
                     fnOnRemoveImage: _,
-                    langData: __webpack_require__,
+                    langData: _,
                   }),
               ],
             }),
@@ -3931,7 +3880,7 @@
       function _(_) {
         const {
             clanSteamID: _,
-            langData: __webpack_require__,
+            langData: _,
             fnOnArtworkLangChange: _,
             fnGetImageHash: _,
             fnLangHasData: _,
@@ -3939,7 +3888,7 @@
           } = _,
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(() => {
-            const _ = _(__webpack_require__.lang);
+            const _ = _(_.lang);
             (0, _._)(
               !_ || !_.includes("."),
               "ChangeLanguageButton: Unexpected File Extension: " + _,
@@ -3952,7 +3901,7 @@
               (0, _.jsx)(_._, {
                 toolTipContent: (0, _._)("#selectimage_reassign_image_ttip"),
                 children: (0, _.jsx)("img", {
-                  "data-lang": __webpack_require__.lang,
+                  "data-lang": _.lang,
                   src: _,
                   onClick: () => _(),
                 }),
@@ -3962,7 +3911,7 @@
                   active: _,
                   children: (0, _.jsx)(_._, {
                     clanImage: _,
-                    lang: __webpack_require__.lang,
+                    lang: _.lang,
                     fnOnArtworkLangChange: _,
                     fnLangHasData: _,
                     realms: _,
@@ -3975,14 +3924,14 @@
         console.error("image does not exists on server");
       }
       function _(_) {
-        const { fnOnRemoveImage: _, langData: __webpack_require__ } = _,
+        const { fnOnRemoveImage: _, langData: _ } = _,
           [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
               toolTipContent: (0, _._)("#selectimage_delete_image_ttip"),
               children: (0, _.jsx)("img", {
-                "data-lang": __webpack_require__.lang,
+                "data-lang": _.lang,
                 src: _._,
                 onClick: _,
               }),
@@ -3994,10 +3943,10 @@
                   strTitle: (0, _._)("#selectimage_remove_image"),
                   strDescription: (0, _._)(
                     "#selectimage_remove_details",
-                    (0, _._)("#Language_" + (0, _._)(__webpack_require__.lang)),
+                    (0, _._)("#Language_" + (0, _._)(_.lang)),
                   ),
                   onOK: () => {
-                    _(__webpack_require__.lang);
+                    _(_.lang);
                   },
                   closeModal: _,
                 }),
@@ -4028,7 +3977,7 @@
       function _(_) {
         const {
             clanImage: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             lang: _,
             fnOnArtworkLangChange: _,
             realms: _,
@@ -4047,8 +3996,8 @@
           strTitle: (0, _._)("#selectimage_change_artwork_lang_title"),
           strDescription: (0, _._)("#selectimage_change_artworl_lang_desc"),
           onOK: () => (null == _ ? void 0 : _(_, _, _)),
-          onCancel: __webpack_require__,
-          closeModal: __webpack_require__,
+          onCancel: _,
+          closeModal: _,
           children: (0, _.jsxs)("div", {
             className: (0, _._)(_().FlexColumnContainer, _().ReassignCtn),
             children: [
@@ -4156,20 +4105,20 @@
       function _(_) {
         const {
             accountID: _,
-            bHideWhenNotAvailable: __webpack_require__,
+            bHideWhenNotAvailable: _,
             bHideName: _,
             bLink: _ = !0,
           } = _,
           [_] = (function (_) {
-            const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+            const { data: _, isLoading: _ } = (0, _._)({
               queryKey: [_, _],
               queryFn: () => _.load(_),
             });
-            return [_, __webpack_require__];
+            return [_, _];
           })(_),
           _ = (function (_) {
             const _ = (0, _._)(),
-              { data: __webpack_require__, isLoading: _ } = (0, _._)({
+              { data: _, isLoading: _ } = (0, _._)({
                 queryKey: [_],
                 queryFn: async () => {
                   const _ = new Map();
@@ -4185,7 +4134,7 @@
                   return _;
                 },
               });
-            return __webpack_require__ ? __webpack_require__.get(_) : null;
+            return _ ? __webpack_require__.get(_) : null;
           })(_),
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
           _ = `${_._.COMMUNITY_BASE_URL}profiles/${_.ConvertTo64BitString()}`,
@@ -4194,7 +4143,7 @@
           children: Boolean(!_)
             ? (0, _.jsx)(_.Fragment, {
                 children:
-                  Boolean(!__webpack_require__) &&
+                  Boolean(!_) &&
                   (0, _.jsx)("span", {
                     children: _,
                   }),
@@ -4232,10 +4181,10 @@
         return !!_ && (_ ? _.valve_admin : _.valve_admin || _.support_user);
       }
       function _(_) {
-        const { clanSteamID: _, _: __webpack_require__ } = _;
+        const { clanSteamID: _, _: _ } = _;
         return _(_, _.requireAdmin)
           ? (0, _.jsx)("div", {
-              _: __webpack_require__,
+              _: _,
               className: (0, _._)(
                 _.className,
                 _.requireAdmin
@@ -4289,7 +4238,7 @@
         ];
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
+        const [_, _] = _.useState(!1);
         return [
           {
             onDragEnter: _.useCallback((_) => {

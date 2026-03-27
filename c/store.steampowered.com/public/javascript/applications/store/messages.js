@@ -3687,14 +3687,14 @@
         return _.useContext(_).setLegalText || function (_) {};
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           _ = (0, _._)("BrowserView.RegisterForMessageFromParent"),
           _ = (0, _._)(),
           _ = _.useMemo(
             () => ({
-              setLegalText: _ && !_ ? __webpack_require__ : void 0,
+              setLegalText: _ && !_ ? _ : void 0,
             }),
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
         return (0, _.jsxs)(_.Provider, {
           value: _,
@@ -3741,7 +3741,7 @@
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { title: _, bodyClassName: __webpack_require__, children: _ } = _;
+        const { title: _, bodyClassName: _, children: _ } = _;
         return (
           _.useEffect(() => {
             const _ = document.title;
@@ -3752,7 +3752,7 @@
               }
             );
           }, [_]),
-          _(__webpack_require__),
+          _(_),
           _
         );
       }
@@ -3775,7 +3775,7 @@
         _: () => _,
       });
       var _ = __webpack_require__("chunkid");
-      function _(_, _ = "#Played_", __webpack_require__ = !1) {
+      function _(_, _ = "#Played_", _ = !1) {
         if (_ >= 120) {
           let _ = _ / 60;
           _ = Math.round(10 * _) / 10;
@@ -3874,7 +3874,7 @@
           ? _.replace("https://store.steampowered.com/", _._.STORE_BASE_URL)
           : _;
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         let _,
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -3893,7 +3893,7 @@
                     : 6 == _ && (_ = "partner_event");
         let _ = (0, _._)(_(_), _);
         return (
-          __webpack_require__ && (_ = _),
+          _ && (_ = _),
           _.startsWith("steam://") || (_ = `steam://openurl/${_}`),
           (0, _.useCallback)(
             (_) => {
@@ -3934,9 +3934,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { path: _, message: __webpack_require__, eLanguage: _, ..._ } = _,
+        const { path: _, message: _, eLanguage: _, ..._ } = _,
           _ = __webpack_require__.GetTemplateVars()?.last_asset_mtime,
-          _ = _(__webpack_require__._, _, _, {
+          _ = _(_._, _, _, {
             type: "file",
             path: _,
           }),
@@ -3948,13 +3948,7 @@
         });
       }
       function _(_) {
-        const {
-            message: _,
-            mp4Path: __webpack_require__,
-            webmPath: _,
-            language: _,
-            ..._
-          } = _,
+        const { message: _, mp4Path: _, webmPath: _, language: _, ..._ } = _,
           _ = _.GetTemplateVars()?.last_asset_mtime,
           _ = _(_._, _, _, {
             type: "file",
@@ -3962,7 +3956,7 @@
           }),
           _ = _(_._, _, _, {
             type: "file",
-            path: __webpack_require__,
+            path: _,
           }),
           _ = (0, _.useRef)(null);
         (0, _._)(_);
@@ -4024,15 +4018,10 @@
         });
       }
       function _(_) {
-        const {
-            isBackgroundBlur: _,
-            bOverrideUseBackgroundImage: __webpack_require__,
-          } = _,
+        const { isBackgroundBlur: _, bOverrideUseBackgroundImage: _ } = _,
           _ = _(),
           _ = (0, _._)(_.GetTemplateVars().linkurl, 1),
-          [_, _] = __webpack_require__
-            ? _.GetTemplateBackgroundImage()
-            : _.GetTemplateImage();
+          [_, _] = _ ? _.GetTemplateBackgroundImage() : _.GetTemplateImage();
         return (0, _.jsx)(_._, {
           focusable: !0,
           noFocusRing: !0,
@@ -4092,11 +4081,7 @@
           : null;
       }
       function _(_) {
-        const {
-            storeItem: _,
-            bPreview: __webpack_require__,
-            bPreferAssetWithoutOverride: _,
-          } = _,
+        const { storeItem: _, bPreview: _, bPreferAssetWithoutOverride: _ } = _,
           _ =
             ((0, _.useMemo)(
               () => ({
@@ -4112,17 +4097,14 @@
           _ = (0, _._)(_.GetAppID()),
           _ = (0, _._)(_.GetAppID()),
           _ = (0, _.useMemo)(() => {
-            if (
-              __webpack_require__ &&
-              (!_?.playtime_forever || !_?.rtime_last_played)
-            ) {
+            if (_ && (!_?.playtime_forever || !_?.rtime_last_played)) {
               return {
                 playtime_forever: 300,
                 rtime_last_played: Math.floor(Date.now() / 1e3) - 432e3,
               };
             }
             return _;
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         let _ = "steam://openurl/" + _.GetStorePageURL();
         _ &&
           (_ = _
@@ -4226,7 +4208,7 @@
         });
       }
       function _(_) {
-        const { bHidePrice: _, fnOnClickButton: __webpack_require__ } = _,
+        const { bHidePrice: _, fnOnClickButton: _ } = _,
           _ = _(),
           [_, _] = (0, _._)(() => [
             _.GetTemplateVars().button_text_custom ||
@@ -4244,7 +4226,7 @@
                   focusable: !0,
                   noFocusRing: !0,
                   className: _.Btn,
-                  onActivate: __webpack_require__,
+                  onActivate: _,
                   children: _,
                 }),
                 Boolean(!_) &&
@@ -4287,7 +4269,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bPreview: _, bUseAnimated: __webpack_require__ } = _,
+        const { bPreview: _, bUseAnimated: _ } = _,
           { message: _, eventModel: _ } = (function (_) {
             const _ = _();
             let _ = _.GetTemplateVars().update_event_clan_accountid,
@@ -4323,7 +4305,7 @@
                     message: _,
                     eventModel: _,
                     fnOnClickButton: _,
-                    bUseAnimated: __webpack_require__,
+                    bUseAnimated: _,
                   }),
                 ],
               }),
@@ -4338,7 +4320,7 @@
       function _(_) {
         const {
             message: _,
-            fnOnClickButton: __webpack_require__,
+            fnOnClickButton: _,
             eventModel: _,
             bUseAnimated: _,
           } = _,
@@ -4359,7 +4341,7 @@
               focusable: !0,
               noFocusRing: !0,
               className: (0, _._)(_().EventImage),
-              onActivate: __webpack_require__,
+              onActivate: _,
               children: [
                 _ &&
                   !_ &&
@@ -4370,7 +4352,7 @@
                   }),
                 _ &&
                   (0, _.jsx)(_, {
-                    fnOnClick: __webpack_require__,
+                    fnOnClick: _,
                   }),
               ],
             }),
@@ -4399,7 +4381,7 @@
       function _(_) {
         const {
           isLoading: _,
-          isError: __webpack_require__,
+          isError: _,
           data: _,
         } = (0, _._)({
           queryKey: ["useDLCHubCount", _],
@@ -4421,7 +4403,7 @@
             })(_),
           enabled: Boolean(_ && _ != _._),
         });
-        return _ || __webpack_require__ ? null : _;
+        return _ || _ ? null : _;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -4487,7 +4469,7 @@
         );
       }
       function _(_) {
-        const { messageType: _, itemCount: __webpack_require__ } = _,
+        const { messageType: _, itemCount: _ } = _,
           _ = _._.GetTypeAsLocalizedString(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -4496,7 +4478,7 @@
                 className: _.Type,
                 children: _,
               }),
-            1 == __webpack_require__
+            1 == _
               ? (0, _.jsx)("div", {
                   className: _.DealDesc,
                   children: (0, _._)("#MarketingMessages_DLC_desc_singular"),
@@ -4509,13 +4491,13 @@
         });
       }
       function _(_) {
-        const { rgDLCSaleCapsules: _, messageType: __webpack_require__ } = _;
+        const { rgDLCSaleCapsules: _, messageType: _ } = _;
         return _.length >= 4
           ? (0, _.jsxs)("div", {
               className: _.DlcCtn,
               children: [
                 (0, _.jsx)(_, {
-                  messageType: __webpack_require__,
+                  messageType: _,
                 }),
                 (0, _.jsx)(_, {
                   first: _[0],
@@ -4532,7 +4514,7 @@
                 className: _.DlcCtn,
                 children: [
                   (0, _.jsx)(_, {
-                    messageType: __webpack_require__,
+                    messageType: _,
                   }),
                   (0, _.jsx)("div", {
                     className: _.OneItemRow,
@@ -4552,7 +4534,7 @@
                   className: _.DlcCtn,
                   children: [
                     (0, _.jsx)(_, {
-                      messageType: __webpack_require__,
+                      messageType: _,
                     }),
                     (0, _.jsx)("div", {
                       className: _.OneItemRow,
@@ -4575,7 +4557,7 @@
                     className: _.DlcCtn,
                     children: [
                       (0, _.jsx)(_, {
-                        messageType: __webpack_require__,
+                        messageType: _,
                         itemCount: _.length,
                       }),
                       (0, _.jsx)("div", {
@@ -4590,7 +4572,7 @@
                 : null;
       }
       function _(_) {
-        const { first: _, second: __webpack_require__ } = _;
+        const { first: _, second: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.TwoCapsuleRow,
           children: [
@@ -4604,7 +4586,7 @@
             (0, _.jsx)("div", {
               className: _.DlcCtn,
               children: (0, _.jsx)(_, {
-                capsule: __webpack_require__,
+                capsule: _,
                 imageType: "header",
               }),
             }),
@@ -4612,23 +4594,21 @@
         });
       }
       function _(_, _) {
-        const [__webpack_require__] = (0, _._)(_, (0, _._)(_), {
+        const [_] = (0, _._)(_, (0, _._)(_), {
           include_platforms: !0,
         });
         return (0, _._)(
-          __webpack_require__
-            ? __webpack_require__.GetStorePageURL()
-            : _._.STORE_BASE_URL,
+          _ ? __webpack_require__.GetStorePageURL() : _._.STORE_BASE_URL,
           3,
         );
       }
       function _(_) {
-        const { capsule: _, imageType: __webpack_require__ } = _;
+        const { capsule: _, imageType: _ } = _;
         return (
           (_.overrideNavigation = _(_._, _.type)),
           (0, _.jsx)(_._, {
             capsule: _,
-            imageType: __webpack_require__,
+            imageType: _,
             bShowParentApp: !1,
             bHideStoreHover: !0,
             bPreferAssetWithoutOverride: !1,
@@ -4636,11 +4616,11 @@
         );
       }
       function _(_) {
-        const { _: _, type: __webpack_require__ } = _,
-          _ = _(_, __webpack_require__);
+        const { _: _, type: _ } = _,
+          _ = _(_, _);
         return (0, _.jsx)(_._, {
           _: _,
-          type: __webpack_require__,
+          type: _,
           fnOnClickOverride: _,
           bIsMarketingMessage: !0,
           bPreferAssetWithoutOverride: !1,
@@ -4651,9 +4631,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _(),
-          [__webpack_require__, _] = (0, _.useState)(() =>
-            _.GetFeaturedVideoAutoPlay(),
-          ),
+          [_, _] = (0, _.useState)(() => _.GetFeaturedVideoAutoPlay()),
           _ = (0, _.useRef)(null);
         (0, _._)(_);
         const _ = (0, _._)(_.GetTemplateVars().linkurl, 1),
@@ -4664,7 +4642,7 @@
           onActivate: (_) =>
             !_ && _.GetFeaturedVideoAutoPlay() ? _(_) : _(!0),
           className: _.PosterCtn,
-          children: __webpack_require__
+          children: _
             ? (0, _.jsxs)("video", {
                 controls: !_.GetFeaturedVideoLoop(),
                 ref: _,
@@ -4800,7 +4778,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bPreview: _, bLowBandwidthMode: __webpack_require__ } = _,
+        const { bPreview: _, bLowBandwidthMode: _ } = _,
           _ = _(),
           _ = (0, _._)(_.GetTemplateVars().linkurl, 5),
           _ = _.associated_item,
@@ -4834,7 +4812,7 @@
                       children: (0, _.jsx)(_._, {
                         _: _,
                         fnOnClickButton: _,
-                        bLowBandwidthMode: __webpack_require__,
+                        bLowBandwidthMode: _,
                         bUseAssetWithoutOverride:
                           _.GetAutoRenderWithoutAssetOverrides(),
                       }),
@@ -4851,7 +4829,7 @@
         });
       }
       function _(_) {
-        const { message: _, storeItem: __webpack_require__ } = _,
+        const { message: _, storeItem: _ } = _,
           [_] = (0, _._)("timezone"),
           [_] = (0, _._)("locale");
         if (14 == _.GetType()) {
@@ -4893,7 +4871,7 @@
         return _.useContext(_);
       }
       function _(_) {
-        const { message: _, preview: __webpack_require__ } = _,
+        const { message: _, preview: _ } = _,
           _ = !1 !== _.active,
           _ = (0, _._)();
         return (
@@ -4907,7 +4885,7 @@
               children: (0, _.jsx)(_, {
                 message: _,
                 active: _,
-                preview: __webpack_require__,
+                preview: _,
               }),
             }),
           })
@@ -4919,7 +4897,7 @@
           .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
-        const { message: _, active: __webpack_require__, preview: _ } = _,
+        const { message: _, active: _, preview: _ } = _,
           _ = (0, _._)(_._.LANGUAGE),
           { bLowBandwidthMode: _ } = (0, _._)();
         if (
@@ -4930,7 +4908,7 @@
           return isNaN(_)
             ? null
             : (0, _.jsx)(_, {
-                active: __webpack_require__,
+                active: _,
                 year: _,
               });
         }
@@ -5040,10 +5018,10 @@
       function _(_) {
         const {
           MarketingMessagesStore: _,
-          rgMessages: __webpack_require__,
+          rgMessages: _,
           iActiveMessage: _,
         } = _;
-        return __webpack_require__
+        return _
           ? (0, _.jsx)("div", {
               className: _.MessageListContainer,
               children: __webpack_require__?.map((_, _) =>
@@ -5069,34 +5047,24 @@
             });
       }
       function _(_) {
-        const {
-            cMessages: _,
-            iMessage: __webpack_require__,
-            setMessage: _,
-          } = _,
-          _ = _.useCallback(
-            () => _(__webpack_require__ - 1),
-            [_, __webpack_require__],
-          ),
-          _ = _.useCallback(
-            () => _(__webpack_require__ + 1),
-            [_, __webpack_require__],
-          ),
+        const { cMessages: _, iMessage: _, setMessage: _ } = _,
+          _ = _.useCallback(() => _(_ - 1), [_, _]),
+          _ = _.useCallback(() => _(_ + 1), [_, _]),
           _ = [];
         for (let _ = 0; _ < _; _++)
           _.push(
             (0, _.jsx)(
               _,
               {
-                active: _ == __webpack_require__,
+                active: _ == _,
                 iMessage: _,
                 setMessage: _,
               },
               _,
             ),
           );
-        const _ = __webpack_require__ > 0 ? _ : void 0,
-          _ = __webpack_require__ < _ - 1 ? _ : void 0;
+        const _ = _ > 0 ? _ : void 0,
+          _ = _ < _ - 1 ? _ : void 0;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -5141,24 +5109,17 @@
         });
       }
       function _(_) {
-        const { active: _, iMessage: __webpack_require__, setMessage: _ } = _,
-          _ = _.useCallback(
-            () => _(__webpack_require__),
-            [_, __webpack_require__],
-          );
+        const { active: _, iMessage: _, setMessage: _ } = _,
+          _ = _.useCallback(() => _(_), [_, _]);
         return (0, _.jsx)("div", {
           className: (0, _._)(_.Pip, _ && _.Active),
           onClick: _,
         });
       }
       function _(_) {
-        const { MarketingMessagesStore: _, preview: __webpack_require__ } = _,
+        const { MarketingMessagesStore: _, preview: _ } = _,
           _ = (0, _._)(),
-          { message: _, isError: _ } = (0, _._)(
-            _,
-            _.params.messageid,
-            __webpack_require__,
-          );
+          { message: _, isError: _ } = (0, _._)(_, _.params.messageid, _);
         return (
           (0, _._)(_.MarketingMessagePage),
           _
@@ -5169,7 +5130,7 @@
               ? _
                 ? (0, _.jsx)(_._, {
                     message: _,
-                    preview: __webpack_require__,
+                    preview: _,
                   })
                 : null
               : (0, _.jsx)(_, {
@@ -5196,7 +5157,7 @@
       function _(_) {
         const {
             message: _,
-            MarketingMessagesStore: __webpack_require__,
+            MarketingMessagesStore: _,
             active: _,
             next: _,
             displayIndex: _,
@@ -5209,7 +5170,7 @@
               _ &&
                 _.MarkMessageSeen(_._, _ + 1, _.GetTemplateTypeForReporting());
             }, [_, _, _]);
-          })(__webpack_require__, _ ? _ : null, _),
+          })(_, _ ? _ : null, _),
           (_ || _) && (_.current = !0),
           !_.current)
         )
@@ -5308,7 +5269,7 @@
         prioritized_list: !1,
       });
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           _ = (0, _._)(),
           _ = _.useMemo(() => {
             new URLSearchParams(_.search);

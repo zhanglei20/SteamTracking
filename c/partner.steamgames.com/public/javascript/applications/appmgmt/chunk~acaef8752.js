@@ -1012,12 +1012,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            color: _,
-            onChange: __webpack_require__,
-            strTitle: _,
-            disableAlpha: _,
-          } = _,
+        const { color: _, onChange: _, strTitle: _, disableAlpha: _ } = _,
           [_, _] = (0, _.useState)(() => _ || "rgba(255, 255, 255, 1)"),
           _ = (0, _.useCallback)(async () => {
             if ("EyeDropper" in window)
@@ -1033,7 +1028,7 @@
                 console.warn((0, _._)("#Sale_EyeDropperFailed"), _);
               }
             else alert((0, _._)("#Sale_EyeDropperError"));
-          }, [__webpack_require__]);
+          }, [_]);
         return (0, _.jsxs)("div", {
           children: [
             Boolean(_) &&
@@ -1090,7 +1085,7 @@
       function _(_) {
         const {
             onDropFiles: _,
-            renderDesciption: __webpack_require__,
+            renderDesciption: _,
             elAdditonalButtons: _,
             elOverrideDragAndDropText: _,
           } = _,
@@ -1106,7 +1101,7 @@
             "DragAndDropContainer",
           ),
           children: [
-            Boolean(__webpack_require__) && __webpack_require__(),
+            Boolean(_) && __webpack_require__(),
             (0, _.jsx)("div", {
               children: _ || (0, _._)("#ImagePicker_DragAndDrop"),
             }),
@@ -1150,7 +1145,7 @@
       function _(_) {
         const {
             imageUploader: _,
-            fnUploadComplete: __webpack_require__,
+            fnUploadComplete: _,
             elOverrideDragAndDropText: _,
             forceResolution: _,
             elAdditonalButtons: _,
@@ -1261,10 +1256,7 @@
         });
       }
       function _(_) {
-        const {
-            imageUploader: _,
-            fnOnUploadImageRequested: __webpack_require__,
-          } = _,
+        const { imageUploader: _, fnOnUploadImageRequested: _ } = _,
           [_] = (0, _._)(() => [_.GetUploadImages()]),
           _ = _.some((_) => "pending" == _.status),
           _ = _.some(
@@ -1284,7 +1276,7 @@
                 style: {
                   margin: "8px",
                 },
-                onClick: __webpack_require__,
+                onClick: _,
                 disabled: !_,
                 children: (0, _._)("#ImageUpload_Upload"),
               }),
@@ -1301,11 +1293,7 @@
         });
       }
       const _ = (0, _._)(function (_) {
-        const {
-            asset: _,
-            fnOnRemove: __webpack_require__,
-            languageRealms: _,
-          } = _,
+        const { asset: _, fnOnRemove: _, languageRealms: _ } = _,
           _ = _.ImageOptions?.map((_) => {
             let _,
               _,
@@ -1492,10 +1480,10 @@
             });
       }
       function _(_) {
-        const { asset: _, closeModal: __webpack_require__ } = _;
+        const { asset: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           bAlertDialog: !0,
-          closeModal: __webpack_require__,
+          closeModal: _,
           bAllowFullSize: !0,
           children: (0, _.jsx)("video", {
             controls: !0,
@@ -1556,7 +1544,7 @@
       function _(_) {
         const {
           nLatestTime: _,
-          nEarliestTime: __webpack_require__,
+          nEarliestTime: _,
           fnGetTimeToUpdate: _,
           onError: _,
           strAlsoShowTimeZone: _,
@@ -1604,13 +1592,8 @@
           })(_, _, _, _, _),
           _ = !_ && _;
         let _, _;
-        if (
-          _ &&
-          __webpack_require__ &&
-          _ == __webpack_require__ &&
-          __webpack_require__ > _._.GetTimeNowWithOverride()
-        ) {
-          const _ = _().unix(__webpack_require__);
+        if (_ && _ && _ == _ && _ > _._.GetTimeNowWithOverride()) {
+          const _ = _().unix(_);
           (_ = {
             hours: {
               max: _.hour(),
@@ -1635,7 +1618,7 @@
           }),
             (_ = _);
         }
-        _ || !__webpack_require__ || _ || (_ = _().unix(__webpack_require__));
+        _ || !_ || _ || (_ = _().unix(_));
         const _ = _()._.guess(),
           _ = _().unix(_)._(_),
           _ = !!_ && _ != _ && _().unix(_)._(_),
@@ -1740,7 +1723,7 @@
                             ((0 != _.weekday() && 6 != _.weekday()) ||
                               (_ = !1));
                           return _;
-                        })(__webpack_require__, _, _, _),
+                        })(_, _, _, _),
                       initialValue: _,
                       inputProps: {
                         placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
@@ -2589,7 +2572,7 @@
         ];
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1);
+        const [_, _] = _.useState(!1);
         return [
           {
             onDragEnter: _.useCallback((_) => {

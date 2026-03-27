@@ -218,7 +218,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(""),
+          const [_, _] = (0, _.useState)(""),
             _ = (0, _._)();
           if (_.isLoading)
             return (0, _.jsx)("div", {
@@ -273,7 +273,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const [_, _] = _.useState(!1),
             _ = (0, _._)(),
             _ = (0, _._)(_.nHeroID),
             _ = (0, _._)(_.nHeroID),
@@ -394,7 +394,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(""),
+          const [_, _] = (0, _.useState)(""),
             _ = (0, _._)();
           if (_.isLoading)
             return (0, _.jsx)("div", {
@@ -503,7 +503,7 @@
             "ITEM_OPTIONS_NOT_EARLY_LATE");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const [_, _] = _.useState(!1),
             _ = (0, _._)(_.nItemID),
             _ = (0, _._)().ownerWindow,
             _ = _.data,
@@ -620,7 +620,7 @@
             ],
           }),
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.strMMR);
+          const [_, _] = _.useState(_.strMMR);
           return (
             _.useEffect(() => {
               if (_.strMMR == _) return () => {};
@@ -2038,7 +2038,7 @@
             secondaryKey: "comprankuncertainty",
             tertiaryKey: "compranktier",
             displayName: "Ranked",
-            formatFunction: (_, _, __webpack_require__ = 0) =>
+            formatFunction: (_, _, _ = 0) =>
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)("span", {
@@ -2051,7 +2051,7 @@
                       `+/- ${_}`,
                       (0, _.jsx)("img", {
                         className: _().RankedBadgeIcon,
-                        src: `${_._.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(__webpack_require__ / 10)}.png`,
+                        src: `${_._.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(_ / 10)}.png`,
                       }),
                     ],
                   }),
@@ -2127,7 +2127,7 @@
             secondaryKey: "commscore",
             tertiaryKey: "trustscore",
             displayName: "Behav, Comms, Trust",
-            formatFunction: (_ = 8e3, _ = -1, __webpack_require__ = -1) => {
+            formatFunction: (_ = 8e3, _ = -1, _ = -1) => {
               let _ = _;
               _ < 0
                 ? (_ = _)
@@ -2163,7 +2163,7 @@
                       style: {
                         color: _,
                       },
-                      children: `${__webpack_require__}`,
+                      children: `${_}`,
                     }),
                   ],
                 })
@@ -2825,15 +2825,15 @@
                   (0, _.jsx)("td", {
                     children: _
                       ? "Permanent"
-                      : ((__webpack_require__ = _.duration),
-                        __webpack_require__
-                          ? __webpack_require__ < 60
-                            ? `${_().duration(__webpack_require__, "seconds").asSeconds()} seconds`
-                            : __webpack_require__ < 3600
-                              ? `${_().duration(__webpack_require__, "seconds").asMinutes()} min`
-                              : __webpack_require__ < 864e3
-                                ? `${_().duration(__webpack_require__, "seconds").asHours()} hours`
-                                : `${_().duration(__webpack_require__, "seconds").asDays()} days`
+                      : ((_ = _.duration),
+                        _
+                          ? _ < 60
+                            ? `${_().duration(_, "seconds").asSeconds()} seconds`
+                            : _ < 3600
+                              ? `${_().duration(_, "seconds").asMinutes()} min`
+                              : _ < 864e3
+                                ? `${_().duration(_, "seconds").asHours()} hours`
+                                : `${_().duration(_, "seconds").asDays()} days`
                           : ""),
                   }),
                   (0, _.jsx)("td", {
@@ -5273,12 +5273,8 @@
           {
             key: "action",
             displayName: "Audit Action",
-            formatFunction: (_, _ = "", __webpack_require__ = "") =>
-              _.find((_) => _.enum === _).formatFunction.call(
-                null,
-                _,
-                __webpack_require__,
-              ),
+            formatFunction: (_, _ = "", _ = "") =>
+              _.find((_) => _.enum === _).formatFunction.call(null, _, _),
           },
         ],
         _ = [
@@ -5367,10 +5363,10 @@
               return (0, _.jsxs)(_.Fragment, {
                 children: [
                   `${_} ( `,
-                  ((__webpack_require__ = _),
+                  ((_ = _),
                   (0, _.jsx)("a", {
-                    href: `${_._.BASE_URL}${_._.teamdetails(__webpack_require__).substr(1)}`,
-                    children: __webpack_require__,
+                    href: `${_._.BASE_URL}${_._.teamdetails(_).substr(1)}`,
+                    children: _,
                   })),
                   " )",
                 ],
@@ -5414,7 +5410,7 @@
         ],
         _ = (_) => {
           const _ = (0, _._)()._,
-            [__webpack_require__, _] = (0, _.useState)([]),
+            [_, _] = (0, _.useState)([]),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)({}),
@@ -5696,7 +5692,7 @@
                 children: "Loading...",
               })),
             _ &&
-              (0 == __webpack_require__.length || _) &&
+              (0 == _.length || _) &&
               (_ = (0, _.jsx)("div", {
                 children: "Error loading registered teams...",
               })),
@@ -5802,9 +5798,7 @@
                         }),
                         (0, _.jsx)(
                           ({ strTeamId: _ }) => {
-                            const [_, __webpack_require__] = (0, _.useState)(
-                                "",
-                              ),
+                            const [_, _] = (0, _.useState)(""),
                               [_, _] = (0, _.useState)(""),
                               [_, _] = (0, _.useState)(""),
                               [_, _] = (0, _.useState)(!1);
@@ -5890,9 +5884,7 @@
                         }),
                         (0, _.jsx)(
                           ({ strTeamId: _ }) => {
-                            const [_, __webpack_require__] = (0, _.useState)(
-                                "",
-                              ),
+                            const [_, _] = (0, _.useState)(""),
                               [_, _] = (0, _.useState)(!1);
                             return (0, _.jsxs)("form", {
                               onSubmit: async (_) => {
@@ -6059,9 +6051,7 @@
                         }),
                         (0, _.jsx)(
                           ({ strTeamId: _ }) => {
-                            const [_, __webpack_require__] = (0, _.useState)(
-                                "",
-                              ),
+                            const [_, _] = (0, _.useState)(""),
                               [_, _] = (0, _.useState)(""),
                               [_, _] = (0, _.useState)(!1);
                             return (0, _.jsxs)("form", {

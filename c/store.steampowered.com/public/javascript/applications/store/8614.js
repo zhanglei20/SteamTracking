@@ -214,9 +214,9 @@
         __webpack_require__("chunkid");
       function _(_) {
         const { labelledBy: _ } = _ || {},
-          [__webpack_require__, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0);
         return {
-          headerId: _ || __webpack_require__,
+          headerId: _ || _,
           context: _.useMemo(
             () => ({
               setHeaderId: _,
@@ -228,7 +228,7 @@
       function _(_) {
         const {
             active: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             className: _,
             modalClassName: _,
             children: _,
@@ -242,7 +242,7 @@
           children: (0, _.jsx)(_._, {
             active: _,
             children: (0, _.jsx)(_._, {
-              onEscKeypress: __webpack_require__,
+              onEscKeypress: _,
               className: _,
               children: (0, _.jsx)(_._, {
                 role: "dialog",
@@ -256,12 +256,12 @@
         });
       }
       function _(_) {
-        const { className: _, children: __webpack_require__ } = _;
+        const { className: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)("div", {
             className: _,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
@@ -288,17 +288,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(0, _._)();
         return (
@@ -340,17 +336,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {

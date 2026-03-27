@@ -283,7 +283,7 @@
       function _(_) {
         const {
             children: _,
-            beforeContent: __webpack_require__,
+            beforeContent: _,
             afterContent: _,
             hasValue: _,
             ..._
@@ -291,7 +291,7 @@
           _ = (function (_) {
             const {
                 variant: _ = "default",
-                size: __webpack_require__ = "2",
+                size: _ = "2",
                 radius: _,
                 focusable: _ = !0,
                 hoverable: _ = !0,
@@ -312,7 +312,7 @@
                   _ && !_ && _.Clickable,
                   _ && _.Disabled,
                   _[`Variant-${_}`],
-                  _[`Size-${__webpack_require__}`],
+                  _[`Size-${_}`],
                   _,
                 ),
               },
@@ -324,10 +324,10 @@
           align: "center",
           "data-has-value": !!_,
           children: [
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)(_._, {
                 paddingRight: "2",
-                children: __webpack_require__,
+                children: _,
               }),
             (0, _.jsx)(_._, {
               flexGrow: "1",
@@ -359,11 +359,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const {
-          options: _,
-          getOptionLabel: __webpack_require__ = (_) => _,
-          ..._
-        } = _;
+        const { options: _, getOptionLabel: _ = (_) => _, ..._ } = _;
         return (0, _.jsx)(_.Root, {
           ..._,
           children: _.map((_) =>
@@ -393,7 +389,7 @@
             : 0;
       }
       (_.Item = function (_) {
-        const { value: _, children: __webpack_require__ } = _,
+        const { value: _, children: _ } = _,
           _ = (0, _.useContext)(_),
           [_, _] = (0, _.useState)(),
           { register: _, unregister: _ } = _ || {};
@@ -408,7 +404,7 @@
         const { value: _, onValueChange: _, radius: _, size: _ } = _,
           _ = _ === _,
           _ = _ ? void 0 : () => _(_),
-          _ = void 0 === __webpack_require__ ? _ : __webpack_require__;
+          _ = void 0 === _ ? _ : _;
         return (0, _.jsx)(_._, {
           justify: "center",
           align: "center",
@@ -423,7 +419,7 @@
         (_.Root = function (_) {
           const {
               variant: _ = "default",
-              radius: __webpack_require__,
+              radius: _,
               size: _,
               children: _,
               value: _,
@@ -454,17 +450,17 @@
                 onValueChange: _,
                 register: _,
                 unregister: _,
-                radius: __webpack_require__,
+                radius: _,
                 size: _,
               }),
-              [_, _, _, _, __webpack_require__, _],
+              [_, _, _, _, _, _],
             );
           return (0, _.jsx)(_._, {
             clickable: !1,
             hoverable: !1,
             focusable: !1,
             variant: _,
-            radius: __webpack_require__,
+            radius: _,
             size: _,
             className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
             tabIndex: 0,
@@ -507,7 +503,7 @@
                   _,
                   null !== _ &&
                     (0, _.jsx)(_, {
-                      radius: __webpack_require__,
+                      radius: _,
                     }),
                 ],
               }),
@@ -528,7 +524,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: __webpack_require__, ..._ } = _,
+        const { _: _ = "div", ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -538,7 +534,7 @@
           ),
           _ = _;
         return (0, _.jsx)(_, {
-          ref: __webpack_require__,
+          ref: _,
           ..._,
         });
       }
@@ -560,7 +556,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: __webpack_require__, ..._ } = _,
+        const { _: _ = "div", ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -573,7 +569,7 @@
         return (0, _.jsx)(_._, {
           focusable: _,
           children: (0, _.jsx)(_, {
-            ref: __webpack_require__,
+            ref: _,
             ..._,
           }),
         });
@@ -1030,8 +1026,8 @@
       }
       function _(_) {
         if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
-        const [_, __webpack_require__] = _.split(" ");
-        return `rgb( from ${`var(--color-${_})`} r g b / ${__webpack_require__} )`;
+        const [_, _] = _.split(" ");
+        return `rgb( from ${`var(--color-${_})`} r g b / ${_} )`;
       }
       function _(_, _) {
         return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
@@ -1070,25 +1066,21 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
-        const { children: __webpack_require__, "flow-children": _, ..._ } = _,
+        const { children: _, "flow-children": _, ..._ } = _,
           { gamepadEvents: _ } = (0, _._)(_);
         _ && (_.layout = (0, _._)(_)),
           _.onOKButton ||
-            ("onClick" in __webpack_require__.props &&
-              __webpack_require__.props.onClick &&
-              (_.onOKButton = _._));
+            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
         const { ref: _, node: _ } = (0, _._)(_);
         (0, _._)(_, _);
         const _ = (0, _._)(
           _,
-          null === (_ = __webpack_require__.props) || void 0 === _
-            ? void 0
-            : _.ref,
+          null === (_ = _.props) || void 0 === _ ? void 0 : _.ref,
         );
         return (0, _.jsx)(_._.Provider, {
           value: _,
-          children: _.cloneElement(__webpack_require__, {
-            ...__webpack_require__.props,
+          children: _.cloneElement(_, {
+            ..._.props,
             ref: _,
           }),
         });

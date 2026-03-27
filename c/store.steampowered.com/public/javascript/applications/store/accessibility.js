@@ -111,7 +111,7 @@
           input: "#Accessibility_Group_Input",
         };
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(_.initialOpen ?? !1),
+        const [_, _] = (0, _.useState)(_.initialOpen ?? !1),
           _ = _.useId(),
           _ = Object.entries(_.features)
             .filter(([_, _]) => _)

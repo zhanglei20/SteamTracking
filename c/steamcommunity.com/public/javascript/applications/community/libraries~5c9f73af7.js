@@ -61,7 +61,7 @@
         void 0 === _ && (_ = {});
         const {
             placement: _ = "bottom",
-            strategy: __webpack_require__ = "absolute",
+            strategy: _ = "absolute",
             middleware: _ = [],
             platform: _,
             elements: { reference: _, floating: _ } = {},
@@ -72,7 +72,7 @@
           [_, _] = _.useState({
             _: 0,
             _: 0,
-            strategy: __webpack_require__,
+            strategy: _,
             placement: _,
             middlewareData: {},
             isPositioned: !1,
@@ -100,7 +100,7 @@
             if (!_.current || !_.current) return;
             const _ = {
               placement: _,
-              strategy: __webpack_require__,
+              strategy: _,
               middleware: _,
             };
             _.current && (_.platform = _.current),
@@ -116,7 +116,7 @@
                     _(_);
                   }));
               });
-          }, [_, _, __webpack_require__, _, _]);
+          }, [_, _, _, _, _]);
         _(() => {
           !1 === _ &&
             _.current.isPositioned &&
@@ -160,7 +160,7 @@
           ),
           _ = _.useMemo(() => {
             const _ = {
-              position: __webpack_require__,
+              position: _,
               left: 0,
               top: 0,
             };
@@ -176,11 +176,11 @@
                   }),
                 }
               : {
-                  position: __webpack_require__,
+                  position: _,
                   left: _,
                   top: _,
                 };
-          }, [__webpack_require__, _, _.floating, _._, _._]);
+          }, [_, _, _.floating, _._, _._]);
         return _.useMemo(
           () => ({
             ..._,
@@ -235,10 +235,9 @@
         for (
           ;
           null !=
-          (null == (__webpack_require__ = _) ||
-          null == (__webpack_require__ = __webpack_require__.shadowRoot)
+          (null == (_ = _) || null == (_ = _.shadowRoot)
             ? void 0
-            : __webpack_require__.activeElement);
+            : _.activeElement);
         ) {
           var _;
           _ = _.shadowRoot.activeElement;
@@ -267,8 +266,8 @@
         return _ && Array.isArray(_.brands)
           ? _.brands
               .map((_) => {
-                let { brand: _, version: __webpack_require__ } = _;
-                return _ + "/" + __webpack_require__;
+                let { brand: _, version: _ } = _;
+                return _ + "/" + _;
               })
               .join(" ")
           : navigator.userAgent;
@@ -736,13 +735,13 @@
       }
       function _(_, _) {
         let {
-          startingIndex: __webpack_require__ = -1,
+          startingIndex: _ = -1,
           decrement: _ = !1,
           disabledIndices: _,
           amount: _ = 1,
         } = void 0 === _ ? {} : _;
         const _ = _.current;
-        let _ = __webpack_require__;
+        let _ = _;
         do {
           _ += _ ? -_ : _;
         } while (_ >= 0 && _ <= _.length - 1 && _(_, _, _));
@@ -750,7 +749,7 @@
       }
       function _(_, _) {
         let {
-            event: __webpack_require__,
+            event: _,
             orientation: _,
             loop: _,
             rtl: _,
@@ -762,8 +761,8 @@
             stopEvent: _ = !1,
           } = _,
           _ = _;
-        if (__webpack_require__.key === _) {
-          if ((_ && _(__webpack_require__), -1 === _)) _ = _;
+        if (_.key === _) {
+          if ((_ && _(_), -1 === _)) _ = _;
           else if (
             ((_ = _(_, {
               startingIndex: _,
@@ -925,11 +924,7 @@
         },
       });
       function _(_) {
-        const {
-            children: _,
-            elementsRef: __webpack_require__,
-            labelsRef: _,
-          } = _,
+        const { children: _, elementsRef: _, labelsRef: _ } = _,
           [_, _] = _.useState(() => new Set()),
           _ = _.useCallback((_) => {
             _((_) => new Set(_).add(_));
@@ -957,10 +952,10 @@
               register: _,
               unregister: _,
               map: _,
-              elementsRef: __webpack_require__,
+              elementsRef: _,
               labelsRef: _,
             }),
-            [_, _, _, __webpack_require__, _],
+            [_, _, _, _, _],
           ),
           children: _,
         });
@@ -969,7 +964,7 @@
         void 0 === _ && (_ = {});
         const { label: _ } = _,
           {
-            register: __webpack_require__,
+            register: _,
             unregister: _,
             map: _,
             elementsRef: _,
@@ -1001,7 +996,7 @@
                   _(_);
                 }
               );
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           _(() => {
             const _ = _.current ? _.get(_.current) : null;
             null != _ && _(_);
@@ -1090,7 +1085,7 @@
       function _(_, _) {
         void 0 === _ && (_ = {});
         const {
-            open: __webpack_require__,
+            open: _,
             onOpenChange: _,
             dataRef: _,
             events: _,
@@ -1108,7 +1103,7 @@
           _ = _(),
           _ = _(_),
           _ = _(_),
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = _.useRef(),
           _ = _.useRef(-1),
           _ = _.useRef(),
@@ -1140,7 +1135,7 @@
           _.useEffect(() => {
             if (!_) return;
             if (!_.current) return;
-            if (!__webpack_require__) return;
+            if (!_) return;
             function _(_) {
               _() && _(!1, _, "hover");
             }
@@ -1151,7 +1146,7 @@
                 _.removeEventListener("mouseleave", _);
               }
             );
-          }, [_.floating, __webpack_require__, _, _, _, _]);
+          }, [_.floating, _, _, _, _, _]);
         const _ = _.useCallback(
             function (_, _, _) {
               void 0 === _ && (_ = !0), void 0 === _ && (_ = "hover");
@@ -1183,7 +1178,7 @@
             var _;
             const _ = _.domReference;
             return (
-              __webpack_require__ && _.addEventListener("mouseleave", _),
+              _ && _.addEventListener("mouseleave", _),
               null == (_ = _.floating) || _.addEventListener("mouseleave", _),
               _ &&
                 _.addEventListener("mousemove", _, {
@@ -1193,7 +1188,7 @@
               _.addEventListener("mouseleave", _),
               () => {
                 var _;
-                __webpack_require__ && _.removeEventListener("mouseleave", _),
+                _ && _.removeEventListener("mouseleave", _),
                   null == (_ = _.floating) ||
                     _.removeEventListener("mouseleave", _),
                   _ && _.removeEventListener("mousemove", _),
@@ -1214,7 +1209,7 @@
               ? (_.current = window.setTimeout(() => {
                   _.current || _(!0, _, "hover");
                 }, _))
-              : __webpack_require__ || _(!0, _, "hover");
+              : _ || _(!0, _, "hover");
           }
           function _(_) {
             if (_()) return;
@@ -1223,7 +1218,7 @@
             if (
               (_(_), (_.current = !1), _.current && _.current.floatingContext)
             ) {
-              __webpack_require__ || _(_),
+              _ || _(_),
                 (_.current = _.current({
                   ..._.current.floatingContext,
                   tree: _,
@@ -1257,30 +1252,12 @@
                     },
                   })(_)));
           }
-        }, [
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          __webpack_require__,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-        ]),
+        }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           _(() => {
             var _;
             if (
               _ &&
-              __webpack_require__ &&
+              _ &&
               null != (_ = _.current) &&
               _.__options.blockPointerEvents &&
               _()
@@ -1311,11 +1288,10 @@
                 );
               }
             }
-          }, [_, __webpack_require__, _, _, _, _, _]),
+          }, [_, _, _, _, _, _, _]),
           _(() => {
-            __webpack_require__ ||
-              ((_.current = void 0), (_.current = !1), _(), _());
-          }, [__webpack_require__, _, _]),
+            _ || ((_.current = void 0), (_.current = !1), _(), _());
+          }, [_, _, _]),
           _.useEffect(
             () => () => {
               _(), _(_), _(_), _();
@@ -1335,7 +1311,7 @@
                   _.current || _.current || _(!0, _, "hover");
                 }
                 (_ && !_(_.current)) ||
-                  __webpack_require__ ||
+                  _ ||
                   0 === _ ||
                   (_.current && _.movementX ** 2 + _.movementY ** 2 < 2) ||
                   (_(_),
@@ -1345,7 +1321,7 @@
                       (_.current = window.setTimeout(_, _))));
               },
             };
-          }, [_, _, __webpack_require__, _, _]),
+          }, [_, _, _, _, _]),
           _ = _.useMemo(
             () => ({
               onMouseEnter() {
@@ -1372,7 +1348,7 @@
       function _(_, _) {
         void 0 === _ && (_ = {});
         const {
-          preventScroll: __webpack_require__ = !1,
+          preventScroll: _ = !1,
           cancelPrevious: _ = !0,
           sync: _ = !1,
         } = _;
@@ -1381,7 +1357,7 @@
           null == _
             ? void 0
             : _.focus({
-                preventScroll: __webpack_require__,
+                preventScroll: _,
               });
         _ ? _() : (_ = requestAnimationFrame(_));
       }
@@ -1543,15 +1519,15 @@
           left: 0,
         },
         _ = _.forwardRef(function (_, _) {
-          const [__webpack_require__, _] = _.useState();
+          const [_, _] = _.useState();
           _(() => {
             _() && _("button");
           }, []);
           const _ = {
             ref: _,
             tabIndex: 0,
-            role: __webpack_require__,
-            "aria-hidden": !__webpack_require__ || void 0,
+            role: _,
+            "aria-hidden": !_ || void 0,
             [_("focus-guard")]: "",
             style: _,
           };
@@ -1563,15 +1539,10 @@
         _ = _.createContext(null),
         _ = _("portal");
       function _(_) {
-        const {
-            children: _,
-            _: __webpack_require__,
-            root: _,
-            preserveTabOrder: _ = !0,
-          } = _,
+        const { children: _, _: _, root: _, preserveTabOrder: _ = !0 } = _,
           _ = (function (_) {
             void 0 === _ && (_ = {});
-            const { _: _, root: __webpack_require__ } = _,
+            const { _: _, root: _ } = _,
               _ = _(),
               _ = _(),
               [_, _] = _.useState(null),
@@ -1599,11 +1570,10 @@
                   _(_);
               }, [_, _]),
               _(() => {
-                if (null === __webpack_require__) return;
+                if (null === _) return;
                 if (!_) return;
                 if (_.current) return;
-                let _ =
-                  __webpack_require__ || (null == _ ? void 0 : _.portalNode);
+                let _ = _ || (null == _ ? void 0 : _.portalNode);
                 _ && !(0, _._)(_) && (_ = _.current), (_ = _ || document.body);
                 let _ = null;
                 _ &&
@@ -1617,11 +1587,11 @@
                   _.appendChild(_),
                   (_.current = _),
                   _(_);
-              }, [_, __webpack_require__, _, _]),
+              }, [_, _, _, _]),
               _
             );
           })({
-            _: __webpack_require__,
+            _: _,
             root: _,
           }),
           [_, _] = _.useState(null),
@@ -1748,7 +1718,7 @@
       function _(_) {
         const {
             context: _,
-            children: __webpack_require__,
+            children: _,
             disabled: _ = !1,
             order: _ = ["content"],
             guards: _ = !0,
@@ -2136,7 +2106,7 @@
                 },
               }),
             !_ && _("start"),
-            __webpack_require__,
+            _,
             _("end"),
             _ &&
               (0, _.jsx)(_, {
@@ -2166,7 +2136,7 @@
       function _(_, _) {
         void 0 === _ && (_ = {});
         const {
-            open: __webpack_require__,
+            open: _,
             onOpenChange: _,
             dataRef: _,
             elements: { domReference: _ },
@@ -2191,7 +2161,7 @@
                 0 === _.button &&
                   "click" !== _ &&
                   ((_(_, !0) && _) ||
-                    (!__webpack_require__ ||
+                    (!_ ||
                     !_ ||
                     (_.current.openEvent &&
                       _ &&
@@ -2204,7 +2174,7 @@
                 "mousedown" === _ && _.current
                   ? (_.current = void 0)
                   : (_(_, !0) && _) ||
-                    (!__webpack_require__ ||
+                    (!_ ||
                     !_ ||
                     (_.current.openEvent &&
                       _ &&
@@ -2220,8 +2190,7 @@
                     (" " !== _.key ||
                       _(_) ||
                       (_.preventDefault(), (_.current = !0)),
-                    "Enter" === _.key &&
-                      _(!__webpack_require__ || !_, _.nativeEvent, "click"));
+                    "Enter" === _.key && _(!_ || !_, _.nativeEvent, "click"));
               },
               onKeyUp(_) {
                 _.defaultPrevented ||
@@ -2230,11 +2199,10 @@
                   _(_) ||
                   (" " === _.key &&
                     _.current &&
-                    ((_.current = !1),
-                    _(!__webpack_require__ || !_, _.nativeEvent, "click")));
+                    ((_.current = !1), _(!_ || !_, _.nativeEvent, "click")));
               },
             }),
-            [_, _, _, _, _, _, __webpack_require__, _, _],
+            [_, _, _, _, _, _, _, _, _],
           );
         return _.useMemo(
           () =>
@@ -2271,12 +2239,7 @@
         };
       function _(_, _) {
         void 0 === _ && (_ = {});
-        const {
-            open: __webpack_require__,
-            onOpenChange: _,
-            elements: _,
-            dataRef: _,
-          } = _,
+        const { open: _, onOpenChange: _, elements: _, dataRef: _ } = _,
           {
             enabled: _ = !0,
             escapeKey: _ = !0,
@@ -2298,7 +2261,7 @@
           _ = _.useRef(!1),
           _ = _((_) => {
             var _;
-            if (!__webpack_require__ || !_ || !_ || "Escape" !== _.key) return;
+            if (!_ || !_ || !_ || "Escape" !== _.key) return;
             if (_.current) return;
             const _ =
                 null == (_ = _.current.floatingContext) ? void 0 : _.nodeId,
@@ -2415,7 +2378,7 @@
             null == (_ = _(_)) || _.addEventListener(_, _);
           });
         _.useEffect(() => {
-          if (!__webpack_require__ || !_) return;
+          if (!_ || !_) return;
           (_.current.__escapeKeyBubbles = _),
             (_.current.__outsidePressBubbles = _);
           let _ = -1;
@@ -2471,25 +2434,7 @@
                 window.clearTimeout(_);
             }
           );
-        }, [
-          _,
-          _,
-          _,
-          _,
-          _,
-          __webpack_require__,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-          _,
-        ]),
+        }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]),
           _.useEffect(() => {
             _.current = !1;
           }, [_, _]);
@@ -2677,7 +2622,7 @@
       function _(_, _) {
         void 0 === _ && (_ = {});
         const {
-            open: __webpack_require__,
+            open: _,
             onOpenChange: _,
             events: _,
             dataRef: _,
@@ -2691,7 +2636,7 @@
           if (!_) return;
           const _ = (0, _._)(_.domReference);
           function _() {
-            !__webpack_require__ &&
+            !_ &&
               (0, _._)(_.domReference) &&
               _.domReference === _(_(_.domReference)) &&
               (_.current = !0);
@@ -2707,7 +2652,7 @@
                 _.removeEventListener("keydown", _, !0);
             }
           );
-        }, [_.domReference, __webpack_require__, _]),
+        }, [_.domReference, _, _]),
           _.useEffect(() => {
             if (_)
               return (
@@ -2895,7 +2840,7 @@
           : _(_, _ ? _ === _ : _ === _, _ === _);
       }
       function _(_, _) {
-        const { open: __webpack_require__, onOpenChange: _, elements: _ } = _,
+        const { open: _, onOpenChange: _, elements: _ } = _,
           {
             listRef: _,
             activeIndex: _,
@@ -2934,11 +2879,11 @@
           _ = _.useRef(!0),
           _ = _.useRef(_),
           _ = _.useRef(!!_.floating),
-          _ = _.useRef(__webpack_require__),
+          _ = _.useRef(_),
           _ = _.useRef(!1),
           _ = _.useRef(!1),
           _ = _(_),
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = _(_),
           _ = _(_),
           [_, _] = _.useState(),
@@ -2977,14 +2922,14 @@
           });
         _(() => {
           _ &&
-            (__webpack_require__ && _.floating
+            (_ && _.floating
               ? _.current &&
                 null != _ &&
                 ((_.current = !0), (_.current = _), _())
               : _.current && ((_.current = -1), _.current()));
-        }, [_, __webpack_require__, _.floating, _, _]),
+        }, [_, _, _.floating, _, _]),
           _(() => {
-            if (_ && __webpack_require__ && _.floating)
+            if (_ && _ && _.floating)
               if (null == _) {
                 if (((_.current = !1), null != _.current)) return;
                 if (
@@ -3012,7 +2957,7 @@
                   _();
                 }
               } else _(_, _) || ((_.current = _), _(), (_.current = !1));
-          }, [_, __webpack_require__, _.floating, _, _, _, _, _, _, _, _, _]),
+          }, [_, _, _.floating, _, _, _, _, _, _, _, _, _]),
           _(() => {
             var _;
             if (!_ || _.floating || !_ || _ || !_.current) return;
@@ -3044,24 +2989,22 @@
             }
           }, [_, _, _, _, _]),
           _(() => {
-            (_.current = _),
-              (_.current = __webpack_require__),
-              (_.current = !!_.floating);
+            (_.current = _), (_.current = _), (_.current = !!_.floating);
           }),
           _(() => {
-            __webpack_require__ || (_.current = null);
-          }, [__webpack_require__]);
+            _ || (_.current = null);
+          }, [_]);
         const _ = null != _,
           _ = _.useMemo(() => {
             function _(_) {
-              if (!__webpack_require__) return;
+              if (!_) return;
               const _ = _.current.indexOf(_);
               -1 !== _ && _.current !== _ && ((_.current = _), _());
             }
             return {
               onFocus(_) {
-                let { currentTarget: __webpack_require__ } = _;
-                (_.current = !0), _(__webpack_require__);
+                let { currentTarget: _ } = _;
+                (_.current = !0), _(_);
               },
               onClick: (_) => {
                 let { currentTarget: _ } = _;
@@ -3071,8 +3014,8 @@
               },
               ...(_ && {
                 onMouseMove(_) {
-                  let { currentTarget: __webpack_require__ } = _;
-                  (_.current = !0), (_.current = !1), _(__webpack_require__);
+                  let { currentTarget: _ } = _;
+                  (_.current = !0), (_.current = !1), _(_);
                 },
                 onPointerLeave(_) {
                   let { pointerType: _ } = _;
@@ -3090,7 +3033,7 @@
                 },
               }),
             };
-          }, [__webpack_require__, _, _, _, _, _]),
+          }, [_, _, _, _, _, _]),
           _ = _((_) => {
             if (((_.current = !1), (_.current = !0), 229 === _.which)) return;
             if (!_.current && _.currentTarget === _.current) return;
@@ -3224,11 +3167,11 @@
           _ = _.useMemo(
             () =>
               _ &&
-              __webpack_require__ &&
+              _ &&
               _ && {
                 "aria-activedescendant": _ || _,
               },
-            [_, __webpack_require__, _, _, _],
+            [_, _, _, _, _],
           ),
           _ = _.useMemo(
             () => ({
@@ -3269,7 +3212,7 @@
                   _ = _(_.key, _, _),
                   _ = _(_.key, _),
                   _ = (_ ? _ : _) || "Enter" === _.key || "" === _.key.trim();
-                if (_ && __webpack_require__) {
+                if (_ && _) {
                   const _ =
                       null == _
                         ? void 0
@@ -3349,34 +3292,14 @@
                 }
               },
               onFocus() {
-                __webpack_require__ && !_ && ((_.current = -1), _());
+                _ && !_ && ((_.current = -1), _());
               },
               onPointerDown: _,
               onPointerEnter: _,
               onMouseDown: _,
               onClick: _,
             };
-          }, [
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            __webpack_require__,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-          ]);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
         return _.useMemo(
           () =>
             _
@@ -3609,14 +3532,14 @@
         );
       }
       function _(_, _) {
-        const [__webpack_require__, _] = _;
+        const [_, _] = _;
         let _ = !1;
         const _ = _.length;
         for (let _ = 0, _ = _ - 1; _ < _; _ = _++) {
           const [_, _] = _[_] || [0, 0],
             [_, _] = _[_] || [0, 0];
           _ >= _ != _ >= _ &&
-            __webpack_require__ <= ((_ - _) * (_ - _)) / (_ - _) + _ &&
+            _ <= ((_ - _) * (_ - _)) / (_ - _) + _ &&
             (_ = !_);
         }
         return _;
@@ -3625,7 +3548,7 @@
         void 0 === _ && (_ = {});
         const {
           buffer: _ = 0.5,
-          blockPointerEvents: __webpack_require__ = !1,
+          blockPointerEvents: _ = !1,
           requireIntent: _ = !0,
         } = _;
         let _,
@@ -3635,7 +3558,7 @@
           _ = performance.now();
         const _ = (_) => {
           let {
-            _: __webpack_require__,
+            _: _,
             _: _,
             placement: _,
             elements: _,
@@ -3652,7 +3575,7 @@
               !_.domReference ||
                 !_.floating ||
                 null == _ ||
-                null == __webpack_require__ ||
+                null == _ ||
                 null == _)
             )
               return;
@@ -3665,7 +3588,7 @@
               _ = _.domReference.getBoundingClientRect(),
               _ = _.floating.getBoundingClientRect(),
               _ = _.split("-")[0],
-              _ = __webpack_require__ > _.right - _.width / 2,
+              _ = _ > _.right - _.width / 2,
               _ = _ > _.bottom - _.height / 2,
               _ = (function (_, _) {
                 return (
@@ -3700,8 +3623,8 @@
             if (
               ("top" === _ && _ >= _.bottom - 1) ||
               ("bottom" === _ && _ <= _.top + 1) ||
-              ("left" === _ && __webpack_require__ >= _.right - 1) ||
-              ("right" === _ && __webpack_require__ <= _.left + 1)
+              ("left" === _ && _ >= _.right - 1) ||
+              ("right" === _ && _ <= _.left + 1)
             )
               return _();
             let _ = [];
@@ -3756,26 +3679,12 @@
               _(
                 [_, _],
                 (function (_) {
-                  let [__webpack_require__, _] = _;
+                  let [_, _] = _;
                   switch (_) {
                     case "top":
                       return [
-                        [
-                          _
-                            ? __webpack_require__ + _ / 2
-                            : _
-                              ? __webpack_require__ + 4 * _
-                              : __webpack_require__ - 4 * _,
-                          _ + _ + 1,
-                        ],
-                        [
-                          _
-                            ? __webpack_require__ - _ / 2
-                            : _
-                              ? __webpack_require__ + 4 * _
-                              : __webpack_require__ - 4 * _,
-                          _ + _ + 1,
-                        ],
+                        [_ ? _ + _ / 2 : _ ? _ + 4 * _ : _ - 4 * _, _ + _ + 1],
+                        [_ ? _ - _ / 2 : _ ? _ + 4 * _ : _ - 4 * _, _ + _ + 1],
                         ...[
                           [_.left, _ || _ ? _.bottom - _ : _.top],
                           [
@@ -3786,22 +3695,8 @@
                       ];
                     case "bottom":
                       return [
-                        [
-                          _
-                            ? __webpack_require__ + _ / 2
-                            : _
-                              ? __webpack_require__ + 4 * _
-                              : __webpack_require__ - 4 * _,
-                          _ - _,
-                        ],
-                        [
-                          _
-                            ? __webpack_require__ - _ / 2
-                            : _
-                              ? __webpack_require__ + 4 * _
-                              : __webpack_require__ - 4 * _,
-                          _ - _,
-                        ],
+                        [_ ? _ + _ / 2 : _ ? _ + 4 * _ : _ - 4 * _, _ - _],
+                        [_ ? _ - _ / 2 : _ ? _ + 4 * _ : _ - 4 * _, _ - _],
                         ...[
                           [_.left, _ || _ ? _.top + _ : _.bottom],
                           [_.right, _ ? (_ ? _.top + _ : _.bottom) : _.top + _],
@@ -3809,11 +3704,11 @@
                       ];
                     case "left": {
                       const _ = [
-                          __webpack_require__ + _ + 1,
+                          _ + _ + 1,
                           _ ? _ + _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
                         ],
                         _ = [
-                          __webpack_require__ + _ + 1,
+                          _ + _ + 1,
                           _ ? _ - _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
                         ];
                       return [
@@ -3830,14 +3725,8 @@
                     }
                     case "right":
                       return [
-                        [
-                          __webpack_require__ - _,
-                          _ ? _ + _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
-                        ],
-                        [
-                          __webpack_require__ - _,
-                          _ ? _ - _ / 2 : _ ? _ + 4 * _ : _ - 4 * _,
-                        ],
+                        [_ - _, _ ? _ + _ / 2 : _ ? _ + 4 * _ : _ - 4 * _],
+                        [_ - _, _ ? _ - _ / 2 : _ ? _ + 4 * _ : _ - 4 * _],
                         ...[
                           [_ || _ ? _.left + _ : _.right, _.top],
                           [
@@ -3847,7 +3736,7 @@
                         ],
                       ];
                   }
-                })([__webpack_require__, _]),
+                })([_, _]),
               )
                 ? !_ && _ && (_ = window.setTimeout(_, 40))
                 : _();
@@ -3856,7 +3745,7 @@
         };
         return (
           (_.__options = {
-            blockPointerEvents: __webpack_require__,
+            blockPointerEvents: _,
           }),
           _
         );
@@ -3963,10 +3852,10 @@
           };
         },
         _ = (_) => {
-          const { offsetWidth: _, offsetHeight: __webpack_require__ } = _;
+          const { offsetWidth: _, offsetHeight: _ } = _;
           return {
             width: _,
-            height: __webpack_require__,
+            height: _,
           };
         },
         _ = (_) => _,
@@ -4063,13 +3952,13 @@
           }
           return _[_.options.horizontal ? "offsetWidth" : "offsetHeight"];
         },
-        _ = (_, { adjustments: _ = 0, behavior: __webpack_require__ }, _) => {
+        _ = (_, { adjustments: _ = 0, behavior: _ }, _) => {
           var _, _;
           const _ = _ + _;
           null == (_ = null == (_ = _.scrollElement) ? void 0 : _.scrollTo) ||
             _.call(_, {
               [_.options.horizontal ? "left" : "top"]: _,
-              behavior: __webpack_require__,
+              behavior: _,
             });
         };
       class _ {
@@ -4126,8 +4015,8 @@
             })()),
             (this.range = null),
             (this.setOptions = (_) => {
-              Object.entries(_).forEach(([_, __webpack_require__]) => {
-                void 0 === __webpack_require__ && delete _[_];
+              Object.entries(_).forEach(([_, _]) => {
+                void 0 === _ && delete _[_];
               }),
                 (this.options = {
                   debug: !1,
@@ -4302,7 +4191,7 @@
                 {
                   count: _,
                   paddingStart: _,
-                  scrollMargin: __webpack_require__,
+                  scrollMargin: _,
                   getItemKey: _,
                   enabled: _,
                 },
@@ -4332,7 +4221,7 @@
                       1 === this.options.lanes
                         ? _[_ - 1]
                         : this.getFurthestMeasurement(_, _),
-                    _ = _ ? _.end + this.options.gap : _ + __webpack_require__,
+                    _ = _ ? _.end + this.options.gap : _ + _,
                     _ = _.get(_),
                     _ = "number" == typeof _ ? _ : this.options.estimateSize(_),
                     _ = _ + _,
@@ -4511,13 +4400,11 @@
               if (0 !== _.length)
                 return _(_[_(0, _.length - 1, (_) => _(_[_]).start, _)]);
             }),
-            (this.getOffsetForAlignment = (_, _, __webpack_require__ = 0) => {
+            (this.getOffsetForAlignment = (_, _, _ = 0) => {
               const _ = this.getSize(),
                 _ = this.getScrollOffset();
               "auto" === _ && (_ = _ >= _ + _ ? "end" : "start"),
-                "center" === _
-                  ? (_ += (__webpack_require__ - _) / 2)
-                  : "end" === _ && (_ -= _);
+                "center" === _ ? (_ += (_ - _) / 2) : "end" === _ && (_ -= _);
               const _ = this.getTotalSize() + this.options.scrollMargin - _;
               return Math.max(Math.min(_, _), 0);
             }),
@@ -4543,23 +4430,23 @@
             (this.isDynamicMode = () => this.elementsCache.size > 0),
             (this.scrollToOffset = (
               _,
-              { align: _ = "start", behavior: __webpack_require__ } = {},
+              { align: _ = "start", behavior: _ } = {},
             ) => {
-              "smooth" === __webpack_require__ &&
+              "smooth" === _ &&
                 this.isDynamicMode() &&
                 console.warn(
                   "The `smooth` scroll behavior is not fully supported with dynamic size.",
                 ),
                 this._scrollToOffset(this.getOffsetForAlignment(_, _), {
                   adjustments: void 0,
-                  behavior: __webpack_require__,
+                  behavior: _,
                 });
             }),
             (this.scrollToIndex = (
               _,
-              { align: _ = "auto", behavior: __webpack_require__ } = {},
+              { align: _ = "auto", behavior: _ } = {},
             ) => {
-              "smooth" === __webpack_require__ &&
+              "smooth" === _ &&
                 this.isDynamicMode() &&
                 console.warn(
                   "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -4577,7 +4464,7 @@
                   const [_, _] = _;
                   this._scrollToOffset(_, {
                     adjustments: void 0,
-                    behavior: __webpack_require__,
+                    behavior: _,
                   }),
                     this.targetWindow.requestAnimationFrame(() => {
                       const _ = this.getScrollOffset(),
@@ -4631,14 +4518,11 @@
                 0,
               );
             }),
-            (this._scrollToOffset = (
-              _,
-              { adjustments: _, behavior: __webpack_require__ },
-            ) => {
+            (this._scrollToOffset = (_, { adjustments: _, behavior: _ }) => {
               this.options.scrollToFn(
                 _,
                 {
-                  behavior: __webpack_require__,
+                  behavior: _,
                   adjustments: _,
                 },
                 this,

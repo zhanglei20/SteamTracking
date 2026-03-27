@@ -125,7 +125,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(0),
+        const [_, _] = _.useState(0),
           [_, _] = _.useState(null),
           [_, _] = _.useState(null),
           [_, _] = _.useState(null),
@@ -306,7 +306,7 @@
       const _ = (_) => {
           const {
             sError: _,
-            eLanguage: __webpack_require__,
+            eLanguage: _,
             realms: _,
             fnHasLanguage: _,
             fnSetLanguage: _,
@@ -359,7 +359,7 @@
                         children: (0, _._)("#BuildNotes_ImportLocalization"),
                       }),
                       (0, _.jsx)(_._, {
-                        selectedLang: __webpack_require__,
+                        selectedLang: _,
                         fnOnLanguageChanged: _,
                         fnLangHasData: _,
                         realms: _,
@@ -369,9 +369,9 @@
                 ],
               }),
               (0, _.jsx)(_._, {
-                value: _(__webpack_require__),
+                value: _(_),
                 placeholder: (0, _._)("#BuildNotes_TitlePlaceholder"),
-                onChange: (_) => _(__webpack_require__, _.currentTarget.value),
+                onChange: (_) => _(_, _.currentTarget.value),
                 maxLength: _._,
               }),
               (0, _.jsx)("div", {
@@ -379,10 +379,9 @@
                 children: (0, _._)("#BuildNotes_PatchnotesDesc"),
               }),
               (0, _.jsx)(_._, {
-                fnGetCurText: () => _(__webpack_require__),
-                fnOnTextChange: (_) =>
-                  _(__webpack_require__, _.currentTarget.value),
-                fnSetText: (_) => _(__webpack_require__, _),
+                fnGetCurText: () => _(_),
+                fnOnTextChange: (_) => _(_, _.currentTarget.value),
+                fnSetText: (_) => _(_, _),
                 strPlaceholder: (0, _._)("#BuildNotes_DescPlaceholder"),
                 emoticonStore: _._,
                 bSupportHTMLImport: !0,
@@ -415,7 +414,7 @@
         _ = (_) => {
           const {
             event: _,
-            eLanguage: __webpack_require__,
+            eLanguage: _,
             realms: _,
             fnOnClose: _,
             fnOnSubmitEvent: _,
@@ -428,7 +427,7 @@
                 className: _.PreviewHeader,
                 children: [
                   (0, _.jsx)(_._, {
-                    selectedLang: __webpack_require__,
+                    selectedLang: _,
                     fnOnLanguageChanged: _,
                     fnFilterLanguage: _,
                     realms: _,
@@ -452,7 +451,7 @@
                 children: (0, _.jsx)(_._, {
                   event: _,
                   fnClose: _,
-                  langOverride: __webpack_require__,
+                  langOverride: _,
                   isPreview: !0,
                 }),
               }),
@@ -490,8 +489,8 @@
             ],
           }),
         _ = (_) => {
-          const { appId: _, eventGid: __webpack_require__ } = _,
-            _ = `${_._.STORE_BASE_URL}news/app/${_}/view/${__webpack_require__}`;
+          const { appId: _, eventGid: _ } = _,
+            _ = `${_._.STORE_BASE_URL}news/app/${_}/view/${_}`;
           return (0, _.jsxs)("div", {
             className: (0, _._)(_.RightPanel, _.SuccessPanel),
             children: [

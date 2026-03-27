@@ -442,17 +442,12 @@
               _.typedArray(_.relatedInformation, _._))
           );
         }),
-        ((_ = _ || (_ = {})).create = function (_, _, ...__webpack_require__) {
+        ((_ = _ || (_ = {})).create = function (_, _, ..._) {
           let _ = {
             title: _,
             command: _,
           };
-          return (
-            _.defined(__webpack_require__) &&
-              __webpack_require__.length > 0 &&
-              (_.arguments = __webpack_require__),
-            _
-          );
+          return _.defined(_) && _.length > 0 && (_.arguments = _), _;
         }),
         (_._ = function (_) {
           let _ = _;
@@ -791,15 +786,13 @@
                 label: _,
               };
         }),
-        ((_ || (_ = {})).create = function (_, _, ...__webpack_require__) {
+        ((_ || (_ = {})).create = function (_, _, ..._) {
           let _ = {
             label: _,
           };
           return (
             _.defined(_) && (_.documentation = _),
-            _.defined(__webpack_require__)
-              ? (_.parameters = __webpack_require__)
-              : (_.parameters = []),
+            _.defined(_) ? (_.parameters = _) : (_.parameters = []),
             _
           );
         }),

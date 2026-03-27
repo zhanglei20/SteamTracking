@@ -90,7 +90,7 @@
             : (this.m_dictComponents = new Map(Object.entries(_))),
             (this.m_fnAccumulatorFactory = _);
         }
-        Parse(_, _, __webpack_require__ = !0) {
+        Parse(_, _, _ = !0) {
           const _ = (function (_, _) {
             var _, _, _;
             const _ = [];
@@ -156,7 +156,7 @@
                     text: null !== (_ = _.text) && void 0 !== _ ? _ : "",
                   }));
             return _;
-          })(_ || "", __webpack_require__);
+          })(_ || "", _);
           return this.Parse_BuildElements(_, _);
         }
         Parse_BuildElements(_, _) {
@@ -280,7 +280,7 @@
       function _(_) {
         return _.replace(/(\\|\[)/g, "\\$1");
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const { type: _, text: _ = "" } = _;
         if (2 == _) {
           let _ = _.indexOf("=");
@@ -391,7 +391,7 @@
         UpdateOverrideLanguage(_) {
           this.m_renderingLanguage = _;
         }
-        ParseBBCode(_, _, __webpack_require__ = !0) {
+        ParseBBCode(_, _, _ = !0) {
           let _ = 0;
           const _ = this.Parse(
             _,
@@ -406,7 +406,7 @@
                 },
                 ..._,
               ),
-            __webpack_require__,
+            _,
           );
           return _.length > 1
             ? _.createElement(_.Fragment, null, ..._)

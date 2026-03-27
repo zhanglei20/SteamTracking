@@ -399,12 +399,7 @@
       }
       const _ = ["AccountPrivateApps"];
       function _(_) {
-        const {
-          transport: _,
-          storage: __webpack_require__,
-          bUseLocalCache: _,
-          bEnabled: _,
-        } = _;
+        const { transport: _, storage: _, bUseLocalCache: _, bEnabled: _ } = _;
         return {
           queryKey: _,
           queryFn: async () => {
@@ -413,7 +408,7 @@
               (_ = await (async function (_) {
                 const _ = _();
                 return await _.GetObject(_);
-              })(__webpack_require__));
+              })(_));
             const _ = _._.Init(_),
               _ = await _.GetPrivateAppList(_, _);
             if (!_.BSuccess()) {
@@ -421,11 +416,7 @@
               throw _.GetErrorMessage();
             }
             return (
-              _ &&
-                (await _(
-                  __webpack_require__,
-                  _.Body().private_apps(!0).appids(),
-                )),
+              _ && (await _(_, _.Body().private_apps(!0).appids())),
               new Set(_.Body().private_apps(!0).appids())
             );
           },

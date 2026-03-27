@@ -2222,10 +2222,10 @@
           }
         }
         OnOpenPreviewAsPartnerEvent(_) {
-          const { newsData: _, clanSteamID: __webpack_require__ } = this.props;
+          const { newsData: _, clanSteamID: _ } = this.props;
           let _ = new _._();
           (_.GID = "PreviewPartnerEventRow_0"),
-            (_.clanSteamID = __webpack_require__),
+            (_.clanSteamID = _),
             (_.postTime = Date.now() / 1e3),
             (_.startTime = Date.now() / 1e3),
             (_.type = 28),
@@ -2277,7 +2277,7 @@
           return !(!_ || Array.isArray(_) || "object" != typeof _);
         }
         OnPostNewsEvent(_) {
-          const { newsData: _, fnGetRSSUrl: __webpack_require__ } = this.props;
+          const { newsData: _, fnGetRSSUrl: _ } = this.props;
           (0, _._)(
             (0, _.jsx)(_, {
               newsData: _,
@@ -2289,7 +2289,7 @@
           );
         }
         OnUpdateNewsEvent(_) {
-          const { newsData: _, fnGetRSSUrl: __webpack_require__ } = this.props;
+          const { newsData: _, fnGetRSSUrl: _ } = this.props;
           (0, _._)(
             (0, _.jsx)(_, {
               newsData: _,
@@ -2338,19 +2338,19 @@
           const { newsData: _ } = this.props,
             {
               clan_event_gid: _,
-              existingEventModel: __webpack_require__,
+              existingEventModel: _,
               bLoadingPartnerEvent: _,
             } = this.state;
           let _ = this.props.admin,
             _ = _.GetClanSteamID(),
-            _ = __webpack_require__ && __webpack_require__.BIsStagedEvent(),
+            _ = _ && __webpack_require__.BIsStagedEvent(),
             _ = _.post.appids && 1 == _.post.appids.length && _.post.appids[0],
             _ =
               0 !== _.post.recommendation_state &&
               _ &&
               _.Get().BHasReviewForApp(_, _),
             _ = "";
-          if (__webpack_require__) {
+          if (_) {
             const _ =
               __webpack_require__.GetVisibilityStartTimeAndDateUnixSeconds() ||
               __webpack_require__.GetPostTimeAndDateUnixSeconds();
@@ -2373,7 +2373,7 @@
                 children: _.title,
               }),
               (0, _.jsx)("br", {}),
-              Boolean(__webpack_require__) &&
+              Boolean(_) &&
                 (0, _.jsxs)(_.Fragment, {
                   children: [
                     Boolean(__webpack_require__.BIsVisibleEvent()) &&
@@ -2951,7 +2951,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-          const [_, __webpack_require__] = (0, _.useState)(!0);
+          const [_, _] = (0, _.useState)(!0);
           if (
             ((0, _.useEffect)(() => {
               (async () => {
@@ -2993,7 +2993,7 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1),
+          const [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(void 0);
           return _
             ? (0, _.jsx)(_._, {
@@ -3020,7 +3020,7 @@
                 });
         }),
         _ = (_) => {
-          const { rgClanIDs: _, strTitle: __webpack_require__ } = _,
+          const { rgClanIDs: _, strTitle: _ } = _,
             [_, _] = (0, _.useState)(!1);
           let _ = null;
           return (
@@ -3041,7 +3041,7 @@
                   className: (0, _._)(_().ModSectionTitle),
                   onDoubleClick: () => _(!_),
                   children: [
-                    __webpack_require__,
+                    _,
                     (0, _.jsx)("span", {
                       children: " ",
                     }),
@@ -3102,7 +3102,7 @@
           });
         },
         _ = (_) => {
-          const { clanInfo: _, rssAdminInfo: __webpack_require__ } = _,
+          const { clanInfo: _, rssAdminInfo: _ } = _,
             [_, _] = (0, _.useState)(!1),
             _ = _._.STORE_BASE_URL + "newshub/group/" + _.clanAccountID,
             _ =
@@ -3218,7 +3218,7 @@
                   children: Boolean(__webpack_require__.BHasSavedRSSURL())
                     ? (0, _.jsx)(_._, {
                         strRssURL: __webpack_require__.GetRSSUrl(),
-                        admin: __webpack_require__,
+                        admin: _,
                       })
                     : (0, _.jsx)("div", {
                         children: (0, _._)("#RSSModeration_NoRSSFeed"),
@@ -3243,7 +3243,7 @@
             }),
           }),
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(void 0),
+          const [_, _] = (0, _.useState)(void 0),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(void 0),
             _ = () => _.closeModal && _.closeModal();
@@ -3363,7 +3363,7 @@
         async LoadPartnerEventForQueryIncremental(
           _,
           _ = 0,
-          __webpack_require__ = 10,
+          _ = 10,
           _,
           _,
           _,
@@ -3374,7 +3374,7 @@
           const _ = await this.GetLatestPartnerEvents(
             _,
             _,
-            __webpack_require__,
+            _,
             _,
             _,
             _,
@@ -3398,7 +3398,7 @@
         async GetLatestPartnerEvents(
           _,
           _ = 0,
-          __webpack_require__ = 10,
+          _ = 10,
           _,
           _,
           _,
@@ -3414,7 +3414,7 @@
               _._.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
             _ = {
               page: _,
-              count: __webpack_require__,
+              count: _,
               date: _,
               appids: void 0 === _ ? void 0 : _.join(","),
               required_tags: void 0 === _ ? void 0 : _.join(","),
@@ -3557,9 +3557,9 @@
                   });
               });
         }
-        async GetImageInfo(_, _, __webpack_require__ = "") {
+        async GetImageInfo(_, _, _ = "") {
           const _ = (0, _._)(_),
-            _ = _._.GetHashFromHashAndExt(_) + __webpack_require__;
+            _ = _._.GetHashFromHashAndExt(_) + _;
           return _._.AsyncGetImageResolution(_, _, _, this.m_cancelSignal, !0);
         }
         HandleErrorFatal(_, _, _, _) {
@@ -4256,7 +4256,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { accountID: _, locToken: __webpack_require__ } = _,
+        const { accountID: _, locToken: _ } = _,
           _ = _.useMemo(() => _._.InitFromAccountID(_), [_]),
           { data: _ } = (0, _._)(_);
         let _ =
@@ -4264,7 +4264,7 @@
           _.ConvertTo64BitString();
         return (0, _.jsx)("div", {
           children: (0, _._)(
-            __webpack_require__,
+            _,
             (0, _.jsx)("a", {
               href: _,
               target: _._.IN_CLIENT ? void 0 : "_blank",
@@ -4392,7 +4392,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!0),
+        const [_, _] = _.useState(!0),
           { eventModel: _ } = _;
         let _ = _.GetAllTags()
           .filter((_) => _.IsAuditAction(_))
@@ -4408,7 +4408,7 @@
                   children: (0, _._)("#EventModTile_Action_Title"),
                 }),
                 ((_) => {
-                  const { eventModel: __webpack_require__ } = _;
+                  const { eventModel: _ } = _;
                   return _.map((_) => {
                     const _ = new _();
                     return (
@@ -4418,7 +4418,7 @@
                         {
                           modAction: _,
                         },
-                        __webpack_require__.GID + _,
+                        _.GID + _,
                       )
                     );
                   });
@@ -4486,12 +4486,12 @@
           if (_.bUseCustomQuery) {
             const {
               selectedTags: _,
-              excludedTags: __webpack_require__,
+              excludedTags: _,
               filterEventTypes: _,
               filterDate: _,
               bOrderByVisibilityStartTime: _,
             } = _;
-            if (_ || __webpack_require__ || _ || _ || _) {
+            if (_ || _ || _ || _ || _) {
               const _ = new URLSearchParams();
               _?.forEach((_) => _.append("selectedTags", _.value)),
                 __webpack_require__?.forEach((_) =>
@@ -4675,7 +4675,7 @@
       const _ = (0, _._)(_),
         _ = (0, _._)((_) => {
           const _ = _.Get(),
-            { fnRequireRefetchEvents: __webpack_require__ } = _;
+            { fnRequireRefetchEvents: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)("div", {
@@ -4723,7 +4723,7 @@
         }),
         _ = (0, _._)((_) => {
           const _ = _.Get(),
-            { fnRequireRefetchEvents: __webpack_require__ } = _,
+            { fnRequireRefetchEvents: _ } = _,
             _ = _._.map((_) => ({
               value: _,
               label: (0, _._)(_),
@@ -4855,12 +4855,12 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const { onClick: _, event: __webpack_require__, bSaving: _ } = _;
+          const { onClick: _, event: _, bSaving: _ } = _;
           let _ = (0, _._)("#EventModTile_Moderate_ClearReviewed"),
             _ = _.EventModerateClearReview,
             _ = !1;
           return (
-            (0, _._)(__webpack_require__) ||
+            (0, _._)(_) ||
               ((_ = (0, _._)("#EventModTile_Moderate_MarkReviewed")),
               (_ = _.EventModerateMarkReview),
               (_ = !0)),
@@ -4882,7 +4882,7 @@
           );
         }),
         _ = (0, _._)((_) => {
-          const { onClick: _, event: __webpack_require__, bSaving: _ } = _,
+          const { onClick: _, event: _, bSaving: _ } = _,
             _ = __webpack_require__.BHasTag("adult_only_content");
           let _ = (0, _._)(
             _
@@ -4906,7 +4906,7 @@
           );
         });
       function _(_) {
-        const { onClick: _, event: __webpack_require__, bSaving: _ } = _,
+        const { onClick: _, event: _, bSaving: _ } = _,
           _ = (0, _._)(() => __webpack_require__.BHasTag("halloween"));
         let _ = (0, _._)(
           _
@@ -5417,7 +5417,7 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (0, _._)((_) => {
-        const { appid: _, clanSteamID: __webpack_require__ } = _,
+        const { appid: _, clanSteamID: _ } = _,
           _ = (0, _._)(_),
           [_, _] = (0, _.useState)(!_._.Get().BHasApp(_.appid)),
           _ = _.useRef(_().CancelToken.source());
@@ -5430,11 +5430,10 @@
             [],
           ),
           (0, _.useEffect)(() => {
-            const { appid: _, clanSteamID: __webpack_require__ } = _;
+            const { appid: _, clanSteamID: _ } = _;
             if (
               (_ && !_._.Get().BHasApp(_)) ||
-              (__webpack_require__ &&
-                !_._.BHasClanInfoLoaded(__webpack_require__))
+              (_ && !_._.BHasClanInfoLoaded(_))
             ) {
               (async () => {
                 try {
@@ -5444,9 +5443,7 @@
                       include_release: !0,
                       include_screenshots: !0,
                     }),
-                    __webpack_require__
-                      ? _._.LoadClanInfoForClanSteamID(__webpack_require__)
-                      : void 0,
+                    _ ? _._.LoadClanInfoForClanSteamID(_) : void 0,
                   ]);
                 } catch (_) {
                   const _ = (0, _._)(_);
@@ -5498,7 +5495,7 @@
               })
             : null;
         }
-        if (__webpack_require__) {
+        if (_) {
           const _ = __webpack_require__.GetAccountID(),
             _ = _._.GetClanInfoByClanAccountID(_);
           if (_ && _.is_curator)
@@ -5528,13 +5525,9 @@
       });
       let _ = class extends _.Component {
         render() {
-          const {
-              event: _,
-              hidden: _,
-              published: __webpack_require__,
-            } = this.props,
+          const { event: _, hidden: _, published: _ } = this.props,
             _ = _
-              ? __webpack_require__
+              ? _
                 ? (0, _._)("#EVentModTile_State_Staged")
                 : (0, _._)("#EVentModTile_State_Draft")
               : (0, _._)("#EVentModTile_State_Published"),
@@ -5861,18 +5854,18 @@
             this.state.bCute ? _.push("cute") : _.push("cute"),
             this.state.bHorror ? _.push("horror") : _.push("horror");
           try {
-            const { eventModel: __webpack_require__ } = this.props;
+            const { eventModel: _ } = this.props;
             let _ = await _.Get().UpdateTagsOnPartnerEvent(
               this.m_cancelSignal,
-              __webpack_require__.clanSteamID,
-              __webpack_require__.AnnouncementGID,
+              _.clanSteamID,
+              _.AnnouncementGID,
               _,
               _,
               new _().SetUpdateSeasonalTags(
                 this.state.bAccept ? "halloween2019" : "halloween2019reviewed",
               ),
             );
-            (__webpack_require__.vecTags = _), this.props.closeModal();
+            (_.vecTags = _), this.props.closeModal();
           } catch (_) {
             let _ = (0, _._)(_);
             console.error("EventModerationTile " + _.strErrorMsg, _),
@@ -6305,7 +6298,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           [_] = (0, _.useState)(() =>
             (function () {
               const _ = (0, _._)(

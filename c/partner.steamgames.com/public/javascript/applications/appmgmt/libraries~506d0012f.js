@@ -20,8 +20,8 @@
                   return _.prototype && _.prototype.isReactComponent;
                 })()
               );
-            })((__webpack_require__ = _)) ||
-            "function" == typeof __webpack_require__ ||
+            })((_ = _)) ||
+            "function" == typeof _ ||
             (function (_) {
               return (
                 "object" == typeof _ &&
@@ -30,7 +30,7 @@
                   _.$$typeof.description,
                 )
               );
-            })(__webpack_require__)
+            })(_)
             ? _.createElement(_, _)
             : _
           : null;
@@ -43,12 +43,12 @@
             renderFallbackValue: null,
             ..._,
           },
-          [__webpack_require__] = _.useState(() => ({
+          [_] = _.useState(() => ({
             current: (0, _._)(_),
           })),
-          [_, _] = _.useState(() => __webpack_require__.current.initialState);
+          [_, _] = _.useState(() => _.current.initialState);
         return (
-          __webpack_require__.current.setOptions((_) => ({
+          _.current.setOptions((_) => ({
             ..._,
             ..._,
             state: {
@@ -59,7 +59,7 @@
               _(_), null == _.onStateChange || _.onStateChange(_);
             },
           })),
-          __webpack_require__.current
+          _.current
         );
       }
     },
@@ -682,14 +682,11 @@
         return _ >= _ && _ <= _;
       };
       (_.resolveFilterValue = (_) => {
-        let [_, __webpack_require__] = _,
+        let [_, _] = _,
           _ = "number" != typeof _ ? parseFloat(_) : _,
-          _ =
-            "number" != typeof __webpack_require__
-              ? parseFloat(__webpack_require__)
-              : __webpack_require__,
+          _ = "number" != typeof _ ? parseFloat(_) : _,
           _ = null === _ || Number.isNaN(_) ? -1 / 0 : _,
-          _ = null === __webpack_require__ || Number.isNaN(_) ? 1 / 0 : _;
+          _ = null === _ || Number.isNaN(_) ? 1 / 0 : _;
         if (_ > _) {
           const _ = _;
           (_ = _), (_ = _);
@@ -1396,7 +1393,7 @@
               )),
               (_.resetSize = () => {
                 _.setColumnSizing((_) => {
-                  let { [_._]: __webpack_require__, ..._ } = _;
+                  let { [_._]: _, ..._ } = _;
                   return _;
                 });
               }),
@@ -1758,28 +1755,19 @@
               )),
               (_.getIsAllRowsSelected = () => {
                 const _ = _.getFilteredRowModel().flatRows,
-                  { rowSelection: __webpack_require__ } = _.getState();
-                let _ = Boolean(
-                  _.length && Object.keys(__webpack_require__).length,
-                );
+                  { rowSelection: _ } = _.getState();
+                let _ = Boolean(_.length && Object.keys(_).length);
                 return (
-                  _ &&
-                    _.some(
-                      (_) => _.getCanSelect() && !__webpack_require__[_._],
-                    ) &&
-                    (_ = !1),
-                  _
+                  _ && _.some((_) => _.getCanSelect() && !_[_._]) && (_ = !1), _
                 );
               }),
               (_.getIsAllPageRowsSelected = () => {
                 const _ = _.getPaginationRowModel().flatRows.filter((_) =>
                     _.getCanSelect(),
                   ),
-                  { rowSelection: __webpack_require__ } = _.getState();
+                  { rowSelection: _ } = _.getState();
                 let _ = !!_.length;
-                return (
-                  _ && _.some((_) => !__webpack_require__[_._]) && (_ = !1), _
-                );
+                return _ && _.some((_) => !_[_._]) && (_ = !1), _;
               }),
               (_.getIsSomeRowsSelected = () => {
                 var _;
@@ -1827,16 +1815,16 @@
               });
             }),
               (_.getIsSelected = () => {
-                const { rowSelection: __webpack_require__ } = _.getState();
-                return _(_, __webpack_require__);
+                const { rowSelection: _ } = _.getState();
+                return _(_, _);
               }),
               (_.getIsSomeSelected = () => {
-                const { rowSelection: __webpack_require__ } = _.getState();
-                return "some" === _(_, __webpack_require__);
+                const { rowSelection: _ } = _.getState();
+                return "some" === _(_, _);
               }),
               (_.getIsAllSubRowsSelected = () => {
-                const { rowSelection: __webpack_require__ } = _.getState();
-                return "all" === _(_, __webpack_require__);
+                const { rowSelection: _ } = _.getState();
+                return "all" === _(_, _);
               }),
               (_.getCanSelect = () => {
                 var _;
@@ -3946,10 +3934,10 @@
           };
         },
         _ = (_) => {
-          const { offsetWidth: _, offsetHeight: __webpack_require__ } = _;
+          const { offsetWidth: _, offsetHeight: _ } = _;
           return {
             width: _,
-            height: __webpack_require__,
+            height: _,
           };
         },
         _ = (_) => _,
@@ -4096,22 +4084,22 @@
           }
           return _[_.options.horizontal ? "offsetWidth" : "offsetHeight"];
         },
-        _ = (_, { adjustments: _ = 0, behavior: __webpack_require__ }, _) => {
+        _ = (_, { adjustments: _ = 0, behavior: _ }, _) => {
           var _, _;
           const _ = _ + _;
           null == (_ = null == (_ = _.scrollElement) ? void 0 : _.scrollTo) ||
             _.call(_, {
               [_.options.horizontal ? "left" : "top"]: _,
-              behavior: __webpack_require__,
+              behavior: _,
             });
         },
-        _ = (_, { adjustments: _ = 0, behavior: __webpack_require__ }, _) => {
+        _ = (_, { adjustments: _ = 0, behavior: _ }, _) => {
           var _, _;
           const _ = _ + _;
           null == (_ = null == (_ = _.scrollElement) ? void 0 : _.scrollTo) ||
             _.call(_, {
               [_.options.horizontal ? "left" : "top"]: _,
-              behavior: __webpack_require__,
+              behavior: _,
             });
         };
       class _ {
@@ -4168,8 +4156,8 @@
             })()),
             (this.range = null),
             (this.setOptions = (_) => {
-              Object.entries(_).forEach(([_, __webpack_require__]) => {
-                void 0 === __webpack_require__ && delete _[_];
+              Object.entries(_).forEach(([_, _]) => {
+                void 0 === _ && delete _[_];
               }),
                 (this.options = {
                   debug: !1,
@@ -4344,7 +4332,7 @@
                 {
                   count: _,
                   paddingStart: _,
-                  scrollMargin: __webpack_require__,
+                  scrollMargin: _,
                   getItemKey: _,
                   enabled: _,
                 },
@@ -4374,7 +4362,7 @@
                       1 === this.options.lanes
                         ? _[_ - 1]
                         : this.getFurthestMeasurement(_, _),
-                    _ = _ ? _.end + this.options.gap : _ + __webpack_require__,
+                    _ = _ ? _.end + this.options.gap : _ + _,
                     _ = _.get(_),
                     _ = "number" == typeof _ ? _ : this.options.estimateSize(_),
                     _ = _ + _,
@@ -4553,13 +4541,11 @@
               if (0 !== _.length)
                 return _(_[_(0, _.length - 1, (_) => _(_[_]).start, _)]);
             }),
-            (this.getOffsetForAlignment = (_, _, __webpack_require__ = 0) => {
+            (this.getOffsetForAlignment = (_, _, _ = 0) => {
               const _ = this.getSize(),
                 _ = this.getScrollOffset();
               "auto" === _ && (_ = _ >= _ + _ ? "end" : "start"),
-                "center" === _
-                  ? (_ += (__webpack_require__ - _) / 2)
-                  : "end" === _ && (_ -= _);
+                "center" === _ ? (_ += (_ - _) / 2) : "end" === _ && (_ -= _);
               const _ = this.getTotalSize() + this.options.scrollMargin - _;
               return Math.max(Math.min(_, _), 0);
             }),
@@ -4585,23 +4571,23 @@
             (this.isDynamicMode = () => this.elementsCache.size > 0),
             (this.scrollToOffset = (
               _,
-              { align: _ = "start", behavior: __webpack_require__ } = {},
+              { align: _ = "start", behavior: _ } = {},
             ) => {
-              "smooth" === __webpack_require__ &&
+              "smooth" === _ &&
                 this.isDynamicMode() &&
                 console.warn(
                   "The `smooth` scroll behavior is not fully supported with dynamic size.",
                 ),
                 this._scrollToOffset(this.getOffsetForAlignment(_, _), {
                   adjustments: void 0,
-                  behavior: __webpack_require__,
+                  behavior: _,
                 });
             }),
             (this.scrollToIndex = (
               _,
-              { align: _ = "auto", behavior: __webpack_require__ } = {},
+              { align: _ = "auto", behavior: _ } = {},
             ) => {
-              "smooth" === __webpack_require__ &&
+              "smooth" === _ &&
                 this.isDynamicMode() &&
                 console.warn(
                   "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -4619,7 +4605,7 @@
                   const [_, _] = _;
                   this._scrollToOffset(_, {
                     adjustments: void 0,
-                    behavior: __webpack_require__,
+                    behavior: _,
                   }),
                     this.targetWindow.requestAnimationFrame(() => {
                       const _ = this.getScrollOffset(),
@@ -4673,14 +4659,11 @@
                 0,
               );
             }),
-            (this._scrollToOffset = (
-              _,
-              { adjustments: _, behavior: __webpack_require__ },
-            ) => {
+            (this._scrollToOffset = (_, { adjustments: _, behavior: _ }) => {
               this.options.scrollToFn(
                 _,
                 {
-                  behavior: __webpack_require__,
+                  behavior: _,
                   adjustments: _,
                 },
                 this,

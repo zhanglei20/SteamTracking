@@ -52,7 +52,7 @@
       const _ = _.memo(function (_) {
         const {
             linkMarkType: _,
-            onURLPasted: __webpack_require__,
+            onURLPasted: _,
             schema: _,
             onClickURL: _ = _,
           } = _,
@@ -88,7 +88,7 @@
                       _.altKey
                     ) && (_(_), !0),
                   clipboardTextParser(_, _, _, _) {
-                    const _ = (0, _._)(_, _, _, __webpack_require__);
+                    const _ = (0, _._)(_, _, _, _);
                     return _ && new _._(_._.from(_), _.start(), _.end());
                   },
                   handlePaste(_, _, _) {
@@ -96,7 +96,7 @@
                     if (
                       (_.content.descendants((_, _) => {
                         if (_.isText) {
-                          const _ = (0, _._)(_, _.text, _, __webpack_require__);
+                          const _ = (0, _._)(_, _.text, _, _);
                           _ &&
                             _.push({
                               node: _,
@@ -113,17 +113,9 @@
                     let _ = _.selection.from,
                       _ = 0;
                     for (const _ of _) {
-                      const {
-                          node: _,
-                          pos: __webpack_require__,
-                          rgNodes: _,
-                        } = _,
-                        _ = _.content
-                          .cut(_, __webpack_require__)
-                          .append(_._.from(_));
-                      _.insert(_, _),
-                        (_ += _.size + 2),
-                        (_ = __webpack_require__ + _.nodeSize);
+                      const { node: _, pos: _, rgNodes: _ } = _,
+                        _ = _.content.cut(_, _).append(_._.from(_));
+                      _.insert(_, _), (_ += _.size + 2), (_ = _ + _.nodeSize);
                     }
                     return (
                       _.insert(_, _.content.cut(_)),
@@ -151,7 +143,7 @@
                   },
                 },
               }),
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           );
         (0, _._)(_);
         let _ = null;
@@ -170,15 +162,15 @@
         );
       });
       function _(_) {
-        const { top: _, left: __webpack_require__, href: _ } = _,
+        const { top: _, left: _, href: _ } = _,
           [_, _] = _.useState(0),
           _ = _.useRef(null);
         _.useLayoutEffect(() => {
           _(_.current.getBoundingClientRect().width);
-        }, [_, __webpack_require__, _]);
+        }, [_, _, _]);
         const _ = {
           top: `${_}px`,
-          left: `${Math.max(__webpack_require__ - _ / 2, 12)}px`,
+          left: `${Math.max(_ - _ / 2, 12)}px`,
         };
         return (0, _.jsxs)("div", {
           className: _.Hover,
@@ -214,7 +206,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const { specs: _ } = _,
-          [__webpack_require__, _] = _.useState([]),
+          [_, _] = _.useState([]),
           _ = _.useRef(0),
           _ = _.useCallback(
             (_) => (
@@ -258,7 +250,7 @@
       function _(_) {
         const {
             element: _,
-            spec: __webpack_require__,
+            spec: _,
             getProps: _,
             onPropsChanged: _,
             actions: _,
@@ -268,7 +260,7 @@
         return (
           _.useEffect(() => _.Register(_).Unregister, [_, _]),
           _.createPortal(
-            _.createElement(__webpack_require__.component, {
+            _.createElement(_.component, {
               ..._(),
               selected: _(),
               ..._,
@@ -338,7 +330,7 @@
       function _(_) {
         const {
             _: _,
-            role: __webpack_require__,
+            role: _,
             visible: _ = !0,
             className: _,
             keepMounted: _ = !1,
@@ -350,7 +342,7 @@
             style: _,
             active: _,
             refDiv: _,
-          } = (function (_, _ = "height", __webpack_require__ = 250) {
+          } = (function (_, _ = "height", _ = 250) {
             const _ = _.useRef(null),
               _ = _.useRef(!0),
               [_, _] = _.useState("idle"),
@@ -422,7 +414,7 @@
               }, [_, _]);
             const _ = {
               ..._,
-              transition: `${_} ${__webpack_require__}ms`,
+              transition: `${_} ${_}ms`,
             };
             return {
               style: _,
@@ -433,7 +425,7 @@
         return _ || _ || _
           ? (0, _.jsx)("div", {
               _: _,
-              role: __webpack_require__,
+              role: _,
               className: _,
               ref: _,
               style: _,
@@ -468,16 +460,16 @@
       function _(_) {
         const {
             children: _,
-            ProcessFileUpload: __webpack_require__,
+            ProcessFileUpload: _,
             FetchImageURL: _,
             bAllowImageHotLinking: _ = !1,
           } = _,
           [_] = _.useState(() => ({
-            manager: new _(__webpack_require__, _, _),
+            manager: new _(_, _, _),
           })),
           { manager: _ } = _;
         return (
-          _.SetProps(__webpack_require__, _, _),
+          _.SetProps(_, _, _),
           (0, _.jsxs)(_.Provider, {
             value: _,
             children: [
@@ -722,10 +714,10 @@
         }
       }
       function _(_) {
-        const { element: _, data: __webpack_require__ } = _,
-          _ = "file" in __webpack_require__ ? __webpack_require__.file : void 0,
+        const { element: _, data: _ } = _,
+          _ = "file" in _ ? _.file : void 0,
           _ = _.useMemo(() => _ && URL.createObjectURL(_), [_]),
-          _ = "url" in __webpack_require__ ? __webpack_require__.url : _,
+          _ = "url" in _ ? _.url : _,
           _ = null == _ ? void 0 : _.type.startsWith("video/");
         return _.createPortal(
           (0, _.jsxs)("span", {
@@ -867,13 +859,13 @@
           );
         }
         async ProcessDataURL(_, _) {
-          const [__webpack_require__, _] = _.split(","),
+          const [_, _] = _.split(","),
             _ = __webpack_require__.match(
               /^data:(?<mimetype>[^;]*);(?<encoding>.*)$/,
             );
           if (!_ || "base64" != _.groups.encoding)
             return void this.AddError(
-              `Unable to data URL, unexpected format: ${__webpack_require__}`,
+              `Unable to data URL, unexpected format: ${_}`,
             );
           const _ = null == _ ? void 0 : _.groups.mimetype,
             _ = (function (_) {
@@ -972,7 +964,7 @@
           : null;
       });
       function _(_) {
-        const { manager: _, children: __webpack_require__ } = _,
+        const { manager: _, children: _ } = _,
           _ = _.useCallback(
             (_, _) => {
               for (const _ of _)
@@ -981,9 +973,9 @@
             [_],
           ),
           [_, _] = (0, _._)(_);
-        return _.cloneElement(__webpack_require__, {
+        return _.cloneElement(_, {
           ..._,
-          ...__webpack_require__.props,
+          ..._.props,
         });
       }
     },

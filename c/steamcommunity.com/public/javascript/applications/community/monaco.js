@@ -84,7 +84,7 @@
           });
         var _ = _[_],
           _ = _[0];
-        return Promise.all(_.slice(1).map(__webpack_require__._)).then(() =>
+        return Promise.all(_.slice(1).map(_._)).then(() =>
           __webpack_require__(_),
         );
       }

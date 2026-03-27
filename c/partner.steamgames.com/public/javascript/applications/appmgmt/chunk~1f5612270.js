@@ -80,18 +80,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            closeModal: _,
-            fnOnApply: __webpack_require__,
-            singlePackage: _,
-          } = _,
+        const { closeModal: _, fnOnApply: _, singlePackage: _ } = _,
           _ = (0, _._)();
         return (0, _.jsxs)(_._, {
           closeModal: _,
           bAlertDialog: !0,
           strTitle: (0, _._)("#PricingDashboard_ApplyGuidelines_Header"),
           onOK: () => {
-            _(), __webpack_require__ && __webpack_require__();
+            _(), _ && __webpack_require__();
           },
           strOKButtonText: _
             ? (0, _._)("#PricingDashboard_ApplyGuidelines_Button_Single")
@@ -149,10 +145,10 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { rgLocalPriceOverrides: _ } = _,
-          [__webpack_require__, _] = _.useState(_.length < 9);
+          [_, _] = _.useState(_.length < 9);
         return (0, _.jsx)("div", {
           className: _().SeeDetailsSection,
-          children: __webpack_require__
+          children: _
             ? (0, _.jsx)("div", {
                 className: _().PriceOverrideSummaryList,
                 children: _.map((_) =>
@@ -175,19 +171,16 @@
       function _(_) {
         const { override: _ } = _,
           {
-            packageID: __webpack_require__,
+            packageID: _,
             strPriceKey: _,
             nPriceInCents: _,
             nOldPriceInCents: _,
           } = _,
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           [_, _, _] = (0, _._)(_, _),
           [_, _, _] = (0, _._)(_, _),
           _ = (0, _._)(_),
-          { nMinPriceInCents: _, nMaxPriceInCents: _ } = (0, _._)(
-            __webpack_require__,
-            _,
-          ),
+          { nMinPriceInCents: _, nMaxPriceInCents: _ } = (0, _._)(_, _),
           _ = _ < _ || (!!_ && _ > _);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().PriceOverrideSummary),
@@ -200,7 +193,7 @@
               children: _,
             }),
             (0, _.jsx)(_._, {
-              toolTipContent: `${__webpack_require__}: ${_}`,
+              toolTipContent: `${_}: ${_}`,
               direction: "overlay",
               className: _().PackageName,
               strTooltipClassname: _().HoverToolTip,
@@ -208,7 +201,7 @@
             }),
             _
               ? (0, _.jsx)(_._, {
-                  packageID: __webpack_require__,
+                  packageID: _,
                   strPriceKey: _,
                 })
               : (0, _.jsx)(_._, {
@@ -274,8 +267,8 @@
         _ = __webpack_require__("chunkid");
       const _ = new _._("price-grid-cell-popout-elements");
       function _(_) {
-        let { hoverKey: _, className: __webpack_require__, renderHover: _ } = _,
-          _ = (0, _._)(_().MoreDots, __webpack_require__),
+        let { hoverKey: _, className: _, renderHover: _ } = _,
+          _ = (0, _._)(_().MoreDots, _),
           _ = _.useRef(void 0),
           _ = _.useCallback(() => {
             _.HideElement(_.current.ownerDocument, _);
@@ -331,11 +324,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { closeModal: _, packageID: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__),
+        const { closeModal: _, packageID: _ } = _,
+          _ = (0, _._)(_),
           _ = _.some((_) => _.nPriceInCents > _.nOldPriceInCents),
           _ = (function (_, _) {
-            let [__webpack_require__, _] = _.useState(void 0);
+            let [_, _] = _.useState(void 0);
             const _ = (0, _._)(),
               _ = (0, _._)(60);
             if (
@@ -349,25 +342,25 @@
               !_)
             )
               return _._;
-            if (null == __webpack_require__) return _.Loading;
-            if (1 != __webpack_require__) return _.FailedToLoad;
+            if (null == _) return _.Loading;
+            if (1 != _) return _.FailedToLoad;
             const _ = (0, _._)(_);
             return _.every((_) => _.rtStartDate > _ + _._ || _.rtEndDate < _)
               ? _._
               : _.RequiresCooldown;
-          })(__webpack_require__, _),
+          })(_, _),
           { fnPublish: _, ePublishState: _ } = (function (_) {
             const _ = (0, _._)(),
-              [__webpack_require__, _] = _.useState(_.Idle);
+              [_, _] = _.useState(_.Idle);
             let _ = _.useCallback(async () => {
               _(_.Loading);
               1 == (await _(_)).success ? _(_._) : _(_.Failed);
             }, [_, _, _]);
             return {
               fnPublish: _,
-              ePublishState: __webpack_require__,
+              ePublishState: _,
             };
-          })(__webpack_require__);
+          })(_);
         let _;
         if (_ == _.FailedToLoad)
           _ = (0, _._)(
@@ -500,7 +493,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { packageID: _, bShowCancel: __webpack_require__ } = _,
+        const { packageID: _, bShowCancel: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = _ && (0, _._)(_.rtSubmitted),
@@ -559,7 +552,7 @@
                     }),
                   ],
                 })));
-        let _ = __webpack_require__ && (_ || !!_);
+        let _ = _ && (_ || !!_);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().ProposalState, _),
           children: [
@@ -587,7 +580,7 @@
       }
       function _(_) {
         const { packageID: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)();
+          [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -597,7 +590,7 @@
               ),
             }),
             (0, _.jsx)(_._, {
-              active: __webpack_require__,
+              active: _,
               children: (0, _.jsx)(_, {
                 packageID: _,
                 closeModal: _,
@@ -746,16 +739,12 @@
         );
       }
       function _(_) {
-        const {
-            closeModal: _,
-            strContinueUrl: __webpack_require__,
-            bReloadPageOnSave: _,
-          } = _,
+        const { closeModal: _, strContinueUrl: _, bReloadPageOnSave: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _] = _.useState(void 0),
           _ = (function (_) {
-            let [_, __webpack_require__] = _.useState(void 0);
+            let [_, _] = _.useState(void 0);
             const _ = (0, _._)(),
               _ = (0, _._)(60);
             return (
@@ -767,7 +756,7 @@
                       __webpack_require__(_);
                     })
                   : __webpack_require__("chunkid");
-              }, [__webpack_require__, _, _]),
+              }, [_, _, _]),
               _.useMemo(() => {
                 if (void 0 === _) return null;
                 if (1 != _)
@@ -793,7 +782,7 @@
             );
           })(_);
         if (!_) return null;
-        const _ = !!__webpack_require__,
+        const _ = !!_,
           _ = (0, _._)(
             _
               ? "#PackageGrid_NavigationWarning_Title"
@@ -821,12 +810,12 @@
           _ = !1,
           _ = new Set();
         for (const _ of _) {
-          const { nMinPriceInCents: _, nMaxPriceInCents: __webpack_require__ } =
-            (0, _._)(_.packageID, _.strPriceKey);
+          const { nMinPriceInCents: _, nMaxPriceInCents: _ } = (0, _._)(
+            _.packageID,
+            _.strPriceKey,
+          );
           (_ = _ || _.nPriceInCents < _),
-            (_ =
-              _ ||
-              (!!__webpack_require__ && _.nPriceInCents > __webpack_require__)),
+            (_ = _ || (!!_ && _.nPriceInCents > _)),
             (_ = _ || _.nPriceInCents > _.nOldPriceInCents),
             _.add(_.packageID);
         }
@@ -839,8 +828,8 @@
         const _ = _ || _,
           _ = _ || void 0 === _ || 0 != _.length,
           _ = (_) => {
-            __webpack_require__
-              ? (window.location.href = __webpack_require__)
+            _
+              ? (window.location.href = _)
               : _ && !_ && window.location.reload();
           },
           _ = () => {
@@ -933,8 +922,8 @@
       }
       function _(_) {
         let _,
-          { priceIncrease: __webpack_require__, nextDiscount: _ } = _;
-        return __webpack_require__
+          { priceIncrease: _, nextDiscount: _ } = _;
+        return _
           ? ((_ =
               _ < _
                 ? (0, _._)(
@@ -966,7 +955,7 @@
           : null;
       }
       function _(_) {
-        let { value: _, onChange: __webpack_require__ } = _,
+        let { value: _, onChange: _ } = _,
           _ = _.nextDiscount <= _;
         return (0, _.jsxs)("div", {
           className: _().AutoPublishCheckBox,
@@ -988,17 +977,13 @@
         });
       }
       function _(_) {
-        const {
-            closeModal: _,
-            bAutoPublish: __webpack_require__,
-            fnOnSuccess: _,
-          } = _,
+        const { closeModal: _, bAutoPublish: _, fnOnSuccess: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)("SaveProgressDialog"),
           [_, _] = _.useState(0),
           [_, _] = _.useState(null),
-          _ = !__webpack_require__;
+          _ = !_;
         return (
           _.useEffect(() => {
             (async () => {

@@ -231,13 +231,13 @@
         OnTimelineEntryRemoved(_) {
           const {
             entry_id: _,
-            timeline_id: __webpack_require__,
+            timeline_id: _,
             game_id: _,
           } = _.Body().toObject();
           if (_) {
             const _ = this.m_mapTimelineLoaders.get(_);
             if (_) {
-              _.loader.RemoveTimelineEvent(__webpack_require__, _);
+              _.loader.RemoveTimelineEvent(_, _);
             }
           }
           return 1;

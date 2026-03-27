@@ -6179,7 +6179,7 @@ Error generating stack: ` +
                     break;
                   case "script":
                     (_ = _.createElement("div")),
-                      (_.innerHTML = "<script></script>"),
+                      (_.innerHTML = "<script><\/script>"),
                       (_ = _.removeChild(_.firstChild));
                     break;
                   case "select":

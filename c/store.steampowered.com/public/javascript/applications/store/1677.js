@@ -97,7 +97,7 @@
           const {
             persona: _,
             animating: _,
-            className: __webpack_require__,
+            className: _,
             size: _,
             dim: _,
             ..._
@@ -109,7 +109,7 @@
               className: (0, _._)(
                 _().SnoozeContainer,
                 _.online_state,
-                __webpack_require__,
+                _,
                 _ && _().animating,
                 _,
                 _ && _().Dim,
@@ -142,7 +142,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-        const { persona: _, className: __webpack_require__, ..._ } = _;
+        const { persona: _, className: _, ..._ } = _;
         if (!_) return null;
         if (!_.is_online) return null;
         const _ = _.HasStateFlag(512),
@@ -155,7 +155,7 @@
             _ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(
-                  __webpack_require__,
+                  _,
                   _().PersonaStatusIcon,
                   _().MobilePhoneIcon,
                   (0, _._)(_),
@@ -167,7 +167,7 @@
             _ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(
-                  __webpack_require__,
+                  _,
                   _().PersonaStatusIcon,
                   _().VRIcon,
                   (0, _._)(_),
@@ -179,7 +179,7 @@
             _ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(
-                  __webpack_require__,
+                  _,
                   _().PersonaStatusIcon,
                   _().BigPictureIcon,
                   (0, _._)(_),
@@ -191,7 +191,7 @@
             _ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(
-                  __webpack_require__,
+                  _,
                   _().PersonaStatusIcon,
                   _().SteamDeckIcon,
                   (0, _._)(_),
@@ -203,7 +203,7 @@
             _ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(
-                  __webpack_require__,
+                  _,
                   _().PersonaStatusIcon,
                   _().SteamDeckIcon,
                   (0, _._)(_),
@@ -235,7 +235,7 @@
           const {
             className: _,
             onContextMenu: _,
-            persona: __webpack_require__,
+            persona: _,
             eFriendRelationship: _,
             bIsSelf: _,
             bParenthesizeNicknames: _,
@@ -261,36 +261,36 @@
             _ = [
               _,
               _().personaNameAndStatusLabel,
-              (0, _._)(__webpack_require__),
+              (0, _._)(_),
               _ && _().compactView,
               _ && _().NoMask,
             ];
-          _ || __webpack_require__.has_public_party_beacon
+          _ || _.has_public_party_beacon
             ? (_ = (0, _.jsx)(_, {
-                persona: __webpack_require__,
+                persona: _,
               }))
             : (0, _._)(_)
               ? ((_ = (0, _._)("#PersonaStateBlocked")), _.push(_().blocked))
-              : __webpack_require__.is_ingame
+              : _.is_ingame
                 ? ((_ =
-                    !__webpack_require__.is_in_nonsteam_game || _ || (0, _._)(_)
+                    !_.is_in_nonsteam_game || _ || (0, _._)(_)
                       ? __webpack_require__.GetCurrentGameName()
                       : (0, _._)("#PersonaStateInNonSteamGame")),
                   _ || _
                     ? _ &&
-                      __webpack_require__.is_awayOrSnooze &&
+                      _.is_awayOrSnooze &&
                       (_ = (0, _._)("#PersonaStateAway"))
                     : (_ = __webpack_require__.GetCurrentGameRichPresence()))
-                : __webpack_require__.m_broadcastAccountId &&
+                : _.m_broadcastAccountId &&
                   (_ = (0, _._)("#PersonaStateWatchingBroadcast")),
             _ || (_ = __webpack_require__.GetLocalizedOnlineStatus()),
             _ && (_ = _());
           let _ = !_ && !_;
           !1 === _ && (_ = !0),
-            __webpack_require__.is_awayOrSnooze &&
+            _.is_awayOrSnooze &&
               _ &&
               (_ = (0, _.jsx)(_, {
-                persona: __webpack_require__,
+                persona: _,
               }));
           let _ = null;
           _
@@ -303,12 +303,12 @@
             _ && _.push(_().hidePersona),
             _ && (_ = _()),
             (!_ && _) || _.push(_().twoLine);
-          const _ = !__webpack_require__.is_ingame && !_,
+          const _ = !_.is_ingame && !_,
             _ = !_ && _,
             _ = _ && (!_ || !_),
             _ = (0, _._)(_._.LAUNCHER_TYPE);
           let _ = _ && !_,
-            _ = _ ? _ : __webpack_require__.m_strPlayerName,
+            _ = _ ? _ : _.m_strPlayerName,
             _ = !_ && (_ || _) && _;
           return (0, _.jsxs)("div", {
             ..._,
@@ -343,11 +343,10 @@
                       children: " *",
                     }),
                   (0, _.jsx)(_, {
-                    persona: __webpack_require__,
+                    persona: _,
                   }),
                   _,
-                  (__webpack_require__.m_bPlayerNamePending ||
-                    __webpack_require__.m_bAvatarPending) &&
+                  (_.m_bPlayerNamePending || _.m_bAvatarPending) &&
                     _ &&
                     (0, _.jsx)("div", {
                       className: _().PendingPersona,
@@ -394,14 +393,14 @@
       const _ = (0, _._)((_) => {
         const {
           persona: _,
-          bParenthesizeNicknames: __webpack_require__,
+          bParenthesizeNicknames: _,
           strNickname: _,
           bIgnorePersonaStatus: _,
           bDisableColoring: _,
           className: _,
           ..._
         } = _;
-        let _ = _ && !__webpack_require__ ? _ : _.m_strPlayerName;
+        let _ = _ && !_ ? _ : _.m_strPlayerName;
         return (0, _.jsx)("span", {
           ..._,
           className: (0, _._)(_, _ && _().DisableColoring, !_ && (0, _._)(_)),
@@ -409,7 +408,7 @@
             className: _().playerName,
             children: [
               _ || " ",
-              __webpack_require__ &&
+              _ &&
                 _ &&
                 (0, _.jsxs)("span", {
                   className: _().playerNickname,

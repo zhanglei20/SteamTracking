@@ -16330,12 +16330,10 @@
       const _ = (_) => {
           const {
               nProjectID: _,
-              arrOtherPublishedVersions: __webpack_require__,
+              arrOtherPublishedVersions: _,
               msgProjectConfig: _,
             } = _(),
-            [_, _] = _.useState(
-              __webpack_require__.length > 0 ? __webpack_require__[0] : 0,
-            ),
+            [_, _] = _.useState(_.length > 0 ? _[0] : 0),
             [_, _] = _.useState(!1),
             _ = async (_) => {
               _(!0),
@@ -16394,10 +16392,7 @@
           });
         },
         _ = (_) => {
-          const {
-              msgProjectConfig: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { msgProjectConfig: _, msgWorkingProjectConfig: _ } = _(),
             [_, _] = _.useState(!1),
             [_, _] = _.useState(!1);
           _.useEffect(() => {
@@ -16409,7 +16404,7 @@
             showModifications: !0,
             arrayDiffMethod: "lcs",
           });
-          return _ && __webpack_require__
+          return _ && _
             ? (0, _.jsxs)(_._, {
                 active: _.bVisible,
                 onDismiss: _.fnClosePopup,
@@ -16629,7 +16624,7 @@
         _ = (_) => {
           const {
               nProjectID: _,
-              nPublishedVersion: __webpack_require__,
+              nPublishedVersion: _,
               msgProjectConfig: _,
               msgWorkingProjectConfig: _,
             } = _(),
@@ -16679,7 +16674,7 @@
                     "#SteamLearn_Project_Publish_Warning",
                   ),
                   onOK: async () => {
-                    const [__webpack_require__, _] = await (async function (_) {
+                    const [_, _] = await (async function (_) {
                       let _ = _._.Init(_);
                       _.Body().set_project_id(_);
                       const _ = await _.PublishProject(
@@ -16697,7 +16692,7 @@
                           ])
                         : [3, 0];
                     })(_);
-                    1 == __webpack_require__ &&
+                    1 == _ &&
                       (console.log("switching to version", _),
                       setTimeout(
                         () => _(_, _, _, _, _.arrMsgProjectConfigInfos),
@@ -16744,7 +16739,7 @@
                       _ &&
                         (0, _.jsx)("select", {
                           className: _.PublishedVersionInput,
-                          value: __webpack_require__,
+                          value: _,
                           onChange: (_) =>
                             _(
                               _,
@@ -16786,7 +16781,7 @@
               (0, _.jsxs)("div", {
                 className: _.StatusSection,
                 children: [
-                  (_ || 0 != __webpack_require__) &&
+                  (_ || 0 != _) &&
                     (0, _.jsx)(_._, {
                       disabled: !_ || _,
                       onClick: (_) =>
@@ -16796,7 +16791,7 @@
                       children: (0, _._)("#SteamLearn_Project_Save"),
                     }),
                   !_ &&
-                    0 == __webpack_require__ &&
+                    0 == _ &&
                     (0, _.jsx)(_._, {
                       disabled: _,
                       onClick: (_) => _(),
@@ -16818,7 +16813,7 @@
                     bVisible: _,
                     fnClosePopup: _,
                   }),
-                  0 == __webpack_require__ &&
+                  0 == _ &&
                     _ &&
                     _.length > 0 &&
                     !_ &&
@@ -16853,7 +16848,7 @@
       }
       const _ = () => {
         const [_, _] = _.useState(_.Hidden),
-          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(""),
           [_, _] = _.useState(0),
           _ = (0, _._)(),
           _ = new Date(),
@@ -16879,7 +16874,7 @@
                 (0, _.jsx)("input", {
                   type: "text",
                   className: _.ListFilter,
-                  value: __webpack_require__,
+                  value: _,
                   onChange: (_) => _(_.target.value),
                   placeholder: (0, _._)("#SteamLearn_FilterProject"),
                 }),
@@ -16924,7 +16919,7 @@
         _ = __webpack_require__("chunkid");
       const _ = () => {
           const [_, _] = _.useState(""),
-            [__webpack_require__, _] = _.useState(""),
+            [_, _] = _.useState(""),
             [_, _] = _.useState(!1);
           return (0, _.jsxs)("div", {
             className: _.ProjectCreatePage,
@@ -16954,7 +16949,7 @@
                   }),
                   (0, _.jsx)("textarea", {
                     className: _.InputAreaWide,
-                    value: __webpack_require__,
+                    value: _,
                     onChange: (_) => _(_.target.value),
                   }),
                 ],
@@ -16963,7 +16958,7 @@
                 disabled: !_,
                 onClick: async () => {
                   _(!1);
-                  const [_, _] = await _(_, __webpack_require__);
+                  const [_, _] = await _(_, _);
                   switch (_) {
                     case 1: {
                       const _ =
@@ -17037,7 +17032,7 @@
       })(_, 200);
       const _ = () => {
           const { msgWorkingProjectConfig: _, nPublishedVersion: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _(),
             _ = 0 == _,
             _ = (_) => {
@@ -17124,7 +17119,7 @@
                         ),
                       ),
                       (0, _.jsx)(_, {
-                        bShowPopup: __webpack_require__,
+                        bShowPopup: _,
                         fnSetShowPopup: _,
                         fnAddSelectedDataSources: (_) => {
                           for (const _ of _) _(_, _);
@@ -17192,7 +17187,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState([]),
+          const [_, _] = _.useState([]),
             _ = _(_.nDataSourceID),
             { msgWorkingProjectConfig: _ } = _();
           if (!_.isSuccess) return null;
@@ -17288,10 +17283,7 @@
           });
         },
         _ = (_) => {
-          const {
-              msgWorkingProjectConfig: _,
-              nPublishedVersion: __webpack_require__,
-            } = _(),
+          const { msgWorkingProjectConfig: _, nPublishedVersion: _ } = _(),
             _ = _(
               _.rgSettings.nDataSourceID,
               _.rgSettings.arrDataElementUsagePathNames[0],
@@ -17408,7 +17400,7 @@
             }),
               _ && _(_);
           }, [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _]);
-          const _ = 0 == __webpack_require__,
+          const _ = 0 == _,
             _ = (_, _, _) => {
               _(_),
                 /^-?[\d]*\.?[\d]{0,2}$/.test(_)
@@ -18054,7 +18046,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState([]);
+          const [_, _] = _.useState([]);
           _.useEffect(() => {
             _.bShowPopup || __webpack_require__([]);
           }, [_.bShowPopup]);
@@ -18184,7 +18176,7 @@
       }
       const _ = () => {
           const _ = _(),
-            [_, __webpack_require__] = _.useState(0),
+            [_, _] = _.useState(0),
             _ = _.data;
           if (!_) return null;
           let _ = new Map();
@@ -18337,7 +18329,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = () => {
         const { nProjectID: _, msgWorkingProjectConfig: _ } = _(),
-          [__webpack_require__, _] = _.useState({}),
+          [_, _] = _.useState({}),
           [_, _] = _.useState((0, _.jsx)("div", {})),
           [_, _] = _.useState("10"),
           [_, _] = _.useState(0),
@@ -18378,7 +18370,7 @@
                 [_.data_element_path()]: "0",
               }));
           }, [_]);
-        return 0 == Object.keys(__webpack_require__).length
+        return 0 == Object.keys(_).length
           ? null
           : (0, _.jsx)("div", {
               className: _.ProjectInferenceTesterPage,
@@ -18423,11 +18415,10 @@
                               (0, _.jsx)("input", {
                                 type: "text",
                                 className: _.ValueInput,
-                                value:
-                                  __webpack_require__[_.data_element_path()],
+                                value: _[_.data_element_path()],
                                 onChange: (_) =>
                                   _({
-                                    ...__webpack_require__,
+                                    ..._,
                                     [_.data_element_path()]: _.target.value,
                                   }),
                               }),
@@ -18503,14 +18494,10 @@
                           for (const _ of _) {
                             if (0 == _.input()) continue;
                             const _ = new _();
-                            isNaN(+__webpack_require__[_.data_element_path()])
-                              ? _.set_string_value(
-                                  __webpack_require__[_.data_element_path()],
-                                )
+                            isNaN(+_[_.data_element_path()])
+                              ? _.set_string_value(_[_.data_element_path()])
                               : _.set_float_value(
-                                  parseFloat(
-                                    __webpack_require__[_.data_element_path()],
-                                  ),
+                                  parseFloat(_[_.data_element_path()]),
                                 ),
                               _.Body().add_data(_);
                           }
@@ -18679,7 +18666,7 @@
         _ = (_) => {
           const {
               nProjectID: _,
-              nPublishedVersion: __webpack_require__,
+              nPublishedVersion: _,
               msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(_.fnGetInitialValue()),
@@ -18688,7 +18675,7 @@
               !_.fnValidateValue || _.fnValidateValue(_.fnGetInitialValue()),
             ),
             [_, _] = _.useState(_),
-            [_, _] = _.useState(__webpack_require__);
+            [_, _] = _.useState(_);
           _.useEffect(() => {
             const _ = _.digitCount && _.digitCount > 0;
             ((!_ && parseInt(_.fnGetInitialValue()) != parseInt(_)) ||
@@ -18696,12 +18683,12 @@
                 parseFloat(_.fnGetInitialValue()).toFixed(_.digitCount) !=
                   parseFloat(_).toFixed(_.digitCount)) ||
               _ != _ ||
-              _ != __webpack_require__) &&
+              _ != _) &&
               (_(_.fnGetInitialValue()),
               _(!_.fnValidateValue || _.fnValidateValue(_.fnGetInitialValue())),
               _(_),
-              _(__webpack_require__));
-          }, [_, _, _, _, __webpack_require__, _]);
+              _(_));
+          }, [_, _, _, _, _, _]);
           return (0, _.jsxs)("div", {
             className: _.InputOption,
             children: [
@@ -18773,19 +18760,17 @@
         _ = (_) => {
           const {
               nProjectID: _,
-              nPublishedVersion: __webpack_require__,
+              nPublishedVersion: _,
               msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(_.fnGetInitialValue()),
             [_, _] = _.useState(_),
-            [_, _] = _.useState(__webpack_require__);
+            [_, _] = _.useState(_);
           return (
             _.useEffect(() => {
-              (_.fnGetInitialValue() != _ ||
-                _ != _ ||
-                _ != __webpack_require__) &&
-                (_(_.fnGetInitialValue()), _(_), _(__webpack_require__));
-            }, [_, _, _, _, __webpack_require__, _]),
+              (_.fnGetInitialValue() != _ || _ != _ || _ != _) &&
+                (_(_.fnGetInitialValue()), _(_), _(_));
+            }, [_, _, _, _, _, _]),
             _.hidden
               ? null
               : (0, _.jsx)("div", {
@@ -18812,7 +18797,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -18820,7 +18805,7 @@
             className: (0, _._)(_.FlowNode, _.BatchNormalizationNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -18923,7 +18908,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -18967,7 +18952,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -18979,9 +18964,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -18996,7 +18979,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -19024,7 +19007,7 @@
             className: (0, _._)(_.FlowNode, _.BertFinetuneNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -19168,7 +19151,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.bert_finetune().bert_model()),
             [_, _] = _.useState(
               _.msgNode.bert_finetune().unfrozen_layers()?.toString() || "0",
@@ -19252,7 +19235,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -19314,7 +19297,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.bert_finetune().set_bert_model(_),
                         _.msgNode
                           .bert_finetune()
@@ -19335,7 +19318,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -19343,7 +19326,7 @@
             className: (0, _._)(_.FlowNode, _.BertNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -19444,7 +19427,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -19486,7 +19469,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -19501,9 +19484,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -19518,7 +19499,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -19550,7 +19531,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -19694,7 +19675,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.bert_tokenizer().bert_model()),
             [_, _] = _.useState(
               _.msgNode.bert_tokenizer().sequence_length()?.toString() || "512",
@@ -19778,7 +19759,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -19839,7 +19820,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.bert_tokenizer().set_bert_model(_),
                         _.msgNode
                           .bert_tokenizer()
@@ -19860,7 +19841,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -19880,7 +19861,7 @@
               className: (0, _._)(_.FlowNode, _.CombineNode, _.Preprocessing),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -20123,7 +20104,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -20143,7 +20124,7 @@
               className: (0, _._)(_.FlowNode, _.ConcatNode, _.Keras),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -20433,7 +20414,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -20480,7 +20461,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -21207,7 +21188,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -21220,7 +21201,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -21335,7 +21316,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           return (0, _.jsxs)(_._, {
             active: _.bVisible,
             onDismiss: () => _.fnSetPopupVisible(!1),
@@ -21376,7 +21357,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -21389,7 +21370,7 @@
                     children: [
                       (0, _.jsx)(_._, {
                         onClick: () => {
-                          _.msgNode.set_comment(__webpack_require__),
+                          _.msgNode.set_comment(_),
                             _(_),
                             _.fnSetPopupVisible(!1);
                         },
@@ -21439,7 +21420,7 @@
       }
       const _ = (_) => {
           const _ = _.data.msgNode,
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             { msgWorkingProjectConfig: _ } = _(),
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -21447,7 +21428,7 @@
             className: (0, _._)(_.FlowNode, _.DenseNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -21595,7 +21576,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dense().width().toString()),
             [_, _] = _.useState(_.msgNode.dense().activation()),
             [_, _] = _.useState(_.msgNode.dense().regularization());
@@ -21705,7 +21686,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -21835,7 +21816,7 @@
                       _.msgNode.dense().set_width(parseInt(_)),
                         _.msgNode.dense().set_activation(_),
                         _.msgNode.dense().set_regularization(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -21852,7 +21833,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -21860,7 +21841,7 @@
             className: (0, _._)(_.FlowNode, _.Conv1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -22022,7 +22003,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.conv_1d().filters().toString()),
             [_, _] = _.useState(_.msgNode.conv_1d().kernel_size().toString()),
             [_, _] = _.useState(
@@ -22101,7 +22082,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -22225,7 +22206,7 @@
                         _.msgNode.conv_1d().set_kernel_size(parseInt(_)),
                         _.msgNode.conv_1d().set_strides(parseInt(_)),
                         _.msgNode.conv_1d().set_activation(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -22242,7 +22223,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -22250,7 +22231,7 @@
             className: (0, _._)(_.FlowNode, _.DenseStackNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -22422,7 +22403,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.dense_stack().width().length.toString(),
             ),
@@ -22540,7 +22521,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -22710,7 +22691,7 @@
                         _.msgNode.dense_stack().set_dropout_pct(parseInt(_)),
                         _.msgNode.dense_stack().set_activation(_),
                         _.msgNode.dense_stack().set_regularization(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -22727,7 +22708,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -22735,7 +22716,7 @@
             className: (0, _._)(_.FlowNode, _.DotNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -22854,7 +22835,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dot().normalize());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.dot().normalize());
@@ -22897,7 +22878,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -22950,7 +22931,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.dot().set_normalize(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -22967,7 +22948,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -22975,7 +22956,7 @@
             className: (0, _._)(_.FlowNode, _.DropoutNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -23092,7 +23073,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.dropout().dropout_pct().toString());
           _.useEffect(() => {
             _(_.msgNode.comment()),
@@ -23138,7 +23119,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -23180,7 +23161,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.dropout().set_dropout_pct(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -23197,7 +23178,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -23206,7 +23187,7 @@
             className: (0, _._)(_.FlowNode, _.EmbeddingNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -23375,7 +23356,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.embedding().compact_table().length > 0
                 ? _.msgNode.embedding().compact_table()
@@ -23438,7 +23419,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -23608,7 +23589,7 @@
                         _.msgNode.embedding().set_flatten(_),
                         _.msgNode.embedding().set_export_name(_),
                         _.msgNode.embedding().set_embed_name(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -23625,7 +23606,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)();
           _.useEffect(() => {
@@ -23637,14 +23618,11 @@
                 !1,
                 `No input connector on node ${_.toObject()}`,
               );
-            const {
-                msgIncomingNode: __webpack_require__,
-                nIncomingConnectorID: _,
-              } = _(_, _),
+            const { msgIncomingNode: _, nIncomingConnectorID: _ } = _(_, _),
               _ = _.connectors().filter((_) => !_.is_input_connector()).length;
             let _ = _;
-            if (__webpack_require__) {
-              const _ = _(_, __webpack_require__, _);
+            if (_) {
+              const _ = _(_, _, _);
               (0, _._)(
                 _.length <= 1,
                 `Input tensor to STEAMLEARN_NODE_TYPE_EXPLODE not one-dimensional! ( ${_.length} ) (node ${__webpack_require__.node_id()}, connector ${_}`,
@@ -23692,7 +23670,7 @@
             className: (0, _._)(_.FlowNode, _.ExplodeNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -23793,7 +23771,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -23837,7 +23815,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -23850,7 +23828,7 @@
                     children: [
                       (0, _.jsx)(_._, {
                         onClick: () => {
-                          _.msgNode.set_comment(__webpack_require__),
+                          _.msgNode.set_comment(_),
                             _(_),
                             _.fnSetPopupVisible(!1);
                         },
@@ -23869,7 +23847,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ =
               ((0, _._)(),
@@ -23887,7 +23865,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -24083,7 +24061,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] =
+            [_, _] =
               (_.msgNode.connectors().filter((_) => _.is_input_connector())
                 .length,
               _.msgNode.connectors().filter((_) => !_.is_input_connector())
@@ -24156,7 +24134,7 @@
                           isText: !0,
                           dontUpdateProject: !0,
                           width: 200,
-                          fnGetInitialValue: () => __webpack_require__,
+                          fnGetInitialValue: () => _,
                           fnSetValue: (_) => _(_),
                         }),
                       ],
@@ -24338,7 +24316,7 @@
                           _.msgNode.external_embedding().set_embedding_name(_),
                           _.msgNode.external_embedding().set_compact_table(_),
                           _.msgNode.external_embedding().set_exclude_missing(_),
-                          _.msgNode.set_comment(__webpack_require__),
+                          _.msgNode.set_comment(_),
                           _(_),
                           _.fnSetPopupVisible(!1);
                       },
@@ -24356,7 +24334,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _(_.data.msgNode.external_model().project_id()),
@@ -24377,7 +24355,7 @@
               className: (0, _._)(_.FlowNode, _.ExternalModelNode, _.Keras),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -24938,7 +24916,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = 1 == _.extract().mode(),
@@ -24958,7 +24936,7 @@
             className: (0, _._)(_.FlowNode, _.ExtractNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -25867,7 +25845,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -25875,7 +25853,7 @@
             className: (0, _._)(_.FlowNode, _.FlattenNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -25976,7 +25954,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -26020,7 +25998,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26035,9 +26013,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -26052,7 +26028,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -26060,7 +26036,7 @@
             className: (0, _._)(_.FlowNode, _.GlobalAvgPooling1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -26163,7 +26139,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_]);
@@ -26207,7 +26183,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26222,9 +26198,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -26239,7 +26213,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -26247,7 +26221,7 @@
             className: (0, _._)(_.FlowNode, _.GlobalMaxPooling1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -26350,7 +26324,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_]);
@@ -26394,7 +26368,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26409,9 +26383,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -26426,7 +26398,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _(_, _.input().input_num()),
             _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -26445,7 +26417,7 @@
               className: (0, _._)(_.FlowNode, _.InputNode, _.Preprocessing),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _.data.msgNode,
                 }),
@@ -26570,7 +26542,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.input().inference_iterate());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.input().inference_iterate());
@@ -26610,7 +26582,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26659,7 +26631,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.input().set_inference_iterate(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
@@ -26677,7 +26649,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -26697,7 +26669,7 @@
               className: (0, _._)(_.FlowNode, _.KMeansNode, _.Preprocessing),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -26833,7 +26805,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.kmeans()?.num_clusters().toString() || "0",
             ),
@@ -26885,7 +26857,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 300,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -26975,7 +26947,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.kmeans().set_num_clusters(parseInt(_)),
                         _.msgNode.kmeans().set_name(_),
                         _.msgNode.kmeans().set_generate_clusters(_),
@@ -26995,7 +26967,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27023,7 +26995,7 @@
             className: (0, _._)(_.FlowNode, _.LogicNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27140,7 +27112,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.logic().logic_operator());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.logic().logic_operator());
@@ -27209,7 +27181,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27251,7 +27223,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.logic().set_logic_operator(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -27268,7 +27240,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27276,7 +27248,7 @@
             className: (0, _._)(_.FlowNode, _.MaskedHeadNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27389,7 +27361,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_]);
@@ -27433,7 +27405,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27448,9 +27420,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -27465,7 +27435,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27473,7 +27443,7 @@
             className: (0, _._)(_.FlowNode, _.MaxPooling1DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27607,7 +27577,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.max_pooling_1d().pool_size().toString(),
             ),
@@ -27659,7 +27629,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27724,7 +27694,7 @@
                     onClick: () => {
                       _.msgNode.max_pooling_1d().set_pool_size(parseInt(_)),
                         _.msgNode.max_pooling_1d().set_strides(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -27741,7 +27711,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27749,7 +27719,7 @@
             className: (0, _._)(_.FlowNode, _.NamedInferenceNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -27868,7 +27838,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.named_inference().name());
           _.useEffect(() => {
             _(_.msgNode.comment()), _(_.msgNode.named_inference().name());
@@ -27913,7 +27883,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -27948,7 +27918,7 @@
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       _.msgNode.named_inference().set_name(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -27965,7 +27935,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -27973,7 +27943,7 @@
             className: (0, _._)(_.FlowNode, _.NormalizeNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -28076,7 +28046,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment());
+            [_, _] = _.useState(_.msgNode.comment());
           _.useEffect(() => {
             _(_.msgNode.comment());
           }, [_.bVisible, _.msgNode]);
@@ -28120,7 +28090,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -28132,9 +28102,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
-                        _(_),
-                        _.fnSetPopupVisible(!1);
+                      _.msgNode.set_comment(_), _(_), _.fnSetPopupVisible(!1);
                     },
                     children: (0, _._)("#SteamLearn_Confirm"),
                   }),
@@ -28149,7 +28117,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector()),
@@ -28158,7 +28126,7 @@
             className: (0, _._)(_.FlowNode, _.OnehotNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -28294,7 +28262,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.onehot().compact_table().length > 0
                 ? _.msgNode.onehot().compact_table()
@@ -28350,7 +28318,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -28438,7 +28406,7 @@
                           (_.msgNode.onehot().set_compact_table(_),
                           _.msgNode.onehot().set_width(0)),
                         _.msgNode.onehot().set_multi_hot(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -28455,7 +28423,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -28463,7 +28431,7 @@
             className: (0, _._)(_.FlowNode, _.Reshape2DNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -28582,7 +28550,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.reshape_2d().dimension()?.toString() || "1",
             );
@@ -28630,7 +28598,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -28671,7 +28639,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.reshape_2d().set_dimension(parseInt(_)),
                         _(_),
                         _.fnSetPopupVisible(!1);
@@ -28689,7 +28657,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)(),
             _ = _.data.msgNode
@@ -28709,7 +28677,7 @@
               className: (0, _._)(_.FlowNode, _.RowExtractNode, _.Keras),
               children: [
                 (0, _.jsx)(_, {
-                  bVisible: __webpack_require__,
+                  bVisible: _,
                   fnSetPopupVisible: _,
                   msgNode: _,
                 }),
@@ -28944,7 +28912,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -28956,7 +28924,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -29137,7 +29105,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.sequence_split().head_split_chance().toString(),
             ),
@@ -29201,7 +29169,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -29344,7 +29312,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode
                           .sequence_split()
                           .set_head_split_chance(parseInt(_)),
@@ -29372,7 +29340,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -29380,7 +29348,7 @@
             className: (0, _._)(_.FlowNode, _.ShuffleNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -29499,7 +29467,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.shuffle().exclude_zeroes());
           return (0, _.jsxs)(_._, {
             active: _.bVisible,
@@ -29541,7 +29509,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -29593,7 +29561,7 @@
                 children: [
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      _.msgNode.set_comment(__webpack_require__),
+                      _.msgNode.set_comment(_),
                         _.msgNode.shuffle().set_exclude_zeroes(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
@@ -29611,7 +29579,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = (0, _._)();
           _.useEffect(() => {
@@ -29630,7 +29598,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -29950,7 +29918,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _(_.text_vectorization().other_project_id()),
             _ = _.connectors().filter((_) => _.is_input_connector()),
@@ -29963,7 +29931,7 @@
             ),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -30228,7 +30196,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.text_vectorization().vocabulary_size().toString(),
             ),
@@ -30384,7 +30352,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -30681,7 +30649,7 @@
                         _.msgNode
                           .text_vectorization()
                           .set_other_fetch_id(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -30698,7 +30666,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -30725,7 +30693,7 @@
             className: (0, _._)(_.FlowNode, _.ThresholdNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -30859,7 +30827,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.threshold().threshold_value().toFixed(5),
             ),
@@ -30941,7 +30909,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -31010,7 +30978,7 @@
                     onClick: () => {
                       _.msgNode.threshold().set_threshold_value(parseFloat(_)),
                         _.msgNode.threshold().set_comparison(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -31027,7 +30995,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -31035,7 +31003,7 @@
             className: (0, _._)(_.FlowNode, _.TokenMaskNode, _.Preprocessing),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -31209,7 +31177,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.token_mask().mask_pct().toString() || "10",
             ),
@@ -31269,7 +31237,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -31393,7 +31361,7 @@
                           .set_mask_count_limit(parseInt(_)),
                         _.msgNode.token_mask().set_random_pct(parseInt(_)),
                         _.msgNode.token_mask().set_keep_pct(parseInt(_)),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -31410,7 +31378,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -31418,7 +31386,7 @@
             className: (0, _._)(_.FlowNode, _.TokenTransformerNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -31673,7 +31641,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(
               _.msgNode.token_transformer().compact_table()?.length > 0
                 ? _.msgNode.token_transformer().compact_table()
@@ -31768,7 +31736,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -32067,7 +32035,7 @@
                           .set_transformer_dropout_pct(parseInt(_)),
                         _.msgNode.token_transformer().set_is_causal(_),
                         _.msgNode.token_transformer().set_is_set(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -32108,7 +32076,7 @@
       }
       const _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = (0, _._)();
@@ -32126,7 +32094,7 @@
             },
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -32273,9 +32241,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(
-              _.msgNode.train().input_count().toString(),
-            ),
+            [_, _] = _.useState(_.msgNode.train().input_count().toString()),
             [_, _] = _.useState(_.msgNode.train().activation()),
             [_, _] = _.useState(_.msgNode.train().loss()),
             [_, _] = _.useState(_.msgNode.train().uses_weight_mask() || !1),
@@ -32702,7 +32668,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -32710,7 +32676,7 @@
             className: (0, _._)(_.FlowNode, _.TransformerNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -32890,7 +32856,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.transformer().num_heads().toString()),
             [_, _] = _.useState(
               _.msgNode.transformer().feedforward_size()?.toString() || "1024",
@@ -32976,7 +32942,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -33127,7 +33093,7 @@
                           .transformer()
                           .set_num_internal_blocks(parseInt(_)),
                         _.msgNode.transformer().set_regularization(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -33144,7 +33110,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(!1),
+            [_, _] = _.useState(!1),
             _ = _.data.msgNode,
             _ = _.connectors().filter((_) => _.is_input_connector()),
             _ = _.connectors().filter((_) => !_.is_input_connector());
@@ -33152,7 +33118,7 @@
             className: (0, _._)(_.FlowNode, _.WeightedAverageNode, _.Keras),
             children: [
               (0, _.jsx)(_, {
-                bVisible: __webpack_require__,
+                bVisible: _,
                 fnSetPopupVisible: _,
                 msgNode: _,
               }),
@@ -33272,7 +33238,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(_.msgNode.comment()),
+            [_, _] = _.useState(_.msgNode.comment()),
             [_, _] = _.useState(_.msgNode.weighted_average().axis().toString()),
             [_, _] = _.useState(_.msgNode.weighted_average().use_weights());
           _.useEffect(() => {
@@ -33320,7 +33286,7 @@
                         isText: !0,
                         dontUpdateProject: !0,
                         width: 200,
-                        fnGetInitialValue: () => __webpack_require__,
+                        fnGetInitialValue: () => _,
                         fnSetValue: (_) => _(_),
                       }),
                     ],
@@ -33398,7 +33364,7 @@
                     onClick: () => {
                       _.msgNode.weighted_average().set_axis(parseInt(_)),
                         _.msgNode.weighted_average().set_use_weights(_),
-                        _.msgNode.set_comment(__webpack_require__),
+                        _.msgNode.set_comment(_),
                         _(_),
                         _.fnSetPopupVisible(!1);
                     },
@@ -33433,7 +33399,7 @@
           }),
         _ = () => {
           const _ = _.useRef(null),
-            [_, __webpack_require__] = _.useState(null),
+            [_, _] = _.useState(null),
             { msgWorkingProjectConfig: _ } = _(),
             [_, _] = _(_),
             [_, _, _] = (0, _._)(_),
@@ -34376,7 +34342,7 @@
                     onEdgesChange: _,
                     onNodeDragStop: _,
                     onConnect: _,
-                    onInit: __webpack_require__,
+                    onInit: _,
                     onDrop: _,
                     onDragOver: _,
                     onReconnect: _,
@@ -35520,7 +35486,7 @@
         },
         _ = (_) => {
           const { msgWorkingProjectConfig: _ } = _(),
-            [__webpack_require__, _] = _.useState(void 0),
+            [_, _] = _.useState(void 0),
             _ = _.msgSnapshotExample.map_storage_elements().sort((_, _) => {
               const _ = _.data_source_element_usages().find(
                   (_) => _.sql_column() == _.key(),
@@ -35531,7 +35497,7 @@
               return _.data_element_path() < _.data_element_path() ? -1 : 1;
             });
           let _ = [];
-          if (__webpack_require__)
+          if (_)
             for (const _ of __webpack_require__.outputs()) {
               if (_.regression().value().length > 0) {
                 _.push(
@@ -36329,10 +36295,7 @@
         return _;
       }
       const _ = (_) => {
-          const {
-              nPublishedVersion: _,
-              msgWorkingProjectConfig: __webpack_require__,
-            } = _(),
+          const { nPublishedVersion: _, msgWorkingProjectConfig: _ } = _(),
             [_, _] = _.useState(!1),
             [_, _] = _.useState(""),
             _ = _(_.nProjectID, _.nFetchID),
@@ -36841,7 +36804,7 @@
       const _ = (_) => {
           const {
               nPublishedVersion: _,
-              msgWorkingProjectConfig: __webpack_require__,
+              msgWorkingProjectConfig: _,
               msgProjectConfig: _,
             } = _(),
             _ = _(_.nProjectID, _.nTrainID),
@@ -36873,7 +36836,7 @@
             (_, _) => {
               _(__webpack_require__.project_id(), _, _, _);
             },
-            [__webpack_require__, _],
+            [_, _],
           );
           if (0 == _)
             return (0, _.jsx)("div", {
@@ -37551,7 +37514,7 @@
           (_[(_.GPU = 3)] = "GPU");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.NONE);
+          const [_, _] = _.useState(_.NONE);
           return (0, _.jsxs)("div", {
             className: _.LogSection,
             children: [
@@ -37701,7 +37664,7 @@
           const {
               nProjectID: _,
               nPublishedVersion: _,
-              msgWorkingProjectConfig: __webpack_require__,
+              msgWorkingProjectConfig: _,
             } = _(),
             [_, _] = _.useState(0),
             [_, _] = _.useState(0),
@@ -37773,7 +37736,7 @@
         const {
             nProjectID: _,
             nPublishedVersion: _,
-            msgProjectConfig: __webpack_require__,
+            msgProjectConfig: _,
             msgWorkingProjectConfig: _,
           } = _(),
           [_, _] = _.useState(0),
@@ -37786,7 +37749,7 @@
           _ = _.isLoading || _.isLoading,
           _ = _ > 0,
           _ =
-            __webpack_require__ &&
+            _ &&
             _ &&
             _.serializeBase64String() ==
               __webpack_require__.serializeBase64String(),
@@ -38079,7 +38042,7 @@
         const {
           nProjectID: _,
           nPublishedVersion: _,
-          msgWorkingProjectConfig: __webpack_require__,
+          msgWorkingProjectConfig: _,
         } = _();
         let _ = {
           weekday: "short",
@@ -38422,7 +38385,7 @@
                               "#SteamLearn_Overview_DataSources",
                             ),
                           }),
-                          __webpack_require__ &&
+                          _ &&
                             __webpack_require__.data_source_ids().map((_) =>
                               (0, _.jsx)(
                                 _,
@@ -38445,7 +38408,7 @@
       };
       function _(_) {
         const _ = _(_.msgProjectStatus.project_id()),
-          [__webpack_require__, _] = _.data || [void 0, void 0];
+          [_, _] = _.data || [void 0, void 0];
         const _ =
           6 == _.msgTrain.fetch_status() ||
           5 == _.msgTrain.fetch_status() ||
@@ -38547,8 +38510,8 @@
         });
       }
       const _ = (_) => {
-          const { nProjectID: _, nPublishedVersion: __webpack_require__ } = _(),
-            _ = _(_, __webpack_require__, _.nFetchID, _.nTrainID).data,
+          const { nProjectID: _, nPublishedVersion: _ } = _(),
+            _ = _(_, _, _.nFetchID, _.nTrainID).data,
             _ = 1 == _?.trains().length ? _.trains()[0] : void 0;
           return _
             ? (0, _.jsxs)("div", {
@@ -38671,7 +38634,7 @@
         const {
             nProjectID: _,
             nPublishedVersion: _,
-            msgWorkingProjectConfig: __webpack_require__,
+            msgWorkingProjectConfig: _,
           } = _(),
           [_, _] = _.useState(0),
           [_, _] = _.useState(0),
@@ -38736,14 +38699,14 @@
       function _(_) {
         const {
             nProjectID: _,
-            nPublishedVersion: __webpack_require__,
+            nPublishedVersion: _,
             msgWorkingProjectConfig: _,
           } = _(),
           [_, _] = _.useState("");
         (0, _._)(() => {
-          _(_, __webpack_require__, _.nFetchID, _.nTrainID);
+          _(_, _, _.nFetchID, _.nTrainID);
         }, 3e3);
-        if (0 == __webpack_require__)
+        if (0 == _)
           return (0, _.jsx)("div", {
             className: _.StatusMessage,
             children: (0, _._)("#SteamLearn_Status_Fetch_Status_Unpublished"),
@@ -39078,7 +39041,7 @@
       const _ = (_) => {
         const {
             nPublishedVersion: _,
-            msgWorkingProjectConfig: __webpack_require__,
+            msgWorkingProjectConfig: _,
             msgProjectConfig: _,
           } = _(),
           [_, _] = _.useState(-1),
@@ -39095,7 +39058,7 @@
           (_, _) => {
             _(__webpack_require__.project_id(), _, _, _);
           },
-          [__webpack_require__, _],
+          [_, _],
         );
         if (0 == _)
           return (0, _.jsx)("div", {
@@ -39804,7 +39767,7 @@
           (_[(_.GPU = 3)] = "GPU");
       })(_ || (_ = {}));
       const _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.NONE);
+          const [_, _] = _.useState(_.NONE);
           return (0, _.jsxs)("div", {
             className: _.LogSection,
             children: [
@@ -40002,8 +39965,8 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          { msgWorkingProjectConfig: __webpack_require__ } = _();
-        return _(_.pathname) && !__webpack_require__
+          { msgWorkingProjectConfig: _ } = _();
+        return _(_.pathname) && !_
           ? null
           : (0, _.jsx)("div", {
               className: _.MainAppContainer,
@@ -40014,7 +39977,7 @@
         const _ = (0, _._)(),
           {
             nProjectID: _,
-            nPublishedVersion: __webpack_require__,
+            nPublishedVersion: _,
             msgWorkingProjectConfig: _,
           } = _();
         if (!_(_.pathname)) return null;
@@ -40075,7 +40038,7 @@
                 className: _.TabAndSpacer,
                 children: [
                   (0, _.jsx)(_._, {
-                    _: _.fnRoute(_, __webpack_require__),
+                    _: _.fnRoute(_, _),
                     className: (0, _._)(
                       _.Tab,
                       _(_.pathname, [_.fnRoute(void 0, void 0)]) && _.Active,

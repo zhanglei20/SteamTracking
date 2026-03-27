@@ -2649,11 +2649,7 @@
           ],
         ]),
         _ = (_) => {
-          const {
-              text: _,
-              bShowErrorInfo: __webpack_require__,
-              version: _,
-            } = _,
+          const { text: _, bShowErrorInfo: _, version: _ } = _,
             _ = _.useCallback(
               (_) =>
                 new _._(
@@ -2676,7 +2672,7 @@
           return (0, _.jsx)("div", {
             className: _().FAQContainer,
             children: _.current.ParseBBCode(_, {
-              showErrorInfo: __webpack_require__,
+              showErrorInfo: _,
               version: _,
             }),
           });
@@ -3477,9 +3473,7 @@
         return [_ && _.Get().GetFAQPublishedContent(_, _), !0];
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-            _.Get().GetFAQDraftContent(_),
-          ),
+        const [_, _] = _.useState(_.Get().GetFAQDraftContent(_)),
           [_, _] = _.useState(!!_);
         return (
           (0, _.useEffect)(() => {

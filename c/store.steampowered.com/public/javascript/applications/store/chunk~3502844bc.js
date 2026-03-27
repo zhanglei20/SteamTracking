@@ -304,24 +304,24 @@
       function _(_) {
         const {
           size: _ = "3",
-          loading: __webpack_require__ = !0,
+          loading: _ = !0,
           children: _,
           color: _,
           variant: _,
           ..._
         } = _;
-        return _ || !__webpack_require__
+        return _ || !_
           ? (0, _.jsxs)(_._, {
               position: "relative",
               ..._,
               width: "fit-content",
               children: [
                 (0, _.jsx)("div", {
-                  "data-visibility": !__webpack_require__,
+                  "data-visibility": !_,
                   className: _.ChildContainer,
                   children: _,
                 }),
-                __webpack_require__ &&
+                _ &&
                   (0, _.jsx)(_._, {
                     position: "absolute",
                     inset: "0",
@@ -343,13 +343,9 @@
             });
       }
       function _(_) {
-        const {
-          className: _,
-          color: __webpack_require__,
-          ..._
-        } = (0, _._)(_, _);
+        const { className: _, color: _, ..._ } = (0, _._)(_, _);
         return (0, _.jsx)("div", {
-          "data-accent-color": __webpack_require__,
+          "data-accent-color": _,
           className: _()(_, _.Spinner),
           ..._,
         });
@@ -399,7 +395,7 @@
         _ = function (_) {
           const {
               variant: _ = "default",
-              size: __webpack_require__ = "2",
+              size: _ = "2",
               minWidth: _ = "fit-content",
               color: _,
               loading: _,
@@ -411,7 +407,7 @@
             } = _,
             _ = _
               ? (0, _.jsx)(_, {
-                  size: __webpack_require__,
+                  size: _,
                   color: _,
                   variant: "bright",
                   children: _,
@@ -425,7 +421,7 @@
               {
                 ..._,
                 variant: _,
-                size: __webpack_require__,
+                size: _,
                 minWidth: _,
                 color: _,
                 className: _()(_.Button, _ && _.Icon),
@@ -449,7 +445,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: __webpack_require__, ..._ } = _,
+        const { _: _ = "div", ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -459,7 +455,7 @@
           ),
           _ = _;
         return (0, _.jsx)(_, {
-          ref: __webpack_require__,
+          ref: _,
           ..._,
         });
       }
@@ -477,9 +473,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, "flow-children": __webpack_require__, ..._ } = _,
+        const { children: _, "flow-children": _, ..._ } = _,
           { gamepadEvents: _ } = (0, _._)(_);
-        __webpack_require__ && (_.layout = (0, _._)(__webpack_require__)),
+        _ && (_.layout = (0, _._)(_)),
           _.onOKButton ||
             ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
         const { ref: _, node: _ } = (0, _._)(_);
@@ -499,7 +495,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _ = "div", ref: __webpack_require__, ..._ } = _,
+        const { _: _ = "div", ref: _, ..._ } = _,
           _ = (0, _._)(
             {
               ..._,
@@ -512,7 +508,7 @@
         return (0, _.jsx)(_, {
           focusable: _,
           children: (0, _.jsx)(_, {
-            ref: __webpack_require__,
+            ref: _,
             ..._,
           }),
         });
@@ -970,8 +966,8 @@
       }
       function _(_) {
         if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
-        const [_, __webpack_require__] = _.split(" ");
-        return `rgb( from ${`var(--color-${_})`} r g b / ${__webpack_require__} )`;
+        const [_, _] = _.split(" ");
+        return `rgb( from ${`var(--color-${_})`} r g b / ${_} )`;
       }
       function _(_, _) {
         return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
@@ -993,15 +989,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _ = "span",
-            ref: __webpack_require__,
-            className: _,
-            ..._
-          } = _,
+        const { _: _ = "span", ref: _, className: _, ..._ } = _,
           _ = _;
         return (0, _.jsx)(_, {
-          ref: __webpack_require__,
+          ref: _,
           ...(0, _._)(
             {
               ..._,

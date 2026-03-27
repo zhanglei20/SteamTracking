@@ -109,11 +109,11 @@
       function _(_) {
         const _ = _.match(/rgba?\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
         if (!_) return null;
-        const [, __webpack_require__, _, _] = _;
-        return `${__webpack_require__},${_},${_}`;
+        const [, _, _, _] = _;
+        return `${_},${_},${_}`;
       }
       function _(_) {
-        const { strKVPrepend: _, bWriteAsRGBOnly: __webpack_require__ } = _;
+        const { strKVPrepend: _, bWriteAsRGBOnly: _ } = _;
         let [_, _] = _.useState(_.strCurrentColor);
         const _ = _.useRef(void 0);
         return (0, _.jsxs)(_.Fragment, {
@@ -125,11 +125,9 @@
               onChange: () => {
                 _(_.current.value);
               },
-              placeholder: __webpack_require__
-                ? "255,255,255"
-                : "rgba(255, 255, 255, .5)",
+              placeholder: _ ? "255,255,255" : "rgba(255, 255, 255, .5)",
               size: 20,
-              value: __webpack_require__ ? _(_) : _,
+              value: _ ? _(_) : _,
               readOnly: !0,
             }),
             (0, _.jsx)("div", {
@@ -144,7 +142,7 @@
                       _(_);
                     },
                     color: _,
-                    disableAlpha: __webpack_require__,
+                    disableAlpha: _,
                   }),
                   _,
                   {
@@ -202,7 +200,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)("closed"),
+        const [_, _] = (0, _.useState)("closed"),
           _ = _.rgEditions,
           [_, _] = (0, _.useState)(new _(_)),
           _ = new Map();
@@ -523,11 +521,7 @@
               packageid: _.nId,
             };
       function _(_) {
-        const {
-            rgEditions: _,
-            rgCandidates: __webpack_require__,
-            setEditions: _,
-          } = _,
+        const { rgEditions: _, rgCandidates: _, setEditions: _ } = _,
           _ = new Map();
         for (const _ of _.rgCandidates) _.set(_.nId, _);
         const [_, _] = (0, _.useState)(""),
@@ -671,7 +665,7 @@
       function _(_) {
         const {
             mapOriginalImages: _,
-            mapImages: __webpack_require__,
+            mapImages: _,
             setImages: _,
             mapAltText: _,
             setAltText: _,
@@ -729,7 +723,7 @@
                             _.height,
                           ),
                         );
-                      const _ = new Map(__webpack_require__);
+                      const _ = new Map(_);
                       _.set(_, _), _(_), _(null);
                     }
                   },
@@ -785,7 +779,7 @@
                         _.height,
                       ),
                     );
-                  const _ = new Map(__webpack_require__);
+                  const _ = new Map(_);
                   _.set(_, _), _(_), _(null);
                 }
               },
@@ -806,7 +800,7 @@
                         children: (0, _.jsx)("a", {
                           onClick: () => {
                             if (__webpack_require__.has(_)) {
-                              const _ = new Map(__webpack_require__);
+                              const _ = new Map(_);
                               _.delete(_), _(_), _(null);
                             }
                           },
@@ -869,7 +863,7 @@
       function _(_) {
         const {
             rtSteamReleaseDate: _,
-            value: __webpack_require__,
+            value: _,
             onChange: _,
             rgComingSoonOptionOverride: _,
             bExpandedDisplay: _,
@@ -896,7 +890,7 @@
           disabled: !_,
           strDefaultLabel: _,
           rgOptions: _,
-          selectedOption: _ ? __webpack_require__ : null,
+          selectedOption: _ ? _ : null,
           onChange: _,
         });
       }
@@ -927,7 +921,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, onClose: __webpack_require__, onCommit: _ } = _,
+        const { appid: _, onClose: _, onCommit: _ } = _,
           [_, _] = _.useState(null),
           {
             data: _,
@@ -973,7 +967,7 @@
             value: _,
             children: (0, _.jsx)(_, {
               fnSubmit: _,
-              fnCloseModal: __webpack_require__,
+              fnCloseModal: _,
               children: _,
             }),
           })
@@ -986,7 +980,7 @@
       const _ = _.memo(function (_) {
         const {
             appid: _,
-            bCanUpdateComingSoonDate: __webpack_require__,
+            bCanUpdateComingSoonDate: _,
             rtReleaseDate: _,
             strComingSoonDisplay: _,
           } = _(),
@@ -1005,13 +999,13 @@
                 (async function (_) {
                   const {
                       unAppID: _,
-                      rtReleaseDate: __webpack_require__,
+                      rtReleaseDate: _,
                       strComingSoonDisplay: _,
                     } = _,
                     _ = `${_._.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${_}`,
                     _ = new FormData();
                   _.append("sessionid", _._.SESSIONID),
-                    __webpack_require__ &&
+                    _ &&
                       _.append("release_date", __webpack_require__.toString());
                   _.append("coming_soon_display", _);
                   const _ = await _().post(_, _);
@@ -1023,7 +1017,7 @@
                     );
                 })({
                   unAppID: _,
-                  rtReleaseDate: __webpack_require__ ? _ : null,
+                  rtReleaseDate: _ ? _ : null,
                   strComingSoonDisplay: _,
                 })
                   .then(() => {
@@ -1035,11 +1029,11 @@
               } else
                 _((0, _._)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"));
             else _((0, _._)("#App_Landing_ReleaseDate_Error_NoDate"));
-          }, [_, _, _, __webpack_require__, _, _]);
+          }, [_, _, _, _, _, _]);
         return (
           _.useEffect(() => {
             _("none" == _ ? () => _ : null);
-          }, [_, __webpack_require__, _, _]),
+          }, [_, _, _, _]),
           (0, _.jsxs)(_.Fragment, {
             children: [
               _ &&
@@ -1109,12 +1103,12 @@
         const {
           bIsComingSoon: _,
           bIsStorePageReviewed: _,
-          bIsWaitingForBuildReview: __webpack_require__,
+          bIsWaitingForBuildReview: _,
           bIsFirstSelfPublishingApp: _,
           rtEarliestDate: _,
         } = _();
         return _ && _
-          ? __webpack_require__
+          ? _
             ? (0, _.jsx)(_, {
                 children: (0, _._)(
                   "#App_Landing_Release_EarliestDate_BuildReview",
@@ -1139,11 +1133,7 @@
               });
       }
       function _(_) {
-        const {
-            fnCloseModal: _,
-            fnSubmit: __webpack_require__,
-            children: _,
-          } = _,
+        const { fnCloseModal: _, fnSubmit: _, children: _ } = _,
           { bCanUpdateComingSoonDate: _ } = _() || {
             bCanUpdateComingSoonDate: !0,
           };
@@ -1164,17 +1154,17 @@
               children: _,
             }),
             (0, _.jsx)(_._, {
-              bOKDisabled: !__webpack_require__,
+              bOKDisabled: !_,
               onCancel: _,
               strCancelText: (0, _._)("#App_Landing_Requested_Date_Cancel"),
-              onOK: __webpack_require__,
+              onOK: _,
               strOKText: (0, _._)("#App_Landing_Requested_Date_Update"),
             }),
           ],
         });
       }
       function _(_) {
-        const { label: _, children: __webpack_require__ } = _;
+        const { label: _, children: _ } = _;
         return (0, _.jsxs)(_._, {
           className: _.Column,
           children: [
@@ -1184,13 +1174,13 @@
             }),
             (0, _.jsx)("div", {
               className: _.ColumnContent,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
       }
       function _(_) {
-        const { rtSelectedDate: _, setSelectedDate: __webpack_require__ } = _,
+        const { rtSelectedDate: _, setSelectedDate: _ } = _,
           { bCanUpdateComingSoonDate: _, rtEarliestDate: _ } = _();
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsx)(_._, {
@@ -1199,7 +1189,7 @@
             disabled: !_,
             nEarliestTime: _,
             fnGetTimeToUpdate: () => _,
-            fnSetTimeToUpdate: __webpack_require__,
+            fnSetTimeToUpdate: _,
             className: _.DatePicker,
             bShowTimeZone: !0,
             strAlsoShowTimeZone: _._,
@@ -1207,10 +1197,7 @@
         });
       }
       function _(_) {
-        const {
-          bCanUpdateComingSoonDate: _,
-          rtReleaseDate: __webpack_require__,
-        } = _();
+        const { bCanUpdateComingSoonDate: _, rtReleaseDate: _ } = _();
         return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
@@ -1233,7 +1220,7 @@
               children: (0, _._)(
                 (0, _._)(
                   "#App_Landing_Set_Release_Date_ComingSoonWarning_CantSet_Desc",
-                  (0, _._)(__webpack_require__),
+                  (0, _._)(_),
                 ),
                 (0, _.jsx)("a", {
                   href: `${(0, _._)()}wizard/HelpWithPublishing?issueid=905`,
@@ -1250,10 +1237,10 @@
       function _(_) {
         const {
           rtEarliestDate: _,
-          strReleaseState: __webpack_require__,
+          strReleaseState: _,
           bCanUpdateComingSoonDate: _,
         } = _();
-        return "prerelease" != __webpack_require__ || _
+        return "prerelease" != _ || _
           ? null
           : (0, _.jsx)("div", {
               className: _.PublishNowWarning,
@@ -1268,7 +1255,7 @@
       function _(_) {
         const {
             bIsGameEdit: _,
-            unAppID: __webpack_require__,
+            unAppID: _,
             rgEarliestAdvancedAccessDate: _,
           } = _,
           [_, _] = _.useState(_.rtReleaseDate),
@@ -1284,13 +1271,13 @@
           children: [
             _ &&
               (0, _.jsx)(_, {
-                appid: __webpack_require__,
+                appid: _,
                 onClose: _,
                 onCommit: _,
               }),
             _ &&
               (0, _.jsx)(_, {
-                appid: __webpack_require__,
+                appid: _,
                 bIsGameEdit: _,
                 closeModal: () => _(!1),
               }),
@@ -1384,14 +1371,14 @@
         });
       }
       function _(_) {
-        const { appid: _, bIsGameEdit: __webpack_require__, closeModal: _ } = _,
+        const { appid: _, bIsGameEdit: _, closeModal: _ } = _,
           _ = _.useCallback(() => {
-            __webpack_require__
+            _
               ? (window.TabSelect("tab_publish"), window.scrollTo(0, 0))
               : (window.location.href =
                   _._.GameEditByAppID(_.toString()) + "?activetab=tab_publish"),
               _();
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)(_._, {

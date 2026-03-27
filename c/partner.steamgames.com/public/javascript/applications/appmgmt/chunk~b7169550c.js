@@ -250,7 +250,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1);
+        const [_, _] = (0, _.useState)(!1);
         return (
           (0, _.useEffect)(() => {
             !_ &&
@@ -263,9 +263,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(() =>
-          _.Get().GetPartnerInfo(_),
-        );
+        const [_, _] = _.useState(() => _.Get().GetPartnerInfo(_));
         return (
           _.useEffect(() => {
             !_.Get().BHasPartnerInfoLoad(_) && _ > 0
@@ -309,7 +307,7 @@
             : (this.m_dictComponents = new Map(Object.entries(_))),
             (this.m_fnAccumulatorFactory = _);
         }
-        Parse(_, _, __webpack_require__ = !0) {
+        Parse(_, _, _ = !0) {
           const _ = (function (_, _) {
             const _ = [];
             let _ = {
@@ -368,7 +366,7 @@
                     text: _.text ?? "",
                   }));
             return _;
-          })(_ || "", __webpack_require__);
+          })(_ || "", _);
           return this.Parse_BuildElements(_, _);
         }
         Parse_BuildElements(_, _) {
@@ -477,7 +475,7 @@
       function _(_) {
         return _.replace(/(\\|\[)/g, "\\$1");
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const { type: _, text: _ = "" } = _;
         if (2 == _) {
           let _ = _.indexOf("=");
@@ -638,20 +636,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            _: _,
-            imageType: __webpack_require__,
-            bPreferAssetWithoutOverride: _,
-          } = _,
-          { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(
-            _,
-            __webpack_require__,
-            _,
-          );
-        if (
-          "library" === __webpack_require__ ||
-          "vertical" == __webpack_require__
-        )
+        const { _: _, imageType: _, bPreferAssetWithoutOverride: _ } = _,
+          { storeItemAsset: _, storeItemDefaultInfo: _ } = (0, _._)(_, _, _);
+        if ("library" === _ || "vertical" == _)
           return (0, _.jsx)(_._, {
             _: _,
             bPreferAssetWithoutOverride: _,
@@ -659,7 +646,7 @@
         let _,
           _,
           _ = "";
-        if ("main" === __webpack_require__)
+        if ("main" === _)
           (_ = _().mainCapsuleImgWidth),
             (_ = _().mainCapsuleImgHeight),
             (_ = _().MainCapsuleImageContainer);
@@ -672,7 +659,7 @@
             className: (0, _._)(_, "CapsuleImageCtn"),
           });
         if (null == _) return null;
-        let _ = (0, _._)(_, "header" === __webpack_require__);
+        let _ = (0, _._)(_, "header" === _);
         return (0, _.jsx)("div", {
           className: (0, _._)(_, "CapsuleImageCtn"),
           children: (0, _.jsx)(_._, {
@@ -729,11 +716,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            _: _,
-            bPreferLibrary: __webpack_require__,
-            bPreferAssetWithoutOverride: _,
-          } = _,
+        const { _: _, bPreferLibrary: _, bPreferAssetWithoutOverride: _ } = _,
           { storeItemDefaultInfo: _, storeItemAsset: _ } = (0, _._)(
             _,
             "vertical",
@@ -748,7 +731,7 @@
           _,
           _,
         );
-        if (_ && (!__webpack_require__ || !_))
+        if (_ && (!_ || !_))
           return (0, _.jsxs)("div", {
             className: (0, _._)(
               _().HeroCapsuleImageContainer,
@@ -773,7 +756,7 @@
             className: (0, _._)(
               _().LibraryFallbackAssetImageContainer,
               _().VerticalCapsule,
-              __webpack_require__ ? _().ForceLibrarySizing : "",
+              _ ? _().ForceLibrarySizing : "",
             ),
             children: [
               (0, _.jsx)("div", {
@@ -870,18 +853,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            appids: _,
-            hide_status_banners: __webpack_require__,
-            show_early_access: _,
-          } = _,
+        const { appids: _, hide_status_banners: _, show_early_access: _ } = _,
           { data: _ } = (0, _._)(),
           { data: _ } = (0, _._)(),
           _ = _.length > 0 && _.every((_) => _ && _.has(_)),
           _ = _.length > 0 && _.every((_) => _ && _.has(_)),
           _ = (function (_) {
             const { data: _ } = _(),
-              [__webpack_require__, _] = (0, _.useState)(!1),
+              [_, _] = (0, _.useState)(!1),
               _ = (0, _._)(),
               _ = (0, _._)();
             return (
@@ -907,12 +886,12 @@
                   );
                 })();
               }, [_, _, _, _]),
-              __webpack_require__
+              _
             );
           })(_),
-          _ = _ && !__webpack_require__,
-          _ = _ && !__webpack_require__,
-          _ = !__webpack_require__ && _;
+          _ = _ && !_,
+          _ = _ && !_,
+          _ = !_ && _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().CapsuleDecorators, "CapsuleDecorators"),
           children: [
@@ -988,9 +967,9 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_, __webpack_require__);
+          { data: _ } = (0, _._)(_, _);
         let _;
         _ &&
           1 == _.included_appids?.length &&
@@ -1014,7 +993,7 @@
             appid: _.included_appids[0],
           });
         const { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(_, __webpack_require__),
+          { data: _ } = (0, _._)(_, _),
           _ = _?.visible ? _ : _;
         return {
           storeItemAsset: _?.visible ? _ : _,
@@ -1114,13 +1093,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            appID: _,
-            feature: __webpack_require__,
-            depth: _,
-            children: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__, _),
+        const { appID: _, feature: _, depth: _, children: _ } = _,
+          _ = (0, _._)(_, _),
           _ = _.useContext(_),
           [_, _] = _.useState(void 0),
           _ = _.useCallback(
@@ -1192,7 +1166,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           [_] = (0, _.useState)(() =>
             (function () {
               const _ = (0, _._)(
@@ -1265,7 +1239,7 @@
       const _ = "nicknames";
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_],
             queryFn: async () => {
               const _ = new Map();
@@ -1281,7 +1255,7 @@
               return _;
             },
           });
-        return __webpack_require__ ? __webpack_require__.get(_) : null;
+        return _ ? __webpack_require__.get(_) : null;
       }
       const _ = new (_())(
           (_) =>
@@ -1338,15 +1312,15 @@
         ),
         _ = "avatarandpersonas";
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: [_, _],
           queryFn: () => _.load(_),
         });
-        return [_, __webpack_require__];
+        return [_, _];
       }
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
             queryFn: async () => {
               const _ = await _.loadMany(_);
@@ -1368,7 +1342,7 @@
               }),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ ? null : _;
       }
       function _(_) {
@@ -1402,7 +1376,7 @@
           let _ = [];
           const {
             fnFilterLanguage: _,
-            fnLangHasData: __webpack_require__,
+            fnLangHasData: _,
             fnLastUpdateRTime: _,
             fnIsLangSupported: _,
           } = this.props;
@@ -1492,20 +1466,15 @@
           return _;
         }
         OnLanguageChange(_) {
-          const { fnOnLanguageChanged: _, selectedLang: __webpack_require__ } =
-            this.props;
+          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
           let _ = Number.parseInt(_.currentTarget.value);
-          _ != __webpack_require__ && _ && _(_);
+          _ != _ && _ && _(_);
         }
         render() {
-          const {
-            selectedLang: _,
-            bDisabled: _,
-            strTooltip: __webpack_require__,
-          } = this.props;
+          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
           let _ = this.GenerateLanguageOptions();
           return (0, _.jsx)(_._, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             children: (0, _.jsx)("select", {
               value: _,
               onChange: this.OnLanguageChange,
@@ -1516,12 +1485,12 @@
         }
       };
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)(() => [
+        const [_, _] = (0, _._)(() => [
           _._.Get().GetHasLocalizationContext(),
           _._.Get().GetCurEditLanguage(),
         ]);
         return (0, _.jsx)(_, {
-          selectedLang: __webpack_require__,
+          selectedLang: _,
           fnLangHasData: _._.Get().BHasLanguageData,
           fnOnLanguageChanged: _._.Get().SetCurEditLanguage,
           bDisabled: !_,
@@ -1660,15 +1629,15 @@
         return [_, _];
       }
       function _(_) {
-        const { closeModal: _, rgImageURL: __webpack_require__ } = _,
+        const { closeModal: _, rgImageURL: _ } = _,
           [_, _] = _.useState(0),
-          _ = __webpack_require__?.length ?? 0,
+          _ = _?.length ?? 0,
           _ = _.useCallback(() => {
             _(0 == _ ? _ - 1 : _ - 1);
           }, [_, _]),
           _ = _.useCallback(() => {
-            _(__webpack_require__ && _ + 1 >= _ ? 0 : _ + 1);
-          }, [_, __webpack_require__, _]);
+            _(_ && _ + 1 >= _ ? 0 : _ + 1);
+          }, [_, _, _]);
         return (0, _.jsxs)(_._, {
           title: (0, _._)("#SaleTech_Screenshot_Viewer"),
           bAllowFullSize: !0,
@@ -1679,7 +1648,7 @@
           children: [
             (0, _.jsx)(_, {
               index: _,
-              numElements: __webpack_require__?.length || 0,
+              numElements: _?.length || 0,
               fnForward: _,
               fnBackwards: _,
               fnClose: _,
@@ -1689,7 +1658,7 @@
               className: _().PopupScreenshotContainer,
               children: (0, _.jsx)("img", {
                 className: _().PopupScreenshot,
-                src: __webpack_require__?.[_],
+                src: _?.[_],
               }),
             }),
           ],
@@ -1698,7 +1667,7 @@
       function _(_) {
         const {
           index: _,
-          numElements: __webpack_require__,
+          numElements: _,
           fnForward: _,
           fnBackwards: _,
           fnClose: _,
@@ -1710,7 +1679,7 @@
           _("Right", () => _?.(), !0, !0),
           _("Escape", () => _ && _(), !0, !0),
           _("Esc", () => _ && _(), !0, !0);
-        let _ = __webpack_require__ > 1;
+        let _ = _ > 1;
         return (0, _.jsxs)("div", {
           className: _().ButtonCtn,
           children: [
@@ -1730,7 +1699,7 @@
                   (0, _.jsx)("div", {
                     className: (0, _._)(
                       _().ButtonIcon,
-                      _ !== __webpack_require__ - 1 || _ ? null : _().Disabled,
+                      _ !== _ - 1 || _ ? null : _().Disabled,
                     ),
                     onClick: _,
                     children: (0, _.jsx)(_.V5W, {
@@ -1768,8 +1737,8 @@
           : null;
       }
       function _(_) {
-        const { className: _, _: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__),
+        const { className: _, _: _ } = _,
+          _ = (0, _._)(_),
           [_, _] = (0, _._)();
         let _ = "unknown";
         if (2 == _)
@@ -1813,28 +1782,27 @@
       function _(_) {
         const {
             className: _,
-            srcs: __webpack_require__,
+            srcs: _,
             lazyLoad: _,
             width: _,
             height: _,
             alt: _,
             crossOrigin: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__.length),
+          [_, _] = _.useState(_.length),
           [_, _] = _.useState(0);
         _.useEffect(() => {
-          _ != __webpack_require__.length &&
-            (_(__webpack_require__.length), _(0));
-        }, [_, __webpack_require__.length]);
+          _ != _.length && (_(_.length), _(0));
+        }, [_, _.length]);
         const _ = _.useCallback(() => {
           _.onImageError && _.onImageError(_.srcs[_]),
             _ + 1 < _.srcs.length && _(_ + 1);
         }, [_, _]);
-        return 0 == __webpack_require__.length
+        return 0 == _.length
           ? null
           : (0, _.jsx)("img", {
               className: _,
-              src: __webpack_require__[_],
+              src: _[_],
               crossOrigin: _,
               onError: _,
               loading: _ ? "lazy" : void 0,
@@ -1844,7 +1812,7 @@
             });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           {
             className: _,
             src: _,
@@ -1899,7 +1867,7 @@
         _ = 3,
         _ = 256;
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)({
             naturalWidth: 0,
             naturalHeight: 0,
@@ -1947,13 +1915,13 @@
                   if (!_.currentTarget.closest("a") && !(0, _._)()) {
                     const {
                       naturalWidth: _,
-                      naturalHeight: __webpack_require__,
+                      naturalHeight: _,
                       width: _,
                       height: _,
                     } = _.currentTarget;
                     _({
                       naturalWidth: _,
-                      naturalHeight: __webpack_require__,
+                      naturalHeight: _,
                       displayWidth: _,
                       displayHeight: _,
                     });
@@ -1984,7 +1952,7 @@
       function _(_) {
         const {
             title: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             getMinimized: _,
             toggleMinimized: _,
             className: _,
@@ -2009,9 +1977,9 @@
                   ),
                   children: [
                     _,
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                       (0, _.jsx)(_._, {
-                        tooltip: __webpack_require__,
+                        tooltip: _,
                       }),
                   ],
                 }),
@@ -2035,7 +2003,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
+        const [_, _] = _.useState(Boolean(_.bStartMinimized));
         return (0, _.jsx)(_, {
           ..._,
           getMinimized: () => _,
@@ -2044,11 +2012,11 @@
         });
       }
       function _(_) {
-        const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
+        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, _.jsx)(_._, {
           "data-tooltip-text": (0, _._)(_),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _.bIsMinimized
             ? (0, _.jsx)(_.hz4, {})
             : (0, _.jsx)(_.Xjb, {}),

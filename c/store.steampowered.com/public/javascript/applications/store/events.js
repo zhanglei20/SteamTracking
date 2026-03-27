@@ -359,7 +359,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
           const _ = ["maxresdefault", "mqdefault", "default"],
-            [__webpack_require__, _] = _.useState(0);
+            [_, _] = _.useState(0);
           _.useEffect(() => _(0), [_.video]);
           const _ = _.useRef(void 0);
           if (_.altImgWithFallback && _.altImgWithFallback.length > 0)
@@ -374,14 +374,9 @@
             });
           {
             const _ =
-                "https://img.youtube.com/vi/" +
-                _.video +
-                "/" +
-                _[__webpack_require__] +
-                ".jpg",
+                "https://img.youtube.com/vi/" + _.video + "/" + _[_] + ".jpg",
               _ = () => {
-                __webpack_require__ + 1 < _.length &&
-                  _(__webpack_require__ + 1);
+                _ + 1 < _.length && _(_ + 1);
               },
               _ = () => {
                 _.current && _.current.naturalHeight < 91 && _();
@@ -396,7 +391,7 @@
           }
         },
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1);
+          const [_, _] = _.useState(!1);
           (0, _._)(!!_.preloadYoutubeScripts);
           const _ = (0, _._)("youtube");
           if (_ && _)
@@ -491,16 +486,12 @@
       const _ = (0, _._)((_) => {
           const {
               bInfiniteScroll: _,
-              event_gid: __webpack_require__,
+              event_gid: _,
               announcement_gid: _,
               clansteamid: _,
               appid: _,
             } = _,
-            [_, _] = (0, _.useState)(
-              __webpack_require__
-                ? _.GetClanEventModel(__webpack_require__)
-                : void 0,
-            ),
+            [_, _] = (0, _.useState)(_ ? _.GetClanEventModel(_) : void 0),
             [_] = (0, _._)(_?.appid, {
               include_assets: !0,
               include_release: !0,
@@ -541,25 +532,12 @@
               const _ = _().CancelToken.source();
               return (
                 _ ||
-                  (__webpack_require__ &&
-                  !_.GetClanEventModel(__webpack_require__)
-                    ? _.LoadPartnerEventGeneric(
-                        _,
-                        _,
-                        __webpack_require__,
-                        void 0,
-                        0,
-                      )
+                  (_ && !_.GetClanEventModel(_)
+                    ? _.LoadPartnerEventGeneric(_, _, _, void 0, 0)
                         .then((_) => _(_, _))
                         .catch(() => {
                           _.token.reason ||
-                            _.LoadPartnerEventGeneric(
-                              _,
-                              _,
-                              void 0,
-                              __webpack_require__,
-                              0,
-                            )
+                            _.LoadPartnerEventGeneric(_, _, void 0, _, 0)
                               .then((_) => _(_, _))
                               .catch(_);
                         })
@@ -572,7 +550,7 @@
                   _.cancel("StoreEventDetailView: unmounting");
                 }
               );
-            }, [__webpack_require__, _, _, _, _]);
+            }, [_, _, _, _, _]);
           const _ = (0, _._)(_, _._.k_eStoreNewsHub, "allowRelative");
           if (_ || !_ || (_?.appid && !_)) {
             const _ = "lang_" + (0, _._)((0, _._)(_._.LANGUAGE)),
@@ -947,7 +925,7 @@
           const {
               strLabel: _,
               focusOnMount: _,
-              rgCorporaToSearch: __webpack_require__,
+              rgCorporaToSearch: _,
               strResultsClass: _,
             } = this.props,
             { strSearchString: _ } = this.state,
@@ -956,7 +934,7 @@
             _ = _?.length > 0,
             _ = _?.length > 0,
             _ = _?.length > 0,
-            _ = _(__webpack_require__).size > 1,
+            _ = _(_).size > 1,
             _ =
               _ &&
               _ &&
@@ -965,7 +943,7 @@
                   ? "#EventCalendar_SearchResultsHeader_GameAndDLCSection"
                   : "#EventCalendar_SearchResultsHeader_GameSection",
               ),
-            _ = Array.from(_(__webpack_require__)).some(
+            _ = Array.from(_(_)).some(
               (_) =>
                 this.m_nHighestSentRequestID >
                 this.m_mapHighestReceivedRequestIDFromBackEnd.get(_),
@@ -1143,7 +1121,7 @@
             children: (0, _.jsx)(_, {}),
           }),
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(_.Get().IsLoaded());
+          const [_, _] = _.useState(_.Get().IsLoaded());
           _.useEffect(() => {
             if (!_) {
               (async () => {
@@ -1238,7 +1216,7 @@
           });
         }),
         _ = (_) => {
-          const [_, __webpack_require__] = _.useState(!1),
+          const [_, _] = _.useState(!1),
             _ = () => {
               (0, _._)(
                 (0, _.jsx)(_._, {
@@ -1792,7 +1770,7 @@
         _ = (0, _._)(_().FilterSubSectionTitle),
         _ = (0, _._)(_().FilterLink);
       function _(_) {
-        const { calendar: _, onFilterChange: __webpack_require__ } = _,
+        const { calendar: _, onFilterChange: _ } = _,
           [_, _] = (0, _._)(() => [
             _.GetAllClans().filter(
               (_) => _._.GetClanInfoByClanAccountID(_)?.group_name,
@@ -1818,7 +1796,7 @@
                       {
                         calendar: _,
                         clanid: _,
-                        onFilterChange: __webpack_require__,
+                        onFilterChange: _,
                       },
                       _,
                     ),
@@ -1829,7 +1807,7 @@
                       {
                         calendar: _,
                         appid: _,
-                        onFilterChange: __webpack_require__,
+                        onFilterChange: _,
                       },
                       _,
                     ),
@@ -1840,35 +1818,24 @@
         );
       }
       function _(_) {
-        const {
-            calendar: _,
-            clanid: __webpack_require__,
-            onFilterChange: _,
-          } = _,
-          _ = (0, _._)(() =>
-            _.m_visibilityStore.BIsClanVisible(__webpack_require__),
-          );
+        const { calendar: _, clanid: _, onFilterChange: _ } = _,
+          _ = (0, _._)(() => _.m_visibilityStore.BIsClanVisible(_));
         return (0, _.jsx)(_, {
-          label:
-            _._.GetClanInfoByClanAccountID(__webpack_require__)?.group_name,
+          label: _._.GetClanInfoByClanAccountID(_)?.group_name,
           checked: _,
           onChange: (_) => {
-            _.m_visibilityStore.SetClanVisibility(__webpack_require__, _), _();
+            _.m_visibilityStore.SetClanVisibility(_, _), _();
           },
         });
       }
       function _(_) {
-        const {
-            calendar: _,
-            appid: __webpack_require__,
-            onFilterChange: _,
-          } = _,
-          _ = _.m_visibilityStore.BIsAppVisible(__webpack_require__);
+        const { calendar: _, appid: _, onFilterChange: _ } = _,
+          _ = _.m_visibilityStore.BIsAppVisible(_);
         return (0, _.jsx)(_, {
-          label: _._.Get().GetApp(__webpack_require__)?.GetName(),
+          label: _._.Get().GetApp(_)?.GetName(),
           checked: _,
           onChange: (_) => {
-            _.m_visibilityStore.SetAppVisibility(__webpack_require__, _), _();
+            _.m_visibilityStore.SetAppVisibility(_, _), _();
           },
         });
       }
@@ -1904,7 +1871,7 @@
           const {
               bUserIsLoggedIn: _,
               nDisappearingHeaderVisibleHeight: _,
-              bIsCollapsed: __webpack_require__,
+              bIsCollapsed: _,
               fnToggleCollapsed: _,
               fnOnFilterChange: _,
             } = this.props,
@@ -1916,7 +1883,7 @@
               },
               children: (0, _.jsx)(_.i6V, {}),
             }),
-            _ = __webpack_require__ ? Math.max(0, _) : 0,
+            _ = _ ? Math.max(0, _) : 0,
             _ = _
               ? null
               : (0, _.jsx)("div", {
@@ -1928,7 +1895,7 @@
                     },
                     className: _().DesktopButton,
                     children: (0, _.jsx)(_.F2T, {
-                      angle: __webpack_require__ ? 180 : 0,
+                      angle: _ ? 180 : 0,
                     }),
                   }),
                 }),
@@ -1946,7 +1913,7 @@
                   }),
                 }),
             _ = "desktop_navigation" != _.Get().GetDisplay() ? _ : _,
-            _ = __webpack_require__
+            _ = _
               ? null
               : {
                   top: `${_}px`,
@@ -1973,10 +1940,10 @@
             children: (0, _.jsx)("div", {
               className: (0, _._)(
                 _().SidebarContainer,
-                __webpack_require__ && _().SidebarCollapsed,
+                _ && _().SidebarCollapsed,
               ),
               style: _,
-              children: __webpack_require__
+              children: _
                 ? _
                 : (0, _.jsxs)("div", {
                     className: _().Sidebar,
@@ -1996,10 +1963,7 @@
       (0, _._)([_._], _.prototype, "OpenFilterSettings", null),
         (_ = (0, _._)([_._], _));
       const _ = (0, _._)((_) => {
-        const {
-            bShouldIncludeLegalFooter: _,
-            bShowUpcoming: __webpack_require__,
-          } = _,
+        const { bShouldIncludeLegalFooter: _, bShowUpcoming: _ } = _,
           _ =
             "Responsive_RequestMobileView" in window &&
             window.Responsive_RequestMobileView;
@@ -2014,7 +1978,7 @@
               children: (0, _._)("#EventCalendar_Title", (0, _.jsx)("br", {})),
             }),
             (0, _.jsx)(_, {
-              bIsUpcoming: __webpack_require__,
+              bIsUpcoming: _,
             }),
             (0, _.jsx)(_, {}),
             (0, _.jsx)("div", {
@@ -2024,7 +1988,7 @@
               }),
             }),
             (0, _.jsx)(_, {
-              bIsUpcoming: __webpack_require__,
+              bIsUpcoming: _,
             }),
             (0, _.jsx)("div", {
               className: _().FilterSettingsCtn,
@@ -2157,7 +2121,7 @@
       const _ = (_) => {
         const {
           shortName: _,
-          name: __webpack_require__,
+          name: _,
           url: _,
           onPage: _,
           count: _,
@@ -2173,7 +2137,7 @@
                   _ && _().MobileNavButtonActive,
                 ),
                 children: [
-                  _ || __webpack_require__,
+                  _ || _,
                   _ &&
                     (0, _.jsx)("div", {
                       className: _().MobileNavCount,
@@ -2255,7 +2219,7 @@
       function _(_) {
         const {
           key: _,
-          name: __webpack_require__,
+          name: _,
           subtitle: _,
           url: _,
           onPage: _,
@@ -2284,7 +2248,7 @@
                     children: [
                       (0, _.jsxs)("div", {
                         className: _().NewsChannelTitle,
-                        children: [_ && "(VO) ", __webpack_require__],
+                        children: [_ && "(VO) ", _],
                       }),
                       _ &&
                         (0, _.jsx)("div", {
@@ -2384,22 +2348,14 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-        const {
-            eventModel: _,
-            calendarEvent: __webpack_require__,
-            history: _,
-          } = _,
+        const { eventModel: _, calendarEvent: _, history: _ } = _,
           _ = (_) => {
             let _ = __webpack_require__.GetEntityName();
             (0, _._)(
               (0, _.jsx)(_._, {
                 strTitle: (0, _._)("#EventCalendar_MuteApp_Title", _),
                 strDescription: (0, _._)("#EventCalendar_MuteApp_details", _),
-                onOK: () =>
-                  (0, _._)().UpdateEventBlockFromCalendarEvent(
-                    __webpack_require__,
-                    !1,
-                  ),
+                onOK: () => (0, _._)().UpdateEventBlockFromCalendarEvent(_, !1),
                 children: (0, _.jsx)("a", {
                   href: _._.STORE_BASE_URL + "account/emailoptout/app",
                   target: _._.IN_CLIENT ? void 0 : "_blank",
@@ -2410,10 +2366,7 @@
             );
           },
           _ = () => {
-            (0, _._)().UpdateEventBlockFromCalendarEvent(
-              __webpack_require__,
-              !0,
-            );
+            (0, _._)().UpdateEventBlockFromCalendarEvent(_, !0);
           },
           _ = () => {
             const _ = _().MapClanEventTypeToGroup(_.GetEventType());
@@ -2456,14 +2409,13 @@
           onClick: (_) => {
             let _ = [];
             const _ = __webpack_require__.GetSource(),
-              _ = __webpack_require__.unique_id,
+              _ = _.unique_id,
               _ = (0, _._)(),
               _ = (0, _._)();
             _.BIsGlobalCalendar() &&
               (_ &&
                 _ & _._.k_eLibrary &&
-                (_().BIsGameSourceAllowed(_._.k_ERecent) &&
-                __webpack_require__.appInfo
+                (_().BIsGameSourceAllowed(_._.k_ERecent) && _.appInfo
                   ? (_.push(
                       (0, _.jsx)(
                         _._,
@@ -2474,7 +2426,7 @@
                             "#EventCalender_LastPlayed",
                             (0, _._)(
                               _._.GetTimeNowWithOverride() -
-                                __webpack_require__.appInfo.last_played,
+                                _.appInfo.last_played,
                             ),
                           ),
                         },
@@ -2506,7 +2458,7 @@
                 ),
               ),
               _._.logged_in &&
-                (_._.Get().BIsEventBlocked(__webpack_require__)
+                (_._.Get().BIsEventBlocked(_)
                   ? _.push(
                       (0, _.jsx)(
                         _._,
@@ -2548,7 +2500,7 @@
                 _.push(
                   (0, _.jsx)(_, {
                     eventModel: _,
-                    calendarEvent: __webpack_require__,
+                    calendarEvent: _,
                   }),
                 ),
               _.BIsSingleSourceCalendar() ||
@@ -2590,7 +2542,7 @@
         });
       });
       function _(_) {
-        const { eventModel: _, calendarEvent: __webpack_require__ } = _,
+        const { eventModel: _, calendarEvent: _ } = _,
           _ = (0, _._)(_.clanSteamID.GetAccountID()),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           _ = _.useCallback(async () => {
@@ -2644,7 +2596,7 @@
       function _(_) {
         const {
             eventModel: _,
-            calendarEvent: __webpack_require__,
+            calendarEvent: _,
             bSuppressHoverEffects: _,
             mode: _,
             bHideGameTitle: _,
@@ -2653,11 +2605,11 @@
           [_, _] = _.useState(!1);
         (0, _._)(_.GetAppIDOrReferenceAppID(), _),
           _.useEffect(() => {
-            if (__webpack_require__.clanInfo) {
-              let _ = _._.InitFromClanID(__webpack_require__.clanInfo.clanid);
+            if (_.clanInfo) {
+              let _ = _._.InitFromClanID(_.clanInfo.clanid);
               _._.LoadClanInfoForClanSteamID(_);
             }
-          }, [__webpack_require__.clanInfo]);
+          }, [_.clanInfo]);
         const _ = _._.Get(),
           _ = (0, _._)(_._.LANGUAGE),
           _ = "capsule",
@@ -2718,7 +2670,7 @@
                 });
               }
               return null;
-            })(_, __webpack_require__, _, _),
+            })(_, _, _, _),
           _ = _()[`EventType${_}`],
           _ = _.map((_) => _()[`Tag-${_}`]),
           _ = (0, _._)(
@@ -2740,7 +2692,7 @@
         const _ = (0, _._)(_),
           _ = (0, _.jsx)(_, {
             videoPreview: _,
-            calendarEvent: __webpack_require__,
+            calendarEvent: _,
             eventModel: _,
             mode: _,
             artworkType: _,
@@ -2788,10 +2740,7 @@
               children: (0, _.jsxs)("div", {
                 className: _().Tile,
                 onClick: (_) => {
-                  _._.RecordAppInteractionEvent(
-                    __webpack_require__.appid,
-                    _._.k_eClickThrough,
-                  ),
+                  _._.RecordAppInteractionEvent(_.appid, _._.k_eClickThrough),
                     _(_),
                     _.stopPropagation(),
                     _.preventDefault();
@@ -2830,9 +2779,9 @@
                                     (0, _.jsx)(_, {
                                       ..._,
                                     }),
-                                    __webpack_require__ &&
+                                    _ &&
                                       (0, _.jsx)(_, {
-                                        calendarEvent: __webpack_require__,
+                                        calendarEvent: _,
                                       }),
                                   ],
                                 }),
@@ -2891,7 +2840,7 @@
       function _(_) {
         const {
             videoPreview: _,
-            eventModel: __webpack_require__,
+            eventModel: _,
             calendarEvent: _,
             mode: _,
             artworkType: _,
@@ -2902,9 +2851,9 @@
           _ = !_ && "upcoming" !== _,
           [_, _, _, _, _, _] = (0, _._)(() => [
             __webpack_require__.GetEventType(),
-            __webpack_require__.has_live_stream,
-            __webpack_require__.has_live_stream,
-            __webpack_require__.clanSteamID.GetAccountID(),
+            _.has_live_stream,
+            _.has_live_stream,
+            _.clanSteamID.GetAccountID(),
             _.GetGameCapsule(),
             __webpack_require__.BImageNeedScreenshotFallback(_, _),
           ]);
@@ -2994,7 +2943,7 @@
       const _ = (0, _._)((_) => {
           const {
               eventModel: _,
-              calendarEvent: __webpack_require__,
+              calendarEvent: _,
               bSuppressHoverEffects: _,
               history: _,
             } = _,
@@ -3031,15 +2980,9 @@
         }),
         _ = (0, _._)(_),
         _ = (0, _._)((_) => {
-          const {
-              eventModel: _,
-              calendarEvent: __webpack_require__,
-              className: _,
-            } = _,
+          const { eventModel: _, calendarEvent: _, className: _ } = _,
             _ = (0, _._)().GetStoreInitializationTimestamp().getTime() / 1e3,
-            _ = _
-              ? _.GetStartTimeAndDateUnixSeconds()
-              : __webpack_require__.start_time,
+            _ = _ ? _.GetStartTimeAndDateUnixSeconds() : _.start_time,
             _ = _ && (0, _._)(_.type) && _.GetEndTimeAndDateUnixSeconds();
           if (_ && _ < _ && _ < _) {
             const _ = _ - _,
@@ -3256,7 +3199,7 @@
       const _ = (0, _._)((_) => {
           const {
               calendarEvent: _,
-              partnerEventStore: __webpack_require__,
+              partnerEventStore: _,
               mode: _,
               forceParentUpdate: _,
             } = _,
@@ -3284,7 +3227,7 @@
                           ? _._.Get().QueueAppRequest(_.appid, _).then(_)
                           : __webpack_require__();
                       });
-                  })(_, __webpack_require__, _);
+                  })(_, _, _);
                 },
               },
               {
@@ -3306,12 +3249,8 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const {
-              partnerEventStore: _,
-              calendarEvent: __webpack_require__,
-              ..._
-            } = _,
-            _ = _.GetClanEventModel(__webpack_require__.unique_id),
+          const { partnerEventStore: _, calendarEvent: _, ..._ } = _,
+            _ = _.GetClanEventModel(_.unique_id),
             _ = (function (_, _) {
               const _ = _.GetClanEventModel(_.unique_id);
               return !(
@@ -3322,16 +3261,16 @@
                   !_._.Get().BHasApp(_.appid, _)) ||
                 (_.clanInfo && !_._.HasLoadedClanAccountID(_.clanInfo.clanid))
               );
-            })(__webpack_require__, _),
+            })(_, _),
             _ = (0, _._)();
           return _
             ? (0, _.jsx)(_, {
                 eventModel: _,
-                calendarEvent: __webpack_require__,
+                calendarEvent: _,
                 ..._,
               })
             : (0, _.jsx)(_, {
-                calendarEvent: __webpack_require__,
+                calendarEvent: _,
                 partnerEventStore: _,
                 ..._,
                 forceParentUpdate: _,
@@ -3362,7 +3301,7 @@
       }
       function _(_) {
         const { bCanDismiss: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(() =>
+          [_, _] = (0, _.useState)(() =>
             (function () {
               const _ = JSON.parse(localStorage.getItem(_));
               return _ && _.bDismissed;
@@ -3395,7 +3334,7 @@
               () => window.removeEventListener("resize", _)
             );
           }, [_.token.reason, _, _]),
-          __webpack_require__)
+          _)
         )
           return null;
         let _ = _?.slice(0, _).map((_) => {
@@ -3469,7 +3408,7 @@
       const _ = (_) => {
         const {
             titleToken: _,
-            subtitleToken: __webpack_require__,
+            subtitleToken: _,
             backgroundImg: _,
             headerImg: _,
             headerURL: _,
@@ -3516,12 +3455,12 @@
                     className: _().Title,
                     children: _.startsWith("#") ? (0, _._)(_) : _,
                   }),
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)("div", {
                       className: _().Subtitle,
                       children: __webpack_require__.startsWith("#")
-                        ? (0, _._)(__webpack_require__)
-                        : __webpack_require__,
+                        ? (0, _._)(_)
+                        : _,
                     }),
                 ],
               }),
@@ -3565,17 +3504,17 @@
           const {
             rgCalendarItems: _,
             bSuppressHoverEffects: _,
-            strMultipleSourceTitle: __webpack_require__,
+            strMultipleSourceTitle: _,
           } = this.props;
           if (!_ || 0 == _.length) return null;
           const _ = _[0];
           if (!_.every((_) => _.appid === _.appid && _.clanid === _.clanid))
-            return __webpack_require__
+            return _
               ? (0, _.jsx)("div", {
                   className: _().EventTileCarouselTitleContainer,
                   children: (0, _.jsx)("div", {
                     className: _().EventTileCarouselTextTitle,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                 })
               : null;
@@ -3629,7 +3568,7 @@
           const {
             rgCalendarItems: _,
             fnOnEventClick: _,
-            bSuppressHoverEffects: __webpack_require__,
+            bSuppressHoverEffects: _,
             bHideGameTitle: _,
             strMultipleSourceTitle: _,
           } = this.props;
@@ -3641,7 +3580,7 @@
                 calendarEvent: _,
                 partnerEventStore: _._,
                 fnOnClicked: _,
-                bSuppressHoverEffects: __webpack_require__,
+                bSuppressHoverEffects: _,
                 mode: _.length > 1 ? "carousel" : "wide",
                 bHideGameTitle: _,
               },
@@ -3653,7 +3592,7 @@
             children: [
               (0, _.jsx)(_, {
                 rgCalendarItems: _,
-                bSuppressHoverEffects: __webpack_require__,
+                bSuppressHoverEffects: _,
                 strMultipleSourceTitle: _,
               }),
               (0, _.jsx)("div", {
@@ -3698,13 +3637,13 @@
         },
         _ = (_) => {
           const _ = "SteamNewsHub_LanguageDismissed",
-            [__webpack_require__, _] = _.useState(
+            [_, _] = _.useState(
               (() => {
                 const _ = JSON.parse(localStorage.getItem(_));
                 return _ && _.bDismissed;
               })(),
             );
-          if (__webpack_require__) return null;
+          if (_) return null;
           if ((0, _._)()) return null;
           const _ = _._.STORE_BASE_URL + "account/languagepreferences/";
           return (0, _.jsx)("div", {
@@ -3877,10 +3816,9 @@
                 return _ ? (_ ? _.largeHeight : _.smallHeight) : 0;
               })((0, _._)().GetCollectionID(), _)
             : (0, _._)().BIsSaleCalendar()
-              ? ((__webpack_require__ = (0, _._)().GetSaleID()),
+              ? ((_ = (0, _._)().GetSaleID()),
                 (_ = _),
-                __webpack_require__ &&
-                _._.GetClanEventModel(__webpack_require__)
+                _ && _._.GetClanEventModel(_)
                   ? Number(
                       _
                         ? _().simpleTitleLargeHeight
@@ -3956,14 +3894,13 @@
           const _ = (0, _._)(this.props.location, "clientpatchnotes");
           if (!!_ && "0" !== _ && "false" !== _) {
             (0, _._)(this.props.history, "clientpatchnotes", null);
-            const [_, __webpack_require__] =
-                "beta" === _ ? [null, _._] : [_._, null],
+            const [_, _] = "beta" === _ ? [null, _._] : [_._, null],
               _ = {
                 require_tags: ["patchnotes"],
               },
               _ = await _._.LoadAdjacentPartnerEvents(
                 null,
-                _._.InitFromClanID(__webpack_require__),
+                _._.InitFromClanID(_),
                 _,
                 0,
                 1,
@@ -4383,7 +4320,7 @@
       const _ = (0, _._)(_);
       function _(_) {
         const _ = (0, _._)(() => (0, _._)()),
-          [__webpack_require__, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.GetCollectionMetaData()?.clan_event_gid || void 0,
             _.GetCollectionID(),
             _.BHasCollectionMetaData(),
@@ -4397,11 +4334,7 @@
           _ = (0, _._)(_._.LANGUAGE);
         if (
           (_.useEffect(() => {
-            if (
-              _ &&
-              __webpack_require__ &&
-              !_._.GetClanEventModel(__webpack_require__)
-            ) {
+            if (_ && _ && !_._.GetClanEventModel(_)) {
               _(!0);
               (async () => {
                 const _ = _.GetCollectionMetaData(),
@@ -4414,12 +4347,12 @@
                   _(!1);
               })();
             }
-          }, [_, _, __webpack_require__]),
+          }, [_, _, _]),
           _)
         ) {
           let _, _;
           if (_ && !_) {
-            const _ = _._.GetClanEventModel(__webpack_require__);
+            const _ = _._.GetClanEventModel(_);
             _ &&
               ((_ = _.GetImageURLWithFallback("capsule", _, _._.capsule_main)),
               (_ = _.GetSaleURL()));
@@ -4541,7 +4474,7 @@
           const _ = (0, _._)(),
             {
               bShowFutureViewOnly: _,
-              bShowUpdatesOnly: __webpack_require__,
+              bShowUpdatesOnly: _,
               fnOnEventClick: _,
               fnToggleSeeFuture: _,
               fnResetFilters: _,
@@ -4559,7 +4492,7 @@
           const _ = _
             ? []
             : this.GetCurrentSectionLayout().map(
-                ({ section: _, nTopOfSection: __webpack_require__ }, _) => {
+                ({ section: _, nTopOfSection: _ }, _) => {
                   const {
                       strId: _,
                       strSectionLabel: _,
@@ -4568,12 +4501,12 @@
                       bIsFutureSection: _,
                       nRenderedHeight: _,
                     } = _,
-                    _ = __webpack_require__ < _,
+                    _ = _ < _,
                     _ = (0, _._)(_().PastSection, _ && _().DarkerBackground);
                   _ > 0 &&
                     ((_ = !_),
                     void 0 !== _.nInlineOffset &&
-                      __webpack_require__ >= _.nInlineOffset &&
+                      _ >= _.nInlineOffset &&
                       void 0 === _ &&
                       (_ = _));
                   const _ = !_ && _;
@@ -4661,7 +4594,7 @@
                     },
                     "link-back",
                   )))
-              : __webpack_require__ &&
+              : _ &&
                 (_ =
                   _ &&
                   (_.nCount
@@ -4702,7 +4635,7 @@
               children: (0, _.jsxs)("div", {
                 className: _().Rows,
                 children: [
-                  __webpack_require__ &&
+                  _ &&
                     (0, _.jsx)("div", {
                       className: _().UpdatePageBanner,
                       children: (0, _._)("#EventCalendar_UpdatesViewHeader"),
@@ -4745,7 +4678,7 @@
           const {
             rgCalendarItems: _,
             fnOnEventClick: _,
-            fnOnSeeFutureClick: __webpack_require__,
+            fnOnSeeFutureClick: _,
             bSuppressHoverEffects: _,
           } = this.props;
           return _ && 0 != _.length
@@ -4778,7 +4711,7 @@
                     }),
                     (0, _.jsx)(_, {
                       rgCalendarItems: _,
-                      fnOnSeeFutureClick: __webpack_require__,
+                      fnOnSeeFutureClick: _,
                     }),
                   ],
                 }),
@@ -4788,8 +4721,7 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (0, _._)((_) => {
-        const { calendarItem: _, bSuppressHoverEffects: __webpack_require__ } =
-            _,
+        const { calendarItem: _, bSuppressHoverEffects: _ } = _,
           _ = _._.GetClanEventModel(_.unique_id);
         return _
           ? (0, _.jsx)("div", {
@@ -4797,7 +4729,7 @@
               children: (0, _.jsx)(_, {
                 eventModel: _,
                 calendarEvent: _,
-                bSuppressHoverEffects: __webpack_require__,
+                bSuppressHoverEffects: _,
               }),
             })
           : null;
@@ -4866,7 +4798,7 @@
         RenderEventList(_) {
           const {
               fnOnEventClick: _,
-              bSuppressHoverEffects: __webpack_require__,
+              bSuppressHoverEffects: _,
               strMergeEvents: _,
             } = this.props,
             _ = (0, _._)();
@@ -4982,7 +4914,7 @@
           const {
             bRenderStickyHeader: _,
             strSectionLabel: _,
-            strSectionClassname: __webpack_require__,
+            strSectionClassname: _,
             bUseHorizontalLayout: _,
             fnOnSeeFutureClick: _,
             bShowEarliestFirst: _,
@@ -4993,7 +4925,7 @@
           if (0 == _.length && _)
             return (0, _.jsx)("div", {
               ref: this.m_ref,
-              className: __webpack_require__,
+              className: _,
             });
           _.length && _ && (_ = _.slice().reverse());
           let _ = null;
@@ -5044,7 +4976,7 @@
                 : this.RenderEventList(_)),
             (0, _.jsxs)("div", {
               ref: this.m_ref,
-              className: __webpack_require__,
+              className: _,
               children: [
                 _,
                 _,
@@ -5135,7 +5067,7 @@
       }
       const _ = (_) => {
         const [_] = (0, _._)("byday", !1),
-          [__webpack_require__] = (0, _._)("upcoming", !1);
+          [_] = (0, _._)("upcoming", !1);
         return (0, _._)(_._.LANGUAGE)
           ? (0, _.jsx)(_._, {
               bSalePage: !0,
@@ -5275,7 +5207,7 @@
                         {
                           ..._,
                           filter_to_saleid: _.match.params.saleid,
-                          section_by_day: _ || __webpack_require__,
+                          section_by_day: _ || _,
                         },
                         _.match.params.saleid,
                       ),

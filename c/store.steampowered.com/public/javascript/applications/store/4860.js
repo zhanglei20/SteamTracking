@@ -4770,7 +4770,7 @@
         staleTimeMs: 1 / 0,
       });
       function _(_) {
-        const { staleTimeMs: _, children: __webpack_require__ } = _,
+        const { staleTimeMs: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               staleTimeMs: _ ?? 3e3,
@@ -4782,7 +4782,7 @@
           {
             value: _,
           },
-          __webpack_require__,
+          _,
         );
       }
       function _(_ = !1) {
@@ -5203,10 +5203,10 @@
         }, [_, _, _, _, _, _.isSuccess, _.data]);
       }
       function _(_, _) {
-        const { setErrorMessage: __webpack_require__ } = _();
+        const { setErrorMessage: _ } = _();
         (0, _.useEffect)(() => {
           _.isError && __webpack_require__((0, _._)(_));
-        }, [__webpack_require__, _.isError, _]);
+        }, [_, _.isError, _]);
       }
       function _(_) {
         const _ = (0, _._)();

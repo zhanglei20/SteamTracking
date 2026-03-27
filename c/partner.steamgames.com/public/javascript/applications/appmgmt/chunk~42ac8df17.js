@@ -4378,125 +4378,65 @@
         _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 93695, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 93695, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 41091, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 41091, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89180, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89180, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21514, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21514, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45598, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 45598, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 55971, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 55971, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67217, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67217, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27686, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27686, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7623, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 7623, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97757, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97757, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 46345, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46345, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 5600, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 5600, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51163, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51163, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 71913, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71913, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 79872, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 79872, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 12322, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94954, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48341, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97890, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97890, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21810, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21810, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75500, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75500, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72268, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 72268, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 85951, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 85951, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 28265, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 28265, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 82248, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 82248, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 62020, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 62020, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67841, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67841, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94921, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94921, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 11667, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 11667, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 74528, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 74528, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -4515,12 +4455,12 @@
         });
       }
       function _() {
-        const [_, _, __webpack_require__] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return {
           elDialogElement: (0, _.jsx)(_._, {
             active: _,
             children: (0, _.jsx)(_, {
-              closeModal: __webpack_require__,
+              closeModal: _,
             }),
           }),
           fnShowLogonDialog: _,
@@ -4612,7 +4552,7 @@
             if (_) {
               const {
                 success: _,
-                err_msg: __webpack_require__,
+                err_msg: _,
                 warning: _,
                 warning_msg: _,
                 ..._
@@ -4647,7 +4587,7 @@
       function _(_) {
         const {
             nCreatorAccountID: _,
-            classOverride: __webpack_require__,
+            classOverride: _,
             styleOverride: _,
             followType: _,
           } = _,
@@ -4655,10 +4595,7 @@
           { data: _ } = _(_);
         return _ && _
           ? (0, _.jsxs)("div", {
-              className: (0, _._)(
-                _().GameHoverCreatorFollowButtonCtn,
-                __webpack_require__,
-              ),
+              className: (0, _._)(_().GameHoverCreatorFollowButtonCtn, _),
               style: _,
               children: [
                 (0, _.jsx)("a", {
@@ -4695,7 +4632,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, snr: __webpack_require__, classOverride: _ } = _,
+        const { _: _, snr: _, classOverride: _ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverIgnoreButton"),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
@@ -4736,7 +4673,7 @@
                 (0, _._)();
               },
             });
-          })(_, !_, __webpack_require__),
+          })(_, !_, _),
           _ = _ && "appid" in _ && _._.Get().BIsGameIgnored(_.appid);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().IgnoreButton, _),
@@ -4839,31 +4776,27 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        if (
-          !__webpack_require__ ||
-          __webpack_require__.unvailable_for_country_restriction ||
-          !__webpack_require__.visible
-        )
+          { data: _ } = (0, _._)(_);
+        if (!_ || _.unvailable_for_country_restriction || !_.visible)
           return (0, _.jsx)("div", {
             className: _().TrailerCtn,
             children: (0, _.jsx)(_, {}, "default"),
           });
-        const _ = __webpack_require__.item_type,
-          _ = __webpack_require__.type;
+        const _ = _.item_type,
+          _ = _.type;
         return 2 == _ || 1 == _
           ? (0, _.jsx)(_, {
-              includeAppIDs: __webpack_require__.included_appids,
+              includeAppIDs: _.included_appids,
             })
           : (1 == _ || 12 == _) &&
-              __webpack_require__.related_items &&
-              __webpack_require__.related_items.parent_appid
+              _.related_items &&
+              _.related_items.parent_appid
             ? (0, _.jsx)(_, {
-                demoItemDefaultInfo: __webpack_require__,
-                parentAppID: __webpack_require__.related_items.parent_appid,
+                demoItemDefaultInfo: _,
+                parentAppID: _.related_items.parent_appid,
               })
             : (0, _.jsx)(_, {
-                storeItemDefaultData: __webpack_require__,
+                storeItemDefaultData: _,
               });
       }
       function _(_) {
@@ -4902,7 +4835,7 @@
         });
       }
       function _(_) {
-        const { demoItemDefaultInfo: _, parentAppID: __webpack_require__ } = _,
+        const { demoItemDefaultInfo: _, parentAppID: _ } = _,
           _ = (0, _._)(_);
         return (0, _._)(_)
           ? (0, _.jsx)(_, {
@@ -4911,17 +4844,13 @@
           : (0, _.jsx)(_, {
               demoID: _,
               demoItemDefaultInfo: _,
-              parentAppID: __webpack_require__,
+              parentAppID: _,
             });
       }
       function _(_) {
-        const {
-            parentAppID: _,
-            demoID: __webpack_require__,
-            demoItemDefaultInfo: _,
-          } = _,
+        const { parentAppID: _, demoID: _, demoItemDefaultInfo: _ } = _,
           _ = (0, _._)(_),
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _.useMemo)(
@@ -4941,8 +4870,8 @@
                     ),
                   _
                 );
-              })(__webpack_require__, _, _, _, _, _),
-            [__webpack_require__, _, _, _, _, _],
+              })(_, _, _, _, _, _),
+            [_, _, _, _, _, _],
           );
         return (0, _.jsx)(_, {
           rgTrailerAndImages: _,
@@ -5024,8 +4953,8 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__
+          { data: _ } = (0, _._)(_);
+        return _
           ? (0, _.jsx)("div", {
               className: _().TagRow,
               children: (0, _.jsx)("div", {
@@ -5050,7 +4979,7 @@
       function _(_) {
         const {
             _: _,
-            displayID: __webpack_require__,
+            displayID: _,
             name: _,
             strStoreUrl: _,
             elElementToAppend: _,
@@ -5066,7 +4995,7 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(""),
           { data: _ } = (0, _._)(_),
-          { data: _ } = (0, _._)(__webpack_require__),
+          { data: _ } = (0, _._)(_),
           _ = !_ && !_ && !_,
           _ = _ && 0 == _.item_type;
         return (0, _.jsxs)("div", {
@@ -5184,9 +5113,9 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        if (!__webpack_require__) return null;
-        const _ = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_);
+        if (!_) return null;
+        const _ = (0, _._)(_);
         return (0, _.jsx)("div", {
           className: _().ReleaseDate,
           children: _,
@@ -5194,18 +5123,18 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__
+          { data: _ } = (0, _._)(_);
+        return _
           ? (0, _.jsx)("div", {
               className: _().ShortDescription,
-              children: __webpack_require__?.short_description,
+              children: _?.short_description,
             })
           : null;
       }
       function _(_) {
         const {
             _: _,
-            displayID: __webpack_require__,
+            displayID: _,
             strStoreUrl: _,
             bHideBottomHalf: _,
             bShowDeckCompatibilityDialog: _,
@@ -5229,12 +5158,12 @@
                   children: [
                     Boolean(_ && !_) &&
                       (0, _.jsx)(_._, {
-                        _: __webpack_require__,
+                        _: _,
                         snr: _.strSNR,
                       }),
                     Boolean(_ && !_) &&
                       (0, _.jsx)(_, {
-                        _: __webpack_require__,
+                        _: _,
                         snr: _.strSNR,
                       }),
                     _ &&
@@ -5252,7 +5181,7 @@
       function _(_) {
         const {
             _: _,
-            name: __webpack_require__,
+            name: _,
             bPreventNavigation: _,
             elElementToAppend: _,
             bShowDemoButton: _,
@@ -5272,7 +5201,7 @@
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(),
           { strStoreURL: _, snr: _ } = (0, _._)(_, _);
-        if ((!_ && !__webpack_require__) || _)
+        if ((!_ && !_) || _)
           return (0, _.jsx)(_.Fragment, {
             children: _,
           });
@@ -5287,7 +5216,7 @@
           _ = {
             _: _,
             displayID: _,
-            name: __webpack_require__,
+            name: _,
             bPreventNavigation: _,
             strStoreUrl: _,
             elElementToAppend: _,
@@ -5338,11 +5267,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _,
-            bTruncateTotalReviews: __webpack_require__,
-            bShowTooltip: _,
-          } = _,
+        const { _: _, bTruncateTotalReviews: _, bShowTooltip: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           _ = (0, _._)(_),
@@ -5387,7 +5312,7 @@
                 ),
                 children: [
                   "(",
-                  __webpack_require__
+                  _
                     ? "(" + _.review_count.toLocaleString((0, _._)()) + ")"
                     : _
                       ? _._.Localize(
@@ -5402,7 +5327,7 @@
                   ")",
                 ],
               }),
-              !__webpack_require__ &&
+              !_ &&
                 (0, _.jsxs)("div", {
                   className: _().ReviewScoreHeader,
                   children: [" ", _._.Localize("#GameHover_UserReviewsHeader")],
@@ -5468,12 +5393,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _,
-            snr: __webpack_require__,
-            classOverride: _,
-            styleOverride: _,
-          } = _,
+        const { _: _, snr: _, classOverride: _, styleOverride: _ } = _,
           { data: _ } = (0, _._)(_),
           { elDialogElement: _, fnShowLogonDialog: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() =>
@@ -5488,7 +5408,7 @@
           { bIsOwned: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)("GameHoverWishlistButton"),
-          { mutateAsync: _ } = (0, _._)(_, !_, __webpack_require__);
+          { mutateAsync: _ } = (0, _._)(_, !_, _);
         (0, _.useEffect)(() => {
           _ &&
             "appid" in _ &&
@@ -5551,7 +5471,7 @@
       function _(_) {
         const {
             hoverContent: _,
-            hoverProps: __webpack_require__,
+            hoverProps: _,
             nDelayShowMs: _,
             nWidthMultiplier: _,
             children: _,
@@ -5583,7 +5503,7 @@
                 target: _,
                 nDelayShowMs: _,
                 nWidthMultiplier: _,
-                hoverProps: __webpack_require__,
+                hoverProps: _,
                 children: _,
               }),
             (0, _.jsx)(_._, {
@@ -5595,7 +5515,7 @@
       function _(_) {
         const {
             hoverProps: _,
-            nDelayShowMs: __webpack_require__ = _,
+            nDelayShowMs: _ = _,
             nWidthMultiplier: _ = 1.15,
             target: _,
             visible: _,
@@ -5606,8 +5526,8 @@
         if (
           (_.useEffect(() => {
             if (_) {
-              if (__webpack_require__) {
-                const _ = window.setTimeout(() => _(!0), __webpack_require__);
+              if (_) {
+                const _ = window.setTimeout(() => _(!0), _);
                 return () => window.clearTimeout(_);
               }
               _(!0);
@@ -5660,7 +5580,7 @@
           : null;
       }
       function _(_) {
-        const { hoverProps: _, children: __webpack_require__ } = _,
+        const { hoverProps: _, children: _ } = _,
           _ = _.useCallback((_) => _?.focus(), []);
         return (0, _.jsx)(_._, {
           ..._,
@@ -5677,7 +5597,7 @@
                 ref: (0, _._)(_, _),
                 className: _().HoverContentTransition,
                 tabIndex: -1,
-                children: __webpack_require__,
+                children: _,
               }),
           }),
         });
@@ -5709,11 +5629,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _;
+        const { children: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           className: _.GreenButton,
           type: "button",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("span", {
             children: _,
           }),
@@ -7708,22 +7628,22 @@
         bDisablePopTop: !0,
       };
       function _(_) {
-        const { setRemoteClientID: _, rgSessions: __webpack_require__ } = _,
+        const { setRemoteClientID: _, rgSessions: _ } = _,
           _ = (0, _.useCallback)(
             (_) => {
-              __webpack_require__?.length &&
+              _?.length &&
                 (0, _._)(
                   (0, _.jsx)(_, {
-                    sessions: __webpack_require__,
+                    sessions: _,
                     setRemoteDownloadClientId: _,
                   }),
                   _,
                   _,
                 );
             },
-            [_, __webpack_require__],
+            [_, _],
           );
-        return __webpack_require__?.length
+        return _?.length
           ? (0, _.jsx)("button", {
               onClick: _,
               className: _().ClientSelectDropdown,
@@ -8115,11 +8035,7 @@
         return null;
       }
       function _(_) {
-        const {
-          rgAcceptableSession: _,
-          session: __webpack_require__,
-          setSessionIndex: _,
-        } = _;
+        const { rgAcceptableSession: _, session: _, setSessionIndex: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -8130,7 +8046,7 @@
               children: [
                 (0, _.jsx)("span", {
                   className: _().ClientName,
-                  children: __webpack_require__.machine_name,
+                  children: _.machine_name,
                 }),
                 (0, _.jsx)(_, {
                   rgSessions: _,
@@ -8159,11 +8075,7 @@
         });
       }
       function _(_) {
-        const {
-            appid: _,
-            session: __webpack_require__,
-            setRemoteDownloadRequested: _,
-          } = _,
+        const { appid: _, session: _, setRemoteDownloadRequested: _ } = _,
           _ = (function (_, _, _) {
             const _ = (0, _._)(),
               _ = _(_),
@@ -8190,7 +8102,7 @@
               },
               onSuccess: _,
             });
-          })(_, __webpack_require__.client_instanceid);
+          })(_, _.client_instanceid);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_, {
@@ -8215,7 +8127,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, className: __webpack_require__ } = _,
+        const { _: _, className: _ } = _,
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ =
@@ -8233,7 +8145,7 @@
           if (_ && _) {
             const _ = 1 === _.type ? _.appid : _[0];
             return (0, _.jsx)("div", {
-              className: __webpack_require__,
+              className: _,
               children: (0, _.jsx)(_, {
                 appid: _,
               }),
@@ -8244,7 +8156,7 @@
         return !_ && _ && _.is_free
           ? (0, _.jsx)(_._, {
               _: _,
-              className: __webpack_require__,
+              className: _,
             })
           : (0, _.jsx)(_._, {
               toolTipContent: _,
@@ -8253,11 +8165,7 @@
                   _.stopPropagation(),
                   _ && (0, _._)(1 === _.type ? _.appid : _[0], _.name);
               },
-              className: (0, _._)(
-                __webpack_require__,
-                _().DemoButton,
-                !_ && _().DisabledButton,
-              ),
+              className: (0, _._)(_, _().DemoButton, !_ && _().DisabledButton),
               children: _
                 ? _._.Localize("#Sale_InstallDemo")
                 : _._.Localize("#Sale_DemoNotFound"),
@@ -8278,11 +8186,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _,
-            strClassName: __webpack_require__,
-            bMinimizePlatforms: _,
-          } = _,
+        const { _: _, strClassName: _, bMinimizePlatforms: _ } = _,
           { data: _ } = (0, _._)(_);
         if (!_) return null;
         if (_) {
@@ -8312,14 +8216,14 @@
                 })),
             _
               ? (0, _.jsx)("span", {
-                  className: (0, _._)(_().CapsulePlatform, __webpack_require__),
+                  className: (0, _._)(_().CapsulePlatform, _),
                   children: _,
                 })
               : null
           );
         }
         return (0, _.jsxs)("span", {
-          className: (0, _._)(_().CapsulePlatform, __webpack_require__),
+          className: (0, _._)(_().CapsulePlatform, _),
           children: [
             _.windows &&
               (0, _.jsx)("span", {
@@ -8374,16 +8278,16 @@
       function _(_) {
         const {
             bSingleLineMode: _,
-            _: __webpack_require__,
+            _: _,
             onlyOneDiscountPct: _,
             bHidePrePurchase: _,
             bHideReleaseDate: _,
             bHideIfDemo: _,
           } = _,
           _ = _._.NOW,
-          { data: _ } = (0, _._)(__webpack_require__),
-          { data: _ } = (0, _._)(__webpack_require__),
-          { data: _ } = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
         if (!_) return null;
         const _ = (0, _._)(_, _),
           _ = (0, _._)({
@@ -8489,7 +8393,7 @@
       function _(_) {
         const {
             bSingleLineMode: _,
-            nDiscountPercentage: __webpack_require__,
+            nDiscountPercentage: _,
             bIsPrePurchase: _,
             nBaseDiscountPercentage: _,
             strBestPurchaseOriginalPriceFormatted: _,
@@ -8501,22 +8405,17 @@
           _ = _;
         let _;
         return (
-          __webpack_require__ &&
+          _ &&
             (_ = _
               ? _._.Localize("#Discount_ARIA_Label_SpecialPrice", _)
-              : _._.Localize(
-                  "#Discount_ARIA_Label",
-                  __webpack_require__,
-                  _,
-                  _,
-                )),
+              : _._.Localize("#Discount_ARIA_Label", _, _, _)),
           (0, _.jsxs)("div", {
             className: (0, _._)({
               [_().StoreSalePriceWidgetContainer]: !0,
               [_().SingleLineMode]: _,
               StoreSalePriceWidgetContainer: !0,
-              [_().Discounted]: Boolean(__webpack_require__),
-              Discounted: Boolean(__webpack_require__),
+              [_().Discounted]: Boolean(_),
+              Discounted: Boolean(_),
               [_().PrePurchase]: Boolean(_),
               [_().NewItem]: Boolean(_),
             }),
@@ -8548,7 +8447,7 @@
                         children: `-${_}%`,
                       }),
                     }),
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("span", {
@@ -8560,24 +8459,24 @@
                             ),
                             children: (0, _.jsx)("span", {
                               className: (0, _._)(_().StoreSaleDiscountBox),
-                              children: `-${__webpack_require__}%`,
+                              children: `-${_}%`,
                             }),
                           }),
                         ],
                       }),
                   ],
                 }),
-              Boolean(!_ && __webpack_require__ && !_) &&
+              Boolean(!_ && _ && !_) &&
                 (0, _.jsx)("div", {
                   className: _().StoreSaleDiscountBox,
-                  children: `-${__webpack_require__}%`,
+                  children: `-${_}%`,
                 }),
               Boolean(_) &&
                 (0, _.jsx)("div", {
                   className: _().DiscountIconCtn,
                   children: (0, _.jsx)(_.XH_, {}),
                 }),
-              Boolean((__webpack_require__ || _) && _ && !_)
+              Boolean((_ || _) && _ && !_)
                 ? (0, _.jsxs)("div", {
                     className: (0, _._)(_().StoreSaleDiscountedPriceCtn),
                     children: [
@@ -8624,12 +8523,12 @@
       function _(_) {
         const {
           rgTagIDs: _,
-          bShowEvenIfNoTags: __webpack_require__,
+          bShowEvenIfNoTags: _,
           bHideTitle: _,
           bLargeText: _,
           bNoStoreLinks: _,
         } = _;
-        return _?.length > 0 || __webpack_require__
+        return _?.length > 0 || _
           ? (0, _.jsxs)("div", {
               className: (0, _._)(
                 _().SaleTagBlockCtn,
@@ -8664,35 +8563,31 @@
           : null;
       }
       function _(_) {
-        const { tagid: _, className: __webpack_require__ } = _,
+        const { tagid: _, className: _ } = _,
           _ = (0, _._)(_, _._.LANGUAGE);
         if (!_) return null;
         const _ = (0, _._)((0, _._)(_._.LANGUAGE)),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return (0, _.jsx)(_._, {
           url: _,
-          className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+          className: (0, _._)(_().Tag, "WidgetTag", _),
           children: _,
         });
       }
       function _(_) {
-        const {
-            tagid: _,
-            className: __webpack_require__,
-            bNoStoreLinks: _,
-          } = _,
+        const { tagid: _, className: _, bNoStoreLinks: _ } = _,
           _ = (0, _._)((0, _._)(_._.LANGUAGE)),
           _ = (0, _._)(_, _._.LANGUAGE),
           _ = `${_._.STORE_BASE_URL}tags/${_}/${_}`;
         return _
           ? _
             ? (0, _.jsx)("div", {
-                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+                className: (0, _._)(_().Tag, "WidgetTag", _),
                 children: _,
               })
             : (0, _.jsx)(_._, {
                 url: _,
-                className: (0, _._)(_().Tag, "WidgetTag", __webpack_require__),
+                className: (0, _._)(_().Tag, "WidgetTag", _),
                 children: _,
               })
           : null;
@@ -8714,7 +8609,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, bIsMuted: __webpack_require__ } = _,
+        const { appid: _, bIsMuted: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -8724,7 +8619,7 @@
           },
           _ = (0, _._)(
             _().CapsuleBottomBar,
-            __webpack_require__ && _().Muted,
+            _ && _().Muted,
             _ ? _().PlayNowButton : _().AddToLibraryButton,
           );
         return (0, _.jsx)("div", {
@@ -8910,22 +8805,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            _: _,
-            active: __webpack_require__,
-            bIsHoverMode: _,
-            eGrowOnHover: _,
-          } = _,
+        const { _: _, active: _, bIsHoverMode: _, eGrowOnHover: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = _.useRef(0),
           _ = _.useRef(null);
         _.useLayoutEffect(() => {
-          __webpack_require__ &&
-            _.current &&
-            (_.current.currentTime = _.current);
-        }, [__webpack_require__]);
-        const _ = (0, _._)(__webpack_require__ ? _ : void 0);
-        if ((_ && _._.IN_MOBILE) || !__webpack_require__) return null;
+          _ && _.current && (_.current.currentTime = _.current);
+        }, [_]);
+        const _ = (0, _._)(_ ? _ : void 0);
+        if ((_ && _._.IN_MOBILE) || !_) return null;
         if (!_ || !_.visible || !_) return null;
         const _ = _.filter((_) => _.microtrailer && _.microtrailer.length > 0);
         if (0 === _.length)
@@ -9795,8 +9683,8 @@
 }`);
       var _ = __webpack_require__("chunkid");
       class _ {
-        static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetSNRLinkParam(_, __webpack_require__),
+        static InstrumentLink(_, _, _ = null) {
+          const _ = _.GetSNRLinkParam(_, _),
             _ = _.GetCuratorClanIDParam(_);
           return _.AddNavParamToURL(_, _, _);
         }
@@ -9900,22 +9788,22 @@
       const _ = _.createContext({});
       _.createContext(void 0);
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = _(),
           _ = _.useMemo(
             () => ({
               ..._,
-              ...__webpack_require__,
+              ..._,
             }),
             [
               _,
-              __webpack_require__.domain,
-              __webpack_require__.controller,
-              __webpack_require__.method,
-              __webpack_require__.submethod,
-              __webpack_require__.feature,
-              __webpack_require__.depth,
-              __webpack_require__.curator_clanid,
+              _.domain,
+              _.controller,
+              _.method,
+              _.submethod,
+              _.feature,
+              _.depth,
+              _.curator_clanid,
             ],
           );
         return (0, _.jsx)(_.Provider, {
@@ -10078,11 +9966,11 @@
       }
       function _(_) {
         const { data: _ } = (0, _._)(_ && "appid" in _ ? void 0 : _),
-          { data: __webpack_require__ } = _();
+          { data: _ } = _();
         let _;
         return (
           _ && "appid" in _ ? (_ = [_.appid]) : _ && (_ = _.included_appids),
-          void 0 === _ || void 0 === __webpack_require__ || 0 == _.length
+          void 0 === _ || void 0 === _ || 0 == _.length
             ? {
                 bIsOwned: void 0,
                 unAppID: void 0,
@@ -10294,7 +10182,7 @@
       }
       function _(_) {
         const _ = "blocked" == _() && !!_,
-          { data: __webpack_require__ } = (0, _._)(
+          { data: _ } = (0, _._)(
             _
               ? {
                   appid: _,
@@ -10303,9 +10191,9 @@
           );
         return (
           !!_ &&
-          (!__webpack_require__ ||
-            __webpack_require__.content_descriptorids.includes(3) ||
-            __webpack_require__.content_descriptorids.includes(4))
+          (!_ ||
+            _.content_descriptorids.includes(3) ||
+            _.content_descriptorids.includes(4))
         );
       }
     },
@@ -10455,16 +10343,10 @@
         );
       }
       const _ = (_) => {
-        const {
-          url: _,
-          event: __webpack_require__,
-          className: _,
-          style: _,
-        } = _;
+        const { url: _, event: _, className: _, style: _ } = _;
         let _,
           _ = (0, _._)(_);
-        (_ = _(_, __webpack_require__)),
-          (0, _._)(_) && (_ = "noopener nofollow");
+        (_ = _(_, _)), (0, _._)(_) && (_ = "noopener nofollow");
         const _ =
           "string" == typeof _.children &&
           _.children.length > 0 &&
@@ -10690,8 +10572,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _ = "", __webpack_require__ = null) {
-        return _.InstrumentLink(_, _, __webpack_require__);
+      function _(_, _ = "", _ = null) {
+        return _.InstrumentLink(_, _, _);
       }
       function _(_, _, _) {
         const _ = (0, _._)();
@@ -10702,8 +10584,8 @@
           return _ === _ || _ === _ ? (0, _._)(_, _, _, _) : _;
         }, [_, _, _, _]);
       }
-      function _(_, _, __webpack_require__ = null) {
-        const _ = _(_, __webpack_require__),
+      function _(_, _, _ = null) {
+        const _ = _(_, _),
           _ = _ ? _._.GetCuratorClanIDParam(_) : null;
         return _._.AddNavParamToURL(_, _, _);
       }
@@ -10734,10 +10616,10 @@
         static sm_strMethod;
         static sm_strSubmethod;
         static sm_strComputedLinkPrefix;
-        static SetNavEventParams(_, _, __webpack_require__ = null, _ = null) {
+        static SetNavEventParams(_, _, _ = null, _ = null) {
           (_.sm_strDomain = _),
             (_.sm_strController = _),
-            (_.sm_strMethod = __webpack_require__),
+            (_.sm_strMethod = _),
             (_.sm_strSubmethod = _),
             (_.sm_strComputedLinkPrefix = null);
         }
@@ -10752,8 +10634,8 @@
             _
           );
         }
-        static InstrumentLink(_, _, __webpack_require__ = null) {
-          const _ = _.GetLinkParam(_, __webpack_require__),
+        static InstrumentLink(_, _, _ = null) {
+          const _ = _.GetLinkParam(_, _),
             _ = "string" != typeof _ ? _._.GetCuratorClanIDParam(_) : null;
           return _._.AddNavParamToURL(_, _, _);
         }
@@ -11088,7 +10970,7 @@
         (0, _._)([_._], _.prototype, "InternalSetupValue", null);
       const _ = new _();
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _ ? _.GetClanInfoByClanAccountID(_) : void 0,
           ),
           [_, _] = (0, _.useState)(!!_ && !_.BHasClanInfoLoadedByAccountID(_));
@@ -11116,9 +10998,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-            () => !_.GetOGGClanInfo(_),
-          ),
+        const [_, _] = (0, _.useState)(() => !_.GetOGGClanInfo(_)),
           [_, _] = (0, _.useState)(() => _.GetOGGClanInfo(_));
         return (
           (0, _.useEffect)(() => {
@@ -11578,12 +11458,12 @@
                 _.data)
           );
         }
-        ApplyWishlistUpdate(_, _, __webpack_require__ = -1) {
+        ApplyWishlistUpdate(_, _, _ = -1) {
           if ((this.InvalidateCache(), (_ = Number(_)), _))
             this.m_setWishList.has(_) ||
-              (-1 == __webpack_require__
+              (-1 == _
                 ? this.m_wishlistInOrder.push(_)
-                : this.m_wishlistInOrder.splice(__webpack_require__, 0, _)),
+                : this.m_wishlistInOrder.splice(_, 0, _)),
               this.m_setWishList.add(_);
           else {
             if (this.m_setWishList.has(_)) {
@@ -12295,7 +12175,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
             _.Get().BIsPartnerEventPermissionsLoaded(_),
           ),
           _ = _._.InitFromClanID(_),
@@ -12328,11 +12208,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = _.useRef(null);
         return (0, _.jsx)(_._, {
           nodeRef: _,
-          ...__webpack_require__,
+          ..._,
           children: _.children(_),
         });
       }
@@ -14262,12 +14142,12 @@
       };
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _._)({
             queryKey: [
-              __webpack_require__?._ || _._,
-              __webpack_require__?.type || "invalid",
-              __webpack_require__?.item_type || "invalid",
+              _?._ || _._,
+              _?.type || "invalid",
+              _?.item_type || "invalid",
             ],
             queryFn: () =>
               (async function (_, _) {
@@ -14287,10 +14167,8 @@
                     ))
                   );
                 return _.Body().toObject();
-              })(__webpack_require__, _),
-            enabled: Boolean(
-              __webpack_require__ && 10 === __webpack_require__.type,
-            ),
+              })(_, _),
+            enabled: Boolean(_ && 10 === _.type),
           });
         return _.isLoading ? null : _.data;
       }
@@ -14302,7 +14180,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { _: _, className: __webpack_require__ } = _,
+        const { _: _, className: _ } = _,
           _ = (0, _._)(),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -14333,7 +14211,7 @@
               });
             if (!_.inventory_available)
               return (0, _.jsx)("div", {
-                className: (0, _._)(_().ActionOutOfStock, __webpack_require__),
+                className: (0, _._)(_().ActionOutOfStock, _),
                 children: (0, _.jsxs)("span", {
                   children: [" ", (0, _._)("#Sale_ReserveExhausted")],
                 }),
@@ -14348,7 +14226,7 @@
               const _ = `${_._.IN_CLIENT ? "steam://openurl/" : ""}${_}`;
               return (0, _.jsx)("div", {
                 onClick: (_) => (0, _._)(_, _),
-                className: (0, _._)(_().Action, __webpack_require__),
+                className: (0, _._)(_().Action, _),
                 children: (0, _.jsx)("span", {
                   children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
                 }),
@@ -14374,7 +14252,7 @@
                     value: _._.SESSIONID,
                   }),
                   (0, _.jsx)("button", {
-                    className: (0, _._)(_().Action, __webpack_require__),
+                    className: (0, _._)(_().Action, _),
                     type: "submit",
                     children: (0, _._)(
                       "#EventDisplay_CallToAction_AddToAccount",
@@ -14392,7 +14270,7 @@
                 : _.is_free_temporarily &&
                   (_ = (0, _._)("#EventDisplay_CallToAction_AddToAccount")),
               (0, _.jsx)("div", {
-                className: (0, _._)(_().Action, __webpack_require__),
+                className: (0, _._)(_().Action, _),
                 onClick: _,
                 children: (0, _.jsx)("span", {
                   children: _,
@@ -14403,12 +14281,12 @@
           if ("" == _.formatted_final_price)
             return (0, _.jsx)("a", {
               href: _,
-              className: (0, _._)(_().Action, __webpack_require__),
+              className: (0, _._)(_().Action, _),
               children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
             });
         }
         return (0, _.jsx)(_, {
-          className: __webpack_require__,
+          className: _,
           storeItemBestPurchaseOption: _,
           storeItemDefaultData: _,
         });
@@ -14416,16 +14294,11 @@
       function _(_) {
         const {
             className: _,
-            storeItemBestPurchaseOption: __webpack_require__,
+            storeItemBestPurchaseOption: _,
             storeItemDefaultData: _,
           } = _,
           _ = (0, _._)(),
-          { mutate: _ } = _(
-            __webpack_require__?.packageid,
-            __webpack_require__?.bundleid,
-            !1,
-            _.feature,
-          );
+          { mutate: _ } = _(_?.packageid, _?.bundleid, !1, _.feature);
         return (0, _.jsx)("div", {
           className: (0, _._)(_().Action, _),
           onClick: () => _(),
@@ -14556,7 +14429,7 @@
       const _ = (_) => {
         const {
             className: _,
-            bIgnored: __webpack_require__,
+            bIgnored: _,
             bApplyingFollowing: _,
             bFollowing: _,
             onFollowClick: _,
@@ -14582,7 +14455,7 @@
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
-                  toolTipContent: __webpack_require__ || _ ? void 0 : _,
+                  toolTipContent: _ || _ ? void 0 : _,
                   children: (0, _.jsxs)(_._, {
                     className: (0, _._)(
                       _.Button,
@@ -14599,14 +14472,14 @@
                         (0, _.jsx)(_._, {
                           size: 15,
                         }),
-                      !_ && (_ || __webpack_require__) && (0, _.jsx)(_.Jlk, {}),
+                      !_ && (_ || _) && (0, _.jsx)(_.Jlk, {}),
                       (0, _.jsx)("div", {
                         className: (0, _._)(_.FollowBtnText, "FollowBtnText"),
                         children:
                           !_ &&
                           (_
                             ? (0, _._)("#Button_Followed")
-                            : __webpack_require__
+                            : _
                               ? (0, _._)("#Button_Ignored")
                               : (0, _._)("#Button_Follow")),
                       }),
@@ -14621,7 +14494,7 @@
       function _(_) {
         const {
             followType: _,
-            fnSuccessCallback: __webpack_require__,
+            fnSuccessCallback: _,
             clanAccountID: _,
             className: _,
           } = _,
@@ -14735,12 +14608,8 @@
           })(_, _ ? _.k_ECuratorUnfollow : _.k_ECuratorFollow),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(async () => {
-            null != _ &&
-              (_(!0),
-              await _(),
-              _(!1),
-              __webpack_require__ && __webpack_require__(_));
-          }, [_, __webpack_require__, _]);
+            null != _ && (_(!0), await _(), _(!1), _ && __webpack_require__(_));
+          }, [_, _, _]);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -14764,7 +14633,7 @@
         });
       }
       function _(_) {
-        const { appid: _, className: __webpack_require__ } = _,
+        const { appid: _, className: _ } = _,
           [_, _] = _.useState(!1),
           _ = (function (_) {
             const { data: _ } = _();
@@ -14779,7 +14648,7 @@
             _(!0), await _(), _(!1);
           }, [_, _]);
         return (0, _.jsx)(_, {
-          className: __webpack_require__,
+          className: _,
           bIgnored: Boolean(_),
           bFollowing: Boolean(_),
           bApplyingFollowing: _,
@@ -14833,16 +14702,12 @@
       function _(_) {
         const {
             className: _,
-            url: __webpack_require__,
+            url: _,
             style: _,
             children: _,
             bSkipForcingStoreLink: _,
           } = _,
-          _ = _
-            ? __webpack_require__
-            : __webpack_require__
-              ? (0, _._)(__webpack_require__, _._.STORE_BASE_URL)
-              : void 0,
+          _ = _ ? _ : _ ? (0, _._)(_, _._.STORE_BASE_URL) : void 0,
           _ = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
@@ -14869,10 +14734,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { size: _, color: __webpack_require__, trackColor: _ } = _,
+        const { size: _, color: _, trackColor: _ } = _,
           _ = {
             borderColor: _,
-            borderLeftColor: __webpack_require__,
+            borderLeftColor: _,
           };
         if ("number" == typeof _) {
           const _ = `${_}px`;

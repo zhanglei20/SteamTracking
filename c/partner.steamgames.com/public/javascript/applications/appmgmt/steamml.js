@@ -762,7 +762,7 @@
           })
         ),
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1),
+          const [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(""),
             [_, _] = (0, _.useState)(""),
             [_, _] = (0, _.useState)([]),
@@ -899,7 +899,7 @@
           });
         }),
         _ = (0, _._)(({ problem: _ }) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1),
+          const [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(_.name),
             [_, _] = (0, _.useState)(!1),
             [_, _] = (0, _.useState)(_.problem_description),

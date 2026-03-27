@@ -12,13 +12,10 @@
       var _ = class extends Event {
           oldState;
           newState;
-          constructor(
-            _,
-            { oldState: _ = "", newState: __webpack_require__ = "", ..._ } = {},
-          ) {
+          constructor(_, { oldState: _ = "", newState: _ = "", ..._ } = {}) {
             super(_, _),
               (this.oldState = String(_ || "")),
-              (this.newState = String(__webpack_require__ || ""));
+              (this.newState = String(_ || ""));
           }
         },
         _ = new WeakMap();
@@ -209,15 +206,14 @@
           _ && _ && "auto" === _.popover && _.set(_, _),
           _(_, "closed", "open");
       }
-      function _(_, _ = !1, __webpack_require__ = !1) {
+      function _(_, _ = !1, _ = !1) {
         if (!_(_, !0)) return;
         const _ = _.ownerDocument;
-        if ("auto" === _.popover && (_(_, _, __webpack_require__), !_(_, !0)))
-          return;
+        if ("auto" === _.popover && (_(_, _, _), !_(_, !0))) return;
         if (
           (_(_.get(_), !1),
           _.delete(_),
-          __webpack_require__ &&
+          _ &&
             (_.dispatchEvent(
               new _("beforetoggle", {
                 oldState: "open",
@@ -231,13 +227,13 @@
           _.get(_)?.delete(_),
           _.classList.remove(":popover-open"),
           _.set(_, "hidden"),
-          __webpack_require__ && _(_, "open", "closed");
+          _ && _(_, "open", "closed");
         const _ = _.get(_);
         _ && (_.delete(_), _ && _.focus());
       }
-      function _(_, _ = !1, __webpack_require__ = !1) {
+      function _(_, _ = !1, _ = !1) {
         let _ = _(_);
-        for (; _; ) _(_, _, __webpack_require__), (_ = _(_));
+        for (; _; ) _(_, _, _), (_ = _(_));
       }
       function _(_, _, _) {
         const _ = _.ownerDocument || _;

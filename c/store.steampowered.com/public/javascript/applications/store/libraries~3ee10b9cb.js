@@ -66,10 +66,10 @@
           };
         },
         _ = (_) => {
-          const { offsetWidth: _, offsetHeight: __webpack_require__ } = _;
+          const { offsetWidth: _, offsetHeight: _ } = _;
           return {
             width: _,
-            height: __webpack_require__,
+            height: _,
           };
         },
         _ = (_) => _,
@@ -216,22 +216,22 @@
           }
           return _[_.options.horizontal ? "offsetWidth" : "offsetHeight"];
         },
-        _ = (_, { adjustments: _ = 0, behavior: __webpack_require__ }, _) => {
+        _ = (_, { adjustments: _ = 0, behavior: _ }, _) => {
           var _, _;
           const _ = _ + _;
           null == (_ = null == (_ = _.scrollElement) ? void 0 : _.scrollTo) ||
             _.call(_, {
               [_.options.horizontal ? "left" : "top"]: _,
-              behavior: __webpack_require__,
+              behavior: _,
             });
         },
-        _ = (_, { adjustments: _ = 0, behavior: __webpack_require__ }, _) => {
+        _ = (_, { adjustments: _ = 0, behavior: _ }, _) => {
           var _, _;
           const _ = _ + _;
           null == (_ = null == (_ = _.scrollElement) ? void 0 : _.scrollTo) ||
             _.call(_, {
               [_.options.horizontal ? "left" : "top"]: _,
-              behavior: __webpack_require__,
+              behavior: _,
             });
         };
       class _ {
@@ -288,8 +288,8 @@
             })()),
             (this.range = null),
             (this.setOptions = (_) => {
-              Object.entries(_).forEach(([_, __webpack_require__]) => {
-                void 0 === __webpack_require__ && delete _[_];
+              Object.entries(_).forEach(([_, _]) => {
+                void 0 === _ && delete _[_];
               }),
                 (this.options = {
                   debug: !1,
@@ -464,7 +464,7 @@
                 {
                   count: _,
                   paddingStart: _,
-                  scrollMargin: __webpack_require__,
+                  scrollMargin: _,
                   getItemKey: _,
                   enabled: _,
                 },
@@ -494,7 +494,7 @@
                       1 === this.options.lanes
                         ? _[_ - 1]
                         : this.getFurthestMeasurement(_, _),
-                    _ = _ ? _.end + this.options.gap : _ + __webpack_require__,
+                    _ = _ ? _.end + this.options.gap : _ + _,
                     _ = _.get(_),
                     _ = "number" == typeof _ ? _ : this.options.estimateSize(_),
                     _ = _ + _,
@@ -673,13 +673,11 @@
               if (0 !== _.length)
                 return _(_[_(0, _.length - 1, (_) => _(_[_]).start, _)]);
             }),
-            (this.getOffsetForAlignment = (_, _, __webpack_require__ = 0) => {
+            (this.getOffsetForAlignment = (_, _, _ = 0) => {
               const _ = this.getSize(),
                 _ = this.getScrollOffset();
               "auto" === _ && (_ = _ >= _ + _ ? "end" : "start"),
-                "center" === _
-                  ? (_ += (__webpack_require__ - _) / 2)
-                  : "end" === _ && (_ -= _);
+                "center" === _ ? (_ += (_ - _) / 2) : "end" === _ && (_ -= _);
               const _ = this.getTotalSize() + this.options.scrollMargin - _;
               return Math.max(Math.min(_, _), 0);
             }),
@@ -705,23 +703,23 @@
             (this.isDynamicMode = () => this.elementsCache.size > 0),
             (this.scrollToOffset = (
               _,
-              { align: _ = "start", behavior: __webpack_require__ } = {},
+              { align: _ = "start", behavior: _ } = {},
             ) => {
-              "smooth" === __webpack_require__ &&
+              "smooth" === _ &&
                 this.isDynamicMode() &&
                 console.warn(
                   "The `smooth` scroll behavior is not fully supported with dynamic size.",
                 ),
                 this._scrollToOffset(this.getOffsetForAlignment(_, _), {
                   adjustments: void 0,
-                  behavior: __webpack_require__,
+                  behavior: _,
                 });
             }),
             (this.scrollToIndex = (
               _,
-              { align: _ = "auto", behavior: __webpack_require__ } = {},
+              { align: _ = "auto", behavior: _ } = {},
             ) => {
-              "smooth" === __webpack_require__ &&
+              "smooth" === _ &&
                 this.isDynamicMode() &&
                 console.warn(
                   "The `smooth` scroll behavior is not fully supported with dynamic size.",
@@ -739,7 +737,7 @@
                   const [_, _] = _;
                   this._scrollToOffset(_, {
                     adjustments: void 0,
-                    behavior: __webpack_require__,
+                    behavior: _,
                   }),
                     this.targetWindow.requestAnimationFrame(() => {
                       const _ = this.getScrollOffset(),
@@ -793,14 +791,11 @@
                 0,
               );
             }),
-            (this._scrollToOffset = (
-              _,
-              { adjustments: _, behavior: __webpack_require__ },
-            ) => {
+            (this._scrollToOffset = (_, { adjustments: _, behavior: _ }) => {
               this.options.scrollToFn(
                 _,
                 {
-                  behavior: __webpack_require__,
+                  behavior: _,
                   adjustments: _,
                 },
                 this,

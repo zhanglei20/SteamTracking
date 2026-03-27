@@ -41,7 +41,7 @@
       const _ = _.memo(function (_) {
         const {
             virtualizer: _,
-            bDynamic: __webpack_require__,
+            bDynamic: _,
             idx: _,
             rowGap: _,
             renderItem: _,
@@ -56,7 +56,7 @@
             [_, _],
           );
         return (0, _.jsx)(_._, {
-          ref: __webpack_require__ ? _.measureElement : void 0,
+          ref: _ ? _.measureElement : void 0,
           navKey: `VirtualizedListIndex-${_}`,
           "data-index": _,
           fnScrollIntoViewHandler: _,
@@ -70,7 +70,7 @@
       });
       _.forwardRef(function (_, _) {
         const {
-            nRows: __webpack_require__,
+            nRows: _,
             nItemHeight: _,
             nRowGap: _,
             overscan: _,
@@ -100,7 +100,7 @@
           ),
           _ = (0, _._)(_, _),
           _ = {
-            nRows: __webpack_require__,
+            nRows: _,
             nItemHeight: _,
             nRowGap: _,
             overscan: _,
@@ -135,7 +135,7 @@
       function _(_) {
         const {
             nScrollMargin: _,
-            nRows: __webpack_require__,
+            nRows: _,
             nItemHeight: _,
             nRowGap: _ = 10,
             overscan: _ = 6,
@@ -145,7 +145,7 @@
           } = _,
           _ = ((0, _._)(), _ + _),
           _ = (0, _._)({
-            count: __webpack_require__,
+            count: _,
             scrollMargin: _,
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
@@ -173,7 +173,7 @@
       function _(_) {
         const {
             nRows: _,
-            nScrollMargin: __webpack_require__,
+            nScrollMargin: _,
             elScrollable: _,
             nItemHeight: _,
             nRowGap: _ = 10,
@@ -186,7 +186,7 @@
           _ = (0, _._)(),
           _ = (0, _._)({
             count: _,
-            scrollMargin: __webpack_require__ - (_?.offsetTop || 0),
+            scrollMargin: _ - (_?.offsetTop || 0),
             getScrollElement: () => _,
             estimateSize: _.useCallback(() => _, [_]),
             measureElement: _,
@@ -217,12 +217,7 @@
         );
       }
       function _(_) {
-        const {
-            virtualizer: _,
-            nRowGap: __webpack_require__,
-            renderItem: _,
-            bDynamic: _,
-          } = _,
+        const { virtualizer: _, nRowGap: _, renderItem: _, bDynamic: _ } = _,
           _ = _.getVirtualItems(),
           _ = _.length ? _[0].start - _.options.scrollMargin : 0,
           _ = Math.max(0, _.getTotalSize());
@@ -249,7 +244,7 @@
                   virtualizer: _,
                   bDynamic: _,
                   idx: _.index,
-                  rowGap: __webpack_require__,
+                  rowGap: _,
                   renderItem: _,
                 },
                 _.key,
@@ -342,15 +337,15 @@
       }
       const _ = _.createContext(void 0);
       function _(_) {
-        const { table: _, setColumnSizeOverride: __webpack_require__ } = _,
+        const { table: _, setColumnSizeOverride: _ } = _,
           _ = (0, _.useRef)(_);
         _.current = _;
         const _ = (0, _.useMemo)(
           () => ({
             table: _.current,
-            setColumnSizeOverride: __webpack_require__,
+            setColumnSizeOverride: _,
           }),
-          [__webpack_require__],
+          [_],
         );
         return (0, _.jsx)(_.Provider, {
           value: _,
@@ -359,7 +354,7 @@
       }
       const _ = _.forwardRef(function (_, _) {
         const {
-            data: __webpack_require__,
+            data: _,
             columns: _,
             className: _,
             width: _,
@@ -404,7 +399,7 @@
             );
           }),
           _ = (0, _._)({
-            data: __webpack_require__,
+            data: _,
             columns: _,
             defaultColumn: {
               minSize: 60,
@@ -555,7 +550,7 @@
             children: (0, _.jsxs)("div", {
               role: "table",
               ref: _,
-              "aria-rowcount": __webpack_require__.length,
+              "aria-rowcount": _.length,
               style: {
                 minHeight: _,
                 width: _.getTotalSize(),
@@ -615,13 +610,13 @@
         };
       }
       function _(_) {
-        const { group: _, sticky: __webpack_require__, nHeaderHeight: _ } = _;
+        const { group: _, sticky: _, nHeaderHeight: _ } = _;
         return (0, _.jsx)("div", {
           role: "row",
           className: _()(
             _().FancyTableRow,
             _().FancyTableHeader,
-            __webpack_require__ && _().StickyHeader,
+            _ && _().StickyHeader,
           ),
           children: _.headers.map((_, _) => {
             const _ = _.headers[_ - 1],
@@ -657,7 +652,7 @@
       const _ = _.memo(function (_) {
         const {
           row: _,
-          size: __webpack_require__,
+          size: _,
           rowVirtualizer: _,
           measureRef: _,
           index: _,
@@ -671,7 +666,7 @@
             _.getCanExpand() && _().ExpandableRow,
           ),
           style: {
-            minHeight: _.getCanExpand() ? void 0 : `${__webpack_require__}px`,
+            minHeight: _.getCanExpand() ? void 0 : `${_}px`,
             transform: "translateY(var(--virtualPos))",
           },
           "data-even": _ % 2 == 0,
@@ -686,11 +681,7 @@
         });
       });
       function _(_) {
-        const {
-          row: _,
-          rowVirtualizer: __webpack_require__,
-          renderGroup: _,
-        } = _;
+        const { row: _, rowVirtualizer: _, renderGroup: _ } = _;
         if (_.getCanExpand()) {
           const _ = _ ?? (() => _.groupingValue);
           return (0, _.jsxs)("button", {
@@ -719,7 +710,7 @@
                 _,
                 {
                   cell: _,
-                  rowVirtualizer: __webpack_require__,
+                  rowVirtualizer: _,
                   index: _.index,
                   transform: _ ? void 0 : `translateX(${_ - _}px)`,
                 },
@@ -767,7 +758,7 @@
       function _(_) {
         const {
             header: _,
-            prevHeader: __webpack_require__,
+            prevHeader: _,
             HeaderElement: _,
             nHeaderHeight: _,
             sortDirection: _,
@@ -794,10 +785,10 @@
               },
               ..._,
               children: [
-                __webpack_require__?.column.getCanResize() &&
+                _?.column.getCanResize() &&
                   (0, _.jsx)("div", {
                     role: "presentation",
-                    onDoubleClick: () => __webpack_require__.column.resetSize(),
+                    onDoubleClick: () => _.column.resetSize(),
                     onMouseDown: __webpack_require__.getResizeHandler(),
                     onTouchStart: __webpack_require__.getResizeHandler(),
                     onClick: (_) => _.stopPropagation(),
@@ -830,14 +821,9 @@
         );
       }
       function _(_) {
-        const {
-            cell: _,
-            rowVirtualizer: __webpack_require__,
-            index: _,
-            transform: _,
-          } = _,
+        const { cell: _, rowVirtualizer: _, index: _, transform: _ } = _,
           _ = _.useRef(null),
-          _ = (0, _._)(_, __webpack_require__.measure);
+          _ = (0, _._)(_, _.measure);
         return (
           _(_.column, _),
           (0, _.jsx)("div", {

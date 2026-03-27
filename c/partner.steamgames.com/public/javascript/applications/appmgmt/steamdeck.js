@@ -11,18 +11,18 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { dataprops: _, results: __webpack_require__ } = _;
+        const { dataprops: _, results: _ } = _;
         let _ = null;
-        if (__webpack_require__ && __webpack_require__.length > 0) {
+        if (_ && _.length > 0) {
           const _ = _.appid ?? null;
           if (_) {
             let _ = __webpack_require__.findIndex((_) => _.appid == _);
-            _ = -1 != _ ? __webpack_require__[_] : null;
+            _ = -1 != _ ? _[_] : null;
           }
           const _ = _.search_id ?? null;
           if (!_ && _) {
             let _ = __webpack_require__.findIndex((_) => _.search_id == _);
-            _ = -1 != _ ? __webpack_require__[_] : null;
+            _ = -1 != _ ? _[_] : null;
           }
         }
         return _

@@ -41,16 +41,13 @@
         );
       }
       function _(_) {
-        const {
-            redirectUrl: _ = _._.PARTNER_BASE_URL,
-            closeModal: __webpack_require__,
-          } = _,
+        const { redirectUrl: _ = _._.PARTNER_BASE_URL, closeModal: _ } = _,
           _ = (0, _.useRef)(
             new _._(_._.WEBAPI_BASE_URL).GetServiceTransport(),
           ).current,
           [_, _] = (0, _.useState)(!1);
         return (0, _.jsx)(_._, {
-          onEscKeypress: __webpack_require__,
+          onEscKeypress: _,
           hideTopBar: !0,
           bDisableBackgroundDismiss: !0,
           children: _

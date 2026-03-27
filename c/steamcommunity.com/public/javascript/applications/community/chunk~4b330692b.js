@@ -112,7 +112,7 @@
           (_[(_.LNY2020 = 2)] = "LNY2020");
       })(_ || (_ = {}));
       const _ = (_, _) => {
-          const { anim: __webpack_require__ } = (0, _._)({
+          const { anim: _ } = (0, _._)({
               anim: 1,
               from: {
                 anim: 0,
@@ -160,7 +160,7 @@
                   (function (_, _) {
                     _.Default;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioY: _,
                       rotationRatioX: _,
                       rotationRatioZ: _,
@@ -176,20 +176,20 @@
                       filter: _,
                       flRandom: 0,
                       transform: _.interpolate((_) => {
-                        const _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
+                        const _ = _ * _ * _,
+                          _ = _ * _ * _,
+                          _ = _ * _ * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateY(${_}rad) rotateX(${_}rad) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ),
                 _ = _.map((_) =>
                   (function (_, _) {
                     if (Math.random() > 0.1) return null;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioZ: _,
                       yRange: _,
                       xRange: _,
@@ -203,18 +203,18 @@
                       filter: _,
                       flRandom: Math.random(),
                       transform: _.interpolate((_) => {
-                        const _ = ((_ * __webpack_require__) / 4) * _,
+                        const _ = ((_ * _) / 4) * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ).filter((_) => !!_);
               return {
                 rgParticleStyles: _,
                 rgStreamerStyles: _,
               };
-            }, [_, _, __webpack_require__]);
+            }, [_, _, _]);
           return _;
         },
         _ = {
@@ -231,7 +231,7 @@
         },
         _ = ({ eType: _ }) => {
           _.Gold, _.LNY2020;
-          const [_, __webpack_require__] = (function () {
+          const [_, _] = (function () {
             const [_, _] = (0, _.useState)(null),
               _ = (0, _.useCallback)((_) => {
                 _ &&
@@ -293,7 +293,7 @@
               bottom: 0,
               overflow: "hidden",
             },
-            ref: __webpack_require__,
+            ref: _,
             children: [
               _,
               _.map((_, _) =>
@@ -601,10 +601,10 @@
         _ = __webpack_require__("chunkid");
       var _ = __webpack_require__("chunkid");
       const _ = (_) => {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_, _.UnstyledButton),
-          ...__webpack_require__,
+          ..._,
         });
       };
       var _,
@@ -651,10 +651,10 @@
         render() {
           const _ =
             ((_ = this.props.reactionType),
-            (__webpack_require__ =
+            (_ =
               !this.props.bDisableAnimation &&
               (this.state.bHovered || this.props.bForceAnimated)),
-            `${_._.STORE_CDN_URL}public/images/loyalty/reactions/${__webpack_require__ ? "animated" : "still"}/${_}.png`);
+            `${_._.STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${_}.png`);
           var _, _;
           return (0, _.jsx)("img", {
             className: this.props.className,
@@ -688,7 +688,7 @@
           const {
             bShowModal: _,
             targetType: _,
-            fnSuccessFunc: __webpack_require__,
+            fnSuccessFunc: _,
             targetid: _,
             ugcType: _,
             initialSelectedReaction: _,
@@ -705,7 +705,7 @@
                     this.setState({
                       bShowModal: !1,
                     }),
-                  onSuccess: __webpack_require__,
+                  onSuccess: _,
                   initialSelectedReaction: _,
                 },
                 _,
@@ -1234,7 +1234,7 @@
           ],
         });
       function _(_) {
-        const { pointBalance: _, children: __webpack_require__ } = _,
+        const { pointBalance: _, children: _ } = _,
           _ = _ && (0, _._)(_.toNumber());
         return (0, _.jsxs)("div", {
           className: _.Footer,
@@ -1278,7 +1278,7 @@
               children: (0, _.jsx)(_._, {
                 className: _.Actions,
                 "flow-children": "row",
-                children: _.Children.map(__webpack_require__, (_) =>
+                children: _.Children.map(_, (_) =>
                   (0, _.jsx)("div", {
                     className: _.Action,
                     children: _,
@@ -1314,7 +1314,7 @@
           const {
             reaction: _,
             selected: _,
-            alreadyAwarded: __webpack_require__,
+            alreadyAwarded: _,
             cost: _,
             autoFocus: _,
             awardConfig: _,
@@ -1324,11 +1324,7 @@
             type: "button",
             onMouseEnter: this.handleMouseOver,
             onMouseLeave: this.handleMouseOut,
-            className: (0, _._)(
-              _.Button,
-              _ && _.Selected,
-              __webpack_require__ && _.Disabled,
-            ),
+            className: (0, _._)(_.Button, _ && _.Selected, _ && _.Disabled),
             autoFocus: _,
             ..._,
             children: [
@@ -1337,7 +1333,7 @@
                 children: (0, _.jsx)(_, {
                   reactionType: _,
                   bForceAnimated: this.state.bHovered,
-                  bDisableAnimation: __webpack_require__,
+                  bDisableAnimation: _,
                 }),
               }),
               (0, _.jsxs)("div", {
@@ -1353,7 +1349,7 @@
                   }),
                 ],
               }),
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)(_, {
                   className: _.IconCheckMark,
                 }),
@@ -1369,10 +1365,10 @@
             className: _.Loading,
           }),
         _ = (_) => {
-          const { children: _, className: __webpack_require__, ..._ } = _;
+          const { children: _, className: _, ..._ } = _;
           return (0, _.jsxs)("span", {
             ..._,
-            className: (0, _._)(__webpack_require__, _.PointsAmount),
+            className: (0, _._)(_, _.PointsAmount),
             children: [
               (0, _.jsx)(_.vrn, {
                 className: _.PointsAmountIcon,

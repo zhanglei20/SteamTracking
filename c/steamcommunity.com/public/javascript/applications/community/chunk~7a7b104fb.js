@@ -175,7 +175,7 @@
           "i",
         );
       const _ = (_) => {
-          const { userType: _, msg: __webpack_require__, presenterInfo: _ } = _;
+          const { userType: _, msg: _, presenterInfo: _ } = _;
           if ("presenter" === _)
             return (0, _.jsx)("span", {
               children: (0, _.jsx)(_._, {
@@ -186,13 +186,10 @@
                 bioString: _.bio,
                 children: (0, _.jsx)("a", {
                   className: (0, _._)(_().MessageName, _().MessagePresenter),
-                  href:
-                    _._.COMMUNITY_BASE_URL +
-                    "profiles/" +
-                    __webpack_require__.steamid,
+                  href: _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
-                  children: __webpack_require__.persona_name,
+                  children: _.persona_name,
                 }),
               }),
             });
@@ -205,14 +202,11 @@
               (0, _.jsx)("span", {
                 children: (0, _.jsx)("a", {
                   className: (0, _._)(_().MessageName, _),
-                  href:
-                    _._.COMMUNITY_BASE_URL +
-                    "profiles/" +
-                    __webpack_require__.steamid,
-                  "data-miniprofile": "s" + __webpack_require__.steamid,
+                  href: _._.COMMUNITY_BASE_URL + "profiles/" + _.steamid,
+                  "data-miniprofile": "s" + _.steamid,
                   target: "_blank",
                   rel: "noopener noreferrer",
-                  children: __webpack_require__.persona_name,
+                  children: _.persona_name,
                 }),
               })
             );
@@ -592,10 +586,10 @@
           const {
               hidden: _,
               bPartnerMemberOnlyChat: _,
-              bInvertLayout: __webpack_require__,
+              bInvertLayout: _,
             } = this.props,
             _ = this.m_chat ? this.m_chat.m_rgChatMessages : [],
-            _ = __webpack_require__ ? _.reverse() : _,
+            _ = _ ? _.reverse() : _,
             _ = this.m_chat
               ? _._.GetPresenterMapForBroadcasterSteamID(
                   this.m_chat.GetBroadcastSteamID(),
@@ -613,7 +607,7 @@
               (0, _.jsx)(_._, {
                 latestAnnouncement: _,
               }),
-              __webpack_require__ &&
+              _ &&
                 !!this.m_chat &&
                 (0, _.jsx)(_, {
                   oChat: this.m_chat,
@@ -631,7 +625,7 @@
                 children: _.map((_, _) => this.RenderUserChatLine(_, _, _)),
               }),
               (0, _.jsx)(_, {}),
-              !__webpack_require__ &&
+              !_ &&
                 !!this.m_chat &&
                 (0, _.jsx)(_, {
                   oChat: this.m_chat,
@@ -643,24 +637,20 @@
         }
       };
       function _(_) {
-        const {
-          oChat: _,
-          emoticonStore: __webpack_require__,
-          bPartnerMemberOnlyChat: _,
-        } = _;
+        const { oChat: _, emoticonStore: _, bPartnerMemberOnlyChat: _ } = _;
         return !_ ||
           ((null === _._ || void 0 === _._ ? void 0 : _._.logged_in) &&
             (null === _._ || void 0 === _._ ? void 0 : _._.is_partner_member))
           ? (null === _._ || void 0 === _._ ? void 0 : _._.logged_in)
             ? (0, _.jsx)(_, {
                 oChat: _,
-                emoticonStore: __webpack_require__,
+                emoticonStore: _,
               })
             : null
           : (0, _.jsx)(_, {});
       }
       function _(_) {
-        const { oChat: _, emoticonStore: __webpack_require__ } = _,
+        const { oChat: _, emoticonStore: _ } = _,
           [_, _] = _.useState(""),
           _ = _.useRef(void 0),
           _ = (0, _._)(() => _.m_bRateLimited),
@@ -726,7 +716,7 @@
                       disabled: !1,
                       OnEmoticonSelected: _,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                      emoticonStore: __webpack_require__,
+                      emoticonStore: _,
                     }),
                     (0, _.jsx)(_, {
                       ..._,
@@ -741,17 +731,11 @@
       }
       function _(_) {
         var _;
-        const {
-          oChat: __webpack_require__,
-          emoticonStore: _,
-          textInputRef: _,
-        } = _;
-        return __webpack_require__.m_strFlairGroupID &&
+        const { oChat: _, emoticonStore: _, textInputRef: _ } = _;
+        return _.m_strFlairGroupID &&
           _.flair_list &&
-          (null ===
-            (_ = _.GetFlairListByGroupID(
-              __webpack_require__.m_strFlairGroupID,
-            )) || void 0 === _
+          (null === (_ = _.GetFlairListByGroupID(_.m_strFlairGroupID)) ||
+          void 0 === _
             ? void 0
             : _.length)
           ? (0, _.jsx)(_._, {
@@ -762,7 +746,7 @@
               },
               rtLastAckedNewEmoticons: Number.MAX_VALUE,
               emoticonStore: _,
-              strFlairGroupID: __webpack_require__.m_strFlairGroupID,
+              strFlairGroupID: _.m_strFlairGroupID,
               title: (0, _._)("#ChatEntryButton_Flair"),
               buttonIcon: (0, _.jsx)(_.P7r, {}),
             })
@@ -946,9 +930,9 @@
         });
       }
       function _(_) {
-        const { gidGiveaway: _, stream: __webpack_require__ } = _,
+        const { gidGiveaway: _, stream: _ } = _,
           _ = (function (_, _) {
-            const [__webpack_require__, _] = (0, _._)(() => {
+            const [_, _] = (0, _._)(() => {
                 var _;
                 return [
                   null == _ ? void 0 : _.steamid,
@@ -963,15 +947,15 @@
             _.useEffect(() => {
               let _ = null;
               return (
-                (__webpack_require__ || _) &&
-                  ((_ = _._.Get().GetOrCreateChat(_, __webpack_require__)),
-                  _.StartForSteamID(__webpack_require__, _),
+                (_ || _) &&
+                  ((_ = _._.Get().GetOrCreateChat(_, _)),
+                  _.StartForSteamID(_, _),
                   _(_)),
                 () => {
                   _ && (_.Stop(), _(null));
                 }
               );
-            }, [__webpack_require__, _]);
+            }, [_, _]);
             const _ = (0, _._)(
               () => (null == _ ? void 0 : _.m_latestAnnouncement) || null,
             );
@@ -980,7 +964,7 @@
               if (_.giveaway_gid == _) return _;
             }
             return null;
-          })(_, __webpack_require__),
+          })(_, _),
           _ = (0, _._)("GameAwardDrop2022");
         let _ = null,
           _ = _().GiveawayRegisterButton;

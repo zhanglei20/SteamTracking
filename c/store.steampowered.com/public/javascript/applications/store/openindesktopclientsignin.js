@@ -37,11 +37,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ...__webpack_require__ } = _;
+        const { underline: _ = "auto", ..._ } = _;
         return (0, _.jsx)("a", {
           ...(0, _._)(
             {
-              ...__webpack_require__,
+              ..._,
               underline: _,
               className: _.TextLink,
             },
@@ -81,12 +81,12 @@
         });
       }
       function _() {
-        const [_, _, __webpack_require__] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return {
           elDialogElement: (0, _.jsx)(_._, {
             active: _,
             children: (0, _.jsx)(_, {
-              closeModal: __webpack_require__,
+              closeModal: _,
             }),
           }),
           fnShowLogonDialog: _,
@@ -104,125 +104,65 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 93695, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 93695, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 41091, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 41091, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 89180, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 89180, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21514, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21514, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 45598, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 45598, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 55971, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 55971, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67217, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67217, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 27686, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 27686, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 7623, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 7623, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97757, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97757, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 46345, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46345, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 5600, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 5600, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51163, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51163, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 71913, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 71913, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 79872, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 79872, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 12322, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94954, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 48341, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97890, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97890, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21810, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21810, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 75500, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 75500, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 72268, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 72268, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 85951, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 85951, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 28265, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 28265, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 82248, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 82248, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 62020, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 62020, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67841, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67841, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 94921, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 94921, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 11667, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 11667, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 74528, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 74528, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });
@@ -494,9 +434,9 @@
         __webpack_require__("chunkid");
       function _(_) {
         const { labelledBy: _ } = _ || {},
-          [__webpack_require__, _] = _.useState(void 0);
+          [_, _] = _.useState(void 0);
         return {
-          headerId: _ || __webpack_require__,
+          headerId: _ || _,
           context: _.useMemo(
             () => ({
               setHeaderId: _,
@@ -508,7 +448,7 @@
       function _(_) {
         const {
             active: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             className: _,
             modalClassName: _,
             children: _,
@@ -522,7 +462,7 @@
           children: (0, _.jsx)(_._, {
             active: _,
             children: (0, _.jsx)(_._, {
-              onEscKeypress: __webpack_require__,
+              onEscKeypress: _,
               className: _,
               children: (0, _.jsx)(_._, {
                 role: "dialog",
@@ -536,12 +476,12 @@
         });
       }
       function _(_) {
-        const { className: _, children: __webpack_require__ } = _;
+        const { className: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)("div", {
             className: _,
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
@@ -652,11 +592,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = (0, _._)(function (_) {
-          const {
-              fnOpenInSteamClient: _,
-              eClientConnectedState: __webpack_require__,
-            } = (0, _.useOpenWebInSteamClient)(),
-            _ = 1 == __webpack_require__,
+          const { fnOpenInSteamClient: _, eClientConnectedState: _ } = (0,
+            _.useOpenWebInSteamClient)(),
+            _ = 1 == _,
             [_, _, _] = (0, _._)();
           return (0, _.jsxs)(_.Fragment, {
             children: [

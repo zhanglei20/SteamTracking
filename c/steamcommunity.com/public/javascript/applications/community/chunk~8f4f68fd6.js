@@ -2373,13 +2373,7 @@
         _ = __webpack_require__._(_);
       const _ = !0;
       function _(_) {
-        let {
-            onActivate: _,
-            icon: __webpack_require__,
-            body: _,
-            eUIMode: _,
-            classNames: _,
-          } = _,
+        let { onActivate: _, icon: _, body: _, eUIMode: _, classNames: _ } = _,
           _ = _,
           _ = _().PinnedTemplate;
         return (
@@ -2397,7 +2391,7 @@
                 children: [
                   (0, _.jsx)("span", {
                     className: _().Icon,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                   _,
                 ],
@@ -2409,7 +2403,7 @@
       function _(_) {
         const {
           count: _,
-          icon: __webpack_require__,
+          icon: _,
           onActivate: _,
           strLocToken: _,
           bAlwaysShow: _,
@@ -2420,7 +2414,7 @@
         if (!_ && !_) return null;
         const _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
-          icon: __webpack_require__,
+          icon: _,
           body: _,
           onActivate: _,
           eUIMode: _,
@@ -2432,7 +2426,7 @@
       function _(_) {
         let {
           nUnread: _,
-          location: __webpack_require__,
+          location: _,
           eUIMode: _,
           bLoading: _,
           footer: _,
@@ -2454,29 +2448,21 @@
             return () => window.clearTimeout(_);
           }, []),
           _.useEffect(() => {
-            _ &&
-            _ > 0 &&
-            _ !== _().Unread &&
-            2 != __webpack_require__ &&
-            1 != __webpack_require__
+            _ && _ > 0 && _ !== _().Unread && 2 != _ && 1 != _
               ? _(_().Unread)
               : _ || _ != _().Unread || _(_().MarkedRead);
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         let _ = _.onActivate;
         _ || (_ = () => console.log("Missing activate function")),
           _ == _.loadingActive && (_ = void 0);
         let _ = _().StandardTemplate;
-        4 == __webpack_require__
+        4 == _
           ? (_ = _().AllNotificationsTemplate)
-          : 2 == __webpack_require__
+          : 2 == _
             ? (_ = _().DesktopToastTemplate)
             : (7 != _ && 3 != _) || (_ = _().StandardTemplateDesktop);
         let _ = null;
-        if (
-          _ != _.none &&
-          2 != __webpack_require__ &&
-          1 != __webpack_require__
-        ) {
+        if (_ != _.none && 2 != _ && 1 != _) {
           let _ = _ == _.loadingComplete ? _().Hide : null;
           _ = (0, _.jsxs)("div", {
             className: (0, _._)(_().LoadingTemplate, _),
@@ -2525,7 +2511,7 @@
                 _,
                 _ &&
                   (0, _.jsx)(_, {
-                    location: __webpack_require__,
+                    location: _,
                   }),
               ],
             }),
@@ -2545,7 +2531,7 @@
       function _(_) {
         let {
           icon: _,
-          title: __webpack_require__,
+          title: _,
           timestamp: _,
           location: _,
           fnRenderTimestamp: _,
@@ -2560,9 +2546,9 @@
               (0, _.jsx)(_, {
                 icon: _,
               }),
-              !!__webpack_require__ &&
+              !!_ &&
                 (0, _.jsx)(_, {
-                  title: __webpack_require__,
+                  title: _,
                 }),
               _ &&
                 _({
@@ -2643,7 +2629,7 @@
       function _(_) {
         let {
             onActivate: _,
-            onDismiss: __webpack_require__,
+            onDismiss: _,
             logo: _,
             icon: _,
             title: _,
@@ -2660,12 +2646,12 @@
               },
               [_, _],
             );
-          })(_, __webpack_require__);
+          })(_, _);
         return (0, _.jsxs)(_._, {
           className: (0, _._)(_().ShortTemplate, !_ && _().TwoLine, _),
           onActivate: _,
           onMouseDown: (_) => {
-            1 == _.button && __webpack_require__ && __webpack_require__();
+            1 == _.button && _ && __webpack_require__();
           },
           children: [
             (0, _.jsx)("div", {
@@ -2796,13 +2782,13 @@
       function _(_) {
         let {
           displayName: _,
-          location: __webpack_require__,
+          location: _,
           icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
         } = _;
-        const _ = _(__webpack_require__),
+        const _ = _(_),
           _ = (0, _._)("#SteamNotifications_TradeOffer_Title"),
           _ = _
             ? (0, _._)(
@@ -2832,7 +2818,7 @@
                     icon: _,
                     title: _,
                     timestamp: _,
-                    location: __webpack_require__,
+                    location: _,
                     fnRenderTimestamp: _,
                   }),
                   (0, _.jsx)(_, {
@@ -2853,7 +2839,7 @@
       const _ = (_) => {
         let {
           location: _,
-          icon: __webpack_require__,
+          icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
@@ -2877,7 +2863,7 @@
                 ..._,
                 children: [
                   (0, _.jsx)(_, {
-                    icon: __webpack_require__,
+                    icon: _,
                     title: _,
                     timestamp: _,
                     location: _,
@@ -2901,13 +2887,13 @@
       function _(_) {
         let {
           senderName: _,
-          location: __webpack_require__,
+          location: _,
           icon: _,
           timestamp: _,
           fnRenderTimestamp: _,
           onHide: _,
         } = _;
-        const _ = _(__webpack_require__),
+        const _ = _(_),
           _ = _
             ? (0, _._)(
                 "#Notification_GiftReceived_Body_Short",
@@ -2934,7 +2920,7 @@
                     icon: _,
                     title: _,
                     timestamp: _,
-                    location: __webpack_require__,
+                    location: _,
                     fnRenderTimestamp: _,
                   }),
                   (0, _.jsx)(_, {
@@ -2957,7 +2943,7 @@
       function _(_) {
         let {
           requestorName: _,
-          requestorAvatarURL: __webpack_require__,
+          requestorAvatarURL: _,
           fallbackLogo: _,
           data: _,
           location: _,
@@ -2981,7 +2967,7 @@
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
         let _ = _;
-        if (__webpack_require__ && !_) {
+        if (_ && !_) {
           const _ = 3 == _.state && 1 != _,
             _ = _ ? _().ShortLogoDimensions : _().StandardLogoDimensions;
           _ = (0, _.jsxs)(_._, {
@@ -2995,7 +2981,7 @@
                 }),
               (0, _.jsx)("img", {
                 className: _,
-                src: __webpack_require__,
+                src: _,
                 onError: _,
               }),
             ],
@@ -3167,7 +3153,7 @@
       function _(_) {
         let {
           fallbackLogo: _,
-          app: __webpack_require__,
+          app: _,
           data: _,
           location: _,
           icon: _,
@@ -3176,16 +3162,13 @@
           onHide: _,
         } = _;
         const _ = _(_),
-          _ = _(__webpack_require__, _, _),
-          _ = !__webpack_require__;
+          _ = _(_, _, _),
+          _ = !_;
         let _ = "";
         return (
           1 == _.state
             ? (_ =
-                _ &&
-                (null == __webpack_require__
-                  ? void 0
-                  : __webpack_require__.GetName())
+                _ && (null == _ ? void 0 : __webpack_require__.GetName())
                   ? (0, _._)(
                       "#SteamNotification_AsyncGame_Action_Short",
                       __webpack_require__.GetName(),
@@ -3193,10 +3176,7 @@
                   : (0, _._)("#SteamNotification_AsyncGame_Action"))
             : 2 == _.state &&
               (_ =
-                _ &&
-                (null == __webpack_require__
-                  ? void 0
-                  : __webpack_require__.GetName())
+                _ && (null == _ ? void 0 : __webpack_require__.GetName())
                   ? (0, _._)(
                       "#SteamNotification_AsyncGame_Done_Short",
                       __webpack_require__.GetName(),
@@ -3228,9 +3208,7 @@
                     }),
                     (0, _.jsx)(_, {
                       children:
-                        null == __webpack_require__
-                          ? void 0
-                          : __webpack_require__.GetName(),
+                        null == _ ? void 0 : __webpack_require__.GetName(),
                     }),
                     _
                       ? (0, _.jsx)(_, {
@@ -3245,7 +3223,7 @@
       function _(_) {
         const {
             title: _,
-            body: __webpack_require__,
+            body: _,
             logoUrl: _,
             bDataLoading: _,
             icon: _,
@@ -3275,7 +3253,7 @@
               logo: _,
               icon: _.icon,
               title: _,
-              body: __webpack_require__,
+              body: _,
               onActivate: _,
               personaStatus: _,
             })
@@ -3296,7 +3274,7 @@
                   }),
                   (0, _.jsx)(_, {
                     multiline: !0,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                   _
                     ? (0, _.jsx)(_, {
@@ -3469,7 +3447,7 @@
       function _(_) {
         let {
           app: _,
-          fallbackLogo: __webpack_require__,
+          fallbackLogo: _,
           data: _,
           location: _,
           icon: _,
@@ -3478,7 +3456,7 @@
           onHide: _,
         } = _;
         const _ = _(_),
-          _ = _(_, __webpack_require__, _),
+          _ = _(_, _, _),
           _ = _.appid && !_;
         let _ = "",
           _ = null;
@@ -3567,7 +3545,7 @@
               })
         );
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         var _, _, _;
         const [_, _] = _.useState(!1),
           _ = () => _(!0);
@@ -3578,7 +3556,7 @@
               },
               children: _,
             })
-          : __webpack_require__
+          : _
             ? (0, _.jsx)(_._, {
                 style: {
                   position: "relative",
@@ -3672,12 +3650,12 @@
         );
       }
       function _(_) {
-        const { rollup: _, uimode: __webpack_require__, location: _ } = _,
+        const { rollup: _, uimode: _, location: _ } = _,
           _ = _(_.type);
         return _
           ? (0, _.jsx)(_._, {
               controller: "notification",
-              method: (0, _._)(__webpack_require__),
+              method: (0, _._)(_),
               submethod: (0, _._)(_),
               children: (0, _.jsx)(_, {
                 ..._,
@@ -3819,10 +3797,10 @@
       }
       function _(_) {
         const _ =
-          ((__webpack_require__ = _.rollup.type),
+          ((_ = _.rollup.type),
           (_ = _.rollup.item.body_data),
           _.useMemo(() => {
-            const _ = __webpack_require__,
+            const _ = _,
               _ = (0, _._)(_),
               _ = (0, _._)(_);
             if (!_) return null;
@@ -3840,7 +3818,7 @@
               strUrl: _,
               steamid: _ && _[_],
             };
-          }, [_, __webpack_require__]));
+          }, [_, _]));
         var _, _;
         if (!_) return null;
         const { strTitleLoc: _, strBodyLoc: _, strUrl: _, steamid: _ } = _;
@@ -3855,15 +3833,9 @@
           : null;
       }
       function _(_) {
-        const {
-            url: _,
-            count: __webpack_require__,
-            icon: _,
-            strLocToken: _,
-            eFeature: _,
-          } = _,
+        const { url: _, count: _, icon: _, strLocToken: _, eFeature: _ } = _,
           _ = (0, _._)(_);
-        return __webpack_require__
+        return _
           ? _
             ? null
             : (0, _.jsx)("a", {
@@ -3871,7 +3843,7 @@
                 className: _().WebPinnedNotification,
                 children: (0, _.jsx)(_, {
                   icon: (0, _.jsx)(_, {}),
-                  count: __webpack_require__,
+                  count: _,
                   onActivate: () => window.location.assign(_),
                   strLocToken: _,
                   eUIMode: 3,
@@ -4186,15 +4158,14 @@
               : "";
           return (0, _.jsx)("a", {
             href: _,
-            onMouseDown: (_) => _(() => {}, __webpack_require__.item, _),
+            onMouseDown: (_) => _(() => {}, _.item, _),
             children: (0, _.jsx)(_, {
               title: _,
               body: _,
               bDataLoading: _,
               logoUrl: null == _ ? void 0 : _.avatar_url_medium,
               icon: (0, _.jsx)(_.Qte, {}),
-              onActivate: () =>
-                _(() => window.location.assign(_), __webpack_require__.item),
+              onActivate: () => _(() => window.location.assign(_), _.item),
               location: _,
               eUIMode: _,
               timestamp: _.timestamp,

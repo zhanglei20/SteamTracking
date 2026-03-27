@@ -1111,8 +1111,8 @@
             );
           let _ =
             ((_ = this.m_representation),
-            (__webpack_require__ = this.m_nNextSegment),
-            _(_.segmentTemplate.strMedia, _.strID, __webpack_require__));
+            (_ = this.m_nNextSegment),
+            _(_.segmentTemplate.strMedia, _.strID, _));
           var _, _;
           this.DownloadSegment(this.m_representation, this.m_nNextSegment, _);
         }
@@ -3757,7 +3757,7 @@
         _ = __webpack_require__("chunkid");
       const _ = 6;
       function _(_) {
-        const { _: _, bHideInLibraryApps: __webpack_require__ } = _,
+        const { _: _, bHideInLibraryApps: _ } = _,
           { data: _ } = (0, _._)(_),
           _ = 2 == _?.item_type,
           { data: _ } = (0, _._)(),
@@ -3765,7 +3765,7 @@
             if (_)
               return 1 === _.item_type || 2 === _.item_type
                 ? (_.included_appids || [])
-                    .filter((_) => !_ || !__webpack_require__ || !_?.has(_))
+                    .filter((_) => !_ || !_ || !_?.has(_))
                     .map((_) => ({
                       appid: _,
                     }))
@@ -3774,7 +3774,7 @@
                     _.item_type,
                   ),
                   null);
-          }, [_, __webpack_require__, _, _]);
+          }, [_, _, _, _]);
         if (!_ || 0 == _.length) return null;
         const _ = _.length;
         let _ = _._.LocalizePlural("#Sale_ContentPreview", _);
@@ -3814,10 +3814,10 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
-        if (!__webpack_require__ || !_) return null;
-        const _ = (0, _._)(__webpack_require__, "small_capsule");
+        if (!_ || !_) return null;
+        const _ = (0, _._)(_, "small_capsule");
         return (0, _.jsx)(_._, {
           _: _,
           className: _().PreviewItem,
@@ -3859,7 +3859,7 @@
       function _(_) {
         const {
             _: _,
-            type: __webpack_require__,
+            type: _,
             bShowDemoButton: _,
             bPreferDemoStorePage: _,
             bHidePrice: _,
@@ -3874,7 +3874,7 @@
             bIsMarketingMessage: _,
             bPreferAssetWithoutOverride: _,
           } = _,
-          _ = (0, _._)(_, __webpack_require__),
+          _ = (0, _._)(_, _),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(),
           { data: _ } = (0, _._)(_),
@@ -4088,48 +4088,42 @@
         });
       }
       function _(_) {
-        const { _: _, strURL: __webpack_require__, children: _ } = _;
+        const { _: _, strURL: _, children: _ } = _;
         return "appid" in _
           ? (0, _.jsxs)(_._, {
               _: _,
               children: [_, " "],
             })
           : (0, _.jsx)("a", {
-              href: __webpack_require__,
+              href: _,
               children: _,
             });
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__
+          { data: _ } = (0, _._)(_);
+        return _
           ? (0, _.jsx)("div", {
               className: _().StoreSaleWidgetRelease,
-              children: (0, _._)(__webpack_require__),
+              children: (0, _._)(_),
             })
           : null;
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)();
-        if (!(__webpack_require__ && _ && _.short_description && _))
-          return null;
+        if (!(_ && _ && _.short_description && _)) return null;
         const _ = _?.discount_pct || 0,
-          _ = __webpack_require__.included_appids?.length || 0,
-          _ =
-            __webpack_require__.included_appids?.filter((_) => _?.has(_))
-              ?.length || 0;
+          _ = _.included_appids?.length || 0,
+          _ = _.included_appids?.filter((_) => _?.has(_))?.length || 0;
         let _ = _.short_description;
-        const _ = 1 == __webpack_require__.item_type && 1 == _,
-          _ =
-            2 == __webpack_require__.item_type &&
-            Boolean(_?.must_purchase_as_set);
+        const _ = 1 == _.item_type && 1 == _,
+          _ = 2 == _.item_type && Boolean(_?.must_purchase_as_set);
         return (
-          (2 == __webpack_require__.item_type ||
-            (1 == __webpack_require__.item_type && !_)) &&
+          (2 == _.item_type || (1 == _.item_type && !_)) &&
             (_ =
               !_ && _ > 0 && _ < _
                 ? (0, _._)("#Sale_Bundle_CompletePartialSet", _, _)
@@ -4179,7 +4173,7 @@
       function _(_) {
         const {
             _: _,
-            bShowDemoButton: __webpack_require__,
+            bShowDemoButton: _,
             bShowPurchaseOptionsButton: _,
             fnOnPurchaseOptionsClick: _,
             bHidePrice: _,
@@ -4197,7 +4191,7 @@
             (_.related_items?.demo_appid &&
               _.related_items?.demo_appid.length > 0),
           _ = (0, _._)(_.type),
-          _ = __webpack_require__ && _ && _;
+          _ = _ && _ && _;
         let _ = null;
         if (!_ && _?.is_free_to_keep && _?.free_to_keep_ends) {
           const _ = _.free_to_keep_ends,

@@ -1222,7 +1222,7 @@ var _ = _((exports, module) => {
             `', this)" type="text/javascript" ` +
             (goog.Dependency.defer_ ? "defer" : "") +
             _ +
-            "></script>"),
+            "><\/script>"),
             _.write(
               goog.TRUSTED_TYPES_POLICY_
                 ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -1266,8 +1266,8 @@ var _ = _((exports, module) => {
     (goog.Es6ModuleDependency.prototype.load = function (_) {
       function _(_, _) {
         (_ = _
-          ? '<script type="module" crossorigin>' + _ + "</script>"
-          : '<script type="module" crossorigin src="' + _ + '"></script>'),
+          ? '<script type="module" crossorigin>' + _ + "<\/script>"
+          : '<script type="module" crossorigin src="' + _ + '"><\/script>'),
           _.write(
             goog.TRUSTED_TYPES_POLICY_
               ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)
@@ -1381,7 +1381,7 @@ var _ = _((exports, module) => {
           _ =
             '<script type="text/javascript">' +
             goog.protectScriptTag_('goog.Dependency.callback_("' + _ + '");') +
-            "</script>";
+            "<\/script>";
         _.write(
           goog.TRUSTED_TYPES_POLICY_
             ? goog.TRUSTED_TYPES_POLICY_.createHTML(_)

@@ -430,7 +430,7 @@
       function _(_) {
         const {
             rgOrderedAppIDs: _,
-            fnSetFilteredAppID: __webpack_require__,
+            fnSetFilteredAppID: _,
             rgNotToPruneList: _,
             pageid: _,
           } = _,
@@ -500,7 +500,7 @@
                 .filter((_) => !(_ && _.size > 0) || !_.has(_));
               _.token.reason || __webpack_require__(_);
             }
-          }, [_, _.token.reason, __webpack_require__, _, _, _, _, _, _]),
+          }, [_, _.token.reason, _, _, _, _, _, _, _]),
           (0, _.jsx)(_._, {
             title: "Filter Options",
             bStartMinimized: !0,
@@ -564,7 +564,7 @@
       function _(_) {
         const {
             setFilterTagIDs: _,
-            fnUpdateSetFilterTagIDs: __webpack_require__,
+            fnUpdateSetFilterTagIDs: _,
             rgAppIDs: _,
             bLoading: _,
           } = _,
@@ -832,30 +832,25 @@
         });
       }
       function _(_) {
-        const { appId: _, frameRateData: __webpack_require__ } = _,
+        const { appId: _, frameRateData: _ } = _,
           [_, _] = (0, _._)(_, _._),
           _ = _.useMemo(() => {
             let _ = [];
             return (
-              __webpack_require__?.frame_rate_clusters.length > 0 &&
-                __webpack_require__?.frame_rate_clusters[0]?.daily_frame_rates?.map(
-                  (_) => {
-                    const _ = parseInt("" + _.mean_frame_rate),
-                      _ = parseInt("" + _.mean_frame_rate_stddev);
-                    _.push({
-                      date: _.date,
-                      mean: _,
-                      range: [_ + _, _ - _],
-                    });
-                  },
-                ),
+              _?.frame_rate_clusters.length > 0 &&
+                _?.frame_rate_clusters[0]?.daily_frame_rates?.map((_) => {
+                  const _ = parseInt("" + _.mean_frame_rate),
+                    _ = parseInt("" + _.mean_frame_rate_stddev);
+                  _.push({
+                    date: _.date,
+                    mean: _,
+                    range: [_ + _, _ - _],
+                  });
+                }),
               _.sort((_, _) => _.date - _.date)
             );
-          }, [__webpack_require__]);
-        if (
-          !__webpack_require__ ||
-          !__webpack_require__.frame_rate_clusters?.length
-        )
+          }, [_]);
+        if (!_ || !_.frame_rate_clusters?.length)
           return (0, _.jsx)("div", {
             className: _.FrameRateContainer,
             children: (0, _.jsxs)("div", {
@@ -873,7 +868,7 @@
               ],
             }),
           });
-        const _ = __webpack_require__.frame_rate_clusters[0],
+        const _ = _.frame_rate_clusters[0],
           _ = Number(_.mean_frame_rate).toFixed(0),
           _ = (0, _.jsx)("span", {
             className: _.FrameRateValue,
@@ -1067,15 +1062,9 @@
         );
       }
       const _ = (_) => {
-        const {
-          fill: _,
-          _: __webpack_require__,
-          _: _,
-          width: _,
-          height: _,
-        } = _;
+        const { fill: _, _: _, _: _, width: _, height: _ } = _;
         return (0, _.jsx)("rect", {
-          _: __webpack_require__,
+          _: _,
           _: _,
           width: _,
           height: _,
@@ -1148,7 +1137,7 @@
       (0, _._)([_._], _.prototype, "nOverrideDateNow", void 0);
       const _ = new _();
       function _(_ = 1) {
-        const [_, __webpack_require__] = _.useState(() => _()),
+        const [_, _] = _.useState(() => _()),
           _ = (0, _._)("useTimeNowWithOverride"),
           _ = _.useCallback(() => {
             _.token.reason || __webpack_require__(_());
@@ -1191,7 +1180,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           [_] = (0, _.useState)(() =>
             (function () {
               const _ = (0, _._)(
@@ -1443,7 +1432,7 @@
       function _(_) {
         const {
           nLatestTime: _,
-          nEarliestTime: __webpack_require__,
+          nEarliestTime: _,
           fnGetTimeToUpdate: _,
           onError: _,
           strAlsoShowTimeZone: _,
@@ -1491,13 +1480,8 @@
           })(_, _, _, _, _),
           _ = !_ && _;
         let _, _;
-        if (
-          _ &&
-          __webpack_require__ &&
-          _ == __webpack_require__ &&
-          __webpack_require__ > _._.GetTimeNowWithOverride()
-        ) {
-          const _ = _().unix(__webpack_require__);
+        if (_ && _ && _ == _ && _ > _._.GetTimeNowWithOverride()) {
+          const _ = _().unix(_);
           (_ = {
             hours: {
               max: _.hour(),
@@ -1522,7 +1506,7 @@
           }),
             (_ = _);
         }
-        _ || !__webpack_require__ || _ || (_ = _().unix(__webpack_require__));
+        _ || !_ || _ || (_ = _().unix(_));
         const _ = _()._.guess(),
           _ = _().unix(_)._(_),
           _ = !!_ && _ != _ && _().unix(_)._(_),
@@ -1627,7 +1611,7 @@
                             ((0 != _.weekday() && 6 != _.weekday()) ||
                               (_ = !1));
                           return _;
-                        })(__webpack_require__, _, _, _),
+                        })(_, _, _, _),
                       initialValue: _,
                       inputProps: {
                         placeholder: (0, _._)("#DateTimePicker_Enter_Date"),
@@ -1759,7 +1743,7 @@
       function _(_) {
         const {
             title: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
             getMinimized: _,
             toggleMinimized: _,
             className: _,
@@ -1784,9 +1768,9 @@
                   ),
                   children: [
                     _,
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                       (0, _.jsx)(_._, {
-                        tooltip: __webpack_require__,
+                        tooltip: _,
                       }),
                   ],
                 }),
@@ -1810,7 +1794,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(Boolean(_.bStartMinimized));
+        const [_, _] = _.useState(Boolean(_.bStartMinimized));
         return (0, _.jsx)(_, {
           ..._,
           getMinimized: () => _,
@@ -1819,11 +1803,11 @@
         });
       }
       function _(_) {
-        const { bIsMinimized: _, fnToggleMinimize: __webpack_require__ } = _,
+        const { bIsMinimized: _, fnToggleMinimize: _ } = _,
           _ = _ ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return (0, _.jsx)(_._, {
           "data-tooltip-text": (0, _._)(_),
-          onClick: __webpack_require__,
+          onClick: _,
           children: _.bIsMinimized
             ? (0, _.jsx)(_.hz4, {})
             : (0, _.jsx)(_.Xjb, {}),

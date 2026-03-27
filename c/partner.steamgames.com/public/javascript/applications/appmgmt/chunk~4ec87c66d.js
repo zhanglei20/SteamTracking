@@ -3088,16 +3088,8 @@
         GetMustHaveLaunchedAppID() {
           return this.m_oMessage.must_have_launched_appid;
         }
-        GetPreviewURL(
-          _ = "US",
-          _ = "english",
-          __webpack_require__ = !1,
-          _ = !1,
-          _ = [],
-          _,
-          _,
-        ) {
-          return `${_._.PARTNER_BASE_URL}marketingmessages/messagepreview/${this.m_oMessage.gid}/?cc=${_}&l=${_}&bForceSteamChina=${__webpack_require__}&low_bandwidth=${_}&timezone=${_ ? encodeURIComponent(_) : ""}&locale=${_ ?? ""}&dlc_override=${_ ? _.join(",") : ""}`;
+        GetPreviewURL(_ = "US", _ = "english", _ = !1, _ = !1, _ = [], _, _) {
+          return `${_._.PARTNER_BASE_URL}marketingmessages/messagepreview/${this.m_oMessage.gid}/?cc=${_}&l=${_}&bForceSteamChina=${_}&low_bandwidth=${_}&timezone=${_ ? encodeURIComponent(_) : ""}&locale=${_ ?? ""}&dlc_override=${_ ? _.join(",") : ""}`;
         }
         GetSteamRealmsForLanguage() {
           return this.m_eSteamRealms || [_._.k_ESteamRealmGlobal];
@@ -3944,19 +3936,19 @@
         }
         return !1;
       }
-      function _(_, _, __webpack_require__ = "") {
+      function _(_, _, _ = "") {
         if (_) {
           const _ = (0, _._)(_);
-          return _[_] ? _[_] : _.english ? _.english : __webpack_require__;
+          return _[_] ? _[_] : _.english ? _.english : _;
         }
-        return __webpack_require__;
+        return _;
       }
-      function _(_, _, __webpack_require__ = "") {
+      function _(_, _, _ = "") {
         if (_) {
           const _ = (0, _._)(_);
-          return _[_] ? _[_] : __webpack_require__;
+          return _[_] ? _[_] : _;
         }
-        return __webpack_require__;
+        return _;
       }
       function _(_, _) {
         const _ = (0, _._)(_);
@@ -5675,7 +5667,7 @@
           (_.k_AppTypeAdvertising = "Advertising");
       })(_ || (_ = {}));
       const _ = 2 == _._.EUNIVERSE ? 12 : 504;
-      function _(_, _ = _, __webpack_require__ = !0) {
+      function _(_, _ = _, _ = !0) {
         const _ = (0, _._)({
           mutationFn: async (_) => {
             const _ = `${_._.PARTNER_BASE_URL}apps/ajaxcreatenewapp/`,
@@ -5718,7 +5710,7 @@
               type: _.k_AppTypeAdvertising,
               range: 10,
               add_partner_app_reporting: !1,
-              auto_publish: __webpack_require__,
+              auto_publish: _,
             };
             return await _.mutateAsync(_);
           },
@@ -8717,14 +8709,12 @@
         return _(_._.InitFromAccountID(_).ConvertTo64BitString());
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _.Get().GetUserInfo(_),
-        );
+        const [_, _] = (0, _.useState)(_.Get().GetUserInfo(_));
         return (
           (0, _.useEffect)(() => {
             !_ || (_ && _?.steamid == _) || _.Get().LoadUserInfo([_]);
           }, [_, _]),
-          (0, _._)(_.Get().GetUserInfoCallbackup(_), __webpack_require__),
+          (0, _._)(_.Get().GetUserInfoCallbackup(_), _),
           _
         );
       }
@@ -8956,18 +8946,13 @@
         return _.Get().GetClusterByID(_, _);
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(() =>
-          _.Get().GetClusterByID(_, _),
-        );
+        const [_, _] = (0, _.useState)(() => _.Get().GetClusterByID(_, _));
         return (
           (0, _.useEffect)(() => {
-            _ &&
-              _ &&
-              __webpack_require__?._ != _ &&
-              _.Get().LoadCluster(_, _).then(_);
-          }, [__webpack_require__, _, _]),
+            _ && _ && _?._ != _ && _.Get().LoadCluster(_, _).then(_);
+          }, [_, _, _]),
           (0, _._)(_.Get().GetCallbackForClusterByID(_, _), _),
-          __webpack_require__
+          _
         );
       }
       function _() {
@@ -9020,7 +9005,7 @@
       }
       function _() {
         const _ = (0, _._)(),
-          [_, __webpack_require__] = _.useState(_.Get().GetDailyDealToEdit());
+          [_, _] = _.useState(_.Get().GetDailyDealToEdit());
         return (
           (0, _._)(_?.GetCallback(), (_) => {
             __webpack_require__(_), _();
@@ -9071,7 +9056,7 @@
         return (0, _._)(_._, (0, _._)(_), _);
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useMemo)(() => {
+        const [_, _] = (0, _.useMemo)(() => {
           let _ = new Set(),
             _ = new Set();
           return (
@@ -9093,7 +9078,7 @@
           );
         }, [_, _]);
         return {
-          rgAppIDs: Array.from(__webpack_require__),
+          rgAppIDs: Array.from(_),
           rgBundleIDs: Array.from(_),
         };
       }
@@ -10853,25 +10838,17 @@
       }
       function _(_) {
         const _ = _.Get(),
-          [__webpack_require__, _] = _.useState(_.GetDailyDealStartTime(_));
+          [_, _] = _.useState(_.GetDailyDealStartTime(_));
         return (
           (0, _._)(_.GetCallbackForDailyDealID(_), () =>
             _(_.GetDailyDealStartTime(_)),
           ),
-          __webpack_require__
+          _
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(() =>
-          _.Get().GetDailyDealByDay(_),
-        );
-        return (
-          (0, _._)(
-            _.Get().GetCallbackForDailyDealByDayList(_),
-            __webpack_require__,
-          ),
-          _
-        );
+        const [_, _] = _.useState(() => _.Get().GetDailyDealByDay(_));
+        return (0, _._)(_.Get().GetCallbackForDailyDealByDayList(_), _), _;
       }
       function _() {
         return {
@@ -11236,14 +11213,12 @@
       });
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)(() => [
+        const [_, _] = (0, _._)(() => [
             _.BHasAssociatedItem(),
             _.GetStoreItemKey(),
           ]),
-          [_] = (0, _._)(() => [
-            _.BHasDynamicFilterForApp(2, __webpack_require__?._),
-          ]);
-        return _ && "app" == __webpack_require__.item_type && _;
+          [_] = (0, _._)(() => [_.BHasDynamicFilterForApp(2, _?._)]);
+        return _ && "app" == _.item_type && _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -11263,7 +11238,7 @@
       class _ {
         m_mapEditModel = new Map();
         m_callback = new Map();
-        InitMarketingMessageToEdit(_, _, __webpack_require__ = !1) {
+        InitMarketingMessageToEdit(_, _, _ = !1) {
           if (
             ("dev" == _._.WEB_UNIVERSE &&
               console.log(
@@ -11271,14 +11246,14 @@
                   Boolean(this.m_mapEditModel.get(_)),
                 (0, _._)(_),
               ),
-            this.m_mapEditModel.has(_) && !__webpack_require__)
+            this.m_mapEditModel.has(_) && !_)
           )
             this.m_mapEditModel.get(_).Reset(_);
           else {
             const _ = new _._(_);
             this.m_mapEditModel.set(_, _),
               _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-              __webpack_require__ && this.GetCallback(_).Dispatch(_);
+              _ && this.GetCallback(_).Dispatch(_);
           }
           return this.m_mapEditModel.get(_);
         }
@@ -11311,9 +11286,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(
-            _.Get().GetMarketingMessageToEdit(_),
-          ),
+          [_, _] = _.useState(_.Get().GetMarketingMessageToEdit(_)),
           _ = (0, _._)(_);
         return (
           _.useEffect(() => {
@@ -11325,7 +11298,7 @@
           (0, _._)(_.Get().GetCallback(_), (_) => {
             _(_), _();
           }),
-          __webpack_require__?.GetGID() == _ ? __webpack_require__ : null
+          __webpack_require__?.GetGID() == _ ? _ : null
         );
       }
       function _(_, _) {
@@ -11418,25 +11391,23 @@
       };
       function _(_) {
         const _ = (0, _._)(_),
-          [__webpack_require__, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(
-            () => [
-              _?.GetAssetsObject("ll_image"),
-              _?.GetRealm(),
-              _?.BHasAnimatedAssets(),
-              _?.GetAssetsObject("mp4"),
-              _?.GetAssetsObject("webm"),
-              _?.GetCustomTemplate(),
-              _?.GetAssetsObject("subtitles"),
-              _?.GetAssetsObject("poster"),
-              _?.GetFeaturedVideoMP4Url(),
-              _?.GetFeaturedVideoWebMUrl(),
-              _?.GetStoreItemID(),
-              _?.GetAllAltLocalizedText(),
-            ],
-          ),
+          [_, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+            _?.GetAssetsObject("ll_image"),
+            _?.GetRealm(),
+            _?.BHasAnimatedAssets(),
+            _?.GetAssetsObject("mp4"),
+            _?.GetAssetsObject("webm"),
+            _?.GetCustomTemplate(),
+            _?.GetAssetsObject("subtitles"),
+            _?.GetAssetsObject("poster"),
+            _?.GetFeaturedVideoMP4Url(),
+            _?.GetFeaturedVideoWebMUrl(),
+            _?.GetStoreItemID(),
+            _?.GetAllAltLocalizedText(),
+          ]),
           [_] = (0, _._)(_?.appid, _);
         return _?.GetGID() == _
-          ? _(__webpack_require__, _, _, _, _, _, _, _, _, _, _, _)
+          ? _(_, _, _, _, _, _, _, _, _, _, _, _)
           : {
               bMatchingVideoAssets: !1,
               bMinimumAssetsSetup: !1,
@@ -11571,25 +11542,7 @@
       }
       function _(_) {
         const _ = (0, _._)(_),
-          [
-            __webpack_require__,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-          ] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _?.GetVisibilty(),
             _?.GetStartRTime(),
             _?.GetEndRTime(),
@@ -11613,26 +11566,7 @@
           { eventModel: _ } = (0, _._)(_, _, !0),
           [_, _] = (0, _._)((0, _._)(_), (0, _._)(_), _);
         return _?.GetGID() == _
-          ? _(
-              __webpack_require__,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-              _,
-            )
+          ? _(_, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _)
           : _();
       }
       function _(_, _) {
@@ -11685,8 +11619,8 @@
       function _(_) {
         return _(_(_), _(_), !1);
       }
-      function _(_, _, __webpack_require__ = !1) {
-        return _(_(_, _), _(_, _), __webpack_require__);
+      function _(_, _, _ = !1) {
+        return _(_(_, _), _(_, _), _);
       }
       function _(_, _, _) {
         const {
@@ -12043,19 +11977,14 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() =>
+        const [_, _] = (0, _.useState)(() =>
           _.Get().GetMarketingMessageByID(_),
         );
         return (
           (0, _.useEffect)(() => {
-            !_ ||
-              (_ && _.gid == _) ||
-              _.Get().LoadMarketingMessage(_).then(__webpack_require__);
+            !_ || (_ && _.gid == _) || _.Get().LoadMarketingMessage(_).then(_);
           }, [_, _]),
-          (0, _._)(
-            _.Get().GetCallbackForMarketingMessage(_),
-            __webpack_require__,
-          ),
+          (0, _._)(_.Get().GetCallbackForMarketingMessage(_), _),
           _
         );
       }
@@ -12077,13 +12006,12 @@
           fnDeleteMarketingMessage: _.Get().DeleteMarketingMessage,
         };
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const _ = (0, _._)({
-          queryKey: ["usePastMarketingMessage", _, __webpack_require__],
+          queryKey: ["usePastMarketingMessage", _, _],
           queryFn: async () => {
             let _ = _._.Init(_._);
-            _.Body().set_start_past_days(__webpack_require__),
-              _.Body().set_upto_past_days(_);
+            _.Body().set_start_past_days(_), _.Body().set_upto_past_days(_);
             const _ = await _._.GetPastMarketingMessages(_, _);
             if (1 !== _.GetEResult())
               throw (
@@ -12129,9 +12057,7 @@
         }
         async InternalLoadDictionary() {
           const [_] = await Promise.all([
-            __webpack_require__
-              ._("chunkid")
-              .then(__webpack_require__._.bind(__webpack_require__, 72022, 19)),
+            __webpack_require__._("chunkid").then(_._.bind(_, 72022, 19)),
           ]);
           return (this.m_marketingTokens = _), this.m_marketingTokens;
         }
@@ -12247,21 +12173,19 @@
         constructor() {}
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _.Get().GetAllPromotionContacts(_),
-        );
+        const [_, _] = (0, _.useState)(_.Get().GetAllPromotionContacts(_));
         return (
           (0, _.useEffect)(() => {
             _.Get().BHasPromotionContact(_)
               ? __webpack_require__(_.Get().GetAllPromotionContacts(_))
               : _.Get().LoadPartnerContactList(_);
           }, [_]),
-          (0, _._)(_.Get().GetListChangeCallback(_), __webpack_require__),
+          (0, _._)(_.Get().GetListChangeCallback(_), _),
           _
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(null);
+        const [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
             if (_?.length > 0) {
@@ -12449,25 +12373,22 @@
         return _(_._, (0, _._)(_));
       }
       function _(_, _) {
-        const [__webpack_require__, _] = _.useState(() =>
-          _.Get().GetInfoForStoreItem(_, _),
-        );
+        const [_, _] = _.useState(() => _.Get().GetInfoForStoreItem(_, _));
         return (
           _.useEffect(() => {
             _
-              ? _.Get().BHasInfoForStoreItem(_, _) &&
-                null != __webpack_require__
+              ? _.Get().BHasInfoForStoreItem(_, _) && null != _
                 ? _.Get().BHasInfoForStoreItem(_, _) &&
-                  __webpack_require__ != _.Get().GetInfoForStoreItem(_, _) &&
+                  _ != _.Get().GetInfoForStoreItem(_, _) &&
                   _(_.Get().GetInfoForStoreItem(_, _))
                 : _.Get().LoadStoreItemPartnerInfo(_, _).then(_)
               : _(null);
-          }, [_, _, __webpack_require__]),
-          __webpack_require__
+          }, [_, _, _]),
+          _
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(null);
+        const [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
             if (_?.length > 0) {
@@ -12967,7 +12888,7 @@
       class _ {
         m_model = null;
         m_SteamInterface = null;
-        InitPromotionPlanToEdit(_, _, __webpack_require__ = !1) {
+        InitPromotionPlanToEdit(_, _, _ = !1) {
           return (
             "dev" == _._.WEB_UNIVERSE &&
               console.log(
@@ -12977,8 +12898,7 @@
               ),
             this.m_model
               ? (this.m_model.Reset(_, _),
-                __webpack_require__ &&
-                  this.m_model.GetCallback().Dispatch(this.m_model))
+                _ && this.m_model.GetCallback().Dispatch(this.m_model))
               : (this.m_model = new _(_, _)),
             this.m_model
           );
@@ -13069,14 +12989,12 @@
           return _ && _.enable_input && Array.isArray(_.art_requests);
         }
       }
-      function _(_, _, __webpack_require__ = !1) {
-        return _.Get().InitPromotionPlanToEdit(_, _, __webpack_require__);
+      function _(_, _, _ = !1) {
+        return _.Get().InitPromotionPlanToEdit(_, _, _);
       }
       function _() {
         const _ = (0, _._)(),
-          [_, __webpack_require__] = _.useState(
-            _.Get().GetPromotionPlanToEdit(),
-          );
+          [_, _] = _.useState(_.Get().GetPromotionPlanToEdit());
         return (
           (0, _._)(_?.GetCallback(), (_) => {
             __webpack_require__(_), _();
@@ -13218,7 +13136,7 @@
         async CreatePromoInvite(_) {
           const {
             rtExpireTime: _,
-            nPartnerID: __webpack_require__,
+            nPartnerID: _,
             oInviteItem: _,
             type: _,
             strPromotionPlanID: _,
@@ -13235,8 +13153,7 @@
               _.appid && _.append("nAppID", "" + _.appid),
               _.packageid && _.append("nPackageID", "" + _.packageid),
               _.bundleid && _.append("nBundleID", "" + _.bundleid),
-              __webpack_require__ &&
-                _.append("nPartnerID", "" + __webpack_require__),
+              _ && _.append("nPartnerID", "" + _),
               _ && _.append("strPromotionPlanID", "" + _),
               _ && _.append("bRequireSalePage", "" + _),
               _ && _.append("eRequireSalePageType", "" + _),
@@ -13260,7 +13177,7 @@
                   appid: _.appid,
                   packageid: _.packageid,
                   bundleid: _.bundleid,
-                  primary_partnerid: __webpack_require__,
+                  primary_partnerid: _,
                   rtinvitetime: _,
                   rtexpiretime: _,
                 };
@@ -13443,7 +13360,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() =>
+        const [_, _] = (0, _.useState)(() =>
           _
             ? _.Get()
                 .GetAllInvites()
@@ -13491,7 +13408,7 @@
         };
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
           _.Get().GetPromotionEventInvitesByPlanID(_),
         );
         return (
@@ -13499,7 +13416,7 @@
             (!_ || (_.length > 0 && _[0].promotion_id != _)) &&
               _.Get().LoadInviteByPromotionPlanID(_);
           }),
-          (0, _._)(_.Get().GetPromotionPlanIDCallback(_), __webpack_require__),
+          (0, _._)(_.Get().GetPromotionPlanIDCallback(_), _),
           _
         );
       }
@@ -14751,7 +14668,7 @@
       var _ = __webpack_require__("chunkid");
       class _ {
         m_model = null;
-        InitPromotionPlanToEdit(_, _, __webpack_require__ = !1) {
+        InitPromotionPlanToEdit(_, _, _ = !1) {
           return (
             "dev" == _._.WEB_UNIVERSE &&
               console.log(
@@ -14761,8 +14678,7 @@
               ),
             this.m_model
               ? (this.m_model.Reset(_, _),
-                __webpack_require__ &&
-                  this.m_model.GetCallback().Dispatch(this.m_model))
+                _ && this.m_model.GetCallback().Dispatch(this.m_model))
               : (this.m_model = new _(_, _)),
             this.m_model
           );
@@ -14785,17 +14701,15 @@
         }
         constructor() {}
       }
-      function _(_, _, __webpack_require__ = !1) {
-        return _.Get().InitPromotionPlanToEdit(_, _, __webpack_require__);
+      function _(_, _, _ = !1) {
+        return _.Get().InitPromotionPlanToEdit(_, _, _);
       }
       function _() {
         return _.Get().GetPromotionPlanToEdit();
       }
       function _() {
         const _ = (0, _._)(),
-          [_, __webpack_require__] = _.useState(
-            _.Get().GetPromotionPlanToEdit(),
-          );
+          [_, _] = _.useState(_.Get().GetPromotionPlanToEdit());
         return (
           (0, _._)(_?.GetCallback(), (_) => {
             __webpack_require__(_), _();
@@ -15114,7 +15028,7 @@
         async AddNewAdminPlan(_) {
           const {
               type: _,
-              strName: __webpack_require__,
+              strName: _,
               rtStartDate: _,
               rtEndDate: _,
               strDiscountEventID: _,
@@ -15135,7 +15049,7 @@
             _ = Math.floor(new Date().getTime() / 1e3),
             _ = {
               type: _,
-              name: __webpack_require__,
+              name: _,
               start_date: _,
               end_date: _,
               store_item_id: _,
@@ -15386,11 +15300,11 @@
         };
       }
       function _(_, _) {
-        const [__webpack_require__, _] = _.useState(_.Get().GetPlanByID(_)),
+        const [_, _] = _.useState(_.Get().GetPlanByID(_)),
           [_, _] = _.useState(!1);
         return (
           (0, _.useEffect)(() => {
-            (__webpack_require__ && !_) ||
+            (_ && !_) ||
               !_ ||
               (_ ? _.Get().ForceReloadPlan(_) : _.Get().LoadPlanByID(_))
                 .then((_) => {
@@ -15402,25 +15316,23 @@
                   ),
                     _(!0);
                 });
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           (0, _._)(_.Get().GetPlanChangeCallback(_), (_) => {
             _(_.Get().GetPlanByID(_?._));
           }),
           {
             bError: _,
-            oPlanContainer: __webpack_require__,
+            oPlanContainer: _,
           }
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-          _.Get().GetPlanAdminByID(_),
-        );
+        const [_, _] = _.useState(_.Get().GetPlanAdminByID(_));
         return (
           (0, _.useEffect)(() => {
             _ || _.Get().LoadPlanByID(_);
           }, [_, _]),
-          (0, _._)(_.Get().GetPlanChangeCallback(_), __webpack_require__),
+          (0, _._)(_.Get().GetPlanChangeCallback(_), _),
           _
         );
       }
@@ -15457,9 +15369,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-          _.Get().GetPlanPipelineInputByID(_),
-        );
+        const [_, _] = _.useState(_.Get().GetPlanPipelineInputByID(_));
         return (
           (0, _.useEffect)(() => {}, []),
           (0, _._)(_.Get().GetPlanChangeCallback(_), (_) =>
@@ -15640,7 +15550,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0);
+        const [_, _] = (0, _.useState)(!0);
         return (
           (0, _.useEffect)(() => {
             __webpack_require__(!0),
@@ -15680,7 +15590,7 @@
         const {
           data: _,
           isLoading: _,
-          isError: __webpack_require__,
+          isError: _,
         } = (0, _._)({
           queryKey: ["useTopSalesRankGamesData"],
           queryFn: async () => {
@@ -15696,10 +15606,10 @@
               : null;
           },
         });
-        return _ || __webpack_require__ ? null : _;
+        return _ || _ ? null : _;
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(null);
+        const [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
             if (_ && _?.length > 0) {
@@ -15707,7 +15617,7 @@
               __webpack_require__.LoadApps(_).then(() => _(_));
             }
           }, [_, _]),
-          __webpack_require__
+          _
         );
       }
       function _(_, _, _) {
@@ -15749,14 +15659,14 @@
       class _ {
         m_mapEditModel = new Map();
         m_callback = new Map();
-        InitSpotlightToEdit(_, _, __webpack_require__ = !1) {
-          if (this.m_mapEditModel.has(_) && !__webpack_require__)
+        InitSpotlightToEdit(_, _, _ = !1) {
+          if (this.m_mapEditModel.has(_) && !_)
             this.m_mapEditModel.get(_).Reset(_);
           else {
             const _ = new _._(_);
             this.m_mapEditModel.set(_, _),
               _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-              __webpack_require__ && this.GetCallback(_).Dispatch(_);
+              _ && this.GetCallback(_).Dispatch(_);
           }
           return this.m_mapEditModel.get(_);
         }
@@ -15789,9 +15699,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(() =>
-            _.Get().GetSpotlightToEdit(_),
-          ),
+          [_, _] = _.useState(() => _.Get().GetSpotlightToEdit(_)),
           _ = (0, _._)(_);
         return (
           _.useEffect(() => {
@@ -15803,7 +15711,7 @@
           (0, _._)(_.Get().GetCallback(_), (_) => {
             _(_), _();
           }),
-          __webpack_require__
+          _
         );
       }
       function _(_, _) {
@@ -15991,16 +15899,12 @@
         };
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() =>
-          _.Get().GetSpotlightByID(_),
-        );
+        const [_, _] = (0, _.useState)(() => _.Get().GetSpotlightByID(_));
         return (
           (0, _.useEffect)(() => {
-            _ &&
-              _ != _?._ &&
-              _.Get().LoadSpotlight(_).then(__webpack_require__);
+            _ && _ != _?._ && _.Get().LoadSpotlight(_).then(_);
           }, [_, _]),
-          (0, _._)(_.Get().GetCallbackForSpotlightID(_), __webpack_require__),
+          (0, _._)(_.Get().GetCallbackForSpotlightID(_), _),
           _
         );
       }
@@ -16249,14 +16153,14 @@
         }
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(() =>
+        const [_, _] = (0, _.useState)(() =>
           _.Get().BHasSaleDetails(_, _) ? _.Get().GetSaleDetails(_, _) : null,
         );
         return (
           (0, _.useEffect)(() => {
             _.Get().FetchSalePageDetails(_, _).then(_);
-          }, [_, _, __webpack_require__]),
-          __webpack_require__
+          }, [_, _, _]),
+          _
         );
       }
       (0, _._)([_._.shallow], _.prototype, "m_mapSaleDetails", void 0);
@@ -16407,7 +16311,7 @@
       function _(_) {
         const {
             children: _,
-            hasImage: __webpack_require__,
+            hasImage: _,
             dimmed: _,
             backgroundImageUrl: _,
             backgroundColor: _,
@@ -16421,7 +16325,7 @@
         return (0, _.jsxs)("div", {
           className: (0, _._)({
             [_.ItemContainer]: !0,
-            [_.HasImage]: __webpack_require__,
+            [_.HasImage]: _,
             [_.ButtonsOnTop]: "top" == _,
             [_.ButtonsOnBottom]: "bottom" == _,
           }),
@@ -16442,45 +16346,39 @@
         });
       }
       function _(_) {
-        const { children: _, hasImage: __webpack_require__ } = _;
+        const { children: _, hasImage: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _.ItemNameInfoContainer,
-            __webpack_require__ && _.HasImage,
-          ),
+          className: (0, _._)(_.ItemNameInfoContainer, _ && _.HasImage),
           children: _,
         });
       }
       function _(_) {
-        const { children: _, inlineDate: __webpack_require__ } = _;
+        const { children: _, inlineDate: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(
-            _.ItemInfoHeader,
-            __webpack_require__ && _.InlineDate,
-          ),
+          className: (0, _._)(_.ItemInfoHeader, _ && _.InlineDate),
           children: _,
         });
       }
       function _(_) {
-        const { text: _, url: __webpack_require__, light: _, large: _ } = _;
+        const { text: _, url: _, light: _, large: _ } = _;
         return (0, _.jsx)("span", {
           className: (0, _._)(_.ItemName, _ && _.Light, _ && _.Large),
           children: (0, _.jsx)(_._, {
-            href: __webpack_require__,
+            href: _,
             target: "_blank",
             children: _,
           }),
         });
       }
       function _(_) {
-        const { imageUrl: _, url: __webpack_require__, tooltip: _ } = _;
+        const { imageUrl: _, url: _, tooltip: _ } = _;
         return (
           _ &&
           (0, _.jsx)(_._, {
             className: _.ItemImage,
             toolTipContent: _,
             children: (0, _.jsx)(_._, {
-              href: __webpack_require__,
+              href: _,
               target: "_blank",
               children: (0, _.jsx)("img", {
                 src: _,
@@ -16490,7 +16388,7 @@
         );
       }
       function _(_) {
-        const { linkUrl: _, title: __webpack_require__, eventType: _ } = _,
+        const { linkUrl: _, title: _, eventType: _ } = _,
           _ = "imageUrl" in _ ? [_.imageUrl] : _.imageUrls;
         if (!_?.length) return;
         let _;
@@ -16517,10 +16415,10 @@
                 rgSources: _,
               }),
             }),
-            !!__webpack_require__ &&
+            !!_ &&
               (0, _.jsx)("div", {
                 className: (0, _._)(_.CapsuleTitle, _),
-                children: __webpack_require__,
+                children: _,
               }),
           ],
         });
@@ -16528,7 +16426,7 @@
       function _(_) {
         const {
             startTimestamp: _,
-            endTimestamp: __webpack_require__,
+            endTimestamp: _,
             largeDate: _,
             showTime: _,
           } = _,
@@ -16544,13 +16442,13 @@
           }),
           _ = _.format(new Date(1e3 * _));
         let _ = _;
-        if (_ !== __webpack_require__) {
-          const _ = _.format(new Date(1e3 * __webpack_require__)),
-            _ = _.format(new Date(1e3 * __webpack_require__));
+        if (_ !== _) {
+          const _ = _.format(new Date(1e3 * _)),
+            _ = _.format(new Date(1e3 * _));
           _ =
             _ &&
             (0, _._)(new Date(1e3 * _)).getTime() ===
-              (0, _._)(new Date(1e3 * __webpack_require__)).getTime()
+              (0, _._)(new Date(1e3 * _)).getTime()
               ? (0, _._)("#Dashboard_UpcomingEvents_Events_TimeRange", _, _)
               : (0, _._)("#Dashboard_UpcomingEvents_Events_TimeRange", _, _);
         }
@@ -16567,13 +16465,13 @@
         });
       }
       function _(_) {
-        const { url: _, children: __webpack_require__ } = _;
+        const { url: _, children: _ } = _;
         return (
           _?.length > 0 &&
           (0, _.jsx)("button", {
             className: (0, _._)(_.LinkButton),
             onClick: () => window.open(_, "_blank"),
-            children: __webpack_require__,
+            children: _,
           })
         );
       }
@@ -16585,12 +16483,7 @@
         });
       }
       function _(_) {
-        const {
-            complete: _,
-            urgent: __webpack_require__,
-            overrideLabel: _,
-            overrideText: _,
-          } = _,
+        const { complete: _, urgent: _, overrideLabel: _, overrideText: _ } = _,
           _ = ("boolean" == typeof _ && _) || 1 == _,
           _ = ("boolean" == typeof _ && !_) || 0 == _,
           _ = "boolean" != typeof _ && 2 == _;
@@ -16609,8 +16502,8 @@
               (0, _.jsx)("span", {
                 className: (0, _._)(
                   _.StatusText,
-                  __webpack_require__ && _.IncompleteUrgent,
-                  !__webpack_require__ && _.Incomplete,
+                  _ && _.IncompleteUrgent,
+                  !_ && _.Incomplete,
                 ),
                 children:
                   _ ?? (0, _._)("#Dashboard_UpcomingEvents_Status_Incomplete"),
@@ -16627,7 +16520,7 @@
       function _(_) {
         const {
             complete: _,
-            urgent: __webpack_require__,
+            urgent: _,
             label: _,
             status: _,
             tooltip: _,
@@ -16655,8 +16548,8 @@
                       (0, _.jsx)("span", {
                         className: (0, _._)(
                           _.StatusTodoLabelCheck,
-                          __webpack_require__ && _.IncompleteUrgent,
-                          !__webpack_require__ && _.Incomplete,
+                          _ && _.IncompleteUrgent,
+                          !_ && _.Incomplete,
                         ),
                         children: (0, _._)(
                           "#Dashboard_UpcomingEvents_Unchecked",
@@ -16729,14 +16622,14 @@
         return [...new Set(_.flat())];
       }
       function _(_) {
-        const { href: _, children: __webpack_require__ } = _;
+        const { href: _, children: _ } = _;
         return _
           ? (0, _.jsx)("a", {
               ..._,
-              children: __webpack_require__,
+              children: _,
             })
           : (0, _.jsx)(_.Fragment, {
-              children: __webpack_require__,
+              children: _,
             });
       }
       function _(_, _) {
@@ -16873,7 +16766,7 @@
         return -60 === _ ? 1 : 60 === _ ? -1 : 0;
       }
       function _(_) {
-        const { nInitialPackageID: _, closeModal: __webpack_require__ } = _,
+        const { nInitialPackageID: _, closeModal: _ } = _,
           [_, _] = _.useState(null),
           [_, _] = _.useState(""),
           [_, _] = _.useState(7),
@@ -17152,7 +17045,7 @@
         });
       }
       function _(_) {
-        const { range: _, fnSelectRangeAndEvent: __webpack_require__ } = _;
+        const { range: _, fnSelectRangeAndEvent: _ } = _;
         if (!_.bIsAvailable)
           return (0, _.jsxs)("div", {
             className: _().DiscountedRange,
@@ -17224,12 +17117,8 @@
         });
       }
       function _(_) {
-        const {
-            range: _,
-            strDiscountEventID: __webpack_require__,
-            fnClearEvent: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { range: _, strDiscountEventID: _, fnClearEvent: _ } = _,
+          _ = (0, _._)(_);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().SelectedEvent, "landingTable"),
           children: [
@@ -17280,14 +17169,14 @@
       function _(_) {
         const {
             packageID: _,
-            rgScheduleRanges: __webpack_require__,
+            rgScheduleRanges: _,
             selectedRange: _,
             selectedDiscountEventID: _,
             fnSelectRangeAndEvent: _,
           } = _,
           _ = !_,
           _ = !_ && !!_,
-          _ = !_ && !_ && !__webpack_require__?.length,
+          _ = !_ && !_ && !_?.length,
           _ = !_ && !_ && !_,
           _ = _ && !__webpack_require__?.some((_) => _.bIsAvailable);
         return (0, _.jsxs)("div", {
@@ -17345,7 +17234,7 @@
         });
       }
       function _(_) {
-        const { selectedPackageID: _, onSelect: __webpack_require__ } = _,
+        const { selectedPackageID: _, onSelect: _ } = _,
           [_, _] = _.useState(""),
           [_, _] = _.useState(),
           _ = (function () {
@@ -17434,13 +17323,9 @@
         });
       }
       function _(_) {
-        const {
-          strSearchKey: _,
-          rgSearchResults: __webpack_require__,
-          onSelect: _,
-        } = _;
+        const { strSearchKey: _, rgSearchResults: _, onSelect: _ } = _;
         if (!_) return null;
-        const _ = __webpack_require__?.length ?? 0;
+        const _ = _?.length ?? 0;
         let _;
         return (
           (_ =
@@ -17480,7 +17365,7 @@
         );
       }
       function _(_) {
-        const { packageID: _, onSelect: __webpack_require__ } = _,
+        const { packageID: _, onSelect: _ } = _,
           [_, _] = (0, _._)(_, {});
         return (0, _.jsx)("div", {
           className: _().OnePackageResult,
@@ -17492,18 +17377,14 @@
         });
       }
       function _(_) {
-        const {
-            closeModal: _,
-            discount: __webpack_require__,
-            fnOnSuccess: _,
-          } = _,
+        const { closeModal: _, discount: _, fnOnSuccess: _ } = _,
           { fnSaveDiscount: _ } = (0, _._)(),
           [_, _] = _.useState(null),
           _ = (0, _._)("SaveProgressDialog");
         return (
           _.useEffect(() => {
             (async () => {
-              const _ = await _(__webpack_require__);
+              const _ = await _(_);
               _.token.reason ||
                 (1 == _.success
                   ? (_(), _())
@@ -17611,9 +17492,7 @@
         constructor() {}
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _.Get().GetOptInPublicDefinition(_),
-        );
+        const [_, _] = (0, _.useState)(_.Get().GetOptInPublicDefinition(_));
         return (
           (0, _.useEffect)(() => {
             let _ = _().CancelToken.source();
@@ -17678,10 +17557,10 @@
         );
       }
       function _(_) {
-        const { closeModal: _, strContinueUrl: __webpack_require__ } = _,
+        const { closeModal: _, strContinueUrl: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = !!__webpack_require__,
+          _ = !!_,
           _ = (0, _._)(
             _
               ? "#PackageGrid_NavigationWarning_Title"
@@ -17706,7 +17585,7 @@
           _ = Math.floor(Date.now() / 1e3),
           _ = _.some((_) => _.rtStartDate < _),
           _ = () => {
-            __webpack_require__ && (window.location.href = __webpack_require__);
+            _ && (window.location.href = _);
           },
           _ = () => {
             _.closeModal(),
@@ -17811,7 +17690,7 @@
       function _(_) {
         const {
             closeModal: _,
-            rgLocalPackageDiscountOverrides: __webpack_require__,
+            rgLocalPackageDiscountOverrides: _,
             fnOnSuccess: _,
           } = _,
           _ = (0, _._)(),
@@ -17819,14 +17698,14 @@
           [_, _] = _.useState(0),
           [_, _] = _.useState(null),
           _ = (0, _._)("SaveProgressDialog"),
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = _.useRef(new Map()),
           { bEditingDailyDealDiscount: _ } = (0, _._)();
         _.useEffect(() => {
           (async () => {
-            for (let _ = 0; _ < __webpack_require__.length; _++) {
+            for (let _ = 0; _ < _.length; _++) {
               _(_);
-              const _ = __webpack_require__[_],
+              const _ = _[_],
                 _ = await (_.nDiscountPct > 0
                   ? _(_)
                   : _(_.nDiscountID, _.packageID, _.discountEventID));
@@ -17841,7 +17720,7 @@
                 );
               _.msg && _.current.set(_, _.msg);
             }
-            _(__webpack_require__.length);
+            _(_.length);
           })();
         }, []);
         const _ = (_) =>
@@ -17872,7 +17751,7 @@
               : (0, _.jsx)(_._, {
                   className: _().ProgressIconThrobber,
                 }),
-          _ = !_ && _ < __webpack_require__.length,
+          _ = !_ && _ < _.length,
           _ = (0, _._)(),
           _ = _.useCallback(() => {
             window.location.assign(
@@ -17929,7 +17808,7 @@
       function _(_) {
         const {
             rgLocalPackageDiscountOverrides: _,
-            bMarkupStartTimeBeforeNow: __webpack_require__,
+            bMarkupStartTimeBeforeNow: _,
           } = _,
           [_, _] = _.useState(_.length < 9),
           _ = _(_),
@@ -17945,9 +17824,7 @@
                     {
                       discount: _,
                       icon:
-                        __webpack_require__ && _.rtStartDate < _
-                          ? (0, _.jsx)(_.FEq, {})
-                          : void 0,
+                        _ && _.rtStartDate < _ ? (0, _.jsx)(_.FEq, {}) : void 0,
                       nPreviousDiscountPct: _.get(_.nDiscountID) ?? 0,
                     },
                     _.packageID + "-" + _.discountEventID,
@@ -17962,11 +17839,7 @@
         });
       }
       function _(_) {
-        const {
-            discount: _,
-            nPreviousDiscountPct: __webpack_require__,
-            icon: _,
-          } = _,
+        const { discount: _, nPreviousDiscountPct: _, icon: _ } = _,
           _ = (0, _._)(_.discountEventID),
           _ = (0, _._)(_.packageID),
           _ = _._.Get().GetPackage(_.packageID)?.GetName() ?? _.packageID,
@@ -18011,7 +17884,7 @@
               children: [
                 (0, _.jsx)("span", {
                   className: _().PreviousDiscount,
-                  children: __webpack_require__ + "%",
+                  children: _ + "%",
                 }),
                 (0, _.jsx)("span", {
                   className: _().DiscountArrow,
@@ -18066,7 +17939,7 @@
         });
       }
       function _(_) {
-        const { packageState: _, strMessage: __webpack_require__ } = _,
+        const { packageState: _, strMessage: _ } = _,
           _ = (0, _._)(),
           _ = _(),
           _ = _.optInReg.opt_in_name.replace("sale_", ""),
@@ -18076,11 +17949,11 @@
           strClassName: _().RegistrationLink,
           fnBLocalChangesExist: _,
           fnWarnUser: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const { packageState: _, strMessage: __webpack_require__ } = _,
+        const { packageState: _, strMessage: _ } = _,
           _ = _.optInReg.opt_in_name.replace("sale_", ""),
           _ = _(_),
           _ = (0, _._)(_, _.nBaseAppID);
@@ -18098,15 +17971,11 @@
                   }),
                   (0, _._)(_),
                 ),
-              children: __webpack_require__,
+              children: _,
             });
       }
       function _(_) {
-        const {
-            strOptInName: _,
-            closeModal: __webpack_require__,
-            packageState: _,
-          } = _,
+        const { strOptInName: _, closeModal: _, packageState: _ } = _,
           _ = _(_),
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(null),
@@ -18132,14 +18001,14 @@
                           strDescription: (0, _._)(
                             "#EventDisplay_Share_Success",
                           ),
-                          closeModal: __webpack_require__,
+                          closeModal: _,
                           bAlertDialog: !0,
                         }),
                         window,
                       ));
                 });
           },
-          onCancel: __webpack_require__,
+          onCancel: _,
           bOKDisabled: Boolean(_),
           children: [
             (0, _.jsx)("div", {
@@ -18176,13 +18045,13 @@
         });
       }
       function _(_) {
-        const { cell: _, column: __webpack_require__ } = _,
+        const { cell: _, column: _ } = _,
           _ = _.getValue(),
           { packageState: _, fnSetDiscountPct: _ } = (0, _._)(
             _?.packageID,
             _?.discountEventID,
           ),
-          _ = __webpack_require__.columnDef.meta.arbitraryData,
+          _ = _.columnDef.meta.arbitraryData,
           _ = (0, _._)(),
           _ = (0, _._)(_?.packageID),
           _ = _?.start_date < _;
@@ -18350,7 +18219,7 @@
         });
       }
       function _(_) {
-        const { packageState: _, fnSetDiscountPct: __webpack_require__ } = _,
+        const { packageState: _, fnSetDiscountPct: _ } = _,
           _ = (0, _._)(),
           _ = _?.discount?.nDiscountPct?.toString() ?? "0";
         return (0, _.jsxs)(_.Fragment, {
@@ -18504,18 +18373,18 @@
       }
       function _(_) {
         const { packageID: _ } = _,
-          { deepestDiscount: __webpack_require__, bLoading: _ } = (0, _._)(_);
+          { deepestDiscount: _, bLoading: _ } = (0, _._)(_);
         if (_)
           return (0, _.jsx)(_._, {
             className: _().GridRowLoadingThrobber,
           });
-        const _ = __webpack_require__?.nDiscountPct ?? 0,
-          _ = __webpack_require__
+        const _ = _?.nDiscountPct ?? 0,
+          _ = _
             ? (0, _._)(
                 "#DiscountDashboard_DeepestPastDiscount_Details",
-                __webpack_require__.nDiscountPct,
-                __webpack_require__.strDiscountName,
-                (0, _._)(__webpack_require__.rtStartDate),
+                _.nDiscountPct,
+                _.strDiscountName,
+                (0, _._)(_.rtStartDate),
               )
             : (0, _._)("#DiscountDashboard_NeverDiscounted");
         return (0, _.jsx)(_._, {
@@ -18525,20 +18394,18 @@
       }
       function _(_) {
         const { packageID: _ } = _,
-          { mostRecentDiscount: __webpack_require__, bLoading: _ } = (0, _._)([
-            _,
-          ]);
+          { mostRecentDiscount: _, bLoading: _ } = (0, _._)([_]);
         if (_)
           return (0, _.jsx)(_._, {
             className: _().GridRowLoadingThrobber,
           });
-        const _ = __webpack_require__?.nDiscountPct ?? 0,
-          _ = __webpack_require__
+        const _ = _?.nDiscountPct ?? 0,
+          _ = _
             ? (0, _._)(
                 "#DiscountDashboard_LastPastDiscount_Details",
-                __webpack_require__.nDiscountPct,
-                __webpack_require__.strDiscountName,
-                (0, _._)(__webpack_require__.rtStartDate),
+                _.nDiscountPct,
+                _.strDiscountName,
+                (0, _._)(_.rtStartDate),
               )
             : (0, _._)("#DiscountDashboard_NeverDiscounted");
         return (0, _.jsx)(_._, {
@@ -18641,7 +18508,7 @@
         const {
             strPriceKey: _,
             rgSupportedPriceKeys: _,
-            fnSetPriceKey: __webpack_require__,
+            fnSetPriceKey: _,
           } = (0, _._)(),
           _ = _.map((_) => ({
             label: _,
@@ -18687,11 +18554,7 @@
       const _ = "createnew";
       function _(_) {
         const { column: _ } = _,
-          {
-            fnBLocalChangesExist: __webpack_require__,
-            fnWarnUser: _,
-            client: _,
-          } = (0, _._)(),
+          { fnBLocalChangesExist: _, fnWarnUser: _, client: _ } = (0, _._)(),
           _ = (0, _._)(),
           { strSelectedEvent: _, fnSelectEvent: _ } = (0, _._)(),
           _ = _.columnDef.meta.arbitraryData,
@@ -18722,7 +18585,7 @@
                   _.name,
                   !!_ &&
                     (0, _.jsx)(_._, {
-                      fnBLocalChangesExist: __webpack_require__,
+                      fnBLocalChangesExist: _,
                       fnWarnUser: _,
                       href: _,
                       strClassName: _().EditEventLink,
@@ -18915,7 +18778,7 @@
         return `${_} (${_(_.toLocaleString(_._.GetPreferredLocales(), _), _.timeZone)})`;
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(0),
+        const [_, _] = _.useState(0),
           {
             bSingleDiscountEventView: _,
             strSelectedEvent: _,
@@ -19106,7 +18969,7 @@
         return _.size == _.size && Array.from(_).every((_) => _.has(_));
       }
       function _(_) {
-        const { rgDiscountEvents: _, refTable: __webpack_require__ } = _,
+        const { rgDiscountEvents: _, refTable: _ } = _,
           {
             bSingleDiscountEventView: _,
             strSelectedEvent: _,
@@ -19136,16 +18999,16 @@
           _ = (function (_) {
             const {
                 bSingleDiscountEventView: _,
-                strSelectedEvent: __webpack_require__,
+                strSelectedEvent: _,
                 bIncludeConflictsInSingleEventView: _,
               } = (0, _._)(),
               _ = (0, _._)(),
-              _ = (0, _._)(__webpack_require__),
+              _ = (0, _._)(_),
               _ = _.useRef(_),
               _ = _.useRef(_),
               [_, _] = _.useState(!1);
             return (
-              _.useEffect(() => _(!0), [__webpack_require__, _, _, _]),
+              _.useEffect(() => _(!0), [_, _, _, _]),
               _.useEffect(() => {
                 if (!_) return;
                 const _ = [],
@@ -19203,7 +19066,7 @@
               }, [_]),
               _
             );
-          })(__webpack_require__),
+          })(_),
           _ = _.some((_) => (0, _._)(_._));
         return (0, _.jsxs)("div", {
           className: _().DiscountsFilterBar,
@@ -19246,7 +19109,7 @@
                 children: (0, _._)("#DiscountDashboard_UpdatingStatusMessage"),
               }),
             (0, _.jsx)(_, {
-              refTable: __webpack_require__,
+              refTable: _,
             }),
           ],
         });
@@ -19625,11 +19488,7 @@
         _._.WriteCSVToFile(_, _);
       }
       function _(_) {
-        const {
-            closeModal: _,
-            strFilename: __webpack_require__,
-            parseResult: _,
-          } = _,
+        const { closeModal: _, strFilename: _, parseResult: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -19642,7 +19501,7 @@
             const {
               rgDiscountOverrides: _,
               nPackagesImported: _,
-              nDiscountEventsImported: __webpack_require__,
+              nDiscountEventsImported: _,
             } = (function (_, _, _, _, _) {
               const _ = new Map(),
                 _ = new Set(_.meta?.fields ?? []);
@@ -19676,7 +19535,7 @@
                 nDiscountEventsImported: _.length,
               };
             })(_, _, _, _, _);
-            _(_), _(_), _(__webpack_require__);
+            _(_), _(_), _(_);
           }, [_, _, _, _, _]),
           null === _)
         )
@@ -19745,8 +19604,7 @@
       }
       function _(_) {
         (0, _._)((0, _._)());
-        const { rgDiscountEvents: _, eResult: __webpack_require__ } = (0,
-          _._)(),
+        const { rgDiscountEvents: _, eResult: _ } = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)("DiscountDashboard"),
           _ = (0, _._)(),
@@ -19785,9 +19643,9 @@
           }, [_, _, _]),
           _.useEffect(() => {
             if (_)
-              if (null === __webpack_require__)
+              if (null === _)
                 _((0, _._)("#DiscountDashboard_LoadingDiscountEvents"));
-              else if (1 != __webpack_require__)
+              else if (1 != _)
                 _(
                   (0, _._)(
                     "#DiscountDashboard_Error_CouldNotLoadDiscountEvents",
@@ -19800,10 +19658,10 @@
                   _ = _.map((_) => _.opt_in_name).filter(Boolean);
                 _.length > 0 ? _(_, _, _).then(() => _(!0)) : _(!0);
               }
-          }, [_, _, __webpack_require__, _, _]),
+          }, [_, _, _, _, _]),
           _.useEffect(() => {
             _ &&
-              1 == __webpack_require__ &&
+              1 == _ &&
               (_
                 ? _
                   ? (_(
@@ -19826,7 +19684,7 @@
                       _.length,
                     ),
                   ));
-          }, [_, __webpack_require__, _, _, _, _]),
+          }, [_, _, _, _, _, _]),
           _.useEffect(() => {
             _ &&
               window.setTimeout(() => {
@@ -20064,13 +19922,13 @@
       function _(_) {
         const {
             rtBaselineStart: _,
-            rtBaselineEnd: __webpack_require__,
+            rtBaselineEnd: _,
             rtCompareStart: _,
             rtCompareEnd: _,
             rgAppIDs: _,
             strComparisonName: _,
           } = _,
-          _ = (0, _._)(_, __webpack_require__, _),
+          _ = (0, _._)(_, _, _),
           _ = (0, _._)(_, _, _);
         if (!_ || !_)
           return (0, _.jsx)(_._, {
@@ -20079,7 +19937,7 @@
             position: "center",
           });
         const _ = _.GetTotalSummary().gross_sales_usd / 100,
-          _ = Math.max(1, Math.ceil((__webpack_require__ - _) / 86400)),
+          _ = Math.max(1, Math.ceil((_ - _) / 86400)),
           _ = _.GetTotalSummary().gross_sales_usd / _ / 100,
           _ = Math.max(1, Math.ceil((_ - _) / 86400)),
           _ = _.GetTotalSummary().gross_sales_usd / _ / 100,
@@ -20132,7 +19990,7 @@
       function _(_) {
         const {
             rtBaselineStart: _,
-            rtBaselineEnd: __webpack_require__,
+            rtBaselineEnd: _,
             rtCompareStart: _,
             rtCompareEnd: _,
             rgAppIDs: _,
@@ -20140,7 +19998,7 @@
             rtPostlineStart: _,
             rtPostlineEnd: _,
           } = _,
-          _ = (0, _._)(_, __webpack_require__, _),
+          _ = (0, _._)(_, _, _),
           _ = (0, _._)(_, _, _),
           _ = (0, _._)(_, _, _),
           [_, _] = (0, _.useState)(50);
@@ -20150,7 +20008,7 @@
             size: "medium",
             position: "center",
           });
-        const _ = Math.max(1, Math.ceil((__webpack_require__ - _) / 86400)),
+        const _ = Math.max(1, Math.ceil((_ - _) / 86400)),
           _ = _.GetTotalSummary().gross_sales_usd / _ / 100,
           _ = _.GetTotalSummary().gross_sales_usd / 100,
           _ = Math.max(1, Math.ceil((_ - _) / 86400)),
@@ -20275,7 +20133,7 @@
                         (0, _.jsx)("td", {
                           children: (0, _.jsx)(_._, {
                             rtStartDate: _,
-                            rtEndDate: __webpack_require__,
+                            rtEndDate: _,
                           }),
                         }),
                         (0, _.jsx)("td", {
@@ -20413,7 +20271,7 @@
       function _(_) {
         const {
             oAppSummary: _,
-            nTopAppCount: __webpack_require__,
+            nTopAppCount: _,
             strToken: _,
             oPriorSummary: _,
             nDays: _,
@@ -20422,10 +20280,7 @@
             nPostDays: _,
             nTotalSaleUSD: _,
           } = _,
-          _ = (0, _.useMemo)(
-            () => _?.GetTopNApps(__webpack_require__) || [],
-            [__webpack_require__, _],
-          );
+          _ = (0, _.useMemo)(() => _?.GetTopNApps(_) || [], [_, _]);
         let _ = 0;
         return (0, _.jsxs)("div", {
           className: _().ComparisonRichTable,
@@ -20537,7 +20392,7 @@
       function _(_) {
         const {
             summary: _,
-            nDays: __webpack_require__,
+            nDays: _,
             index: _,
             priorSummary: _,
             nPriorDays: _,
@@ -20547,7 +20402,7 @@
             nCumulativeSalesUSDCents: _,
           } = _,
           [_] = (0, _._)(_.appid, _),
-          _ = _.gross_sales_usd / __webpack_require__ / 100;
+          _ = _.gross_sales_usd / _ / 100;
         let _, _, _, _;
         return (
           _ && ((_ = _.gross_sales_usd / _ / 100), (_ = _ > 0 ? _ / _ : 0)),
@@ -20671,7 +20526,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.memo((_) => {
-        const { data: _, appid: __webpack_require__ } = _,
+        const { data: _, appid: _ } = _,
           _ = (0, _.useCallback)(
             (_, _) =>
               _[_]
@@ -20683,7 +20538,7 @@
             [_],
           ),
           _ = (0, _.useMemo)(() => {
-            const _ = _.filter((_) => _.appid == __webpack_require__);
+            const _ = _.filter((_) => _.appid == _);
             return _.map((_, _) => {
               const _ = {
                 ..._,
@@ -20695,7 +20550,7 @@
                 _
               );
             });
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return (0, _.jsx)("div", {
           className: _().ChartContainer,
           children: (0, _.jsx)("div", {
@@ -20788,10 +20643,10 @@
         return null;
       }
       function _(_) {
-        const { _: _, _: __webpack_require__, payload: _ } = _,
+        const { _: _, _: _, payload: _ } = _,
           _ = _.tickFormatter(_.value, _.index);
         return (0, _.jsx)("g", {
-          transform: `translate(${_},${__webpack_require__})`,
+          transform: `translate(${_},${_})`,
           children: (0, _.jsx)("text", {
             _: 0,
             _: 0,
@@ -20941,7 +20796,7 @@
       function _(_) {
         const {
             rgDemo: _,
-            rtLatestEndDate: __webpack_require__,
+            rtLatestEndDate: _,
             bShowOnlySummary: _,
             className: _,
             rgAppSansPermissions: _,
@@ -20953,7 +20808,7 @@
               _ = 0;
             return (
               _.forEach((_) => {
-                _.rt_end_time == __webpack_require__ &&
+                _.rt_end_time == _ &&
                   ((_ += 1),
                   (_ += _.demo_player_count),
                   (_ += _.wishlist_count),
@@ -20962,7 +20817,7 @@
               (_ += _?.length || 0),
               [_, _, _, _]
             );
-          }, [_, __webpack_require__, _]);
+          }, [_, _, _]);
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().StatReportCtn, _),
           children: [
@@ -21025,7 +20880,7 @@
       function _(_) {
         const {
             rgDemo: _,
-            rtLatestEndDate: __webpack_require__,
+            rtLatestEndDate: _,
             nUniqueApps: _,
             className: _,
             bShowDiscoveryGraph: _,
@@ -21053,15 +20908,14 @@
           }, []),
           _ = (0, _.useMemo)(
             () =>
-              _.filter((_) => _.rt_end_time == __webpack_require__).sort(
-                (_, _) =>
-                  _ == _.by_player
-                    ? _.demo_player_count - _.demo_player_count
-                    : _ == _.by_wishlist
-                      ? _.wishlist_count - _.wishlist_count
-                      : _.player_wishlist_count - _.player_wishlist_count,
+              _.filter((_) => _.rt_end_time == _).sort((_, _) =>
+                _ == _.by_player
+                  ? _.demo_player_count - _.demo_player_count
+                  : _ == _.by_wishlist
+                    ? _.wishlist_count - _.wishlist_count
+                    : _.player_wishlist_count - _.player_wishlist_count,
               ),
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
         return (0, _.jsxs)("div", {
           className: _,
@@ -21171,7 +21025,7 @@
         });
       }
       function _(_) {
-        const { appid: _, bCompact: __webpack_require__, index: _ } = _,
+        const { appid: _, bCompact: _, index: _ } = _,
           [_] = (0, _._)(_, _),
           _ = _?.GetName() || (0, _._)("#Recap_NextFest_LoadingApp", _),
           _ = (0, _._)(_);
@@ -21180,7 +21034,7 @@
             (0, _.jsx)("td", {
               children: (0, _._)(_ + 1),
             }),
-            !__webpack_require__ &&
+            !_ &&
               (0, _.jsx)("td", {
                 children: (0, _.jsx)(_._, {
                   _: _,
@@ -21229,7 +21083,7 @@
       function _(_) {
         const {
             demo: _,
-            index: __webpack_require__,
+            index: _,
             bCompact: _,
             bShowDiscoveryGraph: _,
             rgAllDemos: _,
@@ -21240,7 +21094,7 @@
         return (0, _.jsxs)("tr", {
           children: [
             (0, _.jsx)("td", {
-              children: (0, _._)(__webpack_require__ + 1),
+              children: (0, _._)(_ + 1),
             }),
             !_ &&
               (0, _.jsx)("td", {
@@ -21545,7 +21399,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { pageid: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(null);
+          [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
             const _ = _._.Get().GetDefinition(_);
@@ -21563,7 +21417,7 @@
                   }
                 });
           }, [_]),
-          __webpack_require__ && __webpack_require__.BInitialized()
+          _ && __webpack_require__.BInitialized()
             ? (0, _.jsx)(_.Fragment, {
                 children: _.children,
               })
@@ -21574,7 +21428,7 @@
       }
       function _(_) {
         const { pageid: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(null);
+          [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
             const _ = _._.Get().GetDefinition(_);
@@ -21589,7 +21443,7 @@
                     }
                   });
           }, [_]),
-          __webpack_require__ && __webpack_require__.BInitialized()
+          _ && __webpack_require__.BInitialized()
             ? (0, _.jsx)(_.Fragment, {
                 children: _.children,
               })
@@ -21627,7 +21481,7 @@
       function _(_) {
         const {
             rgOrderedAppIDs: _,
-            fnSetFilteredAppID: __webpack_require__,
+            fnSetFilteredAppID: _,
             rgNotToPruneList: _,
             pageid: _,
           } = _,
@@ -21697,7 +21551,7 @@
                 .filter((_) => !(_ && _.size > 0) || !_.has(_));
               _.token.reason || __webpack_require__(_);
             }
-          }, [_, _.token.reason, __webpack_require__, _, _, _, _, _, _]),
+          }, [_, _.token.reason, _, _, _, _, _, _, _]),
           (0, _.jsx)(_._, {
             title: "Filter Options",
             bStartMinimized: !0,
@@ -21761,7 +21615,7 @@
       function _(_) {
         const {
             setFilterTagIDs: _,
-            fnUpdateSetFilterTagIDs: __webpack_require__,
+            fnUpdateSetFilterTagIDs: _,
             rgAppIDs: _,
             bLoading: _,
           } = _,
@@ -21898,7 +21752,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { def: _, closeModal: __webpack_require__, stats: _ } = _,
+        const { def: _, closeModal: _, stats: _ } = _,
           [_, _] = (0, _.useState)(""),
           _ = _.trim()
             .toLowerCase()
@@ -21950,7 +21804,7 @@
                   _("Failed to Clone, exception caught, " + _.pageid),
                 );
           },
-          onCancel: __webpack_require__,
+          onCancel: _,
           bOKDisabled: _ || 0 == _.trim().length,
           children: [
             (0, _.jsxs)("p", {
@@ -25178,7 +25032,7 @@
         });
       }
       function _(_) {
-        const { list: _, bActiveOptIn: __webpack_require__ } = _,
+        const { list: _, bActiveOptIn: _ } = _,
           _ = (0, _.useMemo)(() => _.map((_) => _.pageid), [_]),
           _ = (function (_) {
             const _ = _.map((_) => _(_));
@@ -25195,7 +25049,7 @@
           ? (0, _.jsx)(_, {
               rgStrOptInName: _,
               mapOptInToDefs: _,
-              bActiveOptIn: __webpack_require__,
+              bActiveOptIn: _,
             })
           : (0, _.jsx)(_._, {
               size: "medium",
@@ -25204,11 +25058,7 @@
             });
       }
       function _(_) {
-        const {
-            rgStrOptInName: _,
-            mapOptInToDefs: __webpack_require__,
-            bActiveOptIn: _,
-          } = _,
+        const { rgStrOptInName: _, mapOptInToDefs: _, bActiveOptIn: _ } = _,
           _ = (0, _.useMemo)(() => {
             const _ = new Map();
             return (
@@ -25219,7 +25069,7 @@
               }),
               _
             );
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           [_, _, _] = (0, _.useMemo)(() => {
             const _ = [],
               _ = [],
@@ -25239,7 +25089,7 @@
               _.sort((_, _) => _.start_rtime - _.start_rtime),
               [_, _, _]
             );
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsxs)("div", {
@@ -25295,10 +25145,7 @@
         });
       }
       function _(_) {
-        const {
-          serverDef: _,
-          mapEmailDefIDToStrOptInName: __webpack_require__,
-        } = _;
+        const { serverDef: _, mapEmailDefIDToStrOptInName: _ } = _;
         return (0, _.jsx)("div", {
           children: _.email_def_id,
         });
@@ -25316,7 +25163,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-        const [_, __webpack_require__, _] = (0, _._)(!1);
+        const [_, _, _] = (0, _._)(!1);
         (0, _.useEffect)(() => {
           _._.Get(), _._.Get().Reset(null, null);
         }, []);
@@ -25438,12 +25285,7 @@
         });
       };
       function _(_) {
-        const {
-            bActiveOptIn: _,
-            stats: __webpack_require__,
-            list: _,
-            bReverseOrder: _,
-          } = _,
+        const { bActiveOptIn: _, stats: _, list: _, bReverseOrder: _ } = _,
           [_, _] = (0, _._)("query", ""),
           _ = (0, _.useMemo)(() => {
             const _ = _.trim();
@@ -25483,7 +25325,7 @@
                 _,
                 {
                   def: _,
-                  stats: __webpack_require__,
+                  stats: _,
                   bActiveOptIn: _,
                 },
                 _.pageid,
@@ -25493,9 +25335,9 @@
         });
       }
       function _(_) {
-        const { def: _, stats: __webpack_require__, bActiveOptIn: _ } = _,
+        const { def: _, stats: _, bActiveOptIn: _ } = _,
           [_, _, _, _, _] = (0, _._)(() => [
-            __webpack_require__?.[_.pageid]?.time_updated || 0,
+            _?.[_.pageid]?.time_updated || 0,
             _.event_end_date,
             _.event_start_date,
             _.event_title?.english || "No Name Assigned",
@@ -25563,17 +25405,14 @@
                       (0, _.jsxs)("div", {
                         className: _().TopStatsCtn,
                         children: [
-                          Boolean(
-                            __webpack_require__?.[_.pageid]?.count_eligible,
-                          ) &&
+                          Boolean(_?.[_.pageid]?.count_eligible) &&
                             (0, _.jsxs)("div", {
                               className: _().FeaturedApps,
                               children: [
                                 (0, _.jsx)("div", {
                                   className: _().BigNumber,
                                   children: (0, _._)(
-                                    __webpack_require__[_.pageid]
-                                      .count_eligible,
+                                    _[_.pageid].count_eligible,
                                   ),
                                 }),
                                 (0, _.jsxs)("span", {
@@ -25588,17 +25427,13 @@
                                 }),
                               ],
                             }),
-                          Boolean(
-                            __webpack_require__?.[_.pageid]?.count_invited,
-                          ) &&
+                          Boolean(_?.[_.pageid]?.count_invited) &&
                             (0, _.jsxs)("div", {
                               className: _().FeaturedApps,
                               children: [
                                 (0, _.jsx)("div", {
                                   className: _().BigNumber,
-                                  children: (0, _._)(
-                                    __webpack_require__[_.pageid].count_invited,
-                                  ),
+                                  children: (0, _._)(_[_.pageid].count_invited),
                                 }),
                                 (0, _.jsxs)("span", {
                                   className: _().HelperTooltip,
@@ -25612,7 +25447,7 @@
                                 }),
                               ],
                             }),
-                          Boolean(__webpack_require__?.[_.pageid]) &&
+                          Boolean(_?.[_.pageid]) &&
                             (0, _.jsxs)("div", {
                               className: _().FeaturedApps,
                               children: [
@@ -25622,8 +25457,7 @@
                                     _().Highlight,
                                   ),
                                   children: (0, _._)(
-                                    __webpack_require__[_.pageid]
-                                      .count_opted_in,
+                                    _[_.pageid].count_opted_in,
                                   ),
                                 }),
                                 (0, _.jsxs)("span", {
@@ -25648,15 +25482,14 @@
                                 }),
                               ],
                             }),
-                          Boolean(__webpack_require__?.[_.pageid]) &&
+                          Boolean(_?.[_.pageid]) &&
                             (0, _.jsxs)("div", {
                               className: _().FeaturedApps,
                               children: [
                                 (0, _.jsx)("div", {
                                   className: _().BigNumber,
                                   children: (0, _._)(
-                                    __webpack_require__[_.pageid]
-                                      .count_opted_out,
+                                    _[_.pageid].count_opted_out,
                                   ),
                                 }),
                                 (0, _.jsx)("div", {
@@ -25665,17 +25498,14 @@
                                 }),
                               ],
                             }),
-                          Boolean(
-                            __webpack_require__?.[_.pageid]?.count_featured,
-                          ) &&
+                          Boolean(_?.[_.pageid]?.count_featured) &&
                             (0, _.jsxs)("div", {
                               className: _().FeaturedApps,
                               children: [
                                 (0, _.jsx)("div", {
                                   className: _().BigNumber,
                                   children: (0, _._)(
-                                    __webpack_require__[_.pageid]
-                                      .count_featured,
+                                    _[_.pageid].count_featured,
                                   ),
                                 }),
                                 (0, _.jsxs)("span", {
@@ -25695,7 +25525,7 @@
                       (0, _.jsx)("div", {
                         className: _().StatusCtn,
                         children:
-                          Boolean(__webpack_require__?.[_.pageid]) &&
+                          Boolean(_?.[_.pageid]) &&
                           (0, _.jsxs)("div", {
                             className: _().StatRefresh,
                             children: [
@@ -25745,7 +25575,7 @@
                           (0, _._)(
                             (0, _.jsx)(_, {
                               def: _,
-                              stats: __webpack_require__?.[_.pageid],
+                              stats: _?.[_.pageid],
                             }),
                             (0, _._)(_),
                           ),
@@ -25810,7 +25640,7 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const { section: _, dynamicSectionIndex: __webpack_require__ } = _,
+          const { section: _, dynamicSectionIndex: _ } = _,
             _ = _._.Get().GetCurEditLanguage(),
             _ = _.createRef(),
             _ = _.GetLists().map((_, _) =>
@@ -25832,7 +25662,7 @@
               children: [
                 (0, _.jsx)(_, {
                   section: _,
-                  dynamicSectionIndex: __webpack_require__,
+                  dynamicSectionIndex: _,
                 }),
                 (0, _.jsxs)("div", {
                   children: ["Section ID: ", _.GetUniqueID()],
@@ -25950,7 +25780,7 @@
         }),
         _ = (0, _._)((_) => {
           const _ = _._.Get(),
-            { section: __webpack_require__, dynamicSectionIndex: _ } = _;
+            { section: _, dynamicSectionIndex: _ } = _;
           return (0, _.jsxs)("div", {
             className: (0, _._)({
               [_.Header]: !0,
@@ -25991,19 +25821,19 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const { section: _, listIndex: __webpack_require__ } = _;
+          const { section: _, listIndex: _ } = _;
           return "text_input" === _.GetInputStyle()
             ? (0, _.jsx)("div", {
                 children: "Textarea will appear here for the users input.",
               })
             : (0, _.jsx)(_, {
                 section: _,
-                listIndex: __webpack_require__,
+                listIndex: _,
               });
         }),
         _ = (0, _._)((_) => {
-          const { section: _, listIndex: __webpack_require__ } = _,
-            _ = _.GetListByIndex(__webpack_require__),
+          const { section: _, listIndex: _ } = _,
+            _ = _.GetListByIndex(_),
             _ = _._.Get().GetCurEditLanguage();
           return (0, _.jsxs)("div", {
             _: _.GetUniqueID() + _.unique_id,
@@ -26012,13 +25842,9 @@
               (0, _.jsx)(_._, {
                 type: "text",
                 label: "Name for this group of options",
-                value: _.GetListTitle(__webpack_require__),
+                value: _.GetListTitle(_),
                 onChange: (_) =>
-                  _.SetListTitleByListIndex(
-                    __webpack_require__,
-                    _.currentTarget.value,
-                    _,
-                  ),
+                  _.SetListTitleByListIndex(_, _.currentTarget.value, _),
               }),
               Boolean(0 == _.options.length)
                 ? (0, _.jsx)("div", {
@@ -26036,12 +25862,8 @@
                           strTitle: "Delete selected option",
                           strDescription:
                             "Are you sure you want to delete the following item?: " +
-                            (0, _._)(
-                              _.GetItemAtListAndIndex(__webpack_require__, _)
-                                .text,
-                              _,
-                            ),
-                          onOK: () => _.RemoveListItem(__webpack_require__, _),
+                            (0, _._)(_.GetItemAtListAndIndex(_, _).text, _),
+                          onOK: () => _.RemoveListItem(_, _),
                         }),
                         (0, _._)(_),
                       );
@@ -26051,7 +25873,7 @@
                         (0, _.jsx)(_, {
                           ..._,
                           itemIndex: _,
-                          item: _.GetItemAtListAndIndex(__webpack_require__, _),
+                          item: _.GetItemAtListAndIndex(_, _),
                         }),
                         (0, _._)(_),
                       );
@@ -26087,7 +25909,7 @@
           });
         }),
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(_.item.text),
+          const [_, _] = (0, _.useState)(_.item.text),
             [_, _] = (0, _.useState)(_.item.tooltip),
             [_, _] = (0, _.useState)(_._.Get().GetCurEditLanguage());
           return (0, _.jsx)(_._, {
@@ -26136,7 +25958,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(""),
+          const [_, _] = (0, _.useState)(""),
             [_, _] = (0, _.useState)(""),
             _ = _._.Get().GetCurEditLanguage();
           return (0, _.jsx)(_._, {
@@ -26366,7 +26188,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__] = (0, _._)(() => [
+          [_] = (0, _._)(() => [
             Object.keys(_.GetAllLocalizedOptInBanner())
               .sort()
               .map((_) => (0, _._)(_)),
@@ -26379,7 +26201,7 @@
             [_],
           );
         return (0, _.jsx)(_._, {
-          rgAssetLangs: __webpack_require__,
+          rgAssetLangs: _,
           fnGetAssetUrl: _,
           fnDeletAssetLang: _.DeleteLocalizedOptInBanner,
           imageClassname: _().BannerPreview,
@@ -26428,7 +26250,7 @@
       function _(_) {
         const {
             strTitle: _,
-            strDescription: __webpack_require__,
+            strDescription: _,
             closeModal: _,
             fnGenericAddAction: _,
           } = _,
@@ -26467,7 +26289,7 @@
         const _ = _?.GetEventEndTime() < Math.floor(Date.now() / 1e3);
         return (0, _.jsxs)(_._, {
           strTitle: _,
-          strDescription: __webpack_require__,
+          strDescription: _,
           onOK: _,
           bOKDisabled: 0 == _.trim().length || _.bLoading || _,
           onCancel: _,
@@ -26504,7 +26326,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             _.BIsAdditionalFeaturingSectionEnabled(),
             _.BIsCollectTrailerPermissions(),
             _.BIsCollectDemoPermissions(),
@@ -26543,13 +26365,13 @@
                 (0, _.jsx)(_._, {
                   label: "Enable the Additional Featuring Section.",
                   onChange: _.SetAdditionalFeaturingSectionEnabled,
-                  checked: __webpack_require__,
+                  checked: _,
                 }),
                 (0, _.jsx)("hr", {}),
                 (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _().IndentedSubSection,
-                    __webpack_require__ ? "" : _().Disabled,
+                    _ ? "" : _().Disabled,
                   ),
                   children: [
                     (0, _.jsx)(_._, {
@@ -26606,13 +26428,13 @@
       }
       function _(_) {
         const { strOptInName: _ } = _,
-          { fnChangeAppAdditionalFeaturingState: __webpack_require__ } = {
+          { fnChangeAppAdditionalFeaturingState: _ } = {
             fnChangeAppAdditionalFeaturingState:
               _.Get().ChangeAppsAdditionalFeaturingState,
           },
           _ = (0, _.useCallback)(
             async (_) => __webpack_require__(_, _, !0),
-            [__webpack_require__, _],
+            [_, _],
           );
         return (0, _.jsx)(_, {
           strTitle: "Additional App Featuring",
@@ -27043,7 +26865,7 @@
       const _ = (_) => {
         const {
             searchResult: _,
-            invite_status: __webpack_require__,
+            invite_status: _,
             bShowStatus: _,
             children: _,
           } = _,
@@ -27128,13 +26950,13 @@
                         }),
                       }),
                     _ &&
-                      "failure" === __webpack_require__ &&
+                      "failure" === _ &&
                       (0, _.jsx)("div", {
                         className: _().Failure,
                         children: (0, _._)("#ManageFriends_InviteFailure"),
                       }),
                     _ &&
-                      "success" === __webpack_require__ &&
+                      "success" === _ &&
                       (0, _.jsx)("div", {
                         className: _().Success,
                         children: (0, _._)(
@@ -27339,11 +27161,8 @@
       }
       function _(_) {
         const { strOptInName: _ } = _,
-          { fnUpdateAppToInvitation: __webpack_require__ } = _(),
-          _ = (0, _.useCallback)(
-            (_) => __webpack_require__(_, _, !0),
-            [_, __webpack_require__],
-          );
+          { fnUpdateAppToInvitation: _ } = _(),
+          _ = (0, _.useCallback)((_) => __webpack_require__(_, _, !0), [_, _]);
         return (0, _.jsx)(_, {
           strTitle: "Invite Apps",
           strDescription:
@@ -27354,10 +27173,10 @@
       }
       function _(_) {
         const { strOptInName: _ } = _,
-          { fnUpdateAppToInvitation: __webpack_require__ } = _(),
+          { fnUpdateAppToInvitation: _ } = _(),
           _ = (0, _.useCallback)(
             (_) => __webpack_require__(_, _, !1, !1, !0),
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsx)(_, {
           strTitle: "Add Apps to Pending Review",
@@ -27369,10 +27188,10 @@
       }
       function _(_) {
         const { strOptInName: _ } = _,
-          { fnUpdateAppToInvitation: __webpack_require__ } = _(),
+          { fnUpdateAppToInvitation: _ } = _(),
           _ = (0, _.useCallback)(
             (_) => __webpack_require__(_, _, !1, !0),
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsx)(_, {
           strTitle: "Prune App",
@@ -27386,8 +27205,8 @@
         include_release: !0,
       };
       function _(_) {
-        const { closeModal: _, strOptInName: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__, !1),
+        const { closeModal: _, strOptInName: _ } = _,
+          _ = (0, _._)(_, !1),
           [_, _] = _.useState(!1);
         return (
           _.useEffect(() => {
@@ -27449,7 +27268,7 @@
       }
       function _(_) {
         const { registration: _ } = _,
-          [__webpack_require__] = (0, _._)(_.appid, _);
+          [_] = (0, _._)(_.appid, _);
         let _ = "invited";
         return (
           _.pruned
@@ -27755,7 +27574,7 @@
       }
       const _ = (0, _._)((_) => {
         const _ = _._.Get(),
-          [__webpack_require__, _] = _.useState(_.BHasSpecialEventType()),
+          [_, _] = _.useState(_.BHasSpecialEventType()),
           [_, _] = _.useState(_(_.GetSpecialEventType())),
           _ = new Array();
         _._.forEach((_) => _.push(_(_)));
@@ -27769,7 +27588,7 @@
                 "If enabled, registered games have the ability to create events of the specified typed marked up using tags with this opt-in names. This allows sales page to automatically load those events in a carousel or a schedule widget.",
                 (0, _.jsx)("span", {
                   children:
-                    Boolean(__webpack_require__) &&
+                    Boolean(_) &&
                     (0, _.jsxs)("span", {
                       children: [
                         " The following tag will be set on the associated events: ",
@@ -27781,7 +27600,7 @@
                 }),
               ],
             }),
-            __webpack_require__
+            _
               ? (0, _.jsxs)("div", {
                   className: _().IndentedSubSection,
                   children: [
@@ -27889,20 +27708,20 @@
                 })
               : (0, _.jsx)(_._, {
                   label: "Enable Feature",
-                  checked: __webpack_require__,
+                  checked: _,
                   onChange: _,
                 }),
           ],
         });
       });
       function _(_) {
-        const { fnSetEnabled: _, closeModal: __webpack_require__ } = _,
+        const { fnSetEnabled: _, closeModal: _ } = _,
           _ = _._.Get();
         return (0, _.jsx)(_._, {
           strTitle: "Remove Special Event",
           strDescription:
             "This will clear and unset all of the fields related to the special event and category. Are you sure?",
-          closeModal: __webpack_require__,
+          closeModal: _,
           bAlertDialog: !0,
           onOK: () => {
             _.ClearSpecialEventCategory(), _(!1);
@@ -27911,7 +27730,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _] = _.useState(
+          [_, _] = _.useState(
             _.BHasSpecialEventTimeSet() || _.NCountSpecialEventBlocks() > 0,
           ),
           [_, _, _, _, _] = (0, _._)(() => [
@@ -27921,7 +27740,7 @@
             _.GetSpecialEventEndTime(),
             _.GetAllSpecialEventBlocks(),
           ]);
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("p", {
@@ -27987,13 +27806,13 @@
             })
           : (0, _.jsx)(_._, {
               label: "Optional: Limit Event Schedule Time",
-              checked: __webpack_require__,
+              checked: _,
               onChange: _,
             });
       }
       function _(_) {
         const { block: _ } = _,
-          [__webpack_require__, _, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.block_rt_start,
             _.block_rt_end,
             _.block_reason,
@@ -28006,7 +27825,7 @@
                   children: "Blocked time: ",
                 }),
                 (0, _.jsx)(_._, {
-                  startDateAndTime: __webpack_require__,
+                  startDateAndTime: _,
                   endDateAndTime: _,
                 }),
                 Boolean(_) &&
@@ -28024,7 +27843,7 @@
             });
       }
       function _(_) {
-        const { blockIndex: _, closeModal: __webpack_require__ } = _,
+        const { blockIndex: _, closeModal: _ } = _,
           _ = _._.Get(),
           [_, _] = (0, _.useState)(_.GetAllSpecialEventBlocks()[_]),
           [_, _, _] = (0, _._)(() => [
@@ -28047,7 +27866,7 @@
                 _,
               );
           },
-          closeModal: __webpack_require__,
+          closeModal: _,
           children: [
             (0, _.jsx)(_._, {
               strDescription: "Blocked Out Scheduling Start Date and Time",
@@ -28113,7 +27932,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _] = (0, _.useState)(
+          [_, _] = (0, _.useState)(
             () =>
               _.GetQandA1EventStartTime() > 0 ||
               _.GetQandA2EventStartTime() > 0,
@@ -28144,10 +27963,10 @@
                   children:
                     "Next Fest has two Question and Answer sessions. The first one is registration focussed and second is more general",
                 }),
-                Boolean(!__webpack_require__)
+                Boolean(!_)
                   ? (0, _.jsx)(_._, {
                       label: "Enable Question and Answer Section?",
-                      checked: __webpack_require__,
+                      checked: _,
                       onChange: () => _(!0),
                     })
                   : (0, _.jsxs)(_.Fragment, {
@@ -28231,7 +28050,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetName(),
             _.GetFullName(),
             _.BIsOptInEnabled(),
@@ -28242,7 +28061,7 @@
           children: [
             (0, _.jsxs)("div", {
               className: _().PageTitle,
-              children: ["OptIn Admin Editing: ", __webpack_require__],
+              children: ["OptIn Admin Editing: ", _],
             }),
             (0, _.jsx)("hr", {}),
             (0, _.jsxs)("div", {
@@ -28762,7 +28581,7 @@
         });
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.BIsLaunchYourDemoEnabled(),
             _.GetRequiredOptions(),
             _.GetLaunchYourDemoRequired(),
@@ -28780,14 +28599,14 @@
               }),
               (0, _.jsx)(_._, {
                 label: "Show 'Launch your demo' section",
-                checked: __webpack_require__,
+                checked: _,
                 onChange: _.SetLaunchYourDemoEnabled,
               }),
               (0, _.jsx)("hr", {}),
               (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _().IndentedSubSection,
-                  __webpack_require__ ? "" : _().Disabled,
+                  _ ? "" : _().Disabled,
                 ),
                 children: [
                   (0, _.jsx)(_._, {
@@ -28815,7 +28634,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _] = (0, _._)(() => [
             _.BIsDoAnytimeEnabled(),
             _.BIsLivestreamEnabled(),
             _.BIsChatSessionEnabled(),
@@ -28835,14 +28654,14 @@
               }),
               (0, _.jsx)(_._, {
                 label: "Show This Section to Developers",
-                checked: __webpack_require__,
+                checked: _,
                 onChange: _.SetDoAnytimeEnabled,
               }),
               (0, _.jsx)("hr", {}),
               (0, _.jsxs)("div", {
                 className: (0, _._)(
                   _().IndentedSubSection,
-                  Boolean(__webpack_require__) ? "" : _().Disabled,
+                  Boolean(_) ? "" : _().Disabled,
                 ),
                 children: [
                   (0, _.jsx)("h3", {
@@ -28917,11 +28736,9 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__] = (0, _._)(() => [
-            _.BOptInRegistationOnlyShowSaveButton(),
-          ]),
+          [_] = (0, _._)(() => [_.BOptInRegistationOnlyShowSaveButton()]),
           [_, _] = (0, _.useState)(
-            _.BHasOptInRegistrationTitleOrCheckbox() || __webpack_require__,
+            _.BHasOptInRegistrationTitleOrCheckbox() || _,
           ),
           [_, _] = (0, _._)(() => [
             _.GetCurOptInRegistrationTitle(),
@@ -28982,7 +28799,7 @@
                         onChange: (_) =>
                           _.SetCurOptInRegistrationTitle(_.target.value),
                         value: _,
-                        disabled: __webpack_require__,
+                        disabled: _,
                         placeholder: "Enter OptIn Registration Title Here",
                       }),
                       (0, _.jsx)(_._, {
@@ -28993,7 +28810,7 @@
                         onChange: (_) =>
                           _.SetCurOptInRegistrationCheckbox(_.target.value),
                         value: _,
-                        disabled: __webpack_require__,
+                        disabled: _,
                         placeholder: "Enter OptIn Registration Checkbox Here",
                       }),
                       (0, _.jsx)(_._, {
@@ -29001,7 +28818,7 @@
                         tooltip:
                           "This hides the title and checkbox and only shows the save. When the save is pressed it is treated as opted in. Useful for when we are asking for permissions and not actualy looking for opt-in into a festival. Hitting means they are done.",
                         onChange: _.SetOptInRegistationOnlyShowSaveButton,
-                        checked: __webpack_require__,
+                        checked: _,
                       }),
                     ],
                   })
@@ -29016,9 +28833,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _] = (0, _.useState)(
-            _.GetCurAppealsText()?.length > 0,
-          );
+          [_, _] = (0, _.useState)(_.GetCurAppealsText()?.length > 0);
         return (0, _.jsx)(_._, {
           title: "Appeals Process",
           bStartMinimized: !1,
@@ -29029,7 +28844,7 @@
                 children:
                   "To avoid tickets, we want to provide games that have been pruned out or not considered information about how we reviewed games for inclusion in the sale. This let them review our guidelines and then submit an appeal for us to review for their include.  Not all opt-in's need an appeal process.",
               }),
-              Boolean(__webpack_require__)
+              Boolean(_)
                 ? (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)("p", {
@@ -29061,7 +28876,7 @@
       }
       function _() {
         const [_, _] = _.useState(!1),
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           [_, _] = _.useState(null),
           _ = _.useRef(null),
           _ = (0, _._)();
@@ -29100,9 +28915,9 @@
                     const _ = await _._.Get().Delete(_.current.token);
                     _(_), _(!1), _ || (_(!1), _.push(_.OptinAdminDashboard()));
                   },
-                  bOKDisabled: __webpack_require__,
+                  bOKDisabled: _,
                   children: [
-                    Boolean(__webpack_require__ && !_) &&
+                    Boolean(_ && !_) &&
                       (0, _.jsx)(_._, {
                         size: "medium",
                         position: "center",
@@ -29296,7 +29111,7 @@
       }
       function _(_, _) {
         const {
-            oAllStats: __webpack_require__,
+            oAllStats: _,
             mapAppToDiscountInfo: _,
             strDiscountEventID: _,
             rtEventStart: _,
@@ -29314,11 +29129,9 @@
           };
         return (
           _.forEach((_) => {
-            __webpack_require__.setOptedIn.has(_.appid) && (_.nTopOptedIn += 1),
-              __webpack_require__.setOptedOut.has(_.appid) &&
-                (_.nTopOptedOut += 1),
-              __webpack_require__.setInvited.has(_.appid) &&
-                (_.nTopInvited += 1);
+            _.setOptedIn.has(_.appid) && (_.nTopOptedIn += 1),
+              _.setOptedOut.has(_.appid) && (_.nTopOptedOut += 1),
+              _.setInvited.has(_.appid) && (_.nTopInvited += 1);
             const _ = _?.get(_.appid);
             _ &&
               (_.is_free && (_.nTopFree += 1),
@@ -29334,7 +29147,7 @@
       }
       function _(_) {
         const { rgOverviewList: _ } = _,
-          [__webpack_require__, _] = (0, _.useMemo)(
+          [_, _] = (0, _.useMemo)(
             () => [_(_.sort(_).slice(0, 100), _), _(_, _)],
             [_, _],
           );
@@ -29392,7 +29205,7 @@
                         children: "Top Hundred:",
                       }),
                       (0, _.jsx)(_, {
-                        oCalc: __webpack_require__,
+                        oCalc: _,
                       }),
                     ],
                   }),
@@ -29534,11 +29347,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            tableRef: _,
-            mapAppToDiscountInfo: __webpack_require__,
-            oAllStats: _,
-          } = _,
+        const { tableRef: _, mapAppToDiscountInfo: _, oAllStats: _ } = _,
           _ = _._.Get(),
           { jsonFeatured: _ } = _,
           [_, _, _] = (0, _._)(() => [
@@ -29553,15 +29362,13 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           _ = (function (_, _) {
-            const [__webpack_require__, _] = (0, _.useState)(
-              _.Get().GetOptInDemoApps(_),
-            );
+            const [_, _] = (0, _.useState)(_.Get().GetOptInDemoApps(_));
             return (
               (0, _.useEffect)(() => {
                 _ && !_.Get().BHasLoaded(_) && _.Get().LoadAppWithDemoAppIDs(_);
               }, [_, _]),
               (0, _._)(_.Get().GetLoadCallback(_), _),
-              __webpack_require__
+              _
             );
           })(
             (0, _._)(() => _.GetOptInPageID()),
@@ -29713,11 +29520,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            tableRef: _,
-            mapAppToDiscountInfo: __webpack_require__,
-            oAllStats: _,
-          } = _,
+        const { tableRef: _, mapAppToDiscountInfo: _, oAllStats: _ } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           { data: _ } = (0, _._)(_._.LANGUAGE),
@@ -29796,7 +29599,7 @@
       function _(_) {
         const {
             tableRef: _,
-            bSomeEmailSent: __webpack_require__,
+            bSomeEmailSent: _,
             mapAppToDiscountInfo: _,
             oAllStats: _,
           } = _,
@@ -29863,8 +29666,8 @@
             }),
           ],
           _ = [];
-        if (__webpack_require__ && _) {
-          if (__webpack_require__) {
+        if (_ && _) {
+          if (_) {
             const _ = _
                 ? _.count_opted_in + _.count_opted_out + _.count_invited
                 : 0,
@@ -30299,7 +30102,7 @@
             : null;
         }),
         _ = (0, _._)((_) => {
-          const { demoPackageInfo: _, editModel: __webpack_require__ } = _,
+          const { demoPackageInfo: _, editModel: _ } = _,
             [_, _] = (0, _._)(_.packageid, {
               include_basic_info: !0,
             });
@@ -30375,7 +30178,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _] = _.useState(null),
+          [_, _] = _.useState(null),
           [_, _] = _.useState(new Array()),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
@@ -30386,7 +30189,7 @@
           onCancel: _.closeModal,
           onOK: () => {
             _.closeModal && _.closeModal();
-            let _ = __webpack_require__ ? _(__webpack_require__.value) : null,
+            let _ = _ ? _(_.value) : null,
               _ = _?.length > 0 ? _.map((_) => _(_.value)) : null;
             (0, _._)(
               (0, _.jsx)(_, {
@@ -30406,7 +30209,7 @@
             "Choose an optional filter which will limit which partners to export. Choose optionally additional data to export that the partners would have entered",
           children: [
             (0, _.jsx)(_, {
-              selected: __webpack_require__,
+              selected: _,
               fnChoiceMade: _,
               rgInputType: ["checkbox"],
               label: "Choose Filter:",
@@ -30451,7 +30254,7 @@
       function _(_) {
         const {
             rgAdditionalData: _,
-            filter: __webpack_require__,
+            filter: _,
             bIncludePerssContact: _,
             bIncludeCategories: _,
             bExportArtistStatement: _,
@@ -30481,18 +30284,10 @@
                 const _ = _().CancelToken.source();
                 _.current = _.cancel;
                 let _ = null;
-                _ &&
-                  (_ = await _.Get().LoadAppWithDemoAppIDs(
-                    _,
-                    __webpack_require__,
-                  ));
+                _ && (_ = await _.Get().LoadAppWithDemoAppIDs(_, _));
                 const _ = new Array();
                 _.filter((_) =>
-                  _._.Get().BHasOptionOnRegistration(
-                    _.appid,
-                    _,
-                    __webpack_require__,
-                  ),
+                  _._.Get().BHasOptionOnRegistration(_.appid, _, _),
                 )
                   .filter((_) =>
                     Boolean(null == _ || _.get(_.appid)?.demo_appid),
@@ -30555,7 +30350,7 @@
             }
             return () =>
               _.current && _.current("OptInStatsPressCSV: unmounting");
-          }, [_, _, _, _, __webpack_require__, _, _, _, _, _, _]),
+          }, [_, _, _, _, _, _, _, _, _, _, _]),
           (0, _.jsx)(_._, {
             children: (0, _.jsx)(_._, {
               onEscKeypress: _,
@@ -30605,10 +30400,10 @@
       }
       (0, _._)([_._], _.prototype, "nLoadedOptIn", void 0);
       const _ = (0, _._)((_) => {
-        const { tracker: _, nTotalOptIn: __webpack_require__ } = _,
+        const { tracker: _, nTotalOptIn: _ } = _,
           _ = (0, _._)();
         return (0, _.jsx)(_._, {
-          string: `Progressing ${_ ? _.nLoadedOptIn : 0} / ${__webpack_require__}`,
+          string: `Progressing ${_ ? _.nLoadedOptIn : 0} / ${_}`,
           size: "medium",
           position: "center",
         });
@@ -30616,14 +30411,14 @@
       function _(_) {
         const {
             closeModal: _,
-            eligigleOptInStats: __webpack_require__,
+            eligigleOptInStats: _,
             strOptInName: _,
             bPendingReviewInstead: _,
           } = _,
           _ = (0, _.useMemo)(() => {
             const _ = new Set(__webpack_require__.map((_) => _.appid));
             return Array.from(_);
-          }, [__webpack_require__]),
+          }, [_]),
           _ = (0, _._)(_, {
             include_release: !0,
           }),
@@ -30632,7 +30427,7 @@
           [_, _] = (0, _.useState)(1e3),
           [_, _, _, _, _] = (0, _.useMemo)(
             () => [
-              __webpack_require__.length,
+              _.length,
               __webpack_require__.filter((_) => _.released).length,
               __webpack_require__.filter((_) => {
                 if (!_.released) return !1;
@@ -30652,7 +30447,7 @@
                 return !1;
               }).length,
             ],
-            [__webpack_require__, _, _],
+            [_, _, _],
           ),
           [_, _] = (0, _.useState)(void 0),
           [_, _] = (0, _.useState)(void 0),
@@ -30696,7 +30491,7 @@
             1 != _ &&
               _("Hit error on invite batch, check networks/console: " + _),
               _(!0);
-          }, [_, _, _, __webpack_require__, _, _, _]);
+          }, [_, _, _, _, _, _, _]);
         return (0, _.jsxs)(_._, {
           strTitle: `Move Eligible Apps To '${_ ? "Pending Review" : "Invited"}'`,
           strDescription: `Move eligible apps into the '${_ ? "Pending Review" : "Invited"}' state as computed by the latest refresh stats to the ${_ ? "app requiring review. This lets us prune the app to be precisely matching our festival purpose." : "invited app list. This lets them participate immediately when festival is open."}`,
@@ -30811,7 +30606,7 @@
         }
       }
       function _(_) {
-        const { closeModal: _, optInStats: __webpack_require__ } = _,
+        const { closeModal: _, optInStats: _ } = _,
           _ = _._.Get(),
           _ = _.GetOptInPageID(),
           _ = (0, _._)("OptinAdminManageDownloadTrailers"),
@@ -30821,9 +30616,9 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(new _()),
-          _ = _(_.GetOptInPageID(), __webpack_require__, _),
+          _ = _(_.GetOptInPageID(), _, _),
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(!0);
+            const [_, _] = (0, _.useState)(!0);
             return (
               (0, _.useEffect)(() => {
                 const _ = _().CancelToken.source(),
@@ -30843,7 +30638,7 @@
               }, [_]),
               _
             );
-          })(__webpack_require__),
+          })(_),
           [_, _] = _.useState(void 0),
           [_, _] = _.useState(void 0),
           [_, _] = (0, _.useState)(0),
@@ -30866,7 +30661,7 @@
                   .filter((_) => !_ || _.has(_));
               _(_);
             }
-          }, [_, _, __webpack_require__, _, _, _, _, _, _]),
+          }, [_, _, _, _, _, _, _, _, _]),
           (0, _.jsxs)(_._, {
             strTitle:
               "Download Game Capsules or Trailers for " + _.GetFullName(),
@@ -30956,7 +30751,7 @@
             children: [
               _ || !_
                 ? (0, _.jsx)(_._, {
-                    string: `Loading ${__webpack_require__.length} OptIn Registration and Games Details`,
+                    string: `Loading ${_.length} OptIn Registration and Games Details`,
                     position: "center",
                     size: "medium",
                   })
@@ -31025,7 +30820,7 @@
         );
       }
       function _(_) {
-        const { type: _, setType: __webpack_require__ } = _,
+        const { type: _, setType: _ } = _,
           _ = (0, _.useMemo)(
             () => [
               {
@@ -31072,7 +30867,7 @@
       }
       function _(_) {
         const { fnSetAppIDListList: _ } = _,
-          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(""),
           [_, _] = _.useState(!1);
         return (0, _.jsxs)("div", {
           children: [
@@ -31090,7 +30885,7 @@
                       cols: 120,
                       rows: 10,
                       onChange: (_) => _(_.currentTarget.value),
-                      value: __webpack_require__,
+                      value: _,
                       autoFocus: !0,
                     }),
                     (0, _.jsx)(_._, {
@@ -31117,7 +30912,7 @@
         });
       }
       function _(_) {
-        const { tableRef: _, eligibleStats: __webpack_require__ } = _,
+        const { tableRef: _, eligibleStats: _ } = _,
           _ = _._.Get(),
           _ = (0, _._)(() => _.GetFullName()),
           [_] = (0, _._)(() => [
@@ -31216,14 +31011,14 @@
                 children: "🔍 Find App...",
               }),
             }),
-            Boolean(__webpack_require__?.length > 0) &&
+            Boolean(_?.length > 0) &&
               (0, _.jsx)(_._, {
                 _: "eligible_to_invite",
                 onClick: (_) =>
                   (0, _._)(
                     (0, _.jsx)(_, {
                       strOptInName: _,
-                      eligigleOptInStats: __webpack_require__,
+                      eligigleOptInStats: _,
                       bPendingReviewInstead: !0,
                     }),
                     (0, _._)(_),
@@ -31234,14 +31029,14 @@
                   children: "Eligible → Pending Review...",
                 }),
               }),
-            Boolean(__webpack_require__?.length > 0) &&
+            Boolean(_?.length > 0) &&
               (0, _.jsx)(_._, {
                 _: "eligible_to_invite",
                 onClick: (_) =>
                   (0, _._)(
                     (0, _.jsx)(_, {
                       strOptInName: _,
-                      eligigleOptInStats: __webpack_require__,
+                      eligigleOptInStats: _,
                       bPendingReviewInstead: !1,
                     }),
                     (0, _._)(_),
@@ -31256,9 +31051,9 @@
         });
       }
       function _(_) {
-        const { closeModal: _, strOptInName: __webpack_require__ } = _,
+        const { closeModal: _, strOptInName: _ } = _,
           [_, _] = (0, _.useState)(""),
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = (0, _.useMemo)(
             () =>
               _.split(" ")
@@ -31390,7 +31185,7 @@
       }
       function _(_) {
         const _ = _._.Get(),
-          { bSomeEmailSent: __webpack_require__ } = _,
+          { bSomeEmailSent: _ } = _,
           _ = (0, _._)(),
           { jsonEligible: _ } = _,
           _ = (0, _._)(() => _.BIsEnterDiscountsEnabled()),
@@ -31400,12 +31195,12 @@
             Boolean(_)
               ? (0, _.jsx)(_, {
                   tableRef: _,
-                  bSomeEmailSent: __webpack_require__,
+                  bSomeEmailSent: _,
                   oAllStats: _,
                 })
               : (0, _.jsx)(_, {
                   tableRef: _,
-                  bSomeEmailSent: __webpack_require__,
+                  bSomeEmailSent: _,
                   oAllStats: _,
                 }),
             (0, _.jsx)(_, {
@@ -31432,11 +31227,7 @@
           : _;
       }
       function _(_) {
-        const {
-            tableRef: _,
-            bSomeEmailSent: __webpack_require__,
-            oAllStats: _,
-          } = _,
+        const { tableRef: _, bSomeEmailSent: _, oAllStats: _ } = _,
           _ = _._.Get(),
           [_, _] = (0, _._)(() => [_.GetFullName(), _.GetDiscountEventID()]),
           {
@@ -31470,7 +31261,7 @@
         return _ && _
           ? (0, _.jsx)(_, {
               tableRef: _,
-              bSomeEmailSent: __webpack_require__,
+              bSomeEmailSent: _,
               mapAppToDiscountInfo: _,
               oAllStats: _,
             })
@@ -31547,7 +31338,7 @@
         }
       }
       function _(_) {
-        const { serverDef: _, emailEditModel: __webpack_require__ } = _,
+        const { serverDef: _, emailEditModel: _ } = _,
           [_] = (0, _._)(() => [_.reviewed || !1]);
         return _
           ? (0, _.jsx)("span", {
@@ -31558,7 +31349,7 @@
               onClick: (_) =>
                 (0, _._)(
                   (0, _.jsx)(_, {
-                    emailEditModel: __webpack_require__,
+                    emailEditModel: _,
                     serverDef: _,
                   }),
                   (0, _._)(_),
@@ -31567,11 +31358,7 @@
             });
       }
       function _(_) {
-        const {
-            serverDef: _,
-            emailEditModel: __webpack_require__,
-            closeModal: _,
-          } = _,
+        const { serverDef: _, emailEditModel: _, closeModal: _ } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null);
@@ -31582,7 +31369,7 @@
           onOK: () => {
             _(!0),
               _.Get()
-                .UpdateOptInEmailMetaData(__webpack_require__, {
+                .UpdateOptInEmailMetaData(_, {
                   rtStartAutomaticEmailType: _?.start_rtime || 0,
                   rtEndAutomaticEmail: _?.end_rtime || 0,
                   bReviewed: !0,
@@ -31625,7 +31412,7 @@
         });
       }
       function _(_) {
-        const { serverDef: _, emailEditModel: __webpack_require__ } = _,
+        const { serverDef: _, emailEditModel: _ } = _,
           [_] = (0, _._)(() => [_.start_rtime]);
         return _.aborted || _.completed || _.deleted || _.reviewed
           ? null
@@ -31636,7 +31423,7 @@
                   onClick: (_) =>
                     (0, _._)(
                       (0, _.jsx)(_, {
-                        emailEditModel: __webpack_require__,
+                        emailEditModel: _,
                         serverDef: _,
                       }),
                       (0, _._)(_),
@@ -31651,7 +31438,7 @@
                     onClick: (_) =>
                       (0, _._)(
                         (0, _.jsx)(_, {
-                          emailEditModel: __webpack_require__,
+                          emailEditModel: _,
                           serverDef: _,
                         }),
                         (0, _._)(_),
@@ -31662,11 +31449,7 @@
             });
       }
       function _(_) {
-        const {
-            serverDef: _,
-            emailEditModel: __webpack_require__,
-            closeModal: _,
-          } = _,
+        const { serverDef: _, emailEditModel: _, closeModal: _ } = _,
           _ = _._.Get(),
           _ = _.start_rtime || _.GetEventStartTime(),
           _ = _.end_rtime || _.GetEventEndTime(),
@@ -31686,7 +31469,7 @@
           onOK: () => {
             _(!0),
               _.Get()
-                .UpdateOptInEmailMetaData(__webpack_require__, {
+                .UpdateOptInEmailMetaData(_, {
                   rtStartAutomaticEmailType: _,
                   rtEndAutomaticEmail: _,
                 })
@@ -31749,11 +31532,7 @@
         });
       }
       function _(_) {
-        const {
-            serverDef: _,
-            emailEditModel: __webpack_require__,
-            closeModal: _,
-          } = _,
+        const { serverDef: _, emailEditModel: _, closeModal: _ } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null);
@@ -31765,7 +31544,7 @@
           onOK: () => {
             _(!0),
               _.Get()
-                .UpdateOptInEmailMetaData(__webpack_require__, {
+                .UpdateOptInEmailMetaData(_, {
                   rtStartAutomaticEmailType: 0,
                   rtEndAutomaticEmail: 0,
                 })
@@ -31811,7 +31590,7 @@
       const _ = (0, _._)((_) => {
           const {
             section: _,
-            sectionIndex: __webpack_require__,
+            sectionIndex: _,
             emailDef: _,
             storeItem: _,
             fnOnRemoveSection: _,
@@ -31839,7 +31618,7 @@
                       (0, _._)(
                         (0, _.jsx)(_, {
                           emailDef: _,
-                          sectionIndex: __webpack_require__,
+                          sectionIndex: _,
                           storeItem: _,
                           fnOnRemoveSection: _,
                         }),
@@ -31885,7 +31664,7 @@
         _ = (_) => {
           const {
               curValue: _,
-              fnOnChange: __webpack_require__,
+              fnOnChange: _,
               emailDef: _,
               sectionIndex: _,
             } = _,
@@ -31911,13 +31690,13 @@
         _ = (_) => {
           const {
               closeModal: _,
-              sectionIndex: __webpack_require__,
+              sectionIndex: _,
               emailDef: _,
               storeItem: _,
               fnOnRemoveSection: _,
             } = _,
-            _ = "number" != typeof __webpack_require__,
-            _ = _ ? _._.k_Custom : _.GetSection(__webpack_require__).GetType(),
+            _ = "number" != typeof _,
+            _ = _ ? _._.k_Custom : _.GetSection(_).GetType(),
             _ = _ == _._.k_Custom,
             [_, _] = _.useState(_);
           return (0, _.jsxs)(_._, {
@@ -31941,7 +31720,7 @@
                     }),
                   (0, _.jsx)(_, {
                     emailDef: _,
-                    sectionIndex: __webpack_require__,
+                    sectionIndex: _,
                     curValue: _,
                     fnOnChange: _,
                   }),
@@ -31988,7 +31767,7 @@
                         "end_of_email_sections",
                       );
                       _ && _.scrollIntoView();
-                    } else _.GetSection(__webpack_require__).SetType(_);
+                    } else _.GetSection(_).SetType(_);
                     _();
                   },
                 }),
@@ -31997,7 +31776,7 @@
           });
         },
         _ = (0, _._)((_) => {
-          const { emailDef: _, section: __webpack_require__, storeItem: _ } = _;
+          const { emailDef: _, section: _, storeItem: _ } = _;
           let _ = "",
             _ = (0, _.jsx)("div", {});
           const _ = (0, _._)();
@@ -33428,14 +33207,14 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { appid: _, closeModal: __webpack_require__ } = _,
+        const { appid: _, closeModal: _ } = _,
           _ = (0, _._)(_);
         return (
           console.log(_, _),
           (0, _.jsx)(_._, {
             bAlertDialog: !0,
             strTitle: "Steam Award Definitions",
-            closeModal: __webpack_require__,
+            closeModal: _,
             children: _.isLoading
               ? (0, _.jsx)(_._, {
                   size: "medium",
@@ -33500,14 +33279,14 @@
         });
       }
       function _(_) {
-        const { emailDef: _, closeModal: __webpack_require__ } = _,
+        const { emailDef: _, closeModal: _ } = _,
           _ = (0, _.useMemo)(() => ["localized_email_image"], []),
           _ = (0, _.useMemo)(() => [_._.k_ESteamRealmGlobal], []),
           [_, _] = (0, _.useState)(() => _.GetAllEmailImages()),
           _ = (0, _._)(() => _.GetOwningOptInName());
         return (0, _.jsxs)(_._, {
           strTitle: "Upload Email Image",
-          closeModal: __webpack_require__,
+          closeModal: _,
           bDisableBackgroundDismiss: !0,
           bAllowFullSize: !0,
           onOK: () => _.SetAllEmailImages(_),
@@ -33543,7 +33322,7 @@
         });
       }
       function _(_) {
-        const { rgImages: _, pageid: __webpack_require__, fnSetImages: _ } = _,
+        const { rgImages: _, pageid: _, fnSetImages: _ } = _,
           [_] = (0, _._)(() => [
             Object.keys(_)
               .sort()
@@ -33553,9 +33332,9 @@
             (_) => {
               const _ = (0, _._)(_),
                 _ = _[_];
-              return _ ? (0, _._)(__webpack_require__, _, _) : null;
+              return _ ? (0, _._)(_, _, _) : null;
             },
-            [__webpack_require__, _],
+            [_, _],
           );
         return (0, _.jsx)(_._, {
           rgAssetLangs: _,
@@ -33599,11 +33378,7 @@
         }
       }
       const _ = (_) => {
-          const {
-            emailDef: _,
-            storeItem: __webpack_require__,
-            partnerInfo: _,
-          } = _;
+          const { emailDef: _, storeItem: _, partnerInfo: _ } = _;
           switch (_.GetType()) {
             case _._.k_Invite:
             case _._.k_InviteReminder:
@@ -33722,8 +33497,8 @@
           }
         },
         _ = (0, _._)((_) => {
-          const { emailDef: _, appid: __webpack_require__ } = _,
-            [_] = (0, _._)(__webpack_require__, {
+          const { emailDef: _, appid: _ } = _,
+            [_] = (0, _._)(_, {
               include_basic_info: !0,
             }),
             [_] = (0, _._)((0, _._)()),
@@ -33887,7 +33662,7 @@
                                         "optin/" +
                                         _.GetModel().pageid +
                                         "/sale/" +
-                                        __webpack_require__,
+                                        _,
                                       children: [
                                         "registration page for ",
                                         _.GetName(),
@@ -34064,7 +33839,7 @@
           "#OptIn_EmailSubject_TrailerPermissions",
         ];
       function _(_) {
-        const { emailDef: _, fnSetUseCustom: __webpack_require__ } = _,
+        const { emailDef: _, fnSetUseCustom: _ } = _,
           _ = _._.Get(),
           _ = (0, _._)(),
           [_, _] = (0, _._)(() => [_.GetSubjectToken(), _.GetEventTitle(_)]),
@@ -34735,11 +34510,11 @@
       };
       function _(_) {
         const { emailDef: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             512 == _.GetEmailTargeting(),
             _.GetCustomAppTargetList()?.length || 0,
           ]);
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)("div", {
               className: _().MetaDataCtn,
               children: [
@@ -34783,14 +34558,14 @@
           : null;
       }
       function _(_) {
-        const { emailDef: _, closeModal: __webpack_require__ } = _,
+        const { emailDef: _, closeModal: _ } = _,
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_] = (0, _._)(() => [_.GetCustomAppTargetList()]);
         return (0, _.jsxs)(_._, {
           strTitle: "Custom App Email Target List Manager",
           bDisableBackgroundDismiss: !0,
-          onCancel: __webpack_require__,
+          onCancel: _,
           bAllowFullSize: !0,
           onOK: () => {
             _.replace(/\n/g, "|")
@@ -34851,7 +34626,7 @@
         });
       }
       function _(_) {
-        const { appid: _, fnRemoveApp: __webpack_require__ } = _,
+        const { appid: _, fnRemoveApp: _ } = _,
           _ = "string" == typeof _ ? Number.parseInt(_) : _,
           [_] = (0, _._)(_, {});
         return (0, _.jsxs)("div", {
@@ -34866,7 +34641,7 @@
                 }),
             (0, _.jsx)(_._, {
               className: _().ProgressIconError,
-              onClick: __webpack_require__,
+              onClick: _,
               toolTipContent: "Remove App From List",
               children: (0, _.jsx)(_._, {}),
             }),
@@ -34874,12 +34649,12 @@
         });
       }
       const _ = (_) => {
-        const { closeModal: _, emailDef: __webpack_require__ } = _,
+        const { closeModal: _, emailDef: _ } = _,
           _ = (0, _._)(),
           _ = (0, _.useCallback)(() => {
             _.fnSetLoading(!0),
               _.Get()
-                .CreateOptInEmail(__webpack_require__)
+                .CreateOptInEmail(_)
                 .then((_) => {
                   if (1 != _)
                     _.fnSetError(!0),
@@ -34912,7 +34687,7 @@
                       });
                   }
                 });
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return _.bLoading
           ? (0, _.jsx)(_._, {
               state: _,
@@ -34933,15 +34708,15 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _] = (0, _.useState)(!1);
+          [_, _] = (0, _.useState)(!1);
         _.GetEventTitle(0);
         return _.GetOptInPageID().includes("nextfest") ||
           _.GetOptInPageID().includes("next_fest")
           ? (0, _.jsxs)(_.Fragment, {
               children: [
-                Boolean(__webpack_require__) && (0, _.jsx)(_._, {}),
+                Boolean(_) && (0, _.jsx)(_._, {}),
                 (0, _.jsxs)(_._, {
-                  disabled: __webpack_require__,
+                  disabled: _,
                   onClick: (_) => {
                     _(!0);
                     {
@@ -35122,7 +34897,7 @@
           : null;
       }
       const _ = (_) => {
-        const { closeModal: _, emailDef: __webpack_require__ } = _,
+        const { closeModal: _, emailDef: _ } = _,
           [_, _] = _.useState(void 0),
           _ = (0, _._)();
         return _.bLoading
@@ -35140,7 +34915,7 @@
               onOK: () => {
                 _.fnSetLoading(!0),
                   _.Get()
-                    .SendManualEmail(__webpack_require__)
+                    .SendManualEmail(_)
                     .then((_) => {
                       1 != _.eResult
                         ? (_.fnSetError(!0),
@@ -35199,8 +34974,8 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { emailEditModel: _, serverDef: __webpack_require__ } = _,
-          _ = __webpack_require__.opt_in_name,
+        const { emailEditModel: _, serverDef: _ } = _,
+          _ = _.opt_in_name,
           { rgEmailSentList: _, oEmailSummary: _ } = (function (_) {
             const _ = (0, _._)({
                 queryKey: ["COptInEmailAdmin", "GetEmailDetails", _],
@@ -35444,7 +35219,7 @@
                   ? (0, _.jsx)(_, {
                       strOptInName: _,
                       setInvitedAppMissingEmail: _,
-                      serverDef: __webpack_require__,
+                      serverDef: _,
                     })
                   : (0, _.jsx)(_._, {
                       label: "Expand Invited Users Missing Emails",
@@ -35547,7 +35322,7 @@
       function _(_) {
         const {
             setInvitedAppMissingEmail: _,
-            strOptInName: __webpack_require__,
+            strOptInName: _,
             serverDef: _,
           } = _,
           {
@@ -35619,7 +35394,7 @@
                 strReason: _,
               }
             );
-          })(__webpack_require__, _, _.last_update_time);
+          })(_, _, _.last_update_time);
         return _
           ? (0, _.jsx)(_._, {
               size: "small",
@@ -35663,7 +35438,7 @@
             });
       }
       const _ = (_) => {
-        const { closeModal: _, emailDef: __webpack_require__ } = _,
+        const { closeModal: _, emailDef: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)();
         return _.bLoading
@@ -35689,7 +35464,7 @@
                   _ = _[Math.floor(Math.random() * _.length)];
                 }
                 _.Get()
-                  .TestFireEmailToSelf(__webpack_require__, _, _)
+                  .TestFireEmailToSelf(_, _, _)
                   .then((_) => {
                     1 != _
                       ? (_.fnSetError(!0),
@@ -35717,16 +35492,16 @@
       };
       function _(_) {
         const _ = _._.Get(),
-          [__webpack_require__, _] = (0, _.useState)(!1);
+          [_, _] = (0, _.useState)(!1);
         _.GetEventTitle(0);
         return _.GetOptInPageID().includes("nextfest") ||
           _.GetOptInPageID().includes("next_fest")
           ? null
           : (0, _.jsxs)(_.Fragment, {
               children: [
-                Boolean(__webpack_require__) && (0, _.jsx)(_._, {}),
+                Boolean(_) && (0, _.jsx)(_._, {}),
                 (0, _.jsxs)(_._, {
-                  disabled: __webpack_require__,
+                  disabled: _,
                   onClick: (_) => {
                     _(!0);
                     {
@@ -36163,18 +35938,18 @@
         ),
         _ = (_) => {
           const { closeModal: _ } = _,
-            [__webpack_require__, _] = _.useState(""),
+            [_, _] = _.useState(""),
             [_, _] = _.useState(_._.k_RegistrationConfirmation),
             _ = (0, _.useCallback)(() => {
               const _ = {
                   unique_id: _(),
                   type: _,
-                  internal_name: __webpack_require__,
+                  internal_name: _,
                   sections: [],
                 },
                 _ = _._.Get().AddEmailDraft(_);
               _.Get().SetSelection(_, void 0, _.history), _();
-            }, [_, _, __webpack_require__, _.history]);
+            }, [_, _, _, _.history]);
           return (0, _.jsxs)(_._, {
             title: "Create New Email Draft",
             bAllowFullSize: !0,
@@ -36189,7 +35964,7 @@
                   }),
                   (0, _.jsx)("input", {
                     type: "text",
-                    value: __webpack_require__,
+                    value: _,
                     placeholder: "Enter Internal Name",
                     onFocus: (_) => _.target.select(),
                     onChange: (_) => _(_.currentTarget.value),
@@ -36212,7 +35987,7 @@
           });
         },
         _ = (_) => {
-          const { curValue: _, fnOnChange: __webpack_require__ } = _,
+          const { curValue: _, fnOnChange: _ } = _,
             _ = _._.map((_) => ({
               label: (0, _._)(_),
               data: _,
@@ -36268,7 +36043,7 @@
           });
         },
         _ = (_) => {
-          const { emailEditModel: _, serverDef: __webpack_require__ } = _,
+          const { emailEditModel: _, serverDef: _ } = _,
             _ = (0, _._)(),
             [_, _] = (0, _.useState)(!1);
           return (
@@ -36287,26 +36062,22 @@
                 }),
                 (0, _.jsx)("td", {
                   children: (0, _.jsx)("span", {
-                    children:
-                      __webpack_require__?.stats?.accounts_examined || 0,
+                    children: _?.stats?.accounts_examined || 0,
                   }),
                 }),
                 (0, _.jsx)("td", {
                   children: (0, _.jsx)("span", {
-                    children: __webpack_require__?.stats?.accounts_emailed || 0,
+                    children: _?.stats?.accounts_emailed || 0,
                   }),
                 }),
                 (0, _.jsx)("td", {
                   children: (0, _.jsx)("span", {
-                    children:
-                      __webpack_require__?.stats
-                        ?.accounts_not_emailed_opted_out || 0,
+                    children: _?.stats?.accounts_not_emailed_opted_out || 0,
                   }),
                 }),
                 (0, _.jsx)("td", {
                   children: (0, _.jsx)("span", {
-                    children:
-                      __webpack_require__?.stats?.accounts_email_failed || 0,
+                    children: _?.stats?.accounts_email_failed || 0,
                   }),
                 }),
                 (0, _.jsx)("td", {
@@ -36325,7 +36096,7 @@
                 (0, _.jsx)("td", {
                   className: _.NoWrap,
                   children: (0, _.jsx)(_, {
-                    serverDef: __webpack_require__,
+                    serverDef: _,
                     emailEditModel: _,
                   }),
                 }),
@@ -36333,7 +36104,7 @@
                   children: _
                     ? (0, _.jsx)(_, {
                         emailEditModel: _,
-                        serverDef: __webpack_require__,
+                        serverDef: _,
                       })
                     : (0, _.jsx)(_._, {
                         label: "Show Details",
@@ -36346,12 +36117,10 @@
           );
         };
       function _(_) {
-        const { emailEditModel: _, serverDef: __webpack_require__ } = _,
+        const { emailEditModel: _, serverDef: _ } = _,
           _ = (0, _._)(),
           [_, _] = (function (_) {
-            const [_, __webpack_require__] = _.useState(
-              !_.Get().BHasReachEstimateLoaded(_),
-            );
+            const [_, _] = _.useState(!_.Get().BHasReachEstimateLoaded(_));
             return (
               (0, _.useEffect)(() => {
                 _.Get().BHasReachEstimateLoaded(_)
@@ -36362,7 +36131,7 @@
               }, [_]),
               [_, _.Get().GetReachEstimate(_)]
             );
-          })(__webpack_require__.email_def_id);
+          })(_.email_def_id);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("td", {
@@ -36374,15 +36143,15 @@
               children: ["Type: ", (0, _._)(_.GetType())],
             }),
             (0, _.jsx)("td", {
-              children: Boolean(__webpack_require__.start_rtime)
+              children: Boolean(_.start_rtime)
                 ? (0, _.jsxs)("span", {
                     children: [
                       "Scheduled:",
-                      (0, _._)(__webpack_require__.start_rtime),
+                      (0, _._)(_.start_rtime),
                       (0, _.jsx)("span", {
                         children: " - ",
                       }),
-                      (0, _._)(__webpack_require__.start_rtime, {
+                      (0, _._)(_.start_rtime, {
                         bForce24HourClock: !1,
                       }),
                     ],
@@ -36435,7 +36204,7 @@
               className: _.NoWrap,
               children: (0, _.jsx)(_, {
                 emailEditModel: _,
-                serverDef: __webpack_require__,
+                serverDef: _,
               }),
             }),
             (0, _.jsx)(_, {
@@ -36520,16 +36289,12 @@
         );
       }
       const _ = (0, _._)((_) => {
-        const {
-          emailEditModel: _,
-          bSelected: __webpack_require__,
-          serverDef: _,
-        } = _;
+        const { emailEditModel: _, bSelected: _, serverDef: _ } = _;
         return (0, _.jsx)("tr", {
           onClick: () => _.Get().SetSelection(_, _, _.history),
           className: (0, _._)({
             [_.TileContainer]: !0,
-            [_.Selected]: __webpack_require__,
+            [_.Selected]: _,
           }),
           children: _.children,
         });
@@ -37297,7 +37062,7 @@
         });
       }
       function _(_) {
-        const { appid: _, count: __webpack_require__ } = _,
+        const { appid: _, count: _ } = _,
           [_] = (0, _._)(_, {
             include_assets: !0,
           });
@@ -37314,7 +37079,7 @@
                   children: [_.GetName(), " (", _, ")"],
                 }),
                 (0, _.jsxs)("div", {
-                  children: ["Count: ", __webpack_require__],
+                  children: ["Count: ", _],
                 }),
                 (0, _.jsx)("hr", {}),
               ],
@@ -37322,7 +37087,7 @@
           : (0, _.jsx)("a", {
               href: `${_._.COMMUNITY_BASE_URL}/ogg/${_}/partnerevents`,
               children: (0, _.jsxs)("div", {
-                children: [_, " = ", __webpack_require__],
+                children: [_, " = ", _],
               }),
             });
       }
@@ -37338,7 +37103,7 @@
       }
       function _(_) {
         const { info: _ } = _,
-          [__webpack_require__] = (0, _._)(_.appid, {}),
+          [_] = (0, _._)(_.appid, {}),
           _ = _.appid;
         return (0, _.jsxs)("div", {
           children: [
@@ -37517,7 +37282,7 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { editModel: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetPointShopPriorityApps(),
             _.GetPointShopIncludedApps(),
             _.GetPublicEventURL(),
@@ -37604,7 +37369,7 @@
                   onClick: (_) =>
                     (0, _._)(
                       (0, _.jsx)(_, {
-                        rgAppIDs: __webpack_require__,
+                        rgAppIDs: _,
                         fnSetAppIDs: _.SetPointShopPriorityApps,
                       }),
                       (0, _._)(_),
@@ -37661,9 +37426,7 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [
-            _.GetPointShopAdvertisingAppID(),
-          ]);
+          [_] = (0, _._)(() => [_.GetPointShopAdvertisingAppID()]);
         return (0, _.jsxs)("div", {
           className: _().Section,
           children: [
@@ -37678,15 +37441,15 @@
               type: "number",
               onChange: (_) =>
                 _.SetPointShopAdvertisingAppID(Number.parseInt(_.target.value)),
-              value: __webpack_require__,
+              value: _,
               placeholder: "Advertising App ID",
             }),
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   (0, _.jsx)("br", {}),
                   (0, _.jsx)("a", {
-                    href: `${_._.PARTNER_BASE_URL}apps/communityitems/${__webpack_require__}`,
+                    href: `${_._.PARTNER_BASE_URL}apps/communityitems/${_}`,
                     target: "_blank",
                     children: "Open the Community and Point Shop Editor",
                   }),
@@ -37700,7 +37463,7 @@
       }
       function _(_) {
         const { editModel: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.GetPointShopRadialColorOverride(),
             _.GetPointShopRadialEdgeColorOverride(),
           ]);
@@ -37722,7 +37485,7 @@
               onClick: (_) => {
                 (0, _._)(
                   (0, _.jsx)(_._, {
-                    color: __webpack_require__,
+                    color: _,
                     onChange: (_) => _.SetPointShopRadialColorOverride(_),
                   }),
                   _,
@@ -37732,7 +37495,7 @@
                 );
               },
               style: {
-                backgroundColor: __webpack_require__,
+                backgroundColor: _,
               },
               children: "Update Radial Center Color",
             }),
@@ -37861,8 +37624,8 @@
         );
       }
       function _(_) {
-        const { def: _, editModel: __webpack_require__ } = _,
-          _ = _(JSON.parse(_.item_key_values), __webpack_require__);
+        const { def: _, editModel: _ } = _,
+          _ = _(JSON.parse(_.item_key_values), _);
         return (0, _.jsxs)("div", {
           children: [
             Boolean(0 == _.length) ? "✓ " : "✗ " + _,
@@ -37873,10 +37636,10 @@
         });
       }
       function _(_) {
-        const { def: _, editModel: __webpack_require__ } = _,
+        const { def: _, editModel: _ } = _,
           _ = ((_ = _.defid), _.Get().GetCommunityItemKV(_) || {});
         var _;
-        const _ = _(_, __webpack_require__);
+        const _ = _(_, _);
         return (0, _.jsxs)("div", {
           children: [
             Boolean(0 == _.length) ? "✓ " : "✗ " + _,
@@ -37926,7 +37689,7 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_, {});
+          [_, _] = (0, _._)(_, {});
         return 2 == _
           ? (0, _.jsxs)("div", {
               children: ["Appid ", _, " Not Found"],
@@ -37950,11 +37713,7 @@
               });
       }
       function _(_) {
-        const {
-            closeModal: _,
-            rgAppIDs: __webpack_require__,
-            fnSetAppIDs: _,
-          } = _,
+        const { closeModal: _, rgAppIDs: _, fnSetAppIDs: _ } = _,
           [_, _] = _.useState(__webpack_require__?.join("\n") || "");
         return (0, _.jsx)(_._, {
           strTitle: "Set App List",
@@ -38007,7 +37766,7 @@
         );
       }
       function _(_) {
-        const { closeModal: _, editModel: __webpack_require__ } = _,
+        const { closeModal: _, editModel: _ } = _,
           [_, _] = (0, _.useState)(50),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
@@ -38176,7 +37935,7 @@
       function _(_) {
         const {
             strSurveyType: _,
-            strOptInName: __webpack_require__,
+            strOptInName: _,
             appid: _,
             oSurveyData: _,
             fnSetSurveyData: _,
@@ -38200,10 +37959,7 @@
                 children: [
                   (0, _.jsx)("div", {
                     className: _().PageTitle,
-                    children: (0, _._)(
-                      "#OptIn_SurveyTitle",
-                      __webpack_require__,
-                    ),
+                    children: (0, _._)("#OptIn_SurveyTitle", _),
                   }),
                   (0, _.jsx)("hr", {}),
                   (0, _.jsxs)("div", {
@@ -38228,7 +37984,7 @@
                               (0, _.jsx)("h2", {
                                 children: (0, _._)(
                                   "#OptIn_SurveyIntroTitle",
-                                  __webpack_require__,
+                                  _,
                                 ),
                               }),
                               (0, _._)("#OptIn_SurveyIntro"),
@@ -38278,11 +38034,7 @@
             });
       }
       function _(_) {
-        const {
-          oSurveyData: _,
-          fnSaveSurveyResults: __webpack_require__,
-          closeModal: _,
-        } = _;
+        const { oSurveyData: _, fnSaveSurveyResults: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: (0, _._)("#OptIn_SubmitSurvey"),
           strDescription: (0, _._)("#OptIn_SubmitSurvey_desc"),
@@ -38295,7 +38047,7 @@
       const _ = "Affirmative",
         _ = "Negative";
       function _(_) {
-        const { oSurveyData: _, fnUpdateLocalSurvey: __webpack_require__ } = _,
+        const { oSurveyData: _, fnUpdateLocalSurvey: _ } = _,
           [_, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.satisfaction,
             _.satisfiction_description,
@@ -38393,7 +38145,7 @@
       function _(_) {
         const {
           strQuestionToken: _,
-          rgOptions: __webpack_require__,
+          rgOptions: _,
           selected: _,
           fnSetSelected: _,
           strAdditionalFeedbackToken: _,
@@ -38438,9 +38190,7 @@
                 ),
               ),
             }),
-            Boolean(
-              _ && _ === __webpack_require__[__webpack_require__.length - 1],
-            ) &&
+            Boolean(_ && _ === _[_.length - 1]) &&
               (0, _.jsxs)("div", {
                 className: _().FollowUpText,
                 children: [
@@ -38463,7 +38213,7 @@
       function _(_) {
         const {
           strQuestionToken: _,
-          strAnswerString: __webpack_require__,
+          strAnswerString: _,
           fnAnswerString: _,
           strNotesToken: _,
         } = _;
@@ -38487,7 +38237,7 @@
                     _().FollowUpTextInput,
                   ),
                   onChange: (_) => _(_.currentTarget.value),
-                  value: __webpack_require__,
+                  value: _,
                   autoFocus: !0,
                 }),
               ],
@@ -38882,7 +38632,7 @@
         }),
         _ = (_) => {
           const { closeModal: _ } = _,
-            [__webpack_require__, _] = _.useState(!0),
+            [_, _] = _.useState(!0),
             [_, _] = _.useState(new Array());
           return (
             (0, _.useEffect)(() => {
@@ -38910,7 +38660,7 @@
               children: [
                 (0, _.jsxs)(_._, {
                   children: [
-                    Boolean(__webpack_require__ && 0 == _.length) &&
+                    Boolean(_ && 0 == _.length) &&
                       (0, _.jsx)("div", {
                         children:
                           "We are saving the Opt-In Data, please be patient.\t",
@@ -38928,13 +38678,13 @@
                           ),
                         ),
                       }),
-                    __webpack_require__ &&
+                    _ &&
                       (0, _.jsx)(_._, {
                         size: "medium",
                         position: "center",
                         string: (0, _._)("#Saving"),
                       }),
-                    Boolean(!__webpack_require__ && 0 == _.length) &&
+                    Boolean(!_ && 0 == _.length) &&
                       (0, _.jsx)("div", {
                         children: "Save Successful.",
                       }),
@@ -38943,7 +38693,7 @@
                 (0, _.jsx)(_._, {
                   children: (0, _.jsx)(_._, {
                     onClick: _,
-                    disabled: __webpack_require__,
+                    disabled: _,
                     children: (0, _._)("#Button_Close"),
                   }),
                 }),
@@ -38953,7 +38703,7 @@
         };
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__, _] = _.useState(!0);
+          [_, _] = _.useState(!0);
         _.useEffect(() => {
           const _ = _._.Get()
             .GetActiveOptIn()
@@ -39020,7 +38770,7 @@
                     }),
                 }),
               }),
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)(_._, {
                   size: "medium",
                   position: "center",
@@ -39195,13 +38945,9 @@
             : null,
         ),
         _ = (0, _._)((_) => {
-          const { section: _, sectionIndex: __webpack_require__ } = _,
+          const { section: _, sectionIndex: _ } = _,
             _ = (0, _._)(_._.LANGUAGE),
-            _ = (0, _._)(
-              _.name,
-              _,
-              (0, _._)("#OptIn_Registration_Title", __webpack_require__),
-            ),
+            _ = (0, _._)(_.name, _, (0, _._)("#OptIn_Registration_Title", _)),
             _ = (0, _._)(_.description, _, ""),
             _ = _.valve_only;
           return (0, _.jsxs)("div", {
@@ -39222,13 +38968,13 @@
               }),
               (0, _.jsx)(_, {
                 section: _,
-                sectionIndex: __webpack_require__,
+                sectionIndex: _,
               }),
             ],
           });
         }),
         _ = (0, _._)((_) => {
-          const { section: _, sectionIndex: __webpack_require__ } = _;
+          const { section: _, sectionIndex: _ } = _;
           if ("text_input" === _.input_style)
             return (0, _.jsx)(_, {
               ..._,
@@ -39266,11 +39012,8 @@
           }
         }),
         _ = (0, _._)((_) => {
-          const { section: _, list: __webpack_require__, listIndex: _ } = _,
-            _ = _.Get().GetSelectedItems(
-              _.unique_id,
-              __webpack_require__.unique_id,
-            ),
+          const { section: _, list: _, listIndex: _ } = _,
+            _ = _.Get().GetSelectedItems(_.unique_id, _.unique_id),
             [_, _] = (0, _.useState)(_?.length > 0 ? _[0] : "");
           return (
             (0, _._)(0 == _, "expected list index to be zero"),
@@ -39283,7 +39026,7 @@
                 }),
                 (0, _.jsx)(_, {
                   ..._,
-                  list: __webpack_require__,
+                  list: _,
                   listIndex: _,
                   item_unique_ids: [_],
                 }),
@@ -39292,15 +39035,12 @@
           );
         }),
         _ = (0, _._)((_) => {
-          const { section: _, list: __webpack_require__ } = _,
+          const { section: _, list: _ } = _,
             [_, _] = (0, _.useState)(
-              _.Get().GetSelectedItems(
-                _.unique_id,
-                __webpack_require__.unique_id,
-              ),
+              _.Get().GetSelectedItems(_.unique_id, _.unique_id),
             ),
             _ = (0, _._)(_._.LANGUAGE),
-            _ = (0, _._)(__webpack_require__.option_title, _),
+            _ = (0, _._)(_.option_title, _),
             _ = new Array(),
             _ = _._(_.columns, 1, 3);
           for (let _ = 0; _ < _; ++_)
@@ -39309,7 +39049,7 @@
                 "div",
                 {
                   className: _.Column,
-                  children: __webpack_require__.options
+                  children: _.options
                     .filter((_, _) => _ % _ == _)
                     .map((_) => {
                       const _ = (0, _._)(_.text, _),
@@ -39375,17 +39115,14 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const { section: _, list: __webpack_require__ } = _,
+          const { section: _, list: _ } = _,
             [_, _] = (0, _.useState)(
-              _.Get().GetSelectedItems(
-                _.unique_id,
-                __webpack_require__.unique_id,
-              ),
+              _.Get().GetSelectedItems(_.unique_id, _.unique_id),
             ),
             _ = (0, _._)(_._.LANGUAGE),
-            _ = (0, _._)(__webpack_require__.option_title, _),
+            _ = (0, _._)(_.option_title, _),
             _ = [],
-            _ = __webpack_require__.options.map((_) => {
+            _ = _.options.map((_) => {
               const _ = (0, _._)(_.text, _);
               let _ = {
                 value: _.unique_id,
@@ -39429,7 +39166,7 @@
         _ = (0, _._)((_) => {
           const {
             section: _,
-            list: __webpack_require__,
+            list: _,
             sectionIndex: _,
             listIndex: _,
             item_unique_ids: _,
@@ -39445,7 +39182,7 @@
                   (0, _.jsx)("input", {
                     type: "hidden",
                     name: `dynamic_selection[${_}][list_selection][${_}][list_id]`,
-                    value: __webpack_require__.unique_id,
+                    value: _.unique_id,
                   }),
                 ],
               })
@@ -39459,7 +39196,7 @@
                   (0, _.jsx)("input", {
                     type: "hidden",
                     name: `dynamic_selection[${_}][list_selection][${_}][list_id]`,
-                    value: __webpack_require__.unique_id,
+                    value: _.unique_id,
                   }),
                   Boolean(_) &&
                     _.map((_, _) =>
@@ -39498,7 +39235,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         if (!_.eventdata) return null;
-        const { appid: _, eventdata: __webpack_require__ } = _,
+        const { appid: _, eventdata: _ } = _,
           _ = (0, _._)("#OptIn_GameListing_Title");
         let _ = (function (_, _) {
           const _ = _.jsondata,
@@ -39556,7 +39293,7 @@
                 );
             }
           return _;
-        })(_, __webpack_require__);
+        })(_, _);
         return _.length > 0
           ? (0, _.jsx)(_._, {
               children: (0, _.jsxs)("div", {
@@ -39646,7 +39383,7 @@
           }),
         });
       function _(_) {
-        const { optInDefinition: _, appid: __webpack_require__ } = _,
+        const { optInDefinition: _, appid: _ } = _,
           _ = (0, _._)("optin_preview_mode", "application_config") || !1;
         return (_.Get().BHasAdditionalFeaturing() || _) &&
           _.additional_featuring_section_enabled &&
@@ -39663,14 +39400,14 @@
                   }),
                 (0, _.jsx)(_, {
                   optInDefinition: _,
-                  appid: __webpack_require__,
+                  appid: _,
                 }),
               ],
             })
           : null;
       }
       function _(_) {
-        const { optInDefinition: _, appid: __webpack_require__ } = _,
+        const { optInDefinition: _, appid: _ } = _,
           [_] = (0, _._)("focusmedia", !1);
         return (
           (0, _.useEffect)(() => {
@@ -39678,11 +39415,11 @@
               (0, _._)(
                 (0, _.jsx)(_, {
                   optInDefinition: _,
-                  appid: __webpack_require__,
+                  appid: _,
                 }),
                 window,
               );
-          }, [_, _, __webpack_require__]),
+          }, [_, _, _]),
           (0, _.jsx)(_, {
             ..._,
             bShowVisibilityDetails: !0,
@@ -39690,11 +39427,7 @@
         );
       }
       function _(_) {
-        const {
-            optInDefinition: _,
-            appid: __webpack_require__,
-            closeModal: _,
-          } = _,
+        const { optInDefinition: _, appid: _, closeModal: _ } = _,
           _ = (0, _._)();
         return _.bLoading
           ? (0, _.jsx)(_._, {
@@ -39709,10 +39442,7 @@
               onOK: () => {
                 _.fnSetLoading(!0),
                   _._.Get()
-                    .UpdateOptInRegistrationJson(
-                      __webpack_require__,
-                      _.Get().GetModel().jsondata,
-                    )
+                    .UpdateOptInRegistrationJson(_, _.Get().GetModel().jsondata)
                     .then((_) => {
                       _
                         ? (_.fnSetError(!0), _.fnSetStrError(_))
@@ -39723,17 +39453,13 @@
               onCancel: _,
               children: (0, _.jsx)(_, {
                 optInDefinition: _,
-                appid: __webpack_require__,
+                appid: _,
                 bShowVisibilityDetails: !1,
               }),
             });
       }
       function _(_) {
-        const {
-          optInDefinition: _,
-          appid: __webpack_require__,
-          bShowVisibilityDetails: _,
-        } = _;
+        const { optInDefinition: _, appid: _, bShowVisibilityDetails: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             Boolean(_) &&
@@ -39761,7 +39487,7 @@
             Boolean(_.collect_game_profile_intent) &&
               (0, _.jsx)(_, {
                 optInDefinition: _,
-                appid: __webpack_require__,
+                appid: _,
               }),
           ],
         });
@@ -40042,7 +39768,7 @@
         });
       }
       function _(_) {
-        const { optInDefinition: _, appid: __webpack_require__ } = _,
+        const { optInDefinition: _, appid: _ } = _,
           _ = _.event_title[_._.LANGUAGE] || _.event_title.english,
           _ = _.do_anytime.enter_discounts,
           _ = _.pageid,
@@ -40174,7 +39900,7 @@
                   children: (0, _._)(
                     "#OptIn_Collect_Game_Profile_Intent_goto",
                     (0, _.jsx)("a", {
-                      href: `${_._.PARTNER_BASE_URL}apps/communityitems/${__webpack_require__}`,
+                      href: `${_._.PARTNER_BASE_URL}apps/communityitems/${_}`,
                       target: "_blank",
                     }),
                   ),
@@ -40577,7 +40303,7 @@
       }
       function _(_) {
         const _ = _.Get().GetModel(),
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.jsondata.free_to_keep_item_drop?.dlc_appid || null,
             _.jsondata.free_to_keep_item_drop?.clan_event_gid || null,
           ]);
@@ -40597,7 +40323,7 @@
       }
       var _ = __webpack_require__("chunkid");
       const _ = (_) => {
-          let { pageid: _, appid: __webpack_require__ } = _;
+          let { pageid: _, appid: _ } = _;
           _.startsWith("sale_sale_") && (_ = _.substring(5));
           const _ = _._.Get().GetDefinition(_),
             [_, _] = (0, _.useState)(!1),
@@ -40605,19 +40331,15 @@
           if (
             ((0, _.useEffect)(() => {
               const _ = _._.Get().CreateOrGetRegistration(
-                Number.parseInt(__webpack_require__),
+                Number.parseInt(_),
                 _,
               );
               _.Get().Reset(_), _(!0);
-            }, [_, __webpack_require__]),
+            }, [_, _]),
             !_)
           )
             return (
-              console.error(
-                "Definition is missing: " + __webpack_require__ + " - " + _,
-                _,
-              ),
-              null
+              console.error("Definition is missing: " + _ + " - " + _, _), null
             );
           if (!_)
             return (0, _.jsx)(_._, {
@@ -40630,7 +40352,7 @@
                 _: "GameListing",
               }),
               (0, _.jsx)(_, {
-                appid: __webpack_require__,
+                appid: _,
                 eventdata: _,
               }),
               (0, _.jsxs)("div", {
@@ -40651,7 +40373,7 @@
                       }),
                       (0, _.jsx)(_, {
                         optInDefinition: _,
-                        appid: Number.parseInt(__webpack_require__),
+                        appid: Number.parseInt(_),
                       }),
                       (0, _.jsx)(_, {
                         optInDefinition: _,
@@ -40927,7 +40649,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { rgAppealReviewReg: _, pageid: __webpack_require__ } = _,
+        const { rgAppealReviewReg: _, pageid: _ } = _,
           _ = _.useMemo(
             () =>
               _.sort(
@@ -40948,7 +40670,7 @@
                     (0, _.jsx)(
                       _,
                       {
-                        pageid: __webpack_require__,
+                        pageid: _,
                         registration: _,
                         index: _,
                       },
@@ -41023,8 +40745,8 @@
         });
       }
       function _(_) {
-        const { appid: _, pageid: __webpack_require__, index: _ } = _,
-          _ = (0, _._)(_, __webpack_require__),
+        const { appid: _, pageid: _, index: _ } = _,
+          _ = (0, _._)(_, _),
           [_, _] = (0, _._)(_, _._),
           _ =
             (_.useMemo(
@@ -41201,7 +40923,7 @@
       function _(_) {
         const {
             appid: _,
-            registration: __webpack_require__,
+            registration: _,
             bAcceptAppeal: _,
             closeModal: _,
           } = _,
@@ -41225,7 +40947,7 @@
               onCancel: _,
               onOK: async () => {
                 _.fnSetLoading(!0);
-                (await _(_, __webpack_require__, _))
+                (await _(_, _, _))
                   ? _.fnSetSuccess(!0)
                   : (_.fnSetError(!0),
                     _.fnSetStrError(
@@ -41263,24 +40985,19 @@
         });
       }
       function _(_) {
-        const {
-            closeModal: _,
-            rgAppIDs: __webpack_require__,
-            strOptInName: _,
-            bInvite: _,
-          } = _,
+        const { closeModal: _, rgAppIDs: _, strOptInName: _, bInvite: _ } = _,
           { fnChangeAppPruneState: _ } = _(),
           [_, _] = (0, _.useState)(void 0),
           [_, _] = (0, _.useState)(void 0),
           [_, _] = (0, _.useState)(void 0),
           _ = (0, _.useCallback)(async () => {
             _(!0),
-              _(_, __webpack_require__, !_)
+              _(_, _, !_)
                 .then((_) => {
                   _ || _((0, _._)("#OptIn_AppReview_ErrorBatch"));
                 })
                 .finally(() => _(!0));
-          }, [_, _, __webpack_require__, _]);
+          }, [_, _, _, _]);
         return (0, _.jsxs)(_._, {
           strTitle: (0, _._)(
             _
@@ -41312,8 +41029,8 @@
         });
       }
       function _(_) {
-        const { tagid: _, language: __webpack_require__ = _._.LANGUAGE } = _;
-        return (0, _._)(_, __webpack_require__) || String(_);
+        const { tagid: _, language: _ = _._.LANGUAGE } = _;
+        return (0, _._)(_, _) || String(_);
       }
       function _(_) {
         const { pageid: _ } = _,
@@ -41494,7 +41211,7 @@
       function _(_) {
         const {
             rgOrderedAppIDs: _,
-            pageid: __webpack_require__,
+            pageid: _,
             bPruned: _,
             rgNotToPruneList: _,
             bPendingReview: _,
@@ -41506,14 +41223,14 @@
           children: [
             Boolean(_) &&
               (0, _.jsx)(_, {
-                strOptInName: __webpack_require__,
+                strOptInName: _,
                 rgAppIDs: _,
               }),
             (0, _.jsx)(_, {
               bShowPruningCriteria: _,
             }),
             (0, _.jsx)(_._, {
-              pageid: __webpack_require__,
+              pageid: _,
               rgOrderedAppIDs: _,
               fnSetFilteredAppID: _,
               rgNotToPruneList: _,
@@ -41524,7 +41241,7 @@
                     (0, _.jsx)(
                       _,
                       {
-                        pageid: __webpack_require__,
+                        pageid: _,
                         appid: _,
                         bInvited: !_ && !_,
                         bPendingReview: _,
@@ -41552,7 +41269,7 @@
       function _(_) {
         const {
             appid: _,
-            bInvited: __webpack_require__,
+            bInvited: _,
             pageid: _,
             index: _,
             bPendingReview: _,
@@ -41575,10 +41292,7 @@
             });
         }
         return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _.Row,
-            __webpack_require__ ? _.Invited : _.Pruned,
-          ),
+          className: (0, _._)(_.Row, _ ? _.Invited : _.Pruned),
           children: [
             (0, _.jsx)(_._, {
               _: _,
@@ -41629,9 +41343,9 @@
                       className: _.ActionsCtn,
                       children: [
                         (0, _.jsx)(_._, {
-                          onClick: () => _(_, [_], __webpack_require__ || _),
+                          onClick: () => _(_, [_], _ || _),
                           children: (0, _._)(
-                            __webpack_require__ || _
+                            _ || _
                               ? "#OptIn_AppReview_Prune"
                               : "#OptIn_AppReview_Unprune",
                           ),
@@ -41641,7 +41355,7 @@
                             onClick: () => _(_, [_], !1),
                             children: (0, _._)("#OptIn_AppReview_Invite"),
                           }),
-                        Boolean(_._.is_support && __webpack_require__) &&
+                        Boolean(_._.is_support && _) &&
                           (0, _.jsx)(_, {
                             appid: _,
                             pageid: _,
@@ -41672,15 +41386,10 @@
         });
       }
       function _(_) {
-        const { appid: _, pageid: __webpack_require__ } = _,
+        const { appid: _, pageid: _ } = _,
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(
-              _.Get().GetStateForApp(_),
-            );
-            return (
-              (0, _._)(_.Get().GetStateForAppCallback(_), __webpack_require__),
-              _
-            );
+            const [_, _] = (0, _.useState)(_.Get().GetStateForApp(_));
+            return (0, _._)(_.Get().GetStateForAppCallback(_), _), _;
           })(_),
           { fnChangeAppAdditionalFeaturingState: _ } = {
             fnChangeAppAdditionalFeaturingState:
@@ -41690,7 +41399,7 @@
           className: _().ValveOnlyBackground,
           children: (0, _.jsx)(_._, {
             onClick: () => {
-              _(__webpack_require__, [_], !_.additionally_featured)
+              _(_, [_], !_.additionally_featured)
                 .then((_) => {
                   1 != _ &&
                     (0, _._)(
@@ -41748,7 +41457,7 @@
       function _(_) {
         const {
             storeItem: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             optInDef: _,
             optInRegistration: _,
           } = _,
@@ -41763,13 +41472,13 @@
                 "#OptIn_Appeals_Control_Title",
                 _.GetName(),
               ),
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: (0, _._)("#OptIn_Appeals_Control_Title", _.GetName()),
               strOKButtonText: (0, _._)("#OptIn_Appeals_Dialog_Submit"),
               bDisableBackgroundDismiss: !0,
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: async () => {
                 _.fnSetLoading(!0);
                 try {
@@ -41865,7 +41574,7 @@
       function _(_) {
         const {
             optInDef: _,
-            optInRegistration: __webpack_require__,
+            optInRegistration: _,
             storeItem: _,
             closeModal: _,
             bReject: _,
@@ -41891,10 +41600,7 @@
                 try {
                   const _ = JSON.parse(
                     JSON.stringify(
-                      "" !== __webpack_require__.jsondata &&
-                        __webpack_require__.jsondata
-                        ? __webpack_require__.jsondata
-                        : {},
+                      "" !== _.jsondata && _.jsondata ? _.jsondata : {},
                     ),
                   );
                   (_.accountid_appealing = void 0),
@@ -41964,7 +41670,7 @@
         });
       }
       function _(_) {
-        const { optInDef: _, optInRegistration: __webpack_require__ } = _,
+        const { optInDef: _, optInRegistration: _ } = _,
           { fnUpdateAppToInvitation: _ } = _();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -42008,7 +41714,7 @@
                         strTitle: (0, _._)("#OptIn_Debug"),
                         bAlertDialog: !0,
                         children: (0, _.jsx)(_._, {
-                          data: __webpack_require__,
+                          data: _,
                         }),
                       }),
                       (0, _._)(_),
@@ -42029,7 +41735,7 @@
                     ),
                   children: "(VO) " + (0, _._)("#OptIn_Def_Debug"),
                 }),
-                Boolean(__webpack_require__.jsondata.accountid_appealing) &&
+                Boolean(_.jsondata.accountid_appealing) &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)(_._, {
@@ -42047,8 +41753,8 @@
                         onClick: (_) =>
                           (0, _._)(
                             (0, _.jsx)(_, {
-                              appid: __webpack_require__.appid,
-                              registration: __webpack_require__,
+                              appid: _.appid,
+                              registration: _,
                               bAcceptAppeal: !0,
                             }),
                             (0, _._)(_),
@@ -42059,8 +41765,8 @@
                         onClick: (_) =>
                           (0, _._)(
                             (0, _.jsx)(_, {
-                              appid: __webpack_require__.appid,
-                              registration: __webpack_require__,
+                              appid: _.appid,
+                              registration: _,
                               bAcceptAppeal: !1,
                             }),
                             (0, _._)(_),
@@ -42075,11 +41781,7 @@
         });
       }
       function _(_) {
-        const {
-            optInDef: _,
-            optInRegistration: __webpack_require__,
-            closeModal: _,
-          } = _,
+        const { optInDef: _, optInRegistration: _, closeModal: _ } = _,
           { fnUpdateAppToInvitation: _ } = _(),
           _ = (0, _._)();
         return _.bLoading
@@ -42093,7 +41795,7 @@
               onCancel: _,
               onOK: () => {
                 _.fnSetLoading(!0),
-                  _(_.pageid, [__webpack_require__.appid], !0, !1, !1)
+                  _(_.pageid, [_.appid], !0, !1, !1)
                     .then((_) => {
                       1 == _
                         ? _.fnSetElSuccess(
@@ -42105,7 +41807,7 @@
                                 }),
                                 (0, _.jsx)("br", {}),
                                 (0, _.jsx)("a", {
-                                  href: `${_._.PARTNER_BASE_URL}optin/sale/${_.pageid}/${__webpack_require__.appid}`,
+                                  href: `${_._.PARTNER_BASE_URL}optin/sale/${_.pageid}/${_.appid}`,
                                   children: "Or go to registration Page.",
                                 }),
                               ],
@@ -42129,20 +41831,17 @@
             });
       }
       function _(_) {
-        const { appid: _, pageid: __webpack_require__ } = _,
+        const { appid: _, pageid: _ } = _,
           [_] = (0, _._)(_, {
             include_release: !0,
             include_assets: !0,
           }),
           _ = (0, _._)("eligible_due_optin_def", "application_config"),
-          _ = (0, _._)(__webpack_require__),
-          _ = (0, _._)(_, __webpack_require__);
+          _ = (0, _._)(_),
+          _ = (0, _._)(_, _);
         if (!_)
           return (0, _.jsx)("div", {
-            children: (0, _._)(
-              "#OptIn_Appeals_DoesNotExist",
-              __webpack_require__,
-            ),
+            children: (0, _._)("#OptIn_Appeals_DoesNotExist", _),
           });
         const _ = (0, _._)(_.event_title, (0, _._)(_._.LANGUAGE)),
           _ = Math.floor(Date.now() / 1e3);
@@ -42162,7 +41861,7 @@
                       ),
                     }),
                     (0, _.jsx)("a", {
-                      href: `${_._.PARTNER_BASE_URL}optin/sale/${__webpack_require__}/${_}`,
+                      href: `${_._.PARTNER_BASE_URL}optin/sale/${_}/${_}`,
                       children: (0, _._)("#OptIn_Appeals_RegistrationPage"),
                     }),
                   ],
@@ -42196,24 +41895,17 @@
               });
       }
       function _(_) {
-        const {
-            optInDef: _,
-            optInRegistration: __webpack_require__,
-            storeItem: _,
-          } = _,
+        const { optInDef: _, optInRegistration: _, storeItem: _ } = _,
           _ = (0, _._)(_.event_title, (0, _._)(_._.LANGUAGE)),
           _ = (0, _._)(_),
-          _ = Boolean(__webpack_require__.jsondata?.rtime_appeal_created),
-          _ = Boolean(2 === __webpack_require__.appeal_state);
+          _ = Boolean(_.jsondata?.rtime_appeal_created),
+          _ = Boolean(2 === _.appeal_state);
         let _ = "#OptIn_Appeals_Title_Pruned";
         return (
-          (__webpack_require__.accountid_appeal &&
-            1 != __webpack_require__.appeal_state &&
-            2 != __webpack_require__.appeal_state) ||
+          (_.accountid_appeal && 1 != _.appeal_state && 2 != _.appeal_state) ||
           (_ && !_)
             ? (_ = "#OptIn_Appeals_Title_AppealProcess")
-            : (!__webpack_require__.pending_review &&
-                __webpack_require__.pruned) ||
+            : (!_.pending_review && _.pruned) ||
               (_ = "#OptIn_Appeals_Title_NotReviewed"),
           (0, _.jsxs)("div", {
             className: _().ColumnCtn,
@@ -42265,11 +41957,7 @@
         );
       }
       function _(_) {
-        const {
-          optInDef: _,
-          storeItem: __webpack_require__,
-          optInRegistration: _,
-        } = _;
+        const { optInDef: _, storeItem: _, optInRegistration: _ } = _;
         Boolean(_.jsondata?.rtime_appeal_created);
         let _ = "#OptIn_Appeals_ReviewLine";
         (!_.pending_review && _.pruned) ||
@@ -42325,11 +42013,7 @@
         });
       }
       function _(_) {
-        const {
-          optInDef: _,
-          optInRegistration: __webpack_require__,
-          storeItem: _,
-        } = _;
+        const { optInDef: _, optInRegistration: _, storeItem: _ } = _;
         let _ = !1;
         if (
           _.release_date_eligibility?.include_unreleased_games &&
@@ -42396,7 +42080,7 @@
             });
         } else if (
           _.event_start_date < Math.floor(Date.now() / 1e3) &&
-          !__webpack_require__.jsondata?.rtime_appeal_created
+          !_.jsondata?.rtime_appeal_created
         )
           return (0, _.jsxs)("div", {
             className: _().SectionCtn,
@@ -42420,21 +42104,20 @@
       function _(_) {
         const {
             optInDef: _,
-            optInRegistration: __webpack_require__,
+            optInRegistration: _,
             storeItem: _,
             bShowReleaseDatePassed: _,
           } = _,
-          _ = Boolean(__webpack_require__.jsondata?.rtime_appeal_created),
-          _ = Boolean(2 === __webpack_require__.appeal_state),
+          _ = Boolean(_.jsondata?.rtime_appeal_created),
+          _ = Boolean(2 === _.appeal_state),
           _ = (0, _._)(_.event_title, (0, _._)(_._.LANGUAGE));
         let _ = "#OptIn_Appeals_Control_Title",
           _ = "#OptIn_Appeals_Control_Desc";
         return (
-          2 == __webpack_require__.appeal_state
+          2 == _.appeal_state
             ? ((_ = "#OptIn_Appeals_Control_Rejected_Title"),
               (_ = "#OptIn_Appeals_Control_Rejected_Desc"))
-            : (!__webpack_require__.pending_review &&
-                __webpack_require__.pruned) ||
+            : (!_.pending_review && _.pruned) ||
               (_ = "#OptIn_Appeals_Control_NotReviewed_Title"),
           (0, _.jsxs)("div", {
             className: _().SectionCtn,
@@ -42941,16 +42624,11 @@
             });
       }
       function _(_) {
-        const {
-          appid: _,
-          appName: __webpack_require__,
-          optInDef: _,
-          bReview: _,
-        } = _;
+        const { appid: _, appName: _, optInDef: _, bReview: _ } = _;
         return (0, _.jsxs)("tr", {
           children: [
             (0, _.jsx)("td", {
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)("td", {
               children: _,
@@ -42970,15 +42648,11 @@
       }
       function _(_) {
         const { optInDef: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(null),
-          [_] = (0, _._)(
-            (0, _._)(__webpack_require__),
-            (0, _._)(__webpack_require__),
-            {
-              include_assets: !0,
-            },
-          ),
-          _ = __webpack_require__?.appid && 0 == _?.GetAppType(),
+          [_, _] = (0, _.useState)(null),
+          [_] = (0, _._)((0, _._)(_), (0, _._)(_), {
+            include_assets: !0,
+          }),
+          _ = _?.appid && 0 == _?.GetAppType(),
           _ = (0, _._)(_.appeals_text, (0, _._)(_._.LANGUAGE));
         if (_?.length > 0)
           return (0, _.jsxs)("div", {
@@ -43024,7 +42698,7 @@
                     strLabel: (0, _._)("#OptIn_SearchGame"),
                     autoFocus: !1,
                     fnSetItemID: (_) => {
-                      (__webpack_require__ && __webpack_require__.appid == _) ||
+                      (_ && _.appid == _) ||
                         _({
                           appid: _,
                         });
@@ -43034,7 +42708,7 @@
                     className: _.AppealSelectedApp,
                     children: [
                       (0, _.jsx)(_, {
-                        oFeaturedItem: __webpack_require__,
+                        oFeaturedItem: _,
                         oStoreItem: _,
                       }),
                       (0, _.jsx)(_._, {
@@ -43042,7 +42716,7 @@
                         onClick: (_) =>
                           (0, _._)(
                             _,
-                            `${_._.PARTNER_BASE_URL}optin/appeal/${_.pageid}/${__webpack_require__?.appid}`,
+                            `${_._.PARTNER_BASE_URL}optin/appeal/${_.pageid}/${_?.appid}`,
                           ),
                         children: (0, _._)(
                           _
@@ -43059,12 +42733,12 @@
           });
       }
       function _(_) {
-        const { oFeaturedItem: _, oStoreItem: __webpack_require__ } = _;
-        return _ && !__webpack_require__
+        const { oFeaturedItem: _, oStoreItem: _ } = _;
+        return _ && !_
           ? (0, _.jsx)("div", {
               children: (0, _._)("#OptIn_LoadingAppDetails", _.appid),
             })
-          : __webpack_require__
+          : _
             ? (0, _.jsxs)("div", {
                 className: _.SelectedApp,
                 children: [
@@ -43158,7 +42832,7 @@
         (0, _.useEffect)(() => {
           _._.Get();
         }, []);
-        const [_, __webpack_require__] = (0, _._)("tab", "active"),
+        const [_, _] = (0, _._)("tab", "active"),
           _ = (_) => __webpack_require__(_.key),
           _ = [
             {
@@ -43218,12 +42892,12 @@
         });
       }
       function _(_) {
-        const { list: _, bReverseOrder: __webpack_require__, bAppeals: _ } = _,
+        const { list: _, bReverseOrder: _, bAppeals: _ } = _,
           [_, _] = (0, _._)("query", ""),
           _ = (0, _.useMemo)(() => {
             const _ = _.trim();
             return _.sort((_, _) =>
-              __webpack_require__
+              _
                 ? _.sale_optin_enabled == _.sale_optin_enabled
                   ? _.event_start_date - _.event_start_date
                   : -1
@@ -43241,7 +42915,7 @@
                   .includes(_) ||
                 _.event_title?.english?.toLocaleLowerCase().includes(_),
             );
-          }, [__webpack_require__, _, _]);
+          }, [_, _, _]);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_._, {
@@ -43267,7 +42941,7 @@
         });
       }
       function _(_) {
-        const { def: _, bAppeals: __webpack_require__ } = _,
+        const { def: _, bAppeals: _ } = _,
           _ = _.event_title?.english || "No Name Assigned",
           _ = (0, _._)(_.appeals_text, (0, _._)(_._.LANGUAGE));
         return _?.length > 0
@@ -43277,7 +42951,7 @@
                 className: (0, _._)(
                   _().OptInAdminRow,
                   _().TileContainer,
-                  Boolean(__webpack_require__) ? _().OptinEnabled : "",
+                  Boolean(_) ? _().OptinEnabled : "",
                 ),
                 children: [
                   (0, _.jsxs)("div", {
@@ -43325,7 +42999,7 @@
                     children: [
                       (0, _.jsx)("div", {
                         className: _().StatsCtn,
-                        children: __webpack_require__
+                        children: _
                           ? (0, _.jsx)(_, {
                               def: _,
                             })
@@ -43352,7 +43026,7 @@
                       (0, _.jsx)("div", {
                         className: (0, _._)(_().Button, _().ButtonCtn),
                         children: (0, _.jsx)("a", {
-                          href: `${_._.PARTNER_BASE_URL}optin/appreview/${_.pageid}?tab=${__webpack_require__ ? "review" : "appeal"}`,
+                          href: `${_._.PARTNER_BASE_URL}optin/appreview/${_.pageid}?tab=${_ ? "review" : "appeal"}`,
                           children: "Open Review Tool",
                         }),
                       }),
@@ -43504,7 +43178,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          { closeModal: __webpack_require__, list: _ } = _,
+          { closeModal: _, list: _ } = _,
           [_, _] = (0, _.useState)(!0),
           _ = (function (_) {
             const _ = (0, _._)(),
@@ -43564,7 +43238,7 @@
           }, [_?.length]),
           (0, _.jsx)(_._, {
             strTitle: "Download Appeals CSV",
-            closeModal: __webpack_require__,
+            closeModal: _,
             bOKDisabled: _,
             onOK: () => {
               const _ = (0, _._)(_) + "_appeals_data.csv";
@@ -43610,8 +43284,7 @@
             );
             return _;
           })(),
-          { rgDemoStats: __webpack_require__, rgAppSansPermissions: _ } = (0,
-          _._)(),
+          { rgDemoStats: _, rgAppSansPermissions: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(() => !0),
           [_, _, _, _] = (0, _.useMemo)(() => {
             const _ = __webpack_require__.reduce(
@@ -43634,7 +43307,7 @@
                 _,
               ]
             );
-          }, [__webpack_require__]),
+          }, [_]),
           _ = (0, _.useMemo)(() => {
             const _ = [];
             return (
@@ -43811,7 +43484,7 @@
       };
       function _(_) {
         const _ = Number.parseInt(_.getValue()),
-          [__webpack_require__] = (0, _._)(_, _),
+          [_] = (0, _._)(_, _),
           _ = (0, _._)(_);
         return (0, _.jsxs)("div", {
           children: [
@@ -43845,14 +43518,14 @@
         _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = _.useState({}),
-          { rgTags: __webpack_require__ } = (0, _._)(),
+          { rgTags: _ } = (0, _._)(),
           _ = _.useMemo(
             () =>
               __webpack_require__?.reduce(
                 (_, _) => _.set(_.tagid, _.name),
                 new Map(),
               ),
-            [__webpack_require__],
+            [_],
           ),
           _ = (function (_) {
             const _ = (0, _._)({
@@ -44014,7 +43687,7 @@
       }
       function _(_) {
         const { fnSetSearch: _ } = _,
-          [__webpack_require__, _] = _.useState(""),
+          [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           { rgTags: _ } = (0, _._)(),
@@ -44052,7 +43725,7 @@
               type: "text",
               label: "Game Name",
               placeholder: "Game Name",
-              value: __webpack_require__,
+              value: _,
               onChange: (_) => _(_.target.value),
             }),
             (0, _.jsx)(_._, {
@@ -44093,13 +43766,11 @@
         });
       }
       function _(_) {
-        const { search: _, rgCurrentResults: __webpack_require__ } = _,
+        const { search: _, rgCurrentResults: _ } = _,
           { rgTags: _ } = (0, _._)(),
           [_, _] = _.useState([]),
           [_, _] = _.useState(1),
-          _ =
-            __webpack_require__?.length > 0 &&
-            !_.some((_) => _.rgItems == __webpack_require__),
+          _ = _?.length > 0 && !_.some((_) => _.rgItems == _),
           _ = _.length > 0;
         return (0, _.jsxs)("div", {
           className: _().ResultSetsCtn,
@@ -44159,7 +43830,7 @@
                         {
                           nSetId: _,
                           strDescription: _.join(", "),
-                          rgItems: __webpack_require__,
+                          rgItems: _,
                         },
                       ]);
                     })(),
@@ -44407,7 +44078,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { fnGetAltText: _, fnSetAltText: __webpack_require__ } = _,
+        const { fnGetAltText: _, fnSetAltText: _ } = _,
           _ = (0, _._)(),
           _ = _(_),
           [_, _] = (0, _.useState)(!1),
@@ -44445,7 +44116,7 @@
               }),
                 _.readAsText(_);
             },
-            [__webpack_require__],
+            [_],
           );
         return _
           ? (0, _.jsx)(_._, {
@@ -44743,7 +44414,7 @@
         });
       }
       function _(_) {
-        const { oEditablePlan: _, closeModal: __webpack_require__ } = _,
+        const { oEditablePlan: _, closeModal: _ } = _,
           { fnCreatePromoInvite: _ } = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -44794,7 +44465,7 @@
           return (0, _.jsx)(_._, {
             state: _,
             strDialogTitle: "Send Email To Partner",
-            closeModal: __webpack_require__,
+            closeModal: _,
           });
         let _;
         return (
@@ -44810,15 +44481,15 @@
             ? (0, _.jsx)(_._, {
                 strTitle: "Can't Send Email",
                 strDescription: _,
-                onCancel: __webpack_require__,
-                onOK: __webpack_require__,
+                onCancel: _,
+                onOK: _,
                 bAlertDialog: !0,
               })
             : (0, _.jsx)(_._, {
                 strTitle: "Send Email To Partner",
                 strDescription:
                   "This will send an assets and discount event request to the partner",
-                onCancel: __webpack_require__,
+                onCancel: _,
                 onOK: _,
                 bSavePlanFirst: !0,
               })
@@ -45046,12 +44717,12 @@
       function _(_) {
         const {
             strTitle: _,
-            rtDueDate: __webpack_require__,
+            rtDueDate: _,
             fnSetDueDate: _,
             bPartnerDueDate: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _.useState)(null != __webpack_require__),
+          [_, _] = (0, _.useState)(null != _),
           [_] = (0, _._)(() => [_.GetStartDate()]);
         return _
           ? (0, _.jsxs)(_.Fragment, {
@@ -45078,7 +44749,7 @@
                 (0, _.jsxs)("div", {
                   className: _().EditDueDateContainer,
                   children: [
-                    __webpack_require__ != _._ &&
+                    _ != _._ &&
                       (0, _.jsx)(_(), {
                         timeFormat: !1,
                         onChange: (_) => {
@@ -45087,9 +44758,7 @@
                         isValidDate: (_) =>
                           _.unix() <
                           _().unix(_).hour(0).seconds(0).minute(0).unix(),
-                        value: __webpack_require__
-                          ? new Date(1e3 * __webpack_require__)
-                          : void 0,
+                        value: _ ? new Date(1e3 * _) : void 0,
                       }),
                     _ &&
                       (0, _.jsx)("span", {
@@ -45097,7 +44766,7 @@
                         children: (0, _.jsx)(_._, {
                           label: (0, _._)("#AssetRequest_DueDate_ASAP"),
                           onClick: () => {
-                            __webpack_require__ != _._
+                            _ != _._
                               ? _(_._)
                               : _(
                                   (0, _._)(
@@ -45107,7 +44776,7 @@
                                   ),
                                 );
                           },
-                          checked: __webpack_require__ == _._,
+                          checked: _ == _._,
                         }),
                       }),
                   ],
@@ -45124,7 +44793,7 @@
                 }),
                 (0, _.jsxs)("h2", {
                   children: [
-                    _(__webpack_require__, _, _ ? "partner" : "artproduction"),
+                    _(_, _, _ ? "partner" : "artproduction"),
                     (0, _.jsx)("div", {
                       className: _().DateCustomizeCtn,
                       children: (0, _.jsx)("span", {
@@ -45143,15 +44812,13 @@
       function _(_) {
         const {
             type: _,
-            index: __webpack_require__,
+            index: _,
             bReviewApprovals: _,
             bLocalizationRequest: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          _ = (0, _._)(() =>
-            _.BHasPromotionFeaturingForArtRequirement(_, __webpack_require__),
-          ),
+          _ = (0, _._)(() => _.BHasPromotionFeaturingForArtRequirement(_, _)),
           _ = (0, _._)(() =>
             _
               ? _.BIsArtTypeReviewRequested(_)
@@ -45391,7 +45058,7 @@
         );
       }
       function _(_) {
-        const { oEditableMessage: _, closeModal: __webpack_require__ } = _,
+        const { oEditableMessage: _, closeModal: _ } = _,
           { fnAddNewPlan: _ } = (0, _._)(),
           { fnUpdateMarketingMessage: _ } = (0, _._)(),
           _ = (0, _._)();
@@ -45399,13 +45066,13 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: "Creating Asset Request",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: "Create Asset Request?",
               strDescription:
                 "By clicking confirm, this will unlock the asset request for this marketing message only. It will create an assert request only promotion plan for the rest of operations and artwork workflow.",
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: async () => {
                 _.fnSetLoading(!0), await _(_, _, _, _);
               },
@@ -45458,7 +45125,7 @@
         });
       }
       function _(_) {
-        const { oEditableDailyDeal: _, closeModal: __webpack_require__ } = _,
+        const { oEditableDailyDeal: _, closeModal: _ } = _,
           { fnAddNewPlan: _ } = (0, _._)(),
           _ = _.GetStoreItemKey(),
           [_, _] = (0, _._)(_._, (0, _._)(_.item_type), {}),
@@ -45477,13 +45144,13 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: "Creating Asset Request",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: "Create Asset Request?",
               strDescription:
                 "By clicking confirm, this will unlock the asset request for this daily deal only. It will create an asset request only promotion plan for the remaining operations and artwork workflow.",
-              onCancel: __webpack_require__,
+              onCancel: _,
               bOKDisabled: !_,
               onOK: async () => {
                 _.fnSetLoading(!0);
@@ -45584,7 +45251,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { promoAssetType: _, planID: __webpack_require__ } = _,
+        const { promoAssetType: _, planID: _ } = _,
           _ = (0, _.useMemo)(() => [_], [_]),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(
@@ -45647,10 +45314,10 @@
           case "app_main_capsule":
             _ = "#AssetRequest_ArtType_app_main_capsule";
         }
-        let _ = `${_._.PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${__webpack_require__}`;
+        let _ = `${_._.PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${_}`;
         return (
           _ &&
-            (_ = `${_._.PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${__webpack_require__}?inputaccesskey=${_}`),
+            (_ = `${_._.PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${_}?inputaccesskey=${_}`),
           (0, _.jsxs)("div", {
             className: _().UploadPreviewCtn,
             children: [
@@ -45677,8 +45344,8 @@
         );
       }
       function _(_) {
-        const { planIdentify: _, promoAssetType: __webpack_require__ } = _,
-          _ = (0, _._)().GetPreviewArtOfType(__webpack_require__);
+        const { planIdentify: _, promoAssetType: _ } = _,
+          _ = (0, _._)().GetPreviewArtOfType(_);
         return (0, _.jsx)("div", {
           className: _().AssetRequestPreviewCtn,
           children: (0, _.jsx)("img", {
@@ -45687,20 +45354,18 @@
         });
       }
       function _(_) {
-        const { planIdentify: _, index: __webpack_require__ } = _,
+        const { planIdentify: _, index: _ } = _,
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(() => [
-            _.BIsMarketingMessageArtRequestAtIndex(__webpack_require__),
+            _.BIsMarketingMessageArtRequestAtIndex(_),
             _.BIsMarketingMessageArtRequestAtIndex(0) &&
               _.BIsMarketingMessageArtRequestAtIndex(1),
-            _.BIsMarketingMessageEventCapsuleRequestAtIndex(
-              __webpack_require__,
-            ),
+            _.BIsMarketingMessageEventCapsuleRequestAtIndex(_),
           ]);
         if (!_) return null;
         const _ = _ ? 2 : 1,
           _ =
-            0 == __webpack_require__
+            0 == _
               ? _
                 ? "marketingmessage_art_eventcapsule"
                 : "marketingmessage_art"
@@ -45714,7 +45379,7 @@
               className: _().TitleBar,
               title: (0, _._)(
                 _ ? "#AssetRequest_MM_Update_Title" : "#AssetRequest_MM_Title",
-                `${_ ? __webpack_require__ + 1 : 1}/${_}`,
+                `${_ ? _ + 1 : 1}/${_}`,
               ),
               children: (0, _.jsxs)("div", {
                 className: _().SectionCtn,
@@ -45853,8 +45518,8 @@
         });
       }
       function _(_) {
-        const { planIdentify: _, promoAssetType: __webpack_require__ } = _,
-          _ = (0, _._)().GetPreviewArtOfType(__webpack_require__);
+        const { planIdentify: _, promoAssetType: _ } = _,
+          _ = (0, _._)().GetPreviewArtOfType(_);
         return (0, _.jsx)("div", {
           className: _().AssetRequestPreviewCtn,
           children: (0, _.jsx)("img", {
@@ -45875,7 +45540,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { planIdentify: _, bShowDetails: __webpack_require__ } = _,
+        const { planIdentify: _, bShowDetails: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _._)(() => [
             _.GetArtRequests() || [],
@@ -45895,7 +45560,7 @@
                 }),
               ],
             }),
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsxs)("div", {
                 className: _().SectionCtn,
                 children: [
@@ -45930,7 +45595,7 @@
                   }),
                 ],
               }),
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsx)(_, {
                 planIdentify: _,
               }),
@@ -46050,12 +45715,12 @@
       }
       function _(_) {
         const { planIdentify: _ } = _,
-          [__webpack_require__] = (0, _._)(_.store_item_id, _.store_item_type, {
+          [_] = (0, _._)(_.store_item_id, _.store_item_type, {
             include_assets: !0,
           });
         return _.store_item_id
           ? (0, _.jsx)(_.Fragment, {
-              children: Boolean(__webpack_require__)
+              children: Boolean(_)
                 ? (0, _.jsx)("div", {
                     className: _().FeaturedApp,
                     children: (0, _.jsx)(_._, {
@@ -46075,21 +45740,14 @@
           : null;
       }
       function _(_) {
-        const {
-          name: _,
-          iconType: __webpack_require__,
-          dueDate: _,
-          startDate: _,
-        } = _;
+        const { name: _, iconType: _, dueDate: _, startDate: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().ArtTaskCtn,
           children: [
             (0, _.jsx)("div", {
               className: _().Icon,
               children:
-                "PSD" == __webpack_require__
-                  ? (0, _.jsx)(_.yCC, {})
-                  : (0, _.jsx)(_.KQV, {}),
+                "PSD" == _ ? (0, _.jsx)(_.yCC, {}) : (0, _.jsx)(_.KQV, {}),
             }),
             (0, _.jsx)("div", {
               className: _().Asset,
@@ -46470,8 +46128,8 @@
         );
       }
       function _(_) {
-        const { planIdentify: _, promoAssetType: __webpack_require__ } = _,
-          _ = (0, _._)().GetPreviewArtOfType(__webpack_require__);
+        const { planIdentify: _, promoAssetType: _ } = _,
+          _ = (0, _._)().GetPreviewArtOfType(_);
         return (0, _.jsx)("div", {
           className: _().AssetRequestPreviewCtn,
           children: (0, _.jsx)("img", {
@@ -46590,8 +46248,8 @@
         );
       }
       function _(_) {
-        const { planIdentify: _, promoAssetType: __webpack_require__ } = _,
-          _ = (0, _._)().GetPreviewArtOfType(__webpack_require__);
+        const { planIdentify: _, promoAssetType: _ } = _,
+          _ = (0, _._)().GetPreviewArtOfType(_);
         return (0, _.jsx)("div", {
           className: _().AssetRequestPreviewCtn,
           children: (0, _.jsx)("img", {
@@ -47109,7 +46767,7 @@
       function _(_) {
         const {
           bCompleted: _,
-          bRequired: __webpack_require__,
+          bRequired: _,
           title: _,
           children: _,
           bSkipOptional: _,
@@ -47126,7 +46784,7 @@
                         className: _().Completed,
                         children: "✓ ",
                       })
-                    : __webpack_require__
+                    : _
                       ? (0, _.jsx)("div", {
                           className: _().RequiredToggle,
                         })
@@ -47140,13 +46798,13 @@
                   !_ &&
                     (0, _.jsxs)("span", {
                       className: (0, _._)({
-                        [_().Required]: __webpack_require__,
-                        [_().Optional]: !__webpack_require__,
+                        [_().Required]: _,
+                        [_().Optional]: !_,
                       }),
                       children: [
                         " ",
                         (0, _._)(
-                          __webpack_require__
+                          _
                             ? "#AssetRequest_General_Upload_req"
                             : "#AssetRequest_General_Upload_opt",
                         ),
@@ -47173,7 +46831,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             _.GetUpdateEventGID(),
             _.GetStoreItemType(),
             _.GetStoreItemID(),
@@ -47186,10 +46844,10 @@
                 "Error wrong store item type assocatiated, please reach out to Steam Contact",
             })
           : (0, _.jsx)(_, {
-              bCompleted: Boolean(__webpack_require__),
+              bCompleted: Boolean(_),
               title: (0, _._)("#AssetRequest_UpdateAnnouncement"),
               bRequired: !0,
-              children: Boolean(__webpack_require__)
+              children: Boolean(_)
                 ? (0, _.jsxs)("div", {
                     children: [
                       (0, _.jsx)("div", {
@@ -47197,7 +46855,7 @@
                           "#AssetRequest_EventLinked_Desc",
                           (0, _.jsx)("a", {
                             target: "_blank",
-                            href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents/edit/${__webpack_require__}`,
+                            href: `${_._.COMMUNITY_BASE_URL}ogg/${_}/partnerevents/edit/${_}`,
                           }),
                         ),
                       }),
@@ -47233,11 +46891,11 @@
             });
       }
       function _(_) {
-        const [_, __webpack_require__, _] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
-              onClick: __webpack_require__,
+              onClick: _,
               children: (0, _._)("#AssetRequest_CreateEvent_ReadRules"),
             }),
             (0, _.jsx)(_._, {
@@ -47252,11 +46910,11 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__, _] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
-              onClick: __webpack_require__,
+              onClick: _,
               children: (0, _._)("#AssetRequest_CreateEvent_Title"),
             }),
             (0, _.jsx)(_._, {
@@ -47270,7 +46928,7 @@
       }
       function _(_) {
         const { closeModal: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1),
+          [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(!1),
@@ -47333,11 +46991,11 @@
                     _.fnSetSuccess(!0));
                 }
               },
-              bOKDisabled: !__webpack_require__,
+              bOKDisabled: !_,
               children: [
                 (0, _.jsx)(_, {}),
                 (0, _.jsx)("br", {}),
-                Boolean(__webpack_require__)
+                Boolean(_)
                   ? (0, _.jsxs)(_.Fragment, {
                       children: [
                         (0, _.jsxs)("div", {
@@ -47386,12 +47044,12 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__, _] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           className: _().ValveOnlyBackground,
           children: [
             (0, _.jsx)(_._, {
-              onClick: __webpack_require__,
+              onClick: _,
               children: "(VO) Unlink Event",
             }),
             (0, _.jsx)(_._, {
@@ -47457,14 +47115,14 @@
             });
       }
       function _(_) {
-        const { planIdentify: _, bAdminView: __webpack_require__ } = _,
+        const { planIdentify: _, bAdminView: _ } = _,
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(() => [
             _.GetModel().requested_promotion_name || "",
             Boolean(_.GetModel().submitting_accountid),
             Boolean(_.GetModel().asset_request_discount_event_id_clone),
           ]),
-          [_, _] = (0, _.useState)(() => __webpack_require__ || !_);
+          [_, _] = (0, _.useState)(() => _ || !_);
         return (0, _.jsxs)("div", {
           className: _().EditCtn,
           children: [
@@ -47494,7 +47152,7 @@
                   children: [
                     _ &&
                       _ &&
-                      !__webpack_require__ &&
+                      !_ &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)(_, {
@@ -47572,10 +47230,10 @@
         });
       }
       function _(_) {
-        const { oInput: _, partnerID: __webpack_require__ } = _,
+        const { oInput: _, partnerID: _ } = _,
           _ = (0, _._)(_.GetDiscountEventID()),
           _ = (0, _._)(_.GetDiscountEventID()),
-          _ = `${_._.PARTNER_BASE_URL}promotion/discounts/dashboard/${__webpack_require__}?de=${_.GetDiscountEventID()}`;
+          _ = `${_._.PARTNER_BASE_URL}promotion/discounts/dashboard/${_}?de=${_.GetDiscountEventID()}`;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().SectionCtn, _().Bright),
           children: [
@@ -47943,11 +47601,9 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__] = (0, _._)(() => [_.GetArtInputLink()]);
+          [_] = (0, _._)(() => [_.GetArtInputLink()]);
         return (0, _.jsxs)(_, {
-          bCompleted:
-            __webpack_require__?.length > 0 &&
-            _._.validateUrl(__webpack_require__),
+          bCompleted: _?.length > 0 && _._.validateUrl(_),
           title: (0, _._)("#AssetRequest_Link_Title"),
           bRequired: !0,
           children: [
@@ -47962,7 +47618,7 @@
               type: "text",
               label: (0, _._)("#AssetRequest_Link_Title"),
               placeholder: (0, _._)("#AssetRequest_Link_Placeholder"),
-              value: __webpack_require__ || "",
+              value: _ || "",
               mustBeURL: !0,
               onChange: (_) => _.SetInputArtworkLink(_.currentTarget.value),
             }),
@@ -47970,11 +47626,7 @@
         });
       }
       function _(_) {
-        const {
-          strTemplateURL: _,
-          strDocURL: __webpack_require__,
-          strTemplateName: _,
-        } = _;
+        const { strTemplateURL: _, strDocURL: _, strTemplateName: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("h2", {
@@ -47992,7 +47644,7 @@
                 "|",
                 " ",
                 (0, _.jsx)("a", {
-                  href: __webpack_require__,
+                  href: _,
                   children: (0, _._)("#AssetRequest_General_SeeDocs"),
                 }),
               ],
@@ -48001,11 +47653,7 @@
         });
       }
       function _(_) {
-        const {
-            closeModal: _,
-            strURL: __webpack_require__,
-            fnSetShowDetails: _,
-          } = _,
+        const { closeModal: _, strURL: _, fnSetShowDetails: _ } = _,
           { fnUpdatePipelineInputAsPartner: _ } = ((0, _._)(), (0, _._)()),
           [_] = (0, _._)("inputaccesskey", void 0),
           _ = (0, _._)();
@@ -48228,27 +47876,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            rtStartDate: _,
-            rtEndDate: __webpack_require__,
-            bForceShowYear: _,
-          } = _,
+        const { rtStartDate: _, rtEndDate: _, bForceShowYear: _ } = _,
           _ =
             _ &&
-            __webpack_require__ &&
+            _ &&
             (0, _._)(
               new Date(1e3 * _.rtStartDate),
               new Date(1e3 * _.rtEndDate),
             ),
-          _ =
-            _ &&
-            __webpack_require__ &&
-            (0, _._)(new Date(1e3 * _.rtStartDate), new Date()),
+          _ = _ && _ && (0, _._)(new Date(1e3 * _.rtStartDate), new Date()),
           _ = _ || !_ || !_;
         if (_.rtStartDate && _.rtEndDate)
           return (0, _.jsx)("div", {
             className: _.className,
-            children: (0, _._)(_, __webpack_require__, _),
+            children: (0, _._)(_, _, _),
           });
         {
           const _ = _.rtStartDate ? (0, _._)(_.rtStartDate, !_) : "unset",
@@ -48358,7 +47999,7 @@
       function _(_) {
         const {
             rtDay: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             strInviteID: _,
             nMaxDiscountDays: _,
             nextDiscount: _,
@@ -48385,7 +48026,7 @@
         return _
           ? (0, _.jsx)(_, {
               rtDay: _,
-              closeModal: __webpack_require__,
+              closeModal: _,
               invite: _,
               nMaxDiscountDays: _,
               nextDiscount: _,
@@ -48395,7 +48036,7 @@
             })
           : (0, _.jsx)(_._, {
               strDescription: (0, _._)("#DailyDeals_NoInvitation"),
-              closeModal: __webpack_require__,
+              closeModal: _,
             });
       }
       function _(_, _) {
@@ -48420,15 +48061,11 @@
         );
       }
       function _(_) {
-        const {
-            rtime: _,
-            locTokenLocalTime: __webpack_require__,
-            shortTimeZone: _,
-          } = _,
+        const { rtime: _, locTokenLocalTime: _, shortTimeZone: _ } = _,
           { strLocal: _, strPacific: _ } = _(_, _);
         let _ = _;
         return (
-          __webpack_require__ && (_ = (0, _._)(__webpack_require__, _)),
+          _ && (_ = (0, _._)(_, _)),
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)("div", {
@@ -48443,8 +48080,8 @@
         );
       }
       function _(_, _) {
-        const { strLocal: __webpack_require__, strPacific: _ } = _(_, _);
-        let _ = __webpack_require__;
+        const { strLocal: _, strPacific: _ } = _(_, _);
+        let _ = _;
         return _ && (_ += " (" + _ + ")"), _;
       }
       function _(_) {
@@ -48464,7 +48101,7 @@
       function _(_) {
         const {
             rtDay: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             invite: _,
             nMaxDiscountDays: _,
             nextDiscount: _,
@@ -48556,7 +48193,7 @@
               window.location.assign(
                 `${_._.PARTNER_BASE_URL}promotion${_.PromotionRoutes.DailyDealDashboard()}`,
               );
-          }, [__webpack_require__]),
+          }, [_]),
           _ = _ < _ || _ > _,
           _ = _ && Boolean(_) && Boolean(_),
           _ = "America/Los_Angeles",
@@ -48571,7 +48208,7 @@
             : void 0;
         return (0, _.jsxs)(_._, {
           title: (0, _._)("#DailyDeals_CreateFromInvite"),
-          onCancel: __webpack_require__,
+          onCancel: _,
           children: [
             (0, _.jsxs)(_._, {
               children: [
@@ -48654,22 +48291,21 @@
                     strCancelText: (0, _._)("#Button_Cancel"),
                     onOK: _,
                     bOKDisabled: _,
-                    onCancel: __webpack_require__,
+                    onCancel: _,
                   }),
             }),
           ],
         });
       }
       function _(_) {
-        const { nearbyMajorSale: _, nDaysUntilMajorSale: __webpack_require__ } =
-            _,
+        const { nearbyMajorSale: _, nDaysUntilMajorSale: _ } = _,
           _ = `${_._.PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales`;
         return (0, _.jsxs)("div", {
           className: _.MajorSaleWarning,
           children: [
             (0, _._)(
               "#DailyDeals_New_DailyDeal_MajorSaleNearby",
-              __webpack_require__,
+              _,
               _.name,
               (0, _._)(_.start_date),
             ),
@@ -48687,7 +48323,7 @@
       function _(_) {
         const {
             nDiscountDays: _,
-            fnSetDiscountDays: __webpack_require__,
+            fnSetDiscountDays: _,
             rgDiscountPackages: _,
             fnSetDiscountPackages: _,
             nStoreItemID: _,
@@ -48771,7 +48407,7 @@
       function _(_) {
         const {
             rgDiscountPackages: _,
-            fnSetDiscountPackages: __webpack_require__,
+            fnSetDiscountPackages: _,
             oAppInfo: _,
           } = _,
           _ = _.GetAllPurchaseOptions()?.filter((_) => Boolean(_.packageid));
@@ -48842,7 +48478,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { rtDay: _, closeModal: __webpack_require__ } = _,
+        const { rtDay: _, closeModal: _ } = _,
           [_, _] = _.useState(0),
           [_, _] = _.useState(void 0),
           [_] = (0, _._)((0, _._)(_), (0, _._)(_), {
@@ -48864,13 +48500,13 @@
                   : _.fnSetStrError((0, _._)("#DailyDeals_New_Error"));
               });
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         return _.bLoading
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: (0, _._)("#DailyDeals_CreateNew", (0, _._)(_)),
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: (0, _._)("#DailyDeals_CreateNew", (0, _._)(_)),
@@ -48901,7 +48537,7 @@
                         })
                     : _(_, _, _, null);
               },
-              onCancel: __webpack_require__,
+              onCancel: _,
               bOKDisabled: !Boolean(_) || !Boolean(_) || !_ || !_ || _.bLoading,
               children: (0, _.jsxs)("div", {
                 className: "DailyDealEditor",
@@ -48956,17 +48592,13 @@
             });
       }
       function _(_) {
-        const {
-            _: _,
-            itemType: __webpack_require__,
-            bHideAdvertisingAppWarnings: _,
-          } = _,
-          [_, _] = (0, _._)(_, __webpack_require__, {
+        const { _: _, itemType: _, bHideAdvertisingAppWarnings: _ } = _,
+          [_, _] = (0, _._)(_, _, {
             include_assets: !0,
             include_all_purchase_options: !0,
           });
         let _ = _._.PARTNER_BASE_URL + "apps/landing/" + _;
-        switch (__webpack_require__) {
+        switch (_) {
           case 1:
             _ = _._.PARTNER_BASE_URL + "store/packagelanding/" + _;
             break;
@@ -49004,7 +48636,7 @@
                   : (0, _.jsx)(_, {
                       oStoreItem: _,
                       eLoadState: _,
-                      itemType: __webpack_require__,
+                      itemType: _,
                     }),
               ],
             }),
@@ -49012,13 +48644,9 @@
         });
       }
       function _(_) {
-        const {
-            oStoreItem: _,
-            eLoadState: __webpack_require__,
-            itemType: _,
-          } = _,
+        const { oStoreItem: _, eLoadState: _, itemType: _ } = _,
           _ = (0, _._)(_?.GetAppID());
-        if (2 == __webpack_require__) {
+        if (2 == _) {
           let _ = (0, _._)("#DailyDeals_App_NotAvailable");
           switch (_) {
             case 2:
@@ -49062,7 +48690,7 @@
         );
       }
       function _(_) {
-        const { oStoreItem: _, bHideWarnings: __webpack_require__ } = _,
+        const { oStoreItem: _, bHideWarnings: _ } = _,
           _ = _.GetStorePageURLOverride();
         return _ && 0 != _.trim().length
           ? _._.validateUrl(_)
@@ -49076,13 +48704,13 @@
                   }),
                 ],
               })
-            : __webpack_require__
+            : _
               ? (0, _.jsx)(_.Fragment, {})
               : (0, _.jsxs)("div", {
                   className: _.WarningStylesWithIcon,
                   children: ["Warning: linked provided invalid: ", _],
                 })
-          : __webpack_require__
+          : _
             ? (0, _.jsx)(_.Fragment, {})
             : (0, _.jsx)("div", {
                 className: _.WarningStylesWithIcon,
@@ -49090,11 +48718,7 @@
               });
       }
       function _(_) {
-        const {
-            nAppID: _,
-            oFeaturedItem: __webpack_require__,
-            fnSetFeaturedItem: _,
-          } = _,
+        const { nAppID: _, oFeaturedItem: _, fnSetFeaturedItem: _ } = _,
           [_, _] = (0, _._)(_, {
             include_all_purchase_options: !0,
           }),
@@ -49165,7 +48789,7 @@
                 (0, _.jsx)(_._, {
                   labelId: _,
                   descriptionId: _,
-                  value: (0, _._)(__webpack_require__),
+                  value: (0, _._)(_),
                   onChange: (_) => _((0, _._)(_)),
                   children: _,
                 }),
@@ -49220,14 +48844,14 @@
         );
       }
       function _(_) {
-        const { storeItemId: _, itemType: __webpack_require__ } = _,
+        const { storeItemId: _, itemType: _ } = _,
           _ = (0, _._)(1),
           _ = (0, _._)();
         if (
           _.find((_) => {
             const _ = (0, _._)(_),
               _ = (0, _._)(_);
-            return _ == _ && _ == __webpack_require__ && (0, _._)(_);
+            return _ == _ && _ == _ && (0, _._)(_);
           })
         )
           return (0, _.jsx)("p", {
@@ -49238,7 +48862,7 @@
           _ = _.find(
             (_) =>
               _.store_item_id == _ &&
-              (0, _._)(_.store_item_type) == __webpack_require__ &&
+              (0, _._)(_.store_item_type) == _ &&
               _.rtime32_start_time > _,
           );
         return _
@@ -49338,7 +48962,7 @@
         });
       }
       function _(_) {
-        const { rtDay: _, children: __webpack_require__ } = _,
+        const { rtDay: _, children: _ } = _,
           _ = _._.GetTimeNowWithOverride(),
           _ = _ < _,
           _ = (0, _._)(_) == (0, _._)(_),
@@ -49355,7 +48979,7 @@
               className: _.DayName,
               children: _,
             }),
-            __webpack_require__,
+            _,
           ],
         });
       }
@@ -49466,7 +49090,7 @@
             });
       }
       function _(_) {
-        const { oDailyDeal: _, bShowName: __webpack_require__ } = _,
+        const { oDailyDeal: _, bShowName: _ } = _,
           [_, _] = (0, _._)(_),
           [_, _] = (0, _._)(_, _, {
             include_basic_info: !0,
@@ -49497,7 +49121,7 @@
                             ? (0, _._)("#DailyDeals_Bundle")
                             : (0, _._)("#DailyDeals_ImageMissing"),
                       }),
-                  Boolean(__webpack_require__) &&
+                  Boolean(_) &&
                     (0, _.jsxs)("div", {
                       children: [_?.GetName() || "unknown", " (", _, ")"],
                     }),
@@ -49542,7 +49166,7 @@
         });
       }
       function _(_) {
-        const { rtDay: _, bAdd: __webpack_require__ } = _,
+        const { rtDay: _, bAdd: _ } = _,
           _ = _.createRef(),
           _ = (0, _._)(),
           { rgMajorSaleDiscountEvents: _, eResult: _ } = (0, _._)(!1),
@@ -49565,17 +49189,16 @@
           }, [_]);
         return (0, _.jsx)(_._, {
           strTitle: "Block out",
-          onOK: () =>
-            _(_, __webpack_require__, parseInt(_.current?.state.value.data)),
+          onOK: () => _(_, _, parseInt(_.current?.state.value.data)),
           closeModal: _.closeModal,
           onCancel: _.closeModal,
           strDescription:
             "Are you sure you want to " +
-            (__webpack_require__ ? "add" : "remove") +
+            (_ ? "add" : "remove") +
             " this block out date?  Block out prevents daily deals from being scheduled on this date: " +
             (0, _._)(_),
           children:
-            __webpack_require__ &&
+            _ &&
             (0, _.jsx)("div", {
               className: _.MajorSaleDropdown,
               children: (0, _.jsx)(_._, {
@@ -49589,13 +49212,13 @@
         });
       }
       function _(_) {
-        const { rtDay: _, bAdd: __webpack_require__ } = _;
+        const { rtDay: _, bAdd: _ } = _;
         return (0, _.jsx)(_._, {
           onClick: (_) => {
             (0, _._)(
               (0, _.jsx)(_, {
                 rtDay: _,
-                bAdd: __webpack_require__,
+                bAdd: _,
               }),
               (0, _._)(_),
             );
@@ -49603,9 +49226,7 @@
           children: (0, _.jsx)(_._, {
             toolTipContent:
               "Block out days prevent users or Admin from registering daily deals",
-            children: __webpack_require__
-              ? "Block out day (VO)"
-              : "Remove Block out",
+            children: _ ? "Block out day (VO)" : "Remove Block out",
           }),
         });
       }
@@ -49629,11 +49250,11 @@
       function _(_) {
         const {
             fnCreateCalendarEntries: _,
-            nMaxWeeksToDisplay: __webpack_require__,
+            nMaxWeeksToDisplay: _,
             nWeeksPerPage: _,
           } = _,
           _ = _ ?? _._,
-          _ = Math.ceil(__webpack_require__ / _) - 1,
+          _ = Math.ceil(_ / _) - 1,
           [_, _] = (0, _._)("page", 0),
           _ = _ < 0 ? 0 : _ >= _ ? _ : _,
           _ = (0, _._)(_._.GetTimeNowWithOverride()),
@@ -49729,13 +49350,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { dealid: _, closeModal: __webpack_require__ } = _,
+        const { dealid: _, closeModal: _ } = _,
           _ = (0, _._)(_),
           { fnSaveDailyDeal: _ } = (0, _._)(),
           _ = _.useMemo(() => (0, _._)(_), [_]);
         return (0, _.jsx)(_, {
           oFeaturedItem: _,
-          closeModal: __webpack_require__,
+          closeModal: _,
           onConfirmFeatureItem: async (_) => {
             const _ = (0, _._)(_),
               _ = _._.Get().GetStoreItem(
@@ -49758,7 +49379,7 @@
       function _(_) {
         const {
             oFeaturedItem: _,
-            onConfirmFeatureItem: __webpack_require__,
+            onConfirmFeatureItem: _,
             closeModal: _,
             bExcludeBundle: _,
             strTitleOverride: _,
@@ -49845,7 +49466,7 @@
       function _(_) {
         const {
             oChoice: _,
-            fnSetChoice: __webpack_require__,
+            fnSetChoice: _,
             bExcludeApp: _,
             bExcludePackage: _,
             bExcludeBundle: _,
@@ -49912,7 +49533,7 @@
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   oChoice: _,
-                  fnSetChoice: __webpack_require__,
+                  fnSetChoice: _,
                 }),
               }),
             }),
@@ -49924,7 +49545,7 @@
         );
       }
       function _(_) {
-        const { oChoice: _, fnSetChoice: __webpack_require__ } = _,
+        const { oChoice: _, fnSetChoice: _ } = _,
           _ = (0, _._)(_),
           [_, _] = _.useState((0, _._)(_, 0));
         return (0, _.jsxs)(_.Fragment, {
@@ -50067,7 +49688,7 @@
       function _(_) {
         const {
             rgPackagesDiscounts: _,
-            oDiscountEvent: __webpack_require__,
+            oDiscountEvent: _,
             nBundleID: _,
             nDiscountStart: _,
             nDiscountEnd: _,
@@ -50081,25 +49702,25 @@
           children: [
             (0, _.jsx)("div", {
               className: "DialogLabel",
-              children: __webpack_require__
+              children: _
                 ? (0, _._)("#DailyDeals_DiscountEvent")
                 : (0, _._)("#DailyDeals_DiscountInfo"),
             }),
             (0, _.jsxs)("div", {
               className: _.HoverDetailsCtn,
               children: [
-                Boolean(__webpack_require__) &&
+                Boolean(_) &&
                   (0, _.jsx)(_.Fragment, {
                     children: (0, _.jsxs)("div", {
                       className: _.DiscountDates,
                       children: [
-                        (0, _._)(__webpack_require__.start_date),
+                        (0, _._)(_.start_date),
                         " - ",
-                        (0, _._)(__webpack_require__.end_date),
+                        (0, _._)(_.end_date),
                       ],
                     }),
                   }),
-                !Boolean(__webpack_require__) &&
+                !Boolean(_) &&
                   Boolean(_) &&
                   Boolean(_) &&
                   (0, _.jsxs)("div", {
@@ -50109,8 +49730,8 @@
               ],
             }),
             _ &&
-              Boolean(__webpack_require__) &&
-              !__webpack_require__.appids?.length &&
+              Boolean(_) &&
+              !_.appids?.length &&
               (0, _.jsx)(_.Fragment, {
                 children: (0, _.jsx)("div", {
                   className: _().WarningIconLayout,
@@ -50142,15 +49763,15 @@
             _._.is_support &&
               Boolean(_) &&
               (0, _.jsx)(_, {
-                oDiscountEvent: __webpack_require__,
+                oDiscountEvent: _,
                 bundleid: _,
               }),
           ],
         });
       }
       function _(_) {
-        const { oDiscountEvent: _, bundleid: __webpack_require__ } = _,
-          [_] = (0, _._)(__webpack_require__, {
+        const { oDiscountEvent: _, bundleid: _ } = _,
+          [_] = (0, _._)(_, {
             include_basic_info: !0,
           }),
           { fnUpdateDiscountEventAppAndPublisherList: _ } = (0, _._)();
@@ -50166,8 +49787,8 @@
       }
       function _(_) {
         const { oDiscount: _ } = _,
-          [__webpack_require__] = (0, _._)(_.packageID, {});
-        return __webpack_require__
+          [_] = (0, _._)(_.packageID, {});
+        return _
           ? (0, _.jsxs)("div", {
               className: _.DiscountedPackage,
               children: [
@@ -50193,13 +49814,13 @@
             });
       }
       function _(_) {
-        const { strDiscountEventID: _, nBundleID: __webpack_require__ } = _,
+        const { strDiscountEventID: _, nBundleID: _ } = _,
           _ = (0, _._)(_),
           _ = (0, _._)(_);
         return (0, _.jsx)(_, {
           rgPackagesDiscounts: _,
           oDiscountEvent: _,
-          nBundleID: __webpack_require__,
+          nBundleID: _,
         });
       }
       function _(_) {
@@ -50220,7 +49841,7 @@
       function _(_) {
         const {
             rgPackageIDs: _,
-            bHidePackage: __webpack_require__,
+            bHidePackage: _,
             bShowDiscountEventName: _,
             bShowCooldownState: _,
           } = _,
@@ -50252,17 +49873,17 @@
                         }),
                       ),
                     }),
-                    __webpack_require__ ? "" : (0, _.jsx)("br", {}),
+                    _ ? "" : (0, _.jsx)("br", {}),
                   ],
                 })
               : (0, _.jsx)(_.Fragment, {
-                  children: __webpack_require__ ? "" : (0, _.jsx)("br", {}),
+                  children: _ ? "" : (0, _.jsx)("br", {}),
                 });
         return (0, _.jsxs)("div", {
           className: _.LastDiscount,
           children: [
             (0, _._)(
-              __webpack_require__
+              _
                 ? "#DailyDeals_New_LastDiscount_SansPackage"
                 : "#DailyDeals_New_LastDiscount",
               (0, _.jsx)("span", {
@@ -50270,7 +49891,7 @@
                 children: _ + " - " + _,
               }),
               _.nDiscountPct,
-              __webpack_require__
+              _
                 ? ""
                 : (0, _.jsx)("a", {
                     href: `${_._.PARTNER_BASE_URL}packages/discounts/${_.packageID}`,
@@ -50329,7 +49950,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1),
+        const [_, _] = (0, _.useState)(!1),
           _ = (0, _._)(
             (0, _.useCallback)((_) => {
               _.isIntersecting && __webpack_require__(!0);
@@ -50350,26 +49971,15 @@
           (_[(_.Marketing = 2)] = "Marketing");
       })(_ || (_ = {}));
       const _ = _.forwardRef((_, _) => {
-        const {
-            deal: __webpack_require__,
-            strPublisherID: _,
-            bLoadReportData: _,
-          } = _,
-          [_, _] = (0, _._)(
-            __webpack_require__?.store_item_id,
-            (0, _._)(__webpack_require__?.store_item_type),
-            {
-              include_assets: !0,
-            },
-          ),
-          _ = (0, _._)(
-            parseInt(_),
-            _ && __webpack_require__?.gid ? [__webpack_require__.gid] : [],
-          ),
+        const { deal: _, strPublisherID: _, bLoadReportData: _ } = _,
+          [_, _] = (0, _._)(_?.store_item_id, (0, _._)(_?.store_item_type), {
+            include_assets: !0,
+          }),
+          _ = (0, _._)(parseInt(_), _ && _?.gid ? [_.gid] : []),
           [_, _] = (0, _.useState)(_.Summary),
-          _ = _?.get(__webpack_require__.gid),
-          _ = !__webpack_require__ || !_ || 1 == _;
-        return __webpack_require__.cancelled || __webpack_require__.deleted
+          _ = _?.get(_.gid),
+          _ = !_ || !_ || 1 == _;
+        return _.cancelled || _.deleted
           ? null
           : (0, _.jsxs)("div", {
               className: (0, _._)(_.DailyDeal_HistoryContainer),
@@ -50383,11 +49993,9 @@
                       children: [
                         (0, _.jsx)("span", {
                           className: _.FeaturedDate,
-                          children: (0, _._)(
-                            __webpack_require__.rtime32_start_time,
-                          ),
+                          children: (0, _._)(_.rtime32_start_time),
                         }),
-                        _?.GetName() || __webpack_require__?.store_item_name,
+                        _?.GetName() || _?.store_item_name,
                       ],
                     }),
                     (0, _.jsx)(_, {
@@ -50402,23 +50010,19 @@
                       _,
                       {
                         tab: _,
-                        deal: __webpack_require__,
+                        deal: _,
                         reportData: _,
                       },
-                      __webpack_require__.gid,
+                      _.gid,
                     ),
               ],
             });
       });
       function _(_) {
-        const { tab: _, deal: __webpack_require__, reportData: _ } = _,
-          [_, _] = (0, _._)(
-            __webpack_require__?.store_item_id,
-            (0, _._)(__webpack_require__?.store_item_type),
-            {
-              include_assets: !0,
-            },
-          );
+        const { tab: _, deal: _, reportData: _ } = _,
+          [_, _] = (0, _._)(_?.store_item_id, (0, _._)(_?.store_item_type), {
+            include_assets: !0,
+          });
         let _ = null;
         if (1 == _) _ = (0, _.jsx)(_, {});
         else
@@ -50426,21 +50030,21 @@
             case _.Summary:
               _ = (0, _.jsx)(_, {
                 reportData: _,
-                deal: __webpack_require__,
+                deal: _,
                 storeItem: _,
               });
               break;
             case _.Sales:
               _ = (0, _.jsx)(_, {
                 reportData: _,
-                deal: __webpack_require__,
+                deal: _,
                 storeItem: _,
               });
               break;
             case _.Marketing:
               _ = (0, _.jsx)(_, {
                 reportData: _,
-                deal: __webpack_require__,
+                deal: _,
                 storeItem: _,
               });
           }
@@ -50450,7 +50054,7 @@
         });
       }
       function _(_) {
-        const { tab: _, setTab: __webpack_require__ } = _,
+        const { tab: _, setTab: _ } = _,
           _ = _.useMemo(
             () => [
               {
@@ -50484,8 +50088,8 @@
         });
       }
       function _(_) {
-        const { reportData: _, deal: __webpack_require__, storeItem: _ } = _,
-          { rgDiscounts: _ } = (0, _._)(__webpack_require__),
+        const { reportData: _, deal: _, storeItem: _ } = _,
+          { rgDiscounts: _ } = (0, _._)(_),
           [_, _] = (0, _.useState)("gross_sales"),
           [_, _] = (0, _.useState)(!1),
           _ = (_) => {
@@ -50515,7 +50119,7 @@
             className: _.DailyDeal_HistoryTable,
             children: [
               (0, _.jsx)(_, {
-                dealID: __webpack_require__.gid,
+                dealID: _.gid,
                 children: _,
               }),
               (0, _.jsx)("div", {
@@ -50623,11 +50227,11 @@
         );
       }
       function _(_) {
-        const { reportData: _, deal: __webpack_require__, storeItem: _ } = _,
+        const { reportData: _, deal: _, storeItem: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)("visits"),
           [_, _] = (0, _.useState)(!1),
-          _ = _(__webpack_require__),
+          _ = _(_),
           _ = (_) => {
             _(_ == _ && !_), _(_);
           },
@@ -50656,7 +50260,7 @@
             className: _.DailyDeal_HistoryTable,
             children: [
               (0, _.jsx)(_, {
-                dealID: __webpack_require__.gid,
+                dealID: _.gid,
                 children: _,
               }),
               (0, _.jsx)("div", {
@@ -50755,8 +50359,8 @@
         );
       }
       function _(_) {
-        const { reportData: _, deal: __webpack_require__, storeItem: _ } = _,
-          _ = _(__webpack_require__),
+        const { reportData: _, deal: _, storeItem: _ } = _,
+          _ = _(_),
           _ = _ ? "+" + (0, _._)(_.wishlist_additions ?? 0) : (0, _.jsx)(_, {}),
           _ = _ ? (0, _._)(_.wishlist_purchases ?? 0) : (0, _.jsx)(_, {});
         let _;
@@ -50772,7 +50376,7 @@
             className: _.DailyDeal_HistoryTable,
             children: [
               (0, _.jsx)(_, {
-                dealID: __webpack_require__.gid,
+                dealID: _.gid,
                 children: _,
               }),
               (0, _.jsx)("div", {
@@ -50935,7 +50539,7 @@
       function _(_) {
         const {
             OnClick: _,
-            columnSortID: __webpack_require__,
+            columnSortID: _,
             value: _,
             sortColumn: _,
             sortAscending: _,
@@ -50943,13 +50547,10 @@
             valueClassName: _,
           } = _,
           _ = void 0 === _ || "number" == typeof _ ? (0, _._)(_ ?? 0) : _,
-          _ = (0, _._)(
-            _.HighlightHeader,
-            _ == __webpack_require__ ? _.ActiveSortColumn : "",
-          );
+          _ = (0, _._)(_.HighlightHeader, _ == _ ? _.ActiveSortColumn : "");
         return (0, _.jsx)("div", {
           className: (0, _._)(_.Cell, _.ClickableHeader),
-          onClick: () => _(__webpack_require__),
+          onClick: () => _(_),
           children:
             null != _ &&
             (0, _.jsxs)(_.Fragment, {
@@ -50958,7 +50559,7 @@
                   className: _,
                   children: [
                     (0, _._)(_),
-                    _ == __webpack_require__ &&
+                    _ == _ &&
                       (0, _.jsx)(_, {
                         bAscending: _,
                       }),
@@ -51251,7 +50852,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = _.useState(""),
+        const [_, _] = _.useState(""),
           [_] = _.useState(new _._()),
           [_, _] = _.useState(new Array()),
           [_, _] = _.useState(!1),
@@ -51333,14 +50934,11 @@
       function _(_) {
         const { deal: _ } = _,
           {
-            nDiscountPercentHigh: __webpack_require__,
+            nDiscountPercentHigh: _,
             dtDiscountStart: _,
             dtDiscountEnd: _,
           } = (0, _._)(_);
-        let _ = _.useMemo(
-            () => (0, _._)(_, __webpack_require__),
-            [_, __webpack_require__],
-          ),
+        let _ = _.useMemo(() => (0, _._)(_, _), [_, _]),
           _ = null;
         if (_ == _._.DealFailed)
           _ = (0, _.jsx)(_, {
@@ -51503,11 +51101,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)(),
+        const [_, _] = (0, _._)(),
           _ = (0, _._)(),
           _ = !_ && _._.is_support;
         return (
-          _.useEffect(() => __webpack_require__(), [__webpack_require__]),
+          _.useEffect(() => __webpack_require__(), [_]),
           (0, _.jsx)(_._, {
             children: Boolean(_)
               ? (0, _.jsx)(_, {})
@@ -51662,12 +51260,8 @@
             });
       }
       function _(_) {
-        const {
-          rgInvites: _,
-          rgIncompleteDeals: __webpack_require__,
-          strPublisherID: _,
-        } = _;
-        return 0 == _.length && 0 == __webpack_require__.length
+        const { rgInvites: _, rgIncompleteDeals: _, strPublisherID: _ } = _;
+        return 0 == _.length && 0 == _.length
           ? (0, _.jsxs)("div", {
               children: [
                 (0, _.jsx)("div", {
@@ -51727,7 +51321,7 @@
             });
       }
       function _(_) {
-        const { rgDeals: _, strPublisherID: __webpack_require__ } = _;
+        const { rgDeals: _, strPublisherID: _ } = _;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("div", {
@@ -51747,7 +51341,7 @@
                       _,
                       {
                         deal: _,
-                        strPublisherID: __webpack_require__,
+                        strPublisherID: _,
                       },
                       "ud_" + _.gid,
                     ),
@@ -51759,7 +51353,7 @@
       function _(_) {
         const {
             rgInvites: _,
-            rgDeals: __webpack_require__,
+            rgDeals: _,
             strPublisherID: _,
             bHideHeader: _,
           } = _,
@@ -51778,7 +51372,7 @@
           }),
           [_, _] = _.useState(!1),
           _ = _.useMemo(() => {
-            let _ = [...__webpack_require__, ..._];
+            let _ = [..._, ..._];
             return (
               _.sort((_, _) =>
                 (_.hasOwnProperty("rtexpiretime")
@@ -51792,8 +51386,8 @@
               ),
               _
             );
-          }, [__webpack_require__, _]);
-        if (0 == _.length && 0 == __webpack_require__.length) return null;
+          }, [_, _]);
+        if (0 == _.length && 0 == _.length) return null;
         if (1 == _ || 1 == _ || 1 == _)
           return (0, _.jsx)(_._, {
             position: "center",
@@ -51808,7 +51402,7 @@
                 className: _.PartnerDashboard_HistoryHeader,
                 children: (0, _._)(
                   "#DailyDeals_PartnerDashboard_Archive",
-                  _.length + __webpack_require__.length,
+                  _.length + _.length,
                 ),
               }),
             (0, _.jsx)("div", {
@@ -51856,7 +51450,7 @@
         });
       }
       function _(_) {
-        const { deal: _, strPublisherID: __webpack_require__ } = _,
+        const { deal: _, strPublisherID: _ } = _,
           { nDiscountPercentHigh: _ } = (0, _._)(_),
           _ = _.useMemo(() => (0, _._)(_, _), [_, _]),
           [_, _] = (0, _._)(_.store_item_id, (0, _._)(_.store_item_type), {
@@ -51893,7 +51487,7 @@
               }),
               (0, _.jsx)(_, {
                 deal: _,
-                strPublisherID: __webpack_require__,
+                strPublisherID: _,
               }),
             ],
           })
@@ -51902,15 +51496,12 @@
       function _(_) {
         const {
             strPublisherID: _,
-            invite: __webpack_require__,
+            invite: _,
             containerClass: _,
             children: _,
           } = _,
-          [_] = (0, _._)(__webpack_require__),
-          _ = _.useMemo(
-            () => (0, _._)(__webpack_require__),
-            [__webpack_require__],
-          );
+          [_] = (0, _._)(_),
+          _ = _.useMemo(() => (0, _._)(_), [_]);
         return (0, _.jsxs)("div", {
           className: (0, _._)(
             _.DailyDeal_Container,
@@ -51923,10 +51514,10 @@
               children: _?.GetName(),
             }),
             (0, _.jsx)(_._, {
-              invite: __webpack_require__,
+              invite: _,
             }),
             (0, _.jsx)(_, {
-              invite: __webpack_require__,
+              invite: _,
               strPublisherID: _,
               children: _,
             }),
@@ -51934,11 +51525,7 @@
         });
       }
       function _(_) {
-        const {
-            invite: _,
-            strPublisherID: __webpack_require__,
-            children: _,
-          } = _,
+        const { invite: _, strPublisherID: _, children: _ } = _,
           _ = _.useMemo(() => (0, _._)(_), [_]);
         if (_ == _._.Unknown) return null;
         if (_ == _._.InviteExpired)
@@ -51985,7 +51572,7 @@
         );
       }
       function _(_) {
-        const { deal: _, strPublisherID: __webpack_require__, children: _ } = _,
+        const { deal: _, strPublisherID: _, children: _ } = _,
           {
             nDiscountPercentHigh: _,
             dtDiscountStart: _,
@@ -52012,10 +51599,7 @@
           });
         let _ = null,
           _ = null;
-        const _ = (0, _._)(
-          __webpack_require__,
-          _.discount_event_id?.toString(),
-        );
+        const _ = (0, _._)(_, _.discount_event_id?.toString());
         switch (_) {
           case _._.InviteAccepted:
             (_ = (0, _.jsx)("div", {
@@ -52080,7 +51664,7 @@
       function _(_) {
         const {
             inviteBody: _,
-            discountBody: __webpack_require__,
+            discountBody: _,
             invite: _,
             displayState: _,
             children: _,
@@ -52194,7 +51778,7 @@
                 _,
                 (0, _.jsx)("div", {
                   className: _.DiscountBody,
-                  children: __webpack_require__,
+                  children: _,
                 }),
               ],
             }),
@@ -52209,7 +51793,7 @@
         });
       }
       function _(_) {
-        const { strMessage: _, children: __webpack_require__ } = _;
+        const { strMessage: _, children: _ } = _;
         return (0, _.jsx)("div", {
           className: _.DailyDealStatusContainer,
           children: (0, _.jsxs)("div", {
@@ -52219,7 +51803,7 @@
                 (0, _.jsx)("div", {
                   children: _,
                 }),
-              __webpack_require__,
+              _,
             ],
           }),
         });
@@ -52227,14 +51811,14 @@
       function _(_) {
         const {
           deal: _,
-          eDealState: __webpack_require__,
+          eDealState: _,
           dtDiscountStart: _,
           dtDiscountEnd: _,
         } = _;
         let _ = null;
         return (
           (_ =
-            __webpack_require__ == _._.DealLive
+            _ == _._.DealLive
               ? (0, _.jsx)("div", {
                   className: _.Orange,
                   children: (0, _._)("#DailyDeals_ActiveDeal"),
@@ -52263,16 +51847,14 @@
       function _(_) {
         const {
             closeModal: _,
-            deal: __webpack_require__,
+            deal: _,
             clanID: _,
             clanName: _,
             eRequireSalePageType: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _.useState)(__webpack_require__.rtime32_start_time),
-          [_, _] = (0, _.useState)(
-            __webpack_require__.rtime32_start_time + _._.PerWeek,
-          ),
+          [_, _] = (0, _.useState)(_.rtime32_start_time),
+          [_, _] = (0, _.useState)(_.rtime32_start_time + _._.PerWeek),
           _ = Math.floor(Date.now() / 1e3),
           [_, _] = (0, _.useState)(""),
           { fnSetDailyDealSalePage: _ } = (0, _._)(),
@@ -52297,8 +51879,7 @@
                     className: _.CreateSalePageStartDate,
                     children: (0, _.jsx)(_._, {
                       bShowTimeZone: !0,
-                      fnIsValidDateTime: () =>
-                        _ <= __webpack_require__.rtime32_start_time,
+                      fnIsValidDateTime: () => _ <= _.rtime32_start_time,
                       strDescription: (0, _._)(
                         "#DailyDeals_SalePage_SaleStart",
                       ),
@@ -52312,8 +51893,7 @@
                     children: (0, _.jsx)(_._, {
                       bShowTimeZone: !0,
                       fnIsValidDateTime: () =>
-                        _ >=
-                        __webpack_require__.rtime32_start_time + _._.PerDay,
+                        _ >= _.rtime32_start_time + _._.PerDay,
                       strDescription: (0, _._)("#DailyDeals_SalePage_SaleEnd"),
                       nEarliestTime: _,
                       fnGetTimeToUpdate: () => _,
@@ -52338,14 +51918,7 @@
                 onCancel: _,
                 onOK: async () => {
                   _(!0);
-                  const [_, _] = await _(
-                    __webpack_require__.gid,
-                    _,
-                    _,
-                    _,
-                    _,
-                    __webpack_require__.store_item_id,
-                  );
+                  const [_, _] = await _(_.gid, _, _, _, _, _.store_item_id);
                   _(!1),
                     _
                       ? (_.invalidateQueries({
@@ -52369,7 +51942,7 @@
         });
       }
       function _(_) {
-        const { deal: _, eRequireSalePageType: __webpack_require__ } = _,
+        const { deal: _, eRequireSalePageType: _ } = _,
           _ = JSON.parse(_.partner_jsondata),
           _ = _._.InitFromClanID(_?.sale_clan_account);
         return (0, _.jsx)("div", {
@@ -52403,11 +51976,11 @@
                     onClick: (_) => {
                       (0, _._)(
                         (0, _.jsx)(_._, {
-                          title: _(__webpack_require__),
+                          title: _(_),
                           children: (0, _.jsx)(_._, {
                             children: (0, _.jsx)(_, {
                               deal: _,
-                              eRequireSalePageType: __webpack_require__,
+                              eRequireSalePageType: _,
                             }),
                           }),
                         }),
@@ -52424,11 +51997,7 @@
         });
       }
       function _(_) {
-        const {
-            deal: _,
-            eRequireSalePageType: __webpack_require__,
-            fnOnSalePageSelected: _,
-          } = _,
+        const { deal: _, eRequireSalePageType: _, fnOnSalePageSelected: _ } = _,
           _ = (0, _._)(),
           { fnSetDailyDealSalePage: _ } = (0, _._)(),
           _ = (0, _._)(),
@@ -52463,8 +52032,7 @@
                   (_) =>
                     _.start_time <= _?.rtime32_start_time &&
                     _.end_time > _?.rtime32_start_time + _._.PerDay &&
-                    (!__webpack_require__ ||
-                      _.external_sale_event_type == __webpack_require__),
+                    (!_ || _.external_sale_event_type == _),
                 )
                 .map((_) => ({
                   label: _.name,
@@ -52486,7 +52054,7 @@
               );
             }
             return [];
-          }, [_?.rtime32_start_time, _, _, _, __webpack_require__]);
+          }, [_?.rtime32_start_time, _, _, _, _]);
         return _
           ? !_ || !_ || (_?.length && _?.find((_) => _.clan_account_id == _))
             ? _?.length
@@ -52565,13 +52133,13 @@
                               deal: _,
                               clanID: _,
                               clanName: _.clan_name,
-                              eRequireSalePageType: __webpack_require__,
+                              eRequireSalePageType: _,
                               closeModal: _,
                             }),
                             (0, _._)(_),
                           );
                         },
-                        children: _(__webpack_require__),
+                        children: _(_),
                       }),
                   ],
                 })
@@ -52721,11 +52289,7 @@
         return `${_._.get(_)} - ${String(_.getUTCMonth() + 1).padStart(2, "0")}/${String(_.getUTCDate()).padStart(2, "0")}/${String(_.getUTCFullYear()).padStart(2, "0")} - ${__webpack_require__?.GetName() ?? ((0, _._))(_)}`;
       }
       function _(_) {
-        const {
-            oEditablePlan: _,
-            closeModal: __webpack_require__,
-            oStoreItem: _,
-          } = _,
+        const { oEditablePlan: _, closeModal: _, oStoreItem: _ } = _,
           _ = _.GetType(),
           _ = _.GetFeaturedItemID(),
           _ = _.GetFeaturedItemType(),
@@ -52758,13 +52322,13 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: "Create New Discount Event",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : _
             ? (0, _.jsx)(_._, {
                 strTitle: "Create Discount Event?",
                 strDescription: `You already have Discount Event with ID ${_.GetDiscountEventID()} associated with this promotion plan.  Are you sure you want to create a new one?`,
-                onCancel: __webpack_require__,
+                onCancel: _,
                 onOK: () => _(!1),
                 strOKButtonText: "Create Discount Event Anyways",
               })
@@ -52772,7 +52336,7 @@
                 strTitle: "Create New Discount Event",
                 strDescription:
                   "Create and link a discount event from date range and featured item from the existing plan? ",
-                onCancel: __webpack_require__,
+                onCancel: _,
                 bOKDisabled:
                   0 == _.trim().length ||
                   0 == _?.trim().length ||
@@ -52844,7 +52408,7 @@
               });
       }
       function _(_) {
-        const { oEditablePlan: _, closeModal: __webpack_require__ } = _,
+        const { oEditablePlan: _, closeModal: _ } = _,
           { rgDiscountEvents: _, eResult: _ } = (0, _._)(),
           [_, _] = (0, _.useState)(null);
         (0, _.useEffect)(() => {
@@ -52868,8 +52432,8 @@
               strTitle: "Select an Upcoming Discount Event",
               strDescription:
                 "This only surfaces active or upcoming Discount Event. This doesn't have access to archived discount events.",
-              onCancel: __webpack_require__,
-              closeModal: __webpack_require__,
+              onCancel: _,
+              closeModal: _,
               onOK: () => {
                 _.SetDiscountEventID(_);
               },
@@ -52929,7 +52493,7 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const { invite: _ } = _,
-          [__webpack_require__, _] = (0, _._)(_);
+          [_, _] = (0, _._)(_);
         let _ = _._.PARTNER_BASE_URL;
         return (
           _.appid
@@ -52937,7 +52501,7 @@
             : _.bundleid
               ? (_ += "bundles/view/" + _.bundleid)
               : _.packageid && (_ += "store/packagelanding/" + _.packageid),
-          __webpack_require__
+          _
             ? _.require_sale_page &&
               !__webpack_require__?.GetAssets().GetHeaderURL()
               ? (0, _.jsx)("div", {})
@@ -53049,12 +52613,8 @@
             });
       }
       function _(_) {
-        const {
-            rtFirstDay: _,
-            strInviteID: __webpack_require__,
-            rgDiscountConflict: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__),
+        const { rtFirstDay: _, strInviteID: _, rgDiscountConflict: _ } = _,
+          _ = (0, _._)(_),
           _ = new Array();
         for (let _ = 0; _ < 7; ++_) {
           const _ = (0, _._)(_ + _ * _._.PerDay),
@@ -53073,7 +52633,7 @@
                 rtDay: _,
                 nDiscount: _,
                 bMajorSale: _,
-                strInviteID: __webpack_require__,
+                strInviteID: _,
                 strConflict: _,
                 strDiscountName: _,
                 discountEventID: _,
@@ -53100,7 +52660,7 @@
       function _(_) {
         const {
             rtDay: _,
-            strInviteID: __webpack_require__,
+            strInviteID: _,
             strConflict: _,
             nextDiscount: _,
             nDiscount: _,
@@ -53145,13 +52705,13 @@
                         _
                           ? (0, _.jsx)(_, {
                               rtDay: _,
-                              strInviteID: __webpack_require__,
+                              strInviteID: _,
                               strDiscountName: _,
                               discountEventID: _,
                             })
                           : (0, _.jsx)(_._, {
                               rtDay: _,
-                              strInviteID: __webpack_require__,
+                              strInviteID: _,
                               nMaxDiscountDays: _,
                               nextDiscount: _,
                             }),
@@ -53185,13 +52745,13 @@
       function _(_) {
         const {
             rtDay: _,
-            strInviteID: __webpack_require__,
+            strInviteID: _,
             closeModal: _,
             strDiscountName: _,
             discountEventID: _,
           } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           { fnAcceptInvitation: _ } = (0, _._)(),
           _ =
             _.appid || _.packageid
@@ -53250,8 +52810,7 @@
                         );
                     else
                       try {
-                        _ = (await _(__webpack_require__, _, 0, "", !0))
-                          .errorCode;
+                        _ = (await _(_, _, 0, "", !0)).errorCode;
                       } catch (_) {
                         const _ = (0, _._)(_);
                         console.error(
@@ -53292,7 +52851,7 @@
         });
       }
       function _(_) {
-        const { nAvailableSlots: _, onClick: __webpack_require__ } = _;
+        const { nAvailableSlots: _, onClick: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.DailyDealCtn, _.Available),
           children: [
@@ -53301,7 +52860,7 @@
               children: (0, _._)("#DailyDeals_NumAvailable", _),
             }),
             (0, _.jsx)(_._, {
-              onClick: __webpack_require__,
+              onClick: _,
               children: (0, _._)("#DailyDeals_Select"),
             }),
           ],
@@ -53458,7 +53017,7 @@
           : null;
       }
       function _(_) {
-        const { inviteid: _, children: __webpack_require__ } = _,
+        const { inviteid: _, children: _ } = _,
           _ = (0, _._)(_),
           [_] = (0, _._)(_),
           _ = _.useMemo(
@@ -53479,9 +53038,9 @@
                   }),
                   window,
                 ),
-              children: __webpack_require__,
+              children: _,
             })
-          : __webpack_require__;
+          : _;
       }
       function _(_) {
         const { strInviteID: _ } = _,
@@ -53543,7 +53102,7 @@
       }
       function _(_) {
         const { promo: _ } = _,
-          [__webpack_require__] = (0, _._)(_);
+          [_] = (0, _._)(_);
         return (0, _.jsxs)("div", {
           className: _.InvitePageHeader,
           children: [
@@ -53627,20 +53186,20 @@
         });
       }
       function _(_) {
-        const { promo: _, closeModal: __webpack_require__ } = _,
+        const { promo: _, closeModal: _ } = _,
           { fnCancelInvite: _ } = (0, _._)(),
           _ = (0, _._)();
         return _.bLoading
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: "Cancel Promo Invitation",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: "Cancel Promo Invitation",
               strDescription:
                 "Are you sure you want to cancel this invitation?  The Partner will no longer be able to schedule this promotion",
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: () => {
                 _.fnSetLoading(!0),
                   _(_.inviteid)
@@ -53665,20 +53224,20 @@
             });
       }
       function _(_) {
-        const { promo: _, closeModal: __webpack_require__ } = _,
+        const { promo: _, closeModal: _ } = _,
           { fnResendInvitationEmail: _ } = (0, _._)(),
           _ = (0, _._)();
         return _.bLoading
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: "Resend Invitation Email",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: "Resend Invitation Email",
               strDescription:
                 "Are you sure you want to re-send this email? It will fire to the partner associated with the app to their user who opted in to receive communication",
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: () => {
                 _.fnSetLoading(!0),
                   _(_.inviteid)
@@ -53731,13 +53290,9 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            closeModal: _,
-            storeItemID: __webpack_require__,
-            storeItemType: _,
-          } = _,
+        const { closeModal: _, storeItemID: _, storeItemType: _ } = _,
           [_, _] = _.useState(() => {
-            const _ = (0, _._)(__webpack_require__, _);
+            const _ = (0, _._)(_, _);
             return Boolean(_) ? _ : {};
           }),
           _ = _.useMemo(() => (0, _._)(_), [_]),
@@ -53881,7 +53436,7 @@
       function _(_) {
         const {
             nPartnerIDToContact: _,
-            advertisingAppID: __webpack_require__,
+            advertisingAppID: _,
             setAdvertisingAppID: _,
           } = _,
           _ = (0, _._)(),
@@ -53918,7 +53473,7 @@
                 (0, _.jsx)(_._, {
                   label: "Existing Adv. Apps For This Partner",
                   rgOptions: _,
-                  selectedOption: __webpack_require__,
+                  selectedOption: _,
                   onChange: (_) => _(_.data),
                   contextMenuPositionOptions: {
                     bDisablePopTop: !0,
@@ -53942,7 +53497,7 @@
         });
       }
       function _(_) {
-        const { promoType: _, setPromoType: __webpack_require__ } = _;
+        const { promoType: _, setPromoType: _ } = _;
         return (0, _.jsx)("div", {
           className: _.ChooseInviteTypeContainer,
           children: (0, _.jsx)(_._, {
@@ -53971,7 +53526,7 @@
       function _(_) {
         const {
           nPartnerIDToContact: _,
-          fnSetPartnerIDToContact: __webpack_require__,
+          fnSetPartnerIDToContact: _,
           storeItemKey: _,
         } = _;
         return (0, _.jsxs)("div", {
@@ -53979,7 +53534,7 @@
           children: [
             (0, _.jsx)(_._, {
               nPartnerID: _,
-              fnUpdatePartnerID: __webpack_require__,
+              fnUpdatePartnerID: _,
               storeItemKey: _,
               autoSelectPartnerFromStoreItem: !0,
             }),
@@ -53991,11 +53546,7 @@
         });
       }
       function _(_) {
-        const {
-            closeModal: _,
-            fnAppCreated: __webpack_require__,
-            partnerID: _,
-          } = _,
+        const { closeModal: _, fnAppCreated: _, partnerID: _ } = _,
           [_, _] = _.useState(""),
           _ = (0, _._)(_, _),
           _ = (0, _._)();
@@ -54076,7 +53627,7 @@
         });
       }
       function _(_) {
-        const { strDiscountName: _, nDiscount: __webpack_require__ } = _;
+        const { strDiscountName: _, nDiscount: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.ExistingDiscountCtn,
           children: [
@@ -54088,7 +53639,7 @@
               children: _,
             }),
             (0, _.jsxs)("div", {
-              children: [__webpack_require__, " %"],
+              children: [_, " %"],
             }),
           ],
         });
@@ -54134,11 +53685,7 @@
         _ = __webpack_require__("chunkid");
       const _ = 1 * _._.PerDay;
       function _(_) {
-        const {
-            closeModal: _,
-            oEditablePlan: __webpack_require__,
-            bSteamChinaOnly: _,
-          } = _,
+        const { closeModal: _, oEditablePlan: _, bSteamChinaOnly: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)({
             mutationFn: async (_) => {
@@ -54363,7 +53910,7 @@
       function _(_) {
         const {
             bIsDirty: _,
-            fnOnRevert: __webpack_require__,
+            fnOnRevert: _,
             fnOnSave: _,
             bSaveDisabled: _,
             strSave: _,
@@ -54399,7 +53946,7 @@
                     (0, _.jsx)(_._, {
                       strTitle: (0, _._)("#Dialog_AreYouSure"),
                       strDescription: (0, _._)("#DailyDeals_UnsavedChanges"),
-                      onOK: __webpack_require__,
+                      onOK: _,
                     }),
                     (0, _._)(_),
                   ),
@@ -54410,11 +53957,7 @@
         });
       }
       function _(_) {
-        const {
-            fnOnSave: _,
-            closeModal: __webpack_require__,
-            strSaving: _,
-          } = _,
+        const { fnOnSave: _, closeModal: _, strSaving: _ } = _,
           [_, _] = _.useState(!0),
           [_, _] = _.useState(!1),
           _ = _ ?? (0, _._)("#Saving");
@@ -54430,7 +53973,7 @@
           (0, _.jsx)(_._, {
             strTitle: _,
             bAlertDialog: !0,
-            closeModal: __webpack_require__,
+            closeModal: _,
             children: Boolean(_)
               ? (0, _.jsx)(_._, {
                   size: "medium",
@@ -54453,11 +53996,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            setting: _,
-            fnUpdateSetting: __webpack_require__,
-            label: _,
-          } = _,
+        const { setting: _, fnUpdateSetting: _, label: _ } = _,
           _ = _.useMemo(() => {
             const _ = [];
             return (
@@ -54503,7 +54042,7 @@
         });
       }
       function _(_) {
-        const { model: _, fnOnDirty: __webpack_require__ } = _,
+        const { model: _, fnOnDirty: _ } = _,
           [_, _] = (0, _._)(() => [
             _.sale_background_color,
             _.sale_background_repeat,
@@ -54569,11 +54108,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            strArrowColor: _,
-            fnUpdateArrowColor: __webpack_require__,
-            arrowStyle: _,
-          } = _,
+        const { strArrowColor: _, fnUpdateArrowColor: _, arrowStyle: _ } = _,
           [_, _] = _.useState(null == _);
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)(_._, {
@@ -54582,7 +54117,7 @@
               (0, _._)(
                 (0, _.jsx)(_._, {
                   color: _,
-                  onChange: __webpack_require__,
+                  onChange: _,
                 }),
                 _,
                 {
@@ -54610,11 +54145,7 @@
         });
       }
       function _(_) {
-        const {
-          label: _,
-          fnUpdateColor: __webpack_require__,
-          strColorToChange: _,
-        } = _;
+        const { label: _, fnUpdateColor: _, strColorToChange: _ } = _;
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)(_._, {
             className: _().BackgroundColorBtn,
@@ -54622,7 +54153,7 @@
               (0, _._)(
                 (0, _.jsx)(_._, {
                   color: _,
-                  onChange: __webpack_require__,
+                  onChange: _,
                 }),
                 _,
                 {
@@ -54669,7 +54200,7 @@
         });
       }
       function _(_) {
-        const { model: _, fnOnDirty: __webpack_require__ } = _,
+        const { model: _, fnOnDirty: _ } = _,
           [_, _] = (0, _._)(() => [
             _.sale_carousel_arrow_color,
             _.sale_carousel_arrow_style || _._.k_ECutArrowStyle,
@@ -54746,7 +54277,7 @@
         });
       }
       function _(_) {
-        const { model: _, fnOnDirty: __webpack_require__ } = _,
+        const { model: _, fnOnDirty: _ } = _,
           [_, _, _] = (0, _._)(() => [
             _.sale_carousel_breadcrumb_color,
             _.sale_carousel_active_breadcrumb_color,
@@ -54839,7 +54370,7 @@
       function _(_) {
         const {
             gidClanEvent: _,
-            rgArtworkToDisplay: __webpack_require__,
+            rgArtworkToDisplay: _,
             promotionPlanID: _,
             clanAccountID: _,
             bShowInternalControls: _,
@@ -54868,13 +54399,13 @@
                               }),
                             (0, _.jsx)(_, {
                               oSaleAssetEdit: _,
-                              rgArtworkToDisplay: __webpack_require__,
+                              rgArtworkToDisplay: _,
                             }),
                           ],
                         }),
                         (0, _.jsx)(_, {
                           oSaleAssetEdit: _,
-                          rgArtworkToDisplay: __webpack_require__,
+                          rgArtworkToDisplay: _,
                           promotionPlanID: _,
                         }),
                       ],
@@ -54906,8 +54437,7 @@
         });
       }
       function _(_) {
-        const { oSaleAssetEdit: _, rgArtworkToDisplay: __webpack_require__ } =
-            _,
+        const { oSaleAssetEdit: _, rgArtworkToDisplay: _ } = _,
           _ = (0, _.useMemo)(() => {
             const _ = [
               "sale_header",
@@ -54917,10 +54447,8 @@
               "product_mobile_banner",
               "localized_title_image",
             ];
-            return __webpack_require__
-              ? __webpack_require__.filter((_) => _.includes(_))
-              : _;
-          }, [__webpack_require__]),
+            return _ ? __webpack_require__.filter((_) => _.includes(_)) : _;
+          }, [_]),
           _ = (0, _.useMemo)(
             () => [_._.k_ESteamRealmGlobal, _._.k_ESteamRealmChina],
             [],
@@ -54968,9 +54496,7 @@
                   children: [
                     (0, _.jsx)("br", {}),
                     _._.filter(
-                      (_) =>
-                        !__webpack_require__ ||
-                        __webpack_require__.includes((0, _._)(_)),
+                      (_) => !_ || __webpack_require__.includes((0, _._)(_)),
                     ).map((_) => {
                       const _ = _._[(0, _._)(_)];
                       return (0, _.jsxs)(
@@ -55013,9 +54539,9 @@
         });
       }
       function _(_) {
-        const { oSaleAssetEdit: _, assetType: __webpack_require__ } = _,
+        const { oSaleAssetEdit: _, assetType: _ } = _,
           [_, _, _] = (0, _._)(() => [
-            _.GetAssetsObject(__webpack_require__),
+            _.GetAssetsObject(_),
             _.GetGID(),
             _.GetPromoModifyTime(),
           ]),
@@ -55034,10 +54560,8 @@
           children: (0, _.jsx)(_._, {
             rgAssetLangs: _,
             fnGetAssetUrl: _,
-            fnDeletAssetLang: (_) =>
-              _.DeleteAssetObjectLang(__webpack_require__, _),
-            fnDeleteAllAssets: () =>
-              _.ClearAllAssetObjects(__webpack_require__),
+            fnDeletAssetLang: (_) => _.DeleteAssetObjectLang(_, _),
+            fnDeleteAllAssets: () => _.ClearAllAssetObjects(_),
             bVerifyAssets: !0,
           }),
         });
@@ -55045,10 +54569,10 @@
       function _(_) {
         const {
             oSaleAssetEdit: _,
-            rgArtworkToDisplay: __webpack_require__,
+            rgArtworkToDisplay: _,
             promotionPlanID: _,
           } = _,
-          _ = _(_, __webpack_require__);
+          _ = _(_, _);
         return (0, _.jsxs)("div", {
           className: _().RightCol,
           children: [
@@ -55101,7 +54625,7 @@
       }
       function _(_) {
         const { oSaleAssetEdit: _ } = _,
-          { fnSaveSaleAssets: __webpack_require__ } = (0, _._)(),
+          { fnSaveSaleAssets: _ } = (0, _._)(),
           [_, _, _, _, _] = (0, _._)(() => [
             _.BIsDirty(),
             _.GetGID(),
@@ -55127,8 +54651,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { promotionPlanID: _, _: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { promotionPlanID: _, _: _ } = _,
+          _ = (0, _._)(_);
         return void 0 === _
           ? (0, _.jsx)(_._, {
               size: "medium",
@@ -55286,9 +54810,9 @@
         });
       }
       function _(_) {
-        const { oEditableSpotlight: _, assetType: __webpack_require__ } = _,
+        const { oEditableSpotlight: _, assetType: _ } = _,
           [_, _, _] = (0, _._)(() => [
-            _.GetAssetsObject(__webpack_require__),
+            _.GetAssetsObject(_),
             _.GetID(),
             _.GetAssetUpdateTime(),
           ]),
@@ -55314,17 +54838,14 @@
           children: (0, _.jsx)(_._, {
             rgAssetLangs: _,
             fnGetAssetUrl: _,
-            fnDeletAssetLang: (_) =>
-              _.DeleteAssetObjectLang(__webpack_require__, _),
-            fnDeleteAllAssets: () =>
-              _.ClearAllAssetObjects(__webpack_require__),
+            fnDeletAssetLang: (_) => _.DeleteAssetObjectLang(_, _),
+            fnDeleteAllAssets: () => _.ClearAllAssetObjects(_),
             bVerifyAssets: !0,
           }),
         });
       }
       function _(_) {
-        const { oEditableSpotlight: _, promotionPlanID: __webpack_require__ } =
-            _,
+        const { oEditableSpotlight: _, promotionPlanID: _ } = _,
           _ = (0, _._)(_);
         return (0, _.jsxs)("div", {
           className: _().RightCol,
@@ -55362,12 +54883,12 @@
                   target: "_blank",
                   children: "Open Spotlight Editor",
                 }),
-                Boolean(__webpack_require__) &&
+                Boolean(_) &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)("br", {}),
                       (0, _.jsx)("a", {
-                        href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${__webpack_require__}`,
+                        href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${_}`,
                         target: "_blank",
                         children: "Open Promotion Plan Editor",
                       }),
@@ -55380,7 +54901,7 @@
       }
       function _(_) {
         const { oEditableSpotlight: _ } = _,
-          { fnSaveClusterAssets: __webpack_require__ } = (0, _._)(),
+          { fnSaveClusterAssets: _ } = (0, _._)(),
           [_, _, _, _] = (0, _._)(() => [
             _.BIsDirty(),
             _.GetID(),
@@ -55692,11 +55213,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-          label: _,
-          colorString: __webpack_require__,
-          fnOnSetColor: _,
-        } = _;
+        const { label: _, colorString: _, fnOnSetColor: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().colorRow,
           children: [
@@ -55704,12 +55221,12 @@
               type: "text",
               className: _().colorInput,
               disabled: !0,
-              value: __webpack_require__,
+              value: _,
               onChange: (_) => _(_.currentTarget.value),
               label: _,
               placeholder: "255,255,255",
               style: {
-                backgroundColor: `rgba( ${__webpack_require__} )`,
+                backgroundColor: `rgba( ${_} )`,
               },
             }),
             (0, _.jsx)(_._, {
@@ -55717,7 +55234,7 @@
               onClick: (_) => {
                 (0, _._)(
                   (0, _.jsx)(_._, {
-                    color: __webpack_require__,
+                    color: _,
                     onChange: (_) =>
                       _(
                         (function (_) {
@@ -55725,8 +55242,8 @@
                             /rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/,
                           );
                           if (!_) throw new Error(`Invalid rgba format: ${_}`);
-                          const [, __webpack_require__, _, _] = _;
-                          return `${__webpack_require__},${_},${_}`;
+                          const [, _, _, _] = _;
+                          return `${_},${_},${_}`;
                         })(_),
                       ),
                   }),
@@ -55744,7 +55261,7 @@
       function _(_) {
         const {
             bShowInternalControls: _,
-            rgArtworkToDisplay: __webpack_require__,
+            rgArtworkToDisplay: _,
             promotionPlanID: _,
             type: _,
             _: _,
@@ -55777,13 +55294,13 @@
                             }),
                           (0, _.jsx)(_, {
                             oEditableTakeover: _,
-                            rgArtworkToDisplay: __webpack_require__,
+                            rgArtworkToDisplay: _,
                           }),
                         ],
                       }),
                       (0, _.jsx)(_, {
                         oEditableTakeover: _,
-                        rgArtworkToDisplay: __webpack_require__,
+                        rgArtworkToDisplay: _,
                         promotionPlanID: _,
                       }),
                     ],
@@ -55804,7 +55321,7 @@
       }
       function _(_) {
         const { oEditableTakeover: _ } = _,
-          [__webpack_require__, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             _.GetBackgroundOffset(),
             _.GetBackgroundMobileOffset(),
             _.GetBackgroundImageHeight(),
@@ -55824,7 +55341,7 @@
             }),
             (0, _.jsx)(_._, {
               type: "number",
-              value: __webpack_require__,
+              value: _,
               onChange: (_) =>
                 _.SetBackgroundOffset(Number.parseInt(_.currentTarget.value)),
               label: "Pixel Offset",
@@ -55889,10 +55406,7 @@
         }
       }
       function _(_) {
-        const {
-            oEditableTakeover: _,
-            rgArtworkToDisplay: __webpack_require__,
-          } = _,
+        const { oEditableTakeover: _, rgArtworkToDisplay: _ } = _,
           _ = (0, _.useMemo)(() => {
             const _ = [
               "takeover_art",
@@ -55902,10 +55416,8 @@
               "takeover_webm_mobile_art",
               "takeover_mp4_mobile_art",
             ];
-            return __webpack_require__
-              ? __webpack_require__.filter((_) => _.includes(_))
-              : _;
-          }, [__webpack_require__]),
+            return _ ? __webpack_require__.filter((_) => _.includes(_)) : _;
+          }, [_]),
           _ = (0, _.useMemo)(
             () => [_._.k_ESteamRealmGlobal, _._.k_ESteamRealmChina],
             [],
@@ -55975,7 +55487,7 @@
                 (0, _.jsxs)(_._, {
                   children: [
                     (0, _.jsx)("br", {}),
-                    _("page_bg", __webpack_require__) &&
+                    _("page_bg", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -55995,7 +55507,7 @@
                           }),
                         ],
                       }),
-                    _("page_bg_mobile", __webpack_require__) &&
+                    _("page_bg_mobile", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -56015,7 +55527,7 @@
                           }),
                         ],
                       }),
-                    _("webm_page_bg", __webpack_require__) &&
+                    _("webm_page_bg", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -56035,7 +55547,7 @@
                           }),
                         ],
                       }),
-                    _("mp4_page_bg", __webpack_require__) &&
+                    _("mp4_page_bg", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -56055,7 +55567,7 @@
                           }),
                         ],
                       }),
-                    _("webm_page_bg_mobile", __webpack_require__) &&
+                    _("webm_page_bg_mobile", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -56075,7 +55587,7 @@
                           }),
                         ],
                       }),
-                    _("mp4_page_bg_mobile", __webpack_require__) &&
+                    _("mp4_page_bg_mobile", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -56106,9 +55618,9 @@
         });
       }
       function _(_) {
-        const { oEditableTakeover: _, assetType: __webpack_require__ } = _,
+        const { oEditableTakeover: _, assetType: _ } = _,
           [_, _, _, _] = (0, _._)(() => [
-            _.GetAssetsObject(__webpack_require__),
+            _.GetAssetsObject(_),
             _.GetID(),
             _.GetPromoModifyTime(),
             _.GetType(),
@@ -56131,19 +55643,17 @@
             [_, _, _, _],
           ),
           _ =
-            "mp4_page_bg" == __webpack_require__ ||
-            "mp4_page_bg_mobile" == __webpack_require__ ||
-            "webm_page_bg" == __webpack_require__ ||
-            "webm_page_bg_mobile" == __webpack_require__;
+            "mp4_page_bg" == _ ||
+            "mp4_page_bg_mobile" == _ ||
+            "webm_page_bg" == _ ||
+            "webm_page_bg_mobile" == _;
         return (0, _.jsx)("div", {
           className: _().MarketingMessage,
           children: (0, _.jsx)(_._, {
             rgAssetLangs: _,
             fnGetAssetUrl: _,
-            fnDeletAssetLang: (_) =>
-              _.DeleteAssetObjectLang(__webpack_require__, _),
-            fnDeleteAllAssets: () =>
-              _.ClearAllAssetObjects(__webpack_require__),
+            fnDeletAssetLang: (_) => _.DeleteAssetObjectLang(_, _),
+            fnDeleteAllAssets: () => _.ClearAllAssetObjects(_),
             bVerifyAssets: !0,
             bVideoAsset: _,
           }),
@@ -56152,7 +55662,7 @@
       function _(_) {
         const {
             oEditableTakeover: _,
-            rgArtworkToDisplay: __webpack_require__,
+            rgArtworkToDisplay: _,
             promotionPlanID: _,
           } = _,
           _ = (0, _._)(() => {
@@ -56176,15 +55686,14 @@
                 (0, _.jsx)(_._, {
                   children: "Asset Progress",
                 }),
-                _._.filter((_) => _.has(_) && _(_, __webpack_require__)).map(
-                  (_) =>
-                    (0, _.jsxs)(
-                      "div",
-                      {
-                        children: [(0, _._)(_), ": ", _.get(_), " / 29"],
-                      },
-                      "as_" + _,
-                    ),
+                _._.filter((_) => _.has(_) && _(_, _)).map((_) =>
+                  (0, _.jsxs)(
+                    "div",
+                    {
+                      children: [(0, _._)(_), ": ", _.get(_), " / 29"],
+                    },
+                    "as_" + _,
+                  ),
                 ),
               ],
             }),
@@ -56214,7 +55723,7 @@
       }
       function _(_) {
         const { oEditableTakeover: _ } = _,
-          { fnSaveClusterAssets: __webpack_require__ } = (0, _._)(),
+          { fnSaveClusterAssets: _ } = (0, _._)(),
           [_, _, _, _, _] = (0, _._)(() => [
             _.BIsDirty(),
             _.GetType(),
@@ -56381,15 +55890,14 @@
       class _ {
         m_mapEditModel = new Map();
         m_callback = new Map();
-        InitTakeunderToEdit(_, _, __webpack_require__ = !1) {
-          if (this.m_mapEditModel.has(_) && !__webpack_require__)
+        InitTakeunderToEdit(_, _, _ = !1) {
+          if (this.m_mapEditModel.has(_) && !_)
             this.m_mapEditModel.get(_).Reset(_);
           else {
             const _ = new _(_);
             this.m_mapEditModel.set(_, _),
               _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-              __webpack_require__ &&
-                this.m_mapEditModel.get(_).GetCallback().Dispatch(_);
+              _ && this.m_mapEditModel.get(_).GetCallback().Dispatch(_);
           }
           return this.m_mapEditModel.get(_);
         }
@@ -56422,9 +55930,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(() =>
-            _.Get().GetTakeunderToEdit(_),
-          ),
+          [_, _] = _.useState(() => _.Get().GetTakeunderToEdit(_)),
           _ = (0, _._)(_._.k_ConfigPage_Takeunder, _);
         return (
           _.useEffect(() => {
@@ -56436,15 +55942,11 @@
           (0, _._)(_.Get().GetCallback(_), (_) => {
             _(_), _();
           }),
-          __webpack_require__
+          _
         );
       }
       function _(_) {
-        const {
-            rgArtworkToDisplay: _,
-            promotionPlanID: __webpack_require__,
-            _: _,
-          } = _,
+        const { rgArtworkToDisplay: _, promotionPlanID: _, _: _ } = _,
           _ = _(_);
         return void 0 === _
           ? (0, _.jsx)(_._, {
@@ -56474,7 +55976,7 @@
                       (0, _.jsx)(_, {
                         oEditableTakeunder: _,
                         rgArtworkToDisplay: _,
-                        promotionPlanID: __webpack_require__,
+                        promotionPlanID: _,
                       }),
                     ],
                   }),
@@ -56502,16 +56004,11 @@
         }
       }
       function _(_) {
-        const {
-            oEditableTakeunder: _,
-            rgArtworkToDisplay: __webpack_require__,
-          } = _,
+        const { oEditableTakeunder: _, rgArtworkToDisplay: _ } = _,
           _ = (0, _.useMemo)(() => {
             const _ = ["takeunder_art", "takeunder_mobile_art"];
-            return __webpack_require__
-              ? __webpack_require__.filter((_) => _.includes(_))
-              : _;
-          }, [__webpack_require__]),
+            return _ ? __webpack_require__.filter((_) => _.includes(_)) : _;
+          }, [_]),
           _ = (0, _.useMemo)(() => [_._.k_ESteamRealmGlobal], []),
           _ = (0, _.useCallback)(
             (_, _, _, _, _, _, _) => {
@@ -56569,7 +56066,7 @@
                 (0, _.jsxs)(_._, {
                   children: [
                     (0, _.jsx)("br", {}),
-                    _("takeunder_desktop", __webpack_require__) &&
+                    _("takeunder_desktop", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -56589,7 +56086,7 @@
                           }),
                         ],
                       }),
-                    _("takeunder_mobile", __webpack_require__) &&
+                    _("takeunder_mobile", _) &&
                       (0, _.jsxs)(_.Fragment, {
                         children: [
                           (0, _.jsx)("h3", {
@@ -56620,9 +56117,9 @@
         });
       }
       function _(_) {
-        const { oEditableTakeunder: _, assetType: __webpack_require__ } = _,
+        const { oEditableTakeunder: _, assetType: _ } = _,
           [_, _, _, _] = (0, _._)(() => [
-            _.GetAssetsObject(__webpack_require__),
+            _.GetAssetsObject(_),
             _.GetID(),
             _.GetPromoModifyTime(),
             _.GetType(),
@@ -56649,10 +56146,8 @@
           children: (0, _.jsx)(_._, {
             rgAssetLangs: _,
             fnGetAssetUrl: _,
-            fnDeletAssetLang: (_) =>
-              _.DeleteAssetObjectLang(__webpack_require__, _),
-            fnDeleteAllAssets: () =>
-              _.ClearAllAssetObjects(__webpack_require__),
+            fnDeletAssetLang: (_) => _.DeleteAssetObjectLang(_, _),
+            fnDeleteAllAssets: () => _.ClearAllAssetObjects(_),
             bVerifyAssets: !0,
           }),
         });
@@ -56660,7 +56155,7 @@
       function _(_) {
         const {
             oEditableTakeunder: _,
-            rgArtworkToDisplay: __webpack_require__,
+            rgArtworkToDisplay: _,
             promotionPlanID: _,
           } = _,
           _ = (0, _._)(() => {
@@ -56684,15 +56179,14 @@
                 (0, _.jsx)(_._, {
                   children: "Asset Progress",
                 }),
-                _._.filter((_) => _.has(_) && _(_, __webpack_require__)).map(
-                  (_) =>
-                    (0, _.jsxs)(
-                      "div",
-                      {
-                        children: [(0, _._)(_), ": ", _.get(_), " / 29"],
-                      },
-                      "as_" + _,
-                    ),
+                _._.filter((_) => _.has(_) && _(_, _)).map((_) =>
+                  (0, _.jsxs)(
+                    "div",
+                    {
+                      children: [(0, _._)(_), ": ", _.get(_), " / 29"],
+                    },
+                    "as_" + _,
+                  ),
                 ),
               ],
             }),
@@ -56722,7 +56216,7 @@
       }
       function _(_) {
         const { oEditableTakeunder: _ } = _,
-          { fnSaveClusterAssets: __webpack_require__ } = (0, _._)(),
+          { fnSaveClusterAssets: _ } = (0, _._)(),
           [_, _, _, _] = (0, _._)(() => [
             _.BIsDirty(),
             _.GetID(),
@@ -56922,7 +56416,7 @@
       class _ {
         m_mapEditModel = new Map();
         m_callback = new Map();
-        InitAppAssetsToEdit(_, _, __webpack_require__ = !1) {
+        InitAppAssetsToEdit(_, _, _ = !1) {
           if (
             ("dev" == _._.WEB_UNIVERSE &&
               console.log(
@@ -56930,14 +56424,14 @@
                   Boolean(this.m_mapEditModel.get(_)),
                 (0, _._)(_),
               ),
-            this.m_mapEditModel.has(_) && !__webpack_require__)
+            this.m_mapEditModel.has(_) && !_)
           )
             this.m_mapEditModel.get(_).Reset(_);
           else {
             const _ = new _(_);
             this.m_mapEditModel.set(_, _),
               _.GetCallback().Register((_) => this.GetCallback(_).Dispatch(_)),
-              __webpack_require__ && this.GetCallback(_).Dispatch(_);
+              _ && this.GetCallback(_).Dispatch(_);
           }
           return this.m_mapEditModel.get(_);
         }
@@ -56970,21 +56464,14 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = _.useState(_.Get().GetAppAssetsToEdit(_)),
+          [_, _] = _.useState(_.Get().GetAppAssetsToEdit(_)),
           _ = (function (_) {
-            const [_, __webpack_require__] = (0, _.useState)(() =>
-              _.Get().GetAppAssetsByID(_),
-            );
+            const [_, _] = (0, _.useState)(() => _.Get().GetAppAssetsByID(_));
             return (
               (0, _.useEffect)(() => {
-                _
-                  ? _.Get().LoadAssets(_).then(__webpack_require__)
-                  : __webpack_require__(void 0);
+                _ ? _.Get().LoadAssets(_).then(_) : __webpack_require__(void 0);
               }, [_]),
-              (0, _._)(
-                _.Get().GetCallbackForAssetsByID(_),
-                __webpack_require__,
-              ),
+              (0, _._)(_.Get().GetCallbackForAssetsByID(_), _),
               _
             );
           })(_);
@@ -56999,7 +56486,7 @@
           (0, _._)(_.Get().GetCallback(_), (_) => {
             _(_), _();
           }),
-          __webpack_require__
+          _
         );
       }
       function _(_, _) {
@@ -57014,11 +56501,7 @@
         );
       }
       function _(_) {
-        const {
-            bShowInternalControls: _,
-            rgArtworkToDisplay: __webpack_require__,
-            _: _,
-          } = _,
+        const { bShowInternalControls: _, rgArtworkToDisplay: _, _: _ } = _,
           _ = _(_);
         return _
           ? (0, _.jsxs)("div", {
@@ -57037,12 +56520,12 @@
                       children: (0, _.jsx)(_, {
                         bShowInternalControls: _,
                         oEditableAppAssets: _,
-                        rgArtworkToDisplay: __webpack_require__,
+                        rgArtworkToDisplay: _,
                       }),
                     }),
                     (0, _.jsx)(_, {
                       oEditableAppAssets: _,
-                      rgArtworkToDisplay: __webpack_require__,
+                      rgArtworkToDisplay: _,
                     }),
                   ],
                 }),
@@ -57057,7 +56540,7 @@
       function _(_) {
         const {
             bShowInternalControls: _,
-            oEditableAppAssets: __webpack_require__,
+            oEditableAppAssets: _,
             rgArtworkToDisplay: _,
           } = _,
           _ = (0, _.useMemo)(() => {
@@ -57072,7 +56555,7 @@
             (_, _, _, _, _, _, _) => {
               __webpack_require__.SetAsset(_(_), (0, _._)(_), _);
             },
-            [__webpack_require__],
+            [_],
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -57117,7 +56600,7 @@
                             ],
                           }),
                           (0, _.jsx)(_, {
-                            oEditableAppAssets: __webpack_require__,
+                            oEditableAppAssets: _,
                             assetType: "header_image",
                           }),
                         ],
@@ -57137,7 +56620,7 @@
                             ],
                           }),
                           (0, _.jsx)(_, {
-                            oEditableAppAssets: __webpack_require__,
+                            oEditableAppAssets: _,
                             assetType: "main_capsule",
                           }),
                         ],
@@ -57148,17 +56631,14 @@
             }),
             _ &&
               (0, _.jsx)(_, {
-                oEditableAppAssets: __webpack_require__,
+                oEditableAppAssets: _,
               }),
           ],
         });
       }
       function _(_) {
-        const { oEditableAppAssets: _, assetType: __webpack_require__ } = _,
-          [_, _] = (0, _._)(() => [
-            _.GetAssets(__webpack_require__),
-            _.GetID(),
-          ]),
+        const { oEditableAppAssets: _, assetType: _ } = _,
+          [_, _] = (0, _._)(() => [_.GetAssets(_), _.GetID()]),
           _ = Object.keys(_)
             .sort()
             .map((_) => (0, _._)(_)),
@@ -57166,11 +56646,11 @@
             (_) => {
               const _ = (0, _._)(_);
               return _[_]
-                ? ((__webpack_require__ = _),
+                ? ((_ = _),
                   (_ = _[_]),
                   _._.BASE_URL_SHARED_CDN +
                     "store_item_assets/steam/apps/" +
-                    __webpack_require__ +
+                    _ +
                     "/" +
                     _)
                 : null;
@@ -57196,11 +56676,8 @@
         });
       }
       function _(_) {
-        const {
-            oEditableAppAssets: _,
-            rgArtworkToDisplay: __webpack_require__,
-          } = _,
-          _ = _(_, __webpack_require__);
+        const { oEditableAppAssets: _, rgArtworkToDisplay: _ } = _,
+          _ = _(_, _);
         return (0, _.jsxs)("div", {
           className: _().RightCol,
           children: [
@@ -57238,9 +56715,9 @@
       }
       function _(_) {
         const { oEditableAppAssets: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [_.BIsDirty(), _.GetID()]);
+          [_, _] = (0, _._)(() => [_.BIsDirty(), _.GetID()]);
         return (0, _.jsx)(_, {
-          bIsDirty: __webpack_require__,
+          bIsDirty: _,
           fnOnRevert: () => _.RevertChanges(),
           bSaveDisabled: !1,
           strSave: (0, _._)("#Button_Publish"),
@@ -57263,7 +56740,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetArtworkLocalizationDropboxLink(),
             _.GetArtworkLocalizationTaskID(),
             _.GetArtworkLocalizationRequests(),
@@ -57287,7 +56764,7 @@
                 (0, _.jsx)(_._, {
                   type: "url",
                   label: "DropBox Link",
-                  value: __webpack_require__,
+                  value: _,
                   onChange: (_) =>
                     _.SetArtworkLocalizationDropboxLink(_.currentTarget.value),
                 }),
@@ -57315,7 +56792,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.BHasArtworkLocalizationSteamChinaOnly(),
             _.GetNumArtworkLocalizationRequired(),
           ]);
@@ -57328,7 +56805,7 @@
               label: "Only Steam China Localization",
               tooltip:
                 "If checked, we only want English and Simplified Chinese. Otherwise, we want all of the languages Steam supports",
-              checked: __webpack_require__,
+              checked: _,
               onChange: (_) => _.SetArtworkLocalizationSteamChinaOnly(_),
             }),
             (0, _.jsx)(_._, {
@@ -57337,7 +56814,7 @@
                 (0, _._)(
                   (0, _.jsx)(_, {
                     oEditablePlan: _,
-                    bSteamChinaOnly: __webpack_require__,
+                    bSteamChinaOnly: _,
                   }),
                   (0, _._)(_),
                 ),
@@ -57349,7 +56826,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetArtworkLocationUploadAssetURL(),
             _.GetArtworkLocalizationRequestTime(),
             _.GetArtworkLocalizationTaskID(),
@@ -57374,7 +56851,7 @@
               ],
             }),
             (0, _.jsx)("a", {
-              href: __webpack_require__,
+              href: _,
               target: "_blank",
               children: "Page Localization Team will see for Asset Upload",
             }),
@@ -57453,7 +56930,7 @@
       function _(_) {
         const {
             bShowInternalControls: _,
-            rgArtworkToDisplay: __webpack_require__,
+            rgArtworkToDisplay: _,
             bDisableRouting: _,
             strHeaderName: _,
           } = _,
@@ -57464,8 +56941,7 @@
           _ = new Array();
         return (
           !_.BHasMarketingMessages(0) ||
-            (__webpack_require__ &&
-              !__webpack_require__.includes("marketingmessage_art")) ||
+            (_ && !__webpack_require__.includes("marketingmessage_art")) ||
             _.push({
               artworkType: "marketingmessage_art",
               _: _.GetMarketingMessageID(0),
@@ -57473,8 +56949,7 @@
               promotionPlanID: _.GetID(),
             }),
           !_.BHasMarketingMessages(1) ||
-            (__webpack_require__ &&
-              !__webpack_require__.includes("marketingmessage_art_2")) ||
+            (_ && !__webpack_require__.includes("marketingmessage_art_2")) ||
             _.push({
               artworkType: "marketingmessage_art_2",
               _: _.GetMarketingMessageID(1),
@@ -57482,7 +56957,7 @@
               promotionPlanID: _.GetID(),
             }),
           _.BHasSpotlightIDs(0) &&
-            (!__webpack_require__ ||
+            (!_ ||
               __webpack_require__.includes("spotlight_art") ||
               __webpack_require__.includes("spotlight_art_hero")) &&
             _.push({
@@ -57491,7 +56966,7 @@
               promotionPlanID: _.GetID(),
             }),
           _.BHasTakeoverIDs(0) &&
-            (!__webpack_require__ ||
+            (!_ ||
               __webpack_require__.includes("takeover_art") ||
               __webpack_require__.includes("takeover_mobile_art")) &&
             _.push({
@@ -57502,7 +56977,7 @@
               promotionPlanID: _.GetID(),
             }),
           _.BHasSteamChinaTakeoverID(0) &&
-            (!__webpack_require__ ||
+            (!_ ||
               __webpack_require__.includes("takeover_art") ||
               __webpack_require__.includes("takeover_mobile_art")) &&
             _.push({
@@ -57513,7 +56988,7 @@
               promotionPlanID: _.GetID(),
             }),
           _.BHasContentHubTakeoverIDs(0) &&
-            (!__webpack_require__ ||
+            (!_ ||
               __webpack_require__.includes("takeover_art") ||
               __webpack_require__.includes("takeover_mobile_art")) &&
             _.push({
@@ -57524,7 +56999,7 @@
               promotionPlanID: _.GetID(),
             }),
           _.BHasTakeunderIDs(0) &&
-            (!__webpack_require__ ||
+            (!_ ||
               __webpack_require__.includes("takeunder_art") ||
               __webpack_require__.includes("takeunder_mobile_art")) &&
             _.push({
@@ -57534,7 +57009,7 @@
               promotionPlanID: _.GetID(),
             }),
           _.BHasAssociatedSaleEvent() &&
-            (!__webpack_require__ ||
+            (!_ ||
               __webpack_require__.includes("sale_header") ||
               __webpack_require__.includes("sale_logo") ||
               __webpack_require__.includes("capsule")) &&
@@ -57546,7 +57021,7 @@
               promotionPlanID: _.GetID(),
             }),
           _.BHasAdvertisingAppID() &&
-            (!__webpack_require__ ||
+            (!_ ||
               __webpack_require__.includes("app_header_capsule") ||
               __webpack_require__.includes("app_main_capsule")) &&
             _.push({
@@ -57562,13 +57037,13 @@
               status: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   ..._,
-                  rgArtworkToDisplay: __webpack_require__,
+                  rgArtworkToDisplay: _,
                 }),
               }),
               contents: (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_, {
                   ..._,
-                  rgArtworkToDisplay: __webpack_require__,
+                  rgArtworkToDisplay: _,
                 }),
               }),
               onClick: _,
@@ -57600,7 +57075,7 @@
       function _(_) {
         const {
             artworkType: _,
-            rgArtworkToDisplay: __webpack_require__,
+            rgArtworkToDisplay: _,
             _: _,
             clanAccountID: _,
             gidClanEvent: _,
@@ -57618,7 +57093,7 @@
               rgType: _._,
               component: () =>
                 (0, _.jsx)(_, {
-                  rgArtworkToDisplay: __webpack_require__,
+                  rgArtworkToDisplay: _,
                   _: parseInt(_),
                 }),
             },
@@ -57626,7 +57101,7 @@
               rgType: _._,
               component: () =>
                 (0, _.jsx)(_, {
-                  rgArtworkToDisplay: __webpack_require__,
+                  rgArtworkToDisplay: _,
                   _: _,
                 }),
             },
@@ -57634,7 +57109,7 @@
               rgType: _._,
               component: () =>
                 (0, _.jsx)(_, {
-                  rgArtworkToDisplay: __webpack_require__,
+                  rgArtworkToDisplay: _,
                   type: _,
                   _: _,
                 }),
@@ -57643,7 +57118,7 @@
               rgType: _._,
               component: () =>
                 (0, _.jsx)(_, {
-                  rgArtworkToDisplay: __webpack_require__,
+                  rgArtworkToDisplay: _,
                   _: _,
                 }),
             },
@@ -57651,7 +57126,7 @@
               rgType: _._,
               component: () =>
                 (0, _.jsx)(_, {
-                  rgArtworkToDisplay: __webpack_require__,
+                  rgArtworkToDisplay: _,
                   clanAccountID: _,
                   gidClanEvent: _,
                 }),
@@ -57666,7 +57141,7 @@
       function _(_) {
         const {
             artworkType: _,
-            gidClanEvent: __webpack_require__,
+            gidClanEvent: _,
             bShowInternalControls: _,
             rgArtworkToDisplay: _,
             promotionPlanID: _,
@@ -57717,7 +57192,7 @@
               component: () =>
                 (0, _.jsx)(_, {
                   bShowInternalControls: _,
-                  gidClanEvent: __webpack_require__,
+                  gidClanEvent: _,
                   rgArtworkToDisplay: _,
                   promotionPlanID: _,
                   clanAccountID: _,
@@ -57741,7 +57216,7 @@
             });
       }
       function _(_) {
-        const { rgArtworkToDisplay: _, _: __webpack_require__ } = _,
+        const { rgArtworkToDisplay: _, _: _ } = _,
           _ = (function (_, _) {
             const _ = new Map();
             if (!_) return _;
@@ -57757,13 +57232,13 @@
               }),
               _
             );
-          })(_(__webpack_require__), _);
+          })(_(_), _);
         return (0, _.jsx)(_, {
           rgAssetCounts: _,
         });
       }
       function _(_) {
-        const { rgArtworkToDisplay: _, type: __webpack_require__, _: _ } = _,
+        const { rgArtworkToDisplay: _, type: _, _: _ } = _,
           _ = (function (_, _) {
             const _ = new Map();
             if (!_) return _;
@@ -57779,33 +57254,29 @@
               }),
               _
             );
-          })(_(__webpack_require__, _), _);
+          })(_(_, _), _);
         return (0, _.jsx)(_, {
           rgAssetCounts: _,
         });
       }
       function _(_) {
-        const { rgArtworkToDisplay: _, _: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__),
+        const { rgArtworkToDisplay: _, _: _ } = _,
+          _ = (0, _._)(_),
           _ = (0, _._)(_, _);
         return (0, _.jsx)(_, {
           rgAssetCounts: _,
         });
       }
       function _(_) {
-        const {
-            rgArtworkToDisplay: _,
-            clanAccountID: __webpack_require__,
-            gidClanEvent: _,
-          } = _,
-          _ = _(_(__webpack_require__, _), _);
+        const { rgArtworkToDisplay: _, clanAccountID: _, gidClanEvent: _ } = _,
+          _ = _(_(_, _), _);
         return (0, _.jsx)(_, {
           rgAssetCounts: _,
         });
       }
       function _(_) {
-        const { rgArtworkToDisplay: _, _: __webpack_require__ } = _,
-          _ = _(__webpack_require__),
+        const { rgArtworkToDisplay: _, _: _ } = _,
+          _ = _(_),
           _ = _(_, _);
         return (0, _.jsx)(_, {
           rgAssetCounts: _,
@@ -57815,11 +57286,11 @@
       function _(_) {
         const { _: _ } = _,
           {
-            bMinimumAssetsSetup: __webpack_require__,
+            bMinimumAssetsSetup: _,
             nAssetSetup: _,
             nCompleteAssetRequired: _,
           } = (0, _._)(_);
-        return __webpack_require__
+        return _
           ? (0, _.jsx)("div", {
               className: _().EventElementComplete,
               children: "done",
@@ -57830,8 +57301,8 @@
             });
       }
       function _(_) {
-        const { rgAssetCounts: _, bLoading: __webpack_require__ } = _;
-        if (__webpack_require__)
+        const { rgAssetCounts: _, bLoading: _ } = _;
+        if (_)
           return (0, _.jsx)(_._, {
             size: "medium",
             position: "center",
@@ -57874,7 +57345,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { oEditableMessage: _, promotionPlanID: __webpack_require__ } = _;
+        const { oEditableMessage: _, promotionPlanID: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().RightCol,
           children: [
@@ -57897,12 +57368,12 @@
                   target: "_blank",
                   children: "Open Marketing Message Editor",
                 }),
-                Boolean(__webpack_require__) &&
+                Boolean(_) &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)("br", {}),
                       (0, _.jsx)("a", {
-                        href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${__webpack_require__}`,
+                        href: `${_._.PARTNER_BASE_URL}promotion/planning/edit/${_}`,
                         target: "_blank",
                         children: "Open Promotion Plan Editor",
                       }),
@@ -57916,7 +57387,7 @@
       function _(_) {
         const { oEditableMessage: _ } = _,
           {
-            bMinimumAssetsSetup: __webpack_require__,
+            bMinimumAssetsSetup: _,
             nAssetSetup: _,
             nCompleteAssetRequired: _,
             bMatchingVideoAssets: _,
@@ -57948,7 +57419,7 @@
                   }),
                 Boolean(!_ && !_) &&
                   (0, _.jsx)(_._, {
-                    bDone: __webpack_require__,
+                    bDone: _,
                     name: `Assets (${_}/${_})`,
                   }),
                 Boolean(_) &&
@@ -58027,11 +57498,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            bAssetUploadOnly: _,
-            promotionPlanID: __webpack_require__,
-            _: _,
-          } = _,
+        const { bAssetUploadOnly: _, promotionPlanID: _, _: _ } = _,
           _ = (0, _._)(_),
           [_, _] = (0, _._)(() => [
             (0, _._)(_?.GetCustomTemplate() || ""),
@@ -58069,7 +57536,7 @@
                       (0, _.jsx)(_._, {
                         oEditableMessage: _,
                         bAssetUploadOnly: _,
-                        promotionPlanID: __webpack_require__,
+                        promotionPlanID: _,
                       }),
                     ],
                   }),
@@ -58085,10 +57552,7 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
-            _?.GetInternalAssetURL(),
-            _(_),
-          ]);
+          [_, _] = (0, _._)(() => [_?.GetInternalAssetURL(), _(_)]);
         return _
           ? (0, _.jsxs)("div", {
               className: _().SectionCtn,
@@ -58098,7 +57562,7 @@
                 }),
                 (0, _.jsx)(_._, {
                   type: "text",
-                  value: __webpack_require__,
+                  value: _,
                   placeholder: "enter fileserver location",
                   onChange: (_) => _.SetInternalAssetURL(_.currentTarget.value),
                   tooltip:
@@ -58148,7 +57612,7 @@
       const _ = {};
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__] = (0, _._)(_?.GetStoreItemID()?.appid, _),
+          [_] = (0, _._)(_?.GetStoreItemID()?.appid, _),
           [_, _] = (0, _.useState)(_(_)),
           [_] = (0, _._)(() => [_.GetAutoRenderWithoutOverride()]),
           _ = (0, _.useMemo)(
@@ -58229,14 +57693,14 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _] = (0, _._)(() => [
             _.GetCustomTemplate(),
             _.GetFeaturedVideoMP4Url() || "",
             _.GetFeaturedVideoWebMUrl() || "",
             _.GetFeaturedVideoAutoPlay(),
             _.GetFeaturedVideoLoop(),
           ]);
-        return "featured_video" != __webpack_require__
+        return "featured_video" != _
           ? null
           : (0, _.jsxs)(_.Fragment, {
               children: [
@@ -58303,16 +57767,16 @@
             });
       }
       function _(_) {
-        const { strURL: _, extension: __webpack_require__, mimetype: _ } = _;
+        const { strURL: _, extension: _, mimetype: _ } = _;
         if (!_ || 0 == _.trim().length) return null;
-        const _ = !(0, _._)(_, __webpack_require__);
+        const _ = !(0, _._)(_, _);
         return (0, _.jsx)("div", {
           children: _
             ? (0, _.jsxs)("div", {
                 className: _.ErrorStylesWithIcon,
                 children: [
                   "Error: URL format is wrong or missing extensions (",
-                  __webpack_require__,
+                  _,
                   ")",
                 ],
               })
@@ -58320,7 +57784,7 @@
                 onClick: (_) =>
                   (0, _._)(
                     (0, _.jsx)(_._, {
-                      strTitle: "Preview " + __webpack_require__,
+                      strTitle: "Preview " + _,
                       bAllowFullSize: !0,
                       children: (0, _.jsx)("video", {
                         controls: !0,
@@ -58357,7 +57821,7 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _] = (0, _._)(() => [
             _?.GetRealm(),
             _?.GetAssetsObject("ll_image"),
             _?.BHasAnimatedAssets(),
@@ -58365,7 +57829,7 @@
             _?.GetGID(),
             "partner_event" === _?.GetCustomTemplate(),
           ]),
-          _ = Boolean(0 != __webpack_require__),
+          _ = Boolean(0 != _),
           _ = (0, _.useMemo)(() => {
             const _ = [_ ? "capsule" : "localized_marketing_message"];
             return (
@@ -58518,11 +57982,11 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.BHasAnimatedAssets(),
             _.GetCustomTemplate(),
           ]);
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         const _ = "partner_event" == _ ? "800px by 450px" : "570px by 600px";
         return (0, _.jsxs)("div", {
           children: [
@@ -58561,8 +58025,8 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.GetCustomTemplate()]);
-        return "featured_video" != __webpack_require__
+          [_] = (0, _._)(() => [_.GetCustomTemplate()]);
+        return "featured_video" != _
           ? null
           : (0, _.jsxs)("div", {
               children: [
@@ -58618,9 +58082,9 @@
             });
       }
       function _(_) {
-        const { oEditableMessage: _, assetType: __webpack_require__ } = _,
+        const { oEditableMessage: _, assetType: _ } = _,
           [_, _, _] = (0, _._)(() => [
-            _.GetAssetsObject(__webpack_require__),
+            _.GetAssetsObject(_),
             _.GetGID(),
             _.GetAssetsModifyTime(),
           ]),
@@ -58639,13 +58103,10 @@
           children: (0, _.jsx)(_._, {
             rgAssetLangs: _,
             fnGetAssetUrl: _,
-            fnDeletAssetLang: (_) =>
-              _.DeleteAssetObjectLang(__webpack_require__, _),
-            fnDeleteAllAssets: () =>
-              _.ClearAllAssetObjects(__webpack_require__),
+            fnDeletAssetLang: (_) => _.DeleteAssetObjectLang(_, _),
+            fnDeleteAllAssets: () => _.ClearAllAssetObjects(_),
             bVerifyAssets: !0,
-            bVideoAsset:
-              "mp4" == __webpack_require__ || "webm" == __webpack_require__,
+            bVideoAsset: "mp4" == _ || "webm" == _,
           }),
         });
       }
@@ -58693,8 +58154,8 @@
       const _ = [11, 9, 12, 11, 2, 14];
       function _(_) {
         const { closeModal: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!1);
-        return __webpack_require__
+          [_, _] = (0, _.useState)(!1);
+        return _
           ? (0, _.jsx)(_, {
               ..._,
             })
@@ -58730,7 +58191,7 @@
       function _(_) {
         const {
             rtInitialDate: _,
-            closeModal: __webpack_require__,
+            closeModal: _,
             rtInitialEndDate: _,
             initialType: _,
             bAllowPromotionPlanCreate: _,
@@ -58759,12 +58220,12 @@
           return (0, _.jsx)(_._, {
             state: _,
             strDialogTitle: "Creating Marketing Message",
-            closeModal: __webpack_require__,
+            closeModal: _,
           });
         const _ = (_?.appid || _?.bundleid || _?.packageid) && !_._.is_support;
         return (0, _.jsxs)(_._, {
           strTitle: "Create Marketing Message",
-          onCancel: __webpack_require__,
+          onCancel: _,
           bAllowFullSize: !0,
           bDisableBackgroundDismiss: !0,
           bOKDisabled:
@@ -58906,12 +58367,7 @@
         });
       }
       function _(_) {
-        const {
-            label: _,
-            type: __webpack_require__,
-            setType: _,
-            bIncludeUnset: _,
-          } = _,
+        const { label: _, type: _, setType: _, bIncludeUnset: _ } = _,
           _ = (0, _.useMemo)(() => {
             const _ = new Array();
             return (
@@ -58935,11 +58391,10 @@
               label: _,
               strDropDownClassName: _().DropDownScroll,
               rgOptions: _,
-              selectedOption:
-                0 == __webpack_require__ && _ ? null : __webpack_require__,
+              selectedOption: 0 == _ && _ ? null : _,
               onChange: (_) => _(_.data),
             }),
-            5 == __webpack_require__ &&
+            5 == _ &&
               (0, _.jsxs)("div", {
                 children: [
                   (0, _.jsx)("div", {
@@ -58958,14 +58413,14 @@
       function _(_) {
         const {
             type: _,
-            rtStartTime: __webpack_require__,
+            rtStartTime: _,
             setStartTime: _,
             rtEndTime: _,
             setEndTime: _,
             bNewMessage: _,
           } = _,
           _ = (0, _._)();
-        if (!__webpack_require__ || __webpack_require__ > _)
+        if (!_ || _ > _)
           switch (_) {
             case 2:
             case 14:
@@ -58991,9 +58446,9 @@
             (0, _.jsx)(_._, {
               strDescription: "Start Date/Time",
               nEarliestTime: 0,
-              fnGetTimeToUpdate: () => __webpack_require__,
+              fnGetTimeToUpdate: () => _,
               fnSetTimeToUpdate: _,
-              fnIsValidDateTime: () => !_ || __webpack_require__ > _,
+              fnIsValidDateTime: () => !_ || _ > _,
               bShowTimeZone: !0,
             }),
             (0, _.jsx)(_._, {
@@ -59001,7 +58456,7 @@
               nEarliestTime: 0,
               fnGetTimeToUpdate: () => _,
               fnSetTimeToUpdate: _,
-              fnIsValidDateTime: () => __webpack_require__ < _,
+              fnIsValidDateTime: () => _ < _,
               bShowTimeZone: !0,
             }),
           ],
@@ -59084,7 +58539,7 @@
         });
       }
       function _(_) {
-        const { oEditableMessage: _, closeModal: __webpack_require__ } = _,
+        const { oEditableMessage: _, closeModal: _ } = _,
           _ = _.GetUserMessageFilters();
         (0, _._)("and" == _.clause, "Unexpected usefilter structure");
         const _ = (0, _._)(_);
@@ -59094,15 +58549,15 @@
               bDestructiveWarning: !0,
               strTitle: "Save Not Possible",
               strDescription: _,
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_, {
               oEditableMessage: _,
-              closeModal: __webpack_require__,
+              closeModal: _,
             });
       }
       function _(_) {
-        const { oEditableMessage: _, closeModal: __webpack_require__ } = _,
+        const { oEditableMessage: _, closeModal: _ } = _,
           { fnUpdateMarketingMessage: _ } = (0, _._)(),
           [_, _] = _.useState(!0),
           [_, _] = _.useState(!1);
@@ -59118,7 +58573,7 @@
           (0, _.jsx)(_._, {
             strTitle: "Saving",
             bAlertDialog: !0,
-            closeModal: __webpack_require__,
+            closeModal: _,
             children: Boolean(_)
               ? (0, _.jsx)(_._, {
                   size: "medium",
@@ -59137,7 +58592,7 @@
         );
       }
       function _(_) {
-        const { oEditableMessage: _, closeModal: __webpack_require__ } = _,
+        const { oEditableMessage: _, closeModal: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(void 0),
           { fnDeleteMarketingMessage: _ } = (0, _._)();
@@ -59145,7 +58600,7 @@
           strTitle: "Delete Marketing Message?",
           strDescription:
             "Only delete this message if it has never been shown to customers. Are you sure you want to remove the promotion plan for the following? This can't be undone, but a new one can be created if needed.  This only removes the record from the Steam database. If this message has already been published, the files published will remain on the web cluster.",
-          onCancel: __webpack_require__,
+          onCancel: _,
           onOK: () => {
             _(!0),
               _(_.GetModel()).then((_) => {
@@ -59177,8 +58632,8 @@
         });
       }
       function _(_) {
-        const { _: _, storeItemType: __webpack_require__ } = _,
-          [_] = (0, _._)(_, __webpack_require__, {
+        const { _: _, storeItemType: _ } = _,
+          [_] = (0, _._)(_, _, {
             include_basic_info: !0,
             include_assets: !0,
           });
@@ -59231,11 +58686,11 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.GetStoreItemKey()]);
-        return __webpack_require__ && "app" == __webpack_require__.item_type
+          [_] = (0, _._)(() => [_.GetStoreItemKey()]);
+        return _ && "app" == _.item_type
           ? (0, _.jsx)(_, {
               oEditableMessage: _,
-              idKey: __webpack_require__,
+              idKey: _,
             })
           : (0, _.jsx)("div", {
               className: _.ErrorStylesWithIcon,
@@ -59244,22 +58699,18 @@
             });
       }
       function _(_) {
-        const { oEditableMessage: _, idKey: __webpack_require__ } = _,
+        const { oEditableMessage: _, idKey: _ } = _,
           [_, _] = (0, _._)(() => [
             _.GetUpdateEventClanAccountID(),
             _.GetUpdateEventGID(),
           ]),
-          [_] = (0, _._)(
-            __webpack_require__?._,
-            (0, _._)(__webpack_require__?.item_type),
-            _._,
-          ),
+          [_] = (0, _._)(_?._, (0, _._)(_?.item_type), _._),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]),
           _ = 12 != _?.GetAppType() ? _?.GetParentAppID() : void 0;
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
-              appid: _ || __webpack_require__._,
+              appid: _ || _._,
               selectedEventGID: _,
               fnSetUpdateEvent: _.SetUpdateEvent,
               label: (0, _._)("#EventDropDown_MM_FeaturedEvent"),
@@ -59295,7 +58746,7 @@
       function _(_) {
         const {
             appid: _,
-            selectedEventGID: __webpack_require__,
+            selectedEventGID: _,
             fnSetUpdateEvent: _,
             label: _,
             tooltip: _,
@@ -59367,12 +58818,12 @@
                 : [],
             [_],
           ),
-          _ = _?.find((_) => _.gid === __webpack_require__);
+          _ = _?.find((_) => _.gid === _);
         return (
           "dev" == _._.WEB_UNIVERSE &&
             console.log(
-              `AssetRequestSelectPartnerEvent: selectedEventGID=${__webpack_require__} === selected?.gid=${_?.gid}`,
-              __webpack_require__,
+              `AssetRequestSelectPartnerEvent: selectedEventGID=${_} === selected?.gid=${_?.gid}`,
+              _,
               _,
               _?.gid,
             ),
@@ -59507,7 +58958,7 @@
         });
       }
       function _(_) {
-        const { andFilter: _, oEditableMessage: __webpack_require__ } = _;
+        const { andFilter: _, oEditableMessage: _ } = _;
         return (
           (0, _._)("and" == _.clause, "Expected And Filter"),
           (0, _.jsxs)(_.Fragment, {
@@ -59519,7 +58970,7 @@
                     children: (0, _.jsx)(_, {
                       orFilter: _,
                       andIndex: _,
-                      oEditableMessage: __webpack_require__,
+                      oEditableMessage: _,
                     }),
                   },
                   _.temp_id,
@@ -59553,7 +59004,7 @@
         );
       }
       function _(_) {
-        const { strTitle: _, onOK: __webpack_require__, strTooltip: _ } = _;
+        const { strTitle: _, onOK: _, strTooltip: _ } = _;
         return (0, _.jsx)(_._, {
           toolTipContent: _ || _,
           children: (0, _.jsx)(_._, {
@@ -59562,7 +59013,7 @@
                 (0, _.jsx)(_._, {
                   strTitle: _,
                   strDescription: "Are you sure?",
-                  onOK: __webpack_require__,
+                  onOK: _,
                 }),
                 (0, _._)(_),
               ),
@@ -59570,11 +59021,7 @@
         });
       }
       function _(_) {
-        const {
-          orFilter: _,
-          oEditableMessage: __webpack_require__,
-          andIndex: _,
-        } = _;
+        const { orFilter: _, oEditableMessage: _, andIndex: _ } = _;
         return (
           (0, _._)("or" == _.clause, "Expected OR Filter"),
           (0, _.jsx)(_.Fragment, {
@@ -59587,12 +59034,12 @@
                     (_ =
                       0 == _ && 0 == _
                         ? (0, _.jsx)(_, {
-                            oEditableMessage: __webpack_require__,
+                            oEditableMessage: _,
                             andIndex: _,
                           })
                         : 0 == _
                           ? (0, _.jsx)(_, {
-                              oEditableMessage: __webpack_require__,
+                              oEditableMessage: _,
                               andIndex: _,
                             })
                           : (0, _.jsx)(_, {})),
@@ -59606,7 +59053,7 @@
                             children: (0, _.jsx)(_, {
                               clause: _.clause,
                               filter: _,
-                              oEditableMessage: __webpack_require__,
+                              oEditableMessage: _,
                               fnUpdateFilter: (_) =>
                                 __webpack_require__.UpdateUserFilter(_, _, _),
                               onRemoveOrClause: () =>
@@ -59650,7 +59097,7 @@
         );
       }
       function _(_) {
-        const { oEditableMessage: _, andIndex: __webpack_require__ } = _;
+        const { oEditableMessage: _, andIndex: _ } = _;
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().ConditionTitle),
           children: [
@@ -59661,7 +59108,7 @@
                   children: "Must ",
                 }),
                 "meet one of these criteria",
-                Boolean(!_.BHasSomeIDForAndUserFilter(__webpack_require__)) &&
+                Boolean(!_.BHasSomeIDForAndUserFilter(_)) &&
                   (0, _.jsx)("div", {
                     className: _.WarningStylesWithIcon,
                     children:
@@ -59673,14 +59120,14 @@
               className: _().RemoveConditionBtn,
               children: (0, _.jsx)(_, {
                 strTitle: "Remove Must Clause",
-                onOK: () => _.RemoveAndUserFilter(__webpack_require__),
+                onOK: () => _.RemoveAndUserFilter(_),
               }),
             }),
           ],
         });
       }
       function _(_) {
-        const { oEditableMessage: _, andIndex: __webpack_require__ } = _;
+        const { oEditableMessage: _, andIndex: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().ConditionTitle,
           children: [
@@ -59691,7 +59138,7 @@
                   children: "And ",
                 }),
                 "must also meet one of these criteria",
-                Boolean(!_.BHasSomeIDForAndUserFilter(__webpack_require__)) &&
+                Boolean(!_.BHasSomeIDForAndUserFilter(_)) &&
                   (0, _.jsx)("div", {
                     className: _.WarningStylesWithIcon,
                     children:
@@ -59703,7 +59150,7 @@
               className: _().RemoveConditionBtn,
               children: (0, _.jsx)(_, {
                 strTitle: "Remove Must Clause",
-                onOK: () => _.RemoveAndUserFilter(__webpack_require__),
+                onOK: () => _.RemoveAndUserFilter(_),
               }),
             }),
           ],
@@ -59718,7 +59165,7 @@
       function _(_) {
         const {
             clause: _,
-            filter: __webpack_require__,
+            filter: _,
             oEditableMessage: _,
             fnUpdateFilter: _,
             onRemoveOrClause: _,
@@ -59734,8 +59181,8 @@
                 })),
             [],
           ),
-          _ = (0, _._)(__webpack_require__.filter_type),
-          _ = (0, _._)(_, __webpack_require__);
+          _ = (0, _._)(_.filter_type),
+          _ = (0, _._)(_, _);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsxs)("div", {
@@ -59746,9 +59193,9 @@
                   children: (0, _.jsx)(_._, {
                     strDropDownClassName: (0, _._)(_().DropDownScroll),
                     rgOptions: _,
-                    selectedOption: __webpack_require__.filter_type,
+                    selectedOption: _.filter_type,
                     onChange: (_) => {
-                      _((0, _._)(_, __webpack_require__, _.data));
+                      _((0, _._)(_, _, _.data));
                     },
                   }),
                 }),
@@ -59769,28 +59216,26 @@
             (0, _.jsxs)("div", {
               className: _().SelectedProductList,
               children: [
-                __webpack_require__.id_list.map((_) =>
+                _.id_list.map((_) =>
                   (0, _.jsx)(
                     _,
                     {
-                      filter_type: __webpack_require__.filter_type,
+                      filter_type: _.filter_type,
                       filterDefinition: _,
                       _: _,
                       readonly: !_.canModifyStoreItems,
                       fnRemoveItem: () => {
-                        const _ = __webpack_require__.id_list.findIndex(
-                          (_) => _ == _,
-                        );
+                        const _ = _.id_list.findIndex((_) => _ == _);
                         (0, _._)(_ >= 0, `Did not find ${_} in list`),
-                          __webpack_require__.id_list.splice(_, 1);
+                          _.id_list.splice(_, 1);
                         const _ = {
-                          filter_type: __webpack_require__.filter_type,
-                          id_list: [...__webpack_require__.id_list],
+                          filter_type: _.filter_type,
+                          id_list: [..._.id_list],
                         };
                         _(_);
                       },
                     },
-                    "item" + __webpack_require__.temp_id + "_" + _,
+                    "item" + _.temp_id + "_" + _,
                   ),
                 ),
                 _.canModifyStoreItems &&
@@ -59800,12 +59245,12 @@
                       onClick: (_) =>
                         (0, _._)(
                           (0, _.jsx)(_, {
-                            filter: __webpack_require__,
+                            filter: _,
                             filterDefinition: _,
                             onSelected: (_) => {
                               const _ = {
-                                filter_type: __webpack_require__.filter_type,
-                                id_list: [...__webpack_require__.id_list, _],
+                                filter_type: _.filter_type,
+                                id_list: [..._.id_list, _],
                               };
                               _(_);
                             },
@@ -59838,12 +59283,12 @@
       function _(_) {
         const {
             filter_type: _,
-            filterDefinition: __webpack_require__,
+            filterDefinition: _,
             _: _,
             readonly: _,
             fnRemoveItem: _,
           } = _,
-          _ = __webpack_require__.storeItemType,
+          _ = _.storeItemType,
           [_] = (0, _._)(_, _, {});
         let _;
         return (
@@ -59886,7 +59331,7 @@
       function _(_) {
         const {
             closeModal: _,
-            filter: __webpack_require__,
+            filter: _,
             filterDefinition: _,
             onSelected: _,
           } = _,
@@ -59911,9 +59356,7 @@
               (0, _.jsx)(_._, {
                 fnSetItemID: _,
                 itemType: _,
-                fnFilterID: (_) =>
-                  !__webpack_require__.id_list ||
-                  !__webpack_require__.id_list.includes(_),
+                fnFilterID: (_) => !_.id_list || !_.id_list.includes(_),
                 bIncludeRetired: _,
                 bShowDLCToggle: !0,
               }),
@@ -60079,15 +59522,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { oEditablePlan: _, index: __webpack_require__ } = _;
+        const { oEditablePlan: _, index: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.LinkCtn,
           children: [
             (0, _.jsx)(_._, {
-              name: "Marketing Message " + (__webpack_require__ + 1) + " ID",
+              name: "Marketing Message " + (_ + 1) + " ID",
               placeHolder: "/marketing/message/<grab this ID>",
-              _: _.GetMarketingMessageID(__webpack_require__),
-              index: __webpack_require__,
+              _: _.GetMarketingMessageID(_),
+              index: _,
               fnSetID: _.SetMarketingMessageID,
               fnGetURL: _._.GetMarketingMesssageEditURL,
             }),
@@ -60099,7 +59542,7 @@
                     (0, _._)(
                       (0, _.jsx)(_, {
                         oEditablePlan: _,
-                        index: __webpack_require__,
+                        index: _,
                       }),
                       (0, _._)(_),
                     );
@@ -60111,7 +59554,7 @@
                     (0, _._)(
                       (0, _.jsx)(_, {
                         oEditablePlan: _,
-                        index: __webpack_require__,
+                        index: _,
                       }),
                       (0, _._)(_),
                     );
@@ -60182,11 +59625,7 @@
         include_platforms: !0,
       };
       function _(_) {
-        const {
-            oEditablePlan: _,
-            index: __webpack_require__,
-            closeModal: _,
-          } = _,
+        const { oEditablePlan: _, index: _, closeModal: _ } = _,
           [_, _] = (0, _._)(() => [
             _.GetFeaturedItemID(),
             _.GetFeaturedItemType(),
@@ -60202,9 +59641,7 @@
               })),
             [],
           ),
-          [_, _] = (0, _.useState)(
-            _.BHasMarketingMessages(__webpack_require__),
-          ),
+          [_, _] = (0, _.useState)(_.BHasMarketingMessages(_)),
           [_, _] = (0, _.useState)("#msg_action_details"),
           { fnCreateMarketingMessage: _ } = (0, _._)(),
           _ = (0, _._)();
@@ -60217,7 +59654,7 @@
           : _
             ? (0, _.jsx)(_._, {
                 strTitle: "Create New Marketing Message?",
-                strDescription: `You already have Marketing Message with ID ${_.GetMarketingMessageID(__webpack_require__)} associated with this promotion plan.  Are you sure you want to create a new one?`,
+                strDescription: `You already have Marketing Message with ID ${_.GetMarketingMessageID(_)} associated with this promotion plan.  Are you sure you want to create a new one?`,
                 onCancel: _,
                 onOK: () => _(!1),
                 strOKButtonText: "Create New Marketing Message Anyways",
@@ -60248,7 +59685,7 @@
                   _(_, !0)
                     .then((_) => {
                       _
-                        ? (_.SetMarketingMessageID(_, __webpack_require__),
+                        ? (_.SetMarketingMessageID(_, _),
                           _.fnSetStrSuccess(
                             "Create Marketing Message Successful. Remember to Save the Promotion Plan.",
                           ))
@@ -60294,7 +59731,7 @@
               });
       }
       function _(_) {
-        const { selected: _, fnSetSelected: __webpack_require__ } = _,
+        const { selected: _, fnSetSelected: _ } = _,
           _ = (0, _._)(),
           _ = (0, _.useMemo)(
             () =>
@@ -60327,11 +59764,7 @@
             });
       }
       function _(_) {
-        const {
-            oEditablePlan: _,
-            closeModal: __webpack_require__,
-            index: _,
-          } = _,
+        const { oEditablePlan: _, closeModal: _, index: _ } = _,
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(null);
         (0, _.useEffect)(() => {
@@ -60361,8 +59794,8 @@
               strTitle: "Select an Existing Marketing Message",
               strDescription:
                 "This only surfaces active or upcoming Marketing Message. This doesn't have access to archived Marketing Message.",
-              onCancel: __webpack_require__,
-              closeModal: __webpack_require__,
+              onCancel: _,
+              closeModal: _,
               onOK: () => {
                 _.SetMarketingMessageID(_, _);
               },
@@ -60459,12 +59892,12 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetStoreItemKey()?._,
             (0, _._)(_.GetStoreItemKey()?.item_type),
             _.GetModel(),
           ]),
-          [_] = (0, _._)(__webpack_require__, _, _),
+          [_] = (0, _._)(_, _, _),
           _ = _(_, _),
           _ = (function (_, _) {
             const _ = [];
@@ -60541,7 +59974,7 @@
       function _(_) {
         const {
             nPartnerID: _,
-            bAllowedCustomContacts: __webpack_require__,
+            bAllowedCustomContacts: _,
             storeItemFilter: _,
           } = _,
           [_, _] = (0, _.useState)(!1),
@@ -60568,7 +60001,7 @@
                   children:
                     "Cannot Send Invite: The selected partner does not have any users with communication preference enabeld.",
                 }),
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsx)(_.Fragment, {
                 children: _
                   ? (0, _.jsx)(_, {})
@@ -60600,11 +60033,7 @@
         });
       }
       function _(_) {
-        const {
-            rgAccountIDs: _,
-            closeModal: __webpack_require__,
-            description: _,
-          } = _,
+        const { rgAccountIDs: _, closeModal: _, description: _ } = _,
           { fnHintLoadPartnerUserInfo: _ } = (0, _._)(),
           _ = (0, _.useMemo)(
             () => _.map((_) => _._.InitFromAccountID(_).ConvertTo64BitString()),
@@ -60620,7 +60049,7 @@
             : (0, _.jsxs)(_._, {
                 strTitle: "Partner Contact List",
                 bAlertDialog: !0,
-                closeModal: __webpack_require__,
+                closeModal: _,
                 children: [
                   (0, _.jsx)("div", {
                     children:
@@ -60713,7 +60142,7 @@
       function _(_) {
         const {
             nPartnerID: _,
-            nOriginalPartnerID: __webpack_require__,
+            nOriginalPartnerID: _,
             storeItemKey: _,
             fnUpdatePartnerID: _,
             showPartnerUnsetWarning: _,
@@ -60744,7 +60173,7 @@
               }),
               (0, _.jsx)(_, {
                 nPartnerID: _,
-                nOriginalPartnerID: __webpack_require__,
+                nOriginalPartnerID: _,
                 storeItemKey: _,
                 fnUpdatePartnerID: (_) => _(_?.toString() ?? ""),
                 showPartnerUnsetWarning: _ ?? !0,
@@ -60759,7 +60188,7 @@
       function _(_) {
         const {
             storeItemKey: _,
-            nPartnerID: __webpack_require__,
+            nPartnerID: _,
             nOriginalPartnerID: _,
             fnUpdatePartnerID: _,
             showPartnerUnsetWarning: _,
@@ -60768,9 +60197,7 @@
             autoSelectPartnerFromStoreItem: _,
           } = _,
           _ = (0, _._)(_?._, (0, _._)(_?.item_type)),
-          _ =
-            (!__webpack_require__ || __webpack_require__ !== _) &&
-            _?.filter((_) => _.partner_id != __webpack_require__).length > 0;
+          _ = (!_ || _ !== _) && _?.filter((_) => _.partner_id != _).length > 0;
         return (
           (0, _.useEffect)(() => {
             _ && _ && 1 == _.length && _ && _(_._(0).partner_id);
@@ -60778,7 +60205,7 @@
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
-                nPartnerID: __webpack_require__,
+                nPartnerID: _,
                 nOriginalPartnerID: _,
                 showPartnerUnsetWarning: _,
                 showPartnerInitialSetWarning: _,
@@ -60810,7 +60237,7 @@
       function _(_) {
         const {
             nPartnerID: _,
-            nOriginalPartnerID: __webpack_require__,
+            nOriginalPartnerID: _,
             showPartnerUnsetWarning: _,
             showPartnerInitialSetWarning: _,
           } = _,
@@ -60820,10 +60247,7 @@
               className: (0, _._)(_.ErrorStylesWithIcon, _.ErrorFloatBelow),
               children: "No Partner ID set; no partner can access this request",
             })
-          : _ &&
-              void 0 !== __webpack_require__ &&
-              __webpack_require__ <= 1 &&
-              _ > 1
+          : _ && void 0 !== _ && _ <= 1 && _ > 1
             ? (0, _.jsx)("div", {
                 className: (0, _._)(
                   _.WarningStylesWithIcon,
@@ -60917,7 +60341,7 @@
       function _(_) {
         const {
             viewDate: _,
-            fnSetMonthDelta: __webpack_require__,
+            fnSetMonthDelta: _,
             nOwnerAccountToFilter: _,
             fnSkipLoadingDailyDealPages: _,
           } = _,
@@ -61108,7 +60532,7 @@
       function _(_) {
         const {
           rgVisiblePromotionTypes: _,
-          fnSetVisiblePromotionTypes: __webpack_require__,
+          fnSetVisiblePromotionTypes: _,
           rgAvailableTypes: _,
         } = _;
         return (0, _.jsx)("div", {
@@ -61150,7 +60574,7 @@
       }
       function _(_) {
         const { fnResetDirtyPlan: _ } = (0, _._)(),
-          { fnResetDirtyPlanInputPipeline: __webpack_require__ } = (0, _._)(),
+          { fnResetDirtyPlanInputPipeline: _ } = (0, _._)(),
           [_, _] = (0, _._)("tab", "current"),
           [_, _] = (0, _._)("search", ""),
           [_, _] = (0, _._)("filter_account", 0),
@@ -61159,7 +60583,7 @@
         (0, _._)(_?.map((_) => _._) || []),
           _.useEffect(() => {
             _(), __webpack_require__();
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         const [_, _] = (0, _._)("month", 0),
           _ = (0, _.useMemo)(() => {
             const _ = new Date(),
@@ -61454,7 +60878,7 @@
         );
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)((0, _._)()),
+        const [_, _] = (0, _.useState)((0, _._)()),
           [_, _] = (0, _.useState)(!1);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -62118,11 +61542,7 @@
         );
       }
       function _(_) {
-        const {
-            oEditableDailyDeal: _,
-            closeModal: __webpack_require__,
-            bDelete: _,
-          } = _,
+        const { oEditableDailyDeal: _, closeModal: _, bDelete: _ } = _,
           { fnRemoveDailyDeal: _, fnCancelDailyDeal: _ } = (0, _._)(),
           [_, _] = (0, _._)(_.GetModel()),
           [_] = (0, _._)(_, _, {
@@ -62134,14 +61554,14 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: _ ? "Remove Daily Deal" : "Cancel Daily Deal",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : (0, _.jsx)(_._, {
               strTitle: _ ? "Remove Daily Deal?" : "Cancel Daily Deal?",
               strDescription: _
                 ? "Are you sure you want to remove the daily deal for the following? This can't be undone, but a new one can be created if needed. This will only delete the daily deal featuring; this has no effect on the discount event associated with the daily deal."
                 : "Are you sure you want to cancel this daily deal? A cancelled deal will no longer appear on the calendar, however, it will appear in the list of cancelled daily deals on the partner daily deal dashboard. Cancelled daily deals can no longer be edited.",
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: () => {
                 _.fnSetLoading(!0),
                   (_ ? _(_.GetDealID()) : _(_.GetDealID()))
@@ -62303,7 +61723,7 @@
       function _(_) {
         const {
             display: _,
-            fnSetDisplay: __webpack_require__,
+            fnSetDisplay: _,
             sort: _,
             fnSetSort: _,
             strSearch: _,
@@ -62411,7 +61831,7 @@
         _ = __webpack_require__("chunkid");
       function _() {
         const _ = (0, _._)(),
-          { data: _, isLoading: __webpack_require__ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: ["useMarketingMessageAllStats"],
             queryFn: () =>
               (async function (_) {
@@ -62433,10 +61853,10 @@
                 };
               })(_),
           });
-        return __webpack_require__ ? null : _;
+        return _ ? null : _;
       }
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: ["useSingleMarketingMessageViewStats", _],
           queryFn: () =>
             (async function (_) {
@@ -62455,10 +61875,10 @@
             })(_),
           staleTime: 3600,
         });
-        return __webpack_require__ ? null : _;
+        return _ ? null : _;
       }
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: ["useSingleMarketingMessageClickedStats", _],
           queryFn: () =>
             (async function (_) {
@@ -62477,7 +61897,7 @@
             })(_),
           staleTime: 3600,
         });
-        return __webpack_require__ ? null : _;
+        return _ ? null : _;
       }
       function _(_) {
         const _ = _(_);
@@ -62574,11 +61994,11 @@
             });
       }
       function _(_) {
-        const { gid: _, templateType: __webpack_require__ } = _,
+        const { gid: _, templateType: _ } = _,
           _ = _(_),
           [_, _, _] = (0, _.useMemo)(() => {
             if (!_) return [0, 0, []];
-            const _ = _(_, __webpack_require__);
+            const _ = _(_, _);
             let _ = 0,
               _ = 0;
             return (
@@ -62587,7 +62007,7 @@
               }),
               [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
             );
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return _
           ? (0, _.jsxs)("div", {
               className: _.DashStatsContainer,
@@ -62648,11 +62068,11 @@
             });
       }
       function _(_) {
-        const { gid: _, templateType: __webpack_require__ } = _,
+        const { gid: _, templateType: _ } = _,
           _ = _(_),
           [_, _, _] = (0, _.useMemo)(() => {
             if (!_) return [0, 0, []];
-            const _ = _(_, __webpack_require__);
+            const _ = _(_, _);
             let _ = 0,
               _ = 0;
             return (
@@ -62662,7 +62082,7 @@
               }),
               [_, _, _.sort((_, _) => _.rt_time_hour - _.rt_time_hour)]
             );
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return _
           ? (0, _.jsxs)("div", {
               className: _.DashStatsContainer,
@@ -62834,7 +62254,7 @@
         );
       }
       const _ = _.memo((_) => {
-        const { Data: _, nPeak: __webpack_require__, field: _ } = _;
+        const { Data: _, nPeak: _, field: _ } = _;
         return (0, _.jsx)(_._, {
           width: "100%",
           height: "100%",
@@ -62896,7 +62316,7 @@
                 fill: "url( #bar_linear )",
               }),
               (0, _.jsx)(_._, {
-                _: __webpack_require__,
+                _: _,
                 stroke: "#82FF01",
                 strokeDasharray: "6",
               }),
@@ -62922,11 +62342,11 @@
         return null;
       }
       function _(_) {
-        const { gid: _, templateType: __webpack_require__ } = _,
+        const { gid: _, templateType: _ } = _,
           _ = _(_),
           [_, _] = (0, _.useMemo)(() => {
             if (!_) return [0, []];
-            const _ = _(_, __webpack_require__);
+            const _ = _(_, _);
             let _ = 0,
               _ = 0;
             _.forEach((_) => {
@@ -62941,7 +62361,7 @@
                 });
             }
             return [_, _.sort((_, _) => _.display_index - _.display_index)];
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return _
           ? (0, _.jsx)("div", {
               className: _.DashStatsContainer,
@@ -62980,7 +62400,7 @@
         );
       }
       const _ = _.memo((_) => {
-        const { Data: _, nPeak: __webpack_require__ } = _;
+        const { Data: _, nPeak: _ } = _;
         return (0, _.jsx)(_._, {
           width: "100%",
           height: "100%",
@@ -63042,7 +62462,7 @@
                 fill: "url( #bar_linear )",
               }),
               (0, _.jsx)(_._, {
-                _: __webpack_require__,
+                _: _,
                 stroke: "#82FF01",
                 strokeDasharray: "6",
               }),
@@ -63118,10 +62538,10 @@
             });
       }
       function _(_) {
-        const { rgStats: _, templateType: __webpack_require__ } = _,
+        const { rgStats: _, templateType: _ } = _,
           [_, _, _, _] = (0, _.useMemo)(() => {
             if (!_) return [0, 0, 0, []];
-            const _ = _(_, __webpack_require__);
+            const _ = _(_, _);
             let _ = 0,
               _ = 0,
               _ = 0,
@@ -63145,7 +62565,7 @@
               _,
               _.sort((_, _) => _.display_index - _.display_index),
             ];
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_._, {
@@ -63221,8 +62641,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { marketingMessageID: _, bForceShowYear: __webpack_require__ } =
-            _,
+        const { marketingMessageID: _, bForceShowYear: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_),
           { bReady: _ } = (0, _._)(_, null);
@@ -63294,7 +62713,7 @@
                     children: (0, _.jsx)(_._, {
                       rtStartDate: _.start_date,
                       rtEndDate: _.end_date,
-                      bForceShowYear: __webpack_require__,
+                      bForceShowYear: _,
                     }),
                   }),
                 }),
@@ -63395,8 +62814,8 @@
             });
       }
       function _(_) {
-        let { label: _, count: __webpack_require__, color: _ } = _,
-          _ = `${Math.min((__webpack_require__ / 2e7) * 100, 100)}%`;
+        let { label: _, count: _, color: _ } = _,
+          _ = `${Math.min((_ / 2e7) * 100, 100)}%`;
         return (0, _.jsxs)("div", {
           className: _.VisualizationRow,
           children: [
@@ -63406,7 +62825,7 @@
                 _,
                 ": ",
                 (0, _.jsx)("span", {
-                  children: (0, _._)(__webpack_require__),
+                  children: (0, _._)(_),
                 }),
               ],
             }),
@@ -63424,10 +62843,10 @@
         });
       }
       function _(_) {
-        let { text: _, clicks: __webpack_require__, impressions: _ } = _,
+        let { text: _, clicks: _, impressions: _ } = _,
           _ = "0";
         return (
-          _ > 0 && (_ = (0, _._)((__webpack_require__ / _) * 100, 2)),
+          _ > 0 && (_ = (0, _._)((_ / _) * 100, 2)),
           (0, _.jsxs)("div", {
             className: _.SummaryCtn,
             children: [
@@ -63457,16 +62876,16 @@
             });
       }
       function _(_) {
-        const { strCountries: _, bAllowList: __webpack_require__ } = _;
+        const { strCountries: _, bAllowList: _ } = _;
         return _ && 0 != _?.trim().length
           ? (0, _.jsxs)("div", {
               className: _.CountryList,
-              children: [__webpack_require__ ? "ONLY: " : "NOT: ", _],
+              children: [_ ? "ONLY: " : "NOT: ", _],
             })
           : null;
       }
       function _(_) {
-        const { storeItemID: _, strPrefix: __webpack_require__ } = _,
+        const { storeItemID: _, strPrefix: _ } = _,
           [_, _] = (0, _._)(_._, (0, _._)(_.item_type), {});
         return _._
           ? _ || 1 != _
@@ -63476,14 +62895,7 @@
                 })
               : (0, _.jsxs)("div", {
                   className: _.OwnerLimit,
-                  children: [
-                    __webpack_require__,
-                    " ",
-                    _.GetName(),
-                    " (",
-                    _._,
-                    ")",
-                  ],
+                  children: [_, " ", _.GetName(), " (", _._, ")"],
                 })
             : (0, _.jsx)(_._, {
                 size: "small",
@@ -63493,7 +62905,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = (0, _._)(_());
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)("filter_account", 0),
+        const [_, _] = (0, _._)("filter_account", 0),
           _ = (_) =>
             window.sessionStorage.setItem(
               "marketingmessagedashboardtab",
@@ -63566,7 +62978,7 @@
                 (0, _.jsx)(_, {}),
                 (0, _.jsx)(_._, {
                   nAccountID: _,
-                  fnSetAccountFilter: __webpack_require__,
+                  fnSetAccountFilter: _,
                 }),
               ],
             }),
@@ -63580,7 +62992,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__, _] = (0, _._)(),
+        const [_, _, _] = (0, _._)(),
           _ = (0, _._)();
         let _ = new Date(1e3 * _);
         return (
@@ -63591,7 +63003,7 @@
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
-                onClick: __webpack_require__,
+                onClick: _,
                 children: "Create New",
               }),
               (0, _.jsx)(_._, {
@@ -63644,15 +63056,15 @@
       }
       function _(_) {
         const { nFilterAccountID: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(_.k_DisplayAll),
+          [_, _] = (0, _.useState)(_.k_DisplayAll),
           [_, _] = (0, _.useState)(_.k_SortByStartDate),
           [_, _] = (0, _._)("type", 0),
           [_, _] = (0, _.useState)(""),
-          _ = _(__webpack_require__, _, _, !1, _, _);
+          _ = _(_, _, _, !1, _, _);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
-              display: __webpack_require__,
+              display: _,
               fnSetDisplay: _,
               sort: _,
               fnSetSort: _,
@@ -63672,7 +63084,7 @@
       }
       function _(_) {
         const { nFilterAccountID: _ } = _,
-          [__webpack_require__, _] = (0, _._)("pastdays", 30),
+          [_, _] = (0, _._)("pastdays", 30),
           [_, _] = (0, _.useState)(_.k_DisplayAll),
           [_, _] = (0, _.useState)(_.k_SortByStartDate),
           [_, _] = (0, _._)("type", 0),
@@ -63682,7 +63094,7 @@
             let _ = (0, _._)(_, _);
             const _ = (0, _._)(_);
             return _ && 0 != _.length ? _(_, _, _, _, _, _, _, _) : null;
-          })(__webpack_require__, _, _, _, !1, _, _);
+          })(_, _, _, _, !1, _, _);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
@@ -63696,16 +63108,12 @@
               type: _,
             }),
             (0, _.jsxs)("div", {
-              children: [
-                "Recent Past ",
-                __webpack_require__,
-                " Days of Marketing Messages",
-              ],
+              children: ["Recent Past ", _, " Days of Marketing Messages"],
             }),
             (0, _.jsx)(_._, {
               type: "number",
               label: "Numer of Days",
-              value: __webpack_require__,
+              value: _,
               onChange: (_) => _(Number(_.currentTarget.value) || 30),
             }),
             (0, _.jsx)(_, {
@@ -63716,9 +63124,9 @@
       }
       function _(_) {
         const { nFilterAccountID: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(_.k_DisplayAll),
+          [_, _] = (0, _.useState)(_.k_DisplayAll),
           [_, _] = (0, _.useState)(""),
-          _ = _(__webpack_require__, _, void 0, !1, void 0, _),
+          _ = _(_, _, void 0, !1, void 0, _),
           _ = (0, _.useMemo)(
             () =>
               _.filter((_) => _.start_date && _.end_date).map((_) => ({
@@ -63734,7 +63142,7 @@
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
-              display: __webpack_require__,
+              display: _,
               fnSetDisplay: _,
               strSearch: _,
               fnSetSearch: _,
@@ -63770,7 +63178,7 @@
         });
       }
       function _(_) {
-        const { rows: _, bForceShowYear: __webpack_require__ } = _;
+        const { rows: _, bForceShowYear: _ } = _;
         return null == _
           ? (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
@@ -63787,7 +63195,7 @@
                     _,
                     {
                       marketingMessageID: _.gid,
-                      bForceShowYear: __webpack_require__,
+                      bForceShowYear: _,
                     },
                     _.gid,
                   ),
@@ -63795,7 +63203,7 @@
               });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(""),
+        const [_, _] = (0, _.useState)(""),
           [_, _] = (0, _.useState)(0),
           _ = [
             {
@@ -63867,7 +63275,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(_.k_DisplayAll),
+        const [_, _] = (0, _.useState)(_.k_DisplayAll),
           [_, _] = (0, _.useState)(_.k_SortByStartDate),
           [_, _] = (0, _.useState)(""),
           [_, _] = (0, _._)("type", 0),
@@ -63876,7 +63284,7 @@
           children: [
             (0, _.jsx)(_, {
               display: _,
-              fnSetDisplay: __webpack_require__,
+              fnSetDisplay: _,
               sort: _,
               fnSetSort: _,
               strSearch: _,
@@ -63901,11 +63309,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          oEditableMessage: _,
-          storeItem: __webpack_require__,
-          closeModal: _,
-        } = _;
+        const { oEditableMessage: _, storeItem: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: "Update Dynamic Filters",
           strDescription:
@@ -63913,7 +63317,7 @@
           onCancel: _,
           bDestructiveWarning: !0,
           onOK: () => {
-            _.ReplaceUserFilter((0, _._)(__webpack_require__, _.GetType())),
+            _.ReplaceUserFilter((0, _._)(_, _.GetType())),
               (0, _._)(_, "mm_partner_event"),
               _ && _();
           },
@@ -63925,10 +63329,10 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { oEditableMessage: _, closeModal: __webpack_require__ } = _;
+        const { oEditableMessage: _, closeModal: _ } = _;
         return (0, _.jsx)(_._, {
           oFeaturedItem: _.GetStoreItemID(),
-          closeModal: __webpack_require__,
+          closeModal: _,
           bIncludeHidden: !0,
           onConfirmFeatureItem: async (_) => {
             const _ = (0, _._)(_);
@@ -64158,7 +63562,7 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(() =>
+          [_, _] = (0, _.useState)(() =>
             _.BIsCountryShow()
               ? _.k_ECountryTarget_AllowList
               : _.k_ECountryTarget_DenyList,
@@ -64205,10 +63609,10 @@
         let _ = !1;
         2 == _ &&
           _?.length > 0 &&
-          (_ = __webpack_require__
+          (_ = _
             ? !_.toLowerCase().includes("cn")
             : _.toLowerCase().includes("cn"));
-        const _ = __webpack_require__ == _.k_ECountryTarget_AllowList;
+        const _ = _ == _.k_ECountryTarget_AllowList;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -64233,7 +63637,7 @@
                 (0, _.jsx)(_._, {
                   strClassName: (0, _._)(_().DropDownScroll, _().CountryInOut),
                   rgOptions: _,
-                  selectedOption: __webpack_require__,
+                  selectedOption: _,
                   onChange: (_) => {
                     _(_.data), _(_.data == _.k_ECountryTarget_AllowList, _);
                   },
@@ -64310,14 +63714,14 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetRealm(),
             _.GetSteamRealmsForLanguage(),
             _.GetMustUseClientLanguage()
               .split(",")
               .map((_) => (0, _._)(_, -1)),
           ]),
-          _ = 2 == __webpack_require__,
+          _ = 2 == _,
           _ = (0, _.useMemo)(
             () =>
               _._.GetLanguageListForRealms(_).map((_) => {
@@ -64329,7 +63733,7 @@
               }),
             [_],
           );
-        return 1 == __webpack_require__
+        return 1 == _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)(_._, {
@@ -65012,7 +64416,7 @@
         }
       }
       function _(_, _ = 20) {
-        const [__webpack_require__, _] = (0, _.useState)(null);
+        const [_, _] = (0, _.useState)(null);
         return (
           (0, _.useEffect)(() => {
             if (_ && _ != _._)
@@ -65031,7 +64435,7 @@
                   });
               }
           }, [_, _]),
-          __webpack_require__
+          _
         );
       }
       var _ = __webpack_require__("chunkid"),
@@ -65049,7 +64453,7 @@
           : null;
       }
       function _(_) {
-        const { _: _, _: __webpack_require__, _: _ } = _,
+        const { _: _, _: _, _: _ } = _,
           _ = _((0, _._)(_).GetStoreItemKey()._, 4);
         return _ && 0 !== _.length
           ? (0, _.jsxs)("div", {
@@ -65069,7 +64473,7 @@
                         _,
                         {
                           _: _,
-                          _: __webpack_require__,
+                          _: _,
                           _: _,
                           msg: `Show ${_} DLC`,
                           rgDLCOverride: _.slice(0, _),
@@ -65224,7 +64628,7 @@
       function _(_) {
         const {
             _: _,
-            _: __webpack_require__,
+            _: _,
             _: _,
             msg: _,
             bForceSteamChina: _,
@@ -65233,7 +64637,7 @@
             szLocale: _,
             szTimezoneOverride: _,
           } = _,
-          _ = (0, _._)(_).GetPreviewURL(__webpack_require__, _, _, _, _, _, _);
+          _ = (0, _._)(_).GetPreviewURL(_, _, _, _, _, _, _);
         return (0, _.jsx)(_._, {
           toolTipContent: _,
           children: (0, _.jsx)("a", {
@@ -65302,7 +64706,7 @@
       let _;
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { associatedID: _, associatedType: __webpack_require__ } = _,
+        const { associatedID: _, associatedType: _ } = _,
           _ = (function (_, _) {
             const _ = (0, _._)(),
               _ = _.useContext(_),
@@ -65316,7 +64720,7 @@
                 })(_, _, _, _),
               );
             return _.isLoading ? null : _.data;
-          })(_, __webpack_require__);
+          })(_, _);
         return _ && 0 != _.length
           ? (0, _.jsx)(_._, {
               children: (0, _.jsxs)("div", {
@@ -65331,7 +64735,7 @@
                       {
                         plan: _,
                         associatedID: _,
-                        associatedType: __webpack_require__,
+                        associatedType: _,
                       },
                       _.promotion_id,
                     ),
@@ -65342,11 +64746,7 @@
           : null;
       }
       function _(_) {
-        const {
-          plan: _,
-          associatedType: __webpack_require__,
-          associatedID: _,
-        } = _;
+        const { plan: _, associatedType: _, associatedID: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("a", {
@@ -65354,7 +64754,7 @@
               target: "_blank",
               children: "Edit Plan",
             }),
-            2 == __webpack_require__ &&
+            2 == _ &&
               (0, _.jsx)(_, {
                 plan: _,
                 gidMarketingMessage: _,
@@ -65363,15 +64763,15 @@
         });
       }
       function _(_) {
-        const { plan: _, gidMarketingMessage: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { plan: _, gidMarketingMessage: _ } = _,
+          _ = (0, _._)(_);
         (0, _._)(() => _.partner_id);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             Boolean(_.partner_id) &&
               (0, _.jsx)("div", {
                 children: (0, _.jsx)("a", {
-                  href: `${_._.PARTNER_BASE_URL}dashboard/${_.partner_id}?eventids=${__webpack_require__}`,
+                  href: `${_._.PARTNER_BASE_URL}dashboard/${_.partner_id}?eventids=${_}`,
                   target: "_blank",
                   children: "Open MM on Partner Dashboard",
                 }),
@@ -65385,17 +64785,14 @@
         });
       }
       function _(_) {
-        const { oEditableMessage: _, plan: __webpack_require__ } = _,
+        const { oEditableMessage: _, plan: _ } = _,
           [_, _, _, _] = (0, _._)(() => [
             _.GetUpdateEventGID(),
             _.BHasReviewedMajorUpdateAndMeetsBar(),
             _.GetAccountReviewMajorUpdate(),
             _.GetTimeReviewMajorUpdate(),
           ]),
-          _ = (0, _.useMemo)(
-            () => JSON.parse(__webpack_require__.input_jsondata),
-            [__webpack_require__],
-          ),
+          _ = (0, _.useMemo)(() => JSON.parse(_.input_jsondata), [_]),
           _ = _.GetUpdateEventGID() ?? _.update_event_gid,
           _ = _.GetUpdateEventClanAccountID() ?? _.update_event_clan_account_id,
           _ = (0, _._)(_, _, !0),
@@ -65478,7 +64875,7 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.BIsAccountInWatchList(_._.accountid),
             _.GetGID(),
           ]);
@@ -65509,11 +64906,11 @@
                   }),
                   (0, _.jsx)(_._, {
                     onClick: () => {
-                      __webpack_require__
+                      _
                         ? _.RemoveFromWatchList(_._.accountid)
                         : _.AddToWatchList(_._.accountid);
                     },
-                    children: __webpack_require__
+                    children: _
                       ? "Remove From Watch List"
                       : "Add to Watch List",
                   }),
@@ -65556,7 +64953,7 @@
       }
       function _(_) {
         const _ = new URLSearchParams(),
-          { oEditableMessage: __webpack_require__ } = _;
+          { oEditableMessage: _ } = _;
         return (
           _.set("name", __webpack_require__.GetModel().title),
           _.set("marketingmessageid", __webpack_require__.GetGID()),
@@ -65706,7 +65103,7 @@
       function _(_) {
         const { oEditableMessage: _ } = _,
           {
-            bDateSet: __webpack_require__,
+            bDateSet: _,
             bItemAssociated: _,
             bFiltersSetup: _,
             bValidLink: _,
@@ -65798,7 +65195,7 @@
                   children: "PROGRESS",
                 }),
                 (0, _.jsx)(_._, {
-                  bDone: __webpack_require__,
+                  bDone: _,
                   name: "Date Set",
                 }),
                 (0, _.jsx)(_._, {
@@ -65919,10 +65316,7 @@
         });
       }
       function _(_) {
-        const {
-          oEditableMessage: _,
-          eStoreItemMarketingMessageState: __webpack_require__,
-        } = _;
+        const { oEditableMessage: _, eStoreItemMarketingMessageState: _ } = _;
         if (!_.BHasAssociatedItemReleaseState()) return null;
         const _ = _.GetAssociatedItemReleaseState();
         let _ = "Associated Item Requires Pre-purchase state";
@@ -65934,7 +65328,7 @@
               : _ == _._.k_StoreGeneralAvailability &&
                 (_ = "Associated Item Required General Availability"),
           (0, _.jsx)(_._, {
-            bDone: _ === __webpack_require__,
+            bDone: _ === _,
             name: _,
           })
         );
@@ -66277,13 +65671,13 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.BUseCustomLegalText(),
             _.GetCustomLegalText(),
             _.GetLegalTextPartnerName(),
             _.BExplicitNoLegalPartnerNeeded(),
           ]),
-          _ = __webpack_require__ ? _ : (0, _._)(_);
+          _ = _ ? _ : (0, _._)(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
@@ -66297,10 +65691,10 @@
                   children: [
                     (0, _.jsx)(_._, {
                       label: "Use custom legal text",
-                      checked: __webpack_require__,
+                      checked: _,
                       onChange: (_) => _.SetUseCustomLegalText(_),
                     }),
-                    __webpack_require__
+                    _
                       ? (0, _.jsx)("textarea", {
                           value: _,
                           onChange: (_) =>
@@ -66357,8 +65751,8 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.GetCustomTemplate()]),
-          _ = (0, _._)(__webpack_require__ || ""),
+          [_] = (0, _._)(() => [_.GetCustomTemplate()]),
+          _ = (0, _._)(_ || ""),
           [_, _] = (0, _.useState)(() => !!_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -66389,12 +65783,12 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             "mm_auto_render" == _.GetCustomTemplate(),
             _.GetType(),
             _.GetAutoRenderSubtitle(),
           ]);
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         const _ = [
           {
             label: (0, _._)("#label_just_updated"),
@@ -66741,17 +66135,13 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.GetStoreItemKey(),
             _.BExplicitNoAssociationItem(),
             _.GetType(),
           ]),
           [_, _] = (0, _.useState)(_.BHasAssociatedSaleEvent()),
-          [_] = (0, _._)(
-            __webpack_require__?._,
-            (0, _._)(__webpack_require__?.item_type),
-            _._,
-          );
+          [_] = (0, _._)(_?._, (0, _._)(_?.item_type), _._);
         return (0, _.jsx)("div", {
           className: _().SectionCtn,
           children: (0, _.jsxs)("div", {
@@ -66771,7 +66161,7 @@
                     },
                     children: "Change Selected Product",
                   }),
-                  Boolean(__webpack_require__)
+                  Boolean(_)
                     ? (0, _.jsx)(_._, {
                         className: _().ProgressIconError,
                         onClick: () => {
@@ -66799,12 +66189,12 @@
               Boolean(!_)
                 ? (0, _.jsx)("div", {
                     className: _.TargetGamePlaceholder,
-                    children: __webpack_require__
-                      ? `${__webpack_require__._}/${__webpack_require__.item_type}`
+                    children: _
+                      ? `${_._}/${_.item_type}`
                       : "Nothing associated yet",
                   })
                 : (0, _.jsx)(_._, {
-                    _: __webpack_require__._,
+                    _: _._,
                     itemType: _.GetStoreItemType(),
                   }),
               Boolean(10 == _) &&
@@ -66833,11 +66223,8 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
-            _.GetRealm(),
-            _.GetLinkURL(),
-          ]),
-          _ = (0, _._)(__webpack_require__, _);
+          [_, _] = (0, _._)(() => [_.GetRealm(), _.GetLinkURL()]),
+          _ = (0, _._)(_, _);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_._, {
@@ -66849,13 +66236,13 @@
               requiredLabel: (0, _._)("#Steamworks_Generic_Required"),
               onChange: (_) => _.SetLinkURL(_.target.value),
             }),
-            Boolean(!_ && 1 == __webpack_require__) &&
+            Boolean(!_ && 1 == _) &&
               (0, _.jsx)("div", {
                 className: _.WarningStylesWithIcon,
                 children:
                   "Since we are displaying in Steam China only, the URL must start with the following: https://store.steamchina.com/",
               }),
-            Boolean(!_ && 2 == __webpack_require__) &&
+            Boolean(!_ && 2 == _) &&
               (0, _.jsx)("div", {
                 className: _.WarningStylesWithIcon,
                 children:
@@ -66866,7 +66253,7 @@
       }
       function _(_) {
         const { oEditableMessage: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.BHasPlatformWindows(),
             _.BHasPlatformMac(),
             _.BHasPlatformLinux(),
@@ -66877,7 +66264,7 @@
             (0, _.jsx)(_._, {
               children: "PLATFORMS",
             }),
-            Boolean(!__webpack_require__ && !_ && !_) &&
+            Boolean(!_ && !_ && !_) &&
               (0, _.jsx)("div", {
                 className: _.WarningStylesWithIcon,
                 children:
@@ -66885,7 +66272,7 @@
               }),
             (0, _.jsx)(_._, {
               label: "Windows",
-              checked: __webpack_require__,
+              checked: _,
               onChange: _.SetPlatformWindows,
             }),
             (0, _.jsx)(_._, {
@@ -67057,7 +66444,7 @@
         weekday: void 0,
       };
       function _(_) {
-        const { rgAppInfo: _, appSummaries: __webpack_require__ } = _,
+        const { rgAppInfo: _, appSummaries: _ } = _,
           [_] = (0, _._)(_.appid, {
             include_reviews: !0,
             include_release: !0,
@@ -67270,7 +66657,7 @@
           : _;
       }
       function _(_) {
-        const { display: _, fnSetDisplay: __webpack_require__ } = _,
+        const { display: _, fnSetDisplay: _ } = _,
           _ = [
             {
               label: "Show All",
@@ -67304,13 +66691,13 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(_.k_DisplayAll),
+        const [_, _] = (0, _.useState)(_.k_DisplayAll),
           _ = _(_);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
               display: _,
-              fnSetDisplay: __webpack_require__,
+              fnSetDisplay: _,
             }),
             (0, _.jsx)("div", {
               children: "Present and Future Spotlights",
@@ -67339,7 +66726,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(_.k_DisplayAll),
+        const [_, _] = (0, _.useState)(_.k_DisplayAll),
           _ = _(_),
           _ = (0, _.useMemo)(
             () =>
@@ -67359,7 +66746,7 @@
           children: [
             (0, _.jsx)(_, {
               display: _,
-              fnSetDisplay: __webpack_require__,
+              fnSetDisplay: _,
             }),
             (0, _.jsx)("h1", {
               children: "Calendar View of Spotlights",
@@ -67502,7 +66889,7 @@
             });
       }
       function _(_) {
-        const { marketingMessage: _, refresh: __webpack_require__ } = _,
+        const { marketingMessage: _, refresh: _ } = _,
           _ = 2 === _.visibility(),
           _ = new Date(1e3 * _.start_date()).toLocaleString(
             _._.GetPreferredLocales(),
@@ -67547,7 +66934,7 @@
                     !_ &&
                       (0, _.jsx)(_, {
                         marketingMessage: _,
-                        refresh: __webpack_require__,
+                        refresh: _,
                         visbilityEnd: _,
                       }),
                     (0, _.jsx)("span", {
@@ -67583,11 +66970,7 @@
         });
       }
       function _(_) {
-        const {
-            marketingMessage: _,
-            refresh: __webpack_require__,
-            visbilityEnd: _,
-          } = _,
+        const { marketingMessage: _, refresh: _, visbilityEnd: _ } = _,
           { clanAccountID: _, gidClanEvent: _ } = (0, _.useMemo)(() => {
             if (10 == _.type()) {
               const _ = (0, _._)(_.template_vars_json());
@@ -67624,7 +67007,7 @@
               }),
             (0, _.jsx)(_, {
               gid: _.gid(),
-              refresh: __webpack_require__,
+              refresh: _,
               disabled: !_,
             }),
             (0, _.jsx)("span", {
@@ -67660,7 +67043,7 @@
         });
       }
       function _(_) {
-        const { gid: _, refresh: __webpack_require__, closeModal: _ } = _,
+        const { gid: _, refresh: _, closeModal: _ } = _,
           _ = (0, _._)();
         if (_.bLoading)
           return (0, _.jsx)(_._, {
@@ -67727,16 +67110,14 @@
       }
       function _(_) {
         const { marketingMessage: _ } = _,
-          [__webpack_require__] = (0, _.useState)(() =>
-            (0, _._)(_?.template_vars_json()),
-          );
+          [_] = (0, _.useState)(() => (0, _._)(_?.template_vars_json()));
         return (0, _.jsxs)("div", {
           className: _().PreviewCtn,
           children: [
-            "mm_auto_render" == __webpack_require__.custom_display
+            "mm_auto_render" == _.custom_display
               ? (0, _.jsx)(_, {
                   marketingMessage: _,
-                  template: __webpack_require__,
+                  template: _,
                 })
               : (0, _.jsx)(_, {
                   marketingMessage: _,
@@ -67986,7 +67367,7 @@
         return _;
       }
       function _(_) {
-        const { display: _, fnSetDisplay: __webpack_require__ } = _,
+        const { display: _, fnSetDisplay: _ } = _,
           _ = [
             {
               label: "Show Active And Upcoming",
@@ -68028,15 +67409,13 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-            _.k_DisplayActiveAndUpcoming,
-          ),
+        const [_, _] = (0, _.useState)(_.k_DisplayActiveAndUpcoming),
           _ = _(_);
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)(_, {
               display: _,
-              fnSetDisplay: __webpack_require__,
+              fnSetDisplay: _,
             }),
             (0, _.jsx)("hr", {}),
             (0, _.jsx)(_, {
@@ -68051,9 +67430,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-            _.k_DisplayActiveAndUpcoming,
-          ),
+        const [_, _] = (0, _.useState)(_.k_DisplayActiveAndUpcoming),
           _ = _(_),
           _ = (0, _.useMemo)(
             () =>
@@ -68072,7 +67449,7 @@
           children: [
             (0, _.jsx)(_, {
               display: _,
-              fnSetDisplay: __webpack_require__,
+              fnSetDisplay: _,
             }),
             (0, _.jsx)("h1", {
               children: "Calendar View of Discount Events",
@@ -68268,9 +67645,7 @@
       }
       function _() {
         const _ = (0, _._)(),
-          [_, __webpack_require__] = _.useState(
-            _.Get().GetDiscountEventToEdit(),
-          );
+          [_, _] = _.useState(_.Get().GetDiscountEventToEdit());
         return (
           (0, _._)(_?.GetCallback(), (_) => {
             __webpack_require__(_), _();
@@ -68519,12 +67894,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            strLabel: _,
-            strToolTip: __webpack_require__,
-            fnSetPartner: _,
-            className: _,
-          } = _,
+        const { strLabel: _, strToolTip: _, fnSetPartner: _, className: _ } = _,
           { fnFindPartnerByName: _ } = (0, _._)(),
           _ = (0, _.useRef)(null),
           _ = (0, _.useRef)(null),
@@ -68588,12 +67958,12 @@
             onChange: _,
             onBlur: (_) => setTimeout(() => _.current && _.current.Hide(), 200),
             ref: _,
-            tooltip: __webpack_require__,
+            tooltip: _,
           }),
         });
       }
       function _(_) {
-        const { list: _, fnSetPartner: __webpack_require__ } = _;
+        const { list: _, fnSetPartner: _ } = _;
         return (0, _.jsx)(_._, {
           className: _.SearchResults,
           children: _.map((_) =>
@@ -69027,7 +68397,7 @@
       }
       function _(_) {
         const { closeModal: _ } = _,
-          [__webpack_require__, _] = _.useState("");
+          [_, _] = _.useState("");
         return (0, _.jsxs)(_._, {
           strTitle: "View App List",
           strDescription: "Opens an invitation page with the apps list below.",
@@ -69056,14 +68426,14 @@
               cols: 120,
               rows: 5,
               onChange: (_) => _(_.currentTarget.value),
-              value: __webpack_require__,
+              value: _,
               autoFocus: !0,
             }),
           ],
         });
       }
       function _(_) {
-        const { nDisplayedApps: _, strQueryParams: __webpack_require__ } = _,
+        const { nDisplayedApps: _, strQueryParams: _ } = _,
           [_] = (0, _._)("start", 1),
           [_] = (0, _._)("count", 50),
           [_] = (0, _.useState)(
@@ -69119,7 +68489,7 @@
                   (0, _.jsx)("a", {
                     href:
                       _ > 0
-                        ? `${_._.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${_._(_ - _, 0, Number.MAX_SAFE_INTEGER)}&count=${_}${__webpack_require__}`
+                        ? `${_._.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${_._(_ - _, 0, Number.MAX_SAFE_INTEGER)}&count=${_}${_}`
                         : "#",
                     children: (0, _.jsxs)(_._, {
                       disabled: _ <= 1,
@@ -69128,7 +68498,7 @@
                   }),
                   (0, _.jsx)("a", {
                     href: _
-                      ? `${_._.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${_}&count=${_}${__webpack_require__}`
+                      ? `${_._.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${_}&count=${_}${_}`
                       : "#",
                     children: (0, _.jsxs)(_._, {
                       disabled: !_,
@@ -69144,13 +68514,13 @@
       function _(_) {
         const {
             rgCandidateApps: _,
-            rgAppIDs: __webpack_require__,
+            rgAppIDs: _,
             oFeaturingMaps: _,
             rtUpcomingFeatureStart: _,
           } = _,
           _ = (0, _._)(),
           _ = _ - _._.PerDay * (_ + 1),
-          _ = (0, _._)(_, _ - _._.PerDay, __webpack_require__),
+          _ = (0, _._)(_, _ - _._.PerDay, _),
           _ = (function () {
             const [_] = (0, _.useState)(() =>
               (0, _._)("upcoming_discount_app_details", "application_config"),
@@ -69238,7 +68608,7 @@
       function _(_) {
         const {
             appInfo: _,
-            oFeaturingMaps: __webpack_require__,
+            oFeaturingMaps: _,
             oRevenueSummary: _,
             oUpcomingAppDiscountInfo: _,
             rtUpcomingFeatureStart: _,
@@ -69278,7 +68648,7 @@
                   }),
                   (0, _.jsx)(_, {
                     appInfo: _,
-                    oFeaturingMaps: __webpack_require__,
+                    oFeaturingMaps: _,
                   }),
                 ],
               }),
@@ -69332,7 +68702,7 @@
                 _ &&
                 (0, _.jsx)(_, {
                   appInfo: _,
-                  oFeaturingMaps: __webpack_require__,
+                  oFeaturingMaps: _,
                 }),
             }),
           ],
@@ -69348,7 +68718,7 @@
       }
       function _(_) {
         const { oUpcomingAppDiscountInfo: _ } = _,
-          [__webpack_require__] = (0, _._)(_.cheapest_package_id, {});
+          [_] = (0, _._)(_.cheapest_package_id, {});
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsxs)("div", {
@@ -69418,9 +68788,9 @@
         });
       }
       function _(_) {
-        const { appInfo: _, oFeaturingMaps: __webpack_require__ } = _,
+        const { appInfo: _, oFeaturingMaps: _ } = _,
           _ = (0, _._)(_.appid, 0),
-          _ = __webpack_require__.mapStoreItemToInvites.get(_);
+          _ = _.mapStoreItemToInvites.get(_);
         return _?.filter((_) => (0, _._)(_)).length > 0
           ? (0, _.jsx)(_._, {
               toolTipContent:
@@ -69615,13 +68985,13 @@
         return "Uknown (" + _ + ")";
       }
       function _(_) {
-        const { appInfo: _, oFeaturingMaps: __webpack_require__ } = _,
+        const { appInfo: _, oFeaturingMaps: _ } = _,
           {
             mapStoreItemToPlans: _,
             mapStoreItemToDailyDeals: _,
             mapStoreItemToMMs: _,
             mapStoreItemToInvites: _,
-          } = __webpack_require__,
+          } = _,
           _ = (0, _._)(_.appid, 0),
           _ = _.get(_)?.sort((_, _) => _.start_date - _.start_date),
           _ = _.get(_)?.sort(
@@ -69631,9 +69001,7 @@
             (_) => 1 == _.type || 2 == _.type || 3 == _.type,
           ),
           _ = _.get(_)
-            ?.filter(
-              (_) => !__webpack_require__.mapMMFeaturedInPlans.has(_.gid),
-            )
+            ?.filter((_) => !_.mapMMFeaturedInPlans.has(_.gid))
             .sort((_, _) => _.start_date - _.start_date),
           _ = (function (_) {
             const _ = (0, _._)(),
@@ -70026,9 +69394,9 @@
         });
       }
       function _(_) {
-        const { partnerID: _, appInfo: __webpack_require__ } = _,
+        const { partnerID: _, appInfo: _ } = _,
           [_] = (0, _._)(_),
-          _ = (0, _._)(_, __webpack_require__.appid, "business");
+          _ = (0, _._)(_, _.appid, "business");
         return _
           ? (0, _.jsxs)("div", {
               className: _().PartnerCol,
@@ -70064,11 +69432,7 @@
           : null;
       }
       function _(_) {
-        const {
-            strLabel: _,
-            fnOnTagSelected: __webpack_require__,
-            strSelectedTagIDs: _,
-          } = _,
+        const { strLabel: _, fnOnTagSelected: _, strSelectedTagIDs: _ } = _,
           { rgTags: _, rgCategories: _ } = (0, _._)(),
           _ = (0, _.useRef)(void 0),
           _ = (0, _.useRef)(void 0),
@@ -70094,7 +69458,7 @@
               ),
             ).sort((_, _) => (0, _._)(_.key, _.key));
             return _;
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return (0, _.jsxs)("div", {
           className: _().StoreTagChooser,
           children: [
@@ -70150,7 +69514,7 @@
       function _(_) {
         const {
             rtUpcomingFeatureStart: _,
-            rtUpcomingFeatureEnd: __webpack_require__,
+            rtUpcomingFeatureEnd: _,
             setUpcomingFeatureStart: _,
             setUpcomingFeatureEnd: _,
             strQueryPlan: _,
@@ -70195,7 +69559,7 @@
                 (0, _.jsx)(_._, {
                   type: _,
                   rtStartTime: _,
-                  rtEndTime: __webpack_require__,
+                  rtEndTime: _,
                   setStartTime: _,
                   setEndTime: _,
                 }),
@@ -70214,7 +69578,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(""),
+        const [_, _] = (0, _.useState)(""),
           _ = (0, _._)(),
           _ = (0, _.useMemo)(
             () =>
@@ -70369,7 +69733,7 @@
       }
       function _(_) {
         const _ = (0, _._)(),
-          { fnUpdatePlan: __webpack_require__ } = (0, _._)(),
+          { fnUpdatePlan: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
@@ -70490,14 +69854,7 @@
                                         _(_, _);
                                     }
                                     (_.current = !1), _();
-                                  })(
-                                    _,
-                                    __webpack_require__,
-                                    _,
-                                    () => _(!1),
-                                    _,
-                                    _,
-                                  );
+                                  })(_, _, _, () => _(!1), _, _);
                               },
                               children: "Start",
                             }),
@@ -70620,10 +69977,10 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, _: __webpack_require__, payload: _ } = _,
+        const { _: _, _: _, payload: _ } = _,
           _ = _.tickFormatter(_.value, _.index);
         return (0, _.jsx)("g", {
-          transform: `translate(${_},${__webpack_require__})`,
+          transform: `translate(${_},${_})`,
           children: (0, _.jsx)("text", {
             _: 0,
             _: 0,
@@ -70637,7 +69994,7 @@
         });
       }
       const _ = _.memo((_) => {
-        const { data: _, fnSelectedData: __webpack_require__ } = _,
+        const { data: _, fnSelectedData: _ } = _,
           _ = (0, _.useRef)(void 0),
           _ = (0, _.useCallback)(
             (_, _) => (_[_]?.rtTimeStart ? (0, _._)(_[_].rtTimeStart) : ""),
@@ -70851,7 +70208,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.memo((_) => {
-        const { data: _, fnSetSelected: __webpack_require__ } = _,
+        const { data: _, fnSetSelected: _ } = _,
           _ = (function (_, _) {
             const _ = Math.max(..._.map((_) => _.USD)) / (_ - 1);
             return Array.from(
@@ -71106,8 +70463,8 @@
         }, [_, _, _, _]);
       }
       function _({ item: _, rtRange: _ }) {
-        const [__webpack_require__, _] = _,
-          _ = _(_.productid, __webpack_require__, _);
+        const [_, _] = _,
+          _ = _(_.productid, _, _);
         return 4 === _.product_type && _
           ? (0, _.jsxs)(_.Fragment, {
               children: [_.percentage, "%"],
@@ -71116,7 +70473,7 @@
               children: "N/A",
             });
       }
-      function _({ appID: _, items: _, rtRange: __webpack_require__ }) {
+      function _({ appID: _, items: _, rtRange: _ }) {
         const [_] = (0, _._)(_, {
             include_release: !0,
             include_basic_info: !0,
@@ -71165,7 +70522,7 @@
                       className: (0, _._)(_.Col, _.Small),
                       children: (0, _.jsx)(_, {
                         item: _[0],
-                        rtRange: __webpack_require__,
+                        rtRange: _,
                       }),
                     }),
                   ],
@@ -71225,7 +70582,7 @@
                         _,
                         {
                           item: _,
-                          rtRange: __webpack_require__,
+                          rtRange: _,
                         },
                         `${_}-${_.productid}`,
                       ),
@@ -71235,7 +70592,7 @@
             });
       }
       function _({ item: _, rtRange: _ }) {
-        const [__webpack_require__] = (0, _._)(_.productid, {
+        const [_] = (0, _._)(_.productid, {
             include_release: !0,
             include_basic_info: !0,
           }),
@@ -71244,7 +70601,7 @@
             include_basic_info: !0,
           }),
           _ = Math.floor(_.gross_sales_usdx100),
-          _ = 4 === _.product_type ? __webpack_require__ : _;
+          _ = 4 === _.product_type ? _ : _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_.RowCtn, _.ProductRow, _.Compact),
           children: (0, _.jsxs)("div", {
@@ -71487,12 +70844,9 @@
       }
       function _(_) {
         const { rgWeeklyPlanAndResults: _ } = _,
-          [__webpack_require__, _] = (0, _._)(
-            "rtime_week",
-            _[_.length - 1].rtWeekStart,
-          ),
+          [_, _] = (0, _._)("rtime_week", _[_.length - 1].rtWeekStart),
           [_, _] = (0, _.useState)(() => {
-            const _ = _.findIndex((_) => _.rtWeekStart === __webpack_require__);
+            const _ = _.findIndex((_) => _.rtWeekStart === _);
             return _ >= 0 ? _[_] : _[_.length - 1];
           });
         return (0, _.jsxs)("div", {
@@ -71523,11 +70877,8 @@
         });
       }
       function _(_) {
-        const { type: _, week: __webpack_require__ } = _,
-          _ =
-            "midweek" == _
-              ? __webpack_require__.rgMidweeks
-              : __webpack_require__.rgWeekends,
+        const { type: _, week: _ } = _,
+          _ = "midweek" == _ ? _.rgMidweeks : _.rgWeekends,
           [_, _] = (0, _.useState)(null),
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useMemo)(
@@ -71592,10 +70943,7 @@
         );
       }
       function _(_) {
-        const {
-            rgWeeklyPlanAndResults: _,
-            fnSetSelectedWeek: __webpack_require__,
-          } = _,
+        const { rgWeeklyPlanAndResults: _, fnSetSelectedWeek: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               _.map((_) => {
@@ -71837,7 +71185,7 @@
         });
       }
       function _(_) {
-        const { oInvite: _, rgRTimeWeeks: __webpack_require__ } = _,
+        const { oInvite: _, rgRTimeWeeks: _ } = _,
           [_, _] = (0, _.useState)(10),
           _ = __webpack_require__.slice(0, _),
           { bLoading: _, rgDiscountConflict: _ } = (0, _._)(_);
@@ -71860,7 +71208,7 @@
                     "start" + _,
                   ),
                 ),
-                Boolean(_.length < __webpack_require__.length) &&
+                Boolean(_.length < _.length) &&
                   (0, _.jsx)(_._, {
                     onClick: () => _(_ + 10),
                     children: (0, _._)("#Sale_ShowMore"),
@@ -71869,26 +71217,22 @@
             });
       }
       function _(_) {
-        const {
-            oInvite: _,
-            rtStartTime: __webpack_require__,
-            rgDiscountConflict: _,
-          } = _,
+        const { oInvite: _, rtStartTime: _, rgDiscountConflict: _ } = _,
           _ = 2 == _.type ? 3 : 4,
-          _ = __webpack_require__ + 24 * _ * 60 * 60,
+          _ = _ + 24 * _ * 60 * 60,
           {
             nMaxDiscount: _,
             strDiscountName: _,
             bMajorSale: _,
             strConflict: _,
             nextDiscount: _,
-          } = (0, _._)(_, _, __webpack_require__, _);
+          } = (0, _._)(_, _, _, _);
         return (0, _.jsxs)("div", {
           className: _().Row,
           children: [
             (0, _.jsx)(_._, {
               className: _.Dates,
-              rtStartDate: __webpack_require__,
+              rtStartDate: _,
               rtEndDate: _,
             }),
             (0, _.jsx)(_._, {
@@ -71909,7 +71253,7 @@
       }
       function _(_) {
         const { oInvite: _ } = _,
-          [__webpack_require__] = (0, _._)(_),
+          [_] = (0, _._)(_),
           _ = 2 == _.type,
           _ = (0, _._)(
             _ ? "#Invite_Landing_Type_Midweek" : "#Invite_Landing_Type_Weekend",
@@ -72284,11 +71628,7 @@
             });
       }
       function _(_) {
-        const {
-          oEditablePlan: _,
-          closeModal: __webpack_require__,
-          bTakeOwnership: _,
-        } = _;
+        const { oEditablePlan: _, closeModal: _, bTakeOwnership: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: _
             ? "Claim Ownership of Production Design?"
@@ -72296,21 +71636,17 @@
           strDescription: _
             ? "Do you want to claim ownership of the artwork and localizations required for this promotion plan?"
             : "Remove the current owner of the production design on this event?",
-          closeModal: __webpack_require__,
+          closeModal: _,
           onOK: () => {
             _
               ? _.SetArtworkOwnerAccountID(_._.accountid)
               : _.SetArtworkOwnerAccountID(null);
           },
-          onCancel: __webpack_require__,
+          onCancel: _,
         });
       }
       function _(_) {
-        const {
-          oEditablePlan: _,
-          closeModal: __webpack_require__,
-          bTakeOwnership: _,
-        } = _;
+        const { oEditablePlan: _, closeModal: _, bTakeOwnership: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: _
             ? "Claim Operations Ownership?"
@@ -72318,22 +71654,22 @@
           strDescription: _
             ? "Do you want to claim ownership of the operations for this plans promotion? This means reviewing and verifying all of require items are provided before the promotion needs to go live."
             : "Remove the current owner of the operations owner this promotion plan?",
-          closeModal: __webpack_require__,
+          closeModal: _,
           onOK: () => {
             _
               ? _.SetOperatorOwnerAccountID(_._.accountid)
               : _.SetOperatorOwnerAccountID(null);
           },
-          onCancel: __webpack_require__,
+          onCancel: _,
         });
       }
       function _(_) {
-        const { oEditablePlan: _, closeModal: __webpack_require__ } = _;
+        const { oEditablePlan: _, closeModal: _ } = _;
         return (0, _.jsxs)(_._, {
           strTitle: "Complete the production Design",
           strDescription:
             "Please verify the production design aspect is completed. All of the localized artwork is uploading into each of the appropriate featuring for this plan.",
-          closeModal: __webpack_require__,
+          closeModal: _,
           onOK: () =>
             _.SetArtworkCompleted(Math.floor(new Date().getTime() / 1e3)),
           children: [
@@ -72396,11 +71732,11 @@
       function _(_) {
         const {
             rtInitialDate: _,
-            initialType: __webpack_require__,
+            initialType: _,
             closeModal: _,
             rtInitialEndDate: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__ || "saleevent"),
+          [_, _] = _.useState(_ || "saleevent"),
           [_, _] = _.useState(""),
           [_, _] = _.useState((0, _._)(_)),
           [_, _] = _.useState((0, _._)(_, _)),
@@ -72819,7 +72155,7 @@
         );
       }
       function _(_) {
-        const { type: _, setType: __webpack_require__ } = _,
+        const { type: _, setType: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               [
@@ -72893,7 +72229,7 @@
         });
       }
       function _(_) {
-        const { intention: _, setIntention: __webpack_require__ } = _,
+        const { intention: _, setIntention: _ } = _,
           _ = (0, _.useMemo)(() => {
             const _ = new Array();
             return (
@@ -72976,7 +72312,7 @@
       function _(_) {
         const {
             rtStartTime: _,
-            setStartTime: __webpack_require__,
+            setStartTime: _,
             rtEndTime: _,
             setEndTime: _,
           } = _,
@@ -72995,7 +72331,7 @@
               }
               __webpack_require__(_);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           );
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.DateCtn, "DateCtn"),
@@ -73026,12 +72362,12 @@
       function _(_) {
         const {
             type: _,
-            rtStartTime: __webpack_require__,
+            rtStartTime: _,
             setStartTime: _,
             setEndTime: _,
             fnSetSlotFull: _,
           } = _,
-          [_, _] = (0, _.useState)(__webpack_require__),
+          [_, _] = (0, _.useState)(_),
           _ = (0, _.useMemo)(() => [_], [_]),
           _ = (0, _._)(104, _),
           _ = (0, _.useMemo)(() => {
@@ -73058,15 +72394,12 @@
               const _ = _._.get(_),
                 _ = _?.get(_)?.find((_) => {
                   const _ = new Date(1e3 * (_.rtWeekStart + _.rtStartModifier));
-                  return (
-                    _.setHours(10),
-                    Math.floor(_.getTime() / 1e3) == __webpack_require__
-                  );
+                  return _.setHours(10), Math.floor(_.getTime() / 1e3) == _;
                 }),
                 _ = _.nMaxSlots - _?.rgPlans?.length;
               _(_ <= 0);
             }
-          }, [_, __webpack_require__, _, _]),
+          }, [_, _, _, _]),
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -73075,13 +72408,13 @@
               (0, _.jsx)(_._, {
                 strDropDownClassName: _().DropDownScroll,
                 rgOptions: _,
-                selectedOption: __webpack_require__,
+                selectedOption: _,
                 onChange: (_) => {
                   const _ = _._.get(_);
                   _(_.data), _(_.data + _.rtDays * _._.PerDay);
                 },
               }),
-              _ != __webpack_require__ &&
+              _ != _ &&
                 (0, _.jsx)("p", {
                   className: _.WarningStylesBackground,
                   children:
@@ -73110,12 +72443,12 @@
       function _(_) {
         const {
             nStoreItemID: _,
-            eStoreItemType: __webpack_require__,
+            eStoreItemType: _,
             nPartnerID: _,
             setPartnerID: _,
           } = _,
-          _ = (0, _._)(_, __webpack_require__),
-          [_] = (0, _._)(_, __webpack_require__, {}),
+          _ = (0, _._)(_, _),
+          [_] = (0, _._)(_, _, {}),
           _ = _.useId();
         if (
           (_.useEffect(() => {
@@ -73151,7 +72484,7 @@
                   "Error: Cannot determine partner associated with id ",
                   _,
                   " type ",
-                  __webpack_require__,
+                  _,
                 ],
               })
             : 1 == _.size
@@ -73313,7 +72646,7 @@
         );
       }
       function _(_) {
-        const { oEditablePlan: _, closeModal: __webpack_require__ } = _,
+        const { oEditablePlan: _, closeModal: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState(void 0),
           { fnDeletePlan: _ } = (0, _._)();
@@ -73321,7 +72654,7 @@
           strTitle: "Remove Promotion Plan?",
           strDescription:
             "Are you sure you want to remove the promotion plan for the following? This can't be undone, but a new one can be created if needed.  This will only delete the promotion plan itself; this has no effect on the discount event or other associated featuring of the plan.",
-          onCancel: __webpack_require__,
+          onCancel: _,
           onOK: () => {
             _(!0),
               _(_.GetModel()._).then((_) => {
@@ -73358,8 +72691,8 @@
         });
       }
       function _(_) {
-        const { _: _, storeItemType: __webpack_require__ } = _,
-          [_] = (0, _._)(_, __webpack_require__, {
+        const { _: _, storeItemType: _ } = _,
+          [_] = (0, _._)(_, _, {
             include_basic_info: !0,
             include_assets: !0,
           });
@@ -73408,7 +72741,7 @@
       function _(_) {
         const {
           name: _,
-          _: __webpack_require__,
+          _: _,
           fnSetID: _,
           fnGetURL: _,
           placeHolder: _,
@@ -73420,7 +72753,7 @@
             (0, _.jsx)(_._, {
               type: "text",
               label: _,
-              value: __webpack_require__ || "",
+              value: _ || "",
               onChange: (_) => _(_?.currentTarget?.value || ""),
               placeholder: _,
               tooltip: _,
@@ -73435,7 +72768,7 @@
       function _(_) {
         const {
           name: _,
-          _: __webpack_require__,
+          _: _,
           fnSetID: _,
           index: _,
           placeHolder: _,
@@ -73447,7 +72780,7 @@
             (0, _.jsx)(_._, {
               type: "text",
               label: _,
-              value: __webpack_require__ || "",
+              value: _ || "",
               onChange: (_) => _(_?.currentTarget?.value || "", _),
               placeholder: _,
               tooltip: _,
@@ -73462,7 +72795,7 @@
       function _(_) {
         const {
           name: _,
-          type: __webpack_require__,
+          type: _,
           _: _,
           showSimplifiedOpenText: _,
           fnGetURL: _,
@@ -73480,10 +72813,7 @@
               : (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsxs)("b", {
-                      children: [
-                        __webpack_require__,
-                        _ && __webpack_require__ ? ": " : "",
-                      ],
+                      children: [_, _ && _ ? ": " : ""],
                     }),
                     _,
                   ],
@@ -73509,7 +72839,7 @@
       function _(_) {
         const {
           name: _,
-          type: __webpack_require__,
+          type: _,
           _: _,
           showSimplifiedOpenText: _,
           fnGetURL: _,
@@ -73528,10 +72858,7 @@
               : (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsxs)("b", {
-                      children: [
-                        __webpack_require__,
-                        _ && __webpack_require__ ? ": " : "",
-                      ],
+                      children: [_, _ && _ ? ": " : ""],
                     }),
                     _,
                   ],
@@ -73597,7 +72924,7 @@
         };
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!0),
+        const [_, _] = _.useState(!0),
           [_, _] = _.useState();
         return (
           _.useEffect(() => {
@@ -73773,14 +73100,14 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.BIsDeliveryReviewed(),
             _.GetEndDate() < _._.GetTimeNowWithOverride(),
           ]);
         return _
           ? null
           : (0, _.jsx)(_.Fragment, {
-              children: Boolean(__webpack_require__)
+              children: Boolean(_)
                 ? (0, _.jsx)(_, {
                     oEditablePlan: _,
                   })
@@ -73806,9 +73133,9 @@
       }
       function _(_) {
         const { input: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_?.art_requests]),
+          [_] = (0, _._)(() => [_?.art_requests]),
           _ = (0, _.useMemo)(() => {
-            if (!__webpack_require__?.length) return null;
+            if (!_?.length) return null;
             const _ = new Set();
             return (
               __webpack_require__.forEach((_) =>
@@ -73852,7 +73179,7 @@
               ),
               Array.from(_)
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _?.length
           ? (0, _.jsxs)("div", {
               children: [
@@ -73934,7 +73261,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.GetDeliveryReviewTime(),
             _.GetDeliveryReviewAccount(),
           ]);
@@ -73968,9 +73295,9 @@
               (0, _.jsxs)("div", {
                 children: [
                   "Reviewed: ",
-                  (0, _._)(__webpack_require__),
+                  (0, _._)(_),
                   "@ ",
-                  (0, _._)(__webpack_require__, {
+                  (0, _._)(_, {
                     bForce24HourClock: !1,
                   }),
                 ],
@@ -73980,11 +73307,7 @@
         });
       }
       function _(_) {
-        const {
-            oEditablePlan: _,
-            closeModal: __webpack_require__,
-            bReviewVerify: _,
-          } = _,
+        const { oEditablePlan: _, closeModal: _, bReviewVerify: _ } = _,
           _ = (0, _._)(_.GetID()),
           [_, _] = (0, _.useState)(_.GetDeliveryReviewNotes());
         return (0, _.jsx)(_._, {
@@ -73994,7 +73317,7 @@
           strDescription: _
             ? "Is the Asset Delivery Reviewed?"
             : "Remove the asset delivery review status from this plan?",
-          closeModal: __webpack_require__,
+          closeModal: _,
           bAllowFullSize: !0,
           bDisableBackgroundDismiss: !0,
           onOK: () => {
@@ -74083,7 +73406,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { bSavePlanFirst: _ } = _,
-          { fnUpdatePlan: __webpack_require__ } = (0, _._)(),
+          { fnUpdatePlan: _ } = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (0, _._)();
@@ -74176,22 +73499,18 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            oEditablePlan: _,
-            clusterType: __webpack_require__,
-            index: _,
-          } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { oEditablePlan: _, clusterType: _, index: _ } = _,
+          _ = (0, _._)(_);
         return (0, _.jsxs)("div", {
           className: _.LinkCtn,
           children: [
             (0, _.jsx)(_._, {
               name: _ + " ID",
-              placeHolder: (0, _._)(__webpack_require__),
-              _: _.GetClusterID(__webpack_require__, 0),
+              placeHolder: (0, _._)(_),
+              _: _.GetClusterID(_, 0),
               index: 0,
-              fnSetID: (_, _) => _.SetClusterID(__webpack_require__, _, _),
-              fnGetURL: (_, _) => _._.GetClusterEditURL(__webpack_require__, _),
+              fnSetID: (_, _) => _.SetClusterID(_, _, _),
+              fnGetURL: (_, _) => _._.GetClusterEditURL(_, _),
             }),
             (0, _.jsxs)("div", {
               className: _.ButtonRow,
@@ -74201,7 +73520,7 @@
                     (0, _._)(
                       (0, _.jsx)(_, {
                         oEditablePlan: _,
-                        clusterType: __webpack_require__,
+                        clusterType: _,
                         index: _,
                       }),
                       (0, _._)(_),
@@ -74214,7 +73533,7 @@
                     (0, _._)(
                       (0, _.jsx)(_, {
                         oEditablePlan: _,
-                        clusterType: __webpack_require__,
+                        clusterType: _,
                         index: _,
                       }),
                       (0, _._)(_),
@@ -74228,7 +73547,7 @@
         });
       }
       function _(_) {
-        const { index: _, oEditablePlan: __webpack_require__ } = _,
+        const { index: _, oEditablePlan: _ } = _,
           [_, _] = (0, _.useState)(_._.k_ConfigPage_FreeToPlay_Takeover),
           _ = (0, _.useMemo)(
             () =>
@@ -74251,7 +73570,7 @@
                 _(__webpack_require__.GetContentHubTakeoverType(_));
                 break;
               }
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
@@ -74268,7 +73587,7 @@
               }),
               (0, _.jsx)(_, {
                 index: _,
-                oEditablePlan: __webpack_require__,
+                oEditablePlan: _,
                 clusterType: _,
               }),
             ],
@@ -74276,12 +73595,7 @@
         );
       }
       function _(_) {
-        const {
-            closeModal: _,
-            oEditablePlan: __webpack_require__,
-            clusterType: _,
-            index: _,
-          } = _,
+        const { closeModal: _, oEditablePlan: _, clusterType: _, index: _ } = _,
           [_, _] = (0, _.useState)(__webpack_require__.GetName()),
           [_, _] = (0, _.useState)(""),
           _ = "Create New " + (0, _._)(_),
@@ -74352,11 +73666,7 @@
             });
       }
       function _(_) {
-        const {
-            closeModal: _,
-            oEditablePlan: __webpack_require__,
-            clusterType: _,
-          } = _,
+        const { closeModal: _, oEditablePlan: _, clusterType: _ } = _,
           _ = (0, _._)(_);
         return (0, _.jsx)(_._, {
           strTitle: "Choose Existing " + _,
@@ -74372,11 +73682,11 @@
       function _(_) {
         const {
             storeItemID: _,
-            storeItemType: __webpack_require__,
+            storeItemType: _,
             closeModal: _,
             fnSetStoreItemFeature: _,
           } = _,
-          [_, _] = _.useState((0, _._)(_, __webpack_require__));
+          [_, _] = _.useState((0, _._)(_, _));
         return (0, _.jsxs)(_._, {
           strTitle: "Update Item Featuring",
           bDisableBackgroundDismiss: !0,
@@ -74388,7 +73698,7 @@
             Boolean(_)
               ? (0, _.jsx)(_._, {
                   _: _,
-                  itemType: __webpack_require__,
+                  itemType: _,
                 })
               : (0, _.jsx)("div", {
                   children: "No featured store item selected.",
@@ -74519,7 +73829,7 @@
         (0, _._)([_._], _.prototype, "RevertChanges", null);
       class _ {
         m_model = null;
-        InitPromotionPlanToEdit(_, _, __webpack_require__ = !1) {
+        InitPromotionPlanToEdit(_, _, _ = !1) {
           return (
             "dev" == _._.WEB_UNIVERSE &&
               console.log(
@@ -74529,8 +73839,7 @@
               ),
             this.m_model
               ? (this.m_model.Reset(_, _),
-                __webpack_require__ &&
-                  this.m_model.GetCallback().Dispatch(this.m_model))
+                _ && this.m_model.GetCallback().Dispatch(this.m_model))
               : (this.m_model = new _(_, _)),
             this.m_model
           );
@@ -74555,9 +73864,7 @@
       }
       function _() {
         const _ = (0, _._)(),
-          [_, __webpack_require__] = _.useState(
-            _.Get().GetPromotionPlanToEdit(),
-          );
+          [_, _] = _.useState(_.Get().GetPromotionPlanToEdit());
         return (
           (0, _._)(_?.GetCallback(), (_) => {
             __webpack_require__(_), _();
@@ -74613,7 +73920,7 @@
       }
       function _(_) {
         const _ = (0, _._)().GetModel(),
-          [__webpack_require__, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _] = (0, _._)(() => [
             _.owner_account_id,
             _.creator_account_id,
             _.artwork_owner_account_id,
@@ -74636,7 +73943,7 @@
                   }),
                 ],
               }),
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsxs)("div", {
                 className: _().SectionCtn,
                 children: [
@@ -74644,7 +73951,7 @@
                     children: "Owner:",
                   }),
                   (0, _.jsx)(_._, {
-                    accountID: __webpack_require__,
+                    accountID: _,
                   }),
                 ],
               }),
@@ -74779,7 +74086,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { fnBIsPlanDirty: _ } = (0, _._)(),
-          { fnBIsPlanInputPipelineDirty: __webpack_require__ } = (0, _._)(),
+          { fnBIsPlanInputPipelineDirty: _ } = (0, _._)(),
           { fnBIsPlanPartnerRequestDirty: _ } = {
             fnBIsPlanPartnerRequestDirty: _.useCallback(
               () =>
@@ -74804,7 +74111,7 @@
               window.onbeforeunload = () => {};
             }
           ),
-          [_, __webpack_require__, _],
+          [_, _, _],
         );
         return (0, _.jsx)(_._, {
           message: (_) =>
@@ -74944,8 +74251,8 @@
         });
       }
       function _(_) {
-        const { _: _, type: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__, _);
+        const { _: _, type: _ } = _,
+          _ = (0, _._)(_, _);
         if (!_) return null;
         const _ = Boolean(_.visibility.visible),
           _ =
@@ -74997,7 +74304,7 @@
                         ")",
                       ],
                     },
-                    __webpack_require__ + "_" + _,
+                    _ + "_" + _,
                   );
                 }),
               ],
@@ -75009,9 +74316,7 @@
                   "Error: Takeover has an overide URL which isn't store or community. Check for typos.",
               }),
             Boolean(
-              _ &&
-                __webpack_require__ == _._.k_ConfigPage_TakeoverSteamChina &&
-                !(0, _._)(_),
+              _ && _ == _._.k_ConfigPage_TakeoverSteamChina && !(0, _._)(_),
             ) &&
               (0, _.jsx)("div", {
                 className: (0, _._)(_.StatusRow, _.StatusAlert),
@@ -75097,8 +74402,8 @@
         });
       }
       function _(_) {
-        const { clanAccountID: _, gidClanEvent: __webpack_require__ } = _,
-          { eventModel: _ } = (0, _._)(_, __webpack_require__);
+        const { clanAccountID: _, gidClanEvent: _ } = _,
+          { eventModel: _ } = (0, _._)(_, _);
         if (!_) return null;
         const _ = Boolean(_.BIsVisibleEvent()),
           _ =
@@ -75158,8 +74463,8 @@
         });
       }
       function _(_) {
-        const { clanAccountID: _, gidClanEvent: __webpack_require__ } = _,
-          { eventModel: _ } = (0, _._)(_, __webpack_require__);
+        const { clanAccountID: _, gidClanEvent: _ } = _,
+          { eventModel: _ } = (0, _._)(_, _);
         if (!_) return null;
         const _ = Boolean(_.BIsVisibleEvent());
         let _ = 0;
@@ -75209,7 +74514,7 @@
         });
       }
       function _(_) {
-        const { strDiscountEventID: _, oEditablePlan: __webpack_require__ } = _,
+        const { strDiscountEventID: _, oEditablePlan: _ } = _,
           _ = (0, _._)(_),
           [_, _, _] = (0, _._)(() => [
             __webpack_require__.GetSaleClanAccountID(),
@@ -75311,7 +74616,7 @@
         });
       }
       function _(_) {
-        const { oEditablePlan: _, closeModal: __webpack_require__ } = _,
+        const { oEditablePlan: _, closeModal: _ } = _,
           [_, _] = (0, _.useState)(_.GetName() + " Advertising App"),
           [_, _] = (0, _.useState)(_.BHasAdvertisingAppID()),
           [_, _] = (0, _.useState)(() => _.GetPartnerID() || _._),
@@ -75326,13 +74631,13 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: "Creating Advertising App",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : _
             ? (0, _.jsx)(_._, {
                 strTitle: "Create New Advertising App?",
                 strDescription: `You already have appid with ID ${_.GetAdvertisingAppID()} associated with this promotion plan.  Are you sure you want to create a new one?`,
-                onCancel: __webpack_require__,
+                onCancel: _,
                 onOK: () => _(!1),
                 strOKButtonText: "Create New Advertising App Anyways",
               })
@@ -75340,7 +74645,7 @@
                 strTitle: "Create New Advertising App?",
                 strDescription:
                   "Creates and links the advertising app to this promotion. We always create the advertising app on the special 504 publisher ID.",
-                onCancel: __webpack_require__,
+                onCancel: _,
                 className: _.CreationDialogCtn,
                 bOKDisabled: 0 == _.trim().length,
                 bAllowFullSize: !0,
@@ -75445,14 +74750,14 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.GetSaleClanAccountID(),
             _.GetSaleClanEventGID(),
           ]),
-          _ = (0, _._)(__webpack_require__, _),
+          _ = (0, _._)(_, _),
           _ = (0, _.useMemo)(
             () => ({
-              clanAccountID: __webpack_require__,
+              clanAccountID: _,
               clanEventGID: _,
               eEventType: 20,
               strEventName: _.GetName(),
@@ -75460,7 +74765,7 @@
               rtEndTime: _.GetEndDate(),
               bVisible: !0,
             }),
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         return (0, _.jsx)(_._, {
           children: Boolean(_)
@@ -75479,7 +74784,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _, _, _] = (0, _._)(() => [
+          [_, _, _, _] = (0, _._)(() => [
             _.BHasAssociatedBlogEvent(),
             _.BRequiresBlogPage(),
             _.GetBlogClanAccountID(),
@@ -75490,7 +74795,7 @@
         return (0, _.jsxs)("div", {
           className: _.LinkCtn,
           children: [
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsxs)("div", {
                 className: _.SalePageLinkCtn,
                 children: [
@@ -75509,7 +74814,7 @@
               }),
             (0, _.jsxs)(_._, {
               title: "Link A Blog Post:",
-              bStartMinimized: __webpack_require__,
+              bStartMinimized: _,
               children: [
                 (0, _.jsx)("p", {
                   children:
@@ -75549,7 +74854,7 @@
                     (0, _.jsx)("div", {
                       className: _.ButtonRow,
                       children:
-                        Boolean(__webpack_require__) &&
+                        Boolean(_) &&
                         (0, _.jsx)(_._, {
                           onClick: (_) => _.ClearBlogPage(),
                           children: "Clear Associated Blog Post",
@@ -75563,12 +74868,7 @@
         });
       }
       function _(_) {
-        const {
-            planid: _,
-            children: __webpack_require__,
-            bCanBeMissing: _,
-            bForceReload: _,
-          } = _,
+        const { planid: _, children: _, bCanBeMissing: _, bForceReload: _ } = _,
           [_, _] = _.useState(!1),
           _ = _ ? !_ : _,
           { oPlanContainer: _, bError: _ } = (0, _._)(_, _),
@@ -75600,7 +74900,7 @@
               })
             : (_ && !_) || _ || _
               ? (0, _.jsxs)(_.Fragment, {
-                  children: [__webpack_require__, " "],
+                  children: [_, " "],
                 })
               : (0, _.jsx)(_._, {
                   size: "medium",
@@ -75892,7 +75192,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.GetSpotlightIDs(0),
             _.GetDiscountEventID(),
             _.GetMarketingMessageID(0),
@@ -75903,7 +75203,7 @@
             _.GetSaleClanAccountID(),
             _.GetSaleClanEventGID(),
           ]),
-          _ = (0, _._)(__webpack_require__),
+          _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
@@ -76369,7 +75669,7 @@
       function _(_) {
         const {
           nNumDiscountDays: _,
-          strNumDaysString: __webpack_require__,
+          strNumDaysString: _,
           nTotalDiscountSalesUSD: _,
           nPercentLift: _,
           strPercentLift: _,
@@ -76387,7 +75687,7 @@
                 }),
                 (0, _.jsx)("div", {
                   className: _().SmallText,
-                  children: __webpack_require__ || "Discount Days",
+                  children: _ || "Discount Days",
                 }),
               ],
             }),
@@ -76469,26 +75769,16 @@
       }
       const _ = 365;
       function _(_) {
-        const { rgAppList: _, oDiscountEvent: __webpack_require__ } = _,
+        const { rgAppList: _, oDiscountEvent: _ } = _,
           _ = (0, _._)(_, _),
-          _ = (0, _._)(
-            __webpack_require__.start_date,
-            __webpack_require__.end_date,
-            _,
-          );
+          _ = (0, _._)(_.start_date, _.end_date, _);
         if (!_ || !_)
           return (0, _.jsx)(_._, {
             string: "Loading",
             size: "medium",
             position: "center",
           });
-        const _ = Math.max(
-            1,
-            Math.ceil(
-              (__webpack_require__.end_date - __webpack_require__.start_date) /
-                86400,
-            ),
-          ),
+        const _ = Math.max(1, Math.ceil((_.end_date - _.start_date) / 86400)),
           _ = _.GetTotalSummary().gross_sales_usd / _ / 100,
           _ = _.GetTotalSummary().gross_sales_usd / _ / 100,
           _ = _.GetTotalSummary().gross_sales_usd / 100,
@@ -76702,13 +75992,10 @@
           ],
         });
       }
-      function _({ active: _, payload: _, displayType: __webpack_require__ }) {
+      function _({ active: _, payload: _, displayType: _ }) {
         if (_ && _ && _.length) {
           const _ = _[0].payload,
-            _ =
-              "sales" === __webpack_require__
-                ? `$${(0, _._)(_.value)}`
-                : (0, _._)(_.value);
+            _ = "sales" === _ ? `$${(0, _._)(_.value)}` : (0, _._)(_.value);
           return (0, _.jsxs)(_._, {
             children: [
               (0, _.jsx)("b", {
@@ -76723,8 +76010,8 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.GetID()]),
-          _ = (0, _._)([__webpack_require__], 0);
+          [_] = (0, _._)(() => [_.GetID()]),
+          _ = (0, _._)([_], 0);
         console.log(_);
         const [_, _] = (0, _.useMemo)(() => {
           if (!_ || !_.sales || _.sales.length < 1) return [0, 0];
@@ -76759,7 +76046,7 @@
               children: "Daily Featuring Sales",
             }),
             (0, _.jsx)(_, {
-              promotionID: __webpack_require__,
+              promotionID: _,
               displayType: "sales",
             }),
             (0, _.jsx)("br", {}),
@@ -76767,7 +76054,7 @@
               children: "Daily Featuring Units",
             }),
             (0, _.jsx)(_, {
-              promotionID: __webpack_require__,
+              promotionID: _,
               displayType: "units",
             }),
           ],
@@ -76787,9 +76074,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [
-            _.GetEndDate() < _._.GetTimeNowWithOverride(),
-          ]);
+          [_] = (0, _._)(() => [_.GetEndDate() < _._.GetTimeNowWithOverride()]);
         return (0, _.jsxs)("div", {
           className: _().RightCol,
           children: [
@@ -76804,10 +76089,10 @@
                 }),
               ],
             }),
-            Boolean(__webpack_require__)
+            Boolean(_)
               ? (0, _.jsx)(_._, {
                   title: "Shipping Status",
-                  bStartMinimized: __webpack_require__,
+                  bStartMinimized: _,
                   children: (0, _.jsx)(_, {
                     oEditablePlan: _,
                   }),
@@ -76820,9 +76105,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [
-            _.BOnWatchList(_._.accountid),
-          ]);
+          [_] = (0, _._)(() => [_.BOnWatchList(_._.accountid)]);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -76952,7 +76235,7 @@
                     ? _.RemoveFromWatchList(_._.accountid)
                     : _.AddToWatchList(_._.accountid);
                 },
-                children: __webpack_require__
+                children: _
                   ? "Remove from my watch list"
                   : "Add to my watch list",
               }),
@@ -76964,13 +76247,13 @@
         });
       }
       function _(_) {
-        const { oEditablePlan: _, closeModal: __webpack_require__ } = _,
+        const { oEditablePlan: _, closeModal: _ } = _,
           [_, _] = (0, _.useState)(_.GetOwnerAccountID());
         return (0, _.jsx)(_._, {
           strTitle: "Change Plan Owner",
           strDescription:
             "Change the primary contact and person responsible for this promotion",
-          closeModal: __webpack_require__,
+          closeModal: _,
           bOKDisabled: !_,
           onOK: () => _.SetPlanOwnerAccountID(_),
           children: (0, _.jsx)(_._, {
@@ -76981,7 +76264,7 @@
       }
       function _(_) {
         const _ = new URLSearchParams(),
-          { oEditablePlan: __webpack_require__ } = _;
+          { oEditablePlan: _ } = _;
         return (
           _.set("name", __webpack_require__.GetModel().name),
           _.set("promotionplanid", __webpack_require__.GetID()),
@@ -76996,7 +76279,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _] = (0, _._)(() => [
+          [_, _] = (0, _._)(() => [
             _.BIsReviewed(),
             _.GetEndDate() < _._.GetTimeNowWithOverride(),
           ]);
@@ -77006,13 +76289,13 @@
               (0, _.jsx)(_, {
                 oEditablePlan: _,
               }),
-            Boolean(!_ && __webpack_require__) &&
+            Boolean(!_ && _) &&
               (0, _.jsx)(_.Fragment, {
                 children: (0, _.jsx)(_, {
                   oEditablePlan: _,
                 }),
               }),
-            Boolean(!_ && !__webpack_require__) &&
+            Boolean(!_ && !_) &&
               (0, _.jsx)(_, {
                 oEditablePlan: _,
               }),
@@ -77047,7 +76330,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.BIsMarkedCompleted(),
             _.GetMarkedCompletedAccount(),
             _.GetReviewedAccount(),
@@ -77101,7 +76384,7 @@
               (0, _.jsxs)("div", {
                 className: _.OwnerCtn,
                 children: [
-                  Boolean(__webpack_require__) &&
+                  Boolean(_) &&
                     (0, _.jsx)("div", {
                       children: (0, _.jsx)(_._, {
                         accountID: _,
@@ -77113,17 +76396,15 @@
                       (0, _._)(
                         (0, _.jsx)(_, {
                           oEditablePlan: _,
-                          bMarkedCompleted: !__webpack_require__,
+                          bMarkedCompleted: !_,
                         }),
                         (0, _._)(_),
                       ),
-                    children: __webpack_require__
-                      ? "Clear Completed"
-                      : "Mark Completed",
+                    children: _ ? "Clear Completed" : "Mark Completed",
                   }),
                 ],
               }),
-              Boolean(__webpack_require__) &&
+              Boolean(_) &&
                 (0, _.jsxs)("div", {
                   children: [
                     "Completed At ",
@@ -77140,7 +76421,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _, _, _, _, _, _, _, _] = (0, _._)(() => [
+          [_, _, _, _, _, _, _, _, _] = (0, _._)(() => [
             _.GetSaleClanAccountID(),
             _.GetSaleClanEventGID(),
             _.GetFeaturedItemID(),
@@ -77167,7 +76448,7 @@
                   children: " This promo is over ",
                 }),
               }),
-              Boolean(__webpack_require__ || _ || _) &&
+              Boolean(_ || _ || _) &&
                 (0, _.jsxs)("div", {
                   children: [
                     (0, _.jsx)(_, {
@@ -77206,11 +76487,11 @@
                           (0, _.jsx)("br", {}),
                         ],
                       }),
-                    Boolean(__webpack_require__ && _) &&
+                    Boolean(_ && _) &&
                       (0, _.jsxs)("div", {
                         children: [
                           (0, _.jsx)("a", {
-                            href: `${_._.STATS_BASE_URL}sales/details/?gid=${_}&clanid=${__webpack_require__}`,
+                            href: `${_._.STATS_BASE_URL}sales/details/?gid=${_}&clanid=${_}`,
                             target: "_blank",
                             children: "See detailed sale page promo stats",
                           }),
@@ -77251,17 +76532,13 @@
         });
       }
       function _(_) {
-        const {
-          oEditablePlan: _,
-          closeModal: __webpack_require__,
-          bReviewVerify: _,
-        } = _;
+        const { oEditablePlan: _, closeModal: _, bReviewVerify: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: _ ? "Plan Review?" : "Clear Plan Review Status",
           strDescription: _
             ? "Is the Plan Reviewed?"
             : "Remove the review status from this plan?",
-          closeModal: __webpack_require__,
+          closeModal: _,
           onOK: () => {
             _
               ? _.SetReviewedAccountAndTime(
@@ -77286,17 +76563,13 @@
         });
       }
       function _(_) {
-        const {
-          oEditablePlan: _,
-          closeModal: __webpack_require__,
-          bMarkedCompleted: _,
-        } = _;
+        const { oEditablePlan: _, closeModal: _, bMarkedCompleted: _ } = _;
         return (0, _.jsx)(_._, {
           strTitle: _ ? "Plan Competed?" : "Clear Plan Complete Status",
           strDescription: _
             ? "Marking the plan complete will remove it from the workflow and the 'awaiting live decision'. Is the Plan Completed?"
             : "Remove the completed status from this plan? This will make it return on the 'Awaiting Live Decision' column of the workflow",
-          closeModal: __webpack_require__,
+          closeModal: _,
           onOK: () => {
             _
               ? _.SetMarkedCompletedAccountAndTime(
@@ -77315,7 +76588,7 @@
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          [__webpack_require__, _, _] = (0, _._)(() => [
+          [_, _, _] = (0, _._)(() => [
             _.BRequireBroadcastModeration(),
             _.GetBroadcastModerationNotes(),
             _.BIsModerationScheduled(),
@@ -77332,10 +76605,10 @@
             }),
             (0, _.jsx)(_._, {
               label: "Broadcast Moderation Needed",
-              checked: __webpack_require__,
+              checked: _,
               onChange: _.SetRequireBroadcastModeration,
             }),
-            Boolean(__webpack_require__) &&
+            Boolean(_) &&
               (0, _.jsxs)("div", {
                 className: _().Indent,
                 children: [
@@ -77388,19 +76661,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            countDownUntil: _,
-            fnCallbackOnZero: __webpack_require__,
-            ..._
-          } = _,
+        const { countDownUntil: _, fnCallbackOnZero: _, ..._ } = _,
           [_, _] = (0, _.useState)(
             Math.floor(Math.max(0, _.getTime() - _._()) / 1e3),
           ),
           _ = _.useRef(null);
         _.useEffect(() => (_(_, _, _), () => _(_)), [_]),
           _.useEffect(() => {
-            0 == _ && __webpack_require__ && __webpack_require__();
-          }, [__webpack_require__, _]);
+            0 == _ && _ && __webpack_require__();
+          }, [_, _]);
         const _ = Math.floor(_ / _._.PerHour),
           _ = Math.floor((_ - _ * _._.PerHour) / _._.PerMinute),
           _ = Math.floor(_ - (_ * _._.PerHour + _ * _._.PerMinute));
@@ -77435,7 +76704,7 @@
       function _(_) {
         const {
             planIDs: _,
-            shadowPlanIDs: __webpack_require__,
+            shadowPlanIDs: _,
             fnDisplayDueDate: _,
             bExcludeHideButton: _,
             bHideTypeField: _,
@@ -77526,8 +76795,8 @@
                   bHideFullyReviewedEvents: _,
                   bSortUnclaimedFirst: _,
                 }),
-                __webpack_require__ &&
-                  __webpack_require__?.length > 0 &&
+                _ &&
+                  _?.length > 0 &&
                   (0, _.jsxs)("div", {
                     children: [
                       (0, _.jsx)("br", {}),
@@ -77539,7 +76808,7 @@
                       (0, _.jsx)("hr", {}),
                       (0, _.jsx)(_, {
                         ..._,
-                        planIDs: __webpack_require__,
+                        planIDs: _,
                         bHidePastEvents: _,
                         bHideFullyReviewedEvents: _,
                         bSortUnclaimedFirst: _,
@@ -77552,7 +76821,7 @@
       function _(_) {
         const {
             planIDs: _,
-            bHidePastEvents: __webpack_require__,
+            bHidePastEvents: _,
             bHideFullyReviewedEvents: _,
             bHideTypeField: _,
             bShowProgress: _,
@@ -77563,9 +76832,7 @@
           } = _,
           _ = _._.GetTimeNowWithOverride();
         return (0, _.jsx)("div", {
-          children: _.filter(
-            (_) => !__webpack_require__ || (0, _._)(_)?.end_date > _,
-          )
+          children: _.filter((_) => !_ || (0, _._)(_)?.end_date > _)
             .filter((_) => !_ || !(0, _._)(_)?.reviewed_by_account)
             .sort((_, _) => {
               const _ = (0, _._)(_),
@@ -77594,7 +76861,7 @@
       function _(_) {
         const {
             planID: _,
-            bHideTypeField: __webpack_require__,
+            bHideTypeField: _,
             bShowProgress: _,
             nUrgentWindowInSeconds: _,
             fnDisplayDueDate: _,
@@ -77630,7 +76897,7 @@
                     }),
                 ],
               }),
-              !__webpack_require__ &&
+              !_ &&
                 (0, _.jsx)("div", {
                   className: (0, _._)(_.Col, _.Type),
                   children: _.type,
@@ -77773,7 +77040,7 @@
       }
       const _ = 60;
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!0),
+        const [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(() => new Date(Date.now() + 1e3 * _)),
           [_, _] = (0, _.useState)(!1),
           { fnRefreshPlans: _ } = (0, _._)(),
@@ -77807,7 +77074,7 @@
               })
             : (0, _.jsx)(_._, {
                 checked: _,
-                onChange: __webpack_require__,
+                onChange: _,
                 label: _
                   ? (0, _.jsxs)(_.Fragment, {
                       children: [
@@ -78217,9 +77484,8 @@
         );
       }
       function _(_) {
-        const { rgWarnings: _, rgInfos: __webpack_require__ } = _;
-        return (_ && 0 != _.length) ||
-          (__webpack_require__ && 0 != __webpack_require__.length)
+        const { rgWarnings: _, rgInfos: _ } = _;
+        return (_ && 0 != _.length) || (_ && 0 != _.length)
           ? (0, _.jsxs)("div", {
               className: _.WarningsContainer,
               children: [
@@ -78248,7 +77514,7 @@
                       }),
                     ],
                   }),
-                __webpack_require__?.length > 0 &&
+                _?.length > 0 &&
                   (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)(_._, {
@@ -78350,7 +77616,7 @@
       function _(_) {
         const {
             closeModal: _,
-            rgPartnerToValidateAgainst: __webpack_require__,
+            rgPartnerToValidateAgainst: _,
             clanAccountID: _,
             clanEventGID: _,
           } = _,
@@ -78397,7 +77663,7 @@
                       _,
                       {
                         appid: _,
-                        rgPartnerToValidateAgainst: __webpack_require__,
+                        rgPartnerToValidateAgainst: _,
                       },
                       "app" + _,
                     ),
@@ -78426,7 +77692,7 @@
         return !1;
       }
       function _(_) {
-        const { appid: _, rgPartnerToValidateAgainst: __webpack_require__ } = _,
+        const { appid: _, rgPartnerToValidateAgainst: _ } = _,
           _ = (function (_) {
             const _ = _.useContext(_);
             return (0, _._)(_(_, _));
@@ -78435,7 +77701,7 @@
         return _.data && _
           ? (0, _.jsxs)("div", {
               children: [
-                _(__webpack_require__, _.data.publisherid) ? "✓ " : "✗ ",
+                _(_, _.data.publisherid) ? "✓ " : "✗ ",
                 " ",
                 _.GetName(),
               ],
@@ -78446,9 +77712,9 @@
       }
       function _(_) {
         const { partnerID: _ } = _,
-          [__webpack_require__] = (0, _._)(_);
+          [_] = (0, _._)(_);
         return (0, _.jsxs)("div", {
-          children: [__webpack_require__?.name || "Unknown", " (", _, ")"],
+          children: [_?.name || "Unknown", " (", _, ")"],
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -78499,7 +77765,7 @@
       function _(_) {
         const {
             oEditablePlan: _,
-            bUseSalePageType: __webpack_require__,
+            bUseSalePageType: _,
             rgPartnerIDToValidate: _,
           } = _,
           { eventModel: _ } = (0, _._)(
@@ -78590,7 +77856,7 @@
                   onChange: _.SetRequiresSalePage,
                 }),
                 _ &&
-                  __webpack_require__ &&
+                  _ &&
                   (0, _.jsx)(_._, {
                     label: "Require a specific Sale page type?",
                     rgOptions: _,
@@ -78638,11 +77904,11 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__, _] = (0, _._)();
+        const [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_._, {
-              onClick: __webpack_require__,
+              onClick: _,
               children: "Create New Sale Page",
             }),
             (0, _.jsx)(_._, {
@@ -78656,29 +77922,29 @@
         });
       }
       function _(_) {
-        const { oEditablePlan: _, closeModal: __webpack_require__ } = _,
+        const { oEditablePlan: _, closeModal: _ } = _,
           [_, _] = (0, _.useState)(_.BHasAssociatedSaleEvent());
         return _
           ? (0, _.jsx)(_._, {
               strTitle: "Create New Sale Page?",
               strDescription: `You already have Sale Page with ID ${_.GetSaleEditEventURL()} associated with this promotion plan.  Are you sure you want to create a new one?`,
-              onCancel: __webpack_require__,
+              onCancel: _,
               onOK: () => _(!1),
               strOKButtonText: "Create New Sale Page Anyways",
             })
           : (0, _.jsx)(_._, {
               fnSetSalePageInfo: _.SetSaleEvent,
-              closeModal: __webpack_require__,
+              closeModal: _,
             });
       }
       function _(_) {
         const { oEditablePlan: _ } = _,
-          { eventModel: __webpack_require__ } = (0, _._)(
+          { eventModel: _ } = (0, _._)(
             _.GetSaleClanAccountID(),
             _.GetSaleClanEventGID(),
             !0,
           );
-        return __webpack_require__
+        return _
           ? (0, _.jsx)(_._, {
               name: __webpack_require__.GetSaleVanity(),
               type: "Sale Store Page",
@@ -78716,15 +77982,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { oEditablePlan: _, index: __webpack_require__ } = _;
+        const { oEditablePlan: _, index: _ } = _;
         return (0, _.jsxs)("div", {
           className: _.LinkCtn,
           children: [
             (0, _.jsx)(_._, {
               name: "Spotlight ID",
               placeHolder: "/admin/store/spotlight/<grab this ID>",
-              _: _.GetSpotlightIDs(__webpack_require__),
-              index: __webpack_require__,
+              _: _.GetSpotlightIDs(_),
+              index: _,
               fnSetID: _.SetSpotlightID,
               fnGetURL: _._.GetSpotlightEditURL,
             }),
@@ -78736,7 +78002,7 @@
                     (0, _._)(
                       (0, _.jsx)(_, {
                         oEditablePlan: _,
-                        index: __webpack_require__,
+                        index: _,
                       }),
                       (0, _._)(_),
                     );
@@ -78748,7 +78014,7 @@
                     (0, _._)(
                       (0, _.jsx)(_, {
                         oEditablePlan: _,
-                        index: __webpack_require__,
+                        index: _,
                       }),
                       (0, _._)(_),
                     );
@@ -78787,11 +78053,7 @@
         );
       }
       function _(_) {
-        const {
-            oEditablePlan: _,
-            closeModal: __webpack_require__,
-            index: _,
-          } = _,
+        const { oEditablePlan: _, closeModal: _, index: _ } = _,
           _ = _.GetType(),
           [_, _] = (0, _.useState)(_.GetName()),
           [_, _] = (0, _.useState)("Weekend Deal"),
@@ -78819,13 +78081,13 @@
           ? (0, _.jsx)(_._, {
               state: _,
               strDialogTitle: "Create New Spotlight?",
-              closeModal: __webpack_require__,
+              closeModal: _,
             })
           : _
             ? (0, _.jsx)(_._, {
                 strTitle: "Create New Spotlight?",
                 strDescription: `You already have spotlight with ID ${_.GetSpotlightIDs(_)} associated with this promotion plan.  Are you sure you want to create a new one?`,
-                onCancel: __webpack_require__,
+                onCancel: _,
                 onOK: () => _(!1),
                 strOKButtonText: "Create New Spotlight Anyways",
               })
@@ -78833,7 +78095,7 @@
                 strTitle: "Create New Spotlight?",
                 strDescription:
                   "Create and link a spotlight from date range and featured item from the existing plan? Any additional customization can be done in the spotlight editor directly.",
-                onCancel: __webpack_require__,
+                onCancel: _,
                 className: _.CreationDialogCtn,
                 bOKDisabled:
                   0 == _.trim().length ||
@@ -78910,7 +78172,7 @@
               });
       }
       function _(_) {
-        const { selected: _, fnSetSelected: __webpack_require__ } = _,
+        const { selected: _, fnSetSelected: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               [
@@ -78939,7 +78201,7 @@
         });
       }
       function _(_) {
-        const { selected: _, fnSetSelected: __webpack_require__ } = _,
+        const { selected: _, fnSetSelected: _ } = _,
           _ = (0, _._)(),
           _ = (0, _.useMemo)(
             () =>
@@ -78972,11 +78234,7 @@
             });
       }
       function _(_) {
-        const {
-            oEditablePlan: _,
-            closeModal: __webpack_require__,
-            index: _,
-          } = _,
+        const { oEditablePlan: _, closeModal: _, index: _ } = _,
           [_, _] = (0, _.useState)(null),
           _ = (0, _._)();
         (0, _.useEffect)(() => {
@@ -79005,8 +78263,8 @@
           strTitle: "Select an Existing Spotlight",
           strDescription:
             "This only surfaces active or upcoming spotlight. This doesn't have access to archived spotlights.",
-          onCancel: __webpack_require__,
-          closeModal: __webpack_require__,
+          onCancel: _,
+          closeModal: _,
           onOK: () => {
             _.SetSpotlightID(_, _);
           },
@@ -79060,7 +78318,7 @@
       function _(_) {
         const {
             nAccountID: _,
-            fnSetAccountFilter: __webpack_require__,
+            fnSetAccountFilter: _,
             rgAdditional: _,
             rgAccountListFilter: _,
             className: _,
@@ -79108,12 +78366,12 @@
         );
       }
       function _(_) {
-        const { accountID: _, displayName: __webpack_require__ } = _,
+        const { accountID: _, displayName: _ } = _,
           { data: _ } = (0, _._)(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("b", {
-              children: __webpack_require__,
+              children: _,
             }),
             " (",
             _ ? _.m_strPlayerName : _,
@@ -79232,13 +78490,13 @@
         });
       }
       function _(_) {
-        const { partnerID: _, optInDef: __webpack_require__, summary: _ } = _,
-          _ = (0, _._)(__webpack_require__.event_title, (0, _._)(_._.LANGUAGE)),
-          _ = (0, _._)(__webpack_require__),
+        const { partnerID: _, optInDef: _, summary: _ } = _,
+          _ = (0, _._)(_.event_title, (0, _._)(_._.LANGUAGE)),
+          _ = (0, _._)(_),
           _ = (0, _._)(_.appids, {
             include_basic_info: !0,
           }),
-          _ = __webpack_require__.pageid.substring(14),
+          _ = _.pageid.substring(14),
           _ = `${_._.PARTNER_BASE_URL}recap/nextfest/${_}/${_}`;
         return (0, _.jsxs)("div", {
           className: _().EventRecapRow,
@@ -79279,10 +78537,10 @@
         });
       }
       function _(_) {
-        const { pagePostFix: _, nPartnerID: __webpack_require__ } = _,
+        const { pagePostFix: _, nPartnerID: _ } = _,
           _ = "sale_nextfest_" + _,
           _ = (0, _._)(_),
-          _ = (0, _._)(_._.accountid, __webpack_require__),
+          _ = (0, _._)(_._.accountid, _),
           _ = (0, _._)(_.event_title, (0, _._)(_._.LANGUAGE)),
           _ = (0, _._)(_),
           { rgDemoStats: _, rgAppSansPermissions: _ } = _(),
@@ -79419,10 +78677,8 @@
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
       function _(_) {
-        const {
-          strExternalSaleEventType: _,
-          fnSetExternalSaleEventType: __webpack_require__,
-        } = _;
+        const { strExternalSaleEventType: _, fnSetExternalSaleEventType: _ } =
+          _;
         return (0, _.jsxs)("div", {
           children: [
             "Please Select event type so that:",
@@ -79494,8 +78750,8 @@
         });
       }
       function _(_) {
-        const { clanSteamID: _, gidClanEvent: __webpack_require__ } = _,
-          { bLoading: _ } = (0, _._)(_.GetAccountID(), __webpack_require__);
+        const { clanSteamID: _, gidClanEvent: _ } = _,
+          { bLoading: _ } = (0, _._)(_.GetAccountID(), _);
         return _
           ? (0, _.jsx)(_._, {
               string: (0, _._)("#Loading"),
@@ -79505,11 +78761,7 @@
             });
       }
       function _(_) {
-        const {
-            clanSteamID: _,
-            gidClanEvent: __webpack_require__,
-            fnOkCallbackList: _,
-          } = _,
+        const { clanSteamID: _, gidClanEvent: _, fnOkCallbackList: _ } = _,
           {
             bPublishRequiresValveApproval: _,
             fnSetStorePublishingRequiresValveApproval: _,
@@ -79518,7 +78770,7 @@
             bHasSettingForRequiresValveApproval: _,
             strExternalSaleEventType: _,
             fnSetExternalSaleEventType: _,
-          } = (0, _._)(_.GetAccountID(), __webpack_require__),
+          } = (0, _._)(_.GetAccountID(), _),
           [_, _] = (0, _.useState)(!_ || _),
           [_, _] = (0, _.useState)(_);
         return (
@@ -79561,7 +78813,7 @@
       const _ = (_) => {
           const {
               strLabel: _,
-              strToolTip: __webpack_require__,
+              strToolTip: _,
               fnSetCurator: _,
               bLimitToCreatorHome: _,
             } = _,
@@ -79626,12 +78878,12 @@
               onBlur: (_) =>
                 setTimeout(() => _.current && _.current.Hide(), 200),
               ref: _,
-              tooltip: __webpack_require__,
+              tooltip: _,
             }),
           });
         },
         _ = (_) => {
-          const { list: _, fnSetCurator: __webpack_require__ } = _;
+          const { list: _, fnSetCurator: _ } = _;
           return (0, _.jsx)(_._, {
             className: _.SearchResults,
             children: _.map((_) =>
@@ -79899,7 +79151,7 @@
           });
         }),
         _ = (_) => {
-          const { creatorHome: _, fnSetCreatorHome: __webpack_require__ } = _;
+          const { creatorHome: _, fnSetCreatorHome: _ } = _;
           return (0, _.jsxs)("div", {
             className: _.MinWidthCtn,
             children: [
@@ -79923,7 +79175,7 @@
         },
         _ = (_) => {
           const { creatorHome: _ } = _,
-            [__webpack_require__, _] = (0, _.useState)(!1);
+            [_, _] = (0, _.useState)(!1);
           return (0, _.jsx)(_._, {
             children: (0, _.jsxs)("div", {
               children: [
@@ -79950,7 +79202,7 @@
                   },
                   children: (0, _._)("#Button_Accept"),
                 }),
-                __webpack_require__ &&
+                _ &&
                   (0, _.jsx)(_._, {
                     size: "small",
                   }),
@@ -79961,7 +79213,7 @@
         _ = (_) => {
           const {
             clanSteamID: _,
-            strEventName: __webpack_require__,
+            strEventName: _,
             fnSetEventName: _,
             strVanity: _,
             fnSetVanity: _,
@@ -79982,7 +79234,7 @@
                     type: "text",
                     label: (0, _._)("#Sale_New_EnterEventName"),
                     tooltip: (0, _._)("#Sale_New_EnterEventName_ttip"),
-                    value: __webpack_require__,
+                    value: _,
                     onChange: (_) => _(_.target.value),
                   }),
                   (0, _.jsx)(_._, {
@@ -80056,15 +79308,15 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { publisherid: _ } = (0, _._)(),
-          [__webpack_require__, _] = _.useState(!0);
+          [_, _] = _.useState(!0);
         if (
           (_.useEffect(() => {
-            __webpack_require__ &&
+            _ &&
               (_._.Init(),
               _._.Get(),
               Promise.all([_._.InitGlobal()]).then(() => _(!1)));
-          }, [__webpack_require__]),
-          __webpack_require__)
+          }, [_]),
+          _)
         )
           return (0, _.jsx)(_._, {
             string: (0, _._)("#Loading"),
@@ -80095,7 +79347,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!0);
+        const [_, _] = _.useState(!0);
         _.useEffect(() => {
           _ &&
             (_._.Init(),
@@ -81220,7 +80472,7 @@
       function _(_) {
         const {
           capsules_per_row: _,
-          is_generic: __webpack_require__,
+          is_generic: _,
           is_generic_trailer: _,
           is_event_dash_row: _,
           is_trailer_carousel: _,
@@ -81232,7 +80484,7 @@
           show_auto_advance_bar: _,
         } = _;
         if (!_) return null;
-        if (__webpack_require__)
+        if (_)
           return (0, _.jsx)("div", {
             className: _().GhostCtn,
             children: (0, _.jsx)("div", {
@@ -82441,7 +81693,7 @@
       const _ = (0, _._)(function (_) {
           const {
               language: _,
-              linkColor: __webpack_require__,
+              linkColor: _,
               headingColor: _,
               background: _,
               styleOverrides: _,
@@ -82455,11 +81707,11 @@
           _?.menu ||
             (_ = {
               ..._,
-              color: __webpack_require__ || "white",
+              color: _ || "white",
             }),
             _?.menuTitle ||
               (_ = {
-                borderBottom: "0px solid " + (__webpack_require__ || "white"),
+                borderBottom: "0px solid " + (_ || "white"),
                 color: _ || "white",
               });
           const _ = (0, _.useRef)(null),
@@ -82575,7 +81827,7 @@
         }),
         _ = (0, _._)(function (_) {
           const { facets: _ } = _,
-            [__webpack_require__, _] = (0, _.useState)([]);
+            [_, _] = (0, _.useState)([]);
           return (
             (0, _.useEffect)(() => {
               const _ = [];
@@ -82587,7 +81839,7 @@
                       _.push(_);
               _(_);
             }, [_]),
-            __webpack_require__
+            _
               ? (0, _.jsx)(_.Fragment, {
                   children: (0, _.jsx)("div", {
                     className: _.SelectedFacetValuesList,
@@ -82607,12 +81859,8 @@
           );
         }),
         _ = (0, _._)(function (_) {
-          const {
-              facetValue: _,
-              language: __webpack_require__,
-              onUpdateFilter: _,
-            } = _,
-            _ = _(_.facetValue, __webpack_require__);
+          const { facetValue: _, language: _, onUpdateFilter: _ } = _,
+            _ = _(_.facetValue, _);
           return (0, _.jsxs)("a", {
             className: _.SelectedFacetValueCtn,
             onClick: (_) => {
@@ -82630,7 +81878,7 @@
         _ = (0, _._)(function (_) {
           const {
               language: _,
-              linkColor: __webpack_require__,
+              linkColor: _,
               headingColor: _,
               facet: _,
               nFacetIndex: _,
@@ -82645,7 +81893,7 @@
           let _;
           _?.facetName ||
             (_ = {
-              borderBottom: "0px solid " + (__webpack_require__ || "white"),
+              borderBottom: "0px solid " + (_ || "white"),
               color: _ || "white",
             });
           const _ = (0, _._)(_._.GetWithFallback(_.facet.facet.name, _).trim());
@@ -82738,7 +81986,7 @@
       const _ = (0, _._)(function (_) {
           const {
               language: _,
-              highlightedFacetColor: __webpack_require__,
+              highlightedFacetColor: _,
               linkColor: _,
               facetValue: _,
               styleOverrides: _,
@@ -82752,8 +82000,8 @@
           const _ = _.bEnabled,
             _ = _.bDeactivated,
             _ = {
-              color: __webpack_require__ || "darkorange",
-              borderLeft: "4px solid " + (__webpack_require__ || "darkorange"),
+              color: _ || "darkorange",
+              borderLeft: "4px solid " + (_ || "darkorange"),
             };
           let _, _;
           _?.facetValue || (_ = _ ? _ : {}),
@@ -82832,7 +82080,7 @@
         _ = (0, _._)(function (_) {
           const {
               background: _,
-              labelColor: __webpack_require__,
+              labelColor: _,
               headingColor: _,
               buttonColor: _,
               highlightedFacetColor: _,
@@ -82857,7 +82105,7 @@
                   _
                     ? (0, _.jsx)(_, {
                         highlightedFacetColor: _,
-                        linkColor: __webpack_require__,
+                        linkColor: _,
                         headingColor: _,
                         background: _,
                         ..._,
@@ -82873,18 +82121,14 @@
           });
         }),
         _ = (0, _._)(function (_) {
-          const {
-              buttonColor: _,
-              bShowControls: __webpack_require__,
-              fnOnToggleControls: _,
-            } = _,
+          const { buttonColor: _, bShowControls: _, fnOnToggleControls: _ } = _,
             _ = {
               color: _ || "white",
             };
           return (0, _.jsx)("div", {
             className: _.FacetedBrowsePopupCtn,
             onClick: () => _(),
-            children: __webpack_require__
+            children: _
               ? (0, _.jsxs)(_.Fragment, {
                   children: [
                     (0, _.jsx)("div", {
@@ -82914,7 +82158,7 @@
           });
         });
       function _(_) {
-        const { section: _, event: __webpack_require__ } = _,
+        const { section: _, event: _ } = _,
           [_, _, _] = (0, _._)(() => [
             _.label_color,
             _.heading_color,
@@ -82949,7 +82193,7 @@
                   outlineWidth: _.border_width ? `${_.border_width}px` : void 0,
                 }
               : {};
-          })(_, __webpack_require__, _);
+          })(_, _, _);
         return (0, _.jsx)(_, {
           labelColor: _,
           headingColor: _,
@@ -83153,7 +82397,7 @@
               ((this.m_nHighestDoorOpened = _),
               this.GetLargestDoorIndexChange().Dispatch(_));
         }
-        async OpenDoor(_, _ = !0, __webpack_require__ = "", _ = !1) {
+        async OpenDoor(_, _ = !0, _ = "", _ = !1) {
           return !_._.logged_in ||
             !this.m_userData ||
             _ > this.m_userData.length ||
@@ -83174,7 +82418,7 @@
                 : (this.m_mapDoorOpenPromise.has(_) ||
                     this.m_mapDoorOpenPromise.set(
                       _,
-                      this.InternalOpenDoor(_, _, __webpack_require__, _),
+                      this.InternalOpenDoor(_, _, _, _),
                     ),
                   this.m_mapDoorOpenPromise.get(_));
         }
@@ -83354,20 +82598,15 @@
       function _(_) {
         const {
             closeModal: _,
-            iDoorIndex: __webpack_require__,
+            iDoorIndex: _,
             datarecord: _,
             bPreviewMode: _,
           } = _,
           _ = (function (_) {
             const _ = _(),
-              [__webpack_require__, _] = (0, _.useState)(
-                _ ? _.Get().BIsDoorOpened(_) : void 0,
-              );
-            return (
-              (0, _._)(_.Get().GetDoorStateChangeCallback(_), _),
-              __webpack_require__
-            );
-          })(__webpack_require__),
+              [_, _] = (0, _.useState)(_ ? _.Get().BIsDoorOpened(_) : void 0);
+            return (0, _._)(_.Get().GetDoorStateChangeCallback(_), _), _;
+          })(_),
           { fnOpenDoor: _ } = {
             fnOpenDoor: _.Get().OpenDoor,
           },
@@ -83377,12 +82616,12 @@
         (0, _.useEffect)(() => {
           const _ = _().CancelToken.source();
           return (
-            _(__webpack_require__, !0, _, _).then((_) => {
+            _(_, !0, _, _).then((_) => {
               _.token.reason || (_(_), _(null == _), _(!1));
             }),
             () => _.cancel("unmounting SummerSale2022FoundItem")
           );
-        }, [_, _, _, __webpack_require__]);
+        }, [_, _, _, _]);
         const _ = Math.floor(5 * Math.random()) + 1;
         return (0, _.jsx)(_._, {
           strTitle: (0, _._)(`#Sale_Minigame_FoundIt_${_}`),
@@ -83456,7 +82695,7 @@
                             (0, _.jsx)("div", {
                               className: _.PostText,
                               children: (0, _._)(
-                                __webpack_require__ < 10
+                                _ < 10
                                   ? "#Summer2022_hunt_quest_return_clue"
                                   : "#Summer2022_hunt_quest_return_gift",
                               ),
@@ -84945,12 +84184,12 @@
           const {
             appid: _,
             clanSteamID: _,
-            announcementGID: __webpack_require__,
+            announcementGID: _,
             partnerEventStore: _,
             additionalParams: _,
           } = this.props;
           _.LoadAdjacentPartnerEventsByAnnouncement(
-            __webpack_require__,
+            _,
             _,
             _,
             0,
@@ -84995,7 +84234,7 @@
         }
         render() {
           const { bShowOnlyInitialEvent: _ } = this.props,
-            { bLoading: _, eventModel: __webpack_require__ } = this.state;
+            { bLoading: _, eventModel: _ } = this.state;
           if (_)
             return (0, _.jsx)(_._, {
               active: !0,
@@ -85020,16 +84259,12 @@
           } = this.props;
           let _;
           _._.IN_CLIENT &&
-            __webpack_require__?.appid &&
+            _?.appid &&
             (_._.Get().HintLoad(),
-            _._.Get().BOwnsApp(__webpack_require__.appid) &&
-              (_ = (_) =>
-                (0, _._)(
-                  _,
-                  "steam://nav/games/details/" + __webpack_require__.appid,
-                )));
+            _._.Get().BOwnsApp(_.appid) &&
+              (_ = (_) => (0, _._)(_, "steam://nav/games/details/" + _.appid)));
           const _ = (0, _.jsx)(_._, {
-            initialEvent: __webpack_require__,
+            initialEvent: _,
             appid: _,
             clanSteamID: _,
             partnerEventStore: _,
@@ -85067,7 +84302,7 @@
       (0, _._)((_) => {
         const {
             clanAccountID: _,
-            gidAnnouncement: __webpack_require__,
+            gidAnnouncement: _,
             partnerEventStore: _,
             trackingLocation: _,
             bViewAllShowInfiniteScroll: _,
@@ -85087,7 +84322,7 @@
                 const _ = _._.InitFromClanID(_);
                 await _._.LoadClanInfoForClanSteamID(_);
                 let _ = await _.LoadAdjacentPartnerEventsByAnnouncement(
-                  __webpack_require__,
+                  _,
                   _,
                   null,
                   4,
@@ -85099,9 +84334,9 @@
                 );
                 if (!_.token.reason) {
                   _ = _ || [];
-                  let _ = _.filter(
-                    (_) => _.GetAnnouncementGID() != __webpack_require__,
-                  ).map((_) => _.AnnouncementGID);
+                  let _ = _.filter((_) => _.GetAnnouncementGID() != _).map(
+                    (_) => _.AnnouncementGID,
+                  );
                   _._(_);
                   const _ = _.slice(0, 3)
                     .map((_) => _.GetClanEventFromAnnouncementGID(_))
@@ -85109,9 +84344,8 @@
                   if ((_(_), _(!1), _)) {
                     let _ = _._.Get().GetTracker(),
                       _ = !1;
-                    if (_.BHasClanAnnouncementGID(__webpack_require__)) {
-                      let _ =
-                        _.GetClanEventFromAnnouncementGID(__webpack_require__);
+                    if (_.BHasClanAnnouncementGID(_)) {
+                      let _ = _.GetClanEventFromAnnouncementGID(_);
                       _ &&
                         _.BIsPartnerEvent() &&
                         _.BIsVisibleEvent() &&
@@ -85139,7 +84373,7 @@
                 _.current && _.current("PartnerEventRow: unmounting");
               }
             ),
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           ),
           _)
         )
@@ -85214,7 +84448,7 @@
       function _(_) {
         const {
             event: _,
-            imageURLOverride: __webpack_require__,
+            imageURLOverride: _,
             bShowAssociatedApp: _,
             langOverride: _,
             onClick: _,
@@ -85224,11 +84458,11 @@
           _ = (0, _._)(_.appid),
           [_, _, _, _, _, _] = (0, _._)(() => {
             const _ = _ || (0, _._)(_._.LANGUAGE),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.capsule_main),
-              _ = Boolean(void 0 !== __webpack_require__)
-                ? __webpack_require__
+              _ = Boolean(void 0 !== _)
+                ? _
                 : _.GetImageURLWithFallback("capsule", _, _._.full);
             return [
               _,
@@ -85351,7 +84585,7 @@
         );
       }
       function _(_) {
-        const { appid: _, bHidePrice: __webpack_require__ } = _,
+        const { appid: _, bHidePrice: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -85380,7 +84614,7 @@
                   alt: _.name,
                 }),
               }),
-              Boolean(!__webpack_require__ && !_.is_free) &&
+              Boolean(!_ && !_.is_free) &&
                 (0, _.jsxs)("span", {
                   className: (0, _._)(
                     _().AppCapsulePrice,
@@ -85411,10 +84645,10 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { _: _, type: __webpack_require__ } = _,
+        const { _: _, type: _ } = _,
           _ = (0, _._)({
             _: _,
-            type: __webpack_require__,
+            type: _,
           }),
           { data: _ } = (0, _._)(_);
         return (0, _.jsx)("div", {
@@ -85445,7 +84679,7 @@
       function _(_) {
         const {
             _: _,
-            bPurchaseOptionsExpanded: __webpack_require__,
+            bPurchaseOptionsExpanded: _,
             fnCollapseOptions: _,
             bPreferAssetWithoutOverride: _,
           } = _,
@@ -85456,7 +84690,7 @@
         return _
           ? (0, _.jsx)(_._, {
               nodeRef: _,
-              _: __webpack_require__,
+              _: _,
               mountOnEnter: !0,
               unmountOnExit: !0,
               timeout: 2e3,
@@ -85507,8 +84741,8 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-        const { _: _, type: __webpack_require__ } = _,
-          _ = (0, _._)(_, __webpack_require__),
+        const { _: _, type: _ } = _,
+          _ = (0, _._)(_, _),
           {
             bHidePrice: _,
             bShowDemoButton: _,
@@ -85713,7 +84947,7 @@
       function _(_) {
         const {
             _: _,
-            type: __webpack_require__,
+            type: _,
             bShowDemoButton: _,
             bHidePrice: _,
             bHidePlatforms: _,
@@ -85722,7 +84956,7 @@
           } = _,
           _ = (0, _._)({
             _: _,
-            type: __webpack_require__,
+            type: _,
           }),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_),
@@ -85781,11 +85015,7 @@
         });
       }
       function _(_) {
-        const {
-            displayStyle: _,
-            requestCompact: __webpack_require__,
-            ..._
-          } = _,
+        const { displayStyle: _, requestCompact: _, ..._ } = _,
           { type: _ } = _,
           _ = (0, _._)();
         if ("purchaseonlydisplay" === _)
@@ -85796,7 +85026,7 @@
           return (0, _.jsx)(_._, {
             ..._,
           });
-        if (__webpack_require__ && !(0, _._)())
+        if (_ && !(0, _._)())
           return (0, _.jsx)(_, {
             ..._,
           });
@@ -86449,17 +85679,13 @@
         }
         componentDidMount() {
           window.addEventListener("resize", this.OnResize), this.LoadCapsules();
-          const {
-            section: _,
-            activeTab: _,
-            displayStyle: __webpack_require__,
-          } = this.props;
+          const { section: _, activeTab: _, displayStyle: _ } = this.props;
           this.setState({
             fnUnregisterCallback: _(
               _.unique_id,
               _?.GetActiveTabUniqueID(),
             ).Register(this.OnDynamicCapsuleInsert).Unregister,
-            bCompactViewMode: this.BDisplayStyleIsCompact(__webpack_require__),
+            bCompactViewMode: this.BDisplayStyleIsCompact(_),
           });
         }
         componentWillUnmount() {
@@ -86529,10 +85755,10 @@
             });
         }
         OnDynamicCapsuleInsert(_) {
-          const { activeTab: _, section: __webpack_require__ } = this.props;
+          const { activeTab: _, section: _ } = this.props;
           if (
             _ &&
-            _.sectionID == __webpack_require__.unique_id &&
+            _.sectionID == _.unique_id &&
             _?.GetActiveTabUniqueID() == _.tabID
           ) {
             const _ = this.state.rgCapsules ? [...this.state.rgCapsules] : [];
@@ -86571,11 +85797,7 @@
           });
         }
         async FilterItems(_) {
-          const {
-              event: _,
-              section: __webpack_require__,
-              activeTab: _,
-            } = this.props,
+          const { event: _, section: _, activeTab: _ } = this.props,
             { facetFilterState: _ } = this.state;
           let _ = _.map((_) => ({
             _: _._,
@@ -86618,7 +85840,7 @@
             })(_, 0, _));
           let _ = new Array();
           return (
-            __webpack_require__?.enable_faceted_browsing &&
+            _?.enable_faceted_browsing &&
               _ &&
               (_ = await _.ApplyUserPreferenceFilters(_, !1, _)),
             (_ = await _(_, !1, _, (_) => _(_, _))),
@@ -86632,7 +85854,7 @@
           const {
             event: _,
             activeTab: _,
-            section: __webpack_require__,
+            section: _,
             controllerCategory: _,
           } = this.props;
           let {
@@ -86658,32 +85880,26 @@
             return void _.Debug(
               `LoadCapsules[${_}]: Cancellation flipped after precache`,
             );
-          __webpack_require__.enable_faceted_browsing &&
-            _ &&
-            (0, _._)(() => _.PruneFacets());
+          _.enable_faceted_browsing && _ && (0, _._)(() => _.PruneFacets());
           const _ = parseInt((0, _._)(this.props.history, "offset")) || 0;
           let _,
             _ = !0;
           try {
             const _ = {
-                nSectionUniqueID: __webpack_require__.unique_id,
-                strSectionFilter: (0, _._)(__webpack_require__),
+                nSectionUniqueID: _.unique_id,
+                strSectionFilter: (0, _._)(_),
                 nTabUniqueID: Boolean(_) ? void 0 : _?.GetActiveTabUniqueID(),
                 strTabFilter: Boolean(_) ? void 0 : _?.GetStoreFilter(),
                 facetFilter: _,
                 contentHub: _.GetContentHub(),
                 bContentHubDiscountedOnly: _.BContentHubDiscountedOnly(),
                 strSearch: _,
-                bRequestFacetCounts:
-                  __webpack_require__.enable_faceted_browsing,
+                bRequestFacetCounts: _.enable_faceted_browsing,
                 eControllerCategory: _,
               },
               _ = Boolean(_) ? "search" : _;
             let _;
-            const _ =
-              __webpack_require__.cap_item_count > 12
-                ? __webpack_require__.cap_item_count
-                : 12;
+            const _ = _.cap_item_count > 12 ? _.cap_item_count : 12;
             (_ = await _.Get().GetItemsSoFar(
               this.state.results,
               _,
@@ -86718,7 +85934,7 @@
               `LoadCapsules[${_}]: Cancellation flipped after GetItems`,
             );
           const _ =
-            ((_ = __webpack_require__.unique_id),
+            ((_ = _.unique_id),
             (_ = _?.GetActiveTabUniqueID()),
             _.Get().GetMatchingInsertion(_, _));
           var _, _;
@@ -86904,7 +86120,7 @@
           const {
               browseInfo: _,
               section: _,
-              event: __webpack_require__,
+              event: _,
               language: _,
               activeTab: _,
               bInGamepadUI: _,
@@ -86989,7 +86205,7 @@
             (_ = (0, _.jsx)(_, {
               language: _,
               section: _,
-              event: __webpack_require__,
+              event: _,
               facetFilterState: this.state.facetFilterState,
               nMaxFacetValues: _.max_facet_values_for_facet || 100,
               fnOnUpdateFilter: this.OnUpdateFacetFilter,
@@ -87029,7 +86245,7 @@
                 className: _.SaleSectionTitleCtn,
                 children: (0, _.jsx)(_._, {
                   section: _,
-                  event: __webpack_require__,
+                  event: _,
                   nHiddenCapsules: _,
                   ...this.props,
                 }),
@@ -87092,7 +86308,7 @@
       function _(_) {
         const {
           value: _,
-          onChange: __webpack_require__,
+          onChange: _,
           className: _,
           tooltip: _,
           children: _,
@@ -87110,7 +86326,7 @@
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(),
+        const [_, _] = _.useState(),
           [_, _] = _.useState(),
           [_, _] = _.useState(!1);
         return (
@@ -87185,7 +86401,7 @@
       function _(_) {
         const {
             browseInfo: _,
-            rgCapsules: __webpack_require__,
+            rgCapsules: _,
             fnBIsPermittedApp: _,
             fnOnRestartBrowse: _,
             feature: _,
@@ -87504,10 +86720,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            saleDescList: _,
-            fnSetFilteredSaleDescList: __webpack_require__,
-          } = _,
+        const { saleDescList: _, fnSetFilteredSaleDescList: _ } = _,
           [_, _] = (0, _._)("search", ""),
           _ = _.useRef(void 0);
         return (
@@ -87519,7 +86732,7 @@
                 (_.strVanity || "").toLocaleLowerCase().includes(_),
             );
             __webpack_require__(_);
-          }, [_, _, __webpack_require__]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             ref: _,
             type: "text",
@@ -87533,7 +86746,7 @@
         );
       }
       function _(_) {
-        const { eventModel: _, rgAppIds: __webpack_require__ } = _,
+        const { eventModel: _, rgAppIds: _ } = _,
           [_, _] = _.useState(
             __webpack_require__.map((_) => ({
               _: _,
@@ -87562,11 +86775,11 @@
         _ = __webpack_require__._(_);
       function _(_) {
         const _ = _.event.GetValveAccessLog(),
-          { fnHintLoadPartnerUserInfo: __webpack_require__ } = (0, _._)();
+          { fnHintLoadPartnerUserInfo: _ } = (0, _._)();
         return (
           (0, _.useEffect)(() => {
             _ && __webpack_require__(_.map((_) => _.strSteamID));
-          }, [_, __webpack_require__]),
+          }, [_, _]),
           (0, _.jsxs)("div", {
             className: _().AccessLog,
             children: [
@@ -87592,15 +86805,11 @@
         );
       }
       function _(_) {
-        const {
-            strSteamID: _,
-            rtUpdated: __webpack_require__,
-            strNotes: _,
-          } = _.entry,
+        const { strSteamID: _, rtUpdated: _, strNotes: _ } = _.entry,
           _ = _,
           _ = (0, _._)(_),
           _ = Date.now() / 1e3,
-          _ = (0, _._)(_ - __webpack_require__);
+          _ = (0, _._)(_ - _);
         return (0, _.jsxs)("div", {
           className: _().AccessLogEntry,
           children: [
@@ -87616,7 +86825,7 @@
             "-",
             (0, _.jsx)(_._, {
               className: _().Timestamp,
-              rtFullDate: __webpack_require__,
+              rtFullDate: _,
               stylesmodule: _(),
               children: _,
             }),
@@ -87630,7 +86839,7 @@
       const _ = (_) => {
         const {
             saleDescList: _,
-            bShowAppBrowse: __webpack_require__,
+            bShowAppBrowse: _,
             bShowFeaturing: _,
             descriptionToken: _,
             hiddenSaleDescList: _,
@@ -87658,7 +86867,7 @@
                     rootMargin: "0px 0px 200px 0px",
                     children: (0, _.jsx)(_, {
                       saleDesc: _,
-                      bShowAppBrowse: __webpack_require__,
+                      bShowAppBrowse: _,
                       bShowFeaturing: _,
                       bShowRankView: _,
                     }),
@@ -87738,7 +86947,7 @@
       function _(_) {
         const {
             saleDesc: _,
-            bShowAppBrowse: __webpack_require__,
+            bShowAppBrowse: _,
             bShowFeaturing: _,
             bShowRankView: _,
             bHidePartnerStats: _,
@@ -87815,7 +87024,7 @@
                       (0, _.jsx)(_, {
                         saleDesc: _,
                         eventModel: _,
-                        bShowAppBrowse: __webpack_require__,
+                        bShowAppBrowse: _,
                         bShowRankView: !_ && _,
                       }),
                       Boolean(!_) &&
@@ -87866,7 +87075,7 @@
         });
       }
       function _(_) {
-        const { saleDesc: _, message: __webpack_require__ } = _,
+        const { saleDesc: _, message: _ } = _,
           _ = _.bFeaturedNextSeasonalSale
             ? _._.STORE_BASE_URL + "sale/" + _.strVanity
             : _._.STORE_BASE_URL +
@@ -87899,7 +87108,7 @@
                   children: [
                     (0, _.jsx)("div", {
                       className: _().NotVisibleMessage,
-                      children: __webpack_require__,
+                      children: _,
                     }),
                     (0, _.jsx)(_, {
                       saleDesc: _,
@@ -87994,27 +87203,23 @@
         });
       }
       function _(_) {
-        const {
-            saleDesc: _,
-            eventModel: __webpack_require__,
-            showWhyAmISeeingThis: _,
-          } = _,
+        const { saleDesc: _, eventModel: _, showWhyAmISeeingThis: _ } = _,
           _ = (0, _._)(),
-          _ = (0, _._)(__webpack_require__.clanSteamID.GetAccountID()),
-          _ = __webpack_require__.clanSteamID.GetAccountID(),
-          _ = __webpack_require__.GID,
+          _ = (0, _._)(_.clanSteamID.GetAccountID()),
+          _ = _.clanSteamID.GetAccountID(),
+          _ = _.GID,
           _ = __webpack_require__.GetSaleURL(),
           _ =
             _._.COMMUNITY_BASE_URL +
             "gid/" +
-            __webpack_require__.clanSteamID.ConvertTo64BitString() +
+            _.clanSteamID.ConvertTo64BitString() +
             "/partnerevents/edit/" +
             _ +
             "?tab=sale",
           _ =
             _._.COMMUNITY_BASE_URL +
             "gid/" +
-            __webpack_require__.clanSteamID.ConvertTo64BitString() +
+            _.clanSteamID.ConvertTo64BitString() +
             "/partnerevents/preview/" +
             _,
           _ = new Date(
@@ -88081,7 +87286,7 @@
       function _(_) {
         const {
             saleDesc: _,
-            eventModel: __webpack_require__,
+            eventModel: _,
             bShowAppBrowse: _,
             bShowRankView: _,
           } = _,
@@ -88092,13 +87297,13 @@
               (0, _._)(
                 (0, _.jsx)(_, {
                   nPartnerID: _,
-                  eventModel: __webpack_require__,
+                  eventModel: _,
                   setAppIds: _,
                 }),
                 (0, _._)(_),
               );
             },
-            [__webpack_require__, _, _],
+            [_, _, _],
           );
         return (0, _.jsxs)("div", {
           className: (0, _._)(_().FeaturedApps),
@@ -88126,7 +87331,7 @@
                       onClick: (_) => {
                         (0, _._)(
                           (0, _.jsx)(_, {
-                            eventModel: __webpack_require__,
+                            eventModel: _,
                           }),
                           (0, _._)(_),
                         );
@@ -88144,12 +87349,7 @@
         });
       }
       function _(_) {
-        const {
-          closeModal: _,
-          nPartnerID: __webpack_require__,
-          eventModel: _,
-          setAppIds: _,
-        } = _;
+        const { closeModal: _, nPartnerID: _, eventModel: _, setAppIds: _ } = _;
         return (0, _.jsx)(_._, {
           bAllowFullSize: !0,
           title: (0, _._)("#Sale_DashBoard_ShowLiveData"),
@@ -88163,7 +87363,7 @@
                 (0, _.jsx)("br", {}),
                 (0, _.jsx)("div", {
                   className: _().QuickViewCtn,
-                  children: __webpack_require__
+                  children: _
                     ? (0, _.jsx)(_, {
                         eventModel: _,
                         rgAppIds: Array.from(_),
@@ -88203,10 +87403,10 @@
         });
       }
       function _(_) {
-        const { closeModal: _, eventModel: __webpack_require__ } = _,
+        const { closeModal: _, eventModel: _ } = _,
           _ = (0, _.useMemo)(
             () => Array.from(__webpack_require__.GetSaleFeaturedApps()),
-            [__webpack_require__],
+            [_],
           ),
           _ = (0, _._)(_),
           _ = (0, _._)(_),
@@ -88263,7 +87463,7 @@
                       ),
                     };
                   }),
-            [_, _, _, _, __webpack_require__],
+            [_, _, _, _, _],
           );
         return 1 != _ && _ && !_.bLoading && _
           ? (0, _.jsx)(_._, {
@@ -88300,17 +87500,13 @@
             });
       }
       function _(_) {
-        const {
-          saleDesc: _,
-          strSaleURL: __webpack_require__,
-          strEventName: _,
-        } = _;
+        const { saleDesc: _, strSaleURL: _, strEventName: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
               className: (0, _._)(_().EventNameCtn),
               children: (0, _.jsx)("a", {
-                href: __webpack_require__,
+                href: _,
                 target: "_blank",
                 className: _().EventName,
                 children: _,
@@ -88330,7 +87526,7 @@
       function _(_) {
         const {
             clanAccountID: _,
-            primaryContactName: __webpack_require__,
+            primaryContactName: _,
             primaryContactEmail: _,
           } = _,
           [_, _] = (0, _._)(_),
@@ -88350,7 +87546,7 @@
               position: "center",
             }),
           });
-        const _ = __webpack_require__ && _;
+        const _ = _ && _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)("div", {
@@ -88380,11 +87576,7 @@
                 className: (0, _._)(_().ClanInfoContactInfo),
                 children: [
                   (0, _.jsxs)("span", {
-                    children: [
-                      (0, _._)("#Sale_Info_ContactName"),
-                      " ",
-                      __webpack_require__,
-                    ],
+                    children: [(0, _._)("#Sale_Info_ContactName"), " ", _],
                   }),
                   (0, _.jsxs)("span", {
                     className: _().ClanInfoEmail,
@@ -88452,11 +87644,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
-          const {
-              saleDesc: _,
-              bDetailsAreVisible: __webpack_require__,
-              fnToggleDetails: _,
-            } = _,
+          const { saleDesc: _, bDetailsAreVisible: _, fnToggleDetails: _ } = _,
             [_, _] = (0, _.useState)(_(_));
           (0, _.useEffect)(() => {
             _(_) &&
@@ -88486,7 +87674,7 @@
                   onClick: _,
                   className: _().DetailedStatsButton,
                   children: (0, _._)(
-                    __webpack_require__
+                    _
                       ? "#Sale_Stats_HideDetailedStatsButton"
                       : "#Sale_Stats_SeeDetailedStatsButton",
                   ),
@@ -88845,7 +88033,7 @@
             ],
           }),
         _ = (_) => {
-          const { packageid: _, saleDetails: __webpack_require__ } = _;
+          const { packageid: _, saleDetails: _ } = _;
           return (0, _.jsxs)("div", {
             className: _().DetailedStatsRow,
             children: [
@@ -88855,39 +88043,32 @@
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatLong,
-                children: __webpack_require__.rgPackages[_].name,
+                children: _.rgPackages[_].name,
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatShort,
-                children:
-                  __webpack_require__.rgPackages[_].contains_apps.length,
+                children: _.rgPackages[_].contains_apps.length,
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatShort,
-                children: _(
-                  __webpack_require__.rgPackageSaleSummaries[_]
-                    ?.gross_sales_usd,
-                ),
+                children: _(_.rgPackageSaleSummaries[_]?.gross_sales_usd),
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatShort,
-                children: _(
-                  __webpack_require__.rgPackageSaleSummaries[_]
-                    ?.gross_units_sold,
-                ),
+                children: _(_.rgPackageSaleSummaries[_]?.gross_units_sold),
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatShort,
                 children: (0, _.jsx)(_, {
                   rgPackageIds: [_],
-                  saleDetails: __webpack_require__,
+                  saleDetails: _,
                 }),
               }),
             ],
           });
         },
         _ = (_) => {
-          const { bundleid: _, saleDetails: __webpack_require__ } = _;
+          const { bundleid: _, saleDetails: _ } = _;
           return (0, _.jsxs)("div", {
             className: _().DetailedStatsRow,
             children: [
@@ -88897,16 +88078,15 @@
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatLong,
-                children: __webpack_require__.rgBundles[_].name,
+                children: _.rgBundles[_].name,
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatShort,
-                children:
-                  __webpack_require__.rgBundles[_].contains_packages.length,
+                children: _.rgBundles[_].contains_packages.length,
               }),
               (0, _.jsx)("div", {
                 className: _().DetailedStatShort,
-                children: __webpack_require__.rgBundles[_].contains_apps.length,
+                children: _.rgBundles[_].contains_apps.length,
               }),
             ],
           });
@@ -88924,7 +88104,7 @@
       }
       function _(_) {
         const _ = Number.parseInt(_.getValue()),
-          [__webpack_require__] = (0, _._)(_, {});
+          [_] = (0, _._)(_, {});
         return __webpack_require__?.GetName() || "";
       }
       function _(_, _) {
@@ -88944,9 +88124,9 @@
             : `${_}%-${_}%`;
       }
       const _ = (_) => {
-        const { rgPackageIds: _, saleDetails: __webpack_require__ } = _;
+        const { rgPackageIds: _, saleDetails: _ } = _;
         return (0, _.jsx)("div", {
-          children: _(_, __webpack_require__),
+          children: _(_, _),
         });
       };
       function _(_) {
@@ -89101,7 +88281,7 @@
       function _(_) {
         const {
             fnSetItemID: _,
-            strLabel: __webpack_require__,
+            strLabel: _,
             itemType: _,
             fnFilterID: _,
             className: _,
@@ -89208,7 +88388,7 @@
                   type: "text",
                   ref: _,
                   className: _.SearchInput,
-                  label: __webpack_require__,
+                  label: _,
                   tooltip: _,
                   placeholder: _,
                   onChange: _,
@@ -89290,14 +88470,8 @@
         });
       }
       function _(_) {
-        const {
-            name: _,
-            _: __webpack_require__,
-            type: _,
-            is_visible: _,
-            fnSetItemID: _,
-          } = _,
-          [_] = (0, _._)(__webpack_require__, _, {
+        const { name: _, _: _, type: _, is_visible: _, fnSetItemID: _ } = _,
+          [_] = (0, _._)(_, _, {
             include_assets: !0,
           });
         let _ = "#DailyDeals_HeaderArtMissing";
@@ -89328,7 +88502,7 @@
                     children: [(0, _._)("#Sale_FeaturingHidden"), " "],
                   }),
                 _,
-                1 == _ ? ` (${__webpack_require__})` : "",
+                1 == _ ? ` (${_})` : "",
               ],
             }),
           ],
@@ -98262,7 +97436,7 @@
       function _(_) {
         const {
             _: _,
-            hoverClassName: __webpack_require__,
+            hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
             children: _,
@@ -98293,7 +97467,7 @@
           );
         return (0, _.jsx)("div", {
           ref: _,
-          className: __webpack_require__,
+          className: _,
           onMouseEnter: _,
           onMouseLeave: _,
           onFocus: _,
@@ -98304,7 +97478,7 @@
       function _(_) {
         const {
             _: _,
-            strExtraParams: __webpack_require__,
+            strExtraParams: _,
             fnOnClickOverride: _,
             strOverrideURL: _,
           } = _,
@@ -98314,12 +97488,12 @@
             _ ||
               (_ && "creatorid" in _
                 ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )
                 : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )),
@@ -98460,8 +97634,8 @@
           return this.m_clanSteamID;
         }
         async AddImage(_, _ = 0) {
-          const { language: __webpack_require__ } = (0, _._)(_.name, _);
-          return this.AddImageForLanguage(_, __webpack_require__);
+          const { language: _ } = (0, _._)(_.name, _);
+          return this.AddImageForLanguage(_, _);
         }
         async AddImageForLanguage(_, _) {
           if (!((0, _._)(_.type) || (_._.is_support && (0, _._)(_.type))))
@@ -99174,11 +98348,7 @@
         return [_.BIsEventDirty, _.DiscardChanges, _.SaveDirtyChanges];
       }
       function _(_, _) {
-        const {
-            oPrivateData: __webpack_require__,
-            fnSetPrivateJson: _,
-            bLoading: _,
-          } = _(_, _),
+        const { oPrivateData: _, fnSetPrivateJson: _, bLoading: _ } = _(_, _),
           _ = _.Get(),
           _ = (0, _.useCallback)(
             (_) =>
@@ -99235,21 +98405,20 @@
         return {
           bLoading: _,
           bPublishRequiresValveApproval: Boolean(
-            __webpack_require__?.jsonData?.bPublishRequiresValveApproval,
+            _?.jsonData?.bPublishRequiresValveApproval,
           ),
           bHasSettingForRequiresValveApproval:
-            void 0 !==
-            __webpack_require__?.jsonData?.bPublishRequiresValveApproval,
+            void 0 !== _?.jsonData?.bPublishRequiresValveApproval,
           bRequiresHostDisclaimer: Boolean(
-            __webpack_require__?.jsonData?.bRequiresHostDisclaimer,
+            _?.jsonData?.bRequiresHostDisclaimer,
           ),
-          nAccountApproved: __webpack_require__?.jsonData?.nAccountApproved,
-          rtApprovalTime: __webpack_require__?.jsonData?.rtApprovalTime,
+          nAccountApproved: _?.jsonData?.nAccountApproved,
+          rtApprovalTime: _?.jsonData?.rtApprovalTime,
           fnSetStorePublishingRequiresValveApproval: _,
           fnSetAccountApproved: _,
           fnSetStoreRequireHostDisclaimer: _,
           strExternalSaleEventType:
-            __webpack_require__?.jsonData?.strExternalSaleType || "publisher",
+            _?.jsonData?.strExternalSaleType || "publisher",
           fnSetExternalSaleEventType: _,
           fnSetUserWhoEnabledSalePage: _,
           fnRemoveApprovalAccount: _,
@@ -101465,7 +100634,7 @@
       function _(_) {
         const {
             accountID: _,
-            partnerID: __webpack_require__,
+            partnerID: _,
             fnSetPartnerID: _,
             strLabel: _,
             strTooltip: _,
@@ -101487,7 +100656,7 @@
               label: _,
               tooltip: _,
               rgOptions: _,
-              selectedOption: __webpack_require__,
+              selectedOption: _,
               onChange: (_) => _(_.data),
             });
       }
@@ -101988,7 +101157,7 @@
           let _,
             {
               emoticonStore: _,
-              supportBBCodes: __webpack_require__,
+              supportBBCodes: _,
               fnSetText: _,
               ..._
             } = this.props;
@@ -102004,7 +101173,7 @@
               break;
             case "BBCode":
               _ = (0, _.jsx)(_, {
-                supportBBCodes: __webpack_require__,
+                supportBBCodes: _,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnBBCodeSuggestionSelected,
@@ -102059,8 +101228,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-          const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
-              _,
+          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
             [_, _] = (0, _.useState)(""),
             _ = (0, _._)(_.clanSteamID.GetAccountID()),
             _ = () => _.closeModal && _.closeModal(),
@@ -102133,11 +101301,7 @@
           });
         },
         _ = (_) => {
-          const {
-            clanImage: _,
-            searchStringHilight: __webpack_require__,
-            fnImageClick: _,
-          } = _;
+          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
           let _ = _.file_name ? _.file_name : "",
             _ = (function (_, _, _, _) {
               let _ = [];
@@ -102190,7 +101354,7 @@
                   ),
                 );
               return _;
-            })(__webpack_require__, _, String(_.imageid), _.Hilight);
+            })(_, _, String(_.imageid), _.Hilight);
           return (0, _.jsxs)("div", {
             className: _.ImageContainer,
             children: [
@@ -102214,7 +101378,7 @@
       const _ = (0, _._)((_) => {
         const {
             clanSteamID: _,
-            inputClanImage: __webpack_require__,
+            inputClanImage: _,
             nWidth: _,
             nHeight: _,
             setImage: _,
@@ -102227,7 +101391,7 @@
             [_, _],
           ),
           [_, _] = _.useState(void 0),
-          [_, _] = _.useState(Boolean(__webpack_require__)),
+          [_, _] = _.useState(Boolean(_)),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
@@ -102240,17 +101404,16 @@
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
                 0 != _.error.length ||
                   _.needsCrop ||
-                  (__webpack_require__ &&
-                    __webpack_require__.image_hash == _.image_hash) ||
+                  (_ && _.image_hash == _.image_hash) ||
                   _(_);
               }
               _(!1);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           );
         _.useEffect(() => {
-          _(__webpack_require__);
-        }, [_, __webpack_require__]);
+          _(_);
+        }, [_, _]);
         let _,
           _ = "",
           _ = !1;
@@ -102751,7 +101914,7 @@
           const {
             showFormatHelp: _,
             bEmbeddedInDialog: _,
-            bSupportHTMLImport: __webpack_require__,
+            bSupportHTMLImport: _,
             pathToImages: _,
           } = this.props;
           let _;
@@ -102900,7 +102063,7 @@
                     tooltip: (0, _._)("#EventEditor_AddSpeaker"),
                     imgURL: this.props.pathToImages + "/insert_img.png",
                   }),
-                Boolean(__webpack_require__ && !_) &&
+                Boolean(_ && !_) &&
                   (0, _.jsx)(_, {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
                     className: _().ActionImportHTML,
@@ -103360,7 +102523,7 @@
         (0, _._)([_._], _.prototype, "OnAnchorURLChange", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) => {
-        const [_, __webpack_require__] = _.useState(""),
+        const [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
@@ -103538,7 +102701,7 @@
         });
       };
       function _(_) {
-        const { friends: _, setSteamID: __webpack_require__ } = _;
+        const { friends: _, setSteamID: _ } = _;
         return (0, _.jsx)("div", {
           className: _().DropDownScroll,
           children: _.map((_) =>
@@ -103546,7 +102709,7 @@
               _,
               {
                 steamid: _,
-                setSteamID: __webpack_require__,
+                setSteamID: _,
               },
               _,
             ),
@@ -103554,7 +102717,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, setSteamID: __webpack_require__ } = _,
+        const { steamid: _, setSteamID: _ } = _,
           { data: _ } = (0, _._)(_);
         return (0, _.jsx)(_._, {
           onSelected: () => __webpack_require__(new _._(_)),
@@ -104054,7 +103217,7 @@
       function _(_) {
         const {
             strUploadAjaxURL: _,
-            fnOnUploadSuccess: __webpack_require__,
+            fnOnUploadSuccess: _,
             bSynchronousUpload: _,
             rgSupportArtwork: _,
             rgRealmList: _,
@@ -104069,7 +103232,7 @@
         return (
           _.useEffect(() => {
             _.GetUploadPath() != _ && _.SetUploadPath(_);
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             ..._,
             imageUploader: _,
@@ -104136,7 +103299,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { rgAssetURL: _, rgLang: __webpack_require__, bIsImage: _ } = _,
+        const { rgAssetURL: _, rgLang: _, bIsImage: _ } = _,
           [_, _] = (0, _.useState)([]);
         if (
           ((0, _.useEffect)(() => {
@@ -104173,7 +103336,7 @@
                 }),
                 _.map((_) => ({
                   url: _[_],
-                  lang: __webpack_require__[_],
+                  lang: _[_],
                 })).map((_) =>
                   (0, _.jsx)(
                     _._,
@@ -104206,7 +103369,7 @@
       function _(_) {
         const {
             rgAssetLangs: _,
-            initialLang: __webpack_require__,
+            initialLang: _,
             fnGetAssetUrl: _,
             fnDeletAssetLang: _,
             imageClassname: _,
@@ -104215,9 +103378,7 @@
             bVerifyAssets: _,
             bVideoAsset: _,
           } = _,
-          [_, _] = _.useState(
-            __webpack_require__ ?? _._.Get().GetCurEditLanguage() ?? _[0],
-          ),
+          [_, _] = _.useState(_ ?? _._.Get().GetCurEditLanguage() ?? _[0]),
           [_, _] = _.useState(_(_)),
           _ = _.useMemo(() => [..._].sort(), [_]);
         _.useEffect(() => {
@@ -104284,7 +103445,7 @@
       function _(_) {
         const {
             language: _,
-            selectedLanguage: __webpack_require__,
+            selectedLanguage: _,
             setSelectedLanguage: _,
             deleteLanguage: _,
           } = _,
@@ -104300,7 +103461,7 @@
                   _.preventDefault(), _(_);
                 },
                 children:
-                  _ === __webpack_require__
+                  _ === _
                     ? (0, _.jsx)("span", {
                         className: _().LangSelected,
                         children: "" + _,
@@ -104322,7 +103483,7 @@
         );
       }
       function _(_) {
-        const { curAssetURL: _, imageClassname: __webpack_require__ } = _;
+        const { curAssetURL: _, imageClassname: _ } = _;
         if (!_)
           return (0, _.jsx)("div", {
             className: _().ArtNoArt,
@@ -104335,16 +103496,16 @@
             })
           : _._.includes(_)
             ? (0, _.jsx)(_, {
-                className: __webpack_require__ || _().ArtPreview,
+                className: _ || _().ArtPreview,
                 strTextURL: _,
               })
             : (0, _.jsx)("img", {
-                className: __webpack_require__ || _().ArtPreview,
+                className: _ || _().ArtPreview,
                 src: _,
               });
       }
       function _(_) {
-        const { curAssetURL: _, imageClassname: __webpack_require__ } = _,
+        const { curAssetURL: _, imageClassname: _ } = _,
           _ = _.useRef(void 0);
         return (
           _.useEffect(() => {
@@ -104352,7 +103513,7 @@
           }, [_]),
           (0, _.jsx)("video", {
             ref: _,
-            className: __webpack_require__ || _().ArtPreview,
+            className: _ || _().ArtPreview,
             autoPlay: !0,
             loop: !0,
             controls: !0,
@@ -104364,7 +103525,7 @@
         );
       }
       function _(_) {
-        const { strTextURL: _, className: __webpack_require__ } = _,
+        const { strTextURL: _, className: _ } = _,
           [_, _] = _.useState("");
         return (
           _.useEffect(() => {
@@ -104378,7 +103539,7 @@
               });
           }, [_]),
           (0, _.jsx)("textarea", {
-            className: __webpack_require__,
+            className: _,
             value: _,
             readOnly: !0,
             rows: 20,
@@ -104398,7 +103559,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { bDone: _, name: __webpack_require__, tooltip: _ } = _;
+        const { bDone: _, name: _, tooltip: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().StatusLineItemCtn,
           children: [
@@ -104411,7 +103572,7 @@
             }),
             (0, _.jsx)(_._, {
               toolTipContent: _,
-              children: __webpack_require__,
+              children: _,
             }),
           ],
         });
@@ -104442,7 +103603,7 @@
         OnEmoticonClick(_) {
           const {
             emoticonStore: _,
-            strFlairGroupID: __webpack_require__,
+            strFlairGroupID: _,
             SetUIDisplayPref: _,
             contextOptions: _,
             bShowChatAddons: _,
@@ -104459,9 +103620,7 @@
                   onRoomEffectSelected: this.props.onRoomEffectSelected,
                   onStickerSelected: this.props.onStickerSelected,
                 })
-              : __webpack_require__ &&
-                  _.flair_list &&
-                  _.GetFlairListByGroupID(__webpack_require__)?.length > 0
+              : _ && _.flair_list && _.GetFlairListByGroupID(_)?.length > 0
                 ? (0, _.jsx)(_._, {
                     emoticonStore: this.props.emoticonStore,
                     strFlairGroupID: this.props.strFlairGroupID,
@@ -104501,24 +103660,19 @@
           return !_ || _ < _ || (_ && (!_ || _ < _));
         }
         render() {
-          const {
-            disabled: _,
-            className: _,
-            ttip: __webpack_require__,
-            useImg: _,
-          } = this.props;
+          const { disabled: _, className: _, ttip: _, useImg: _ } = this.props;
           let _ = [_],
             _ = !1;
           return (
             _ ? _.push("disabled") : this.BHaveUnseenEmoticons() && (_ = !0),
-            __webpack_require__ && _.push("ttip"),
+            _ && _.push("ttip"),
             _
               ? (0, _.jsx)(_._, {
                   onClick: this.OnEmoticonClick,
                   onOKActionDescription: (0, _._)("#ChatEntryButton_Emoticon"),
                   focusable: !0,
                   children: (0, _.jsx)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: (0, _.jsx)("img", {
                       src: this.props.useImg,
                       className: (0, _._)(..._),
@@ -104538,7 +103692,7 @@
                     this.props.title || (0, _._)("#ChatEntryButton_Emoticon"),
                   disabled: _,
                   children: (0, _.jsxs)(_._, {
-                    toolTipContent: __webpack_require__,
+                    toolTipContent: _,
                     children: [
                       this.props.buttonIcon || (0, _.jsx)(_._, {}),
                       _ && (0, _.jsx)(_._, {}),
@@ -104570,8 +103724,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = !1) {
-        return `${_}economy/sticker${__webpack_require__ ? "static" : ""}/${encodeURIComponent(_)}`;
+      function _(_, _, _ = !1) {
+        return `${_}economy/sticker${_ ? "static" : ""}/${encodeURIComponent(_)}`;
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -104649,21 +103803,21 @@
         });
       }
       function _(_) {
-        const { active: _, children: __webpack_require__, onClick: _ } = _;
+        const { active: _, children: _, onClick: _ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_.Tab, _ && _.Active),
           focusClassName: _.Focus,
           onActivate: _,
           children: (0, _.jsx)("div", {
             className: (0, _._)(_.TabContent, _ && _.Active),
-            children: __webpack_require__,
+            children: _,
           }),
         });
       }
       function _(_) {
         const {
           items: _,
-          renderItem: __webpack_require__,
+          renderItem: _,
           onItemSelect: _,
           keyExtractor: _,
           renderEmpty: _,
@@ -104691,13 +103845,7 @@
         );
       }
       function _(_) {
-        const {
-          title: _,
-          onFilterChange: __webpack_require__,
-          filter: _,
-          onSubmit: _,
-          ..._
-        } = _;
+        const { title: _, onFilterChange: _, filter: _, onSubmit: _, ..._ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)(_, {
@@ -104710,19 +103858,14 @@
             }),
             (0, _.jsx)(_, {
               value: _,
-              onChange: __webpack_require__,
+              onChange: _,
               onSubmit: _,
             }),
           ],
         });
       }
       function _(_) {
-        const {
-          onFilterChange: _,
-          filter: __webpack_require__,
-          sections: _,
-          title: _,
-        } = _;
+        const { onFilterChange: _, filter: _, sections: _, title: _ } = _;
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_, {
@@ -104747,7 +103890,7 @@
               ],
             }),
             (0, _.jsx)(_, {
-              value: __webpack_require__,
+              value: _,
               onChange: _,
             }),
           ],
@@ -104769,7 +103912,7 @@
         });
       }
       function _(_) {
-        const { value: _, onChange: __webpack_require__, onSubmit: _ } = _;
+        const { value: _, onChange: _, onSubmit: _ } = _;
         return (0, _.jsx)("div", {
           className: _.FilterInputContainer,
           children: (0, _.jsx)(_._, {
@@ -104783,10 +103926,10 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_, _.AddonPickerMessage),
-          ...__webpack_require__,
+          ..._,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -104805,14 +103948,14 @@
       const _ = (0, _._)((_) => {
         const {
           emoticonStore: _,
-          roomEffectSettings: __webpack_require__,
+          roomEffectSettings: _,
           strFlairGroupID: _,
           onEmoticonSelected: _,
           onRoomEffectSelected: _,
           onStickerSelected: _,
         } = _;
         !(function (_) {
-          const [_, __webpack_require__] = (0, _.useState)(_.is_initialized);
+          const [_, _] = (0, _.useState)(_.is_initialized);
           (0, _.useEffect)(() => {
             if (!_.is_initialized) {
               _.UpdateEmoticonList();
@@ -104888,7 +104031,7 @@
                   renderContent: () =>
                     (0, _.jsx)(_, {
                       store: _,
-                      effectSettings: __webpack_require__,
+                      effectSettings: _,
                       onItemSelect: (_) => _(_.name),
                     }),
                 },
@@ -104919,7 +104062,7 @@
           const {
               emoticonStore: _,
               onEmoticonSelected: _,
-              onStickerSelected: __webpack_require__,
+              onStickerSelected: _,
               strFlairGroupID: _,
             } = this.props,
             _ = [];
@@ -105072,7 +104215,7 @@
           const {
               store: _,
               onEmoticonSelect: _,
-              onStickerSelect: __webpack_require__,
+              onStickerSelect: _,
             } = this.props,
             { filter: _ } = this.state,
             _ = [];
@@ -105101,7 +104244,7 @@
               _.push({
                 title: (0, _._)("#AddonPicker_RecentStickers"),
                 items: _._.FilterStickers(_(_), _),
-                onItemSelect: __webpack_require__,
+                onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
                     sticker: _,
@@ -105133,16 +104276,9 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
-            _ =
-              !_ && __webpack_require__
-                ? _.GetFlairListByGroupID(__webpack_require__)
-                : _.emoticon_list,
+            _ = !_ && _ ? _.GetFlairListByGroupID(_) : _.emoticon_list,
             _ = _._.FilterEmoticons(_, _).slice(0, 1e3);
           return (0, _.jsx)(_, {
             title: (0, _._)("#AddonPicker_Emoticons"),
@@ -105201,8 +104337,8 @@
         };
         render() {
           const { store: _, onItemSelect: _ } = this.props,
-            { filter: __webpack_require__ } = this.state,
-            _ = _._.FilterStickers(_.GetStickerList(), __webpack_require__);
+            { filter: _ } = this.state,
+            _ = _._.FilterStickers(_.GetStickerList(), _);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_StickerHeading"),
             items: _,
@@ -105216,10 +104352,10 @@
               this.setState({
                 filter: _,
               }),
-            filter: __webpack_require__,
+            filter: _,
             onSubmit: () => _(_[0]),
             renderEmpty: () =>
-              __webpack_require__
+              _
                 ? (0, _.jsx)(_, {
                     children: (0, _._)("#AddonPicker_NoResults"),
                   })
@@ -105252,17 +104388,13 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              effectSettings: _,
-              onItemSelect: __webpack_require__,
-            } = this.props,
+          const { store: _, effectSettings: _, onItemSelect: _ } = this.props,
             { filter: _ } = this.state,
             _ = _.GetEffectList().filter(({ name: _ }) => _.indexOf(_) > -1);
           return (0, _.jsx)(_, {
             title: (0, _._)("#EmoticonPicker_EffectHeading"),
             items: _,
-            onItemSelect: __webpack_require__,
+            onItemSelect: _,
             renderItem: (_) =>
               (0, _.jsx)(_, {
                 effect: _,
@@ -105309,11 +104441,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state,
             _ = [];
           return (
@@ -105372,11 +104500,7 @@
           filter: "",
         };
         render() {
-          const {
-              store: _,
-              onItemSelect: _,
-              flairGroupID: __webpack_require__,
-            } = this.props,
+          const { store: _, onItemSelect: _, flairGroupID: _ } = this.props,
             { filter: _ } = this.state;
           return (0, _.jsx)(_, {
             onFilterChange: (_) =>
@@ -105387,10 +104511,7 @@
             sections: [
               {
                 title: (0, _._)("#ChatEntryButton_Flair"),
-                items: _._.FilterStickers(
-                  _.GetFlairListByGroupID(__webpack_require__),
-                  _,
-                ),
+                items: _._.FilterStickers(_.GetFlairListByGroupID(_), _),
                 onItemSelect: _,
                 renderItem: (_) =>
                   (0, _.jsx)(_, {
@@ -105410,14 +104531,14 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (_) => {
-        const { emoticon: _, large: __webpack_require__ } = _,
+        const { emoticon: _, large: _ } = _,
           _ = !_.last_used && _.time_received;
         return (0, _.jsxs)("div", {
           className: _().EmoticonItem,
           children: [
             (0, _.jsx)(_._, {
               emoticon: _.name,
-              large: __webpack_require__,
+              large: _,
             }),
             _ && (0, _.jsx)(_, {}),
           ],
@@ -105429,11 +104550,7 @@
         };
         m_ref = _.createRef();
         render() {
-          const {
-              sticker: _,
-              className: _,
-              ...__webpack_require__
-            } = this.props,
+          const { sticker: _, className: _, ..._ } = this.props,
             _ = _(_._.COMMUNITY_CDN_URL, _.name);
           return (0, _.jsxs)("div", {
             ref: this.m_ref,
@@ -105454,7 +104571,7 @@
               this.setState({
                 showHover: !1,
               }),
-            ...__webpack_require__,
+            ..._,
             children: [
               (0, _.jsx)("img", {
                 style: {
@@ -105474,15 +104591,15 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            sticker: { name: __webpack_require__, appid: _ },
+            sticker: { name: _, appid: _ },
           } = _,
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("img", {
-            src: _(_._.COMMUNITY_CDN_URL, __webpack_require__),
+            src: _(_._.COMMUNITY_CDN_URL, _),
             className: _().StickerHoverSticker,
           }),
         });
@@ -105496,7 +104613,7 @@
           const {
               effect: _,
               roomEffectSettings: _,
-              className: __webpack_require__,
+              className: _,
               ..._
             } = this.props,
             _ = _[_.name];
@@ -105518,7 +104635,7 @@
               this.setState({
                 showHover: !1,
               }),
-            className: (0, _._)(__webpack_require__, _().EffectButton),
+            className: (0, _._)(_, _().EffectButton),
             ..._,
             children: [
               _.renderEffectIcon(),
@@ -105535,14 +104652,14 @@
       const _ = (0, _._)((_) => {
         const {
             target: _,
-            effect: { name: __webpack_require__, appid: _ },
+            effect: { name: _, appid: _ },
             roomEffectSettings: _,
           } = _,
-          _ = _[__webpack_require__],
+          _ = _[_],
           [_] = (0, _._)(_, {});
         return (0, _.jsx)(_._, {
           target: _,
-          title: __webpack_require__,
+          title: _,
           subtitle: _?.GetName(),
           children: (0, _.jsx)("div", {
             className: _().EffectHoverEffect,
@@ -105641,7 +104758,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)("SVGIcon_Button SVGIcon_Clock", _),
           version: "1.1",
@@ -105650,7 +104767,7 @@
           width: "20px",
           height: "20px",
           viewBox: "0 0 24 24",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("path", {
             _: "M15.999 15c-.15 0-.303-.034-.446-.105l-4-2A1.001 1.001 0 0111 12V5a1 1 0 012 0v6.382l3.447 1.724A1 1 0 0115.999 15zM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12zm0-22C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2z",
           }),
@@ -105696,7 +104813,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)({}),
+        const [_, _] = (0, _.useState)({}),
           _ = (0, _._)("useEventHeaderData");
         return (
           (0, _.useEffect)(() => {
@@ -105749,29 +104866,23 @@
               });
             }
           }, [_, _?.token?.reason, _]),
-          __webpack_require__
+          _
         );
       }
       function _(_) {
-        const { appId: _, clanId: __webpack_require__, bShowRSSFeed: _ } = _,
-          {
-            strStoreURL: _,
-            strCommunityURL: _,
-            strForumURL: _,
-          } = _(_, __webpack_require__),
+        const { appId: _, clanId: _, bShowRSSFeed: _ } = _,
+          { strStoreURL: _, strCommunityURL: _, strForumURL: _ } = _(_, _),
           _ = (0, _._)(),
           _ =
             _._.STORE_BASE_URL +
             "feeds/" +
             (0, _._)() +
-            (_ ? "/app/" + _ : "/group/" + __webpack_require__) +
+            (_ ? "/app/" + _ : "/group/" + _) +
             "/?cc=" +
             _._.COUNTRY +
             "&l=" +
             _._.LANGUAGE,
-          _ = _._.Get().GetPartnerEventPermissions(
-            _._.InitFromClanID(__webpack_require__),
-          ),
+          _ = _._.Get().GetPartnerEventPermissions(_._.InitFromClanID(_)),
           _ = _ && (_.can_edit || _.support_user),
           _ = _._.Get().BOwnsApp(_),
           _ = (0, _.useMemo)(() => {
@@ -105811,15 +104922,11 @@
               _ &&
                 _.push({
                   label: (0, _._)("#EventDisplay_Admin_ExtraShort"),
-                  data: (0, _._)(
-                    _,
-                    _._.InitFromClanID(__webpack_require__),
-                    "admin",
-                  ),
+                  data: (0, _._)(_, _._.InitFromClanID(_), "admin"),
                 }),
               _
             );
-          }, [_, _, _, _, _, _, _, _, _, __webpack_require__]);
+          }, [_, _, _, _, _, _, _, _, _, _]);
         return (0, _.jsx)(_._, {
           strDefaultLabel: (0, _._)("#EventDisplay_LinksDropDown_ExtraShort"),
           strClassName: _().AppBannerLinkDD,
@@ -105834,13 +104941,13 @@
         });
       }
       const _ = (0, _._)((_) => {
-        const { appId: _, clanId: __webpack_require__ } = _,
+        const { appId: _, clanId: _ } = _,
           {
             strCapsuleUrl: _,
             strGroupTitle: _,
             _: _,
             strExtraBannerGroupStyle: _,
-          } = _(_, __webpack_require__),
+          } = _(_, _),
           _ = (0, _.useMemo)(
             () =>
               _
@@ -105848,9 +104955,9 @@
                     appid: _,
                   }
                 : {
-                    creatorid: __webpack_require__,
+                    creatorid: _,
                   },
-            [_, __webpack_require__],
+            [_, _],
           ),
           { data: _ } = (0, _._)(_),
           _ = _._.Get().BOwnsApp(_);
@@ -105928,7 +105035,7 @@
                               className: _().HeaderButtonDark,
                             })
                           : (0, _.jsx)(_._, {
-                              clanAccountID: __webpack_require__,
+                              clanAccountID: _,
                               className: _().HeaderButtonDark,
                             }),
                       }),
@@ -106087,7 +105194,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _._)((_) => {
         const { eventModel: _ } = _,
-          [__webpack_require__, _] = (0, _.useState)(!0),
+          [_, _] = (0, _.useState)(!0),
           [_, _] = (0, _.useState)(new Set()),
           [_, _] = (0, _.useState)(new Set()),
           [_, _] = (0, _.useState)(new Set()),
@@ -106095,7 +105202,7 @@
           [_, _] = (0, _.useState)(null),
           _ = (0, _.useRef)(null);
         (0, _.useEffect)(() => {
-          if (__webpack_require__) {
+          if (_) {
             (async () => {
               const _ = _().CancelToken.source();
               _.current = _.cancel;
@@ -106121,7 +105228,7 @@
             })();
           }
           return () => _.current && _.current();
-        }, [__webpack_require__, _.GID, _.clanSteamID]);
+        }, [_, _.GID, _.clanSteamID]);
         const _ = new Array();
         return (
           _.Get()
@@ -106164,7 +105271,7 @@
                       (0, _.jsx)(_._, {
                         children: (0, _._)("#EventRepost_Dialog_Desc"),
                       }),
-                      __webpack_require__
+                      _
                         ? (0, _.jsx)(_._, {
                             string: (0, _._)("#Loading"),
                           })
@@ -106517,11 +105624,7 @@
         }
       };
       function _(_) {
-        const {
-            eventModel: _,
-            emoticonStore: __webpack_require__,
-            partnerEventStore: _,
-          } = _,
+        const { eventModel: _, emoticonStore: _, partnerEventStore: _ } = _,
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(_),
           _ = (0, _._)(_);
@@ -106537,7 +105640,7 @@
                     eventLink: _,
                     sharePageUrls: _,
                     appid: _.appid,
-                    emoticonStore: __webpack_require__,
+                    emoticonStore: _,
                     partnerEventStore: _,
                   }),
                 }),
@@ -106560,11 +105663,7 @@
         });
       }
       function _(_) {
-        const {
-          commentCount: _,
-          discussionURL: __webpack_require__,
-          gotoDiscussion: _,
-        } = _;
+        const { commentCount: _, discussionURL: _, gotoDiscussion: _ } = _;
         return (0, _.jsxs)("div", {
           className: _().DiscussContainer,
           children: [
@@ -106572,9 +105671,9 @@
               className: _().DiscussionCount,
               children: [(0, _.jsx)(_.ROZ, {}), (0, _._)(_)],
             }),
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)(_._, {
-                href: (0, _._)(__webpack_require__),
+                href: (0, _._)(_),
                 children: (0, _.jsxs)("div", {
                   className: (0, _._)(
                     _().Button,
@@ -106590,7 +105689,7 @@
                   ],
                 }),
               }),
-            !__webpack_require__ &&
+            !_ &&
               (0, _.jsxs)(_._, {
                 focusable: !0,
                 onActivate: _,
@@ -106674,7 +105773,7 @@
         include_assets: !0,
       };
       function _(_) {
-        const { event: _, lang: __webpack_require__, previewMode: _ } = _,
+        const { event: _, lang: _, previewMode: _ } = _,
           [_] = (0, _._)(() => [_.GetSteamAwardCategory()]),
           _ = (0, _._)("EventDisplaySteamAwardNomination"),
           [_, _] = (0, _.useState)(null),
@@ -106750,7 +105849,7 @@
                         ? _
                           ? (0, _._)(
                               "#SteamAwards_EventNominateGamePrompt_Long",
-                              _.GetGameTitle(__webpack_require__),
+                              _.GetGameTitle(_),
                             )
                           : (0, _.jsx)("a", {
                               className: _().LinkText,
@@ -106759,7 +105858,7 @@
                               ),
                               children: (0, _._)(
                                 "#SteamAwards_EventNominateGamePrompt_NoCategory",
-                                _.GetGameTitle(__webpack_require__),
+                                _.GetGameTitle(_),
                               ),
                             })
                         : (0, _._)("#SteamAwards_Event_NominationsClosed"),
@@ -106777,11 +105876,7 @@
         });
       }
       function _(_) {
-        const {
-            event: _,
-            nominationEventDetails: __webpack_require__,
-            currentNomination: _,
-          } = _,
+        const { event: _, nominationEventDetails: _, currentNomination: _ } = _,
           [_, _] = (0, _._)(() => [_.GetSteamAwardCategory(), _.appid]),
           _ = _?.appid,
           _ = (0, _._)(_, _, 0),
@@ -106811,7 +105906,7 @@
             [_, _, _],
           ),
           _ = _._.GetTimeNowWithOverride(),
-          _ = 1 == __webpack_require__.rgAwardCategoryDetails?.length,
+          _ = 1 == _.rgAwardCategoryDetails?.length,
           _ =
             _.BIsEventActionEnabled() || _ < _.GetStartTimeAndDateUnixSeconds();
         return _ && (_ || _)
@@ -106826,8 +105921,7 @@
                   children: [
                     (0, _.jsx)("div", {
                       style: {
-                        background:
-                          __webpack_require__?.strNominateButtonBGColor,
+                        background: _?.strNominateButtonBGColor,
                       },
                       className: (0, _._)(
                         _().SteamAwardNominateButton,
@@ -106850,12 +105944,12 @@
                             children: _
                               ? (0, _._)(
                                   "#SteamAwards_NominateWidget_CTA_PastTense",
-                                  __webpack_require__.rgAwardCategoryDetails[0]
+                                  _.rgAwardCategoryDetails[0]
                                     .strSuggestedCategoryTitle,
                                 )
                               : (0, _._)(
                                   "#SteamAwards_NominateWidget_CTA",
-                                  __webpack_require__.rgAwardCategoryDetails[0]
+                                  _.rgAwardCategoryDetails[0]
                                     .strSuggestedCategoryTitle,
                                 ),
                           }),
@@ -106865,12 +105959,11 @@
                     (0, _.jsx)("div", {
                       className: _().SteamAwardCategoryDesc,
                       children:
-                        __webpack_require__.rgAwardCategoryDetails[0]
-                          .strSuggestedCategoryDesc,
+                        _.rgAwardCategoryDetails[0].strSuggestedCategoryDesc,
                     }),
                   ],
                 }),
-                Boolean(_ && _ != __webpack_require__.eLaborOfLove) &&
+                Boolean(_ && _ != _.eLaborOfLove) &&
                   (0, _.jsx)("div", {
                     className: _().SteamAwardLinkToNominationPage,
                     children: (0, _.jsx)("a", {
@@ -106889,14 +105982,14 @@
       function _(_) {
         const {
             curNominatedAppID: _,
-            newAppID: __webpack_require__,
+            newAppID: _,
             strLocTokenInfix: _,
             fnOnConfirm: _,
             fnOnCancel: _,
             closeModal: _,
           } = _,
           [_] = (0, _._)(_, _),
-          [_] = (0, _._)(__webpack_require__, _);
+          [_] = (0, _._)(_, _);
         return (0, _.jsx)(_._, {
           modalClassName: _().SteamAwardConflictModal,
           strTitle: (0, _._)(`#SteamAward_${_}ConflictWarning_Title`),
@@ -107247,15 +106340,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            _: _,
-            event: __webpack_require__,
-            dateRangeLayout: _ = "horizontal",
-          } = _,
+        const { _: _, event: _, dateRangeLayout: _ = "horizontal" } = _,
           [_, _, _] = (0, _._)(() => [
             __webpack_require__.GetStartTimeAndDateUnixSeconds(),
             __webpack_require__.GetEndTimeAndDateUnixSeconds(),
-            __webpack_require__.type,
+            _.type,
           ]),
           _ = {};
         return (
@@ -107334,11 +106423,11 @@
       }
       function _(_) {
         const { appid: _ } = _,
-          [__webpack_require__] = (0, _._)(_, {
+          [_] = (0, _._)(_, {
             include_basic_info: !0,
             include_links: !0,
           });
-        if (!__webpack_require__) return null;
+        if (!_) return null;
         const _ = __webpack_require__.GetLinks();
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
@@ -107360,7 +106449,7 @@
       }
       const _ = [6, 23, 18, 8, 9, 19, 24];
       function _(_) {
-        const { _: _, rgSocialMedia: __webpack_require__, className: _ } = _,
+        const { _: _, rgSocialMedia: _, className: _ } = _,
           _ = (0, _._)();
         return (0, _.jsx)("div", {
           className: (0, _._)(_().AppSocialLinks, _),
@@ -107427,97 +106516,97 @@
         });
       }
       function _(_) {
-        const { linkType: _, ...__webpack_require__ } = _;
+        const { linkType: _, ..._ } = _;
         switch (_) {
           case 1:
             return (0, _.jsx)(_.agV, {
-              ...__webpack_require__,
+              ..._,
             });
           case 2:
             return (0, _.jsx)(_.ZnA, {
-              ...__webpack_require__,
+              ..._,
             });
           case 3:
             return (0, _.jsx)(_._, {
-              ...__webpack_require__,
+              ..._,
             });
           case 4:
             return (0, _.jsx)(_.ofN, {
-              ...__webpack_require__,
+              ..._,
             });
           case 5:
             return (0, _.jsx)(_.Bki, {
-              ...__webpack_require__,
+              ..._,
             });
           case 6:
           case 18:
           case 23:
             return (0, _.jsx)(_.$vK, {
-              ...__webpack_require__,
+              ..._,
             });
           case 7:
             return (0, _.jsx)(_.OSJ, {
-              ...__webpack_require__,
+              ..._,
             });
           case 8:
             return (0, _.jsx)(_.nm_, {
-              ...__webpack_require__,
+              ..._,
             });
           case 9:
             return (0, _.jsx)(_.tIO, {
-              ...__webpack_require__,
+              ..._,
             });
           case 10:
             return (0, _.jsx)(_.Vt2, {
-              ...__webpack_require__,
+              ..._,
             });
           case 11:
             return (0, _.jsx)(_.Vgk, {
-              ...__webpack_require__,
+              ..._,
             });
           case 12:
             return (0, _.jsx)(_.VSd, {
-              ...__webpack_require__,
+              ..._,
             });
           case 13:
             return (0, _.jsx)(_.ccb, {
-              ...__webpack_require__,
+              ..._,
             });
           case 14:
             return (0, _.jsx)(_.rNt, {
-              ...__webpack_require__,
+              ..._,
             });
           case 15:
             return (0, _.jsx)(_.g$j, {
-              ...__webpack_require__,
+              ..._,
             });
           case 16:
             return (0, _.jsx)(_.BQz, {
-              ...__webpack_require__,
+              ..._,
             });
           case 17:
             return (0, _.jsx)(_.jdP, {
-              ...__webpack_require__,
+              ..._,
             });
           case 19:
             return (0, _.jsx)(_.bKN, {
-              ...__webpack_require__,
+              ..._,
             });
           case 20:
             return (0, _.jsx)(_.sDU, {
-              ...__webpack_require__,
+              ..._,
             });
           case 21:
             return (0, _.jsx)(_.MbF, {
-              ...__webpack_require__,
+              ..._,
             });
           case 22:
             return (0, _.jsx)(_.emH, {
-              ...__webpack_require__,
+              ..._,
             });
           case 24:
             return (0, _.jsx)(_.Yoo, {
-              ...__webpack_require__,
+              ..._,
             });
           case 25:
           case 0:
@@ -107532,7 +106621,7 @@
           .then(__webpack_require__.bind(__webpack_require__, "chunkid")),
       );
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)(_.appid, {
+        const [_, _] = (0, _._)(_.appid, {
             include_assets: !0,
           }),
           [_, _] = (0, _._)(_.clanID);
@@ -107939,7 +107028,7 @@
           const {
               event: _,
               langOverride: _,
-              partnerEventStore: __webpack_require__,
+              partnerEventStore: _,
               emoticonStore: _,
               className: _,
               additionalTypeAndDateElement: _,
@@ -108115,7 +107204,7 @@
                       children: [
                         (0, _.jsx)(_._, {
                           text: _,
-                          partnerEventStore: __webpack_require__,
+                          partnerEventStore: _,
                           event: _,
                         }),
                         (0, _.jsx)("span", {
@@ -108161,7 +107250,7 @@
                 !Boolean(_) &&
                   (0, _.jsx)(_, {
                     eventModel: _,
-                    partnerEventStore: __webpack_require__,
+                    partnerEventStore: _,
                     emoticonStore: _,
                   }),
               ],
@@ -108372,11 +107461,7 @@
           _.currentTarget == _.target && this.props.fnClose();
         }
         render() {
-          const {
-            event: _,
-            langOverride: _,
-            isPreview: __webpack_require__,
-          } = this.props;
+          const { event: _, langOverride: _, isPreview: _ } = this.props;
           return (0, _.jsx)("div", {
             ref: this.m_refFocus,
             className: _.Main,
@@ -108388,7 +107473,7 @@
                 emoticonStore: _._,
                 partnerEventStore: _.Get(),
                 langOverride: _,
-                isPreview: __webpack_require__,
+                isPreview: _,
                 bDisableBroadcastPlayer: !1,
               },
               _.GID,
@@ -108413,27 +107498,22 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-          href: _,
-          children: __webpack_require__,
-          bAllowFocuseableAnchor: _,
-          ..._
-        } = _;
+        const { href: _, children: _, bAllowFocuseableAnchor: _, ..._ } = _;
         return (0, _._)()
           ? (0, _.jsx)("div", {
               ..._,
-              children: __webpack_require__,
+              children: _,
             })
           : _
             ? (0, _.jsx)(_._, {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               })
             : (0, _.jsx)("a", {
                 href: _,
                 ..._,
-                children: __webpack_require__,
+                children: _,
               });
       }
       var _ = __webpack_require__("chunkid"),
@@ -108450,7 +107530,7 @@
       function _(_) {
         const {
             creatorID: _,
-            bShowTagline: __webpack_require__,
+            bShowTagline: _,
             bHideCreatorType: _,
             bSmallFormat: _,
             bHideFollowButton: _,
@@ -108534,7 +107614,7 @@
                                       className: _.CreatorNameName,
                                       children: _.GetName(),
                                     }),
-                                    Boolean(__webpack_require__) &&
+                                    Boolean(_) &&
                                       (0, _.jsx)("div", {
                                         className: (0, _._)(
                                           _.FlexColumnContainer,
@@ -108602,7 +107682,7 @@
         });
       }
       function _(_) {
-        const { clanInfo: _, bAddLinkToMemberList: __webpack_require__ } = _;
+        const { clanInfo: _, bAddLinkToMemberList: _ } = _;
         if (
           ((0, _._)(
             _ && _.clanAccountID,
@@ -108623,7 +107703,7 @@
             bSmallFormat: !0,
             bShowTagline: !0,
             bHideCreatorType: !0,
-            bAddLinkToMemberList: __webpack_require__,
+            bAddLinkToMemberList: _,
           }),
         });
       }
@@ -108668,7 +107748,7 @@
         async LoadPartnerEventForQueryIncremental(
           _,
           _ = 0,
-          __webpack_require__ = 10,
+          _ = 10,
           _,
           _,
           _,
@@ -108679,7 +107759,7 @@
           const _ = await this.GetLatestPartnerEvents(
             _,
             _,
-            __webpack_require__,
+            _,
             _,
             _,
             _,
@@ -108703,7 +107783,7 @@
         async GetLatestPartnerEvents(
           _,
           _ = 0,
-          __webpack_require__ = 10,
+          _ = 10,
           _,
           _,
           _,
@@ -108719,7 +107799,7 @@
               _._.STORE_BASE_URL + "events_admin/ajaxgetlatestpartnerevents",
             _ = {
               page: _,
-              count: __webpack_require__,
+              count: _,
               date: _,
               appids: void 0 === _ ? void 0 : _.join(","),
               required_tags: void 0 === _ ? void 0 : _.join(","),
@@ -108752,7 +107832,7 @@
       function _(_) {
         const {
             fnSetEvent: _,
-            strLabel: __webpack_require__,
+            strLabel: _,
             strPlaceholder: _,
             strToolTip: _,
             bShowHidden: _,
@@ -108993,7 +108073,7 @@
           },
           ref: _,
           type: "text",
-          label: __webpack_require__ ?? (0, _._)("#Sale_EnterEventsURL_Common"),
+          label: _ ?? (0, _._)("#Sale_EnterEventsURL_Common"),
           placeholder: _,
           onChange: _,
           tooltip: _ ?? (0, _._)("#Sale_EnterEventsURL_Tooltip_Common"),
@@ -109022,15 +108102,15 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, __webpack_require__ = !1, _ = void 0) {
+      function _(_, _, _ = !1, _ = void 0) {
         return {
           queryKey: ["DiscoveryQueue", _, _],
           queryFn: () =>
-            (async function (_, _, __webpack_require__ = !1, _) {
+            (async function (_, _, _ = !1, _) {
               const _ = _._.Init(_._);
               _.Body().set_queue_type(_),
                 _.Body().set_country_code(_._.COUNTRY),
-                _.Body().set_rebuild_queue(__webpack_require__),
+                _.Body().set_rebuild_queue(_),
                 _.Body().set_rebuild_queue_if_stale(!0),
                 (_?.nSaleTagID ||
                   _?.strContentHubType ||
@@ -109040,7 +108120,7 @@
               if (!_.BSuccess())
                 throw `Error loading discovery queue: ${_.GetErrorMessage()}`;
               return _.Body().toObject();
-            })(_, _, __webpack_require__, _),
+            })(_, _, _, _),
           enabled: _._.logged_in,
         };
       }
@@ -109736,7 +108816,7 @@
       const _ = (0, _._)((_) => {
         const {
             section: _,
-            event: __webpack_require__,
+            event: _,
             language: _,
             nHiddenCapsules: _,
             title: _,
@@ -109749,20 +108829,12 @@
             _.sale_page_cross_promo_event_gid,
             !1,
           ),
-          _ =
-            _ ||
-            (0, _._)(
-              _,
-              __webpack_require__,
-              _,
-              __webpack_require__.clanSteamID.GetAccountID(),
-              _.eLocation,
-            );
+          _ = _ || (0, _._)(_, _, _, _.clanSteamID.GetAccountID(), _.eLocation);
         if (!_) return null;
-        const _ = _ || (0, _._)(_, __webpack_require__, _);
+        const _ = _ || (0, _._)(_, _, _);
         let _ = (0, _.jsx)("div", {
             className: (0, _._)(_().SaleSectionHeader, "SaleSectionHeader"),
-            style: _(_, __webpack_require__, _),
+            style: _(_, _, _),
             children: _?.BHasSomeImage("product_banner")
               ? (0, _.jsxs)("div", {
                   className: _().SaleImageCtn,
@@ -109788,7 +108860,7 @@
               _().SaleSectionSubtitle,
               "SaleSectionSubtitle",
             ),
-            style: _(_, __webpack_require__, _),
+            style: _(_, _, _),
             children: _,
           });
         const _ =
@@ -109948,7 +109020,7 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: __webpack_require__,
+            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -109979,7 +109051,7 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  __webpack_require__ && _().Muted,
+                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -110030,20 +109102,16 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__?.name
+          { data: _ } = (0, _._)(_);
+        return _?.name
           ? (0, _.jsx)("div", {
               className: _().CapsuleName,
-              children: __webpack_require__.name,
+              children: _.name,
             })
           : null;
       }
       function _(_) {
-        const {
-            creatorAccountID: _,
-            bShowAsMuted: __webpack_require__,
-            strClassName: _,
-          } = _,
+        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -110092,11 +109160,7 @@
           })(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().BottomCreatorRow,
-            __webpack_require__ && _().Muted,
-            _,
-          ),
+          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -110135,7 +109199,7 @@
       function _(_) {
         const {
             capsule: _,
-            bShowParentApp: __webpack_require__,
+            bShowParentApp: _,
             elElementToAppendToHover: _,
             index: _,
             navKey: _,
@@ -110147,9 +109211,7 @@
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          _ = (0, _._)(
-            __webpack_require__ ? _?.related_items?.parent_appid : void 0,
-          ),
+          _ = (0, _._)(_ ? _?.related_items?.parent_appid : void 0),
           { data: _ } = (0, _._)(_);
         if (!_ || !_) return null;
         const _ = !!_ && !!_,
@@ -110216,14 +109278,14 @@
       function _(_) {
         const {
             strExtraParams: _,
-            parentID: __webpack_require__,
+            parentID: _,
             parentStoreItemDefaultInfo: _,
             childAppType: _,
             bPreferDemoStorePage: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          { data: _ } = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               className: _().CapsuleParentInfo,
@@ -110240,7 +109302,7 @@
                     ),
                   }),
                   (0, _.jsx)(_._, {
-                    _: __webpack_require__,
+                    _: _,
                     strExtraParams: _,
                     children: (0, _.jsx)("img", {
                       loading: "lazy",
@@ -110259,7 +109321,7 @@
       function _(_) {
         const {
             _: _,
-            bHideStatusBanners: __webpack_require__,
+            bHideStatusBanners: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -110301,7 +109363,7 @@
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
-                      hide_status_banners: __webpack_require__,
+                      hide_status_banners: _,
                       show_early_access: _.bShowEarlyAccessBanner,
                     }),
                     "none" != _ &&
@@ -110335,11 +109397,7 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            strDoubleCapsuleMessage: __webpack_require__,
-            index: _,
-          } = _,
+        const { _: _, strDoubleCapsuleMessage: _, index: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return (0, _.jsxs)("div", {
@@ -110347,7 +109405,7 @@
           children: [
             (0, _.jsx)("div", {
               className: _().Reason,
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)("div", {
               className: _().StoreSaleItemRelease,
@@ -110366,7 +109424,7 @@
       function _(_) {
         const {
             _: _,
-            bHidePriceIfOwned: __webpack_require__,
+            bHidePriceIfOwned: _,
             bHideStatusBanners: _,
             bUseSubscriptionLayout: _,
             elElementToAppendToHover: _,
@@ -110386,7 +109444,7 @@
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && __webpack_require__),
+        const _ = Boolean(_ && _),
           _ = Boolean(_);
         return (0, _.jsx)(_, {
           _: _,
@@ -110426,7 +109484,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+        const { appid: _, className: _, bTextMode: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -110435,11 +109493,11 @@
           bIsFree: Boolean(_?.is_free),
           bIsComingSoon: Boolean(_?.is_coming_soon),
           bTextMode: _,
-          className: __webpack_require__,
+          className: _,
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)(),
           {
             appid: _,
@@ -110493,7 +109551,7 @@
         );
       }
       function _(_) {
-        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+        const { possibleDemoAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
@@ -110501,12 +109559,12 @@
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,
-                className: __webpack_require__,
+                className: _,
               })
           : null;
       }
       function _(_) {
-        const { parentAppID: _, className: __webpack_require__ } = _,
+        const { parentAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -110515,7 +109573,7 @@
               appid: _,
               bIsComingSoon: Boolean(_.is_coming_soon),
               bIsFree: Boolean(_.is_free),
-              className: __webpack_require__,
+              className: _,
             })
           : null;
       }
@@ -110534,7 +109592,7 @@
       function _(_) {
         const {
             accountID: _,
-            bHideWhenNotAvailable: __webpack_require__,
+            bHideWhenNotAvailable: _,
             bHideName: _,
             bLink: _ = !0,
           } = _,
@@ -110547,7 +109605,7 @@
           children: Boolean(!_)
             ? (0, _.jsx)(_.Fragment, {
                 children:
-                  Boolean(!__webpack_require__) &&
+                  Boolean(!_) &&
                   (0, _.jsx)("span", {
                     children: _,
                   }),
@@ -110676,7 +109734,7 @@
           });
         },
         _ = (_) => {
-          const [_, __webpack_require__] = (0, _.useState)(!1),
+          const [_, _] = (0, _.useState)(!1),
             _ = (_, _) => {
               __webpack_require__(!1),
                 console.log(
@@ -110835,15 +109893,15 @@
         _ = (_) => {
           const {
               fnOnImportLocData: _,
-              closeModal: __webpack_require__,
+              closeModal: _,
               sampleLocData: _,
               sampleFilename: _,
             } = _,
             _ = new _._();
           return (0, _.jsxs)(_._, {
             title: (0, _._)("#ImportLoc_Title"),
-            onCancel: __webpack_require__,
-            closeModal: __webpack_require__,
+            onCancel: _,
+            closeModal: _,
             children: [
               (0, _.jsxs)(_._, {
                 children: [
@@ -110918,22 +109976,22 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = (0, _._)(),
           _ = _.useMemo(
             () => ({
               ..._._.GetDefaultParams(),
               ..._,
-              ...__webpack_require__,
+              ..._,
             }),
             [
               _,
-              __webpack_require__.domain,
-              __webpack_require__.controller,
-              __webpack_require__.method,
-              __webpack_require__.submethod,
-              __webpack_require__.feature,
-              __webpack_require__.depth,
+              _.domain,
+              _.controller,
+              _.method,
+              _.submethod,
+              _.feature,
+              _.depth,
             ],
           );
         return (0, _.jsx)(_._, {

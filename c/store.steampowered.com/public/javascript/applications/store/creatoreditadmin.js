@@ -106,17 +106,13 @@
       const _ = _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_),
           _ = !(0, _._)();
         return (
@@ -158,17 +154,13 @@
       _.memo(function (_) {
         const {
           className: _,
-          size: __webpack_require__,
+          size: _,
           string: _,
           position: _,
           static: _,
           msDelayAppear: _,
         } = _;
-        let _ = [
-          _().LoadingWrapper,
-          "SteamLogoThrobber",
-          _(__webpack_require__),
-        ];
+        let _ = [_().LoadingWrapper, "SteamLogoThrobber", _(_)];
         const [_, _] = _.useState(!_);
         return (
           (0, _.useEffect)(() => {
@@ -478,7 +470,7 @@
       function _(_) {
         const {
             items: _,
-            render: __webpack_require__,
+            render: _,
             onDelete: _,
             onEdit: _,
             onReorder: _,
@@ -733,7 +725,7 @@
       function _(_) {
         const {
             rgSocialMediaItems: _,
-            fnSetItems: __webpack_require__,
+            fnSetItems: _,
             rgSupportedSocialMediaTypes: _,
             rgValidationData: _,
           } = _,
@@ -801,7 +793,7 @@
         });
       }
       function _(_) {
-        const { options: _, onAddLink: __webpack_require__ } = _;
+        const { options: _, onAddLink: _ } = _;
         return (0, _.jsx)("div", {
           className: _.AddLinkDropDown,
           children: (0, _.jsx)(_._, {
@@ -851,11 +843,7 @@
         );
       }
       function _(_) {
-        const {
-          item: _,
-          onUpdateLink: __webpack_require__,
-          validationData: _,
-        } = _;
+        const { item: _, onUpdateLink: _, validationData: _ } = _;
         let _;
         _ = _.number
           ? (0, _._)("#StoreAdmin_SocialMedia_EnterNumber")
@@ -893,7 +881,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { clanAccountID: _, page_config: __webpack_require__ } = _,
+        const { clanAccountID: _, page_config: _ } = _,
           _ = (function () {
             const _ = (0, _._)({
               queryKey: ["useSocialMediaSupports"],
@@ -915,12 +903,8 @@
             });
             return _.isLoading ? null : _.data;
           })(),
-          [_, _] = (0, _.useState)(
-            () => __webpack_require__?.social_media ?? [],
-          ),
-          [_, _] = (0, _.useState)(
-            () => __webpack_require__?.social_media ?? [],
-          );
+          [_, _] = (0, _.useState)(() => _?.social_media ?? []),
+          [_, _] = (0, _.useState)(() => _?.social_media ?? []);
         return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [

@@ -119,7 +119,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = Object.assign(
         function (_) {
-          const { render: _, ...__webpack_require__ } = _;
+          const { render: _, ..._ } = _;
           return _(
             _,
             (0, _.jsx)(_._, {
@@ -129,7 +129,7 @@
             }),
             {
               role: "listbox",
-              ...__webpack_require__,
+              ..._,
             },
           );
         },
@@ -137,14 +137,14 @@
           Option: function (_) {
             const {
                 selected: _,
-                focused: __webpack_require__,
+                focused: _,
                 label: _ = null,
                 render: _,
                 disabled: _,
                 ..._
               } = _,
               _ = _ ? "true" : "false",
-              _ = __webpack_require__ ? "true" : void 0;
+              _ = _ ? "true" : void 0;
             return _(
               _,
               (0, _.jsx)(_._, {
@@ -161,7 +161,7 @@
               },
               {
                 selected: _,
-                focused: __webpack_require__,
+                focused: _,
                 disabled: _,
               },
             );
@@ -172,20 +172,19 @@
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
       (0, _.createContext)(null);
       function _(_) {
-        const { gutter: _ = 0, placement: __webpack_require__ } = _,
+        const { gutter: _ = 0, placement: _ } = _,
           _ = [],
-          _ = __webpack_require__ && "object" == typeof __webpack_require__;
+          _ = _ && "object" == typeof _;
         return (
-          _ && __webpack_require__.offset
-            ? _.push((0, _._)(__webpack_require__.offset))
-            : (_ && void 0 !== __webpack_require__.offset) ||
-              _.push((0, _._)(2)),
-          _ && __webpack_require__.flip
-            ? _.push((0, _._)(__webpack_require__.flip))
-            : (_ && void 0 !== __webpack_require__.flip) || _.push((0, _._)()),
-          _ && __webpack_require__.shift
-            ? _.push((0, _._)(__webpack_require__.shift))
-            : (_ && void 0 !== __webpack_require__.shift) || _.push((0, _._)()),
+          _ && _.offset
+            ? _.push((0, _._)(_.offset))
+            : (_ && void 0 !== _.offset) || _.push((0, _._)(2)),
+          _ && _.flip
+            ? _.push((0, _._)(_.flip))
+            : (_ && void 0 !== _.flip) || _.push((0, _._)()),
+          _ && _.shift
+            ? _.push((0, _._)(_.shift))
+            : (_ && void 0 !== _.shift) || _.push((0, _._)()),
           _.push(
             (0, _._)({
               apply: (_) => {
@@ -227,9 +226,9 @@
       }
       const _ = (0, _.createContext)(null);
       const _ = function (_) {
-          const { children: _, state: __webpack_require__ } = _;
+          const { children: _, state: _ } = _;
           return (0, _.jsx)(_.Provider, {
-            value: __webpack_require__,
+            value: _,
             children: _,
           });
         },
@@ -253,7 +252,7 @@
           });
         },
         _ = function (_) {
-          const { children: _, render: __webpack_require__, ref: _ } = _,
+          const { children: _, render: _, ref: _ } = _,
             _ = (0, _.useContext)(_),
             _ = (0, _._)([_, _?.floating.refs.setFloating]),
             _ = (0, _._)();
@@ -269,7 +268,7 @@
                       ref: _,
                       style: _.floating.floatingStyles,
                       ..._.getFloatingProps(),
-                      render: __webpack_require__,
+                      render: _,
                       children: (0, _.jsx)(_._, {
                         elementsRef: _.elementsRef,
                         labelsRef: _.labelsRef,
@@ -287,7 +286,7 @@
         _ = function (_) {
           const {
               children: _,
-              label: __webpack_require__,
+              label: _,
               selected: _,
               onSelect: _,
               ref: _,
@@ -296,7 +295,7 @@
             } = _,
             _ = (0, _.useContext)(_),
             { ref: _, index: _ } = (0, _._)({
-              label: __webpack_require__,
+              label: _,
             }),
             _ = (0, _._)([_, _]);
           if (!_)
@@ -339,7 +338,7 @@
       function _(_) {
         const {
             children: _,
-            beforeContent: __webpack_require__,
+            beforeContent: _,
             afterContent: _,
             hasValue: _,
             ..._
@@ -347,7 +346,7 @@
           _ = (function (_) {
             const {
                 variant: _ = "default",
-                size: __webpack_require__ = "2",
+                size: _ = "2",
                 radius: _,
                 focusable: _ = !0,
                 hoverable: _ = !0,
@@ -368,7 +367,7 @@
                   _ && !_ && _.Clickable,
                   _ && _.Disabled,
                   _[`Variant-${_}`],
-                  _[`Size-${__webpack_require__}`],
+                  _[`Size-${_}`],
                   _,
                 ),
               },
@@ -380,10 +379,10 @@
           align: "center",
           "data-has-value": !!_,
           children: [
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)(_._, {
                 paddingRight: "2",
-                children: __webpack_require__,
+                children: _,
               }),
             (0, _.jsx)(_._, {
               flexGrow: "1",
@@ -400,14 +399,14 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { viewBoxSize: _ = 20, ...__webpack_require__ } = _,
-          _ = __webpack_require__.size ? void 0 : _.IconSizeDefault;
+        const { viewBoxSize: _ = 20, ..._ } = _,
+          _ = _.size ? void 0 : _.IconSizeDefault;
         return (0, _.jsx)("svg", {
           viewBox: `0 0 ${_} ${_}`,
           ...(0, _._)(
             {
               className: _,
-              ...__webpack_require__,
+              ..._,
             },
             _,
           ),
@@ -478,7 +477,7 @@
       function _(_) {
         const {
             checked: _,
-            onChange: __webpack_require__,
+            onChange: _,
             disabled: _,
             children: _,
             ref: _,
@@ -488,7 +487,7 @@
           _ = "indeterminate" === _,
           _ = _ ? _ : _,
           _ = () => {
-            __webpack_require__ && __webpack_require__(!!_ || !_);
+            _ && __webpack_require__(!!_ || !_);
           };
         return (0, _.jsxs)(_._, {
           ref: _,
@@ -531,17 +530,13 @@
         });
       }
       function _(_, _) {
-        const {
-            onSelectionChange: __webpack_require__,
-            selectedValue: _,
-            ..._
-          } = _,
+        const { onSelectionChange: _, selectedValue: _, ..._ } = _,
           [_, _] = (0, _.useState)(!1),
           _ = (0, _.useCallback)(
             (_) => {
               __webpack_require__(_), _ || _(!1);
             },
-            [__webpack_require__, _],
+            [_, _],
           ),
           _ = (0, _.useCallback)(
             (_) => {
@@ -575,7 +570,7 @@
         Root: function (_) {
           const {
               children: _,
-              state: __webpack_require__,
+              state: _,
               placement: _ = "bottom-end",
               popoverWidth: _ = "dropdown",
               ..._
@@ -584,31 +579,22 @@
             [_, _] = (0, _.useState)(null),
             _ = (0, _.useMemo)(
               () =>
-                __webpack_require__.rgOptions.findIndex((_) =>
-                  __webpack_require__.multiselect
-                    ? __webpack_require__.selectedValue.includes(_)
-                    : _ === __webpack_require__.selectedValue,
+                _.rgOptions.findIndex((_) =>
+                  _.multiselect
+                    ? _.selectedValue.includes(_)
+                    : _ === _.selectedValue,
                 ),
-              [
-                __webpack_require__.selectedValue,
-                __webpack_require__.rgOptions,
-                __webpack_require__.multiselect,
-              ],
+              [_.selectedValue, _.rgOptions, _.multiselect],
             ),
             _ = (0, _.useRef)(null),
             _ = {
-              ...__webpack_require__,
+              ..._,
               ..._,
               focusedValue: _,
               onFocusChange: _,
               refPopover: _,
               setOpen: (_) => {
-                _ &&
-                  _(
-                    __webpack_require__.multiselect
-                      ? __webpack_require__.selectedValue[0]
-                      : __webpack_require__.selectedValue,
-                  ),
+                _ && _(_.multiselect ? _.selectedValue[0] : _.selectedValue),
                   __webpack_require__.setOpen(_);
               },
               focusedIndex: _,
@@ -617,7 +603,7 @@
             _ = (function (_) {
               const {
                 open: _,
-                onOpenChange: __webpack_require__,
+                onOpenChange: _,
                 activeIndex: _,
                 setActiveIndex: _,
                 selectedIndex: _,
@@ -629,7 +615,7 @@
               let _ = _;
               const _ = (0, _._)({
                   open: _,
-                  onOpenChange: __webpack_require__,
+                  onOpenChange: _,
                   middleware: _(_),
                   whileElementsMounted: _._,
                   placement: _ && "object" == typeof _ ? _.initial : _,
@@ -684,15 +670,13 @@
                 initialFocus: _.virtualItemFocus ? -1 : void 0,
               };
             })({
-              open: __webpack_require__.bOpen,
-              onOpenChange: __webpack_require__.setOpen,
+              open: _.bOpen,
+              onOpenChange: _.setOpen,
               width: _,
               placement: _,
               selectedIndex: _,
               setSelectedIndex: (_) =>
-                __webpack_require__.onItemSelectionChange(
-                  __webpack_require__.rgOptions[_],
-                ),
+                __webpack_require__.onItemSelectionChange(_.rgOptions[_]),
               activeIndex: _,
               setActiveIndex: _,
               gutter: "4",
@@ -712,12 +696,7 @@
           });
         },
         Option: function (_) {
-          const {
-              value: _,
-              children: __webpack_require__,
-              disabled: _,
-              ..._
-            } = _,
+          const { value: _, children: _, disabled: _, ..._ } = _,
             {
               onItemSelectionChange: _,
               multiselect: _,
@@ -741,10 +720,10 @@
                       checked: _,
                       variant: "dark",
                     }),
-                    __webpack_require__,
+                    _,
                   ],
                 }),
-              !_ && __webpack_require__,
+              !_ && _,
             ],
           });
         },
@@ -756,7 +735,7 @@
           });
         },
         Trigger: function (_) {
-          const { children: _, render: __webpack_require__ } = _,
+          const { children: _, render: _ } = _,
             {
               bOpen: _,
               setOpen: _,
@@ -794,7 +773,7 @@
                   })
                 : (0, _.jsx)(_, {}),
             _ = _(
-              __webpack_require__,
+              _,
               (0, _.jsx)(_, {
                 afterContent: _,
                 variant: _,
@@ -841,7 +820,7 @@
       const _ = Object.assign(function (_) {
         const {
             selectedValue: _,
-            onSelectionChange: __webpack_require__,
+            onSelectionChange: _,
             options: _,
             placeholder: _,
             getOptionLabel: _ = _,
@@ -850,7 +829,7 @@
           _ = (function (_) {
             return _(_, !1);
           })({
-            onSelectionChange: __webpack_require__,
+            onSelectionChange: _,
             selectedValue: _,
             rgOptions: _,
             placeholder: _,
@@ -892,7 +871,7 @@
       const _ = Object.assign(function (_) {
           const {
               selectedValue: _,
-              onSelectionChange: __webpack_require__,
+              onSelectionChange: _,
               options: _,
               placeholder: _,
               getOptionLabel: _ = _,
@@ -901,7 +880,7 @@
             _ = (function (_) {
               return _(_, !0);
             })({
-              onSelectionChange: __webpack_require__,
+              onSelectionChange: _,
               selectedValue: _,
               rgOptions: _,
               placeholder: _,
@@ -976,7 +955,7 @@
         _ = __webpack_require__("chunkid");
       const _ = _.memo(function () {
         const [_, _] = _.useState(),
-          [__webpack_require__, _] = _.useState(!1),
+          [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1);
         _.useEffect(() => {
@@ -987,7 +966,7 @@
         const _ = _.useCallback((_) => {
           _(_), _(!0);
         }, []);
-        return __webpack_require__
+        return _
           ? (0, _.jsxs)("div", {
               className: _().AdminPageCtn,
               children: [
@@ -1068,7 +1047,7 @@
             });
       });
       function _(_) {
-        const { categories: _, onUpdate: __webpack_require__ } = _,
+        const { categories: _, onUpdate: _ } = _,
           { rgTags: _ } = (0, _._)(),
           [_] = (0, _._)("edit");
         if (!_)
@@ -1120,7 +1099,7 @@
         });
       }
       function _(_) {
-        const { rgTags: _, replacesTags: __webpack_require__ } = _,
+        const { rgTags: _, replacesTags: _ } = _,
           _ = (0, _.useMemo)(
             () =>
               __webpack_require__
@@ -1129,7 +1108,7 @@
                   return (_?.name || "Unknown tag") + " (" + String(_._) + ")";
                 })
                 .join(", "),
-            [__webpack_require__, _],
+            [_, _],
           );
         return _
           ? (0, _.jsx)("span", {
@@ -1138,12 +1117,7 @@
           : (0, _.jsx)("span", {});
       }
       function _(_) {
-        const {
-            item: _,
-            rgTags: __webpack_require__,
-            fnSaveCategory: _,
-            bOpenEditor: _,
-          } = _,
+        const { item: _, rgTags: _, fnSaveCategory: _, bOpenEditor: _ } = _,
           [_, _, _] = (0, _._)(_);
         return (0, _.jsx)("div", {
           className: _().CategoryCtn,
@@ -1181,7 +1155,7 @@
               (0, _.jsx)("div", {
                 className: _().ReplacesTags,
                 children: (0, _.jsx)(_, {
-                  rgTags: __webpack_require__,
+                  rgTags: _,
                   replacesTags: _.replaces_tags,
                 }),
               }),
@@ -1198,7 +1172,7 @@
         });
       }
       function _(_) {
-        const { fnSaveCategory: _, closeModal: __webpack_require__ } = _,
+        const { fnSaveCategory: _, closeModal: _ } = _,
           [_, _] = _.useState(_.category),
           _ = _.useMemo(
             () => [
@@ -1228,8 +1202,8 @@
         return (0, _.jsxs)(_._, {
           title: `Edit Category (ID ${_._})`,
           bAllowFullSize: !0,
-          onCancel: __webpack_require__,
-          closeModal: __webpack_require__,
+          onCancel: _,
+          closeModal: _,
           children: [
             (0, _.jsx)(_._, {
               children: (0, _.jsxs)("div", {
@@ -1337,7 +1311,7 @@
             }),
             (0, _.jsx)(_._, {
               children: (0, _.jsx)(_._, {
-                onCancel: __webpack_require__,
+                onCancel: _,
                 onOK: () => {
                   _(_), __webpack_require__();
                 },
@@ -1348,16 +1322,13 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-            rgContentDescriptors: _,
-            setContentDescriptors: __webpack_require__,
-          } = _,
+        const { rgContentDescriptors: _, setContentDescriptors: _ } = _,
           _ = _.useMemo(() => [2, 1, 4, 3], []);
         return (0, _.jsx)(_._, {
           label: "Content Descriptors",
           children: (0, _.jsx)(_, {
             selectedValue: _,
-            onSelectionChange: __webpack_require__,
+            onSelectionChange: _,
             options: _,
             getOptionLabel: (_) =>
               (function (_) {
@@ -1387,7 +1358,7 @@
         });
       });
       function _(_) {
-        const { category: _, setCategory: __webpack_require__ } = _,
+        const { category: _, setCategory: _ } = _,
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(0);
         return (0, _.jsxs)(_.Fragment, {
@@ -1400,19 +1371,19 @@
                   children: [
                     (0, _.jsx)(_, {
                       category: _,
-                      setCategory: __webpack_require__,
+                      setCategory: _,
                       list: "must",
                       title: "Must have all of these tags",
                     }),
                     (0, _.jsx)(_, {
                       category: _,
-                      setCategory: __webpack_require__,
+                      setCategory: _,
                       list: "any",
                       title: "Must have one of these tags",
                     }),
                     (0, _.jsx)(_, {
                       category: _,
-                      setCategory: __webpack_require__,
+                      setCategory: _,
                       list: "mustnot",
                       title: "Must not have any of these tags",
                     }),
@@ -1427,7 +1398,7 @@
                 children: [
                   (0, _.jsx)(_, {
                     category: _,
-                    setCategory: __webpack_require__,
+                    setCategory: _,
                     list: "replaces_tags",
                     title:
                       "The following Tags should redirect to this category page",
@@ -1551,12 +1522,7 @@
         });
       }
       const _ = _.memo(function (_) {
-        const {
-            category: _,
-            setCategory: __webpack_require__,
-            list: _,
-            title: _,
-          } = _,
+        const { category: _, setCategory: _, list: _, title: _ } = _,
           { rgTags: _, rgCategories: _ } = (0, _._)(),
           _ = (_) => {
             __webpack_require__((_) => ({
@@ -1669,14 +1635,14 @@
         });
       });
       function _(_) {
-        const { categories: _, onSave: __webpack_require__, closeModal: _ } = _,
+        const { categories: _, onSave: _, closeModal: _ } = _,
           [_, _] = _.useState();
         return (
           _.useEffect(() => {
             (0, _._)(_).then((_) => {
               _ ? _(_.strErrorMsg) : (__webpack_require__(), _ && _());
             });
-          }, [_, _, __webpack_require__]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             strTitle: "Saving",
             bAlertDialog: !0,
@@ -1695,18 +1661,16 @@
         );
       }
       function _(_) {
-        const { onPublish: _, closeModal: __webpack_require__ } = _,
+        const { onPublish: _, closeModal: _ } = _,
           [_, _] = _.useState(!1),
           [_, _] = _.useState();
         return (
           _.useEffect(() => {
             _ &&
               (0, _._)().then((_) => {
-                _
-                  ? _(_.strErrorMsg)
-                  : (_(), _(!1), __webpack_require__ && __webpack_require__());
+                _ ? _(_.strErrorMsg) : (_(), _(!1), _ && __webpack_require__());
               });
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           (0, _.jsx)(_._, {
             strTitle: _ ? "Publishing" : "Really Publish?",
             strDescription:
@@ -1716,10 +1680,10 @@
             bDisableBackgroundDismiss: _,
             bHideCloseIcon: _,
             onOK: () => {
-              _ ? __webpack_require__ && __webpack_require__() : _(!0);
+              _ ? _ && __webpack_require__() : _(!0);
             },
             onCancel: () => {
-              __webpack_require__ && __webpack_require__();
+              _ && __webpack_require__();
             },
             children:
               _ &&

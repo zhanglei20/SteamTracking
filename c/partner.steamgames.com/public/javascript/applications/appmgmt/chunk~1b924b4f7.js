@@ -114,21 +114,21 @@
         _ = __webpack_require__("chunkid");
       let _ = null;
       function _(_) {
-        const { packageID: _, strPriceKey: __webpack_require__ } = _,
+        const { packageID: _, strPriceKey: _ } = _,
           {
             nPriceInCents: _,
             nPublishedPriceInCents: _,
             nProposedPriceInCents: _,
             nSuggestedPriceInCents: _,
             fnSetPrice: _,
-          } = (0, _._)(_, __webpack_require__),
+          } = (0, _._)(_, _),
           { nPriceInCents: _ } = (0, _._)(_, "USD"),
           _ = !(!_ || (_ && _ == _)),
           _ = (0, _._)(_),
           _ = _ && _(_.rtSubmitted),
           { data: _ } = (0, _._)(_?.submitterID),
           _ = _ ? _.m_strPlayerName : _?.submitterID;
-        return (_ || _ || _) && _ == _ + __webpack_require__
+        return (_ || _ || _) && _ == _ + _
           ? (0, _.jsxs)("div", {
               className: _().PricePopout,
               children: [
@@ -148,7 +148,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().DetailPrice,
-                        children: (0, _._)(_, __webpack_require__).join(""),
+                        children: (0, _._)(_, _).join(""),
                       }),
                       (0, _.jsx)(_._, {
                         className: (0, _._)(
@@ -182,7 +182,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().DetailPrice,
-                        children: (0, _._)(_, __webpack_require__).join(""),
+                        children: (0, _._)(_, _).join(""),
                       }),
                       (0, _.jsx)(_._, {
                         className: (0, _._)(
@@ -215,7 +215,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _().DetailPrice,
-                        children: (0, _._)(_, __webpack_require__).join(""),
+                        children: (0, _._)(_, _).join(""),
                       }),
                       (0, _.jsx)(_._, {
                         className: (0, _._)(
@@ -238,8 +238,8 @@
           : null;
       }
       function _(_) {
-        const { cell: _, row: __webpack_require__ } = _,
-          _ = __webpack_require__.original.packageID,
+        const { cell: _, row: _ } = _,
+          _ = _.original.packageID,
           _ = _.getValue(),
           {
             nPriceInCents: _,
@@ -303,8 +303,8 @@
             _ &&
               (0, _.jsx)(_, {
                 packageID: _,
-                appids: __webpack_require__.original.appids,
-                bCanSetToFree: __webpack_require__.original.bCanSetToFree,
+                appids: _.original.appids,
+                bCanSetToFree: _.original.bCanSetToFree,
               }),
             (0, _.jsx)(_, {
               packageID: _,
@@ -314,11 +314,7 @@
         });
       }
       function _(_) {
-        const {
-            packageID: _,
-            appids: __webpack_require__,
-            bCanSetToFree: _,
-          } = _,
+        const { packageID: _, appids: _, bCanSetToFree: _ } = _,
           { fnApplyGuidelines: _ } = (0, _._)((0, _._)());
         return (0, _.jsx)(_._, {
           fnGetUSDPriceInCents: () => (0, _._)(_, "USD"),
@@ -327,17 +323,13 @@
             "#PricingDashboard_GuidelinesPickerDescription",
           ),
           nPackageID: _,
-          appids: __webpack_require__,
+          appids: _,
           bCanSetToFree: _,
         });
       }
       function _(_) {
-        const { packageID: _, strPriceKey: __webpack_require__ } = _,
-          {
-            strPriceWarning: _,
-            bBadPrice: _,
-            bShowWarningIcon: _,
-          } = _(_, __webpack_require__);
+        const { packageID: _, strPriceKey: _ } = _,
+          { strPriceWarning: _, bBadPrice: _, bShowWarningIcon: _ } = _(_, _);
         return _
           ? (0, _.jsx)(_._, {
               className: _().PriceAlert,
@@ -353,7 +345,7 @@
       const _ = 2;
       function _(_, _) {
         const {
-            nPriceInCents: __webpack_require__,
+            nPriceInCents: _,
             nPublishedPriceInCents: _,
             nProposedPriceInCents: _,
             nMinPriceInCents: _,
@@ -363,13 +355,13 @@
           } = (0, _._)(_, _),
           _ = (0, _._)(_),
           _ = "USD" == _,
-          _ = __webpack_require__ != (_ ?? _),
-          _ = __webpack_require__ < _,
-          _ = !!_ && __webpack_require__ > _,
-          _ = !!_ && __webpack_require__ > _ * _,
-          _ = !!_ && __webpack_require__ < _ / _,
-          _ = !!_ && __webpack_require__ < _ && !!_,
-          _ = !!_ && __webpack_require__ == _ && !!_,
+          _ = _ != (_ ?? _),
+          _ = _ < _,
+          _ = !!_ && _ > _,
+          _ = !!_ && _ > _ * _,
+          _ = !!_ && _ < _ / _,
+          _ = !!_ && _ < _ && !!_,
+          _ = !!_ && _ == _ && !!_,
           _ =
             (_ && (0, _._)("#PricingDashboard_PriceIncreaseDisallowed")) ||
             (_ &&
@@ -422,16 +414,14 @@
         );
       }
       function _(_) {
-        const { nPriceInCents: _, nSavedPriceInCents: __webpack_require__ } = _;
+        const { nPriceInCents: _, nSavedPriceInCents: _ } = _;
         let _ = null,
           _ = null,
           _ = null,
           _ = null;
-        if (__webpack_require__) {
-          const _ = Math.ceil(
-              (100 * (_ - __webpack_require__)) / __webpack_require__,
-            ),
-            _ = _ > __webpack_require__;
+        if (_) {
+          const _ = Math.ceil((100 * (_ - _)) / _),
+            _ = _ > _;
           (_ = _
             ? (0, _._)("#PricingDashboard_PriceIncreaseBy", _ + "%")
             : (0, _._)("#PricingDashboard_PriceLowerBy", _ + "%")),
@@ -483,24 +473,24 @@
       function _(_) {
         const {
           size: _ = "3",
-          loading: __webpack_require__ = !0,
+          loading: _ = !0,
           children: _,
           color: _,
           variant: _,
           ..._
         } = _;
-        return _ || !__webpack_require__
+        return _ || !_
           ? (0, _.jsxs)(_._, {
               position: "relative",
               ..._,
               width: "fit-content",
               children: [
                 (0, _.jsx)("div", {
-                  "data-visibility": !__webpack_require__,
+                  "data-visibility": !_,
                   className: _.ChildContainer,
                   children: _,
                 }),
-                __webpack_require__ &&
+                _ &&
                   (0, _.jsx)(_._, {
                     position: "absolute",
                     inset: "0",
@@ -522,13 +512,9 @@
             });
       }
       function _(_) {
-        const {
-          className: _,
-          color: __webpack_require__,
-          ..._
-        } = (0, _._)(_, _);
+        const { className: _, color: _, ..._ } = (0, _._)(_, _);
         return (0, _.jsx)("div", {
-          "data-accent-color": __webpack_require__,
+          "data-accent-color": _,
           className: _()(_, _.Spinner),
           ..._,
         });
@@ -581,7 +567,7 @@
         _ = function (_) {
           const {
               variant: _ = "default",
-              size: __webpack_require__ = "2",
+              size: _ = "2",
               minWidth: _ = "fit-content",
               color: _,
               loading: _,
@@ -593,7 +579,7 @@
             } = _,
             _ = _
               ? (0, _.jsx)(_, {
-                  size: __webpack_require__,
+                  size: _,
                   color: _,
                   variant: "bright",
                   children: _,
@@ -607,7 +593,7 @@
               {
                 ..._,
                 variant: _,
-                size: __webpack_require__,
+                size: _,
                 minWidth: _,
                 color: _,
                 className: _()(_.Button, _ && _.Icon),
@@ -621,7 +607,7 @@
         _ = function (_) {
           const {
               variant: _ = "default",
-              size: __webpack_require__ = "2",
+              size: _ = "2",
               minWidth: _ = "fit-content",
               disabled: _,
               icon: _,
@@ -636,7 +622,7 @@
                 onClick: _,
                 ..._,
                 variant: _,
-                size: __webpack_require__,
+                size: _,
                 minWidth: _,
                 className: _()(_.Button, _ && _.Icon, (0, _._)()),
               },
@@ -956,7 +942,7 @@
       function _(_) {
         const {
             direction: _,
-            ignoreHorizontal: __webpack_require__,
+            ignoreHorizontal: _,
             ignoreVertical: _,
             dismissOnClick: _,
             interactionMode: _ = 0,
@@ -969,10 +955,8 @@
           [_, _] = (0, _.useMemo)(
             () =>
               (function (_) {
-                const [_, __webpack_require__] = (0, _._)(_, "-");
-                return "left" === _ || "right" === _
-                  ? [void 0, _]
-                  : [_, __webpack_require__];
+                const [_, _] = (0, _._)(_, "-");
+                return "left" === _ || "right" === _ ? [void 0, _] : [_, _];
               })(_),
             [_],
           ),
@@ -984,7 +968,7 @@
             _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left")),
               _.current.style.setProperty("--parentWidth", `${_.width}px`),
               _.current.style.setProperty("--parentHeight", `${_.height}px`),
-              __webpack_require__ ||
+              _ ||
                 ("left" === _
                   ? _
                     ? ((_.current.style.left = "unset"),
@@ -1031,7 +1015,7 @@
                         "--availableHeight",
                         document.documentElement.clientHeight - _.top + "px",
                       )));
-          }, [_, __webpack_require__, _, _]),
+          }, [_, _, _, _]),
           _ = (0, _.useMemo)(() => {
             if (_.current) return (0, _._)(_.current);
           }, [_.current]);
@@ -1197,7 +1181,7 @@
       function _(_) {
         const {
             direction: _,
-            interactionMode: __webpack_require__ = 0,
+            interactionMode: _ = 0,
             ignoreHorizontal: _,
             ignoreVertical: _,
             dismissOnClick: _,
@@ -1263,14 +1247,14 @@
           function (_) {
             const {
               value: _,
-              onValueChange: __webpack_require__,
+              onValueChange: _,
               options: _,
               getOptionLabel: _,
               ..._
             } = _;
             return (0, _.jsx)(_.Root, {
               value: _,
-              onValueChange: __webpack_require__,
+              onValueChange: _,
               ..._,
               children: _.map((_) => {
                 const _ = _ ? _(_) : _;
@@ -1287,13 +1271,13 @@
           },
           {
             Root: function (_) {
-              const { value: _, onValueChange: __webpack_require__, ..._ } = _,
+              const { value: _, onValueChange: _, ..._ } = _,
                 _ = (0, _.useMemo)(
                   () => ({
                     value: _,
-                    onValueChange: __webpack_require__,
+                    onValueChange: _,
                   }),
-                  [_, __webpack_require__],
+                  [_, _],
                 );
               return (0, _.jsx)(_, {
                 value: _,
@@ -1306,7 +1290,7 @@
               });
             },
             Option: function (_) {
-              const { value: _, ref: __webpack_require__, children: _ } = _,
+              const { value: _, ref: _, children: _ } = _,
                 _ = (0, _.useContext)(_);
               if (!_)
                 return (
@@ -1321,7 +1305,7 @@
                   _ || _(_);
                 };
               return (0, _.jsxs)(_._, {
-                ref: __webpack_require__,
+                ref: _,
                 role: "radio",
                 "aria-checked": _,
                 onClick: _,
@@ -1363,7 +1347,7 @@
       function _(_) {
         const {
             strButtonOverride: _,
-            appids: __webpack_require__,
+            appids: _,
             nPackageID: _,
             onClick: _,
           } = _,
@@ -1386,11 +1370,11 @@
             (0, _.jsx)(_._, {
               active: _,
               children:
-                _ && __webpack_require__ && 1 == __webpack_require__.length
+                _ && _ && 1 == _.length
                   ? (0, _.jsx)(_, {
                       closeModal: _,
                       nPackageID: _,
-                      nAppID: __webpack_require__[0],
+                      nAppID: _[0],
                     })
                   : (0, _.jsx)(_, {
                       closeModal: _,
@@ -1400,7 +1384,7 @@
         });
       }
       function _(_) {
-        const { closeModal: _, nAppID: __webpack_require__, nPackageID: _ } = _,
+        const { closeModal: _, nAppID: _, nPackageID: _ } = _,
           [_, _] = (0, _.useState)(_.k_FreeToPlay),
           _ = (function (_, _) {
             return (0, _._)({
@@ -1458,7 +1442,7 @@
                 }
               },
             });
-          })(__webpack_require__, _),
+          })(_, _),
           _ = (0, _._)();
         return _.bLoading
           ? (0, _.jsx)(_._, {
@@ -1588,12 +1572,12 @@
         });
       }
       function _(_) {
-        const { strButton: _, strTooltip: __webpack_require__ } = _,
+        const { strButton: _, strTooltip: _ } = _,
           _ = (0, _.jsxs)(_._, {
             onClick: () => {},
             children: [
               (0, _.jsx)(_._, {
-                toolTipContent: __webpack_require__,
+                toolTipContent: _,
                 children: (0, _.jsx)("span", {
                   children: _,
                 }),
@@ -1629,7 +1613,7 @@
       function _(_) {
         const {
             fnGetUSDPriceInCents: _,
-            fnOnUpdate: __webpack_require__,
+            fnOnUpdate: _,
             strDescription: _,
             bCanSetToFree: _,
             nPackageID: _,
@@ -1695,125 +1679,65 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       (_.arabic = () =>
-        __webpack_require__
-          ._("chunkid")
-          .then(__webpack_require__._.bind(__webpack_require__, 46873, 19))),
+        __webpack_require__._("chunkid").then(_._.bind(_, 46873, 19))),
         (_.brazilian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 1365, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 1365, 19))),
         (_.bulgarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 83966, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 83966, 19))),
         (_.czech = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51360, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51360, 19))),
         (_.danish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98292, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98292, 19))),
         (_.dutch = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 44993, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 44993, 19))),
         (_.english = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 3703, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 3703, 19))),
         (_.finnish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 86376, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 86376, 19))),
         (_.french = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 67325, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 67325, 19))),
         (_.german = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69263, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69263, 19))),
         (_.greek = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 14399, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 14399, 19))),
         (_.hungarian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 91706, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 91706, 19))),
         (_.indonesian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 69341, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 69341, 19))),
         (_.italian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 97511, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 97511, 19))),
         (_.japanese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 40330, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40330, 19))),
         (_.koreana = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96252, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 96252, 19))),
         (_.latam = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 90204, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 90204, 19))),
         (_.norwegian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 40839, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 40839, 19))),
         (_.polish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 78816, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 78816, 19))),
         (_.portuguese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 98160, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 98160, 19))),
         (_.romanian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 73546, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 73546, 19))),
         (_.russian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 84302, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 84302, 19))),
         (_.schinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 46461, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46461, 19))),
         (_.spanish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 18167, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 18167, 19))),
         (_.swedish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 22438, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 22438, 19))),
         (_.tchinese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 46006, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 46006, 19))),
         (_.thai = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 96727, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 96727, 19))),
         (_.turkish = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 51639, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 51639, 19))),
         (_.ukrainian = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 21973, 19))),
+          __webpack_require__._("chunkid").then(_._.bind(_, 21973, 19))),
         (_.vietnamese = () =>
-          __webpack_require__
-            ._("chunkid")
-            .then(__webpack_require__._.bind(__webpack_require__, 53946, 19)));
+          __webpack_require__._("chunkid").then(_._.bind(_, 53946, 19)));
       const _ = (0, _._)(async function (_) {
         if (_[_]) return _[_]();
       });

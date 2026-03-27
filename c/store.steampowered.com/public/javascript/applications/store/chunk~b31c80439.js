@@ -264,10 +264,10 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         let { children: _ } = _;
-        const [__webpack_require__, _] = (0, _.useState)(0.8),
+        const [_, _] = (0, _.useState)(0.8),
           [_, _] = (0, _.useState)(!0);
         return (0, _.jsx)(_._, {
-          playerVolume: __webpack_require__,
+          playerVolume: _,
           setPlayerVolume: _,
           audioMuted: _,
           setAudioMuted: _,
@@ -441,7 +441,7 @@
           let {
             keyExtractor: _,
             style: _,
-            duration: __webpack_require__ = _,
+            duration: _ = _,
             className: _,
             children: _,
             childRef: _,
@@ -449,7 +449,7 @@
           } = this.props;
           const _ = {
             ...(_ || {}),
-            transitionDuration: __webpack_require__ / 1e3 + "s",
+            transitionDuration: _ / 1e3 + "s",
           };
           return (0, _.jsx)(_._, {
             ..._,
@@ -459,7 +459,7 @@
               {
                 nodeRef: _,
                 classNames: "crossfade-anim",
-                timeout: __webpack_require__,
+                timeout: _,
                 style: _,
                 children: _,
               },
@@ -469,7 +469,7 @@
         }
       }
       function _(_) {
-        const { src: _, ...__webpack_require__ } = _,
+        const { src: _, ..._ } = _,
           _ = {
             backgroundImage: `url(${_})`,
           },
@@ -478,7 +478,7 @@
           style: _,
           keyExtractor: () => _,
           childRef: _,
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("div", {
             ref: _,
             className: "crossfade-img",
@@ -926,7 +926,7 @@
         render() {
           let _ = !1,
             _ = !1;
-          const { video: __webpack_require__, actions: _ } = this.props;
+          const { video: _, actions: _ } = this.props;
           let _,
             _,
             _ = 0,
@@ -1036,7 +1036,7 @@
                 children: (0, _.jsx)(_.wB_, {}),
               }),
               (0, _.jsx)(_, {
-                video: __webpack_require__,
+                video: _,
               }),
               _ &&
                 _.map((_) =>
@@ -2439,17 +2439,13 @@
       _ = (0, _._)([_._], _);
       class _ extends _.Component {
         showContextMenu(_) {
-          const {
-              options: _,
-              value: __webpack_require__,
-              onChange: _,
-            } = this.props,
+          const { options: _, value: _, onChange: _ } = this.props,
             _ = Object.keys(_).map((_) =>
               (0, _.jsx)(
                 _._,
                 {
                   onSelected: () => _(_),
-                  bChecked: _ === __webpack_require__,
+                  bChecked: _ === _,
                   children: (0, _._)(_[_]),
                 },
                 _,
@@ -3580,12 +3576,12 @@
             console.error(_);
           }
         }
-        DelayedGetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+        DelayedGetBroadcastManifest(_, _, _ = Date.now()) {
           _.m_schManifestTimeout.Schedule(5e3, () =>
-            this.GetBroadcastManifest(_, _, __webpack_require__),
+            this.GetBroadcastManifest(_, _, _),
           );
         }
-        async GetBroadcastManifest(_, _, __webpack_require__ = Date.now()) {
+        async GetBroadcastManifest(_, _, _ = Date.now()) {
           _.SetState(_.Loading, "");
           let _ = {
               steamid: _.m_steamIDBroadcast,
@@ -3638,7 +3634,7 @@
               _.Loading,
               (0, _._)("#BroadcastWatch_WaitingForResponse"),
             );
-            let _ = Date.now() - __webpack_require__;
+            let _ = Date.now() - _;
             if (_ > 6e4)
               return void _.SetState(
                 _.Error,
@@ -3646,7 +3642,7 @@
               );
             let _ = _ > 3e4 ? _.retry : 5e3;
             _.m_schManifestTimeout.Schedule(_, () =>
-              this.GetBroadcastManifest(_, _, __webpack_require__),
+              this.GetBroadcastManifest(_, _, _),
             );
           } else
             "waiting_for_start" == _
@@ -3655,7 +3651,7 @@
                   (0, _._)("#BroadcastWatch_WaitingForStart"),
                 ),
                 _.m_schManifestTimeout.Schedule(_.retry, () =>
-                  this.GetBroadcastManifest(_, _, __webpack_require__),
+                  this.GetBroadcastManifest(_, _, _),
                 ))
               : "waiting_for_reconnect" == _
                 ? (_.SetState(
@@ -3663,7 +3659,7 @@
                     (0, _._)("#BroadcastWatch_WaitingForReconnect"),
                   ),
                   _.m_schManifestTimeout.Schedule(_.retry, () =>
-                    this.GetBroadcastManifest(_, _, __webpack_require__),
+                    this.GetBroadcastManifest(_, _, _),
                   ))
                 : "end" == _
                   ? _.SetState(
@@ -3763,13 +3759,13 @@
           _.m_rgVideos.findIndex((_) => _ == this.m_activeVideo) >= 0 &&
             this.m_activeVideo.StartVOD(_);
         }
-        BroadcastDownloadFailed(_, _ = !0, __webpack_require__ = _._.Invalid) {
+        BroadcastDownloadFailed(_, _ = !0, _ = _._.Invalid) {
           _.Stop();
           let _ = this.m_mapBroadcasts.get(_.GetBroadcastSteamID());
           _ &&
             _.m_eWatchState != _.Loading &&
             (_.m_bWebRTC && _ && (_.m_bWebRTC = !1),
-            __webpack_require__ == _._.StreamGone
+            _ == _._.StreamGone
               ? this.DelayedGetBroadcastManifest(_, _.GetWatchLocation())
               : this.GetBroadcastManifest(_, _.GetWatchLocation()));
         }
@@ -4560,13 +4556,10 @@
         }
       }
       function _(_, _) {
-        const [__webpack_require__, _] = (0, _.useState)(
+        const [_, _] = (0, _.useState)(
           _.Get().GetInClientCompletedQueues(_, _),
         );
-        return (
-          (0, _._)(_.Get().GetInClientCompletedQueuesCallback(_, _), _),
-          __webpack_require__
-        );
+        return (0, _._)(_.Get().GetInClientCompletedQueuesCallback(_, _), _), _;
       }
       function _(_, _) {
         return (0, _._)(_.Get().GetExhaustedCallback(_, _));
@@ -4598,7 +4591,7 @@
       const _ = _.createContext({}),
         _ = () => _.useContext(_);
       function _(_) {
-        let { defaultOptions: _, children: __webpack_require__ } = _,
+        let { defaultOptions: _, children: _ } = _,
           _ = _.useMemo(
             () => ({
               defaultOptions: _ || {},
@@ -4607,7 +4600,7 @@
           );
         return (0, _.jsx)(_.Provider, {
           value: _,
-          children: __webpack_require__,
+          children: _,
         });
       }
       const _ = "StoreQueryStore";
@@ -5214,7 +5207,7 @@
       function _(_) {
         const {
             arrDiscoveryApps: _,
-            onClick: __webpack_require__,
+            onClick: _,
             className: _,
             bDisableAnimation: _ = !1,
             children: _,
@@ -5237,7 +5230,7 @@
             onMouseEnter: () => _ && _(!0),
             onGamepadBlur: () => _(!1),
             onMouseLeave: () => _ && _(!1),
-            onActivate: __webpack_require__,
+            onActivate: _,
             onOKActionDescription: (0, _._)("#DiscoveryQueue_OpenWizard"),
             className: (0, _._)(
               _.DiscoveryQueueWidgetCtn,
@@ -5259,13 +5252,13 @@
       function _(_) {
         const {
             rgAppIDs: _,
-            bAnimationEnabled: __webpack_require__ = !0,
+            bAnimationEnabled: _ = !0,
             nCapsuleWidth: _ = 320,
           } = _,
           [_, _] = _.useState(null);
         return (
           _.useEffect(() => {
-            if (!__webpack_require__ || !_) return;
+            if (!_ || !_) return;
             let _;
             _ || (_ = performance.now());
             const _ = () => {
@@ -5279,7 +5272,7 @@
             return (
               (_ = requestAnimationFrame(_)), () => cancelAnimationFrame(_)
             );
-          }, [_, __webpack_require__, _]),
+          }, [_, _, _]),
           _ && _.length
             ? (0, _.jsx)("div", {
                 className: _.AppCarouselPosition,
@@ -5375,8 +5368,8 @@
           : null;
       }
       function _(_) {
-        const [_, __webpack_require__] = (0, _._)();
-        let _ = (0, _._)(() => __webpack_require__.ExcludedContentDescriptor),
+        const [_, _] = (0, _._)();
+        let _ = (0, _._)(() => _.ExcludedContentDescriptor),
           _ = _.useMemo(
             () => ({
               content_descriptors_excluded: _,
@@ -5393,38 +5386,32 @@
       function _(_) {
         const {
             eStoreDiscoveryQueueType: _,
-            strQueueDescriptionOverride: __webpack_require__,
+            strQueueDescriptionOverride: _,
             ..._
           } = _,
           { showDiscoveryQueue: _, bQueueVisible: _ } = (0, _._)(_, _),
           _ = (0, _._)(),
           [_, _] = (function (_, _) {
-            const { data: __webpack_require__ } = (0, _._)({
+            const { data: _ } = (0, _._)({
               queryKey: ["DiscoveryQueueLoader", _, _],
               queryFn: async () => {
-                const { appids: __webpack_require__, exhausted: _ } =
+                const { appids: _, exhausted: _ } =
                   await _._.Get().GetDiscoveryQueueAppsOfType(_, !1, _);
                 let _ = {
                   ..._._,
                   include_screenshots: !0,
                 };
                 return (
-                  await _._.Get().QueueMultipleAppRequests(
-                    __webpack_require__ ?? [],
-                    _,
-                  ),
+                  await _._.Get().QueueMultipleAppRequests(_ ?? [], _),
                   {
-                    rgDiscoveryApps: __webpack_require__,
+                    rgDiscoveryApps: _,
                     exhausted: _,
                   }
                 );
               },
               enabled: _._.logged_in,
             });
-            return [
-              __webpack_require__?.rgDiscoveryApps,
-              __webpack_require__?.exhausted,
-            ];
+            return [_?.rgDiscoveryApps, _?.exhausted];
           })(_, _.storePageFilter),
           _ = _ || Boolean(_.data?.preferences?.disable_animated_marketing),
           _ = _.useCallback(() => {
@@ -5442,16 +5429,16 @@
               !_ &&
               (0, _.jsx)(_, {
                 _: _,
-                strQueueDescriptionOverride: __webpack_require__,
+                strQueueDescriptionOverride: _,
               }),
           }),
         });
       }
       function _(_) {
-        const { strQueueDescriptionOverride: _, _: __webpack_require__ } = _,
+        const { strQueueDescriptionOverride: _, _: _ } = _,
           _ = _ ?? (0, _._)("#DiscoveryQueue_WidgetHeader");
         return (0, _.jsxs)("div", {
-          _: __webpack_require__,
+          _: _,
           className: (0, _._)(_().WidgetHeaderCtn, "WidgetHeaderCtn"),
           children: [
             (0, _.jsx)("div", {
@@ -5610,13 +5597,13 @@
         _ = __webpack_require__("chunkid");
       function _() {
         const [_, _] = (0, _.useState)(!_._.logged_in),
-          [__webpack_require__] = (0, _._)(),
+          [_] = (0, _._)(),
           _ = (0, _._)();
         return (
           (0, _.useEffect)(() => {
             _ || (_._.Init(_), _(!0));
           }, [_, _]),
-          _ && !__webpack_require__
+          _ && !_
         );
       }
     },
@@ -5633,7 +5620,7 @@
       function _(_) {
         const {
           className: _,
-          showPriorAsActive: __webpack_require__,
+          showPriorAsActive: _,
           count: _,
           selectedIndex: _,
           fnNavigate: _,
@@ -5649,7 +5636,7 @@
               {
                 className: (0, _._)({
                   [_().ProgressDot]: !0,
-                  [_().ProgressDotActive]: __webpack_require__ && _ < _,
+                  [_().ProgressDotActive]: _ && _ < _,
                   [_().ProgressDotSelected]: _ == _,
                   [_().ProgressDotClickable]: !!_,
                 }),
@@ -5701,7 +5688,7 @@
       function _(_) {
         const {
             storeItem: _,
-            bCurrentlyActive: __webpack_require__,
+            bCurrentlyActive: _,
             autoPlayCookieName: _,
             bPlayWithBroadcastPlayer: _,
             showScreenshotInsteadOfMainCap: _,
@@ -5739,11 +5726,11 @@
                 }
               );
             })(_, _);
-          })(_, __webpack_require__, _),
+          })(_, _, _),
           _ = _;
         _.useEffect(() => {
-          __webpack_require__ && _ && (_ || _) && !_ && _(!0);
-        }, [_, _, __webpack_require__, _, _]),
+          _ && _ && (_ || _) && !_ && _(!0);
+        }, [_, _, _, _, _]),
           _.useEffect(() => {
             _ && _ && _ && _();
           }, [_, _, _, _]);
@@ -5798,7 +5785,7 @@
               featuredTrailer: _,
               refMicroTrailer: _,
               refMainTrailer: _,
-              loadedAndActive: _ && __webpack_require__,
+              loadedAndActive: _ && _,
               setVideoShouldStart: _,
               bMouseOverVideo: _,
               storeItem: _,
@@ -5831,7 +5818,7 @@
       function _(_) {
         const {
             storeItem: _,
-            featuredTrailer: __webpack_require__,
+            featuredTrailer: _,
             bPlayWithBroadcastPlayer: _,
             bSkipMicroTrailer: _,
             nFadeRatio: _,
@@ -5857,7 +5844,7 @@
           [_, _] = _.useState(!1),
           _ = (0, _._)(),
           _ = _?.GetMicroTrailer("blocked" == _),
-          _ = !!_ || !!__webpack_require__;
+          _ = !!_ || !!_;
         _.useEffect(() => {
           let _ = !1;
           _ && _ && _ && (_ = 0 === _ || (1 === _ && !_) || (2 === _ && !_)),
@@ -5909,7 +5896,7 @@
                       (_.current.onended = _),
                       (_ = _.current),
                       (_ = "microtrailer"),
-                      (__webpack_require__ = () => _(!1)),
+                      (_ = () => _(!1)),
                       _.play().catch((_) => {
                         __webpack_require__(),
                           _.Warning(`Failed to play ${_}: `, _);
@@ -5959,7 +5946,7 @@
             }, [_, _, _, _, _, _, _, _]);
           })(_, _, _.current, _, _.current, _, _),
           _ && _.BIsVisible()
-            ? (__webpack_require__ || _) &&
+            ? (_ || _) &&
               (0, _.jsxs)(_.Fragment, {
                 children: [
                   _ &&
@@ -5990,11 +5977,11 @@
                           }),
                       ],
                     }),
-                  __webpack_require__ &&
+                  _ &&
                     !_ &&
                     (0, _.jsx)(_, {
                       ref: _,
-                      trailer: __webpack_require__,
+                      trailer: _,
                       eTrailerDisplay: _,
                       fadeRatio: _,
                       onPlayPauseChange: _,
@@ -6019,7 +6006,7 @@
       function _(_) {
         let {
           ref: _,
-          trailer: __webpack_require__,
+          trailer: _,
           eTrailerDisplay: _,
           fadeRatio: _,
           onPlayPauseChange: _,
@@ -6064,7 +6051,7 @@
       function _(_) {
         const {
             storeItem: _,
-            bAutoplayVideos: __webpack_require__,
+            bAutoplayVideos: _,
             fnSetAutoPlayVideos: _,
             autoplayCheckboxPosition: _,
           } = _,
@@ -6080,7 +6067,7 @@
             _._,
             {
               controlled: !0,
-              checked: __webpack_require__,
+              checked: _,
               className: _().AutoplayCheckbox,
               style: _,
               label: _._.Localize("#StoreTrailer_AutoPlayVideos"),
@@ -6107,7 +6094,7 @@
       function _(_) {
         const {
             appID: _,
-            focused: __webpack_require__,
+            focused: _,
             skipMicroTrailer: _,
             playWithBroadcastPlayer: _,
             autoPlayCookieName: _,
@@ -6147,7 +6134,7 @@
                   _,
                   {
                     storeItem: _,
-                    bCurrentlyActive: __webpack_require__ && !_,
+                    bCurrentlyActive: _ && !_,
                     autoplayCheckboxPosition: "top",
                     autoPlayCookieName: _,
                     bShowAOAutoPlayWarning: _,

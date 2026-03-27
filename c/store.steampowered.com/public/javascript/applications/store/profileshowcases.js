@@ -68,7 +68,7 @@
         _ = (_) => {
           const {
             point_cost: _,
-            upgradable_showcases: __webpack_require__,
+            upgradable_showcases: _,
             purchased_upgrades: _,
           } = _;
           let _ = new Map();
@@ -107,7 +107,7 @@
         _ = (_) => {
           const {
             point_cost: _,
-            purchasable_showcases: __webpack_require__,
+            purchasable_showcases: _,
             purchased_showcases: _,
             purchased_upgrades: _,
           } = _;

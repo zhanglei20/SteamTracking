@@ -338,7 +338,7 @@
       const _ = _.memo(function (_) {
         const {
             strAvatarURL: _,
-            size: __webpack_require__ = "Medium",
+            size: _ = "Medium",
             className: _,
             statusStyle: _,
             statusPosition: _,
@@ -365,17 +365,17 @@
                     default:
                       return (0, _._)(_, `Unhandled size ${_}`), _;
                   }
-                })(__webpack_require__),
+                })(_),
               ),
               _
             );
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return (0, _.jsxs)("div", {
           className: (0, _._)(
             _().avatarHolder,
             "avatarHolder",
             "no-drag",
-            __webpack_require__,
+            _,
             _,
           ),
           ..._,
@@ -398,20 +398,15 @@
           const {
             persona: _,
             size: _ = "Medium",
-            animatedAvatar: __webpack_require__,
+            animatedAvatar: _,
             className: _,
             strBackupAvatarURL: _,
             ..._
           } = this.props;
           let _ = "";
           return (
-            __webpack_require__ &&
-            __webpack_require__.image_small &&
-            0 != __webpack_require__.image_small.length
-              ? (_ =
-                  _._.MEDIA_CDN_COMMUNITY_URL +
-                  "images/" +
-                  __webpack_require__.image_small)
+            _ && _.image_small && 0 != _.image_small.length
+              ? (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _.image_small)
               : _
                 ? ((_ = _.avatar_url_medium),
                   "Small" == _ || "X-Small" == _
@@ -430,12 +425,7 @@
       };
       _ = (0, _._)([_._], _);
       const _ = (0, _._)((_) => {
-        const {
-          profileItem: _,
-          className: __webpack_require__,
-          bDisableAnimation: _,
-          ..._
-        } = _;
+        const { profileItem: _, className: _, bDisableAnimation: _, ..._ } = _;
         if (!_ || !_.image_small || 0 == _.image_small.length) return null;
         let _ = _ ? _.image_large : _.image_small;
         return (
@@ -443,11 +433,7 @@
           _.startsWith("https://") ||
             (_ = _._.MEDIA_CDN_COMMUNITY_URL + "images/" + _),
           (0, _.jsx)("div", {
-            className: (0, _._)(
-              _().avatarFrame,
-              __webpack_require__,
-              "avatarFrame",
-            ),
+            className: (0, _._)(_().avatarFrame, _, "avatarFrame"),
             ..._,
             children: (0, _.jsx)("img", {
               className: _().avatarFrameImg,
@@ -532,7 +518,7 @@
           let {
             loopDuration: _,
             animatedAvatar: _,
-            avatarFrame: __webpack_require__,
+            avatarFrame: _,
             children: _,
             style: _,
             bLimitProfileFrameAnimationTime: _,
@@ -557,7 +543,7 @@
               children: [
                 _,
                 (0, _.jsx)(_, {
-                  profileItem: __webpack_require__,
+                  profileItem: _,
                   bDisableAnimation: _ && !this.state.bAnimate,
                 }),
               ],
@@ -577,7 +563,7 @@
       function _(_) {
         const {
             rgSources: _,
-            onIncrementalError: __webpack_require__,
+            onIncrementalError: _,
             onError: _,
             strAltText: _,
             ref: _,
@@ -620,7 +606,7 @@
               const _ = _ + 1;
               _ >= _.length && _ && _(_), _ < _.length && _(_);
             },
-            [_, _, __webpack_require__, _],
+            [_, _, _, _],
           );
         return (0, _.jsx)(
           "img",

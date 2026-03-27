@@ -99,16 +99,16 @@
           ? _.map((_) => ("*" == _ ? "\\*" : _)).join("|")
           : (_ || (_ = _(_)), _);
       }
-      function _(_, _ = null, __webpack_require__ = " ") {
+      function _(_, _ = null, _ = " ") {
         const _ = new RegExp(
           "\\[(" + _(_) + ")\\b[^\\]]*\\].*?\\[/\\1\\]",
           "gi",
         );
-        return _.replace(_, __webpack_require__);
+        return _.replace(_, _);
       }
-      function _(_, _ = null, __webpack_require__ = "") {
+      function _(_, _ = null, _ = "") {
         const _ = "\\[\\/?(?:" + _(_) + "){1,}.*?]";
-        return _.replace(new RegExp(_, "gi"), __webpack_require__);
+        return _.replace(new RegExp(_, "gi"), _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -825,17 +825,13 @@
                                   .localized_store_app_spotlight_mobile);
           return _;
         }
-        GetImageURL(_, _ = 0, __webpack_require__ = _._.full) {
+        GetImageURL(_, _ = 0, _ = _._.full) {
           const _ = this.GetImgArray(_),
             _ = _ && _.length > _ && null != _[_];
           return _ && _[_]?.startsWith("http")
             ? _[_]
             : _
-              ? _._.GenerateURLFromHashAndExt(
-                  this.clanSteamID,
-                  _[_] ?? "",
-                  __webpack_require__,
-                )
+              ? _._.GenerateURLFromHashAndExt(this.clanSteamID, _[_] ?? "", _)
               : void 0;
         }
         GetImageHash(_, _ = 0) {
@@ -944,12 +940,12 @@
             ? this.appid
             : this.jsondata?.referenced_appids?.[0];
         }
-        GetImageURLWithFallback(_, _, __webpack_require__ = _._.full, _ = !0) {
-          const _ = this.GetImageURL(_, _, __webpack_require__);
+        GetImageURLWithFallback(_, _, _ = _._.full, _ = !0) {
+          const _ = this.GetImageURL(_, _, _);
           if (_ && _.trim().length > 0) return _;
           const _ = _._.GetELanguageFallback(_);
           if (_ != _) {
-            const _ = this.GetImageURL(_, _, __webpack_require__);
+            const _ = this.GetImageURL(_, _, _);
             if (_ && _.trim().length > 0) return _;
           }
           const _ = _._.GetClanInfoByClanAccountID(
@@ -1755,9 +1751,7 @@
           __webpack_require__("chunkid"));
       __webpack_require__("chunkid"), __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() =>
-            _._.GetClanEventModel(_),
-          ),
+        const [_, _] = (0, _.useState)(() => _._.GetClanEventModel(_)),
           _ = (0, _._)("usePartnerEventByEventGID");
         return (
           (0, _.useEffect)(() => {
@@ -1869,31 +1863,19 @@
           return _.substring(0, _.length - _.length);
         },
         GetExtStringFromHashAndExt: (_) => _.substring(_.lastIndexOf(".")),
-        GenerateURLFromHashAndExt(_, _, __webpack_require__ = _._.full) {
-          return this.GenerateURLFromHashAndExtAndLang(
-            _,
-            _,
-            __webpack_require__,
-            -1,
-            void 0,
-          );
+        GenerateURLFromHashAndExt(_, _, _ = _._.full) {
+          return this.GenerateURLFromHashAndExtAndLang(_, _, _, -1, void 0);
         },
-        GenerateURLFromHashAndExtAndLang(
-          _,
-          _,
-          __webpack_require__ = _._.full,
-          _,
-          _,
-        ) {
+        GenerateURLFromHashAndExtAndLang(_, _, _ = _._.full, _, _) {
           _ instanceof _._ && (_ = _.GetAccountID());
           let _ = this.GetBaseURL();
           const _ = null != _ && -1 != _;
-          if (__webpack_require__ != _._.full || _) {
+          if (_ != _._.full || _) {
             let _ = _.substring(_.lastIndexOf(".")),
               _ = _.substring(0, _.length - _.length);
             return _ && 0 != _ && "localized_image_group" == _
               ? _ + _ + "/" + _ + "/" + (0, _._)((0, _._)(_)) + _
-              : _ + _ + "/" + _ + __webpack_require__ + _;
+              : _ + _ + "/" + _ + _ + _;
           }
           return _ + _ + "/" + _;
         },
@@ -2792,19 +2774,13 @@
           }
           return _;
         }
-        async LoadPartnerEventsPageable(
-          _,
-          _,
-          __webpack_require__ = 0,
-          _ = 0,
-          _,
-        ) {
+        async LoadPartnerEventsPageable(_, _, _ = 0, _ = 0, _) {
           let _ = new Array(),
             _ = _._.STORE_BASE_URL + "events/ajaxgetpartnereventspageable/",
             _ = {
               clan_accountid: _ ? _.GetAccountID() : void 0,
               appid: _,
-              offset: __webpack_require__,
+              offset: _,
               count: _,
               _: _._.LANGUAGE,
               origin: self.origin,
@@ -3315,7 +3291,7 @@
       const _ = new _();
       window.g_PartnerEventStore = _;
       const _ = new _(!0);
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const [_, _] = (0, _.useState)(() => _.GetClanEventModel(_)),
           [_, _] = (0, _.useState)(!0),
           _ = (0, _.useMemo)(() => _._.InitFromClanID(_), [_]);
@@ -3324,19 +3300,11 @@
             !_ &&
               _ > 0 &&
               (_.Init(),
-              _.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                _,
-                _,
-                0,
-                __webpack_require__,
-              )
+              _.LoadPartnerEventFromClanEventGIDAndClanSteamID(_, _, 0, _)
                 .then(_)
                 .finally(() => _(!1)));
-          }, [_, _, _, _, __webpack_require__]),
-          (0, _._)(
-            __webpack_require__ ? _.GetPartnerEventChangeCallback(_) : void 0,
-            _,
-          ),
+          }, [_, _, _, _, _]),
+          (0, _._)(_ ? _.GetPartnerEventChangeCallback(_) : void 0, _),
           {
             eventModel: _,
             bLoading: _,

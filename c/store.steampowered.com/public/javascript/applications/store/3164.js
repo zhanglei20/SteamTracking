@@ -92,7 +92,7 @@
         });
       }
       function _(_) {
-        const { role: _, persona: __webpack_require__, isSelf: _ } = _;
+        const { role: _, persona: _, isSelf: _ } = _;
         let _ = _.size || "Large";
         const _ = (0, _._)(),
           _ = (0, _._)(),
@@ -105,7 +105,7 @@
               children: [
                 (0, _.jsx)(_._, {
                   className: _.Avatar,
-                  persona: __webpack_require__,
+                  persona: _,
                   size: _,
                   statusPosition: "right",
                 }),
@@ -116,7 +116,7 @@
                   bHidePersona: !1,
                   bParenthesizeNicknames: _,
                   bCompactView: !1,
-                  persona: __webpack_require__,
+                  persona: _,
                   strNickname: _,
                   eFriendRelationship: 3,
                   bEllipsisName: !0,
@@ -149,13 +149,13 @@
           : null;
       }
       function _(_) {
-        const { persona: _, role: __webpack_require__, invitePending: _ } = _,
+        const { persona: _, role: _, invitePending: _ } = _,
           _ = (0, _._)() == _.GetSteamIDAsString();
         return (0, _.jsxs)("div", {
           className: _.FamilyMemberStatus,
           children: [
             (0, _.jsx)(_, {
-              role: __webpack_require__,
+              role: _,
               persona: _,
               isSelf: _,
             }),
@@ -173,7 +173,7 @@
         });
       }
       function _(_) {
-        const { bExpanded: _, setExpanded: __webpack_require__ } = _;
+        const { bExpanded: _, setExpanded: _ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_.ExpandRowButton, _ && _.Selected),
           onClick: () => __webpack_require__(!_),
@@ -206,7 +206,7 @@
       const _ = "nicknames";
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_],
             queryFn: async () => {
               const _ = new Map();
@@ -222,7 +222,7 @@
               return _;
             },
           });
-        return __webpack_require__ ? __webpack_require__.get(_) : null;
+        return _ ? __webpack_require__.get(_) : null;
       }
       const _ = new (_())(
           (_) =>
@@ -279,15 +279,15 @@
         ),
         _ = "avatarandpersonas";
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: [_, _],
           queryFn: () => _.load(_),
         });
-        return [_, __webpack_require__];
+        return [_, _];
       }
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
             queryFn: async () => {
               const _ = await _.loadMany(_);
@@ -309,7 +309,7 @@
               }),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ ? null : _;
       }
     },
@@ -391,9 +391,9 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { familyGroupID: _, requestID: __webpack_require__ } = _,
+        const { familyGroupID: _, requestID: _ } = _,
           [_, _] = _.useState(),
-          _ = (0, _._)(_, __webpack_require__),
+          _ = (0, _._)(_, _),
           _ = (0, _.useInitCartLocalization)(),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -476,11 +476,7 @@
         });
       }
       function _(_) {
-        const {
-            familyGroupID: _,
-            headerLocToken: __webpack_require__,
-            infoLocToken: _,
-          } = _,
+        const { familyGroupID: _, headerLocToken: _, infoLocToken: _ } = _,
           [_, _] = _.useState(null);
         return (0, _.jsx)("div", {
           className: _().PurchaseRequestInfoPage,
@@ -492,7 +488,7 @@
             children: [
               (0, _.jsx)("div", {
                 className: _().Header,
-                children: (0, _._)(__webpack_require__),
+                children: (0, _._)(_),
               }),
               (0, _.jsx)(_._, {}),
               (0, _.jsx)(_, {
@@ -518,7 +514,7 @@
         });
       }
       function _(_) {
-        const { request: _, cartID: __webpack_require__ } = _,
+        const { request: _, cartID: _ } = _,
           _ = new _._(_.requester_steamid).GetAccountID(),
           [_] = (0, _._)(_),
           [_, _] = _.useState({
@@ -527,7 +523,7 @@
           _ = _.useRef(() => {}).current,
           _ = (0, _._)("#Cart_PurchaseRequestTitle", _?.persona_name);
         return (0, _.jsx)(_.BaseCartPage, {
-          cartID: __webpack_require__,
+          cartID: _,
           step: "gifts",
           onStepChange: _,
           title: _,

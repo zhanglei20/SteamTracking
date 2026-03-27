@@ -517,7 +517,7 @@
       const _ = (_) => {
         const {
             searchResult: _,
-            invite_status: __webpack_require__,
+            invite_status: _,
             bShowStatus: _,
             children: _,
           } = _,
@@ -602,13 +602,13 @@
                         }),
                       }),
                     _ &&
-                      "failure" === __webpack_require__ &&
+                      "failure" === _ &&
                       (0, _.jsx)("div", {
                         className: _().Failure,
                         children: (0, _._)("#ManageFriends_InviteFailure"),
                       }),
                     _ &&
-                      "success" === __webpack_require__ &&
+                      "success" === _ &&
                       (0, _.jsx)("div", {
                         className: _().Success,
                         children: (0, _._)(

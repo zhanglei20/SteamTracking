@@ -54,7 +54,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(() => Boolean(_)),
+        const [_, _] = (0, _.useState)(() => Boolean(_)),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
@@ -71,7 +71,7 @@
           elSuccess: _,
           elError: _,
           strThrobber: _,
-          fnSetLoading: __webpack_require__,
+          fnSetLoading: _,
           fnSetError: _,
           fnSetSuccess: _,
           fnSetStrError: _,
@@ -84,7 +84,7 @@
       function _(_) {
         const {
             strDialogTitle: _,
-            state: __webpack_require__,
+            state: _,
             closeModal: _,
             strThrobber: _,
           } = _,
@@ -97,7 +97,7 @@
             elSuccess: _,
             elError: _,
             strThrobber: _,
-          } = __webpack_require__;
+          } = _;
         return _ || _ || _
           ? (0, _.jsxs)(_._, {
               strTitle: _,
@@ -386,9 +386,9 @@
         );
       }
       function _(_) {
-        const { eventModel: _, route: __webpack_require__, bPopup: _ = !0 } = _,
-          _ = _(__webpack_require__, _),
-          _ = _(_, __webpack_require__, _ ? "relative" : "absolute");
+        const { eventModel: _, route: _, bPopup: _ = !0 } = _,
+          _ = _(_, _),
+          _ = _(_, _, _ ? "relative" : "absolute");
         return (
           _.useEffect(() => {
             _ ? window.open(_) : window.location.assign(_);
@@ -406,7 +406,7 @@
         return "admin" === _ ? _ + "partnerevents" : "";
       }
       function _(_) {
-        const { eventModel: _, preferredFocus: __webpack_require__ } = _,
+        const { eventModel: _, preferredFocus: _ } = _,
           { bCanUseLink: _ } = _.useContext(_._),
           _ = (0, _._)(),
           _ = (0, _._)(),
@@ -434,7 +434,7 @@
                 },
                 onOptionsActionDescription: _,
                 onOptionsButton: _ ? _ : void 0,
-                preferredFocus: __webpack_require__,
+                preferredFocus: _,
                 children: _.children,
               })
             : (0, _.jsx)(_._, {
@@ -442,7 +442,7 @@
                 style: _.style,
                 className: _.className,
                 onClick: _.onClick,
-                preferredFocus: __webpack_require__,
+                preferredFocus: _,
                 onOptionsActionDescription: _,
                 onOptionsButton: _ ? _ : void 0,
                 children: _.children,
@@ -641,12 +641,7 @@
         });
       }
       function _(_) {
-        const {
-            clanSteamID: _,
-            creatorHome: __webpack_require__,
-            eventModel: _,
-            refetch: _,
-          } = _,
+        const { clanSteamID: _, creatorHome: _, eventModel: _, refetch: _ } = _,
           [_, _] = _.useState(!1),
           _ = (0, _._)({
             mutationFn: async (_) => {
@@ -854,7 +849,7 @@
       function _(_) {
         const {
             active: _,
-            mutateAsync: __webpack_require__,
+            mutateAsync: _,
             onClose: _,
             strTitle: _,
             strDescription: _,
@@ -891,7 +886,7 @@
       function _(_) {
         const {
           eventModel: _,
-          label: __webpack_require__,
+          label: _,
           tooltip: _,
           icon: _,
           route: _,
@@ -912,7 +907,7 @@
               className: _().SVGIcon,
               children: _,
             }),
-            __webpack_require__,
+            _,
             _ &&
               (0, _.jsx)(_._, {
                 tooltip: _,

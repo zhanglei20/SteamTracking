@@ -801,7 +801,7 @@
               }),
               _ && _(_, _);
           })(_, _),
-          (__webpack_require__ = _),
+          (_ = _),
           (_ = [
             {
               key: "getDerivedStateFromProps",
@@ -1229,12 +1229,12 @@
                 );
               },
             },
-          ]) && _(__webpack_require__.prototype, _),
-          _ && _(__webpack_require__, _),
-          Object.defineProperty(__webpack_require__, "prototype", {
+          ]) && _(_.prototype, _),
+          _ && _(_, _),
+          Object.defineProperty(_, "prototype", {
             writable: !1,
           }),
-          __webpack_require__
+          _
         );
         var _, _, _;
       })(_.PureComponent);
@@ -1515,7 +1515,7 @@
               }),
               _ && _(_, _);
           })(_, _),
-          (__webpack_require__ = _),
+          (_ = _),
           (_ = [
             {
               key: "render",
@@ -1523,12 +1523,12 @@
                 return null;
               },
             },
-          ]) && _(__webpack_require__.prototype, _),
-          _ && _(__webpack_require__, _),
-          Object.defineProperty(__webpack_require__, "prototype", {
+          ]) && _(_.prototype, _),
+          _ && _(_, _),
+          Object.defineProperty(_, "prototype", {
             writable: !1,
           }),
-          __webpack_require__
+          _
         );
         var _, _, _;
       })(_.Component);
@@ -1818,7 +1818,7 @@
               }),
               _ && _(_, _);
           })(_, _),
-          (__webpack_require__ = _),
+          (_ = _),
           (_ = [
             {
               key: "getDerivedStateFromProps",
@@ -2133,12 +2133,12 @@
                 );
               },
             },
-          ]) && _(__webpack_require__.prototype, _),
-          _ && _(__webpack_require__, _),
-          Object.defineProperty(__webpack_require__, "prototype", {
+          ]) && _(_.prototype, _),
+          _ && _(_, _),
+          Object.defineProperty(_, "prototype", {
             writable: !1,
           }),
-          __webpack_require__
+          _
         );
         var _, _, _;
       })(_.PureComponent);

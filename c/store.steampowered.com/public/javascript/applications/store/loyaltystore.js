@@ -1719,11 +1719,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ...__webpack_require__ } = _,
+        const { children: _, ..._ } = _,
           _ = _.useRef(null);
         return (0, _.jsx)(_._, {
           nodeRef: _,
-          ...__webpack_require__,
+          ..._,
           children: _.children(_),
         });
       }
@@ -1793,7 +1793,7 @@
           );
         return [_, _];
       }
-      function _(_, _, __webpack_require__ = !1) {
+      function _(_, _, _ = !1) {
         const _ = new URLSearchParams(_.location.search.substring(1));
         for (const _ in _)
           if (_.hasOwnProperty(_)) {
@@ -1871,7 +1871,7 @@
         );
       }
       function _(_) {
-        const { redirectURL: _, guestOption: __webpack_require__ } = _,
+        const { redirectURL: _, guestOption: _ } = _,
           [_] = (0, _.useState)(
             new _._(_._.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
@@ -1891,7 +1891,7 @@
                 redirectUrl: _,
                 theme: "modal",
                 children:
-                  __webpack_require__ &&
+                  _ &&
                   (0, _.jsx)(_._, {
                     redirectURL: _,
                   }),
@@ -1909,13 +1909,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { navigate: _, onClick: __webpack_require__, ..._ } = _,
+        const { navigate: _, onClick: _, ..._ } = _,
           { target: _ } = _;
         return (0, _.jsx)(_._, {
           ..._,
           onClick: (_) => {
             try {
-              __webpack_require__ && __webpack_require__(_);
+              _ && __webpack_require__(_);
             } catch (_) {
               throw (_.preventDefault(), _);
             }
@@ -1951,10 +1951,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { size: _, color: __webpack_require__, trackColor: _ } = _,
+        const { size: _, color: _, trackColor: _ } = _,
           _ = {
             borderColor: _,
-            borderLeftColor: __webpack_require__,
+            borderLeftColor: _,
           };
         if ("number" == typeof _) {
           const _ = `${_}px`;
@@ -1985,10 +1985,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)(_._, {
           className: (0, _._)(_, _.UnstyledButton),
-          ...__webpack_require__,
+          ..._,
         });
       };
     },
@@ -2003,10 +2003,10 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
       function _(_) {
-        const { spacing: _, children: __webpack_require__ } = _;
+        const { spacing: _, children: _ } = _;
         return (0, _.jsx)(_.Provider, {
           value: _(_),
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
@@ -2035,11 +2035,11 @@
       }
       function _(_) {
         if (!_) return;
-        const { top: _, bottom: __webpack_require__, left: _, right: _ } = _,
+        const { top: _, bottom: _, left: _, right: _ } = _,
           _ = {};
         return (
           _ && (_.marginTop = `-${_}`),
-          __webpack_require__ && (_.marginBottom = `-${__webpack_require__}`),
+          _ && (_.marginBottom = `-${_}`),
           _ && (_.marginLeft = `-${_}`),
           _ && (_.marginRight = `-${_}`),
           _
@@ -2063,7 +2063,7 @@
       var _ = __webpack_require__("chunkid");
       const _ = {};
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(!1);
+        const [_, _] = (0, _.useState)(!1);
         return (
           (0, _.useEffect)(() => {
             let _ = !0;
@@ -2125,7 +2125,7 @@
           (_[(_.LNY2020 = 2)] = "LNY2020");
       })(_ || (_ = {}));
       const _ = (_, _) => {
-          const { anim: __webpack_require__ } = (0, _._)({
+          const { anim: _ } = (0, _._)({
               anim: 1,
               from: {
                 anim: 0,
@@ -2173,7 +2173,7 @@
                   (function (_, _) {
                     _.Default;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioY: _,
                       rotationRatioX: _,
                       rotationRatioZ: _,
@@ -2189,20 +2189,20 @@
                       filter: _,
                       flRandom: 0,
                       transform: _.interpolate((_) => {
-                        const _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
-                          _ = _ * __webpack_require__ * _,
+                        const _ = _ * _ * _,
+                          _ = _ * _ * _,
+                          _ = _ * _ * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateY(${_}rad) rotateX(${_}rad) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ),
                 _ = _.map((_) =>
                   (function (_, _) {
                     if (Math.random() > 0.1) return null;
                     const {
-                      rotationCoefficient: __webpack_require__,
+                      rotationCoefficient: _,
                       rotationRatioZ: _,
                       yRange: _,
                       xRange: _,
@@ -2216,18 +2216,18 @@
                       filter: _,
                       flRandom: Math.random(),
                       transform: _.interpolate((_) => {
-                        const _ = ((_ * __webpack_require__) / 4) * _,
+                        const _ = ((_ * _) / 4) * _,
                           _ = _ * (_[1] - _[0]) + _[0];
                         return `translate(${_ * (_[1] - _[0]) + _[0]}px, ${_}px) rotateZ(${_}rad) scale(${_})`;
                       }),
                     };
-                  })(_, __webpack_require__),
+                  })(_, _),
                 ).filter((_) => !!_);
               return {
                 rgParticleStyles: _,
                 rgStreamerStyles: _,
               };
-            }, [_, _, __webpack_require__]);
+            }, [_, _, _]);
           return _;
         },
         _ = {
@@ -2244,7 +2244,7 @@
         },
         _ = ({ eType: _ }) => {
           _.Gold, _.LNY2020;
-          const [_, __webpack_require__] = (function () {
+          const [_, _] = (function () {
             const [_, _] = (0, _.useState)(null),
               _ = (0, _.useCallback)((_) => {
                 _ &&
@@ -2306,7 +2306,7 @@
               bottom: 0,
               overflow: "hidden",
             },
-            ref: __webpack_require__,
+            ref: _,
             children: [
               _,
               _.map((_, _) =>
@@ -4582,7 +4582,7 @@
           },
           (_, _) => {
             if (1 == _.GetEResult()) {
-              const { items: __webpack_require__ } = _.Body().toObject(),
+              const { items: _ } = _.Body().toObject(),
                 _ = {};
               return (
                 __webpack_require__.forEach((_) => {
@@ -6586,7 +6586,7 @@
         if (!_) return "";
         const {
             appid: _,
-            itemclass: __webpack_require__,
+            itemclass: _,
             rewardtype: _,
             grouping: _,
             queryFilter: _,
@@ -6599,7 +6599,7 @@
           _ = _(_);
         return [
           _ ? [..._].sort().join("_") : "",
-          __webpack_require__ ? __webpack_require__.join("_") : "",
+          _ ? __webpack_require__.join("_") : "",
           _ ? _.join("_") : "",
           _.sort,
           _.sort_descending ? "1" : "0",
@@ -6655,11 +6655,11 @@
         m_filter;
         m_strTitle;
         m_strSubtitle;
-        constructor(_, _, __webpack_require__ = {}) {
-          (this.m_filter = __webpack_require__),
+        constructor(_, _, _ = {}) {
+          (this.m_filter = _),
             (this.m_strTitle = _),
             (this.m_strSubtitle = _),
-            (this.m_strId = _([], __webpack_require__));
+            (this.m_strId = _([], _));
         }
         get id() {
           return this.m_strId;
@@ -7202,15 +7202,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      const _ = ({ value: _, className: _, ...__webpack_require__ }) =>
+      const _ = ({ value: _, className: _, ..._ }) =>
         (0, _.jsxs)("div", {
           className: (0, _._)(_.Discount, _),
-          ...__webpack_require__,
+          ..._,
           children: ["-", _, "%"],
         });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _({ definition: _, theme: _, ...__webpack_require__ }) {
+      function _({ definition: _, theme: _, ..._ }) {
         const { icon_url: _, name: _ } = _._.GetAppInfo(_.appid),
           _ = _.internal_description,
           _ = _._.Get().GetBundleOfferForUser(_);
@@ -7223,7 +7223,7 @@
           appName: _,
           bundle: _,
           definition: _,
-          ...__webpack_require__,
+          ..._,
         };
       }
       const _ = (0, _._)((_) =>
@@ -7234,7 +7234,7 @@
         _ = (0, _._)((_) => {
           const {
               appName: _,
-              appIcon: __webpack_require__,
+              appIcon: _,
               bundle: _,
               definition: _,
               cost: _,
@@ -7258,10 +7258,10 @@
             onActivate: _,
             ..._,
             children: [
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)("img", {
                   title: _,
-                  src: __webpack_require__,
+                  src: _,
                   className: _.AppIcon,
                 }),
               (0, _.jsx)(_._, {
@@ -7290,13 +7290,8 @@
             ],
           });
         }),
-        _ = ({
-          cost: _,
-          discount: _,
-          label: __webpack_require__,
-          count: _,
-        }) => {
-          const _ = `${__webpack_require__} (${_})`;
+        _ = ({ cost: _, discount: _, label: _, count: _ }) => {
+          const _ = `${_} (${_})`;
           return (0, _.jsxs)(_._, {
             padding: "small",
             display: "flex",
@@ -7336,13 +7331,7 @@
           });
         };
       const _ = (0, _._)((_) => {
-        const {
-            offer: _,
-            items: __webpack_require__,
-            visible: _,
-            width: _,
-            cardSize: _,
-          } = _,
+        const { offer: _, items: _, visible: _, width: _, cardSize: _ } = _,
           _ = (function (_, _, _) {
             if (_.length <= _) return _;
             const _ = _.filter((_) => !_.mapItemOwnership.get(_.defid)).slice(
@@ -7357,7 +7346,7 @@
               return _.concat(_);
             }
             return _;
-          })(_, __webpack_require__, _);
+          })(_, _, _);
         return (0, _.jsx)("div", {
           style: {
             position: "relative",
@@ -7443,20 +7432,20 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = "none";
-      function _(_, _, __webpack_require__ = {}) {
+      function _(_, _, _ = {}) {
         const {
             cInitialItems: _,
             cOverscanCount: _,
             fnRenderItemSkeleton: _,
             ..._
-          } = __webpack_require__,
+          } = _,
           _ = _ || 10,
           _ = _ || 10,
           [_, _] = (0, _.useState)(_ + _);
         let _ = _(0, _).map((_) => _(_));
         const _ = 0 === _.length;
         if (_) for (let _ = 0; _ < _; _++) _.push(_());
-        const _ = (function (_, _ = {}, __webpack_require__ = !1) {
+        const _ = (function (_, _ = {}, _ = !1) {
           const _ = _.length,
             [_, _] = (0, _.useState)(0),
             [_, _] = _(),
@@ -7467,7 +7456,7 @@
           _.width &&
             void 0 !== _.width &&
             (_ = Math.floor((_.width + _) / _.width));
-          const _ = !__webpack_require__ && _ + _ < _,
+          const _ = !_ && _ + _ < _,
             _ = () => _ && _(_ + _),
             _ = _ > 0,
             _ = () => _ && _(Math.max(0, _ - _)),
@@ -7509,7 +7498,7 @@
       const _ = (_) => {
           const {
             className: _,
-            containerRef: __webpack_require__,
+            containerRef: _,
             rgVisibleItems: _,
             bAllowNext: _,
             bAllowPrev: _,
@@ -7520,26 +7509,18 @@
           } = _;
           return (0, _.jsx)(_._, {
             className: (0, _._)(_.Container, _),
-            ref: __webpack_require__,
+            ref: _,
             "flow-children": "row",
             ..._,
             children: _,
           });
         },
         _ = (_) => {
-          const {
-            bAllowNext: _,
-            bAllowPrev: __webpack_require__,
-            fnNext: _,
-            fnPrev: _,
-          } = _;
+          const { bAllowNext: _, bAllowPrev: _, fnNext: _, fnPrev: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
-                className: (0, _._)(
-                  _.LeftArrow,
-                  !__webpack_require__ && _.Disabled,
-                ),
+                className: (0, _._)(_.LeftArrow, !_ && _.Disabled),
                 onClick: _,
               }),
               (0, _.jsx)(_, {
@@ -7552,30 +7533,30 @@
         _ = () => (window.ResizeObserver ? _() : _()),
         _ = () => {
           const [_, _] = (0, _.useState)({}),
-            [__webpack_require__, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)(null),
             _ = (0, _.useCallback)((_) => _(_), []);
           return (
             (0, _.useLayoutEffect)(() => {
-              if (__webpack_require__) {
+              if (_) {
                 const _ = new ResizeObserver(() =>
                   window.requestAnimationFrame(() =>
                     _(__webpack_require__.getBoundingClientRect()),
                   ),
                 );
-                return _.observe(__webpack_require__), () => _.disconnect();
+                return _.observe(_), () => _.disconnect();
               }
               return () => {};
-            }, [__webpack_require__]),
+            }, [_]),
             [_, _]
           );
         },
         _ = () => {
           const [_, _] = (0, _.useState)({}),
-            [__webpack_require__, _] = (0, _.useState)(null),
+            [_, _] = (0, _.useState)(null),
             _ = (0, _.useCallback)((_) => _(_), []);
           return (
             (0, _.useLayoutEffect)(() => {
-              if (__webpack_require__) {
+              if (_) {
                 const _ = () =>
                   window.requestAnimationFrame(() =>
                     _(__webpack_require__.getBoundingClientRect()),
@@ -7591,7 +7572,7 @@
                 );
               }
               return () => {};
-            }, [__webpack_require__]),
+            }, [_]),
             [_, _]
           );
         },
@@ -7609,20 +7590,20 @@
             }),
           }),
         _ = (_) => {
-          const { style: _, ...__webpack_require__ } = _,
+          const { style: _, ..._ } = _,
             _ = {
               transform: "scaleX(-1)",
               ...(_ || {}),
             };
           return (0, _.jsx)(_, {
             style: _,
-            ...__webpack_require__,
+            ..._,
           });
         };
       function _(_) {
         const {
           items: _,
-          renderItem: __webpack_require__,
+          renderItem: _,
           loadMore: _,
           bLoadingMore: _,
           style: _,
@@ -7634,7 +7615,7 @@
             className: (0, _._)(_.Container, _.Mobile),
             style: _._.IN_GAMEPADUI ? null : _,
             children: [
-              _.map(__webpack_require__),
+              _.map(_),
               (0, _.jsx)(_._, {
                 trigger: "repeated",
                 rootMargin: "0px 100% 0px 100%",
@@ -7658,7 +7639,7 @@
       const _ = (_) => {
           const {
               title: _,
-              description: __webpack_require__,
+              description: _,
               actions: _,
               children: _,
               className: _,
@@ -7720,7 +7701,7 @@
                     }),
                     (0, _.jsx)("div", {
                       className: _.Description,
-                      children: __webpack_require__,
+                      children: _,
                     }),
                   ],
                 }),
@@ -7737,11 +7718,11 @@
           });
         },
         _ = (_) => {
-          const { theme: _, style: __webpack_require__, ..._ } = _;
+          const { theme: _, style: _, ..._ } = _;
           return (0, _.jsx)(_._, {
             ..._,
             style: {
-              ...__webpack_require__,
+              ..._,
             },
           });
         };
@@ -7816,12 +7797,7 @@
           if (1 != this.props.descriptor.type) return null;
           const {
               descriptor: {
-                cluster: {
-                  _: _,
-                  title: _,
-                  subtitle: __webpack_require__,
-                  GetRewards: _,
-                },
+                cluster: { _: _, title: _, subtitle: _, GetRewards: _ },
                 title: _,
                 subtitle: _,
                 bHideHiddenItemCount: _,
@@ -7832,7 +7808,7 @@
             _ = {
               getItems: (_, _) => _(_, _, _),
               title: _ || _,
-              subtitle: _ || __webpack_require__,
+              subtitle: _ || _,
               route: _ ? (0, _._)(_) : void 0,
               bHideHiddenItemCount: !!_,
             };
@@ -7852,7 +7828,7 @@
       const _ = (0, _._)((_) => {
           const {
               title: _,
-              subtitle: __webpack_require__,
+              subtitle: _,
               route: _,
               getItems: _,
               bHideHiddenItemCount: _,
@@ -7897,7 +7873,7 @@
         _ = (0, _._)((_) => {
           const {
             title: _,
-            subtitle: __webpack_require__,
+            subtitle: _,
             route: _,
             getItems: _,
             bHideHiddenItemCount: _,
@@ -7964,7 +7940,7 @@
             _ && (0 == _.length ? _.push(_) : 0 == _.length && _.push(_)),
             (0, _.jsx)(_._, {
               title: _,
-              subtitle: __webpack_require__,
+              subtitle: _,
               leftActions: _,
               rightActions: _,
               children: (0, _.jsx)(_, {
@@ -7981,7 +7957,7 @@
           const {
             descriptor: {
               title: _,
-              subtitle: __webpack_require__,
+              subtitle: _,
               cluster: { _: _, title: _, subtitle: _, GetRewards: _ },
             },
             additionalFilter: _,
@@ -7990,7 +7966,7 @@
           const _ = _(_(0, 0));
           return (0, _.jsx)(_._, {
             title: _ || _,
-            subtitle: __webpack_require__ || _,
+            subtitle: _ || _,
             rightActions: _ || void 0,
             children: (0, _.jsx)(
               _._,
@@ -8015,11 +7991,7 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const {
-              descriptor: _,
-              additionalFilter: __webpack_require__,
-              linkedPage: _,
-            } = _,
+          const { descriptor: _, additionalFilter: _, linkedPage: _ } = _,
             _ = (0, _._)("(min-width: 1070px)");
           if (2 !== _.type)
             return (
@@ -8037,7 +8009,7 @@
               cluster: { title: _, subtitle: _, GetRewards: _ },
             } = _,
             _ = _ ? (0, _._)(_) : void 0,
-            _ = _(0, _ ? 4 : 3, __webpack_require__),
+            _ = _(0, _ ? 4 : 3, _),
             _ =
               _.bLoadingMore && 0 === _.rewards.length
                 ? [
@@ -8077,11 +8049,7 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const {
-              descriptor: _,
-              additionalFilter: __webpack_require__,
-              linkedPage: _,
-            } = _,
+          const { descriptor: _, additionalFilter: _, linkedPage: _ } = _,
             _ = (0, _._)();
           if (2 !== _.type)
             return (
@@ -8119,7 +8087,7 @@
                 }),
               }),
               children: (0, _.jsx)(_, {
-                items: _(0, 6, __webpack_require__).rewards,
+                items: _(0, 6, _).rewards,
                 loadMore: () => {},
                 renderItem: (_) =>
                   (0, _.jsx)(
@@ -8135,7 +8103,7 @@
           });
         }),
         _ = (_) => {
-          const { definition: _, theme: __webpack_require__ } = _,
+          const { definition: _, theme: _ } = _,
             _ = (0, _._)();
           return (0, _.jsx)(_._, {
             definition: _,
@@ -8144,7 +8112,7 @@
                 ? _.push(_._.LoyaltyItemBundle(_.defid))
                 : (0, _._)(_, _);
             },
-            theme: __webpack_require__,
+            theme: _,
           });
         };
     },
@@ -8204,12 +8172,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-          const {
-            className: _,
-            children: __webpack_require__,
-            onClick: _,
-            ..._
-          } = _;
+          const { className: _, children: _, onClick: _, ..._ } = _;
           return (0, _.jsxs)(_._, {
             className: (0, _._)(_.ItemBox, _),
             focusable: !0,
@@ -8219,22 +8182,22 @@
               (0, _.jsx)("div", {
                 className: (0, _._)(_.NoBackdropSupportBackdrop),
               }),
-              __webpack_require__,
+              _,
             ],
           });
         },
         _ = (_) => {
-          const { className: _, ...__webpack_require__ } = _;
+          const { className: _, ..._ } = _;
           return (0, _.jsx)("div", {
             className: (0, _._)(_.Body, _),
-            ...__webpack_require__,
+            ..._,
           });
         },
         _ = (_) => {
-          const { className: _, ...__webpack_require__ } = _;
+          const { className: _, ..._ } = _;
           return (0, _.jsx)("div", {
             className: (0, _._)(_.Footer, _),
-            ...__webpack_require__,
+            ..._,
           });
         };
     },
@@ -8262,7 +8225,7 @@
         _ = __webpack_require__("chunkid");
       const _ = (0, _.forwardRef)(function (_, _) {
           const {
-              component: __webpack_require__,
+              component: _,
               padding: _,
               paddingX: _,
               paddingY: _,
@@ -8319,8 +8282,8 @@
               ref: _,
               ..._,
             };
-          if (__webpack_require__) {
-            const _ = __webpack_require__;
+          if (_) {
+            const _ = _;
             return (0, _.jsx)(_, {
               ..._,
             });
@@ -8334,7 +8297,7 @@
         }),
         _ = (0, _.forwardRef)(function (_, _) {
           const {
-              children: __webpack_require__,
+              children: _,
               style: _,
               spacing: _,
               horizontalSpacing: _,
@@ -8359,7 +8322,7 @@
                 marginLeft: _(-_),
               },
               className: _.InlineContainer,
-              children: _.Children.map(__webpack_require__, (_) =>
+              children: _.Children.map(_, (_) =>
                 null != _
                   ? (0, _.jsx)(_, {
                       paddingLeft: _ || _,
@@ -8374,7 +8337,7 @@
         }),
         _ = (0, _.forwardRef)(function (_, _) {
           const {
-              spacing: __webpack_require__,
+              spacing: _,
               itemClassName: _,
               children: _,
               className: _,
@@ -8389,7 +8352,7 @@
             children: _.Children.map(_, (_, _) =>
               null != _
                 ? (0, _.jsx)(_, {
-                    paddingBottom: _ !== _ - 1 ? __webpack_require__ : void 0,
+                    paddingBottom: _ !== _ - 1 ? _ : void 0,
                     className: (0, _._)(_, _.RemoveOnEmpty),
                     children: _,
                   })
@@ -8419,7 +8382,7 @@
         _ = (0, _.createContext)(_),
         _ = () => (0, _.useContext)(_),
         _ = (_) => {
-          const { config: _, children: __webpack_require__ } = _,
+          const { config: _, children: _ } = _,
             _ = _ || _,
             _ = (0, _.useMemo)(
               () =>
@@ -8456,7 +8419,7 @@
                 (0, _.jsx)("style", {
                   children: _,
                 }),
-                __webpack_require__,
+                _,
               ],
             })
           );
@@ -8528,10 +8491,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-        const { amount: _, className: __webpack_require__, size: _, ..._ } = _,
+        const { amount: _, className: _, size: _, ..._ } = _,
           _ = _ > 0 ? (0, _._)(_) : (0, _._)("#Rewards_Free");
         return (0, _.jsxs)("div", {
-          className: (0, _._)(_.Container, __webpack_require__),
+          className: (0, _._)(_.Container, _),
           ..._,
           children: [
             (0, _.jsx)(_.vrn, {
@@ -8662,7 +8625,7 @@
             }),
           });
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "61px",
@@ -8679,7 +8642,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "47px",
@@ -8696,7 +8659,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "49px",
@@ -8713,13 +8676,13 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 36 36",
           fill: "none",
-          ...__webpack_require__,
+          ..._,
           children: (0, _.jsx)("path", {
             fill: "none",
             fillRule: "evenodd",
@@ -8729,7 +8692,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "64",
@@ -8746,7 +8709,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "51px",
@@ -8801,7 +8764,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           fill: "none",
           width: "68",
@@ -8809,7 +8772,7 @@
           viewBox: "0 0 68 68",
           xmlns: "http://www.w3.org/2000/svg",
           className: (0, _._)(_, "SVGIcon_Button"),
-          ...__webpack_require__,
+          ..._,
           children: [
             (0, _.jsx)("path", {
               _: "M57.2981 10.8369L56.9021 9.61803C56.3034 7.77541 53.6966 7.77541 53.0979 9.61803L52.7019 10.8369H51.4203C49.4828 10.8369 48.6773 13.3161 50.2447 14.4549L51.2815 15.2082L50.8855 16.4271C50.2868 18.2697 52.3958 19.8019 53.9632 18.6631L55 17.9098L56.0368 18.6631C57.6042 19.8019 59.7132 18.2697 59.1145 16.4271L58.7185 15.2082L59.7553 14.4549C61.3227 13.3161 60.5172 10.8369 58.5797 10.8369L57.2981 10.8369Z",
@@ -8881,7 +8844,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           xmlns: "http://www.w3.org/2000/svg",
@@ -8892,7 +8855,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "64px",
@@ -8909,7 +8872,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "61px",
@@ -8926,7 +8889,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "33",
@@ -8986,7 +8949,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           width: "23",
           height: "23",
@@ -9016,7 +8979,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: (0, _._)(_, "SVGIcon_Button"),
           width: "64",
@@ -9033,7 +8996,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: _,
           width: "22",
@@ -9041,7 +9004,7 @@
           viewBox: "0 0 22 22",
           fill: "none",
           xmlns: "http://www.w3.org/2000/svg",
-          ...__webpack_require__,
+          ..._,
           children: [
             (0, _.jsx)("path", {
               _: "M21 1L1 21",
@@ -9055,7 +9018,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: _,
           width: "59",
@@ -9081,7 +9044,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: _,
           width: "49",
@@ -9096,7 +9059,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: _,
           width: "47",
@@ -9111,7 +9074,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: _,
           width: "29",
@@ -9126,7 +9089,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("svg", {
           className: _,
           width: "41",
@@ -9143,7 +9106,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: _,
           width: "55",
@@ -9220,7 +9183,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: _,
           height: 100,
@@ -9239,7 +9202,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: _,
           height: 100,
@@ -9272,7 +9235,7 @@
         });
       }
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsxs)("svg", {
           className: _,
           xmlns: "http://www.w3.org/2000/svg",
@@ -9418,7 +9381,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.createContext(() => {}),
-        _ = ({ children: _, className: _, ...__webpack_require__ }) => {
+        _ = ({ children: _, className: _, ..._ }) => {
           const [_, _] = _.useState(null),
             [_, _] = _.useState(0),
             [_, _] = (function (
@@ -9428,24 +9391,23 @@
                 msInterval: 10,
               },
             ) {
-              const [__webpack_require__, _] = _.useState(null),
+              const [_, _] = _.useState(null),
                 _ = _.useCallback((_) => _(_), []),
                 { msDuration: _, msInterval: _ } = _;
               return (
                 _.useLayoutEffect(() => {
-                  if (!__webpack_require__) return;
+                  if (!_) return;
                   const _ =
-                      (Math.abs(_ - __webpack_require__.scrollLeft) / (_ / _)) *
-                      (_ < __webpack_require__.scrollLeft ? -1 : 1),
+                      (Math.abs(_ - _.scrollLeft) / (_ / _)) *
+                      (_ < _.scrollLeft ? -1 : 1),
                     _ = window.setInterval(() => {
-                      Math.abs(_) < Math.abs(__webpack_require__.scrollLeft - _)
-                        ? ((__webpack_require__.scrollLeft = _),
-                          clearInterval(_))
-                        : (__webpack_require__.scrollLeft += _);
+                      Math.abs(_) < Math.abs(_.scrollLeft - _)
+                        ? ((_.scrollLeft = _), clearInterval(_))
+                        : (_.scrollLeft += _);
                     }, _);
                   return () => clearInterval(_);
-                }, [_, __webpack_require__, _, _]),
-                [_, __webpack_require__]
+                }, [_, _, _, _]),
+                [_, _]
               );
             })(_),
             _ = _
@@ -9483,7 +9445,7 @@
               value: _,
               children: (0, _.jsxs)(_._, {
                 "flow-children": "row",
-                ...__webpack_require__,
+                ..._,
                 className: (0, _._)(_.ItemContainer, _),
                 ref: _,
                 fnScrollIntoViewHandler: () => !0,
@@ -9498,12 +9460,7 @@
             })
           );
         },
-        _ = ({
-          children: _,
-          active: _,
-          className: __webpack_require__,
-          ..._
-        }) => {
+        _ = ({ children: _, active: _, className: _, ..._ }) => {
           const _ = _.useContext(_),
             [_, _] = _.useState(null),
             _ = _.useCallback((_) => _(_), []);
@@ -9517,7 +9474,7 @@
                 });
             }, [_, _, _]),
             (0, _.jsx)("div", {
-              className: (0, _._)(_.Item, _ && _.Active, __webpack_require__),
+              className: (0, _._)(_.Item, _ && _.Active, _),
               ref: _,
               ..._,
               children: _,
@@ -9727,7 +9684,7 @@
         },
         _ = (0, _._)(() => {
           const [_, _] = (0, _.useState)(_._.Get().GetCurrentSearchTerm()),
-            [__webpack_require__, _] = (0, _.useState)(0),
+            [_, _] = (0, _.useState)(0),
             _ = _._.Get().GetCurrentSearchPlaceholder();
           return (0, _.jsx)(_._, {
             className: (0, _._)(_.SearchSection, _.NavItemPadding),
@@ -9740,7 +9697,7 @@
                   _: "point_search",
                   onChange: (_) => {
                     let _ = _.target.value.toLowerCase();
-                    __webpack_require__ && clearTimeout(__webpack_require__),
+                    _ && clearTimeout(_),
                       _(
                         window.setTimeout(() => {
                           _._.Get().SetCurrentSearchTerm(_);
@@ -9849,7 +9806,7 @@
         _ = (_) => {
           const {
               iconComponent: _,
-              className: __webpack_require__,
+              className: _,
               children: _,
               iconCallout: _,
               ..._
@@ -9857,7 +9814,7 @@
             _ = _,
             _ = "object" == typeof _._ && _._.hash ? _ : _._;
           return (0, _.jsxs)(_, {
-            className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
+            className: (0, _._)(_.SecondaryNavItem, _),
             activeClassName: _.Selected,
             ..._,
             children: [
@@ -9875,14 +9832,14 @@
         _ = (_) => {
           const {
               iconComponent: _,
-              className: __webpack_require__,
+              className: _,
               children: _,
               iconCallout: _,
               ..._
             } = _,
             _ = _;
           return (0, _.jsxs)("a", {
-            className: (0, _._)(_.SecondaryNavItem, __webpack_require__),
+            className: (0, _._)(_.SecondaryNavItem, _),
             ..._,
             children: [
               (0, _.jsx)("div", {
@@ -9915,11 +9872,7 @@
           _.forEach((_) => {
             _.items.forEach((_) => {
               if (_.external) {
-                const {
-                  iconComponent: __webpack_require__,
-                  iconCallout: _,
-                  ..._
-                } = _.props;
+                const { iconComponent: _, iconCallout: _, ..._ } = _.props;
                 _.push(
                   (0, _.createElement)(
                     _._,
@@ -9996,7 +9949,7 @@
             className: (0, _._)(_.ParallaxRoot, _.ParallaxRoot),
             children: _,
           }),
-        _ = ({ children: _, src: _, className: __webpack_require__ }) =>
+        _ = ({ children: _, src: _, className: _ }) =>
           (0, _.jsxs)(_.Fragment, {
             children: [
               _,
@@ -10004,7 +9957,7 @@
                 className: (0, _._)(
                   _.ParallaxBackground,
                   _.ParallaxBackground,
-                  __webpack_require__,
+                  _,
                 ),
                 style: {
                   backgroundImage: `url(${_})`,
@@ -10068,7 +10021,7 @@
             }),
           }),
         _ = (0, _._)(({ children: _, appid: _ }) => {
-          const [__webpack_require__] = (0, _._)(_, {
+          const [_] = (0, _._)(_, {
             include_assets: !0,
           });
           let _ = _;
@@ -10076,7 +10029,7 @@
           return (
             _.is_custom
               ? (_ = _.img_url)
-              : __webpack_require__ &&
+              : _ &&
                 (_ =
                   __webpack_require__.GetAssets().GetRawPageBackgroundURL() ??
                   __webpack_require__.GetAssets().GetPageBackgroundURL()),
@@ -10100,10 +10053,10 @@
             });
       }
       function _(_) {
-        const { children: _, appid: __webpack_require__ } = _,
+        const { children: _, appid: _ } = _,
           _ = (function (_) {
             return _[_];
-          })(__webpack_require__);
+          })(_);
         return (0, _.jsx)(_, {
           children: (0, _.jsx)("div", {
             style: {
@@ -10117,10 +10070,10 @@
         });
       }
       function _(_) {
-        const { children: _, appid: __webpack_require__ } = _;
+        const { children: _, appid: _ } = _;
         return (0, _.jsx)(_, {
           children: (0, _.jsx)(_, {
-            appid: __webpack_require__,
+            appid: _,
             children: (0, _.jsx)(_, {
               children: _,
             }),
@@ -10128,7 +10081,7 @@
         });
       }
       function _(_) {
-        const { title: _, subtitle: __webpack_require__, headerImage: _ } = _,
+        const { title: _, subtitle: _, headerImage: _ } = _,
           _ = _();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -10147,10 +10100,10 @@
                 className: (0, _._)(_.PageTitle, _.PageTitle),
                 children: _,
               }),
-            __webpack_require__ &&
+            _ &&
               (0, _.jsx)("div", {
                 className: _.PageSubtitle,
-                children: __webpack_require__,
+                children: _,
               }),
           ],
         });
@@ -10216,7 +10169,7 @@
         _ = (0, _._)((_) => {
           const {
               appName: _,
-              appIcon: __webpack_require__,
+              appIcon: _,
               bundle: _,
               definition: _,
               cost: _,
@@ -10233,7 +10186,7 @@
             name: _,
             cost: _,
             attributes: _,
-            appIcon: __webpack_require__,
+            appIcon: _,
             iconComponent: _._,
             desc: _,
             className: _,
@@ -10251,7 +10204,7 @@
         _ = (0, _._)((_) => {
           const {
               appName: _,
-              appIcon: __webpack_require__,
+              appIcon: _,
               bundle: _,
               definition: _,
               cost: _,
@@ -10277,10 +10230,10 @@
             onActivate: _,
             ..._,
             children: [
-              __webpack_require__ &&
+              _ &&
                 (0, _.jsx)("img", {
                   title: _,
-                  src: __webpack_require__,
+                  src: _,
                   className: _.AppIcon,
                 }),
               (0, _.jsxs)(_._, {
@@ -10310,7 +10263,7 @@
             ],
           });
         }),
-        _ = ({ cost: _, label: _, bOwned: __webpack_require__ }) =>
+        _ = ({ cost: _, label: _, bOwned: _ }) =>
           (0, _.jsxs)(_._, {
             padding: "small",
             display: "flex",
@@ -10323,7 +10276,7 @@
                 className: _.ProfileBundleName,
                 children: _,
               }),
-              __webpack_require__
+              _
                 ? (0, _.jsxs)(_.Fragment, {
                     children: [
                       (0, _.jsx)("span", {
@@ -10347,11 +10300,11 @@
         return 1 == _.length ? _[0] : null;
       }
       const _ = (0, _._)((_) => {
-          const { offer: _, items: __webpack_require__ } = _,
-            _ = _(__webpack_require__, 15),
-            _ = _(__webpack_require__, 14),
-            _ = _(__webpack_require__, 13),
-            _ = _(__webpack_require__, 3);
+          const { offer: _, items: _ } = _,
+            _ = _(_, 15),
+            _ = _(_, 14),
+            _ = _(_, 13),
+            _ = _(_, 3);
           return (0, _.jsxs)("div", {
             style: {
               position: "relative",
@@ -10386,8 +10339,8 @@
           });
         }),
         _ = (0, _._)((_) => {
-          const { offer: _, item: __webpack_require__, className: _, ..._ } = _,
-            _ = 14 == __webpack_require__.community_item_class;
+          const { offer: _, item: _, className: _, ..._ } = _,
+            _ = 14 == _.community_item_class;
           return (0, _.createElement)(
             _._,
             {
@@ -10397,7 +10350,7 @@
               alignItems: "center",
               ..._,
               className: (0, _._)(_, _.ItemCard),
-              key: __webpack_require__.defid,
+              key: _.defid,
             },
             _ &&
               (0, _.jsx)("img", {
@@ -10407,7 +10360,7 @@
                   "images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg",
               }),
             (0, _.jsx)("img", {
-              src: (0, _._)(__webpack_require__),
+              src: (0, _._)(_),
               className: _.ItemCardImage,
               style: _
                 ? {
@@ -10662,7 +10615,7 @@
       }
       const _ = ({ msDelay: _, children: _ }) =>
         (function (_) {
-          const [_, __webpack_require__] = (0, _.useState)(!1);
+          const [_, _] = (0, _.useState)(!1);
           return _(() => __webpack_require__(!0), _), _;
         })(_)
           ? (0, _.jsx)(_.Fragment, {
@@ -10915,7 +10868,7 @@
             })
           );
         }
-        Snowball(_, _, ...__webpack_require__) {
+        Snowball(_, _, ..._) {
           let _ = _ < 0 ? _().SnowballImageCW : _().SnowballImageCCW;
           _ > -5 && _ < 5 && (_ = "");
           let _ = __webpack_require__.map((_) => _()[_]);
@@ -11387,11 +11340,11 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { link: _, className: __webpack_require__, ..._ } = _,
+        const { link: _, className: _, ..._ } = _,
           [_, _] = _.useState(!1);
         return (0, _.jsx)("div", {
           title: (0, _._)("#ToolTip_CopyLinkToClipboard"),
-          className: (0, _._)(_.Button, __webpack_require__),
+          className: (0, _._)(_.Button, _),
           onClick: () => (_(!0), void navigator.clipboard.writeText(_)),
           children: (0, _.jsx)(_._, {
             ..._,
@@ -11404,10 +11357,10 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return ({ className: _, ...__webpack_require__ }) =>
+        return ({ className: _, ..._ }) =>
           (0, _.jsx)(_._, {
             className: (0, _._)(_, _),
-            ...__webpack_require__,
+            ..._,
           });
       }
       const _ = _(_.GrayButton),
@@ -11519,7 +11472,7 @@
         return 0;
       }
       function _(_) {
-        const { definitionid: _, ...__webpack_require__ } = _,
+        const { definitionid: _, ..._ } = _,
           _ = (0, _._)(() => _._.Get().GetRewardItem(_));
         if (!_) return null;
         const _ = {
@@ -11528,7 +11481,7 @@
         };
         return (0, _.jsx)(_, {
           definition: _,
-          ...__webpack_require__,
+          ..._,
         });
       }
       let _ = class extends _.Component {
@@ -11978,13 +11931,13 @@
         (0, _._)([_._], _.prototype, "CloseModal", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) => {
-          const { definition: _, closeModal: __webpack_require__ } = _,
+          const { definition: _, closeModal: _ } = _,
             _ = () => {},
             _ = _.rewardDefinition
               ? _._.GetAppInfo(_.rewardDefinition.appid)
               : null;
           return (0, _.jsx)(_, {
-            onEscKeypress: __webpack_require__,
+            onEscKeypress: _,
             children: (0, _.jsx)(_._, {
               children: (0, _.jsx)("div", {
                 children: (0, _.jsxs)(_, {
@@ -11993,11 +11946,11 @@
                       itemName: _(_),
                       itemClassName: _(_),
                       appInfo: _,
-                      onRequestClose: __webpack_require__,
+                      onRequestClose: _,
                     }),
                     (0, _.jsx)(_, {
                       definition: _,
-                      closeModal: __webpack_require__,
+                      closeModal: _,
                       redeemPoints: _,
                       equipItem: _,
                       step: "preview",
@@ -12014,7 +11967,7 @@
           ({
             itemName: _,
             itemClassName: _,
-            itemLink: __webpack_require__,
+            itemLink: _,
             appInfo: _,
             onRequestClose: _,
           }) =>
@@ -12028,10 +11981,10 @@
                       className: _.Header,
                       children: [
                         _,
-                        __webpack_require__ &&
+                        _ &&
                           !_._.IN_GAMEPADUI &&
                           (0, _.jsx)(_, {
-                            link: __webpack_require__,
+                            link: _,
                             style: {
                               marginLeft: "8px",
                             },
@@ -12118,22 +12071,15 @@
         _ = (_) => {
           const {
             type: _,
-            itemLevel: __webpack_require__,
+            itemLevel: _,
             desiredItemLevel: _,
             rewardDefinition: _,
           } = _;
           switch (_) {
             case 2:
               return _(_)
-                ? (0, _._)(
-                    "#ProfileShowcases_UpgradeLevel",
-                    __webpack_require__,
-                    _,
-                  )
-                : (0, _._)(
-                    "#ProfileShowcases_UpgradeAtMaxLevel",
-                    __webpack_require__,
-                  );
+                ? (0, _._)("#ProfileShowcases_UpgradeLevel", _, _)
+                : (0, _._)("#ProfileShowcases_UpgradeAtMaxLevel", _);
             case 3:
               return (0, _._)("#ProfileShowcases_AdditionalSlot");
             case 1:
@@ -12150,18 +12096,14 @@
         },
         _ =
           ((0, _._)((_) => {
-            const {
-                animatedAvatar: _,
-                persona: __webpack_require__,
-                strClassName: _,
-              } = _,
+            const { animatedAvatar: _, persona: _, strClassName: _ } = _,
               _ = {
                 size: "FillArea",
                 statusPosition: "none",
                 className: (0, _._)(_, _.playerAvatar),
               };
             return (0, _.jsx)(_._, {
-              persona: __webpack_require__,
+              persona: _,
               animatedAvatar: _,
               ..._,
             });
@@ -12169,7 +12111,7 @@
           (0, _._)((_) => {
             const {
                 animatedAvatar: _,
-                avatarFrame: __webpack_require__,
+                avatarFrame: _,
                 persona: _,
                 className: _,
                 strAnimatedAvatarClassName: _,
@@ -12186,7 +12128,7 @@
                 animatedAvatar: _,
                 ..._,
                 children: (0, _.jsx)(_._, {
-                  profileItem: __webpack_require__,
+                  profileItem: _,
                 }),
               }),
             });
@@ -13614,10 +13556,10 @@
               : null;
         }),
         _ = (_) => {
-          const { className: _, ...__webpack_require__ } = _;
+          const { className: _, ..._ } = _;
           return (0, _.jsxs)("div", {
             className: (0, _._)(_.WarningTextContainer, _.className),
-            ...__webpack_require__,
+            ..._,
             children: [
               (0, _.jsx)(_.ENo, {
                 className: _.TimeWarning,
@@ -13629,7 +13571,7 @@
         _ = (_) => {
           const {
             cost: _,
-            discount: __webpack_require__,
+            discount: _,
             originalCost: _,
             redeemPoints: _,
             closeModal: _,
@@ -13638,7 +13580,7 @@
             children: [
               (0, _.jsx)(_, {
                 cost: _,
-                discount: __webpack_require__,
+                discount: _,
                 originalCost: _,
                 onClick: _,
               }),
@@ -13652,13 +13594,13 @@
         _ = (_) => {
           const {
             cost: _,
-            discount: __webpack_require__,
+            discount: _,
             originalCost: _,
             onClick: _,
             className: _,
           } = _;
-          if (__webpack_require__) {
-            const _ = __webpack_require__ ? (0, _._)(_) : "",
+          if (_) {
+            const _ = _ ? (0, _._)(_) : "",
               _ = _._.Get().BIsLoggedIn()
                 ? (0, _.jsxs)(_.Fragment, {
                     children: [
@@ -13688,7 +13630,7 @@
               children: [
                 (0, _.jsxs)("div", {
                   className: _.DiscountContainer,
-                  children: ["-", __webpack_require__, "%"],
+                  children: ["-", _, "%"],
                 }),
                 (0, _.jsx)("div", {
                   className: _.CostContainer,
@@ -13771,7 +13713,7 @@
               });
         },
         _ = (_) => {
-          const { equipItem: _, closeModal: __webpack_require__ } = _;
+          const { equipItem: _, closeModal: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
@@ -13779,7 +13721,7 @@
                 children: (0, _._)("#Button_Equip"),
               }),
               (0, _.jsx)(_, {
-                onClick: __webpack_require__,
+                onClick: _,
                 children: (0, _._)("#Button_Later"),
               }),
             ],
@@ -13838,11 +13780,11 @@
           });
         },
         _ = (_) => {
-          const { closeModal: _, fnReloadItemDef: __webpack_require__ } = _;
+          const { closeModal: _, fnReloadItemDef: _ } = _;
           return (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_, {
-                onClick: __webpack_require__,
+                onClick: _,
                 children: (0, _._)("#Redeem_PriceChange"),
               }),
               (0, _.jsx)(_, {
@@ -13855,7 +13797,7 @@
         _ = (_) => {
           const {
             step: _,
-            definition: __webpack_require__,
+            definition: _,
             closeModal: _,
             redeemPoints: _,
             bRequestInProgress: _,
@@ -13874,7 +13816,7 @@
               children: (0, _._)("#Button_Close"),
             });
           else if ("redeem" == _) {
-            const _ = _(__webpack_require__),
+            const _ = _(_),
               { discount: _, originalCost: _ } = (function (_) {
                 switch (_.type) {
                   case 1:
@@ -13882,13 +13824,11 @@
                       5 == _.rewardDefinition.type ||
                       6 == _.rewardDefinition.type
                     ) {
-                      const {
-                        discount: _,
-                        original_point_cost: __webpack_require__,
-                      } = _._.Get().GetBundleOfferForUser(_.rewardDefinition);
+                      const { discount: _, original_point_cost: _ } =
+                        _._.Get().GetBundleOfferForUser(_.rewardDefinition);
                       return {
                         discount: _,
-                        originalCost: __webpack_require__,
+                        originalCost: _,
                       };
                     }
                     return {
@@ -13912,7 +13852,7 @@
                   discount: 0,
                   originalCost: parseInt(_.rewardDefinition.point_cost),
                 };
-              })(__webpack_require__);
+              })(_);
             _ = (0, _.jsx)(_, {
               cost: _,
               discount: _,
@@ -13955,7 +13895,7 @@
           });
         },
         _ = (_) => {
-          const { step: _, className: __webpack_require__, ..._ } = _;
+          const { step: _, className: _, ..._ } = _;
           let _ = null;
           return (
             "equip" == _.step
@@ -13967,17 +13907,17 @@
                   className: (0, _._)(_.GreenCheck, _.EquippedCheck),
                 })),
             (0, _.jsxs)("div", {
-              className: (0, _._)(__webpack_require__, _.ItemPreviewContainer),
+              className: (0, _._)(_, _.ItemPreviewContainer),
               ..._,
               children: [_, _.children],
             })
           );
         },
         _ = (_) => {
-          const { icon: _, ...__webpack_require__ } = _;
+          const { icon: _, ..._ } = _;
           return (0, _.jsx)("div", {
             className: _.ChatPickerContainer,
-            ...__webpack_require__,
+            ..._,
             children: (0, _.jsx)("div", {
               className: _.IconPreview,
               style: _ && {
@@ -13988,18 +13928,12 @@
           });
         },
         _ = (_) => {
-          const {
-            definition: _,
-            badgeLevel: __webpack_require__,
-            title: _,
-          } = _;
-          if (!__webpack_require__) return null;
-          let _ =
-              _.community_item_data.badge_data[__webpack_require__ - 1]?.image,
+          const { definition: _, badgeLevel: _, title: _ } = _;
+          if (!_) return null;
+          let _ = _.community_item_data.badge_data[_ - 1]?.image,
             _ = _.NextLevel;
           return (
-            _._.Get().GetUserSeasonalBadgeLevel() == __webpack_require__ &&
-              (_ = _.CurrentLevel),
+            _._.Get().GetUserSeasonalBadgeLevel() == _ && (_ = _.CurrentLevel),
             (0, _.jsxs)("div", {
               className: _.BadgeColumn,
               children: [
@@ -14026,7 +13960,7 @@
                       className: (0, _._)(_.BadgeLevelContainer, _),
                       children: (0, _.jsx)("div", {
                         className: _.BadgeLevelText,
-                        children: __webpack_require__,
+                        children: _,
                       }),
                     }),
                   ],
@@ -14036,21 +13970,15 @@
           );
         },
         _ = (_) => {
-          const {
-            definition: _,
-            step: __webpack_require__,
-            description: _,
-            ..._
-          } = _;
+          const { definition: _, step: _, description: _, ..._ } = _;
           let _,
             _ = null;
           if (
-            ("equip" != __webpack_require__ &&
-              "equipped" != __webpack_require__) ||
+            ("equip" != _ && "equipped" != _) ||
             !_.rewardDefinition ||
             1 != _.rewardDefinition.type
           ) {
-            if ("cantredeemforapp" == __webpack_require__) {
+            if ("cantredeemforapp" == _) {
               let _ = (0, _.jsx)("span", {
                 className: _.NeedAppOwnership,
                 children: _._.GetAppInfo(_.rewardDefinition.appid).name || "",
@@ -14059,7 +13987,7 @@
                 className: (0, _._)(_.Bold, _.Opacity),
                 children: (0, _._)("#Redeem_CantRedeemItemForApp", _),
               });
-            } else if ("cantafford" == __webpack_require__) {
+            } else if ("cantafford" == _) {
               let _ = _(_) - _._.Get().GetPointsAvailable().getLowBits();
               _ = (0, _.jsx)("div", {
                 className: (0, _._)(_.Bold, _.Opacity),
@@ -14089,24 +14017,20 @@
           });
         },
         _ = _.forwardRef((_, _) => {
-          const { className: __webpack_require__, ..._ } = _;
+          const { className: _, ..._ } = _;
           return (0, _.jsx)(_._, {
             ref: _,
-            className: (0, _._)(_.ItemWrapper, __webpack_require__),
+            className: (0, _._)(_.ItemWrapper, _),
             ..._,
             children: _.children,
           });
         });
       function _(_) {
-        const {
-          children: _,
-          destructive: __webpack_require__,
-          onEscKeypress: _,
-        } = _;
+        const { children: _, destructive: _, onEscKeypress: _ } = _;
         return (0, _.jsx)(_._, {
           onEscKeypress: _,
           bHideCloseIcon: !0,
-          bDestructiveWarning: __webpack_require__,
+          bDestructiveWarning: _,
           hideTopBar: !1,
           bGamepadUIScrollWithin: !0,
           children: _,
@@ -14147,10 +14071,10 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("div", {
           className: (0, _._)(_, _.Pulse),
-          ...__webpack_require__,
+          ..._,
         });
       }
       var _ = __webpack_require__("chunkid"),
@@ -14216,7 +14140,7 @@
             children: (_) => {
               const {
                   definition: {
-                    appid: __webpack_require__,
+                    appid: _,
                     community_item_data: {
                       item_image_large: _,
                       item_image_small: _,
@@ -14224,7 +14148,7 @@
                   },
                 } = _,
                 _ = _ ? _ : _,
-                _ = (0, _._)(__webpack_require__, _);
+                _ = (0, _._)(_, _);
               return (0, _.jsx)("img", {
                 className: _.ImageMedium,
                 src: _,
@@ -14378,7 +14302,7 @@
             children: (_) => {
               const {
                   definition: {
-                    appid: __webpack_require__,
+                    appid: _,
                     community_item_data: {
                       item_image_large: _,
                       item_image_small: _,
@@ -14386,7 +14310,7 @@
                   },
                 } = _,
                 _ = _ ? _ : _,
-                _ = (0, _._)(__webpack_require__, _);
+                _ = (0, _._)(_, _);
               return (0, _.jsx)("img", {
                 className: _.ImageFrames,
                 src: _,
@@ -14401,7 +14325,7 @@
             children: (_) => {
               const {
                   definition: {
-                    appid: __webpack_require__,
+                    appid: _,
                     community_item_data: {
                       item_image_large: _,
                       item_image_small: _,
@@ -14409,7 +14333,7 @@
                   },
                 } = _,
                 _ = _ ? _ : _,
-                _ = (0, _._)(__webpack_require__, _);
+                _ = (0, _._)(_, _);
               return (0, _.jsx)("img", {
                 className: _.ImageAnimatedAvatar,
                 src: _,
@@ -14478,13 +14402,9 @@
           bVisible: !1,
         };
         render() {
-          const {
-            children: _,
-            videoProps: _,
-            ...__webpack_require__
-          } = this.props;
+          const { children: _, videoProps: _, ..._ } = this.props;
           return (0, _.jsxs)(_, {
-            ...__webpack_require__,
+            ..._,
             children: [
               (0, _.jsx)(_._, {
                 trigger: "repeated",
@@ -14549,7 +14469,7 @@
       const _ = (_) => {
           const {
               appName: _,
-              appIcon: __webpack_require__,
+              appIcon: _,
               attributes: _,
               children: _,
               cost: _,
@@ -14588,7 +14508,7 @@
                       children: _,
                     }),
                     (0, _.jsx)(_, {
-                      src: __webpack_require__,
+                      src: _,
                       title: _,
                     }),
                     !_ &&
@@ -14671,7 +14591,7 @@
         _ = (_) => {
           const {
               appName: _,
-              appIcon: __webpack_require__,
+              appIcon: _,
               attributes: _,
               children: _,
               cost: _,
@@ -14709,7 +14629,7 @@
                       children: _,
                     }),
                     (0, _.jsx)(_, {
-                      src: __webpack_require__,
+                      src: _,
                       title: _,
                     }),
                     _,
@@ -14788,14 +14708,14 @@
           17: _,
         },
         _ = (0, _._)((_) => {
-          const { className: _, ...__webpack_require__ } = _,
+          const { className: _, ..._ } = _,
             _ = _._.Get().BRewardOwnedByUser(_.definition),
             _ = (0, _._)(_, _ && _.OwnedItem);
           if (5 == _.definition.type || 6 == _.definition.type)
             return (0, _.jsx)(_._, {
               fallback: null,
               children: (0, _.jsx)(_._, {
-                ...__webpack_require__,
+                ..._,
                 className: _,
                 onClick: _.onClick,
               }),
@@ -14807,7 +14727,7 @@
             return (0, _.jsx)(_._, {
               fallback: null,
               children: (0, _.jsx)(_._, {
-                ...__webpack_require__,
+                ..._,
                 className: _,
                 onClick: _.onClick,
               }),
@@ -14817,7 +14737,7 @@
             ? (0, _.jsx)(_._, {
                 fallback: null,
                 children: (0, _.jsx)(_, {
-                  ...__webpack_require__,
+                  ..._,
                   className: _,
                   onClick: _.onClick,
                 }),
@@ -14825,7 +14745,7 @@
             : (0, _.jsx)(_._, {
                 fallback: null,
                 children: (0, _.jsx)(_, {
-                  ...__webpack_require__,
+                  ..._,
                   className: _,
                   onClick: _.onClick,
                 }),
@@ -14838,7 +14758,7 @@
       function _({
         customization_type: _,
         current_level: _,
-        point_cost: __webpack_require__,
+        point_cost: _,
         ..._
       }) {
         const _ = _(_),
@@ -14847,7 +14767,7 @@
           _ = _ > 1,
           _ = (0, _._)(_ && _.OwnedItem, !_ && _ && _.OwnedItemProgress);
         return {
-          cost: __webpack_require__,
+          cost: _,
           name: _,
           itemLevel: _,
           children: (0, _.jsx)("img", {
@@ -14868,13 +14788,13 @@
       function _({
         customization_type: _,
         point_cost: _,
-        purchased_count: __webpack_require__,
+        purchased_count: _,
         current_level: _,
         ..._
       }) {
         const _ = _(_),
           _ = (0, _._)("#ProfileShowcases_Type_" + _),
-          _ = __webpack_require__ >= _._.Get().GetMaxProfileShowcaseSlots(),
+          _ = _ >= _._.Get().GetMaxProfileShowcaseSlots(),
           _ = (0, _._)(_ && _.OwnedItem);
         return {
           cost: _,
@@ -14900,7 +14820,7 @@
         };
         render() {
           const { src: _, title: _ } = this.props,
-            { bLoadComplete: __webpack_require__ } = this.state;
+            { bLoadComplete: _ } = this.state;
           return _
             ? (0, _.jsx)("div", {
                 className: _.AppIconContainer,
@@ -14911,7 +14831,7 @@
                     this.setState({
                       bLoadComplete: !0,
                     }),
-                  style: __webpack_require__
+                  style: _
                     ? void 0
                     : {
                         display: "none",
@@ -14968,7 +14888,7 @@
       const _ = (0, _._)(function (_) {
         const {
             getItems: _,
-            renderItem: __webpack_require__,
+            renderItem: _,
             children: _,
             style: _,
             cItemsPerPage: _,
@@ -14978,7 +14898,7 @@
           _ = _ || 20,
           [_, _] = (0, _.useState)(_),
           { rewards: _, bLoadingMore: _ } = _(0, _),
-          _ = _.map(__webpack_require__);
+          _ = _.map(_);
         return (0, _.jsx)(_.Fragment, {
           children: (0, _.jsxs)(_._, {
             verticalSpacing: "large",
@@ -15024,12 +14944,12 @@
       const _ = (_) => {
           const {
               title: _,
-              subtitle: __webpack_require__,
+              subtitle: _,
               leftActions: _,
               rightActions: _,
               children: _,
             } = _,
-            _ = _ || __webpack_require__ || _ || _;
+            _ = _ || _ || _ || _;
           return (0, _.jsxs)("div", {
             className: _.Section,
             children: [
@@ -15063,7 +14983,7 @@
                       }),
                       (0, _.jsx)("div", {
                         className: _.SectionSubtitle,
-                        children: __webpack_require__,
+                        children: _,
                       }),
                     ],
                   }),
@@ -15076,17 +14996,17 @@
           });
         },
         _ = (_) => {
-          const { className: _, ...__webpack_require__ } = _;
+          const { className: _, ..._ } = _;
           return (0, _.jsx)(_._, {
             className: (0, _._)(_, _.ActionButton),
-            ...__webpack_require__,
+            ..._,
           });
         },
         _ = (_) => {
-          const { className: _, ...__webpack_require__ } = _;
+          const { className: _, ..._ } = _;
           return (0, _.jsx)("div", {
             className: (0, _._)(_, _.SectionCallout),
-            ...__webpack_require__,
+            ..._,
           });
         };
     },
@@ -15177,12 +15097,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-          const {
-              children: _,
-              iconComponent: __webpack_require__,
-              descCallout: _,
-            } = _,
-            _ = __webpack_require__,
+          const { children: _, iconComponent: _, descCallout: _ } = _,
+            _ = _,
             _ = _;
           return (0, _.jsxs)("div", {
             className: _.CalloutContainer,
@@ -15234,10 +15150,10 @@
             }),
             (0, _.jsx)("span", {
               children:
-                ((__webpack_require__ = _.dollarConversion),
+                ((_ = _.dollarConversion),
                 "undefined" == typeof GStoreItemData
                   ? (console.error("Unable to find GStoreItemData"), null)
-                  : GStoreItemData.fnFormatCurrency(__webpack_require__)),
+                  : GStoreItemData.fnFormatCurrency(_)),
             }),
           );
           var _;
@@ -15761,11 +15677,9 @@
           });
         },
         _ = (_) => {
-          const { question: _, answer: __webpack_require__ } = _,
+          const { question: _, answer: _ } = _,
             _ = Array.isArray(_) ? _ : [_],
-            _ = Array.isArray(__webpack_require__)
-              ? __webpack_require__
-              : [__webpack_require__];
+            _ = Array.isArray(_) ? _ : [_];
           return (0, _.jsxs)(_._, {
             display: "flex",
             flexDirection: "column",
@@ -17671,7 +17585,7 @@
       function _(_) {
         const {
             title: _,
-            description: __webpack_require__,
+            description: _,
             image: _,
             iconComponent: _,
             linked_page: _,
@@ -17701,7 +17615,7 @@
                   }),
                   (0, _.jsx)("div", {
                     className: _.Description,
-                    children: __webpack_require__,
+                    children: _,
                   }),
                 ],
               }),
@@ -17871,7 +17785,7 @@
             : null;
         }),
         _ = (0, _._)((_) => {
-          const { time: _, ...__webpack_require__ } = _,
+          const { time: _, ..._ } = _,
             _ = Math.floor(Math.max(0, _ - _._()) / 1e3),
             _ = Math.floor(_ / _._.PerHour),
             _ = Math.floor((_ - _ * _._.PerHour) / _._.PerMinute),
@@ -17880,7 +17794,7 @@
             style: {
               fontFamily: "monospace",
             },
-            ...__webpack_require__,
+            ..._,
             children: [_(_), ":", _(_), ":", _(_)],
           });
         }),
@@ -18161,7 +18075,7 @@
         const {
             descriptor: {
               items: _,
-              title: __webpack_require__,
+              title: _,
               subtitle: _,
               searchPlaceholder: _,
               headerImage: _,
@@ -18173,7 +18087,7 @@
           _ =
             _ ||
             (0, _.jsx)(_._, {
-              title: __webpack_require__,
+              title: _,
               subtitle: _,
               headerImage: _,
             });
@@ -18191,7 +18105,7 @@
               _.filter(Boolean).map((_, _) => {
                 switch (_.type) {
                   case "banner":
-                    const { type: __webpack_require__, ..._ } = _;
+                    const { type: _, ..._ } = _;
                     return (0, _.createElement)(_, {
                       ..._,
                       key: `${_.title}_${_}`,
@@ -18228,14 +18142,10 @@
         DeriveClusterView() {
           const {
               match: {
-                params: {
-                  pageid: _,
-                  appid: _,
-                  clusterindex: __webpack_require__,
-                },
+                params: { pageid: _, appid: _, clusterindex: _ },
               },
             } = this.props,
-            _ = parseInt(__webpack_require__);
+            _ = parseInt(_);
           if (isNaN(_)) return null;
           let _;
           if (_)
@@ -18641,7 +18551,7 @@
         _ = (_) => {
           const {
             level: _,
-            owned: __webpack_require__,
+            owned: _,
             cost: _,
             imgSrc: _,
             className: _,
@@ -18662,12 +18572,12 @@
                 className: _.Footer,
                 children: [
                   (0, _.jsx)(_, {
-                    owned: __webpack_require__,
+                    owned: _,
                     level: _,
                   }),
                   (0, _.jsx)("div", {
                     className: _.Hint,
-                    children: __webpack_require__
+                    children: _
                       ? (0, _.jsx)(_, {})
                       : (0, _.jsx)(_, {
                           cost: _,
@@ -18688,9 +18598,9 @@
             size: 0.75,
           }),
         _ = (_) => {
-          const { level: _, owned: __webpack_require__ } = _;
+          const { level: _, owned: _ } = _;
           return (0, _.jsx)("div", {
-            className: (0, _._)(_.LevelMarker, __webpack_require__ && _.Owned),
+            className: (0, _._)(_.LevelMarker, _ && _.Owned),
             children: (0, _.jsx)("div", {
               className: _.Inner,
               children: _,

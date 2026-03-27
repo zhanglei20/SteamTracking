@@ -406,7 +406,7 @@
       const _ = "nicknames";
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_],
             queryFn: async () => {
               const _ = new Map();
@@ -422,7 +422,7 @@
               return _;
             },
           });
-        return __webpack_require__ ? __webpack_require__.get(_) : null;
+        return _ ? __webpack_require__.get(_) : null;
       }
       const _ = new (_())(
           (_) =>
@@ -479,15 +479,15 @@
         ),
         _ = "avatarandpersonas";
       function _(_) {
-        const { data: _, isLoading: __webpack_require__ } = (0, _._)({
+        const { data: _, isLoading: _ } = (0, _._)({
           queryKey: [_, _],
           queryFn: () => _.load(_),
         });
-        return [_, __webpack_require__];
+        return [_, _];
       }
       function _(_) {
         const _ = (0, _._)(),
-          { data: __webpack_require__, isLoading: _ } = (0, _._)({
+          { data: _, isLoading: _ } = (0, _._)({
             queryKey: [_, _],
             queryFn: async () => {
               const _ = await _.loadMany(_);
@@ -509,7 +509,7 @@
               }),
               _
             );
-          }, [__webpack_require__]);
+          }, [_]);
         return _ ? null : _;
       }
     },
@@ -575,29 +575,24 @@
       }
       function _(_) {
         const { theme: _ } = _,
-          [__webpack_require__] = (0, _._)(_._.accountid);
-        return __webpack_require__
+          [_] = (0, _._)(_._.accountid);
+        return _
           ? (0, _.jsxs)(_.Fragment, {
               children: [
                 (0, _.jsx)("div", {
                   className: (0, _._)(_.Avatar, _.Avatar),
                   children:
-                    __webpack_require__ &&
-                    __webpack_require__.avatar_url &&
+                    _ &&
+                    _.avatar_url &&
                     (0, _.jsx)("img", {
-                      src: __webpack_require__.avatar_url.replace(
-                        /\.jpg$/,
-                        "_full.jpg",
-                      ),
+                      src: _.avatar_url.replace(/\.jpg$/, "_full.jpg"),
                     }),
                 }),
                 (0, _.jsx)("div", {
                   className: (0, _._)(_.DataBlock, _.DataBlock),
                   children: (0, _.jsx)("div", {
                     className: (0, _._)(_.PersonaName, _.PersonaName),
-                    children: __webpack_require__
-                      ? __webpack_require__.persona_name
-                      : "",
+                    children: _ ? _.persona_name : "",
                   }),
                 }),
               ],
@@ -639,7 +634,7 @@
         });
       }
       function _(_) {
-        const { baseClass: _, accentClass: __webpack_require__ } = _;
+        const { baseClass: _, accentClass: _ } = _;
         return (0, _.jsxs)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 80 50",
@@ -654,29 +649,26 @@
             }),
             (0, _.jsx)("path", {
               fill: "#4AD4FF",
-              className: __webpack_require__,
+              className: _,
               _: "M31.635 45.874C31.5218 45.874 31.4969 45.716 31.6033 45.6773C40.8922 42.2999 47.5266 33.3932 47.5266 22.937C47.5266 12.4808 40.8922 3.57411 31.6033 0.196722C31.4969 0.15803 31.5218 0 31.635 0C44.3028 0 54.5721 10.2692 54.5721 22.937C54.5721 35.6048 44.3028 45.874 31.635 45.874Z",
             }),
             (0, _.jsx)("path", {
               fill: "#4AD4FF",
-              className: __webpack_require__,
+              className: _,
               _: "M39.9974 45.874C39.8841 45.874 39.8592 45.716 39.9656 45.6773C49.2545 42.2999 55.8889 33.3932 55.8889 22.937C55.8889 12.4808 49.2545 3.57411 39.9656 0.196722C39.8592 0.15803 39.8841 0 39.9974 0C52.6651 0 62.9344 10.2692 62.9344 22.937C62.9344 35.6048 52.6651 45.874 39.9974 45.874Z",
             }),
           ],
         });
       }
       function _(_) {
-        const { year: _, theme: __webpack_require__ } = _;
+        const { year: _, theme: _ } = _;
         return (0, _.jsx)("div", {
-          className: (0, _._)(_.Header, __webpack_require__.Header),
+          className: (0, _._)(_.Header, _.Header),
           children: (0, _._)(
             "#YIR_MM_Header",
             (0, _.jsx)("br", {}),
             (0, _.jsx)("div", {
-              className: (0, _._)(
-                _.YearSubtitle,
-                __webpack_require__.YearSubtitle,
-              ),
+              className: (0, _._)(_.YearSubtitle, _.YearSubtitle),
               children: (0, _._)("#date_year", _),
             }),
           ),
@@ -714,7 +706,7 @@
         ),
         _ = 2022;
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)({});
+        const [_, _] = (0, _.useState)({});
         return (
           (0, _.useEffect)(() => {
             let _ = _[_];

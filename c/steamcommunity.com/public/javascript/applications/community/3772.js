@@ -100,16 +100,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { className: _, ...__webpack_require__ } = _;
+        const { className: _, ..._ } = _;
         return (0, _.jsx)("div", {
           className: _()(_, _.EditableComponentToolbarContainer),
-          ...__webpack_require__,
+          ..._,
         });
       }
       function _(_) {
         const {
             toolbar: _,
-            top: __webpack_require__,
+            top: _,
             left: _,
             width: _,
             height: _,
@@ -117,15 +117,13 @@
           } = _,
           _ = {
             left: `${_}px`,
-            top: `${__webpack_require__}px`,
+            top: `${_}px`,
             width: `${_}px`,
             position: "absolute",
           },
           _ = _ < 120;
         return (
-          (_ < 80 || _) &&
-            ((_.top = __webpack_require__ - 32 - 16 + "px"),
-            (_.height = "48px")),
+          (_ < 80 || _) && ((_.top = _ - 32 - 16 + "px"), (_.height = "48px")),
           (0, _.jsx)("div", {
             style: _,
             className: _()(
@@ -138,7 +136,7 @@
         );
       }
       function _(_) {
-        const { className: _, toolbar: __webpack_require__, children: _ } = _,
+        const { className: _, toolbar: _, children: _ } = _,
           [_, _] = (0, _._)(),
           [_, _] = _.useState({
             top: 0,
@@ -167,7 +165,7 @@
               children: [
                 (0, _.jsx)(_, {
                   ..._,
-                  toolbar: __webpack_require__,
+                  toolbar: _,
                   visible: _ && _.width > 0,
                 }),
                 _,
@@ -179,7 +177,7 @@
       function _(_) {
         const {
           onEditClick: _,
-          strEditDescription: __webpack_require__ = (0, _._)("#Button_Edit"),
+          strEditDescription: _ = (0, _._)("#Button_Edit"),
           onDeleteClick: _,
           strDeleteDescription: _ = (0, _._)("#Button_Remove"),
           bStrongShadows: _ = !1,
@@ -192,7 +190,7 @@
             _ &&
               (0, _.jsx)(_, {
                 onClick: _,
-                description: __webpack_require__,
+                description: _,
                 children: (0, _.jsx)(_.ffu, {}),
               }),
             _ &&
@@ -205,17 +203,17 @@
         });
       }
       function _(_) {
-        const { bStrongShadows: _, children: __webpack_require__ } = _;
+        const { bStrongShadows: _, children: _ } = _;
         return (0, _.jsx)("span", {
           className: _()(_.EditableComponentToolbar, _ && _.StrongShadows),
-          children: __webpack_require__,
+          children: _,
         });
       }
       function _(_) {
-        const { onClick: _, description: __webpack_require__, children: _ } = _;
+        const { onClick: _, description: _, children: _ } = _;
         return (0, _.jsx)(_._, {
           onClick: _,
-          tooltip: __webpack_require__,
+          tooltip: _,
           className: _.FloatingToolbarButton,
           children: _,
         });
@@ -241,7 +239,7 @@
       function _(_) {
         const {
             node: _,
-            imageNodeType: __webpack_require__,
+            imageNodeType: _,
             videoNodeType: _,
             editModel: _,
             schemaConfig: _,
@@ -259,17 +257,17 @@
             let _ = [];
             return (
               _.descendants((_) => {
-                (_.type != __webpack_require__ && _.type != _) || _.push(_);
+                (_.type != _ && _.type != _) || _.push(_);
               }),
               _
             );
-          }, [__webpack_require__, _, _]),
+          }, [_, _, _]),
           _ = _.useCallback((_) => _((0, _._)(_)), [_]),
           _ = "true" === _.attrs.autoadvance,
           [_, _] = _(_, {
             autoAdvance: _,
             clanSteamID: _,
-            imageNodeType: __webpack_require__,
+            imageNodeType: _,
             videoNodeType: _,
             carouselNodeType: _.type,
           }),
@@ -359,7 +357,7 @@
       function _(_) {
         var _;
         const {
-            hideModal: __webpack_require__,
+            hideModal: _,
             images: _,
             onCarouselImagesSelected: _,
             clanSteamID: _,
@@ -384,7 +382,7 @@
           ),
           _ = _.useCallback(() => {
             _(_, _), __webpack_require__();
-          }, [_, __webpack_require__, _, _]),
+          }, [_, _, _, _]),
           _ = _.useCallback((_) => {
             _.destination &&
               _((_) => _._(_.slice(), _.source.index, _.destination.index));
@@ -400,7 +398,7 @@
             _,
             (0, _.jsxs)(_._, {
               active: !0,
-              onDismiss: __webpack_require__,
+              onDismiss: _,
               children: [
                 (0, _.jsx)(_._, {
                   children: (0, _._)(
@@ -467,7 +465,7 @@
                 }),
                 (0, _.jsx)(_._, {
                   children: (0, _.jsx)(_._, {
-                    onCancel: __webpack_require__,
+                    onCancel: _,
                     onOK: _,
                   }),
                 }),
@@ -479,14 +477,14 @@
       function _(_) {
         const {
             draggableProvided: _,
-            image: __webpack_require__,
+            image: _,
             setSelectedImages: _,
             iImage: _,
             cImages: _,
           } = _,
           _ = _.useCallback(() => {
-            _((_) => _.filter((_) => _ != __webpack_require__));
-          }, [__webpack_require__, _]);
+            _((_) => _.filter((_) => _ != _));
+          }, [_, _]);
         return (0, _.jsx)("div", {
           className: _()(_.ListItem, _.DraggableItem),
           ref: _.innerRef,
@@ -496,9 +494,7 @@
             className: _.ImagePreview,
             children: [
               (0, _.jsx)("img", {
-                src: _._.ReplacementTokenToClanImageURL(
-                  __webpack_require__.node.attrs.src,
-                ),
+                src: _._.ReplacementTokenToClanImageURL(_.node.attrs.src),
               }),
               (0, _.jsx)("div", {
                 className: _.Controls,
@@ -518,7 +514,7 @@
       function _(_) {
         const {
             schemaConfig: _,
-            node: __webpack_require__,
+            node: _,
             editModel: _,
             imageNodeType: _,
             videoNodeType: _,
@@ -531,11 +527,11 @@
             selected: _,
           } = _,
           [_, _, _] = (0, _._)(),
-          _ = _(__webpack_require__);
+          _ = _(_);
         let _ = (0, _.jsx)(_, {
           schemaConfig: _,
           event: _.GetEventModel(),
-          node: __webpack_require__,
+          node: _,
           nodeAttrs: _,
         });
         const _ = _.useCallback(() => {
@@ -549,8 +545,8 @@
             carouselNodeType: _,
           }),
           _ = _.useCallback(() => {
-            _([__webpack_require__]);
-          }, [__webpack_require__, _]),
+            _([_]);
+          }, [_, _]),
           _ = {
             createCarousel: _ ? _ : void 0,
             src: _(_),
@@ -582,11 +578,7 @@
         });
       }
       function _(_) {
-        const {
-            showModal: _,
-            removeNode: __webpack_require__,
-            contextMenuProps: _,
-          } = _,
+        const { showModal: _, removeNode: _, contextMenuProps: _ } = _,
           _ = _.useCallback(
             (_) => {
               (0, _._)(
@@ -604,7 +596,7 @@
           );
         return (0, _.jsx)(_, {
           onEditClick: _,
-          onDeleteClick: __webpack_require__,
+          onDeleteClick: _,
           children: (0, _.jsx)(_, {
             onClick: _,
             description: (0, _._)("#ActionButtonLabelContextMenu"),
@@ -613,10 +605,10 @@
         });
       }
       function _(_) {
-        const { createCarousel: _, src: __webpack_require__ } = _,
+        const { createCarousel: _, src: _ } = _,
           _ = _.useCallback(() => {
-            window.open(__webpack_require__);
-          }, [__webpack_require__]);
+            window.open(_);
+          }, [_]);
         return (0, _.jsxs)(_._, {
           children: [
             _ &&
@@ -634,16 +626,16 @@
         });
       }
       function _(_) {
-        const { type: _, attrs: __webpack_require__ } = _;
+        const { type: _, attrs: _ } = _;
         return "image" == _.name
           ? {
               type: "image",
-              attrs: __webpack_require__,
+              attrs: _,
             }
           : "video" == _.name
             ? {
                 type: "video",
-                attrs: __webpack_require__,
+                attrs: _,
               }
             : void 0;
       }
@@ -655,12 +647,7 @@
             : void 0;
       }
       function _(_) {
-        const {
-            schemaConfig: _,
-            event: __webpack_require__,
-            node: _,
-            nodeAttrs: _,
-          } = _,
+        const { schemaConfig: _, event: _, node: _, nodeAttrs: _ } = _,
           { type: _, attrs: _ } = _,
           _ = _.ConvertAttrToBBCodeArgs(_, _);
         return "image" == _
@@ -668,7 +655,7 @@
               strTag: "img",
               args: _,
               rawargs: "",
-              event: __webpack_require__,
+              event: _,
               showErrorInfo: !0,
             })
           : "video" == _
@@ -678,7 +665,7 @@
                   strTag: "video",
                   args: _,
                   rawargs: "",
-                  event: __webpack_require__,
+                  event: _,
                   showErrorInfo: !0,
                 },
                 `${_.mp4}_${_.webm}`,
@@ -686,12 +673,10 @@
             : ((0, _._)(_, "unhandled type: " + _), null);
       }
       function _(_, _) {
-        const { type: __webpack_require__, attrs: _ } = _;
+        const { type: _, attrs: _ } = _;
         let _;
         if (
-          ("image" == __webpack_require__
-            ? (_ = _.src)
-            : "video" == __webpack_require__ && (_ = _.mp4 || _.webm),
+          ("image" == _ ? (_ = _.src) : "video" == _ && (_ = _.mp4 || _.webm),
           _)
         ) {
           const [_] = _._.ExtractHashFromBBCodeURL(_);
@@ -701,7 +686,7 @@
       function _(_) {
         const {
             clanSteamID: _,
-            imageNodeType: __webpack_require__,
+            imageNodeType: _,
             videoNodeType: _,
             onItemSelected: _,
             onHideModal: _,
@@ -738,7 +723,7 @@
               nodeAttrs: _,
               hideModal: _,
               onItemSelected: _,
-              imageNodeType: __webpack_require__,
+              imageNodeType: _,
               videoNodeType: _,
               clanSteamID: _,
             }),
@@ -748,24 +733,21 @@
       function _(_) {
         const {
             bIsEdit: _ = !1,
-            nodeAttrs: __webpack_require__,
+            nodeAttrs: _,
             hideModal: _,
             clanSteamID: _,
             onItemSelected: _,
             imageNodeType: _,
             videoNodeType: _,
           } = _,
-          { type: _, attrs: _ } = __webpack_require__,
+          { type: _, attrs: _ } = _,
           _ = (function (_, _) {
             return _.useMemo(() => _(_, _), [_, _.type, _.attrs]);
-          })(_, __webpack_require__),
+          })(_, _),
           [_, _] = _.useState(() =>
             _ ||
-            ("image" == __webpack_require__.type &&
-              !__webpack_require__.attrs.src) ||
-            ("video" == __webpack_require__.type &&
-              !__webpack_require__.attrs.mp4 &&
-              !__webpack_require__.attrs.webm)
+            ("image" == _.type && !_.attrs.src) ||
+            ("video" == _.type && !_.attrs.mp4 && !_.attrs.webm)
               ? "uploaded"
               : "hotlink",
           ),
@@ -864,14 +846,14 @@
       function _(_) {
         const {
             active: _,
-            bIsEdit: __webpack_require__,
+            bIsEdit: _,
             hideModal: _,
             onImageSelected: _,
             src: _,
           } = _,
           [_, _] = _.useState(_),
           _ = _.useCallback((_) => _(_.currentTarget.value), []),
-          _ = __webpack_require__
+          _ = _
             ? (0, _._)("#EventEditor_ReplaceImage_Title")
             : (0, _._)("#EventEditor_InsertImage_Title"),
           _ = _.useRef(void 0);
@@ -902,7 +884,7 @@
       function _(_) {
         const {
             active: _,
-            bIsEdit: __webpack_require__,
+            bIsEdit: _,
             hideModal: _,
             attrs: _,
             setAttrs: _,
@@ -970,7 +952,7 @@
       function _(_) {
         const {
             bIsEdit: _,
-            hideModal: __webpack_require__,
+            hideModal: _,
             onImageSelected: _,
             onVideoSelected: _,
             clanSteamID: _,
@@ -1026,7 +1008,7 @@
               }),
               (0, _.jsx)(_._, {
                 children: (0, _.jsx)(_._, {
-                  onCancel: __webpack_require__,
+                  onCancel: _,
                   strOKText: _,
                   bOKDisabled: !_ || _ == _.selectedImage,
                 }),
@@ -1036,12 +1018,7 @@
         });
       }
       function _(_) {
-        const {
-            editModel: _,
-            imageNode: __webpack_require__,
-            videoNode: _,
-            children: _,
-          } = _,
+        const { editModel: _, imageNode: _, videoNode: _, children: _ } = _,
           _ = _.useCallback(
             async (_) => {
               const _ = _.GetClanSteamID(),
@@ -1056,20 +1033,20 @@
                 throw _.uploadResult.message;
               const _ = _(
                 _._.GetClanImageByImageHash(_, _.uploadResult.image_hash),
-                __webpack_require__,
+                _,
                 _,
               );
               return (
-                _.type == __webpack_require__ &&
+                _.type == _ &&
                   (await (0, _._)(
                     _._.ReplacementTokenToClanImageURL(_.attrs.src),
                   )),
                 _
               );
             },
-            [_, __webpack_require__, _],
+            [_, _, _],
           );
-        return __webpack_require__
+        return _
           ? (0, _.jsx)(_._, {
               ProcessFileUpload: _,
               bAllowImageHotLinking: !0,
@@ -1106,7 +1083,7 @@
       function _(_) {
         const {
             videoID: _,
-            align: __webpack_require__,
+            align: _,
             editModel: _,
             selected: _,
             setAttrs: _,
@@ -1131,7 +1108,7 @@
             _ &&
               (0, _.jsx)(_, {
                 videoID: _,
-                align: __webpack_require__,
+                align: _,
                 bEditing: !0,
                 hideModal: _,
                 onSave: _,
@@ -1152,9 +1129,9 @@
                   event: _.GetEventModel(),
                   strTag: "previewyoutube",
                   args: {
-                    "": `${_};${__webpack_require__}`,
+                    "": `${_};${_}`,
                   },
-                  rawargs: `${_};${__webpack_require__}`,
+                  rawargs: `${_};${_}`,
                   showErrorInfo: !0,
                 }),
               ],
@@ -1165,12 +1142,12 @@
       function _(_) {
         const {
             videoID: _ = "",
-            align: __webpack_require__ = "",
+            align: _ = "",
             bEditing: _ = !1,
             hideModal: _,
             onSave: _,
           } = _,
-          [_, _] = _.useState(__webpack_require__ || _._.full),
+          [_, _] = _.useState(_ || _._.full),
           [_, _] = _.useState(_ ? `https://www.youtube.com/watch?v=${_}` : ""),
           [_, _] = _.useState(void 0),
           _ = _.useCallback(() => {
@@ -1251,7 +1228,7 @@
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { hideModal: _, fnUpdateSession: __webpack_require__ } = _,
+        const { hideModal: _, fnUpdateSession: _ } = _,
           [_, _] = (0, _.useState)(() => _(!0, null)),
           [_, _] = (0, _.useState)(() => _(!0, null)),
           [_] = (0, _._)(() => [_.location_type]);
@@ -1281,12 +1258,8 @@
         });
       }
       function _(_) {
-        const {
-            hideModal: _,
-            groupInput: __webpack_require__,
-            fnUpdateGroupSession: _,
-          } = _,
-          [_, _] = (0, _.useState)(() => _(!1, __webpack_require__));
+        const { hideModal: _, groupInput: _, fnUpdateGroupSession: _ } = _,
+          [_, _] = (0, _.useState)(() => _(!1, _));
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)(_._, {
@@ -1295,7 +1268,7 @@
               _(_), _();
             },
             onCancel: () => {
-              _(_(!1, __webpack_require__)), _();
+              _(_(!1, _)), _();
             },
             children: (0, _.jsx)("div", {
               className: _().DialogCtn,
@@ -1310,7 +1283,7 @@
       function _(_) {
         const {
             bCreate: _,
-            hideModal: __webpack_require__,
+            hideModal: _,
             sessionInput: _,
             fnUpdateSession: _,
           } = _,
@@ -1340,7 +1313,7 @@
         });
       }
       function _(_) {
-        const { group: _, fnSetGroup: __webpack_require__ } = _,
+        const { group: _, fnSetGroup: _ } = _,
           _ = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -1447,10 +1420,9 @@
       }
       function _(_) {
         var _;
-        const { group: __webpack_require__, fnSetGroup: _ } = _,
+        const { group: _, fnSetGroup: _ } = _,
           [_, _] = (0, _.useState)(
-            (null === (_ = __webpack_require__.group_visibility_tokens) ||
-            void 0 === _
+            (null === (_ = _.group_visibility_tokens) || void 0 === _
               ? void 0
               : _.length) > 0,
           );
@@ -1461,7 +1433,7 @@
                   children:
                     "By default, all sessions are visibility to any partner wiht a list. We can limit visibility to users by adding tokens below. Multiple Meet Steam sections can be visible together if they share the same token. To make the tokens appears most friendly, we are limiting them to exactly 5 digits. Only one token can be set on the URL.",
                 }),
-                __webpack_require__.group_visibility_tokens.map((_, _) =>
+                _.group_visibility_tokens.map((_, _) =>
                   (0, _.jsx)(
                     _._,
                     {
@@ -1471,7 +1443,7 @@
                       value: _ || 1e4,
                       onChange: (_) => {
                         const _ = {
-                          ...__webpack_require__,
+                          ..._,
                         };
                         (_.group_visibility_tokens[_] = Number.parseInt(
                           _.currentTarget.value,
@@ -1486,7 +1458,7 @@
                 (0, _.jsx)(_._, {
                   onClick: () => {
                     const _ = {
-                      ...__webpack_require__,
+                      ..._,
                     };
                     (_.group_visibility_tokens = [
                       ..._.group_visibility_tokens,
@@ -1496,13 +1468,11 @@
                   },
                   children: "Add Token",
                 }),
-                Boolean(
-                  __webpack_require__.group_visibility_tokens.length > 0,
-                ) &&
+                Boolean(_.group_visibility_tokens.length > 0) &&
                   (0, _.jsx)(_._, {
                     onClick: () => {
                       const _ = {
-                        ...__webpack_require__,
+                        ..._,
                       };
                       (_.group_visibility_tokens =
                         _.group_visibility_tokens.slice(0, -1)),
@@ -1519,7 +1489,7 @@
             });
       }
       function _(_) {
-        const { session: _, fnSetSession: __webpack_require__ } = _,
+        const { session: _, fnSetSession: _ } = _,
           [_, _, _, _, _, _] = (0, _._)(() => [
             _.rtime_start,
             _.rtime_end,
@@ -1617,16 +1587,12 @@
         });
       }
       function _(_) {
-        const {
-            rtime_start: _,
-            rtime_end: __webpack_require__,
-            sDisplayTimeZone: _,
-          } = _,
+        const { rtime_start: _, rtime_end: _, sDisplayTimeZone: _ } = _,
           _ = _.unix(_)._(_._),
           _ = _.unix(_)._(_),
           _ = _.utcOffset() - _.utcOffset(),
-          _ = _.unix(__webpack_require__)._(_._),
-          _ = _.unix(__webpack_require__)._(_),
+          _ = _.unix(_)._(_._),
+          _ = _.unix(_)._(_),
           _ = _.utcOffset() - _.utcOffset();
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -1652,7 +1618,7 @@
       function _(_) {
         const {
             startTime: _,
-            location_type: __webpack_require__,
+            location_type: _,
             fnUpdateLocationAndTZ: _,
             in_person_time_zone: _,
           } = _,
@@ -1697,7 +1663,7 @@
             (0, _.jsxs)(_._, {
               labelId: _,
               descriptionId: _,
-              value: __webpack_require__,
+              value: _,
               onChange: (_) => _(_, _),
               children: [
                 (0, _.jsx)(_._, {
@@ -1710,7 +1676,7 @@
                 }),
               ],
             }),
-            "in_person" === __webpack_require__ &&
+            "in_person" === _ &&
               (0, _.jsx)(_._, {
                 styles: {
                   option: (_) => ({
@@ -1734,7 +1700,7 @@
                       label: _(_._),
                       value: _._,
                     },
-                onChange: (_) => _(__webpack_require__, _.value),
+                onChange: (_) => _(_, _.value),
               }),
           ],
         });
@@ -1863,11 +1829,7 @@
       var _ = __webpack_require__("chunkid");
       function _(_) {
         var _;
-        const {
-            focusView: __webpack_require__,
-            removeNode: _,
-            group_id: _,
-          } = _,
+        const { focusView: _, removeNode: _, group_id: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(() => {
             var _;
@@ -1879,18 +1841,18 @@
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return _ && _.GetClanAccountID() == (0, _._)()
           ? (0, _.jsxs)("div", {
               className: _().EditorCtn,
               children: [
                 (0, _.jsx)(_, {
                   groupData: _,
-                  focusView: __webpack_require__,
+                  focusView: _,
                 }),
                 (0, _.jsxs)("div", {
                   className: _().controls,
@@ -1963,12 +1925,12 @@
             });
       }
       function _(_) {
-        const { groupData: _, focusView: __webpack_require__ } = _,
+        const { groupData: _, focusView: _ } = _,
           _ = (0, _._)(() => _.sessions || []),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return _
           ? (0, _.jsxs)(_._, {
               groupData: _,
@@ -1977,7 +1939,7 @@
                   (0, _.jsx)(
                     _,
                     {
-                      focusView: __webpack_require__,
+                      focusView: _,
                       sessionID: _._,
                       bShowOR: _ + 1 < _.length,
                     },
@@ -2007,12 +1969,12 @@
           : null;
       }
       function _(_) {
-        const { sessionID: _, bShowOR: __webpack_require__, focusView: _ } = _,
+        const { sessionID: _, bShowOR: _, focusView: _ } = _,
           [_, _] = (0, _._)(),
           _ = (0, _._)(() => {
-            const { groupIndex: _, sessionIndex: __webpack_require__ } = _(_);
+            const { groupIndex: _, sessionIndex: _ } = _(_);
             return _._.GetEditModel().GetEventModel().jsondata
-              .meet_steam_groups[_].sessions[__webpack_require__];
+              .meet_steam_groups[_].sessions[_];
           }),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
@@ -2075,17 +2037,15 @@
                       strDescription: (0, _._)("#Dialog_AreYouSure"),
                       onOK: () => {
                         const _ = _._.GetEditModel(),
-                          { groupIndex: __webpack_require__, sessionIndex: _ } =
-                            _(_),
+                          { groupIndex: _, sessionIndex: _ } = _(_),
                           _ = [
-                            ..._.GetEventModel().jsondata.meet_steam_groups[
-                              __webpack_require__
-                            ].sessions,
+                            ..._.GetEventModel().jsondata.meet_steam_groups[_]
+                              .sessions,
                           ];
                         _.splice(_, 1),
                           _.sort((_, _) => _.rtime_start - _.rtime_start),
                           (_.GetEventModel().jsondata.meet_steam_groups[
-                            __webpack_require__
+                            _
                           ].sessions = _),
                           _.SetDirty(_._.description);
                       },
@@ -2094,7 +2054,7 @@
                   }),
               ],
             }),
-            __webpack_require__ && (0, _.jsx)(_._, {}),
+            _ && (0, _.jsx)(_._, {}),
           ],
         });
       }
@@ -2104,7 +2064,7 @@
       function _(_) {
         const { schema: _ } = _,
           {
-            table: __webpack_require__,
+            table: _,
             table_row: _,
             table_header: _,
             table_cell: _,
@@ -2128,13 +2088,13 @@
                         _.createChecked(null, [_(), _()]),
                         _.createChecked(null, [_(), _()]),
                       ]);
-                    })(__webpack_require__, _, _, _, _),
+                    })(_, _, _, _, _),
                   ),
                 ),
               !0),
-            [__webpack_require__, _, _, _, _],
+            [_, _, _, _, _],
           );
-        return __webpack_require__
+        return _
           ? (0, _.jsx)(_._, {
               tooltip: (0, _._)("#FormattingToolbar_Tables_InsertTable"),
               command: _,
@@ -2143,7 +2103,7 @@
           : null;
       }
       function _(_) {
-        const { schema: _, className: __webpack_require__ } = _,
+        const { schema: _, className: _ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           [_, _] = _.useState(() => !!_.nodes.table && _._(_.state));
         return (
@@ -2158,7 +2118,7 @@
             visible: _,
             msAnimationDuration: 100,
             children: (0, _.jsx)(_._, {
-              className: __webpack_require__,
+              className: _,
               children: (0, _.jsx)(_, {
                 schema: _,
               }),
@@ -2260,11 +2220,7 @@
             null);
       }
       function _(_) {
-        const {
-            hideModal: _,
-            fnUpdateSession: __webpack_require__,
-            inputScheduleModel: _,
-          } = _,
+        const { hideModal: _, fnUpdateSession: _, inputScheduleModel: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _] = (0, _.useState)(() => _(!Boolean(_), _)),
@@ -2314,17 +2270,17 @@
       function _(_) {
         const {
             fnUpdateSession: _,
-            inputScheduleModel: __webpack_require__,
+            inputScheduleModel: _,
             rtBreakStartingTime: _,
           } = _,
           [_, _] = (0, _._)(() => [
-            __webpack_require__.session_breaks || [],
-            __webpack_require__.in_person_time_zone || _._,
+            _.session_breaks || [],
+            _.in_person_time_zone || _._,
           ]),
           _ = (0, _.useCallback)(
             (_, _) => {
               const _ = {
-                ...__webpack_require__,
+                ..._,
               };
               (_.session_breaks = _.session_breaks
                 ? [..._.session_breaks]
@@ -2334,7 +2290,7 @@
                   : _.session_breaks.push(_),
                 _(_);
             },
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsxs)("div", {
           children: [
@@ -2356,9 +2312,7 @@
             (0, _.jsx)(_._, {
               onClick: () => {
                 var _;
-                const _ = __webpack_require__.session_breaks
-                  ? [...__webpack_require__.session_breaks]
-                  : [];
+                const _ = _.session_breaks ? [..._.session_breaks] : [];
                 let _ = Math.floor(1 + 1e5 * Math.random());
                 for (; _.findIndex((_) => _.break_id == _) >= 0; )
                   _ = Math.floor(1 + 1e5 * Math.random());
@@ -2369,8 +2323,7 @@
                     rtime_start: _,
                     rtime_end: _ + _._.PerHour,
                   },
-                  (null === (_ = __webpack_require__.session_breaks) ||
-                  void 0 === _
+                  (null === (_ = _.session_breaks) || void 0 === _
                     ? void 0
                     : _.length) || 0,
                 );
@@ -2383,7 +2336,7 @@
       function _(_) {
         const {
             breakSession: _,
-            fnOnUpdate: __webpack_require__,
+            fnOnUpdate: _,
             index: _,
             sDisplayTimeZone: _,
           } = _,
@@ -2448,11 +2401,7 @@
         });
       }
       function _(_) {
-        const {
-            focusView: _,
-            removeNode: __webpack_require__,
-            schedule_id: _,
-          } = _,
+        const { focusView: _, removeNode: _, schedule_id: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(() => {
             var _;
@@ -2535,7 +2484,7 @@
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { schema: _ } = _,
-          { callbacks: __webpack_require__, view: _ } = (0, _._)(),
+          { callbacks: _, view: _ } = (0, _._)(),
           [_, _] = _.useState(!1),
           _ = _.useCallback(
             (_, _) => {
@@ -2593,11 +2542,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const {
-            hideModal: _,
-            fnUpdateSession: __webpack_require__,
-            clanAccountID: _,
-          } = _,
+        const { hideModal: _, fnUpdateSession: _, clanAccountID: _ } = _,
           [_, _] = (0, _.useState)(() => _(!0, null));
         return (0, _.jsx)(_._, {
           active: !0,
@@ -2621,11 +2566,11 @@
       function _(_) {
         const {
             hideModal: _,
-            userPollDef: __webpack_require__,
+            userPollDef: _,
             clanAccountID: _,
             fnUpdateUserPollDef: _,
           } = _,
-          [_, _] = (0, _.useState)(() => _(!1, __webpack_require__));
+          [_, _] = (0, _.useState)(() => _(!1, _));
         return (0, _.jsx)(_._, {
           active: !0,
           children: (0, _.jsx)(_._, {
@@ -2634,7 +2579,7 @@
               _(_);
             },
             onCancel: () => {
-              _(_(!1, __webpack_require__));
+              _(_(!1, _));
             },
             closeModal: _,
             children: (0, _.jsx)("div", {
@@ -2664,7 +2609,7 @@
         }
       }
       function _(_) {
-        const { userPollDef: _, fnSetDef: __webpack_require__ } = _,
+        const { userPollDef: _, fnSetDef: _ } = _,
           _ = (0, _._)(),
           [_] = (0, _._)(() => [_.results_visibility_settings]),
           _ = Object.values(_._).map((_) => ({
@@ -2724,14 +2669,10 @@
         });
       }
       function _(_) {
-        const {
-            clanAccountID: _,
-            userPollDef: __webpack_require__,
-            fnSetDef: _,
-          } = _,
+        const { clanAccountID: _, userPollDef: _, fnSetDef: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(_.GetClanSteamID()),
-          [_] = (0, _._)(() => [__webpack_require__.user_poll_background]),
+          [_] = (0, _._)(() => [_.user_poll_background]),
           _ = (0, _.useCallback)(
             (_, _, _, _, _) => {
               (0, _._)(
@@ -2745,11 +2686,11 @@
               const _ = (0, _._)(_, _);
               _.image &&
                 _({
-                  ...__webpack_require__,
+                  ..._,
                   user_poll_background: _.image,
                 });
             },
-            [_, __webpack_require__],
+            [_, _],
           );
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -2795,15 +2736,11 @@
         }
       }
       function _(_) {
-        const {
-            clanAccountID: _,
-            userPollDef: __webpack_require__,
-            fnSetDef: _,
-          } = _,
+        const { clanAccountID: _, userPollDef: _, fnSetDef: _ } = _,
           [_, _] = (0, _._)(_),
           [_, _] = (0, _._)(() => [
-            __webpack_require__.voter_min_playtime_seconds,
-            __webpack_require__.voter_eligibility,
+            _.voter_min_playtime_seconds,
+            _.voter_eligibility,
           ]),
           _ = (0, _.useMemo)(() => {
             const _ = [
@@ -2844,9 +2781,9 @@
                   rgOptions: _,
                   selectedOption: _,
                   onChange: (_) => {
-                    if (_.data != __webpack_require__.voter_eligibility) {
+                    if (_.data != _.voter_eligibility) {
                       let _ = {
-                        ...__webpack_require__,
+                        ..._,
                         voter_eligibility: _.data,
                       };
                       _.data == _._.k_EPollVoter_MinPlayTime &&
@@ -2880,9 +2817,9 @@
                             )) && void 0 !== _
                             ? _
                             : 5) * _;
-                        __webpack_require__.voter_min_playtime_seconds != _ &&
+                        _.voter_min_playtime_seconds != _ &&
                           _({
-                            ...__webpack_require__,
+                            ..._,
                             voter_min_playtime_seconds: _,
                           });
                       },
@@ -2894,7 +2831,7 @@
         });
       }
       function _(_) {
-        const { userPollDef: _, fnSetDef: __webpack_require__ } = _,
+        const { userPollDef: _, fnSetDef: _ } = _,
           [_, _] = (0, _._)(() => [
             _.poll_end_time,
             _.poll_end_days_since_start,
@@ -3050,7 +2987,7 @@
       function _(_) {
         const {
             bCreate: _,
-            hideModal: __webpack_require__,
+            hideModal: _,
             pollOptionsInput: _,
             fnUpdatePollOption: _,
           } = _,
@@ -3145,7 +3082,7 @@
       }
       var _ = __webpack_require__("chunkid");
       function _(_) {
-        const { focusView: _, removeNode: __webpack_require__, poll_id: _ } = _,
+        const { focusView: _, removeNode: _, poll_id: _ } = _,
           _ = (0, _._)(),
           _ = (0, _._)(() => {
             var _;
@@ -3235,18 +3172,18 @@
             });
       }
       function _(_) {
-        const { userPollDef: _, focusView: __webpack_require__ } = _,
+        const { userPollDef: _, focusView: _ } = _,
           [_, _] = (0, _._)(() => [_.options || [], _.randomize_option_order]),
           _ = (0, _._)(),
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return _
           ? (0, _.jsxs)(_._, {
               userPollDef: _,
@@ -3257,7 +3194,7 @@
                   (0, _.jsx)(
                     _,
                     {
-                      focusView: __webpack_require__,
+                      focusView: _,
                       optionID: _.option_id,
                     },
                     "polloption" + _.poll_id + "_" + _.option_id,
@@ -3305,12 +3242,12 @@
       function _(_) {
         const {
             options: _,
-            bRandomize: __webpack_require__,
+            bRandomize: _,
             fnUpdateOptions: _,
             hideModal: _,
           } = _,
           _ = (0, _._)(),
-          [_, _] = (0, _.useState)(__webpack_require__),
+          [_, _] = (0, _.useState)(_),
           [_, _] = (0, _.useState)(_);
         return (0, _.jsx)(_._, {
           active: !0,
@@ -3318,7 +3255,7 @@
             strTitle: (0, _._)("#UserPolls_Option_Reorder"),
             strDescription: (0, _._)("#UserPolls_Option_Reorder_desc"),
             onCancel: () => {
-              _(__webpack_require__), _(_);
+              _(_), _(_);
             },
             onOK: () => {
               _([..._], _);
@@ -3352,23 +3289,22 @@
         });
       }
       function _(_) {
-        const { optionID: _, focusView: __webpack_require__ } = _,
+        const { optionID: _, focusView: _ } = _,
           [_, _] = (0, _._)(),
           _ = (0, _._)(() => {
-            const { optionIndex: _, pollIndex: __webpack_require__ } = _(_);
-            return _._.GetEditModel().GetEventModel().jsondata.user_polls[
-              __webpack_require__
-            ].options[_];
+            const { optionIndex: _, pollIndex: _ } = _(_);
+            return _._.GetEditModel().GetEventModel().jsondata.user_polls[_]
+              .options[_];
           }),
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
-          }, [__webpack_require__, _]),
+          }, [_, _]),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             __webpack_require__(), _();
-          }, [__webpack_require__, _]);
+          }, [_, _]);
         return (0, _.jsxs)("div", {
           className: _().Column,
           ..._,
@@ -3420,9 +3356,9 @@
                   strDescription: (0, _._)("#Dialog_AreYouSure"),
                   onOK: () => {
                     const _ = _._.GetEditModel(),
-                      { optionIndex: __webpack_require__, pollIndex: _ } = _(_),
+                      { optionIndex: _, pollIndex: _ } = _(_),
                       _ = [..._.GetEventModel().jsondata.user_polls[_].options];
-                    _.splice(__webpack_require__, 1),
+                    _.splice(_, 1),
                       (_.GetEventModel().jsondata.user_polls[_].options = _),
                       _.SetDirty(_._.description);
                   },
@@ -3435,7 +3371,7 @@
       const _ = _.memo(function (_) {
         const {
           view: _,
-          schema: __webpack_require__,
+          schema: _,
           refUpdateToolbar: _,
           className: _,
           clanSteamID: _,
@@ -3454,34 +3390,34 @@
                   (0, _.jsx)(_._, {}),
                   (0, _.jsx)(_._, {}),
                   (0, _.jsx)(_._, {
-                    schema: __webpack_require__,
+                    schema: _,
                   }),
                   (0, _.jsx)(_._, {}),
-                  __webpack_require__.marks.link &&
+                  _.marks.link &&
                     (0, _.jsx)(_, {
-                      schema: __webpack_require__,
+                      schema: _,
                     }),
                   (0, _.jsx)(_._, {}),
                   (0, _.jsx)(_._, {
-                    schema: __webpack_require__,
+                    schema: _,
                   }),
                   (0, _.jsx)(_._, {
-                    schema: __webpack_require__,
+                    schema: _,
                     levels: 3,
                   }),
                   (0, _.jsx)(_._, {}),
                   (0, _.jsx)(_, {
-                    schema: __webpack_require__,
+                    schema: _,
                   }),
                   (0, _.jsx)(_, {
-                    schema: __webpack_require__,
+                    schema: _,
                     clanSteamID: _,
                   }),
                   (0, _.jsx)(_, {
-                    schema: __webpack_require__,
+                    schema: _,
                   }),
                   (0, _.jsx)(_._, {
-                    schema: __webpack_require__,
+                    schema: _,
                     showIndentButtonsAsNeeded: !0,
                   }),
                   (0, _.jsx)(_._, {}),
@@ -3490,24 +3426,24 @@
                       bSpellcheckEnabled: _,
                       setSpellcheckEnabled: _,
                     }),
-                  __webpack_require__.nodes.meetsteamsessiongroup &&
+                  _.nodes.meetsteamsessiongroup &&
                     (0, _.jsx)(_, {
-                      schema: __webpack_require__,
+                      schema: _,
                     }),
-                  __webpack_require__.nodes.meetsteamscheduleview &&
+                  _.nodes.meetsteamscheduleview &&
                     (0, _.jsx)(_, {
-                      schema: __webpack_require__,
+                      schema: _,
                     }),
-                  __webpack_require__.nodes.userpolls &&
+                  _.nodes.userpolls &&
                     _._.is_support &&
                     (0, _.jsx)(_, {
-                      schema: __webpack_require__,
+                      schema: _,
                     }),
                 ],
               }),
               (0, _.jsx)(_, {
                 className: _.className,
-                schema: __webpack_require__,
+                schema: _,
               }),
             ],
           }),
@@ -3522,7 +3458,7 @@
       }
       function _(_) {
         const { schema: _ } = _,
-          { callbacks: __webpack_require__, view: _ } = (0, _._)(),
+          { callbacks: _, view: _ } = (0, _._)(),
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
@@ -3567,7 +3503,7 @@
         });
       }
       function _(_) {
-        const { schema: _, clanSteamID: __webpack_require__ } = _,
+        const { schema: _, clanSteamID: _ } = _,
           { callbacks: _, view: _ } = (0, _._)(),
           { image: _, video: _, previewyoutube: _ } = _.nodes,
           _ = _.useCallback(
@@ -3583,7 +3519,7 @@
             imageModal: _,
             activeModal: _,
           } = _({
-            clanSteamID: __webpack_require__,
+            clanSteamID: _,
             imageNodeType: _,
             videoNodeType: _,
             onItemSelected: _,
@@ -3616,7 +3552,7 @@
       }
       function _(_) {
         const { schema: _ } = _,
-          { callbacks: __webpack_require__, view: _ } = (0, _._)(),
+          { callbacks: _, view: _ } = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
             _(), _.focus();
@@ -3658,7 +3594,7 @@
       }
       function _(_) {
         const { schema: _ } = _,
-          { callbacks: __webpack_require__, view: _ } = (0, _._)(),
+          { callbacks: _, view: _ } = (0, _._)(),
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
@@ -3707,7 +3643,7 @@
       }
       function _(_) {
         const { schema: _ } = _,
-          { callbacks: __webpack_require__, view: _ } = (0, _._)(),
+          { callbacks: _, view: _ } = (0, _._)(),
           _ = (0, _._)(),
           [_, _, _] = (0, _._)(),
           _ = _.useCallback(() => {
@@ -3760,16 +3696,16 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { schema: _, emoticonStore: __webpack_require__ } = _,
+        const { schema: _, emoticonStore: _ } = _,
           _ = _.nodes.emoticon;
-        (0, _._)(__webpack_require__),
+        (0, _._)(_),
           (0, _._)(
             _.useMemo(
               () =>
                 (0, _._)({
-                  rules: [_(/:([a-zA-Z0-9_]+):$/, _, __webpack_require__)],
+                  rules: [_(/:([a-zA-Z0-9_]+):$/, _, _)],
                 }),
-              [_, __webpack_require__],
+              [_, _],
             ),
           );
         const _ = _.useMemo(
@@ -3778,24 +3714,20 @@
               type: _,
               component: _,
               readProps: (_) => ({
-                emoticonStore: __webpack_require__,
+                emoticonStore: _,
                 emoticon: _.textContent,
               }),
             },
           ],
-          [_, __webpack_require__],
+          [_, _],
         );
         return (0, _.jsx)(_._, {
           specs: _,
         });
       }
       function _(_) {
-        const {
-          selected: _,
-          emoticonStore: __webpack_require__,
-          emoticon: _,
-        } = _;
-        (0, _._)(__webpack_require__);
+        const { selected: _, emoticonStore: _, emoticon: _ } = _;
+        (0, _._)(_);
         if (__webpack_require__.BHasEmoticon(_)) {
           const _ = _
             ? {
@@ -3823,16 +3755,16 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { editModel: _, href: __webpack_require__ } = _,
-          _ = (0, _._)(__webpack_require__);
+        const { editModel: _, href: _ } = _,
+          _ = (0, _._)(_);
         if (_) {
-          const _ = _.fnBBComponent(__webpack_require__, {
+          const _ = _.fnBBComponent(_, {
             partnerEventStore: _._,
             event: _.GetEventModel(),
           });
           return (0, _.jsx)(_, {
             toolbar: (0, _.jsx)(_, {
-              href: __webpack_require__,
+              href: _,
               removeNode: _.removeNode,
               update: _.update,
               schema: _.schema,
@@ -3841,19 +3773,14 @@
           });
         }
         return (0, _.jsx)("a", {
-          href: __webpack_require__,
-          children: __webpack_require__,
+          href: _,
+          children: _,
         });
       }
       function _(_) {
-        const {
-          href: _,
-          removeNode: __webpack_require__,
-          update: _,
-          schema: _,
-        } = _;
+        const { href: _, removeNode: _, update: _, schema: _ } = _;
         return (0, _.jsxs)(_, {
-          onDeleteClick: __webpack_require__,
+          onDeleteClick: _,
           children: [
             (0, _.jsx)(_, {
               onClick: () => window.open(_),
@@ -3896,7 +3823,7 @@
       const _ = _.memo(function (_) {
         const {
             editModel: _,
-            refOnInsertImage: __webpack_require__,
+            refOnInsertImage: _,
             limitBBCode: _,
             eCurrentEditLanguage: _,
           } = _,
@@ -3904,7 +3831,7 @@
           _ = _.useMemo(() => (0, _._)(_), [_]),
           [_, _] = _.useState(),
           _ = (function (_, _) {
-            const { nodes: __webpack_require__ } = _.pm_schema,
+            const { nodes: _ } = _.pm_schema,
               _ = (function (_, _, _) {
                 const _ = _.useCallback(
                   (_) => {
@@ -3926,7 +3853,7 @@
                   [_, _, _],
                 );
                 return _ ? _ : void 0;
-              })(_, __webpack_require__.image, __webpack_require__.video),
+              })(_, _.image, _.video),
               _ = (function (_, _) {
                 const _ = _.useCallback(
                   (_) =>
@@ -3938,7 +3865,7 @@
                   [_],
                 );
                 return _ ? _ : void 0;
-              })(0, __webpack_require__.dynamiclink);
+              })(0, _.dynamiclink);
             return _.useCallback(
               (..._) => {
                 let _ = "default";
@@ -4030,7 +3957,7 @@
                 }
               );
             }, [_, _, _, _, _]);
-          })(__webpack_require__, _.image, _.video, _.link, _),
+          })(_, _.image, _.video, _.link, _),
           (0, _.jsx)(_, {
             editModel: _,
             imageNode: _.image,
@@ -4071,11 +3998,7 @@
         );
       });
       const _ = _.memo(function (_) {
-        const {
-            eventSchemaConfig: _,
-            editModel: __webpack_require__,
-            onURLPasted: _,
-          } = _,
+        const { eventSchemaConfig: _, editModel: _, onURLPasted: _ } = _,
           { marks: _, nodes: _ } = _.pm_schema;
         return (0, _.jsxs)(_.Fragment, {
           children: [
@@ -4090,7 +4013,7 @@
               }),
             (0, _.jsx)(_, {
               schemaConfig: _,
-              editModel: __webpack_require__,
+              editModel: _,
               clanSteamID: __webpack_require__.GetClanSteamID(),
             }),
             (0, _.jsx)(_, {
@@ -4101,11 +4024,7 @@
         });
       });
       function _(_) {
-        const {
-            schemaConfig: _,
-            editModel: __webpack_require__,
-            clanSteamID: _,
-          } = _,
+        const { schemaConfig: _, editModel: _, clanSteamID: _ } = _,
           _ = _.pm_schema,
           _ = _.useMemo(
             () =>
@@ -4128,10 +4047,10 @@
               imageNodeType: _,
               videoNodeType: _,
               carouselNodeType: _,
-              editModel: __webpack_require__,
+              editModel: _,
               clanSteamID: _,
             }),
-            [_, _, _, _, __webpack_require__, _],
+            [_, _, _, _, _, _],
           ),
           _ = _.useMemo(
             () => [
@@ -4141,7 +4060,7 @@
                 readProps: (_) => ({
                   videoID: _.attrs.videoID,
                   align: _.attrs.align,
-                  editModel: __webpack_require__,
+                  editModel: _,
                 }),
               },
               _ && {
@@ -4179,7 +4098,7 @@
                 type: _.dynamiclink,
                 component: _,
                 readProps: (_) => ({
-                  editModel: __webpack_require__,
+                  editModel: _,
                   href: _.attrs.href,
                   schema: _.pm_schema,
                 }),
@@ -4192,11 +4111,11 @@
                   imageNodeType: _,
                   videoNodeType: _,
                   schemaConfig: _,
-                  editModel: __webpack_require__,
+                  editModel: _,
                 }),
               },
             ],
-            [_, _, _, __webpack_require__, _, _],
+            [_, _, _, _, _, _],
           );
         return (0, _.jsx)(_._, {
           specs: _,

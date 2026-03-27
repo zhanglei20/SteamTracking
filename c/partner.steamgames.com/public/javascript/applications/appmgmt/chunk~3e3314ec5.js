@@ -641,7 +641,7 @@
             }
           );
         }
-        async PublishApprovedProposal(_, _, __webpack_require__ = 0) {
+        async PublishApprovedProposal(_, _, _ = 0) {
           const _ = this.m_mapPriceProposals.get(_);
           if (4 != _?.eState || !_?.proposalKey)
             return {
@@ -662,7 +662,7 @@
             const _ = await _().post(_, _, {
               withCredentials: !0,
               cancelToken: _?.token,
-              timeout: __webpack_require__,
+              timeout: _,
             });
             if (200 == _?.status && 1 == _.data?.success) {
               this.m_mapPriceProposals.delete(_);
@@ -830,17 +830,15 @@
         return _(_.Get().GetPrice(_, _), _).join("");
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(
-          _.Get().m_strDisplayPriceKey,
-        );
+        const [_, _] = _.useState(_.Get().m_strDisplayPriceKey);
         return (
-          (0, _._)(_.Get().m_displayPriceKeyCallbackList, __webpack_require__),
+          (0, _._)(_.Get().m_displayPriceKeyCallbackList, _),
           (function (_, _) {
-            const [__webpack_require__, _] = _.useState(_.Get().GetPrice(_, _));
+            const [_, _] = _.useState(_.Get().GetPrice(_, _));
             return (
               (0, _._)(_.Get().GetPriceGridCellCallbackList(_, _), _),
               _.useEffect(() => _(_.Get().GetPrice(_, _)), [_, _]),
-              _(__webpack_require__, _).join("")
+              _(_, _).join("")
             );
           })(_, _)
         );
@@ -918,13 +916,11 @@
         );
       }
       function _(_) {
-        let [_, __webpack_require__] = _.useState(() =>
-            _.Get().BAnyPackagePriceBelowMin(_),
-          ),
+        let [_, _] = _.useState(() => _.Get().BAnyPackagePriceBelowMin(_)),
           _ = _.useCallback(() => {
             let _ = _.Get().BAnyPackagePriceBelowMin(_);
             __webpack_require__(_);
-          }, [_, __webpack_require__]);
+          }, [_, _]);
         return (0, _._)(_.Get().GetPackageOverridesCallbackList(_), _), _;
       }
       function _(_) {

@@ -21,21 +21,17 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const {
-            closeCart: _,
-            lineItemIDs: __webpack_require__,
-            replacedPackageIDs: _,
-          } = _,
+        const { closeCart: _, lineItemIDs: _, replacedPackageIDs: _ } = _,
           _ = (0, _._)(),
           { data: _ } = (0, _._)(),
           _ = _.useMemo(
             () =>
-              _.data && __webpack_require__ && 0 !== __webpack_require__.length
+              _.data && _ && 0 !== _.length
                 ? _.data.line_items.filter((_) =>
                     __webpack_require__.includes(_.line_item_id),
                   )
                 : null,
-            [__webpack_require__, _.data],
+            [_, _.data],
           ),
           _ = (0, _._)(_._.STORE_BASE_URL + "cart");
         if (
@@ -82,7 +78,7 @@
         });
       }
       function _(_) {
-        const { active: _, result: __webpack_require__, onDismiss: _ } = _;
+        const { active: _, result: _, onDismiss: _ } = _;
         return (0, _.jsxs)(_._, {
           active: _,
           onDismiss: _,
@@ -99,9 +95,7 @@
                 }),
                 (0, _.jsx)("div", {
                   className: _().ErrorModalCode,
-                  children: __webpack_require__
-                    ? (0, _._)("#Cart_ErrorCode", __webpack_require__)
-                    : "",
+                  children: _ ? (0, _._)("#Cart_ErrorCode", _) : "",
                 }),
                 (0, _.jsx)("div", {
                   className: _().ErrorModalBottom,

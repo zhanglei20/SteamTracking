@@ -228,7 +228,7 @@
       function _(_) {
         const {
             trackingLocation: _,
-            strClassName: __webpack_require__,
+            strClassName: _,
             bViewAllShowInfiniteScroll: _,
           } = _,
           [_, _, _] = (0, _._)(),
@@ -254,7 +254,7 @@
           { last_update_event: _, rgEvents: _ } = (function (_) {
             const {
                 appid: _,
-                event_customization: __webpack_require__,
+                event_customization: _,
                 partnerEventStore: _,
                 trackingLocation: _,
                 fnEventShowModal: _,
@@ -294,7 +294,7 @@
                       _,
                       0,
                       2,
-                      __webpack_require__,
+                      _,
                     );
                     if ((_(_), _ && _ && _.length > 0)) {
                       const _ = _._.Get().GetTracker();
@@ -309,7 +309,7 @@
                     }
                   })();
                 }
-              }, [_, _, __webpack_require__, _, _, _]),
+              }, [_, _, _, _, _, _]),
               (0, _.useEffect)(() => {
                 if (null != _ && _) {
                   const _ = _.find((_) => _.GID === _);
@@ -336,16 +336,9 @@
             fnEventShowModal: _,
           }),
           _ = (0, _.useCallback)(() => {
-            const {
-                event_gid: _,
-                announcement_gid: __webpack_require__,
-                clan_account_id: _,
-              } = _,
+            const { event_gid: _, announcement_gid: _, clan_account_id: _ } = _,
               _ = _._.Get().GetTracker();
-            _ && _ && _.MarkEventRead(_, _, _) && _.Flush(),
-              _(__webpack_require__),
-              _(null),
-              _();
+            _ && _ && _.MarkEventRead(_, _, _) && _.Flush(), _(_), _(null), _();
           }, [_, _, _]);
         (0, _.useEffect)(
           () => (
@@ -366,7 +359,7 @@
               : void 0,
           _ = window.screen.width <= 500 ? 1 : 2;
         return (0, _.jsxs)(_._, {
-          className: __webpack_require__,
+          className: _,
           "flow-children": "row",
           children: [
             (0, _.jsx)(_._, {
@@ -440,7 +433,7 @@
       function _(_) {
         const {
             appid: _,
-            partnerEventStore: __webpack_require__,
+            partnerEventStore: _,
             trackingLocation: _,
             announcementGID: _,
             eventModel: _,
@@ -453,7 +446,7 @@
           appid: _,
           trackingLocation: _,
           announcementGID: _,
-          partnerEventStore: __webpack_require__,
+          partnerEventStore: _,
           eventModel: _,
           closeModal: _,
         });
@@ -480,14 +473,8 @@
         });
       }
       function _(_) {
-        const {
-            nUpdateTime: _,
-            announcementGID: __webpack_require__,
-            onClick: _,
-          } = _,
-          _ = __webpack_require__
-            ? _._.GetClanEventFromAnnouncementGID(__webpack_require__)
-            : null,
+        const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
+          _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
           _ = (_) => {
             null == _ || _(), _.stopPropagation(), _.preventDefault();
           },
@@ -544,7 +531,7 @@
         }
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!0);
+        const [_, _] = _.useState(!0);
         return (
           _.useEffect(() => {
             _._.Init(new _._(_._.WEBAPI_BASE_URL)),

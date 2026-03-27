@@ -94,7 +94,7 @@
       function _(_) {
         const {
             _: _,
-            hoverClassName: __webpack_require__,
+            hoverClassName: _,
             fnGetIDOverride: _,
             fnHoverState: _,
             children: _,
@@ -125,7 +125,7 @@
           );
         return (0, _.jsx)("div", {
           ref: _,
-          className: __webpack_require__,
+          className: _,
           onMouseEnter: _,
           onMouseLeave: _,
           onFocus: _,
@@ -136,7 +136,7 @@
       function _(_) {
         const {
             _: _,
-            strExtraParams: __webpack_require__,
+            strExtraParams: _,
             fnOnClickOverride: _,
             strOverrideURL: _,
           } = _,
@@ -146,12 +146,12 @@
             _ ||
               (_ && "creatorid" in _
                 ? (0, _._)(
-                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}curator/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )
                 : (0, _._)(
-                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${__webpack_require__ ? `?${__webpack_require__}` : ""}`,
+                    `${_._.STORE_BASE_URL}${_(_)}/${((0, _._))(_)._}${_ ? `?${_}` : ""}`,
                     _,
                     _,
                   )),
@@ -188,7 +188,7 @@
       function _(_) {
         const {
             _: _,
-            bShowAsMuted: __webpack_require__,
+            bShowAsMuted: _,
             bHidePrice: _,
             bShowInLibraryInsteadOfPrice: _,
             bHidePlatforms: _,
@@ -219,7 +219,7 @@
                 className: (0, _._)(
                   _().CapsuleBottomBar,
                   "CapsuleBottomBar",
-                  __webpack_require__ && _().Muted,
+                  _ && _().Muted,
                   _,
                 ),
                 children: [
@@ -270,20 +270,16 @@
       }
       function _(_) {
         const { _: _ } = _,
-          { data: __webpack_require__ } = (0, _._)(_);
-        return __webpack_require__?.name
+          { data: _ } = (0, _._)(_);
+        return _?.name
           ? (0, _.jsx)("div", {
               className: _().CapsuleName,
-              children: __webpack_require__.name,
+              children: _.name,
             })
           : null;
       }
       function _(_) {
-        const {
-            creatorAccountID: _,
-            bShowAsMuted: __webpack_require__,
-            strClassName: _,
-          } = _,
+        const { creatorAccountID: _, bShowAsMuted: _, strClassName: _ } = _,
           _ = (0, _.useMemo)(
             () => ({
               creatorid: _,
@@ -296,11 +292,7 @@
         const _ = (0, _._)(_?.clan_avatar, "Medium"),
           _ = _.name || "";
         return (0, _.jsxs)("div", {
-          className: (0, _._)(
-            _().BottomCreatorRow,
-            __webpack_require__ && _().Muted,
-            _,
-          ),
+          className: (0, _._)(_().BottomCreatorRow, _ && _().Muted, _),
           children: [
             (0, _.jsx)("img", {
               className: (0, _._)(_().CreatorLogo),
@@ -360,7 +352,7 @@
       function _(_) {
         const {
             capsule: _,
-            bShowParentApp: __webpack_require__,
+            bShowParentApp: _,
             elElementToAppendToHover: _,
             index: _,
             navKey: _,
@@ -372,9 +364,7 @@
           [_, _] = _.useState(!1),
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
-          _ = (0, _._)(
-            __webpack_require__ ? _?.related_items?.parent_appid : void 0,
-          ),
+          _ = (0, _._)(_ ? _?.related_items?.parent_appid : void 0),
           { data: _ } = (0, _._)(_);
         if (!_ || !_) return null;
         const _ = !!_ && !!_,
@@ -441,14 +431,14 @@
       function _(_) {
         const {
             strExtraParams: _,
-            parentID: __webpack_require__,
+            parentID: _,
             parentStoreItemDefaultInfo: _,
             childAppType: _,
             bPreferDemoStorePage: _,
           } = _,
           _ = (0, _._)(),
           _ = (0, _._)(),
-          { data: _ } = (0, _._)(__webpack_require__);
+          { data: _ } = (0, _._)(_);
         return _
           ? (0, _.jsx)(_._, {
               className: _().CapsuleParentInfo,
@@ -465,7 +455,7 @@
                     ),
                   }),
                   (0, _.jsx)(_._, {
-                    _: __webpack_require__,
+                    _: _,
                     strExtraParams: _,
                     children: (0, _.jsx)("img", {
                       loading: "lazy",
@@ -484,7 +474,7 @@
       function _(_) {
         const {
             _: _,
-            bHideStatusBanners: __webpack_require__,
+            bHideStatusBanners: _,
             strExtraParams: _,
             index: _,
             imageType: _,
@@ -526,7 +516,7 @@
                   children: [
                     (0, _.jsx)(_._, {
                       appids: _,
-                      hide_status_banners: __webpack_require__,
+                      hide_status_banners: _,
                       show_early_access: _.bShowEarlyAccessBanner,
                     }),
                     "none" != _ &&
@@ -560,11 +550,7 @@
         });
       }
       function _(_) {
-        const {
-            _: _,
-            strDoubleCapsuleMessage: __webpack_require__,
-            index: _,
-          } = _,
+        const { _: _, strDoubleCapsuleMessage: _, index: _ } = _,
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return (0, _.jsxs)("div", {
@@ -572,7 +558,7 @@
           children: [
             (0, _.jsx)("div", {
               className: _().Reason,
-              children: __webpack_require__,
+              children: _,
             }),
             (0, _.jsx)("div", {
               className: _().StoreSaleItemRelease,
@@ -591,7 +577,7 @@
       function _(_) {
         const {
             _: _,
-            bHidePriceIfOwned: __webpack_require__,
+            bHidePriceIfOwned: _,
             bHideStatusBanners: _,
             bUseSubscriptionLayout: _,
             elElementToAppendToHover: _,
@@ -611,7 +597,7 @@
             bIsMuted: _,
           });
         if (_) return null;
-        const _ = Boolean(_ && __webpack_require__),
+        const _ = Boolean(_ && _),
           _ = Boolean(_);
         return (0, _.jsx)(_._, {
           _: _,
@@ -651,7 +637,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { appid: _, className: __webpack_require__, bTextMode: _ } = _,
+        const { appid: _, className: _, bTextMode: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -660,11 +646,11 @@
           bIsFree: Boolean(_?.is_free),
           bIsComingSoon: Boolean(_?.is_coming_soon),
           bTextMode: _,
-          className: __webpack_require__,
+          className: _,
         });
       }
       function _(_) {
-        const [_, __webpack_require__] = _.useState(!1),
+        const [_, _] = _.useState(!1),
           _ = (0, _._)(),
           {
             appid: _,
@@ -718,7 +704,7 @@
         );
       }
       function _(_) {
-        const { possibleDemoAppID: _, className: __webpack_require__ } = _,
+        const { possibleDemoAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_);
         return _
@@ -726,12 +712,12 @@
             ? null
             : (0, _.jsx)(_, {
                 parentAppID: _.related_items?.parent_appid,
-                className: __webpack_require__,
+                className: _,
               })
           : null;
       }
       function _(_) {
-        const { parentAppID: _, className: __webpack_require__ } = _,
+        const { parentAppID: _, className: _ } = _,
           _ = (0, _._)(_),
           { data: _ } = (0, _._)(_),
           { data: _ } = (0, _._)(_);
@@ -740,7 +726,7 @@
               appid: _,
               bIsComingSoon: Boolean(_.is_coming_soon),
               bIsFree: Boolean(_.is_free),
-              className: __webpack_require__,
+              className: _,
             })
           : null;
       }

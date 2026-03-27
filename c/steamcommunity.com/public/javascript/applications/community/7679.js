@@ -611,8 +611,8 @@
           return this.m_clanSteamID;
         }
         async AddImage(_, _ = 0) {
-          const { language: __webpack_require__ } = (0, _._)(_.name, _);
-          return this.AddImageForLanguage(_, __webpack_require__);
+          const { language: _ } = (0, _._)(_.name, _);
+          return this.AddImageForLanguage(_, _);
         }
         async AddImageForLanguage(_, _) {
           if (!((0, _._)(_.type) || (_._.is_support && (0, _._)(_.type))))
@@ -1410,16 +1410,8 @@
         (0, _._)([_._], _.prototype, "m_mapClanImageLoadState", void 0);
       const _ = new _();
       function _(_) {
-        const [_, __webpack_require__] = (0, _.useState)(
-          _.GetClanImagesByAccount(_),
-        );
-        return (
-          (0, _._)(
-            _.GetImageListCallbackForClanAccountID(_),
-            __webpack_require__,
-          ),
-          _
-        );
+        const [_, _] = (0, _.useState)(_.GetClanImagesByAccount(_));
+        return (0, _._)(_.GetImageListCallbackForClanAccountID(_), _), _;
       }
       function _(_) {
         const _ = _._.InitFromClanID(_),
@@ -2030,7 +2022,7 @@
           let _,
             {
               emoticonStore: _,
-              supportBBCodes: __webpack_require__,
+              supportBBCodes: _,
               fnSetText: _,
               ..._
             } = this.props;
@@ -2046,7 +2038,7 @@
               break;
             case "BBCode":
               _ = (0, _.jsx)(_, {
-                supportBBCodes: __webpack_require__,
+                supportBBCodes: _,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnBBCodeSuggestionSelected,
@@ -2105,7 +2097,7 @@
       const _ = (0, _._)((_) => {
         const {
             clanSteamID: _,
-            inputClanImage: __webpack_require__,
+            inputClanImage: _,
             nWidth: _,
             nHeight: _,
             setImage: _,
@@ -2118,7 +2110,7 @@
             [_, _],
           ),
           [_, _] = _.useState(void 0),
-          [_, _] = _.useState(Boolean(__webpack_require__)),
+          [_, _] = _.useState(Boolean(_)),
           [_, _] = _.useState(!1),
           _ = (0, _._)(_, "dummy"),
           _ = _.useCallback(
@@ -2131,17 +2123,16 @@
                 const _ = _.GetUploadImages()[0].IsValidAssetType(_);
                 0 != _.error.length ||
                   _.needsCrop ||
-                  (__webpack_require__ &&
-                    __webpack_require__.image_hash == _.image_hash) ||
+                  (_ && _.image_hash == _.image_hash) ||
                   _(_);
               }
               _(!1);
             },
-            [_, __webpack_require__, _, _],
+            [_, _, _, _],
           );
         _.useEffect(() => {
-          _(__webpack_require__);
-        }, [_, __webpack_require__]);
+          _(_);
+        }, [_, _]);
         let _,
           _ = "",
           _ = !1;
@@ -2640,7 +2631,7 @@
           const {
             showFormatHelp: _,
             bEmbeddedInDialog: _,
-            bSupportHTMLImport: __webpack_require__,
+            bSupportHTMLImport: _,
             pathToImages: _,
           } = this.props;
           let _;
@@ -2788,7 +2779,7 @@
                     tooltip: (0, _._)("#EventEditor_AddSpeaker"),
                     imgURL: this.props.pathToImages + "/insert_img.png",
                   }),
-                Boolean(__webpack_require__ && !_) &&
+                Boolean(_ && !_) &&
                   (0, _.jsx)(_, {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
                     className: _().ActionImportHTML,
@@ -3253,7 +3244,7 @@
         (0, _._)([_._], _.prototype, "OnAnchorURLChange", null),
         (_ = (0, _._)([_._], _));
       const _ = (_) => {
-        const [_, __webpack_require__] = _.useState(""),
+        const [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
           [_, _] = _.useState(""),
@@ -3433,7 +3424,7 @@
         });
       };
       function _(_) {
-        const { friends: _, setSteamID: __webpack_require__ } = _;
+        const { friends: _, setSteamID: _ } = _;
         return (0, _.jsx)("div", {
           className: _().DropDownScroll,
           children: _.map((_) =>
@@ -3441,7 +3432,7 @@
               _,
               {
                 steamid: _,
-                setSteamID: __webpack_require__,
+                setSteamID: _,
               },
               _,
             ),
@@ -3449,7 +3440,7 @@
         });
       }
       function _(_) {
-        const { steamid: _, setSteamID: __webpack_require__ } = _,
+        const { steamid: _, setSteamID: _ } = _,
           { data: _ } = (0, _._)(_);
         return (0, _.jsx)(_._, {
           onSelected: () => __webpack_require__(new _._(_)),
@@ -3680,8 +3671,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (_) => {
-          const { clanSteamID: _, fnImageSelectCallBack: __webpack_require__ } =
-              _,
+          const { clanSteamID: _, fnImageSelectCallBack: _ } = _,
             [_, _] = (0, _.useState)(""),
             _ = (0, _._)(_.clanSteamID.GetAccountID()),
             _ = () => _.closeModal && _.closeModal(),
@@ -3754,13 +3744,9 @@
           });
         },
         _ = (_) => {
-          const {
-            clanImage: _,
-            searchStringHilight: __webpack_require__,
-            fnImageClick: _,
-          } = _;
+          const { clanImage: _, searchStringHilight: _, fnImageClick: _ } = _;
           let _ = _.file_name ? _.file_name : "",
-            _ = _(__webpack_require__, _, String(_.imageid), _.Hilight);
+            _ = _(_, _, String(_.imageid), _.Hilight);
           return (0, _.jsxs)("div", {
             className: _.ImageContainer,
             children: [
@@ -3855,7 +3841,7 @@
           let _ = [];
           const {
             fnFilterLanguage: _,
-            fnLangHasData: __webpack_require__,
+            fnLangHasData: _,
             fnLastUpdateRTime: _,
             fnIsLangSupported: _,
           } = this.props;
@@ -3945,20 +3931,15 @@
           return _;
         }
         OnLanguageChange(_) {
-          const { fnOnLanguageChanged: _, selectedLang: __webpack_require__ } =
-            this.props;
+          const { fnOnLanguageChanged: _, selectedLang: _ } = this.props;
           let _ = Number.parseInt(_.currentTarget.value);
-          _ != __webpack_require__ && _ && _(_);
+          _ != _ && _ && _(_);
         }
         render() {
-          const {
-            selectedLang: _,
-            bDisabled: _,
-            strTooltip: __webpack_require__,
-          } = this.props;
+          const { selectedLang: _, bDisabled: _, strTooltip: _ } = this.props;
           let _ = this.GenerateLanguageOptions();
           return (0, _.jsx)(_._, {
-            toolTipContent: __webpack_require__,
+            toolTipContent: _,
             children: (0, _.jsx)("select", {
               value: _,
               onChange: this.OnLanguageChange,

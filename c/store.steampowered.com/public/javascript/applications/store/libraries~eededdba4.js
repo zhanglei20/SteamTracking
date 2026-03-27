@@ -4026,7 +4026,7 @@
         },
         _ = 1,
         _ = (function (_) {
-          (0, _._)(__webpack_require__, _);
+          (0, _._)(_, _);
           var _ = (function (_) {
             var _ = _();
             return function () {
@@ -4038,7 +4038,7 @@
               } else _ = _.apply(this, arguments);
               return (0, _._)(this, _);
             };
-          })(__webpack_require__);
+          })(_);
           function _(_) {
             var _;
             if (
