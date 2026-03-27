@@ -3417,7 +3417,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(16UP
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -4886,7 +4885,7 @@ $steammessages_parental_objects.proto"
 *23CInternalLambdaWorkItemIZN28CUpdateSystemPerfSettingsJob30YieldingWritePerfOverlayConfigEb25EGraphicsPerfOverlayLevelbEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet24YieldingIPAddrToHostNameE10CIPAddressPcjEUlvE_vE
 *23CInternalLambdaWorkItemIZN4CNet26YieldingHostStringToNetAdrEPKcR10CIPAndPortEUlvE_S3_E
-*23CInternalLambdaWorkItemIZN5CUser12SpawnProcessEPKcS2_S2_7CGameIDS2_jj13ELaunchSourcejRjiEUlvE_vE
+*23CInternalLambdaWorkItemIZN5CUser12SpawnProcessEPKcS2_S2_7CGameIDS2_jj13ELaunchSourcejRjEUlvE_vE
 *23CInternalLambdaWorkItemIZZN21CNetworkManagerClient23RequestUpdateDeviceDataEjENKUlvE_clEvEUlvE_bE
 *5KS
 *7CUtlMapIPKc8CAutoPtrIN12_GLOBAL__N_115CachedSDRConfigEEi22CDefCaselessStringLessE
@@ -5737,6 +5736,7 @@ $steammessages_parental_objects.proto"
 --> P2P send on socket #%d, %d bytes\n
 --> P2P socket read/write/dead/reason %d/%d/%d/%s\n
 --> reliable send on socket #%d, %d bytes\n
+--alongside-steam
 --compute-pipeline-range
 --control-fd
 --device-index
@@ -5766,6 +5766,7 @@ $steammessages_parental_objects.proto"
 --enable-sandbox-logging
 --enable-smooth-scrolling
 --enable-validation
+--env-fd=%d
 --force-device-scale-factor=1
 --force-renderer-accessibility
 --full-memory-crash-report
@@ -7807,7 +7808,7 @@ $steammessages_parental_objects.proto"
 /usr/bin/
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam-runtime-launch-client --alongside-steam --env-fd %d --
+/usr/bin/steam-runtime-launch-client
 /usr/bin/steam_serialnumber.sh
 /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -7933,11 +7934,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11448,10 +11449,10 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+20000
 200M
 2019
 2048
-20000
 2000000
 208.64.200.0/22
 208.78.164.0/22
@@ -15670,7 +15671,6 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -15684,6 +15684,7 @@ $steammessages_parental_objects.proto"
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
+60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16273,6 +16274,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hd0\
 9IClientVR
 9IGv
 9ISteamUGC
@@ -47191,7 +47193,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen"
 ghjkl
 gidlist
 gidparentcomment
@@ -59064,7 +59066,7 @@ stderr
 stdin
 stdout
 steam
-steam Mar 25 2026 23:38:28
+steam Mar 27 2026 01:51:34
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
