@@ -465,20 +465,43 @@
         const _ = `${_._.PARTNER_BASE_URL}doc/finance/taxfaq`;
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsx)(_._, {
+            (0, _.jsxs)(_._, {
               paddingBottom: "4",
-              children: (0, _.jsxs)(_._, {
-                size: "4",
-                color: "text-body",
-                contrast: "subtitle",
-                children: [
-                  _._.Localize("#SinglePricingPackage_Desc_1"),
-                  (0, _.jsx)(_, {
-                    href: _,
-                    children: _,
+              children: [
+                (0, _.jsx)(_._, {
+                  _: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: _._.Localize("#SinglePricingPackage_Intro_1"),
+                }),
+                (0, _.jsx)(_._, {
+                  _: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: _._.Localize("#SinglePricingPackage_Intro_2"),
+                }),
+                (0, _.jsx)(_._, {
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: (0, _.jsxs)("ol", {
+                    children: [
+                      (0, _.jsx)("li", {
+                        children: _._.Localize(
+                          "#SinglePricingPackage_Intro_2a",
+                        ),
+                      }),
+                      (0, _.jsx)("li", {
+                        children: _._.Localize(
+                          "#SinglePricingPackage_Intro_2b",
+                        ),
+                      }),
+                    ],
                   }),
-                ],
-              }),
+                }),
+              ],
             }),
             (0, _.jsx)(_._, {
               paddingBottom: "4",
@@ -857,8 +880,8 @@
           ),
           fnGetUSDPriceInCents: () => (0, _._)(_.packageID, "USD"),
           fnOnUpdate: (_) => __webpack_require__(_.packageID, _),
-          strDescription: (0, _._)(
-            "#PricingDashboard_GuidelinesPickerDescription",
+          strDescription: _._.Localize(
+            "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           appids: _.appids,
           nPackageID: _.packageID,

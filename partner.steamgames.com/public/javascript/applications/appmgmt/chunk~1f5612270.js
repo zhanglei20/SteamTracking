@@ -68,7 +68,7 @@
     },
     95582: (e, i, r) => {
       "use strict";
-      r.d(i, { i: () => u });
+      r.d(i, { i: () => P });
       var n = r(7850),
         a = r(83800),
         s = r(17084),
@@ -76,16 +76,17 @@
         t = r(61859),
         l = r(78327),
         c = r(14578),
-        d = r.n(c);
-      function u(e) {
+        d = r.n(c),
+        u = r(47184);
+      function P(e) {
         const { closeModal: i, fnOnApply: r, singlePackage: c } = e,
-          u = (0, s._A)();
+          P = (0, s._A)();
         return (0, n.jsxs)(o.o0, {
           closeModal: i,
           bAlertDialog: !0,
-          strTitle: (0, t.we)("#PricingDashboard_ApplyGuidelines_Header"),
+          strTitle: u.g.Localize("#PricingDashboard_ApplyConversion_Method"),
           onOK: () => {
-            u(), r && r();
+            P(), r && r();
           },
           strOKButtonText: c
             ? (0, t.we)("#PricingDashboard_ApplyGuidelines_Button_Single")
@@ -93,8 +94,8 @@
           children: [
             (0, n.jsx)("div", {
               className: d().Instructions,
-              children: (0, t.we)(
-                "#PricingDashboard_ApplyGuidelines_Instructions",
+              children: u.g.Localize(
+                "#PricingDashboard_ApplyGuidelines_Instructions_MultiOptions",
               ),
             }),
             (0, n.jsx)("br", {}),
@@ -444,8 +445,8 @@
             (e[(e.FailedToLoad = 3)] = "FailedToLoad"),
             (e[(e.RequiresCooldown = 4)] = "RequiresCooldown");
         })(a || (a = {}));
-      var N = r(64753),
-        S = r(16676),
+      var S = r(64753),
+        N = r(16676),
         I = r(96434),
         T = r.n(I);
       function O(e) {
@@ -529,10 +530,10 @@
       }
       function k(e) {
         const { packageID: i } = e,
-          [r, n, a] = (0, N.uD)();
+          [r, n, a] = (0, S.uD)();
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(S.jn, {
+            (0, s.jsx)(N.jn, {
               onClick: n,
               children: (0, c.we)(
                 "#PricingDashboard_PriceProposal_PublishDialog_Button",
@@ -575,7 +576,7 @@
     },
     40818: (e, i, r) => {
       "use strict";
-      r.d(i, { Zg: () => O, BL: () => S, cK: () => I });
+      r.d(i, { Zg: () => O, BL: () => N, cK: () => I });
       var n = r(7850),
         a = r(64753),
         s = r(48996),
@@ -614,8 +615,8 @@
       var m = r(18715),
         C = r.n(m);
       const f = 30,
-        N = 40;
-      function S(e) {
+        S = 40;
+      function N(e) {
         const { bReloadPageOnSave: i } = e,
           r = (0, t.Ci)();
         let s = r?.length ?? 0,
@@ -733,8 +734,8 @@
               ),
             }),
           });
-        let N = !1,
-          S = !1,
+        let S = !1,
+          N = !1,
           I = !1,
           O = new Set();
         for (const e of h) {
@@ -742,8 +743,8 @@
             e.packageID,
             e.strPriceKey,
           );
-          (N = N || e.nPriceInCents < i),
-            (S = S || (!!r && e.nPriceInCents > r)),
+          (S = S || e.nPriceInCents < i),
+            (N = N || (!!r && e.nPriceInCents > r)),
             (I = I || e.nPriceInCents > e.nOldPriceInCents),
             O.add(e.packageID);
         }
@@ -753,7 +754,7 @@
           let e = A.map((e) => (0, o.ww)(e));
           W = (0, p.we)("#PricingDashboad_RequiredPrices", e.join(", "));
         }
-        const E = N || S,
+        const E = S || N,
           M = E || void 0 === b || 0 != A.length,
           F = (e) => {
             r
@@ -850,7 +851,7 @@
                     "#PricingDashboard_SavePrice_FutureDiscountTooSoon",
                     f,
                   )
-                : a < N
+                : a < S
                   ? (0, p.we)(
                       "#PricingDashboard_SavePrice_FutureDiscountSoon",
                       a,
@@ -946,9 +947,20 @@
     },
     83800: (e, i, r) => {
       "use strict";
-      r.d(i, { J: () => n });
-      r(7850), r(90626);
-      const n = (e) => null;
+      r.d(i, { J: () => o });
+      var n = r(7850),
+        a = r(90626);
+      const s = a.lazy(() =>
+          Promise.all([r.e(4781), r.e(1194)]).then(r.bind(r, 58813)),
+        ),
+        o = s
+          ? function (e) {
+              return (0, n.jsx)(a.Suspense, {
+                fallback: null,
+                children: (0, n.jsx)(s, { ...e }),
+              });
+            }
+          : (e) => null;
     },
     4434: (e, i, r) => {
       "use strict";

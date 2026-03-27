@@ -2099,7 +2099,7 @@
       }
     },
     87700: (e, r, c) => {
-      c.d(r, { Bb: () => o, jY: () => i });
+      c.d(r, { Bb: () => u, MA: () => o, jY: () => i });
       var n = c(7850),
         t = c(90626),
         a = c(48174);
@@ -2123,6 +2123,9 @@
         return (0, n.jsx)(s.Provider, { value: u, children: e.children });
       }
       function o() {
+        return t.useContext(s);
+      }
+      function u() {
         return t.useContext(s).eConversionMethod;
       }
     },

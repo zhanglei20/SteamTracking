@@ -9490,125 +9490,8 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ =
-          (__webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid"),
-          __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ {
-        m_tours = {};
-        m_strActiveTour = "";
-        m_storage = void 0;
-        m_bReady = !1;
-        constructor() {
-          (0, _._)(this);
-        }
-        async Init(_) {
-          if (this.m_storage) return;
-          this.m_storage = _;
-          const _ = await _(_);
-          Object.keys(_ || {}).forEach((_) => {
-            const _ = !!_[_];
-            this.m_tours[_] = {
-              ...(this.m_tours[_] || {
-                stops: {},
-              }),
-              bSeen: _,
-            };
-          }),
-            (this.m_bReady = !0);
-        }
-        UpdateStop(_, _, _, _) {
-          this.m_tours[_] ||
-            (this.m_tours[_] = {
-              bSeen: !1,
-              stops: {},
-            }),
-            (this.m_tours[_].stops[_] = {
-              options: _,
-              elem: _,
-            });
-        }
-        BHasSeenTour(_) {
-          return !this.m_bReady || (this.m_tours[_] && this.m_tours[_].bSeen);
-        }
-        GetTrackedStops(_) {
-          return this.m_tours[_]?.stops || {};
-        }
-        ActivateTour(_) {
-          this.m_strActiveTour &&
-            this.m_strActiveTour !== _ &&
-            this.DismissTour(this.m_strActiveTour),
-            (this.m_strActiveTour = _);
-        }
-        DismissTour(_) {
-          this.m_tours[_] &&
-            (this.MarkTourSeen(_),
-            (this.m_tours[_].bSeen = !0),
-            this.m_strActiveTour === _ && (this.m_strActiveTour = ""));
-        }
-        MarkTourSeen(_) {
-          return _(this.m_storage, _, Date.now());
-        }
-        MarkTourUnseen(_) {
-          return _(this.m_storage, _, void 0);
-        }
-      }
-      (0, _._)([_._], _.prototype, "m_tours", void 0),
-        (0, _._)([_._], _.prototype, "m_strActiveTour", void 0),
-        (0, _._)([_._], _.prototype, "m_bReady", void 0),
-        (0, _._)([_._.bound], _.prototype, "UpdateStop", null),
-        (0, _._)([_._], _.prototype, "ActivateTour", null),
-        (0, _._)([_._], _.prototype, "DismissTour", null);
-      const _ = "tour_history";
-      async function _(_) {
-        const _ = await _.GetObject(_);
-        return _ && "object" == typeof _ ? _ : {};
-      }
-      async function _(_, _, _) {
-        const _ = await _(_);
-        return _.StoreObject(_, {
-          ..._,
-          [_]: _,
-        });
-      }
-      const _ = new _();
-      function _() {
-        const _ = (0, _._)();
-        return (
-          (0, _.useEffect)(() => {
-            _.Init(_);
-          }, [_]),
-          _
-        );
-      }
-      function _(_) {
-        const _ = _(),
-          { bShowTour: _, stopElems: _ } = (0, _._)(() => ({
-            bShowTour: !_.BHasSeenTour(_),
-            stopElems: _.GetTrackedStops(_),
-          }));
-        return {
-          bShowTour: _,
-          stopElems: _,
-          onInteraction: (0, _.useCallback)(() => _.MarkTourSeen(_), [_, _]),
-          onDismiss: (0, _.useCallback)(() => _.DismissTour(_), [_, _]),
-          onActivate: (0, _.useCallback)(() => _.ActivateTour(_), [_, _]),
-          updateStop: _.UpdateStop,
-        };
-      }
-      function _(_) {
-        const { name: _, tour: _, options: _, children: _ } = _,
-          { updateStop: _ } = _(_),
-          _ = (0, _.useCallback)((_) => _(_, _, _, _), [_, _, _]),
-          _ = _.Children.only(_),
-          _ = (0, _._)(_, _.props.ref);
-        return (0, _.cloneElement)(_.Children.only(_), {
-          ref: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = _(),
           _ = (0, _._)(() => _.GetVisibleTimelines());
@@ -9813,7 +9696,7 @@
             children: [
               (0, _.jsx)(_, {}),
               (0, _.jsx)(_, {}),
-              (0, _.jsx)(_, {
+              (0, _.jsx)(_._, {
                 tour: "recording_timeline",
                 name: "timeline",
                 options: {
@@ -20934,6 +20817,355 @@
         static InitFromShortcutID(_) {
           return new _(_._.k_EGameIDTypeShortcut, 0, _);
         }
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      class _ {
+        m_tours = {};
+        m_strActiveTour = "";
+        m_storage = void 0;
+        m_bReady = !1;
+        constructor() {
+          (0, _._)(this);
+        }
+        async Init(_) {
+          if (this.m_storage) return;
+          this.m_storage = _;
+          const _ = await _(_);
+          Object.keys(_ || {}).forEach((_) => {
+            const _ = !!_[_];
+            this.m_tours[_] = {
+              ...(this.m_tours[_] || {
+                stops: {},
+              }),
+              bSeen: _,
+            };
+          }),
+            (this.m_bReady = !0);
+        }
+        UpdateStop(_, _, _, _) {
+          this.m_tours[_] ||
+            (this.m_tours[_] = {
+              bSeen: !1,
+              stops: {},
+            }),
+            (this.m_tours[_].stops[_] = {
+              options: _,
+              elem: _,
+            });
+        }
+        BHasSeenTour(_) {
+          return !this.m_bReady || (this.m_tours[_] && this.m_tours[_].bSeen);
+        }
+        GetTrackedStops(_) {
+          return this.m_tours[_]?.stops || {};
+        }
+        ActivateTour(_) {
+          this.m_strActiveTour &&
+            this.m_strActiveTour !== _ &&
+            this.DismissTour(this.m_strActiveTour),
+            (this.m_strActiveTour = _);
+        }
+        DismissTour(_) {
+          this.m_tours[_] &&
+            (this.MarkTourSeen(_),
+            (this.m_tours[_].bSeen = !0),
+            this.m_strActiveTour === _ && (this.m_strActiveTour = ""));
+        }
+        MarkTourSeen(_) {
+          return _(this.m_storage, _, Date.now());
+        }
+        MarkTourUnseen(_) {
+          return _(this.m_storage, _, void 0);
+        }
+      }
+      (0, _._)([_._], _.prototype, "m_tours", void 0),
+        (0, _._)([_._], _.prototype, "m_strActiveTour", void 0),
+        (0, _._)([_._], _.prototype, "m_bReady", void 0),
+        (0, _._)([_._.bound], _.prototype, "UpdateStop", null),
+        (0, _._)([_._], _.prototype, "ActivateTour", null),
+        (0, _._)([_._], _.prototype, "DismissTour", null);
+      const _ = "tour_history";
+      async function _(_) {
+        const _ = await _.GetObject(_);
+        return _ && "object" == typeof _ ? _ : {};
+      }
+      async function _(_, _, _) {
+        const _ = await _(_);
+        return _.StoreObject(_, {
+          ..._,
+          [_]: _,
+        });
+      }
+      const _ = new _();
+      function _() {
+        const _ = (0, _._)();
+        return (
+          (0, _.useEffect)(() => {
+            _.Init(_);
+          }, [_]),
+          _
+        );
+      }
+      function _(_) {
+        const _ = _(),
+          { bShowTour: _, stopElems: _ } = (0, _._)(() => ({
+            bShowTour: !_.BHasSeenTour(_),
+            stopElems: _.GetTrackedStops(_),
+          }));
+        return {
+          bShowTour: _,
+          stopElems: _,
+          onInteraction: (0, _.useCallback)(() => _.MarkTourSeen(_), [_, _]),
+          onDismiss: (0, _.useCallback)(() => _.DismissTour(_), [_, _]),
+          onActivate: (0, _.useCallback)(() => _.ActivateTour(_), [_, _]),
+          updateStop: _.UpdateStop,
+        };
+      }
+      function _(_) {
+        const { children: _ } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            _,
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { active: _, name: _, stops: _ } = _,
+          { bShowTour: _, onInteraction: _, onDismiss: _, stopElems: _ } = _(_),
+          [_, _] = (0, _.useState)(0);
+        if (!_ || !_ || _ >= _.length) return null;
+        const { _: _, title: _, content: _ } = _[_],
+          _ = _[_];
+        if (!_ || !_.elem) return null;
+        let _ = _;
+        return (
+          Array.isArray(_) &&
+            (_ = _.map((_, _) =>
+              (0, _.jsx)(
+                "div",
+                {
+                  children: _,
+                },
+                _,
+              ),
+            )),
+          (0, _.jsx)(_, {
+            ..._,
+            children: (0, _.jsxs)(_, {
+              tour: _,
+              title: _,
+              onRequestClose: _,
+              children: [
+                _,
+                (0, _.jsxs)("div", {
+                  className: _.Action,
+                  children: [
+                    _.length > 1 &&
+                      (0, _.jsx)("div", {
+                        className: _.TipCount,
+                        children: (0, _._)("#Tour_TipCount", _ + 1, _.length),
+                      }),
+                    _ < _.length - 1
+                      ? (0, _.jsx)(_._, {
+                          onClick: () => {
+                            _(_ + 1), _();
+                          },
+                          children: (0, _._)("#Button_Next"),
+                        })
+                      : (0, _.jsx)(_._, {
+                          onClick: _,
+                          children: (0, _._)("#Button_Done"),
+                        }),
+                  ],
+                }),
+              ],
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { elem: _, options: _, children: _ } = _,
+          { ownerWindow: _ } = (0, _._)(),
+          _ = _.getBoundingClientRect(),
+          { style: _, position: _ } = (function (_, _, _, _ = 0) {
+            let _,
+              _ = _;
+            const _ = 240,
+              _ = 10,
+              _ = _ + _,
+              _ = _ + _ + _;
+            let _ = _.document.body.matches(":dir(rtl)");
+            _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left"));
+            (("left" === _ && _._ < _) ||
+              ("right" === _ && _.innerWidth - (_._ + _.width) < _)) &&
+              (_ = "below");
+            switch (_) {
+              case "left":
+                _ = {
+                  top: _.top,
+                  width: _.left - _ - _,
+                  left: _,
+                  minWidth: _,
+                  flexDirection: "row",
+                  justifyContent: "flex-end",
+                };
+                break;
+              case "right":
+                _ = {
+                  top: _.top,
+                  left: _.right + _,
+                  right: _,
+                  minWidth: _,
+                  flexDirection: "row",
+                  justifyContent: "flex-start",
+                };
+                break;
+              case "above":
+                _ = {
+                  top: _,
+                  height: _._ - _ - _,
+                  left: _._,
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
+                };
+                break;
+              default:
+                _ = _
+                  ? {
+                      top: _._ + _.height + _,
+                      right: _.innerWidth - _.right,
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                    }
+                  : {
+                      top: _._ + _.height + _,
+                      left: _._,
+                      flexDirection: "column",
+                      justifyContent: "flex-start",
+                    };
+            }
+            const _ = {
+              display: "flex",
+            };
+            return {
+              style: {
+                ..._,
+                ..._,
+              },
+              position: _,
+              rect: _,
+            };
+          })(_, _, _.position, _.offset);
+        return (0, _.createPortal)(
+          (0, _.jsxs)("div", {
+            className: _.TourPositioner,
+            style: _,
+            "data-position": _,
+            children: [
+              (0, _.jsx)(_, {
+                position: _,
+                targetRect: _,
+              }),
+              _,
+            ],
+          }),
+          _.document.body,
+        );
+      }
+      function _(_) {
+        const { tour: _, title: _, onRequestClose: _, children: _ } = _,
+          { onActivate: _ } = _(_);
+        return (
+          (0, _.useEffect)(() => _(), [_]),
+          (0, _.jsxs)("div", {
+            className: _.TourBox,
+            children: [
+              (0, _.jsx)("div", {
+                onClick: _,
+                className: _.CloseButton,
+                children: (0, _.jsx)(_.sED, {
+                  className: _._,
+                }),
+              }),
+              (0, _.jsx)("div", {
+                className: _.Title,
+                children: _,
+              }),
+              (0, _.jsx)("div", {
+                className: _.Content,
+                children: _,
+              }),
+            ],
+          })
+        );
+      }
+      function _(_) {
+        const { name: _, tour: _, options: _, children: _ } = _,
+          { updateStop: _ } = _(_),
+          _ = (0, _.useCallback)((_) => _(_, _, _, _), [_, _, _]),
+          _ = _.Children.only(_),
+          _ = (0, _._)(_, _.props.ref);
+        return (0, _.cloneElement)(_.Children.only(_), {
+          ref: _,
+        });
+      }
+      function _(_) {
+        const { position: _, targetRect: _ } = _;
+        return (0, _.jsx)("svg", {
+          viewBox: "0 0 28 10",
+          className: _.TourStopArrow,
+          style: _(_, _),
+          children: (0, _.jsx)("polygon", {
+            points: "0,0 14,10 28,0",
+            fill: "currentColor",
+          }),
+        });
+      }
+      const _ = 28,
+        _ = 10;
+      function _(_, _) {
+        const _ = {
+          width: `${_}px`,
+          height: `${_}px`,
+        };
+        switch (_) {
+          case "right":
+            (_.left = "0px"), (_.top = `${Math.max(_.height / 2 - _, _)}px`);
+            break;
+          case "left":
+            (_.right = "0px"), (_.top = `${Math.max(_.height / 2 - _, _)}px`);
+            break;
+          case "above":
+            (_.bottom = -_ + "px"),
+              (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`);
+            break;
+          case "below":
+            (_.top = -_ + "px"),
+              (_.insetInlineStart = `${Math.max(_.width / 2 - _, _)}px`);
+        }
+        return _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

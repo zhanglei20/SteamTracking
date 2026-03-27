@@ -1097,6 +1097,7 @@ ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/dashboard/?pn=${}
+${PARTNER_BASE_URL}pricing/explorer
 ${PARTNER_BASE_URL}promotion${}
 ${PARTNER_BASE_URL}promotion/${}
 ${PARTNER_BASE_URL}promotion/analysis/ajaxgetpackagesdiscountsbytimerange

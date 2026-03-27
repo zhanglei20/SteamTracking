@@ -48,7 +48,7 @@
     },
     19378: (e, n, i) => {
       "use strict";
-      i.r(n), i.d(n, { default: () => fe });
+      i.r(n), i.d(n, { default: () => Re });
       var r = i(7850),
         c = i(90626),
         t = i(92757);
@@ -96,35 +96,35 @@
       const C = (0, P.l)(async function (e) {
         if (p[e]) return p[e]();
       });
-      var b = i(26408);
-      function x(e) {
+      var x = i(26408);
+      function b(e) {
         return (
           (n = e.getValue()),
           C.Localize(`#CurrencyCodeDescription_${(0, _.M1)(n)}`)
         );
         var n;
       }
-      function m(e) {
+      function j(e) {
         const n = e.getValue(),
           i = (0, _.mG)(n),
           c = C.Localize(`#Region_Pricing_Tooltip_${i}`);
         return (0, r.jsxs)("span", {
-          children: [i, " ", (0, r.jsx)(b.o, { tooltip: c })],
+          children: [i, " ", (0, r.jsx)(x.o, { tooltip: c })],
         });
       }
-      var j = i(82314),
+      var m = i(82314),
         k = i(32232),
         S = i.n(k),
-        y = i(64753),
-        z = i(39049),
+        z = i(64753),
+        y = i(39049),
         D = i(75659),
         w = i(20187),
-        f = i(41324);
-      const R = c.createContext({ depth: 0 });
+        R = i(41324);
+      const f = c.createContext({ depth: 0 });
       var v = i(11820),
         L = i(64238),
-        A = i.n(L);
-      function I(e) {
+        I = i.n(L);
+      function E(e) {
         const { level: n = "auto", className: i, color: t } = e,
           a = (function (e, n) {
             if ("auto" === e && 0 === n) return "h1";
@@ -140,18 +140,18 @@
                   ),
                   "h1");
             return "h" + i;
-          })(n, (0, c.useContext)(R).depth);
+          })(n, (0, c.useContext)(f).depth);
         return (0, r.jsx)(a, {
-          ...(0, f.mz)({ ...e, className: A()((0, v.T)(), z.Heading, i) }, E),
+          ...(0, R.mz)({ ...e, className: I()((0, v.T)(), y.Heading, i) }, A),
         });
       }
-      const E = [
+      const A = [
         ...w.U6,
         ...D.L,
         {
           prop: "size",
           responsive: !0,
-          className: (e) => z[`HeadingSize-${e}`],
+          className: (e) => y[`HeadingSize-${e}`],
         },
       ];
       var N = i(53971),
@@ -161,8 +161,8 @@
         F = i(29848),
         O = i(87700),
         B = i(42836),
-        G = i(17084),
-        Y = i(81393);
+        Y = i(17084),
+        G = i(81393);
       var $ = i(84811),
         K = i(9154),
         M = i(61859),
@@ -243,9 +243,9 @@
         ue = i(86762);
       function Pe(e) {
         const { nPackageID: n } = e,
-          i = (0, G.d$)(n),
-          [t, a, s] = (0, y.uD)(),
-          o = (0, G.fr)(n),
+          i = (0, Y.d$)(n),
+          [t, a, s] = (0, z.uD)(),
+          o = (0, Y.fr)(n),
           [d, l] = (0, c.useState)(!1);
         return i
           ? (0, r.jsx)("div", {
@@ -288,16 +288,16 @@
       function _e(e) {
         const { underline: n = "auto", ...i } = e;
         return (0, r.jsx)("a", {
-          ...(0, f.mz)({ ...i, underline: n, className: pe.TextLink }, Ce),
+          ...(0, R.mz)({ ...i, underline: n, className: pe.TextLink }, Ce),
         });
       }
       const Ce = [
         ...w.Ae,
         { prop: "underline", className: (e) => pe[`Underline-${e}`] },
       ];
-      var be = i(90534),
-        xe = i(8527);
-      function me(e) {
+      var xe = i(90534),
+        be = i(8527);
+      function je(e) {
         const { nPackageID: n } = e;
         return (0, r.jsxs)(r.Fragment, {
           children: [
@@ -307,7 +307,7 @@
               paddingBottom: "4",
               children: [
                 (0, r.jsx)(T.v, {
-                  href: `${xe.TS.PARTNER_BASE_URL}pricing/dashboard/?pn=${n}`,
+                  href: `${be.TS.PARTNER_BASE_URL}pricing/dashboard/?pn=${n}`,
                   children: h.g.Localize("#SinglePackagePricing_Right_Edit"),
                 }),
                 (0, r.jsx)(w.EY, {
@@ -321,7 +321,7 @@
               direction: "column",
               paddingBottom: "4",
               children: [
-                (0, r.jsx)(I, {
+                (0, r.jsx)(E, {
                   size: "6",
                   children: h.g.Localize(
                     "#SinglePackagePricing_Right_Help_Title",
@@ -333,7 +333,7 @@
                   ),
                 }),
                 (0, r.jsx)(_e, {
-                  href: `${xe.TS.PARTNER_BASE_URL}doc/store/pricing`,
+                  href: `${be.TS.PARTNER_BASE_URL}doc/store/pricing`,
                   children: h.g.Localize("#SinglePackagePricing_Right_Link"),
                 }),
               ],
@@ -341,11 +341,11 @@
             (0, r.jsxs)(N.s, {
               direction: "column",
               children: [
-                (0, r.jsx)(I, {
+                (0, r.jsx)(E, {
                   size: "6",
                   children: h.g.Localize("#SinglePackagePricing_Right_FAQ"),
                 }),
-                (0, r.jsxs)(be.az, {
+                (0, r.jsxs)(xe.az, {
                   children: [
                     (0, r.jsx)(w.EY, {
                       size: "4",
@@ -359,7 +359,7 @@
                       children: h.g.LocalizeReact(
                         "#SinglePackagePricing_Right_FAQ_switching_answer",
                         (0, r.jsx)(_e, {
-                          href: `${xe.TS.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
+                          href: `${be.TS.PARTNER_BASE_URL}wizard/HelpWithPublishing?issueid=915`,
                           children: h.g.Localize(
                             "#SinglePackagePricing_Right_FAQ_switching_answer_link",
                           ),
@@ -373,23 +373,49 @@
           ],
         });
       }
-      function je(e) {
-        const n = `${xe.TS.PARTNER_BASE_URL}doc/finance/taxfaq`;
+      function me(e) {
+        const n = `${be.TS.PARTNER_BASE_URL}doc/finance/taxfaq`;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(be.az, {
+            (0, r.jsxs)(xe.az, {
               paddingBottom: "4",
-              children: (0, r.jsxs)(w.EY, {
-                size: "4",
-                color: "text-body",
-                contrast: "subtitle",
-                children: [
-                  h.g.Localize("#SinglePricingPackage_Desc_1"),
-                  (0, r.jsx)(_e, { href: n, children: n }),
-                ],
-              }),
+              children: [
+                (0, r.jsx)(w.EY, {
+                  as: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: h.g.Localize("#SinglePricingPackage_Intro_1"),
+                }),
+                (0, r.jsx)(w.EY, {
+                  as: "p",
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: h.g.Localize("#SinglePricingPackage_Intro_2"),
+                }),
+                (0, r.jsx)(w.EY, {
+                  size: "4",
+                  color: "text-body",
+                  contrast: "subtitle",
+                  children: (0, r.jsxs)("ol", {
+                    children: [
+                      (0, r.jsx)("li", {
+                        children: h.g.Localize(
+                          "#SinglePricingPackage_Intro_2a",
+                        ),
+                      }),
+                      (0, r.jsx)("li", {
+                        children: h.g.Localize(
+                          "#SinglePricingPackage_Intro_2b",
+                        ),
+                      }),
+                    ],
+                  }),
+                }),
+              ],
             }),
-            (0, r.jsx)(be.az, {
+            (0, r.jsx)(xe.az, {
               paddingBottom: "4",
               children: (0, r.jsx)(w.EY, {
                 children: h.g.LocalizeReact(
@@ -403,7 +429,7 @@
                 ),
               }),
             }),
-            (0, r.jsx)(be.az, {
+            (0, r.jsx)(xe.az, {
               children: (0, r.jsx)(w.EY, {
                 children: h.g.Localize("#SinglePricingPackage_Desc_3"),
               }),
@@ -414,7 +440,7 @@
       const ke = (0, d.FB)();
       function Se(e) {
         const { nPackageID: n, appids: i } = e,
-          c = (0, G.Zz)();
+          c = (0, Y.Zz)();
         (0, J.h)(c);
         const t = (0, ne.cK)(),
           a = Number.parseInt(n),
@@ -431,14 +457,14 @@
                     className: "adminLeftCol",
                     children: (0, r.jsx)("div", {
                       className: "colSection",
-                      children: (0, r.jsx)(je, {}),
+                      children: (0, r.jsx)(me, {}),
                     }),
                   }),
                   (0, r.jsx)("div", {
                     className: "adminRightCol",
                     children: (0, r.jsx)("div", {
                       className: "panel",
-                      children: (0, r.jsx)(me, { nPackageID: a }),
+                      children: (0, r.jsx)(je, { nPackageID: a }),
                     }),
                   }),
                 ],
@@ -448,7 +474,7 @@
                 children: [
                   (0, r.jsx)("div", {
                     className: "adminLeftCol",
-                    children: (0, r.jsx)(ye, {
+                    children: (0, r.jsx)(ze, {
                       nPackageID: a,
                       appids: i.map(Number.parseInt),
                     }),
@@ -458,7 +484,7 @@
                     children: (0, r.jsxs)("div", {
                       className: "panel",
                       children: [
-                        (0, r.jsx)(I, {
+                        (0, r.jsx)(E, {
                           size: "6",
                           children: h.g.Localize(
                             "#SinglePackagePricing_Right_Convert_Title",
@@ -500,7 +526,7 @@
           }),
         });
       }
-      function ye(e) {
+      function ze(e) {
         const { nPackageID: n, appids: i } = e,
           t = (0, g.cT)(),
           {
@@ -516,7 +542,7 @@
                 s = new Array();
               if (e) {
                 const o = (0, _.pd)(U.AI.k_ECurrencyCodeUSD).toUpperCase(),
-                  d = (0, G.Dl)(n, o) || (0, G.Oc)(n, o) || (0, G.mv)(n, o);
+                  d = (0, Y.Dl)(n, o) || (0, Y.Oc)(n, o) || (0, Y.mv)(n, o);
                 for (
                   let a = U.AI.k_ECurrencyCodeUSD;
                   a < U.AI.k_ECurrencyCodeMax;
@@ -524,9 +550,9 @@
                 ) {
                   if (!e.BIsSupportCurrencyAndOrRegion(a)) continue;
                   const s = (0, _.pd)(a).toUpperCase(),
-                    o = (0, G.mv)(n, s),
-                    l = (0, G.Oc)(n, s),
-                    g = (0, G.Dl)(n, s),
+                    o = (0, Y.mv)(n, s),
+                    l = (0, Y.Oc)(n, s),
+                    g = (0, Y.Dl)(n, s),
                     h = e.GetScaledRecommendedPrice(d, a, void 0, r).price;
                   c.push({
                     packageID: n,
@@ -552,9 +578,9 @@
                   )
                     continue;
                   const t = (0, _.pd)(U.AI.k_ECurrencyCodeUSD, c).toUpperCase(),
-                    s = (0, G.mv)(n, t),
-                    o = (0, G.Oc)(n, t),
-                    l = (0, G.Dl)(n, t),
+                    s = (0, Y.mv)(n, t),
+                    o = (0, Y.Oc)(n, t),
+                    l = (0, Y.Dl)(n, t),
                     g = e.GetScaledRecommendedPrice(
                       d,
                       U.AI.k_ECurrencyCodeUSD,
@@ -575,27 +601,27 @@
                     appids: i,
                   });
                 }
-                const l = (0, G.Y2)(n);
+                const l = (0, Y.Y2)(n);
                 l.length > 0 &&
                   l.forEach((e) => {
                     const { eCurrencyCode: r, strCountryCode: c } = (0, _.gM)(
                         e,
                       ),
                       t = (0, _.rt)(c);
-                    (0, Y.wT)(
+                    (0, G.wT)(
                       r == t,
                       `Unexpected currency ${r} for country ${c} when expecting ${t} `,
                     );
-                    const a = (0, G.Oc)(n, e);
+                    const a = (0, Y.Oc)(n, e);
                     s.push({
                       packageID: n,
                       strPriceKey: e,
                       eCurrencyCode: r,
                       eRegionCode: void 0,
                       strCountryOverride: c,
-                      nPublishedPrice: (0, G.oL)(n, e),
+                      nPublishedPrice: (0, Y.oL)(n, e),
                       nProposedPrice: a,
-                      nLocalPrice: (0, G.Dl)(n, e),
+                      nLocalPrice: (0, Y.Dl)(n, e),
                       nSuggestedPrice: void 0,
                       bCanSetToFree: !1,
                       appids: i,
@@ -609,20 +635,20 @@
               };
             }, [e, n, t, r, i]);
           })(t, n, i),
-          d = !!(0, G.d$)(n);
+          d = !!(0, Y.d$)(n);
         (0, c.useEffect)(() => {
           (0, H.Sm)([n]);
         }, [n]);
         const P = [
           ke.accessor("nPublishedPrice", {
             header: (0, M.we)("#PackagePricing_Col_CurPrice"),
-            meta: { cellClassname: A()(W().CurrentPrice) },
+            meta: { cellClassname: I()(W().CurrentPrice) },
             size: 150,
             cell: ae,
           }),
           ke.accessor(d ? "nProposedPrice" : "strPriceKey", {
             header: (0, M.we)("#PackagePricing_Col_Proposal"),
-            meta: { cellClassname: A()(W().ProposedPrice) },
+            meta: { cellClassname: I()(W().ProposedPrice) },
             size: 280,
             cell: d ? se : ee.sh,
           }),
@@ -661,7 +687,7 @@
                                     "#PricingDashboard_Select_Price",
                                   ),
                                 }),
-                                (0, r.jsx)(ze, {
+                                (0, r.jsx)(ye, {
                                   usdRow: a[U.AI.k_ECurrencyCodeUSD],
                                 }),
                               ],
@@ -675,7 +701,7 @@
                   children: [
                     (0, r.jsx)(l.k, {
                       data: a,
-                      className: A()(
+                      className: I()(
                         S().DefaultFancyTable,
                         S().NoColumnBorders,
                         Q().PackagePricingContext,
@@ -684,7 +710,7 @@
                         ke.accessor("eCurrencyCode", {
                           header: (0, M.we)("#PackagePricing_Col_Currency"),
                           size: 200,
-                          cell: x,
+                          cell: b,
                         }),
                         ...P,
                       ],
@@ -694,7 +720,7 @@
                     }),
                     (0, r.jsx)(l.k, {
                       data: s,
-                      className: A()(
+                      className: I()(
                         S().DefaultFancyTable,
                         S().NoColumnBorders,
                         Q().PackagePricingContext,
@@ -703,12 +729,12 @@
                         ke.accessor("eRegionCode", {
                           header: (0, M.we)("#PackagePricing_Col_Region"),
                           size: 200,
-                          cell: m,
+                          cell: j,
                         }),
                         ke.accessor("eCurrencyCode", {
                           header: (0, M.we)("#PackagePricing_Col_Currency"),
                           size: 100,
-                          cell: x,
+                          cell: b,
                         }),
                         ...P,
                       ],
@@ -719,7 +745,7 @@
                     o.length > 0 &&
                       (0, r.jsx)(l.k, {
                         data: o,
-                        className: A()(
+                        className: I()(
                           S().DefaultFancyTable,
                           S().NoColumnBorders,
                           Q().PackagePricingContext,
@@ -733,7 +759,7 @@
                           ke.accessor("eCurrencyCode", {
                             header: (0, M.we)("#PackagePricing_Col_Currency"),
                             size: 100,
-                            cell: x,
+                            cell: b,
                           }),
                           ...P,
                         ],
@@ -748,18 +774,18 @@
               ],
             });
       }
-      function ze(e) {
+      function ye(e) {
         const { usdRow: n } = e,
-          { fnApplyGuidelines: i } = (0, g.gC)((0, G.$i)());
-        return (0, r.jsx)(j.e, {
+          { fnApplyGuidelines: i } = (0, g.gC)((0, Y.$i)());
+        return (0, r.jsx)(m.e, {
           strButton: h.g.Localize("#PricingDashboard_Select_Price_button"),
           strTooltip: h.g.Localize(
             "#PricingDashboard_Select_Price_button_ttip",
           ),
-          fnGetUSDPriceInCents: () => (0, G.FR)(n.packageID, "USD"),
+          fnGetUSDPriceInCents: () => (0, Y.FR)(n.packageID, "USD"),
           fnOnUpdate: (e) => i(n.packageID, e),
-          strDescription: (0, M.we)(
-            "#PricingDashboard_GuidelinesPickerDescription",
+          strDescription: h.g.Localize(
+            "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           appids: n.appids,
           nPackageID: n.packageID,
@@ -768,8 +794,8 @@
       }
       function De(e) {
         const { nPackageID: n, oPricingGuideline: i } = e,
-          [c, t, a] = (0, y.uD)(),
-          s = (0, y.CH)();
+          [c, t, a] = (0, z.uD)(),
+          s = (0, z.CH)();
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(T.$, {
@@ -790,7 +816,7 @@
         });
       }
       var we = i(92724);
-      function fe(e) {
+      function Re(e) {
         return (
           c.use((0, we.u)()),
           (0, r.jsx)(t.dO, {

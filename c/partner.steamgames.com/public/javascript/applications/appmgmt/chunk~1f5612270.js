@@ -78,14 +78,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _, fnOnApply: _, singlePackage: _ } = _,
           _ = (0, _._)();
         return (0, _.jsxs)(_._, {
           closeModal: _,
           bAlertDialog: !0,
-          strTitle: (0, _._)("#PricingDashboard_ApplyGuidelines_Header"),
+          strTitle: _._.Localize("#PricingDashboard_ApplyConversion_Method"),
           onOK: () => {
             _(), _ && __webpack_require__();
           },
@@ -95,8 +96,8 @@
           children: [
             (0, _.jsx)("div", {
               className: _().Instructions,
-              children: (0, _._)(
-                "#PricingDashboard_ApplyGuidelines_Instructions",
+              children: _._.Localize(
+                "#PricingDashboard_ApplyGuidelines_Instructions_MultiOptions",
               ),
             }),
             (0, _.jsx)("br", {}),
@@ -1028,8 +1029,24 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      __webpack_require__("chunkid"), __webpack_require__("chunkid");
-      const _ = (_) => null;
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _
+          ? function (_) {
+              return (0, _.jsx)(_.Suspense, {
+                fallback: null,
+                children: (0, _.jsx)(_, {
+                  ..._,
+                }),
+              });
+            }
+          : (_) => null;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

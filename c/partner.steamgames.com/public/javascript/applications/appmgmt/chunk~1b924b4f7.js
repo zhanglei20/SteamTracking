@@ -110,6 +110,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
       let _ = null;
@@ -204,14 +205,16 @@
                   (0, _.jsxs)(_._, {
                     className: _().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, _._)(
-                      "#PricingDashboard_SuggestedPrice_ttip",
+                    toolTipContent: _._.Localize(
+                      "#PricingDashboard_Method_SuggestedPrice_ttip",
                       (0, _._)(_, "USD").join(""),
                     ),
                     children: [
                       (0, _.jsx)("div", {
                         className: _().DetailLabel,
-                        children: (0, _._)("#PricingDashboard_SuggestedPrice"),
+                        children: _._.Localize(
+                          "#PricingDashboard_Method_SuggestedPrice",
+                        ),
                       }),
                       (0, _.jsx)("div", {
                         className: _().DetailPrice,
@@ -319,8 +322,8 @@
         return (0, _.jsx)(_._, {
           fnGetUSDPriceInCents: () => (0, _._)(_, "USD"),
           fnOnUpdate: (_) => _(_, _),
-          strDescription: (0, _._)(
-            "#PricingDashboard_GuidelinesPickerDescription",
+          strDescription: _._.Localize(
+            "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           nPackageID: _,
           appids: _,
@@ -369,18 +372,18 @@
                 "#PricingDashboard_PriceTooLow",
                 (0, _._)(_, _).join(""),
               )) ||
-            (_ && !1) ||
             (_ &&
               (0, _._)(
-                "#PricingDashboard_PriceMuchHigherThanGuidelines",
+                "#PricingDashboard_PriceMuchHigherThanMethod",
                 (0, _._)(_, _).join(""),
               )) ||
             (_ && !1) ||
             (_ &&
               (0, _._)(
-                "#PricingDashboard_PriceMuchLowerThanGuidelines",
+                "#PricingDashboard_PriceMuchLowerThanMethod",
                 (0, _._)(_, _).join(""),
               )) ||
+            (_ && !1) ||
             (_ &&
               (0, _._)(
                 "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
