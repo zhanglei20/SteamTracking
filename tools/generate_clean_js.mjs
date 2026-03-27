@@ -148,21 +148,33 @@ function normalizeAst(ast) {
 	webpackRequires.add("__webpack_require__");
 
 	// STEP 3: Second pass to update identifiers, respecting scope
-	// Create scopes array to track variables in scope
 	const scopes = [];
+	const scopeFunctions = []; // parallel stack: which function owns each scope
 
-	// Find containing function for a node
-	function findContainingFunction(node) {
-		let current = node;
-		while (
-			current &&
-			current.type !== Syntax.FunctionExpression &&
-			current.type !== Syntax.ArrowFunctionExpression &&
-			current.type !== Syntax.FunctionDeclaration
-		) {
-			current = current._parentNode;
+	// Collect all binding identifiers from a pattern (handles destructuring, rest, defaults)
+	function collectBindingIdentifiers(pattern, into) {
+		if (!pattern) return;
+		switch (pattern.type) {
+			case Syntax.Identifier:
+				into.push(pattern);
+				break;
+			case Syntax.ObjectPattern:
+				for (const prop of pattern.properties) {
+					collectBindingIdentifiers(prop.type === Syntax.RestElement ? prop.argument : prop.value, into);
+				}
+				break;
+			case Syntax.ArrayPattern:
+				for (const elem of pattern.elements) {
+					if (elem) collectBindingIdentifiers(elem, into);
+				}
+				break;
+			case Syntax.AssignmentPattern:
+				collectBindingIdentifiers(pattern.left, into);
+				break;
+			case Syntax.RestElement:
+				collectBindingIdentifiers(pattern.argument, into);
+				break;
 		}
-		return current;
 	}
 
 	// Create a normalized chunk ID literal
@@ -173,19 +185,6 @@ function normalizeAst(ast) {
 			raw: '"chunkid"',
 		};
 	}
-
-	// Track parent nodes during traversal
-	const parentMap = new WeakMap();
-
-	// First traversal to set up parent references
-	traverse(ast, {
-		enter: (node, parent) => {
-			if (parent) {
-				parentMap.set(node, parent);
-				node._parentNode = parent;
-			}
-		},
-	});
 
 	// Main traversal for normalization
 	traverse(ast, {
@@ -198,15 +197,17 @@ function normalizeAst(ast) {
 			) {
 				const newScope = new Set();
 
-				// Add parameters to the new scope
+				// Add parameters to the new scope (handles destructuring, rest, defaults)
 				if (node.params) {
 					for (const param of node.params) {
-						if (param.type === Syntax.Identifier) {
-							newScope.add(param.name);
+						const bindings = [];
+						collectBindingIdentifiers(param, bindings);
+						for (const ident of bindings) {
+							newScope.add(ident.name);
 
 							// Normalize short parameter names in non-webpack modules
-							if (param.name.length < 3 && !webpackModules.has(node)) {
-								param.name = "_";
+							if (ident.name.length < 3 && !webpackModules.has(node)) {
+								ident.name = "_";
 							}
 						}
 					}
@@ -221,45 +222,49 @@ function normalizeAst(ast) {
 
 				// Push the new scope
 				scopes.push(newScope);
+				scopeFunctions.push(node);
 			}
 
 			// Handle variable declarations - add to current scope
 			if (node.type === Syntax.VariableDeclaration) {
 				for (const decl of node.declarations) {
-					if (decl.id && decl.id.type === Syntax.Identifier) {
-						// Add to current scope
+					const bindings = [];
+					collectBindingIdentifiers(decl.id, bindings);
+					for (const ident of bindings) {
 						if (scopes.length > 0) {
-							scopes[scopes.length - 1].add(decl.id.name);
+							scopes[scopes.length - 1].add(ident.name);
 						}
 
-						// Normalize short names
-						if (decl.id.name.length < 3) {
-							decl.id.name = "_";
+						if (ident.name.length < 3) {
+							ident.name = "_";
 						}
 					}
 				}
 			}
 
 			// Handle catch clause parameters
-			if (node.type === Syntax.CatchClause && node.param && node.param.type === Syntax.Identifier) {
-				// Add to current scope
-				if (scopes.length > 0) {
-					scopes[scopes.length - 1].add(node.param.name);
-				}
+			if (node.type === Syntax.CatchClause && node.param) {
+				const bindings = [];
+				collectBindingIdentifiers(node.param, bindings);
+				for (const ident of bindings) {
+					if (scopes.length > 0) {
+						scopes[scopes.length - 1].add(ident.name);
+					}
 
-				// Normalize if short
-				if (node.param.name.length < 3) {
-					node.param.name = "_";
+					if (ident.name.length < 3) {
+						ident.name = "_";
+					}
 				}
 			}
 
 			// Handle identifiers (variable references)
 			if (node.type === Syntax.Identifier) {
-				// Skip if property key
+				// Skip if non-computed property key or class member key
 				if (
 					parent &&
-					((parent.type === Syntax.Property && parent.key === node) ||
-						(parent.type === Syntax.MethodDefinition && parent.key === node))
+					((parent.type === Syntax.Property && parent.key === node && !parent.computed) ||
+						(parent.type === Syntax.MethodDefinition && parent.key === node) ||
+						(parent.type === Syntax.PropertyDefinition && parent.key === node))
 				) {
 					return;
 				}
@@ -275,8 +280,8 @@ function normalizeAst(ast) {
 
 				// Handle based on shadowing status
 				if (!isShadowed) {
-					// Check if inside webpack module
-					const containingFunc = findContainingFunction(node);
+					// Check if inside webpack module (O(1) via parallel stack)
+					const containingFunc = scopeFunctions.length > 0 ? scopeFunctions[scopeFunctions.length - 1] : null;
 
 					if (containingFunc && webpackModules.has(containingFunc)) {
 						// Inside webpack module - replace webpack parameters
@@ -292,9 +297,10 @@ function normalizeAst(ast) {
 							node.name = "_";
 						}
 					} else {
-						// Outside webpack module
-						if (webpackRequires.has(node.name)) {
-							node.name = "__webpack_require__";
+						// Outside webpack module - only match the standardized name
+						// for plain identifiers (call-site matching is handled separately)
+						if (node.name === "__webpack_require__") {
+							// already normalized
 						} else if (node.name.length < 3) {
 							node.name = "_";
 						}
@@ -305,8 +311,13 @@ function normalizeAst(ast) {
 				}
 			}
 
-			// Handle object property keys
-			if (node.type === Syntax.Property && node.key.type === Syntax.Identifier && node.key.name.length < 3) {
+			// Handle non-computed object property keys
+			if (
+				node.type === Syntax.Property &&
+				!node.computed &&
+				node.key.type === Syntax.Identifier &&
+				node.key.name.length < 3
+			) {
 				node.key.name = "_";
 			}
 
@@ -416,7 +427,7 @@ function normalizeAst(ast) {
 									raw: prettyJson,
 									cooked: prettyJson,
 								},
-								tail: false,
+								tail: true,
 							},
 						],
 						expressions: [],
@@ -436,6 +447,7 @@ function normalizeAst(ast) {
 				node.type === Syntax.FunctionDeclaration
 			) {
 				scopes.pop();
+				scopeFunctions.pop();
 			}
 		},
 	});
