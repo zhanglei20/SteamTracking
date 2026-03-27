@@ -175,6 +175,7 @@ a:hover {
 #profileBlock {
 	margin: 5px 0px 0px 0px;
 	flex-grow: 1;
+	max-width: 638px;
 	display: flex;
 	flex-direction: column;
 	padding-bottom: 7px;
