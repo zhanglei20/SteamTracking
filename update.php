@@ -572,7 +572,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 				}
 
 				// Extract json from numeric localization chunks
-				if( preg_match( '/[0-9]+\.js$/', $File ) && str_contains( substr( $Data, 0, 200 ), 'exports=JSON.parse' ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				if( preg_match( '/[0-9]+\.js$/', $File ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
 				{
 					$JsonData = stripcslashes( $Matches[ 1 ] );
 					$JsonData = json_decode( $JsonData, true );
