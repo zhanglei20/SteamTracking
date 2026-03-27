@@ -571,6 +571,34 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					return true;
 				}
 
+				// Extract json from numeric localization chunks
+				if( preg_match( '/[0-9]+\.js$/', $File ) && preg_match( "/exports=JSON\.parse\('(.+)'\)}}]\);$/", $Data, $Matches ) )
+				{
+					$JsonData = stripcslashes( $Matches[ 1 ] );
+					$JsonData = json_decode( $JsonData, true );
+
+					if( $JsonData !== null )
+					{
+						$JsonData = json_encode( $JsonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL;
+						file_put_contents( preg_replace( '/\.js$/', '.json', $File ), $JsonData );
+
+						// Delete old .js and c/ copies from before this extraction existed
+						if( file_exists( $File ) )
+						{
+							unlink( $File );
+						}
+
+						$CleanFile = __DIR__ . '/c/' . $OriginalFile;
+
+						if( file_exists( $CleanFile ) )
+						{
+							unlink( $CleanFile );
+						}
+
+						return true;
+					}
+				}
+
 				file_put_contents( $File, $Data );
 
 				if( $IsSSR )
@@ -952,6 +980,13 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 					if( $IsChunkFile( $Filename ) && !isset( $NewChunks[ $Filename ] ) )
 					{
+						// Preserve .json files whose corresponding .js chunk is still in the manifest
+						if( str_ends_with( $Filename, '.json' )
+						 && isset( $NewChunks[ str_replace( '.json', '.js', $Filename ) ] ) )
+						{
+							continue;
+						}
+
 						$FilepathOnDisk = $FileInfo->getRealPath();
 
 						$this->Log( 'Chunk ' . $FilepathOnDisk . ' no longer exists in manifest' );
@@ -960,6 +995,13 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 						$TagFile = $Folder . '/' . $Filename;
 						unset( $this->ETags[ $TagFile ], $this->ETags[ $TagFile . '.unmodified' ] );
+
+						// When deleting a .json chunk, also clear ETags for the corresponding .js
+						if( str_ends_with( $Filename, '.json' ) )
+						{
+							$JsTagFile = str_replace( '.json', '.js', $TagFile );
+							unset( $this->ETags[ $JsTagFile ], $this->ETags[ $JsTagFile . '.unmodified' ] );
+						}
 
 						// Also delete the corresponding file in the clean directory if it exists
 						$CleanFilepath = __DIR__ . '/c/' . $Folder . '/' . $Filename;
