@@ -13581,15 +13581,15 @@
         GetBlogEditEventURL() {
           if (this.BHasAssociatedBlogEvent()) {
             const e = i.b.InitFromClanID(
-              this.m_oPromotionPlan.sale_clan_account,
+              this.m_oPromotionPlan.blog_post_clan_accountid,
             );
             return (
               d.TS.COMMUNITY_BASE_URL +
               "gid/" +
               e.ConvertTo64BitString() +
               "/partnerevents/edit/" +
-              this.m_oPromotionPlan.sale_clan_event_gid +
-              "?tab=sale"
+              this.m_oPromotionPlan.blog_post_clan_eventgid +
+              "?tab=description"
             );
           }
           return "";
@@ -68495,7 +68495,7 @@
     },
     45025: (e, t, s) => {
       "use strict";
-      s.d(t, { kd: () => rt, S4: () => at, rr: () => st });
+      s.d(t, { kd: () => ct, S4: () => rt, rr: () => it });
       var a = s(7850),
         n = s(73523),
         i = s(67239),
@@ -69345,7 +69345,7 @@
       }
       function Ae(e) {
         const { clanAccountID: t, gidClanEvent: s } = e,
-          { eventModel: n } = (0, xe.dB)(t, s);
+          { eventModel: n } = (0, xe.dB)(t, s, !0);
         if (!n) return null;
         const i = Boolean(n.BIsVisibleEvent()),
           r =
@@ -69406,7 +69406,7 @@
       }
       function Be(e) {
         const { clanAccountID: t, gidClanEvent: s } = e,
-          { eventModel: n } = (0, xe.dB)(t, s);
+          { eventModel: n } = (0, xe.dB)(t, s, !0);
         if (!n) return null;
         const i = Boolean(n.BIsVisibleEvent());
         let r = 0;
@@ -69711,18 +69711,18 @@
       var Je = s(16021),
         Xe = s(26408),
         Qe = s(64753),
-        Ze = s(38390),
-        et = s(77905);
-      function tt(e) {
+        Ze = s(77905),
+        et = s(53965),
+        tt = s(75233),
+        st = s(51614);
+      function at(e) {
         const { oEditablePlan: t } = e,
           [s, n, i, r] = (0, u.q3)(() => [
             t.BHasAssociatedBlogEvent(),
             t.BRequiresBlogPage(),
             t.GetBlogClanAccountID(),
             t.GetBlogClanEventGID(),
-          ]),
-          { eventModel: o } = (0, Ze.B9)(i, r, !0),
-          [l, c, d] = (0, Qe.uD)();
+          ]);
         return (0, a.jsxs)("div", {
           className: E.LinkCtn,
           children: [
@@ -69738,6 +69738,11 @@
                       target: "_blank",
                       children: "Edit Associated Blog Page",
                     }),
+                  }),
+                  (0, a.jsx)(nt, {
+                    blogClanAccountID: i,
+                    blogEventGID: r,
+                    oEditablePlan: t,
                   }),
                 ],
               }),
@@ -69757,7 +69762,7 @@
                   children:
                     "Steamworks Blog (partner facing): https://steamcommunity.com/groups/steamworks/partnerevents",
                 }),
-                (0, a.jsx)(et.R, {
+                (0, a.jsx)(Ze.R, {
                   strLabel: "",
                   strPlaceholder:
                     "eg. https://steamcommunity.com/games/593110/partnerevents/edit/526496349181445005",
@@ -69796,7 +69801,88 @@
           ],
         });
       }
-      function st(e) {
+      function nt(e) {
+        const { blogClanAccountID: t, blogEventGID: s, oEditablePlan: n } = e,
+          [i, r, o] = (0, u.q3)(() => [
+            n.BHasAssociatedSaleEvent(),
+            n.GetSaleClanAccountID(),
+            n.GetSaleClanEventGID(),
+          ]),
+          l = (function () {
+            (0, tt.jE)();
+            return (0, st.n)({
+              mutationFn: async (e) => {
+                const t = await fetch(
+                  `${Ge.TS.PARTNER_BASE_URL}promotion/tools/eventimagecopy`,
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(e),
+                    credentials: "include",
+                  },
+                );
+                if (
+                  ("dev" == Ge.TS.WEB_UNIVERSE &&
+                    console.log(
+                      "event image copy workflow dev debug info: ",
+                      t,
+                      e,
+                    ),
+                  !t.ok)
+                )
+                  throw new Error("Failed to copy event assets, check logs");
+                const s = await t.json();
+                if (!s || 1 != s?.success)
+                  throw new Error(
+                    `Failed to copy event assets, check logs ${s?.success}`,
+                  );
+                return !0;
+              },
+            });
+          })(),
+          c = (0, P.vs)(),
+          [d, m, p] = (0, Qe.uD)();
+        return (0, a.jsxs)(a.Fragment, {
+          children: [
+            (0, a.jsx)(et.$, {
+              onClick: () => {
+                c.fnSetLoading(!0),
+                  m(),
+                  l
+                    .mutateAsync({
+                      sourceClanAccountID: r,
+                      sourceClanEventGID: o,
+                      targetClanAccountID: t,
+                      targetClanEventGID: s,
+                    })
+                    .then((e) => {
+                      c.fnSetSuccess(!0),
+                        c.fnSetStrSuccess(
+                          "Images Copied; reload promotion plan.",
+                        );
+                    })
+                    .catch(() => {
+                      c.fnSetError(!0),
+                        c.fnSetStrError(
+                          "Failed to copy images, check console for errors.",
+                        );
+                    });
+              },
+              disabled: !i,
+              children: "Sync Event Capsule and Header from Sale Page",
+            }),
+            (0, a.jsx)(k.EN, {
+              active: d,
+              children: (0, a.jsx)(P.Hh, {
+                state: c,
+                strDialogTitle: "Sync Sale -> Blog Images",
+                closeModal: p,
+              }),
+            }),
+          ],
+        });
+      }
+      function it(e) {
         const { planid: t, children: s, bCanBeMissing: n, bForceReload: i } = e,
           [r, o] = p.useState(!1),
           m = i ? !r : i,
@@ -69836,7 +69922,7 @@
                 })
         );
       }
-      function at(e) {
+      function rt(e) {
         const { planid: t } = e,
           s = (0, l.bE)(),
           n = (e) =>
@@ -69845,7 +69931,7 @@
             {
               name: "Editor Tab",
               key: "editor",
-              contents: (0, a.jsx)(y.tH, { children: (0, a.jsx)(it, {}) }),
+              contents: (0, a.jsx)(y.tH, { children: (0, a.jsx)(lt, {}) }),
               onClick: n,
             },
             {
@@ -69889,14 +69975,14 @@
             contents: (0, a.jsx)(y.tH, { children: (0, a.jsx)(le, {}) }),
             onClick: n,
           }),
-          (0, a.jsx)(st, {
+          (0, a.jsx)(it, {
             planid: t,
             bForceReload: !0,
             children: (0, a.jsxs)("div", {
               className: S().AdminPageCtn,
               children: [
                 (0, a.jsx)(he, {}),
-                (0, a.jsx)(nt, {}),
+                (0, a.jsx)(ot, {}),
                 (0, a.jsx)(w.V, { tabs: i }),
                 (0, a.jsx)("div", { className: x().ClearThings }),
               ],
@@ -69904,7 +69990,7 @@
           })
         );
       }
-      function nt(e) {
+      function ot(e) {
         const t = (0, c.ok)(),
           s = new Date(),
           n = (0, u.q3)(() => new Date(1e3 * t.GetStartDate())),
@@ -69923,7 +70009,7 @@
           ],
         });
       }
-      function it(e) {
+      function lt(e) {
         const t = (0, c.ok)();
         return (0, a.jsx)("div", {
           children: (0, a.jsxs)("div", {
@@ -70041,7 +70127,7 @@
                         children: (0, a.jsxs)("div", {
                           className: S().SectionCtn,
                           children: [
-                            (0, a.jsx)(rt, { oEditablePlan: t }),
+                            (0, a.jsx)(ct, { oEditablePlan: t }),
                             (0, a.jsx)(Pe.w, { oEditablePlan: t }),
                           ],
                         }),
@@ -70060,7 +70146,7 @@
                       (0, a.jsx)(y.tH, {
                         children: (0, a.jsx)("div", {
                           className: S().SectionCtn,
-                          children: (0, a.jsx)(ot, { oEditablePlan: t }),
+                          children: (0, a.jsx)(dt, { oEditablePlan: t }),
                         }),
                       }),
                       (0, a.jsx)(y.tH, {
@@ -70084,7 +70170,7 @@
           }),
         });
       }
-      function rt(e) {
+      function ct(e) {
         const { oEditablePlan: t } = e,
           [s, c, d, p, h, g, S, f, x] = (0, u.q3)(() => [
             t.GetSpotlightIDs(0),
@@ -70371,7 +70457,7 @@
           ],
         });
       }
-      function ot(e) {
+      function dt(e) {
         const { oEditablePlan: t } = e,
           s = (0, u.q3)(() => t.GetPartnerID()),
           r = (0, p.useMemo)(() => [s], [s]);
@@ -70389,7 +70475,7 @@
               (0, a.jsx)(W.t, { index: 1, oEditablePlan: t }),
               (0, a.jsx)(Ee.K, { index: 0, oEditablePlan: t }),
               (0, a.jsx)(Me.eq, { oEditablePlan: t, rgPartnerIDToValidate: r }),
-              (0, a.jsx)(tt, { oEditablePlan: t }),
+              (0, a.jsx)(at, { oEditablePlan: t }),
               (0, a.jsx)(O, {
                 index: 0,
                 oEditablePlan: t,
@@ -72038,7 +72124,7 @@
           ]),
           q = (0, v.TR)(y.ii.k_ConfigPage_Takeover, j),
           W = (0, f.Ib)(c),
-          { eventModel: H } = (0, p.dB)(l, O),
+          { eventModel: H } = (0, p.dB)(l, O, !0),
           [V] = (0, h.G6)(N, G, x),
           K = s.get(r),
           Y = [],
@@ -100504,81 +100590,71 @@
                   v = null,
                   y = null,
                   f = null;
-                if (a?.length >= 3) (h = Number.parseInt(a[1])), (v = a[2]);
-                else if (n?.length >= 3)
+                if (a && a?.length >= 3)
+                  (h = Number.parseInt(a[1])), (v = a[2]);
+                else if (n && n?.length >= 3)
                   (S = Number.parseInt(n[1])), (v = n[2]);
-                else if (i?.length >= 3) (_ = i[1]), (y = i[2]);
-                else if (r?.length >= 3)
+                else if (i && i?.length >= 3) (_ = i[1]), (y = i[2]);
+                else if (r && r.length >= 3)
                   (h = Number.parseInt(r[1])), (y = r[2]);
-                else if (o?.length >= 3) {
+                else if (o && o.length >= 3) {
                   let e = o[1];
                   y = o[2];
                   let t = await d.ac.LoadOGGClanInfoForIdentifier(e);
                   t && (h = t.appid);
-                } else if (l?.length >= 3) (_ = l[1]), (v = l[2]);
-                else if (m?.length >= 3)
+                } else if (l && l.length >= 3) (_ = l[1]), (v = l[2]);
+                else if (m && m.length >= 3)
                   (h = Number.parseInt(m[1])), (v = m[2]);
-                else if (u?.length >= 3) {
+                else if (u && u.length >= 3) {
                   const e = u[1];
                   y = u[2];
                   const t = await d.ac.LoadOGGClanInfoForIdentifier(e);
                   t && (h = t.appid);
                 }
+                const x = Boolean(p);
                 if (h)
                   v
-                    ? (f = await g.O3.LoadPartnerEventFromClanEventGID(h, v, 0))
+                    ? (f = await g.O3.LoadPartnerEventFromClanEventGID(
+                        h,
+                        v,
+                        0,
+                        x,
+                      ))
                     : y &&
                       (f = await g.O3.LoadPartnerEventFromAnnoucementGID(
                         h,
                         y,
                         0,
+                        x,
                       ));
                 else {
                   let e = null;
                   if ((S && (e = c.b.InitFromClanID(S)), _)) {
-                    e = (await d.ac.LoadOGGClanInfoForGroupVanity(_))
-                      .clanSteamID;
+                    let t = await d.ac.LoadOGGClanInfoForGroupVanity(_);
+                    t && (e = t.clanSteamID);
                   }
-                  if (p) {
-                    const t = !0;
-                    y && e
-                      ? (f =
-                          await g.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            e,
-                            y,
-                            0,
-                            t,
-                          ))
-                      : v &&
-                        e &&
-                        (f =
-                          await g.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            e,
-                            v,
-                            0,
-                            t,
-                          ));
-                  } else
-                    y && e
-                      ? (f =
-                          await g.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            e,
-                            y,
-                            0,
-                          ))
-                      : v &&
-                        e &&
-                        (f =
-                          await g.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            e,
-                            v,
-                            0,
-                          ));
+                  y && e
+                    ? (f =
+                        await g.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                          e,
+                          y,
+                          0,
+                          x,
+                        ))
+                    : v &&
+                      e &&
+                      (f =
+                        await g.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                          e,
+                          v,
+                          0,
+                          x,
+                        ));
                 }
                 if (f)
                   return (
                     e.push({
-                      name: f.GetNameWithFallback(s),
+                      name: f.GetNameWithFallback(s) ?? "",
                       type: f.GetEventType(),
                       clanSteamID: f.clanSteamID,
                       gidClanAnnouncement: f.GetAnnouncementGID(),
@@ -100593,21 +100669,22 @@
                 let e = null;
                 if (D) {
                   const s = m.pF.GetCreatorHome(new c.b(D));
-                  e = await _.Get().GetLatestPartnerEvents(
-                    i().CancelToken.source(),
-                    0,
-                    20,
-                    s.GetAppIDList(),
-                    void 0,
-                    void 0,
-                    void 0,
-                    void 0,
-                    !0,
-                    [s.GetClanAccountID()],
-                    t,
-                    !0,
-                    w,
-                  );
+                  s &&
+                    (e = await _.Get().GetLatestPartnerEvents(
+                      i().CancelToken.source(),
+                      0,
+                      20,
+                      s.GetAppIDList(),
+                      void 0,
+                      void 0,
+                      void 0,
+                      void 0,
+                      !0,
+                      [s.GetClanAccountID()],
+                      t,
+                      !0,
+                      w,
+                    ));
                 } else
                   e = await _.Get().GetLatestPartnerEvents(
                     i().CancelToken.source(),
@@ -100624,13 +100701,14 @@
                     !0,
                     w,
                   );
-                const s = e.map((e) => ({
-                  name: e.event_name,
-                  type: Number.parseInt(e.event_type),
-                  clanSteamID: new c.b(e.clan_steamid),
-                  gidClanAnnouncement: e.announcement_gid,
-                  gidClanEvent: e.unique_id,
-                }));
+                const s =
+                  e?.map((e) => ({
+                    name: e.event_name,
+                    type: Number.parseInt(e.event_type),
+                    clanSteamID: new c.b(e.clan_steamid),
+                    gidClanAnnouncement: e.announcement_gid,
+                    gidClanEvent: e.unique_id,
+                  })) ?? [];
                 A(s);
               }, 300);
             },

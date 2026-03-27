@@ -20316,11 +20316,12 @@
             _,
           );
         }
-        async LoadPartnerEventFromAnnoucementGID(_, _, _) {
+        async LoadPartnerEventFromAnnoucementGID(_, _, _, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             _,
             void 0,
+            _,
             _,
             _,
           );
@@ -20335,12 +20336,13 @@
             _,
           );
         }
-        async LoadPartnerEventFromClanEventGID(_, _, _) {
+        async LoadPartnerEventFromClanEventGID(_, _, _, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             _,
             _,
             void 0,
+            _,
             _,
           );
         }

@@ -3211,6 +3211,7 @@
         _ = () => "/home",
         _ = (_) => "/news" + (_ ? "/" + _ : ""),
         _ = (_) => `/newsentry/${_ || ""}`,
+        _ = (_) => `/newsentry2/${_ || ""}`,
         _ = (_) => `/cs2${_ || ""}`,
         _ = (_) => "/";
       var _ = __webpack_require__("chunkid"),
@@ -54929,13 +54930,21 @@
           _ = new URLSearchParams(_.search).has("is_embedded_in_client");
         if (!_)
           return (
-            _.LoadPartnerEventsPageable(
-              _.InitFromClanID(0),
-              730,
-              0,
-              100,
-              _,
-            ).then((_) => _(_)),
+            2 == _.newsfeed
+              ? _.LoadPartnerEventsPageable(
+                  _.InitFromClanID(46056098),
+                  0,
+                  0,
+                  100,
+                  _,
+                ).then((_) => _(_))
+              : _.LoadPartnerEventsPageable(
+                  _.InitFromClanID(0),
+                  730,
+                  0,
+                  100,
+                  _,
+                ).then((_) => _(_)),
             _.createElement("div", null)
           );
         let _ = __webpack_require__.find((_) => _.GID == _._);
@@ -56338,7 +56347,17 @@
                         }),
                         _.createElement(_, {
                           path: _(":id"),
-                          component: _,
+                          render: () =>
+                            _.createElement(_, {
+                              newsfeed: 1,
+                            }),
+                        }),
+                        _.createElement(_, {
+                          path: _(":id"),
+                          render: () =>
+                            _.createElement(_, {
+                              newsfeed: 2,
+                            }),
                         }),
                         _.createElement(_, {
                           path: _(":updates?"),

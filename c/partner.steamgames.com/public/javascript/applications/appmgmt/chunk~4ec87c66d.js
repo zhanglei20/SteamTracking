@@ -13858,15 +13858,15 @@
         GetBlogEditEventURL() {
           if (this.BHasAssociatedBlogEvent()) {
             const _ = _._.InitFromClanID(
-              this.m_oPromotionPlan.sale_clan_account,
+              this.m_oPromotionPlan.blog_post_clan_accountid,
             );
             return (
               _._.COMMUNITY_BASE_URL +
               "gid/" +
               _.ConvertTo64BitString() +
               "/partnerevents/edit/" +
-              this.m_oPromotionPlan.sale_clan_event_gid +
-              "?tab=sale"
+              this.m_oPromotionPlan.blog_post_clan_eventgid +
+              "?tab=description"
             );
           }
           return "";
@@ -74403,7 +74403,7 @@
       }
       function _(_) {
         const { clanAccountID: _, gidClanEvent: _ } = _,
-          { eventModel: _ } = (0, _._)(_, _);
+          { eventModel: _ } = (0, _._)(_, _, !0);
         if (!_) return null;
         const _ = Boolean(_.BIsVisibleEvent()),
           _ =
@@ -74464,7 +74464,7 @@
       }
       function _(_) {
         const { clanAccountID: _, gidClanEvent: _ } = _,
-          { eventModel: _ } = (0, _._)(_, _);
+          { eventModel: _ } = (0, _._)(_, _, !0);
         if (!_) return null;
         const _ = Boolean(_.BIsVisibleEvent());
         let _ = 0;
@@ -74781,6 +74781,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { oEditablePlan: _ } = _,
@@ -74789,9 +74791,7 @@
             _.BRequiresBlogPage(),
             _.GetBlogClanAccountID(),
             _.GetBlogClanEventGID(),
-          ]),
-          { eventModel: _ } = (0, _._)(_, _, !0),
-          [_, _, _] = (0, _._)();
+          ]);
         return (0, _.jsxs)("div", {
           className: _.LinkCtn,
           children: [
@@ -74809,6 +74809,11 @@
                       target: "_blank",
                       children: "Edit Associated Blog Page",
                     }),
+                  }),
+                  (0, _.jsx)(_, {
+                    blogClanAccountID: _,
+                    blogEventGID: _,
+                    oEditablePlan: _,
                   }),
                 ],
               }),
@@ -74863,6 +74868,88 @@
                   ],
                 }),
               ],
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { blogClanAccountID: _, blogEventGID: _, oEditablePlan: _ } = _,
+          [_, _, _] = (0, _._)(() => [
+            _.BHasAssociatedSaleEvent(),
+            _.GetSaleClanAccountID(),
+            _.GetSaleClanEventGID(),
+          ]),
+          _ = (function () {
+            (0, _._)();
+            return (0, _._)({
+              mutationFn: async (_) => {
+                const _ = await fetch(
+                  `${_._.PARTNER_BASE_URL}promotion/tools/eventimagecopy`,
+                  {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(_),
+                    credentials: "include",
+                  },
+                );
+                if (
+                  ("dev" == _._.WEB_UNIVERSE &&
+                    console.log(
+                      "event image copy workflow dev debug info: ",
+                      _,
+                      _,
+                    ),
+                  !_._)
+                )
+                  throw new Error("Failed to copy event assets, check logs");
+                const _ = await _.json();
+                if (!_ || 1 != _?.success)
+                  throw new Error(
+                    `Failed to copy event assets, check logs ${_?.success}`,
+                  );
+                return !0;
+              },
+            });
+          })(),
+          _ = (0, _._)(),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              onClick: () => {
+                _.fnSetLoading(!0),
+                  _(),
+                  _.mutateAsync({
+                    sourceClanAccountID: _,
+                    sourceClanEventGID: _,
+                    targetClanAccountID: _,
+                    targetClanEventGID: _,
+                  })
+                    .then((_) => {
+                      _.fnSetSuccess(!0),
+                        _.fnSetStrSuccess(
+                          "Images Copied; reload promotion plan.",
+                        );
+                    })
+                    .catch(() => {
+                      _.fnSetError(!0),
+                        _.fnSetStrError(
+                          "Failed to copy images, check console for errors.",
+                        );
+                    });
+              },
+              disabled: !_,
+              children: "Sync Event Capsule and Header from Sale Page",
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                state: _,
+                strDialogTitle: "Sync Sale -> Blog Images",
+                closeModal: _,
+              }),
             }),
           ],
         });
@@ -77339,7 +77426,7 @@
           ]),
           _ = (0, _._)(_._.k_ConfigPage_Takeover, _),
           _ = (0, _._)(_),
-          { eventModel: _ } = (0, _._)(_, _),
+          { eventModel: _ } = (0, _._)(_, _, !0),
           [_] = (0, _._)(_, _, _),
           _ = __webpack_require__.get(_),
           _ = [],
@@ -107934,81 +108021,71 @@
                   _ = null,
                   _ = null,
                   _ = null;
-                if (_?.length >= 3) (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if (_?.length >= 3)
+                if (_ && _?.length >= 3)
                   (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if (_?.length >= 3) (_ = _[1]), (_ = _[2]);
-                else if (_?.length >= 3)
+                else if (_ && _?.length >= 3)
                   (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if (_?.length >= 3) {
+                else if (_ && _?.length >= 3) (_ = _[1]), (_ = _[2]);
+                else if (_ && _.length >= 3)
+                  (_ = Number.parseInt(_[1])), (_ = _[2]);
+                else if (_ && _.length >= 3) {
                   let _ = _[1];
                   _ = _[2];
                   let _ = await _._.LoadOGGClanInfoForIdentifier(_);
                   _ && (_ = _.appid);
-                } else if (_?.length >= 3) (_ = _[1]), (_ = _[2]);
-                else if (_?.length >= 3)
+                } else if (_ && _.length >= 3) (_ = _[1]), (_ = _[2]);
+                else if (_ && _.length >= 3)
                   (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if (_?.length >= 3) {
+                else if (_ && _.length >= 3) {
                   const _ = _[1];
                   _ = _[2];
                   const _ = await _._.LoadOGGClanInfoForIdentifier(_);
                   _ && (_ = _.appid);
                 }
+                const _ = Boolean(_);
                 if (_)
                   _
-                    ? (_ = await _._.LoadPartnerEventFromClanEventGID(_, _, 0))
+                    ? (_ = await _._.LoadPartnerEventFromClanEventGID(
+                        _,
+                        _,
+                        0,
+                        _,
+                      ))
                     : _ &&
                       (_ = await _._.LoadPartnerEventFromAnnoucementGID(
                         _,
                         _,
                         0,
+                        _,
                       ));
                 else {
                   let _ = null;
                   if ((_ && (_ = _._.InitFromClanID(_)), _)) {
-                    _ = (await _._.LoadOGGClanInfoForGroupVanity(_))
-                      .clanSteamID;
+                    let _ = await _._.LoadOGGClanInfoForGroupVanity(_);
+                    _ && (_ = _.clanSteamID);
                   }
-                  if (_) {
-                    const _ = !0;
-                    _ && _
-                      ? (_ =
-                          await _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                            _,
-                          ))
-                      : _ &&
-                        _ &&
-                        (_ =
-                          await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                            _,
-                          ));
-                  } else
-                    _ && _
-                      ? (_ =
-                          await _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                          ))
-                      : _ &&
-                        _ &&
-                        (_ =
-                          await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                          ));
+                  _ && _
+                    ? (_ =
+                        await _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                          _,
+                          _,
+                          0,
+                          _,
+                        ))
+                    : _ &&
+                      _ &&
+                      (_ =
+                        await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                          _,
+                          _,
+                          0,
+                          _,
+                        ));
                 }
                 if (_)
                   return (
                     _.push({
-                      name: _.GetNameWithFallback(_),
+                      name: _.GetNameWithFallback(_) ?? "",
                       type: _.GetEventType(),
                       clanSteamID: _.clanSteamID,
                       gidClanAnnouncement: _.GetAnnouncementGID(),
@@ -108023,21 +108100,22 @@
                 let _ = null;
                 if (_) {
                   const _ = _._.GetCreatorHome(new _._(_));
-                  _ = await _.Get().GetLatestPartnerEvents(
-                    _().CancelToken.source(),
-                    0,
-                    20,
-                    __webpack_require__.GetAppIDList(),
-                    void 0,
-                    void 0,
-                    void 0,
-                    void 0,
-                    !0,
-                    [__webpack_require__.GetClanAccountID()],
-                    _,
-                    !0,
-                    _,
-                  );
+                  _ &&
+                    (_ = await _.Get().GetLatestPartnerEvents(
+                      _().CancelToken.source(),
+                      0,
+                      20,
+                      __webpack_require__.GetAppIDList(),
+                      void 0,
+                      void 0,
+                      void 0,
+                      void 0,
+                      !0,
+                      [__webpack_require__.GetClanAccountID()],
+                      _,
+                      !0,
+                      _,
+                    ));
                 } else
                   _ = await _.Get().GetLatestPartnerEvents(
                     _().CancelToken.source(),
@@ -108054,13 +108132,14 @@
                     !0,
                     _,
                   );
-                const _ = _.map((_) => ({
-                  name: _.event_name,
-                  type: Number.parseInt(_.event_type),
-                  clanSteamID: new _._(_.clan_steamid),
-                  gidClanAnnouncement: _.announcement_gid,
-                  gidClanEvent: _.unique_id,
-                }));
+                const _ =
+                  _?.map((_) => ({
+                    name: _.event_name,
+                    type: Number.parseInt(_.event_type),
+                    clanSteamID: new _._(_.clan_steamid),
+                    gidClanAnnouncement: _.announcement_gid,
+                    gidClanEvent: _.unique_id,
+                  })) ?? [];
                 _(_);
               }, 300);
             },

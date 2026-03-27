@@ -33,44 +33,30 @@
         HoverToolTip: "_36qS74l1tXSXwGdyfIFQ-G",
       };
     },
-    69041: (e) => {
-      e.exports = {
-        Button: "_0BH1ydyFmSnUvoVK2hIc",
-        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
-        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
-        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
-        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
-        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
-        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
-        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
-        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
-        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
-        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
-        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
-      };
-    },
-    73406: (e) => {
-      e.exports = {
-        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
-        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
-        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
-        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
-        "Size-3": "_389OPmdZoebw42_AlsUFxi",
-        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
-        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
-        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
-        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
-        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
-      };
-    },
     16180: (e) => {
       e.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
       };
     },
-    91239: (e) => {
-      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
+    65274: (e) => {
+      e.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
     },
     31389: (e) => {
       e.exports = {
@@ -89,8 +75,8 @@
     10754: (e, r, n) => {
       "use strict";
       n.d(r, {
-        mK: () => I,
-        Gy: () => v,
+        mK: () => E,
+        Gy: () => T,
         sh: () => _,
         T6: () => x,
         Oo: () => D,
@@ -102,14 +88,14 @@
         a = n(17084),
         c = n(9554),
         l = n(90626),
-        d = n(16676),
-        u = n(12155),
+        u = n(16676),
+        d = n(12155),
         b = n(32754),
         m = n(52038),
-        h = n(61859),
-        S = n(47184),
-        p = n(96434),
-        y = n.n(p),
+        S = n(61859),
+        p = n(47184),
+        h = n(96434),
+        y = n.n(h),
         C = n(14336);
       let P = null;
       function g(e) {
@@ -121,13 +107,13 @@
             nSuggestedPriceInCents: c,
             fnSetPrice: l,
           } = (0, a.xQ)(r, n),
-          { nPriceInCents: d } = (0, a.xQ)(r, "USD"),
-          u = !(!s || (i && s == i)),
-          p = (0, a.d$)(r),
-          g = p && I(p.rtSubmitted),
-          { data: _ } = (0, C.js)(p?.submitterID),
-          f = _ ? _.m_strPlayerName : p?.submitterID;
-        return (i || u || c) && P == r + n
+          { nPriceInCents: u } = (0, a.xQ)(r, "USD"),
+          d = !(!s || (i && s == i)),
+          h = (0, a.d$)(r),
+          g = h && E(h.rtSubmitted),
+          { data: _ } = (0, C.js)(h?.submitterID),
+          f = _ ? _.m_strPlayerName : h?.submitterID;
+        return (i || d || c) && P == r + n
           ? (0, t.jsxs)("div", {
               className: y().PricePopout,
               children: [
@@ -135,13 +121,13 @@
                   (0, t.jsxs)(b.he, {
                     className: y().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, h.we)(
+                    toolTipContent: (0, S.we)(
                       "#PricingDashboard_CurrentPriceOnStore_ttip",
                     ),
                     children: [
                       (0, t.jsx)("div", {
                         className: y().DetailLabel,
-                        children: (0, h.we)(
+                        children: (0, S.we)(
                           "#PricingDashboard_CurrentPriceOnStore",
                         ),
                       }),
@@ -156,20 +142,20 @@
                         ),
                         onClick: () => l(i),
                         bDisabled: i == o,
-                        toolTipContent: (0, h.we)(
+                        toolTipContent: (0, S.we)(
                           "#PricingDashboard_UseThisOldPrice_ttip",
                         ),
-                        children: (0, h.we)(
+                        children: (0, S.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
                     ],
                   }),
-                u &&
+                d &&
                   (0, t.jsxs)(b.he, {
                     className: y().DetailRow,
                     direction: "left",
-                    toolTipContent: (0, h.we)(
+                    toolTipContent: (0, S.we)(
                       "#PricingDashboard_ProposedPrice_ttip",
                       f,
                       g,
@@ -177,7 +163,7 @@
                     children: [
                       (0, t.jsx)("div", {
                         className: y().DetailLabel,
-                        children: (0, h.we)("#PricingDashboard_ProposedPrice"),
+                        children: (0, S.we)("#PricingDashboard_ProposedPrice"),
                       }),
                       (0, t.jsx)("div", {
                         className: y().DetailPrice,
@@ -190,10 +176,10 @@
                         ),
                         onClick: () => l(s),
                         bDisabled: s == o,
-                        toolTipContent: (0, h.we)(
+                        toolTipContent: (0, S.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
                         ),
-                        children: (0, h.we)(
+                        children: (0, S.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
@@ -203,14 +189,14 @@
                   (0, t.jsxs)(b.he, {
                     className: y().DetailRow,
                     direction: "left",
-                    toolTipContent: S.g.Localize(
+                    toolTipContent: p.g.Localize(
                       "#PricingDashboard_Method_SuggestedPrice_ttip",
-                      (0, a.Wx)(d, "USD").join(""),
+                      (0, a.Wx)(u, "USD").join(""),
                     ),
                     children: [
                       (0, t.jsx)("div", {
                         className: y().DetailLabel,
-                        children: S.g.Localize(
+                        children: p.g.Localize(
                           "#PricingDashboard_Method_SuggestedPrice",
                         ),
                       }),
@@ -225,10 +211,10 @@
                         ),
                         onClick: () => l(c),
                         bDisabled: c == o,
-                        toolTipContent: (0, h.we)(
+                        toolTipContent: (0, S.we)(
                           "#PricingDashboard_UseThisNewPrice_ttip",
                         ),
-                        children: (0, h.we)(
+                        children: (0, S.we)(
                           "#PricingDashboard_UseThisPrice_Button",
                         ),
                       }),
@@ -243,30 +229,30 @@
           i = n.original.packageID,
           s = r.getValue(),
           {
-            nPriceInCents: u,
+            nPriceInCents: d,
             nPublishedPriceInCents: b,
             nProposedPriceInCents: m,
-            fnSetPrice: h,
+            fnSetPrice: S,
           } = (0, a.xQ)(i, s),
-          [S, p, C] = (0, a.Wx)(u, s),
+          [p, h, C] = (0, a.Wx)(d, s),
           _ = (0, a.Gs)(s),
           D = l.useRef(void 0),
-          { strClassName: I } = k(i, s),
-          T = "USD" == s,
-          A = m ?? b,
-          E = u != A;
+          { strClassName: E } = k(i, s),
+          I = "USD" == s,
+          v = m ?? b,
+          A = d != v;
         return (0, t.jsxs)("div", {
           ref: D,
           onKeyDown: c.nm,
-          className: I,
+          className: E,
           children: [
-            E && (0, t.jsx)(v, { nPriceInCents: u, nSavedPriceInCents: A }),
-            (0, t.jsx)("div", { className: y().PricePrefix, children: S && S }),
+            A && (0, t.jsx)(T, { nPriceInCents: d, nSavedPriceInCents: v }),
+            (0, t.jsx)("div", { className: y().PricePrefix, children: p && p }),
             (0, t.jsx)(o.n, {
               menuTarget: (0, t.jsx)("div", {
                 className: y().EditablePrice,
-                children: (0, t.jsx)(d.pd, {
-                  value: p,
+                children: (0, t.jsx)(u.pd, {
+                  value: h,
                   className: y().PriceInput,
                   onChange: (e) => {
                     const r = e.target.value.replace(/[^0-9]/g, "");
@@ -274,7 +260,7 @@
                     if (Number.isNaN(n)) return;
                     _.bWholeUnitsOnly && (n *= 100);
                     const t = 2147483647;
-                    n > t && (n = t), h(n);
+                    n > t && (n = t), S(n);
                   },
                   onFocus: () => {
                     P = i + s;
@@ -288,7 +274,7 @@
               children: (0, t.jsx)(g, { packageID: i, strPriceKey: s }),
             }),
             (0, t.jsx)("div", { className: y().PriceSuffix, children: C && C }),
-            T &&
+            I &&
               (0, t.jsx)(f, {
                 packageID: i,
                 appids: n.original.appids,
@@ -304,7 +290,7 @@
         return (0, t.jsx)(s.x, {
           fnGetUSDPriceInCents: () => (0, a.FR)(r, "USD"),
           fnOnUpdate: (e) => c(r, e),
-          strDescription: S.g.Localize(
+          strDescription: p.g.Localize(
             "#PricingDashboard_GuidelinesPickerDescription_New",
           ),
           nPackageID: r,
@@ -321,7 +307,7 @@
               strTooltipClassname: y().HoverToolTip,
               toolTipContent: o,
               direction: "top",
-              children: (0, t.jsx)(u.eTF, {
+              children: (0, t.jsx)(d.eTF, {
                 color: i ? "rgb(194, 45, 0)" : "#e5af37",
               }),
             })
@@ -336,69 +322,69 @@
             nMinPriceInCents: i,
             nMaxPriceInCents: s,
             nMaxDiscountPercentage: c,
-            nSuggestedPriceInCents: d,
+            nSuggestedPriceInCents: u,
           } = (0, a.xQ)(e, r),
-          u = (0, a.d$)(e),
+          d = (0, a.d$)(e),
           b = "USD" == r,
-          S = n != (o ?? t),
-          p = n < i,
+          p = n != (o ?? t),
+          h = n < i,
           C = !!s && n > s,
-          P = !!d && n > d * D,
-          g = !!d && n < d / D,
-          _ = !!d && n < d && !!c,
-          f = !!d && n == d && !!c,
+          P = !!u && n > u * D,
+          g = !!u && n < u / D,
+          _ = !!u && n < u && !!c,
+          f = !!u && n == u && !!c,
           x =
-            (C && (0, h.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
-            (p &&
-              (0, h.we)(
+            (C && (0, S.we)("#PricingDashboard_PriceIncreaseDisallowed")) ||
+            (h &&
+              (0, S.we)(
                 "#PricingDashboard_PriceTooLow",
                 (0, a.Wx)(i, r).join(""),
               )) ||
             (P &&
-              (0, h.we)(
+              (0, S.we)(
                 "#PricingDashboard_PriceMuchHigherThanMethod",
-                (0, a.Wx)(d, r).join(""),
+                (0, a.Wx)(u, r).join(""),
               )) ||
             (P && !1) ||
             (g &&
-              (0, h.we)(
+              (0, S.we)(
                 "#PricingDashboard_PriceMuchLowerThanMethod",
-                (0, a.Wx)(d, r).join(""),
+                (0, a.Wx)(u, r).join(""),
               )) ||
             (g && !1) ||
             (_ &&
-              (0, h.we)(
+              (0, S.we)(
                 "#PricingDashboard_PriceCheapAndLowerThanGuidelines",
                 c,
               )) ||
-            (f && (0, h.we)("#PricingDashboard_PriceCheap", c)),
-          k = C || p,
-          v = P || g,
-          I = k || v || _,
-          T = !(S || !o || (t && o == t)),
-          A = 4 == u?.eState,
-          E = (0, m.A)(
+            (f && (0, S.we)("#PricingDashboard_PriceCheap", c)),
+          k = C || h,
+          T = P || g,
+          E = k || T || _,
+          I = !(p || !o || (t && o == t)),
+          v = 4 == d?.eState,
+          A = (0, m.A)(
             y().PriceCell,
             b && y().USD,
-            S && y().ChangedLocally,
-            T && y().ProposedPrice,
-            A && y().ApprovedCanPublish,
-            I && y().WarningPrice,
-            v && y().SevereWarningPrice,
+            p && y().ChangedLocally,
+            I && y().ProposedPrice,
+            v && y().ApprovedCanPublish,
+            E && y().WarningPrice,
+            T && y().SevereWarningPrice,
             k && y().BadPrice,
           );
         return l.useMemo(
           () => ({
             strPriceWarning: x,
-            strClassName: E,
+            strClassName: A,
             bBadPrice: k,
-            bShowSevereWarning: v,
-            bShowWarningIcon: I,
+            bShowSevereWarning: T,
+            bShowWarningIcon: E,
           }),
-          [x, E, k, v, I],
+          [x, A, k, T, E],
         );
       }
-      function v(e) {
+      function T(e) {
         const { nPriceInCents: r, nSavedPriceInCents: n } = e;
         let o = null,
           i = null,
@@ -408,16 +394,16 @@
           const e = Math.ceil((100 * (r - n)) / n),
             c = r > n;
           (s = c
-            ? (0, h.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
-            : (0, h.we)("#PricingDashboard_PriceLowerBy", e + "%")),
+            ? (0, S.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
+            : (0, S.we)("#PricingDashboard_PriceLowerBy", e + "%")),
             (a = (0, m.A)(y().PriceChange, c && y().PriceIncrease)),
             (i = (0, t.jsx)("div", {
               className: y().PriceChangeArrow,
-              children: (0, t.jsx)(u.i3G, { angle: c ? 0 : 180 }),
+              children: (0, t.jsx)(d.i3G, { angle: c ? 0 : 180 }),
             })),
             (o = e + "%");
         } else
-          (o = (0, h.we)("#PricingDashboard_PriceIsNew_Short")),
+          (o = (0, S.we)("#PricingDashboard_PriceIsNew_Short")),
             (a = (0, m.A)(y().NewPrice));
         return (0, t.jsxs)(b.he, {
           className: a,
@@ -427,8 +413,8 @@
           children: [i, o],
         });
       }
-      function I(e) {
-        return new Date(1e3 * e).toLocaleString(h.pf.GetPreferredLocales(), {
+      function E(e) {
+        return new Date(1e3 * e).toLocaleString(S.pf.GetPreferredLocales(), {
           weekday: "long",
           month: "long",
           day: "numeric",
@@ -437,161 +423,72 @@
         });
       }
     },
-    53965: (e, r, n) => {
+    20187: (e, r, n) => {
       "use strict";
-      n.d(r, { $: () => g, v: () => _ });
+      n.d(r, { Ae: () => d, EY: () => l, U6: () => u });
       var t = n(7850),
-        o = n(64238),
-        i = n.n(o),
-        s = n(69041),
-        a = n(75659),
-        c = n(41324),
-        l = n(11820),
-        d = n(73406),
-        u = n(90534),
-        b = n(53971);
-      function m(e) {
-        const {
-          size: r = "3",
-          loading: n = !0,
-          children: o,
-          color: i,
-          variant: s,
-          ...a
-        } = e;
-        return o || !n
-          ? (0, t.jsxs)(u.az, {
-              position: "relative",
-              ...a,
-              width: "fit-content",
-              children: [
-                (0, t.jsx)("div", {
-                  "data-visibility": !n,
-                  className: d.ChildContainer,
-                  children: o,
-                }),
-                n &&
-                  (0, t.jsx)(b.s, {
-                    position: "absolute",
-                    inset: "0",
-                    justify: "center",
-                    align: "center",
-                    children: (0, t.jsx)(h, { size: r, color: i, variant: s }),
-                  }),
-              ],
-            })
-          : (0, t.jsx)(h, { size: r, color: i, variant: s, ...a });
-      }
-      function h(e) {
-        const { className: r, color: n, ...o } = (0, c.mz)(e, S);
-        return (0, t.jsx)("div", {
-          "data-accent-color": n,
-          className: i()(r, d.Spinner),
-          ...o,
+        o = n(41324),
+        i = n(75659),
+        s = n(64238),
+        a = n.n(s),
+        c = n(65274);
+      function l(e) {
+        const { as: r = "span", ref: n, className: i, ...s } = e,
+          l = r;
+        return (0, t.jsx)(l, {
+          ref: n,
+          ...(0, o.mz)({ ...s, className: a()(c.Text, i) }, d),
         });
       }
-      const S = [
-        ...a.L,
-        { prop: "size", responsive: !0, className: (e) => d[`Size-${e}`] },
-        { prop: "variant", className: (e) => d[`Variant-${e}`] },
-      ];
-      var p = n(45699),
-        y = n(8527);
-      function C(e) {
-        e.preventDefault();
-      }
-      const P = [
-          ...a.L,
-          { prop: "size", responsive: !0, className: (e) => s[`Size-${e}`] },
-          { prop: "variant", className: (e) => s[`Variant-${e}`] },
-          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
+      const u = [
           {
-            prop: "width",
-            className: s.Width,
-            cssProperty: "--width",
+            prop: "weight",
             responsive: !0,
+            className: c.TextWeight,
+            cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
           },
           {
-            prop: "minWidth",
-            className: s.MinWidth,
-            cssProperty: "--min-width",
+            prop: "align",
             responsive: !0,
+            className: c.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (e, r) => [
+              "--text-color",
+              (0, o.To)(e, r.contrast ?? "body"),
+            ],
+          },
+          {
+            prop: "contrast",
+            cssProperty: (e, r) => [
+              "--text-color",
+              (0, o.To)(r.color ?? "text-body", e),
+            ],
+          },
+          { prop: "truncate", className: c.Truncate },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: c.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: c.WhiteSpace,
+            cssProperty: "--white-space",
           },
         ],
-        g = function (e) {
-          const {
-              variant: r = "default",
-              size: n = "2",
-              minWidth: o = "fit-content",
-              color: a,
-              loading: l,
-              children: d,
-              onClick: u,
-              icon: b,
-              gamepadFocusable: h = !0,
-              ...S
-            } = e,
-            C = l
-              ? (0, t.jsx)(m, {
-                  size: n,
-                  color: a,
-                  variant: "bright",
-                  children: d,
-                })
-              : d,
-            g = l ? void 0 : u,
-            _ = h && y.TS.IN_GAMEPADUI ? p.fu : "button";
-          return (0, t.jsx)(_, {
-            type: "button",
-            ...(0, c.mz)(
-              {
-                ...S,
-                variant: r,
-                size: n,
-                minWidth: o,
-                color: a,
-                className: i()(s.Button, b && s.Icon),
-                onClick: g,
-              },
-              P,
-            ),
-            children: C,
-          });
-        },
-        _ = function (e) {
-          const {
-              variant: r = "default",
-              size: n = "2",
-              minWidth: o = "fit-content",
-              disabled: a,
-              icon: d,
-              gamepadFocusable: u = !0,
-              ...b
-            } = e,
-            m = a ? C : void 0,
-            h = u && y.TS.IN_GAMEPADUI ? p.Ii : "a";
-          return (0, t.jsx)(h, {
-            ...(0, c.mz)(
-              {
-                onClick: m,
-                ...b,
-                variant: r,
-                size: n,
-                minWidth: o,
-                className: i()(s.Button, d && s.Icon, (0, l.T)()),
-              },
-              P,
-            ),
-          });
-        };
-    },
-    11820: (e, r, n) => {
-      "use strict";
-      n.d(r, { T: () => o });
-      var t = n(91239);
-      function o() {
-        return t.Reset;
-      }
+        d = [
+          ...u,
+          ...i.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (e) => c[`TextSize-${e}`],
+          },
+        ];
     },
     87864: (e, r, n) => {
       "use strict";
@@ -812,30 +709,30 @@
             bSpaceForSymbol: a,
             bWholeUnitsOnly: c,
             strDecimalSymbol: l,
-            strThousandsSeparator: d,
+            strThousandsSeparator: u,
           } = n,
-          u = e < 0,
+          d = e < 0,
           b = c && e % 100 == 0;
-        u && (e = -e);
+        d && (e = -e);
         const m = [];
         for (let r = 0; r < 2; r++)
           b || m.push(e % 10), (e = Math.floor(e / 10));
         !b && l && m.push(l);
-        let h = 0;
+        let S = 0;
         do {
-          h++ % 3 == 0 && h > 2 && d && m.push(d),
+          S++ % 3 == 0 && S > 2 && u && m.push(u),
             m.push(e % 10),
             (e = Math.floor(e / 10));
         } while (e > 0);
-        const S = m.reverse().join(""),
-          p = a ? " " : "",
-          y = u ? "-" : "";
-        return s ? `${y}${S}${p}${t}` : `${y}${t}${p}${S}`;
+        const p = m.reverse().join(""),
+          h = a ? " " : "",
+          y = d ? "-" : "";
+        return s ? `${y}${p}${h}${t}` : `${y}${t}${h}${p}`;
       }
     },
     13578: (e, r, n) => {
       "use strict";
-      n.d(r, { n: () => h });
+      n.d(r, { n: () => S });
       var t = n(7850),
         o = n(91934),
         i = n(64238),
@@ -843,7 +740,7 @@
         a = n(90626),
         c = n(56011),
         l = n(65697);
-      function d(e) {
+      function u(e) {
         const {
             direction: r,
             ignoreHorizontal: n,
@@ -851,12 +748,12 @@
             dismissOnClick: i,
             interactionMode: s = 0,
           } = e,
-          d = (0, a.useRef)(null),
-          u = (0, a.useRef)(!1),
+          u = (0, a.useRef)(null),
+          d = (0, a.useRef)(!1),
           b = (0, a.useRef)(!1),
           m = (0, a.useRef)(null),
-          [h, S] = (0, a.useState)(!1),
-          [p, y] = (0, a.useMemo)(
+          [S, p] = (0, a.useState)(!1),
+          [h, y] = (0, a.useMemo)(
             () =>
               (function (e) {
                 const [r, n] = (0, o.x)(e, "-");
@@ -865,68 +762,68 @@
             [r],
           ),
           C = (0, a.useCallback)(() => {
-            if (!m.current || !d.current) return;
+            if (!m.current || !u.current) return;
             const e = m.current.getBoundingClientRect();
             let r = y;
             const o = m.current.matches(":dir(rtl)");
             o && ("left" === y ? (r = "right") : "right" === y && (r = "left")),
-              d.current.style.setProperty("--parentWidth", `${e.width}px`),
-              d.current.style.setProperty("--parentHeight", `${e.height}px`),
+              u.current.style.setProperty("--parentWidth", `${e.width}px`),
+              u.current.style.setProperty("--parentHeight", `${e.height}px`),
               n ||
                 ("left" === r
-                  ? p
-                    ? ((d.current.style.left = "unset"),
-                      (d.current.style.right =
+                  ? h
+                    ? ((u.current.style.left = "unset"),
+                      (u.current.style.right =
                         document.documentElement.clientWidth - e.right + "px"))
-                    : ((d.current.style.left = "unset"),
-                      (d.current.style.right =
+                    : ((u.current.style.left = "unset"),
+                      (u.current.style.right =
                         document.documentElement.clientWidth - e.left + "px"))
                   : "right" === r
-                    ? p
-                      ? ((d.current.style.left = `${e.left}px`),
-                        (d.current.style.right = "unset"))
-                      : ((d.current.style.left = `${e.right}px`),
-                        (d.current.style.right = "unset"))
+                    ? h
+                      ? ((u.current.style.left = `${e.left}px`),
+                        (u.current.style.right = "unset"))
+                      : ((u.current.style.left = `${e.right}px`),
+                        (u.current.style.right = "unset"))
                     : void 0 === r &&
                       (o
-                        ? ((d.current.style.left = "unset"),
-                          (d.current.style.right =
+                        ? ((u.current.style.left = "unset"),
+                          (u.current.style.right =
                             document.documentElement.clientWidth -
                             e.right +
                             "px"))
-                        : ((d.current.style.left = `${e.left}px`),
-                          (d.current.style.right = "unset")))),
+                        : ((u.current.style.left = `${e.left}px`),
+                          (u.current.style.right = "unset")))),
               t ||
-                ("down" === p
-                  ? ((d.current.style.top = `${e.bottom}px`),
-                    (d.current.style.bottom = "unset"),
-                    d.current.style.setProperty(
+                ("down" === h
+                  ? ((u.current.style.top = `${e.bottom}px`),
+                    (u.current.style.bottom = "unset"),
+                    u.current.style.setProperty(
                       "--availableHeight",
                       document.documentElement.clientHeight - e.bottom + "px",
                     ))
-                  : "up" === p
-                    ? ((d.current.style.top = "unset"),
-                      (d.current.style.bottom =
+                  : "up" === h
+                    ? ((u.current.style.top = "unset"),
+                      (u.current.style.bottom =
                         document.documentElement.clientHeight - e.top + "px"),
-                      d.current.style.setProperty(
+                      u.current.style.setProperty(
                         "--availableHeight",
                         `${e.top}px`,
                       ))
-                    : void 0 === p &&
-                      ((d.current.style.top = `${e.top}px`),
-                      (d.current.style.bottom = "unset"),
-                      d.current.style.setProperty(
+                    : void 0 === h &&
+                      ((u.current.style.top = `${e.top}px`),
+                      (u.current.style.bottom = "unset"),
+                      u.current.style.setProperty(
                         "--availableHeight",
                         document.documentElement.clientHeight - e.top + "px",
                       )));
-          }, [y, n, t, p]),
+          }, [y, n, t, h]),
           P = (0, a.useMemo)(() => {
             if (m.current) return (0, c._f)(m.current);
           }, [m.current]);
         (0, a.useEffect)(
           () =>
-            h
-              ? (d.current?.showPopover(),
+            S
+              ? (u.current?.showPopover(),
                 P?.addEventListener("scroll", C),
                 window.addEventListener("scroll", C),
                 () => {
@@ -935,122 +832,122 @@
                 })
               : ("true" !=
                   window.sessionStorage.getItem("DEBUG_StickyContextMenus") &&
-                  d.current?.hidePopover(),
+                  u.current?.hidePopover(),
                 () => {}),
-          [h, C, P],
+          [S, C, P],
         );
         const g = (0, a.useCallback)(() => {
-            C(), S(!0), (b.current = !0);
+            C(), p(!0), (b.current = !0);
           }, [C]),
           _ = (0, a.useCallback)(() => {
-            (b.current = !1), u.current || S(!1);
+            (b.current = !1), d.current || p(!1);
           }, []),
           f = (0, a.useCallback)(() => {
-            (u.current = !0), S(!0);
+            (d.current = !0), p(!0);
           }, []),
           x = (0, a.useCallback)(
             (e) => {
-              d.current?.contains(e.target) && f();
+              u.current?.contains(e.target) && f();
             },
             [f],
           ),
           D = (0, a.useCallback)(
             (e) => {
-              d.current?.contains(e.target) && f();
+              u.current?.contains(e.target) && f();
             },
             [f],
           ),
           k = (0, a.useCallback)(() => {
-            (u.current = !1), b.current || S(!1);
+            (d.current = !1), b.current || p(!1);
           }, []),
-          v = (0, a.useCallback)(
+          T = (0, a.useCallback)(
             (e) => {
-              d.current?.contains(e.target) && k();
+              u.current?.contains(e.target) && k();
             },
             [k],
           ),
-          I = (0, a.useCallback)(() => {
+          E = (0, a.useCallback)(() => {
             k(), _();
           }, [k, _]),
-          T = (0, a.useCallback)(
+          I = (0, a.useCallback)(
             (e) => {
-              "Enter" === e.key && (e.preventDefault(), h ? _() : g());
+              "Enter" === e.key && (e.preventDefault(), S ? _() : g());
             },
-            [_, g, h],
+            [_, g, S],
           ),
-          A = (0, a.useCallback)(
+          v = (0, a.useCallback)(
             (e) => {
               e.currentTarget.contains(e.relatedTarget) ||
-                d.current?.contains(e.relatedTarget) ||
+                u.current?.contains(e.relatedTarget) ||
                 _();
             },
             [_],
           ),
-          E = (0, a.useCallback)(
+          A = (0, a.useCallback)(
             (e) => {
               2 === s && g();
             },
             [s, g],
           ),
-          j = (0, a.useCallback)(
+          w = (0, a.useCallback)(
             (e) => {
               const r =
                   e.relatedTarget && !e.currentTarget.contains(e.relatedTarget),
-                n = !e.relatedTarget && !u.current;
-              (r || n) && (k(), S(!1));
+                n = !e.relatedTarget && !d.current;
+              (r || n) && (k(), p(!1));
             },
             [k],
           ),
+          j = (0, a.useCallback)(
+            (e) => {
+              u.current?.contains(e.target) &&
+                (S && i ? E() : d.current && g());
+            },
+            [E, i, S, g],
+          ),
           F = (0, a.useCallback)(
             (e) => {
-              d.current?.contains(e.target) &&
-                (h && i ? I() : u.current && g());
+              u.current?.contains(e.target) &&
+                ("Enter" === e.key && S && i ? E() : g(),
+                "Escape" === e.key && S && (E(), e.stopPropagation()));
             },
-            [I, i, h, g],
-          ),
-          w = (0, a.useCallback)(
-            (e) => {
-              d.current?.contains(e.target) &&
-                ("Enter" === e.key && h && i ? I() : g(),
-                "Escape" === e.key && h && (I(), e.stopPropagation()));
-            },
-            [I, i, h, g],
+            [E, i, S, g],
           );
-        let N;
-        0 !== s || h
-          ? 1 === s && (N = h ? _ : g)
-          : (N = (e) => {
+        let O;
+        0 !== s || S
+          ? 1 === s && (O = S ? _ : g)
+          : (O = (e) => {
               e.preventDefault(), g();
             });
-        const O = {
-            "aria-expanded": h,
+        const N = {
+            "aria-expanded": S,
             role: "button",
             onMouseEnter: 0 === s ? g : void 0,
             onMouseLeave: 0 === s ? _ : void 0,
-            onClick: N,
+            onClick: O,
             ref: m,
-            onKeyDown: T,
-            onFocus: E,
-            onBlur: A,
+            onKeyDown: I,
+            onFocus: A,
+            onBlur: v,
           },
           R = {
             popover: "manual",
-            ref: d,
+            ref: u,
             onMouseEnter: D,
-            onMouseLeave: v,
+            onMouseLeave: T,
             onFocus: x,
-            onBlur: j,
-            onClick: F,
-            onKeyDown: w,
+            onBlur: w,
+            onClick: j,
+            onKeyDown: F,
             className: l.PopoverMenu,
           };
         return (
           (0, a.useImperativeHandle)(
             e.ref,
-            () => ({ show: g, hide: _, close: I }),
-            [g, _, I],
+            () => ({ show: g, hide: _, close: E }),
+            [g, _, E],
           ),
-          { isShowingMenu: h, triggerProps: O, menuProps: R, closeMenu: I }
+          { isShowingMenu: S, triggerProps: N, menuProps: R, closeMenu: E }
         );
       }
       !(async function () {
@@ -1062,14 +959,14 @@
           (await n.e(8433).then(n.bind(n, 8433))).apply();
         }
       })();
-      var u = n(7445),
+      var d = n(7445),
         b = n(76217);
       function m(e, r) {
         return (n) => {
           e?.(n), r?.(n);
         };
       }
-      function h(e) {
+      function S(e) {
         const {
             direction: r,
             interactionMode: n = 0,
@@ -1077,9 +974,9 @@
             ignoreVertical: i,
             dismissOnClick: c,
             menuTarget: l,
-            className: h,
-            children: S,
-            renderWhenClosed: p = !0,
+            className: S,
+            children: p,
+            renderWhenClosed: h = !0,
             ...y
           } = e,
           {
@@ -1087,7 +984,7 @@
             triggerProps: P,
             menuProps: g,
             closeMenu: _,
-          } = d(e),
+          } = u(e),
           f = a.useRef(null),
           x = a.useRef(null);
         return (
@@ -1107,12 +1004,12 @@
               (0, t.jsx)(b.Z, {
                 ...y,
                 ...g,
-                className: s()(g.className, h),
+                className: s()(g.className, S),
                 navRef: x,
                 onCancel: _,
                 onFocusWithin: (e) => !e && _(),
                 childFocusDisabled: !C,
-                children: (0, t.jsx)(u.q, { children: (p || C) && S }),
+                children: (0, t.jsx)(d.q, { children: (h || C) && p }),
               }),
             ],
           })
@@ -1121,7 +1018,7 @@
     },
     42836: (e, r, n) => {
       "use strict";
-      n.d(r, { K: () => x, T: () => v });
+      n.d(r, { K: () => x, T: () => T });
       var t = n(7850),
         o = n(53965),
         i = n(90534),
@@ -1129,7 +1026,7 @@
         a = n(90626),
         c = n(16180),
         l = n(53971);
-      const d = Object.assign(
+      const u = Object.assign(
           function (e) {
             const {
               value: r,
@@ -1138,13 +1035,13 @@
               getOptionLabel: i,
               ...s
             } = e;
-            return (0, t.jsx)(d.Root, {
+            return (0, t.jsx)(u.Root, {
               value: r,
               onValueChange: n,
               ...s,
               children: o.map((e) => {
                 const r = i ? i(e) : e;
-                return (0, t.jsx)(d.Option, { value: e, children: r }, r);
+                return (0, t.jsx)(u.Option, { value: e, children: r }, r);
               }),
             });
           },
@@ -1155,7 +1052,7 @@
                   () => ({ value: r, onValueChange: n }),
                   [r, n],
                 );
-              return (0, t.jsx)(u, {
+              return (0, t.jsx)(d, {
                 value: i,
                 children: (0, t.jsx)(l.s, {
                   direction: "column",
@@ -1167,7 +1064,7 @@
             },
             Option: function (e) {
               const { value: r, ref: n, children: o } = e,
-                i = (0, a.useContext)(u);
+                i = (0, a.useContext)(d);
               if (!i)
                 return (
                   console.error(
@@ -1175,19 +1072,19 @@
                   ),
                   null
                 );
-              const { value: d, onValueChange: b } = i,
-                m = d === r,
-                h = () => {
+              const { value: u, onValueChange: b } = i,
+                m = u === r,
+                S = () => {
                   m || b(r);
                 };
               return (0, t.jsxs)(l.s, {
                 ref: n,
                 role: "radio",
                 "aria-checked": m,
-                onClick: h,
+                onClick: S,
                 onKeyDown: (e) => {
                   " " === e.key &&
-                    (h(), e.preventDefault(), e.stopPropagation());
+                    (S(), e.preventDefault(), e.stopPropagation());
                 },
                 tabIndex: m ? 0 : -1,
                 cursor: "default",
@@ -1201,12 +1098,12 @@
             },
           },
         ),
-        u = (0, a.createContext)(null);
+        d = (0, a.createContext)(null);
       var b,
         m = n(64753),
-        h = n(9154),
-        S = n(32754),
-        p = n(24484),
+        S = n(9154),
+        p = n(32754),
+        h = n(24484),
         y = n(47184),
         C = n(30470);
       !(function (e) {
@@ -1223,11 +1120,11 @@
             nPackageID: i,
             onClick: s,
           } = e,
-          a = v(),
-          [c, l, d] = (0, m.uD)();
+          a = T(),
+          [c, l, u] = (0, m.uD)();
         return (0, t.jsxs)(t.Fragment, {
           children: [
-            (0, t.jsx)(S.Gq, {
+            (0, t.jsx)(p.Gq, {
               toolTipContent: a
                 ? y.g.Localize("#FreeOnDemand_Button_ttip")
                 : y.g.Localize("#FreeOnDemand_Button_disabled_ttip"),
@@ -1239,16 +1136,16 @@
                 children: r || y.g.Localize("#FreeOnDemand_Button"),
               }),
             }),
-            (0, t.jsx)(h.EN, {
+            (0, t.jsx)(S.EN, {
               active: c,
               children:
                 a && n && 1 == n.length
                   ? (0, t.jsx)(D, {
-                      closeModal: d,
+                      closeModal: u,
                       nPackageID: i,
                       nAppID: n[0],
                     })
-                  : (0, t.jsx)(k, { closeModal: d }),
+                  : (0, t.jsx)(k, { closeModal: u }),
             }),
           ],
         });
@@ -1256,7 +1153,7 @@
       function D(e) {
         const { closeModal: r, nAppID: n, nPackageID: o } = e,
           [c, l] = (0, a.useState)(b.k_FreeToPlay),
-          u = (function (e, r) {
+          d = (function (e, r) {
             return (0, g.n)({
               mutationKey: ["settofree", r],
               mutationFn: async (n) => {
@@ -1265,7 +1162,7 @@
                 {
                   const r = new FormData();
                   if (
-                    (r.set("sessionid", (0, p.KC)()),
+                    (r.set("sessionid", (0, h.KC)()),
                     r.set("appid", "" + e),
                     r.set(
                       "displaytext",
@@ -1288,7 +1185,7 @@
                 {
                   const e = new FormData();
                   if (
-                    (e.set("sessionid", (0, p.KC)()),
+                    (e.set("sessionid", (0, h.KC)()),
                     e.set("action", "save"),
                     e.set("billing_type", "12"),
                     !(
@@ -1317,7 +1214,7 @@
                   r();
               },
             })
-          : (0, t.jsxs)(h.o0, {
+          : (0, t.jsxs)(S.o0, {
               strTitle: y.g.Localize("#FreeOnDemand_Title"),
               strDescription: y.g.Localize("#FreeOnDemand_Desc"),
               strOKButtonText: y.g.Localize("#FreeOnDemand_Button_Confirm"),
@@ -1328,7 +1225,7 @@
                     m.fnSetThrobber(
                       y.g.Localize("#FreeOnDemand_Convert_Store"),
                     ),
-                    await u.mutateAsync({
+                    await d.mutateAsync({
                       displayOption: c,
                       fnOnStoreSaveSucceed: () => {
                         m.fnSetThrobber(
@@ -1362,7 +1259,7 @@
                       padding: "4",
                       background: "greyneutral-6",
                       radius: "sm",
-                      children: (0, t.jsx)(d, {
+                      children: (0, t.jsx)(u, {
                         value: c,
                         options: [b.k_FreeToPlay, b.k_Free],
                         getOptionLabel: (e) =>
@@ -1380,7 +1277,7 @@
       function k(e) {
         const { closeModal: r } = e,
           n = `${C.TS.SUPPORT_BASE_URL}wizard/HelpWithPublishing?issueid=915`;
-        return (0, t.jsxs)(h.KG, {
+        return (0, t.jsxs)(S.KG, {
           strTitle: y.g.Localize("#FreeOnDemand_Title"),
           strDescription: y.g.Localize("#FreeOnDemand_Desc_NotPermitted"),
           closeModal: r,
@@ -1396,9 +1293,9 @@
           ],
         });
       }
-      function v() {
+      function T() {
         const [e] = (0, a.useState)(
-          (0, p.Tc)("bCanSetFree", "application_config"),
+          (0, h.Tc)("bCanSetFree", "application_config"),
         );
         return e;
       }
@@ -1413,13 +1310,13 @@
         a = n(48174),
         c = n(42836),
         l = n(12155),
-        d = n(52038),
-        u = n(31389),
-        b = n.n(u),
+        u = n(52038),
+        d = n(31389),
+        b = n.n(d),
         m = n(90626),
-        h = n(47184),
-        S = n(53965),
-        p = n(32754);
+        S = n(47184),
+        p = n(53965),
+        h = n(32754);
       function y(e) {
         const r = (0, t.jsx)("button", {
           className: b().PriceGuidelinesPicker,
@@ -1429,15 +1326,15 @@
       }
       function C(e) {
         const { strButton: r, strTooltip: n } = e,
-          o = (0, t.jsxs)(S.$, {
+          o = (0, t.jsxs)(p.$, {
             onClick: () => {},
             children: [
-              (0, t.jsx)(p.Gq, {
+              (0, t.jsx)(h.Gq, {
                 toolTipContent: n,
                 children: (0, t.jsx)("span", { children: r }),
               }),
               (0, t.jsx)("div", {
-                className: (0, d.A)(
+                className: (0, u.A)(
                   b().SelectionIndicator,
                   "DialogDropDown_Arrow",
                 ),
@@ -1464,20 +1361,20 @@
             fnOnUpdate: n,
             strDescription: s,
             bCanSetToFree: l,
-            nPackageID: u,
+            nPackageID: d,
             onSelect: m,
-            appids: S,
+            appids: p,
           } = e,
-          p = (0, a.cT)(),
+          h = (0, a.cT)(),
           y = r();
-        if (!p) return null;
-        const C = p.GetUSDPricePointsInCents();
+        if (!h) return null;
+        const C = h.GetUSDPricePointsInCents();
         return (0, t.jsxs)("div", {
           className: b().GuidelinesPanel,
           children: [
             (0, t.jsx)("div", {
               className: b().GuidelinesDescription,
-              children: s || h.g.Localize("#PricingGuideline_Default"),
+              children: s || S.g.Localize("#PricingGuideline_Default"),
             }),
             (0, t.jsxs)("div", {
               className: b().GuidelinesGrid,
@@ -1488,11 +1385,11 @@
                     {
                       className: b().GridElement,
                       children: (0, t.jsx)(c.K, {
-                        nPackageID: u,
-                        strButtonOverride: h.g.Localize(
+                        nPackageID: d,
+                        strButtonOverride: S.g.Localize(
                           "#FreeOnDemand_InlineOption",
                         ),
-                        appids: S,
+                        appids: p,
                       }),
                     },
                     "settofree",
@@ -1504,7 +1401,7 @@
                       onClick: () => {
                         m(), n(e);
                       },
-                      className: (0, d.A)({
+                      className: (0, u.A)({
                         [b().GridElement]: !0,
                         [b().CurrentPrice]: y == e,
                       }),

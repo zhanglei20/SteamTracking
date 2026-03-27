@@ -1,11 +1,44 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-"use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
   [9246],
   {
+    69041: (e) => {
+      e.exports = {
+        Button: "_0BH1ydyFmSnUvoVK2hIc",
+        "Size-1": "_3QKUrmKA1DptBhihc8GSAF",
+        Icon: "_2_fy3SzcKa1xbrgpG7JsW1",
+        "Size-2": "_2rbqjlRz2ShvIiYodebfc2",
+        "Size-3": "_2WV0DrM2sIAtg0N1lOU26f",
+        "Variant-default": "RttCMpsTJp47IkzXpZYvA",
+        "Variant-inverted": "RmQIHBmo3QqjBtWih540t",
+        "Variant-outline": "_3Ivla_Ow2vkS32o8Ih_PeA",
+        "Variant-ghost": "_2oeLjYS5GL7cq3t8V_fC-8",
+        "Variant-vibrant": "HpR1uGt2MH6wMkWZz8XTQ",
+        Width: "_3sJrbUPuxxtvf7RM9OYpwU",
+        MinWidth: "_1SOkb8NGXTctRFJs2fKHh-",
+      };
+    },
+    73406: (e) => {
+      e.exports = {
+        Spinner: "_2DCKU_4nS3RTO87T3YPOx_",
+        LoadingSpinnerAmin: "_1SGyFmFKc3sUwmfqrrtxxJ",
+        "Size-1": "_1Vxi9jNBkNCJzht7q4pUcZ",
+        "Size-2": "_4YMNfb67K5DdLQo1iUILX",
+        "Size-3": "_389OPmdZoebw42_AlsUFxi",
+        "Size-4": "_2_bEJtUl18pDhzOGeCFemg",
+        "Size-5": "_1XSG-5xKQMEoGjfZTMCTke",
+        "Variant-solid": "lQP4sfWThY4O0ZGRwTFFo",
+        "Variant-bright": "_3Jl5ljGbdHy_fzyOpYdWpB",
+        ChildContainer: "_3drTSOAFK4l1BW7WUUbGvs",
+      };
+    },
+    91239: (e) => {
+      e.exports = { Reset: "_3A_c3YHYd4YIjA8Y-olnPl" };
+    },
     96745: (e, r, c) => {
+      "use strict";
       c.d(r, {
         OM: () => u,
         Sm: () => k,
@@ -118,42 +151,43 @@
       }
     },
     17084: (e, r, c) => {
+      "use strict";
       c.d(r, {
         iy: () => re,
         Y5: () => H,
         $i: () => se,
-        Wx: () => D,
+        Wx: () => f,
         Gs: () => R,
         ww: () => ue,
         RO: () => Z,
-        XK: () => X,
+        XK: () => J,
         FR: () => v,
         oj: () => M,
-        Dl: () => U,
-        tn: () => Y,
-        Oc: () => L,
+        Dl: () => L,
+        tn: () => V,
+        Oc: () => U,
         Y2: () => K,
         mv: () => b,
         oL: () => N,
         Ci: () => ce,
         v4: () => F,
-        _A: () => T,
+        _A: () => B,
         nT: () => w,
-        fr: () => z,
-        T_: () => Q,
-        mP: () => $,
+        fr: () => $,
+        T_: () => X,
+        mP: () => Q,
         T7: () => q,
         Zz: () => te,
         NC: () => ae,
         h4: () => oe,
         Bt: () => ie,
-        hm: () => V,
-        fZ: () => B,
+        hm: () => Y,
+        fZ: () => T,
         XB: () => ee,
         U3: () => j,
         YB: () => ne,
         d$: () => W,
-        FX: () => J,
+        FX: () => z,
         xQ: () => O,
       });
       var n = c(34629),
@@ -171,7 +205,7 @@
         E = c(81393),
         y = c(29848),
         P = c(88267);
-      function A(e, r, c, n, t) {
+      function p(e, r, c, n, t) {
         if (!e) return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
         let a = null;
         for (let r of e.GetUSDPricePointsInCents())
@@ -201,7 +235,7 @@
         }
         return { nSuggestedPriceInCents: u, nGuidelinesLevel: a };
       }
-      var p = c(48174),
+      var A = c(48174),
         I = c(87700),
         g = c(72255),
         m = c(87718);
@@ -719,7 +753,7 @@
           for (let r of this.m_rgKnownPriceKeys) {
             let c = this.GetPrice(e, r);
             if (void 0 === c) continue;
-            let { nMinPriceInCents: n, nMaxPriceInCents: t } = Y(e, r);
+            let { nMinPriceInCents: n, nMaxPriceInCents: t } = V(e, r);
             if (c < n) return !0;
           }
           return !1;
@@ -737,7 +771,7 @@
         const r = e.split("_")[0];
         return h.Get().m_mapCurrencyData.get(r);
       }
-      function D(e, r) {
+      function f(e, r) {
         if (void 0 === r) return ["", "", ""];
         const c = R(r) ?? R("USD");
         let n = "";
@@ -763,7 +797,7 @@
       (0, n.Cg)([i.sH], h.prototype, "m_mapOverridesPerPriceKey", void 0),
         (0, n.Cg)([C.oI], h.prototype, "OverridePrice", null),
         (0, n.Cg)([i.XI], h.prototype, "UpdateOverridesPerPriceKey", null);
-      const f = new Map([
+      const D = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
         ["EUR", "@3"],
@@ -775,7 +809,7 @@
         ["RUB", "@9"],
       ]);
       function G(e) {
-        return f.has(e) ? f.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
+        return D.has(e) ? D.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
       function v(e, r) {
         return h.Get().GetPrice(e, r);
@@ -789,17 +823,17 @@
       function b(e, r) {
         return h.Get().GetPublishedPrice(e, r);
       }
-      function L(e, r) {
+      function U(e, r) {
         return h.Get().GetProposedPrice(e, r);
       }
-      function U(e, r) {
+      function L(e, r) {
         return h.Get().GetLocalOverridePrice(e, r);
       }
       function M(e) {
         const r = h.Get().m_strDisplayPriceKey;
-        return D(h.Get().GetPrice(e, r), r).join("");
+        return f(h.Get().GetPrice(e, r), r).join("");
       }
-      function B(e) {
+      function T(e) {
         const [r, c] = s.useState(h.Get().m_strDisplayPriceKey);
         return (
           (0, C.hL)(h.Get().m_displayPriceKeyCallbackList, c),
@@ -808,14 +842,14 @@
             return (
               (0, C.hL)(h.Get().GetPriceGridCellCallbackList(e, r), n),
               s.useEffect(() => n(h.Get().GetPrice(e, r)), [e, r]),
-              D(c, r).join("")
+              f(c, r).join("")
             );
           })(e, r)
         );
       }
-      function T() {
+      function B() {
         const e = (0, _.Yr)(),
-          r = (0, p.cT)(),
+          r = (0, A.cT)(),
           c = (0, I.Bb)();
         return s.useCallback(
           () =>
@@ -829,7 +863,7 @@
                   for (const n of h.Get().m_rgKnownPriceKeys) {
                     if ("USD" == n) continue;
                     const s = h.Get().GetPrice(t, "USD"),
-                      { nSuggestedPriceInCents: i, nGuidelinesLevel: o } = A(
+                      { nSuggestedPriceInCents: i, nGuidelinesLevel: o } = p(
                         r,
                         c,
                         s,
@@ -853,11 +887,11 @@
         const c = (0, C.CH)();
         (0, C.hL)(h.Get().GetPriceGridCellCallbackList(e, r), c);
         const n = h.Get().GetPrice(e, r),
-          t = (0, p.cT)(),
+          t = (0, A.cT)(),
           a = (0, I.Bb)();
         (0, C.hL)(h.Get().GetPriceGridCellCallbackList(e, "USD"), c);
         const i = h.Get().GetPrice(e, "USD"),
-          { nSuggestedPriceInCents: o, nGuidelinesLevel: u } = A(
+          { nSuggestedPriceInCents: o, nGuidelinesLevel: u } = p(
             t,
             a,
             i,
@@ -867,7 +901,7 @@
           d = s.useCallback((c) => h.Get().OverridePrice(e, r, c), [e, r]),
           l = h.Get().GetPublishedPrice(e, r),
           _ = h.Get().GetProposedPrice(e, r),
-          { nMinPriceInCents: k, nMaxPriceInCents: E } = Y(e, r),
+          { nMinPriceInCents: k, nMaxPriceInCents: E } = V(e, r),
           y = h.Get().GetMinimumDiscountPrice(r),
           P = n ? Math.floor((100 * (n - y)) / n) : 90,
           S = P < Math.min(90, Math.floor((100 * (u - 50)) / u)) ? P : null;
@@ -896,7 +930,7 @@
       function H(e) {
         return h.Get().BAnyPackagePriceBelowMin(e);
       }
-      function Y(e, r) {
+      function V(e, r) {
         let c = h.Get();
         return {
           nMinPriceInCents: c.GetMinimumBasePrice(r),
@@ -905,7 +939,7 @@
             : null,
         };
       }
-      function V() {
+      function Y() {
         return s.useCallback((e, r, c) => {
           const n = h.Get().GetPrice(e, r);
           return (
@@ -942,7 +976,7 @@
         }
         return r;
       }
-      function J(e) {
+      function z(e) {
         const r = W(e),
           c = [];
         for (const n of h.Get().m_rgKnownPriceKeys) {
@@ -961,21 +995,21 @@
       function j() {
         return h.Get().m_rgKnownPriceKeys;
       }
-      function X(e) {
+      function J(e) {
         let r = h.Get().m_mapPriceKeyDescriptions.get(e);
         return r ? r.strDescription : "";
       }
-      function $(e) {
+      function Q(e) {
         return s.useCallback(() => {
           h.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
-      function Q(e) {
+      function X(e) {
         return s.useCallback(() => {
           h.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
       }
-      function z(e) {
+      function $(e) {
         return s.useCallback(() => {
           h.Get().CancelProposal(e);
         }, [e]);
@@ -1050,6 +1084,7 @@
       }
     },
     9554: (e, r, c) => {
+      "use strict";
       c.d(r, { es: () => a, nm: () => d });
       var n = c(56011),
         t = c(61859);
@@ -1125,6 +1160,7 @@
       }
     },
     70986: (e, r, c) => {
+      "use strict";
       c.d(r, { M: () => t, o: () => n });
       const n = "America/Los_Angeles";
       function t(e) {
@@ -1138,7 +1174,164 @@
         );
       }
     },
+    53965: (e, r, c) => {
+      "use strict";
+      c.d(r, { $: () => I, v: () => g });
+      var n = c(7850),
+        t = c(64238),
+        a = c.n(t),
+        s = c(69041),
+        i = c(75659),
+        o = c(41324),
+        u = c(11820),
+        C = c(73406),
+        d = c(90534),
+        l = c(53971);
+      function _(e) {
+        const {
+          size: r = "3",
+          loading: c = !0,
+          children: t,
+          color: a,
+          variant: s,
+          ...i
+        } = e;
+        return t || !c
+          ? (0, n.jsxs)(d.az, {
+              position: "relative",
+              ...i,
+              width: "fit-content",
+              children: [
+                (0, n.jsx)("div", {
+                  "data-visibility": !c,
+                  className: C.ChildContainer,
+                  children: t,
+                }),
+                c &&
+                  (0, n.jsx)(l.s, {
+                    position: "absolute",
+                    inset: "0",
+                    justify: "center",
+                    align: "center",
+                    children: (0, n.jsx)(k, { size: r, color: a, variant: s }),
+                  }),
+              ],
+            })
+          : (0, n.jsx)(k, { size: r, color: a, variant: s, ...i });
+      }
+      function k(e) {
+        const { className: r, color: c, ...t } = (0, o.mz)(e, E);
+        return (0, n.jsx)("div", {
+          "data-accent-color": c,
+          className: a()(r, C.Spinner),
+          ...t,
+        });
+      }
+      const E = [
+        ...i.L,
+        { prop: "size", responsive: !0, className: (e) => C[`Size-${e}`] },
+        { prop: "variant", className: (e) => C[`Variant-${e}`] },
+      ];
+      var y = c(45699),
+        P = c(8527);
+      function p(e) {
+        e.preventDefault();
+      }
+      const A = [
+          ...i.L,
+          { prop: "size", responsive: !0, className: (e) => s[`Size-${e}`] },
+          { prop: "variant", className: (e) => s[`Variant-${e}`] },
+          { prop: "color", dataProperty: (e) => ["accent-color", `${e}`] },
+          {
+            prop: "width",
+            className: s.Width,
+            cssProperty: "--width",
+            responsive: !0,
+          },
+          {
+            prop: "minWidth",
+            className: s.MinWidth,
+            cssProperty: "--min-width",
+            responsive: !0,
+          },
+        ],
+        I = function (e) {
+          const {
+              variant: r = "default",
+              size: c = "2",
+              minWidth: t = "fit-content",
+              color: i,
+              loading: u,
+              children: C,
+              onClick: d,
+              icon: l,
+              gamepadFocusable: k = !0,
+              ...E
+            } = e,
+            p = u
+              ? (0, n.jsx)(_, {
+                  size: c,
+                  color: i,
+                  variant: "bright",
+                  children: C,
+                })
+              : C,
+            I = u ? void 0 : d,
+            g = k && P.TS.IN_GAMEPADUI ? y.fu : "button";
+          return (0, n.jsx)(g, {
+            type: "button",
+            ...(0, o.mz)(
+              {
+                ...E,
+                variant: r,
+                size: c,
+                minWidth: t,
+                color: i,
+                className: a()(s.Button, l && s.Icon),
+                onClick: I,
+              },
+              A,
+            ),
+            children: p,
+          });
+        },
+        g = function (e) {
+          const {
+              variant: r = "default",
+              size: c = "2",
+              minWidth: t = "fit-content",
+              disabled: i,
+              icon: C,
+              gamepadFocusable: d = !0,
+              ...l
+            } = e,
+            _ = i ? p : void 0,
+            k = d && P.TS.IN_GAMEPADUI ? y.Ii : "a";
+          return (0, n.jsx)(k, {
+            ...(0, o.mz)(
+              {
+                onClick: _,
+                ...l,
+                variant: r,
+                size: c,
+                minWidth: t,
+                className: a()(s.Button, C && s.Icon, (0, u.T)()),
+              },
+              A,
+            ),
+          });
+        };
+    },
+    11820: (e, r, c) => {
+      "use strict";
+      c.d(r, { T: () => t });
+      var n = c(91239);
+      function t() {
+        return n.Reset;
+      }
+    },
     72255: (e, r, c) => {
+      "use strict";
       c.d(r, {
         IG: () => l,
         M1: () => i,
@@ -1884,6 +2077,7 @@
       }
     },
     88267: (e, r, c) => {
+      "use strict";
       var n;
       c.d(r, { AI: () => n, X5: () => s, yv: () => a }),
         (function (e) {
@@ -1994,6 +2188,7 @@
       }
     },
     29848: (e, r, c) => {
+      "use strict";
       var n;
       function t() {
         return [
@@ -2014,6 +2209,7 @@
         })(n || (n = {}));
     },
     87718: (e, r, c) => {
+      "use strict";
       c.d(r, {
         bS: () => a,
         de: () => i,
@@ -2099,6 +2295,7 @@
       }
     },
     87700: (e, r, c) => {
+      "use strict";
       c.d(r, { Bb: () => u, MA: () => o, jY: () => i });
       var n = c(7850),
         t = c(90626),
@@ -2130,6 +2327,7 @@
       }
     },
     48174: (e, r, c) => {
+      "use strict";
       c.d(r, { mj: () => E, gC: () => y, cT: () => k });
       var n = c(90626),
         t = c(76501);
@@ -2297,6 +2495,7 @@
       }
     },
     76501: (e, r, c) => {
+      "use strict";
       c.d(r, {
         AI: () => n.AI,
         JA: () => i,

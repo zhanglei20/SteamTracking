@@ -18304,13 +18304,14 @@
             s,
           );
         }
-        async LoadPartnerEventFromAnnoucementGID(e, t, r) {
+        async LoadPartnerEventFromAnnoucementGID(e, t, r, i) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             e,
             void 0,
             t,
             r,
+            i,
           );
         }
         async LoadPartnerEventFromAnnoucementGIDAndClanSteamID(e, t, r, i) {
@@ -18323,13 +18324,14 @@
             i,
           );
         }
-        async LoadPartnerEventFromClanEventGID(e, t, r) {
+        async LoadPartnerEventFromClanEventGID(e, t, r, i) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             e,
             t,
             void 0,
             r,
+            i,
           );
         }
         async LoadPartnerEventFromClanEventGIDAndClanSteamID(e, t, r, i) {

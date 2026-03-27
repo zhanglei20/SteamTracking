@@ -1,14 +1,14 @@
-/**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
- ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [9989],
+  [5950],
   {
-    44041: (s) => {
-      s.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
+    chunkid: (module) => {
+      module.exports = {
+        Box: "_2YzOLNBx6TonKU0Zmp20l4",
+      };
     },
-    68875: (s) => {
-      s.exports = {
+    chunkid: (module) => {
+      module.exports = {
         Flex: "_3nHL7awgK1Qei1XivGvHMK",
         Direction: "_3JCkAyd9cnB90tRcDLPp4W",
         Justify: "_12ampOcrpRamy1y301kEaK",
@@ -20,8 +20,8 @@
         Inline: "LOeaKjPDMbdcAB54IFgyX",
       };
     },
-    88122: (s) => {
-      s.exports = {
+    chunkid: (module) => {
+      module.exports = {
         "m-0": "_3NvasCX7YWBZpC8aibkm0E",
         "m-1": "_37cUiZ5UzC1qHmlFJaMIAr",
         "m-2": "_22pmrTZIf7_RclhN_Za_yk",
@@ -239,401 +239,446 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
-    65274: (s) => {
-      s.exports = {
-        Text: "f6hU22EA7Z8peFWZVBJU",
-        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
-        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
-        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
-        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
-        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
-        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
-        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
-        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
-        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
-        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
-        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
-        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
-        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
-        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
-      };
-    },
-    90534: (s, e, r) => {
+    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      r.d(e, { az: () => m });
-      var p = r(7850),
-        o = r(64238),
-        t = r.n(o),
-        i = r(41324),
-        a = r(75659),
-        n = r(44041);
-      function m(s) {
-        const { as: e = "div", ref: r, ...o } = s,
-          a = (0, i.mz)({ ...o, className: t()(n.Box, s.className) }, c),
-          m = e;
-        return (0, p.jsx)(m, { ref: r, ...a });
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "div", ref: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, _.className),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_, {
+          ref: _,
+          ..._,
+        });
       }
-      const c = a.h;
+      const _ = _._;
     },
-    53971: (s, e, r) => {
+    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      r.d(e, { s: () => u });
-      var p = r(7850),
-        o = r(8871),
-        t = r(90626),
-        i = r(7745),
-        a = r(90665),
-        n = r(74882);
-      function m(s) {
-        const { children: e, "flow-children": r, ...m } = s,
-          { gamepadEvents: c } = (0, a.C7)(s);
-        r && (m.layout = (0, i.O)(r)),
-          c.onOKButton ||
-            ("onClick" in e.props && e.props.onClick && (c.onOKButton = a._K));
-        const { ref: l, node: _ } = (0, a.qp)(m);
-        (0, n.Ui)(c, l);
-        const d = (0, o.Ue)(l, e.props?.ref);
-        return (0, p.jsx)(a.TJ.Provider, {
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, "flow-children": _, ..._ } = _,
+          { gamepadEvents: _ } = (0, _._)(_);
+        _ && (_.layout = (0, _._)(_)),
+          _.onOKButton ||
+            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
+        const { ref: _, node: _ } = (0, _._)(_);
+        (0, _._)(_, _);
+        const _ = (0, _._)(_, _.props?.ref);
+        return (0, _.jsx)(_._.Provider, {
           value: _,
-          children: t.cloneElement(e, { ...e.props, ref: d }),
+          children: _.cloneElement(_, {
+            ..._.props,
+            ref: _,
+          }),
         });
       }
-      var c = r(41324),
-        l = r(75659),
-        _ = r(64238),
-        d = r.n(_),
-        y = r(68875);
-      function u(s) {
-        const { as: e = "div", ref: r, ...o } = s,
-          t = (0, c.mz)({ ...o, className: d()(s.className, y.Flex) }, x),
-          i = !o.disabled && !!o.onClick,
-          a = e;
-        return (0, p.jsx)(m, {
-          focusable: i,
-          children: (0, p.jsx)(a, { ref: r, ...t }),
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { _: _ = "div", ref: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.className, _.Flex),
+            },
+            _,
+          ),
+          _ = !_.disabled && !!_.onClick,
+          _ = _;
+        return (0, _.jsx)(_, {
+          focusable: _,
+          children: (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          }),
         });
       }
-      const x = [
-        ...l.h,
+      const _ = [
+        ..._._,
         {
           prop: "direction",
           responsive: !0,
-          className: y.Direction,
+          className: _.Direction,
           cssProperty: "--direction",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: y.Justify,
-          cssProperty: (s) => ["--justify", N(s)],
+          className: _.Justify,
+          cssProperty: (_) => ["--justify", _(_)],
         },
         {
           prop: "align",
           responsive: !0,
-          className: y.Align,
+          className: _.Align,
           cssProperty: "--align",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: y.Gap,
-          cssProperty: (s) => ["--gap", `var(--spacing-${s})`],
+          className: _.Gap,
+          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: y.GapX,
-          cssProperty: (s) => ["--gap-x", `var(--spacing-${s})`],
+          className: _.GapX,
+          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: y.GapY,
-          cssProperty: (s) => ["--gap-y", `var(--spacing-${s})`],
+          className: _.GapY,
+          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
         },
         {
           prop: "wrap",
           responsive: !0,
-          className: y.Wrap,
+          className: _.Wrap,
           cssProperty: "--wrap",
         },
-        { prop: "inline", responsive: !0, className: y.Inline },
+        {
+          prop: "inline",
+          responsive: !0,
+          className: _.Inline,
+        },
       ];
-      function N(s) {
-        return /^(between|around|evenly)$/.test(s) ? `space-${s}` : s;
+      function _(_) {
+        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
       }
     },
-    75659: (s, e, r) => {
+    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      r.d(e, { L: () => t, h: () => i });
-      var p = r(41324),
-        o = r(88122);
-      const t = [
-          { prop: "margin", responsive: !0, className: (s) => o[`m-${s}`] },
-          { prop: "marginX", responsive: !0, className: (s) => o[`mx-${s}`] },
-          { prop: "marginY", responsive: !0, className: (s) => o[`my-${s}`] },
-          { prop: "marginTop", responsive: !0, className: (s) => o[`mt-${s}`] },
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = [
+          {
+            prop: "margin",
+            responsive: !0,
+            className: (_) => _[`m-${_}`],
+          },
+          {
+            prop: "marginX",
+            responsive: !0,
+            className: (_) => _[`mx-${_}`],
+          },
+          {
+            prop: "marginY",
+            responsive: !0,
+            className: (_) => _[`my-${_}`],
+          },
+          {
+            prop: "marginTop",
+            responsive: !0,
+            className: (_) => _[`mt-${_}`],
+          },
           {
             prop: "marginRight",
             responsive: !0,
-            className: (s) => o[`mr-${s}`],
+            className: (_) => _[`mr-${_}`],
           },
           {
             prop: "marginBottom",
             responsive: !0,
-            className: (s) => o[`mb-${s}`],
+            className: (_) => _[`mb-${_}`],
           },
           {
             prop: "marginLeft",
             responsive: !0,
-            className: (s) => o[`ml-${s}`],
+            className: (_) => _[`ml-${_}`],
           },
           {
             prop: "marginStart",
             responsive: !0,
-            className: (s) => o[`ms-${s}`],
+            className: (_) => _[`ms-${_}`],
           },
-          { prop: "marginEnd", responsive: !0, className: (s) => o[`me-${s}`] },
+          {
+            prop: "marginEnd",
+            responsive: !0,
+            className: (_) => _[`me-${_}`],
+          },
         ],
-        i = [
-          ...t,
-          { prop: "padding", responsive: !0, className: (s) => o[`p-${s}`] },
-          { prop: "paddingX", responsive: !0, className: (s) => o[`px-${s}`] },
-          { prop: "paddingY", responsive: !0, className: (s) => o[`py-${s}`] },
+        _ = [
+          ..._,
+          {
+            prop: "padding",
+            responsive: !0,
+            className: (_) => _[`p-${_}`],
+          },
+          {
+            prop: "paddingX",
+            responsive: !0,
+            className: (_) => _[`px-${_}`],
+          },
+          {
+            prop: "paddingY",
+            responsive: !0,
+            className: (_) => _[`py-${_}`],
+          },
           {
             prop: "paddingTop",
             responsive: !0,
-            className: (s) => o[`pt-${s}`],
+            className: (_) => _[`pt-${_}`],
           },
           {
             prop: "paddingRight",
             responsive: !0,
-            className: (s) => o[`pr-${s}`],
+            className: (_) => _[`pr-${_}`],
           },
           {
             prop: "paddingBottom",
             responsive: !0,
-            className: (s) => o[`pb-${s}`],
+            className: (_) => _[`pb-${_}`],
           },
           {
             prop: "paddingLeft",
             responsive: !0,
-            className: (s) => o[`pl-${s}`],
+            className: (_) => _[`pl-${_}`],
           },
           {
             prop: "paddingStart",
             responsive: !0,
-            className: (s) => o[`ps-${s}`],
+            className: (_) => _[`ps-${_}`],
           },
           {
             prop: "paddingEnd",
             responsive: !0,
-            className: (s) => o[`pe-${s}`],
+            className: (_) => _[`pe-${_}`],
           },
           {
             prop: "width",
             responsive: !0,
-            className: o.Width,
+            className: _.Width,
             cssProperty: "--width",
           },
           {
             prop: "minWidth",
             responsive: !0,
-            className: o.MinWidth,
+            className: _.MinWidth,
             cssProperty: "--min-width",
           },
           {
             prop: "maxWidth",
             responsive: !0,
-            className: o.MaxWidth,
+            className: _.MaxWidth,
             cssProperty: "--max-width",
           },
           {
             prop: "height",
             responsive: !0,
-            className: o.Height,
+            className: _.Height,
             cssProperty: "--height",
           },
           {
             prop: "minHeight",
             responsive: !0,
-            className: o.MinHeight,
+            className: _.MinHeight,
             cssProperty: "--min-height",
           },
           {
             prop: "maxHeight",
             responsive: !0,
-            className: o.MaxHeight,
+            className: _.MaxHeight,
             cssProperty: "--max-height",
           },
           {
             prop: "flexBasis",
             responsive: !0,
-            className: o.FlexBasis,
+            className: _.FlexBasis,
             cssProperty: "--flex-basis",
           },
           {
             prop: "flexGrow",
             responsive: !0,
-            className: o.FlexGrow,
+            className: _.FlexGrow,
             cssProperty: "--flex-grow",
           },
           {
             prop: "flexShrink",
             responsive: !0,
-            className: o.FlexShrink,
+            className: _.FlexShrink,
             cssProperty: "--flex-shrink",
           },
           {
             prop: "radius",
             responsive: !0,
-            className: (s) => o[`Radius-${s}`],
+            className: (_) => _[`Radius-${_}`],
           },
           {
             prop: "cursor",
             responsive: !0,
-            className: o.Cursor,
+            className: _.Cursor,
             cssProperty: "--cursor",
           },
           {
             prop: "position",
             responsive: !0,
-            className: o.Position,
+            className: _.Position,
             cssProperty: "--position",
           },
           {
             prop: "inset",
             responsive: !0,
-            className: o.Inset,
-            cssProperty: (s) => ["--inset", (0, p.ti)(s)],
+            className: _.Inset,
+            cssProperty: (_) => ["--inset", (0, _._)(_)],
           },
           {
             prop: "gridColumn",
             responsive: !0,
-            className: o.GridColumn,
+            className: _.GridColumn,
             cssProperty: "--grid-column",
           },
           {
             prop: "gridColumnStart",
             responsive: !0,
-            className: o.GridColumnStart,
+            className: _.GridColumnStart,
             cssProperty: "--grid-column-start",
           },
           {
             prop: "gridColumnEnd",
             responsive: !0,
-            className: o.GridColumnEnd,
+            className: _.GridColumnEnd,
             cssProperty: "--grid-column-end",
           },
           {
             prop: "gridRow",
             responsive: !0,
-            className: o.GridRow,
+            className: _.GridRow,
             cssProperty: "--grid-row",
           },
           {
             prop: "gridRowStart",
             responsive: !0,
-            className: o.GridRowStart,
+            className: _.GridRowStart,
             cssProperty: "--grid-row-start",
           },
           {
             prop: "gridRowEnd",
             responsive: !0,
-            className: o.GridRowEnd,
+            className: _.GridRowEnd,
             cssProperty: "--grid-row-end",
           },
           {
             prop: "gridArea",
             responsive: !0,
-            className: o.GridArea,
+            className: _.GridArea,
             cssProperty: "--grid-area",
           },
           {
             prop: "alignSelf",
             responsive: !0,
-            className: o.AlignSelf,
+            className: _.AlignSelf,
             cssProperty: "--align-self",
           },
           {
             prop: "justifySelf",
             responsive: !0,
-            className: o.JustifySelf,
+            className: _.JustifySelf,
             cssProperty: "--justify-self",
           },
           {
             prop: "background",
             responsive: !0,
-            className: o.Background,
-            cssProperty: (s) => ["--background", (0, p.Fd)(s)],
+            className: _.Background,
+            cssProperty: (_) => ["--background", (0, _._)(_)],
           },
           {
             prop: "overflow",
             responsive: !0,
-            className: o.Overflow,
+            className: _.Overflow,
             cssProperty: "--overflow",
           },
           {
             prop: "zIndex",
             responsive: !0,
-            className: o.ZIndex,
+            className: _.ZIndex,
             cssProperty: "--z-index",
           },
           {
             prop: "display",
             responsive: !0,
-            className: o.Display,
+            className: _.Display,
             cssProperty: "--display",
           },
           {
             prop: "elevation",
             responsive: !0,
-            className: o.Elevation,
+            className: _.Elevation,
             dataProperty: "elevation",
           },
           {
             prop: "border",
             responsive: !0,
-            className: o.Border,
+            className: _.Border,
             cssProperty: "--border",
           },
           {
             prop: "borderColor",
             responsive: !0,
-            className: [o.Border, o.BorderColor].join(" "),
-            cssProperty: (s) => ["--border-color", (0, p.Fd)(s)],
+            className: [_.Border, _.BorderColor].join(" "),
+            cssProperty: (_) => ["--border-color", (0, _._)(_)],
           },
           {
             prop: "outline",
             responsive: !0,
-            className: o.Outline,
-            cssProperty: (s) => ["--outline-color", (0, p.Fd)(s)],
+            className: _.Outline,
+            cssProperty: (_) => ["--outline-color", (0, _._)(_)],
           },
           {
             prop: "textAlign",
             responsive: !0,
-            className: o.TextAlign,
+            className: _.TextAlign,
             cssProperty: "--text-align",
           },
         ];
     },
-    41324: (s, e, r) => {
+    chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
-      r.d(e, {
-        Fd: () => m,
-        ti: () => n,
-        To: () => c,
-        w7: () => l,
-        mz: () => a,
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
-      var p = r(10430);
-      const o = p.IE.reduce((s, e, r) => ((s[e] = r), s), {});
-      function t(s, e) {
-        if ("object" != typeof s) return s;
-        for (let r = o[e]; r >= 0; r--) if (p.IE[r] in s) return s[p.IE[r]];
-        return s.initial;
+      var _ = __webpack_require__("chunkid");
+      const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
+      function _(_, _) {
+        if ("object" != typeof _) return _;
+        for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
+        return _.initial;
       }
-      const i = {
+      const _ = {
         0: !0,
         1: !0,
         2: !0,
@@ -645,152 +690,97 @@
         8: !0,
         9: !0,
       };
-      function a(s, e) {
-        return (function (s, e, r) {
-          const p = [],
-            o = {},
-            i = {},
-            { extracted: a, remaining: n } = (function (s, e) {
-              const r = { remaining: { ...s }, extracted: {} };
-              for (const s of e) {
-                const e = s.prop;
-                e in r.remaining &&
-                  ((r.extracted[e] = r.remaining[e]), delete r.remaining[e]);
+      function _(_, _) {
+        return (function (_, _, _) {
+          const _ = [],
+            _ = {},
+            _ = {},
+            { extracted: _, remaining: _ } = (function (_, _) {
+              const _ = {
+                remaining: {
+                  ..._,
+                },
+                extracted: {},
+              };
+              for (const _ of _) {
+                const _ = _.prop;
+                _ in _.remaining &&
+                  ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
               }
-              return r;
-            })(s, e);
-          for (const n of e) {
-            if (!(n.prop in a)) continue;
-            let e = a[n.prop];
-            if (void 0 !== e) {
-              if ((n.responsive && (e = t(e, r.formFactor)), n.className)) {
+              return _;
+            })(_, _);
+          for (const _ of _) {
+            if (!(_.prop in _)) continue;
+            let _ = _[_.prop];
+            if (void 0 !== _) {
+              if ((_.responsive && (_ = _(_, _.formFactor)), _.className)) {
                 if (
-                  !n.cssProperty &&
-                  !n.dataProperty &&
-                  "string" == typeof n.className &&
-                  !e
+                  !_.cssProperty &&
+                  !_.dataProperty &&
+                  "string" == typeof _.className &&
+                  !_
                 )
                   continue;
-                const s =
-                  "function" == typeof n.className
-                    ? n.className(e)
-                    : n.className;
-                p.push(s);
+                const _ =
+                  "function" == typeof _.className
+                    ? _.className(_)
+                    : _.className;
+                _.push(_);
               }
-              if (n.cssProperty)
-                if ("function" == typeof n.cssProperty) {
-                  const r = n.cssProperty(e, s);
-                  if (r.length && Array.isArray(r[0]))
-                    r.forEach(([s, e]) => (o[s] = e));
+              if (_.cssProperty)
+                if ("function" == typeof _.cssProperty) {
+                  const _ = _.cssProperty(_, _);
+                  if (_.length && Array.isArray(_[0]))
+                    __webpack_require__.forEach(([_, _]) => (_[_] = _));
                   else {
-                    const s = r;
-                    o[s[0]] = s[1];
+                    const _ = _;
+                    _[_[0]] = _[1];
                   }
-                } else o[n.cssProperty] = e;
-              if (n.dataProperty)
-                if ("function" == typeof n.dataProperty) {
-                  const [s, r] = n.dataProperty(e);
-                  i[`data-${s}`] = r;
-                } else i[`data-${n.dataProperty}`] = e;
+                } else _[_.cssProperty] = _;
+              if (_.dataProperty)
+                if ("function" == typeof _.dataProperty) {
+                  const [_, _] = _.dataProperty(_);
+                  _[`data-${_}`] = _;
+                } else _[`data-${_.dataProperty}`] = _;
             }
           }
           return (
-            "className" in n &&
-              "string" == typeof n.className &&
-              p.push(n.className),
-            "style" in n &&
-              n.style &&
-              "object" == typeof n.style &&
-              Object.assign(o, n.style),
-            { ...i, ...n, className: p.join(" "), style: o }
+            "className" in _ &&
+              "string" == typeof _.className &&
+              _.push(_.className),
+            "style" in _ &&
+              _.style &&
+              "object" == typeof _.style &&
+              Object.assign(_, _.style),
+            {
+              ..._,
+              ..._,
+              className: _.join(" "),
+              style: _,
+            }
           );
-        })(s, e, { formFactor: (0, p.xC)() });
-      }
-      function n(s) {
-        return (function (s) {
-          return !!i[s];
-        })(s)
-          ? `var(--spacing-${s})`
-          : s;
-      }
-      function m(s) {
-        if (!("%" == s[s.length - 1])) return `var(--color-${s})`;
-        const [e, r] = s.split(" ");
-        return `rgb( from ${`var(--color-${e})`} r g b / ${r} )`;
-      }
-      function c(s, e) {
-        return s.startsWith("text") ? `var(--color-${s}-${e})` : m(s);
-      }
-      function l(s) {
-        return s.startsWith("text") ? `var(--color-${s})` : m(s);
-      }
-    },
-    20187: (s, e, r) => {
-      "use strict";
-      r.d(e, { Ae: () => l, EY: () => m, U6: () => c });
-      var p = r(7850),
-        o = r(41324),
-        t = r(75659),
-        i = r(64238),
-        a = r.n(i),
-        n = r(65274);
-      function m(s) {
-        const { as: e = "span", ref: r, className: t, ...i } = s,
-          m = e;
-        return (0, p.jsx)(m, {
-          ref: r,
-          ...(0, o.mz)({ ...i, className: a()(n.Text, t) }, l),
+        })(_, _, {
+          formFactor: (0, _._)(),
         });
       }
-      const c = [
-          {
-            prop: "weight",
-            responsive: !0,
-            className: n.TextWeight,
-            cssProperty: (s) => ["--text-weight", `var(--font-weight-${s})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: n.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (s, e) => [
-              "--text-color",
-              (0, o.To)(s, e.contrast ?? "body"),
-            ],
-          },
-          {
-            prop: "contrast",
-            cssProperty: (s, e) => [
-              "--text-color",
-              (0, o.To)(e.color ?? "text-body", s),
-            ],
-          },
-          { prop: "truncate", className: n.Truncate },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: n.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: n.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        l = [
-          ...c,
-          ...t.L,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (s) => n[`TextSize-${s}`],
-          },
-        ];
+      function _(_) {
+        return (function (_) {
+          return !!_[_];
+        })(_)
+          ? `var(--spacing-${_})`
+          : _;
+      }
+      function _(_) {
+        if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
+        const [_, _] = _.split(" ");
+        return `rgb( from ${`var(--color-${_})`} r g b / ${_} )`;
+      }
+      function _(_, _) {
+        return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
+      }
+      function _(_) {
+        return _.startsWith("text") ? `var(--color-${_})` : _(_);
+      }
     },
   },
 ]);

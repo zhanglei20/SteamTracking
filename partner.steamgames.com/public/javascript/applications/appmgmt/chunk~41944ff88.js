@@ -1,14 +1,14 @@
+/**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
+ ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [9989],
+  [5950],
   {
-    chunkid: (module) => {
-      module.exports = {
-        Box: "_2YzOLNBx6TonKU0Zmp20l4",
-      };
+    44041: (s) => {
+      s.exports = { Box: "_2YzOLNBx6TonKU0Zmp20l4" };
     },
-    chunkid: (module) => {
-      module.exports = {
+    68875: (s) => {
+      s.exports = {
         Flex: "_3nHL7awgK1Qei1XivGvHMK",
         Direction: "_3JCkAyd9cnB90tRcDLPp4W",
         Justify: "_12ampOcrpRamy1y301kEaK",
@@ -20,8 +20,8 @@
         Inline: "LOeaKjPDMbdcAB54IFgyX",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
+    88122: (s) => {
+      s.exports = {
         "m-0": "_3NvasCX7YWBZpC8aibkm0E",
         "m-1": "_37cUiZ5UzC1qHmlFJaMIAr",
         "m-2": "_22pmrTZIf7_RclhN_Za_yk",
@@ -239,465 +239,382 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
-    chunkid: (module) => {
-      module.exports = {
-        Text: "f6hU22EA7Z8peFWZVBJU",
-        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
-        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
-        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
-        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
-        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
-        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
-        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
-        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
-        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
-        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
-        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
-        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
-        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
-        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
-      };
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
+    90534: (s, r, e) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.Box, _.className),
-            },
-            _,
-          ),
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: _,
-          ..._,
-        });
+      e.d(r, { az: () => m });
+      var p = e(7850),
+        o = e(64238),
+        i = e.n(o),
+        a = e(41324),
+        t = e(75659),
+        n = e(44041);
+      function m(s) {
+        const { as: r = "div", ref: e, ...o } = s,
+          t = (0, a.mz)({ ...o, className: i()(n.Box, s.className) }, c),
+          m = r;
+        return (0, p.jsx)(m, { ref: e, ...t });
       }
-      const _ = _._;
+      const c = t.h;
     },
-    chunkid: (module, module_exports, __webpack_require__) => {
+    53971: (s, r, e) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, "flow-children": _, ..._ } = _,
-          { gamepadEvents: _ } = (0, _._)(_);
-        _ && (_.layout = (0, _._)(_)),
-          _.onOKButton ||
-            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
-        const { ref: _, node: _ } = (0, _._)(_);
-        (0, _._)(_, _);
-        const _ = (0, _._)(_, _.props?.ref);
-        return (0, _.jsx)(_._.Provider, {
+      e.d(r, { s: () => y });
+      var p = e(7850),
+        o = e(8871),
+        i = e(90626),
+        a = e(7745),
+        t = e(90665),
+        n = e(74882);
+      function m(s) {
+        const { children: r, "flow-children": e, ...m } = s,
+          { gamepadEvents: c } = (0, t.C7)(s);
+        e && (m.layout = (0, a.O)(e)),
+          c.onOKButton ||
+            ("onClick" in r.props && r.props.onClick && (c.onOKButton = t._K));
+        const { ref: l, node: _ } = (0, t.qp)(m);
+        (0, n.Ui)(c, l);
+        const d = (0, o.Ue)(l, r.props?.ref);
+        return (0, p.jsx)(t.TJ.Provider, {
           value: _,
-          children: _.cloneElement(_, {
-            ..._.props,
-            ref: _,
-          }),
+          children: i.cloneElement(r, { ...r.props, ref: d }),
         });
       }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "div", ref: _, ..._ } = _,
-          _ = (0, _._)(
-            {
-              ..._,
-              className: _()(_.className, _.Flex),
-            },
-            _,
-          ),
-          _ = !_.disabled && !!_.onClick,
-          _ = _;
-        return (0, _.jsx)(_, {
-          focusable: _,
-          children: (0, _.jsx)(_, {
-            ref: _,
-            ..._,
-          }),
+      var c = e(41324),
+        l = e(75659),
+        _ = e(64238),
+        d = e.n(_),
+        u = e(68875);
+      function y(s) {
+        const { as: r = "div", ref: e, ...o } = s,
+          i = (0, c.mz)({ ...o, className: d()(s.className, u.Flex) }, f),
+          a = !o.disabled && !!o.onClick,
+          t = r;
+        return (0, p.jsx)(m, {
+          focusable: a,
+          children: (0, p.jsx)(t, { ref: e, ...i }),
         });
       }
-      const _ = [
-        ..._._,
+      const f = [
+        ...l.h,
         {
           prop: "direction",
           responsive: !0,
-          className: _.Direction,
+          className: u.Direction,
           cssProperty: "--direction",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: _.Justify,
-          cssProperty: (_) => ["--justify", _(_)],
+          className: u.Justify,
+          cssProperty: (s) => ["--justify", g(s)],
         },
         {
           prop: "align",
           responsive: !0,
-          className: _.Align,
+          className: u.Align,
           cssProperty: "--align",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: _.Gap,
-          cssProperty: (_) => ["--gap", `var(--spacing-${_})`],
+          className: u.Gap,
+          cssProperty: (s) => ["--gap", `var(--spacing-${s})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: _.GapX,
-          cssProperty: (_) => ["--gap-x", `var(--spacing-${_})`],
+          className: u.GapX,
+          cssProperty: (s) => ["--gap-x", `var(--spacing-${s})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: _.GapY,
-          cssProperty: (_) => ["--gap-y", `var(--spacing-${_})`],
+          className: u.GapY,
+          cssProperty: (s) => ["--gap-y", `var(--spacing-${s})`],
         },
         {
           prop: "wrap",
           responsive: !0,
-          className: _.Wrap,
+          className: u.Wrap,
           cssProperty: "--wrap",
         },
-        {
-          prop: "inline",
-          responsive: !0,
-          className: _.Inline,
-        },
+        { prop: "inline", responsive: !0, className: u.Inline },
       ];
-      function _(_) {
-        return /^(between|around|evenly)$/.test(_) ? `space-${_}` : _;
+      function g(s) {
+        return /^(between|around|evenly)$/.test(s) ? `space-${s}` : s;
       }
     },
-    chunkid: (module, module_exports, __webpack_require__) => {
+    75659: (s, r, e) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = [
-          {
-            prop: "margin",
-            responsive: !0,
-            className: (_) => _[`m-${_}`],
-          },
-          {
-            prop: "marginX",
-            responsive: !0,
-            className: (_) => _[`mx-${_}`],
-          },
-          {
-            prop: "marginY",
-            responsive: !0,
-            className: (_) => _[`my-${_}`],
-          },
-          {
-            prop: "marginTop",
-            responsive: !0,
-            className: (_) => _[`mt-${_}`],
-          },
+      e.d(r, { L: () => i, h: () => a });
+      var p = e(41324),
+        o = e(88122);
+      const i = [
+          { prop: "margin", responsive: !0, className: (s) => o[`m-${s}`] },
+          { prop: "marginX", responsive: !0, className: (s) => o[`mx-${s}`] },
+          { prop: "marginY", responsive: !0, className: (s) => o[`my-${s}`] },
+          { prop: "marginTop", responsive: !0, className: (s) => o[`mt-${s}`] },
           {
             prop: "marginRight",
             responsive: !0,
-            className: (_) => _[`mr-${_}`],
+            className: (s) => o[`mr-${s}`],
           },
           {
             prop: "marginBottom",
             responsive: !0,
-            className: (_) => _[`mb-${_}`],
+            className: (s) => o[`mb-${s}`],
           },
           {
             prop: "marginLeft",
             responsive: !0,
-            className: (_) => _[`ml-${_}`],
+            className: (s) => o[`ml-${s}`],
           },
           {
             prop: "marginStart",
             responsive: !0,
-            className: (_) => _[`ms-${_}`],
+            className: (s) => o[`ms-${s}`],
           },
-          {
-            prop: "marginEnd",
-            responsive: !0,
-            className: (_) => _[`me-${_}`],
-          },
+          { prop: "marginEnd", responsive: !0, className: (s) => o[`me-${s}`] },
         ],
-        _ = [
-          ..._,
-          {
-            prop: "padding",
-            responsive: !0,
-            className: (_) => _[`p-${_}`],
-          },
-          {
-            prop: "paddingX",
-            responsive: !0,
-            className: (_) => _[`px-${_}`],
-          },
-          {
-            prop: "paddingY",
-            responsive: !0,
-            className: (_) => _[`py-${_}`],
-          },
+        a = [
+          ...i,
+          { prop: "padding", responsive: !0, className: (s) => o[`p-${s}`] },
+          { prop: "paddingX", responsive: !0, className: (s) => o[`px-${s}`] },
+          { prop: "paddingY", responsive: !0, className: (s) => o[`py-${s}`] },
           {
             prop: "paddingTop",
             responsive: !0,
-            className: (_) => _[`pt-${_}`],
+            className: (s) => o[`pt-${s}`],
           },
           {
             prop: "paddingRight",
             responsive: !0,
-            className: (_) => _[`pr-${_}`],
+            className: (s) => o[`pr-${s}`],
           },
           {
             prop: "paddingBottom",
             responsive: !0,
-            className: (_) => _[`pb-${_}`],
+            className: (s) => o[`pb-${s}`],
           },
           {
             prop: "paddingLeft",
             responsive: !0,
-            className: (_) => _[`pl-${_}`],
+            className: (s) => o[`pl-${s}`],
           },
           {
             prop: "paddingStart",
             responsive: !0,
-            className: (_) => _[`ps-${_}`],
+            className: (s) => o[`ps-${s}`],
           },
           {
             prop: "paddingEnd",
             responsive: !0,
-            className: (_) => _[`pe-${_}`],
+            className: (s) => o[`pe-${s}`],
           },
           {
             prop: "width",
             responsive: !0,
-            className: _.Width,
+            className: o.Width,
             cssProperty: "--width",
           },
           {
             prop: "minWidth",
             responsive: !0,
-            className: _.MinWidth,
+            className: o.MinWidth,
             cssProperty: "--min-width",
           },
           {
             prop: "maxWidth",
             responsive: !0,
-            className: _.MaxWidth,
+            className: o.MaxWidth,
             cssProperty: "--max-width",
           },
           {
             prop: "height",
             responsive: !0,
-            className: _.Height,
+            className: o.Height,
             cssProperty: "--height",
           },
           {
             prop: "minHeight",
             responsive: !0,
-            className: _.MinHeight,
+            className: o.MinHeight,
             cssProperty: "--min-height",
           },
           {
             prop: "maxHeight",
             responsive: !0,
-            className: _.MaxHeight,
+            className: o.MaxHeight,
             cssProperty: "--max-height",
           },
           {
             prop: "flexBasis",
             responsive: !0,
-            className: _.FlexBasis,
+            className: o.FlexBasis,
             cssProperty: "--flex-basis",
           },
           {
             prop: "flexGrow",
             responsive: !0,
-            className: _.FlexGrow,
+            className: o.FlexGrow,
             cssProperty: "--flex-grow",
           },
           {
             prop: "flexShrink",
             responsive: !0,
-            className: _.FlexShrink,
+            className: o.FlexShrink,
             cssProperty: "--flex-shrink",
           },
           {
             prop: "radius",
             responsive: !0,
-            className: (_) => _[`Radius-${_}`],
+            className: (s) => o[`Radius-${s}`],
           },
           {
             prop: "cursor",
             responsive: !0,
-            className: _.Cursor,
+            className: o.Cursor,
             cssProperty: "--cursor",
           },
           {
             prop: "position",
             responsive: !0,
-            className: _.Position,
+            className: o.Position,
             cssProperty: "--position",
           },
           {
             prop: "inset",
             responsive: !0,
-            className: _.Inset,
-            cssProperty: (_) => ["--inset", (0, _._)(_)],
+            className: o.Inset,
+            cssProperty: (s) => ["--inset", (0, p.ti)(s)],
           },
           {
             prop: "gridColumn",
             responsive: !0,
-            className: _.GridColumn,
+            className: o.GridColumn,
             cssProperty: "--grid-column",
           },
           {
             prop: "gridColumnStart",
             responsive: !0,
-            className: _.GridColumnStart,
+            className: o.GridColumnStart,
             cssProperty: "--grid-column-start",
           },
           {
             prop: "gridColumnEnd",
             responsive: !0,
-            className: _.GridColumnEnd,
+            className: o.GridColumnEnd,
             cssProperty: "--grid-column-end",
           },
           {
             prop: "gridRow",
             responsive: !0,
-            className: _.GridRow,
+            className: o.GridRow,
             cssProperty: "--grid-row",
           },
           {
             prop: "gridRowStart",
             responsive: !0,
-            className: _.GridRowStart,
+            className: o.GridRowStart,
             cssProperty: "--grid-row-start",
           },
           {
             prop: "gridRowEnd",
             responsive: !0,
-            className: _.GridRowEnd,
+            className: o.GridRowEnd,
             cssProperty: "--grid-row-end",
           },
           {
             prop: "gridArea",
             responsive: !0,
-            className: _.GridArea,
+            className: o.GridArea,
             cssProperty: "--grid-area",
           },
           {
             prop: "alignSelf",
             responsive: !0,
-            className: _.AlignSelf,
+            className: o.AlignSelf,
             cssProperty: "--align-self",
           },
           {
             prop: "justifySelf",
             responsive: !0,
-            className: _.JustifySelf,
+            className: o.JustifySelf,
             cssProperty: "--justify-self",
           },
           {
             prop: "background",
             responsive: !0,
-            className: _.Background,
-            cssProperty: (_) => ["--background", (0, _._)(_)],
+            className: o.Background,
+            cssProperty: (s) => ["--background", (0, p.Fd)(s)],
           },
           {
             prop: "overflow",
             responsive: !0,
-            className: _.Overflow,
+            className: o.Overflow,
             cssProperty: "--overflow",
           },
           {
             prop: "zIndex",
             responsive: !0,
-            className: _.ZIndex,
+            className: o.ZIndex,
             cssProperty: "--z-index",
           },
           {
             prop: "display",
             responsive: !0,
-            className: _.Display,
+            className: o.Display,
             cssProperty: "--display",
           },
           {
             prop: "elevation",
             responsive: !0,
-            className: _.Elevation,
+            className: o.Elevation,
             dataProperty: "elevation",
           },
           {
             prop: "border",
             responsive: !0,
-            className: _.Border,
+            className: o.Border,
             cssProperty: "--border",
           },
           {
             prop: "borderColor",
             responsive: !0,
-            className: [_.Border, _.BorderColor].join(" "),
-            cssProperty: (_) => ["--border-color", (0, _._)(_)],
+            className: [o.Border, o.BorderColor].join(" "),
+            cssProperty: (s) => ["--border-color", (0, p.Fd)(s)],
           },
           {
             prop: "outline",
             responsive: !0,
-            className: _.Outline,
-            cssProperty: (_) => ["--outline-color", (0, _._)(_)],
+            className: o.Outline,
+            cssProperty: (s) => ["--outline-color", (0, p.Fd)(s)],
           },
           {
             prop: "textAlign",
             responsive: !0,
-            className: _.TextAlign,
+            className: o.TextAlign,
             cssProperty: "--text-align",
           },
         ];
     },
-    chunkid: (module, module_exports, __webpack_require__) => {
+    41324: (s, r, e) => {
       "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
+      e.d(r, {
+        Fd: () => m,
+        ti: () => n,
+        To: () => c,
+        w7: () => l,
+        mz: () => t,
       });
-      var _ = __webpack_require__("chunkid");
-      const _ = _._.reduce((_, _, _) => ((_[_] = _), _), {});
-      function _(_, _) {
-        if ("object" != typeof _) return _;
-        for (let _ = _[_]; _ >= 0; _--) if (_._[_] in _) return _[_._[_]];
-        return _.initial;
+      var p = e(10430);
+      const o = p.IE.reduce((s, r, e) => ((s[r] = e), s), {});
+      function i(s, r) {
+        if ("object" != typeof s) return s;
+        for (let e = o[r]; e >= 0; e--) if (p.IE[e] in s) return s[p.IE[e]];
+        return s.initial;
       }
-      const _ = {
+      const a = {
         0: !0,
         1: !0,
         2: !0,
@@ -709,177 +626,85 @@
         8: !0,
         9: !0,
       };
-      function _(_, _) {
-        return (function (_, _, _) {
-          const _ = [],
-            _ = {},
-            _ = {},
-            { extracted: _, remaining: _ } = (function (_, _) {
-              const _ = {
-                remaining: {
-                  ..._,
-                },
-                extracted: {},
-              };
-              for (const _ of _) {
-                const _ = _.prop;
-                _ in _.remaining &&
-                  ((_.extracted[_] = _.remaining[_]), delete _.remaining[_]);
+      function t(s, r) {
+        return (function (s, r, e) {
+          const p = [],
+            o = {},
+            a = {},
+            { extracted: t, remaining: n } = (function (s, r) {
+              const e = { remaining: { ...s }, extracted: {} };
+              for (const s of r) {
+                const r = s.prop;
+                r in e.remaining &&
+                  ((e.extracted[r] = e.remaining[r]), delete e.remaining[r]);
               }
-              return _;
-            })(_, _);
-          for (const _ of _) {
-            if (!(_.prop in _)) continue;
-            let _ = _[_.prop];
-            if (void 0 !== _) {
-              if ((_.responsive && (_ = _(_, _.formFactor)), _.className)) {
+              return e;
+            })(s, r);
+          for (const n of r) {
+            if (!(n.prop in t)) continue;
+            let r = t[n.prop];
+            if (void 0 !== r) {
+              if ((n.responsive && (r = i(r, e.formFactor)), n.className)) {
                 if (
-                  !_.cssProperty &&
-                  !_.dataProperty &&
-                  "string" == typeof _.className &&
-                  !_
+                  !n.cssProperty &&
+                  !n.dataProperty &&
+                  "string" == typeof n.className &&
+                  !r
                 )
                   continue;
-                const _ =
-                  "function" == typeof _.className
-                    ? _.className(_)
-                    : _.className;
-                _.push(_);
+                const s =
+                  "function" == typeof n.className
+                    ? n.className(r)
+                    : n.className;
+                p.push(s);
               }
-              if (_.cssProperty)
-                if ("function" == typeof _.cssProperty) {
-                  const _ = _.cssProperty(_, _);
-                  if (_.length && Array.isArray(_[0]))
-                    __webpack_require__.forEach(([_, _]) => (_[_] = _));
+              if (n.cssProperty)
+                if ("function" == typeof n.cssProperty) {
+                  const e = n.cssProperty(r, s);
+                  if (e.length && Array.isArray(e[0]))
+                    e.forEach(([s, r]) => (o[s] = r));
                   else {
-                    const _ = _;
-                    _[_[0]] = _[1];
+                    const s = e;
+                    o[s[0]] = s[1];
                   }
-                } else _[_.cssProperty] = _;
-              if (_.dataProperty)
-                if ("function" == typeof _.dataProperty) {
-                  const [_, _] = _.dataProperty(_);
-                  _[`data-${_}`] = _;
-                } else _[`data-${_.dataProperty}`] = _;
+                } else o[n.cssProperty] = r;
+              if (n.dataProperty)
+                if ("function" == typeof n.dataProperty) {
+                  const [s, e] = n.dataProperty(r);
+                  a[`data-${s}`] = e;
+                } else a[`data-${n.dataProperty}`] = r;
             }
           }
           return (
-            "className" in _ &&
-              "string" == typeof _.className &&
-              _.push(_.className),
-            "style" in _ &&
-              _.style &&
-              "object" == typeof _.style &&
-              Object.assign(_, _.style),
-            {
-              ..._,
-              ..._,
-              className: _.join(" "),
-              style: _,
-            }
+            "className" in n &&
+              "string" == typeof n.className &&
+              p.push(n.className),
+            "style" in n &&
+              n.style &&
+              "object" == typeof n.style &&
+              Object.assign(o, n.style),
+            { ...a, ...n, className: p.join(" "), style: o }
           );
-        })(_, _, {
-          formFactor: (0, _._)(),
-        });
+        })(s, r, { formFactor: (0, p.xC)() });
       }
-      function _(_) {
-        return (function (_) {
-          return !!_[_];
-        })(_)
-          ? `var(--spacing-${_})`
-          : _;
+      function n(s) {
+        return (function (s) {
+          return !!a[s];
+        })(s)
+          ? `var(--spacing-${s})`
+          : s;
       }
-      function _(_) {
-        if (!("%" == _[_.length - 1])) return `var(--color-${_})`;
-        const [_, _] = _.split(" ");
-        return `rgb( from ${`var(--color-${_})`} r g b / ${_} )`;
+      function m(s) {
+        if (!("%" == s[s.length - 1])) return `var(--color-${s})`;
+        const [r, e] = s.split(" ");
+        return `rgb( from ${`var(--color-${r})`} r g b / ${e} )`;
       }
-      function _(_, _) {
-        return _.startsWith("text") ? `var(--color-${_}-${_})` : _(_);
+      function c(s, r) {
+        return s.startsWith("text") ? `var(--color-${s}-${r})` : m(s);
       }
-      function _(_) {
-        return _.startsWith("text") ? `var(--color-${_})` : _(_);
+      function l(s) {
+        return s.startsWith("text") ? `var(--color-${s})` : m(s);
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "span", ref: _, className: _, ..._ } = _,
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: _,
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()(_.Text, _),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-          {
-            prop: "weight",
-            responsive: !0,
-            className: _.TextWeight,
-            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_, _.contrast ?? "body"),
-            ],
-          },
-          {
-            prop: "contrast",
-            cssProperty: (_, _) => [
-              "--text-color",
-              (0, _._)(_.color ?? "text-body", _),
-            ],
-          },
-          {
-            prop: "truncate",
-            className: _.Truncate,
-          },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: _.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: _.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        _ = [
-          ..._,
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`TextSize-${_}`],
-          },
-        ];
     },
   },
 ]);
