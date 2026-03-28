@@ -1,4 +1,3 @@
-import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _((_) => {
   "use strict";
   _.byteLength = _;

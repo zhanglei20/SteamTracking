@@ -1,4 +1,3 @@
-import { _, _ } from "./chunk-XXXXXXXX.js";
 function _(_, _) {
   _.Body().set_context(_(_));
 }

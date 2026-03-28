@@ -1,7 +1,3 @@
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 async function _(_, _) {
   let _ = _.Init(_);
   _.Body().set_steamid(_);

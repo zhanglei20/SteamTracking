@@ -1,4 +1,3 @@
-import { _, _ } from "./chunk-XXXXXXXX.js";
 var _ = _((exports, module) => {
   "use strict";
   var $jscomp = $jscomp || {};

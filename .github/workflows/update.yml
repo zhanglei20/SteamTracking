@@ -69,6 +69,7 @@ jobs:
           path: |
             .support
             store.steampowered.com/ssr
+            partner.steamgames.com/ssr
           key: cache-
           restore-keys: |
             cache-
@@ -106,7 +107,8 @@ jobs:
           path: |
             .support
             store.steampowered.com/ssr
-          key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**') }}
+            partner.steamgames.com/ssr
+          key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**', 'partner.steamgames.com/ssr/**') }}
 
       - name: Dispatch to ValveProtobufs
         if: steps.update.outputs.changed == 'true'

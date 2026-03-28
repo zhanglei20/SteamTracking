@@ -1,24 +1,3 @@
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _, _, _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _({
   "../../../shared/localization/shared_arabic.json": () =>
     import("./shared_arabic-XXXXXXXX.js"),

@@ -253,6 +253,7 @@ ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
 ${COMMUNITY_BASE_URL}groups/community_market/discussions/
+${COMMUNITY_BASE_URL}groups/steamworks/discussions
 ${COMMUNITY_BASE_URL}groups/store_contenthubs/partnerevents/edit/3016840454305565993?tab=sale
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
@@ -884,13 +885,23 @@ ${PARTNER_BASE_URL}/admin/store/pagecreate
 ${PARTNER_BASE_URL}/appsearch/suggestapps?json=1&apptype=1&term=${}
 ${PARTNER_BASE_URL}/contentdescriptors/editsurvey/${}
 ${PARTNER_BASE_URL}/dashboard/?requestedPrimaryPublisher=${}
+${PARTNER_BASE_URL}/doc/
+${PARTNER_BASE_URL}/doc/features
+${PARTNER_BASE_URL}/doc/features/steamvr/info
+${PARTNER_BASE_URL}/doc/finance
+${PARTNER_BASE_URL}/doc/gettingstarted
+${PARTNER_BASE_URL}/doc/marketing
 ${PARTNER_BASE_URL}/doc/marketing/event_tools/stats
+${PARTNER_BASE_URL}/doc/sdk
+${PARTNER_BASE_URL}/doc/store
 ${PARTNER_BASE_URL}/meetsteam/ajaxfetchpartnerdetails
 ${PARTNER_BASE_URL}/meetsteam/ajaxinviteusers
 ${PARTNER_BASE_URL}/meetsteam/ajaxsendinviteemails
 ${PARTNER_BASE_URL}/optin/ajaxadminpreprunesearch
 ${PARTNER_BASE_URL}/optin/ajaxoptinsfordashboard
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
+${PARTNER_BASE_URL}/pccafe
+${PARTNER_BASE_URL}/vrlicensing
 ${PARTNER_BASE_URL}actions/ajaxgetadminusers
 ${PARTNER_BASE_URL}actions/ajaxgetpartnereventssaledetails
 ${PARTNER_BASE_URL}actions/ajaxgetpartnervalvecontacts
@@ -993,6 +1004,7 @@ ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/sections#cross
 ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
 ${PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales
 ${PARTNER_BASE_URL}doc/marketing/wishlist
+${PARTNER_BASE_URL}doc/pricing/explorer
 ${PARTNER_BASE_URL}doc/store/assets/promos
 ${PARTNER_BASE_URL}doc/store/assets/promos#popup_update
 ${PARTNER_BASE_URL}doc/store/assets/rules
@@ -1004,6 +1016,7 @@ ${PARTNER_BASE_URL}doc/store/manageeditions
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
+${PARTNER_BASE_URL}doc/store/pricing/currencies
 ${PARTNER_BASE_URL}doc/store/promo/${}_page
 ${PARTNER_BASE_URL}doc/store/promo/itemdrops
 ${PARTNER_BASE_URL}doc/store/promo/itemdrops#event
@@ -1097,6 +1110,7 @@ ${PARTNER_BASE_URL}partnerevents/ajaxsetprivatedata
 ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
+${PARTNER_BASE_URL}pricing/dashboard
 ${PARTNER_BASE_URL}pricing/dashboard/?pn=${}
 ${PARTNER_BASE_URL}pricing/explorer
 ${PARTNER_BASE_URL}promotion${}
@@ -1471,8 +1485,12 @@ ${STORE_BASE_URL}news/app/${appid}?emclan=${}&emgid=${GID}
 ${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
+${STORE_BASE_URL}news/app/1675200
+${STORE_BASE_URL}news/app/250820
+${STORE_BASE_URL}news/app/593110
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
+${STORE_BASE_URL}news/group/4145017
 ${STORE_BASE_URL}news/group/4145017/view/4578559379959234050
 ${STORE_BASE_URL}news/sale/${}
 ${STORE_BASE_URL}newshub/${appid ? _ : _}/view/${GID}
@@ -2099,6 +2117,7 @@ https://avatars.fastly.steamstatic.com/${strHash}${strSize}.jpg
 https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
 https://blog.counter-strike.net/
 https://bouncinglogo.steamscreensavers.host/index.html
+https://bsky.app/profile/partner.steamgames.com
 https://calendar.google.com/calendar/render?action=TEMPLATE
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.mp4
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.webm
@@ -2960,6 +2979,7 @@ https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
 https://twitter.com/Steam
+https://twitter.com/Steamworks
 https://twitter.com/dota2ti
 https://twitter.com/intent/tweet/?
 https://twitter.com/steam_games
@@ -3035,6 +3055,7 @@ https://www.youtube.com/
 https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
 https://www.youtube.com/iframe_api
+https://www.youtube.com/user/SteamworksDev
 https://www.youtube.com/user/dota2
 https://www.youtube.com/watch?v=
 https://www.youtube.com/watch?v=${strVideoID}
@@ -3044,6 +3065,7 @@ https://www.youtube.com/watch?v=1T76Ya-vNMc...
 https://www.youtube.com/watch?v=MZhBVH9UeAA
 https://youtu.be/
 https://youtube.com/user/dota2
+id/${profile_url}/
 linear-gradient( ${}${}, ${}${} ), url( '${IMG_URL}international2022/backgrounds/buy_bp_capsule_bg.jpg' )
 linear-gradient(90deg, rgba(3, 2, 2, 0) 22.92%, rgba(3, 2, 2, 0.6) 100%), url( ${IMG_URL}international2020/stone_rect_small.png )
 steam://

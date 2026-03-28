@@ -212,7 +212,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 
 		private function HandleResponse( string $File, string $Data, string $URL ) : bool
 		{
-			$IsSSR = str_starts_with( $File, 'store.steampowered.com/ssr/' );
+			$IsSSR = str_starts_with( $File, 'store.steampowered.com/ssr/' ) || str_starts_with( $File, 'steamcommunity.com/ssr/' ) || str_starts_with( $File, 'partner.steamgames.com/ssr/' );
 
 			if( $File === 'API/SupportedAPIList.json' )
 			{
@@ -388,7 +388,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			}
 			else if( $IsSSR )
 			{
-				$Data = preg_replace( '/^\s*const CLSTAMP = [0-9]+;\s*/', '', $Data );
+				// raw ssr files are not tracked, only clean versions are
 			}
 			else if( $File === '.support/archives/steam-android.apk' )
 			{
@@ -631,6 +631,22 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					}
 
 					$this->DumpJavascriptFiles = true;
+				}
+				else if( $IsSSR && str_ends_with( $File, '.json' ) )
+				{
+					$JsonData = json_decode( $Data, true );
+					// TODO: strip hash from named json files: preg_replace( '/^(?!chunk-)(.+)-[A-Z0-9]{8}\.json$/', '$1.json', basename( $OriginalFile ) )
+					$CleanFile = __DIR__ . '/c/' . $OriginalFile;
+					$CleanFolder = dirname( $CleanFile );
+
+					if( !is_dir( $CleanFolder ) )
+					{
+						$this->Log( '{lightblue}Creating ' . $CleanFolder );
+
+						mkdir( $CleanFolder, 0755, true );
+					}
+
+					file_put_contents( $CleanFile, json_encode( $JsonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL );
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
@@ -1104,15 +1120,32 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 						unset( $this->ETags[ $File ], $this->ETags[ $File . '.unmodified' ] );
 
 						unlink( $FilepathOnDisk );
+					}
+				}
 
-						// Also delete the corresponding file in the clean directory if it exists
-						$CleanFilepath = __DIR__ . '/c/' . $File;
+				// Clean up orphaned files in the clean directory
+				$CleanFolder = str_replace( __DIR__ . '/', __DIR__ . '/c/', $Folder );
 
-						if( file_exists( $CleanFilepath ) )
-						{
-							$this->Log( 'Deleting clean file ' . $CleanFilepath );
-							unlink( $CleanFilepath );
-						}
+				if( !is_dir( $CleanFolder ) )
+				{
+					continue;
+				}
+
+				foreach( new DirectoryIterator( $CleanFolder ) as $FileInfo )
+				{
+					if( $FileInfo->isDot() )
+					{
+						continue;
+					}
+
+					$Filename = $FileInfo->getFilename();
+
+					if( !isset( $NewChunks[ $Filename ] ) )
+					{
+						$FilepathOnDisk = $FileInfo->getRealPath();
+
+						$this->Log( 'Deleting clean file ' . $FilepathOnDisk );
+						unlink( $FilepathOnDisk );
 					}
 				}
 			}
@@ -1125,6 +1158,14 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			if( str_starts_with( $File, '/store/ssr/' ) )
 			{
 				return 'store.steampowered.com/ssr/' . basename( $File );
+			}
+			else if( str_starts_with( $File, '/steamcommunity/public/ssr/' ) )
+			{
+				return 'steamcommunity.com/ssr/' . basename( $File );
+			}
+			else if( str_starts_with( $File, '/appmgmt/ssr/' ) )
+			{
+				return 'partner.steamgames.com/ssr/' . basename( $File );
 			}
 
 			$this->Log( '{lightred}Unknown SSR path: ' . $File );

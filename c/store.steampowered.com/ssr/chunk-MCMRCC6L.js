@@ -1,5 +1,3 @@
-import { _, _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 function _(_, ..._) {
   let _ = _.match(/(?:^|\/)(:[^/]+)/g);
   if (!_) return _;

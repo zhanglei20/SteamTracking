@@ -457,6 +457,14 @@ function normalizeAst(ast) {
 
 // Normalize the AST and generate the output code
 const normalizedAst = normalizeAst(ast);
+
+// Remove static import declarations from SSR files, after normalization all imports
+// are indistinguishable (import { _ } from "./chunk-XXXXXXXX.js") and Vite reorders
+// them across builds, creating diff churn with no meaningful information
+if (inputFile.includes("/ssr/")) {
+	normalizedAst.body = normalizedAst.body.filter((node) => node.type !== Syntax.ImportDeclaration);
+}
+
 const normalizedCode = generate(normalizedAst, {
 	indent: "  ",
 });

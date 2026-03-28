@@ -1,5 +1,3 @@
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _(_(), 1);
 function _() {
   let [, _] = _.useState(0);

@@ -1,7 +1,3 @@
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
-import { _ } from "./chunk-XXXXXXXX.js";
 function _(_, _) {
   if (_[_])
     if (_ == "community_icon") {

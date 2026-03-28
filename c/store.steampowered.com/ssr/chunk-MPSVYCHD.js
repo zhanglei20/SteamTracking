@@ -1,4 +1,3 @@
-import { _ } from "./chunk-XXXXXXXX.js";
 var _ = "./store_arabic-XXXXXXXX.json";
 var _ = "./store_brazilian-XXXXXXXX.json";
 var _ = "./store_bulgarian-XXXXXXXX.json";

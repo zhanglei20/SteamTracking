@@ -1,4 +1,3 @@
-import "./chunk-XXXXXXXX.js";
 var _ = "english",
   _ = "Greetings from the Future!",
   _ =

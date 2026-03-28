@@ -1,4 +1,3 @@
-import "./chunk-XXXXXXXX.js";
 var _ = "english",
   _ = "Play for free until %1$s.",
   _ = "Offer ends %1$s.",

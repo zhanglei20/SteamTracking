@@ -1,4 +1,3 @@
-import { _, _, _ } from "./chunk-XXXXXXXX.js";
 async function _(_, _, ..._) {
   return (
     await fetch(_, {

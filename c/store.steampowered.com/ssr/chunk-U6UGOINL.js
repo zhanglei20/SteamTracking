@@ -1,4 +1,3 @@
-import { _ } from "./chunk-XXXXXXXX.js";
 var _ = _((_, _) => {
   "use strict";
   var _ = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
