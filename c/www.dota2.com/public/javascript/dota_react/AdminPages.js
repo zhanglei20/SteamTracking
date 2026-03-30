@@ -1962,7 +1962,8 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = "red",
         _ = "orange",
         _ = "goldenrod",
@@ -4734,11 +4735,18 @@
                                       label: _.label,
                                       dataKey: _.dataKey,
                                       width: _ * _.widthRelative,
-                                      cellRenderer: _.cellRenderer,
+                                      cellRenderer: _.cellRenderer
+                                        ? _.cellRenderer
+                                        : _._,
                                       columnData: {
                                         strAccountId: _,
                                       },
-                                      headerRenderer: _.headerRenderer,
+                                      headerRenderer: _.headerRenderer
+                                        ? _.headerRenderer
+                                        : _._,
+                                      cellDataGetter: _._,
+                                      flexGrow: 0,
+                                      flexShrink: 1,
                                     },
                                     _.dataKey,
                                   ),
