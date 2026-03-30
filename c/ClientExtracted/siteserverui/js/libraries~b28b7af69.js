@@ -1313,20 +1313,10 @@
         )
           _.push(_(_, _, _ + _ > _ ? _ : _ + _));
         1 === _
-          ? ((_ = _[_ - 1]),
-            _.push(
-              __webpack_require__[_ >> 2] +
-                __webpack_require__[(_ << 4) & 63] +
-                "==",
-            ))
+          ? ((_ = _[_ - 1]), _.push(_[_ >> 2] + _[(_ << 4) & 63] + "=="))
           : 2 === _ &&
             ((_ = (_[_ - 2] << 8) + _[_ - 1]),
-            _.push(
-              __webpack_require__[_ >> 10] +
-                __webpack_require__[(_ >> 4) & 63] +
-                __webpack_require__[(_ << 2) & 63] +
-                "=",
-            ));
+            _.push(_[_ >> 10] + _[(_ >> 4) & 63] + _[(_ << 2) & 63] + "="));
         return _.join("");
       };
       for (
@@ -6086,7 +6076,7 @@
         }),
         (goog.labs.userAgent.browser.getVersion = function () {
           function _(_) {
-            return (_ = goog.array.find(_, _)), __webpack_require__[_] || "";
+            return (_ = goog.array.find(_, _)), _[_] || "";
           }
           var _ = goog.labs.userAgent.util.getUserAgent();
           if (goog.labs.userAgent.browser.isIE())
@@ -12697,8 +12687,8 @@
           ? globalThis
           : "undefined" != typeof window
             ? window
-            : void 0 !== __webpack_require__._
-              ? __webpack_require__._
+            : void 0 !== _._
+              ? _._
               : "undefined" != typeof self
                 ? self
                 : _;
@@ -13479,10 +13469,8 @@
           : !1 === _.deep
             ? _
             : (_ = _.defaultDecorator) &&
-                null !=
-                  (__webpack_require__ =
-                    null == (_ = _.options_) ? void 0 : _.enhancer)
-              ? __webpack_require__
+                null != (_ = null == (_ = _.options_) ? void 0 : _.enhancer)
+              ? _
               : _;
         var _, _, _;
       }
@@ -28143,21 +28131,13 @@
             _.split(" ").forEach(function (_) {
               return (
                 (_ = _),
-                void ((__webpack_require__ = _).classList
-                  ? __webpack_require__.classList.remove(_)
-                  : "string" == typeof __webpack_require__.className
-                    ? (__webpack_require__.className = _(
-                        __webpack_require__.className,
-                        _,
-                      ))
+                void ((_ = _).classList
+                  ? _.classList.remove(_)
+                  : "string" == typeof _.className
+                    ? (_.className = _(_.className, _))
                     : __webpack_require__.setAttribute(
                         "class",
-                        _(
-                          (__webpack_require__.className &&
-                            __webpack_require__.className.baseVal) ||
-                            "",
-                          _,
-                        ),
+                        _((_.className && _.className.baseVal) || "", _),
                       ))
               );
               var _, _;

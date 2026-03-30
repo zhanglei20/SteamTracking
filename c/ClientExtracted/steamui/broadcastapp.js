@@ -57,7 +57,7 @@
         CreateWatchParty(_ = !1) {
           const {
             browserContext: _,
-            ownerWindow: __webpack_require__,
+            ownerWindow: _,
             broadcastAccountId: _,
             initialFriend: _,
           } = this.props;
@@ -84,7 +84,7 @@
               },
               (0, _._)(_),
             );
-          })(_, __webpack_require__ || window, _, _);
+          })(_, _ || window, _, _);
         }
         WatchAlone() {
           this.Close();
@@ -92,7 +92,7 @@
         UpgradeExisting(_) {
           const {
             broadcastAccountId: _,
-            browserContext: __webpack_require__,
+            browserContext: _,
             broadcastChannelID: _,
             broadcastTabId: _,
           } = this.props;
@@ -100,11 +100,7 @@
             _
               ? _.SetChatRoomGroupWatchingBroadcast(void 0, _)
               : _.SetChatRoomGroupWatchingBroadcast(_);
-          const _ = _._.UIStore.ShowAndOrActivateChatRoomGroup(
-            __webpack_require__,
-            _,
-            !0,
-          );
+          const _ = _._.UIStore.ShowAndOrActivateChatRoomGroup(_, _, !0);
           _ && _._.UIStore.CloseTabByID(_),
             this.props.bIsNewSteamTVDialog || _.ShowBroadcast();
         }
@@ -468,11 +464,7 @@
           _._.UIStore.SetTheaterMode(!_._.UIStore.GetTheaterMode());
         }
         render() {
-          const {
-              broadcastView: _,
-              popup: _,
-              style: __webpack_require__,
-            } = this.props,
+          const { broadcastView: _, popup: _, style: _ } = this.props,
             _ = _.GetSteamID().ConvertTo64BitString();
           let _ = _();
           const _ = _.m_bShowWatchPromptDialog
@@ -487,7 +479,7 @@
             : null;
           return (0, _.jsxs)("div", {
             className: "BroadcastTab",
-            style: __webpack_require__,
+            style: _,
             children: [
               (0, _.jsx)(_._, {
                 className: "FullpageBroadcastBackdrop",
@@ -759,7 +751,7 @@
         {
           steamID: _,
           localSteamID: _,
-          watchLocation: __webpack_require__,
+          watchLocation: _,
           bWebRTC: _,
           style: _,
           onRequestClose: _,
@@ -786,7 +778,7 @@
                   _.default,
                   {
                     steamIDBroadcast: _,
-                    watchLocation: __webpack_require__,
+                    watchLocation: _,
                     bWebRTC: _,
                     onRequestClose: _,
                     actions: _,

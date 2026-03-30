@@ -1348,20 +1348,10 @@ var CLSTAMP = "steamdb";
           )
             _.push(_(_, _, _ + _ > _ ? _ : _ + _));
           1 === _
-            ? ((_ = _[_ - 1]),
-              _.push(
-                __webpack_require__[_ >> 2] +
-                  __webpack_require__[(_ << 4) & 63] +
-                  "==",
-              ))
+            ? ((_ = _[_ - 1]), _.push(_[_ >> 2] + _[(_ << 4) & 63] + "=="))
             : 2 === _ &&
               ((_ = (_[_ - 2] << 8) + _[_ - 1]),
-              _.push(
-                __webpack_require__[_ >> 10] +
-                  __webpack_require__[(_ >> 4) & 63] +
-                  __webpack_require__[(_ << 2) & 63] +
-                  "=",
-              ));
+              _.push(_[_ >> 10] + _[(_ >> 4) & 63] + _[(_ << 2) & 63] + "="));
           return _.join("");
         });
       for (
@@ -6121,7 +6111,7 @@ var CLSTAMP = "steamdb";
         }),
         (goog.labs.userAgent.browser.getVersion = function () {
           function _(_) {
-            return (_ = goog.array.find(_, _)), __webpack_require__[_] || "";
+            return (_ = goog.array.find(_, _)), _[_] || "";
           }
           var _ = goog.labs.userAgent.util.getUserAgent();
           if (goog.labs.userAgent.browser.isIE())
@@ -13669,8 +13659,8 @@ var CLSTAMP = "steamdb";
           ? globalThis
           : "undefined" != typeof window
             ? window
-            : void 0 !== __webpack_require__._
-              ? __webpack_require__._
+            : void 0 !== _._
+              ? _._
               : "undefined" != typeof self
                 ? self
                 : _;
@@ -14473,10 +14463,8 @@ var CLSTAMP = "steamdb";
           : !1 === _.deep
             ? _
             : (_ = _.defaultDecorator) &&
-                null !=
-                  (__webpack_require__ =
-                    null == (_ = _.options_) ? void 0 : _.enhancer)
-              ? __webpack_require__
+                null != (_ = null == (_ = _.options_) ? void 0 : _.enhancer)
+              ? _
               : _;
         var _, _, _;
       }
@@ -33205,25 +33193,13 @@ var CLSTAMP = "steamdb";
           },
         };
       }
-      function _(_, { pages: _, pageParams: __webpack_require__ }) {
+      function _(_, { pages: _, pageParams: _ }) {
         const _ = _.length - 1;
-        return _.length > 0
-          ? _.getNextPageParam(
-              _[_],
-              _,
-              __webpack_require__[_],
-              __webpack_require__,
-            )
-          : void 0;
+        return _.length > 0 ? _.getNextPageParam(_[_], _, _[_], _) : void 0;
       }
-      function _(_, { pages: _, pageParams: __webpack_require__ }) {
+      function _(_, { pages: _, pageParams: _ }) {
         return _.length > 0
-          ? _.getPreviousPageParam?.(
-              _[0],
-              _,
-              __webpack_require__[0],
-              __webpack_require__,
-            )
+          ? _.getPreviousPageParam?.(_[0], _, _[0], _)
           : void 0;
       }
       function _(_, _) {
@@ -34674,7 +34650,7 @@ var CLSTAMP = "steamdb";
       }
       function _(_, _) {
         const {
-          type: __webpack_require__ = "all",
+          type: _ = "all",
           exact: _,
           fetchStatus: _,
           predicate: _,
@@ -34685,10 +34661,10 @@ var CLSTAMP = "steamdb";
           if (_) {
             if (_.queryHash !== _(_, _.options)) return !1;
           } else if (!_(_.queryKey, _)) return !1;
-        if ("all" !== __webpack_require__) {
+        if ("all" !== _) {
           const _ = _.isActive();
-          if ("active" === __webpack_require__ && !_) return !1;
-          if ("inactive" === __webpack_require__ && _) return !1;
+          if ("active" === _ && !_) return !1;
+          if ("inactive" === _ && _) return !1;
         }
         return (
           ("boolean" != typeof _ || _.isStale() === _) &&
@@ -34697,15 +34673,10 @@ var CLSTAMP = "steamdb";
         );
       }
       function _(_, _) {
-        const {
-          exact: __webpack_require__,
-          status: _,
-          predicate: _,
-          mutationKey: _,
-        } = _;
+        const { exact: _, status: _, predicate: _, mutationKey: _ } = _;
         if (_) {
           if (!_.options.mutationKey) return !1;
-          if (__webpack_require__) {
+          if (_) {
             if (_(_.options.mutationKey) !== _(_)) return !1;
           } else if (!_(_.options.mutationKey, _)) return !1;
         }
@@ -34786,17 +34757,13 @@ var CLSTAMP = "steamdb";
             ? _(_, _)
             : _;
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const _ = [..._, _];
-        return __webpack_require__ && _.length > __webpack_require__
-          ? _.slice(1)
-          : _;
+        return _ && _.length > _ ? _.slice(1) : _;
       }
-      function _(_, _, __webpack_require__ = 0) {
+      function _(_, _, _ = 0) {
         const _ = [_, ..._];
-        return __webpack_require__ && _.length > __webpack_require__
-          ? _.slice(0, -1)
-          : _;
+        return _ && _.length > _ ? _.slice(0, -1) : _;
       }
       var _ = Symbol();
       function _(_, _) {

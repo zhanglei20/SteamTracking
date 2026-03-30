@@ -281,12 +281,12 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_) {
-        const { steamid: _, closeModal: __webpack_require__ } = _;
+        const { steamid: _, closeModal: _ } = _;
         return (0, _.jsxs)(_._, {
           strDescription: "",
           strTitle: (0, _._)("#Button_Share"),
-          onCancel: __webpack_require__,
-          onOK: __webpack_require__,
+          onCancel: _,
+          onOK: _,
           bAlertDialog: !0,
           modalClassName: "EventDisplay_Share_Dialog",
           children: [
@@ -651,11 +651,11 @@
             this.MarkBroadcastSeen();
             let _ = "show" === _._.Get().GetChatVisibility();
             const {
-              event: __webpack_require__,
+              event: _,
               language: _,
               fnRenderBroadcastContext: _,
             } = this.props;
-            __webpack_require__ &&
+            _ &&
               (_ = {
                 ..._,
                 left_panel: __webpack_require__.GetImageURL(
@@ -686,7 +686,7 @@
                   (0, _.jsxs)("div", {
                     className: (0, _._)({
                       [_().bordered_container]: !0,
-                      [_().Event]: Boolean(__webpack_require__),
+                      [_().Event]: Boolean(_),
                       broadcast_brd_ctn_trgt: !0,
                     }),
                     children: [
@@ -780,12 +780,10 @@
                     ],
                   }),
                   Boolean(
-                    __webpack_require__ &&
-                      __webpack_require__.jsondata &&
-                      __webpack_require__.jsondata.broadcast_item_drops_enabled,
+                    _ && _.jsondata && _.jsondata.broadcast_item_drops_enabled,
                   ) &&
                     (0, _.jsx)(_, {
-                      event: __webpack_require__,
+                      event: _,
                     }),
                   (0, _.jsx)("div", {
                     className: _().clear_div,
@@ -883,11 +881,8 @@
       }
       function _(_) {
         const { stream: _ } = _,
-          [__webpack_require__] = (0, _._)(() => [_.steamid]),
-          _ =
-            _.BroadcastWatchStore.GetOrCreateBroadcastInfo(
-              __webpack_require__,
-            ).m_nAppID,
+          [_] = (0, _._)(() => [_.steamid]),
+          _ = _.BroadcastWatchStore.GetOrCreateBroadcastInfo(_).m_nAppID,
           _ = _.list.find(
             (_) =>
               _.appid == _ &&
@@ -909,8 +904,7 @@
           );
         }
         {
-          const _ =
-            _._.COMMUNITY_BASE_URL + "broadcast/watch/" + __webpack_require__;
+          const _ = _._.COMMUNITY_BASE_URL + "broadcast/watch/" + _;
           return (0, _.jsx)(_._, {
             toolTipContent: (0, _._)("#BroadcastWatch_View_Broadcast_Page"),
             children: (0, _.jsx)("a", {
@@ -1102,7 +1096,7 @@
       function _(_) {
         const {
             curStream: _,
-            onStreamSelect: __webpack_require__,
+            onStreamSelect: _,
             fnFilterStreams: _,
             bShowCapsuleArt: _,
             broadcastEmbedContext: _,
@@ -1154,7 +1148,7 @@
                   {
                     stream: _,
                     bSelected: _.accountid == _.accountid,
-                    onStreamSelect: __webpack_require__,
+                    onStreamSelect: _,
                     bShowCapsuleArt: _,
                   },
                   _.accountid ?? _.steamid,
@@ -1167,7 +1161,7 @@
       function _(_) {
         const {
           onStreamSelect: _,
-          bSelected: __webpack_require__,
+          bSelected: _,
           stream: _,
           bShowCapsuleArt: _,
         } = _;
@@ -1198,13 +1192,13 @@
               children: (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _().stream_icon_container,
-                  __webpack_require__ && _().stream_selected,
+                  _ && _().stream_selected,
                 ),
                 onClick: () => _ && _(_),
                 rootMargin: "100px 0px 100px 0px",
                 children: (0, _.jsx)(_, {
                   strThumbnail: _.thumbnail_http_address,
-                  bSelected: __webpack_require__,
+                  bSelected: _,
                   strCapsuleArtURL: _,
                 }),
               }),
@@ -1227,11 +1221,7 @@
         });
       }
       function _(_) {
-        const {
-            strCapsuleArtURL: _,
-            strThumbnail: __webpack_require__,
-            bSelected: _,
-          } = _,
+        const { strCapsuleArtURL: _, strThumbnail: _, bSelected: _ } = _,
           _ = _ ? _().stream_icon_selected : _().stream_icon;
         if (_) {
           const _ = [_];
@@ -1250,12 +1240,12 @@
         }
         return (0, _.jsx)("img", {
           className: _,
-          src: __webpack_require__,
+          src: _,
         });
       }
       function _(_) {
-        const { stream: _, orientation: __webpack_require__ } = _,
-          _ = "below" == __webpack_require__,
+        const { stream: _, orientation: _ } = _,
+          _ = "below" == _,
           [_, _] = (0, _._)(() => [
             _.BroadcastWatchStore.GetBroadcast(_.steamid),
             _.BroadcastWatchStore.GetBroadcast(_.steamid)?.m_ulBroadcastID,
