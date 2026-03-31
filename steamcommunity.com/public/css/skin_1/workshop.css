@@ -3335,7 +3335,8 @@ input.searchText
 	text-align: left;
 	max-width: 948px;
 	padding: 20px 0 0 0;
-	margin: 0px auto;
+	margin: 0 auto;
+	width: 100%;
 }
 .breadcrumbs, .breadcrumbs a {
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;

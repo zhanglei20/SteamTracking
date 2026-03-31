@@ -3,15 +3,6 @@
   {
     chunkid: (module) => {
       module.exports = {
-        Root: "_1kIuUssJvopWbHik1IKMG6",
-        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
-        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
-        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
-        Icon: "cngAYeP7ZvFo2pT_v3-xO",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         FilterBorder: "_3xFYpKNlOZ6xjQ529ZgRbr",
         Top: "_310cGk80jWCZr6LxeueX_5",
         Bottom: "nLYMJhpffeKLN_8VkTcD_",
@@ -100,22 +91,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
-        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
-        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
-        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
-        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
-        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
-        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
-        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
-        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
-        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
-        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
-        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Grid: "_2IVd64AHN6R428cgcPqW7M",
         Display: "_2PUyyAEGuZenuwES7VJvQO",
         Columns: "_16FZUyKiH6Z7trthKypJwf",
@@ -143,25 +118,6 @@
         "HeadingSize-7": "Ena8Nl7MJg7YAYsWql_jo",
         "HeadingSize-8": "jyf9-rlT4iFrHQOAVn298",
         "HeadingSize-9": "_3L0vs4_Y96AtsR3P5GUkUa",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Text: "f6hU22EA7Z8peFWZVBJU",
-        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
-        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
-        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
-        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
-        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
-        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
-        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
-        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
-        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
-        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
-        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
-        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
-        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
-        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
       };
     },
     chunkid: (module) => {
@@ -2916,98 +2872,6 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { _: _ = "span", ref: _, className: _, ..._ } = _,
-          _ = _;
-        return (0, _.jsx)(_, {
-          ref: _,
-          ...(0, _._)(
-            {
-              ..._,
-              className: _()(_.Text, _),
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-          {
-            prop: "weight",
-            responsive: !0,
-            className: _.TextWeight,
-            cssProperty: (_) => ["--text-weight", `var(--font-weight-${_})`],
-          },
-          {
-            prop: "align",
-            responsive: !0,
-            className: _.TextAlign,
-            cssProperty: "--text-align",
-          },
-          {
-            prop: "color",
-            cssProperty: (_, _) => {
-              var _;
-              return [
-                "--text-color",
-                (0, _._)(
-                  _,
-                  null !== (_ = _.contrast) && void 0 !== _ ? _ : "body",
-                ),
-              ];
-            },
-          },
-          {
-            prop: "contrast",
-            cssProperty: (_, _) => {
-              var _;
-              return [
-                "--text-color",
-                (0, _._)(
-                  null !== (_ = _.color) && void 0 !== _ ? _ : "text-body",
-                  _,
-                ),
-              ];
-            },
-          },
-          {
-            prop: "truncate",
-            className: _.Truncate,
-          },
-          {
-            prop: "lineClamp",
-            responsive: !0,
-            className: _.LineClamp,
-            cssProperty: "--line-clamp",
-          },
-          {
-            prop: "whiteSpace",
-            className: _.WhiteSpace,
-            cssProperty: "--white-space",
-          },
-        ],
-        _ = [
-          ..._,
-          ..._._,
-          {
-            prop: "size",
-            responsive: !0,
-            className: (_) => _[`TextSize-${_}`],
-          },
-        ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       function _() {
@@ -3144,117 +3008,14 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { viewBoxSize: _ = 20, ..._ } = _,
-          _ = _.size ? void 0 : _.IconSizeDefault;
-        return (0, _.jsx)("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ...(0, _._)(
-            {
-              className: _,
-              ..._,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`IconSize-${_}`],
-        },
-        {
-          prop: "color",
-          className: _.Color,
-          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
-        },
-        {
-          prop: "hitSlop",
-          className: _.HitSlop,
-          cssProperty: (_) => [
-            "--hit-slop-custom",
-            "string" == typeof _ ? _ : "",
-          ],
-        },
-        _._.find(({ prop: _ }) => "cursor" === _),
-      ];
-      function _(_) {
-        return (0, _.jsx)(_, {
-          ..._,
-          viewBoxSize: 16,
-          children: (0, _.jsx)("path", {
-            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            checked: _,
-            onChange: _,
-            disabled: _,
-            children: _,
-            ref: _,
-            variant: _ = "default",
-            ..._
-          } = _,
-          _ = "indeterminate" === _,
-          _ = _ ? _ : _,
-          _ = () => {
-            _ && __webpack_require__(!!_ || !_);
-          };
-        return (0, _.jsxs)(_._, {
-          ref: _,
-          role: "checkbox",
-          "aria-checked": _ ? "mixed" : _,
-          "data-state": _(_),
-          className: _()(_.Root, _[`Variant-${_}`]),
-          onClick: _,
-          tabIndex: 0,
-          onKeyDown: (_) => {
-            " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
-          },
-          cursor: "default",
-          ..._,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.Checkbox,
-              children:
-                _ &&
-                (0, _.jsx)(_, {
-                  className: _.Icon,
-                }),
-            }),
-            _,
-          ],
-        });
-      }
-      function _(_) {
-        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
-      }
-      function _(_) {
-        return (0, _.jsx)("svg", {
-          viewBox: "0 0 16 16",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: (0, _.jsx)("path", {
-            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           ..._,
           viewBoxSize: 12,
           children: (0, _.jsx)("path", {
@@ -3327,18 +3088,13 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
-      }
-      function _(_, _, _, _) {
-        return _(_ || _, _, _);
-      }
-      var _ = __webpack_require__("chunkid");
       const _ = Object.assign(
         function (_) {
           const { render: _, ..._ } = _;
-          return _(
+          return (0, _._)(
             _,
             (0, _.jsx)(_._, {
               radius: "sm",
@@ -3363,7 +3119,7 @@
               } = _,
               _ = _ ? "true" : "false",
               _ = _ ? "true" : void 0;
-            return _(
+            return (0, _._)(
               _,
               (0, _.jsx)(_._, {
                 "data-selected": _,
@@ -3743,7 +3499,7 @@
       function _(_) {
         const { direction: _ = "down" } = _,
           _ = _[_];
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           ..._,
           children: (0, _.jsx)("path", {
             transform: _,
@@ -3844,7 +3600,7 @@
                   gap: "2",
                   align: "center",
                   children: [
-                    (0, _.jsx)(_, {
+                    (0, _.jsx)(_._, {
                       checked: _,
                       variant: "dark",
                     }),
@@ -4109,19 +3865,15 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_, {}),
-            _ = _(
-              _,
-              (0, _.jsx)(_._, {
-                beforeContent: _,
-                afterContent: _,
-                hasValue: _,
-                cursor: "pointer",
-                tabIndex: 0,
-                ..._,
-              }),
-              _,
-              void 0,
-            );
+            _ = (0, _.jsx)(_._, {
+              beforeContent: _,
+              afterContent: _,
+              hasValue: _,
+              cursor: "pointer",
+              tabIndex: 0,
+              ..._,
+            }),
+            _ = (0, _._)(_, _, _, void 0);
           return (0, _.jsx)(_, {
             children: _,
           });
@@ -4395,7 +4147,7 @@
                   gap: "2",
                   align: "center",
                   children: [
-                    (0, _.jsx)(_, {
+                    (0, _.jsx)(_._, {
                       checked: _,
                       variant: "dark",
                     }),
@@ -4451,20 +4203,16 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_, {}),
-            _ = _(
-              _,
-              (0, _.jsx)(_._, {
-                afterContent: _,
-                variant: _,
-                size: _,
-                radius: _,
-                hasValue: _,
-                tabIndex: 0,
-                ..._,
-              }),
-              _,
-              void 0,
-            );
+            _ = (0, _.jsx)(_._, {
+              afterContent: _,
+              variant: _,
+              size: _,
+              radius: _,
+              hasValue: _,
+              tabIndex: 0,
+              ..._,
+            }),
+            _ = (0, _._)(_, _, _, void 0);
           return (0, _.jsx)(_, {
             children: _,
           });
@@ -4660,7 +4408,7 @@
                   null
                 );
               const { selected: _, onChange: _, disabled: _ } = _;
-              return (0, _.jsx)(_, {
+              return (0, _.jsx)(_._, {
                 checked: !!_[_],
                 disabled: _,
                 onChange: (_) => _(_, _),
@@ -4673,7 +4421,9 @@
             },
           },
         );
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       const _ = Object.assign(
           function (_) {
             return (0, _.jsxs)(_.Root, {
@@ -5512,7 +5262,7 @@
       }
       function _(_) {
         const { render: _, ..._ } = _;
-        return _(
+        return (0, _._)(
           _,
           (0, _.jsx)("div", {
             className: _.SliderTrack,
@@ -5528,7 +5278,7 @@
         const { min: _, max: _ } = _,
           _ = _(_, _, _),
           _ = 100 - _(_, _, _);
-        return _(
+        return (0, _._)(
           _,
           (0, _.jsx)("div", {
             className: _.SliderRange,
@@ -5615,7 +5365,7 @@
             }
           },
         };
-        return _(
+        return (0, _._)(
           _,
           (0, _.jsx)("span", {
             className: _.SliderHandle,

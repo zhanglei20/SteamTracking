@@ -16837,6 +16837,8 @@
             background_gradient_top: "#0000006b",
             background_gradient_bottom: "#0000006b",
             facet_sort_order: 1,
+            cap_item_count: 24,
+            show_more_count: 48,
             facet_auto_generate_options: {
               only_facets: [
                 {

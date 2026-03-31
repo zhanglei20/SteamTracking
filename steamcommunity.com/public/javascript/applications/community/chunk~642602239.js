@@ -4887,6 +4887,8 @@
             background_gradient_top: "#0000006b",
             background_gradient_bottom: "#0000006b",
             facet_sort_order: 1,
+            cap_item_count: 24,
+            show_more_count: 48,
             facet_auto_generate_options: {
               only_facets: [
                 { loc_token: "#App_Taxonomy_Survey_QSuperGenreTitle" },
@@ -7522,13 +7524,14 @@
             a,
           );
         }
-        async LoadPartnerEventFromAnnoucementGID(e, t, n) {
+        async LoadPartnerEventFromAnnoucementGID(e, t, n, i) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             e,
             void 0,
             t,
             n,
+            i,
           );
         }
         async LoadPartnerEventFromAnnoucementGIDAndClanSteamID(e, t, n, i) {
@@ -7541,13 +7544,14 @@
             i,
           );
         }
-        async LoadPartnerEventFromClanEventGID(e, t, n) {
+        async LoadPartnerEventFromClanEventGID(e, t, n, i) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             e,
             t,
             void 0,
             n,
+            i,
           );
         }
         async LoadPartnerEventFromClanEventGIDAndClanSteamID(e, t, n, i) {

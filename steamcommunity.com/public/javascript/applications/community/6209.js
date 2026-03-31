@@ -420,18 +420,19 @@
         GetCurrentExportingClip() {
           return this.m_currentlyExportingClip;
         }
-        async TakeScreenshot(e, t, i) {
-          const r = await a.xM.TakeScreenshot({
+        async TakeScreenshot(e, t, i, r) {
+          const o = await a.xM.TakeScreenshot({
             game_id: e,
             timeline_id: t,
             timeline_offset_ms: Math.floor(i).toString(),
+            source_clip_id: r,
           });
-          if (1 == r.GetEResult()) {
-            r.Body().toObject();
-            return { handle: parseInt(r.Body().screenshot_id()), result: 1 };
+          if (1 == o.GetEResult()) {
+            o.Body().toObject();
+            return { handle: parseInt(o.Body().screenshot_id()), result: 1 };
           }
           return (
-            (0, d.tH)("Failed to take screenshot"), { result: r.GetEResult() }
+            (0, d.tH)("Failed to take screenshot"), { result: o.GetEResult() }
           );
         }
         async LazyLoadClips() {

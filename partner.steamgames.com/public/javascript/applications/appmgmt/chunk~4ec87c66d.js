@@ -43177,8 +43177,8 @@
                               (0, a.jsx)("div", {
                                 children: (0, S.we)(
                                   "#AssetRequest_General_Size",
-                                  374,
-                                  448,
+                                  748,
+                                  896,
                                 ),
                               }),
                               (0, a.jsx)("br", {}),
@@ -51400,7 +51400,7 @@
                         (0, a.jsxs)("div", {
                           children: [
                             (0, a.jsx)("span", { children: "306px x 260px" }),
-                            " (.jpg, .png)",
+                            " (.webp)",
                           ],
                         }),
                         (0, a.jsx)(Ee, {
@@ -51417,8 +51417,8 @@
                         }),
                         (0, a.jsxs)("div", {
                           children: [
-                            (0, a.jsx)("span", { children: "374px by 448px" }),
-                            " (.jpg,.png)",
+                            (0, a.jsx)("span", { children: "748px by 896px" }),
+                            " (.webp)",
                           ],
                         }),
                         (0, a.jsx)(Ee, {
@@ -80085,9 +80085,9 @@
                   ? void 0
                   : this.state.results?.nNextSolrIndex.toString(),
               ),
-              this.setState({ bAwaitingMoreRowsLoading: !0 }, async () => {
-                this.LoadCapsules();
-              }));
+              this.setState({ bAwaitingMoreRowsLoading: !0 }, () =>
+                this.LoadCapsules(),
+              ));
         }
         SetViewMode(e) {
           this.setState({ bCompactViewMode: e });
@@ -80191,22 +80191,23 @@
                 eControllerCategory: a,
               },
               c = Boolean(o) ? "search" : n;
-            let d;
-            const _ = s.cap_item_count > 12 ? s.cap_item_count : 12;
-            (p = await le
-              .Get()
-              .GetItemsSoFar(
-                this.state.results,
-                e,
-                c,
-                r,
-                this.FilterItems,
-                u,
-                _,
-                m,
-                void 0,
-                d,
-              )),
+            let d,
+              _ = Math.max(s.cap_item_count ?? 0, 12);
+            u > 0 && (s.show_more_count ?? 0) > 0 && (_ = s.show_more_count),
+              (p = await le
+                .Get()
+                .GetItemsSoFar(
+                  this.state.results,
+                  e,
+                  c,
+                  r,
+                  this.FilterItems,
+                  u,
+                  _,
+                  m,
+                  void 0,
+                  d,
+                )),
               (i = p.rgItems?.map((e) => ({
                 id: e.id,
                 type: 0 === e.type ? "game" : (0, ae.TM)(e.type),

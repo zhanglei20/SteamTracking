@@ -2426,6 +2426,155 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return "[object Object]" === Object.prototype.toString.call(_);
+      }
+      function _(..._) {
+        return JSON.stringify(_, (_, _) => {
+          if (
+            (function (_) {
+              if (!_(_)) return !1;
+              const _ = _.constructor;
+              if (void 0 === _) return !0;
+              const _ = _.prototype;
+              return (
+                !!_(_) &&
+                !!Object.prototype.hasOwnProperty.call(_, "isPrototypeOf")
+              );
+            })(_)
+          ) {
+            const _ = {};
+            return (
+              Object.keys(_)
+                .sort()
+                .forEach((_) => {
+                  _[_] = _[_];
+                }),
+              _
+            );
+          }
+          return _;
+        });
+      }
+      var _ = __webpack_require__("chunkid");
+      __webpack_require__("chunkid");
+      const _ = (0, _.createContext)({
+        instances: {},
+        factories: {},
+      });
+      var _,
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const _ = _((0, _._)());
+        return (0, _._)(_(_, _));
+      }
+      function _(_) {
+        const _ = (0, _._)(),
+          _ = _((0, _._)()),
+          [_, _] = (0, _.useState)(void 0);
+        (0, _.useEffect)(() => {
+          let _ = !1;
+          return (
+            (async function () {
+              _(void 0);
+              try {
+                const _ = await Promise.all(
+                  _.map((_) => _.fetchQuery(_(_, _))),
+                );
+                if (_.some((_) => null == _)) return void (_ || _(null));
+                _ || _(_.map((_) => _));
+              } catch {
+                _ || _(null);
+              }
+            })(),
+            () => {
+              _ = !0;
+            }
+          );
+        }, [_, _, _]);
+        let _ = _.k_Loading;
+        return (
+          null == _ ? (_ = _.k_LoadFailure) : _ && (_ = _.k_LoadSuccess),
+          {
+            rgHardwareDetails: _,
+            eHardwareLoadingState: _,
+          }
+        );
+      }
+      function _(_, _) {
+        return {
+          queryKey: _(_),
+          queryFn: async () => _.load(_),
+          enabled: !!_,
+        };
+      }
+      function _(_) {
+        return ["hardwaredetail", _];
+      }
+      function _(_) {
+        return (function (_, _) {
+          const _ = (0, _.useContext)(_),
+            _ = "string" == typeof _ ? _ : _(..._);
+          let _ = _;
+          for (; _; ) {
+            if (_ in _.instances) return _.instances[_];
+            if (_ in _.factories) break;
+            _ = _.parent;
+          }
+          const _ = (_?.factories[_] ?? _)();
+          return ((_ ?? _).instances[_] = _), _;
+        })("HardwareDetailLoader", () =>
+          (function (_) {
+            return new (_())(async (_) => {
+              const _ = await (async function (_, _) {
+                  const _ = _._.Init(_._);
+                  __webpack_require__.Body().set_context((0, _._)(!1)),
+                    _.forEach((_) =>
+                      __webpack_require__.Body().add_packageid(_),
+                    );
+                  const _ = await _._.GetHardwareItems(_, _);
+                  return _.BSuccess()
+                    ? _.Body()
+                        .details()
+                        .map((_) => _.toObject())
+                    : (console.error(
+                        `GetHardareDetails failed on packages: ${_.join(",")}`,
+                      ),
+                      null);
+                })(_, _),
+                _ = new Map();
+              return (
+                _ &&
+                  __webpack_require__.forEach((_) => {
+                    _.packageid && _.set(_.packageid, _);
+                  }),
+                _.map((_) => _.get(_) || null)
+              );
+            });
+          })(_),
+        );
+      }
+      !(function (_) {
+        (_[(_.k_Loading = 0)] = "k_Loading"),
+          (_[(_.k_LoadSuccess = 1)] = "k_LoadSuccess"),
+          (_[(_.k_LoadFailure = 2)] = "k_LoadFailure");
+      })(_ || (_ = {}));
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -5110,250 +5259,6 @@
         );
       }
       (0, _._)([_._], _.prototype, "LoadCompatabilityAppList", null);
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-        _: () => _,
-        _: () => _,
-        _: () => _,
-      });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      class _ {
-        m_mapHardwareDetails = new Map();
-        m_mapPromises = new Map();
-        m_detailChangeCallback = new Map();
-        m_listChangeCallback = new _._();
-        m_SteamInterface = null;
-        m_mapTestOriginalValues = new Map();
-        GetDetail(_) {
-          return this.m_mapHardwareDetails.get(_);
-        }
-        GetListChangeCallback() {
-          return this.m_listChangeCallback;
-        }
-        GetDetailChangeCallback(_) {
-          return (
-            this.m_detailChangeCallback.has(_) ||
-              this.m_detailChangeCallback.set(_, new _._()),
-            this.m_detailChangeCallback.get(_)
-          );
-        }
-        GetMultipleDetails(_) {
-          return _.map((_) => this.m_mapHardwareDetails.get(_));
-        }
-        async LoadHardwareItems(_) {
-          if (!_ || 0 == _.length) return null;
-          const _ = new Array(),
-            _ = _.filter(
-              (_) =>
-                !this.m_mapPromises.has(_) ||
-                (_.push(this.m_mapPromises.get(_)), !1),
-            );
-          if (_.length > 0) {
-            const _ = this.InternalLoadHardwareItems(_);
-            __webpack_require__.forEach((_) => this.m_mapPromises.set(_, _)),
-              _.push(_);
-          }
-          return (await Promise.all(_)).every((_) => _);
-        }
-        async InternalLoadHardwareItems(_) {
-          const _ = _._.Init(_._);
-          _.Body().set_context((0, _._)(!1)),
-            _.forEach((_) => _.Body().add_packageid(_));
-          const _ = await _._.GetHardwareItems(
-            this.m_SteamInterface.GetServiceTransport(),
-            _,
-          );
-          return 1 == __webpack_require__.GetEResult()
-            ? (__webpack_require__
-                .Body()
-                .details()
-                .forEach((_) => {
-                  const _ = _.toObject();
-                  this.m_mapHardwareDetails.set(_.packageid, _);
-                }),
-              !0)
-            : (console.log(
-                "CHardwareStore failed with " +
-                  __webpack_require__.GetEResult(),
-              ),
-              !1);
-        }
-        async UpdateReservation(_, _) {
-          await this.m_mapPromises.get(_);
-          const _ = this.GetDetail(_);
-          if (!_ || !_.requires_reservation)
-            return (
-              console.log(
-                "CHardwareStore: package is not loaded or does not require reservations",
-              ),
-              !1
-            );
-          if (!_._.logged_in)
-            return (
-              console.log(
-                "CHardwareStore: Cannot reserve when user is not logged in",
-              ),
-              !1
-            );
-          const _ = _._.Init(_._);
-          _
-            ? _.Body().add_packages_to_reserve(_)
-            : _.Body().add_packages_to_unreserve(_),
-            _.Body().set_country_code(_._.country_code);
-          const _ = await _._.UpdatePackageReservations(
-            this.m_SteamInterface.GetServiceTransport(),
-            _,
-          );
-          if (
-            1 == _.GetEResult() &&
-            1 == _.Body().reservation_status().length
-          ) {
-            let _ = _.Body().reservation_status()[0];
-            return (
-              (_.reservation_state = _.reservation_state()),
-              (_.expired = _.expired()),
-              (_.time_expires = _.time_expires()),
-              (_.time_reserved = _.time_reserved()),
-              (_.rtime_estimated_notification =
-                _.rtime_estimated_notification()),
-              (_.notificaton_token = _.notificaton_token()),
-              this.GetDetailChangeCallback(_).Dispatch({
-                ..._,
-              }),
-              !0
-            );
-          }
-          return (
-            console.log(
-              `CHardwareStore Failed to ${_ ? "create" : "cancel"}  reservation for package: ${_}`,
-            ),
-            !1
-          );
-        }
-        Test_ReplaceDetails(_, _) {
-          if (
-            (this.m_mapTestOriginalValues.has(_) ||
-              this.m_mapTestOriginalValues.set(_, {
-                ...this.m_mapHardwareDetails.get(_),
-              }),
-            _)
-          )
-            this.m_mapHardwareDetails.set(_, _);
-          else {
-            const _ = this.m_mapTestOriginalValues.get(_);
-            this.m_mapHardwareDetails.set(_, _),
-              this.m_mapTestOriginalValues.delete(_);
-          }
-          this.GetListChangeCallback().Dispatch(
-            Array.from(this.m_mapHardwareDetails.values()),
-          ),
-            this.GetDetailChangeCallback(_).Dispatch({
-              ...this.m_mapHardwareDetails.get(_),
-            });
-        }
-        Test_GetOriginalDetail(_) {
-          return this.m_mapTestOriginalValues.has(_)
-            ? {
-                ...this.m_mapTestOriginalValues.get(_),
-              }
-            : {
-                ...this.m_mapHardwareDetails.get(_),
-              };
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            _.s_Singleton ||
-              ((_.s_Singleton = new _()),
-              ("dev" != _._.WEB_UNIVERSE && "beta" != _._.WEB_UNIVERSE) ||
-                (window.g_HardwareStore = _.s_Singleton),
-              _.s_Singleton.Init()),
-            _.s_Singleton
-          );
-        }
-        constructor() {}
-        Init() {
-          const _ = (0, _._)("loyalty_webapi_token", "application_config");
-          this.m_SteamInterface = new _._(_._.WEBAPI_BASE_URL, _);
-        }
-      }
-      function _(_) {
-        const [_, _] = (0, _.useState)(void 0),
-          [_, _] = (0, _.useState)(_.k_Loading);
-        return (
-          (0, _.useEffect)(() => {
-            !(_?.length > 0) ||
-              (_ &&
-                _.length == _.length &&
-                (0, _._)(
-                  _.map((_) => _.packageid),
-                  _,
-                )) ||
-              (_(_.k_Loading),
-              _.Get()
-                .LoadHardwareItems(_)
-                .then((_) => {
-                  _
-                    ? (__webpack_require__(_.Get().GetMultipleDetails(_)),
-                      _(_.k_LoadSuccess))
-                    : _(_.k_LoadFailure);
-                })
-                .catch(() => _(_.k_LoadFailure)));
-          }, [_, _]),
-          (0, _._)(_.Get().GetListChangeCallback(), _),
-          {
-            rgHardwareDetails: _,
-            eHardwareLoadingState: _,
-          }
-        );
-      }
-      function _(_) {
-        const [_, _] = (0, _.useState)(() => _.Get().GetDetail(_ ?? 0)),
-          _ = _?.packageid;
-        return (
-          (0, _.useEffect)(() => {
-            _ != _ &&
-              _ &&
-              _.Get()
-                .LoadHardwareItems([_])
-                .then((_) => {
-                  _ && __webpack_require__(_.Get().GetDetail(_));
-                });
-          }, [_, _]),
-          (0, _._)(_.Get().GetDetailChangeCallback(_ ?? 0), _),
-          _
-        );
-      }
-      function _() {
-        return {
-          fnUpdateReservation: _.Get().UpdateReservation,
-          Test_ReplaceDetails: _.Get().Test_ReplaceDetails,
-          Test_GetOriginalDetail: _.Get().Test_GetOriginalDetail,
-        };
-      }
-      (0, _._)([_._], _.prototype, "UpdateReservation", null),
-        (0, _._)([_._], _.prototype, "Test_ReplaceDetails", null),
-        (0, _._)([_._], _.prototype, "Test_GetOriginalDetail", null),
-        (function (_) {
-          (_[(_.k_Loading = 0)] = "k_Loading"),
-            (_[(_.k_LoadSuccess = 1)] = "k_LoadSuccess"),
-            (_[(_.k_LoadFailure = 2)] = "k_LoadFailure");
-        })(_ || (_ = {}));
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -8328,6 +8233,65 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_, _) {
+        const { data: _ } = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)();
+        return (0, _._)({
+          mutationFn: async () => {
+            if (!_ || !_ || !_.requires_reservation)
+              return (
+                console.log(
+                  "useUpdateReservationMutation: package is not loaded or does not require reservations",
+                ),
+                !1
+              );
+            if (!_._.logged_in)
+              return (
+                console.log(
+                  "useUpdateReservationMutation: Cannot reserve when user is not logged in",
+                ),
+                !1
+              );
+            const _ = _._.Init(_._);
+            _
+              ? _.Body().add_packages_to_reserve(_)
+              : _.Body().add_packages_to_unreserve(_),
+              _.Body().set_country_code(_._.country_code);
+            const _ = await _._.UpdatePackageReservations(_, _);
+            if (
+              1 == _.GetEResult() &&
+              1 == _.Body().reservation_status().length
+            ) {
+              let _ = _.Body().reservation_status()[0];
+              const _ = {
+                ..._,
+              };
+              return (
+                (_.reservation_state = _.reservation_state()),
+                (_.expired = _.expired()),
+                (_.time_expires = _.time_expires()),
+                (_.time_reserved = _.time_reserved()),
+                (_.rtime_estimated_notification =
+                  _.rtime_estimated_notification()),
+                (_.notificaton_token = _.notificaton_token()),
+                _.setQueryData((0, _._)(_), _),
+                !0
+              );
+            }
+            return (
+              console.log(
+                `useUpdateReservationMutation Failed to ${_ ? "create" : "cancel"}  reservation for package: ${_}`,
+              ),
+              !1
+            );
+          },
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       function _(_, _) {
         return _ > _ + 1 ? _ - _ : _ + 12 - _;
@@ -8395,14 +8359,15 @@
           children: (0, _._)(_, _, _, _, ""),
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
-        return (
-          !_.requires_reservation &&
-          _.allow_purchase_in_country &&
-          !_.account_restricted_from_purchasing &&
-          _.inventory_available &&
-          _.reservation_state != _._.k_EPurchaseReservationState_Allocated &&
-          _.reservation_state != _._.k_EPurchaseReservationState_Reserved
+        return !(
+          _.requires_reservation ||
+          !_.allow_purchase_in_country ||
+          _.account_restricted_from_purchasing ||
+          !_.inventory_available ||
+          _.reservation_state == _._.k_EPurchaseReservationState_Allocated ||
+          _.reservation_state == _._.k_EPurchaseReservationState_Reserved
         );
       }
       function _(_) {
@@ -8445,14 +8410,18 @@
               });
         if (!_.requires_reservation && !_.inventory_available) {
           let _ = (0, _._)("#Sale_ReserveExhausted"),
-            _ = _.localized_out_of_stock_override?.length > 0;
+            _ =
+              _.localized_out_of_stock_override &&
+              _.localized_out_of_stock_override?.length > 0;
           if (_) {
             const _ = (0, _._)(_._.LANGUAGE),
-              _ = _._.GetELanguageFallback(_);
-            _ =
-              (0, _._)(_.localized_out_of_stock_override[_]) ||
-              (0, _._)(_.localized_out_of_stock_override[_]) ||
-              (0, _._)("#Sale_ReserveExhausted");
+              _ = _._.GetELanguageFallback(_),
+              _ =
+                (_.localized_out_of_stock_override &&
+                  (_.localized_out_of_stock_override[_] ||
+                    _.localized_out_of_stock_override[_])) ||
+                "#Sale_ReserveExhausted";
+            _ = (0, _._)(_);
           }
           return (0, _.jsx)("div", {
             className: (0, _._)({
@@ -8489,6 +8458,7 @@
           ),
           _ = (0, _._)(() => {
             if (
+              _.localized_delivery_override_desc &&
               _.localized_delivery_override_desc?.length > 0 &&
               (!_.override_delivery_only_out_of_stock || _)
             ) {
@@ -8502,7 +8472,7 @@
             }
             return null;
           }),
-          _ = _.account_restricted_from_purchasing && !_._.logged_in;
+          _ = !!_.account_restricted_from_purchasing && !_._.logged_in;
         if ((_ && !_) || _) return null;
         if (
           _(_) ||
@@ -8510,7 +8480,7 @@
         )
           return (0, _.jsx)("div", {
             className: (0, _._)(_.expecteddate, "ReservationBuyNow"),
-            children: Boolean(_)
+            children: _
               ? (0, _.jsx)(_._, {
                   text: _,
                   partnerEventStore: _._,
@@ -8537,7 +8507,7 @@
           className: (0, _._)(_.expecteddate, "ReservationExpectedDateCtn"),
           children: (0, _.jsx)("div", {
             className: (0, _._)(_.expecteddate_str, "ReservationExpectedDate"),
-            children: Boolean(_)
+            children: _
               ? (0, _.jsx)(_._, {
                   text: _,
                   partnerEventStore: _._,
@@ -8565,39 +8535,12 @@
       }
       function _(_) {
         const { hardwareDetail: _ } = _,
-          { fnUpdateReservation: _ } = (0, _._)(),
+          _ = _(_.packageid, !1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
           _ = (0, _._)("DisplayCancelReservationButton"),
-          _ = (0, _.useCallback)(
-            (_) => {
-              (0, _._)(
-                (0, _.jsx)(_._, {
-                  strTitle: (0, _._)("#Sale_CancelReservation"),
-                  strDescription: (0, _._)(
-                    "#Sale_Reservation_CancelAreYouSure_NoDeposit",
-                  ),
-                  onOK: () => {
-                    _(!0),
-                      __webpack_require__(_.packageid, !1)
-                        .then((_) => {
-                          _?.token?.reason ||
-                            (_ || _((0, _._)("#GrantAwardError_PersistFailed")),
-                            _(!0));
-                        })
-                        .catch(() => {
-                          _?.token?.reason ||
-                            (_((0, _._)("#GrantAwardError_PersistFailed")),
-                            _(!0));
-                        });
-                  },
-                }),
-                (0, _._)(_),
-              );
-            },
-            [_?.token?.reason, _, _.packageid],
-          );
+          [_, _, _] = (0, _._)();
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsxs)(_._, {
@@ -8617,6 +8560,31 @@
                 className: _.ErrorStylesWithIcon,
                 children: _,
               }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                closeModal: _,
+                strTitle: (0, _._)("#Sale_CancelReservation"),
+                strDescription: (0, _._)(
+                  "#Sale_Reservation_CancelAreYouSure_NoDeposit",
+                ),
+                onOK: () => {
+                  _(!0),
+                    __webpack_require__
+                      .mutateAsync()
+                      .then((_) => {
+                        _?.token?.reason ||
+                          (_ || _((0, _._)("#GrantAwardError_PersistFailed")),
+                          _(!0));
+                      })
+                      .catch(() => {
+                        _?.token?.reason ||
+                          (_((0, _._)("#GrantAwardError_PersistFailed")),
+                          _(!0));
+                      });
+                },
+              }),
+            }),
           ],
         });
       }
@@ -8650,8 +8618,9 @@
       }
       function _(_) {
         const { hardwareDetail: _ } = _,
-          _ = (0, _._)();
-        return _._.GetTimeNowWithOverride() < _.time_expires
+          _ = (0, _._)(),
+          _ = _._.GetTimeNowWithOverride();
+        return _.time_expires && _ < _.time_expires
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_.reserverowReserved, "ReservationAllocated"),
               children: [
@@ -8728,11 +8697,11 @@
           [_, _] = (0, _.useState)(!1),
           [_, _] = (0, _.useState)(null),
           _ = (0, _._)("DisplyDirectReservation"),
-          { fnUpdateReservation: _ } = (0, _._)(),
+          _ = _(_.packageid, !0),
           _ = (0, _.useCallback)(
             (_) => {
               _(!0),
-                _(_.packageid, !0)
+                _.mutateAsync()
                   .then((_) => {
                     _?.token?.reason ||
                       (_ || _((0, _._)("#GrantAwardError_PersistFailed")),
@@ -8743,7 +8712,7 @@
                       (_(!0), _((0, _._)("#GrantAwardError_PersistFailed")));
                   });
             },
-            [_?.token?.reason, _, _.packageid],
+            [_?.token?.reason, _],
           );
         return (0, _.jsxs)("div", {
           className: (0, _._)(_.reserverow, "ReservationDirectAction"),
@@ -16382,8 +16351,8 @@
       }
       function _(_) {
         const { reservationDef: _, language: _, event: _, disabled: _ } = _,
-          _ = (0, _._)(_.reservation_package),
-          _ = (0, _._)(_.psu_less_package),
+          { data: _ } = (0, _._)(_.reservation_package),
+          { data: _ } = (0, _._)(_.psu_less_package),
           _ = _._.GetELanguageFallback(_),
           _ =
             _.localized_reservation_desc?.[_] ||
@@ -16435,7 +16404,8 @@
                           ..._,
                           hardwareDetail: _,
                         }),
-                        Boolean(_?.allow_purchase_in_country) &&
+                        _ &&
+                          !!_.allow_purchase_in_country &&
                           (0, _.jsx)(_._, {
                             ..._,
                             hardwareDetail: _,
@@ -19165,9 +19135,7 @@
                 {
                   bAwaitingMoreRowsLoading: !0,
                 },
-                async () => {
-                  this.LoadCapsules();
-                },
+                () => this.LoadCapsules(),
               ));
         }
         SetViewMode(_) {
@@ -19247,20 +19215,21 @@
                 eControllerCategory: _,
               },
               _ = Boolean(_) ? "search" : _;
-            let _;
-            const _ = _.cap_item_count > 12 ? _.cap_item_count : 12;
-            (_ = await _.Get().GetItemsSoFar(
-              this.state.results,
-              _,
-              _,
-              _,
-              this.FilterItems,
-              _,
-              _,
-              _,
-              void 0,
-              _,
-            )),
+            let _,
+              _ = Math.max(_.cap_item_count ?? 0, 12);
+            _ > 0 && (_.show_more_count ?? 0) > 0 && (_ = _.show_more_count),
+              (_ = await _.Get().GetItemsSoFar(
+                this.state.results,
+                _,
+                _,
+                _,
+                this.FilterItems,
+                _,
+                _,
+                _,
+                void 0,
+                _,
+              )),
               (_ = _.rgItems?.map((_) => ({
                 _: _._,
                 type: 0 === _.type ? "game" : (0, _._)(_.type),
@@ -24240,17 +24209,10 @@
           (_.k_ClaimState_NoMoreClaimsLeft = "nomoreclaims");
       })(_ || (_ = {}));
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { section: _, language: _, event: _ } = _,
-          _ = (0, _.useMemo)(
-            () =>
-              _.internal_section_data?.while_supplies_last_option?.map(
-                (_) => _.supply_package,
-              ),
-            [_],
-          ),
-          { eHardwareLoadingState: _ } = (0, _._)(_),
           _ = (0, _._)(),
           _ = _._.GetELanguageFallback(_),
           _ = _.localized_description
@@ -24277,7 +24239,7 @@
                 event: _,
                 language: _,
               }),
-              Boolean(_) &&
+              !!_ &&
                 (0, _.jsx)("div", {
                   className: _.description,
                   children: (0, _.jsx)(_._, {
@@ -24288,28 +24250,24 @@
                     languageOverride: _,
                   }),
                 }),
-              Boolean(_ == _._.k_LoadSuccess)
-                ? (0, _.jsx)("div", {
-                    className: (0, _._)(_.options, "options"),
-                    children:
-                      _.internal_section_data?.while_supplies_last_option?.map(
-                        (_) =>
-                          (0, _.jsx)(
-                            _,
-                            {
-                              ..._,
-                              supplyInfo: _,
-                            },
-                            "supply" + _.unique_id,
-                          ),
+              (0, _.jsx)("div", {
+                className: (0, _._)(_.options, "options"),
+                children:
+                  _.internal_section_data?.while_supplies_last_option?.map(
+                    (_) =>
+                      (0, _.jsx)(
+                        _._,
+                        {
+                          children: (0, _.jsx)(_, {
+                            ..._,
+                            supplyInfo: _,
+                          }),
+                        },
+                        "supply" + _.unique_id,
                       ),
-                  })
-                : (0, _.jsx)(_._, {
-                    string: (0, _._)("#Loading"),
-                    position: "center",
-                    size: "medium",
-                  }),
-              Boolean(_) &&
+                  ),
+              }),
+              !!_ &&
                 (0, _.jsx)("div", {
                   className: _.description2,
                   children: (0, _.jsx)(_._, {
@@ -24326,10 +24284,11 @@
       }
       function _(_) {
         const { supplyInfo: _, language: _, event: _ } = _,
-          _ = (0, _._)(_.supply_package),
+          { data: _ } = (0, _._)(_.supply_package),
           _ = (0, _._)(),
           _ = _._.GetELanguageFallback(_),
-          _ = _.localized_supply_desc[_] || _.localized_supply_desc[_] || "",
+          _ =
+            _.localized_supply_desc?.[_] || _.localized_supply_desc?.[_] || "",
           _ = (0, _._)();
         return _
           ? (0, _.jsxs)("div", {

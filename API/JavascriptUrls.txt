@@ -1004,7 +1004,6 @@ ${PARTNER_BASE_URL}doc/marketing/event_tools/sales/sections#cross
 ${PARTNER_BASE_URL}doc/marketing/event_tools/steamawards
 ${PARTNER_BASE_URL}doc/marketing/upcoming_events/themed_sales
 ${PARTNER_BASE_URL}doc/marketing/wishlist
-${PARTNER_BASE_URL}doc/pricing/explorer
 ${PARTNER_BASE_URL}doc/store/assets/promos
 ${PARTNER_BASE_URL}doc/store/assets/promos#popup_update
 ${PARTNER_BASE_URL}doc/store/assets/rules
@@ -1271,7 +1270,6 @@ ${STORE_BASE_URL}/curator/${}/admin/ajaxgetcreatorhomeevents
 ${STORE_BASE_URL}/curator/${}/admin/ajaxselectcreatorhome
 ${STORE_BASE_URL}/events/ajaxgetdynamiceventmetadata
 ${STORE_BASE_URL}/events_admin/ajaxhidefromsteamchina
-${STORE_BASE_URL}/join/
 ${STORE_BASE_URL}/userreviews/ajaxgetvotes/
 ${STORE_BASE_URL}/userreviews/rate/${}
 ${STORE_BASE_URL}/userreviews/votetag/${}

@@ -226,6 +226,12 @@
                     "description": "Admin tool is doing a query, return hidden items"
                 },
                 {
+                    "name": "special_filter",
+                    "type": "{enum}",
+                    "optional": false,
+                    "description": "Additional special filtering"
+                },
+                {
                     "name": "totalonly",
                     "type": "bool",
                     "optional": false,

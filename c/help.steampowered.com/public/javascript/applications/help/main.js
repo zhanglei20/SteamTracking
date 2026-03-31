@@ -8261,9 +8261,10 @@
           [_, _] = _.useState(!1),
           [_, _] = _.useState(!1),
           [_, _] = _.useState(null),
+          [_, _] = _.useState(null),
           _ = _.useCallback(() => {
             let _ = _;
-            if (!_ || !_) return;
+            if (!_ || !_ || !_) return;
             if (_ && _ && !_.visible) return;
             let _ = _.ownerDocument.defaultView;
             if (!_ || _.closed) return;
@@ -8273,7 +8274,8 @@
               _ = _.querySelector(".hover_arrow.bottom"),
               _ = _.getBoundingClientRect(),
               _ = _.getBoundingClientRect(),
-              _ = "overlay" == _ || "overlay-center" == _;
+              _ = "overlay" == _ || "overlay-center" == _,
+              _ = _.getBoundingClientRect();
             _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;"),
               _ && _.setAttribute("style", "display: none;"),
@@ -8286,7 +8288,7 @@
                 nTop: _,
                 nOverflow: _,
                 nLateralOverflow: _,
-              } = _(_, _, _, _, _, _.innerWidth, _.innerHeight),
+              } = _(_, _, _, _, _, _, _),
               _ = _;
             if (_ > (_ ?? 10) && !_) {
               const _ = (function (_) {
@@ -8310,7 +8312,7 @@
                   nTop: _,
                   nOverflow: _,
                   nLateralOverflow: _,
-                } = _(_, _, _, _, _, _.innerWidth, _.innerHeight);
+                } = _(_, _, _, _, _, _, _);
               if (
                 (_ < _ && ((_ = _), (_ = _), (_ = _), (_ = _), (_ = _)),
                 _ > (_ ?? 10))
@@ -8352,7 +8354,7 @@
               _ != _ && _(_),
               _ != _ && _(_),
               _ || _(!0);
-          }, [_, _, _, _, _, _, _, _, _, _, _, _]);
+          }, [_, _, _, _, _, _, _, _, _, _, _, _, _]);
         _.useEffect(() => _(), [_]);
         let _ = Object.assign(
             {
@@ -8363,6 +8365,7 @@
           ),
           _ = !_ || _.visible;
         return (0, _.jsx)("div", {
+          ref: _,
           className: (0, _._)(_().HoverPositionOuter, _ && _().HoverAboveModal),
           children: (0, _.jsx)("div", {
             ..._,
@@ -8380,40 +8383,40 @@
         });
       }
       function _(_, _, _, _, _, _, _) {
-        const _ = _,
-          _ = _;
+        const _ = _.innerWidth,
+          _ = _.innerHeight;
         let _, _, _, _;
         switch (_) {
           case "right":
-            (_ = _.right + _),
-              (_ = _(_.top, _.height, _.height, _)),
+            (_ = _.right + _ - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
               (_ = Math.max(0, _ + _.width - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
             break;
           case "left":
-            (_ = _.left - _ - _.width),
-              (_ = _(_.top, _.height, _.height, _)),
+            (_ = _.left - _ - _.width - _.left),
+              (_ = _(_.top - _.top, _.height, _.height, _)),
               (_ = Math.max(0, 0 - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.height - _)]);
             break;
           case "bottom":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.bottom + _),
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.bottom + _ - _.top),
               (_ = Math.max(0, _ + _.height - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
             break;
           case "top":
-            (_ = _(_.left, _.width, _.width, _)),
-              (_ = _.top - _ - _.height),
+            (_ = _(_.left - _.left, _.width, _.width, _)),
+              (_ = _.top - _ - _.height - _.top),
               (_ = Math.max(0, 0 - _)),
               (_ = [Math.max(0, 0 - _), Math.max(0, _ + _.width - _)]);
             break;
           case "overlay":
-            (_ = _.left), (_ = _.top), (_ = 0), (_ = [0, 0]);
+            (_ = _.left - _.left), (_ = _.top - _.top), (_ = 0), (_ = [0, 0]);
             break;
           case "overlay-center":
-            (_ = _.left + 0.5 * _.width - 0.5 * _.width),
-              (_ = _.top + 0.5 * _.height - 0.5 * _.height),
+            (_ = _.left - _.left + 0.5 * _.width - 0.5 * _.width),
+              (_ = _.top - _.top + 0.5 * _.height - 0.5 * _.height),
               (_ = 0),
               (_ = [0, 0]);
         }
@@ -19107,6 +19110,8 @@
             background_gradient_top: "#0000006b",
             background_gradient_bottom: "#0000006b",
             facet_sort_order: 1,
+            cap_item_count: 24,
+            show_more_count: 48,
             facet_auto_generate_options: {
               only_facets: [
                 {
@@ -20094,11 +20099,12 @@
             _,
           );
         }
-        async LoadPartnerEventFromAnnoucementGID(_, _, _) {
+        async LoadPartnerEventFromAnnoucementGID(_, _, _, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             _,
             void 0,
+            _,
             _,
             _,
           );
@@ -20113,12 +20119,13 @@
             _,
           );
         }
-        async LoadPartnerEventFromClanEventGID(_, _, _) {
+        async LoadPartnerEventFromClanEventGID(_, _, _, _) {
           return this.InternalLoadPartnerEventFromClanEventOrClanAnnouncementGIDCached(
             void 0,
             _,
             _,
             void 0,
+            _,
             _,
           );
         }
@@ -32640,6 +32647,7 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      var _;
       function _(_) {
         return 3 == _ || 6 == _;
       }
@@ -32656,7 +32664,57 @@
         _: () => _,
         _: () => _,
         _: () => _,
-      });
+      }),
+        (function (_) {
+          (_[(_.kPFIFlag_MicroTransactionFile = 1)] =
+            "kPFIFlag_MicroTransactionFile"),
+            (_[(_.kPFIFlag_Incompatible = 2)] = "kPFIFlag_Incompatible"),
+            (_[(_.kPFIFlag_RevenueSplitsFinalized = 4)] =
+              "kPFIFlag_RevenueSplitsFinalized"),
+            (_[(_.kPFIFlag_AcceptedForUse = 8)] = "kPFIFlag_AcceptedForUse"),
+            (_[(_.kPFIFlag_CollectionShowSubscribeAll = 16)] =
+              "kPFIFlag_CollectionShowSubscribeAll"),
+            (_[(_.kPFIFlag_ItemInProgress = 32)] = "kPFIFlag_ItemInProgress"),
+            (_[(_.kPFIFlag_GamePlayable = 64)] = "kPFIFlag_GamePlayable"),
+            (_[(_.kPFIFlag_AwaitingModeration = 128)] =
+              "kPFIFlag_AwaitingModeration"),
+            (_[(_.kPFIFlag_PendingApproval = 256)] =
+              "kPFIFlag_PendingApproval"),
+            (_[(_.kPFIFlag_FixedStats = 1536)] = "kPFIFlag_FixedStats"),
+            (_[(_.kPFIFlag_LatestWorkshopTermsNotAccepted = 2048)] =
+              "kPFIFlag_LatestWorkshopTermsNotAccepted"),
+            (_[(_.kPFIFlag_DepotContent = 4096)] = "kPFIFlag_DepotContent"),
+            (_[(_.kPFIFlag_CollectionAllOwnerItems = 8192)] =
+              "kPFIFlag_CollectionAllOwnerItems"),
+            (_[(_.kPFIFlag_CollectionIsASet = 16384)] =
+              "kPFIFlag_CollectionIsASet"),
+            (_[(_.kPFIFlag_Subscribable = 32768)] = "kPFIFlag_Subscribable"),
+            (_[(_.kPFIFlag_ForceUnbanned = 65536)] = "kPFIFlag_ForceUnbanned"),
+            (_[(_.kPFIFlag_ForceInappropriate = 131072)] =
+              "kPFIFlag_ForceInappropriate"),
+            (_[(_.kPFIFlag_ForceAppropriate = 262144)] =
+              "kPFIFlag_ForceAppropriate"),
+            (_[(_.kPFIFlag_RequireVerification = 524288)] =
+              "kPFIFlag_RequireVerification"),
+            (_[(_.kPFIFlag_HasApprovedSteamChinaContent = 1048576)] =
+              "kPFIFlag_HasApprovedSteamChinaContent"),
+            (_[(_.kPFIFlag_HasApprovedContent = 2097152)] =
+              "kPFIFlag_HasApprovedContent"),
+            (_[(_.kPFIFlag_IgnoreTextContentCheckFlag = 4194304)] =
+              "kPFIFlag_IgnoreTextContentCheckFlag"),
+            (_[(_.kPFIFlag_DisableComments = 8388608)] =
+              "kPFIFlag_DisableComments"),
+            (_[(_.kPFIFlag_NeedsContentCheck = 16777216)] =
+              "kPFIFlag_NeedsContentCheck"),
+            (_[(_.kPFIFlag_SteamChinaCreated = 33554432)] =
+              "kPFIFlag_SteamChinaCreated"),
+            (_[(_.kPFIFlag_RejectedLatestContent = 67108864)] =
+              "kPFIFlag_RejectedLatestContent"),
+            (_[(_.kPFIFlag_ManagedContentDescriptors = 134217728)] =
+              "kPFIFlag_ManagedContentDescriptors"),
+            (_[(_.kPFIFlag_HasAuthorSnapshots = 268435456)] =
+              "kPFIFlag_HasAuthorSnapshots");
+        })(_ || (_ = {}));
       const _ = 1,
         _ = 4;
       const _ = "18446744073709551615";
@@ -53864,8 +53922,78 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  label: {
+                    _: 2,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  show_above_purchase: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "StoreItem_Demo";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.parent_appid || _._(_._()),
-            _.Message.initialize(this, _, 0, -1, [2, 3], null);
+            _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5], null);
         }
         static sm_m;
         static sm_mbf;
@@ -53895,6 +54023,18 @@
                     _: _._.readUint32,
                     pbr: _._.readPackedUint32,
                     _: _._.writeRepeatedUint32,
+                  },
+                  demos: {
+                    _: 4,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  standalone_demos: {
+                    _: 5,
+                    _: _,
+                    _: !0,
+                    _: !0,
                   },
                 },
               }),
@@ -54468,13 +54608,28 @@
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  main_capsule_2x: {
+                    _: 18,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                   small_capsule: {
                     _: 3,
                     _: _._.readString,
                     _: _._.writeString,
                   },
+                  small_capsule_2x: {
+                    _: 19,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
                   header: {
                     _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  header_2x: {
+                    _: 20,
                     _: _._.readString,
                     _: _._.writeString,
                   },
@@ -68123,6 +68278,7 @@
           "chrome-extension://",
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
+          "Millennium internal",
           "Refused unauthorized RPC command",
         ];
       function _() {

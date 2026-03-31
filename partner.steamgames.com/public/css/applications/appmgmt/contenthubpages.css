@@ -1621,7 +1621,8 @@ img {
   gap: var(--spacing-2);
   --background-color: var(--bg-default);
 }
-._1kIuUssJvopWbHik1IKMG6:disabled {
+._1kIuUssJvopWbHik1IKMG6:disabled,
+._1kIuUssJvopWbHik1IKMG6.kLcGKsNxkoEqxgok6YzML {
   --icon-color: rgb(from var(--color-dull-11) r g b / 50%);
   --background-color: var(--bg-disabled);
 }

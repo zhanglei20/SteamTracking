@@ -290,7 +290,6 @@ ul.market_restrictions li {
 	position: absolute;
 	right: 15px;
 	bottom: 8px;
-	z-index: 2;
 }
 
 .pick_and_sell_button .item_market_action_button_contents {

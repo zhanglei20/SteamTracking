@@ -378,8 +378,8 @@
         f = t(6878),
         y = t(84811),
         D = t(22797),
-        C = t(77291),
-        x = t(19267),
+        C = t(37474),
+        x = t(67645),
         b = t(8527),
         j = t(62490);
       const N = r.Fragment;
@@ -394,8 +394,8 @@
             strDeliveryOverride: l,
             bDeliveryOverrideOnlyIfOutOfStock: u,
           } = e,
-          m = (0, x.DR)(n),
-          _ = (0, x.DR)(a),
+          { data: m } = (0, x.DR)(n),
+          { data: _ } = (0, x.DR)(a),
           g = (0, r.useMemo)(
             () => [
               {
@@ -430,7 +430,7 @@
           children: [
             (0, d.jsx)(r.Suspense, {
               fallback: null,
-              children: (0, d.jsx)(N, { bIsPreview: s, rgReservationDef: g }),
+              children: (0, d.jsx)(N, { bIsPreview: !!s, rgReservationDef: g }),
             }),
             Boolean(m.allow_purchase_in_country) &&
               (0, d.jsxs)("div", {
@@ -447,7 +447,8 @@
                       reservationDef: g[0],
                       hardwareDetail: m,
                     }),
-                  Boolean(_?.allow_purchase_in_country) &&
+                  _ &&
+                    _?.allow_purchase_in_country &&
                     (0, d.jsx)(C.bk, {
                       reservationDef: g[0],
                       hardwareDetail: _,

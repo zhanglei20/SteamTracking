@@ -1074,6 +1074,38 @@ enum ITEM_OPTIONS
 	ITEM_OPTIONS_NOT_EARLY_LATE = 5;
 }
 
+enum kPFIFlag
+{
+	kPFIFlag_MicroTransactionFile = 1;
+	kPFIFlag_Incompatible = 2;
+	kPFIFlag_RevenueSplitsFinalized = 4;
+	kPFIFlag_AcceptedForUse = 8;
+	kPFIFlag_CollectionShowSubscribeAll = 16;
+	kPFIFlag_ItemInProgress = 32;
+	kPFIFlag_GamePlayable = 64;
+	kPFIFlag_AwaitingModeration = 128;
+	kPFIFlag_PendingApproval = 256;
+	kPFIFlag_FixedStats = 1536;
+	kPFIFlag_LatestWorkshopTermsNotAccepted = 2048;
+	kPFIFlag_DepotContent = 4096;
+	kPFIFlag_CollectionAllOwnerItems = 8192;
+	kPFIFlag_CollectionIsASet = 16384;
+	kPFIFlag_Subscribable = 32768;
+	kPFIFlag_ForceUnbanned = 65536;
+	kPFIFlag_ForceInappropriate = 131072;
+	kPFIFlag_ForceAppropriate = 262144;
+	kPFIFlag_RequireVerification = 524288;
+	kPFIFlag_HasApprovedSteamChinaContent = 1048576;
+	kPFIFlag_HasApprovedContent = 2097152;
+	kPFIFlag_IgnoreTextContentCheckFlag = 4194304;
+	kPFIFlag_DisableComments = 8388608;
+	kPFIFlag_NeedsContentCheck = 16777216;
+	kPFIFlag_SteamChinaCreated = 33554432;
+	kPFIFlag_RejectedLatestContent = 67108864;
+	kPFIFlag_ManagedContentDescriptors = 134217728;
+	kPFIFlag_HasAuthorSnapshots = 268435456;
+}
+
 enum kTRAA
 {
 	kTRAA_RegisterTeam = 0;

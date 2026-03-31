@@ -26,6 +26,7 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
       };
@@ -128,18 +129,13 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
-      }
-      function _(_, _, _, _) {
-        return _(_ || _, _, _);
-      }
-      var _ = __webpack_require__("chunkid");
       const _ = Object.assign(
         function (_) {
           const { render: _, ..._ } = _;
-          return _(
+          return (0, _._)(
             _,
             (0, _.jsx)(_._, {
               radius: "sm",
@@ -164,7 +160,7 @@
               } = _,
               _ = _ ? "true" : "false",
               _ = _ ? "true" : void 0;
-            return _(
+            return (0, _._)(
               _,
               (0, _.jsx)(_._, {
                 "data-selected": _,
@@ -506,20 +502,22 @@
           _ = "indeterminate" === _,
           _ = _ ? _ : _,
           _ = () => {
-            _ && __webpack_require__(!!_ || !_);
+            _ || (_ && __webpack_require__(!!_ || !_));
           };
         return (0, _.jsxs)(_._, {
           ref: _,
           role: "checkbox",
           "aria-checked": _ ? "mixed" : _,
           "data-state": _(_),
-          className: _()(_.Root, _[`Variant-${_}`]),
+          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
           onClick: _,
           tabIndex: 0,
           onKeyDown: (_) => {
-            " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
+            _ ||
+              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
           },
           cursor: "default",
+          "aria-disabled": _,
           ..._,
           children: [
             (0, _.jsx)("div", {
@@ -791,20 +789,16 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_, {}),
-            _ = _(
-              _,
-              (0, _.jsx)(_, {
-                afterContent: _,
-                variant: _,
-                size: _,
-                radius: _,
-                hasValue: _,
-                tabIndex: 0,
-                ..._,
-              }),
-              _,
-              void 0,
-            );
+            _ = (0, _.jsx)(_, {
+              afterContent: _,
+              variant: _,
+              size: _,
+              radius: _,
+              hasValue: _,
+              tabIndex: 0,
+              ..._,
+            }),
+            _ = (0, _._)(_, _, _, void 0);
           return (0, _.jsx)(_, {
             children: _,
           });
@@ -1740,6 +1734,19 @@
             }),
           ],
         });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
+      }
+      function _(_, _, _, _) {
+        return _(_ || _, _, _);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {

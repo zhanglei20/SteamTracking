@@ -4092,7 +4092,7 @@
         ma = a(60860),
         va = a(30294),
         ga = a(56654),
-        Sa = a(66210),
+        Sa = a(77392),
         xa = a(16989);
       function Ea(e) {
         const { editModel: t } = e,
@@ -17940,8 +17940,8 @@
         fr = a(56631),
         yr = a(35400),
         Dr = a(6878),
-        Ir = a(77291),
-        Tr = a(19267);
+        Ir = a(37474),
+        Tr = a(1090);
       const Gr = n.Fragment;
       function Ar(e) {
         const {
@@ -17954,8 +17954,8 @@
             strDeliveryOverride: d,
             bDeliveryOverrideOnlyIfOutOfStock: c,
           } = e,
-          _ = (0, Tr.DR)(t),
-          u = (0, Tr.DR)(l),
+          { data: _ } = (0, Tr.DR)(t),
+          { data: u } = (0, Tr.DR)(l),
           h = (0, n.useMemo)(
             () => [
               {
@@ -17990,7 +17990,10 @@
           children: [
             (0, i.jsx)(n.Suspense, {
               fallback: null,
-              children: (0, i.jsx)(Gr, { bIsPreview: o, rgReservationDef: h }),
+              children: (0, i.jsx)(Gr, {
+                bIsPreview: !!o,
+                rgReservationDef: h,
+              }),
             }),
             Boolean(_.allow_purchase_in_country) &&
               (0, i.jsxs)("div", {
@@ -18007,7 +18010,8 @@
                       reservationDef: h[0],
                       hardwareDetail: _,
                     }),
-                  Boolean(null == u ? void 0 : u.allow_purchase_in_country) &&
+                  u &&
+                    (null == u ? void 0 : u.allow_purchase_in_country) &&
                     (0, i.jsx)(Ir.bk, {
                       reservationDef: h[0],
                       hardwareDetail: u,

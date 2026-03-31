@@ -449,11 +449,12 @@
         GetCurrentExportingClip() {
           return this.m_currentlyExportingClip;
         }
-        async TakeScreenshot(_, _, _) {
+        async TakeScreenshot(_, _, _, _) {
           const _ = await _._.TakeScreenshot({
             game_id: _,
             timeline_id: _,
             timeline_offset_ms: Math.floor(_).toString(),
+            source_clip_id: _,
           });
           if (1 == _.GetEResult()) {
             _.Body().toObject();

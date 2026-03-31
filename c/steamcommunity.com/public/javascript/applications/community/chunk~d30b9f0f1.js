@@ -557,6 +557,12 @@
         PendingVisibilityText: "_1G3Ia68Tqe9nh-mC_dAaa6",
       };
     },
+    chunkid: (module) => {
+      module.exports = {
+        Option: "_3a3fNdwhCItYEc1SsUNP",
+        RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
+      };
+    },
     chunkid: () => {},
     chunkid: (module) => {
       module.exports = {
@@ -15958,19 +15964,26 @@
           ),
           _ = _.useCallback(
             async (_) => {
+              var _;
               const _ = String(_.target.value);
-              if (!_ || 0 == _.trim().length) return;
+              if (!_ || 0 == __webpack_require__.trim().length) return;
               const _ = (0, _._)(_._.LANGUAGE);
               if (
-                _.toLocaleLowerCase().startsWith(_._.STORE_BASE_URL) ||
-                _.toLocaleLowerCase().startsWith(_._.COMMUNITY_BASE_URL) ||
-                _.toLocaleLowerCase().startsWith(
-                  "https://store.steampowered.com/",
-                ) ||
-                _.toLocaleLowerCase().startsWith(
-                  "https://store.steamchina.com/",
-                ) ||
-                _.toLocaleLowerCase().startsWith("https://steamcommunity.com/")
+                __webpack_require__
+                  .toLocaleLowerCase()
+                  .startsWith(_._.STORE_BASE_URL) ||
+                __webpack_require__
+                  .toLocaleLowerCase()
+                  .startsWith(_._.COMMUNITY_BASE_URL) ||
+                __webpack_require__
+                  .toLocaleLowerCase()
+                  .startsWith("https://store.steampowered.com/") ||
+                __webpack_require__
+                  .toLocaleLowerCase()
+                  .startsWith("https://store.steamchina.com/") ||
+                __webpack_require__
+                  .toLocaleLowerCase()
+                  .startsWith("https://steamcommunity.com/")
               ) {
                 const _ = [],
                   _ = /app\/(\d+)\/view\/(\d+)\/?$/.exec(_),
@@ -15999,84 +16012,75 @@
                   _ = null,
                   _ = null,
                   _ = null;
-                if ((null == _ ? void 0 : _.length) >= 3)
+                if (_ && (null == _ ? void 0 : _.length) >= 3)
                   (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if ((null == _ ? void 0 : _.length) >= 3)
+                else if (_ && (null == _ ? void 0 : _.length) >= 3)
                   (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if ((null == _ ? void 0 : _.length) >= 3)
+                else if (_ && (null == _ ? void 0 : _.length) >= 3)
                   (_ = _[1]), (_ = _[2]);
-                else if ((null == _ ? void 0 : _.length) >= 3)
+                else if (_ && _.length >= 3)
                   (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if ((null == _ ? void 0 : _.length) >= 3) {
+                else if (_ && _.length >= 3) {
                   let _ = _[1];
                   _ = _[2];
                   let _ = await _._.LoadOGGClanInfoForIdentifier(_);
                   _ && (_ = _.appid);
-                } else if ((null == _ ? void 0 : _.length) >= 3)
-                  (_ = _[1]), (_ = _[2]);
-                else if ((null == _ ? void 0 : _.length) >= 3)
+                } else if (_ && _.length >= 3) (_ = _[1]), (_ = _[2]);
+                else if (_ && _.length >= 3)
                   (_ = Number.parseInt(_[1])), (_ = _[2]);
-                else if ((null == _ ? void 0 : _.length) >= 3) {
+                else if (_ && _.length >= 3) {
                   const _ = _[1];
                   _ = _[2];
                   const _ = await _._.LoadOGGClanInfoForIdentifier(_);
                   _ && (_ = _.appid);
                 }
+                const _ = Boolean(_);
                 if (_)
                   _
-                    ? (_ = await _._.LoadPartnerEventFromClanEventGID(_, _, 0))
+                    ? (_ = await _._.LoadPartnerEventFromClanEventGID(
+                        _,
+                        _,
+                        0,
+                        _,
+                      ))
                     : _ &&
                       (_ = await _._.LoadPartnerEventFromAnnoucementGID(
                         _,
                         _,
                         0,
+                        _,
                       ));
                 else {
                   let _ = null;
                   if ((_ && (_ = _._.InitFromClanID(_)), _)) {
-                    _ = (await _._.LoadOGGClanInfoForGroupVanity(_))
-                      .clanSteamID;
+                    let _ = await _._.LoadOGGClanInfoForGroupVanity(_);
+                    _ && (_ = _.clanSteamID);
                   }
-                  if (_) {
-                    const _ = !0;
-                    _ && _
-                      ? (_ =
-                          await _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                            _,
-                          ))
-                      : _ &&
-                        _ &&
-                        (_ =
-                          await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                            _,
-                          ));
-                  } else
-                    _ && _
-                      ? (_ =
-                          await _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                          ))
-                      : _ &&
-                        _ &&
-                        (_ =
-                          await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            _,
-                            _,
-                            0,
-                          ));
+                  _ && _
+                    ? (_ =
+                        await _._.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                          _,
+                          _,
+                          0,
+                          _,
+                        ))
+                    : _ &&
+                      _ &&
+                      (_ =
+                        await _._.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                          _,
+                          _,
+                          0,
+                          _,
+                        ));
                 }
                 if (_)
                   return (
                     _.push({
-                      name: _.GetNameWithFallback(_),
+                      name:
+                        null !== (_ = _.GetNameWithFallback(_)) && void 0 !== _
+                          ? _
+                          : "",
                       type: _.GetEventType(),
                       clanSteamID: _.clanSteamID,
                       gidClanAnnouncement: _.GetAnnouncementGID(),
@@ -16088,24 +16092,26 @@
                   (window.clearTimeout(_.current), (_.current = null));
               }
               _.current = window.setTimeout(async () => {
+                var _;
                 let _ = null;
                 if (_) {
                   const _ = _._.GetCreatorHome(new _._(_));
-                  _ = await _.Get().GetLatestPartnerEvents(
-                    _().CancelToken.source(),
-                    0,
-                    20,
-                    __webpack_require__.GetAppIDList(),
-                    void 0,
-                    void 0,
-                    void 0,
-                    void 0,
-                    !0,
-                    [__webpack_require__.GetClanAccountID()],
-                    _,
-                    !0,
-                    _,
-                  );
+                  _ &&
+                    (_ = await _.Get().GetLatestPartnerEvents(
+                      _().CancelToken.source(),
+                      0,
+                      20,
+                      _.GetAppIDList(),
+                      void 0,
+                      void 0,
+                      void 0,
+                      void 0,
+                      !0,
+                      [_.GetClanAccountID()],
+                      _,
+                      !0,
+                      _,
+                    ));
                 } else
                   _ = await _.Get().GetLatestPartnerEvents(
                     _().CancelToken.source(),
@@ -16122,13 +16128,20 @@
                     !0,
                     _,
                   );
-                const _ = _.map((_) => ({
-                  name: _.event_name,
-                  type: Number.parseInt(_.event_type),
-                  clanSteamID: new _._(_.clan_steamid),
-                  gidClanAnnouncement: _.announcement_gid,
-                  gidClanEvent: _.unique_id,
-                }));
+                const _ =
+                  null !==
+                    (_ =
+                      null == _
+                        ? void 0
+                        : _.map((_) => ({
+                            name: _.event_name,
+                            type: Number.parseInt(_.event_type),
+                            clanSteamID: new _._(_.clan_steamid),
+                            gidClanAnnouncement: _.announcement_gid,
+                            gidClanEvent: _.unique_id,
+                          }))) && void 0 !== _
+                    ? _
+                    : [];
                 _(_);
               }, 300);
             },
@@ -26838,7 +26851,198 @@
         });
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsxs)(_._, {
+          cursor: "default",
+          gap: "2",
+          className: _.Option,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.RadioCircle,
+            }),
+            (0, _.jsx)(_._, {
+              children: _,
+            }),
+          ],
+        });
+      }
+      const _ = Object.assign(
+          function (_) {
+            const {
+              value: _,
+              onValueChange: _,
+              options: _,
+              getOptionLabel: _,
+              ..._
+            } = _;
+            return (0, _.jsx)(_.Root, {
+              value: _,
+              onValueChange: _,
+              ..._,
+              children: _.map((_) => {
+                const _ = _ ? _(_) : _;
+                return (0, _.jsx)(
+                  _.Option,
+                  {
+                    value: _,
+                    children: _,
+                  },
+                  _,
+                );
+              }),
+            });
+          },
+          {
+            Root: function (_) {
+              const { value: _, onValueChange: _, render: _, ..._ } = _,
+                _ = (0, _.useRef)(null),
+                _ = (0, _.useCallback)((_, _) => {
+                  if (!_.current) return;
+                  const _ = [..._.current.querySelectorAll("[data-radio-id]")];
+                  if (0 !== _.length)
+                    for (let _ = 0; _ < _.length; _++) {
+                      const _ = _[_];
+                      if (!_.dataset.radioId) continue;
+                      if (_.dataset.radioId === _) {
+                        const _ = _[(_ + _ + _.length) % _.length];
+                        _.click(), _.focus();
+                      }
+                    }
+                }, []),
+                _ = (0, _.useCallback)((_) => _(_, 1), [_]),
+                _ = (0, _.useCallback)((_) => _(_, -1), [_]),
+                _ = (0, _.useMemo)(
+                  () => ({
+                    value: _,
+                    onValueChange: _,
+                    onSelectNext: _,
+                    onSelectPrev: _,
+                  }),
+                  [_, _, _, _],
+                ),
+                _ = {
+                  role: "radiogroup",
+                  ref: _,
+                  ..._,
+                },
+                _ = (0, _.jsx)(_._, {
+                  direction: "column",
+                  gap: "2",
+                  role: "radiogroup",
+                  ..._,
+                }),
+                _ = (0, _._)(_, _, _);
+              return (0, _.jsx)(_, {
+                value: _,
+                children: _,
+              });
+            },
+            Option: function (_) {
+              const { value: _, ref: _, children: _, render: _ } = _,
+                _ = (0, _.useContext)(_),
+                _ = (0, _.useId)();
+              if (!_)
+                return (
+                  console.error(
+                    "<RadioGroup.Option> must be rendered within a <RadioGroup.Root>",
+                  ),
+                  null
+                );
+              const {
+                  value: _,
+                  onValueChange: _,
+                  onSelectNext: _,
+                  onSelectPrev: _,
+                } = _,
+                _ = _ === _,
+                _ = () => {
+                  _ || _(_);
+                },
+                _ = {
+                  role: "radio",
+                  "aria-checked": _,
+                  "data-radio-id": _,
+                  onClick: _,
+                  onKeyDown: (_) => {
+                    switch (_.key) {
+                      case " ":
+                        _(), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowRight":
+                      case "ArrowDown":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowLeft":
+                      case "ArrowUp":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                    }
+                  },
+                  tabIndex: _ ? 0 : -1,
+                  ref: _,
+                  children: _,
+                },
+                _ = (0, _.jsx)(_, {});
+              return (0, _._)(_, _, _, {
+                bSelected: _,
+              });
+            },
+          },
+        ),
+        _ = (0, _.createContext)(null);
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { editModel: _, saleSection: _ } = _;
+        return (
+          (0, _.useEffect)(() => {
+            _.internal_section_data.reservation_layout ||
+              (_.internal_section_data.reservation_layout = {
+                item_definition_flow: "horizontal",
+                show_product_configs: !1,
+              });
+          }, [_]),
+          _.internal_section_data.reservation_layout
+            ? (0, _.jsx)(_, {
+                ..._,
+                reservation_layout: _.internal_section_data.reservation_layout,
+              })
+            : null
+        );
+      }
+      function _(_) {
+        const { editModel: _, reservation_layout: _ } = _,
+          [_, _] = (0, _._)(() => [
+            _.item_definition_flow || "horizontal",
+            _.show_product_configs || !1,
+          ]),
+          _ = () => _.SetDirty(_._.jsondata_sales);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              options: ["vertical", "horizontal"],
+              value: _,
+              onValueChange: (_) => {
+                _.item_definition_flow != _ &&
+                  ((_.item_definition_flow = _), _());
+              },
+            }),
+            (0, _.jsx)(_._, {
+              checked: _,
+              onChange: (_) => {
+                _.show_product_configs != _ &&
+                  ((_.show_product_configs = _), _());
+              },
+              children: "Enable Displaying Product Config Grids?",
+            }),
+          ],
+        });
+      }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -27136,7 +27340,7 @@
         ].includes(_);
       }
       const _ = (0, _._)((_) => {
-        var _;
+        var _, _;
         const {
             saleSection: _,
             editModel: _,
@@ -27156,7 +27360,7 @@
             _.forEach((_) => {
               _ &&
                 ("bundle" === _.type
-                  ? _.add(Number(_._))
+                  ? __webpack_require__.add(Number(_._))
                   : "sub" === _.type
                     ? _.add(Number(_._))
                     : _.add(Number(_._)));
@@ -27219,22 +27423,29 @@
               ? void 0
               : _.length) > 0,
           _ = !_.includes(_.section_type),
-          _ = (function (_) {
-            return [
-              "items",
-              "events",
-              "links",
-              "crosspromotesalepage",
-              "creator_list",
-              "creator_list_of_lists",
-              "itemdef",
-              "trailercarousel",
-              "point_shop_smart",
-              "dlc_for_you",
-              "template_media_content",
-              "sale_item_browser",
-            ].includes(_);
-          })(_.section_type),
+          _ = (function (_, _) {
+            return "vo_internal" == _
+              ? "reservation_widget" == _
+              : [
+                  "items",
+                  "events",
+                  "links",
+                  "crosspromotesalepage",
+                  "creator_list",
+                  "creator_list_of_lists",
+                  "itemdef",
+                  "trailercarousel",
+                  "point_shop_smart",
+                  "dlc_for_you",
+                  "template_media_content",
+                  "sale_item_browser",
+                ].includes(_);
+          })(
+            _.section_type,
+            (null === (_ = _.internal_section_data) || void 0 === _
+              ? void 0
+              : _.internal_type) || "invalid",
+          ),
           _ = (0, _._)(_.GetClanSteamID()),
           _ = (function (_, _, _, _, _, _, _, _, _, _, _) {
             const _ = [];
@@ -27253,18 +27464,31 @@
                 (0, _._)(_.saleSection, !0) ||
                 "crosspromotesalepage" == _.saleSection.section_type ||
                 "dlc_for_you" == _.saleSection.section_type;
-              _.push({
-                name: (0, _._)("#Sale_Section_EditTab_Layout"),
-                key: "display",
-                contents: (0, _.jsx)(
-                  _,
-                  {
-                    ..._,
-                    bSmartSection: _,
-                  },
-                  "SaleSectionDisplayOptions",
-                ),
-              });
+              "vo_internal" == _.section_type
+                ? _.push({
+                    name: (0, _._)("#Sale_Section_EditTab_Layout"),
+                    key: "display",
+                    contents: (0, _.jsx)(
+                      _,
+                      {
+                        editModel: _,
+                        saleSection: _,
+                      },
+                      "SaleSectionDisplayOptions",
+                    ),
+                  })
+                : _.push({
+                    name: (0, _._)("#Sale_Section_EditTab_Layout"),
+                    key: "display",
+                    contents: (0, _.jsx)(
+                      _,
+                      {
+                        ..._,
+                        bSmartSection: _,
+                      },
+                      "SaleSectionDisplayOptions",
+                    ),
+                  });
             }
             if (
               (_ &&

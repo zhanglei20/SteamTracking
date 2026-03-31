@@ -73,5 +73,7 @@
     "Error_TooManyRequests_Description": "لقد أرسلت عددًا كبيرًا من الطلبات مؤخرًا. يرجى الانتظار ومحاولة إرسال طلبك في وقت لاحق.",
     "AssetProperty_Range_MinPlaceholder": "دقيقة",
     "AssetProperty_Range_MaxPlaceholder": "الحد الأقصى",
-    "Accessories_FieldSectionLabel": "الملحقات"
+    "Accessories_FieldSectionLabel": "الملحقات",
+    "Economy_Market_TopLevelTooltip_MoreInfoLink": "معلومات أكثر...",
+    "Economy_Market_TopLevelReason_InvalidCookie": "يواجه Steam مشكلة في استخدام ملفات تعريف الارتباط الخاصة بمتصفحك."
 }

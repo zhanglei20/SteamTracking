@@ -18,7 +18,7 @@
 }
 .customBrowseLink {
 	display: block;
-	flex-basis: 50%;
+	flex-basis: 60%;
 	height: 100%;
 }
 
@@ -39,7 +39,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: start;
-	flex-basis: 50%;
+	flex-basis: 40%;
 	padding-right: 12px;
 	box-sizing: border-box;
 	height: 100%;
@@ -49,6 +49,7 @@
 {
 	font-size: 22px;
 	color: #fff;
+	text-align: left;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 900; /* black */
 

@@ -8,6 +8,7 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
       };
@@ -1000,8 +1001,8 @@
         B = s(38878),
         D = s(90534),
         O = s(53971),
-        P = s(75659),
-        L = s(41324);
+        L = s(75659),
+        P = s(41324);
       function M(e) {
         const {
             children: t,
@@ -1023,7 +1024,7 @@
                 ...c
               } = e,
               d = "underline" === t ? "none" : r;
-            return (0, L.mz)(
+            return (0, P.mz)(
               {
                 ...c,
                 radius: d,
@@ -1038,7 +1039,7 @@
                   l,
                 ),
               },
-              P.h,
+              L.h,
             );
           })(i);
         return (0, r.jsxs)(O.s, {
@@ -1380,11 +1381,11 @@
           n = s.size ? void 0 : X.IconSizeDefault;
         return (0, r.jsx)("svg", {
           viewBox: `0 0 ${t} ${t}`,
-          ...(0, L.mz)({ className: n, ...s }, te),
+          ...(0, P.mz)({ className: n, ...s }, te),
         });
       }
       const te = [
-          ...P.L,
+          ...L.L,
           {
             prop: "size",
             responsive: !0,
@@ -1393,7 +1394,7 @@
           {
             prop: "color",
             className: X.Color,
-            cssProperty: (e) => ["--icon-color", (0, L.w7)(e)],
+            cssProperty: (e) => ["--icon-color", (0, P.w7)(e)],
           },
           {
             prop: "hitSlop",
@@ -1403,7 +1404,7 @@
               "string" == typeof e ? e : "",
             ],
           },
-          P.h.find(({ prop: e }) => "cursor" === e),
+          L.h.find(({ prop: e }) => "cursor" === e),
         ],
         se = {
           up: "rotate( 180, 10, 10 )",
@@ -1458,20 +1459,22 @@
           c = "indeterminate" === t,
           d = c ? pe : oe,
           p = () => {
-            s && s(!!c || !t);
+            n || (s && s(!!c || !t));
           };
         return (0, r.jsxs)(O.s, {
           ref: i,
           role: "checkbox",
           "aria-checked": c ? "mixed" : t,
           "data-state": de(t),
-          className: N()(le.Root, le[`Variant-${o}`]),
+          className: N()(le.Root, le[`Variant-${o}`], n && le.Disabled),
           onClick: p,
           tabIndex: 0,
           onKeyDown: (e) => {
-            " " === e.key && (p(), e.preventDefault(), e.stopPropagation());
+            n ||
+              (" " === e.key && (p(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
+          "aria-disabled": n,
           ...l,
           children: [
             (0, r.jsx)("div", {
@@ -1877,7 +1880,7 @@
           ],
         });
       }
-      function Pe(e) {
+      function Le(e) {
         const [t] = (0, we.t7)(e.selectedAppInfo.nAppID, {
           include_basic_info: !0,
           include_assets_without_overrides: !0,
@@ -1915,7 +1918,7 @@
           ],
         });
       }
-      function Le(e) {
+      function Pe(e) {
         const [t, s] = u.useState(
             (function (e) {
               if (e.bSimilar) return "Similar";
@@ -1993,7 +1996,7 @@
                     }),
                   e.state.arrSelectedAppInfos.map((t) =>
                     (0, r.jsx)(
-                      Pe,
+                      Le,
                       {
                         selectedAppInfo: t,
                         onWeightChange: i,
@@ -2354,7 +2357,7 @@
                   children: [
                     (0, r.jsx)(Oe, {}),
                     !i.iA.steamid && (0, r.jsx)(Te, {}),
-                    (0, r.jsx)(Le, {
+                    (0, r.jsx)(Pe, {
                       state: t,
                       onChange: (e, t) => {
                         s(e), t && (o.push(De(e)), a(e));
@@ -3287,8 +3290,8 @@
         (0, a.Cg)([c.oI], B.prototype, "OnSelectedEndApp", null),
         (B = (0, a.Cg)([y.PA], B));
       var O,
-        P = s(17720),
-        L = s(6144),
+        L = s(17720),
+        P = s(6144),
         M = s(56545),
         k = s(80613),
         T = s.n(k),
@@ -3970,7 +3973,7 @@
         }
       }
       class Q {
-        m_callbacksLoaded = new L.lu();
+        m_callbacksLoaded = new P.lu();
         m_rgClusters;
         constructor(e, t, s, r, n) {
           const a = M.w.Init(V);
@@ -4066,7 +4069,7 @@
           u = _.useCallback((e) => c(e.data), [c]);
         let m = !1;
         const h = _.useRef(o.iA.steamid),
-          g = s && new P.b(s);
+          g = s && new L.b(s);
         let f;
         g &&
           g.BIsValid() &&

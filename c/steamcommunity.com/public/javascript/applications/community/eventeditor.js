@@ -19075,8 +19075,8 @@
             strDeliveryOverride: _,
             bDeliveryOverrideOnlyIfOutOfStock: _,
           } = _,
-          _ = (0, _._)(_),
-          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _.useMemo)(
             () => [
               {
@@ -19112,7 +19112,7 @@
             (0, _.jsx)(_.Suspense, {
               fallback: null,
               children: (0, _.jsx)(_, {
-                bIsPreview: _,
+                bIsPreview: !!_,
                 rgReservationDef: _,
               }),
             }),
@@ -19131,7 +19131,8 @@
                       reservationDef: _[0],
                       hardwareDetail: _,
                     }),
-                  Boolean(null == _ ? void 0 : _.allow_purchase_in_country) &&
+                  _ &&
+                    (null == _ ? void 0 : _.allow_purchase_in_country) &&
                     (0, _.jsx)(_._, {
                       reservationDef: _[0],
                       hardwareDetail: _,

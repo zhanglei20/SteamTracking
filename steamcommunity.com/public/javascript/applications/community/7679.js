@@ -316,7 +316,7 @@
             rgAcceptableTypes: o,
           },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: r },
-          spotlight_art_hero: { width: 374, height: 448, rgAcceptableTypes: o },
+          spotlight_art_hero: { width: 748, height: 896, rgAcceptableTypes: o },
           old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: r },
           marketingmessage_art: {
             width: 570,

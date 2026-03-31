@@ -543,6 +543,12 @@
         PendingVisibilityText: "_1G3Ia68Tqe9nh-mC_dAaa6",
       };
     },
+    16180: (e) => {
+      e.exports = {
+        Option: "_3a3fNdwhCItYEc1SsUNP",
+        RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
+      };
+    },
     26418: () => {},
     72584: (e) => {
       e.exports = { SingleLineProseMirror: "_3VacujiZBoCbegfnyWifs8" };
@@ -7945,7 +7951,7 @@
                 };
               V.push(o);
             }
-          let $ = (() => {
+          let K = (() => {
               if (t.capsules) {
                 const e = a.GetNumberOfDays();
                 let i = new Array(e);
@@ -7962,11 +7968,11 @@
                 );
               }
             })(),
-            K = new Array();
-          if ($) {
+            $ = new Array();
+          if (K) {
             let e = "CountFilter_Sale" + i,
               t = "CountFilter_Sale" + i + "_day_all";
-            K.push(
+            $.push(
               (0, n.jsxs)(
                 "div",
                 {
@@ -7991,9 +7997,9 @@
                 "CountFilter_sale" + i + "_" + H,
               ),
             ),
-              $.forEach((t, a) => {
+              K.forEach((t, a) => {
                 let o = "CountFilter_Sale" + i + "_day_" + a;
-                K.push(
+                $.push(
                   (0, n.jsxs)(
                     "div",
                     {
@@ -8077,7 +8083,7 @@
                     f.EventDefaultRowContainer,
                   ),
                   children: [
-                    Boolean($ && $.length > 0) &&
+                    Boolean(K && K.length > 0) &&
                       (0, n.jsxs)("div", {
                         className: L.SaleVisibilityDateFilter,
                         children: [
@@ -8086,7 +8092,7 @@
                               "#Sale_VisibilityIndex_ShowFilter",
                             ),
                           }),
-                          K,
+                          $,
                         ],
                       }),
                     (0, n.jsx)(_.Io, {
@@ -11538,15 +11544,15 @@
         );
       };
     },
-    66210: (e, t, a) => {
+    77392: (e, t, a) => {
       "use strict";
       a.d(t, {
-        vx: () => fl,
-        sq: () => vl,
-        ke: () => Cl,
-        m: () => yl,
-        gB: () => wl,
-        sL: () => Tl,
+        vx: () => Ml,
+        sq: () => Il,
+        ke: () => Bl,
+        m: () => Al,
+        gB: () => kl,
+        sL: () => Nl,
       });
       var i = a(7850),
         n = a(22837),
@@ -11984,8 +11990,8 @@
         return null;
       }
       var X = a(60169),
-        $ = a(56654),
-        K = a(12155),
+        K = a(56654),
+        $ = a(12155),
         J = a(26408),
         Z = a(64238),
         ee = a.n(Z),
@@ -12030,7 +12036,7 @@
                           ]),
                           a.SetDirty(o.IQ.jsondata_sales);
                       },
-                      children: (0, i.jsx)(K.FWt, {}),
+                      children: (0, i.jsx)($.FWt, {}),
                     }),
                     (0, i.jsx)(ne, { editModel: a, saleSection: t, tab: e }),
                   ],
@@ -12116,7 +12122,7 @@
                 }),
               ],
             }),
-            (0, i.jsx)($.A, {
+            (0, i.jsx)(K.A, {
               items: c,
               onDelete: (e) => {
                 _();
@@ -13410,8 +13416,8 @@
         });
       }
       var Xe = a(9701),
-        $e = a(65944);
-      function Ke(e) {
+        Ke = a(65944);
+      function $e(e) {
         const { saleSection: t } = e,
           [a, n] = (0, d.q3)(() => [(0, u.CU)(t, !0), (0, u.Pm)(t)]);
         return (0, i.jsx)(xe.tH, {
@@ -13542,7 +13548,7 @@
           ]),
           r = s ? "wishlist" : "linked_app_list",
           _ = [];
-        (0, $e.iR)(a.GetEventModel()) ||
+        (0, Ke.iR)(a.GetEventModel()) ||
           _.push({
             label: (0, M.we)("#Sale_SmartSection_FilterFromLinkedAppList"),
             tooltip: (0, M.we)(
@@ -14217,7 +14223,7 @@
         const { section: t } = e;
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(Ke, { saleSection: t, ...e }),
+            (0, i.jsx)($e, { saleSection: t, ...e }),
             (0, i.jsx)(Je, { saleSection: t, ...e }),
           ],
         });
@@ -14334,7 +14340,7 @@
               l &&
                 (0, i.jsxs)(i.Fragment, {
                   children: [
-                    (0, i.jsx)($.A, {
+                    (0, i.jsx)(K.A, {
                       items: _,
                       onDelete: (e) => {
                         t.dlc_for_you_data.parent_app_sorts.splice(e, 1),
@@ -14958,133 +14964,121 @@
           ),
           S = c.useCallback(
             async (e) => {
-              const t = String(e.target.value);
-              if (!t || 0 == t.trim().length) return;
-              const a = (0, n.sf)(A.TS.LANGUAGE);
+              var t;
+              const a = String(e.target.value);
+              if (!a || 0 == a.trim().length) return;
+              const i = (0, n.sf)(A.TS.LANGUAGE);
               if (
-                t.toLocaleLowerCase().startsWith(A.TS.STORE_BASE_URL) ||
-                t.toLocaleLowerCase().startsWith(A.TS.COMMUNITY_BASE_URL) ||
-                t
+                a.toLocaleLowerCase().startsWith(A.TS.STORE_BASE_URL) ||
+                a.toLocaleLowerCase().startsWith(A.TS.COMMUNITY_BASE_URL) ||
+                a
                   .toLocaleLowerCase()
                   .startsWith("https://store.steampowered.com/") ||
-                t
+                a
                   .toLocaleLowerCase()
                   .startsWith("https://store.steamchina.com/") ||
-                t.toLocaleLowerCase().startsWith("https://steamcommunity.com/")
+                a.toLocaleLowerCase().startsWith("https://steamcommunity.com/")
               ) {
                 const e = [],
-                  i = /app\/(\d+)\/view\/(\d+)\/?$/.exec(t),
-                  n = /group\/(\d+)\/view\/(\d+)\/?$/.exec(t),
-                  o =
+                  n = /app\/(\d+)\/view\/(\d+)\/?$/.exec(a),
+                  o = /group\/(\d+)\/view\/(\d+)\/?$/.exec(a),
+                  s =
                     /groups\/([A-Za-z0-9\-@#!$_]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
-                      t,
+                      a,
                     ),
-                  s = /games\/(\d+)\/announcements\/detail\/(\d+)+\/?$/.exec(t),
-                  r =
-                    /games\/([A-Za-z0-9\-@#!$_]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
-                      t,
-                    ),
+                  r = /games\/(\d+)\/announcements\/detail\/(\d+)+\/?$/.exec(a),
                   d =
-                    /groups\/([A-Za-z0-9\-@#!$_]+)\/partnerevents\/edit\/(\d+)+/.exec(
-                      t,
-                    ),
-                  c = /games\/(\d+)\/partnerevents\/edit\/(\d+)+/.exec(t),
-                  _ =
                     /games\/([A-Za-z0-9\-@#!$_]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
-                      t,
+                      a,
+                    ),
+                  c =
+                    /groups\/([A-Za-z0-9\-@#!$_]+)\/partnerevents\/edit\/(\d+)+/.exec(
+                      a,
+                    ),
+                  _ = /games\/(\d+)\/partnerevents\/edit\/(\d+)+/.exec(a),
+                  u =
+                    /games\/([A-Za-z0-9\-@#!$_]+)\/announcements\/detail\/(\d+)+\/?$/.exec(
+                      a,
                     );
-                let u = null,
-                  p = null,
+                let p = null,
                   m = null,
                   S = null,
                   v = null,
-                  b = null;
-                if ((null == i ? void 0 : i.length) >= 3)
-                  (u = Number.parseInt(i[1])), (S = i[2]);
-                else if ((null == n ? void 0 : n.length) >= 3)
-                  (m = Number.parseInt(n[1])), (S = n[2]);
-                else if ((null == o ? void 0 : o.length) >= 3)
-                  (p = o[1]), (v = o[2]);
-                else if ((null == s ? void 0 : s.length) >= 3)
-                  (u = Number.parseInt(s[1])), (v = s[2]);
-                else if ((null == r ? void 0 : r.length) >= 3) {
-                  let e = r[1];
-                  v = r[2];
+                  b = null,
+                  f = null;
+                if (n && (null == n ? void 0 : n.length) >= 3)
+                  (p = Number.parseInt(n[1])), (v = n[2]);
+                else if (o && (null == o ? void 0 : o.length) >= 3)
+                  (S = Number.parseInt(o[1])), (v = o[2]);
+                else if (s && (null == s ? void 0 : s.length) >= 3)
+                  (m = s[1]), (b = s[2]);
+                else if (r && r.length >= 3)
+                  (p = Number.parseInt(r[1])), (b = r[2]);
+                else if (d && d.length >= 3) {
+                  let e = d[1];
+                  b = d[2];
                   let t = await Bt.ac.LoadOGGClanInfoForIdentifier(e);
-                  t && (u = t.appid);
-                } else if ((null == d ? void 0 : d.length) >= 3)
-                  (p = d[1]), (S = d[2]);
-                else if ((null == c ? void 0 : c.length) >= 3)
-                  (u = Number.parseInt(c[1])), (S = c[2]);
-                else if ((null == _ ? void 0 : _.length) >= 3) {
-                  const e = _[1];
-                  v = _[2];
+                  t && (p = t.appid);
+                } else if (c && c.length >= 3) (m = c[1]), (v = c[2]);
+                else if (_ && _.length >= 3)
+                  (p = Number.parseInt(_[1])), (v = _[2]);
+                else if (u && u.length >= 3) {
+                  const e = u[1];
+                  b = u[2];
                   const t = await Bt.ac.LoadOGGClanInfoForIdentifier(e);
-                  t && (u = t.appid);
+                  t && (p = t.appid);
                 }
-                if (u)
-                  S
-                    ? (b = await kt.O3.LoadPartnerEventFromClanEventGID(
-                        u,
-                        S,
-                        0,
-                      ))
-                    : v &&
-                      (b = await kt.O3.LoadPartnerEventFromAnnoucementGID(
-                        u,
+                const y = Boolean(l);
+                if (p)
+                  v
+                    ? (f = await kt.O3.LoadPartnerEventFromClanEventGID(
+                        p,
                         v,
                         0,
+                        y,
+                      ))
+                    : b &&
+                      (f = await kt.O3.LoadPartnerEventFromAnnoucementGID(
+                        p,
+                        b,
+                        0,
+                        y,
                       ));
                 else {
                   let e = null;
-                  if ((m && (e = jt.b.InitFromClanID(m)), p)) {
-                    e = (await Bt.ac.LoadOGGClanInfoForGroupVanity(p))
-                      .clanSteamID;
+                  if ((S && (e = jt.b.InitFromClanID(S)), m)) {
+                    let t = await Bt.ac.LoadOGGClanInfoForGroupVanity(m);
+                    t && (e = t.clanSteamID);
                   }
-                  if (l) {
-                    const t = !0;
-                    v && e
-                      ? (b =
-                          await kt.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            e,
-                            v,
-                            0,
-                            t,
-                          ))
-                      : S &&
-                        e &&
-                        (b =
-                          await kt.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            e,
-                            S,
-                            0,
-                            t,
-                          ));
-                  } else
-                    v && e
-                      ? (b =
-                          await kt.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            e,
-                            v,
-                            0,
-                          ))
-                      : S &&
-                        e &&
-                        (b =
-                          await kt.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                            e,
-                            S,
-                            0,
-                          ));
+                  b && e
+                    ? (f =
+                        await kt.O3.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                          e,
+                          b,
+                          0,
+                          y,
+                        ))
+                    : v &&
+                      e &&
+                      (f =
+                        await kt.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                          e,
+                          v,
+                          0,
+                          y,
+                        ));
                 }
-                if (b)
+                if (f)
                   return (
                     e.push({
-                      name: b.GetNameWithFallback(a),
-                      type: b.GetEventType(),
-                      clanSteamID: b.clanSteamID,
-                      gidClanAnnouncement: b.GetAnnouncementGID(),
-                      gidClanEvent: b.GID,
+                      name:
+                        null !== (t = f.GetNameWithFallback(i)) && void 0 !== t
+                          ? t
+                          : "",
+                      type: f.GetEventType(),
+                      clanSteamID: f.clanSteamID,
+                      gidClanAnnouncement: f.GetAnnouncementGID(),
+                      gidClanEvent: f.GID,
                     }),
                     void g(e)
                   );
@@ -15092,26 +15086,28 @@
                   (window.clearTimeout(h.current), (h.current = null));
               }
               h.current = window.setTimeout(async () => {
-                let e = null;
+                var e;
+                let t = null;
                 if (r) {
-                  const a = Fe.pF.GetCreatorHome(new jt.b(r));
-                  e = await Lt.Get().GetLatestPartnerEvents(
-                    De().CancelToken.source(),
-                    0,
-                    20,
-                    a.GetAppIDList(),
-                    void 0,
-                    void 0,
-                    void 0,
-                    void 0,
-                    !0,
-                    [a.GetClanAccountID()],
-                    t,
-                    !0,
-                    d,
-                  );
+                  const e = Fe.pF.GetCreatorHome(new jt.b(r));
+                  e &&
+                    (t = await Lt.Get().GetLatestPartnerEvents(
+                      De().CancelToken.source(),
+                      0,
+                      20,
+                      e.GetAppIDList(),
+                      void 0,
+                      void 0,
+                      void 0,
+                      void 0,
+                      !0,
+                      [e.GetClanAccountID()],
+                      a,
+                      !0,
+                      d,
+                    ));
                 } else
-                  e = await Lt.Get().GetLatestPartnerEvents(
+                  t = await Lt.Get().GetLatestPartnerEvents(
                     De().CancelToken.source(),
                     0,
                     20,
@@ -15122,18 +15118,25 @@
                     void 0,
                     !0,
                     void 0,
-                    t,
+                    a,
                     !0,
                     d,
                   );
-                const a = e.map((e) => ({
-                  name: e.event_name,
-                  type: Number.parseInt(e.event_type),
-                  clanSteamID: new jt.b(e.clan_steamid),
-                  gidClanAnnouncement: e.announcement_gid,
-                  gidClanEvent: e.unique_id,
-                }));
-                g(a);
+                const i =
+                  null !==
+                    (e =
+                      null == t
+                        ? void 0
+                        : t.map((e) => ({
+                            name: e.event_name,
+                            type: Number.parseInt(e.event_type),
+                            clanSteamID: new jt.b(e.clan_steamid),
+                            gidClanAnnouncement: e.announcement_gid,
+                            gidClanEvent: e.unique_id,
+                          }))) && void 0 !== e
+                    ? e
+                    : [];
+                g(i);
               }, 300);
             },
             [d, l, g, r],
@@ -15233,7 +15236,7 @@
           (0, d.q3)(() =>
             Array.from(r).map((e) => kt.O3.GetClanEventFromAnnouncementGID(e)),
           ),
-          (0, i.jsx)($.A, {
+          (0, i.jsx)(K.A, {
             items: l,
             onDelete: (e) => {
               (0, Me.h5)(() => {
@@ -15460,7 +15463,7 @@
               },
             }),
             Boolean(n) &&
-              (0, i.jsx)(Kt, { editModel: t, track: n, saleSection: a }),
+              (0, i.jsx)($t, { editModel: t, track: n, saleSection: a }),
             (0, i.jsx)("br", {}),
             (0, i.jsx)(m.JU, {
               children: (0, M.we)(
@@ -15669,7 +15672,7 @@
                 ],
               }),
               Boolean(a.event_schedule_tracks)
-                ? (0, i.jsx)($.A, {
+                ? (0, i.jsx)(K.A, {
                     items: a.event_schedule_tracks,
                     onDelete: (e) => {
                       (0, V.pg)(
@@ -15738,7 +15741,7 @@
               e.index ? e.index + 1 : 1,
             ),
           });
-      function $t(e, t, a, n) {
+      function Kt(e, t, a, n) {
         (0, Ae.lX)(
           (0, i.jsx)(Dt.s, {
             onChange: (e) => {
@@ -15750,7 +15753,7 @@
           { bDisablePopTop: !0 },
         );
       }
-      const Kt = (0, r.PA)((e) => {
+      const $t = (0, r.PA)((e) => {
         const { saleSection: t, track: a, editModel: n } = e,
           [o, s, r, c] = (0, d.q3)(() => [
             n.GetEventModel(),
@@ -15887,13 +15890,13 @@
                       ),
                     }),
                     (0, i.jsx)(m.$n, {
-                      onClick: (e) => $t(e, a, n, "label_color"),
+                      onClick: (e) => Kt(e, a, n, "label_color"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.label_color },
                       children: (0, M.we)("#Sale_Section_Generic_Label_Color"),
                     }),
                     (0, i.jsx)(m.$n, {
-                      onClick: (e) => $t(e, a, n, "background_gradient_left"),
+                      onClick: (e) => Kt(e, a, n, "background_gradient_left"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.label_color, background: u },
                       children: (0, M.we)(
@@ -15901,7 +15904,7 @@
                       ),
                     }),
                     (0, i.jsx)(m.$n, {
-                      onClick: (e) => $t(e, a, n, "background_gradient_right"),
+                      onClick: (e) => Kt(e, a, n, "background_gradient_right"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.label_color, background: u },
                       children: (0, M.we)(
@@ -15910,7 +15913,7 @@
                     }),
                     (0, i.jsx)(m.$n, {
                       onClick: (e) =>
-                        $t(e, a, n, "selected_background_gradient_left"),
+                        Kt(e, a, n, "selected_background_gradient_left"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.label_color, background: p },
                       children: (0, M.we)(
@@ -15919,7 +15922,7 @@
                     }),
                     (0, i.jsx)(m.$n, {
                       onClick: (e) =>
-                        $t(e, a, n, "selected_background_gradient_right"),
+                        Kt(e, a, n, "selected_background_gradient_right"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.label_color, background: p },
                       children: (0, M.we)(
@@ -15937,14 +15940,14 @@
                       ),
                     }),
                     (0, i.jsx)(m.$n, {
-                      onClick: (e) => $t(e, a, n, "encore_label_color"),
+                      onClick: (e) => Kt(e, a, n, "encore_label_color"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.encore_label_color },
                       children: (0, M.we)("#Sale_Section_Generic_Label_Color"),
                     }),
                     (0, i.jsx)(m.$n, {
                       onClick: (e) =>
-                        $t(e, a, n, "encore_background_gradient_left"),
+                        Kt(e, a, n, "encore_background_gradient_left"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.encore_label_color, background: g },
                       children: (0, M.we)(
@@ -15953,7 +15956,7 @@
                     }),
                     (0, i.jsx)(m.$n, {
                       onClick: (e) =>
-                        $t(e, a, n, "encore_background_gradient_right"),
+                        Kt(e, a, n, "encore_background_gradient_right"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.encore_label_color, background: g },
                       children: (0, M.we)(
@@ -15962,7 +15965,7 @@
                     }),
                     (0, i.jsx)(m.$n, {
                       onClick: (e) =>
-                        $t(e, a, n, "selected_encore_background_gradient_left"),
+                        Kt(e, a, n, "selected_encore_background_gradient_left"),
                       className: h.EventEditorTextTitle,
                       style: { color: a.encore_label_color, background: S },
                       children: (0, M.we)(
@@ -15971,7 +15974,7 @@
                     }),
                     (0, i.jsx)(m.$n, {
                       onClick: (e) =>
-                        $t(
+                        Kt(
                           e,
                           a,
                           n,
@@ -16682,7 +16685,7 @@
                     (0, i.jsx)("h2", {
                       children: (0, M.we)("#Sale_Section_Quiz_QuestionTitle"),
                     }),
-                    (0, i.jsx)($.A, {
+                    (0, i.jsx)(K.A, {
                       items: l,
                       onDelete: (e) => ma(t, e, s),
                       onReorder: s,
@@ -16752,7 +16755,7 @@
               (0, i.jsx)("h2", {
                 children: (0, M.we)("#Sale_Section_Quiz_AnswerTitle"),
               }),
-              (0, i.jsx)($.A, {
+              (0, i.jsx)(K.A, {
                 items: null !== (t = a.answers) && void 0 !== t ? t : [],
                 onDelete: l,
                 onReorder: n,
@@ -17000,7 +17003,7 @@
                   (0, i.jsx)("h2", {
                     children: (0, M.we)("#Sale_Section_Quiz_ScenarioTitle"),
                   }),
-                  (0, i.jsx)($.A, {
+                  (0, i.jsx)(K.A, {
                     items:
                       null !==
                         (a =
@@ -17260,7 +17263,7 @@
             (0, i.jsx)("h2", {
               children: (0, M.we)("#Sale_Section_BadgeProgress_LevelsURLs"),
             }),
-            (0, i.jsx)($.A, {
+            (0, i.jsx)(K.A, {
               items:
                 null !== (t = a.badge_progress.levels) && void 0 !== t ? t : [],
               onDelete: y,
@@ -17419,7 +17422,7 @@
           (0, i.jsxs)(i.Fragment, {
             children: [
               (0, i.jsx)(_t, { editModel: a, saleSection: t }),
-              (0, i.jsx)(Ke, { saleSection: t, editModel: a }),
+              (0, i.jsx)($e, { saleSection: t, editModel: a }),
               (0, i.jsx)(Ga.ip, {
                 uniqueKey: "Section" + n,
                 capsuleContainer: t,
@@ -17816,7 +17819,7 @@
                   }),
                 ],
               }),
-              (0, i.jsx)($.A, {
+              (0, i.jsx)(K.A, {
                 items: l.featured_curator_list,
                 onDelete: (e) => {
                   l.featured_curator_list.splice(e, 1),
@@ -18033,8 +18036,8 @@
         );
       }
       var Xa = a(56631),
-        $a = a(70707);
-      function Ka(e) {
+        Ka = a(70707);
+      function $a(e) {
         return (0, i.jsxs)("div", {
           children: [
             (0, i.jsx)(ei, { ...e }),
@@ -18047,7 +18050,7 @@
       }
       function Ja(e) {
         const t = (0, d.q3)(() => e.saleSection.itemdefs);
-        return (0, i.jsx)($.A, {
+        return (0, i.jsx)(K.A, {
           items: t || [],
           onDelete: (t) => {
             e.saleSection.itemdefs.splice(t, 1),
@@ -18085,7 +18088,7 @@
                 (0, i.jsx)("div", {
                   style: { backgroundColor: s.strBackgroundColor },
                   children: (0, i.jsx)("img", {
-                    className: $a.itemimg,
+                    className: Ka.itemimg,
                     src: null == s ? void 0 : s.strImgURL,
                   }),
                 }),
@@ -18265,7 +18268,7 @@
                     },
                     toggled: a == O.V8.k_HeaderFullWidth,
                     tooltip: (0, M.we)("#FormattingToolbar_FullWidth"),
-                    children: (0, i.jsx)(K.ZzC, {}),
+                    children: (0, i.jsx)($.ZzC, {}),
                   }),
                 si.map((e) =>
                   (0, i.jsx)(
@@ -18805,7 +18808,7 @@
             t.links.length != e.length && (t.links = e);
           }, [t, t.links]),
           (0, i.jsx)(i.Fragment, {
-            children: a ? (0, i.jsx)(Wi, { ...e }) : (0, i.jsx)($i, { ...e }),
+            children: a ? (0, i.jsx)(Wi, { ...e }) : (0, i.jsx)(Ki, { ...e }),
           })
         );
       }
@@ -18930,7 +18933,7 @@
             }),
             (0, i.jsx)(q.EN, {
               active: o,
-              children: (0, i.jsx)(Ki, {
+              children: (0, i.jsx)($i, {
                 editModel: a,
                 link: n,
                 closeModal: l,
@@ -18939,7 +18942,7 @@
           ],
         });
       }
-      function $i(e) {
+      function Ki(e) {
         const { saleSection: t, editModel: a } = e,
           n = (0, d.q3)(() => t.links),
           s = (0, ae.CH)();
@@ -18949,7 +18952,7 @@
             (0, i.jsx)("p", {
               children: (0, M.we)("#Sale_ImageBuilder_description", "1200px"),
             }),
-            (0, i.jsx)($.A, {
+            (0, i.jsx)(K.A, {
               items: n,
               onDelete: (e) => {
                 t.links.splice(e, 1), a.SetDirty(o.IQ.jsondata_sales), s();
@@ -18971,7 +18974,7 @@
           ],
         });
       }
-      function Ki(e) {
+      function $i(e) {
         const { link: t, editModel: a, closeModal: n } = e,
           [s, r, c, _, u] = (0, d.q3)(() => [
             a.GetEventModel(),
@@ -19059,7 +19062,7 @@
                   }),
                 (0, i.jsxs)(q.EN, {
                   active: s,
-                  children: [(0, i.jsx)(Ki, { ...e, closeModal: r }), ","],
+                  children: [(0, i.jsx)($i, { ...e, closeModal: r }), ","],
                 }),
                 (0, i.jsx)(q.EN, {
                   active: c,
@@ -19247,7 +19250,7 @@
                     (0, i.jsx)("h2", {
                       children: (0, M.we)("#Sale_Section_Quest_Section_Header"),
                     }),
-                    (0, i.jsx)($.A, {
+                    (0, i.jsx)(K.A, {
                       items:
                         null !==
                           (n =
@@ -19849,7 +19852,7 @@
                         u.length,
                       ],
                     }),
-                    (0, i.jsx)($.A, {
+                    (0, i.jsx)(K.A, {
                       items: null !== (t = r) && void 0 !== t ? t : [],
                       onReorder: o,
                       render: (e) =>
@@ -20112,7 +20115,7 @@
             (0, i.jsx)("h2", {
               children: (0, M.we)("#Sale_Section_RewardShelf_ItemList"),
             }),
-            (0, i.jsx)($.A, {
+            (0, i.jsx)(K.A, {
               items: _,
               onDelete: p,
               onReorder: l,
@@ -20826,7 +20829,7 @@
             (0, i.jsx)("h1", {
               children: (0, M.we)("#Sale_Section_Social_Share_ContentOptions"),
             }),
-            (0, i.jsx)($.A, {
+            (0, i.jsx)(K.A, {
               items: null != n ? n : [],
               onDelete: p,
               onReorder: o,
@@ -21059,8 +21062,8 @@
         Wn = a.n(Qn),
         Yn = a(85468),
         Xn = a(77397),
-        $n = a.n(Xn);
-      function Kn(e) {
+        Kn = a.n(Xn);
+      function $n(e) {
         const { fnOnDirty: t, localizedMedia: a } = e,
           [n, o, s] = (0, d.q3)(() => [
             a.trailer_appid,
@@ -21068,7 +21071,7 @@
             a.trailer_display || O.XE.k_EDisplayScreenshot,
           ]);
         return (0, i.jsxs)("div", {
-          className: $n().Ctn,
+          className: Kn().Ctn,
           children: [
             (0, i.jsx)("p", {
               children: (0, M.we)(
@@ -21148,9 +21151,9 @@
                     }),
                     (0, i.jsx)("div", { children: s.GetName() }),
                     (0, i.jsx)("div", {
-                      className: $n().CarouselCtn,
+                      className: Kn().CarouselCtn,
                       children: (0, i.jsx)("div", {
-                        className: $n().Carousel,
+                        className: Kn().Carousel,
                         children: s
                           .GetAllTrailers()
                           .GetAllTrailers(!1)
@@ -21159,8 +21162,8 @@
                               "div",
                               {
                                 className: (0, E.A)({
-                                  [$n().CarouselItem]: !0,
-                                  [$n().Selected]: a == e.GetTrailerID(),
+                                  [Kn().CarouselItem]: !0,
+                                  [Kn().Selected]: a == e.GetTrailerID(),
                                 }),
                                 onClick: () => o(t, e.GetTrailerID(), n),
                                 children: (0, i.jsx)(j.Gq, {
@@ -21211,7 +21214,7 @@
           children: [
             (0, i.jsx)(ao, { ...e }),
             o == O.Cu.k_MediaTrailer
-              ? (0, i.jsx)(Kn, { fnOnDirty: a, localizedMedia: t })
+              ? (0, i.jsx)($n, { fnOnDirty: a, localizedMedia: t })
               : (0, i.jsxs)(i.Fragment, {
                   children: [
                     (0, i.jsx)(Yn.v, { fnOnDirty: a, localizedMedia: t }),
@@ -21792,7 +21795,7 @@
                 (0, i.jsx)("h2", {
                   children: (0, M.we)("#Sale_Section_Quiz_QuestionTitle"),
                 }),
-                (0, i.jsx)($.A, {
+                (0, i.jsx)(K.A, {
                   items: l,
                   onReorder: s,
                   render: (e, a) =>
@@ -21936,7 +21939,7 @@
                 onOK: () => {
                   s.every((e, t) => e === t) || a(s.map((e) => t[e]));
                 },
-                children: (0, i.jsx)($.A, {
+                children: (0, i.jsx)(K.A, {
                   items: s,
                   onReorder: (e) => l(e),
                   render: (e, a) => {
@@ -22352,7 +22355,7 @@
                   onClick: (e) => {
                     e.preventDefault(), e.stopPropagation(), l();
                   },
-                  children: (0, i.jsx)(K.QPu, {}),
+                  children: (0, i.jsx)($.QPu, {}),
                 }),
               }),
               (0, i.jsx)(To.E, {
@@ -22488,13 +22491,13 @@
       function qo(e) {
         switch (e.nColCount) {
           case 2:
-            return (0, i.jsx)(K.HxD, {});
+            return (0, i.jsx)($.HxD, {});
           case 3:
-            return (0, i.jsx)(K.LsA, {});
+            return (0, i.jsx)($.LsA, {});
           case 4:
-            return (0, i.jsx)(K.xHM, {});
+            return (0, i.jsx)($.xHM, {});
         }
-        return (0, i.jsx)(K.LHj, {});
+        return (0, i.jsx)($.LHj, {});
       }
       var Vo = a(18041),
         Qo = a.n(Vo),
@@ -22516,7 +22519,7 @@
           { type: O.dv.k_TitleDescOnly, bHorizontal: !1, bMediaEditor: !1 },
           { type: O.dv.k_OverlayMedia, bHorizontal: !1, bMediaEditor: !1 },
         ],
-        $o = [
+        Ko = [
           { type: O.dv.k_TitleDescOnly, bHorizontal: !1, bMediaEditor: !1 },
           {
             type: O.dv.k_HorizontalMediaFirst,
@@ -22526,56 +22529,56 @@
           { type: O.dv.k_OverlayMedia, bHorizontal: !1, bMediaEditor: !1 },
           { type: O.dv.k_MediaOnly, bHorizontal: !1, bMediaEditor: !0 },
         ];
-      function Ko(e) {
+      function $o(e) {
         switch (e.displayOrder) {
           case O.dv.k_HorizontalTextFirst:
             return (0, i.jsx)(j.Gq, {
               toolTipContent: (0, M.we)(
                 "#Template_Section_MediaContent_HorizontalTextFirst_ttip",
               ),
-              children: (0, i.jsx)(K.znK, {}),
+              children: (0, i.jsx)($.znK, {}),
             });
           case O.dv.k_MediaTitleDesc:
             return (0, i.jsx)(j.Gq, {
               toolTipContent: (0, M.we)(
                 "#Template_Section_MediaContent_VerticalMediaFirst_ttip",
               ),
-              children: (0, i.jsx)(K._bA, {}),
+              children: (0, i.jsx)($._bA, {}),
             });
           case O.dv.k_TitleDescMedia:
             return (0, i.jsx)(j.Gq, {
               toolTipContent: (0, M.we)(
                 "#Template_Section_MediaContent_VerticalTextFirst_ttip",
               ),
-              children: (0, i.jsx)(K.Ehx, {}),
+              children: (0, i.jsx)($.Ehx, {}),
             });
           case O.dv.k_TitleDescOnly:
             return (0, i.jsx)(j.Gq, {
               toolTipContent: (0, M.we)(
                 "#Template_Section_MediaContent_TextOnly_ttip",
               ),
-              children: (0, i.jsx)(K.UNh, {}),
+              children: (0, i.jsx)($.UNh, {}),
             });
           case O.dv.k_OverlayMedia:
             return (0, i.jsx)(j.Gq, {
               toolTipContent: (0, M.we)(
                 "#Template_Section_MediaContent_Overlay_ttip",
               ),
-              children: (0, i.jsx)(K.yGy, {}),
+              children: (0, i.jsx)($.yGy, {}),
             });
           case O.dv.k_MediaOnly:
             return (0, i.jsx)(j.Gq, {
               toolTipContent: (0, M.we)(
                 "#Template_Section_MediaContent_MediaOnly_ttip",
               ),
-              children: (0, i.jsx)(K.Z29, {}),
+              children: (0, i.jsx)($.Z29, {}),
             });
         }
         return (0, i.jsx)(j.Gq, {
           toolTipContent: (0, M.we)(
             "#Template_Section_MediaContent_HorizontalMediaFirst_ttip",
           ),
-          children: (0, i.jsx)(K.LHj, {}),
+          children: (0, i.jsx)($.LHj, {}),
         });
       }
       function Jo(e) {
@@ -22604,7 +22607,7 @@
             }),
             (0, i.jsx)("div", {
               className: Yo().MediaLayoutPickerCtn,
-              children: $o.map((e) =>
+              children: Ko.map((e) =>
                 (0, i.jsx)(
                   "div",
                   {
@@ -22615,7 +22618,7 @@
                       t.display_order != e.type &&
                         ((t.display_order = e.type), a());
                     },
-                    children: (0, i.jsx)(Ko, { displayOrder: e.type }),
+                    children: (0, i.jsx)($o, { displayOrder: e.type }),
                   },
                   "displayorder_" + e.type,
                 ),
@@ -23119,7 +23122,7 @@
               (0, i.jsx)("div", {
                 className: Qo().EditInternalTitleIcon,
                 onClick: () => o(),
-                children: (0, i.jsx)(K.ffu, {}),
+                children: (0, i.jsx)($.ffu, {}),
               }),
               (0, i.jsx)(To.E, {
                 active: n,
@@ -23168,7 +23171,7 @@
               onClick: () => {
                 t ? l() : a();
               },
-              children: o ? (0, i.jsx)(K.EOr, {}) : (0, i.jsx)(K.krz, {}),
+              children: o ? (0, i.jsx)($.EOr, {}) : (0, i.jsx)($.krz, {}),
             }),
             (0, i.jsx)(To.E, {
               active: s,
@@ -23303,7 +23306,7 @@
                       onClick: () => {
                         (e.bHorizontal && !o) || n(e.type);
                       },
-                      children: (0, i.jsx)(Ko, { displayOrder: e.type }),
+                      children: (0, i.jsx)($o, { displayOrder: e.type }),
                     }),
                   },
                   t + "_" + e.type,
@@ -23416,7 +23419,7 @@
                 (0, i.jsx)("h2", {
                   children: (0, M.we)("#Template_Section_TechSpec_block"),
                 }),
-                (0, i.jsx)($.A, {
+                (0, i.jsx)(K.A, {
                   items: l,
                   onDelete: (e) =>
                     (function (e, t, a) {
@@ -23509,7 +23512,7 @@
                   "#Template_Section_TechSpec_block_Title_ttip",
                 ),
               }),
-              (0, i.jsx)($.A, {
+              (0, i.jsx)(K.A, {
                 items: _,
                 onDelete: (e) =>
                   (function (e, t, a) {
@@ -24163,7 +24166,7 @@
               fnOnDirty: t,
               language: o,
               children: [
-                (0, i.jsx)($.A, {
+                (0, i.jsx)(K.A, {
                   items: s,
                   onDelete: _,
                   onReorder: t,
@@ -24468,7 +24471,7 @@
               fnOnDirty: t,
               language: o,
               children: [
-                (0, i.jsx)($.A, {
+                (0, i.jsx)(K.A, {
                   items: s,
                   onDelete: r,
                   onReorder: t,
@@ -24733,7 +24736,7 @@
                     children:
                       null == s
                         ? void 0
-                        : s.map((e) => (0, i.jsx)($s, { list: e }, e.listid())),
+                        : s.map((e) => (0, i.jsx)(Ks, { list: e }, e.listid())),
                   }),
                 ],
               }),
@@ -24745,7 +24748,7 @@
           ],
         });
       }
-      function $s(e) {
+      function Ks(e) {
         const { list: t } = e,
           a = 0 == t.list_state(),
           n = a
@@ -24756,7 +24759,7 @@
           children: n,
         });
       }
-      function Ks(e) {
+      function $s(e) {
         const t = (0, d.q3)(() => e.saleSection.section_type);
         switch (t) {
           case "items":
@@ -24803,7 +24806,7 @@
           case "contenthubbroadcasts":
             return (0, i.jsx)(Ce, { section: e.saleSection, ...e });
           case "itemdef":
-            return (0, i.jsx)(Ka, { ...e });
+            return (0, i.jsx)($a, { ...e });
           case "quiz":
             return (0, i.jsx)(fa, { ...e });
           case "rewards":
@@ -25161,12 +25164,183 @@
         });
       }
       var ol = a(66845),
-        sl = a.n(ol);
-      var ll = a(54614),
-        rl = a.n(ll),
-        dl = a(17098),
-        cl = a(60860);
-      const _l = (0, r.PA)((e) => {
+        sl = a.n(ol),
+        ll = a(16180),
+        rl = a(83392),
+        dl = a(20187),
+        cl = a(80797);
+      function _l(e) {
+        const { children: t, ...a } = e;
+        return (0, i.jsxs)(rl.s, {
+          cursor: "default",
+          gap: "2",
+          className: ll.Option,
+          ...a,
+          children: [
+            (0, i.jsx)("div", { className: ll.RadioCircle }),
+            (0, i.jsx)(dl.EY, { children: t }),
+          ],
+        });
+      }
+      const ul = Object.assign(
+          function (e) {
+            const {
+              value: t,
+              onValueChange: a,
+              options: n,
+              getOptionLabel: o,
+              ...s
+            } = e;
+            return (0, i.jsx)(ul.Root, {
+              value: t,
+              onValueChange: a,
+              ...s,
+              children: n.map((e) => {
+                const t = o ? o(e) : e;
+                return (0, i.jsx)(ul.Option, { value: e, children: t }, t);
+              }),
+            });
+          },
+          {
+            Root: function (e) {
+              const { value: t, onValueChange: a, render: n, ...o } = e,
+                s = (0, c.useRef)(null),
+                l = (0, c.useCallback)((e, t) => {
+                  if (!s.current) return;
+                  const a = [...s.current.querySelectorAll("[data-radio-id]")];
+                  if (0 !== a.length)
+                    for (let i = 0; i < a.length; i++) {
+                      const n = a[i];
+                      if (!n.dataset.radioId) continue;
+                      if (n.dataset.radioId === e) {
+                        const e = a[(i + t + a.length) % a.length];
+                        e.click(), e.focus();
+                      }
+                    }
+                }, []),
+                r = (0, c.useCallback)((e) => l(e, 1), [l]),
+                d = (0, c.useCallback)((e) => l(e, -1), [l]),
+                _ = (0, c.useMemo)(
+                  () => ({
+                    value: t,
+                    onValueChange: a,
+                    onSelectNext: r,
+                    onSelectPrev: d,
+                  }),
+                  [t, a, r, d],
+                ),
+                u = { role: "radiogroup", ref: s, ...o },
+                p = (0, i.jsx)(rl.s, {
+                  direction: "column",
+                  gap: "2",
+                  role: "radiogroup",
+                  ...o,
+                }),
+                m = (0, cl.Q)(n, p, u);
+              return (0, i.jsx)(pl, { value: _, children: m });
+            },
+            Option: function (e) {
+              const { value: t, ref: a, children: n, render: o } = e,
+                s = (0, c.useContext)(pl),
+                l = (0, c.useId)();
+              if (!s)
+                return (
+                  console.error(
+                    "<RadioGroup.Option> must be rendered within a <RadioGroup.Root>",
+                  ),
+                  null
+                );
+              const {
+                  value: r,
+                  onValueChange: d,
+                  onSelectNext: _,
+                  onSelectPrev: u,
+                } = s,
+                p = r === t,
+                m = () => {
+                  p || d(t);
+                },
+                h = {
+                  role: "radio",
+                  "aria-checked": p,
+                  "data-radio-id": l,
+                  onClick: m,
+                  onKeyDown: (e) => {
+                    switch (e.key) {
+                      case " ":
+                        m(), e.preventDefault(), e.stopPropagation();
+                        break;
+                      case "ArrowRight":
+                      case "ArrowDown":
+                        _(l), e.preventDefault(), e.stopPropagation();
+                        break;
+                      case "ArrowLeft":
+                      case "ArrowUp":
+                        u(l), e.preventDefault(), e.stopPropagation();
+                    }
+                  },
+                  tabIndex: p ? 0 : -1,
+                  ref: a,
+                  children: n,
+                },
+                g = (0, i.jsx)(_l, {});
+              return (0, cl.Q)(o, g, h, { bSelected: p });
+            },
+          },
+        ),
+        pl = (0, c.createContext)(null);
+      var ml = a(57757);
+      function hl(e) {
+        const { editModel: t, saleSection: a } = e;
+        return (
+          (0, c.useEffect)(() => {
+            a.internal_section_data.reservation_layout ||
+              (a.internal_section_data.reservation_layout = {
+                item_definition_flow: "horizontal",
+                show_product_configs: !1,
+              });
+          }, [a]),
+          a.internal_section_data.reservation_layout
+            ? (0, i.jsx)(gl, {
+                ...e,
+                reservation_layout: a.internal_section_data.reservation_layout,
+              })
+            : null
+        );
+      }
+      function gl(e) {
+        const { editModel: t, reservation_layout: a } = e,
+          [n, s] = (0, d.q3)(() => [
+            a.item_definition_flow || "horizontal",
+            a.show_product_configs || !1,
+          ]),
+          l = () => t.SetDirty(o.IQ.jsondata_sales);
+        return (0, i.jsxs)(i.Fragment, {
+          children: [
+            (0, i.jsx)(ul, {
+              options: ["vertical", "horizontal"],
+              value: n,
+              onValueChange: (e) => {
+                a.item_definition_flow != e &&
+                  ((a.item_definition_flow = e), l());
+              },
+            }),
+            (0, i.jsx)(ml.S, {
+              checked: s,
+              onChange: (e) => {
+                a.show_product_configs != e &&
+                  ((a.show_product_configs = e), l());
+              },
+              children: "Enable Displaying Product Config Grids?",
+            }),
+          ],
+        });
+      }
+      var Sl = a(54614),
+        vl = a.n(Sl),
+        bl = a(17098),
+        fl = a(60860);
+      const yl = (0, r.PA)((e) => {
         const { saleSection: t, editModel: a } = e,
           n = a.GetCurEditLanguage(),
           [s, r, c, _, u, p, h, S, v, f, y] = (0, d.q3)(() => [
@@ -25183,13 +25357,13 @@
             t.internal_section_title || "",
           ]),
           w = Boolean(M.NT.GetWithFallback(r, n)),
-          x = w || dl.a.IsValidTitleOption(s, "label");
+          x = w || bl.a.IsValidTitleOption(s, "label");
         let C = 0;
         null == _ ||
           _.forEach((e) => {
             C += e ? 1 : 0;
           });
-        const T = (0, cl.yD)(),
+        const T = (0, fl.yD)(),
           j =
             !!(0, Oe.s0)(t, a.GetEventModel(), T.eLocation) ||
             "title_image" == t.section_type;
@@ -25207,7 +25381,7 @@
                   (0, i.jsx)(m.JU, {
                     children: (0, M.we)("#EventEditor_Event_SectionTitle"),
                   }),
-                  (0, i.jsx)(dl.a, {
+                  (0, i.jsx)(bl.a, {
                     default_label: s,
                     localized_label: r,
                     editModel: e.editModel,
@@ -25301,7 +25475,7 @@
                           },
                           value: c,
                         }),
-                        (0, i.jsx)(ul, { saleSection: t, editModel: a }),
+                        (0, i.jsx)(wl, { saleSection: t, editModel: a }),
                       ],
                     }),
                   (0, i.jsxs)("div", {
@@ -25310,7 +25484,7 @@
                       (0, i.jsx)(m.JU, {
                         children: (0, M.we)("#EventEditor_Event_SubTitle"),
                       }),
-                      (0, i.jsx)(dl.a, {
+                      (0, i.jsx)(bl.a, {
                         nameType: "subtitle",
                         default_label: u,
                         localized_label: p,
@@ -25371,7 +25545,7 @@
           ],
         });
       });
-      function ul(e) {
+      function wl(e) {
         const { saleSection: t, editModel: a } = e,
           [n] = (0, d.q3)(() => [t.label_link_style]);
         if (!t.label_link) return null;
@@ -25388,7 +25562,7 @@
           }),
         });
       }
-      function pl(e) {
+      function xl(e) {
         const { saleSection: t, editModel: a, visible: n } = e,
           [s, l, r] = (0, ae.uD)(),
           [d, _] = c.useState(void 0);
@@ -25396,14 +25570,14 @@
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)("div", {
-              className: rl().EditInternalTitleIcon,
+              className: vl().EditInternalTitleIcon,
               onClick: (e) => {
                 _(JSON.parse(JSON.stringify(t))),
                   l(),
                   e.stopPropagation(),
                   e.preventDefault();
               },
-              children: (0, i.jsx)(K.ffu, {}),
+              children: (0, i.jsx)($.ffu, {}),
             }),
             (0, i.jsx)("div", {
               onClick: (e) => e.stopPropagation(),
@@ -25417,24 +25591,24 @@
                     Object.assign(t, d), a.SetDirty(o.IQ.jsondata_sales), r();
                   },
                   closeModal: r,
-                  children: (0, i.jsx)(_l, { editModel: a, saleSection: t }),
+                  children: (0, i.jsx)(yl, { editModel: a, saleSection: t }),
                 }),
               }),
             }),
           ],
         });
       }
-      var ml = a(86927),
-        hl = a(50607),
-        gl = a(98924),
-        Sl = a(27939);
-      function vl(e, t, a) {
+      var Cl = a(86927),
+        Tl = a(50607),
+        jl = a(98924),
+        Dl = a(27939);
+      function Il(e, t, a) {
         return e.disable_background
           ? { background: "transparent" }
           : (0, w.Vb)(e, t, a);
       }
-      const bl = ["tabs", "social_share"];
-      function fl(e) {
+      const El = ["tabs", "social_share"];
+      function Ml(e) {
         return [
           "broadcast",
           "sale_item_browser",
@@ -25447,52 +25621,52 @@
           "social_share",
         ].includes(e);
       }
-      const yl = (0, r.PA)((e) => {
-        var t;
+      const Al = (0, r.PA)((e) => {
+        var t, a;
         const {
-            saleSection: a,
-            editModel: n,
-            index: r,
-            editLanguage: g,
-            isDuplicateSingleton: S,
+            saleSection: n,
+            editModel: r,
+            index: g,
+            editLanguage: S,
+            isDuplicateSingleton: v,
           } = e,
-          { ref: v, ...w } = e,
-          [T, D] = c.useState(!1);
+          { ref: w, ...T } = e,
+          [D, A] = c.useState(!1);
         c.useEffect(() => {
           var e;
           const t = new Set(),
-            i = new Set(),
-            n = new Set();
-          null === (e = a.capsules) ||
+            a = new Set(),
+            i = new Set();
+          null === (e = n.capsules) ||
             void 0 === e ||
             e.forEach((e) => {
               e &&
                 ("bundle" === e.type
-                  ? i.add(Number(e.id))
+                  ? a.add(Number(e.id))
                   : "sub" === e.type
-                    ? n.add(Number(e.id))
+                    ? i.add(Number(e.id))
                     : t.add(Number(e.id)));
             }),
             p.A.Get().QueueMultipleAppRequests(Array.from(t), _.Xh),
-            p.A.Get().QueueMultiplePackageRequests(Array.from(n), _.Xh),
-            p.A.Get().QueueMultipleBundleRequests(Array.from(i), _.Xh),
+            p.A.Get().QueueMultiplePackageRequests(Array.from(i), _.Xh),
+            p.A.Get().QueueMultipleBundleRequests(Array.from(a), _.Xh),
             l.mh.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
               null,
-              a.events
+              n.events
                 .filter((e) => Boolean(null == e ? void 0 : e.announcement_gid))
                 .map((e) => e.announcement_gid),
             );
-        }, [a]);
-        const A = (e) => {
-            (0, s.mi)((0, s.LY)(a), e);
+        }, [n]);
+        const k = (e) => {
+            (0, s.mi)((0, s.LY)(n), e);
           },
-          k = ((N = !0), (0, s.Nx)((0, s.LY)(a), N));
-        var N;
-        const L = c.useRef(void 0),
-          O = (0, ml.BZ)(L),
-          [P, F] = c.useState(!1),
-          R = (0, f.cv)(),
-          { bHighlighted: H, fnJumpTo: z } = (function (e, t, a) {
+          N = ((L = !0), (0, s.Nx)((0, s.LY)(n), L));
+        var L;
+        const O = c.useRef(void 0),
+          P = (0, Cl.BZ)(O),
+          [F, R] = c.useState(!1),
+          H = (0, f.cv)(),
+          { bHighlighted: z, fnJumpTo: U } = (function (e, t, a) {
             c.useEffect(() => {
               f.xr.Get().SetMouseOverSection(e, t);
             }, [e, t]);
@@ -25502,74 +25676,91 @@
               (0, f.Xb)((t) => e == t && (a(), !0)),
               { bHighlighted: i == e, fnJumpTo: n }
             );
-          })(a.unique_id, O, () => {
+          })(n.unique_id, P, () => {
             var e;
-            k && A(!0),
-              null === (e = L.current) || void 0 === e || e.scrollIntoView(),
-              F(!0);
+            N && k(!0),
+              null === (e = O.current) || void 0 === e || e.scrollIntoView(),
+              R(!0);
           }),
-          [U, q] = (0, d.q3)(() => [n.GetClanSteamID(), n.GetEventType()]),
-          V = (0, hl.q)(U, q),
+          [q, V] = (0, d.q3)(() => [r.GetClanSteamID(), r.GetEventType()]),
+          W = (0, Tl.q)(q, V),
           {
-            sale_font: W,
-            sale_section_font_size: X,
+            sale_font: X,
+            sale_section_font_size: K,
             sale_section_disable_capitalize: $,
-          } = n.GetEventModel().jsondata,
-          K = a.section_type || V[0].data,
-          J =
-            "event_schedule" !== a.section_type &&
-            "broadcast" !== a.section_type,
-          Z = n.GetClanSteamID().GetAccountID() == Sl.bv,
-          ee =
-            "unselected_empty" != (te = a.section_type) && "tab_buttons" != te;
-        var te;
-        const ie = Y(n, a),
-          ne =
-            (null === (t = null == ie ? void 0 : ie.tabs) || void 0 === t
+          } = r.GetEventModel().jsondata,
+          J = n.section_type || W[0].data,
+          Z =
+            "event_schedule" !== n.section_type &&
+            "broadcast" !== n.section_type,
+          ee = r.GetClanSteamID().GetAccountID() == Dl.bv,
+          te =
+            "unselected_empty" != (ie = n.section_type) && "tab_buttons" != ie;
+        var ie;
+        const ne = Y(r, n),
+          oe =
+            (null === (t = null == ne ? void 0 : ne.tabs) || void 0 === t
               ? void 0
               : t.length) > 0,
-          oe = !bl.includes(a.section_type),
-          se = (function (e) {
-            return [
-              "items",
-              "events",
-              "links",
-              "crosspromotesalepage",
-              "creator_list",
-              "creator_list_of_lists",
-              "itemdef",
-              "trailercarousel",
-              "point_shop_smart",
-              "dlc_for_you",
-              "template_media_content",
-              "sale_item_browser",
-            ].includes(e);
-          })(a.section_type),
-          re = (0, I.m)(n.GetClanSteamID()),
-          de = (function (e, t, a, n, s, l, r, d, c, _, p) {
+          se = !El.includes(n.section_type),
+          re = (function (e, t) {
+            return "vo_internal" == e
+              ? "reservation_widget" == t
+              : [
+                  "items",
+                  "events",
+                  "links",
+                  "crosspromotesalepage",
+                  "creator_list",
+                  "creator_list_of_lists",
+                  "itemdef",
+                  "trailercarousel",
+                  "point_shop_smart",
+                  "dlc_for_you",
+                  "template_media_content",
+                  "sale_item_browser",
+                ].includes(e);
+          })(
+            n.section_type,
+            (null === (a = n.internal_section_data) || void 0 === a
+              ? void 0
+              : a.internal_type) || "invalid",
+          ),
+          de = (0, I.m)(r.GetClanSteamID()),
+          ce = (function (e, t, a, n, s, l, r, d, c, _, p) {
             const h = [];
             if (
               (s &&
                 h.push({
                   name: (0, M.we)("#Sale_Section_EditTab_Contents"),
                   key: "contents",
-                  contents: (0, i.jsx)(Ks, { ...n }),
+                  contents: (0, i.jsx)($s, { ...n }),
                 }),
               _)
             ) {
-              const e =
+              const a =
                 (0, u.CU)(n.saleSection, !0) ||
                 "crosspromotesalepage" == n.saleSection.section_type ||
                 "dlc_for_you" == n.saleSection.section_type;
-              h.push({
-                name: (0, M.we)("#Sale_Section_EditTab_Layout"),
-                key: "display",
-                contents: (0, i.jsx)(
-                  le,
-                  { ...n, bSmartSection: e },
-                  "SaleSectionDisplayOptions",
-                ),
-              });
+              "vo_internal" == t.section_type
+                ? h.push({
+                    name: (0, M.we)("#Sale_Section_EditTab_Layout"),
+                    key: "display",
+                    contents: (0, i.jsx)(
+                      hl,
+                      { editModel: e, saleSection: t },
+                      "SaleSectionDisplayOptions",
+                    ),
+                  })
+                : h.push({
+                    name: (0, M.we)("#Sale_Section_EditTab_Layout"),
+                    key: "display",
+                    contents: (0, i.jsx)(
+                      le,
+                      { ...n, bSmartSection: a },
+                      "SaleSectionDisplayOptions",
+                    ),
+                  });
             }
             if (
               (l &&
@@ -25635,26 +25826,26 @@
                 }),
               h
             );
-          })(n, a, g, w, ee, J, ne, Z, oe, se, re),
-          ce = (0, ae.Ue)(L, v);
-        return 0 == de.length
+          })(r, n, S, T, te, Z, oe, ee, se, re, de),
+          _e = (0, ae.Ue)(O, w);
+        return 0 == ce.length
           ? null
           : (0, i.jsxs)("div", {
-              ref: ce,
-              id: (0, s.LY)(a),
+              ref: _e,
+              id: (0, s.LY)(n),
               className: (0, E.A)({
                 [b.SaleSection]: !0,
                 [b.InEditor]: !0,
                 [h.InEditor]: !0,
-                [b.LivePreview]: H,
-                [b.JumpedTo]: P,
-                [b.Expanded]: !k,
+                [b.LivePreview]: z,
+                [b.JumpedTo]: F,
+                [b.Expanded]: !N,
               }),
-              onAnimationEnd: () => F(!1),
+              onAnimationEnd: () => R(!1),
               children: [
-                R &&
-                  O &&
-                  !a.hide_section &&
+                H &&
+                  P &&
+                  !n.hide_section &&
                   (0, i.jsx)("div", {
                     className: h.JumpToButtonCtn,
                     children: (0, i.jsx)(j.Gq, {
@@ -25664,7 +25855,7 @@
                       children: (0, i.jsx)("button", {
                         className: h.JumpToButton,
                         onClick: (e) => {
-                          z(), e.stopPropagation();
+                          U(), e.stopPropagation();
                         },
                         children: (0, M.we)("#Sale_Debug_LivePreview_GoTo"),
                       }),
@@ -25673,22 +25864,22 @@
                 (0, i.jsx)("div", {
                   className: (0, E.A)(
                     h.BackgroundImage,
-                    "coverBlur" == a.background_repeat ? h.Blur : "",
+                    "coverBlur" == n.background_repeat ? h.Blur : "",
                   ),
                   style: {
-                    ...vl(a, n.GetEventModel(), !1),
-                    opacity: T ? 0 : 1,
+                    ...Il(n, r.GetEventModel(), !1),
+                    opacity: D ? 0 : 1,
                     transition: "opacity 500ms",
                   },
                 }),
                 (0, i.jsxs)("div", {
                   className: (0, E.A)(h.SaleSectionHeader, "SaleSectionHeader"),
-                  onClick: () => A(!0),
+                  onClick: () => k(!0),
                   style: {
-                    fontFamily: W,
-                    fontSize: X,
+                    fontFamily: X,
+                    fontSize: K,
                     textTransform: $ ? "initial" : null,
-                    color: a.label_color,
+                    color: n.label_color,
                   },
                   children: [
                     (0, i.jsx)("div", {
@@ -25696,33 +25887,33 @@
                       children: (0, i.jsxs)("div", {
                         className: (0, E.A)(
                           b.HeaderTitle,
-                          a.hide_section && b.Hidden,
+                          n.hide_section && b.Hidden,
                         ),
                         children: [
                           (0, i.jsx)(y.fi, {
-                            saleSection: a,
-                            editLanguage: g,
-                            eventModel: n.GetEventModel(),
-                            index: r,
+                            saleSection: n,
+                            editLanguage: S,
+                            eventModel: r.GetEventModel(),
+                            index: g,
                           }),
-                          (0, i.jsx)(pl, {
-                            saleSection: a,
-                            editModel: n,
-                            visible: !k,
+                          (0, i.jsx)(xl, {
+                            saleSection: n,
+                            editModel: r,
+                            visible: !N,
                           }),
                         ],
                       }),
                     }),
                     (0, i.jsx)(G.Zv, {
-                      editModel: n,
-                      saleSection: a,
-                      bMinimized: k,
-                      SetIsExiting: D,
-                      fnToggleMinimized: A,
+                      editModel: r,
+                      saleSection: n,
+                      bMinimized: N,
+                      SetIsExiting: A,
+                      fnToggleMinimized: k,
                     }),
                   ],
                 }),
-                S &&
+                v &&
                   (0, i.jsxs)("div", {
                     className: b.MultipleSingletonSectionsWarningCtn,
                     children: [
@@ -25739,43 +25930,43 @@
                       }),
                     ],
                   }),
-                "tabs" == a.section_type &&
+                "tabs" == n.section_type &&
                   (0, i.jsx)("div", {
                     className: b.SectionTabEditorCtn,
                     children: (0, i.jsx)(Nn.tE, {
-                      section: a,
-                      editModel: n,
-                      expanded: !k,
+                      section: n,
+                      editModel: r,
+                      expanded: !N,
                     }),
                   }),
-                (0, i.jsx)(xl, {
-                  editModel: n,
-                  section: a,
-                  tabSection: ie,
-                  minimized: k,
+                (0, i.jsx)(Gl, {
+                  editModel: r,
+                  section: n,
+                  tabSection: ne,
+                  minimized: N,
                 }),
-                !k &&
+                !N &&
                   (0, i.jsxs)(i.Fragment, {
                     children: [
                       (0, i.jsx)(x.K, {
                         placeholderHeight: "300px",
                         rootMargin: "0px 0px 100% 0px",
                         className: b.SectionTypePicker,
-                        children: (0, i.jsx)(wl, {
-                          rgSectionTypeInfos: V,
-                          sectionType: K,
+                        children: (0, i.jsx)(kl, {
+                          rgSectionTypeInfos: W,
+                          sectionType: J,
                           fnSetSectionType: (e) => {
-                            o.nG.SetSaleSectionType(a, e),
-                              n.SetDirty(o.IQ.jsondata_sales);
+                            o.nG.SetSaleSectionType(n, e),
+                              r.SetDirty(o.IQ.jsondata_sales);
                           },
                           showWarnings: !0,
                         }),
                       }),
-                      Boolean("unselected_empty" !== K) &&
+                      Boolean("unselected_empty" !== J) &&
                         (0, i.jsx)("div", {
                           className: b.TabContents,
                           children: (0, i.jsx)(C.V, {
-                            tabs: de,
+                            tabs: ce,
                             bDisableRouting: !0,
                           }),
                         }),
@@ -25784,7 +25975,7 @@
               ],
             });
       });
-      function wl(e) {
+      function kl(e) {
         const {
             rgSectionTypeInfos: t,
             sectionType: a,
@@ -25829,13 +26020,13 @@
           ],
         });
       }
-      const xl = (e) => {
+      const Gl = (e) => {
           const { editModel: t, section: a, tabSection: o, minimized: s } = e,
             l = (0, d.q3)(() =>
               (function (e, t) {
                 let a = "";
-                (0, gl.lf)(e) && t && t.tabs && t.tabs.length > 0
-                  ? (0, gl.bq)(e, t.tabs).forEach((e) => {
+                (0, jl.lf)(e) && t && t.tabs && t.tabs.length > 0
+                  ? (0, jl.bq)(e, t.tabs).forEach((e) => {
                       a.length > 0 && (a += ", ");
                       let i = t.tabs.find((t) => t.unique_id == e);
                       a += i
@@ -25923,7 +26114,7 @@
               (0, i.jsx)("div", { className: b.SectionSummaryCtn, children: c })
           );
         },
-        Cl = (0, r.PA)((e) => {
+        Bl = (0, r.PA)((e) => {
           var t, a;
           const { editModel: n } = e,
             [s, l] = (0, c.useState)(!1),
@@ -25991,7 +26182,7 @@
                           };
                           (n.GetEventModel().jsondata.source_content_hub = e),
                             n.GetEventModel().jsondata
-                              .bAutoUpdateVanityURLForContentHub && Tl(e, n);
+                              .bAutoUpdateVanityURLForContentHub && Nl(e, n);
                         }
                         n.SetDirty(o.IQ.jsondata_sales);
                       },
@@ -26001,7 +26192,7 @@
               : (0, i.jsx)(T.t, { size: "medium", position: "center" }),
           });
         });
-      function Tl(e, t) {
+      function Nl(e, t) {
         if (e.type)
           if ("category" !== e.type || e.category)
             if ("tags" !== e.type || e.tagid) {
@@ -26304,9 +26495,9 @@
         Q = a(78327),
         W = a(84140),
         Y = a(63872),
-        X = a(66210),
-        $ = a(10206),
-        K = a(95186),
+        X = a(77392),
+        K = a(10206),
+        $ = a(95186),
         J = a(60860),
         Z = a(65944),
         ee = a(30294),
@@ -26347,9 +26538,9 @@
               " '" +
               a.or_tags.join("' " + (0, U.we)("#Sale_TagFilter_Or") + " '") +
               "'",
-            o = "Must have" === a.type ? K.MustHaveClause : K.MustNotHaveClause;
+            o = "Must have" === a.type ? $.MustHaveClause : $.MustNotHaveClause;
           return (0, n.jsx)("div", {
-            className: (0, H.A)(o, K.ClauseRowCtn),
+            className: (0, H.A)(o, $.ClauseRowCtn),
             children: i,
           });
         },
@@ -26357,7 +26548,7 @@
           const { filter: t } = e;
           return (0, d.aY)(t)
             ? (0, n.jsxs)("div", {
-                className: K.FilterDisplayNoFilter,
+                className: $.FilterDisplayNoFilter,
                 children: [
                   (0, U.we)("#Sale_TagFilter_NoFilter"),
                   (0, n.jsx)(te.o, {
@@ -26366,7 +26557,7 @@
                 ],
               })
             : (0, n.jsx)("div", {
-                className: K.FilterDisplayList,
+                className: $.FilterDisplayList,
                 children: t.clauses.map((e, t) =>
                   (0, n.jsx)(ue, { clause: e }, "clause" + t),
                 ),
@@ -26424,7 +26615,7 @@
                   (0, n.jsxs)("span", { children: ["(", t, ")"] }),
                   " ",
                   (0, n.jsxs)("span", {
-                    className: $.SmallText,
+                    className: K.SmallText,
                     children: ["(", (0, U.we)("#AppType_" + a), ")"],
                   }),
                 ],
@@ -26438,7 +26629,7 @@
           s = g.useRef(0),
           r = g.useRef(void 0);
         return (0, n.jsx)("div", {
-          className: $.SaleImportURL,
+          className: K.SaleImportURL,
           children: (0, n.jsx)(D.pd, {
             type: "text",
             label: (0, U.we)("#Sale_SelectApps"),
@@ -26481,7 +26672,7 @@
                   e.length &&
                     (o.current = (0, f.lX)(
                       (0, n.jsx)(j.tz, {
-                        className: $.SearchResults,
+                        className: K.SearchResults,
                         children: e.map((e) =>
                           (0, n.jsx)(
                             he,
@@ -26533,9 +26724,9 @@
               t.SetDirty(r.IQ.jsondata_sales);
           };
         return (0, n.jsx)("div", {
-          className: K.FilterDisplayCtn,
+          className: $.FilterDisplayCtn,
           children: (0, n.jsxs)("div", {
-            className: K.FilterActionsCtn,
+            className: $.FilterActionsCtn,
             children: [
               (0, n.jsx)(pe, { filter: i }),
               (0, n.jsx)(D.$n, {
@@ -26595,7 +26786,7 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)("div", {
-              className: K.TagItemEditorCtn,
+              className: $.TagItemEditorCtn,
               children: (0, n.jsx)(F.E, {
                 clanSteamID: t.GetClanSteamID(),
                 requireAdmin: !0,
@@ -26606,10 +26797,10 @@
               (0, n.jsx)(n.Fragment, {
                 children: Boolean(!(null == o ? void 0 : o.length) && !a)
                   ? (0, n.jsxs)("div", {
-                      className: K.TagItemEditorCtn,
+                      className: $.TagItemEditorCtn,
                       children: [
                         (0, n.jsx)("div", {
-                          className: K.ItemEditDescription,
+                          className: $.ItemEditDescription,
                           children: (0, U.we)(
                             "#Sale_EditTags_EnableItemEditingDesc",
                           ),
@@ -26641,7 +26832,7 @@
               (0, n.jsx)(F.E, {
                 clanSteamID: t.GetClanSteamID(),
                 children: (0, n.jsx)("div", {
-                  className: K.ButtonRow,
+                  className: $.ButtonRow,
                   children: (0, n.jsxs)(D.$n, {
                     onClick: (e) =>
                       (0, G.pg)((0, n.jsx)(Re, { editModel: t }), (0, z.uX)(e)),
@@ -26684,16 +26875,16 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
-              className: K.TagItemEditorCtn,
+              className: $.TagItemEditorCtn,
               children: [
                 (0, n.jsx)("div", {
-                  className: K.ItemEditDescription,
+                  className: $.ItemEditDescription,
                   children: (0, U.we)(
                     "#Sale_EditTags_EnableItemEditing_CreatorHome_Desc",
                   ),
                 }),
                 (0, n.jsx)("div", {
-                  className: K.ItemEditDescription,
+                  className: $.ItemEditDescription,
                   children: (0, U.oW)(
                     "#Sale_EditTags_EnableItemEditing_CreatorHome_Desc2",
                     (0, n.jsx)("a", { href: r }),
@@ -26802,10 +26993,10 @@
             [t, f, S.length, o],
           );
         return (0, n.jsxs)("div", {
-          className: (0, H.A)(K.ItemListCtn, K.TagItemEditorCtn),
+          className: (0, H.A)($.ItemListCtn, $.TagItemEditorCtn),
           children: [
             (0, n.jsxs)("div", {
-              className: K.ItemListTitle,
+              className: $.ItemListTitle,
               children: [
                 (0, n.jsxs)("div", {
                   className: Y.SaleSectionTitleHeader,
@@ -26828,10 +27019,10 @@
                   ],
                 }),
                 (0, n.jsxs)("div", {
-                  className: K.ItemListControls,
+                  className: $.ItemListControls,
                   children: [
                     (0, n.jsxs)("div", {
-                      className: K.ButtonRow,
+                      className: $.ButtonRow,
                       children: [
                         (0, n.jsxs)(D.$n, {
                           onClick: () => {
@@ -26894,7 +27085,7 @@
                     (0, n.jsx)(F.E, {
                       clanSteamID: m,
                       children: (0, n.jsxs)("div", {
-                        className: K.ButtonRow,
+                        className: $.ButtonRow,
                         children: [
                           (0, n.jsx)(xe, { editModel: t, nFilteredItems: C }),
                           (0, n.jsx)(Ce, { editModel: t }),
@@ -26984,7 +27175,7 @@
             }),
             !b &&
               (0, n.jsxs)("div", {
-                className: K.ItemList,
+                className: $.ItemList,
                 children: [
                   Boolean(C > 0) &&
                     (0, n.jsx)(we, { eChoice: a, fnUpdateChoice: i }),
@@ -27124,7 +27315,7 @@
       })(ye || (ye = {}));
       const Te = (0, m.PA)((e) =>
           (0, n.jsx)(A.K, {
-            className: K.TagItemCtn,
+            className: $.TagItemCtn,
             children: (0, n.jsx)(je, { ...e }),
           }),
         ),
@@ -27171,10 +27362,10 @@
             });
           const T = s ? s.toLocaleLowerCase() : void 0;
           return (0, n.jsxs)("div", {
-            className: K.TagItemContents,
+            className: $.TagItemContents,
             children: [
               (0, n.jsx)(O.uU, {
-                className: K.TagItemImageCtn,
+                className: $.TagItemImageCtn,
                 bDisableContextMenu: !0,
                 href:
                   (null == v ? void 0 : v.GetStorePageURL()) || (0, W.MA)(S),
@@ -27182,18 +27373,18 @@
                   Boolean(v) &&
                   (0, n.jsx)("img", {
                     loading: "lazy",
-                    className: $.SaleCapsuleImg,
+                    className: K.SaleCapsuleImg,
                     src: v.GetAssets().GetHeaderURL(),
                   }),
               }),
               (0, n.jsxs)("div", {
-                className: K.NameAndTagCtn,
+                className: $.NameAndTagCtn,
                 children: [
                   (0, n.jsxs)("div", {
-                    className: K.NameCtn,
+                    className: $.NameCtn,
                     children: [
                       (0, n.jsxs)(O.uU, {
-                        className: K.NameCtn,
+                        className: $.NameCtn,
                         bDisableContextMenu: !0,
                         href: `${Q.TS.PARTNER_BASE_URL}apps/landing/${y}`,
                         children: [
@@ -27202,14 +27393,14 @@
                           y,
                           ") ",
                           (0, n.jsxs)("span", {
-                            className: $.SmallText,
+                            className: K.SmallText,
                             children: ["(", f, ")"],
                           }),
                         ],
                       }),
                       !v &&
                         (0, n.jsxs)("div", {
-                          className: $.SaleCapsuleConflict,
+                          className: K.SaleCapsuleConflict,
                           children: [
                             (0, U.we)("#Sale_NotFoundCapsule"),
                             (0, n.jsx)(te.o, {
@@ -27227,10 +27418,10 @@
                     (0, n.jsxs)(n.Fragment, {
                       children: [
                         (0, n.jsxs)("div", {
-                          className: K.TagSummaryCtn,
+                          className: $.TagSummaryCtn,
                           children: [
                             (0, n.jsx)("span", {
-                              className: K.TagSummary,
+                              className: $.TagSummary,
                               onClick: h,
                               children: (0, U.we)(
                                 "#Sale_EditTags_TagCount",
@@ -27240,7 +27431,7 @@
                               ),
                             }),
                             (0, n.jsx)("span", {
-                              className: K.TagShowToggle,
+                              className: $.TagShowToggle,
                               onClick: () => p(!u),
                               children: (0, U.we)(
                                 u
@@ -27270,7 +27461,7 @@
       function De(e, t, a) {
         var i;
         const n = e.toLocaleLowerCase();
-        if (t && n === t) return K.TagHighlight;
+        if (t && n === t) return $.TagHighlight;
         if (null == a ? void 0 : a.clauses)
           for (const e of a.clauses)
             if (
@@ -27278,7 +27469,7 @@
                 ? void 0
                 : i.find((e) => n === e.toLocaleLowerCase())
             )
-              return "Must have" === e.type ? K.TagMustHave : K.TagMustNotHave;
+              return "Must have" === e.type ? $.TagMustHave : $.TagMustNotHave;
         return null;
       }
       const Ie = (0, m.PA)((e) => {
@@ -27320,7 +27511,7 @@
             ? (i.sort((e, t) => e.localeCompare(t)),
               o.sort((e, t) => e.localeCompare(t)),
               (0, n.jsxs)("div", {
-                className: K.TagListCtn,
+                className: $.TagListCtn,
                 children: [
                   i.map((t) =>
                     (0, n.jsx)(
@@ -27336,21 +27527,21 @@
                     s.map((e) =>
                       (0, n.jsx)(
                         Ee,
-                        { tag: e, className: K.TagMissingMustHave },
+                        { tag: e, className: $.TagMissingMustHave },
                         e,
                       ),
                     ),
                   o.map((e) =>
                     (0, n.jsx)(
                       Ee,
-                      { tag: e, className: K.TagMissingRemoved },
+                      { tag: e, className: $.TagMissingRemoved },
                       e,
                     ),
                   ),
                 ],
               }))
             : (0, n.jsx)("div", {
-                className: K.TagListCtn,
+                className: $.TagListCtn,
                 children: (0, U.we)("#Sale_TagFilter_AddTags"),
               });
         }),
@@ -27358,7 +27549,7 @@
           const t = (0, ae.W9)(e.tag);
           return (0, n.jsx)("div", {
             className: (0, H.A)(
-              K.ItemTag,
+              $.ItemTag,
               e.className,
               t && "TagCollection_" + t,
             ),
@@ -27465,7 +27656,7 @@
             return (0, n.jsx)(
               "div",
               {
-                className: i ? K.SectionAdded : K.SectionUnchanged,
+                className: i ? $.SectionAdded : $.SectionUnchanged,
                 children: t,
               },
               a,
@@ -27482,7 +27673,7 @@
           l.sort((e, t) => e.localeCompare(t));
           const r = l.map((e) => {
               const t = i.has(e),
-                a = (0, H.A)(K.EditTag, K.AppliedTag, t && K.DefaultTag);
+                a = (0, H.A)($.EditTag, $.AppliedTag, t && $.DefaultTag);
               return (0, n.jsx)(
                 "div",
                 { className: a, onClick: () => this.RemoveTag(e), children: e },
@@ -27497,7 +27688,7 @@
           const c = [];
           d.forEach((e) => {
             if (i.has(e)) {
-              const t = (0, H.A)(K.EditTag, K.OtherTag, K.DefaultTag);
+              const t = (0, H.A)($.EditTag, $.OtherTag, $.DefaultTag);
               c.push(
                 (0, n.jsx)(
                   "div",
@@ -27513,7 +27704,7 @@
             .forEach((e) => {
               if (!s.has(e.toLocaleLowerCase())) {
                 const t = i.has(e),
-                  a = (0, H.A)(K.EditTag, K.OtherTag, t && K.DefaultTag);
+                  a = (0, H.A)($.EditTag, $.OtherTag, t && $.DefaultTag);
                 _.push(
                   (0, n.jsx)(
                     "div",
@@ -27531,7 +27722,7 @@
             p = d.map((e) => ({ label: e, value: e }));
           return (0, n.jsx)(k.eV, {
             title: (0, n.jsx)("div", {
-              className: K.EditTagsTitle,
+              className: $.EditTagsTitle,
               children: (0, n.jsx)(W.tb, { capsule: e.capsule }),
             }),
             onCancel: t,
@@ -27541,16 +27732,16 @@
             className: I.NotTooWideModal,
             children: (0, n.jsx)(D.nB, {
               children: (0, n.jsxs)("div", {
-                className: K.EditTagsBody,
+                className: $.EditTagsBody,
                 children: [
                   (0, n.jsxs)("div", {
-                    className: K.ColumnList,
+                    className: $.ColumnList,
                     children: [
                       (0, n.jsxs)("div", {
-                        className: K.TagColumn,
+                        className: $.TagColumn,
                         children: [
                           (0, n.jsxs)("div", {
-                            className: K.TagColumnTitle,
+                            className: $.TagColumnTitle,
                             children: [
                               (0, U.we)("#Sale_EditTags_Applied", a.length),
                               (0, n.jsx)(te.o, {
@@ -27561,20 +27752,20 @@
                             ],
                           }),
                           (0, n.jsx)("div", {
-                            className: K.TagColumnList,
+                            className: $.TagColumnList,
                             children: r,
                           }),
                         ],
                       }),
                       (0, n.jsxs)("div", {
-                        className: K.TagColumn,
+                        className: $.TagColumn,
                         children: [
                           c.length > 0 &&
                             (0, n.jsxs)("div", {
-                              className: K.SmallColumn,
+                              className: $.SmallColumn,
                               children: [
                                 (0, n.jsxs)("div", {
-                                  className: K.TagColumnTitle,
+                                  className: $.TagColumnTitle,
                                   children: [
                                     (0, U.we)("#Sale_EditTags_Store", c.length),
                                     (0, n.jsx)(te.o, {
@@ -27585,16 +27776,16 @@
                                   ],
                                 }),
                                 (0, n.jsx)("div", {
-                                  className: K.TagColumnList,
+                                  className: $.TagColumnList,
                                   children: c,
                                 }),
                               ],
                             }),
                           (0, n.jsxs)("div", {
-                            className: K.FillColumn,
+                            className: $.FillColumn,
                             children: [
                               (0, n.jsxs)("div", {
-                                className: K.TagColumnTitle,
+                                className: $.TagColumnTitle,
                                 children: [
                                   (0, U.we)("#Sale_EditTags_RecentTags"),
                                   (0, n.jsx)(te.o, {
@@ -27605,7 +27796,7 @@
                                 ],
                               }),
                               (0, n.jsx)("div", {
-                                className: K.TagColumnList,
+                                className: $.TagColumnList,
                                 children: _,
                               }),
                             ],
@@ -27613,10 +27804,10 @@
                         ],
                       }),
                       (0, n.jsxs)("div", {
-                        className: K.TagColumn,
+                        className: $.TagColumn,
                         children: [
                           (0, n.jsxs)("div", {
-                            className: K.TagColumnTitle,
+                            className: $.TagColumnTitle,
                             children: [
                               (0, U.we)("#Sale_EditTags_Sections", u.length),
                               (0, n.jsx)(te.o, {
@@ -27627,7 +27818,7 @@
                             ],
                           }),
                           (0, n.jsx)("div", {
-                            className: K.TagColumnList,
+                            className: $.TagColumnList,
                             children: u,
                           }),
                         ],
@@ -27635,10 +27826,10 @@
                     ],
                   }),
                   (0, n.jsxs)("div", {
-                    className: K.AddTagCtn,
+                    className: $.AddTagCtn,
                     children: [
                       (0, n.jsxs)("div", {
-                        className: K.TagColumnTitle,
+                        className: $.TagColumnTitle,
                         children: [
                           (0, U.we)("#Sale_EditTags_NewTagName"),
                           (0, n.jsx)(te.o, {
@@ -27664,7 +27855,7 @@
                     ],
                   }),
                   (0, n.jsx)("div", {
-                    className: K.OKButton,
+                    className: $.OKButton,
                     children: (0, n.jsx)(D.jn, {
                       onClick: this.OnOK,
                       children: (0, U.we)("#Sale_TagFilter_OK"),
@@ -27804,7 +27995,7 @@
           }),
             o.sort((e, t) => e.tag.localeCompare(t.tag));
           const s = o.map((e) => {
-              const t = (0, H.A)(K.EditTag, K.AppliedTag);
+              const t = (0, H.A)($.EditTag, $.AppliedTag);
               return (0, n.jsx)(
                 "div",
                 {
@@ -27824,7 +28015,7 @@
           me.Get(this.props.editModel)
             .GetRecentTags()
             .forEach((e) => {
-              const t = (0, H.A)(K.EditTag, K.OtherTag);
+              const t = (0, H.A)($.EditTag, $.OtherTag);
               r.push(
                 (0, n.jsx)(
                   "div",
@@ -27848,16 +28039,16 @@
             className: I.NotTooWideModal,
             children: (0, n.jsx)(D.nB, {
               children: (0, n.jsxs)("div", {
-                className: K.EditTagsBody,
+                className: $.EditTagsBody,
                 children: [
                   (0, n.jsxs)("div", {
-                    className: K.ColumnList,
+                    className: $.ColumnList,
                     children: [
                       (0, n.jsxs)("div", {
-                        className: K.TagColumn,
+                        className: $.TagColumn,
                         children: [
                           (0, n.jsxs)("div", {
-                            className: K.TagColumnTitle,
+                            className: $.TagColumnTitle,
                             children: [
                               (0, U.we)(
                                 "#Sale_EditTags_BatchItemText",
@@ -27877,7 +28068,7 @@
                               this.OnTextChanged(e.currentTarget.value),
                           }),
                           (0, n.jsxs)("div", {
-                            className: K.PopulateByFilter,
+                            className: $.PopulateByFilter,
                             onClick: this.OnPopulateFromFilter,
                             children: [
                               (0, U.we)("#Sale_EditTags_BatchFilter"),
@@ -27891,10 +28082,10 @@
                         ],
                       }),
                       (0, n.jsxs)("div", {
-                        className: K.TagColumn,
+                        className: $.TagColumn,
                         children: [
                           (0, n.jsxs)("div", {
-                            className: K.TagColumnTitle,
+                            className: $.TagColumnTitle,
                             children: [
                               (0, U.we)("#Sale_EditTags_BatchItems", t.length),
                               (0, n.jsx)(te.o, {
@@ -27905,7 +28096,7 @@
                             ],
                           }),
                           (0, n.jsx)("div", {
-                            className: K.TagColumnList,
+                            className: $.TagColumnList,
                             children: t.map((e) =>
                               (0, n.jsx)(
                                 "div",
@@ -27921,10 +28112,10 @@
                         ],
                       }),
                       (0, n.jsxs)("div", {
-                        className: K.TagColumn,
+                        className: $.TagColumn,
                         children: [
                           (0, n.jsxs)("div", {
-                            className: K.TagColumnTitle,
+                            className: $.TagColumnTitle,
                             children: [
                               (0, U.we)("#Sale_EditTags_Applied", a.size),
                               (0, n.jsx)(te.o, {
@@ -27935,18 +28126,18 @@
                             ],
                           }),
                           (0, n.jsx)("div", {
-                            className: K.TagColumnList,
+                            className: $.TagColumnList,
                             children: s,
                           }),
                         ],
                       }),
                       (0, n.jsx)("div", {
-                        className: K.TagColumn,
+                        className: $.TagColumn,
                         children: (0, n.jsxs)("div", {
-                          className: K.FillColumn,
+                          className: $.FillColumn,
                           children: [
                             (0, n.jsxs)("div", {
-                              className: K.TagColumnTitle,
+                              className: $.TagColumnTitle,
                               children: [
                                 (0, U.we)("#Sale_EditTags_RecentTags"),
                                 (0, n.jsx)(te.o, {
@@ -27957,7 +28148,7 @@
                               ],
                             }),
                             (0, n.jsx)("div", {
-                              className: K.TagColumnList,
+                              className: $.TagColumnList,
                               children: r,
                             }),
                           ],
@@ -27966,10 +28157,10 @@
                     ],
                   }),
                   (0, n.jsxs)("div", {
-                    className: K.AddTagCtn,
+                    className: $.AddTagCtn,
                     children: [
                       (0, n.jsxs)("div", {
-                        className: K.TagColumnTitle,
+                        className: $.TagColumnTitle,
                         children: [
                           (0, U.we)("#Sale_EditTags_NewTagName"),
                           (0, n.jsx)(te.o, {
@@ -27993,7 +28184,7 @@
                         menuPlacement: "top",
                       }),
                       (0, n.jsxs)("div", {
-                        className: K.TagColumnTitle,
+                        className: $.TagColumnTitle,
                         children: [
                           (0, U.we)("#Sale_EditTags_RemoveTagName"),
                           (0, n.jsx)(te.o, {
@@ -28021,7 +28212,7 @@
                     ],
                   }),
                   (0, n.jsx)("div", {
-                    className: K.OKButton,
+                    className: $.OKButton,
                     children: (0, n.jsx)(D.jn, {
                       onClick: this.OnOK,
                       children: (0, U.we)("#Sale_TagFilter_OK"),
@@ -28348,15 +28539,15 @@
               (0, n.jsxs)(
                 "div",
                 {
-                  className: K.ClauseTagList,
+                  className: $.ClauseTagList,
                   children: [
                     a > 0 &&
                       (0, n.jsx)("div", {
-                        className: K.OrLabel,
+                        className: $.OrLabel,
                         children: (0, U.we)("#Sale_TagFilter_Or"),
                       }),
                     (0, n.jsx)("div", {
-                      className: K.TagDropDown,
+                      className: $.TagDropDown,
                       children: (0, n.jsx)(ke, {
                         taggedItems: i,
                         value: e,
@@ -28376,24 +28567,24 @@
                 "Clause" + t + "_" + a,
               ),
             ),
-            l = "Must have" === e.type ? K.MustHaveClause : K.MustNotHaveClause;
+            l = "Must have" === e.type ? $.MustHaveClause : $.MustNotHaveClause;
           return (0, n.jsxs)(
             "div",
             {
-              className: (0, H.A)(K.ClauseRowCtn, l, 0 === t && K.FirstClause),
+              className: (0, H.A)($.ClauseRowCtn, l, 0 === t && $.FirstClause),
               children: [
                 t > 0 &&
                   (0, n.jsxs)(n.Fragment, {
                     children: [
                       (0, n.jsx)(_e, { onClick: () => this.OnRemoveClause(t) }),
                       (0, n.jsx)("div", {
-                        className: K.AndLabel,
+                        className: $.AndLabel,
                         children: (0, U.we)("#Sale_TagFilter_And"),
                       }),
                     ],
                   }),
                 (0, n.jsx)("div", {
-                  className: K.ClauseTypeDropDown,
+                  className: $.ClauseTypeDropDown,
                   children: (0, n.jsx)(D.m, {
                     rgOptions: a,
                     selectedOption: e.type,
@@ -28403,7 +28594,7 @@
                 s,
                 e.or_tags.length < 3 &&
                   (0, n.jsx)("div", {
-                    className: K.AppendClauseBtnCtn,
+                    className: $.AppendClauseBtnCtn,
                     children: (0, n.jsxs)(D.$n, {
                       onClick: () => this.OnAddClauseTagSlot(t),
                       children: [
@@ -28424,10 +28615,10 @@
           const { currentFilter: e } = this.state,
             t = e.clauses.map((e, t) => this.RenderFilterClause(e, t));
           return (0, n.jsxs)("div", {
-            className: K.FilterControlsCtn,
+            className: $.FilterControlsCtn,
             children: [
               (0, n.jsxs)("div", {
-                className: K.SectionTitle,
+                className: $.SectionTitle,
                 children: [
                   (0, U.we)("#Sale_TagFilter_Filter"),
                   (0, n.jsx)(te.o, {
@@ -28436,7 +28627,7 @@
                 ],
               }),
               (0, n.jsxs)("div", {
-                className: K.FilterControlBox,
+                className: $.FilterControlBox,
                 children: [
                   t,
                   e.clauses.length < 5 &&
@@ -28471,28 +28662,28 @@
               "div",
               {
                 className: (0, H.A)(
-                  K.TagBreakdownEntry,
-                  a === t.tag && K.Selected,
+                  $.TagBreakdownEntry,
+                  a === t.tag && $.Selected,
                 ),
                 onClick: () => this.OnHighlightTag(t.tag),
                 children: [
                   (0, n.jsxs)("div", {
-                    className: K.TextStats,
+                    className: $.TextStats,
                     children: [
                       (0, n.jsx)("div", {
-                        className: K.TagName,
+                        className: $.TagName,
                         children: t.tag,
                       }),
                       (0, n.jsx)("div", {
-                        className: K.TagUses,
+                        className: $.TagUses,
                         children: t.count,
                       }),
                     ],
                   }),
                   (0, n.jsx)("div", {
-                    className: K.PercentageBar,
+                    className: $.PercentageBar,
                     children: (0, n.jsx)("div", {
-                      className: K.PercentageBarFill,
+                      className: $.PercentageBarFill,
                       style: { width: (100 * t.count) / e + "%" },
                     }),
                   }),
@@ -28503,9 +28694,9 @@
           );
           return (0, n.jsx)(n.Fragment, {
             children: (0, n.jsx)("div", {
-              className: K.TagBreakdownCtn,
+              className: $.TagBreakdownCtn,
               children: (0, n.jsx)("div", {
-                className: K.TagBreakdownList,
+                className: $.TagBreakdownList,
                 children: o,
               }),
             }),
@@ -28656,7 +28847,7 @@
                 t.capsule.type + t.capsule.id,
               ),
             ),
-            f = l ? K.ShowTagBreakdown : K.HideTagBreakdown;
+            f = l ? $.ShowTagBreakdown : $.HideTagBreakdown;
           return (0, n.jsx)(k.eV, {
             title: a,
             closeModal: t,
@@ -28665,14 +28856,14 @@
             className: I.NotTooWideModal,
             children: (0, n.jsx)(D.nB, {
               children: (0, n.jsxs)("div", {
-                className: (0, H.A)(K.EditFitlerCtn, f),
+                className: (0, H.A)($.EditFitlerCtn, f),
                 children: [
                   this.RenderFilterControls(),
                   (0, n.jsxs)("div", {
-                    className: K.TopTabs,
+                    className: $.TopTabs,
                     children: [
                       (0, n.jsx)("div", {
-                        className: K.TagSelector,
+                        className: $.TagSelector,
                         children: (0, n.jsx)(D.m, {
                           rgOptions: v,
                           selectedOption: i,
@@ -28681,12 +28872,12 @@
                         }),
                       }),
                       (0, n.jsx)("div", {
-                        className: K.BreakdownBtnCtn,
+                        className: $.BreakdownBtnCtn,
                         children: (0, n.jsxs)(D.$n, {
                           className: (0, H.A)(
-                            K.ShowTagBreakdown,
-                            K.SectionTab,
-                            l && K.TabActive,
+                            $.ShowTagBreakdown,
+                            $.SectionTab,
+                            l && $.TabActive,
                           ),
                           onClick: this.OnToggleTagBreakdown,
                           children: [
@@ -28706,16 +28897,16 @@
                     ],
                   }),
                   (0, n.jsxs)("div", {
-                    className: K.TopSection,
+                    className: $.TopSection,
                     children: [
                       (0, n.jsxs)("div", {
-                        className: K.MatchingItemsCtn,
+                        className: $.MatchingItemsCtn,
                         children: [
                           !this.state.bInitialFilteredItemsSourceLoadComplete &&
                             (0, n.jsx)(L.t, {}),
                           this.state.bInitialFilteredItemsSourceLoadComplete &&
                             (0, n.jsx)("div", {
-                              className: K.ItemList,
+                              className: $.ItemList,
                               children: b,
                             }),
                         ],
@@ -28731,7 +28922,7 @@
                     tooltip: (0, U.we)("#Sale_TaggedItemsFilter_ttip"),
                   }),
                   (0, n.jsx)("div", {
-                    className: K.OKButton,
+                    className: $.OKButton,
                     children: (0, n.jsx)(D.jn, {
                       onClick: this.OnOK,
                       children: (0, U.we)("#Sale_TagFilter_OK"),
@@ -28924,7 +29115,7 @@
                     (0, n.jsx)(L.t, { size: "medium", position: "center" }),
                   !this.state.bImporting &&
                     (0, n.jsx)("textarea", {
-                      className: (0, H.A)(Y.EditRawTextArea, K.EditRawTextArea),
+                      className: (0, H.A)(Y.EditRawTextArea, $.EditRawTextArea),
                       value: this.state.editValue,
                       cols: 80,
                       rows: 30,
@@ -29237,9 +29428,9 @@
             children: [
               (0, n.jsx)(D.nB, {
                 children: (0, n.jsx)("div", {
-                  className: K.EditAutoTagsBody,
+                  className: $.EditAutoTagsBody,
                   children: (0, n.jsxs)("div", {
-                    className: K.AutoTagList,
+                    className: $.AutoTagList,
                     children: [
                       h,
                       (0, n.jsx)(D.$n, {
@@ -29280,10 +29471,10 @@
               (e.autoTag.filter = t), e.fnOnEdited(), o(t);
             };
           return (0, n.jsxs)("div", {
-            className: K.AutoTag,
+            className: $.AutoTag,
             children: [
               (0, n.jsxs)("div", {
-                className: K.AutoTagRow,
+                className: $.AutoTagRow,
                 children: [
                   (0, n.jsx)(D.pd, {
                     type: "text",
@@ -29300,7 +29491,7 @@
                 ],
               }),
               (0, n.jsxs)("div", {
-                className: K.AutoTagRow,
+                className: $.AutoTagRow,
                 children: [
                   (0, n.jsx)(pe, { filter: i }),
                   (0, n.jsx)(D.$n, {
@@ -29397,27 +29588,27 @@
                           children: Boolean(s)
                             ? (0, n.jsxs)("div", {
                                 className:
-                                  K.ForceUpdateFeaturedAppTagsDialogBody,
+                                  $.ForceUpdateFeaturedAppTagsDialogBody,
                                 children: [
                                   (0, n.jsx)("div", {
-                                    className: K.AddSummary,
+                                    className: $.AddSummary,
                                     children:
                                       s.rgAppIDsAdded.length + " app(s) added:",
                                   }),
                                   (0, n.jsx)("div", {
-                                    className: K.AppTable,
+                                    className: $.AppTable,
                                     children: s.rgAppIDsAdded.map((e) =>
                                       (0, n.jsx)(Ue, { appid: e }, "add" + e),
                                     ),
                                   }),
                                   (0, n.jsx)("div", {
-                                    className: K.RemoveSummary,
+                                    className: $.RemoveSummary,
                                     children:
                                       s.rgAppIDsRemoved.length +
                                       " app(s) removed:",
                                   }),
                                   (0, n.jsx)("div", {
-                                    className: K.AppTable,
+                                    className: $.AppTable,
                                     children: s.rgAppIDsRemoved.map((e) =>
                                       (0, n.jsx)(
                                         Ue,
@@ -29447,11 +29638,11 @@
         const { appid: t } = e,
           [a] = (0, C.t7)(t, {});
         return (0, n.jsxs)("div", {
-          className: K.AppTableRow,
+          className: $.AppTableRow,
           children: [
-            (0, n.jsx)("div", { className: K.AppID, children: t }),
+            (0, n.jsx)("div", { className: $.AppID, children: t }),
             (0, n.jsx)("div", {
-              className: K.AppName,
+              className: $.AppName,
               children: null == a ? void 0 : a.GetName(),
             }),
           ],
@@ -34924,7 +35115,7 @@
           {
             fnOnInput: Y,
             fnOnInputBlur: X,
-            fnOnChange: $,
+            fnOnChange: K,
           } = y(
             w,
             (e) => {
@@ -34941,7 +35132,7 @@
             R,
           ),
           {
-            fnOnInput: K,
+            fnOnInput: $,
             fnOnInputBlur: J,
             fnOnChange: Z,
           } = y(
@@ -34992,7 +35183,7 @@
                   className: (0, _.A)(c().InputBorder, h().TimeBlock),
                   children: [
                     (0, i.jsx)(s(), {
-                      onChange: $,
+                      onChange: K,
                       timeFormat: !1,
                       value: null != F ? F : N,
                       isValidDate: (e) =>
@@ -35051,7 +35242,7 @@
                           "DialogTextInputBase",
                         ),
                         disabled: g,
-                        onChange: (e) => K(e.currentTarget.value),
+                        onChange: (e) => $(e.currentTarget.value),
                         onBlur: (e) => J(e.currentTarget.value),
                       },
                     }),
@@ -35378,7 +35569,7 @@
       "use strict";
       a.d(t, {
         vR: () => W,
-        dm: () => $,
+        dm: () => K,
         vB: () => X,
         L: () => Y,
         ZX: () => ae,
@@ -35540,14 +35731,14 @@
                 : [2, 3, 4, 3]
               : [G.OQ(e.capsules_per_row || 1, 1, t ? 3 : 5) || 1];
       }
-      function $(e, t, a) {
+      function K(e, t, a) {
         const i = X(e, a),
           n = (0, s.W2)(e) ? (0, s.qQ)(e) : Y(e, t);
         let o = 0;
         for (let e = 0; e < n; e++) o += i[e % i.length];
         return o;
       }
-      function K(e, t) {
+      function $(e, t) {
         return e.capsule_style_per_row_array
           ? e.capsule_style_per_row_array
           : (function (e, t) {
@@ -35998,7 +36189,7 @@
         );
         if (0 === l.length) return { content: null, bAdditionalContent: !1 };
         const r = X(a, n),
-          d = K(a, n),
+          d = $(a, n),
           c = (0, s.qQ)(a),
           _ = { section: a, saleEvent: t, language: i, activeTab: o };
         return te(a.unique_id, e, l, r, d, c, (e) => Y(a, e), _, n);
@@ -36665,13 +36856,13 @@
         Y = a(75487);
       function X(e, t, a) {
         return {
-          queryKey: K(t),
+          queryKey: $(t),
           queryFn: async () => {
             if (!t)
               return {
                 preferences: { primary_language: (0, W.sf)(q.TS.LANGUAGE) },
                 content_descriptor_preferences: {
-                  content_descriptors_to_exclude: $.map((e) => ({
+                  content_descriptors_to_exclude: K.map((e) => ({
                     content_descriptorid: e,
                   })),
                 },
@@ -36686,8 +36877,8 @@
           staleTime: 36e5,
         };
       }
-      const $ = [4, 3];
-      function K(e) {
+      const K = [4, 3];
+      function $(e) {
         return ["StorePreferencesQueryKey", null != e ? e : 0];
       }
       function J(e) {
@@ -38240,18 +38431,18 @@
                   ],
                 }),
                 x &&
-                  (0, i.jsx)($, {
+                  (0, i.jsx)(K, {
                     id: t,
                     strDoubleCapsuleMessage: _,
                     index: s,
                   }),
               ],
             }),
-            (0, i.jsx)(K, { ...e }),
+            (0, i.jsx)($, { ...e }),
           ],
         });
       }
-      function $(e) {
+      function K(e) {
         const { id: t, strDoubleCapsuleMessage: a, index: n } = e,
           { data: o } = (0, p.by)(t),
           { data: s } = (0, p.xz)(t);
@@ -38271,7 +38462,7 @@
           ],
         });
       }
-      function K(e) {
+      function $(e) {
         const {
             id: t,
             bHidePriceIfOwned: a,
@@ -38667,7 +38858,7 @@
             for (let e = H.current.length; e < t.length; e++)
               H.current.push(n.createRef()), z.current.push(n.createRef());
           }, [t.length]);
-        const $ = (e) => {
+        const K = (e) => {
             O(void 0);
             const t = null == P ? void 0 : P.trim(),
               a = Number.parseInt(t);
@@ -38675,7 +38866,7 @@
             const i = a - 1;
             e != i && Y(e, i);
           },
-          [K, J] = n.useState(void 0);
+          [$, J] = n.useState(void 0);
         return (0, i.jsx)("div", {
           className: c().WhitelistCtn,
           ref: R,
@@ -38721,7 +38912,7 @@
                       y,
                       w && c().DragActive,
                       n == I && c().BeingDragged,
-                      K == n && c().Dropped,
+                      $ == n && c().Dropped,
                     ),
                     onAnimationEnd: () => J(void 0),
                     children: [
@@ -38745,12 +38936,12 @@
                         onChange: (e) => F(e.target.value),
                         onKeyDown: (e) =>
                           ((e, t) => {
-                            "Enter" === e.key && ($(t), e.currentTarget.blur());
+                            "Enter" === e.key && (K(t), e.currentTarget.blur());
                           })(e, n),
                         onFocus: (e) => {
                           O(n), F(e.target.value);
                         },
-                        onBlur: () => $(n),
+                        onBlur: () => K(n),
                       }),
                       a(e, n),
                       Boolean(n != I) &&

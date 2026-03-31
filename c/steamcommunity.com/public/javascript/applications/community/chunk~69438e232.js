@@ -115,13 +115,6 @@
     },
     chunkid: (module) => {
       module.exports = {
-        GreenButton: "_23fSnYfnMQqkgm3ROkJhrO",
-        GreyButton: "_15dbpkIdbzeDJlZYQEhn1d",
-        BlueButton: "_14GZWzJgooP0mbfTvEQnjA",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         CapsuleMicroTrailer: "_2aMRbzoT83AkFGYSmCvnRe",
         GrowOnHoverSmall: "YoLbM_PjSF7Lk-_QYDToT",
         GrowOnHoverMedium: "_2aYdrHuuHZHrhgAJh-eZX3",
@@ -11053,7 +11046,8 @@
       __webpack_require__._(module_exports, {
         _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
+      var _,
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -11065,19 +11059,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, ..._ } = _;
-        return (0, _.jsx)(_._, {
-          className: _.GreenButton,
-          type: "button",
-          ..._,
-          children: (0, _.jsx)("span", {
-            children: _,
-          }),
-        });
-      }
-      var _,
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -13785,7 +13766,7 @@
             ? null
             : (0, _.jsxs)(_.Fragment, {
                 children: [
-                  (0, _.jsxs)(_, {
+                  (0, _.jsxs)(_._, {
                     onClick: async () => {
                       try {
                         _(!0), await _(), (0, _._)(), _(!1), _();
@@ -14177,7 +14158,7 @@
           })(_, _.client_instanceid);
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsxs)(_, {
+            (0, _.jsxs)(_._, {
               onClick: () => {
                 _.mutateAsync(), _(!0);
               },

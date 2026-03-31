@@ -2254,8 +2254,8 @@
           ? _().LoadThumbnails(_, _, _, _, _, null == _ || _)
           : null;
       }
-      function _(_, _, _) {
-        return null != _() ? _().TakeScreenshot(_, _, _.valMS) : null;
+      function _(_, _, _, _) {
+        return null != _() ? _().TakeScreenshot(_, _, _.valMS, _) : null;
       }
       function _() {
         return null != _()
@@ -5327,10 +5327,9 @@
               (0, _.jsx)(_._, {
                 onSelected: () => {
                   const { strTimelineID: _, nTimelineOffsetMS: _ } =
-                      _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS),
-                    _ = _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_),
-                    _ = (0, _._)(_.valMS + _);
-                  _(_.GetGameID(), _, _);
+                    _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
+                  _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_);
+                  _(_.GetGameID(), _, _, _.GetClipID());
                 },
                 className: _.TimelineContextMenuItem,
                 children: (0, _.jsxs)("div", {
@@ -5489,10 +5488,9 @@
               onSelected: () => {
                 const _ = _.GetGlobalMSPlaytime(),
                   { strTimelineID: _, nTimelineOffsetMS: _ } =
-                    _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS),
-                  _ = _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_),
-                  _ = (0, _._)(_.valMS + _);
-                _(_.GetGameID(), _, _);
+                    _.ConvertGlobalOffsetToTimelineRelativeOffset(_.valMS);
+                _.GetLoader().GetTimelineStartBeforeGlobalZeroMS(_);
+                _(_.GetGameID(), _, _, _.GetClipID());
               },
               className: _.TimelineContextMenuItem,
               children: (0, _.jsxs)("div", {
@@ -14685,6 +14683,11 @@
                     _: 3,
                     _: _._.readUint64String,
                     _: _._.writeUint64String,
+                  },
+                  source_clip_id: {
+                    _: 4,
+                    _: _._.readString,
+                    _: _._.writeString,
                   },
                 },
               }),

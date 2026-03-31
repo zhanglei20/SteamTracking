@@ -45819,8 +45819,8 @@
                               (0, _.jsx)("div", {
                                 children: (0, _._)(
                                   "#AssetRequest_General_Size",
-                                  374,
-                                  448,
+                                  748,
+                                  896,
                                 ),
                               }),
                               (0, _.jsx)("br", {}),
@@ -54770,7 +54770,7 @@
                             (0, _.jsx)("span", {
                               children: "306px x 260px",
                             }),
-                            " (.jpg, .png)",
+                            " (.webp)",
                           ],
                         }),
                         (0, _.jsx)(_, {
@@ -54788,9 +54788,9 @@
                         (0, _.jsxs)("div", {
                           children: [
                             (0, _.jsx)("span", {
-                              children: "374px by 448px",
+                              children: "748px by 896px",
                             }),
-                            " (.jpg,.png)",
+                            " (.webp)",
                           ],
                         }),
                         (0, _.jsx)(_, {
@@ -85873,9 +85873,7 @@
                 {
                   bAwaitingMoreRowsLoading: !0,
                 },
-                async () => {
-                  this.LoadCapsules();
-                },
+                () => this.LoadCapsules(),
               ));
         }
         SetViewMode(_) {
@@ -85985,20 +85983,21 @@
                 eControllerCategory: _,
               },
               _ = Boolean(_) ? "search" : _;
-            let _;
-            const _ = _.cap_item_count > 12 ? _.cap_item_count : 12;
-            (_ = await _.Get().GetItemsSoFar(
-              this.state.results,
-              _,
-              _,
-              _,
-              this.FilterItems,
-              _,
-              _,
-              _,
-              void 0,
-              _,
-            )),
+            let _,
+              _ = Math.max(_.cap_item_count ?? 0, 12);
+            _ > 0 && (_.show_more_count ?? 0) > 0 && (_ = _.show_more_count),
+              (_ = await _.Get().GetItemsSoFar(
+                this.state.results,
+                _,
+                _,
+                _,
+                this.FilterItems,
+                _,
+                _,
+                _,
+                void 0,
+                _,
+              )),
               (_ = _.rgItems?.map((_) => ({
                 _: _._,
                 type: 0 === _.type ? "game" : (0, _._)(_.type),

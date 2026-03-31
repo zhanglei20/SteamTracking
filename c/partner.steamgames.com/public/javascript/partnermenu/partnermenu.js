@@ -33358,6 +33358,7 @@ Error generating stack: ` +
     _,
     _,
     _,
+    _,
     _ = _(() => {
       "use strict";
       _ = _(_(), 1);
@@ -33750,8 +33751,80 @@ Error generating stack: ` +
           static ImplementsStaticInterface() {}
           constructor(_ = null) {
             super(),
+              _.prototype.appid || _(_._()),
+              _.Message.initialize(this, _, 0, -1, void 0, null);
+          }
+          static sm_m;
+          static sm_mbf;
+          static M() {
+            return (
+              _.sm_m ||
+                (_.sm_m = {
+                  proto: _,
+                  fields: {
+                    appid: {
+                      _: 1,
+                      _: _.readUint32,
+                      _: _.writeUint32,
+                    },
+                    label: {
+                      _: 2,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    show_above_purchase: {
+                      _: 3,
+                      _: _.readBool,
+                      _: _.writeBool,
+                    },
+                  },
+                }),
+              _.sm_m
+            );
+          }
+          static MBF() {
+            return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+          }
+          toObject(_ = !1) {
+            return _.toObject(_, this);
+          }
+          static toObject(_, _) {
+            return _(_._(), _, _);
+          }
+          static fromObject(_) {
+            return _(_._(), _);
+          }
+          static deserializeBinary(_) {
+            let _ = new _.default.BinaryReader(_),
+              _ = new _();
+            return _.deserializeBinaryFromReader(_, _);
+          }
+          static deserializeBinaryFromReader(_, _) {
+            return _(_.MBF(), _, _);
+          }
+          serializeBinary() {
+            var _ = new _.default.BinaryWriter();
+            return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+          }
+          static serializeBinaryToWriter(_, _) {
+            _(_._(), _, _);
+          }
+          serializeBase64String() {
+            var _ = new _.default.BinaryWriter();
+            return (
+              _.serializeBinaryToWriter(this, _), _.getResultBase64String()
+            );
+          }
+          getClassName() {
+            return "StoreItem_Demo";
+          }
+        }),
+        (_ = class _ extends _.Message {
+          static ImplementsStaticInterface() {}
+          constructor(_ = null) {
+            super(),
               _.prototype.parent_appid || _(_._()),
-              _.Message.initialize(this, _, 0, -1, [2, 3], null);
+              _.Message.initialize(this, _, 0, -1, [2, 3, 4, 5], null);
           }
           static sm_m;
           static sm_mbf;
@@ -33781,6 +33854,18 @@ Error generating stack: ` +
                       _: _.readUint32,
                       pbr: _.readPackedUint32,
                       _: _.writeRepeatedUint32,
+                    },
+                    demos: {
+                      _: 4,
+                      _: _,
+                      _: !0,
+                      _: !0,
+                    },
+                    standalone_demos: {
+                      _: 5,
+                      _: _,
+                      _: !0,
+                      _: !0,
                     },
                   },
                 }),
@@ -34370,13 +34455,28 @@ Error generating stack: ` +
                       _: _.readString,
                       _: _.writeString,
                     },
+                    main_capsule_2x: {
+                      _: 18,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
                     small_capsule: {
                       _: 3,
                       _: _.readString,
                       _: _.writeString,
                     },
+                    small_capsule_2x: {
+                      _: 19,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
                     header: {
                       _: 4,
+                      _: _.readString,
+                      _: _.writeString,
+                    },
+                    header_2x: {
+                      _: 20,
                       _: _.readString,
                       _: _.writeString,
                     },
@@ -55248,52 +55348,67 @@ Error generating stack: ` +
       _ = (0, _.useCallback)(() => {
         if (!_.current || !_.current) return;
         let _ = _.current.getBoundingClientRect(),
+          _ = _.current.getBoundingClientRect(),
           _ = _,
           _ = _.current.matches(":dir(rtl)");
         _ && (_ === "left" ? (_ = "right") : _ === "right" && (_ = "left")),
           _.current.style.setProperty("--parentWidth", `${_.width}px`),
-          _.current.style.setProperty("--parentHeight", `${_.height}px`),
-          _ ||
-            (_ === "left"
+          _.current.style.setProperty("--parentHeight", `${_.height}px`);
+        let _ = 0;
+        if (!_) {
+          if (_.width) {
+            if (
+              (_ === "left" && (_ = (_ ? _.right : _.left) - _.width),
+              _ === "right")
+            ) {
+              let _ = _ ? _.left : _.right;
+              _ = document.documentElement.clientWidth - (_ + _.width);
+            }
+            _ === void 0 &&
+              (_
+                ? (_ = _.right - _.width)
+                : (_ =
+                    document.documentElement.clientWidth - (_.left + _.width))),
+              (_ = Math.min(_, 0));
+          }
+          _ === "left"
+            ? _
+              ? ((_.current.style.left = "unset"),
+                (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+              : ((_.current.style.left = "unset"),
+                (_.current.style.right = `${document.documentElement.clientWidth - _.left + _}px`))
+            : _ === "right"
               ? _
-                ? ((_.current.style.left = "unset"),
-                  (_.current.style.right = `${document.documentElement.clientWidth - _.right}px`))
-                : ((_.current.style.left = "unset"),
-                  (_.current.style.right = `${document.documentElement.clientWidth - _.left}px`))
-              : _ === "right"
-                ? _
-                  ? ((_.current.style.left = `${_.left}px`),
-                    (_.current.style.right = "unset"))
-                  : ((_.current.style.left = `${_.right}px`),
-                    (_.current.style.right = "unset"))
-                : _ === void 0 &&
-                  (_
-                    ? ((_.current.style.left = "unset"),
-                      (_.current.style.right = `${document.documentElement.clientWidth - _.right}px`))
-                    : ((_.current.style.left = `${_.left}px`),
-                      (_.current.style.right = "unset")))),
-          _ ||
-            (_ === "down"
-              ? ((_.current.style.top = `${_.bottom}px`),
+                ? ((_.current.style.left = `${_.left + _}px`),
+                  (_.current.style.right = "unset"))
+                : ((_.current.style.left = `${_.right + _}px`),
+                  (_.current.style.right = "unset"))
+              : _ === void 0 &&
+                (_
+                  ? ((_.current.style.left = "unset"),
+                    (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                  : ((_.current.style.left = `${_.left + _}px`),
+                    (_.current.style.right = "unset")));
+        }
+        _ ||
+          (_ === "down"
+            ? ((_.current.style.top = `${_.bottom}px`),
+              (_.current.style.bottom = "unset"),
+              _.current.style.setProperty(
+                "--availableHeight",
+                `${document.documentElement.clientHeight - _.bottom}px`,
+              ))
+            : _ === "up"
+              ? ((_.current.style.top = "unset"),
+                (_.current.style.bottom = `${document.documentElement.clientHeight - _.top}px`),
+                _.current.style.setProperty("--availableHeight", `${_.top}px`))
+              : _ === void 0 &&
+                ((_.current.style.top = `${_.top}px`),
                 (_.current.style.bottom = "unset"),
                 _.current.style.setProperty(
                   "--availableHeight",
-                  `${document.documentElement.clientHeight - _.bottom}px`,
-                ))
-              : _ === "up"
-                ? ((_.current.style.top = "unset"),
-                  (_.current.style.bottom = `${document.documentElement.clientHeight - _.top}px`),
-                  _.current.style.setProperty(
-                    "--availableHeight",
-                    `${_.top}px`,
-                  ))
-                : _ === void 0 &&
-                  ((_.current.style.top = `${_.top}px`),
-                  (_.current.style.bottom = "unset"),
-                  _.current.style.setProperty(
-                    "--availableHeight",
-                    `${document.documentElement.clientHeight - _.top}px`,
-                  )));
+                  `${document.documentElement.clientHeight - _.top}px`,
+                )));
       }, [_, _, _, _]),
       _ = (0, _.useMemo)(() => {
         if (_.current) return _(_.current);
@@ -55302,6 +55417,7 @@ Error generating stack: ` +
       () =>
         _
           ? (_.current?.showPopover(),
+            _(),
             _?.addEventListener("scroll", _),
             window.addEventListener("scroll", _),
             () => {
@@ -58146,28 +58262,20 @@ Error generating stack: ` +
   function _(_) {
     let { pageRoutes: _, index: _ = 0, loaderData: _ } = _,
       [_, ..._] = _,
-      [_, ..._] = _,
-      _;
-    return (
-      _.length === 0 && (_ = history.state?._),
-      (0, _.jsx)(
-        _,
-        {
-          loaderData: _,
-          _: _,
-          children: (0, _.jsx)(_.Component, {
-            children:
-              _.length > 0 &&
-              (0, _.jsx)(_, {
-                pageRoutes: _,
-                loaderData: _,
-                index: _ + 1,
-              }),
+      [_, ..._] = _;
+    return (0, _.jsx)(_, {
+      loaderData: _,
+      _: _,
+      children: (0, _.jsx)(_.Component, {
+        children:
+          _.length > 0 &&
+          (0, _.jsx)(_, {
+            pageRoutes: _,
+            loaderData: _,
+            index: _ + 1,
           }),
-        },
-        _,
-      )
-    );
+      }),
+    });
   }
   var _ = _(_(), 1),
     _ = _(_(), 1);

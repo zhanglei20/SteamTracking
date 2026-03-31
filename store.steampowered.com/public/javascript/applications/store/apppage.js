@@ -452,6 +452,7 @@
         Points: "_3k_jxlKBddOAxgSknpHNTq",
         IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
         Footer: "_164mmLkSJ91cXzABhIrlZq",
+        PointsArea: "_3CsHeO3G5c1fQY9Xx4lgUI",
         Column: "_2ihFd-KfZvzA81NOi3SEEJ",
         Left: "_1v0jLHAK-8P4IONBwuF4kv",
         BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
@@ -474,6 +475,7 @@
         SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
         SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
         InitialLoading: "_1ZKr7z5ZdQghkZZCnjx455",
+        Loading: "fGpQ7K-RTxeDJfNELWaCD",
         ErrorContainer: "_1SebPOeiRaEqfXHg_dsaYQ",
         ErrorText: "ok8moMj5E4XI25uTRhAHN",
         PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
@@ -2272,26 +2274,26 @@
           : null;
       }
       var z = r(6813),
-        V = r(92406),
-        W = r(52038),
+        W = r(92406),
+        V = r(52038),
         Q = r(27510),
         K = r.n(Q),
         Z = r(4869);
-      new V.cE();
+      new W.cE();
       var q;
       function X(e) {
         return (0, n.jsxs)("div", {
-          className: (0, W.A)(K().PurchaseNoticeContainer),
+          className: (0, V.A)(K().PurchaseNoticeContainer),
           children: [
             (0, n.jsx)("div", {
-              className: (0, W.A)(K().PurchaseNoticeImageContainer),
+              className: (0, V.A)(K().PurchaseNoticeImageContainer),
               children: (0, n.jsx)(Z.xIk, {
                 type: "xbox",
-                className: (0, W.A)(K().PurchaseNoticeImage, K().Tilt),
+                className: (0, V.A)(K().PurchaseNoticeImage, K().Tilt),
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, W.A)(K().PurchaseNoticeLabel),
+              className: (0, V.A)(K().PurchaseNoticeLabel),
               children: (0, _.we)("#PurchaseNotice_ControllerRequired"),
             }),
           ],
@@ -2299,16 +2301,16 @@
       }
       function J(e) {
         return (0, n.jsxs)("div", {
-          className: (0, W.A)(K().PurchaseNoticeContainer),
+          className: (0, V.A)(K().PurchaseNoticeContainer),
           children: [
             (0, n.jsx)("div", {
-              className: (0, W.A)(K().PurchaseNoticeImageContainer),
+              className: (0, V.A)(K().PurchaseNoticeImageContainer),
               children: (0, n.jsx)(Z.oqe, {
-                className: (0, W.A)(K().PurchaseNoticeImage, K().VROnly),
+                className: (0, V.A)(K().PurchaseNoticeImage, K().VROnly),
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, W.A)(K().PurchaseNoticeLabel),
+              className: (0, V.A)(K().PurchaseNoticeLabel),
               children: (0, _.we)("#PurchaseNotice_VRRequired"),
             }),
           ],
@@ -2316,19 +2318,19 @@
       }
       function Y(e) {
         return (0, n.jsxs)("div", {
-          className: (0, W.A)(K().PurchaseNoticeContainer),
+          className: (0, V.A)(K().PurchaseNoticeContainer),
           children: [
             (0, n.jsx)("div", {
-              className: (0, W.A)(
+              className: (0, V.A)(
                 K().PurchaseNoticeImageContainer,
                 K().VRSupported,
               ),
               children: (0, n.jsx)(Z.Kkn, {
-                className: (0, W.A)(K().PurchaseNoticeImage, K().VRSupported),
+                className: (0, V.A)(K().PurchaseNoticeImage, K().VRSupported),
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, W.A)(K().PurchaseNoticeLabel),
+              className: (0, V.A)(K().PurchaseNoticeLabel),
               children: (0, _.we)("#PurchaseNotice_VRSupported"),
             }),
           ],
@@ -2429,7 +2431,7 @@
         if (!m) return;
         const g = !d && (c ? 1 == f : f <= 2) && p;
         return (0, n.jsxs)("div", {
-          className: (0, W.A)(
+          className: (0, V.A)(
             re().CreatorHomeWithItems,
             g ? re().WithFollowBtn : "",
           ),
@@ -2482,7 +2484,7 @@
               ],
             }),
             (0, n.jsxs)("div", {
-              className: (0, W.A)(
+              className: (0, V.A)(
                 re().CarouselContentsRow,
                 g && re().WithFollowSection,
               ),
@@ -2710,7 +2712,7 @@
           r = (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)("div", {
-                className: (0, W.A)(
+                className: (0, V.A)(
                   Ne.ImgSection,
                   e.bHightlightRow && Ne.HighlightRow,
                   e.bHighlightGPRequired && Ne.GamepadRequired,
@@ -2718,7 +2720,7 @@
                 children: e.tagImage,
               }),
               (0, n.jsxs)("div", {
-                className: (0, W.A)(
+                className: (0, V.A)(
                   Ne.LocSection,
                   e.bHighlightText && Ne.HighlightText,
                   e.bHightlightRow && Ne.HighlightRow,
@@ -2726,7 +2728,7 @@
                 ),
                 children: [
                   (0, n.jsx)("div", {
-                    className: (0, W.A)(
+                    className: (0, V.A)(
                       Ne.LocString,
                       e.bHighlightText && Ne.HighlightText,
                       e.bHightlightRow && Ne.HighlightRow,
@@ -2755,7 +2757,7 @@
       function be() {
         return (0, n.jsx)(Te, {
           tagImage: (0, n.jsx)(Z.Moo, {
-            className: (0, W.A)(Ne.Tilt, Ne.SmallerSVG),
+            className: (0, V.A)(Ne.Tilt, Ne.SmallerSVG),
             role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
@@ -2766,14 +2768,14 @@
       }
       function Ie() {
         return (0, n.jsxs)("div", {
-          className: (0, W.A)(Ne.PurchaseNoticeContainer),
+          className: (0, V.A)(Ne.PurchaseNoticeContainer),
           children: [
             (0, n.jsx)(Z.Kz1, {
-              className: (0, W.A)(Ne.PurchaseNoticeImage),
+              className: (0, V.A)(Ne.PurchaseNoticeImage),
               role: "presentation",
             }),
             (0, n.jsx)("div", {
-              className: (0, W.A)(Ne.PurchaseNoticeLabel),
+              className: (0, V.A)(Ne.PurchaseNoticeLabel),
               children: (0, _.we)("#Store_ControllerSupport_GamepadPreferred"),
             }),
           ],
@@ -2782,7 +2784,7 @@
       function Re(e) {
         const { bNoKeyboardSupport: t, bGamepadPreferred: r } = e;
         return (0, n.jsxs)("div", {
-          className: (0, W.A)(Ne.NoticeContainer),
+          className: (0, V.A)(Ne.NoticeContainer),
           children: [t && (0, n.jsx)(be, {}), r && !t && (0, n.jsx)(Ie, {})],
         });
       }
@@ -2978,8 +2980,8 @@
         Oe = r(80902);
       var Ue = r(56283),
         ze = r(22797),
-        Ve = r(72061),
-        We = r(15799),
+        We = r(72061),
+        Ve = r(15799),
         Qe = r(23809);
       function Ke(e, t) {
         return `${v.TS.STORE_CDN_URL}public/images/loyalty/reactions/${t ? "animated" : "still"}/${e}.png`;
@@ -3046,8 +3048,10 @@
         render() {
           const e = Ke(
             this.props.reactionType,
-            !this.props.bDisableAnimation &&
-              (this.state.bHovered || this.props.bForceAnimated),
+            !(
+              0 != this.props.bDisableAnimation ||
+              (!this.state.bHovered && !this.props.bForceAnimated)
+            ),
           );
           return (0, n.jsx)("img", {
             className: this.props.className,
@@ -3074,7 +3078,7 @@
                   targetType: t,
                 });
             }),
-            (this.state = { bShowModal: !1 });
+            (this.state = { bShowModal: !1, targetid: "", targetType: 0 });
         }
         render() {
           const {
@@ -3091,7 +3095,7 @@
                 {
                   targetid: s,
                   active: e,
-                  targetType: t,
+                  targetType: t ?? 0,
                   ugcType: a,
                   onDismiss: () => this.setState({ bShowModal: !1 }),
                   onSuccess: r,
@@ -3139,7 +3143,7 @@
           [u, p] = s.useState(l || 0),
           [m, h] = s.useState(Xe.SELECTING),
           [f, g] = s.useState(!1),
-          [x, w] = s.useState(void 0),
+          [x, w] = s.useState(2),
           A = (0, v.Qn)(),
           y = (0, Qe.KV)(),
           S = (function (e, t, r, n) {
@@ -3155,7 +3159,7 @@
               },
               enabled: e,
             });
-          })(t, y, r, a),
+          })(!!t, y, r, a),
           N = (function (e, t) {
             return (0, Oe.I)({
               queryKey: ["AwardsConfiguration"],
@@ -3165,15 +3169,15 @@
                 let r = await Fe.a9.GetReactionConfig(t, e);
                 if (1 == r.GetEResult()) {
                   const e = new Map();
-                  let t = r.Body().toObject().reactions;
-                  for (const r of t) e.set(r.reactionid, r);
+                  let t = r.Body().toObject().reactions ?? [];
+                  for (const r of t) r.reactionid && e.set(r.reactionid, r);
                   return e;
                 }
                 throw r.GetEResult();
               },
               enabled: e,
             });
-          })(t, y),
+          })(!!t, y),
           j = (function (e, t) {
             return (0, Oe.I)({
               queryKey: ["UserPointBalance"],
@@ -3184,12 +3188,14 @@
                 r.Body().set_steamid(e);
                 let n = await Fe.a9.GetSummary(t, r);
                 if (1 == n.GetEResult())
-                  return Be.A.fromString(n.Body().summary().points());
+                  return Be.A.fromString(
+                    n.Body().toObject().summary?.points ?? "0",
+                  );
                 throw n.GetEResult();
               },
               enabled: e,
             });
-          })(t, y),
+          })(!!t, y),
           T = (function (e) {
             const t = (0, Ge.jE)();
             return (0, He.n)({
@@ -3216,13 +3222,17 @@
           !t)
         )
           return null;
-        const I = N.data || new Map(),
-          E = j.data,
+        const I = N.data ?? new Map(),
+          E = j.data ?? new Be.A(0),
           P = (function (e, t, r) {
             let n = [];
             return (
               e.forEach(function (e) {
-                if (e.valid_target_types.includes(t) && e.purchaseable)
+                if (
+                  e.valid_target_types?.includes(t) &&
+                  e.purchaseable &&
+                  e.reactionid
+                )
                   switch (t) {
                     case 1:
                     case 3:
@@ -3231,7 +3241,9 @@
                       n.push(e.reactionid);
                       break;
                     case 2:
-                      e.valid_ugc_types.includes(r) && n.push(e.reactionid);
+                      void 0 !== r &&
+                        e.valid_ugc_types?.includes(r) &&
+                        n.push(e.reactionid);
                   }
               }),
               n
@@ -3282,14 +3294,14 @@
                   (0, n.jsx)(ot, {}),
                   b &&
                     (0, n.jsx)("div", {
-                      className: We.InitialLoading,
+                      className: Ve.InitialLoading,
                       children: (0, n.jsx)("div", {
-                        className: (0, W.A)(We.LoadingContainer, We.Visible),
+                        className: (0, V.A)(Ve.LoadingContainer, Ve.Visible),
                         children: (0, n.jsx)(lt, {}),
                       }),
                     }),
                   (0, n.jsx)(ke.MS, {
-                    className: We.ButtonContainer,
+                    className: Ve.ButtonContainer,
                     scrollDirection: A ? "x" : "y",
                     "flow-children": "grid",
                     children:
@@ -3324,7 +3336,7 @@
                             (0, n.jsx)(
                               "div",
                               {
-                                className: We.NotEnoughPoints,
+                                className: Ve.NotEnoughPoints,
                                 children: (0, _.we)(
                                   "#GrantAward_CantAfford",
                                   (0, Ye.D)(E.negate().add(k).toNumber()),
@@ -3409,39 +3421,39 @@
                       style: { position: "relative" },
                       children: [
                         (0, n.jsxs)("div", {
-                          className: (0, W.A)(
-                            We.ConfirmContainer,
-                            m === Xe.CONFIRM && We.Visible,
+                          className: (0, V.A)(
+                            Ve.ConfirmContainer,
+                            m === Xe.CONFIRM && Ve.Visible,
                           ),
                           children: [
                             (0, n.jsx)(et, {
-                              className: We.ConfirmAwardImage,
+                              className: Ve.ConfirmAwardImage,
                               reactionType: u,
                             }),
                             (0, n.jsxs)("div", {
-                              className: We.ConfirmTextCtn,
+                              className: Ve.ConfirmTextCtn,
                               children: [
                                 (0, n.jsx)("div", {
-                                  className: We.ConfirmText,
+                                  className: Ve.ConfirmText,
                                   children: (0, _.PP)(
                                     "#GrantAward_Confirm",
                                     (0, n.jsx)(ct, { children: (0, Ye.D)(k) }),
                                     (0, n.jsx)("span", {
-                                      className: We.AwardName,
-                                      children: N.data?.get(u).localized_title,
+                                      className: Ve.AwardName,
+                                      children: N.data?.get(u)?.localized_title,
                                     }),
                                   ),
                                 }),
                                 B > 0 &&
                                   (0, n.jsx)("div", {
-                                    className: We.ConfirmText,
+                                    className: Ve.ConfirmText,
                                     children: (0, _.PP)(
                                       "#GrantAward_Confirm_Details",
                                       (0, n.jsx)(ct, {
                                         children: (0, Ye.D)(B),
                                       }),
                                       (0, n.jsx)("span", {
-                                        className: We.TimePeriod,
+                                        className: Ve.TimePeriod,
                                         children: (0, _.we)(
                                           "#GrantAward_Confirm_DetailsTimePeriod",
                                         ),
@@ -3453,25 +3465,25 @@
                           ],
                         }),
                         (0, n.jsx)("div", {
-                          className: (0, W.A)(
-                            We.LoadingContainer,
-                            m === Xe.SUBMITTING && We.Visible,
+                          className: (0, V.A)(
+                            Ve.LoadingContainer,
+                            m === Xe.SUBMITTING && Ve.Visible,
                           ),
                           children: (0, n.jsx)(lt, {}),
                         }),
                         (0, n.jsxs)("div", {
-                          className: (0, W.A)(
-                            We.SuccessContainer,
-                            m === Xe.DONE && We.Visible,
+                          className: (0, V.A)(
+                            Ve.SuccessContainer,
+                            m === Xe.DONE && Ve.Visible,
                           ),
                           children: [
                             (0, n.jsx)(et, {
-                              className: We.ConfirmAwardImage,
+                              className: Ve.ConfirmAwardImage,
                               reactionType: u,
                               bForceAnimated: !0,
                             }),
                             (0, n.jsx)("div", {
-                              className: We.SuccessText,
+                              className: Ve.SuccessText,
                               children: (0, _.we)("#GrantAward_Success"),
                             }),
                           ],
@@ -3522,9 +3534,9 @@
                   (0, n.jsx)("div", {
                     style: { position: "relative" },
                     children: (0, n.jsx)("div", {
-                      className: We.ErrorContainer,
+                      className: Ve.ErrorContainer,
                       children: (0, n.jsx)("div", {
-                        className: We.ErrorText,
+                        className: Ve.ErrorText,
                         children: e,
                       }),
                     }),
@@ -3560,9 +3572,9 @@
                 (0, n.jsx)("div", {
                   style: { position: "relative" },
                   children: (0, n.jsx)("div", {
-                    className: We.ErrorContainer,
+                    className: Ve.ErrorContainer,
                     children: (0, n.jsx)("div", {
-                      className: We.ErrorText,
+                      className: Ve.ErrorText,
                       children: e,
                     }),
                   }),
@@ -3573,45 +3585,45 @@
           }
         }
         return (0, n.jsxs)(C.mt, {
-          className: We.GrantAwardModal,
+          className: Ve.GrantAwardModal,
           active: t,
           onDismiss: d,
-          children: [f && (0, n.jsx)(Ve.NW, { eType: Ve.O4.Default }), D],
+          children: [f && (0, n.jsx)(We.NW, { eType: We.O4.Default }), D],
         });
       }
       const st = ({ description: e }) =>
         (0, n.jsxs)("div", {
-          className: We.Header,
+          className: Ve.Header,
           children: [
             (0, n.jsx)("div", {
-              className: We.Title,
+              className: Ve.Title,
               children: (0, _.we)("#GrantAwardTitle"),
             }),
-            (0, n.jsx)("div", { className: We.Description, children: e }),
+            (0, n.jsx)("div", { className: Ve.Description, children: e }),
           ],
         });
       function at(e) {
         const { pointBalance: t, children: r } = e,
           a = t && (0, Ye.D)(t.toNumber());
         return (0, n.jsxs)("div", {
-          className: We.Footer,
+          className: Ve.Footer,
           children: [
             (0, n.jsxs)("div", {
-              className: We.PointsArea,
+              className: Ve.PointsArea,
               children: [
                 (0, n.jsxs)("div", {
-                  className: We.Left,
+                  className: Ve.Left,
                   children: [
-                    (0, n.jsx)(f.vrn, { className: We.BalanceIcon }),
+                    (0, n.jsx)(f.vrn, { className: Ve.BalanceIcon }),
                     (0, n.jsxs)("div", {
-                      className: We.BalanceDetails,
+                      className: Ve.BalanceDetails,
                       children: [
                         (0, n.jsx)("div", {
-                          className: We.BalanceLabel,
+                          className: Ve.BalanceLabel,
                           children: (0, _.we)("#YourBalance"),
                         }),
                         (0, n.jsx)("div", {
-                          className: We.BalanceAmount,
+                          className: Ve.BalanceAmount,
                           children: a,
                         }),
                       ],
@@ -3619,9 +3631,9 @@
                   ],
                 }),
                 (0, n.jsx)("div", {
-                  className: We.Column,
+                  className: Ve.Column,
                   children: (0, n.jsx)("a", {
-                    className: We.FooterLink,
+                    className: Ve.FooterLink,
                     href: `${v.TS.STORE_BASE_URL}points/howitworks`,
                     children: (0, _.we)("#GrantAward_PointsLink"),
                   }),
@@ -3629,19 +3641,19 @@
               ],
             }),
             (0, n.jsx)("div", {
-              className: We.Right,
+              className: Ve.Right,
               children: (0, n.jsx)(l.Z, {
-                className: We.Actions,
+                className: Ve.Actions,
                 "flow-children": "row",
                 children: s.Children.map(r, (e) =>
-                  (0, n.jsx)("div", { className: We.Action, children: e }),
+                  (0, n.jsx)("div", { className: Ve.Action, children: e }),
                 ),
               }),
             }),
           ],
         });
       }
-      const ot = () => (0, n.jsx)("div", { className: We.Divider });
+      const ot = () => (0, n.jsx)("div", { className: Ve.Divider });
       class it extends s.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
@@ -3666,12 +3678,12 @@
             type: "button",
             onMouseEnter: this.handleMouseOver,
             onMouseLeave: this.handleMouseOut,
-            className: (0, W.A)(We.Button, t && We.Selected, r && We.Disabled),
+            className: (0, V.A)(Ve.Button, t && Ve.Selected, r && Ve.Disabled),
             autoFocus: a,
             ...i,
             children: [
               (0, n.jsx)("div", {
-                className: We.IconCtn,
+                className: Ve.IconCtn,
                 children: (0, n.jsx)(et, {
                   reactionType: e,
                   bForceAnimated: this.state.bHovered,
@@ -3679,19 +3691,19 @@
                 }),
               }),
               (0, n.jsxs)("div", {
-                className: We.LabelCtn,
+                className: Ve.LabelCtn,
                 children: [
                   (0, n.jsx)("div", {
-                    className: We.Label,
+                    className: Ve.Label,
                     children: o?.localized_title,
                   }),
                   (0, n.jsx)(ct, {
-                    className: We.Points,
-                    children: (0, Ye.D)(s),
+                    className: Ve.Points,
+                    children: (0, Ye.D)(s ?? 0),
                   }),
                 ],
               }),
-              r && (0, n.jsx)($e, { className: We.IconCheckMark }),
+              r && (0, n.jsx)($e, { className: Ve.IconCheckMark }),
             ],
           });
         }
@@ -3699,14 +3711,14 @@
       (0, fe.Cg)([g.oI], it.prototype, "handleMouseOver", null),
         (0, fe.Cg)([g.oI], it.prototype, "handleMouseOut", null);
       const lt = () =>
-          (0, n.jsx)(ze.t, { size: "large", className: We.Loading }),
+          (0, n.jsx)(ze.t, { size: "large", className: Ve.Loading }),
         ct = (e) => {
           const { children: t, className: r, ...s } = e;
           return (0, n.jsxs)("span", {
             ...s,
-            className: (0, W.A)(r, We.PointsAmount),
+            className: (0, V.A)(r, Ve.PointsAmount),
             children: [
-              (0, n.jsx)(f.vrn, { className: We.PointsAmountIcon }),
+              (0, n.jsx)(f.vrn, { className: Ve.PointsAmountIcon }),
               t,
             ],
           });
@@ -4012,7 +4024,7 @@
                 }),
                 (0, n.jsx)("a", {
                   href: i,
-                  className: (0, W.A)(ut().TopPlayedBannerCtn, a.className),
+                  className: (0, V.A)(ut().TopPlayedBannerCtn, a.className),
                   children: (0, n.jsxs)("div", {
                     className: ut().BannerRightContent,
                     children: [
@@ -4054,7 +4066,7 @@
               className: Nt().ParentWidgetContainer,
               children: [
                 (0, n.jsx)("div", {
-                  className: (0, W.A)(Nt().ParentCapsuleImageContainer),
+                  className: (0, V.A)(Nt().ParentCapsuleImageContainer),
                   children: (0, n.jsx)("a", {
                     href: o,
                     children: (0, n.jsx)("img", {
@@ -4067,7 +4079,7 @@
                   className: Nt().AppDetails,
                   children: [
                     (0, n.jsx)("a", {
-                      className: (0, W.A)(Nt().GameName),
+                      className: (0, V.A)(Nt().GameName),
                       href: o,
                       children: a.name,
                     }),
@@ -4167,7 +4179,7 @@
                 : null,
           ),
           _ = o ? "" : Bt.n.Localize("#TrailerPlayer_FullScreen_Tooltip"),
-          g = (0, W.A)(bt.TheaterDialog, o && bt.Fullscreen);
+          g = (0, V.A)(bt.TheaterDialog, o && bt.Fullscreen);
         return (0, n.jsx)("div", {
           ref: a.refTheater,
           className: g,
@@ -4210,7 +4222,7 @@
       }
       function Gt(e) {
         let { screenshot: t } = e,
-          r = (0, W.A)(bt.CarouselItem, bt.Screenshot);
+          r = (0, V.A)(bt.CarouselItem, bt.Screenshot);
         return (0, n.jsx)(l.Z, {
           className: r,
           focusable: !0,
@@ -4320,7 +4332,7 @@
           _ = a.bPaused
             ? Bt.n.Localize("#TrailerPlayer_Play_Tooltip")
             : Bt.n.Localize("#TrailerPlayer_Pause_Tooltip"),
-          v = (0, W.A)(bt.CarouselItem, bt.SingleFileTrailer);
+          v = (0, V.A)(bt.CarouselItem, bt.SingleFileTrailer);
         return (0, n.jsx)(l.Z, {
           className: v,
           onActivate: d,
@@ -4349,7 +4361,7 @@
         let { trailer: t } = e,
           [r, a] = (0, s.useState)(!1),
           [o, i] = (0, g.TP)(),
-          c = (0, W.A)(bt.CarouselItem, bt.DashTrailer);
+          c = (0, V.A)(bt.CarouselItem, bt.DashTrailer);
         return (0, n.jsx)(l.Z, {
           ref: i,
           className: c,
@@ -4373,8 +4385,8 @@
         });
       }
       var zt = r(15955),
-        Vt = r(98505),
-        Wt = r(62872),
+        Wt = r(98505),
+        Vt = r(62872),
         Qt = r(81393);
       function Kt() {
         let e = document.cookie.match(
@@ -4609,14 +4621,14 @@
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
-              className: (0, W.A)(rr.StripSkeleton, l && rr.TheaterMode),
+              className: (0, V.A)(rr.StripSkeleton, l && rr.TheaterMode),
               children: [
                 (0, n.jsx)("div", { className: rr.Items }),
                 (0, n.jsx)("div", { className: rr.Scrollbar }),
               ],
             }),
             (0, n.jsxs)("div", {
-              className: (0, W.A)(rr.Strip, l && rr.TheaterMode),
+              className: (0, V.A)(rr.Strip, l && rr.TheaterMode),
               children: [
                 (0, n.jsx)(or, {
                   refStrip: r,
@@ -4665,7 +4677,7 @@
           i = t.key,
           l = (0, s.useCallback)((e) => r(i, e), [i, r]),
           c = t.data.thumbnail ? t.data.thumbnail : "",
-          d = (0, W.A)(rr.Item, o && rr.Active);
+          d = (0, V.A)(rr.Item, o && rr.Active);
         return (0, n.jsxs)("div", {
           ref: l,
           className: d,
@@ -4867,12 +4879,12 @@
           i = (0, Lt.ri)(),
           l = "theater" == i.strMode,
           [c, d] = (function () {
-            let [e, t] = (0, Vt.if)(),
+            let [e, t] = (0, Wt.if)(),
               r = (0, s.useRef)({ element: void 0, bKeepControls: !1 }),
               n = (0, s.useCallback)(
                 (e) => {
                   if (e.target == r.current.element) return;
-                  let t = (0, Vt.Ae)(e);
+                  let t = (0, Wt.Ae)(e);
                   r.current = { element: e.target, bKeepControls: t };
                 },
                 [r],
@@ -4885,13 +4897,13 @@
               ),
               o = (0, s.useCallback)(
                 (e) => {
-                  "touch" != e.pointerType && (n(e), a((0, Vt.Av)(e)));
+                  "touch" != e.pointerType && (n(e), a((0, Wt.Av)(e)));
                 },
                 [a, n],
               ),
               i = (0, s.useCallback)(
                 (e) => {
-                  "touch" != e.pointerType && (n(e), a((0, Vt.Av)(e)));
+                  "touch" != e.pointerType && (n(e), a((0, Wt.Av)(e)));
                 },
                 [n, a],
               ),
@@ -4899,13 +4911,13 @@
                 (e) => {
                   "touch" != e.pointerType &&
                     ((r.current = { element: void 0, bKeepControls: !1 }),
-                    a((0, Vt.Ug)()));
+                    a((0, Wt.Ug)()));
                 },
                 [r, a],
               ),
               c = (0, s.useCallback)(
                 (e) => {
-                  a((0, Vt.Av)(e));
+                  a((0, Wt.Av)(e));
                 },
                 [a],
               );
@@ -4971,7 +4983,7 @@
                     children: [
                       _,
                       (0, n.jsx)("div", {
-                        className: (0, W.A)(
+                        className: (0, V.A)(
                           zt.FullscreenArrow,
                           c && zt.Visible,
                           zt.Previous,
@@ -4981,7 +4993,7 @@
                         children: (0, n.jsx)(cr, { direction: "left" }),
                       }),
                       (0, n.jsx)("div", {
-                        className: (0, W.A)(
+                        className: (0, V.A)(
                           zt.FullscreenArrow,
                           c && zt.Visible,
                           zt.Next,
@@ -4997,7 +5009,7 @@
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, W.A)(zt.SkeletonViewArea, l && zt.TheaterMode),
+              className: (0, V.A)(zt.SkeletonViewArea, l && zt.TheaterMode),
             }),
           ],
         });
@@ -5078,7 +5090,7 @@
           d = "none" == l.strMode,
           u = (0, pr.b$)(s);
         if (!i) return null;
-        let p = (0, W.A)(
+        let p = (0, V.A)(
             zt.ViewedItem,
             a && zt.Active,
             zt.Screenshot,
@@ -5096,8 +5108,8 @@
             (0, n.jsxs)("div", {
               className: zt.Controls,
               children: [
-                l.bSupportsTheater && (0, n.jsx)(Wt.tS, {}),
-                l.bSupportsFullscreen && (0, n.jsx)(Wt.Wc, {}),
+                l.bSupportsTheater && (0, n.jsx)(Vt.tS, {}),
+                l.bSupportsFullscreen && (0, n.jsx)(Vt.Wc, {}),
               ],
             }),
           ],
@@ -5112,7 +5124,7 @@
           u = $t(),
           p = (0, s.useCallback)(() => u.fnSetActive(u.strNextID), [u]);
         if (!i) return null;
-        let m = (0, W.A)(zt.ViewedItem, o && zt.Active, zt.Trailer);
+        let m = (0, V.A)(zt.ViewedItem, o && zt.Active, zt.Trailer);
         return (0, n.jsx)(Lt.vG, {
           drop: !(0, dr.tg)(),
           children: (0, n.jsx)("div", {
@@ -5345,10 +5357,10 @@
         );
       }
       var zr = r(42780);
-      function Vr(e, t) {
+      function Wr(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      const Wr = {
+      const Vr = {
         b: {
           Constructor: function (e) {
             return (0, n.jsx)("b", { children: e.children });
@@ -5376,7 +5388,7 @@
         },
         color: {
           Constructor: function (e) {
-            const t = Vr(e.args),
+            const t = Wr(e.args),
               r = {};
             t &&
               (t.match(/^#[a-fA-F0-9]+$/) || t.match(/rgba?\([0-9, ]+\)$/)) &&
@@ -5486,7 +5498,7 @@
                       className: tn.Desc,
                       children: s.localized_desc,
                     }),
-                    s.points_transferred > 0 &&
+                    !!s.points_transferred &&
                       (0, n.jsx)("div", {
                         className: tn.Points,
                         children: (0, _.we)(
@@ -5494,7 +5506,7 @@
                           (0, Ye.D)(s.points_transferred),
                         ),
                       }),
-                    r > 0 &&
+                    !!r &&
                       (0, n.jsx)("div", {
                         className: tn.Count,
                         children: (0, _.Yp)(
@@ -5672,7 +5684,7 @@
       const An = s.createContext([]);
       function yn(e) {
         const t = s.useContext(An);
-        let r = Vr(e.args) ?? Vr(e.args, "href");
+        let r = Wr(e.args) ?? Wr(e.args, "href");
         if (!r || !r.match(/^https?:\/\//)) return e.children;
         (0, vn.p)(r) && (r = (0, vn.E)(r));
         const a = URL.parse(r);
@@ -5771,7 +5783,7 @@
       function Rn(e) {
         const { bPositive: t } = e;
         return (0, n.jsx)("div", {
-          className: (0, W.A)(Nn().ThumbIcon, t ? Nn().Up : Nn().Down),
+          className: (0, V.A)(Nn().ThumbIcon, t ? Nn().Up : Nn().Down),
           children: (0, n.jsx)(f.twC, {}),
         });
       }
@@ -5988,7 +6000,7 @@
           children: o,
         } = e;
         return (0, n.jsxs)(en.$n, {
-          className: (0, W.A)(Nn().VoteButton, r && Nn().Selected),
+          className: (0, V.A)(Nn().VoteButton, r && Nn().Selected),
           onClick: a,
           disabled: !s,
           children: [
@@ -5997,7 +6009,7 @@
           ],
         });
       }
-      function Vn(e) {
+      function Wn(e) {
         const { review: t } = e,
           [r, a, o] = (0, E.uD)(),
           [i, c] = s.useState(),
@@ -6135,7 +6147,7 @@
           ],
         });
       }
-      function Wn(e) {
+      function Vn(e) {
         const { review: t } = e,
           { appid: r } = s.useContext(Us);
         return (0, n.jsxs)(l.Z, {
@@ -6200,10 +6212,10 @@
       const Kn = s.createContext(0);
       function Zn(e) {
         const t = s.useContext(Kn),
-          r = Vr(e.args),
+          r = Wr(e.args),
           a = JSON.parse(`[${r}]`).includes(t);
         return (0, n.jsx)("span", {
-          className: (0, W.A)(Nn().Highlight, a && Nn().Active),
+          className: (0, V.A)(Nn().Highlight, a && Nn().Active),
           "data-type": r,
           children: e.children,
         });
@@ -6217,7 +6229,7 @@
         const { text: t = "" } = e,
           r = s.useMemo(() => {
             const e = {
-              ...Wr,
+              ...Vr,
               ...Kr,
               ...Qr,
               spoiler: { Constructor: Xr },
@@ -6241,7 +6253,7 @@
           [r, a] = s.useState(!1),
           [o, i] = s.useState(!1);
         return (0, n.jsxs)(l.Z, {
-          className: (0, W.A)(
+          className: (0, V.A)(
             Nn().ReviewText,
             r && Nn().Expanded,
             o && Nn().Collapsed,
@@ -6494,8 +6506,8 @@
                   (0, n.jsx)(ns, { review: t }),
                   (0, n.jsx)(rs, { review: t, mapTags: o, setHighlight: c }),
                   (0, n.jsx)("hr", { className: Nn().MainDivider }),
-                  (0, n.jsx)(Vn, { review: t }),
                   (0, n.jsx)(Wn, { review: t }),
+                  (0, n.jsx)(Vn, { review: t }),
                   (0, n.jsx)(Qn, { review: t }),
                   (0, n.jsx)(es, { review: t }),
                 ],
@@ -6532,7 +6544,7 @@
           style: f,
           children: (0, n.jsx)(h, {
             onGamepadDirection: "full" == a ? as : void 0,
-            className: (0, W.A)(
+            className: (0, V.A)(
               Nn().ReviewDetails,
               r && Nn().Friend,
               s && Nn().Short,
@@ -6571,7 +6583,7 @@
         return s
           ? (0, n.jsx)("div", {
               id: t,
-              className: (0, W.A)(ls().ReviewSectionTitle, r),
+              className: (0, V.A)(ls().ReviewSectionTitle, r),
               children: on.Localize(s),
             })
           : null;
@@ -7154,7 +7166,7 @@
             (0, n.jsxs)(l.Z, {
               "flow-children": "row",
               navEntryPreferPosition: c.iU.MAINTAIN_X,
-              className: (0, W.A)(ws().PageableContainer, this.props.className),
+              className: (0, V.A)(ws().PageableContainer, this.props.className),
               children: [
                 !this.props.bNoHeader &&
                   (0, n.jsxs)("div", {
@@ -7166,7 +7178,7 @@
                         : (0, n.jsxs)(s.Fragment, {
                             children: [
                               (0, n.jsx)("div", {
-                                className: (0, W.A)(
+                                className: (0, V.A)(
                                   ws().Name,
                                   this.props.bClickableHeader && ws().Clickable,
                                 ),
@@ -7178,7 +7190,7 @@
                             ],
                           }),
                       (0, n.jsxs)("div", {
-                        className: (0, W.A)(
+                        className: (0, V.A)(
                           ws().PageClickContainer,
                           this.props.pageContainerStyles,
                         ),
@@ -7187,7 +7199,7 @@
                             (0, n.jsxs)(s.Fragment, {
                               children: [
                                 (0, n.jsx)("div", {
-                                  className: (0, W.A)(
+                                  className: (0, V.A)(
                                     ws().PageLeft,
                                     !this.props.bLeftEnabled && ws().Disabled,
                                     t,
@@ -7199,7 +7211,7 @@
                                   }),
                                 }),
                                 (0, n.jsx)("div", {
-                                  className: (0, W.A)(
+                                  className: (0, V.A)(
                                     ws().PageRight,
                                     !this.props.bRightEnabled && ws().Disabled,
                                     t,
@@ -7215,7 +7227,7 @@
                             }),
                           this.props.bShowCloseButton &&
                             (0, n.jsx)("div", {
-                              className: (0, W.A)(
+                              className: (0, V.A)(
                                 ws().PageableCloseButton,
                                 e && ws().PageButtonsVisible,
                                 t,
@@ -7423,7 +7435,7 @@
             (e, r, s, o) => {
               if (e >= t.length)
                 return (0, n.jsx)(l.Z, {
-                  className: (0, W.A)(Is().LoadingThrobber, Is().FullScreen),
+                  className: (0, V.A)(Is().LoadingThrobber, Is().FullScreen),
                   style: { width: r, height: s },
                   focusable: !1,
                   children: (0, n.jsx)(ze.t, {
@@ -7460,7 +7472,7 @@
             [o, d],
           );
         return (0, n.jsxs)("div", {
-          className: (0, W.A)(Is().CarouselWrapper),
+          className: (0, V.A)(Is().CarouselWrapper),
           children: [
             (0, n.jsx)(cs, {
               className: Is().ReviewSectionTitle,
@@ -7828,8 +7840,8 @@
           })
         );
       }
-      const Vs = s.lazy(() => r.e(5139).then(r.bind(r, 51899))),
-        Ws = s.lazy(() =>
+      const Ws = s.lazy(() => r.e(5139).then(r.bind(r, 51899))),
+        Vs = s.lazy(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
@@ -7924,7 +7936,7 @@
                 (0, n.jsx)(Ct.d, { children: (0, n.jsx)(I, { appid: t }) }),
               "review-award": () => (0, n.jsx)(tt, {}),
               "deck-topplayed-banner": (e) => (0, n.jsx)(gt, { ...e }),
-              "steamawardsvote-embed": () => (0, n.jsx)(Ws, { appID: t }),
+              "steamawardsvote-embed": () => (0, n.jsx)(Vs, { appID: t }),
               "broadcast-embed": (t) =>
                 (0, n.jsx)(Ks, { ...e, appid: t.appid }),
               "demo-and-quick-pitch": () =>
@@ -7956,7 +7968,7 @@
                 (0, n.jsx)(Pe, { ...e }),
               "store-sidebar-accessibility-info": (e) =>
                 (0, n.jsx)(Zs, { features: e }),
-              "season-pass-display": (e) => (0, n.jsx)(Vs, { ...e }),
+              "season-pass-display": (e) => (0, n.jsx)(Ws, { ...e }),
               "storeitems-carousel": (e) =>
                 (0, n.jsx)(Se.Ay, {
                   feature: "recommended",

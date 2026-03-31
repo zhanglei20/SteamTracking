@@ -349,8 +349,8 @@
             rgAcceptableTypes: _,
           },
           spotlight_art_hero: {
-            width: 374,
-            height: 448,
+            width: 748,
+            height: 896,
             rgAcceptableTypes: _,
           },
           old_spotlight_art: {

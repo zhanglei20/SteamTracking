@@ -3,6 +3,16 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [9769],
   {
+    21895: (e) => {
+      e.exports = {
+        Root: "_1kIuUssJvopWbHik1IKMG6",
+        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
+        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
+        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
+        Icon: "cngAYeP7ZvFo2pT_v3-xO",
+      };
+    },
     38878: (e) => {
       e.exports = {
         "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
@@ -30,6 +40,22 @@
         "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
         "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
         "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
+      };
+    },
+    16619: (e) => {
+      e.exports = {
+        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
+        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
+        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
+        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
+        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
+        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
+        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
+        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
+        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
+        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
+        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
+        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
       };
     },
     44041: (e) => {
@@ -267,17 +293,109 @@
         TextAlign: "_1xbvB3MqxnugiXxR02dPOx",
       };
     },
+    65274: (e) => {
+      e.exports = {
+        Text: "f6hU22EA7Z8peFWZVBJU",
+        Truncate: "_2tXpWMxzSX3lf_9_EFUzmJ",
+        "TextSize-1": "NUSSU36hkPXb7VdM8HFef",
+        "TextSize-2": "_1HTEiDPVrmM0RUnp3DzkXW",
+        "TextSize-3": "_1maNP9UvDekHzld1kwwQnw",
+        "TextSize-4": "mGlMCg85s0ULA8kYCZzMB",
+        "TextSize-5": "_2MGI1O3WXMHKcWkSFCf6Bz",
+        "TextSize-6": "_3kpvs1OYmjREjAE9RONmZm",
+        "TextSize-7": "_3RzzHMo4NUK3RIl__o-aYU",
+        "TextSize-8": "_3KRhxZU1kR1ArBuZyY_ib3",
+        "TextSize-9": "_3O17p9mMWHcy_sU-_IPM6R",
+        TextWeight: "_3KfHV-wUo5sKXQAsJZO5Uw",
+        TextAlign: "_310d_LkZp2K-i9ZY8r2B_c",
+        LineClamp: "_3z4FSJhGOOHIOqRI6ZqJ_H",
+        WhiteSpace: "FYJ4NYxpWeIha0N1-jUcm",
+      };
+    },
+    57757: (e, s, r) => {
+      "use strict";
+      r.d(s, { S: () => l });
+      var o = r(7850),
+        t = r(83392),
+        n = r(40704);
+      function i(e) {
+        return (0, o.jsx)(n.I, {
+          ...e,
+          viewBoxSize: 16,
+          children: (0, o.jsx)("path", {
+            d: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+      var a = r(21895),
+        p = r(64238),
+        c = r.n(p);
+      function l(e) {
+        const {
+            checked: s,
+            onChange: r,
+            disabled: n,
+            children: p,
+            ref: l,
+            variant: _ = "default",
+            ...u
+          } = e,
+          f = "indeterminate" === s,
+          x = f ? d : i,
+          v = () => {
+            n || (r && r(!!f || !s));
+          };
+        return (0, o.jsxs)(t.s, {
+          ref: l,
+          role: "checkbox",
+          "aria-checked": f ? "mixed" : s,
+          "data-state": m(s),
+          className: c()(a.Root, a[`Variant-${_}`], n && a.Disabled),
+          onClick: v,
+          tabIndex: 0,
+          onKeyDown: (e) => {
+            n ||
+              (" " === e.key && (v(), e.preventDefault(), e.stopPropagation()));
+          },
+          cursor: "default",
+          "aria-disabled": n,
+          ...u,
+          children: [
+            (0, o.jsx)("div", {
+              className: a.Checkbox,
+              children: s && (0, o.jsx)(x, { className: a.Icon }),
+            }),
+            p,
+          ],
+        });
+      }
+      function m(e) {
+        return "indeterminate" === e ? e : e ? "checked" : "unchecked";
+      }
+      function d(e) {
+        return (0, o.jsx)("svg", {
+          viewBox: "0 0 16 16",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: (0, o.jsx)("path", {
+            d: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
+            fill: "currentColor",
+          }),
+        });
+      }
+    },
     61023: (e, s, r) => {
       "use strict";
       r.d(s, { j: () => m });
       var o = r(7850),
         t = r(64238),
         n = r.n(t),
-        p = r(38878),
-        i = r(90534),
-        a = r(83392),
-        l = r(75659),
-        c = r(11526);
+        i = r(38878),
+        a = r(90534),
+        p = r(83392),
+        c = r(75659),
+        l = r(11526);
       function m(e) {
         const {
             children: s,
@@ -292,39 +410,39 @@
                 size: r = "2",
                 radius: o,
                 focusable: t = !0,
-                hoverable: i = !0,
-                clickable: a = !0,
+                hoverable: a = !0,
+                clickable: p = !0,
                 disabled: m,
                 className: d,
                 ..._
               } = e,
               u = "underline" === s ? "none" : o;
-            return (0, c.mz)(
+            return (0, l.mz)(
               {
                 ..._,
                 radius: u,
                 className: n()(
-                  p.ControlBox,
-                  t && !m && p.Focusable,
-                  i && !m && p.Hoverable,
-                  a && !m && p.Clickable,
-                  m && p.Disabled,
-                  p[`Variant-${s}`],
-                  p[`Size-${r}`],
+                  i.ControlBox,
+                  t && !m && i.Focusable,
+                  a && !m && i.Hoverable,
+                  p && !m && i.Clickable,
+                  m && i.Disabled,
+                  i[`Variant-${s}`],
+                  i[`Size-${r}`],
                   d,
                 ),
               },
-              l.h,
+              c.h,
             );
           })(d);
-        return (0, o.jsxs)(a.s, {
+        return (0, o.jsxs)(p.s, {
           ..._,
           align: "center",
           "data-has-value": !!m,
           children: [
-            r && (0, o.jsx)(a.s, { paddingRight: "2", children: r }),
-            (0, o.jsx)(i.az, { flexGrow: "1", minWidth: "0", children: s }),
-            t && (0, o.jsx)(a.s, { paddingLeft: "2", children: t }),
+            r && (0, o.jsx)(p.s, { paddingRight: "2", children: r }),
+            (0, o.jsx)(a.az, { flexGrow: "1", minWidth: "0", children: s }),
+            t && (0, o.jsx)(p.s, { paddingLeft: "2", children: t }),
           ],
         });
       }
@@ -335,11 +453,11 @@
       var o = r(7850),
         t = r(90626),
         n = r(61023),
-        p = r(90534),
-        i = r(81393),
-        a = r(64238),
-        l = r.n(a),
-        c = r(53011),
+        i = r(90534),
+        a = r(81393),
+        p = r(64238),
+        c = r.n(p),
+        l = r(53011),
         m = r(83392);
       const d = (0, t.createContext)(null);
       function _(e) {
@@ -352,7 +470,7 @@
         });
       }
       function u(e) {
-        return (0, o.jsx)(p.az, { className: c.Indicator, radius: e.radius });
+        return (0, o.jsx)(i.az, { className: l.Indicator, radius: e.radius });
       }
       function f(e, s) {
         const r = e.compareDocumentPosition(s);
@@ -365,28 +483,28 @@
       (_.Item = function (e) {
         const { value: s, children: r } = e,
           n = (0, t.useContext)(d),
-          [p, i] = (0, t.useState)(),
-          { register: a, unregister: _ } = n || {};
+          [i, a] = (0, t.useState)(),
+          { register: p, unregister: _ } = n || {};
         if (
           ((0, t.useEffect)(
-            () => (p && a && _ ? (a(p, s), () => _(p, s)) : () => {}),
-            [a, _, s, p],
+            () => (i && p && _ ? (p(i, s), () => _(i, s)) : () => {}),
+            [p, _, s, i],
           ),
           !n)
         )
           return null;
-        const { value: u, onValueChange: f, radius: v, size: g } = n,
-          y = s === u,
-          x = y ? void 0 : () => f(s),
+        const { value: u, onValueChange: f, radius: x, size: v } = n,
+          g = s === u,
+          y = g ? void 0 : () => f(s),
           N = void 0 === r ? s : r;
         return (0, o.jsx)(m.s, {
           justify: "center",
           align: "center",
-          radius: v,
-          ref: i,
-          onClick: x,
-          "data-selected": y ? "true" : "false",
-          className: l()(c.Item, g && c[`Size-${g}`]),
+          radius: x,
+          ref: a,
+          onClick: y,
+          "data-selected": g ? "true" : "false",
+          className: c()(l.Item, v && l[`Size-${v}`]),
           children: N,
         });
       }),
@@ -394,16 +512,16 @@
           const {
               variant: s = "default",
               radius: r,
-              size: p,
-              children: a,
+              size: i,
+              children: p,
               value: m,
               onValueChange: _,
             } = e,
-            [v, g] = (0, t.useState)({}),
-            y = (0, t.useCallback)((e, s) => g((r) => ({ ...r, [s]: e })), []),
-            x = (0, t.useCallback)(
+            [x, v] = (0, t.useState)({}),
+            g = (0, t.useCallback)((e, s) => v((r) => ({ ...r, [s]: e })), []),
+            y = (0, t.useCallback)(
               (e, s) =>
-                g((r) => {
+                v((r) => {
                   const o = { ...r };
                   return o[s] === e && delete o[s], o;
                 }),
@@ -413,12 +531,12 @@
               () => ({
                 value: m,
                 onValueChange: _,
-                register: y,
-                unregister: x,
+                register: g,
+                unregister: y,
                 radius: r,
-                size: p,
+                size: i,
               }),
-              [m, _, y, x, r, p],
+              [m, _, g, y, r, i],
             );
           return (0, o.jsx)(n.j, {
             clickable: !1,
@@ -426,8 +544,8 @@
             focusable: !1,
             variant: s,
             radius: r,
-            size: p,
-            className: l()(c.SegmentedControlBox, c[`Variant-${s}`]),
+            size: i,
+            className: c()(l.SegmentedControlBox, l[`Variant-${s}`]),
             tabIndex: 0,
             onKeyDown: (e) => {
               let s = 0;
@@ -441,20 +559,20 @@
                   s = -1;
               }
               if (s) {
-                const r = Array.from(Object.values(v)).sort(f);
+                const r = Array.from(Object.values(x)).sort(f);
                 let o;
                 if (null === m) o = s > 0 ? 0 : r.length - 1;
                 else {
-                  const e = v[m],
+                  const e = x[m],
                     t = r.findIndex((s) => s === e);
-                  (0, i.wT)(
+                  (0, a.wT)(
                     "number" == typeof t,
                     "Could not find current segmented value position",
                   ),
                     (o = t + s);
                 }
                 const t = r[o < 0 ? r.length + o : o % r.length],
-                  n = Object.keys(v).find((e) => v[e] === t);
+                  n = Object.keys(x).find((e) => x[e] === t);
                 "string" != typeof n
                   ? console.error("Could not find next segmeneted value")
                   : (_(n), e.stopPropagation(), e.preventDefault());
@@ -463,98 +581,132 @@
             children: (0, o.jsx)(d.Provider, {
               value: N,
               children: (0, o.jsxs)("div", {
-                className: c.SegmentedControl,
-                children: [a, null !== m && (0, o.jsx)(u, { radius: r })],
+                className: l.SegmentedControl,
+                children: [p, null !== m && (0, o.jsx)(u, { radius: r })],
               }),
             }),
           });
         });
     },
+    40704: (e, s, r) => {
+      "use strict";
+      r.d(s, { I: () => a });
+      var o = r(7850),
+        t = r(11526),
+        n = r(75659),
+        i = r(16619);
+      function a(e) {
+        const { viewBoxSize: s = 20, ...r } = e,
+          n = r.size ? void 0 : i.IconSizeDefault;
+        return (0, o.jsx)("svg", {
+          viewBox: `0 0 ${s} ${s}`,
+          ...(0, t.mz)({ className: n, ...r }, p),
+        });
+      }
+      const p = [
+        ...n.L,
+        { prop: "size", responsive: !0, className: (e) => i[`IconSize-${e}`] },
+        {
+          prop: "color",
+          className: i.Color,
+          cssProperty: (e) => ["--icon-color", (0, t.w7)(e)],
+        },
+        {
+          prop: "hitSlop",
+          className: i.HitSlop,
+          cssProperty: (e) => [
+            "--hit-slop-custom",
+            "string" == typeof e ? e : "",
+          ],
+        },
+        n.h.find(({ prop: e }) => "cursor" === e),
+      ];
+    },
     90534: (e, s, r) => {
       "use strict";
-      r.d(s, { A4: () => m, az: () => l });
+      r.d(s, { A4: () => m, az: () => c });
       var o = r(7850),
         t = r(64238),
         n = r.n(t),
-        p = r(11526),
-        i = r(75659),
-        a = r(44041);
-      function l(e) {
+        i = r(11526),
+        a = r(75659),
+        p = r(44041);
+      function c(e) {
         const { as: s = "div", ref: r, ...t } = e,
-          i = (0, p.mz)({ ...t, className: n()(a.Box, e.className) }, c),
-          l = s;
-        return (0, o.jsx)(l, { ref: r, ...i });
+          a = (0, i.mz)({ ...t, className: n()(p.Box, e.className) }, l),
+          c = s;
+        return (0, o.jsx)(c, { ref: r, ...a });
       }
-      const c = i.h;
+      const l = a.h;
       function m(e) {
-        return (0, p.Ef)(e, i.L);
+        return (0, i.Ef)(e, a.L);
       }
     },
     83392: (e, s, r) => {
       "use strict";
-      r.d(s, { s: () => c });
+      r.d(s, { s: () => l });
       var o = r(7850),
         t = r(39479),
         n = r(11526),
-        p = r(75659),
-        i = r(64238),
-        a = r.n(i),
-        l = r(68875);
-      function c(e) {
-        const { as: s = "div", ref: r, ...p } = e,
-          i = (0, n.mz)({ ...p, className: a()(e.className, l.Flex) }, m),
-          c = !p.disabled && !!p.onClick,
+        i = r(75659),
+        a = r(64238),
+        p = r.n(a),
+        c = r(68875);
+      function l(e) {
+        const { as: s = "div", ref: r, ...i } = e,
+          a = (0, n.mz)({ ...i, className: p()(e.className, c.Flex) }, m),
+          l = !i.disabled && !!i.onClick,
           d = s;
         return (0, o.jsx)(t.J, {
-          focusable: c,
-          children: (0, o.jsx)(d, { ref: r, ...i }),
+          focusable: l,
+          children: (0, o.jsx)(d, { ref: r, ...a }),
         });
       }
       const m = [
-        ...p.h,
+        ...i.h,
         {
           prop: "direction",
           responsive: !0,
-          className: l.Direction,
+          className: c.Direction,
           cssProperty: "--direction",
         },
         {
           prop: "justify",
           responsive: !0,
-          className: l.Justify,
+          className: c.Justify,
           cssProperty: (e) => ["--justify", d(e)],
         },
         {
           prop: "align",
           responsive: !0,
-          className: l.Align,
+          className: c.Align,
           cssProperty: "--align",
         },
         {
           prop: "gap",
           responsive: !0,
-          className: l.Gap,
+          className: c.Gap,
           cssProperty: (e) => ["--gap", `var(--spacing-${e})`],
         },
         {
           prop: "gapX",
           responsive: !0,
-          className: l.GapX,
+          className: c.GapX,
           cssProperty: (e) => ["--gap-x", `var(--spacing-${e})`],
         },
         {
           prop: "gapY",
           responsive: !0,
-          className: l.GapY,
+          className: c.GapY,
           cssProperty: (e) => ["--gap-y", `var(--spacing-${e})`],
         },
         {
           prop: "wrap",
           responsive: !0,
-          className: l.Wrap,
+          className: c.Wrap,
           cssProperty: "--wrap",
         },
-        { prop: "inline", responsive: !0, className: l.Inline },
+        { prop: "inline", responsive: !0, className: c.Inline },
       ];
       function d(e) {
         return /^(between|around|evenly)$/.test(e) ? `space-${e}` : e;
@@ -562,7 +714,7 @@
     },
     75659: (e, s, r) => {
       "use strict";
-      r.d(s, { L: () => n, h: () => p });
+      r.d(s, { L: () => n, h: () => i });
       var o = r(11526),
         t = r(88122);
       const n = [
@@ -592,7 +744,7 @@
           },
           { prop: "marginEnd", responsive: !0, className: (e) => t[`me-${e}`] },
         ],
-        p = [
+        i = [
           ...n,
           { prop: "padding", responsive: !0, className: (e) => t[`p-${e}`] },
           { prop: "paddingX", responsive: !0, className: (e) => t[`px-${e}`] },
@@ -814,15 +966,26 @@
           },
         ];
     },
+    80797: (e, s, r) => {
+      "use strict";
+      r.d(s, { Q: () => n });
+      var o = r(90626);
+      function t(e, s, r) {
+        return "function" == typeof e ? e(s, r) : o.cloneElement(e, s);
+      }
+      function n(e, s, r, o) {
+        return t(e || s, r, o);
+      }
+    },
     11526: (e, s, r) => {
       "use strict";
       r.d(s, {
-        Ef: () => p,
-        Fd: () => l,
-        ti: () => a,
-        To: () => c,
+        Ef: () => i,
+        Fd: () => c,
+        ti: () => p,
+        To: () => l,
         w7: () => m,
-        mz: () => i,
+        mz: () => a,
       });
       var o = r(96678),
         t = r(55348);
@@ -838,7 +1001,7 @@
         8: !0,
         9: !0,
       };
-      function p(e, s) {
+      function i(e, s) {
         const r = { remaining: { ...e }, extracted: {} };
         for (const e of s) {
           const s = e.prop;
@@ -847,83 +1010,83 @@
         }
         return r;
       }
-      function i(e, s) {
+      function a(e, s) {
         return (function (e, s, r) {
           const o = [],
             n = {},
-            i = {},
-            { extracted: a, remaining: l } = p(e, s);
-          for (const p of s) {
-            if (!(p.prop in a)) continue;
-            let s = a[p.prop];
+            a = {},
+            { extracted: p, remaining: c } = i(e, s);
+          for (const i of s) {
+            if (!(i.prop in p)) continue;
+            let s = p[i.prop];
             if (void 0 !== s) {
               if (
-                (p.responsive && (s = (0, t.I)(s, r.formFactor)), p.className)
+                (i.responsive && (s = (0, t.I)(s, r.formFactor)), i.className)
               ) {
                 if (
-                  !p.cssProperty &&
-                  !p.dataProperty &&
-                  "string" == typeof p.className &&
+                  !i.cssProperty &&
+                  !i.dataProperty &&
+                  "string" == typeof i.className &&
                   !s
                 )
                   continue;
                 const e =
-                  "function" == typeof p.className
-                    ? p.className(s)
-                    : p.className;
+                  "function" == typeof i.className
+                    ? i.className(s)
+                    : i.className;
                 o.push(e);
               }
-              if (p.cssProperty)
-                if ("function" == typeof p.cssProperty) {
-                  const r = p.cssProperty(s, e);
+              if (i.cssProperty)
+                if ("function" == typeof i.cssProperty) {
+                  const r = i.cssProperty(s, e);
                   if (r.length && Array.isArray(r[0]))
                     r.forEach(([e, s]) => (n[e] = s));
                   else {
                     const e = r;
                     n[e[0]] = e[1];
                   }
-                } else n[p.cssProperty] = s;
-              if (p.dataProperty)
-                if ("function" == typeof p.dataProperty) {
-                  const [e, r] = p.dataProperty(s);
-                  i[`data-${e}`] = r;
-                } else i[`data-${p.dataProperty}`] = s;
+                } else n[i.cssProperty] = s;
+              if (i.dataProperty)
+                if ("function" == typeof i.dataProperty) {
+                  const [e, r] = i.dataProperty(s);
+                  a[`data-${e}`] = r;
+                } else a[`data-${i.dataProperty}`] = s;
             }
           }
           return (
-            "className" in l &&
-              "string" == typeof l.className &&
-              o.push(l.className),
-            "style" in l &&
-              l.style &&
-              "object" == typeof l.style &&
-              Object.assign(n, l.style),
-            { ...i, ...l, className: o.join(" "), style: n }
+            "className" in c &&
+              "string" == typeof c.className &&
+              o.push(c.className),
+            "style" in c &&
+              c.style &&
+              "object" == typeof c.style &&
+              Object.assign(n, c.style),
+            { ...a, ...c, className: o.join(" "), style: n }
           );
         })(e, s, { formFactor: (0, o.xC)() });
       }
-      function a(e) {
+      function p(e) {
         return (function (e) {
           return !!n[e];
         })(e)
           ? `var(--spacing-${e})`
           : e;
       }
-      function l(e) {
+      function c(e) {
         if (!("%" == e[e.length - 1])) return `var(--color-${e})`;
         const [s, r] = e.split(" ");
         return `rgb( from ${`var(--color-${s})`} r g b / ${r} )`;
       }
-      function c(e, s) {
-        return e.startsWith("text") ? `var(--color-${e}-${s})` : l(e);
+      function l(e, s) {
+        return e.startsWith("text") ? `var(--color-${e}-${s})` : c(e);
       }
       function m(e) {
-        return e.startsWith("text") ? `var(--color-${e})` : l(e);
+        return e.startsWith("text") ? `var(--color-${e})` : c(e);
       }
     },
     55348: (e, s, r) => {
       "use strict";
-      r.d(s, { I: () => n, n: () => p });
+      r.d(s, { I: () => n, n: () => i });
       var o = r(96678);
       const t = o.IE.reduce((e, s, r) => ((e[s] = r), e), {});
       function n(e, s) {
@@ -931,33 +1094,112 @@
         for (let r = t[s]; r >= 0; r--) if (o.IE[r] in e) return e[o.IE[r]];
         return e.initial;
       }
-      function p(e) {
+      function i(e) {
         return n(e, (0, o.xC)());
       }
     },
+    20187: (e, s, r) => {
+      "use strict";
+      r.d(s, { Ae: () => m, EY: () => c, U6: () => l });
+      var o = r(7850),
+        t = r(11526),
+        n = r(75659),
+        i = r(64238),
+        a = r.n(i),
+        p = r(65274);
+      function c(e) {
+        const { as: s = "span", ref: r, className: n, ...i } = e,
+          c = s;
+        return (0, o.jsx)(c, {
+          ref: r,
+          ...(0, t.mz)({ ...i, className: a()(p.Text, n) }, m),
+        });
+      }
+      const l = [
+          {
+            prop: "weight",
+            responsive: !0,
+            className: p.TextWeight,
+            cssProperty: (e) => ["--text-weight", `var(--font-weight-${e})`],
+          },
+          {
+            prop: "align",
+            responsive: !0,
+            className: p.TextAlign,
+            cssProperty: "--text-align",
+          },
+          {
+            prop: "color",
+            cssProperty: (e, s) => {
+              var r;
+              return [
+                "--text-color",
+                (0, t.To)(
+                  e,
+                  null !== (r = s.contrast) && void 0 !== r ? r : "body",
+                ),
+              ];
+            },
+          },
+          {
+            prop: "contrast",
+            cssProperty: (e, s) => {
+              var r;
+              return [
+                "--text-color",
+                (0, t.To)(
+                  null !== (r = s.color) && void 0 !== r ? r : "text-body",
+                  e,
+                ),
+              ];
+            },
+          },
+          { prop: "truncate", className: p.Truncate },
+          {
+            prop: "lineClamp",
+            responsive: !0,
+            className: p.LineClamp,
+            cssProperty: "--line-clamp",
+          },
+          {
+            prop: "whiteSpace",
+            className: p.WhiteSpace,
+            cssProperty: "--white-space",
+          },
+        ],
+        m = [
+          ...l,
+          ...n.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (e) => p[`TextSize-${e}`],
+          },
+        ];
+    },
     39479: (e, s, r) => {
       "use strict";
-      r.d(s, { J: () => l });
+      r.d(s, { J: () => c });
       var o = r(7850),
         t = r(8871),
         n = r(90626),
-        p = r(7745),
-        i = r(90665),
-        a = r(74882);
-      function l(e) {
+        i = r(7745),
+        a = r(90665),
+        p = r(74882);
+      function c(e) {
         var s;
-        const { children: r, "flow-children": l, ...c } = e,
-          { gamepadEvents: m } = (0, i.C7)(e);
-        l && (c.layout = (0, p.O)(l)),
+        const { children: r, "flow-children": c, ...l } = e,
+          { gamepadEvents: m } = (0, a.C7)(e);
+        c && (l.layout = (0, i.O)(c)),
           m.onOKButton ||
-            ("onClick" in r.props && r.props.onClick && (m.onOKButton = i._K));
-        const { ref: d, node: _ } = (0, i.qp)(c);
-        (0, a.Ui)(m, d);
+            ("onClick" in r.props && r.props.onClick && (m.onOKButton = a._K));
+        const { ref: d, node: _ } = (0, a.qp)(l);
+        (0, p.Ui)(m, d);
         const u = (0, t.Ue)(
           d,
           null === (s = r.props) || void 0 === s ? void 0 : s.ref,
         );
-        return (0, o.jsx)(i.TJ.Provider, {
+        return (0, o.jsx)(a.TJ.Provider, {
           value: _,
           children: n.cloneElement(r, { ...r.props, ref: u }),
         });

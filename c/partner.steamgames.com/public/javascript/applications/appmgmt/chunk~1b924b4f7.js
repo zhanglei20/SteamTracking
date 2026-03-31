@@ -445,6 +445,19 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
+      }
+      function _(_, _, _, _) {
+        return _(_ || _, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -842,59 +855,72 @@
           ),
           _ = (0, _.useCallback)(() => {
             if (!_.current || !_.current) return;
-            const _ = _.current.getBoundingClientRect();
+            const _ = _.current.getBoundingClientRect(),
+              _ = _.current.getBoundingClientRect();
             let _ = _;
             const _ = _.current.matches(":dir(rtl)");
             _ && ("left" === _ ? (_ = "right") : "right" === _ && (_ = "left")),
               _.current.style.setProperty("--parentWidth", `${_.width}px`),
-              _.current.style.setProperty("--parentHeight", `${_.height}px`),
-              _ ||
-                ("left" === _
+              _.current.style.setProperty("--parentHeight", `${_.height}px`);
+            let _ = 0;
+            if (!_) {
+              if (_.width) {
+                if ("left" === _) {
+                  _ = (_ ? _.right : _.left) - _.width;
+                }
+                if ("right" === _) {
+                  const _ = _ ? _.left : _.right;
+                  _ = document.documentElement.clientWidth - (_ + _.width);
+                }
+                void 0 === _ &&
+                  (_ = _
+                    ? _.right - _.width
+                    : document.documentElement.clientWidth -
+                      (_.left + _.width)),
+                  (_ = Math.min(_, 0));
+              }
+              "left" === _
+                ? _
+                  ? ((_.current.style.left = "unset"),
+                    (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                  : ((_.current.style.left = "unset"),
+                    (_.current.style.right = `${document.documentElement.clientWidth - _.left + _}px`))
+                : "right" === _
                   ? _
-                    ? ((_.current.style.left = "unset"),
-                      (_.current.style.right =
-                        document.documentElement.clientWidth - _.right + "px"))
-                    : ((_.current.style.left = "unset"),
-                      (_.current.style.right =
-                        document.documentElement.clientWidth - _.left + "px"))
-                  : "right" === _
-                    ? _
-                      ? ((_.current.style.left = `${_.left}px`),
-                        (_.current.style.right = "unset"))
-                      : ((_.current.style.left = `${_.right}px`),
-                        (_.current.style.right = "unset"))
-                    : void 0 === _ &&
-                      (_
-                        ? ((_.current.style.left = "unset"),
-                          (_.current.style.right =
-                            document.documentElement.clientWidth -
-                            _.right +
-                            "px"))
-                        : ((_.current.style.left = `${_.left}px`),
-                          (_.current.style.right = "unset")))),
-              _ ||
-                ("down" === _
-                  ? ((_.current.style.top = `${_.bottom}px`),
+                    ? ((_.current.style.left = `${_.left + _}px`),
+                      (_.current.style.right = "unset"))
+                    : ((_.current.style.left = `${_.right + _}px`),
+                      (_.current.style.right = "unset"))
+                  : void 0 === _ &&
+                    (_
+                      ? ((_.current.style.left = "unset"),
+                        (_.current.style.right = `${document.documentElement.clientWidth - _.right + _}px`))
+                      : ((_.current.style.left = `${_.left + _}px`),
+                        (_.current.style.right = "unset")));
+            }
+            _ ||
+              ("down" === _
+                ? ((_.current.style.top = `${_.bottom}px`),
+                  (_.current.style.bottom = "unset"),
+                  _.current.style.setProperty(
+                    "--availableHeight",
+                    document.documentElement.clientHeight - _.bottom + "px",
+                  ))
+                : "up" === _
+                  ? ((_.current.style.top = "unset"),
+                    (_.current.style.bottom =
+                      document.documentElement.clientHeight - _.top + "px"),
+                    _.current.style.setProperty(
+                      "--availableHeight",
+                      `${_.top}px`,
+                    ))
+                  : void 0 === _ &&
+                    ((_.current.style.top = `${_.top}px`),
                     (_.current.style.bottom = "unset"),
                     _.current.style.setProperty(
                       "--availableHeight",
-                      document.documentElement.clientHeight - _.bottom + "px",
-                    ))
-                  : "up" === _
-                    ? ((_.current.style.top = "unset"),
-                      (_.current.style.bottom =
-                        document.documentElement.clientHeight - _.top + "px"),
-                      _.current.style.setProperty(
-                        "--availableHeight",
-                        `${_.top}px`,
-                      ))
-                    : void 0 === _ &&
-                      ((_.current.style.top = `${_.top}px`),
-                      (_.current.style.bottom = "unset"),
-                      _.current.style.setProperty(
-                        "--availableHeight",
-                        document.documentElement.clientHeight - _.top + "px",
-                      )));
+                      document.documentElement.clientHeight - _.top + "px",
+                    )));
           }, [_, _, _, _]),
           _ = (0, _.useMemo)(() => {
             if (_.current) return (0, _._)(_.current);
@@ -903,6 +929,7 @@
           () =>
             _
               ? (_.current?.showPopover(),
+                _(),
                 _?.addEventListener("scroll", _),
                 window.addEventListener("scroll", _),
                 () => {
@@ -1122,7 +1149,25 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, ..._ } = _;
+        return (0, _.jsxs)(_._, {
+          cursor: "default",
+          gap: "2",
+          className: _.Option,
+          ..._,
+          children: [
+            (0, _.jsx)("div", {
+              className: _.RadioCircle,
+            }),
+            (0, _.jsx)(_._, {
+              children: _,
+            }),
+          ],
+        });
+      }
       const _ = Object.assign(
           function (_) {
             const {
@@ -1151,27 +1196,53 @@
           },
           {
             Root: function (_) {
-              const { value: _, onValueChange: _, ..._ } = _,
+              const { value: _, onValueChange: _, render: _, ..._ } = _,
+                _ = (0, _.useRef)(null),
+                _ = (0, _.useCallback)((_, _) => {
+                  if (!_.current) return;
+                  const _ = [..._.current.querySelectorAll("[data-radio-id]")];
+                  if (0 !== _.length)
+                    for (let _ = 0; _ < _.length; _++) {
+                      const _ = _[_];
+                      if (!_.dataset.radioId) continue;
+                      if (_.dataset.radioId === _) {
+                        const _ = _[(_ + _ + _.length) % _.length];
+                        _.click(), _.focus();
+                      }
+                    }
+                }, []),
+                _ = (0, _.useCallback)((_) => _(_, 1), [_]),
+                _ = (0, _.useCallback)((_) => _(_, -1), [_]),
                 _ = (0, _.useMemo)(
                   () => ({
                     value: _,
                     onValueChange: _,
+                    onSelectNext: _,
+                    onSelectPrev: _,
                   }),
-                  [_, _],
-                );
-              return (0, _.jsx)(_, {
-                value: _,
-                children: (0, _.jsx)(_._, {
+                  [_, _, _, _],
+                ),
+                _ = {
+                  role: "radiogroup",
+                  ref: _,
+                  ..._,
+                },
+                _ = (0, _.jsx)(_._, {
                   direction: "column",
                   gap: "2",
                   role: "radiogroup",
                   ..._,
                 }),
+                _ = (0, _._)(_, _, _);
+              return (0, _.jsx)(_, {
+                value: _,
+                children: _,
               });
             },
             Option: function (_) {
-              const { value: _, ref: _, children: _ } = _,
-                _ = (0, _.useContext)(_);
+              const { value: _, ref: _, children: _, render: _ } = _,
+                _ = (0, _.useContext)(_),
+                _ = (0, _.useId)();
               if (!_)
                 return (
                   console.error(
@@ -1179,32 +1250,42 @@
                   ),
                   null
                 );
-              const { value: _, onValueChange: _ } = _,
+              const {
+                  value: _,
+                  onValueChange: _,
+                  onSelectNext: _,
+                  onSelectPrev: _,
+                } = _,
                 _ = _ === _,
                 _ = () => {
                   _ || _(_);
-                };
-              return (0, _.jsxs)(_._, {
-                ref: _,
-                role: "radio",
-                "aria-checked": _,
-                onClick: _,
-                onKeyDown: (_) => {
-                  " " === _.key &&
-                    (_(), _.preventDefault(), _.stopPropagation());
                 },
-                tabIndex: _ ? 0 : -1,
-                cursor: "default",
-                gap: "2",
-                className: _.Option,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _.RadioCircle,
-                  }),
-                  (0, _.jsx)(_._, {
-                    children: _,
-                  }),
-                ],
+                _ = {
+                  role: "radio",
+                  "aria-checked": _,
+                  "data-radio-id": _,
+                  onClick: _,
+                  onKeyDown: (_) => {
+                    switch (_.key) {
+                      case " ":
+                        _(), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowRight":
+                      case "ArrowDown":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowLeft":
+                      case "ArrowUp":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                    }
+                  },
+                  tabIndex: _ ? 0 : -1,
+                  ref: _,
+                  children: _,
+                },
+                _ = (0, _.jsx)(_, {});
+              return (0, _._)(_, _, _, {
+                bSelected: _,
               });
             },
           },

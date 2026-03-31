@@ -2104,8 +2104,8 @@
           ? W().LoadThumbnails(e, t, r, i, n, null == a || a)
           : null;
       }
-      function A(e, t, r) {
-        return null != W() ? W().TakeScreenshot(e, t, r.valMS) : null;
+      function A(e, t, r, i) {
+        return null != W() ? W().TakeScreenshot(e, t, r.valMS, i) : null;
       }
       function L() {
         return null != W()
@@ -5090,10 +5090,9 @@
               (0, a.jsx)(Ke.kt, {
                 onSelected: () => {
                   const { strTimelineID: e, nTimelineOffsetMS: r } =
-                      t.ConvertGlobalOffsetToTimelineRelativeOffset(i.valMS),
-                    n = t.GetLoader().GetTimelineStartBeforeGlobalZeroMS(e),
-                    a = (0, ee.sK)(r.valMS + n);
-                  A(t.GetGameID(), e, a);
+                    t.ConvertGlobalOffsetToTimelineRelativeOffset(i.valMS);
+                  t.GetLoader().GetTimelineStartBeforeGlobalZeroMS(e);
+                  A(t.GetGameID(), e, r, t.GetClipID());
                 },
                 className: st.TimelineContextMenuItem,
                 children: (0, a.jsxs)("div", {
@@ -5248,10 +5247,9 @@
               onSelected: () => {
                 const e = t.GetGlobalMSPlaytime(),
                   { strTimelineID: r, nTimelineOffsetMS: i } =
-                    t.ConvertGlobalOffsetToTimelineRelativeOffset(e.valMS),
-                  n = t.GetLoader().GetTimelineStartBeforeGlobalZeroMS(r),
-                  a = (0, ee.sK)(i.valMS + n);
-                A(t.GetGameID(), r, a);
+                    t.ConvertGlobalOffsetToTimelineRelativeOffset(e.valMS);
+                t.GetLoader().GetTimelineStartBeforeGlobalZeroMS(r);
+                A(t.GetGameID(), r, i, t.GetClipID());
               },
               className: st.TimelineContextMenuItem,
               children: (0, a.jsxs)("div", {
@@ -13618,6 +13616,11 @@
                     n: 3,
                     br: s.qM.readUint64String,
                     bw: s.gp.writeUint64String,
+                  },
+                  source_clip_id: {
+                    n: 4,
+                    br: s.qM.readString,
+                    bw: s.gp.writeString,
                   },
                 },
               }),

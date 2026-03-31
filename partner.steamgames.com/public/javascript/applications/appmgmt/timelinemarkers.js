@@ -6025,12 +6025,11 @@
               (0, n.jsx)(yr.kt, {
                 onSelected: () => {
                   const { strTimelineID: e, nTimelineOffsetMS: r } =
-                      t.ConvertGlobalOffsetToTimelineRelativeOffset(i.valMS),
-                    n = t.GetLoader().GetTimelineStartBeforeGlobalZeroMS(e),
-                    a = (0, Ye.sK)(r.valMS + n);
-                  !(function (e, t, r) {
-                    null != Ne() && Ne().TakeScreenshot(e, t, r.valMS);
-                  })(t.GetGameID(), e, a);
+                    t.ConvertGlobalOffsetToTimelineRelativeOffset(i.valMS);
+                  t.GetLoader().GetTimelineStartBeforeGlobalZeroMS(e);
+                  !(function (e, t, r, i) {
+                    null != Ne() && Ne().TakeScreenshot(e, t, r.valMS, i);
+                  })(t.GetGameID(), e, r, t.GetClipID());
                 },
                 className: Cr.TimelineContextMenuItem,
                 children: (0, n.jsxs)("div", {
@@ -15138,6 +15137,11 @@
                     n: 3,
                     br: s.qM.readUint64String,
                     bw: s.gp.writeUint64String,
+                  },
+                  source_clip_id: {
+                    n: 4,
+                    br: s.qM.readString,
+                    bw: s.gp.writeString,
                   },
                 },
               }),

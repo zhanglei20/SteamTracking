@@ -6,6 +6,7 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
       };
@@ -1623,20 +1624,22 @@
           _ = "indeterminate" === _,
           _ = _ ? _ : _,
           _ = () => {
-            _ && __webpack_require__(!!_ || !_);
+            _ || (_ && __webpack_require__(!!_ || !_));
           };
         return (0, _.jsxs)(_._, {
           ref: _,
           role: "checkbox",
           "aria-checked": _ ? "mixed" : _,
           "data-state": _(_),
-          className: _()(_.Root, _[`Variant-${_}`]),
+          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
           onClick: _,
           tabIndex: 0,
           onKeyDown: (_) => {
-            " " === _.key && (_(), _.preventDefault(), _.stopPropagation());
+            _ ||
+              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
           },
           cursor: "default",
+          "aria-disabled": _,
           ..._,
           children: [
             (0, _.jsx)("div", {

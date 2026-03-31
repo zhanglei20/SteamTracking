@@ -454,6 +454,7 @@
         Points: "_3k_jxlKBddOAxgSknpHNTq",
         IconCheckMark: "_38WUBpAcqEe6Neu89Kri9T",
         Footer: "_164mmLkSJ91cXzABhIrlZq",
+        PointsArea: "_3CsHeO3G5c1fQY9Xx4lgUI",
         Column: "_2ihFd-KfZvzA81NOi3SEEJ",
         Left: "_1v0jLHAK-8P4IONBwuF4kv",
         BalanceIcon: "_3VvvB-r8dZsAaPGZ2nsi1A",
@@ -476,6 +477,7 @@
         SuccessContainer: "Uz_0uByMqbJfo6n5oW71y",
         SuccessText: "_1kQzNssyGs4FwglLbkE3mx",
         InitialLoading: "_1ZKr7z5ZdQghkZZCnjx455",
+        Loading: "fGpQ7K-RTxeDJfNELWaCD",
         ErrorContainer: "_1SebPOeiRaEqfXHg_dsaYQ",
         ErrorText: "ok8moMj5E4XI25uTRhAHN",
         PointsAmount: "_1WCEAVbVX-TuOWAkFll4DS",
@@ -3316,8 +3318,10 @@
         render() {
           const _ = _(
             this.props.reactionType,
-            !this.props.bDisableAnimation &&
-              (this.state.bHovered || this.props.bForceAnimated),
+            !(
+              0 != this.props.bDisableAnimation ||
+              (!this.state.bHovered && !this.props.bForceAnimated)
+            ),
           );
           return (0, _.jsx)("img", {
             className: this.props.className,
@@ -3348,6 +3352,8 @@
             }),
             (this.state = {
               bShowModal: !1,
+              targetid: "",
+              targetType: 0,
             });
         }
         render() {
@@ -3365,7 +3371,7 @@
                 {
                   targetid: _,
                   active: _,
-                  targetType: _,
+                  targetType: _ ?? 0,
                   ugcType: _,
                   onDismiss: () =>
                     this.setState({
@@ -3416,7 +3422,7 @@
           [_, _] = _.useState(_ || 0),
           [_, _] = _.useState(_.SELECTING),
           [_, _] = _.useState(!1),
-          [_, _] = _.useState(void 0),
+          [_, _] = _.useState(2),
           _ = (0, _._)(),
           _ = (0, _._)(),
           _ = (function (_, _, _, _) {
@@ -3432,7 +3438,7 @@
               },
               enabled: _,
             });
-          })(_, _, _, _),
+          })(!!_, _, _, _),
           _ = (function (_, _) {
             return (0, _._)({
               queryKey: ["AwardsConfiguration"],
@@ -3442,15 +3448,15 @@
                 let _ = await _._.GetReactionConfig(_, _);
                 if (1 == __webpack_require__.GetEResult()) {
                   const _ = new Map();
-                  let _ = __webpack_require__.Body().toObject().reactions;
-                  for (const _ of _) _.set(_.reactionid, _);
+                  let _ = __webpack_require__.Body().toObject().reactions ?? [];
+                  for (const _ of _) _.reactionid && _.set(_.reactionid, _);
                   return _;
                 }
                 throw __webpack_require__.GetEResult();
               },
               enabled: _,
             });
-          })(_, _),
+          })(!!_, _),
           _ = (function (_, _) {
             return (0, _._)({
               queryKey: ["UserPointBalance"],
@@ -3461,12 +3467,14 @@
                 __webpack_require__.Body().set_steamid(_);
                 let _ = await _._.GetSummary(_, _);
                 if (1 == _.GetEResult())
-                  return _._.fromString(_.Body().summary().points());
+                  return _._.fromString(
+                    _.Body().toObject().summary?.points ?? "0",
+                  );
                 throw _.GetEResult();
               },
               enabled: _,
             });
-          })(_, _),
+          })(!!_, _),
           _ = (function (_) {
             const _ = (0, _._)();
             return (0, _._)({
@@ -3495,13 +3503,17 @@
           !_)
         )
           return null;
-        const _ = _.data || new Map(),
-          _ = _.data,
+        const _ = _.data ?? new Map(),
+          _ = _.data ?? new _._(0),
           _ = (function (_, _, _) {
             let _ = [];
             return (
               _.forEach(function (_) {
-                if (_.valid_target_types.includes(_) && _.purchaseable)
+                if (
+                  _.valid_target_types?.includes(_) &&
+                  _.purchaseable &&
+                  _.reactionid
+                )
                   switch (_) {
                     case 1:
                     case 3:
@@ -3510,7 +3522,9 @@
                       _.push(_.reactionid);
                       break;
                     case 2:
-                      _.valid_ugc_types.includes(_) && _.push(_.reactionid);
+                      void 0 !== _ &&
+                        _.valid_ugc_types?.includes(_) &&
+                        _.push(_.reactionid);
                   }
               }),
               _
@@ -3719,7 +3733,7 @@
                                     }),
                                     (0, _.jsx)("span", {
                                       className: _.AwardName,
-                                      children: _.data?.get(_).localized_title,
+                                      children: _.data?.get(_)?.localized_title,
                                     }),
                                   ),
                                 }),
@@ -4010,7 +4024,7 @@
                   }),
                   (0, _.jsx)(_, {
                     className: _.Points,
-                    children: (0, _._)(_),
+                    children: (0, _._)(_ ?? 0),
                   }),
                 ],
               }),
@@ -6290,7 +6304,7 @@
                       className: _.Desc,
                       children: _.localized_desc,
                     }),
-                    _.points_transferred > 0 &&
+                    !!_.points_transferred &&
                       (0, _.jsx)("div", {
                         className: _.Points,
                         children: (0, _._)(
@@ -6298,7 +6312,7 @@
                           (0, _._)(_.points_transferred),
                         ),
                       }),
-                    _ > 0 &&
+                    !!_ &&
                       (0, _.jsx)("div", {
                         className: _.Count,
                         children: (0, _._)(
