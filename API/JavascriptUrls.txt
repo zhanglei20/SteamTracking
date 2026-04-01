@@ -1437,6 +1437,7 @@ ${STORE_BASE_URL}gameexplorer/exploreplayedlist
 ${STORE_BASE_URL}genre/Early%20Access/
 ${STORE_BASE_URL}genre/Free%20to%20Play/
 ${STORE_BASE_URL}greatondeck
+${STORE_BASE_URL}hardware/
 ${STORE_BASE_URL}hardware_recycling/
 ${STORE_BASE_URL}hwsurvey/
 ${STORE_BASE_URL}itemstore/${nAppID}/
@@ -1474,6 +1475,7 @@ ${STORE_BASE_URL}meetsteam/attendance_qrcode
 ${STORE_BASE_URL}meetsteam/attendeelist?gid=${}
 ${STORE_BASE_URL}mobile
 ${STORE_BASE_URL}mobile#mobile_section
+${STORE_BASE_URL}mobile/
 ${STORE_BASE_URL}mobile/?show=steamapp
 ${STORE_BASE_URL}mobile?show=steamapp
 ${STORE_BASE_URL}news/
@@ -1635,6 +1637,10 @@ ${STORE_CDN_URL}public/images/footerLogo_valve_new.png
 ${STORE_CDN_URL}public/images/loyalty/reactions/${_ ? "animated" : "still"}/${}.png
 ${STORE_CDN_URL}public/images/mobile/localizedimages/appleappstore/apple_store_${LANGUAGE}.png
 ${STORE_CDN_URL}public/images/mobile/localizedimages/googleplaystore/google_play_store_${LANGUAGE}.png
+${STORE_CDN_URL}public/shared/images/footer/WeChat-QR.png?v=2
+${STORE_CDN_URL}public/shared/images/footer/Weibo-QR.png?v=2
+${STORE_CDN_URL}public/shared/images/footer/wechat_logo.svg?v=1
+${STORE_CDN_URL}public/shared/images/footer/weibo_logo.svg?v=1
 ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
 ${STORE_CHECKOUT_BASE_URL}checkout/
 ${STORE_CHECKOUT_BASE_URL}checkout/?purchasetype=updatebillinginfo&r=cart
@@ -2108,14 +2114,17 @@ https://<url to zoom>
 https://about.steamchina.com/content_report.html
 https://about.steamchina.com/infringement_report.html
 https://about.steamchina.com/parentguardianship_agreement.html
+https://about.steamchina.com/upgrade_announcement.html
 https://avatars.akamai.steamstatic.com/e34e65ef2ef16093d4428c930fbcc42490522ed3_full.jpg
 https://avatars.fastly.steamstatic.com/${hash}
 https://avatars.fastly.steamstatic.com/${strAvatarHash}${}.jpg
 https://avatars.fastly.steamstatic.com/${strHash}${strSize}.jpg
 https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg
+https://beian.miit.gov.cn
 https://blog.counter-strike.net/
 https://bouncinglogo.steamscreensavers.host/index.html
 https://bsky.app/profile/partner.steamgames.com
+https://bsky.app/profile/steampowered.com
 https://calendar.google.com/calendar/render?action=TEMPLATE
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.mp4
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.webm
@@ -2301,6 +2310,7 @@ https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts
 https://en.wikipedia.org/wiki/Main_Page
 https://f.io/m-TZSjwG...
 https://facebook.com/dota2/
+https://facebook.com/steam
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
 https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m
 https://grafana.valve.org/steam/d/c2d2436a-7206-47d5-8fca-89bdc91db65d/storemarketing-getitemstofeature-filtering?orgId=2&var-type=marketing_messages
@@ -2980,9 +2990,12 @@ https://twitter.com/Steam
 https://twitter.com/Steamworks
 https://twitter.com/dota2ti
 https://twitter.com/intent/tweet/?
+https://twitter.com/steam
 https://twitter.com/steam_games
 https://valvecorp.slack.com/app_redirect?channel=${}
 https://valvesoftware.com
+https://valvesoftware.com/
+https://valvesoftware.com/about
 https://vimeo.com/privacy
 https://www.amazon.com/
 https://www.counter-strike.net/workshop/workshop
@@ -3050,6 +3063,7 @@ https://www.youtube-nocookie.com/embed/LJ6CoMgr2U8
 https://www.youtube-nocookie.com/embed/d8N2A8KePP4
 https://www.youtube-nocookie.com/embed/p0qKpJXOJsY
 https://www.youtube.com/
+https://www.youtube.com/@Steam
 https://www.youtube.com/c/SteamYT
 https://www.youtube.com/embed/${id}?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct
 https://www.youtube.com/iframe_api

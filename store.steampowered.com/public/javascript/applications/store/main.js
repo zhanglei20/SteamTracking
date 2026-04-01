@@ -1294,6 +1294,35 @@
         return (o += a), o;
       }
     },
+    37603: (e, t, r) => {
+      "use strict";
+      r.d(t, { N: () => s });
+      var i = r(7850),
+        n = r(10430);
+      function s(e) {
+        const {
+            accentColor: t,
+            dullColor: r,
+            bodyTextColor: s,
+            children: a,
+            breakpoints: o,
+          } = e,
+          l = (0, i.jsx)("div", {
+            "data-accent-color": t,
+            "data-dull-color": r,
+            "data-body-text-color": s,
+            style: { display: "contents" },
+            children: (0, i.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: a,
+            }),
+          });
+        return o ? (0, i.jsx)(n.cW, { breakpoints: o, children: l }) : l;
+      }
+    },
     10430: (e, t, r) => {
       "use strict";
       r.d(t, { IE: () => o, cW: () => c, cr: () => u, xC: () => d });
@@ -1346,7 +1375,7 @@
       }
       o.reduce((e, t, r) => ((e[t] = r), e), {});
     },
-    96146: (e, t, r) => {
+    55156: (e, t, r) => {
       "use strict";
       r.d(t, { Y: () => p });
       var i = r(7850),
@@ -1366,30 +1395,8 @@
         return (0, n.useContext)(o);
       }
       var d = r(64238),
-        m = r.n(d);
-      function g(e) {
-        const {
-            accentColor: t,
-            dullColor: r,
-            bodyTextColor: n,
-            children: s,
-            breakpoints: o,
-          } = e,
-          l = (0, i.jsx)("div", {
-            "data-accent-color": t,
-            "data-dull-color": r,
-            "data-body-text-color": n,
-            style: { display: "contents" },
-            children: (0, i.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: s,
-            }),
-          });
-        return o ? (0, i.jsx)(a.cW, { breakpoints: o, children: l }) : l;
-      }
+        m = r.n(d),
+        g = r(37603);
       const p = n.memo(function (e) {
         const {
           defaultTextSize: t,
@@ -1415,7 +1422,7 @@
                 children: (0, i.jsx)("div", {
                   className: m()(s.Root, "noOpinionatedGlobalStyles"),
                   style: p,
-                  children: (0, i.jsxs)(g, {
+                  children: (0, i.jsxs)(g.N, {
                     accentColor: r,
                     dullColor: n,
                     bodyTextColor: o,
@@ -2336,8 +2343,32 @@
     },
     38861: (e, t, r) => {
       "use strict";
-      r.d(t, { J_: () => i, TP: () => n, st: () => s });
-      const i = {
+      r.d(t, {
+        J_: () => s,
+        TP: () => o,
+        _R: () => n,
+        k1: () => a,
+        st: () => l,
+      });
+      var i = r(91933);
+      function n(e) {
+        if (e.preferenceControls.isTechnicallyNecessary) return !0;
+        const t = (0, i.uK)();
+        if (!t) return !1;
+        switch (t.preference_state) {
+          case 1:
+          case 0:
+            return !0;
+          case 2:
+          case 4:
+            return !1;
+        }
+        return (
+          "IsAllowed" in e.preferenceControls &&
+          e.preferenceControls.IsAllowed(t)
+        );
+      }
+      const s = {
           name: "cookieSettings",
           options: {
             secure: !0,
@@ -2348,12 +2379,17 @@
           },
           preferenceControls: { isTechnicallyNecessary: !0 },
         },
-        n = {
+        a = {
+          name: "strResponsiveViewPrefs",
+          options: { maxAge: 31536e6 },
+          preferenceControls: { isTechnicallyNecessary: !0 },
+        },
+        o = {
           name: "shoppingCartGID",
           options: { path: "/", secure: !0, maxAge: 6048e5 },
           preferenceControls: { isTechnicallyNecessary: !0 },
         },
-        s = {
+        l = {
           name: "steamLoginSpoofSteamID",
           options: { path: "/", secure: !0 },
           preferenceControls: { isTechnicallyNecessary: !0 },
@@ -2361,12 +2397,36 @@
     },
     91933: (e, t, r) => {
       "use strict";
-      function i(e) {
+      r.d(t, { Y1: () => s, j_: () => n, uK: () => a });
+      var i = r(38861);
+      function n(e) {
         if (!document.cookie) return;
         const t = document.cookie.match("(^|; )" + e.name + "=([^;]*)");
         return t && t[2] ? decodeURIComponent(t[2]) : void 0;
       }
-      r.d(t, { j_: () => i });
+      function s(e) {
+        return (function (e, t) {
+          if (!document.cookie) return;
+          if (!(0, i._R)(e)) return;
+          const r = e.options?.path ?? "/";
+          let n = "";
+          e.options?.expires
+            ? (n += ";expires=" + e.options.expires.toUTCString())
+            : e.options?.maxAge &&
+              (n += ";max-age=" + Math.floor(e.options.maxAge / 1e3)),
+            e.options?.secure && (n += ";secure"),
+            (document.cookie =
+              encodeURIComponent(e.name) +
+              "=" +
+              encodeURIComponent(t) +
+              n +
+              ";path=" +
+              r);
+        })({ ...e, options: { ...e.options, expires: new Date(0) } }, "");
+      }
+      function a() {
+        return window.SSR?.renderContext?.cookiePrefs;
+      }
     },
     45699: (e, t, r) => {
       "use strict";
@@ -61094,6 +61154,7 @@
         gK: () => g,
         he: () => h,
         m9: () => _,
+        pK: () => S,
         t1: () => y,
         zQ: () => w,
       });
@@ -61261,6 +61322,12 @@
         return s.createPortal(
           (0, i.jsx)(o.g, { target: r, ...l, children: c }),
           p ?? r.ownerDocument.body,
+        );
+      }
+      const C = "DEBUG_StickyHovers";
+      function S() {
+        return (
+          window.sessionStorage && "true" == window.sessionStorage.getItem(C)
         );
       }
     },
@@ -73435,7 +73502,7 @@
         });
       }
       var po = r(31292),
-        ho = r(96146);
+        ho = r(55156);
       let _o = 0;
       function fo(e) {
         return n.lazy(async function () {
@@ -73591,7 +73658,7 @@
             r.e(7937),
             r.e(9099),
             r.e(2298),
-            r.e(9754),
+            r.e(9427),
             r.e(5422),
             r.e(7403),
             r.e(4796),
@@ -73756,7 +73823,7 @@
             r.e(7937),
             r.e(9099),
             r.e(2298),
-            r.e(9754),
+            r.e(9427),
             r.e(5422),
             r.e(7403),
             r.e(4796),
@@ -73921,7 +73988,7 @@
         ),
         Po = fo(() => r.e(8843).then(r.bind(r, 71009))),
         Do = fo(() =>
-          Promise.all([r.e(8291), r.e(1349)]).then(r.bind(r, 26240)),
+          Promise.all([r.e(1814), r.e(1349)]).then(r.bind(r, 26240)),
         ),
         Uo = fo(() =>
           Promise.all([
@@ -74214,12 +74281,21 @@
             r.e(9297),
           ]).then(r.bind(r, 13643)),
         ),
-        Yo = n.Fragment,
+        Yo = fo(async () => ({
+          default: (
+            await Promise.all([
+              r.e(9427),
+              r.e(6130),
+              r.e(1814),
+              r.e(1574),
+            ]).then(r.bind(r, 56561))
+          ).GlobalFooter,
+        })),
         Qo = fo(() =>
           Promise.all([
             r.e(8970),
-            r.e(9754),
-            r.e(3056),
+            r.e(9427),
+            r.e(6130),
             r.e(7403),
             r.e(4796),
             r.e(8614),
@@ -74231,15 +74307,15 @@
             r.e(6769),
             r.e(1006),
             r.e(2687),
-            r.e(8291),
+            r.e(1814),
             r.e(9456),
-          ]).then(r.bind(r, 45132)),
+          ]).then(r.bind(r, 87226)),
         ),
         Xo = fo(() =>
           Promise.all([
             r.e(8970),
-            r.e(9754),
-            r.e(3056),
+            r.e(9427),
+            r.e(6130),
             r.e(7403),
             r.e(4796),
             r.e(8614),
@@ -74251,15 +74327,15 @@
             r.e(6769),
             r.e(1006),
             r.e(2687),
-            r.e(8291),
+            r.e(1814),
             r.e(9456),
           ]).then(r.bind(r, 1593)),
         ),
         Jo = fo(() =>
           Promise.all([
             r.e(8970),
-            r.e(9754),
-            r.e(3056),
+            r.e(9427),
+            r.e(6130),
             r.e(7403),
             r.e(4796),
             r.e(8614),
@@ -74271,7 +74347,7 @@
             r.e(6769),
             r.e(1006),
             r.e(2687),
-            r.e(8291),
+            r.e(1814),
             r.e(9456),
           ]).then(r.bind(r, 84155)),
         );

@@ -2928,28 +2928,9 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_, ..._) {
-        const _ = [],
-          _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
-        let _,
-          _ = 0;
-        for (; (_ = _.exec(_)); ) {
-          (_ += _[0].length), __webpack_require__.push(_[1]);
-          const _ = parseInt(_[2]),
-            _ = _[3] || "",
-            _ = _(_, ..._),
-            _ = (_ >= 1 && _ <= _.length ? _[_ - 1] : null)
-              ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
-              : _;
-          __webpack_require__.push(_);
-        }
-        return (
-          __webpack_require__.push(_.substr(_)),
-          _.createElement(_.Fragment, null, ..._)
-        );
-      }
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -2988,7 +2969,7 @@
               }),
               (0, _.jsx)(_._, {
                 className: _.AnonymousNotice,
-                children: _(
+                children: (0, _._)(
                   _._.Localize("#anonymousreport_footer"),
                   (0, _.jsx)(_._, {
                     href: _,
@@ -3062,6 +3043,38 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -3100,39 +3113,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -3286,14 +3271,6 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
@@ -3306,9 +3283,32 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
-        _ = _.Fragment,
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(async () => ({
+          default: (
+            await Promise.all([
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+              __webpack_require__._("chunkid"),
+            ]).then(__webpack_require__.bind(__webpack_require__, "chunkid"))
+          ).GlobalFooter,
+        })),
         _ = () => (_._.IS_OGG ? "games" : "groups"),
         _ = {
           DiagData: () => "/:anything*/diagdata",
@@ -3925,6 +3925,44 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const {
+            accentColor: _,
+            dullColor: _,
+            bodyTextColor: _,
+            children: _,
+            breakpoints: _,
+          } = _,
+          _ = (0, _.jsx)("div", {
+            "data-accent-color": _,
+            "data-dull-color": _,
+            "data-body-text-color": _,
+            style: {
+              display: "contents",
+            },
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: _,
+            }),
+          });
+        return _
+          ? (0, _.jsx)(_._, {
+              breakpoints: _,
+              children: _,
+            })
+          : _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -4044,37 +4082,8 @@
         return (0, _.useContext)(_);
       }
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            accentColor: _,
-            dullColor: _,
-            bodyTextColor: _,
-            children: _,
-            breakpoints: _,
-          } = _,
-          _ = (0, _.jsx)("div", {
-            "data-accent-color": _,
-            "data-dull-color": _,
-            "data-body-text-color": _,
-            style: {
-              display: "contents",
-            },
-            children: (0, _.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: _,
-            }),
-          });
-        return _
-          ? (0, _.jsx)(_._, {
-              breakpoints: _,
-              children: _,
-            })
-          : _;
-      }
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = _.memo(function (_) {
         const {
           defaultTextSize: _,
@@ -4100,7 +4109,7 @@
                 children: (0, _.jsx)("div", {
                   className: _()(_.Root, "noOpinionatedGlobalStyles"),
                   style: _,
-                  children: (0, _.jsxs)(_, {
+                  children: (0, _.jsxs)(_._, {
                     accentColor: _,
                     dullColor: _,
                     bodyTextColor: _,
@@ -4725,7 +4734,27 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
+        _: () => _,
       });
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        if (_.preferenceControls.isTechnicallyNecessary) return !0;
+        const _ = (0, _._)();
+        if (!_) return !1;
+        switch (_.preference_state) {
+          case 1:
+          case 0:
+            return !0;
+          case 2:
+          case 4:
+            return !1;
+        }
+        return (
+          "IsAllowed" in _.preferenceControls &&
+          _.preferenceControls.IsAllowed(_)
+        );
+      }
       const _ = {
           name: "cookieSettings",
           options: {
@@ -4733,6 +4762,15 @@
             httpOnly: !1,
             path: "/",
             sameSite: "none",
+            maxAge: 31536e6,
+          },
+          preferenceControls: {
+            isTechnicallyNecessary: !0,
+          },
+        },
+        _ = {
+          name: "strResponsiveViewPrefs",
+          options: {
             maxAge: 31536e6,
           },
           preferenceControls: {
@@ -4763,14 +4801,64 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         if (!document.cookie) return;
         const _ = document.cookie.match("(^|; )" + _.name + "=([^;]*)");
         return _ && _[2] ? decodeURIComponent(_[2]) : void 0;
       }
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
+      function _(_) {
+        return (function (_, _) {
+          var _, _, _, _, _;
+          if (!document.cookie) return;
+          if (!(0, _._)(_)) return;
+          const _ =
+            null !==
+              (_ =
+                null === (_ = _.options) || void 0 === _ ? void 0 : _.path) &&
+            void 0 !== _
+              ? _
+              : "/";
+          let _ = "";
+          (null === (_ = _.options) || void 0 === _ ? void 0 : _.expires)
+            ? (_ += ";expires=" + _.options.expires.toUTCString())
+            : (null === (_ = _.options) || void 0 === _ ? void 0 : _.maxAge) &&
+              (_ += ";max-age=" + Math.floor(_.options.maxAge / 1e3)),
+            (null === (_ = _.options) || void 0 === _ ? void 0 : _.secure) &&
+              (_ += ";secure"),
+            (document.cookie =
+              encodeURIComponent(_.name) +
+              "=" +
+              encodeURIComponent(_) +
+              _ +
+              ";path=" +
+              _);
+        })(
+          {
+            ..._,
+            options: {
+              ..._.options,
+              expires: new Date(0),
+            },
+          },
+          "",
+        );
+      }
+      function _() {
+        var _, _;
+        return null ===
+          (_ =
+            null === (_ = window.SSR) || void 0 === _
+              ? void 0
+              : _.renderContext) || void 0 === _
+          ? void 0
+          : _.cookiePrefs;
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -8871,6 +8959,64 @@
         _ = /^(steam|ftp|https?):\/\//;
       function _(_) {
         return _.test(_) ? _ : "https://" + _;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, ..._) {
+        const _ = [],
+          _ = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+        let _,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          (_ += _[0].length), __webpack_require__.push(_[1]);
+          const _ = parseInt(_[2]),
+            _ = _[3] || "",
+            _ = _(_, ..._),
+            _ = (_ >= 1 && _ <= _.length ? _[_ - 1] : null)
+              ? _.cloneElement(_[_ - 1], {}, _ ? _ : null)
+              : _;
+          __webpack_require__.push(_);
+        }
+        return (
+          __webpack_require__.push(_.substr(_)),
+          _.createElement(_.Fragment, null, ..._)
+        );
+      }
+      function _(_, _ = ["b", "i", "br"]) {
+        var _;
+        const _ = _.join("|"),
+          _ = [],
+          _ = new RegExp(
+            `(?<before>.*?)<(?<tagname>${_})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
+            "gs",
+          );
+        let _,
+          _ = 0;
+        for (; (_ = _.exec(_)); ) {
+          if (!_.groups) continue;
+          if (!(null === (_ = _.groups) || void 0 === _ ? void 0 : _.endtag)) {
+            const _ = _.groups.before.length + _.groups.tagname.length + 2;
+            (_ += _), (_.lastIndex = _.index + _), _.push(_.groups.before);
+            const _ = _[2],
+              _ = _.createElement(_);
+            _.push(_);
+            continue;
+          }
+          (_ += _[0].length), _.push(_.groups.before);
+          const _ = _.groups.tagname,
+            _ = _.groups.contents || "";
+          let _ = null;
+          _ && (_ = _(_, _));
+          const _ = _.createElement(_, {}, _);
+          _.push(_);
+        }
+        return _.push(_.slice(_)), _.createElement(_.Fragment, null, ..._);
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -83866,6 +84012,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -84076,6 +84223,12 @@
             children: _,
           }),
           null != _ ? _ : _.ownerDocument.body,
+        );
+      }
+      const _ = "DEBUG_StickyHovers";
+      function _() {
+        return (
+          window.sessionStorage && "true" == window.sessionStorage.getItem(_)
         );
       }
     },
@@ -87181,7 +87334,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 80131), _((_._ = _));
+      return (_ = 27484), _((_._ = _));
       var _;
     });
     _._();

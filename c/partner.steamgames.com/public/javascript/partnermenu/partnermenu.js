@@ -47223,6 +47223,16 @@ Error generating stack: ` +
       for (let _ of _) _(_, _);
     }, _);
   }
+  function _(..._) {
+    if (!(!_ || _.length === 0))
+      return _.length === 1
+        ? _[0]
+        : (_) =>
+            _.forEach((_) => {
+              if (_) typeof _ == "function" ? _(_) : (_.current = _);
+              else return;
+            });
+  }
   function _(_, _) {
     let _ = _.useRef(void 0);
     return _.useCallback((_) => {
@@ -58696,9 +58706,10 @@ Error generating stack: ` +
       return (await fetch(new URL(_[_], document.currentScript.src))).json();
   }
   var _ = _(_);
+  _();
   var _ = _(_(), 1);
   function _(_) {
-    let { term: _, inputRef: _, fnDismiss: _, firstItemRef: _ } = _;
+    let { term: _, inputRef: _, fnDismiss: _, firstItemRef: _, ref: _ } = _;
     function _(_) {
       return {
         queryKey: ["AppSearch", _],
@@ -58762,11 +58773,10 @@ Error generating stack: ` +
       ? (0, _.jsx)("dialog", {
           className: _.SuggestionsPopup,
           open: !0,
-          ref: _,
+          ref: _(_, _),
           onKeyDown: _,
           onBlur: (_) => {
-            (_.relatedTarget && _.relatedTarget.dataset.index !== void 0) ||
-              _();
+            (_.relatedTarget && _.current?.contains(_.relatedTarget)) || _();
           },
           children: (0, _.jsx)("ul", {
             children: _?.data?.map((_, _) =>
@@ -58831,6 +58841,7 @@ Error generating stack: ` +
       [_, _] = _.default.useState(!1),
       _ = (0, _.useRef)(null),
       _ = (0, _.useRef)(null),
+      _ = (0, _.useRef)(null),
       _ = (_) => {
         if (_.key === "Escape") {
           _(!1);
@@ -58853,8 +58864,7 @@ Error generating stack: ` +
           autoComplete: "off",
           onFocus: () => _(!0),
           onBlur: (_) => {
-            (_.relatedTarget && _.relatedTarget.dataset.index !== void 0) ||
-              _(!1);
+            (_.relatedTarget && _.current?.contains(_.relatedTarget)) || _(!1);
           },
           onKeyDown: _,
         }),
@@ -58866,6 +58876,7 @@ Error generating stack: ` +
               _.current?.focus(), _(!1);
             },
             firstItemRef: _,
+            ref: _,
           }),
       ],
     });

@@ -1083,7 +1083,7 @@
     },
     20187: (e, t, r) => {
       "use strict";
-      r.d(t, { Ae: () => d, EY: () => c });
+      r.d(t, { Ae: () => u, EY: () => c, U6: () => d });
       var n = r(7850),
         s = r(41324),
         a = r(75659),
@@ -1095,11 +1095,10 @@
           c = t;
         return (0, n.jsx)(c, {
           ref: r,
-          ...(0, s.mz)({ ...o, className: i()(l.Text, a) }, d),
+          ...(0, s.mz)({ ...o, className: i()(l.Text, a) }, u),
         });
       }
       const d = [
-        ...[
           {
             prop: "weight",
             responsive: !0,
@@ -1139,9 +1138,15 @@
             cssProperty: "--white-space",
           },
         ],
-        ...a.L,
-        { prop: "size", responsive: !0, className: (e) => l[`TextSize-${e}`] },
-      ];
+        u = [
+          ...d,
+          ...a.L,
+          {
+            prop: "size",
+            responsive: !0,
+            className: (e) => l[`TextSize-${e}`],
+          },
+        ];
     },
     28491: (e, t, r) => {
       "use strict";

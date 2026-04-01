@@ -986,7 +986,7 @@
       }
       (n.keys = () => Object.keys(i)), (n.id = 68042), (e.exports = n);
     },
-    80131: (e, t, r) => {
+    27484: (e, t, r) => {
       "use strict";
       r(23808), r(83977);
       var i = r(90626),
@@ -2804,25 +2804,9 @@
       var Ze = r(7860),
         Ke = r(18663),
         $e = r(38455),
-        Ye = r(96146);
-      function Qe(e, ...t) {
-        const r = [],
-          n = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
-        let s,
-          a = 0;
-        for (; (s = n.exec(e)); ) {
-          (a += s[0].length), r.push(s[1]);
-          const e = parseInt(s[2]),
-            n = s[3] || "",
-            o = Qe(n, ...t),
-            l = (e >= 1 && e <= t.length ? t[e - 1] : null)
-              ? i.cloneElement(t[e - 1], {}, n ? o : null)
-              : n;
-          r.push(l);
-        }
-        return r.push(e.substr(a)), i.createElement(i.Fragment, null, ...r);
-      }
-      var Xe = r(63275),
+        Ye = r(55156),
+        Qe = r(66973),
+        Xe = r(63275),
         Je = r(8527),
         et = r(55388),
         tt = r(9154),
@@ -2856,7 +2840,7 @@
               }),
               (0, n.jsx)(f.Z, {
                 className: rt.AnonymousNotice,
-                children: Qe(
+                children: (0, Qe.i)(
                   Xe.u.Localize("#anonymousreport_footer"),
                   (0, n.jsx)(W.Ii, { href: a }),
                 ),
@@ -2906,8 +2890,8 @@
             r.e(8589),
             r.e(7596),
             r.e(7055),
+            r.e(2421),
             r.e(2667),
-            r.e(8415),
             r.e(1477),
             r.e(9402),
             r.e(9436),
@@ -2922,6 +2906,7 @@
             r.e(9774),
             r.e(2694),
             r.e(7679),
+            r.e(1415),
             r.e(9281),
             r.e(9773),
             r.e(9769),
@@ -2935,8 +2920,8 @@
             r.e(8589),
             r.e(7596),
             r.e(7055),
+            r.e(2421),
             r.e(2667),
-            r.e(8415),
             r.e(1477),
             r.e(9402),
             r.e(9436),
@@ -2951,6 +2936,7 @@
             r.e(9774),
             r.e(2694),
             r.e(7679),
+            r.e(1415),
             r.e(9281),
             r.e(9773),
             r.e(9769),
@@ -2965,8 +2951,8 @@
             r.e(8589),
             r.e(7596),
             r.e(7055),
+            r.e(2421),
             r.e(2667),
-            r.e(8415),
             r.e(1477),
             r.e(9402),
             r.e(9436),
@@ -2981,6 +2967,7 @@
             r.e(9774),
             r.e(2694),
             r.e(7679),
+            r.e(1415),
             r.e(9281),
             r.e(9773),
             r.e(9769),
@@ -2999,8 +2986,8 @@
             r.e(8589),
             r.e(7596),
             r.e(7055),
+            r.e(2421),
             r.e(2667),
-            r.e(8415),
             r.e(1477),
             r.e(9436),
             r.e(4731),
@@ -3014,10 +3001,11 @@
             r.e(9774),
             r.e(2694),
             r.e(7679),
+            r.e(1415),
             r.e(9281),
             r.e(9773),
-            r.e(9769),
             r.e(1063),
+            r.e(9769),
             r.e(6299),
             r.e(3256),
             r.e(2079),
@@ -3124,9 +3112,11 @@
         ),
         vt = i.lazy(() =>
           Promise.all([
-            r.e(8415),
+            r.e(2421),
+            r.e(5048),
             r.e(3359),
             r.e(5660),
+            r.e(1415),
             r.e(9769),
             r.e(5282),
             r.e(7331),
@@ -3134,9 +3124,11 @@
         ),
         St = i.lazy(() =>
           Promise.all([
-            r.e(8415),
+            r.e(2421),
+            r.e(5048),
             r.e(3359),
             r.e(5660),
+            r.e(1415),
             r.e(9769),
             r.e(5282),
             r.e(7331),
@@ -3144,15 +3136,26 @@
         ),
         Ct = i.lazy(() =>
           Promise.all([
-            r.e(8415),
+            r.e(2421),
+            r.e(5048),
             r.e(3359),
             r.e(5660),
+            r.e(1415),
             r.e(9769),
             r.e(5282),
             r.e(7331),
-          ]).then(r.bind(r, 37646)),
+          ]).then(r.bind(r, 11381)),
         ),
-        Rt = i.Fragment,
+        Rt = i.lazy(async () => ({
+          default: (
+            await Promise.all([
+              r.e(2421),
+              r.e(5048),
+              r.e(1415),
+              r.e(1574),
+            ]).then(r.bind(r, 2917))
+          ).GlobalFooter,
+        })),
         zt = () => (R.UF.IS_OGG ? "games" : "groups"),
         jt = {
           DiagData: () => "/:anything*/diagdata",
@@ -3638,6 +3641,35 @@
             (e.g_rgPendingLocManifests = void 0);
         })();
     },
+    37603: (e, t, r) => {
+      "use strict";
+      r.d(t, { N: () => s });
+      var i = r(7850),
+        n = r(96678);
+      function s(e) {
+        const {
+            accentColor: t,
+            dullColor: r,
+            bodyTextColor: s,
+            children: a,
+            breakpoints: o,
+          } = e,
+          l = (0, i.jsx)("div", {
+            "data-accent-color": t,
+            "data-dull-color": r,
+            "data-body-text-color": s,
+            style: { display: "contents" },
+            children: (0, i.jsx)("div", {
+              style: {
+                display: "contents",
+                color: "var(--color-text-body-body)",
+              },
+              children: a,
+            }),
+          });
+        return o ? (0, i.jsx)(n.cW, { breakpoints: o, children: l }) : l;
+      }
+    },
     96678: (e, t, r) => {
       "use strict";
       r.d(t, {
@@ -3715,7 +3747,7 @@
         })(m(), e);
       }
     },
-    96146: (e, t, r) => {
+    55156: (e, t, r) => {
       "use strict";
       r.d(t, { Y: () => p });
       var i = r(7850),
@@ -3735,30 +3767,8 @@
         return (0, n.useContext)(o);
       }
       var d = r(64238),
-        m = r.n(d);
-      function g(e) {
-        const {
-            accentColor: t,
-            dullColor: r,
-            bodyTextColor: n,
-            children: s,
-            breakpoints: o,
-          } = e,
-          l = (0, i.jsx)("div", {
-            "data-accent-color": t,
-            "data-dull-color": r,
-            "data-body-text-color": n,
-            style: { display: "contents" },
-            children: (0, i.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: s,
-            }),
-          });
-        return o ? (0, i.jsx)(a.cW, { breakpoints: o, children: l }) : l;
-      }
+        m = r.n(d),
+        g = r(37603);
       const p = n.memo(function (e) {
         const {
           defaultTextSize: t,
@@ -3784,7 +3794,7 @@
                 children: (0, i.jsx)("div", {
                   className: m()(s.Root, "noOpinionatedGlobalStyles"),
                   style: p,
-                  children: (0, i.jsxs)(g, {
+                  children: (0, i.jsxs)(g.N, {
                     accentColor: r,
                     dullColor: n,
                     bodyTextColor: o,
@@ -4396,8 +4406,32 @@
     },
     38861: (e, t, r) => {
       "use strict";
-      r.d(t, { J_: () => i, TP: () => n, st: () => s });
-      const i = {
+      r.d(t, {
+        J_: () => s,
+        TP: () => o,
+        _R: () => n,
+        k1: () => a,
+        st: () => l,
+      });
+      var i = r(91933);
+      function n(e) {
+        if (e.preferenceControls.isTechnicallyNecessary) return !0;
+        const t = (0, i.uK)();
+        if (!t) return !1;
+        switch (t.preference_state) {
+          case 1:
+          case 0:
+            return !0;
+          case 2:
+          case 4:
+            return !1;
+        }
+        return (
+          "IsAllowed" in e.preferenceControls &&
+          e.preferenceControls.IsAllowed(t)
+        );
+      }
+      const s = {
           name: "cookieSettings",
           options: {
             secure: !0,
@@ -4408,12 +4442,17 @@
           },
           preferenceControls: { isTechnicallyNecessary: !0 },
         },
-        n = {
+        a = {
+          name: "strResponsiveViewPrefs",
+          options: { maxAge: 31536e6 },
+          preferenceControls: { isTechnicallyNecessary: !0 },
+        },
+        o = {
           name: "shoppingCartGID",
           options: { path: "/", secure: !0, maxAge: 6048e5 },
           preferenceControls: { isTechnicallyNecessary: !0 },
         },
-        s = {
+        l = {
           name: "steamLoginSpoofSteamID",
           options: { path: "/", secure: !0 },
           preferenceControls: { isTechnicallyNecessary: !0 },
@@ -4421,12 +4460,51 @@
     },
     91933: (e, t, r) => {
       "use strict";
-      function i(e) {
+      r.d(t, { Y1: () => s, j_: () => n, uK: () => a });
+      var i = r(38861);
+      function n(e) {
         if (!document.cookie) return;
         const t = document.cookie.match("(^|; )" + e.name + "=([^;]*)");
         return t && t[2] ? decodeURIComponent(t[2]) : void 0;
       }
-      r.d(t, { j_: () => i });
+      function s(e) {
+        return (function (e, t) {
+          var r, n, s, a, o;
+          if (!document.cookie) return;
+          if (!(0, i._R)(e)) return;
+          const l =
+            null !==
+              (n =
+                null === (r = e.options) || void 0 === r ? void 0 : r.path) &&
+            void 0 !== n
+              ? n
+              : "/";
+          let c = "";
+          (null === (s = e.options) || void 0 === s ? void 0 : s.expires)
+            ? (c += ";expires=" + e.options.expires.toUTCString())
+            : (null === (a = e.options) || void 0 === a ? void 0 : a.maxAge) &&
+              (c += ";max-age=" + Math.floor(e.options.maxAge / 1e3)),
+            (null === (o = e.options) || void 0 === o ? void 0 : o.secure) &&
+              (c += ";secure"),
+            (document.cookie =
+              encodeURIComponent(e.name) +
+              "=" +
+              encodeURIComponent(t) +
+              c +
+              ";path=" +
+              l);
+        })({ ...e, options: { ...e.options, expires: new Date(0) } }, "");
+      }
+      function a() {
+        var e, t;
+        return null ===
+          (t =
+            null === (e = window.SSR) || void 0 === e
+              ? void 0
+              : e.renderContext) || void 0 === t
+          ? void 0
+          : t.cookiePrefs;
+      }
     },
     45699: (e, t, r) => {
       "use strict";
@@ -8211,6 +8289,58 @@
         n = /^(steam|ftp|https?):\/\//;
       function s(e) {
         return n.test(e) ? e : "https://" + e;
+      }
+    },
+    66973: (e, t, r) => {
+      "use strict";
+      r.d(t, { A: () => s, i: () => n });
+      var i = r(90626);
+      function n(e, ...t) {
+        const r = [],
+          s = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs");
+        let a,
+          o = 0;
+        for (; (a = s.exec(e)); ) {
+          (o += a[0].length), r.push(a[1]);
+          const e = parseInt(a[2]),
+            s = a[3] || "",
+            l = n(s, ...t),
+            c = (e >= 1 && e <= t.length ? t[e - 1] : null)
+              ? i.cloneElement(t[e - 1], {}, s ? l : null)
+              : s;
+          r.push(c);
+        }
+        return r.push(e.substr(o)), i.createElement(i.Fragment, null, ...r);
+      }
+      function s(e, t = ["b", "i", "br"]) {
+        var r;
+        const n = t.join("|"),
+          a = [],
+          o = new RegExp(
+            `(?<before>.*?)<(?<tagname>${n})>(?<contents>.*?)(?<endtag><\\/\\2>|$)`,
+            "gs",
+          );
+        let l,
+          c = 0;
+        for (; (l = o.exec(e)); ) {
+          if (!l.groups) continue;
+          if (!(null === (r = l.groups) || void 0 === r ? void 0 : r.endtag)) {
+            const e = l.groups.before.length + l.groups.tagname.length + 2;
+            (c += e), (o.lastIndex = l.index + e), a.push(l.groups.before);
+            const t = l[2],
+              r = i.createElement(t);
+            a.push(r);
+            continue;
+          }
+          (c += l[0].length), a.push(l.groups.before);
+          const e = l.groups.tagname,
+            n = l.groups.contents || "";
+          let u = null;
+          n && (u = s(n, t));
+          const d = i.createElement(e, {}, u);
+          a.push(d);
+        }
+        return a.push(e.slice(c)), i.createElement(i.Fragment, null, ...a);
       }
     },
     96762: (e, t, r) => {
@@ -76629,6 +76759,7 @@
         gK: () => g,
         he: () => h,
         m9: () => _,
+        pK: () => S,
         zQ: () => y,
       });
       var i = r(7850),
@@ -76800,6 +76931,12 @@
         return s.createPortal(
           (0, i.jsx)(o.g, { target: r, ...l, children: c }),
           null != p ? p : r.ownerDocument.body,
+        );
+      }
+      const v = "DEBUG_StickyHovers";
+      function S() {
+        return (
+          window.sessionStorage && "true" == window.sessionStorage.getItem(v)
         );
       }
     },
@@ -79719,7 +79856,7 @@
   },
   (e) => {
     e.O(0, [8997], () => {
-      return (t = 80131), e((e.s = t));
+      return (t = 27484), e((e.s = t));
       var t;
     });
     e.O();
