@@ -67,9 +67,11 @@
         return (
           e &&
             (function (e, a, t) {
-              t
-                ? e.push((0, r.b0)(a, "header"), (0, r.b0)(a, "main_capsule"))
-                : e.push((0, r.b0)(a, "main_capsule"), (0, r.b0)(a, "header"));
+              const s = (0, r.b0)(a, "header_2x") ?? (0, r.b0)(a, "header"),
+                i =
+                  (0, r.b0)(a, "main_capsule_2x") ??
+                  (0, r.b0)(a, "main_capsule");
+              t ? e.push(s, i) : e.push(i, s);
             })(t, e, a),
           t.filter((e) => !!e)
         );
