@@ -7420,6 +7420,34 @@
         });
       }
       function _(_) {
+        const { review: _ } = _,
+          { appid: _ } = _.useContext(_);
+        return _.developer_response && _.timestamp_dev_responded
+          ? (0, _.jsxs)("div", {
+              className: _().DeveloperResponse,
+              children: [
+                (0, _.jsx)("div", {
+                  className: _().Text,
+                  children: _.Localize(
+                    "#Review_OfficialDeveloperResponseExistsDate",
+                    (0, _._)(_.timestamp_dev_responded, {
+                      fullmonthname: !0,
+                      bUseRelativeNames: !1,
+                    }),
+                  ),
+                }),
+                (0, _.jsx)(_._, {
+                  className: _().Link,
+                  href: _(_, _),
+                  children: _.Localize(
+                    "#Review_OfficialDeveloperResponse_View",
+                  ),
+                }),
+              ],
+            })
+          : null;
+      }
+      function _(_) {
         const {
             review: _,
             bIsFriend: _,
@@ -7530,22 +7558,27 @@
               style: {
                 maxHeight: _.height,
               },
-              children: (0, _.jsx)("div", {
+              children: (0, _.jsxs)("div", {
                 className: _().ReviewWrapper,
-                children: (0, _.jsxs)(_._, {
-                  className: _().Top,
-                  children: [
-                    (0, _.jsx)(_, {
-                      author: _.author,
-                    }),
-                    (0, _.jsx)(_, {
-                      review: _,
-                      bIsFriend: _,
-                      bShortPresentation: _,
-                      mapTags: _,
-                    }),
-                  ],
-                }),
+                children: [
+                  (0, _.jsxs)(_._, {
+                    className: _().Top,
+                    children: [
+                      (0, _.jsx)(_, {
+                        author: _.author,
+                      }),
+                      (0, _.jsx)(_, {
+                        review: _,
+                        bIsFriend: _,
+                        bShortPresentation: _,
+                        mapTags: _,
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    review: _,
+                  }),
+                ],
               }),
             }),
           }),

@@ -1344,7 +1344,7 @@ body.v7 .spotlight_col {
 /* ============================================ */
 
 /* Wide Mode */
-@media screen and ( min-width: calc( 1200px + 150px ) )
+@media screen and ( min-width: 1400px )
 {
 	.carousel_wide_mode {
 		overflow: hidden;

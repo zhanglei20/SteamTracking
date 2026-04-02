@@ -2673,6 +2673,18 @@ enum UnnamedEnum5e54375b174a402e
 	ForceBrowserVisible = 16777216;
 }
 
+enum UnnamedEnum5fbde168ba65b54a
+{
+	Error = -1;
+	Welcome = 0;
+	PlugInPuck = 1;
+	UpdatePuck = 2;
+	PlugInController = 3;
+	UpdateController = 4;
+	PuckIntro = 5;
+	BigPictureIntro = 6;
+}
+
 enum UnnamedEnum6010fbb978b95cf2
 {
 	Disabled = 0;

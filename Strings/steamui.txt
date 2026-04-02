@@ -885,6 +885,7 @@
 "X\n1CRemoteClient_UnregisterStatusUpdate_Notification
 "X\n3CContentServerDirectory_GetPeerContentInfo_Response
 "Y\n$CFamilyGroups_GetFamilyGroup_Request
+"Y\n(CHardwareUpdate_CheckForUpdates_Response
 "Y\n)CGameRecording_UploadClipToSteam_Response
 "Z\n-CContentBuilder_GetMissingDepotChunks_Request
 "Z\n2CCommunity_GetClanAnnouncementVoteForUser_Response
@@ -1597,6 +1598,7 @@ $Number%05d$
 $ORIGIN
 $O\tdwR\rox\\r*
 $RepresentationID$
+$SteamInput/Configurator/ShowIbexTour
 $UI/Display/Current/IsExternalDisplay
 $V7E
 $XI(6
@@ -3466,7 +3468,6 @@ ${LANGUAGE}
 (\t"X\n,CSteamInputService_EnableDockedInput_Request
 (\t"X\n7CContentServerDirectory_GetManifestRequestCode_Response
 (\t"Y\n#CClientNotificationItemAnnouncement
-(\t"Y\n(CHardwareUpdate_CheckForUpdates_Response
 (\t"Y\n,CPublishedFile_FileUnsubscribed_Notification
 (\t"Z\n)CCommunity_GetClanLocGroupImages_Response
 (\t"[\n)CPlayer_GetSteamDeckKeyboardSkin_Response
@@ -6942,8 +6943,8 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/x264wrapper.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp:148
-/data/src/steamUI/hardwareupdatecontroller.cpp:213
-/data/src/steamUI/hardwareupdatecontroller.cpp:258
+/data/src/steamUI/hardwareupdatecontroller.cpp:214
+/data/src/steamUI/hardwareupdatecontroller.cpp:259
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
@@ -7268,11 +7269,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+0123456789.
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -14113,6 +14114,7 @@ Android420ToABGR
 Android420ToARGB
 Android420ToARGBMatrix
 AndroidExternalData
+AndroidInternalData
 AndroidSteamPackageRoot
 AnimatingImagePanel
 AnimationController
@@ -14287,6 +14289,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
+Apr  1 2026 23:00:43
 April
 Arabic
 AreFilesInSubscriptionList
@@ -23932,7 +23935,6 @@ MapValueRef::SetInt64Value
 MapValueRef::SetStringValue
 MapValueRef::SetUInt32Value
 MapValueRef::SetUInt64Value
-Mar 27 2026 01:51:14
 Marathi
 March
 MarkMessageClicked
@@ -37155,6 +37157,7 @@ controller_ps5
 controller_ps5_edge
 controller_ps_support
 controller_rog_ally
+controller_show_ibex_tour
 controller_siapi_config_author_mode
 controller_slots
 controller_slots_obsolete
@@ -39858,7 +39861,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen
+ggen&dl
 ghost_
 gidlist
 gidparentcomment
@@ -48122,6 +48125,7 @@ manage_signing
 manager
 manager2
 mandatory
+mandatory_update
 manifest
 manifest_request_code
 manifest_requests
@@ -48512,6 +48516,7 @@ must_not_own_packageid
 must_own_appid
 must_own_packageid
 must_purchase_as_set
+must_update
 mustownapp
 muted
 mutual_friend_account_ids
@@ -51408,6 +51413,7 @@ saved_snapshot
 sbgp-autonomousSysNum
 sbgp-ipAddrBlock
 sbgp-routerIdentifier
+sc_force_fw_update
 sc_schinese
 scale
 scale <= 32768

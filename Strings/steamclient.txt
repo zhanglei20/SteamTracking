@@ -1140,6 +1140,7 @@
 "X\n1CRemoteClient_UnregisterStatusUpdate_Notification
 "X\n3CContentServerDirectory_GetPeerContentInfo_Response
 "Y\n$CFamilyGroups_GetFamilyGroup_Request
+"Y\n(CHardwareUpdate_CheckForUpdates_Response
 "Y\n)CGameRecording_UploadClipToSteam_Response
 "Z\n-CContentBuilder_GetMissingDepotChunks_Request
 "Z\n2CCommunity_GetClanAnnouncementVoteForUser_Response
@@ -3936,7 +3937,6 @@ $steammessages_parental_objects.proto"
 (\t"X\n$CPartnerApps_FindDRMUploads_Response
 (\t"X\n,CSteamInputService_EnableDockedInput_Request
 (\t"X\n7CContentServerDirectory_GetManifestRequestCode_Response
-(\t"Y\n(CHardwareUpdate_CheckForUpdates_Response
 (\t"Y\n,CPublishedFile_FileUnsubscribed_Notification
 (\t"Z\n)CCommunity_GetClanLocGroupImages_Response
 (\t"[\n)CPlayer_GetSteamDeckKeyboardSkin_Response
@@ -7677,14 +7677,15 @@ $steammessages_parental_objects.proto"
 /etc/pki/tls/cert.pem
 /etc/ssl/ca-bundle.pem
 /etc/ssl/certs/ca-certificates.crt
+/external
 /fossilize-external-%d-%d
 /fxLf
 /g6c<
 /index
 /index.html
+/internal
 /legacycompat/Steam.dll
 /manifestupload
-/media0
 /music
 /name
 /nvidiav1/GLCache/%s/%s
@@ -7933,12 +7934,8 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 0000000000000000
 00000001
-00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8092,9 +8089,13 @@ $steammessages_parental_objects.proto"
 100.64.0.0/10
 1000
 1024
+00003333
 10000
 1000000
 10000000
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -11200,6 +11201,7 @@ $steammessages_parental_objects.proto"
 19CHIDMessageToRemote
 19CHTTPClientResponse
 19CHTTPServerResponse
+19CHapticToneWorkItem
 19CInputMouseWheelMsg
 19CInventory_Response
 19CJobUploadFrameRate
@@ -11449,11 +11451,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-20000
-200M
 2019
-2048
+20000
 2000000
+200M
+2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -11692,7 +11694,6 @@ $steammessages_parental_objects.proto"
 21CScheduledFunctionJobI12CCMInterfaceE
 21CScheduledFunctionJobI13CAppInfoCacheE
 21CScheduledFunctionMgr
-21CSimpleHapticWorkItem
 21CSiteServerUILoginJob
 21CSiteServerUIWebUIJob
 21CSteamServiceBaseImpl
@@ -12305,6 +12306,7 @@ $steammessages_parental_objects.proto"
 25CScheduledFunctionUserJobI12CCMInterface9CBaseUserE
 25CScopedSystemLogCollector
 25CSetStreamingClientConfig
+25CSimpleHapticTickWorkItem
 25CSimpleParallelWorkThread
 25CSteamControllerClientJob
 25CSteamTV_AppCheer_Request
@@ -15671,6 +15673,7 @@ $steammessages_parental_objects.proto"
 6.CSteamNotification_NotificationsReceived_Notification
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
+60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -15684,7 +15687,6 @@ $steammessages_parental_objects.proto"
 60CSiteLicenseClientJob_SiteManagerClient_ExpectIncomingClient
 60CSteamInputService_ControllerButtonStateChanged_Notification
 6144
-60000000
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -16274,7 +16276,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hd0\
 9IClientVR
 9IGv
 9ISteamUGC
@@ -17412,6 +17413,7 @@ An unsynchronized lyrics frame must contain at least 5 bytes.
 AnalogTrigger
 Android
 AndroidExternalData
+AndroidInternalData
 AndroidSteamPackageRoot
 Anime
 Announcement
@@ -51715,13 +51717,13 @@ low-pri yield - /data/src/clientdll/clientjob.cpp:780
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6886
 low-pri yield - /data/src/clientdll/compatmanager.cpp:1948
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2200
-low-pri yield - /data/src/clientdll/compatmanager.cpp:2467
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3147
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3179
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3192
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3244
-low-pri yield - /data/src/clientdll/compatmanager.cpp:3844
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2199
+low-pri yield - /data/src/clientdll/compatmanager.cpp:2466
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3146
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3178
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3191
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3243
+low-pri yield - /data/src/clientdll/compatmanager.cpp:3843
 low-pri yield - /data/src/clientdll/csinterface.cpp:180
 low-pri yield - /data/src/clientdll/depotbuilder.cpp:107
 low-pri yield - /data/src/clientdll/depotreconstruct.cpp:3071
@@ -54030,6 +54032,7 @@ manage_signing
 managed
 manager
 mandatory
+mandatory_update
 mangoapp_steam\n
 mangohud %s
 mangohudctl toggle reload_config
@@ -59066,7 +59069,7 @@ stderr
 stdin
 stdout
 steam
-steam Mar 27 2026 01:51:34
+steam Apr  1 2026 23:00:35
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -60512,7 +60515,6 @@ tree_init
 tried to send packet to server, but socket not opened
 trigger
 trigger_analog
-triton_pairing_trigger
 triton_uuid
 trkn
 true
@@ -61499,7 +61501,6 @@ watching_broadcast_appid
 watching_broadcast_channel_id
 watching_broadcast_title
 watching_broadcast_viewers
-waydroid
 wayland: Error: %s: failed to register wayland registry listener
 wayland: context initialized in %f ms
 wayland: failed to acquire display fd

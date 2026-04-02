@@ -1352,6 +1352,7 @@ Amex (BoaCompra)
 Amharic
 Android
 AndroidExternalData
+AndroidInternalData
 AndroidSteamPackageRoot
 Announcement
 Anonymous Game Server

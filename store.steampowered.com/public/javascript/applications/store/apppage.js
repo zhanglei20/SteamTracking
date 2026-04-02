@@ -721,7 +721,7 @@
     },
     75659: (e, t, r) => {
       "use strict";
-      r.d(t, { L: () => a, h: () => o });
+      r.d(t, { L: () => a, h: () => i });
       var n = r(41324),
         s = r(88122);
       const a = [
@@ -751,7 +751,7 @@
           },
           { prop: "marginEnd", responsive: !0, className: (e) => s[`me-${e}`] },
         ],
-        o = [
+        i = [
           ...a,
           { prop: "padding", responsive: !0, className: (e) => s[`p-${e}`] },
           { prop: "paddingX", responsive: !0, className: (e) => s[`px-${e}`] },
@@ -980,7 +980,7 @@
         ti: () => l,
         To: () => d,
         w7: () => u,
-        mz: () => i,
+        mz: () => o,
       });
       var n = r(10430);
       const s = n.IE.reduce((e, t, r) => ((e[t] = r), e), {});
@@ -989,7 +989,7 @@
         for (let r = s[t]; r >= 0; r--) if (n.IE[r] in e) return e[n.IE[r]];
         return e.initial;
       }
-      const o = {
+      const i = {
         0: !0,
         1: !0,
         2: !0,
@@ -1001,12 +1001,12 @@
         8: !0,
         9: !0,
       };
-      function i(e, t) {
+      function o(e, t) {
         return (function (e, t, r) {
           const n = [],
             s = {},
-            o = {},
-            { extracted: i, remaining: l } = (function (e, t) {
+            i = {},
+            { extracted: o, remaining: l } = (function (e, t) {
               const r = { remaining: { ...e }, extracted: {} };
               for (const e of t) {
                 const t = e.prop;
@@ -1016,8 +1016,8 @@
               return r;
             })(e, t);
           for (const l of t) {
-            if (!(l.prop in i)) continue;
-            let t = i[l.prop];
+            if (!(l.prop in o)) continue;
+            let t = o[l.prop];
             if (void 0 !== t) {
               if ((l.responsive && (t = a(t, r.formFactor)), l.className)) {
                 if (
@@ -1046,8 +1046,8 @@
               if (l.dataProperty)
                 if ("function" == typeof l.dataProperty) {
                   const [e, r] = l.dataProperty(t);
-                  o[`data-${e}`] = r;
-                } else o[`data-${l.dataProperty}`] = t;
+                  i[`data-${e}`] = r;
+                } else i[`data-${l.dataProperty}`] = t;
             }
           }
           return (
@@ -1058,13 +1058,13 @@
               l.style &&
               "object" == typeof l.style &&
               Object.assign(s, l.style),
-            { ...o, ...l, className: n.join(" "), style: s }
+            { ...i, ...l, className: n.join(" "), style: s }
           );
         })(e, t, { formFactor: (0, n.xC)() });
       }
       function l(e) {
         return (function (e) {
-          return !!o[e];
+          return !!i[e];
         })(e)
           ? `var(--spacing-${e})`
           : e;
@@ -1087,15 +1087,15 @@
       var n = r(7850),
         s = r(41324),
         a = r(75659),
-        o = r(64238),
-        i = r.n(o),
+        i = r(64238),
+        o = r.n(i),
         l = r(65274);
       function c(e) {
-        const { as: t = "span", ref: r, className: a, ...o } = e,
+        const { as: t = "span", ref: r, className: a, ...i } = e,
           c = t;
         return (0, n.jsx)(c, {
           ref: r,
-          ...(0, s.mz)({ ...o, className: i()(l.Text, a) }, u),
+          ...(0, s.mz)({ ...i, className: o()(l.Text, a) }, u),
         });
       }
       const d = [
@@ -1150,32 +1150,32 @@
     },
     28491: (e, t, r) => {
       "use strict";
-      r.d(t, { Y: () => i });
+      r.d(t, { Y: () => o });
       var n = r(7850),
         s = r(20187),
         a = r(41324),
-        o = r(50122);
-      function i(e) {
+        i = r(50122);
+      function o(e) {
         const { underline: t = "auto", ...r } = e;
         return (0, n.jsx)("a", {
-          ...(0, a.mz)({ ...r, underline: t, className: o.TextLink }, l),
+          ...(0, a.mz)({ ...r, underline: t, className: i.TextLink }, l),
         });
       }
       const l = [
         ...s.Ae,
-        { prop: "underline", className: (e) => o[`Underline-${e}`] },
+        { prop: "underline", className: (e) => i[`Underline-${e}`] },
       ];
     },
     31286: (e, t, r) => {
       "use strict";
-      r.d(t, { N: () => i });
+      r.d(t, { N: () => o });
       var n = r(7850),
         s = r(52038),
         a = r(56425),
-        o = r(45699);
-      const i = (e) => {
+        i = r(45699);
+      const o = (e) => {
         const { className: t, ...r } = e;
-        return (0, n.jsx)(o.fu, {
+        return (0, n.jsx)(i.fu, {
           className: (0, s.A)(t, a.UnstyledButton),
           ...r,
         });
@@ -1183,17 +1183,17 @@
     },
     87669: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => i });
+      r.r(t), r.d(t, { default: () => o });
       var n = r(7850),
         s = r(1205),
         a = r.n(s),
-        o = r(88965);
-      function i(e) {
+        i = r(88965);
+      function o(e) {
         const {
           title: t,
           navKey: r,
           seeAllLink: s,
-          appIDs: i,
+          appIDs: o,
           sortOrder: l,
           scorePenaltyIfOwned: c,
           capsuleSize: d,
@@ -1205,12 +1205,12 @@
               className: a().Header,
               children: [
                 (0, n.jsx)("div", { className: a().Title, children: t }),
-                (0, n.jsx)(o.H, { url: s }),
+                (0, n.jsx)(i.H, { url: s }),
               ],
             }),
-            (0, n.jsx)(o._, {
+            (0, n.jsx)(i._, {
               navKey: r,
-              appIDs: i,
+              appIDs: o,
               maxItemCount: 4,
               sortOrder: l,
               scorePenaltyIfOwned: c,
@@ -1226,8 +1226,8 @@
       var n = r(7850),
         s = r(90626),
         a = r(57876),
-        o = r(75933),
-        i = r(30894),
+        i = r(75933),
+        o = r(30894),
         l = r(16021),
         c = r(62792),
         d = r(55263),
@@ -1243,7 +1243,7 @@
         const {
             navKey: t,
             classes: r,
-            appIDs: i,
+            appIDs: o,
             sortOrder: c,
             scorePenaltyIfOwned: p,
             capsuleSize: h,
@@ -1253,20 +1253,20 @@
             strFeatureFirstAppMsg: y,
             setNumberVisibleItems: S,
           } = e,
-          N = (0, o.a4)(910),
+          N = (0, i.a4)(910),
           j = (0, g.Qn)(),
-          [T, b] = s.useState(i),
-          I = (0, d.zX)(i, a.Xh),
+          [T, b] = s.useState(o),
+          I = (0, d.zX)(o, a.Xh),
           [R, E] = s.useState(null);
         s.useEffect(() => {
           if (1 == I) return;
-          const e = i.filter((e) => !l.A.Get().BIsStoreItemMissing(e, 0));
-          if (y && N && !j && e.length > 0 && e[0] == i[0]) {
+          const e = o.filter((e) => !l.A.Get().BIsStoreItemMissing(e, 0));
+          if (y && N && !j && e.length > 0 && e[0] == o[0]) {
             const t = [e[0], v, ...e.slice(1)];
             b(t), E(y), S?.(t.length);
           } else b(e), S?.(e.length);
-        }, [i, j, N, I, S, y]);
-        const P = j;
+        }, [o, j, N, I, S, y]);
+        const L = j;
         return (0, n.jsx)(m.F, {
           className: (0, u.A)(r, {
             SaleSectionCarousel: !0,
@@ -1281,7 +1281,7 @@
           hideArrows: !1,
           screenIsWide: N,
           navKey: t,
-          bForceSimpleCarousel: P,
+          bForceSimpleCarousel: L,
           children: w(T, c ?? "none", p ?? 3).map((e, t) =>
             (0, n.jsx)(
               x,
@@ -1301,9 +1301,9 @@
             appID: t,
             size: r,
             creatorClanAccountID: s,
-            strFeaturingMsg: o,
+            strFeaturingMsg: i,
           } = e,
-          [i] = (0, d.G6)(t, 0, a.Xh);
+          [o] = (0, d.G6)(t, 0, a.Xh);
         if (t == v)
           return (0, n.jsx)("div", {
             className: (0, u.A)({
@@ -1311,13 +1311,13 @@
               [_().Small]: "small" == r,
             }),
           });
-        if (!i)
+        if (!o)
           return (0, n.jsx)("div", {
             className: (0, u.A)(_().Capsule, _().Placeholder),
           });
-        const l = (0, c._4)(i.GetStoreItemType(), i.GetAppType()),
-          m = { id: i.GetID(), type: l },
-          f = Boolean(o);
+        const l = (0, c._4)(o.GetStoreItemType(), o.GetAppType()),
+          m = { id: o.GetID(), type: l },
+          f = Boolean(i);
         return (0, n.jsx)("div", {
           className: (0, u.A)({
             [_().Capsule]: !0,
@@ -1330,15 +1330,15 @@
             bHidePlatforms: !0,
             bHideStoreHover: f,
             creatorAccountID: s,
-            strDoubleCapsuleMessage: f ? (0, p.we)(o) : void 0,
+            strDoubleCapsuleMessage: f ? (0, p.we)(i) : void 0,
             bPreferAssetWithoutOverride: !1,
           }),
         });
       }
       function w(e, t, r) {
-        const n = i.Fm.Get(),
+        const n = o.Fm.Get(),
           a = s.useMemo(() => e.filter((e) => !n.BIsGameIgnored(e)), [e, n]),
-          o = s.useMemo(
+          i = s.useMemo(
             () => Array.from({ length: a.length }, () => Math.random()),
             [a.length],
           );
@@ -1348,7 +1348,7 @@
                 id: e,
                 score:
                   (n.BIsGameOwned(e) ? r : 0) +
-                  (Math.sqrt(t) + 2) * o[t] +
+                  (Math.sqrt(t) + 2) * i[t] +
                   Math.sqrt(t),
               }))
               .sort((e, t) => e.score - t.score)
@@ -1381,12 +1381,12 @@
     },
     72061: (e, t, r) => {
       "use strict";
-      r.d(t, { NW: () => h, O4: () => l, nT: () => i });
+      r.d(t, { NW: () => h, O4: () => l, nT: () => o });
       var n = r(7850),
         s = r(90626),
         a = r(65414),
-        o = r(25489);
-      const i = 8e3;
+        i = r(25489);
+      const o = 8e3;
       var l;
       function c(e) {
         switch (e) {
@@ -1399,7 +1399,7 @@
       }
       function d(e) {
         return e == l.LNY2020
-          ? `hue-rotate(${360 + ((0, o.Tg))(-30, 10)}deg)`
+          ? `hue-rotate(${360 + ((0, i.Tg))(-30, 10)}deg)`
           : "";
       }
       !(function (e) {
@@ -1411,7 +1411,7 @@
           const { anim: r } = (0, a.zh)({
               anim: 1,
               from: { anim: 0 },
-              config: { duration: i },
+              config: { duration: o },
             }),
             n = (0, s.useMemo)(() => {
               let n = (function (e, t) {
@@ -1421,8 +1421,8 @@
                   for (let e = 0; e < 200; e++) {
                     const e = Math.random(),
                       a = Math.random() * e,
-                      o = Math.random() * a,
-                      i = 4 * (Math.random() - 0.5) * Math.PI * 20,
+                      i = Math.random() * a,
+                      o = 4 * (Math.random() - 0.5) * Math.PI * 20,
                       u = Math.random() + 0.5,
                       p = [
                         Math.random() * s - s - 20,
@@ -1435,10 +1435,10 @@
                       g = c(t),
                       v = d(t);
                     r.push({
-                      rotationCoefficient: i,
+                      rotationCoefficient: o,
                       rotationRatioY: a,
                       rotationRatioX: e,
-                      rotationRatioZ: o,
+                      rotationRatioZ: i,
                       yRange: p,
                       xRange: _,
                       scale: m,
@@ -1456,8 +1456,8 @@
                       rotationRatioY: n,
                       rotationRatioX: s,
                       rotationRatioZ: a,
-                      yRange: o,
-                      xRange: i,
+                      yRange: i,
+                      xRange: o,
                       scale: c,
                       colorHue: d,
                       filter: u,
@@ -1471,8 +1471,8 @@
                         const t = e * r * n,
                           l = e * r * s,
                           d = e * r * a,
-                          u = e * (o[1] - o[0]) + o[0];
-                        return `translate(${e * (i[1] - i[0]) + i[0]}px, ${u}px) rotateY(${t}rad) rotateX(${l}rad) rotateZ(${d}rad) scale(${c})`;
+                          u = e * (i[1] - i[0]) + i[0];
+                        return `translate(${e * (o[1] - o[0]) + o[0]}px, ${u}px) rotateY(${t}rad) rotateX(${l}rad) rotateZ(${d}rad) scale(${c})`;
                       }),
                     };
                   })(e, r),
@@ -1486,19 +1486,19 @@
                         rotationRatioZ: n,
                         yRange: s,
                         xRange: a,
-                        scale: o,
-                        colorHue: i,
+                        scale: i,
+                        colorHue: o,
                         filter: l,
                       } = e;
                       return {
                         backgroundColor: void 0,
-                        fill: i,
+                        fill: o,
                         filter: l,
                         flRandom: Math.random(),
                         transform: t.interpolate((e) => {
                           const t = ((e * r) / 4) * n,
-                            i = e * (s[1] - s[0]) + s[0];
-                          return `translate(${e * (a[1] - a[0]) + a[0]}px, ${i}px) rotateZ(${t}rad) scale(${o})`;
+                            o = e * (s[1] - s[0]) + s[0];
+                          return `translate(${e * (a[1] - a[0]) + a[0]}px, ${o}px) rotateZ(${t}rad) scale(${i})`;
                         }),
                       };
                     })(e, r),
@@ -1528,20 +1528,20 @@
             return [e, r];
           })();
           let a,
-            { rgParticleStyles: o, rgStreamerStyles: i } = u(t, e);
+            { rgParticleStyles: i, rgStreamerStyles: o } = u(t, e);
           switch (e) {
             case l.Gold:
-              a = o.map((e, t) => (0, n.jsx)(_, { style: e }, t));
+              a = i.map((e, t) => (0, n.jsx)(_, { style: e }, t));
               break;
             case l.LNY2020:
-              a = o.map((e, t) =>
+              a = i.map((e, t) =>
                 t % 2
                   ? (0, n.jsx)(f, { style: e }, t)
                   : (0, n.jsx)(g, { style: e }, t),
               );
               break;
             case l.Default:
-              a = o.map((e, t) => (0, n.jsx)(f, { style: e }, t));
+              a = i.map((e, t) => (0, n.jsx)(f, { style: e }, t));
           }
           return (0, n.jsxs)("div", {
             style: {
@@ -1555,7 +1555,7 @@
             ref: r,
             children: [
               a,
-              i.map((e, t) =>
+              o.map((e, t) =>
                 e.flRandom > 0.5
                   ? (0, n.jsx)(C, { style: e }, t)
                   : (0, n.jsx)(v, { style: e }, t),
@@ -1781,12 +1781,12 @@
     },
     89649: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Xs });
+      r.r(t), r.d(t, { default: () => Js });
       var n = r(7850),
         s = r(90626),
         a = r(44165),
-        o = r(73964),
-        i = r(45699),
+        i = r(73964),
+        o = r(45699),
         l = r(76217),
         c = r(23310);
       function d(e, t) {
@@ -1817,8 +1817,8 @@
                 : n
               : t;
           }, [e, t, r]),
-          [a, o] = (0, s.useState)(n),
-          i = s.useCallback(
+          [a, i] = (0, s.useState)(n),
+          o = s.useCallback(
             (t, n = !1) => {
               const a = new URLSearchParams(r.substring(1));
               if (null != t) {
@@ -1840,12 +1840,12 @@
                     decodeURIComponent(`${window.location.pathname}?${a}`),
                   ),
                 (0, s.startTransition)(() => {
-                  o(t), window.postMessage("urlchange");
+                  i(t), window.postMessage("urlchange");
                 });
             },
             [e, r],
           );
-        return [a, i];
+        return [a, o];
       }
       var u = r(60746),
         p = r(6379),
@@ -1866,7 +1866,7 @@
             strClassName: r,
             bViewAllShowInfiniteScroll: a,
           } = e,
-          [o, c, f] = (0, g.uD)(),
+          [i, c, f] = (0, g.uD)(),
           [x, S] = (0, s.useState)(null),
           [b, I] = (0, s.useState)(void 0),
           R = (0, s.useCallback)(() => {
@@ -1883,15 +1883,15 @@
             },
             [t, c],
           ),
-          { last_update_event: P, rgEvents: L } = (function (e) {
+          { last_update_event: L, rgEvents: P } = (function (e) {
             const {
                 appid: t,
                 event_customization: r,
                 partnerEventStore: n,
                 trackingLocation: a,
-                fnEventShowModal: o,
+                fnEventShowModal: i,
               } = e,
-              [i, l] = (0, s.useState)(null),
+              [o, l] = (0, s.useState)(null),
               [c, h] = (0, s.useState)(null),
               [f] = d("emgid", void 0);
             return (
@@ -1943,11 +1943,11 @@
                     }
                   })();
                 }
-              }, [t, f, r, o, n, a]),
+              }, [t, f, r, i, n, a]),
               (0, s.useEffect)(() => {
                 if (null != c && f) {
                   const e = c.find((e) => e.GID === f);
-                  if (e) o(e);
+                  if (e) i(e);
                   else {
                     (async () => {
                       const e = await n.LoadPartnerEventFromClanEventGID(
@@ -1959,15 +1959,15 @@
                     })();
                   }
                 }
-              }, [f, c, o, h, n, t]),
-              { last_update_event: i, rgEvents: c }
+              }, [f, c, i, h, n, t]),
+              { last_update_event: o, rgEvents: c }
             );
           })({ ...e, fnEventShowModal: E }),
           k = (0, s.useCallback)(() => {
-            const { event_gid: e, announcement_gid: r, clan_account_id: n } = P,
+            const { event_gid: e, announcement_gid: r, clan_account_id: n } = L,
               s = u.KN.Get().GetTracker();
             t && e && s.MarkEventRead(e, n, t) && s.Flush(), I(r), S(null), c();
-          }, [P, c, t]);
+          }, [L, c, t]);
         (0, s.useEffect)(
           () => (
             (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
@@ -1980,10 +1980,10 @@
           ),
           [c],
         );
-        const B = !!P && !!P.rtime,
+        const B = !!L && !!L.rtime,
           D =
-            B && !!P.announcement_gid && (!L || 0 == L.length)
-              ? P.announcement_gid
+            B && !!L.announcement_gid && (!P || 0 == P.length)
+              ? L.announcement_gid
               : void 0,
           F = window.screen.width <= y ? 1 : 2;
         return (0, n.jsxs)(l.Z, {
@@ -1991,7 +1991,7 @@
           "flow-children": "row",
           children: [
             (0, n.jsx)(C.EN, {
-              active: o,
+              active: i,
               children: (0, n.jsx)(N, {
                 ...e,
                 announcementGID: b || x?.AnnouncementGID,
@@ -1999,24 +1999,24 @@
                 closeModal: R,
               }),
             }),
-            !!L &&
+            !!P &&
               (0, n.jsxs)("div", {
                 children: [
                   (0, n.jsx)("h2", {
                     children: (0, _.we)("#EventBrowse_RecentEvents"),
                   }),
                   !v.TS.IN_GAMEPADUI &&
-                    !!L &&
+                    !!P &&
                     (0, n.jsx)("div", {
                       className: A.SectionButtonCtn,
                       children: a
-                        ? (0, n.jsx)(i.ml, {
+                        ? (0, n.jsx)(o.ml, {
                             className: A.SectionButton,
-                            onClick: () => E(L[0]),
+                            onClick: () => E(P[0]),
                             children: (0, _.we)("#EventBrowse_MoreEventsBtn"),
                           })
                         : (0, n.jsx)(w.tj, {
-                            eventModel: L[0],
+                            eventModel: P[0],
                             route: w.PH.k_eViewWebSiteHub,
                             className: A.SectionButton,
                             children: (0, _.we)("#EventBrowse_MoreEventsBtn"),
@@ -2024,9 +2024,9 @@
                     }),
                   (0, n.jsx)("div", {
                     className: A.EventsSummariesCtn,
-                    children: L.slice(0, F).map((e) => {
+                    children: P.slice(0, F).map((e) => {
                       const t =
-                        1 === L.length && window.screen.width > 500
+                        1 === P.length && window.screen.width > 500
                           ? h.kH
                           : h.uY;
                       return (0, n.jsx)(
@@ -2046,14 +2046,14 @@
             B &&
               !!D &&
               (0, n.jsx)(T, {
-                nUpdateTime: P.rtime,
+                nUpdateTime: L.rtime,
                 announcementGID: D,
                 onClick: k,
               }),
             B &&
               !D &&
               !v.TS.IN_GAMEPADUI &&
-              (0, n.jsx)(j, { nUpdateTime: P.rtime, onClick: k }),
+              (0, n.jsx)(j, { nUpdateTime: L.rtime, onClick: k }),
           ],
         });
       }
@@ -2063,8 +2063,8 @@
             partnerEventStore: r,
             trackingLocation: s,
             announcementGID: a,
-            eventModel: o,
-            closeModal: i,
+            eventModel: i,
+            closeModal: o,
           } = e,
           l = (0, v.Qn)();
         return (0, n.jsx)(x.N, {
@@ -2074,8 +2074,8 @@
           trackingLocation: s,
           announcementGID: a,
           partnerEventStore: r,
-          eventModel: o,
-          closeModal: i,
+          eventModel: i,
+          closeModal: o,
         });
       }
       function j(e) {
@@ -2086,7 +2086,7 @@
               className: A.LatestUpdateIcon,
               children: (0, n.jsx)(f.UTF, { role: "presentation" }),
             }),
-            (0, n.jsx)(i.ml, {
+            (0, n.jsx)(o.ml, {
               className: A.LatestUpdateButton,
               onClick: e.onClick,
               children: (0, _.we)(
@@ -2100,10 +2100,10 @@
       function T(e) {
         const { nUpdateTime: t, announcementGID: r, onClick: s } = e,
           a = r ? p.O3.GetClanEventFromAnnouncementGID(r) : null,
-          o = (e) => {
+          i = (e) => {
             s?.(), e.stopPropagation(), e.preventDefault();
           },
-          i = window.screen.width > 500 ? h.kH : h.uY;
+          o = window.screen.width > 500 ? h.kH : h.uY;
         return (0, n.jsxs)("div", {
           children: [
             (0, n.jsx)("h2", {
@@ -2113,7 +2113,7 @@
               className: A.SectionButtonCtn,
               children: (0, n.jsx)("div", {
                 className: A.SectionButton,
-                onClick: o,
+                onClick: i,
                 children: (0, _.we)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
@@ -2122,7 +2122,7 @@
                 className: A.EventsSummariesCtn,
                 "flow-children": "column",
                 navEntryPreferPosition: c.iU.PREFERRED_CHILD,
-                children: (0, n.jsx)(i, { event: a, onClick: o }),
+                children: (0, n.jsx)(o, { event: a, onClick: i }),
               }),
           ],
         });
@@ -2132,12 +2132,12 @@
         const t = (0, a.s4)(),
           r = new Date(t.setUTCHours(0, 0, 0, 0) - 15552e6),
           s = Math.floor(r.getTime() / 1e3),
-          { appid: i } = e;
+          { appid: o } = e;
         return (0, n.jsx)(b.u, {
           navID: "EventsRowBridge",
           children: (0, n.jsx)(S, {
-            appid: i,
-            partnerEventStore: o.$.Get(),
+            appid: o,
+            partnerEventStore: i.$.Get(),
             event_customization: {
               rtime_oldestevent: s,
               exclude_tags: ["patchnotes", "hide_store", "mod_hide_store"],
@@ -2150,8 +2150,8 @@
       }
       var R = r(22837),
         E = r(64753),
-        P = r(41735),
-        L = r.n(P),
+        L = r(41735),
+        P = r.n(L),
         k = r(35380),
         B = r(68033),
         D = r(41550),
@@ -2164,12 +2164,12 @@
         const t = (0, s.useRef)(null),
           r = Number(e.appID),
           a = (0, k.$5)(r),
-          { data: o } = (0, M.J$)(a),
-          [i, l] = (0, s.useState)(null);
+          { data: i } = (0, M.J$)(a),
+          [o, l] = (0, s.useState)(null);
         (0, s.useEffect)(
           () => (
             (async () => {
-              const e = L().CancelToken.source();
+              const e = P().CancelToken.source();
               t.current = e.cancel;
               const n = await p.O3.LoadAdjacentPartnerEvents(
                 void 0,
@@ -2191,11 +2191,11 @@
           [r],
         );
         const [c, d, u] = (0, E.uD)(),
-          m = i ? i.GetNameWithFallback((0, R.sf)(v.TS.LANGUAGE)) : null,
-          h = !i || i.BHasEventEnded();
-        return o &&
-          o.related_items?.demo_appid &&
-          0 != o.related_items?.demo_appid.length
+          m = o ? o.GetNameWithFallback((0, R.sf)(v.TS.LANGUAGE)) : null,
+          h = !o || o.BHasEventEnded();
+        return i &&
+          i.related_items?.demo_appid &&
+          0 != i.related_items?.demo_appid.length
           ? (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsxs)("div", {
@@ -2211,7 +2211,7 @@
                               className: H.TileTitle,
                               children: (0, _.we)(
                                 "#Sale_DownloadDemo",
-                                o.name || "",
+                                i.name || "",
                               ),
                             }),
                             (0, n.jsx)(F.Q, { id: a }),
@@ -2226,7 +2226,7 @@
                     (0, n.jsx)("div", {
                       className: H.TileActionContainer,
                       children:
-                        i &&
+                        o &&
                         m &&
                         (0, n.jsxs)("div", {
                           className: H.TileActionInnerContainer,
@@ -2252,7 +2252,7 @@
                                   className: H.TileActionInnerText,
                                   children: (0, n.jsx)(G.K4, {
                                     dateAndTime:
-                                      i.GetStartTimeAndDateUnixSeconds(),
+                                      o.GetStartTimeAndDateUnixSeconds(),
                                     bSingleLine: !0,
                                   }),
                                 }),
@@ -2266,7 +2266,7 @@
                 (0, n.jsx)(C.EN, {
                   active: c,
                   children: (0, n.jsx)(D.AD, {
-                    initialEvent: i,
+                    initialEvent: o,
                     bShowOnlyInitialEvent: !1,
                     partnerEventStore: p.O3,
                     emoticonStore: B.A,
@@ -2279,26 +2279,26 @@
           : null;
       }
       var z = r(6813),
-        W = r(92406),
-        V = r(52038),
+        V = r(92406),
+        W = r(52038),
         Q = r(27510),
         K = r.n(Q),
         Z = r(4869);
-      new W.cE();
+      new V.cE();
       var q;
       function X(e) {
         return (0, n.jsxs)("div", {
-          className: (0, V.A)(K().PurchaseNoticeContainer),
+          className: (0, W.A)(K().PurchaseNoticeContainer),
           children: [
             (0, n.jsx)("div", {
-              className: (0, V.A)(K().PurchaseNoticeImageContainer),
+              className: (0, W.A)(K().PurchaseNoticeImageContainer),
               children: (0, n.jsx)(Z.xIk, {
                 type: "xbox",
-                className: (0, V.A)(K().PurchaseNoticeImage, K().Tilt),
+                className: (0, W.A)(K().PurchaseNoticeImage, K().Tilt),
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, V.A)(K().PurchaseNoticeLabel),
+              className: (0, W.A)(K().PurchaseNoticeLabel),
               children: (0, _.we)("#PurchaseNotice_ControllerRequired"),
             }),
           ],
@@ -2306,16 +2306,16 @@
       }
       function J(e) {
         return (0, n.jsxs)("div", {
-          className: (0, V.A)(K().PurchaseNoticeContainer),
+          className: (0, W.A)(K().PurchaseNoticeContainer),
           children: [
             (0, n.jsx)("div", {
-              className: (0, V.A)(K().PurchaseNoticeImageContainer),
+              className: (0, W.A)(K().PurchaseNoticeImageContainer),
               children: (0, n.jsx)(Z.oqe, {
-                className: (0, V.A)(K().PurchaseNoticeImage, K().VROnly),
+                className: (0, W.A)(K().PurchaseNoticeImage, K().VROnly),
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, V.A)(K().PurchaseNoticeLabel),
+              className: (0, W.A)(K().PurchaseNoticeLabel),
               children: (0, _.we)("#PurchaseNotice_VRRequired"),
             }),
           ],
@@ -2323,19 +2323,19 @@
       }
       function Y(e) {
         return (0, n.jsxs)("div", {
-          className: (0, V.A)(K().PurchaseNoticeContainer),
+          className: (0, W.A)(K().PurchaseNoticeContainer),
           children: [
             (0, n.jsx)("div", {
-              className: (0, V.A)(
+              className: (0, W.A)(
                 K().PurchaseNoticeImageContainer,
                 K().VRSupported,
               ),
               children: (0, n.jsx)(Z.Kkn, {
-                className: (0, V.A)(K().PurchaseNoticeImage, K().VRSupported),
+                className: (0, W.A)(K().PurchaseNoticeImage, K().VRSupported),
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, V.A)(K().PurchaseNoticeLabel),
+              className: (0, W.A)(K().PurchaseNoticeLabel),
               children: (0, _.we)("#PurchaseNotice_VRSupported"),
             }),
           ],
@@ -2367,12 +2367,12 @@
         ne = r(57876),
         se = r(75933),
         ae = r(4796),
-        oe = r(8092);
+        ie = r(8092);
       !(function (e) {
         (e[(e.k_CreatorHomeNone = 0)] = "k_CreatorHomeNone"),
           (e[(e.k_CreatorHomeAll = -1)] = "k_CreatorHomeAll");
       })(ee || (ee = {}));
-      var ie = r(16021),
+      var oe = r(16021),
         le = r(55263),
         ce = r(28372),
         de = r(88965);
@@ -2381,21 +2381,21 @@
             clanID: t,
             title: r,
             seeAllLink: a,
-            appIDs: o,
-            rgAppIDToCreatorIDs: i,
+            appIDs: i,
+            rgAppIDToCreatorIDs: o,
             rgAllCreatorClanIDs: l,
             strFeatureFirstAppMsg: c,
           } = e,
-          d = (0, le.zX)(o, ne.Xh),
+          d = (0, le.zX)(i, ne.Xh),
           u = (0, s.useMemo)(() => {
             const e = new Map(
-              Object.entries(i).map(([e, t]) => [Number(e), t]),
+              Object.entries(o).map(([e, t]) => [Number(e), t]),
             );
             if (1 != d && t == ee.k_CreatorHomeAll) {
               const t = new Set(l);
-              o.forEach((r) => {
+              i.forEach((r) => {
                 if (!e.has(r)) {
-                  const n = ie.A.Get().GetApp(r);
+                  const n = oe.A.Get().GetApp(r);
                   n &&
                     n
                       .GetAllCreatorClanIDs()
@@ -2404,15 +2404,15 @@
               });
             }
             return e;
-          }, [i, d, t, l, o]),
+          }, [o, d, t, l, i]),
           p = "developer";
-        return o.length > 0
+        return i.length > 0
           ? (0, n.jsx)(pe, {
               creatorHomeType: p,
               clanID: t,
               titleOverride: r,
               seeAllLink: a,
-              appIDs: o,
+              appIDs: i,
               mapAppIDsToCreatorClanID: u,
               strFeatureFirstAppMsg: c,
             })
@@ -2423,20 +2423,20 @@
             creatorHomeType: t,
             clanID: r,
             titleOverride: a,
-            seeAllLink: o,
-            appIDs: i,
+            seeAllLink: i,
+            appIDs: o,
             mapAppIDsToCreatorClanID: l,
             strFeatureFirstAppMsg: c,
           } = e,
           d = ((0, se.a4)(940), (0, v.Qn)()),
           [u, p] = (0, ae.TB)(r),
-          { creatorHome: m } = (0, oe.FV)(r),
+          { creatorHome: m } = (0, ie.FV)(r),
           h = m?.GetCreatorHomeURL(t),
           [f, _] = s.useState(void 0);
         if (!m) return;
         const g = !d && (c ? 1 == f : f <= 2) && p;
         return (0, n.jsxs)("div", {
-          className: (0, V.A)(
+          className: (0, W.A)(
             re().CreatorHomeWithItems,
             g ? re().WithFollowBtn : "",
           ),
@@ -2483,13 +2483,13 @@
                         className: re().CarouselFollowButton,
                         clanAccountID: r,
                       }),
-                    (0, n.jsx)(de.H, { url: o }),
+                    (0, n.jsx)(de.H, { url: i }),
                   ],
                 }),
               ],
             }),
             (0, n.jsxs)("div", {
-              className: (0, V.A)(
+              className: (0, W.A)(
                 re().CarouselContentsRow,
                 g && re().WithFollowSection,
               ),
@@ -2497,7 +2497,7 @@
                 (0, n.jsx)(de._, {
                   navKey: "store_page_" + t,
                   classes: re().Carousel,
-                  appIDs: i,
+                  appIDs: o,
                   maxItemCount: g ? f : 4,
                   shrinkToFitItems: !0,
                   mapAppToCreatorClan: l,
@@ -2521,9 +2521,9 @@
       function me(e) {
         const { creatorHomeType: t, clanID: r } = e,
           [s, a] = (0, ae.TB)(r),
-          { creatorHome: o } = (0, oe.FV)(r),
-          i = o?.GetCreatorHomeURL(t);
-        if (o)
+          { creatorHome: i } = (0, ie.FV)(r),
+          o = i?.GetCreatorHomeURL(t);
+        if (i)
           return (0, n.jsxs)("div", {
             className: re().CreatorHomeWithoutItems,
             children: [
@@ -2534,17 +2534,17 @@
                 }),
               (0, n.jsx)("div", {
                 children: (0, n.jsx)("a", {
-                  href: i,
+                  href: o,
                   children: (0, n.jsx)("img", {
                     className: re().ClanAvatarImage,
-                    src: o.GetAvatarURLFullSize(),
+                    src: i.GetAvatarURLFullSize(),
                   }),
                 }),
               }),
               (0, n.jsx)(he, {
                 clanID: r,
-                creatorName: o.GetName(),
-                creatorUrl: i,
+                creatorName: i.GetName(),
+                creatorUrl: o,
               }),
             ],
           });
@@ -2585,8 +2585,8 @@
             id: t,
             dashManifests: r,
             hlsManifest: a,
-            screenshot: o,
-            title: i,
+            screenshot: i,
+            title: o,
             category: l,
             statsURL: c,
           } = e,
@@ -2625,11 +2625,11 @@
               children: (0, n.jsx)(ve.P, {
                 dashManifests: r,
                 hlsManifest: a,
-                screenshot: o,
+                screenshot: i,
                 forcePause: u,
                 onPlaybackEnd: f,
-                altText: i,
-                title: i,
+                altText: o,
+                title: o,
                 category: l,
                 statsURL: c,
               }),
@@ -2717,7 +2717,7 @@
           r = (0, n.jsxs)(n.Fragment, {
             children: [
               (0, n.jsx)("div", {
-                className: (0, V.A)(
+                className: (0, W.A)(
                   Ne.ImgSection,
                   e.bHightlightRow && Ne.HighlightRow,
                   e.bHighlightGPRequired && Ne.GamepadRequired,
@@ -2725,7 +2725,7 @@
                 children: e.tagImage,
               }),
               (0, n.jsxs)("div", {
-                className: (0, V.A)(
+                className: (0, W.A)(
                   Ne.LocSection,
                   e.bHighlightText && Ne.HighlightText,
                   e.bHightlightRow && Ne.HighlightRow,
@@ -2733,7 +2733,7 @@
                 ),
                 children: [
                   (0, n.jsx)("div", {
-                    className: (0, V.A)(
+                    className: (0, W.A)(
                       Ne.LocString,
                       e.bHighlightText && Ne.HighlightText,
                       e.bHightlightRow && Ne.HighlightRow,
@@ -2762,7 +2762,7 @@
       function be() {
         return (0, n.jsx)(Te, {
           tagImage: (0, n.jsx)(Z.Moo, {
-            className: (0, V.A)(Ne.Tilt, Ne.SmallerSVG),
+            className: (0, W.A)(Ne.Tilt, Ne.SmallerSVG),
             role: "presentation",
           }),
           strLocalizationToken: "#Store_ControllerSupport_GamepadRequired",
@@ -2773,14 +2773,14 @@
       }
       function Ie() {
         return (0, n.jsxs)("div", {
-          className: (0, V.A)(Ne.PurchaseNoticeContainer),
+          className: (0, W.A)(Ne.PurchaseNoticeContainer),
           children: [
             (0, n.jsx)(Z.Kz1, {
-              className: (0, V.A)(Ne.PurchaseNoticeImage),
+              className: (0, W.A)(Ne.PurchaseNoticeImage),
               role: "presentation",
             }),
             (0, n.jsx)("div", {
-              className: (0, V.A)(Ne.PurchaseNoticeLabel),
+              className: (0, W.A)(Ne.PurchaseNoticeLabel),
               children: (0, _.we)("#Store_ControllerSupport_GamepadPreferred"),
             }),
           ],
@@ -2789,7 +2789,7 @@
       function Re(e) {
         const { bNoKeyboardSupport: t, bGamepadPreferred: r } = e;
         return (0, n.jsxs)("div", {
-          className: (0, V.A)(Ne.NoticeContainer),
+          className: (0, W.A)(Ne.NoticeContainer),
           children: [t && (0, n.jsx)(be, {}), r && !t && (0, n.jsx)(Ie, {})],
         });
       }
@@ -2799,8 +2799,8 @@
           bPS4ControllerSupport: r,
           bPS5ControllerSupport: s,
           bPS4ControllerBTSupport: a,
-          bPS5ControllerBTSupport: o,
-          bFullXboxControllerSupport: i,
+          bPS5ControllerBTSupport: i,
+          bFullXboxControllerSupport: o,
           bPartialXboxControllerSupport: l,
           bSteamInputAPISupport: c,
           bHasOther: d,
@@ -2810,11 +2810,11 @@
           bPreview: h,
         } = e;
         let f = [];
-        if (r && s && a && o) {
+        if (r && s && a && i) {
           const e = (0, n.jsx)(Z.pcV, {
               className: Ne.SmallerSVG,
               controllerType: 34,
-              partial: !i,
+              partial: !o,
               role: "presentation",
             }),
             t = u || p;
@@ -2838,7 +2838,7 @@
             const e = (0, n.jsx)(Z.pcV, {
               className: Ne.SmallerSVG,
               controllerType: 34,
-              partial: !i,
+              partial: !o,
               role: "presentation",
             });
             a
@@ -2875,10 +2875,10 @@
             const e = (0, n.jsx)(Z.pcV, {
               className: Ne.SmallerSVG,
               controllerType: 45,
-              partial: !i,
+              partial: !o,
               role: "presentation",
             });
-            o
+            i
               ? f.push(
                   (0, n.jsx)(
                     Te,
@@ -2911,13 +2911,13 @@
         }
         return (0, n.jsx)(n.Fragment, {
           children:
-            (l || i) &&
+            (l || o) &&
             (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsx)("div", {
                   className: Ne.ControllerSupportLevelString,
                   children: (0, _.we)(
-                    i
+                    o
                       ? "#Store_ControllerSupport_FullController"
                       : "#Store_ControllerSupport_PartialController",
                   ),
@@ -2926,7 +2926,7 @@
                   tagImage: (0, n.jsx)(Z.pcV, {
                     className: Ne.SmallerSVG,
                     controllerType: 32,
-                    partial: !i,
+                    partial: !o,
                     role: "presentation",
                   }),
                   strLocalizationToken: m
@@ -2940,7 +2940,7 @@
                   (0, n.jsx)(Te, {
                     tagImage: (0, n.jsx)(Z.kdM, {
                       className: Ne.BiggerSVG,
-                      bGreyOutRightSide: !i,
+                      bGreyOutRightSide: !o,
                       role: "presentation",
                     }),
                     strLocalizationToken: "#Store_ControllerSupport_SIAPI",
@@ -2964,7 +2964,7 @@
             }),
         });
       }
-      const Pe = function (e) {
+      const Le = function (e) {
         return (0, n.jsx)(n.Fragment, {
           children:
             (e.bPartialXboxControllerSupport || e.bFullXboxControllerSupport) &&
@@ -2974,7 +2974,7 @@
             }),
         });
       };
-      var Le = r(87669),
+      var Pe = r(87669),
         ke = r(75204),
         Be = r(38506),
         De = r(56545),
@@ -2985,8 +2985,8 @@
         Oe = r(80902);
       var Ue = r(56283),
         ze = r(22797),
-        We = r(72061),
-        Ve = r(15799),
+        Ve = r(72061),
+        We = r(15799),
         Qe = r(23809);
       function Ke(e, t) {
         return `${v.TS.STORE_CDN_URL}public/images/loyalty/reactions/${t ? "animated" : "still"}/${e}.png`;
@@ -3092,7 +3092,7 @@
             fnSuccessFunc: r,
             targetid: s,
             ugcType: a,
-            initialSelectedReaction: o,
+            initialSelectedReaction: i,
           } = this.state;
           return e
             ? (0, n.jsx)(
@@ -3104,7 +3104,7 @@
                   ugcType: a,
                   onDismiss: () => this.setState({ bShowModal: !1 }),
                   onSuccess: r,
-                  initialSelectedReaction: o,
+                  initialSelectedReaction: i,
                 },
                 s,
               )
@@ -3117,8 +3117,8 @@
           targetid: r,
           bShowModal: s,
           ugcType: a,
-          initialSelectedReaction: o,
-          onDismiss: i,
+          initialSelectedReaction: i,
+          onDismiss: o,
           onSuccess: l,
         } = e;
         return (0, n.jsx)(
@@ -3128,9 +3128,9 @@
             active: s,
             targetType: t,
             ugcType: a,
-            onDismiss: i,
+            onDismiss: o,
             onSuccess: l,
-            initialSelectedReaction: o,
+            initialSelectedReaction: i,
           },
           r,
         );
@@ -3140,7 +3140,7 @@
             active: t,
             targetid: r,
             targetType: a,
-            ugcType: o,
+            ugcType: i,
             initialSelectedReaction: l,
             onSuccess: c,
             onDismiss: d,
@@ -3211,8 +3211,8 @@
                 a.Body().set_target_type(n),
                   a.Body().set_targetid(r),
                   a.Body().set_reactionid(s);
-                const o = await Fe.a9.AddReaction(e, a);
-                if (1 != o.GetEResult()) throw o.GetEResult();
+                const i = await Fe.a9.AddReaction(e, a);
+                if (1 != i.GetEResult()) throw i.GetEResult();
               },
               onSuccess: () => {
                 t.invalidateQueries({ queryKey: ["UserPointBalance"] });
@@ -3229,7 +3229,7 @@
           return null;
         const I = N.data ?? new Map(),
           E = j.data ?? new Be.A(0),
-          P = (function (e, t, r) {
+          L = (function (e, t, r) {
             let n = [];
             return (
               e.forEach(function (e) {
@@ -3253,10 +3253,10 @@
               }),
               n
             );
-          })(I, a, o),
-          L = 0 === u ? null : I.get(u),
-          k = L ? L.points_cost : 0,
-          B = L ? L.points_transferred : 0;
+          })(I, a, i),
+          P = 0 === u ? null : I.get(u),
+          k = P ? P.points_cost : 0,
+          B = P ? P.points_transferred : 0;
         let D,
           F = "";
         switch (a) {
@@ -3296,24 +3296,24 @@
               D = (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(st, { description: F }),
-                  (0, n.jsx)(ot, {}),
+                  (0, n.jsx)(it, {}),
                   b &&
                     (0, n.jsx)("div", {
-                      className: Ve.InitialLoading,
+                      className: We.InitialLoading,
                       children: (0, n.jsx)("div", {
-                        className: (0, V.A)(Ve.LoadingContainer, Ve.Visible),
+                        className: (0, W.A)(We.LoadingContainer, We.Visible),
                         children: (0, n.jsx)(lt, {}),
                       }),
                     }),
                   (0, n.jsx)(ke.MS, {
-                    className: Ve.ButtonContainer,
+                    className: We.ButtonContainer,
                     scrollDirection: A ? "x" : "y",
                     "flow-children": "grid",
                     children:
                       !b &&
-                      P.map((e, t) =>
+                      L.map((e, t) =>
                         (0, n.jsx)(
-                          it,
+                          ot,
                           {
                             autoFocus:
                               (void 0 === u && 0 == t) ||
@@ -3331,7 +3331,7 @@
                         ),
                       ),
                   }),
-                  (0, n.jsx)(ot, {}),
+                  (0, n.jsx)(it, {}),
                   (0, n.jsx)(at, {
                     pointBalance: E,
                     children:
@@ -3341,7 +3341,7 @@
                             (0, n.jsx)(
                               "div",
                               {
-                                className: Ve.NotEnoughPoints,
+                                className: We.NotEnoughPoints,
                                 children: (0, _.we)(
                                   "#GrantAward_CantAfford",
                                   (0, Ye.D)(E.negate().add(k).toNumber()),
@@ -3350,7 +3350,7 @@
                               "msg",
                             ),
                             (0, n.jsx)(
-                              i.Ii,
+                              o.Ii,
                               {
                                 href: `${v.TS.STORE_BASE_URL}points/howitworks`,
                                 children: (0, n.jsx)(
@@ -3421,44 +3421,44 @@
                 (D = (0, n.jsxs)(n.Fragment, {
                   children: [
                     (0, n.jsx)(st, { description: F }),
-                    (0, n.jsx)(ot, {}),
+                    (0, n.jsx)(it, {}),
                     (0, n.jsxs)("div", {
                       style: { position: "relative" },
                       children: [
                         (0, n.jsxs)("div", {
-                          className: (0, V.A)(
-                            Ve.ConfirmContainer,
-                            m === Xe.CONFIRM && Ve.Visible,
+                          className: (0, W.A)(
+                            We.ConfirmContainer,
+                            m === Xe.CONFIRM && We.Visible,
                           ),
                           children: [
                             (0, n.jsx)(et, {
-                              className: Ve.ConfirmAwardImage,
+                              className: We.ConfirmAwardImage,
                               reactionType: u,
                             }),
                             (0, n.jsxs)("div", {
-                              className: Ve.ConfirmTextCtn,
+                              className: We.ConfirmTextCtn,
                               children: [
                                 (0, n.jsx)("div", {
-                                  className: Ve.ConfirmText,
+                                  className: We.ConfirmText,
                                   children: (0, _.PP)(
                                     "#GrantAward_Confirm",
                                     (0, n.jsx)(ct, { children: (0, Ye.D)(k) }),
                                     (0, n.jsx)("span", {
-                                      className: Ve.AwardName,
+                                      className: We.AwardName,
                                       children: N.data?.get(u)?.localized_title,
                                     }),
                                   ),
                                 }),
                                 B > 0 &&
                                   (0, n.jsx)("div", {
-                                    className: Ve.ConfirmText,
+                                    className: We.ConfirmText,
                                     children: (0, _.PP)(
                                       "#GrantAward_Confirm_Details",
                                       (0, n.jsx)(ct, {
                                         children: (0, Ye.D)(B),
                                       }),
                                       (0, n.jsx)("span", {
-                                        className: Ve.TimePeriod,
+                                        className: We.TimePeriod,
                                         children: (0, _.we)(
                                           "#GrantAward_Confirm_DetailsTimePeriod",
                                         ),
@@ -3470,32 +3470,32 @@
                           ],
                         }),
                         (0, n.jsx)("div", {
-                          className: (0, V.A)(
-                            Ve.LoadingContainer,
-                            m === Xe.SUBMITTING && Ve.Visible,
+                          className: (0, W.A)(
+                            We.LoadingContainer,
+                            m === Xe.SUBMITTING && We.Visible,
                           ),
                           children: (0, n.jsx)(lt, {}),
                         }),
                         (0, n.jsxs)("div", {
-                          className: (0, V.A)(
-                            Ve.SuccessContainer,
-                            m === Xe.DONE && Ve.Visible,
+                          className: (0, W.A)(
+                            We.SuccessContainer,
+                            m === Xe.DONE && We.Visible,
                           ),
                           children: [
                             (0, n.jsx)(et, {
-                              className: Ve.ConfirmAwardImage,
+                              className: We.ConfirmAwardImage,
                               reactionType: u,
                               bForceAnimated: !0,
                             }),
                             (0, n.jsx)("div", {
-                              className: Ve.SuccessText,
+                              className: We.SuccessText,
                               children: (0, _.we)("#GrantAward_Success"),
                             }),
                           ],
                         }),
                       ],
                     }),
-                    (0, n.jsx)(ot, {}),
+                    (0, n.jsx)(it, {}),
                     e,
                   ],
                 }));
@@ -3535,18 +3535,18 @@
               D = (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(st, { description: F }),
-                  (0, n.jsx)(ot, {}),
+                  (0, n.jsx)(it, {}),
                   (0, n.jsx)("div", {
                     style: { position: "relative" },
                     children: (0, n.jsx)("div", {
-                      className: Ve.ErrorContainer,
+                      className: We.ErrorContainer,
                       children: (0, n.jsx)("div", {
-                        className: Ve.ErrorText,
+                        className: We.ErrorText,
                         children: e,
                       }),
                     }),
                   }),
-                  (0, n.jsx)(ot, {}),
+                  (0, n.jsx)(it, {}),
                   (0, n.jsx)(at, {
                     pointBalance: E,
                     children: (0, n.jsx)(Ue.$n, {
@@ -3573,62 +3573,62 @@
             D = (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsx)(st, { description: F }),
-                (0, n.jsx)(ot, {}),
+                (0, n.jsx)(it, {}),
                 (0, n.jsx)("div", {
                   style: { position: "relative" },
                   children: (0, n.jsx)("div", {
-                    className: Ve.ErrorContainer,
+                    className: We.ErrorContainer,
                     children: (0, n.jsx)("div", {
-                      className: Ve.ErrorText,
+                      className: We.ErrorText,
                       children: e,
                     }),
                   }),
                 }),
-                (0, n.jsx)(ot, {}),
+                (0, n.jsx)(it, {}),
               ],
             });
           }
         }
         return (0, n.jsxs)(C.mt, {
-          className: Ve.GrantAwardModal,
+          className: We.GrantAwardModal,
           active: t,
           onDismiss: d,
-          children: [f && (0, n.jsx)(We.NW, { eType: We.O4.Default }), D],
+          children: [f && (0, n.jsx)(Ve.NW, { eType: Ve.O4.Default }), D],
         });
       }
       const st = ({ description: e }) =>
         (0, n.jsxs)("div", {
-          className: Ve.Header,
+          className: We.Header,
           children: [
             (0, n.jsx)("div", {
-              className: Ve.Title,
+              className: We.Title,
               children: (0, _.we)("#GrantAwardTitle"),
             }),
-            (0, n.jsx)("div", { className: Ve.Description, children: e }),
+            (0, n.jsx)("div", { className: We.Description, children: e }),
           ],
         });
       function at(e) {
         const { pointBalance: t, children: r } = e,
           a = t && (0, Ye.D)(t.toNumber());
         return (0, n.jsxs)("div", {
-          className: Ve.Footer,
+          className: We.Footer,
           children: [
             (0, n.jsxs)("div", {
-              className: Ve.PointsArea,
+              className: We.PointsArea,
               children: [
                 (0, n.jsxs)("div", {
-                  className: Ve.Left,
+                  className: We.Left,
                   children: [
-                    (0, n.jsx)(f.vrn, { className: Ve.BalanceIcon }),
+                    (0, n.jsx)(f.vrn, { className: We.BalanceIcon }),
                     (0, n.jsxs)("div", {
-                      className: Ve.BalanceDetails,
+                      className: We.BalanceDetails,
                       children: [
                         (0, n.jsx)("div", {
-                          className: Ve.BalanceLabel,
+                          className: We.BalanceLabel,
                           children: (0, _.we)("#YourBalance"),
                         }),
                         (0, n.jsx)("div", {
-                          className: Ve.BalanceAmount,
+                          className: We.BalanceAmount,
                           children: a,
                         }),
                       ],
@@ -3636,9 +3636,9 @@
                   ],
                 }),
                 (0, n.jsx)("div", {
-                  className: Ve.Column,
+                  className: We.Column,
                   children: (0, n.jsx)("a", {
-                    className: Ve.FooterLink,
+                    className: We.FooterLink,
                     href: `${v.TS.STORE_BASE_URL}points/howitworks`,
                     children: (0, _.we)("#GrantAward_PointsLink"),
                   }),
@@ -3646,20 +3646,20 @@
               ],
             }),
             (0, n.jsx)("div", {
-              className: Ve.Right,
+              className: We.Right,
               children: (0, n.jsx)(l.Z, {
-                className: Ve.Actions,
+                className: We.Actions,
                 "flow-children": "row",
                 children: s.Children.map(r, (e) =>
-                  (0, n.jsx)("div", { className: Ve.Action, children: e }),
+                  (0, n.jsx)("div", { className: We.Action, children: e }),
                 ),
               }),
             }),
           ],
         });
       }
-      const ot = () => (0, n.jsx)("div", { className: Ve.Divider });
-      class it extends s.PureComponent {
+      const it = () => (0, n.jsx)("div", { className: We.Divider });
+      class ot extends s.PureComponent {
         constructor(e) {
           super(e), (this.state = { bHovered: !1 });
         }
@@ -3676,19 +3676,19 @@
             alreadyAwarded: r,
             cost: s,
             autoFocus: a,
-            awardConfig: o,
-            ...i
+            awardConfig: i,
+            ...o
           } = this.props;
           return (0, n.jsxs)(Je.N, {
             type: "button",
             onMouseEnter: this.handleMouseOver,
             onMouseLeave: this.handleMouseOut,
-            className: (0, V.A)(Ve.Button, t && Ve.Selected, r && Ve.Disabled),
+            className: (0, W.A)(We.Button, t && We.Selected, r && We.Disabled),
             autoFocus: a,
-            ...i,
+            ...o,
             children: [
               (0, n.jsx)("div", {
-                className: Ve.IconCtn,
+                className: We.IconCtn,
                 children: (0, n.jsx)(et, {
                   reactionType: e,
                   bForceAnimated: this.state.bHovered,
@@ -3696,34 +3696,34 @@
                 }),
               }),
               (0, n.jsxs)("div", {
-                className: Ve.LabelCtn,
+                className: We.LabelCtn,
                 children: [
                   (0, n.jsx)("div", {
-                    className: Ve.Label,
-                    children: o?.localized_title,
+                    className: We.Label,
+                    children: i?.localized_title,
                   }),
                   (0, n.jsx)(ct, {
-                    className: Ve.Points,
+                    className: We.Points,
                     children: (0, Ye.D)(s ?? 0),
                   }),
                 ],
               }),
-              r && (0, n.jsx)($e, { className: Ve.IconCheckMark }),
+              r && (0, n.jsx)($e, { className: We.IconCheckMark }),
             ],
           });
         }
       }
-      (0, fe.Cg)([g.oI], it.prototype, "handleMouseOver", null),
-        (0, fe.Cg)([g.oI], it.prototype, "handleMouseOut", null);
+      (0, fe.Cg)([g.oI], ot.prototype, "handleMouseOver", null),
+        (0, fe.Cg)([g.oI], ot.prototype, "handleMouseOut", null);
       const lt = () =>
-          (0, n.jsx)(ze.t, { size: "large", className: Ve.Loading }),
+          (0, n.jsx)(ze.t, { size: "large", className: We.Loading }),
         ct = (e) => {
           const { children: t, className: r, ...s } = e;
           return (0, n.jsxs)("span", {
             ...s,
-            className: (0, V.A)(r, Ve.PointsAmount),
+            className: (0, W.A)(r, We.PointsAmount),
             children: [
-              (0, n.jsx)(f.vrn, { className: Ve.PointsAmountIcon }),
+              (0, n.jsx)(f.vrn, { className: We.PointsAmountIcon }),
               t,
             ],
           });
@@ -4008,9 +4008,9 @@
       }
       function vt(e) {
         const { appid: t, appBannerDef: r, app_name: s } = e,
-          a = ((o = r.strBannerType), _t.get(o));
-        var o;
-        const i = (0, ht.aL)(
+          a = ((i = r.strBannerType), _t.get(i));
+        var i;
+        const o = (0, ht.aL)(
           pt.TS.STORE_BASE_URL +
             `app/${mt.wy}?deckapp=${t}&utm_source=topplayed_app_banner&utm_campaign=${t}`,
           "topplayed_app_banner",
@@ -4028,8 +4028,8 @@
                   ],
                 }),
                 (0, n.jsx)("a", {
-                  href: i,
-                  className: (0, V.A)(ut().TopPlayedBannerCtn, a.className),
+                  href: o,
+                  className: (0, W.A)(ut().TopPlayedBannerCtn, a.className),
                   children: (0, n.jsxs)("div", {
                     className: ut().BannerRightContent,
                     children: [
@@ -4064,16 +4064,16 @@
           r = (0, k.$5)(t),
           { data: s } = (0, M.lv)(r),
           { data: a } = (0, M.J$)(r),
-          o = (0, At.n)(a);
+          i = (0, At.n)(a);
         return s && a
           ? (0, n.jsxs)(l.Z, {
               focusable: !0,
               className: Nt().ParentWidgetContainer,
               children: [
                 (0, n.jsx)("div", {
-                  className: (0, V.A)(Nt().ParentCapsuleImageContainer),
+                  className: (0, W.A)(Nt().ParentCapsuleImageContainer),
                   children: (0, n.jsx)("a", {
-                    href: o,
+                    href: i,
                     children: (0, n.jsx)("img", {
                       className: Nt().ParentCapsuleImage,
                       src: (0, wt.b0)(s, "small_capsule"),
@@ -4084,8 +4084,8 @@
                   className: Nt().AppDetails,
                   children: [
                     (0, n.jsx)("a", {
-                      className: (0, V.A)(Nt().GameName),
-                      href: o,
+                      className: (0, W.A)(Nt().GameName),
+                      href: i,
                       children: a.name,
                     }),
                     (0, n.jsxs)("div", {
@@ -4109,7 +4109,7 @@
         It = r(7445),
         Rt = r(88006),
         Et = r(96236);
-      function Pt(e, t) {
+      function Lt(e, t) {
         return (0, s.useMemo)(() => {
           let r = [],
             n = new Map();
@@ -4129,14 +4129,14 @@
           return r;
         }, [e, t]);
       }
-      var Lt = r(2925),
+      var Pt = r(2925),
         kt = r(63512),
         Bt = r(49632);
       function Dt(e) {
         let { trailers: t, screenshots: r } = e;
         return (0, n.jsx)(b.u, {
           navID: "GameHighlightGamepadCarousel",
-          children: (0, n.jsx)(Lt.QY, {
+          children: (0, n.jsx)(Pt.QY, {
             supportsFullscreen: !1,
             supportsTheater: !0,
             children: (0, n.jsx)(Mt, {
@@ -4147,10 +4147,10 @@
       }
       function Ft(e) {
         let { trailers: t, screenshots: r } = e,
-          a = (0, Lt.ri)(),
-          o = "theater" == a.strMode,
-          i = (0, Lt.Dy)(a, "theater"),
-          d = (0, Lt.Dy)(a, "none"),
+          a = (0, Pt.ri)(),
+          i = "theater" == a.strMode,
+          o = (0, Pt.Dy)(a, "theater"),
+          d = (0, Pt.Dy)(a, "none"),
           u = (0, kt.tw)(),
           [p, m] = (function (e, t) {
             let r = (0, s.useCallback)(
@@ -4161,8 +4161,8 @@
               ),
               n = (0, s.useCallback)((t) => !!e, [e]);
             return [n, r];
-          })(o, d),
-          h = Pt(t, r);
+          })(i, d),
+          h = Lt(t, r);
         if (
           ((function (e) {
             let t = e.length;
@@ -4183,8 +4183,8 @@
                 ? (0, n.jsx)(Ht, { trailer: e.data }, e.key)
                 : null,
           ),
-          _ = o ? "" : Bt.n.Localize("#TrailerPlayer_FullScreen_Tooltip"),
-          g = (0, V.A)(bt.TheaterDialog, o && bt.Fullscreen);
+          _ = i ? "" : Bt.n.Localize("#TrailerPlayer_FullScreen_Tooltip"),
+          g = (0, W.A)(bt.TheaterDialog, i && bt.Fullscreen);
         return (0, n.jsx)("div", {
           ref: a.refTheater,
           className: g,
@@ -4192,7 +4192,7 @@
           children: (0, n.jsx)("div", {
             className: bt.FocusRingClip,
             children: (0, n.jsx)(It.q, {
-              disableFocusRing: o,
+              disableFocusRing: i,
               children: (0, n.jsx)(l.Z, {
                 autoFocus: !0,
                 ref: u.ref,
@@ -4201,8 +4201,8 @@
                 "flow-children": "row",
                 navEntryPreferPosition: c.iU.MAINTAIN_X,
                 onOptionsActionDescription: _,
-                onOptionsButton: i,
-                onCancelButton: o ? d : void 0,
+                onOptionsButton: o,
+                onCancelButton: i ? d : void 0,
                 onGamepadDirection: p,
                 onFocusWithin: m,
                 children: f,
@@ -4214,20 +4214,20 @@
       function Mt(e) {
         let { children: t } = e,
           r = (0, s.useCallback)(() => {}, []),
-          [a, o] = (0, s.useState)(!0);
+          [a, i] = (0, s.useState)(!0);
         return (0, n.jsx)(ge.v, {
           autoplayEnabled: !1,
           setAutoplayEnabled: r,
           playerVolume: 1,
           setPlayerVolume: r,
           audioMuted: a,
-          setAudioMuted: o,
+          setAudioMuted: i,
           children: t,
         });
       }
       function Gt(e) {
         let { screenshot: t } = e,
-          r = (0, V.A)(bt.CarouselItem, bt.Screenshot);
+          r = (0, W.A)(bt.CarouselItem, bt.Screenshot);
         return (0, n.jsx)(l.Z, {
           className: r,
           focusable: !0,
@@ -4244,7 +4244,7 @@
       function Ot(e) {
         let { trailer: t } = e,
           r = (0, s.useRef)(null),
-          [a, o] = (function () {
+          [a, i] = (function () {
             let [e, t] = (0, s.useState)({ bPaused: !0, bMuted: !0 }),
               r = (0, g.QS)(
                 (e) => {
@@ -4272,7 +4272,7 @@
               );
             return [e, r];
           })(),
-          i = (0, g.Ue)(r, o),
+          o = (0, g.Ue)(r, i),
           [c, d] = (function (e) {
             let t = (0, s.useRef)(!1),
               r = (0, s.useRef)(null),
@@ -4337,7 +4337,7 @@
           _ = a.bPaused
             ? Bt.n.Localize("#TrailerPlayer_Play_Tooltip")
             : Bt.n.Localize("#TrailerPlayer_Pause_Tooltip"),
-          v = (0, V.A)(bt.CarouselItem, bt.SingleFileTrailer);
+          v = (0, W.A)(bt.CarouselItem, bt.SingleFileTrailer);
         return (0, n.jsx)(l.Z, {
           className: v,
           onActivate: d,
@@ -4347,7 +4347,7 @@
           onSecondaryActionDescription: f,
           onButtonDown: m,
           children: (0, n.jsx)("video", {
-            ref: i,
+            ref: o,
             controls: !0,
             muted: !0,
             disablePictureInPicture: !0,
@@ -4365,10 +4365,10 @@
       function Ut(e) {
         let { trailer: t } = e,
           [r, a] = (0, s.useState)(!1),
-          [o, i] = (0, g.TP)(),
-          c = (0, V.A)(bt.CarouselItem, bt.DashTrailer);
+          [i, o] = (0, g.TP)(),
+          c = (0, W.A)(bt.CarouselItem, bt.DashTrailer);
         return (0, n.jsx)(l.Z, {
-          ref: i,
+          ref: o,
           className: c,
           onFocusWithin: a,
           children: (0, n.jsx)(Et.K, {
@@ -4380,7 +4380,7 @@
               hlsManifest: t.hlsManifest,
               screenshot: t.poster,
               altText: t.title,
-              forcePause: !r || !o,
+              forcePause: !r || !i,
               onPlaybackEnd: null,
               title: t.title,
               category: t.category,
@@ -4390,8 +4390,8 @@
         });
       }
       var zt = r(15955),
-        Wt = r(98505),
-        Vt = r(62872),
+        Vt = r(98505),
+        Wt = r(62872),
         Qt = r(81393);
       function Kt() {
         let e = document.cookie.match(
@@ -4415,7 +4415,7 @@
       function Xt(e) {
         let { children: t } = e,
           [r, a] = (0, s.useState)(Kt),
-          o = (0, s.useCallback)((e) => {
+          i = (0, s.useCallback)((e) => {
             !(function (e) {
               let t = new Date();
               t.setTime(t.getTime() + 31536e7);
@@ -4424,7 +4424,7 @@
             })(e),
               a(e);
           }, []),
-          [i, l] = (0, s.useState)(Zt),
+          [o, l] = (0, s.useState)(Zt),
           c = (0, s.useCallback)((e) => {
             (function (e) {
               let t = new Date();
@@ -4445,8 +4445,8 @@
           }, []);
         return (0, n.jsx)(ge.v, {
           autoplayEnabled: r,
-          setAutoplayEnabled: o,
-          playerVolume: i / 100,
+          setAutoplayEnabled: i,
+          playerVolume: o / 100,
           setPlayerVolume: c,
           audioMuted: !d,
           setAudioMuted: p,
@@ -4457,7 +4457,7 @@
       function Yt(e) {
         let { orderedItems: t, children: r } = e,
           a = (0, ge.F)().m_bAutoplayEnabled,
-          [o, i] = (0, s.useState)(() =>
+          [i, o] = (0, s.useState)(() =>
             (function (e, t) {
               return (
                 (0, Qt.wT)(e.length > 0, "Unexpected length"),
@@ -4472,21 +4472,21 @@
                 strActiveType: "",
                 strPreviousID: "",
                 strNextID: "",
-                fnSetActive: i,
+                fnSetActive: o,
               };
-            let e = t.findIndex((e) => e.key == o);
+            let e = t.findIndex((e) => e.key == i);
             e = e || 0;
             let r = t[e].type,
               n = tr("previous", t, e, a),
               s = tr("next", t, e, a);
             return {
-              strActiveID: o,
+              strActiveID: i,
               strActiveType: r,
               strPreviousID: n,
               strNextID: s,
-              fnSetActive: i,
+              fnSetActive: o,
             };
-          }, [o, i, t, a]);
+          }, [i, o, t, a]);
         return (0, n.jsx)(Jt.Provider, { value: l, children: r });
       }
       function $t() {
@@ -4516,36 +4516,36 @@
           {
             refStrip: r,
             refTrack: a,
-            refThumb: o,
-            fnRegisterItemElement: i,
+            refThumb: i,
+            fnRegisterItemElement: o,
           } = (function () {
             let e = $t(),
               t = (0, s.useRef)(null),
               r = (0, s.useRef)(null),
               n = (0, s.useRef)(null),
               a = (0, s.useRef)(null),
-              o = (0, s.useRef)(void 0);
-            o.current || (o.current = new Map());
+              i = (0, s.useRef)(void 0);
+            i.current || (i.current = new Map());
             (0, s.useEffect)(() => {
               let e = n.current,
                 s = r.current,
-                o = t.current,
-                i = () => {
+                i = t.current,
+                o = () => {
                   a.current ||
                     (a.current = requestAnimationFrame(() => {
                       a.current = null;
                       let t = s.getBoundingClientRect(),
                         r = e.getBoundingClientRect(),
                         n = t.width - r.width,
-                        i = o.scrollWidth - o.clientWidth,
-                        l = (0, sr.Fu)(o.scrollLeft, 0, i, 0, n);
+                        o = i.scrollWidth - i.clientWidth,
+                        l = (0, sr.Fu)(i.scrollLeft, 0, o, 0, n);
                       e.style.transform = `translateX( ${l}px )`;
                     }));
                 };
               return (
-                o.addEventListener("scroll", i, { passive: !0 }),
+                i.addEventListener("scroll", o, { passive: !0 }),
                 () => {
-                  o.removeEventListener("scroll", i),
+                  i.removeEventListener("scroll", o),
                     a.current && cancelAnimationFrame(a.current);
                 }
               );
@@ -4554,12 +4554,12 @@
                 let e = n.current,
                   s = r.current,
                   a = t.current,
-                  o = null,
-                  i = (e) => {
-                    if (!o) return;
-                    let t = e.clientX - o.nInitialClientX,
-                      r = (0, sr.OQ)(o.nInitialPosition + t, 0, o.nTrackWidth),
-                      n = (0, sr.Fu)(r, 0, o.nTrackWidth, 0, o.nScrollWidth);
+                  i = null,
+                  o = (e) => {
+                    if (!i) return;
+                    let t = e.clientX - i.nInitialClientX,
+                      r = (0, sr.OQ)(i.nInitialPosition + t, 0, i.nTrackWidth),
+                      n = (0, sr.Fu)(r, 0, i.nTrackWidth, 0, i.nScrollWidth);
                     a.scrollTo({ left: n, behavior: "auto" });
                   },
                   l = (t) => {
@@ -4574,32 +4574,32 @@
                       ((d = t.clientX - r.left),
                       (d -= Math.floor(n.width / 2)),
                       (d = (0, sr.OQ)(d, 0, l))),
-                      (o = {
+                      (i = {
                         nInitialPosition: d,
                         nInitialClientX: u,
                         nTrackWidth: l,
                         nScrollWidth: c,
                       }),
                       (document.body.style.userSelect = "none"),
-                      i(t);
+                      o(t);
                   },
                   c = (e) => {
-                    (o = null), (document.body.style.userSelect = "");
+                    (i = null), (document.body.style.userSelect = "");
                   };
                 return (
                   s.addEventListener("pointerdown", l),
-                  s.addEventListener("pointermove", i),
+                  s.addEventListener("pointermove", o),
                   s.addEventListener("lostpointercapture", c),
                   () => {
                     s.removeEventListener("pointerdown", l),
-                      s.removeEventListener("pointermove", i),
+                      s.removeEventListener("pointermove", o),
                       s.removeEventListener("lostpointercapture", c);
                   }
                 );
               }, []);
-            let i = e.strActiveID;
+            let o = e.strActiveID;
             (0, s.useEffect)(() => {
-              let e = o.current.get(i);
+              let e = i.current.get(o);
               if (!e) return;
               let r = t.current,
                 n = r.getBoundingClientRect(),
@@ -4608,12 +4608,12 @@
                 let e = s.left - n.left + r.scrollLeft;
                 r.scrollTo({ left: e, behavior: "smooth" });
               }
-            }, [i]);
+            }, [o]);
             let l = (0, s.useCallback)(
               (e, t) => {
-                t ? o.current.set(e, t) : o.current.delete(e);
+                t ? i.current.set(e, t) : i.current.delete(e);
               },
-              [o],
+              [i],
             );
             return {
               refStrip: t,
@@ -4622,33 +4622,33 @@
               fnRegisterItemElement: l,
             };
           })(),
-          l = "theater" == (0, Lt.ri)().strMode;
+          l = "theater" == (0, Pt.ri)().strMode;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
-              className: (0, V.A)(rr.StripSkeleton, l && rr.TheaterMode),
+              className: (0, W.A)(rr.StripSkeleton, l && rr.TheaterMode),
               children: [
                 (0, n.jsx)("div", { className: rr.Items }),
                 (0, n.jsx)("div", { className: rr.Scrollbar }),
               ],
             }),
             (0, n.jsxs)("div", {
-              className: (0, V.A)(rr.Strip, l && rr.TheaterMode),
+              className: (0, W.A)(rr.Strip, l && rr.TheaterMode),
               children: [
-                (0, n.jsx)(or, {
+                (0, n.jsx)(ir, {
                   refStrip: r,
                   items: t,
-                  registerItemElement: i,
+                  registerItemElement: o,
                 }),
-                (0, n.jsx)(lr, { refTrack: a, refThumb: o }),
+                (0, n.jsx)(lr, { refTrack: a, refThumb: i }),
               ],
             }),
           ],
         });
       }
-      function or(e) {
+      function ir(e) {
         let { refStrip: t, items: r, registerItemElement: a } = e,
-          o = (function () {
+          i = (function () {
             let e = $t(),
               t = (0, s.useCallback)(
                 (t) => {
@@ -4664,25 +4664,25 @@
               );
             return t;
           })(),
-          i = r.map((e) =>
-            (0, n.jsx)(ir, { item: e, registerItemElement: a }, e.key),
+          o = r.map((e) =>
+            (0, n.jsx)(or, { item: e, registerItemElement: a }, e.key),
           );
         return (0, n.jsx)("div", {
           ref: t,
           className: rr.StripItems,
-          onKeyDown: o,
+          onKeyDown: i,
           tabIndex: 0,
-          children: i,
+          children: o,
         });
       }
-      function ir(e) {
+      function or(e) {
         let { item: t, registerItemElement: r } = e,
           a = $t(),
-          o = t.key == a.strActiveID,
-          i = t.key,
-          l = (0, s.useCallback)((e) => r(i, e), [i, r]),
+          i = t.key == a.strActiveID,
+          o = t.key,
+          l = (0, s.useCallback)((e) => r(o, e), [o, r]),
           c = t.data.thumbnail ? t.data.thumbnail : "",
-          d = (0, V.A)(rr.Item, o && rr.Active);
+          d = (0, W.A)(rr.Item, i && rr.Active);
         return (0, n.jsxs)("div", {
           ref: l,
           className: d,
@@ -4701,7 +4701,7 @@
         let { refTrack: t, refThumb: r } = e,
           s = $t(),
           a = s.strPreviousID ? () => s.fnSetActive(s.strPreviousID) : null,
-          o = s.strNextID ? () => s.fnSetActive(s.strNextID) : null;
+          i = s.strNextID ? () => s.fnSetActive(s.strNextID) : null;
         return (0, n.jsxs)("div", {
           className: rr.StripScrollbar,
           children: [
@@ -4717,7 +4717,7 @@
             }),
             (0, n.jsx)("div", {
               className: rr.Arrow,
-              onClick: o,
+              onClick: i,
               children: (0, n.jsx)(cr, { direction: "right" }),
             }),
           ],
@@ -4751,10 +4751,10 @@
       const mr = 5e3;
       function hr(e) {
         let { appName: t, trailers: r, screenshots: a } = e,
-          o =
+          i =
             (0, ur.$)(`(max-width: ${zt.storeNarrowResponsiveWidth})`) ||
             Me.TS.IN_MOBILE_WEBVIEW,
-          i = Pt(r, a);
+          o = Lt(r, a);
         return (
           (function (e) {
             let t = e.length;
@@ -4764,19 +4764,19 @@
                 .querySelectorAll(".gamehighlight_desktopskeleton")
                 .forEach((e) => e.remove());
             }, [t]);
-          })(i),
-          0 == i.length
+          })(o),
+          0 == o.length
             ? null
-            : (0, n.jsx)(Lt.QY, {
-                supportsTheater: !o,
+            : (0, n.jsx)(Pt.QY, {
+                supportsTheater: !i,
                 supportsFullscreen: (0, dr.tg)(),
                 children: (0, n.jsx)(Xt, {
                   children: (0, n.jsx)(Yt, {
-                    orderedItems: i,
+                    orderedItems: o,
                     children: (0, n.jsxs)(_r, {
                       children: [
-                        (0, n.jsx)(gr, { appName: t, items: i }),
-                        (0, n.jsx)(ar, { items: i }),
+                        (0, n.jsx)(gr, { appName: t, items: o }),
+                        (0, n.jsx)(ar, { items: o }),
                       ],
                     }),
                   }),
@@ -4788,23 +4788,23 @@
       function _r(e) {
         let { children: t } = e,
           [r, a] = (0, s.useState)(!1),
-          o = (0, s.useCallback)((e) => a(e.isIntersecting), []),
-          i = (0, g.BL)(o),
+          i = (0, s.useCallback)((e) => a(e.isIntersecting), []),
+          o = (0, g.BL)(i),
           { refRoot: l } = (function (e) {
             let t = (0, s.useRef)(null),
               r = (0, s.useRef)(0),
               n = (0, s.useRef)(!1),
               a = (0, s.useRef)(e),
-              o = $t(),
-              i = (0, s.useRef)(o);
-            i.current = o;
-            let l = "none" != (0, Lt.ri)().strMode,
+              i = $t(),
+              o = (0, s.useRef)(i);
+            o.current = i;
+            let l = "none" != (0, Pt.ri)().strMode,
               c = (0, s.useRef)(l);
             c.current = l;
             let d = (0, s.useCallback)(() => {
                 if (
-                  !i.current ||
-                  "screenshot" != i.current.strActiveType ||
+                  !o.current ||
+                  "screenshot" != o.current.strActiveType ||
                   r.current ||
                   n.current ||
                   c.current ||
@@ -4812,14 +4812,14 @@
                 )
                   return;
                 let e = () => {
-                  (r.current = 0), i.current.fnSetActive(i.current.strNextID);
+                  (r.current = 0), o.current.fnSetActive(o.current.strNextID);
                 };
                 r.current = window.setTimeout(e, mr);
               }, []),
               u = (0, s.useCallback)(() => {
                 r.current && (window.clearTimeout(r.current), (r.current = 0));
               }, []),
-              p = o.strActiveID;
+              p = i.strActiveID;
             return (
               (0, s.useEffect)(() => {
                 d();
@@ -4855,7 +4855,7 @@
               { refRoot: t }
             );
           })(r),
-          c = (0, g.Ue)(i, l);
+          c = (0, g.Ue)(o, l);
         return (0, n.jsx)(fr.Provider, {
           value: r,
           children: (0, n.jsx)("div", { ref: c, children: t }),
@@ -4864,7 +4864,7 @@
       function gr(e) {
         let { appName: t, items: r } = e,
           a = $t(),
-          o = (function () {
+          i = (function () {
             let e = $t(),
               t = (0, s.useCallback)(
                 (t) => {
@@ -4881,15 +4881,15 @@
               );
             return t;
           })(),
-          i = (0, Lt.ri)(),
-          l = "theater" == i.strMode,
+          o = (0, Pt.ri)(),
+          l = "theater" == o.strMode,
           [c, d] = (function () {
-            let [e, t] = (0, Wt.if)(),
+            let [e, t] = (0, Vt.if)(),
               r = (0, s.useRef)({ element: void 0, bKeepControls: !1 }),
               n = (0, s.useCallback)(
                 (e) => {
                   if (e.target == r.current.element) return;
-                  let t = (0, Wt.Ae)(e);
+                  let t = (0, Vt.Ae)(e);
                   r.current = { element: e.target, bKeepControls: t };
                 },
                 [r],
@@ -4900,15 +4900,15 @@
                 },
                 [r, t],
               ),
-              o = (0, s.useCallback)(
+              i = (0, s.useCallback)(
                 (e) => {
-                  "touch" != e.pointerType && (n(e), a((0, Wt.Av)(e)));
+                  "touch" != e.pointerType && (n(e), a((0, Vt.Av)(e)));
                 },
                 [a, n],
               ),
-              i = (0, s.useCallback)(
+              o = (0, s.useCallback)(
                 (e) => {
-                  "touch" != e.pointerType && (n(e), a((0, Wt.Av)(e)));
+                  "touch" != e.pointerType && (n(e), a((0, Vt.Av)(e)));
                 },
                 [n, a],
               ),
@@ -4916,21 +4916,21 @@
                 (e) => {
                   "touch" != e.pointerType &&
                     ((r.current = { element: void 0, bKeepControls: !1 }),
-                    a((0, Wt.Ug)()));
+                    a((0, Vt.Ug)()));
                 },
                 [r, a],
               ),
               c = (0, s.useCallback)(
                 (e) => {
-                  a((0, Wt.Av)(e));
+                  a((0, Vt.Av)(e));
                 },
                 [a],
               );
             return [
               e,
               {
-                onPointerEnter: o,
-                onPointerMove: i,
+                onPointerEnter: i,
+                onPointerMove: o,
                 onPointerLeave: l,
                 onPointerDown: c,
               },
@@ -4951,7 +4951,7 @@
             );
             return (0, pr.zO)(t);
           })(a),
-          f = (0, g.Ue)(i.refTheater, h),
+          f = (0, g.Ue)(o.refTheater, h),
           _ = r.map((e) =>
             "screenshot" == e.type
               ? (0, n.jsx)(
@@ -4980,15 +4980,15 @@
                 children: [
                   (0, n.jsx)(Cr, { appName: t }),
                   (0, n.jsxs)("div", {
-                    ref: i.refFullscreen,
+                    ref: o.refFullscreen,
                     className: zt.ItemViewArea,
                     ...d,
-                    onKeyDown: o,
+                    onKeyDown: i,
                     tabIndex: 0,
                     children: [
                       _,
                       (0, n.jsx)("div", {
-                        className: (0, V.A)(
+                        className: (0, W.A)(
                           zt.FullscreenArrow,
                           c && zt.Visible,
                           zt.Previous,
@@ -4998,7 +4998,7 @@
                         children: (0, n.jsx)(cr, { direction: "left" }),
                       }),
                       (0, n.jsx)("div", {
-                        className: (0, V.A)(
+                        className: (0, W.A)(
                           zt.FullscreenArrow,
                           c && zt.Visible,
                           zt.Next,
@@ -5014,16 +5014,16 @@
               }),
             }),
             (0, n.jsx)("div", {
-              className: (0, V.A)(zt.SkeletonViewArea, l && zt.TheaterMode),
+              className: (0, W.A)(zt.SkeletonViewArea, l && zt.TheaterMode),
             }),
           ],
         });
       }
       function vr(e) {
         let { ref: t, children: r, ...a } = e,
-          o = (0, Lt.ri)(),
-          i = o.strMode,
-          l = (0, Lt.Dy)(o, "none"),
+          i = (0, Pt.ri)(),
+          o = i.strMode,
+          l = (0, Pt.Dy)(i, "none"),
           c = (0, s.useCallback)(
             (e) => {
               e.target === e.currentTarget && l();
@@ -5032,7 +5032,7 @@
           );
         return (
           (0, s.useEffect)(() => {
-            if ("theater" != i) return;
+            if ("theater" != o) return;
             let e = (e) => {
               "Escape" != e.key || e.repeat || l();
             };
@@ -5040,7 +5040,7 @@
               window.addEventListener("keydown", e),
               () => window.removeEventListener("keydown", e)
             );
-          }, [i, l]),
+          }, [o, l]),
           (0, n.jsx)("div", {
             ref: t,
             ...a,
@@ -5052,8 +5052,8 @@
       }
       function Cr(e) {
         let { appName: t } = e,
-          r = (0, Lt.ri)(),
-          s = (0, Lt.Dy)(r, "none");
+          r = (0, Pt.ri)(),
+          s = (0, Pt.Dy)(r, "none");
         return (0, n.jsxs)("div", {
           className: zt.TheaterModeHeader,
           children: [
@@ -5088,14 +5088,14 @@
       function wr(e) {
         let { id: t, screenshot: r, focus: s } = e,
           a = er(t),
-          o = t == $t().strNextID;
-        let i = yr(a || o),
-          l = (0, Lt.ri)(),
-          c = (0, Lt.Dy)(l, "theater"),
+          i = t == $t().strNextID;
+        let o = yr(a || i),
+          l = (0, Pt.ri)(),
+          c = (0, Pt.Dy)(l, "theater"),
           d = "none" == l.strMode,
           u = (0, pr.b$)(s);
-        if (!i) return null;
-        let p = (0, V.A)(
+        if (!o) return null;
+        let p = (0, W.A)(
             zt.ViewedItem,
             a && zt.Active,
             zt.Screenshot,
@@ -5113,8 +5113,8 @@
             (0, n.jsxs)("div", {
               className: zt.Controls,
               children: [
-                l.bSupportsTheater && (0, n.jsx)(Vt.tS, {}),
-                l.bSupportsFullscreen && (0, n.jsx)(Vt.Wc, {}),
+                l.bSupportsTheater && (0, n.jsx)(Wt.tS, {}),
+                l.bSupportsFullscreen && (0, n.jsx)(Wt.Wc, {}),
               ],
             }),
           ],
@@ -5122,15 +5122,15 @@
       }
       function Ar(e) {
         let { id: t, trailer: r, focus: a } = e,
-          o = er(t),
-          i = yr(o),
+          i = er(t),
+          o = yr(i),
           [l, c] = (0, g.TP)(),
           d = (0, s.useContext)(fr),
           u = $t(),
           p = (0, s.useCallback)(() => u.fnSetActive(u.strNextID), [u]);
-        if (!i) return null;
-        let m = (0, V.A)(zt.ViewedItem, o && zt.Active, zt.Trailer);
-        return (0, n.jsx)(Lt.vG, {
+        if (!o) return null;
+        let m = (0, W.A)(zt.ViewedItem, i && zt.Active, zt.Trailer);
+        return (0, n.jsx)(Pt.vG, {
           drop: !(0, dr.tg)(),
           children: (0, n.jsx)("div", {
             ref: c,
@@ -5140,7 +5140,7 @@
               hlsManifest: r.hlsManifest,
               screenshot: r.poster,
               altText: r.title,
-              forcePause: !o || !l || !d,
+              forcePause: !i || !l || !d,
               onPlaybackEnd: p,
               title: r.title,
               category: r.category,
@@ -5174,8 +5174,8 @@
           children: (0, _.we)((0, br.wW)(t)),
         });
       }
-      function Pr(e) {
-        const { results: t, learnMore: r, appName: a, eStartingTab: o } = e,
+      function Lr(e) {
+        const { results: t, learnMore: r, appName: a, eStartingTab: i } = e,
           [l, c] = (0, s.useState)(!1);
         let d = s.useCallback(
           (e) => {
@@ -5192,7 +5192,7 @@
         };
         return (0, n.jsxs)("div", {
           children: [
-            (0, n.jsx)(i.Ii, {
+            (0, n.jsx)(o.Ii, {
               className: Tr().LearnMore,
               onClick: d,
               children: r,
@@ -5208,17 +5208,17 @@
                   results: t,
                   buttonProps: u,
                   appName: a,
-                  eStartingTab: o,
+                  eStartingTab: i,
                 }),
               }),
             }),
           ],
         });
       }
-      const Lr = function (e) {
-        const { appID: t, results: r, appName: a, tab: o } = e,
-          i = (0, v.Qn)(),
-          l = "steamos" == o ? 2 : 1;
+      const Pr = function (e) {
+        const { appID: t, results: r, appName: a, tab: i } = e,
+          o = (0, v.Qn)(),
+          l = "steamos" == i ? 2 : 1;
         let c, d, u;
         2 == l
           ? ((c = (0, _.we)(
@@ -5226,7 +5226,7 @@
             )),
             (d = (0, n.jsx)(br.aw, { category: r.steamos_resolved_category })),
             (u = (0, n.jsx)(Er, { category: r.steamos_resolved_category })))
-          : ((c = i
+          : ((c = o
               ? (0, _.we)(
                   "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
                 )
@@ -5249,10 +5249,10 @@
                   children: c,
                 }),
                 (0, n.jsxs)("div", {
-                  className: i ? Tr().BannerContent : Tr().BannerContentDesktop,
+                  className: o ? Tr().BannerContent : Tr().BannerContentDesktop,
                   children: [
                     (0, n.jsxs)("div", { children: [d, u] }),
-                    (0, n.jsx)(Pr, {
+                    (0, n.jsx)(Lr, {
                       results: r,
                       learnMore: (0, _.we)(
                         "#SteamDeckVerified_Store_CompatSection_LearnMore",
@@ -5286,15 +5286,15 @@
         Fr =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
       function Mr(e) {
-        const { rgSources: t, onIncrementalError: r, alt: a, ...o } = e,
-          [i, l] = (0, s.useState)(0),
-          c = t[i];
+        const { rgSources: t, onIncrementalError: r, alt: a, ...i } = e,
+          [o, l] = (0, s.useState)(0),
+          c = t[o];
         return (0, n.jsx)("img", {
           onError: (e) => {
-            l((e) => e + 1), r?.(e, c, i);
+            l((e) => e + 1), r?.(e, c, o);
           },
           alt: a,
-          ...o,
+          ...i,
           src: c,
         });
       }
@@ -5307,8 +5307,8 @@
             size: r,
             statusStyle: s,
             statusPosition: a,
-            className: o,
-            children: i,
+            className: i,
+            children: o,
             isOnline: l,
             isInGame: c,
             isWatchingBroadcast: d,
@@ -5344,7 +5344,7 @@
                 [Or.WatchingBroadcast]: d,
                 [Or.AwayOrSnooze]: u,
               },
-              o,
+              i,
             ),
             "data-size": r,
             "data-status-position": a,
@@ -5356,16 +5356,16 @@
                 draggable: !1,
                 alt: p,
               }),
-              i,
+              o,
             ],
           })
         );
       }
       var zr = r(42780);
-      function Wr(e, t) {
+      function Vr(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      const Vr = {
+      const Wr = {
         b: {
           Constructor: function (e) {
             return (0, n.jsx)("b", { children: e.children });
@@ -5393,7 +5393,7 @@
         },
         color: {
           Constructor: function (e) {
-            const t = Wr(e.args),
+            const t = Vr(e.args),
               r = {};
             t &&
               (t.match(/^#[a-fA-F0-9]+$/) || t.match(/rgba?\([0-9, ]+\)$/)) &&
@@ -5588,7 +5588,7 @@
           },
           a = Object.assign(s, r);
         a.cursor = n;
-        const o = (function (e) {
+        const i = (function (e) {
             const t = Object.entries(e)
                 .filter((e) => "topics" != e[0])
                 .map((e) => [e[0], String(e[1])]),
@@ -5597,16 +5597,16 @@
               e.topics && e.topics.forEach((e) => r.append("topics[]", e)), r
             );
           })(a),
-          i = await fetch(
-            `${Me.TS.STORE_BASE_URL}/ajaxappreviews/${t}?${o.toString()}`,
+          o = await fetch(
+            `${Me.TS.STORE_BASE_URL}/ajaxappreviews/${t}?${i.toString()}`,
           ),
-          l = await i.json().catch((e) => "");
+          l = await o.json().catch((e) => "");
         if (!l || "object" != typeof l)
           throw new ln(76, "Malformed ajaxgetreviews response");
         if (1 != l.success)
           throw new ln(l.success, `Error ${l.success} from ajaxgetreviews`);
         const c = l;
-        c.reviewFilter = o.get("filter") || "all";
+        c.reviewFilter = i.get("filter") || "all";
         const d = [
           ...(c.reviews?.map((e) => e.recommendationid) || []),
           ...(c.recentreviews?.map((e) => e.recommendationid) || []),
@@ -5689,18 +5689,18 @@
       const An = s.createContext([]);
       function yn(e) {
         const t = s.useContext(An);
-        let r = Wr(e.args) ?? Wr(e.args, "href");
+        let r = Vr(e.args) ?? Vr(e.args, "href");
         if (!r || !r.match(/^https?:\/\//)) return e.children;
         (0, vn.p)(r) && (r = (0, vn.E)(r));
         const a = URL.parse(r);
         if (!a) return e.children;
-        const o = (function (e, t) {
+        const i = (function (e, t) {
           for (const r of e)
             if (wn(t.origin, r.site) && r.regex.exec(t.pathname))
               return r.component;
           return xn;
         })(t || [], a);
-        return (0, n.jsx)(o, { url: a, children: e.children });
+        return (0, n.jsx)(i, { url: a, children: e.children });
       }
       var Sn = r(4179),
         Nn = r.n(Sn);
@@ -5713,7 +5713,7 @@
         const r = "FillArea",
           s = new $r.b(t.steamid),
           a = (0, kr.t)(t.avatar, r);
-        return (0, n.jsx)(i.Ii, {
+        return (0, n.jsx)(o.Ii, {
           className: Nn().AvatarContainer,
           "data-miniprofile": s.GetAccountID(),
           href: t.profile_url,
@@ -5738,7 +5738,7 @@
             (0, n.jsxs)(l.Z, {
               className: Nn().AuthorNameAndCounts,
               children: [
-                (0, n.jsx)(i.Ii, {
+                (0, n.jsx)(o.Ii, {
                   className: Nn().Name,
                   "data-miniprofile": r.GetAccountID(),
                   href: t.profile_url,
@@ -5748,7 +5748,7 @@
                   className: Nn().Counts,
                   children: [
                     t.num_games_owned > 0 &&
-                      (0, n.jsx)(i.Ii, {
+                      (0, n.jsx)(o.Ii, {
                         className: Nn().Count,
                         href: t.profile_url + "games/?tab=all",
                         children: on.Localize(
@@ -5757,7 +5757,7 @@
                         ),
                       }),
                     t.num_reviews > 0 &&
-                      (0, n.jsx)(i.Ii, {
+                      (0, n.jsx)(o.Ii, {
                         className: Nn().Count,
                         href: t.profile_url + "recommended",
                         children: on.Localize(
@@ -5788,7 +5788,7 @@
       function Rn(e) {
         const { bPositive: t } = e;
         return (0, n.jsx)("div", {
-          className: (0, V.A)(Nn().ThumbIcon, t ? Nn().Up : Nn().Down),
+          className: (0, W.A)(Nn().ThumbIcon, t ? Nn().Up : Nn().Down),
           children: (0, n.jsx)(f.twC, {}),
         });
       }
@@ -5798,19 +5798,19 @@
           ? (0, n.jsx)(je.he, {
               toolTipContent: on.Localize(
                 "#Review_Majority_Deck",
-                Pn(t.author.playtime_forever),
+                Ln(t.author.playtime_forever),
               ),
               className: Nn().SteamDeckIcon,
               children: (0, n.jsx)(f.DQe, {}),
             })
           : null;
       }
-      function Pn(e) {
+      function Ln(e) {
         return (0, nn.Dq)(e / 60, 1);
       }
-      function Ln(e) {
+      function Pn(e) {
         const { review: t, bIsFriend: r, bShortPresentation: a } = e,
-          { appid: o } = s.useContext(Us),
+          { appid: i } = s.useContext(zs),
           l = t.voted_up;
         let c = l ? "#Review_Recommended" : "#Review_NotRecommended";
         r &&
@@ -5825,12 +5825,12 @@
         a && (d = "#Review_HoursOnRecord_Short");
         const u = on.Localize(
           d,
-          Pn(t.author.playtime_forever),
-          Pn(t.author.playtime_at_review),
+          Ln(t.author.playtime_forever),
+          Ln(t.author.playtime_at_review),
         );
-        return (0, n.jsx)(i.Ii, {
+        return (0, n.jsx)(o.Ii, {
           className: Nn().ReviewInfoHeaderLink,
-          href: jn(t, o),
+          href: jn(t, i),
           children: (0, n.jsxs)(je.he, {
             className: Nn().ReviewInfoHeader,
             toolTipContent: on.Localize("#Review_SeeFullReview"),
@@ -5862,12 +5862,12 @@
       }
       function kn(e) {
         const { review: t } = e,
-          { appid: r, app_release_date: a, appname: o } = s.useContext(Us);
+          { appid: r, app_release_date: a, appname: i } = s.useContext(zs);
         if (r == R.q || r == R.DF || r == R.PB) {
           if ((t.timestamp_updated || t.timestamp_created) < 1695853800)
             return (0, n.jsx)(je.he, {
               className: Nn().Disclaimer,
-              toolTipContent: on.Localize("#Review_CSGO_Disclaimer_Tooltip", o),
+              toolTipContent: on.Localize("#Review_CSGO_Disclaimer_Tooltip", i),
               children: on.Localize("#Review_CSGO_Disclaimer"),
             });
         }
@@ -5875,7 +5875,7 @@
       }
       function Bn(e) {
         const { review: t } = e,
-          { app_release_date: r, appname: a } = s.useContext(Us);
+          { app_release_date: r, appname: a } = s.useContext(zs);
         return t.written_during_early_access
           ? (0, n.jsx)(je.he, {
               className: Nn().Disclaimer,
@@ -5889,7 +5889,7 @@
       }
       function Dn(e) {
         const { review: t } = e,
-          { app_release_date: r, appname: a } = s.useContext(Us);
+          { app_release_date: r, appname: a } = s.useContext(zs);
         return r && t.author.last_played && t.author.last_played < r
           ? (0, n.jsx)(
               je.he,
@@ -6002,22 +6002,22 @@
           bSelected: r,
           bEnabled: s,
           onActivate: a,
-          children: o,
+          children: i,
         } = e;
         return (0, n.jsxs)(en.$n, {
-          className: (0, V.A)(Nn().VoteButton, r && Nn().Selected),
+          className: (0, W.A)(Nn().VoteButton, r && Nn().Selected),
           onClick: a,
           disabled: !s,
           children: [
-            o,
+            i,
             (0, n.jsx)("div", { className: Nn().VoteButtonText, children: t }),
           ],
         });
       }
-      function Wn(e) {
+      function Vn(e) {
         const { review: t } = e,
-          [r, a, o] = (0, E.uD)(),
-          [i, c] = s.useState(),
+          [r, a, i] = (0, E.uD)(),
+          [o, c] = s.useState(),
           d = (function (e) {
             const t = (0, Ge.jE)();
             return (0, He.n)({
@@ -6099,17 +6099,17 @@
           className: Nn().VoteButtonsContainer,
           children: [
             (0, n.jsx)(C.EN, {
-              active: !!i,
+              active: !!o,
               children: (0, n.jsx)(C.KG, {
                 closeModal: () => c(void 0),
-                strDescription: i,
+                strDescription: o,
               }),
             }),
             (0, n.jsx)(rt, {
               targetType: 1,
               bShowModal: r,
               targetid: t.recommendationid,
-              onDismiss: o,
+              onDismiss: i,
               onSuccess: () => {},
             }),
             (0, n.jsx)("div", {
@@ -6152,9 +6152,9 @@
           ],
         });
       }
-      function Vn(e) {
+      function Wn(e) {
         const { review: t } = e,
-          { appid: r } = s.useContext(Us);
+          { appid: r } = s.useContext(zs);
         return (0, n.jsxs)(l.Z, {
           className: Nn().ReviewRatings,
           children: [
@@ -6182,7 +6182,7 @@
             Boolean(t.comment_count) &&
               (0, n.jsx)("div", {
                 className: Nn().Right,
-                children: (0, n.jsx)(i.Ii, {
+                children: (0, n.jsx)(o.Ii, {
                   href: jn(t, r),
                   children: (0, n.jsxs)(je.he, {
                     className: Nn().CommentCount,
@@ -6217,10 +6217,10 @@
       const Kn = s.createContext(0);
       function Zn(e) {
         const t = s.useContext(Kn),
-          r = Wr(e.args),
+          r = Vr(e.args),
           a = JSON.parse(`[${r}]`).includes(t);
         return (0, n.jsx)("span", {
-          className: (0, V.A)(Nn().Highlight, a && Nn().Active),
+          className: (0, W.A)(Nn().Highlight, a && Nn().Active),
           "data-type": r,
           children: e.children,
         });
@@ -6234,7 +6234,7 @@
         const { text: t = "" } = e,
           r = s.useMemo(() => {
             const e = {
-              ...Vr,
+              ...Wr,
               ...Kr,
               ...Qr,
               spoiler: { Constructor: Xr },
@@ -6256,28 +6256,28 @@
       function Jn(e) {
         const { review: t } = e,
           [r, a] = s.useState(!1),
-          [o, i] = s.useState(!1);
+          [i, o] = s.useState(!1);
         return (0, n.jsxs)(l.Z, {
-          className: (0, V.A)(
+          className: (0, W.A)(
             Nn().ReviewText,
             r && Nn().Expanded,
-            o && Nn().Collapsed,
+            i && Nn().Collapsed,
           ),
           children: [
             (0, n.jsxs)("div", {
               className: Nn().TextContainer,
               ref: (e) => {
-                e && e.scrollHeight > e.clientHeight && i(!0);
+                e && e.scrollHeight > e.clientHeight && o(!0);
               },
               children: [
                 (0, n.jsx)("div", {
                   className: Nn().Text,
                   children: (0, n.jsx)(Xn, { text: t.review }),
                 }),
-                o && (0, n.jsx)("div", { className: Nn().FadeGradient }),
+                i && (0, n.jsx)("div", { className: Nn().FadeGradient }),
               ],
             }),
-            o &&
+            i &&
               (0, n.jsx)(en.$n, {
                 className: Nn().ReadMoreButton,
                 tabIndex: 0,
@@ -6289,8 +6289,8 @@
       }
       function Yn(e) {
         const { review: t, reaction: r } = e,
-          [s, a, o] = (0, E.uD)(),
-          i = qe(r.reaction_type);
+          [s, a, i] = (0, E.uD)(),
+          o = qe(r.reaction_type);
         return (0, n.jsx)(je.m9, {
           bDisabled: s,
           toolTipContent: (0, n.jsx)(rn, {
@@ -6307,14 +6307,14 @@
                 targetType: 1,
                 bShowModal: s,
                 targetid: t.recommendationid,
-                onDismiss: o,
+                onDismiss: i,
                 initialSelectedReaction: r.reaction_type,
                 onSuccess: () => {},
               }),
               (0, n.jsx)("img", {
                 className: Nn().Icon,
                 src: Ke(r.reaction_type, !1),
-                alt: i?.localized_title,
+                alt: o?.localized_title,
               }),
               r.count > 1 &&
                 (0, n.jsx)("div", { className: Nn().Count, children: r.count }),
@@ -6346,22 +6346,22 @@
       function es(e) {
         const { review: t } = e,
           [r, a] = s.useState(!0),
-          o = Ze();
-        if (!o.isSuccess || !t.reactions || 0 == t.reactions?.length)
+          i = Ze();
+        if (!i.isSuccess || !t.reactions || 0 == t.reactions?.length)
           return null;
-        const i = [];
+        const o = [];
         let c = 0;
         for (let e of t.reactions) {
-          const t = o.data?.find((t) => t.reactionid == e.reaction_type);
+          const t = i.data?.find((t) => t.reactionid == e.reaction_type);
           t &&
-            (!r || (i.length < 3 && t.purchaseable)
-              ? i.push(e)
+            (!r || (o.length < 3 && t.purchaseable)
+              ? o.push(e)
               : (c += e.count));
         }
         return (0, n.jsxs)(l.Z, {
           className: Nn().ReviewReactions,
           children: [
-            i.map((e) =>
+            o.map((e) =>
               (0, n.jsx)(Yn, { review: t, reaction: e }, e.reaction_type),
             ),
             r &&
@@ -6371,29 +6371,29 @@
         });
       }
       function ts(e) {
-        const { id: t, name: r, onHighlight: a, onUnhighlight: o } = e,
-          i = s.useCallback(() => {
+        const { id: t, name: r, onHighlight: a, onUnhighlight: i } = e,
+          o = s.useCallback(() => {
             window.SetReviewTopicFilter(t, !0);
           }, [t]);
         return r
           ? (0, n.jsx)(en.$n, {
               className: Nn().ReviewTagButton,
-              onClick: i,
+              onClick: o,
               onMouseEnter: () => a(t),
-              onMouseLeave: () => o(t),
+              onMouseLeave: () => i(t),
               children: r,
             })
           : null;
       }
       function rs(e) {
         const { review: t, mapTags: r, setHighlight: a } = e,
-          o = s.useCallback(
+          i = s.useCallback(
             function (e) {
               a(e);
             },
             [a],
           ),
-          i = s.useCallback(
+          o = s.useCallback(
             function (e) {
               a(0);
             },
@@ -6421,8 +6421,8 @@
                       {
                         id: e,
                         name: r.get(e)?.name,
-                        onHighlight: o,
-                        onUnhighlight: i,
+                        onHighlight: i,
+                        onUnhighlight: o,
                       },
                       e,
                     ),
@@ -6483,19 +6483,47 @@
         });
       }
       function ss(e) {
+        const { review: t } = e,
+          { appid: r } = s.useContext(zs);
+        return t.developer_response && t.timestamp_dev_responded
+          ? (0, n.jsxs)("div", {
+              className: Nn().DeveloperResponse,
+              children: [
+                (0, n.jsx)("div", {
+                  className: Nn().Text,
+                  children: on.Localize(
+                    "#Review_OfficialDeveloperResponseExistsDate",
+                    (0, Yr._l)(t.timestamp_dev_responded, {
+                      fullmonthname: !0,
+                      bUseRelativeNames: !1,
+                    }),
+                  ),
+                }),
+                (0, n.jsx)(o.Ii, {
+                  className: Nn().Link,
+                  href: jn(t, r),
+                  children: on.Localize(
+                    "#Review_OfficialDeveloperResponse_View",
+                  ),
+                }),
+              ],
+            })
+          : null;
+      }
+      function as(e) {
         const {
             review: t,
             bIsFriend: r,
             bShortPresentation: a,
-            mapTags: o,
+            mapTags: i,
           } = e,
-          [i, c] = s.useState(0);
+          [o, c] = s.useState(0);
         return (0, n.jsx)(Kn.Provider, {
-          value: i,
+          value: o,
           children: (0, n.jsxs)(l.Z, {
             className: Nn().ReviewInfo,
             children: [
-              (0, n.jsx)(Ln, {
+              (0, n.jsx)(Pn, {
                 review: t,
                 bIsFriend: r,
                 bShortPresentation: a,
@@ -6509,10 +6537,10 @@
                   (0, n.jsx)(Un, { review: t }),
                   (0, n.jsx)(Jn, { review: t }),
                   (0, n.jsx)(ns, { review: t }),
-                  (0, n.jsx)(rs, { review: t, mapTags: o, setHighlight: c }),
+                  (0, n.jsx)(rs, { review: t, mapTags: i, setHighlight: c }),
                   (0, n.jsx)("hr", { className: Nn().MainDivider }),
-                  (0, n.jsx)(Wn, { review: t }),
                   (0, n.jsx)(Vn, { review: t }),
+                  (0, n.jsx)(Wn, { review: t }),
                   (0, n.jsx)(Qn, { review: t }),
                   (0, n.jsx)(es, { review: t }),
                 ],
@@ -6521,7 +6549,7 @@
           }),
         });
       }
-      function as(e) {
+      function is(e) {
         switch (e.detail.button) {
           case Rt.pR.DIR_UP:
           case Rt.pR.DIR_DOWN:
@@ -6535,8 +6563,8 @@
           bIsFriend: r = !1,
           bShortPresentation: s = !1,
           gamepadPresentation: a,
-          mapTags: o,
-          className: i,
+          mapTags: i,
+          className: o,
           nItemWidth: c,
           nItemHeight: d,
           onActivate: u,
@@ -6548,60 +6576,63 @@
         return (0, n.jsx)("div", {
           style: f,
           children: (0, n.jsx)(h, {
-            onGamepadDirection: "full" == a ? as : void 0,
-            className: (0, V.A)(
+            onGamepadDirection: "full" == a ? is : void 0,
+            className: (0, W.A)(
               Nn().ReviewDetails,
               r && Nn().Friend,
               s && Nn().Short,
               !!a && Nn().Gamepad,
               "full" == a && Nn().Fullscreen,
-              i,
+              o,
             ),
             onActivate: u,
             autoFocus: m,
             children: (0, n.jsx)(ke.Qg, {
               className: Nn().ScrollPanel,
               style: { maxHeight: f.height },
-              children: (0, n.jsx)("div", {
+              children: (0, n.jsxs)("div", {
                 className: Nn().ReviewWrapper,
-                children: (0, n.jsxs)(l.Z, {
-                  className: Nn().Top,
-                  children: [
-                    (0, n.jsx)(bn, { author: t.author }),
-                    (0, n.jsx)(ss, {
-                      review: t,
-                      bIsFriend: r,
-                      bShortPresentation: s,
-                      mapTags: o,
-                    }),
-                  ],
-                }),
+                children: [
+                  (0, n.jsxs)(l.Z, {
+                    className: Nn().Top,
+                    children: [
+                      (0, n.jsx)(bn, { author: t.author }),
+                      (0, n.jsx)(as, {
+                        review: t,
+                        bIsFriend: r,
+                        bShortPresentation: s,
+                        mapTags: i,
+                      }),
+                    ],
+                  }),
+                  (0, n.jsx)(ss, { review: t }),
+                ],
               }),
             }),
           }),
         });
       }
-      var is = r(7284),
-        ls = r.n(is);
-      function cs(e) {
+      var ls = r(7284),
+        cs = r.n(ls);
+      function ds(e) {
         const { id: t, className: r, title: s } = e;
         return s
           ? (0, n.jsx)("div", {
               id: t,
-              className: (0, V.A)(ls().ReviewSectionTitle, r),
+              className: (0, W.A)(cs().ReviewSectionTitle, r),
               children: on.Localize(s),
             })
           : null;
       }
-      var ds = r(72739),
-        us = r(79516),
-        ps = r(34822),
-        ms = r(69381),
-        hs = r(60778),
-        fs = r(76011);
-      const _s = new hs.wd("VirtualizedBoxCarousel").Debug;
-      function gs(e, t, r) {
-        const n = (0, fs.SP)("VBC_" + e, t || 0);
+      var us = r(72739),
+        ps = r(79516),
+        ms = r(34822),
+        hs = r(69381),
+        fs = r(60778),
+        _s = r(76011);
+      const gs = new fs.wd("VirtualizedBoxCarousel").Debug;
+      function vs(e, t, r) {
+        const n = (0, _s.SP)("VBC_" + e, t || 0);
         return (
           s.useEffect(() => {
             r && r(void 0, t || 0);
@@ -6611,19 +6642,19 @@
       }
       s.forwardRef(function (e, t) {
         const { name: r, initialColumn: s, fnOnFocusedColumnChange: a } = e,
-          [o, i] = gs(r, s, a);
-        return (0, n.jsx)(vs, {
+          [i, o] = vs(r, s, a);
+        return (0, n.jsx)(Cs, {
           ...e,
           ref: t,
-          focusedColumn: o,
-          setFocusedColumn: i,
+          focusedColumn: i,
+          setFocusedColumn: o,
         });
       });
-      const vs = s.forwardRef(function (e, t) {
+      const Cs = s.forwardRef(function (e, t) {
         const r = (0, v.Qn)();
-        return (0, n.jsx)(Cs, { ref: t, ...e, autoHeight: !r });
+        return (0, n.jsx)(xs, { ref: t, ...e, autoHeight: !r });
       });
-      class Cs extends s.PureComponent {
+      class xs extends s.PureComponent {
         static defaultProps = {
           nIndexLeftmost: 0,
           scrollDuration: 100,
@@ -6647,14 +6678,14 @@
           if (a)
             if (s) {
               const a = this.m_refGridElement;
-              _s("StartScrollAnimation", r, n, s);
-              let o = {
+              gs("StartScrollAnimation", r, n, s);
+              let i = {
                 msDuration: s,
                 timing: this.props.scrollTiming,
                 onComplete: () => this.OnAnimationScrollComplete(e, t, r, n),
               };
               this.m_scrollAnimation && this.m_scrollAnimation.End(),
-                (this.m_scrollAnimation = new ms.JV(a, { scrollLeft: n }, o)),
+                (this.m_scrollAnimation = new hs.JV(a, { scrollLeft: n }, i)),
                 this.m_scrollAnimation.Start();
             } else
               a.scrollToPosition({ scrollLeft: n, scrollTop: 0 }),
@@ -6678,13 +6709,13 @@
           }, 250);
         }
         OnAnimationScrollComplete(e, t, r, n) {
-          ds.unstable_batchedUpdates(() => {
-            _s("OnAnimationScrollComplete", r, n),
+          us.unstable_batchedUpdates(() => {
+            gs("OnAnimationScrollComplete", r, n),
               this.SendScrollNotification(n);
             const s = this.m_mapRefs.get(r);
             s &&
               s.current &&
-              (_s("Sending focus to", r), s.current.TakeFocus(e)),
+              (gs("Sending focus to", r), s.current.TakeFocus(e)),
               this.props.setFocusedColumn(t),
               (this.m_scrollAnimation = null),
               (this.m_activeScrollTo = null);
@@ -6759,14 +6790,14 @@
               fnGetId: r,
               fnItemRenderer: s,
               nItemHeight: a,
-              autoFocus: o,
+              autoFocus: i,
             } = this.props,
             { key: c, columnIndex: d, style: u } = e,
             p = t(d),
             m = parseInt(u.left.toString()),
             h = r(d),
             f = !this.m_mapRefs.has(h),
-            _ = this.m_mapRefs.get(h) || (0, i.b$)();
+            _ = this.m_mapRefs.get(h) || (0, o.b$)();
           return (
             this.m_mapRefs.set(h, _),
             (0, n.jsx)(
@@ -6776,7 +6807,7 @@
                 navRef: _,
                 focusable: !1,
                 onGamepadDirection: this.OnGamepadDirection,
-                autoFocus: o && d == this.props.focusedColumn && f,
+                autoFocus: i && d == this.props.focusedColumn && f,
                 "data-id": h,
                 onFocus: (e) => this.OnItemFocused(e, d),
                 style: u,
@@ -6793,7 +6824,7 @@
         OnSectionRendered(e) {
           (this.m_iStart = e.columnStartIndex),
             (this.m_iEnd = e.columnStopIndex),
-            _s("Section rendered", this.m_iStart, this.m_iEnd),
+            gs("Section rendered", this.m_iStart, this.m_iEnd),
             this.UpdateScrollArrows();
         }
         get alignment() {
@@ -6808,7 +6839,7 @@
               e > this.props.nIndexLeftmost;
             )
               e--;
-          return _s("LastFocusableColumn: ", e), e;
+          return gs("LastFocusableColumn: ", e), e;
         }
         UpdateScrollArrows() {
           if (this.props.fnUpdateArrows) {
@@ -6827,7 +6858,7 @@
               s =
                 r != Math.floor(t?.scrollLeft) &&
                 r != Math.round(t?.scrollLeft);
-            _s(
+            gs(
               "ShowLeftArrow: ",
               n,
               e,
@@ -6892,7 +6923,7 @@
               n = parseInt(t.getPropertyValue("scroll-padding-right")) || 0,
               s = Math.max(r, n);
             s != this.state.nRightPadding &&
-              (_s("Computed", s, "additional right padding"),
+              (gs("Computed", s, "additional right padding"),
               this.setState({ nRightPadding: s }, () => {
                 this.m_refGrid.recomputeGridSize({
                   columnIndex: this.props.nNumItems - 1,
@@ -6906,7 +6937,7 @@
               this.m_refContainer.current,
               this.OnResize,
             )),
-            _s(
+            gs(
               "componentDidMount Setting width to",
               this.m_refContainer.current.clientWidth,
             ),
@@ -6916,7 +6947,7 @@
         }
         componentDidUpdate(e) {
           this.props.fnGetColumnWidth != e.fnGetColumnWidth &&
-            (_s("Column width function changes, recalculating sizes"),
+            (gs("Column width function changes, recalculating sizes"),
             this.m_refGrid?.recomputeGridSize());
         }
         componentWillUnmount() {
@@ -6925,7 +6956,7 @@
         OnResize() {
           const e = this.m_refContainer.current.clientWidth;
           e != this.state.nContainerWidth &&
-            (_s(
+            (gs(
               "OnResize Setting width to",
               this.m_refContainer.current.clientWidth,
             ),
@@ -6960,7 +6991,7 @@
           );
         }
         MoveLeft(e) {
-          _s("MoveLeft from", this.props.focusedColumn);
+          gs("MoveLeft from", this.props.focusedColumn);
           let t = this.props.focusedColumn - 1;
           for (
             ;
@@ -6970,8 +7001,8 @@
           )
             t--;
           return t == this.props.nIndexLeftmost - 1
-            ? (_s("At left edge, not handling left gamepad"), !1)
-            : (_s("MoveLeft to", t),
+            ? (gs("At left edge, not handling left gamepad"), !1)
+            : (gs("MoveLeft to", t),
               this.ScrollToItem(
                 e ? e.detail.button : Rt.pR.INVALID,
                 t,
@@ -6980,7 +7011,7 @@
               ));
         }
         MoveRight(e) {
-          _s("MoveRight from", this.props.focusedColumn);
+          gs("MoveRight from", this.props.focusedColumn);
           let t = this.props.focusedColumn + 1;
           for (
             ;
@@ -6990,8 +7021,8 @@
           )
             t++;
           return t == this.props.nNumItems
-            ? (_s("At right edge, not handling right gamepad"), !1)
-            : (_s("MoveRight to", t),
+            ? (gs("At right edge, not handling right gamepad"), !1)
+            : (gs("MoveRight to", t),
               this.ScrollToItem(
                 e ? e.detail.button : Rt.pR.INVALID,
                 t,
@@ -7007,7 +7038,7 @@
           )
             return !0;
           if (
-            (_s("ScrollToItem", t, r, n, s),
+            (gs("ScrollToItem", t, r, n, s),
             t != this.props.focusedColumn &&
               this.m_refGrid &&
               (!this.props.fnDoesItemTakeFocus ||
@@ -7018,16 +7049,16 @@
                 columnIndex: t,
                 rowIndex: 0,
               }),
-              o = this.props.fnGetId(t);
+              i = this.props.fnGetId(t);
             return (
-              _s("Scrolling to item", t, o, r, a.scrollLeft, s),
+              gs("Scrolling to item", t, i, r, a.scrollLeft, s),
               (this.m_activeScrollTo = { iNewFocus: t, alignment: r }),
               this.props.fnOnFocusedColumnChange &&
                 this.props.fnOnFocusedColumnChange(this.props.focusedColumn, t),
               this.StartScrollAnimation(
                 e,
                 t,
-                o,
+                i,
                 a.scrollLeft,
                 s ?? this.props.scrollDuration,
               ),
@@ -7039,7 +7070,7 @@
           return !1;
         }
         OnGamepadButtonDown(e) {
-          switch ((_s("OnGamepadButtonDown", e.detail), e.detail.button)) {
+          switch ((gs("OnGamepadButtonDown", e.detail), e.detail.button)) {
             case Rt.pR.BUMPER_LEFT:
               return !!this.props.enableBumperPaging && this.ScrollLeft(e);
             case Rt.pR.BUMPER_RIGHT:
@@ -7048,7 +7079,7 @@
           return !1;
         }
         OnGamepadDirection(e) {
-          switch ((_s("OnGamepadDirection", e.detail), e.detail.button)) {
+          switch ((gs("OnGamepadDirection", e.detail), e.detail.button)) {
             case Rt.pR.DIR_LEFT:
               return this.MoveLeft(e);
             case Rt.pR.DIR_RIGHT:
@@ -7063,8 +7094,8 @@
               nIndexLeftmost: r,
               nHeight: s,
               nItemHeight: a,
-              overscan: o = 3,
-              scrollToAlignment: i,
+              overscan: i = 3,
+              scrollToAlignment: o,
               focusedColumn: c,
               autoHeight: d,
               "aria-label": u,
@@ -7072,7 +7103,7 @@
             } = this.props,
             m = this.state.nContainerWidth;
           return (
-            _s("Inner render", this.props.name, this.props.nNumItems, m, r, c),
+            gs("Inner render", this.props.name, this.props.nNumItems, m, r, c),
             (0, n.jsx)(l.Z, {
               ref: this.m_refContainer,
               "flow-children": "row",
@@ -7081,7 +7112,7 @@
               navEntryPreferPosition: p,
               children:
                 m &&
-                (0, n.jsx)(ps.xA, {
+                (0, n.jsx)(ms.xA, {
                   role: "generic",
                   containerRole: "list",
                   ref: this.BindGridObject,
@@ -7092,7 +7123,7 @@
                   onSectionRendered: this.OnSectionRendered,
                   columnCount: t,
                   columnWidth: this.GetCellColumnWidth,
-                  overscanColumnCount: o,
+                  overscanColumnCount: i,
                   overscanIndicesGetter: ({
                     cellCount: e,
                     overscanCellsCount: t,
@@ -7116,42 +7147,42 @@
           );
         }
       }
-      (0, fe.Cg)([g.oI], Cs.prototype, "RestoreScrollPosition", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnAnimationScrollComplete", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnTouchStart", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnTouchEnd", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnTouchMove", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnMouseDown", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnMouseUp", null),
+      (0, fe.Cg)([g.oI], xs.prototype, "RestoreScrollPosition", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnAnimationScrollComplete", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnTouchStart", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnTouchEnd", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnTouchMove", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnMouseDown", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnMouseUp", null),
         (0, fe.Cg)(
-          [g.oI, (0, us.s)(250)],
-          Cs.prototype,
+          [g.oI, (0, ps.s)(250)],
+          xs.prototype,
           "SnapBackToFirstElement",
           null,
         ),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnScroll", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "GetCellColumnWidth", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnItemFocused", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "CellRenderer", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnSectionRendered", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnScroll", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "GetCellColumnWidth", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnItemFocused", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "CellRenderer", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnSectionRendered", null),
         (0, fe.Cg)(
-          [g.oI, (0, us.s)(250)],
-          Cs.prototype,
+          [g.oI, (0, ps.s)(250)],
+          xs.prototype,
           "UpdateScrollArrows",
           null,
         ),
-        (0, fe.Cg)([g.oI], Cs.prototype, "BindGridObject", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnResize", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "ScrollLeft", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "ScrollRight", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "ScrollToFirstChild", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "MoveLeft", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "MoveRight", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnGamepadButtonDown", null),
-        (0, fe.Cg)([g.oI], Cs.prototype, "OnGamepadDirection", null);
-      var xs = r(58160),
-        ws = r.n(xs);
-      class As extends s.Component {
+        (0, fe.Cg)([g.oI], xs.prototype, "BindGridObject", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnResize", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "ScrollLeft", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "ScrollRight", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "ScrollToFirstChild", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "MoveLeft", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "MoveRight", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnGamepadButtonDown", null),
+        (0, fe.Cg)([g.oI], xs.prototype, "OnGamepadDirection", null);
+      var ws = r(58160),
+        As = r.n(ws);
+      class ys extends s.Component {
         onCloseButtonClicked(e) {
           this.props.bShowCloseButton &&
             this.props.fnOnCloseButtonClicked &&
@@ -7161,8 +7192,8 @@
         }
         render() {
           let e = this.props.bLeftEnabled || this.props.bRightEnabled,
-            t = ws().Medium;
-          "small" == this.props.buttonSize && (t = ws().Small);
+            t = As().Medium;
+          "small" == this.props.buttonSize && (t = As().Small);
           let r = {};
           return (
             !this.props.bNoHeader &&
@@ -7171,11 +7202,11 @@
             (0, n.jsxs)(l.Z, {
               "flow-children": "row",
               navEntryPreferPosition: c.iU.MAINTAIN_X,
-              className: (0, V.A)(ws().PageableContainer, this.props.className),
+              className: (0, W.A)(As().PageableContainer, this.props.className),
               children: [
                 !this.props.bNoHeader &&
                   (0, n.jsxs)("div", {
-                    className: ws().HeaderPageControls,
+                    className: As().HeaderPageControls,
                     style: r,
                     children: [
                       this.props.customheader
@@ -7183,20 +7214,20 @@
                         : (0, n.jsxs)(s.Fragment, {
                             children: [
                               (0, n.jsx)("div", {
-                                className: (0, V.A)(
-                                  ws().Name,
-                                  this.props.bClickableHeader && ws().Clickable,
+                                className: (0, W.A)(
+                                  As().Name,
+                                  this.props.bClickableHeader && As().Clickable,
                                 ),
                                 onClick: this.props.fnOnClickHeader,
                                 children: this.props.name,
                               }),
                               this.props.aftername,
-                              (0, n.jsx)("div", { className: ws().Rule }),
+                              (0, n.jsx)("div", { className: As().Rule }),
                             ],
                           }),
                       (0, n.jsxs)("div", {
-                        className: (0, V.A)(
-                          ws().PageClickContainer,
+                        className: (0, W.A)(
+                          As().PageClickContainer,
                           this.props.pageContainerStyles,
                         ),
                         children: [
@@ -7204,9 +7235,9 @@
                             (0, n.jsxs)(s.Fragment, {
                               children: [
                                 (0, n.jsx)("div", {
-                                  className: (0, V.A)(
-                                    ws().PageLeft,
-                                    !this.props.bLeftEnabled && ws().Disabled,
+                                  className: (0, W.A)(
+                                    As().PageLeft,
+                                    !this.props.bLeftEnabled && As().Disabled,
                                     t,
                                   ),
                                   onClick: this.props.fnLeftClicked,
@@ -7216,9 +7247,9 @@
                                   }),
                                 }),
                                 (0, n.jsx)("div", {
-                                  className: (0, V.A)(
-                                    ws().PageRight,
-                                    !this.props.bRightEnabled && ws().Disabled,
+                                  className: (0, W.A)(
+                                    As().PageRight,
+                                    !this.props.bRightEnabled && As().Disabled,
                                     t,
                                   ),
                                   onClick: this.props.fnRightClicked,
@@ -7232,9 +7263,9 @@
                             }),
                           this.props.bShowCloseButton &&
                             (0, n.jsx)("div", {
-                              className: (0, V.A)(
-                                ws().PageableCloseButton,
-                                e && ws().PageButtonsVisible,
+                              className: (0, W.A)(
+                                As().PageableCloseButton,
+                                e && As().PageButtonsVisible,
                                 t,
                               ),
                               onClick: this.onCloseButtonClicked,
@@ -7245,7 +7276,7 @@
                     ],
                   }),
                 (0, n.jsx)("div", {
-                  className: ws().PageableContent,
+                  className: As().PageableContent,
                   children: this.props.children,
                 }),
               ],
@@ -7253,8 +7284,8 @@
           );
         }
       }
-      (0, fe.Cg)([g.oI], As.prototype, "onCloseButtonClicked", null);
-      class ys extends s.Component {
+      (0, fe.Cg)([g.oI], ys.prototype, "onCloseButtonClicked", null);
+      class Ss extends s.Component {
         state = { bLeftArrowEnabled: !1, bRightArrowEnabled: !1 };
         m_refCarousel = s.createRef();
         OnLeftClicked(e) {
@@ -7299,7 +7330,7 @@
             t =
               this.props.bHeaderClickScrollToFirst &&
               this.state.bLeftArrowEnabled;
-          return (0, n.jsx)(As, {
+          return (0, n.jsx)(ys, {
             name: this.props.name,
             aftername: this.props.aftername,
             className: this.props.className,
@@ -7320,23 +7351,23 @@
           });
         }
       }
-      (0, fe.Cg)([g.oI], ys.prototype, "OnLeftClicked", null),
-        (0, fe.Cg)([g.oI], ys.prototype, "OnRightClicked", null),
-        (0, fe.Cg)([g.oI], ys.prototype, "ScrollLeft", null),
-        (0, fe.Cg)([g.oI], ys.prototype, "ScrollRight", null),
-        (0, fe.Cg)([g.oI], ys.prototype, "ScrollToFirstChild", null),
-        (0, fe.Cg)([g.oI], ys.prototype, "OnUpdateArrows", null),
-        (0, fe.Cg)([g.oI], ys.prototype, "OnHeaderClick", null),
-        (0, fe.Cg)([g.oI], ys.prototype, "onCloseButtonClicked", null);
-      var Ss = r(56344),
-        Ns = r.n(Ss);
-      function js(e) {
+      (0, fe.Cg)([g.oI], Ss.prototype, "OnLeftClicked", null),
+        (0, fe.Cg)([g.oI], Ss.prototype, "OnRightClicked", null),
+        (0, fe.Cg)([g.oI], Ss.prototype, "ScrollLeft", null),
+        (0, fe.Cg)([g.oI], Ss.prototype, "ScrollRight", null),
+        (0, fe.Cg)([g.oI], Ss.prototype, "ScrollToFirstChild", null),
+        (0, fe.Cg)([g.oI], Ss.prototype, "OnUpdateArrows", null),
+        (0, fe.Cg)([g.oI], Ss.prototype, "OnHeaderClick", null),
+        (0, fe.Cg)([g.oI], Ss.prototype, "onCloseButtonClicked", null);
+      var Ns = r(56344),
+        js = r.n(Ns);
+      function Ts(e) {
         const {
             itemWidthPercentage: t,
             closeModal: r,
             name: a,
-            nNumItems: o,
-            ...i
+            nNumItems: i,
+            ...o
           } = e,
           [c, d] = s.useState(0),
           [u, p] = s.useState(0),
@@ -7345,24 +7376,24 @@
           }, []),
           h = s.useCallback((e) => (c * t) / 100, [c, t]);
         return (0, n.jsx)(l.Z, {
-          className: Ns().FullScreenCarousel,
+          className: js().FullScreenCarousel,
           onCancel: r,
           children: (0, n.jsx)("div", {
-            className: Ns().InnerContainer,
+            className: js().InnerContainer,
             ref: m,
             children:
-              o &&
-              (0, n.jsx)(ys, {
-                className: Ns().PageableContainer,
+              i &&
+              (0, n.jsx)(Ss, {
+                className: js().PageableContainer,
                 name: a,
                 bNoHeader: !0,
                 fnUpdateArrows: void 0,
                 children: (e, t) =>
-                  (0, n.jsx)(vs, {
+                  (0, n.jsx)(Cs, {
                     name: a,
-                    nNumItems: o,
-                    ...i,
-                    className: Ns().Carousel,
+                    nNumItems: i,
+                    ...o,
+                    className: js().Carousel,
                     ref: e,
                     fnGetColumnWidth: h,
                     fnUpdateArrows: t,
@@ -7373,39 +7404,39 @@
           }),
         });
       }
-      function Ts(e) {
+      function bs(e) {
         const {
             name: t,
             initialColumn: r,
             modalClassName: s,
             fnOnFocusedColumnChange: a,
-            bFullScreen: o,
-            setFullScreen: i,
+            bFullScreen: i,
+            setFullScreen: o,
             nFullScreenItemWidthPercentage: l,
             ...d
           } = e,
-          [u, p] = gs(t, r, a);
+          [u, p] = vs(t, r, a);
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(C.EN, {
-              active: o,
+              active: i,
               children: (0, n.jsx)(C.x_, {
-                onEscKeypress: () => i(!1),
+                onEscKeypress: () => o(!1),
                 className: s,
                 padding: "none",
-                children: (0, n.jsx)(js, {
+                children: (0, n.jsx)(Ts, {
                   name: t,
                   fnOnFocusedColumnChange: a,
                   focusedColumn: u,
                   setFocusedColumn: p,
                   itemWidthPercentage: l,
-                  closeModal: () => i(!1),
+                  closeModal: () => o(!1),
                   navEntryPreferPosition: c.iU.PREFERRED_CHILD,
                   ...d,
                 }),
               }),
             }),
-            (0, n.jsx)(vs, {
+            (0, n.jsx)(Cs, {
               name: t,
               fnOnFocusedColumnChange: a,
               focusedColumn: u,
@@ -7416,15 +7447,15 @@
           ],
         });
       }
-      var bs = r(15572),
-        Is = r.n(bs);
-      function Rs(e) {
+      var Is = r(15572),
+        Rs = r.n(Is);
+      function Es(e) {
         const {
             rgReviews: t,
             nNumItems: r,
             nFriendReviews: a,
-            getTitle: o,
-            mapTags: i,
+            getTitle: i,
+            mapTags: o,
             onItemFocusChanged: d,
           } = e,
           [u, p] = s.useState(!1),
@@ -7437,10 +7468,10 @@
           ),
           v = s.useCallback((e) => e < t.length, [t.length]),
           C = s.useCallback(
-            (e, r, s, o) => {
+            (e, r, s, i) => {
               if (e >= t.length)
                 return (0, n.jsx)(l.Z, {
-                  className: (0, V.A)(Is().LoadingThrobber, Is().FullScreen),
+                  className: (0, W.A)(Rs().LoadingThrobber, Rs().FullScreen),
                   style: { width: r, height: s },
                   focusable: !1,
                   children: (0, n.jsx)(ze.t, {
@@ -7464,33 +7495,33 @@
                 nItemHeight: s,
                 bIsFriend: d,
                 review: c,
-                mapTags: i,
+                mapTags: o,
               });
             },
-            [t, i, a, u],
+            [t, o, a, u],
           ),
           x = s.useCallback((e) => f, [f]),
           w = s.useCallback(
             (e, t) => {
-              h(o(t)), d && d(e, t);
+              h(i(t)), d && d(e, t);
             },
-            [o, d],
+            [i, d],
           );
         return (0, n.jsxs)("div", {
-          className: (0, V.A)(Is().CarouselWrapper),
+          className: (0, W.A)(Rs().CarouselWrapper),
           children: [
-            (0, n.jsx)(cs, {
-              className: Is().ReviewSectionTitle,
+            (0, n.jsx)(ds, {
+              className: Rs().ReviewSectionTitle,
               id: _,
               title: m,
             }),
-            (0, n.jsx)(Ts, {
+            (0, n.jsx)(bs, {
               name: "AppReviews",
-              modalClassName: Is().ModalPosition,
+              modalClassName: Rs().ModalPosition,
               bFullScreen: u,
               setFullScreen: p,
               nFullScreenItemWidthPercentage: 80,
-              className: Is().Carousel,
+              className: Rs().Carousel,
               "aria-labelledby": _,
               scrollToAlignment: "center",
               nNumItems: r,
@@ -7507,24 +7538,24 @@
           ],
         });
       }
-      function Es(e) {
+      function Ls(e) {
         const { queryReviews: t, mapTags: r, loadMore: a } = e,
-          o = s.useMemo(
+          i = s.useMemo(
             () => (t?.data?.pages || []).map((e) => e.reviews).flat(1),
             [t?.data?.pages],
           ),
-          i = s.useCallback((e) => {}, []),
+          o = s.useCallback((e) => {}, []),
           l = s.useCallback(
             (e, r) => {
-              a && r > o.length - 3 && !t.isFetching && a();
+              a && r > i.length - 3 && !t.isFetching && a();
             },
-            [a, o.length, t.isFetching],
+            [a, i.length, t.isFetching],
           );
-        return (0, n.jsx)(Rs, {
-          rgReviews: o,
-          nNumItems: o.length + (a ? 1 : 0),
+        return (0, n.jsx)(Es, {
+          rgReviews: i,
+          nNumItems: i.length + (a ? 1 : 0),
           nFriendReviews: 0,
-          getTitle: i,
+          getTitle: o,
           mapTags: r,
           onItemFocusChanged: l,
         });
@@ -7532,21 +7563,21 @@
       function Ps(e) {
         const { summary: t, mapTags: r } = e,
           a = t?.friendreviews?.length || 0,
-          o = t?.reviews?.length || 0,
-          i = s.useCallback(
+          i = t?.reviews?.length || 0,
+          o = s.useCallback(
             function (e) {
               let t;
               return (
                 (t =
                   e < a
                     ? "#Review_SectionTitle_Friends"
-                    : e < a + o
+                    : e < a + i
                       ? "#Review_SectionTitle_Top"
                       : "#Review_SectionTitle_Recent"),
                 t
               );
             },
-            [a, o],
+            [a, i],
           ),
           l = s.useMemo(
             () =>
@@ -7555,30 +7586,30 @@
                 .concat(t?.recentreviews || []),
             [t],
           );
-        return (0, n.jsx)(Rs, {
+        return (0, n.jsx)(Es, {
           rgReviews: l,
           nNumItems: l.length,
           nFriendReviews: a,
-          getTitle: i,
+          getTitle: o,
           mapTags: r,
         });
       }
-      var Ls = r(72685),
-        ks = r.n(Ls);
-      function Bs(e) {
+      var ks = r(72685),
+        Bs = r.n(ks);
+      function Ds(e) {
         const { data: t } = e,
           r = t?.query_summary;
         if (!r || !r.total_reviews) return null;
-        let s = ks().Negative;
+        let s = Bs().Negative;
         switch (r.review_score) {
           case 9:
           case 8:
           case 7:
           case 6:
-            s = ks().Positive;
+            s = Bs().Positive;
             break;
           case 5:
-            s = ks().Mixed;
+            s = Bs().Mixed;
         }
         let a = "#Review_Count";
         return (
@@ -7590,16 +7621,16 @@
               ? "#Review_Count"
               : "#Review_Count_Plural"),
           (0, n.jsx)("div", {
-            className: ks().ReviewCount,
+            className: Bs().ReviewCount,
             children: on.LocalizeReact(
               a,
               (0, n.jsx)("b", { children: (0, nn.Dq)(r.total_reviews) }),
               (0, n.jsx)(je.he, {
                 toolTipContent: r.review_score_tooltip,
-                className: ks().ScoreTooltip,
+                className: Bs().ScoreTooltip,
                 direction: "top",
                 children: (0, n.jsx)("span", {
-                  className: Hr()(ks().Score, s),
+                  className: Hr()(Bs().Score, s),
                   children: r.review_score_desc,
                 }),
               }),
@@ -7607,31 +7638,31 @@
           })
         );
       }
-      function Ds(e) {
+      function Fs(e) {
         const {
             title: t,
             className: r,
             bIsFriend: a,
-            bShortPresentation: o,
-            reviews: i,
+            bShortPresentation: i,
+            reviews: o,
             mapTags: l,
           } = e,
           c = s.useId();
-        return i?.length
+        return o?.length
           ? (0, n.jsxs)("div", {
-              className: Hr()(ks().ReviewSection, r),
+              className: Hr()(Bs().ReviewSection, r),
               children: [
-                (0, n.jsx)(cs, { id: c, title: t }),
+                (0, n.jsx)(ds, { id: c, title: t }),
                 (0, n.jsx)("div", {
-                  className: ks().Reviews,
+                  className: Bs().Reviews,
                   "aria-labelledby": c,
                   role: "list",
-                  children: i.map((e) =>
+                  children: o.map((e) =>
                     (0, n.jsx)(
                       os,
                       {
                         bIsFriend: a,
-                        bShortPresentation: o,
+                        bShortPresentation: i,
                         review: e,
                         mapTags: l,
                       },
@@ -7643,24 +7674,24 @@
             })
           : null;
       }
-      function Fs(e) {
+      function Ms(e) {
         const { error: t } = e,
           r = t instanceof ln ? t.eResult : void 0;
         return (0, n.jsx)("div", {
-          className: ks().LoadingError,
+          className: Bs().LoadingError,
           children: on.Localize(
             void 0 !== r ? "#Review_LoadError" : "#Review_LoadErrorUnknown",
             r,
           ),
         });
       }
-      function Ms(e) {
+      function Gs(e) {
         const { searchParams: t } = e,
-          { appid: r } = s.useContext(Us),
-          [a, o] = s.useState(!1),
-          i = (0, g.BL)(
+          { appid: r } = s.useContext(zs),
+          [a, i] = s.useState(!1),
+          o = (0, g.BL)(
             s.useCallback((e) => {
-              e.isIntersecting && o(!0);
+              e.isIntersecting && i(!0);
             }, []),
             { threshold: 1, rootMargin: "0px 0px 1000px 0px" },
           ),
@@ -7685,52 +7716,52 @@
           children: [
             !1,
             (0, n.jsxs)("div", {
-              ref: i,
-              className: ks().StatusLine,
+              ref: o,
+              className: Bs().StatusLine,
               children: [
                 l.isFetching && (0, n.jsx)(ze.t, { size: "small" }),
-                (0, n.jsx)(Bs, { data: c }),
+                (0, n.jsx)(Ds, { data: c }),
               ],
             }),
             "summary" == c?.reviewFilter &&
-              (0, n.jsx)(Os, { summary: c, mapTags: d }),
+              (0, n.jsx)(Us, { summary: c, mapTags: d }),
             "summary" != c?.reviewFilter &&
-              (0, n.jsx)(Gs, { queryReviews: l, mapTags: d }),
-            l.isError && (0, n.jsx)(Fs, { error: l.error }),
+              (0, n.jsx)(Hs, { queryReviews: l, mapTags: d }),
+            l.isError && (0, n.jsx)(Ms, { error: l.error }),
           ],
         });
       }
-      function Gs(e) {
+      function Hs(e) {
         const { queryReviews: t, mapTags: r } = e,
           s = (t?.data?.pages || []).map((e) => e.reviews).flat(1),
           a =
             (t?.data?.pages[0].cAppRecommendationCount || 0) > s.length &&
             !t.isError,
-          o = a ? () => t.fetchNextPage() : void 0,
-          i = (0, v.Qn)();
+          i = a ? () => t.fetchNextPage() : void 0,
+          o = (0, v.Qn)();
         return 0 == s.length
           ? null
-          : i
-            ? (0, n.jsx)(Es, { ...e, loadMore: o })
+          : o
+            ? (0, n.jsx)(Ls, { ...e, loadMore: i })
             : (0, n.jsxs)(n.Fragment, {
                 children: [
-                  (0, n.jsx)(Ds, { reviews: s, mapTags: r }),
+                  (0, n.jsx)(Fs, { reviews: s, mapTags: r }),
                   a &&
                     (0, n.jsx)(en.$n, {
                       disabled: t.isFetching,
-                      className: ks().LoadMoreButton,
-                      onClick: o,
+                      className: Bs().LoadMoreButton,
+                      onClick: i,
                       children: on.Localize("#Review_LoadMore"),
                     }),
                 ],
               });
       }
-      function Hs(e) {
+      function Os(e) {
         const { summary: t, className: r } = e,
-          { appid: a } = s.useContext(Us);
+          { appid: a } = s.useContext(zs);
         return t?.query_summary?.total_reviews_unfiltered
           ? (0, n.jsx)("a", {
-              className: Hr()(ks().BrowseAllLink, r),
+              className: Hr()(Bs().BrowseAllLink, r),
               href:
                 Me.TS.COMMUNITY_BASE_URL +
                 `app/${a}/reviews/?browsefilter=toprated`,
@@ -7741,7 +7772,7 @@
             })
           : null;
       }
-      function Os(e) {
+      function Us(e) {
         const { summary: t, mapTags: r } = e,
           s = (0, v.Qn)();
         return t
@@ -7749,42 +7780,42 @@
             ? (0, n.jsx)(Ps, { ...e })
             : (0, n.jsx)(n.Fragment, {
                 children: (0, n.jsxs)(l.Z, {
-                  className: ks().ReviewSummary,
+                  className: Bs().ReviewSummary,
                   children: [
                     (0, n.jsxs)(l.Z, {
-                      className: ks().Left,
+                      className: Bs().Left,
                       children: [
-                        (0, n.jsx)(Ds, {
+                        (0, n.jsx)(Fs, {
                           title: "#Review_SectionTitle_Friends",
-                          className: ks().Friends,
+                          className: Bs().Friends,
                           bIsFriend: !0,
                           reviews: t?.friendreviews,
                           mapTags: r,
                         }),
-                        (0, n.jsx)(Ds, {
+                        (0, n.jsx)(Fs, {
                           title: "#Review_SectionTitle_Top",
-                          className: ks().TopReviews,
+                          className: Bs().TopReviews,
                           reviews: t?.reviews,
                           mapTags: r,
                         }),
-                        (0, n.jsx)(Hs, {
-                          className: ks().LeftColumn,
+                        (0, n.jsx)(Os, {
+                          className: Bs().LeftColumn,
                           summary: t,
                         }),
                       ],
                     }),
                     (0, n.jsxs)(l.Z, {
-                      className: ks().Right,
+                      className: Bs().Right,
                       children: [
-                        (0, n.jsx)(Ds, {
+                        (0, n.jsx)(Fs, {
                           title: "#Review_SectionTitle_Recent",
-                          className: ks().Recent,
+                          className: Bs().Recent,
                           bShortPresentation: !0,
                           reviews: t?.recentreviews,
                           mapTags: r,
                         }),
-                        (0, n.jsx)(Hs, {
-                          className: ks().RightColumn,
+                        (0, n.jsx)(Os, {
+                          className: Bs().RightColumn,
                           summary: t,
                         }),
                       ],
@@ -7794,18 +7825,18 @@
               })
           : null;
       }
-      const Us = s.createContext({
+      const zs = s.createContext({
         appid: 0,
         app_release_date: 0,
         appname: "",
       });
-      function zs(e) {
+      function Vs(e) {
         const { appid: t, app_release_date: r, appname: a } = e,
-          o = s.useMemo(
+          i = s.useMemo(
             () => ({ appid: t, app_release_date: r, appname: a }),
             [t, r, a],
           ),
-          [i, l] = s.useState({
+          [o, l] = s.useState({
             filter: "summary",
             date_range_type: "all",
             day_range: 30,
@@ -7836,17 +7867,17 @@
               } catch {}
             }, []),
           ),
-          (0, n.jsx)(Us.Provider, {
-            value: o,
+          (0, n.jsx)(zs.Provider, {
+            value: i,
             children: (0, n.jsx)(b.u, {
               navID: "AppReviews",
-              children: (0, n.jsx)(Ms, { searchParams: i }),
+              children: (0, n.jsx)(Gs, { searchParams: o }),
             }),
           })
         );
       }
       const Ws = s.lazy(() => r.e(5139).then(r.bind(r, 51899))),
-        Vs = s.lazy(() =>
+        Qs = s.lazy(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
@@ -7879,7 +7910,7 @@
             r.e(3027),
           ]).then(r.bind(r, 64940)),
         ),
-        Qs = s.lazy(() =>
+        Ks = s.lazy(() =>
           Promise.all([
             r.e(6597),
             r.e(7403),
@@ -7903,7 +7934,7 @@
             r.e(9672),
           ]).then(r.bind(r, 47554)),
         ),
-        Ks = s.lazy(() =>
+        Zs = s.lazy(() =>
           Promise.all([
             r.e(6597),
             r.e(8970),
@@ -7926,12 +7957,12 @@
             r.e(8396),
           ]).then(r.bind(r, 74968)),
         ),
-        Zs = s.lazy(async () => ({
+        qs = s.lazy(async () => ({
           default: (await r.e(445).then(r.bind(r, 13229)))
             .AccessibilityFeatureDisplay,
         })),
-        qs = () => null;
-      function Xs(e) {
+        Xs = () => null;
+      function Js(e) {
         const { appid: t } = e;
         return (0, n.jsx)(xt.QA, {
           eAdultOnlyMediaBehavior: "allowed",
@@ -7941,13 +7972,13 @@
                 (0, n.jsx)(Ct.d, { children: (0, n.jsx)(I, { appid: t }) }),
               "review-award": () => (0, n.jsx)(tt, {}),
               "deck-topplayed-banner": (e) => (0, n.jsx)(gt, { ...e }),
-              "steamawardsvote-embed": () => (0, n.jsx)(Vs, { appID: t }),
+              "steamawardsvote-embed": () => (0, n.jsx)(Qs, { appID: t }),
               "broadcast-embed": (t) =>
-                (0, n.jsx)(Ks, { ...e, appid: t.appid }),
+                (0, n.jsx)(Zs, { ...e, appid: t.appid }),
               "demo-and-quick-pitch": () =>
                 (0, n.jsx)(Ct.d, { children: (0, n.jsx)(U, { appID: t }) }),
               "deck-verified-results": (e) =>
-                (0, n.jsx)(Lr, {
+                (0, n.jsx)(Pr, {
                   appID: t,
                   results: (0, ye.Tc)(
                     "deckcompatibility",
@@ -7959,7 +7990,7 @@
               "gamehighlight-trailer": (e) => (0, n.jsx)(xe, { ...e }),
               "gamehighlight-gamepadcarousel": (e) => (0, n.jsx)(Dt, { ...e }),
               "gamehighlight-desktopcarousel": (e) => (0, n.jsx)(hr, { ...e }),
-              "discovery-queue-app-widget": () => (0, n.jsx)(Qs, { appID: t }),
+              "discovery-queue-app-widget": () => (0, n.jsx)(Ks, { appID: t }),
               "game-notice-controller-required": () =>
                 (0, n.jsx)($, {
                   appid: t,
@@ -7970,19 +8001,19 @@
               "game-notice-vr-supported": () =>
                 (0, n.jsx)($, { type: q.EPurchaseNoticeType_VRSupported }),
               "store-sidebar-controller-support-info": (e) =>
-                (0, n.jsx)(Pe, { ...e }),
+                (0, n.jsx)(Le, { ...e }),
               "store-sidebar-accessibility-info": (e) =>
-                (0, n.jsx)(Zs, { features: e }),
+                (0, n.jsx)(qs, { features: e }),
               "season-pass-display": (e) => (0, n.jsx)(Ws, { ...e }),
               "storeitems-carousel": (e) =>
                 (0, n.jsx)(Se.Ay, {
                   feature: "recommended",
-                  children: (0, n.jsx)(Le.default, { ...e }),
+                  children: (0, n.jsx)(Pe.default, { ...e }),
                 }),
               "storeitems-carousel-dlc": (e) =>
                 (0, n.jsx)(Se.Ay, {
                   feature: "dlc",
-                  children: (0, n.jsx)(Le.default, { ...e }),
+                  children: (0, n.jsx)(Pe.default, { ...e }),
                 }),
               "creatorhome-carousel": (e) =>
                 (0, n.jsx)(Se.Ay, {
@@ -7994,8 +8025,8 @@
                   feature: e.feature,
                   children: (0, n.jsx)(Tt, { appid: e.appid }),
                 }),
-              appreviews: (e) => (0, n.jsx)(zs, { ...e }),
-              "wishlist-item-categories": (e) => (0, n.jsx)(qs, { ...e }),
+              appreviews: (e) => (0, n.jsx)(Vs, { ...e }),
+              "wishlist-item-categories": (e) => (0, n.jsx)(Xs, { ...e }),
             },
           }),
         });
