@@ -1677,8 +1677,11 @@ function _(_) {
         (0, _.jsx)("div", {
           className: _,
           children: (0, _.jsx)(_, {
-            appid: _,
-            item: _,
+            feature: "wishlist-actions",
+            children: (0, _.jsx)(_, {
+              appid: _,
+              item: _,
+            }),
           }),
         }),
       ],
