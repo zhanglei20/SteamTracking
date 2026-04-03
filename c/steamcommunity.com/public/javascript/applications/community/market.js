@@ -2354,6 +2354,9 @@
                 filter: _.state,
                 config: _.config,
                 onFilterChange: _,
+                onSearch: (_, _) => {
+                  window.location.href = (0, _._)(_, _);
+                },
               }),
             }),
           }),
@@ -3561,6 +3564,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3912,28 +3916,18 @@
                 suggestions: _,
                 onTextChange: _,
                 onSuggestionSelected: _,
-                clearable: _,
                 ..._
               } = _,
               _ = _({
                 onTextChange: _,
                 suggestions: _,
                 onSuggestionSelected: _,
-              }),
-              _ =
-                _.value && _
-                  ? (0, _.jsx)(_, {
-                      onClick: () => _.onTextChange(""),
-                      cursor: "pointer",
-                      hitSlop: !0,
-                    })
-                  : void 0;
+              });
             return (0, _.jsxs)(_.Root, {
               state: _,
               children: [
                 (0, _.jsx)(_.TextInput, {
                   ..._,
-                  afterContent: _,
                 }),
                 (0, _.jsx)(_.Suggestions, {
                   children: _.map((_, _) =>
@@ -4265,7 +4259,6 @@
           const {
               children: _,
               state: _,
-              clearable: _ = !0,
               placement: _ = "bottom-end",
               popoverWidth: _ = "dropdown",
               ..._
@@ -4305,7 +4298,6 @@
               onFocusChange: _,
               refPopover: _,
               refScrollElement: _,
-              clearable: _,
               setOpen: (_) => {
                 if (_) {
                   let _ = null;
@@ -8774,6 +8766,7 @@
             config: _,
             preload: _ = {},
             debugMode: _,
+            onSearch: _,
             ..._
           } = _,
           _ = _.bSteamItems,
@@ -8884,6 +8877,7 @@
                       filter: _,
                       onFilterChange: _,
                       config: _,
+                      onSearch: _,
                     }),
                   ],
                 }),
@@ -8893,7 +8887,7 @@
         });
       }
       function _(_) {
-        const { filter: _, onFilterChange: _, config: _ } = _,
+        const { filter: _, onFilterChange: _, config: _, onSearch: _ } = _,
           _ = _.bSteamItems,
           [_, _] = (0, _.useState)(!1),
           _ = _ ? _.filterSteam : _.filterInGame,
@@ -8905,64 +8899,7 @@
           _ = (0, _.jsx)(_._, {
             type: "submit",
             onClick: () => {
-              _(!0),
-                (window.location.href = (function (_, _) {
-                  const {
-                      strSearch: _,
-                      bSearchDescriptions: _,
-                      bSteamItems: _,
-                      filterInGame: _,
-                      filterSteam: _,
-                    } = _,
-                    _ = _
-                      ? (function (_) {
-                          let _ = {
-                            ..._,
-                            facets: {
-                              ..._.facets,
-                            },
-                          };
-                          _.app &&
-                            (_.facets.Game = {
-                              [`app_${_.app.appid}`]: !0,
-                            });
-                          return (
-                            (_.app = {
-                              appid: _,
-                              name: "",
-                              icon: "",
-                            }),
-                            _
-                          );
-                        })(_)
-                      : _,
-                    {
-                      app: _,
-                      facets: _,
-                      accessories: _,
-                      price: [_, _],
-                    } = _,
-                    _ = new FormData();
-                  _ && _.set("appid", _.appid.toString());
-                  _ && _.set("q", _);
-                  _ && _ && (_.app, 0) && _.set("descriptions", "1");
-                  for (const _ of Object.keys(_))
-                    if (_[_])
-                      for (const _ of Object.keys(_[_]))
-                        _[_][_] &&
-                          _.append(`category_${_.appid}_${_}[]`, `tag_${_}`);
-                  for (const _ of Object.keys(_))
-                    if (_[_])
-                      for (const _ of Object.keys(_[_]))
-                        _[_][_] && _.append(`accessory_${_}[]`, _);
-                  _ > 0 && _.append("price_min", _.toString());
-                  _ > _ &&
-                    _ < _.maxPrice &&
-                    _.append("price_max", _.toString());
-                  return _._.Search({
-                    search: new URLSearchParams(_),
-                  });
-                })(_, _));
+              _(!0), _(_, _);
             },
             disabled: _,
             children: _.Localize("#AdvancedSearch_Search"),
@@ -9605,6 +9542,62 @@
           config: _.config,
         };
       }
+      function _(_, _) {
+        const {
+            strSearch: _,
+            bSearchDescriptions: _,
+            bSteamItems: _,
+            filterInGame: _,
+            filterSteam: _,
+          } = _,
+          _ = _
+            ? (function (_) {
+                let _ = {
+                  ..._,
+                  facets: {
+                    ..._.facets,
+                  },
+                };
+                return (
+                  _.app &&
+                    (_.facets.Game = {
+                      [`app_${_.app.appid}`]: !0,
+                    }),
+                  (_.app = {
+                    appid: _,
+                    name: "",
+                    icon: "",
+                  }),
+                  _
+                );
+              })(_)
+            : _,
+          {
+            app: _,
+            facets: _,
+            accessories: _,
+            price: [_, _],
+          } = _,
+          _ = new FormData();
+        _ && _.set("appid", _.appid.toString()),
+          _ && _.set("q", _),
+          _ && _ && (_.app, 0) && _.set("descriptions", "1");
+        for (const _ of Object.keys(_))
+          if (_[_])
+            for (const _ of Object.keys(_[_]))
+              _[_][_] && _.append(`category_${_.appid}_${_}[]`, `tag_${_}`);
+        for (const _ of Object.keys(_))
+          if (_[_])
+            for (const _ of Object.keys(_[_]))
+              _[_][_] && _.append(`accessory_${_}[]`, _);
+        return (
+          _ > 0 && _.append("price_min", _.toString()),
+          _ > _ && _ < _.maxPrice && _.append("price_max", _.toString()),
+          _._.Search({
+            search: new URLSearchParams(_),
+          })
+        );
+      }
       function _(_) {
         return (0, _.jsx)(_._, {
           flexGrow: "1",
@@ -9747,6 +9740,7 @@
             apps: _,
             onSelectionChange: _,
             size: _ = "3",
+            clearable: _ = !0,
           } = _,
           _ = _({
             rgOptions: _,
@@ -9763,6 +9757,7 @@
           size: _,
           radius: "sm",
           marginBottom: "2",
+          clearable: _,
           children: [
             (0, _.jsxs)(_.Trigger, {
               children: [

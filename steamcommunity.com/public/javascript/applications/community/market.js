@@ -2106,6 +2106,9 @@
                 filter: o.state,
                 config: o.config,
                 onFilterChange: v,
+                onSearch: (t, c) => {
+                  window.location.href = (0, r.Tx)(t, c);
+                },
               }),
             }),
           }),
@@ -3114,7 +3117,7 @@
     },
     88386: (t, c, n) => {
       "use strict";
-      n.d(c, { nk: () => ze, D: () => Ye, xs: () => Le });
+      n.d(c, { nk: () => ze, Tx: () => Be, D: () => Ye, xs: () => Le });
       var e = n(7850),
         l = n(90626),
         s = n(8527),
@@ -3444,26 +3447,17 @@
                 suggestions: c,
                 onTextChange: n,
                 onSuggestionSelected: l,
-                clearable: s,
-                ...r
+                ...s
               } = t,
-              a = R({
+              r = R({
                 onTextChange: n,
                 suggestions: c,
                 onSuggestionSelected: l,
-              }),
-              o =
-                r.value && s
-                  ? (0, e.jsx)(x, {
-                      onClick: () => a.onTextChange(""),
-                      cursor: "pointer",
-                      hitSlop: !0,
-                    })
-                  : void 0;
+              });
             return (0, e.jsxs)(P.Root, {
-              state: a,
+              state: r,
               children: [
-                (0, e.jsx)(P.TextInput, { ...r, afterContent: o }),
+                (0, e.jsx)(P.TextInput, { ...s }),
                 (0, e.jsx)(P.Suggestions, {
                   children: c.map((t, c) =>
                     (0, e.jsx)(P.Suggestion, { value: t, children: t }, t + c),
@@ -3766,42 +3760,40 @@
           const {
               children: c,
               state: n,
-              clearable: s = !0,
-              placement: r = "bottom-end",
-              popoverWidth: a = "dropdown",
-              ...o
+              placement: s = "bottom-end",
+              popoverWidth: r = "dropdown",
+              ...a
             } = t,
-            [i, v] = (0, l.useState)(void 0);
-          (0, l.useEffect)(() => v(void 0), [n.bOpen]);
-          const h = (0, l.useRef)(null),
-            d = (0, l.useRef)(null),
-            u = (0, l.useMemo)(
+            [o, i] = (0, l.useState)(void 0);
+          (0, l.useEffect)(() => i(void 0), [n.bOpen]);
+          const v = (0, l.useRef)(null),
+            h = (0, l.useRef)(null),
+            d = (0, l.useMemo)(
               () => n.rgFilteredOptions.findIndex((t) => t === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            p = T({
+            u = T({
               open: n.bOpen,
               onOpenChange: n.setOpen,
-              width: a,
-              placement: r,
+              width: r,
+              placement: s,
               gutter: "4",
               activeIndex: n.activeIndex,
               setActiveIndex: n.setActiveIndex,
-              selectedIndex: u,
+              selectedIndex: d,
               setSelectedIndex: (t) =>
                 n.onItemSelectionChange(n.rgFilteredOptions[t]),
               interactions: { click: !0, virtualItemFocus: !0 },
               role: "combobox",
               scroll: !1,
             }),
-            f = {
+            p = {
               ...n,
-              ...o,
-              focusedValue: i,
-              onFocusChange: v,
-              refPopover: h,
-              refScrollElement: d,
-              clearable: s,
+              ...a,
+              focusedValue: o,
+              onFocusChange: i,
+              refPopover: v,
+              refScrollElement: h,
               setOpen: (t) => {
                 if (t) {
                   let t = null;
@@ -3810,22 +3802,22 @@
                       ? n.selectedValue[0]
                       : null
                     : n.selectedValue),
-                    v(t),
+                    i(t),
                     n.onInputChange("");
                 }
                 n.setOpen(t);
               },
               onIndexSelected: (t) => {
-                const c = p.elementsRef.current;
+                const c = u.elementsRef.current;
                 if (c && c[t]) {
                   c[t].click();
                 }
               },
-              popoverPlacement: p.floating.placement,
+              popoverPlacement: u.floating.placement,
             };
           return (0, e.jsx)(vt.Provider, {
-            value: f,
-            children: (0, e.jsx)(E, { state: p, children: c }),
+            value: p,
+            children: (0, e.jsx)(E, { state: u, children: c }),
           });
         },
         Option: ct,
@@ -7580,11 +7572,12 @@
             config: l,
             preload: s = {},
             debugMode: r,
-            ...h
+            onSearch: h,
+            ...d
           } = t,
-          d = c.bSteamItems,
-          u = (0, oe.LT)("sm"),
-          p = d ? h.rgAppData && h.rgAppData[Oe] : c.filterInGame.app;
+          u = c.bSteamItems,
+          p = (0, oe.LT)("sm"),
+          f = u ? d.rgAppData && d.rgAppData[Oe] : c.filterInGame.app;
         return (0, e.jsx)(re.u.Provider, {
           value: !!r,
           children: (0, e.jsx)(gc.Provider, {
@@ -7613,12 +7606,12 @@
                         (0, e.jsx)(a.az, {
                           flexGrow: "0",
                           children: (0, e.jsx)(he, {
-                            showSteamItems: d,
+                            showSteamItems: u,
                             onShowSteamItemsChange: (t) =>
                               n({ ...c, bSteamItems: t }),
                           }),
                         }),
-                        u &&
+                        p &&
                           (0, e.jsx)(a.az, {
                             style: { marginTop: "10px" },
                             children: (0, e.jsx)(v.w, {
@@ -7633,7 +7626,7 @@
                           gap: "2",
                           children: [
                             (0, e.jsx)(Ie, {
-                              app: p || void 0,
+                              app: f || void 0,
                               value: c.strSearch || "",
                               onTextChange: (t) => n({ ...c, strSearch: t }),
                             }),
@@ -7644,23 +7637,28 @@
                     }),
                     (0, e.jsxs)(Ne, {
                       children: [
-                        !d &&
+                        !u &&
                           (0, e.jsx)(He, {
-                            ...h,
+                            ...d,
                             filter: c.filterInGame,
                             onFilterChange: (t) => n({ ...c, filterInGame: t }),
                             suggestedInitialApp: c.filterSteam.app,
                           }),
-                        d &&
+                        u &&
                           (0, e.jsx)(Re, {
-                            ...h,
+                            ...d,
                             filter: c.filterSteam,
                             onFilterChange: (t) => n({ ...c, filterSteam: t }),
                             suggestedInitialApp: c.filterInGame.app,
                           }),
                       ],
                     }),
-                    (0, e.jsx)(Me, { filter: c, onFilterChange: n, config: l }),
+                    (0, e.jsx)(Me, {
+                      filter: c,
+                      onFilterChange: n,
+                      config: l,
+                      onSearch: h,
+                    }),
                   ],
                 }),
               }),
@@ -7669,68 +7667,27 @@
         });
       }
       function Me(t) {
-        const { filter: c, onFilterChange: n, config: r } = t,
-          a = c.bSteamItems,
-          [o, h] = (0, l.useState)(!1),
-          u = a ? c.filterSteam : c.filterInGame,
-          p =
-            0 !== u.price[0] ||
-            u.price[1] !== r.maxPrice ||
-            Object.keys(u.facets).length > 0,
-          f = (0, oe.LT)("sm"),
-          g = (0, e.jsx)(d.$, {
+        const { filter: c, onFilterChange: n, config: r, onSearch: a } = t,
+          o = c.bSteamItems,
+          [h, u] = (0, l.useState)(!1),
+          p = o ? c.filterSteam : c.filterInGame,
+          f =
+            0 !== p.price[0] ||
+            p.price[1] !== r.maxPrice ||
+            Object.keys(p.facets).length > 0,
+          g = (0, oe.LT)("sm"),
+          m = (0, e.jsx)(d.$, {
             type: "submit",
             onClick: () => {
-              h(!0),
-                (window.location.href = (function (t, c) {
-                  const {
-                      strSearch: n,
-                      bSearchDescriptions: e,
-                      bSteamItems: l,
-                      filterInGame: s,
-                      filterSteam: r,
-                    } = t,
-                    a = l
-                      ? (function (t) {
-                          let c = { ...t, facets: { ...t.facets } };
-                          t.app &&
-                            (c.facets.Game = { [`app_${t.app.appid}`]: !0 });
-                          return (c.app = { appid: Oe, name: "", icon: "" }), c;
-                        })(r)
-                      : s,
-                    {
-                      app: o,
-                      facets: i,
-                      accessories: v,
-                      price: [h, d],
-                    } = a,
-                    u = new FormData();
-                  o && u.set("appid", o.appid.toString());
-                  n && u.set("q", n);
-                  n && e && (a.app, 0) && u.set("descriptions", "1");
-                  for (const t of Object.keys(i))
-                    if (i[t])
-                      for (const c of Object.keys(i[t]))
-                        i[t][c] &&
-                          u.append(`category_${o.appid}_${t}[]`, `tag_${c}`);
-                  for (const t of Object.keys(v))
-                    if (v[t])
-                      for (const c of Object.keys(v[t]))
-                        v[t][c] && u.append(`accessory_${t}[]`, c);
-                  h > 0 && u.append("price_min", h.toString());
-                  d > h &&
-                    d < c.maxPrice &&
-                    u.append("price_max", d.toString());
-                  return ie.N.Search({ search: new URLSearchParams(u) });
-                })(c, r));
+              u(!0), a(c, r);
             },
-            disabled: o,
+            disabled: h,
             children: Ot.Localize("#AdvancedSearch_Search"),
           });
         return (0, e.jsxs)(i.s, {
-          justify: f ? "between" : void 0,
+          justify: g ? "between" : void 0,
           marginTop: Se,
-          direction: f ? "row" : "column",
+          direction: g ? "row" : "column",
           gap: "2",
           children: [
             r.bNewMarket
@@ -7745,7 +7702,7 @@
                       className: At.BetaLink,
                       children: Ot.Localize("#AdvancedSearch_BetaTag"),
                     }),
-                    f &&
+                    g &&
                       (0, e.jsx)(v.w, {
                         size: "1",
                         orientation: "vertical",
@@ -7761,18 +7718,18 @@
                     }),
                   ],
                 }),
-            f &&
+            g &&
               (0, e.jsxs)(i.s, {
                 gap: Se,
                 justify: "end",
                 children: [
-                  f &&
+                  g &&
                     (0, e.jsx)(d.$, {
                       color: "dull",
                       variant: "ghost",
                       onClick: () => {
                         n(
-                          a
+                          o
                             ? {
                                 ...c,
                                 strSearch: "",
@@ -7793,13 +7750,13 @@
                               },
                         );
                       },
-                      disabled: !p,
+                      disabled: !f,
                       children: Ot.Localize("#AdvancedSearch_Reset"),
                     }),
-                  g,
+                  m,
                 ],
               }),
-            !f && g,
+            !g && m,
           ],
         });
       }
@@ -8005,14 +7962,14 @@
           i || (v(!0), o && s[o.appid] && a({ ...r, app: s[o.appid] }));
         }, [a, r, o, s, i]);
         const h = !r.app && i,
-          d = We(h),
+          d = Ue(h),
           u = (0, l.useMemo)(
             () => n.filter((t) => t !== Oe && s[t]).map((t) => s[t]),
             [n, s],
           );
         return (0, e.jsxs)(e.Fragment, {
           children: [
-            (0, e.jsx)(Ue, {
+            (0, e.jsx)($e, {
               apps: u,
               selectedApp: r.app,
               onSelectionChange: (t) => a({ ...r, app: t, facets: {} }),
@@ -8026,7 +7983,7 @@
                 onSelect: (t) => a({ ...r, app: s[t] || null, facets: {} }),
               }),
             !!r.app &&
-              (0, e.jsx)(Ge, {
+              (0, e.jsx)(De, {
                 appid: r.app.appid,
                 state: r,
                 onStateChange: a,
@@ -8041,9 +7998,9 @@
         const { filter: o, onFilterChange: i, suggestedInitialApp: v } = t,
           [h, d] = (0, l.useState)(!1),
           u = !o.app && h,
-          p = We(u),
+          p = Ue(u),
           f = (0, r.I)(
-            ((g = Fe),
+            ((g = We),
             {
               queryKey: ["marketfilters", Oe],
               queryFn: async () => {
@@ -8085,9 +8042,9 @@
           }, [h, v, x, i, o]),
           f.isLoading)
         )
-          return (0, e.jsx)(Ze, {});
+          return (0, e.jsx)(qe, {});
         if (f.isError || !f.data || !C || !m)
-          return (0, e.jsx)(Be, {
+          return (0, e.jsx)(Ge, {
             children: (0, e.jsx)(G.EY, {
               size: "4",
               children: Ot.Localize("#AdvancedSearch_FacetLoadError"),
@@ -8107,7 +8064,7 @@
         return (0, e.jsxs)(e.Fragment, {
           children: [
             _ &&
-              (0, e.jsx)(Ue, {
+              (0, e.jsx)($e, {
                 apps: C,
                 selectedApp: o.app,
                 onSelectionChange: (t) => i({ ...o, app: t, facets: {} }),
@@ -8289,7 +8246,49 @@
         }
         return { state: c, config: t.config };
       }
-      function Be(t) {
+      function Be(t, c) {
+        const {
+            strSearch: n,
+            bSearchDescriptions: e,
+            bSteamItems: l,
+            filterInGame: s,
+            filterSteam: r,
+          } = t,
+          a = l
+            ? (function (t) {
+                let c = { ...t, facets: { ...t.facets } };
+                return (
+                  t.app && (c.facets.Game = { [`app_${t.app.appid}`]: !0 }),
+                  (c.app = { appid: Oe, name: "", icon: "" }),
+                  c
+                );
+              })(r)
+            : s,
+          {
+            app: o,
+            facets: i,
+            accessories: v,
+            price: [h, d],
+          } = a,
+          u = new FormData();
+        o && u.set("appid", o.appid.toString()),
+          n && u.set("q", n),
+          n && e && (a.app, 0) && u.set("descriptions", "1");
+        for (const t of Object.keys(i))
+          if (i[t])
+            for (const c of Object.keys(i[t]))
+              i[t][c] && u.append(`category_${o.appid}_${t}[]`, `tag_${c}`);
+        for (const t of Object.keys(v))
+          if (v[t])
+            for (const c of Object.keys(v[t]))
+              v[t][c] && u.append(`accessory_${t}[]`, c);
+        return (
+          h > 0 && u.append("price_min", h.toString()),
+          d > h && d < c.maxPrice && u.append("price_max", d.toString()),
+          ie.N.Search({ search: new URLSearchParams(u) })
+        );
+      }
+      function Ge(t) {
         return (0, e.jsx)(i.s, {
           flexGrow: "1",
           radius: "sm",
@@ -8306,12 +8305,12 @@
           }),
         });
       }
-      function Ge(t) {
+      function De(t) {
         const { appid: c, ...n } = t,
           l = (function (t) {
             return (0, r.I)({
               queryKey: ["marketfilters", t],
-              queryFn: () => Fe(t),
+              queryFn: () => We(t),
               enabled: !!t,
             });
           })(c),
@@ -8345,9 +8344,9 @@
               })(t),
             );
           })(c);
-        if (l.isLoading || a.isLoading) return (0, e.jsx)(Ze, {});
+        if (l.isLoading || a.isLoading) return (0, e.jsx)(qe, {});
         if (l.isError || !l.data || a.isError || !a.data)
-          return (0, e.jsx)(Be, {
+          return (0, e.jsx)(Ge, {
             children: (0, e.jsx)(G.EY, {
               size: "4",
               children: Ot.Localize("#AdvancedSearch_FacetLoadError"),
@@ -8358,7 +8357,7 @@
             return 2 === s.TS.EUNIVERSE ? 710 === t : 730 === t;
           })(t) && 1 === s.TS.EUNIVERSE
             ? Zn
-            : De;
+            : Fe;
         })(c);
         return (0, e.jsx)(o, {
           appid: c,
@@ -8367,12 +8366,12 @@
           ...n,
         });
       }
-      function De(t) {
+      function Fe(t) {
         const { appid: c, facets: n, ...l } = t,
           s = ue(c, n);
         return 0 === s.length
           ? (0, e.jsx)(e.Fragment, {
-              children: (0, e.jsxs)(Be, {
+              children: (0, e.jsxs)(Ge, {
                 children: [
                   (0, e.jsx)(G.EY, {
                     align: "center",
@@ -8394,7 +8393,7 @@
             })
           : (0, e.jsx)(me, { facets: s, ...l });
       }
-      async function Fe(t) {
+      async function We(t) {
         const c = await fetch(
           `${s.TS.COMMUNITY_BASE_URL}market/appfilters/${t}`,
         );
@@ -8405,7 +8404,7 @@
           throw new Error(`Loaded malformed market filters for app ${t}`);
         return n.facets;
       }
-      function We(t = !0) {
+      function Ue(t = !0) {
         const { suggestedApps: c } = (0, l.useContext)(ke);
         return (0, r.I)({
           queryKey: ["marketsuggestedapps"],
@@ -8422,14 +8421,15 @@
           initialData: c,
         });
       }
-      function Ue(t) {
+      function $e(t) {
         const {
             selectedApp: c,
             apps: n,
             onSelectionChange: l,
             size: s = "3",
+            clearable: r = !0,
           } = t,
-          r = et({
+          a = et({
             rgOptions: n,
             selectedValue: c || null,
             onSelectionChange: l,
@@ -8440,14 +8440,15 @@
             ),
           });
         return (0, e.jsxs)(at.Root, {
-          state: r,
+          state: a,
           size: s,
           radius: "sm",
           marginBottom: "2",
+          clearable: r,
           children: [
             (0, e.jsxs)(at.Trigger, {
               children: [
-                c && (0, e.jsx)($e, { app: c, size: s }),
+                c && (0, e.jsx)(Je, { app: c, size: s }),
                 !c &&
                   (0, e.jsx)(at.Placeholder, {
                     weight: "medium",
@@ -8460,14 +8461,14 @@
             }),
             (0, e.jsx)(at.VirtualizedOptions, {
               estimateSize: () => 48,
-              items: r.rgFilteredOptions,
+              items: a.rgFilteredOptions,
               renderItem: (t, n) =>
                 (0, e.jsx)(
                   at.VirtualizedOption,
                   {
                     value: t,
                     virtualItem: n,
-                    children: (0, e.jsx)($e, {
+                    children: (0, e.jsx)(Je, {
                       app: t,
                       active: t === c,
                       size: s,
@@ -8479,7 +8480,7 @@
           ],
         });
       }
-      function $e(t) {
+      function Je(t) {
         const {
           app: { icon: c, name: n },
           active: l,
@@ -8489,7 +8490,7 @@
           align: "center",
           gap: "2",
           children: [
-            c && (0, e.jsx)(Ke, { icon: c, size: s }),
+            c && (0, e.jsx)(Ze, { icon: c, size: s }),
             (0, e.jsx)(G.EY, {
               color: l ? "accent-8" : void 0,
               contrast: l ? void 0 : "title",
@@ -8498,10 +8499,10 @@
           ],
         });
       }
-      const Je = {};
-      function Ke(t) {
+      const Ke = {};
+      function Ze(t) {
         const { icon: c, size: n } = t,
-          [s, r] = (0, l.useState)(!!Je[c]);
+          [s, r] = (0, l.useState)(!!Ke[c]);
         (0, l.useEffect)(() => {
           let t = !0;
           return (
@@ -8513,7 +8514,7 @@
             }
           );
         }, []),
-          s && (Je[c] = !0);
+          s && (Ke[c] = !0);
         const o = (0, dt.n)(n),
           i = `var(--spacing-${parseInt(o) + 3})`;
         return s
@@ -8524,7 +8525,7 @@
             })
           : (0, e.jsx)(a.az, { width: i, height: i, background: "dull-10" });
       }
-      function Ze() {
+      function qe() {
         return (0, e.jsx)(i.s, {
           justify: "center",
           align: "center",

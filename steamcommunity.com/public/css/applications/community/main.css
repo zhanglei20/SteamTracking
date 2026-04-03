@@ -6332,6 +6332,18 @@ a._14GZWzJgooP0mbfTvEQnjA {
   --color-orange-10: #ff801f;
   --color-orange-11: #ffa057;
   --color-orange-12: #ffe0c2;
+  --color-valveonly-1: #680000;
+  --color-valveonly-2: #790000;
+  --color-valveonly-3: #8a0000;
+  --color-valveonly-4: #9a0101;
+  --color-valveonly-5: #ab1212;
+  --color-valveonly-6: #bc2323;
+  --color-valveonly-7: #cc3333;
+  --color-valveonly-8: #e04747;
+  --color-valveonly-9: #f45b5b;
+  --color-valveonly-10: #ff6f6f;
+  --color-valveonly-11: #ff8383;
+  --color-valveonly-12: #ff9797;
   --color-text-light-title: #f1f2f3;
   --color-text-light-subtitle: #d6d9dc;
   --color-text-light-body: #acb2b8;
@@ -7277,6 +7289,36 @@ a._14GZWzJgooP0mbfTvEQnjA {
   --color-dull-10: var(--color-orange-10);
   --color-dull-11: var(--color-orange-11);
   --color-dull-12: var(--color-orange-12);
+}
+:root:has(._2KPA3I9eXE9r251_-GX_iv > div[data-accent-color="valveonly"]),
+:root [data-accent-color="valveonly"] {
+  --color-accent-1: var(--color-valveonly-1);
+  --color-accent-2: var(--color-valveonly-2);
+  --color-accent-3: var(--color-valveonly-3);
+  --color-accent-4: var(--color-valveonly-4);
+  --color-accent-5: var(--color-valveonly-5);
+  --color-accent-6: var(--color-valveonly-6);
+  --color-accent-7: var(--color-valveonly-7);
+  --color-accent-8: var(--color-valveonly-8);
+  --color-accent-9: var(--color-valveonly-9);
+  --color-accent-10: var(--color-valveonly-10);
+  --color-accent-11: var(--color-valveonly-11);
+  --color-accent-12: var(--color-valveonly-12);
+}
+:root:has(._2KPA3I9eXE9r251_-GX_iv > div[data-dull-color="valveonly"]),
+:root [data-dull-color="valveonly"] {
+  --color-dull-1: var(--color-valveonly-1);
+  --color-dull-2: var(--color-valveonly-2);
+  --color-dull-3: var(--color-valveonly-3);
+  --color-dull-4: var(--color-valveonly-4);
+  --color-dull-5: var(--color-valveonly-5);
+  --color-dull-6: var(--color-valveonly-6);
+  --color-dull-7: var(--color-valveonly-7);
+  --color-dull-8: var(--color-valveonly-8);
+  --color-dull-9: var(--color-valveonly-9);
+  --color-dull-10: var(--color-valveonly-10);
+  --color-dull-11: var(--color-valveonly-11);
+  --color-dull-12: var(--color-valveonly-12);
 }
 :root [data-accent-color="dull"] {
   --color-accent-1: var(--color-dull-1);
