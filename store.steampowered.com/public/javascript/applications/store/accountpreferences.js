@@ -1104,6 +1104,7 @@
                   className: p.CookieSection,
                   children: [
                     (0, a.jsx)("h2", {
+                      id: "FrameRateReporting",
                       children: (0, d.we)(
                         "#DataPreferences_FrameRateReporting_Title",
                       ),
