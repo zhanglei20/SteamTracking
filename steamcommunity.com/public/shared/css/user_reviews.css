@@ -558,3 +558,18 @@ select {
 .saved_hardware:hover {
 	color: #66C0F4;
 }
+
+.reviewer_hardware_container
+{
+	padding: 4px;
+	margin: 0px 8px 8px 0px;
+	color: #AFDEFF;
+	background-color: #486582;
+}
+.reviewer_hardware_container .reviewer_hardware
+{
+	font-weight: bold;
+}
+.review_area .reviewer_hardware_container {
+	margin-top: 10px;
+}

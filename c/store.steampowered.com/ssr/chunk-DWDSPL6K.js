@@ -1,21 +1,4 @@
 var _ = _(_(), 1);
-var _ = _(_(), 1),
-  _ = _.createContext({
-    ePreferredHWCompat: 0,
-  });
-function _(_) {
-  let { ePreferredHWCompat: _ } = _;
-  return (0, _.jsx)(_.Provider, {
-    value: {
-      ePreferredHWCompat: _,
-    },
-    children: _.children,
-  });
-}
-function _() {
-  return _.useContext(_).ePreferredHWCompat;
-}
-var _ = _(_(), 1);
 function _(_, _) {
   let [_, _] = (0, _.useState)(_),
     _ = _(_, {
@@ -54,5 +37,22 @@ function _(_, _ = {}) {
     }, [_, _, _, _]),
     _
   );
+}
+var _ = _(_(), 1);
+var _ = _(_(), 1),
+  _ = _.createContext({
+    ePreferredHWCompat: 0,
+  });
+function _(_) {
+  let { ePreferredHWCompat: _ } = _;
+  return (0, _.jsx)(_.Provider, {
+    value: {
+      ePreferredHWCompat: _,
+    },
+    children: _.children,
+  });
+}
+function _() {
+  return _.useContext(_).ePreferredHWCompat;
 }
 export { _, _, _, _ };

@@ -170,7 +170,6 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	clear: left;	/* in responsive mode, will drop below the game logo */
 }
 
-
 .review_box .content.failed_content_check {
 	font-style: italic;
 }
@@ -205,6 +204,9 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	margin-left: 8px;
 }
 
+.review_box .reviewer_hardware_container {
+	margin-top: 10px;
+}
 
 #rightContents
 {
@@ -299,7 +301,6 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 .review_box .control_block .dselect_container {
 	display: inline-block;
 	position: relative;
-
 }
 
 .dselect_container a, .dselect_container a:hover, .dselect_container a:active, .dselect_container a:visited
