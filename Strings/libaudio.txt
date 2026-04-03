@@ -19,7 +19,6 @@
 !pArray || ( Base() >= ( pArray + size ) ) || ( pArray >= ( Base() + Count() ) )
 !pszString || pszString[nChars] == '\0'
 !s_bInRunFrame
-"^ttb0
 "type mismatch! call is<type>() before get<type>()" && is<array>()
 "type mismatch! call is<type>() before get<type>()" && is<object>()
 "type mismatch! call is<type>() before get<type>()" && is<std::string>()
@@ -192,6 +191,7 @@ $ORIGIN
 7CUtlMapI14CBaseUtlSymbolItEPvi8CDefLessE
 9IValidate
 >/dev/null
+?V8e
 AIL_allocate_sample_handle
 AIL_close_digital_driver
 AIL_digital_latency

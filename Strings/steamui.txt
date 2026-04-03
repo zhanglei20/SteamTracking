@@ -797,6 +797,7 @@
 "B\n-CTransportValidation_GetLargeResponse_Request
 "B\n.CFriendMessages_UpdateMessageReaction_Response
 "B\n/CClientNotificationGameRecordingUserMarkerAdded
+"C\n%CMsgRemoteClientDownloadingAppChanged
 "C\n)CSiteLicense_InitiateAssociation_Response
 "Customization/StartupMovie/MovieID
 "Customization/StartupMovie/Shuffle
@@ -980,6 +981,7 @@
 "l\n-CChatRoom_EndMiniGameForChatRoomGroup_Request
 "lbN.
 "legacy_set"\t\t"1"
+"m\n(CMsgRemoteClientPeerContentServerChanged
 "m\n8CDepotContentDetection_GetAllDetectedAppContent_Response
 "p\n+CClientNotificationFamilySharingStopPlaying
 "q\n5CAuthenticationSupport_QueryRefreshTokenByID_Response
@@ -1438,6 +1440,7 @@
 #\n\ravatar_frames
 #\n\tpair_type
 #\n\vsearch_tags
+#\n\vupdate_info
 #\t#\v#'#)#/#3#5#E#Q#S#Y#c#k#
 #\v+(bF&drJ:x#
 #]hK Ed
@@ -1954,6 +1957,7 @@ ${LANGUAGE}
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
 %\n k_EMsgUCMPublishedFileSubscribed
@@ -2751,12 +2755,15 @@ ${LANGUAGE}
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
 '\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
+'\n"k_EMsgRemoteClientAppDownloadStats
+'\n"k_EMsgRemoteClientAppUpdateStopped
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
 '\n"k_EMsgWGConnectionLegacyWGResponse
 '\n"k_EStreamControlSetBitrateOverride
 '\n"k_EStreamControlSetQualityOverride
+'\n"k_eMsgRemoteClientDownloadingAppID
 '\n#k_EAppControllerSupportLevelPartial
 '\n#k_EAppReportType_CopyrightViolation
 '\n#k_EAuthTokenAppType_Mobile_SteamApp
@@ -3016,6 +3023,7 @@ ${LANGUAGE}
 (\n is_adaptive_brightness_available
 (\n is_available_on_current_platform
 (\n offset_detection_min_clean_chunk
+(\n remove_from_download_list_app_id
 (\n#k_EMsgAMCheckClanInviteRateLimiting
 (\n#k_EMsgAMCheckClanMembershipResponse
 (\n#k_EMsgAMClientRemoveFriendFromGroup
@@ -3224,11 +3232,13 @@ ${LANGUAGE}
 (\r"6\n\rCInputTextMsg
 (\r"7\n$CClientNotificationIncomingVoiceChat
 (\r"7\n$CStore_GetGamesFollowedCount_Request
+(\r"7\n%CMsgRemoteClientAppUpdateInfoComplete
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
 (\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"7\n\rCMsgWasHidden
 (\r"8\n%CGameRecording_StartRecording_Request
+(\r"8\n%CMsgRemoteClientSuspendLanPeerContent
 (\r"8\n6CTransportValidation_RequestLargeNotification_Response"=\n-CTransportValidation_NotifyLarge_Notification
 (\r"8\n\rCMsgDisableF5
 (\r"9\n$CParties_ChangeNumOpenSlots_Response
@@ -3241,6 +3251,7 @@ ${LANGUAGE}
 (\r"<\n:CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"
 (\r"<\n\rCMsgScreenDPI
 (\r"=\n&CDataPublisher_GetVRDeviceInfo_Request
+(\r"=\n+CMsgRemoteClientDownloadScheduleItemChanged
 (\r">\n&CBroadcast_EndBroadcastSession_Request
 (\r">\n.CTransportValidation_GetLargeResponse_Response
 (\r"?\n.CCommunity_PartnerEventsShowMoreForApp_Request
@@ -3322,6 +3333,7 @@ ${LANGUAGE}
 (\r"a\n*CGameNetworking_ReleaseFakeIP_Notification
 (\r"a\n4CMarketingMessages_GetPastMarketingMessages_Response
 (\r"b\n%CChatRoom_AckChatMessage_Notification
+(\r"c\n CMsgRemoteClientDownloadingAppID
 (\r"c\n"CChatRoom_CreateInviteLink_Request
 (\r"c\n(CValveHWSurvey_GetSurveySchedule_Request
 (\r"c\n)CContentBuilder_SignInstallScript_Request
@@ -3343,6 +3355,7 @@ ${LANGUAGE}
 (\r"k\n+CStore_QueueWishlistDemoEmailToFire_Request
 (\r"k\n1CSteamInputService_PairDongleTritonDocked_Request
 (\r"k\n<CMarketingMessages_GetPartnerReadyToPublishMessages_Response
+(\r"l\n)CMsgRemoteClientUpdateDownloadsController
 (\r"l\n-CBroadcast_StopWatchingBroadcast_Notification
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
 (\r"o\n(CBroadcast_GetBroadcastChatInfo_Response
@@ -3632,7 +3645,6 @@ ${LANGUAGE}
 (\v2'.google.protobuf.ServiceDescriptorProto
 (\v2(.CClientMetrics_AppInterfaceMethodCounts
 (\v2(.CMsgClientFriendsGroupsList.FriendGroup
-(\v2(.CMsgRemoteClientAppStatus.AppUpdateInfo
 (\v2(.CPublishedFile_QueryFiles_Request.KVTag
 (\v2(.CRemoteClient_RemotePacket_NotificationH
 (\v2(.CRemotePlayTogether_Notification.Player
@@ -3757,6 +3769,7 @@ ${LANGUAGE}
 (\v28.CClientMetrics_ClipRange_Notification.RelativeRangeEdge
 (\v28.CClientMetrics_ReportReactUsage_Notification.ActionData
 (\v28.CFamilyGroups_GetPreferredLenders_Response.FamilyMember
+(\v28.CMsgRemoteClientDownloadsManagement.ChangeDownloadIndex
 (\v28.CPlayer_GetFriendsGameplayInfo_Response.OwnGameplayInfo
 (\v28.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails
 (\v28.CPlayer_GetTopAchievementsForGames_Response.Achievement"{\n'CPlayer_GetAchievementsProgress_Request
@@ -3780,6 +3793,7 @@ ${LANGUAGE}
 (\v2;.CRemoveAuthenticatorViaChallengeContinue_Replacement_Token*l\n
 (\v2;.CStoreBrowse_GetContentHubConfig_Response.ContentHubConfig
 (\v2<.CChatUsability_ClientUsabilityMetrics_Notification.Settings
+(\v2<.CMsgRemoteClientDownloadsManagement.ChangeAppQueuePlacement
 (\v2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfo
 (\v2<.CPublishedFile_GetAppRelationships_Response.AppRelationship
 (\v2<.CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData
@@ -4092,6 +4106,7 @@ ${LANGUAGE}
 )\n%k_EPublishedFileStorageSystemUGCCloud
 )\n%k_ERemoteClientPairWifiAPNetworkError
 )\n%k_ERemoteClientPairWifiAPUnauthorized
+)\n%k_ERemoteClientServiceManageDownloads
 )\n%k_ERemoteDeviceAuthorizationConfirmed
 )\n%k_ERemoteDeviceStreamingCancelRequest
 )\n%k_ESteamDeckKeyboardLayout_Indonesian
@@ -4817,6 +4832,7 @@ ${LANGUAGE}
 *\n%k_EPersonaStateFlag_ClientTypeTenfoot
 *\n%k_EPersonaStateFlag_LaunchTypeGamepad
 *\n%k_EStreamControlResumeControllerInput
+*\n%k_eMsgRemoteClientDownloadsManagement
 *\n&k_EBanContentCheckResult_NeedsChecking
 *\n&k_EBroadcastWatchLocation_Chat_Friends
 *\n&k_EBroadcastWatchLocation_StoreAppPage
@@ -5227,10 +5243,12 @@ ${LANGUAGE}
 ,\n'k_EMsgEconTrading_InitiateTradeResponse
 ,\n'k_EMsgGMGetServiceMethodRoutingResponse
 ,\n'k_EMsgPSGetShoppingCartContentsResponse
+,\n'k_EMsgRemoteClientAppInfoUpdateComplete
 ,\n'k_EMsgRemoteClientAuthResponse_OBSOLETE
 ,\n'k_EMsgRemoteClientAuthorizationResponse
 ,\n'k_EMsgUCMGetUserSubscribedFilesResponse
 ,\n'k_EMsgWebAPIValidateOAuth2TokenResponse
+,\n'k_eMsgRemoteClientSuspendLanPeerContent
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EAuthTokenRevokeNonRememberedPermanent
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
@@ -5720,10 +5738,14 @@ ${LANGUAGE}
 .9GXdx
 .9\Kre
 .;PEzo
+.AppStageProgress
+.AppUpdateInfo
+.AppUpdateInfo"
 .BNW^h
 .CAchievements_GetInfo_Request
 .CAchievements_GetInfo_Response
 .CAppOverview_PerClientData
+.CAppOverview_PerClientData"
 .CAuthentication_DeviceDetails
 .CBluetoothManager_Pair_Request
 .CBroadcast_GetRTMPInfo_Request
@@ -6407,6 +6429,7 @@ ${LANGUAGE}
 .\n)k_EMsgDRMWorkerProcessValidateFileRequest
 .\n)k_EMsgEconCDKeyProcessTransactionResponse
 .\n)k_EMsgGCHAppCheersGetAllowedTypesResponse
+.\n)k_EMsgRemoteClientDownloadScheduleChanged
 .\n)k_EMsgUCMPublishedFileChildRemoveResponse
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
 .\n)k_EStreamControlStartNeptuneData_OBSOLETE
@@ -6602,6 +6625,7 @@ ${LANGUAGE}
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
 /\n*k_EStreamControlEnableNeptuneData_OBSOLETE
 /\n*k_EStreamControlTouchActionSetLayerRemoved
+/\n*k_eMsgRemoteClientPeerContentServerChanged
 /\n+k_EBroadcastWatchLocation_DesktopUI_Overlay
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_EChatRoomServerMsg_ChatRoomTaglineChanged
@@ -6972,6 +6996,7 @@ ${LANGUAGE}
 /data/src/steamUI/steamuicontroller.cpp
 /data/src/steamUI/steamuicurrentusercontroller.cpp
 /data/src/steamUI/steamuidownloadscontroller.cpp
+/data/src/steamUI/steamuidownloadscontroller.h
 /data/src/steamUI/steamuiinputcontroller.cpp
 /data/src/steamUI/steamuiservicetransport.cpp
 /data/src/steamUI/steamuisharedjscontroller.cpp
@@ -7269,11 +7294,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00:00:00
+01/01/00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
-01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7324,6 +7349,7 @@ ${LANGUAGE}
 0\n+k_EMsgWGConnectionValidateUserTokenResponse
 0\n+k_EStreamControlDisableNeptuneData_OBSOLETE
 0\n+k_EStreamControlSetInputTemporarilyDisabled
+0\n+k_eMsgRemoteClientUpdateDownloadsController
 0\n,k_EAppGamepadGyroTrackpadSupportLevelGamepad
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EAuthSessionSecurityHistory_NoPriorHistory
@@ -7466,6 +7492,7 @@ ${LANGUAGE}
 10CUtlMemoryI19ControllerDetails_tE
 10CUtlMemoryI19InstallFolderInfo_sE
 10CUtlMemoryI20ModuleAddressRange_tE
+10CUtlMemoryI20RemoteDownloadApps_tE
 10CUtlMemoryI22PanelAnimationMapEntryE
 10CUtlMemoryI23ControllerBindingInfo_tE
 10CUtlMemoryI23SteamOSCompatTestResultE
@@ -7925,6 +7952,7 @@ ${LANGUAGE}
 10CUtlVectorI19ControllerDetails_t10CUtlMemoryIS0_EE
 10CUtlVectorI19InstallFolderInfo_s10CUtlMemoryIS0_EE
 10CUtlVectorI20ModuleAddressRange_t10CUtlMemoryIS0_EE
+10CUtlVectorI20RemoteDownloadApps_t10CUtlMemoryIS0_EE
 10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
 10CUtlVectorI23ControllerBindingInfo_t10CUtlMemoryIS0_EE
 10CUtlVectorI23SteamOSCompatTestResult10CUtlMemoryIS0_EE
@@ -8394,6 +8422,7 @@ ${LANGUAGE}
 12Secrets_Stub
 12SleepManager
 12SteamTV_Stub
+13AppUpdateInfo
 13CBoolProperty
 13CCallbackBase
 13CCallbackImplILi1025EE
@@ -8405,6 +8434,7 @@ ${LANGUAGE}
 13CCallbackImplILi136EE
 13CCallbackImplILi144EE
 13CCallbackImplILi148EE
+13CCallbackImplILi152EE
 13CCallbackImplILi164EE
 13CCallbackImplILi16EE
 13CCallbackImplILi1EE
@@ -8421,6 +8451,7 @@ ${LANGUAGE}
 13CCallbackImplILi280EE
 13CCallbackImplILi28EE
 13CCallbackImplILi2EE
+13CCallbackImplILi308EE
 13CCallbackImplILi32EE
 13CCallbackImplILi36EE
 13CCallbackImplILi392EE
@@ -8440,12 +8471,14 @@ ${LANGUAGE}
 13CCallbackImplILi5120EE
 13CCallbackImplILi520EE
 13CCallbackImplILi52EE
+13CCallbackImplILi552EE
+13CCallbackImplILi560EE
 13CCallbackImplILi584EE
-13CCallbackImplILi60EE
 13CCallbackImplILi628EE
 13CCallbackImplILi704EE
 13CCallbackImplILi75EE
-13CCallbackImplILi764EE
+13CCallbackImplILi768EE
+13CCallbackImplILi780EE
 13CCallbackImplILi784EE
 13CCallbackImplILi80EE
 13CCallbackImplILi8476EE
@@ -8698,6 +8731,7 @@ ${LANGUAGE}
 15WebUINoResponse
 16 Mbps
 16AppModalQueryBox
+16AppStageProgress
 16BluetoothManager
 16CAlignedUVBuffer
 16CBilling_Address
@@ -9147,6 +9181,7 @@ ${LANGUAGE}
 1\n,k_EMsgFBSBootstrapperGetPackageChunkResponse
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
+1\n,k_eMsgRemoteClientRestrictAutoUpdatesChanged
 1\n-k_EClientNotificationType_OverlaySplashScreen
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_EClientSettingStore_ConfigStore_UserRoaming
@@ -9602,9 +9637,10 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI27CSharedConnectionControllerJjPKcEE
 20CJSMethodCallHandlerI27CSharedConnectionControllerJjiEE
 20CJSMethodCallHandlerI27CSteamUIDownloadsControllerJ9CSmartPtrI15CJSCallbackFuncEEE
-20CJSMethodCallHandlerI27CSteamUIDownloadsControllerJbEE
+20CJSMethodCallHandlerI27CSteamUIDownloadsControllerJbyEE
 20CJSMethodCallHandlerI27CSteamUIDownloadsControllerJjEE
-20CJSMethodCallHandlerI27CSteamUIDownloadsControllerJjiEE
+20CJSMethodCallHandlerI27CSteamUIDownloadsControllerJjiyEE
+20CJSMethodCallHandlerI27CSteamUIDownloadsControllerJjyEE
 20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKc9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI27CSteamUIMessagingControllerJPKcS2_S2_9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI28CSystemAudioDeviceControllerJ9CSmartPtrI15CJSCallbackFuncEEE
@@ -9774,6 +9810,7 @@ ${LANGUAGE}
 21CSteamOSManagerLegacy
 21CSteamServiceBaseImpl
 21CSteamUIAppController
+21CSteamUIDownloadsData
 21CSteamUIURLController
 21CStreamingClientState
 21CStreamingKeymapEntry
@@ -9846,6 +9883,7 @@ ${LANGUAGE}
 22CSetTouchConfigDataMsg
 22CSteamOSControllerStub
 22CSteamTV_ChatModerator
+22CSteamUILocalDownloads
 22CStore_UserPreferences
 22CStreamingClientConfig
 22CStreamingServerConfig
@@ -9902,6 +9940,7 @@ ${LANGUAGE}
 23CSteamUIErrorController
 23CSteamUIInputController
 23CSteamUIMusicController
+23CSteamUIRemoteDownloads
 23CSteamUIStatsController
 23CStreamTransportUDP_SNS
 23CSystemDevkitController
@@ -10244,6 +10283,7 @@ ${LANGUAGE}
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
 28CMsgRemoteClientPingResponse
+28CMsgRemoteClientUploadStatus
 28CMsgRemoteClientWifiAPStatus
 28CMsgRemoteDeviceProofRequest
 28CMsgScalePageToValueResponse
@@ -10392,6 +10432,7 @@ ${LANGUAGE}
 2\n-k_EMsgGMTestNextBuildSchemaConversionResponse
 2\n-k_EMsgGSComputeNewPlayerCompatibilityResponse
 2\n-k_EMsgPSAddWalletCreditToShoppingCartResponse
+2\n-k_EMsgRemoteClientDownloadItemScheduleChanged
 2\n-k_EMsgRemoteClientGetControllerConfigResponse
 2\n-k_EMsgSMTestNextBuildSchemaConversionResponse
 2\n-k_EStreamControlRemotePlayTogetherGroupUpdate
@@ -10529,6 +10570,7 @@ ${LANGUAGE}
 30CMsgClientEmoticonList_Sticker
 30CMsgGameServerPlayersQueryData
 30CMsgImeCompositionRangeChanged
+30CMsgRemoteClientDownloadStatus
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
 30CMsgSetNetFakeLocalSystemState
@@ -10686,6 +10728,8 @@ ${LANGUAGE}
 32CMsgClientPersonaState_Friend_KV
 32CMsgCloudPendingRemoteOperations
 32CMsgNetworkDeviceConnect_KnownAP
+32CMsgRemoteClientAppUpdateStopped
+32CMsgRemoteClientDownloadingAppID
 32CMsgRemoteClientStreamingEnabled
 32CMsgRemoteDeviceStreamingRequest
 32CMsgSystemPerfLegacySettingEntry
@@ -10931,7 +10975,9 @@ ${LANGUAGE}
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgNetworkDevicesData_Device_Wired
 35CMsgRemoteClientAppStatus_AppStatus
+35CMsgRemoteClientDownloadsManagement
 35CMsgRemoteClientGetControllerConfig
+35CMsgRemoteClientRestrictAutoUpdates
 35CMsgRemoteClientStartStreamResponse
 35CMsgZoomToElementAtPositionResponse
 35CParental_ParentalLock_Notification
@@ -11121,6 +11167,9 @@ ${LANGUAGE}
 37CMsgClientSiteLicenseCheckoutResponse
 37CMsgControllerInputMouseButtonBinding
 37CMsgGameServerPlayersQueryData_Player
+37CMsgRemoteClientAppUpdateInfoComplete
+37CMsgRemoteClientDownloadingAppChanged
+37CMsgRemoteClientSuspendLanPeerContent
 37CMsgRemoteDeviceAuthorizationResponse
 37CMsgRemoteDeviceStreamTransportSignal
 37CMsgSystemAudioManagerUpdateSomething
@@ -11282,7 +11331,7 @@ ${LANGUAGE}
 39CMsgClientFriendsGroupsList_FriendGroup
 39CMsgClientRemoveFriendFromGroupResponse
 39CMsgControllerInputGamepadButtonBinding
-39CMsgRemoteClientAppStatus_AppUpdateInfo
+39CMsgRemoteClientDownloadScheduleChanged
 39COffline_GetOfflineLogonTicket_Response
 39CParental_ApproveFeatureAccess_Response
 39CParental_RequestFeatureAccess_Response
@@ -11448,6 +11497,7 @@ ${LANGUAGE}
 40CInventory_PurchaseInit_Request_LineItem
 40CMsgChildProcessQueryGpuTopology_GpuInfo
 40CMsgClientSiteLicenseGetContentCacheInfo
+40CMsgRemoteClientPeerContentServerChanged
 40CMsgSwapModeInputBindings_CModeInputSwap
 40CParental_EnableParentalSettings_Request
 40CParties_OnReservationCompleted_Response
@@ -11548,6 +11598,7 @@ ${LANGUAGE}
 41CMsgBrowserViewPostMessageToParentRequest
 41CMsgControllerInputBinding_KeyBindingData
 41CMsgNetworkDevicesData_Device_Wireless_AP
+41CMsgRemoteClientUpdateDownloadsController
 41CMsgShowBrowserContextMenu_ContextCommand
 41CNetConnectionImmediateDisconnectWorkItem
 41CParental_DisableParentalSettings_Request
@@ -11728,6 +11779,7 @@ ${LANGUAGE}
 43CMsgClientPersonaState_Friend_OtherGameData
 43CMsgClientPlayerNicknameList_PlayerNickname
 43CMsgRemoteClientBroadcastClientIDDeconflict
+43CMsgRemoteClientDownloadScheduleItemChanged
 43CMsgRemoteClientGetControllerConfigResponse
 43CMsgRemoteClientStartStream_ReservedGamepad
 43CParental_GetSignedParentalSettings_Request
@@ -12358,6 +12410,7 @@ ${LANGUAGE}
 55CGameRecording_ManuallyDeleteRecordingsForApps_Response
 55CMarketingMessages_GetMarketingMessagesForUser_Response
 55CMsgControllerInputControllerActionGameActionSetBinding
+55CMsgRemoteClientDownloadsManagement_ChangeDownloadIndex
 55CPlayer_GetFriendsGameplayInfo_Response_OwnGameplayInfo
 55CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails
 55CPlayer_GetTopAchievementsForGames_Response_Achievement
@@ -12436,6 +12489,7 @@ ${LANGUAGE}
 59CDataPublisher_SetVRDeviceInfoAggregationReference_Response
 59CMarketingMessages_GetMarketingMessageClickedStats_Response
 59CMarketingMessages_GetPartnerReadyToPublishMessages_Request
+59CMsgRemoteClientDownloadsManagement_ChangeAppQueuePlacement
 59CPlayer_GetFriendsGameplayInfo_Response_FriendsGameplayInfo
 59CPublishedFile_GetAppRelationships_Response_AppRelationship
 59CStore_GetTrendingAppsAmongFriends_Response_TrendingAppData
@@ -13250,7 +13304,6 @@ ${LANGUAGE}
 =\n\nline_items
 =\n\nrecordings
 =\n\temoticons
-=\n\vupdate_info
 =\tUa7
 =asyv
 =fff?
@@ -14147,6 +14200,7 @@ AppModalQueryBox
 AppProperties
 AppRelationship
 AppRootPanel
+AppStageProgress
 Appearance
 Append() bytes[] overlaps with buf_[]
 Append() bytes[] overlaps with outbuf_[]
@@ -14289,7 +14343,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  1 2026 23:00:43
+Apr  2 2026 23:25:48
 April
 Arabic
 AreFilesInSubscriptionList
@@ -16573,11 +16627,13 @@ CMsgRemoteClientAcceptEULA
 CMsgRemoteClientAppStatus
 CMsgRemoteClientBroadcastHeader
 CMsgRemoteClientBroadcastStatus
+CMsgRemoteClientDownloadStatus
 CMsgRemoteClientPairWifiAP
 CMsgRemoteClientPing"
 CMsgRemoteClientPingResponse"S\n
 CMsgRemoteClientStartStream
 CMsgRemoteClientStatus
+CMsgRemoteClientUploadStatus
 CMsgRemoteClientWifiAPStatus
 CMsgRemoteDeviceProofRequest
 CMsgRemoteDeviceProofResponse
@@ -16987,9 +17043,14 @@ CRemotePlayController::OnStreamingClientUsedInput
 CRemoteSteamAppMgr::OnAppEventStateChange
 CRemoteSteamAppMgr::OnRemoteClientAppStateChanged
 CRemoteSteamAppMgr::OnRemoteClientAppUpdateInfoChanged
+CRemoteSteamAppMgr::OnRemoteClientAppUpdateStopped
 CRemoteSteamAppMgr::OnRemoteClientConnected
 CRemoteSteamAppMgr::OnRemoteClientDisconnected
+CRemoteSteamAppMgr::OnRemoteClientDownloadStatsChanged
+CRemoteSteamAppMgr::OnRemoteClientRestrictAutoUpdateChanged
 CRemoteSteamAppMgr::OnRemoteClientStreamLifetime
+CRemoteSteamAppMgr::OnRemoteClientUploadStatsChanged
+CRemoteSteamAppMgr::OnRemoteRecvClientDownloadingAppID
 CRemoteSteamAppMgr::OnShortcutRemoved
 CRemoteSteamAppMgr::OnStreamingClientConnected
 CRemoteSteamAppMgr::OnStreamingClientDisconnected
@@ -17225,15 +17286,23 @@ CSteamUICurrentUserController::UpdateCommentNotification
 CSteamUICurrentUserController::UpdateItemAnnouncement
 CSteamUICurrentUserController::UpdateOfflineMessageCount
 CSteamUICurrentUserController::UpdateUserNotificationCount
-CSteamUIDownloadsController::OnAppAutoUpdateBehaviorChange
 CSteamUIDownloadsController::OnAppDownloadScheduleChange
 CSteamUIDownloadsController::OnAppEventStateChange
-CSteamUIDownloadsController::OnAppInfoUpdateComplete
 CSteamUIDownloadsController::OnAppUpdateStopped
-CSteamUIDownloadsController::OnDlcInstalled
-CSteamUIDownloadsController::OnPeerContentServerChange
-CSteamUIDownloadsController::OnSteamServersConnected
-CSteamUIDownloadsController::OnSteamServersDisconnected
+CSteamUIDownloadsController::OnLocalAppInfoUpdateComplete
+CSteamUIDownloadsController::OnLocalPeerContentServerChanged
+CSteamUIDownloadsController::OnRecvRemoteClientDownloadingAppID
+CSteamUIDownloadsController::OnRemoteAppDownloadScheduleChange
+CSteamUIDownloadsController::OnRemoteAppDownloadScheduleItemChange
+CSteamUIDownloadsController::OnRemoteAppInfoUpdateComplete
+CSteamUIDownloadsController::OnRemoteAppUpdateStopped
+CSteamUIDownloadsController::OnRemoteClientAppStateChanged
+CSteamUIDownloadsController::OnRemoteClientAppUpdateInfoChanged
+CSteamUIDownloadsController::OnRemoteClientConnected
+CSteamUIDownloadsController::OnRemoteClientDisconnected
+CSteamUIDownloadsController::OnRemotePeerContentServerChanged
+CSteamUIDownloadsController::OnRemoteRestrictAutoUpdatesChanged
+CSteamUIDownloadsController::OnRemoteUpdateDownloadsController
 CSteamUIInputController::OnConfigLoaded
 CSteamUIInputController::OnControllerActionTriggered
 CSteamUIInputController::OnControllerConfigSelectionChange
@@ -17251,6 +17320,16 @@ CSteamUIInputController::OnPostLogonState
 CSteamUIInputController::OnReceivedControllerPersonalization
 CSteamUIInputController::OnRemoteClientRemotePlayUIMovedController
 CSteamUIInputController::OnShowControllerLayoutPreview
+CSteamUILocalDownloads::OnDlcInstalled
+CSteamUILocalDownloads::OnEnableAllDownloadsFromRemoteClient
+CSteamUILocalDownloads::OnRemoteClientAppQueueChanged
+CSteamUILocalDownloads::OnRemoteClientDownloadQueueChanged
+CSteamUILocalDownloads::OnRemoteRemoveFromDownloadList
+CSteamUILocalDownloads::OnRemoteSuspendDownloadThrottling
+CSteamUILocalDownloads::OnRemoteSuspendLanePeerContent
+CSteamUILocalDownloads::OnRestrictAutoUpdateChanged
+CSteamUILocalDownloads::OnSteamServersConnected
+CSteamUILocalDownloads::OnSteamServersDisconnected
 CSteamUIMessagingController::OnClientPostMessage
 CSteamUIMusicController::OnCurrentQueueEntryHasChanged
 CSteamUIMusicController::OnCurrentQueueEntrySecondsElapsedChanged
@@ -17774,6 +17853,8 @@ Camellia_decrypt
 Camellia_encrypt
 Camellia_set_key
 Camera
+Can not set launch app on complete for Remote Client.
+Can not show download complete notification on Remote Client.
 Can't
 Can't AbortConnection as it deletes inside a HTTP2 callback from nghttp2, doing async - but fix caller
 Can't BackUp() after failed Next().
@@ -17907,6 +17988,8 @@ ChainCAPath
 Chakma
 Cham
 Change
+ChangeAppQueuePlacement
+ChangeDownloadIndex
 ChangeNumOpenSlots
 ChangePassphrase
 Changing adapter [old=%llu][new=%llu]\n
@@ -18389,6 +18472,7 @@ Couldn't create offer\n
 Couldn't create socket: %s\n
 Couldn't determine VirtualHere executable, can't send command\n
 Couldn't find %s in %s, x264 support disabled
+Couldn't find remote app when we should. figure this out.
 Couldn't find script file %s\n
 Couldn't format time value %llu
 Couldn't get app info for AppID %u\n
@@ -19002,6 +19086,7 @@ Downloads.PauseAppUpdate
 Downloads.QueueAppUpdate
 Downloads.RegisterForDownloadItems
 Downloads.RegisterForDownloadOverview
+Downloads.RegisterForRemoteClientsConnected
 Downloads.RemoveFromDownloadList
 Downloads.ResumeAppUpdate
 Downloads.SetLaunchOnUpdateComplete
@@ -25169,7 +25254,12 @@ N18CRemoteSteamAppMgr44CCallbackInternal_OnStreamingClientConnectedE
 N18CRemoteSteamAppMgr46CCallbackInternal_OnRemoteClientStreamLifetimeE
 N18CRemoteSteamAppMgr47CCallbackInternal_OnRemoteClientAppStateChangedE
 N18CRemoteSteamAppMgr47CCallbackInternal_OnStreamingClientDisconnectedE
+N18CRemoteSteamAppMgr48CCallbackInternal_OnRemoteClientAppUpdateStoppedE
+N18CRemoteSteamAppMgr50CCallbackInternal_OnRemoteClientUploadStatsChangedE
 N18CRemoteSteamAppMgr52CCallbackInternal_OnRemoteClientAppUpdateInfoChangedE
+N18CRemoteSteamAppMgr52CCallbackInternal_OnRemoteClientDownloadStatsChangedE
+N18CRemoteSteamAppMgr52CCallbackInternal_OnRemoteRecvClientDownloadingAppIDE
+N18CRemoteSteamAppMgr57CCallbackInternal_OnRemoteClientRestrictAutoUpdateChangedE
 N18CSteamUIController22RegisteredController_tE
 N18CSteamUIController33CCallbackInternal_OnUIModeChangedE
 N18CSteamUIController49CCallbackInternal_OnGamepadUIIdleThresholdReachedE
@@ -25322,6 +25412,16 @@ N22CGameSessionController37CCallbackInternal_OnScreenshotStartedE
 N22CGameSessionController37CCallbackInternal_OnScreenshotWrittenE
 N22CGameSessionController43CCallbackInternal_OnAppLifetimeNotificationE
 N22CScreensaverController39CCallbackInternal_OnBatteryStateChangedE
+N22CSteamUILocalDownloads32CCallbackInternal_OnDlcInstalledE
+N22CSteamUILocalDownloads41CCallbackInternal_OnSteamServersConnectedE
+N22CSteamUILocalDownloads44CCallbackInternal_OnSteamServersDisconnectedE
+N22CSteamUILocalDownloads45CCallbackInternal_OnRestrictAutoUpdateChangedE
+N22CSteamUILocalDownloads47CCallbackInternal_OnRemoteClientAppQueueChangedE
+N22CSteamUILocalDownloads48CCallbackInternal_OnRemoteRemoveFromDownloadListE
+N22CSteamUILocalDownloads48CCallbackInternal_OnRemoteSuspendLanePeerContentE
+N22CSteamUILocalDownloads51CCallbackInternal_OnRemoteSuspendDownloadThrottlingE
+N22CSteamUILocalDownloads52CCallbackInternal_OnRemoteClientDownloadQueueChangedE
+N22CSteamUILocalDownloads54CCallbackInternal_OnEnableAllDownloadsFromRemoteClientE
 N22CSystemAudioController25CCallback_OnSystemResumedE
 N22CSystemAudioController28CCallback_OnSystemSuspendingE
 N23CGameStreamVideoEncoder12CVideoThreadE
@@ -25479,15 +25579,23 @@ N27CSharedConnectionController24CCallback_OnMessageReadyE
 N27CSharedConnectionController26CCallback_OnPostLogonStateE
 N27CSharedConnectionController28CCallback_OnServersConnectedE
 N27CSharedConnectionController31CCallback_OnServersDisconnectedE
-N27CSteamUIDownloadsController32CCallbackInternal_OnDlcInstalledE
 N27CSteamUIDownloadsController36CCallbackInternal_OnAppUpdateStoppedE
 N27CSteamUIDownloadsController39CCallbackInternal_OnAppEventStateChangeE
-N27CSteamUIDownloadsController41CCallbackInternal_OnAppInfoUpdateCompleteE
-N27CSteamUIDownloadsController41CCallbackInternal_OnSteamServersConnectedE
-N27CSteamUIDownloadsController43CCallbackInternal_OnPeerContentServerChangeE
-N27CSteamUIDownloadsController44CCallbackInternal_OnSteamServersDisconnectedE
+N27CSteamUIDownloadsController41CCallbackInternal_OnRemoteClientConnectedE
+N27CSteamUIDownloadsController42CCallbackInternal_OnRemoteAppUpdateStoppedE
+N27CSteamUIDownloadsController44CCallbackInternal_OnRemoteClientDisconnectedE
 N27CSteamUIDownloadsController45CCallbackInternal_OnAppDownloadScheduleChangeE
-N27CSteamUIDownloadsController47CCallbackInternal_OnAppAutoUpdateBehaviorChangeE
+N27CSteamUIDownloadsController46CCallbackInternal_OnLocalAppInfoUpdateCompleteE
+N27CSteamUIDownloadsController47CCallbackInternal_OnRemoteAppInfoUpdateCompleteE
+N27CSteamUIDownloadsController47CCallbackInternal_OnRemoteClientAppStateChangedE
+N27CSteamUIDownloadsController49CCallbackInternal_OnLocalPeerContentServerChangedE
+N27CSteamUIDownloadsController50CCallbackInternal_OnRemotePeerContentServerChangedE
+N27CSteamUIDownloadsController51CCallbackInternal_OnRemoteAppDownloadScheduleChangeE
+N27CSteamUIDownloadsController51CCallbackInternal_OnRemoteUpdateDownloadsControllerE
+N27CSteamUIDownloadsController52CCallbackInternal_OnRecvRemoteClientDownloadingAppIDE
+N27CSteamUIDownloadsController52CCallbackInternal_OnRemoteClientAppUpdateInfoChangedE
+N27CSteamUIDownloadsController52CCallbackInternal_OnRemoteRestrictAutoUpdatesChangedE
+N27CSteamUIDownloadsController55CCallbackInternal_OnRemoteAppDownloadScheduleItemChangeE
 N27CSteamUIMessagingController15QueuedMessage_tE
 N27CSteamUIMessagingController17ChannelCallback_tE
 N27CSteamUIMessagingController37CCallbackInternal_OnClientPostMessageE
@@ -28923,6 +29031,7 @@ SendSteamToSteamPacket
 SendThumbnailToRelay
 SenderAddress
 SenderName
+Sending Remote App Update for local client. Should be a remote Client ID
 Sending first queued request for %s\n
 Sending msg of type '%s' with timeout=0.  Receiver won't have any time to service it!
 Sending of an email failed
@@ -30898,6 +31007,7 @@ TreeViewItemSelected
 TreeViewSubPanel
 TrendingAppData
 Tried to add streaming frame event for old frame %d\n
+Tried to get remote app for invalid app ID. App ID: %i
 Tried to initiate an outbound connection to %s, bound to local address %s.  An ephemeral local port should be used for outbound TCP conections!  How does this work?
 Tried to merge messages of different types
 Tried to register a non-generated type with the generated type registry.
@@ -32661,6 +32771,7 @@ Zulu
 \n CChatRoom_SearchMembers_Response
 \n CClientNotificationFriendMessage
 \n CMsgChildProcessQueryGpuTopology
+\n CMsgRemoteClientAppUpdateStopped
 \n CMsgRemoteDeviceStreamingRequest
 \n CPlayer_GetEmoticonList_Response
 \n CPlayer_GetNicknameList_Response
@@ -32752,6 +32863,8 @@ Zulu
 \n#CMarketingMessageClickedHourlyStats
 \n#CMsgClientFriendProfileInfoResponse
 \n#CMsgHorizontalScrollBarSizeResponse
+\n#CMsgRemoteClientDownloadsManagement
+\n#CMsgRemoteClientRestrictAutoUpdates
 \n#CMsgRemoteClientStartStreamResponse
 \n#CPlayer_GetDurationControl_Response
 \n#CPlayer_GetGameBadgeLevels_Response
@@ -32874,6 +32987,7 @@ Zulu
 \n'CCommunity_HideAndReportComment_Request
 \n'CContentBuilder_InitDepotBuild_Response
 \n'CDataPublisher_GetVRDeviceInfo_Response
+\n'CMsgRemoteClientDownloadScheduleChanged
 \n'COffline_GetOfflineLogonTicket_Response
 \n'CPlayer_GetFriendsGameplayInfo_Response
 \n'CPlayer_GetProfileCustomization_Request
@@ -33253,6 +33367,7 @@ Zulu
 \n\fencrypt_file
 \n\fenglish_name
 \n\fenough_space
+\n\ferror_detail
 \n\ferror_string
 \n\feula_version
 \n\fexcludedtags
@@ -33601,6 +33716,7 @@ Zulu
 \n\nquery_port
 \n\nquery_type
 \n\nreactionid
+\n\nrecent_bps
 \n\nrefresh_hz
 \n\nrequest_id
 \n\nrestricted
@@ -33730,6 +33846,7 @@ Zulu
 \n\rdisplay_index
 \n\rdisplay_width
 \n\rdownload_host
+\n\rdownload_type
 \n\rduration_secs
 \n\rdx_video_card
 \n\re_pair_result
@@ -33742,6 +33859,7 @@ Zulu
 \n\rfiles_deleted
 \n\rfiles_managed
 \n\rfilter_gameid
+\n\rfinal_message
 \n\rfirst_segment
 \n\rflatpak_appid
 \n\rfraudwarnings
@@ -33871,6 +33989,7 @@ Zulu
 \n\rseconds_today
 \n\rseconds_valid
 \n\rserial_number
+\n\rserved_app_id
 \n\rserver_secret
 \n\rshared_secret
 \n\rshift_keycode
@@ -34219,6 +34338,7 @@ Zulu
 \n\vcount_after
 \n\vcredentials
 \n\vcurrencyids
+\n\vcurrent_bps
 \n\vcustom_data
 \n\vday_of_week
 \n\vdelete_view
@@ -34257,6 +34377,7 @@ Zulu
 \n\vimage_large
 \n\vimage_small
 \n\vimage_width
+\n\vin_progress
 \n\vin_wishlist
 \n\vinclude_own
 \n\vincludetags
@@ -34312,6 +34433,7 @@ Zulu
 \n\vnew_session
 \n\vnext_cursor
 \n\vno_response
+\n\vnum_clients
 \n\vnum_players
 \n\vnum_reports
 \n\vnum_retries
@@ -35252,6 +35374,7 @@ app_indicator_set_title
 app_info_print
 app_info_print <appid> [section] : print app info for appID
 app_install
+app_install_state
 app_license_request
 app_list
 app_mark_validation
@@ -35300,6 +35423,7 @@ approved
 apps
 apps/%u/%s/%u/%llu
 apps_per_overview_chunk
+apps_scheduled
 ar?Mgs?
 arGT
 ar_AE
@@ -36282,6 +36406,7 @@ bytes_per_recv
 bytes_processed
 bytes_received
 bytes_to_cipher_list
+bytes_to_disc_per_second
 bytes_to_download
 bytes_to_process
 bytes_total
@@ -36612,6 +36737,8 @@ challenge
 challengePassword
 change
 change_description
+change_download_index
+change_queue_placement
 changed
 changed the POTW
 changed_properties
@@ -38242,9 +38369,12 @@ downarrow
 download
 download_chunk
 download_chunk <appid> <depotid> <sha>: download a single chunk from a depot
+download_complete
 download_completed
 download_depot
 download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] : download a single depot
+download_enabled
+download_index
 download_item
 download_item <appid> <PublishedFileId> : download a workshop item
 download_lan_peer_group
@@ -38256,6 +38386,7 @@ download_throttle_rate
 download_throttle_while_streaming
 download_while_app_running
 downloading
+downloading_app_id
 dpLX
 dpad_up
 dpi_horizontal
@@ -38625,6 +38756,7 @@ en-US
 en_US
 en_US.UTF8
 enable
+enable_all_downloads
 enable_audio_streaming
 enable_audio_uncompressed
 enable_avif_screenshots
@@ -38802,6 +38934,7 @@ estimated_seconds_remaining
 estimated_size
 estimated_time_registered
 estimated_time_remaining_sec
+estimated_time_remaining_secs
 estonian
 etGV!0
 etag
@@ -39861,7 +39994,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen&dl
+ggen
 ghost_
 gidlist
 gidparentcomment
@@ -43754,6 +43887,7 @@ inputData
 insert_link_dep
 inspectelement
 install
+install_folder_index
 install_script
 installaudiocapturedriver
 installdir
@@ -44175,6 +44309,7 @@ item%d
 itemID
 itemIndex
 item_contextid
+item_data
 item_description
 item_expiration
 item_instanceid
@@ -47988,6 +48123,7 @@ m_vecRedirectStack
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
 m_vecRemoteClientReq
+m_vecRemoteDownloadApps
 m_vecRemotePlayConfigChangedCallbacks
 m_vecRepairFinished
 m_vecRequestedActionSets
@@ -49224,9 +49360,11 @@ numElements >= 0
 numFiles
 numFilesAvailable
 num_apps
+num_apps_scheduled
 num_bots
 num_comments_developer
 num_comments_public
+num_connections
 num_entries_in_client_list
 num_fake_ports
 num_gpu
@@ -50473,6 +50611,7 @@ profiles/%llu
 program
 progress
 progress-valid
+progress_weights
 promise_handle
 promoted to moderator
 promoted to officer
@@ -50714,6 +50853,7 @@ queue_head_position_now
 queue_index
 queue_items_next_appid
 queue_items_remaining
+queue_placement
 queue_position
 queued
 queues
@@ -50815,6 +50955,8 @@ read timeout expired
 read-lookahead-enabled
 read-lookahead-supported
 read-only
+read_bytes_per_sec
+read_bytes_total
 read_state_machine
 readdir
 readdir64
@@ -50916,7 +51058,9 @@ remote-interfaces
 remotePublicKey.IsValid()
 remote_address
 remote_client_id
+remote_client_name
 remote_launch_available
+remote_per_client_data
 remote_play_together
 remote_play_wifi_ap_channel_5ghz
 remote_play_wifi_ap_channel_6ghz
@@ -51598,6 +51742,8 @@ sendOwner
 sendProxiedOwner
 sendProxiedRouter
 sendRouter
+send_bytes_per_sec
+send_bytes_total
 send_duration
 send_running_apps
 send_unlock_on_success
@@ -51922,6 +52068,7 @@ shader_process <appId> <bucketID> <optionalOverrideBasePath>
 shader_prune
 shader_scan
 shader_scan <appId> <optionalOverridePath>
+shader_update_available
 shaders
 shaderserver
 shahmukhi
@@ -52173,6 +52320,7 @@ sounds_showingame
 sounds_showmessages
 sounds_showonline
 source
+source_build_id
 source_code_info
 source_context
 source_driver_desc
@@ -52376,6 +52524,8 @@ stackLevel >= 0 && stackLevel < m_errorIndex
 stackpath
 stage_progress
 stage_size_bytes
+staging_bytes_staged
+staging_bytes_to_stage
 standalone_demo_appid
 standalone_properties
 standing
@@ -53124,6 +53274,8 @@ surname
 surveydatetoken
 surveydatetokentype
 surveydatetokenversion
+suspend
+suspend_download_throttling
 svRegPath
 sv_SE
 svcK71b.
@@ -53223,6 +53375,7 @@ tamil
 target
 target.object
 targetInformation
+target_build_id
 target_buildid
 target_dongle_index
 target_job_name
@@ -53374,6 +53527,7 @@ timeShiftBufferDepth
 timeStamping
 timeUpdated
 time_chinassa_accepted
+time_deferred_until
 time_end
 time_first_unread
 time_kick_expire
@@ -53972,7 +54126,6 @@ triggered
 triggergetsysteminfo
 trim-command: %s
 true
-true"
 true"v\n+CClanChatRooms_GetClanChatRoomInfo_Response
 truncated
 trust
@@ -54509,6 +54662,8 @@ update_check_results
 update_complete
 update_device_list
 update_disc_bytes_per_second
+update_download_items
+update_download_overview
 update_error
 update_interval
 update_is_install
@@ -55249,6 +55404,7 @@ workshop_download_item
 workshop_download_item <appid> <PublishedFileId> : download a workshop item
 workshop_itemid
 workshop_items
+workshop_update_avilable
 workshop_visible
 workshopfiletype
 wpa2_deprecated

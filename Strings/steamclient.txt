@@ -1051,6 +1051,7 @@
 "B\n%CBroadcast_GetBuildClipStatus_Request
 "B\n-CTransportValidation_GetLargeResponse_Request
 "B\n.CFriendMessages_UpdateMessageReaction_Response
+"C\n%CMsgRemoteClientDownloadingAppChanged
 "C\n)CSiteLicense_InitiateAssociation_Response
 "D\n CMsgClientServerTimestampRequest
 "D\n$CMsgClientGetPeerContentInfoResponse
@@ -1209,6 +1210,7 @@
 "l\n-CChatRoom_EndMiniGameForChatRoomGroup_Request
 "lbN.
 "legacy_set"\t\t"1"
+"m\n(CMsgRemoteClientPeerContentServerChanged
 "m\n8CDepotContentDetection_GetAllDetectedAppContent_Response
 "n\n"CMsgClientDeauthorizeDeviceRequest
 "q\n CMsgClientPICSPrivateBetaRequest
@@ -1466,6 +1468,7 @@
 #\n\ravatar_frames
 #\n\tpair_type
 #\n\vsearch_tags
+#\n\vupdate_info
 #\t#\v#'#)#/#3#5#E#Q#S#Y#c#k#
 #\v+(bF&drJ:x#
 #]hK Ed
@@ -2170,6 +2173,7 @@ $steammessages_parental_objects.proto"
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
 %\n k_EMsgUCMPublishedFileSubscribed
@@ -3187,12 +3191,15 @@ $steammessages_parental_objects.proto"
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
 '\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
+'\n"k_EMsgRemoteClientAppDownloadStats
+'\n"k_EMsgRemoteClientAppUpdateStopped
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
 '\n"k_EMsgWGConnectionLegacyWGResponse
 '\n"k_EStreamControlSetBitrateOverride
 '\n"k_EStreamControlSetQualityOverride
+'\n"k_eMsgRemoteClientDownloadingAppID
 '\n#k_EAppReportType_CopyrightViolation
 '\n#k_EAuthTokenAppType_Mobile_SteamApp
 '\n#k_EAuthTokenPlatformType_WebBrowser
@@ -3418,6 +3425,7 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
+(1VMP
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -3474,6 +3482,7 @@ $steammessages_parental_objects.proto"
 (\n is_adaptive_brightness_available
 (\n multipath_packets_recv_sequenced
 (\n offset_detection_min_clean_chunk
+(\n remove_from_download_list_app_id
 (\n#k_EMsgAMCheckClanInviteRateLimiting
 (\n#k_EMsgAMCheckClanMembershipResponse
 (\n#k_EMsgAMClientRemoveFriendFromGroup
@@ -3685,11 +3694,13 @@ $steammessages_parental_objects.proto"
 (\r"6\n$CMsgClientUninstallClientAppResponse
 (\r"6\n\rCInputTextMsg
 (\r"7\n$CStore_GetGamesFollowedCount_Request
+(\r"7\n%CMsgRemoteClientAppUpdateInfoComplete
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
 (\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"7\n\rCMsgWasHidden
 (\r"8\n%CGameRecording_StartRecording_Request
+(\r"8\n%CMsgRemoteClientSuspendLanPeerContent
 (\r"8\n6CTransportValidation_RequestLargeNotification_Response"=\n-CTransportValidation_NotifyLarge_Notification
 (\r"8\n\rCMsgDisableF5
 (\r"9\n$CParties_ChangeNumOpenSlots_Response
@@ -3704,6 +3715,7 @@ $steammessages_parental_objects.proto"
 (\r"<\n:CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response"
 (\r"<\n\rCMsgScreenDPI
 (\r"=\n&CDataPublisher_GetVRDeviceInfo_Request
+(\r"=\n+CMsgRemoteClientDownloadScheduleItemChanged
 (\r">\n&CBroadcast_EndBroadcastSession_Request
 (\r">\n(CMsgClientUCMDeletePublishedFileResponse
 (\r">\n.CTransportValidation_GetLargeResponse_Response
@@ -3789,6 +3801,7 @@ $steammessages_parental_objects.proto"
 (\r"a\n*CGameNetworking_ReleaseFakeIP_Notification
 (\r"a\n4CMarketingMessages_GetPastMarketingMessages_Response
 (\r"b\n%CChatRoom_AckChatMessage_Notification
+(\r"c\n CMsgRemoteClientDownloadingAppID
 (\r"c\n"CChatRoom_CreateInviteLink_Request
 (\r"c\n(CValveHWSurvey_GetSurveySchedule_Request
 (\r"c\n)CContentBuilder_SignInstallScript_Request
@@ -3810,6 +3823,7 @@ $steammessages_parental_objects.proto"
 (\r"k\n+CStore_QueueWishlistDemoEmailToFire_Request
 (\r"k\n1CSteamInputService_PairDongleTritonDocked_Request
 (\r"k\n<CMarketingMessages_GetPartnerReadyToPublishMessages_Response
+(\r"l\n)CMsgRemoteClientUpdateDownloadsController
 (\r"l\n-CBroadcast_StopWatchingBroadcast_Notification
 (\r"m\n'CMsgClientGetDepotDecryptionKeyResponse
 (\r"m\n9CChatRoom_SetAppChatRoomGroupStopForceActive_Notification
@@ -4137,7 +4151,6 @@ $steammessages_parental_objects.proto"
 (\v2(.CMsgClientRichPresenceInfo.RichPresence
 (\v2(.CMsgClientUGSGetGlobalStatsResponse.Day
 (\v2(.CMsgGMSClientServerQueryResponse.Server
-(\v2(.CMsgRemoteClientAppStatus.AppUpdateInfo
 (\v2(.CMsgSteamDatagramLinkInstantaneousStats
 (\v2(.CMsgSteamDatagramP2PRoutes.RelayCluster
 (\v2(.CMsgSteamDatagramSessionCryptInfoSigned
@@ -4305,6 +4318,7 @@ $steammessages_parental_objects.proto"
 (\v28.CClientMetrics_ReportReactUsage_Notification.ActionData
 (\v28.CFamilyGroups_GetPreferredLenders_Response.FamilyMember
 (\v28.CMsgClientGetAuthorizedDevicesResponse.AuthorizedDevice
+(\v28.CMsgRemoteClientDownloadsManagement.ChangeDownloadIndex
 (\v28.CMsgSteamDatagramClientPingSampleReply.LegacyDataCenter
 (\v28.CPlayer_GetFriendsGameplayInfo_Response.OwnGameplayInfo
 (\v28.CPlayer_GetPlayerLinkDetails_Response.PlayerLinkDetails
@@ -4331,6 +4345,7 @@ $steammessages_parental_objects.proto"
 (\v2<.CChatUsability_ClientUsabilityMetrics_Notification.Settings
 (\v2<.CMsgClientAMGetPersonaNameHistoryResponse.NameTableInstance
 (\v2<.CMsgClientChatGetFriendMessageHistoryResponse.FriendMessage
+(\v2<.CMsgRemoteClientDownloadsManagement.ChangeAppQueuePlacement
 (\v2<.CPlayer_GetFriendsGameplayInfo_Response.FriendsGameplayInfo
 (\v2<.CPublishedFile_GetAppRelationships_Response.AppRelationship
 (\v2<.CStore_GetTrendingAppsAmongFriends_Response.TrendingAppData
@@ -4661,6 +4676,7 @@ $steammessages_parental_objects.proto"
 )\n%k_EPublishedFileStorageSystemUGCCloud
 )\n%k_ERemoteClientPairWifiAPNetworkError
 )\n%k_ERemoteClientPairWifiAPUnauthorized
+)\n%k_ERemoteClientServiceManageDownloads
 )\n%k_ERemoteDeviceAuthorizationConfirmed
 )\n%k_ERemoteDeviceStreamingCancelRequest
 )\n%k_ESteamDatagramMsg_P2PSessionRequest
@@ -5155,6 +5171,7 @@ $steammessages_parental_objects.proto"
 *\n%k_EPersonaStateFlag_ClientTypeTenfoot
 *\n%k_EPersonaStateFlag_LaunchTypeGamepad
 *\n%k_EStreamControlResumeControllerInput
+*\n%k_eMsgRemoteClientDownloadsManagement
 *\n&k_EBanContentCheckResult_NeedsChecking
 *\n&k_EBroadcastWatchLocation_Chat_Friends
 *\n&k_EBroadcastWatchLocation_StoreAppPage
@@ -5566,10 +5583,12 @@ $steammessages_parental_objects.proto"
 ,\n'k_EMsgEconTrading_InitiateTradeResponse
 ,\n'k_EMsgGMGetServiceMethodRoutingResponse
 ,\n'k_EMsgPSGetShoppingCartContentsResponse
+,\n'k_EMsgRemoteClientAppInfoUpdateComplete
 ,\n'k_EMsgRemoteClientAuthResponse_OBSOLETE
 ,\n'k_EMsgRemoteClientAuthorizationResponse
 ,\n'k_EMsgUCMGetUserSubscribedFilesResponse
 ,\n'k_EMsgWebAPIValidateOAuth2TokenResponse
+,\n'k_eMsgRemoteClientSuspendLanPeerContent
 ,\n(k_ColorGamutLabelSet_Native_sRGB_Boosted
 ,\n(k_EAuthTokenRevokeNonRememberedPermanent
 ,\n(k_EBrowserFeatureStatus_DisabledSoftware
@@ -5736,7 +5755,6 @@ $steammessages_parental_objects.proto"
 --> P2P send on socket #%d, %d bytes\n
 --> P2P socket read/write/dead/reason %d/%d/%d/%s\n
 --> reliable send on socket #%d, %d bytes\n
---alongside-steam
 --compute-pipeline-range
 --control-fd
 --device-index
@@ -5766,7 +5784,6 @@ $steammessages_parental_objects.proto"
 --enable-sandbox-logging
 --enable-smooth-scrolling
 --enable-validation
---env-fd=%d
 --force-device-scale-factor=1
 --force-renderer-accessibility
 --full-memory-crash-report
@@ -6231,6 +6248,9 @@ $steammessages_parental_objects.proto"
 .5P<e
 .97yY
 .9GXdx
+.AppStageProgress
+.AppUpdateInfo
+.AppUpdateInfo"
 .BNW^h
 .CAchievements_GetInfo_Request
 .CAchievements_GetInfo_Response
@@ -6932,6 +6952,7 @@ $steammessages_parental_objects.proto"
 .\n)k_EMsgDRMWorkerProcessValidateFileRequest
 .\n)k_EMsgEconCDKeyProcessTransactionResponse
 .\n)k_EMsgGCHAppCheersGetAllowedTypesResponse
+.\n)k_EMsgRemoteClientDownloadScheduleChanged
 .\n)k_EMsgUCMPublishedFileChildRemoveResponse
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
 .\n)k_EStreamControlStartNeptuneData_OBSOLETE
@@ -7114,6 +7135,7 @@ $steammessages_parental_objects.proto"
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
 /\n*k_EStreamControlEnableNeptuneData_OBSOLETE
 /\n*k_EStreamControlTouchActionSetLayerRemoved
+/\n*k_eMsgRemoteClientPeerContentServerChanged
 /\n+k_EBroadcastWatchLocation_DesktopUI_Overlay
 /\n+k_EBrowserFeatureStatus_UnavailableSoftware
 /\n+k_EChatRoomServerMsg_ChatRoomTaglineChanged
@@ -7267,7 +7289,6 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/depotdownloadmgr.cpp
 /data/src/clientdll/depotfileverify.cpp
 /data/src/clientdll/depotreconstruct.cpp
-/data/src/clientdll/gamelaunchhelpers_linux.cpp
 /data/src/clientdll/gameserver.cpp
 /data/src/clientdll/gameserver.h
 /data/src/clientdll/htmlsurface.cpp
@@ -7809,7 +7830,6 @@ $steammessages_parental_objects.proto"
 /usr/bin/
 /usr/bin/crosdisk %s
 /usr/bin/lsof
-/usr/bin/steam-runtime-launch-client
 /usr/bin/steam_serialnumber.sh
 /usr/bin/steamos-polkit-helpers/jupiter-biosupdate
 /usr/bin/steamos-polkit-helpers/jupiter-check-support
@@ -7934,8 +7954,12 @@ $steammessages_parental_objects.proto"
 0000000000000000000000000000000000000000
 0000000000000000
 00000001
+00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -7978,6 +8002,7 @@ $steammessages_parental_objects.proto"
 0\n+k_EMsgWGConnectionValidateUserTokenResponse
 0\n+k_EStreamControlDisableNeptuneData_OBSOLETE
 0\n+k_EStreamControlSetInputTemporarilyDisabled
+0\n+k_eMsgRemoteClientUpdateDownloadsController
 0\n,k_EAsyncGameSessionUserStateWaitingForOthers
 0\n,k_EAuthSessionSecurityHistory_NoPriorHistory
 0\n,k_EAuthSessionSecurityHistory_UsedPreviously
@@ -8089,13 +8114,9 @@ $steammessages_parental_objects.proto"
 100.64.0.0/10
 1000
 1024
-00003333
 10000
 1000000
 10000000
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10Audio_Stub
 10ByteReader
 10CClientJob
@@ -9777,6 +9798,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI28CMsgFSEnumerateFollowingListE
 12CProtoBufMsgI28CMsgFSGetIsFollowingResponseE
 12CProtoBufMsgI28CMsgRemoteClientPingResponseE
+12CProtoBufMsgI28CMsgRemoteClientUploadStatusE
 12CProtoBufMsgI28CMsgRemoteClientWifiAPStatusE
 12CProtoBufMsgI28CMsgRemoteDeviceProofRequestE
 12CProtoBufMsgI28SiteServerUI_Logout_ResponseE
@@ -9806,6 +9828,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI30CMsgClientMMSJoinLobbyResponseE
 12CProtoBufMsgI30CMsgClientUDSP2PSessionStartedE
 12CProtoBufMsgI30CMsgFSGetFollowerCountResponseE
+12CProtoBufMsgI30CMsgRemoteClientDownloadStatusE
 12CProtoBufMsgI30CMsgTrading_CancelTradeRequestE
 12CProtoBufMsgI31CCloud_AppLaunchIntent_ResponseE
 12CProtoBufMsgI31CCloud_AppSessionResume_RequestE
@@ -9835,6 +9858,8 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI32CMsgClientUCMPublishFileResponseE
 12CProtoBufMsgI32CMsgClientUCMUpdatePublishedFileE
 12CProtoBufMsgI32CMsgGMSClientServerQueryResponseE
+12CProtoBufMsgI32CMsgRemoteClientAppUpdateStoppedE
+12CProtoBufMsgI32CMsgRemoteClientDownloadingAppIDE
 12CProtoBufMsgI32CMsgRemoteClientStreamingEnabledE
 12CProtoBufMsgI32CMsgTrading_InitiateTradeRequestE
 12CProtoBufMsgI32CRemotePlayTogether_NotificationE
@@ -9889,7 +9914,9 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI35CMsgClientUGSGetGlobalStatsResponseE
 12CProtoBufMsgI35CMsgDRMDownloadRequestWithCrashDataE
 12CProtoBufMsgI35CMsgGSComputeNewPlayerCompatibilityE
+12CProtoBufMsgI35CMsgRemoteClientDownloadsManagementE
 12CProtoBufMsgI35CMsgRemoteClientGetControllerConfigE
+12CProtoBufMsgI35CMsgRemoteClientRestrictAutoUpdatesE
 12CProtoBufMsgI35CMsgRemoteClientStartStreamResponseE
 12CProtoBufMsgI35CParental_ParentalLock_NotificationE
 12CProtoBufMsgI35CParental_PlaytimeUsed_NotificationE
@@ -9921,6 +9948,8 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI37CMsgClientRequestCommentNotificationsE
 12CProtoBufMsgI37CMsgClientSiteLicenseCheckoutResponseE
 12CProtoBufMsgI37CMsgClientUCMDeleteScreenshotResponseE
+12CProtoBufMsgI37CMsgRemoteClientAppUpdateInfoCompleteE
+12CProtoBufMsgI37CMsgRemoteClientSuspendLanPeerContentE
 12CProtoBufMsgI37CMsgRemoteDeviceAuthorizationResponseE
 12CProtoBufMsgI37CParental_ParentalUnlock_NotificationE
 12CProtoBufMsgI38CAccountHardware_SaveHardware_ResponseE
@@ -9945,6 +9974,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI39CMsgClientUCMSetUserPublishedFileActionE
 12CProtoBufMsgI39CMsgClientVoiceCallPreAuthorizeResponseE
 12CProtoBufMsgI39CMsgDPGetNumberOfCurrentPlayersResponseE
+12CProtoBufMsgI39CMsgRemoteClientDownloadScheduleChangedE
 12CProtoBufMsgI39CRemoteClient_MarkTaskComplete_ResponseE
 12CProtoBufMsgI39CRemoteClient_RemotePacket_NotificationE
 12CProtoBufMsgI39CRemoteClient_SteamToSteam_NotificationE
@@ -9955,6 +9985,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI40CMsgClientStartPeerContentServerResponseE
 12CProtoBufMsgI40CMsgClientUCMDeletePublishedFileResponseE
 12CProtoBufMsgI40CMsgClientUCMUpdatePublishedFileResponseE
+12CProtoBufMsgI40CMsgRemoteClientPeerContentServerChangedE
 12CProtoBufMsgI40CUserAccount_CancelLicenseForApp_RequestE
 12CProtoBufMsgI40GameServerClient_QueryServerData_RequestE
 12CProtoBufMsgI40SiteServerUI_ContentCacheConfig_ResponseE
@@ -9964,6 +9995,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI41CMsgClientAMGetPersonaNameHistoryResponseE
 12CProtoBufMsgI41CMsgClientFSGetFriendsSteamLevelsResponseE
 12CProtoBufMsgI41CMsgClientSetClientAppUpdateStateResponseE
+12CProtoBufMsgI41CMsgRemoteClientUpdateDownloadsControllerE
 12CProtoBufMsgI41CRemoteClient_SteamBroadcast_NotificationE
 12CProtoBufMsgI41CSiteManagerClient_IncomingClient_RequestE
 12CProtoBufMsgI41CUserAccount_CancelLicenseForApp_ResponseE
@@ -9985,6 +10017,7 @@ $steammessages_parental_objects.proto"
 12CProtoBufMsgI43CCloud_ClientLogUploadComplete_NotificationE
 12CProtoBufMsgI43CMsgClientRequestEncryptedAppTicketResponseE
 12CProtoBufMsgI43CMsgGSComputeNewPlayerCompatibilityResponseE
+12CProtoBufMsgI43CMsgRemoteClientDownloadScheduleItemChangedE
 12CProtoBufMsgI43CMsgRemoteClientGetControllerConfigResponseE
 12CProtoBufMsgI43CPlayer_RecordDisconnectedPlaytime_ResponseE
 12CProtoBufMsgI43CPlayer_TextFilterWordsChanged_NotificationE
@@ -10099,6 +10132,7 @@ $steammessages_parental_objects.proto"
 12StringReader
 12StructReader
 1348857570
+13AppUpdateInfo
 13CAppInfoCache
 13CBackupAppJob
 13CCMConnection
@@ -10463,6 +10497,7 @@ $steammessages_parental_objects.proto"
 162.254.193.74:27017
 162.254.195.66:27017
 162.254.195.71:27017
+16AppStageProgress
 16BluetoothManager
 16BucketManifest_t
 16CAPIJobJoinParty
@@ -10823,7 +10858,9 @@ $steammessages_parental_objects.proto"
 17CInternalCallbackI20CRemoteClientManager15VRModeChanged_tE
 17CInternalCallbackI20CRemoteClientManager16AppInfoChanged_tE
 17CInternalCallbackI20CRemoteClientManager17LicensesUpdated_tE
+17CInternalCallbackI20CRemoteClientManager18AppUpdateStopped_tE
 17CInternalCallbackI20CRemoteClientManager21VRLinkInviteChanged_tE
+17CInternalCallbackI20CRemoteClientManager23AppInfoUpdateComplete_tE
 17CInternalCallbackI20CRemoteClientManager26NetworkDeviceStateChange_tE
 17CInternalCallbackI20CRemoteClientManager27FocusedSteamWindowChanged_tE
 17CInternalCallbackI20CRemoteClientManager27SystemResumingFromSuspend_tE
@@ -11333,6 +11370,7 @@ $steammessages_parental_objects.proto"
 1\n,k_EMsgFBSBootstrapperGetPackageChunkResponse
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
+1\n,k_eMsgRemoteClientRestrictAutoUpdatesChanged
 1\n-k_ECommentThreadTypeWorkshopAccount_Developer
 1\n-k_EContentDeltaChunkDataLocationAfterProtobuf
 1\n-k_EContentHubDiscountFilterType_DiscountsOnly
@@ -11451,11 +11489,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+200M
 2019
+2048
 20000
 2000000
-200M
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12770,6 +12808,7 @@ $steammessages_parental_objects.proto"
 28CMsgHandleContextMenuCommand
 28CMsgJSValue_JSObjectProperty
 28CMsgRemoteClientPingResponse
+28CMsgRemoteClientUploadStatus
 28CMsgRemoteClientWifiAPStatus
 28CMsgRemoteDeviceProofRequest
 28CMsgScalePageToValueResponse
@@ -12989,6 +13028,7 @@ $steammessages_parental_objects.proto"
 2\n-k_EMsgGMTestNextBuildSchemaConversionResponse
 2\n-k_EMsgGSComputeNewPlayerCompatibilityResponse
 2\n-k_EMsgPSAddWalletCreditToShoppingCartResponse
+2\n-k_EMsgRemoteClientDownloadItemScheduleChanged
 2\n-k_EMsgRemoteClientGetControllerConfigResponse
 2\n-k_EMsgSMTestNextBuildSchemaConversionResponse
 2\n-k_EStreamControlRemotePlayTogetherGroupUpdate
@@ -13195,6 +13235,7 @@ $steammessages_parental_objects.proto"
 30CMsgFSGetFollowerCountResponse
 30CMsgGameServerPlayersQueryData
 30CMsgImeCompositionRangeChanged
+30CMsgRemoteClientDownloadStatus
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
 30CMsgSetNetFakeLocalSystemState
@@ -13451,6 +13492,8 @@ $steammessages_parental_objects.proto"
 32CMsgCloudPendingRemoteOperations
 32CMsgGMSClientServerQueryResponse
 32CMsgNetworkDeviceConnect_KnownAP
+32CMsgRemoteClientAppUpdateStopped
+32CMsgRemoteClientDownloadingAppID
 32CMsgRemoteClientStreamingEnabled
 32CMsgRemoteDeviceStreamingRequest
 32CMsgSteamDatagramP2PRoutes_Route
@@ -13513,6 +13556,7 @@ $steammessages_parental_objects.proto"
 3333
 3333UUUU
 333?Software\Valve\Steam\System\DisplayNightModeBlend
+33554432
 33AvailableBeaconLocationsUpdated_t
 33CAPIJobDownloadCommunityItemAsset
 33CAPIJobDownloadLeaderboardEntries
@@ -13855,7 +13899,9 @@ $steammessages_parental_objects.proto"
 35CMsgHorizontalScrollBarSizeResponse
 35CMsgNetworkDevicesData_Device_Wired
 35CMsgRemoteClientAppStatus_AppStatus
+35CMsgRemoteClientDownloadsManagement
 35CMsgRemoteClientGetControllerConfig
+35CMsgRemoteClientRestrictAutoUpdates
 35CMsgRemoteClientStartStreamResponse
 35CMsgSteamDatagramCertificateRequest
 35CMsgSteamSockets_UDP_ChallengeReply
@@ -14098,6 +14144,9 @@ $steammessages_parental_objects.proto"
 37CMsgClientWorkshopItemChangesResponse
 37CMsgControllerInputMouseButtonBinding
 37CMsgGameServerPlayersQueryData_Player
+37CMsgRemoteClientAppUpdateInfoComplete
+37CMsgRemoteClientDownloadingAppChanged
+37CMsgRemoteClientSuspendLanPeerContent
 37CMsgRemoteDeviceAuthorizationResponse
 37CMsgRemoteDeviceStreamTransportSignal
 37CMsgSteamDatagramNoSessionRelayToPeer
@@ -14321,7 +14370,7 @@ $steammessages_parental_objects.proto"
 39CMsgControllerInputGamepadButtonBinding
 39CMsgDPGetNumberOfCurrentPlayersResponse
 39CMsgGMSClientServerQueryResponse_Server
-39CMsgRemoteClientAppStatus_AppUpdateInfo
+39CMsgRemoteClientDownloadScheduleChanged
 39CMsgSteamDatagramLinkInstantaneousStats
 39CMsgSteamDatagramNoSessionRelayToClient
 39CMsgSteamDatagramP2PRoutes_RelayCluster
@@ -14495,6 +14544,7 @@ $steammessages_parental_objects.proto"
 40CMsgClientUCMDeletePublishedFileResponse
 40CMsgClientUCMUpdatePublishedFileResponse
 40CMsgClientUserNotifications_Notification
+40CMsgRemoteClientPeerContentServerChanged
 40CMsgSteamDatagramCachedCredentialsForApp
 40CMsgSteamDatagramClientPingSampleRequest
 40CMsgSteamDatagramGameserverPingReplyData
@@ -14615,6 +14665,7 @@ $steammessages_parental_objects.proto"
 41CMsgClientSetClientAppUpdateStateResponse
 41CMsgControllerInputBinding_KeyBindingData
 41CMsgNetworkDevicesData_Device_Wireless_AP
+41CMsgRemoteClientUpdateDownloadsController
 41CMsgShowBrowserContextMenu_ContextCommand
 41CMsgSteamDatagramGameserverSessionRequest
 41CNetConnectionImmediateDisconnectWorkItem
@@ -14820,6 +14871,7 @@ $steammessages_parental_objects.proto"
 43CMsgClientRequestEncryptedAppTicketResponse
 43CMsgGSComputeNewPlayerCompatibilityResponse
 43CMsgRemoteClientBroadcastClientIDDeconflict
+43CMsgRemoteClientDownloadScheduleItemChanged
 43CMsgRemoteClientGetControllerConfigResponse
 43CMsgRemoteClientStartStream_ReservedGamepad
 43CMsgSteamDatagramGameCoordinatorServerLogin
@@ -15510,6 +15562,7 @@ $steammessages_parental_objects.proto"
 55CMsgClientChatGetFriendMessageHistoryForOfflineMessages
 55CMsgClientGetAuthorizedDevicesResponse_AuthorizedDevice
 55CMsgControllerInputControllerActionGameActionSetBinding
+55CMsgRemoteClientDownloadsManagement_ChangeDownloadIndex
 55CMsgSteamDatagramClientPingSampleReply_LegacyDataCenter
 55CPlayer_GetFriendsGameplayInfo_Response_OwnGameplayInfo
 55CPlayer_GetPlayerLinkDetails_Response_PlayerLinkDetails
@@ -15590,6 +15643,7 @@ $steammessages_parental_objects.proto"
 59CMarketingMessages_GetPartnerReadyToPublishMessages_Request
 59CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance
 59CMsgClientChatGetFriendMessageHistoryResponse_FriendMessage
+59CMsgRemoteClientDownloadsManagement_ChangeAppQueuePlacement
 59CPlayer_GetFriendsGameplayInfo_Response_FriendsGameplayInfo
 59CPublishedFile_GetAppRelationships_Response_AppRelationship
 59CStore_GetTrendingAppsAmongFriends_Response_TrendingAppData
@@ -16487,7 +16541,6 @@ $steammessages_parental_objects.proto"
 =\n\nline_items
 =\n\nrecordings
 =\n\temoticons
-=\n\vupdate_info
 =aDmJ
 =asyv
 =j&&LZ66lA??~
@@ -16793,6 +16846,7 @@ $steammessages_parental_objects.proto"
 @uDownloadLANPeerPort
 @uRemoteDiscoveryPortOverride
 @uRemoteDiscoveryPortTransmit
+@unMinimumShaderDownloadSizeInUI
 @unUserStatsTest
 @voice_minabs
 @voice_minavg
@@ -17534,6 +17588,7 @@ AppNetworkSummary_t::Recompute
 AppOwnershipTicketReceived_t
 AppProofOfPurchaseKeyResponse_Legacy_t
 AppRelationship
+AppStageProgress
 AppState
 AppTicket
 AppToken
@@ -17849,6 +17904,7 @@ BHandleNewIncomingConnection returned false
 BHandleTCPMessageData - buffered
 BHandleTCPMessageData - unbuffered
 BHasCachedCredentials
+BHasConnectedClients
 BHasEmbeddedClientToken
 BHasEquippedProfileItem
 BHasLocalContentServer
@@ -18063,11 +18119,13 @@ BReleaseExcessDiskSpace: available:%llu required:%llu retained:%llu\n
 BRemoteClientCanPairViaWifiAP
 BRemoteClientCanStreamSteamVR
 BRemoteClientConnectedToWifiAP
+BRemoteClientDownloadManagementEnabled
 BRemoteClientHasLocalConnection
 BRemoteClientHasStreamingEnabled
 BRemoteClientHasStreamingEnabledByIndex
 BRemoteClientHasStreamingSupported
 BRemoteClientHasStreamingSupportedByIndex
+BRemoteClientIsConnected
 BRemoteClientIsSteamDeck
 BRemoteClientStreaming
 BRemoteClientWifiAPUnpaired
@@ -20442,11 +20500,13 @@ CMsgRemoteClientAcceptEULA
 CMsgRemoteClientAppStatus
 CMsgRemoteClientBroadcastHeader
 CMsgRemoteClientBroadcastStatus
+CMsgRemoteClientDownloadStatus
 CMsgRemoteClientPairWifiAP
 CMsgRemoteClientPing"
 CMsgRemoteClientPingResponse"S\n
 CMsgRemoteClientStartStream
 CMsgRemoteClientStatus
+CMsgRemoteClientUploadStatus
 CMsgRemoteClientWifiAPStatus
 CMsgRemoteDeviceProofRequest
 CMsgRemoteDeviceProofResponse
@@ -20942,13 +21002,36 @@ CRemoteClientManager::GetRemoteClientIDByIndex
 CRemoteClientManager::GetRemoteClientNameByIndex
 CRemoteClientManager::OnAppEventStateChange
 CRemoteClientManager::OnAppLifetimeNotification
+CRemoteClientManager::OnPeerContentServerChange
+CRemoteClientManager::OnRemoteDownloadStatsChange
+CRemoteClientManager::OnRemoteRestrictAutoUpdatesChanged
+CRemoteClientManager::OnRemoteUploadStatsChange
 CRemoteClientManager::OnUpdateInfoChange
 CRemoteClientManager::PairWifiAP failed: not %s
+CRemoteClientManager::RecvMsgAppInfoUpdatedComplete
 CRemoteClientManager::RecvMsgAppStatus
+CRemoteClientManager::RecvMsgAppUpdateDownloadStats
+CRemoteClientManager::RecvMsgAppUpdateStopped
+CRemoteClientManager::RecvMsgAppUpdateUploadStats
+CRemoteClientManager::RecvMsgDownloadScheduleChanged
+CRemoteClientManager::RecvMsgDownloadScheduleItemChanged
+CRemoteClientManager::RecvMsgDownloadingAppID
+CRemoteClientManager::RecvMsgDownloadsManagement
+CRemoteClientManager::RecvMsgPeerContentServerChanged
+CRemoteClientManager::RecvMsgRestrictAutoUpdatesChanged
+CRemoteClientManager::RecvMsgSuspendLanPeerContent
+CRemoteClientManager::RecvMsgUpdateDownloadsController
 CRemoteClientManager::RecvPkt
 CRemoteClientManager::SendAppStatusToClient
 CRemoteClientManager::SendAppStatusToConnectedClients
+CRemoteClientManager::SendDownloadIndexChangeToRemoteClient
+CRemoteClientManager::SendDownloadQueueChangeToRemoteClient
+CRemoteClientManager::SendEnableAllDownloadsToRemoteClient
 CRemoteClientManager::SendQueuedBroadcastMessagesIfNecessary
+CRemoteClientManager::SendRemoveFromDownloadsToRemoteClient
+CRemoteClientManager::SendSuspendDownloadThrottleingToRemoteClient
+CRemoteClientManager::SendSuspendLanPeerContent
+CRemoteClientManager::SetDownloadingAppIDToRemoteClient
 CRemoteClientManager::StartStream failed: another launch in progress for appid %u
 CRemoteClientManager::StartStream failed: not %s
 CRemoteClientManager_BroadcastStatus
@@ -22000,6 +22083,8 @@ Change CM List
 Change number %u->%u, apps: %u/%u, packages: %u/%u
 Change was not initiated on this machine, locking.
 ChangeAppDownloadQueuePlacement
+ChangeAppQueuePlacement
+ChangeDownloadIndex
 ChangeNumOpenSlots
 ChangeNumOpenSlots() failed, invalid Beacon ID\n
 ChangeNumber
@@ -22364,7 +22449,6 @@ Config fetch is in progess, but network config avail is %d?
 Config store has m_bDisableDiskSave on beta or public!
 ConfigSet - failed to find config set file on-disk: %s
 ConfigSet - found config set file on-disk: %s
-ConfigSet - found deck config set file on-disk: %s
 ConfigSet Failed to Resolve Path: %s
 ConfigStore (%s) is dirty, and being destroyed, we're discarding data
 Configure: %s manual
@@ -26023,6 +26107,7 @@ GetConfigStoreKeyName
 GetConfigString
 GetConfigValue
 GetConflictingFileTimestamps
+GetConnectedRemoteClientIDByIndex
 GetConnectedUniverse
 GetConnectedUniverse() == pfnBootstrapperEUniverse()
 GetConnectedUniverse() > k_EUniverseInvalid && GetConnectedUniverse() < k_EUniverseMax
@@ -34619,6 +34704,9 @@ SendClanChatMessage
 SendClanChatMessage( %s ) called with unknown chat room\n
 SendDataOnSocket
 SendDataOnSocket( #%d ) failed sending %d byte UDP packet, which is more than the max of %d bytes (any larger will be dropped by some routers).\n
+SendDownloadIndexChangeToRemoteClient
+SendDownloadQueueChangeToRemoteClient
+SendEnableAllDownloadsToRemoteClient
 SendGameWebCallback
 SendHTTPRequest
 SendHTTPRequestAndStreamResponse
@@ -34656,6 +34744,7 @@ SendRateMin
 SendRemotePlaySessionStarted
 SendRemotePlaySessionStopped
 SendRemotePlayTogetherPacket
+SendRemoveFromDownloadsToRemoteClient
 SendResumeRequest
 SendSAS
 SendScreenshotStartedNotification
@@ -34665,6 +34754,8 @@ SendSteamBroadcastPacket
 SendSteamServiceStatusUpdate
 SendSteamToSteamPacket
 SendStreamTransportSignal
+SendSuspendDownloadThrottleingToRemoteClient
+SendSuspendLanPeerContent
 SendThumbnailToRelay
 SendTimeSincePreviousPacket
 SendTo
@@ -39595,6 +39686,7 @@ Zulu
 \n CMsgClientUCMPublishFileResponse
 \n CMsgClientUCMUpdatePublishedFile
 \n CMsgGMSClientServerQueryResponse
+\n CMsgRemoteClientAppUpdateStopped
 \n CMsgRemoteDeviceStreamingRequest
 \n CMsgSteamDatagramRelayAuthTicket
 \n CMsgSteamDatagramRouterPingReply
@@ -39714,6 +39806,8 @@ Zulu
 \n#CMsgClientUGSGetGlobalStatsResponse
 \n#CMsgDRMDownloadRequestWithCrashData
 \n#CMsgHorizontalScrollBarSizeResponse
+\n#CMsgRemoteClientDownloadsManagement
+\n#CMsgRemoteClientRestrictAutoUpdates
 \n#CMsgRemoteClientStartStreamResponse
 \n#CMsgSteamSockets_UDP_ChallengeReply
 \n#CMsgSteamSockets_UDP_ConnectRequest
@@ -39858,6 +39952,7 @@ Zulu
 \n'CDataPublisher_GetVRDeviceInfo_Response
 \n'CMsgClientMMSSetRatelimitPolicyOnClient
 \n'CMsgClientVoiceCallPreAuthorizeResponse
+\n'CMsgRemoteClientDownloadScheduleChanged
 \n'CMsgSteamDatagramLinkInstantaneousStats
 \n'CMsgSteamDatagramNoSessionRelayToClient
 \n'CMsgSteamNetworkingIdentityLegacyBinary
@@ -40696,6 +40791,7 @@ Zulu
 \n\nquery_port
 \n\nquery_type
 \n\nreactionid
+\n\nrecent_bps
 \n\nrefresh_hz
 \n\nrendezvous
 \n\nrequest_id
@@ -40847,6 +40943,7 @@ Zulu
 \n\rdisplay_index
 \n\rdisplay_width
 \n\rdownload_host
+\n\rdownload_type
 \n\rdup_pkts_recv
 \n\rdx_video_card
 \n\re_pair_result
@@ -40862,6 +40959,7 @@ Zulu
 \n\rfiles_managed
 \n\rfilter_appids
 \n\rfilter_gameid
+\n\rfinal_message
 \n\rfirst_segment
 \n\rfixed64_value
 \n\rflatpak_appid
@@ -41012,6 +41110,7 @@ Zulu
 \n\rseconds_valid
 \n\rsection_flags
 \n\rserial_number
+\n\rserved_app_id
 \n\rserver_secret
 \n\rsession_error
 \n\rshared_secret
@@ -41406,6 +41505,7 @@ Zulu
 \n\vcount_after
 \n\vcredentials
 \n\vcurrencyids
+\n\vcurrent_bps
 \n\vcustom_data
 \n\vday_current
 \n\vday_of_week
@@ -41521,6 +41621,7 @@ Zulu
 \n\vnew_session
 \n\vnext_cursor
 \n\vno_response
+\n\vnum_clients
 \n\vnum_members
 \n\vnum_players
 \n\vnum_reports
@@ -42443,6 +42544,7 @@ app_info_find
 app_info_http_min
 app_info_http_num_sockets
 app_info_update
+app_install_state
 app_installed_files
 app_key
 app_list
@@ -42500,6 +42602,7 @@ approved
 apps
 apps_installed
 apps_running
+apps_scheduled
 apptickets
 ar?Mgs?
 ar_AE
@@ -43379,6 +43482,7 @@ bytes_recv_relay
 bytes_required
 bytes_sent_relay
 bytes_to_cipher_list
+bytes_to_disc_per_second
 bytes_to_download
 bytes_to_process
 bytes_to_stage
@@ -43783,7 +43887,9 @@ challengePassword
 challenge_time
 change
 change_description
+change_download_index
 change_player_number
+change_queue_placement
 changed
 changed the POTW
 changes
@@ -45567,21 +45673,26 @@ doubletap
 doubletap_beep
 download
 download progress %llu/%llu bytes\n
+download_complete
 download_completed
+download_enabled
 download_file_dfs_ip
 download_file_dfs_port
 download_file_url
 download_flags
+download_index
 download_lan_peer_group
 download_paused
 download_size=
 download_size=%lld
 download_source
 download_sources
+download_throttle_rate
 download_types_known
 downloading
 downloading chunk "%s" (%s)
 downloading,
+downloading_app_id
 downtime_warning_reached
 dpad
 dpad_click
@@ -45953,6 +46064,7 @@ en_US
 en_us
 enable
 enable-wall-messages
+enable_all_downloads
 enable_audio_streaming
 enable_audio_uncompressed
 enable_capture_nvfbc
@@ -46153,6 +46265,7 @@ estimated_packet_rate
 estimated_seconds_remaining
 estimated_size
 estimated_time_registered
+estimated_time_remaining_secs
 estonian
 etag
 etyoxw
@@ -47195,7 +47308,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen"
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -48566,6 +48679,7 @@ inputs
 insert_link_dep
 install
 install path removed
+install_folder_index
 install_path
 install_script
 installdir
@@ -55364,9 +55478,11 @@ numElements <= m_nAllocationCount
 numElements >= 0
 num_app_info_cached
 num_apps
+num_apps_scheduled
 num_bots
 num_comments_developer
 num_comments_public
+num_connections
 num_downloading
 num_entries_in_client_list
 num_fake_ports
@@ -55621,7 +55737,6 @@ otuoxwwiuouwkb
 out of memory
 out of place
 out-of-date sRGB profile with no signature
-outEnvFD != -1
 outTempKeymaterial == tempKeyMaterial + cbTempKeyMaterial
 out_bytes_per_sec
 out_pMap->Count() == 0
@@ -56901,6 +57016,7 @@ program
 progress
 progress=
 progress=%d
+progress_weights
 prohibitrunincountries
 promise_handle
 promoted to moderator
@@ -57168,6 +57284,7 @@ queue
 queue_head_position_now
 queue_items_next_appid
 queue_items_remaining
+queue_placement
 queue_position
 queueinfo
 queues
@@ -57276,6 +57393,8 @@ read done
 read header
 read key
 read timeout expired
+read_bytes_per_sec
+read_bytes_total
 read_state_machine
 readdir
 readdir64
@@ -57425,6 +57544,7 @@ remote_client_dongle
 remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable
 remote_client_dongle [[connect] clientid ssid password]|disconnect|status|disable|enable|leddebug|lednodebug
 remote_client_id
+remote_client_name
 remote_client_softapcmd
 remote_client_softapcmd <softapcmd args>
 remote_clients
@@ -57586,6 +57706,9 @@ response_time_ms
 responses
 restart
 restored
+restrict_auto_updates
+restrict_auto_updates_end
+restrict_auto_updates_start
 restricted-xml
 restricted_countries
 restrictions_approved
@@ -58165,6 +58288,8 @@ sendRoute.m_nSortScoreLocal < 9999
 sendRoute.m_pRoute == &m_routeSelector.m_vecRoutes[ idxRoute ]
 sendRouter
 send_app_info_changes
+send_bytes_per_sec
+send_bytes_total
 send_changelist
 send_duration
 send_package_info_changes
@@ -58502,6 +58627,7 @@ shacknews.com
 shaderBuffer.SizeAllocated() >= 0
 shader_code_sha
 shader_log
+shader_update_available
 shaderbuild
 shadercachedepot
 shaders
@@ -58760,6 +58886,7 @@ sounds_showingame
 sounds_showmessages
 sounds_showonline
 source
+source_build_id
 source_buildid
 source_code_info
 source_driver_desc
@@ -58966,6 +59093,8 @@ stage=
 stage_progress
 stage_size_bytes
 staging file is missing
+staging_bytes_staged
+staging_bytes_to_stage
 stamp
 standalone
 standalone_demo_appid
@@ -59069,7 +59198,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr  1 2026 23:00:35
+steam Apr  2 2026 23:25:47
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -59561,6 +59690,7 @@ surname
 surveydatetoken
 surveydatetokenversion
 suspend
+suspend_download_throttling
 svRegPath
 sv_SE
 svcK71b.
@@ -59658,6 +59788,7 @@ tamil
 tanf
 target
 targetInformation
+target_build_id
 target_buildid
 target_dongle_index
 target_job_name
@@ -59816,6 +59947,7 @@ time syscall error
 timeStamping
 time_chinassa_accepted
 time_created
+time_deferred_until
 time_end
 time_first_unread
 time_generated
@@ -60518,7 +60650,6 @@ trigger_analog
 triton_uuid
 trkn
 true
-true"
 true"v\n+CClanChatRooms_GetClanChatRoomInfo_Response
 truncated
 trust
@@ -61076,6 +61207,8 @@ update_clean_bytes_tally
 update_content_manifest
 update_description
 update_device_list
+update_download_items
+update_download_overview
 update_hosts_cached%s.vdf
 update_interval
 update_metadata
@@ -61724,6 +61857,7 @@ workshop_items_update_interval
 workshop_log
 workshop_status
 workshop_status <appId>
+workshop_update_avilable
 workshop_visible
 workshopdepot
 workshopfiletype

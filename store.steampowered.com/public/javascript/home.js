@@ -262,12 +262,13 @@ GHomepage = {
 				$J.ajax( {
 					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
 					data: {
-						v: 4,							bNeedRecommendedCurators: 0,
+						v: 7,							bNeedRecommendedCurators: 0,
 						u: g_AccountID,
 						hwsos: Number( GHomepage.bSteamOS ),
 						hwvar: GHomepage.eHWVariant,
 						hwtype: GHomepage.eGamingDeviceType,
 						v7: ( GHomepage.bIsSeasonalSale || GHomepage.bOptedIntoHomeBeta ) ? 1 : 0,
+						seasonal_sale: GHomepage.bIsSeasonalSale ? 1 : 0,
 					},
 					dataType: 'json',
 					type: 'GET'
@@ -1880,13 +1881,15 @@ GHomepage = {
 
 		$RecommendedCreators.hide();
 
+		const k_nMinCapsules = $RecommendedCreators.hasClass( 'v2' ) ? 5 : 4;
+
         var rgCapsules = GHomepage.FilterItemsForDisplay(
-			rgRecommendedAppsByCreators, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+			rgRecommendedAppsByCreators, 'home', k_nMinCapsules, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 
-		rgCapsulesToRender = [];
-		rgDisplayedCreators = [];
-		rgDisplayedAppIds = [];
+		let rgCapsulesToRender = [];
+		let rgDisplayedCreators = [];
+		let rgDisplayedAppIds = [];
 
 		// filter this to one app per creator
 		for ( var i = 0; i < rgCapsules.length; i++ )
@@ -1900,7 +1903,7 @@ GHomepage = {
 		}
 
 		// if not enough creators, just fill in the rest
-		if ( rgCapsulesToRender.length < 4 )
+		if ( rgCapsulesToRender.length < k_nMinCapsules )
 		{
 			for ( var i = 0; i < rgCapsules.length; i++ )
 			{
@@ -1909,12 +1912,12 @@ GHomepage = {
 					rgCapsulesToRender.push( rgCapsules[i] );
 				}
 
-				if ( rgCapsulesToRender.length == 4 )
+				if ( rgCapsulesToRender.length == k_nMinCapsules )
 					break;
 			}
 
 		}
-		if ( rgCapsulesToRender.length >= 4 )
+		if ( rgCapsulesToRender.length >= k_nMinCapsules )
 			$RecommendedCreators.show();
 		else
 			return;
@@ -1936,10 +1939,10 @@ GHomepage = {
 				}
 
 				return $CapCtn;
-			},	'creator_recommendations', 4
+			},	'creator_recommendations', k_nMinCapsules
 		);
 
-		GDynamicStore.MarkAppDisplayed( rgCapsulesToRender, 4 );
+		GDynamicStore.MarkAppDisplayed( rgCapsulesToRender, k_nMinCapsules );
 	},
 
 	RenderRecommendedByDeepDiveCarousel: function()
@@ -2084,16 +2087,18 @@ GHomepage = {
             return;
         }
 
+		const bVersion2 = $RecommendedBySteamLabs.hasClass( 'v2' );
+
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecommendedBySteamLabs,
             function( oItem, strFeature, rgOptions, nDepth )
             {
-				if ( $RecommendedBySteamLabs.hasClass( 'v2' ) )
+				if ( bVersion2 )
 				{
 					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true } );
 				}
 				var nAppId = oItem.appid;
                 return GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
-            }, 'recommended_by_steam_labs', 4
+            }, 'recommended_by_steam_labs', bVersion2 ? 5 : 4
         );
 
 		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
@@ -2329,6 +2334,7 @@ GHomepage = {
 				GDynamicStore.MarkAppDisplayed( rgItemsShown );
 		}
 
+		GDynamicStore.DecorateDynamicItems( $Spotlights );
 		CreateFadingCarousel( $Spotlights, 0, false, null, false, $Spotlights.hasClass( 'v2' ) );
 		$Parent.css( 'minHeight', '' );
 		$Spotlights.css( 'visibility', '' );
@@ -2387,7 +2393,7 @@ GHomepage = {
 	{
 		let $SteamDeckCarousel = $J( '#featured_steam_deck_gamesv2' );
 		let $SteamDeckParent = $J( '#home_deck_content' );
-		const k_nMinItemsInCarousel = 4;
+		const k_nMinItemsInCarousel = 5;
 
 		if ( !$SteamDeckCarousel.length || !GHomepage.oDisplayLists.top_played_deck.length )
 		{
@@ -2511,22 +2517,14 @@ GHomepage = {
 			{
 				if ( $RecentlyUpdated.hasClass( 'v2' ) )
 				{
-					let $elAnnouncements = $J('<div/>', {'class': 'recently_updated_desc'} ).text(oItem.description );
-					if ( oItem.announcementid.length != 0)
+					let $elAnnouncements = $J('<div/>', {'class': 'recently_updated_desc'} ).text( oItem.description );
+					let rgOptions = { 'disable_autosizer': true, 'html_before_price': $elAnnouncements };
+					if ( oItem.announcementid )
 					{
-						const strAnnouncementLink = 'https://store.steampowered.com/' + 'news/app/' + oItem.appid + '/view/' + oItem.announcementid + '/';
-						var $AnnouncementLink = $J('<div/>', {
-							'class': 'recently_updated_announcement_link',
-							'text': 'View Update Details',
-							'data-ds-link': strAnnouncementLink
-						});
-						$AnnouncementLink.click(function (e) {
-							top.location.href = $J(this).attr('data-ds-link');
-							return false;
-						});
+						rgOptions.href = 'https://store.steampowered.com/' + 'app/' + oItem.appid + '?announce_gid=' + oItem.announcementid;
 					}
 
-					return GHomepage.BuildHomePageCapsule( oItem, strFeature, { 'disable_autosizer': true, 'html_before_price': $elAnnouncements } );
+					return GHomepage.BuildHomePageCapsule( oItem, strFeature, rgOptions );
 				}
 				else
 				{
@@ -2615,11 +2613,11 @@ GHomepage = {
 			return;
 
 		var rgWishlistOnSaleFiltered = GHomepage.FilterItemsForDisplay(
-			GHomepage.oAdditionalData.wishlist_onsale, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			GHomepage.oAdditionalData.wishlist_onsale, 'home', 4, 5, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		var rgDLCOnSaleFiltered = GHomepage.FilterItemsForDisplay(
-			GHomepage.oAdditionalData.dlc_onsale, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			GHomepage.oAdditionalData.dlc_onsale, 'home', 4, 5, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		// fallback to tags section
@@ -2634,6 +2632,7 @@ GHomepage = {
 		{
 			if ( bSingle )
 				$J('#wishlist_tier').addClass( 'single_row' );
+
 			GHomepage.RenderHomeTwoByTwoSection( $J('#wishlist_tier' ), rgWishlistOnSaleFiltered, 'sale_fromyourwishlist', { 'capsule_size': 'header' } );
 			GDynamicStore.MarkAppDisplayed( rgWishlistOnSaleFiltered );
 			$J('.wishlist_block').show();
@@ -3024,6 +3023,9 @@ GHomepage = {
 			return;
 
 		var $CapCtn = $J('<a/>', params );
+		if ( rgOptions.href )
+			$CapCtn.attr( 'href', GStoreItemData.AddNavEventParamsToURL( rgOptions.href, strFeatureContext, nDepth, null ) );
+
 		if ( !rgOptions.no_hover )
 			GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
 
@@ -4312,7 +4314,7 @@ GSteamCurators = {
 			var apps = GSteamCurators.rgAppsRecommendedByCurators.apps;
 
 			var rgRecommendedApps = GHomepage.FilterItemsForDisplay(
-				apps, 'home', 5, 9, { games_already_in_library: false, displayed_elsewhere: false, only_current_platform: true }
+				apps, 'home', 6, 11, { games_already_in_library: false, displayed_elsewhere: false, only_current_platform: true }
 			);
 
 			GDynamicStore.MarkAppDisplayed( rgRecommendedApps, 5 ); 
@@ -4416,7 +4418,7 @@ GSteamCurators = {
 						}
 
 						return $CapCtn;
-					},	'curated_app', 4
+					},	'curated_app', bVersion2 ? 5 : 4
 				);
 
 				return;

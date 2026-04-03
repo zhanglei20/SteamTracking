@@ -2876,6 +2876,7 @@ https://store.steampowered.com/actions/clues
 https://store.steampowered.com/api/addtowishlist
 https://store.steampowered.com/api/removefromwishlist
 https://store.steampowered.com/app/${appid}/?snr=1_saliens_4__salienapps
+https://store.steampowered.com/app/${appid}?announce_gid=${announcementid}
 https://store.steampowered.com/app/${appid}?snr=${g_SNR}
 https://store.steampowered.com/app/${unAppID}/
 https://store.steampowered.com/app/${unAppID}/${url_name}/

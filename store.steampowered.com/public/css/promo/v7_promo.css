@@ -1352,16 +1352,16 @@ body.v7 .spotlight_col {
 	}
 
 	.carousel_wide_mode.no_transition .carousel_container .carousel_items .store_main_capsule {
-		transition: none;
+		transition: opacity 300ms 50ms;
 	}
 
 	.carousel_wide_mode .carousel_container .carousel_items .store_main_capsule {
-		transition: transform 50ms ease, opacity 300ms, filter 300ms;
+		transition: transform 100ms ease, opacity 300ms 50ms, filter 300ms;
 		transform: translateX(var(--nudge, 0%));
 	}
 
 	.carousel_wide_mode .carousel_container .focus {
-		transition: transform 50ms ease, opacity 1ms;
+		transition: transform 100ms ease, opacity 300ms 50ms;
 		transform: translateX(var(--nudge, 0%));
 	}
 
@@ -2099,11 +2099,6 @@ div.community_recommendations_by_steam_labs_ctn h2.title {
 }
 
 /* STEAM CURATORS */
-.steam_curators_ctn
-{
-	margin-top: 0px;
-	margin-bottom: 40px;
-}
 
 .steam_curators_ctn h2
 {
@@ -2400,10 +2395,6 @@ body.v6 .apps_recommended_by_curators_ctn .store_capsule_frame {
 	background: none;
 	border: none;
 	border-image: none;
-}
-
-.steam_curators_ctn {
-	margin-bottom: 50px;
 }
 
 .steam_curator {

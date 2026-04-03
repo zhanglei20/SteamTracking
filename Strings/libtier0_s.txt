@@ -100,7 +100,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-23:00:11
+23:25:35
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -108,7 +108,7 @@ $ORIGIN
 <unknown>
 AllocateCrashMemoryReserve
 Anonymous mutex cannot have bAllAccess == true
-Apr  1 2026
+Apr  2 2026
 AreStackTrackingFiltersEnabledAtStart
 Assert( %s ):%s:%d\n
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
@@ -304,7 +304,6 @@ Leaked mem: %s %s\n
 Logger
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Lowered '%s' -> '%s'\n
-M.[oN
 Matched '%s' -> '%s'\n
 MemFree:
 MemTotal:

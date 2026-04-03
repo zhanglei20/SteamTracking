@@ -603,6 +603,7 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
 %\n k_EMsgUCMPublishedFileSubscribed
@@ -938,10 +939,13 @@ $ffn
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
 '\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
+'\n"k_EMsgRemoteClientAppDownloadStats
+'\n"k_EMsgRemoteClientAppUpdateStopped
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
 '\n"k_EMsgWGConnectionLegacyWGResponse
+'\n"k_eMsgRemoteClientDownloadingAppID
 '\n#k_EBanContentCheckResult_NotScanned
 '\n#k_EBanContentCheckResult_VeryLikely
 '\n#k_EClientPersonaStateFlagPlayerName
@@ -1231,6 +1235,7 @@ $ffn
 *\n%k_EMsgSMTestNextBuildSchemaConversion
 *\n%k_EMsgUFSHttpUploadFileFinishResponse
 *\n%k_EMsgWebAPIInvalidateOAuthTokenCache
+*\n%k_eMsgRemoteClientDownloadsManagement
 *\n&k_EBanContentCheckResult_NeedsChecking
 *\n\fjobid_source
 *\n\fjobid_target
@@ -1328,10 +1333,12 @@ $ffn
 ,\n'k_EMsgEconTrading_InitiateTradeResponse
 ,\n'k_EMsgGMGetServiceMethodRoutingResponse
 ,\n'k_EMsgPSGetShoppingCartContentsResponse
+,\n'k_EMsgRemoteClientAppInfoUpdateComplete
 ,\n'k_EMsgRemoteClientAuthResponse_OBSOLETE
 ,\n'k_EMsgRemoteClientAuthorizationResponse
 ,\n'k_EMsgUCMGetUserSubscribedFilesResponse
 ,\n'k_EMsgWebAPIValidateOAuth2TokenResponse
+,\n'k_eMsgRemoteClientSuspendLanPeerContent
 ,name:
 ,section=
 ,value:
@@ -1449,6 +1456,7 @@ $ffn
 .\n)k_EMsgDRMWorkerProcessValidateFileRequest
 .\n)k_EMsgEconCDKeyProcessTransactionResponse
 .\n)k_EMsgGCHAppCheersGetAllowedTypesResponse
+.\n)k_EMsgRemoteClientDownloadScheduleChanged
 .\n)k_EMsgUCMPublishedFileChildRemoveResponse
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
 .\n*k_ESteamReviewScore_OverwhelminglyNegative
@@ -1500,6 +1508,7 @@ $ffn
 /\n*k_EMsgDRMWorkerProcessValidateFileResponse
 /\n*k_EMsgGCHRecurringSubscriptionStatusChange
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
+/\n*k_eMsgRemoteClientPeerContentServerChanged
 /bin/sh
 /data/src/SteamServiceClient/serviceengine.cpp
 /data/src/SteamServiceClient/servicemodulemanagerasync.cpp
@@ -1697,9 +1706,6 @@ $ffn
 0 == sm_ThreadSafeQueueLogEvents.Count()
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
-0123456789.
-0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.:abcdefABCDEF
@@ -1734,6 +1740,7 @@ $ffn
 0\n+k_EMsgFSGetPendingNotificationCountResponse
 0\n+k_EMsgUCMPublishedFilePreviewRemoveResponse
 0\n+k_EMsgWGConnectionValidateUserTokenResponse
+0\n+k_eMsgRemoteClientUpdateDownloadsController
 0\n\nrouting_gc
 0\r0#0)070;0U0Y0[0g0q0y0}0
 0\r8np
@@ -1748,6 +1755,9 @@ $ffn
 1000
 1024
 10000
+0123456789.
+0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10CIPCServer
 10CNetFilter
 10CPipeEvent
@@ -2184,6 +2194,7 @@ $ffn
 1\n,k_EMsgFBSBootstrapperGetPackageChunkResponse
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
+1\n,k_eMsgRemoteClientRestrictAutoUpdatesChanged
 1bS1
 1nds
 2 + encoded_len_bytes + encoded_len <= buflen
@@ -2238,7 +2249,7 @@ $ffn
 22CFutureSharedStateBase
 22IPCServerMapAndMutex_t
 22ISSLConnectionCallback
-23:00:02
+23:25:32
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 23IUnbufferedSendCallback
@@ -2275,6 +2286,7 @@ $ffn
 2\n-k_EMsgGMTestNextBuildSchemaConversionResponse
 2\n-k_EMsgGSComputeNewPlayerCompatibilityResponse
 2\n-k_EMsgPSAddWalletCreditToShoppingCartResponse
+2\n-k_EMsgRemoteClientDownloadItemScheduleChanged
 2\n-k_EMsgRemoteClientGetControllerConfigResponse
 2\n-k_EMsgSMTestNextBuildSchemaConversionResponse
 2aNuE
@@ -2385,7 +2397,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2406,11 +2417,12 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
 65536
+524288
+60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2998,7 +3010,7 @@ App Running
 AppendedSHA
 Application running
 Approved Friends
-Apr  1 2026
+Apr  2 2026
 April
 Arabic
 Armenian

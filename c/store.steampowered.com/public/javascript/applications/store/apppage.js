@@ -2118,7 +2118,8 @@
               } = _,
               [_, _] = (0, _.useState)(null),
               [_, _] = (0, _.useState)(null),
-              [_] = _("emgid", void 0);
+              [_] = _("emgid", void 0),
+              [_] = _("announce_gid", void 0);
             return (
               (0, _.useEffect)(() => {
                 const _ = (0, _._)("EventWebRowEmbed");
@@ -2166,23 +2167,23 @@
                     }
                   })();
                 }
-              }, [_, _, _, _, _, _]),
+              }, [_, _, _, _, _]),
               (0, _.useEffect)(() => {
-                if (null != _ && _) {
-                  const _ = _.find((_) => _.GID === _);
+                if (null != _ && (_ || _)) {
+                  const _ = _.find(
+                    (_) => _.GID === _ || _.AnnouncementGID == _,
+                  );
                   if (_) _(_);
                   else {
                     (async () => {
-                      const _ = await _.LoadPartnerEventFromClanEventGID(
-                        _,
-                        _,
-                        0,
-                      );
+                      const _ = _
+                        ? await _.LoadPartnerEventFromClanEventGID(_, _, 0)
+                        : await _.LoadPartnerEventFromAnnoucementGID(_, _, 0);
                       _ && _([..._, _]);
                     })();
                   }
                 }
-              }, [_, _, _, _, _, _]),
+              }, [_, _, _, _, _, _, _]),
               {
                 last_update_event: _,
                 rgEvents: _,
@@ -2332,9 +2333,6 @@
       function _(_) {
         const { nUpdateTime: _, announcementGID: _, onClick: _ } = _,
           _ = _ ? _._.GetClanEventFromAnnouncementGID(_) : null,
-          _ = (_) => {
-            _?.(), _.stopPropagation(), _.preventDefault();
-          },
           _ = window.screen.width > 500 ? _._ : _._;
         return (0, _.jsxs)("div", {
           children: [
@@ -2345,7 +2343,9 @@
               className: _.SectionButtonCtn,
               children: (0, _.jsx)("div", {
                 className: _.SectionButton,
-                onClick: _,
+                onClick: (_) => {
+                  _?.(), _.stopPropagation(), _.preventDefault();
+                },
                 children: (0, _._)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
@@ -2356,7 +2356,9 @@
                 navEntryPreferPosition: _._.PREFERRED_CHILD,
                 children: (0, _.jsx)(_, {
                   event: _,
-                  onClick: _,
+                  onClick: (_) => {
+                    _?.(), _.stopPropagation(), _.preventDefault();
+                  },
                 }),
               }),
           ],

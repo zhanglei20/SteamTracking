@@ -612,6 +612,7 @@ $ffn
 %\n k_EMsgGCHAccountLockStatusChange
 %\n k_EMsgGCHRoutingRulesFromGCHtoGM
 %\n k_EMsgGCHRoutingRulesToGCHfromGM
+%\n k_EMsgRemoteClientAppUploadStats
 %\n k_EMsgRemoteClientStatusResponse
 %\n k_EMsgUCMPublishedFilePreviewAdd
 %\n k_EMsgUCMPublishedFileSubscribed
@@ -937,10 +938,13 @@ $ffn
 '\n"k_EMsgGMSClientServerQueryResponse
 '\n"k_EMsgGSGetUserGroupStatusResponse
 '\n"k_EMsgRMMsgTraceAddOrUpdateTrigger
+'\n"k_EMsgRemoteClientAppDownloadStats
+'\n"k_EMsgRemoteClientAppUpdateStopped
 '\n"k_EMsgRemoteClientStreamingEnabled
 '\n"k_EMsgSecretsRequestCredentialPair
 '\n"k_EMsgUCMPublishedFileUnsubscribed
 '\n"k_EMsgWGConnectionLegacyWGResponse
+'\n"k_eMsgRemoteClientDownloadingAppID
 '\n#k_EBanContentCheckResult_NotScanned
 '\n#k_EBanContentCheckResult_VeryLikely
 '\n#k_EClientPersonaStateFlagPlayerName
@@ -1232,6 +1236,7 @@ $ffn
 *\n%k_EMsgSMTestNextBuildSchemaConversion
 *\n%k_EMsgUFSHttpUploadFileFinishResponse
 *\n%k_EMsgWebAPIInvalidateOAuthTokenCache
+*\n%k_eMsgRemoteClientDownloadsManagement
 *\n&k_EBanContentCheckResult_NeedsChecking
 *\n\fjobid_source
 *\n\fjobid_target
@@ -1327,10 +1332,12 @@ $ffn
 ,\n'k_EMsgEconTrading_InitiateTradeResponse
 ,\n'k_EMsgGMGetServiceMethodRoutingResponse
 ,\n'k_EMsgPSGetShoppingCartContentsResponse
+,\n'k_EMsgRemoteClientAppInfoUpdateComplete
 ,\n'k_EMsgRemoteClientAuthResponse_OBSOLETE
 ,\n'k_EMsgRemoteClientAuthorizationResponse
 ,\n'k_EMsgUCMGetUserSubscribedFilesResponse
 ,\n'k_EMsgWebAPIValidateOAuth2TokenResponse
+,\n'k_eMsgRemoteClientSuspendLanPeerContent
 ,name:
 ,section=
 ,value:
@@ -1448,6 +1455,7 @@ $ffn
 .\n)k_EMsgDRMWorkerProcessValidateFileRequest
 .\n)k_EMsgEconCDKeyProcessTransactionResponse
 .\n)k_EMsgGCHAppCheersGetAllowedTypesResponse
+.\n)k_EMsgRemoteClientDownloadScheduleChanged
 .\n)k_EMsgUCMPublishedFileChildRemoveResponse
 .\n)k_EMsgUpdateScheduledTaskEnableState_TEST
 .\n*k_ESteamReviewScore_OverwhelminglyNegative
@@ -1498,6 +1506,7 @@ $ffn
 /\n*k_EMsgDRMWorkerProcessValidateFileResponse
 /\n*k_EMsgGCHRecurringSubscriptionStatusChange
 /\n*k_EMsgServiceMethodCallFromClientNonAuthed
+/\n*k_eMsgRemoteClientPeerContentServerChanged
 /bin/sh
 /data/src/common/audio/audio_utils.cpp
 /data/src/common/completionportmanager.cpp
@@ -1707,9 +1716,6 @@ $ffn
 0.8.3
 00:00:00
 01/01/00
-1000
-1024
-10000
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -1745,6 +1751,7 @@ $ffn
 0\n+k_EMsgFSGetPendingNotificationCountResponse
 0\n+k_EMsgUCMPublishedFilePreviewRemoveResponse
 0\n+k_EMsgWGConnectionValidateUserTokenResponse
+0\n+k_eMsgRemoteClientUpdateDownloadsController
 0\n\nrouting_gc
 0\r0#0)070;0U0Y0[0g0q0y0}0
 0\r8np
@@ -1755,6 +1762,9 @@ $ffn
 1.5.6
 10.0.0.0/8
 100 127.0.0.1 stale
+1000
+1024
+10000
 10CNetFilter
 10CUtlMemoryI10CIPAddressE
 10CUtlMemoryI10CUtlStringE
@@ -2197,6 +2207,7 @@ $ffn
 1\n,k_EMsgFBSBootstrapperGetPackageChunkResponse
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
+1\n,k_eMsgRemoteClientRestrictAutoUpdatesChanged
 1bS1
 1nds
 2 + encoded_len_bytes + encoded_len <= buflen
@@ -2247,7 +2258,7 @@ $ffn
 22CFutureSharedStateBase
 22ISSLConnectionCallback
 22VideoSegmentTemplate_t
-23:00:02
+23:25:32
 23CAudioConvertFloatToS16
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2287,6 +2298,7 @@ $ffn
 2\n-k_EMsgGMTestNextBuildSchemaConversionResponse
 2\n-k_EMsgGSComputeNewPlayerCompatibilityResponse
 2\n-k_EMsgPSAddWalletCreditToShoppingCartResponse
+2\n-k_EMsgRemoteClientDownloadItemScheduleChanged
 2\n-k_EMsgRemoteClientGetControllerConfigResponse
 2\n-k_EMsgSMTestNextBuildSchemaConversionResponse
 2aNuE
@@ -2384,9 +2396,9 @@ $ffn
 6*Fc7
 6-nn
 6144
-65536
 60000000
 64CK\vH
+65536
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -3102,7 +3114,7 @@ App Running
 AppendedSHA
 Application running
 Approved Friends
-Apr  1 2026
+Apr  2 2026
 April
 Arabic
 Armenian
@@ -7851,7 +7863,6 @@ QIWI
 QPeA~S
 QSeA~
 QXzc
-Q\toc
 Qf(I
 Qg$ZO4Z
 Qjh/T

@@ -149,7 +149,6 @@ $ORIGIN
 17CStreamReaderBase
 18CUtlCharConversion
 19CUtlNoEscConversion
-1LT3B
 21CUtlCStringConversion
 24CDirWatcherPollingThread
 27CFileSystemStdIODLLValidate

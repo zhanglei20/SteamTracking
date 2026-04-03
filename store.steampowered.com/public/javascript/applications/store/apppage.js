@@ -1266,7 +1266,7 @@
             b(t), E(y), S?.(t.length);
           } else b(e), S?.(e.length);
         }, [o, j, N, I, S, y]);
-        const L = j;
+        const P = j;
         return (0, n.jsx)(m.F, {
           className: (0, u.A)(r, {
             SaleSectionCarousel: !0,
@@ -1281,7 +1281,7 @@
           hideArrows: !1,
           screenIsWide: N,
           navKey: t,
-          bForceSimpleCarousel: L,
+          bForceSimpleCarousel: P,
           children: w(T, c ?? "none", p ?? 3).map((e, t) =>
             (0, n.jsx)(
               x,
@@ -1883,7 +1883,7 @@
             },
             [t, c],
           ),
-          { last_update_event: L, rgEvents: P } = (function (e) {
+          { last_update_event: P, rgEvents: L } = (function (e) {
             const {
                 appid: t,
                 event_customization: r,
@@ -1893,7 +1893,8 @@
               } = e,
               [o, l] = (0, s.useState)(null),
               [c, h] = (0, s.useState)(null),
-              [f] = d("emgid", void 0);
+              [f] = d("emgid", void 0),
+              [_] = d("announce_gid", void 0);
             return (
               (0, s.useEffect)(() => {
                 const e = (0, m.v)("EventWebRowEmbed");
@@ -1943,31 +1944,31 @@
                     }
                   })();
                 }
-              }, [t, f, r, i, n, a]),
+              }, [t, r, i, n, a]),
               (0, s.useEffect)(() => {
-                if (null != c && f) {
-                  const e = c.find((e) => e.GID === f);
+                if (null != c && (f || _)) {
+                  const e = c.find(
+                    (e) => e.GID === f || e.AnnouncementGID == _,
+                  );
                   if (e) i(e);
                   else {
                     (async () => {
-                      const e = await n.LoadPartnerEventFromClanEventGID(
-                        t,
-                        f,
-                        0,
-                      );
+                      const e = f
+                        ? await n.LoadPartnerEventFromClanEventGID(t, f, 0)
+                        : await n.LoadPartnerEventFromAnnoucementGID(t, _, 0);
                       e && h([...c, e]);
                     })();
                   }
                 }
-              }, [f, c, i, h, n, t]),
+              }, [f, _, c, i, h, n, t]),
               { last_update_event: o, rgEvents: c }
             );
           })({ ...e, fnEventShowModal: E }),
           k = (0, s.useCallback)(() => {
-            const { event_gid: e, announcement_gid: r, clan_account_id: n } = L,
+            const { event_gid: e, announcement_gid: r, clan_account_id: n } = P,
               s = u.KN.Get().GetTracker();
             t && e && s.MarkEventRead(e, n, t) && s.Flush(), I(r), S(null), c();
-          }, [L, c, t]);
+          }, [P, c, t]);
         (0, s.useEffect)(
           () => (
             (window.fnPartnerEvent_ShowInfiniteScroll = (e, t) => {
@@ -1980,10 +1981,10 @@
           ),
           [c],
         );
-        const B = !!L && !!L.rtime,
+        const B = !!P && !!P.rtime,
           D =
-            B && !!L.announcement_gid && (!P || 0 == P.length)
-              ? L.announcement_gid
+            B && !!P.announcement_gid && (!L || 0 == L.length)
+              ? P.announcement_gid
               : void 0,
           F = window.screen.width <= y ? 1 : 2;
         return (0, n.jsxs)(l.Z, {
@@ -1999,24 +2000,24 @@
                 closeModal: R,
               }),
             }),
-            !!P &&
+            !!L &&
               (0, n.jsxs)("div", {
                 children: [
                   (0, n.jsx)("h2", {
                     children: (0, _.we)("#EventBrowse_RecentEvents"),
                   }),
                   !v.TS.IN_GAMEPADUI &&
-                    !!P &&
+                    !!L &&
                     (0, n.jsx)("div", {
                       className: A.SectionButtonCtn,
                       children: a
                         ? (0, n.jsx)(o.ml, {
                             className: A.SectionButton,
-                            onClick: () => E(P[0]),
+                            onClick: () => E(L[0]),
                             children: (0, _.we)("#EventBrowse_MoreEventsBtn"),
                           })
                         : (0, n.jsx)(w.tj, {
-                            eventModel: P[0],
+                            eventModel: L[0],
                             route: w.PH.k_eViewWebSiteHub,
                             className: A.SectionButton,
                             children: (0, _.we)("#EventBrowse_MoreEventsBtn"),
@@ -2024,9 +2025,9 @@
                     }),
                   (0, n.jsx)("div", {
                     className: A.EventsSummariesCtn,
-                    children: P.slice(0, F).map((e) => {
+                    children: L.slice(0, F).map((e) => {
                       const t =
-                        1 === P.length && window.screen.width > 500
+                        1 === L.length && window.screen.width > 500
                           ? h.kH
                           : h.uY;
                       return (0, n.jsx)(
@@ -2046,14 +2047,14 @@
             B &&
               !!D &&
               (0, n.jsx)(T, {
-                nUpdateTime: L.rtime,
+                nUpdateTime: P.rtime,
                 announcementGID: D,
                 onClick: k,
               }),
             B &&
               !D &&
               !v.TS.IN_GAMEPADUI &&
-              (0, n.jsx)(j, { nUpdateTime: L.rtime, onClick: k }),
+              (0, n.jsx)(j, { nUpdateTime: P.rtime, onClick: k }),
           ],
         });
       }
@@ -2100,10 +2101,7 @@
       function T(e) {
         const { nUpdateTime: t, announcementGID: r, onClick: s } = e,
           a = r ? p.O3.GetClanEventFromAnnouncementGID(r) : null,
-          i = (e) => {
-            s?.(), e.stopPropagation(), e.preventDefault();
-          },
-          o = window.screen.width > 500 ? h.kH : h.uY;
+          i = window.screen.width > 500 ? h.kH : h.uY;
         return (0, n.jsxs)("div", {
           children: [
             (0, n.jsx)("h2", {
@@ -2113,7 +2111,9 @@
               className: A.SectionButtonCtn,
               children: (0, n.jsx)("div", {
                 className: A.SectionButton,
-                onClick: i,
+                onClick: (e) => {
+                  s?.(), e.stopPropagation(), e.preventDefault();
+                },
                 children: (0, _.we)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
@@ -2122,7 +2122,12 @@
                 className: A.EventsSummariesCtn,
                 "flow-children": "column",
                 navEntryPreferPosition: c.iU.PREFERRED_CHILD,
-                children: (0, n.jsx)(o, { event: a, onClick: i }),
+                children: (0, n.jsx)(i, {
+                  event: a,
+                  onClick: (e) => {
+                    s?.(), e.stopPropagation(), e.preventDefault();
+                  },
+                }),
               }),
           ],
         });
@@ -2150,8 +2155,8 @@
       }
       var R = r(22837),
         E = r(64753),
-        L = r(41735),
-        P = r.n(L),
+        P = r(41735),
+        L = r.n(P),
         k = r(35380),
         B = r(68033),
         D = r(41550),
@@ -2169,7 +2174,7 @@
         (0, s.useEffect)(
           () => (
             (async () => {
-              const e = P().CancelToken.source();
+              const e = L().CancelToken.source();
               t.current = e.cancel;
               const n = await p.O3.LoadAdjacentPartnerEvents(
                 void 0,
@@ -2964,7 +2969,7 @@
             }),
         });
       }
-      const Le = function (e) {
+      const Pe = function (e) {
         return (0, n.jsx)(n.Fragment, {
           children:
             (e.bPartialXboxControllerSupport || e.bFullXboxControllerSupport) &&
@@ -2974,7 +2979,7 @@
             }),
         });
       };
-      var Pe = r(87669),
+      var Le = r(87669),
         ke = r(75204),
         Be = r(38506),
         De = r(56545),
@@ -3229,7 +3234,7 @@
           return null;
         const I = N.data ?? new Map(),
           E = j.data ?? new Be.A(0),
-          L = (function (e, t, r) {
+          P = (function (e, t, r) {
             let n = [];
             return (
               e.forEach(function (e) {
@@ -3254,9 +3259,9 @@
               n
             );
           })(I, a, i),
-          P = 0 === u ? null : I.get(u),
-          k = P ? P.points_cost : 0,
-          B = P ? P.points_transferred : 0;
+          L = 0 === u ? null : I.get(u),
+          k = L ? L.points_cost : 0,
+          B = L ? L.points_transferred : 0;
         let D,
           F = "";
         switch (a) {
@@ -3311,7 +3316,7 @@
                     "flow-children": "grid",
                     children:
                       !b &&
-                      L.map((e, t) =>
+                      P.map((e, t) =>
                         (0, n.jsx)(
                           ot,
                           {
@@ -4109,7 +4114,7 @@
         It = r(7445),
         Rt = r(88006),
         Et = r(96236);
-      function Lt(e, t) {
+      function Pt(e, t) {
         return (0, s.useMemo)(() => {
           let r = [],
             n = new Map();
@@ -4129,14 +4134,14 @@
           return r;
         }, [e, t]);
       }
-      var Pt = r(2925),
+      var Lt = r(2925),
         kt = r(63512),
         Bt = r(49632);
       function Dt(e) {
         let { trailers: t, screenshots: r } = e;
         return (0, n.jsx)(b.u, {
           navID: "GameHighlightGamepadCarousel",
-          children: (0, n.jsx)(Pt.QY, {
+          children: (0, n.jsx)(Lt.QY, {
             supportsFullscreen: !1,
             supportsTheater: !0,
             children: (0, n.jsx)(Mt, {
@@ -4147,10 +4152,10 @@
       }
       function Ft(e) {
         let { trailers: t, screenshots: r } = e,
-          a = (0, Pt.ri)(),
+          a = (0, Lt.ri)(),
           i = "theater" == a.strMode,
-          o = (0, Pt.Dy)(a, "theater"),
-          d = (0, Pt.Dy)(a, "none"),
+          o = (0, Lt.Dy)(a, "theater"),
+          d = (0, Lt.Dy)(a, "none"),
           u = (0, kt.tw)(),
           [p, m] = (function (e, t) {
             let r = (0, s.useCallback)(
@@ -4162,7 +4167,7 @@
               n = (0, s.useCallback)((t) => !!e, [e]);
             return [n, r];
           })(i, d),
-          h = Lt(t, r);
+          h = Pt(t, r);
         if (
           ((function (e) {
             let t = e.length;
@@ -4622,7 +4627,7 @@
               fnRegisterItemElement: l,
             };
           })(),
-          l = "theater" == (0, Pt.ri)().strMode;
+          l = "theater" == (0, Lt.ri)().strMode;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsxs)("div", {
@@ -4754,7 +4759,7 @@
           i =
             (0, ur.$)(`(max-width: ${zt.storeNarrowResponsiveWidth})`) ||
             Me.TS.IN_MOBILE_WEBVIEW,
-          o = Lt(r, a);
+          o = Pt(r, a);
         return (
           (function (e) {
             let t = e.length;
@@ -4767,7 +4772,7 @@
           })(o),
           0 == o.length
             ? null
-            : (0, n.jsx)(Pt.QY, {
+            : (0, n.jsx)(Lt.QY, {
                 supportsTheater: !i,
                 supportsFullscreen: (0, dr.tg)(),
                 children: (0, n.jsx)(Xt, {
@@ -4798,7 +4803,7 @@
               i = $t(),
               o = (0, s.useRef)(i);
             o.current = i;
-            let l = "none" != (0, Pt.ri)().strMode,
+            let l = "none" != (0, Lt.ri)().strMode,
               c = (0, s.useRef)(l);
             c.current = l;
             let d = (0, s.useCallback)(() => {
@@ -4881,7 +4886,7 @@
               );
             return t;
           })(),
-          o = (0, Pt.ri)(),
+          o = (0, Lt.ri)(),
           l = "theater" == o.strMode,
           [c, d] = (function () {
             let [e, t] = (0, Vt.if)(),
@@ -5021,9 +5026,9 @@
       }
       function vr(e) {
         let { ref: t, children: r, ...a } = e,
-          i = (0, Pt.ri)(),
+          i = (0, Lt.ri)(),
           o = i.strMode,
-          l = (0, Pt.Dy)(i, "none"),
+          l = (0, Lt.Dy)(i, "none"),
           c = (0, s.useCallback)(
             (e) => {
               e.target === e.currentTarget && l();
@@ -5052,8 +5057,8 @@
       }
       function Cr(e) {
         let { appName: t } = e,
-          r = (0, Pt.ri)(),
-          s = (0, Pt.Dy)(r, "none");
+          r = (0, Lt.ri)(),
+          s = (0, Lt.Dy)(r, "none");
         return (0, n.jsxs)("div", {
           className: zt.TheaterModeHeader,
           children: [
@@ -5090,8 +5095,8 @@
           a = er(t),
           i = t == $t().strNextID;
         let o = yr(a || i),
-          l = (0, Pt.ri)(),
-          c = (0, Pt.Dy)(l, "theater"),
+          l = (0, Lt.ri)(),
+          c = (0, Lt.Dy)(l, "theater"),
           d = "none" == l.strMode,
           u = (0, pr.b$)(s);
         if (!o) return null;
@@ -5130,7 +5135,7 @@
           p = (0, s.useCallback)(() => u.fnSetActive(u.strNextID), [u]);
         if (!o) return null;
         let m = (0, W.A)(zt.ViewedItem, i && zt.Active, zt.Trailer);
-        return (0, n.jsx)(Pt.vG, {
+        return (0, n.jsx)(Lt.vG, {
           drop: !(0, dr.tg)(),
           children: (0, n.jsx)("div", {
             ref: c,
@@ -5174,7 +5179,7 @@
           children: (0, _.we)((0, br.wW)(t)),
         });
       }
-      function Lr(e) {
+      function Pr(e) {
         const { results: t, learnMore: r, appName: a, eStartingTab: i } = e,
           [l, c] = (0, s.useState)(!1);
         let d = s.useCallback(
@@ -5215,7 +5220,7 @@
           ],
         });
       }
-      const Pr = function (e) {
+      const Lr = function (e) {
         const { appID: t, results: r, appName: a, tab: i } = e,
           o = (0, v.Qn)(),
           l = "steamos" == i ? 2 : 1;
@@ -5252,7 +5257,7 @@
                   className: o ? Tr().BannerContent : Tr().BannerContentDesktop,
                   children: [
                     (0, n.jsxs)("div", { children: [d, u] }),
-                    (0, n.jsx)(Lr, {
+                    (0, n.jsx)(Pr, {
                       results: r,
                       learnMore: (0, _.we)(
                         "#SteamDeckVerified_Store_CompatSection_LearnMore",
@@ -5798,17 +5803,17 @@
           ? (0, n.jsx)(je.he, {
               toolTipContent: on.Localize(
                 "#Review_Majority_Deck",
-                Ln(t.author.playtime_forever),
+                Pn(t.author.playtime_forever),
               ),
               className: Nn().SteamDeckIcon,
               children: (0, n.jsx)(f.DQe, {}),
             })
           : null;
       }
-      function Ln(e) {
+      function Pn(e) {
         return (0, nn.Dq)(e / 60, 1);
       }
-      function Pn(e) {
+      function Ln(e) {
         const { review: t, bIsFriend: r, bShortPresentation: a } = e,
           { appid: i } = s.useContext(zs),
           l = t.voted_up;
@@ -5825,8 +5830,8 @@
         a && (d = "#Review_HoursOnRecord_Short");
         const u = on.Localize(
           d,
-          Ln(t.author.playtime_forever),
-          Ln(t.author.playtime_at_review),
+          Pn(t.author.playtime_forever),
+          Pn(t.author.playtime_at_review),
         );
         return (0, n.jsx)(o.Ii, {
           className: Nn().ReviewInfoHeaderLink,
@@ -6523,7 +6528,7 @@
           children: (0, n.jsxs)(l.Z, {
             className: Nn().ReviewInfo,
             children: [
-              (0, n.jsx)(Pn, {
+              (0, n.jsx)(Ln, {
                 review: t,
                 bIsFriend: r,
                 bShortPresentation: a,
@@ -7538,7 +7543,7 @@
           ],
         });
       }
-      function Ls(e) {
+      function Ps(e) {
         const { queryReviews: t, mapTags: r, loadMore: a } = e,
           i = s.useMemo(
             () => (t?.data?.pages || []).map((e) => e.reviews).flat(1),
@@ -7560,7 +7565,7 @@
           onItemFocusChanged: l,
         });
       }
-      function Ps(e) {
+      function Ls(e) {
         const { summary: t, mapTags: r } = e,
           a = t?.friendreviews?.length || 0,
           i = t?.reviews?.length || 0,
@@ -7742,7 +7747,7 @@
         return 0 == s.length
           ? null
           : o
-            ? (0, n.jsx)(Ls, { ...e, loadMore: i })
+            ? (0, n.jsx)(Ps, { ...e, loadMore: i })
             : (0, n.jsxs)(n.Fragment, {
                 children: [
                   (0, n.jsx)(Fs, { reviews: s, mapTags: r }),
@@ -7777,7 +7782,7 @@
           s = (0, v.Qn)();
         return t
           ? s
-            ? (0, n.jsx)(Ps, { ...e })
+            ? (0, n.jsx)(Ls, { ...e })
             : (0, n.jsx)(n.Fragment, {
                 children: (0, n.jsxs)(l.Z, {
                   className: Bs().ReviewSummary,
@@ -7978,7 +7983,7 @@
               "demo-and-quick-pitch": () =>
                 (0, n.jsx)(Ct.d, { children: (0, n.jsx)(U, { appID: t }) }),
               "deck-verified-results": (e) =>
-                (0, n.jsx)(Pr, {
+                (0, n.jsx)(Lr, {
                   appID: t,
                   results: (0, ye.Tc)(
                     "deckcompatibility",
@@ -8001,19 +8006,19 @@
               "game-notice-vr-supported": () =>
                 (0, n.jsx)($, { type: q.EPurchaseNoticeType_VRSupported }),
               "store-sidebar-controller-support-info": (e) =>
-                (0, n.jsx)(Le, { ...e }),
+                (0, n.jsx)(Pe, { ...e }),
               "store-sidebar-accessibility-info": (e) =>
                 (0, n.jsx)(qs, { features: e }),
               "season-pass-display": (e) => (0, n.jsx)(Ws, { ...e }),
               "storeitems-carousel": (e) =>
                 (0, n.jsx)(Se.Ay, {
                   feature: "recommended",
-                  children: (0, n.jsx)(Pe.default, { ...e }),
+                  children: (0, n.jsx)(Le.default, { ...e }),
                 }),
               "storeitems-carousel-dlc": (e) =>
                 (0, n.jsx)(Se.Ay, {
                   feature: "dlc",
-                  children: (0, n.jsx)(Pe.default, { ...e }),
+                  children: (0, n.jsx)(Le.default, { ...e }),
                 }),
               "creatorhome-carousel": (e) =>
                 (0, n.jsx)(Se.Ay, {
