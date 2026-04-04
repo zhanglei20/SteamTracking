@@ -206,6 +206,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 .review_box .reviewer_hardware_container {
 	margin-top: 10px;
+	margin-left: 8px;
 }
 
 #rightContents

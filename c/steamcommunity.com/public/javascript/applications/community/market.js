@@ -4092,6 +4092,9 @@
           _ = (0, _.jsx)(_._, {
             overflow: "auto",
             ref: _,
+            style: {
+              overscrollBehavior: "contain",
+            },
             children: _.children,
           });
         return (0, _.jsx)(_, {

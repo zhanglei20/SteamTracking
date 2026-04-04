@@ -3602,6 +3602,7 @@
           g = (0, e.jsx)(a.az, {
             overflow: "auto",
             ref: p,
+            style: { overscrollBehavior: "contain" },
             children: t.children,
           });
         return (0, e.jsx)(O, {
