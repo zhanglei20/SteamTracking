@@ -3671,7 +3671,8 @@
               _
                 ? _.BChildTakeFocus(_.AUTOFOCUS) ||
                   this.m_tree.TransferFocus(_.AUTOFOCUS, _)
-                : _.BTakeFocus(_.AUTOFOCUS);
+                : _.BTakeFocus(_.AUTOFOCUS) ||
+                  this.m_tree.TakeFocus(_.AUTOFOCUS);
           }
         }
       }

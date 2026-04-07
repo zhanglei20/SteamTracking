@@ -29,18 +29,21 @@
     },
     28491: (e, n, t) => {
       "use strict";
-      t.d(n, { Y: () => a });
+      t.d(n, { Y: () => l });
       var i = t(7850),
         s = t(20187),
         o = t(41324),
-        r = t(50122);
-      function a(e) {
-        const { underline: n = "auto", ...t } = e;
-        return (0, i.jsx)("a", {
-          ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, c),
+        r = t(50122),
+        a = t(8527),
+        c = t(45699);
+      function l(e) {
+        const { underline: n = "auto", ...t } = e,
+          s = a.TS.IN_GAMEPADUI ? c.Ii : "a";
+        return (0, i.jsx)(s, {
+          ...(0, o.mz)({ ...t, underline: n, className: r.TextLink }, d),
         });
       }
-      const c = [
+      const d = [
         ...s.Ae,
         { prop: "underline", className: (e) => r[`Underline-${e}`] },
       ];

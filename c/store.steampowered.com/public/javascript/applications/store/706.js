@@ -232,6 +232,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -1275,6 +1276,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -1342,7 +1344,7 @@
                 return () => window.clearTimeout(_);
               }
               _(!0);
-            } else _(!1);
+            } else (0, _._)() || _(!1);
           }, [_]),
           _.useEffect(() => {
             if (!_) return;
@@ -3749,6 +3751,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -3806,6 +3809,14 @@
           if (null != _ && _ != _._)
             return {
               appid: _,
+            };
+        }, [_]);
+      }
+      function _(_) {
+        return (0, _.useMemo)(() => {
+          if (null != _ && _ != _._)
+            return {
+              packageid: _,
             };
         }, [_]);
       }
@@ -4761,8 +4772,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, className: _ } = _,
           _ = (0, _._)(),
@@ -4797,7 +4808,7 @@
               return (0, _.jsx)("div", {
                 className: (0, _._)(_().ActionOutOfStock, _),
                 children: (0, _.jsxs)("span", {
-                  children: [" ", (0, _._)("#Sale_ReserveExhausted")],
+                  children: [" ", _._.Localize("#Sale_ReserveExhausted")],
                 }),
               });
           } else if (_ && _.included_appids && _.included_appids.length > 1)
@@ -4812,7 +4823,9 @@
                 onClick: (_) => (0, _._)(_, _),
                 className: (0, _._)(_().Action, _),
                 children: (0, _.jsx)("span", {
-                  children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
+                  children: _._.Localize(
+                    "#EventDisplay_CallToAction_VisitStore",
+                  ),
                 }),
               });
             }
@@ -4838,7 +4851,7 @@
                   (0, _.jsx)("button", {
                     className: (0, _._)(_().Action, _),
                     type: "submit",
-                    children: (0, _._)(
+                    children: _._.Localize(
                       "#EventDisplay_CallToAction_AddToAccount",
                     ),
                   }),
@@ -4847,12 +4860,12 @@
             }
           }
           if ((_ || _) && !_.is_coming_soon) {
-            let _ = (0, _._)("#EventDisplay_CallToAction_PlayNowForFree");
+            let _ = _._.Localize("#EventDisplay_CallToAction_PlayNowForFree");
             return (
               _
-                ? (_ = (0, _._)("#EventDisplay_CallToAction_PlayNow"))
+                ? (_ = _._.Localize("#EventDisplay_CallToAction_PlayNow"))
                 : _.is_free_temporarily &&
-                  (_ = (0, _._)("#EventDisplay_CallToAction_AddToAccount")),
+                  (_ = _._.Localize("#EventDisplay_CallToAction_AddToAccount")),
               (0, _.jsx)("div", {
                 className: (0, _._)(_().Action, _),
                 onClick: _,
@@ -4866,7 +4879,7 @@
             return (0, _.jsx)("a", {
               href: _,
               className: (0, _._)(_().Action, _),
-              children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
+              children: _._.Localize("#EventDisplay_CallToAction_VisitStore"),
             });
         }
         return (0, _.jsx)(_, {
@@ -4887,7 +4900,7 @@
           className: (0, _._)(_().Action, _),
           onClick: () => _(),
           children: (0, _.jsx)("span", {
-            children: (0, _._)("#Store_AddToCart"),
+            children: _._.Localize("#Store_AddToCart"),
           }),
         });
       }

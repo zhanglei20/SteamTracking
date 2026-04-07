@@ -2875,6 +2875,553 @@
         static ImplementsStaticInterface() {}
         constructor(_ = null) {
           super(),
+            _.prototype.appid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  appid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  opt_out_in_library_events: {
+                    _: 2,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPerAppEmailOptions";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.clanid || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  clanid: {
+                    _: 1,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  opt_out_in_library_events: {
+                    _: 2,
+                    _: !1,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CPerClanEmailOptions";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.opt_out_token || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  opt_out_token: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserAccount_GetOptOutEmailOptions_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.email || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [10, 11], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  email: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  opt_out_all: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_wishlist_sales: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_seasonal_promo: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_wishlist_releases: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_greenlight_releases: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_curator_connect: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_creator_home_releases: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_in_library_events: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  per_app_opt_outs: {
+                    _: 10,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  per_clan_opt_outs: {
+                    _: 11,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  opt_out_loyalty_awards_received: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_partner_messages: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_year_in_review: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_wishlist_demo_releases: {
+                    _: 15,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_creator_home_demo_releases: {
+                    _: 16,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_next_fest_starts: {
+                    _: 17,
+                    _: !0,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_theme_sale_starts: {
+                    _: 18,
+                    _: !0,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_season_pass_ship: {
+                    _: 19,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_roadmap_ship: {
+                    _: 20,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserAccount_GetOptOutEmailOptions_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
+            _.prototype.opt_out_token || _._(_._()),
+            _.Message.initialize(this, _, 0, -1, [10, 11], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  opt_out_token: {
+                    _: 1,
+                    _: _._.readString,
+                    _: _._.writeString,
+                  },
+                  opt_out_all: {
+                    _: 2,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_wishlist_sales: {
+                    _: 3,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_seasonal_promo: {
+                    _: 4,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_wishlist_releases: {
+                    _: 5,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_greenlight_releases: {
+                    _: 6,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_curator_connect: {
+                    _: 7,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_creator_home_releases: {
+                    _: 8,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_in_library_events: {
+                    _: 9,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  per_app_opt_outs: {
+                    _: 10,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  per_clan_opt_outs: {
+                    _: 11,
+                    _: _,
+                    _: !0,
+                    _: !0,
+                  },
+                  opt_out_loyalty_awards_received: {
+                    _: 12,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_partner_messages: {
+                    _: 13,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_year_in_review: {
+                    _: 14,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_wishlist_demo_releases: {
+                    _: 15,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_creator_home_demo_releases: {
+                    _: 16,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_next_fest_starts: {
+                    _: 17,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_theme_sale_starts: {
+                    _: 18,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_season_pass_ship: {
+                    _: 19,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                  opt_out_roadmap_ship: {
+                    _: 20,
+                    _: _._.readBool,
+                    _: _._.writeBool,
+                  },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = _._(_._())), _.sm_mbf;
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _._(_._(), _, _);
+        }
+        static fromObject(_) {
+          return _._(_._(), _);
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _._(_.MBF(), _, _);
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {
+          _._(_._(), _, _);
+        }
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserAccount_SetOptOutEmailOptions_Request";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(), _.Message.initialize(this, _, 0, -1, void 0, null);
+        }
+        toObject(_ = !1) {
+          return _.toObject(_, this);
+        }
+        static toObject(_, _) {
+          return _
+            ? {
+                $jspbMessageInstance: _,
+              }
+            : {};
+        }
+        static fromObject(_) {
+          return new _();
+        }
+        static deserializeBinary(_) {
+          let _ = new (_().BinaryReader)(_),
+            _ = new _();
+          return _.deserializeBinaryFromReader(_, _);
+        }
+        static deserializeBinaryFromReader(_, _) {
+          return _;
+        }
+        serializeBinary() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+        }
+        static serializeBinaryToWriter(_, _) {}
+        serializeBase64String() {
+          var _ = new (_().BinaryWriter)();
+          return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+        }
+        getClassName() {
+          return "CUserAccount_SetOptOutEmailOptions_Response";
+        }
+      }
+      class _ extends _.Message {
+        static ImplementsStaticInterface() {}
+        constructor(_ = null) {
+          super(),
             _.prototype.has_wallet || _._(_._()),
             _.Message.initialize(this, _, 0, -1, [13], null);
         }
@@ -4332,6 +4879,27 @@
             },
           );
         }),
+          (_.GetOptOutEmailOptions = function (_, _) {
+            return _.SendMsg(
+              "UserAccount.GetOptOutEmailOptions#1",
+              (0, _._)(_, _),
+              _,
+              {
+                bConstMethod: !0,
+                ePrivilege: 2,
+              },
+            );
+          }),
+          (_.SetOptOutEmailOptions = function (_, _) {
+            return _.SendMsg(
+              "UserAccount.SetOptOutEmailOptions#1",
+              (0, _._)(_, _),
+              _,
+              {
+                ePrivilege: 2,
+              },
+            );
+          }),
           (_.GetClientWalletDetails = function (_, _) {
             return _.SendMsg(
               "UserAccount.GetClientWalletDetails#1",

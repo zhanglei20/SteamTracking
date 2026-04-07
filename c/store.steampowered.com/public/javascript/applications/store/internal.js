@@ -541,6 +541,19 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      function _(_, _, _) {
+        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
+      }
+      function _(_, _, _, _) {
+        return _(_ || _, _, _);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,
@@ -1154,13 +1167,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
-      }
-      function _(_, _, _, _) {
-        return _(_ || _, _, _);
-      }
       const _ = Object.assign(
         function (_) {
           const {
@@ -1289,7 +1297,7 @@
       }
       function _(_) {
         const { render: _, ..._ } = _;
-        return _(
+        return (0, _._)(
           _,
           (0, _.jsx)("div", {
             className: _.SliderTrack,
@@ -1305,7 +1313,7 @@
         const { min: _, max: _ } = _,
           _ = _(_, _, _),
           _ = 100 - _(_, _, _);
-        return _(
+        return (0, _._)(
           _,
           (0, _.jsx)("div", {
             className: _.SliderRange,
@@ -1392,7 +1400,7 @@
             }
           },
         };
-        return _(
+        return (0, _._)(
           _,
           (0, _.jsx)("span", {
             className: _.SliderHandle,
@@ -1647,7 +1655,7 @@
       const _ = Object.assign(
         function (_) {
           const { render: _, ..._ } = _;
-          return _(
+          return (0, _._)(
             _,
             (0, _.jsx)(_._, {
               radius: "sm",
@@ -1672,7 +1680,7 @@
               } = _,
               _ = _ ? "true" : "false",
               _ = _ ? "true" : void 0;
-            return _(
+            return (0, _._)(
               _,
               (0, _.jsx)(_._, {
                 "data-selected": _,
@@ -2179,20 +2187,16 @@
                     hitSlop: !0,
                   })
                 : (0, _.jsx)(_, {}),
-            _ = _(
-              _,
-              (0, _.jsx)(_, {
-                afterContent: _,
-                variant: _,
-                size: _,
-                radius: _,
-                hasValue: _,
-                tabIndex: 0,
-                ..._,
-              }),
-              _,
-              void 0,
-            );
+            _ = (0, _.jsx)(_, {
+              afterContent: _,
+              variant: _,
+              size: _,
+              radius: _,
+              hasValue: _,
+              tabIndex: 0,
+              ..._,
+            }),
+            _ = (0, _._)(_, _, _, void 0);
           return (0, _.jsx)(_, {
             children: _,
           });

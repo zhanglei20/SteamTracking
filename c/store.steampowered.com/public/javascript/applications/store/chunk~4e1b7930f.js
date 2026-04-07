@@ -6186,7 +6186,7 @@
                 return (
                   !!_ &&
                   !!_.is_creator_home &&
-                  (_ || (!_ && _._.NOW > _) || (_ && _.postTime > _))
+                  (_ || (!_ && _._.NOW > _) || (_ && _.createTime > _))
                 );
               })(_, _)),
           _
@@ -15207,7 +15207,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -15277,10 +15278,11 @@
         m_fnHidePopup;
         m_nScrollPosAtHoverStart;
         ClosePopup() {
-          this.m_fnHidePopup &&
-            (this.m_fnHidePopup(),
-            (this.m_fnHidePopup = null),
-            window.removeEventListener("scroll", this.OnScroll));
+          (0, _._)() ||
+            (this.m_fnHidePopup &&
+              (this.m_fnHidePopup(),
+              (this.m_fnHidePopup = null),
+              window.removeEventListener("scroll", this.OnScroll)));
         }
         componentWillUnmount() {
           this.ClosePopup();

@@ -3,6 +3,11 @@
   {
     chunkid: (module) => {
       module.exports = {
+        BreadContainer: "YaL4BAoqywnKnb5jbU_il",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         AdminPageCtn: "wC3_c2yhq3ppKA9AKQoTy",
         WidePageCtn: "uHgjQHyNygSKukDngfNQO",
         PageTitleFlexCtn: "_3uPTh_ikegl-PIq12cfjJg",
@@ -49,11 +54,6 @@
         Stat: "_3OYQbVCq1yBuEx1XcDzG06",
         BigStat: "lYYwDDss378Sm0FKPBxPh",
         IncreaseRateInfo: "_2yY3XT7VPyYBZS3FCEGgRS",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG",
       };
     },
     chunkid: (module) => {
@@ -119,7 +119,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { crumbs: _, className: _ } = _;
+        const { crumbs: _, className: _, bHideLastArrow: _ } = _;
         return _ && 0 != _.length
           ? (0, _.jsxs)("div", {
               className: (0, _._)(_.BreadContainer, _),
@@ -127,7 +127,7 @@
                 (0, _.jsx)(_._, {
                   className: "blockbg",
                   "flow-children": "row",
-                  children: _.map((_) => {
+                  children: _.map((_, _) => {
                     const _ = new Array();
                     return (
                       _.url.startsWith("http")
@@ -151,15 +151,16 @@
                               "link_" + _.name,
                             ),
                           ),
-                      _.push(
-                        (0, _.jsx)(
-                          "span",
-                          {
-                            children: " > ",
-                          },
-                          _.name + "span",
+                      (!_ || _ < _.length - 1) &&
+                        _.push(
+                          (0, _.jsx)(
+                            "span",
+                            {
+                              children: " > ",
+                            },
+                            _.name + "span",
+                          ),
                         ),
-                      ),
                       _
                     );
                   }),
@@ -400,7 +401,6 @@
         (0, _._)([_._], _.prototype, "LazyInit", null);
       const _ = new _();
       var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -1131,6 +1131,7 @@
               })
             : null;
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),

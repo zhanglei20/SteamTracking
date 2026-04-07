@@ -4,6 +4,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -460,7 +461,7 @@
         );
       }
       function _(_) {
-        const { gidClanEvent: _, rgSocial: _ } = _,
+        const { gidClanEvent: _, rgSocial: _, bIsCreatorHomeEvent: _ } = _,
           _ = _(_);
         return _ && 0 != _.length && _._.IMG_URL
           ? (0, _.jsxs)(_.Fragment, {
@@ -470,7 +471,9 @@
                     _().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: (0, _._)("#EventDisplay_Sale_SocialTitle"),
+                  children: _
+                    ? (0, _._)("#EventDisplay_Sale_SocialTitle_Dev")
+                    : (0, _._)("#EventDisplay_Sale_SocialTitle"),
                 }),
                 (0, _.jsx)(_, {
                   _: _,

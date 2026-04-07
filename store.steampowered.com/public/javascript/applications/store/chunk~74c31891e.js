@@ -376,82 +376,80 @@
         h = t(56631),
         I = t(35400),
         f = t(6878),
-        y = t(84811),
-        D = t(22797),
-        C = t(37474),
-        x = t(67645),
-        b = t(8527),
-        j = t(62490);
+        y = t(8527),
+        D = t(67645),
+        C = t(62490),
+        x = t(84811),
+        b = t(22797),
+        j = t(37474);
       const N = r.Fragment;
       function S(e) {
         const {
             reservationPackageID: n,
-            event: t,
-            depositPackageID: o,
-            bIsPreview: s,
-            psuLessPackageID: a,
-            strOutOfStockOverride: i,
-            strDeliveryOverride: l,
-            bDeliveryOverrideOnlyIfOutOfStock: u,
+            depositPackageID: t,
+            bIsPreview: o,
+            psuLessPackageID: s,
+            strOutOfStockOverride: a,
+            strDeliveryOverride: i,
+            bDeliveryOverrideOnlyIfOutOfStock: l,
           } = e,
-          { data: m } = (0, x.DR)(n),
-          { data: _ } = (0, x.DR)(a),
-          g = (0, r.useMemo)(
+          { data: u } = (0, D.DR)(n),
+          { data: m } = (0, D.DR)(s),
+          _ = (0, r.useMemo)(
             () => [
               {
                 unique_id: "reservation_bbcode_" + n,
                 reservation_package: n,
-                deposit_package: o,
-                localized_reservation_desc: (0, j.$Y)([], 31, null),
-                localized_out_of_stock_override: (0, j.$Y)(
+                deposit_package: t,
+                localized_reservation_desc: (0, C.$Y)([], 31, null),
+                localized_out_of_stock_override: (0, C.$Y)(
+                  [a || null],
+                  31,
+                  null,
+                ),
+                localized_delivery_override_desc: (0, C.$Y)(
                   [i || null],
                   31,
                   null,
                 ),
-                localized_delivery_override_desc: (0, j.$Y)(
-                  [l || null],
-                  31,
-                  null,
-                ),
-                override_delivery_only_out_of_stock: Boolean(u),
-                psu_less_package: a,
+                override_delivery_only_out_of_stock: Boolean(l),
+                psu_less_package: s,
               },
             ],
-            [n, o, i, l, u, a],
+            [n, t, a, i, l, s],
           );
-        if (!m || (a && !_))
-          return (0, d.jsx)(D.t, {
+        if (!u || (s && !m))
+          return (0, d.jsx)(b.t, {
             string: (0, c.we)("#Loading"),
             size: "small",
             position: "center",
           });
-        const w = !b.iA.logged_in || !m.account_restricted_from_purchasing;
-        return (0, d.jsxs)(y.tH, {
+        const g = !y.iA.logged_in || !u.account_restricted_from_purchasing;
+        return (0, d.jsxs)(x.tH, {
           children: [
             (0, d.jsx)(r.Suspense, {
               fallback: null,
-              children: (0, d.jsx)(N, { bIsPreview: !!s, rgReservationDef: g }),
+              children: (0, d.jsx)(N, { bIsPreview: !!o, rgReservationDef: _ }),
             }),
-            Boolean(m.allow_purchase_in_country) &&
+            Boolean(u.allow_purchase_in_country) &&
               (0, d.jsxs)("div", {
-                className: g[0].unique_id,
+                className: _[0].unique_id,
                 children: [
-                  (0, d.jsx)(C.bk, {
-                    reservationDef: g[0],
-                    hardwareDetail: m,
+                  (0, d.jsx)(j.bk, {
+                    reservationDef: _[0],
+                    hardwareDetail: u,
                     bPSULessModel: !1,
                   }),
-                  w &&
-                    (0, d.jsx)(C.pc, {
-                      event: t,
-                      reservationDef: g[0],
-                      hardwareDetail: m,
+                  g &&
+                    (0, d.jsx)(j.pc, {
+                      reservationDef: _[0],
+                      hardwareDetail: u,
                     }),
-                  _ &&
-                    _?.allow_purchase_in_country &&
-                    (0, d.jsx)(C.bk, {
-                      reservationDef: g[0],
-                      hardwareDetail: _,
+                  m &&
+                    m?.allow_purchase_in_country &&
+                    (0, d.jsx)(j.bk, {
+                      reservationDef: _[0],
+                      hardwareDetail: m,
                       bPSULessModel: !0,
                     }),
                 ],
@@ -593,7 +591,7 @@
                         ? (0, d.jsxs)("div", {
                             className: te.Throbber,
                             children: [
-                              (0, d.jsx)(D.t, { size: "small" }),
+                              (0, d.jsx)(b.t, { size: "small" }),
                               (0, d.jsx)("div", {
                                 children: (0, c.we)("#Giveaway_RandomDraw"),
                               }),
@@ -646,7 +644,7 @@
         _e = t(7193),
         ge = t(39199),
         we = t(60860),
-        ve = t(16042),
+        ve = t(8242),
         pe = t(40353);
       function he(e) {
         const { eventModel: n, nEventBadgeID: t } = e,
@@ -727,7 +725,7 @@
               })
             : (0, d.jsxs)(d.Fragment, {
                 children: [
-                  Boolean(a) && (0, d.jsx)(D.t, { size: "small" }),
+                  Boolean(a) && (0, d.jsx)(b.t, { size: "small" }),
                   Boolean(o) && (0, d.jsx)(Q.Jlk, {}),
                   t,
                 ],
@@ -816,7 +814,7 @@
               itemDefSetting: { nAppID: t, nItemDefID: o, max_quantity: r },
               strCallToAction: s,
             })
-          : (0, d.jsx)(D.t, {
+          : (0, d.jsx)(b.t, {
               size: "small",
               position: "center",
               string: (0, c.we)("#Loading"),
@@ -832,7 +830,7 @@
             e
           );
         })();
-        if (!n) return (0, d.jsx)(D.t, { size: "small" });
+        if (!n) return (0, d.jsx)(b.t, { size: "small" });
         const t = Number.parseInt((0, m.j$)(e.args));
         let o = n.verified;
         switch (t) {
@@ -846,7 +844,7 @@
       }
       function Fe(e) {
         const n = (0, p.j)("library");
-        if (!n) return (0, d.jsx)(D.t, { size: "small" });
+        if (!n) return (0, d.jsx)(b.t, { size: "small" });
         const t = Number.parseInt((0, m.j$)(e.args));
         let o = n.verifiedList?.length || 0;
         switch (t) {
@@ -912,22 +910,21 @@
           : (0, d.jsx)(r.Fragment, {});
       }
       function He(e) {
-        const { event: n, showErrorInfo: t } = e.context,
-          o = Number.parseInt((0, m.j$)(e.args));
-        if (o) {
-          const t = Number.parseInt((0, m.j$)(e.args, "depositpackageid")),
-            r = Number.parseInt((0, m.j$)(e.args, "psulesspackageid")),
-            s = (0, m.j$)(e.args, "out_of_stock_override"),
-            a = (0, m.j$)(e.args, "delivery_override"),
-            i = (0, m.j$)(e.args, "delivery_override_out_of_stock");
+        const { showErrorInfo: n } = e.context,
+          t = Number.parseInt((0, m.j$)(e.args));
+        if (t) {
+          const n = Number.parseInt((0, m.j$)(e.args, "depositpackageid")),
+            o = Number.parseInt((0, m.j$)(e.args, "psulesspackageid")),
+            r = (0, m.j$)(e.args, "out_of_stock_override"),
+            s = (0, m.j$)(e.args, "delivery_override"),
+            a = (0, m.j$)(e.args, "delivery_override_out_of_stock");
           return (0, d.jsx)(S, {
-            reservationPackageID: o,
-            event: n,
-            depositPackageID: t,
-            psuLessPackageID: r,
-            strOutOfStockOverride: s,
-            strDeliveryOverride: i || a,
-            bDeliveryOverrideOnlyIfOutOfStock: Boolean(i),
+            reservationPackageID: t,
+            depositPackageID: n,
+            psuLessPackageID: o,
+            strOutOfStockOverride: r,
+            strDeliveryOverride: a || s,
+            bDeliveryOverrideOnlyIfOutOfStock: Boolean(a),
           });
         }
         return (0, d.jsx)(d.Fragment, {});

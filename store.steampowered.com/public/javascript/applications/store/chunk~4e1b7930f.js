@@ -5658,7 +5658,7 @@
                 return (
                   !!t &&
                   !!t.is_creator_home &&
-                  (s || (!r && i.TS.NOW > n) || (r && e.postTime > n))
+                  (s || (!r && i.TS.NOW > n) || (r && e.createTime > n))
                 );
               })(e, t)),
           r
@@ -13881,7 +13881,7 @@
     },
     48079: (e, t, r) => {
       "use strict";
-      r.d(t, { $k: () => h, S8: () => y, fI: () => f });
+      r.d(t, { $k: () => f, S8: () => b, fI: () => y });
       var i = r(34629),
         n = r(7850),
         s = r(75844),
@@ -13890,26 +13890,27 @@
         l = r(22837),
         c = r(49771),
         d = r(6336),
-        m = (r(32754), r(84933)),
-        u = r(78327),
-        p = r(23649),
-        _ = r(3246),
-        g = r.n(_);
-      const h = (0, s.PA)((e) => {
-        const t = (0, o.z)(e.photo, (0, l.sf)(u.TS.LANGUAGE)),
+        m = r(42327),
+        u = r(84933),
+        p = r(78327),
+        _ = r(23649),
+        g = r(3246),
+        h = r.n(g);
+      const f = (0, s.PA)((e) => {
+        const t = (0, o.z)(e.photo, (0, l.sf)(p.TS.LANGUAGE)),
           r = t ? ("string" == typeof t ? t : t[1]) : null,
           i = Boolean(e.title),
           s = Boolean(e.company);
         return (0, n.jsxs)("div", {
-          className: g().SpeakerPopup,
+          className: h().SpeakerPopup,
           onMouseLeave: e.fnClose,
           children: [
             (0, n.jsxs)("div", {
-              className: g().SpeakerInfoOuter,
+              className: h().SpeakerInfoOuter,
               children: [
                 e.photo && (0, n.jsx)("img", { src: r }),
                 (0, n.jsxs)("div", {
-                  className: g().SpeakerInfoInner,
+                  className: h().SpeakerInfoInner,
                   children: [
                     (0, n.jsx)("div", { children: e.name }),
                     (i || s) &&
@@ -13917,7 +13918,7 @@
                         children: [
                           i &&
                             (0, n.jsx)("span", {
-                              className: g().SpeakerTitle,
+                              className: h().SpeakerTitle,
                               children: e.title,
                             }),
                           i && s && (0, n.jsx)("span", { children: ", " }),
@@ -13930,16 +13931,16 @@
             }),
             e.bio &&
               (0, n.jsxs)("div", {
-                className: g().SpeakerBio,
+                className: h().SpeakerBio,
                 children: [
                   e.bio,
-                  e.bioString && (0, n.jsx)(p.h, { text: e.bioString }),
+                  e.bioString && (0, n.jsx)(_.h, { text: e.bioString }),
                 ],
               }),
           ],
         });
       });
-      class f extends a.Component {
+      class y extends a.Component {
         static sm_embeddedElements = new c.MX(
           "presenter-hover-source-elements",
         );
@@ -13947,10 +13948,11 @@
         m_fnHidePopup;
         m_nScrollPosAtHoverStart;
         ClosePopup() {
-          this.m_fnHidePopup &&
-            (this.m_fnHidePopup(),
-            (this.m_fnHidePopup = null),
-            window.removeEventListener("scroll", this.OnScroll));
+          (0, m.p)() ||
+            (this.m_fnHidePopup &&
+              (this.m_fnHidePopup(),
+              (this.m_fnHidePopup = null),
+              window.removeEventListener("scroll", this.OnScroll)));
         }
         componentWillUnmount() {
           this.ClosePopup();
@@ -13970,15 +13972,15 @@
             },
             i = "presenter-hover-" + Math.floor(1e8 * Math.random());
           (this.m_fnHidePopup = () =>
-            f.sm_embeddedElements.HideElement(t.ownerDocument, i)),
+            y.sm_embeddedElements.HideElement(t.ownerDocument, i)),
             window.addEventListener("scroll", this.OnScroll),
             (this.m_nScrollPosAtHoverStart = window.scrollY);
-          f.sm_embeddedElements.ShowElementDelayed(
+          y.sm_embeddedElements.ShowElementDelayed(
             t.ownerDocument,
             150,
             (0, n.jsx)(d.g, {
               ...r,
-              children: (0, n.jsx)(h, { ...this.props, fnClose: this.OnLeave }),
+              children: (0, n.jsx)(f, { ...this.props, fnClose: this.OnLeave }),
             }),
             i,
           );
@@ -13988,7 +13990,7 @@
         }
         render() {
           return (0, n.jsx)("div", {
-            className: g().SpeakerHover,
+            className: h().SpeakerHover,
             ref: this.m_refAnchor,
             onMouseEnter: this.OnHover,
             onFocus: this.OnHover,
@@ -13998,7 +14000,7 @@
           });
         }
       }
-      function y(e) {
+      function b(e) {
         const {
             photo: t,
             name: r,
@@ -14006,34 +14008,34 @@
             company: s,
             hidePhotoInCompactView: a,
           } = e,
-          c = (0, o.z)(t, (0, l.sf)(u.TS.LANGUAGE)),
+          c = (0, o.z)(t, (0, l.sf)(p.TS.LANGUAGE)),
           d = c && !a ? ("string" == typeof c ? c : c[1]) : null,
           m = Boolean(i),
-          p = Boolean(s);
+          u = Boolean(s);
         return (0, n.jsx)("div", {
-          className: g().SpeakerOuter,
-          children: (0, n.jsx)(f, {
+          className: h().SpeakerOuter,
+          children: (0, n.jsx)(y, {
             ...e,
             children: (0, n.jsx)("div", {
-              className: g().Speaker,
+              className: h().Speaker,
               children: (0, n.jsxs)("div", {
-                className: g().SpeakerInfoOuter,
+                className: h().SpeakerInfoOuter,
                 children: [
                   !!d && (0, n.jsx)("img", { src: d }),
                   (0, n.jsxs)("div", {
-                    className: g().SpeakerInfoInner,
+                    className: h().SpeakerInfoInner,
                     children: [
                       (0, n.jsx)("div", { children: r }),
-                      (m || p) &&
+                      (m || u) &&
                         (0, n.jsxs)("div", {
                           children: [
                             m &&
                               (0, n.jsx)("span", {
-                                className: g().SpeakerTitle,
+                                className: h().SpeakerTitle,
                                 children: i,
                               }),
-                            m && p && (0, n.jsx)("span", { children: ", " }),
-                            p && (0, n.jsx)("span", { children: s }),
+                            m && u && (0, n.jsx)("span", { children: ", " }),
+                            u && (0, n.jsx)("span", { children: s }),
                           ],
                         }),
                     ],
@@ -14044,10 +14046,10 @@
           }),
         });
       }
-      (0, i.Cg)([m.oI], f.prototype, "ClosePopup", null),
-        (0, i.Cg)([m.oI], f.prototype, "OnScroll", null),
-        (0, i.Cg)([m.oI], f.prototype, "OnHover", null),
-        (0, i.Cg)([m.oI], f.prototype, "OnLeave", null);
+      (0, i.Cg)([u.oI], y.prototype, "ClosePopup", null),
+        (0, i.Cg)([u.oI], y.prototype, "OnScroll", null),
+        (0, i.Cg)([u.oI], y.prototype, "OnHover", null),
+        (0, i.Cg)([u.oI], y.prototype, "OnLeave", null);
     },
     90874: (e, t, r) => {
       "use strict";

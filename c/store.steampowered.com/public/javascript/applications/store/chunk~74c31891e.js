@@ -393,7 +393,6 @@
       function _(_) {
         const {
             reservationPackageID: _,
-            event: _,
             depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
@@ -453,7 +452,6 @@
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
-                      event: _,
                       reservationDef: _[0],
                       hardwareDetail: _,
                     }),
@@ -979,7 +977,7 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { event: _, showErrorInfo: _ } = _.context,
+        const { showErrorInfo: _ } = _.context,
           _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
@@ -989,7 +987,6 @@
             _ = (0, _._)(_.args, "delivery_override_out_of_stock");
           return (0, _.jsx)(_, {
             reservationPackageID: _,
-            event: _,
             depositPackageID: _,
             psuLessPackageID: _,
             strOutOfStockOverride: _,

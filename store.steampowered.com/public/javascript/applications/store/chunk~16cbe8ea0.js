@@ -4734,9 +4734,9 @@
         );
       }
       function y(e) {
-        const { gidClanEvent: t, rgSocial: r } = e,
-          i = v(r);
-        return i && 0 != i.length && p.TS.IMG_URL
+        const { gidClanEvent: t, rgSocial: r, bIsCreatorHomeEvent: i } = e,
+          a = v(r);
+        return a && 0 != a.length && p.TS.IMG_URL
           ? (0, n.jsxs)(n.Fragment, {
               children: [
                 (0, n.jsx)("div", {
@@ -4744,9 +4744,11 @@
                     l().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: (0, m.we)("#EventDisplay_Sale_SocialTitle"),
+                  children: i
+                    ? (0, m.we)("#EventDisplay_Sale_SocialTitle_Dev")
+                    : (0, m.we)("#EventDisplay_Sale_SocialTitle"),
                 }),
-                (0, n.jsx)(f, { id: t, rgSocialMedia: i }),
+                (0, n.jsx)(f, { id: t, rgSocialMedia: a }),
               ],
             })
           : null;

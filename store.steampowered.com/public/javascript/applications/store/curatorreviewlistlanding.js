@@ -3,15 +3,15 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [716],
   {
+    2108: (e) => {
+      e.exports = { BreadContainer: "YaL4BAoqywnKnb5jbU_il" };
+    },
     33380: (e) => {
       e.exports = {
         VideoReviewCtn: "V6zz2NPPxfnGjAchCe56r",
         YouTubePreviewImage: "_3joL1ZVcmC-6lCOLfjuIq7",
         TwitchPlayer: "_1Q0Ym9jG7UCFeD3c9LbOSy",
       };
-    },
-    66272: (e) => {
-      e.exports = { BreadContainer: "_3jswbLK3E0Uf47oGyc6qUG" };
     },
     70758: (e) => {
       e.exports = {
@@ -250,6 +250,60 @@
         );
       }
       a.d(t, { fp: () => n, vm: () => r });
+    },
+    85693: (e, t, a) => {
+      "use strict";
+      a.d(t, { r: () => c });
+      var n = a(7850),
+        r = a(45699),
+        s = a(76217),
+        o = a(17083),
+        i = a(52038),
+        l = a(2108);
+      function c(e) {
+        const { crumbs: t, className: a, bHideLastArrow: c } = e;
+        return t && 0 != t.length
+          ? (0, n.jsxs)("div", {
+              className: (0, i.A)(l.BreadContainer, a),
+              children: [
+                (0, n.jsx)(s.Z, {
+                  className: "blockbg",
+                  "flow-children": "row",
+                  children: t.map((e, a) => {
+                    const s = new Array();
+                    return (
+                      e.url.startsWith("http")
+                        ? s.push(
+                            (0, n.jsx)(
+                              r.Ii,
+                              { href: e.url, children: e.name },
+                              "anchor_" + e.name,
+                            ),
+                          )
+                        : s.push(
+                            (0, n.jsx)(
+                              o.N_,
+                              { to: e.url, children: e.name },
+                              "link_" + e.name,
+                            ),
+                          ),
+                      (!c || a < t.length - 1) &&
+                        s.push(
+                          (0, n.jsx)(
+                            "span",
+                            { children: " > " },
+                            e.name + "span",
+                          ),
+                        ),
+                      s
+                    );
+                  }),
+                }),
+                (0, n.jsx)("div", { style: { clear: "left" } }),
+              ],
+            })
+          : null;
+      }
     },
     57876: (e, t, a) => {
       "use strict";
@@ -869,59 +923,6 @@
       }
       (0, n.Cg)([o.sH], v.prototype, "m_mapList", void 0);
     },
-    22305: (e, t, a) => {
-      "use strict";
-      a.d(t, { r: () => c });
-      var n = a(7850),
-        r = a(66272),
-        s = a(52038),
-        o = a(17083),
-        i = a(45699),
-        l = a(76217);
-      function c(e) {
-        const { crumbs: t, className: a } = e;
-        return t && 0 != t.length
-          ? (0, n.jsxs)("div", {
-              className: (0, s.A)(r.BreadContainer, a),
-              children: [
-                (0, n.jsx)(l.Z, {
-                  className: "blockbg",
-                  "flow-children": "row",
-                  children: t.map((e) => {
-                    const t = new Array();
-                    return (
-                      e.url.startsWith("http")
-                        ? t.push(
-                            (0, n.jsx)(
-                              i.Ii,
-                              { href: e.url, children: e.name },
-                              "anchor_" + e.name,
-                            ),
-                          )
-                        : t.push(
-                            (0, n.jsx)(
-                              o.N_,
-                              { to: e.url, children: e.name },
-                              "link_" + e.name,
-                            ),
-                          ),
-                      t.push(
-                        (0, n.jsx)(
-                          "span",
-                          { children: " > " },
-                          e.name + "span",
-                        ),
-                      ),
-                      t
-                    );
-                  }),
-                }),
-                (0, n.jsx)("div", { style: { clear: "left" } }),
-              ],
-            })
-          : null;
-      }
-    },
     99032: (e, t, a) => {
       "use strict";
       a.d(t, {
@@ -1368,11 +1369,11 @@
         V = a(22797),
         O = a(10224),
         Y = a(94743),
-        U = a(61859),
-        M = a(61336),
+        M = a(61859),
+        U = a(61336),
         W = a(62014),
         z = a.n(W),
-        q = a(22305),
+        q = a(85693),
         Z = a(22584);
       function K(e) {
         const { clanInfo: t } = e,
@@ -1410,7 +1411,7 @@
                     (0, n.jsx)(l.Ii, {
                       className: "pageheader curator_name",
                       href: a,
-                      children: (0, U.we)(
+                      children: (0, M.we)(
                         "#SteamCurator_List_Header_List",
                         t.group_name,
                       ),
@@ -1462,13 +1463,13 @@
                             className: z().CuratorMoreCtn,
                             children: [
                               (0, n.jsx)("h2", {
-                                children: (0, U.we)(
+                                children: (0, M.we)(
                                   "#SteamCurator_ExploreMoreTitle",
                                 ),
                               }),
                               (0, n.jsx)(l.Ii, {
                                 href: a.vanity_url,
-                                children: (0, U.PP)(
+                                children: (0, M.PP)(
                                   "#SteamCurator_MoreReviews",
                                   a.group_name,
                                 ),
@@ -1544,7 +1545,7 @@
           null == i)
         )
           return (0, n.jsx)(V.t, {
-            string: (0, U.we)("#Loading"),
+            string: (0, M.we)("#Loading"),
             position: "center",
             size: "medium",
           });
@@ -1567,13 +1568,13 @@
                 children: [
                   (0, n.jsxs)("span", {
                     children: [
-                      (0, U.Yp)("#SteamCurator_Hidden", r - i.length),
+                      (0, M.Yp)("#SteamCurator_Hidden", r - i.length),
                       " ",
                     ],
                   }),
                   (0, n.jsx)(l.Ii, {
                     href: y.TS.STORE_BASE_URL + "account/preferences/",
-                    children: (0, U.we)("#SteamCurator_Setting"),
+                    children: (0, M.we)("#SteamCurator_Setting"),
                   }),
                 ],
               }),
@@ -1590,9 +1591,9 @@
             (0, d.XU)(t.list_jsondata.youtube_link),
           c = t.list_jsondata.youtube_link && N(t.list_jsondata.youtube_link),
           u = (0, i.sf)(y.TS.LANGUAGE),
-          m = U.NT.GetWithFallback(t.localized_flat_title, u),
-          p = U.NT.GetWithFallback(t.localized_flat_blurb, u),
-          _ = U.NT.GetWithFallback(t.localized_flat_link, u),
+          m = M.NT.GetWithFallback(t.localized_flat_title, u),
+          p = M.NT.GetWithFallback(t.localized_flat_blurb, u),
+          _ = M.NT.GetWithFallback(t.localized_flat_link, u),
           f =
             a &&
             a.GetImageURL(
@@ -1714,18 +1715,18 @@
                       className: z().ReviewDate,
                       children:
                         I || !Boolean(h)
-                          ? (0, U.we)(
+                          ? (0, M.we)(
                               "#EventModTile_ReleaseDate",
                               l.GetFormattedSteamReleaseDate(),
                             )
-                          : (0, U.$z)(h),
+                          : (0, M.$z)(h),
                     }),
                   ],
                 }),
                 Boolean(G) &&
                   (0, n.jsx)("div", {
                     className: z().ReviewBlurb,
-                    children: (0, U.we)("#SteamCurator_ReviewTextQuoted", G),
+                    children: (0, M.we)("#SteamCurator_ReviewTextQuoted", G),
                   }),
                 Boolean(_) && (0, n.jsx)(ie, { url: _ }),
               ],
@@ -1800,17 +1801,17 @@
           case 0:
             return (0, n.jsx)("div", {
               className: z().Recommended,
-              children: (0, U.we)("#SteamCurator_Recommended"),
+              children: (0, M.we)("#SteamCurator_Recommended"),
             });
           case 1:
             return (0, n.jsx)("div", {
               className: z().NotRecommended,
-              children: (0, U.we)("#SteamCurator_NotRecommended"),
+              children: (0, M.we)("#SteamCurator_NotRecommended"),
             });
           case 2:
             return (0, n.jsx)("div", {
               className: z().Informational,
-              children: (0, U.we)("#SteamCurator_Informational"),
+              children: (0, M.we)("#SteamCurator_Informational"),
             });
           default:
             return null;
@@ -1824,7 +1825,7 @@
             y.TS.COMMUNITY_BASE_URL +
             "linkfilter/?url=" +
             t);
-        const a = (0, M.wm)(e.url),
+        const a = (0, U.wm)(e.url),
           r = (0, d.Lg)(e.url);
         return (0, n.jsxs)("div", {
           className: z().FullReviewLink,
@@ -1835,7 +1836,7 @@
               rel: "noopener nofollow",
               preferredFocus: !1,
               autoFocus: !1,
-              children: (0, U.we)(
+              children: (0, M.we)(
                 r
                   ? "#SteamCurator_WatchFullReview"
                   : "#SteamCurator_ReadFullReview",
@@ -1843,7 +1844,7 @@
             }),
             (0, n.jsx)("div", {
               className: z().FullReviewDomain,
-              children: (0, U.we)(
+              children: (0, M.we)(
                 "#SteamCurator_ReviewLinkHostnameBracketed",
                 a,
               ),

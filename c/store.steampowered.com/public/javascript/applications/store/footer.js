@@ -232,38 +232,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { underline: _ = "auto", ..._ } = _;
-        return (0, _.jsx)("a", {
-          ...(0, _._)(
-            {
-              ..._,
-              underline: _,
-              className: _.TextLink,
-            },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "underline",
-          className: (_) => _[`Underline-${_}`],
-        },
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports),
-        __webpack_require__._(module_exports, {
-          GlobalFooter: () => _,
-        });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -309,9 +277,57 @@
           className: (_) => _[`HeadingSize-${_}`],
         },
       ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { underline: _ = "auto", ..._ } = _,
+          _ = _._.IN_GAMEPADUI ? _._ : "a";
+        return (0, _.jsx)(_, {
+          ...(0, _._)(
+            {
+              ..._,
+              underline: _,
+              className: _.TextLink,
+            },
+            _,
+          ),
+        });
+      }
+      const _ = [
+        ..._._,
+        {
+          prop: "underline",
+          className: (_) => _[`Underline-${_}`],
+        },
+      ];
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports),
+        __webpack_require__._(module_exports, {
+          GlobalFooter: () => _,
+        });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -420,7 +436,8 @@
           cssProperty: (_) => ["--grid-gap-y", `var(--spacing-${_})`],
         },
       ];
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_, _ = ["b", "i", "br"]) {
         const _ = _.join("|"),
           _ = [],
@@ -980,7 +997,7 @@
         });
       }
       function _(_) {
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           level: "3",
           color: "dull-12",
           weight: "heavy",

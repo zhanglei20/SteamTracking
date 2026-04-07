@@ -1351,18 +1351,12 @@ body.v7 .spotlight_col {
 		margin: 0 auto;
 	}
 
-	.carousel_wide_mode.no_transition .carousel_container .carousel_items .store_main_capsule {
-		transition: opacity 300ms 50ms;
-	}
-
-	.carousel_wide_mode .carousel_container .carousel_items .store_main_capsule {
-		transition: transform 100ms ease, opacity 300ms 50ms, filter 300ms;
-		transform: translateX(var(--nudge, 0%));
+	.carousel_wide_mode .carousel_container .store_main_capsule {
+		transition: none;
 	}
 
 	.carousel_wide_mode .carousel_container .focus {
-		transition: transform 100ms ease, opacity 300ms 50ms;
-		transform: translateX(var(--nudge, 0%));
+		transform: translateX( 0 );
 	}
 
 	.carousel_wide_mode .carousel_container .next,
@@ -1384,14 +1378,13 @@ body.v7 .spotlight_col {
 
 	.carousel_wide_mode .carousel_container .next {
 		mask-image: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.45) 30%, rgba(0, 0, 0, 0.25) 50%, transparent 70%);
-		left: calc( 1200px + 40px );
-		transform: translateX( var(--nudge) );
+		transform: translateX( calc( 1200px + 40px ) );
+
 	}
 
 	.carousel_wide_mode .carousel_container .prev {
 		mask-image: linear-gradient(270deg, black 0%, rgba(0, 0, 0, 0.45) 30%, rgba(0, 0, 0, 0.25) 50%, transparent 70%);
-		left: calc( -756px - 40px );
-		transform: translateX( var(--nudge) );
+		transform: translateX( calc( -756px - 40px ) );
 	}
 
 	.carousel_wide_mode .carousel_container .store_main_capsule.next .info,

@@ -6,6 +6,7 @@
     95695: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -169,13 +170,13 @@
             include_screenshots: x,
             include_trailers: f,
             include_ratings: k,
-            include_tag_count: g,
-            include_reviews: h,
+            include_tag_count: h,
+            include_reviews: g,
             include_basic_info: I,
             include_supported_languages: E,
             include_full_description: b,
-            include_included_items: A,
-            include_assets_without_overrides: C,
+            include_included_items: C,
+            include_assets_without_overrides: A,
             apply_user_filters: B,
             include_links: T,
           } = n;
@@ -189,13 +190,13 @@
               include_screenshots: x,
               include_trailers: f,
               include_ratings: k,
-              include_tag_count: g,
-              include_reviews: h,
+              include_tag_count: h,
+              include_reviews: g,
               include_basic_info: I,
               include_supported_languages: E,
               include_full_description: b,
-              include_included_items: A,
-              include_assets_without_overrides: C,
+              include_included_items: C,
+              include_assets_without_overrides: A,
               apply_user_filters: B,
               include_links: T,
             };
@@ -214,7 +215,7 @@
                   })),
               () => s?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, i, _, p, m, v, S, x, f, k, g, h, I, E, b, A, C, B, T, u]),
+          }, [e, t, i, _, p, m, v, S, x, f, k, h, g, I, E, b, C, A, B, T, u]),
           !e)
         )
           return [null, 2];
@@ -257,8 +258,8 @@
             include_reviews: x,
             include_basic_info: f,
             include_supported_languages: k,
-            include_full_description: g,
-            include_included_items: h,
+            include_full_description: h,
+            include_included_items: g,
             include_assets_without_overrides: I,
             apply_user_filters: E,
             include_links: b,
@@ -278,8 +279,8 @@
                 include_reviews: x,
                 include_basic_info: f,
                 include_supported_languages: k,
-                include_full_description: g,
-                include_included_items: h,
+                include_full_description: h,
+                include_included_items: g,
                 include_assets_without_overrides: I,
                 apply_user_filters: E,
                 include_links: b,
@@ -300,7 +301,7 @@
               }),
               () => s.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, i, c, o, u, _, d, p, m, v, S, x, f, k, g, h, I, E, b]),
+          }, [e, t, i, c, o, u, _, d, p, m, v, S, x, f, k, h, g, I, E, b]),
           !e)
         )
           return 2;
@@ -333,7 +334,7 @@
     },
     18663: (e, t, n) => {
       "use strict";
-      n.d(t, { D1: () => I, lS: () => x, lz: () => g, nK: () => k });
+      n.d(t, { D1: () => I, lS: () => x, lz: () => h, nK: () => k });
       var i = n(7850),
         r = n(90626);
       function s(e) {
@@ -444,10 +445,10 @@
           [e],
         );
       }
-      function g(e) {
-        const { gidClanEvent: t, rgSocial: n } = e,
-          r = k(n);
-        return r && 0 != r.length && p.TS.IMG_URL
+      function h(e) {
+        const { gidClanEvent: t, rgSocial: n, bIsCreatorHomeEvent: r } = e,
+          s = k(n);
+        return s && 0 != s.length && p.TS.IMG_URL
           ? (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)("div", {
@@ -455,21 +456,23 @@
                     c().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: (0, _.we)("#EventDisplay_Sale_SocialTitle"),
+                  children: r
+                    ? (0, _.we)("#EventDisplay_Sale_SocialTitle_Dev")
+                    : (0, _.we)("#EventDisplay_Sale_SocialTitle"),
                 }),
-                (0, i.jsx)(I, { id: t, rgSocialMedia: r }),
+                (0, i.jsx)(I, { id: t, rgSocialMedia: s }),
               ],
             })
           : null;
       }
-      const h = [6, 23, 18, 8, 9, 19, 24];
+      const g = [6, 23, 18, 8, 9, 19, 24];
       function I(e) {
         const { id: t, rgSocialMedia: n, className: r } = e,
           s = (0, p.Y2)();
         return (0, i.jsx)("div", {
           className: (0, u.A)(S().AppSocialLinks, r),
           children: n
-            .filter((e) => !s || h.includes(e.link_type || 0))
+            .filter((e) => !s || g.includes(e.link_type || 0))
             .map((e) =>
               e.url
                 ? (0, i.jsx)(
@@ -494,7 +497,7 @@
               rel: "noopener noreferrer",
               children: (0, i.jsx)(m.he, {
                 toolTipContent: t.url,
-                children: (0, i.jsx)(A, { social: t }),
+                children: (0, i.jsx)(C, { social: t }),
               }),
             })
           : null;
@@ -506,7 +509,7 @@
           children: [
             (0, i.jsx)(m.he, {
               toolTipContent: t.text,
-              children: (0, i.jsx)(A, { social: t }),
+              children: (0, i.jsx)(C, { social: t }),
             }),
             (0, i.jsx)("div", {
               className: S().AppSocialText,
@@ -515,14 +518,14 @@
           ],
         });
       }
-      function A(e) {
+      function C(e) {
         const { social: t } = e;
-        return (0, i.jsx)(C, {
+        return (0, i.jsx)(A, {
           linkType: t.link_type || 0,
           className: S().AppSocialLinkIcon,
         });
       }
-      function C(e) {
+      function A(e) {
         const { linkType: t, ...n } = e;
         switch (t) {
           case 1:

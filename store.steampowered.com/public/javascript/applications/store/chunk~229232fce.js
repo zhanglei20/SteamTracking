@@ -553,6 +553,7 @@
         name = new Map();
         description = new Map();
         timestamp_loc_updated = new Map();
+        createTime = void 0;
         startTime = void 0;
         endTime = void 0;
         visibilityStartTime = void 0;
@@ -661,6 +662,7 @@
             this.timestamp_loc_updated.forEach((e, a) => {
               t.timestamp_loc_updated.set(a, e);
             }),
+            (t.createTime = Math.floor(Date.now() / 1e3)),
             (t.startTime = this.startTime),
             (t.endTime = this.endTime),
             (t.visibilityStartTime = this.visibilityStartTime),
@@ -2269,6 +2271,7 @@
               (a.GID = b(t)),
               (a.bOldAnnouncement = I(t)),
               (a.appid = t.appid ?? 0),
+              (a.createTime = t.rtime_created),
               (a.startTime = t.rtime32_start_time),
               (a.endTime = t.rtime32_end_time),
               (a.visibilityStartTime = t.rtime32_visibility_start),

@@ -35304,7 +35304,7 @@
           ),
           {},
         ).exports;
-      } catch (e) {}
+      } catch {}
       function o(e, t, r) {
         (this.low = 0 | e), (this.high = 0 | t), (this.unsigned = !!r);
       }
@@ -35448,6 +35448,15 @@
             t--
           );
           return 0 != this.high ? t + 33 : t + 1;
+        }),
+        (j.isSafeInteger = function () {
+          var e = this.high >> 21;
+          return (
+            !e ||
+            (!this.unsigned &&
+              -1 === e &&
+              !(0 === this.low && -2097152 === this.high))
+          );
         }),
         (j.isZero = function () {
           return 0 === this.high && 0 === this.low;
@@ -35860,7 +35869,26 @@
             (e[0] << 24) | (e[1] << 16) | (e[2] << 8) | e[3],
             t,
           );
-        });
+        }),
+        "function" == typeof BigInt &&
+          ((o.fromBigInt = function (e, t) {
+            return g(
+              Number(BigInt.asIntN(32, e)),
+              Number(BigInt.asIntN(32, e >> BigInt(32))),
+              t,
+            );
+          }),
+          (o.fromValue = function (e, t) {
+            return "bigint" == typeof e ? o.fromBigInt(e, t) : d(e, t);
+          }),
+          (j.toBigInt = function () {
+            var e = BigInt(this.low >>> 0);
+            return (
+              (BigInt(this.unsigned ? this.high >>> 0 : this.high) <<
+                BigInt(32)) |
+              e
+            );
+          }));
       const R = o;
     },
     68841: (e, t, r) => {

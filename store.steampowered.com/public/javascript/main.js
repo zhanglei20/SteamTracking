@@ -2554,7 +2554,7 @@ CGenericCarousel.prototype.Advance = function( nNewIndex, bApplyFocus )
 	if( nNextIndex == this.nIndex || nNextIndex === false )
 		return;
 
-	if ( this.bIsWideScreenMode() )
+	if ( false && this.bIsWideScreenMode() )
 	{
 		const bGoForward = nNewIndex !== -1;
 		return this.WideModeAdvance( nNextIndex, bGoForward ) ;
@@ -2622,7 +2622,19 @@ CGenericCarousel.prototype.WideModeAdvance = function( nNewIndex, bGoForward )
 		this.$elContainer.addClass( 'go-prev' );
 	}
 
-	this.$elContainer[0].addEventListener( 'transitionend', this.WideModeTransition.bind( this, nNewIndex ), { once: true });
+	let instance = this;
+
+	let fnOnTransitionEnd = function( event )
+	{
+		if ( event.propertyName !== 'transform' )
+			return;
+
+		instance.WideModeTransition( nNewIndex );
+
+		instance.$elContainer[0].removeEventListener( "transitionend", fnOnTransitionEnd );
+	}
+
+	this.$elContainer[0].addEventListener( 'transitionend', fnOnTransitionEnd );
 }
 
 // Advance function may be (totally is) different in responsive mode
