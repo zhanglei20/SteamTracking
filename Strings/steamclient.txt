@@ -2284,7 +2284,6 @@ $steammessages_parental_objects.proto"
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
 %ld%c
-%llX
 %llX\n
 %lld
 %llu
@@ -3425,7 +3424,6 @@ $steammessages_parental_objects.proto"
 (.CUserAccount_RegisterCompatTool_Request
 (0'yX
 (1 + n) * 3 <= vecsize
-(1VMP
 (8GXgw
 (8HXhx
 (?<!\\)\[\/?.+?\]
@@ -3879,6 +3877,7 @@ $steammessages_parental_objects.proto"
 (\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
+(\t"0\n.CAccountHardware_RegisterSteamMachine_Response*
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -4126,7 +4125,7 @@ $steammessages_parental_objects.proto"
 (\v2&.ParentalTemporaryPlaytimeRestrictionsB
 (\v2&.google.protobuf.ExtensionRangeOptions
 (\v2&.google.protobuf.MethodDescriptorProto
-(\v2'.CAccountHardware_SavedHardware_Details*
+(\v2'.CAccountHardware_SavedHardware_Details"\\n-CAccountHardware_RegisterSteamMachine_Request
 (\v2'.CClientMetrics_ClientBootstrap_Summary"
 (\v2'.CClientMetrics_IPv6Connectivity_Result
 (\v2'.CGameRecording_QueryPhases_Request.Tag
@@ -6169,6 +6168,7 @@ $steammessages_parental_objects.proto"
 ../ubuntu12_64/steamwebhelper.sh
 ..CAccountHardware_GetSavedHardwareList_Request
 ..CAccountHardware_ManageSavedHardware_Response"
+..CAccountHardware_RegisterSteamMachine_Request
 ..CAccountHardware_VRCompatibilityCheck_Request
 ..CAuthentication_BeginAuthSessionViaQR_Request
 ..CAuthentication_PollAuthSessionStatus_Request
@@ -7050,6 +7050,7 @@ $steammessages_parental_objects.proto"
 /)IMT
 /+ep+eqU
 /.CAccountHardware_GetSavedHardwareList_Response"
+/.CAccountHardware_RegisterSteamMachine_Response"
 /.CAccountHardware_VRCompatibilityCheck_Response"
 /.CAuthenticationSupport_GetTokenHistory_Request
 /.CAuthentication_BeginAuthSessionViaQR_Response"
@@ -7955,11 +7956,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
+0123456789.
+0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
-0123456789.
-0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11489,11 +11490,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -14998,6 +14999,7 @@ $steammessages_parental_objects.proto"
 456789:;<=
 45CAccountHardware_GetSavedHardwareList_Request
 45CAccountHardware_ManageSavedHardware_Response
+45CAccountHardware_RegisterSteamMachine_Request
 45CAccountHardware_VRCompatibilityCheck_Request
 45CAuthentication_BeginAuthSessionViaQR_Request
 45CAuthentication_PollAuthSessionStatus_Request
@@ -15074,6 +15076,7 @@ $steammessages_parental_objects.proto"
 46$a
 46CAPIJobEnumerateUserSubscribedFilesWithUpdates
 46CAccountHardware_GetSavedHardwareList_Response
+46CAccountHardware_RegisterSteamMachine_Response
 46CAccountHardware_VRCompatibilityCheck_Response
 46CAuthenticationSupport_GetTokenHistory_Request
 46CAuthentication_BeginAuthSessionViaQR_Response
@@ -16330,6 +16333,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hd#\
 9IClientVR
 9IGv
 9ISteamUGC
@@ -22534,7 +22538,7 @@ ConnectionUserData
 Connectivity check
 Connectivity test (%s (%s)): Got HTTP %d.  Assuming failure
 Connectivity test (%s (%s)): Got HTTP 200, assuming captive portal hijack
-Connectivity test (%s (%s)): Got HTTP redirect (%d), assuming captive portal at %s
+Connectivity test (%s (%s)): Got HTTP redirect (%d), redirect target: %s
 Connectivity test (%s (%s)): HTTP fetch failed
 Connectivity test (%s (%s)): OK!
 Connectivity test result
@@ -29846,6 +29850,7 @@ Method RegisterCDKey() not implemented.
 Method RegisterCompatTool() not implemented.
 Method RegisterShader() not implemented.
 Method RegisterSteamController() not implemented.
+Method RegisterSteamMachine() not implemented.
 Method RegisterValveIndexComponent() not implemented.
 Method ReloadAllReservationPositionMessages() not implemented.
 Method RemoveAppRelationship() not implemented.
@@ -33368,6 +33373,7 @@ RegisterProtocolInOverlayBrowser
 RegisterServiceMethodHandler
 RegisterShader
 RegisterSteamController
+RegisterSteamMachine
 RegisterSteamProtocolHandler
 RegisterValveIndexComponent
 Registered ID
@@ -40466,6 +40472,7 @@ Zulu
 \n\flobby_cellid
 \n\floc_group_id
 \n\flow_priority
+\n\fmachine_code
 \n\fmachine_info
 \n\fmachine_name
 \n\fmain_capsule
@@ -40533,6 +40540,7 @@ Zulu
 \n\frtime_filter
 \n\frtime_joined
 \n\fruby_package
+\n\fscreen_width
 \n\fsdrpop_local
 \n\fsearch_score
 \n\fseconds_left
@@ -41102,6 +41110,7 @@ Zulu
 \n\rrtime_updated
 \n\rscore_changed
 \n\rscore_penalty
+\n\rscreen_height
 \n\rscreen_locked
 \n\rscreenshot_id
 \n\rsdrpop_remote
@@ -47308,7 +47317,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggen"
 ghjkl
 gidlist
 gidparentcomment
@@ -47911,7 +47920,8 @@ http://jabber.org/protocol/disco#info
 http://jabber.org/protocol/disco#items
 http://jabber.org/protocol/nick
 http://musicbrainz.org
-http://test.steampowered.com/204
+http://steamconnecttest.com/
+http://steamconnecttest.com/204
 http://www.google.com/session
 http://www.google.com/transport/p2p
 http://www.w3.org/2000/xmlns/
@@ -59198,7 +59208,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr  2 2026 23:25:47
+steam Apr  7 2026 01:10:37
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

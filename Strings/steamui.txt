@@ -2318,7 +2318,6 @@ ${LANGUAGE}
 %s: skipping set as steamos-manager is already in the desired state: %d -> %d
 %s: skipping set as steamos-manager is already in the desired state: %s -> %s
 %s: starting
-%s: starting post-update wait: %d seconds
 %s: starting update check
 %s: starting update: %s
 %s: switching to desktop via SteamOSManager
@@ -3409,6 +3408,7 @@ ${LANGUAGE}
 (\t"/\n-CAccountHardware_ManageSavedHardware_Response"@\n-CAccountHardware_GetSavedHardwareList_Request
 (\t"/\n-CUserAccount_RedeemFriendInviteToken_Response"D\n,CUserAccount_RevokeFriendInviteToken_Request
 (\t"/\n-CUserAccount_RevokeFriendInviteToken_Response">\n'CUserAccount_RegisterCompatTool_Request
+(\t"0\n.CAccountHardware_RegisterSteamMachine_Response*
 (\t"0\n.CBroadcast_SendBroadcastStateToServer_Response"O\n7CBroadcast_NotifyBroadcastSessionHeartbeat_Notification
 (\t"1\n/CFamilyGroups_ModifyFamilyGroupDetails_Response"
 (\t"1\n/CGameRecording_UserRemoveTimelineEntry_Response"J\n6CGameRecording_ManuallyDeleteRecordingsForApps_Request
@@ -3629,7 +3629,7 @@ ${LANGUAGE}
 (\v2&.ParentalTemporaryPlaytimeRestrictionsB
 (\v2&.google.protobuf.ExtensionRangeOptions
 (\v2&.google.protobuf.MethodDescriptorProto
-(\v2'.CAccountHardware_SavedHardware_Details*
+(\v2'.CAccountHardware_SavedHardware_Details"\\n-CAccountHardware_RegisterSteamMachine_Request
 (\v2'.CClientMetrics_ClientBootstrap_Summary"
 (\v2'.CClientMetrics_IPv6Connectivity_Result
 (\v2'.CGameRecording_QueryPhases_Request.Tag
@@ -4722,6 +4722,7 @@ ${LANGUAGE}
 *ZN30CTransportValidationController10InitializeEvEUlRK47CTransportValidation_RequestInvalidBool_RequestR48CTransportValidation_RequestInvalidBool_ResponseE4_
 *ZN30CTransportValidationController10InitializeEvEUlRK48CTransportValidation_GetLastNotifyNumber_RequestR49CTransportValidation_GetLastNotifyNumber_ResponseE1_
 *ZN30CTransportValidationController10InitializeEvEUlRK53CTransportValidation_RequestLargeNotification_RequestR54CTransportValidation_RequestLargeNotification_ResponseE6_
+*ZN31CHardwareRegistrationController29UpdateRegistrationIfNecessaryEvEUlvE0_
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE29CWebUIBluetoothManagerPairJob
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE31CWebUIBluetoothManagerForgetJob
 *ZN31CSystemBluetoothControllerLinux10InitializeEvE32CWebUIBluetoothManagerConnectJob
@@ -5654,6 +5655,7 @@ ${LANGUAGE}
 ../tenfoot/resource/images/library/controller/binding_icons
 ..CAccountHardware_GetSavedHardwareList_Request
 ..CAccountHardware_ManageSavedHardware_Response"
+..CAccountHardware_RegisterSteamMachine_Request
 ..CAccountHardware_VRCompatibilityCheck_Request
 ..CAuthentication_BeginAuthSessionViaQR_Request
 ..CAuthentication_PollAuthSessionStatus_Request
@@ -6538,6 +6540,7 @@ ${LANGUAGE}
 /)IMT
 /+ep+eqU
 /.CAccountHardware_GetSavedHardwareList_Response"
+/.CAccountHardware_RegisterSteamMachine_Response"
 /.CAccountHardware_VRCompatibilityCheck_Response"
 /.CAuthenticationSupport_GetTokenHistory_Request
 /.CAuthentication_BeginAuthSessionViaQR_Response"
@@ -6968,7 +6971,7 @@ ${LANGUAGE}
 /data/src/steamUI/hardwareupdatecontroller.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp:148
 /data/src/steamUI/hardwareupdatecontroller.cpp:214
-/data/src/steamUI/hardwareupdatecontroller.cpp:259
+/data/src/steamUI/hardwareupdatecontroller.cpp:250
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
@@ -7146,6 +7149,7 @@ ${LANGUAGE}
 /steaminputuservirtualmenuicon/%s
 /sys/bus/iio/devices
 /sys/class/backlight/
+/sys/class/dmi/board_serial
 /sys/class/dmi/id/bios_version
 /sys/class/dmi/id/board_name
 /sys/class/dmi/id/board_vendor
@@ -9008,6 +9012,7 @@ ${LANGUAGE}
 18CScheduledFunctionI25CHTTPClientNetworkRequestE
 18CScheduledFunctionI25CHardwareUpdateControllerE
 18CScheduledFunctionI27CHTTPServerClientConnectionE
+18CScheduledFunctionI31CHardwareRegistrationControllerE
 18CScheduledFunctionI32CSystemStorageDeviceManagerLinuxE
 18CSetCaptureSizeMsg
 18CSetCursorImageMsg
@@ -10644,6 +10649,7 @@ ${LANGUAGE}
 31CHIDMessageToRemote_DeviceClose
 31CHIDMessageToRemote_DeviceWrite
 31CHTTPServerParseRequestWorkItem
+31CHardwareRegistrationController
 31CHardwareUpdate_Update_Response
 31CInventory_ExchangeItem_Request
 31CInventory_GetInventory_Request
@@ -11891,6 +11897,7 @@ ${LANGUAGE}
 456789:;<=
 45CAccountHardware_GetSavedHardwareList_Request
 45CAccountHardware_ManageSavedHardware_Response
+45CAccountHardware_RegisterSteamMachine_Request
 45CAccountHardware_VRCompatibilityCheck_Request
 45CAuthentication_BeginAuthSessionViaQR_Request
 45CAuthentication_PollAuthSessionStatus_Request
@@ -11960,6 +11967,7 @@ ${LANGUAGE}
 45SiteServerUI_ClientStatus_Response_ClientInfo
 46$a
 46CAccountHardware_GetSavedHardwareList_Response
+46CAccountHardware_RegisterSteamMachine_Response
 46CAccountHardware_VRCompatibilityCheck_Response
 46CAuthenticationSupport_GetTokenHistory_Request
 46CAuthentication_BeginAuthSessionViaQR_Response
@@ -14018,6 +14026,7 @@ Account logon denied, need two-factor code
 Account not verified
 Account: %s \n
 AccountHardware
+AccountHardware.RegisterSteamMachine#1
 AccountHardware.UpdateControllerUsageReport#1
 AccountIDCreator
 AccountIDLastUpdated
@@ -14343,7 +14352,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  2 2026 23:25:48
+Apr  7 2026 01:10:44
 April
 Arabic
 AreFilesInSubscriptionList
@@ -16177,6 +16186,7 @@ CHTTPUtil::BFindNextHeader called with invalid parameters
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 CH\f1
 CHardwarePackageDetails
+CHardwareRegistrationController::OnPostLogonState
 CHardwareUpdateController::OnAppLifetimeNotice
 CHardwareUpdateController::OnControllerBootloaderConnected
 CHardwareUpdateController::OnControllerDetails
@@ -17122,6 +17132,7 @@ CShowCursorMsg
 CShowOnScreenKeyboardMsg"~\n#CControllerPersonalizationUpdateMsg
 CShutdownController::OnInvalidateCredentials
 CSiteLicenseClient_YldReconnectSiteLicenseProviders
+CSleepController: supports low power downloads: %d
 CSleepController::CheckIdleTimeout
 CSleepController::OnBatteryStateChanged
 CSleepController::OnControllerActionTriggered
@@ -22333,6 +22344,9 @@ Hardware encoding should be suppressed.. rebuilding
 Hardware not capable of IPT
 Hardware suppression complete.. rebuilding
 HardwareModel
+HardwareReg: failed to query device data
+HardwareReg: failed to query product serial number
+HardwareReg: failed to send request
 HardwareUpdate
 HardwareUpdate.CheckForUpdates#1
 HardwareUpdate.GetState#1
@@ -24737,6 +24751,7 @@ Method RegisterCDKey() not implemented.
 Method RegisterCompatTool() not implemented.
 Method RegisterShader() not implemented.
 Method RegisterSteamController() not implemented.
+Method RegisterSteamMachine() not implemented.
 Method RegisterValveIndexComponent() not implemented.
 Method ReloadAllReservationPositionMessages() not implemented.
 Method RemoveAppRelationship() not implemented.
@@ -25649,6 +25664,7 @@ N30CSteamUICloudStorageController34CCallbackInternal_OnPostLogonStateE
 N30CStreamingClientGameController30CCallback_OnStreamClientResultE
 N30CStreamingClientGameController41CCallback_OnRemoteClientStartStreamResultE
 N30CStreamingClientGameController43CCallback_OnRemoteClientStartStreamProgressE
+N31CHardwareRegistrationController34CCallbackInternal_OnPostLogonStateE
 N32CGameStreamVideoStageQueueThread18CProcessDataThreadE
 N36CLoadControllerPersonalizationWorker46CCallbackInternal_OnReceivedDownloadItemResultE
 N3IPC10ISharedMemE
@@ -26668,7 +26684,6 @@ OnNotificationsRequested
 OnOpen
 OnPowerButtonPressedShort
 OnPowerButtonPressedShort: non-battery device automatically finishing downloads
-OnPowerButtonPressedShort: short press
 OnProfileSlotsChanged
 OnRelease
 OnRequestAuthorization
@@ -27988,6 +28003,7 @@ RegisterProduct
 RegisterProfile
 RegisterShader
 RegisterSteamController
+RegisterSteamMachine
 RegisterSteamProtocolHandler
 RegisterValveIndexComponent
 Registered ID
@@ -32565,6 +32581,7 @@ YldTriggerScreenReaderAction
 YldTrimAll
 YldUnmount
 YldUpdateDownloadSourceList
+YldUpdateRegistration
 YldUpdateUsageReportIfNecessary
 YldZipClip
 YnFpW
@@ -33441,6 +33458,7 @@ Zulu
 \n\flibrary_hero
 \n\floc_group_id
 \n\flow_priority
+\n\fmachine_code
 \n\fmachine_name
 \n\fmain_capsule
 \n\fmanifest_url
@@ -33500,6 +33518,7 @@ Zulu
 \n\frtime_filter
 \n\frtime_joined
 \n\fruby_package
+\n\fscreen_width
 \n\fsearch_score
 \n\fsegment_size
 \n\fsession_name
@@ -33983,6 +34002,7 @@ Zulu
 \n\rrtime_created
 \n\rrtime_expires
 \n\rrtime_updated
+\n\rscreen_height
 \n\rscreen_locked
 \n\rscreenshot_id
 \n\rseconds_delay
@@ -47502,6 +47522,7 @@ m_pHTTPClient
 m_pHTTPRedirectHandler
 m_pHTTPRequest
 m_pHTTPServer
+m_pHardwareRegistrationController
 m_pHardwareUpdateController
 m_pHeader->ip_v6().length() == 16
 m_pImageList
