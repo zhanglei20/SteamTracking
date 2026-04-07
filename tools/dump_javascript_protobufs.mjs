@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { createWriteStream } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
-import { join as pathJoin, resolve as pathResolve } from "node:path";
+import { basename as pathBasename, join as pathJoin, resolve as pathResolve } from "node:path";
 import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";
 import { GetFilesToParse } from "./dump_javascript_paths.mjs";
@@ -115,48 +115,36 @@ for (const file of files) {
 		const messages = [];
 		const enums = [];
 
-		// React native code is minified differently, so we need to handle it separately
-		if (file.includes("steammobile_")) {
-			traverse(ast, {
-				enter: function (node) {
-					if (
-						node.type === Syntax.ExpressionStatement &&
-						node.expression.type === Syntax.CallExpression &&
-						node.expression.callee.type === Syntax.Identifier &&
-						node.expression.callee.name === "__d" &&
-						node.expression.arguments[0].type === Syntax.FunctionExpression &&
-						node.expression.arguments[0].body.type === Syntax.BlockStatement &&
-						node.expression.arguments[0].params.length === 7
-					) {
-						this.skip();
+		// ESM chunks (top-level `import`/`export` statements) go through a
+		// separate traversal. Webpack chunks contain their modules as Property
+		// nodes inside an object literal and still use the original path.
+		const isEsm = ast.body.some(
+			(node) =>
+				node.type === Syntax.ImportDeclaration ||
+				node.type === Syntax.ExportNamedDeclaration ||
+				node.type === Syntax.ExportDefaultDeclaration,
+		);
 
-						const func = node.expression.arguments[0].body;
-						const requireVar = node.expression.arguments[0].params[1].name;
-						const exportVar = node.expression.arguments[0].params[5].name;
-						const dependencyMapVar = node.expression.arguments[0].params[6].name;
-						const currentModule = node.expression.arguments[1].value;
-						const dependencyMap = [];
+		if (isEsm) {
+			const result = TraverseEsmModule(ast);
+			const currentModule = pathBasename(file);
 
-						for (const dep of node.expression.arguments[2].elements) {
-							dependencyMap.push(dep.value);
-						}
+			crossModuleExportedMessages.set(currentModule, result.exportedIds);
 
-						const result = TraverseReactNativeModule(func, requireVar, exportVar, dependencyMapVar, dependencyMap);
+			if (globalModuleExportedMessages.has(currentModule)) {
+				globalModuleExportedMessages.set(
+					currentModule,
+					new Map([...globalModuleExportedMessages.get(currentModule), ...result.exportedIds]),
+				);
+			} else {
+				globalModuleExportedMessages.set(currentModule, result.exportedIds);
+			}
 
-						if (crossModuleExportedMessages.has(currentModule)) {
-							throw new Error("Module already exported");
-						}
+			FixTypesSameModule(result.services, result.messages);
 
-						crossModuleExportedMessages.set(currentModule, result.exportedIds);
-
-						// Look up field types from other messages in same module
-						FixTypesSameModule(result.services, result.messages);
-
-						services.push(...result.services);
-						messages.push(...result.messages);
-					}
-				},
-			});
+			services.push(...result.services);
+			messages.push(...result.messages);
+			enums.push(...result.enums);
 		} else {
 			traverse(ast, {
 				enter: function (node) {
@@ -785,7 +773,7 @@ function FixTypesSameModule(services, messages) {
 	}
 
 	for (const service of services) {
-		if (service.requestToLookup) {
+		if (service.requestToLookup?.names) {
 			outerLoop: for (const requestToLookup of service.requestToLookup.names) {
 				for (const message of messages) {
 					if (requestToLookup === message.className) {
@@ -872,6 +860,18 @@ function FixTypesCrossModule(services, messages, crossModuleExportedMessages) {
 		// This is only needed because of setting requestToLookup above
 		// Otherwise it doesn't find anything new
 		if (service.requestToLookup) {
+			// ESM: targeted cross-module lookup by {module, name}
+			if (service.requestToLookup.module) {
+				const className = GetType(service.requestToLookup);
+
+				if (className !== null) {
+					service.request = className;
+					service.requestToLookup = null;
+				}
+
+				continue;
+			}
+
 			outerLoop: for (const requestToLookup of service.requestToLookup.names) {
 				for (const [, map] of crossModuleExportedMessages) {
 					for (const [, className] of map) {
@@ -1218,6 +1218,178 @@ function TraverseModule(ast, fileName) {
 }
 
 /**
+ * Parse an ES module file (top-level `import`/`export` statements, classes as
+ * `var X = class extends o.Message { ... }` expressions) rather than a webpack
+ * runtime chunk.
+ *
+ * @param {Node} ast
+ * @returns {TraverseResult}
+ */
+function TraverseEsmModule(ast) {
+	const services = [];
+	const messages = [];
+	const enums = [];
+	// importedIds stays empty here — ESM has no webpack `r("id")` calls, so the
+	// shared helpers' MemberExpression path never fires. Cross-file resolution
+	// in ESM goes through esmImports instead.
+	const importedIds = new Map();
+	/** @type {Map<string, {module: string, name: string}>} */
+	const esmImports = new Map();
+	const exportedIds = new Map();
+	const exportLocalToExported = new Map();
+
+	// Pass 1: collect ESM import specifiers so we know which identifiers are
+	// cross-file references and their exported name in the source chunk.
+	for (const node of ast.body) {
+		if (node.type === Syntax.ImportDeclaration) {
+			const moduleKey = pathBasename(node.source.value);
+
+			for (const spec of node.specifiers) {
+				if (spec.type === Syntax.ImportSpecifier) {
+					esmImports.set(spec.local.name, {
+						module: moduleKey,
+						name: spec.imported.name,
+					});
+				} else if (spec.type === Syntax.ImportDefaultSpecifier) {
+					esmImports.set(spec.local.name, {
+						module: moduleKey,
+						name: "default",
+					});
+				}
+			}
+		} else if (node.type === Syntax.ExportNamedDeclaration && !node.source) {
+			for (const spec of node.specifiers) {
+				if (spec.type === Syntax.ExportSpecifier) {
+					exportLocalToExported.set(spec.local.name, spec.exported.name);
+				}
+			}
+		}
+	}
+
+	// Pass 2: walk the whole program for classes, services, enums.
+	traverse(ast, {
+		enter: function (node, parent) {
+			// var Ae = class t extends o.Message { ... }
+			if (
+				node.type === Syntax.VariableDeclarator &&
+				node.id.type === Syntax.Identifier &&
+				node.init?.type === Syntax.ClassExpression &&
+				node.init.superClass?.type === Syntax.MemberExpression &&
+				node.init.superClass.property.type === Syntax.Identifier &&
+				node.init.superClass.property.name === "Message"
+			) {
+				const message = TraverseClass(node.init.body, importedIds);
+				message.id = node.id.name;
+				messages.push(message);
+				this.skip();
+				return;
+			}
+
+			/*
+				s.NotifyFileSubscribedHandler = {
+					name: "PublishedFileClient.NotifyFileSubscribed#1",
+					request: Ti,
+				}
+			*/
+			if (
+				node.type === Syntax.AssignmentExpression &&
+				node.left.type === Syntax.MemberExpression &&
+				node.right.type === Syntax.ObjectExpression &&
+				node.right.properties.length === 2 &&
+				node.right.properties[0].type === Syntax.Property &&
+				node.right.properties[1].type === Syntax.Property &&
+				node.right.properties[0].key.name === "name" &&
+				node.right.properties[1].key.name === "request"
+			) {
+				services.push(GetMsgResponse(node, messages, esmImports));
+				this.skip();
+				return;
+			}
+
+			/*
+				return n.SendMsg("PublishedFile.GetOwner#1", m(Ae, l), Me, { ... });
+				return n.SendNotification("ClientMetrics.ClientBootstrapReport#1", t, { ... });
+			*/
+			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
+				let msg = null;
+				if (node.property.name === "SendMsg") {
+					msg = GetSendMsg(parent, messages, importedIds, esmImports);
+				} else if (node.property.name === "SendNotification") {
+					msg = GetSendNotification(parent);
+				}
+
+				if (msg !== null) {
+					services.push(msg);
+					this.skip();
+					return;
+				}
+			}
+
+			/*
+				(e[(e.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
+			*/
+			if (
+				node.type === Syntax.SequenceExpression &&
+				node.expressions.every(
+					(e) =>
+						e.type === Syntax.AssignmentExpression &&
+						e.left.type === Syntax.MemberExpression &&
+						e.right.type === Syntax.Literal &&
+						e.left.property.type === Syntax.AssignmentExpression &&
+						e.left.property.left.property.name === e.right.value,
+				)
+			) {
+				const enumObj = ParseEnum(node);
+
+				if (enumObj !== null) {
+					enums.push(enumObj);
+					this.skip();
+					return;
+				}
+			}
+		},
+	});
+
+	// Pass 3: rewrite field typeToLookup entries that reference imported symbols
+	// (FixTypesSameModule would otherwise throw because `name` isn't a local id).
+	for (const message of messages) {
+		for (const field of message.fields) {
+			if (!field.typeToLookup || field.typeToLookup.module !== null) {
+				continue;
+			}
+
+			if (field.typeToLookup.recursive) {
+				continue;
+			}
+
+			const name = field.typeToLookup.name;
+
+			if (messages.some((m) => m.id === name)) {
+				continue;
+			}
+
+			const imp = esmImports.get(name);
+
+			if (imp) {
+				field.typeToLookup = { module: imp.module, name: imp.name };
+			}
+		}
+	}
+
+	// Pass 4: map ESM `export { local as exported }` specifiers to the class
+	// names we discovered, mirroring what `r.d(...)` does in the webpack path.
+	for (const [local, exported] of exportLocalToExported) {
+		const message = messages.find((m) => m.id === local);
+
+		if (message) {
+			exportedIds.set(exported, message.className);
+		}
+	}
+
+	return { services, messages, enums, exportedIds };
+}
+
+/**
  * @param {Node} ast
  * @param {Map<string, string>} importedIds
  * @returns {Message}
@@ -1290,210 +1462,6 @@ function TraverseClass(ast, importedIds) {
 
 	if (message.className === null) {
 		throw new Error("Failed to find classname");
-	}
-
-	return message;
-}
-
-/**
- * @param {Node} ast
- * @param {string} requireVar
- * @param {string} exportVar
- * @param {string} dependencyMapVar
- * @param {string[]} dependencyMap
- * @returns {TraverseResult}
- */
-function TraverseReactNativeModule(ast, requireVar, exportVar, dependencyMapVar, dependencyMap) {
-	const services = [];
-	const messages = [];
-	const enums = [];
-	const importedIds = new Map();
-	const exportedIds = new Map();
-	let messageIdentifier = null;
-
-	traverse(ast, {
-		enter: function (node, parent) {
-			/*
-				var P = c.Message;
-			*/
-			if (
-				node.type === Syntax.VariableDeclarator &&
-				node.id.type === Syntax.Identifier &&
-				node.init?.type === Syntax.MemberExpression &&
-				node.init.property.type === Syntax.Identifier &&
-				node.init.property.name === "Message"
-			) {
-				messageIdentifier = node.id.name;
-				return;
-			}
-
-			/*
-				h = r(o[10])
-			*/
-			if (node.type === Syntax.VariableDeclarator && node.init) {
-				const importedId = CheckReactNativeRequireExpression(node.init, requireVar, dependencyMapVar, dependencyMap);
-
-				if (importedId !== null) {
-					const localId = node.id.name;
-					importedIds.set(localId, importedId);
-					return;
-				}
-			}
-
-			/*
-				S = (r(d[15]), r(d[16]));
-			*/
-			if (node.type === Syntax.VariableDeclarator && node.init?.type === Syntax.SequenceExpression) {
-				const call = node.init.expressions[node.init.expressions.length - 1];
-
-				const importedId = CheckReactNativeRequireExpression(call, requireVar, dependencyMapVar, dependencyMap);
-
-				if (importedId !== null) {
-					const localId = node.id.name;
-					importedIds.set(localId, importedId);
-					return;
-				}
-
-				/* TODO: Not needed so far?
-				if (
-					call.type === Syntax.MemberExpression &&
-					call.property.type === Syntax.Identifier &&
-					call.property.name === "Message"
-				) {
-					messageIdentifier = node.id.name;
-					return;
-				}
-				*/
-			}
-
-			/*
-				a.CAuthentication_GetPasswordRSAPublicKey_Request = p;
-			*/
-			if (
-				node.type === Syntax.AssignmentExpression &&
-				node.left.type === Syntax.MemberExpression &&
-				node.left.object.type === Syntax.Identifier &&
-				node.left.object.name === exportVar &&
-				node.right.type === Syntax.Identifier
-			) {
-				const exportedId = node.left.property.name;
-				const localId = node.right.name;
-				const message = messages.find((m) => m.id === localId);
-
-				if (message) {
-					exportedIds.set(exportedId, message.className);
-				}
-
-				return;
-			}
-
-			/*
-				var _ = (function (t) {
-
-				})(P);
-			*/
-			if (
-				node.type === Syntax.VariableDeclarator &&
-				node.id.type === Syntax.Identifier &&
-				node.init?.type === Syntax.CallExpression &&
-				node.init.arguments.length === 1 &&
-				node.init.arguments[0].type === Syntax.Identifier &&
-				node.init.arguments[0].name === messageIdentifier &&
-				node.init.callee?.type === Syntax.FunctionExpression &&
-				node.init.callee?.body.type === Syntax.BlockStatement
-			) {
-				const message = ParseReactNativeMessage(node.init.callee.body, importedIds);
-
-				if (message !== null) {
-					message.id = node.id.name;
-					messages.push(message);
-				}
-
-				this.skip();
-				return;
-			}
-
-			/*
-				return e.SendMsg("Video.ClientGetVideoURL#1", t, s, { ePrivilege: 1 });
-				return e.SendNotification("ClientMetrics.ClientBootstrapReport#1", t, { ePrivilege: 1 });
-			*/
-			if (node.type === Syntax.MemberExpression && node.property.type === Syntax.Identifier) {
-				let msg = null;
-				if (node.property.name === "SendMsg") {
-					msg = GetSendMsg(parent, messages, importedIds);
-				} else if (node.property.name === "SendNotification") {
-					msg = GetSendNotification(parent);
-				}
-
-				if (msg !== null) {
-					services.push(msg);
-					this.skip();
-					return;
-				}
-			}
-		},
-	});
-
-	return { services, messages, enums, exportedIds };
-}
-
-/**
- * @param {Object} node
- * @param {string} requireVar
- * @param {string} dependencyMapVar
- * @param {string[]} dependencyMap
- */
-function CheckReactNativeRequireExpression(node, requireVar, dependencyMapVar, dependencyMap) {
-	if (
-		node.type === Syntax.CallExpression &&
-		node.callee.type === Syntax.Identifier &&
-		node.callee.name === requireVar &&
-		node.arguments.length === 1 &&
-		node.arguments[0].type === Syntax.MemberExpression &&
-		node.arguments[0].object.type === Syntax.Identifier &&
-		node.arguments[0].object.name === dependencyMapVar
-	) {
-		return dependencyMap[node.arguments[0].property.value];
-	}
-
-	return null;
-}
-
-/**
- * @param {Node} node
- * @param {Map<string, string>} importedIds
- * @returns {Message|null}
- */
-function ParseReactNativeMessage(node, importedIds) {
-	const ret = node.body[node.body.length - 1];
-
-	if (ret.type !== Syntax.ReturnStatement) {
-		return null;
-	}
-
-	const keys = [
-		...ret.argument.expressions[0].arguments[1].elements,
-		...ret.argument.expressions[0].arguments[2].elements,
-	];
-
-	const message = {
-		className: null,
-		dependants: new Set(),
-		fields: [],
-	};
-
-	for (const key of keys) {
-		if (key.type !== Syntax.ObjectExpression) {
-			continue;
-		}
-
-		const name = key.properties[0].value.value;
-
-		if (name === "getClassName") {
-			message.className = GetClassNameLiteral(key.properties[1]);
-		} else if (name === "M") {
-			message.fields = TraverseFields(key.properties[1], importedIds);
-		}
 	}
 
 	return message;
@@ -1656,9 +1624,10 @@ function GetClassNameLiteral(ast) {
 /**
  * @param {Object} node
  * @param {Message[]} messages
+ * @param {Map<string, {module: string, name: string}>|null} [esmImports]
  * @returns {Service}
  */
-function GetMsgResponse(node, messages) {
+function GetMsgResponse(node, messages, esmImports = null) {
 	if (!node.left.property.name.endsWith("Handler")) {
 		throw new Error("Unexpected handler name");
 	}
@@ -1671,18 +1640,34 @@ function GetMsgResponse(node, messages) {
 		throw new Error("Unexpected request message");
 	}
 
+	const name = node.right.properties[0].value.value;
 	const requestToLookup = node.right.properties[1].value.name;
 	const message = messages.find((m) => m.id === requestToLookup);
 
-	if (!message) {
-		throw new Error("Failed to find request message");
+	if (message) {
+		return {
+			name: name,
+			request: message.className,
+			response: NoResponse,
+		};
 	}
 
-	return {
-		name: node.right.properties[0].value.value,
-		request: message.className,
-		response: NoResponse,
-	};
+	// ESM: request may reference a symbol imported from another chunk
+	if (esmImports?.has(requestToLookup)) {
+		const imp = esmImports.get(requestToLookup);
+
+		return {
+			name: name,
+			request: NotImplemented,
+			response: NoResponse,
+			requestToLookup: {
+				module: imp.module,
+				name: imp.name,
+			},
+		};
+	}
+
+	throw new Error("Failed to find request message");
 }
 
 /**
@@ -1722,9 +1707,10 @@ SendMsg: <Req extends jspb.Message, Res extends jspb.Message>(
  * @param {Object} node
  * @param {Message[]} messages
  * @param {Map<string, string>} importedIds
+ * @param {Map<string, {module: string, name: string}>|null} [esmImports]
  * @returns {Service|null}
  */
-function GetSendMsg(node, messages, importedIds) {
+function GetSendMsg(node, messages, importedIds, esmImports = null) {
 	if (node.type !== Syntax.CallExpression || node.arguments.length !== 4 || node.arguments[0].type !== Syntax.Literal) {
 		return null;
 	}
@@ -1740,24 +1726,40 @@ function GetSendMsg(node, messages, importedIds) {
 		const responseToLookup = node.arguments[2].name;
 		const response = messages.find((m) => m.id === responseToLookup);
 
-		if (!response) {
-			throw new Error("Failed to find response message");
+		if (response) {
+			if (!response.className.endsWith("_Response")) {
+				throw new Error("Unexpected message response");
+			}
+
+			return {
+				name: name,
+				request: NotImplemented,
+				response: response.className,
+				requestToLookup: {
+					//module: null, // all modules
+					names: GenerateRequestNames(name, response.className),
+				},
+				serviceMethodParams: GetServiceMethodParams(node.arguments[3].properties),
+			};
 		}
 
-		if (!response.className.endsWith("_Response")) {
-			throw new Error("Unexpected message response");
+		// ESM: response may reference a symbol imported from another chunk
+		if (esmImports?.has(responseToLookup)) {
+			const imp = esmImports.get(responseToLookup);
+
+			return {
+				name: name,
+				request: NotImplemented,
+				response: NoResponse,
+				responseToLookup: {
+					module: imp.module,
+					name: imp.name,
+				},
+				serviceMethodParams: GetServiceMethodParams(node.arguments[3].properties),
+			};
 		}
 
-		return {
-			name: name,
-			request: NotImplemented,
-			response: response.className,
-			requestToLookup: {
-				//module: null, // all modules
-				names: GenerateRequestNames(name, response.className),
-			},
-			serviceMethodParams: GetServiceMethodParams(node.arguments[3].properties),
-		};
+		throw new Error("Failed to find response message");
 	} else if (node.arguments[2].type === Syntax.MemberExpression) {
 		const importedModule = importedIds.get(node.arguments[2].object.name);
 

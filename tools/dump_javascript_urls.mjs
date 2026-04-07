@@ -22,12 +22,7 @@ for await (const file of GetRecursiveFilesToParse()) {
 				if (node.type === Syntax.TemplateLiteral && node.expressions.some(IsBaseUrlExpression)) {
 					allStrings.add(ConstructLiteral(node));
 					this.skip();
-				} else if (
-					node.type === Syntax.Literal &&
-					IsBaseUrlExpression(node) &&
-					!file.endsWith("steammobile_chat.js") &&
-					!file.endsWith("steammobile_app.js")
-				) {
+				} else if (node.type === Syntax.Literal && IsBaseUrlExpression(node)) {
 					allStrings.add(FormatNode(node, true).join(""));
 					this.skip();
 				} else if (node.type === Syntax.BinaryExpression && IsLeftSideBaseUrlExpression(node)) {
