@@ -530,6 +530,7 @@
     95695: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -3651,23 +3652,37 @@
             accentColor: t,
             dullColor: r,
             bodyTextColor: s,
-            children: a,
-            breakpoints: o,
+            children: o,
+            breakpoints: l,
           } = e,
-          l = (0, i.jsx)("div", {
-            "data-accent-color": t,
-            "data-dull-color": r,
-            "data-body-text-color": s,
-            style: { display: "contents" },
-            children: (0, i.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: a,
-            }),
-          });
-        return o ? (0, i.jsx)(n.cW, { breakpoints: o, children: l }) : l;
+          c = { display: "contents" };
+        let u, d, m;
+        "string" == typeof t ? (u = t) : t && a(c, "accent", t),
+          "string" == typeof r ? (d = r) : r && a(c, "dull", r),
+          "string" == typeof s
+            ? (m = s)
+            : s &&
+              (function (e, t) {
+                for (const [r, i] of Object.entries(t))
+                  e[`--color-text-body-${r}`] = i;
+              })(c, s);
+        const g = (0, i.jsx)("div", {
+          "data-accent-color": u,
+          "data-dull-color": d,
+          "data-body-text-color": m,
+          style: c,
+          children: (0, i.jsx)("div", {
+            style: {
+              display: "contents",
+              color: "var(--color-text-body-body)",
+            },
+            children: o,
+          }),
+        });
+        return l ? (0, i.jsx)(n.cW, { breakpoints: l, children: g }) : g;
+      }
+      function a(e, t, r) {
+        for (const [i, n] of Object.entries(r)) e[`--color-${t}-${i}`] = n;
       }
     },
     96678: (e, t, r) => {
@@ -67558,8 +67573,8 @@
           : null;
       }
       function f(e) {
-        const { gidClanEvent: t, rgSocial: r } = e,
-          a = (function (e) {
+        const { gidClanEvent: t, rgSocial: r, bIsCreatorHomeEvent: a } = e,
+          o = (function (e) {
             return (0, n.useMemo)(
               () =>
                 e
@@ -67576,7 +67591,7 @@
               [e],
             );
           })(r);
-        return a && 0 != a.length && g.TS.IMG_URL
+        return o && 0 != o.length && g.TS.IMG_URL
           ? (0, i.jsxs)(i.Fragment, {
               children: [
                 (0, i.jsx)("div", {
@@ -67584,9 +67599,11 @@
                     l().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: (0, d.we)("#EventDisplay_Sale_SocialTitle"),
+                  children: a
+                    ? (0, d.we)("#EventDisplay_Sale_SocialTitle_Dev")
+                    : (0, d.we)("#EventDisplay_Sale_SocialTitle"),
                 }),
-                (0, i.jsx)(y, { id: t, rgSocialMedia: a }),
+                (0, i.jsx)(y, { id: t, rgSocialMedia: o }),
               ],
             })
           : null;

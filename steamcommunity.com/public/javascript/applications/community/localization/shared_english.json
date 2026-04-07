@@ -534,6 +534,7 @@
     "EventDisplay_Sketchfab": "Sketchfab Model",
     "EventDisplay_SketchFab_Error_Network": "Could not contact Sketchfab",
     "EventDisplay_Sale_SocialTitle": "More Ways To Connect with Event Host:",
+    "EventDisplay_Sale_SocialTitle_Dev": "More Ways To Connect with this creator:",
     "EventEditor_Publish_VisibleNow": "Make Visible Now",
     "EventEditor_Publish_VisibleNow_ttip": "This event will automatically become visible at the scheduled time. This button forces the event to become immediately visible.",
     "EventEditor_Edit": "Edit Event",

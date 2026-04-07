@@ -31485,13 +31485,14 @@
       }
       function Vs(e) {
         const { eventModel: t, titleOverride: n } = e,
-          [a, s] = (0, at.q3)(() => [
+          [a, s, o] = (0, at.q3)(() => [
             t.GID,
             t.jsondata.sale_social_media_items,
+            t.GetEventType(),
           ]),
-          [o, l, c] = (0, ks.uD)(),
-          d = (0, Ps.EX)(t),
-          u = (0, Ps.JP)(t);
+          [l, c, d] = (0, ks.uD)(),
+          u = (0, Ps.EX)(t),
+          m = (0, Ps.JP)(t);
         return t.BHasTag("contenthub")
           ? null
           : (0, i.jsxs)(i.Fragment, {
@@ -31511,7 +31512,7 @@
                     Gs().ShareButton,
                     "SocialShareButton",
                   ),
-                  onActivate: l,
+                  onActivate: c,
                   children: [
                     (0, i.jsx)(v.SYj, {
                       className: (0, b.A)(Gs().ShareIcon, "SocialShareIcon"),
@@ -31526,17 +31527,21 @@
                   className: Gs().SalePageSocialLinks,
                   children:
                     Boolean((null == s ? void 0 : s.length) > 0) &&
-                    (0, i.jsx)(Fs.lz, { gidClanEvent: a, rgSocial: s }),
+                    (0, i.jsx)(Fs.lz, {
+                      gidClanEvent: a,
+                      rgSocial: s,
+                      bIsCreatorHomeEvent: !0,
+                    }),
                 }),
-                o &&
+                l &&
                   (0, i.jsx)(r.Suspense, {
                     fallback: null,
                     children: (0, i.jsx)(gi.EN, {
                       active: !0,
                       children: (0, i.jsx)(Ns, {
-                        closeModal: c,
-                        eventLink: d,
-                        sharePageUrls: u,
+                        closeModal: d,
+                        eventLink: u,
+                        sharePageUrls: m,
                         appid: t.appid,
                         emoticonStore: Rs.A,
                         partnerEventStore: zn.O3,

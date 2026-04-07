@@ -33391,7 +33391,11 @@
       }
       function _(_) {
         const { eventModel: _, titleOverride: _ } = _,
-          [_, _] = (0, _._)(() => [_.GID, _.jsondata.sale_social_media_items]),
+          [_, _, _] = (0, _._)(() => [
+            _.GID,
+            _.jsondata.sale_social_media_items,
+            _.GetEventType(),
+          ]),
           [_, _, _] = (0, _._)(),
           _ = (0, _._)(_),
           _ = (0, _._)(_);
@@ -33432,6 +33436,7 @@
                     (0, _.jsx)(_._, {
                       gidClanEvent: _,
                       rgSocial: _,
+                      bIsCreatorHomeEvent: !0,
                     }),
                 }),
                 _ &&

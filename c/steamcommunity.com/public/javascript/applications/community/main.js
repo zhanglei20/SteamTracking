@@ -534,6 +534,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PartnerEventFont: "LK4bXmKAknKopK864hJFM",
         Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
         Divider: "_3B5HO7jdTpNaectJS1a6UZ",
@@ -3936,27 +3937,41 @@
             children: _,
             breakpoints: _,
           } = _,
-          _ = (0, _.jsx)("div", {
-            "data-accent-color": _,
-            "data-dull-color": _,
-            "data-body-text-color": _,
+          _ = {
+            display: "contents",
+          };
+        let _, _, _;
+        "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
+          "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
+          "string" == typeof _
+            ? (_ = _)
+            : _ &&
+              (function (_, _) {
+                for (const [_, _] of Object.entries(_))
+                  _[`--color-text-body-${_}`] = _;
+              })(_, _);
+        const _ = (0, _.jsx)("div", {
+          "data-accent-color": _,
+          "data-dull-color": _,
+          "data-body-text-color": _,
+          style: _,
+          children: (0, _.jsx)("div", {
             style: {
               display: "contents",
+              color: "var(--color-text-body-body)",
             },
-            children: (0, _.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: _,
-            }),
-          });
+            children: _,
+          }),
+        });
         return _
           ? (0, _.jsx)(_._, {
               breakpoints: _,
               children: _,
             })
           : _;
+      }
+      function _(_, _, _) {
+        for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -74369,7 +74384,7 @@
           : null;
       }
       function _(_) {
-        const { gidClanEvent: _, rgSocial: _ } = _,
+        const { gidClanEvent: _, rgSocial: _, bIsCreatorHomeEvent: _ } = _,
           _ = (function (_) {
             return (0, _.useMemo)(
               () =>
@@ -74397,7 +74412,9 @@
                     _().EventEditorTextTitle,
                     "EventEditorTextTitle",
                   ),
-                  children: (0, _._)("#EventDisplay_Sale_SocialTitle"),
+                  children: _
+                    ? (0, _._)("#EventDisplay_Sale_SocialTitle_Dev")
+                    : (0, _._)("#EventDisplay_Sale_SocialTitle"),
                 }),
                 (0, _.jsx)(_, {
                   _: _,
