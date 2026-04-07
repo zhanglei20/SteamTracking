@@ -1737,8 +1737,6 @@
     "Sale_InteractiveRecommender_ttip": "Will display games from this page AND are in the top 150 recommendations that Steam has for the user. This only works for recommending released products.",
     "Sale_PersonalizedCarousel": "Personalized: Games that match a single favorite tag",
     "Sale_PersonalizedCarousel_ttip": "Each of these will show games for one of the users' top played tags. The first of these will show the top tag, the second will show the next played tag, and so on.",
-    "Sale_PersonalizedCarousel_Section_Editor_title": "Personalized Carousel (%1$s/%2$s)",
-    "Sale_CreatorList_Section_Editor_title": "Creator List - %1$s",
     "Sale_SmartSection_Recommended": "Personalized: Recommended by tags",
     "Sale_SmartSection_Recommended_ttip": "Will display games from this page based on similarity of tags for the players' recently played. Can include unreleased games.",
     "Sale_SmartSection_DiscountedPopular": "Discounted, Sorted by popularity",

@@ -266,130 +266,6 @@
   var _ = _(() => {
     "use strict";
   });
-  function _(_, _) {
-    return (
-      (_ = Math.ceil(_)),
-      (_ = Math.floor(_)),
-      Math.floor(Math.random() * (_ - _ + 1)) + _
-    );
-  }
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _,
-    _ = _(() => {
-      "use strict";
-      _ = class extends Error {
-        eResult;
-        constructor(_, _) {
-          super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _);
-        }
-      };
-    });
-  var _,
-    _ = _(() => {
-      "use strict";
-      _();
-      _ = class {
-        m_vecCallbacks = [];
-        Register(_) {
-          return (
-            this.m_vecCallbacks.push(_),
-            {
-              Unregister: () => {
-                _(this.m_vecCallbacks, _);
-              },
-            }
-          );
-        }
-        Dispatch(..._) {
-          for (let _ of Array.from(this.m_vecCallbacks)) _(..._);
-        }
-        ClearAllCallbacks() {
-          this.m_vecCallbacks = [];
-        }
-        CountRegistered() {
-          return this.m_vecCallbacks.length;
-        }
-        static PromiseFromAny(_) {
-          return new Promise((_) => {
-            let _ = [],
-              _ = () => {
-                _.forEach((_) => _.Unregister()), _();
-              };
-            for (let _ of _) _.push(_.Register(_));
-          });
-        }
-      };
-    });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  function _(_, _) {
-    return _.split(_);
-  }
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  function _(_) {
-    return _.test(_) ? _ : "https://" + _;
-  }
-  var _,
-    _ = _(() => {
-      "use strict";
-      _ = /^(steam|ftp|https?):\/\//;
-    });
-  var _ = _(() => {
-    "use strict";
-  });
-  function _(_, _, _) {
-    return {
-      get() {
-        let _ = _.value.bind(this);
-        return (
-          Object.prototype.hasOwnProperty.call(this, _) ||
-            Object.defineProperty(this, _, {
-              value: _,
-            }),
-          _
-        );
-      },
-    };
-  }
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-    _();
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
-  var _ = _(() => {
-    "use strict";
-  });
   function _(_) {
     switch (_) {
       case 0:
@@ -484,6 +360,125 @@
       }
       return _;
     });
+  }
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  function _(_, _, _) {
+    return {
+      get() {
+        let _ = _.value.bind(this);
+        return (
+          Object.prototype.hasOwnProperty.call(this, _) ||
+            Object.defineProperty(this, _, {
+              value: _,
+            }),
+          _
+        );
+      },
+    };
+  }
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+    _();
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _,
+    _ = _(() => {
+      "use strict";
+      _ = class extends Error {
+        eResult;
+        constructor(_, _) {
+          super(_ ? `EResult ${_}: ${_}` : `EResult ${_}`), (this.eResult = _);
+        }
+      };
+    });
+  var _,
+    _ = _(() => {
+      "use strict";
+      _();
+      _ = class {
+        m_vecCallbacks = [];
+        Register(_) {
+          return (
+            this.m_vecCallbacks.push(_),
+            {
+              Unregister: () => {
+                _(this.m_vecCallbacks, _);
+              },
+            }
+          );
+        }
+        Dispatch(..._) {
+          for (let _ of Array.from(this.m_vecCallbacks)) _(..._);
+        }
+        ClearAllCallbacks() {
+          this.m_vecCallbacks = [];
+        }
+        CountRegistered() {
+          return this.m_vecCallbacks.length;
+        }
+        static PromiseFromAny(_) {
+          return new Promise((_) => {
+            let _ = [],
+              _ = () => {
+                _.forEach((_) => _.Unregister()), _();
+              };
+            for (let _ of _) _.push(_.Register(_));
+          });
+        }
+      };
+    });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  function _(_, _) {
+    return (
+      (_ = Math.ceil(_)),
+      (_ = Math.floor(_)),
+      Math.floor(Math.random() * (_ - _ + 1)) + _
+    );
+  }
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  var _ = _(() => {
+    "use strict";
+  });
+  function _(_, _) {
+    return _.split(_);
   }
   var _ = _(() => {
     "use strict";
@@ -991,8 +986,17 @@
       "use strict";
       _ = _(_(), 1);
     });
+  function _(_) {
+    return _.test(_) ? _ : "https://" + _;
+  }
+  var _,
+    _ = _(() => {
+      "use strict";
+      _ = /^(steam|ftp|https?):\/\//;
+    });
   var _ = _(() => {
     "use strict";
+    _();
     _();
     _();
     _();
@@ -22662,31 +22666,37 @@ Error generating stack: ` +
       return this.readSignedVarint32();
     };
     jspb.BinaryDecoder.prototype.readString = function (_) {
-      var _ = this.bytes_,
-        _ = this.cursor_;
-      _ = _ + _;
-      for (var _ = [], _ = ""; _ < _; ) {
+      for (
+        var _ = this.bytes_, _ = this.cursor_, _ = _ + _, _ = [], _ = "";
+        _ < _;
+      ) {
         var _ = _[_++];
-        if (128 > _) _.push(_);
+        if (_ < 128) _.push(_);
         else {
-          if (192 > _) continue;
-          if (224 > _) {
+          if (_ < 192) continue;
+          if (_ < 224) {
+            if (_ - _ < 1) break;
             var _ = _[_++];
             _.push(((_ & 31) << 6) | (_ & 63));
-          } else if (240 > _) {
-            _ = _[_++];
-            var _ = _[_++];
+          } else if (_ < 240) {
+            if (_ - _ < 2) break;
+            var _ = _[_++],
+              _ = _[_++];
             _.push(((_ & 15) << 12) | ((_ & 63) << 6) | (_ & 63));
-          } else if (248 > _) {
-            (_ = _[_++]), (_ = _[_++]);
-            var _ = _[_++];
-            (_ =
-              ((_ & 7) << 18) | ((_ & 63) << 12) | ((_ & 63) << 6) | (_ & 63)),
-              (_ -= 65536),
-              _.push(((_ >> 10) & 1023) + 55296, (_ & 1023) + 56320);
+          } else if (_ < 248) {
+            if (_ - _ < 3) break;
+            var _ = _[_++],
+              _ = _[_++],
+              _ = _[_++],
+              _ =
+                ((_ & 7) << 18) | ((_ & 63) << 12) | ((_ & 63) << 6) | (_ & 63);
+            _ -= 65536;
+            var _ = (_ & 1023) + 56320,
+              _ = ((_ >> 10) & 1023) + 55296;
+            _.push(_, _);
           }
         }
-        8192 <= _.length &&
+        _.length >= 8192 &&
           ((_ += String.fromCharCode.apply(null, _)), (_.length = 0));
       }
       return (_ += goog.crypt.byteArrayToString(_)), (this.cursor_ = _), _;
@@ -40138,6 +40148,14 @@ Error generating stack: ` +
         );
         return this.high != 0 ? _ + 33 : _ + 1;
       };
+      _.isSafeInteger = function () {
+        var _ = this.high >> 21;
+        return _
+          ? this.unsigned
+            ? !1
+            : _ === -1 && !(this.low === 0 && this.high === -2097152)
+          : !0;
+      };
       _.isZero = function () {
         return this.high === 0 && this.low === 0;
       };
@@ -40551,6 +40569,20 @@ Error generating stack: ` +
           _,
         );
       };
+      typeof BigInt == "function" &&
+        ((_.fromBigInt = function (_, _) {
+          var _ = Number(BigInt.asIntN(32, _)),
+            _ = Number(BigInt.asIntN(32, _ >> BigInt(32)));
+          return _(_, _, _);
+        }),
+        (_.fromValue = function (_, _) {
+          return typeof _ == "bigint" ? _.fromBigInt(_, _) : _(_, _);
+        }),
+        (_.toBigInt = function () {
+          var _ = BigInt(this.low >>> 0),
+            _ = BigInt(this.unsigned ? this.high >>> 0 : this.high);
+          return (_ << BigInt(32)) | _;
+        }));
     });
   var _ = _(() => {
     "use strict";
@@ -58085,21 +58117,20 @@ Error generating stack: ` +
     let _,
       _ = _ === "routeAction";
     _ &&
-      (_.append(_, _.action),
+      (_.append(_, `${_.routeID}:${_.action}`),
       _.append("Content-Type", "application/json; charset=utf-8"),
       (_ = _(_.data)));
-    let _ = (
-      await fetch(_, {
-        credentials: "same-origin",
-        headers: _,
-        signal: _,
-        body: _,
-        method: _ ? "POST" : "GET",
-      })
-    ).body
-      ?.pipeThrough(new TextDecoderStream())
-      .getReader();
-    if (!_) throw "no response body reader";
+    let _ = await fetch(_, {
+      credentials: "same-origin",
+      headers: _,
+      signal: _,
+      body: _,
+      method: _ ? "POST" : "GET",
+      redirect: "manual",
+    });
+    _.type === "opaqueredirect" && (location.href = _);
+    let _ = _.body?.pipeThrough(new TextDecoderStream()).getReader();
+    if (!_) throw new Error("no response body reader");
     for await (let _ of _(_)) {
       if (_?.aborted) return;
       yield _;

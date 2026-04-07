@@ -4,7 +4,7 @@
 jQuery( function($) {
 	var mqQuerySmallMode = window.matchMedia ? window.matchMedia("(max-width: 910px)") : {matches: false};
 	var mqMobileMode = window.matchMedia ? window.matchMedia("(max-width: 500px)") : {matches: false};
-	var mqWideMode = window.matchMedia ? window.matchMedia("(min-width: 1200px)") : {matches: false};
+	var mqWideMode = window.matchMedia ? window.matchMedia("(min-width: 1400px)") : {matches: false};
 
 	var $HTML = $J('html');
 	window.UseTouchFriendlyMode = function() {

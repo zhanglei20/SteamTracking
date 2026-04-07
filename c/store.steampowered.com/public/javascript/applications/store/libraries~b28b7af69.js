@@ -9383,32 +9383,36 @@
           return this.readSignedVarint32();
         }),
         (jspb.BinaryDecoder.prototype.readString = function (_) {
-          var _ = this.bytes_,
-            _ = this.cursor_;
-          _ = _ + _;
-          for (var _ = [], _ = ""; _ < _; ) {
+          for (
+            var _ = this.bytes_, _ = this.cursor_, _ = _ + _, _ = [], _ = "";
+            _ < _;
+          ) {
             var _ = _[_++];
-            if (128 > _) _.push(_);
+            if (_ < 128) _.push(_);
             else {
-              if (192 > _) continue;
-              if (224 > _) {
+              if (_ < 192) continue;
+              if (_ < 224) {
+                if (_ - _ < 1) break;
                 var _ = _[_++];
                 _.push(((31 & _) << 6) | (63 & _));
-              } else if (240 > _) {
+              } else if (_ < 240) {
+                if (_ - _ < 2) break;
                 _ = _[_++];
                 var _ = _[_++];
                 _.push(((15 & _) << 12) | ((63 & _) << 6) | (63 & _));
-              } else if (248 > _) {
-                (_ =
-                  ((7 & _) << 18) |
-                  ((63 & (_ = _[_++])) << 12) |
-                  ((63 & (_ = _[_++])) << 6) |
-                  (63 & _[_++])),
-                  (_ -= 65536),
-                  _.push(55296 + ((_ >> 10) & 1023), 56320 + (1023 & _));
+              } else if (_ < 248) {
+                if (_ - _ < 3) break;
+                var _ =
+                    ((7 & _) << 18) |
+                    ((63 & (_ = _[_++])) << 12) |
+                    ((63 & (_ = _[_++])) << 6) |
+                    (63 & _[_++]),
+                  _ = 56320 + (1023 & (_ -= 65536)),
+                  _ = 55296 + ((_ >> 10) & 1023);
+                _.push(_, _);
               }
             }
-            8192 <= _.length &&
+            _.length >= 8192 &&
               ((_ += String.fromCharCode.apply(null, _)), (_.length = 0));
           }
           return (_ += goog.crypt.byteArrayToString(_)), (this.cursor_ = _), _;

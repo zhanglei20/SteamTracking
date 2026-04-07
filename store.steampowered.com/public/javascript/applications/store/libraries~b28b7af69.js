@@ -9222,35 +9222,39 @@
           return this.readSignedVarint32();
         }),
         (jspb.BinaryDecoder.prototype.readString = function (e) {
-          var t = this.bytes_,
-            r = this.cursor_;
-          e = r + e;
-          for (var n = [], o = ""; r < e; ) {
-            var i = t[r++];
-            if (128 > i) n.push(i);
+          for (
+            var t = this.bytes_, r = this.cursor_, n = r + e, o = [], i = "";
+            r < n;
+          ) {
+            var s = t[r++];
+            if (s < 128) o.push(s);
             else {
-              if (192 > i) continue;
-              if (224 > i) {
-                var s = t[r++];
-                n.push(((31 & i) << 6) | (63 & s));
-              } else if (240 > i) {
-                s = t[r++];
+              if (s < 192) continue;
+              if (s < 224) {
+                if (n - r < 1) break;
                 var a = t[r++];
-                n.push(((15 & i) << 12) | ((63 & s) << 6) | (63 & a));
-              } else if (248 > i) {
-                (i =
-                  ((7 & i) << 18) |
-                  ((63 & (s = t[r++])) << 12) |
-                  ((63 & (a = t[r++])) << 6) |
-                  (63 & t[r++])),
-                  (i -= 65536),
-                  n.push(55296 + ((i >> 10) & 1023), 56320 + (1023 & i));
+                o.push(((31 & s) << 6) | (63 & a));
+              } else if (s < 240) {
+                if (n - r < 2) break;
+                a = t[r++];
+                var l = t[r++];
+                o.push(((15 & s) << 12) | ((63 & a) << 6) | (63 & l));
+              } else if (s < 248) {
+                if (n - r < 3) break;
+                var u =
+                    ((7 & s) << 18) |
+                    ((63 & (a = t[r++])) << 12) |
+                    ((63 & (l = t[r++])) << 6) |
+                    (63 & t[r++]),
+                  c = 56320 + (1023 & (u -= 65536)),
+                  g = 55296 + ((u >> 10) & 1023);
+                o.push(g, c);
               }
             }
-            8192 <= n.length &&
-              ((o += String.fromCharCode.apply(null, n)), (n.length = 0));
+            o.length >= 8192 &&
+              ((i += String.fromCharCode.apply(null, o)), (o.length = 0));
           }
-          return (o += goog.crypt.byteArrayToString(n)), (this.cursor_ = r), o;
+          return (i += goog.crypt.byteArrayToString(o)), (this.cursor_ = n), i;
         }),
         (jspb.BinaryDecoder.prototype.readStringWithLength = function () {
           var e = this.readUnsignedVarint32();

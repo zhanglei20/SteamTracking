@@ -505,6 +505,7 @@ body.Steam3000Theme .profile_comment_area {
 div.profile_page {
 	position: relative;
 	min-width: 950px;
+	padding-bottom: 200px;
 }
 
 body.profile_page,

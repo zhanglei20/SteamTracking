@@ -299,15 +299,13 @@
         NoMinWidth: "R7OZbuJa9H3NPk-5gy3Is",
         ActiveAndUnfocused: "_28cXJKe4jqDnSsP9HO7yYm",
         StandaloneFieldSeparator: "_1vcky98a3hG0ulFCdee4kd",
+        Background: "_2CCdODv0vfzOMrEBUzZwfI",
         StandardPadding: "xIITXDcM70faUNqssgUyx",
         CompactPadding: "_3hgIZByMuZIEiFspMRGFBw",
         WithDescription: "_3tB2lyT2Pfvfv-jyuVgUOg",
-        WithBottomSeparatorStandard: "GxgIyq8R5xTOeu4ftGrgX",
-        WithBottomSeparatorThick: "_39x36zDuDr8Z0Z_UnJkY4S",
         HighlightOnFocus: "_2HFrmMgB38Ike5w4rVxzEX",
         Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
         Disabled: "aIeh3X5T2M074RLW1qn6_",
-        WithBottomSeparator: "_3YKpU6T7dSIjGegCiQgg3h",
         "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
         "ItemFocusAnim-darkGrey": "_2NVMbdV4wBIACWgwBU2kyz",
         FieldChildrenWithIcon: "_1aw7cA3mAZfWt8idAlVJWi",
@@ -316,6 +314,8 @@
         FieldIcon: "_2DM37juowId1V_DScp3l4",
         Front: "_2sj0iYB2llhya3q15q0xiX",
         BeforeChildren: "_1mbHaypn3SksXyYjPLVuX1",
+        FieldLeftColumn: "_2tALpM7z8naXJ35Pp5fNAG",
+        FieldRightColumn: "PSZtxj2h3MlyYv-c9dgke",
         FieldLabelRow: "_2VcTlXFC64Jtg9gvtT6cmY",
         VerticalAlignCenter: "_16vVnDqpbNs-zIH-EdV6Vz",
         InlineWrapShiftsChildrenBelow: "_3LCXhoVmpvqbOW8fsItdTl",
@@ -407,10 +407,9 @@
         PagedSettingsDialog_PageList_ShowTitle: "_3UfINfoarLdX2Cbx22cWNf",
         PageSettingsDialog_PageList_NoHeaderPadding: "_2EiZ3BiLOqNY5BfgsBnUda",
         PagedSettingsDialog_PageListItem: "_2mL2HfT5AkDXRi1YBnRWKa",
-        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
+        ScaledChildren: "_3oALQTKb_fq_yVJAuTkwdb",
         Active: "_1ELdDY5kb5jxjXe-FpWBo5",
-        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
-        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
+        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
         PageListItem_Icon: "_3f2IOwoVFEcJNNmmRXIMK8",
         PageListItem_Title: "_4niDTAfIpKQoRx-CR_3K",
         Separator: "_3sUwukdeKdKRTojXu4I3ga",
@@ -424,6 +423,8 @@
         Down: "_1C1JjI4inJUtodtSWKAPoE",
         BackgroundAnimation: "_5VEJ9ppWFMtmQZUIl5QGM",
         "ItemFocusAnim-darkerGrey-nocolor": "gmWXVs6ySMfR95uy-dzLj",
+        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
+        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
         "ItemFocusAnim-grey": "_2_WUbDOZ71hKkEf-CD41hr",
         "ItemFocusAnim-translucent-white-10": "_3JK1VosnPSCLdf_lSz1exG",
         "ItemFocusAnim-translucent-white-20": "_2PDwQBU5MzHQ75ycEVpwK3",
@@ -1340,7 +1341,7 @@
             })(_, [
               {
                 packageid: "" + _,
-                game_code: 0,
+                game_code: 4602,
                 territory: "",
                 key_count: _,
                 notes: _,
@@ -1699,27 +1700,41 @@
             children: _,
             breakpoints: _,
           } = _,
-          _ = (0, _.jsx)("div", {
-            "data-accent-color": _,
-            "data-dull-color": _,
-            "data-body-text-color": _,
+          _ = {
+            display: "contents",
+          };
+        let _, _, _;
+        "string" == typeof _ ? (_ = _) : _ && _(_, "accent", _),
+          "string" == typeof _ ? (_ = _) : _ && _(_, "dull", _),
+          "string" == typeof _
+            ? (_ = _)
+            : _ &&
+              (function (_, _) {
+                for (const [_, _] of Object.entries(_))
+                  _[`--color-text-body-${_}`] = _;
+              })(_, _);
+        const _ = (0, _.jsx)("div", {
+          "data-accent-color": _,
+          "data-dull-color": _,
+          "data-body-text-color": _,
+          style: _,
+          children: (0, _.jsx)("div", {
             style: {
               display: "contents",
+              color: "var(--color-text-body-body)",
             },
-            children: (0, _.jsx)("div", {
-              style: {
-                display: "contents",
-                color: "var(--color-text-body-body)",
-              },
-              children: _,
-            }),
-          });
+            children: _,
+          }),
+        });
         return _
           ? (0, _.jsx)(_._, {
               breakpoints: _,
               children: _,
             })
           : _;
+      }
+      function _(_, _, _) {
+        for (const [_, _] of Object.entries(_)) _[`--color-${_}-${_}`] = _;
       }
       const _ = _.memo(function (_) {
         const {
@@ -1846,88 +1861,12 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
             __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -1971,6 +1910,86 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -1993,6 +2012,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2082,77 +2102,11 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
           Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
-        ),
-        _ = _.lazy(() =>
-          Promise.all([
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
-            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2198,6 +2152,76 @@
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+          ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
+        ),
+        _ = _.lazy(() =>
+          Promise.all([
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
+            __webpack_require__._("chunkid"),
           ]).then(__webpack_require__.bind(__webpack_require__, "chunkid")),
         ),
         _ = _.lazy(() =>
@@ -2218,6 +2242,7 @@
         ),
         _ = _.lazy(() =>
           Promise.all([
+            __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
             __webpack_require__._("chunkid"),
@@ -2673,8 +2698,10 @@
                     switch (_) {
                       case "LibraryLogoEditor":
                       case "LibraryLogoEditorPopup":
-                        __webpack_require__
-                          ._("chunkid")
+                        Promise.all([
+                          __webpack_require__._("chunkid"),
+                          __webpack_require__._("chunkid"),
+                        ])
                           .then(
                             __webpack_require__.bind(
                               __webpack_require__,
@@ -6984,6 +7011,15 @@
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      function _() {
+        return !1;
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
       function _(_, _) {
         return _.split(_);
       }
@@ -9079,6 +9115,16 @@
                   },
                   vram_size: {
                     _: 17,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  screen_width: {
+                    _: 18,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  screen_height: {
+                    _: 19,
                     _: _._.readUint32,
                     _: _._.writeUint32,
                   },
@@ -19936,6 +19982,10 @@
                 package_groups: _.package_groups,
               });
             })(_, _, _),
+          _.include_full_description &&
+            (function (_, _, _) {
+              _(_, _, _, "include_full_description", "full_description_bbcode");
+            })(_, _, _),
           _.include_included_items &&
             _.included_item_data_request &&
             (_.included_items?.included_apps?.forEach((_) =>
@@ -19959,6 +20009,7 @@
         "screenshots",
         "trailers",
         "supported_languages",
+        "full_description_bbcode",
         "assets_without_overrides",
         "user_filter_failure",
         "links",
@@ -23702,6 +23753,7 @@
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
           "Millennium internal",
+          "millenium",
           "Refused unauthorized RPC command",
         ];
       function _() {
@@ -25974,7 +26026,6 @@
         _: () => _._,
         _: () => _._,
         _: () => _._,
-        _: () => _,
         _: () => _._,
         _: () => _,
         _: () => _,
@@ -27956,172 +28007,171 @@
           ..._,
         });
       }
-      const _ = _.createContext(void 0),
-        _ = _.forwardRef(function (_, _) {
-          const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
-            _ = _.useId(),
-            _ = null == _.page,
-            [_, _] = _.useState(() =>
-              void 0 === _.startingPage
-                ? -1
-                : _.findIndex(
-                    (_) =>
-                      "object" == typeof _ && _.identifier === _.startingPage,
-                  ),
-            );
-          let _ = _;
-          _ ||
-            (_ = _.findIndex(
-              (_) => "object" == typeof _ && _.identifier === _.page,
-            )),
-            (_ < 0 || _ >= _.length) && (_ = 0);
-          let _ = null;
-          "object" == typeof _[_] && (_ = _[_]);
-          const _ = _.useRef(null),
-            _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
-            [_, _] = _.useState(!1),
-            _ = _ ? _ : void 0,
-            _ = _.useCallback((_) => {
-              _ && _(!0);
-            }, []),
-            _ = _.useCallback(
-              (_, _) => {
-                _(!0),
-                  _._.PlayNavSound(_._.PagedNavigation),
-                  _ && _(_.identifier),
-                  _.click ? _.click() : _ && _(_);
-              },
-              [_, _],
+      const _ = _.createContext(void 0);
+      _.forwardRef(function (_, _) {
+        const { stylesheet: _ = _(), pages: _, onPageRequested: _ } = _,
+          _ = _.useId(),
+          _ = null == _.page,
+          [_, _] = _.useState(() =>
+            void 0 === _.startingPage
+              ? -1
+              : _.findIndex(
+                  (_) =>
+                    "object" == typeof _ && _.identifier === _.startingPage,
+                ),
+          );
+        let _ = _;
+        _ ||
+          (_ = _.findIndex(
+            (_) => "object" == typeof _ && _.identifier === _.page,
+          )),
+          (_ < 0 || _ >= _.length) && (_ = 0);
+        let _ = null;
+        "object" == typeof _[_] && (_ = _[_]);
+        const _ = _.useRef(null),
+          _ = _.useCallback(() => _.current?.TakeFocus() || !1, [_]),
+          [_, _] = _.useState(!1),
+          _ = _ ? _ : void 0,
+          _ = _.useCallback((_) => {
+            _ && _(!0);
+          }, []),
+          _ = _.useCallback(
+            (_, _) => {
+              _(!0),
+                _._.PlayNavSound(_._.PagedNavigation),
+                _ && _(_.identifier),
+                _.click ? _.click() : _ && _(_);
+            },
+            [_, _],
+          ),
+          _ = _.useRef(null),
+          _ = _.showTitle ?? !0,
+          _ = (0, _._)(
+            "DialogContentTransition",
+            _.PagedSettingDialog_ContentColumn,
+          );
+        _.useEffect(() => {
+          _.bAutoFocusPageContent && _.current?.TakeFocus();
+        }, []);
+        const { refForPageList: _, refForPage: _ } = (function () {
+          const _ = _.useMemo(() => new _(), []);
+          _.useEffect(
+            () => (
+              _.Get().m_setPagedSettingsInstances.add(_),
+              () => {
+                _.Get().m_setPagedSettingsInstances.delete(_);
+              }
             ),
-            _ = _.useRef(null),
-            _ = _.showTitle ?? !0,
-            _ = (0, _._)(
-              "DialogContentTransition",
-              _.PagedSettingDialog_ContentColumn,
-            );
-          _.useEffect(() => {
-            _.bAutoFocusPageContent && _.current?.TakeFocus();
-          }, []);
-          const { refForPageList: _, refForPage: _ } = (function () {
-            const _ = _.useMemo(() => new _(), []);
-            _.useEffect(
-              () => (
-                _.Get().m_setPagedSettingsInstances.add(_),
-                () => {
-                  _.Get().m_setPagedSettingsInstances.delete(_);
-                }
-              ),
+            [_],
+          );
+          const _ = _.useCallback(
+              (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
               [_],
-            );
-            const _ = _.useCallback(
-                (_) => (_.m_flPageListScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
-                [_],
-              ),
-              _ = (0, _._)("scroll", _),
-              _ = (0, _._)("scroll", _),
-              _ = _.useCallback(
-                (_) => {
-                  _.m_flPageListScrollTop = _?.scrollTop ?? 0;
+            ),
+            _ = _.useCallback(
+              (_) => (_.m_flPageScrollTop = _.currentTarget.scrollTop),
+              [_],
+            ),
+            _ = (0, _._)("scroll", _),
+            _ = (0, _._)("scroll", _),
+            _ = _.useCallback(
+              (_) => {
+                _.m_flPageListScrollTop = _?.scrollTop ?? 0;
+              },
+              [_],
+            ),
+            _ = _.useCallback(
+              (_) => {
+                _.m_flPageScrollTop = _?.scrollTop ?? 0;
+              },
+              [_],
+            ),
+            _ = (0, _._)(_, _),
+            _ = (0, _._)(_, _);
+          return {
+            refForPageList: _,
+            refForPage: _,
+          };
+        })();
+        return (0, _.jsx)(_.Provider, {
+          value: _,
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(_.PagedSettingsDialog, _.className),
+            ref: _,
+            children: [
+              (0, _.jsxs)(_._, {
+                className: (0, _._)(
+                  _.PagedSettingsDialog_PageListColumn,
+                  _.hideList && _().Hidden,
+                  "PageListColumn",
+                ),
+                navRef: _,
+                onButtonDown: (_) => {
+                  _.detail.button == _._._ &&
+                    _.current?.TakeFocus(_.detail.button);
                 },
-                [_],
-              ),
-              _ = _.useCallback(
-                (_) => {
-                  _.m_flPageScrollTop = _?.scrollTop ?? 0;
-                },
-                [_],
-              ),
-              _ = (0, _._)(_, _),
-              _ = (0, _._)(_, _);
-            return {
-              refForPageList: _,
-              refForPage: _,
-            };
-          })();
-          return (0, _.jsx)(_.Provider, {
-            value: _,
-            children: (0, _.jsxs)(_._, {
-              className: (0, _._)(_.PagedSettingsDialog, _.className),
-              ref: _,
-              children: [
-                (0, _.jsxs)(_._, {
-                  className: (0, _._)(
-                    _.PagedSettingsDialog_PageListColumn,
-                    _.hideList && _().Hidden,
-                    "PageListColumn",
-                  ),
-                  navRef: _,
-                  onButtonDown: (_) => {
-                    _.detail.button == _._._ &&
-                      _.current?.TakeFocus(_.detail.button);
-                  },
-                  onFocusWithin: _,
-                  children: [
-                    _ &&
-                      (0, _.jsx)("div", {
-                        className: _.PagedSettingsDialog_Title,
-                        children: _.title,
-                      }),
-                    _.topControls &&
-                      (0, _.jsx)("div", {
-                        children: _.topControls,
-                      }),
-                    (0, _.jsx)(_._, {
-                      className: (0, _._)(
-                        _.PagedSettingsDialog_PageList,
-                        _.disablePageListScrolling &&
-                          _.PagedSettingsDialog_PageList_DisableScrolling,
-                        _ && _.PagedSettingsDialog_PageList_ShowTitle,
-                        _.bNoHeaderPadding &&
-                          _.PageSettingsDialog_PageList_NoHeaderPadding,
-                      ),
-                      role: "tablist",
-                      "aria-orientation": "vertical",
-                      navEntryPreferPosition: _._.PREFERRED_CHILD,
-                      ref: _,
-                      children: (0, _.jsx)(_, {
-                        stylesheet: _,
-                        pages: _,
-                        iActivePage: _,
-                        onPageSelected: _,
-                        PageListItemComponent: _.PageListItemComponent,
-                        PageListSeparatorComponent:
-                          _.PageListSeparatorComponent,
-                      }),
+                onFocusWithin: _,
+                children: [
+                  _ &&
+                    (0, _.jsx)("div", {
+                      className: _.PagedSettingsDialog_Title,
+                      children: _.title,
                     }),
-                    _.bottomControls &&
-                      (0, _.jsx)("div", {
-                        children: _.bottomControls,
+                  _.topControls &&
+                    (0, _.jsx)("div", {
+                      children: _.topControls,
+                    }),
+                  (0, _.jsx)(_._, {
+                    className: (0, _._)(
+                      _.PagedSettingsDialog_PageList,
+                      _.disablePageListScrolling &&
+                        _.PagedSettingsDialog_PageList_DisableScrolling,
+                      _ && _.PagedSettingsDialog_PageList_ShowTitle,
+                      _.bNoHeaderPadding &&
+                        _.PageSettingsDialog_PageList_NoHeaderPadding,
+                    ),
+                    role: "tablist",
+                    "aria-orientation": "vertical",
+                    navEntryPreferPosition: _._.PREFERRED_CHILD,
+                    ref: _,
+                    children: (0, _.jsx)(_, {
+                      stylesheet: _,
+                      pages: _,
+                      iActivePage: _,
+                      onPageSelected: _,
+                      PageListItemComponent: _.PageListItemComponent,
+                      PageListSeparatorComponent: _.PageListSeparatorComponent,
+                    }),
+                  }),
+                  _.bottomControls &&
+                    (0, _.jsx)("div", {
+                      children: _.bottomControls,
+                    }),
+                ],
+              }),
+              (0, _.jsxs)(_._, {
+                className: _,
+                onCancelButton: _,
+                navRef: _,
+                children: [
+                  _.toggleHideList &&
+                    (0, _.jsx)(_, {
+                      hideList: _.hideList,
+                      toggleHideList: _.toggleHideList,
+                    }),
+                  _.renderPageContent
+                    ? _.renderPageContent(_, _, _)
+                    : (0, _.jsx)(_, {
+                        ref: _,
+                        activePage: _,
+                        stylesheet: _,
                       }),
-                  ],
-                }),
-                (0, _.jsxs)(_._, {
-                  className: _,
-                  onCancelButton: _,
-                  navRef: _,
-                  children: [
-                    _.toggleHideList &&
-                      (0, _.jsx)(_, {
-                        hideList: _.hideList,
-                        toggleHideList: _.toggleHideList,
-                      }),
-                    _.renderPageContent
-                      ? _.renderPageContent(_, _, _)
-                      : (0, _.jsx)(_, {
-                          ref: _,
-                          activePage: _,
-                          stylesheet: _,
-                        }),
-                  ],
-                }),
-              ],
-            }),
-          });
+                ],
+              }),
+            ],
+          }),
         });
+      });
       const _ = _.createContext(!1);
       _.memo(function (_) {
         const {
@@ -28283,7 +28333,7 @@
           "aria-describedby": _ ? _(_) : void 0,
         };
       }
-      const _ = _.forwardRef(function (_, _) {
+      function _(_, _) {
         const {
             accessibilityId: _,
             label: _,
@@ -28305,6 +28355,7 @@
             tooltip: _,
             explainer: _,
             explainerTitle: _,
+            transparentBackground: _,
             ..._
           } = _,
           _ = (0, _._)(),
@@ -28344,6 +28395,20 @@
             },
             [_],
           );
+        let _ = (0, _.jsxs)("div", {
+          className: _().FieldChildrenWithIcon,
+          children: [
+            _ &&
+              (0, _.jsx)("div", {
+                className: (0, _._)(_().FieldIcon, _().BeforeChildren),
+                children: _,
+              }),
+            (0, _.jsx)("div", {
+              className: _().FieldChildrenInner,
+              children: _,
+            }),
+          ],
+        });
         return (0, _.jsxs)(_._, {
           focusable: _,
           noFocusRing: !0,
@@ -28373,75 +28438,51 @@
             "compact" == _ && _().CompactPadding,
             _ && _().Clickable,
             _ && _().HighlightOnFocus,
+            !_ && _().Background,
           ),
           style: {
             "--indent-level": _,
           },
           children: [
-            _ &&
-              (0, _.jsxs)("div", {
-                className: _().FieldLabelRow,
-                children: [
-                  (0, _.jsxs)("div", {
-                    className: _().FieldLabel,
-                    _: _(_),
-                    children: [
-                      _ &&
-                        (0, _.jsx)("div", {
-                          className: (0, _._)(_().FieldIcon, _().Front),
-                          children: _,
-                        }),
-                      _,
-                      _ &&
-                        (0, _.jsx)(_._, {
-                          tooltip: _,
-                        }),
-                    ],
-                  }),
-                  _ &&
-                    (0, _.jsxs)("div", {
-                      className: _().FieldChildrenWithIcon,
+            (0, _.jsxs)("div", {
+              className: _().FieldLeftColumn,
+              children: [
+                _ &&
+                  (0, _.jsx)("div", {
+                    className: _().FieldLabelRow,
+                    children: (0, _.jsxs)("div", {
+                      className: _().FieldLabel,
+                      _: _(_),
                       children: [
                         _ &&
                           (0, _.jsx)("div", {
-                            className: (0, _._)(
-                              _().FieldIcon,
-                              _().BeforeChildren,
-                            ),
+                            className: (0, _._)(_().FieldIcon, _().Front),
                             children: _,
                           }),
-                        (0, _.jsx)("div", {
-                          className: _().FieldChildrenInner,
-                          children: _,
-                        }),
+                        _,
+                        _ &&
+                          (0, _.jsx)(_._, {
+                            tooltip: _,
+                          }),
                       ],
                     }),
-                ],
-              }),
-            _ &&
-              (0, _.jsxs)("div", {
-                className: _().FieldChildrenWithIcon,
-                children: [
-                  _ &&
-                    (0, _.jsx)("div", {
-                      className: (0, _._)(_().FieldIcon, _().BeforeChildren),
-                      children: _,
-                    }),
+                  }),
+                _ && _,
+                _ &&
                   (0, _.jsx)("div", {
-                    className: _().FieldChildrenInner,
+                    className: _().FieldDescription,
+                    _: _(_),
                     children: _,
                   }),
-                ],
-              }),
-            _ &&
-              (0, _.jsx)("div", {
-                className: _().FieldDescription,
-                _: _(_),
-                children: _,
-              }),
+              ],
+            }),
+            (0, _.jsx)("div", {
+              className: _().FieldRightColumn,
+              children: _ && _,
+            }),
           ],
         });
-      });
+      }
       _.forwardRef(function (_, _) {
         return (0, _.jsx)(_, {
           ref: _,
@@ -28464,6 +28505,7 @@
             childrenContainerWidth: _,
             padding: _,
             inlineWrap: _,
+            transparentBackground: _,
             fieldClassName: _,
             fieldChildren: _,
             accessibilityNameOrder: _,
@@ -28489,6 +28531,7 @@
           explainer: _,
           className: _,
           disabled: _,
+          transparentBackground: _,
           onActivate: _ ? _ : void 0,
           children: [
             (0, _.jsx)(_, {
@@ -28574,134 +28617,8 @@
             }),
           });
         });
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            childrenKey: _,
-            childrenClasses: _,
-            children: _,
-            directionClass: _,
-            animate: _ = !0,
-            sizeClass: _,
-          } = _,
-          _ = (0, _._)(_().TransitionGroup, _);
-        return (0, _.jsx)(_._, {
-          className: _,
-          appear: !1,
-          enter: _,
-          exit: _,
-          children: (0, _.jsx)(
-            _,
-            {
-              childrenClasses: _,
-              sizeClass: _,
-              children: _,
-            },
-            _,
-          ),
-        });
-      }
-      function _(_) {
-        const {
-            sizeClass: _,
-            children: _,
-            childrenClasses: _,
-            navKey: _,
-            ..._
-          } = _,
-          [_, _, _, _] = (function () {
-            let _ = _.useRef(null),
-              _ = _.useRef(void 0);
-            _.useLayoutEffect(() => {
-              let _ = _.current;
-              if (!_ || _.current) return;
-              _.current = {
-                element: _,
-                activeProps: new Set(),
-                bExiting: !1,
-                fnDone: null,
-              };
-              let _ = _.current,
-                _ = (_) => {
-                  _.target == _ && _.activeProps.add(_.propertyName);
-                };
-              __webpack_require__.addEventListener("transitionrun", _, !1);
-              let _ = (_) => {
-                _.target == _ &&
-                  (_.activeProps.delete(_.propertyName),
-                  _.fnDone &&
-                    0 == _.activeProps.size &&
-                    _.bExiting &&
-                    _.fnDone());
-              };
-              __webpack_require__.addEventListener("transitionend", _, !1),
-                __webpack_require__.addEventListener("transitioncancel", _, !1);
-            }, []);
-            let _ = _.useCallback(
-                (_) => {
-                  _.current ? (_.current.fnDone = _) : _();
-                },
-                [_],
-              ),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !1);
-              }, [_]),
-              _ = _.useCallback(() => {
-                _.current && (_.current.bExiting = !0);
-              }, [_]);
-            return [_, _, _, _];
-          })(),
-          _ = _.useRef(!0),
-          _ = _.useCallback(() => _.current, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !0), _();
-          }, [_]),
-          _ = _.useCallback(() => {
-            (_.current = !1), _();
-          }, [_]),
-          _ = _.childrenClasses,
-          _ = {
-            enter: _.enterStart,
-            enterActive: _.enterEnd,
-            exit: _.exitStart,
-            exitActive: _.exitEnd,
-          };
-        return _.current && !_.current.ownerDocument.defaultView
-          ? null
-          : (0, _.jsx)(_._, {
-              nodeRef: _,
-              classNames: _,
-              _: !0,
-              timeout: 1e4,
-              addEndListener: _,
-              onEntering: _,
-              onExiting: _,
-              ..._,
-              children: (0, _.jsx)("div", {
-                ref: _,
-                className: (0, _._)(_().ContentWrapper, _.base),
-                children: (0, _.jsx)(_._, {
-                  className: _,
-                  fnCanTakeFocus: _,
-                  navKey: _,
-                  children: _.children,
-                }),
-              }),
-            });
-      }
-      function _(_, _) {
-        return {
-          base: _,
-          enterStart: _.Enter,
-          enterEnd: _.EnterActive,
-          exitStart: _.Exit,
-          exitEnd: _.ExitActive,
-        };
-      }
+      var _;
+      __webpack_require__("chunkid");
       !(function (_) {
         (_[(_.None = 0)] = "None"),
           (_[(_.Left = 1)] = "Left"),
@@ -28709,133 +28626,8 @@
           (_[(_._ = 3)] = "Up"),
           (_[(_.Down = 4)] = "Down");
       })(_ || (_ = {}));
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = _.createContext(null);
-      function _(_) {
-        const _ = _.useContext(_),
-          _ = (0, _._)().IN_VR,
-          { title: _, icon: _, active: _, ..._ } = _;
-        return (0, _.jsxs)(_._, {
-          preferredFocus: _,
-          navRef: _ && _ ? _ : void 0,
-          noFocusRing: !0,
-          onActivate: _ ? void 0 : _.onClick,
-          onFocus: _ ? void 0 : _.onClick,
-          ..._,
-          children: [
-            _ &&
-              (0, _.jsx)("div", {
-                className: _().PageListItem_Icon,
-                children: _,
-              }),
-            (0, _.jsx)("div", {
-              className: _().PageListItem_Title,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const { bTransparent: _, className: _, ..._ } = _;
-        return (0, _.jsx)("div", {
-          className: (0, _._)(_, _().Separator),
-          ..._,
-        });
-      }
-      _.forwardRef(function (_, _) {
-        const { page: _, bAutoFocusPageContent: _, showTitle: _ = !1 } = _,
-          _ = _.useRef(null),
-          _ = _.useRef(!0);
-        _.useEffect(() => {
-          (_.current && _) || _.current?.TakeFocus(), (_.current = !1);
-        }, [_, _]);
-        return (0, _.jsx)(_.Provider, {
-          value: _,
-          children: (0, _.jsx)(_, {
-            ..._,
-            stylesheet: _(),
-            showTitle: _,
-            PageListItemComponent: _,
-            PageListSeparatorComponent: _,
-            renderPageContent:
-              _.renderPageContent ||
-              ((_, _, _) =>
-                (0, _.jsx)(_, {
-                  pages: _.pages,
-                  activePage: _,
-                  refForPage: _,
-                  PageComponent: _,
-                })),
-          }),
-        });
-      });
-      function _(_) {
-        const { pages: _, activePage: _, refForPage: _, PageComponent: _ } = _,
-          _ = (function (_) {
-            let _ = _.useRef(_),
-              _ = _.useRef(_.None),
-              _ = _.current;
-            if (_ == _) return _.current;
-            let _ = _.None;
-            _ < _ ? (_ = _.Down) : _ > _ && (_ = _._);
-            return (_.current = _), (_.current = _), _;
-          })(_.useMemo(() => _.findIndex((_) => _ == _), [_, _])),
-          _ = (function (_, _) {
-            const _ = _.useMemo(() => new Map(), []),
-              _ = _.useRef(_);
-            _.current = _;
-            const _ = _.useRef(_);
-            _.current = _;
-            const _ = _.useCallback(
-              (_) => (_) => {
-                __webpack_require__.set(_, _),
-                  _ === _.current && (0, _._)(_.current, _);
-              },
-              [_],
-            );
-            return (
-              _.useEffect(
-                () => (
-                  (0, _._)(_, _ && __webpack_require__.get(_)),
-                  () => (0, _._)(_, void 0)
-                ),
-                [_, _, _],
-              ),
-              _
-            );
-          })(_?.identifier, _);
-        let _ =
-          ((_ = _()),
-          (_ = _) == _.Left
-            ? _.Left
-            : _ == _.Right
-              ? _.Right
-              : _ == _._
-                ? _._
-                : _ == _.Down
-                  ? _.Down
-                  : "");
-        var _, _;
-        return (0, _.jsx)(_, {
-          childrenKey: _?.identifier,
-          childrenClasses: _(_(), _().ContentTransition),
-          directionClass: _,
-          animate: _ != _.None,
-          children:
-            _ &&
-            (0, _.jsx)(
-              _,
-              {
-                ref: _(_.identifier),
-                stylesheet: _(),
-                activePage: _,
-              },
-              _.identifier,
-            ),
-        });
-      }
+      __webpack_require__("chunkid");
+      _.createContext(null);
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid");
@@ -28973,6 +28765,7 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
@@ -37562,7 +37355,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       const _ = _.createContext({}),
         _ = () => _.useContext(_);
       function _(_) {
@@ -37752,7 +37546,7 @@
                 return () => window.clearTimeout(_);
               }
               _(!0);
-            } else _(!1);
+            } else (0, _._)() || _(!1);
           }, [_]),
           !_)
         )
@@ -40454,7 +40248,6 @@
         _: () => _._,
         _: () => _,
         _: () => _._,
-        _: () => _,
         _: () => _,
         _: () => _,
         _: () => _,

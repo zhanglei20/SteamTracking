@@ -270,15 +270,13 @@
         NoMinWidth: "R7OZbuJa9H3NPk-5gy3Is",
         ActiveAndUnfocused: "_28cXJKe4jqDnSsP9HO7yYm",
         StandaloneFieldSeparator: "_1vcky98a3hG0ulFCdee4kd",
+        Background: "_2CCdODv0vfzOMrEBUzZwfI",
         StandardPadding: "xIITXDcM70faUNqssgUyx",
         CompactPadding: "_3hgIZByMuZIEiFspMRGFBw",
         WithDescription: "_3tB2lyT2Pfvfv-jyuVgUOg",
-        WithBottomSeparatorStandard: "GxgIyq8R5xTOeu4ftGrgX",
-        WithBottomSeparatorThick: "_39x36zDuDr8Z0Z_UnJkY4S",
         HighlightOnFocus: "_2HFrmMgB38Ike5w4rVxzEX",
         Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
         Disabled: "aIeh3X5T2M074RLW1qn6_",
-        WithBottomSeparator: "_3YKpU6T7dSIjGegCiQgg3h",
         "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
         "ItemFocusAnim-darkGrey": "_2NVMbdV4wBIACWgwBU2kyz",
         FieldChildrenWithIcon: "_1aw7cA3mAZfWt8idAlVJWi",
@@ -287,6 +285,8 @@
         FieldIcon: "_2DM37juowId1V_DScp3l4",
         Front: "_2sj0iYB2llhya3q15q0xiX",
         BeforeChildren: "_1mbHaypn3SksXyYjPLVuX1",
+        FieldLeftColumn: "_2tALpM7z8naXJ35Pp5fNAG",
+        FieldRightColumn: "PSZtxj2h3MlyYv-c9dgke",
         FieldLabelRow: "_2VcTlXFC64Jtg9gvtT6cmY",
         VerticalAlignCenter: "_16vVnDqpbNs-zIH-EdV6Vz",
         InlineWrapShiftsChildrenBelow: "_3LCXhoVmpvqbOW8fsItdTl",
@@ -378,10 +378,9 @@
         PagedSettingsDialog_PageList_ShowTitle: "_3UfINfoarLdX2Cbx22cWNf",
         PageSettingsDialog_PageList_NoHeaderPadding: "_2EiZ3BiLOqNY5BfgsBnUda",
         PagedSettingsDialog_PageListItem: "_2mL2HfT5AkDXRi1YBnRWKa",
-        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
+        ScaledChildren: "_3oALQTKb_fq_yVJAuTkwdb",
         Active: "_1ELdDY5kb5jxjXe-FpWBo5",
-        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
-        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
+        DisabledItem: "_1G3whBr0RMzXKIfj4fcQjI",
         PageListItem_Icon: "_3f2IOwoVFEcJNNmmRXIMK8",
         PageListItem_Title: "_4niDTAfIpKQoRx-CR_3K",
         Separator: "_3sUwukdeKdKRTojXu4I3ga",
@@ -395,6 +394,8 @@
         Down: "_1C1JjI4inJUtodtSWKAPoE",
         BackgroundAnimation: "_5VEJ9ppWFMtmQZUIl5QGM",
         "ItemFocusAnim-darkerGrey-nocolor": "gmWXVs6ySMfR95uy-dzLj",
+        "ItemFocusAnim-darkerGrey": "_2Shpsf_OXX9VqX7Wf0lif0",
+        "ItemFocusAnim-darkGrey": "_2x0HRpP0QPcd8y8ykAaCFm",
         "ItemFocusAnim-grey": "_2_WUbDOZ71hKkEf-CD41hr",
         "ItemFocusAnim-translucent-white-10": "_3JK1VosnPSCLdf_lSz1exG",
         "ItemFocusAnim-translucent-white-20": "_2PDwQBU5MzHQ75ycEVpwK3",
@@ -1962,7 +1963,8 @@
               t
                 ? e.BChildTakeFocus(_e.D$.AUTOFOCUS) ||
                   this.m_tree.TransferFocus(_e.D$.AUTOFOCUS, e)
-                : e.BTakeFocus(_e.D$.AUTOFOCUS);
+                : e.BTakeFocus(_e.D$.AUTOFOCUS) ||
+                  this.m_tree.TakeFocus(_e.D$.AUTOFOCUS);
           }
         }
       }
@@ -2890,8 +2892,8 @@
           Promise.all([
             r.e(8589),
             r.e(7596),
-            r.e(7055),
             r.e(2421),
+            r.e(7055),
             r.e(2667),
             r.e(1477),
             r.e(9402),
@@ -2912,6 +2914,7 @@
             r.e(9773),
             r.e(9769),
             r.e(6299),
+            r.e(3719),
             r.e(8780),
             r.e(4268),
           ]).then(r.bind(r, 5901)),
@@ -2920,8 +2923,8 @@
           Promise.all([
             r.e(8589),
             r.e(7596),
-            r.e(7055),
             r.e(2421),
+            r.e(7055),
             r.e(2667),
             r.e(1477),
             r.e(9402),
@@ -2942,6 +2945,7 @@
             r.e(9773),
             r.e(9769),
             r.e(6299),
+            r.e(3719),
             r.e(8780),
             r.e(9855),
             r.e(6662),
@@ -2951,8 +2955,8 @@
           Promise.all([
             r.e(8589),
             r.e(7596),
-            r.e(7055),
             r.e(2421),
+            r.e(7055),
             r.e(2667),
             r.e(1477),
             r.e(9402),
@@ -2973,6 +2977,7 @@
             r.e(9773),
             r.e(9769),
             r.e(6299),
+            r.e(3719),
             r.e(8780),
             r.e(258),
           ]).then(r.bind(r, 98378)),
@@ -2986,8 +2991,8 @@
           Promise.all([
             r.e(8589),
             r.e(7596),
-            r.e(7055),
             r.e(2421),
+            r.e(7055),
             r.e(2667),
             r.e(1477),
             r.e(9436),
@@ -3114,11 +3119,11 @@
         vt = i.lazy(() =>
           Promise.all([
             r.e(2421),
-            r.e(5048),
             r.e(3359),
             r.e(5660),
             r.e(1415),
             r.e(9769),
+            r.e(3719),
             r.e(5282),
             r.e(7331),
           ]).then(r.bind(r, 65423)),
@@ -3126,11 +3131,11 @@
         St = i.lazy(() =>
           Promise.all([
             r.e(2421),
-            r.e(5048),
             r.e(3359),
             r.e(5660),
             r.e(1415),
             r.e(9769),
+            r.e(3719),
             r.e(5282),
             r.e(7331),
           ]).then(r.bind(r, 55435)),
@@ -3138,23 +3143,20 @@
         Ct = i.lazy(() =>
           Promise.all([
             r.e(2421),
-            r.e(5048),
             r.e(3359),
             r.e(5660),
             r.e(1415),
             r.e(9769),
+            r.e(3719),
             r.e(5282),
             r.e(7331),
-          ]).then(r.bind(r, 11381)),
+          ]).then(r.bind(r, 43082)),
         ),
         Rt = i.lazy(async () => ({
           default: (
-            await Promise.all([
-              r.e(2421),
-              r.e(5048),
-              r.e(1415),
-              r.e(1574),
-            ]).then(r.bind(r, 2917))
+            await Promise.all([r.e(2421), r.e(1415), r.e(1574)]).then(
+              r.bind(r, 2917),
+            )
           ).GlobalFooter,
         })),
         zt = () => (R.UF.IS_OGG ? "games" : "groups"),
@@ -8296,6 +8298,13 @@
         kf: () => u,
       });
     },
+    42327: (e, t, r) => {
+      "use strict";
+      r.d(t, { p: () => i });
+      function i() {
+        return !1;
+      }
+    },
     26205: (e, t, r) => {
       "use strict";
       r.d(t, { O: () => i, S: () => s });
@@ -10280,6 +10289,16 @@
                   },
                   vram_size: {
                     n: 17,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
+                  screen_width: {
+                    n: 18,
+                    br: s.qM.readUint32,
+                    bw: s.gp.writeUint32,
+                  },
+                  screen_height: {
+                    n: 19,
                     br: s.qM.readUint32,
                     bw: s.gp.writeUint32,
                   },
@@ -33908,25 +33927,27 @@
     39777: (e, t, r) => {
       "use strict";
       r.d(t, {
-        AQ: () => S,
-        EO: () => _,
-        Ec: () => R,
+        AQ: () => C,
+        EO: () => B,
+        Ec: () => z,
         J$: () => l,
-        Q_: () => p,
+        LM: () => p,
+        Q_: () => h,
         U2: () => c,
-        Yo: () => f,
-        by: () => y,
+        Yo: () => w,
+        by: () => M,
         f2: () => u,
-        ik: () => w,
-        is: () => h,
-        j4: () => b,
-        lv: () => B,
-        qI: () => v,
-        rK: () => z,
-        us: () => T,
-        vB: () => q,
+        ik: () => y,
+        is: () => _,
+        j4: () => f,
+        kE: () => q,
+        lv: () => b,
+        qI: () => S,
+        rK: () => j,
+        us: () => F,
+        vB: () => U,
         wl: () => g,
-        xz: () => M,
+        xz: () => v,
       });
       var i = r(81393),
         n = r(88942),
@@ -33935,13 +33956,13 @@
         o = r(7338);
       function l(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(T(t, e));
+        return (0, n.I)(F(t, e));
       }
       function c(e) {
-        return d(e, T);
+        return d(e, F);
       }
       function u(e) {
-        return d(e, S, "include_assets");
+        return d(e, C, "include_assets");
       }
       function d(e, t, r) {
         var i;
@@ -33950,7 +33971,7 @@
           c = e && "packageid" in e && !!e.packageid;
         let u;
         if (c) {
-          const t = l.getQueryData(W(e, "default_info"));
+          const t = l.getQueryData(q(e, "default_info"));
           t &&
             1 ==
               (null === (i = t.included_appids) || void 0 === i
@@ -33966,12 +33987,12 @@
       function m(e, t, r) {
         const i = t && "appid" in t && !!t.appid;
         return {
-          queryKey: W(t, "include_included_items"),
+          queryKey: q(t, "include_included_items"),
           queryFn: async () => {
             var i;
-            r && L(e, t, r);
+            r && P(e, t, r);
             return null !==
-              (i = (await L(e, t, "include_included_items")).included_appids) &&
+              (i = (await P(e, t, "include_included_items")).included_appids) &&
               void 0 !== i
               ? i
               : [];
@@ -33984,13 +34005,22 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_basic_info", "basic_info");
+            return I(e, t, "include_basic_info", "basic_info");
           })(t, e),
         );
       }
       function p(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(F(t, e));
+        return (0, n.I)(
+          (function (e, t) {
+            return I(
+              e,
+              t,
+              "include_full_description",
+              "full_description_bbcode",
+            );
+          })(t, e),
+        );
       }
       function h(e) {
         const t = (0, o.eG)();
@@ -33998,12 +34028,16 @@
       }
       function _(e) {
         const t = (0, o.eG)();
+        return (0, n.I)(W(t, e));
+      }
+      function B(e) {
+        const t = (0, o.eG)();
         return (0, n.I)(
           e && "bundleid" in e
-            ? F(t, e)
+            ? O(t, e)
             : (function (e, t) {
                 return {
-                  ...O(e, t),
+                  ...W(e, t),
                   select: (e) =>
                     (null == e ? void 0 : e.purchase_options) &&
                     e.purchase_options.length > 0
@@ -34014,23 +34048,15 @@
               })(t, e),
         );
       }
-      function B(e, t = !1) {
+      function b(e, t = !1) {
         const r = (0, o.eG)();
-        return (0, n.I)(t ? C(r, e) : S(r, e));
-      }
-      function b(e) {
-        const t = (0, o.eG)();
-        return (0, n.I)(
-          (function (e, t) {
-            return x(e, t, "include_screenshots", "screenshots");
-          })(t, e),
-        );
+        return (0, n.I)(t ? R(r, e) : C(r, e));
       }
       function f(e) {
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_trailers", "trailers");
+            return I(e, t, "include_screenshots", "screenshots");
           })(t, e),
         );
       }
@@ -34038,7 +34064,7 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_reviews", "reviews");
+            return I(e, t, "include_trailers", "trailers");
           })(t, e),
         );
       }
@@ -34046,36 +34072,44 @@
         const t = (0, o.eG)();
         return (0, n.I)(
           (function (e, t) {
-            return x(e, t, "include_release", "release");
+            return I(e, t, "include_reviews", "reviews");
           })(t, e),
         );
       }
       function M(e) {
         const t = (0, o.eG)();
-        return (0, n.I)(R(t, e));
+        return (0, n.I)(
+          (function (e, t) {
+            return I(e, t, "include_release", "release");
+          })(t, e),
+        );
       }
       function v(e) {
         const t = (0, o.eG)();
         return (0, n.I)(z(t, e));
       }
-      function S(e, t) {
-        return x(e, t, "include_assets", "assets");
+      function S(e) {
+        const t = (0, o.eG)();
+        return (0, n.I)(j(t, e));
       }
       function C(e, t) {
-        return x(
+        return I(e, t, "include_assets", "assets");
+      }
+      function R(e, t) {
+        return I(
           e,
           t,
           "include_assets_without_overrides",
           "assets_without_overrides",
         );
       }
-      function R(e, t) {
-        return x(e, t, "top_tags", "tags");
-      }
       function z(e, t) {
-        return x(e, t, "include_platforms", "platforms");
+        return I(e, t, "top_tags", "tags");
       }
-      function j(e) {
+      function j(e, t) {
+        return I(e, t, "include_platforms", "platforms");
+      }
+      function x(e) {
         return (
           !!e &&
           ("appid" in e && !e.appid
@@ -34084,77 +34118,77 @@
               ((0, i.wT)(!1, "Invalid bundleid passed to useStoreItem"), !1))
         );
       }
-      function x(e, t, r, i) {
+      function I(e, t, r, i) {
         return {
-          queryKey: W(t, r),
-          queryFn: async () => (await L(e, t, r))[i] || null,
+          queryKey: q(t, r),
+          queryFn: async () => (await P(e, t, r))[i] || null,
           staleTime: 216e5,
-          enabled: j(t),
+          enabled: x(t),
         };
       }
-      function I(e, t, r, i, n) {
+      function T(e, t, r, i, n) {
         var s;
-        e.setQueryData(W(t, i), null !== (s = r[n]) && void 0 !== s ? s : null);
-      }
-      function T(e, t) {
-        return {
-          queryKey: W(t, "default_info"),
-          queryFn: async () => k(await L(e, t, "default_info")),
-          staleTime: 216e5,
-          enabled: j(t),
-        };
+        e.setQueryData(q(t, i), null !== (s = r[n]) && void 0 !== s ? s : null);
       }
       function F(e, t) {
         return {
-          ...T(e, t),
+          queryKey: q(t, "default_info"),
+          queryFn: async () => L(await P(e, t, "default_info")),
+          staleTime: 216e5,
+          enabled: x(t),
+        };
+      }
+      function O(e, t) {
+        return {
+          ...F(e, t),
           select: (e) => e.best_purchase_option || null,
           staleTime: 6e5,
         };
       }
-      function O(e, t) {
+      function W(e, t) {
         const r = "include_all_purchase_options";
         return {
-          queryKey: W(t, r),
+          queryKey: q(t, r),
           queryFn: async () => {
-            const i = await L(e, t, r);
+            const i = await P(e, t, r);
             return {
               purchase_options: i.purchase_options,
               package_groups: i.package_groups,
             };
           },
           staleTime: 6e5,
-          enabled: j(t),
+          enabled: x(t),
         };
       }
-      function W(e, t) {
+      function q(e, t) {
         return ["StoreItem", e && (0, a.ER)(e), t];
       }
-      function q(e, t, r) {
+      function U(e, t, r) {
         var i, n, s, o, l, c;
         const u = (0, a.Jz)(t);
         u &&
           (!(function (e, t, r) {
-            e.setQueryData(W(t, "default_info"), k(r));
+            e.setQueryData(q(t, "default_info"), L(r));
           })(e, u, t),
           r.include_basic_info &&
             (function (e, t, r) {
-              I(e, t, r, "include_basic_info", "basic_info");
+              T(e, t, r, "include_basic_info", "basic_info");
             })(e, u, t),
           r.include_assets &&
             (function (e, t, r) {
-              I(e, t, r, "include_assets", "assets");
+              T(e, t, r, "include_assets", "assets");
             })(e, u, t),
           r.include_screenshots &&
             (function (e, t, r) {
-              I(e, t, r, "include_screenshots", "screenshots");
+              T(e, t, r, "include_screenshots", "screenshots");
             })(e, u, t),
           r.include_trailers &&
             (function (e, t, r) {
-              I(e, t, r, "include_trailers", "trailers");
+              T(e, t, r, "include_trailers", "trailers");
             })(e, u, t),
           r.include_assets_without_overrides &&
             (function (e, t, r) {
-              I(
+              T(
                 e,
                 t,
                 r,
@@ -34164,31 +34198,35 @@
             })(e, u, t),
           r.include_reviews &&
             (function (e, t, r) {
-              I(e, t, r, "include_reviews", "reviews");
+              T(e, t, r, "include_reviews", "reviews");
             })(e, u, t),
           r.include_release &&
             (function (e, t, r) {
-              I(e, t, r, "include_release", "release");
+              T(e, t, r, "include_release", "release");
             })(e, u, t),
           r.include_tag_count &&
             r.include_tag_count > 0 &&
             (function (e, t, r) {
-              I(e, t, r, "top_tags", "tags");
+              T(e, t, r, "top_tags", "tags");
             })(e, u, t),
           r.include_platforms &&
             (function (e, t, r) {
-              I(e, t, r, "include_platforms", "platforms");
+              T(e, t, r, "include_platforms", "platforms");
             })(e, u, t),
           r.apply_user_filters &&
             (function (e, t, r) {
-              I(e, t, r, "apply_user_filters", "user_filter_failure");
+              T(e, t, r, "apply_user_filters", "user_filter_failure");
             })(e, u, t),
           r.include_all_purchase_options &&
             (function (e, t, r) {
-              e.setQueryData(W(t, "include_all_purchase_options"), {
+              e.setQueryData(q(t, "include_all_purchase_options"), {
                 purchase_options: r.purchase_options,
                 package_groups: r.package_groups,
               });
+            })(e, u, t),
+          r.include_full_description &&
+            (function (e, t, r) {
+              T(e, t, r, "include_full_description", "full_description_bbcode");
             })(e, u, t),
           r.include_included_items &&
             r.included_item_data_request &&
@@ -34198,23 +34236,23 @@
                   ? void 0
                   : i.included_apps) ||
               void 0 === n ||
-              n.forEach((t) => q(e, t, r.included_item_data_request)),
+              n.forEach((t) => U(e, t, r.included_item_data_request)),
             null ===
               (o =
                 null === (s = t.included_items) || void 0 === s
                   ? void 0
                   : s.included_packages) ||
               void 0 === o ||
-              o.forEach((t) => q(e, t, r.included_item_data_request)),
+              o.forEach((t) => U(e, t, r.included_item_data_request)),
             null ===
               (c =
                 null === (l = t.included_items) || void 0 === l
                   ? void 0
                   : l.included_bundles) ||
               void 0 === c ||
-              c.forEach((t) => q(e, t, r.included_item_data_request))));
+              c.forEach((t) => U(e, t, r.included_item_data_request))));
       }
-      const U = [
+      const k = [
         "assets",
         "tagids",
         "tags",
@@ -34225,6 +34263,7 @@
         "screenshots",
         "trailers",
         "supported_languages",
+        "full_description_bbcode",
         "assets_without_overrides",
         "user_filter_failure",
         "links",
@@ -34232,12 +34271,12 @@
         "release",
         "package_groups",
       ];
-      function k(e) {
+      function L(e) {
         const t = { ...e };
-        for (const e of U) delete t[e];
+        for (const e of k) delete t[e];
         return t;
       }
-      async function L(e, t, r) {
+      async function P(e, t, r) {
         return await e.load(`${(0, a.ER)(t)}|${r}`);
       }
     },
@@ -40636,6 +40675,7 @@
           "HTMLDivElement.onreset \\(/market",
           "/.millennium/Dist",
           "Millennium internal",
+          "millenium",
           "Refused unauthorized RPC command",
         ];
       function b() {
@@ -41143,7 +41183,11 @@
                 null === (r = e.user_filter_failure()) || void 0 === r
                   ? void 0
                   : r.toObject()),
-              (this.m_DataRequested.apply_user_filters = !0));
+              (this.m_DataRequested.apply_user_filters = !0)),
+            t.include_full_description &&
+              !this.m_strFullDescriptionBBCode &&
+              ((this.m_strFullDescriptionBBCode = e.full_description_bbcode()),
+              (this.m_DataRequested.include_full_description = !0));
         }
         static BDataRequestContainsOtherDataRequest(e, t) {
           return Boolean(
@@ -41163,6 +41207,7 @@
               (!t.include_basic_info || e.include_basic_info) &&
               (!t.include_supported_languages ||
                 e.include_supported_languages) &&
+              (!t.include_full_description || e.include_full_description) &&
               (!t.include_links || e.include_links),
           );
         }
@@ -41418,6 +41463,12 @@
             null === (e = this.m_ReviewInfo) || void 0 === e
               ? void 0
               : e.summary_language_specific
+          );
+        }
+        GetFullDescriptionBBCode() {
+          return (
+            this.BCheckDataRequestIncluded({ include_full_description: !0 }),
+            this.m_strFullDescriptionBBCode
           );
         }
         GetShortDescription() {
@@ -42377,6 +42428,7 @@
             e.include_reviews,
             e.include_basic_info,
             e.include_supported_languages,
+            e.include_full_description,
             e.include_links,
           ];
           for (const e of t) if (!0 !== e && void 0 !== e) return !1;
@@ -43099,6 +43151,7 @@
           include_reviews: !0,
           include_basic_info: !0,
           include_supported_languages: !0,
+          include_full_description: !0,
           include_links: !0,
         });
       const b = B;
@@ -62944,7 +62997,6 @@
         Yh: () => i.Yh,
         UC: () => i.UC,
         U9: () => i.U9,
-        Mw: () => xe,
         Ce: () => b.Ce,
         t6: () => i.t6,
         ZU: () => G,
@@ -62953,10 +63005,10 @@
         D0: () => Ve,
         wi: () => i.wi,
         lV: () => i.lV,
-        P9: () => Et,
-        Mm: () => ht,
-        A0: () => Wt,
-        J0: () => Pt,
+        P9: () => xt,
+        Mm: () => tt,
+        A0: () => wt,
+        J0: () => Ct,
         Dm: () => He,
         Y9: () => i.Y9,
         pd: () => w,
@@ -62970,7 +63022,7 @@
         Bv: () => ze,
         O7: () => Fe,
         _Z: () => Te,
-        yA: () => Bt,
+        yA: () => it,
         jn: () => i.jn,
         a: () => I,
         zW: () => x,
@@ -65303,7 +65355,7 @@
           "aria-describedby": i ? Ge(e) : void 0,
         };
       }
-      const Ve = a.forwardRef(function (e, t) {
+      function Ve(e, t) {
         const {
             accessibilityId: r,
             label: i,
@@ -65325,26 +65377,27 @@
             tooltip: R,
             explainer: z,
             explainerTitle: j,
-            ...x
+            transparentBackground: x,
+            ...I
           } = e,
-          I = (0, De.Qn)(),
-          T = null != u ? u : "inline",
-          F = null != C ? C : "front",
-          O = "front" == F && !!o,
-          W = "before-children" == F && !!o,
-          q = "inline" == T && !!c,
-          U = "below" == T && !!c,
-          k = null != p ? p : I ? "shift-children-below" : "keep-inline",
-          L = !!(x.onClick || x.onActivate || x.focusable),
-          P = (null != o && O) || null != i || (q && null != c),
-          D = null != h ? h : "min",
-          N = null != _ ? _ : "standard",
-          A = null != b ? b : "standard",
-          E = null != w ? w : "standard",
-          G = null == M || M,
-          H = null != v ? v : 0,
-          V = null != S ? S : "center",
-          Z = (function (e, t) {
+          T = (0, De.Qn)(),
+          F = null != u ? u : "inline",
+          O = null != C ? C : "front",
+          W = "front" == O && !!o,
+          q = "before-children" == O && !!o,
+          U = "inline" == F && !!c,
+          k = "below" == F && !!c,
+          L = null != p ? p : T ? "shift-children-below" : "keep-inline",
+          P = !!(I.onClick || I.onActivate || I.focusable),
+          D = (null != o && W) || null != i || (U && null != c),
+          N = null != h ? h : "min",
+          A = null != _ ? _ : "standard",
+          E = null != b ? b : "standard",
+          G = null != w ? w : "standard",
+          H = null == M || M,
+          V = null != v ? v : 0,
+          Z = null != S ? S : "center",
+          K = (function (e, t) {
             const r = (0, Ne.R7)(),
               i = a.useCallback(() => {
                 var i;
@@ -65358,117 +65411,107 @@
             const n = (0, m.we)("#Field_MoreInfo_Action");
             return { onOptionsButton: i, onOptionsActionDescription: n };
           })(null != j ? j : i, z),
-          K = a.useRef(void 0),
-          $ = (0, g.Ue)(K, e.navRef),
-          Y = a.useCallback(
+          $ = a.useRef(void 0),
+          Y = (0, g.Ue)($, e.navRef),
+          Q = a.useCallback(
             (e) => {
               var t;
-              K.current &&
-                (null === (t = K.current) || void 0 === t || t.TakeFocus(),
+              $.current &&
+                (null === (t = $.current) || void 0 === t || t.TakeFocus(),
                 e.preventDefault());
             },
-            [K],
+            [$],
           );
+        let X = (0, s.jsxs)("div", {
+          className: Pe().FieldChildrenWithIcon,
+          children: [
+            q &&
+              (0, s.jsx)("div", {
+                className: (0, d.A)(Pe().FieldIcon, Pe().BeforeChildren),
+                children: o,
+              }),
+            (0, s.jsx)("div", {
+              className: Pe().FieldChildrenInner,
+              children: c,
+            }),
+          ],
+        });
         return (0, s.jsxs)(l.Z, {
-          focusable: L,
+          focusable: P,
           noFocusRing: !0,
           scrollIntoViewWhenChildFocused: !0,
-          onActivate: x.onClick
+          onActivate: I.onClick
             ? (e) => {
                 var t;
-                return null === (t = x.onClick) || void 0 === t
+                return null === (t = I.onClick) || void 0 === t
                   ? void 0
-                  : t.call(x, e);
+                  : t.call(I, e);
               }
             : void 0,
           ref: t,
-          onMouseDown: L ? void 0 : Y,
-          ...x,
-          ...Z,
-          navRef: $,
+          onMouseDown: P ? void 0 : Q,
+          ...I,
+          ...K,
+          navRef: Y,
           className: (0, d.A)(
             y,
             Pe().Field,
             f && Pe().Disabled,
-            P && Pe().WithFirstRow,
-            q && Pe().WithChildrenInline,
-            U && Pe().WithChildrenBelow,
-            "center" == V && Pe().VerticalAlignCenter,
-            "shift-children-below" == k && Pe().InlineWrapShiftsChildrenBelow,
+            D && Pe().WithFirstRow,
+            U && Pe().WithChildrenInline,
+            k && Pe().WithChildrenBelow,
+            "center" == Z && Pe().VerticalAlignCenter,
+            "shift-children-below" == L && Pe().InlineWrapShiftsChildrenBelow,
             !!n && Pe().WithDescription,
-            "standard" == E && Pe().WithBottomSeparatorStandard,
-            "thick" == E && Pe().WithBottomSeparatorThick,
-            "fixed" == D && Pe().ChildrenWidthFixed,
-            "max" == D && Pe().ChildrenWidthGrow,
-            "standard" == N && Pe().ExtraPaddingOnChildrenBelow,
-            "standard" == A && Pe().StandardPadding,
-            "compact" == A && Pe().CompactPadding,
-            L && Pe().Clickable,
-            G && Pe().HighlightOnFocus,
+            "standard" == G && Pe().WithBottomSeparatorStandard,
+            "thick" == G && Pe().WithBottomSeparatorThick,
+            "fixed" == N && Pe().ChildrenWidthFixed,
+            "max" == N && Pe().ChildrenWidthGrow,
+            "standard" == A && Pe().ExtraPaddingOnChildrenBelow,
+            "standard" == E && Pe().StandardPadding,
+            "compact" == E && Pe().CompactPadding,
+            P && Pe().Clickable,
+            H && Pe().HighlightOnFocus,
+            !x && Pe().Background,
           ),
-          style: { "--indent-level": H },
+          style: { "--indent-level": V },
           children: [
-            P &&
-              (0, s.jsxs)("div", {
-                className: Pe().FieldLabelRow,
-                children: [
-                  (0, s.jsxs)("div", {
-                    className: Pe().FieldLabel,
-                    id: Ee(r),
-                    children: [
-                      O &&
-                        (0, s.jsx)("div", {
-                          className: (0, d.A)(Pe().FieldIcon, Pe().Front),
-                          children: o,
-                        }),
-                      i,
-                      R && (0, s.jsx)(B.o, { tooltip: R }),
-                    ],
-                  }),
-                  q &&
-                    (0, s.jsxs)("div", {
-                      className: Pe().FieldChildrenWithIcon,
+            (0, s.jsxs)("div", {
+              className: Pe().FieldLeftColumn,
+              children: [
+                D &&
+                  (0, s.jsx)("div", {
+                    className: Pe().FieldLabelRow,
+                    children: (0, s.jsxs)("div", {
+                      className: Pe().FieldLabel,
+                      id: Ee(r),
                       children: [
                         W &&
                           (0, s.jsx)("div", {
-                            className: (0, d.A)(
-                              Pe().FieldIcon,
-                              Pe().BeforeChildren,
-                            ),
+                            className: (0, d.A)(Pe().FieldIcon, Pe().Front),
                             children: o,
                           }),
-                        (0, s.jsx)("div", {
-                          className: Pe().FieldChildrenInner,
-                          children: c,
-                        }),
+                        i,
+                        R && (0, s.jsx)(B.o, { tooltip: R }),
                       ],
                     }),
-                ],
-              }),
-            U &&
-              (0, s.jsxs)("div", {
-                className: Pe().FieldChildrenWithIcon,
-                children: [
-                  W &&
-                    (0, s.jsx)("div", {
-                      className: (0, d.A)(Pe().FieldIcon, Pe().BeforeChildren),
-                      children: o,
-                    }),
-                  (0, s.jsx)("div", {
-                    className: Pe().FieldChildrenInner,
-                    children: c,
                   }),
-                ],
-              }),
-            n &&
-              (0, s.jsx)("div", {
-                className: Pe().FieldDescription,
-                id: Ge(r),
-                children: n,
-              }),
+                k && X,
+                n &&
+                  (0, s.jsx)("div", {
+                    className: Pe().FieldDescription,
+                    id: Ge(r),
+                    children: n,
+                  }),
+              ],
+            }),
+            (0, s.jsx)("div", {
+              className: Pe().FieldRightColumn,
+              children: U && X,
+            }),
           ],
         });
-      });
+      }
       a.forwardRef(function (e, t) {
         return (0, s.jsx)(Ve, { ref: t, accessibilityId: null, ...e });
       });
@@ -65487,15 +65530,16 @@
               childrenContainerWidth: h,
               padding: _,
               inlineWrap: B,
-              fieldClassName: b,
-              fieldChildren: f,
-              accessibilityNameOrder: w,
-              ...y
+              transparentBackground: b,
+              fieldClassName: f,
+              fieldChildren: w,
+              accessibilityNameOrder: y,
+              ...M
             } = e,
-            { refWithValue: M, refForElement: v } = (0, g.RY)(t),
-            S = a.useId();
+            { refWithValue: v, refForElement: S } = (0, g.RY)(t),
+            C = a.useId();
           return (0, s.jsxs)(Ve, {
-            accessibilityId: S,
+            accessibilityId: C,
             label: r,
             indentLevel: d,
             description: i,
@@ -65506,16 +65550,17 @@
             childrenContainerWidth: null != h ? h : "min",
             onMouseDown: (e) => {
               var t;
-              null === (t = M.current) || void 0 === t || t.focus(),
+              null === (t = v.current) || void 0 === t || t.focus(),
                 e.preventDefault();
             },
             padding: _,
             inlineWrap: B,
             explainer: n,
-            className: b,
+            className: f,
             disabled: c,
+            transparentBackground: b,
             onActivate: c ? u : void 0,
-            children: [(0, s.jsx)(Ke, { accessibilityId: S, ...e, ref: v }), f],
+            children: [(0, s.jsx)(Ke, { accessibilityId: C, ...e, ref: S }), w],
           });
         }),
         Ke = a.forwardRef(function (e, t) {
@@ -65588,130 +65633,8 @@
             children: (0, s.jsx)(w, { ...He(p, e), ...u, ref: m }),
           });
         });
-      var Ye,
-        Qe = r(3812),
-        Xe = r.n(Qe),
-        Je = r(16569),
-        et = r(63741);
-      function tt(e) {
-        const {
-            childrenKey: t,
-            childrenClasses: r,
-            children: i,
-            directionClass: n,
-            animate: a = !0,
-            sizeClass: o,
-          } = e,
-          l = (0, d.A)(Xe().TransitionGroup, n);
-        return (0, s.jsx)(Je.A, {
-          className: l,
-          appear: !1,
-          enter: a,
-          exit: a,
-          children: (0, s.jsx)(
-            rt,
-            { childrenClasses: r, sizeClass: o, children: i },
-            t,
-          ),
-        });
-      }
-      function rt(e) {
-        const {
-            sizeClass: t,
-            children: r,
-            childrenClasses: i,
-            navKey: n,
-            ...o
-          } = e,
-          [c, u, m, g] = (function () {
-            let e = a.useRef(null),
-              t = a.useRef(void 0);
-            a.useLayoutEffect(() => {
-              let r = e.current;
-              if (!r || t.current) return;
-              t.current = {
-                element: r,
-                activeProps: new Set(),
-                bExiting: !1,
-                fnDone: null,
-              };
-              let i = t.current,
-                n = (e) => {
-                  e.target == r && i.activeProps.add(e.propertyName);
-                };
-              r.addEventListener("transitionrun", n, !1);
-              let s = (e) => {
-                e.target == r &&
-                  (i.activeProps.delete(e.propertyName),
-                  i.fnDone &&
-                    0 == i.activeProps.size &&
-                    i.bExiting &&
-                    i.fnDone());
-              };
-              r.addEventListener("transitionend", s, !1),
-                r.addEventListener("transitioncancel", s, !1);
-            }, []);
-            let r = a.useCallback(
-                (e) => {
-                  t.current ? (t.current.fnDone = e) : e();
-                },
-                [t],
-              ),
-              i = a.useCallback(() => {
-                t.current && (t.current.bExiting = !1);
-              }, [t]),
-              n = a.useCallback(() => {
-                t.current && (t.current.bExiting = !0);
-              }, [t]);
-            return [e, r, i, n];
-          })(),
-          p = a.useRef(!0),
-          h = a.useCallback(() => p.current, [p]),
-          _ = a.useCallback(() => {
-            (p.current = !0), m();
-          }, [m]),
-          B = a.useCallback(() => {
-            (p.current = !1), g();
-          }, [g]),
-          b = e.childrenClasses,
-          f = {
-            enter: b.enterStart,
-            enterActive: b.enterEnd,
-            exit: b.exitStart,
-            exitActive: b.exitEnd,
-          };
-        return c.current && !c.current.ownerDocument.defaultView
-          ? null
-          : (0, s.jsx)(et.A, {
-              nodeRef: c,
-              classNames: f,
-              in: !0,
-              timeout: 1e4,
-              addEndListener: u,
-              onEntering: _,
-              onExiting: B,
-              ...o,
-              children: (0, s.jsx)("div", {
-                ref: c,
-                className: (0, d.A)(Xe().ContentWrapper, b.base),
-                children: (0, s.jsx)(l.Z, {
-                  className: t,
-                  fnCanTakeFocus: h,
-                  navKey: n,
-                  children: e.children,
-                }),
-              }),
-            });
-      }
-      function it(e, t) {
-        return {
-          base: t,
-          enterStart: e.Enter,
-          enterEnd: e.EnterActive,
-          exitStart: e.Exit,
-          exitEnd: e.ExitActive,
-        };
-      }
+      var Ye;
+      r(3812);
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Left = 1)] = "Left"),
@@ -65719,152 +65642,28 @@
           (e[(e.Up = 3)] = "Up"),
           (e[(e.Down = 4)] = "Down");
       })(Ye || (Ye = {}));
-      var nt = r(21717),
-        st = r.n(nt),
-        at = r(8871);
-      const ot = a.createContext(null);
-      function lt(e) {
-        const t = a.useContext(ot),
-          r = (0, De.rP)().IN_VR,
-          { title: i, icon: n, active: o, ...c } = e;
-        return (0, s.jsxs)(l.Z, {
-          preferredFocus: o,
-          navRef: o && t ? t : void 0,
-          noFocusRing: !0,
-          onActivate: r ? void 0 : c.onClick,
-          onFocus: r ? void 0 : c.onClick,
-          ...c,
-          children: [
-            n &&
-              (0, s.jsx)("div", {
-                className: st().PageListItem_Icon,
-                children: n,
-              }),
-            (0, s.jsx)("div", {
-              className: st().PageListItem_Title,
-              children: i,
-            }),
-          ],
-        });
-      }
-      function ct(e) {
-        const { bTransparent: t, className: r, ...i } = e;
-        return (0, s.jsx)("div", {
-          className: (0, d.A)(r, st().Separator),
-          ...i,
-        });
-      }
-      a.forwardRef(function (e, t) {
-        const { page: r, bAutoFocusPageContent: i, showTitle: n = !1 } = e,
-          o = a.useRef(null),
-          l = a.useRef(!0);
-        a.useEffect(() => {
-          var e;
-          (l.current && i) ||
-            null === (e = o.current) ||
-            void 0 === e ||
-            e.TakeFocus(),
-            (l.current = !1);
-        }, [r, i]);
-        return (0, s.jsx)(ot.Provider, {
-          value: o,
-          children: (0, s.jsx)(xe, {
-            ...e,
-            stylesheet: st(),
-            showTitle: n,
-            PageListItemComponent: lt,
-            PageListSeparatorComponent: ct,
-            renderPageContent:
-              e.renderPageContent ||
-              ((t, r, i) =>
-                (0, s.jsx)(ut, {
-                  pages: e.pages,
-                  activePage: t,
-                  refForPage: r,
-                  PageComponent: i,
-                })),
-          }),
-        });
-      });
-      function ut(e) {
-        const { pages: t, activePage: r, refForPage: i, PageComponent: n } = e,
-          o = (function (e) {
-            let t = a.useRef(e),
-              r = a.useRef(Ye.None),
-              i = t.current;
-            if (i == e) return r.current;
-            let n = Ye.None;
-            i < e ? (n = Ye.Down) : i > e && (n = Ye.Up);
-            return (t.current = e), (r.current = n), n;
-          })(a.useMemo(() => t.findIndex((e) => e == r), [t, r])),
-          l = (function (e, t) {
-            const r = a.useMemo(() => new Map(), []),
-              i = a.useRef(e);
-            i.current = e;
-            const n = a.useRef(t);
-            n.current = t;
-            const s = a.useCallback(
-              (e) => (t) => {
-                r.set(e, t), e === i.current && (0, at.cZ)(n.current, t);
-              },
-              [r],
-            );
-            return (
-              a.useEffect(
-                () => (
-                  (0, at.cZ)(t, e && r.get(e)), () => (0, at.cZ)(t, void 0)
-                ),
-                [r, e, t],
-              ),
-              s
-            );
-          })(null == r ? void 0 : r.identifier, i);
-        let c =
-          ((u = st()),
-          (d = o) == Ye.Left
-            ? u.Left
-            : d == Ye.Right
-              ? u.Right
-              : d == Ye.Up
-                ? u.Up
-                : d == Ye.Down
-                  ? u.Down
-                  : "");
-        var u, d;
-        return (0, s.jsx)(tt, {
-          childrenKey: null == r ? void 0 : r.identifier,
-          childrenClasses: it(st(), st().ContentTransition),
-          directionClass: c,
-          animate: o != Ye.None,
-          children:
-            r &&
-            (0, s.jsx)(
-              n,
-              { ref: l(r.identifier), stylesheet: st(), activePage: r },
-              r.identifier,
-            ),
-        });
-      }
-      var dt = r(43670),
-        mt = r.n(dt),
-        gt = r(60155);
-      function pt(e, t) {
+      r(21717);
+      a.createContext(null);
+      var Qe = r(43670),
+        Xe = r.n(Qe),
+        Je = r(60155);
+      function et(e, t) {
         for (const r of e.options) {
           if (q(r) && r.data === t) return !0;
-          if (k(r) && pt(r, t)) return !0;
+          if (k(r) && et(r, t)) return !0;
         }
         return !1;
       }
-      function ht(e) {
+      function tt(e) {
         const t = (r) =>
           null == r
             ? void 0
             : r.map((r, i) =>
                 U(r)
-                  ? (0, s.jsx)(gt.K5, {}, i)
+                  ? (0, s.jsx)(Je.K5, {}, i)
                   : q(r)
                     ? (0, s.jsx)(
-                        gt.kt,
+                        Je.kt,
                         {
                           role: "option",
                           onSelected: (t) =>
@@ -65878,17 +65677,17 @@
                       )
                     : k(r)
                       ? (0, s.jsx)(
-                          gt.Vs,
+                          Je.Vs,
                           {
                             label: r.label,
-                            selectedWithin: pt(r, e.selectedValue),
+                            selectedWithin: et(r, e.selectedValue),
                             children: t(r.options),
                           },
                           i,
                         )
                       : null,
               );
-        return (0, s.jsx)(gt.tz, {
+        return (0, s.jsx)(Je.tz, {
           onCancel: e.onCancel,
           role: "listbox",
           children: t(e.rgOptions),
@@ -65909,7 +65708,7 @@
           children: [
             (0, s.jsx)(i.$n, {
               id: m,
-              className: (0, d.A)(mt().DropDownControlButton, r),
+              className: (0, d.A)(Xe().DropDownControlButton, r),
               "aria-labelledby": c || g,
               ...u,
               ref: t,
@@ -65933,8 +65732,8 @@
           ],
         });
       });
-      var _t = r(4437);
-      const Bt = a.forwardRef(function (e, t) {
+      var rt = r(4437);
+      const it = a.forwardRef(function (e, t) {
         const { className: r, ...n } = e;
         let o = a.useRef(void 0),
           c = (0, g.Ue)(t, o);
@@ -65961,7 +65760,7 @@
               "aria-label": (0, m.we)(
                 u ? "#Login_HidePassword" : "#Login_ShowPassword",
               ),
-              className: _t.TogglePasswordVisibilityBtn,
+              className: rt.TogglePasswordVisibilityBtn,
               onPointerDown: p,
               onOKButton: p,
               children: u ? (0, s.jsx)(pe.rxV, {}) : (0, s.jsx)(pe.ZyV, {}),
@@ -65991,7 +65790,7 @@
           bottomSeparator: l,
           highlightOnFocus: c,
           childrenContainerWidth: "fixed",
-          children: (0, s.jsx)(Bt, { ...He(d, e), ...u, ref: t }),
+          children: (0, s.jsx)(it, { ...He(d, e), ...u, ref: t }),
         });
       });
       a.forwardRef(function (e, t) {
@@ -66024,18 +65823,18 @@
           },
         });
       });
-      var bt,
-        ft,
-        wt,
-        yt,
-        Mt,
-        vt,
-        St,
-        Ct = r(10794),
-        Rt = r.n(Ct),
-        zt = r(69817),
-        jt = r(37788),
-        xt = r(51272);
+      var nt,
+        st,
+        at,
+        ot,
+        lt,
+        ct,
+        ut,
+        dt = r(10794),
+        mt = r.n(dt),
+        gt = r(69817),
+        pt = r(37788),
+        ht = r(51272);
       !(function (e) {
         (e[(e.Invalid = 0)] = "Invalid"),
           (e[(e.TrackingSystemName_String = 1e3)] =
@@ -66355,7 +66154,7 @@
             "VendorSpecific_Reserved_End"),
           (e[(e.TrackedDeviceProperty_Max = 1e6)] =
             "TrackedDeviceProperty_Max");
-      })(bt || (bt = {})),
+      })(nt || (nt = {})),
         (function (e) {
           (e[(e.k_EButton_System = 0)] = "k_EButton_System"),
             (e[(e.k_EButton_ApplicationMenu = 1)] =
@@ -66387,7 +66186,7 @@
             (e[(e.k_EButton_Reserved0 = 50)] = "k_EButton_Reserved0"),
             (e[(e.k_EButton_Reserved1 = 51)] = "k_EButton_Reserved1"),
             (e[(e.k_EButton_Max = 64)] = "k_EButton_Max");
-        })(ft || (ft = {})),
+        })(st || (st = {})),
         (function (e) {
           (e[(e.None = 0)] = "None"),
             (e[(e.ButtonEnter = 1)] = "ButtonEnter"),
@@ -66395,13 +66194,13 @@
             (e[(e.Snap = 3)] = "Snap"),
             (e[(e.Sliding = 4)] = "Sliding"),
             (e[(e.SlidingEdge = 5)] = "SlidingEdge");
-        })(wt || (wt = {})),
+        })(at || (at = {})),
         (function (e) {
           (e[(e.Minimal = 1)] = "Minimal"),
             (e[(e.Modal = 2)] = "Modal"),
             (e[(e.ShowArrowKeys = 4)] = "ShowArrowKeys"),
             (e[(e.HideDoneKey = 8)] = "HideDoneKey");
-        })(yt || (yt = {})),
+        })(ot || (ot = {})),
         (function (e) {
           (e[(e.Unknown = -1)] = "Unknown"),
             (e[(e.Idle = 0)] = "Idle"),
@@ -66409,38 +66208,38 @@
             (e[(e.UserInteraction_Timeout = 2)] = "UserInteraction_Timeout"),
             (e[(e.Standby = 3)] = "Standby"),
             (e[(e.Idle_Timeout = 4)] = "Idle_Timeout");
-        })(Mt || (Mt = {})),
+        })(lt || (lt = {})),
         (function (e) {
           (e[(e.VRMouseButton_Left = 1)] = "VRMouseButton_Left"),
             (e[(e.VRMouseButton_Right = 2)] = "VRMouseButton_Right"),
             (e[(e.VRMouseButton_Middle = 4)] = "VRMouseButton_Middle");
-        })(vt || (vt = {})),
+        })(ct || (ct = {})),
         (function (e) {
           (e[(e.Notification_Shown = 600)] = "Notification_Shown"),
             (e[(e.Notification_Hidden = 601)] = "Notification_Hidden"),
             (e[(e.Notification_BeginInteraction = 602)] =
               "Notification_BeginInteraction"),
             (e[(e.Notification_Destroyed = 603)] = "Notification_Destroyed");
-        })(St || (St = {}));
-      (0, xt.i_)(Rt()["error-shake-duration"]);
-      function It(e, t) {
+        })(ut || (ut = {}));
+      (0, ht.i_)(mt()["error-shake-duration"]);
+      function _t(e, t) {
         return t < 0 ? 0 : t > 1 ? 1 : 0 == e ? t : Math.round(t / e) * e;
       }
-      function Tt(e, t, r) {
+      function Bt(e, t, r) {
         const i = e + r * (t - e);
         return Number.parseFloat(i.toFixed(10));
       }
-      function Ft(e, t, r) {
+      function bt(e, t, r) {
         return (r - e) / (t - e);
       }
-      var Ot;
+      var ft;
       !(function (e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.MouseDragging = 1)] = "MouseDragging"),
           (e[(e.TouchStart = 2)] = "TouchStart"),
           (e[(e.TouchDragging = 3)] = "TouchDragging");
-      })(Ot || (Ot = {}));
-      class Wt extends a.Component {
+      })(ft || (ft = {}));
+      class wt extends a.Component {
         get showHandle() {
           var e;
           return null === (e = this.props.showHandle) || void 0 === e || e;
@@ -66482,18 +66281,18 @@
             null == this.props.value || isNaN(this.props.value)
               ? this.props.min
               : (0, te.OQ)(this.props.value, this.props.min, this.props.max);
-          return Ft(this.props.min, this.props.max, e);
+          return bt(this.props.min, this.props.max, e);
         }
         get normalizedDefaultValue() {
           const e = this.props.resetValue;
           if (
             !(null == e || isNaN(e) || e < this.props.min || e > this.props.max)
           )
-            return Ft(this.props.min, this.props.max, e);
+            return bt(this.props.min, this.props.max, e);
         }
         get normalizedSliderOrigin() {
           const e = (0, te.OQ)(0, this.props.min, this.props.max);
-          return Ft(this.props.min, this.props.max, e);
+          return bt(this.props.min, this.props.max, e);
         }
         get CanResetToDefault() {
           return (
@@ -66503,12 +66302,12 @@
         }
         get SliderChangeSource() {
           switch (this.m_eDragMode) {
-            case Ot.MouseDragging:
+            case ft.MouseDragging:
               return 1;
-            case Ot.TouchDragging:
-            case Ot.TouchStart:
+            case ft.TouchDragging:
+            case ft.TouchStart:
               return 0;
-            case Ot.None:
+            case ft.None:
               return;
           }
         }
@@ -66520,8 +66319,8 @@
             (this.m_sliderBounds = void 0),
             (this.m_handleBounds = void 0),
             (this.m_fZoom = 1),
-            (this.m_eDragMode = Ot.None),
-            (this.m_vTouchStartPosition = (0, zt.D0)()),
+            (this.m_eDragMode = ft.None),
+            (this.m_vTouchStartPosition = (0, gt.D0)()),
             (this.m_bInnerSliderHasFocus = !1),
             (this.m_nRepeatCount = 0),
             (this.m_fInitalRepeatTime = void 0),
@@ -66549,16 +66348,16 @@
                 this.props.onChangeStart(this.SliderChangeSource),
               e)
             ) {
-              case Ot.MouseDragging:
-              case Ot.TouchDragging:
-              case Ot.TouchStart:
+              case ft.MouseDragging:
+              case ft.TouchDragging:
+              case ft.TouchStart:
                 this.RecomputeSliderBounds(),
                   (this.m_fStartValue = this.props.value),
                   (this.m_fLatestUserValue = this.props.value);
-              case Ot.None:
+              case ft.None:
             }
             switch (e) {
-              case Ot.MouseDragging:
+              case ft.MouseDragging:
                 null ===
                   (r =
                     null === (t = this.m_refSlider.current) || void 0 === t
@@ -66578,8 +66377,8 @@
                       passive: !1,
                     });
                 break;
-              case Ot.TouchStart:
-              case Ot.TouchDragging:
+              case ft.TouchStart:
+              case ft.TouchDragging:
                 null ===
                   (a =
                     null === (s = this.m_refSlider.current) || void 0 === s
@@ -66599,7 +66398,7 @@
                       passive: !1,
                     });
                 break;
-              case Ot.None:
+              case ft.None:
                 this.RemoveDocumentEventListeners();
             }
           }
@@ -66624,8 +66423,8 @@
             a = Math.pow(2, Math.floor(n / s)),
             o = this.normalizedDpadStep * a,
             l = (0, te.OQ)(o, this.normalizedDpadStep, 0.05) * i,
-            c = It(this.normalizedStep, this.normalizedClampedValue + l);
-          let u = Tt(this.props.min, this.props.max, c);
+            c = _t(this.normalizedStep, this.normalizedClampedValue + l);
+          let u = Bt(this.props.min, this.props.max, c);
           if (
             ((u = (0, te.OQ)(
               u,
@@ -66700,8 +66499,8 @@
           var t, r;
           if (this.props.disabled || !this.m_refSlider.current) return;
           const i = this.ComputeNormalizedValueForMousePosition(e),
-            n = It(this.normalizedStep, i);
-          let s = Tt(this.props.min, this.props.max, n);
+            n = _t(this.normalizedStep, i);
+          let s = Bt(this.props.min, this.props.max, n);
           const a =
               null !== (t = this.props.clampMin) && void 0 !== t
                 ? t
@@ -66714,11 +66513,11 @@
             const e = s > this.props.value,
               t = 0 == this.step;
             if (
-              ((this.m_eDragMode == Ot.None || !t) &&
+              ((this.m_eDragMode == ft.None || !t) &&
                 this.props.stepSound &&
                 ge.eZ.PlayNavSound(e ? ge.PN.SliderUp : ge.PN.SliderDown),
-              this.m_eDragMode == Ot.MouseDragging ||
-                this.m_eDragMode == Ot.TouchDragging)
+              this.m_eDragMode == ft.MouseDragging ||
+                this.m_eDragMode == ft.TouchDragging)
             ) {
               let e = !1;
               if (
@@ -66727,7 +66526,7 @@
                 this.m_fLatestUserValue < o &&
                 !e
               )
-                this.PlayHaptic(wt.SlidingEdge), (e = !0);
+                this.PlayHaptic(at.SlidingEdge), (e = !0);
               else if (
                 !this.BShouldTriggerHapticOnSnap() &&
                 this.m_fLatestUserValue >= a &&
@@ -66737,9 +66536,9 @@
                 Math.floor(((this.m_fLatestUserValue - a) / (o - a)) * t) ==
                   Math.floor(((s - a) / (o - a)) * t) ||
                   e ||
-                  (this.PlayHaptic(wt.Sliding), (e = !0));
+                  (this.PlayHaptic(at.Sliding), (e = !0));
               }
-              t || e || (this.PlayHaptic(wt.Snap), (e = !0));
+              t || e || (this.PlayHaptic(at.Snap), (e = !0));
             }
             (this.m_fLatestUserValue = s),
               this.FireOnChange(s, this.SliderChangeSource);
@@ -66749,13 +66548,13 @@
           this.UpdateSliderValueForPosition(e.clientX);
         }
         OnWindowMouseUp(e) {
-          this.m_eDragMode != Ot.None && this.Complete();
+          this.m_eDragMode != ft.None && this.Complete();
         }
         OnMouseDown(e) {
           0 == e.button &&
             (this.props.disabled ||
               (e.preventDefault(),
-              this.SetDragMode(Ot.MouseDragging),
+              this.SetDragMode(ft.MouseDragging),
               this.UpdateSliderValueForPosition(e.clientX)));
         }
         OnTouchStart(e) {
@@ -66766,7 +66565,7 @@
           );
           t < 0 ||
             t > 1 ||
-            (this.SetDragMode(Ot.TouchStart),
+            (this.SetDragMode(ft.TouchStart),
             (this.m_vTouchStartPosition = {
               x: e.touches[0].clientX,
               y: e.touches[0].clientY,
@@ -66776,36 +66575,36 @@
           var t;
           if (1 == e.touches.length) {
             switch (this.m_eDragMode) {
-              case Ot.TouchStart:
+              case ft.TouchStart:
                 const r = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-                if ((0, zt.LD)(this.m_vTouchStartPosition, r) >= 10) {
-                  const e = (0, zt.Fg)(this.m_vTouchStartPosition, r);
+                if ((0, gt.LD)(this.m_vTouchStartPosition, r) >= 10) {
+                  const e = (0, gt.Fg)(this.m_vTouchStartPosition, r);
                   Math.abs(e.x) > Math.abs(e.y)
-                    ? (this.SetDragMode(Ot.TouchDragging),
+                    ? (this.SetDragMode(ft.TouchDragging),
                       null === (t = this.m_refSlider.current) ||
                         void 0 === t ||
                         t.focus())
-                    : this.SetDragMode(Ot.None);
+                    : this.SetDragMode(ft.None);
                 }
                 break;
-              case Ot.TouchDragging:
+              case ft.TouchDragging:
                 this.UpdateSliderValueForPosition(e.touches[0].clientX);
             }
             e.preventDefault();
           }
         }
         OnWindowTouchEnd(e) {
-          this.m_eDragMode != Ot.None && this.Complete();
+          this.m_eDragMode != ft.None && this.Complete();
         }
         Complete() {
-          const e = this.m_eDragMode != Ot.None;
+          const e = this.m_eDragMode != ft.None;
           this.FireOnChange(this.m_fLatestUserValue, this.SliderChangeSource),
             this.props.onChangeComplete &&
               this.props.onChangeComplete(
                 this.m_fLatestUserValue,
                 this.SliderChangeSource,
               ),
-            this.SetDragMode(Ot.None);
+            this.SetDragMode(ft.None);
           const t = 0 == this.step;
           if (
             this.m_fLatestUserValue != this.m_fStartValue &&
@@ -66868,7 +66667,7 @@
             this.m_fStartValue != this.m_fLatestUserValue && this.Complete();
         }
         ResetToDefault() {
-          if (!this.CanResetToDefault || this.m_eDragMode != Ot.None) return;
+          if (!this.CanResetToDefault || this.m_eDragMode != ft.None) return;
           let e;
           (this.m_fLatestUserValue = this.props.resetValue),
             this.FireOnChange(this.props.resetValue, 4),
@@ -66881,8 +66680,8 @@
         }
         OnContextMenu(e) {
           if (null != this.props.resetValue) {
-            const t = (0, s.jsx)(gt.tz, {
-              children: (0, s.jsx)(gt.kt, {
+            const t = (0, s.jsx)(Je.tz, {
+              children: (0, s.jsx)(Je.kt, {
                 disabled: !this.CanResetToDefault,
                 onSelected: this.ResetToDefault,
                 children: (0, m.we)("#ResetToDefault"),
@@ -66947,27 +66746,27 @@
             Q = {};
           this.CanResetToDefault &&
             (Q[de.pR.SECONDARY] = (0, m.we)("#ResetToDefault"));
-          let X = `${Rt().SliderHandle} SliderHandle`,
-            J = `${Rt().SliderHandleContainer} SliderHandleContainer `;
+          let X = `${mt().SliderHandle} SliderHandle`,
+            J = `${mt().SliderHandleContainer} SliderHandleContainer `;
           "verticalline" == h
-            ? ((X = `${Rt().VerticalLineSliderHandle} SliderHandle`),
-              (J = `${Rt().VerticalLineSliderHandleContainer} SliderHandleContainer `))
+            ? ((X = `${mt().VerticalLineSliderHandle} SliderHandle`),
+              (J = `${mt().VerticalLineSliderHandleContainer} SliderHandleContainer `))
             : ("leftparen" != h && "rightparen" != h) ||
               ((X = (0, d.A)(
-                Rt().ParenSliderHandle,
-                "leftparen" == h ? Rt().Left : Rt().Right,
+                mt().ParenSliderHandle,
+                "leftparen" == h ? mt().Left : mt().Right,
                 "SliderHandle",
               )),
               (J = (0, d.A)(
-                Rt().ParenSliderHandleContainer,
-                "leftparen" == h ? Rt().Left : Rt().Right,
+                mt().ParenSliderHandleContainer,
+                "leftparen" == h ? mt().Left : mt().Right,
                 "SliderHandleContainer",
               )));
           const ee = Y(r);
-          return (0, s.jsx)(jt.YZ, {
+          return (0, s.jsx)(pt.YZ, {
             noFocusRing: !0,
             className: (0, d.A)(
-              Rt().SliderControlPanelGroup,
+              mt().SliderControlPanelGroup,
               "SliderControlPanelGroup",
               a,
             ),
@@ -66995,13 +66794,13 @@
               "aria-valuetext": ee,
               ...P,
               className: (0, d.A)(
-                Rt().SliderControlAndNotches,
-                l && Rt().Disabled,
-                Z && Rt().WithDefaultValue,
-                Z && $ && Rt().DefaultValueIsColorRange,
-                Z && $ && "left" == x.side && Rt().DefaultValueColorLeft,
-                Z && $ && "left" != x.side && Rt().DefaultValueColorRight,
-                !k && Rt().ForegroundInvisible,
+                mt().SliderControlAndNotches,
+                l && mt().Disabled,
+                Z && mt().WithDefaultValue,
+                Z && $ && mt().DefaultValueIsColorRange,
+                Z && $ && "left" == x.side && mt().DefaultValueColorLeft,
+                Z && $ && "left" != x.side && mt().DefaultValueColorRight,
+                !k && mt().ForegroundInvisible,
               ),
               focusable: this.isKeyNavTarget,
               noFocusRing: !0,
@@ -67025,13 +66824,13 @@
               onCancelActionDescription: (0, m.we)("#ActionButtonLabelDone"),
               children: [
                 (0, s.jsxs)("div", {
-                  className: (0, d.A)(Rt().SliderControl, "SliderControl"),
+                  className: (0, d.A)(mt().SliderControl, "SliderControl"),
                   children: [
                     (0, s.jsx)("div", {
                       className: (0, d.A)(
-                        Rt().SliderTrack,
-                        null != f && N && Rt().SliderHasNotches,
-                        { [Rt().SliderTrackDark]: "dark" === L },
+                        mt().SliderTrack,
+                        null != f && N && mt().SliderHasNotches,
+                        { [mt().SliderTrackDark]: "dark" === L },
                         U,
                         "SliderTrack",
                       ),
@@ -67040,9 +66839,9 @@
                     Z &&
                       K &&
                       (0, s.jsx)("div", {
-                        className: Rt().DefaultValueTickContainer,
+                        className: mt().DefaultValueTickContainer,
                         children: (0, s.jsx)("div", {
-                          className: Rt().DefaultValueTick,
+                          className: mt().DefaultValueTick,
                           children: (0, s.jsx)(pe.u49, { direction: "down" }),
                         }),
                       }),
@@ -67063,7 +66862,7 @@
                       }),
                   ],
                 }),
-                (0, s.jsx)(qt, {
+                (0, s.jsx)(yt, {
                   notchCount: A,
                   notchLabels: E,
                   sliderValue: this.normalizedClampedValue,
@@ -67075,7 +66874,7 @@
           });
         }
       }
-      function qt(e) {
+      function yt(e) {
         let {
             sliderValue: t,
             notchCount: r,
@@ -67092,7 +66891,7 @@
           i && (c = !0),
             u.push(
               (0, s.jsx)(
-                Ut,
+                Mt,
                 {
                   notchIndex: e,
                   sliderValue: t,
@@ -67106,36 +66905,36 @@
             );
         }
         return (0, s.jsx)(l.Z, {
-          className: (0, d.A)(Rt().SliderNotchContainer),
+          className: (0, d.A)(mt().SliderNotchContainer),
           children: u,
         });
       }
-      function Ut(e) {
+      function Mt(e) {
         const t = e.notchIndex <= (e.notchCount - 1) * e.sliderValue,
           r = e.notchCount <= 3 && !e.notchTicksVisible,
           i = r && 0 == e.notchIndex,
           n = r && e.notchIndex == e.notchCount - 1,
           a = { ...e, alignLeftEnd: i, alignRightEnd: n, active: t };
         return (0, s.jsx)("div", {
-          className: (0, d.A)(Rt().SliderNotch, r && Rt().AlignToEnds),
-          children: e.renderNotch ? e.renderNotch(a) : (0, s.jsx)(kt, { ...a }),
+          className: (0, d.A)(mt().SliderNotch, r && mt().AlignToEnds),
+          children: e.renderNotch ? e.renderNotch(a) : (0, s.jsx)(vt, { ...a }),
         });
       }
-      function kt(e) {
+      function vt(e) {
         var t;
         const { alignLeftEnd: r, alignRightEnd: i, active: n } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             e.notchTicksVisible &&
               (0, s.jsx)("div", {
-                className: (0, d.A)(Rt().SliderNotchTick, n && Rt().TickActive),
+                className: (0, d.A)(mt().SliderNotchTick, n && mt().TickActive),
               }),
             e.notchLabel &&
               (0, s.jsx)("div", {
                 className: (0, d.A)(
-                  Rt().SliderNotchLabel,
-                  r && Rt().AlignToLeft,
-                  i && Rt().AlignToRight,
+                  mt().SliderNotchLabel,
+                  r && mt().AlignToLeft,
+                  i && mt().AlignToRight,
                 ),
                 children:
                   null === (t = e.notchLabel) || void 0 === t
@@ -67145,22 +66944,22 @@
           ],
         });
       }
-      (0, n.Cg)([g.oI], Wt.prototype, "RecomputeSliderBounds", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "SetDragMode", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnGamepadDirection", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "UpdateSliderValueForPosition", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnWindowMouseMove", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnWindowMouseUp", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnMouseDown", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnTouchStart", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnWindowTouchMove", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnWindowTouchEnd", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "Complete", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "BlurInnerSlider", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnInnerSliderFocus", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnInnerSliderBlur", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "ResetToDefault", null),
-        (0, n.Cg)([g.oI], Wt.prototype, "OnContextMenu", null);
+      (0, n.Cg)([g.oI], wt.prototype, "RecomputeSliderBounds", null),
+        (0, n.Cg)([g.oI], wt.prototype, "SetDragMode", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnGamepadDirection", null),
+        (0, n.Cg)([g.oI], wt.prototype, "UpdateSliderValueForPosition", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnWindowMouseMove", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnWindowMouseUp", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnMouseDown", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnTouchStart", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnWindowTouchMove", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnWindowTouchEnd", null),
+        (0, n.Cg)([g.oI], wt.prototype, "Complete", null),
+        (0, n.Cg)([g.oI], wt.prototype, "BlurInnerSlider", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnInnerSliderFocus", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnInnerSliderBlur", null),
+        (0, n.Cg)([g.oI], wt.prototype, "ResetToDefault", null),
+        (0, n.Cg)([g.oI], wt.prototype, "OnContextMenu", null);
       a.forwardRef(function (e, t) {
         const {
           label: r,
@@ -67182,19 +66981,19 @@
           d = (0, g.wY)(u),
           m = (0, g.Ue)(d, t);
         return (0, s.jsx)("div", {
-          className: Rt().CompoundSliderSubSliderLabel,
+          className: mt().CompoundSliderSubSliderLabel,
           ref: m,
           onMouseDown: l,
           onTouchStart: c,
           style: { transform: `translateX(${n}px)` },
           children: (0, s.jsx)("div", {
-            className: Rt().CompoundSliderSubSliderLabelInternal,
+            className: mt().CompoundSliderSubSliderLabelInternal,
             children: r,
           }),
         });
       });
-      var Lt = r(90665);
-      const Pt = a.forwardRef(function (e, t) {
+      var St = r(90665);
+      const Ct = a.forwardRef(function (e, t) {
         const {
           value: r,
           onChange: i,
@@ -67230,9 +67029,9 @@
           ],
         });
       });
-      function Dt(e) {
+      function Rt(e) {
         const t = !!e.disabled,
-          { actionDescriptions: r, gamepadEvents: i } = (0, Lt.C7)(e),
+          { actionDescriptions: r, gamepadEvents: i } = (0, St.C7)(e),
           n = a.useId(),
           { "aria-expanded": o, "aria-controls": l } = e;
         return (0, s.jsx)(Ve, {
@@ -67253,7 +67052,7 @@
           onClick: e.onClick,
           indentLevel: e.indentLevel,
           ...i,
-          children: (0, s.jsx)(Pt, {
+          children: (0, s.jsx)(Ct, {
             "aria-expanded": o,
             "aria-controls": l,
             ...He(n, e),
@@ -67264,21 +67063,21 @@
           }),
         });
       }
-      class Nt extends i.pF {
+      class zt extends i.pF {
         OnToggleChange(e) {
           this.props.disabled || e === this.checked || this.Toggle();
         }
         render() {
-          return (0, s.jsx)(Dt, {
+          return (0, s.jsx)(Rt, {
             ...this.props,
             OnToggleChange: this.OnToggleChange,
             checked: this.checked,
           });
         }
       }
-      (0, n.Cg)([g.oI], Nt.prototype, "OnToggleChange", null);
-      var At = r(63512);
-      function Et(e) {
+      (0, n.Cg)([g.oI], zt.prototype, "OnToggleChange", null);
+      var jt = r(63512);
+      function xt(e) {
         const { children: t, bCenterVertically: r, refElem: i, ...n } = e,
           a = (0, d.A)(
             Pe().GamepadDialogContent,
@@ -67286,7 +67085,7 @@
             e.className,
             r && " _DialogCenterVertically",
           ),
-          { ref: o, navRef: c } = (0, At.tw)(),
+          { ref: o, navRef: c } = (0, jt.tw)(),
           u = (0, g.Ue)(i, o);
         return (0, s.jsx)(l.Z, {
           ...n,
@@ -76770,14 +76569,13 @@
     32754: (e, t, r) => {
       "use strict";
       r.d(t, {
-        C$: () => p,
-        Gq: () => B,
-        fS: () => w,
-        gK: () => g,
-        he: () => h,
-        m9: () => _,
-        pK: () => S,
-        zQ: () => y,
+        C$: () => h,
+        Gq: () => b,
+        fS: () => y,
+        gK: () => p,
+        he: () => _,
+        m9: () => B,
+        zQ: () => M,
       });
       var i = r(7850),
         n = r(90626),
@@ -76787,23 +76585,24 @@
         l = r(52038),
         c = r(61859),
         u = r(7077),
-        d = r.n(u);
-      const m = n.createContext({}),
-        g = () => n.useContext(m);
-      function p(e) {
+        d = r.n(u),
+        m = r(42327);
+      const g = n.createContext({}),
+        p = () => n.useContext(g);
+      function h(e) {
         const [t, r] = n.useState(null),
           s = n.useMemo(() => ({ targetElement: t }), [t]);
-        return (0, i.jsxs)(m.Provider, {
+        return (0, i.jsxs)(g.Provider, {
           value: s,
           children: [(0, i.jsx)("div", { ref: r }), e.children],
         });
       }
-      function h(e) {
+      function _(e) {
         var t;
-        const { divProps: r, tooltipProps: n } = b({
+        const { divProps: r, tooltipProps: n } = f({
           ...e,
           toolTipContent: e.toolTipContent
-            ? (0, i.jsx)(y, { children: f(e.toolTipContent) })
+            ? (0, i.jsx)(M, { children: w(e.toolTipContent) })
             : null,
         });
         return (0, i.jsxs)(a.ml, {
@@ -76812,37 +76611,37 @@
           focusable:
             null !== (t = e.bNavStop) && void 0 !== t ? t : !!r.onClick,
           ...r,
-          children: [(0, i.jsx)(M, { ...n }), e.children],
+          children: [(0, i.jsx)(v, { ...n }), e.children],
         });
       }
-      function _(e) {
+      function B(e) {
         var t;
-        const { divProps: r, tooltipProps: n } = b(e);
+        const { divProps: r, tooltipProps: n } = f(e);
         return (0, i.jsxs)(a.ml, {
           className: "tool-tip-source",
           noFocusRing: !0,
           focusable:
             null !== (t = e.bNavStop) && void 0 !== t ? t : !!r.onClick,
           ...r,
-          children: [(0, i.jsx)(M, { ...n }), e.children],
+          children: [(0, i.jsx)(v, { ...n }), e.children],
         });
       }
-      function B(e) {
+      function b(e) {
         const { children: t } = e,
-          { divProps: r, tooltipProps: s } = b({
+          { divProps: r, tooltipProps: s } = f({
             ...e,
             toolTipContent: e.toolTipContent
-              ? (0, i.jsx)(y, { children: f(e.toolTipContent) })
+              ? (0, i.jsx)(M, { children: w(e.toolTipContent) })
               : null,
           });
         return (0, i.jsxs)(i.Fragment, {
           children: [
             n.cloneElement(t, { ...r, ...t.props }),
-            (0, i.jsx)(M, { ...s }),
+            (0, i.jsx)(v, { ...s }),
           ],
         });
       }
-      function b(e) {
+      function f(e) {
         const {
             toolTipContent: t,
             nDelayShowMS: r = 300,
@@ -76903,24 +76702,24 @@
           }
         );
       }
-      function f(e) {
+      function w(e) {
         return "string" == typeof e ? c.pf.LocalizeIfToken(e, !0) : e;
       }
-      function w(e) {
-        const { divProps: t, tooltipProps: r, stateHandlers: n } = b(e);
+      function y(e) {
+        const { divProps: t, tooltipProps: r, stateHandlers: n } = f(e);
         return {
           divProps: t,
           stateHandlers: n,
-          tooltip: (0, i.jsx)(M, { ...r }),
+          tooltip: (0, i.jsx)(v, { ...r }),
         };
       }
-      function y(e) {
+      function M(e) {
         return (0, i.jsx)("div", {
           ...e,
           className: (0, l.A)(d().TextToolTip, e.className),
         });
       }
-      function M(e) {
+      function v(e) {
         const {
             active: t,
             target: r,
@@ -76929,7 +76728,7 @@
             children: c,
           } = e,
           [u, d] = n.useState(t),
-          m = g();
+          g = p();
         if (
           (n.useEffect(() => {
             if (t) {
@@ -76938,22 +76737,16 @@
                 return () => window.clearTimeout(e);
               }
               d(!0);
-            } else d(!1);
+            } else (0, m.p)() || d(!1);
           }, [t]),
           !u)
         )
           return null;
         if (!c || !r) return null;
-        const { targetElement: p } = m;
+        const { targetElement: h } = g;
         return s.createPortal(
           (0, i.jsx)(o.g, { target: r, ...l, children: c }),
-          null != p ? p : r.ownerDocument.body,
-        );
-      }
-      const v = "DEBUG_StickyHovers";
-      function S() {
-        return (
-          window.sessionStorage && "true" == window.sessionStorage.getItem(v)
+          null != h ? h : r.ownerDocument.body,
         );
       }
     },
@@ -79477,7 +79270,6 @@
         XJ: () => l.XJ,
         Y2: () => g,
         iA: () => a.iA,
-        rP: () => u,
         rf: () => b,
         ss: () => d,
         td: () => p,

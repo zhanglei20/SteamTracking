@@ -606,6 +606,7 @@
         _ = "sale_reservation_bbcode_",
         _ = "sale_reservation_outofstock_",
         _ = "sale_reservation_delivery_",
+        _ = "sale_reservation_product_",
         _ = "sale_white_supplies_last_bbcode_",
         _ = "sale_section_desc_",
         _ = "sale_section_title_desc_",
@@ -806,7 +807,27 @@
             _.GetSaleSections()
               .filter((_) => !Boolean(_.disable_localization))
               .forEach((_) => {
-                var _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _;
+                var _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _,
+                  _;
                 const _ = _.GetSaleSectionIndexByID(_.unique_id);
                 for (let _ = 0; _ < 31; ++_) {
                   if (
@@ -890,13 +911,16 @@
                         (null === (_ = _.internal_section_data) || void 0 === _
                           ? void 0
                           : _.internal_type) &&
-                      (null ===
+                      ((null ===
                         (_ = _.internal_section_data.reservation_options) ||
                       void 0 === _
                         ? void 0
-                        : _.length) > 0 &&
-                      _.internal_section_data.reservation_options.forEach(
-                        (_) => {
+                        : _.length) > 0 ||
+                        _.internal_section_data.reservation_layout) &&
+                      (null ===
+                        (_ = _.internal_section_data.reservation_options) ||
+                        void 0 === _ ||
+                        _.forEach((_) => {
                           _.localized_reservation_desc &&
                             Boolean(_._.Get(_.localized_reservation_desc, _)) &&
                             _.SetLocalization(
@@ -922,8 +946,45 @@
                                 _,
                                 _.localized_delivery_override_desc[_],
                               );
-                        },
-                      ),
+                        }),
+                      null ===
+                        (_ =
+                          null ===
+                            (_ = _.internal_section_data.reservation_layout) ||
+                          void 0 === _
+                            ? void 0
+                            : _.product_configs) ||
+                        void 0 === _ ||
+                        _.forEach((_) => {
+                          var _;
+                          _.localized_product_config_title &&
+                            Boolean(
+                              _._.Get(_.localized_product_config_title, _),
+                            ) &&
+                            _.SetLocalization(
+                              _ + _.unique_id + "_" + _.unique_id,
+                              _,
+                              _.localized_product_config_title[_],
+                            ),
+                            null === (_ = _.variations) ||
+                              void 0 === _ ||
+                              __webpack_require__.forEach((_) => {
+                                _.localized_variation_name &&
+                                  Boolean(
+                                    _._.Get(_.localized_variation_name, _),
+                                  ) &&
+                                  _.SetLocalization(
+                                    "sale_reservation_variation_" +
+                                      _.unique_id +
+                                      "_" +
+                                      _.unique_id +
+                                      "_" +
+                                      _.unique_id,
+                                    _,
+                                    _.localized_variation_name[_],
+                                  );
+                              });
+                        })),
                     "vo_internal" == _.section_type &&
                       "while_supplies_last" ==
                         (null === (_ = _.internal_section_data) || void 0 === _
@@ -1541,6 +1602,9 @@
                           _,
                           _,
                           _,
+                          _,
+                          _,
+                          _,
                           _;
                         const _ = _.GetSaleSectionIndexByID(_.unique_id);
                         if (
@@ -1620,14 +1684,18 @@
                               void 0 === _
                                 ? void 0
                                 : _.internal_type) &&
-                            (null ===
+                            ((null ===
                               (_ =
                                 _.internal_section_data.reservation_options) ||
                             void 0 === _
                               ? void 0
-                              : _.length) > 0 &&
-                            _.internal_section_data.reservation_options.forEach(
-                              (_) => {
+                              : _.length) > 0 ||
+                              _.internal_section_data.reservation_layout) &&
+                            (null ===
+                              (_ =
+                                _.internal_section_data.reservation_options) ||
+                              void 0 === _ ||
+                              _.forEach((_) => {
                                 if (
                                   _ === _ + _.unique_id + "_" + _.unique_id &&
                                   (_ ||
@@ -1698,8 +1766,74 @@
                                     _.SetDirty(_._.jsondata_sales),
                                     (_ = !0));
                                 }
-                              },
-                            ),
+                              }),
+                            null ===
+                              (_ =
+                                null ===
+                                  (_ =
+                                    _.internal_section_data
+                                      .reservation_layout) || void 0 === _
+                                  ? void 0
+                                  : _.product_configs) ||
+                              void 0 === _ ||
+                              _.forEach((_) => {
+                                var _;
+                                if (
+                                  _ === _ + _.unique_id + "_" + _.unique_id &&
+                                  (_ ||
+                                    (_.localized_product_config_title &&
+                                      Boolean(
+                                        _._.Get(
+                                          _.localized_product_config_title,
+                                          _,
+                                        ),
+                                      )))
+                                ) {
+                                  _._.Get(
+                                    _.localized_product_config_title,
+                                    _,
+                                  ) !== _ &&
+                                    ((_.localized_product_config_title =
+                                      _._.Set(
+                                        _.localized_product_config_title || [],
+                                        _,
+                                        _,
+                                      )),
+                                    _.SetDirty(_._.jsondata_sales),
+                                    (_ = !0));
+                                }
+                                null === (_ = _.variations) ||
+                                  void 0 === _ ||
+                                  _.forEach((_) => {
+                                    if (
+                                      _ ===
+                                        _ +
+                                          _.unique_id +
+                                          "_" +
+                                          _.unique_id +
+                                          "_" +
+                                          _.unique_id &&
+                                      (_ ||
+                                        (_.localized_variation_name &&
+                                          Boolean(
+                                            _._.Get(
+                                              _.localized_variation_name,
+                                              _,
+                                            ),
+                                          )))
+                                    ) {
+                                      _._.Get(_.localized_variation_name, _) !==
+                                        _ &&
+                                        ((_.localized_variation_name = _._.Set(
+                                          _.localized_variation_name || [],
+                                          _,
+                                          _,
+                                        )),
+                                        _.SetDirty(_._.jsondata_sales),
+                                        (_ = !0));
+                                    }
+                                  });
+                              })),
                           "vo_internal" == _.section_type &&
                             "while_supplies_last" ==
                               (null === (_ = _.internal_section_data) ||
@@ -19067,7 +19201,6 @@
       function _(_) {
         const {
             reservationPackageID: _,
-            event: _,
             depositPackageID: _,
             bIsPreview: _,
             psuLessPackageID: _,
@@ -19127,7 +19260,6 @@
                   }),
                   _ &&
                     (0, _.jsx)(_._, {
-                      event: _,
                       reservationDef: _[0],
                       hardwareDetail: _,
                     }),
@@ -19666,7 +19798,7 @@
           : (0, _.jsx)(_.Fragment, {});
       }
       function _(_) {
-        const { event: _, showErrorInfo: _ } = _.context,
+        const { showErrorInfo: _ } = _.context,
           _ = Number.parseInt((0, _._)(_.args));
         if (_) {
           const _ = Number.parseInt((0, _._)(_.args, "depositpackageid")),
@@ -19676,7 +19808,6 @@
             _ = (0, _._)(_.args, "delivery_override_out_of_stock");
           return (0, _.jsx)(_, {
             reservationPackageID: _,
-            event: _,
             depositPackageID: _,
             psuLessPackageID: _,
             strOutOfStockOverride: _,

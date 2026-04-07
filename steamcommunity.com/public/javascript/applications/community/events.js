@@ -143,8 +143,8 @@
         (k = (0, w.Cg)([_.PA], k));
       var L = n(45699),
         G = n(76217),
-        b = n(23310);
-      function x(e, t) {
+        A = n(23310);
+      function b(e, t) {
         const n = (function () {
             const [e, t] = (0, a.useState)(location.search);
             return (
@@ -202,7 +202,7 @@
           );
         return [s, r];
       }
-      var A = n(55563),
+      var x = n(55563),
         C = n(35685),
         P = n(12155),
         j = n(9154),
@@ -240,10 +240,11 @@
               } = e,
               [r, c] = (0, a.useState)(null),
               [l, d] = (0, a.useState)(null),
-              [m] = x("emgid", void 0);
+              [m] = b("emgid", void 0),
+              [h] = b("announce_gid", void 0);
             return (
               (0, a.useEffect)(() => {
-                const e = (0, A.v)("EventWebRowEmbed");
+                const e = (0, x.v)("EventWebRowEmbed");
                 let a = !1;
                 if (
                   (function (e) {
@@ -290,23 +291,23 @@
                     }
                   })();
                 }
-              }, [t, m, n, i, o, s]),
+              }, [t, n, i, o, s]),
               (0, a.useEffect)(() => {
-                if (null != l && m) {
-                  const e = l.find((e) => e.GID === m);
+                if (null != l && (m || h)) {
+                  const e = l.find(
+                    (e) => e.GID === m || e.AnnouncementGID == h,
+                  );
                   if (e) i(e);
                   else {
                     (async () => {
-                      const e = await o.LoadPartnerEventFromClanEventGID(
-                        t,
-                        m,
-                        0,
-                      );
+                      const e = m
+                        ? await o.LoadPartnerEventFromClanEventGID(t, m, 0)
+                        : await o.LoadPartnerEventFromAnnoucementGID(t, h, 0);
                       e && d([...l, e]);
                     })();
                   }
                 }
-              }, [m, l, i, d, o, t]),
+              }, [m, h, l, i, d, o, t]),
               { last_update_event: r, rgEvents: l }
             );
           })({ ...e, fnEventShowModal: S }),
@@ -328,7 +329,7 @@
           [r],
         );
         const k = !!I && !!I.rtime,
-          b =
+          A =
             k && !!I.announcement_gid && (!E || 0 == E.length)
               ? I.announcement_gid
               : void 0,
@@ -391,14 +392,14 @@
                 ],
               }),
             k &&
-              !!b &&
+              !!A &&
               (0, o.jsx)(U, {
                 nUpdateTime: I.rtime,
-                announcementGID: b,
+                announcementGID: A,
                 onClick: D,
               }),
             k &&
-              !b &&
+              !A &&
               !v.TS.IN_GAMEPADUI &&
               (0, o.jsx)(N, { nUpdateTime: I.rtime, onClick: D }),
           ],
@@ -447,10 +448,7 @@
       function U(e) {
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
           s = n ? p.O3.GetClanEventFromAnnouncementGID(n) : null,
-          i = (e) => {
-            null == a || a(), e.stopPropagation(), e.preventDefault();
-          },
-          r = window.screen.width > 500 ? C.kH : C.uY;
+          i = window.screen.width > 500 ? C.kH : C.uY;
         return (0, o.jsxs)("div", {
           children: [
             (0, o.jsx)("h2", {
@@ -460,7 +458,9 @@
               className: y.SectionButtonCtn,
               children: (0, o.jsx)("div", {
                 className: y.SectionButton,
-                onClick: i,
+                onClick: (e) => {
+                  null == a || a(), e.stopPropagation(), e.preventDefault();
+                },
                 children: (0, g.we)("#EventBrowse_ViewLatestUpdate"),
               }),
             }),
@@ -468,8 +468,13 @@
               (0, o.jsx)(G.Z, {
                 className: y.EventsSummariesCtn,
                 "flow-children": "column",
-                navEntryPreferPosition: b.iU.PREFERRED_CHILD,
-                children: (0, o.jsx)(r, { event: s, onClick: i }),
+                navEntryPreferPosition: A.iU.PREFERRED_CHILD,
+                children: (0, o.jsx)(i, {
+                  event: s,
+                  onClick: (e) => {
+                    null == a || a(), e.stopPropagation(), e.preventDefault();
+                  },
+                }),
               }),
           ],
         });
