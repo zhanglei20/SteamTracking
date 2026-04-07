@@ -51,6 +51,7 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 			CURLOPT_CONNECTTIMEOUT => 10,
 			CURLOPT_SSL_VERIFYPEER => 0,
 			CURLOPT_SSL_VERIFYHOST => 0,
+			CURLOPT_COOKIE         => 'workshop_preferences=%7B%22bOptedIn%22%3Atrue%7D',
 		];
 
 		private CurlShareHandle $CurlShareHandle;
@@ -196,15 +197,15 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					'__KEY__',
 					'__TIME__',
 					'__CDN__',
-					'https://steamcommunity.com/',
-					'https://store.steampowered.com/',
+					//'https://steamcommunity.com/',
+					//'https://store.steampowered.com/',
 				],
 				[
 					'key=' . $this->APIKey,
 					'_=' . $this->CurrentTime,
 					'_cdn=fastly',
-					'https://community.fastly.steamstatic.com/',
-					'https://store.fastly.steamstatic.com/',
+					//'https://community.fastly.steamstatic.com/',
+					//'https://store.fastly.steamstatic.com/',
 				],
 				$URL
 			);

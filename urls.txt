@@ -491,3 +491,4 @@ Random/SteamMobileApks.txt                      @ https://store.steampowered.com
 SSR @ https://store.steampowered.com/wishlist/id/steamdb_wolfgang/
 SSR @ https://store.steampowered.com/sitemap
 SSR @ https://partner.steamgames.com/pricing/explorer
+SSR @ https://steamcommunity.com/workshop/browse/?appid=730
