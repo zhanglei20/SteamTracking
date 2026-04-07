@@ -130,7 +130,8 @@ jobs:
             .support
             store.steampowered.com/ssr
             partner.steamgames.com/ssr
-          key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**', 'partner.steamgames.com/ssr/**') }}
+            steamcommunity.com/ssr
+          key: cache-${{ hashFiles('.support/**', '!.support/etags.json', 'store.steampowered.com/ssr/**', 'partner.steamgames.com/ssr/**', 'steamcommunity.com/ssr/**') }}
 
       - name: Dispatch to ValveProtobufs
         if: steps.update.outputs.changed == 'true' && env.GH_TOKEN != ''
