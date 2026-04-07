@@ -2,13 +2,13 @@ import { readFile, writeFile } from "node:fs/promises";
 import { resolve as pathResolve } from "node:path";
 import { latestEcmaVersion, parse } from "espree";
 import { Syntax, traverse } from "estraverse";
-import { GetRecursiveFilesToParse } from "./dump_javascript_paths.mjs";
+import { GetFilesToParse } from "./dump_javascript_paths.mjs";
 
 const __dirname = import.meta.dirname;
 
 const allStrings = new Set();
 
-for await (const file of GetRecursiveFilesToParse()) {
+for (const file of await GetFilesToParse()) {
 	try {
 		const code = await readFile(file);
 		const ast = parse(code, {
