@@ -721,7 +721,7 @@ function MergeMessages(allMessages) {
  * @returns {Map<string, Map<string, number|string>>}
  */
 function MergeEnums(allEnums) {
-	/** @type {Map<string, Enum[]>} */
+	/** @type {Map<string, Map<string, number|string>[]>} */
 	const keyedEnums = new Map();
 
 	for (const { name, values } of allEnums) {
@@ -734,10 +734,25 @@ function MergeEnums(allEnums) {
 		}
 	}
 
+	/** @type {Map<string, Map<string, number|string>>} */
 	const cleanEnums = new Map();
 
-	for (const [name, values] of keyedEnums) {
-		cleanEnums.set(name, values[0]); // TODO: Merge
+	for (const [name, variants] of keyedEnums) {
+		const merged = new Map(variants[0]);
+
+		for (let i = 1; i < variants.length; i++) {
+			for (const [key, value] of variants[i]) {
+				const existing = merged.get(key);
+
+				if (existing === undefined) {
+					merged.set(key, value);
+				} else if (existing !== value) {
+					console.warn(`Enum ${name} has conflicting value for ${key}: ${existing} vs ${value} (keeping ${existing})`);
+				}
+			}
+		}
+
+		cleanEnums.set(name, merged);
 	}
 
 	return SortMapByKey(cleanEnums);
@@ -1203,7 +1218,7 @@ function TraverseModule(ast, fileName) {
 						e.left.property.left.property.name === e.right.value,
 				)
 			) {
-				const enumObj = ParseEnum(node);
+				const enumObj = ParseEnum(node, ResolveEnumName(this.parents(), exportedIdsFlipped));
 
 				if (enumObj !== null) {
 					enums.push(enumObj);
@@ -1339,7 +1354,7 @@ function TraverseEsmModule(ast) {
 						e.left.property.left.property.name === e.right.value,
 				)
 			) {
-				const enumObj = ParseEnum(node);
+				const enumObj = ParseEnum(node, ResolveEnumName(this.parents(), exportLocalToExported));
 
 				if (enumObj !== null) {
 					enums.push(enumObj);
@@ -1839,10 +1854,58 @@ function GetSendNotification(node) {
 }
 
 /**
+ * Resolve an enum's best-known identifier by finding the enclosing IIFE and
+ * looking its local variable name up in the caller's export map. Returns the
+ * exported name when available, otherwise the raw local name, otherwise null.
+ *
+ * The enum wrapper shapes we handle:
+ *   (function(e){...})(Foo)
+ *   (function(e){...})(Foo || (Foo = {}))
+ *   (function(e){...})(Foo ||= {})
+ *
+ * @param {Array<Object>} parents — `this.parents()` from estraverse, root-first
+ * @param {Map<string, string>} exportMap — local-name → exported-name
+ * @returns {string|null}
+ */
+function ResolveEnumName(parents, exportMap) {
+	// Walk parents innermost-first to find the IIFE wrapping this enum.
+	for (let i = parents.length - 1; i >= 0; i--) {
+		const parent = parents[i];
+
+		if (parent.type !== Syntax.CallExpression || parent.callee.type !== Syntax.FunctionExpression) {
+			continue;
+		}
+
+		const arg = parent.arguments[0];
+		let localName = null;
+
+		if (arg?.type === Syntax.Identifier) {
+			localName = arg.name;
+		} else if (
+			(arg?.type === Syntax.LogicalExpression || arg?.type === Syntax.AssignmentExpression) &&
+			arg.left.type === Syntax.Identifier
+		) {
+			localName = arg.left.name;
+		}
+
+		if (!localName) {
+			return null;
+		}
+
+		return exportMap.get(localName) ?? localName;
+	}
+
+	return null;
+}
+
+/**
  * @param {Object} node
+ * @param {string|null} [identifierName] Resolved enum identifier from the
+ *     enclosing IIFE (preferably an exported name; falls back to the local
+ *     variable if not exported). Used as the enum name when it looks meaningful.
  * @returns {Enum|null}
  */
-function ParseEnum(node) {
+function ParseEnum(node, identifierName = null) {
 	const enumValues = new Map();
 
 	for (const expr of node.expressions) {
@@ -1853,24 +1916,45 @@ function ParseEnum(node) {
 	}
 
 	const allEnumKeys = [...enumValues.keys()];
-	const commonName = allEnumKeys.reduce((str1, str2) => {
-		let i = 0;
-		while (i < str1.length && str1.charAt(i) === str2.charAt(i)) {
-			i++;
+
+	// Tier 1: prefer the enclosing identifier (an exported or local var name).
+	// We require >=3 chars: 1- and 2-char identifiers like `s`, `EG`, `Ic` are
+	// minified and would collide across chunks if used as enum names.
+	let enumName = identifierName && identifierName.length >= 3 ? identifierName : null;
+
+	// Tier 2: longest common prefix of the keys, but only when the prefix has a
+	// "clean" structure (`k_` prefix or trailing `_`). Otherwise the result is
+	// almost always a mid-word truncation like `Calibrati`.
+	if (!enumName) {
+		const commonName = allEnumKeys.reduce((str1, str2) => {
+			let i = 0;
+			while (i < str1.length && str1.charAt(i) === str2.charAt(i)) {
+				i++;
+			}
+			return str1.substring(0, i);
+		});
+
+		const hasCleanPrefix = commonName.startsWith("k_") || commonName.endsWith("_");
+
+		if (hasCleanPrefix) {
+			let cleanName = commonName;
+
+			if (cleanName.startsWith("k_")) {
+				cleanName = cleanName.substring(2);
+			}
+
+			if (cleanName.endsWith("_")) {
+				cleanName = cleanName.substring(0, cleanName.length - 1);
+			}
+
+			if (cleanName.length >= 2) {
+				enumName = cleanName;
+			}
 		}
-		return str1.substring(0, i);
-	});
-	let enumName = commonName;
-
-	if (enumName.startsWith("k_")) {
-		enumName = enumName.substring(2);
 	}
 
-	if (enumName.endsWith("_")) {
-		enumName = enumName.substring(0, enumName.length - 1);
-	}
-
-	if (enumName.length < 2) {
+	// Tier 3: hash fallback for everything else.
+	if (!enumName) {
 		const hash = createHash("sha256");
 		hash.update(allEnumKeys.join(","));
 

@@ -20,16 +20,6 @@ enum by
 	by_play_wish = 3;
 }
 
-enum Calibrati
-{
-	CalibrationPrompt = 0;
-	CalibrationCountDown = 1;
-	CalibratingAccelerometerTolerances = 2;
-	CalibratingGyroDriftCorrection = 3;
-	CalibrationComplete_Success = 4;
-	CalibrationComplete_Failure = 5;
-}
-
 enum CM_EDITFLAG
 {
 	CM_EDITFLAG_NONE = 0;
@@ -87,6 +77,10 @@ enum Display
 	k_DisplayBetaPastStart = 4;
 	k_DisplayGift = 5;
 	k_DisplayAprrovedForPublishing = 6;
+	k_DisplayActiveAndUpcoming = 0;
+	k_DisplayActive = 1;
+	k_DisplayUpcoming = 2;
+	k_DisplayExpired = 3;
 }
 
 enum DOTA_ACCESS_TOURNAMENT
@@ -469,6 +463,7 @@ enum EGameIDType
 	k_EGameIDTypeApp = 0;
 	k_EGameIDTypeGameMod = 1;
 	k_EGameIDTypeShortcut = 2;
+	k_EGameIDTypeP2P = 3;
 }
 
 enum eGamepadButtonBitMask
@@ -1200,13 +1195,6 @@ enum Preview
 	k_PreviewGamepad = 3;
 }
 
-enum Show
-{
-	ShowIncludedItems = 0;
-	ShowAllItems = 1;
-	ShowFilteredOutItems = 2;
-}
-
 enum ShowGripButtons
 {
 	k_ShowGripButtons_None = 0;
@@ -1237,18 +1225,6 @@ enum Store
 	k_StoreComingSoon = 3;
 	k_StoreEarlyAccess = 4;
 	k_StoreGeneralAvailability = 5;
-}
-
-enum SystemKey
-{
-	SystemKey0 = 0;
-	SystemKey1 = 1;
-}
-
-enum TemplateFAQDisplay
-{
-	TemplateFAQDisplayColumn = 1;
-	TemplateFAQDisplaySimpleRow = 2;
 }
 
 enum UnnamedEnum001b037885a2ecde
@@ -1463,6 +1439,12 @@ enum UnnamedEnum10fca4e49733d28f
 	k_EIsNotChild = 1;
 	k_EInvalidCartType = 2;
 	k_ENonGiftableItemPresent = 3;
+}
+
+enum UnnamedEnum11b0fa7d9ee589b2
+{
+	TemplateFAQDisplayColumn = 1;
+	TemplateFAQDisplaySimpleRow = 2;
 }
 
 enum UnnamedEnum12487a88f7459bbf
@@ -2587,6 +2569,14 @@ enum UnnamedEnum55a9e12958fe69d4
 	Days = 86400000;
 }
 
+enum UnnamedEnum55cd587fa9d2b6e4
+{
+	ViewFromBack = 0;
+	ViewFromTop = 1;
+	ViewFromRight = 2;
+	ViewFromLeft = 3;
+}
+
 enum UnnamedEnum56fdca98a5fc5dc5
 {
 	NOT_TRACKING_ = -1;
@@ -2866,6 +2856,16 @@ enum UnnamedEnum71e1e8884d5da508
 	None = 0;
 	Text = 1;
 	Blocks = 2;
+}
+
+enum UnnamedEnum721622f4f4fd0213
+{
+	CalibrationPrompt = 0;
+	CalibrationCountDown = 1;
+	CalibratingAccelerometerTolerances = 2;
+	CalibratingGyroDriftCorrection = 3;
+	CalibrationComplete_Success = 4;
+	CalibrationComplete_Failure = 5;
 }
 
 enum UnnamedEnum7282757b17cca874
@@ -3692,6 +3692,13 @@ enum UnnamedEnuma8a8b1f6cea505e4
 	LibraryHome = 2;
 }
 
+enum UnnamedEnuma8be968d191e67f1
+{
+	ShowIncludedItems = 0;
+	ShowAllItems = 1;
+	ShowFilteredOutItems = 2;
+}
+
 enum UnnamedEnuma9dc642d225a4850
 {
 	Large = 3;
@@ -4176,6 +4183,12 @@ enum UnnamedEnumd4f313929840b090
 	Failed = 3;
 }
 
+enum UnnamedEnumd50fa8195a8af7b9
+{
+	SystemKey0 = 0;
+	SystemKey1 = 1;
+}
+
 enum UnnamedEnumd5afec5988542538
 {
 	Undo = 0;
@@ -4604,14 +4617,6 @@ enum UnnamedEnumfffa6d846ba9b8ac
 	NONE = 0;
 	MOUSE_HOVER = 1;
 	ACTIVE_ITEM = 2;
-}
-
-enum ViewFrom
-{
-	ViewFromBack = 0;
-	ViewFromTop = 1;
-	ViewFromRight = 2;
-	ViewFromLeft = 3;
 }
 
 enum VRInitError
