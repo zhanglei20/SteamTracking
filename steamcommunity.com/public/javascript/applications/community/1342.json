@@ -207,6 +207,7 @@
     "AssetProperty_Range_MinPlaceholder": "ต่ำสุด",
     "AssetProperty_Range_MaxPlaceholder": "สูงสุด",
     "Accessories_FieldSectionLabel": "อุปกรณ์เสริม",
+    "AccessoriesList_Title": "อุปกรณ์เสริม",
     "Item_CountryBuySellRestricted": "คุณไม่สามารถสั่งซื้อไอเท็มนี้ได้ เนื่องจากการซื้อและการขายไอเท็มประเภทนี้ได้ถูกปิดการใช้งานในประเทศของคุณ",
     "Item_CountryBuyRestricted": "คุณไม่สามารถสั่งซื้อไอเท็มนี้ได้ เนื่องจากการซื้อและการขายไอเท็มประเภทนี้ได้ถูกปิดการใช้งานในประเทศของคุณ",
     "Listing_EnhancedAppearance_Missing": "รายการนี้ยังไม่มีภาพที่เป็นเอกลักษณ์หรือที่ปรับแต่งแล้ว ภาพที่แสดงที่นี่อาจแตกต่างจากผลิตภัณฑ์ที่แสดงในรายการแล้วเล็กน้อย",

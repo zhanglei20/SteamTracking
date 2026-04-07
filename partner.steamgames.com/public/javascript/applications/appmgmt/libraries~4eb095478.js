@@ -6,7 +6,7 @@
   [1784],
   {
     86679: (e, r, t) => {
-      t.d(r, { JY: () => Bi, sx: () => vo, gL: () => yo });
+      t.d(r, { JY: () => Li, sx: () => bo, gL: () => xo });
       var n = t(90626),
         i = t(42891),
         o = t(58584),
@@ -279,7 +279,7 @@
         E = t(904),
         A = t.n(E),
         C = t(44019),
-        S = [
+        P = [
           "getDisplayName",
           "methodName",
           "renderCountProp",
@@ -289,7 +289,7 @@
           "forwardRef",
           "context",
         ],
-        P = ["reactReduxForwardedRef"],
+        S = ["reactReduxForwardedRef"],
         N = [],
         O = [null, null];
       function R(e, r) {
@@ -362,7 +362,7 @@
           b = void 0 !== v && v,
           h = t.context,
           y = void 0 === h ? m : h,
-          x = (0, w.A)(t, S),
+          x = (0, w.A)(t, P),
           D = y;
         return function (r) {
           var t = r.displayName || r.name || "Component",
@@ -387,7 +387,7 @@
             var i = (0, n.useMemo)(
                 function () {
                   var e = t.reactReduxForwardedRef,
-                    r = (0, w.A)(t, P);
+                    r = (0, w.A)(t, S);
                   return [t.context, e, r];
                 },
                 [t],
@@ -439,13 +439,13 @@
               ),
               E = (0, n.useReducer)(R, N, G),
               A = E[0][0],
-              S = E[1];
+              P = E[1];
             if (A && A.error) throw A.error;
             var M = (0, n.useRef)(),
               _ = (0, n.useRef)(c),
               F = (0, n.useRef)(),
-              k = (0, n.useRef)(!1),
-              W = d(
+              W = (0, n.useRef)(!1),
+              k = d(
                 function () {
                   return F.current && c === _.current
                     ? F.current
@@ -453,13 +453,13 @@
                 },
                 [v, A, c],
               );
-            B(T, [_, M, k, c, W, F, y]),
-              B(L, [p, v, h, m, _, M, k, F, y, S], [v, h, m]);
+            B(T, [_, M, W, c, k, F, y]),
+              B(L, [p, v, h, m, _, M, W, F, y, P], [v, h, m]);
             var U = (0, n.useMemo)(
               function () {
-                return n.createElement(r, (0, o.A)({}, W, { ref: l }));
+                return n.createElement(r, (0, o.A)({}, k, { ref: l }));
               },
-              [l, r, W],
+              [l, r, k],
             );
             return (0, n.useMemo)(
               function () {
@@ -508,7 +508,7 @@
             return !1;
         return !0;
       }
-      function k(e) {
+      function W(e) {
         return function (r, t) {
           var n = e(r, t);
           function i() {
@@ -517,7 +517,7 @@
           return (i.dependsOnOwnProps = !1), i;
         };
       }
-      function W(e) {
+      function k(e) {
         return null !== e.dependsOnOwnProps && void 0 !== e.dependsOnOwnProps
           ? Boolean(e.dependsOnOwnProps)
           : 1 !== e.length;
@@ -531,12 +531,12 @@
           return (
             (n.dependsOnOwnProps = !0),
             (n.mapToProps = function (r, t) {
-              (n.mapToProps = e), (n.dependsOnOwnProps = W(e));
+              (n.mapToProps = e), (n.dependsOnOwnProps = k(e));
               var i = n(r, t);
               return (
                 "function" == typeof i &&
                   ((n.mapToProps = i),
-                  (n.dependsOnOwnProps = W(i)),
+                  (n.dependsOnOwnProps = k(i)),
                   (i = n(r, t))),
                 i
               );
@@ -552,13 +552,13 @@
         function (e) {
           return e
             ? void 0
-            : k(function (e) {
+            : W(function (e) {
                 return { dispatch: e };
               });
         },
         function (e) {
           return e && "object" == typeof e
-            ? k(function (r) {
+            ? W(function (r) {
                 return (function (e, r) {
                   var t = {},
                     n = function (n) {
@@ -582,7 +582,7 @@
         function (e) {
           return e
             ? void 0
-            : k(function () {
+            : W(function () {
                 return {};
               });
         },
@@ -985,13 +985,13 @@
       }
       var Ae = !0,
         Ce = "Invariant failed";
-      function Se(e) {
+      function Pe(e) {
         this.message = e;
       }
-      function Pe(e, r) {
-        if (!e) throw new Se(Ae ? Ce : Ce + ": " + (r || ""));
+      function Se(e, r) {
+        if (!e) throw new Pe(Ae ? Ce : Ce + ": " + (r || ""));
       }
-      Se.prototype.toString = function () {
+      Pe.prototype.toString = function () {
         return this.message;
       };
       var Ne = (function (e) {
@@ -1009,7 +1009,7 @@
               (r.onWindowError = function (e) {
                 var t = r.getCallbacks();
                 t.isDragging() && t.tryAbort(),
-                  e.error instanceof Se && e.preventDefault();
+                  e.error instanceof Pe && e.preventDefault();
               }),
               (r.getCallbacks = function () {
                 if (!r.callbacks)
@@ -1033,7 +1033,7 @@
               ]);
             }),
             (t.componentDidCatch = function (e) {
-              if (!(e instanceof Se)) throw e;
+              if (!(e instanceof Pe)) throw e;
               this.setState({});
             }),
             (t.componentWillUnmount = function () {
@@ -1139,10 +1139,10 @@
         Fe = function (e, r) {
           return e.x === r.x && e.y === r.y;
         },
-        ke = function (e) {
+        We = function (e) {
           return { x: 0 !== e.x ? -e.x : 0, y: 0 !== e.y ? -e.y : 0 };
         },
-        We = function (e, r, t) {
+        ke = function (e, r, t) {
           var n;
           return (
             void 0 === t && (t = 0),
@@ -1217,10 +1217,10 @@
           return { page: r, withPlaceholder: t, active: ze(u, i) };
         },
         Je = function (e, r) {
-          e.frame || Pe(!1);
+          e.frame || Se(!1);
           var t = e.frame,
             n = _e(r, t.scroll.initial),
-            i = ke(n),
+            i = We(n),
             a = (0, o.A)({}, t, {
               scroll: {
                 initial: t.scroll.initial,
@@ -1254,27 +1254,24 @@
         var t = Ke(e, r);
         return -1 !== t ? e[t] : void 0;
       }
-      function Qe(e) {
-        return Array.prototype.slice.call(e);
-      }
-      var Ze = Ie(function (e) {
+      var Qe = Ie(function (e) {
+          return e.reduce(function (e, r) {
+            return (e[r.descriptor.id] = r), e;
+          }, {});
+        }),
+        Ze = Ie(function (e) {
           return e.reduce(function (e, r) {
             return (e[r.descriptor.id] = r), e;
           }, {});
         }),
         er = Ie(function (e) {
-          return e.reduce(function (e, r) {
-            return (e[r.descriptor.id] = r), e;
-          }, {});
+          return Xe(e);
         }),
         rr = Ie(function (e) {
           return Xe(e);
         }),
-        tr = Ie(function (e) {
-          return Xe(e);
-        }),
-        nr = Ie(function (e, r) {
-          var t = tr(r)
+        tr = Ie(function (e, r) {
+          var t = rr(r)
             .filter(function (r) {
               return e === r.descriptor.droppableId;
             })
@@ -1283,31 +1280,31 @@
             });
           return t;
         });
-      function ir(e) {
+      function nr(e) {
         return e.at && "REORDER" === e.at.type ? e.at.destination : null;
       }
-      function or(e) {
+      function ir(e) {
         return e.at && "COMBINE" === e.at.type ? e.at.combine : null;
       }
-      var ar = Ie(function (e, r) {
+      var or = Ie(function (e, r) {
           return r.filter(function (r) {
             return r.descriptor.id !== e.descriptor.id;
           });
         }),
-        ur = function (e, r) {
+        ar = function (e, r) {
           return e.descriptor.droppableId === r.descriptor.id;
         },
-        lr = { point: Ge, value: 0 },
-        cr = { invisible: {}, visible: {}, all: [] },
-        sr = { displaced: cr, displacedBy: lr, at: null },
-        dr = function (e, r) {
+        ur = { point: Ge, value: 0 },
+        lr = { invisible: {}, visible: {}, all: [] },
+        cr = { displaced: lr, displacedBy: ur, at: null },
+        sr = function (e, r) {
           return function (t) {
             return e <= t && t <= r;
           };
         },
-        pr = function (e) {
-          var r = dr(e.top, e.bottom),
-            t = dr(e.left, e.right);
+        dr = function (e) {
+          var r = sr(e.top, e.bottom),
+            t = sr(e.left, e.right);
           return function (n) {
             if (r(n.top) && r(n.bottom) && t(n.left) && t(n.right)) return !0;
             var i = r(n.top) || r(n.bottom),
@@ -1318,14 +1315,14 @@
             return !(!a || !u) || (a && o) || (u && i);
           };
         },
-        fr = function (e) {
-          var r = dr(e.top, e.bottom),
-            t = dr(e.left, e.right);
+        pr = function (e) {
+          var r = sr(e.top, e.bottom),
+            t = sr(e.left, e.right);
           return function (e) {
             return r(e.top) && r(e.bottom) && t(e.left) && t(e.right);
           };
         },
-        gr = {
+        fr = {
           direction: "vertical",
           line: "y",
           crossAxisLine: "x",
@@ -1336,7 +1333,7 @@
           crossAxisEnd: "right",
           crossAxisSize: "width",
         },
-        vr = {
+        gr = {
           direction: "horizontal",
           line: "x",
           crossAxisLine: "y",
@@ -1347,7 +1344,7 @@
           crossAxisEnd: "bottom",
           crossAxisSize: "height",
         },
-        mr = function (e) {
+        vr = function (e) {
           var r = e.target,
             t = e.destination,
             n = e.viewport,
@@ -1368,13 +1365,13 @@
             })(a, n, o)
           );
         },
-        br = function (e) {
-          return mr((0, o.A)({}, e, { isVisibleThroughFrameFn: pr }));
+        mr = function (e) {
+          return vr((0, o.A)({}, e, { isVisibleThroughFrameFn: dr }));
         },
-        hr = function (e) {
-          return mr((0, o.A)({}, e, { isVisibleThroughFrameFn: fr }));
+        br = function (e) {
+          return vr((0, o.A)({}, e, { isVisibleThroughFrameFn: pr }));
         };
-      function yr(e) {
+      function hr(e) {
         var r = e.afterDragging,
           t = e.destination,
           n = e.displacedBy,
@@ -1391,7 +1388,7 @@
               l = r.descriptor.id;
             if (
               (e.all.push(l),
-              !br({
+              !mr({
                 target: u,
                 destination: t,
                 viewport: i,
@@ -1414,7 +1411,7 @@
           { all: [], visible: {}, invisible: {} },
         );
       }
-      function Ir(e) {
+      function yr(e) {
         var r = e.insideDestination,
           t = e.inHomeList,
           n = e.displacedBy,
@@ -1425,7 +1422,7 @@
             return r.inHomeList ? t : t + 1;
           })(r, { inHomeList: t });
         return {
-          displaced: cr,
+          displaced: lr,
           displacedBy: n,
           at: {
             type: "REORDER",
@@ -1433,7 +1430,7 @@
           },
         };
       }
-      function xr(e) {
+      function Ir(e) {
         var r = e.draggable,
           t = e.insideDestination,
           n = e.destination,
@@ -1442,9 +1439,9 @@
           a = e.last,
           u = e.index,
           l = e.forceShouldAnimate,
-          c = ur(r, n);
+          c = ar(r, n);
         if (null == u)
-          return Ir({
+          return yr({
             insideDestination: t,
             inHomeList: c,
             displacedBy: o,
@@ -1454,16 +1451,16 @@
           return e.descriptor.index === u;
         });
         if (!s)
-          return Ir({
+          return yr({
             insideDestination: t,
             inHomeList: c,
             displacedBy: o,
             destination: n,
           });
-        var d = ar(r, t),
+        var d = or(r, t),
           p = t.indexOf(s);
         return {
-          displaced: yr({
+          displaced: hr({
             afterDragging: d.slice(p),
             destination: n,
             displacedBy: o,
@@ -1478,10 +1475,10 @@
           },
         };
       }
-      function Dr(e, r) {
+      function xr(e, r) {
         return Boolean(r.effected[e]);
       }
-      var wr = function (e) {
+      var Dr = function (e) {
           var r = e.isMovingForward,
             t = e.isInHomeList,
             n = e.draggable,
@@ -1492,7 +1489,7 @@
             l = e.viewport,
             c = e.afterCritical,
             s = u.at;
-          if ((s || Pe(!1), "REORDER" === s.type)) {
+          if ((s || Se(!1), "REORDER" === s.type)) {
             var d = (function (e) {
               var r = e.isMovingForward,
                 t = e.isInHomeList,
@@ -1512,7 +1509,7 @@
             });
             return null == d
               ? null
-              : xr({
+              : Ir({
                   draggable: n,
                   insideDestination: a,
                   destination: o,
@@ -1531,7 +1528,7 @@
             if (!t.isCombineEnabled) return null;
             var a = i.draggableId,
               u = n[a].descriptor.index;
-            return Dr(a, o) ? (r ? u : u - 1) : r ? u + 1 : u;
+            return xr(a, o) ? (r ? u : u - 1) : r ? u + 1 : u;
           })({
             isMovingForward: r,
             destination: o,
@@ -1542,7 +1539,7 @@
           });
           return null == p
             ? null
-            : xr({
+            : Ir({
                 draggable: n,
                 insideDestination: a,
                 destination: o,
@@ -1552,12 +1549,12 @@
                 index: p,
               });
         },
-        Er = function (e) {
+        wr = function (e) {
           var r = e.afterCritical,
             t = e.impact,
             n = e.draggables,
-            i = or(t);
-          i || Pe(!1);
+            i = ir(t);
+          i || Se(!1);
           var o = i.draggableId,
             a = n[o].page.borderBox.center,
             u = (function (e) {
@@ -1566,7 +1563,7 @@
                 n = e.combineWith,
                 i = e.displacedBy,
                 o = Boolean(r.visible[n] || r.invisible[n]);
-              return Dr(n, t) ? (o ? Ge : ke(i.point)) : o ? i.point : Ge;
+              return xr(n, t) ? (o ? Ge : We(i.point)) : o ? i.point : Ge;
             })({
               displaced: t.displaced,
               afterCritical: r,
@@ -1575,46 +1572,46 @@
             });
           return Me(a, u);
         },
-        Ar = function (e, r) {
+        Er = function (e, r) {
           return r.margin[e.start] + r.borderBox[e.size] / 2;
         },
-        Cr = function (e, r, t) {
+        Ar = function (e, r, t) {
           return (
             r[e.crossAxisStart] +
             t.margin[e.crossAxisStart] +
             t.borderBox[e.crossAxisSize] / 2
           );
         },
-        Sr = function (e) {
+        Cr = function (e) {
           var r = e.axis,
             t = e.moveRelativeTo,
             n = e.isMoving;
-          return We(
+          return ke(
             r.line,
-            t.marginBox[r.end] + Ar(r, n),
-            Cr(r, t.marginBox, n),
+            t.marginBox[r.end] + Er(r, n),
+            Ar(r, t.marginBox, n),
           );
         },
         Pr = function (e) {
           var r = e.axis,
             t = e.moveRelativeTo,
             n = e.isMoving;
-          return We(
+          return ke(
             r.line,
             t.marginBox[r.start] -
               (function (e, r) {
                 return r.margin[e.end] + r.borderBox[e.size] / 2;
               })(r, n),
-            Cr(r, t.marginBox, n),
+            Ar(r, t.marginBox, n),
           );
         },
-        Nr = function (e) {
+        Sr = function (e) {
           var r = e.impact,
             t = e.draggable,
             n = e.draggables,
             i = e.droppable,
             o = e.afterCritical,
-            a = nr(i.descriptor.id, n),
+            a = tr(i.descriptor.id, n),
             u = t.page,
             l = i.axis;
           if (!a.length)
@@ -1622,10 +1619,10 @@
               var r = e.axis,
                 t = e.moveInto,
                 n = e.isMoving;
-              return We(
+              return ke(
                 r.line,
-                t.contentBox[r.start] + Ar(r, n),
-                Cr(r, t.contentBox, n),
+                t.contentBox[r.start] + Er(r, n),
+                Ar(r, t.contentBox, n),
               );
             })({ axis: l, moveInto: i.page, isMoving: u });
           var c = r.displaced,
@@ -1633,24 +1630,24 @@
             d = c.all[0];
           if (d) {
             var p = n[d];
-            if (Dr(d, o))
+            if (xr(d, o))
               return Pr({ axis: l, moveRelativeTo: p.page, isMoving: u });
             var f = fe(p.page, s.point);
             return Pr({ axis: l, moveRelativeTo: f, isMoving: u });
           }
           var g = a[a.length - 1];
           if (g.descriptor.id === t.descriptor.id) return u.borderBox.center;
-          if (Dr(g.descriptor.id, o)) {
-            var v = fe(g.page, ke(o.displacedBy.point));
-            return Sr({ axis: l, moveRelativeTo: v, isMoving: u });
+          if (xr(g.descriptor.id, o)) {
+            var v = fe(g.page, We(o.displacedBy.point));
+            return Cr({ axis: l, moveRelativeTo: v, isMoving: u });
           }
-          return Sr({ axis: l, moveRelativeTo: g.page, isMoving: u });
+          return Cr({ axis: l, moveRelativeTo: g.page, isMoving: u });
         },
-        Or = function (e, r) {
+        Nr = function (e, r) {
           var t = e.frame;
           return t ? Me(r, t.scroll.diff.displacement) : r;
         },
-        Rr = function (e) {
+        Or = function (e) {
           var r = (function (e) {
               var r = e.impact,
                 t = e.draggable,
@@ -1661,22 +1658,22 @@
                 u = r.at;
               return n && u
                 ? "REORDER" === u.type
-                  ? Nr({
+                  ? Sr({
                       impact: r,
                       draggable: t,
                       draggables: i,
                       droppable: n,
                       afterCritical: o,
                     })
-                  : Er({ impact: r, draggables: i, afterCritical: o })
+                  : wr({ impact: r, draggables: i, afterCritical: o })
                 : a;
             })(e),
             t = e.droppable;
-          return t ? Or(t, r) : r;
+          return t ? Nr(t, r) : r;
         },
-        Br = function (e, r) {
+        Rr = function (e, r) {
           var t = _e(r, e.scroll.initial),
-            n = ke(t);
+            n = We(t);
           return {
             frame: ue({
               top: r.y,
@@ -1692,12 +1689,12 @@
             },
           };
         };
-      function Tr(e, r) {
+      function Br(e, r) {
         return e.map(function (e) {
           return r[e];
         });
       }
-      var Lr = function (e) {
+      var Tr = function (e) {
           var r = e.pageBorderBoxCenter,
             t = e.draggable,
             n = (function (e, r) {
@@ -1706,7 +1703,7 @@
             i = _e(n, t.page.borderBox.center);
           return Me(t.client.borderBox.center, i);
         },
-        Gr = function (e) {
+        Lr = function (e) {
           var r = e.draggable,
             t = e.destination,
             n = e.newPageBorderBoxCenter,
@@ -1723,15 +1720,15 @@
             };
           return l
             ? (function (e) {
-                return mr(
+                return vr(
                   (0, o.A)({}, e, {
                     isVisibleThroughFrameFn:
                       ((r = e.destination.axis),
                       function (e) {
-                        var t = dr(e.top, e.bottom),
-                          n = dr(e.left, e.right);
+                        var t = sr(e.top, e.bottom),
+                          n = sr(e.left, e.right);
                         return function (e) {
-                          return r === gr
+                          return r === fr
                             ? t(e.top) && t(e.bottom)
                             : n(e.left) && n(e.right);
                         };
@@ -1740,9 +1737,9 @@
                 );
                 var r;
               })(s)
-            : hr(s);
+            : br(s);
         },
-        Mr = function (e) {
+        Gr = function (e) {
           var r = e.isMovingForward,
             t = e.draggable,
             n = e.destination,
@@ -1753,8 +1750,8 @@
             c = e.previousClientSelection,
             s = e.afterCritical;
           if (!n.isEnabled) return null;
-          var d = nr(n.descriptor.id, i),
-            p = ur(t, n),
+          var d = tr(n.descriptor.id, i),
+            p = ar(t, n),
             f =
               (function (e) {
                 var r = e.isMovingForward,
@@ -1763,7 +1760,7 @@
                   i = e.insideDestination,
                   a = e.previousImpact;
                 if (!n.isCombineEnabled) return null;
-                if (!ir(a)) return null;
+                if (!nr(a)) return null;
                 function u(e) {
                   var r = {
                     type: "COMBINE",
@@ -1774,13 +1771,13 @@
                 var l = a.displaced.all,
                   c = l.length ? l[0] : null;
                 if (r) return c ? u(c) : null;
-                var s = ar(t, i);
+                var s = or(t, i);
                 if (!c)
                   return s.length ? u(s[s.length - 1].descriptor.id) : null;
                 var d = Ke(s, function (e) {
                   return e.descriptor.id === c;
                 });
-                -1 === d && Pe(!1);
+                -1 === d && Se(!1);
                 var p = d - 1;
                 return p < 0 ? null : u(s[p].descriptor.id);
               })({
@@ -1790,7 +1787,7 @@
                 insideDestination: d,
                 previousImpact: a,
               }) ||
-              wr({
+              Dr({
                 isMovingForward: r,
                 isInHomeList: p,
                 draggable: t,
@@ -1802,7 +1799,7 @@
                 afterCritical: s,
               });
           if (!f) return null;
-          var g = Rr({
+          var g = Or({
             impact: f,
             draggable: t,
             droppable: n,
@@ -1810,7 +1807,7 @@
             afterCritical: s,
           });
           if (
-            Gr({
+            Lr({
               draggable: t,
               destination: n,
               newPageBorderBoxCenter: g,
@@ -1820,7 +1817,7 @@
             })
           )
             return {
-              clientSelection: Lr({
+              clientSelection: Tr({
                 pageBorderBoxCenter: g,
                 draggable: t,
                 viewport: u,
@@ -1835,19 +1832,19 @@
                 n = e.destination,
                 i = e.draggables,
                 a = e.maxScrollChange,
-                u = Br(t, Me(t.scroll.current, a)),
+                u = Rr(t, Me(t.scroll.current, a)),
                 l = n.frame ? Je(n, Me(n.frame.scroll.current, a)) : n,
                 c = r.displaced,
-                s = yr({
-                  afterDragging: Tr(c.all, i),
+                s = hr({
+                  afterDragging: Br(c.all, i),
                   destination: n,
                   displacedBy: r.displacedBy,
                   viewport: u.frame,
                   last: c,
                   forceShouldAnimate: !1,
                 }),
-                d = yr({
-                  afterDragging: Tr(c.all, i),
+                d = hr({
+                  afterDragging: Br(c.all, i),
                   destination: l,
                   displacedBy: r.displacedBy,
                   viewport: t.frame,
@@ -1881,42 +1878,42 @@
             });
           return { clientSelection: c, impact: m, scrollJumpRequest: v };
         },
-        _r = function (e) {
+        Mr = function (e) {
           var r = e.subject.active;
-          return r || Pe(!1), r;
+          return r || Se(!1), r;
+        },
+        _r = function (e, r) {
+          var t = e.page.borderBox.center;
+          return xr(e.descriptor.id, r) ? _e(t, r.displacedBy.point) : t;
         },
         Fr = function (e, r) {
-          var t = e.page.borderBox.center;
-          return Dr(e.descriptor.id, r) ? _e(t, r.displacedBy.point) : t;
-        },
-        kr = function (e, r) {
           var t = e.page.borderBox;
-          return Dr(e.descriptor.id, r) ? qe(t, ke(r.displacedBy.point)) : t;
+          return xr(e.descriptor.id, r) ? qe(t, We(r.displacedBy.point)) : t;
         },
         Wr = Ie(function (e, r) {
           var t = r[e.line];
-          return { value: t, point: We(e.line, t) };
+          return { value: t, point: ke(e.line, t) };
         }),
-        Ur = function (e, r) {
+        kr = function (e, r) {
           return (0, o.A)({}, e, {
             scroll: (0, o.A)({}, e.scroll, { max: r }),
           });
         },
-        jr = function (e, r, t) {
+        Ur = function (e, r, t) {
           var n = e.frame;
-          ur(r, e) && Pe(!1), e.subject.withPlaceholder && Pe(!1);
+          ar(r, e) && Se(!1), e.subject.withPlaceholder && Se(!1);
           var i = Wr(e.axis, r.displaceBy).point,
             a = (function (e, r, t) {
               var n = e.axis;
-              if ("virtual" === e.descriptor.mode) return We(n.line, r[n.line]);
+              if ("virtual" === e.descriptor.mode) return ke(n.line, r[n.line]);
               var i = e.subject.page.contentBox[n.size],
                 o =
-                  nr(e.descriptor.id, t).reduce(function (e, r) {
+                  tr(e.descriptor.id, t).reduce(function (e, r) {
                     return e + r.client.marginBox[n.size];
                   }, 0) +
                   r[n.line] -
                   i;
-              return o <= 0 ? null : We(n.line, o);
+              return o <= 0 ? null : ke(n.line, o);
             })(e, i, t),
             u = {
               placeholderSize: i,
@@ -1933,7 +1930,7 @@
             return (0, o.A)({}, e, { subject: l });
           }
           var c = a ? Me(n.scroll.max, a) : n.scroll.max,
-            s = Ur(n, c),
+            s = kr(n, c),
             d = Ye({
               page: e.subject.page,
               withPlaceholder: u,
@@ -1942,7 +1939,7 @@
             });
           return (0, o.A)({}, e, { subject: d, frame: s });
         },
-        Hr = function (e) {
+        jr = function (e) {
           var r = e.isMovingForward,
             t = e.previousPageBorderBoxCenter,
             n = e.draggable,
@@ -1960,8 +1957,8 @@
                 a = n.subject.active;
               if (!a) return null;
               var u = n.axis,
-                l = dr(a[u.start], a[u.end]),
-                c = rr(i)
+                l = sr(a[u.start], a[u.end]),
+                c = er(i)
                   .filter(function (e) {
                     return e !== n;
                   })
@@ -1972,17 +1969,17 @@
                     return Boolean(e.subject.active);
                   })
                   .filter(function (e) {
-                    return pr(o.frame)(_r(e));
+                    return dr(o.frame)(Mr(e));
                   })
                   .filter(function (e) {
-                    var t = _r(e);
+                    var t = Mr(e);
                     return r
                       ? a[u.crossAxisEnd] < t[u.crossAxisEnd]
                       : t[u.crossAxisStart] < a[u.crossAxisStart];
                   })
                   .filter(function (e) {
-                    var r = _r(e),
-                      t = dr(r[u.start], r[u.end]);
+                    var r = Mr(e),
+                      t = sr(r[u.start], r[u.end]);
                     return (
                       l(r[u.start]) ||
                       l(r[u.end]) ||
@@ -1991,30 +1988,30 @@
                     );
                   })
                   .sort(function (e, t) {
-                    var n = _r(e)[u.crossAxisStart],
-                      i = _r(t)[u.crossAxisStart];
+                    var n = Mr(e)[u.crossAxisStart],
+                      i = Mr(t)[u.crossAxisStart];
                     return r ? n - i : i - n;
                   })
                   .filter(function (e, r, t) {
                     return (
-                      _r(e)[u.crossAxisStart] === _r(t[0])[u.crossAxisStart]
+                      Mr(e)[u.crossAxisStart] === Mr(t[0])[u.crossAxisStart]
                     );
                   });
               if (!c.length) return null;
               if (1 === c.length) return c[0];
               var s = c.filter(function (e) {
-                return dr(_r(e)[u.start], _r(e)[u.end])(t[u.line]);
+                return sr(Mr(e)[u.start], Mr(e)[u.end])(t[u.line]);
               });
               return 1 === s.length
                 ? s[0]
                 : s.length > 1
                   ? s.sort(function (e, r) {
-                      return _r(e)[u.start] - _r(r)[u.start];
+                      return Mr(e)[u.start] - Mr(r)[u.start];
                     })[0]
                   : c.sort(function (e, r) {
-                      var n = je(t, Ve(_r(e))),
-                        i = je(t, Ve(_r(r)));
-                      return n !== i ? n - i : _r(e)[u.start] - _r(r)[u.start];
+                      var n = je(t, Ve(Mr(e))),
+                        i = je(t, Ve(Mr(r)));
+                      return n !== i ? n - i : Mr(e)[u.start] - Mr(r)[u.start];
                     })[0];
             })({
               isMovingForward: r,
@@ -2024,7 +2021,7 @@
               viewport: u,
             });
           if (!c) return null;
-          var s = nr(c.descriptor.id, o),
+          var s = tr(c.descriptor.id, o),
             d = (function (e) {
               var r = e.pageBorderBoxCenter,
                 t = e.viewport,
@@ -2033,16 +2030,16 @@
                 o = e.afterCritical,
                 a = i
                   .filter(function (e) {
-                    return hr({
-                      target: kr(e, o),
+                    return br({
+                      target: Fr(e, o),
                       destination: n,
                       viewport: t.frame,
                       withDroppableDisplacement: !0,
                     });
                   })
                   .sort(function (e, t) {
-                    var i = Ue(r, Or(n, Fr(e, o))),
-                      a = Ue(r, Or(n, Fr(t, o)));
+                    var i = Ue(r, Nr(n, _r(e, o))),
+                      a = Ue(r, Nr(n, _r(t, o)));
                     return i < a
                       ? -1
                       : a < i
@@ -2069,22 +2066,22 @@
               if (!t) {
                 if (n.length) return null;
                 var c = {
-                    displaced: cr,
-                    displacedBy: lr,
+                    displaced: lr,
+                    displacedBy: ur,
                     at: {
                       type: "REORDER",
                       destination: { droppableId: a.descriptor.id, index: 0 },
                     },
                   },
-                  s = Rr({
+                  s = Or({
                     impact: c,
                     draggable: i,
                     droppable: a,
                     draggables: o,
                     afterCritical: l,
                   }),
-                  d = ur(i, a) ? a : jr(a, i, o);
-                return Gr({
+                  d = ar(i, a) ? a : Ur(a, i, o);
+                return Lr({
                   draggable: i,
                   destination: d,
                   newPageBorderBoxCenter: s,
@@ -2103,13 +2100,13 @@
                   ((p = t.descriptor.index),
                   t.descriptor.id === i.descriptor.id || f ? p : p + 1),
                 v = Wr(a.axis, i.displaceBy);
-              return xr({
+              return Ir({
                 draggable: i,
                 insideDestination: n,
                 destination: a,
                 viewport: u,
                 displacedBy: v,
-                last: cr,
+                last: lr,
                 index: g,
               });
             })({
@@ -2123,7 +2120,7 @@
               afterCritical: l,
             });
           if (!p) return null;
-          var f = Rr({
+          var f = Or({
             impact: p,
             draggable: n,
             droppable: c,
@@ -2131,7 +2128,7 @@
             afterCritical: l,
           });
           return {
-            clientSelection: Lr({
+            clientSelection: Tr({
               pageBorderBoxCenter: f,
               draggable: n,
               viewport: u,
@@ -2140,7 +2137,7 @@
             scrollJumpRequest: null,
           };
         },
-        qr = function (e) {
+        Hr = function (e) {
           var r = e.at;
           return r
             ? "REORDER" === r.type
@@ -2148,11 +2145,11 @@
               : r.combine.droppableId
             : null;
         },
-        Vr = function (e) {
+        qr = function (e) {
           var r = e.state,
             t = e.type,
             n = (function (e, r) {
-              var t = qr(e);
+              var t = Hr(e);
               return t ? r[t] : null;
             })(r.impact, r.dimensions.droppables),
             i = Boolean(n),
@@ -2170,7 +2167,7 @@
             f = p.draggables,
             g = p.droppables;
           return l
-            ? Mr({
+            ? Gr({
                 isMovingForward: c,
                 previousPageBorderBoxCenter: d,
                 draggable: s,
@@ -2181,7 +2178,7 @@
                 previousImpact: r.impact,
                 afterCritical: r.afterCritical,
               })
-            : Hr({
+            : jr({
                 isMovingForward: c,
                 previousPageBorderBoxCenter: d,
                 draggable: s,
@@ -2192,21 +2189,21 @@
                 afterCritical: r.afterCritical,
               });
         };
-      function zr(e) {
+      function Vr(e) {
         return "DRAGGING" === e.phase || "COLLECTING" === e.phase;
       }
-      function Yr(e) {
-        var r = dr(e.top, e.bottom),
-          t = dr(e.left, e.right);
+      function zr(e) {
+        var r = sr(e.top, e.bottom),
+          t = sr(e.left, e.right);
         return function (e) {
           return r(e.y) && t(e.x);
         };
       }
-      function Jr(e) {
+      function Yr(e) {
         var r = e.pageBorderBox,
           t = e.draggable,
           n = e.droppables,
-          i = rr(n).filter(function (e) {
+          i = er(n).filter(function (e) {
             if (!e.isEnabled) return !1;
             var t,
               n,
@@ -2222,12 +2219,12 @@
               ))
             )
               return !1;
-            if (Yr(i)(r.center)) return !0;
+            if (zr(i)(r.center)) return !0;
             var o = e.axis,
               a = i.center[o.crossAxisLine],
               u = r[o.crossAxisStart],
               l = r[o.crossAxisEnd],
-              c = dr(i[o.crossAxisStart], i[o.crossAxisEnd]),
+              c = sr(i[o.crossAxisStart], i[o.crossAxisEnd]),
               s = c(u),
               d = c(l);
             return (!s && !d) || (s ? u < a : l > a);
@@ -2243,7 +2240,7 @@
                   o = n
                     .map(function (e) {
                       var t = e.axis,
-                        n = We(
+                        n = ke(
                           e.axis.line,
                           r.center[t.line],
                           e.page.borderBox.center[t.crossAxisLine],
@@ -2257,15 +2254,15 @@
               })({ pageBorderBox: r, draggable: t, candidates: i })
           : null;
       }
-      var Xr = function (e, r) {
+      var Jr = function (e, r) {
         return ue(qe(e, r));
       };
-      function Kr(e) {
+      function Xr(e) {
         var r = e.displaced,
           t = e.id;
         return Boolean(r.visible[t] || r.invisible[t]);
       }
-      var $r = function (e) {
+      var Kr = function (e) {
           var r = e.pageOffset,
             t = e.draggable,
             n = e.draggables,
@@ -2273,14 +2270,14 @@
             o = e.previousImpact,
             a = e.viewport,
             u = e.afterCritical,
-            l = Xr(t.page.borderBox, r),
-            c = Jr({ pageBorderBox: l, draggable: t, droppables: i });
-          if (!c) return sr;
+            l = Jr(t.page.borderBox, r),
+            c = Yr({ pageBorderBox: l, draggable: t, droppables: i });
+          if (!c) return cr;
           var s = i[c],
-            d = nr(s.descriptor.id, n),
+            d = tr(s.descriptor.id, n),
             p = (function (e, r) {
               var t = e.frame;
-              return t ? Xr(r, t.scroll.diff.value) : r;
+              return t ? Jr(r, t.scroll.diff.value) : r;
             })(s, l);
           return (
             (function (e) {
@@ -2296,12 +2293,12 @@
                 c = l.value,
                 s = t[u.start],
                 d = t[u.end],
-                p = $e(ar(r, o), function (e) {
+                p = $e(or(r, o), function (e) {
                   var r = e.descriptor.id,
                     t = e.page.borderBox,
                     i = t[u.size] / 4,
-                    o = Dr(r, a),
-                    l = Kr({ displaced: n.displaced, id: r });
+                    o = xr(r, a),
+                    l = Xr({ displaced: n.displaced, id: r });
                   return o
                     ? l
                       ? d > t[u.start] + i && d < t[u.end] - i
@@ -2355,11 +2352,11 @@
                     : null;
                 })({
                   draggable: t,
-                  closest: $e(ar(t, i), function (e) {
+                  closest: $e(or(t, i), function (e) {
                     var r = e.descriptor.id,
                       t = e.page.borderBox.center[l.line],
-                      n = Dr(r, u),
-                      i = Kr({ displaced: o, id: r });
+                      n = xr(r, u),
+                      i = Xr({ displaced: o, id: r });
                     return n
                       ? i
                         ? p <= t
@@ -2368,9 +2365,9 @@
                         ? p <= t + s
                         : d < t;
                   }),
-                  inHomeList: ur(t, n),
+                  inHomeList: ar(t, n),
                 });
-              return xr({
+              return Ir({
                 draggable: t,
                 insideDestination: i,
                 destination: n,
@@ -2390,23 +2387,23 @@
             })
           );
         },
-        Qr = function (e, r) {
+        $r = function (e, r) {
           var t;
           return (0, o.A)({}, e, (((t = {})[r.descriptor.id] = r), t));
         },
-        Zr = function (e) {
+        Qr = function (e) {
           var r = e.previousImpact,
             t = e.impact,
             n = e.droppables,
-            i = qr(r),
-            a = qr(t);
+            i = Hr(r),
+            a = Hr(t);
           if (!i) return n;
           if (i === a) return n;
           var u = n[i];
           if (!u.subject.withPlaceholder) return n;
           var l = (function (e) {
             var r = e.subject.withPlaceholder;
-            r || Pe(!1);
+            r || Se(!1);
             var t = e.frame;
             if (!t) {
               var n = Ye({
@@ -2418,8 +2415,8 @@
               return (0, o.A)({}, e, { subject: n });
             }
             var i = r.oldFrameMaxScroll;
-            i || Pe(!1);
-            var a = Ur(t, i),
+            i || Se(!1);
+            var a = kr(t, i),
               u = Ye({
                 page: e.subject.page,
                 axis: e.axis,
@@ -2428,9 +2425,9 @@
               });
             return (0, o.A)({}, e, { subject: u, frame: a });
           })(u);
-          return Qr(n, l);
+          return $r(n, l);
         },
-        et = function (e) {
+        Zr = function (e) {
           var r = e.state,
             t = e.clientSelection,
             n = e.dimensions,
@@ -2461,7 +2458,7 @@
           var v = c.draggables[r.critical.draggable.id],
             m =
               a ||
-              $r({
+              Kr({
                 pageOffset: f.offset,
                 draggable: v,
                 draggables: c.draggables,
@@ -2476,14 +2473,14 @@
                 n = e.droppables,
                 i = e.previousImpact,
                 o = e.impact,
-                a = Zr({ previousImpact: i, impact: o, droppables: n }),
-                u = qr(o);
+                a = Qr({ previousImpact: i, impact: o, droppables: n }),
+                u = Hr(o);
               if (!u) return a;
               var l = n[u];
-              if (ur(r, l)) return a;
+              if (ar(r, l)) return a;
               if (l.subject.withPlaceholder) return a;
-              var c = jr(l, r, t);
-              return Qr(a, c);
+              var c = Ur(l, r, t);
+              return $r(a, c);
             })({
               draggable: v,
               impact: m,
@@ -2500,7 +2497,7 @@
             forceShouldAnimate: !u && null,
           });
         };
-      var rt = function (e) {
+      var et = function (e) {
           var r = e.impact,
             t = e.viewport,
             n = e.draggables,
@@ -2512,7 +2509,7 @@
                 return r[e];
               });
             })(u.all, n),
-            c = yr({
+            c = hr({
               afterDragging: l,
               destination: i,
               displacedBy: r.displacedBy,
@@ -2522,38 +2519,38 @@
             });
           return (0, o.A)({}, r, { displaced: c });
         },
-        tt = function (e) {
+        rt = function (e) {
           var r = e.impact,
             t = e.draggable,
             n = e.droppable,
             i = e.draggables,
             o = e.viewport,
             a = e.afterCritical,
-            u = Rr({
+            u = Or({
               impact: r,
               draggable: t,
               draggables: i,
               droppable: n,
               afterCritical: a,
             });
-          return Lr({ pageBorderBoxCenter: u, draggable: t, viewport: o });
+          return Tr({ pageBorderBoxCenter: u, draggable: t, viewport: o });
         },
-        nt = function (e) {
+        tt = function (e) {
           var r = e.state,
             t = e.dimensions,
             n = e.viewport;
-          "SNAP" !== r.movementMode && Pe(!1);
+          "SNAP" !== r.movementMode && Se(!1);
           var i = r.impact,
             o = n || r.viewport,
             a = t || r.dimensions,
             u = a.draggables,
             l = a.droppables,
             c = u[r.critical.draggable.id],
-            s = qr(i);
-          s || Pe(!1);
+            s = Hr(i);
+          s || Se(!1);
           var d = l[s],
-            p = rt({ impact: i, viewport: o, destination: d, draggables: u }),
-            f = tt({
+            p = et({ impact: i, viewport: o, destination: d, draggables: u }),
+            f = rt({
               impact: p,
               draggable: c,
               droppable: d,
@@ -2561,7 +2558,7 @@
               viewport: o,
               afterCritical: r.afterCritical,
             });
-          return et({
+          return Zr({
             impact: p,
             clientSelection: f,
             state: r,
@@ -2569,15 +2566,15 @@
             viewport: o,
           });
         },
-        it = function (e) {
+        nt = function (e) {
           var r = e.draggable,
             t = e.home,
             n = e.draggables,
             i = e.viewport,
             o = Wr(t.axis, r.displaceBy),
-            a = nr(t.descriptor.id, n),
+            a = tr(t.descriptor.id, n),
             u = a.indexOf(r);
-          -1 === u && Pe(!1);
+          -1 === u && Se(!1);
           var l,
             c = a.slice(u + 1),
             s = c.reduce(function (e, r) {
@@ -2590,7 +2587,7 @@
             };
           return {
             impact: {
-              displaced: yr({
+              displaced: hr({
                 afterDragging: c,
                 destination: t,
                 displacedBy: o,
@@ -2609,13 +2606,13 @@
             afterCritical: d,
           };
         },
+        it = function (e) {
+          0;
+        },
         ot = function (e) {
           0;
         },
         at = function (e) {
-          0;
-        },
-        ut = function (e) {
           var r = e.additions,
             t = e.updatedDroppables,
             n = e.viewport,
@@ -2624,7 +2621,7 @@
             var r = e.descriptor.droppableId,
               a = (function (e) {
                 var r = e.frame;
-                return r || Pe(!1), r;
+                return r || Se(!1), r;
               })(t[r]),
               u = a.scroll.diff.value,
               l = (function (e) {
@@ -2646,31 +2643,31 @@
             return l;
           });
         },
-        lt = function (e) {
+        ut = function (e) {
           return "SNAP" === e.movementMode;
         },
-        ct = function (e, r, t) {
+        lt = function (e, r, t) {
           var n = (function (e, r) {
             return {
               draggables: e.draggables,
-              droppables: Qr(e.droppables, r),
+              droppables: $r(e.droppables, r),
             };
           })(e.dimensions, r);
-          return !lt(e) || t
-            ? et({ state: e, dimensions: n })
-            : nt({ state: e, dimensions: n });
+          return !ut(e) || t
+            ? Zr({ state: e, dimensions: n })
+            : tt({ state: e, dimensions: n });
         };
-      function st(e) {
+      function ct(e) {
         return e.isDragging && "SNAP" === e.movementMode
           ? (0, o.A)({ phase: "DRAGGING" }, e, { scrollJumpRequest: null })
           : e;
       }
-      var dt = { phase: "IDLE", completed: null, shouldFlush: !1 },
-        pt = function (e, r) {
-          if ((void 0 === e && (e = dt), "FLUSH" === r.type))
-            return (0, o.A)({}, dt, { shouldFlush: !0 });
+      var st = { phase: "IDLE", completed: null, shouldFlush: !1 },
+        dt = function (e, r) {
+          if ((void 0 === e && (e = st), "FLUSH" === r.type))
+            return (0, o.A)({}, st, { shouldFlush: !0 });
           if ("INITIAL_PUBLISH" === r.type) {
-            "IDLE" !== e.phase && Pe(!1);
+            "IDLE" !== e.phase && Se(!1);
             var t = r.payload,
               n = t.critical,
               i = t.clientSelection,
@@ -2692,10 +2689,10 @@
                   offset: Me(d.selection, a.scroll.diff.value),
                 },
               },
-              f = rr(u.droppables).every(function (e) {
+              f = er(u.droppables).every(function (e) {
                 return !e.isFixedOnPage;
               }),
-              g = it({
+              g = nt({
                 draggable: c,
                 home: s,
                 draggables: u.draggables,
@@ -2722,22 +2719,22 @@
           if ("COLLECTION_STARTING" === r.type)
             return "COLLECTING" === e.phase || "DROP_PENDING" === e.phase
               ? e
-              : ("DRAGGING" !== e.phase && Pe(!1),
+              : ("DRAGGING" !== e.phase && Se(!1),
                 (0, o.A)({ phase: "COLLECTING" }, e, { phase: "COLLECTING" }));
           if ("PUBLISH_WHILE_DRAGGING" === r.type)
             return (
-              "COLLECTING" !== e.phase && "DROP_PENDING" !== e.phase && Pe(!1),
+              "COLLECTING" !== e.phase && "DROP_PENDING" !== e.phase && Se(!1),
               (function (e) {
                 var r = e.state,
                   t = e.published;
-                ot();
+                it();
                 var n = t.modified.map(function (e) {
                     var t = r.dimensions.droppables[e.droppableId];
                     return Je(t, e.scroll);
                   }),
-                  i = (0, o.A)({}, r.dimensions.droppables, {}, Ze(n)),
-                  a = er(
-                    ut({
+                  i = (0, o.A)({}, r.dimensions.droppables, {}, Qe(n)),
+                  a = Ze(
+                    at({
                       additions: t.additions,
                       updatedDroppables: i,
                       viewport: r.viewport,
@@ -2748,11 +2745,11 @@
                   delete u[e];
                 });
                 var l = { droppables: i, draggables: u },
-                  c = qr(r.impact),
+                  c = Hr(r.impact),
                   s = c ? l.droppables[c] : null,
                   d = l.draggables[r.critical.draggable.id],
                   p = l.droppables[r.critical.droppable.id],
-                  f = it({
+                  f = nt({
                     draggable: d,
                     home: p,
                     draggables: u,
@@ -2761,7 +2758,7 @@
                   g = f.impact,
                   v = f.afterCritical,
                   m = s && s.isCombineEnabled ? r.impact : g,
-                  b = $r({
+                  b = Kr({
                     pageOffset: r.current.page.offset,
                     draggable: l.draggables[r.critical.draggable.id],
                     draggables: l.draggables,
@@ -2770,7 +2767,7 @@
                     viewport: r.viewport,
                     afterCritical: v,
                   });
-                at();
+                ot();
                 var h = (0, o.A)({ phase: "DRAGGING" }, r, {
                   phase: "DRAGGING",
                   impact: b,
@@ -2790,63 +2787,63 @@
             );
           if ("MOVE" === r.type) {
             if ("DROP_PENDING" === e.phase) return e;
-            zr(e) || Pe(!1);
+            Vr(e) || Se(!1);
             var m = r.payload.client;
             return Fe(m, e.current.client.selection)
               ? e
-              : et({
+              : Zr({
                   state: e,
                   clientSelection: m,
-                  impact: lt(e) ? e.impact : null,
+                  impact: ut(e) ? e.impact : null,
                 });
           }
           if ("UPDATE_DROPPABLE_SCROLL" === r.type) {
-            if ("DROP_PENDING" === e.phase) return st(e);
-            if ("COLLECTING" === e.phase) return st(e);
-            zr(e) || Pe(!1);
+            if ("DROP_PENDING" === e.phase) return ct(e);
+            if ("COLLECTING" === e.phase) return ct(e);
+            Vr(e) || Se(!1);
             var b = r.payload,
               h = b.id,
               y = b.newScroll,
               I = e.dimensions.droppables[h];
             if (!I) return e;
             var x = Je(I, y);
-            return ct(e, x, !1);
+            return lt(e, x, !1);
           }
           if ("UPDATE_DROPPABLE_IS_ENABLED" === r.type) {
             if ("DROP_PENDING" === e.phase) return e;
-            zr(e) || Pe(!1);
+            Vr(e) || Se(!1);
             var D = r.payload,
               w = D.id,
               E = D.isEnabled,
               A = e.dimensions.droppables[w];
-            A || Pe(!1), A.isEnabled === E && Pe(!1);
+            A || Se(!1), A.isEnabled === E && Se(!1);
             var C = (0, o.A)({}, A, { isEnabled: E });
-            return ct(e, C, !0);
+            return lt(e, C, !0);
           }
           if ("UPDATE_DROPPABLE_IS_COMBINE_ENABLED" === r.type) {
             if ("DROP_PENDING" === e.phase) return e;
-            zr(e) || Pe(!1);
-            var S = r.payload,
-              P = S.id,
-              N = S.isCombineEnabled,
-              O = e.dimensions.droppables[P];
-            O || Pe(!1), O.isCombineEnabled === N && Pe(!1);
+            Vr(e) || Se(!1);
+            var P = r.payload,
+              S = P.id,
+              N = P.isCombineEnabled,
+              O = e.dimensions.droppables[S];
+            O || Se(!1), O.isCombineEnabled === N && Se(!1);
             var R = (0, o.A)({}, O, { isCombineEnabled: N });
-            return ct(e, R, !0);
+            return lt(e, R, !0);
           }
           if ("MOVE_BY_WINDOW_SCROLL" === r.type) {
             if ("DROP_PENDING" === e.phase || "DROP_ANIMATING" === e.phase)
               return e;
-            zr(e) || Pe(!1), e.isWindowScrollAllowed || Pe(!1);
+            Vr(e) || Se(!1), e.isWindowScrollAllowed || Se(!1);
             var B = r.payload.newScroll;
-            if (Fe(e.viewport.scroll.current, B)) return st(e);
-            var T = Br(e.viewport, B);
-            return lt(e)
-              ? nt({ state: e, viewport: T })
-              : et({ state: e, viewport: T });
+            if (Fe(e.viewport.scroll.current, B)) return ct(e);
+            var T = Rr(e.viewport, B);
+            return ut(e)
+              ? tt({ state: e, viewport: T })
+              : Zr({ state: e, viewport: T });
           }
           if ("UPDATE_VIEWPORT_MAX_SCROLL" === r.type) {
-            if (!zr(e)) return e;
+            if (!Vr(e)) return e;
             var L = r.payload.maxScroll;
             if (Fe(L, e.viewport.scroll.max)) return e;
             var G = (0, o.A)({}, e.viewport, {
@@ -2862,10 +2859,10 @@
           ) {
             if ("COLLECTING" === e.phase || "DROP_PENDING" === e.phase)
               return e;
-            "DRAGGING" !== e.phase && Pe(!1);
-            var M = Vr({ state: e, type: r.type });
+            "DRAGGING" !== e.phase && Se(!1);
+            var M = qr({ state: e, type: r.type });
             return M
-              ? et({
+              ? Zr({
                   state: e,
                   impact: M.impact,
                   clientSelection: M.clientSelection,
@@ -2876,7 +2873,7 @@
           if ("DROP_PENDING" === r.type) {
             var _ = r.payload.reason;
             return (
-              "COLLECTING" !== e.phase && Pe(!1),
+              "COLLECTING" !== e.phase && Se(!1),
               (0, o.A)({ phase: "DROP_PENDING" }, e, {
                 phase: "DROP_PENDING",
                 isWaiting: !0,
@@ -2886,15 +2883,15 @@
           }
           if ("DROP_ANIMATE" === r.type) {
             var F = r.payload,
-              k = F.completed,
-              W = F.dropDuration,
+              W = F.completed,
+              k = F.dropDuration,
               U = F.newHomeClientOffset;
             return (
-              "DRAGGING" !== e.phase && "DROP_PENDING" !== e.phase && Pe(!1),
+              "DRAGGING" !== e.phase && "DROP_PENDING" !== e.phase && Se(!1),
               {
                 phase: "DROP_ANIMATING",
-                completed: k,
-                dropDuration: W,
+                completed: W,
+                dropDuration: k,
                 newHomeClientOffset: U,
                 dimensions: e.dimensions,
               }
@@ -2904,77 +2901,77 @@
             ? { phase: "IDLE", completed: r.payload.completed, shouldFlush: !1 }
             : e;
         },
-        ft = function (e) {
+        pt = function (e) {
           return { type: "LIFT", payload: e };
         },
-        gt = function (e) {
+        ft = function (e) {
           return { type: "PUBLISH_WHILE_DRAGGING", payload: e };
         },
-        vt = function () {
+        gt = function () {
           return { type: "COLLECTION_STARTING", payload: null };
         },
-        mt = function (e) {
+        vt = function (e) {
           return { type: "UPDATE_DROPPABLE_SCROLL", payload: e };
         },
-        bt = function (e) {
+        mt = function (e) {
           return { type: "UPDATE_DROPPABLE_IS_ENABLED", payload: e };
         },
-        ht = function (e) {
+        bt = function (e) {
           return { type: "UPDATE_DROPPABLE_IS_COMBINE_ENABLED", payload: e };
         },
-        yt = function (e) {
+        ht = function (e) {
           return { type: "MOVE", payload: e };
         },
-        It = function () {
+        yt = function () {
           return { type: "MOVE_UP", payload: null };
         },
-        xt = function () {
+        It = function () {
           return { type: "MOVE_DOWN", payload: null };
         },
-        Dt = function () {
+        xt = function () {
           return { type: "MOVE_RIGHT", payload: null };
         },
-        wt = function () {
+        Dt = function () {
           return { type: "MOVE_LEFT", payload: null };
         },
-        Et = function () {
+        wt = function () {
           return { type: "FLUSH", payload: null };
         },
-        At = function (e) {
+        Et = function (e) {
           return { type: "DROP_COMPLETE", payload: e };
         },
-        Ct = function (e) {
+        At = function (e) {
           return { type: "DROP", payload: e };
         },
-        St = function () {
+        Ct = function () {
           return { type: "DROP_ANIMATION_FINISHED", payload: null };
         };
       var Pt = "cubic-bezier(.2,1,.1,1)",
-        Nt = { drop: 0, combining: 0.7 },
-        Ot = { drop: 0.75 },
-        Rt = 0.2 + "s " + "cubic-bezier(0.2, 0, 0, 1)",
-        Bt = {
-          fluid: "opacity " + Rt,
-          snap: "transform " + Rt + ", opacity " + Rt,
+        St = { drop: 0, combining: 0.7 },
+        Nt = { drop: 0.75 },
+        Ot = 0.2 + "s " + "cubic-bezier(0.2, 0, 0, 1)",
+        Rt = {
+          fluid: "opacity " + Ot,
+          snap: "transform " + Ot + ", opacity " + Ot,
           drop: function (e) {
             var r = e + "s " + Pt;
             return "transform " + r + ", opacity " + r;
           },
-          outOfTheWay: "transform " + Rt,
-          placeholder: "height " + Rt + ", width " + Rt + ", margin " + Rt,
+          outOfTheWay: "transform " + Ot,
+          placeholder: "height " + Ot + ", width " + Ot + ", margin " + Ot,
         },
-        Tt = function (e) {
+        Bt = function (e) {
           return Fe(e, Ge) ? null : "translate(" + e.x + "px, " + e.y + "px)";
         },
-        Lt = Tt,
-        Gt = function (e, r) {
-          var t = Tt(e);
-          return t ? (r ? t + " scale(" + Ot.drop + ")" : t) : null;
+        Tt = Bt,
+        Lt = function (e, r) {
+          var t = Bt(e);
+          return t ? (r ? t + " scale(" + Nt.drop + ")" : t) : null;
         },
-        Mt = 0.33,
-        _t = 0.55,
-        Ft = _t - Mt,
-        kt = function (e) {
+        Gt = 0.33,
+        Mt = 0.55,
+        _t = Mt - Gt,
+        Ft = function (e) {
           var r = e.getState,
             t = e.dispatch;
           return function (e) {
@@ -2984,10 +2981,10 @@
                   a = n.payload.reason;
                 if ("COLLECTING" !== i.phase) {
                   if ("IDLE" !== i.phase) {
-                    "DROP_PENDING" === i.phase && i.isWaiting && Pe(!1),
+                    "DROP_PENDING" === i.phase && i.isWaiting && Se(!1),
                       "DRAGGING" !== i.phase &&
                         "DROP_PENDING" !== i.phase &&
-                        Pe(!1);
+                        Se(!1);
                     var u = i.critical,
                       l = i.dimensions,
                       c = l.draggables[i.critical.draggable.id],
@@ -3002,11 +2999,11 @@
                           ? "REORDER" === n.at.type
                             ? { impact: n, didDropInsideDroppable: !0 }
                             : {
-                                impact: (0, o.A)({}, n, { displaced: cr }),
+                                impact: (0, o.A)({}, n, { displaced: lr }),
                                 didDropInsideDroppable: !0,
                               }
                           : {
-                              impact: rt({
+                              impact: et({
                                 draggables: r,
                                 impact: u,
                                 destination: i,
@@ -3026,8 +3023,8 @@
                       }),
                       d = s.impact,
                       p = s.didDropInsideDroppable,
-                      f = p ? ir(d) : null,
-                      g = p ? or(d) : null,
+                      f = p ? nr(d) : null,
+                      g = p ? ir(d) : null,
                       v = {
                         index: u.draggable.index,
                         droppableId: u.droppable.id,
@@ -3049,10 +3046,10 @@
                           o = e.afterCritical,
                           a = n.draggables,
                           u = n.droppables,
-                          l = qr(r),
+                          l = Hr(r),
                           c = l ? u[l] : null,
                           s = u[t.descriptor.droppableId],
-                          d = tt({
+                          d = rt({
                             impact: r,
                             draggable: t,
                             draggables: a,
@@ -3080,9 +3077,9 @@
                           t = e.destination,
                           n = e.reason,
                           i = Ue(r, t);
-                        if (i <= 0) return Mt;
-                        if (i >= 1500) return _t;
-                        var o = Mt + Ft * (i / 1500);
+                        if (i <= 0) return Gt;
+                        if (i >= 1500) return Mt;
+                        var o = Gt + _t * (i / 1500);
                         return Number(
                           ("CANCEL" === n ? 0.6 * o : o).toFixed(2),
                         );
@@ -3100,7 +3097,7 @@
                           completed: h,
                         }),
                       );
-                    } else t(At({ completed: h }));
+                    } else t(Et({ completed: h }));
                   }
                 } else
                   t(
@@ -3112,10 +3109,10 @@
             };
           };
         },
-        Wt = function () {
-          return { x: window.pageXOffset, y: window.pageYOffset };
+        Wt = function (e) {
+          return { x: e.pageXOffset, y: e.pageYOffset };
         };
-      function Ut(e) {
+      function kt(e) {
         var r = e.onWindowScroll;
         var t = xe(function () {
             r(Wt());
@@ -3135,16 +3132,16 @@
         }
         return {
           start: function () {
-            o() && Pe(!1), (i = Ee(window, [n]));
+            o() && Se(!1), (i = Ee(window, [n]));
           },
           stop: function () {
-            o() || Pe(!1), t.cancel(), i(), (i = we);
+            o() || Se(!1), t.cancel(), i(), (i = we);
           },
           isActive: o,
         };
       }
-      var jt = function (e) {
-          var r = Ut({
+      var Ut = function (e) {
+          var r = kt({
             onWindowScroll: function (r) {
               e.dispatch({
                 type: "MOVE_BY_WINDOW_SCROLL",
@@ -3168,7 +3165,7 @@
             };
           };
         },
-        Ht = function () {
+        jt = function () {
           var e = [];
           return {
             add: function (r) {
@@ -3177,7 +3174,7 @@
                     var t = Ke(e, function (e) {
                       return e.timerId === r;
                     });
-                    -1 === t && Pe(!1), e.splice(t, 1)[0].callback();
+                    -1 === t && Se(!1), e.splice(t, 1)[0].callback();
                   })(t);
                 }),
                 n = { timerId: t, callback: r };
@@ -3194,10 +3191,10 @@
             },
           };
         },
-        qt = function (e, r) {
-          ot(), r(), at();
+        Ht = function (e, r) {
+          it(), r(), ot();
         },
-        Vt = function (e, r) {
+        qt = function (e, r) {
           return {
             draggableId: e.draggable.id,
             type: e.droppable.type,
@@ -3205,7 +3202,7 @@
             mode: r,
           };
         },
-        zt = function (e, r, t, n) {
+        Vt = function (e, r, t, n) {
           if (e) {
             var i = (function (e) {
               var r = !1,
@@ -3226,35 +3223,35 @@
             e(r, { announce: i }), i.wasCalled() || t(n(r));
           } else t(n(r));
         },
-        Yt = function (e, r) {
+        zt = function (e, r) {
           var t = (function (e, r) {
-            var t = Ht(),
+            var t = jt(),
               n = null,
               i = function (t) {
-                n || Pe(!1),
+                n || Se(!1),
                   (n = null),
-                  qt(0, function () {
-                    return zt(e().onDragEnd, t, r, Le.onDragEnd);
+                  Ht(0, function () {
+                    return Vt(e().onDragEnd, t, r, Le.onDragEnd);
                   });
               };
             return {
               beforeCapture: function (r, t) {
-                n && Pe(!1),
-                  qt(0, function () {
+                n && Se(!1),
+                  Ht(0, function () {
                     var n = e().onBeforeCapture;
                     n && n({ draggableId: r, mode: t });
                   });
               },
               beforeStart: function (r, t) {
-                n && Pe(!1),
-                  qt(0, function () {
+                n && Se(!1),
+                  Ht(0, function () {
                     var n = e().onBeforeDragStart;
-                    n && n(Vt(r, t));
+                    n && n(qt(r, t));
                   });
               },
               start: function (i, o) {
-                n && Pe(!1);
-                var a = Vt(i, o);
+                n && Se(!1);
+                var a = qt(i, o);
                 (n = {
                   mode: o,
                   lastCritical: i,
@@ -3262,15 +3259,15 @@
                   lastCombine: null,
                 }),
                   t.add(function () {
-                    qt(0, function () {
-                      return zt(e().onDragStart, a, r, Le.onDragStart);
+                    Ht(0, function () {
+                      return Vt(e().onDragStart, a, r, Le.onDragStart);
                     });
                   });
               },
               update: function (i, a) {
-                var u = ir(a),
-                  l = or(a);
-                n || Pe(!1);
+                var u = nr(a),
+                  l = ir(a);
+                n || Se(!1);
                 var c = !(function (e, r) {
                   if (e === r) return !0;
                   var t =
@@ -3306,24 +3303,24 @@
                   );
                 })(n.lastCombine, l);
                 if ((f && (n.lastCombine = l), c || p || f)) {
-                  var g = (0, o.A)({}, Vt(i, n.mode), {
+                  var g = (0, o.A)({}, qt(i, n.mode), {
                     combine: l,
                     destination: u,
                   });
                   t.add(function () {
-                    qt(0, function () {
-                      return zt(e().onDragUpdate, g, r, Le.onDragUpdate);
+                    Ht(0, function () {
+                      return Vt(e().onDragUpdate, g, r, Le.onDragUpdate);
                     });
                   });
                 }
               },
               flush: function () {
-                n || Pe(!1), t.flush();
+                n || Se(!1), t.flush();
               },
               drop: i,
               abort: function () {
                 if (n) {
-                  var e = (0, o.A)({}, Vt(n.lastCritical, n.mode), {
+                  var e = (0, o.A)({}, qt(n.lastCritical, n.mode), {
                     combine: null,
                     destination: null,
                     reason: "CANCEL",
@@ -3362,18 +3359,18 @@
             };
           };
         },
-        Jt = function (e) {
+        Yt = function (e) {
           return function (r) {
             return function (t) {
               if ("DROP_ANIMATION_FINISHED" === t.type) {
                 var n = e.getState();
-                "DROP_ANIMATING" !== n.phase && Pe(!1),
-                  e.dispatch(At({ completed: n.completed }));
+                "DROP_ANIMATING" !== n.phase && Se(!1),
+                  e.dispatch(Et({ completed: n.completed }));
               } else r(t);
             };
           };
         },
-        Xt = function (e) {
+        Jt = function (e) {
           var r = null,
             t = null;
           return function (n) {
@@ -3405,19 +3402,19 @@
             };
           };
         },
-        Kt = function (e) {
+        Xt = function (e) {
           return function (r) {
             return function (t) {
               if ((r(t), "PUBLISH_WHILE_DRAGGING" === t.type)) {
                 var n = e.getState();
                 "DROP_PENDING" === n.phase &&
-                  (n.isWaiting || e.dispatch(Ct({ reason: n.reason })));
+                  (n.isWaiting || e.dispatch(At({ reason: n.reason })));
               }
             };
           };
         },
-        $t = v,
-        Qt = function (e) {
+        Kt = v,
+        $t = function (e) {
           var r,
             t = e.dimensionMarshal,
             n = e.focusMarshal,
@@ -3426,8 +3423,8 @@
             l = e.announce,
             c = e.autoScroller;
           return p(
-            pt,
-            $t(
+            dt,
+            Kt(
               (function () {
                 for (
                   var e = arguments.length, r = new Array(e), t = 0;
@@ -3496,9 +3493,9 @@
                             l = o.movementMode,
                             c = t();
                           "DROP_ANIMATING" === c.phase &&
-                            n(At({ completed: c.completed })),
-                            "IDLE" !== t().phase && Pe(!1),
-                            n(Et()),
+                            n(Et({ completed: c.completed })),
+                            "IDLE" !== t().phase && Se(!1),
+                            n(wt()),
                             n({
                               type: "BEFORE_INITIAL_CAPTURE",
                               payload: { draggableId: a, movementMode: l },
@@ -3528,10 +3525,10 @@
                     };
                   };
                 })(t),
-                kt,
+                Ft,
+                Yt,
                 Jt,
                 Xt,
-                Kt,
                 (function (e) {
                   return function (r) {
                     return function (t) {
@@ -3550,7 +3547,7 @@
                           t(n);
                           var i = r.getState();
                           return (
-                            "DRAGGING" !== i.phase && Pe(!1), void e.start(i)
+                            "DRAGGING" !== i.phase && Se(!1), void e.start(i)
                           );
                         }
                         t(n), e.scroll(r.getState());
@@ -3558,7 +3555,7 @@
                     };
                   };
                 })(c),
-                jt,
+                Ut,
                 (function (e) {
                   var r = !1;
                   return function () {
@@ -3589,12 +3586,12 @@
                     };
                   };
                 })(n),
-                Yt(o, l),
+                zt(o, l),
               ),
             ),
           );
         };
-      var Zt = function (e) {
+      var Qt = function (e) {
           var r = e.scrollHeight,
             t = e.scrollWidth,
             n = e.height,
@@ -3602,60 +3599,55 @@
             o = _e({ x: t, y: r }, { x: i, y: n });
           return { x: Math.max(0, o.x), y: Math.max(0, o.y) };
         },
-        en = function () {
-          var e = document.documentElement;
-          return e || Pe(!1), e;
+        Zt = function (e) {
+          var r = e.document.documentElement;
+          return r || Se(!1), r;
         },
-        rn = function () {
-          var e = en();
-          return Zt({
-            scrollHeight: e.scrollHeight,
-            scrollWidth: e.scrollWidth,
-            width: e.clientWidth,
-            height: e.clientHeight,
+        en = function (e) {
+          var r = Zt(e);
+          return Qt({
+            scrollHeight: r.scrollHeight,
+            scrollWidth: r.scrollWidth,
+            width: r.clientWidth,
+            height: r.clientHeight,
           });
         },
-        tn = function (e) {
-          var r = e.critical,
-            t = e.scrollOptions,
-            n = e.registry;
-          ot();
-          var i,
-            o,
-            a,
-            u,
-            l,
-            c,
-            s,
-            d =
-              ((i = Wt()),
-              (o = rn()),
-              (a = i.y),
-              (u = i.x),
-              (l = en()),
-              (c = l.clientWidth),
-              (s = l.clientHeight),
-              {
-                frame: ue({ top: a, left: u, right: u + c, bottom: a + s }),
+        rn = function (e) {
+          var r = e.windowToUse,
+            t = e.critical,
+            n = e.scrollOptions,
+            i = e.registry;
+          it();
+          var o = (function (e) {
+              var r = Wt(e),
+                t = en(e),
+                n = r.y,
+                i = r.x,
+                o = Zt(e),
+                a = o.clientWidth,
+                u = o.clientHeight;
+              return {
+                frame: ue({ top: n, left: i, right: i + a, bottom: n + u }),
                 scroll: {
-                  initial: i,
-                  current: i,
-                  max: o,
+                  initial: r,
+                  current: r,
+                  max: t,
                   diff: { value: Ge, displacement: Ge },
                 },
-              }),
-            p = d.scroll.current,
-            f = r.droppable,
-            g = n.droppable.getAllByType(f.type).map(function (e) {
-              return e.callbacks.getDimensionAndWatchScroll(p, t);
+              };
+            })(r),
+            a = o.scroll.current,
+            u = t.droppable,
+            l = i.droppable.getAllByType(u.type).map(function (e) {
+              return e.callbacks.getDimensionAndWatchScroll(a, n);
             }),
-            v = n.draggable.getAllByType(r.draggable.type).map(function (e) {
-              return e.getDimension(p);
+            c = i.draggable.getAllByType(t.draggable.type).map(function (e) {
+              return e.getDimension(a);
             }),
-            m = { draggables: er(v), droppables: Ze(g) };
-          return at(), { dimensions: m, critical: r, viewport: d };
+            s = { draggables: Ze(c), droppables: Qe(l) };
+          return ot(), { dimensions: s, critical: t, viewport: o };
         };
-      function nn(e, r, t) {
+      function tn(e, r, t) {
         return (
           t.descriptor.id !== r.id &&
           t.descriptor.type === r.type &&
@@ -3663,11 +3655,11 @@
             e.droppable.getById(t.descriptor.droppableId).descriptor.mode
         );
       }
-      var on,
-        an,
-        un = function (e, r) {
-          var t = null,
-            n = (function (e) {
+      var nn,
+        on,
+        an = function (e, r, t) {
+          var n = null,
+            i = (function (e) {
               var r = e.registry,
                 t = e.callbacks,
                 n = { additions: {}, removals: {}, modified: {} },
@@ -3676,7 +3668,7 @@
                   i ||
                     (t.collectionStarting(),
                     (i = requestAnimationFrame(function () {
-                      (i = null), ot();
+                      (i = null), it();
                       var e = n,
                         o = e.additions,
                         a = e.removals,
@@ -3702,7 +3694,7 @@
                           modified: c,
                         };
                       (n = { additions: {}, removals: {}, modified: {} }),
-                        at(),
+                        ot(),
                         t.publish(s);
                     })));
                 };
@@ -3730,68 +3722,69 @@
               };
             })({
               callbacks: {
-                publish: r.publishWhileDragging,
-                collectionStarting: r.collectionStarting,
+                publish: t.publishWhileDragging,
+                collectionStarting: t.collectionStarting,
               },
-              registry: e,
+              registry: r,
             }),
-            i = function (r) {
-              t || Pe(!1);
-              var i = t.critical.draggable;
-              "ADDITION" === r.type && nn(e, i, r.value) && n.add(r.value),
-                "REMOVAL" === r.type && nn(e, i, r.value) && n.remove(r.value);
+            o = function (e) {
+              n || Se(!1);
+              var t = n.critical.draggable;
+              "ADDITION" === e.type && tn(r, t, e.value) && i.add(e.value),
+                "REMOVAL" === e.type && tn(r, t, e.value) && i.remove(e.value);
             },
-            o = {
-              updateDroppableIsEnabled: function (n, i) {
-                e.droppable.exists(n) || Pe(!1),
-                  t && r.updateDroppableIsEnabled({ id: n, isEnabled: i });
+            a = {
+              updateDroppableIsEnabled: function (e, i) {
+                r.droppable.exists(e) || Se(!1),
+                  n && t.updateDroppableIsEnabled({ id: e, isEnabled: i });
               },
-              updateDroppableIsCombineEnabled: function (n, i) {
-                t &&
-                  (e.droppable.exists(n) || Pe(!1),
-                  r.updateDroppableIsCombineEnabled({
-                    id: n,
+              updateDroppableIsCombineEnabled: function (e, i) {
+                n &&
+                  (r.droppable.exists(e) || Se(!1),
+                  t.updateDroppableIsCombineEnabled({
+                    id: e,
                     isCombineEnabled: i,
                   }));
               },
-              scrollDroppable: function (r, n) {
-                t && e.droppable.getById(r).callbacks.scroll(n);
+              scrollDroppable: function (e, t) {
+                n && r.droppable.getById(e).callbacks.scroll(t);
               },
-              updateDroppableScroll: function (n, i) {
-                t &&
-                  (e.droppable.exists(n) || Pe(!1),
-                  r.updateDroppableScroll({ id: n, newScroll: i }));
+              updateDroppableScroll: function (e, i) {
+                n &&
+                  (r.droppable.exists(e) || Se(!1),
+                  t.updateDroppableScroll({ id: e, newScroll: i }));
               },
-              startPublishing: function (r) {
-                t && Pe(!1);
-                var n = e.draggable.getById(r.draggableId),
-                  o = e.droppable.getById(n.descriptor.droppableId),
-                  a = { draggable: n.descriptor, droppable: o.descriptor },
-                  u = e.subscribe(i);
+              startPublishing: function (t) {
+                n && Se(!1);
+                var i = r.draggable.getById(t.draggableId),
+                  a = r.droppable.getById(i.descriptor.droppableId),
+                  u = { draggable: i.descriptor, droppable: a.descriptor },
+                  l = r.subscribe(o);
                 return (
-                  (t = { critical: a, unsubscribe: u }),
-                  tn({
-                    critical: a,
-                    registry: e,
-                    scrollOptions: r.scrollOptions,
+                  (n = { critical: u, unsubscribe: l }),
+                  rn({
+                    windowToUse: e,
+                    critical: u,
+                    registry: r,
+                    scrollOptions: t.scrollOptions,
                   })
                 );
               },
               stopPublishing: function () {
-                if (t) {
-                  n.stop();
-                  var r = t.critical.droppable;
-                  e.droppable.getAllByType(r.type).forEach(function (e) {
+                if (n) {
+                  i.stop();
+                  var e = n.critical.droppable;
+                  r.droppable.getAllByType(e.type).forEach(function (e) {
                     return e.callbacks.dragStopped();
                   }),
-                    t.unsubscribe(),
-                    (t = null);
+                    n.unsubscribe(),
+                    (n = null);
                 }
               },
             };
-          return o;
+          return a;
         },
-        ln = function (e, r) {
+        un = function (e, r) {
           return (
             "IDLE" === e.phase ||
             ("DROP_ANIMATING" === e.phase &&
@@ -3799,15 +3792,15 @@
               "DROP" === e.completed.result.reason)
           );
         },
-        cn = function (e) {
+        ln = function (e) {
           window.scrollBy(e.x, e.y);
         },
-        sn = Ie(function (e) {
-          return rr(e).filter(function (e) {
+        cn = Ie(function (e) {
+          return er(e).filter(function (e) {
             return !!e.isEnabled && !!e.frame;
           });
         }),
-        dn = function (e) {
+        sn = function (e) {
           var r = e.center,
             t = e.destination,
             n = e.droppables;
@@ -3816,44 +3809,44 @@
             return i.frame ? i : null;
           }
           var o = (function (e, r) {
-            var t = $e(sn(r), function (r) {
-              return r.frame || Pe(!1), Yr(r.frame.pageMarginBox)(e);
+            var t = $e(cn(r), function (r) {
+              return r.frame || Se(!1), zr(r.frame.pageMarginBox)(e);
             });
             return t;
           })(r, n);
           return o;
         },
-        pn = 0.25,
-        fn = 0.05,
-        gn = 28,
-        vn = function (e) {
+        dn = 0.25,
+        pn = 0.05,
+        fn = 28,
+        gn = function (e) {
           return Math.pow(e, 2);
         },
-        mn = { stopDampeningAt: 1200, accelerateAt: 360 },
-        bn = function (e) {
+        vn = { stopDampeningAt: 1200, accelerateAt: 360 },
+        mn = function (e) {
           var r = e.startOfRange,
             t = e.endOfRange,
             n = e.current,
             i = t - r;
           return 0 === i ? 0 : (n - r) / i;
         },
-        hn = mn.accelerateAt,
-        yn = mn.stopDampeningAt,
-        In = function (e) {
+        bn = vn.accelerateAt,
+        hn = vn.stopDampeningAt,
+        yn = function (e) {
           var r = e.distanceToEdge,
             t = e.thresholds,
             n = e.dragStartTime,
             i = e.shouldUseTimeDampening,
             o = (function (e, r) {
               if (e > r.startScrollingFrom) return 0;
-              if (e <= r.maxScrollValueAt) return gn;
+              if (e <= r.maxScrollValueAt) return fn;
               if (e === r.startScrollingFrom) return 1;
-              var t = bn({
+              var t = mn({
                   startOfRange: r.maxScrollValueAt,
                   endOfRange: r.startScrollingFrom,
                   current: e,
                 }),
-                n = gn * vn(1 - t);
+                n = fn * gn(1 - t);
               return Math.ceil(n);
             })(r, t);
           return 0 === o
@@ -3862,19 +3855,19 @@
               ? Math.max(
                   (function (e, r) {
                     var t = r,
-                      n = yn,
+                      n = hn,
                       i = Date.now() - t;
-                    if (i >= yn) return e;
-                    if (i < hn) return 1;
-                    var o = bn({ startOfRange: hn, endOfRange: n, current: i }),
-                      a = e * vn(o);
+                    if (i >= hn) return e;
+                    if (i < bn) return 1;
+                    var o = mn({ startOfRange: bn, endOfRange: n, current: i }),
+                      a = e * gn(o);
                     return Math.ceil(a);
                   })(o, n),
                   1,
                 )
               : o;
         },
-        xn = function (e) {
+        In = function (e) {
           var r = e.container,
             t = e.distanceToEdges,
             n = e.dragStartTime,
@@ -3882,29 +3875,29 @@
             o = e.shouldUseTimeDampening,
             a = (function (e, r) {
               return {
-                startScrollingFrom: e[r.size] * pn,
-                maxScrollValueAt: e[r.size] * fn,
+                startScrollingFrom: e[r.size] * dn,
+                maxScrollValueAt: e[r.size] * pn,
               };
             })(r, i);
           return t[i.end] < t[i.start]
-            ? In({
+            ? yn({
                 distanceToEdge: t[i.end],
                 thresholds: a,
                 dragStartTime: n,
                 shouldUseTimeDampening: o,
               })
             : -1 *
-                In({
+                yn({
                   distanceToEdge: t[i.start],
                   thresholds: a,
                   dragStartTime: n,
                   shouldUseTimeDampening: o,
                 });
         },
-        Dn = He(function (e) {
+        xn = He(function (e) {
           return 0 === e ? 0 : e;
         }),
-        wn = function (e) {
+        Dn = function (e) {
           var r = e.dragStartTime,
             t = e.container,
             n = e.subject,
@@ -3916,21 +3909,21 @@
               bottom: t.bottom - i.y,
               left: i.x - t.left,
             },
-            u = xn({
+            u = In({
+              container: t,
+              distanceToEdges: a,
+              dragStartTime: r,
+              axis: fr,
+              shouldUseTimeDampening: o,
+            }),
+            l = In({
               container: t,
               distanceToEdges: a,
               dragStartTime: r,
               axis: gr,
               shouldUseTimeDampening: o,
             }),
-            l = xn({
-              container: t,
-              distanceToEdges: a,
-              dragStartTime: r,
-              axis: vr,
-              shouldUseTimeDampening: o,
-            }),
-            c = Dn({ x: l, y: u });
+            c = xn({ x: l, y: u });
           if (Fe(c, Ge)) return null;
           var s = (function (e) {
             var r = e.container,
@@ -3946,11 +3939,11 @@
           })({ container: t, subject: n, proposedScroll: c });
           return s ? (Fe(s, Ge) ? null : s) : null;
         },
-        En = He(function (e) {
+        wn = He(function (e) {
           return 0 === e ? 0 : e > 0 ? 1 : -1;
         }),
-        An =
-          ((on = function (e, r) {
+        En =
+          ((nn = function (e, r) {
             return e < 0 ? e : e > r ? e - r : 0;
           }),
           function (e) {
@@ -3958,20 +3951,20 @@
               t = e.max,
               n = e.change,
               i = Me(r, n),
-              o = { x: on(i.x, t.x), y: on(i.y, t.y) };
+              o = { x: nn(i.x, t.x), y: nn(i.y, t.y) };
             return Fe(o, Ge) ? null : o;
           }),
-        Cn = function (e) {
+        An = function (e) {
           var r = e.max,
             t = e.current,
             n = e.change,
             i = { x: Math.max(t.x, r.x), y: Math.max(t.y, r.y) },
-            o = En(n),
-            a = An({ max: i, current: t, change: o });
+            o = wn(n),
+            a = En({ max: i, current: t, change: o });
           return !a || (0 !== o.x && 0 === a.x) || (0 !== o.y && 0 === a.y);
         },
-        Sn = function (e, r) {
-          return Cn({
+        Cn = function (e, r) {
+          return An({
             current: e.scroll.current,
             max: e.scroll.max,
             change: r,
@@ -3981,10 +3974,10 @@
           var t = e.frame;
           return (
             !!t &&
-            Cn({ current: t.scroll.current, max: t.scroll.max, change: r })
+            An({ current: t.scroll.current, max: t.scroll.max, change: r })
           );
         },
-        Nn = function (e) {
+        Sn = function (e) {
           var r = e.state,
             t = e.dragStartTime,
             n = e.shouldUseTimeDampening,
@@ -3999,14 +3992,14 @@
                 n = e.center,
                 i = e.dragStartTime,
                 o = e.shouldUseTimeDampening,
-                a = wn({
+                a = Dn({
                   dragStartTime: i,
                   container: r.frame,
                   subject: t,
                   center: n,
                   shouldUseTimeDampening: o,
                 });
-              return a && Sn(r, a) ? a : null;
+              return a && Cn(r, a) ? a : null;
             })({
               dragStartTime: t,
               viewport: r.viewport,
@@ -4016,9 +4009,9 @@
             });
             if (l) return void i(l);
           }
-          var c = dn({
+          var c = sn({
             center: a,
-            destination: qr(r.impact),
+            destination: Hr(r.impact),
             droppables: r.dimensions.droppables,
           });
           if (c) {
@@ -4030,7 +4023,7 @@
                 o = e.shouldUseTimeDampening,
                 a = r.frame;
               if (!a) return null;
-              var u = wn({
+              var u = Dn({
                 dragStartTime: i,
                 container: a.pageMarginBox,
                 subject: t,
@@ -4048,7 +4041,7 @@
             s && o(c.descriptor.id, s);
           }
         },
-        On = function (e) {
+        Nn = function (e) {
           var r = e.move,
             t = e.scrollDroppable,
             n = e.scrollWindow,
@@ -4057,7 +4050,7 @@
               var n = (function (e, r) {
                 var t = e.frame;
                 return t && Pn(e, r)
-                  ? An({
+                  ? En({
                       current: t.scroll.current,
                       max: t.scroll.max,
                       change: r,
@@ -4070,12 +4063,12 @@
             },
             o = function (e, r, t) {
               if (!e) return t;
-              if (!Sn(r, t)) return t;
+              if (!Cn(r, t)) return t;
               var i = (function (e, r) {
-                if (!Sn(e, r)) return null;
+                if (!Cn(e, r)) return null;
                 var t = e.scroll.max,
                   n = e.scroll.current;
-                return An({ current: n, max: t, change: r });
+                return En({ current: n, max: t, change: r });
               })(r, t);
               if (!i) return n(t), null;
               var o = _e(t, i);
@@ -4084,8 +4077,8 @@
           return function (e) {
             var t = e.scrollJumpRequest;
             if (t) {
-              var n = qr(e.impact);
-              n || Pe(!1);
+              var n = Hr(e.impact);
+              n || Se(!1);
               var a = i(e.dimensions.droppables[n], t);
               if (a) {
                 var u = e.viewport,
@@ -4099,7 +4092,7 @@
             }
           };
         },
-        Rn = function (e) {
+        On = function (e) {
           var r = e.scrollDroppable,
             t = e.scrollWindow,
             n = e.move,
@@ -4110,11 +4103,11 @@
                 i = xe(t),
                 o = null,
                 a = function (e) {
-                  o || Pe(!1);
+                  o || Se(!1);
                   var r = o,
                     t = r.shouldUseTimeDampening,
                     a = r.dragStartTime;
-                  Nn({
+                  Sn({
                     state: e,
                     scrollWindow: n,
                     scrollDroppable: i,
@@ -4124,13 +4117,13 @@
                 };
               return {
                 start: function (e) {
-                  ot(), o && Pe(!1);
+                  it(), o && Se(!1);
                   var r = Date.now(),
                     t = !1,
                     n = function () {
                       t = !0;
                     };
-                  Nn({
+                  Sn({
                     state: e,
                     dragStartTime: 0,
                     shouldUseTimeDampening: !1,
@@ -4138,7 +4131,7 @@
                     scrollDroppable: n,
                   }),
                     (o = { dragStartTime: r, shouldUseTimeDampening: t }),
-                    at(),
+                    ot(),
                     t && a(e);
                 },
                 stop: function () {
@@ -4147,7 +4140,7 @@
                 scroll: a,
               };
             })({ scrollWindow: t, scrollDroppable: r }),
-            o = On({ move: n, scrollWindow: t, scrollDroppable: r });
+            o = Nn({ move: n, scrollWindow: t, scrollDroppable: r });
           return {
             scroll: function (e) {
               "DRAGGING" === e.phase &&
@@ -4159,22 +4152,22 @@
             stop: i.stop,
           };
         },
-        Bn = "data-rbd",
-        Tn = {
-          base: (an = Bn + "-drag-handle"),
-          draggableId: an + "-draggable-id",
-          contextId: an + "-context-id",
+        Rn = "data-rbd",
+        Bn = {
+          base: (on = Rn + "-drag-handle"),
+          draggableId: on + "-draggable-id",
+          contextId: on + "-context-id",
         },
+        Tn = (function () {
+          var e = Rn + "-draggable";
+          return { base: e, contextId: e + "-context-id", id: e + "-id" };
+        })(),
         Ln = (function () {
-          var e = Bn + "-draggable";
+          var e = Rn + "-droppable";
           return { base: e, contextId: e + "-context-id", id: e + "-id" };
         })(),
-        Gn = (function () {
-          var e = Bn + "-droppable";
-          return { base: e, contextId: e + "-context-id", id: e + "-id" };
-        })(),
-        Mn = { contextId: Bn + "-scroll-container-context-id" },
-        _n = function (e, r) {
+        Gn = { contextId: Rn + "-scroll-container-context-id" },
+        Mn = function (e, r) {
           return e
             .map(function (e) {
               var t = e.styles[r];
@@ -4182,7 +4175,7 @@
             })
             .join(" ");
         },
-        Fn = function (e) {
+        _n = function (e) {
           var r,
             t,
             n,
@@ -4194,7 +4187,7 @@
             o =
               ((t = "\n      cursor: -webkit-grab;\n      cursor: grab;\n    "),
               {
-                selector: i(Tn.contextId),
+                selector: i(Bn.contextId),
                 styles: {
                   always:
                     "\n          -webkit-touch-callout: none;\n          -webkit-tap-highlight-color: rgba(0,0,0,0);\n          touch-action: manipulation;\n        ",
@@ -4204,18 +4197,18 @@
                 },
               }),
             a = [
-              ((n = "\n      transition: " + Bt.outOfTheWay + ";\n    "),
+              ((n = "\n      transition: " + Rt.outOfTheWay + ";\n    "),
               {
-                selector: i(Ln.contextId),
+                selector: i(Tn.contextId),
                 styles: { dragging: n, dropAnimating: n, userCancel: n },
               }),
               o,
               {
-                selector: i(Gn.contextId),
+                selector: i(Ln.contextId),
                 styles: { always: "overflow-anchor: none;" },
               },
               {
-                selector: "body",
+                selector: "body, :host",
                 styles: {
                   dragging:
                     "\n        cursor: grabbing;\n        cursor: -webkit-grabbing;\n        user-select: none;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        overflow-anchor: none;\n      ",
@@ -4223,43 +4216,53 @@
               },
             ];
           return {
-            always: _n(a, "always"),
-            resting: _n(a, "resting"),
-            dragging: _n(a, "dragging"),
-            dropAnimating: _n(a, "dropAnimating"),
-            userCancel: _n(a, "userCancel"),
+            always: Mn(a, "always"),
+            resting: Mn(a, "resting"),
+            dragging: Mn(a, "dragging"),
+            dropAnimating: Mn(a, "dropAnimating"),
+            userCancel: Mn(a, "userCancel"),
           };
         },
-        kn =
+        Fn =
           "undefined" != typeof window &&
           void 0 !== window.document &&
           void 0 !== window.document.createElement
             ? n.useLayoutEffect
             : n.useEffect,
-        Wn = function () {
-          var e = document.querySelector("head");
-          return e || Pe(!1), e;
+        Wn = function (e) {
+          var r = e || document.querySelector("head");
+          return r || Se(!1), r;
         },
-        Un = function (e) {
+        kn = function (e) {
           var r = document.createElement("style");
           return e && r.setAttribute("nonce", e), (r.type = "text/css"), r;
         };
-      var jn = function (e) {
+      function Un(e) {
+        return (e.composedPath && e.composedPath()[0]) || e.target;
+      }
+      function jn(e, r, t) {
+        var n,
+          i = e && e.getRootNode(),
+          o = i && i.querySelectorAll ? i : document,
+          a = $e(
+            ((n = o.querySelectorAll(r)), Array.prototype.slice.call(n)),
+            t,
+          );
+        return !a && o.host ? jn(o.host, r, t) : a;
+      }
+      var Hn = function (e) {
         return e && e.ownerDocument ? e.ownerDocument.defaultView : window;
       };
-      function Hn(e) {
-        return e instanceof jn(e).HTMLElement;
+      function qn(e) {
+        return e instanceof Hn(e).HTMLElement;
       }
-      function qn(e, r) {
-        var t = "[" + Tn.contextId + '="' + e + '"]',
-          n = Qe(document.querySelectorAll(t));
-        if (!n.length) return null;
-        var i = $e(n, function (e) {
-          return e.getAttribute(Tn.draggableId) === r;
+      function Vn(e, r, t) {
+        var n = jn(t, "[" + Bn.contextId + '="' + e + '"]', function (e) {
+          return e.getAttribute(Bn.draggableId) === r;
         });
-        return i && Hn(i) ? i : null;
+        return n && qn(n) ? n : null;
       }
-      function Vn() {
+      function zn() {
         var e = { draggables: {}, droppables: {} },
           r = [];
         function t(e) {
@@ -4296,7 +4299,7 @@
             },
             getById: function (e) {
               var r = n(e);
-              return r || Pe(!1), r;
+              return r || Se(!1), r;
             },
             findById: n,
             exists: function (e) {
@@ -4320,7 +4323,7 @@
             },
             getById: function (e) {
               var r = i(e);
-              return r || Pe(!1), r;
+              return r || Se(!1), r;
             },
             findById: i,
             exists: function (e) {
@@ -4346,12 +4349,12 @@
           },
         };
       }
-      var zn = n.createContext(null),
-        Yn = function () {
+      var Yn = n.createContext(null),
+        Jn = function () {
           var e = document.body;
-          return e || Pe(!1), e;
+          return e || Se(!1), e;
         },
-        Jn = {
+        Xn = {
           position: "absolute",
           width: "1px",
           height: "1px",
@@ -4362,30 +4365,30 @@
           clip: "rect(0 0 0 0)",
           "clip-path": "inset(100%)",
         },
-        Xn = function (e) {
+        Kn = function (e) {
           return "rbd-announcement-" + e;
         };
-      var Kn = 0,
-        $n = { separator: "::" };
-      function Qn(e, r) {
+      var $n = 0,
+        Qn = { separator: "::" };
+      function Zn(e, r) {
         return (
-          void 0 === r && (r = $n),
+          void 0 === r && (r = Qn),
           ie(
             function () {
-              return "" + e + r.separator + Kn++;
+              return "" + e + r.separator + $n++;
             },
             [r.separator, e],
           )
         );
       }
-      var Zn = n.createContext(null);
-      function ei(e) {
+      var ei = n.createContext(null);
+      function ri(e) {
         0;
       }
-      function ri(e, r) {
-        ei();
+      function ti(e, r) {
+        ri();
       }
-      function ti(e) {
+      function ni(e) {
         var r = (0, n.useRef)(e);
         return (
           (0, n.useEffect)(function () {
@@ -4394,12 +4397,12 @@
           r
         );
       }
-      var ni,
-        ii = (((ni = {})[13] = !0), (ni[9] = !0), ni),
-        oi = function (e) {
-          ii[e.keyCode] && e.preventDefault();
+      var ii,
+        oi = (((ii = {})[13] = !0), (ii[9] = !0), ii),
+        ai = function (e) {
+          oi[e.keyCode] && e.preventDefault();
         },
-        ai = (function () {
+        ui = (function () {
           var e = "visibilitychange";
           return "undefined" == typeof document
             ? e
@@ -4407,9 +4410,9 @@
                 return "on" + e in document;
               }) || e;
         })();
-      var ui,
-        li = { type: "IDLE" };
-      function ci(e) {
+      var li,
+        ci = { type: "IDLE" };
+      function si(e) {
         var r = e.cancel,
           t = e.completed,
           n = e.getPhase,
@@ -4426,7 +4429,7 @@
                   u = n();
                 if ("DRAGGING" === u.type)
                   return e.preventDefault(), void u.actions.move(a);
-                "PENDING" !== u.type && Pe(!1);
+                "PENDING" !== u.type && Se(!1);
                 var l = u.point;
                 if (
                   ((c = l),
@@ -4464,7 +4467,7 @@
               if ("PENDING" !== n().type)
                 return 27 === e.keyCode
                   ? (e.preventDefault(), void r())
-                  : void oi(e);
+                  : void ai(e);
               r();
             },
           },
@@ -4480,17 +4483,17 @@
             eventName: "webkitmouseforcedown",
             fn: function (e) {
               var t = n();
-              "IDLE" === t.type && Pe(!1),
+              "IDLE" === t.type && Se(!1),
                 t.actions.shouldRespectForcePress() ? r() : e.preventDefault();
             },
           },
-          { eventName: ai, fn: r },
+          { eventName: ui, fn: r },
         ];
       }
-      function si() {}
-      var di =
-        (((ui = {})[34] = !0), (ui[33] = !0), (ui[36] = !0), (ui[35] = !0), ui);
-      function pi(e, r) {
+      function di() {}
+      var pi =
+        (((li = {})[34] = !0), (li[33] = !0), (li[36] = !0), (li[35] = !0), li);
+      function fi(e, r) {
         function t() {
           r(), e.cancel();
         }
@@ -4510,7 +4513,7 @@
                         ? (n.preventDefault(), void e.moveRight())
                         : 37 === n.keyCode
                           ? (n.preventDefault(), void e.moveLeft())
-                          : void (di[n.keyCode] ? n.preventDefault() : oi(n));
+                          : void (pi[n.keyCode] ? n.preventDefault() : ai(n));
             },
           },
           { eventName: "mousedown", fn: t },
@@ -4519,11 +4522,11 @@
           { eventName: "touchstart", fn: t },
           { eventName: "resize", fn: t },
           { eventName: "wheel", fn: t, options: { passive: !0 } },
-          { eventName: ai, fn: t },
+          { eventName: ui, fn: t },
         ];
       }
-      var fi = { type: "IDLE" };
-      var gi = {
+      var gi = { type: "IDLE" };
+      var vi = {
         input: !0,
         button: !0,
         textarea: !0,
@@ -4533,20 +4536,20 @@
         video: !0,
         audio: !0,
       };
-      function vi(e, r) {
-        if (null == r) return !1;
-        if (Boolean(gi[r.tagName.toLowerCase()])) return !0;
-        var t = r.getAttribute("contenteditable");
-        return "true" === t || "" === t || (r !== e && vi(e, r.parentElement));
-      }
       function mi(e, r) {
-        var t = r.target;
-        return !!Hn(t) && vi(e, t);
+        if (null == r) return !1;
+        if (Boolean(vi[r.tagName.toLowerCase()])) return !0;
+        var t = r.getAttribute("contenteditable");
+        return "true" === t || "" === t || (r !== e && mi(e, r.parentElement));
       }
-      var bi = function (e) {
+      function bi(e, r) {
+        var t = Un(r);
+        return !!qn(t) && mi(e, t);
+      }
+      var hi = function (e) {
         return ue(e.getBoundingClientRect()).center;
       };
-      var hi = (function () {
+      var yi = (function () {
         var e = "matches";
         return "undefined" == typeof document
           ? e
@@ -4554,42 +4557,51 @@
               return e in Element.prototype;
             }) || e;
       })();
-      function yi(e, r) {
-        return null == e ? null : e[hi](r) ? e : yi(e.parentElement, r);
-      }
       function Ii(e, r) {
-        return e.closest ? e.closest(r) : yi(e, r);
+        return null == e ? null : e[yi](r) ? e : Ii(e.parentElement, r);
       }
       function xi(e, r) {
-        var t,
-          n = r.target;
-        if (!((t = n) instanceof jn(t).Element)) return null;
-        var i = (function (e) {
-            return "[" + Tn.contextId + '="' + e + '"]';
-          })(e),
-          o = Ii(n, i);
-        return o && Hn(o) ? o : null;
+        return e.closest ? e.closest(r) : Ii(e, r);
       }
-      function Di(e) {
+      function Di(e, r) {
+        if (!e || e === document || e === window) return null;
+        var t = xi(e, r);
+        return t || Di(e.getRootNode().host, r);
+      }
+      function wi(e, r) {
+        var t = Un(r);
+        if (
+          !(function (e) {
+            return e instanceof Hn(e).Element;
+          })(t)
+        )
+          return null;
+        var n = (function (e) {
+            return "[" + Bn.contextId + '="' + e + '"]';
+          })(e),
+          i = Di(t, n);
+        return i && qn(i) ? i : null;
+      }
+      function Ei(e) {
         e.preventDefault();
       }
-      function wi(e) {
+      function Ai(e) {
         var r = e.expected,
           t = e.phase,
           n = e.isLockActive;
         e.shouldWarn;
         return !!n() && r === t;
       }
-      function Ei(e) {
+      function Ci(e) {
         var r = e.lockAPI,
           t = e.store,
           n = e.registry,
           i = e.draggableId;
         if (r.isClaimed()) return !1;
         var o = n.draggable.findById(i);
-        return !!o && !!o.options.isEnabled && !!ln(t.getState(), i);
+        return !!o && !!o.options.isEnabled && !!un(t.getState(), i);
       }
-      function Ai(e) {
+      function Pi(e) {
         var r = e.lockAPI,
           t = e.contextId,
           n = e.store,
@@ -4597,33 +4609,40 @@
           a = e.draggableId,
           u = e.forceSensorStop,
           l = e.sourceEvent;
-        if (!Ei({ lockAPI: r, store: n, registry: i, draggableId: a }))
+        if (!Ci({ lockAPI: r, store: n, registry: i, draggableId: a }))
           return null;
-        var c = i.draggable.getById(a),
-          s = (function (e, r) {
-            var t = "[" + Ln.contextId + '="' + e + '"]',
-              n = $e(Qe(document.querySelectorAll(t)), function (e) {
-                return e.getAttribute(Ln.id) === r;
-              });
-            return n && Hn(n) ? n : null;
-          })(t, c.descriptor.id);
-        if (!s) return null;
-        if (l && !c.options.canDragInteractiveElements && mi(s, l)) return null;
-        var d = r.claim(u || we),
-          p = "PRE_DRAG";
-        function f() {
-          return c.options.shouldRespectForcePress;
+        var c,
+          s,
+          d = i.draggable.getById(a),
+          p = (function (e, r, t) {
+            var n = jn(t, "[" + Tn.contextId + '="' + e + '"]', function (e) {
+              return e.getAttribute(Tn.id) === r;
+            });
+            return n && qn(n) ? n : null;
+          })(
+            t,
+            d.descriptor.id,
+            ((s = (c = l) && c.composedPath && c.composedPath()[0]) &&
+              s.getRootNode()) ||
+              document,
+          );
+        if (!p) return null;
+        if (l && !d.options.canDragInteractiveElements && bi(p, l)) return null;
+        var f = r.claim(u || we),
+          g = "PRE_DRAG";
+        function v() {
+          return d.options.shouldRespectForcePress;
         }
-        function g() {
-          return r.isActive(d);
+        function m() {
+          return r.isActive(f);
         }
-        var v = function (e, r) {
-          wi({ expected: e, phase: p, isLockActive: g, shouldWarn: !0 }) &&
+        var b = function (e, r) {
+          Ai({ expected: e, phase: g, isLockActive: m, shouldWarn: !0 }) &&
             n.dispatch(r());
         }.bind(null, "DRAGGING");
-        function m(e) {
+        function h(e) {
           function t() {
-            r.release(), (p = "COMPLETED");
+            r.release(), (g = "COMPLETED");
           }
           function i(r, i) {
             if (
@@ -4634,29 +4653,29 @@
               var o = Ee(window, [
                 {
                   eventName: "click",
-                  fn: Di,
+                  fn: Ei,
                   options: { once: !0, passive: !1, capture: !0 },
                 },
               ]);
               setTimeout(o);
             }
-            t(), n.dispatch(Ct({ reason: r }));
+            t(), n.dispatch(At({ reason: r }));
           }
           return (
-            "PRE_DRAG" !== p && (t(), "PRE_DRAG" !== p && Pe(!1)),
-            n.dispatch(ft(e.liftActionArgs)),
-            (p = "DRAGGING"),
+            "PRE_DRAG" !== g && (t(), "PRE_DRAG" !== g && Se(!1)),
+            n.dispatch(pt(e.liftActionArgs)),
+            (g = "DRAGGING"),
             (0, o.A)(
               {
                 isActive: function () {
-                  return wi({
+                  return Ai({
                     expected: "DRAGGING",
-                    phase: p,
-                    isLockActive: g,
+                    phase: g,
+                    isLockActive: m,
                     shouldWarn: !1,
                   });
                 },
-                shouldRespectForcePress: f,
+                shouldRespectForcePress: v,
                 drop: function (e) {
                   return i("DROP", e);
                 },
@@ -4670,21 +4689,21 @@
         }
         return {
           isActive: function () {
-            return wi({
+            return Ai({
               expected: "PRE_DRAG",
-              phase: p,
-              isLockActive: g,
+              phase: g,
+              isLockActive: m,
               shouldWarn: !1,
             });
           },
-          shouldRespectForcePress: f,
+          shouldRespectForcePress: v,
           fluidLift: function (e) {
             var r = xe(function (e) {
-                v(function () {
-                  return yt({ client: e });
+                b(function () {
+                  return ht({ client: e });
                 });
               }),
-              t = m({
+              t = h({
                 liftActionArgs: {
                   id: a,
                   clientSelection: e,
@@ -4700,22 +4719,22 @@
           snapLift: function () {
             var e = {
               moveUp: function () {
-                return v(It);
+                return b(yt);
               },
               moveRight: function () {
-                return v(Dt);
+                return b(xt);
               },
               moveDown: function () {
-                return v(xt);
+                return b(It);
               },
               moveLeft: function () {
-                return v(wt);
+                return b(Dt);
               },
             };
-            return m({
+            return h({
               liftActionArgs: {
                 id: a,
-                clientSelection: bi(s),
+                clientSelection: hi(p),
                 movementMode: "SNAP",
               },
               cleanup: we,
@@ -4723,18 +4742,18 @@
             });
           },
           abort: function () {
-            wi({
+            Ai({
               expected: "PRE_DRAG",
-              phase: p,
-              isLockActive: g,
+              phase: g,
+              isLockActive: m,
               shouldWarn: !0,
             }) && r.release();
           },
         };
       }
-      var Ci = [
+      var Si = [
         function (e) {
-          var r = (0, n.useRef)(li),
+          var r = (0, n.useRef)(ci),
             t = (0, n.useRef)(we),
             i = ie(
               function () {
@@ -4782,14 +4801,17 @@
             ),
             a = oe(
               function () {
-                t.current = Ee(window, [o, i], { passive: !1, capture: !0 });
+                t.current = Ee(e.getWindow(), [o, i], {
+                  passive: !1,
+                  capture: !0,
+                });
               },
-              [o, i],
+              [e, o, i],
             ),
             u = oe(
               function () {
                 "IDLE" !== r.current.type &&
-                  ((r.current = li), t.current(), a());
+                  ((r.current = ci), t.current(), a());
               },
               [a],
             ),
@@ -4805,7 +4827,7 @@
             ),
             c = oe(
               function () {
-                var e = ci({
+                var n = si({
                   cancel: l,
                   completed: u,
                   getPhase: function () {
@@ -4815,19 +4837,19 @@
                     r.current = e;
                   },
                 });
-                t.current = Ee(window, e, { capture: !0, passive: !1 });
+                t.current = Ee(e.getWindow(), n, { capture: !0, passive: !1 });
               },
-              [l, u],
+              [e, l, u],
             ),
             s = oe(
               function (e, t) {
-                "IDLE" !== r.current.type && Pe(!1),
+                "IDLE" !== r.current.type && Se(!1),
                   (r.current = { type: "PENDING", point: t, actions: e }),
                   c();
               },
               [c],
             );
-          kn(
+          Fn(
             function () {
               return (
                 a(),
@@ -4840,7 +4862,7 @@
           );
         },
         function (e) {
-          var r = (0, n.useRef)(si),
+          var r = (0, n.useRef)(di),
             t = ie(
               function () {
                 return {
@@ -4855,7 +4877,7 @@
                           var a = !0,
                             u = o.snapLift();
                           r.current(),
-                            (r.current = Ee(window, pi(u, l), {
+                            (r.current = Ee(e.getWindow(), fi(u, l), {
                               capture: !0,
                               passive: !1,
                             }));
@@ -4863,7 +4885,7 @@
                       }
                     }
                     function l() {
-                      a || Pe(!1), (a = !1), r.current(), i();
+                      a || Se(!1), (a = !1), r.current(), i();
                     }
                   },
                 };
@@ -4872,11 +4894,14 @@
             ),
             i = oe(
               function () {
-                r.current = Ee(window, [t], { passive: !1, capture: !0 });
+                r.current = Ee(e.getWindow(), [t], {
+                  passive: !1,
+                  capture: !0,
+                });
               },
-              [t],
+              [e, t],
             );
-          kn(
+          Fn(
             function () {
               return (
                 i(),
@@ -4889,7 +4914,7 @@
           );
         },
         function (e) {
-          var r = (0, n.useRef)(fi),
+          var r = (0, n.useRef)(gi),
             t = (0, n.useRef)(we),
             i = oe(function () {
               return r.current;
@@ -4920,16 +4945,19 @@
             ),
             u = oe(
               function () {
-                t.current = Ee(window, [a], { capture: !0, passive: !1 });
+                t.current = Ee(e.getWindow(), [a], {
+                  capture: !0,
+                  passive: !1,
+                });
               },
-              [a],
+              [e, a],
             ),
             l = oe(
               function () {
                 var e = r.current;
                 "IDLE" !== e.type &&
                   ("PENDING" === e.type && clearTimeout(e.longPressTimerId),
-                  o(fi),
+                  o(gi),
                   t.current(),
                   u());
               },
@@ -4947,10 +4975,10 @@
             ),
             s = oe(
               function () {
-                var e = { capture: !0, passive: !1 },
-                  r = { cancel: c, completed: l, getPhase: i },
-                  n = Ee(
-                    window,
+                var r = { capture: !0, passive: !1 },
+                  n = { cancel: c, completed: l, getPhase: i },
+                  o = Ee(
+                    e.getWindow(),
                     (function (e) {
                       var r = e.cancel,
                         t = e.completed,
@@ -4992,7 +5020,7 @@
                           eventName: "touchforcechange",
                           fn: function (e) {
                             var t = n();
-                            "IDLE" === t.type && Pe(!1);
+                            "IDLE" === t.type && Se(!1);
                             var i = e.touches[0];
                             if (i && i.force >= 0.15) {
                               var o = t.actions.shouldRespectForcePress();
@@ -5006,13 +5034,13 @@
                             }
                           },
                         },
-                        { eventName: ai, fn: r },
+                        { eventName: ui, fn: r },
                       ];
-                    })(r),
-                    e,
+                    })(n),
+                    r,
                   ),
-                  o = Ee(
-                    window,
+                  a = Ee(
+                    e.getWindow(),
                     (function (e) {
                       var r = e.cancel,
                         t = e.getPhase;
@@ -5033,21 +5061,21 @@
                               : r();
                           },
                         },
-                        { eventName: ai, fn: r },
+                        { eventName: ui, fn: r },
                       ];
-                    })(r),
-                    e,
+                    })(n),
+                    r,
                   );
                 t.current = function () {
-                  n(), o();
+                  o(), a();
                 };
               },
-              [c, i, l],
+              [e, c, i, l],
             ),
             d = oe(
               function () {
                 var e = i();
-                "PENDING" !== e.type && Pe(!1);
+                "PENDING" !== e.type && Se(!1);
                 var r = e.actions.fluidLift(e.point);
                 o({ type: "DRAGGING", actions: r, hasMoved: !1 });
               },
@@ -5055,7 +5083,7 @@
             ),
             p = oe(
               function (e, r) {
-                "IDLE" !== i().type && Pe(!1);
+                "IDLE" !== i().type && Se(!1);
                 var t = setTimeout(d, 120);
                 o({
                   type: "PENDING",
@@ -5067,7 +5095,7 @@
               },
               [s, i, o, d],
             );
-          kn(
+          Fn(
             function () {
               return (
                 u(),
@@ -5075,35 +5103,39 @@
                   t.current();
                   var e = i();
                   "PENDING" === e.type &&
-                    (clearTimeout(e.longPressTimerId), o(fi));
+                    (clearTimeout(e.longPressTimerId), o(gi));
                 }
               );
             },
             [i, u, o],
           ),
-            kn(function () {
-              return Ee(window, [
-                {
-                  eventName: "touchmove",
-                  fn: function () {},
-                  options: { capture: !1, passive: !1 },
-                },
-              ]);
-            }, []);
+            Fn(
+              function () {
+                return Ee(e.getWindow(), [
+                  {
+                    eventName: "touchmove",
+                    fn: function () {},
+                    options: { capture: !1, passive: !1 },
+                  },
+                ]);
+              },
+              [e],
+            );
         },
       ];
-      function Si(e) {
+      function Ni(e) {
         var r = e.contextId,
           t = e.store,
           i = e.registry,
           o = e.customSensors,
           a = e.enableDefaultSensors,
-          u = [].concat(a ? Ci : [], o || []),
-          l = (0, n.useState)(function () {
+          u = e.windowToUse,
+          l = [].concat(a ? Si : [], o || []),
+          c = (0, n.useState)(function () {
             return (function () {
               var e = null;
               function r() {
-                e || Pe(!1), (e = null);
+                e || Se(!1), (e = null);
               }
               return {
                 isClaimed: function () {
@@ -5113,7 +5145,7 @@
                   return r === e;
                 },
                 claim: function (r) {
-                  e && Pe(!1);
+                  e && Se(!1);
                   var t = { abandon: r };
                   return (e = t), t;
                 },
@@ -5124,38 +5156,38 @@
               };
             })();
           })[0],
-          c = oe(
+          s = oe(
             function (e, r) {
-              e.isDragging && !r.isDragging && l.tryAbandon();
+              e.isDragging && !r.isDragging && c.tryAbandon();
             },
-            [l],
+            [c],
           );
-        kn(
+        Fn(
           function () {
             var e = t.getState();
             return t.subscribe(function () {
               var r = t.getState();
-              c(e, r), (e = r);
+              s(e, r), (e = r);
             });
           },
-          [l, t, c],
+          [c, t, s],
         ),
-          kn(
+          Fn(
             function () {
-              return l.tryAbandon;
+              return c.tryAbandon;
             },
-            [l.tryAbandon],
+            [c.tryAbandon],
           );
-        var s = oe(
+        var d = oe(
             function (e) {
-              return Ei({ lockAPI: l, registry: i, store: t, draggableId: e });
+              return Ci({ lockAPI: c, registry: i, store: t, draggableId: e });
             },
-            [l, i, t],
+            [c, i, t],
           ),
-          d = oe(
+          p = oe(
             function (e, n, o) {
-              return Ai({
-                lockAPI: l,
+              return Pi({
+                lockAPI: c,
                 registry: i,
                 contextId: r,
                 store: t,
@@ -5164,50 +5196,57 @@
                 sourceEvent: o && o.sourceEvent ? o.sourceEvent : null,
               });
             },
-            [r, l, i, t],
+            [r, c, i, t],
           ),
-          p = oe(
+          f = oe(
             function (e) {
               return (function (e, r) {
-                var t = xi(e, r);
-                return t ? t.getAttribute(Tn.draggableId) : null;
+                var t = wi(e, r);
+                return t ? t.getAttribute(Bn.draggableId) : null;
               })(r, e);
             },
             [r],
           ),
-          f = oe(
+          g = oe(
             function (e) {
               var r = i.draggable.findById(e);
               return r ? r.options : null;
             },
             [i.draggable],
           ),
-          g = oe(
+          v = oe(
             function () {
-              l.isClaimed() &&
-                (l.tryAbandon(),
-                "IDLE" !== t.getState().phase && t.dispatch(Et()));
+              c.isClaimed() &&
+                (c.tryAbandon(),
+                "IDLE" !== t.getState().phase && t.dispatch(wt()));
             },
-            [l, t],
+            [c, t],
           ),
-          v = oe(l.isClaimed, [l]),
-          m = ie(
+          m = oe(c.isClaimed, [c]),
+          b = oe(
+            function () {
+              return u;
+            },
+            [u],
+          ),
+          h = ie(
             function () {
               return {
-                canGetLock: s,
-                tryGetLock: d,
-                findClosestDraggableId: p,
-                findOptionsForDraggable: f,
-                tryReleaseLock: g,
-                isLockClaimed: v,
+                canGetLock: d,
+                tryGetLock: p,
+                findClosestDraggableId: f,
+                findOptionsForDraggable: g,
+                tryReleaseLock: v,
+                isLockClaimed: m,
+                getWindow: b,
               };
             },
-            [s, d, p, f, g, v],
+            [d, p, f, g, v, m, b],
           );
-        ei();
-        for (var b = 0; b < u.length; b++) u[b](m);
+        ri();
+        for (var y = 0; y < l.length; y++) l[y](h);
       }
-      var Pi = function (e) {
+      var Oi = function (e) {
         return {
           onBeforeCapture: e.onBeforeCapture,
           onBeforeDragStart: e.onBeforeDragStart,
@@ -5216,28 +5255,35 @@
           onDragUpdate: e.onDragUpdate,
         };
       };
-      function Ni(e) {
-        return e.current || Pe(!1), e.current;
+      function Ri(e) {
+        return e.current || Se(!1), e.current;
       }
-      function Oi(e) {
+      function Bi(e) {
         var r = e.contextId,
           t = e.setCallbacks,
           i = e.sensors,
           a = e.nonce,
           u = e.dragHandleUsageInstructions,
-          l = (0, n.useRef)(null);
-        ri();
-        var c = ti(e),
-          s = oe(
+          l = (0, n.useRef)(null),
+          [c, s] = n.useState(),
+          d = n.useMemo(
             function () {
-              return Pi(c.current);
+              return c ? c.ownerDocument.defaultView : window;
             },
             [c],
+          );
+        ti();
+        var p = ni(e),
+          f = oe(
+            function () {
+              return Oi(p.current);
+            },
+            [p],
           ),
-          d = (function (e) {
+          v = (function (e) {
             var r = ie(
                 function () {
-                  return Xn(e);
+                  return Kn(e);
                 },
                 [e],
               ),
@@ -5251,11 +5297,11 @@
                     (e.id = r),
                     e.setAttribute("aria-live", "assertive"),
                     e.setAttribute("aria-atomic", "true"),
-                    (0, o.A)(e.style, Jn),
-                    Yn().appendChild(e),
+                    (0, o.A)(e.style, Xn),
+                    Jn().appendChild(e),
                     function () {
                       setTimeout(function () {
-                        var r = Yn();
+                        var r = Jn();
                         r.contains(e) && r.removeChild(e),
                           e === t.current && (t.current = null);
                       });
@@ -5270,10 +5316,10 @@
               }, [])
             );
           })(r),
-          p = (function (e) {
+          m = (function (e) {
             var r = e.contextId,
               t = e.text,
-              i = Qn("hidden-text", { separator: "-" }),
+              i = Zn("hidden-text", { separator: "-" }),
               o = ie(
                 function () {
                   return (
@@ -5294,9 +5340,9 @@
                     (e.id = o),
                     (e.textContent = t),
                     (e.style.display = "none"),
-                    Yn().appendChild(e),
+                    Jn().appendChild(e),
                     function () {
-                      var r = Yn();
+                      var r = Jn();
                       r.contains(e) && r.removeChild(e);
                     }
                   );
@@ -5306,96 +5352,97 @@
               o
             );
           })({ contextId: r, text: u }),
-          f = (function (e, r) {
-            var t = ie(
+          b = (function (e, r, t) {
+            var i = ie(
                 function () {
-                  return Fn(e);
+                  return _n(e);
                 },
                 [e],
               ),
-              i = (0, n.useRef)(null),
               o = (0, n.useRef)(null),
-              a = oe(
+              a = (0, n.useRef)(null),
+              u = oe(
                 Ie(function (e) {
-                  var r = o.current;
-                  r || Pe(!1), (r.textContent = e);
+                  var r = a.current;
+                  r || Se(!1), (r.textContent = e);
                 }),
                 [],
               ),
-              u = oe(function (e) {
-                var r = i.current;
-                r || Pe(!1), (r.textContent = e);
+              l = oe(function (e) {
+                var r = o.current;
+                r || Se(!1), (r.textContent = e);
               }, []);
-            kn(
+            Fn(
               function () {
-                (i.current || o.current) && Pe(!1);
-                var n = Un(r),
-                  l = Un(r);
+                (o.current || a.current) && Se(!1);
+                var n = kn(r),
+                  c = kn(r);
+                (o.current = n),
+                  (a.current = c),
+                  n.setAttribute(Rn + "-always", e),
+                  c.setAttribute(Rn + "-dynamic", e);
+                var s = Wn(t);
                 return (
-                  (i.current = n),
-                  (o.current = l),
-                  n.setAttribute(Bn + "-always", e),
-                  l.setAttribute(Bn + "-dynamic", e),
-                  Wn().appendChild(n),
-                  Wn().appendChild(l),
-                  u(t.always),
-                  a(t.resting),
+                  s.appendChild(n),
+                  s.appendChild(c),
+                  l(i.always),
+                  u(i.resting),
                   function () {
                     var e = function (e) {
                       var r = e.current;
-                      r || Pe(!1), Wn().removeChild(r), (e.current = null);
+                      r || Se(!1), s.removeChild(r), (e.current = null);
                     };
-                    e(i), e(o);
+                    e(o), e(a);
                   }
                 );
               },
-              [r, u, a, t.always, t.resting, e],
+              [r, l, u, i.always, i.resting, e, t],
             );
-            var l = oe(
+            var c = oe(
                 function () {
-                  return a(t.dragging);
+                  return u(i.dragging);
                 },
-                [a, t.dragging],
-              ),
-              c = oe(
-                function (e) {
-                  a("DROP" !== e ? t.userCancel : t.dropAnimating);
-                },
-                [a, t.dropAnimating, t.userCancel],
+                [u, i.dragging],
               ),
               s = oe(
-                function () {
-                  o.current && a(t.resting);
+                function (e) {
+                  u("DROP" !== e ? i.userCancel : i.dropAnimating);
                 },
-                [a, t.resting],
+                [u, i.dropAnimating, i.userCancel],
+              ),
+              d = oe(
+                function () {
+                  a.current && u(i.resting);
+                },
+                [u, i.resting],
               );
             return ie(
               function () {
-                return { dragging: l, dropping: c, resting: s };
+                return { dragging: c, dropping: s, resting: d };
               },
-              [l, c, s],
+              [c, s, d],
             );
-          })(r, a),
-          v = oe(function (e) {
-            Ni(l).dispatch(e);
+          })(r, a, e.stylesInsertionPoint),
+          h = oe(function (e) {
+            Ri(l).dispatch(e);
           }, []),
-          m = ie(
+          y = ie(
             function () {
               return g(
                 {
-                  publishWhileDragging: gt,
-                  updateDroppableScroll: mt,
-                  updateDroppableIsEnabled: bt,
-                  updateDroppableIsCombineEnabled: ht,
-                  collectionStarting: vt,
+                  publishWhileDragging: ft,
+                  updateDroppableScroll: vt,
+                  updateDroppableIsEnabled: mt,
+                  updateDroppableIsCombineEnabled: bt,
+                  collectionStarting: gt,
                 },
-                v,
+                h,
               );
             },
-            [v],
+            [h],
           ),
-          b = (function () {
-            var e = ie(Vn, []);
+          I = (function () {
+            var e = ie(zn, []);
             return (
               (0, n.useEffect)(
                 function () {
@@ -5408,24 +5455,24 @@
               e
             );
           })(),
-          h = ie(
+          x = ie(
             function () {
-              return un(b, m);
+              return an(d, I, y);
             },
-            [b, m],
+            [d, I, y],
           ),
-          y = ie(
+          w = ie(
             function () {
-              return Rn(
+              return On(
                 (0, o.A)(
-                  { scrollWindow: cn, scrollDroppable: h.scrollDroppable },
-                  g({ move: yt }, v),
+                  { scrollWindow: ln, scrollDroppable: x.scrollDroppable },
+                  g({ move: ht }, h),
                 ),
               );
             },
-            [h.scrollDroppable, v],
+            [x.scrollDroppable, h],
           ),
-          I = (function (e) {
+          E = (function (e) {
             var r = (0, n.useRef)({}),
               t = (0, n.useRef)(null),
               i = (0, n.useRef)(null),
@@ -5442,7 +5489,7 @@
               }, []),
               u = oe(
                 function (r) {
-                  var t = qn(e, r);
+                  var t = Vn(e, r);
                   t && t !== document.activeElement && t.focus();
                 },
                 [e],
@@ -5465,10 +5512,10 @@
               s = oe(function (e) {
                 t.current = null;
                 var r = document.activeElement;
-                r && r.getAttribute(Tn.draggableId) === e && (t.current = e);
+                r && r.getAttribute(Bn.draggableId) === e && (t.current = e);
               }, []);
             return (
-              kn(function () {
+              Fn(function () {
                 return (
                   (o.current = !0),
                   function () {
@@ -5491,86 +5538,88 @@
               )
             );
           })(r),
-          x = ie(
+          A = ie(
             function () {
-              return Qt({
-                announce: d,
-                autoScroller: y,
-                dimensionMarshal: h,
-                focusMarshal: I,
-                getResponders: s,
-                styleMarshal: f,
+              return $t({
+                announce: v,
+                autoScroller: w,
+                dimensionMarshal: x,
+                focusMarshal: E,
+                getResponders: f,
+                styleMarshal: b,
               });
             },
-            [d, y, h, I, s, f],
+            [v, w, x, E, f, b],
           );
-        l.current = x;
-        var w = oe(function () {
-            var e = Ni(l);
-            "IDLE" !== e.getState().phase && e.dispatch(Et());
+        c && (l.current = A);
+        var C = oe(function () {
+            var e = Ri(l);
+            "IDLE" !== e.getState().phase && e.dispatch(wt());
           }, []),
-          E = oe(function () {
-            var e = Ni(l).getState();
+          P = oe(function () {
+            var e = Ri(l).getState();
             return e.isDragging || "DROP_ANIMATING" === e.phase;
           }, []);
         t(
           ie(
             function () {
-              return { isDragging: E, tryAbort: w };
+              return { isDragging: P, tryAbort: C };
             },
-            [E, w],
+            [P, C],
           ),
         );
-        var A = oe(function (e) {
-            return ln(Ni(l).getState(), e);
+        var S = oe(function (e) {
+            return un(Ri(l).getState(), e);
           }, []),
-          C = oe(function () {
-            return zr(Ni(l).getState());
+          N = oe(function () {
+            return Vr(Ri(l).getState());
           }, []),
-          S = ie(
+          O = ie(
             function () {
               return {
-                marshal: h,
-                focus: I,
+                marshal: x,
+                focus: E,
                 contextId: r,
-                canLift: A,
-                isMovementAllowed: C,
-                dragHandleUsageInstructionsId: p,
-                registry: b,
+                canLift: S,
+                isMovementAllowed: N,
+                dragHandleUsageInstructionsId: m,
+                registry: I,
               };
             },
-            [r, h, p, I, A, C, b],
+            [r, x, m, E, S, N, I],
           );
         return (
-          Si({
+          Ni({
             contextId: r,
-            store: x,
-            registry: b,
+            store: A,
+            registry: I,
             customSensors: i,
             enableDefaultSensors: !1 !== e.enableDefaultSensors,
+            windowToUse: d,
           }),
           (0, n.useEffect)(
             function () {
-              return w;
+              return C;
             },
-            [w],
+            [C],
           ),
           n.createElement(
-            Zn.Provider,
-            { value: S },
-            n.createElement(D, { context: zn, store: x }, e.children),
+            ei.Provider,
+            { value: O },
+            n.createElement("div", { ref: s }),
+            c && n.createElement(D, { context: Yn, store: A }, e.children),
           )
         );
       }
-      var Ri = 0;
-      function Bi(e) {
+      var Ti = 0;
+      function Li(e) {
         var r = ie(function () {
-            return "" + Ri++;
+            return "" + Ti++;
           }, []),
           t = e.dragHandleUsageInstructions || Le.dragHandleUsageInstructions;
         return n.createElement(Ne, null, function (i) {
           return n.createElement(
-            Oi,
+            Bi,
             {
               nonce: e.nonce,
               contextId: r,
@@ -5583,51 +5632,50 @@
               onDragStart: e.onDragStart,
               onDragUpdate: e.onDragUpdate,
               onDragEnd: e.onDragEnd,
+              stylesInsertionPoint: e.stylesInsertionPoint,
             },
             e.children,
           );
         });
       }
-      var Ti = function (e) {
+      var Gi = function (e) {
           return function (r) {
             return e === r;
           };
         },
-        Li = Ti("scroll"),
-        Gi = Ti("auto"),
-        Mi =
-          (Ti("visible"),
+        Mi = Gi("scroll"),
+        _i = Gi("auto"),
+        Fi =
+          (Gi("visible"),
           function (e, r) {
             return r(e.overflowX) || r(e.overflowY);
           }),
-        _i = function (e) {
-          var r = window.getComputedStyle(e),
+        Wi = function (e) {
+          var r = e.ownerDocument.defaultView.getComputedStyle(e),
             t = { overflowX: r.overflowX, overflowY: r.overflowY };
-          return Mi(t, Li) || Mi(t, Gi);
+          return Fi(t, Mi) || Fi(t, _i);
         },
-        Fi = function e(r) {
+        ki = function e(r) {
           return null == r ||
             r === document.body ||
             r === document.documentElement
             ? null
-            : _i(r)
+            : Wi(r)
               ? r
               : e(r.parentElement);
         },
-        ki = function (e) {
+        Ui = function (e) {
           return { x: e.scrollLeft, y: e.scrollTop };
         },
-        Wi = function e(r) {
+        ji = function e(r) {
           return (
             !!r &&
-            ("fixed" === window.getComputedStyle(r).position ||
+            ("fixed" ===
+              r.ownerDocument.defaultView.getComputedStyle(r).position ||
               e(r.parentElement))
           );
         },
-        Ui = function (e) {
-          return { closestScrollable: Fi(e), isFixedOnPage: Wi(e) };
-        },
-        ji = function (e) {
+        Hi = function (e) {
           var r = e.ref,
             t = e.descriptor,
             n = e.env,
@@ -5664,7 +5712,7 @@
               return {
                 client: e,
                 page: ge(e, i),
-                scroll: ki(c),
+                scroll: Ui(c),
                 scrollSize: r,
                 shouldClipSubject: l,
               };
@@ -5682,7 +5730,7 @@
                   if (!l) return null;
                   var e = l.scrollSize,
                     r = l.client,
-                    t = Zt({
+                    t = Qt({
                       scrollHeight: e.scrollHeight,
                       scrollWidth: e.scrollWidth,
                       height: r.paddingBox.height,
@@ -5701,7 +5749,7 @@
                     },
                   };
                 })(),
-                s = "vertical" === o ? gr : vr;
+                s = "vertical" === o ? fr : gr;
               return {
                 descriptor: r,
                 isCombineEnabled: n,
@@ -5730,25 +5778,179 @@
             });
           return f;
         },
-        Hi = { passive: !1 },
-        qi = { passive: !0 },
-        Vi = function (e) {
-          return e.shouldPublishImmediately ? Hi : qi;
+        qi = { passive: !1 },
+        Vi = { passive: !0 },
+        zi = function (e) {
+          return e.shouldPublishImmediately ? qi : Vi;
         };
-      function zi(e) {
+      function Yi(e) {
         var r = (0, n.useContext)(e);
-        return r || Pe(!1), r;
+        return r || Se(!1), r;
       }
-      var Yi = function (e) {
+      var Ji = function (e) {
         return (e && e.env.closestScrollable) || null;
       };
-      function Ji() {}
-      var Xi = {
+      function Xi(e) {
+        var r = (0, n.useRef)(null),
+          t = Yi(ei),
+          i = Zn("droppable"),
+          o = t.registry,
+          a = t.marshal,
+          u = ni(e),
+          l = ie(
+            function () {
+              return { id: e.droppableId, type: e.type, mode: e.mode };
+            },
+            [e.droppableId, e.mode, e.type],
+          ),
+          c = (0, n.useRef)(l),
+          s = ie(
+            function () {
+              return Ie(function (e, t) {
+                r.current || Se(!1);
+                var n = { x: e, y: t };
+                a.updateDroppableScroll(l.id, n);
+              });
+            },
+            [l.id, a],
+          ),
+          d = oe(function () {
+            var e = r.current;
+            return e && e.env.closestScrollable
+              ? Ui(e.env.closestScrollable)
+              : Ge;
+          }, []),
+          p = oe(
+            function () {
+              var e = d();
+              s(e.x, e.y);
+            },
+            [d, s],
+          ),
+          f = ie(
+            function () {
+              return xe(p);
+            },
+            [p],
+          ),
+          g = oe(
+            function () {
+              var e = r.current,
+                t = Ji(e);
+              (e && t) || Se(!1),
+                e.scrollOptions.shouldPublishImmediately ? p() : f();
+            },
+            [f, p],
+          ),
+          v = oe(
+            function (e, n) {
+              r.current && Se(!1);
+              var i = u.current,
+                o = i.getDroppableRef();
+              o || Se(!1);
+              var a = (function (e) {
+                  return { closestScrollable: ki(e), isFixedOnPage: ji(e) };
+                })(o),
+                c = { ref: o, descriptor: l, env: a, scrollOptions: n };
+              r.current = c;
+              var s = Hi({
+                  ref: o,
+                  descriptor: l,
+                  env: a,
+                  windowScroll: e,
+                  direction: i.direction,
+                  isDropDisabled: i.isDropDisabled,
+                  isCombineEnabled: i.isCombineEnabled,
+                  shouldClipSubject: !i.ignoreContainerClipping,
+                }),
+                d = a.closestScrollable;
+              return (
+                d &&
+                  (d.setAttribute(Gn.contextId, t.contextId),
+                  d.addEventListener("scroll", g, zi(c.scrollOptions))),
+                s
+              );
+            },
+            [t.contextId, l, g, u],
+          ),
+          m = oe(function () {
+            var e = r.current,
+              t = Ji(e);
+            return (e && t) || Se(!1), Ui(t);
+          }, []),
+          b = oe(
+            function () {
+              var e = r.current;
+              e || Se(!1);
+              var t = Ji(e);
+              (r.current = null),
+                t &&
+                  (f.cancel(),
+                  t.removeAttribute(Gn.contextId),
+                  t.removeEventListener("scroll", g, zi(e.scrollOptions)));
+            },
+            [g, f],
+          ),
+          h = oe(function (e) {
+            var t = r.current;
+            t || Se(!1);
+            var n = Ji(t);
+            n || Se(!1), (n.scrollTop += e.y), (n.scrollLeft += e.x);
+          }, []),
+          y = ie(
+            function () {
+              return {
+                getDimensionAndWatchScroll: v,
+                getScrollWhileDragging: m,
+                dragStopped: b,
+                scroll: h,
+              };
+            },
+            [b, v, m, h],
+          ),
+          I = ie(
+            function () {
+              return { uniqueId: i, descriptor: l, callbacks: y };
+            },
+            [y, l, i],
+          );
+        Fn(
+          function () {
+            return (
+              (c.current = I.descriptor),
+              o.droppable.register(I),
+              function () {
+                r.current && b(), o.droppable.unregister(I);
+              }
+            );
+          },
+          [y, l, b, I, a, o.droppable],
+        ),
+          Fn(
+            function () {
+              r.current &&
+                a.updateDroppableIsEnabled(c.current.id, !e.isDropDisabled);
+            },
+            [e.isDropDisabled, a],
+          ),
+          Fn(
+            function () {
+              r.current &&
+                a.updateDroppableIsCombineEnabled(
+                  c.current.id,
+                  e.isCombineEnabled,
+                );
+            },
+            [e.isCombineEnabled, a],
+          );
+      }
+      function Ki() {}
+      var $i = {
           width: 0,
           height: 0,
           margin: { top: 0, right: 0, bottom: 0, left: 0 },
         },
-        Ki = function (e) {
+        Qi = function (e) {
           var r = e.isAnimatingOpenOnMount,
             t = e.placeholder,
             n = e.animate,
@@ -5757,7 +5959,7 @@
                 t = e.placeholder,
                 n = e.animate;
               return r || "close" === n
-                ? Xi
+                ? $i
                 : {
                     height: t.client.borderBox.height,
                     width: t.client.borderBox.width,
@@ -5776,10 +5978,10 @@
             flexShrink: "0",
             flexGrow: "0",
             pointerEvents: "none",
-            transition: "none" !== n ? Bt.placeholder : null,
+            transition: "none" !== n ? Rt.placeholder : null,
           };
         };
-      var $i = n.memo(function (e) {
+      var Zi = n.memo(function (e) {
           var r = (0, n.useRef)(null),
             t = oe(function () {
               r.current && (clearTimeout(r.current), (r.current = null));
@@ -5795,14 +5997,14 @@
             function () {
               return c
                 ? "open" !== i
-                  ? (t(), s(!1), Ji)
+                  ? (t(), s(!1), Ki)
                   : r.current
-                    ? Ji
+                    ? Ki
                     : ((r.current = setTimeout(function () {
                         (r.current = null), s(!1);
                       })),
                       t)
-                : Ji;
+                : Ki;
             },
             [i, c, t],
           );
@@ -5812,7 +6014,7 @@
               },
               [i, a, o],
             ),
-            p = Ki({
+            p = Qi({
               isAnimatingOpenOnMount: c,
               animate: e.animate,
               placeholder: e.placeholder,
@@ -5824,8 +6026,8 @@
             ref: e.innerRef,
           });
         }),
-        Qi = n.createContext(null);
-      var Zi = (function (e) {
+        eo = n.createContext(null);
+      var ro = (function (e) {
           function r() {
             for (
               var r, t = arguments.length, n = new Array(t), i = 0;
@@ -5868,15 +6070,15 @@
             r
           );
         })(n.PureComponent),
-        eo = 5e3,
-        ro = 4500,
-        to = function (e, r) {
-          return r ? Bt.drop(r.duration) : e ? Bt.snap : Bt.fluid;
+        to = 5e3,
+        no = 4500,
+        io = function (e, r) {
+          return r ? Rt.drop(r.duration) : e ? Rt.snap : Rt.fluid;
         },
-        no = function (e, r) {
-          return e ? (r ? Nt.drop : Nt.combining) : null;
+        oo = function (e, r) {
+          return e ? (r ? St.drop : St.combining) : null;
         };
-      function io(e) {
+      function ao(e) {
         return "DRAGGING" === e.type
           ? (function (e) {
               var r = e.dimension.client,
@@ -5890,7 +6092,7 @@
                     : "SNAP" === e.mode;
                 })(e),
                 u = Boolean(i),
-                l = u ? Gt(t, o) : Lt(t);
+                l = u ? Lt(t, o) : Tt(t);
               return {
                 position: "fixed",
                 top: r.marginBox.top,
@@ -5898,21 +6100,21 @@
                 boxSizing: "border-box",
                 width: r.borderBox.width,
                 height: r.borderBox.height,
-                transition: to(a, i),
+                transition: io(a, i),
                 transform: l,
-                opacity: no(o, u),
-                zIndex: u ? ro : eo,
+                opacity: oo(o, u),
+                zIndex: u ? no : to,
                 pointerEvents: "none",
               };
             })(e)
           : {
-              transform: Lt((r = e).offset),
+              transform: Tt((r = e).offset),
               transition: r.shouldAnimateDisplacement ? null : "none",
             };
         var r;
       }
-      function oo(e) {
-        var r = Qn("draggable"),
+      function uo(e) {
+        var r = Zn("draggable"),
           t = e.descriptor,
           i = e.registry,
           o = e.getDraggableRef,
@@ -5933,7 +6135,7 @@
             function (e) {
               var r = o();
               return (
-                r || Pe(!1),
+                r || Se(!1),
                 (function (e, r, t) {
                   void 0 === t && (t = Ge);
                   var n = window.getComputedStyle(r),
@@ -5969,7 +6171,7 @@
           ),
           p = (0, n.useRef)(d),
           f = (0, n.useRef)(!0);
-        kn(
+        Fn(
           function () {
             return (
               i.draggable.register(p.current),
@@ -5980,7 +6182,7 @@
           },
           [i.draggable],
         ),
-          kn(
+          Fn(
             function () {
               if (f.current) f.current = !1;
               else {
@@ -5991,21 +6193,21 @@
             [d, i.draggable],
           );
       }
-      function ao(e, r, t) {
-        ri();
+      function lo(e, r, t) {
+        ti();
       }
-      function uo(e) {
+      function co(e) {
         e.preventDefault();
       }
-      var lo = function (e, r) {
+      var so = function (e, r) {
           return e === r;
         },
-        co = function (e) {
+        po = function (e) {
           var r = e.combine,
             t = e.destination;
           return t ? t.droppableId : r ? r.droppableId : null;
         };
-      function so(e) {
+      function fo(e) {
         return {
           isDragging: !1,
           isDropAnimating: !1,
@@ -6017,16 +6219,16 @@
           combineWith: null,
         };
       }
-      var po = {
+      var go = {
         mapped: {
           type: "SECONDARY",
           offset: Ge,
           combineTargetFor: null,
           shouldAnimateDisplacement: !0,
-          snapshot: so(null),
+          snapshot: fo(null),
         },
       };
-      var fo = ee(
+      var vo = ee(
         function () {
           var e,
             r,
@@ -6067,7 +6269,7 @@
                   if (n.critical.draggable.id !== i.draggableId) return null;
                   var o = n.current.client.offset,
                     a = n.dimensions.draggables[i.draggableId],
-                    u = qr(n.impact),
+                    u = Hr(n.impact),
                     l =
                       (s = n.impact).at && "COMBINE" === s.at.type
                         ? s.at.combine.draggableId
@@ -6083,7 +6285,7 @@
                     f = n.dimensions.draggables[i.draggableId],
                     g = d.result,
                     v = g.mode,
-                    m = co(g),
+                    m = po(g),
                     b = (function (e) {
                       return e.combine ? e.combine.draggableId : null;
                     })(g),
@@ -6091,8 +6293,8 @@
                       duration: n.dropDuration,
                       curve: Pt,
                       moveTo: n.newHomeClientOffset,
-                      opacity: b ? Nt.drop : null,
-                      scale: b ? Ot.drop : null,
+                      opacity: b ? St.drop : null,
+                      scale: b ? Nt.drop : null,
                     };
                   return {
                     mapped: {
@@ -6114,7 +6316,7 @@
               var e = Ie(function (e, r) {
                   return { x: e, y: r };
                 }),
-                r = Ie(so),
+                r = Ie(fo),
                 t = Ie(function (e, t, n) {
                   return (
                     void 0 === t && (t = null),
@@ -6135,12 +6337,12 @@
                 i = function (r, i, o, a) {
                   var u = o.displaced.visible[r],
                     l = Boolean(a.inVirtualList && a.effected[r]),
-                    c = or(o),
+                    c = ir(o),
                     s = c && c.draggableId === r ? i : null;
                   if (!u) {
                     if (!l) return n(s);
                     if (o.displaced.invisible[r]) return null;
-                    var d = ke(a.displacedBy.point),
+                    var d = We(a.displacedBy.point),
                       p = e(d.x, d.y);
                     return t(p, s, !0);
                   }
@@ -6174,12 +6376,12 @@
               };
             })();
           return function (e, r) {
-            return n(e, r) || i(e, r) || po;
+            return n(e, r) || i(e, r) || go;
           };
         },
-        { dropAnimationFinished: St },
+        { dropAnimationFinished: Ct },
         null,
-        { context: zn, pure: !0, areStatePropsEqual: lo },
+        { context: Yn, pure: !0, areStatePropsEqual: so },
       )(function (e) {
         var r = (0, n.useRef)(null),
           t = oe(function (e) {
@@ -6188,11 +6390,11 @@
           i = oe(function () {
             return r.current;
           }, []),
-          o = zi(Zn),
+          o = Yi(ei),
           a = o.contextId,
           u = o.dragHandleUsageInstructionsId,
           l = o.registry,
-          c = zi(Qi),
+          c = Yi(eo),
           s = c.type,
           d = c.droppableId,
           p = ie(
@@ -6214,10 +6416,10 @@
           h = e.isClone,
           y = e.mapped,
           I = e.dropAnimationFinished;
-        ao(),
-          ei(),
+        lo(),
+          ri(),
           h ||
-            oo(
+            uo(
               ie(
                 function () {
                   return {
@@ -6242,7 +6444,7 @@
                     "data-rbd-drag-handle-draggable-id": g,
                     "data-rbd-drag-handle-context-id": a,
                     draggable: !1,
-                    onDragStart: uo,
+                    onDragStart: co,
                   }
                 : null;
             },
@@ -6259,7 +6461,7 @@
           ),
           w = ie(
             function () {
-              var e = io(y),
+              var e = ao(y),
                 r = "DRAGGING" === y.type && y.dropping ? D : null;
               return {
                 innerRef: t,
@@ -6286,17 +6488,17 @@
           );
         return f(w, y.snapshot, E);
       });
-      function go(e) {
-        return zi(Qi).isUsingCloneFor !== e.draggableId || e.isClone
-          ? n.createElement(fo, e)
+      function mo(e) {
+        return Yi(eo).isUsingCloneFor !== e.draggableId || e.isClone
+          ? n.createElement(vo, e)
           : null;
       }
-      function vo(e) {
+      function bo(e) {
         var r = "boolean" != typeof e.isDragDisabled || !e.isDragDisabled,
           t = Boolean(e.disableInteractiveElementBlocking),
           i = Boolean(e.shouldRespectForcePress);
         return n.createElement(
-          go,
+          mo,
           (0, o.A)({}, e, {
             isClone: !1,
             isEnabled: r,
@@ -6305,13 +6507,13 @@
           }),
         );
       }
-      var mo = function (e, r) {
+      var ho = function (e, r) {
           return e === r.droppable.type;
         },
-        bo = function (e, r) {
+        yo = function (e, r) {
           return r.draggables[e.draggable.id];
         };
-      var ho = {
+      var Io = {
           mode: "standard",
           type: "DEFAULT",
           direction: "vertical",
@@ -6320,10 +6522,10 @@
           ignoreContainerClipping: !1,
           renderClone: null,
           getContainerForClone: function () {
-            return document.body || Pe(!1), document.body;
+            return document.body || Se(!1), document.body;
           },
         },
-        yo = ee(
+        xo = ee(
           function () {
             var e = {
                 placeholder: null,
@@ -6383,21 +6585,21 @@
                 l = i.renderClone;
               if (t.isDragging) {
                 var c = t.critical;
-                if (!mo(a, c)) return r;
-                var s = bo(c, t.dimensions),
-                  d = qr(t.impact) === o;
+                if (!ho(a, c)) return r;
+                var s = yo(c, t.dimensions),
+                  d = Hr(t.impact) === o;
                 return n(o, u, d, d, s, l);
               }
               if ("DROP_ANIMATING" === t.phase) {
                 var p = t.completed;
-                if (!mo(a, p.critical)) return r;
-                var f = bo(p.critical, t.dimensions);
-                return n(o, u, co(p.result) === o, qr(p.impact) === o, f, l);
+                if (!ho(a, p.critical)) return r;
+                var f = yo(p.critical, t.dimensions);
+                return n(o, u, po(p.result) === o, Hr(p.impact) === o, f, l);
               }
               if ("IDLE" === t.phase && t.completed && !t.shouldFlush) {
                 var g = t.completed;
-                if (!mo(a, g.critical)) return r;
-                var v = qr(g.impact) === o,
+                if (!ho(a, g.critical)) return r;
+                var v = Hr(g.impact) === o,
                   m = Boolean(g.impact.at && "COMBINE" === g.impact.at.type),
                   b = g.critical.droppable.id === o;
                 return v ? (m ? e : r) : b ? e : r;
@@ -6411,10 +6613,10 @@
             },
           },
           null,
-          { context: zn, pure: !0, areStatePropsEqual: lo },
+          { context: Yn, pure: !0, areStatePropsEqual: so },
         )(function (e) {
-          var r = (0, n.useContext)(Zn);
-          r || Pe(!1);
+          var r = (0, n.useContext)(ei);
+          r || Se(!1);
           var t = r.contextId,
             i = r.isMovementAllowed,
             o = (0, n.useRef)(null),
@@ -6444,165 +6646,22 @@
               oe(function (e) {
                 a.current = e;
               }, []));
-          ri();
+          ti();
           var D = oe(
             function () {
-              i() && b({ maxScroll: rn() });
+              var e;
+              i() &&
+                b({
+                  maxScroll: en(
+                    (null == (e = o.current)
+                      ? void 0
+                      : e.ownerDocument.defaultView) || window,
+                  ),
+                });
             },
             [i, b],
           );
-          !(function (e) {
-            var r = (0, n.useRef)(null),
-              t = zi(Zn),
-              i = Qn("droppable"),
-              o = t.registry,
-              a = t.marshal,
-              u = ti(e),
-              l = ie(
-                function () {
-                  return { id: e.droppableId, type: e.type, mode: e.mode };
-                },
-                [e.droppableId, e.mode, e.type],
-              ),
-              c = (0, n.useRef)(l),
-              s = ie(
-                function () {
-                  return Ie(function (e, t) {
-                    r.current || Pe(!1);
-                    var n = { x: e, y: t };
-                    a.updateDroppableScroll(l.id, n);
-                  });
-                },
-                [l.id, a],
-              ),
-              d = oe(function () {
-                var e = r.current;
-                return e && e.env.closestScrollable
-                  ? ki(e.env.closestScrollable)
-                  : Ge;
-              }, []),
-              p = oe(
-                function () {
-                  var e = d();
-                  s(e.x, e.y);
-                },
-                [d, s],
-              ),
-              f = ie(
-                function () {
-                  return xe(p);
-                },
-                [p],
-              ),
-              g = oe(
-                function () {
-                  var e = r.current,
-                    t = Yi(e);
-                  (e && t) || Pe(!1),
-                    e.scrollOptions.shouldPublishImmediately ? p() : f();
-                },
-                [f, p],
-              ),
-              v = oe(
-                function (e, n) {
-                  r.current && Pe(!1);
-                  var i = u.current,
-                    o = i.getDroppableRef();
-                  o || Pe(!1);
-                  var a = Ui(o),
-                    c = { ref: o, descriptor: l, env: a, scrollOptions: n };
-                  r.current = c;
-                  var s = ji({
-                      ref: o,
-                      descriptor: l,
-                      env: a,
-                      windowScroll: e,
-                      direction: i.direction,
-                      isDropDisabled: i.isDropDisabled,
-                      isCombineEnabled: i.isCombineEnabled,
-                      shouldClipSubject: !i.ignoreContainerClipping,
-                    }),
-                    d = a.closestScrollable;
-                  return (
-                    d &&
-                      (d.setAttribute(Mn.contextId, t.contextId),
-                      d.addEventListener("scroll", g, Vi(c.scrollOptions))),
-                    s
-                  );
-                },
-                [t.contextId, l, g, u],
-              ),
-              m = oe(function () {
-                var e = r.current,
-                  t = Yi(e);
-                return (e && t) || Pe(!1), ki(t);
-              }, []),
-              b = oe(
-                function () {
-                  var e = r.current;
-                  e || Pe(!1);
-                  var t = Yi(e);
-                  (r.current = null),
-                    t &&
-                      (f.cancel(),
-                      t.removeAttribute(Mn.contextId),
-                      t.removeEventListener("scroll", g, Vi(e.scrollOptions)));
-                },
-                [g, f],
-              ),
-              h = oe(function (e) {
-                var t = r.current;
-                t || Pe(!1);
-                var n = Yi(t);
-                n || Pe(!1), (n.scrollTop += e.y), (n.scrollLeft += e.x);
-              }, []),
-              y = ie(
-                function () {
-                  return {
-                    getDimensionAndWatchScroll: v,
-                    getScrollWhileDragging: m,
-                    dragStopped: b,
-                    scroll: h,
-                  };
-                },
-                [b, v, m, h],
-              ),
-              I = ie(
-                function () {
-                  return { uniqueId: i, descriptor: l, callbacks: y };
-                },
-                [y, l, i],
-              );
-            kn(
-              function () {
-                return (
-                  (c.current = I.descriptor),
-                  o.droppable.register(I),
-                  function () {
-                    r.current && b(), o.droppable.unregister(I);
-                  }
-                );
-              },
-              [y, l, b, I, a, o.droppable],
-            ),
-              kn(
-                function () {
-                  r.current &&
-                    a.updateDroppableIsEnabled(c.current.id, !e.isDropDisabled);
-                },
-                [e.isDropDisabled, a],
-              ),
-              kn(
-                function () {
-                  r.current &&
-                    a.updateDroppableIsCombineEnabled(
-                      c.current.id,
-                      e.isCombineEnabled,
-                    );
-                },
-                [e.isCombineEnabled, a],
-              );
-          })({
+          Xi({
             droppableId: l,
             type: c,
             mode: s,
@@ -6613,13 +6672,13 @@
             getDroppableRef: y,
           });
           var w = n.createElement(
-              Zi,
+              ro,
               { on: e.placeholder, shouldAnimate: e.shouldAnimatePlaceholder },
               function (e) {
                 var r = e.onClose,
                   i = e.data,
                   o = e.animate;
-                return n.createElement($i, {
+                return n.createElement(Zi, {
                   placeholder: i,
                   onClose: r,
                   innerRef: x,
@@ -6650,7 +6709,7 @@
               [l, A, c],
             );
           return n.createElement(
-            Qi.Provider,
+            eo.Provider,
             { value: C },
             u(E, v),
             (function () {
@@ -6658,7 +6717,7 @@
               var e = m.dragging,
                 r = m.render,
                 t = n.createElement(
-                  go,
+                  mo,
                   {
                     draggableId: e.draggableId,
                     index: e.source.index,
@@ -6675,7 +6734,7 @@
             })(),
           );
         });
-      yo.defaultProps = ho;
+      xo.defaultProps = Io;
     },
     59671: (e, r) => {
       var t = 60103,

@@ -208,6 +208,7 @@
           include_reviews: !0,
           include_basic_info: !0,
           include_supported_languages: !0,
+          include_full_description: !0,
           include_links: !0,
         };
         async QueueAppRequest(_, _) {
@@ -240,6 +241,7 @@
             _.include_reviews,
             _.include_basic_info,
             _.include_supported_languages,
+            _.include_full_description,
             _.include_links,
           ];
           for (const _ of _) if (!0 !== _ && void 0 !== _) return !1;

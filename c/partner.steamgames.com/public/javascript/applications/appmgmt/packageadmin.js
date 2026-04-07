@@ -362,10 +362,13 @@
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        const { underline: _ = "auto", ..._ } = _;
-        return (0, _.jsx)("a", {
+        const { underline: _ = "auto", ..._ } = _,
+          _ = _._.IN_GAMEPADUI ? _._ : "a";
+        return (0, _.jsx)(_, {
           ...(0, _._)(
             {
               ..._,
@@ -383,8 +386,7 @@
           className: (_) => _[`Underline-${_}`],
         },
       ];
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { nPackageID: _ } = _;
         return (0, _.jsxs)(_.Fragment, {

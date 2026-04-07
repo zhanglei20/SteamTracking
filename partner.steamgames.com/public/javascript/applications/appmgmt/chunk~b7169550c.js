@@ -620,9 +620,11 @@
         return (
           e &&
             (function (e, t, n) {
-              n
-                ? e.push((0, a.b0)(t, "header"), (0, a.b0)(t, "main_capsule"))
-                : e.push((0, a.b0)(t, "main_capsule"), (0, a.b0)(t, "header"));
+              const r = (0, a.b0)(t, "header_2x") ?? (0, a.b0)(t, "header"),
+                s =
+                  (0, a.b0)(t, "main_capsule_2x") ??
+                  (0, a.b0)(t, "main_capsule");
+              n ? e.push(r, s) : e.push(s, r);
             })(n, e, t),
           n.filter((e) => !!e)
         );
@@ -733,7 +735,7 @@
     },
     94191: (e, t, n) => {
       "use strict";
-      n.d(t, { V: () => S });
+      n.d(t, { V: () => x });
       var a = n(7850),
         r = n(8527),
         s = n(47911),
@@ -777,12 +779,12 @@
         I = n(12155),
         b = n(52038),
         v = n(94011);
-      function S(e) {
+      function x(e) {
         const { appids: t, hide_status_banners: n, show_early_access: i } = e,
           { data: c } = (0, m.$Y)(),
           { data: l } = (0, h.F0)(),
           _ = t.length > 0 && t.every((e) => c && c.has(e)),
-          S = t.length > 0 && t.every((e) => l && l.has(e)),
+          x = t.length > 0 && t.every((e) => l && l.has(e)),
           A = (function (e) {
             const { data: t } = g(),
               [n, a] = (0, p.useState)(!1),
@@ -811,7 +813,7 @@
             );
           })(t),
           C = _ && !n,
-          L = S && !n,
+          L = x && !n,
           E = !n && i;
         return (0, a.jsxs)("div", {
           className: (0, b.A)(y().CapsuleDecorators, "CapsuleDecorators"),
@@ -836,12 +838,12 @@
                   s.Z.Localize("#Sale_OnWishlist"),
                 ],
               }),
-            E && !C && !L && (0, a.jsx)(x, { appids: t }),
+            E && !C && !L && (0, a.jsx)(S, { appids: t }),
             A && (0, a.jsx)(v.K, {}),
           ],
         });
       }
-      function x(e) {
+      function S(e) {
         const { appids: t } = e,
           n = (function (e) {
             const [t, n] = (0, p.useState)(!1),
@@ -1101,7 +1103,7 @@
     },
     27144: (e, t, n) => {
       "use strict";
-      n.d(t, { B3: () => S, CF: () => x, KM: () => y, KT: () => v });
+      n.d(t, { B3: () => x, CF: () => S, KM: () => y, KT: () => v });
       var a = n(41735),
         r = n.n(a),
         s = n(58632),
@@ -1190,7 +1192,7 @@
         });
         return [t, n];
       }
-      function S(e) {
+      function x(e) {
         const t = (0, l.jE)(),
           { data: n, isLoading: a } = (0, c.I)({
             queryKey: [b, e],
@@ -1217,7 +1219,7 @@
           }, [n]);
         return a ? null : r;
       }
-      function x(e) {
+      function S(e) {
         return f.L.getQueryData([b, e]);
       }
     },

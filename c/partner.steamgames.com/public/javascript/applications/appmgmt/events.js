@@ -201,6 +201,7 @@
                                 (_.clanSteamID = new _._(_._.steamid)),
                                 (_.postTime = Date.now() / 1e3),
                                 (_.startTime = Date.now() / 1e3),
+                                (_.createTime = Date.now() / 1e3),
                                 (_.type = 12);
                               for (let _ = 0; _ < 31; _++)
                                 _.name.set(_, _(_, _)),

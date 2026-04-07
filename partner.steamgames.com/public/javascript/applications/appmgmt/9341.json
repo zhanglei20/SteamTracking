@@ -39,7 +39,7 @@
     "PricingDashboard_Select_Price_button_ttip": "Buka dialog yang berisi serangkaian tingkatan harga umum untuk memungkinkan pengaturan harga di semua mata uang di bawah ini.",
     "ConversionMethod_Nuanced": "Konversi multivariabel",
     "ConversionMethod_PPP": "Konversi berdasarkan daya beli",
-    "ConversionMethod_FX": "Hanya nilai konversi",
+    "ConversionMethod_FX": "Konversi nilai tukar",
     "PricingExplorer_Time_Title": "Terakhir diperbarui:",
     "PricingExplorer_Time_Disc": "Metode-metode konversi dihasilkan menggunakan data publik per Januari 2026",
     "Tour_ConversionMethod_Title": "Metode konversi baru tersedia",

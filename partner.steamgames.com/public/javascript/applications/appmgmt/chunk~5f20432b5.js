@@ -6,7 +6,7 @@
   [6129],
   {
     72839: (e, t, s) => {
-      s.d(t, { Bn: () => o, hS: () => r, rV: () => n });
+      s.d(t, { Bn: () => l, hS: () => r, rV: () => n });
       var a = s(15161),
         i = s(78327);
       s(94601);
@@ -21,7 +21,7 @@
           t
         );
       }
-      function o(e, t) {
+      function l(e, t) {
         e.Body().set_data_request(a.gn.fromObject(t));
       }
     },
@@ -31,8 +31,8 @@
         i = s(14947),
         n = s(56545),
         r = s(96059),
-        o = s(59411),
-        l = s(15161),
+        l = s(59411),
+        o = s(15161),
         u = s(81393),
         m = s(68797),
         c = s(78327),
@@ -202,6 +202,7 @@
           include_reviews: !0,
           include_basic_info: !0,
           include_supported_languages: !0,
+          include_full_description: !0,
           include_links: !0,
         };
         async QueueAppRequest(e, t) {
@@ -234,6 +235,7 @@
             e.include_reviews,
             e.include_basic_info,
             e.include_supported_languages,
+            e.include_full_description,
             e.include_links,
           ];
           for (const e of t) if (!0 !== e && void 0 !== e) return !1;
@@ -368,7 +370,7 @@
             i = Array.from(this.m_setPendingTagInfo),
             n = Array.from(this.m_setPendingCreatorInfo),
             r = Array.from(this.m_setPendingHubCategoryInfo),
-            o = this.m_setPendingDataRequest;
+            l = this.m_setPendingDataRequest;
           (this.m_PendingInfoPromise = void 0),
             (this.m_PendingInfoResolve = void 0),
             this.m_setPendingAppInfo.clear(),
@@ -379,7 +381,7 @@
             this.m_setPendingHubCategoryInfo.clear(),
             (this.m_setPendingDataRequest = {}),
             (this.m_PendingTimer = void 0),
-            this.HintLoadStoreItems(t, s, a, i, n, r, o).then((t) => e(t));
+            this.HintLoadStoreItems(t, s, a, i, n, r, l).then((t) => e(t));
         }
         async HintLoadStoreApps(e, t) {
           return this.HintLoadStoreItems(e, null, null, null, null, null, t);
@@ -419,15 +421,15 @@
             : null;
         }
         async HintLoadStoreItems(e, t, s, a, i, n, r) {
-          let o = null;
-          const u = new Promise((e) => (o = e));
+          let l = null;
+          const u = new Promise((e) => (l = e));
           let m = [],
             c = [];
           (e || []).forEach((e) => {
             const t = this.GetPreviousSupersetLoadPromise(e, 0, r);
             if (t) c.push(t);
             else {
-              m.push(l.O4.fromObject({ appid: e }));
+              m.push(o.O4.fromObject({ appid: e }));
               let t = p(this.GetStoreItemDataRequest(e, 0), r);
               const s = this.m_mapAppsInFlight.get(e);
               (t = p(s?.dataRequest, t)),
@@ -442,7 +444,7 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 1, r);
               if (t) c.push(t);
               else {
-                m.push(l.O4.fromObject({ packageid: e }));
+                m.push(o.O4.fromObject({ packageid: e }));
                 let t = p(this.GetStoreItemDataRequest(e, 1), r);
                 const s = this.m_mapPackageInFlight.get(e);
                 (t = p(s?.dataRequest, t)),
@@ -457,7 +459,7 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 2, r);
               if (t) c.push(t);
               else {
-                m.push(l.O4.fromObject({ bundleid: e }));
+                m.push(o.O4.fromObject({ bundleid: e }));
                 let t = p(this.GetStoreItemDataRequest(e, 2), r);
                 const s = this.m_mapBundleInFlight.get(e);
                 (t = p(s?.dataRequest, t)),
@@ -472,7 +474,7 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 4, r);
               if (t) c.push(t);
               else {
-                m.push(l.O4.fromObject({ tagid: e }));
+                m.push(o.O4.fromObject({ tagid: e }));
                 let t = p(this.GetStoreItemDataRequest(e, 4), r);
                 const s = this.m_mapTagsInFlight.get(e);
                 (t = p(s?.dataRequest, t)),
@@ -487,7 +489,7 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 5, r);
               if (t) c.push(t);
               else {
-                m.push(l.O4.fromObject({ creatorid: e }));
+                m.push(o.O4.fromObject({ creatorid: e }));
                 let t = p(this.GetStoreItemDataRequest(e, 5), r);
                 const s = this.m_mapCreatorsInFlight.get(e);
                 (t = p(s?.dataRequest, t)),
@@ -502,7 +504,7 @@
               const t = this.GetPreviousSupersetLoadPromise(e, 6, r);
               if (t) c.push(t);
               else {
-                m.push(l.O4.fromObject({ hubcategoryid: e }));
+                m.push(o.O4.fromObject({ hubcategoryid: e }));
                 let t = p(this.GetStoreItemDataRequest(e, 6), r);
                 const s = this.m_mapHubCategoriesInFlight.get(e);
                 (t = p(s?.dataRequest, t)),
@@ -517,7 +519,7 @@
           if (
             (m.length > 0 &&
               (d = await this.InternalHandleLoadStoreItems(m, r)),
-            o(d),
+            l(d),
             c.length > 0)
           ) {
             const e = await Promise.all(c);
@@ -568,11 +570,11 @@
                 n = t.packageid() ?? 0;
               if (i != n) return i - n;
               let r = e.bundleid() ?? 0,
-                o = t.bundleid() ?? 0;
-              if (r != o) return r - o;
-              let l = e.tagid() ?? 0,
+                l = t.bundleid() ?? 0;
+              if (r != l) return r - l;
+              let o = e.tagid() ?? 0,
                 u = t.tagid() ?? 0;
-              if (l != u) return l - u;
+              if (o != u) return o - u;
               let m = e.creatorid() ?? 0,
                 c = t.creatorid() ?? 0;
               if (m != c) return m - c;
@@ -612,19 +614,19 @@
             for (; e.length > 0; ) {
               const s = e.splice(0, this.k_nMaxBatchSize);
               if ((a.push(s), this.m_bUsePartnerAPI)) {
-                const e = n.w.Init(o.St);
+                const e = n.w.Init(l.St);
                 e.Body().set_include_unpublished(!1);
                 const a = e.Body().getitems_request(!0);
                 a.set_context((0, d.hS)(this.m_bUsePartnerAPI)),
-                  a.set_data_request(l.gn.fromObject(t)),
+                  a.set_data_request(o.gn.fromObject(t)),
                   a.set_ids(s),
-                  r.push(o.BT.GetItems(this.GetServiceTransport(), e));
+                  r.push(l.BT.GetItems(this.GetServiceTransport(), e));
               } else {
-                const e = n.w.Init(l.eE);
+                const e = n.w.Init(o.eE);
                 (0, d.rV)(e, this.m_bUsePartnerAPI),
                   (0, d.Bn)(e, t),
                   e.Body().set_ids(s),
-                  r.push(l.$4.GetItems(this.GetServiceTransport(), e));
+                  r.push(o.$4.GetItems(this.GetServiceTransport(), e));
               }
             }
             (await Promise.all(r)).forEach((n, r) => {
@@ -635,10 +637,10 @@
                     .forEach((s) => {
                       const a = s.id(),
                         r = s.item_type();
-                      let o =
+                      let l =
                           this.m_bReturnUnavailableItems && 15 == s.success(),
-                        l = 1 == s.success() && !this.BIsStoreItemMissing(a, r);
-                      if (o || l) this.ReadItem(s, t);
+                        o = 1 == s.success() && !this.BIsStoreItemMissing(a, r);
+                      if (l || o) this.ReadItem(s, t);
                       else {
                         switch (
                           ("dev" == c.TS.WEB_UNIVERSE &&

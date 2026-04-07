@@ -19311,11 +19311,6 @@
           children: [
             (0, _._)("#DiscountDashboard_ImportExport_GeneralInstructions"),
             (0, _.jsx)("br", {}),
-            (0, _.jsx)("a", {
-              href: _._.PARTNER_BASE_URL + "doc/store/discounting/csv",
-              target: "_blank",
-              children: (0, _._)("#PricingDashboard_ImportExport_DocLink"),
-            }),
             (0, _.jsx)("br", {}),
             (0, _.jsx)("br", {}),
             (0, _.jsx)("h3", {

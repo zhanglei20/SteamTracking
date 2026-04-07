@@ -1378,9 +1378,6 @@
         var _ = _(_, _);
         return -1 !== _ ? _[_] : void 0;
       }
-      function _(_) {
-        return Array.prototype.slice.call(_);
-      }
       var _ = _(function (_) {
           return _.reduce(function (_, _) {
             return (_[_.descriptor._] = _), _;
@@ -3533,10 +3530,10 @@
             };
           };
         },
-        _ = function () {
+        _ = function (_) {
           return {
-            _: window.pageXOffset,
-            _: window.pageYOffset,
+            _: _.pageXOffset,
+            _: _.pageYOffset,
           };
         };
       function _(_) {
@@ -4090,12 +4087,12 @@
             _: Math.max(0, _._),
           };
         },
-        _ = function () {
-          var _ = document.documentElement;
+        _ = function (_) {
+          var _ = _.document.documentElement;
           return _ || _(!1), _;
         },
-        _ = function () {
-          var _ = _();
+        _ = function (_) {
+          var _ = _(_);
           return _({
             scrollHeight: _.scrollHeight,
             scrollWidth: _.scrollWidth,
@@ -4104,26 +4101,20 @@
           });
         },
         _ = function (_) {
-          var _ = _.critical,
+          var _ = _.windowToUse,
+            _ = _.critical,
             _ = _.scrollOptions,
             _ = _.registry;
           _();
-          var _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _,
-            _ =
-              ((_ = _()),
-              (_ = _()),
-              (_ = _._),
-              (_ = _._),
-              (_ = _()),
-              (_ = _.clientWidth),
-              (_ = _.clientHeight),
-              {
+          var _ = (function (_) {
+              var _ = _(_),
+                _ = _(_),
+                _ = _._,
+                _ = _._,
+                _ = _(_),
+                _ = _.clientWidth,
+                _ = _.clientHeight;
+              return {
                 frame: _({
                   top: _,
                   left: _,
@@ -4139,7 +4130,8 @@
                     displacement: _,
                   },
                 },
-              }),
+              };
+            })(_),
             _ = _.scroll.current,
             _ = _.droppable,
             _ = _.droppable.getAllByType(_.type).map(function (_) {
@@ -4171,7 +4163,7 @@
       }
       var _,
         _,
-        _ = function (_, _) {
+        _ = function (_, _, _) {
           var _ = null,
             _ = (function (_) {
               var _ = _.registry,
@@ -4263,7 +4255,7 @@
               updateDroppableIsEnabled: function (_, _) {
                 _.droppable.exists(_) || _(!1),
                   _ &&
-                    _.updateDroppableIsEnabled({
+                    __webpack_require__.updateDroppableIsEnabled({
                       _: _,
                       isEnabled: _,
                     });
@@ -4271,7 +4263,7 @@
               updateDroppableIsCombineEnabled: function (_, _) {
                 _ &&
                   (_.droppable.exists(_) || _(!1),
-                  _.updateDroppableIsCombineEnabled({
+                  __webpack_require__.updateDroppableIsCombineEnabled({
                     _: _,
                     isCombineEnabled: _,
                   }));
@@ -4282,7 +4274,7 @@
               updateDroppableScroll: function (_, _) {
                 _ &&
                   (_.droppable.exists(_) || _(!1),
-                  _.updateDroppableScroll({
+                  __webpack_require__.updateDroppableScroll({
                     _: _,
                     newScroll: _,
                   }));
@@ -4302,6 +4294,7 @@
                     unsubscribe: _,
                   }),
                   _({
+                    windowToUse: _,
                     critical: _,
                     registry: _,
                     scrollOptions: _.scrollOptions,
@@ -4315,7 +4308,7 @@
                   _.droppable.getAllByType(_.type).forEach(function (_) {
                     return _.callbacks.dragStopped();
                   }),
-                    __webpack_require__.unsubscribe(),
+                    _.unsubscribe(),
                     (_ = null);
                 }
               },
@@ -4807,7 +4800,7 @@
                 },
               },
               {
-                selector: "body",
+                selector: "body, :host",
                 styles: {
                   dragging:
                     "\n        cursor: grabbing;\n        cursor: -webkit-grabbing;\n        user-select: none;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        overflow-anchor: none;\n      ",
@@ -4828,25 +4821,35 @@
           void 0 !== window.document.createElement
             ? _.useLayoutEffect
             : _.useEffect,
-        _ = function () {
-          var _ = document.querySelector("head");
+        _ = function (_) {
+          var _ = _ || document.querySelector("head");
           return _ || _(!1), _;
         },
         _ = function (_) {
           var _ = document.createElement("style");
           return _ && _.setAttribute("nonce", _), (_.type = "text/css"), _;
         };
+      function _(_) {
+        return (_.composedPath && _.composedPath()[0]) || _.target;
+      }
+      function _(_, _, _) {
+        var _,
+          _ = _ && _.getRootNode(),
+          _ = _ && _.querySelectorAll ? _ : document,
+          _ = _(
+            ((_ = _.querySelectorAll(_)), Array.prototype.slice.call(_)),
+            _,
+          );
+        return !_ && _.host ? _(_.host, _, _) : _;
+      }
       var _ = function (_) {
         return _ && _.ownerDocument ? _.ownerDocument.defaultView : window;
       };
       function _(_) {
         return _ instanceof _(_).HTMLElement;
       }
-      function _(_, _) {
-        var _ = "[" + _.contextId + '="' + _ + '"]',
-          _ = _(document.querySelectorAll(_));
-        if (!_.length) return null;
-        var _ = _(_, function (_) {
+      function _(_, _, _) {
+        var _ = _(_, "[" + _.contextId + '="' + _ + '"]', function (_) {
           return _.getAttribute(_.draggableId) === _;
         });
         return _ && _(_) ? _ : null;
@@ -5189,7 +5192,7 @@
         return "true" === _ || "" === _ || (_ !== _ && _(_, _.parentElement));
       }
       function _(_, _) {
-        var _ = _.target;
+        var _ = _(_);
         return !!_(_) && _(_, _);
       }
       var _ = function (_) {
@@ -5210,9 +5213,18 @@
         return _.closest ? _.closest(_) : _(_, _);
       }
       function _(_, _) {
-        var _,
-          _ = _.target;
-        if (!((_ = _) instanceof _(_).Element)) return null;
+        if (!_ || _ === document || _ === window) return null;
+        var _ = _(_, _);
+        return _ || _(_.getRootNode().host, _);
+      }
+      function _(_, _) {
+        var _ = _(_);
+        if (
+          !(function (_) {
+            return _ instanceof _(_).Element;
+          })(_)
+        )
+          return null;
         var _ = (function (_) {
             return "[" + _.contextId + '="' + _ + '"]';
           })(_),
@@ -5257,14 +5269,21 @@
           })
         )
           return null;
-        var _ = _.draggable.getById(_),
-          _ = (function (_, _) {
-            var _ = "[" + _.contextId + '="' + _ + '"]',
-              _ = _(_(document.querySelectorAll(_)), function (_) {
-                return _.getAttribute(_._) === _;
-              });
+        var _,
+          _,
+          _ = _.draggable.getById(_),
+          _ = (function (_, _, _) {
+            var _ = _(_, "[" + _.contextId + '="' + _ + '"]', function (_) {
+              return _.getAttribute(_._) === _;
+            });
             return _ && _(_) ? _ : null;
-          })(_, _.descriptor._);
+          })(
+            _,
+            _.descriptor._,
+            ((_ = (_ = _) && _.composedPath && _.composedPath()[0]) &&
+              _.getRootNode()) ||
+              document,
+          );
         if (!_) return null;
         if (_ && !_.options.canDragInteractiveElements && _(_, _)) return null;
         var _ = _.claim(_ || _),
@@ -5468,12 +5487,12 @@
             ),
             _ = _(
               function () {
-                _.current = _(window, [_, _], {
+                _.current = _(_.getWindow(), [_, _], {
                   passive: !1,
                   capture: !0,
                 });
               },
-              [_, _],
+              [_, _, _],
             ),
             _ = _(
               function () {
@@ -5506,12 +5525,12 @@
                     _.current = _;
                   },
                 });
-                _.current = _(window, _, {
+                _.current = _(_.getWindow(), _, {
                   capture: !0,
                   passive: !1,
                 });
               },
-              [_, _],
+              [_, _, _],
             ),
             _ = _(
               function (_, _) {
@@ -5555,7 +5574,7 @@
                           var _ = !0,
                             _ = _.snapLift();
                           _.current(),
-                            (_.current = _(window, _(_, _), {
+                            (_.current = _(_.getWindow(), _(_, _), {
                               capture: !0,
                               passive: !1,
                             }));
@@ -5572,12 +5591,12 @@
             ),
             _ = _(
               function () {
-                _.current = _(window, [_], {
+                _.current = _(_.getWindow(), [_], {
                   passive: !1,
                   capture: !0,
                 });
               },
-              [_],
+              [_, _],
             );
           _(
             function () {
@@ -5628,12 +5647,12 @@
             ),
             _ = _(
               function () {
-                _.current = _(window, [_], {
+                _.current = _(_.getWindow(), [_], {
                   capture: !0,
                   passive: !1,
                 });
               },
-              [_],
+              [_, _],
             ),
             _ = _(
               function () {
@@ -5670,7 +5689,7 @@
                     getPhase: _,
                   },
                   _ = _(
-                    window,
+                    _.getWindow(),
                     (function (_) {
                       var _ = _.cancel,
                         _ = _.completed,
@@ -5742,7 +5761,7 @@
                     _,
                   ),
                   _ = _(
-                    window,
+                    _.getWindow(),
                     (function (_) {
                       var _ = _.cancel,
                         _ = _.getPhase;
@@ -5781,7 +5800,7 @@
                   _(), _();
                 };
               },
-              [_, _, _],
+              [_, _, _, _],
             ),
             _ = _(
               function () {
@@ -5824,18 +5843,21 @@
             },
             [_, _, _],
           ),
-            _(function () {
-              return _(window, [
-                {
-                  eventName: "touchmove",
-                  _: function () {},
-                  options: {
-                    capture: !1,
-                    passive: !1,
+            _(
+              function () {
+                return _(_.getWindow(), [
+                  {
+                    eventName: "touchmove",
+                    _: function () {},
+                    options: {
+                      capture: !1,
+                      passive: !1,
+                    },
                   },
-                },
-              ]);
-            }, []);
+                ]);
+              },
+              [_],
+            );
         },
       ];
       function _(_) {
@@ -5844,6 +5866,7 @@
           _ = _.registry,
           _ = _.customSensors,
           _ = _.enableDefaultSensors,
+          _ = _.windowToUse,
           _ = [].concat(_ ? _ : [], _ || []),
           _ = (0, _.useState)(function () {
             return (function () {
@@ -5949,6 +5972,12 @@
           _ = _(_.isClaimed, [_]),
           _ = _(
             function () {
+              return _;
+            },
+            [_],
+          ),
+          _ = _(
+            function () {
               return {
                 canGetLock: _,
                 tryGetLock: _,
@@ -5956,9 +5985,10 @@
                 findOptionsForDraggable: _,
                 tryReleaseLock: _,
                 isLockClaimed: _,
+                getWindow: _,
               };
             },
-            [_, _, _, _, _, _],
+            [_, _, _, _, _, _, _],
           );
         _();
         for (var _ = 0; _ < _.length; _++) _[_](_);
@@ -5981,7 +6011,14 @@
           _ = _.sensors,
           _ = _.nonce,
           _ = _.dragHandleUsageInstructions,
-          _ = (0, _.useRef)(null);
+          _ = (0, _.useRef)(null),
+          [_, _] = _.useState(),
+          _ = _.useMemo(
+            function () {
+              return _ ? _.ownerDocument.defaultView : window;
+            },
+            [_],
+          );
         _();
         var _ = _(_),
           _ = _(
@@ -6070,7 +6107,7 @@
             contextId: _,
             text: _,
           }),
-          _ = (function (_, _) {
+          _ = (function (_, _, _) {
             var _ = _(
                 function () {
                   return _(_);
@@ -6095,25 +6132,26 @@
                 (_.current || _.current) && _(!1);
                 var _ = _(_),
                   _ = _(_);
-                return (
-                  (_.current = _),
+                (_.current = _),
                   (_.current = _),
                   _.setAttribute(_ + "-always", _),
-                  _.setAttribute(_ + "-dynamic", _),
-                  _().appendChild(_),
-                  _().appendChild(_),
+                  _.setAttribute(_ + "-dynamic", _);
+                var _ = _(_);
+                return (
+                  _.appendChild(_),
+                  _.appendChild(_),
                   _(_.always),
                   _(_.resting),
                   function () {
                     var _ = function (_) {
                       var _ = _.current;
-                      _ || _(!1), _().removeChild(_), (_.current = null);
+                      _ || _(!1), _.removeChild(_), (_.current = null);
                     };
                     _(_), _(_);
                   }
                 );
               },
-              [_, _, _, _.always, _.resting, _],
+              [_, _, _, _.always, _.resting, _, _],
             );
             var _ = _(
                 function () {
@@ -6143,7 +6181,7 @@
               },
               [_, _, _],
             );
-          })(_, _),
+          })(_, _, _.stylesInsertionPoint),
           _ = _(function (_) {
             _(_).dispatch(_);
           }, []),
@@ -6178,9 +6216,9 @@
           })(),
           _ = _(
             function () {
-              return _(_, _);
+              return _(_, _, _);
             },
-            [_, _],
+            [_, _, _],
           ),
           _ = _(
             function () {
@@ -6285,7 +6323,7 @@
             },
             [_, _, _, _, _, _],
           );
-        _.current = _;
+        _ && (_.current = _);
         var _ = _(function () {
             var _ = _(_);
             "IDLE" !== _.getState().phase && _.dispatch(_());
@@ -6332,6 +6370,7 @@
             registry: _,
             customSensors: _,
             enableDefaultSensors: !1 !== _.enableDefaultSensors,
+            windowToUse: _,
           }),
           (0, _.useEffect)(
             function () {
@@ -6344,14 +6383,18 @@
             {
               value: _,
             },
-            _.createElement(
-              _,
-              {
-                context: _,
-                store: _,
-              },
-              _.children,
-            ),
+            _.createElement("div", {
+              ref: _,
+            }),
+            _ &&
+              _.createElement(
+                _,
+                {
+                  context: _,
+                  store: _,
+                },
+                _.children,
+              ),
           )
         );
       }
@@ -6376,6 +6419,7 @@
               onDragStart: _.onDragStart,
               onDragUpdate: _.onDragUpdate,
               onDragEnd: _.onDragEnd,
+              stylesInsertionPoint: _.stylesInsertionPoint,
             },
             _.children,
           );
@@ -6394,7 +6438,7 @@
             return _(_.overflowX) || _(_.overflowY);
           }),
         _ = function (_) {
-          var _ = window.getComputedStyle(_),
+          var _ = _.ownerDocument.defaultView.getComputedStyle(_),
             _ = {
               overflowX: _.overflowX,
               overflowY: _.overflowY,
@@ -6419,15 +6463,10 @@
         _ = function _(_) {
           return (
             !!_ &&
-            ("fixed" === window.getComputedStyle(_).position ||
+            ("fixed" ===
+              _.ownerDocument.defaultView.getComputedStyle(_).position ||
               _(_.parentElement))
           );
-        },
-        _ = function (_) {
-          return {
-            closestScrollable: _(_),
-            isFixedOnPage: _(_),
-          };
         },
         _ = function (_) {
           var _ = _.ref,
@@ -6559,6 +6598,183 @@
       var _ = function (_) {
         return (_ && _.env.closestScrollable) || null;
       };
+      function _(_) {
+        var _ = (0, _.useRef)(null),
+          _ = _(_),
+          _ = _("droppable"),
+          _ = _.registry,
+          _ = _.marshal,
+          _ = _(_),
+          _ = _(
+            function () {
+              return {
+                _: _.droppableId,
+                type: _.type,
+                mode: _.mode,
+              };
+            },
+            [_.droppableId, _.mode, _.type],
+          ),
+          _ = (0, _.useRef)(_),
+          _ = _(
+            function () {
+              return _(function (_, _) {
+                _.current || _(!1);
+                var _ = {
+                  _: _,
+                  _: _,
+                };
+                _.updateDroppableScroll(_._, _);
+              });
+            },
+            [_._, _],
+          ),
+          _ = _(function () {
+            var _ = _.current;
+            return _ && _.env.closestScrollable
+              ? _(_.env.closestScrollable)
+              : _;
+          }, []),
+          _ = _(
+            function () {
+              var _ = _();
+              _(_._, _._);
+            },
+            [_, _],
+          ),
+          _ = _(
+            function () {
+              return _(_);
+            },
+            [_],
+          ),
+          _ = _(
+            function () {
+              var _ = _.current,
+                _ = _(_);
+              (_ && _) || _(!1),
+                _.scrollOptions.shouldPublishImmediately ? _() : _();
+            },
+            [_, _],
+          ),
+          _ = _(
+            function (_, _) {
+              _.current && _(!1);
+              var _ = _.current,
+                _ = _.getDroppableRef();
+              _ || _(!1);
+              var _ = (function (_) {
+                  return {
+                    closestScrollable: _(_),
+                    isFixedOnPage: _(_),
+                  };
+                })(_),
+                _ = {
+                  ref: _,
+                  descriptor: _,
+                  env: _,
+                  scrollOptions: _,
+                };
+              _.current = _;
+              var _ = _({
+                  ref: _,
+                  descriptor: _,
+                  env: _,
+                  windowScroll: _,
+                  direction: _.direction,
+                  isDropDisabled: _.isDropDisabled,
+                  isCombineEnabled: _.isCombineEnabled,
+                  shouldClipSubject: !_.ignoreContainerClipping,
+                }),
+                _ = _.closestScrollable;
+              return (
+                _ &&
+                  (_.setAttribute(_.contextId, _.contextId),
+                  _.addEventListener("scroll", _, _(_.scrollOptions))),
+                _
+              );
+            },
+            [_.contextId, _, _, _],
+          ),
+          _ = _(function () {
+            var _ = _.current,
+              _ = _(_);
+            return (_ && _) || _(!1), _(_);
+          }, []),
+          _ = _(
+            function () {
+              var _ = _.current;
+              _ || _(!1);
+              var _ = _(_);
+              (_.current = null),
+                _ &&
+                  (_.cancel(),
+                  __webpack_require__.removeAttribute(_.contextId),
+                  __webpack_require__.removeEventListener(
+                    "scroll",
+                    _,
+                    _(_.scrollOptions),
+                  ));
+            },
+            [_, _],
+          ),
+          _ = _(function (_) {
+            var _ = _.current;
+            _ || _(!1);
+            var _ = _(_);
+            _ || _(!1), (_.scrollTop += _._), (_.scrollLeft += _._);
+          }, []),
+          _ = _(
+            function () {
+              return {
+                getDimensionAndWatchScroll: _,
+                getScrollWhileDragging: _,
+                dragStopped: _,
+                scroll: _,
+              };
+            },
+            [_, _, _, _],
+          ),
+          _ = _(
+            function () {
+              return {
+                uniqueId: _,
+                descriptor: _,
+                callbacks: _,
+              };
+            },
+            [_, _, _],
+          );
+        _(
+          function () {
+            return (
+              (_.current = _.descriptor),
+              _.droppable.register(_),
+              function () {
+                _.current && _(), _.droppable.unregister(_);
+              }
+            );
+          },
+          [_, _, _, _, _, _.droppable],
+        ),
+          _(
+            function () {
+              _.current &&
+                _.updateDroppableIsEnabled(_.current._, !_.isDropDisabled);
+            },
+            [_.isDropDisabled, _],
+          ),
+          _(
+            function () {
+              _.current &&
+                _.updateDroppableIsCombineEnabled(
+                  _.current._,
+                  _.isCombineEnabled,
+                );
+            },
+            [_.isCombineEnabled, _],
+          );
+      }
       function _() {}
       var _ = {
           width: 0,
@@ -7335,185 +7551,19 @@
           _();
           var _ = _(
             function () {
+              var _;
               _() &&
                 _({
-                  maxScroll: _(),
+                  maxScroll: _(
+                    (null == (_ = _.current)
+                      ? void 0
+                      : _.ownerDocument.defaultView) || window,
+                  ),
                 });
             },
             [_, _],
           );
-          !(function (_) {
-            var _ = (0, _.useRef)(null),
-              _ = _(_),
-              _ = _("droppable"),
-              _ = _.registry,
-              _ = _.marshal,
-              _ = _(_),
-              _ = _(
-                function () {
-                  return {
-                    _: _.droppableId,
-                    type: _.type,
-                    mode: _.mode,
-                  };
-                },
-                [_.droppableId, _.mode, _.type],
-              ),
-              _ = (0, _.useRef)(_),
-              _ = _(
-                function () {
-                  return _(function (_, _) {
-                    _.current || _(!1);
-                    var _ = {
-                      _: _,
-                      _: _,
-                    };
-                    _.updateDroppableScroll(_._, _);
-                  });
-                },
-                [_._, _],
-              ),
-              _ = _(function () {
-                var _ = _.current;
-                return _ && _.env.closestScrollable
-                  ? _(_.env.closestScrollable)
-                  : _;
-              }, []),
-              _ = _(
-                function () {
-                  var _ = _();
-                  _(_._, _._);
-                },
-                [_, _],
-              ),
-              _ = _(
-                function () {
-                  return _(_);
-                },
-                [_],
-              ),
-              _ = _(
-                function () {
-                  var _ = _.current,
-                    _ = _(_);
-                  (_ && _) || _(!1),
-                    _.scrollOptions.shouldPublishImmediately ? _() : _();
-                },
-                [_, _],
-              ),
-              _ = _(
-                function (_, _) {
-                  _.current && _(!1);
-                  var _ = _.current,
-                    _ = _.getDroppableRef();
-                  _ || _(!1);
-                  var _ = _(_),
-                    _ = {
-                      ref: _,
-                      descriptor: _,
-                      env: _,
-                      scrollOptions: _,
-                    };
-                  _.current = _;
-                  var _ = _({
-                      ref: _,
-                      descriptor: _,
-                      env: _,
-                      windowScroll: _,
-                      direction: _.direction,
-                      isDropDisabled: _.isDropDisabled,
-                      isCombineEnabled: _.isCombineEnabled,
-                      shouldClipSubject: !_.ignoreContainerClipping,
-                    }),
-                    _ = _.closestScrollable;
-                  return (
-                    _ &&
-                      (_.setAttribute(_.contextId, _.contextId),
-                      _.addEventListener("scroll", _, _(_.scrollOptions))),
-                    _
-                  );
-                },
-                [_.contextId, _, _, _],
-              ),
-              _ = _(function () {
-                var _ = _.current,
-                  _ = _(_);
-                return (_ && _) || _(!1), _(_);
-              }, []),
-              _ = _(
-                function () {
-                  var _ = _.current;
-                  _ || _(!1);
-                  var _ = _(_);
-                  (_.current = null),
-                    _ &&
-                      (_.cancel(),
-                      __webpack_require__.removeAttribute(_.contextId),
-                      __webpack_require__.removeEventListener(
-                        "scroll",
-                        _,
-                        _(_.scrollOptions),
-                      ));
-                },
-                [_, _],
-              ),
-              _ = _(function (_) {
-                var _ = _.current;
-                _ || _(!1);
-                var _ = _(_);
-                _ || _(!1), (_.scrollTop += _._), (_.scrollLeft += _._);
-              }, []),
-              _ = _(
-                function () {
-                  return {
-                    getDimensionAndWatchScroll: _,
-                    getScrollWhileDragging: _,
-                    dragStopped: _,
-                    scroll: _,
-                  };
-                },
-                [_, _, _, _],
-              ),
-              _ = _(
-                function () {
-                  return {
-                    uniqueId: _,
-                    descriptor: _,
-                    callbacks: _,
-                  };
-                },
-                [_, _, _],
-              );
-            _(
-              function () {
-                return (
-                  (_.current = _.descriptor),
-                  _.droppable.register(_),
-                  function () {
-                    _.current && _(), _.droppable.unregister(_);
-                  }
-                );
-              },
-              [_, _, _, _, _, _.droppable],
-            ),
-              _(
-                function () {
-                  _.current &&
-                    _.updateDroppableIsEnabled(_.current._, !_.isDropDisabled);
-                },
-                [_.isDropDisabled, _],
-              ),
-              _(
-                function () {
-                  _.current &&
-                    _.updateDroppableIsCombineEnabled(
-                      _.current._,
-                      _.isCombineEnabled,
-                    );
-                },
-                [_.isCombineEnabled, _],
-              );
-          })({
+          _({
             droppableId: _,
             type: _,
             mode: _,

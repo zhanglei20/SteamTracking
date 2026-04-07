@@ -145,7 +145,7 @@
     "ContentReportReason_GenderedNonConsensualMaterial": "Nőkkel szembeni beleegyezés nélküli tartalom",
     "ContentReportReason_FakedGenderedNonConsensualMaterial": "Nőkkel szembeni mélyhamisított, beleegyezés nélküli tartalom",
     "ContentReportReason_FakedNonConsensualMaterial": "Mélyhamisított beleegyezés nélküli tartalom",
-    "ContentReportReason_Gendered": "Nőket támadó viselkedés",
+    "ContentReportReason_Gendered": "Nőket célzó",
     "ContentReportReason_Deepfake": "Mélyhamisítás",
     "ContentReportSubmitted_Title": "Jelentés beküldve",
     "ContentReportSubmitted_Description": "Köszönjük, hogy beküldted a jelentésedet. Továbbítva lett moderálásra.",

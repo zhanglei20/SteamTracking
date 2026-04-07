@@ -4116,6 +4116,11 @@ html.responsive.touch .ContentHubSalePage {
 .i2PTzRNXOK1OXvXb9-wzd.sale_item_browser ._1cOoCFwafBlSkwllIMf3XM {
   max-width: 1200px;
 }
+@media screen and (max-width: 940px) {
+  .i2PTzRNXOK1OXvXb9-wzd.text_section {
+    margin: 0 16px;
+  }
+}
 .W4mvnnQ0uYKKoCfVm8QgX {
   display: flex;
   margin: 0 auto;
@@ -4144,9 +4149,11 @@ html.responsive.touch ._1cOoCFwafBlSkwllIMf3XM {
     scrollbar-color: hsla(0, 0%, 100%, 0.35) rgba(0, 0, 0, 0);
   }
 }
-._1cOoCFwafBlSkwllIMf3XM.OPH8r3-pnCjCM7T8GrpWo {
-  padding-left: 0;
-  padding-right: 0;
+@media screen and (min-width: 940px) {
+  ._1cOoCFwafBlSkwllIMf3XM.OPH8r3-pnCjCM7T8GrpWo {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 ._1cOoCFwafBlSkwllIMf3XM.OPH8r3-pnCjCM7T8GrpWo .CarouselBtnLeft {
   transform: translateX(16px);
@@ -4482,8 +4489,11 @@ span._1P__hyqsgd049GH0Bn007_ {
   font-size: 16px;
 }
 .SaleSectionCarousel ._2zVSaxkr0mGLlJ4ivF37dx {
-  padding: 10px;
+  padding-bottom: 10px;
   display: block;
+}
+.SaleSectionCarousel.ScrollSnapCarousel ._2zVSaxkr0mGLlJ4ivF37dx {
+  min-width: 200px;
 }
 .j2ykTCJIixZLTJZbDR4Tp {
   position: absolute;

@@ -685,9 +685,10 @@
         return (
           _ &&
             (function (_, _, _) {
-              _
-                ? _.push((0, _._)(_, "header"), (0, _._)(_, "main_capsule"))
-                : _.push((0, _._)(_, "main_capsule"), (0, _._)(_, "header"));
+              const _ = (0, _._)(_, "header_2x") ?? (0, _._)(_, "header"),
+                _ =
+                  (0, _._)(_, "main_capsule_2x") ?? (0, _._)(_, "main_capsule");
+              _ ? _.push(_, _) : _.push(_, _);
             })(_, _, _),
           __webpack_require__.filter((_) => !!_)
         );

@@ -207,6 +207,7 @@
     "AssetProperty_Range_MinPlaceholder": "Min",
     "AssetProperty_Range_MaxPlaceholder": "Max",
     "Accessories_FieldSectionLabel": "Lisävarusteet",
+    "AccessoriesList_Title": "Lisävarusteet",
     "Item_CountryBuySellRestricted": "Et voi ostaa tuotetta, koska tämäntyyppisten tuotteiden ostaminen ja myynti ei ole käytössä maassasi.",
     "Item_CountryBuyRestricted": "Et voi ostaa tuotetta, koska tämäntyyppisten tuotteiden ostaminen ei ole käytössä maassasi.",
     "Listing_EnhancedAppearance_Missing": "Tällä listauksella ei ole vielä yksilöllisiä tai parannettuja kuvia. Tässä esitetty kuva voi olla hieman erilainen listattuun esineeseen nähden.",

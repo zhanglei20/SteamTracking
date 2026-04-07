@@ -200,6 +200,7 @@
                                 (n.clanSteamID = new c.b(T.iA.steamid)),
                                 (n.postTime = Date.now() / 1e3),
                                 (n.startTime = Date.now() / 1e3),
+                                (n.createTime = Date.now() / 1e3),
                                 (n.type = 12);
                               for (let i = 0; i < 31; i++)
                                 n.name.set(i, E(e, i)),

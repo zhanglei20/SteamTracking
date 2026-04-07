@@ -207,6 +207,7 @@
     "AssetProperty_Range_MinPlaceholder": "Min.",
     "AssetProperty_Range_MaxPlaceholder": "Max.",
     "Accessories_FieldSectionLabel": "Accesorii",
+    "AccessoriesList_Title": "Accesorii",
     "Item_CountryBuySellRestricted": "Nu poți achiziționa acest obiect, deoarece cumpărarea și vânzarea acestui tip de obiect este dezactivată în țara ta.",
     "Item_CountryBuyRestricted": "Nu poți achiziționa acest obiect deoarece cumpărarea obiectelor de acest tip este dezactivată în țara ta.",
     "Listing_EnhancedAppearance_Missing": "Această listare nu are încă imagini unice sau îmbunătățite. Obiectul din imaginea afișată aici poate fi ușor diferit de obiectul listat.",

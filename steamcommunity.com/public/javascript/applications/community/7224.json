@@ -207,6 +207,7 @@
     "AssetProperty_Range_MinPlaceholder": "Min.",
     "AssetProperty_Range_MaxPlaceholder": "Maks.",
     "Accessories_FieldSectionLabel": "Tilbehør",
+    "AccessoriesList_Title": "Tilbehør",
     "Item_CountryBuySellRestricted": "Du kan ikke kjøpe denne gjenstanden, fordi kjøp og salg av denne gjenstandstypen ikke er tilgjengelig i landet ditt.",
     "Item_CountryBuyRestricted": "Du kan ikke kjøpe denne gjenstanden, fordi kjøp av denne gjenstandstypen ikke er tilgjengelig i landet ditt.",
     "Listing_EnhancedAppearance_Missing": "Denne annonsen har ennå ikke unike eller forbedrede bilder. Bildet som vises her, kan variere litt fra gjenstanden som er annonsert.",

@@ -559,63 +559,8 @@
     },
     chunkid: (module) => {
       module.exports = {
-        Root: "_1kIuUssJvopWbHik1IKMG6",
-        "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
-        "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
-        Disabled: "kLcGKsNxkoEqxgok6YzML",
-        Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
-        Icon: "cngAYeP7ZvFo2pT_v3-xO",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        "Variant-default": "_1fNVqPb5rhUOTSV5nEBHdl",
-        "Size-3": "_1K_Ve980-qBq8l1-cZJdw1",
-        "Variant-inset": "_2Z-Zr4UW8-jHrU5olM_rpn",
-        "Variant-inset-focus": "_2RYWJyn7v0tvoY5cR63QuI",
-        Focusable: "_1cd-wdIp5lIWsydAxII-vY",
-        "Variant-underline": "yV_Aq5WutzzittgbOJ1R-",
-        "Variant-highlight": "EFvA4gLIikUE06LDGCqg5",
-        ControlBox: "_2gL71Yq-HzVI9oOGyWu3jH",
-        Hoverable: "_8JNTStqpIYaMWQJx6g6hK",
-        Clickable: "_1KONo9A0HE0_NOK2F6uvXy",
-        Disabled: "_2I6xXve3oCxh8fra7SWTnq",
-        "Size-1": "_2e1xlPghh48rkP13ydQOPb",
-        "Size-2": "B7HtDxiiORArIRcBR9kVB",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
         Option: "_3a3fNdwhCItYEc1SsUNP",
         RadioCircle: "_13ZbEe1M2PJ-21o9RTar64",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        SegmentedControlBox: "_3tuJ3SHrhBu16Q7GZBtKyt",
-        Indicator: "_2OvUYpkiij1e7K-4vW8i9W",
-        SegmentedControl: "_3XFGk1-WmLNC9KlGi7IYtN",
-        Item: "_2aNlsjcdOdHOtP8uACA3bM",
-        "Size-1": "_2Y43gK-c1jI0x35n45iZ0",
-        "Size-3": "_3ohjaEz8PkzSzIrIZKEdt9",
-        "Variant-default": "_3hD10Qy5141ZEY503SxZkd",
-        "Variant-inset": "_1FRhoIifZWCKbnl4jrnmG2",
-      };
-    },
-    chunkid: (module) => {
-      module.exports = {
-        Color: "_2Vc3a-PM4tOhJcD72NEq1U",
-        IconSizeDefault: "_20lX82QaoUw-iHboSsmZBI",
-        "IconSize-1": "_1zRMg9IjPqEIAejKQDDLYW",
-        "IconSize-2": "_3dn_hJnXYKfl38rjqz4y91",
-        "IconSize-3": "_2aoIykgGddbEHeCGgMR79l",
-        "IconSize-4": "_1Ypu_MleveHHMyLy8PVNy",
-        "IconSize-5": "e8vp9esm_uAhUEdfq5zjr",
-        "IconSize-6": "hXAsxCohKrk8qBq6Enfgt",
-        "IconSize-7": "_5TifSVb5dMP2wAaHIDqM_",
-        "IconSize-8": "_32KP-QSJpecoxuWZfWkqmy",
-        "IconSize-9": "_3TcYJ4xwprVIVhcdzwF17m",
-        HitSlop: "_1tiFDvBjIAQRZDbVwz8k2u",
       };
     },
     chunkid: () => {},
@@ -5742,6 +5687,21 @@
                         __webpack_require__.GetEventVisibilityStartTime(),
                       ),
                     ),
+                  ],
+                }),
+                (0, _.jsxs)("div", {
+                  children: [
+                    "Event Create Time: ",
+                    __webpack_require__.GetEventModel().createTime,
+                    " -",
+                    Boolean(
+                      0 != __webpack_require__.GetEventModel().startTime,
+                    ) &&
+                      (0, _.jsx)(_._, {
+                        dateAndTime:
+                          __webpack_require__.GetEventModel().createTime,
+                        bSingleLine: !0,
+                      }),
                   ],
                 }),
                 (0, _.jsxs)("div", {
@@ -15848,6 +15808,7 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -25715,11 +25676,60 @@
           }),
         });
       }
-      var _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { value: _, onValueChange: _, type: _, label: _, tooltip: _ } = _,
+          _ = (0, _._)(_, _),
+          { data: _ } = (0, _._)(_);
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              children: [
+                _,
+                _ &&
+                  (0, _.jsx)(_._, {
+                    tooltip: _,
+                  }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              value: _,
+              valueToString: (_) => _.toString(),
+              valueFromString: (_) => (parseInt(_) >= 0 ? parseInt(_) : _._),
+              clearable: !0,
+              onValueChange: _,
+              afterContent:
+                _ && _.visible
+                  ? (0, _.jsx)("span", {
+                      children: _._.LocalizeReact(
+                        "#StoreItemFound",
+                        (0, _.jsx)(_._, {
+                          color: "green-8",
+                        }),
+                        _.name,
+                      ),
+                    })
+                  : _ > 0
+                    ? (0, _.jsx)("span", {
+                        children: _._.LocalizeReact("#StoreItemNotFound", _),
+                      })
+                    : void 0,
+            }),
+          ],
+        });
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { fnOnDirty: _, saleSection: _, event: _ } = _,
           [_, _, _] = (0, _._)(() => {
-            var _, _, _;
+            var _, _, _, _;
             return [
               _._.Get().GetCurEditLanguage(),
               null !==
@@ -25729,9 +25739,13 @@
                     : _.reservation_options) && void 0 !== _
                 ? _
                 : [],
-              (null === (_ = _.internal_section_data) || void 0 === _
+              null ===
+                (_ =
+                  null === (_ = _.internal_section_data) || void 0 === _
+                    ? void 0
+                    : _.reservation_options) || void 0 === _
                 ? void 0
-                : _.reservation_appid_wishlist) || 0,
+                : _.length,
             ];
           }),
           _ = (0, _.useCallback)(() => {
@@ -25753,12 +25767,8 @@
             }),
               _();
           }, [_, _.internal_section_data]),
-          _ = (0, _.useCallback)(
-            (_) => {
-              _.splice(_, 1), _();
-            },
-            [_, _],
-          );
+          [_, _] = (0, _.useState)(null),
+          [_, _, _] = (0, _._)();
         return (0, _.jsxs)("div", {
           children: [
             (0, _.jsx)("h1", {
@@ -25768,22 +25778,8 @@
               children:
                 "Note: If we are building out the page, and if the packages are not yet visible, make sure to be in ?beta=1 mode.",
             }),
-            (0, _.jsx)(_._, {
-              type: "number",
-              value: _,
-              onChange: (_) => {
-                const _ = Number.parseInt(_.currentTarget.value);
-                _.internal_section_data ||
-                  (_.internal_section_data = {
-                    internal_type: "reservation_widget",
-                  }),
-                  (_.internal_section_data.reservation_appid_wishlist =
-                    _ || void 0),
-                  _();
-              },
-              label: "AppID for Wishlists",
-              tooltip:
-                "Only a single appid can be selected for the entire reservation widget. This is only used for collecting wishlists from users",
+            (0, _.jsx)(_, {
+              ..._,
             }),
             (0, _.jsxs)(_, {
               saleSection: _,
@@ -25792,7 +25788,9 @@
               children: [
                 (0, _.jsx)(_._, {
                   items: _,
-                  onDelete: _,
+                  onDelete: (_) => {
+                    _(_), _();
+                  },
                   onReorder: _,
                   render: (_) =>
                     (0, _.jsx)(_, {
@@ -25806,25 +25804,102 @@
                   children: (0, _._)("#Sale_ReserveEditor_Add"),
                 }),
                 (0, _.jsx)("br", {}),
+                (0, _.jsx)(_._, {
+                  active: _,
+                  children: (0, _.jsx)(_._, {
+                    strTitle: _._.Localize("#Button_Delete"),
+                    closeModal: _,
+                    onOK: () => {
+                      null !== _ &&
+                        ((_.internal_section_data.reservation_options =
+                          _.filter((_, _) => _ !== _)),
+                        _());
+                    },
+                    onCancel: () => _(null),
+                    strDescription: _._.Localize("#Dialog_AreYouSure"),
+                  }),
+                }),
               ],
             }),
           ],
         });
       }
-      const _ = {
-        include_basic_info: !0,
-        include_all_purchase_options: !0,
-      };
+      function _(_) {
+        const { fnOnDirty: _, saleSection: _, event: _ } = _,
+          [_] = (0, _._)(() => {
+            var _;
+            return [
+              (null === (_ = _.internal_section_data) || void 0 === _
+                ? void 0
+                : _.reservation_appid_wishlist) || 0,
+            ];
+          });
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsx)(_, {
+            value: _,
+            onValueChange: (_) => {
+              _.internal_section_data ||
+                (_.internal_section_data = {
+                  internal_type: "reservation_widget",
+                }),
+                (_.internal_section_data.reservation_appid_wishlist =
+                  _ || void 0),
+                _();
+            },
+            label: "AppID for Wishlists",
+            tooltip:
+              "Only a single appid can be selected for the entire reservation widget. This is only used for collecting wishlists from users",
+            type: "game",
+          }),
+        });
+      }
+      function _(_) {
+        return (0, _.jsxs)("div", {
+          children: [
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
       function _(_) {
         const { reservation: _, fnOnDirty: _, event: _ } = _,
-          [_, _, _, _, _, _, _, _] = (0, _._)(() => {
-            var _, _, _, _, _, _;
+          [_] = (0, _._)(() => [_.reservation_package]);
+        (0, _._)(_);
+        return (0, _.jsx)(_, {
+          type: "sub",
+          label: (0, _._)("#Sale_ReserveEditor_ReservePack"),
+          tooltip: (0, _._)("#Sale_ReserveEditor_ReservePack_ttip"),
+          value: null != _ ? _ : 0,
+          onValueChange: (_) => {
+            _.reservation_package != _ &&
+              ((_.reservation_package = _), __webpack_require__());
+          },
+        });
+      }
+      function _(_) {
+        const { reservation: _, fnOnDirty: _, event: _ } = _,
+          [_, _, _, _] = (0, _._)(() => {
+            var _, _;
             const _ = _._.Get().GetCurEditLanguage(),
               _ = _._.GetELanguageFallback(_);
             return [
               _,
-              _.reservation_package,
-              _.deposit_package,
               (null === (_ = _.localized_reservation_desc) || void 0 === _
                 ? void 0
                 : _[_]) ||
@@ -25832,31 +25907,12 @@
                   ? void 0
                   : _[_]) ||
                 "",
-              (null === (_ = _.localized_out_of_stock_override) || void 0 === _
-                ? void 0
-                : _[_]) ||
-                (null === (_ = _.localized_out_of_stock_override) ||
-                void 0 === _
-                  ? void 0
-                  : _[_]) ||
-                "",
-              (null === (_ = _.localized_delivery_override_desc) || void 0 === _
-                ? void 0
-                : _[_]) ||
-                (null === (_ = _.localized_delivery_override_desc) ||
-                void 0 === _
-                  ? void 0
-                  : _[_]) ||
-                "",
-              _.override_delivery_only_out_of_stock,
-              _.psu_less_package,
+              _.use_package_description,
+              _.reservation_package,
             ];
           }),
-          [_, _] = (0, _._)(_, _),
-          [_, _] = (0, _._)(_, _),
-          [_, _] = (0, _._)(_, _),
-          [_, _] = (0, _.useState)(_.length > 0),
-          [_, _] = (0, _.useState)(_.length > 0),
+          _ = (0, _._)(_),
+          { data: _ } = (0, _._)(_),
           _ = (0, _.useCallback)(
             (_) => {
               (_.localized_reservation_desc = (0, _._)(
@@ -25869,6 +25925,101 @@
             },
             [_, _, _],
           ),
+          [_, _, _] = (0, _._)(),
+          _ = _.use_package_description ? (null != _ ? _ : "") : _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_.use_package_description &&
+              (0, _.jsx)(_._, {
+                text: _,
+              }),
+            (0, _.jsx)(_._, {
+              checked: _,
+              onChange: (_) => {
+                _.use_package_description != _ &&
+                  ((_.use_package_description = _), __webpack_require__());
+              },
+              children: "Use Package Description?",
+            }),
+            !_ &&
+              (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    onClick: _,
+                    children: (0, _._)("#Sale_ReserveEditor_EditTitle"),
+                  }),
+                  (0, _.jsx)(_._, {
+                    active: _,
+                    children: (0, _.jsx)(_._, {
+                      bAlertDialog: !0,
+                      closeModal: _,
+                      strTitle: (0, _._)("#Sale_ReserveEditor_EditTitle"),
+                      strDescription: (0, _._)("#Sale_ReserveEditor_EditDesc"),
+                      children: (0, _.jsx)(_._, {
+                        strPlaceholder: "Enter Item Description",
+                        fnGetCurText: () => {
+                          var _;
+                          return (null === (_ = _.localized_reservation_desc) ||
+                          void 0 === _
+                            ? void 0
+                            : _.length) > _
+                            ? _.localized_reservation_desc[_]
+                            : "";
+                        },
+                        fnOnTextChange: (_) => _(_.currentTarget.value),
+                        fnSetText: _,
+                        bSupportHTMLImport: !0,
+                        bEmbeddedInDialog: !0,
+                      }),
+                    }),
+                  }),
+                ],
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const { reservation: _, fnOnDirty: _, event: _ } = _;
+        return (0, _.jsx)(_.Fragment, {
+          children: (0, _.jsx)("div", {
+            children:
+              "No longer supporting deposits; code need fixes if we want to add back",
+          }),
+        });
+      }
+      function _(_) {
+        const { reservation: _, fnOnDirty: _, event: _ } = _,
+          [_] = (0, _._)(() => [_.psu_less_package]);
+        return (0, _.jsx)(_, {
+          type: "sub",
+          label: (0, _._)("#Sale_ReserveEditor_SanPowerSupplyPackage"),
+          tooltip: (0, _._)("#Sale_ReserveEditor_SanPowerSupplyPackage_ttip"),
+          value: null != _ ? _ : 0,
+          onValueChange: (_) => {
+            _ != _.psu_less_package &&
+              ((_.psu_less_package = _), __webpack_require__());
+          },
+        });
+      }
+      function _(_) {
+        const { reservation: _, fnOnDirty: _, event: _ } = _,
+          [_, _] = (0, _._)(() => {
+            var _, _;
+            const _ = _._.Get().GetCurEditLanguage(),
+              _ = _._.GetELanguageFallback(_);
+            return [
+              _,
+              (null === (_ = _.localized_out_of_stock_override) || void 0 === _
+                ? void 0
+                : _[_]) ||
+                (null === (_ = _.localized_out_of_stock_override) ||
+                void 0 === _
+                  ? void 0
+                  : _[_]) ||
+                "",
+            ];
+          }),
+          [_, _] = (0, _.useState)(() => _.length > 0),
           _ = (0, _.useCallback)(
             (_) => {
               (_.localized_out_of_stock_override = (0, _._)(
@@ -25880,7 +26031,56 @@
                 __webpack_require__();
             },
             [_, _, _],
-          ),
+          );
+        return (0, _.jsx)(_.Fragment, {
+          children: _
+            ? (0, _.jsxs)(_.Fragment, {
+                children: [
+                  (0, _.jsx)(_._, {
+                    type: "text",
+                    label: "Override out-of-stock message",
+                    tooltip:
+                      "If set, this will replace the default Out-of-Stock message that appear on the button when there is not inventory for this package for this user country",
+                    value: _,
+                    onChange: (_) => _(_.currentTarget.value),
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: () => {
+                      (_.localized_out_of_stock_override = []),
+                        _(!1),
+                        __webpack_require__();
+                    },
+                    children: "Clear Override",
+                  }),
+                ],
+              })
+            : (0, _.jsx)(_._, {
+                checked: _,
+                onChange: _,
+                label: "Override the Out-of-Stock Message?",
+              }),
+        });
+      }
+      function _(_) {
+        const { reservation: _, fnOnDirty: _, event: _ } = _,
+          [_, _, _] = (0, _._)(() => {
+            var _, _;
+            const _ = _._.Get().GetCurEditLanguage(),
+              _ = _._.GetELanguageFallback(_);
+            return [
+              _,
+              (null === (_ = _.localized_delivery_override_desc) || void 0 === _
+                ? void 0
+                : _[_]) ||
+                (null === (_ = _.localized_delivery_override_desc) ||
+                void 0 === _
+                  ? void 0
+                  : _[_]) ||
+                "",
+              _.override_delivery_only_out_of_stock,
+            ];
+          }),
+          [_, _] = (0, _.useState)(_.length > 0),
           _ = (0, _.useCallback)(
             (_) => {
               (_.localized_delivery_override_desc = (0, _._)(
@@ -25892,167 +26092,57 @@
                 __webpack_require__();
             },
             [_, _, _],
-          ),
-          _ = (0, _.useCallback)(() => {
-            (0, _._)(
-              (0, _.jsx)(_._, {
-                bAlertDialog: !0,
-                strTitle: (0, _._)("#Sale_ReserveEditor_EditTitle"),
-                strDescription: (0, _._)("#Sale_ReserveEditor_EditDesc"),
-                children: (0, _.jsx)(_._, {
-                  strPlaceholder: "Enter Item Description",
-                  fnGetCurText: () => {
-                    var _;
-                    return (null === (_ = _.localized_reservation_desc) ||
-                    void 0 === _
-                      ? void 0
-                      : _.length) > _
-                      ? _.localized_reservation_desc[_]
-                      : "";
-                  },
-                  fnOnTextChange: (_) => _(_.currentTarget.value),
-                  fnSetText: _,
-                  bSupportHTMLImport: !0,
-                  bEmbeddedInDialog: !0,
-                }),
-              }),
-              window,
-            );
-          }, [_, _, _.localized_reservation_desc]);
-        return (0, _.jsxs)("div", {
-          children: [
-            (0, _.jsx)(_._, {
-              type: "number",
-              label: (0, _._)("#Sale_ReserveEditor_ReservePack"),
-              tooltip: (0, _._)("#Sale_ReserveEditor_ReservePack_ttip"),
-              value: null != _ ? _ : 0,
-              onChange: (_) => {
-                (_.reservation_package = Number.parseInt(
-                  _.currentTarget.value,
-                )),
-                  __webpack_require__();
-              },
-            }),
-            Boolean(3 == _) &&
-              (0, _.jsxs)("div", {
+          );
+        return (0, _.jsx)(_.Fragment, {
+          children: _
+            ? (0, _.jsxs)(_.Fragment, {
                 children: [
-                  'Reservation Package Found: "',
-                  null == _ ? void 0 : _.GetName(),
-                  '" Price: ',
-                  null == _ ? void 0 : _.GetBestPurchasePriceFormatted(),
+                  (0, _.jsxs)(_._, {
+                    children: [
+                      " Override Delivery Message ",
+                      (0, _.jsx)(_._, {
+                        tooltip:
+                          "If set, this will replace the default delivery message customers see. You can use bbcode here.",
+                      }),
+                      " ",
+                    ],
+                  }),
+                  (0, _.jsx)("textarea", {
+                    rows: 5,
+                    cols: 90,
+                    onChange: (_) => _(_.currentTarget.value),
+                    value: _,
+                    autoFocus: !0,
+                  }),
+                  (0, _.jsx)(_._, {
+                    checked: _,
+                    label: "Only override delivery when out-of-stock",
+                    tooltip:
+                      "By default, we will override delivery all of the time. If check, we only override when out of stock",
+                    onChange: (_) => {
+                      (_.override_delivery_only_out_of_stock = _),
+                        __webpack_require__();
+                    },
+                  }),
+                  (0, _.jsx)(_._, {
+                    onClick: () => {
+                      (_.localized_delivery_override_desc = []),
+                        (_.override_delivery_only_out_of_stock = !1),
+                        _(!1),
+                        __webpack_require__();
+                    },
+                    children: "Clear Delivery Msg Override",
+                  }),
                 ],
+              })
+            : (0, _.jsx)(_._, {
+                checked: _,
+                onChange: _,
+                label: "Override the Delivery Message Message?",
               }),
-            (0, _.jsx)("div", {
-              children:
-                "No longer supporting deposits; code need fixes if we want to add back",
-            }),
-            (0, _.jsx)(_._, {
-              type: "number",
-              label: (0, _._)("#Sale_ReserveEditor_SanPowerSupplyPackage"),
-              tooltip: (0, _._)(
-                "#Sale_ReserveEditor_SanPowerSupplyPackage_ttip",
-              ),
-              value: null != _ ? _ : 0,
-              onChange: (_) => {
-                (_.psu_less_package = Number.parseInt(_.currentTarget.value)),
-                  __webpack_require__();
-              },
-            }),
-            Boolean(3 == _) &&
-              (0, _.jsxs)("div", {
-                children: [
-                  'PSU Less Package Found: "',
-                  null == _ ? void 0 : _.GetName(),
-                  '" Price: ',
-                  null == _ ? void 0 : _.GetBestPurchasePriceFormatted(),
-                ],
-              }),
-            (0, _.jsx)(_._, {
-              text: _,
-              partnerEventStore: _._,
-              showErrorInfo: !0,
-              event: _,
-              languageOverride: _,
-            }),
-            (0, _.jsx)(_._, {
-              onClick: _,
-              children: (0, _._)("#Sale_ReserveEditor_EditTitle"),
-            }),
-            _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)(_._, {
-                      type: "text",
-                      label: "Override out-of-stock message",
-                      tooltip:
-                        "If set, this will replace the default Out-of-Stock message that appear on the button when there is not inventory for this package for this user country",
-                      value: _,
-                      onChange: (_) => _(_.currentTarget.value),
-                    }),
-                    (0, _.jsx)(_._, {
-                      onClick: () => {
-                        (_.localized_out_of_stock_override = []),
-                          _(!1),
-                          __webpack_require__();
-                      },
-                      children: "Clear Override",
-                    }),
-                  ],
-                })
-              : (0, _.jsx)(_._, {
-                  checked: _,
-                  onChange: _,
-                  label: "Override the Out-of-Stock Message?",
-                }),
-            _
-              ? (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsxs)(_._, {
-                      children: [
-                        "Override Delivery Message ",
-                        (0, _.jsx)(_._, {
-                          tooltip:
-                            "If set, this will replace the default delivery message customers see. You can use bbcode here.",
-                        }),
-                        " ",
-                      ],
-                    }),
-                    (0, _.jsx)("textarea", {
-                      rows: 5,
-                      cols: 90,
-                      onChange: (_) => _(_.currentTarget.value),
-                      value: _,
-                      autoFocus: !0,
-                    }),
-                    (0, _.jsx)(_._, {
-                      checked: _,
-                      label: "Only override delivery when out-of-stock",
-                      tooltip:
-                        "By default, we will override delivery all of the time. If check, we only override when out of stock",
-                      onChange: (_) => {
-                        (_.override_delivery_only_out_of_stock = _),
-                          __webpack_require__();
-                      },
-                    }),
-                    (0, _.jsx)(_._, {
-                      onClick: () => {
-                        (_.localized_delivery_override_desc = []),
-                          (_.override_delivery_only_out_of_stock = !1),
-                          _(!1),
-                          __webpack_require__();
-                      },
-                      children: "Clear Delivery Msg Override",
-                    }),
-                  ],
-                })
-              : (0, _.jsx)(_._, {
-                  checked: _,
-                  onChange: _,
-                  label: "Override the Delivery Message Message?",
-                }),
-          ],
         });
       }
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const { fnOnDirty: _, saleSection: _, event: _ } = _,
           [_, _] = (0, _._)(() => {
@@ -26910,150 +27000,15 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { children: _, ..._ } = _;
-        return (0, _.jsxs)(_._, {
-          cursor: "default",
-          gap: "2",
-          className: _.Option,
-          ..._,
-          children: [
-            (0, _.jsx)("div", {
-              className: _.RadioCircle,
-            }),
-            (0, _.jsx)(_._, {
-              children: _,
-            }),
-          ],
-        });
-      }
-      const _ = Object.assign(
-          function (_) {
-            const {
-              value: _,
-              onValueChange: _,
-              options: _,
-              getOptionLabel: _,
-              ..._
-            } = _;
-            return (0, _.jsx)(_.Root, {
-              value: _,
-              onValueChange: _,
-              ..._,
-              children: _.map((_) => {
-                const _ = _ ? _(_) : _;
-                return (0, _.jsx)(
-                  _.Option,
-                  {
-                    value: _,
-                    children: _,
-                  },
-                  _,
-                );
-              }),
-            });
-          },
-          {
-            Root: function (_) {
-              const { value: _, onValueChange: _, render: _, ..._ } = _,
-                _ = (0, _.useRef)(null),
-                _ = (0, _.useCallback)((_, _) => {
-                  if (!_.current) return;
-                  const _ = [..._.current.querySelectorAll("[data-radio-id]")];
-                  if (0 !== _.length)
-                    for (let _ = 0; _ < _.length; _++) {
-                      const _ = _[_];
-                      if (!_.dataset.radioId) continue;
-                      if (_.dataset.radioId === _) {
-                        const _ = _[(_ + _ + _.length) % _.length];
-                        _.click(), _.focus();
-                      }
-                    }
-                }, []),
-                _ = (0, _.useCallback)((_) => _(_, 1), [_]),
-                _ = (0, _.useCallback)((_) => _(_, -1), [_]),
-                _ = (0, _.useMemo)(
-                  () => ({
-                    value: _,
-                    onValueChange: _,
-                    onSelectNext: _,
-                    onSelectPrev: _,
-                  }),
-                  [_, _, _, _],
-                ),
-                _ = {
-                  role: "radiogroup",
-                  ref: _,
-                  ..._,
-                },
-                _ = (0, _.jsx)(_._, {
-                  direction: "column",
-                  gap: "2",
-                  role: "radiogroup",
-                  ..._,
-                }),
-                _ = (0, _._)(_, _, _);
-              return (0, _.jsx)(_, {
-                value: _,
-                children: _,
-              });
-            },
-            Option: function (_) {
-              const { value: _, ref: _, children: _, render: _ } = _,
-                _ = (0, _.useContext)(_),
-                _ = (0, _.useId)();
-              if (!_)
-                return (
-                  console.error(
-                    "<RadioGroup.Option> must be rendered within a <RadioGroup.Root>",
-                  ),
-                  null
-                );
-              const {
-                  value: _,
-                  onValueChange: _,
-                  onSelectNext: _,
-                  onSelectPrev: _,
-                } = _,
-                _ = _ === _,
-                _ = () => {
-                  _ || _(_);
-                },
-                _ = {
-                  role: "radio",
-                  "aria-checked": _,
-                  "data-radio-id": _,
-                  onClick: _,
-                  onKeyDown: (_) => {
-                    switch (_.key) {
-                      case " ":
-                        _(), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowRight":
-                      case "ArrowDown":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                        break;
-                      case "ArrowLeft":
-                      case "ArrowUp":
-                        _(_), _.preventDefault(), _.stopPropagation();
-                    }
-                  },
-                  tabIndex: _ ? 0 : -1,
-                  ref: _,
-                  children: _,
-                },
-                _ = (0, _.jsx)(_, {});
-              return (0, _._)(_, _, _, {
-                bSelected: _,
-              });
-            },
-          },
-        ),
-        _ = (0, _.createContext)(null);
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { editModel: _, saleSection: _ } = _;
+        const { saleSection: _ } = _;
         return (
           (0, _.useEffect)(() => {
             _.internal_section_data.reservation_layout ||
@@ -27071,15 +27026,23 @@
         );
       }
       function _(_) {
-        const { editModel: _, reservation_layout: _ } = _,
-          [_, _] = (0, _._)(() => [
-            _.item_definition_flow || "horizontal",
-            _.show_product_configs || !1,
-          ]),
+        const { editModel: _, reservation_layout: _, saleSection: _ } = _,
+          [_, _, _, _] = (0, _._)(() => {
+            var _;
+            return [
+              _.item_definition_flow || "horizontal",
+              _.show_product_configs || !1,
+              _.internal_section_data.reservation_options,
+              (null === (_ = _.internal_section_data.reservation_options) ||
+              void 0 === _
+                ? void 0
+                : _.length) || 0,
+            ];
+          }),
           _ = () => _.SetDirty(_._.jsondata_sales);
         return (0, _.jsxs)(_.Fragment, {
           children: [
-            (0, _.jsx)(_, {
+            (0, _.jsx)(_._, {
               options: ["vertical", "horizontal"],
               value: _,
               onValueChange: (_) => {
@@ -27094,6 +27057,447 @@
                   ((_.show_product_configs = _), _());
               },
               children: "Enable Displaying Product Config Grids?",
+            }),
+            _ &&
+              (0, _.jsx)(_, {
+                fnOnDirty: _,
+                reservation_layout: _,
+                nReservationPackageCount: _,
+                rgReservationOptions: _,
+              }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+          fnOnDirty: _,
+          reservation_layout: _,
+          nReservationPackageCount: _,
+        } = _;
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_, {
+              reservation_layout: _,
+              nReservationPackageCount: _,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+            (0, _.jsx)(_, {
+              fnOnDirty: _,
+              reservation_layout: _,
+            }),
+            (0, _.jsx)(_, {
+              ..._,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { fnOnDirty: _, reservation_layout: _ } = _,
+          [_] = (0, _._)(() => [_.product_configs || []]),
+          [_, _] = (0, _.useState)(null),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Product Config Categories",
+            }),
+            (0, _.jsx)("hr", {}),
+            (0, _.jsx)("p", {
+              children:
+                "Product Config contain a list of product variation by some vector. A selection per config must be made by user to get a specific package to purchase",
+            }),
+            (0, _.jsx)(_._, {
+              items: _,
+              onDelete: (_) => {
+                _(_), _();
+              },
+              onReorder: _,
+              render: (_) =>
+                (0, _.jsx)(_, {
+                  fnOnDirty: _,
+                  productConfig: _,
+                  rgAllProductConfig: _,
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              onClick: () => {
+                _.product_configs || (_.product_configs = []);
+                let _ = Math.floor(1 + 1e5 * Math.random());
+                for (; _.product_configs.find((_) => _.unique_id == _); )
+                  _ = Math.floor(1 + 1e5 * Math.random());
+                _.product_configs = [
+                  ..._.product_configs,
+                  {
+                    unique_id: _,
+                    localized_product_config_title: (0, _._)([], 31, null),
+                  },
+                ];
+              },
+              children: "Add Product Category",
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                strTitle: _._.Localize("#Button_Delete"),
+                closeModal: _,
+                onOK: () => {
+                  null !== _ &&
+                    ((_.product_configs = _.filter((_, _) => _ !== _)), _());
+                },
+                onCancel: () => _(null),
+                strDescription: _._.Localize("#Dialog_AreYouSure"),
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { fnOnDirty: _, reservation_layout: _ } = _,
+          [_, _] = (0, _._)(() => [
+            _.product_config_background_color,
+            _.product_config_selected_color,
+          ]),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: _,
+            property: "product_config_background_color",
+            color: _,
+          }),
+          _ = (0, _._)({
+            fnOnSetDirty: _,
+            section: _,
+            property: "product_config_selected_color",
+            color: _,
+          });
+        return (0, _.jsxs)(_._, {
+          children: [
+            (0, _.jsx)("br", {}),
+            (0, _.jsx)(_._, {
+              children: "Color Controls",
+            }),
+            (0, _.jsx)("hr", {}),
+            (0, _.jsx)(_._, {
+              onClick: _,
+              style: {
+                backgroundColor: _,
+              },
+              children: "Background Color Of Product Box",
+            }),
+            (0, _.jsx)(_._, {
+              onClick: _,
+              style: {
+                color: _,
+                border: `2px solid ${null != _ ? _ : "blue"}`,
+              },
+              children: "Selected Border Color",
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { productConfig: _, fnOnDirty: _, rgAllProductConfig: _ } = _,
+          [_, _, _] = (0, _._)(() => {
+            var _;
+            const _ = _._.Get().GetCurEditLanguage();
+            return [
+              _,
+              (null === (_ = _.localized_product_config_title) || void 0 === _
+                ? void 0
+                : _[_]) || "",
+              _.variations || [],
+            ];
+          }),
+          [_, _] = (0, _.useState)(null),
+          [_, _, _] = (0, _._)();
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Enter Product Category Name",
+            }),
+            (0, _.jsx)(_._, {
+              value: _,
+              onTextChange: (_) => {
+                var _;
+                (!_.localized_product_config_title ||
+                  31 > _.localized_product_config_title.length) &&
+                  (_.localized_product_config_title = (0, _._)(
+                    null !== (_ = _.localized_product_config_title) &&
+                      void 0 !== _
+                      ? _
+                      : [],
+                    31,
+                    null,
+                  ));
+                const _ = [..._.localized_product_config_title];
+                (_[_] = _),
+                  (_.localized_product_config_title = _),
+                  __webpack_require__();
+              },
+              placeholder: "Category name like Model or bundle...",
+            }),
+            (0, _.jsx)(_._, {
+              items: _,
+              onDelete: (_) => {
+                _(_), _();
+              },
+              onReorder: _,
+              render: (_) =>
+                (0, _.jsx)(_, {
+                  fnOnDirty: _,
+                  variation: _,
+                }),
+            }),
+            (0, _.jsx)(_._, {
+              onClick: () => {
+                _.variations || (_.variations = []);
+                let _ = Math.floor(1 + 1e5 * Math.random());
+                const _ = _.flatMap((_) => {
+                  var _;
+                  return null !== (_ = _.variations) && void 0 !== _ ? _ : [];
+                });
+                for (; __webpack_require__.find((_) => _.unique_id == _); )
+                  _ = Math.floor(1 + 1e5 * Math.random());
+                _.variations = [
+                  ..._.variations,
+                  {
+                    unique_id: _,
+                    localized_variation_name: (0, _._)([], 31, null),
+                  },
+                ];
+              },
+              children: "Add Product Category Variation",
+            }),
+            (0, _.jsx)(_._, {
+              active: _,
+              children: (0, _.jsx)(_._, {
+                strTitle: _._.Localize("#Button_Delete"),
+                closeModal: _,
+                onOK: () => {
+                  null !== _ &&
+                    ((_.variations = _.filter((_, _) => _ !== _)),
+                    __webpack_require__());
+                },
+                onCancel: () => _(null),
+                strDescription: _._.Localize("#Dialog_AreYouSure"),
+              }),
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { fnOnDirty: _, variation: _ } = _,
+          [_, _] = (0, _._)(() => {
+            var _;
+            const _ = _._.Get().GetCurEditLanguage();
+            return [
+              _,
+              (null === (_ = _.localized_variation_name) || void 0 === _
+                ? void 0
+                : _[_]) || "",
+            ];
+          });
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Enter Production Variation; keep very short",
+            }),
+            (0, _.jsx)(_._, {
+              value: _,
+              onTextChange: (_) => {
+                var _;
+                (!_.localized_variation_name ||
+                  31 > _.localized_variation_name.length) &&
+                  (_.localized_variation_name = (0, _._)(
+                    null !== (_ = _.localized_variation_name) && void 0 !== _
+                      ? _
+                      : [],
+                    31,
+                    null,
+                  ));
+                const _ = [..._.localized_variation_name];
+                (_[_] = _), (_.localized_variation_name = _), _();
+              },
+              placeholder: "Enter the variable name...",
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const { reservation_layout: _, nReservationPackageCount: _ } = _,
+          [_] = (0, _._)(() => [_(null == _ ? void 0 : _.product_configs)]);
+        return _ != _
+          ? (0, _.jsxs)("div", {
+              className:
+                _ > _ ? _().ErrorStylesWithIcon : _().WarningStylesWithIcon,
+              children: [
+                "We expect reservation packages ($",
+                _,
+                ") to match product configuration variation ($",
+                _,
+                ")",
+              ],
+            })
+          : null;
+      }
+      function _(_) {
+        return _
+          ? _.reduce((_, _) => {
+              var _, _;
+              return (
+                _ *
+                (null !==
+                  (_ =
+                    null === (_ = _.variations) || void 0 === _
+                      ? void 0
+                      : _.length) && void 0 !== _
+                  ? _
+                  : 1)
+              );
+            }, 1)
+          : 0;
+      }
+      function _(_) {
+        const {
+            fnOnDirty: _,
+            reservation_layout: _,
+            rgReservationOptions: _,
+          } = _,
+          [_] = (0, _._)(() => [_.product_configs]),
+          _ = (0, _.useMemo)(
+            () =>
+              (function (_) {
+                if (!_) return [];
+                const _ = _.filter(
+                  (_) => _.variations && _.variations.length > 0,
+                );
+                if (0 === _.length) return [];
+                let _ = [[]];
+                for (const _ of _) {
+                  const _ = _.variations,
+                    _ = [];
+                  for (const _ of _) for (const _ of _) _.push([..._, _]);
+                  _ = _;
+                }
+                return _;
+              })(_),
+            [_],
+          ),
+          _ = (0, _.useMemo)(
+            () => _.map((_) => _.reservation_package).filter(Boolean),
+            [_],
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsx)(_._, {
+              children: "Variation to Packages",
+            }),
+            (0, _.jsx)("hr", {}),
+            (0, _.jsx)("p", {
+              children:
+                "Map each variation combination into a reservation package",
+            }),
+            _.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  fnOnDirty: _,
+                  reservation_layout: _,
+                  singleVariationCombination: _,
+                  rgPackageIDs: _,
+                },
+                (0, _._)(_),
+              ),
+            ),
+            (0, _.jsx)(_._, {
+              onClick: () => {
+                (_.package_to_config_tuple = []), _();
+              },
+              children: "Reset Variation to Package Mapping",
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            fnOnDirty: _,
+            singleVariationCombination: _,
+            reservation_layout: _,
+            rgPackageIDs: _,
+          } = _,
+          _ = (0, _._)(_),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _._)(() => {
+            var _;
+            return [
+              null === (_ = _.package_to_config_tuple) || void 0 === _
+                ? void 0
+                : _.find((_) => _.tuple_id == _),
+              _.default_tuple_id,
+            ];
+          }),
+          _ = __webpack_require__
+            .map((_) => {
+              var _;
+              return (
+                (null === (_ = _.localized_variation_name) || void 0 === _
+                  ? void 0
+                  : _[_]) || _.unique_id
+              );
+            })
+            .join(" x ");
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            (0, _.jsxs)(_._, {
+              align: "start",
+              justify: "between",
+              children: [
+                (0, _.jsx)(_._, {
+                  children: _,
+                }),
+                _ && _.tuple_id === _
+                  ? (0, _.jsx)(_._, {
+                      children: "This is Default",
+                    })
+                  : (0, _.jsx)(_._, {
+                      onClick: () => {
+                        _ && ((_.default_tuple_id = _.tuple_id), _());
+                      },
+                      children: "Make Default Selection",
+                    }),
+              ],
+            }),
+            (0, _.jsx)(_._, {
+              options: _,
+              selectedValue: _ ? _.package_id : void 0,
+              onSelectionChange: (_) => {
+                _
+                  ? ((_.package_id = _), _())
+                  : (_.package_to_config_tuple ||
+                      (_.package_to_config_tuple = []),
+                    (_.package_to_config_tuple = [
+                      ..._.package_to_config_tuple,
+                      {
+                        tuple_id: _,
+                        package_id: _,
+                      },
+                    ]),
+                    _());
+              },
+              getOptionLabel: (_) =>
+                (function (_, _) {
+                  const _ = _.getQueryData(
+                    (0, _._)(
+                      {
+                        packageid: _,
+                      },
+                      "default_info",
+                    ),
+                  );
+                  return _ ? `${_.name} (packageid: ${_})` : `PackageID: ${_} `;
+                })(_, _),
             }),
           ],
         });
@@ -32041,380 +32445,150 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        return (0, _.jsx)(_._, {
-          ..._,
-          viewBoxSize: 16,
-          children: (0, _.jsx)("path", {
-            _: "M13.8182 1.94629L5.77816 9.98184L2.40483 6.61296L0.835938 8.18184L5.77816 13.1285L15.387 3.51518L13.8182 1.94629Z",
-            fill: "currentColor",
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
-      function _(_) {
-        const {
-            checked: _,
-            onChange: _,
-            disabled: _,
-            children: _,
-            ref: _,
-            variant: _ = "default",
-            ..._
-          } = _,
-          _ = "indeterminate" === _,
-          _ = _ ? _ : _,
-          _ = () => {
-            _ || (_ && __webpack_require__(!!_ || !_));
-          };
+        const { children: _, ..._ } = _;
         return (0, _.jsxs)(_._, {
-          ref: _,
-          role: "checkbox",
-          "aria-checked": _ ? "mixed" : _,
-          "data-state": _(_),
-          className: _()(_.Root, _[`Variant-${_}`], _ && _.Disabled),
-          onClick: _,
-          tabIndex: 0,
-          onKeyDown: (_) => {
-            _ ||
-              (" " === _.key && (_(), _.preventDefault(), _.stopPropagation()));
-          },
           cursor: "default",
-          "aria-disabled": _,
+          gap: "2",
+          className: _.Option,
           ..._,
           children: [
             (0, _.jsx)("div", {
-              className: _.Checkbox,
-              children:
-                _ &&
-                (0, _.jsx)(_, {
-                  className: _.Icon,
-                }),
+              className: _.RadioCircle,
             }),
-            _,
-          ],
-        });
-      }
-      function _(_) {
-        return "indeterminate" === _ ? _ : _ ? "checked" : "unchecked";
-      }
-      function _(_) {
-        return (0, _.jsx)("svg", {
-          viewBox: "0 0 16 16",
-          fill: "none",
-          xmlns: "http://www.w3.org/2000/svg",
-          children: (0, _.jsx)("path", {
-            _: "M14.6663 7.11133H1.33301V9.33355H14.6663V7.11133Z",
-            fill: "currentColor",
-          }),
-        });
-      }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const {
-            children: _,
-            beforeContent: _,
-            afterContent: _,
-            hasValue: _,
-            ..._
-          } = _,
-          _ = (function (_) {
-            const {
-                variant: _ = "default",
-                size: _ = "2",
-                radius: _,
-                focusable: _ = !0,
-                hoverable: _ = !0,
-                clickable: _ = !0,
-                disabled: _,
-                className: _,
-                ..._
-              } = _,
-              _ = "underline" === _ ? "none" : _;
-            return (0, _._)(
-              {
-                ..._,
-                radius: _,
-                className: _()(
-                  _.ControlBox,
-                  _ && !_ && _.Focusable,
-                  _ && !_ && _.Hoverable,
-                  _ && !_ && _.Clickable,
-                  _ && _.Disabled,
-                  _[`Variant-${_}`],
-                  _[`Size-${_}`],
-                  _,
-                ),
-              },
-              _._,
-            );
-          })(_);
-        return (0, _.jsxs)(_._, {
-          ..._,
-          align: "center",
-          "data-has-value": !!_,
-          children: [
-            _ &&
-              (0, _.jsx)(_._, {
-                paddingRight: "2",
-                children: _,
-              }),
             (0, _.jsx)(_._, {
-              flexGrow: "1",
-              minWidth: "0",
               children: _,
             }),
-            _ &&
-              (0, _.jsx)(_._, {
-                paddingLeft: "2",
-                children: _,
-              }),
           ],
         });
       }
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = (0, _.createContext)(null);
-      function _(_) {
-        const { options: _, getOptionLabel: _ = (_) => _, ..._ } = _;
-        return (0, _.jsx)(_.Root, {
-          ..._,
-          children: _.map((_) =>
-            (0, _.jsx)(
-              _.Item,
-              {
-                value: _,
-                children: __webpack_require__(_),
-              },
-              _,
-            ),
-          ),
-        });
-      }
-      function _(_) {
-        return (0, _.jsx)(_._, {
-          className: _.Indicator,
-          radius: _.radius,
-        });
-      }
-      function _(_, _) {
-        const _ = _.compareDocumentPosition(_);
-        return _ & Node.DOCUMENT_POSITION_FOLLOWING
-          ? -1
-          : _ & Node.DOCUMENT_POSITION_PRECEDING
-            ? 1
-            : 0;
-      }
-      (_.Item = function (_) {
-        const { value: _, children: _ } = _,
-          _ = (0, _.useContext)(_),
-          [_, _] = (0, _.useState)(),
-          { register: _, unregister: _ } = _ || {};
-        if (
-          ((0, _.useEffect)(
-            () => (_ && _ && _ ? (_(_, _), () => _(_, _)) : () => {}),
-            [_, _, _, _],
-          ),
-          !_)
-        )
-          return null;
-        const { value: _, onValueChange: _, radius: _, size: _ } = _,
-          _ = _ === _,
-          _ = _ ? void 0 : () => _(_),
-          _ = void 0 === _ ? _ : _;
-        return (0, _.jsx)(_._, {
-          justify: "center",
-          align: "center",
-          radius: _,
-          ref: _,
-          onClick: _,
-          "data-selected": _ ? "true" : "false",
-          className: _()(_.Item, _ && _[`Size-${_}`]),
-          children: _,
-        });
-      }),
-        (_.Root = function (_) {
-          const {
-              variant: _ = "default",
-              radius: _,
-              size: _,
-              children: _,
+      const _ = Object.assign(
+          function (_) {
+            const {
               value: _,
               onValueChange: _,
-            } = _,
-            [_, _] = (0, _.useState)({}),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => ({
-                  ..._,
-                  [_]: _,
-                })),
-              [],
-            ),
-            _ = (0, _.useCallback)(
-              (_, _) =>
-                _((_) => {
-                  const _ = {
-                    ..._,
-                  };
-                  return _[_] === _ && delete _[_], _;
-                }),
-              [],
-            ),
-            _ = (0, _.useMemo)(
-              () => ({
-                value: _,
-                onValueChange: _,
-                register: _,
-                unregister: _,
-                radius: _,
-                size: _,
-              }),
-              [_, _, _, _, _, _],
-            );
-          return (0, _.jsx)(_._, {
-            clickable: !1,
-            hoverable: !1,
-            focusable: !1,
-            variant: _,
-            radius: _,
-            size: _,
-            className: _()(_.SegmentedControlBox, _[`Variant-${_}`]),
-            tabIndex: 0,
-            onKeyDown: (_) => {
-              let _ = 0;
-              switch (_.key) {
-                case " ":
-                case "Enter":
-                case "ArrowRight":
-                  _ = 1;
-                  break;
-                case "ArrowLeft":
-                  _ = -1;
-              }
-              if (_) {
-                const _ = Array.from(Object.values(_)).sort(_);
-                let _;
-                if (null === _) _ = _ > 0 ? 0 : _.length - 1;
-                else {
-                  const _ = _[_],
-                    _ = __webpack_require__.findIndex((_) => _ === _);
-                  (0, _._)(
-                    "number" == typeof _,
-                    "Could not find current segmented value position",
-                  ),
-                    (_ = _ + _);
-                }
-                const _ = _[_ < 0 ? _.length + _ : _ % _.length],
-                  _ = Object.keys(_).find((_) => _[_] === _);
-                "string" != typeof _
-                  ? console.error("Could not find next segmeneted value")
-                  : (_(_), _.stopPropagation(), _.preventDefault());
-              }
-            },
-            children: (0, _.jsx)(_.Provider, {
+              options: _,
+              getOptionLabel: _,
+              ..._
+            } = _;
+            return (0, _.jsx)(_.Root, {
               value: _,
-              children: (0, _.jsxs)("div", {
-                className: _.SegmentedControl,
-                children: [
-                  _,
-                  null !== _ &&
-                    (0, _.jsx)(_, {
-                      radius: _,
-                    }),
-                ],
-              }),
-            }),
-          });
-        });
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { viewBoxSize: _ = 20, ..._ } = _,
-          _ = _.size ? void 0 : _.IconSizeDefault;
-        return (0, _.jsx)("svg", {
-          viewBox: `0 0 ${_} ${_}`,
-          ...(0, _._)(
-            {
-              className: _,
+              onValueChange: _,
               ..._,
+              children: _.map((_) => {
+                const _ = _ ? _(_) : _;
+                return (0, _.jsx)(
+                  _.Option,
+                  {
+                    value: _,
+                    children: _,
+                  },
+                  _,
+                );
+              }),
+            });
+          },
+          {
+            Root: function (_) {
+              const { value: _, onValueChange: _, render: _, ..._ } = _,
+                _ = (0, _.useRef)(null),
+                _ = (0, _.useCallback)((_, _) => {
+                  if (!_.current) return;
+                  const _ = [..._.current.querySelectorAll("[data-radio-id]")];
+                  if (0 !== _.length)
+                    for (let _ = 0; _ < _.length; _++) {
+                      const _ = _[_];
+                      if (!_.dataset.radioId) continue;
+                      if (_.dataset.radioId === _) {
+                        const _ = _[(_ + _ + _.length) % _.length];
+                        _.click(), _.focus();
+                      }
+                    }
+                }, []),
+                _ = (0, _.useCallback)((_) => _(_, 1), [_]),
+                _ = (0, _.useCallback)((_) => _(_, -1), [_]),
+                _ = (0, _.useMemo)(
+                  () => ({
+                    value: _,
+                    onValueChange: _,
+                    onSelectNext: _,
+                    onSelectPrev: _,
+                  }),
+                  [_, _, _, _],
+                ),
+                _ = {
+                  role: "radiogroup",
+                  ref: _,
+                  ..._,
+                },
+                _ = (0, _.jsx)(_._, {
+                  direction: "column",
+                  gap: "2",
+                  role: "radiogroup",
+                  ..._,
+                }),
+                _ = (0, _._)(_, _, _);
+              return (0, _.jsx)(_, {
+                value: _,
+                children: _,
+              });
             },
-            _,
-          ),
-        });
-      }
-      const _ = [
-        ..._._,
-        {
-          prop: "size",
-          responsive: !0,
-          className: (_) => _[`IconSize-${_}`],
-        },
-        {
-          prop: "color",
-          className: _.Color,
-          cssProperty: (_) => ["--icon-color", (0, _._)(_)],
-        },
-        {
-          prop: "hitSlop",
-          className: _.HitSlop,
-          cssProperty: (_) => [
-            "--hit-slop-custom",
-            "string" == typeof _ ? _ : "",
-          ],
-        },
-        _._.find(({ prop: _ }) => "cursor" === _),
-      ];
-    },
-    chunkid: (module, module_exports, __webpack_require__) => {
-      "use strict";
-      __webpack_require__._(module_exports, {
-        _: () => _,
-      });
-      var _ = __webpack_require__("chunkid");
-      function _(_, _, _) {
-        return "function" == typeof _ ? _(_, _) : _.cloneElement(_, _);
-      }
-      function _(_, _, _, _) {
-        return _(_ || _, _, _);
-      }
+            Option: function (_) {
+              const { value: _, ref: _, children: _, render: _ } = _,
+                _ = (0, _.useContext)(_),
+                _ = (0, _.useId)();
+              if (!_)
+                return (
+                  console.error(
+                    "<RadioGroup.Option> must be rendered within a <RadioGroup.Root>",
+                  ),
+                  null
+                );
+              const {
+                  value: _,
+                  onValueChange: _,
+                  onSelectNext: _,
+                  onSelectPrev: _,
+                } = _,
+                _ = _ === _,
+                _ = () => {
+                  _ || _(_);
+                },
+                _ = {
+                  role: "radio",
+                  "aria-checked": _,
+                  "data-radio-id": _,
+                  onClick: _,
+                  onKeyDown: (_) => {
+                    switch (_.key) {
+                      case " ":
+                        _(), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowRight":
+                      case "ArrowDown":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                        break;
+                      case "ArrowLeft":
+                      case "ArrowUp":
+                        _(_), _.preventDefault(), _.stopPropagation();
+                    }
+                  },
+                  tabIndex: _ ? 0 : -1,
+                  ref: _,
+                  children: _,
+                },
+                _ = (0, _.jsx)(_, {});
+              return (0, _._)(_, _, _, {
+                bSelected: _,
+              });
+            },
+          },
+        ),
+        _ = (0, _.createContext)(null);
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -32479,6 +32653,46 @@
                 }
               : {}
           : {};
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { text: _ } = _;
+        return _
+          ? (0, _.jsx)(_, {
+              text: _,
+            })
+          : null;
+      }
+      function _(_) {
+        const { text: _ } = _,
+          _ = (0, _.useMemo)(() => {
+            const _ = {
+              ..._._,
+              ..._._,
+              ..._._,
+              url: {
+                Constructor: _._,
+              },
+            };
+            return new _._(_, (_) => new _._(new _._()), _._.LANGUAGE);
+          }, []);
+        return (0, _.jsx)(_.Fragment, {
+          children: __webpack_require__.ParseBBCode(_, void 0),
+        });
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -32881,6 +33095,30 @@
                 }),
               });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      function _(_) {
+        return _.map((_) => _.unique_id)
+          .sort()
+          .join("_");
+      }
+      function _(_) {
+        return _.sort().join("_");
+      }
+      function _(_) {
+        return _.tuple_id.split("_").map((_) => Number(_));
+      }
+      function _(_, _, _) {
+        const _ = _(_).filter((_) => _ != _);
+        return _.push(_), _(_);
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+        _: () => _,
+        _: () => _,
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

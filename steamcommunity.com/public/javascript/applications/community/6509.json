@@ -145,7 +145,7 @@
     "ContentReportReason_GenderedNonConsensualMaterial": "女性に対する非合意のコンテンツ",
     "ContentReportReason_FakedGenderedNonConsensualMaterial": "ディープフェイクによる女性に対する非合意のコンテンツ",
     "ContentReportReason_FakedNonConsensualMaterial": "ディープフェイクによる非合意のコンテンツ",
-    "ContentReportReason_Gendered": "Targeted at women",
+    "ContentReportReason_Gendered": "女性を標的にした攻撃",
     "ContentReportReason_Deepfake": "ディープフェイク",
     "ContentReportSubmitted_Title": "報告を送信しました",
     "ContentReportSubmitted_Description": "ご報告いただきありがとうございました。送信が完了し、この報告はモデレーションプロセスに入ります。",

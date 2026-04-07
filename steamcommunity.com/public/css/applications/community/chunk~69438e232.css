@@ -6644,11 +6644,11 @@ div._3NW5vEM9HgfQrgR4W-Xy_s {
 ._2LyGIHuQ8SFKb5T262YUvg {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
   margin-bottom: 10px;
   padding: 12px;
   transition: height 0.5s;
-  background-color: #0e141b;
+  background-color: #23262e;
+  border-radius: 2px;
 }
 ._2LyGIHuQ8SFKb5T262YUvg.GamepadMode,
 .GamepadMode ._2LyGIHuQ8SFKb5T262YUvg {

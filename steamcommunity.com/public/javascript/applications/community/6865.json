@@ -145,7 +145,7 @@
     "ContentReportReason_GenderedNonConsensualMaterial": "Materiál související se ženami zveřejněný bez souhlasu",
     "ContentReportReason_FakedGenderedNonConsensualMaterial": "Deepfake materiál související se ženami zveřejněný bez souhlasu",
     "ContentReportReason_FakedNonConsensualMaterial": "Deepfake materiál zveřejněný bez souhlasu",
-    "ContentReportReason_Gendered": "Cílené obtěžování žen",
+    "ContentReportReason_Gendered": "Cíleno na ženy",
     "ContentReportReason_Deepfake": "Deepfake obsah",
     "ContentReportSubmitted_Title": "Nahlášení bylo odesláno",
     "ContentReportSubmitted_Description": "Děkujeme Vám za odeslání nahlášení, které bude nyní přezkoumáno.",

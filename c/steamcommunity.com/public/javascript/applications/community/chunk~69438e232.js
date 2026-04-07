@@ -9556,9 +9556,16 @@
         return (
           _ &&
             (function (_, _, _) {
-              _
-                ? _.push((0, _._)(_, "header"), (0, _._)(_, "main_capsule"))
-                : _.push((0, _._)(_, "main_capsule"), (0, _._)(_, "header"));
+              var _, _;
+              const _ =
+                  null !== (_ = (0, _._)(_, "header_2x")) && void 0 !== _
+                    ? _
+                    : (0, _._)(_, "header"),
+                _ =
+                  null !== (_ = (0, _._)(_, "main_capsule_2x")) && void 0 !== _
+                    ? _
+                    : (0, _._)(_, "main_capsule");
+              _ ? _.push(_, _) : _.push(_, _);
             })(_, _, _),
           __webpack_require__.filter((_) => !!_)
         );
@@ -9682,79 +9689,15 @@
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      const _ = {};
-      (_.arabic = () =>
-        __webpack_require__._("chunkid").then(_._.bind(_, 93695, 19))),
-        (_.brazilian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 41091, 19))),
-        (_.bulgarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 89180, 19))),
-        (_.czech = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 21514, 19))),
-        (_.danish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 45598, 19))),
-        (_.dutch = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 55971, 19))),
-        (_.english = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 67217, 19))),
-        (_.finnish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 27686, 19))),
-        (_.french = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 7623, 19))),
-        (_.german = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 97757, 19))),
-        (_.greek = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 46345, 19))),
-        (_.hungarian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 5600, 19))),
-        (_.indonesian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 51163, 19))),
-        (_.italian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 71913, 19))),
-        (_.japanese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 79872, 19))),
-        (_.koreana = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
-        (_.latam = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
-        (_.norwegian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
-        (_.polish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 97890, 19))),
-        (_.portuguese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 21810, 19))),
-        (_.romanian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 75500, 19))),
-        (_.russian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 72268, 19))),
-        (_.schinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 85951, 19))),
-        (_.spanish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 28265, 19))),
-        (_.swedish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 82248, 19))),
-        (_.tchinese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 62020, 19))),
-        (_.thai = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 67841, 19))),
-        (_.turkish = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 94921, 19))),
-        (_.ukrainian = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 11667, 19))),
-        (_.vietnamese = () =>
-          __webpack_require__._("chunkid").then(_._.bind(_, 74528, 19)));
-      const _ = (0, _._)(async function (_) {
-        if (_[_]) return _[_]();
-      });
-      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { closeModal: _ } = _;
         return (0, _.jsx)(_._, {
-          strTitle: _.Localize("#LoginRedirect_Dialog_Title"),
-          strDescription: _.Localize("#LoginRedirect_Dialog_Description"),
+          strTitle: _._.Localize("#LoginRedirect_Dialog_Title"),
+          strDescription: _._.Localize("#LoginRedirect_Dialog_Description"),
           closeModal: _,
           onOK: () => {
             window.location.href = `${_._.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`;
@@ -10126,6 +10069,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -10202,7 +10146,7 @@
                 return () => window.clearTimeout(_);
               }
               _(!0);
-            } else _(!1);
+            } else (0, _._)() || _(!1);
           }, [_]),
           _.useEffect(() => {
             if (!_) return;
@@ -11004,6 +10948,77 @@
           }),
         });
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid");
+      const _ = {};
+      (_.arabic = () =>
+        __webpack_require__._("chunkid").then(_._.bind(_, 93695, 19))),
+        (_.brazilian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 41091, 19))),
+        (_.bulgarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 89180, 19))),
+        (_.czech = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 21514, 19))),
+        (_.danish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 45598, 19))),
+        (_.dutch = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 55971, 19))),
+        (_.english = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 67217, 19))),
+        (_.finnish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 27686, 19))),
+        (_.french = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 7623, 19))),
+        (_.german = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 97757, 19))),
+        (_.greek = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 46345, 19))),
+        (_.hungarian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 5600, 19))),
+        (_.indonesian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 51163, 19))),
+        (_.italian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 71913, 19))),
+        (_.japanese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 79872, 19))),
+        (_.koreana = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 12322, 19))),
+        (_.latam = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94954, 19))),
+        (_.norwegian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 48341, 19))),
+        (_.polish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 97890, 19))),
+        (_.portuguese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 21810, 19))),
+        (_.romanian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 75500, 19))),
+        (_.russian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 72268, 19))),
+        (_.schinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 85951, 19))),
+        (_.spanish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 28265, 19))),
+        (_.swedish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 82248, 19))),
+        (_.tchinese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 62020, 19))),
+        (_.thai = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 67841, 19))),
+        (_.turkish = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 94921, 19))),
+        (_.ukrainian = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 11667, 19))),
+        (_.vietnamese = () =>
+          __webpack_require__._("chunkid").then(_._.bind(_, 74528, 19)));
+      const _ = (0, _._)(async function (_) {
+        if (_[_]) return _[_]();
+      });
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -14875,7 +14890,7 @@
                 return (
                   !!_ &&
                   !!_.is_creator_home &&
-                  (_ || (!_ && _._.NOW > _) || (_ && _.postTime > _))
+                  (_ || (!_ && _._.NOW > _) || (_ && _.createTime > _))
                 );
               })(_, _)),
           _
@@ -18886,6 +18901,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
@@ -18943,6 +18959,14 @@
           if (null != _ && _ != _._)
             return {
               appid: _,
+            };
+        }, [_]);
+      }
+      function _(_) {
+        return (0, _.useMemo)(() => {
+          if (null != _ && _ != _._)
+            return {
+              packageid: _,
             };
         }, [_]);
       }
@@ -28694,8 +28718,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid");
       function _(_) {
         const { _: _, className: _ } = _,
           _ = (0, _._)(),
@@ -28733,7 +28757,7 @@
               return (0, _.jsx)("div", {
                 className: (0, _._)(_().ActionOutOfStock, _),
                 children: (0, _.jsxs)("span", {
-                  children: [" ", (0, _._)("#Sale_ReserveExhausted")],
+                  children: [" ", _._.Localize("#Sale_ReserveExhausted")],
                 }),
               });
           } else if (_ && _.included_appids && _.included_appids.length > 1)
@@ -28748,7 +28772,9 @@
                 onClick: (_) => (0, _._)(_, _),
                 className: (0, _._)(_().Action, _),
                 children: (0, _.jsx)("span", {
-                  children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
+                  children: _._.Localize(
+                    "#EventDisplay_CallToAction_VisitStore",
+                  ),
                 }),
               });
             }
@@ -28774,7 +28800,7 @@
                   (0, _.jsx)("button", {
                     className: (0, _._)(_().Action, _),
                     type: "submit",
-                    children: (0, _._)(
+                    children: _._.Localize(
                       "#EventDisplay_CallToAction_AddToAccount",
                     ),
                   }),
@@ -28783,12 +28809,12 @@
             }
           }
           if ((_ || _) && !_.is_coming_soon) {
-            let _ = (0, _._)("#EventDisplay_CallToAction_PlayNowForFree");
+            let _ = _._.Localize("#EventDisplay_CallToAction_PlayNowForFree");
             return (
               _
-                ? (_ = (0, _._)("#EventDisplay_CallToAction_PlayNow"))
+                ? (_ = _._.Localize("#EventDisplay_CallToAction_PlayNow"))
                 : _.is_free_temporarily &&
-                  (_ = (0, _._)("#EventDisplay_CallToAction_AddToAccount")),
+                  (_ = _._.Localize("#EventDisplay_CallToAction_AddToAccount")),
               (0, _.jsx)("div", {
                 className: (0, _._)(_().Action, _),
                 onClick: _,
@@ -28802,7 +28828,7 @@
             return (0, _.jsx)("a", {
               href: _,
               className: (0, _._)(_().Action, _),
-              children: (0, _._)("#EventDisplay_CallToAction_VisitStore"),
+              children: _._.Localize("#EventDisplay_CallToAction_VisitStore"),
             });
         }
         return (0, _.jsx)(_, {
@@ -28828,7 +28854,7 @@
           className: (0, _._)(_().Action, _),
           onClick: () => _(),
           children: (0, _.jsx)("span", {
-            children: (0, _._)("#Store_AddToCart"),
+            children: _._.Localize("#Store_AddToCart"),
           }),
         });
       }
@@ -42187,7 +42213,8 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -42256,10 +42283,11 @@
           super(...arguments), (this.m_refAnchor = _.createRef());
         }
         ClosePopup() {
-          this.m_fnHidePopup &&
-            (this.m_fnHidePopup(),
-            (this.m_fnHidePopup = null),
-            window.removeEventListener("scroll", this.OnScroll));
+          (0, _._)() ||
+            (this.m_fnHidePopup &&
+              (this.m_fnHidePopup(),
+              (this.m_fnHidePopup = null),
+              window.removeEventListener("scroll", this.OnScroll)));
         }
         componentWillUnmount() {
           this.ClosePopup();

@@ -207,6 +207,7 @@
     "AssetProperty_Range_MinPlaceholder": "Min.",
     "AssetProperty_Range_MaxPlaceholder": "Max.",
     "Accessories_FieldSectionLabel": "Accessoires",
+    "AccessoriesList_Title": "Accessoires",
     "Item_CountryBuySellRestricted": "Vous ne pouvez pas acheter cet article car l'achat et la vente de ce type d'article sont désactivés dans votre pays.",
     "Item_CountryBuyRestricted": "L'achat de ce type d'item a été désactivé dans votre pays.",
     "Listing_EnhancedAppearance_Missing": "Cette offre n'a pas encore d'images uniques ou améliorées. L'image présentée ici peut différer légèrement de l'item proposé.",
