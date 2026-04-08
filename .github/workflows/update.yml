@@ -71,6 +71,7 @@ jobs:
             .support
             store.steampowered.com/ssr
             partner.steamgames.com/ssr
+            steamcommunity.com/ssr
           key: cache-
           restore-keys: |
             cache-
