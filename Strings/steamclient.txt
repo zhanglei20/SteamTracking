@@ -1038,7 +1038,6 @@
 ">\n,CScreensaver_ActiveStateChanged_Notification
 "????'????????????????????????????????????????????????????\????
 "?\n$CMsgClientReportOverlayDetourFailure
-"?\n&CGameRecording_TakeScreenshot_Response
 "?\n(CSteamTV_FollowBroadcastChannel_Response
 "?\n(CTransportValidation_AddNumbers_Response
 "@\n(CChatRoom_UpdateMessageReaction_Response
@@ -3911,6 +3910,7 @@ $steammessages_parental_objects.proto"
 (\t"<\n,CTransportValidation_NotifyText_Notification
 (\t"=\n.CEcon_ClientGetItemShopOverlayAuthURL_Response
 (\t"?\n"CBroadcast_StartBuildClip_Response
+(\t"?\n&CGameRecording_TakeScreenshot_Response
 (\t"?\n*CAuthentication_GetAuthSessionInfo_Request
 (\t"?\n=CAccountHardware_CompleteSteamControllerRegistration_Response"j\n8CAccountHardware_QueryAccountsRegisteredToSerial_Request
 (\t"@\n&CCloud_ClientCommitFileUpload_Response
@@ -4048,7 +4048,7 @@ $steammessages_parental_objects.proto"
 (\v2".StoreItem.PurchaseOption.Discount
 (\v2#.CContentServerDirectory_ServerInfo
 (\v2#.CGameRecording_ExportClip_Settings
-(\v2#.CGameRecording_ExportClip_Settings"i\n%CGameRecording_TakeScreenshot_Request
+(\v2#.CGameRecording_ExportClip_Settings"
 (\v2#.CMsgBluetoothManagerAdapterDetails"8\n*CBluetoothManager_GetDeviceDetails_Request
 (\v2#.CMsgClientGetClientDetailsResponse
 (\v2#.CMsgSteamDatagramCertificateSigned
@@ -7956,11 +7956,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-0123456789.
-0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
+0123456789
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11490,11 +11490,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+200M
 2019
 2048
 20000
 2000000
-200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -13685,6 +13685,7 @@ $steammessages_parental_objects.proto"
 33CSystemManager_WriteFile_Response
 33CTimedTrial_ResetPlaytime_Request
 33CTransportSignalMsg_WebRTCMessage
+33CTritonDongleDisconnectedWorkItem
 33CVDFControllerMappingErrorHandler
 33CVideo_ClientGetVideoURL_Response
 33CVideo_GetVideoBookmarks_Response
@@ -16333,7 +16334,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hd#\
 9IClientVR
 9IGv
 9ISteamUGC
@@ -39893,6 +39893,7 @@ Zulu
 \n%CFriendMessages_ReportMessage_Request
 \n%CFriendMessages_ResolveReport_Request
 \n%CGameRecording_GetThumbnails_Response
+\n%CGameRecording_TakeScreenshot_Request
 \n%CGameServers_GameServerQuery_Response
 \n%CGameServers_IPsWithSteamIDs_Response
 \n%CMsgClientLANP2PRequestChunksResponse
@@ -47317,7 +47318,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen"
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -58898,6 +58899,7 @@ sounds_showonline
 source
 source_build_id
 source_buildid
+source_clip_id
 source_code_info
 source_driver_desc
 source_gpu_desc
@@ -59208,7 +59210,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr  7 2026 01:10:37
+steam Apr  7 2026 20:56:05
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

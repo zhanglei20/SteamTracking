@@ -1715,7 +1715,6 @@ $ffn
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-01:10:21
 08bX
 0?0L
 0A/8
@@ -2098,7 +2097,6 @@ $ffn
 14ConCommandBase
 14ISSLConnection
 1536
-15000
 155.133.240.0/23
 15CEC25519KeyBase
 15CJobPromiseBase
@@ -2140,7 +2138,6 @@ $ffn
 17RefCountPvWrapperI16CStructNetPacketE
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
-18446744073709551615
 18CBaseFrameFunction
 18CFutureSharedStateIbE
 18CHTTPClientRequest
@@ -2211,8 +2208,11 @@ $ffn
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
 2000
 2048
+15000
+18446744073709551615
 208.64.200.0/22
 208.78.164.0/22
+20:55:52
 20CCDDBAppDetailCommon
 20CClientModuleManager
 20CClientSecureDesktop
@@ -2397,7 +2397,6 @@ $ffn
 5000
 50CWebSocketConnectionDelayedCloseConnectionWorkItem
 50UserContentDescriptorPreferences_ContentDescriptor
-524288
 52F*
 55Ly
 55j_WW
@@ -2418,11 +2417,14 @@ $ffn
 6#6165676;6M6O6S6Y6a6k6m6
 6*Fc7
 6-nn
-60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 6144
 64CK\vH
+8000
+8192
 65536
+524288
+60000000
 666666666666666666666666666666666666666666666666
 6CStatTIN16SteamThreadTools12CThreadMutexEE
 6CStatTIN16SteamThreadTools16CThreadNullMutexEE
@@ -2473,8 +2475,6 @@ $ffn
 7~8A
 8.K%G
 8/A0
-8000
-8192
 82\n:XPH
 88n|
 88pH

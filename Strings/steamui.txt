@@ -783,7 +783,6 @@
 ">\n)CGameNotifications_CreateSession_Response
 ">\n,CScreensaver_ActiveStateChanged_Notification
 "????'????????????????????????????????????????????????????\????
-"?\n&CGameRecording_TakeScreenshot_Response
 "?\n(CSteamTV_FollowBroadcastChannel_Response
 "?\n(CTransportValidation_AddNumbers_Response
 "@\n(CChatRoom_UpdateMessageReaction_Response
@@ -3440,6 +3439,7 @@ ${LANGUAGE}
 (\t"<\n,CTransportValidation_NotifyText_Notification
 (\t"=\n.CEcon_ClientGetItemShopOverlayAuthURL_Response
 (\t"?\n"CBroadcast_StartBuildClip_Response
+(\t"?\n&CGameRecording_TakeScreenshot_Response
 (\t"?\n*CAuthentication_GetAuthSessionInfo_Request
 (\t"?\n=CAccountHardware_CompleteSteamControllerRegistration_Response"j\n8CAccountHardware_QueryAccountsRegisteredToSerial_Request
 (\t"@\n&CCloud_ClientCommitFileUpload_Response
@@ -3569,7 +3569,7 @@ ${LANGUAGE}
 (\v2".StoreItem.PurchaseOption.Discount
 (\v2#.CContentServerDirectory_ServerInfo
 (\v2#.CGameRecording_ExportClip_Settings
-(\v2#.CGameRecording_ExportClip_Settings"i\n%CGameRecording_TakeScreenshot_Request
+(\v2#.CGameRecording_ExportClip_Settings"
 (\v2#.CMsgBluetoothManagerAdapterDetails"8\n*CBluetoothManager_GetDeviceDetails_Request
 (\v2#.CMsgStorageDevicesData.BlockDevice
 (\v2#.CMsgSystemAudioVolume.ChannelEntry
@@ -6935,10 +6935,10 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:5028
-/data/src/steamUI/gamerecordingcontroller.cpp:5128
-/data/src/steamUI/gamerecordingcontroller.cpp:6439
-/data/src/steamUI/gamerecordingcontroller.cpp:6514
+/data/src/steamUI/gamerecordingcontroller.cpp:5058
+/data/src/steamUI/gamerecordingcontroller.cpp:5158
+/data/src/steamUI/gamerecordingcontroller.cpp:6479
+/data/src/steamUI/gamerecordingcontroller.cpp:6554
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/../../common/callbacklist.h
 /data/src/steamUI/gamestream/audiorecorder.cpp
@@ -7302,7 +7302,6 @@ ${LANGUAGE}
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8875,7 +8874,20 @@ ${LANGUAGE}
 16StoreItem_Assets
 16UserAccount_Stub
 16VideoClient_Stub
+2000
+2019
+2048
+3072
+3333
+4000
+4096
+5000
+30000
+333333
+524288
+33554432
 1724792014
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 17Achievements_Stub
 17CClientWalletInfo
 17CCrossProcessPipe
@@ -9303,10 +9315,7 @@ ${LANGUAGE}
 2/YDc~-0
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
-2000
 200M
-2019
-2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -10540,8 +10549,6 @@ ${LANGUAGE}
 3.CSteamInputService_ShouldTritonPairInOobe_Response
 3.CSteamNotification_PreferencesUpdated_Notification
 30!]^JV
-3072
-30000
 30CAchievements_GetInfo_Response
 30CBluetoothManager_Pair_Request
 30CBroadcast_GetRTMPInfo_Request
@@ -10778,11 +10785,8 @@ ${LANGUAGE}
 32SiteServerUI_SetLanguage_Request
 32StoreItem_Screenshots_Screenshot
 32UserContentDescriptorPreferences
-3333
-333333
 3333UUUU
 333?
-33554432
 33CAdditionalParentalBlocksListener
 33CBluetoothManager_Connect_Request
 33CBluetoothManager_Forget_Response
@@ -11451,8 +11455,6 @@ ${LANGUAGE}
 4.CTransportValidation_TriggerSyntheticEvents_Request
 4.hr\F
 40 Mbps
-4000
-4096
 40CAudio_PlaySpeakerTestOnChannel_Response
 40CBluetoothManager_SetDiscovering_Request
 40CBluetoothManager_SetWakeAllowed_Request
@@ -12251,7 +12253,6 @@ ${LANGUAGE}
 5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
 5.ChatRoomClient_NotifyChatRoomDisconnect_Notification
-5000
 50026B72828F405A
 50CAccountHardware_DeRegisterSteamController_Request
 50CAccountHardware_SteamControllerGetConfig_Response
@@ -12323,7 +12324,6 @@ ${LANGUAGE}
 51CSteamInputService_GyroSoftwareCalibration_Response
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
-524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -12589,6 +12589,7 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
+6144
 60000000
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -12599,7 +12600,6 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
-6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -14352,7 +14352,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  7 2026 01:10:44
+Apr  7 2026 20:56:07
 April
 Arabic
 AreFilesInSubscriptionList
@@ -17874,6 +17874,7 @@ Can't change job type once it has been set
 Can't discard critical data on CRC error
 Can't get here.
 Can't get here: failed to get default value as string
+Can't get timestamp %llu for clip %s
 Can't happen
 Can't print proto content: proto type
 Can't reach
@@ -25034,6 +25035,8 @@ Missing low surrogate.
 Missing name.
 Missing parameter when saving clip
 Missing source clip %s when saving clip
+Missing source clip %s when taking screenshot
+Missing timeline %s in clip %s when taking screenshot
 Missing update files
 MkL\f
 Mobile (Degica)
@@ -30958,6 +30961,7 @@ Too many logon attempts
 Too many parameters in URL regex routing rule for %s
 Too many params expected for CHTTPRequestJob
 Too many pending
+Too many timestamps (%d) passed to YldGetThumbnails for clip %s
 Too much image data
 ToolPanel
 ToolWindow
@@ -32954,6 +32958,7 @@ Zulu
 \n%CFriendMessages_ReportMessage_Request
 \n%CFriendMessages_ResolveReport_Request
 \n%CGameRecording_GetThumbnails_Response
+\n%CGameRecording_TakeScreenshot_Request
 \n%CGameServers_GameServerQuery_Response
 \n%CGameServers_IPsWithSteamIDs_Response
 \n%CMsgClientLANP2PRequestChunksResponse
@@ -52342,6 +52347,7 @@ sounds_showmessages
 sounds_showonline
 source
 source_build_id
+source_clip_id
 source_code_info
 source_context
 source_driver_desc
