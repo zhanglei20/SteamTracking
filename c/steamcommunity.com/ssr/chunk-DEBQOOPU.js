@@ -91,7 +91,7 @@ function _(_, _) {
   }
   return _ && (_ = _.concat(_)), _;
 }
-function _(_) {
+function _(_, _) {
   let _ = [0];
   switch ((_.logged_in && (_ = [..._, 3, 4, 2]), _)) {
     case "mtxitems":
@@ -100,7 +100,7 @@ function _(_) {
       _ = [..._, 1];
       break;
   }
-  return _;
+  return _ && (_ = [..._, 5]), _;
 }
 function _(_) {
   let _ = new URLSearchParams();
@@ -150,6 +150,10 @@ function _(_) {
       _.childpublishedfileid.length != 0 &&
       _.set("childpublishedfileid", _.childpublishedfileid),
     _.special_filter && _.set("special_filter", _.special_filter.toString()),
+    _.appids_required_for_use?.length &&
+      _.appids_required_for_use?.forEach((_) =>
+        _.append("appids_required_for_use[]", _.toString()),
+      ),
     _.admin_view && _.set("admin_view", "1"),
     _
   );
@@ -213,6 +217,8 @@ function _(_, _) {
     _.section && (_.section = _.section),
     _.num_per_page && (_.num_per_page = _.num_per_page),
     _.special_filter && (_.special_filter = _.special_filter),
+    _.appids_required_for_use &&
+      (_.appids_required_for_use = _.appids_required_for_use),
     _
   );
 }
@@ -231,6 +237,7 @@ function _(_) {
     (_.created_date_range_filter_end = _.date_range_created?.timestamp_end),
     (_.updated_date_range_filter_start = _.date_range_updated?.timestamp_start),
     (_.updated_date_range_filter_end = _.date_range_updated?.timestamp_end),
+    (_.appids_required_for_use = _.appids_required_for_use),
     _
   );
 }
@@ -9694,7 +9701,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       super(),
         _.prototype.queryid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [4, 5, 15], null);
+        _.Message.initialize(this, _, 0, -1, [4, 5, 15, 17], null);
     }
     static sm_m;
     static sm_mbf;
@@ -9779,6 +9786,14 @@ var _ = class _ extends _.Message {
                 _: 16,
                 _: _.readEnum,
                 _: _.writeEnum,
+              },
+              appids_required_for_use: {
+                _: 17,
+                _: !0,
+                _: !0,
+                _: _.readUint32,
+                pbr: _.readPackedUint32,
+                _: _.writeRepeatedUint32,
               },
               num_per_page: {
                 _: 14,
@@ -13278,7 +13293,7 @@ function _() {
     return !_ || typeof _ != "object"
       ? {
           bOptedIn: !1,
-          numResultsPerPage: 32,
+          numResultsPerPage: 30,
         }
       : _;
   } catch {}
@@ -13563,6 +13578,7 @@ function _(_) {
     })
   );
 }
+var _ = (0, _.createContext)(void 0);
 function _(_) {
   let { bSelected: _, text: _, children: _ } = _,
     [_, _] = (0, _.useState)(!1),
@@ -13597,7 +13613,12 @@ function _(_) {
         children: (0, _.jsx)("div", {
           children: (0, _.jsx)("div", {
             className: _,
-            children: _,
+            children: (0, _.jsx)(_.Provider, {
+              value: {
+                onMenuItemSelected: () => _(!1),
+              },
+              children: _,
+            }),
           }),
         }),
       }),
@@ -13664,6 +13685,7 @@ function _() {
 function _() {
   let { app: _, workshopConfig: _ } = _.useLoaderData(),
     { onBrowseHandler: _, onSearchTextUpdatedExternally: _ } = _(),
+    { onMenuItemSelected: _ } = (0, _.useContext)(_),
     _ = (0, _.useCallback)(
       (_, _, _) => {
         _({
@@ -13672,9 +13694,10 @@ function _() {
           special_filter: _,
           search_text: "",
         }),
-          _("");
+          _(""),
+          _();
       },
-      [_, _],
+      [_, _, _],
     ),
     _ = (0, _.useCallback)((_) => {
       window.location.href = _;
@@ -13970,6 +13993,7 @@ function _() {
   });
 }
 export {
+  _,
   _,
   _,
   _,

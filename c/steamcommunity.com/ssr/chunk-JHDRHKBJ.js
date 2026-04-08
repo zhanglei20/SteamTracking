@@ -52,20 +52,26 @@ var _ = "ZuItuUW6wbA-";
 var _ = "ytngwseR2jE-";
 var _ = "ZNBA7PzLeas-";
 var _ = "_5n8C6PyeXq8-";
+var _ = "_9Xx1E2Gd668-";
+var _ = "mkxmUdOoPsY-";
 var _ = "_8LcK6XOQGOs-";
 var _ = "oTwwpJZZa-0-";
 var _ = "N5sE26cvGKA-";
+var _ = "WwXAMjaND98-";
 var _ = "WraTymZMbqA-";
 var _ = "y6QwltyQEdM-";
 var _ = "LLqx1ozATnk-";
 var _ = "eU5-MV-2cGg-";
 var _ = "yIDj-7dpZ9E-";
+var _ = "ZKaFvriA7TU-";
+var _ = "_1-q2VaywILI-";
 var _ = "jsbOFi7I2qw-";
 var _ = "wXnTKUQ7ghw-";
 var _ = "xlblibmgakI-";
 var _ = "IWuRd9gm2ps-";
 var _ = "_2qfvJ2pXZqA-";
 var _ = "e0ByZLGE2w0-";
+var _ = "_6hdwAAu2BGU-";
 var _ = _(_(), 1);
 var _ = "tmIrUKf-Mh8-";
 var _ = "sDK5fonBQMA-";
@@ -866,7 +872,7 @@ var _ = _(_(), 1);
 function _(_) {
   let { details: _ } = _,
     { data: _ } = _(_.creator),
-    _ = _(_),
+    _ = _(_) + `/myworkshopfiles/?appid=${_.consumer_appid}`,
     _ = _?.public_data?.persona_name;
   return !_ || !_
     ? (0, _.jsx)("div", {
@@ -10064,10 +10070,10 @@ function _(_) {
   });
 }
 function _(_) {
-  let { contributor: _ } = _,
+  let { contributor: _, appid: _ } = _,
     _ = _(_.steamid);
   if (!_.data) return;
-  let _ = _(_.data),
+  let _ = _(_.data) + `/myworkshopfiles/?appid=${_}`,
     _ = _.data?.public_data?.persona_name ?? "";
   return (0, _.jsx)(_, {
     toolTipContent: _,
@@ -10102,6 +10108,7 @@ function _(_) {
             _,
             {
               contributor: _,
+              appid: _.consumer_appid,
             },
             _.steamid,
           ),
@@ -10109,6 +10116,7 @@ function _(_) {
       _.data.contributors.length == 0 &&
         (0, _.jsx)(_, {
           contributor: _,
+          appid: _.consumer_appid,
         }),
     ],
   });
@@ -10733,9 +10741,9 @@ function _(_) {
               (_.special_filter = _.special_filter),
               (_.required_tags = _.required_tags),
               (_.excluded_tags = _.excluded_tags))
-            : ((_.search_text && _.search_text != _.search_text) ||
-                _.browse_sort) &&
-              (_.page = 1),
+            : (_.search_text && _.search_text != _.search_text) || _.browse_sort
+              ? (_.page = 1)
+              : _.special_filter == 5 && (_.browse_sort = "reported"),
           (_.omitted_flags = void 0),
           _.browse_sort)
         ) {
@@ -10794,11 +10802,16 @@ function _(_) {
           children: (0, _.jsxs)(_, {
             children: [
               (0, _.jsxs)(_, {
-                direction: "row",
+                direction: {
+                  initial: "column",
+                  _: "row",
+                },
+                align: "start",
+                justify: "between",
                 children: [
                   (0, _.jsx)(_, {
                     size: {
-                      initial: "3",
+                      initial: "4",
                       _: "5",
                     },
                     children: (0, _.jsxs)(_, {
@@ -10901,8 +10914,8 @@ function _(_) {
 }
 function _(_) {
   let _ = _();
-  return (0, _.jsx)(_, {
-    accentColor: "orange",
+  return (0, _.jsx)("div", {
+    className: _,
     children: (0, _.jsx)(_, {
       size: "1",
       color: "accent",
@@ -11251,6 +11264,48 @@ function _(_) {
     ),
   });
 }
+function _(_) {
+  let { appid: _, rgRequiredAppIDs: _ } = _,
+    { onBrowseHandler: _ } = _(),
+    { data: _ } = _({
+      appid: _,
+    }),
+    _ = (0, _.useCallback)(() => {
+      let _ = _?.filter((_) => _ !== _);
+      _({
+        appids_required_for_use: _,
+        page: 1,
+      });
+    }, [_, _, _]);
+  if (!_?.name) return null;
+  let _ = _.Localize("#Workshop_RequiredDLC_Filter", _?.name ?? _.toString());
+  return (0, _.jsxs)(_, {
+    onClick: _,
+    color: "dull",
+    size: "1",
+    children: [
+      _,
+      (0, _.jsx)(_, {
+        className: _,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { rgRequiredAppIDs: _ } = _;
+  return (0, _.jsx)(_.Fragment, {
+    children: _.map((_) =>
+      (0, _.jsx)(
+        _,
+        {
+          appid: _,
+          rgRequiredAppIDs: _,
+        },
+        _,
+      ),
+    ),
+  });
+}
 function _(_, _) {
   return !_ || ((_.timestamp_start || 0) == 0 && (_.timestamp_end || 0) == 0)
     ? null
@@ -11328,15 +11383,21 @@ function _(_) {
           onClose: _,
           children: [
             (0, _.jsxs)(_, {
+              maxWidth: "500px",
               children: [
-                (0, _.jsx)("div", {
-                  children: _.Localize("#Workshop_Saved_Queries_Save_Title"),
+                (0, _.jsx)(_, {
+                  _: "p",
+                  children: _.Localize(
+                    "#Workshop_Saved_Queries_Save_Desc_Long",
+                  ),
                 }),
                 (0, _.jsx)(_, {
+                  placeholder: _.Localize("#Workshop_Saved_Queries_Save_Title"),
                   value: _,
                   onTextChange: _,
                 }),
-                (0, _.jsx)("div", {
+                (0, _.jsx)(_, {
+                  _: "p",
                   children: _.Localize("#Workshop_Saved_Queries_Save_Desc"),
                 }),
                 (0, _.jsx)(_, {
@@ -11449,6 +11510,16 @@ function _(_) {
           "special_filter",
         ),
       ),
+    _.appids_required_for_use?.length &&
+      _.push(
+        (0, _.jsx)(
+          _,
+          {
+            rgRequiredAppIDs: _.appids_required_for_use ?? [],
+          },
+          "appids_required_for_use",
+        ),
+      ),
     _.admin_view && _.push((0, _.jsx)(_, {}, "admin_view"));
   {
     let _ = _("#Workshop_DateFilter_TimeCreated", _.date_range_created);
@@ -11502,25 +11573,30 @@ function _(_) {
           "saved_query",
         ),
       ),
-    (0, _.jsxs)("div", {
+    (0, _.jsx)("div", {
       className: _,
-      children: [
-        (0, _.jsx)("div", {
-          className: _,
-          children: _.LocalizePlural(
-            "#Workshop_NumResults",
-            _.total_count,
-            _(_.total_count),
-          ),
-        }),
-        _.length != 0 &&
-          (0, _.jsx)(_, {
+      children: (0, _.jsxs)(_, {
+        dullColor: {
+          8: "rgba(0,0,0,0.3)",
+        },
+        children: [
+          (0, _.jsx)("div", {
             className: _,
-            "flow-children": "geometric",
-            focusableIfEmpty: !0,
-            children: _,
+            children: _.LocalizePlural(
+              "#Workshop_NumResults",
+              _.total_count,
+              _(_.total_count),
+            ),
           }),
-      ],
+          _.length != 0 &&
+            (0, _.jsx)(_, {
+              className: _,
+              "flow-children": "geometric",
+              focusableIfEmpty: !0,
+              children: _,
+            }),
+        ],
+      }),
     })
   );
 }
@@ -11751,6 +11827,7 @@ var _ = [
   "#Workshop_SpecialFilter_FavoritedByFriends",
   "#Workshop_SpecialFilter_CreatedByFriends",
   "#Workshop_SpecialFilter_CreatedByFollowed",
+  "#Workshop_SpecialFilter_Reported",
 ];
 function _(_, _, _) {
   let _ = _[_];
@@ -11768,13 +11845,14 @@ function _(_) {
   let { browseQuery: _ } = _,
     { onBrowseHandler: _ } = _(),
     _ = (0, _.useContext)(_),
+    _ = (0, _.useContext)(_),
     _ = (_) => {
       _({
         special_filter: _,
         page: 1,
       });
     },
-    _ = _(_.section ?? "readytouseitems");
+    _ = _(_.section ?? "readytouseitems", _.bIsAdmin);
   return _.length <= 1
     ? null
     : (0, _.jsxs)("div", {
@@ -11878,6 +11956,59 @@ function _(_) {
       }),
     ],
   });
+}
+function _(_) {
+  let { appid: _, rgRequiredAppIDs: _ } = _,
+    { onBrowseHandler: _ } = _(),
+    { data: _ } = _({
+      appid: _,
+    }),
+    _ = _?.includes(_),
+    _ = () => {
+      let _ = _ ? _?.filter((_) => _ !== _) : [..._, _];
+      _({
+        appids_required_for_use: _,
+        page: 1,
+      });
+    };
+  return !_ || !_.name
+    ? null
+    : (0, _.jsxs)(_, {
+        onActivate: _,
+        className: _,
+        children: [
+          (0, _.jsx)("div", {
+            className: (0, _.default)(_, _ && _),
+            children: (0, _.jsx)(_, {}),
+          }),
+          _.name,
+        ],
+      });
+}
+function _(_) {
+  let { browseQuery: _ } = _,
+    { availableRequiredDLC: _ } = _.useLoaderData();
+  return _.length == 0
+    ? null
+    : (0, _.jsxs)(_, {
+        className: _,
+        children: [
+          (0, _.jsx)("div", {
+            className: _,
+            children: _.Localize("#Workshop_RequiredDLC_Header"),
+          }),
+          _.map((_) =>
+            (0, _.jsx)(
+              _,
+              {
+                appid: _,
+                rgRequiredAppIDs: _.appids_required_for_use ?? [],
+              },
+              _,
+            ),
+          ),
+        ],
+      });
 }
 function _(_) {
   return _ == 0
@@ -12023,6 +12154,9 @@ function _(_) {
               className: _,
               "flow-children": "geometric",
               children: [
+                (0, _.jsx)(_, {
+                  browseQuery: _,
+                }),
                 (0, _.jsx)(_, {
                   browseQuery: _,
                 }),
@@ -12304,7 +12438,11 @@ function _(_) {
     },
     _ = (_) => {
       let _ = _(_, _.section ?? "readytouseitems", _);
-      return _ ? (_.includes(_) ? _ : "(VO) " + _) : _;
+      return _
+        ? _.includes(_)
+          ? _
+          : _.Localize("#Workshop_BrowseSort_AdminOption", _)
+        : _;
     };
   return (0, _.jsxs)(_, {
     className: _,
@@ -12335,10 +12473,25 @@ function _(_) {
   });
 }
 function _(_) {
+  let { page: _, bLoading: _, bDisabled: _ } = _,
+    { onBrowseHandler: _ } = _(),
+    _ = () => {
+      _ ||
+        _({
+          page: _,
+        });
+    };
+  return (0, _.jsx)(_, {
+    className: (0, _.default)(_, _ && _),
+    onActivate: _,
+    children: _(_),
+  });
+}
+function _(_) {
   let { onBrowseHandler: _ } = _(),
     { browseQuery: _, results: _, bLoading: _ } = _,
     _ = _(),
-    _ = [8, 16, 32],
+    _ = [10, 15, 30, 50],
     _ = (_) => {
       _.setPreferences({
         numResultsPerPage: _,
@@ -12354,58 +12507,113 @@ function _(_) {
           page: (_.page ?? 1) + _,
         });
     };
-  return _.results.length == 0
-    ? null
-    : (0, _.jsxs)(_, {
-        className: _,
-        direction: "row",
-        children: [
-          (0, _.jsxs)("div", {
-            className: _,
-            children: [
-              _.Localize("#Workshop_NumPerPage"),
-              (0, _.jsx)(_, {
-                size: "1",
-                onSelectionChange: _,
-                selectedValue: _.num_per_page ?? 32,
-                options: _,
+  if (_.results.length == 0) return null;
+  let _ = Math.max(1, _.total_pages),
+    _ = !1,
+    _ = !1,
+    _ = 1,
+    _ = 1,
+    _ = [];
+  _ <= 7
+    ? (_ = _)
+    : (_.current_page - 3 > 1
+        ? ((_ = !0), (_ = _.current_page - 2))
+        : ((_ = !1), (_ = 1)),
+      _.current_page + 3 < _
+        ? ((_ = !0), (_ = _.current_page + 2))
+        : ((_ = !1), (_ = _))),
+    _ &&
+      (_.push(
+        (0, _.jsx)(_, {
+          page: 1,
+          bLoading: _,
+        }),
+      ),
+      _.push(
+        (0, _.jsx)("div", {
+          children: "...",
+        }),
+      ));
+  for (let _ = _; _ <= _; _++)
+    _ > _,
+      _ == _.current_page
+        ? _.push(
+            (0, _.jsx)(_, {
+              page: _,
+              bLoading: _,
+              bDisabled: !0,
+            }),
+          )
+        : _.push(
+            (0, _.jsx)(_, {
+              page: _,
+              bLoading: _,
+            }),
+          );
+  return (
+    _ &&
+      (_.push(
+        (0, _.jsx)("div", {
+          children: "...",
+        }),
+      ),
+      _.push(
+        (0, _.jsx)(_, {
+          page: _,
+          bLoading: _,
+        }),
+      )),
+    (0, _.jsxs)(_, {
+      className: _,
+      direction: "row",
+      children: [
+        (0, _.jsxs)("div", {
+          className: _,
+          children: [
+            _.Localize("#Workshop_NumPerPage"),
+            (0, _.jsx)(_, {
+              size: "1",
+              onSelectionChange: _,
+              selectedValue: _.num_per_page ?? 32,
+              options: _,
+            }),
+          ],
+        }),
+        (0, _.jsxs)(_, {
+          gap: "1",
+          align: "center",
+          direction: "row",
+          children: [
+            (0, _.jsx)(_, {
+              color: _ ? "dull" : "accent",
+              disabled: _.current_page <= 1,
+              onClick: () => _(-1),
+              size: "1",
+              children: (0, _.jsx)(_, {
+                direction: "left",
               }),
-            ],
-          }),
-          (0, _.jsxs)(_, {
-            gap: "1",
-            align: "center",
-            direction: "row",
-            children: [
-              (0, _.jsx)(_, {
-                color: _ ? "dull" : "accent",
-                disabled: _.current_page <= 1,
-                onClick: () => _(-1),
-                size: "1",
-                children: (0, _.jsx)(_, {
-                  direction: "left",
-                }),
+            }),
+            (0, _.jsx)(_, {
+              size: "4",
+              children: (0, _.jsxs)(_, {
+                gap: "2",
+                direction: "row",
+                children: [..._],
               }),
-              (0, _.jsx)(_, {
-                size: "3",
-                children: _.Localize(
-                  "#Workshop_PagingControls",
-                  _.current_page,
-                  _(Math.max(1, _.total_pages)),
-                ),
+            }),
+            (0, _.jsx)(_, {
+              color: _ ? "dull" : "accent",
+              disabled: _?.current_page >= _.total_pages,
+              onClick: () => _(1),
+              size: "1",
+              children: (0, _.jsx)(_, {
+                direction: "right",
               }),
-              (0, _.jsx)(_, {
-                color: _ ? "dull" : "accent",
-                disabled: _?.current_page >= _.total_pages,
-                onClick: () => _(1),
-                size: "1",
-                children: (0, _.jsx)(_, {
-                  direction: "right",
-                }),
-              }),
-            ],
-          }),
-        ],
-      });
+            }),
+          ],
+        }),
+      ],
+    })
+  );
 }
 export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };

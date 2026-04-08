@@ -4640,7 +4640,7 @@ a:hover ._1lQ-aevm7UP_kMSNv9AKJf {
   --bg-color-active: var(--color-dull-9);
   --bg-highlight-color: var(--color-accent-8);
   --text-color: #ffffff;
-  --text-muted-color: #dbdbdb;
+  --text-muted-color: #acb2b8;
   --padding: 0 var(--spacing-2);
   transition: box-shadow 0.2s ease-in-out;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
@@ -6830,14 +6830,14 @@ textarea._3793xvP87t1rZYbAQDC1pG {
   color: var(--color-placeholder-text);
   font-size: var(--font-size);
   letter-spacing: var(--letter-spacing);
-  font-style: normal;
+  font-style: italic;
 }
 ._1vE-LsK6l_D_5yjbywZV1p::-ms-input-placeholder,
 ._1vE-LsK6l_D_5yjbywZV1p:-ms-input-placeholder {
   color: var(--color-placeholder-text);
   font-size: var(--font-size);
   letter-spacing: var(--letter-spacing);
-  font-style: normal;
+  font-style: italic;
 }
 ._1vE-LsK6l_D_5yjbywZV1p:read-only {
   cursor: default;
