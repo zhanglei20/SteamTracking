@@ -57,6 +57,7 @@ var _ = "_8LcK6XOQGOs-";
 var _ = "oTwwpJZZa-0-";
 var _ = "N5sE26cvGKA-";
 var _ = "WwXAMjaND98-";
+var _ = "L6lpU6Nam1Y-";
 var _ = "WraTymZMbqA-";
 var _ = "SMT33YTtlvk-";
 var _ = "y6QwltyQEdM-";
@@ -10776,14 +10777,17 @@ function _(_) {
       },
     ),
     _ = _(_, _),
-    _ = (0, _.useCallback)(() => {
-      _.current &&
-        (_ == "sm" || _ == "initial") &&
-        _.current.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-        });
-    }, [_]),
+    _ = (0, _.useCallback)(
+      (_) => {
+        _.current &&
+          (_ || _ == "sm" || _ == "initial") &&
+          _.current.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          });
+      },
+      [_],
+    ),
     _ = (0, _.useCallback)((_) => {
       let _ = new URL(window.location.href);
       (_.search = _(_).toString()),
@@ -10832,7 +10836,7 @@ function _(_) {
               (_.omitted_flags = ["workshopaccepted"]);
             break;
         }
-        _.special_filter == 1 && (_.omitted_flags = void 0), _(_), _();
+        _.special_filter == 1 && (_.omitted_flags = void 0), _(_), _(!1);
       };
       return _(() => _), () => _(() => {});
     }, [_, _, _, _, _]);
@@ -10999,6 +11003,7 @@ function _(_) {
           bLoading: _,
           browseQuery: _,
           results: _,
+          onChangePage: () => _(!0),
         }),
       ],
     }),
@@ -12643,7 +12648,7 @@ function _(_) {
 }
 function _(_) {
   let { onBrowseHandler: _ } = _(),
-    { browseQuery: _, results: _, bLoading: _ } = _,
+    { browseQuery: _, results: _, bLoading: _, onChangePage: _ } = _,
     _ = _(),
     _ = [10, 15, 30, 50],
     _ = (_) => {
@@ -12653,13 +12658,15 @@ function _(_) {
         _({
           num_per_page: _,
           page: 1,
-        });
+        }),
+        _();
     },
     _ = (_) => {
       _ ||
-        _({
+        (_({
           page: (_.page ?? 1) + _,
-        });
+        }),
+        _());
     };
   if (_.results.length == 0) return null;
   let _ = Math.max(1, _.total_pages),

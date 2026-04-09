@@ -6695,6 +6695,9 @@ function _(_) {
   return _(
     _,
     (0, _.jsx)(_, {
+      navProps: {
+        focusable: !0,
+      },
       "data-selected": _ ? "true" : "false",
       "data-focused": _ ? "true" : void 0,
       "aria-disabled": _,
@@ -6754,9 +6757,7 @@ function _(_) {
       ? (0, _.jsx)(_, {
           root: _?.targetElement,
           children: (0, _.jsx)(_, {
-            context: _.floating.context,
-            initialFocus: _.initialFocus,
-            returnFocus: !1,
+            state: _,
             children: (0, _.jsx)(_, {
               ref: _,
               style: _.floating.floatingStyles,
@@ -6775,6 +6776,39 @@ function _(_) {
         "<PopoverListPositioner> must be a child of <PopoverListRoot>.",
       ),
       null);
+}
+function _(_) {
+  return _.IN_GAMEPADUI
+    ? (0, _.jsx)(_, {
+        ..._,
+      })
+    : (0, _.jsx)(_, {
+        ..._,
+      });
+}
+function _(_) {
+  let { state: _, children: _ } = _,
+    _ = () => _.floating.context.onOpenChange(!1),
+    _ = _.default.useRef(void 0);
+  return (
+    _(_, !!_.current, !1),
+    (0, _.jsx)(_, {
+      navID: "PopoverList",
+      onCancelButton: _,
+      modal: !0,
+      navTreeRef: _,
+      children: _,
+    })
+  );
+}
+function _(_) {
+  let { state: _, children: _ } = _;
+  return (0, _.jsx)(_, {
+    context: _.floating.context,
+    initialFocus: _.initialFocus,
+    returnFocus: !1,
+    children: _,
+  });
 }
 function _(_) {
   let {
@@ -6803,7 +6837,7 @@ function _(_) {
     selected: _,
     focused: _,
     role: "option",
-    tabIndex: _ ? 0 : -1,
+    tabIndex: 0,
     ..._.getItemProps({
       onClick: _ ? void 0 : _,
       onKeyDown: (_) => {
@@ -7492,26 +7526,72 @@ function _(_) {
     _ = _();
   if (!_)
     return (
-      console.error("<PopoverPositioner> must be a child of <PopoverRoot>."),
+      console.error("<Popover.Positioner> must be a child of <Popover.Root>."),
       null
     );
   if (!_.open) return null;
   let _ = _.Children.only(_),
-    _ = (0, _.cloneElement)(_, {
-      ref: _,
-      style: _.floating.floatingStyles,
-      className: _,
-      ..._.getFloatingProps(),
-    });
+    _ = _.default.Fragment;
+  _.type == _.FocusManager &&
+    ((_ = _.Children.only(_.props.children)), (_ = _));
+  let _ = (0, _.cloneElement)(_, {
+    ref: _,
+    style: _.floating.floatingStyles,
+    className: _,
+    ..._.getFloatingProps(),
+  });
   return (0, _.jsx)(_, {
     root: _?.targetElement,
     children: (0, _.jsx)(_, {
+      children: _,
+    }),
+  });
+}
+function _(_) {
+  return _.IN_GAMEPADUI
+    ? (0, _.jsx)(_, {
+        ..._,
+      })
+    : (0, _.jsx)(_, {
+        ..._,
+      });
+}
+function _(_) {
+  let { children: _ } = _,
+    _ = (0, _.useContext)(_);
+  _(!!_, "<Popover.Positioner> must be a child of <Popover.Root>.");
+  let _ = () => _.floating.context.onOpenChange(!1),
+    _ = _.default.useRef(void 0);
+  return (
+    _(_, !!_.current, !1),
+    (0, _.jsx)(_, {
+      navID: "Popover",
+      onCancelButton: _,
+      modal: !0,
+      navTreeRef: _,
+      children: (0, _.jsx)("div", {
+        style: {
+          display: "contents",
+        },
+        children: (0, _.jsx)(_, {
+          children: _,
+        }),
+      }),
+    })
+  );
+}
+function _(_) {
+  let { children: _ } = _,
+    _ = (0, _.useContext)(_);
+  return (
+    _(!!_, "<Popover.Positioner> must be a child of <Popover.Root>."),
+    (0, _.jsx)(_, {
       context: _.floating.context,
       initialFocus: -1,
       returnFocus: !1,
       children: _,
-    }),
-  });
+    })
+  );
 }
 function _(_) {
   let { open: _, onOpenChange: _, placement: _, interactions: _ = {} } = _,
@@ -7603,6 +7683,7 @@ var _ = {
   Root: _,
   Anchor: _,
   Positioner: _,
+  FocusManager: _,
 };
 var _ = _(_(), 1);
 function _(_) {
@@ -14473,7 +14554,7 @@ function _(_) {
       setSelectedIndex: (_) => _.onItemSelectionChange(_.rgFilteredOptions[_]),
       interactions: {
         click: !0,
-        virtualItemFocus: !0,
+        virtualItemFocus: !_.IN_GAMEPADUI,
       },
       role: "combobox",
       scroll: !1,

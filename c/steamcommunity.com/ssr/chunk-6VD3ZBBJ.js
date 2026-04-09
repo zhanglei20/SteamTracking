@@ -13536,7 +13536,7 @@ function _(_) {
     onOpenChange: _,
     interactions: {
       click: !0,
-      focus: !0,
+      focus: !1,
     },
     placement: {
       offset: 0,
@@ -13548,14 +13548,16 @@ function _(_) {
         children: _,
       }),
       (0, _.jsx)(_.Positioner, {
-        children: (0, _.jsx)("div", {
+        children: (0, _.jsx)(_.FocusManager, {
           children: (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)(_.Provider, {
-              value: {
-                onMenuItemSelected: () => _(!1),
-              },
-              children: _,
+            children: (0, _.jsx)("div", {
+              className: _,
+              children: (0, _.jsx)(_.Provider, {
+                value: {
+                  onMenuItemSelected: () => _(!1),
+                },
+                children: _,
+              }),
             }),
           }),
         }),
