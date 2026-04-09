@@ -2181,40 +2181,40 @@
           const {
               children: c,
               state: n,
-              placement: s = "bottom-end",
-              popoverWidth: a = "dropdown",
-              ...i
+              placement: a = "bottom-end",
+              popoverWidth: i = "dropdown",
+              ...v
             } = t,
-            [v, r] = (0, l.useState)(void 0);
-          (0, l.useEffect)(() => r(void 0), [n.bOpen]);
-          const o = (0, l.useRef)(null),
-            h = (0, l.useRef)(null),
-            d = (0, l.useMemo)(
+            [r, o] = (0, l.useState)(void 0);
+          (0, l.useEffect)(() => o(void 0), [n.bOpen]);
+          const h = (0, l.useRef)(null),
+            d = (0, l.useRef)(null),
+            u = (0, l.useMemo)(
               () => n.rgFilteredOptions.findIndex((t) => t === n.selectedValue),
               [n.selectedValue, n.rgFilteredOptions],
             ),
-            u = (0, f.T)({
+            p = (0, f.T)({
               open: n.bOpen,
               onOpenChange: n.setOpen,
-              width: a,
-              placement: s,
+              width: i,
+              placement: a,
               gutter: "4",
               activeIndex: n.activeIndex,
               setActiveIndex: n.setActiveIndex,
-              selectedIndex: d,
+              selectedIndex: u,
               setSelectedIndex: (t) =>
                 n.onItemSelectionChange(n.rgFilteredOptions[t]),
-              interactions: { click: !0, virtualItemFocus: !0 },
+              interactions: { click: !0, virtualItemFocus: !s.TS.IN_GAMEPADUI },
               role: "combobox",
               scroll: !1,
             }),
-            p = {
+            g = {
               ...n,
-              ...i,
-              focusedValue: v,
-              onFocusChange: r,
-              refPopover: o,
-              refScrollElement: h,
+              ...v,
+              focusedValue: r,
+              onFocusChange: o,
+              refPopover: h,
+              refScrollElement: d,
               setOpen: (t) => {
                 if (t) {
                   let t = null;
@@ -2223,22 +2223,22 @@
                       ? n.selectedValue[0]
                       : null
                     : n.selectedValue),
-                    r(t),
+                    o(t),
                     n.onInputChange("");
                 }
                 n.setOpen(t);
               },
               onIndexSelected: (t) => {
-                const c = u.elementsRef.current;
+                const c = p.elementsRef.current;
                 if (c && c[t]) {
                   c[t].click();
                 }
               },
-              popoverPlacement: u.floating.placement,
+              popoverPlacement: p.floating.placement,
             };
           return (0, e.jsx)(F.Provider, {
-            value: p,
-            children: (0, e.jsx)(f.k.Root, { state: u, children: c }),
+            value: g,
+            children: (0, e.jsx)(f.k.Root, { state: p, children: c }),
           });
         },
         Option: A,

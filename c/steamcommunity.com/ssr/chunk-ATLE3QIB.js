@@ -3866,7 +3866,7 @@ var _ = class _ extends _.Message {
           _,
           0,
           -1,
-          [6, 7, 9, 10, 34, 42, 46, 49, 25, 26, 27, 29],
+          [6, 7, 9, 10, 34, 42, 46, 49, 51, 25, 26, 27, 29],
           null,
         );
     }
@@ -4020,6 +4020,14 @@ var _ = class _ extends _.Message {
               },
               appids_required_for_use: {
                 _: 49,
+                _: !0,
+                _: !0,
+                _: _.readUint32,
+                pbr: _.readPackedUint32,
+                _: _.writeRepeatedUint32,
+              },
+              excluded_appids_required_for_use: {
+                _: 51,
                 _: !0,
                 _: !0,
                 _: _.readUint32,

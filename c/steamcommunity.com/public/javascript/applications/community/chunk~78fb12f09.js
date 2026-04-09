@@ -516,8 +516,64 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
+      function _(_) {
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+            });
+      }
+      function _(_) {
+        const { children: _ } = _,
+          _ = (0, _.useContext)(_);
+        (0, _._)(
+          !!_,
+          "<Popover.Positioner> must be a child of <Popover.Root>.",
+        );
+        const _ = _.useRef(void 0);
+        return (
+          (0, _._)(_, !!_.current, !1),
+          (0, _.jsx)(_._, {
+            navID: "Popover",
+            onCancelButton: () => _.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: _,
+            children: (0, _.jsx)("div", {
+              style: {
+                display: "contents",
+              },
+              children: (0, _.jsx)(_._, {
+                children: _,
+              }),
+            }),
+          })
+        );
+      }
+      function _(_) {
+        const { children: _ } = _,
+          _ = (0, _.useContext)(_);
+        return (
+          (0, _._)(
+            !!_,
+            "<Popover.Positioner> must be a child of <Popover.Root>.",
+          ),
+          (0, _.jsx)(_._, {
+            context: _.floating.context,
+            initialFocus: -1,
+            returnFocus: !1,
+            children: _,
+          })
+        );
+      }
       function _(_) {
         const { gutter: _ = 0, placement: _ } = _,
           _ = [],
@@ -647,28 +703,29 @@
           if (!_)
             return (
               console.error(
-                "<PopoverPositioner> must be a child of <PopoverRoot>.",
+                "<Popover.Positioner> must be a child of <Popover.Root>.",
               ),
               null
             );
           if (!_.open) return null;
-          const _ = _.Children.only(_),
-            _ = (0, _.cloneElement)(_, {
-              ref: _,
-              style: _.floating.floatingStyles,
-              className: _,
-              ..._.getFloatingProps(),
-            });
+          let _ = _.Children.only(_),
+            _ = _.Fragment;
+          _.type == _.FocusManager &&
+            ((_ = _.Children.only(_.props.children)), (_ = _));
+          const _ = (0, _.cloneElement)(_, {
+            ref: _,
+            style: _.floating.floatingStyles,
+            className: _,
+            ..._.getFloatingProps(),
+          });
           return (0, _.jsx)(_._, {
             root: null == _ ? void 0 : _.targetElement,
-            children: (0, _.jsx)(_._, {
-              context: _.floating.context,
-              initialFocus: -1,
-              returnFocus: !1,
+            children: (0, _.jsx)(_, {
               children: _,
             }),
           });
         },
+        FocusManager: _,
       };
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -676,8 +733,10 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -696,6 +755,24 @@
         return (0, _.jsx)(_, {
           ref: _,
           ..._,
+        });
+      }
+      function _(_) {
+        const { _: _ = "div", ref: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, _.className),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          }),
         });
       }
       const _ = _._;

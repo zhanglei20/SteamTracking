@@ -230,7 +230,7 @@
     },
     25671: (e, n, t) => {
       "use strict";
-      t.d(n, { k: () => x, T: () => p });
+      t.d(n, { k: () => b, T: () => m });
       var r = t(7850),
         o = t(90626),
         i = t(73788),
@@ -265,7 +265,8 @@
               h = t ? "true" : void 0;
             return (0, c.Q)(
               i,
-              (0, r.jsx)(s.az, {
+              (0, r.jsx)(s.GY, {
+                navProps: { focusable: !0 },
                 "data-selected": d,
                 "data-focused": h,
                 "aria-disabled": l,
@@ -280,9 +281,40 @@
         },
       );
       var d = t(49560),
-        h = t(32754);
-      const f = (0, o.createContext)(null);
-      function p(e) {
+        h = t(32754),
+        f = t(45699),
+        p = t(85585),
+        x = t(8527);
+      const g = (0, o.createContext)(null);
+      function v(e) {
+        return x.TS.IN_GAMEPADUI
+          ? (0, r.jsx)(C, { ...e })
+          : (0, r.jsx)(I, { ...e });
+      }
+      function C(e) {
+        const { state: n, children: t } = e,
+          i = o.useRef(void 0);
+        return (
+          (0, f.O7)(i, !!i.current, !1),
+          (0, r.jsx)(p.D6, {
+            navID: "PopoverList",
+            onCancelButton: () => n.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: i,
+            children: t,
+          })
+        );
+      }
+      function I(e) {
+        const { state: n, children: t } = e;
+        return (0, r.jsx)(i.s3, {
+          context: n.floating.context,
+          initialFocus: n.initialFocus,
+          returnFocus: !1,
+          children: t,
+        });
+      }
+      function m(e) {
         const {
           open: n,
           onOpenChange: t,
@@ -329,13 +361,13 @@
           {
             getFloatingProps: O,
             getReferenceProps: L,
-            getItemProps: y,
+            getItemProps: P,
           } = (0, i.bv)([k, g, v, C, m, S]);
         return {
           floating: x,
           getFloatingProps: O,
           getReferenceProps: L,
-          getItemProps: y,
+          getItemProps: P,
           open: p,
           activeIndex: r,
           selectedIndex: c,
@@ -346,15 +378,15 @@
           initialFocus: u.virtualItemFocus ? -1 : void 0,
         };
       }
-      const x = {
+      const b = {
         Root: function (e) {
           const { children: n, state: t } = e;
-          return (0, r.jsx)(f.Provider, { value: t, children: n });
+          return (0, r.jsx)(g.Provider, { value: t, children: n });
         },
         Anchor: function (e) {
           const { children: n } = e,
             t = o.Children.only(n),
-            r = (0, o.useContext)(f),
+            r = (0, o.useContext)(g),
             l = (0, i.SV)([
               null == r ? void 0 : r.floating.refs.setReference,
               null == t ? void 0 : t.props.ref,
@@ -372,7 +404,7 @@
         },
         Positioner: function (e) {
           const { children: n, render: t, ref: l } = e,
-            s = (0, o.useContext)(f),
+            s = (0, o.useContext)(g),
             c = (0, i.SV)([
               l,
               null == s ? void 0 : s.floating.refs.setFloating,
@@ -382,10 +414,8 @@
             ? s.open
               ? (0, r.jsx)(i.XF, {
                   root: null == a ? void 0 : a.targetElement,
-                  children: (0, r.jsx)(i.s3, {
-                    context: s.floating.context,
-                    initialFocus: s.initialFocus,
-                    returnFocus: !1,
+                  children: (0, r.jsx)(v, {
+                    state: s,
                     children: (0, r.jsx)(u, {
                       ref: c,
                       style: s.floating.floatingStyles,
@@ -415,9 +445,9 @@
               disabled: a,
               ...d
             } = e,
-            h = (0, o.useContext)(f),
-            { ref: p, index: x } = (0, i.rm)({ label: t }),
-            g = (0, i.SV)([c, p]);
+            h = (0, o.useContext)(g),
+            { ref: f, index: p } = (0, i.rm)({ label: t }),
+            x = (0, i.SV)([c, f]);
           if (!h)
             return (
               console.error(
@@ -425,14 +455,14 @@
               ),
               null
             );
-          const v = x === h.activeIndex,
-            C = x === h.selectedIndex || !!l;
+          const v = p === h.activeIndex,
+            C = p === h.selectedIndex || !!l;
           return (0, r.jsx)(u.Option, {
-            ref: g,
+            ref: x,
             selected: C,
             focused: v,
             role: "option",
-            tabIndex: v ? 0 : -1,
+            tabIndex: 0,
             ...h.getItemProps({
               onClick: a ? void 0 : s,
               onKeyDown: (e) => {
@@ -752,10 +782,10 @@
               onItemSelectionChange: k,
               onFocusedIndexChange: O,
               refPopover: L,
-              placeholder: y,
-              ...V
+              placeholder: P,
+              ...y
             } = S("<SelectTrigger>"),
-            P = {
+            V = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => c(!o),
@@ -777,9 +807,9 @@
               radius: p,
               hasValue: z,
               tabIndex: 0,
-              ...V,
+              ...y,
             }),
-            N = (0, u.Q)(t, _, P, void 0);
+            N = (0, u.Q)(t, _, V, void 0);
           return (0, r.jsx)(i.k.Anchor, { children: N });
         },
         Value: function (e) {
@@ -927,10 +957,10 @@
             inputRef: k,
             ref: O,
             disabled: L,
-            gamepadFocusable: y = !0,
-            ...V
+            gamepadFocusable: P = !0,
+            ...y
           } = t,
-          P = {
+          V = {
             ...n,
             variant: m,
             size: b,
@@ -950,17 +980,17 @@
             disabled: L,
           },
           z = (0, o.useRef)(null),
-          w = y && p.TS.IN_GAMEPADUI ? f.BA : "input";
+          w = P && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
-          ...P,
+          ...V,
           onClick: (e) => {
             z.current && e.target !== z.current && z.current.focus();
           },
           children: (0, r.jsx)(w, {
             ref: (0, h.Ue)(k, z),
             type: "text",
-            ...V,
+            ...y,
             "aria-disabled": L,
             readOnly: L,
             className: l()((0, s.T)(), c.TextEntry),

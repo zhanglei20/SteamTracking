@@ -1,780 +1,4 @@
 var _ = _(_(), 1);
-function _(_) {
-  switch (_) {
-    case 0:
-    case 15:
-    case 10:
-      return !0;
-    default:
-      return !1;
-  }
-}
-function _(_) {
-  return _.file_type != 2 || (_.num_children ?? 0) == 0
-    ? !1
-    : ((_?.flags ?? 0) & 16) == 16;
-}
-function _(_) {
-  return ["user_workshop_details", _];
-}
-function _(_, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () => await _(_),
-    placeholderData: (_) => _,
-    staleTime: 300 * 1e3,
-  };
-}
-function _(_, _) {
-  return _(_(_, _));
-}
-var _ = [
-    "accepted",
-    "trend",
-    "mostrecent",
-    "lastupdated",
-    "textsearch",
-    "torate",
-  ],
-  _ = [
-    "trend",
-    "toprated",
-    "mostrecent",
-    "lastupdated",
-    "textsearch",
-    "totaluniquesubscribers",
-    "playtime_trend",
-    "playtime_average_trend",
-    "playtime_trend_total",
-    "playtime_average_trend_total",
-    "playtime_sessions_trend",
-    "playtime_sessions_lifetime",
-  ];
-var _ = ["accepted", "trend", "toprated", "mostrecent", "textsearch"],
-  _ = [
-    "accepted",
-    "trend",
-    "toprated",
-    "mostrecent",
-    "lastupdated",
-    "textsearch",
-  ],
-  _ = ["nominee", "mostrecent", "toprated", "reported", "textsearch"],
-  _ = [
-    "trend",
-    "toprated",
-    "reported",
-    "curatedadmin",
-    "mostupvotes",
-    "totalvotes",
-    "inappropriate_rating",
-    "ban_content_check",
-  ];
-function _(_, _) {
-  let _ = [];
-  switch (_) {
-    case "mtxitems":
-      _ = [..._];
-      break;
-    case "readytouseitems":
-      _ = [..._];
-      break;
-    case "collections":
-      _ = [..._];
-      break;
-    case "merchandise":
-      _ = [..._];
-      break;
-    case "videos":
-      _ = [..._];
-      break;
-  }
-  return _ && (_ = _.concat(_)), _;
-}
-function _(_, _) {
-  let _ = [0];
-  switch ((_.logged_in && (_ = [..._, 3, 4, 2]), _)) {
-    case "mtxitems":
-    case "merchandise":
-    case "collections":
-      _ = [..._, 1];
-      break;
-  }
-  return _ && (_ = [..._, 5]), _;
-}
-function _(_) {
-  let _ = new URLSearchParams();
-  return (
-    _.appid && _.set("appid", _.appid.toString()),
-    _.browse_sort &&
-      _.browse_sort.trim().length > 0 &&
-      _.set("browsesort", _.browse_sort),
-    _.section && _.section.trim().length > 0 && _.set("section", _.section),
-    _.page && _.page > 0 && _.set("p", _.page.toString()),
-    _.num_per_page &&
-      _.num_per_page != 0 &&
-      _.set("num_per_page", _.num_per_page.toString()),
-    _.trend_days && _.trend_days != 0 && _.set("days", _.trend_days.toString()),
-    _.search_text &&
-      _.search_text.trim().length > 0 &&
-      _.set("searchtext", _.search_text.trim()),
-    _.required_tags?.length != 0 &&
-      _.required_tags?.forEach((_) => _.append("requiredtags[]", _)),
-    _.excluded_tags?.length != 0 &&
-      _.excluded_tags?.forEach((_) => _.append("excludedtags[]", _)),
-    _.required_flags?.length != 0 &&
-      _.required_flags?.forEach((_) => _.append("requiredflags[]", _)),
-    _.required_kv_tags?.length != 0 &&
-      _.required_kv_tags?.forEach((_) =>
-        _.append(`requiredkvtags[${_.key}`, _.value),
-      ),
-    _.date_range_created &&
-      (_.set(
-        "created_date_range_filter_start",
-        (_.date_range_created.timestamp_start || 0).toString(),
-      ),
-      _.set(
-        "created_date_range_filter_end",
-        (_.date_range_created.timestamp_end || 0).toString(),
-      )),
-    _.date_range_updated &&
-      (_.set(
-        "updated_date_range_filter_start",
-        (_.date_range_updated.timestamp_start || 0).toString(),
-      ),
-      _.set(
-        "updated_date_range_filter_end",
-        (_.date_range_updated.timestamp_end || 0).toString(),
-      )),
-    _.childpublishedfileid &&
-      _.childpublishedfileid.length != 0 &&
-      _.set("childpublishedfileid", _.childpublishedfileid),
-    _.special_filter && _.set("special_filter", _.special_filter.toString()),
-    _.appids_required_for_use?.length &&
-      _.appids_required_for_use?.forEach((_) =>
-        _.append("appids_required_for_use[]", _.toString()),
-      ),
-    _.admin_view && _.set("admin_view", "1"),
-    _
-  );
-}
-function _(_, _) {
-  return {
-    queryKey: ["saved_web_queries", _],
-    queryFn: async () => await _(_),
-    placeholderData: (_) => _,
-    staleTime: 300 * 1e3,
-  };
-}
-function _(_, _) {
-  return _(_(_, _));
-}
-function _(_, _) {
-  let _ = _();
-  return _({
-    mutationFn: async (_) => await _(_, _),
-    onSuccess: (_) => {
-      _ &&
-        _.removeQueries({
-          queryKey: ["saved_web_queries", _],
-        });
-    },
-  });
-}
-function _(_, _) {
-  let _ = _();
-  return _({
-    mutationFn: async (_) => await _(_, _),
-    onSuccess: (_) => {
-      _ &&
-        _.removeQueries({
-          queryKey: ["saved_web_queries", _],
-        });
-    },
-  });
-}
-function _(_, _) {
-  let _ = {
-    ..._,
-  };
-  return (
-    (_.browse_sort = _.browse_sort),
-    (_.required_tags = _.required_tags),
-    (_.excluded_tags = _.excluded_tags),
-    (_.trend_days = _.days_in_period),
-    (_.search_text = _.search_text),
-    _.required_flags && (_.required_flags = _.required_flags),
-    _.created_date_range_filter_start &&
-      (_.date_range_created = {
-        timestamp_start: _.created_date_range_filter_start,
-        timestamp_end: _.created_date_range_filter_end,
-      }),
-    _.updated_date_range_filter_start &&
-      (_.date_range_updated = {
-        timestamp_start: _.updated_date_range_filter_start,
-        timestamp_end: _.updated_date_range_filter_end,
-      }),
-    _.section && (_.section = _.section),
-    _.num_per_page && (_.num_per_page = _.num_per_page),
-    _.special_filter && (_.special_filter = _.special_filter),
-    _.appids_required_for_use &&
-      (_.appids_required_for_use = _.appids_required_for_use),
-    _
-  );
-}
-function _(_) {
-  let _ = {};
-  return (
-    (_.browse_sort = _.browse_sort),
-    (_.section = _.section),
-    (_.num_per_page = _.num_per_page),
-    (_.required_tags = _.required_tags),
-    (_.excluded_tags = _.excluded_tags),
-    (_.days_in_period = _.trend_days),
-    (_.search_text = _.search_text),
-    (_.required_flags = _.required_flags),
-    (_.created_date_range_filter_start = _.date_range_created?.timestamp_start),
-    (_.created_date_range_filter_end = _.date_range_created?.timestamp_end),
-    (_.updated_date_range_filter_start = _.date_range_updated?.timestamp_start),
-    (_.updated_date_range_filter_end = _.date_range_updated?.timestamp_end),
-    (_.appids_required_for_use = _.appids_required_for_use),
-    _
-  );
-}
-function _(_, _) {
-  return _(_(_, _));
-}
-function _(_, _) {
-  let _ = Object.fromEntries(
-    Object.entries(_).filter(([_, _]) => _ !== void 0),
-  );
-  return {
-    queryKey: [
-      "workshop_browse",
-      Object.keys(_)
-        .sort()
-        .reduce((_, _) => ((_[_] = _[_]), _), {}),
-    ],
-    queryFn: async () => await _(_),
-    placeholderData: (_) => _,
-    staleTime: 300 * 1e3,
-  };
-}
-function _(_, _, _, _) {
-  return ["ugcliststatus", _, _, _, _];
-}
-function _(_, _, _, _, _) {
-  return new _.default(
-    async (_) => {
-      let _ = [..._];
-      return await _(_, _, _, _);
-    },
-    {
-      cache: !1,
-      maxBatchSize: 100,
-      ..._,
-    },
-  );
-}
-function _(_, _, _, _) {
-  return _(["UserListStatus", _, _, _], () => _(_, _, _, _));
-}
-function _(_, _, _, _, _) {
-  return {
-    queryKey: _(_, _, _, _),
-    queryFn: async () => (_.logged_in && (await _.load(_))?.inlist) || !1,
-    staleTime: 300 * 1e3,
-  };
-}
-function _(_, _, _, _, _) {
-  let _ = _(_, _, _, _);
-  return _(_(_, _, _, _, _));
-}
-function _(_, _, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async (_) => {
-      if (_) {
-        let _ = {
-          appid: _,
-          list_type: _,
-          publishedfileid: _,
-          notify_client: !0,
-        };
-        return !!(await _.Subscribe(_, _)).BSuccess();
-      } else {
-        let _ = {
-          appid: _,
-          list_type: _,
-          publishedfileid: _,
-          notify_client: !0,
-        };
-        return !(await _.Unsubscribe(_, _)).BSuccess();
-      }
-    },
-    onSuccess: (_) => {
-      _.setQueryData(_(_, _, _, _), _),
-        _.invalidateQueries({
-          queryKey: _(_),
-        });
-    },
-  });
-}
-function _(_, _, _, _) {
-  let _ = _(),
-    _ = _();
-  return _({
-    mutationFn: async () => {
-      let _ = {
-        appid: _,
-        list_type: _,
-        publishedfileid: _,
-        include_dependencies: !0,
-        notify_client: !0,
-      };
-      return (await _.Subscribe(_, _)).BSuccess();
-    },
-    onSuccess: (_) => {
-      _ &&
-        (_.invalidateQueries({
-          queryKey: ["ugcliststatus", _, _, _],
-        }),
-        _.invalidateQueries({
-          queryKey: _(_),
-        }));
-    },
-  });
-}
-function _(_, _) {
-  return new _.default(
-    async (_) => {
-      let _ = [..._];
-      return (await _(_)) ?? [];
-    },
-    {
-      cache: !0,
-      maxBatchSize: 100,
-      ..._,
-    },
-  );
-}
-function _(_) {
-  return _("UGCSummaryLoader", () => _(_));
-}
-function _(_, _) {
-  return {
-    queryKey: ["ugc_summary", _],
-    queryFn: async () => await _.load(_),
-    staleTime: 300 * 1e3,
-  };
-}
-function _(_, _) {
-  let _ = _(_);
-  return _(_(_, _));
-}
-function _(_, _) {
-  return new _.default(
-    async (_) => {
-      let _ = [..._];
-      return (await _(_)) ?? [];
-    },
-    {
-      cache: !0,
-      maxBatchSize: 100,
-      ..._,
-    },
-  );
-}
-function _(_) {
-  return _("UGCCollectionSummaryLoader", () => _(_));
-}
-function _(_, _) {
-  return {
-    queryKey: ["ugc_collection_summary", _],
-    queryFn: async () => await _.load(_),
-    staleTime: 300 * 1e3,
-  };
-}
-function _(_, _) {
-  let _ = _(_);
-  return _(_(_, _));
-}
-function _(_) {
-  return ["ugcvote", _];
-}
-function _(_, _) {
-  return new _.default(
-    async (_) => {
-      let _ = [..._];
-      return await _(_);
-    },
-    {
-      cache: !1,
-      maxBatchSize: 100,
-      ..._,
-    },
-  );
-}
-function _(_) {
-  return _(["UserVoteSummary"], () => _(_));
-}
-function _(_, _) {
-  return {
-    queryKey: _(_),
-    queryFn: async () =>
-      _.logged_in
-        ? ((await _.load(_)) ?? {
-            vote_for: !1,
-            vote_against: !1,
-          })
-        : {
-            vote_for: !1,
-            vote_against: !1,
-          },
-    staleTime: 300 * 1e3,
-  };
-}
-function _(_, _) {
-  let _ = _(_);
-  return _(_(_, _));
-}
-function _(_, _) {
-  let _ = _();
-  return _({
-    mutationFn: async (_) => await _(_, _),
-    onSuccess: (_) => {
-      _ &&
-        _.invalidateQueries({
-          queryKey: _(_),
-        });
-    },
-  });
-}
-var _ = {
-  BackgroundImageCtn: "JAD8UTa-0ek-",
-  WorkshopBackgroundGridCtn: "i0jZqaPzWXM-",
-};
-var _ = _(_(), 1);
-function _(_) {
-  let { _: _, workshop: _ } = _,
-    { data: _ } = _(_),
-    { data: _ } = _(_);
-  if (!_ || !_) return null;
-  let _ =
-      _(_, "library_hero_2x") ??
-      _(_, "library_hero") ??
-      _(_, "raw_page_background"),
-    _ = `${_.COMMUNITY_CDN_URL}public/images/sharedfiles/workshop_background_grid.png`;
-  return _
-    ? (0, _.jsxs)(_.Fragment, {
-        children: [
-          (0, _.jsx)("div", {
-            className: _.BackgroundImageCtn,
-            children: (0, _.jsx)("img", {
-              src: _,
-              alt: _.name,
-            }),
-          }),
-          _ &&
-            (0, _.jsx)(_.Fragment, {
-              children: (0, _.jsx)("div", {
-                className: _.WorkshopBackgroundGridCtn,
-              }),
-            }),
-        ],
-      })
-    : null;
-}
-var _ = _(_(), 1);
-var _ = {
-  AppHubHeader: "xLMYeLbZSMI-",
-  TabsContainer: "F0rQT-TUKDs-",
-  Tab: "wL0w0j65lE8-",
-  Active: "AKNr409SBBM-",
-  ContentDescriptorWarning: "_3kg9cUD7Rag-",
-  ContentDescriptor: "TzLv8Lum16k-",
-};
-var _ = [
-  "all",
-  "discussions",
-  "screenshots",
-  "art",
-  "broadcasts",
-  "videos",
-  "workshop",
-  "news",
-  "webguides",
-  "userreviews",
-];
-var _ = _(_());
-var _ = _(_()),
-  _ = _(_());
-var _ = _(_());
-var _ = _(_());
-var _ = _(_());
-var _ = _(_());
-function _(_) {
-  let { labelledBy: _ } = _ || {},
-    [_, _] = _.useState(void 0),
-    _ = _.useMemo(
-      () => ({
-        setHeaderId: _,
-      }),
-      [],
-    );
-  return {
-    headerId: _ || _,
-    context: _,
-  };
-}
-function _(_) {
-  let {
-      active: _,
-      onDismiss: _,
-      className: _,
-      modalClassName: _,
-      children: _,
-      ..._
-    } = _,
-    { headerId: _, context: _ } = _({
-      labelledBy: _["aria-labelledby"],
-    });
-  return (0, _.jsx)(_.Provider, {
-    value: _,
-    children: (0, _.jsx)(_, {
-      active: _,
-      children: (0, _.jsx)(_, {
-        onEscKeypress: _,
-        className: _,
-        children: (0, _.jsx)(_, {
-          role: "dialog",
-          "aria-labelledby": _,
-          className: _,
-          ..._,
-          children: _,
-        }),
-      }),
-    }),
-  });
-}
-var _ = _(_());
-var _ = _(_());
-var _ = _(_(), 1),
-  _ = {
-    all: "#AppHub_Nav_All",
-    discussions: "#AppHub_Nav_Discussions",
-    screenshots: "#AppHub_Nav_Screenshots",
-    art: "#AppHub_Nav_Art",
-    broadcasts: "#AppHub_Nav_Broadcasts",
-    videos: "#AppHub_Nav_Videos",
-    workshop: "#AppHub_Nav_WorkshopItems",
-    news: "#AppHub_Nav_AllNews",
-    webguides: "#AppHub_Nav_Guides",
-    userreviews: "#AppHub_Nav_Reviews",
-  },
-  _ = {
-    all: "/",
-    discussions: "/discussions/",
-    screenshots: "/screenshots/",
-    art: "/images/",
-    broadcasts: "/broadcasts/",
-    videos: "/videos/",
-    workshop: "/workshop/",
-    news: "/news/",
-    webguides: "/guides/",
-    userreviews: "/reviews/",
-  },
-  _ = {
-    name: "wants_mature_content_apps",
-    options: {
-      path: "/",
-      secure: !0,
-      maxAge: 365 * 24 * 60 * 60 * 1e3,
-    },
-    preferenceControls: {
-      isTechnicallyNecessary: !0,
-    },
-  };
-function _() {
-  let _ = _(_);
-  return _ ? _.split("|").map((_) => parseInt(_)) : [];
-}
-function _(_) {
-  let _ = _();
-  _.push(_);
-  let _ = _.join("|");
-  _(_, _);
-}
-function _(_) {
-  return _().includes(_);
-}
-function _(_) {
-  let {
-      appid: _,
-      name: _,
-      activeTab: _,
-      rgHiddenTabs: _,
-      children: _,
-      eVisibility: _,
-      rgContentDescriptorIDs: _,
-      rgUserPreferencesOverlappingContentDescriptorIDs: _,
-    } = _,
-    _ = [..._].filter((_) => !_ || !_.includes(_)),
-    _ = `${_.COMMUNITY_BASE_URL}app/${_}`,
-    [_, _] = (0, _.useState)(!_(_) && _ == 3),
-    _ = () => {
-      window.location.href = _.COMMUNITY_BASE_URL;
-    },
-    _ = () => {
-      _(_), _(!1);
-    };
-  return _
-    ? (0, _.jsx)(_, {
-        active: !0,
-        children: (0, _.jsx)(_, {
-          onClose: _,
-          children: (0, _.jsx)(_, {
-            background: "dull-7",
-            padding: "3",
-            radius: "md",
-            children: (0, _.jsxs)(_, {
-              direction: "column",
-              justify: "center",
-              gap: "3",
-              align: "center",
-              className: _.ContentDescriptorWarning,
-              children: [
-                (0, _.jsx)("div", {
-                  children: _.Localize("#AppHubs_ContentCheck_Header_App"),
-                }),
-                (0, _.jsx)(_, {
-                  gap: "1",
-                  children: _.map((_) =>
-                    (0, _.jsx)(
-                      "div",
-                      {
-                        className: _.ContentDescriptor,
-                        children: _(_),
-                      },
-                      _,
-                    ),
-                  ),
-                }),
-                (0, _.jsxs)(_, {
-                  gap: "1",
-                  children: [
-                    (0, _.jsx)(_, {
-                      onClick: _,
-                      children: _.Localize("#AppHubs_ContentCheck_ViewPage"),
-                    }),
-                    (0, _.jsx)(_, {
-                      onClick: _,
-                      children: _.Localize("#AppHubs_ContentCheck_Cancel"),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-          }),
-        }),
-      })
-    : (0, _.jsxs)(_.Fragment, {
-        children: [
-          (0, _.jsx)(_, {
-            paddingTop: "7",
-            paddingBottom: "2",
-            children: (0, _.jsx)(_, {
-              marginX: {
-                initial: "3",
-                _: "9",
-              },
-              children: (0, _.jsxs)("div", {
-                className: _.AppHubHeader,
-                children: [
-                  (0, _.jsxs)(_, {
-                    align: "center",
-                    justify: "between",
-                    wrap: {
-                      initial: "wrap",
-                      _: void 0,
-                    },
-                    gap: "3",
-                    direction: "row",
-                    children: [
-                      (0, _.jsx)(_, {
-                        external: !1,
-                        _: _,
-                        children: (0, _.jsx)(_, {
-                          size: {
-                            initial: "4",
-                            _: "6",
-                          },
-                          children: _,
-                        }),
-                      }),
-                      (0, _.jsx)(_, {
-                        controller: "app",
-                        method: "apphub_header",
-                        children: (0, _.jsx)(_, {
-                          appid: _,
-                        }),
-                      }),
-                    ],
-                  }),
-                  (0, _.jsx)(_, {
-                    gap: "2",
-                    className: _.TabsContainer,
-                    direction: "row",
-                    children: _.map((_) =>
-                      (0, _.jsx)(
-                        _,
-                        {
-                          bActive: _ == _,
-                          tab: _,
-                          appid: _,
-                        },
-                        _,
-                      ),
-                    ),
-                  }),
-                ],
-              }),
-            }),
-          }),
-          _,
-        ],
-      });
-}
-function _(_) {
-  let { appid: _ } = _,
-    _ = _(),
-    _ = _(_, `${_.STORE_BASE_URL}app/${_}/`);
-  return (0, _.jsx)(_, {
-    href: _,
-    children: _.Localize("#AppHub_Store"),
-  });
-}
-function _(_) {
-  return (0, _.jsx)(_, {
-    ..._,
-    className: _(),
-  });
-}
-function _(_) {
-  let { tab: _, appid: _, bActive: _ } = _,
-    _ = `${_.COMMUNITY_BASE_URL}app/${_}${_[_]}`,
-    _ = _.Localize(_[_]);
-  return (0, _.jsx)("div", {
-    className: _(_.Tab, _ && _.Active),
-    children: (0, _.jsx)(_, {
-      size: "4",
-      href: _,
-      children: _,
-    }),
-  });
-}
-var _ = _(_(), 1);
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
     constructor(_ = null) {
@@ -9707,7 +8931,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       super(),
         _.prototype.queryid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [4, 5, 15, 17], null);
+        _.Message.initialize(this, _, 0, -1, [4, 5, 15, 17, 18], null);
     }
     static sm_m;
     static sm_mbf;
@@ -9800,6 +9024,19 @@ var _ = class _ extends _.Message {
                 _: _.readUint32,
                 pbr: _.readPackedUint32,
                 _: _.writeRepeatedUint32,
+              },
+              excluded_appids_required_for_use: {
+                _: 18,
+                _: !0,
+                _: !0,
+                _: _.readUint32,
+                pbr: _.readPackedUint32,
+                _: _.writeRepeatedUint32,
+              },
+              search_text_target: {
+                _: 19,
+                _: _.readEnum,
+                _: _.writeEnum,
               },
               num_per_page: {
                 _: 14,
@@ -12831,6 +12068,793 @@ var _;
   }
   _.NotifyPurchaseActivity = _;
 })((_ ||= {}));
+var _ = _(_(), 1);
+function _(_) {
+  switch (_) {
+    case 0:
+    case 15:
+    case 10:
+      return !0;
+    default:
+      return !1;
+  }
+}
+function _(_) {
+  return _.file_type != 2 || (_.num_children ?? 0) == 0
+    ? !1
+    : ((_?.flags ?? 0) & 16) == 16;
+}
+function _(_) {
+  return ["user_workshop_details", _];
+}
+function _(_, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () => await _(_),
+    placeholderData: (_) => _,
+    staleTime: 300 * 1e3,
+  };
+}
+function _(_, _) {
+  return _(_(_, _));
+}
+var _ = [
+    "accepted",
+    "trend",
+    "mostrecent",
+    "lastupdated",
+    "textsearch",
+    "torate",
+  ],
+  _ = [
+    "trend",
+    "toprated",
+    "mostrecent",
+    "lastupdated",
+    "textsearch",
+    "totaluniquesubscribers",
+    "playtime_trend",
+    "playtime_average_trend",
+    "playtime_trend_total",
+    "playtime_average_trend_total",
+    "playtime_sessions_trend",
+    "playtime_sessions_lifetime",
+  ];
+var _ = ["accepted", "trend", "toprated", "mostrecent", "textsearch"],
+  _ = [
+    "accepted",
+    "trend",
+    "toprated",
+    "mostrecent",
+    "lastupdated",
+    "textsearch",
+  ],
+  _ = ["nominee", "mostrecent", "toprated", "reported", "textsearch"],
+  _ = [
+    "trend",
+    "toprated",
+    "reported",
+    "curatedadmin",
+    "mostupvotes",
+    "totalvotes",
+    "inappropriate_rating",
+    "ban_content_check",
+  ];
+function _(_, _) {
+  let _ = [];
+  switch (_) {
+    case "mtxitems":
+      _ = [..._];
+      break;
+    case "readytouseitems":
+      _ = [..._];
+      break;
+    case "collections":
+      _ = [..._];
+      break;
+    case "merchandise":
+      _ = [..._];
+      break;
+    case "videos":
+      _ = [..._];
+      break;
+  }
+  return _ && (_ = _.concat(_)), _;
+}
+function _(_, _) {
+  let _ = [0];
+  switch ((_.logged_in && (_ = [..._, 3, 4, 2]), _)) {
+    case "mtxitems":
+    case "merchandise":
+    case "collections":
+      _ = [..._, 1];
+      break;
+  }
+  return _ && (_ = [..._, 5]), _;
+}
+function _(_) {
+  let _ = new URLSearchParams();
+  return (
+    _.appid && _.set("appid", _.appid.toString()),
+    _.browse_sort &&
+      _.browse_sort.trim().length > 0 &&
+      _.set("browsesort", _.browse_sort),
+    _.section && _.section.trim().length > 0 && _.set("section", _.section),
+    _.page && _.page > 0 && _.set("p", _.page.toString()),
+    _.num_per_page &&
+      _.num_per_page != 0 &&
+      _.set("num_per_page", _.num_per_page.toString()),
+    _.trend_days && _.trend_days != 0 && _.set("days", _.trend_days.toString()),
+    _.search_text &&
+      _.search_text.trim().length > 0 &&
+      _.set("searchtext", _.search_text.trim()),
+    _.search_text_target &&
+      _.set("search_text_target", _.search_text_target.toString()),
+    _.required_tags?.length != 0 &&
+      _.required_tags?.forEach((_) => _.append("requiredtags[]", _)),
+    _.excluded_tags?.length != 0 &&
+      _.excluded_tags?.forEach((_) => _.append("excludedtags[]", _)),
+    _.required_flags?.length != 0 &&
+      _.required_flags?.forEach((_) => _.append("requiredflags[]", _)),
+    _.required_kv_tags?.length != 0 &&
+      _.required_kv_tags?.forEach((_) =>
+        _.append(`requiredkvtags[${_.key}`, _.value),
+      ),
+    _.date_range_created &&
+      (_.set(
+        "created_date_range_filter_start",
+        (_.date_range_created.timestamp_start || 0).toString(),
+      ),
+      _.set(
+        "created_date_range_filter_end",
+        (_.date_range_created.timestamp_end || 0).toString(),
+      )),
+    _.date_range_updated &&
+      (_.set(
+        "updated_date_range_filter_start",
+        (_.date_range_updated.timestamp_start || 0).toString(),
+      ),
+      _.set(
+        "updated_date_range_filter_end",
+        (_.date_range_updated.timestamp_end || 0).toString(),
+      )),
+    _.childpublishedfileid &&
+      _.childpublishedfileid.length != 0 &&
+      _.set("childpublishedfileid", _.childpublishedfileid),
+    _.special_filter && _.set("special_filter", _.special_filter.toString()),
+    _.appids_required_for_use?.length &&
+      _.appids_required_for_use?.forEach((_) =>
+        _.append("appids_required_for_use[]", _.toString()),
+      ),
+    _.excluded_appids_required_for_use?.length &&
+      _.excluded_appids_required_for_use?.forEach((_) =>
+        _.append("excluded_appids_required_for_use[]", _.toString()),
+      ),
+    _.admin_view && _.set("admin_view", "1"),
+    _
+  );
+}
+function _(_, _) {
+  return {
+    queryKey: ["saved_web_queries", _],
+    queryFn: async () => await _(_),
+    placeholderData: (_) => _,
+    staleTime: 300 * 1e3,
+  };
+}
+function _(_, _) {
+  return _(_(_, _));
+}
+function _(_, _) {
+  let _ = _();
+  return _({
+    mutationFn: async (_) => await _(_, _),
+    onSuccess: (_) => {
+      _ &&
+        _.removeQueries({
+          queryKey: ["saved_web_queries", _],
+        });
+    },
+  });
+}
+function _(_, _) {
+  let _ = _();
+  return _({
+    mutationFn: async (_) => await _(_, _),
+    onSuccess: (_) => {
+      _ &&
+        _.removeQueries({
+          queryKey: ["saved_web_queries", _],
+        });
+    },
+  });
+}
+function _(_, _) {
+  let _ = {
+    ..._,
+  };
+  return (
+    (_.browse_sort = _.browse_sort),
+    (_.required_tags = _.required_tags),
+    (_.excluded_tags = _.excluded_tags),
+    (_.trend_days = _.days_in_period),
+    (_.search_text = _.search_text),
+    (_.search_text_target = _.search_text_target),
+    _.required_flags && (_.required_flags = _.required_flags),
+    _.created_date_range_filter_start &&
+      (_.date_range_created = {
+        timestamp_start: _.created_date_range_filter_start,
+        timestamp_end: _.created_date_range_filter_end,
+      }),
+    _.updated_date_range_filter_start &&
+      (_.date_range_updated = {
+        timestamp_start: _.updated_date_range_filter_start,
+        timestamp_end: _.updated_date_range_filter_end,
+      }),
+    _.section && (_.section = _.section),
+    _.num_per_page && (_.num_per_page = _.num_per_page),
+    _.special_filter && (_.special_filter = _.special_filter),
+    _.appids_required_for_use &&
+      (_.appids_required_for_use = _.appids_required_for_use),
+    _.excluded_appids_required_for_use &&
+      (_.excluded_appids_required_for_use = _.excluded_appids_required_for_use),
+    _
+  );
+}
+function _(_) {
+  let _ = {};
+  return (
+    (_.browse_sort = _.browse_sort),
+    (_.section = _.section),
+    (_.num_per_page = _.num_per_page),
+    (_.required_tags = _.required_tags),
+    (_.excluded_tags = _.excluded_tags),
+    (_.days_in_period = _.trend_days),
+    (_.search_text = _.search_text),
+    (_.search_text_target = _.search_text_target),
+    (_.required_flags = _.required_flags),
+    (_.created_date_range_filter_start = _.date_range_created?.timestamp_start),
+    (_.created_date_range_filter_end = _.date_range_created?.timestamp_end),
+    (_.updated_date_range_filter_start = _.date_range_updated?.timestamp_start),
+    (_.updated_date_range_filter_end = _.date_range_updated?.timestamp_end),
+    (_.appids_required_for_use = _.appids_required_for_use),
+    (_.excluded_appids_required_for_use = _.excluded_appids_required_for_use),
+    _
+  );
+}
+function _(_, _) {
+  return _(_(_, _));
+}
+function _(_, _) {
+  let _ = Object.fromEntries(
+    Object.entries(_).filter(([_, _]) => _ !== void 0),
+  );
+  return {
+    queryKey: [
+      "workshop_browse",
+      Object.keys(_)
+        .sort()
+        .reduce((_, _) => ((_[_] = _[_]), _), {}),
+    ],
+    queryFn: async () => await _(_),
+    placeholderData: (_) => _,
+    staleTime: 300 * 1e3,
+  };
+}
+function _(_, _, _, _) {
+  return ["ugcliststatus", _, _, _, _];
+}
+function _(_, _, _, _, _) {
+  return new _.default(
+    async (_) => {
+      let _ = [..._];
+      return await _(_, _, _, _);
+    },
+    {
+      cache: !1,
+      maxBatchSize: 100,
+      ..._,
+    },
+  );
+}
+function _(_, _, _, _) {
+  return _(["UserListStatus", _, _, _], () => _(_, _, _, _));
+}
+function _(_, _, _, _, _) {
+  return {
+    queryKey: _(_, _, _, _),
+    queryFn: async () => (_.logged_in && (await _.load(_))?.inlist) || !1,
+    staleTime: 300 * 1e3,
+  };
+}
+function _(_, _, _, _, _) {
+  let _ = _(_, _, _, _);
+  return _(_(_, _, _, _, _));
+}
+function _(_, _, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async (_) => {
+      if (_) {
+        let _ = {
+          appid: _,
+          list_type: _,
+          publishedfileid: _,
+          notify_client: !0,
+        };
+        return !!(await _.Subscribe(_, _)).BSuccess();
+      } else {
+        let _ = {
+          appid: _,
+          list_type: _,
+          publishedfileid: _,
+          notify_client: !0,
+        };
+        return !(await _.Unsubscribe(_, _)).BSuccess();
+      }
+    },
+    onSuccess: (_) => {
+      _.setQueryData(_(_, _, _, _), _),
+        _.invalidateQueries({
+          queryKey: _(_),
+        });
+    },
+  });
+}
+function _(_, _, _, _) {
+  let _ = _(),
+    _ = _();
+  return _({
+    mutationFn: async () => {
+      let _ = {
+        appid: _,
+        list_type: _,
+        publishedfileid: _,
+        include_dependencies: !0,
+        notify_client: !0,
+      };
+      return (await _.Subscribe(_, _)).BSuccess();
+    },
+    onSuccess: (_) => {
+      _ &&
+        (_.invalidateQueries({
+          queryKey: ["ugcliststatus", _, _, _],
+        }),
+        _.invalidateQueries({
+          queryKey: _(_),
+        }));
+    },
+  });
+}
+function _(_, _) {
+  return new _.default(
+    async (_) => {
+      let _ = [..._];
+      return (await _(_)) ?? [];
+    },
+    {
+      cache: !0,
+      maxBatchSize: 100,
+      ..._,
+    },
+  );
+}
+function _(_) {
+  return _("UGCSummaryLoader", () => _(_));
+}
+function _(_, _) {
+  return {
+    queryKey: ["ugc_summary", _],
+    queryFn: async () => await _.load(_),
+    staleTime: 300 * 1e3,
+  };
+}
+function _(_, _) {
+  let _ = _(_);
+  return _(_(_, _));
+}
+function _(_, _) {
+  return new _.default(
+    async (_) => {
+      let _ = [..._];
+      return (await _(_)) ?? [];
+    },
+    {
+      cache: !0,
+      maxBatchSize: 100,
+      ..._,
+    },
+  );
+}
+function _(_) {
+  return _("UGCCollectionSummaryLoader", () => _(_));
+}
+function _(_, _) {
+  return {
+    queryKey: ["ugc_collection_summary", _],
+    queryFn: async () => await _.load(_),
+    staleTime: 300 * 1e3,
+  };
+}
+function _(_, _) {
+  let _ = _(_);
+  return _(_(_, _));
+}
+function _(_) {
+  return ["ugcvote", _];
+}
+function _(_, _) {
+  return new _.default(
+    async (_) => {
+      let _ = [..._];
+      return await _(_);
+    },
+    {
+      cache: !1,
+      maxBatchSize: 100,
+      ..._,
+    },
+  );
+}
+function _(_) {
+  return _(["UserVoteSummary"], () => _(_));
+}
+function _(_, _) {
+  return {
+    queryKey: _(_),
+    queryFn: async () =>
+      _.logged_in
+        ? ((await _.load(_)) ?? {
+            vote_for: !1,
+            vote_against: !1,
+          })
+        : {
+            vote_for: !1,
+            vote_against: !1,
+          },
+    staleTime: 300 * 1e3,
+  };
+}
+function _(_, _) {
+  let _ = _(_);
+  return _(_(_, _));
+}
+function _(_, _) {
+  let _ = _();
+  return _({
+    mutationFn: async (_) => await _(_, _),
+    onSuccess: (_) => {
+      _ &&
+        _.invalidateQueries({
+          queryKey: _(_),
+        });
+    },
+  });
+}
+var _ = {
+  BackgroundImageCtn: "JAD8UTa-0ek-",
+  WorkshopBackgroundGridCtn: "i0jZqaPzWXM-",
+};
+var _ = _(_(), 1);
+function _(_) {
+  let { _: _, workshop: _ } = _,
+    { data: _ } = _(_),
+    { data: _ } = _(_);
+  if (!_ || !_) return null;
+  let _ =
+      _(_, "library_hero_2x") ??
+      _(_, "library_hero") ??
+      _(_, "raw_page_background"),
+    _ = `${_.COMMUNITY_CDN_URL}public/images/sharedfiles/workshop_background_grid.png`;
+  return _
+    ? (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)("div", {
+            className: _.BackgroundImageCtn,
+            children: (0, _.jsx)("img", {
+              src: _,
+              alt: _.name,
+            }),
+          }),
+          _ &&
+            (0, _.jsx)(_.Fragment, {
+              children: (0, _.jsx)("div", {
+                className: _.WorkshopBackgroundGridCtn,
+              }),
+            }),
+        ],
+      })
+    : null;
+}
+var _ = _(_(), 1);
+var _ = {
+  AppHubHeader: "xLMYeLbZSMI-",
+  TabsContainer: "F0rQT-TUKDs-",
+  Tab: "wL0w0j65lE8-",
+  Active: "AKNr409SBBM-",
+  ContentDescriptorWarning: "_3kg9cUD7Rag-",
+  ContentDescriptor: "TzLv8Lum16k-",
+};
+var _ = [
+  "all",
+  "discussions",
+  "screenshots",
+  "art",
+  "broadcasts",
+  "videos",
+  "workshop",
+  "news",
+  "webguides",
+  "userreviews",
+];
+var _ = _(_());
+var _ = _(_()),
+  _ = _(_());
+var _ = _(_());
+var _ = _(_());
+var _ = _(_());
+var _ = _(_());
+function _(_) {
+  let { labelledBy: _ } = _ || {},
+    [_, _] = _.useState(void 0),
+    _ = _.useMemo(
+      () => ({
+        setHeaderId: _,
+      }),
+      [],
+    );
+  return {
+    headerId: _ || _,
+    context: _,
+  };
+}
+function _(_) {
+  let {
+      active: _,
+      onDismiss: _,
+      className: _,
+      modalClassName: _,
+      children: _,
+      ..._
+    } = _,
+    { headerId: _, context: _ } = _({
+      labelledBy: _["aria-labelledby"],
+    });
+  return (0, _.jsx)(_.Provider, {
+    value: _,
+    children: (0, _.jsx)(_, {
+      active: _,
+      children: (0, _.jsx)(_, {
+        onEscKeypress: _,
+        className: _,
+        children: (0, _.jsx)(_, {
+          role: "dialog",
+          "aria-labelledby": _,
+          className: _,
+          ..._,
+          children: _,
+        }),
+      }),
+    }),
+  });
+}
+var _ = _(_());
+var _ = _(_());
+var _ = _(_(), 1),
+  _ = {
+    all: "#AppHub_Nav_All",
+    discussions: "#AppHub_Nav_Discussions",
+    screenshots: "#AppHub_Nav_Screenshots",
+    art: "#AppHub_Nav_Art",
+    broadcasts: "#AppHub_Nav_Broadcasts",
+    videos: "#AppHub_Nav_Videos",
+    workshop: "#AppHub_Nav_WorkshopItems",
+    news: "#AppHub_Nav_AllNews",
+    webguides: "#AppHub_Nav_Guides",
+    userreviews: "#AppHub_Nav_Reviews",
+  },
+  _ = {
+    all: "/",
+    discussions: "/discussions/",
+    screenshots: "/screenshots/",
+    art: "/images/",
+    broadcasts: "/broadcasts/",
+    videos: "/videos/",
+    workshop: "/workshop/",
+    news: "/news/",
+    webguides: "/guides/",
+    userreviews: "/reviews/",
+  },
+  _ = {
+    name: "wants_mature_content_apps",
+    options: {
+      path: "/",
+      secure: !0,
+      maxAge: 365 * 24 * 60 * 60 * 1e3,
+    },
+    preferenceControls: {
+      isTechnicallyNecessary: !0,
+    },
+  };
+function _() {
+  let _ = _(_);
+  return _ ? _.split("|").map((_) => parseInt(_)) : [];
+}
+function _(_) {
+  let _ = _();
+  _.push(_);
+  let _ = _.join("|");
+  _(_, _);
+}
+function _(_) {
+  return _().includes(_);
+}
+function _(_) {
+  let {
+      appid: _,
+      name: _,
+      activeTab: _,
+      rgHiddenTabs: _,
+      children: _,
+      eVisibility: _,
+      rgContentDescriptorIDs: _,
+      rgUserPreferencesOverlappingContentDescriptorIDs: _,
+    } = _,
+    _ = [..._].filter((_) => !_ || !_.includes(_)),
+    _ = `${_.COMMUNITY_BASE_URL}app/${_}`,
+    [_, _] = (0, _.useState)(!_(_) && _ == 3),
+    _ = () => {
+      window.location.href = _.COMMUNITY_BASE_URL;
+    },
+    _ = () => {
+      _(_), _(!1);
+    };
+  return _
+    ? (0, _.jsx)(_, {
+        active: !0,
+        children: (0, _.jsx)(_, {
+          onClose: _,
+          children: (0, _.jsx)(_, {
+            background: "dull-7",
+            padding: "3",
+            radius: "md",
+            children: (0, _.jsxs)(_, {
+              direction: "column",
+              justify: "center",
+              gap: "3",
+              align: "center",
+              className: _.ContentDescriptorWarning,
+              children: [
+                (0, _.jsx)("div", {
+                  children: _.Localize("#AppHubs_ContentCheck_Header_App"),
+                }),
+                (0, _.jsx)(_, {
+                  gap: "1",
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      "div",
+                      {
+                        className: _.ContentDescriptor,
+                        children: _(_),
+                      },
+                      _,
+                    ),
+                  ),
+                }),
+                (0, _.jsxs)(_, {
+                  gap: "1",
+                  children: [
+                    (0, _.jsx)(_, {
+                      onClick: _,
+                      children: _.Localize("#AppHubs_ContentCheck_ViewPage"),
+                    }),
+                    (0, _.jsx)(_, {
+                      onClick: _,
+                      children: _.Localize("#AppHubs_ContentCheck_Cancel"),
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          }),
+        }),
+      })
+    : (0, _.jsxs)(_.Fragment, {
+        children: [
+          (0, _.jsx)(_, {
+            paddingTop: "7",
+            paddingBottom: "2",
+            children: (0, _.jsx)(_, {
+              marginX: {
+                initial: "3",
+                _: "9",
+              },
+              children: (0, _.jsxs)("div", {
+                className: _.AppHubHeader,
+                children: [
+                  (0, _.jsxs)(_, {
+                    align: "center",
+                    justify: "between",
+                    wrap: {
+                      initial: "wrap",
+                      _: void 0,
+                    },
+                    gap: "3",
+                    direction: "row",
+                    children: [
+                      (0, _.jsx)(_, {
+                        external: !1,
+                        _: _,
+                        children: (0, _.jsx)(_, {
+                          size: {
+                            initial: "4",
+                            _: "6",
+                          },
+                          children: _,
+                        }),
+                      }),
+                      (0, _.jsx)(_, {
+                        controller: "app",
+                        method: "apphub_header",
+                        children: (0, _.jsx)(_, {
+                          appid: _,
+                        }),
+                      }),
+                    ],
+                  }),
+                  (0, _.jsx)(_, {
+                    gap: "2",
+                    className: _.TabsContainer,
+                    direction: "row",
+                    children: _.map((_) =>
+                      (0, _.jsx)(
+                        _,
+                        {
+                          bActive: _ == _,
+                          tab: _,
+                          appid: _,
+                        },
+                        _,
+                      ),
+                    ),
+                  }),
+                ],
+              }),
+            }),
+          }),
+          _,
+        ],
+      });
+}
+function _(_) {
+  let { appid: _ } = _,
+    _ = _(),
+    _ = _(_, `${_.STORE_BASE_URL}app/${_}/`);
+  return (0, _.jsx)(_, {
+    href: _,
+    children: _.Localize("#AppHub_Store"),
+  });
+}
+function _(_) {
+  return (0, _.jsx)(_, {
+    ..._,
+    className: _(),
+  });
+}
+function _(_) {
+  let { tab: _, appid: _, bActive: _ } = _,
+    _ = `${_.COMMUNITY_BASE_URL}app/${_}${_[_]}`,
+    _ = _.Localize(_[_]);
+  return (0, _.jsx)("div", {
+    className: _(_.Tab, _ && _.Active),
+    children: (0, _.jsx)(_, {
+      size: "4",
+      href: _,
+      children: _,
+    }),
+  });
+}
 var _ = "./workshop_ui_arabic-XXXXXXXX.json";
 var _ = "./workshop_ui_brazilian-XXXXXXXX.json";
 var _ = "./workshop_ui_bulgarian-XXXXXXXX.json";
@@ -13475,7 +13499,12 @@ function _(_) {
 }
 var _ = (0, _.createContext)(void 0),
   _ = (_) => {
-    let { app: _, strExistingSearchText: _ } = _.useLoaderData(),
+    let {
+        app: _,
+        strExistingSearchText: _,
+        existingSearchTextTarget: _,
+      } = _.useLoaderData(),
+      [_, _] = (0, _.useState)(_),
       [_, _] = (0, _.useState)(_),
       [_, _] = (0, _.useState)(void 0),
       _ = (0, _.useCallback)(
@@ -13506,9 +13535,11 @@ var _ = (0, _.createContext)(void 0),
           setOnBrowseHandler: _,
           searchText: _,
           setSearchText: _,
+          searchTextTarget: _,
+          setSearchTextTarget: _,
           onSearchTextUpdatedExternally: _,
         }),
-        [_, _, _],
+        [_, _, _, _],
       );
     return (0, _.jsx)(_.Provider, {
       value: _,

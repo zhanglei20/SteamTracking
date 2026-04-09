@@ -1165,6 +1165,36 @@ function _(_) {
   });
 }
 function _(_) {
+  return (0, _.jsxs)("svg", {
+    width: "100%",
+    height: "100%",
+    viewBox: "0 0 50 50",
+    children: [
+      (0, _.jsx)("rect", {
+        _: "0",
+        _: "10",
+        width: "40",
+        height: "5",
+        _: "5",
+      }),
+      (0, _.jsx)("rect", {
+        _: "0",
+        _: "20",
+        width: "40",
+        height: "5",
+        _: "5",
+      }),
+      (0, _.jsx)("rect", {
+        _: "0",
+        _: "30",
+        width: "40",
+        height: "5",
+        _: "5",
+      }),
+    ],
+  });
+}
+function _(_) {
   let { className: _, ..._ } = _,
     [_, _] = _(),
     [_, _] = _(),
@@ -1787,6 +1817,7 @@ function _(_) {
   });
 }
 export {
+  _,
   _,
   _,
   _,

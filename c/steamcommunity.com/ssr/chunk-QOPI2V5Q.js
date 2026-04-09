@@ -57,7 +57,6 @@ var _ = "_8LcK6XOQGOs-";
 var _ = "oTwwpJZZa-0-";
 var _ = "N5sE26cvGKA-";
 var _ = "WwXAMjaND98-";
-var _ = "L6lpU6Nam1Y-";
 var _ = "WraTymZMbqA-";
 var _ = "SMT33YTtlvk-";
 var _ = "y6QwltyQEdM-";
@@ -10662,10 +10661,23 @@ function _(_) {
 }
 var _ = _(_(), 1);
 var _ = "oFlCqDkvcYo-";
-var _ = _(_(), 1);
+var _ = "QgLhpKCelQA-";
+var _ = "heK9iNtr1G8-";
+var _ = _(_(), 1),
+  _ = [
+    "#Workshop_SearchTarget_All",
+    "#Workshop_SearchTarget_Title",
+    "#Workshop_SearchTarget_Description",
+  ];
 function _(_) {
   let { appName: _ } = _,
-    { onBrowseHandler: _, searchText: _, setSearchText: _ } = _(),
+    {
+      onBrowseHandler: _,
+      searchText: _,
+      setSearchText: _,
+      searchTextTarget: _,
+      setSearchTextTarget: _,
+    } = _(),
     _ = (0, _.useRef)(!1),
     _ = _.Localize("#Workshop_Menu_Search", _),
     _ = (_) => {
@@ -10695,21 +10707,32 @@ function _(_) {
     _ = _(_.trim(), {
       nTimeoutMS: 1e3,
     });
-  return (
-    (0, _.useEffect)(() => {
-      _.current &&
-        (_.length != 0
-          ? _({
-              browse_sort: "textsearch",
-              search_text: _,
-            })
-          : _({
-              search_text: _,
-            }));
-    }, [_]),
-    (0, _.jsx)("div", {
-      className: _,
-      children: (0, _.jsx)("form", {
+  (0, _.useEffect)(() => {
+    _.current &&
+      (_.length != 0
+        ? _({
+            browse_sort: "textsearch",
+            search_text: _,
+          })
+        : _({
+            search_text: _,
+          }));
+  }, [_]);
+  let _ = [0, 1, 2],
+    _ = (_) => {
+      _(_),
+        _({
+          search_text_target: _,
+          page: 1,
+        });
+    },
+    _ = (_) => _.Localize(_[_]),
+    [_, _] = (0, _.useState)(!1);
+  return (0, _.jsxs)(_, {
+    className: _,
+    gap: "1",
+    children: [
+      (0, _.jsx)("form", {
         onSubmit: _,
         children: (0, _.jsx)(
           _,
@@ -10727,8 +10750,49 @@ function _(_) {
           "SearchText",
         ),
       }),
-    })
-  );
+      (0, _.jsxs)(_.Root, {
+        open: _,
+        onOpenChange: _,
+        interactions: {
+          click: !0,
+          hover: !0,
+        },
+        placement: "bottom-start",
+        children: [
+          (0, _.jsx)(_.Anchor, {
+            children: (0, _.jsx)(_, {
+              onActivate: () => _(!0),
+              className: _,
+              children: (0, _.jsx)(_, {}),
+            }),
+          }),
+          (0, _.jsx)(_.Positioner, {
+            children: (0, _.jsx)(_.FocusManager, {
+              children: (0, _.jsx)("div", {
+                children: (0, _.jsxs)(_, {
+                  className: _,
+                  gap: "1",
+                  direction: "column",
+                  children: [
+                    (0, _.jsx)(_, {
+                      size: "4",
+                      children: _.Localize("#Workshop_SearchTarget_MenuTitle"),
+                    }),
+                    (0, _.jsx)(_, {
+                      options: _,
+                      value: _,
+                      onValueChange: _,
+                      getOptionLabel: _,
+                    }),
+                  ],
+                }),
+              }),
+            }),
+          }),
+        ],
+      }),
+    ],
+  });
 }
 var _ = _(_(), 1),
   _ = _({
@@ -10820,7 +10884,10 @@ function _(_) {
               (_.special_filter = _.special_filter),
               (_.required_tags = _.required_tags),
               (_.excluded_tags = _.excluded_tags))
-            : (_.search_text && _.search_text != _.search_text) || _.browse_sort
+            : (_.search_text && _.search_text != _.search_text) ||
+                (_.search_text_target !== void 0 &&
+                  _.search_text_target != _.search_text_target) ||
+                _.browse_sort
               ? (_.page = 1)
               : _.special_filter == 5 && (_.browse_sort = "reported"),
           (_.omitted_flags = void 0),
@@ -11054,14 +11121,23 @@ function _(_) {
 }
 function _(_) {
   let { onSearchTextUpdatedExternally: _, onBrowseHandler: _ } = _(),
-    { search_text: _ } = _,
+    { search_text: _, search_text_target: _ } = _,
     _ = (0, _.useCallback)(() => {
       _({
         search_text: "",
         page: 1,
       }),
         _("");
-    }, [_, _]);
+    }, [_, _]),
+    _ = "#Workshop_SearchResults_SearchText";
+  switch (_) {
+    case 1:
+      _ = "#Workshop_SearchResults_SearchText_TitleOnly";
+      break;
+    case 2:
+      _ = "#Workshop_SearchResults_SearchText_DescriptionOnly";
+      break;
+  }
   return (0, _.jsxs)(_, {
     onClick: _,
     color: "dull",
@@ -11069,7 +11145,7 @@ function _(_) {
     children: [
       (0, _.jsx)("div", {
         className: _,
-        children: _.Localize("#Workshop_SearchResults_SearchText", _),
+        children: _.Localize(_, _),
       }),
       (0, _.jsx)(_, {
         className: _,
@@ -11362,18 +11438,21 @@ function _(_) {
   });
 }
 function _(_) {
-  let { appid: _, rgRequiredAppIDs: _ } = _,
+  let { appid: _, rgRequiredAppIDs: _, rgExcludedRequiredAppIDs: _ } = _,
     { onBrowseHandler: _ } = _(),
     { data: _ } = _({
       appid: _,
     }),
+    _ = _.includes(_),
     _ = (0, _.useCallback)(() => {
-      let _ = _?.filter((_) => _ !== _);
+      let _ = _?.filter((_) => _ !== _),
+        _ = _?.filter((_) => _ !== _);
       _({
         appids_required_for_use: _,
+        excluded_appids_required_for_use: _,
         page: 1,
       });
-    }, [_, _, _]);
+    }, [_, _, _, _]);
   if (!_?.name) return null;
   let _ = _.Localize("#Workshop_RequiredDLC_Filter", _?.name ?? _.toString());
   return (0, _.jsxs)(_, {
@@ -11381,7 +11460,18 @@ function _(_) {
     color: "dull",
     size: "1",
     children: [
-      _,
+      !_ &&
+        (0, _.jsx)(_, {
+          className: (0, _.default)(_, _),
+        }),
+      _ &&
+        (0, _.jsx)(_, {
+          className: (0, _.default)(_, _),
+        }),
+      (0, _.jsx)("div", {
+        className: _,
+        children: _,
+      }),
       (0, _.jsx)(_, {
         className: _,
       }),
@@ -11389,7 +11479,9 @@ function _(_) {
   });
 }
 function _(_) {
-  let { rgRequiredAppIDs: _ } = _;
+  let { rgRequiredAppIDs: _, rgExcludedRequiredAppIDs: _ } = _,
+    { availableRequiredDLC: _ } = _.useLoaderData(),
+    _ = _.filter((_) => _.includes(_) || _.includes(_));
   return (0, _.jsx)(_.Fragment, {
     children: _.map((_) =>
       (0, _.jsx)(
@@ -11397,6 +11489,7 @@ function _(_) {
         {
           appid: _,
           rgRequiredAppIDs: _,
+          rgExcludedRequiredAppIDs: _,
         },
         _,
       ),
@@ -11559,6 +11652,7 @@ function _(_) {
           _,
           {
             search_text: _.search_text ?? "",
+            search_text_target: _.search_text_target,
           },
           "search_text",
         ),
@@ -11607,12 +11701,14 @@ function _(_) {
           "special_filter",
         ),
       ),
-    _.appids_required_for_use?.length &&
+    (_.appids_required_for_use?.length ||
+      _.excluded_appids_required_for_use?.length) &&
       _.push(
         (0, _.jsx)(
           _,
           {
             rgRequiredAppIDs: _.appids_required_for_use ?? [],
+            rgExcludedRequiredAppIDs: _.excluded_appids_required_for_use ?? [],
           },
           "appids_required_for_use",
         ),
@@ -12063,31 +12159,50 @@ function _(_) {
   });
 }
 function _(_) {
-  let { appid: _, rgRequiredAppIDs: _ } = _,
+  let { appid: _, rgRequiredAppIDs: _, rgExcludedRequiredAppIDs: _ } = _,
     { onBrowseHandler: _ } = _(),
     { data: _ } = _({
       appid: _,
     }),
     _ = _?.includes(_),
+    _ = _?.includes(_),
     _ = () => {
-      let _ = _ ? _?.filter((_) => _ !== _) : [..._, _];
+      let _ = _ ? _?.filter((_) => _ !== _) : [..._, _],
+        _ = _.filter((_) => _ !== _);
       _({
         appids_required_for_use: _,
+        excluded_appids_required_for_use: _,
+        page: 1,
+      });
+    },
+    _ = () => {
+      let _ = _.filter((_) => _ !== _),
+        _ = _ ? _.filter((_) => _ !== _) : [..._, _];
+      _({
+        appids_required_for_use: _,
+        excluded_appids_required_for_use: _,
         page: 1,
       });
     };
   return !_ || !_.name
     ? null
     : (0, _.jsxs)(_, {
-        onActivate: _,
         className: _,
+        direction: "row",
         children: [
-          (0, _.jsx)("div", {
+          (0, _.jsx)(_, {
+            onActivate: _,
             className: (0, _.default)(_, _ && _),
             children: (0, _.jsx)(_, {}),
           }),
-          (0, _.jsx)("div", {
-            className: _,
+          (0, _.jsx)(_, {
+            onActivate: _,
+            className: (0, _.default)(_, _ && _),
+            children: (0, _.jsx)(_, {}),
+          }),
+          (0, _.jsx)(_, {
+            focusable: !_.IN_GAMEPADUI,
+            onActivate: _,
             children: _.name,
           }),
         ],
@@ -12115,6 +12230,8 @@ function _(_) {
                   {
                     appid: _,
                     rgRequiredAppIDs: _.appids_required_for_use ?? [],
+                    rgExcludedRequiredAppIDs:
+                      _.excluded_appids_required_for_use ?? [],
                   },
                   _,
                 ),

@@ -2523,7 +2523,7 @@
                 ),
               interactions: {
                 click: !0,
-                virtualItemFocus: !0,
+                virtualItemFocus: !_._.IN_GAMEPADUI,
               },
               role: "combobox",
               scroll: !1,

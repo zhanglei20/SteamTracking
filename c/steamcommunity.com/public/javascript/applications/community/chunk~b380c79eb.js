@@ -297,6 +297,9 @@
             return (0, _._)(
               _,
               (0, _.jsx)(_._, {
+                navProps: {
+                  focusable: !0,
+                },
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,
@@ -318,8 +321,43 @@
         },
       );
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = (0, _.createContext)(null);
+      function _(_) {
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+            });
+      }
+      function _(_) {
+        const { state: _, children: _ } = _,
+          _ = _.useRef(void 0);
+        return (
+          (0, _._)(_, !!_.current, !1),
+          (0, _.jsx)(_._, {
+            navID: "PopoverList",
+            onCancelButton: () => _.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: _,
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const { state: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          context: _.floating.context,
+          initialFocus: _.initialFocus,
+          returnFocus: !1,
+          children: _,
+        });
+      }
       function _(_) {
         const {
           open: _,
@@ -429,10 +467,8 @@
             ? _.open
               ? (0, _.jsx)(_._, {
                   root: null == _ ? void 0 : _.targetElement,
-                  children: (0, _.jsx)(_._, {
-                    context: _.floating.context,
-                    initialFocus: _.initialFocus,
-                    returnFocus: !1,
+                  children: (0, _.jsx)(_, {
+                    state: _,
                     children: (0, _.jsx)(_, {
                       ref: _,
                       style: _.floating.floatingStyles,
@@ -481,7 +517,7 @@
             selected: _,
             focused: _,
             role: "option",
-            tabIndex: _ ? 0 : -1,
+            tabIndex: 0,
             ..._.getItemProps({
               onClick: _ ? void 0 : _,
               onKeyDown: (_) => {
