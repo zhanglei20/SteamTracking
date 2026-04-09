@@ -5412,6 +5412,7 @@ $steammessages_parental_objects.proto"
 +\n'k_EProfileCustomizationTypeMyGreenlight
 +\n'k_EProfileCustomizationTypeWorkshopItem
 +\n'k_EPublishedFileRevision_AuthorSnapshot
++\n'k_ERemoteClientBroadcastMsgPairingState
 +\n'k_ERemoteDeviceAuthorizationNotLoggedIn
 +\n'k_ESteamDatagramMsg_GameserverPingReply
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
@@ -7315,6 +7316,7 @@ $steammessages_parental_objects.proto"
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
 /data/src/clientdll/pipewireutils.cpp
+/data/src/clientdll/remoteclientdongle.cpp
 /data/src/clientdll/remoteclientjobs.cpp
 /data/src/clientdll/remoteclientmanager.cpp
 /data/src/clientdll/remoteclientmanager.h
@@ -7956,11 +7958,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -11390,6 +11392,7 @@ $steammessages_parental_objects.proto"
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ERemoteClientBroadcastMsgClientIDDeconflict
+1\n-k_ERemoteClientBroadcastMsgPairingExclusivity
 1\n-k_ESharedLibrary_AppExcluded_NonrefundableDLC
 1\n-k_ESharedLibrary_LicenseExcluded_FlagBorrowed
 1\n-k_ESteamDatagramMsg_SetSecondaryAddressResult
@@ -11426,7 +11429,7 @@ $steammessages_parental_objects.proto"
 2 Mbps
 2!.EMarketingMessageAssociationType
 2!.ERemoteDeviceAuthorizationResult
-2!.ERemoteDeviceAuthorizationResult"
+2!.ERemoteDeviceAuthorizationResult"f\n+CMsgRemoteClientBroadcastClientPairingState
 2".EGameFrameRateReportingPreference
 2"7\n&CMsgClientSiteLicenseGetAvailableSeats
 2"A\n#CMsgGSComputeNewPlayerCompatibility
@@ -14873,6 +14876,7 @@ $steammessages_parental_objects.proto"
 43CMsgClientRequestEncryptedAppTicketResponse
 43CMsgGSComputeNewPlayerCompatibilityResponse
 43CMsgRemoteClientBroadcastClientIDDeconflict
+43CMsgRemoteClientBroadcastClientPairingState
 43CMsgRemoteClientDownloadScheduleItemChanged
 43CMsgRemoteClientGetControllerConfigResponse
 43CMsgRemoteClientStartStream_ReservedGamepad
@@ -15280,6 +15284,7 @@ $steammessages_parental_objects.proto"
 49CMarketingMessages_UpdateMarketingMessage_Request
 49CMsgClientGetUserStatsResponse_Achievement_Blocks
 49CMsgClientServersAvailable_Server_Types_Available
+49CMsgRemoteClientBroadcastClientPairingExclusivity
 49CMsgSteamDatagramConnectionStatsP2PClientToRouter
 49CMsgSteamDatagramConnectionStatsP2PRouterToClient
 49CMsgSteamDatagramSignedGameCoordinatorServerLogin
@@ -16334,6 +16339,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
+9Hd"\
 9IClientVR
 9IGv
 9ISteamUGC
@@ -20961,6 +20967,7 @@ CRemoteClientDongle: Driver app is installed but updating, will wait to take act
 CRemoteClientDongle: Driver app requires installation or update, attempting to kick that off.
 CRemoteClientDongle: Ensuring dongle driver is updated...
 CRemoteClientDongle: Running post-application driver update check.
+CRemoteClientDongle::GetPairingSSIDPassword returned false
 CRemoteClientDongle::OnRemoteClientUSBTriggerHotplug() valid
 CRemoteClientDongle::OnVRHMDDetected
 CRemoteClientJobGetControllerConfig
@@ -20987,6 +20994,7 @@ CRemoteClientJobStartRemoteApp timed out waiting for reply (extend client timeou
 CRemoteClientJobStartRemoteApp: PerformApplicationPrelaunchCheck( "%s" ) failed with %s
 CRemoteClientJobStartRemoteApp: Post-launch PerformApplicationPrelaunchCheck( "%s" ) failed with %s
 CRemoteClientJobStartRemoteApp::BYieldingRunClientJobSteam starting appid %u on %llu (%s)
+CRemoteClientJobStartRemoteApp::BYieldingRunClientJobSteam: Streaming VR, so forcing audio channels to 2 from configured value %d
 CRemoteClientJobStartStream
 CRemoteClientJobStartStream returning launch result %d
 CRemoteClientJobStartStream timed out k_ERemoteClientWaitUIDriverInstallation
@@ -28719,6 +28727,8 @@ Last verify in '%s' was %u days ago, clean bytes tally reset to 0
 Last-Modified
 LastBuildID
 LastInstallFolderIndex
+LastKnownPairedClientID
+LastKnownPairedTime
 LastName
 LastOwner
 LastPlayTime
@@ -33295,6 +33305,7 @@ RecordPadding
 RecordPlaytime
 RecordSteamInterfaceCreation
 Recorded backend hit cache generation %d.
+Recorded updated pairing info from %llu
 Recording disconnected playtime (%d)\n
 Recording non-user mapping for %u at priority %d to tool %s
 RecoverAppFromFolder
@@ -36836,6 +36847,7 @@ Tctl
 Tdie
 Techno
 Techno-Industrial
+Telling client %llu to unpair
 Telugu
 Temp file already exists: "%s"
 Temp folder not writable
@@ -37083,6 +37095,7 @@ ToggleVideoRecording_t
 Token
 TokenUsageEvent
 Told peer to stop acking up to %lld, but latest packet we have sent is %lld
+Told to unpair by %llu
 Too Early
 Too Far behind
 Too Many Requests
@@ -40200,6 +40213,7 @@ Zulu
 \n1CCloud_ExternalStorageTransferReport_Notification
 \n1CCommunity_GetUserPartnerEventViewStatus_Response
 \n1CContentServerDirectory_GetDepotPatchInfo_Request
+\n1CMsgRemoteClientBroadcastClientPairingExclusivity
 \n1CMsgSteamDatagramConnectionStatsP2PClientToRouter
 \n1CMsgSteamDatagramConnectionStatsP2PRouterToClient
 \n1CMsgSteamDatagramSignedGameCoordinatorServerLogin
@@ -47318,7 +47332,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen
+ggenb
 ghjkl
 gidlist
 gidparentcomment
@@ -48459,6 +48473,7 @@ if-rang
 if-range
 if-unmodified-sinc
 if-unmodified-since
+if_paired_network_hash_is
 iframe->state == NGHTTP2_IB_IGN_ALL
 ig,o
 igbo
@@ -51429,6 +51444,7 @@ last_callissue_delta
 last_changenumber
 last_deck_playtime
 last_ecallresult
+last_known_pairing_time
 last_linux_playtime
 last_logoff_time
 last_mac_playtime
@@ -54631,6 +54647,8 @@ muted
 mutual_friend_account_ids
 mwa!
 my_ips
+my_paired_network_hash
+my_pairing_time
 mycompletedfiles
 myfavorites
 myfiles
@@ -59210,7 +59228,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr  7 2026 20:56:05
+steam Apr  9 2026 00:02:12
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -59572,6 +59590,7 @@ streaming_v2\WifiAPHotspotSSID
 streaming_v2\WifiAPPairedPassword
 streaming_v2\WifiAPPairedSSID
 streaming_v2\WifiAPPairedTime
+streaming_v2\dongle\%llu\%s
 street
 streetAddress
 strerror
@@ -61109,6 +61128,7 @@ unnamed
 unnamed_arg0
 unnamed_arg1
 unpacking bad chunk "%s" (%s)
+unpair_unless_you_are_client_id
 unprotectedAttrs
 unread
 unread_indicator_muted
@@ -61603,6 +61623,7 @@ w>mMS
 w?6r
 wU9%
 wXR\r
+w\fmq
 w\n\nRunningApp
 w\n\tConnectOK
 waC+

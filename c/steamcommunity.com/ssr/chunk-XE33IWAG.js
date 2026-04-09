@@ -49,22 +49,25 @@ var _ = "SN-ezRktzRU-";
 var _ = "kgG4nIhrZoU-";
 var _ = "sGHCfuwOzrA-";
 var _ = "ZuItuUW6wbA-";
+var _ = "_2u-CXYgdzlo-";
 var _ = "ytngwseR2jE-";
 var _ = "ZNBA7PzLeas-";
 var _ = "_5n8C6PyeXq8-";
-var _ = "_9Xx1E2Gd668-";
-var _ = "mkxmUdOoPsY-";
 var _ = "_8LcK6XOQGOs-";
 var _ = "oTwwpJZZa-0-";
 var _ = "N5sE26cvGKA-";
 var _ = "WwXAMjaND98-";
 var _ = "WraTymZMbqA-";
+var _ = "SMT33YTtlvk-";
 var _ = "y6QwltyQEdM-";
 var _ = "LLqx1ozATnk-";
 var _ = "eU5-MV-2cGg-";
 var _ = "yIDj-7dpZ9E-";
 var _ = "ZKaFvriA7TU-";
 var _ = "_1-q2VaywILI-";
+var _ = "pvmj3PqxOT4-";
+var _ = "_8aVzMh2yWb0-";
+var _ = "_2DP7DIL-o68-";
 var _ = "jsbOFi7I2qw-";
 var _ = "wXnTKUQ7ghw-";
 var _ = "xlblibmgakI-";
@@ -10656,6 +10659,76 @@ function _(_) {
     ],
   });
 }
+var _ = _(_(), 1);
+var _ = "oFlCqDkvcYo-";
+var _ = _(_(), 1);
+function _(_) {
+  let { appName: _ } = _,
+    { onBrowseHandler: _, searchText: _, setSearchText: _ } = _(),
+    _ = (0, _.useRef)(!1),
+    _ = _.Localize("#Workshop_Menu_Search", _),
+    _ = (_) => {
+      _.preventDefault(),
+        _({
+          search_text: _,
+        });
+    },
+    _ = (0, _.useCallback)(
+      (_) => {
+        _(_);
+      },
+      [_],
+    ),
+    _ = (0, _.useCallback)(() => {
+      _({
+        browse_sort: "toprated",
+        search_text: "",
+      });
+    }, [_]),
+    _ = (0, _.useCallback)(() => {
+      _.current = !1;
+    }, []),
+    _ = (0, _.useCallback)(() => {
+      _.current = !0;
+    }, []),
+    _ = _(_.trim(), {
+      nTimeoutMS: 1e3,
+    });
+  return (
+    (0, _.useEffect)(() => {
+      _.current &&
+        (_.length != 0
+          ? _({
+              browse_sort: "textsearch",
+              search_text: _,
+            })
+          : _({
+              search_text: _,
+            }));
+    }, [_]),
+    (0, _.jsx)("div", {
+      className: _,
+      children: (0, _.jsx)("form", {
+        onSubmit: _,
+        children: (0, _.jsx)(
+          _,
+          {
+            name: "SearchInput",
+            placeholder: _,
+            value: _,
+            onTextChange: _,
+            onTextClear: _,
+            onFocus: _,
+            onBlur: _,
+            maxLength: 64,
+            clearable: !0,
+          },
+          "SearchText",
+        ),
+      }),
+    })
+  );
+}
 var _ = _(_(), 1),
   _ = _({
     Component: _,
@@ -10690,9 +10763,10 @@ var _ = _(_(), 1),
   },
   _ = () => (0, _.useContext)(_);
 function _(_) {
-  let { serverQuery: _ } = _.useLoaderData(),
+  let { app: _, serverQuery: _ } = _.useLoaderData(),
     [_, _] = (0, _.useState)(() => _()?.workshopBrowseQuery ?? _),
     { setOnBrowseHandler: _, onSearchTextUpdatedExternally: _ } = _(),
+    _ = _(),
     [_, _] = (0, _.useState)(!1),
     _ = (0, _.useRef)(null),
     _ = _(
@@ -10704,11 +10778,12 @@ function _(_) {
     _ = _(_, _),
     _ = (0, _.useCallback)(() => {
       _.current &&
+        (_ == "sm" || _ == "initial") &&
         _.current.scrollIntoView({
           behavior: "smooth",
           block: "nearest",
         });
-    }, []),
+    }, [_]),
     _ = (0, _.useCallback)((_) => {
       let _ = new URL(window.location.href);
       (_.search = _(_).toString()),
@@ -10788,7 +10863,10 @@ function _(_) {
   let _ = _.isLoading || _.isPlaceholderData;
   return (0, _.jsx)(_, {
     marginTop: "5",
-    marginX: "3",
+    marginX: {
+      initial: "3",
+      _: "9",
+    },
     children: (0, _.jsxs)(_, {
       minHeight: "calc( 75vh + 100px )",
       direction: "column",
@@ -10853,6 +10931,9 @@ function _(_) {
                 direction: "row",
                 children: [
                   (0, _.jsx)(_, {
+                    appName: _.name,
+                  }),
+                  (0, _.jsx)(_, {
                     browseQuery: _,
                   }),
                   (0, _.jsx)(_, {
@@ -10864,42 +10945,53 @@ function _(_) {
           }),
         }),
         (0, _.jsxs)(_, {
-          results: _.results,
+          direction: "row",
+          gap: "3",
+          width: "100%",
+          marginTop: "3",
           children: [
-            _.section == "collections" &&
-              (0, _.jsx)(_, {
-                className: (0, _.default)(_, _ && _),
-                "flow-children": "grid",
-                children:
-                  _.isSuccess &&
-                  _.data.results.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        details: _,
-                      },
-                      _.publishedfileid,
-                    ),
-                  ),
-              }),
-            _.section !== "collections" &&
-              (0, _.jsx)(_, {
-                className: (0, _.default)(_, _ && _),
-                "flow-children": "grid",
-                children:
-                  _.isSuccess &&
-                  _.data.results.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        details: _,
-                      },
-                      _.publishedfileid,
-                    ),
-                  ),
-              }),
             (0, _.jsx)(_, {
-              rgDetails: _.results,
+              browseQuery: _,
+            }),
+            (0, _.jsxs)(_, {
+              results: _.results,
+              children: [
+                _.section == "collections" &&
+                  (0, _.jsx)(_, {
+                    className: (0, _.default)(_, _ && _),
+                    "flow-children": "grid",
+                    children:
+                      _.isSuccess &&
+                      _.data.results.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            details: _,
+                          },
+                          _.publishedfileid,
+                        ),
+                      ),
+                  }),
+                _.section !== "collections" &&
+                  (0, _.jsx)(_, {
+                    className: (0, _.default)(_, _ && _),
+                    "flow-children": "grid",
+                    children:
+                      _.isSuccess &&
+                      _.data.results.map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            details: _,
+                          },
+                          _.publishedfileid,
+                        ),
+                      ),
+                  }),
+                (0, _.jsx)(_, {
+                  rgDetails: _.results,
+                }),
+              ],
             }),
           ],
         }),
@@ -11727,7 +11819,7 @@ function _(_) {
       _(!0);
     },
     _ = (_) => {
-      let _ = _.filter((_) => _.tags.findIndex((_) => _ !== _.name) == -1);
+      let _ = _.filter((_) => !_.tags.some((_) => _ == _.name));
       _.length != 0 && _.push(_),
         _({
           required_tags: _,
@@ -11739,7 +11831,7 @@ function _(_) {
     case "select": {
       let _ = _.tags.find((_) => _.find((_) => _.name == _));
       return (0, _.jsxs)("div", {
-        className: _,
+        className: (0, _.default)(_, _),
         children: [
           (0, _.jsx)("div", {
             className: _,
@@ -11785,19 +11877,27 @@ function _(_) {
         children: [
           (0, _.jsx)("div", {
             className: _,
-            children: _.name,
+            children: _.name
+              ? _.name
+              : _.Localize("#Workshop_ItemDetails_Categories_Title"),
           }),
-          _.tags.map((_) =>
-            (0, _.jsx)(
-              _,
-              {
-                tag: _,
-                rgRequiredTags: _,
-                rgExcludedTags: _,
-              },
-              _._,
-            ),
-          ),
+          (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)("div", {
+              className: _,
+              children: _.tags.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    tag: _,
+                    rgRequiredTags: _,
+                    rgExcludedTags: _,
+                  },
+                  _._,
+                ),
+              ),
+            }),
+          }),
         ],
       });
   }
@@ -11856,7 +11956,7 @@ function _(_) {
   return _.length <= 1
     ? null
     : (0, _.jsxs)("div", {
-        className: _,
+        className: (0, _.default)(_, _),
         children: [
           (0, _.jsx)("div", {
             className: _,
@@ -11937,7 +12037,7 @@ function _(_) {
       return null;
   }
   return (0, _.jsxs)(_, {
-    className: _,
+    className: (0, _.default)(_, _),
     children: [
       (0, _.jsx)("div", {
         className: _,
@@ -11981,7 +12081,10 @@ function _(_) {
             className: (0, _.default)(_, _ && _),
             children: (0, _.jsx)(_, {}),
           }),
-          _.name,
+          (0, _.jsx)("div", {
+            className: _,
+            children: _.name,
+          }),
         ],
       });
 }
@@ -11991,22 +12094,28 @@ function _(_) {
   return _.length == 0
     ? null
     : (0, _.jsxs)(_, {
-        className: _,
+        className: (0, _.default)(_),
         children: [
           (0, _.jsx)("div", {
             className: _,
             children: _.Localize("#Workshop_RequiredDLC_Header"),
           }),
-          _.map((_) =>
-            (0, _.jsx)(
-              _,
-              {
-                appid: _,
-                rgRequiredAppIDs: _.appids_required_for_use ?? [],
-              },
-              _,
-            ),
-          ),
+          (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)("div", {
+              className: _,
+              children: _.map((_) =>
+                (0, _.jsx)(
+                  _,
+                  {
+                    appid: _,
+                    rgRequiredAppIDs: _.appids_required_for_use ?? [],
+                  },
+                  _,
+                ),
+              ),
+            }),
+          }),
         ],
       });
 }
@@ -12046,22 +12155,32 @@ function _(_) {
   return (0, _.jsxs)("div", {
     className: _,
     children: [
-      _.Localize("#Workshop_DateFilter_Between"),
-      (0, _.jsx)(_, {
-        value: _,
-        onValueChange: _,
-        max: _,
-        checkValidDate: _,
-        clearable: !0,
+      (0, _.jsxs)(_, {
+        direction: "column",
+        children: [
+          _.Localize("#Workshop_DateFilter_Between"),
+          (0, _.jsx)(_, {
+            value: _,
+            onValueChange: _,
+            max: _,
+            checkValidDate: _,
+            clearable: !0,
+          }),
+        ],
       }),
-      _.Localize("#Workshop_DateFilter_And"),
-      (0, _.jsx)(_, {
-        value: _,
-        onValueChange: _,
-        min: _,
-        max: _,
-        checkValidDate: _,
-        clearable: !0,
+      (0, _.jsxs)(_, {
+        direction: "column",
+        children: [
+          _.Localize("#Workshop_DateFilter_And"),
+          (0, _.jsx)(_, {
+            value: _,
+            onValueChange: _,
+            min: _,
+            max: _,
+            checkValidDate: _,
+            clearable: !0,
+          }),
+        ],
       }),
     ],
   });
@@ -12107,8 +12226,10 @@ function _(_) {
       }),
       _ &&
         (0, _.jsxs)("div", {
+          className: (0, _.default)(_, _),
           children: [
             (0, _.jsx)("div", {
+              className: _,
               children: _.Localize("#Workshop_DateFilter_TimeCreated"),
             }),
             (0, _.jsx)(_, {
@@ -12116,6 +12237,7 @@ function _(_) {
               fnOnUpdate: _,
             }),
             (0, _.jsx)("div", {
+              className: _,
               children: _.Localize("#Workshop_DateFilter_TimeUpdated"),
             }),
             (0, _.jsx)(_, {
@@ -12128,7 +12250,8 @@ function _(_) {
   });
 }
 function _(_) {
-  let { browseQuery: _ } = _,
+  let _ = _(),
+    { browseQuery: _ } = _,
     [_, _] = (0, _.useState)(!1),
     _ = (0, _.jsxs)(_, {
       className: _,
@@ -12178,45 +12301,76 @@ function _(_) {
         }),
       [_],
     );
-  return (0, _.jsxs)("div", {
-    className: _,
-    children: [
-      !_.IN_GAMEPADUI &&
-        (0, _.jsxs)(_.Root, {
-          open: _,
-          onOpenChange: _,
-          interactions: {
-            click: !0,
-            focus: !0,
-          },
-          placement: {
-            offset: 0,
-            initial: "bottom-start",
-            flip: !1,
-          },
-          children: [
-            (0, _.jsx)(_.Anchor, {
-              children: _,
-            }),
-            (0, _.jsx)(_.Positioner, {
-              children: _,
-            }),
-          ],
-        }),
-      _.IN_GAMEPADUI &&
-        (0, _.jsxs)(_.Fragment, {
-          children: [
-            _,
-            _ &&
-              (0, _.jsx)(_, {
-                active: !0,
-                children: (0, _.jsx)(_, {
-                  onClose: () => _(!1),
+  return _ != "sm" && _ != "initial"
+    ? (0, _.jsx)("div", {})
+    : (0, _.jsxs)("div", {
+        className: _,
+        children: [
+          !_.IN_GAMEPADUI &&
+            (0, _.jsxs)(_.Root, {
+              open: _,
+              onOpenChange: _,
+              interactions: {
+                click: !0,
+                focus: !0,
+              },
+              placement: {
+                offset: 0,
+                initial: "bottom-start",
+                flip: !1,
+              },
+              children: [
+                (0, _.jsx)(_.Anchor, {
                   children: _,
                 }),
-              }),
-          ],
-        }),
+                (0, _.jsx)(_.Positioner, {
+                  children: _,
+                }),
+              ],
+            }),
+          _.IN_GAMEPADUI &&
+            (0, _.jsxs)(_.Fragment, {
+              children: [
+                _,
+                _ &&
+                  (0, _.jsx)(_, {
+                    active: !0,
+                    children: (0, _.jsx)(_, {
+                      onClose: () => _(!1),
+                      children: _,
+                    }),
+                  }),
+              ],
+            }),
+        ],
+      });
+}
+function _(_) {
+  let _ = _();
+  if (_ == "sm" || _ == "initial") return null;
+  let { browseQuery: _ } = _;
+  return (0, _.jsxs)(_, {
+    className: _,
+    "flow-children": "column",
+    children: [
+      (0, _.jsx)(_, {
+        browseQuery: _,
+      }),
+      (0, _.jsx)(_, {
+        browseQuery: _,
+      }),
+      (0, _.jsx)(_, {
+        browseQuery: _,
+      }),
+      (0, _.jsx)(_, {
+        browseQuery: _,
+      }),
+      (0, _.jsx)(_, {
+        browseQuery: _,
+      }),
+      (0, _.jsx)(_, {
+        browseQuery: _,
+      }),
     ],
   });
 }

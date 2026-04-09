@@ -2080,6 +2080,7 @@ http://localhost:${}/
 http://proxy
 http://qr.weibo.cn/g/7kla92
 http://steamcommunity.com/games/593110/announcements/detail/1301948399251160549
+http://steamconnecttest.com
 http://steamloopback.host
 http://store-tc.k.steam.net/graph
 http://twitter.com/steam

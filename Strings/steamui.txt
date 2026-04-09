@@ -5072,6 +5072,7 @@ ${LANGUAGE}
 +\n'k_EProfileCustomizationTypeMyGreenlight
 +\n'k_EProfileCustomizationTypeWorkshopItem
 +\n'k_EPublishedFileRevision_AuthorSnapshot
++\n'k_ERemoteClientBroadcastMsgPairingState
 +\n'k_ERemoteDeviceAuthorizationNotLoggedIn
 +\n'k_ESettingProfileMode_PerGamePerDisplay
 +\n'k_ESteamDeckCompatibilityFeedback_Agree
@@ -7302,6 +7303,7 @@ ${LANGUAGE}
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -8478,6 +8480,7 @@ ${LANGUAGE}
 13CCallbackImplILi560EE
 13CCallbackImplILi584EE
 13CCallbackImplILi628EE
+13CCallbackImplILi65EE
 13CCallbackImplILi704EE
 13CCallbackImplILi75EE
 13CCallbackImplILi768EE
@@ -8874,20 +8877,7 @@ ${LANGUAGE}
 16StoreItem_Assets
 16UserAccount_Stub
 16VideoClient_Stub
-2000
-2019
-2048
-3072
-3333
-4000
-4096
-5000
-30000
-333333
-524288
-33554432
 1724792014
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 17Achievements_Stub
 17CClientWalletInfo
 17CCrossProcessPipe
@@ -9219,6 +9209,7 @@ ${LANGUAGE}
 1\n-k_EProfileCustomizationTypeScreenshotShowcase
 1\n-k_EPublishedFileInappropriateProvider_Invalid
 1\n-k_ERemoteClientBroadcastMsgClientIDDeconflict
+1\n-k_ERemoteClientBroadcastMsgPairingExclusivity
 1\n-k_ESharedLibrary_AppExcluded_NonrefundableDLC
 1\n-k_ESharedLibrary_LicenseExcluded_FlagBorrowed
 1\n-k_ESteamDeckCompatibilityCategory_Unsupported
@@ -9254,7 +9245,7 @@ ${LANGUAGE}
 2 Mbps
 2!.EMarketingMessageAssociationType
 2!.ERemoteDeviceAuthorizationResult
-2!.ERemoteDeviceAuthorizationResult"
+2!.ERemoteDeviceAuthorizationResult"f\n+CMsgRemoteClientBroadcastClientPairingState
 2".EGameFrameRateReportingPreference
 2".google.protobuf.Field.Cardinality
 2"7\n&CMsgClientSiteLicenseGetAvailableSeats
@@ -9315,7 +9306,10 @@ ${LANGUAGE}
 2/YDc~-0
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
+2000
 200M
+2019
+2048
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -10549,6 +10543,8 @@ ${LANGUAGE}
 3.CSteamInputService_ShouldTritonPairInOobe_Response
 3.CSteamNotification_PreferencesUpdated_Notification
 30!]^JV
+3072
+30000
 30CAchievements_GetInfo_Response
 30CBluetoothManager_Pair_Request
 30CBroadcast_GetRTMPInfo_Request
@@ -10785,8 +10781,11 @@ ${LANGUAGE}
 32SiteServerUI_SetLanguage_Request
 32StoreItem_Screenshots_Screenshot
 32UserContentDescriptorPreferences
+3333
+333333
 3333UUUU
 333?
+33554432
 33CAdditionalParentalBlocksListener
 33CBluetoothManager_Connect_Request
 33CBluetoothManager_Forget_Response
@@ -11455,6 +11454,8 @@ ${LANGUAGE}
 4.CTransportValidation_TriggerSyntheticEvents_Request
 4.hr\F
 40 Mbps
+4000
+4096
 40CAudio_PlaySpeakerTestOnChannel_Response
 40CBluetoothManager_SetDiscovering_Request
 40CBluetoothManager_SetWakeAllowed_Request
@@ -11787,6 +11788,7 @@ ${LANGUAGE}
 43CMsgClientPersonaState_Friend_OtherGameData
 43CMsgClientPlayerNicknameList_PlayerNickname
 43CMsgRemoteClientBroadcastClientIDDeconflict
+43CMsgRemoteClientBroadcastClientPairingState
 43CMsgRemoteClientDownloadScheduleItemChanged
 43CMsgRemoteClientGetControllerConfigResponse
 43CMsgRemoteClientStartStream_ReservedGamepad
@@ -12156,6 +12158,7 @@ ${LANGUAGE}
 49CMarketingMessages_FindMarketingMessages_Response
 49CMarketingMessages_PartnerPublishMessage_Response
 49CMarketingMessages_UpdateMarketingMessage_Request
+49CMsgRemoteClientBroadcastClientPairingExclusivity
 49CPlayer_GetPurchasedProfileCustomizations_Request
 49CPlayer_GetRecentPlaytimeSessionsForChild_Request
 49CPublishedFile_AreFilesInSubscriptionList_Request
@@ -12253,6 +12256,7 @@ ${LANGUAGE}
 5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
 5.ChatRoomClient_NotifyChatRoomDisconnect_Notification
+5000
 50026B72828F405A
 50CAccountHardware_DeRegisterSteamController_Request
 50CAccountHardware_SteamControllerGetConfig_Response
@@ -12324,6 +12328,7 @@ ${LANGUAGE}
 51CSteamInputService_GyroSoftwareCalibration_Response
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
+524288
 52CAccountHardware_RegisterValveIndexComponent_Request
 52CAccountHardware_UpdateControllerUsageReport_Request
 52CAuthenticationSupport_MarkTokenCompromised_Response
@@ -12589,7 +12594,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-6144
 60000000
 60CAccountHardware_CompleteSteamControllerRegistration_Request
 60CAuthentication_UpdateAuthSessionWithSteamGuardCode_Response
@@ -12600,6 +12604,7 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -14352,7 +14357,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  7 2026 20:56:07
+Apr  9 2026 00:02:19
 April
 Arabic
 AreFilesInSubscriptionList
@@ -17022,6 +17027,7 @@ CRemotePlayController::OnRemoteClientConnected
 CRemotePlayController::OnRemoteClientDisconnected
 CRemotePlayController::OnRemoteClientDongleConnected
 CRemotePlayController::OnRemoteClientDongleDisconnected
+CRemotePlayController::OnRemoteClientDonglePlugEvent
 CRemotePlayController::OnRemoteClientInputSettingsChange
 CRemotePlayController::OnRemoteClientLaunchFailed
 CRemotePlayController::OnRemoteClientOffline
@@ -25359,6 +25365,7 @@ N21CRemotePlayController44CCallbackInternal_OnStreamingClientUsedInputE
 N21CRemotePlayController46CCallbackInternal_OnRemoteClientStreamLifetimeE
 N21CRemotePlayController47CCallbackInternal_OnCheckStreamingDriverSupportE
 N21CRemotePlayController47CCallbackInternal_OnRemoteClientDongleConnectedE
+N21CRemotePlayController47CCallbackInternal_OnRemoteClientDonglePlugEventE
 N21CRemotePlayController47CCallbackInternal_OnStreamingClientDisconnectedE
 N21CRemotePlayController48CCallbackInternal_OnRemoteClientPairWifiAPResultE
 N21CRemotePlayController48CCallbackInternal_OnRemotePlayTogetherPlayerLeftE
@@ -33227,6 +33234,7 @@ Zulu
 \n1CCloud_ExternalStorageTransferReport_Notification
 \n1CCommunity_GetUserPartnerEventViewStatus_Response
 \n1CContentServerDirectory_GetDepotPatchInfo_Request
+\n1CMsgRemoteClientBroadcastClientPairingExclusivity
 \n1CPublishedFile_AreFilesInSubscriptionList_Request
 \n1CSteamTV_GetBroadcastChannelBroadcasters_Response
 \n1steammessages_gamenotifications.steamclient.proto
@@ -43728,6 +43736,7 @@ if-rang
 if-range
 if-unmodified-sinc
 if-unmodified-since
+if_paired_network_hash_is
 iframe->state == NGHTTP2_IB_IGN_ALL
 ig,o
 igbo
@@ -46605,6 +46614,7 @@ lastUpdate
 last_cleanup_time
 last_deck_playtime
 last_directory
+last_known_pairing_time
 last_linux_playtime
 last_logoff_time
 last_mac_playtime
@@ -48684,6 +48694,8 @@ muted
 mutual_friend_account_ids
 mwYC
 mwa!
+my_paired_network_hash
+my_pairing_time
 myfiles
 myspace.com
 mzCT1&
@@ -54593,6 +54605,7 @@ unlocked
 unmatched parentheses
 unnamed_arg0
 unnamed_arg1
+unpair_unless_you_are_client_id
 unprotectedAttrs
 unread_indicator_muted
 unread_message_count

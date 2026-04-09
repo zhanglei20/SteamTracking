@@ -245,6 +245,9 @@ function _(_, _) {
   return _(_(_, _));
 }
 function _(_, _) {
+  let _ = Object.fromEntries(
+    Object.entries(_).filter(([_, _]) => _ !== void 0),
+  );
   return {
     queryKey: [
       "workshop_browse",
@@ -682,7 +685,10 @@ function _(_) {
             paddingTop: "7",
             paddingBottom: "2",
             children: (0, _.jsx)(_, {
-              marginX: "3",
+              marginX: {
+                initial: "3",
+                _: "9",
+              },
               children: (0, _.jsxs)("div", {
                 className: _.AppHubHeader,
                 children: [
@@ -13266,7 +13272,6 @@ var _ = "VsQBaHlz-3M-";
 var _ = "xcZZMNVBlXQ-";
 var _ = "QT14YirlTt4-";
 var _ = "vkN4nIVpqg4-";
-var _ = "VUuAZlECL2k-";
 var _ = "Zaj1eMuo8Qo-";
 var _ = "GcSeprirY0I-";
 var _ = "fKeHSh3rwXM-";
@@ -13510,75 +13515,8 @@ var _ = (0, _.createContext)(void 0),
       children: _.children,
     });
   },
-  _ = () => (0, _.useContext)(_);
-function _(_) {
-  let { app: _ } = _.useLoaderData(),
-    { onBrowseHandler: _, searchText: _, setSearchText: _ } = _(),
-    _ = (0, _.useRef)(!1),
-    _ = _.Localize("#Workshop_Menu_Search", _.name),
-    _ = (_) => {
-      _.preventDefault(),
-        _({
-          search_text: _,
-        });
-    },
-    _ = (0, _.useCallback)(
-      (_) => {
-        _(_);
-      },
-      [_],
-    ),
-    _ = (0, _.useCallback)(() => {
-      _({
-        browse_sort: "toprated",
-        search_text: "",
-      });
-    }, [_]),
-    _ = (0, _.useCallback)(() => {
-      _.current = !1;
-    }, []),
-    _ = (0, _.useCallback)(() => {
-      _.current = !0;
-    }, []),
-    _ = _(_.trim(), {
-      nTimeoutMS: 1e3,
-    });
-  return (
-    (0, _.useEffect)(() => {
-      _.current &&
-        (_.length != 0
-          ? _({
-              browse_sort: "textsearch",
-              search_text: _,
-            })
-          : _({
-              search_text: _,
-            }));
-    }, [_]),
-    (0, _.jsx)("div", {
-      className: _,
-      children: (0, _.jsx)("form", {
-        onSubmit: _,
-        children: (0, _.jsx)(
-          _,
-          {
-            name: "SearchInput",
-            placeholder: _,
-            value: _,
-            onTextChange: _,
-            onTextClear: _,
-            onFocus: _,
-            onBlur: _,
-            maxLength: 64,
-            clearable: !0,
-          },
-          "SearchText",
-        ),
-      }),
-    })
-  );
-}
-var _ = (0, _.createContext)(void 0);
+  _ = () => (0, _.useContext)(_),
+  _ = (0, _.createContext)(void 0);
 function _(_) {
   let { bSelected: _, text: _, children: _ } = _,
     [_, _] = (0, _.useState)(!1),
@@ -13911,7 +13849,10 @@ function _() {
   let { app: _, workshopConfig: _, eActiveTab: _ } = _.useLoaderData(),
     _ = `${_.MEDIA_CDN_COMMUNITY_URL}images/apps/${_.appid}/${_.workshop_header ?? ""}.jpg`;
   return (0, _.jsxs)(_, {
-    marginX: "3",
+    marginX: {
+      initial: "3",
+      _: "9",
+    },
     children: [
       (0, _.jsxs)("div", {
         className: _,
@@ -13986,7 +13927,6 @@ function _() {
               children: _.Localize("#Workshop_Menu_About"),
             }),
           }),
-          (0, _.jsx)(_, {}),
         ],
       }),
     ],

@@ -4026,6 +4026,11 @@ var _ = class _ extends _.Message {
                 pbr: _.readPackedUint32,
                 _: _.writeRepeatedUint32,
               },
+              search_text_target: {
+                _: 50,
+                _: _.readEnum,
+                _: _.writeEnum,
+              },
               totalonly: {
                 _: 16,
                 _: _.readBool,

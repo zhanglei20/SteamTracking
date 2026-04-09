@@ -4232,6 +4232,7 @@
     "Settings_Developer_MuraReArm_ButtonText": "Start",
     "Settings_Developer_MuraReArm_Error": "Failed to re-arm mura calibration",
     "Settings_Developer_WiFi_Title": "WiFi",
+    "Settings_Developer_ForceTriggerCaptivePortal": "Force show captive portal browser",
     "Settings_System_Update_Available": "Update available:",
     "Settings_System_FanControlToggle": "Enable updated fan control",
     "Settings_System_TrimAll_Label": "Run storage device maintenance tasks",

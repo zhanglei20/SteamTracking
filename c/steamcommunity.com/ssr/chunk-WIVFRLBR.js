@@ -1,24 +1,4 @@
 var _ = _(_(), 1);
-var _ = _(_(), 1);
-function _(_) {
-  let { children: _, "flow-children": _, ..._ } = _,
-    { gamepadEvents: _ } = _(_);
-  _ && (_.layout = _(_)),
-    _.onOKButton ||
-      ("onClick" in _.props && _.props.onClick && (_.onOKButton = _));
-  let { ref: _, node: _ } = _(_);
-  _(_, _);
-  let _ = _(_, _.props?.ref);
-  return (0, _.jsx)(_.Provider, {
-    value: _,
-    children: _.cloneElement(_, {
-      ..._.props,
-      ref: _,
-    }),
-  });
-}
-var _ = _(_(), 1);
-var _ = _(_(), 1);
 function _(_) {
   let _ = typeof matchMedia == "function" ? matchMedia : _,
     _ = (0, _.useMemo)(() => _(_), [_, _]),
@@ -239,6 +219,26 @@ function _(_) {
 function _(_, _) {
   return _[_] <= _[_];
 }
+var _ = _(_(), 1);
+var _ = _(_(), 1);
+function _(_) {
+  let { children: _, "flow-children": _, ..._ } = _,
+    { gamepadEvents: _ } = _(_);
+  _ && (_.layout = _(_)),
+    _.onOKButton ||
+      ("onClick" in _.props && _.props.onClick && (_.onOKButton = _));
+  let { ref: _, node: _ } = _(_);
+  _(_, _);
+  let _ = _(_, _.props?.ref);
+  return (0, _.jsx)(_.Provider, {
+    value: _,
+    children: _.cloneElement(_, {
+      ..._.props,
+      ref: _,
+    }),
+  });
+}
+var _ = _(_(), 1);
 var _ = _.reduce((_, _, _) => ((_[_] = _), _), {});
 function _(_, _) {
   if (typeof _ != "object") return _;
