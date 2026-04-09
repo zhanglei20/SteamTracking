@@ -2554,7 +2554,7 @@ GHomepage = {
 
 	RenderTagBucketSection: function()
 	{
-		$Parent = $J( '#home_accountblocks_section' );
+		let $Parent = $J( '#home_accountblocks_section' );
 		if ( !$Parent.length )
 			return;
 
@@ -2562,7 +2562,7 @@ GHomepage = {
 
 		const rgTagBuckets = [ ...GHomepage.rgAccountTagBuckets, ...GHomepage.rgFeaturedTagBuckets ];
 
-		$TagBlocksSection = $J( '#home_tags_section' );
+		let $TagBlocksSection = $J( '#home_tags_section' );
 		if ( !rgTagBuckets.length || !$TagBlocksSection.length )
 		{
 			$Parent.hide();
@@ -2613,11 +2613,11 @@ GHomepage = {
 			return;
 
 		var rgWishlistOnSaleFiltered = GHomepage.FilterItemsForDisplay(
-			GHomepage.oAdditionalData.wishlist_onsale, 'home', 4, 5, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			GHomepage.oAdditionalData.wishlist_onsale, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		var rgDLCOnSaleFiltered = GHomepage.FilterItemsForDisplay(
-			GHomepage.oAdditionalData.dlc_onsale, 'home', 4, 5, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			GHomepage.oAdditionalData.dlc_onsale, 'home', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		// fallback to tags section
