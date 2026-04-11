@@ -370,11 +370,6 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 							continue;
 						}
 
-						if( str_ends_with( $File, '.css' ) )
-						{
-							continue; // TODO: Ignore css for now because biome doesn't format it
-						}
-
 						$this->CurrentSSRFiles[ $File ] = true;
 
 						$this->URLsToFetch[ ] =
@@ -648,6 +643,22 @@ ini_set( 'memory_limit', '1G' ); // Some files may be big
 					}
 
 					file_put_contents( $CleanFile, json_encode( $JsonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT ) . PHP_EOL );
+				}
+				else if( $IsSSR && str_ends_with( $File, '.css' ) )
+				{
+					$CleanFile = __DIR__ . '/c/' . $OriginalFile;
+					$CleanFolder = dirname( $CleanFile );
+
+					if( !is_dir( $CleanFolder ) )
+					{
+						$this->Log( '{lightblue}Creating ' . $CleanFolder );
+
+						mkdir( $CleanFolder, 0755, true );
+					}
+
+					file_put_contents( $CleanFile, $Data );
+
+					system( 'npm run prettier ' . escapeshellarg( $CleanFile ) );
 				}
 
 				system( 'npm run prettier ' . escapeshellarg( $File ) );
