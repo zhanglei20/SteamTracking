@@ -6971,8 +6971,8 @@ ${LANGUAGE}
 /data/src/steamUI/gamestream/x264wrapper.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp
 /data/src/steamUI/hardwareupdatecontroller.cpp:148
-/data/src/steamUI/hardwareupdatecontroller.cpp:214
-/data/src/steamUI/hardwareupdatecontroller.cpp:250
+/data/src/steamUI/hardwareupdatecontroller.cpp:218
+/data/src/steamUI/hardwareupdatecontroller.cpp:254
 /data/src/steamUI/installfoldercontroller.cpp
 /data/src/steamUI/ledcontroller.cpp
 /data/src/steamUI/libraryassetcache.cpp
@@ -7016,7 +7016,7 @@ ${LANGUAGE}
 /data/src/steamUI/systemcontroller.cpp
 /data/src/steamUI/systemdevkitcontroller.cpp
 /data/src/steamUI/systemdevkitcontroller.cpp:75
-/data/src/steamUI/systemreportcontroller.cpp:149
+/data/src/steamUI/systemreportcontroller.cpp:150
 /data/src/steamUI/systemstoragecontroller.cpp
 /data/src/steamUI/systemstoragecontroller.cpp:1444
 /data/src/steamUI/threadedpromiseresolver.cpp
@@ -14357,7 +14357,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr  9 2026 01:38:46
+Apr 10 2026 21:39:52
 April
 Arabic
 AreFilesInSubscriptionList
