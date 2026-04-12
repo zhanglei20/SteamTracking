@@ -100,7 +100,7 @@ $ORIGIN
 0123456789ABCDEF
 12CStdMemAlloc
 16CAdHocValidation
-21:39:42
+22:12:25
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -108,7 +108,7 @@ $ORIGIN
 <unknown>
 AllocateCrashMemoryReserve
 Anonymous mutex cannot have bAllAccess == true
-Apr 10 2026
+Apr 11 2026
 AreStackTrackingFiltersEnabledAtStart
 Assert( %s ):%s:%d\n
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
@@ -692,6 +692,7 @@ WriteMiniDump
 [ func+child   func ]     Count\n
 [ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
 [abi:
+[cG|n
 \t%d items : %s - %s:%d\n
 \t(%zu) comparing %s with %s\n
 \tValidate Failed: leaked connection to %s\n
