@@ -4989,6 +4989,7 @@ var _ = {
     6: {
       strSymbol: "zł",
       bSuffixSymbol: !0,
+      bSpaceForSymbol: !0,
       strDecimalSymbol: ",",
       strThousandsSeparator: " ",
     },
