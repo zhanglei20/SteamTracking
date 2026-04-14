@@ -28,6 +28,7 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
         Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
@@ -111,7 +112,7 @@
     },
     16273: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { ContentHubRoutes: () => Le, default: () => Oe });
+      n.r(t), n.d(t, { ContentHubRoutes: () => Ve, default: () => Fe });
       var s = n(7850),
         o = n(97058),
         a = n(17083),
@@ -157,7 +158,8 @@
               c = n ? "true" : void 0;
             return (0, x.Q)(
               a,
-              (0, s.jsx)(g.az, {
+              (0, s.jsx)(g.GY, {
+                navProps: { focusable: !0 },
                 "data-selected": l,
                 "data-focused": c,
                 "aria-disabled": r,
@@ -172,9 +174,13 @@
         },
       );
       var C = n(94621),
-        b = (n(8871), n(32754));
+        b = (n(8871), n(32754)),
+        v = n(45699),
+        j = n(85585),
+        y = (n(7445), n(8527));
+      n(81393);
       (0, u.createContext)(null);
-      function j(e) {
+      function S(e) {
         const { gutter: t = 0, placement: n } = e,
           s = [],
           o = n && "object" == typeof n;
@@ -223,15 +229,43 @@
           s
         );
       }
-      const v = (0, u.createContext)(null);
-      const y = function (e) {
+      const _ = (0, u.createContext)(null);
+      function I(e) {
+        return y.TS.IN_GAMEPADUI
+          ? (0, s.jsx)(k, { ...e })
+          : (0, s.jsx)(w, { ...e });
+      }
+      function k(e) {
+        const { state: t, children: n } = e,
+          o = u.useRef(void 0);
+        return (
+          (0, v.O7)(o, !!o.current, !1),
+          (0, s.jsx)(j.D6, {
+            navID: "PopoverList",
+            onCancelButton: () => t.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: o,
+            children: n,
+          })
+        );
+      }
+      function w(e) {
+        const { state: t, children: n } = e;
+        return (0, s.jsx)(h.s3, {
+          context: t.floating.context,
+          initialFocus: t.initialFocus,
+          returnFocus: !1,
+          children: n,
+        });
+      }
+      const A = function (e) {
           const { children: t, state: n } = e;
-          return (0, s.jsx)(v.Provider, { value: n, children: t });
+          return (0, s.jsx)(_.Provider, { value: n, children: t });
         },
-        S = function (e) {
+        T = function (e) {
           const { children: t } = e,
             n = u.Children.only(t),
-            s = (0, u.useContext)(v),
+            s = (0, u.useContext)(_),
             o = (0, h.SV)([s?.floating.refs.setReference, n?.props.ref]);
           if (!n) return null;
           if (!s)
@@ -244,19 +278,17 @@
           const { ref: a, ...r } = n.props;
           return (0, u.cloneElement)(n, { ref: o, ...s.getReferenceProps(r) });
         },
-        _ = function (e) {
+        N = function (e) {
           const { children: t, render: n, ref: o } = e,
-            a = (0, u.useContext)(v),
+            a = (0, u.useContext)(_),
             r = (0, h.SV)([o, a?.floating.refs.setFloating]),
             i = (0, b.gK)();
           return a
             ? a.open
               ? (0, s.jsx)(h.XF, {
                   root: i?.targetElement,
-                  children: (0, s.jsx)(h.s3, {
-                    context: a.floating.context,
-                    initialFocus: a.initialFocus,
-                    returnFocus: !1,
+                  children: (0, s.jsx)(I, {
+                    state: a,
                     children: (0, s.jsx)(f, {
                       ref: r,
                       style: a.floating.floatingStyles,
@@ -276,7 +308,7 @@
               ),
               null);
         },
-        I = function (e) {
+        L = function (e) {
           const {
               children: t,
               label: n,
@@ -286,7 +318,7 @@
               disabled: i,
               ...l
             } = e,
-            c = (0, u.useContext)(v),
+            c = (0, u.useContext)(_),
             { ref: d, index: p } = (0, h.rm)({ label: n }),
             g = (0, h.SV)([r, d]);
           if (!c)
@@ -303,7 +335,7 @@
             selected: m,
             focused: x,
             role: "option",
-            tabIndex: x ? 0 : -1,
+            tabIndex: 0,
             ...c.getItemProps({
               onClick: i ? void 0 : a,
               onKeyDown: (e) => {
@@ -320,13 +352,13 @@
             children: t,
           });
         };
-      var k = n(64238),
-        w = n.n(k),
-        A = n(38878),
-        T = n(53971),
-        N = n(75659),
-        L = n(41324);
-      function O(e) {
+      var O = n(64238),
+        P = n.n(O),
+        R = n(38878),
+        z = n(83392),
+        D = n(75659),
+        V = n(41324);
+      function F(e) {
         const {
             children: t,
             beforeContent: n,
@@ -347,75 +379,75 @@
                 ...c
               } = e,
               d = "underline" === t ? "none" : s;
-            return (0, L.mz)(
+            return (0, V.mz)(
               {
                 ...c,
                 radius: d,
-                className: w()(
-                  A.ControlBox,
-                  o && !i && A.Focusable,
-                  a && !i && A.Hoverable,
-                  r && !i && A.Clickable,
-                  i && A.Disabled,
-                  A[`Variant-${t}`],
-                  A[`Size-${n}`],
+                className: P()(
+                  R.ControlBox,
+                  o && !i && R.Focusable,
+                  a && !i && R.Hoverable,
+                  r && !i && R.Clickable,
+                  i && R.Disabled,
+                  R[`Variant-${t}`],
+                  R[`Size-${n}`],
                   l,
                 ),
               },
-              N.h,
+              D.h,
             );
           })(r);
-        return (0, s.jsxs)(T.s, {
+        return (0, s.jsxs)(z.s, {
           ...i,
           align: "center",
           "data-has-value": !!a,
           children: [
-            n && (0, s.jsx)(T.s, { paddingRight: "2", children: n }),
+            n && (0, s.jsx)(z.s, { paddingRight: "2", children: n }),
             (0, s.jsx)(g.az, { flexGrow: "1", minWidth: "0", children: t }),
-            o && (0, s.jsx)(T.s, { paddingLeft: "2", children: o }),
+            o && (0, s.jsx)(z.s, { paddingLeft: "2", children: o }),
           ],
         });
       }
-      var z = n(16619);
-      function P(e) {
+      var B = n(16619);
+      function E(e) {
         const { viewBoxSize: t = 20, ...n } = e,
-          o = n.size ? void 0 : z.IconSizeDefault;
+          o = n.size ? void 0 : B.IconSizeDefault;
         return (0, s.jsx)("svg", {
           viewBox: `0 0 ${t} ${t}`,
-          ...(0, L.mz)({ className: o, ...n }, R),
+          ...(0, V.mz)({ className: o, ...n }, M),
         });
       }
-      const R = [
-          ...N.L,
+      const M = [
+          ...D.L,
           {
             prop: "size",
             responsive: !0,
-            className: (e) => z[`IconSize-${e}`],
+            className: (e) => B[`IconSize-${e}`],
           },
           {
             prop: "color",
-            className: z.Color,
-            cssProperty: (e) => ["--icon-color", (0, L.w7)(e)],
+            className: B.Color,
+            cssProperty: (e) => ["--icon-color", (0, V.w7)(e)],
           },
           {
             prop: "hitSlop",
-            className: z.HitSlop,
+            className: B.HitSlop,
             cssProperty: (e) => [
               "--hit-slop-custom",
               "string" == typeof e ? e : "",
             ],
           },
-          N.h.find(({ prop: e }) => "cursor" === e),
+          D.h.find(({ prop: e }) => "cursor" === e),
         ],
-        D = {
+        U = {
           up: "rotate( 180, 10, 10 )",
           left: "rotate( 90, 10, 10 )",
           right: "rotate( 270, 10, 10 )",
         };
-      function V(e) {
+      function G(e) {
         const { direction: t = "down" } = e,
-          n = D[t];
-        return (0, s.jsx)(P, {
+          n = U[t];
+        return (0, s.jsx)(E, {
           ...e,
           children: (0, s.jsx)("path", {
             transform: n,
@@ -424,9 +456,9 @@
           }),
         });
       }
-      var F = n(20187);
-      function B(e) {
-        return (0, s.jsx)(P, {
+      var W = n(20187);
+      function H(e) {
+        return (0, s.jsx)(E, {
           ...e,
           viewBoxSize: 12,
           children: (0, s.jsx)("path", {
@@ -435,9 +467,9 @@
           }),
         });
       }
-      var E = n(48891);
-      function M(e) {
-        return (0, s.jsx)(P, {
+      var Y = n(48891);
+      function Z(e) {
+        return (0, s.jsx)(E, {
           ...e,
           viewBoxSize: 16,
           children: (0, s.jsx)("path", {
@@ -446,8 +478,8 @@
           }),
         });
       }
-      var U = n(21895);
-      function G(e) {
+      var J = n(21895);
+      function q(e) {
         const {
             checked: t,
             onChange: n,
@@ -455,41 +487,43 @@
             children: a,
             ref: r,
             variant: i = "default",
-            ...l
+            color: l,
+            ...c
           } = e,
-          c = "indeterminate" === t,
-          d = c ? H : M,
-          u = () => {
-            o || (n && n(!!c || !t));
+          d = "indeterminate" === t,
+          u = d ? X : Z,
+          h = () => {
+            o || (n && n(!!d || !t));
           };
-        return (0, s.jsxs)(T.s, {
+        return (0, s.jsxs)(z.s, {
           ref: r,
           role: "checkbox",
-          "aria-checked": c ? "mixed" : t,
-          "data-state": W(t),
-          className: w()(U.Root, U[`Variant-${i}`], o && U.Disabled),
-          onClick: u,
+          "aria-checked": d ? "mixed" : t,
+          "data-state": K(t),
+          className: P()(J.Root, J[`Variant-${i}`], o && J.Disabled),
+          onClick: h,
           tabIndex: 0,
           onKeyDown: (e) => {
             o ||
-              (" " === e.key && (u(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (h(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": o,
-          ...l,
+          "data-accent-color": l,
+          ...c,
           children: [
             (0, s.jsx)("div", {
-              className: U.Checkbox,
-              children: t && (0, s.jsx)(d, { className: U.Icon }),
+              className: J.Checkbox,
+              children: t && (0, s.jsx)(u, { className: J.Icon }),
             }),
             a,
           ],
         });
       }
-      function W(e) {
+      function K(e) {
         return "indeterminate" === e ? e : e ? "checked" : "unchecked";
       }
-      function H(e) {
+      function X(e) {
         return (0, s.jsx)("svg", {
           viewBox: "0 0 16 16",
           fill: "none",
@@ -500,7 +534,7 @@
           }),
         });
       }
-      function Y(e, t) {
+      function Q(e, t) {
         const { onSelectionChange: n, selectedValue: s, ...o } = e,
           [a, r] = (0, u.useState)(!1),
           i = (0, u.useCallback)(
@@ -537,7 +571,7 @@
           ...o,
         };
       }
-      const Z = {
+      const $ = {
         Root: function (e) {
           const {
               children: t,
@@ -587,7 +621,7 @@
               const g = (0, h.we)({
                   open: d,
                   onOpenChange: n,
-                  middleware: j(e),
+                  middleware: S(e),
                   whileElementsMounted: p.ll,
                   placement: c && "object" == typeof c ? c.initial : c,
                 }),
@@ -605,21 +639,21 @@
                   focusItemOnOpen: !1,
                 }),
                 v = (0, u.useRef)([]),
-                y = (0, u.useRef)(!1),
-                S = (0, h.lY)(g.context, {
+                j = (0, u.useRef)(!1),
+                y = (0, h.lY)(g.context, {
                   enabled: !!i.typeahead,
                   listRef: v,
                   activeIndex: s,
                   selectedIndex: a,
                   onMatch: d ? o : r,
-                  onTypingChange: (e) => (y.current = e),
+                  onTypingChange: (e) => (j.current = e),
                 }),
                 _ = (0, h.It)(g.context, { role: l }),
                 {
                   getFloatingProps: I,
                   getReferenceProps: k,
                   getItemProps: w,
-                } = (0, h.bv)([_, x, m, f, b, S]);
+                } = (0, h.bv)([_, x, m, f, b, y]);
               return {
                 floating: g,
                 getFloatingProps: I,
@@ -631,7 +665,7 @@
                 setSelectedIndex: r,
                 elementsRef: C,
                 labelsRef: v,
-                typingRef: y,
+                typingRef: j,
                 initialFocus: i.virtualItemFocus ? -1 : void 0,
               };
             })({
@@ -648,9 +682,9 @@
               role: "select",
               scroll: !0,
             });
-          return (0, s.jsx)(Q.Provider, {
+          return (0, s.jsx)(oe.Provider, {
             value: m,
-            children: (0, s.jsx)(y, { state: f, children: t }),
+            children: (0, s.jsx)(A, { state: f, children: t }),
           });
         },
         Option: function (e) {
@@ -659,10 +693,10 @@
               onItemSelectionChange: r,
               multiselect: i,
               selectedValue: l,
-            } = $("<SelectTrigger>"),
+            } = ae("<SelectTrigger>"),
             c = "string" == typeof t ? t : void 0,
             d = i ? l.includes(t) : l === t;
-          return (0, s.jsxs)(I, {
+          return (0, s.jsxs)(L, {
             label: c,
             onSelect: () => r(t),
             selected: d,
@@ -670,18 +704,18 @@
             ...a,
             children: [
               i &&
-                (0, s.jsxs)(T.s, {
+                (0, s.jsxs)(z.s, {
                   gap: "2",
                   align: "center",
-                  children: [(0, s.jsx)(G, { checked: d, variant: "dark" }), n],
+                  children: [(0, s.jsx)(q, { checked: d, variant: "dark" }), n],
                 }),
               !i && n,
             ],
           });
         },
         Options: function (e) {
-          const { refPopover: t } = $("<Select.Options>");
-          return (0, s.jsx)(_, { ref: t, children: e.children });
+          const { refPopover: t } = ae("<Select.Options>");
+          return (0, s.jsx)(N, { ref: t, children: e.children });
         },
         Trigger: function (e) {
           const { children: t, render: n } = e,
@@ -701,36 +735,36 @@
               clearable: f,
               focusedIndex: C,
               onItemSelectionChange: b,
-              onFocusedIndexChange: j,
-              refPopover: v,
+              onFocusedIndexChange: v,
+              refPopover: j,
               placeholder: y,
-              ..._
-            } = $("<SelectTrigger>"),
-            I = {
+              ...S
+            } = ae("<SelectTrigger>"),
+            _ = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => a(!o),
               children: t,
             },
-            k = u ? Array.isArray(r) && r.length > 0 : !!r,
-            w =
-              k && f
-                ? (0, s.jsx)(B, { onClick: h, cursor: "pointer", hitSlop: !0 })
-                : (0, s.jsx)(V, {}),
-            A = (0, s.jsx)(O, {
-              afterContent: w,
+            I = u ? Array.isArray(r) && r.length > 0 : !!r,
+            k =
+              I && f
+                ? (0, s.jsx)(H, { onClick: h, cursor: "pointer", hitSlop: !0 })
+                : (0, s.jsx)(G, {}),
+            w = (0, s.jsx)(F, {
+              afterContent: k,
               variant: i,
               size: l,
               radius: c,
-              hasValue: k,
+              hasValue: I,
               tabIndex: 0,
-              ..._,
+              ...S,
             }),
-            T = (0, x.Q)(n, A, I, void 0);
-          return (0, s.jsx)(S, { children: T });
+            A = (0, x.Q)(n, w, _, void 0);
+          return (0, s.jsx)(T, { children: A });
         },
         Value: function (e) {
-          return (0, s.jsx)(F.EY, {
+          return (0, s.jsx)(W.EY, {
             weight: "medium",
             truncate: !0,
             contrast: "title",
@@ -738,14 +772,14 @@
           });
         },
         Placeholder: function (e) {
-          return (0, s.jsx)(F.EY, {
+          return (0, s.jsx)(W.EY, {
             contrast: "description",
             truncate: !0,
             children: e.children,
           });
         },
       };
-      function J(e) {
+      function ee(e) {
         return "string" == typeof e
           ? e
           : "number" == typeof e
@@ -756,17 +790,17 @@
               ),
               "");
       }
-      const q = Object.assign(function (e) {
+      const te = Object.assign(function (e) {
         const {
             selectedValue: t,
             onSelectionChange: n,
             options: o,
             placeholder: a,
-            getOptionLabel: r = J,
+            getOptionLabel: r = ee,
             ...i
           } = e,
           l = (function (e) {
-            return Y(e, !1);
+            return Q(e, !1);
           })({
             onSelectionChange: n,
             selectedValue: t,
@@ -775,36 +809,36 @@
           }),
           c = null != t,
           d = c ? r(t) : "";
-        return (0, s.jsxs)(q.Root, {
+        return (0, s.jsxs)(te.Root, {
           state: l,
           ...i,
           children: [
-            (0, s.jsxs)(q.Trigger, {
+            (0, s.jsxs)(te.Trigger, {
               children: [
-                c && (0, s.jsx)(q.Value, { children: d }),
-                !c && (0, s.jsx)(q.Placeholder, { children: a }),
+                c && (0, s.jsx)(te.Value, { children: d }),
+                !c && (0, s.jsx)(te.Placeholder, { children: a }),
               ],
             }),
-            (0, s.jsx)(q.Options, {
+            (0, s.jsx)(te.Options, {
               children: l.rgOptions.map((e) =>
-                (0, s.jsx)(q.Option, { value: e, children: r(e) }, r(e)),
+                (0, s.jsx)(te.Option, { value: e, children: r(e) }, r(e)),
               ),
             }),
           ],
         });
-      }, Z);
-      const K = Z;
-      const X = Object.assign(function (e) {
+      }, $);
+      const ne = $;
+      const se = Object.assign(function (e) {
           const {
               selectedValue: t,
               onSelectionChange: n,
               options: o,
               placeholder: a,
-              getOptionLabel: r = J,
+              getOptionLabel: r = ee,
               ...i
             } = e,
             l = (function (e) {
-              return Y(e, !0);
+              return Q(e, !0);
             })({
               onSelectionChange: n,
               selectedValue: t,
@@ -818,55 +852,55 @@
             d =
               "ListFormat" in Intl
                 ? new Intl.ListFormat(
-                    (0, E.A)().languages[0].strISOCode,
+                    (0, Y.A)().languages[0].strISOCode,
                   ).format(e)
                 : e.join(", ");
           }
-          return (0, s.jsxs)(X.Root, {
+          return (0, s.jsxs)(se.Root, {
             state: l,
             ...i,
             children: [
-              (0, s.jsxs)(X.Trigger, {
+              (0, s.jsxs)(se.Trigger, {
                 children: [
-                  c && (0, s.jsx)(X.Value, { children: d }),
-                  !c && (0, s.jsx)(X.Placeholder, { children: a }),
+                  c && (0, s.jsx)(se.Value, { children: d }),
+                  !c && (0, s.jsx)(se.Placeholder, { children: a }),
                 ],
               }),
-              (0, s.jsx)(X.Options, {
+              (0, s.jsx)(se.Options, {
                 children: l.rgOptions.map((e) =>
-                  (0, s.jsx)(X.Option, { value: e, children: r(e) }, r(e)),
+                  (0, s.jsx)(se.Option, { value: e, children: r(e) }, r(e)),
                 ),
               }),
             ],
           });
-        }, K),
-        Q = (0, u.createContext)(null);
-      function $(e) {
-        const t = (0, u.useContext)(Q);
+        }, ne),
+        oe = (0, u.createContext)(null);
+      function ae(e) {
+        const t = (0, u.useContext)(oe);
         return t || console.error(`${e} must be used within a <Select>!`), t;
       }
-      var ee = n(31376),
-        te = n(77411),
-        ne = n(45737),
-        se = n.n(ne),
-        oe = n(16676),
-        ae = n(9154),
-        re = n(738),
-        ie = n(56654),
-        le = n(12155),
-        ce = n(22797);
-      n(41735), n(78327), n(8527);
-      let de = new Map();
-      de.set(2, 5), de.set(1, 5), de.set(4, 1), de.set(3, 4);
-      var ue = n(9161),
-        he = n(73745),
-        pe = n(30470),
-        ge = n(74810),
-        xe = n(92237),
-        me = n(4940),
-        fe = n.n(me),
-        Ce = n(95034);
-      const be = u.memo(function () {
+      var re = n(31376),
+        ie = n(77411),
+        le = n(45737),
+        ce = n.n(le),
+        de = n(16676),
+        ue = n(9154),
+        he = n(738),
+        pe = n(56654),
+        ge = n(12155),
+        xe = n(22797);
+      n(41735), n(78327);
+      let me = new Map();
+      me.set(2, 5), me.set(1, 5), me.set(4, 1), me.set(3, 4);
+      var fe = n(9161),
+        Ce = n(73745),
+        be = n(30470),
+        ve = n(74810),
+        je = n(92237),
+        ye = n(4940),
+        Se = n.n(ye),
+        _e = n(95034);
+      const Ie = u.memo(function () {
         const [e, t] = u.useState(),
           [n, o] = u.useState(!1),
           [a, r] = u.useState(!1),
@@ -881,18 +915,18 @@
         }, []);
         return n
           ? (0, s.jsxs)("div", {
-              className: se().AdminPageCtn,
+              className: ce().AdminPageCtn,
               children: [
                 (0, s.jsx)("div", {
-                  className: se().PageTitle,
+                  className: ce().PageTitle,
                   children: "Content Hub Categories",
                 }),
-                (0, s.jsx)("hr", { className: fe().TitleHR }),
+                (0, s.jsx)("hr", { className: Se().TitleHR }),
                 (0, s.jsxs)("p", {
                   children: [
                     "This page lets you review and edit existing categories. Click on their titles.  At the bottom there is controls to create a new category. To see the hubs performance related to making a theme sale ",
                     (0, s.jsx)("a", {
-                      href: `${pe.TS.PARTNER_BASE_URL}promotion/planning/themes`,
+                      href: `${be.TS.PARTNER_BASE_URL}promotion/planning/themes`,
                       children: "here.",
                     }),
                   ],
@@ -903,23 +937,23 @@
                   children: "Content Hub Graphana Stats Page",
                 }),
                 (0, s.jsx)("div", {
-                  className: se().PageSubTitle,
+                  className: ce().PageSubTitle,
                   children: "Categories",
                 }),
                 l &&
                   (0, s.jsx)("div", {
-                    className: fe().UnpublishedChangesNotice,
+                    className: Se().UnpublishedChangesNotice,
                     children:
                       "You have unpublished changes. Click Publish below to publish and make them available to users.",
                   }),
-                (0, s.jsx)(je, { categories: e, onUpdate: d }),
+                (0, s.jsx)(ke, { categories: e, onUpdate: d }),
                 (0, s.jsxs)("div", {
-                  className: fe().ActionButtonCtn,
+                  className: Se().ActionButtonCtn,
                   children: [
-                    (0, s.jsx)(oe.jn, {
+                    (0, s.jsx)(de.jn, {
                       onClick: () =>
-                        (0, re.pg)(
-                          (0, s.jsx)(Te, {
+                        (0, he.pg)(
+                          (0, s.jsx)(ze, {
                             categories: e,
                             onSave: () => {
                               r(!1), c(!0);
@@ -930,13 +964,13 @@
                       children: a
                         ? (0, s.jsx)(s.Fragment, { children: "Save" })
                         : (0, s.jsxs)(s.Fragment, {
-                            children: [(0, s.jsx)(le.Jlk, {}), "Saved"],
+                            children: [(0, s.jsx)(ge.Jlk, {}), "Saved"],
                           }),
                     }),
-                    (0, s.jsx)(oe.$n, {
+                    (0, s.jsx)(de.$n, {
                       onClick: () =>
-                        (0, re.pg)(
-                          (0, s.jsx)(Ne, { onPublish: () => c(!1) }),
+                        (0, he.pg)(
+                          (0, s.jsx)(De, { onPublish: () => c(!1) }),
                           window,
                         ),
                       children: "Publish",
@@ -945,21 +979,21 @@
                 }),
               ],
             })
-          : (0, s.jsx)(ce.t, { size: "medium", position: "center" });
+          : (0, s.jsx)(xe.t, { size: "medium", position: "center" });
       });
-      function je(e) {
+      function ke(e) {
         const { categories: t, onUpdate: n } = e,
           { rgTags: o } = (0, i.DT)(),
-          [a] = (0, Ce.QD)("edit");
+          [a] = (0, _e.QD)("edit");
         if (!t)
           return (0, s.jsx)("div", { children: "No categories defined." });
         const r = (e) => {
           n((t) => t.map((t) => (t.id === e.id ? e : t)));
         };
         return (0, s.jsxs)("div", {
-          className: fe().CategoriesList,
+          className: Se().CategoriesList,
           children: [
-            (0, s.jsx)(ie.A, {
+            (0, s.jsx)(pe.A, {
               bDisabled: !0,
               items: t,
               onDelete: (e) => {
@@ -967,7 +1001,7 @@
               },
               render: (e) =>
                 (0, s.jsx)(
-                  ye,
+                  Ae,
                   {
                     item: e,
                     rgTags: o,
@@ -977,7 +1011,7 @@
                   e.id,
                 ),
             }),
-            (0, s.jsx)(oe.$n, {
+            (0, s.jsx)(de.$n, {
               onClick: () => {
                 n((e) => {
                   let n = 0;
@@ -994,7 +1028,7 @@
           ],
         });
       }
-      function ve(e) {
+      function we(e) {
         const { rgTags: t, replacesTags: n } = e,
           o = (0, u.useMemo)(
             () =>
@@ -1010,13 +1044,13 @@
           ? (0, s.jsx)("span", { children: "Replaces tags: " + o })
           : (0, s.jsx)("span", {});
       }
-      function ye(e) {
+      function Ae(e) {
         const { item: t, rgTags: n, fnSaveCategory: o, bOpenEditor: a } = e,
-          [r, i, c] = (0, he.uD)(a);
+          [r, i, c] = (0, Ce.uD)(a);
         return (0, s.jsx)("div", {
-          className: fe().CategoryCtn,
+          className: Se().CategoryCtn,
           children: (0, s.jsxs)("div", {
-            className: fe().Category,
+            className: Se().Category,
             children: [
               (0, s.jsxs)("a", {
                 onClick: (e) =>
@@ -1031,7 +1065,7 @@
                 ],
               }),
               (0, s.jsx)("div", {
-                className: fe().CategoryType,
+                className: Se().CategoryType,
                 children:
                   "tagids" === t.type
                     ? "Tags"
@@ -1042,20 +1076,20 @@
                         : "Special",
               }),
               (0, s.jsx)("div", {
-                className: fe().ExcludedFromSearch,
+                className: Se().ExcludedFromSearch,
                 children:
                   !0 === t.exclude_from_search ? "Excluded from search" : "",
               }),
               (0, s.jsx)("div", {
-                className: fe().ReplacesTags,
-                children: (0, s.jsx)(ve, {
+                className: Se().ReplacesTags,
+                children: (0, s.jsx)(we, {
                   rgTags: n,
                   replacesTags: t.replaces_tags,
                 }),
               }),
-              (0, s.jsx)(ae.EN, {
+              (0, s.jsx)(ue.EN, {
                 active: r,
-                children: (0, s.jsx)(Se, {
+                children: (0, s.jsx)(Te, {
                   category: t,
                   fnSaveCategory: o,
                   closeModal: c,
@@ -1065,7 +1099,7 @@
           }),
         });
       }
-      function Se(e) {
+      function Te(e) {
         const { fnSaveCategory: t, closeModal: n } = e,
           [o, a] = u.useState(e.category),
           r = u.useMemo(
@@ -1080,17 +1114,17 @@
             (e) => a((t) => ({ ...t, content_descriptors: e })),
             [a],
           );
-        return (0, s.jsxs)(ae.eV, {
+        return (0, s.jsxs)(ue.eV, {
           title: `Edit Category (ID ${o.id})`,
           bAllowFullSize: !0,
           onCancel: n,
           closeModal: n,
           children: [
-            (0, s.jsx)(oe.nB, {
+            (0, s.jsx)(de.nB, {
               children: (0, s.jsxs)("div", {
-                className: fe().CategoryEditor,
+                className: Se().CategoryEditor,
                 children: [
-                  (0, s.jsx)(oe.pd, {
+                  (0, s.jsx)(de.pd, {
                     label: "Handle",
                     tooltip: "This forms the end of the URL. It must be unique",
                     value: o.handle,
@@ -1098,9 +1132,9 @@
                       a((t) => ({ ...t, handle: e.target.value })),
                   }),
                   (0, s.jsxs)("div", {
-                    className: fe().CategoryCtn,
+                    className: Se().CategoryCtn,
                     children: [
-                      (0, s.jsx)(oe.pd, {
+                      (0, s.jsx)(de.pd, {
                         label: "Loc Token",
                         tooltip:
                           "Token only needed if we wish to expose this hub to customers",
@@ -1109,8 +1143,8 @@
                           a((t) => ({ ...t, loc_token: e.target.value })),
                       }),
                       o.loc_token &&
-                        (0, s.jsx)(oe.a3, { children: (0, l.we)(o.loc_token) }),
-                      (0, s.jsx)(oe.pd, {
+                        (0, s.jsx)(de.a3, { children: (0, l.we)(o.loc_token) }),
+                      (0, s.jsx)(de.pd, {
                         label: "Description Loc Token",
                         tooltip:
                           "A localized token explaining this content hub to customers",
@@ -1122,51 +1156,51 @@
                           })),
                       }),
                       o.description_loc_token &&
-                        (0, s.jsx)(oe.a3, {
+                        (0, s.jsx)(de.a3, {
                           children: (0, l.we)(o.description_loc_token),
                         }),
                     ],
                   }),
-                  (0, s.jsx)(oe.Yh, {
+                  (0, s.jsx)(de.Yh, {
                     label: "Use As A Heading ",
                     tooltip:
                       "Only used for establishing headings used on the main store drop-down menu",
                     checked: o.heading,
                     onChange: (e) => a((t) => ({ ...t, heading: e })),
                   }),
-                  (0, s.jsx)(oe.Yh, {
+                  (0, s.jsx)(de.Yh, {
                     label: "Exclude from search ",
                     tooltip: "Do not show this category in store search",
                     checked: o.exclude_from_search,
                     onChange: (e) =>
                       a((t) => ({ ...t, exclude_from_search: e })),
                   }),
-                  (0, s.jsx)(oe.pd, {
+                  (0, s.jsx)(de.pd, {
                     label: "Search aliases",
                     tooltip: "Comma separated search aliases",
                     value: o.search_alias,
                     onChange: (e) =>
                       a((t) => ({ ...t, search_alias: e.target.value })),
                   }),
-                  (0, s.jsx)(oe.m, {
+                  (0, s.jsx)(de.m, {
                     label: "Type",
                     rgOptions: r,
                     selectedOption: o.type,
                     onChange: (e) => a((t) => ({ ...t, type: e.data })),
                   }),
-                  (0, s.jsx)(_e, {
+                  (0, s.jsx)(Ne, {
                     rgContentDescriptors: o.content_descriptors ?? [],
                     setContentDescriptors: i,
                   }),
                   ("tagids" === o.type ||
                     "category" === o.type ||
                     "contenthub" == o.type) &&
-                    (0, s.jsx)(Ie, { category: o, setCategory: a }),
+                    (0, s.jsx)(Le, { category: o, setCategory: a }),
                 ],
               }),
             }),
-            (0, s.jsx)(oe.wi, {
-              children: (0, s.jsx)(oe.CB, {
+            (0, s.jsx)(de.wi, {
+              children: (0, s.jsx)(de.CB, {
                 onCancel: n,
                 onOK: () => {
                   t(o), n();
@@ -1177,12 +1211,12 @@
           ],
         });
       }
-      const _e = u.memo(function (e) {
+      const Ne = u.memo(function (e) {
         const { rgContentDescriptors: t, setContentDescriptors: n } = e,
           o = u.useMemo(() => [2, 1, 4, 3], []);
-        return (0, s.jsx)(oe.mq, {
+        return (0, s.jsx)(de.mq, {
           label: "Content Descriptors",
-          children: (0, s.jsx)(X, {
+          children: (0, s.jsx)(se, {
             selectedValue: t,
             onSelectionChange: n,
             options: o,
@@ -1213,7 +1247,7 @@
           }),
         });
       });
-      function Ie(e) {
+      function Le(e) {
         const { category: t, setCategory: n } = e,
           [o, a] = (0, u.useState)(!1),
           [r, i] = (0, u.useState)(0);
@@ -1221,23 +1255,23 @@
           children: [
             ("tagids" == t.type || "category" == t.type) &&
               (0, s.jsx)("div", {
-                className: fe().CategoryCtn,
+                className: Se().CategoryCtn,
                 children: (0, s.jsxs)("div", {
-                  className: fe().Category,
+                  className: Se().Category,
                   children: [
-                    (0, s.jsx)(Ae, {
+                    (0, s.jsx)(Re, {
                       category: t,
                       setCategory: n,
                       list: "must",
                       title: "Must have all of these tags",
                     }),
-                    (0, s.jsx)(Ae, {
+                    (0, s.jsx)(Re, {
                       category: t,
                       setCategory: n,
                       list: "any",
                       title: "Must have one of these tags",
                     }),
-                    (0, s.jsx)(Ae, {
+                    (0, s.jsx)(Re, {
                       category: t,
                       setCategory: n,
                       list: "mustnot",
@@ -1250,9 +1284,9 @@
               "category" == t.type ||
               "contenthub" == t.type) &&
               (0, s.jsxs)("div", {
-                className: fe().CategoryCtn,
+                className: Se().CategoryCtn,
                 children: [
-                  (0, s.jsx)(Ae, {
+                  (0, s.jsx)(Re, {
                     category: t,
                     setCategory: n,
                     list: "replaces_tags",
@@ -1268,15 +1302,15 @@
             Boolean(o)
               ? (0, s.jsxs)(s.Fragment, {
                   children: [
-                    (0, s.jsx)(oe.$n, {
+                    (0, s.jsx)(de.$n, {
                       onClick: () => i(r + 1),
                       children: "Refresh Stats",
                     }),
-                    (0, s.jsx)(ke, { category: t }),
+                    (0, s.jsx)(Oe, { category: t }),
                   ],
                 })
               : (0, s.jsx)(
-                  oe.Yh,
+                  de.Yh,
                   {
                     checked: o,
                     onChange: (e) => a(e),
@@ -1287,19 +1321,19 @@
           ],
         });
       }
-      function ke(e) {
+      function Oe(e) {
         const { category: t } = e,
-          n = (0, ee.p$)(t.must, t.any, t.mustnot);
+          n = (0, re.p$)(t.must, t.any, t.mustnot);
         if (!n)
-          return (0, s.jsx)(ce.t, {
+          return (0, s.jsx)(xe.t, {
             string: (0, l.we)("#Loading"),
             position: "center",
             size: "medium",
           });
-        const o = n.total_games > ge.iT && n.total_games <= ge.hp;
+        const o = n.total_games > ve.iT && n.total_games <= ve.hp;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(oe.$n, {
+            (0, s.jsx)(de.$n, {
               onClick: () => {
                 const e = [];
                 e.push(["AppID", "Sale Rank"]),
@@ -1307,11 +1341,11 @@
                     e.push(["" + t.appid, "" + t.long_term_sale_rank]);
                   });
                 const s = (t.handle || "top100").replace(" ", "_") + ".csv";
-                ue.g.WriteCSVToFile(e, s);
+                fe.g.WriteCSVToFile(e, s);
               },
               children: "Download Top 100 Games",
             }),
-            (0, s.jsx)(oe.$n, {
+            (0, s.jsx)(de.$n, {
               onClick: () => {
                 const e = [];
                 e.push(["AppID"]),
@@ -1319,32 +1353,32 @@
                     e.push(["" + t]);
                   });
                 const s = (t.handle || "allgames").replace(" ", "_") + ".csv";
-                ue.g.WriteCSVToFile(e, s);
+                fe.g.WriteCSVToFile(e, s);
               },
               children: "Download All Games",
             }),
             (0, s.jsxs)("div", {
-              className: xe.ThemeRow,
+              className: je.ThemeRow,
               children: [
                 (0, s.jsxs)("div", {
-                  className: xe.ThemeDefinitionCtn,
+                  className: je.ThemeDefinitionCtn,
                   children: [
                     "Summary: ",
-                    (0, s.jsx)(ge.KU, { nTotalGames: n.total_games }),
-                    Boolean(o) && (0, s.jsx)(we, { category: t }),
+                    (0, s.jsx)(ve.KU, { nTotalGames: n.total_games }),
+                    Boolean(o) && (0, s.jsx)(Pe, { category: t }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: xe.TopGamesCtn,
+                  className: je.TopGamesCtn,
                   children: [
                     (0, s.jsx)("div", { children: "Top 10 Games non-F2P:" }),
                     (0, s.jsx)("div", {
-                      className: xe.GamesColumn,
+                      className: je.GamesColumn,
                       children: n.top_games
                         ?.slice(0, 10)
                         .map((e) =>
                           (0, s.jsx)(
-                            ge.W7,
+                            ve.W7,
                             { info: e, category: t, bSaleSummary: o },
                             e.appid,
                           ),
@@ -1357,13 +1391,13 @@
           ],
         });
       }
-      function we(e) {
+      function Pe(e) {
         const { category: t } = e,
-          n = (0, ee.eX)(t.must, t.any, t.mustnot),
-          o = (0, ee.mg)(t.must, t.any, t.mustnot);
-        return (0, s.jsx)(ge.ny, { saleSummary: n, topAppSummary: o });
+          n = (0, re.eX)(t.must, t.any, t.mustnot),
+          o = (0, re.mg)(t.must, t.any, t.mustnot);
+        return (0, s.jsx)(ve.ny, { saleSummary: n, topAppSummary: o });
       }
-      const Ae = u.memo(function (e) {
+      const Re = u.memo(function (e) {
         const { category: t, setCategory: n, list: o, title: a } = e,
           { rgTags: r, rgCategories: l } = (0, i.DT)(),
           c = (e) => {
@@ -1380,19 +1414,19 @@
               label: `${e.name} (${e.categoryid})`,
             })) || [];
         return (0, s.jsxs)("div", {
-          className: fe().TagOrCategoryList,
+          className: Se().TagOrCategoryList,
           children: [
-            (0, s.jsx)(oe.JU, { children: a }),
-            (0, s.jsx)(ie.A, {
+            (0, s.jsx)(de.JU, { children: a }),
+            (0, s.jsx)(pe.A, {
               bDisabled: !0,
               items: t[o] ?? [],
               onDelete: (e) => c((t) => t.filter((t, n) => n != e)),
               render: (e, n) =>
                 "tagids" === t.type || "replaces_tags" === o
                   ? (0, s.jsxs)("div", {
-                      className: fe().IDSelector,
+                      className: Se().IDSelector,
                       children: [
-                        (0, s.jsx)(oe.pd, {
+                        (0, s.jsx)(de.pd, {
                           value: e.id,
                           onChange: (e) =>
                             c((t) =>
@@ -1403,7 +1437,7 @@
                               ),
                             ),
                         }),
-                        (0, s.jsx)(te.Ay, {
+                        (0, s.jsx)(ie.Ay, {
                           className: "react-select-container",
                           classNamePrefix: "react-select",
                           isSearchable: !0,
@@ -1420,8 +1454,8 @@
                     })
                   : "category" === t.type
                     ? (0, s.jsx)("div", {
-                        className: fe().IDSelector,
-                        children: (0, s.jsx)(te.Ay, {
+                        className: Se().IDSelector,
+                        children: (0, s.jsx)(ie.Ay, {
                           className: "react-select-container",
                           classNamePrefix: "react-select",
                           isSearchable: !0,
@@ -1437,14 +1471,14 @@
                       })
                     : null,
             }),
-            (0, s.jsx)(oe.$n, {
+            (0, s.jsx)(de.$n, {
               onClick: () => c((e) => (e ? [...e, { id: 0 }] : [{ id: 0 }])),
               children: "Add",
             }),
           ],
         });
       });
-      function Te(e) {
+      function ze(e) {
         const { categories: t, onSave: n, closeModal: o } = e,
           [a, r] = u.useState();
         return (
@@ -1453,7 +1487,7 @@
               e ? r(e.strErrorMsg) : (n(), o && o());
             });
           }, [t, o, n]),
-          (0, s.jsx)(ae.o0, {
+          (0, s.jsx)(ue.o0, {
             strTitle: "Saving",
             bAlertDialog: !0,
             bDisableBackgroundDismiss: !0,
@@ -1461,11 +1495,11 @@
             closeModal: o,
             children: Boolean(a)
               ? (0, s.jsxs)("div", { children: ["Error: ", a] })
-              : (0, s.jsx)(ce.t, { size: "medium", position: "center" }),
+              : (0, s.jsx)(xe.t, { size: "medium", position: "center" }),
           })
         );
       }
-      function Ne(e) {
+      function De(e) {
         const { onPublish: t, closeModal: n } = e,
           [o, a] = u.useState(!1),
           [r, l] = u.useState();
@@ -1476,7 +1510,7 @@
                 e ? l(e.strErrorMsg) : (t(), a(!1), n && n());
               });
           }, [o, n, t]),
-          (0, s.jsx)(ae.o0, {
+          (0, s.jsx)(ue.o0, {
             strTitle: o ? "Publishing" : "Really Publish?",
             strDescription:
               !o &&
@@ -1495,13 +1529,13 @@
               (0, s.jsx)(s.Fragment, {
                 children: Boolean(r)
                   ? (0, s.jsxs)("div", { children: ["Error: ", r] })
-                  : (0, s.jsx)(ce.t, { size: "medium", position: "center" }),
+                  : (0, s.jsx)(xe.t, { size: "medium", position: "center" }),
               }),
           })
         );
       }
-      const Le = { ContentHubCategories: () => "/categories/" };
-      function Oe(e) {
+      const Ve = { ContentHubCategories: () => "/categories/" };
+      function Fe(e) {
         return (0, s.jsxs)(a.Kd, {
           basename: (0, d.C)() + "admin/store/contenthub/",
           children: [
@@ -1509,8 +1543,8 @@
             (0, s.jsxs)(r.dO, {
               children: [
                 (0, s.jsx)(r.qh, {
-                  path: Le.ContentHubCategories(),
-                  component: be,
+                  path: Ve.ContentHubCategories(),
+                  component: Ie,
                 }),
                 (0, s.jsx)(r.qh, { component: o.a }),
               ],

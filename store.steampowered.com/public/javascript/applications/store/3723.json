@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Adaugă sau elimină categorii",
     "Wishlist_Categories_Suggested_Discount": "Aștept o reducere",
     "Wishlist_Categories_Suggested_Birthday": "Cadouri de ziua de naștere",
-    "Wishlist_Categories_Suggested_Recommended": "Recomandate de prieteni"
+    "Wishlist_Categories_Suggested_Recommended": "Recomandate de prieteni",
+    "Price_History_Normal_Price": "ÎN MOD NORMAL",
+    "Price_History_Recent_Low_Price": "MINIM (30 ZILE)",
+    "Price_History_Recent_Low_Price_Ttip": "Jocul acesta a fost anterior la reducere pentru %1$s în ultimele %2$s de zile.",
+    "Price_History_Current_Low_Price_Ttip": "Jocul acesta are momentan cel mai mic preț din ultimele %1$s zile.",
+    "Price_History_Current_Price": "ACUM",
+    "Price_History_Lowest_Previous_30": "Reducere bazată pe cel mai mic preț din ultimele 30 de zile"
 }

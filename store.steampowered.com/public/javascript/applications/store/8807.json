@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Přidat nebo odebrat kategorie",
     "Wishlist_Categories_Suggested_Discount": "Čekám na slevu",
     "Wishlist_Categories_Suggested_Birthday": "Chci k narozeninám",
-    "Wishlist_Categories_Suggested_Recommended": "Co mi doporučili přátelé"
+    "Wishlist_Categories_Suggested_Recommended": "Co mi doporučili přátelé",
+    "Price_History_Normal_Price": "BĚŽNÁ CENA",
+    "Price_History_Recent_Low_Price": "NEJNIŽŠÍ CENA",
+    "Price_History_Recent_Low_Price_Ttip": "Tento produkt byl v posledních %2$s dnech dostupný za nejnižší zlevněnou cenu %1$s.",
+    "Price_History_Current_Low_Price_Ttip": "Cena tohoto produktu je v současné době nejnižší za posledních %1$s dnů.",
+    "Price_History_Current_Price": "AKTUÁLNÍ CENA",
+    "Price_History_Lowest_Previous_30": "Sleva založená na nejnižší ceně za posledních 30 dnů."
 }

@@ -1065,10 +1065,11 @@
           for (const i of s) {
             if (!(i.prop in a)) continue;
             let s = a[i.prop];
-            if (void 0 !== s) {
-              if (
-                (i.responsive && (s = (0, o.I)(s, r.formFactor)), i.className)
-              ) {
+            if (
+              void 0 !== s &&
+              (i.responsive && (s = (0, o.I)(s, r.formFactor)), void 0 !== s)
+            ) {
+              if (i.className) {
                 if (
                   !i.cssProperty &&
                   !i.dataProperty &&

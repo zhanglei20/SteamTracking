@@ -11,7 +11,7 @@
     "VerifiedProgram_DeckDeviceAlt": "Steam Deck OLED",
     "VerifiedProgram_DeckShopBannerAlt": "Steam Deck 橫幅：「您的遊戲，隨走隨玩」",
     "VerifiedProgram_DeckDisclaimer": "宣傳片可能與實際 Steam Deck 遊戲過程不完全相符",
-    "StoreItemFound": "找到 %1$s 項（共 %2$s 項）",
-    "StoreItemNotFound": "未找到（共 %1$s 項）",
+    "StoreItemFound": "%1$s 找到了（%2$s）",
+    "StoreItemNotFound": "未找到（%1$s）",
     "Dummy": "dummy"
 }

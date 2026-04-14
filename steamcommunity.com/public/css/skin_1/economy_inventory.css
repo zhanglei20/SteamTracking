@@ -557,16 +557,6 @@ a.games_list_tab:hover {
 	margin-bottom: 12px;
 }
 
-html.responsive .responsive_fixonscroll_ctn #context_selector {
-	margin: 8px 1% 2px 1%;
-}
-
-html.responsive .responsive_fixonscroll_ctn #contextselect {
-	max-width: 430px;
-	width: auto;
-	margin: 0 auto;
-}
-
 #contextselect {
 	background-color: #000000;
 	background-image: url( 'https://community.fastly.steamstatic.com/public/images/economy/context_arrow.png' );

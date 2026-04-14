@@ -6,6 +6,7 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
         Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
@@ -86,6 +87,7 @@
             children: _,
             ref: _,
             variant: _ = "default",
+            color: _,
             ..._
           } = _,
           _ = "indeterminate" === _,
@@ -107,6 +109,7 @@
           },
           cursor: "default",
           "aria-disabled": _,
+          "data-accent-color": _,
           ..._,
           children: [
             (0, _.jsx)("div", {
@@ -1120,7 +1123,6 @@
           children: (0, _.jsx)(_, {
             ref: (0, _._)(_, _),
             type: "text",
-            ..._,
             "aria-disabled": _,
             readOnly: _,
             className: _()((0, _._)(), _.TextEntry),
@@ -1128,6 +1130,7 @@
             onChange: (_) => {
               _ || (_(_.target.value), _ && _(_));
             },
+            ..._,
           }),
         });
       }

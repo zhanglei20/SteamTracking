@@ -154,7 +154,7 @@
           className: (e) => y[`HeadingSize-${e}`],
         },
       ];
-      var N = i(53971),
+      var N = i(83392),
         T = i(53965),
         U = i(96745),
         H = i(88267),

@@ -316,6 +316,7 @@
                   );
                 return a.Body();
               },
+              staleTime: 3e5,
             };
           })(e),
         );

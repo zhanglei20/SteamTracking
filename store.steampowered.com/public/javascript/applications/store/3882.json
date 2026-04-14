@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Categorieën toevoegen of verwijderen",
     "Wishlist_Categories_Suggested_Discount": "Wachten op uitverkoop",
     "Wishlist_Categories_Suggested_Birthday": "Verjaardagslijstje",
-    "Wishlist_Categories_Suggested_Recommended": "Aanbevolen door vrienden"
+    "Wishlist_Categories_Suggested_Recommended": "Aanbevolen door vrienden",
+    "Price_History_Normal_Price": "NORMAAL",
+    "Price_History_Recent_Low_Price": "LAAGSTE IN 30 DAGEN",
+    "Price_History_Recent_Low_Price_Ttip": "Dit spel was in de afgelopen %2$s dagen in de uitverkoop voor %1$s.",
+    "Price_History_Current_Low_Price_Ttip": "De huidige prijs voor dit spel is de laagste prijs in de afgelopen %1$s dagen.",
+    "Price_History_Current_Price": "NU",
+    "Price_History_Lowest_Previous_30": "Korting op basis van de laagste prijs in de afgelopen 30 dagen"
 }

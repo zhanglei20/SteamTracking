@@ -1233,7 +1233,6 @@ dialog._32QRvPPBL733SpNR9x0Gp3::backdrop {
   padding-inline-start: 6px;
   border-radius: 2px;
   color: #dfe3e6;
-  box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
 }
 ._1ml4SNc3LIyBDHIf8ekVSw.L2J24Sa_dQql2exoKoBMi {
   flex: 1;
@@ -2776,8 +2775,8 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
   padding-inline-start: calc(12px + var(--indent-level) * 20px);
   padding-inline-end: 12px;
 }
-.eKmEXJCm_lgme24Fp_HWt:not(:last-child) {
-  margin-bottom: 4px;
+:not(.SettingsDialogSubHeader) + .eKmEXJCm_lgme24Fp_HWt {
+  margin-top: 4px;
 }
 .eKmEXJCm_lgme24Fp_HWt {
   transition-property: transform, background-color;
@@ -2810,24 +2809,8 @@ button.cXzBZxhPBl7fZs9LODEnc.DialogButton:enabled:active:hover:before {
 ._16sYNwqxz6giarbVaRUl7R .eKmEXJCm_lgme24Fp_HWt {
   --field-negative-horizontal-margin: 2.8vw;
 }
-.eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus.DesktopUI,
-.DesktopUI .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus,
-.eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin.DesktopUI,
-.DesktopUI .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin,
-.eKmEXJCm_lgme24Fp_HWt._2HuzvKQ2QMUJ-JJOeApaF1:not(
-    .aIeh3X5T2M074RLW1qn6_
-  ):hover.DesktopUI,
-.DesktopUI
-  .eKmEXJCm_lgme24Fp_HWt._2HuzvKQ2QMUJ-JJOeApaF1:not(
-    .aIeh3X5T2M074RLW1qn6_
-  ):hover {
-  background: none;
-}
 .eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocus,
-.eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin,
-.eKmEXJCm_lgme24Fp_HWt._2HuzvKQ2QMUJ-JJOeApaF1:not(
-    .aIeh3X5T2M074RLW1qn6_
-  ):hover {
+.eKmEXJCm_lgme24Fp_HWt._2HFrmMgB38Ike5w4rVxzEX.gpfocuswithin {
   outline: none;
   background: #3d4450;
   color: #fff;
@@ -7972,7 +7955,7 @@ div.ModalPosition_TopBar {
   margin-inline-end: 26px;
 }
 .SettingsDialogSubHeader {
-  color: #b8bcbf;
+  color: #dcdedf;
 }
 @media (prefers-contrast: more) {
   .SettingsDialogSubHeader {
@@ -7980,7 +7963,7 @@ div.ModalPosition_TopBar {
   }
 }
 .SettingsDialogSubHeader {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 36px;
   user-select: none;

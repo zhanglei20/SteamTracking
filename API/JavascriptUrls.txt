@@ -907,6 +907,7 @@ ${MEDIA_CDN_URL}steam/marketing/${}/${path}${}
 ${MEDIA_CDN_URL}store/
 ${MEDIA_CDN_URL}store/promo/steamawards2025/trophy_220.png?v=1
 ${MEDIA_CDN_URL}store/promo/summer2021/Steam_Summer_Sale_2021_Wallpapers.zip
+${PARTNER_BASE_URL}
 ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneoptinpage"}
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
@@ -973,6 +974,7 @@ ${PARTNER_BASE_URL}admin/store/spotlight/${}
 ${PARTNER_BASE_URL}admin/store/suggestpackage
 ${PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${}
 ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
+${PARTNER_BASE_URL}apps
 ${PARTNER_BASE_URL}apps/
 ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
 ${PARTNER_BASE_URL}apps/ajaxgetdlc

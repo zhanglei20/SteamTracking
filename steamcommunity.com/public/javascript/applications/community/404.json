@@ -71,6 +71,8 @@
     "Error_Sorry": "عذرًا!",
     "Error_Encountered": "حدث خطأ في أثناء معالجة طلبك:",
     "Error_TooManyRequests_Description": "لقد أرسلت عددًا كبيرًا من الطلبات مؤخرًا. يرجى الانتظار ومحاولة إرسال طلبك في وقت لاحق.",
+    "Mobile_InfoSection": "المعلومات",
+    "Mobile_FiltersButton": "عوامل التصفية",
     "AssetProperty_Range_MinPlaceholder": "دقيقة",
     "AssetProperty_Range_MaxPlaceholder": "الحد الأقصى",
     "Accessories_FieldSectionLabel": "الملحقات",

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "10582590";
+var CLSTAMP = "10592840";
 (() => {
   "use strict";
   var a,
@@ -153,13 +153,13 @@ var CLSTAMP = "10582590";
         976: "66955d08674f7f82d250",
         1389: "2375505c8f2c3e6b1797",
         1423: "844ddd459083c6426d07",
-        1574: "e0416518dfceb9c82126",
+        1574: "a46b593fd6fcb232e25b",
         1602: "c9e714b4f4196c855fac",
         1721: "39bd4daf20c1281324fa",
         1724: "edf9cc0e15f8d752612d",
         1990: "b1a89df4f6091f02eab4",
-        2021: "f82644ce440e411e9cff",
-        2199: "18176b690424f5309d0c",
+        2021: "fd1d579f0b28191db3c9",
+        2199: "aeb9226355d84651e6c7",
         2446: "1e14cfdf0fc0983649b4",
         2481: "7c958a3c19e86db6d93b",
         2664: "aed2f44c5fbe63728a2a",
@@ -191,11 +191,11 @@ var CLSTAMP = "10582590";
         6120: "8ab5560adc8f6321a728",
         6421: "b1aaedd44ea54dbadd62",
         6428: "6afb711ae8d4f17c01cd",
-        6430: "415163b3e1705cb261b1",
+        6430: "8f6bacd962ea76d264d4",
         6472: "189dfd593beca4e7fac4",
         6577: "4f1ebb47c0f77a82db3b",
         6740: "cb49ddd633adcf47ffff",
-        6752: "81a355d90b998d136ca2",
+        6752: "b6e48422711894cdf850",
         6888: "c121f1dd6c7ef1d982cc",
         6939: "85709377f972455c9aae",
         7098: "b216cfb8ff5623a11341",
@@ -203,10 +203,10 @@ var CLSTAMP = "10582590";
         7248: "07e4eaa4cb6b5d7dd8a2",
         7345: "99ee2c8fc99ede9a068c",
         7384: "1d057c4175b2fad95f71",
-        7442: "760e05c22aeee65f326e",
+        7442: "b7bff3c7d9a8484a76b5",
         7524: "f9ca39247c32bdbce461",
         7553: "1428a4ee622040531f51",
-        7696: "f6b3691e94eabe538721",
+        7696: "e4b3811ac9c480df1ce0",
         7724: "89f01c4ce3a9b216de12",
         7767: "efa2019e2654edab2202",
         7997: "ea292342f1607f5c17a6",
@@ -239,7 +239,7 @@ var CLSTAMP = "10582590";
       "css/applications/help/" +
       { 976: "greenenvelope", 1574: "footer" }[a] +
       ".css?contenthash=" +
-      { 976: "c3da55c9dc33de7634f8", 1574: "879f52651dfebfe7bb4f" }[a]),
+      { 976: "220733cf882b2c17d892", 1574: "879f52651dfebfe7bb4f" }[a]),
     (d.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {

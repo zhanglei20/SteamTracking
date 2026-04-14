@@ -5133,7 +5133,14 @@
             Ie.sm_m ||
               (Ie.sm_m = {
                 proto: Ie,
-                fields: { achievements: { n: 1, c: Pe, r: !0, q: !0 } },
+                fields: {
+                  achievements: { n: 1, c: Pe, r: !0, q: !0 },
+                  schema_version: {
+                    n: 2,
+                    br: l.qM.readInt32,
+                    bw: l.gp.writeInt32,
+                  },
+                },
               }),
             Ie.sm_m
           );
@@ -5214,6 +5221,21 @@
                     n: 7,
                     br: l.qM.readString,
                     bw: l.gp.writeString,
+                  },
+                  internal_key: {
+                    n: 8,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  min_progress: {
+                    n: 9,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
+                  },
+                  max_progress: {
+                    n: 10,
+                    br: l.qM.readUint32,
+                    bw: l.gp.writeUint32,
                   },
                 },
               }),

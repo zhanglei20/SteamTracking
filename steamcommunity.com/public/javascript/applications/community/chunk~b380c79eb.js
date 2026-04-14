@@ -8,6 +8,7 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
         Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
@@ -84,32 +85,34 @@
             children: a,
             ref: h,
             variant: f = "default",
-            ...p
+            color: p,
+            ...x
           } = e,
-          x = "indeterminate" === n,
-          g = x ? d : i.i,
-          v = () => {
-            s || (t && t(!!x || !n));
+          g = "indeterminate" === n,
+          v = g ? d : i.i,
+          C = () => {
+            s || (t && t(!!g || !n));
           };
         return (0, r.jsxs)(o.s, {
           ref: h,
           role: "checkbox",
-          "aria-checked": x ? "mixed" : n,
+          "aria-checked": g ? "mixed" : n,
           "data-state": u(n),
           className: c()(l.Root, l[`Variant-${f}`], s && l.Disabled),
-          onClick: v,
+          onClick: C,
           tabIndex: 0,
           onKeyDown: (e) => {
             s ||
-              (" " === e.key && (v(), e.preventDefault(), e.stopPropagation()));
+              (" " === e.key && (C(), e.preventDefault(), e.stopPropagation()));
           },
           cursor: "default",
           "aria-disabled": s,
-          ...p,
+          "data-accent-color": p,
+          ...x,
           children: [
             (0, r.jsx)("div", {
               className: l.Checkbox,
-              children: n && (0, r.jsx)(g, { className: l.Icon }),
+              children: n && (0, r.jsx)(v, { className: l.Icon }),
             }),
             a,
           ],
@@ -783,17 +786,17 @@
               onFocusedIndexChange: O,
               refPopover: L,
               placeholder: P,
-              ...y
+              ...V
             } = S("<SelectTrigger>"),
-            V = {
+            y = {
               tabIndex: 0,
               role: "combobox",
               onClick: () => c(!o),
               children: n,
             },
-            z = g ? Array.isArray(d) && d.length > 0 : !!d,
-            w =
-              z && b
+            w = g ? Array.isArray(d) && d.length > 0 : !!d,
+            z =
+              w && b
                 ? (0, r.jsx)(a.g, {
                     onClick: v,
                     cursor: "pointer",
@@ -801,16 +804,16 @@
                   })
                 : (0, r.jsx)(s.V, {}),
             _ = (0, r.jsx)(l.j, {
-              afterContent: w,
+              afterContent: z,
               variant: h,
               size: f,
               radius: p,
-              hasValue: z,
+              hasValue: w,
               tabIndex: 0,
-              ...y,
+              ...V,
             }),
-            N = (0, u.Q)(t, _, V, void 0);
-          return (0, r.jsx)(i.k.Anchor, { children: N });
+            R = (0, u.Q)(t, _, y, void 0);
+          return (0, r.jsx)(i.k.Anchor, { children: R });
         },
         Value: function (e) {
           return (0, r.jsx)(c.EY, {
@@ -958,9 +961,9 @@
             ref: O,
             disabled: L,
             gamepadFocusable: P = !0,
-            ...y
+            ...V
           } = t,
-          V = {
+          y = {
             ...n,
             variant: m,
             size: b,
@@ -979,18 +982,17 @@
             ref: O,
             disabled: L,
           },
-          z = (0, o.useRef)(null),
-          w = P && p.TS.IN_GAMEPADUI ? f.BA : "input";
+          w = (0, o.useRef)(null),
+          z = P && p.TS.IN_GAMEPADUI ? f.BA : "input";
         return (0, r.jsx)(u.j, {
           cursor: "text",
-          ...V,
+          ...y,
           onClick: (e) => {
-            z.current && e.target !== z.current && z.current.focus();
+            w.current && e.target !== w.current && w.current.focus();
           },
-          children: (0, r.jsx)(w, {
-            ref: (0, h.Ue)(k, z),
+          children: (0, r.jsx)(z, {
+            ref: (0, h.Ue)(k, w),
             type: "text",
-            ...y,
             "aria-disabled": L,
             readOnly: L,
             className: l()((0, s.T)(), c.TextEntry),
@@ -998,6 +1000,7 @@
             onChange: (e) => {
               L || (x(e.target.value), C && C(e));
             },
+            ...V,
           }),
         });
       }

@@ -587,10 +587,10 @@
         CompactPadding: "_3hgIZByMuZIEiFspMRGFBw",
         WithDescription: "_3tB2lyT2Pfvfv-jyuVgUOg",
         HighlightOnFocus: "_2HFrmMgB38Ike5w4rVxzEX",
-        Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
-        Disabled: "aIeh3X5T2M074RLW1qn6_",
         "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
         "ItemFocusAnim-darkGrey": "_2NVMbdV4wBIACWgwBU2kyz",
+        Disabled: "aIeh3X5T2M074RLW1qn6_",
+        Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
         FieldChildrenWithIcon: "_1aw7cA3mAZfWt8idAlVJWi",
         FieldChildrenInner: "_2o2fXzn99OddeqZMjbDuxQ",
         FieldClickTarget: "_1cGG5Yx-pDZFg0Cc1rahfw",
@@ -2750,6 +2750,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
         _: () => _,
       });
@@ -17978,6 +17979,11 @@
                     _: !0,
                     _: !0,
                   },
+                  schema_version: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -18067,6 +18073,21 @@
                     _: 7,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  internal_key: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  min_progress: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  max_progress: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -57735,18 +57756,26 @@
                   }),
                 _ && _,
                 _ &&
-                  (0, _.jsx)("div", {
-                    className: _().FieldDescription,
-                    _: _(_),
+                  (0, _.jsx)(_, {
+                    accessibilityId: _(_),
                     children: _,
                   }),
               ],
             }),
-            (0, _.jsx)("div", {
-              className: _().FieldRightColumn,
-              children: _ && _,
-            }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().FieldRightColumn,
+                children: _,
+              }),
           ],
+        });
+      }
+      function _(_) {
+        const { accessibilityId: _, className: _, children: _ } = _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().FieldDescription, _),
+          _: _(_),
+          children: _,
         });
       }
       _.forwardRef(function (_, _) {
@@ -57975,6 +58004,7 @@
             onContextMenu: _,
             onActivate: _,
             padding: _,
+            contextMenuPositionOptions: _,
             ..._
           } = _,
           { actionDescriptions: _, gamepadEvents: _, props: _ } = (0, _._)(_),
@@ -57982,34 +58012,45 @@
           _ = {
             label: _,
             description: _ ?? _,
-          };
-        return (0, _.jsx)(_, {
-          accessibilityId: _,
-          ..._,
-          className: _,
-          disabled: _,
-          onActivate: _,
-          icon: _,
-          childrenLayout: _ ?? "inline",
-          childrenContainerWidth: _,
-          bottomSeparator: _,
-          highlightOnFocus: _,
-          autoFocus: _,
-          indentLevel: _,
-          onContextMenu: _,
-          actionDescriptionMap: _,
-          explainer: _,
-          explainerTitle: _,
-          padding: _,
-          ..._,
-          children: (0, _.jsx)(_, {
-            ..._(_, _),
-            menuLabel: _,
-            disabled: _,
+          },
+          _ = (0, _._)();
+        let _ = _ ?? "inline",
+          _ = _;
+        return (
+          _ ||
+            "inline" != _ ||
+            (_ = {
+              bMatchWidth: !_,
+            }),
+          (0, _.jsx)(_, {
+            accessibilityId: _,
             ..._,
-            ref: _,
-          }),
-        });
+            className: _,
+            disabled: _,
+            onActivate: _,
+            icon: _,
+            childrenLayout: _,
+            childrenContainerWidth: _,
+            bottomSeparator: _,
+            highlightOnFocus: _,
+            autoFocus: _,
+            indentLevel: _,
+            onContextMenu: _,
+            actionDescriptionMap: _,
+            explainer: _,
+            explainerTitle: _,
+            padding: _,
+            ..._,
+            children: (0, _.jsx)(_, {
+              ..._(_, _),
+              contextMenuPositionOptions: _,
+              menuLabel: _,
+              disabled: _,
+              ..._,
+              ref: _,
+            }),
+          })
+        );
       }
       function _(_, _) {
         for (const _ of _.options) {

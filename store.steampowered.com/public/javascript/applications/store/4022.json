@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Kategorien hinzufügen oder entfernen",
     "Wishlist_Categories_Suggested_Discount": "Auf Rabattaktion warten",
     "Wishlist_Categories_Suggested_Birthday": "Geburtstagswunschliste",
-    "Wishlist_Categories_Suggested_Recommended": "Von Freunden empfohlen"
+    "Wishlist_Categories_Suggested_Recommended": "Von Freunden empfohlen",
+    "Price_History_Normal_Price": "STANDARD",
+    "Price_History_Recent_Low_Price": "30-TAGE-TIEF",
+    "Price_History_Recent_Low_Price_Ttip": "Auf dieses Spiel wurde in den vergangenen %2$s Tagen folgender Rabatt gewährt: %1$s.",
+    "Price_History_Current_Low_Price_Ttip": "Dieses Spiel wird derzeit zum niedrigsten Preis innerhalb der letzten %1$s Tage angeboten.",
+    "Price_History_Current_Price": "AKTUELL",
+    "Price_History_Lowest_Previous_30": "Rabatt basiert auf dem niedrigsten Preis der letzten 30 Tage"
 }

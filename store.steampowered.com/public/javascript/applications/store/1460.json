@@ -120,5 +120,8 @@
     "ItemFlag_Ignored": "تم التجاهل",
     "ItemFlag_ExcludedByPreferences": "مستبعدة حسب التفضيلات",
     "Wishlist_Categories_None": "لا شيء",
-    "Wishlist_Controls_Categories_All": "الكل"
+    "Wishlist_Controls_Categories_All": "الكل",
+    "Price_History_Recent_Low_Price_Ttip": "كانت هذه اللعبة معروضة بخصم %1$s طوال %2$s من الأيام الماضية",
+    "Price_History_Current_Low_Price_Ttip": "هذه اللعبة معروضة حاليًا بأقل سعر خلال %1$s من الأيام الماضية",
+    "Price_History_Lowest_Previous_30": "يُحدد الخصم حسب أقل سعر خلال الثلاثين يومًا الماضية"
 }

@@ -283,13 +283,13 @@
       "use strict";
       n(745);
     },
-    688: (e, t, n) => {
+    602: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => Et });
       var o,
         i = n(669),
         s = n.n(i),
-        r = n(827);
+        r = n(534);
       n(696);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
@@ -352,10 +352,10 @@
         );
       }
       var m = n(629),
-        g = n(351),
-        p = n(8),
-        _ = n(859),
-        f = n(714);
+        g = n(767),
+        p = n(128),
+        _ = n(51),
+        f = n(186);
       class v {
         m_NavigationController;
         m_postMessage;
@@ -754,8 +754,8 @@
         (0, m.Cg)([g.o], N.prototype, "OnKeyUp", null),
         (0, m.Cg)([g.o], N.prototype, "Reset", null);
       var E,
-        D = n(390),
-        y = n(542);
+        D = n(990),
+        y = n(278);
       class O {
         SyncStore(e) {
           return this.Subscribe(e).Unsubscribe;
@@ -4825,7 +4825,7 @@
         },
       };
     },
-    8: (e, t, n) => {
+    128: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => o, h: () => i });
       const o = "GamepadInput";
@@ -4838,12 +4838,12 @@
           (e[(e.Full = 4)] = "Full");
       })(i || (i = {}));
     },
-    714: (e, t, n) => {
+    186: (e, t, n) => {
       "use strict";
       n.d(t, { A7: () => r, Vp: () => a, n4: () => c });
       var o = n(629),
-        i = n(351),
-        s = n(8);
+        i = n(767),
+        s = n(128);
       class r {
         PostMessage(e) {}
         RegisterForMessage(e) {}

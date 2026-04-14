@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Tambahkan atau Hapus Kategori",
     "Wishlist_Categories_Suggested_Discount": "Menunggu Diskon",
     "Wishlist_Categories_Suggested_Birthday": "Daftar Ulang Tahun",
-    "Wishlist_Categories_Suggested_Recommended": "Direkomendasikan oleh Teman"
+    "Wishlist_Categories_Suggested_Recommended": "Direkomendasikan oleh Teman",
+    "Price_History_Normal_Price": "HARGA NORMAL",
+    "Price_History_Recent_Low_Price": "TERENDAH (30 HARI)",
+    "Price_History_Recent_Low_Price_Ttip": "Game ini didiskon sebesar %1$s sebelumnya dalam %2$s hari terakhir",
+    "Price_History_Current_Low_Price_Ttip": "Ini adalah harga terendah untuk game ini dalam %1$s hari terakhir.",
+    "Price_History_Current_Price": "SEKARANG",
+    "Price_History_Lowest_Previous_30": "Diskon berdasarkan harga terendah dalam 30 hari terakhir"
 }

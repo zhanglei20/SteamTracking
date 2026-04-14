@@ -2517,7 +2517,6 @@ dialog.modals_ModalDialog_32QRv::backdrop {
   padding-inline-start: 6px;
   border-radius: 2px;
   color: #dfe3e6;
-  box-shadow: inset 0 1px 1px 0px rgba(0, 0, 0, 0.6666666667);
 }
 .radio_Group_1ml4S.radio_CenteredPill_L2J24 {
   flex: 1;
@@ -3705,8 +3704,8 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   padding-inline-start: calc(12px + var(--indent-level) * 20px);
   padding-inline-end: 12px;
 }
-.gamepaddialog_Field_eKmEX:not(:last-child) {
-  margin-bottom: 4px;
+:not(.SettingsDialogSubHeader) + .gamepaddialog_Field_eKmEX {
+  margin-top: 4px;
 }
 .gamepaddialog_Field_eKmEX {
   transition-property: transform, background-color;
@@ -3739,26 +3738,8 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
 .gamepaddialog_GamepadDialogContent_16sYN .gamepaddialog_Field_eKmEX {
   --field-negative-horizontal-margin: 2.8vw;
 }
-.gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocus.DesktopUI,
-.DesktopUI
-  .gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocus,
-.gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocuswithin.DesktopUI,
-.DesktopUI
-  .gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocuswithin,
-.gamepaddialog_Field_eKmEX.gamepaddialog_Clickable_2Huzv:not(
-    .gamepaddialog_Disabled_aIeh3
-  ):hover.DesktopUI,
-.DesktopUI
-  .gamepaddialog_Field_eKmEX.gamepaddialog_Clickable_2Huzv:not(
-    .gamepaddialog_Disabled_aIeh3
-  ):hover {
-  background: none;
-}
 .gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocus,
-.gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocuswithin,
-.gamepaddialog_Field_eKmEX.gamepaddialog_Clickable_2Huzv:not(
-    .gamepaddialog_Disabled_aIeh3
-  ):hover {
+.gamepaddialog_Field_eKmEX.gamepaddialog_HighlightOnFocus_2HFrm.gpfocuswithin {
   outline: none;
   background: #3d4450;
   color: #fff;
@@ -41381,7 +41362,7 @@ div.ModalPosition_TopBar {
   margin-inline-end: 26px;
 }
 .SettingsDialogSubHeader {
-  color: #b8bcbf;
+  color: #dcdedf;
 }
 @media (prefers-contrast: more) {
   .SettingsDialogSubHeader {
@@ -41389,7 +41370,7 @@ div.ModalPosition_TopBar {
   }
 }
 .SettingsDialogSubHeader {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 36px;
   user-select: none;

@@ -1178,6 +1178,8 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
+        GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
         VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
@@ -46846,77 +46848,71 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      class _ extends _.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              activeTab: "",
-            });
-        }
-        componentDidMount() {
-          this.props.startingTab
-            ? this.setState({
-                activeTab: this.props.startingTab,
-              })
-            : !this.props.bDisableRouting &&
-              this.props.location &&
-              this.setState({
-                activeTab: (0, _._)(this.props.location, "tab"),
-              });
-        }
-        componentDidUpdate(_) {
-          !this.props.bDisableRouting &&
-            this.props.location &&
-            this.props.location.key !== _.location.key &&
-            this.setState({
-              activeTab: (0, _._)(this.props.location, "tab"),
-            });
-        }
-        OnTabClick(_) {
-          this.setState({
-            activeTab: _.key,
-          }),
-            !this.props.bDisableRouting &&
-              this.props.history &&
-              (0, _._)(this.props.history, "tab", _.key),
-            _.onClick && _.onClick(_);
-        }
-        render() {
-          var _;
-          const _ = this.props.tabs.filter((_) => !_.hidden);
-          if (!_.length) return null;
-          const _ = _.find((_) => _.key === this.state.activeTab) || _[0],
-            _ = this.props.preferredFocus
-              ? null !== (_ = this.props.startingTab) && void 0 !== _
+      function _(_) {
+        const {
+            tabs: _,
+            bDisableRouting: _,
+            startingTab: _,
+            classNameCtn: _,
+            classNameTab: _,
+            classNameTabContent: _,
+            preferredFocus: _,
+            bVerticalTabs: _,
+          } = _,
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          [_, _] = (0, _.useState)(() => {
+            var _;
+            return (
+              _ ||
+              (!_ &&
+              (0, _._)(_, "tab") &&
+              null !== (_ = (0, _._)(_, "tab")) &&
+              void 0 !== _
                 ? _
-                : _[0].key
-              : void 0;
-          return (0, _.jsxs)(_.Fragment, {
+                : "")
+            );
+          });
+        (0, _.useEffect)(() => {
+          if (!_.bDisableRouting && _) {
+            const _ = (0, _._)(_, "tab");
+            _ && _(_);
+          }
+        }, [_, _.key, _.bDisableRouting, _]);
+        const _ = _.useCallback(
+            (_) => {
+              _(_.key),
+                _ || (0, _._)(_, "tab", _.key),
+                _.onClick && _.onClick(_);
+            },
+            [_, _],
+          ),
+          _ = _.filter((_) => !_.hidden);
+        if (!_.length) return null;
+        const _ = _.find((_) => _.key === _) || _[0],
+          _ = _ ? (null != _ ? _ : _[0].key) : void 0,
+          _ = (0, _.jsxs)(_.Fragment, {
             children: [
               (0, _.jsx)(_._, {
                 className: (0, _._)(
                   _().GraphicalAssetsTabs,
-                  this.props.classNameCtn,
+                  _ && _().GraphicalAssetsTabsVertical,
+                  _,
                 ),
-                navEntryPreferPosition: this.props.preferredFocus
-                  ? _._.PREFERRED_CHILD
-                  : _._.FIRST,
+                navEntryPreferPosition: _ ? _._.PREFERRED_CHILD : _._.FIRST,
                 children: _.map((_, _) =>
                   (0, _.jsx)(
                     _,
                     {
                       tab: _,
-                      OnTabClick: this.OnTabClick,
-                      classNameTab: this.props.classNameTab,
+                      OnTabClick: _,
+                      classNameTab: _,
                       active: _.key === _.key,
                       preferredFocus: _ === _.key,
                     },
@@ -46926,12 +46922,17 @@
               }),
               _ &&
                 (0, _.jsx)(_._, {
-                  className: this.props.classNameTabContent,
+                  className: _,
                   children: _.contents,
                 }),
             ],
           });
-        }
+        return _
+          ? (0, _.jsx)(_._, {
+              className: (0, _._)(_().GraphicalAssetsTabsLayoutVertical),
+              children: _,
+            })
+          : _;
       }
       function _(_) {
         const { statusType: _ = "success", children: _ } = _;
@@ -46948,47 +46949,45 @@
           })
         );
       }
-      (0, _._)([_._], _.prototype, "OnTabClick", null);
-      const _ = (0, _._)(function (_) {
-          const {
-            tab: _,
-            OnTabClick: _,
-            classNameTab: _,
-            active: _,
-            preferredFocus: _,
-          } = _;
-          return (0, _.jsx)(_._, {
-            condition: Boolean(_.statusToolTip || _.tooltip),
-            wrap: (_) =>
-              (0, _.jsx)(_._, {
-                toolTipContent: _.statusToolTip || _.tooltip,
-                children: _,
-              }),
-            children: (0, _.jsxs)(_._, {
-              className: (0, _._)(
-                _().GraphicalAssetsTab,
-                _ && _().Active,
-                _ && "ActiveTab",
-                _,
-              ),
-              onActivate: () => __webpack_require__(_),
-              preferredFocus: _,
-              children: [
-                Boolean(_.vo_warning) &&
-                  (0, _.jsx)(_._, {
-                    toolTipContent: _.vo_warning,
-                    children: (0, _.jsx)("div", {
-                      className: _().VOWarning,
-                      children: (0, _._)("#EventEditor_VOWarning"),
-                    }),
-                  }),
-                _.status,
-                _.name,
-              ],
+      function _(_) {
+        const {
+          tab: _,
+          OnTabClick: _,
+          classNameTab: _,
+          active: _,
+          preferredFocus: _,
+        } = _;
+        return (0, _.jsx)(_._, {
+          condition: Boolean(_.statusToolTip || _.tooltip),
+          wrap: (_) =>
+            (0, _.jsx)(_._, {
+              toolTipContent: _.statusToolTip || _.tooltip,
+              children: _,
             }),
-          });
-        }),
-        _ = (0, _._)(_);
+          children: (0, _.jsxs)(_._, {
+            className: (0, _._)(
+              _().GraphicalAssetsTab,
+              _ && _().Active,
+              _ && "ActiveTab",
+              _,
+            ),
+            onActivate: () => __webpack_require__(_),
+            preferredFocus: _,
+            children: [
+              Boolean(_.vo_warning) &&
+                (0, _.jsx)(_._, {
+                  toolTipContent: _.vo_warning,
+                  children: (0, _.jsx)("div", {
+                    className: _().VOWarning,
+                    children: (0, _._)("#EventEditor_VOWarning"),
+                  }),
+                }),
+              _.status,
+              _.name,
+            ],
+          }),
+        });
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

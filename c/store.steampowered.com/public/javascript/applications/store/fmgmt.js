@@ -689,6 +689,7 @@
                   );
                 return __webpack_require__.Body();
               },
+              staleTime: 3e5,
             };
           })(_),
         );

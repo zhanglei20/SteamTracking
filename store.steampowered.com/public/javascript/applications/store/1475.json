@@ -63,6 +63,6 @@
     "Review_VoteError_LimitedUser": "Tilisi ei täytä toiminnon käyttövaatimuksia. Lisätietoa löytyy Steamin tukisivustolta.",
     "Review_BrowseAll": "Näytä kaikki arvostelut",
     "Review_BrowseAll_Plural": "Näytä kaikki %1$s arvostelua",
-    "Review_PurchaseSource_Steam": "Suoraan Steamistä",
-    "Review_PurchaseSource_Key": "Steam-tuotetunnus"
+    "Review_PurchaseSource_Steam": "Steam-ostos",
+    "Review_PurchaseSource_Key": "Lunastettu Steam-tuotetunnus"
 }

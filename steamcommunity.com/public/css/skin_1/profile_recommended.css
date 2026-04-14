@@ -169,85 +169,57 @@
 #profileBlock.recommendationProfileBlock {
 	padding-top: 13px;
 }
+
+/* dynamic select */
 .dselect_container {
-	padding: 0px;
-	display: inline;
-}
-
-.dselect_container a, .dselect_container a:hover, .dselect_container a:active, .dselect_container a:visited
-{
-	font-size: 12px;
-	line-height: 22px;
-	text-decoration: none;
-	font-weight: normal;
-}
-
-a.trigger, a.activetrigger {
-	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
-	border-right: 7px solid #8f98a0; /* HAAAAAX! */
-	display:block;
-
-	color: #333;
-	height: 22px;
-	padding-left:8px;
-	padding-right: 20px;
-	overflow: hidden;
-
-
-	background-color: #8f98a0;
-	border-radius: 3px;
-	margin: 3px 8px 3px 0px;
-}
-
-.dropcontainer ul {
-background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
+	.dropcontainer ul {
+		background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
 	background: linear-gradient( to bottom, #8f98a0 5%, #b1bcc4 95%);
-	border-radius: 3px;
-	border-top-right-radius: 0;
-	border-top-left-radius: 0;
-	list-style-type:none;
-	margin:0;
-	padding:5px 5px;
+		border-radius: 0 0 3px 3px;
+		list-style-type: none;
+		margin: 0;
+		overflow: hidden auto;
+		padding: 5px;
+		position: absolute;
+		z-index: 999999;
 
-	position:absolute;
-	line-height: 22px;
-	z-index: 999999;
+		&.dropdownhidden {
+			display: none;
+		}
 
-	overflow: auto;
-	overflow-x: hidden;
-}
+		&.dropdownvisible {
+			top: -4px;
+		}
 
-.dropdownhidden{
-	display: none;
-}
-.dropdownvisible{
-	top:-4px;
-	display: block;
-}
-.dropcontainer ul li {
-	padding: 0px;
-	margin: 0px;
-	list-style-type: none;
-}
+		li a {
+			color: #333333;
+			display: block;
 
-.dropcontainer ul a {
-	padding-left:2px;
-	padding-right:2px;
-	display:block;
-	text-decoration:none;
-	color:#333;
-	line-height: 22px;
-	height: 22px;
-}
-.dropcontainer a.highlighted_selection {
-	background:#3196FF;
-	color: #333;
-	text-decoration: none;
-}
-.dropcontainer{
-	position:relative;
-}
+			font-size: 12px;
+			line-height: 22px;
+			padding-inline: 2px;
 
+			&.highlighted_selection {
+				background: #3196FF;
+			}
+		}
+	}
+
+	.trigger {
+		background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
+		background-color: #8f98a0;
+		border-radius: 3px;
+		border-right: 7px solid #8f98a0; /* HAAAAAX! */
+		color: #333333;
+		display: block;
+		font-size: 12px;
+		line-height: 22px;
+		margin: 3px 8px 3px 0px;
+		overflow: hidden;
+		padding-left: 8px;
+		padding-right: 20px;
+	}
+}
 
 .review_page_content {
 	max-width: 918px;

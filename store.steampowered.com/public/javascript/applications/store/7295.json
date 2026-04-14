@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Thêm hoặc bỏ danh mục",
     "Wishlist_Categories_Suggested_Discount": "Đang chờ ưu đãi",
     "Wishlist_Categories_Suggested_Birthday": "Danh sách sinh nhật",
-    "Wishlist_Categories_Suggested_Recommended": "Bạn bè khuyên dùng"
+    "Wishlist_Categories_Suggested_Recommended": "Bạn bè khuyên dùng",
+    "Price_History_Normal_Price": "THÔNG THƯỜNG",
+    "Price_History_Recent_Low_Price": "THẤP NHẤT 30 NGÀY QUA",
+    "Price_History_Recent_Low_Price_Ttip": "Trò chơi này vừa có ưu đãi %1$s trong vòng %2$s ngày qua",
+    "Price_History_Current_Low_Price_Ttip": "Trò chơi này hiện đang ở mức giá thấp nhất trong %1$s ngày qua",
+    "Price_History_Current_Price": "HIỆN TẠI",
+    "Price_History_Lowest_Previous_30": "Giảm giá dựa trên giá thấp nhất trong 30 ngày qua"
 }

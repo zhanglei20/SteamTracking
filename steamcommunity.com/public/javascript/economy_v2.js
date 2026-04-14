@@ -257,8 +257,8 @@ function ShowTagFilters()
 	if( g_ActiveInventory )
 		g_ActiveInventory.ShowTags();
 
-	$( 'filter_tag_show' ).hide();
-	$( 'filter_tag_hide' ).show();
+	$J( '#filter_tag_show' ).css( 'visibility', 'hidden' );
+	$J( '#filter_tag_hide' ).css( 'visibility', 'visible' );
 
 	var elTagHolder = $( 'filter_options' );
 	if( elTagHolder )
@@ -277,8 +277,8 @@ function HideTagFilters()
 
 	if( g_ActiveInventory && g_ActiveInventory.getTagContainer() )
 	{
-		$( 'filter_tag_show' ).show();
-		$( 'filter_tag_hide' ).hide();
+		$J( '#filter_tag_show' ).css( 'visibility', 'visible' );
+		$J( '#filter_tag_hide' ).css( 'visibility', 'hidden' );
 		Filter.UpdateTagFiltering( {} );
 	}
 

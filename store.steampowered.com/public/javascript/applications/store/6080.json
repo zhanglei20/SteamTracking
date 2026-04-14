@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Aggiungi o rimuovi categorie",
     "Wishlist_Categories_Suggested_Discount": "In attesa di uno sconto",
     "Wishlist_Categories_Suggested_Birthday": "Lista di compleanno",
-    "Wishlist_Categories_Suggested_Recommended": "Consigliate dagli amici"
+    "Wishlist_Categories_Suggested_Recommended": "Consigliate dagli amici",
+    "Price_History_Normal_Price": "NORMALE",
+    "Price_History_Recent_Low_Price": "MINIMO DEGLI ULTIMI 30 GIORNI",
+    "Price_History_Recent_Low_Price_Ttip": "Questo gioco era precedentemente in saldo a %1$s negli ultimi %2$s giorni",
+    "Price_History_Current_Low_Price_Ttip": "Questo gioco è attualmente offerto al prezzo più basso degli ultimi %1$s giorni",
+    "Price_History_Current_Price": "ORA",
+    "Price_History_Lowest_Previous_30": "Sconto basato sul prezzo più basso negli ultimi 30 giorni"
 }

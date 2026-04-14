@@ -473,8 +473,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -493,6 +495,24 @@
         return (0, _.jsx)(_, {
           ref: _,
           ..._,
+        });
+      }
+      function _(_) {
+        const { _: _ = "div", ref: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, _.className),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          }),
         });
       }
       const _ = _._;
@@ -921,8 +941,11 @@
           for (const _ of _) {
             if (!(_.prop in _)) continue;
             let _ = _[_.prop];
-            if (void 0 !== _) {
-              if ((_.responsive && (_ = _(_, _.formFactor)), _.className)) {
+            if (
+              void 0 !== _ &&
+              (_.responsive && (_ = _(_, _.formFactor)), void 0 !== _)
+            ) {
+              if (_.className) {
                 if (
                   !_.cssProperty &&
                   !_.dataProperty &&

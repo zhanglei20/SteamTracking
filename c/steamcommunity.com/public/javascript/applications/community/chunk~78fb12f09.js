@@ -1201,10 +1201,11 @@
           for (const _ of _) {
             if (!(_.prop in _)) continue;
             let _ = _[_.prop];
-            if (void 0 !== _) {
-              if (
-                (_.responsive && (_ = (0, _._)(_, _.formFactor)), _.className)
-              ) {
+            if (
+              void 0 !== _ &&
+              (_.responsive && (_ = (0, _._)(_, _.formFactor)), void 0 !== _)
+            ) {
+              if (_.className) {
                 if (
                   !_.cssProperty &&
                   !_.dataProperty &&

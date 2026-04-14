@@ -1158,6 +1158,8 @@
         GraphicalAssetsTabs: "_3oSHTIvUhbK90D9Uvj438V",
         GraphicalAssetsTab: "_3lJb_YN8uykqLcm4eG1jRF",
         Active: "_8XjrTFzaSA8ubHvHCu44L",
+        GraphicalAssetsTabsLayoutVertical: "_1ZIVlOM_Qz4wInwwXzUHTR",
+        GraphicalAssetsTabsVertical: "_3hS8NFdPTrUehJGNVT0PtV",
         GraphicalAssetStatus: "_25U4FBOpeZQAX-v-f9Yosb",
         VOWarning: "_3LaJynPDFfccGWUEtdltlt",
         StatusSuccess: "_1iIRVlPDTEUMMEFuHgLGlq",
@@ -43024,147 +43026,149 @@
     },
     38135: (e, t, r) => {
       "use strict";
-      r.d(t, { V: () => w, a: () => y });
-      var i = r(34629),
-        n = r(7850),
-        a = r(90626),
-        s = r(75844),
-        o = r(92757),
-        l = r(52038),
-        c = r(61859),
-        d = r(95034),
-        u = r(1990),
-        m = r.n(u),
-        p = r(32754),
-        g = r(51272),
-        _ = r(76217),
-        h = r(6419),
-        B = r(23310);
-      class f extends a.Component {
-        constructor() {
-          super(...arguments), (this.state = { activeTab: "" });
-        }
-        componentDidMount() {
-          this.props.startingTab
-            ? this.setState({ activeTab: this.props.startingTab })
-            : !this.props.bDisableRouting &&
-              this.props.location &&
-              this.setState({
-                activeTab: (0, d.f3)(this.props.location, "tab"),
-              });
-        }
-        componentDidUpdate(e) {
-          !this.props.bDisableRouting &&
-            this.props.location &&
-            this.props.location.key !== e.location.key &&
-            this.setState({ activeTab: (0, d.f3)(this.props.location, "tab") });
-        }
-        OnTabClick(e) {
-          this.setState({ activeTab: e.key }),
-            !this.props.bDisableRouting &&
-              this.props.history &&
-              (0, d.Bm)(this.props.history, "tab", e.key),
-            e.onClick && e.onClick(e);
-        }
-        render() {
-          var e;
-          const t = this.props.tabs.filter((e) => !e.hidden);
-          if (!t.length) return null;
-          const r = t.find((e) => e.key === this.state.activeTab) || t[0],
-            i = this.props.preferredFocus
-              ? null !== (e = this.props.startingTab) && void 0 !== e
+      r.d(t, { V: () => _, a: () => h });
+      var i = r(7850),
+        n = r(90626),
+        a = r(52038),
+        s = r(61859),
+        o = r(95034),
+        l = r(1990),
+        c = r.n(l),
+        d = r(32754),
+        u = r(51272),
+        m = r(76217),
+        p = r(23310),
+        g = r(92757);
+      function _(e) {
+        const {
+            tabs: t,
+            bDisableRouting: r,
+            startingTab: s,
+            classNameCtn: l,
+            classNameTab: d,
+            classNameTabContent: u,
+            preferredFocus: _,
+            bVerticalTabs: h,
+          } = e,
+          f = (0, g.zy)(),
+          y = (0, g.W6)(),
+          [b, w] = (0, n.useState)(() => {
+            var e;
+            return (
+              s ||
+              (!r &&
+              (0, o.f3)(f, "tab") &&
+              null !== (e = (0, o.f3)(f, "tab")) &&
+              void 0 !== e
                 ? e
-                : t[0].key
-              : void 0;
-          return (0, n.jsxs)(n.Fragment, {
+                : "")
+            );
+          });
+        (0, n.useEffect)(() => {
+          if (!e.bDisableRouting && f) {
+            const e = (0, o.f3)(f, "tab");
+            e && w(e);
+          }
+        }, [f, f.key, e.bDisableRouting, w]);
+        const S = n.useCallback(
+            (e) => {
+              w(e.key),
+                r || (0, o.Bm)(y, "tab", e.key),
+                e.onClick && e.onClick(e);
+            },
+            [r, y],
+          ),
+          v = t.filter((e) => !e.hidden);
+        if (!v.length) return null;
+        const M = v.find((e) => e.key === b) || v[0],
+          C = _ ? (null != s ? s : v[0].key) : void 0,
+          R = (0, i.jsxs)(i.Fragment, {
             children: [
-              (0, n.jsx)(_.Z, {
-                className: (0, l.A)(
-                  m().GraphicalAssetsTabs,
-                  this.props.classNameCtn,
+              (0, i.jsx)(m.Z, {
+                className: (0, a.A)(
+                  c().GraphicalAssetsTabs,
+                  h && c().GraphicalAssetsTabsVertical,
+                  l,
                 ),
-                navEntryPreferPosition: this.props.preferredFocus
-                  ? B.iU.PREFERRED_CHILD
-                  : B.iU.FIRST,
-                children: t.map((e, t) =>
-                  (0, n.jsx)(
-                    b,
+                navEntryPreferPosition: _ ? p.iU.PREFERRED_CHILD : p.iU.FIRST,
+                children: v.map((e, t) =>
+                  (0, i.jsx)(
+                    B,
                     {
                       tab: e,
-                      OnTabClick: this.OnTabClick,
-                      classNameTab: this.props.classNameTab,
-                      active: e.key === r.key,
-                      preferredFocus: i === e.key,
+                      OnTabClick: S,
+                      classNameTab: d,
+                      active: e.key === M.key,
+                      preferredFocus: C === e.key,
                     },
                     e.key,
                   ),
                 ),
               }),
-              r &&
-                (0, n.jsx)(_.Z, {
-                  className: this.props.classNameTabContent,
-                  children: r.contents,
-                }),
+              M && (0, i.jsx)(m.Z, { className: u, children: M.contents }),
             ],
           });
-        }
+        return h
+          ? (0, i.jsx)(m.Z, {
+              className: (0, a.A)(c().GraphicalAssetsTabsLayoutVertical),
+              children: R,
+            })
+          : R;
       }
-      function y(e) {
+      function h(e) {
         const { statusType: t = "success", children: r } = e;
-        let i = "";
+        let n = "";
         return (
           "success" === t
-            ? (i = m().StatusSuccess)
+            ? (n = c().StatusSuccess)
             : "danger" === t
-              ? (i = m().StatusDanger)
-              : "caution" === t && (i = m().StatusCaution),
-          (0, n.jsx)("div", {
-            className: (0, l.A)(m().GraphicalAssetStatus, i),
+              ? (n = c().StatusDanger)
+              : "caution" === t && (n = c().StatusCaution),
+          (0, i.jsx)("div", {
+            className: (0, a.A)(c().GraphicalAssetStatus, n),
             children: r,
           })
         );
       }
-      (0, i.Cg)([h.o], f.prototype, "OnTabClick", null);
-      const b = (0, s.PA)(function (e) {
-          const {
-            tab: t,
-            OnTabClick: r,
-            classNameTab: i,
-            active: a,
-            preferredFocus: s,
-          } = e;
-          return (0, n.jsx)(g.e7, {
-            condition: Boolean(t.statusToolTip || t.tooltip),
-            wrap: (e) =>
-              (0, n.jsx)(p.he, {
-                toolTipContent: t.statusToolTip || t.tooltip,
-                children: e,
-              }),
-            children: (0, n.jsxs)(_.Z, {
-              className: (0, l.A)(
-                m().GraphicalAssetsTab,
-                a && m().Active,
-                a && "ActiveTab",
-                i,
-              ),
-              onActivate: () => r(t),
-              preferredFocus: s,
-              children: [
-                Boolean(t.vo_warning) &&
-                  (0, n.jsx)(p.he, {
-                    toolTipContent: t.vo_warning,
-                    children: (0, n.jsx)("div", {
-                      className: m().VOWarning,
-                      children: (0, c.we)("#EventEditor_VOWarning"),
-                    }),
-                  }),
-                t.status,
-                t.name,
-              ],
+      function B(e) {
+        const {
+          tab: t,
+          OnTabClick: r,
+          classNameTab: n,
+          active: o,
+          preferredFocus: l,
+        } = e;
+        return (0, i.jsx)(u.e7, {
+          condition: Boolean(t.statusToolTip || t.tooltip),
+          wrap: (e) =>
+            (0, i.jsx)(d.he, {
+              toolTipContent: t.statusToolTip || t.tooltip,
+              children: e,
             }),
-          });
-        }),
-        w = (0, o.y)(f);
+          children: (0, i.jsxs)(m.Z, {
+            className: (0, a.A)(
+              c().GraphicalAssetsTab,
+              o && c().Active,
+              o && "ActiveTab",
+              n,
+            ),
+            onActivate: () => r(t),
+            preferredFocus: l,
+            children: [
+              Boolean(t.vo_warning) &&
+                (0, i.jsx)(d.he, {
+                  toolTipContent: t.vo_warning,
+                  children: (0, i.jsx)("div", {
+                    className: c().VOWarning,
+                    children: (0, s.we)("#EventEditor_VOWarning"),
+                  }),
+                }),
+              t.status,
+              t.name,
+            ],
+          }),
+        });
+      }
     },
     98665: (e, t, r) => {
       "use strict";

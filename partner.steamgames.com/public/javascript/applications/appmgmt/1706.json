@@ -5,7 +5,7 @@
     "FreeOnDemand_Button_ttip": "E csomag ingyenesre állítása a vásárlóknak",
     "FreeOnDemand_Button_disabled_ttip": "Ezt a csomagot csak a Steam Támogatás munkatársai tehetik ingyenessé. Kérjük, használd a „Kapcsolatfelvétel a Steam Kiadással” hivatkozást a „Segítség és dokumentáció” alatt segítségért.",
     "FreeOnDemand_Title": "Ingyenesre alakítod a csomagot?",
-    "FreeOnDemand_Desc": "Ez ingyenesre állítja a csomagod árazását, megjelöli az alkalmazásodat, hogy megjelenhessen az Ingyenesen játszható központban, és az ár megjelenítését az alább kiválasztott kifejezés alapján módosítja. Ez a módosítás nem vonható vissza anélkül, hogy jegyet küldenél a Steamworks támogatási csapatának.",
+    "FreeOnDemand_Desc": "Ez ingyenesre állítja a csomagod árazását, megjelöli az alkalmazásodat, hogy megjelenhessen az Ingyenesen játszható központban, és az ár megjelenítését az alább kiválasztott kifejezés alapján módosítja. Ez a módosítás nem vonható vissza anélkül, hogy jegyet küldenél a Steam Támogatásnak.",
     "FreeOnDemand_Desc_NotPermitted": "Ezt a csomagot csak a Steam Támogatás munkatársai alakíthatják ingyenesre. Kattints alább támogatási jegy létrehozásához a kérésed részleteivel.",
     "FreeOnDemand_Radio": "Válaszd ki az ár helyett megjelenítendő megfelelő szöveget:",
     "FreeOnDemand_Radio_FreeToPlay": "„Ingyenesen játszható” – A játék ingyenesen letölthető és játszható, de tartalmaz választható játékon belüli vásárlásokat (tárgyakat, fizetőeszközt, DLC-t vagy más bevételszerzést).",

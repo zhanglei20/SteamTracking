@@ -1411,7 +1411,7 @@ a:link {
   --bg-color-active: var(--color-dull-9);
   --bg-highlight-color: var(--color-accent-8);
   --text-color: #ffffff;
-  --text-muted-color: #dbdbdb;
+  --text-muted-color: #acb2b8;
   --padding: 0 var(--spacing-2);
   transition: box-shadow 0.2s ease-in-out;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
@@ -1776,13 +1776,20 @@ a:link {
 }
 ._1kIuUssJvopWbHik1IKMG6.zcrlDqGBY0Lrl7faLFoJI {
   --bg-default: var(--color-dull-9);
-  --bg-focus: var(--color-dull-9);
+  --bg-focus: var(--color-dull-8);
   --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
 }
 ._1kIuUssJvopWbHik1IKMG6._3b6kFRuG8ILziz88w8GESp {
   --bg-default: var(--color-dull-6);
   --bg-focus: var(--color-dull-8);
   --bg-disabled: rgb(from var(--bg-focus) r g b / 50%);
+}
+._1kIuUssJvopWbHik1IKMG6.wlcXkTKJWe-SE0fCwIRwQ {
+  --bg-default: transparent;
+  --bg-focus: rgb(from var(--color-dull-8) r g b / 50%);
+  --bg-disabled: transparent;
+  --border-color: var(--color-dull-8);
+  --border-width: 2px;
 }
 ._1kIuUssJvopWbHik1IKMG6 {
   display: flex;
@@ -1801,7 +1808,7 @@ a:link {
   box-sizing: border-box;
   border-radius: var(--radius-sm);
   background-color: var(--background-color);
-  border: 1px solid var(--border-color);
+  border: var(--border-width, 1px) solid var(--border-color, transparent);
   width: var(--checkbox-size);
   height: var(--checkbox-size);
   color: var(--icon-color);

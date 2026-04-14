@@ -214,7 +214,7 @@ jQuery( function($) {
 		g_fnActivateLocalMenu = LocalMenuEvents.fnActivateMenu;
 
 		$(window ).on( 'Responsive_SmallScreenModeToggled.ReponsiveLocalMenu', function() {
-			var bShouldUseResponsiveMenu = UseSmallScreenMode() || UseGamepadScreenMode(); 
+			var bShouldUseResponsiveMenu = UseSmallScreenMode() || UseGamepadScreenMode();
 			if ( bLocalMenuEnabed != bShouldUseResponsiveMenu )
 			{
 				if ( bShouldUseResponsiveMenu )
@@ -242,8 +242,6 @@ jQuery( function($) {
 	}
 
 	Responsive_InitMenuSwipes( $, $Menu, $LocalMenu, MainMenuEvents, LocalMenuEvents );
-
-	Responsive_InitFixOnScroll( $ );
 
 	Responsive_InitTouchDetection( $ );
 
@@ -432,65 +430,6 @@ function Responsive_InitTabSelect( $ )
 		if ( url != window.location )
 			window.location = url;
 	});
-}
-
-function Responsive_InitFixOnScroll($)
-{
-	var $Ctn = $J('.responsive_fixonscroll_ctn');
-	var $Elements = $J('.responsive_fixonscroll');
-	if ( $Elements.length )
-	{
-		var nCtnTop = -1;
-		var nCtnHeight = 0;
-
-		$J(window).on('scroll.ResponsiveFixOnScroll resize.ResponsiveFixOnScroll', function() {
-			var nHeaderOffset = GetResponsiveHeaderFixedOffsetAdjustment();
-			var nScrollTop = $J(window ).scrollTop() + nHeaderOffset + nCtnHeight;
-
-			if ( nHeaderOffset != nCtnTop )
-			{
-				nCtnTop = nHeaderOffset;
-				$Ctn.css( 'top', nCtnTop + 'px' );
-			}
-			$Elements.each( function() {
-				var $Element = $J(this);
-				if ( !$Element.is(':visible') )
-				{
-					if ( $Element.hasClass('in_fixed_ctn') && $Element.data('originalContents') )
-					{
-						$Element.append( $Element.data('originalContents') );
-						$Element.removeClass('in_fixed_ctn');
-						$Element.css('height', '');
-						nCtnHeight = $Ctn.height();
-					}
-					return;
-				}
-
-				var nElementTop = $Element.offset().top;
-				if ( nElementTop > nScrollTop )
-				{
-					if ( $Element.hasClass('in_fixed_ctn') )
-					{
-						$Element.append( $Element.data('originalContents') );
-						$Element.removeClass('in_fixed_ctn');
-						$Element.css('height', '');
-						nCtnHeight = $Ctn.height();
-					}
-				}
-				else
-				{
-					if ( !$Element.hasClass('in_fixed_ctn') )
-					{
-						$Element.css('height', $Element.height() + 'px' );
-						$Element.data( 'originalContents', $Element.children() );
-						$Ctn.append( $Element.children() );
-						$Element.addClass( 'in_fixed_ctn' );
-						nCtnHeight = $Ctn.height();
-					}
-				}
-			});
-		} );
-	}
 }
 
 function Responsive_BuildChangeLanguageOption( $MenuItem )

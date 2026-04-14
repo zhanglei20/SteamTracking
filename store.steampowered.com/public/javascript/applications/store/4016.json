@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Kategori Ekle/Kaldır",
     "Wishlist_Categories_Suggested_Discount": "İndirim Bekliyorum",
     "Wishlist_Categories_Suggested_Birthday": "Doğum Günü Listesi",
-    "Wishlist_Categories_Suggested_Recommended": "Arkadaşların Tavsiyeleri"
+    "Wishlist_Categories_Suggested_Recommended": "Arkadaşların Tavsiyeleri",
+    "Price_History_Normal_Price": "NORMALDE",
+    "Price_History_Recent_Low_Price": "SON 30 GÜNDE EN DÜŞÜK FİYAT",
+    "Price_History_Recent_Low_Price_Ttip": "Bu oyun son %2$s gün içerisinde indirimle %1$s oldu.",
+    "Price_History_Current_Low_Price_Ttip": "Bu oyun şu anda son %1$s gündeki en düşük fiyatta.",
+    "Price_History_Current_Price": "ŞİMDİ",
+    "Price_History_Lowest_Previous_30": "Son 30 gün içindeki en düşük fiyata göre indirim"
 }

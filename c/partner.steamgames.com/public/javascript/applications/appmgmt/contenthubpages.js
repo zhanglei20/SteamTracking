@@ -26,6 +26,7 @@
         Root: "_1kIuUssJvopWbHik1IKMG6",
         "Variant-light": "zcrlDqGBY0Lrl7faLFoJI",
         "Variant-dark": "_3b6kFRuG8ILziz88w8GESp",
+        "Variant-outline": "wlcXkTKJWe-SE0fCwIRwQ",
         Disabled: "kLcGKsNxkoEqxgok6YzML",
         Checkbox: "_3babFLLB0YYBf8znrlE7Dt",
         Icon: "cngAYeP7ZvFo2pT_v3-xO",
@@ -163,6 +164,9 @@
             return (0, _._)(
               _,
               (0, _.jsx)(_._, {
+                navProps: {
+                  focusable: !0,
+                },
                 "data-selected": _,
                 "data-focused": _,
                 "aria-disabled": _,
@@ -184,7 +188,11 @@
         },
       );
       var _ = __webpack_require__("chunkid"),
+        _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid")),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = (__webpack_require__("chunkid"), __webpack_require__("chunkid"));
+      __webpack_require__("chunkid");
       (0, _.createContext)(null);
       function _(_) {
         const { gutter: _ = 0, placement: _ } = _,
@@ -240,6 +248,38 @@
         );
       }
       const _ = (0, _.createContext)(null);
+      function _(_) {
+        return _._.IN_GAMEPADUI
+          ? (0, _.jsx)(_, {
+              ..._,
+            })
+          : (0, _.jsx)(_, {
+              ..._,
+            });
+      }
+      function _(_) {
+        const { state: _, children: _ } = _,
+          _ = _.useRef(void 0);
+        return (
+          (0, _._)(_, !!_.current, !1),
+          (0, _.jsx)(_._, {
+            navID: "PopoverList",
+            onCancelButton: () => _.floating.context.onOpenChange(!1),
+            modal: !0,
+            navTreeRef: _,
+            children: _,
+          })
+        );
+      }
+      function _(_) {
+        const { state: _, children: _ } = _;
+        return (0, _.jsx)(_._, {
+          context: _.floating.context,
+          initialFocus: _.initialFocus,
+          returnFocus: !1,
+          children: _,
+        });
+      }
       const _ = function (_) {
           const { children: _, state: _ } = _;
           return (0, _.jsx)(_.Provider, {
@@ -275,10 +315,8 @@
             ? _.open
               ? (0, _.jsx)(_._, {
                   root: _?.targetElement,
-                  children: (0, _.jsx)(_._, {
-                    context: _.floating.context,
-                    initialFocus: _.initialFocus,
-                    returnFocus: !1,
+                  children: (0, _.jsx)(_, {
+                    state: _,
                     children: (0, _.jsx)(_, {
                       ref: _,
                       style: _.floating.floatingStyles,
@@ -327,7 +365,7 @@
             selected: _,
             focused: _,
             role: "option",
-            tabIndex: _ ? 0 : -1,
+            tabIndex: 0,
             ..._.getItemProps({
               onClick: _ ? void 0 : _,
               onKeyDown: (_) => {
@@ -497,6 +535,7 @@
             children: _,
             ref: _,
             variant: _ = "default",
+            color: _,
             ..._
           } = _,
           _ = "indeterminate" === _,
@@ -518,6 +557,7 @@
           },
           cursor: "default",
           "aria-disabled": _,
+          "data-accent-color": _,
           ..._,
           children: [
             (0, _.jsx)("div", {
@@ -955,9 +995,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
-      __webpack_require__("chunkid"),
-        __webpack_require__("chunkid"),
-        __webpack_require__("chunkid");
+      __webpack_require__("chunkid"), __webpack_require__("chunkid");
       let _ = new Map();
       _.set(2, 5), _.set(1, 5), _.set(4, 1), _.set(3, 4);
       var _ = __webpack_require__("chunkid"),

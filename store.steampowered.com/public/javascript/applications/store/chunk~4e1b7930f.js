@@ -15088,6 +15088,7 @@
                   );
                 return r.Body();
               },
+              staleTime: 3e5,
             };
           })(e),
         );

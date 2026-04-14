@@ -109,6 +109,13 @@
     },
     chunkid: (module) => {
       module.exports = {
+        dummy: "_2lUotEhh9O15IiRoOJkvyT",
+        Ctn: "LGN794ocmn1iDN3mAilmA",
+        Capsule: "_1YmWtGQx7RPg34mzRPqMd-",
+      };
+    },
+    chunkid: (module) => {
+      module.exports = {
         dummy: "_23CcOO7O5wBfw9ITeodREn",
       };
     },
@@ -28568,6 +28575,8 @@
             })
           : null;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const { _: _ } = _,
           { data: _ } = (0, _._)(_),
@@ -28832,6 +28841,7 @@
           [_._.k_ECurrencyCodePLN]: {
             strSymbol: "zł",
             bSuffixSymbol: !0,
+            bSpaceForSymbol: !0,
             strDecimalSymbol: ",",
             strThousandsSeparator: " ",
           },

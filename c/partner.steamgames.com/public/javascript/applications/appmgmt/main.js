@@ -304,10 +304,10 @@
         CompactPadding: "_3hgIZByMuZIEiFspMRGFBw",
         WithDescription: "_3tB2lyT2Pfvfv-jyuVgUOg",
         HighlightOnFocus: "_2HFrmMgB38Ike5w4rVxzEX",
-        Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
-        Disabled: "aIeh3X5T2M074RLW1qn6_",
         "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
         "ItemFocusAnim-darkGrey": "_2NVMbdV4wBIACWgwBU2kyz",
+        Disabled: "aIeh3X5T2M074RLW1qn6_",
+        Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
         FieldChildrenWithIcon: "_1aw7cA3mAZfWt8idAlVJWi",
         FieldChildrenInner: "_2o2fXzn99OddeqZMjbDuxQ",
         FieldClickTarget: "_1cGG5Yx-pDZFg0Cc1rahfw",
@@ -3358,6 +3358,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -3398,6 +3399,12 @@
         (0, _._)("form", {
           bFocusableByDefault: !1,
         });
+      function _(_, _, _ = !1) {
+        _.useEffect(() => {
+          const _ = _.current;
+          _ && (_ ? _.Activate(_) : _.Deactivate());
+        }, [_, _, _]);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -3419,6 +3426,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -28469,18 +28477,26 @@
                   }),
                 _ && _,
                 _ &&
-                  (0, _.jsx)("div", {
-                    className: _().FieldDescription,
-                    _: _(_),
+                  (0, _.jsx)(_, {
+                    accessibilityId: _(_),
                     children: _,
                   }),
               ],
             }),
-            (0, _.jsx)("div", {
-              className: _().FieldRightColumn,
-              children: _ && _,
-            }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().FieldRightColumn,
+                children: _,
+              }),
           ],
+        });
+      }
+      function _(_) {
+        const { accessibilityId: _, className: _, children: _ } = _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().FieldDescription, _),
+          _: _(_),
+          children: _,
         });
       }
       _.forwardRef(function (_, _) {

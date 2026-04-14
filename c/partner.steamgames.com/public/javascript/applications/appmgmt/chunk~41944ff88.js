@@ -243,8 +243,10 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
@@ -265,6 +267,24 @@
           ..._,
         });
       }
+      function _(_) {
+        const { _: _ = "div", ref: _, navProps: _, ..._ } = _,
+          _ = (0, _._)(
+            {
+              ..._,
+              className: _()(_.Box, _.className),
+            },
+            _,
+          ),
+          _ = _;
+        return (0, _.jsx)(_._, {
+          ..._,
+          children: (0, _.jsx)(_, {
+            ref: _,
+            ..._,
+          }),
+        });
+      }
       const _ = _._;
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -275,27 +295,6 @@
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { children: _, "flow-children": _, ..._ } = _,
-          { gamepadEvents: _ } = (0, _._)(_);
-        _ && (_.layout = (0, _._)(_)),
-          _.onOKButton ||
-            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
-        const { ref: _, node: _ } = (0, _._)(_);
-        (0, _._)(_, _);
-        const _ = (0, _._)(_, _.props?.ref);
-        return (0, _.jsx)(_._.Provider, {
-          value: _,
-          children: _.cloneElement(_, {
-            ..._.props,
-            ref: _,
-          }),
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
@@ -311,7 +310,7 @@
           ),
           _ = !_.disabled && !!_.onClick,
           _ = _;
-        return (0, _.jsx)(_, {
+        return (0, _.jsx)(_._, {
           focusable: _,
           children: (0, _.jsx)(_, {
             ref: _,
@@ -712,8 +711,11 @@
           for (const _ of _) {
             if (!(_.prop in _)) continue;
             let _ = _[_.prop];
-            if (void 0 !== _) {
-              if ((_.responsive && (_ = _(_, _.formFactor)), _.className)) {
+            if (
+              void 0 !== _ &&
+              (_.responsive && (_ = _(_, _.formFactor)), void 0 !== _)
+            ) {
+              if (_.className) {
                 if (
                   !_.cssProperty &&
                   !_.dataProperty &&
@@ -780,6 +782,35 @@
       }
       function _(_) {
         return _.startsWith("text") ? `var(--color-${_})` : _(_);
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      function _(_) {
+        const { children: _, "flow-children": _, ..._ } = _,
+          { gamepadEvents: _ } = (0, _._)(_);
+        _ && (_.layout = (0, _._)(_)),
+          _.onOKButton ||
+            ("onClick" in _.props && _.props.onClick && (_.onOKButton = _._));
+        const { ref: _, node: _ } = (0, _._)(_);
+        (0, _._)(_, _);
+        const _ = (0, _._)(_, _.props?.ref);
+        return (0, _.jsx)(_._.Provider, {
+          value: _,
+          children: _.cloneElement(_, {
+            ..._.props,
+            ref: _,
+          }),
+        });
       }
     },
   },

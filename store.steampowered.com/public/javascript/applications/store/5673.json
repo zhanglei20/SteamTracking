@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Kategóriák hozzáadása vagy eltávolítása",
     "Wishlist_Categories_Suggested_Discount": "Akcióra várok",
     "Wishlist_Categories_Suggested_Birthday": "Születésnapi lista",
-    "Wishlist_Categories_Suggested_Recommended": "Barátok ajánlották"
+    "Wishlist_Categories_Suggested_Recommended": "Barátok ajánlották",
+    "Price_History_Normal_Price": "NORMÁL ÁR",
+    "Price_History_Recent_Low_Price": "30 NAPOS LEGALACSONYABB",
+    "Price_History_Recent_Low_Price_Ttip": "Ez a játék az elmúlt %2$s nap során valamikor kedvezményes volt, %1$s áron.",
+    "Price_History_Current_Low_Price_Ttip": "E játék jelenleg az elmúlt %1$s napon belüli legalacsonyabb áron kapható.",
+    "Price_History_Current_Price": "MOST",
+    "Price_History_Lowest_Previous_30": "Kedvezmény az elmúlt 30 nap legalacsonyabb ára alapján"
 }

@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "카테고리 추가 또는 제거",
     "Wishlist_Categories_Suggested_Discount": "할인 대기",
     "Wishlist_Categories_Suggested_Birthday": "생일 선물",
-    "Wishlist_Categories_Suggested_Recommended": "친구 추천"
+    "Wishlist_Categories_Suggested_Recommended": "친구 추천",
+    "Price_History_Normal_Price": "기본 가격",
+    "Price_History_Recent_Low_Price": "30일 기준 최저 가격",
+    "Price_History_Recent_Low_Price_Ttip": "이 게임은 지난 %2$s일 이내에 할인을 제공하여 %1$s에 판매되었습니다.",
+    "Price_History_Current_Low_Price_Ttip": "지난 %1$s일 기준 이 게임의 가격은 현재 가장 저렴합니다.",
+    "Price_History_Current_Price": "현재 가격",
+    "Price_History_Lowest_Previous_30": "지난 30일간의 최저 가격 기준 할인"
 }

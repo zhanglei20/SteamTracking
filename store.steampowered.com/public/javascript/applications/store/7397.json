@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Добавяне или премахване на категории",
     "Wishlist_Categories_Suggested_Discount": "Изчакване за разпродажба",
     "Wishlist_Categories_Suggested_Birthday": "Списък по рождени дни",
-    "Wishlist_Categories_Suggested_Recommended": "Препоръчани от приятели"
+    "Wishlist_Categories_Suggested_Recommended": "Препоръчани от приятели",
+    "Price_History_Normal_Price": "НОРМАЛНА",
+    "Price_History_Recent_Low_Price": "НАЙ-НИСКА ЗА 30 ДНИ",
+    "Price_History_Recent_Low_Price_Ttip": "Тази игра беше с отстъпка за %1$s през последните %2$s дни",
+    "Price_History_Current_Low_Price_Ttip": "Понастоящем тази игра е на най-ниската цена в рамките на изминалите %1$s дни.",
+    "Price_History_Current_Price": "СЕГА",
+    "Price_History_Lowest_Previous_30": "Отстъпки спрямо най-ниската цена през предходните 30 дни"
 }

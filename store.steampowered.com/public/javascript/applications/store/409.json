@@ -131,5 +131,11 @@
     "Wishlist_Controls_Categories_Manage": "Tilføj eller fjern kategorier",
     "Wishlist_Categories_Suggested_Discount": "Venter på et tilbud",
     "Wishlist_Categories_Suggested_Birthday": "Fødselsdagsliste",
-    "Wishlist_Categories_Suggested_Recommended": "Anbefalet af venner"
+    "Wishlist_Categories_Suggested_Recommended": "Anbefalet af venner",
+    "Price_History_Normal_Price": "NORMALT",
+    "Price_History_Recent_Low_Price": "BUNDPRIS (30 DAGE)",
+    "Price_History_Recent_Low_Price_Ttip": "Dette spil var på tilbud for %1$s indenfor de sidste %2$s dage",
+    "Price_History_Current_Low_Price_Ttip": "Dette spil har lige nu den laveste pris indenfor de sidste %1$s dage",
+    "Price_History_Current_Price": "NU",
+    "Price_History_Lowest_Previous_30": "Rabat baseret på laveste pris de sidste 30 dage"
 }

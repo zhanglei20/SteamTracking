@@ -915,15 +915,6 @@ html.force_desktop body #footer_responsive_optin_spacer {
 	}
 }
 
-.responsive_fixonscroll_ctn  {
-	position: fixed;
-	left: 0;
-	right: 0;
-	background: #171a21;
-	box-shadow: 0 2px 4px 0 #000000;
-	z-index: 15;
-}
-
 .responsive_app_menu {
 	display: flex;
 	flex-direction: row;

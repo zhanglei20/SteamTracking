@@ -407,8 +407,14 @@ a.item_action:hover {
 }
 
 .filter_tag_button_ctn {
-	white-space: nowrap;
+	align-items: start;
+	display: grid;
 	padding-top: 4px;
+	white-space: nowrap;
+
+	& > * {
+		grid-area: 1/1;
+	}
 }
 
 .filter_ctn.inventory_filters .filter_tag_button_ctn {

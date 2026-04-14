@@ -420,10 +420,10 @@
         CompactPadding: "_3hgIZByMuZIEiFspMRGFBw",
         WithDescription: "_3tB2lyT2Pfvfv-jyuVgUOg",
         HighlightOnFocus: "_2HFrmMgB38Ike5w4rVxzEX",
-        Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
-        Disabled: "aIeh3X5T2M074RLW1qn6_",
         "ItemFocusAnim-darkerGrey": "_3NU8GvOktZfkdl6LQMVgZx",
         "ItemFocusAnim-darkGrey": "_2NVMbdV4wBIACWgwBU2kyz",
+        Disabled: "aIeh3X5T2M074RLW1qn6_",
+        Clickable: "_2HuzvKQ2QMUJ-JJOeApaF1",
         FieldChildrenWithIcon: "_1aw7cA3mAZfWt8idAlVJWi",
         FieldChildrenInner: "_2o2fXzn99OddeqZMjbDuxQ",
         FieldClickTarget: "_1cGG5Yx-pDZFg0Cc1rahfw",
@@ -12130,18 +12130,26 @@
                   }),
                 _ && _,
                 _ &&
-                  (0, _.jsx)("div", {
-                    className: _().FieldDescription,
-                    _: _(_),
+                  (0, _.jsx)(_, {
+                    accessibilityId: _(_),
                     children: _,
                   }),
               ],
             }),
-            (0, _.jsx)("div", {
-              className: _().FieldRightColumn,
-              children: _ && _,
-            }),
+            _ &&
+              (0, _.jsx)("div", {
+                className: _().FieldRightColumn,
+                children: _,
+              }),
           ],
+        });
+      }
+      function _(_) {
+        const { accessibilityId: _, className: _, children: _ } = _;
+        return (0, _.jsx)("div", {
+          className: (0, _._)(_().FieldDescription, _),
+          _: _(_),
+          children: _,
         });
       }
       _.forwardRef(function (_, _) {
@@ -12556,214 +12564,6 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid");
-      const _ = new _._("FocusNavigation").Debug;
-      function _(_) {
-        const { children: _, disableFocusRing: _, ..._ } = _,
-          [_, _] = _.useState({
-            bFocusWithin: !1,
-            navTarget: null,
-            prevTarget: null,
-          }),
-          _ = _.useRef(null),
-          _ = _.useMemo(
-            () => ({
-              OnBlur: (_, _, _) => {
-                _({
-                  bFocusWithin: !1,
-                  navTarget: null,
-                  prevTarget: null,
-                });
-              },
-              OnFocus: (_, _, _) => {
-                _({
-                  bFocusWithin: !0,
-                  navTarget: _,
-                  prevTarget: null,
-                });
-              },
-              OnFocusChange: (_, _, _) => {
-                _({
-                  bFocusWithin: !0,
-                  navTarget: _,
-                  prevTarget: _,
-                });
-              },
-              OnForceMeasureFocusRing: () => {
-                _.current?.MeasureElementAndUpdate();
-              },
-            }),
-            [_],
-          );
-        return (0, _.jsxs)(_.Fragment, {
-          children: [
-            !_ &&
-              (0, _.jsx)(_, {
-                ..._,
-                ..._,
-                refMeasure: _,
-              }),
-            (0, _.jsx)(_._.Provider, {
-              value: _,
-              children: _,
-            }),
-          ],
-        });
-      }
-      function _(_) {
-        const {
-            rootClassName: _,
-            className: _,
-            bFocusWithin: _,
-            navTarget: _,
-            refMeasure: _,
-          } = _,
-          [_, _] = _.useState(null),
-          _ = (0, _._)(),
-          _ = (0, _._)(),
-          _ = (0, _._)(!1);
-        return _ || _
-          ? (0, _.jsx)("div", {
-              className: _()(_().FocusRingRoot, _),
-              ref: _,
-              children: (0, _.jsx)(_, {
-                refMeasure: _,
-                className: _()(_, _ && _().DebugFocusRing),
-                bFocusWithin: _ && (_ || _),
-                navTarget: _,
-                elContainer: _,
-                bDebug: _,
-              }),
-            })
-          : null;
-      }
-      function _(_) {
-        const {
-            className: _,
-            bFocusWithin: _,
-            navTarget: _,
-            elContainer: _,
-            bDebug: _,
-            refMeasure: _,
-          } = _,
-          [_, _] = _.useState(null),
-          [_, _] = _.useReducer((_) => _ + 1, 0),
-          [_, _] = _.useReducer((_) => _ + 1, 0);
-        (0, _._)(
-          _,
-          _.useMemo(
-            () => ({
-              MeasureElementAndUpdate: _,
-            }),
-            [],
-          ),
-        );
-        const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
-          _ = _ && !_,
-          _ = (function (_, _) {
-            const [_, _] = _.useState(!1);
-            return (
-              (0, _.useEffect)(() => {
-                if (_ && _) {
-                  let _ = _.GetBoundingRect(),
-                    _ = _.Element;
-                  const _ = _.ownerDocument.defaultView,
-                    _ = (_) =>
-                      "none" == _.getComputedStyle(_).display ||
-                      (0 == _?.width && 0 == _.height && 0 == _._ && 0 == _._);
-                  for (; _(_) && _?.parentElement; )
-                    (_ = _.parentElement),
-                      (_ = __webpack_require__.getBoundingClientRect());
-                  let _ = _.Element != _;
-                  _(
-                    (_) => (
-                      _ &&
-                        _ != _ &&
-                        _(
-                          "Focused on hidden item: ",
-                          _.Element,
-                          ". Closest visible ancestor: ",
-                          _,
-                        ),
-                      _
-                    ),
-                  );
-                }
-              }, [_, _]),
-              _
-            );
-          })(_, _),
-          _ = _.useCallback(() => {
-            if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
-            let _ = _.GetBoundingRect();
-            const _ = _.getBoundingClientRect(),
-              _ = {
-                left: _._ - _._,
-                top: _._ - _._,
-                height: _.height,
-                width: _.width,
-              };
-            _((_) =>
-              _ &&
-              _.left == _.left &&
-              _.top == _.top &&
-              _.height == _.height &&
-              _.width == _.width
-                ? _
-                : _,
-            );
-          }, [_, _, _]);
-        _.useLayoutEffect(() => _(), [_]),
-          _.useLayoutEffect(() => {
-            _();
-          }, [_]);
-        let _ = _;
-        return (
-          _ && _ && (_.BWantsFocusRing() || (_ = !1)),
-          _.useEffect(() => {
-            if (!_) return;
-            const _ = performance.now();
-            let _;
-            const _ = () => {
-              _(),
-                performance.now() - _ <= 500 && (_ = requestAnimationFrame(_));
-            };
-            return __webpack_require__(), () => cancelAnimationFrame(_);
-          }, [_, _, _, _]),
-          _ && _
-            ? (0, _.createElement)(_, {
-                ..._,
-                key: _,
-                className: _()(_, _ && _().FocusRingOnHiddenItem),
-                target: _,
-              })
-            : null
-        );
-      }
-      function _(_) {
-        const {
-            className: _,
-            left: _,
-            top: _,
-            height: _,
-            width: _,
-            target: _,
-          } = _,
-          _ = {
-            left: (_ ?? 0) - 0 + "px",
-            top: (_ ?? 0) - 0 + "px",
-            height: _ + "px",
-            width: _ + "px",
-          };
-        return (0, _.jsx)("div", {
-          className: _()(_().FocusRing, _),
-          style: _,
-        });
-      }
-      var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_);
       const _ = _.forwardRef(function (_, _) {
           const {
@@ -12820,7 +12620,7 @@
             className: _()(_, _().ScrollPanel, _),
             ref: _,
             navRef: _,
-            children: (0, _.jsx)(_, {
+            children: (0, _.jsx)(_._, {
               children: _,
             }),
           });
@@ -14118,6 +13918,7 @@
           }),
         });
       });
+      var _ = __webpack_require__("chunkid");
       const _ = _.forwardRef(function (_, _) {
         const {
           value: _,
@@ -32613,6 +32414,7 @@
         _: () => _,
         _: () => _,
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
@@ -32653,6 +32455,12 @@
         (0, _._)("form", {
           bFocusableByDefault: !1,
         });
+      function _(_, _, _ = !1) {
+        _.useEffect(() => {
+          const _ = _.current;
+          _ && (_ ? _.Activate(_) : _.Deactivate());
+        }, [_, _, _]);
+      }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
@@ -32674,6 +32482,7 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";
       __webpack_require__._(module_exports, {
+        _: () => _,
         _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
@@ -33293,6 +33102,228 @@
             _ = _(_, _),
             _ = (0, _._)(_, _);
           return _(_, _, _, _);
+        });
+      }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      __webpack_require__._(module_exports, {
+        _: () => _,
+      });
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
+      const _ = new _._("FocusNavigation").Debug;
+      function _(_) {
+        const { children: _, disableFocusRing: _, ..._ } = _,
+          [_, _] = _.useState({
+            bFocusWithin: !1,
+            navTarget: null,
+            prevTarget: null,
+          }),
+          _ = _.useRef(null),
+          _ = _.useMemo(
+            () => ({
+              OnBlur: (_, _, _) => {
+                _({
+                  bFocusWithin: !1,
+                  navTarget: null,
+                  prevTarget: null,
+                });
+              },
+              OnFocus: (_, _, _) => {
+                _({
+                  bFocusWithin: !0,
+                  navTarget: _,
+                  prevTarget: null,
+                });
+              },
+              OnFocusChange: (_, _, _) => {
+                _({
+                  bFocusWithin: !0,
+                  navTarget: _,
+                  prevTarget: _,
+                });
+              },
+              OnForceMeasureFocusRing: () => {
+                _.current?.MeasureElementAndUpdate();
+              },
+            }),
+            [_],
+          );
+        return (0, _.jsxs)(_.Fragment, {
+          children: [
+            !_ &&
+              (0, _.jsx)(_, {
+                ..._,
+                ..._,
+                refMeasure: _,
+              }),
+            (0, _.jsx)(_._.Provider, {
+              value: _,
+              children: _,
+            }),
+          ],
+        });
+      }
+      function _(_) {
+        const {
+            rootClassName: _,
+            className: _,
+            bFocusWithin: _,
+            navTarget: _,
+            refMeasure: _,
+          } = _,
+          [_, _] = _.useState(null),
+          _ = (0, _._)(),
+          _ = (0, _._)(),
+          _ = (0, _._)(!1);
+        return _ || _
+          ? (0, _.jsx)("div", {
+              className: _()(_().FocusRingRoot, _),
+              ref: _,
+              children: (0, _.jsx)(_, {
+                refMeasure: _,
+                className: _()(_, _ && _().DebugFocusRing),
+                bFocusWithin: _ && (_ || _),
+                navTarget: _,
+                elContainer: _,
+                bDebug: _,
+              }),
+            })
+          : null;
+      }
+      function _(_) {
+        const {
+            className: _,
+            bFocusWithin: _,
+            navTarget: _,
+            elContainer: _,
+            bDebug: _,
+            refMeasure: _,
+          } = _,
+          [_, _] = _.useState(null),
+          [_, _] = _.useReducer((_) => _ + 1, 0),
+          [_, _] = _.useReducer((_) => _ + 1, 0);
+        (0, _._)(
+          _,
+          _.useMemo(
+            () => ({
+              MeasureElementAndUpdate: _,
+            }),
+            [],
+          ),
+        );
+        const { bActiveTree: _, bDisableFocusClasses: _ } = (0, _._)(),
+          _ = _ && !_,
+          _ = (function (_, _) {
+            const [_, _] = _.useState(!1);
+            return (
+              (0, _.useEffect)(() => {
+                if (_ && _) {
+                  let _ = _.GetBoundingRect(),
+                    _ = _.Element;
+                  const _ = _.ownerDocument.defaultView,
+                    _ = (_) =>
+                      "none" == _.getComputedStyle(_).display ||
+                      (0 == _?.width && 0 == _.height && 0 == _._ && 0 == _._);
+                  for (; _(_) && _?.parentElement; )
+                    (_ = _.parentElement),
+                      (_ = __webpack_require__.getBoundingClientRect());
+                  let _ = _.Element != _;
+                  _(
+                    (_) => (
+                      _ &&
+                        _ != _ &&
+                        _(
+                          "Focused on hidden item: ",
+                          _.Element,
+                          ". Closest visible ancestor: ",
+                          _,
+                        ),
+                      _
+                    ),
+                  );
+                }
+              }, [_, _]),
+              _
+            );
+          })(_, _),
+          _ = _.useCallback(() => {
+            if (!(_ && _.BWantsFocusRing() && _ && _)) return void _(null);
+            let _ = _.GetBoundingRect();
+            const _ = _.getBoundingClientRect(),
+              _ = {
+                left: _._ - _._,
+                top: _._ - _._,
+                height: _.height,
+                width: _.width,
+              };
+            _((_) =>
+              _ &&
+              _.left == _.left &&
+              _.top == _.top &&
+              _.height == _.height &&
+              _.width == _.width
+                ? _
+                : _,
+            );
+          }, [_, _, _]);
+        _.useLayoutEffect(() => _(), [_]),
+          _.useLayoutEffect(() => {
+            _();
+          }, [_]);
+        let _ = _;
+        return (
+          _ && _ && (_.BWantsFocusRing() || (_ = !1)),
+          _.useEffect(() => {
+            if (!_) return;
+            const _ = performance.now();
+            let _;
+            const _ = () => {
+              _(),
+                performance.now() - _ <= 500 && (_ = requestAnimationFrame(_));
+            };
+            return __webpack_require__(), () => cancelAnimationFrame(_);
+          }, [_, _, _, _]),
+          _ && _
+            ? (0, _.createElement)(_, {
+                ..._,
+                key: _,
+                className: _()(_, _ && _().FocusRingOnHiddenItem),
+                target: _,
+              })
+            : null
+        );
+      }
+      function _(_) {
+        const {
+            className: _,
+            left: _,
+            top: _,
+            height: _,
+            width: _,
+            target: _,
+          } = _,
+          _ = {
+            left: (_ ?? 0) - 0 + "px",
+            top: (_ ?? 0) - 0 + "px",
+            height: _ + "px",
+            width: _ + "px",
+          };
+        return (0, _.jsx)("div", {
+          className: _()(_().FocusRing, _),
+          style: _,
         });
       }
     },
@@ -47959,6 +47990,11 @@
                     _: !0,
                     _: !0,
                   },
+                  schema_version: {
+                    _: 2,
+                    _: _._.readInt32,
+                    _: _._.writeInt32,
+                  },
                 },
               }),
             _.sm_m
@@ -48048,6 +48084,21 @@
                     _: 7,
                     _: _._.readString,
                     _: _._.writeString,
+                  },
+                  internal_key: {
+                    _: 8,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  min_progress: {
+                    _: 9,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
+                  },
+                  max_progress: {
+                    _: 10,
+                    _: _._.readUint32,
+                    _: _._.writeUint32,
                   },
                 },
               }),
@@ -75400,7 +75451,7 @@
   },
   (_) => {
     _._(0, [8997], () => {
-      return (_ = 4740), _((_._ = _));
+      return (_ = 2312), _((_._ = _));
       var _;
     });
     _._();

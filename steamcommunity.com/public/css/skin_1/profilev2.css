@@ -3305,6 +3305,10 @@ body.profile_page #footer {
 	background-color: #000000;
 }
 
+footer {
+	--footer-bg-color: black;
+}
+
 .friends_that_play_content .profile_friends {
 	margin-bottom: 12px;
 }

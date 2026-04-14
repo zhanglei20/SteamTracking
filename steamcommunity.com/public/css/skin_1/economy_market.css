@@ -2304,192 +2304,107 @@ input.filter_search_box:focus {
 	color: #60acde;
 }
 
-/* DSelect */
-.dropcontainer ul {
-	list-style-type:none;
-	line-height: 22px;
-	margin:0;
-	position:absolute;
-	top:0;
-	left: 0;
-	right: 0;
-	overflow: auto;
-	overflow-x: hidden;
-
-	box-shadow: 0 0 5px 0 #000000;
-	background: #417A9B;
-}
-.dropdownhidden{
-	display: none;
-}
-.dropdownvisible{
-	display: block;
-}
-.dropcontainer ul li {
-	padding: 0;
-	margin: 0;
-}
-.dropcontainer ul li.emptyvalue {
-	font-style: italic;
-}
-.dropcontainer ul a {
-	padding: 0 10px;
-	display:block;
-	text-decoration:none;
-	color: #e5e4dc;
-
-	white-space: nowrap;
-}
-
-.dropcontainer{
-	position:relative;
-}
-
-.dselect_container {
-	font-size: 12px;
-}
-
-.dselect_container {
-	position: relative;
-
-}
-.dselect_container button.trigger, .dselect_container button.activetrigger {
-	display: block;
-	box-sizing: content-box;
-	text-align: inherit;
-	cursor: pointer;
-
-	color: #67c1f5;
-	padding: 0 30px 0 8px;
-	font-size: 12px;
-	line-height: 21px;
-	border: 0;
-	border-radius: 3px;
-	text-decoration: none;
-
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	position:relative;
-}
-
-.dselect_container button.trigger {
-	background: rgba( 103, 193, 245, 0.1 );
-}
-
-.dselect_container button.activetrigger, .dselect_container button.activetrigger:hover {
-	color: #ffffff;
-	background: #67c1f5;
-}
-
-
-.dselect_container button.activetrigger {
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-	z-index: 91;
-	position: relative;
-}
-
-.dselect_container button.trigger::after, .dselect_container button.activetrigger::after {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	width: 20px;
-	background: url('https://community.fastly.steamstatic.com/public/images/economy/market/ico_arrow_dn_for_select.png') no-repeat left center;
-	content: '';
-}
-
-.dselect_container button.trigger:hover,
-.dselect_container .dropcontainer a.highlighted_selection
-{
-	color: #ffffff;
-	background-color: #67c1f5; /* Old browsers */
-	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
-	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
-}
-
-.market_dialog_content .dselect_container {
-	width: 100%;
-	padding: 0;
-	display: inline-block;
-}
-
-.market_dialog_content .dselect_container button.trigger {
-	color: #ffffff;
-	background: rgba( 0, 0, 0, 0.4);
-}
-
-.dselect_container button.trigger:hover
-{
-	background-color: #67c1f5; /* Old browsers */
-background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
-	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
-}
-
-.market_dialog_content .dselect_container button,
-.market_dialog_content .dselect_container button:hover,
-.market_dialog_content .dselect_container button:active,
-.market_dialog_content .dselect_container button:visited
-{
-	text-decoration: none;
-	font-weight: normal;
-}
-
-.market_dialog_content .trigger {
-	display:block;
-	padding-left:2px;
-	padding-right:2px;
-	overflow: hidden;
-}
-
 .market_dialog_content input[type="text"],
 .market_dialog_content select,
-.market_dialog_content textarea,
-.market_dialog_content .dselect_container button.trigger
-{
+.market_dialog_content textarea {
 	background-color: rgba( 0, 0, 0, 0.4);
-	color: #fff;
 	border: 1px solid #000;
 	border-radius: 3px;
 	box-shadow: 1px 1px 0px #45556c;
-	width: 98%;
-	max-width: calc( 100% - 12px );
-	padding: 3px;
-	margin-top: 3px;
-	margin-bottom: 10px;
-	text-align: start !important;
-
+	color: #ffffff;
 	font-size: 13px;
 	line-height: 18px;
+	margin-block: 3px 10px;
+	max-width: calc( 100% - 12px );
+	padding: 3px;
+	text-align: start !important;
+	width: 98%;
 }
 
-.market_dialog_content .dselect_container button.trigger.activetrigger
-{
-	color: #ffffff;
-	background: #67c1f5;
-}
+/* DSelect */
+.dselect_container {
+	width: 100%;
 
-.dropcontainer ul {
-    list-style-type: none;
-    line-height: 22px;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    overflow: auto;
-    overflow-x: hidden;
-    box-shadow: 0 0 5px 0 #000000;
-    background: #417A9B;
-}
+	.dropcontainer ul {
+		background: #417A9B;
+		box-shadow: 0 0 5px 0 #000000;
+		inset: 0 0 auto;
+		line-height: 22px;
+		list-style-type: none;
+		margin: 0;
+		overflow: hidden auto;
+		position: absolute;
+		z-index: 2000;
 
-.dropdownvisible
-{
-	max-height: 225px;
-	overflow-y: auto;
-	z-index: 1001;
+		&.dropdownhidden {
+			display: none;
+		}
+
+		&.dropdownvisible {
+			max-height: 225px;
+		}
+
+		li {
+			&.emptyvalue {
+				font-style: italic;
+			}
+
+			a {
+				color: #e5e4dc;
+				display: block;
+				font-size: 12px;
+				padding: 0 10px;
+
+				&.highlighted_selection {
+					background-color: #67c1f5; /* Old browsers */
+					color: #ffffff;
+					background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+				}
+			}
+		}
+	}
+
+	.trigger {
+		background: rgba( 0, 0, 0, 0.4);
+		border: 1px solid #000;
+		border-radius: 3px;
+		box-shadow: 1px 1px 0px #45556c;
+		box-sizing: content-box;
+		color: #ffffff;
+		cursor: pointer;
+		display: block;
+		font-size: 13px;
+		line-height: 18px;
+		margin-block: 3px 10px;
+		max-width: calc( 100% - 12px );
+		overflow: hidden;
+		padding: 3px 2px;
+		position: relative;
+		text-align: start !important;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 98%;
+
+		&.activetrigger {
+			background: #67c1f5;
+			border-radius: 3px 3px 0 0;
+		}
+
+		&:hover {
+			background-color: #67c1f5; /* Old browsers */
+			background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+		}
+
+		&::after {
+			background: url('https://community.fastly.steamstatic.com/public/images/economy/ico_arrow_dn_for_select.png') no-repeat left center;
+			content: '';
+			inset: 0 0 0 auto;
+			position: absolute;
+			width: 20px;
+		}
+	}
 }
 
 @media screen and (max-width: 910px) {
