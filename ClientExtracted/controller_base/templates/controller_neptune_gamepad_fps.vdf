@@ -307,10 +307,6 @@
 						{
 							"binding"		"xinput_button JOYSTICK_LEFT"
 						}
-						"settings"
-						{
-							"haptic_intensity"		"2"
-						}
 					}
 				}
 			}
