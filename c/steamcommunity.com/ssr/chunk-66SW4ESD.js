@@ -236,6 +236,9 @@ function _(_) {
 function _(_) {
   return _(_)?.IN_GAMEPADUI;
 }
+function _(_) {
+  return _(_)?.IN_DESKTOPUI;
+}
 function _() {
   return _.EREALM === 2;
 }
@@ -5671,6 +5674,7 @@ function _(_) {
   );
 }
 export {
+  _,
   _,
   _,
   _,

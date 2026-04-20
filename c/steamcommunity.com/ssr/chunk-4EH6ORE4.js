@@ -11,17 +11,6 @@ function _(_, ..._) {
   );
 }
 function _() {
-  async function _(_, _) {
-    let _ = await fetch(_, _);
-    if (_.status > 399) {
-      let _ = await _.text();
-      try {
-        _ = JSON.parse(_);
-      } catch {}
-      throw _;
-    }
-    return _.json();
-  }
   async function _(_, _, ..._) {
     return _(_, _, ..._);
   }
@@ -30,7 +19,6 @@ function _() {
   }
   return {
     BuildRouteURL: _,
-    FetchFromAPIRoute: _,
     FetchQueryAction: _,
     CallMutationAction: _,
     NavigateToRoute: _,
@@ -39,7 +27,6 @@ function _() {
 }
 var {
   BuildRouteURL: _,
-  FetchFromAPIRoute: _,
   CallMutationAction: _,
   FetchQueryAction: _,
   NavigateToRoute: _,

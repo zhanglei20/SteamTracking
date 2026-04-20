@@ -1,40 +1,3 @@
-var _ = "_5b8C30zCFXs-";
-var _ = "OS5RbtM7QC0-";
-var _ = "TlSV2TKKPrw-";
-var _ = _(_(), 1);
-function _(_) {
-  let { children: _, ..._ } = _;
-  return (0, _.jsx)(_, {
-    className: _,
-    type: "button",
-    ..._,
-    children: (0, _.jsx)("span", {
-      children: _,
-    }),
-  });
-}
-function _(_) {
-  let { children: _, ..._ } = _;
-  return (0, _.jsx)(_, {
-    className: _,
-    type: "button",
-    ..._,
-    children: (0, _.jsx)("span", {
-      children: _,
-    }),
-  });
-}
-function _(_) {
-  let { children: _, ..._ } = _;
-  return (0, _.jsx)(_, {
-    className: _,
-    type: "button",
-    ..._,
-    children: (0, _.jsx)("span", {
-      children: _,
-    }),
-  });
-}
 var _ = _(_(), 1);
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
@@ -2641,6 +2604,14 @@ var _ = class _ extends _.Message {
                 _: !0,
                 _: !0,
               },
+              date_range_created: {
+                _: 39,
+                _: _,
+              },
+              date_range_updated: {
+                _: 40,
+                _: _,
+              },
               excluded_content_descriptors: {
                 _: 37,
                 _: !0,
@@ -2905,6 +2876,71 @@ var _ = class _ extends _.Message {
     }
     getClassName() {
       return "CPublishedFile_GetUserFiles_Request_TagGroup";
+    }
+  },
+  _ = class _ extends _.Message {
+    static ImplementsStaticInterface() {}
+    constructor(_ = null) {
+      super(),
+        _.prototype.timestamp_start || _(_._()),
+        _.Message.initialize(this, _, 0, -1, void 0, null);
+    }
+    static sm_m;
+    static sm_mbf;
+    static M() {
+      return (
+        _.sm_m ||
+          (_.sm_m = {
+            proto: _,
+            fields: {
+              timestamp_start: {
+                _: 1,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              timestamp_end: {
+                _: 2,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+            },
+          }),
+        _.sm_m
+      );
+    }
+    static MBF() {
+      return _.sm_mbf || (_.sm_mbf = _(_._())), _.sm_mbf;
+    }
+    toObject(_ = !1) {
+      return _.toObject(_, this);
+    }
+    static toObject(_, _) {
+      return _(_._(), _, _);
+    }
+    static fromObject(_) {
+      return _(_._(), _);
+    }
+    static deserializeBinary(_) {
+      let _ = new _.default.BinaryReader(_),
+        _ = new _();
+      return _.deserializeBinaryFromReader(_, _);
+    }
+    static deserializeBinaryFromReader(_, _) {
+      return _(_.MBF(), _, _);
+    }
+    serializeBinary() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBuffer();
+    }
+    static serializeBinaryToWriter(_, _) {
+      _(_._(), _, _);
+    }
+    serializeBase64String() {
+      var _ = new _.default.BinaryWriter();
+      return _.serializeBinaryToWriter(this, _), _.getResultBase64String();
+    }
+    getClassName() {
+      return "CPublishedFile_GetUserFiles_Request_DateRange";
     }
   },
   _ = class _ extends _.Message {
@@ -3726,7 +3762,7 @@ var _ = class _ extends _.Message {
     constructor(_ = null) {
       super(),
         _.prototype.appid || _(_._()),
-        _.Message.initialize(this, _, 0, -1, [3, 5, 7], null);
+        _.Message.initialize(this, _, 0, -1, [3, 5], null);
     }
     static sm_m;
     static sm_mbf;
@@ -7528,78 +7564,41 @@ var _;
     request: _,
   })
 ))((_ ||= {}));
-export {
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-  _,
-};
+var _ = "_5b8C30zCFXs-";
+var _ = "OS5RbtM7QC0-";
+var _ = "TlSV2TKKPrw-";
+var _ = _(_(), 1);
+function _(_) {
+  let { children: _, ..._ } = _;
+  return (0, _.jsx)(_, {
+    className: _,
+    type: "button",
+    ..._,
+    children: (0, _.jsx)("span", {
+      children: _,
+    }),
+  });
+}
+function _(_) {
+  let { children: _, ..._ } = _;
+  return (0, _.jsx)(_, {
+    className: _,
+    type: "button",
+    ..._,
+    children: (0, _.jsx)("span", {
+      children: _,
+    }),
+  });
+}
+function _(_) {
+  let { children: _, ..._ } = _;
+  return (0, _.jsx)(_, {
+    className: _,
+    type: "button",
+    ..._,
+    children: (0, _.jsx)("span", {
+      children: _,
+    }),
+  });
+}
+export { _, _, _, _ };

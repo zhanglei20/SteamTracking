@@ -1134,10 +1134,10 @@ var _ = {
   CompactPadding: "XguX0XZI9XA-",
   WithDescription: "hiDXWuue9Ng-",
   HighlightOnFocus: "hYZwQTmms04-",
-  Clickable: "_046KFlpPhi4-",
-  Disabled: "N7wH4pXSFNg-",
   "ItemFocusAnim-darkerGrey": "arvRRZ9-C9Y-",
   "ItemFocusAnim-darkGrey": "_9jyy72RowfQ-",
+  Disabled: "N7wH4pXSFNg-",
+  Clickable: "_046KFlpPhi4-",
   FieldChildrenWithIcon: "saFoLyssBQo-",
   FieldChildrenInner: "y-N79TWWLB0-",
   FieldClickTarget: "NeJGNNDdkHM-",
@@ -5914,18 +5914,26 @@ function _(_, _) {
             }),
           _ && _,
           _ &&
-            (0, _.jsx)("div", {
-              className: _.FieldDescription,
-              _: _(_),
+            (0, _.jsx)(_, {
+              accessibilityId: _(_),
               children: _,
             }),
         ],
       }),
-      (0, _.jsx)("div", {
-        className: _.FieldRightColumn,
-        children: _ && _,
-      }),
+      _ &&
+        (0, _.jsx)("div", {
+          className: _.FieldRightColumn,
+          children: _,
+        }),
     ],
+  });
+}
+function _(_) {
+  let { accessibilityId: _, className: _, children: _ } = _;
+  return (0, _.jsx)("div", {
+    className: _(_.FieldDescription, _),
+    _: _(_),
+    children: _,
   });
 }
 function _(_, _) {
@@ -7130,6 +7138,7 @@ function _(_) {
       onContextMenu: _,
       onActivate: _,
       padding: _,
+      contextMenuPositionOptions: _,
       ..._
     } = _,
     { actionDescriptions: _, gamepadEvents: _, props: _ } = _(_),
@@ -7137,34 +7146,45 @@ function _(_) {
     _ = {
       label: _,
       description: _ ?? _,
-    };
-  return (0, _.jsx)(_, {
-    accessibilityId: _,
-    ..._,
-    className: _,
-    disabled: _,
-    onActivate: _,
-    icon: _,
-    childrenLayout: _ ?? "inline",
-    childrenContainerWidth: _,
-    bottomSeparator: _,
-    highlightOnFocus: _,
-    autoFocus: _,
-    indentLevel: _,
-    onContextMenu: _,
-    actionDescriptionMap: _,
-    explainer: _,
-    explainerTitle: _,
-    padding: _,
-    ..._,
-    children: (0, _.jsx)(_, {
-      ..._(_, _),
-      menuLabel: _,
-      disabled: _,
+    },
+    _ = _(),
+    _ = _ ?? "inline",
+    _ = _;
+  return (
+    !_ &&
+      _ == "inline" &&
+      (_ = {
+        bMatchWidth: !_,
+      }),
+    (0, _.jsx)(_, {
+      accessibilityId: _,
       ..._,
-      ref: _,
-    }),
-  });
+      className: _,
+      disabled: _,
+      onActivate: _,
+      icon: _,
+      childrenLayout: _,
+      childrenContainerWidth: _,
+      bottomSeparator: _,
+      highlightOnFocus: _,
+      autoFocus: _,
+      indentLevel: _,
+      onContextMenu: _,
+      actionDescriptionMap: _,
+      explainer: _,
+      explainerTitle: _,
+      padding: _,
+      ..._,
+      children: (0, _.jsx)(_, {
+        ..._(_, _),
+        contextMenuPositionOptions: _,
+        menuLabel: _,
+        disabled: _,
+        ..._,
+        ref: _,
+      }),
+    })
+  );
 }
 function _(_, _) {
   for (let _ of _.options)

@@ -5282,6 +5282,11 @@ var _ = class _ extends _.Message {
                 _: !0,
                 _: !0,
               },
+              schema_version: {
+                _: 2,
+                _: _.readInt32,
+                _: _.writeInt32,
+              },
             },
           }),
         _.sm_m
@@ -5371,6 +5376,21 @@ var _ = class _ extends _.Message {
                 _: 7,
                 _: _.readString,
                 _: _.writeString,
+              },
+              internal_key: {
+                _: 8,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              min_progress: {
+                _: 9,
+                _: _.readUint32,
+                _: _.writeUint32,
+              },
+              max_progress: {
+                _: 10,
+                _: _.readUint32,
+                _: _.writeUint32,
               },
             },
           }),

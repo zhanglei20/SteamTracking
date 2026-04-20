@@ -66,6 +66,7 @@ var _ = "yIDj-7dpZ9E-";
 var _ = "ZKaFvriA7TU-";
 var _ = "_1-q2VaywILI-";
 var _ = "pvmj3PqxOT4-";
+var _ = "_9Xx1E2Gd668-";
 var _ = "_8aVzMh2yWb0-";
 var _ = "_2DP7DIL-o68-";
 var _ = "jsbOFi7I2qw-";
@@ -74,1226 +75,34 @@ var _ = "xlblibmgakI-";
 var _ = "IWuRd9gm2ps-";
 var _ = "_2qfvJ2pXZqA-";
 var _ = "e0ByZLGE2w0-";
-var _ = "_6hdwAAu2BGU-";
-var _ = _(_(), 1);
+var _ = _(_(), 1),
+  _ = _(_(), 1);
 var _ = "tmIrUKf-Mh8-";
 var _ = "sDK5fonBQMA-";
+var _ = "qynmFVP8-so-";
+var _ = "HlDLa9SDu2Q-";
+var _ = "_4QZPaDoCaZQ-";
 var _ = "rQvmBxj2Kvg-";
 var _ = "f-tHpODFWIA-";
 var _ = "J1a9Og3P5J4-";
+var _ = "O9xH7cOLbGE-";
+var _ = "pEHf6eEYgQY-";
+var _ = "IpMAtN7O4pk-";
+var _ = "iOhDkaZ40nk-";
+var _ = "RH-5-oAMCJk-";
 var _ = "HHZOG9jofgk-";
+var _ = "_8Sc9yZFl08k-";
 var _ = "BfmIgp5hDLQ-";
 var _ = "fHXMCfEI5NA-";
 var _ = "_3rvey4VpXts-";
 var _ = "F7cx0Xm3dO4-";
 var _ = "CmHGWYJjMk0-";
 var _ = "U-RsNSYD7PY-";
-var _ = "_4QZPaDoCaZQ-";
 var _ = "KoN9cl3-i5Q-";
 var _ = "QZAudVzEsAo-";
 var _ = "a9ic5hZenXM-";
 var _ = "lBX4CPPaMgM-";
 var _ = "VVkQnratdmw-";
-var _ = _(_(), 1),
-  _ = _(_(), 1);
-var _ = "_1sAPHcxnhQQ-";
-var _ = "eQSziUKOD7U-";
-var _ = _(_(), 1),
-  _ = _(_(), 1);
-var _ = _(_());
-function _(_, _, _ = !0) {
-  let _ = new URLSearchParams({
-    ima: "fit",
-    impolicy: "Letterbox",
-    imcolor: "#000000",
-  });
-  return (
-    _ && _.set("imw", Math.round(_).toString()),
-    _ && _.set("imh", Math.round(_).toString()),
-    !_ || !_ || !_ ? _.set("letterbox", "false") : _.set("letterbox", "true"),
-    "?" + _.toString()
-  );
-}
-var _ = {};
-_(_, {
-  IsLoaded: () => _,
-  ItemHeight: () => _,
-  ItemWidth: () => _,
-  PreviewImage: () => _,
-  PreviewImageLink: () => _,
-  aspectratio_16x9: () => _,
-  aspectratio_4x3: () => _,
-  aspectratio_collection_background_image: () => _,
-  aspectratio_square: () => _,
-  default: () => _,
-});
-var _ = "288px";
-var _ = "288px";
-var _ = "_68RUj0Pwr4Q-";
-var _ = "rKsVnKsUFJQ-";
-var _ = "C-IafiYWwwA-";
-var _ = "-eH0SAZCp5I-";
-var _ = "wKhzrXtV8NE-";
-var _ = "jsQQDPfZQ0s-";
-var _ = "yH6dY4JHgMU-";
-var _ = {
-  ItemWidth: "288px",
-  ItemHeight: "288px",
-  PreviewImage: "_68RUj0Pwr4Q-",
-  PreviewImageLink: "rKsVnKsUFJQ-",
-  IsLoaded: "C-IafiYWwwA-",
-  aspectratio_square: "-eH0SAZCp5I-",
-  aspectratio_16x9: "wKhzrXtV8NE-",
-  aspectratio_4x3: "jsQQDPfZQ0s-",
-  aspectratio_collection_background_image: "yH6dY4JHgMU-",
-};
-var _ = _(_(), 1);
-function _(_) {
-  return (0, _.useMemo)(
-    () =>
-      _(_.short_description ?? "").replace(/(?:https?|ftp):\/\/[ \n\S]+/g, ""),
-    [_.short_description],
-  );
-}
-function _(_) {
-  return _
-    ? _.COMMUNITY_BASE_URL + "sharedfiles/filedetails/?id=" + _
-    : _.COMMUNITY_BASE_URL;
-}
-function _(_, _) {
-  return (0, _.useMemo)(() => {
-    let _ = new Map(),
-      _ = _.declared_tags;
-    switch (_) {
-      case 1:
-        _ = _.mtx_tags;
-        break;
-      case 0:
-        _ = _.readytouse_tags;
-        break;
-      case 2:
-        _ = _.collection_tags;
-        break;
-      case 4:
-        _ = _.video_tags;
-        break;
-      case 11:
-        _ = _.merch_tags;
-        break;
-    }
-    return (
-      _?.forEach((_) => {
-        _.tags.forEach((_) => _.set(_.name, _));
-      }),
-      _
-    );
-  }, [_, _]);
-}
-function _(_, _) {
-  let _ = (0, _.useContext)(_),
-    _ = _(_, _);
-  return (0, _.useMemo)(() => _.filter((_) => _.tag && _.has(_.tag)), [_, _]);
-}
-var _ = _(_(), 1);
-function _(_, _) {
-  switch (_(_, _)) {
-    case "square":
-    default:
-      return 1;
-    case "16x9":
-      return 16 / 9;
-    case "4x3":
-      return 4 / 3;
-  }
-}
-function _(_, _) {
-  switch (_) {
-    case 1:
-      if (_.aspect_ratio_curated_items?.length)
-        return _.aspect_ratio_curated_items;
-      break;
-    case 0:
-      if (_.aspect_ratio_readytouse_items?.length)
-        return _.aspect_ratio_readytouse_items;
-      break;
-    case 2:
-      return "square";
-    case 4:
-      return "4x3";
-  }
-  return _.aspect_ratio?.length
-    ? _.aspect_ratio
-    : _.usesquarethumbnails
-      ? "square"
-      : "4x3";
-}
-function _(_) {
-  let { details: _, forcedWidth: _, className: _, ..._ } = _,
-    _ = (0, _.useContext)(_),
-    { setQuickViewItem: _ } = _() || {},
-    _ = _ ?? parseInt(_),
-    _ = parseInt(_),
-    _ = _(_, _.file_type),
-    [_, _] = (0, _.useState)(!1),
-    [_, _] = (0, _.useState)(!1),
-    _ = (0, _.useCallback)(() => {
-      _(!0);
-    }, []),
-    _ = (0, _.useCallback)(() => {
-      _(!0);
-    }, []),
-    _ = (0, _.useRef)(null);
-  switch (
-    ((0, _.useEffect)(() => {
-      _.current?.complete &&
-        (_(),
-        (_.current.naturalHeight == 0 || _.current.naturalWidth == 0) && _());
-    }, [_, _]),
-    _)
-  ) {
-    case "square":
-      _ = _;
-      break;
-    case "16x9":
-      _ = (_ * 9) / 16;
-      break;
-    case "4x3":
-      _ = (_ * 3) / 4;
-      break;
-  }
-  let _ = _.preview_url,
-    _ = !_ || _ ? _() : `${_}${_(_, _)}`;
-  return (0, _.jsx)("div", {
-    ..._,
-    className: (0, _.default)(_, _, _[`aspectratio_${_}`], _ && _),
-    children: (0, _.jsx)(_, {
-      autoFocus: !1,
-      className: _,
-      _: _(_.publishedfileid),
-      onOKActionDescription: _.Localize(
-        "#Workshop_GamepadUIAction_ViewDetails",
-      ),
-      onSecondaryActionDescription: _.Localize(
-        "#Workshop_GamepadUIAction_QuickView",
-      ),
-      onSecondaryButton: _ ? () => _(_.publishedfileid) : void 0,
-      children: (0, _.jsx)(_, {
-        ref: _,
-        src: _,
-        alt: _.title ?? "",
-        onLoad: _,
-        onError: _,
-        loading: "lazy",
-      }),
-    }),
-  });
-}
-var _ = _(_(), 1);
-var _ = "zSSh2fwhC-U-";
-var _ = "VBtc-GNVMqM-";
-var _ = _(_(), 1);
-var _ = _(_(), 1),
-  _ = _(_(), 1);
-function _() {
-  let [_, _] = (0, _.useState)(!1),
-    [_, _] = (0, _.useState)(void 0),
-    _ = (0, _.useCallback)((_) => {
-      let _ = _,
-        _ = 2;
-      switch (
-        (_ instanceof _ ? (_ = _.eResult) : _.success && (_ = _.success), _)
-      ) {
-        case 15:
-        case 24:
-          _("#Workshop_Dialog_AccessDenied");
-          break;
-        case 16:
-          _("#Workshop_Dialog_Timeout");
-          break;
-        case 25:
-          _("#Workshop_Dialog_LimitExceeded");
-          break;
-        default:
-          _(void 0);
-          break;
-      }
-      _(!0);
-    }, []),
-    _ = (0, _.useMemo)(
-      () =>
-        (0, _.jsx)(_.Fragment, {
-          children:
-            _ &&
-            (0, _.jsxs)(_, {
-              strTitle: _.Localize("#Workshop_Dialog_Error"),
-              onClose: () => _(!1),
-              children: [
-                (0, _.jsx)(_, {
-                  children: _.Localize(_ ?? "#Workshop_Dialog_ErrorDesc"),
-                }),
-                (0, _.jsx)(_, {
-                  justify: "end",
-                  gap: "3",
-                  align: "center",
-                  marginTop: "3",
-                  children: (0, _.jsx)(_, {
-                    onClick: () => _(!1),
-                    children: (0, _.jsx)("span", {
-                      children: _.Localize("#Button_Close"),
-                    }),
-                  }),
-                }),
-              ],
-            }),
-        }),
-      [_, _],
-    );
-  return (0, _.useMemo)(
-    () => ({
-      HandleMutationError: _,
-      errorDialog: _,
-    }),
-    [_, _],
-  );
-}
-var _ = "QcQBiQ07EYI-";
-var _ = "Ll8t9-pFhtA-";
-var _ = "DpgHtASWdxg-";
-var _ = "_49iUm91uV4g-";
-var _ = _(_(), 1);
-function _(_, _, _, _) {
-  return _(_, _, _, _, (..._) =>
-    _("/workshop/actions", "GetUserListStatus", ..._),
-  );
-}
-function _(_, _) {
-  let [_, _] = (0, _.useState)(!1),
-    _ = (0, _.useCallback)(() => _(!0), [_]),
-    _ = (0, _.useCallback)(() => _(!1), [_]),
-    _ = _.consumer_appid || _,
-    _ = _.publishedfileid,
-    _ = _(_, _, _.file_type, _),
-    _ = _(_, _, _.file_type, _),
-    _ = _.isFetched && _.data,
-    { errorDialog: _, HandleMutationError: _ } = _(),
-    _ = (0, _.useCallback)(async () => {
-      _.mutate(!_, {
-        onError: _,
-      });
-    }, [_, _, _]);
-  return {
-    onMouseEnter: _,
-    onMouseLeave: _,
-    bHovered: _,
-    bSubscribed: _,
-    fnToggleWorkshopSubscription: _,
-    errorDialog: _,
-  };
-}
-function _(_, _) {
-  let _ = _();
-  return _({
-    mutationFn: async (_) =>
-      _(
-        "/workshop/actions",
-        "SetSubscriptionListFromCollection",
-        _,
-        _,
-        _.publishedfileid,
-        _.bAddOnly,
-      ),
-    onSuccess: (_) => {
-      _ &&
-        (_.invalidateQueries({
-          queryKey: ["ugcliststatus", _, _],
-        }),
-        _.invalidateQueries({
-          queryKey: _(_),
-        }));
-    },
-  });
-}
-function _(_, _) {
-  let _ = _();
-  return _({
-    mutationFn: async (_) =>
-      _("/workshop/actions", "UnsubscribeCollection", _.publishedfileid),
-    onSuccess: (_) => {
-      _ &&
-        (_.invalidateQueries({
-          queryKey: ["ugcliststatus", _, _],
-        }),
-        _.invalidateQueries({
-          queryKey: _(_),
-        }));
-    },
-  });
-}
-function _(_) {
-  let { details: _, onSubscribe: _, onClose: _ } = _,
-    { rgChildIDs: _ } = _(_),
-    _ = _.consumer_appid || _,
-    _ = _(_, 1, _.file_type, _.publishedfileid),
-    { errorDialog: _, HandleMutationError: _ } = _(),
-    _ = async () => {
-      (await _.mutateAsync(void 0, {
-        onError: _,
-      })) && _();
-    };
-  return (0, _.jsxs)(_.Fragment, {
-    children: [
-      (0, _.jsx)(_, {
-        onClose: _,
-        children: (0, _.jsxs)(_, {
-          background: "dull-7",
-          padding: "3",
-          radius: "md",
-          className: _,
-          children: [
-            (0, _.jsx)(_, {
-              size: {
-                initial: "3",
-                _: "5",
-              },
-              children: _.Localize("#Workshop_Dialog_ItemDependencies"),
-            }),
-            (0, _.jsxs)(_, {
-              gap: "1",
-              direction: "column",
-              marginTop: "1",
-              children: [
-                (0, _.jsx)("div", {
-                  children: _.Localize(
-                    "#Workshop_Dialog_ItemDependencies_Desc1",
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  children: _.Localize(
-                    "#Workshop_Dialog_ItemDependencies_Desc2",
-                  ),
-                }),
-                (0, _.jsx)("div", {
-                  children: _.Localize(
-                    "#Workshop_Dialog_ItemDependencies_Desc3",
-                  ),
-                }),
-                (0, _.jsx)(_, {
-                  className: _,
-                  direction: "row",
-                  gap: "1",
-                  wrap: "wrap",
-                  children: _.map((_) =>
-                    (0, _.jsx)(
-                      _,
-                      {
-                        publishedfileid: _,
-                        className: _,
-                        imageClassName: _,
-                        forcedWidth: 100,
-                      },
-                      _,
-                    ),
-                  ),
-                }),
-              ],
-            }),
-            (0, _.jsxs)(_, {
-              justify: "end",
-              gap: "3",
-              align: "center",
-              marginTop: "3",
-              wrap: "wrap",
-              children: [
-                (0, _.jsx)(_, {
-                  onClick: _,
-                  children: _.Localize(
-                    "#Workshop_Dialog_SubscribeJustThisItem",
-                  ),
-                }),
-                (0, _.jsx)(_, {
-                  onClick: _,
-                  children: _.Localize("#Workshop_Dialog_SubscribeAll"),
-                }),
-                (0, _.jsx)(_, {
-                  onClick: _,
-                  color: "dull",
-                  children: _.Localize("#Button_Cancel"),
-                }),
-              ],
-            }),
-          ],
-        }),
-      }),
-      _,
-    ],
-  });
-}
-var _ = _(_(), 1);
-function _(_) {
-  let { details: _, className: _ } = _,
-    _ = _.consumer_appid || _,
-    _ = _.publishedfileid;
-  return _(_, 1, _.file_type, _).data
-    ? (0, _.jsx)(_, {
-        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Subscribed"),
-        direction: "right",
-        nDelayShowMS: 100,
-        children: (0, _.jsx)("div", {
-          className: (0, _.default)(_, _),
-          children: (0, _.jsx)(_, {}),
-        }),
-      })
-    : null;
-}
-function _(_) {
-  let { details: _, className: _ } = _,
-    _ = _.consumer_appid,
-    _ = _.publishedfileid;
-  return _(_, 2, _.file_type, _).data
-    ? (0, _.jsx)(_, {
-        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Favorited"),
-        direction: "right",
-        nDelayShowMS: 100,
-        children: (0, _.jsx)("div", {
-          className: (0, _.default)(_, _),
-          children: (0, _.jsx)(_, {
-            filled: !0,
-          }),
-        }),
-      })
-    : null;
-}
-function _(_) {
-  let { details: _, className: _ } = _;
-  return _.workshop_accepted || !1
-    ? (0, _.jsx)(_, {
-        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Accepted"),
-        direction: "right",
-        nDelayShowMS: 100,
-        children: (0, _.jsx)("div", {
-          className: (0, _.default)(_, _),
-          children: (0, _.jsx)(_, {}),
-        }),
-      })
-    : null;
-}
-var _ = _(_(), 1),
-  _ = _(_(), 1);
-var _ = "bRnh6PiLM-I-";
-var _ = "BgRIiTNqRTE-";
-var _ = "qH5D-gLjGCk-";
-var _ = "Ig7GHLulS68-";
-var _ = "QDZxzkEiVp4-";
-var _ = "O4UgSDFcO8M-";
-var _ = _(_(), 1);
-function _(_) {
-  let { details: _ } = _,
-    _ = _(_),
-    _ = _(_.tags ?? [], _.file_type);
-  return (0, _.jsxs)("div", {
-    className: (0, _.default)(_.TextToolTip, _),
-    children: [
-      (0, _.jsx)("div", {
-        className: _,
-        children: (0, _.jsx)(_, {
-          size: "5",
-          children: _.title,
-        }),
-      }),
-      (0, _.jsx)("div", {
-        className: _,
-        children: _.length != 0 ? _ + "..." : "",
-      }),
-      _.length != 0 &&
-        (0, _.jsx)(_, {
-          gap: "1",
-          marginTop: "1",
-          wrap: "wrap",
-          children: _.map((_) =>
-            (0, _.jsx)(
-              "div",
-              {
-                className: _,
-                children: _.display_name,
-              },
-              _.tag,
-            ),
-          ),
-        }),
-    ],
-  });
-}
-function _(_) {
-  let { details: _ } = _,
-    {
-      numChildItems: _,
-      numChildCollections: _,
-      rgChildIDs: _,
-      rgChildCollectionIDs: _,
-    } = _(_),
-    _ = _(_);
-  _.length != 0 && (_ += "...");
-  let _ = 10,
-    _ = 10;
-  return (0, _.useMemo)(
-    () =>
-      (0, _.jsxs)("div", {
-        className: (0, _.default)(_.TextToolTip, _),
-        children: [
-          (0, _.jsx)("div", {
-            className: _,
-            children: _.title,
-          }),
-          (0, _.jsx)("div", {
-            className: _,
-            children: _,
-          }),
-          (0, _.jsxs)("div", {
-            className: _,
-            children: [
-              _ != 0 &&
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      children: _.LocalizePlural(
-                        _ > _
-                          ? "#Workshop_Collection_NumChildItems_MaxShown"
-                          : "#Workshop_Collection_NumChildItems",
-                        _,
-                        _(_),
-                        _,
-                      ),
-                    }),
-                    (0, _.jsx)(_, {
-                      direction: "row",
-                      gap: "1",
-                      wrap: "wrap",
-                      children: _.slice(0, _).map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            publishedfileid: _,
-                            className: _,
-                          },
-                          _,
-                        ),
-                      ),
-                    }),
-                  ],
-                }),
-              _ != 0 &&
-                (0, _.jsxs)(_.Fragment, {
-                  children: [
-                    (0, _.jsx)("div", {
-                      children: _.LocalizePlural(
-                        _ > _
-                          ? "#Workshop_Collection_NumChildCollections_MaxShown"
-                          : "#Workshop_Collection_NumChildCollections",
-                        _,
-                        _(_),
-                        _,
-                      ),
-                    }),
-                    (0, _.jsx)(_, {
-                      direction: "row",
-                      gap: "1",
-                      wrap: "wrap",
-                      children: _.slice(0, _).map((_) =>
-                        (0, _.jsx)(
-                          _,
-                          {
-                            publishedfileid: _,
-                            className: _,
-                          },
-                          _,
-                        ),
-                      ),
-                    }),
-                  ],
-                }),
-            ],
-          }),
-        ],
-      }),
-    [_.title, _, _, _, _, _],
-  );
-}
-var _ = _(_(), 1);
-function _(_) {
-  return (0, _.useMemo)(() => {
-    let _ = 0,
-      _ = 0,
-      _ = [],
-      _ = [];
-    _.children?.forEach((_) => {
-      switch (_.file_type) {
-        case 2:
-          ++_, _.push(_);
-          break;
-        case 0:
-        case 1:
-        case 11:
-          ++_, _.push(_);
-          break;
-      }
-    });
-    let _ = _.sort((_, _) => (_.sortorder ?? 0) - (_.sortorder ?? 0)).map(
-        (_) => _.publishedfileid ?? "",
-      ),
-      _ = _.sort((_, _) => (_.sortorder ?? 0) - (_.sortorder ?? 0)).map(
-        (_) => _.publishedfileid ?? "",
-      );
-    return {
-      numChildItems: _,
-      numChildCollections: _,
-      rgChildIDs: _,
-      rgChildCollectionIDs: _,
-    };
-  }, [_.children]);
-}
-function _(_) {
-  let {
-      publishedfileid: _,
-      className: _,
-      imageClassName: _,
-      forcedWidth: _,
-    } = _,
-    _ = _(_, (_) => _("/workshop/actions", "GetUGCSummary", _)),
-    _ = (0, _.useMemo)(
-      () =>
-        _.data
-          ? (0, _.jsx)(_, {
-              details: _.data,
-            })
-          : null,
-      [_.data],
-    );
-  if (!_ || !_.data)
-    return (0, _.jsx)(_, {
-      direction: "row",
-      gap: "1",
-      className: (0, _.default)(_, _),
-      align: "center",
-      children: (0, _.jsx)(
-        "div",
-        {
-          className: _,
-        },
-        "preview_image",
-      ),
-    });
-  let _ = _(_.data.file_type);
-  return (0, _.jsx)(_, {
-    hoverContent: _,
-    popoverProps: {
-      placement: "right-start",
-      width: "content",
-    },
-    nDelayShowMS: 250,
-    bTooltipMode: !0,
-    children: (0, _.jsxs)(_, {
-      direction: "row",
-      gap: "1",
-      className: (0, _.default)(_, _),
-      align: "center",
-      children: [
-        (0, _.jsx)(
-          _,
-          {
-            details: _.data,
-            className: _,
-            forcedWidth: _ ?? 50,
-          },
-          "preview_image",
-        ),
-        _ &&
-          (0, _.jsx)(_, {
-            details: _.data,
-            className: _,
-          }),
-      ],
-    }),
-  });
-}
-function _(_) {
-  let {
-      publishedfileid: _,
-      className: _,
-      imageClassName: _,
-      forcedWidth: _,
-    } = _,
-    _ = _(_, (_) => _("/workshop/actions", "GetUGCCollectionSummary", _)),
-    _ = (0, _.useMemo)(
-      () =>
-        _.data
-          ? (0, _.jsx)(_, {
-              details: _.data,
-            })
-          : null,
-      [_.data],
-    );
-  return !_ || !_.data
-    ? (0, _.jsx)(_, {
-        direction: "row",
-        gap: "1",
-        className: (0, _.default)(_, _),
-        align: "center",
-        children: (0, _.jsx)(
-          "div",
-          {
-            className: _,
-          },
-          "preview_image",
-        ),
-      })
-    : (0, _.jsx)(_, {
-        hoverContent: _,
-        popoverProps: {
-          placement: "right-start",
-          width: "content",
-        },
-        nDelayShowMS: 250,
-        bTooltipMode: !0,
-        children: (0, _.jsx)(_, {
-          direction: "row",
-          gap: "1",
-          className: (0, _.default)(_, _),
-          align: "center",
-          children: (0, _.jsx)(
-            _,
-            {
-              details: _.data,
-              className: _,
-              forcedWidth: _ ?? 50,
-            },
-            "preview_image",
-          ),
-        }),
-      });
-}
-var _ = _(_(), 1);
-function _(_) {
-  let { details: _ } = _,
-    { data: _ } = _(_.creator),
-    _ = _(_) + `/myworkshopfiles/?appid=${_.consumer_appid}`,
-    _ = _?.public_data?.persona_name;
-  return !_ || !_
-    ? (0, _.jsx)("div", {
-        className: _,
-        children: " ",
-      })
-    : (0, _.jsx)("div", {
-        className: _,
-        children: (0, _.jsx)(_, {
-          gamepadFocusable: !1,
-          _: _,
-          children: _.Localize("#Workshop_Browse_Author_Link", _),
-        }),
-      });
-}
-function _(_) {
-  let { details: _ } = _,
-    [_, _] = (0, _.useState)(!1),
-    _ = (0, _.useCallback)(() => _(!0), [_]),
-    _ = (0, _.useCallback)(() => _(!1), [_]),
-    _ = _.consumer_appid || _,
-    _ = _.publishedfileid,
-    _ = _(_, 1, _.file_type, _),
-    _ = _(_, 1, _.file_type, _),
-    _ = _.isFetched && _.data,
-    _ = (0, _.useCallback)(
-      (_) => {
-        let _ = _ instanceof _ ? _.eResult : 2;
-        console.log(_ ? "Failed to unsubscribe" : "Failed to subscribe");
-      },
-      [_],
-    ),
-    _ = (0, _.useCallback)(async () => {
-      _.mutate(!_, {
-        onError: _,
-      });
-    }, [_, _, _]),
-    _ = _
-      ? "#Workshop_ItemDetails_Unsubscribe_TT"
-      : "#Workshop_ItemDetails_Subscribe_TT";
-  return (0, _.jsx)(_, {
-    toolTipContent: _.Localize(_),
-    direction: "right",
-    nDelayShowMS: 250,
-    children: (0, _.jsx)("div", {
-      className: _,
-      children: (0, _.jsxs)(_, {
-        onClick: _,
-        size: "1",
-        onMouseEnter: _,
-        onMouseLeave: _,
-        children: [
-          _ && !_ && (0, _.jsx)(_, {}),
-          _ && _ && (0, _.jsx)(_, {}),
-          !_ && (0, _.jsx)(_, {}),
-        ],
-      }),
-    }),
-  });
-}
-function _(_) {
-  let { details: _ } = _,
-    { setQuickViewItem: _ } = _();
-  return (0, _.jsx)(_.Fragment, {
-    children: (0, _.jsx)(_, {
-      toolTipContent: _.Localize("#Workshop_Item_QuickView"),
-      direction: "right",
-      nDelayShowMS: 100,
-      children: (0, _.jsx)(_, {
-        className: _,
-        onActivate: () => _(_.publishedfileid),
-        children: (0, _.jsx)(_, {}),
-      }),
-    }),
-  });
-}
-function _(_) {
-  let { details: _ } = _,
-    _ = (0, _.useContext)(_),
-    _ = _.logged_in && _(_.file_type),
-    _ = _ && _.cansubscribefrombrowseview,
-    _ = (0, _.jsx)(_, {
-      details: _,
-    }),
-    _ = (0, _.jsxs)(_.Fragment, {
-      children: [
-        _.star_rating == -1 &&
-          _.Localize("#Workshop_ItemDetails_NotEnoughRatings"),
-        (_.star_rating ?? 0) > -1 &&
-          _.LocalizePlural(
-            "#Workshop_ItemDetails_NumRatings",
-            _.total_votes ?? 0,
-            _(_.total_votes ?? 0),
-          ),
-      ],
-    });
-  return (0, _.jsxs)(_, {
-    className: _,
-    children: [
-      (0, _.jsx)(_, {
-        hoverContent: _,
-        popoverProps: {
-          placement: "right-start",
-          width: "content",
-        },
-        nDelayShowMS: 250,
-        bTooltipMode: !0,
-        children: (0, _.jsx)(_, {
-          className: _,
-          details: _,
-        }),
-      }),
-      (0, _.jsxs)("div", {
-        className: _,
-        children: [
-          _ &&
-            !_.IN_GAMEPADUI &&
-            (0, _.jsx)(_, {
-              details: _,
-            }),
-          (0, _.jsxs)("div", {
-            className: _,
-            children: [
-              (0, _.jsx)(_, {
-                details: _,
-                className: _,
-              }),
-              _ &&
-                (0, _.jsx)(_, {
-                  details: _,
-                  className: _,
-                }),
-              (0, _.jsx)(_, {
-                details: _,
-                className: _,
-              }),
-            ],
-          }),
-          (0, _.jsx)(_, {
-            toolTipContent: _,
-            direction: "top",
-            nBodyAlignment: 0,
-            nDelayShowMS: 250,
-            children: (0, _.jsx)(_, {
-              details: _,
-              className: _,
-            }),
-          }),
-          (0, _.jsx)("div", {
-            className: _,
-            children: (0, _.jsx)(_, {
-              gamepadFocusable: !1,
-              _: _(_.publishedfileid),
-              children: _.title,
-            }),
-          }),
-          (0, _.jsx)(_, {
-            details: _,
-          }),
-          !_.IN_GAMEPADUI &&
-            (0, _.jsx)(_, {
-              details: _,
-            }),
-        ],
-      }),
-    ],
-  });
-}
-function _(_) {
-  let { details: _ } = _,
-    _ = _(_);
-  _.length != 0 && (_ += "...");
-  let { numChildItems: _, numChildCollections: _ } = _(_);
-  return (0, _.jsxs)(_, {
-    className: _,
-    children: [
-      (0, _.jsx)(_, {
-        className: _,
-        details: _,
-      }),
-      (0, _.jsxs)("div", {
-        className: _,
-        children: [
-          (0, _.jsxs)("div", {
-            className: _,
-            children: [
-              (0, _.jsxs)("div", {
-                className: _,
-                children: [
-                  (0, _.jsx)("div", {
-                    className: _,
-                    children: (0, _.jsx)(_, {
-                      gamepadFocusable: !1,
-                      _: _(_.publishedfileid),
-                      children: _.title,
-                    }),
-                  }),
-                  (0, _.jsx)(_, {
-                    details: _,
-                  }),
-                ],
-              }),
-              (0, _.jsxs)(_, {
-                direction: "row",
-                className: _,
-                children: [
-                  (0, _.jsx)(_, {
-                    details: _,
-                    className: _,
-                  }),
-                  (0, _.jsxs)("div", {
-                    className: _,
-                    children: [
-                      (0, _.jsx)(_, {
-                        details: _,
-                      }),
-                      (0, _.jsx)(_, {
-                        details: _,
-                      }),
-                    ],
-                  }),
-                ],
-              }),
-            ],
-          }),
-          (0, _.jsx)("div", {
-            className: _,
-            children: _,
-          }),
-          (0, _.jsxs)("div", {
-            className: _,
-            children: [
-              _ != 0 &&
-                (0, _.jsx)("div", {
-                  children: _.LocalizePlural(
-                    "#Workshop_Collection_NumChildItems",
-                    _,
-                    _(_),
-                  ),
-                }),
-              _ != 0 &&
-                (0, _.jsx)("div", {
-                  children: _.LocalizePlural(
-                    "#Workshop_Collection_NumChildCollections",
-                    _,
-                    _(_),
-                  ),
-                }),
-            ],
-          }),
-          !_.IN_GAMEPADUI &&
-            (0, _.jsx)(_, {
-              details: _,
-            }),
-        ],
-      }),
-    ],
-  });
-}
-var _ = _(_(), 1),
-  _ = _(_(), 1);
-var _ = {
-  Spoiler: "d7DW-rn-R2I-",
-};
-var _ = _(_(), 1);
-function _(_) {
-  return (0, _.jsx)("span", {
-    className: _.Spoiler,
-    children: _.children,
-  });
-}
-var _ = {
-  Table: "_73m-Rmrdgkw-",
-  NoBorder: "SBoSfn5TFWk-",
-  TableRow: "snkwcf-K-TQ-",
-  TableCell: "BMSSDGDgvHA-",
-  EqualCells: "jmC14wBT7AI-",
-};
-var _ = _(_(), 1),
-  _ = {
-    table: {
-      Constructor: _,
-      autocloses: !1,
-      skipInternalNewline: !0,
-    },
-    _: {
-      Constructor: _,
-      autocloses: !1,
-      skipInternalNewline: !0,
-      skipFollowingNewline: !0,
-    },
-    _: {
-      Constructor: _,
-      autocloses: !1,
-      skipInternalNewline: !0,
-      skipFollowingNewline: !0,
-    },
-    _: {
-      Constructor: _,
-      autocloses: !1,
-      skipInternalNewline: !0,
-      skipFollowingNewline: !0,
-    },
-  };
-function _(_) {
-  let _ = _(_.args, "noborder"),
-    _ = _(_.args, "equalcells"),
-    _ = _(_.args, "colwidth");
-  return (0, _.jsxs)("table", {
-    className: _(_.Table, "BB_Table", _ && _.NoBorder, _ && _.EqualCells),
-    children: [
-      _ &&
-        (0, _.jsx)("colgroup", {
-          children: _.split(",").map((_, _) =>
-            (0, _.jsx)(
-              _,
-              {
-                width: _,
-              },
-              _,
-            ),
-          ),
-        }),
-      (0, _.jsx)("tbody", {
-        children: _.children,
-      }),
-    ],
-  });
-}
-function _(_) {
-  let { width: _ } = _,
-    _;
-  return (
-    _ &&
-      parseInt(_) > 0 &&
-      (_ = {
-        width: `${_}px`,
-      }),
-    (0, _.jsx)("col", {
-      style: _,
-    })
-  );
-}
-function _(_) {
-  return (0, _.jsx)("tr", {
-    className: _(_.TableRow, "BB_TableRow"),
-    children: _.children,
-  });
-}
-function _(_, _) {
-  let _ = _(_.args, "width"),
-    _ =
-      _?.length != 0
-        ? {
-            width: _,
-          }
-        : void 0,
-    _ = _(_.args, "colspan"),
-    _ = _(_.args, "rowspan"),
-    _ = {};
-  return (
-    _ && parseInt(_) > 1 && (_.colSpan = parseInt(_)),
-    _ && parseInt(_) > 1 && (_.rowSpan = parseInt(_)),
-    (0, _.jsx)(_, {
-      className: _(_.TableCell, _ == "td" && "BB_TableData"),
-      ..._,
-      style: _,
-      children: _.children,
-    })
-  );
-}
-function _(_) {
-  return _("th", _);
-}
-function _(_) {
-  return _("td", _);
-}
-var _ = _(_(), 1);
-var _ = "-iFss7wPCns-";
-var _ = _(_(), 1);
-function _(_) {
-  let _ = _(_.args) ?? _?.children?.toString();
-  return (
-    console.log(_.tagname + " => " + _),
-    _
-      ? (0, _.jsx)(_, {
-          className: _,
-          src: _,
-          alt: _,
-        })
-      : null
-  );
-}
-function _(_) {
-  return null;
-}
-function _(_) {
-  return (0, _.useMemo)(() => {
-    let _ = (_) => new _(new _()),
-      _ = {
-        ..._,
-        ..._,
-        ..._,
-        ..._,
-        img: {
-          Constructor: _.include_images ? _ : _,
-          autocloses: !0,
-        },
-        url: {
-          Constructor: _,
-        },
-        spoiler: {
-          Constructor: _,
-        },
-      };
-    return new _(_, _, _.LANGUAGE);
-  }, [_]);
-}
 var _ = _(_(), 1);
 var _ = class _ extends _.Message {
     static ImplementsStaticInterface() {}
@@ -4549,6 +3358,58 @@ var _ = class _ extends _.Message {
 })((_ ||= {}));
 var _ = _(_(), 1),
   _ = _(_(), 1);
+var _ = _(_());
+var _ = "-KmHS-mm1UU-";
+var _ = "KQd0DcAOawg-";
+var _ = "Ela1EhSjZNw-";
+var _ = _(_());
+function _(_) {
+  let { bShowDialog: _, setShowDialog: _ } = _,
+    _ = `${_.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`,
+    _ = `${_.STORE_BASE_URL}join/`,
+    _ = `${_.HELP_BASE_URL}wizard/HelpWithAnonymousContentReport`;
+  return (0, _.jsx)(_, {
+    active: _,
+    children: (0, _.jsxs)(_, {
+      closeModal: () => _(!1),
+      title: _.Localize("#anonymousreport_title"),
+      children: [
+        (0, _.jsx)(_, {
+          className: _,
+          children: _.Localize("#anonymousreport_description"),
+        }),
+        (0, _.jsx)(_, {
+          className: _,
+          children: _(
+            _.Localize("#anonymousreport_footer"),
+            (0, _.jsx)(_, {
+              href: _,
+            }),
+          ),
+        }),
+        (0, _.jsxs)(_, {
+          className: _,
+          children: [
+            (0, _.jsx)(_, {
+              href: _,
+              children: (0, _.jsx)(_, {
+                onClick: () => !1,
+                children: _.Localize("#anonymousreport_signin"),
+              }),
+            }),
+            (0, _.jsx)(_, {
+              href: _,
+              children: (0, _.jsx)(_, {
+                onClick: () => !1,
+                children: _.Localize("#anonymousreport_createaccount"),
+              }),
+            }),
+          ],
+        }),
+      ],
+    }),
+  });
+}
 var _ = _(_());
 function _(_) {
   let _ = _();
@@ -8673,67 +7534,1000 @@ function _(_) {
       })
     : null;
 }
+var _ = _(_(), 1),
+  _ = _(_(), 1);
+function _() {
+  let [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)(void 0),
+    _ = (0, _.useCallback)((_) => {
+      let _ = _,
+        _ = 2;
+      switch (
+        (_ instanceof _ ? (_ = _.eResult) : _.success && (_ = _.success), _)
+      ) {
+        case 15:
+        case 24:
+          _("#Workshop_Dialog_AccessDenied");
+          break;
+        case 16:
+          _("#Workshop_Dialog_Timeout");
+          break;
+        case 25:
+          _("#Workshop_Dialog_LimitExceeded");
+          break;
+        default:
+          _(void 0);
+          break;
+      }
+      _(!0);
+    }, []),
+    _ = (0, _.useMemo)(
+      () =>
+        (0, _.jsx)(_.Fragment, {
+          children:
+            _ &&
+            (0, _.jsxs)(_, {
+              strTitle: _.Localize("#Workshop_Dialog_Error"),
+              onClose: () => _(!1),
+              children: [
+                (0, _.jsx)(_, {
+                  children: _.Localize(_ ?? "#Workshop_Dialog_ErrorDesc"),
+                }),
+                (0, _.jsx)(_, {
+                  justify: "end",
+                  gap: "3",
+                  align: "center",
+                  marginTop: "3",
+                  children: (0, _.jsx)(_, {
+                    onClick: () => _(!1),
+                    children: (0, _.jsx)("span", {
+                      children: _.Localize("#Button_Close"),
+                    }),
+                  }),
+                }),
+              ],
+            }),
+        }),
+      [_, _],
+    );
+  return (0, _.useMemo)(
+    () => ({
+      HandleMutationError: _,
+      errorDialog: _,
+    }),
+    [_, _],
+  );
+}
 var _ = "XUoopLoIxcM-";
 var _ = "_3VFw4JObHL4-";
 var _ = "qN-TZjVnH04-";
 var _ = "ONMKtpSGRmE-";
 var _ = "yXW7wST6vGw-";
+var _ = "Aky2N50mWXM-";
 var _ = "_386fC6qQx4o-";
 var _ = "P-aAQef2qsM-";
 var _ = "ngLfrc7RhW8-";
 var _ = "CkoJ76XAEPM-";
 var _ = "h3IAA9AAPYs-";
 var _ = "r4keorurLUE-";
+var _ = _(_(), 1);
+var _ = _(_(), 1),
+  _ = _(_(), 1);
+var _ = "_1sAPHcxnhQQ-";
+var _ = "iRGwWw2ITyU-";
+var _ = "XVpzXyIalmw-";
+var _ = "eQSziUKOD7U-";
+var _ = "_2Oz3NX-AdsA-";
+var _ = "oTfo3j7yiIU-";
+var _ = "PpTVzf9-IJw-";
+var _ = "Hj-aIRpuNqI-";
+var _ = _(_(), 1),
+  _ = _(_(), 1);
 var _ = _(_());
-var _ = "-KmHS-mm1UU-";
-var _ = "KQd0DcAOawg-";
-var _ = "Ela1EhSjZNw-";
-var _ = _(_());
+function _(_, _, _ = !0) {
+  let _ = new URLSearchParams({
+    ima: "fit",
+    impolicy: "Letterbox",
+    imcolor: "#000000",
+  });
+  return (
+    _ && _.set("imw", Math.round(_).toString()),
+    _ && _.set("imh", Math.round(_).toString()),
+    !_ || !_ || !_ ? _.set("letterbox", "false") : _.set("letterbox", "true"),
+    "?" + _.toString()
+  );
+}
+var _ = {};
+_(_, {
+  IsLoaded: () => _,
+  ItemHeight: () => _,
+  ItemWidth: () => _,
+  PreviewImage: () => _,
+  PreviewImageLink: () => _,
+  aspectratio_16x9: () => _,
+  aspectratio_4x3: () => _,
+  aspectratio_collection_background_image: () => _,
+  aspectratio_square: () => _,
+  default: () => _,
+});
+var _ = "288px";
+var _ = "288px";
+var _ = "_68RUj0Pwr4Q-";
+var _ = "rKsVnKsUFJQ-";
+var _ = "C-IafiYWwwA-";
+var _ = "-eH0SAZCp5I-";
+var _ = "wKhzrXtV8NE-";
+var _ = "jsQQDPfZQ0s-";
+var _ = "yH6dY4JHgMU-";
+var _ = {
+  ItemWidth: "288px",
+  ItemHeight: "288px",
+  PreviewImage: "_68RUj0Pwr4Q-",
+  PreviewImageLink: "rKsVnKsUFJQ-",
+  IsLoaded: "C-IafiYWwwA-",
+  aspectratio_square: "-eH0SAZCp5I-",
+  aspectratio_16x9: "wKhzrXtV8NE-",
+  aspectratio_4x3: "jsQQDPfZQ0s-",
+  aspectratio_collection_background_image: "yH6dY4JHgMU-",
+};
+var _ = _(_(), 1);
 function _(_) {
-  let { bShowDialog: _, setShowDialog: _ } = _,
-    _ = `${_.STORE_BASE_URL}login/?redir=${encodeURIComponent(window.location.href)}`,
-    _ = `${_.STORE_BASE_URL}join/`,
-    _ = `${_.HELP_BASE_URL}wizard/HelpWithAnonymousContentReport`;
-  return (0, _.jsx)(_, {
-    active: _,
-    children: (0, _.jsxs)(_, {
-      closeModal: () => _(!1),
-      title: _.Localize("#anonymousreport_title"),
-      children: [
-        (0, _.jsx)(_, {
-          className: _,
-          children: _.Localize("#anonymousreport_description"),
+  return (0, _.useMemo)(
+    () =>
+      _(_.short_description ?? "").replace(/(?:https?|ftp):\/\/[ \n\S]+/g, ""),
+    [_.short_description],
+  );
+}
+function _(_) {
+  return _
+    ? _.COMMUNITY_BASE_URL + "sharedfiles/filedetails/?id=" + _
+    : _.COMMUNITY_BASE_URL;
+}
+function _(_, _) {
+  return (0, _.useMemo)(() => {
+    let _ = new Map(),
+      _ = _.declared_tags;
+    switch (_) {
+      case 1:
+        _ = _.mtx_tags;
+        break;
+      case 0:
+        _ = _.readytouse_tags;
+        break;
+      case 2:
+        _ = _.collection_tags;
+        break;
+      case 4:
+        _ = _.video_tags;
+        break;
+      case 11:
+        _ = _.merch_tags;
+        break;
+    }
+    return (
+      _?.forEach((_) => {
+        _.tags.forEach((_) => _.set(_.name, _));
+      }),
+      _
+    );
+  }, [_, _]);
+}
+function _(_, _) {
+  let _ = (0, _.useContext)(_),
+    _ = _(_, _);
+  return (0, _.useMemo)(() => _.filter((_) => _.tag && _.has(_.tag)), [_, _]);
+}
+function _(_, _ = !0) {
+  return _({
+    queryKey: ["ugc_item_preview", _],
+    queryFn: async () =>
+      _.length == 0
+        ? null
+        : await _("/workshop/actions", "GetUGCDetailsForItemPreview", _),
+    enabled: _,
+    staleTime: 3600 * 1e3,
+  });
+}
+var _ = _(_(), 1);
+function _(_, _) {
+  switch (_(_, _)) {
+    case "square":
+    default:
+      return 1;
+    case "16x9":
+      return 16 / 9;
+    case "4x3":
+      return 4 / 3;
+  }
+}
+function _(_, _) {
+  switch (_) {
+    case 1:
+      if (_.aspect_ratio_curated_items?.length)
+        return _.aspect_ratio_curated_items;
+      break;
+    case 0:
+      if (_.aspect_ratio_readytouse_items?.length)
+        return _.aspect_ratio_readytouse_items;
+      break;
+    case 2:
+      return "square";
+    case 4:
+      return "4x3";
+  }
+  return _.aspect_ratio?.length
+    ? _.aspect_ratio
+    : _.usesquarethumbnails
+      ? "square"
+      : "4x3";
+}
+function _(_) {
+  let { details: _, forcedWidth: _, className: _, ..._ } = _,
+    _ = (0, _.useContext)(_),
+    { setQuickViewItem: _ } = _() || {},
+    _ = _ ?? parseInt(_),
+    _ = parseInt(_),
+    _ = _(_, _.file_type),
+    [_, _] = (0, _.useState)(!1),
+    [_, _] = (0, _.useState)(!1),
+    _ = (0, _.useCallback)(() => {
+      _(!0);
+    }, []),
+    _ = (0, _.useCallback)(() => {
+      _(!0);
+    }, []),
+    _ = (0, _.useRef)(null);
+  switch (
+    ((0, _.useEffect)(() => {
+      _.current?.complete &&
+        (_(),
+        (_.current.naturalHeight == 0 || _.current.naturalWidth == 0) && _());
+    }, [_, _]),
+    _)
+  ) {
+    case "square":
+      _ = _;
+      break;
+    case "16x9":
+      _ = (_ * 9) / 16;
+      break;
+    case "4x3":
+      _ = (_ * 3) / 4;
+      break;
+  }
+  let _ = _.preview_url,
+    _ = !_ || _ ? _() : `${_}${_(_, _, !_)}`;
+  return (0, _.jsx)("div", {
+    ..._,
+    className: (0, _.default)(_, _, _[`aspectratio_${_}`], _ && _),
+    children: (0, _.jsx)(_, {
+      autoFocus: !1,
+      className: _,
+      _: _(_.publishedfileid),
+      onOKActionDescription: _.Localize(
+        "#Workshop_GamepadUIAction_ViewDetails",
+      ),
+      onSecondaryActionDescription: _.Localize(
+        "#Workshop_GamepadUIAction_QuickView",
+      ),
+      onSecondaryButton: _ ? () => _(_.publishedfileid) : void 0,
+      children: (0, _.jsx)(_, {
+        ref: _,
+        src: _,
+        alt: _.title ?? "",
+        onLoad: _,
+        onError: _,
+        loading: "lazy",
+      }),
+    }),
+  });
+}
+var _ = _(_(), 1);
+var _ = "zSSh2fwhC-U-";
+var _ = "K492auqr8MI-";
+var _ = "j0o2C8FUt1Y-";
+var _ = "deUGLQhcPFM-";
+var _ = "_6zTngo67XqU-";
+var _ = "VBtc-GNVMqM-";
+var _ = "O8zD8Rt3SnU-";
+var _ = _(_(), 1);
+function _(_) {
+  let { details: _, className: _ } = _,
+    _ = _.consumer_appid || _,
+    _ = _.publishedfileid;
+  return _(_, 1, _.file_type, _).data
+    ? (0, _.jsx)(_, {
+        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Subscribed"),
+        direction: "right",
+        nDelayShowMS: 100,
+        children: (0, _.jsx)("div", {
+          className: (0, _.default)(_, _),
+          children: (0, _.jsx)(_, {}),
         }),
-        (0, _.jsx)(_, {
-          className: _,
-          children: _(
-            _.Localize("#anonymousreport_footer"),
+      })
+    : null;
+}
+function _(_) {
+  let { details: _, className: _ } = _,
+    _ = _.consumer_appid,
+    _ = _.publishedfileid;
+  return _(_, 2, _.file_type, _).data
+    ? (0, _.jsx)(_, {
+        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Favorited"),
+        direction: "right",
+        nDelayShowMS: 100,
+        children: (0, _.jsx)("div", {
+          className: (0, _.default)(_, _),
+          children: (0, _.jsx)(_, {
+            filled: !0,
+          }),
+        }),
+      })
+    : null;
+}
+function _(_) {
+  let { details: _, className: _ } = _,
+    _ = _.consumer_appid,
+    _ = _.publishedfileid;
+  return _(_, 3, _.file_type, _).data
+    ? (0, _.jsx)(_, {
+        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Played"),
+        direction: "right",
+        nDelayShowMS: 100,
+        children: (0, _.jsx)("div", {
+          className: (0, _.default)(_, _),
+          children: (0, _.jsx)(_, {}),
+        }),
+      })
+    : null;
+}
+function _(_) {
+  let { details: _, className: _ } = _;
+  return (_.flags ?? 0) & 2
+    ? (0, _.jsx)(_, {
+        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Incompatible"),
+        direction: "right",
+        nDelayShowMS: 100,
+        children: (0, _.jsx)("div", {
+          className: (0, _.default)(_, _),
+          children: (0, _.jsx)(_, {}),
+        }),
+      })
+    : null;
+}
+function _(_) {
+  let { className: _ } = _;
+  return (0, _.jsx)(_, {
+    toolTipContent: _.Localize("#Workshop_StatusIcon_TT_VotedDown"),
+    direction: "right",
+    nDelayShowMS: 100,
+    children: (0, _.jsx)("div", {
+      className: (0, _.default)(_, _),
+      children: (0, _.jsx)(_, {}),
+    }),
+  });
+}
+function _(_) {
+  let { className: _ } = _;
+  return (0, _.jsx)(_, {
+    toolTipContent: _.Localize("#Workshop_StatusIcon_TT_VotedUp"),
+    direction: "right",
+    nDelayShowMS: 100,
+    children: (0, _.jsx)("div", {
+      className: (0, _.default)(_, _),
+      children: (0, _.jsx)(_, {}),
+    }),
+  });
+}
+function _(_) {
+  let { className: _ } = _;
+  return (0, _.jsx)(_, {
+    toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Reported"),
+    direction: "right",
+    nDelayShowMS: 100,
+    children: (0, _.jsx)("div", {
+      className: (0, _.default)(_, _),
+      children: (0, _.jsx)(_, {}),
+    }),
+  });
+}
+function _(_) {
+  let { className: _ } = _;
+  return (0, _.jsx)(_, {
+    toolTipContent: _.Localize("#Workshop_StatusIcon_TT_BlockedCreator"),
+    direction: "right",
+    nDelayShowMS: 100,
+    children: (0, _.jsx)("div", {
+      className: (0, _.default)(_, _),
+      children: (0, _.jsx)(_, {}),
+    }),
+  });
+}
+function _(_) {
+  let { details: _, className: _ } = _;
+  return !_.workshop_accepted
+    ? null
+    : (0, _.jsx)(_, {
+        toolTipContent: _.Localize("#Workshop_StatusIcon_TT_Accepted"),
+        direction: "right",
+        nDelayShowMS: 100,
+        children: (0, _.jsx)("div", {
+          className: (0, _.default)(_, _),
+          children: (0, _.jsx)(_, {}),
+        }),
+      });
+}
+var _ = _(_(), 1),
+  _ = _(_(), 1);
+var _ = "bRnh6PiLM-I-";
+var _ = "BgRIiTNqRTE-";
+var _ = "qH5D-gLjGCk-";
+var _ = "PoaeTcPGYW8-";
+var _ = "_20GhQOFeMJ4-";
+var _ = "Ig7GHLulS68-";
+var _ = "QDZxzkEiVp4-";
+var _ = "O4UgSDFcO8M-";
+var _ = _(_(), 1);
+function _(_) {
+  return _({
+    queryKey: ["useFriendsWhoFavoritedItem", _.publishedfileid],
+    queryFn: async () =>
+      await _(
+        "/workshop/actions",
+        "GetFriendsWhoFavoritedItem",
+        _.consumer_appid,
+        _.publishedfileid,
+      ),
+    staleTime: 3600 * 1e3,
+  });
+}
+function _(_) {
+  let { steamid: _ } = _,
+    _ = _(_);
+  if (!_.data) return;
+  let _ = _.data?.public_data?.persona_name ?? "";
+  return (0, _.jsx)(_, {
+    playerLinkDetails: _.data,
+    size: "X-Small",
+    alt: _,
+  });
+}
+function _(_) {
+  let { details: _ } = _,
+    _ = _(_);
+  return _.data?.length
+    ? (0, _.jsxs)(_, {
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            size: "2",
+            children: _.LocalizePlural(
+              "#Workshop_ItemTooltip_FriendsWhoFavorited",
+              _.data.length,
+            ),
+          }),
+          (0, _.jsx)(_, {
+            direction: "row",
+            gap: "1",
+            children: _.data.map((_) =>
+              (0, _.jsx)(
+                _,
+                {
+                  steamid: _,
+                },
+                _,
+              ),
+            ),
+          }),
+        ],
+      })
+    : null;
+}
+function _(_) {
+  let { details: _ } = _,
+    _ = _(_),
+    _ = _(_.tags ?? [], _.file_type);
+  return (0, _.jsxs)("div", {
+    className: (0, _.default)(_.TextToolTip, _),
+    children: [
+      (0, _.jsx)("div", {
+        className: _,
+        children: (0, _.jsx)(_, {
+          size: "5",
+          children: _.title,
+        }),
+      }),
+      (0, _.jsx)("div", {
+        className: _,
+        children: _.length != 0 ? _ + "..." : "",
+      }),
+      (0, _.jsxs)(_, {
+        direction: "column",
+        className: _,
+        children: [
+          (0, _.jsx)(_, {
+            children: _.Localize(
+              "#Workshop_ItemDetails_TimestampCreated",
+              _(_.time_created ?? 0),
+              _(_.time_created ?? 0),
+            ),
+          }),
+          _.time_created != _.time_updated &&
             (0, _.jsx)(_, {
-              href: _,
+              children: _.Localize(
+                "#Workshop_ItemDetails_TimestampUpdated",
+                _(_.time_updated ?? 0),
+                _(_.time_updated ?? 0),
+              ),
             }),
+        ],
+      }),
+      _.length != 0 &&
+        (0, _.jsx)(_, {
+          gap: "1",
+          marginTop: "1",
+          wrap: "wrap",
+          children: _.map((_) =>
+            (0, _.jsx)(
+              "div",
+              {
+                className: _,
+                children: _.display_name,
+              },
+              _.tag,
+            ),
           ),
         }),
+      (0, _.jsx)(_, {
+        details: _,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { details: _ } = _,
+    {
+      numChildItems: _,
+      numChildCollections: _,
+      rgChildIDs: _,
+      rgChildCollectionIDs: _,
+    } = _(_),
+    _ = _(_);
+  _.length != 0 && (_ += "...");
+  let _ = 10,
+    _ = 10;
+  return (0, _.useMemo)(
+    () =>
+      (0, _.jsxs)("div", {
+        className: (0, _.default)(_.TextToolTip, _),
+        children: [
+          (0, _.jsx)("div", {
+            className: _,
+            children: _.title,
+          }),
+          (0, _.jsx)("div", {
+            className: _,
+            children: _,
+          }),
+          (0, _.jsxs)("div", {
+            className: _,
+            children: [
+              _ != 0 &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: _.LocalizePlural(
+                        _ > _
+                          ? "#Workshop_Collection_NumChildItems_MaxShown"
+                          : "#Workshop_Collection_NumChildItems",
+                        _,
+                        _(_),
+                        _,
+                      ),
+                    }),
+                    (0, _.jsx)(_, {
+                      direction: "row",
+                      gap: "1",
+                      wrap: "wrap",
+                      children: _.slice(0, _).map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            publishedfileid: _,
+                            className: _,
+                          },
+                          _,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+              _ != 0 &&
+                (0, _.jsxs)(_.Fragment, {
+                  children: [
+                    (0, _.jsx)("div", {
+                      children: _.LocalizePlural(
+                        _ > _
+                          ? "#Workshop_Collection_NumChildCollections_MaxShown"
+                          : "#Workshop_Collection_NumChildCollections",
+                        _,
+                        _(_),
+                        _,
+                      ),
+                    }),
+                    (0, _.jsx)(_, {
+                      direction: "row",
+                      gap: "1",
+                      wrap: "wrap",
+                      children: _.slice(0, _).map((_) =>
+                        (0, _.jsx)(
+                          _,
+                          {
+                            publishedfileid: _,
+                            className: _,
+                          },
+                          _,
+                        ),
+                      ),
+                    }),
+                  ],
+                }),
+            ],
+          }),
+          (0, _.jsx)(_, {
+            details: _,
+          }),
+        ],
+      }),
+    [_, _, _, _, _, _],
+  );
+}
+var _ = _(_(), 1);
+function _(_) {
+  return (0, _.useMemo)(() => {
+    let _ = 0,
+      _ = 0,
+      _ = [],
+      _ = [];
+    _.children?.forEach((_) => {
+      switch (_.file_type) {
+        case 2:
+          ++_, _.push(_);
+          break;
+        case 0:
+        case 1:
+        case 11:
+          ++_, _.push(_);
+          break;
+      }
+    });
+    let _ = _.sort((_, _) => (_.sortorder ?? 0) - (_.sortorder ?? 0)).map(
+        (_) => _.publishedfileid ?? "",
+      ),
+      _ = _.sort((_, _) => (_.sortorder ?? 0) - (_.sortorder ?? 0)).map(
+        (_) => _.publishedfileid ?? "",
+      );
+    return {
+      numChildItems: _,
+      numChildCollections: _,
+      rgChildIDs: _,
+      rgChildCollectionIDs: _,
+    };
+  }, [_.children]);
+}
+function _(_) {
+  let {
+      publishedfileid: _,
+      className: _,
+      imageClassName: _,
+      forcedWidth: _,
+    } = _,
+    _ = _(_, (_) => _("/workshop/actions", "GetUGCSummary", _)),
+    _ = _(_, (..._) => _("/workshop/actions", "GetUserVoteSummary", ..._)),
+    _ = (0, _.useMemo)(
+      () =>
+        _.data
+          ? (0, _.jsx)(_, {
+              details: _.data,
+            })
+          : null,
+      [_.data],
+    );
+  if (!_ || !_.data)
+    return (0, _.jsx)(_, {
+      direction: "row",
+      gap: "1",
+      className: (0, _.default)(_, _),
+      align: "center",
+      children: (0, _.jsx)(
+        "div",
+        {
+          className: _,
+        },
+        "preview_image",
+      ),
+    });
+  let _ = _(_.data.file_type);
+  return (0, _.jsx)(_, {
+    hoverContent: _,
+    popoverProps: {
+      placement: "right-start",
+      width: "content",
+    },
+    nDelayShowMS: 250,
+    bTooltipMode: !0,
+    children: (0, _.jsxs)(_, {
+      direction: "row",
+      gap: "1",
+      className: (0, _.default)(_, _, _.data?.vote_against && _),
+      align: "center",
+      children: [
+        (0, _.jsx)(
+          _,
+          {
+            details: _.data,
+            className: _,
+            forcedWidth: _ ?? 50,
+          },
+          "preview_image",
+        ),
         (0, _.jsxs)(_, {
+          direction: "row",
           className: _,
           children: [
-            (0, _.jsx)(_, {
-              href: _,
-              children: (0, _.jsx)(_, {
-                onClick: () => !1,
-                children: _.Localize("#anonymousreport_signin"),
+            _ &&
+              (0, _.jsx)(_, {
+                details: _.data,
+                className: _,
               }),
+            (0, _.jsx)(_, {
+              details: _.data,
+              className: _,
             }),
             (0, _.jsx)(_, {
-              href: _,
-              children: (0, _.jsx)(_, {
-                onClick: () => !1,
-                children: _.Localize("#anonymousreport_createaccount"),
-              }),
+              details: _.data,
+              className: _,
             }),
+            _.data?.vote_for &&
+              (0, _.jsx)(_, {
+                className: _,
+              }),
+            _.data?.vote_against &&
+              (0, _.jsx)(_, {
+                className: _,
+              }),
           ],
         }),
       ],
     }),
+  });
+}
+function _(_) {
+  let {
+      publishedfileid: _,
+      className: _,
+      imageClassName: _,
+      forcedWidth: _,
+    } = _,
+    _ = _(_, (_) => _("/workshop/actions", "GetUGCCollectionSummary", _)),
+    _ = (0, _.useMemo)(
+      () =>
+        _.data
+          ? (0, _.jsx)(_, {
+              details: _.data,
+            })
+          : null,
+      [_.data],
+    );
+  return !_ || !_.data
+    ? (0, _.jsx)(_, {
+        direction: "row",
+        gap: "1",
+        className: (0, _.default)(_, _),
+        align: "center",
+        children: (0, _.jsx)(
+          "div",
+          {
+            className: _,
+          },
+          "preview_image",
+        ),
+      })
+    : (0, _.jsx)(_, {
+        hoverContent: _,
+        popoverProps: {
+          placement: "right-start",
+          width: "content",
+        },
+        nDelayShowMS: 250,
+        bTooltipMode: !0,
+        children: (0, _.jsx)(_, {
+          direction: "row",
+          gap: "1",
+          className: (0, _.default)(_, _),
+          align: "center",
+          children: (0, _.jsx)(
+            _,
+            {
+              details: _.data,
+              className: _,
+              forcedWidth: _ ?? 50,
+            },
+            "preview_image",
+          ),
+        }),
+      });
+}
+var _ = "QcQBiQ07EYI-";
+var _ = "Ll8t9-pFhtA-";
+var _ = "DpgHtASWdxg-";
+var _ = "_49iUm91uV4g-";
+var _ = _(_(), 1);
+function _(_, _, _, _) {
+  return _(_, _, _, _, (..._) =>
+    _("/workshop/actions", "GetUserListStatus", ..._),
+  );
+}
+function _(_, _) {
+  let [_, _] = (0, _.useState)(!1),
+    _ = (0, _.useCallback)(() => _(!0), [_]),
+    _ = (0, _.useCallback)(() => _(!1), [_]),
+    _ = _.consumer_appid || _,
+    _ = _.publishedfileid,
+    _ = _(_, _, _.file_type, _),
+    _ = _(_, _, _.file_type, _),
+    _ = _.isFetched && _.data,
+    { errorDialog: _, HandleMutationError: _ } = _(),
+    _ = (0, _.useCallback)(async () => {
+      _.mutate(!_, {
+        onError: _,
+      });
+    }, [_, _, _]);
+  return {
+    onMouseEnter: _,
+    onMouseLeave: _,
+    bHovered: _,
+    bSubscribed: _,
+    fnToggleWorkshopSubscription: _,
+    errorDialog: _,
+  };
+}
+function _(_, _) {
+  let _ = _();
+  return _({
+    mutationFn: async (_) =>
+      _(
+        "/workshop/actions",
+        "SetSubscriptionListFromCollection",
+        _,
+        _,
+        _.publishedfileid,
+        _.bAddOnly,
+      ),
+    onSuccess: (_) => {
+      _ &&
+        (_.invalidateQueries({
+          queryKey: ["ugcliststatus", _, _],
+        }),
+        _.invalidateQueries({
+          queryKey: _(_),
+        }));
+    },
+  });
+}
+function _(_, _) {
+  let _ = _();
+  return _({
+    mutationFn: async (_) =>
+      _("/workshop/actions", "UnsubscribeCollection", _.publishedfileid),
+    onSuccess: (_) => {
+      _ &&
+        (_.invalidateQueries({
+          queryKey: ["ugcliststatus", _, _],
+        }),
+        _.invalidateQueries({
+          queryKey: _(_),
+        }));
+    },
+  });
+}
+function _(_) {
+  let { details: _, onSubscribe: _, onClose: _ } = _,
+    { rgChildIDs: _ } = _(_),
+    _ = _.consumer_appid || _,
+    _ = _(_, 1, _.file_type, _.publishedfileid),
+    { errorDialog: _, HandleMutationError: _ } = _(),
+    _ = async () => {
+      (await _.mutateAsync(void 0, {
+        onError: _,
+      })) && _();
+    };
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        onClose: _,
+        children: (0, _.jsxs)(_, {
+          background: "dull-7",
+          padding: "3",
+          radius: "md",
+          className: _,
+          children: [
+            (0, _.jsx)(_, {
+              size: {
+                initial: "3",
+                _: "5",
+              },
+              children: _.Localize("#Workshop_Dialog_ItemDependencies"),
+            }),
+            (0, _.jsxs)(_, {
+              gap: "1",
+              direction: "column",
+              marginTop: "1",
+              children: [
+                (0, _.jsx)("div", {
+                  children: _.Localize(
+                    "#Workshop_Dialog_ItemDependencies_Desc1",
+                  ),
+                }),
+                (0, _.jsx)("div", {
+                  children: _.Localize(
+                    "#Workshop_Dialog_ItemDependencies_Desc2",
+                  ),
+                }),
+                (0, _.jsx)("div", {
+                  children: _.Localize(
+                    "#Workshop_Dialog_ItemDependencies_Desc3",
+                  ),
+                }),
+                (0, _.jsx)(_, {
+                  className: _,
+                  direction: "row",
+                  gap: "1",
+                  wrap: "wrap",
+                  children: _.map((_) =>
+                    (0, _.jsx)(
+                      _,
+                      {
+                        publishedfileid: _,
+                        className: _,
+                        imageClassName: _,
+                        forcedWidth: 100,
+                      },
+                      _,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+            (0, _.jsxs)(_, {
+              justify: "end",
+              gap: "3",
+              align: "center",
+              marginTop: "3",
+              wrap: "wrap",
+              children: [
+                (0, _.jsx)(_, {
+                  onClick: _,
+                  children: _.Localize(
+                    "#Workshop_Dialog_SubscribeJustThisItem",
+                  ),
+                }),
+                (0, _.jsx)(_, {
+                  onClick: _,
+                  children: _.Localize("#Workshop_Dialog_SubscribeAll"),
+                }),
+                (0, _.jsx)(_, {
+                  onClick: _,
+                  color: "dull",
+                  children: _.Localize("#Button_Cancel"),
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+      _,
+    ],
   });
 }
 var _ = _(_(), 1);
@@ -8864,6 +8658,68 @@ function _(_) {
       _ &&
         (0, _.jsx)(_, {
           details: _,
+          onSubscribe: () => {
+            _(), _(!1);
+          },
+          onClose: () => _(!1),
+        }),
+      _,
+    ],
+  });
+}
+function _(_) {
+  let { details: _, className: _ } = _,
+    {
+      bSubscribed: _,
+      fnToggleWorkshopSubscription: _,
+      bHovered: _,
+      onMouseEnter: _,
+      onMouseLeave: _,
+      errorDialog: _,
+    } = _(_, 1),
+    [_, _] = (0, _.useState)(!1),
+    { data: _, refetch: _ } = _(_.publishedfileid, !1),
+    _ = _
+      ? "#Workshop_ItemDetails_Unsubscribe_TT"
+      : "#Workshop_ItemDetails_Subscribe_TT",
+    _ = async () => {
+      if (!_ && _.file_type == 0) {
+        if (_ === void 0) {
+          if ((await _()).data?.num_children) {
+            _(!0);
+            return;
+          }
+        } else if (_?.num_children) {
+          _(!0);
+          return;
+        }
+      }
+      _();
+    };
+  return (0, _.jsxs)(_.Fragment, {
+    children: [
+      (0, _.jsx)(_, {
+        toolTipContent: _.Localize(_),
+        direction: "right",
+        nDelayShowMS: 250,
+        children: (0, _.jsx)("div", {
+          className: _,
+          children: (0, _.jsxs)(_, {
+            onClick: _,
+            size: "1",
+            onMouseEnter: _,
+            onMouseLeave: _,
+            children: [
+              _ && !_ && (0, _.jsx)(_, {}),
+              _ && _ && (0, _.jsx)(_, {}),
+              !_ && (0, _.jsx)(_, {}),
+            ],
+          }),
+        }),
+      }),
+      _ &&
+        (0, _.jsx)(_, {
+          details: _ ?? _,
           onSubscribe: () => {
             _(), _(!1);
           },
@@ -9284,7 +9140,7 @@ function _(_) {
   return _({
     queryKey: ["user_collections", _],
     queryFn: async () => await _("/workshop/actions", "GetUserCollections", _),
-    staleTime: 1e3 * 60 * 5,
+    staleTime: 3600 * 1e3,
   });
 }
 function _(_) {
@@ -9632,6 +9488,301 @@ function _(_) {
     ],
   });
 }
+function _(_) {
+  return _({
+    queryKey: ["workshop_parents", _],
+    queryFn: async () => await _("/workshop/actions", "GetParentsCounts", _),
+    staleTime: 3600 * 1e3,
+  });
+}
+function _(_) {
+  let { details: _, size: _, onClick: _ } = _,
+    _ = _(_.publishedfileid);
+  return !_.data || !_.data.total_parent_items
+    ? null
+    : (0, _.jsx)(_.Fragment, {
+        children: (0, _.jsx)(_, {
+          toolTipContent: _.Localize(
+            "#Workshop_ItemDetails_ViewDependentItems_TT",
+          ),
+          direction: "top",
+          children: (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsxs)(_, {
+              onClick: _,
+              size: _,
+              icon: !0,
+              color: "dull",
+              children: [
+                (0, _.jsx)(_, {}),
+                _.Localize("#Workshop_ItemDetails_ViewDependentItems"),
+              ],
+            }),
+          }),
+        }),
+      });
+}
+var _ = _(_(), 1);
+function _(_) {
+  let { details: _ } = _,
+    { data: _ } = _(_.creator),
+    _ = _(_) + `/myworkshopfiles/?appid=${_.consumer_appid}`,
+    _ = _?.public_data?.persona_name;
+  return !_ || !_
+    ? (0, _.jsx)("div", {
+        className: _,
+        children: " ",
+      })
+    : (0, _.jsx)("div", {
+        className: _,
+        children: (0, _.jsx)(_, {
+          gamepadFocusable: !1,
+          _: _,
+          children: _.Localize("#Workshop_Browse_Author_Link", _),
+        }),
+      });
+}
+function _(_) {
+  let { details: _ } = _,
+    { setQuickViewItem: _ } = _();
+  return (0, _.jsx)(_.Fragment, {
+    children: (0, _.jsx)(_, {
+      toolTipContent: _.Localize("#Workshop_Item_QuickView"),
+      direction: "right",
+      nDelayShowMS: 100,
+      children: (0, _.jsx)(_, {
+        className: _,
+        onActivate: () => _(_.publishedfileid),
+        children: (0, _.jsx)(_, {}),
+      }),
+    }),
+  });
+}
+function _(_) {
+  let { details: _, bEnlarged: _ } = _,
+    _ = (0, _.useContext)(_),
+    _ = _(_.publishedfileid, (..._) =>
+      _("/workshop/actions", "GetUserVoteSummary", ..._),
+    ),
+    _ = _((..._) => _("/workshop/actions", "GetCurrentUserFriendsList", ..._)),
+    _ = _.logged_in && _(_.file_type),
+    _ = _(_.consumer_appid, 1, _.file_type, _.publishedfileid),
+    _ = _ && _.cansubscribefrombrowseview,
+    _ = (0, _.jsx)(_, {
+      details: _,
+    }),
+    _ = (0, _.jsxs)(_.Fragment, {
+      children: [
+        _.star_rating == -1 &&
+          _.Localize("#Workshop_ItemDetails_NotEnoughRatings"),
+        (_.star_rating ?? 0) > -1 &&
+          _.LocalizePlural(
+            "#Workshop_ItemDetails_NumRatings",
+            _.total_votes ?? 0,
+            _(_.total_votes ?? 0),
+          ),
+      ],
+    }),
+    { preferences: _ } = _(),
+    _ = !!_.data?.reported,
+    _ = !!_.data?.vote_for,
+    _ = !!_.data?.vote_against,
+    _ = _?.data?.ignored.has(_.creator),
+    _ =
+      (_.bDimVotedUp && _) ||
+      (_.bDimVotedUp && _) ||
+      (_.bDimReported && _) ||
+      (_.bDimSubscribed && _ && _.data) ||
+      (_.bDimIgnoredCreator && _);
+  return (0, _.jsxs)(_, {
+    className: (0, _.default)(_, _ && _, _ && _),
+    children: [
+      (0, _.jsx)(_, {
+        hoverContent: _,
+        popoverProps: {
+          placement: "right-start",
+          width: "content",
+        },
+        nDelayShowMS: 250,
+        bTooltipMode: !0,
+        children: (0, _.jsx)(_, {
+          className: (0, _.default)(_, _ && _),
+          details: _,
+          forcedWidth: _ ? 1024 : void 0,
+        }),
+      }),
+      (0, _.jsxs)("div", {
+        className: _,
+        children: [
+          _ &&
+            !_.IN_GAMEPADUI &&
+            (0, _.jsx)(_, {
+              details: _,
+              className: _,
+            }),
+          (0, _.jsxs)("div", {
+            className: _,
+            children: [
+              (0, _.jsx)(_, {
+                details: _,
+                className: _,
+              }),
+              _ &&
+                (0, _.jsx)(_, {
+                  details: _,
+                  className: _,
+                }),
+              (0, _.jsx)(_, {
+                details: _,
+                className: _,
+              }),
+              (0, _.jsx)(_, {
+                details: _,
+                className: _,
+              }),
+              (0, _.jsx)(_, {
+                details: _,
+                className: _,
+              }),
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _,
+                }),
+              _ &&
+                (0, _.jsx)(_, {
+                  className: _,
+                }),
+            ],
+          }),
+          (0, _.jsx)(_, {
+            toolTipContent: _,
+            direction: "top",
+            nBodyAlignment: 0,
+            nDelayShowMS: 250,
+            children: (0, _.jsx)(_, {
+              details: _,
+              className: _,
+            }),
+          }),
+          (0, _.jsx)("div", {
+            className: _,
+            children: (0, _.jsx)(_, {
+              gamepadFocusable: !1,
+              _: _(_.publishedfileid),
+              children: _.title,
+            }),
+          }),
+          (0, _.jsx)(_, {
+            details: _,
+          }),
+          !_.IN_GAMEPADUI &&
+            (0, _.jsx)(_, {
+              details: _,
+            }),
+        ],
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { details: _ } = _,
+    _ = _(_);
+  _.length != 0 && (_ += "...");
+  let { numChildItems: _, numChildCollections: _ } = _(_);
+  return (0, _.jsxs)(_, {
+    className: _,
+    children: [
+      (0, _.jsx)(_, {
+        className: _,
+        details: _,
+      }),
+      (0, _.jsxs)("div", {
+        className: _,
+        children: [
+          (0, _.jsxs)("div", {
+            className: _,
+            children: [
+              (0, _.jsxs)("div", {
+                className: _,
+                children: [
+                  (0, _.jsx)("div", {
+                    className: _,
+                    children: (0, _.jsx)(_, {
+                      gamepadFocusable: !1,
+                      _: _(_.publishedfileid),
+                      children: _.title,
+                    }),
+                  }),
+                  (0, _.jsx)(_, {
+                    details: _,
+                  }),
+                ],
+              }),
+              (0, _.jsxs)(_, {
+                direction: "row",
+                className: _,
+                children: [
+                  (0, _.jsx)(_, {
+                    details: _,
+                    className: _,
+                  }),
+                  (0, _.jsxs)("div", {
+                    className: _,
+                    children: [
+                      (0, _.jsx)(_, {
+                        details: _,
+                      }),
+                      (0, _.jsx)(_, {
+                        details: _,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+          (0, _.jsx)("div", {
+            className: _,
+            children: _,
+          }),
+          (0, _.jsxs)("div", {
+            className: _,
+            children: [
+              _ != 0 &&
+                (0, _.jsx)("div", {
+                  children: _.LocalizePlural(
+                    "#Workshop_Collection_NumChildItems",
+                    _,
+                    _(_),
+                  ),
+                }),
+              _ != 0 &&
+                (0, _.jsx)("div", {
+                  children: _.LocalizePlural(
+                    "#Workshop_Collection_NumChildCollections",
+                    _,
+                    _(_),
+                  ),
+                }),
+            ],
+          }),
+          !_.IN_GAMEPADUI &&
+            (0, _.jsx)(_, {
+              details: _,
+            }),
+        ],
+      }),
+    ],
+  });
+}
 var _ = _(_(), 1),
   _ = _(_(), 1);
 var _ = _(_());
@@ -9665,6 +9816,165 @@ function _(_) {
     }),
   });
 }
+var _ = {
+  Spoiler: "d7DW-rn-R2I-",
+};
+var _ = _(_(), 1);
+function _(_) {
+  return (0, _.jsx)("span", {
+    className: _.Spoiler,
+    children: _.children,
+  });
+}
+var _ = {
+  Table: "_73m-Rmrdgkw-",
+  NoBorder: "SBoSfn5TFWk-",
+  TableRow: "snkwcf-K-TQ-",
+  TableCell: "BMSSDGDgvHA-",
+  EqualCells: "jmC14wBT7AI-",
+};
+var _ = _(_(), 1),
+  _ = {
+    table: {
+      Constructor: _,
+      autocloses: !1,
+      skipInternalNewline: !0,
+    },
+    _: {
+      Constructor: _,
+      autocloses: !1,
+      skipInternalNewline: !0,
+      skipFollowingNewline: !0,
+    },
+    _: {
+      Constructor: _,
+      autocloses: !1,
+      skipInternalNewline: !0,
+      skipFollowingNewline: !0,
+    },
+    _: {
+      Constructor: _,
+      autocloses: !1,
+      skipInternalNewline: !0,
+      skipFollowingNewline: !0,
+    },
+  };
+function _(_) {
+  let _ = _(_.args, "noborder"),
+    _ = _(_.args, "equalcells"),
+    _ = _(_.args, "colwidth");
+  return (0, _.jsxs)("table", {
+    className: _(_.Table, "BB_Table", _ && _.NoBorder, _ && _.EqualCells),
+    children: [
+      _ &&
+        (0, _.jsx)("colgroup", {
+          children: _.split(",").map((_, _) =>
+            (0, _.jsx)(
+              _,
+              {
+                width: _,
+              },
+              _,
+            ),
+          ),
+        }),
+      (0, _.jsx)("tbody", {
+        children: _.children,
+      }),
+    ],
+  });
+}
+function _(_) {
+  let { width: _ } = _,
+    _;
+  return (
+    _ &&
+      parseInt(_) > 0 &&
+      (_ = {
+        width: `${_}px`,
+      }),
+    (0, _.jsx)("col", {
+      style: _,
+    })
+  );
+}
+function _(_) {
+  return (0, _.jsx)("tr", {
+    className: _(_.TableRow, "BB_TableRow"),
+    children: _.children,
+  });
+}
+function _(_, _) {
+  let _ = _(_.args, "width"),
+    _ =
+      _?.length != 0
+        ? {
+            width: _,
+          }
+        : void 0,
+    _ = _(_.args, "colspan"),
+    _ = _(_.args, "rowspan"),
+    _ = {};
+  return (
+    _ && parseInt(_) > 1 && (_.colSpan = parseInt(_)),
+    _ && parseInt(_) > 1 && (_.rowSpan = parseInt(_)),
+    (0, _.jsx)(_, {
+      className: _(_.TableCell, _ == "td" && "BB_TableData"),
+      ..._,
+      style: _,
+      children: _.children,
+    })
+  );
+}
+function _(_) {
+  return _("th", _);
+}
+function _(_) {
+  return _("td", _);
+}
+var _ = _(_(), 1);
+var _ = "-iFss7wPCns-";
+var _ = _(_(), 1);
+function _(_) {
+  let _ = _(_.args) ?? _?.children?.toString();
+  return (
+    console.log(_.tagname + " => " + _),
+    _
+      ? (0, _.jsx)(_, {
+          className: _,
+          src: _,
+          alt: _,
+        })
+      : null
+  );
+}
+function _(_) {
+  return null;
+}
+function _(_) {
+  return (0, _.useMemo)(() => {
+    let _ = (_) => new _(new _()),
+      _ = {
+        ..._,
+        ..._,
+        ..._,
+        ..._,
+        img: {
+          Constructor: _.include_images ? _ : _,
+          autocloses: !0,
+        },
+        url: {
+          Constructor: _,
+        },
+        spoiler: {
+          Constructor: _,
+        },
+      };
+    return new _(_, _, _.LANGUAGE);
+  }, [_]);
+}
+var _ = _(_(), 1),
+  _ = _(_(), 1);
 var _ = "cwVSLdej-KM-";
 var _ = "_4Gz-CkDZNb0-";
 var _ = "vezX8szxVBA-";
@@ -10056,20 +10366,10 @@ var _ = "MVf18zNZzjw-";
 var _ = _(_(), 1);
 function _(_) {
   return _({
-    queryKey: ["ugc_item_preview", _],
-    queryFn: async () =>
-      _.length == 0
-        ? null
-        : await _("/workshop/actions", "GetUGCDetailsForItemPreview", _),
-    staleTime: 1e3 * 60 * 5,
-  });
-}
-function _(_) {
-  return _({
     queryKey: ["GetUGCContributorData", _],
     queryFn: async () =>
       await _("/workshop/actions", "GetUGCContributorData", _, _.LANGUAGE),
-    staleTime: 300 * 1e3,
+    staleTime: 3600 * 1e3,
   });
 }
 function _(_) {
@@ -10174,15 +10474,14 @@ function _(_) {
       rgChildCollectionIDs: _,
     } = _(_),
     _ = 102,
-    [_, _] = (0, _.useState)(_.file_type == 0 ? _ : 0),
+    [_, _] = (0, _.useState)(0),
     _ = _(
       (0, _.useCallback)(
         (_) => {
-          if (_.file_type == 0) return;
           let _ = Math.floor(_.contentRect.width / _) - 1;
           _(_);
         },
-        [_.file_type, _],
+        [_],
       ),
     ),
     [_, _] = (0, _.useState)(0),
@@ -10306,7 +10605,7 @@ function _(_) {
     queryKey: ["GetUGCAppRelationships", _],
     queryFn: async () =>
       await _("/workshop/actions", "GetUGCAppRelationships", _),
-    staleTime: 300 * 1e3,
+    staleTime: 3600 * 1e3,
   });
 }
 function _(_) {
@@ -10347,6 +10646,7 @@ function _(_) {
 }
 function _(_) {
   let { details: _, onClose: _ } = _,
+    { onBrowseHandler: _ } = _(),
     _ = _.publishedfileid,
     _ = _(_),
     _ = _(_.file_type),
@@ -10367,7 +10667,14 @@ function _(_) {
       let _ = _.target.scrollHeight > _.target.clientHeight;
       _(_);
     }, []),
-    _ = _(_);
+    _ = _(_),
+    _ = () => {
+      _({
+        section: "readytouseitems",
+        childpublishedfileid: _.publishedfileid,
+      }),
+        _();
+    };
   return (0, _.jsxs)(_, {
     className: _,
     direction: "column",
@@ -10463,12 +10770,14 @@ function _(_) {
                               children: _.Localize(
                                 "#Workshop_ItemDetails_TimestampCreated",
                                 _(_.time_created ?? 0),
+                                _(_.time_created ?? 0),
                               ),
                             }),
                             _.time_created != _.time_updated &&
                               (0, _.jsx)(_, {
                                 children: _.Localize(
                                   "#Workshop_ItemDetails_TimestampUpdated",
+                                  _(_.time_updated ?? 0),
                                   _(_.time_updated ?? 0),
                                 ),
                               }),
@@ -10562,6 +10871,10 @@ function _(_) {
               direction: "row",
               gap: "3",
               children: [
+                (0, _.jsx)(_, {
+                  details: _,
+                  onClick: _,
+                }),
                 (0, _.jsxs)(_, {
                   direction: "row",
                   gap: "1",
@@ -10727,6 +11040,26 @@ function _(_) {
         });
     },
     _ = (_) => _.Localize(_[_]),
+    _ = _(),
+    _ = ["left", "right", "collapsed"],
+    _ = (_) => {
+      _.setPreferences({
+        filters_column: _,
+      });
+    },
+    _ = (_) => {
+      switch (_) {
+        case "left":
+          return _.Localize("#Workshop_FiltersMenu_State_Left");
+        case "right":
+          return _.Localize("#Workshop_FiltersMenu_State_Right");
+        case "collapsed":
+          return _.Localize("#Workshop_FiltersMenu_State_Collapsed");
+      }
+    },
+    _ = (_) => {
+      _.setPreferences(_);
+    },
     [_, _] = (0, _.useState)(!1);
   return (0, _.jsxs)(_, {
     className: _,
@@ -10769,22 +11102,28 @@ function _(_) {
           (0, _.jsx)(_.Positioner, {
             children: (0, _.jsx)(_.FocusManager, {
               children: (0, _.jsx)("div", {
-                children: (0, _.jsxs)(_, {
+                children: (0, _.jsx)(_, {
                   className: _,
-                  gap: "1",
+                  gap: "2",
                   direction: "column",
-                  children: [
-                    (0, _.jsx)(_, {
-                      size: "4",
-                      children: _.Localize("#Workshop_SearchTarget_MenuTitle"),
-                    }),
-                    (0, _.jsx)(_, {
-                      options: _,
-                      value: _,
-                      onValueChange: _,
-                      getOptionLabel: _,
-                    }),
-                  ],
+                  children: (0, _.jsxs)(_, {
+                    gap: "1",
+                    direction: "column",
+                    children: [
+                      (0, _.jsx)(_, {
+                        size: "4",
+                        children: _.Localize(
+                          "#Workshop_SearchTarget_MenuTitle",
+                        ),
+                      }),
+                      (0, _.jsx)(_, {
+                        options: _,
+                        value: _,
+                        onValueChange: _,
+                        getOptionLabel: _,
+                      }),
+                    ],
+                  }),
                 }),
               }),
             }),
@@ -10831,6 +11170,7 @@ function _(_) {
   let { app: _, serverQuery: _ } = _.useLoaderData(),
     [_, _] = (0, _.useState)(() => _()?.workshopBrowseQuery ?? _),
     { setOnBrowseHandler: _, onSearchTextUpdatedExternally: _ } = _(),
+    { preferences: _ } = _(),
     _ = _(),
     [_, _] = (0, _.useState)(!1),
     _ = (0, _.useRef)(null),
@@ -10879,17 +11219,28 @@ function _(_) {
           ..._,
         };
         switch (
-          (_.section
+          (_.childpublishedfileid
             ? ((_.page = 1),
-              (_.special_filter = _.special_filter),
-              (_.required_tags = _.required_tags),
-              (_.excluded_tags = _.excluded_tags))
-            : (_.search_text && _.search_text != _.search_text) ||
-                (_.search_text_target !== void 0 &&
-                  _.search_text_target != _.search_text_target) ||
-                _.browse_sort
-              ? (_.page = 1)
-              : _.special_filter == 5 && (_.browse_sort = "reported"),
+              (_.special_filter = 0),
+              (_.search_text = void 0),
+              (_.required_tags = void 0),
+              (_.excluded_tags = void 0),
+              (_.date_range_created = void 0),
+              (_.date_range_updated = void 0),
+              (_.appids_required_for_use = void 0),
+              (_.excluded_appids_required_for_use = void 0),
+              _(""))
+            : _.section
+              ? ((_.page = 1),
+                (_.special_filter = _.special_filter),
+                (_.required_tags = _.required_tags),
+                (_.excluded_tags = _.excluded_tags))
+              : (_.search_text && _.search_text != _.search_text) ||
+                  (_.search_text_target !== void 0 &&
+                    _.search_text_target != _.search_text_target) ||
+                  _.browse_sort
+                ? (_.page = 1)
+                : _.special_filter == 5 && (_.browse_sort = "reported"),
           (_.omitted_flags = void 0),
           _.browse_sort)
         ) {
@@ -10897,6 +11248,15 @@ function _(_) {
             break;
           case "accepted":
             _.special_filter != 1 && (_.browse_sort = "mostrecent");
+            break;
+          case "num_parent_items":
+            _.special_filter != 6 && (_.browse_sort = "mostrecent");
+            break;
+          case "num_parent_collections":
+            _.special_filter != 7 && (_.browse_sort = "mostrecent");
+            break;
+          case "reported":
+            _.special_filter != 5 && (_.browse_sort = "mostrecent");
             break;
           default:
             (_.section == "mtxitems" || _.section == "collections") &&
@@ -10995,23 +11355,42 @@ function _(_) {
                 browseQuery: _,
                 results: _,
               }),
-              (0, _.jsxs)(_, {
-                justify: "between",
-                wrap: "wrap",
-                gap: "1",
-                direction: "row",
-                children: [
-                  (0, _.jsx)(_, {
-                    appName: _.name,
-                  }),
-                  (0, _.jsx)(_, {
-                    browseQuery: _,
-                  }),
-                  (0, _.jsx)(_, {
-                    browseQuery: _,
-                  }),
-                ],
-              }),
+              (_.filters_column == "left" || _.filters_column == "collapsed") &&
+                (0, _.jsxs)(_, {
+                  justify: "between",
+                  wrap: "wrap",
+                  gap: "1",
+                  direction: "row",
+                  children: [
+                    (0, _.jsx)(_, {
+                      appName: _.name,
+                    }),
+                    (0, _.jsx)(_, {
+                      browseQuery: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      browseQuery: _,
+                    }),
+                  ],
+                }),
+              _.filters_column == "right" &&
+                (0, _.jsxs)(_, {
+                  justify: "end",
+                  wrap: "wrap",
+                  gap: "1",
+                  direction: "row",
+                  children: [
+                    (0, _.jsx)(_, {
+                      browseQuery: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      browseQuery: _,
+                    }),
+                    (0, _.jsx)(_, {
+                      appName: _.name,
+                    }),
+                  ],
+                }),
             ],
           }),
         }),
@@ -11021,9 +11400,10 @@ function _(_) {
           width: "100%",
           marginTop: "3",
           children: [
-            (0, _.jsx)(_, {
-              browseQuery: _,
-            }),
+            _.filters_column == "left" &&
+              (0, _.jsx)(_, {
+                browseQuery: _,
+              }),
             (0, _.jsxs)(_, {
               results: _.results,
               children: [
@@ -11064,6 +11444,10 @@ function _(_) {
                 }),
               ],
             }),
+            _.filters_column == "right" &&
+              (0, _.jsx)(_, {
+                browseQuery: _,
+              }),
           ],
         }),
         (0, _.jsx)(_, {
@@ -11073,24 +11457,6 @@ function _(_) {
           onChangePage: () => _(!0),
         }),
       ],
-    }),
-  });
-}
-function _(_) {
-  let _ = _();
-  return (0, _.jsx)("div", {
-    className: _,
-    children: (0, _.jsx)(_, {
-      size: "1",
-      color: "accent",
-      onClick: () => {
-        _.setPreferences({
-          bOptedIn: !1,
-        }),
-          top?.location.reload();
-      },
-      icon: !0,
-      children: _.Localize("#Workshop_ReactBeta_Link"),
     }),
   });
 }
@@ -11155,14 +11521,20 @@ function _(_) {
 }
 function _(_) {
   let { onBrowseHandler: _ } = _(),
-    { childpublishedfileid: _ } = _,
+    { childpublishedfileid: _, section: _ } = _,
     _ = _(_, (_) => _("/workshop/actions", "GetUGCSummary", _)),
     _ = (0, _.useCallback)(() => {
       _({
         childpublishedfileid: "",
         page: 1,
       });
-    }, [_]);
+    }, [_]),
+    _ = _.Localize(
+      _ == "collections"
+        ? "#Workshop_SearchedForChild"
+        : "#Workshop_SearchedForRequiredItem",
+      _.data?.title ?? "",
+    );
   return (0, _.jsxs)(_, {
     onClick: _,
     color: "dull",
@@ -11170,7 +11542,7 @@ function _(_) {
     children: [
       (0, _.jsx)("div", {
         className: _,
-        children: _.Localize("#Workshop_SearchedForChild", _.data?.title ?? ""),
+        children: _,
       }),
       (0, _.jsx)(_, {
         className: _,
@@ -11481,9 +11853,9 @@ function _(_) {
 function _(_) {
   let { rgRequiredAppIDs: _, rgExcludedRequiredAppIDs: _ } = _,
     { availableRequiredDLC: _ } = _.useLoaderData(),
-    _ = _.filter((_) => _.includes(_) || _.includes(_));
+    _ = _.filter(({ appid: _, count: _ }) => _.includes(_) || _.includes(_));
   return (0, _.jsx)(_.Fragment, {
-    children: _.map((_) =>
+    children: _.map(({ appid: _, count: _ }) =>
       (0, _.jsx)(
         _,
         {
@@ -11522,6 +11894,32 @@ function _(_, _) {
               timeZone: "UTC",
             }),
           );
+}
+function _(_) {
+  let { onBrowseHandler: _ } = _();
+  return (0, _.jsx)(
+    _,
+    {
+      onClick: () => {
+        _({
+          special_filter: 0,
+          required_flags: [],
+          omitted_flags: [],
+          required_tags: [],
+          excluded_tags: [],
+          search_text: "",
+          appids_required_for_use: [],
+          excluded_appids_required_for_use: [],
+          childpublishedfileid: void 0,
+          page: 1,
+        });
+      },
+      color: "dull",
+      size: "1",
+      children: _.Localize("#Workshop_Filters_ClearBtn"),
+    },
+    "saved_query",
+  );
 }
 function _(_) {
   let { browseQuery: _ } = _,
@@ -11642,6 +12040,7 @@ function _(_) {
         _,
         {
           childpublishedfileid: _.childpublishedfileid ?? "",
+          section: _.section ?? "collections",
         },
         "childpublishedfileid",
       ),
@@ -11757,7 +12156,7 @@ function _(_) {
   return (
     _.length != 0 &&
       _.logged_in &&
-      _.push(
+      (_.push(
         (0, _.jsx)(
           _,
           {
@@ -11766,6 +12165,7 @@ function _(_) {
           "saved_query",
         ),
       ),
+      _.push((0, _.jsx)(_, {}, "clear"))),
     (0, _.jsx)("div", {
       className: _,
       children: (0, _.jsxs)(_, {
@@ -11920,14 +12320,22 @@ function _(_) {
       _(!0);
     },
     _ = (_) => {
-      let _ = _.filter((_) => !_.tags.some((_) => _ == _.name));
-      _.length != 0 && _.push(_),
+      let _ = _.filter((_) => !_.tags.some((_) => _ == _.name)),
+        _ = _.tags.find((_) => _._ == _);
+      _.length != 0 && _ && _.push(_.name),
         _({
           required_tags: _,
           page: 1,
         });
     },
-    _ = ["", ..._.tags.map((_) => _.display_name ?? "")];
+    _ = (_) => {
+      if (_.length == 0) return _.Localize("#Workshop_Tag_NoneSpecified");
+      let _ = _.tags.find((_) => _._ == _);
+      return _
+        ? (_.display_name ?? _.name)
+        : _.Localize("#Workshop_Tag_NoneSpecified");
+    },
+    _ = ["", ..._.tags.map((_) => _._)];
   switch (_.htmlelement || "checkbox") {
     case "select": {
       let _ = _.tags.find((_) => _.find((_) => _.name == _));
@@ -11942,11 +12350,10 @@ function _(_) {
             placement: {
               flip: !1,
             },
-            selectedValue: _?.name ?? "",
+            selectedValue: _?._ ?? "",
             onSelectionChange: _,
             options: _,
-            getOptionLabel: (_) =>
-              _.length == 0 ? _.Localize("#Workshop_Tag_NoneSpecified") : _,
+            getOptionLabel: _,
           }),
         ],
       });
@@ -12029,6 +12436,8 @@ var _ = [
   "#Workshop_SpecialFilter_CreatedByFriends",
   "#Workshop_SpecialFilter_CreatedByFollowed",
   "#Workshop_SpecialFilter_Reported",
+  "#Workshop_SpecialFilter_ParentItems",
+  "#Workshop_SpecialFilter_ParentCollections",
 ];
 function _(_, _, _) {
   let _ = _[_];
@@ -12048,8 +12457,24 @@ function _(_) {
     _ = (0, _.useContext)(_),
     _ = (0, _.useContext)(_),
     _ = (_) => {
+      let _;
+      switch (_) {
+        case 1:
+          _ = "accepted";
+          break;
+        case 6:
+          _ = "num_parent_items";
+          break;
+        case 7:
+          _ = "num_parent_collections";
+          break;
+        case 5:
+          _ = "reported";
+          break;
+      }
       _({
         special_filter: _,
+        browse_sort: _,
         page: 1,
       });
     },
@@ -12184,7 +12609,7 @@ function _(_) {
         page: 1,
       });
     };
-  return !_ || !_.name
+  return !_ || !_.name?.length
     ? null
     : (0, _.jsxs)(_, {
         className: _,
@@ -12210,21 +12635,60 @@ function _(_) {
 }
 function _(_) {
   let { browseQuery: _ } = _,
-    { availableRequiredDLC: _ } = _.useLoaderData();
-  return _.length == 0
+    _ = (0, _.useContext)(_),
+    { availableRequiredDLC: _, setOwnedApps: _ } = _.useLoaderData(),
+    { onBrowseHandler: _ } = _(),
+    _ = () => {
+      let _ = _.filter(({ appid: _ }) => _ && _.has(_)).map(
+        ({ appid: _ }) => _,
+      );
+      _({
+        appids_required_for_use: _,
+        excluded_appids_required_for_use: [],
+      });
+    },
+    _ = () => {
+      let _ = _.filter(({ appid: _ }) => !_ || !_.has(_)).map(
+        ({ appid: _ }) => _,
+      );
+      _({
+        appids_required_for_use: [],
+        excluded_appids_required_for_use: _,
+      });
+    };
+  return _.length == 0 || !_.feature_required_dlc
     ? null
     : (0, _.jsxs)(_, {
-        className: (0, _.default)(_),
+        className: (0, _.default)(_, _),
         children: [
           (0, _.jsx)("div", {
             className: _,
             children: _.Localize("#Workshop_RequiredDLC_Header"),
           }),
+          _.logged_in &&
+            (0, _.jsxs)(_, {
+              gap: "1",
+              width: "100%",
+              children: [
+                (0, _.jsx)(_, {
+                  color: "dull",
+                  size: "1",
+                  onClick: _,
+                  children: _.Localize("#Workshop_RequiredDLC_IncludeOwned"),
+                }),
+                (0, _.jsx)(_, {
+                  color: "dull",
+                  size: "1",
+                  onClick: _,
+                  children: _.Localize("#Workshop_RequiredDLC_ExcludeUnowned"),
+                }),
+              ],
+            }),
           (0, _.jsx)("div", {
             className: _,
             children: (0, _.jsx)("div", {
               className: _,
-              children: _.map((_) =>
+              children: _.map(({ appid: _, count: _ }) =>
                 (0, _.jsx)(
                   _,
                   {
@@ -12516,6 +12980,8 @@ var _ = {
   inappropriate_rating: "#Workshop_BrowseSort_Inappropriate",
   ban_content_check: "#Workshop_BrowseSort_BanContentCheck",
   lastupdated: "#Workshop_BrowseSort_LastUpdated",
+  num_parent_items: "#Workshop_BrowseSort_NumParentItems",
+  num_parent_collections: "#Workshop_BrowseSort_NumParentCollections",
   curatedadmin: "#Workshop_BrowseSort_CuratedAdmin",
   nominee: "#Workshop_BrowseSort_Nominee",
 };
@@ -12688,7 +13154,8 @@ function _(_) {
     _ = _.bIsAdmin,
     _ = _(_.section ?? "readytouseitems", !1),
     _ = [..._];
-  _ && (_ = [..._, ..._]),
+  switch (
+    (_ && (_ = [..._, ..._]),
     (_ = _.filter(
       (_) => (_ != "textsearch" || _.search_text?.length != 0) && _ != "torate",
     )),
@@ -12702,10 +13169,26 @@ function _(_) {
           _ != "playtime_sessions_trend" &&
           _ != "playtime_sessions_lifetime",
       )),
-    _.special_filter === 1
-      ? (_ = _.filter((_) => _ != "toprated" && _ != "trend"))
-      : (_ = _.filter((_) => _ != "accepted")),
-    (_ = [...new Set(_)]);
+    _.special_filter)
+  ) {
+    case 1:
+      _ = _.filter((_) => _ != "toprated" && _ != "trend");
+      break;
+    case 6:
+    case 7:
+    case 5:
+      break;
+    default:
+      _ = _.filter(
+        (_) =>
+          _ != "accepted" &&
+          _ != "num_parent_items" &&
+          _ != "num_parent_collections" &&
+          _ != "reported",
+      );
+      break;
+  }
+  _ = [...new Set(_)];
   let _ = (_) => {
       _({
         browse_sort: _,
@@ -12738,8 +13221,7 @@ function _(_) {
   });
 }
 function _(_) {
-  let { onBrowseHandler: _ } = _(),
-    { browseQuery: _, results: _ } = _;
+  let { browseQuery: _, results: _ } = _;
   return (0, _.jsx)(_, {
     className: _,
     children: (0, _.jsx)(_, {
@@ -12899,4 +13381,32 @@ function _(_) {
     })
   );
 }
-export { _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _ };
+export {
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+  _,
+};
