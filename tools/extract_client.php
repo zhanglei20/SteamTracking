@@ -249,14 +249,14 @@ class ClientExtractor
 
 		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings' . ( PHP_OS_FAMILY === 'Windows' ? '.exe' : '' );
 		$SteamRTDir = self::LINUX_BINS_DIR . '/steamrt64';
-		$SteamBinary = self::CLIENT_EXTRACTED_DIR . '/steamrt64/steam';
-		$Binaries =
+		$SteamBinaries =
 		[
-			'steam-launch-wrapper',
-			'steam_monitor',
-			'steamsysinfo',
-			'steamwebhelper',
-			'streaming_client'
+			self::CLIENT_EXTRACTED_DIR . '/steamrt64/steam',
+			self::LINUX_BINS_DIR . '/steamrt64/steam-launch-wrapper',
+			self::LINUX_BINS_DIR . '/steamrt64/steam_monitor',
+			self::LINUX_BINS_DIR . '/steamrt64/steamsysinfo',
+			self::LINUX_BINS_DIR . '/steamrt64/steamwebhelper',
+			self::LINUX_BINS_DIR . '/steamrt64/streaming_client'
 		];
 
 		if( !file_exists( $DumpStrings ) )
@@ -279,7 +279,7 @@ class ClientExtractor
 			/** @var \SplFileInfo $File */
 			foreach( $Iterator as $File )
 			{
-				if( $File->isFile() && ( ( $File->getExtension() === 'so' && !str_contains( $File->getPath(), 'pv-runtime' ) ) || in_array( $File->getFilename(), $Binaries ) ) )
+				if( $File->isFile() && $File->getExtension() === 'so' && !str_contains( $File->getPath(), 'pv-runtime' )  )
 				{
 					$Name = $File->getBasename( '.so' );
 					$this->Log( 'Dumping ' . $File->getFilename() );
@@ -302,17 +302,24 @@ class ClientExtractor
 			}
 		}
 
-		if( file_exists( $SteamBinary ) )
+		foreach( $SteamBinaries as $SteamBinary )
 		{
-			$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $SteamBinary );
-			exec( $Command, $Output, $ReturnCode );
-
-			if( $ReturnCode === 0 )
+			if( file_exists( $SteamBinary ) )
 			{
+				$Name = $File->getBasename();
+				$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $SteamBinary );
+				exec( $Command, $Output, $ReturnCode );
+
+				if( $ReturnCode !== 0 )
+				{
+					$this->Log( '{lightred}Failed to dump strings from: ' . $File->getFilename() );
+					continue;
+				}
 				$Strings = array_unique( $Output );
 				sort( $Strings );
 
-				file_put_contents( self::STRINGS_DIR . '/steam.txt', implode( PHP_EOL, $Strings ) . PHP_EOL );
+				file_put_contents( self::STRINGS_DIR . '/'. $Name . '.txt', implode( PHP_EOL, $Strings ) . PHP_EOL );
+				$Output = [];
 			}
 		}
 	}
