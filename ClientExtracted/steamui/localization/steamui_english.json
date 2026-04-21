@@ -6262,7 +6262,7 @@
     "ControllerBinding_SnapModeFlickStick": "Snap Angle",
     "ControllerBinding_SnapModeFlickStick_Description": "Choose which angle the flick-turn snaps to, for more consistent turning. Turn it off completely for unadulterated turns. Or use the Forward Deadzone value to only snap to a tunable front angle.",
     "ControllerBinding_ForwardSnapAngleFlickStick": "Front Angle Deadzone",
-    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "The flick-turn will only occur if it's less than this angle (from forward). Useful if you want to sweep without a flick-turn.",
+    "ControllerBinding_ForwardSnapAngleFlickStick_Description": "The flick-turn will not occur if the stick is pointed north, within this angle. Useful if you want to sweep without a flick-turn.",
     "ControllerBinding_SnapSmoothingFlickStick": "Flick-Turn Tightness",
     "ControllerBinding_SnapSmoothingFlickStick_Description": "Flick-Turn smoothing. Higher = Quick/Instant. Lower = Smoothed/Gradual.",
     "ControllerBinding_SweepSmoothingFlickStick": "Sweep Tightness",

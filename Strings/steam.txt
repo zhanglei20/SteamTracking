@@ -1997,11 +1997,11 @@ $ffn
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 00003333
-01/01/00
+00:00:00
 0123456789.
 0123456789
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
-00:00:00
+01/01/00
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -2313,7 +2313,6 @@ $ffn
 11CWorkThread
 11IFileSystem
 11M|
-123456789
 127.0.0.1
 12CAddressInfo
 12CAutoReleaseI14CMetricsStringE
@@ -2386,8 +2385,6 @@ $ffn
 14CWaitDetailMgr
 14ConCommandBase
 14ISSLConnection
-1536
-15000
 155.133.240.0/23
 15CBaseFileSystem
 15CChatMemberInfo
@@ -2416,6 +2413,9 @@ $ffn
 16ITCPHostCallback
 16JobStatsBucket_t
 172.16
+1536
+15000
+123456789
 172.16.3.31
 172.16.3.39
 17CBootstrapLogFile
@@ -2460,8 +2460,6 @@ $ffn
 18IUDPSocketCallback
 18IWorkThreadFactory
 192.69.96.0/22
-19:45:38
-19:45:44
 19CActivationCodeInfo
 19CClientMicroTxnInfo
 19CCuratorPreferences
@@ -2548,6 +2546,8 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
+23:20:05
+23:20:15
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -3352,7 +3352,7 @@ Application transferred too few scanlines
 Application transferred too many scanlines
 Applying update...
 Approved Friends
-Apr 15 2026
+Apr 20 2026
 April
 Arabic
 Arithmetic table 0x%02x was not defined
@@ -9071,7 +9071,7 @@ StartCheckingForUpdates: %p\n
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Apr 15 2026 19:45:44
+Startup - updater built Apr 20 2026 23:20:15
 State
 StaticFileWriterThread()
 Steam

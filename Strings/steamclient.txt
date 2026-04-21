@@ -5177,6 +5177,8 @@ $steammessages_parental_objects.proto"
 *\n&k_EBrowserFeatureStatus_EnabledForceOn
 *\n&k_EBrowserFeatureStatus_UnavailableOff
 *\n&k_EBrowserGPUStatus_DisabledCrashCount
+*\n&k_ECaptureFailedReasonMacOSPermissions
+*\n&k_ECaptureFailedReasonPipewireRequired
 *\n&k_EChatRoomMessageReactionType_Invalid
 *\n&k_EChatRoomMessageReactionType_Sticker
 *\n&k_EChatroomNotificationLevel_MentionMe
@@ -5936,6 +5938,7 @@ $steammessages_parental_objects.proto"
 -\n)k_EBroadcastWatchLocation_Chat_WatchParty
 -\n)k_EBroadcastWatchLocation_TrailerCarousel
 -\n)k_EBrowserGPUStatus_DisabledRuntimeDetect
+-\n)k_ECaptureFailedReasonPipewirePermissions
 -\n)k_EChatRoomMemberStateChange_RolesChanged
 -\n)k_ECommentThreadTypeScreenshot_Deprecated
 -\n)k_EContentCheckProvider_Google_DEPRECATED
@@ -6679,6 +6682,7 @@ $steammessages_parental_objects.proto"
 .EBrowserFeatureStatus"7\n
 .EBrowserGPUStatus
 .ECLientTaskListType
+.ECaptureFailedReason"%\n
 .EChatRoomGroupRank
 .EChatRoomJoinState
 .EChatRoomMemberStateChange"N\n4ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -7958,11 +7962,11 @@ $steammessages_parental_objects.proto"
 0000000000000000
 00000001
 00003333
-0123456789.
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
+0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -10748,6 +10752,7 @@ $steammessages_parental_objects.proto"
 17CAppUpdateContext
 17CAsyncFileReadJob
 17CAutoCloudManager
+17CCaptureFailedMsg
 17CClientJobChatMsg
 17CClientWalletInfo
 17CConnectDeviceJob
@@ -11493,11 +11498,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
+2000000
 200M
 2019
 2048
 20000
-2000000
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -16339,7 +16344,6 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9Hd"\
 9IClientVR
 9IGv
 9ISteamUGC
@@ -18896,6 +18900,7 @@ CCacheOffSteamPlayStateJob: start job, reason: RunCacheOffJobAgain
 CCacheOffSteamPlayStateJob: will queue job again, reason: %s
 CCacheOffSteamPlayStateJob::BYieldingRunClientJob
 CCacheOffSteamPlayStateJob::BYieldingRunClientJob - loop
+CCaptureFailedMsg
 CChatPartyBeacon
 CChatRoleActions
 CChatRoomGroupHeaderState
@@ -23808,6 +23813,7 @@ EC_POINT_set_to_infinity
 EC_POINTs_make_affine
 EC_POINTs_mul
 EC_PRIVATEKEY
+ECaptureFailedReason
 EChatRoomGroupRank
 EChatRoomJoinState
 EChatRoomMemberStateChange
@@ -32894,6 +32900,7 @@ PublishedFileClient.NotifyFileUnsubscribed#1
 PublishedFileDetails
 PublishedFileId
 PublishedFileSubSection
+Puh""g9
 PulseAudio Default
 PulseAudio connect failed (used only for Mic Volume Control) with error: %s\n
 PulseAudio context init failed\n
@@ -38202,6 +38209,9 @@ WINDOWS
 WINDOW_UPADATE to reserved stream
 WINDOW_UPDATE to idle stream
 WINDOW_UPDATE: window_size_increment == 0
+WIRELESS SYSTEM DEBUG: CURRENT FW TS: %X, HWID: %2X, SHA: %s, SERIAL: %s
+WIRELESS SYSTEM DEBUG: FAULT FW TS: %X, SHA: %s, RESET_REASON: %u, PC: %X, LR: %X
+WIRELESS SYSTEM DEBUG: UPTIME(ms) %u, DISCONNECT TYPE: %d
 WId{q
 WM/AlbumArtistSortOrder
 WM/AlbumSortOrder
@@ -38880,6 +38890,7 @@ YldSignalLibraryReadyOfflineMode
 YldStartRequestProcessorIfNeeded
 YldUpdateDownloadSourceList
 YldUpdateFPSLimitIfNecessary
+YldUpdateRegistration
 YldUpdateUsageReportIfNecessary
 YldWaitForAppStateLoaded
 YldWaitForLibraryReadyOfflineMode
@@ -47335,7 +47346,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggenb
+ggen"
 ghjkl
 gidlist
 gidparentcomment
@@ -49418,6 +49429,8 @@ k_ECPUGovernor_Invalid
 k_ECPUGovernor_Manual
 k_ECPUGovernor_Perf
 k_ECPUGovernor_Powersave
+k_ECaptureFailedReasonNone
+k_ECaptureFailedReasonUnknown
 k_ECceResult_Failk_ECceResult_InvalidArgumentk_ECceResult_InvalidPathk_ECceResult_InvalidPathActionSetKeyk_ECceResult_InvalidPathActivatorIndexk_ECceResult_InvalidPathBaseActionSetKeyk_ECceResult_InvalidPathBindingIndexk_ECceResult_InvalidPathInputKeyk_ECceResult_InvalidPathLayerActionSetKeyk_ECceResult_InvalidPathSourceKeyk_ECceResult_InvalidPathSourceModeKeyk_ECceResult_InvalidValueActionSetNamek_ECceResult_InvalidValueActivatork_ECceResult_InvalidValueActivatorActivationk_ECceResult_InvalidValueActivatorSettingKeyk_ECceResult_InvalidValueActivatorSettingValuek_ECceResult_InvalidValueBindingk_ECceResult_InvalidValueBindingControllerActionk_ECceResult_InvalidValueBindingGameActionk_ECceResult_InvalidValueBindingGameActionKeyk_ECceResult_InvalidValueBindingGameActionSetKeyk_ECceResult_InvalidValueBindingGamepadButtonk_ECceResult_InvalidValueBindingKeyboardKeyk_ECceResult_InvalidValueBindingModeShiftk_ECceResult_InvalidValueBindingMouseButtonk_ECceResult_InvalidValueBindingMouseWheelk_ECceResult_InvalidValueSourceModek_ECceResult_InvalidValueSourceModeSettingKeyk_ECceResult_InvalidValueSourceModeSettingValuek_ECceResult_NoEditingConfigurationk_ECceResult_NotImplementedk_ECceResult_Ok
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 k_EChatRoomGroupRank_Default
@@ -50998,6 +51011,7 @@ k_EStreamColorspace_BT709
 k_EStreamColorspace_BT709_Full
 k_EStreamColorspace_HDR10
 k_EStreamColorspace_Unknown
+k_EStreamControlCaptureFailed
 k_EStreamControlClientHandshake
 k_EStreamControlDeleteCursor
 k_EStreamControlGetCursorImage
@@ -59231,7 +59245,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr 15 2026 19:45:50
+steam Apr 20 2026 23:21:01
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
