@@ -3,10 +3,16 @@
   using display %p window 0x%lx key input win 0x%lx (event mask 0x%x)\n
   what():
  [clone
+ _Complex
+ _Imaginary
  __vector(
+ asimd
+ class
  const
  for
+ neon
  noexcept
+ requires
  restrict
  throw
  transaction_safe
@@ -24,7 +30,6 @@
 $ORIGIN
 %\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v
 %a %b %d %H:%M:%S %Y UTC
-%llu
 %s begin_ctx=%lld
 %s end_ctx=%lld
 %s: %d, %d, %d
@@ -39,11 +44,19 @@ $ORIGIN
 (anonymous namespace)
 (dst_width % 2 == 0) && (dst_width >= 0)
 (dst_width % 3 == 0) && (dst_width > 0)
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGq
+++CCUNGstd::exception
 ----------------------------\n
 /ValveIPCSHM_%d
 /bin/sh
 /dev/null
+/dev/random
+/dev/urandom
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/row_common.cc
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/scale_common.cc
@@ -51,11 +64,13 @@ $ORIGIN
 /proc/self/fd
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
+/tmp/.steam-sem-names
 /tmp/gameoverlayrenderer.%d.log
 /tmp/steam_chrome_overlay_uid%d_spid%u
 /u%d-Shm_%x
 /u%d-ValveIPCSharedObj-Steam
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 10IMemStream
 12CIMENullImpl
 15CSavedMemStream
@@ -69,6 +84,9 @@ $ORIGIN
 4IIME
 5J5J5J5J5J5J5J5J5J5J5J5J5J5J5J5Jx
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
+@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@std::bad_alloc
+ASEs implemented
 Applying steamclient.so path workaround.\n
 Asked to unlock memory for write.. but wasn't locked
 AtomID
@@ -112,6 +130,13 @@ Corrupt shared texture stream (texture data)\n
 Couldn't create movie stream %s\n
 Created mapping %s when set to fail if created\n
 Created movie stream %s\n
+DF128_
+DF16_
+DF16b
+DF32_
+DF32x
+DF64_
+DF64x
 Deleting movie stream\n
 Destroy GLX window 0x%lx\n
 Destroy window 0x%lx\n
@@ -146,20 +171,20 @@ Failed creating view of file for %s\n
 Failed creating write event %s\n
 Failed on texture subrect update!\n
 Failed reading frame completely\n
-Failed to bind client address for shared fd id: 0x%llx\n
+Failed to bind client address for shared fd id: 0x%lx\n
 Failed to bind server addres for shared fd: %d\n
 Failed to create rgba plane\n
-Failed to create socket for shared fd id: 0x%llx\n
+Failed to create socket for shared fd id: 0x%lx\n
 Failed to create socket for shared fd: %d\n
 Failed to create uv plane\n
 Failed to create y plane\n
 Failed to increase file count limit. Currently: %llu\n
-Failed to initialize client address for shared fd id: 0x%llx\n
-Failed to initialize server address for shared fd id: 0x%llx\n
+Failed to initialize client address for shared fd id: 0x%lx\n
+Failed to initialize server address for shared fd id: 0x%lx\n
 Failed to initialize server address for shared fd: %d\n
 Failed to receive shared FD\n
 Failed to receive shared fd from server\n
-Failed to receive shared fd id: 0x%llx\n
+Failed to receive shared fd id: 0x%lx\n
 Failed to send FD to client\n
 Failed to send to shared fd client\n
 Failed to signal shared fd server\n
@@ -168,26 +193,26 @@ Failed to take mutex in GetInternal()\n
 Failed to wait for shared fd client\n
 Failed to write screenshot to stream, clearing data!\n
 Fatal error: %s\n
+Features
 First swap of overlay on %p 0x%lx\n
 Force release of key 0x%x\n
 Forced create but already created for SharedObjectEvent\n
 Forcing internal overlay disable and requesting ui disable\n
 Frame time: %f ms\n
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
 GL extensions: %s\n
-GLIBC_2.0
-GLIBC_2.1
-GLIBC_2.1.3
+GLIBCXX_TUNABLES
 GLIBC_2.12
-GLIBC_2.2
-GLIBC_2.2.4
+GLIBC_2.14
+GLIBC_2.17
+GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.3
 GLIBC_2.3.2
 GLIBC_2.3.3
-GLIBC_2.3.4
 GLIBC_2.4
+GLIBC_2.7
 GLIBC_2.9
 GLOVERLAYCOREPROFILE
 GLSL Fragment Shader log:\n
@@ -229,14 +254,19 @@ IsOverlayEnabled
 JArray
 Key to character event translate: skipped, filtered by XFilterEvent\n
 Left render loop without EndFrame!\n
+Loongson-2K
+Loongson-3
 MajorCode
 Mismatched chrome paint texture width/height!\n
 Missing texture: %d which was used in DrawTexturedRect()\n
 N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
+N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv119__pointer_type_infoE
 N10__cxxabiv120__si_class_type_infoE
 N10__cxxabiv123__fundamental_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
 N16SteamThreadTools7CThreadE
 N3IPC10ISharedMemE
 N3IPC11ISyncObjectE
@@ -248,7 +278,7 @@ N3IPC6IMutexE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NV12
+NSt3_V214error_categoryE
 Need to force key focus to overlay key window 0x%lx\n
 Not enough room in mem stream for video frame\n
 One-time initialization: pid %d for game %llu\n
@@ -261,7 +291,27 @@ OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
 Opening display '%s', process %d returned %p\n
 Overlay pid %d dpy %p: An X Error occurred\n
 OverlayFrameMark
-P010
+PDF128_
+PDF16_
+PDF16b
+PDF32_
+PDF32x
+PDF64_
+PDF64x
+PKDF128_
+PKDF16_
+PKDF16b
+PKDF32_
+PKDF32x
+PKDF64_
+PKDF64x
+PKDd
+PKDe
+PKDf
+PKDi
+PKDn
+PKDs
+PKDu
 Previous renderer inactive, force releasing video stream\n
 Process %d failed to shm_open %s\n
 Process was forked: %d -> %d, follow new process in the new log file!\n
@@ -291,11 +341,20 @@ SetNotificationInset
 SetNotificationPosition
 SetScaleFactors( %1.2f, %1.2f, %1.2f, %1.2f)\n
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
+St10bad_typeid
 St11logic_error
+St11range_error
+St12domain_error
 St12length_error
 St12out_of_range
+St12system_error
 St13bad_exception
+St13runtime_error
+St14overflow_error
+St15underflow_error
+St16invalid_argument
 St20bad_array_new_length
+St8bad_cast
 St9bad_alloc
 St9exception
 St9type_info
@@ -340,6 +399,7 @@ Track %p win 0x%lx (parent 0x%lx), cursor 0x%lx (valid %d), events 0x%x, top %d\
 Track GLX win 0x%lx for X window 0x%lx\n
 Track win 0x%lx cursor 0x%lx\n
 USER
+UUUU
 Unable to write to video stream: dst not aligned!\n
 Unable to write to video stream: dst stride (stride=%u)!\n
 Unable to write to video stream: output not aligned!\n
@@ -459,41 +519,35 @@ XkbKeycodeToKeysym
 XlibMessage
 XwcLookupString
 [abi:
+[friend]
 \f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*
 \v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%\v%
-_Accum
-_Fract
+_Float
 _GLOBAL_
 _ITM_RU1
-_ITM_RU4
+_ITM_RU8
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
-_Sat
-___tls_get_addr
 __assert_fail
 __ctype_b_loc
 __cxa_atexit
 __cxa_finalize
+__cxa_pure_virtual
 __errno_location
 __float128
-__fprintf_chk
 __fxstat
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__memcpy_chk
+__isoc99_sscanf
 __pthread_key_create
 __register_atfork
-__snprintf_chk
-__sprintf_chk
 __stack_chk_fail
-__strcat_chk
-__vfprintf_chk
-__vsnprintf_chk
+__tls_get_addr
 __xstat64
 _exit
 abort
@@ -508,16 +562,30 @@ basic_iostream
 basic_istream
 basic_ostream
 basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
+basic_string::_M_replace_aux
 basic_string::_S_construct null not valid
 basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
+basic_string::copy
+basic_string::erase
 basic_string::insert
+basic_string::replace
+basic_string::resize
+basic_string::substr
+basic_string_view::substr
 bind
 bool
 boolean
 bpp >= 1 && bpp <= 4
 byte
 calloc
-ceilf
 char
 char16_t
 char32_t
@@ -527,13 +595,14 @@ clientWindow
 clock_gettime
 close
 closedir
+co_await
 compatibility
-complex
 connect
 const_cast
 construction vtable for
 core
 covariant return thunk to
+cpu model
 ctime_r
 daylight
 decimal128
@@ -542,6 +611,7 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
+default
 delete
 delete[]
 depth <= 16
@@ -573,12 +643,14 @@ fcntl
 fd-cl-
 fd-srv-
 fflush
+fgets
 fixed function
 float
 flock
 focusWindow
 fopen
 fork
+fprintf
 fputc
 fputs
 free
@@ -586,11 +658,12 @@ ftruncate
 futex robust_list not initialized by pthreads
 futex robust_list not pthreads-compatible
 fwrite
+generic
+getentropy
 getenv
 getpid
 getpriority
 getrlimit
-gettext
 gettimeofday
 getuid
 glActiveTexture
@@ -717,23 +790,25 @@ glXGetProcAddress
 glXGetProcAddressARB
 glXMakeCurrent
 glXSwapBuffers
+glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 gmtime_r
 guard variable for
 half
+hardware
 height > 0
 hidden alias for
-imaginary
 in external stream
 in saved stream
+initializer for module
 inputStyle
 ioctl
 java Class for
 java resource
 k;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 kill
-ld-linux.so.2
+ld-linux-x86-64.so.2
 libGL.so.1
 libSDL3.so.0
 libc.so.6
@@ -748,6 +823,8 @@ logfile opened early, s_Pid == 0 (Init has not been called yet)\n
 long
 long double
 long long
+loongson-ext
+loongson-mmi
 m_pMutex->Wait() failed in ShMemStream::PutInternal\n
 malloc
 memchr
@@ -756,14 +833,17 @@ memcpy
 memmove
 memset
 mmap
-mold 1.10.1 (compatible with GNU ld)
+mold 2.36.0 (compatible with GNU ld)
+mt19937
 munmap
 nanosleep
 new
 new[]
+noexcept
 non-transaction clone for
 non-virtual thunk to
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
+obj_count
+obj_size
 open
 opendir
 operator
@@ -801,7 +881,16 @@ pthread_self
 pthread_setname_np
 pthread_setschedparam
 pthread_setspecific
-pure virtual method called\n
+pthreads futex robust_list is corrupt
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
 read
 readdir
 readlink
@@ -820,6 +909,7 @@ scale >= 256
 sched_get_priority_max
 sched_get_priority_min
 sched_yield
+secure_getenv
 semctl
 semget
 semop
@@ -840,25 +930,27 @@ signed char
 sigprocmask
 sizeof
 sizeof...
+snprintf
 socket
+sprintf
 sqrtf
 srcHeight
 srcWidth
 src_height != 0
 src_width != 0
 src_width > 0
-sscanf
 static_cast
 std::allocator
-std::bad_alloc
 std::bad_array_new_length
+std::bad_cast
 std::bad_exception
+std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
+std::bfloat16_t
 std::iostream
 std::istream
 std::ostream
@@ -867,9 +959,12 @@ stderr
 steamclient.so
 strchr
 strcmp
+strcpy
 strerror
+strerror_r
 strftime
 string literal
+string::string
 strlen
 strncat
 strncmp
@@ -877,9 +972,11 @@ strncpy
 strrchr
 strstr
 strtol
+strtoul
 strtoull
 syscall
 system
+template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -891,11 +988,12 @@ timegm
 timezone
 transaction clone for
 transaction clone for operator delete(void*)
-transaction clone for operator new[](unsigned int)
+transaction clone for operator new[](unsigned long)
 true
 typeinfo fn for
 typeinfo for
 typeinfo name for
+typename
 ubuntu12_32/steamclient.so
 ubuntu12_64/steamclient.so
 uniform bool bFlipRendering;\nvoid main()\n{\n\tgl_TexCoord[0] = gl_MultiTexCoord0;\n   gl_Position = gl_Vertex;\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n}
@@ -910,7 +1008,8 @@ unsigned long long
 unsigned short
 usleep
 valid
-vector::_M_realloc_insert
+vector::_M_realloc_append
+vfprintf
 video capture behind
 video frame behind
 video frame captured
@@ -971,6 +1070,6 @@ xcb_create_window
 xcb_create_window_checked
 y != __null
 {default arg#
-{lambda(
+{lambda
 {parm#
 {unnamed type#

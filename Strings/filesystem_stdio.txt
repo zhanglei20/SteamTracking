@@ -1,19 +1,24 @@
-  f_bavail: %llu\n
-  f_bfree : %llu\n
-  f_blocks: %llu\n
+  f_bavail: %lu\n
+  f_bfree : %lu\n
+  f_blocks: %lu\n
   f_bsize : %lu\n
   f_frsize: %lu\n
   what():
  2>/dev/null
  [clone
+ _Complex
+ _Imaginary
  __vector(
+ class
  const
  for
  noexcept
+ requires
  restrict
  throw
  transaction_safe
  volatile
+!"_msize_dbg unsupported"
 !m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
 !m_bMounted
 !m_data.HasError()
@@ -33,6 +38,7 @@ $ORIGIN
 %lld
 %llu
 %llx
+%lx-%lx %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 %s has %i files
 %s is not a packfile
 %s overflow!\n
@@ -43,20 +49,21 @@ $ORIGIN
 %s/.steam/steam
 %s/steamXXXXXX
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%x-%x %*c%*c%*c%*c %*x %*x:%*x %*u %16383[^\n]
 ( &src < m_Memory.Base() ) || ( &src >= ( m_Memory.Base() + m_Size ) )
 ( unsigned )elem <= ( unsigned )m_Size
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 (anonymous namespace)
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
+*N12_GLOBAL__N_121system_error_categoryE
+*N12_GLOBAL__N_122generic_error_categoryE
+++CCUNG
+++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNGstd::exception
 ---------------\n
 ---FS:  %s %s\n
 ---FS:  close %s %p %i\n
 ---FS:  read %s %llu %p\n
 ---FS:  write %s %llu %p\n
--0123456789
 -chromeosdiskmanagement
 -chromeosnopreallocate
 -chromeosverbose
@@ -64,36 +71,39 @@ $ORIGIN
 -fs_log
 -fs_logbins
 -fs_target
+../external/picojson/picojson.h
+../filesystem/BaseFileSystem.cpp
+../filesystem/filesystem_stdio/filesystem_stdio.cpp
+../public/tier0/memoverride.cpp
+../public/tier0/tslist.h
+../public/tier1/utlbuffer.h
+../public/tier1/utldict.h
+../public/tier1/utllinkedlist.h
+../public/tier1/utlmemory.h
+../public/tier1/utlrbtree.h
+../public/tier1/utlstring.h
+../public/tier1/utlsymbol.h
+../public/tier1/utlvector.h
+../tier1/fileio.cpp
+../tier1/interface.cpp
+../tier1/utlbuffer.cpp
+../tier1/utlmemory.cpp
+../tier1/utlstring.cpp
+../tier1/utlsymbol.cpp
 .bsp
 .cpl
 .steam_exec_test.sh
-/data/src/external/picojson/picojson.h
-/data/src/filesystem/BaseFileSystem.cpp
-/data/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
-/data/src/public/tier0/tslist.h
-/data/src/public/tier1/utlbuffer.h
-/data/src/public/tier1/utldict.h
-/data/src/public/tier1/utllinkedlist.h
-/data/src/public/tier1/utlmemory.h
-/data/src/public/tier1/utlrbtree.h
-/data/src/public/tier1/utlstring.h
-/data/src/public/tier1/utlsymbol.h
-/data/src/public/tier1/utlvector.h
-/data/src/tier1/fileio.cpp
-/data/src/tier1/interface.cpp
-/data/src/tier1/utlbuffer.cpp
-/data/src/tier1/utlmemory.cpp
-/data/src/tier1/utlstring.cpp
-/data/src/tier1/utlsymbol.cpp
 /dev
 /dev/
 /dev/disk/by-uuid
+/dev/random
+/dev/urandom
 /etc/mtab
 /proc/mounts
 /proc/self/maps
+/steamrt64
 /tmp
 /tmp/disk-free.XXXXXX
-/ubuntu12_32
 /ubuntu12_64/disk-free
 /usr/bin/crosdisk %s
 0123456789
@@ -103,7 +113,7 @@ $ORIGIN
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlMemoryIN15CBaseFileSystem10FindData_tEE
@@ -121,7 +131,7 @@ $ORIGIN
 10CUtlRBTreeI16CStringPoolIndexItEtN19CBaseUtlSymbolTableI14CBaseUtlSymbolItEE5CLessE25CDefRBTreeBalanceListenerItES1_E
 10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
 10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
-10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringli8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 10CUtlString
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
@@ -148,26 +158,22 @@ $ORIGIN
 17CFileWriterThread
 17CStreamReaderBase
 18CUtlCharConversion
+19CDirContentsWatcher
 19CUtlNoEscConversion
 21CUtlCStringConversion
 24CDirWatcherPollingThread
 27CFileSystemStdIODLLValidate
 7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessE
-7CUtlMapI10CUtlStringxi8CDefLessE
+7CUtlMapI10CUtlStringli8CDefLessE
 7CUtlMapIPKcii22CDefCaselessStringLessE
 9IValidate
 :done\n
 :error\n
 @echo off\n
 @echo on\n
-AKST
-ASCII
-ASCII//TRANSLIT
-April
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 Assertion failed: length > k_cchMaxString
-August
 BCreateDirectory
 BEnsureDiskSpaceAvailable: available:%llu needed:%llu\n
 BGetFreeDiskSpace: usable_space:%llu disk_size:%llu expandable_space:%llu\n
@@ -227,7 +233,6 @@ DBG_PATHMATCH
 DBG_STAT
 DEFAULT_WRITE_PATH
 DLOPEN Error:%s\n
-December
 Don't know how to check filesystem type on POSIX!
 EXECUTABLE_PATH
 Element( i )
@@ -260,26 +265,22 @@ FS_stat on file %s which appeared to exist failed!!!\n
 Failed system(%s) in execute test: %d %s\n
 Failed system(%s) in execute test: %d\n
 Failed to load optional module %s\n
-February
 File %s was never closed\n
 File change notification for %s but no file contents changed based on hash\n
 Filesystem
 Free disk space for %s would overflow
-Friday
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
-GLIBC_2.0
-GLIBC_2.1
-GLIBC_2.1.3
-GLIBC_2.11
-GLIBC_2.2
-GLIBC_2.2.3
-GLIBC_2.2.4
+GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
+GLIBCXX_TUNABLES
+GLIBC_2.10
+GLIBC_2.14
+GLIBC_2.17
+GLIBC_2.2.5
+GLIBC_2.25
 GLIBC_2.3
+GLIBC_2.3.2
 GLIBC_2.3.4
 GLIBC_2.4
 GLIBC_2.7
-GLIBC_2.8
 GetFileSystemStableId requires a valid path
 GetFileSystemStableId requires a valid path: %s\n
 HOME
@@ -290,32 +291,25 @@ IsText()
 IsValidIndex( elem )
 IsValidIndex(elem)
 JArray
-January
-July
-June
 LOCK_EX
 LOCK_SH
 LoadFileRangeIntoBuffer_Internal
 Log file system accesses
 Log the binaries we load during operation
 Lowered '%s' -> '%s'\n
-March
 Matched '%s' -> '%s'\n
-Monday
 N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
 N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv121__vmi_class_type_infoE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread16CLogFileWorkItemE
 N17CFileWriterThread19CFileWriterWorkItemE
-N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
-N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-NSt6locale5facetE
-NSt8ios_base7failureE
-November
-October
+NSt3_V214error_categoryE
+PS3 Unattributed
 Paths:\n
 Plat_CommandLineParamExists
 Plat_GetExecutablePathUTF8
@@ -327,79 +321,26 @@ Plat_ctime
 Plat_localtime
 PrepareBuffer( nNewLength ) == pstrNew
 Requested non-existent write path %s!\n
-Saturday
 Seeking to a position not supported with async io
 Seeking to a position which is not sector aligned will break unbuffered io
-September
 Set target syntax
-St10ctype_base
-St10money_base
-St10moneypunctIcLb0EE
-St10moneypunctIcLb1EE
-St10moneypunctIwLb0EE
-St10moneypunctIwLb1EE
-St11__timepunctIcE
-St11__timepunctIwE
+St10bad_typeid
 St11logic_error
-St12codecvt_base
+St11range_error
+St12domain_error
 St12length_error
 St12out_of_range
+St12system_error
 St13bad_exception
-St13basic_istreamIwSt11char_traitsIwEE
-St13basic_ostreamIwSt11char_traitsIwEE
-St13messages_base
 St13runtime_error
-St15basic_streambufIcSt11char_traitsIcEE
-St15basic_streambufIwSt11char_traitsIwEE
-St16__numpunct_cacheIcE
-St16__numpunct_cacheIwE
-St17__timepunct_cacheIcE
-St17__timepunct_cacheIwE
-St18__moneypunct_cacheIcLb0EE
-St18__moneypunct_cacheIcLb1EE
-St18__moneypunct_cacheIwLb0EE
-St18__moneypunct_cacheIwLb1EE
+St14overflow_error
+St15underflow_error
+St16invalid_argument
 St20bad_array_new_length
-St21__ctype_abstract_baseIwE
-St23__codecvt_abstract_baseIDiDu11__mbstate_tE
-St23__codecvt_abstract_baseIDic11__mbstate_tE
-St23__codecvt_abstract_baseIDsDu11__mbstate_tE
-St23__codecvt_abstract_baseIDsc11__mbstate_tE
-St23__codecvt_abstract_baseIcc11__mbstate_tE
-St23__codecvt_abstract_baseIwc11__mbstate_tE
-St5ctypeIcE
-St5ctypeIwE
-St7codecvtIDiDu11__mbstate_tE
-St7codecvtIDic11__mbstate_tE
-St7codecvtIDsDu11__mbstate_tE
-St7codecvtIDsc11__mbstate_tE
-St7codecvtIcc11__mbstate_tE
-St7codecvtIwc11__mbstate_tE
-St7collateIcE
-St7collateIwE
-St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St8bad_cast
-St8ios_base
-St8messagesIcE
-St8messagesIwE
-St8numpunctIcE
-St8numpunctIwE
-St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
 St9bad_alloc
-St9basic_iosIcSt11char_traitsIcEE
-St9basic_iosIwSt11char_traitsIwEE
 St9exception
-St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St9time_base
+St9type_info
 StaticFileWriterThread()
 Steam - DirWatcher
 SteamRealPath
@@ -414,7 +355,7 @@ SteamThreadTools::CThread::IsThreadRunning() const
 SteamThreadTools::CThread::Join(unsigned int)
 SteamThreadTools::CThread::OnExit()
 SteamThreadTools::CThread::SetName(char const*)
-SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Start(unsigned long)
 SteamThreadTools::CThread::Terminate(int)
 SteamThreadTools::CThread::~CThread()
 SteamThreadTools::CThreadEvent::CThreadEvent(bool)
@@ -427,7 +368,6 @@ StringAfterPrefix
 StringAfterPrefixCaseSensitive
 StringFindSuffix
 StringFindSuffixCaseSensitive
-Sunday
 Symbol table grew beyond limit. Time to upgrade to a larger specialization of CUtlSymbolBase, or look for unnecessary spam in the tables.
 TLS init function for
 TLS wrapper function for
@@ -448,13 +388,10 @@ ThreadInterlockedExchangeAdd
 ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement
 ThreadSleep
-Thursday
 Tried to Seek NULL file handle!\n
 Tried to close unknown file pointer %p\n
 Tried to read %llu bytes from unknown file pointer %p\n
 Tried to write %llu bytes from unknown file pointer %p\n
-Tuesday
-UTF-8
 Unable to remove %s!\n
 Unable to rename %s to %s!\n
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
@@ -502,68 +439,41 @@ V_vsnprintfRet
 WORKAROUND_GdbSymbolLoadHook
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 WeakRandomUint32
-Wednesday
+XXXXXX
 [abi:
+[friend]
 \t(%zu) comparing %s with %s\n
 \u%04x
-_Accum
-_Fract
+_Float
 _GLOBAL_
 _ITM_RU1
-_ITM_RU4
+_ITM_RU8
 _ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
 _ITM_memcpyRnWt
 _ITM_memcpyRtWn
 _ITM_registerTMCloneTable
 _IsValidIndex( y, unNodeSize, pMemBase )
-_Sat
-___tls_get_addr
 __ctype_b_loc
-__ctype_get_mb_cur_max
 __ctype_tolower_loc
 __cxa_atexit
 __cxa_finalize
-__duplocale
+__cxa_pure_virtual
 __errno_location
 __float128
-__fprintf_chk
-__fread_chk
-__freelocale
 __fxstat64
 __gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
 __int128
-__iswctype_l
+__isoc99_fscanf
+__isoc99_sscanf
 __lxstat
 __lxstat64
-__memcpy_chk
-__newlocale
-__nl_langinfo_l
-__printf_chk
 __pthread_key_create
-__realpath_chk
-__snprintf_chk
-__sprintf_chk
 __stack_chk_fail
-__strcoll_l
-__strcpy_chk
-__strftime_l
-__strncat_chk
-__strtod_l
-__strtof_l
-__strxfrm_l
-__towlower_l
-__towupper_l
-__uselocale
-__vasprintf_chk
-__vfprintf_chk
-__vsnprintf_chk
-__wcscoll_l
-__wcsftime_l
-__wcsxfrm_l
-__wctype_l
+__test_and_acquire(long*)
+__tls_get_addr
 __wrap___lxstat
 __wrap___lxstat64
 __wrap___xstat
@@ -605,8 +515,6 @@ __wrap_utimes
 __xmknod
 __xstat
 __xstat64
-_fini
-_init
 _strlwr
 _txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _txnal_cow_string_D1(void*)
@@ -614,42 +522,45 @@ _txnal_cow_string_D1_commit(void*)
 _txnal_cow_string_c_str(void const*)
 _txnal_logic_error_get_msg(void*)
 _txnal_runtime_error_get_msg(void*)
+_txnal_sso_string_c_str(void const*)
 abort
 access
 alignof
 allocator
-alnum
-alpha
 alphasort64
-alse
-array
 auto
 auto:
 availableSpace
-basic_ios::clear
 basic_iostream
 basic_istream
 basic_ostream
 basic_string
+basic_string: construction from null is not valid
+basic_string::_M_create
+basic_string::_M_replace
 basic_string::_M_replace_aux
 basic_string::_S_construct null not valid
 basic_string::_S_create
 basic_string::append
 basic_string::assign
+basic_string::at: __n (which is %zu) >= this->size() (which is %zu)
+basic_string::basic_string
+basic_string::compare
 basic_string::copy
 basic_string::erase
+basic_string::insert
+basic_string::replace
 basic_string::resize
-bind_textdomain_codeset
-bindtextdomain
-blank
+basic_string::substr
+basic_string_view::substr
 bool
+bool __gnu_cxx::__is_null_pointer<char const>(char const*)
+bool __gnu_cxx::__is_null_pointer<char>(char*)
 boolean
-btowc
 bufferToSwap.TellPut() < FIO_MAX_IO_BYTES
 byte
 cActualReplacements == cReplacements
 cbActual < (uint32)nBufSizeWithTerminator
-cbToRead <= 1024 * 1024 * 1024
 char
 char16_t
 char32_t
@@ -660,8 +571,7 @@ chown
 clock_gettime
 close
 closedir
-cntrl
-complex
+co_await
 const_cast
 construction vtable for
 copy "%%binsrc%%\bin\*.asi" "%%fs_target%%\bin"\n
@@ -696,11 +606,10 @@ decimal64
 decltype (
 decltype(auto)
 decltype(nullptr)
+default
 delete
 delete[]
 desktop
-dgettext
-digit
 disk-free command failed\n
 diskSize
 dl_iterate_phdr
@@ -724,7 +633,6 @@ false
 fclose
 fcntl
 fdatasync
-fdopen
 feof
 ferror
 fflush
@@ -743,6 +651,7 @@ fopen
 fopen tmpfile failed\n
 fopen64
 foundEndOfCentralDirRecord
+fprintf
 fputc
 fputs
 fread
@@ -750,10 +659,8 @@ free
 freopen
 fs_debug
 fs_debug: %s\n
-fscanf
 fscanf disk-free output failed\n
 fseek
-fseeko64
 fsync %s failed, errno = %d\n
 ftell
 ftello64
@@ -768,49 +675,43 @@ g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
 g_pMemAllocSteam
+generic
 get_disk_info
-getc
 getcwd
+getentropy
 getenv
 getmntent
-gettext
-getwc
+glibcxx.eh_pool
 global constructors keyed to
 global destructors keyed to
 goto done\n
-graph
 guard variable for
 half
+hardware
 hidden alias for
-iconv
-iconv_close
-iconv_open
 if "%%fs_target%%" == "" goto error\n
-imaginary
 info.m_pReplacementString == 0
+initializer for module
 ioctl
 isspace
 java Class for
 java resource
 lchown
-ld-linux.so.2
+ld-linux-x86-64.so.2
 len <= INT_MAX
 len > 0 || HasError()
 libc.so.6
 libdl.so.2
 libm.so.6
 libpthread.so.0
-librt.so.1
 libtier0_s.so
 libvstdlib_s.so
 link
 localFileHeader.signature == 0x04034b50
-locale::facet::_S_create_c_locale name not valid
 localeconv
 long
 long double
 long long
-lower
 lseek64
 m_Count == 0
 m_Elements
@@ -849,9 +750,6 @@ m_unInCounter == m_unOutCounter
 m_vecRegisteredWriters
 m_vecRegisteredWriters.HasElement( pFile )
 malloc
-mbrtowc
-mbsnrtowcs
-mbsrtowcs
 memchr
 memcmp
 memcpy
@@ -866,9 +764,10 @@ mkstemp
 mkstemp errno %d\n
 mmap64
 modf
-mold 1.10.1 (compatible with GNU ld)
+mold 2.36.0 (compatible with GNU ld)
 mount
 msync
+mt19937
 munmap
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 nBytesRead <= INT_MAX
@@ -883,13 +782,13 @@ nSize >= 0
 nTargetLength > 0
 new
 new[]
+noexcept
 non-transaction clone for
 non-virtual thunk to
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n
-null
 num > 0
 numElements >= 0
-object
+obj_count
+obj_size
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset >= 0
@@ -917,24 +816,30 @@ packfile.m_bIsPackFile
 packfile.m_hPackFile
 pathID
 pclose
-poll
 popen
 posix_fadvise
 pread64
-print
+printf
 pstrDest[nNewLength] == '\0'
 pstrNew + nNewLength == pstrDestination + 1
 pstrNew == pstrDestination
 pstrNew == pszString
+pthread_cond_broadcast
+pthread_cond_wait
 pthread_mutex_lock
 pthread_mutex_unlock
 pthread_once
-punct
-pure virtual method called\n
-putc
 puts
-putwc
 pwrite64
+random_device could not be read
+random_device: getentropy failed
+random_device: rdrand failed
+random_device: rdseed failed
+random_device::random_device(const std::string&): device not available
+random_device::random_device(const std::string&): unsupported token
+rdrand
+rdrnd
+rdseed
 read
 readdir64
 readlink
@@ -952,21 +857,21 @@ s_pSymbolTable
 scandir
 scandir64
 sched_yield
+secure_getenv
 sendfile64
 set binsrc="%s"\n
 set fs_target="%s"\n
 setlocal\n
-setlocale
 setmntent
 setvbuf
 short
 signed char
 sizeof
 sizeof...
-space
+snprintf
 spaceGranted
 spaceReleased
-sscanf
+sprintf
 stat
 statfs
 statfs64
@@ -982,30 +887,33 @@ std::bad_alloc
 std::bad_array_new_length
 std::bad_cast
 std::bad_exception
+std::bad_typeid
 std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
 std::basic_string
 std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::exception
+std::bfloat16_t
 std::iostream
 std::istream
 std::ostream
 std::string
 stderr
-stdin
-stdout
 strcasecmp
 strcasestr
 strchr
 strcmp
+strcpy
 strdup
 strerror
+strerror_r
 strftime
 string literal
+string::string
 strlen
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 strncasecmp
+strncat
 strncmp
 strncpy
 strpbrk
@@ -1013,13 +921,13 @@ strrchr
 strstr
 strtod
 strtol
-strtold_l
 strtoll
 strtoul
 symlink
 syntax error at line %d near:
 syscall
 system
+template
 template parameter object for
 terminate called after throwing an instance of '
 terminate called recursively\n
@@ -1031,26 +939,29 @@ tolower
 toupper
 transaction clone for
 transaction clone for operator delete(void*)
-transaction clone for operator new[](unsigned int)
+transaction clone for operator new[](unsigned long)
 true
 typeinfo fn for
 typeinfo for
 typeinfo for SteamThreadTools::CThread
+typeinfo for __cxxabiv1::__class_type_info
 typeinfo for __cxxabiv1::__forced_unwind
 typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__vmi_class_type_info
 typeinfo for __gnu_cxx::__concurrence_lock_error
 typeinfo for __gnu_cxx::__concurrence_unlock_error
 typeinfo for __gnu_cxx::recursive_init_error
 typeinfo name for
+typeinfo name for __cxxabiv1::__class_type_info
 typeinfo name for __cxxabiv1::__forced_unwind
 typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__vmi_class_type_info
 typeinfo name for __gnu_cxx::__concurrence_lock_error
 typeinfo name for __gnu_cxx::__concurrence_unlock_error
 typeinfo name for __gnu_cxx::recursive_init_error
+typename
 unReadAheadChunkSize < INT32_MAX/2
 unReadAheadChunkSize should be zero when using bUnbuffered = true
-ungetc
-ungetwc
 unlink
 unsigned
 unsigned __int128
@@ -1060,11 +971,12 @@ unsigned long
 unsigned long long
 unsigned short
 unsupported flags 0x%x passed to CFileReader::BOpenFile
-upper
 usleep
 utime
 utimes
-vector::_M_realloc_insert
+vasprintf
+vector::_M_realloc_append
+vfprintf
 virtual thunk to
 void
 vsnprintf
@@ -1078,23 +990,11 @@ vtable for __gnu_cxx::__concurrence_lock_error
 vtable for __gnu_cxx::__concurrence_unlock_error
 vtable for __gnu_cxx::recursive_init_error
 wchar_t
-wcrtomb
-wcscmp
 wcscpy
-wcslen
-wcsnrtombs
-wctob
-wmemchr
-wmemcmp
-wmemcpy
-wmemmove
-wmemset
 write
 write %s failed, errno = %d\n
-writev
-xdigit
 zip%i.zip
 {default arg#
-{lambda(
+{lambda
 {parm#
 {unnamed type#
