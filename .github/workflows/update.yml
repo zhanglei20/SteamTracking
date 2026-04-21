@@ -66,6 +66,7 @@ jobs:
 
       - name: Restore cache
         uses: actions/cache/restore@v5
+        if: inputs.force != true
         with:
           path: |
             .support
@@ -78,6 +79,7 @@ jobs:
 
       - name: Restore etags cache
         uses: actions/cache/restore@v5
+        if: inputs.force != true
         with:
           path: .support/etags.json
           key: etags-
