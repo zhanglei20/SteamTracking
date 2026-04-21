@@ -210,8 +210,8 @@ class ClientExtractor
 
 		$Binaries =
 		[
-			self::LINUX_BINS_DIR . '/ubuntu12_32/steamui.so',
-			self::LINUX_BINS_DIR . '/ubuntu12_32/steamclient.so',
+			self::LINUX_BINS_DIR . '/steamrt64/steamui.so',
+			self::LINUX_BINS_DIR . '/steamrt64/steamclient.so',
 		];
 
 		if( !file_exists( $ProtobufDumper ) )
@@ -248,8 +248,16 @@ class ClientExtractor
 		$this->Log( 'Dumping strings' );
 
 		$DumpStrings = __DIR__ . '/DumpStrings/DumpStrings' . ( PHP_OS_FAMILY === 'Windows' ? '.exe' : '' );
-		$UbuntuDir = self::LINUX_BINS_DIR . '/ubuntu12_32';
-		$SteamBinary = self::CLIENT_EXTRACTED_DIR . '/ubuntu12_32/steam';
+		$SteamRTDir = self::LINUX_BINS_DIR . '/steamrt64';
+		$SteamBinary = self::CLIENT_EXTRACTED_DIR . '/steamrt64/steam';
+		$Binaries =
+		[
+			'steam-launch-wrapper',
+			'steam_monitor',
+			'steamsysinfo',
+			'steamwebhelper',
+			'streaming_client'
+		];
 
 		if( !file_exists( $DumpStrings ) )
 		{
@@ -262,16 +270,16 @@ class ClientExtractor
 			mkdir( self::STRINGS_DIR, 0755, true );
 		}
 
-		if( is_dir( $UbuntuDir ) )
+		if( is_dir( $SteamRTDir ) )
 		{
 			$Iterator = new RecursiveIteratorIterator(
-				new RecursiveDirectoryIterator( $UbuntuDir, RecursiveDirectoryIterator::SKIP_DOTS )
+				new RecursiveDirectoryIterator( $SteamRTDir, RecursiveDirectoryIterator::SKIP_DOTS )
 			);
 
 			/** @var \SplFileInfo $File */
 			foreach( $Iterator as $File )
 			{
-				if( $File->isFile() && $File->getExtension() === 'so' )
+				if( $File->isFile() && ( ( $File->getExtension() === 'so' && !str_contains( $File->getPath(), 'pv-runtime' ) ) || in_array( $File->getFilename(), $Binaries ) ) )
 				{
 					$Name = $File->getBasename( '.so' );
 					$this->Log( 'Dumping ' . $File->getFilename() );
