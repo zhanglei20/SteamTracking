@@ -32,12 +32,8 @@
         DescriptionDetails: "_2OZwaevyq145GHbte-cYD4",
         FrameRateValue: "Ea6FTud7MSP13e5WFg5YS",
         DescriptionEmphasis: "_5mT3lMk6N-ZIEsrzWPbEO",
-        DataSource: "_1bBvFabMPO5kz8MeUiKwi1",
         FeedbackAgree: "Pr_M36YkNFA-weFm4NdGx",
-        OverwhelminglyAgree: "_3adsYEneLis7vG2etMd4pk",
-        StronglyAgree: "_2HKP4FBagfD5dcBMXPKBng",
-        Mixed: "A1X2rsLuGVPickr5Ay4NO",
-        DoNotAgree: "_3VdYc55Bz4LkZ1ABZOJB6S",
+        Percentage: "nB4-Z0d1bJEAy5sMjXfJv",
         Beta: "_1jNEwMKIFCwXh-4DQ7m6-a",
         FeedbackSummaryTable: "_3LG2xiBJ11-gUCa2URMnOh",
         FeedbackPerformance: "_1RmBbSb73HqJGS6dNMtvst",
@@ -665,6 +661,7 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         const { dataprops: _ } = _;
@@ -949,51 +946,18 @@
         return (0, _._)(_);
       }
       function _(_) {
-        const { nAgreePercent: _ } = _,
-          _ = [
-            [
-              95,
-              "#GamePerformanceStats_Feedback_OverwhelminglyAgree",
-              "#GamePerformanceStats_OverwhelminglyAgree",
-              _.OverwhelminglyAgree,
-              _.toFixed(0),
-            ],
-            [
-              80,
-              "#GamePerformanceStats_Feedback_StronglyAgree",
-              "#GamePerformanceStats_StronglyAgree",
-              _.StronglyAgree,
-              _.toFixed(0),
-            ],
-            [
-              50,
-              "#GamePerformanceStats_Feedback_Mixed",
-              "#GamePerformanceStats_Mixed",
-              _.Mixed,
-              _.toFixed(0),
-            ],
-            [
-              0,
-              "#GamePerformanceStats_Feedback_DoNotAgree",
-              "#GamePerformanceStats_DoNotAgree",
-              _.DoNotAgree,
-              (100 - _).toFixed(0),
-            ],
-          ];
-        let _ = 0;
-        for (const _ of _) {
-          if (_ >= _[0]) break;
-          _++;
-        }
+        const { nAgreePercent: _ } = _;
         return (0, _.jsx)("div", {
           className: _.FeedbackAgree,
           children: (0, _._)(
-            _[_][1],
+            "#GamePerformanceStats_Feedback_Agree",
             (0, _.jsx)("span", {
-              className: _[_][3],
-              children: (0, _._)(_[_][2]),
+              className: (0, _._)(_.Percentage, _.DescriptionEmphasis),
+              children: (0, _._)(
+                "#GamePerformanceStats_Feedback_AgreePercentage",
+                _.toFixed(0),
+              ),
             }),
-            _[_][4],
             (0, _.jsx)("span", {
               children: (0, _._)("#SteamDeckVerified_Category_Verified"),
             }),

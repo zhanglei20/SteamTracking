@@ -8284,6 +8284,9 @@
             bHidePrePurchase: _,
             bHideReleaseDate: _,
             bHideIfDemo: _,
+            strContainerClassName: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
@@ -8296,6 +8299,7 @@
             [_().SingleLineMode]: _,
             StoreSalePriceWidgetContainer: !0,
             [_().NewItem]: _,
+            [_ ?? ""]: !!_,
           });
         if (_.bShowInLibrary)
           return (0, _.jsx)("div", {
@@ -8389,6 +8393,8 @@
           ),
           bShowNewFlag: _,
           bHidePrePurchase: Boolean(_),
+          strDiscountAndPriceClassName: _,
+          strPriceFormattedClassName: _,
         });
       }
       function _(_) {
@@ -8402,6 +8408,8 @@
             bHideDiscountPercentForCompliance: _,
             bShowNewFlag: _,
             bHidePrePurchase: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
           } = _,
           _ = _;
         let _;
@@ -8419,6 +8427,7 @@
               Discounted: Boolean(_),
               [_().PrePurchase]: Boolean(_),
               [_().NewItem]: Boolean(_),
+              [_ ?? ""]: !!_,
             }),
             "aria-label": _,
             children: [
@@ -8492,13 +8501,17 @@
                         className: (0, _._)({
                           [_().StoreSalePriceBox]: !0,
                           [_().SingleLineMode]: _,
+                          [_ ?? ""]: !!_,
                         }),
                         children: _,
                       }),
                     ],
                   })
                 : (0, _.jsx)("div", {
-                    className: _().StoreSalePriceBox,
+                    className: (0, _._)({
+                      [_().StoreSalePriceBox]: !0,
+                      [_ ?? ""]: !!_,
+                    }),
                     children: _,
                   }),
             ],

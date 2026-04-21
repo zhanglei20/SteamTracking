@@ -3322,7 +3322,7 @@
         var i;
         const o = (0, ht.aL)(
           mt.TS.STORE_BASE_URL +
-            `app/${pt.wy}?deckapp=${t}&utm_source=topplayed_app_banner&utm_campaign=${t}`,
+            `app/${pt.w}?deckapp=${t}&utm_source=topplayed_app_banner&utm_campaign=${t}`,
           "topplayed_app_banner",
           t,
         );

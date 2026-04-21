@@ -17,7 +17,7 @@ jQuery( function($) {
 		return $HTML.hasClass( 'responsive' ) && mqMobileMode.matches;
 	};
 	window.UseGamepadScreenMode = function() {
-		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'gamepad' );
+		return $HTML.hasClass( 'responsive' ) && $HTML.hasClass( 'GamepadMode' );
 	};
 	window.UseNewMobileAppMode = function() {
 		// the new mobile app can run on screen widths wider than responsive_css_maxwidth
@@ -426,10 +426,15 @@ function Responsive_InitTabSelect( $ )
 {
 	// handle any tab dropdowns
 	$J(document).on('change.ResponsiveTabSelect', 'select.responsive_tab_select', function() {
-		var url = $J(this ).val();
-		if ( url != window.location )
-			window.location = url;
+		Responsive_SetLocation($J(this).val());
 	});
+}
+
+function Responsive_SetLocation( $url )
+{
+	if (window.location != $url) {
+		window.location = $url;
+	}
 }
 
 function Responsive_BuildChangeLanguageOption( $MenuItem )

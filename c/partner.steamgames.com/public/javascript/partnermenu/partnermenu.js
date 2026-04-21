@@ -58491,7 +58491,7 @@ Error generating stack: ` +
       }
     );
   }
-  var _ = !1;
+  var _ = !!(typeof window < "u" && window.navigation);
   function _(_) {
     window.navigation.navigate(_, {
       info: {

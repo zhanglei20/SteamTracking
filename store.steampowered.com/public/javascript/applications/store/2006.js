@@ -117,6 +117,7 @@
     },
     77700: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",

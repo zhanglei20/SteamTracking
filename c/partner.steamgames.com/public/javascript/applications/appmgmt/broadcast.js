@@ -165,6 +165,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -223,6 +224,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         FriendsListInsetShadowCtn: "_1qeW35auMlJ5pJVNtBC-bF",
         FriendListInsetShadowTop: "_1osHa9KHOmdCDNrA232z4N",
         FriendListInsetShadowBottom: "_2OoTJwlWvzvAysWOOEQaXS",

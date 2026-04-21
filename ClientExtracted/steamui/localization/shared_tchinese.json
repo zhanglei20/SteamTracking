@@ -2558,7 +2558,7 @@
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport": "Valve 仍在努力使 Steam Deck 支援此遊戲",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR": "Steam Deck 不支援 VR 遊戲",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Software": "這是一款 Steam Deck 不支援的軟體",
-    "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Retired": "此遊戲已淘汰或是現在處於無法遊玩狀態，且不支援 Steam Deck。",
+    "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Retired": "此遊戲已淘汰或是現在處於無法遊玩狀態，且不支援 Steam Deck",
     "SteamDeckVerified_TestResult_UnsupportedAntiCheat_Other": "Steam Deck 不支援此遊戲，因其防作弊系統或多人遊戲服務不受支援",
     "SteamDeckVerified_TestResult_UnsupportedAntiCheatConfiguration": "此遊戲的防作弊系統並未針對 Steam Deck 支援進行設定",
     "SteamDeckVerified_TestResult_UnsupportedGraphicsPerformance": "此遊戲的圖像設定無法在 Steam Deck 上設定至可順暢執行的程度",

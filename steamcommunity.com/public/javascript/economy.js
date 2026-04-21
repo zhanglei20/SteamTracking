@@ -98,6 +98,19 @@ function InventoryPreviousPage()
 	g_ActiveInventory.PreviousPage();
 }
 
+function ToggleTagFilters()
+{
+	var elTagHolder = $( 'filter_options' );
+	if( elTagHolder && elTagHolder.hasClassName( 'filter_expanded' ) )
+	{
+		HideTagFilters();
+	}
+	else
+	{
+		ShowTagFilters();
+	}
+}
+
 function ShowTagFilters()
 {
 	if( g_ActiveInventory && g_ActiveInventory.getTagContainer() )
@@ -2057,10 +2070,13 @@ function ShowItemInventory( appid, contextid, assetid, bLoadCompleted )
 			var elTab = $('inventory_link_' + appid );
 			elTab.siblings().invoke( 'removeClassName', 'active');
 
-			var $ResponsiveSelect = $J('#responsive_inventory_select');
-			var $Opt = $ResponsiveSelect.children('[data-appid=' + parseInt(appid) + ']');
+			var $ResponsiveSelect = $J('#responsive_inventory_select_droplist');
+			var $Opt = $ResponsiveSelect.find('#' + appid);
 			if ( $Opt.length )
-				$ResponsiveSelect.val( $Opt.attr('value') );
+			{
+				$J('#responsive_inventory_select').val( appid );
+				$J('#responsive_inventory_select_trigger').html( $Opt.html() );
+			}
 
 			var elPendingGift = $('pending_gift_link' );
 			if ( elPendingGift )

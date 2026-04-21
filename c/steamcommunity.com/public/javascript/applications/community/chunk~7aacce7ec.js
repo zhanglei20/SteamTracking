@@ -5,10 +5,8 @@
     chunkid: (module, module_exports, __webpack_require__) => {
       __webpack_require__._(module_exports, {
         _: () => _,
-        _: () => _,
       });
-      var _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         switch (null == _ ? void 0 : _.toUpperCase()) {
           case "AE":
@@ -295,118 +293,6 @@
               console.assert(!1, `Unhandled country code: ${_}`),
               _._.k_ECurrencyCodeUSD
             );
-        }
-      }
-      function _(_) {
-        switch (_) {
-          case "USD":
-          case "USD_CIS":
-          case "USD_MENA":
-          case "USD_LATAM":
-          case "USD_SASIA":
-            return _._.k_ECurrencyCodeUSD;
-          case "GBP":
-            return _._.k_ECurrencyCodeGBP;
-          case "EUR":
-            return _._.k_ECurrencyCodeEUR;
-          case "CHF":
-            return _._.k_ECurrencyCodeCHF;
-          case "RUB":
-            return _._.k_ECurrencyCodeRUB;
-          case "PLN":
-            return _._.k_ECurrencyCodePLN;
-          case "BRL":
-            return _._.k_ECurrencyCodeBRL;
-          case "JPY":
-            return _._.k_ECurrencyCodeJPY;
-          case "NOK":
-            return _._.k_ECurrencyCodeNOK;
-          case "IDR":
-            return _._.k_ECurrencyCodeIDR;
-          case "MYR":
-            return _._.k_ECurrencyCodeMYR;
-          case "PHP":
-            return _._.k_ECurrencyCodePHP;
-          case "SGD":
-            return _._.k_ECurrencyCodeSGD;
-          case "THB":
-            return _._.k_ECurrencyCodeTHB;
-          case "VND":
-            return _._.k_ECurrencyCodeVND;
-          case "KRW":
-            return _._.k_ECurrencyCodeKRW;
-          case "TRY":
-            return _._.k_ECurrencyCodeTRY;
-          case "UAH":
-            return _._.k_ECurrencyCodeUAH;
-          case "MXN":
-            return _._.k_ECurrencyCodeMXN;
-          case "CAD":
-            return _._.k_ECurrencyCodeCAD;
-          case "AUD":
-            return _._.k_ECurrencyCodeAUD;
-          case "NZD":
-            return _._.k_ECurrencyCodeNZD;
-          case "CNY":
-            return _._.k_ECurrencyCodeCNY;
-          case "INR":
-            return _._.k_ECurrencyCodeINR;
-          case "CLP":
-            return _._.k_ECurrencyCodeCLP;
-          case "PEN":
-            return _._.k_ECurrencyCodePEN;
-          case "COP":
-            return _._.k_ECurrencyCodeCOP;
-          case "ZAR":
-            return _._.k_ECurrencyCodeZAR;
-          case "HKD":
-            return _._.k_ECurrencyCodeHKD;
-          case "TWD":
-            return _._.k_ECurrencyCodeTWD;
-          case "SAR":
-            return _._.k_ECurrencyCodeSAR;
-          case "AED":
-            return _._.k_ECurrencyCodeAED;
-          case "SEK":
-            return _._.k_ECurrencyCodeSEK;
-          case "ARS":
-            return _._.k_ECurrencyCodeARS;
-          case "ILS":
-            return _._.k_ECurrencyCodeILS;
-          case "BYN":
-            return _._.k_ECurrencyCodeBYN;
-          case "KZT":
-            return _._.k_ECurrencyCodeKZT;
-          case "KWD":
-            return _._.k_ECurrencyCodeKWD;
-          case "QAR":
-            return _._.k_ECurrencyCodeQAR;
-          case "CRC":
-            return _._.k_ECurrencyCodeCRC;
-          case "UYU":
-            return _._.k_ECurrencyCodeUYU;
-          case "BGN":
-            return _._.k_ECurrencyCodeBGN;
-          case "HRK":
-            return _._.k_ECurrencyCodeHRK;
-          case "CZK":
-            return _._.k_ECurrencyCodeCZK;
-          case "DKK":
-            return _._.k_ECurrencyCodeDKK;
-          case "HUF":
-            return _._.k_ECurrencyCodeHUF;
-          case "RON":
-            return _._.k_ECurrencyCodeRON;
-          default:
-            return 6 == _.length
-              ? _(_.substring(0, 3))
-              : Number.isInteger(Number(_))
-                ? Number(_)
-                : ((0, _._)(
-                    !1,
-                    `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
-                  ),
-                  _._.k_ECurrencyCodeInvalid);
         }
       }
     },

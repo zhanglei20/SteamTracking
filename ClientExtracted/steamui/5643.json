@@ -22,7 +22,7 @@
     "moderation_statementofreasons_explanation_legal": "Conținutul care este ilegal, constituie o infracțiune, dă naștere la răspundere civilă sau încalcă în alt mod vreo lege nu este permis pe Steam.",
     "moderation_statementofreasons_decisionground_genericcontractual": "Conținut incompatibil cu termenii și condițiile",
     "moderation_statementofreasons_explanation_genericcontractual": "Conținutul de pe Steam trebuie să respecte termenii și condițiile din %1$s și %2$s.",
-    "moderation_statementofreasons_explanation_genericcontractual_steam_online_conduct_rules": "Regulamentul Steam de conduită online",
+    "moderation_statementofreasons_explanation_genericcontractual_steam_online_conduct_rules": "Normele Steam de conduită online",
     "moderation_statementofreasons_explanation_genericcontractual_steam_subscriber_agreement": "Acordul Steam pentru abonați",
     "moderation_statementofreasons_informationsource_report": "Raportat de utilizator",
     "moderation_none": "Nu",

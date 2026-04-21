@@ -406,20 +406,18 @@ a.item_action:hover {
 	width: 200px;
 }
 
-.filter_tag_button_ctn {
-	align-items: start;
+.filter_tag_button {
 	display: grid;
-	padding-top: 4px;
 	white-space: nowrap;
-
-	& > * {
-		grid-area: 1/1;
-	}
 }
 
-.filter_ctn.inventory_filters .filter_tag_button_ctn {
-	float: left;
-	padding-top: 5px;
+.filter_tag_button_content {
+	align-items: center;
+	display: flex !important;
+	flex-direction: row;
+	gap: 3px;
+	grid-area: 1/1;
+	justify-content: space-between;
 }
 
 .filter_control_ctn {
@@ -454,6 +452,8 @@ a.item_action:hover {
 }
 
 .filter_ctn {
+	align-items: center;
+	display: flex;
 	margin-bottom: 12px;
 }
 

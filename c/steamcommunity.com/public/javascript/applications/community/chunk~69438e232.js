@@ -249,6 +249,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
         threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
         blocked: "VTxPkslK1CSpKNFMgKg7d",
@@ -666,7 +667,6 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
-        "duration-app-launch": "800ms",
         EventDetailsPageContainer: "_2Ptras-ZC31rwdT6pD-t0a",
         EventBackgroundBlurCtn: "_32nPM5nI8cmMdkvRnsUcq",
         EventBackgroundBlur: "stsss-bTNuazY8FYtvTOX",
@@ -758,17 +758,6 @@
         MarketLinkhover: "Q7KDk8kBk01MxhM_KZoqt",
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
         VerticalLocalDateAndTime: "_1mp7jCbQZOXCcY5CmAu7xm",
-        BackgroundAnimation: "_1xHuE1YWHzo9e7B1OqN4Dz",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1PpoZpEVTivfMT68wHupWE",
-        "ItemFocusAnim-darkerGrey": "BhYCYOXuISCFgViVdx82C",
-        "ItemFocusAnim-darkGrey": "_3-sdX5Fyzkkq2BZueyW6A0",
-        "ItemFocusAnim-grey": "u2Oxu-B6ki5Zla6SoVKlU",
-        "ItemFocusAnim-translucent-white-10": "_2XZ5VZk3TBgBcW1e2vrQtB",
-        "ItemFocusAnim-translucent-white-20": "N3Z3Av7icrzbAFAW5wJn",
-        "ItemFocusAnimBorder-darkGrey": "mVRKuA_tcspbL8RU6xrzn",
-        "ItemFocusAnim-green": "_3s1RoQM5wahq4m_-EHP-Ke",
-        focusAnimation: "MEjRS-LUv7kC4BFYk_9hq",
-        hoverAnimation: "_3tstCrFD5IJZbVa-dMQbne",
       };
     },
     chunkid: (module) => {
@@ -14356,6 +14345,9 @@
             bHidePrePurchase: _,
             bHideReleaseDate: _,
             bHideIfDemo: _,
+            strContainerClassName: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
           } = _,
           _ = _._.NOW,
           { data: _ } = (0, _._)(_),
@@ -14368,6 +14360,7 @@
             [_().SingleLineMode]: _,
             StoreSalePriceWidgetContainer: !0,
             [_().NewItem]: _,
+            [null != _ ? _ : ""]: !!_,
           });
         if (_.bShowInLibrary)
           return (0, _.jsx)("div", {
@@ -14461,6 +14454,8 @@
           ),
           bShowNewFlag: _,
           bHidePrePurchase: Boolean(_),
+          strDiscountAndPriceClassName: _,
+          strPriceFormattedClassName: _,
         });
       }
       function _(_) {
@@ -14474,6 +14469,8 @@
             bHideDiscountPercentForCompliance: _,
             bShowNewFlag: _,
             bHidePrePurchase: _,
+            strDiscountAndPriceClassName: _,
+            strPriceFormattedClassName: _,
           } = _,
           _ = _;
         let _;
@@ -14491,6 +14488,7 @@
               Discounted: Boolean(_),
               [_().PrePurchase]: Boolean(_),
               [_().NewItem]: Boolean(_),
+              [null != _ ? _ : ""]: !!_,
             }),
             "aria-label": _,
             children: [
@@ -14564,13 +14562,17 @@
                         className: (0, _._)({
                           [_().StoreSalePriceBox]: !0,
                           [_().SingleLineMode]: _,
+                          [null != _ ? _ : ""]: !!_,
                         }),
                         children: _,
                       }),
                     ],
                   })
                 : (0, _.jsx)("div", {
-                    className: _().StoreSalePriceBox,
+                    className: (0, _._)({
+                      [_().StoreSalePriceBox]: !0,
+                      [null != _ ? _ : ""]: !!_,
+                    }),
                     children: _,
                   }),
             ],
@@ -15359,10 +15361,74 @@
       "use strict";
       __webpack_require__._(module_exports, {
         _: () => _,
+        _: () => _,
       });
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
+      function _(_) {
+        return (null == _ ? void 0 : _.is_coming_soon)
+          ? (function (_, _, _) {
+              switch (_) {
+                case "date_full":
+                  return _(_);
+                case "date_month":
+                  return _(new Date(1e3 * _));
+                case "date_quarter":
+                  return (function (_) {
+                    switch (_.getUTCMonth()) {
+                      case 0:
+                      case 1:
+                      case 2:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q1",
+                          _.getUTCFullYear(),
+                        );
+                      case 3:
+                      case 4:
+                      case 5:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q2",
+                          _.getUTCFullYear(),
+                        );
+                      case 6:
+                      case 7:
+                      case 8:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q3",
+                          _.getUTCFullYear(),
+                        );
+                      default:
+                        return _._.Localize(
+                          "#Time_QuarterOfYear_Q4",
+                          _.getUTCFullYear(),
+                        );
+                    }
+                  })(new Date(1e3 * _));
+                case "date_year":
+                  return new Date(1e3 * _).toLocaleDateString((0, _._)(), {
+                    year: "numeric",
+                  });
+                case "text_comingsoon":
+                  return _ || _._.Localize("#Store_ComingSoon_ComingSoon");
+                case "text_tba":
+                  return _ || _._.Localize("#Store_ComingSoon_TBA");
+                default:
+                  return "";
+              }
+            })(
+              _.coming_soon_display,
+              _.steam_release_date,
+              _.custom_release_date_message,
+            )
+          : (null == _ ? void 0 : _.steam_release_date)
+            ? _(_.steam_release_date)
+            : "";
+      }
+      function _(_) {
+        return new Date(1e3 * _).toLocaleDateString((0, _._)());
+      }
       function _(_) {
         return _.toLocaleDateString((0, _._)(), {
           month: "long",

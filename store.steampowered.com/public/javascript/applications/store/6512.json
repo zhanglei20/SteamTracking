@@ -11,7 +11,7 @@
     "Review_Source_Counted": "Cette évaluation compte dans le score d'évaluation global, car la personne a acheté le jeu directement sur Steam ou elle a reçu gratuitement une licence d'un jeu gratuit.",
     "Review_Source_NotCounted": "Cette évaluation ne compte pas dans le score d'évaluation global, car la personne a activé le produit au moyen d'une clé Steam ou d'une licence temporaire gratuite, ou car elle l'a reçu en cadeau.",
     "Review_Majority_Deck": "Cette personne a joué principalement sur Steam Deck (%1$s h) avant de publier son évaluation.",
-    "Review_PostedOn": "Évaluation publiée le %1$s",
+    "Review_PostedOn": "Publication : %1$s",
     "Review_WasHelpful": "Cette évaluation vous a-t-elle été utile ?",
     "Review_RateFunny": "Drôle",
     "Review_GiveAward": "Récompenser",

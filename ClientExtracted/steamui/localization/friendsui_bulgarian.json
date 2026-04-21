@@ -128,7 +128,7 @@
     "Voice_LeftIdleVoiceChat_Body": "Гласовата Ви сесия беше разкачена след повече от един час неактивност.",
     "Voice_LeftIdleVoiceChat_OK": "Добре",
     "VoiceChat_DeniedMicrophoneAccess": "Опа, изглежда браузърът Ви е инструктиран да ни отказва достъп до микрофона!",
-    "VoiceChat_ChromeSampleRateTooHighMicExplainer": "Устройството Ви за възпроизвеждане по подразбиране разполага с честота за семплиране, повече от 48 000 Hz, което понастоящем не се поддържа в Chrome. Опитайте в Steam клиента!",
+    "VoiceChat_ChromeSampleRateTooHighMicExplainer": "Устройството Ви за възпроизвеждане по подразбиране разполага с честота за семплиране, повече от 48 000 Hz, което понастоящем не се поддържа на Chrome. Опитайте в Steam клиента!",
     "VoiceChat_MuteMic": "Заглушаване на микрофона",
     "VoiceChat_UnmuteMic": "Премахване на заглушаване за микрофона",
     "VoiceChat_MuteSpeaker": "Преустановяване на входящото аудио",

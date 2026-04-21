@@ -306,6 +306,7 @@ ${COMMUNITY_BASE_URL}my/moderatormessages/${msgid}
 ${COMMUNITY_BASE_URL}my/myworkshopfiles/?appid=${appid}${_ ? _ : ""}
 ${COMMUNITY_BASE_URL}my/reportedcontent/${subject_type}-${subject_group_id}-${subject_id}
 ${COMMUNITY_BASE_URL}my/reportedcontent/${}-${}-${}
+${COMMUNITY_BASE_URL}my/revenueactivity
 ${COMMUNITY_BASE_URL}my/tradehistory
 ${COMMUNITY_BASE_URL}ogg/${appId}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappbranches
@@ -1416,6 +1417,7 @@ ${STORE_BASE_URL}data_outbound
 ${STORE_BASE_URL}developer/${m_strVanity}/
 ${STORE_BASE_URL}developer/${vanity}/
 ${STORE_BASE_URL}digitalgiftcards/
+${STORE_BASE_URL}digitalgiftcards/selectgiftcard
 ${STORE_BASE_URL}dlc/${}
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlccount
 ${STORE_BASE_URL}dlc/${}/ajaxgetdlclist
@@ -2053,7 +2055,6 @@ ${thumb_url}${}
 ${url}
 ${url} not downloadable from the CDN
 ${url}${g_strActiveURL}
-${url}${location}
 ${url}${m_URL}
 ${url}${question ? "?" : "&"}${uri}
 ${url}${strURL}

@@ -55539,7 +55539,7 @@ Error generating stack: ` +
       );
     return await xw(), { cssPromises: o, routeModules: i, routeCount: n };
   }
-  var oa = !1;
+  var oa = !!(typeof window < "u" && window.navigation);
   function S0(t) {
     window.navigation.navigate(t, { info: { SSR: !0, targetRoute: t } });
   }

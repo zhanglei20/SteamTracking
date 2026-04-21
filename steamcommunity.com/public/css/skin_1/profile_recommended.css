@@ -171,54 +171,65 @@
 }
 
 /* dynamic select */
-.dselect_container {
-	.dropcontainer ul {
-		background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
+.dselect_container .dropcontainer ul {
+	background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
 	background: linear-gradient( to bottom, #8f98a0 5%, #b1bcc4 95%);
-		border-radius: 0 0 3px 3px;
-		list-style-type: none;
-		margin: 0;
-		overflow: hidden auto;
-		padding: 5px;
-		position: absolute;
-		z-index: 999999;
+	border-radius: 0 0 3px 3px;
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden auto;
+	padding: 5px;
+	position: absolute;
+	z-index: 999999;
+}
 
-		&.dropdownhidden {
-			display: none;
-		}
+.dselect_container .dropcontainer ul.dropdownhidden {
+	display: none;
+}
 
-		&.dropdownvisible {
-			top: -4px;
-		}
+.dselect_container .dropcontainer ul.dropdownvisible {
+	top: -4px;
+}
 
-		li a {
-			color: #333333;
-			display: block;
+.dselect_container .dropcontainer ul li a {
+	color: #333333;
+	display: block;
 
-			font-size: 12px;
-			line-height: 22px;
-			padding-inline: 2px;
+	font-size: 12px;
+	line-height: 22px;
+	padding-inline: 2px;
+}
 
-			&.highlighted_selection {
-				background: #3196FF;
-			}
-		}
-	}
+.dselect_container .dropcontainer ul li a.highlighted_selection {
+	background: #3196FF;
+}
 
-	.trigger {
-		background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
-		background-color: #8f98a0;
-		border-radius: 3px;
-		border-right: 7px solid #8f98a0; /* HAAAAAX! */
-		color: #333333;
-		display: block;
-		font-size: 12px;
-		line-height: 22px;
-		margin: 3px 8px 3px 0px;
-		overflow: hidden;
-		padding-left: 8px;
-		padding-right: 20px;
-	}
+.dselect_container .trigger {
+	background-color: #8f98a0;
+	border: 0 solid #8f98a0;
+	border-radius: 3px;
+	color: #333333;
+	font-size: 12px;
+	line-height: 19px;
+	margin: 3px 8px 3px 0px;
+	overflow: hidden;
+	padding-left: 8px;
+	padding-right: 26px !important;
+	position: relative;
+	text-align: start;
+	width: 97%;
+}
+
+html:not(.GamepadMode) .dselect_container .trigger {
+	height: 22px;
+}
+
+.dselect_container .trigger::after {
+	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat left center;
+	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 15.5px;
 }
 
 .review_page_content {

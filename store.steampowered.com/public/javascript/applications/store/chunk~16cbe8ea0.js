@@ -144,7 +144,6 @@
     90316: (e) => {
       e.exports = {
         narrowWidth: "500px",
-        "duration-app-launch": "800ms",
         EventDetailsPageContainer: "_2Ptras-ZC31rwdT6pD-t0a",
         EventBackgroundBlurCtn: "_32nPM5nI8cmMdkvRnsUcq",
         EventBackgroundBlur: "stsss-bTNuazY8FYtvTOX",
@@ -236,17 +235,6 @@
         MarketLinkhover: "Q7KDk8kBk01MxhM_KZoqt",
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
         VerticalLocalDateAndTime: "_1mp7jCbQZOXCcY5CmAu7xm",
-        BackgroundAnimation: "_1xHuE1YWHzo9e7B1OqN4Dz",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1PpoZpEVTivfMT68wHupWE",
-        "ItemFocusAnim-darkerGrey": "BhYCYOXuISCFgViVdx82C",
-        "ItemFocusAnim-darkGrey": "_3-sdX5Fyzkkq2BZueyW6A0",
-        "ItemFocusAnim-grey": "u2Oxu-B6ki5Zla6SoVKlU",
-        "ItemFocusAnim-translucent-white-10": "_2XZ5VZk3TBgBcW1e2vrQtB",
-        "ItemFocusAnim-translucent-white-20": "N3Z3Av7icrzbAFAW5wJn",
-        "ItemFocusAnimBorder-darkGrey": "mVRKuA_tcspbL8RU6xrzn",
-        "ItemFocusAnim-green": "_3s1RoQM5wahq4m_-EHP-Ke",
-        focusAnimation: "MEjRS-LUv7kC4BFYk_9hq",
-        hoverAnimation: "_3tstCrFD5IJZbVa-dMQbne",
       };
     },
     66661: (e) => {
@@ -272,7 +260,7 @@
     36148: (e, t, r) => {
       "use strict";
       r.d(t, {
-        RE: () => X,
+        RE: () => Z,
         AD: () => Y,
         Ri: () => H,
         Fq: () => K,
@@ -1836,10 +1824,10 @@
         q = r(58222);
       const H = 4147080,
         K = 2215130;
-      let Z;
-      function X() {
+      let X;
+      function Z() {
         return (
-          Z || (Z = (0, L.Fd)("steam_awards_config", "application_config")), Z
+          X || (X = (0, L.Fd)("steam_awards_config", "application_config")), X
         );
       }
       const Y = P.createContext(null);
@@ -1852,7 +1840,7 @@
             r.Body().set_sale_appid(e), r.Body().set_language(F.TS.LANGUAGE);
             return (await n.GetVoteDefinitions(t, r)).Body().toObject();
           },
-          initialData: () => X()?.definitions,
+          initialData: () => Z()?.definitions,
           enabled: e > 0,
         });
       }
@@ -1865,7 +1853,7 @@
               r = await i.GetUserNominations(e, t);
             return r.Body().toObject()?.nominations;
           },
-          initialData: () => X()?.user_nominations?.nominations,
+          initialData: () => Z()?.user_nominations?.nominations,
           enabled: F.iA.logged_in,
         });
       }
@@ -1892,7 +1880,7 @@
               .Body()
               .toObject();
           },
-          initialData: () => X()?.badge_progress,
+          initialData: () => Z()?.badge_progress,
           enabled: F.iA.logged_in,
         });
       }
@@ -2000,7 +1988,7 @@
         return (0, G.I)({
           queryKey: [`GetNominationShareLink_${F.iA.accountid}`],
           queryFn: async () => ae(e, !1),
-          initialData: () => [1, X()?.share_link],
+          initialData: () => [1, Z()?.share_link],
           staleTime: 1 / 0,
           enabled: F.iA.logged_in,
         });
@@ -2064,7 +2052,7 @@
                 i.Body().toObject()?.user_votes
               );
             })(t, e),
-          initialData: () => X()?.user_votes,
+          initialData: () => Z()?.user_votes,
           enabled: F.iA.logged_in,
         });
       }
@@ -2091,7 +2079,7 @@
                 );
               },
               staleTime: 1 / 0,
-              initialData: () => X()?.item_definitions,
+              initialData: () => Z()?.item_definitions,
             });
           })(e),
           n = Q(e);
@@ -2159,8 +2147,8 @@
       var q = r(69409),
         H = r(18663),
         K = r(38535),
-        Z = r(23338);
-      const X = o.lazy(() =>
+        X = r(23338);
+      const Z = o.lazy(() =>
         Promise.all([
           r.e(6597),
           r.e(8970),
@@ -2673,7 +2661,7 @@
                       }),
                       !this.props.disableReadTracking &&
                         !v &&
-                        (0, i.jsx)(Z.Y, {
+                        (0, i.jsx)(X.Y, {
                           onEnter: this.OnEnterVisible,
                           onLeave: this.OnLeaveVisible,
                           options: { rootMargin: "0px 0px -300px 0px" },
@@ -2709,7 +2697,7 @@
                     className: y().EventBroadcastCtn,
                     children: (0, i.jsx)(o.Suspense, {
                       fallback: null,
-                      children: (0, i.jsx)(X, { event: this.props.event }),
+                      children: (0, i.jsx)(Z, { event: this.props.event }),
                     }),
                   }),
                 e.BHasTag("steam_award_nomination_request") &&

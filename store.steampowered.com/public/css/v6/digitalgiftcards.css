@@ -446,36 +446,36 @@
     }
 }
 
-html.gamepad .giftcard_title,
-html.gamepad .giftcard_available,
-html.gamepad .giftcard_howwork {
+html.GamepadMode .giftcard_title,
+html.GamepadMode .giftcard_available,
+html.GamepadMode .giftcard_howwork {
 	text-align: unset;
 }
 
-html.gamepad .giftcard_title {
+html.GamepadMode .giftcard_title {
     font-size: 26px;
 }
 
-html.gamepad .giftcard_title {
+html.GamepadMode .giftcard_title {
     margin-top: 10px;
 }
 
 
-html.gamepad .giftcard_subtitle_inner,
-html.gamepad .giftcard_title_inner {
+html.GamepadMode .giftcard_subtitle_inner,
+html.GamepadMode .giftcard_title_inner {
     font-size: 20px;
 }
 
-html.gamepad .giftcard_home_cont {
+html.GamepadMode .giftcard_home_cont {
     width: unset;
     margin: unset;
 }
 
-html.gamepad .giftcard_home_cont_physical {
+html.GamepadMode .giftcard_home_cont_physical {
     margin-top: 20px;
 }
 
-html.gamepad .giftcard_howwork {
+html.GamepadMode .giftcard_howwork {
 	max-width: 80%;
     margin: 0px 0px 20px;
 }

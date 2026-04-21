@@ -442,6 +442,11 @@
                     br: s.qM.readUint32,
                     bw: s.gp.writeUint32,
                   },
+                  market_name_inside_group: {
+                    n: 38,
+                    br: s.qM.readString,
+                    bw: s.gp.writeString,
+                  },
                 },
               }),
             B.sm_m

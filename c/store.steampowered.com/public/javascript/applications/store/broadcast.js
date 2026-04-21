@@ -344,6 +344,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         FriendsListInsetShadowCtn: "_1qeW35auMlJ5pJVNtBC-bF",
         FriendListInsetShadowTop: "_1osHa9KHOmdCDNrA232z4N",
         FriendListInsetShadowBottom: "_2OoTJwlWvzvAysWOOEQaXS",

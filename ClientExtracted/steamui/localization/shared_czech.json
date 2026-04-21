@@ -477,7 +477,7 @@
     "EventDisplay_Reminder_FollowEvent_ErrorDesc": "Změna stavu sledování události vyústila v následující chybu:",
     "EventDisplay_Reminder_IgnoreEvent_Error": "Chyba ignorování události",
     "EventDisplay_Reminder_IgnoreEvent_ErrorDesc": "Změna stavu ignorování události vyústila v následující chybu:",
-    "EventDisplay_Reminder_Toast": "Informační zpráva na ploše při zahájení",
+    "EventDisplay_Reminder_Toast": "Upozornění v desktopovém klientu při zahájení",
     "EventDisplay_Reminder_AddToCalendar": "Přidat do kalendáře",
     "EventDisplay_Reminder_AddToApple": "Přidat do Kalendáře Apple",
     "EventDisplay_Reminder_AppleCalendar_Short": "Apple",

@@ -142,7 +142,6 @@
     chunkid: (module) => {
       module.exports = {
         narrowWidth: "500px",
-        "duration-app-launch": "800ms",
         EventDetailsPageContainer: "_2Ptras-ZC31rwdT6pD-t0a",
         EventBackgroundBlurCtn: "_32nPM5nI8cmMdkvRnsUcq",
         EventBackgroundBlur: "stsss-bTNuazY8FYtvTOX",
@@ -234,17 +233,6 @@
         MarketLinkhover: "Q7KDk8kBk01MxhM_KZoqt",
         ReadMoreCnt: "_1L8MouFdSBwf8mcqLtAIPu",
         VerticalLocalDateAndTime: "_1mp7jCbQZOXCcY5CmAu7xm",
-        BackgroundAnimation: "_1xHuE1YWHzo9e7B1OqN4Dz",
-        "ItemFocusAnim-darkerGrey-nocolor": "_1PpoZpEVTivfMT68wHupWE",
-        "ItemFocusAnim-darkerGrey": "BhYCYOXuISCFgViVdx82C",
-        "ItemFocusAnim-darkGrey": "_3-sdX5Fyzkkq2BZueyW6A0",
-        "ItemFocusAnim-grey": "u2Oxu-B6ki5Zla6SoVKlU",
-        "ItemFocusAnim-translucent-white-10": "_2XZ5VZk3TBgBcW1e2vrQtB",
-        "ItemFocusAnim-translucent-white-20": "N3Z3Av7icrzbAFAW5wJn",
-        "ItemFocusAnimBorder-darkGrey": "mVRKuA_tcspbL8RU6xrzn",
-        "ItemFocusAnim-green": "_3s1RoQM5wahq4m_-EHP-Ke",
-        focusAnimation: "MEjRS-LUv7kC4BFYk_9hq",
-        hoverAnimation: "_3tstCrFD5IJZbVa-dMQbne",
       };
     },
     chunkid: (module) => {

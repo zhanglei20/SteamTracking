@@ -18,6 +18,7 @@
 	--green-mid: #59BF40;
 	--bright-teal: #00e4e4;
 	--blue: #1a9fff;
+	--blue-translucent: #1aa0ff20;
 	--blue-gradient-bg-bold: radial-gradient(ellipse 161.29% 1235.17% at -3.10% 130.83%, rgb(37, 134, 183) 0%, rgb(28, 71, 140) 60%, rgb(14, 61, 97) 100%);
 	--blue-gradient-bg-muted: radial-gradient(ellipse 161.29% 1235.17% at -3.10% 130.83%, rgb(43, 82, 128) 0%, rgb(25, 51, 87) 60%, rgb(33, 63, 98) 100%);
 	--multi-color-bg-gradient-1: linear-gradient(315deg, rgba(49, 72, 113, .90) 5%, rgba(10, 94, 94, .90) 95%);
@@ -55,11 +56,11 @@
 
 body.v7 {
 	background-color: var(--page-background);
-	background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px), radial-gradient(circle at 50% 5%, rgba(94, 174, 255, 0.35) 0%,rgba(94, 174, 255, 0.08) 30%,rgba(94, 174, 255, 0.00) 70%);
-	background-size: 10px 10px, cover, cover;
-	background-repeat: repeat, no-repeat, no-repeat;
-	background-position: top, center, center;
-	background-attachment: scroll, fixed, fixed;
+	background-image: radial-gradient(circle at 50% 5%, rgba(94, 174, 255, 0.35) 0%,rgba(94, 174, 255, 0.08) 30%,rgba(94, 174, 255, 0.00) 70%);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
 	min-height: 100vh;
 	font-family: "Motiva Sans", Sans-serif;
 }
@@ -251,6 +252,29 @@ html.responsive .fullscreen-bg__video_mobile {
 		display: none;
 	}
 
+}
+
+.store_bg_overlay {
+	width: 1854px;
+	height: 450px;
+	z-index: 800;
+	position: absolute;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	pointer-events: none;
+	display: none;
+}
+
+.gradient_width {
+	width: 200px;
+	height: 100%;
+	pointer-events: none;
+}
+
+@media screen and ( min-width: 1800px ) {
+	html.responsive .store_bg_overlay {
+		display: block;
+	}
 }
 
 .menu_takeover_background {
@@ -3353,8 +3377,10 @@ html.responsive .home_tabs_sections .tab_content_items .tab_item_header .tab_row
 }
 
 .home_tab_bg_ctn {
-	/* background: var(--dark-ctn-bg-gradient); */
-	background: var(--light-ctn-bg-gradient);
+	background: var(--dark-ctn-bg-gradient);
+	/* background: var(--light-ctn-bg-gradient); */
+	border-top: 2px solid transparent;
+  	border-image: linear-gradient(to right, transparent, var(--blue-translucent) 50%, var(--blue-translucent) 50%, transparent) 1;
 }
 
 .home_tab_button {
@@ -3435,6 +3461,10 @@ body.v7 .sale_capsule .discount_block_inline, .store_main_capsule .discount_bloc
 	text-align: right;
 	justify-content: flex-end;
 
+}
+
+body.v7 .discount_block_large .bundle_base_discount {
+	font-size: 12px;
 }
 
 @media screen and ( max-width: 500px ) {

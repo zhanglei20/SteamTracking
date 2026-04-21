@@ -206,7 +206,7 @@ Body.v6.tag_page.contenthub_page {
   max-width: 100%;
   margin: 0 auto;
 }
-html.responsive.gamepad .OyJ48UmHDKl9fN7ue4oPF {
+html.responsive.GamepadMode .OyJ48UmHDKl9fN7ue4oPF {
   width: unset;
 }
 @media screen and (max-width: 910px) {
@@ -223,7 +223,7 @@ html.responsive.gamepad .OyJ48UmHDKl9fN7ue4oPF {
   margin-right: 8px;
   padding-left: 8px;
 }
-html.responsive.gamepad .OyJ48UmHDKl9fN7ue4oPF ._2RnIwgy025bixjWk2UTw40 {
+html.responsive.GamepadMode .OyJ48UmHDKl9fN7ue4oPF ._2RnIwgy025bixjWk2UTw40 {
   font: var(--gpText-HeadingSmall);
   font-weight: 500;
   text-transform: unset;
@@ -250,7 +250,7 @@ html.responsive.gamepad .OyJ48UmHDKl9fN7ue4oPF ._2RnIwgy025bixjWk2UTw40 {
   margin-left: 8px;
   text-transform: none;
 }
-html.responsive.gamepad .nVpbhpPkgrAwu1ZjFf7-B {
+html.responsive.GamepadMode .nVpbhpPkgrAwu1ZjFf7-B {
   font: var(--gpText-BodyMedium);
   letter-spacing: unset;
   padding: unset;
@@ -267,7 +267,7 @@ html.responsive.gamepad .nVpbhpPkgrAwu1ZjFf7-B {
     display: block;
     padding-left: 8px;
   }
-  html.responsive.gamepad .nVpbhpPkgrAwu1ZjFf7-B {
+  html.responsive.GamepadMode .nVpbhpPkgrAwu1ZjFf7-B {
     margin-left: 0px;
   }
 }
@@ -281,7 +281,7 @@ html.responsive.gamepad .nVpbhpPkgrAwu1ZjFf7-B {
   font-weight: 300;
   margin-bottom: 8px;
 }
-html.responsive.gamepad ._3LagaO9m29xPGnO2YwpQnq {
+html.responsive.GamepadMode ._3LagaO9m29xPGnO2YwpQnq {
   font: var(--gpText-BodyMedium);
   letter-spacing: unset;
   margin-top: 12px;
@@ -295,7 +295,7 @@ html.responsive.gamepad ._3LagaO9m29xPGnO2YwpQnq {
     padding: 0px var(--gpSpace-Gutter);
   }
 }
-html.responsive.gamepad .contenthubsections {
+html.responsive.GamepadMode .contenthubsections {
   padding-bottom: 16px;
 }
 @media screen and (max-width: 910px) {
@@ -312,7 +312,7 @@ html.responsive.gamepad .contenthubsections {
     max-width: 84vw;
   }
 }
-html.responsive.gamepad .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
+html.responsive.GamepadMode .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
   max-width: unset;
   margin-bottom: 0px;
   padding-bottom: 8px;
@@ -327,21 +327,21 @@ html.responsive.gamepad .ContentHubSalePage ._3SWsMT4_EVVsmPbanjlEy4 {
 .ContentHubSalePage .contenthubmaincarousel {
   overflow-x: hidden;
 }
-html.responsive.gamepad .ContentHubSalePage .contenthubmaincarousel {
+html.responsive.GamepadMode .ContentHubSalePage .contenthubmaincarousel {
   max-width: 100%;
   width: 100%;
   padding: 0px;
   box-sizing: border-box;
   scroll-padding: 0px var(--gpSpace-Gutter);
 }
-html.responsive.gamepad
+html.responsive.GamepadMode
   .ContentHubSalePage
   .contenthubmaincarousel
   .SliderBody
   ul {
   gap: 12px;
 }
-html.responsive.gamepad
+html.responsive.GamepadMode
   .ContentHubSalePage
   .contenthubmaincarousel
   .SliderBody
@@ -373,7 +373,7 @@ html.responsive.gamepad
     overflow: hidden;
   }
 }
-html.responsive.gamepad .ContentHubSalePage .carousel__slider-tray-wrapper {
+html.responsive.GamepadMode .ContentHubSalePage .carousel__slider-tray-wrapper {
   scroll-snap-type: x mandatory;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -381,7 +381,7 @@ html.responsive.gamepad .ContentHubSalePage .carousel__slider-tray-wrapper {
   scroll-padding: 0px var(--gpSpace-Gutter);
   padding: 4px var(--gpSpace-Gutter);
 }
-html.responsive.gamepad
+html.responsive.GamepadMode
   .ContentHubSalePage
   .carousel__slider-tray-wrapper
   .carousel__slide {
@@ -403,7 +403,7 @@ html.responsive.gamepad
     scroll-snap-align: start;
   }
 }
-html.responsive.gamepad .ContentHubSalePage .carousel__slider-tray:after {
+html.responsive.GamepadMode .ContentHubSalePage .carousel__slider-tray:after {
   content: " ";
   min-width: var(--gpSpace-Gutter);
 }
@@ -417,7 +417,9 @@ html.responsive.gamepad .ContentHubSalePage .carousel__slider-tray:after {
   display: block;
   width: 100%;
 }
-html.responsive.gamepad .ContentHubSalePage .contenthubmaincarousel.expanded {
+html.responsive.GamepadMode
+  .ContentHubSalePage
+  .contenthubmaincarousel.expanded {
   position: unset;
   height: unset;
   display: block;
@@ -439,7 +441,7 @@ html.responsive.gamepad .ContentHubSalePage .contenthubmaincarousel.expanded {
   .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
   margin-bottom: 456px;
 }
-html.responsive.gamepad
+html.responsive.GamepadMode
   .ContentHubSalePage
   .SaleSectionTabListContainer
   .SaleSectionCtn.contenthubpartnertakeover.expanded:not(:empty):first-child {
@@ -675,7 +677,7 @@ html.responsive.gamepad
   flex-direction: row;
   align-items: center;
 }
-html.responsive.gamepad ._2NgkNEEvdNAueuTkHH4V0S {
+html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S {
   height: unset !important;
   margin: 0px var(--gpSpace-Gutter) 16px;
   box-shadow: var(--gpShadow-Medium);
@@ -701,7 +703,7 @@ html.responsive.gamepad ._2NgkNEEvdNAueuTkHH4V0S {
   width: 100%;
   z-index: 1;
 }
-html.responsive.gamepad ._2NgkNEEvdNAueuTkHH4V0S a {
+html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a {
   position: unset;
   height: 32vw;
   overflow: hidden;
@@ -722,7 +724,7 @@ html.responsive.gamepad ._2NgkNEEvdNAueuTkHH4V0S a {
   margin: 0 auto;
   object-fit: contain;
 }
-html.responsive.gamepad ._2NgkNEEvdNAueuTkHH4V0S a img {
+html.responsive.GamepadMode ._2NgkNEEvdNAueuTkHH4V0S a img {
   margin: auto;
   height: inherit;
 }

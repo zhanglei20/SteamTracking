@@ -4,32 +4,31 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [3719],
   {
-    72255: (e, r, c) => {
-      c.d(r, { ei: () => n, rt: () => s });
-      var C = c(81393),
-        a = c(88267);
-      function s(e) {
+    72255: (e, c, r) => {
+      r.d(c, { rt: () => a });
+      var C = r(88267);
+      function a(e) {
         switch (null == e ? void 0 : e.toUpperCase()) {
           case "AE":
-            return a.AI.k_ECurrencyCodeAED;
+            return C.AI.k_ECurrencyCodeAED;
           case "AU":
-            return a.AI.k_ECurrencyCodeAUD;
+            return C.AI.k_ECurrencyCodeAUD;
           case "BR":
-            return a.AI.k_ECurrencyCodeBRL;
+            return C.AI.k_ECurrencyCodeBRL;
           case "CA":
-            return a.AI.k_ECurrencyCodeCAD;
+            return C.AI.k_ECurrencyCodeCAD;
           case "CH":
           case "LI":
-            return a.AI.k_ECurrencyCodeCHF;
+            return C.AI.k_ECurrencyCodeCHF;
           case "CL":
-            return a.AI.k_ECurrencyCodeCLP;
+            return C.AI.k_ECurrencyCodeCLP;
           case "CN":
           case "XC":
-            return a.AI.k_ECurrencyCodeCNY;
+            return C.AI.k_ECurrencyCodeCNY;
           case "CO":
-            return a.AI.k_ECurrencyCodeCOP;
+            return C.AI.k_ECurrencyCodeCOP;
           case "CR":
-            return a.AI.k_ECurrencyCodeCRC;
+            return C.AI.k_ECurrencyCodeCRC;
           case "AD":
           case "AL":
           case "AT":
@@ -75,57 +74,57 @@
           case "SK":
           case "SM":
           case "VA":
-            return a.AI.k_ECurrencyCodeEUR;
+            return C.AI.k_ECurrencyCodeEUR;
           case "GB":
           case "GG":
           case "GS":
           case "IM":
           case "JE":
-            return a.AI.k_ECurrencyCodeGBP;
+            return C.AI.k_ECurrencyCodeGBP;
           case "HK":
-            return a.AI.k_ECurrencyCodeHKD;
+            return C.AI.k_ECurrencyCodeHKD;
           case "ID":
-            return a.AI.k_ECurrencyCodeIDR;
+            return C.AI.k_ECurrencyCodeIDR;
           case "IL":
-            return a.AI.k_ECurrencyCodeILS;
+            return C.AI.k_ECurrencyCodeILS;
           case "IN":
-            return a.AI.k_ECurrencyCodeINR;
+            return C.AI.k_ECurrencyCodeINR;
           case "JP":
-            return a.AI.k_ECurrencyCodeJPY;
+            return C.AI.k_ECurrencyCodeJPY;
           case "KR":
-            return a.AI.k_ECurrencyCodeKRW;
+            return C.AI.k_ECurrencyCodeKRW;
           case "KW":
-            return a.AI.k_ECurrencyCodeKWD;
+            return C.AI.k_ECurrencyCodeKWD;
           case "KZ":
-            return a.AI.k_ECurrencyCodeKZT;
+            return C.AI.k_ECurrencyCodeKZT;
           case "MX":
-            return a.AI.k_ECurrencyCodeMXN;
+            return C.AI.k_ECurrencyCodeMXN;
           case "MY":
-            return a.AI.k_ECurrencyCodeMYR;
+            return C.AI.k_ECurrencyCodeMYR;
           case "NO":
-            return a.AI.k_ECurrencyCodeNOK;
+            return C.AI.k_ECurrencyCodeNOK;
           case "NZ":
-            return a.AI.k_ECurrencyCodeNZD;
+            return C.AI.k_ECurrencyCodeNZD;
           case "PE":
-            return a.AI.k_ECurrencyCodePEN;
+            return C.AI.k_ECurrencyCodePEN;
           case "PH":
-            return a.AI.k_ECurrencyCodePHP;
+            return C.AI.k_ECurrencyCodePHP;
           case "PL":
-            return a.AI.k_ECurrencyCodePLN;
+            return C.AI.k_ECurrencyCodePLN;
           case "QA":
-            return a.AI.k_ECurrencyCodeQAR;
+            return C.AI.k_ECurrencyCodeQAR;
           case "RU":
-            return a.AI.k_ECurrencyCodeRUB;
+            return C.AI.k_ECurrencyCodeRUB;
           case "SA":
-            return a.AI.k_ECurrencyCodeSAR;
+            return C.AI.k_ECurrencyCodeSAR;
           case "SG":
-            return a.AI.k_ECurrencyCodeSGD;
+            return C.AI.k_ECurrencyCodeSGD;
           case "TH":
-            return a.AI.k_ECurrencyCodeTHB;
+            return C.AI.k_ECurrencyCodeTHB;
           case "TW":
-            return a.AI.k_ECurrencyCodeTWD;
+            return C.AI.k_ECurrencyCodeTWD;
           case "UA":
-            return a.AI.k_ECurrencyCodeUAH;
+            return C.AI.k_ECurrencyCodeUAH;
           case "AF":
           case "AG":
           case "AI":
@@ -282,136 +281,24 @@
           case "YT":
           case "ZM":
           case "ZW":
-            return a.AI.k_ECurrencyCodeUSD;
+            return C.AI.k_ECurrencyCodeUSD;
           case "UY":
-            return a.AI.k_ECurrencyCodeUYU;
+            return C.AI.k_ECurrencyCodeUYU;
           case "VN":
-            return a.AI.k_ECurrencyCodeVND;
+            return C.AI.k_ECurrencyCodeVND;
           case "ZA":
-            return a.AI.k_ECurrencyCodeZAR;
+            return C.AI.k_ECurrencyCodeZAR;
           default:
             return (
               console.assert(!1, `Unhandled country code: ${e}`),
-              a.AI.k_ECurrencyCodeUSD
+              C.AI.k_ECurrencyCodeUSD
             );
         }
       }
-      function n(e) {
-        switch (e) {
-          case "USD":
-          case "USD_CIS":
-          case "USD_MENA":
-          case "USD_LATAM":
-          case "USD_SASIA":
-            return a.AI.k_ECurrencyCodeUSD;
-          case "GBP":
-            return a.AI.k_ECurrencyCodeGBP;
-          case "EUR":
-            return a.AI.k_ECurrencyCodeEUR;
-          case "CHF":
-            return a.AI.k_ECurrencyCodeCHF;
-          case "RUB":
-            return a.AI.k_ECurrencyCodeRUB;
-          case "PLN":
-            return a.AI.k_ECurrencyCodePLN;
-          case "BRL":
-            return a.AI.k_ECurrencyCodeBRL;
-          case "JPY":
-            return a.AI.k_ECurrencyCodeJPY;
-          case "NOK":
-            return a.AI.k_ECurrencyCodeNOK;
-          case "IDR":
-            return a.AI.k_ECurrencyCodeIDR;
-          case "MYR":
-            return a.AI.k_ECurrencyCodeMYR;
-          case "PHP":
-            return a.AI.k_ECurrencyCodePHP;
-          case "SGD":
-            return a.AI.k_ECurrencyCodeSGD;
-          case "THB":
-            return a.AI.k_ECurrencyCodeTHB;
-          case "VND":
-            return a.AI.k_ECurrencyCodeVND;
-          case "KRW":
-            return a.AI.k_ECurrencyCodeKRW;
-          case "TRY":
-            return a.AI.k_ECurrencyCodeTRY;
-          case "UAH":
-            return a.AI.k_ECurrencyCodeUAH;
-          case "MXN":
-            return a.AI.k_ECurrencyCodeMXN;
-          case "CAD":
-            return a.AI.k_ECurrencyCodeCAD;
-          case "AUD":
-            return a.AI.k_ECurrencyCodeAUD;
-          case "NZD":
-            return a.AI.k_ECurrencyCodeNZD;
-          case "CNY":
-            return a.AI.k_ECurrencyCodeCNY;
-          case "INR":
-            return a.AI.k_ECurrencyCodeINR;
-          case "CLP":
-            return a.AI.k_ECurrencyCodeCLP;
-          case "PEN":
-            return a.AI.k_ECurrencyCodePEN;
-          case "COP":
-            return a.AI.k_ECurrencyCodeCOP;
-          case "ZAR":
-            return a.AI.k_ECurrencyCodeZAR;
-          case "HKD":
-            return a.AI.k_ECurrencyCodeHKD;
-          case "TWD":
-            return a.AI.k_ECurrencyCodeTWD;
-          case "SAR":
-            return a.AI.k_ECurrencyCodeSAR;
-          case "AED":
-            return a.AI.k_ECurrencyCodeAED;
-          case "SEK":
-            return a.AI.k_ECurrencyCodeSEK;
-          case "ARS":
-            return a.AI.k_ECurrencyCodeARS;
-          case "ILS":
-            return a.AI.k_ECurrencyCodeILS;
-          case "BYN":
-            return a.AI.k_ECurrencyCodeBYN;
-          case "KZT":
-            return a.AI.k_ECurrencyCodeKZT;
-          case "KWD":
-            return a.AI.k_ECurrencyCodeKWD;
-          case "QAR":
-            return a.AI.k_ECurrencyCodeQAR;
-          case "CRC":
-            return a.AI.k_ECurrencyCodeCRC;
-          case "UYU":
-            return a.AI.k_ECurrencyCodeUYU;
-          case "BGN":
-            return a.AI.k_ECurrencyCodeBGN;
-          case "HRK":
-            return a.AI.k_ECurrencyCodeHRK;
-          case "CZK":
-            return a.AI.k_ECurrencyCodeCZK;
-          case "DKK":
-            return a.AI.k_ECurrencyCodeDKK;
-          case "HUF":
-            return a.AI.k_ECurrencyCodeHUF;
-          case "RON":
-            return a.AI.k_ECurrencyCodeRON;
-          default:
-            return 6 == e.length
-              ? n(e.substring(0, 3))
-              : Number.isInteger(Number(e))
-                ? Number(e)
-                : ((0, C.wT)(
-                    !1,
-                    `ASCIICurrencyCodeToECurrencyCode unexpected code ${e}`,
-                  ),
-                  a.AI.k_ECurrencyCodeInvalid);
-        }
-      }
     },
-    88267: (e, r, c) => {
+    88267: (e, c, r) => {
       var C;
-      c.d(r, { AI: () => C }),
+      r.d(c, { AI: () => C }),
         (function (e) {
           (e[(e.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
             (e[(e.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),

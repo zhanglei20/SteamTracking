@@ -96,6 +96,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",
@@ -193,6 +194,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         mentionDialogPosition: "_3isL0ZmZcmPqrXDdNiNSsm",
         mentionDialog: "_1QU3cLCGXCmYTUvjYiqqz6",
         mentionSearchText: "_1xVcZo7UqD1Idiz3hcGoHg",

@@ -970,9 +970,9 @@
         A = n(42834),
         k = n(52471),
         H = n(80696),
-        I = n(52541),
-        N = n(39777),
-        D = n(7338),
+        N = n(52541),
+        D = n(39777),
+        I = n(7338),
         T = n(54806),
         R = n(61855),
         M = n(35380),
@@ -982,8 +982,8 @@
         Z = n(64769),
         P = n.n(Z);
       const G = 5500,
-        W = 2e3,
-        O = 10;
+        O = 2e3,
+        W = 10;
       function z(e, t) {
         if (e && t && t.main_capsule) {
           return {
@@ -998,14 +998,14 @@
               },
               "fallback",
             ),
-            nDurationMs: W,
+            nDurationMs: O,
           };
         }
         return null;
       }
       function U(e, t) {
         return {
-          stringifyID: `vid_${(0, I.ER)(e)}`,
+          stringifyID: `vid_${(0, N.ER)(e)}`,
           rctImage: (0, r.jsx)(H.m, { id: e, active: !0 }),
           nDurationMs: G,
         };
@@ -1014,7 +1014,7 @@
         return n.slice(0, i).map((n, i) => {
           const o = (0, A.bu)(n, "1920x1080");
           return {
-            stringifyID: `screen${i}_${(0, I.ER)(e)}`,
+            stringifyID: `screen${i}_${(0, N.ER)(e)}`,
             rctImage: (0, r.jsx)(
               "img",
               {
@@ -1025,7 +1025,7 @@
               },
               o,
             ),
-            nDurationMs: W,
+            nDurationMs: O,
           };
         });
       }
@@ -1039,7 +1039,7 @@
       }
       function q(e) {
         const { id: t } = e,
-          { data: n } = (0, N.U2)(t);
+          { data: n } = (0, D.U2)(t);
         if (!n || n.unvailable_for_country_restriction || !n.visible)
           return (0, r.jsx)("div", {
             className: P().TrailerCtn,
@@ -1062,7 +1062,7 @@
         const { storeItemDefaultData: t } = e,
           n = (0, V.QO)(t),
           i = (0, k.TH)(n),
-          { data: o } = (0, N.lv)(n),
+          { data: o } = (0, D.lv)(n),
           a = (0, A.DT)(n),
           s = (0, u.useMemo)(
             () =>
@@ -1070,7 +1070,7 @@
                 const o = [];
                 if (
                   (i && o.push(U(e)),
-                  r && r.length > 0 && o.push(...K(e, t.name, r, O)),
+                  r && r.length > 0 && o.push(...K(e, t.name, r, W)),
                   0 == o.length && n && n.main_capsule)
                 ) {
                   const e = z(t, n);
@@ -1083,7 +1083,7 @@
                       "beta" != g.TS.WEB_UNIVERSE) ||
                     console.error(
                       "DEV ONLY OUTPUT: GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, I.ER)(e),
+                      (0, N.ER)(e),
                     ),
                   o
                 );
@@ -1114,15 +1114,15 @@
               (function (e, t, n, r, i, o) {
                 const a = [];
                 o && a.push(U(t)),
-                  r && r.length > 0 && a.push(...K(e, n.name, r, O));
-                const s = O - (r?.length || 0);
+                  r && r.length > 0 && a.push(...K(e, n.name, r, W));
+                const s = W - (r?.length || 0);
                 return (
                   s > 0 && i && i.length > 0 && a.push(...K(e, n.name, i, s)),
                   ((e && 0 == a.length && "dev" == g.TS.WEB_UNIVERSE) ||
                     "beta" == g.TS.WEB_UNIVERSE) &&
                     console.error(
                       "DEV ONLY OUTPUT: Demo GameHoverImages for id/type no images: (might be not age safe screenshots)",
-                      (0, I.ER)(e),
+                      (0, N.ER)(e),
                     ),
                   a
                 );
@@ -1133,9 +1133,9 @@
       }
       function $(e) {
         const { includeAppIDs: t } = e,
-          n = (0, D.eG)(),
-          i = (0, T.E)({ queries: t.map((e) => (0, N.AQ)(n, { appid: e })) }),
-          o = (0, T.E)({ queries: t.map((e) => (0, N.us)(n, { appid: e })) }),
+          n = (0, I.eG)(),
+          i = (0, T.E)({ queries: t.map((e) => (0, D.AQ)(n, { appid: e })) }),
+          o = (0, T.E)({ queries: t.map((e) => (0, D.us)(n, { appid: e })) }),
           a = (0, u.useMemo)(
             () => i.map((e, t) => z(o[t].data, e.data)).filter((e) => !!e),
             [i, o],
@@ -1336,7 +1336,7 @@
         Se = n(90421);
       function be(e) {
         const { id: t } = e,
-          { data: n } = (0, N.xz)(t);
+          { data: n } = (0, D.xz)(t);
         return n
           ? (0, r.jsx)("div", {
               className: P().TagRow,
@@ -1374,8 +1374,8 @@
           } = e,
           [S, b] = (0, u.useState)(!1),
           [y, L] = (0, u.useState)(""),
-          { data: j } = (0, N.J$)(t),
-          { data: B } = (0, N.lv)(n),
+          { data: j } = (0, D.J$)(t),
+          { data: B } = (0, D.lv)(n),
           k = !f && !p && !m,
           H = j && 0 == j.item_type;
         return (0, r.jsxs)("div", {
@@ -1468,14 +1468,14 @@
       }
       function Le(e) {
         const { id: t } = e,
-          { data: n } = (0, N.by)(t);
+          { data: n } = (0, D.by)(t);
         if (!n) return null;
         const i = (0, he.CC)(n);
         return (0, r.jsx)("div", { className: P().ReleaseDate, children: i });
       }
       function je(e) {
         const { id: t } = e,
-          { data: n } = (0, N.wl)(t);
+          { data: n } = (0, D.wl)(t);
         return n
           ? (0, r.jsx)("div", {
               className: P().ShortDescription,
@@ -1493,8 +1493,8 @@
             bShowWishlistButton: s = !0,
             bShowIgnoreButton: l = !1,
           } = e,
-          { data: u } = (0, N.Yo)(t),
-          { data: d } = (0, N.j4)(t);
+          { data: u } = (0, D.Yo)(t),
+          { data: d } = (0, D.j4)(t);
         return void 0 === u && void 0 === d
           ? null
           : (0, r.jsxs)("div", {
@@ -1538,7 +1538,7 @@
             bShowDescription: f = !1,
             ...w
           } = e,
-          { data: v } = (0, N.J$)(t),
+          { data: v } = (0, D.J$)(t),
           x = (0, g.Qn)(),
           { strStoreURL: S, snr: b } = (0, te.x)(v, s);
         if ((!v && !n) || x) return (0, r.jsx)(r.Fragment, { children: d });
@@ -1866,28 +1866,28 @@
           { bIsOwned: B } = (0, s.ZJ)(L),
           [A, k] = (0, u.useState)(!1),
           H = (0, p.m)("GameHoverWishlistButton"),
-          { mutateAsync: I } = (0, c.s)(b, !j, n);
+          { mutateAsync: N } = (0, c.s)(b, !j, n);
         (0, u.useEffect)(() => {
           t &&
             "appid" in t &&
             (1 == v?.type || 12 == v?.type) &&
             y(v.related_items?.parent_appid || t.appid);
         }, [v, t]);
-        const N = (0, u.useCallback)(
+        const D = (0, u.useCallback)(
           async (e) => {
             e.preventDefault(),
               e.stopPropagation(),
               _.iA.logged_in
-                ? (k(!0), await I(), H.token.reason || k(!1))
+                ? (k(!0), await N(), H.token.reason || k(!1))
                 : S();
           },
-          [H.token.reason, S, I],
+          [H.token.reason, S, N],
         );
         return B && 10 != v?.type
           ? null
           : (0, r.jsxs)(i.Z, {
               className: (0, C.A)(h().WishlistButton, g),
-              onActivate: N,
+              onActivate: D,
               style: w,
               children: [
                 j ? (0, r.jsx)(m.qnF, {}) : (0, r.jsx)(m.T4m, {}),
@@ -1995,7 +1995,7 @@
             (e) => {
               n?.length &&
                 (0, y.lX)(
-                  (0, r.jsx)(I, { sessions: n, setRemoteDownloadClientId: t }),
+                  (0, r.jsx)(N, { sessions: n, setRemoteDownloadClientId: t }),
                   e,
                   k,
                 );
@@ -2006,11 +2006,11 @@
           ? (0, r.jsx)("button", {
               onClick: i,
               className: A().ClientSelectDropdown,
-              children: (0, r.jsx)(D, {}),
+              children: (0, r.jsx)(I, {}),
             })
           : null;
       }
-      function I({ sessions: e, setRemoteDownloadClientId: t }) {
+      function N({ sessions: e, setRemoteDownloadClientId: t }) {
         return (0, r.jsx)("ul", {
           className: A().ClientListDropdownMenu,
           children: e.map((e) =>
@@ -2022,7 +2022,7 @@
                 },
                 children: (0, L.we)(
                   "#GamesList_Client_Indicator",
-                  N(e.device_type) ?? "",
+                  D(e.device_type) ?? "",
                   e.machine_name,
                 ),
               },
@@ -2031,7 +2031,7 @@
           ),
         });
       }
-      function N(e) {
+      function D(e) {
         switch (e) {
           case 1:
             return (0, L.we)("#Library_DeviceType_PC");
@@ -2045,7 +2045,7 @@
             return;
         }
       }
-      function D(e) {
+      function I(e) {
         return (0, r.jsx)("svg", {
           xmlns: "http://www.w3.org/2000/svg",
           viewBox: "0 0 13 8",
@@ -2145,7 +2145,7 @@
           return (0, r.jsx)("div", {
             className: F().RemoteOptions,
             children: Boolean(s)
-              ? (0, r.jsx)(W, { session: e })
+              ? (0, r.jsx)(O, { session: e })
               : (0, r.jsxs)(r.Fragment, {
                   children: [
                     (0, r.jsx)(G, {
@@ -2155,7 +2155,7 @@
                     }),
                     (0, r.jsx)("div", {
                       className: F().ActionRow,
-                      children: (0, r.jsx)(O, {
+                      children: (0, r.jsx)(W, {
                         appid: t.appid,
                         session: e,
                         setRemoteDownloadRequested: l,
@@ -2193,7 +2193,7 @@
           ],
         });
       }
-      function W(e) {
+      function O(e) {
         const { session: t } = e;
         return (0, r.jsxs)("div", {
           className: F().DownloadStartedCtn,
@@ -2207,7 +2207,7 @@
           ],
         });
       }
-      function O(e) {
+      function W(e) {
         const { appid: t, session: n, setRemoteDownloadRequested: i } = e,
           o = (0, S.we)(t, n.client_instanceid);
         return (0, r.jsxs)(r.Fragment, {
@@ -2380,54 +2380,58 @@
             bHidePrePurchase: u,
             bHideReleaseDate: d,
             bHideIfDemo: _,
+            strContainerClassName: h,
+            strDiscountAndPriceClassName: f,
+            strPriceFormattedClassName: w,
           } = e,
-          h = C.TS.NOW,
-          { data: f } = (0, a.by)(n),
-          { data: w } = (0, a.Q_)(n),
-          { data: v } = (0, a.J$)(n);
-        if (!v) return null;
-        const x = (0, o.fk)(f, h),
-          S = (0, m.A)({
+          v = C.TS.NOW,
+          { data: x } = (0, a.by)(n),
+          { data: S } = (0, a.Q_)(n),
+          { data: b } = (0, a.J$)(n);
+        if (!b) return null;
+        const y = (0, o.fk)(x, v),
+          L = (0, m.A)({
             [c().StoreSalePriceWidgetContainer]: !0,
             [c().SingleLineMode]: t,
             StoreSalePriceWidgetContainer: !0,
-            [c().NewItem]: x,
+            [c().NewItem]: y,
+            [h ?? ""]: !!h,
           });
         if (e.bShowInLibrary)
           return (0, r.jsx)("div", {
-            className: S,
+            className: L,
             children: (0, r.jsx)("div", {
               className: c().StoreSalePriceBox,
               children: p.Z.Localize("#EventDisplay_CallToAction_InLibrary"),
             }),
           });
-        if (f && f.is_coming_soon && (!w || !w.packageid)) {
+        if (x && x.is_coming_soon && (!S || !S.packageid)) {
           if (d) return null;
           const e =
-            f.coming_soon_display &&
-            ["text_comingsoon", "text_tba"].includes(f.coming_soon_display)
-              ? (0, s.d)(f)
+            x.coming_soon_display &&
+            ["text_comingsoon", "text_tba"].includes(x.coming_soon_display)
+              ? (0, s.d)(x)
               : p.Z.Localize(
                   "#EventDisplay_CallToAction_ComingSoon_Date",
-                  (0, i.CC)(f),
+                  (0, i.CC)(x),
                 );
           return (0, r.jsx)("div", {
-            className: S,
+            className: L,
             children: (0, r.jsx)("div", {
               className: c().StoreSalePriceBox,
               children: e,
             }),
           });
         }
-        if (v.is_free) {
-          if (!v.is_free_temporarily)
-            return 0 == v.item_type && 1 == v.type
+        if (b.is_free) {
+          if (!b.is_free_temporarily)
+            return 0 == b.item_type && 1 == b.type
               ? _
                 ? null
                 : (0, r.jsxs)("div", {
-                    className: S,
+                    className: L,
                     children: [
-                      x &&
+                      y &&
                         (0, r.jsx)("div", {
                           className: c().StoreSaleNewItem,
                           children: p.Z.Localize("#Flag_New"),
@@ -2441,9 +2445,9 @@
                     ],
                   })
               : (0, r.jsxs)("div", {
-                  className: S,
+                  className: L,
                   children: [
-                    x &&
+                    y &&
                       (0, r.jsx)("div", {
                         className: c().StoreSaleNewItem,
                         children: p.Z.Localize("#Flag_New"),
@@ -2456,35 +2460,37 @@
                     }),
                   ],
                 });
-          if (w && w.is_free_to_keep && !w.formatted_original_price)
+          if (S && S.is_free_to_keep && !S.formatted_original_price)
             return (0, r.jsx)("div", {
-              className: S,
+              className: L,
               children: (0, r.jsx)("div", {
                 className: c().StoreSalePriceBox,
                 children: p.Z.Localize("#EventDisplay_CallToAction_Free"),
               }),
             });
         }
-        if (!w || !w.formatted_final_price) return null;
-        let b = w.discount_pct || 0,
-          y = l || 2 != v.item_type ? 0 : w.bundle_discount_pct || 0,
-          L = w.formatted_final_price;
-        const j = (0, o.Nq)(f, w);
+        if (!S || !S.formatted_final_price) return null;
+        let j = S.discount_pct || 0,
+          B = l || 2 != b.item_type ? 0 : S.bundle_discount_pct || 0,
+          A = S.formatted_final_price;
+        const k = (0, o.Nq)(x, S);
         return (0, r.jsx)(g, {
           bSingleLineMode: Boolean(t),
-          nBaseDiscountPercentage: y,
-          nDiscountPercentage: b,
-          bIsPrePurchase: j,
+          nBaseDiscountPercentage: B,
+          nDiscountPercentage: j,
+          bIsPrePurchase: k,
           strBestPurchaseOriginalPriceFormatted:
-            w.formatted_price_before_bundle_discount ||
-            w.formatted_original_price ||
+            S.formatted_price_before_bundle_discount ||
+            S.formatted_original_price ||
             "",
-          strBestPurchasePriceFormatted: L,
+          strBestPurchasePriceFormatted: A,
           bHideDiscountPercentForCompliance: Boolean(
-            w.hide_discount_pct_for_compliance,
+            S.hide_discount_pct_for_compliance,
           ),
-          bShowNewFlag: x,
+          bShowNewFlag: y,
           bHidePrePurchase: Boolean(u),
+          strDiscountAndPriceClassName: f,
+          strPriceFormattedClassName: w,
         });
       }
       function g(e) {
@@ -2498,12 +2504,14 @@
             bHideDiscountPercentForCompliance: l,
             bShowNewFlag: C,
             bHidePrePurchase: _,
+            strDiscountAndPriceClassName: g,
+            strPriceFormattedClassName: h,
           } = e,
-          g = l;
-        let h;
+          f = l;
+        let w;
         return (
           n &&
-            (h = g
+            (w = f
               ? p.Z.Localize("#Discount_ARIA_Label_SpecialPrice", a)
               : p.Z.Localize("#Discount_ARIA_Label", n, a, s)),
           (0, r.jsxs)("div", {
@@ -2515,8 +2523,9 @@
               Discounted: Boolean(n),
               [c().PrePurchase]: Boolean(i),
               [c().NewItem]: Boolean(C),
+              [g ?? ""]: !!g,
             }),
-            "aria-label": h,
+            "aria-label": w,
             children: [
               Boolean(i && !_) &&
                 (0, r.jsx)("div", {
@@ -2532,7 +2541,7 @@
                   className: c().StoreSaleNewItem,
                   children: p.Z.Localize("#Flag_New"),
                 }),
-              Boolean(o && !g) &&
+              Boolean(o && !f) &&
                 (0, r.jsxs)(r.Fragment, {
                   children: [
                     (0, r.jsx)(d.Gq, {
@@ -2561,17 +2570,17 @@
                       }),
                   ],
                 }),
-              Boolean(!o && n && !g) &&
+              Boolean(!o && n && !f) &&
                 (0, r.jsx)("div", {
                   className: c().StoreSaleDiscountBox,
                   children: `-${n}%`,
                 }),
-              Boolean(g) &&
+              Boolean(f) &&
                 (0, r.jsx)("div", {
                   className: c().DiscountIconCtn,
                   children: (0, r.jsx)(u.XH_, {}),
                 }),
-              Boolean((n || o) && a && !g)
+              Boolean((n || o) && a && !f)
                 ? (0, r.jsxs)("div", {
                     className: (0, m.A)(c().StoreSaleDiscountedPriceCtn),
                     children: [
@@ -2586,13 +2595,17 @@
                         className: (0, m.A)({
                           [c().StoreSalePriceBox]: !0,
                           [c().SingleLineMode]: t,
+                          [h ?? ""]: !!h,
                         }),
                         children: s,
                       }),
                     ],
                   })
                 : (0, r.jsx)("div", {
-                    className: c().StoreSalePriceBox,
+                    className: (0, m.A)({
+                      [c().StoreSalePriceBox]: !0,
+                      [h ?? ""]: !!h,
+                    }),
                     children: s,
                   }),
             ],
@@ -2879,26 +2892,89 @@
     },
     5309: (e, t, n) => {
       "use strict";
-      n.d(t, { CC: () => s });
+      n.d(t, { CC: () => u, VM: () => s });
       var r = n(99116),
         i = n(3049),
-        o = n(63369);
-      function a(e) {
+        o = n(55672),
+        a = n(63369);
+      function s(e) {
+        return e?.is_coming_soon
+          ? (function (e, t, n) {
+              switch (e) {
+                case "date_full":
+                  return l(t);
+                case "date_month":
+                  return c(new Date(1e3 * t));
+                case "date_quarter":
+                  return (function (e) {
+                    switch (e.getUTCMonth()) {
+                      case 0:
+                      case 1:
+                      case 2:
+                        return o.Z.Localize(
+                          "#Time_QuarterOfYear_Q1",
+                          e.getUTCFullYear(),
+                        );
+                      case 3:
+                      case 4:
+                      case 5:
+                        return o.Z.Localize(
+                          "#Time_QuarterOfYear_Q2",
+                          e.getUTCFullYear(),
+                        );
+                      case 6:
+                      case 7:
+                      case 8:
+                        return o.Z.Localize(
+                          "#Time_QuarterOfYear_Q3",
+                          e.getUTCFullYear(),
+                        );
+                      default:
+                        return o.Z.Localize(
+                          "#Time_QuarterOfYear_Q4",
+                          e.getUTCFullYear(),
+                        );
+                    }
+                  })(new Date(1e3 * t));
+                case "date_year":
+                  return new Date(1e3 * t).toLocaleDateString((0, i.J)(), {
+                    year: "numeric",
+                  });
+                case "text_comingsoon":
+                  return n || o.Z.Localize("#Store_ComingSoon_ComingSoon");
+                case "text_tba":
+                  return n || o.Z.Localize("#Store_ComingSoon_TBA");
+                default:
+                  return "";
+              }
+            })(
+              e.coming_soon_display,
+              e.steam_release_date,
+              e.custom_release_date_message,
+            )
+          : e?.steam_release_date
+            ? l(e.steam_release_date)
+            : "";
+      }
+      function l(e) {
+        return new Date(1e3 * e).toLocaleDateString((0, i.J)());
+      }
+      function c(e) {
         return e.toLocaleDateString((0, i.J)(), {
           month: "long",
           year: "numeric",
         });
       }
-      function s(e) {
+      function u(e) {
         if (!e) return "";
         if (e && e.is_coming_soon) {
-          if (e.coming_soon_display) return (0, o.d)(e);
+          if (e.coming_soon_display) return (0, a.d)(e);
           if (e.custom_release_date_message)
             return e.custom_release_date_message;
           const t = e.steam_release_date;
           return t
             ? e.is_abridged_release_date
-              ? a(new Date(1e3 * t))
+              ? c(new Date(1e3 * t))
               : (0, r.$z)(t)
             : "";
         }
@@ -3838,13 +3914,13 @@
     54906: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ez: () => I,
+        Ez: () => N,
         Dy: () => R,
         wW: () => M,
-        UN: () => D,
+        UN: () => I,
         Q8: () => A,
         Tz: () => k,
-        aw: () => N,
+        aw: () => D,
         cP: () => T,
       });
       var r = n(7850),
@@ -4049,7 +4125,7 @@
           }),
         });
       }
-      function I(e) {
+      function N(e) {
         const { category: t } = e;
         switch (t) {
           case 3:
@@ -4075,7 +4151,7 @@
         }
         return null;
       }
-      function N(e) {
+      function D(e) {
         const { category: t } = e;
         switch (t) {
           case 2:
@@ -4096,7 +4172,7 @@
         }
         return null;
       }
-      function D(e) {
+      function I(e) {
         const { id: t, category: n, appName: i, descriptionToken: o } = e;
         if (0 == n)
           return (0, r.jsx)("div", {
@@ -4216,7 +4292,7 @@
     },
     43976: (e, t, n) => {
       "use strict";
-      n.d(t, { h: () => I });
+      n.d(t, { h: () => N });
       var r,
         i = n(7850),
         o = n(26514),
@@ -4410,7 +4486,7 @@
         A = n(82080),
         k = n.n(A),
         H = n(55672);
-      function I(e) {
+      function N(e) {
         const { id: t, className: n } = e,
           r = (0, l.n9)(),
           { data: o } = (0, s.J$)(t),
@@ -4513,13 +4589,13 @@
               children: H.Z.Localize("#EventDisplay_CallToAction_VisitStore"),
             });
         }
-        return (0, i.jsx)(N, {
+        return (0, i.jsx)(D, {
           className: n,
           storeItemBestPurchaseOption: p,
           storeItemDefaultData: o,
         });
       }
-      function N(e) {
+      function D(e) {
         const {
             className: t,
             storeItemBestPurchaseOption: n,
@@ -4538,7 +4614,7 @@
     },
     28372: (e, t, n) => {
       "use strict";
-      n.d(t, { do: () => N, of: () => I });
+      n.d(t, { do: () => D, of: () => N });
       var r,
         i = n(7850),
         o = n(45699),
@@ -4634,7 +4710,7 @@
             })
           : (console.error("CommonFollowButton unexpected type", u), null);
       };
-      function I(e) {
+      function N(e) {
         const {
             followType: t,
             fnSuccessCallback: n,
@@ -4727,7 +4803,7 @@
           ],
         });
       }
-      function N(e) {
+      function D(e) {
         const { appid: t, className: n } = e,
           [r, o] = w.useState(!1),
           a = (0, d.Fh)(t),
@@ -4961,13 +5037,13 @@
               "aria-label": (0, u.we)("#ControllerButton_R2"),
             });
           case a.g4.LeftStick:
-            return (0, o.jsx)(D, {
+            return (0, o.jsx)(I, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_LS"),
             });
           case a.g4.RightStick:
-            return (0, o.jsx)(N, {
+            return (0, o.jsx)(D, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_RS"),
@@ -4979,7 +5055,7 @@
               "aria-label": (0, u.we)("#ControllerButton_L3"),
             });
           case a.g4.RightStickClick:
-            return (0, o.jsx)(I, {
+            return (0, o.jsx)(N, {
               bIsKnockout: n,
               className: t,
               "aria-label": (0, u.we)("#ControllerButton_R3"),
@@ -5729,7 +5805,7 @@
               ],
             });
       }
-      function I({ bIsKnockout: e, ...t }) {
+      function N({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5790,7 +5866,7 @@
               ],
             });
       }
-      function N({ bIsKnockout: e, ...t }) {
+      function D({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -5837,7 +5913,7 @@
               ],
             });
       }
-      function D({ bIsKnockout: e, ...t }) {
+      function I({ bIsKnockout: e, ...t }) {
         return e
           ? (0, o.jsxs)("svg", {
               xmlns: "http://www.w3.org/2000/svg",
@@ -6700,7 +6776,7 @@
                       {
                         className: m().CompatibilityDetailsRow,
                         children: [
-                          (0, i.jsx)(N, { displaytype: e.display_type }),
+                          (0, i.jsx)(D, { displaytype: e.display_type }),
                           (0, i.jsx)("span", {
                             children: (0, _.we)(e.loc_token),
                           }),
@@ -6720,7 +6796,7 @@
                         {
                           className: m().CompatibilityDetailsRow,
                           children: [
-                            (0, i.jsx)(N, { displaytype: e.display_type }),
+                            (0, i.jsx)(D, { displaytype: e.display_type }),
                             (0, i.jsx)("span", {
                               children: (0, _.we)(e.loc_token),
                             }),
@@ -6767,7 +6843,7 @@
                       {
                         className: m().CompatibilityDetailsRow,
                         children: [
-                          (0, i.jsx)(I, { displaytype: e.display_type }),
+                          (0, i.jsx)(N, { displaytype: e.display_type }),
                           (0, i.jsx)("span", {
                             children: (0, _.we)(e.loc_token),
                           }),
@@ -6841,7 +6917,7 @@
           ],
         });
       }
-      function I(e) {
+      function N(e) {
         const { displaytype: t } = e;
         switch (t) {
           case 4:
@@ -6870,7 +6946,7 @@
             );
         }
       }
-      function N(e) {
+      function D(e) {
         const { displaytype: t } = e;
         switch (t) {
           case 3:

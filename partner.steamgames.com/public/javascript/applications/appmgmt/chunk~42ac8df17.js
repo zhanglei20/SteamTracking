@@ -7598,54 +7598,58 @@
             bHidePrePurchase: u,
             bHideReleaseDate: d,
             bHideIfDemo: _,
+            strContainerClassName: b,
+            strDiscountAndPriceClassName: w,
+            strPriceFormattedClassName: B,
           } = e,
-          b = g.TS.NOW,
-          { data: w } = (0, s.by)(r),
-          { data: B } = (0, s.Q_)(r),
-          { data: y } = (0, s.J$)(r);
-        if (!y) return null;
-        const h = (0, a.fk)(w, b),
-          S = (0, m.A)({
+          y = g.TS.NOW,
+          { data: h } = (0, s.by)(r),
+          { data: S } = (0, s.Q_)(r),
+          { data: M } = (0, s.J$)(r);
+        if (!M) return null;
+        const v = (0, a.fk)(h, y),
+          C = (0, m.A)({
             [c().StoreSalePriceWidgetContainer]: !0,
             [c().SingleLineMode]: t,
             StoreSalePriceWidgetContainer: !0,
-            [c().NewItem]: h,
+            [c().NewItem]: v,
+            [b ?? ""]: !!b,
           });
         if (e.bShowInLibrary)
           return (0, i.jsx)("div", {
-            className: S,
+            className: C,
             children: (0, i.jsx)("div", {
               className: c().StoreSalePriceBox,
               children: p.Z.Localize("#EventDisplay_CallToAction_InLibrary"),
             }),
           });
-        if (w && w.is_coming_soon && (!B || !B.packageid)) {
+        if (h && h.is_coming_soon && (!S || !S.packageid)) {
           if (d) return null;
           const e =
-            w.coming_soon_display &&
-            ["text_comingsoon", "text_tba"].includes(w.coming_soon_display)
-              ? (0, o.d)(w)
+            h.coming_soon_display &&
+            ["text_comingsoon", "text_tba"].includes(h.coming_soon_display)
+              ? (0, o.d)(h)
               : p.Z.Localize(
                   "#EventDisplay_CallToAction_ComingSoon_Date",
-                  (0, n.CC)(w),
+                  (0, n.CC)(h),
                 );
           return (0, i.jsx)("div", {
-            className: S,
+            className: C,
             children: (0, i.jsx)("div", {
               className: c().StoreSalePriceBox,
               children: e,
             }),
           });
         }
-        if (y.is_free) {
-          if (!y.is_free_temporarily)
-            return 0 == y.item_type && 1 == y.type
+        if (M.is_free) {
+          if (!M.is_free_temporarily)
+            return 0 == M.item_type && 1 == M.type
               ? _
                 ? null
                 : (0, i.jsxs)("div", {
-                    className: S,
+                    className: C,
                     children: [
-                      h &&
+                      v &&
                         (0, i.jsx)("div", {
                           className: c().StoreSaleNewItem,
                           children: p.Z.Localize("#Flag_New"),
@@ -7659,9 +7663,9 @@
                     ],
                   })
               : (0, i.jsxs)("div", {
-                  className: S,
+                  className: C,
                   children: [
-                    h &&
+                    v &&
                       (0, i.jsx)("div", {
                         className: c().StoreSaleNewItem,
                         children: p.Z.Localize("#Flag_New"),
@@ -7674,35 +7678,37 @@
                     }),
                   ],
                 });
-          if (B && B.is_free_to_keep && !B.formatted_original_price)
+          if (S && S.is_free_to_keep && !S.formatted_original_price)
             return (0, i.jsx)("div", {
-              className: S,
+              className: C,
               children: (0, i.jsx)("div", {
                 className: c().StoreSalePriceBox,
                 children: p.Z.Localize("#EventDisplay_CallToAction_Free"),
               }),
             });
         }
-        if (!B || !B.formatted_final_price) return null;
-        let M = B.discount_pct || 0,
-          v = l || 2 != y.item_type ? 0 : B.bundle_discount_pct || 0,
-          C = B.formatted_final_price;
-        const I = (0, a.Nq)(w, B);
+        if (!S || !S.formatted_final_price) return null;
+        let I = S.discount_pct || 0,
+          z = l || 2 != M.item_type ? 0 : S.bundle_discount_pct || 0,
+          T = S.formatted_final_price;
+        const R = (0, a.Nq)(h, S);
         return (0, i.jsx)(f, {
           bSingleLineMode: Boolean(t),
-          nBaseDiscountPercentage: v,
-          nDiscountPercentage: M,
-          bIsPrePurchase: I,
+          nBaseDiscountPercentage: z,
+          nDiscountPercentage: I,
+          bIsPrePurchase: R,
           strBestPurchaseOriginalPriceFormatted:
-            B.formatted_price_before_bundle_discount ||
-            B.formatted_original_price ||
+            S.formatted_price_before_bundle_discount ||
+            S.formatted_original_price ||
             "",
-          strBestPurchasePriceFormatted: C,
+          strBestPurchasePriceFormatted: T,
           bHideDiscountPercentForCompliance: Boolean(
-            B.hide_discount_pct_for_compliance,
+            S.hide_discount_pct_for_compliance,
           ),
-          bShowNewFlag: h,
+          bShowNewFlag: v,
           bHidePrePurchase: Boolean(u),
+          strDiscountAndPriceClassName: w,
+          strPriceFormattedClassName: B,
         });
       }
       function f(e) {
@@ -7716,12 +7722,14 @@
             bHideDiscountPercentForCompliance: l,
             bShowNewFlag: g,
             bHidePrePurchase: _,
+            strDiscountAndPriceClassName: f,
+            strPriceFormattedClassName: b,
           } = e,
-          f = l;
-        let b;
+          w = l;
+        let B;
         return (
           r &&
-            (b = f
+            (B = w
               ? p.Z.Localize("#Discount_ARIA_Label_SpecialPrice", s)
               : p.Z.Localize("#Discount_ARIA_Label", r, s, o)),
           (0, i.jsxs)("div", {
@@ -7733,8 +7741,9 @@
               Discounted: Boolean(r),
               [c().PrePurchase]: Boolean(n),
               [c().NewItem]: Boolean(g),
+              [f ?? ""]: !!f,
             }),
-            "aria-label": b,
+            "aria-label": B,
             children: [
               Boolean(n && !_) &&
                 (0, i.jsx)("div", {
@@ -7750,7 +7759,7 @@
                   className: c().StoreSaleNewItem,
                   children: p.Z.Localize("#Flag_New"),
                 }),
-              Boolean(a && !f) &&
+              Boolean(a && !w) &&
                 (0, i.jsxs)(i.Fragment, {
                   children: [
                     (0, i.jsx)(d.Gq, {
@@ -7779,17 +7788,17 @@
                       }),
                   ],
                 }),
-              Boolean(!a && r && !f) &&
+              Boolean(!a && r && !w) &&
                 (0, i.jsx)("div", {
                   className: c().StoreSaleDiscountBox,
                   children: `-${r}%`,
                 }),
-              Boolean(f) &&
+              Boolean(w) &&
                 (0, i.jsx)("div", {
                   className: c().DiscountIconCtn,
                   children: (0, i.jsx)(u.XH_, {}),
                 }),
-              Boolean((r || a) && s && !f)
+              Boolean((r || a) && s && !w)
                 ? (0, i.jsxs)("div", {
                     className: (0, m.A)(c().StoreSaleDiscountedPriceCtn),
                     children: [
@@ -7804,13 +7813,17 @@
                         className: (0, m.A)({
                           [c().StoreSalePriceBox]: !0,
                           [c().SingleLineMode]: t,
+                          [b ?? ""]: !!b,
                         }),
                         children: o,
                       }),
                     ],
                   })
                 : (0, i.jsx)("div", {
-                    className: c().StoreSalePriceBox,
+                    className: (0, m.A)({
+                      [c().StoreSalePriceBox]: !0,
+                      [b ?? ""]: !!b,
+                    }),
                     children: o,
                   }),
             ],

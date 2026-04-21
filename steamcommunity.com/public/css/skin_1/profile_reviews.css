@@ -295,54 +295,66 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 /* dynamic select */
 .dselect_container {
 	display: inline-block;
+}
 
-	.dropcontainer ul {
-		background-color: #000000;
-		border-radius: 0 0 3px 3px;
-		list-style-type: none;
-		margin: 0;
-		max-height: 306px;
-		overflow: hidden auto;
-		padding: 5px;
-		position: absolute;
-		white-space: nowrap;
+.dselect_container .dropcontainer ul {
+	background-color: #000000;
+	border-radius: 0 0 3px 3px;
+	list-style-type: none;
+	margin: 0;
+	max-height: 306px;
+	overflow: hidden auto;
+	padding: 5px;
+	position: absolute;
+	white-space: nowrap;
+	z-index: 999999;
+}
 
-		&.dropdownhidden {
-			display: none;
-		}
+.dselect_container .dropcontainer ul.dropdownhidden {
+	display: none;
+}
 
-		&.dropdownvisible {
-			top: -4px;
-		}
+.dselect_container .dropcontainer ul.dropdownvisible {
+	top: -4px;
+}
 
-		li a {
-			color: #e1e1e1;
-			display: block;
-			font-size: 12px;
-			line-height: 22px;
-			padding-inline: 2px;
+.dselect_container .dropcontainer ul li a {
+	color: #e1e1e1;
+	display: block;
+	font-size: 12px;
+	line-height: 22px;
+	padding-inline: 2px;
+}
 
-			&.highlighted_selection {
-				background: #3196FF;
-				color: #FFFFFF;
-			}
-		}
-	}
+.dselect_container .dropcontainer ul li a.highlighted_selection {
+	background: #3196FF;
+	color: #FFFFFF;
+}
 
-	.trigger {
-		background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
-		background-color: #000000;
-		border-radius: 3px;
-		border-right: 7px solid #000000; /* HAAAAAX! */
-		color: #e1e1e1;
-		display: inline-block;
-		font-size: 12px;
-		line-height: 22px;
-		overflow: hidden;
-		padding-left: 8px;
-		padding-right: 20px;
-		vertical-align: middle;
-	}
+.dselect_container .trigger {
+	background-color: #000000;
+	border: 0 solid #000000;
+	border-radius: 3px;
+	color: #e1e1e1;
+	font-size: 12px;
+	line-height: 21px;
+	overflow: hidden;
+	padding-left: 8px;
+	padding-right: 26.45px !important;
+	position: relative;
+	vertical-align: middle;
+}
+
+html:not(.GamepadMode) .dselect_container .trigger {
+	height: 22px;
+}
+
+.dselect_container .trigger::after {
+	background: url(https://community.fastly.steamstatic.com/public/images/skin_1/arrowDn9x5.gif) no-repeat left center;
+	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 15.5px;
 }
 
 @media screen and (max-width: 910px)
@@ -356,7 +368,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 
 }
 
-	html.responsive.gamepad .review_list #rightContents {
+	html.responsive.GamepadMode .review_list #rightContents {
 		float: none;
 		width: auto;
 	}

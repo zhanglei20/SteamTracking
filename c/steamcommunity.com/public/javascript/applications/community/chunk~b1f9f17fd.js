@@ -109,14 +109,47 @@
     },
     chunkid: (module) => {
       module.exports = {
-        dummy: "_2lUotEhh9O15IiRoOJkvyT",
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         Ctn: "LGN794ocmn1iDN3mAilmA",
+        TitlePriceCtn: "kmXIYRJ_XTRPAlYph2E50",
+        Title: "_1Y6V5Io76K2V2ndqKbJ3Jj",
+        PriceFormatted: "fw4s5ZhAN1s7JOz2St8ll",
         Capsule: "_1YmWtGQx7RPg34mzRPqMd-",
+        Info: "_3wnfYKWMVy4IzwkuD-ZTnX",
+        description: "_2GCyETuEDO1wYJirDK5xzd",
+        BackgroundAnimation: "_1PMJYtmG-0LXiCIzsf7hHH",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1fYjwZXV0mHTRHEYcE_jQ8",
+        "ItemFocusAnim-darkerGrey": "_1LEV1gSZkd--onnkOFZYRV",
+        "ItemFocusAnim-darkGrey": "_2Gt-Rn_dZpXo5pADmd7xgt",
+        "ItemFocusAnim-grey": "_1NQuzlTuuuY5E17W1_Dnvp",
+        "ItemFocusAnim-translucent-white-10": "qPLst3oEHDXrPYy7-xr5r",
+        "ItemFocusAnim-translucent-white-20": "_2RPOy0hbLhHHYOoGti8CRw",
+        "ItemFocusAnimBorder-darkGrey": "_1bwrUjQwfSOh-ossMdGObJ",
+        "ItemFocusAnim-green": "_3DJ7-ozfbmWiW9sFiyrIsz",
+        focusAnimation: "_4EfsGVQ9T6jp3Au9FW6bc",
+        hoverAnimation: "_1F117LcLa8O5wSOCVaeow0",
       };
     },
     chunkid: (module) => {
       module.exports = {
-        dummy: "_23CcOO7O5wBfw9ITeodREn",
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
+        Ctn: "_245e39IWkOSCG4y_xIE0CG",
+        Title: "_2BhcS1KAkFef-tf0ECF0S",
+        PriceFormatted: "Y2Qy5QpQjJLjG4RYUG6go",
+        description: "_39_l0k1tIEgCNXIQ5AcbFN",
+        BackgroundAnimation: "_3--8dqRLvQdQpxNt3iZ2Ci",
+        "ItemFocusAnim-darkerGrey-nocolor": "fZuuzaBtgr14k-PQsJpWW",
+        "ItemFocusAnim-darkerGrey": "_2aV5_tetZEzX88CDjEbCdk",
+        "ItemFocusAnim-darkGrey": "fojjsnGqkNFh7TEC5Ed2g",
+        "ItemFocusAnim-grey": "dXvi2hnxKE2qCZdVqrR-d",
+        "ItemFocusAnim-translucent-white-10": "_3o6uxDJJj4OaDSP8EcAvO2",
+        "ItemFocusAnim-translucent-white-20": "_2I86Qve6ZB0MtINyL05lyE",
+        "ItemFocusAnimBorder-darkGrey": "_35rf_zG7ShhTHPT_a13fN",
+        "ItemFocusAnim-green": "_1Qgsj5QhH-IG4ADf6QONPF",
+        focusAnimation: "_1yNGVGnRAlDmRQ7l8iSCA-",
+        hoverAnimation: "_1G3IJTzCPPT8WHbsHmy_MJ",
       };
     },
     chunkid: (module) => {
@@ -362,6 +395,7 @@
         CommunityPreviewReservationWidgetControl: "k82adLwDVk_0_Qpi4uKHS",
         reservecopy: "_2mg-ayeqtfvSlVBeUNudsd",
         reserverow: "_1DB5FQ_X8YXXb9MTrWamkY",
+        purchaseaction: "_10a9BMKHCowrtgelPrWPvh",
         reserverowReserved: "_27GR40w6gCHGSSzOvM-6f6",
         reservebutton: "_3I2SPz9E3c4Z9kizQ8Si8",
         noreserve: "UsTrTU7oUGQiO_uLnTTBQ",
@@ -28562,14 +28596,22 @@
                     bPreferAssetWithoutOverride: !1,
                   }),
                 (0, _.jsx)("span", {
+                  className: _().Title,
                   children: _.name,
                 }),
                 (0, _.jsx)(_._, {
                   _: _,
                   bSingleLineMode: !0,
+                  bHidePrePurchase: 10 == _.type,
+                  strContainerClassName: _().PriceCtn,
+                  strDiscountAndPriceClassName: _().PriceDiscount,
+                  strPriceFormattedClassName: _().PriceFormatted,
                 }),
-                (0, _.jsx)(_._, {
-                  text: _,
+                (0, _.jsx)("div", {
+                  className: _().description,
+                  children: (0, _.jsx)(_._, {
+                    text: _,
+                  }),
                 }),
               ],
             })
@@ -28597,48 +28639,44 @@
                       bPreferAssetWithoutOverride: !1,
                     }),
                 }),
-                (0, _.jsx)("span", {
-                  children: _.name,
-                }),
-                (0, _.jsx)(_._, {
-                  _: _,
-                  bSingleLineMode: !0,
-                }),
-                (0, _.jsx)(_._, {
-                  text: _,
+                (0, _.jsxs)("div", {
+                  className: _().Info,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().TitlePriceCtn,
+                      children: [
+                        (0, _.jsx)("span", {
+                          className: _().Title,
+                          children: _.name,
+                        }),
+                        (0, _.jsx)(_._, {
+                          _: _,
+                          bSingleLineMode: !0,
+                          strContainerClassName: _().PriceCtn,
+                          strDiscountAndPriceClassName: _().PriceDiscount,
+                          bHidePrePurchase: 10 == _.type,
+                          strPriceFormattedClassName: _().PriceFormatted,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().description,
+                      children: (0, _.jsx)(_._, {
+                        text: _,
+                      }),
+                    }),
+                  ],
                 }),
               ],
             })
           : null;
       }
-      var _ = __webpack_require__("chunkid");
-      _._.EUNIVERSE;
-      const _ = ["HK", "JP", "KR", "TW"],
-        _ =
-          2 == _._.EUNIVERSE
-            ? [501556, 501557, 501558, 502103, 502106]
-            : [595603, 595604, 595605, 946113, 946114];
-      const _ = 1700157600,
-        _ = 2 == _._.EUNIVERSE ? [502103, 502106] : [946113, 946114, 946115];
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid");
       function _(_) {
-        if (_ && _.includes(_)) {
-          const _ = _._.NOW;
-          if (_ && _ > _) return _;
-        }
-      }
-      var _ = __webpack_require__("chunkid");
-      function _(_) {
-        const { hardwareDetail: _ } = _,
-          _ = _(_.packageid),
-          _ = new Date(1e3 * _._.NOW),
-          _ = {
-            weekday: void 0,
-            day: "numeric",
-            hour: "2-digit",
-            month: "long",
-            year: !!_ && (0, _._)(new Date(1e3 * _), _) ? void 0 : "numeric",
-            timeZoneName: "short",
-          };
+        const { hardwareDetail: _, storeItemReleaseInfo: _ } = _,
+          _ = (0, _._)(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -28649,21 +28687,22 @@
                 children: _._.Localize("#Sale_default_label_18"),
               }),
             }),
-            (0, _.jsx)("div", {
-              className: (0, _._)(_.expecteddate, "ReservationExpectedDateCtn"),
-              children: (0, _.jsx)("div", {
+            _.requires_reservation &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
-                  _.expecteddate_str,
-                  "ReservationExpectedDate",
+                  _.expecteddate,
+                  "ReservationExpectedDateCtn",
                 ),
-                children: _
-                  ? _._.Localize(
-                      "#Sale_Reservation_Available_Date",
-                      (0, _._)(_, _),
-                    )
-                  : _._.Localize("#Sale_default_label_18"),
+                children: (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _.expecteddate_str,
+                    "ReservationExpectedDate",
+                  ),
+                  children: _
+                    ? _._.Localize("#Sale_Reservation_Available_Date", _)
+                    : _._.Localize("#Sale_default_label_18"),
+                }),
               }),
-            }),
           ],
         });
       }
@@ -28671,46 +28710,54 @@
       function _(_) {
         const { reservationDef: _, disabled: _ } = _,
           { data: _ } = (0, _._)(_.reservation_package),
-          { data: _ } = (0, _._)(_.psu_less_package);
-        if (_) return null;
-        if (!_ || (_.psu_less_package && !_))
-          return (0, _.jsx)(_._, {
-            size: "medium",
-            position: "center",
-            string: _._.Localize("#Loading"),
-          });
-        if (
-          _.reservation_state ==
-          _._.k_EPurchaseReservationState_CancelPendingRefund
-        )
-          return (0, _.jsx)("div", {
-            className: (0, _._)(_.noreserve, "NoReserverMsg"),
-            children: _._.Localize("#Sale_Reservation_CanceledPendingRefund"),
-          });
-        return !!_(_.packageid)
-          ? (0, _.jsx)(_, {
-              hardwareDetail: _,
-            })
-          : (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
-                  reservationDef: _,
-                  hardwareDetail: _,
-                  bPSULessModel: !1,
-                }),
-                (0, _.jsx)(_._, {
-                  reservationDef: _,
-                  hardwareDetail: _,
-                }),
-                _ &&
-                  !!_.allow_purchase_in_country &&
-                  (0, _.jsx)(_._, {
-                    reservationDef: _,
+          { data: _ } = (0, _._)(_.psu_less_package),
+          _ = (0, _._)(_.reservation_package),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _
+          ? null
+          : !_ || (_.psu_less_package && !_) || void 0 === _
+            ? (0, _.jsx)(_._, {
+                size: "medium",
+                position: "center",
+                string: _._.Localize("#Loading"),
+              })
+            : _.reservation_state ==
+                _._.k_EPurchaseReservationState_CancelPendingRefund
+              ? (0, _.jsx)("div", {
+                  className: (0, _._)(_.noreserve, "NoReserverMsg"),
+                  children: _._.Localize(
+                    "#Sale_Reservation_CanceledPendingRefund",
+                  ),
+                })
+              : _ && _.is_coming_soon
+                ? (0, _.jsx)(_, {
                     hardwareDetail: _,
-                    bPSULessModel: !0,
-                  }),
-              ],
-            });
+                    storeItemReleaseInfo: _,
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsxs)("div", {
+                      className: _.purchaseaction,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          reservationDef: _,
+                          hardwareDetail: _,
+                          bPSULessModel: !1,
+                        }),
+                        (0, _.jsx)(_._, {
+                          reservationDef: _,
+                          hardwareDetail: _,
+                        }),
+                        _ &&
+                          !!_.allow_purchase_in_country &&
+                          (0, _.jsx)(_._, {
+                            reservationDef: _,
+                            hardwareDetail: _,
+                            bPSULessModel: !0,
+                          }),
+                      ],
+                    }),
+                  });
       }
       function _(_) {
         var _, _;
@@ -28811,9 +28858,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       const _ = {
@@ -29096,6 +29140,9 @@
           _ = _ ? "-" : "";
         return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
       }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const {
             section: _,
@@ -29229,6 +29276,7 @@
             (0, _.jsx)(_._, {
               _: _,
               bSingleLineMode: !0,
+              bHidePrePurchase: !0,
             }),
           ],
         });
@@ -29401,6 +29449,12 @@
         }
         return null;
       }
+      _._.EUNIVERSE;
+      const _ = ["HK", "JP", "KR", "TW"],
+        _ =
+          2 == _._.EUNIVERSE
+            ? [501556, 501557, 501558, 502103, 502106]
+            : [595603, 595604, 595605, 946113, 946114];
       function _(_, _, _) {
         let _ = null;
         return (
@@ -34665,7 +34719,6 @@
           });
         });
       var _,
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {

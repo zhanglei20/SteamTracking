@@ -51,6 +51,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
         SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
         none: "T3Fb5KTXwIHM2B-ThTvEs",
@@ -68,6 +69,7 @@
     chunkid: (module) => {
       module.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
         MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
         SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
@@ -87,6 +89,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         avatarHolder: "nibodjvvrm86uCfnnAn4g",
         avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
         avatar: "_3h-QRJGxnVOIExtHD1R0f2",
@@ -147,6 +150,7 @@
     },
     chunkid: (module) => {
       module.exports = {
+        narrowWidth: "500px",
         chatEntryControls: "_3Ule3rolhZJiBN4yNNtk1s",
         chatTextarea: "_113iuw_HlE_qSgt9cGWCSv",
         chatEntryActionsGroup: "_2WfNoLBdfKwyutA6ho4aSH",

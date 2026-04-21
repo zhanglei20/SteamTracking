@@ -1984,6 +1984,7 @@
     "ControllerWelcome_Title": "Steam Controller Welcome",
     "ControllerWelcome_Next": "Next",
     "ControllerWelcome_Close": "Close",
+    "ControllerWelcome_Skip": "Skip",
     "ControllerWelcome_Welcome_Title": "Steam Controller detected!",
     "ControllerWelcome_Welcome_Body": "Before you get in-game, let's install an important firmware update.",
     "ControllerWelcome_PlugInPuck_Title": "Plug in the Steam Controller Puck",

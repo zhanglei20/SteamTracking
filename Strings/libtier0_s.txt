@@ -50,6 +50,7 @@ $ORIGIN
 %s: '%s', '%s'
 %s: __pos (which is %zu) > this->size() (which is %zu)
 %s: no such process %d\n
+']48D
 ( ( size_t )( m_nBlocksAllocated ) % 8 ) == 0
 ( ( size_t )( m_nLogicalBytesAllocated ) % 8 ) == 0
 (%zu) Descend: %s, (%s), %s\n
@@ -116,7 +117,7 @@ $ORIGIN
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-23:19:38
+18:46:38
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -124,7 +125,7 @@ $ORIGIN
 <unknown>
 AllocateCrashMemoryReserve
 Anonymous mutex cannot have bAllAccess == true
-Apr 20 2026
+Apr 21 2026
 AreStackTrackingFiltersEnabledAtStart
 Assert( %s ):%s:%d\n
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
@@ -1010,7 +1011,6 @@ new[]
 noexcept
 non-transaction clone for
 non-virtual thunk to
-nyFH
 obj_count
 obj_size
 open

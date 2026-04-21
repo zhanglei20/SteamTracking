@@ -4192,6 +4192,11 @@
                     br: p.qM.readUint32,
                     bw: p.gp.writeUint32,
                   },
+                  market_name_inside_group: {
+                    n: 38,
+                    br: p.qM.readString,
+                    bw: p.gp.writeString,
+                  },
                 },
               }),
             xe.sm_m

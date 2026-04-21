@@ -5,6 +5,7 @@
   {
     56420: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
         SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
         none: "T3Fb5KTXwIHM2B-ThTvEs",
@@ -22,6 +23,7 @@
     18828: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
         threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
         blocked: "VTxPkslK1CSpKNFMgKg7d",
@@ -58,6 +60,7 @@
     70342: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
         MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
         SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
@@ -254,8 +257,8 @@
             bEllipsisName: N,
             ...x
           } = this.props;
-          let O = null,
-            W = null,
+          let W = null,
+            O = null,
             P = null,
             T = [
               e,
@@ -265,11 +268,11 @@
               R && p().NoMask,
             ];
           S || r.has_public_party_beacon
-            ? (W = (0, s.jsx)(w, { persona: r }))
+            ? (O = (0, s.jsx)(w, { persona: r }))
             : (0, o.aP)(i)
-              ? ((W = (0, c.we)("#PersonaStateBlocked")), T.push(p().blocked))
+              ? ((O = (0, c.we)("#PersonaStateBlocked")), T.push(p().blocked))
               : r.is_ingame
-                ? ((W =
+                ? ((O =
                     !r.is_in_nonsteam_game || a || (0, o.S$)(i)
                       ? r.GetCurrentGameName()
                       : (0, c.we)("#PersonaStateInNonSteamGame")),
@@ -279,12 +282,12 @@
                       (P = (0, c.we)("#PersonaStateAway"))
                     : (P = r.GetCurrentGameRichPresence()))
                 : r.m_broadcastAccountId &&
-                  (W = (0, c.we)("#PersonaStateWatchingBroadcast")),
-            W || (W = r.GetLocalizedOnlineStatus()),
-            z && (W = z());
+                  (O = (0, c.we)("#PersonaStateWatchingBroadcast")),
+            O || (O = r.GetLocalizedOnlineStatus()),
+            z && (O = z());
           let C = !j && !_;
           !1 === _ && (C = !0),
-            r.is_awayOrSnooze && C && (O = (0, s.jsx)(g, { persona: r }));
+            r.is_awayOrSnooze && C && (W = (0, s.jsx)(g, { persona: r }));
           let G = null;
           t
             ? (G = (0, s.jsx)("div", {
@@ -298,7 +301,7 @@
             (!y && P) || T.push(p().twoLine);
           const A = !r.is_ingame && !b,
             L = !M && P,
-            k = W && (!y || !L),
+            k = O && (!y || !L),
             q = (0, o.ID)(h.TS.LAUNCHER_TYPE);
           let U = u && !n,
             D = U ? u : r.m_strPlayerName,
@@ -336,7 +339,7 @@
                       children: " *",
                     }),
                   (0, s.jsx)(f, { persona: r }),
-                  O,
+                  W,
                   (r.m_bPlayerNamePending || r.m_bAvatarPending) &&
                     q &&
                     (0, s.jsx)("div", {
@@ -366,7 +369,7 @@
                               title: (0, c.we)("#User_GameInfoHidden"),
                               children: (0, s.jsx)(B.jZl, {}),
                             }),
-                          W,
+                          O,
                         ],
                       }),
                     L &&
@@ -417,7 +420,7 @@
         d0: () => R,
         Dv: () => N,
         Nd: () => G,
-        EW: () => O,
+        EW: () => W,
       });
       var i,
         s,
@@ -1188,7 +1191,7 @@
           queryKey: ["FriendsList", r, l],
           queryFn: async () => {
             const e = s.fetchQuery(x(t, r)),
-              a = l.loadNicknames ? s.fetchQuery(W(t, r)) : void 0,
+              a = l.loadNicknames ? s.fetchQuery(O(t, r)) : void 0,
               n = l.loadFavorites ? s.fetchQuery(T(t, r)) : void 0,
               c = await e,
               o = new Map(c.map((e) => [e, s.fetchQuery((0, I.mK)(i, t, e))]));
@@ -1242,7 +1245,7 @@
           },
         };
       }
-      function O() {
+      function W() {
         const e = (0, n.KV)(),
           t = (0, a.LH)();
         return (0, o.I)({
@@ -1266,7 +1269,7 @@
           },
         });
       }
-      function W(e, t) {
+      function O(e, t) {
         return {
           queryKey: ["GetFriendNicknameList", t],
           queryFn: async () => {
@@ -1279,7 +1282,7 @@
         return (function (e = {}) {
           const t = (0, n.KV)(),
             r = (0, a.LH)();
-          return (0, o.I)({ ...W(t, r), ...e });
+          return (0, o.I)({ ...O(t, r), ...e });
         })({
           ...e,
           select: (e) =>

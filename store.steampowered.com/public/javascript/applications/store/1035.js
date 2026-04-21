@@ -5,6 +5,7 @@
   {
     43047: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         avatarHolder: "nibodjvvrm86uCfnnAn4g",
         avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
         avatar: "_3h-QRJGxnVOIExtHD1R0f2",

@@ -312,9 +312,26 @@
     },
     chunkid: (module) => {
       module.exports = {
-        dummy: "_2lUotEhh9O15IiRoOJkvyT",
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
         Ctn: "LGN794ocmn1iDN3mAilmA",
+        TitlePriceCtn: "kmXIYRJ_XTRPAlYph2E50",
+        Title: "_1Y6V5Io76K2V2ndqKbJ3Jj",
+        PriceFormatted: "fw4s5ZhAN1s7JOz2St8ll",
         Capsule: "_1YmWtGQx7RPg34mzRPqMd-",
+        Info: "_3wnfYKWMVy4IzwkuD-ZTnX",
+        description: "_2GCyETuEDO1wYJirDK5xzd",
+        BackgroundAnimation: "_1PMJYtmG-0LXiCIzsf7hHH",
+        "ItemFocusAnim-darkerGrey-nocolor": "_1fYjwZXV0mHTRHEYcE_jQ8",
+        "ItemFocusAnim-darkerGrey": "_1LEV1gSZkd--onnkOFZYRV",
+        "ItemFocusAnim-darkGrey": "_2Gt-Rn_dZpXo5pADmd7xgt",
+        "ItemFocusAnim-grey": "_1NQuzlTuuuY5E17W1_Dnvp",
+        "ItemFocusAnim-translucent-white-10": "qPLst3oEHDXrPYy7-xr5r",
+        "ItemFocusAnim-translucent-white-20": "_2RPOy0hbLhHHYOoGti8CRw",
+        "ItemFocusAnimBorder-darkGrey": "_1bwrUjQwfSOh-ossMdGObJ",
+        "ItemFocusAnim-green": "_3DJ7-ozfbmWiW9sFiyrIsz",
+        focusAnimation: "_4EfsGVQ9T6jp3Au9FW6bc",
+        hoverAnimation: "_1F117LcLa8O5wSOCVaeow0",
       };
     },
     chunkid: (module) => {
@@ -358,7 +375,23 @@
     },
     chunkid: (module) => {
       module.exports = {
-        dummy: "_23CcOO7O5wBfw9ITeodREn",
+        narrowWidth: "500px",
+        "duration-app-launch": "800ms",
+        Ctn: "_245e39IWkOSCG4y_xIE0CG",
+        Title: "_2BhcS1KAkFef-tf0ECF0S",
+        PriceFormatted: "Y2Qy5QpQjJLjG4RYUG6go",
+        description: "_39_l0k1tIEgCNXIQ5AcbFN",
+        BackgroundAnimation: "_3--8dqRLvQdQpxNt3iZ2Ci",
+        "ItemFocusAnim-darkerGrey-nocolor": "fZuuzaBtgr14k-PQsJpWW",
+        "ItemFocusAnim-darkerGrey": "_2aV5_tetZEzX88CDjEbCdk",
+        "ItemFocusAnim-darkGrey": "fojjsnGqkNFh7TEC5Ed2g",
+        "ItemFocusAnim-grey": "dXvi2hnxKE2qCZdVqrR-d",
+        "ItemFocusAnim-translucent-white-10": "_3o6uxDJJj4OaDSP8EcAvO2",
+        "ItemFocusAnim-translucent-white-20": "_2I86Qve6ZB0MtINyL05lyE",
+        "ItemFocusAnimBorder-darkGrey": "_35rf_zG7ShhTHPT_a13fN",
+        "ItemFocusAnim-green": "_1Qgsj5QhH-IG4ADf6QONPF",
+        focusAnimation: "_1yNGVGnRAlDmRQ7l8iSCA-",
+        hoverAnimation: "_1G3IJTzCPPT8WHbsHmy_MJ",
       };
     },
     chunkid: (module) => {
@@ -567,6 +600,7 @@
         CommunityPreviewReservationWidgetControl: "k82adLwDVk_0_Qpi4uKHS",
         reservecopy: "_2mg-ayeqtfvSlVBeUNudsd",
         reserverow: "_1DB5FQ_X8YXXb9MTrWamkY",
+        purchaseaction: "_10a9BMKHCowrtgelPrWPvh",
         reserverowReserved: "_27GR40w6gCHGSSzOvM-6f6",
         reservebutton: "_3I2SPz9E3c4Z9kizQ8Si8",
         noreserve: "UsTrTU7oUGQiO_uLnTTBQ",
@@ -3810,7 +3844,6 @@
       __webpack_require__._(module_exports, {
         _: () => _,
         _: () => _,
-        _: () => _,
       });
       var _ = __webpack_require__("chunkid");
       const _ = 2 == _._.EUNIVERSE ? 404860 : 1675200,
@@ -3821,14 +3854,6 @@
             : [595603, 595604, 595605, 946113, 946114];
       function _(_) {
         return _.some((_) => _.includes(_)) && _.includes(_._.country_code);
-      }
-      const _ = 1700157600,
-        _ = 2 == _._.EUNIVERSE ? [502103, 502106] : [946113, 946114, 946115];
-      function _(_) {
-        if (_ && _.includes(_)) {
-          const _ = _._.NOW;
-          if (_ && _ > _) return _;
-        }
       }
     },
     chunkid: (module, module_exports, __webpack_require__) => {
@@ -17461,14 +17486,22 @@
                     bPreferAssetWithoutOverride: !1,
                   }),
                 (0, _.jsx)("span", {
+                  className: _().Title,
                   children: _.name,
                 }),
                 (0, _.jsx)(_._, {
                   _: _,
                   bSingleLineMode: !0,
+                  bHidePrePurchase: 10 == _.type,
+                  strContainerClassName: _().PriceCtn,
+                  strDiscountAndPriceClassName: _().PriceDiscount,
+                  strPriceFormattedClassName: _().PriceFormatted,
                 }),
-                (0, _.jsx)(_._, {
-                  text: _,
+                (0, _.jsx)("div", {
+                  className: _().description,
+                  children: (0, _.jsx)(_._, {
+                    text: _,
+                  }),
                 }),
               ],
             })
@@ -17496,15 +17529,33 @@
                       bPreferAssetWithoutOverride: !1,
                     }),
                 }),
-                (0, _.jsx)("span", {
-                  children: _.name,
-                }),
-                (0, _.jsx)(_._, {
-                  _: _,
-                  bSingleLineMode: !0,
-                }),
-                (0, _.jsx)(_._, {
-                  text: _,
+                (0, _.jsxs)("div", {
+                  className: _().Info,
+                  children: [
+                    (0, _.jsxs)("div", {
+                      className: _().TitlePriceCtn,
+                      children: [
+                        (0, _.jsx)("span", {
+                          className: _().Title,
+                          children: _.name,
+                        }),
+                        (0, _.jsx)(_._, {
+                          _: _,
+                          bSingleLineMode: !0,
+                          strContainerClassName: _().PriceCtn,
+                          strDiscountAndPriceClassName: _().PriceDiscount,
+                          bHidePrePurchase: 10 == _.type,
+                          strPriceFormattedClassName: _().PriceFormatted,
+                        }),
+                      ],
+                    }),
+                    (0, _.jsx)("div", {
+                      className: _().description,
+                      children: (0, _.jsx)(_._, {
+                        text: _,
+                      }),
+                    }),
+                  ],
                 }),
               ],
             })
@@ -17512,20 +17563,10 @@
       }
       var _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
-        const { hardwareDetail: _ } = _,
-          _ = (0, _._)(_.packageid),
-          _ = new Date(1e3 * _._.NOW),
-          _ = {
-            weekday: void 0,
-            day: "numeric",
-            hour: "2-digit",
-            month: "long",
-            year: !!_ && (0, _._)(new Date(1e3 * _), _) ? void 0 : "numeric",
-            timeZoneName: "short",
-          };
+        const { hardwareDetail: _, storeItemReleaseInfo: _ } = _,
+          _ = (0, _._)(_);
         return (0, _.jsxs)(_.Fragment, {
           children: [
             (0, _.jsx)("div", {
@@ -17536,21 +17577,22 @@
                 children: _._.Localize("#Sale_default_label_18"),
               }),
             }),
-            (0, _.jsx)("div", {
-              className: (0, _._)(_.expecteddate, "ReservationExpectedDateCtn"),
-              children: (0, _.jsx)("div", {
+            _.requires_reservation &&
+              (0, _.jsx)("div", {
                 className: (0, _._)(
-                  _.expecteddate_str,
-                  "ReservationExpectedDate",
+                  _.expecteddate,
+                  "ReservationExpectedDateCtn",
                 ),
-                children: _
-                  ? _._.Localize(
-                      "#Sale_Reservation_Available_Date",
-                      (0, _._)(_, _),
-                    )
-                  : _._.Localize("#Sale_default_label_18"),
+                children: (0, _.jsx)("div", {
+                  className: (0, _._)(
+                    _.expecteddate_str,
+                    "ReservationExpectedDate",
+                  ),
+                  children: _
+                    ? _._.Localize("#Sale_Reservation_Available_Date", _)
+                    : _._.Localize("#Sale_default_label_18"),
+                }),
               }),
-            }),
           ],
         });
       }
@@ -17558,46 +17600,54 @@
       function _(_) {
         const { reservationDef: _, disabled: _ } = _,
           { data: _ } = (0, _._)(_.reservation_package),
-          { data: _ } = (0, _._)(_.psu_less_package);
-        if (_) return null;
-        if (!_ || (_.psu_less_package && !_))
-          return (0, _.jsx)(_._, {
-            size: "medium",
-            position: "center",
-            string: _._.Localize("#Loading"),
-          });
-        if (
-          _.reservation_state ==
-          _._.k_EPurchaseReservationState_CancelPendingRefund
-        )
-          return (0, _.jsx)("div", {
-            className: (0, _._)(_.noreserve, "NoReserverMsg"),
-            children: _._.Localize("#Sale_Reservation_CanceledPendingRefund"),
-          });
-        return !!(0, _._)(_.packageid)
-          ? (0, _.jsx)(_, {
-              hardwareDetail: _,
-            })
-          : (0, _.jsxs)(_.Fragment, {
-              children: [
-                (0, _.jsx)(_._, {
-                  reservationDef: _,
-                  hardwareDetail: _,
-                  bPSULessModel: !1,
-                }),
-                (0, _.jsx)(_._, {
-                  reservationDef: _,
-                  hardwareDetail: _,
-                }),
-                _ &&
-                  !!_.allow_purchase_in_country &&
-                  (0, _.jsx)(_._, {
-                    reservationDef: _,
+          { data: _ } = (0, _._)(_.psu_less_package),
+          _ = (0, _._)(_.reservation_package),
+          { data: _ } = (0, _._)(_),
+          { data: _ } = (0, _._)(_);
+        return _
+          ? null
+          : !_ || (_.psu_less_package && !_) || void 0 === _
+            ? (0, _.jsx)(_._, {
+                size: "medium",
+                position: "center",
+                string: _._.Localize("#Loading"),
+              })
+            : _.reservation_state ==
+                _._.k_EPurchaseReservationState_CancelPendingRefund
+              ? (0, _.jsx)("div", {
+                  className: (0, _._)(_.noreserve, "NoReserverMsg"),
+                  children: _._.Localize(
+                    "#Sale_Reservation_CanceledPendingRefund",
+                  ),
+                })
+              : _ && _.is_coming_soon
+                ? (0, _.jsx)(_, {
                     hardwareDetail: _,
-                    bPSULessModel: !0,
-                  }),
-              ],
-            });
+                    storeItemReleaseInfo: _,
+                  })
+                : (0, _.jsx)(_.Fragment, {
+                    children: (0, _.jsxs)("div", {
+                      className: _.purchaseaction,
+                      children: [
+                        (0, _.jsx)(_._, {
+                          reservationDef: _,
+                          hardwareDetail: _,
+                          bPSULessModel: !1,
+                        }),
+                        (0, _.jsx)(_._, {
+                          reservationDef: _,
+                          hardwareDetail: _,
+                        }),
+                        _ &&
+                          !!_.allow_purchase_in_country &&
+                          (0, _.jsx)(_._, {
+                            reservationDef: _,
+                            hardwareDetail: _,
+                            bPSULessModel: !0,
+                          }),
+                      ],
+                    }),
+                  });
       }
       function _(_) {
         const { section: _, disabled: _ } = _,
@@ -17822,15 +17872,7 @@
           },
         ),
         _ = (0, _.createContext)(null);
-      function _(_) {
-        return _.sort().join("_");
-      }
-      function _(_) {
-        return _.tuple_id.split("_").map((_) => Number(_));
-      }
-      var _,
-        _ = __webpack_require__("chunkid"),
-        _ = __webpack_require__._(_);
+      var _;
       !(function (_) {
         (_[(_.k_ECurrencyCodeInvalid = 0)] = "k_ECurrencyCodeInvalid"),
           (_[(_.k_ECurrencyCodeUSD = 1)] = "k_ECurrencyCodeUSD"),
@@ -17883,118 +17925,6 @@
           (_[(_.k_ECurrencyCodeMax = 48)] = "k_ECurrencyCodeMax");
       })(_ || (_ = {}));
       _.k_ECurrencyCodeTRY, _.k_ECurrencyCodeARS;
-      function _(_) {
-        switch (_) {
-          case "USD":
-          case "USD_CIS":
-          case "USD_MENA":
-          case "USD_LATAM":
-          case "USD_SASIA":
-            return _.k_ECurrencyCodeUSD;
-          case "GBP":
-            return _.k_ECurrencyCodeGBP;
-          case "EUR":
-            return _.k_ECurrencyCodeEUR;
-          case "CHF":
-            return _.k_ECurrencyCodeCHF;
-          case "RUB":
-            return _.k_ECurrencyCodeRUB;
-          case "PLN":
-            return _.k_ECurrencyCodePLN;
-          case "BRL":
-            return _.k_ECurrencyCodeBRL;
-          case "JPY":
-            return _.k_ECurrencyCodeJPY;
-          case "NOK":
-            return _.k_ECurrencyCodeNOK;
-          case "IDR":
-            return _.k_ECurrencyCodeIDR;
-          case "MYR":
-            return _.k_ECurrencyCodeMYR;
-          case "PHP":
-            return _.k_ECurrencyCodePHP;
-          case "SGD":
-            return _.k_ECurrencyCodeSGD;
-          case "THB":
-            return _.k_ECurrencyCodeTHB;
-          case "VND":
-            return _.k_ECurrencyCodeVND;
-          case "KRW":
-            return _.k_ECurrencyCodeKRW;
-          case "TRY":
-            return _.k_ECurrencyCodeTRY;
-          case "UAH":
-            return _.k_ECurrencyCodeUAH;
-          case "MXN":
-            return _.k_ECurrencyCodeMXN;
-          case "CAD":
-            return _.k_ECurrencyCodeCAD;
-          case "AUD":
-            return _.k_ECurrencyCodeAUD;
-          case "NZD":
-            return _.k_ECurrencyCodeNZD;
-          case "CNY":
-            return _.k_ECurrencyCodeCNY;
-          case "INR":
-            return _.k_ECurrencyCodeINR;
-          case "CLP":
-            return _.k_ECurrencyCodeCLP;
-          case "PEN":
-            return _.k_ECurrencyCodePEN;
-          case "COP":
-            return _.k_ECurrencyCodeCOP;
-          case "ZAR":
-            return _.k_ECurrencyCodeZAR;
-          case "HKD":
-            return _.k_ECurrencyCodeHKD;
-          case "TWD":
-            return _.k_ECurrencyCodeTWD;
-          case "SAR":
-            return _.k_ECurrencyCodeSAR;
-          case "AED":
-            return _.k_ECurrencyCodeAED;
-          case "SEK":
-            return _.k_ECurrencyCodeSEK;
-          case "ARS":
-            return _.k_ECurrencyCodeARS;
-          case "ILS":
-            return _.k_ECurrencyCodeILS;
-          case "BYN":
-            return _.k_ECurrencyCodeBYN;
-          case "KZT":
-            return _.k_ECurrencyCodeKZT;
-          case "KWD":
-            return _.k_ECurrencyCodeKWD;
-          case "QAR":
-            return _.k_ECurrencyCodeQAR;
-          case "CRC":
-            return _.k_ECurrencyCodeCRC;
-          case "UYU":
-            return _.k_ECurrencyCodeUYU;
-          case "BGN":
-            return _.k_ECurrencyCodeBGN;
-          case "HRK":
-            return _.k_ECurrencyCodeHRK;
-          case "CZK":
-            return _.k_ECurrencyCodeCZK;
-          case "DKK":
-            return _.k_ECurrencyCodeDKK;
-          case "HUF":
-            return _.k_ECurrencyCodeHUF;
-          case "RON":
-            return _.k_ECurrencyCodeRON;
-          default:
-            return 6 == _.length
-              ? _(_.substring(0, 3))
-              : Number.isInteger(Number(_))
-                ? Number(_)
-                : ((0, _._)(
-                    !1,
-                    `ASCIICurrencyCodeToECurrencyCode unexpected code ${_}`,
-                  ),
-                  _.k_ECurrencyCodeInvalid);
-        }
-      }
       const _ = {
           [_.k_ECurrencyCodeInvalid]: {},
           [_.k_ECurrencyCodeUSD]: {
@@ -18275,6 +18205,15 @@
           _ = _ ? "-" : "";
         return _ ? `${_}${_}${_}${_}` : `${_}${_}${_}${_}`;
       }
+      var _ = __webpack_require__("chunkid");
+      function _(_) {
+        return _.sort().join("_");
+      }
+      function _(_) {
+        return _.tuple_id.split("_").map((_) => Number(_));
+      }
+      var _ = __webpack_require__("chunkid"),
+        _ = __webpack_require__._(_);
       function _(_) {
         const {
             section: _,
@@ -18372,6 +18311,7 @@
             (0, _.jsx)(_._, {
               _: _,
               bSingleLineMode: !0,
+              bHidePrePurchase: !0,
             }),
           ],
         });
@@ -18519,13 +18459,301 @@
         if (_ && _) {
           const _ =
               Number(_.final_price_in_cents) - Number(_.final_price_in_cents),
-            _ = _(_._.country_code.toUpperCase());
+            _ = (function (_) {
+              switch (_?.toUpperCase()) {
+                case "AE":
+                  return _.k_ECurrencyCodeAED;
+                case "AU":
+                  return _.k_ECurrencyCodeAUD;
+                case "BR":
+                  return _.k_ECurrencyCodeBRL;
+                case "CA":
+                  return _.k_ECurrencyCodeCAD;
+                case "CH":
+                case "LI":
+                  return _.k_ECurrencyCodeCHF;
+                case "CL":
+                  return _.k_ECurrencyCodeCLP;
+                case "CN":
+                case "XC":
+                  return _.k_ECurrencyCodeCNY;
+                case "CO":
+                  return _.k_ECurrencyCodeCOP;
+                case "CR":
+                  return _.k_ECurrencyCodeCRC;
+                case "AD":
+                case "AL":
+                case "AT":
+                case "AX":
+                case "BA":
+                case "BE":
+                case "BG":
+                case "CY":
+                case "CZ":
+                case "DE":
+                case "DK":
+                case "EE":
+                case "ES":
+                case "FI":
+                case "FO":
+                case "FR":
+                case "GF":
+                case "GI":
+                case "GP":
+                case "GR":
+                case "HR":
+                case "HU":
+                case "IE":
+                case "IT":
+                case "LT":
+                case "LU":
+                case "LV":
+                case "MC":
+                case "ME":
+                case "MK":
+                case "MQ":
+                case "MT":
+                case "NC":
+                case "NL":
+                case "PF":
+                case "PT":
+                case "RE":
+                case "RO":
+                case "RS":
+                case "SE":
+                case "SI":
+                case "SJ":
+                case "SK":
+                case "SM":
+                case "VA":
+                  return _.k_ECurrencyCodeEUR;
+                case "GB":
+                case "GG":
+                case "GS":
+                case "IM":
+                case "JE":
+                  return _.k_ECurrencyCodeGBP;
+                case "HK":
+                  return _.k_ECurrencyCodeHKD;
+                case "ID":
+                  return _.k_ECurrencyCodeIDR;
+                case "IL":
+                  return _.k_ECurrencyCodeILS;
+                case "IN":
+                  return _.k_ECurrencyCodeINR;
+                case "JP":
+                  return _.k_ECurrencyCodeJPY;
+                case "KR":
+                  return _.k_ECurrencyCodeKRW;
+                case "KW":
+                  return _.k_ECurrencyCodeKWD;
+                case "KZ":
+                  return _.k_ECurrencyCodeKZT;
+                case "MX":
+                  return _.k_ECurrencyCodeMXN;
+                case "MY":
+                  return _.k_ECurrencyCodeMYR;
+                case "NO":
+                  return _.k_ECurrencyCodeNOK;
+                case "NZ":
+                  return _.k_ECurrencyCodeNZD;
+                case "PE":
+                  return _.k_ECurrencyCodePEN;
+                case "PH":
+                  return _.k_ECurrencyCodePHP;
+                case "PL":
+                  return _.k_ECurrencyCodePLN;
+                case "QA":
+                  return _.k_ECurrencyCodeQAR;
+                case "RU":
+                  return _.k_ECurrencyCodeRUB;
+                case "SA":
+                  return _.k_ECurrencyCodeSAR;
+                case "SG":
+                  return _.k_ECurrencyCodeSGD;
+                case "TH":
+                  return _.k_ECurrencyCodeTHB;
+                case "TW":
+                  return _.k_ECurrencyCodeTWD;
+                case "UA":
+                  return _.k_ECurrencyCodeUAH;
+                case "AF":
+                case "AG":
+                case "AI":
+                case "AM":
+                case "AN":
+                case "AO":
+                case "AQ":
+                case "AR":
+                case "AS":
+                case "AW":
+                case "AZ":
+                case "BB":
+                case "BD":
+                case "BF":
+                case "BH":
+                case "BI":
+                case "BJ":
+                case "BM":
+                case "BN":
+                case "BO":
+                case "BS":
+                case "BT":
+                case "BV":
+                case "BW":
+                case "BY":
+                case "BZ":
+                case "CC":
+                case "CD":
+                case "CF":
+                case "CG":
+                case "CI":
+                case "CK":
+                case "CM":
+                case "CV":
+                case "CX":
+                case "DJ":
+                case "DM":
+                case "DO":
+                case "DZ":
+                case "EC":
+                case "EG":
+                case "EH":
+                case "ER":
+                case "ET":
+                case "FJ":
+                case "FK":
+                case "FM":
+                case "GA":
+                case "GD":
+                case "GE":
+                case "GH":
+                case "GL":
+                case "GM":
+                case "GN":
+                case "GQ":
+                case "GT":
+                case "GU":
+                case "GW":
+                case "GY":
+                case "HM":
+                case "HN":
+                case "HT":
+                case "IO":
+                case "IQ":
+                case "IS":
+                case "JM":
+                case "JO":
+                case "KE":
+                case "KG":
+                case "KH":
+                case "KI":
+                case "KM":
+                case "KN":
+                case "KY":
+                case "LA":
+                case "LB":
+                case "LC":
+                case "LK":
+                case "LR":
+                case "LS":
+                case "LY":
+                case "MA":
+                case "MD":
+                case "MG":
+                case "MH":
+                case "ML":
+                case "MM":
+                case "MN":
+                case "MO":
+                case "MP":
+                case "MR":
+                case "MS":
+                case "MU":
+                case "MV":
+                case "MW":
+                case "MZ":
+                case "NA":
+                case "NE":
+                case "NF":
+                case "NG":
+                case "NI":
+                case "NP":
+                case "NR":
+                case "NU":
+                case "OM":
+                case "PA":
+                case "PG":
+                case "PK":
+                case "PM":
+                case "PN":
+                case "PR":
+                case "PS":
+                case "PW":
+                case "PY":
+                case "RW":
+                case "SB":
+                case "SC":
+                case "SD":
+                case "SH":
+                case "SL":
+                case "SN":
+                case "SO":
+                case "SR":
+                case "ST":
+                case "SV":
+                case "SY":
+                case "SZ":
+                case "TC":
+                case "TD":
+                case "TF":
+                case "TG":
+                case "TJ":
+                case "TK":
+                case "TL":
+                case "TM":
+                case "TN":
+                case "TO":
+                case "TR":
+                case "TT":
+                case "TV":
+                case "TZ":
+                case "UG":
+                case "UM":
+                case "US":
+                case "UZ":
+                case "VC":
+                case "VE":
+                case "VG":
+                case "VI":
+                case "VU":
+                case "WF":
+                case "WS":
+                case "YE":
+                case "YT":
+                case "ZM":
+                case "ZW":
+                  return _.k_ECurrencyCodeUSD;
+                case "UY":
+                  return _.k_ECurrencyCodeUYU;
+                case "VN":
+                  return _.k_ECurrencyCodeVND;
+                case "ZA":
+                  return _.k_ECurrencyCodeZAR;
+                default:
+                  return (
+                    console.assert(!1, `Unhandled country code: ${_}`),
+                    _.k_ECurrencyCodeUSD
+                  );
+              }
+            })(_._.country_code.toUpperCase());
           return (0, _.jsx)("div", {
             children: _(_, _),
           });
         }
         return null;
       }
+      var _ = __webpack_require__("chunkid");
       const _ = _.Fragment;
       function _(_) {
         const { section: _, language: _, event: _ } = _,
@@ -23302,7 +23530,6 @@
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid"),
         _ = __webpack_require__._(_),
-        _ = __webpack_require__("chunkid"),
         _ = __webpack_require__("chunkid");
       function _(_) {
         let _ = Math.floor(Date.now() / 1e3);

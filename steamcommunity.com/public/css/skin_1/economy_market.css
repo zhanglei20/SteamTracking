@@ -1744,7 +1744,8 @@ input.filter_search_box:focus {
 
 .market_dialog_right_column
 {
-	flex: 1;
+	flex: 1 1 0;
+	max-width: calc( 100% - 150px );
 }
 
 .market_dialog_billing_address_row
@@ -1766,13 +1767,15 @@ input.filter_search_box:focus {
 
 .market_dialog_billing_address_left_column
 {
+	box-sizing: border-box;
+	padding-right: 5px;
 	width: 50%;
 }
 
 .market_dialog_billing_address_right_column
 {
-	margin-left: 10px;
-	flex: 1;
+	box-sizing: border-box;
+	padding-left: 5px;
 	width: 50%;
 }
 
@@ -2304,9 +2307,27 @@ input.filter_search_box:focus {
 	color: #60acde;
 }
 
-.market_dialog_content input[type="text"],
-.market_dialog_content select,
-.market_dialog_content textarea {
+#market_buy_commodity_popup .market_dialog_content input[type="text"],
+#market_buy_commodity_popup .market_dialog_content select,
+#market_buy_commodity_popup .market_dialog_content textarea,
+#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+	box-sizing: border-box;
+	margin-block: 3px 10px;
+	padding: 3px;
+	text-align: start;
+	width: 100%;
+}
+
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content input[type="text"],
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content select,
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content textarea {
+	padding: 8px 10px;
+}
+
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content input[type="text"],
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content select,
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content textarea,
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
 	background-color: rgba( 0, 0, 0, 0.4);
 	border: 1px solid #000;
 	border-radius: 3px;
@@ -2314,97 +2335,88 @@ input.filter_search_box:focus {
 	color: #ffffff;
 	font-size: 13px;
 	line-height: 18px;
-	margin-block: 3px 10px;
-	max-width: calc( 100% - 12px );
-	padding: 3px;
-	text-align: start !important;
-	width: 98%;
 }
 
 /* DSelect */
-.dselect_container {
-	width: 100%;
+.dselect_container .dropcontainer ul {
+	background: #417A9B;
+	border-radius: 0 0 3px 3px;
+	box-shadow: 0 5px 5px #000000;
+	inset: 0 0 auto;
+	line-height: 22px;
+	list-style-type: none;
+	margin: 0 1px;
+	overflow: hidden auto;
+	padding: 0;
+	position: absolute;
+	z-index: 2000;
+}
 
-	.dropcontainer ul {
-		background: #417A9B;
-		box-shadow: 0 0 5px 0 #000000;
-		inset: 0 0 auto;
-		line-height: 22px;
-		list-style-type: none;
-		margin: 0;
-		overflow: hidden auto;
-		position: absolute;
-		z-index: 2000;
+html.GamepadMode .dselect_container .dropcontainer ul {
+	border-radius: 3px;
+}
 
-		&.dropdownhidden {
-			display: none;
-		}
+.dselect_container .dropcontainer ul.dropdownhidden {
+	display: none;
+}
 
-		&.dropdownvisible {
-			max-height: 225px;
-		}
+.dselect_container .dropcontainer ul.dropdownvisible {
+	max-height: 205px;
+	top: -1px;
+}
 
-		li {
-			&.emptyvalue {
-				font-style: italic;
-			}
+.dselect_container .dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
 
-			a {
-				color: #e5e4dc;
-				display: block;
-				font-size: 12px;
-				padding: 0 10px;
+.dselect_container .dropcontainer ul li a {
+	color: #e5e4dc;
+	display: block;
+}
 
-				&.highlighted_selection {
-					background-color: #67c1f5; /* Old browsers */
-					color: #ffffff;
-					background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a {
+	padding: 0 10px;
+}
+
+html:not(.GamepadMode) .dselect_container .dropcontainer ul li a.highlighted_selection,
+html.touch:not(.GamepadMode) .dselect_container .dropcontainer ul li a:hover {
+	background-color: #67c1f5; /* Old browsers */
+	color: #ffffff;
+	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
-				}
-			}
-		}
-	}
+}
 
-	.trigger {
-		background: rgba( 0, 0, 0, 0.4);
-		border: 1px solid #000;
-		border-radius: 3px;
-		box-shadow: 1px 1px 0px #45556c;
-		box-sizing: content-box;
-		color: #ffffff;
-		cursor: pointer;
-		display: block;
-		font-size: 13px;
-		line-height: 18px;
-		margin-block: 3px 10px;
-		max-width: calc( 100% - 12px );
-		overflow: hidden;
-		padding: 3px 2px;
-		position: relative;
-		text-align: start !important;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		width: 98%;
+#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	padding: 3px 27px 3px 3px;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
 
-		&.activetrigger {
-			background: #67c1f5;
-			border-radius: 3px 3px 0 0;
-		}
+html.GamepadMode #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger {
+	padding: 8px 27px 8px 10px;
+}
 
-		&:hover {
-			background-color: #67c1f5; /* Old browsers */
-			background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger.activetrigger {
+	border-radius: 3px 3px 0 0;
+}
+
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger:hover,
+html:not(.GamepadMode) #market_buy_commodity_popup .market_dialog_content .dselect_container .trigger.activetrigger {
+	background-color: #67c1f5; /* Old browsers */
+	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
-		}
+}
 
-		&::after {
-			background: url('https://community.fastly.steamstatic.com/public/images/economy/ico_arrow_dn_for_select.png') no-repeat left center;
-			content: '';
-			inset: 0 0 0 auto;
-			position: absolute;
-			width: 20px;
-		}
-	}
+#market_buy_commodity_popup .market_dialog_content .dselect_container .trigger::after {
+	background: url('https://community.fastly.steamstatic.com/public/images/economy/ico_arrow_dn_for_select.png') no-repeat left center;
+	content: '';
+	inset: 0 0 0 auto;
+	position: absolute;
+	width: 24px;
 }
 
 @media screen and (max-width: 910px) {

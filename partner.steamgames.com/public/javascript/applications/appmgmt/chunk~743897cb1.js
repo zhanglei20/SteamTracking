@@ -121,6 +121,7 @@
     },
     56420: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         SnoozeContainer: "_1DsumfIa3MlkzUV9EXY5W9",
         SnoozeZ: "_2n0EiKMGRP-r_BI5tDtttu",
         none: "T3Fb5KTXwIHM2B-ThTvEs",
@@ -138,6 +139,7 @@
     18828: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         statusAndName: "_4ZTzGZ5TTgFyfw1DcXLXS",
         threeLines: "_1oYSXGjBe7QctQ1ikLpCMm",
         blocked: "VTxPkslK1CSpKNFMgKg7d",
@@ -174,6 +176,7 @@
     70342: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
+        narrowWidth: "500px",
         PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
         MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
         SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
@@ -193,6 +196,7 @@
     },
     43047: (e) => {
       e.exports = {
+        narrowWidth: "500px",
         avatarHolder: "nibodjvvrm86uCfnnAn4g",
         avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
         avatar: "_3h-QRJGxnVOIExtHD1R0f2",

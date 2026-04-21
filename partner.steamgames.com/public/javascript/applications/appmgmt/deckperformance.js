@@ -34,12 +34,8 @@
         DescriptionDetails: "_2OZwaevyq145GHbte-cYD4",
         FrameRateValue: "Ea6FTud7MSP13e5WFg5YS",
         DescriptionEmphasis: "_5mT3lMk6N-ZIEsrzWPbEO",
-        DataSource: "_1bBvFabMPO5kz8MeUiKwi1",
         FeedbackAgree: "Pr_M36YkNFA-weFm4NdGx",
-        OverwhelminglyAgree: "_3adsYEneLis7vG2etMd4pk",
-        StronglyAgree: "_2HKP4FBagfD5dcBMXPKBng",
-        Mixed: "A1X2rsLuGVPickr5Ay4NO",
-        DoNotAgree: "_3VdYc55Bz4LkZ1ABZOJB6S",
+        Percentage: "nB4-Z0d1bJEAy5sMjXfJv",
         Beta: "_1jNEwMKIFCwXh-4DQ7m6-a",
         FeedbackSummaryTable: "_3LG2xiBJ11-gUCa2URMnOh",
         FeedbackPerformance: "_1RmBbSb73HqJGS6dNMtvst",
@@ -410,8 +406,8 @@
         u = n(48479),
         m = n(4434),
         f = n(61859),
-        _ = n(74303),
-        h = n(30470);
+        h = n(74303),
+        _ = n(30470);
       const p = {
         include_basic_info: !0,
         include_assets: !0,
@@ -425,7 +421,7 @@
             rgNotToPruneList: i,
             pageid: o,
           } = e,
-          [_, h] = a.useState(!0),
+          [h, _] = a.useState(!0),
           j = (0, m.m)("OptInAppReviewFilter");
         a.useEffect(() => {
           r.A.Get()
@@ -434,7 +430,7 @@
               r.A.Get()
                 .QueueMultipleAppRequests(t?.slice(100) || [], p)
                 .then(() => {
-                  h(!1);
+                  _(!1);
                 });
             });
         }, [j.token.reason, o, t]);
@@ -442,7 +438,7 @@
           [b, w] = a.useState(""),
           [S, T] = a.useState(0),
           [k, A] = a.useState(!1),
-          [y, G] = a.useState(0);
+          [y, N] = a.useState(0);
         return (
           a.useEffect(() => {
             const e = b?.trim().length > 2,
@@ -498,7 +494,7 @@
           (0, s.jsx)(u.qx, {
             title: "Filter Options",
             bStartMinimized: !0,
-            children: Boolean(_)
+            children: Boolean(h)
               ? (0, s.jsxs)(s.Fragment, {
                   children: [
                     (0, s.jsx)(l.JU, {
@@ -518,16 +514,16 @@
                       placeholder: "search by app name, description",
                       value: b,
                       onChange: (e) => {
-                        w(e.target.value), G(1);
+                        w(e.target.value), N(1);
                       },
                     }),
                     (0, s.jsx)(g, {
                       setFilterTagIDs: v,
                       fnUpdateSetFilterTagIDs: (e) => {
-                        x(e), G(1);
+                        x(e), N(1);
                       },
                       rgAppIDs: t,
-                      bLoading: _,
+                      bLoading: h,
                     }),
                     (0, s.jsx)(c.K, {
                       strDescription: "Filter to games Released After:",
@@ -536,14 +532,14 @@
                       nEarliestTime: 0,
                       fnGetTimeToUpdate: () => S,
                       fnSetTimeToUpdate: (e) => {
-                        T(e), G(1);
+                        T(e), N(1);
                       },
                     }),
                     Boolean(i?.length > 0) &&
                       (0, s.jsx)(l.Yh, {
                         checked: k,
                         onChange: (e) => {
-                          A(e), G(1);
+                          A(e), N(1);
                         },
                         tooltip:
                           "This is a filter we only want to use in pruning that is done after we have notified partners about their inclusion. So if we communicated with a partner about the event, we don't want to be able to filter them out during a second round of pruning",
@@ -582,13 +578,13 @@
                   })(c).sort((e, t) => (e.count < t.count ? 1 : -1)),
             [c, d],
           ),
-          { data: m } = (0, o.Fv)(h.TS.LANGUAGE),
+          { data: m } = (0, o.Fv)(_.TS.LANGUAGE),
           f = a.useMemo(
             () => u.map((e) => ({ label: m && m[e.tagid], value: e })),
             [m, u],
           );
         return (0, s.jsxs)("div", {
-          className: _.TagFilterBar,
+          className: h.TagFilterBar,
           children: [
             (0, s.jsx)(l.JU, { children: "Filter by Tag:" }),
             (0, s.jsx)(i.Ay, {
@@ -610,7 +606,7 @@
       function v(e) {
         const { tagCount: t } = e;
         return (
-          ((0, o.MB)(t.tagid, h.TS.LANGUAGE) || "tagid: " + t.tagid) +
+          ((0, o.MB)(t.tagid, _.TS.LANGUAGE) || "tagid: " + t.tagid) +
           " (count: " +
           t.count +
           ")"
@@ -619,7 +615,7 @@
     },
     15898: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => S });
+      n.r(t), n.d(t, { default: () => T });
       var s = n(7850),
         a = n(90626),
         i = n(84811),
@@ -631,16 +627,17 @@
         u = n(36058),
         m = n(55241),
         f = n(85010),
-        _ = n(62059),
-        h = n(94075),
+        h = n(62059),
+        _ = n(94075),
         p = n(56555),
         j = n(49953),
         g = n(76549),
         v = n(6083),
         x = n(67361),
         b = n(61859),
-        w = n(11577);
-      function S(e) {
+        w = n(11577),
+        S = n(52038);
+      function T(e) {
         const { dataprops: t } = e;
         return t?.framerate || t?.feedback
           ? (0, s.jsx)(w.m, {
@@ -658,12 +655,12 @@
                       ],
                     }),
                     Boolean(t?.framerate) &&
-                      (0, s.jsx)(k, {
+                      (0, s.jsx)(A, {
                         appId: Number(e.appId),
                         frameRateData: t.framerate,
                       }),
                     Boolean(t?.feedback) &&
-                      (0, s.jsx)(T, {
+                      (0, s.jsx)(k, {
                         appId: Number(e.appId),
                         feedbackData: t.feedback,
                       }),
@@ -673,7 +670,7 @@
             })
           : null;
       }
-      function T(e) {
+      function k(e) {
         const { feedbackData: t } = e;
         if (!t || !t.daily?.length)
           return (0, s.jsx)("div", {
@@ -730,7 +727,7 @@
                   className: r.PerformanceSectionTitle,
                   children: (0, b.we)("#GamePerformanceStats_CustomerFeedback"),
                 }),
-                (0, s.jsx)(y, { nAgreePercent: i }),
+                (0, s.jsx)(N, { nAgreePercent: i }),
                 (0, s.jsx)("div", {
                   children: (0, b.we)(
                     "#GamePerformanceStats_NumberOfReports",
@@ -766,19 +763,19 @@
                 children: [
                   (0, s.jsx)(u.W, {
                     dataKey: "date",
-                    tickFormatter: A,
+                    tickFormatter: y,
                     stroke: "white",
                   }),
                   (0, s.jsx)(m.h, {
                     stroke: "white",
                     domain: [() => 0, (e) => Math.max(e, 20)],
                   }),
-                  (0, s.jsx)(f.m, { labelFormatter: A }),
+                  (0, s.jsx)(f.m, { labelFormatter: y }),
                   n.map((e) =>
                     (0, s.jsx)(
-                      _.y,
+                      h.y,
                       {
-                        shape: (0, s.jsx)(N, { fill: e.fill }),
+                        shape: (0, s.jsx)(D, { fill: e.fill }),
                         fill: e.fill,
                         dataKey: e.key,
                         stackId: "day",
@@ -787,17 +784,17 @@
                       e.key,
                     ),
                   ),
-                  (0, s.jsx)(h.s, {}),
+                  (0, s.jsx)(_.s, {}),
                 ],
               }),
             }),
           ],
         });
       }
-      function k(e) {
+      function A(e) {
         const { appId: t, frameRateData: n } = e,
           [i, d] = (0, o.t7)(t, l.L),
-          _ = a.useMemo(() => {
+          h = a.useMemo(() => {
             let e = [];
             return (
               n?.frame_rate_clusters.length > 0 &&
@@ -827,8 +824,8 @@
               ],
             }),
           });
-        const h = n.frame_rate_clusters[0],
-          v = Number(h.mean_frame_rate).toFixed(0),
+        const _ = n.frame_rate_clusters[0],
+          v = Number(_.mean_frame_rate).toFixed(0),
           x = (0, s.jsx)("span", {
             className: r.FrameRateValue,
             children: (0, b.we)("#GamePerformanceStats_FPS", v),
@@ -857,7 +854,7 @@
                   className: r.DescriptionSection,
                   children: (0, b.we)(
                     "#GamePerformanceStats_FrameRateDataBasedOn",
-                    h.report_days,
+                    _.report_days,
                   ),
                 }),
                 (0, s.jsx)("div", {
@@ -874,16 +871,16 @@
               height: 300,
               children: (0, s.jsxs)(p.X, {
                 style: { width: "100%", fontSize: "16px", color: "blue" },
-                data: _,
+                data: h,
                 children: [
                   (0, s.jsx)(j.d, { strokeDasharray: "3 3", color: "red" }),
                   (0, s.jsx)(u.W, {
                     dataKey: "date",
-                    tickFormatter: A,
+                    tickFormatter: y,
                     stroke: "white",
                   }),
                   (0, s.jsx)(m.h, { stroke: "white" }),
-                  (0, s.jsx)(f.m, { labelFormatter: A }),
+                  (0, s.jsx)(f.m, { labelFormatter: y }),
                   (0, s.jsx)(g.N, {
                     type: "natural",
                     dataKey: "mean",
@@ -897,55 +894,22 @@
           ],
         });
       }
-      function A(e) {
+      function y(e) {
         return (0, x._l)(e);
       }
-      function y(e) {
-        const { nAgreePercent: t } = e,
-          n = [
-            [
-              95,
-              "#GamePerformanceStats_Feedback_OverwhelminglyAgree",
-              "#GamePerformanceStats_OverwhelminglyAgree",
-              r.OverwhelminglyAgree,
-              t.toFixed(0),
-            ],
-            [
-              80,
-              "#GamePerformanceStats_Feedback_StronglyAgree",
-              "#GamePerformanceStats_StronglyAgree",
-              r.StronglyAgree,
-              t.toFixed(0),
-            ],
-            [
-              50,
-              "#GamePerformanceStats_Feedback_Mixed",
-              "#GamePerformanceStats_Mixed",
-              r.Mixed,
-              t.toFixed(0),
-            ],
-            [
-              0,
-              "#GamePerformanceStats_Feedback_DoNotAgree",
-              "#GamePerformanceStats_DoNotAgree",
-              r.DoNotAgree,
-              (100 - t).toFixed(0),
-            ],
-          ];
-        let a = 0;
-        for (const e of n) {
-          if (t >= e[0]) break;
-          a++;
-        }
+      function N(e) {
+        const { nAgreePercent: t } = e;
         return (0, s.jsx)("div", {
           className: r.FeedbackAgree,
           children: (0, b.PP)(
-            n[a][1],
+            "#GamePerformanceStats_Feedback_Agree",
             (0, s.jsx)("span", {
-              className: n[a][3],
-              children: (0, b.we)(n[a][2]),
+              className: (0, S.A)(r.Percentage, r.DescriptionEmphasis),
+              children: (0, b.PP)(
+                "#GamePerformanceStats_Feedback_AgreePercentage",
+                t.toFixed(0),
+              ),
             }),
-            n[a][4],
             (0, s.jsx)("span", {
               children: (0, b.we)("#SteamDeckVerified_Category_Verified"),
             }),
@@ -1011,7 +975,7 @@
           })
         );
       }
-      const N = (e) => {
+      const D = (e) => {
         const { fill: t, x: n, y: a, width: i, height: r } = e;
         return (0, s.jsx)("rect", { x: n, y: a, width: i, height: r, fill: t });
       };
@@ -1076,10 +1040,10 @@
       (0, s.Cg)([a.sH], d.prototype, "nOverrideDateNow", void 0);
       const u = new d();
       function m(e = 1) {
-        const [t, n] = o.useState(() => h()),
+        const [t, n] = o.useState(() => _()),
           s = (0, l.m)("useTimeNowWithOverride"),
           a = o.useCallback(() => {
-            s.token.reason || n(h());
+            s.token.reason || n(_());
           }, []);
         return (
           o.useEffect(() => {
@@ -1095,13 +1059,13 @@
       }
       window.g_EventCalendarDevFeatures = u;
       const f = new Date(),
-        _ = Math.floor(f.getTime() / 1e3);
-      function h() {
+        h = Math.floor(f.getTime() / 1e3);
+      function _() {
         const e = Math.floor(Date.now() / 1e3);
-        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - _) : e;
+        return u.nOverrideDateNow ? u.nOverrideDateNow + (e - h) : e;
       }
       function p() {
-        return u.nOverrideDateNow ?? _;
+        return u.nOverrideDateNow ?? h;
       }
       function j() {
         return o.useMemo(() => p(), []);
@@ -1170,9 +1134,9 @@
       n.d(t, {
         G6: () => l,
         Gg: () => u,
-        MS: () => _,
+        MS: () => h,
         Ow: () => d,
-        gF: () => h,
+        gF: () => _,
         t7: () => c,
         zX: () => f,
       });
@@ -1189,8 +1153,8 @@
         const [u, m] = (0, i.useState)(void 0),
           {
             include_assets: f,
-            include_release: _,
-            include_platforms: h,
+            include_release: h,
+            include_platforms: _,
             include_all_purchase_options: p,
             include_screenshots: j,
             include_trailers: g,
@@ -1203,14 +1167,14 @@
             include_included_items: k,
             include_assets_without_overrides: A,
             apply_user_filters: y,
-            include_links: G,
+            include_links: N,
           } = n;
         if (
           ((0, i.useEffect)(() => {
             const n = {
               include_assets: f,
-              include_release: _,
-              include_platforms: h,
+              include_release: h,
+              include_platforms: _,
               include_all_purchase_options: p,
               include_screenshots: j,
               include_trailers: g,
@@ -1223,7 +1187,7 @@
               include_included_items: k,
               include_assets_without_overrides: A,
               apply_user_filters: y,
-              include_links: G,
+              include_links: N,
             };
             let i = null;
             return (
@@ -1240,15 +1204,15 @@
                   })),
               () => i?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, u, f, _, h, p, j, g, v, x, b, w, S, T, k, A, y, G, d]),
+          }, [e, t, s, u, f, h, _, p, j, g, v, x, b, w, S, T, k, A, y, N, d]),
           !e)
         )
           return [null, 2];
         if (!1 === u) return [void 0, 2];
         if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.A.Get().BHasStoreItem(e, t, n)) return [void 0, 1];
-        const N = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return N ? [N, 3] : [null, 2];
+        const G = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return G ? [G, 3] : [null, 2];
       }
       function c(e, t, n) {
         return l(e, 0, t, n);
@@ -1267,8 +1231,8 @@
             include_platforms: u,
             include_all_purchase_options: m,
             include_screenshots: f,
-            include_trailers: _,
-            include_ratings: h,
+            include_trailers: h,
+            include_ratings: _,
             include_tag_count: p,
             include_reviews: j,
             include_basic_info: g,
@@ -1288,8 +1252,8 @@
                 include_platforms: u,
                 include_all_purchase_options: m,
                 include_screenshots: f,
-                include_trailers: _,
-                include_ratings: h,
+                include_trailers: h,
+                include_ratings: _,
                 include_tag_count: p,
                 include_reviews: j,
                 include_basic_info: g,
@@ -1316,7 +1280,7 @@
               }),
               () => i.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, l, c, d, u, m, f, _, h, p, j, g, v, x, b, w, S, T]),
+          }, [e, t, s, l, c, d, u, m, f, h, _, p, j, g, v, x, b, w, S, T]),
           !e)
         )
           return 2;
@@ -1337,10 +1301,10 @@
       function f(e, t, n) {
         return m(e, 0, t, n);
       }
-      function _(e, t, n) {
+      function h(e, t, n) {
         return m(e, 2, t, n);
       }
-      function h(e, t, n) {
+      function _(e, t, n) {
         return m(e, 1, t, n);
       }
     },
@@ -1358,8 +1322,8 @@
         u = n(52038),
         m = n(61859),
         f = n(32754),
-        _ = n(12916),
-        h = n.n(_),
+        h = n(12916),
+        _ = n.n(h),
         p = n(87937),
         j = n.n(p);
       const g = "hh:mm a",
@@ -1370,31 +1334,31 @@
           nEarliestTime: n,
           fnGetTimeToUpdate: i,
           onError: c,
-          strAlsoShowTimeZone: _,
+          strAlsoShowTimeZone: h,
           disabled: p,
           bNoDefaultDate: x,
           className: T,
           strDescToolTip: k,
           strDescription: A,
           bShowTimeZone: y,
-          strInvalidDateTimeLocalizedMsg: G,
-          fnIsValidDateTime: N,
+          strInvalidDateTimeLocalizedMsg: N,
+          fnIsValidDateTime: G,
           bWeekdaysOnly: D,
-          fnSetTimeToUpdate: P,
-          bForce24HourFormat: C,
+          fnSetTimeToUpdate: C,
+          bForce24HourFormat: I,
         } = e;
-        let F =
+        let P =
           (function () {
             const e = j()("2025-01-14T13:00:00");
             return e.format("LT").toLowerCase().includes("13");
-          })() || C
+          })() || I
             ? v
             : g;
-        const I = i(),
-          [E, B] = a.useState(I > 0 ? j()(1e3 * I) : null),
+        const F = i(),
+          [E, B] = a.useState(F > 0 ? j()(1e3 * F) : null),
           [O, z] = a.useState(),
-          [L, M] = a.useState(),
-          R = (function (e, t, n, s, i) {
+          [L, R] = a.useState(),
+          M = (function (e, t, n, s, i) {
             const r = s && s(),
               o = t && !w(t).isValid(),
               l = e && !S(e).isValid();
@@ -1414,8 +1378,8 @@
               }, [c, i]),
               c
             );
-          })(O, L, G, N, c),
-          V = !c && R;
+          })(O, L, N, G, c),
+          V = !c && M;
         let W, U;
         if (t && n && t == n && n > l.HD.GetTimeNowWithOverride()) {
           const e = j().unix(n);
@@ -1425,34 +1389,34 @@
             seconds: { max: e.seconds(), min: e.seconds(), step: 0 },
             milliseconds: { max: 0, min: 0, step: 0 },
           }),
-            (F = v);
+            (P = v);
         }
-        I || !n || x || (U = j().unix(n));
+        F || !n || x || (U = j().unix(n));
         const H = j().tz.guess(),
-          Y = j().unix(I).tz(H),
-          Z = !!_ && H != _ && j().unix(I).tz(_),
+          Y = j().unix(F).tz(H),
+          q = !!h && H != h && j().unix(F).tz(h),
           {
-            fnOnInput: q,
-            fnOnInputBlur: K,
-            fnOnChange: Q,
+            fnOnInput: Z,
+            fnOnInputBlur: Q,
+            fnOnChange: K,
           } = b(
             w,
             (e) => {
               if (p) return;
-              M(null);
+              R(null);
               const t = i(),
                 n = j().unix(t || l.HD.GetTimeNowWithOverride());
               (e = e.clone()).hour(n.hour()),
                 e.minute(n.minute()),
                 e.second(0),
-                P(e.unix()),
+                C(e.unix()),
                 B(e);
             },
-            M,
+            R,
           ),
           {
-            fnOnInput: X,
-            fnOnInputBlur: J,
+            fnOnInput: J,
+            fnOnInputBlur: X,
             fnOnChange: $,
           } = b(
             S,
@@ -1473,15 +1437,15 @@
                   3600 * e.hour() +
                   60 * e.minutes();
               }
-              P(s), B(j().unix(s));
+              C(s), B(j().unix(s));
             },
             z,
           );
         return (0, s.jsxs)("div", {
-          className: (0, u.A)(h().EventTimeSection, T),
+          className: (0, u.A)(_().EventTimeSection, T),
           children: [
             (0, s.jsxs)("div", {
-              className: (0, u.A)(h().EventTimeTitle, "DialogLabel"),
+              className: (0, u.A)(_().EventTimeTitle, "DialogLabel"),
               children: [
                 (0, s.jsx)(f.he, {
                   toolTipContent: k,
@@ -1490,7 +1454,7 @@
                 }),
                 V &&
                   (0, s.jsxs)("span", {
-                    className: h().DateErrorCtn,
+                    className: _().DateErrorCtn,
                     children: [(0, s.jsx)("img", { src: o.A }), V],
                   }),
               ],
@@ -1499,10 +1463,10 @@
               className: d().FlexRowContainer,
               children: [
                 (0, s.jsxs)("div", {
-                  className: (0, u.A)(d().InputBorder, h().TimeBlock),
+                  className: (0, u.A)(d().InputBorder, _().TimeBlock),
                   children: [
                     (0, s.jsx)(r(), {
-                      onChange: Q,
+                      onChange: K,
                       timeFormat: !1,
                       value: null != L ? L : E,
                       isValidDate: (e) =>
@@ -1528,47 +1492,47 @@
                       inputProps: {
                         placeholder: (0, m.we)("#DateTimePicker_Enter_Date"),
                         className: (0, u.A)(
-                          h().DateWidth,
+                          _().DateWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
                         disabled: p,
-                        onChange: (e) => q(e.currentTarget.value),
-                        onBlur: (e) => K(e.currentTarget.value),
+                        onChange: (e) => Z(e.currentTarget.value),
+                        onBlur: (e) => Q(e.currentTarget.value),
                       },
                     }),
-                    !!Z &&
+                    !!q &&
                       (0, s.jsx)("div", {
-                        className: h().PacificTimeHint,
-                        children: Z.format("L"),
+                        className: _().PacificTimeHint,
+                        children: q.format("L"),
                       }),
                   ],
                 }),
                 (0, s.jsxs)("div", {
-                  className: (0, u.A)(d().InputBorder, h().TimeBlock),
+                  className: (0, u.A)(d().InputBorder, _().TimeBlock),
                   children: [
                     (0, s.jsx)(r(), {
                       onChange: $,
                       dateFormat: !1,
-                      timeFormat: F,
+                      timeFormat: P,
                       timeConstraints: W,
                       value: null != O ? O : E,
                       inputProps: {
                         placeholder: (0, m.we)("#DateTimePicker_Enter_Time"),
                         className: (0, u.A)(
-                          h().TimeWidth,
+                          _().TimeWidth,
                           "DialogInput",
                           "DialogTextInputBase",
                         ),
                         disabled: p,
-                        onChange: (e) => X(e.currentTarget.value),
-                        onBlur: (e) => J(e.currentTarget.value),
+                        onChange: (e) => J(e.currentTarget.value),
+                        onBlur: (e) => X(e.currentTarget.value),
                       },
                     }),
-                    !!Z &&
+                    !!q &&
                       (0, s.jsx)("div", {
-                        className: h().PacificTimeHint,
-                        children: Z.format("LT"),
+                        className: _().PacificTimeHint,
+                        children: q.format("LT"),
                       }),
                   ],
                 }),
@@ -1576,13 +1540,13 @@
                   (0, s.jsxs)("div", {
                     children: [
                       (0, s.jsx)("div", {
-                        className: h().TimeZone,
+                        className: _().TimeZone,
                         children: Y.zoneAbbr(),
                       }),
-                      !!Z &&
+                      !!q &&
                         (0, s.jsx)("div", {
-                          className: h().TimeZone,
-                          children: Z.zoneAbbr(),
+                          className: _().TimeZone,
+                          children: q.zoneAbbr(),
                         }),
                     ],
                   }),
@@ -1636,7 +1600,7 @@
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => _, pn: () => p, qx: () => h });
+      n.d(t, { AQ: () => h, pn: () => p, qx: () => _ });
       var s = n(7850),
         a = n(16676),
         i = n(61859),
@@ -1648,7 +1612,7 @@
         u = n(64734),
         m = n(65946),
         f = n(26408);
-      function _(e) {
+      function h(e) {
         const {
             title: t,
             tooltip: n,
@@ -1656,9 +1620,9 @@
             toggleMinimized: i,
             className: r,
             children: o,
-            elAdditionalButtons: _,
+            elAdditionalButtons: h,
           } = e,
-          h = (0, m.q3)(() => a());
+          _ = (0, m.q3)(() => a());
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsxs)("div", {
@@ -1679,19 +1643,19 @@
                 (0, s.jsxs)("div", {
                   className: u.SectionTitleButtons,
                   children: [
-                    _,
-                    (0, s.jsx)(p, { bIsMinimized: h, fnToggleMinimize: i }),
+                    h,
+                    (0, s.jsx)(p, { bIsMinimized: _, fnToggleMinimize: i }),
                   ],
                 }),
               ],
             }),
-            !h && (0, s.jsx)(d.tH, { children: o }),
+            !_ && (0, s.jsx)(d.tH, { children: o }),
           ],
         });
       }
-      function h(e) {
+      function _(e) {
         const [t, n] = o.useState(Boolean(e.bStartMinimized));
-        return (0, s.jsx)(_, {
+        return (0, s.jsx)(h, {
           ...e,
           getMinimized: () => t,
           toggleMinimized: () => n(!t),

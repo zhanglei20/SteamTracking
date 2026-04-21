@@ -6003,7 +6003,7 @@ ${LANGUAGE}
 ../steamUI/hardwareupdatecontroller.cpp
 ../steamUI/hardwareupdatecontroller.cpp:148
 ../steamUI/hardwareupdatecontroller.cpp:218
-../steamUI/hardwareupdatecontroller.cpp:254
+../steamUI/hardwareupdatecontroller.cpp:255
 ../steamUI/installfoldercontroller.cpp
 ../steamUI/ledcontroller.cpp
 ../steamUI/libraryassetcache.cpp
@@ -14626,7 +14626,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 20 2026 23:19:47
+Apr 21 2026 18:46:50
 April
 Arabic
 AreFilesInSubscriptionList
