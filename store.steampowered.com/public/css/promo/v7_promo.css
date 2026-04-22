@@ -3529,6 +3529,7 @@ body.v7 .discount_block_large .bundle_base_discount {
 }
 
 .top_new_releases_background {
+	display: none; /* hiding this temporarily until we figure out how to make this background work at smaller window sizes */
 	position: absolute;
 	top: 0;
 	left: -10%;
