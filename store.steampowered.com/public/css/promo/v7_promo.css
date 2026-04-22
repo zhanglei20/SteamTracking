@@ -1348,11 +1348,11 @@ body.v7 .home_area_spotlight {
 
 @media screen and ( min-width: 911px )
 {
-	html.responsive:not( .gamepad ) .carousel_container.spotlight .carousel_items {
+	html.responsive:not( .GamepadMode ) .carousel_container.spotlight .carousel_items {
 		overflow: hidden;
 	}
 
-	html.responsive:not( .gamepad ) .carousel_container.spotlight .carousel_items .next {
+	html.responsive:not( .GamepadMode ) .carousel_container.spotlight .carousel_items .next {
 		left: 90%;
 		opacity: .5;
 		mask-image: linear-gradient(90deg, black 5%, transparent 10%);
@@ -1361,12 +1361,12 @@ body.v7 .home_area_spotlight {
 
 @media screen and ( max-width: 910px )
 {
-html.responsive:not( .gamepad ) .carousel_container.spotlight .carousel_items > * {
+html.responsive:not( .GamepadMode ) .carousel_container.spotlight .carousel_items > * {
 	width: auto;
 	height: auto;
 }
 
-html.responsive:not( .gamepad ) .carousel_container.spotlight .carousel_items .home_special_offers_group > div {
+html.responsive:not( .GamepadMode ) .carousel_container.spotlight .carousel_items .home_special_offers_group > div {
 	max-width: 225px;
 }
 }
@@ -3864,7 +3864,7 @@ html.responsive .home_content.fourwide a.home_content_item {
 	margin: 0 0 10px 0;
 }
 
-html.responsive:not( .gamepad ) .home_content.fourwide .home_content_items {
+html.responsive:not( .GamepadMode ) .home_content.fourwide .home_content_items {
 	flex-wrap: wrap;
 }
 
@@ -4458,7 +4458,7 @@ html.responsive .content_hub_carousel_ctn .content_hub_capsule_ctn {
 	height: auto;
 }
 
-html.gamepad .content_hub_carousel_ctn .season_sale_feature_event_capsule  {
+html.GamepadMode .content_hub_carousel_ctn .season_sale_feature_event_capsule  {
 	width: calc( 100vw / 3 );
 }
 
