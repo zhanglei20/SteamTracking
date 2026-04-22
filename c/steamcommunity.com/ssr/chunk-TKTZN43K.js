@@ -11061,7 +11061,11 @@ function _(_) {
     _ = (_) => {
       _.setPreferences(_);
     },
-    [_, _] = (0, _.useState)(!1);
+    [_, _] = (0, _.useState)(!1),
+    _ = _.Localize("#Workshop_Search_Help_Example_Red"),
+    _ = _.Localize("#Workshop_Search_Help_Example_Blue"),
+    _ = _.Localize("#Workshop_Search_Help_Example_Green"),
+    _ = _.Localize("#Workshop_Search_Help_Example_Room");
   return (0, _.jsxs)(_, {
     className: _,
     gap: "1",
@@ -11091,7 +11095,10 @@ function _(_) {
           click: !0,
           hover: !0,
         },
-        placement: "bottom-start",
+        placement: {
+          initial: "bottom-start",
+          flip: !1,
+        },
         children: [
           (0, _.jsx)(_.Anchor, {
             children: (0, _.jsx)(_, {
@@ -11122,6 +11129,109 @@ function _(_) {
                         value: _,
                         onValueChange: _,
                         getOptionLabel: _,
+                      }),
+                      (0, _.jsxs)(_, {
+                        marginTop: "3",
+                        direction: "column",
+                        children: [
+                          (0, _.jsx)(_, {
+                            size: "4",
+                            children: _.LocalizeReact(
+                              "#Workshop_Search_Help",
+                              (0, _.jsx)("code", {
+                                children: "AND",
+                              }),
+                              (0, _.jsx)("code", {
+                                children: "OR",
+                              }),
+                              (0, _.jsx)("code", {
+                                children: "NOT",
+                              }),
+                              (0, _.jsx)("code", {
+                                children: "+",
+                              }),
+                              (0, _.jsx)("code", {
+                                children: "-",
+                              }),
+                            ),
+                          }),
+                          (0, _.jsxs)("ul", {
+                            children: [
+                              (0, _.jsx)("li", {
+                                children: _.LocalizeReact(
+                                  "#Workshop_Search_Help_Example1",
+                                  (0, _.jsxs)("code", {
+                                    children: [_, " AND ", _],
+                                  }),
+                                  _,
+                                  _,
+                                ),
+                              }),
+                              (0, _.jsx)("li", {
+                                children: _.LocalizeReact(
+                                  "#Workshop_Search_Help_Example2",
+                                  (0, _.jsxs)("code", {
+                                    children: [_, " OR ", _],
+                                  }),
+                                  _,
+                                  _,
+                                ),
+                              }),
+                              (0, _.jsx)("li", {
+                                children: _.LocalizeReact(
+                                  "#Workshop_Search_Help_Example3",
+                                  (0, _.jsxs)("code", {
+                                    children: [_, " -", _],
+                                  }),
+                                  _,
+                                  _,
+                                ),
+                              }),
+                            ],
+                          }),
+                          (0, _.jsx)(_, {
+                            size: "4",
+                            children: _.Localize(
+                              "#Workshop_Search_Help_Advanced",
+                            ),
+                          }),
+                          (0, _.jsxs)("ul", {
+                            children: [
+                              (0, _.jsx)("li", {
+                                children: _.LocalizeReact(
+                                  "#Workshop_Search_Help_AdvancedExample1",
+                                  (0, _.jsxs)("code", {
+                                    children: ["(", _, " OR ", _, ") AND ", _],
+                                  }),
+                                  _,
+                                  _,
+                                  _,
+                                ),
+                              }),
+                              (0, _.jsx)("li", {
+                                children: _.LocalizeReact(
+                                  "#Workshop_Search_Help_AdvancedExample2",
+                                  (0, _.jsxs)("code", {
+                                    children: [
+                                      "(",
+                                      _,
+                                      " OR ",
+                                      _,
+                                      ") AND ",
+                                      _,
+                                      " -",
+                                      _,
+                                    ],
+                                  }),
+                                  _,
+                                  _,
+                                  _,
+                                  _,
+                                ),
+                              }),
+                            ],
+                          }),
+                        ],
                       }),
                     ],
                   }),

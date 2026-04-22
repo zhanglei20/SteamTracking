@@ -18985,6 +18985,7 @@ html.responsive.touch .oFlCqDkvcYo- {
   }
 }
 .heK9iNtr1G8- {
+  max-width: 500px;
   color: var(--color-text-body-body);
   border: none;
   font-size: 13px;
@@ -18995,4 +18996,8 @@ html.responsive.touch .oFlCqDkvcYo- {
     #1c1e24 67.94%
   );
   box-shadow: 1px 1px 10px #000;
+}
+.heK9iNtr1G8- code {
+  white-space: pre;
+  color: #fff;
 }
