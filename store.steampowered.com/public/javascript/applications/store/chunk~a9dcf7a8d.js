@@ -117,7 +117,7 @@
     49632: (e, t, n) => {
       "use strict";
       n.d(t, { n: () => l });
-      var r = n(42475);
+      var r = n(48891);
       const i = {};
       (i.arabic = () => n.e(9764).then(n.t.bind(n, 19764, 19))),
         (i.brazilian = () => n.e(8110).then(n.t.bind(n, 38110, 19))),
@@ -1209,7 +1209,7 @@
                 e.SetMuteWhenAutoplayBlocked(t);
               }, [e, t]);
           })(w, !!P);
-        let [I, V] = (function (e) {
+        let [V, E] = (function (e) {
             let t = (0, i.useRef)(null),
               n = (0, i.useRef)(null),
               r = (0, i.useRef)(null),
@@ -1245,10 +1245,10 @@
               u = (0, h.wY)(o);
             return [u, r.current];
           })(w),
-          E = (0, g.ri)(),
-          M = x && E ? E.refFullscreen : null,
-          R = (0, h.Ue)(I, M),
-          L = (function (e, t) {
+          M = (0, g.ri)(),
+          R = x && M ? M.refFullscreen : null,
+          L = (0, h.Ue)(V, R),
+          H = (function (e, t) {
             let n = (0, i.useRef)(!1),
               r = (0, i.useRef)(!1),
               l = (0, i.useRef)(!1);
@@ -1264,18 +1264,19 @@
               !l.current
             );
           })(w, !!o),
-          H = L ? void 0 : S,
-          A = {};
-        V && ((A.width = `${V.nWidth}px`), (A.height = `${V.nHeight}px`));
-        let B = (0, y.A)(s().TrailerPlayer, ae);
+          A = H ? void 0 : S,
+          B = {};
+        E && ((B.width = `${E.nWidth}px`), (B.height = `${E.nHeight}px`)),
+          i.use(I.n.Ready());
+        let N = (0, y.A)(s().TrailerPlayer, ae);
         return (0, r.jsxs)("div", {
-          ref: R,
-          className: B,
+          ref: L,
+          className: N,
           "data-trailer-player": !0,
           children: [
             (0, r.jsx)("video", {
-              ref: H,
-              style: A,
+              ref: A,
+              style: B,
               controls: !1,
               playsInline: !0,
               "aria-label": _,
@@ -1288,8 +1289,8 @@
               focus: T,
             }),
             (0, r.jsx)(ce, { player: w }),
-            !L && (0, r.jsx)(de, { player: w, screenshot: a }),
-            !L && (0, r.jsx)(j.MT, { player: w }),
+            !H && (0, r.jsx)(de, { player: w, screenshot: a }),
+            !H && (0, r.jsx)(j.MT, { player: w }),
           ],
         });
       }

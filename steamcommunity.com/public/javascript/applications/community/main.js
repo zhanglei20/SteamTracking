@@ -3577,17 +3577,18 @@
         );
       }
       r(12155), r(738), r(41775);
+      var Pt = r(92724);
       r(64641);
       (0, qt.jK)({ enforceActions: "never" }),
         (0, pe.oQ)(async () => {
-          Nt(),
+          At(),
             (0, kt.aj)().Init(
               "Community",
               CLSTAMP,
               new Ut.D(R.TS.WEBAPI_BASE_URL).GetServiceTransport(),
               { fnGetReportTags: Lt },
             ),
-            await At();
+            await Et();
           const e =
             document.getElementById("react_root") ||
             document.getElementById("application_root");
@@ -3598,18 +3599,18 @@
               (t.g_bCommunityReactInitialized = !0);
           }
         });
-      let Pt,
-        Dt = !1;
-      function Nt() {
-        if (!Dt) {
+      let Dt,
+        Nt = !1;
+      function At() {
+        if (!Nt) {
           (0, R.XJ)("application_config").config
-            ? (At(), (Dt = !0))
+            ? (Et(), (Nt = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function At() {
-        Pt ||
-          (Pt = (async function (e) {
+      async function Et() {
+        Dt ||
+          (Dt = (async function (e) {
             {
               const t = Z.A0.GetLanguageFallback(e),
                 i = e === t,
@@ -3622,25 +3623,26 @@
                     : r(68042)(`./shared_${t}.json`).then((e) => e.default),
                   i ? {} : r(95386)(`./sales_${t}.json`).then((e) => e.default),
                   i ? {} : r(68982)(`./main_${t}.json`).then((e) => e.default),
+                  (0, Pt.u)(),
                 ]);
               Z.pf.AddTokens({ ...s, ...n, ...a }, { ...l, ...o, ...c });
             }
-            for (const e of Et) Z.pf.AddTokens(e);
-            Et = void 0;
+            for (const e of Gt) Z.pf.AddTokens(e);
+            Gt = void 0;
           })(R.TS.LANGUAGE)),
-          await Pt;
+          await Dt;
       }
-      let Et = [];
-      function Gt(e, t, r) {
+      let Gt = [];
+      function Ht(e, t, r) {
         (0, Fe.wT)("manifest" === t, `Expected manifest not "${t}"`),
-          void 0 !== Et ? Et.push(r) : Z.pf.AddTokens(r);
+          void 0 !== Gt ? Gt.push(r) : Z.pf.AddTokens(r);
       }
-      Nt(),
+      At(),
         (function () {
           const e = window;
           e.g_rgPendingLocManifests &&
-            e.g_rgPendingLocManifests.forEach((e) => Gt(...e)),
-            (e.LocalizationManifestReady = Gt),
+            e.g_rgPendingLocManifests.forEach((e) => Ht(...e)),
+            (e.LocalizationManifestReady = Ht),
             (e.g_rgPendingLocManifests = void 0);
         })();
     },
@@ -8462,9 +8464,9 @@
       a.set("sc_schinese", a.get("schinese")),
         a.set("korean", a.get("koreana"));
     },
-    42475: (e, t, r) => {
+    48891: (e, t, r) => {
       "use strict";
-      r.d(t, { l: () => c, A: () => u });
+      r.d(t, { l: () => l, A: () => c });
       var i = r(8527),
         n = r(90626),
         s = r(96762);
@@ -8479,14 +8481,12 @@
               return e;
             }));
       }
-      let o;
-      null != o || (o = new Set());
-      let l = null;
-      function c(e) {
+      var o = r(92724);
+      function l(e) {
         const t = new Map();
         const r = (async function () {
           await (0, i.Ki)();
-          const r = u(),
+          const r = c(),
             n = new Set([]);
           for (const e of r.languages) {
             n.add(e.strLanguage);
@@ -8504,12 +8504,11 @@
             ),
           );
         })();
-        let c = !1;
-        var d;
-        function m(e, r) {
+        let l = !1;
+        function u(e, r) {
           var i, n, a, o;
           const [l, ...c] = r,
-            u =
+            d =
               null !==
                 (n =
                   null === (i = t.get(l.strLanguage)) || void 0 === i
@@ -8524,23 +8523,20 @@
                       )) || void 0 === o
                   ? void 0
                   : o.get(e);
-          return void 0 !== u
-            ? u
+          return void 0 !== d
+            ? d
             : 0 === c.length
               ? (console.error("Couldn't find localization key", e), e)
-              : m(e, c);
+              : u(e, c);
         }
-        function g(e, ...t) {
-          return a(m(e, u().languages), ...t);
+        function d(e, ...t) {
+          return a(u(e, c().languages), ...t);
         }
         return (
-          r.then(() => (c = !0)),
-          (d = r),
-          null != o || (o = new Set()),
-          o.add(d),
-          (l = Promise.all(o)),
+          r.then(() => (l = !0)),
+          (0, o.n)(r),
           {
-            Localize: (e, ...t) => g(e, ...t),
+            Localize: (e, ...t) => d(e, ...t),
             LocalizeReact(e, ...t) {
               const r = this.Localize(e);
               if (r === e) return r;
@@ -8558,14 +8554,14 @@
               );
             },
             LocalizePlural: (e, t, ...r) =>
-              1 === t || "1" === t ? g(e, t, ...r) : g(e + "_Plural", t, ...r),
-            LocalizeInSpecificLang: (e, t, ...r) => a(m(t, [e]), ...r),
+              1 === t || "1" === t ? d(e, t, ...r) : d(e + "_Plural", t, ...r),
+            LocalizeInSpecificLang: (e, t, ...r) => a(u(t, [e]), ...r),
             Ready: () => r,
-            IsReady: () => c,
+            IsReady: () => l,
           }
         );
       }
-      function u() {
+      function c() {
         if (!(0, s.VD)(i.TS.LANGUAGE))
           throw `unknown language ${i.TS.LANGUAGE}`;
         return {
@@ -8579,10 +8575,21 @@
         };
       }
     },
+    92724: (e, t, r) => {
+      "use strict";
+      let i, n;
+      function s() {
+        return null != n ? n : (n = Promise.all(i));
+      }
+      function a(e) {
+        null != i || (i = new Set()), i.add(e), (n = Promise.all(i));
+      }
+      r.d(t, { n: () => a, u: () => s }), null != i || (i = new Set());
+    },
     63275: (e, t, r) => {
       "use strict";
       r.d(t, { u: () => s });
-      var i = r(42475);
+      var i = r(48891);
       const n = {};
       (n.arabic = () => r.e(1970).then(r.t.bind(r, 61970, 19))),
         (n.brazilian = () => r.e(308).then(r.t.bind(r, 80308, 19))),
@@ -33675,7 +33682,7 @@
     16261: (e, t, r) => {
       "use strict";
       r.d(t, { Z: () => s });
-      var i = r(42475);
+      var i = r(48891);
       const n = {};
       (n.arabic = () => r.e(1721).then(r.t.bind(r, 8476, 19))),
         (n.brazilian = () => r.e(3594).then(r.t.bind(r, 99574, 19))),

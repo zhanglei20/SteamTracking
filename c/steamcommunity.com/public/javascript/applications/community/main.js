@@ -3828,6 +3828,7 @@
       __webpack_require__("chunkid"),
         __webpack_require__("chunkid"),
         __webpack_require__("chunkid");
+      var _ = __webpack_require__("chunkid");
       __webpack_require__("chunkid");
       (0, _._)({
         enforceActions: "never",
@@ -3893,6 +3894,7 @@
                     : __webpack_require__("chunkid")(`./main_${_}.json`).then(
                         (_) => _.default,
                       ),
+                  (0, _._)(),
                 ]);
               _._.AddTokens(
                 {
@@ -9163,9 +9165,7 @@
               return _;
             }));
       }
-      let _;
-      null != _ || (_ = new Set());
-      let _ = null;
+      var _ = __webpack_require__("chunkid");
       function _(_) {
         const _ = new Map();
         const _ = (async function () {
@@ -9189,7 +9189,6 @@
           );
         })();
         let _ = !1;
-        var _;
         function _(_, _) {
           var _, _, _, _;
           const [_, ..._] = _,
@@ -9219,10 +9218,7 @@
         }
         return (
           __webpack_require__.then(() => (_ = !0)),
-          (_ = _),
-          null != _ || (_ = new Set()),
-          _.add(_),
-          (_ = Promise.all(_)),
+          (0, _._)(_),
           {
             Localize: (_, ..._) => _(_, ..._),
             LocalizeReact(_, ..._) {
@@ -9262,6 +9258,21 @@
           ],
         };
       }
+    },
+    chunkid: (module, module_exports, __webpack_require__) => {
+      "use strict";
+      let _, _;
+      function _() {
+        return null != _ ? _ : (_ = Promise.all(_));
+      }
+      function _(_) {
+        null != _ || (_ = new Set()), _.add(_), (_ = Promise.all(_));
+      }
+      __webpack_require__._(module_exports, {
+        _: () => _,
+        _: () => _,
+      }),
+        null != _ || (_ = new Set());
     },
     chunkid: (module, module_exports, __webpack_require__) => {
       "use strict";

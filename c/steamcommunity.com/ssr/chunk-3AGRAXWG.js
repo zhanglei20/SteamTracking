@@ -17696,11 +17696,15 @@ function _(_) {
   let _ = _.data.forum_details.gidfeature,
     _ = `gid/${_}`;
   _.data.forum_details.appid && (_ = `app/${_.data.forum_details.appid}`);
-  let _ = `${_.COMMUNITY_BASE_URL}${_}/discussions/${_}/${_}/${_.gidComment ? "#c" + _.gidComment : ""}`;
-  return (0, _.jsx)("a", {
-    href: _,
-    children: _.children,
-  });
+  let _ = new _(_).GetAccountID(),
+    _ = `${_.COMMUNITY_BASE_URL}actions/redirecttoforumtopic?accountIDOwner=${_}&gidForum=${_}&gidTopic=${_}`;
+  return (
+    _.gidComment && (_ += "#c" + _.gidComment),
+    (0, _.jsx)("a", {
+      href: _,
+      children: _.children,
+    })
+  );
 }
 function _(_, _, _, _) {
   return _({

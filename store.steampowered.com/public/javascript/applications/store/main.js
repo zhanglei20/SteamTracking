@@ -6143,7 +6143,7 @@
       "use strict";
       r.d(t, { J: () => s });
       var i = r(8527),
-        n = r(42475);
+        n = r(48891);
       function s() {
         return (0, n.A)().languages.map((e) => {
           return 2 == (t = e.strISOCode).length && i.TS.COUNTRY
@@ -6248,9 +6248,9 @@
       a.set("sc_schinese", a.get("schinese")),
         a.set("korean", a.get("koreana"));
     },
-    42475: (e, t, r) => {
+    48891: (e, t, r) => {
       "use strict";
-      r.d(t, { l: () => c, A: () => u });
+      r.d(t, { l: () => l, A: () => c });
       var i = r(8527),
         n = r(90626),
         s = r(96762);
@@ -6265,14 +6265,12 @@
               return e;
             }));
       }
-      let o;
-      o ??= new Set();
-      let l = null;
-      function c(e) {
+      var o = r(92724);
+      function l(e) {
         const t = new Map();
         const r = (async function () {
           await (0, i.Ki)();
-          const r = u(),
+          const r = c(),
             n = new Set([]);
           for (const e of r.languages) {
             n.add(e.strLanguage);
@@ -6290,9 +6288,8 @@
             ),
           );
         })();
-        let c = !1;
-        var d;
-        function m(e, r) {
+        let l = !1;
+        function u(e, r) {
           const [i, ...n] = r,
             a =
               t.get(i.strLanguage)?.get(e) ??
@@ -6301,19 +6298,16 @@
             ? a
             : 0 === n.length
               ? (console.error("Couldn't find localization key", e), e)
-              : m(e, n);
+              : u(e, n);
         }
-        function g(e, ...t) {
-          return a(m(e, u().languages), ...t);
+        function d(e, ...t) {
+          return a(u(e, c().languages), ...t);
         }
         return (
-          r.then(() => (c = !0)),
-          (d = r),
-          (o ??= new Set()),
-          o.add(d),
-          (l = Promise.all(o)),
+          r.then(() => (l = !0)),
+          (0, o.n)(r),
           {
-            Localize: (e, ...t) => g(e, ...t),
+            Localize: (e, ...t) => d(e, ...t),
             LocalizeReact(e, ...t) {
               const r = this.Localize(e);
               if (r === e) return r;
@@ -6331,14 +6325,14 @@
               );
             },
             LocalizePlural: (e, t, ...r) =>
-              1 === t || "1" === t ? g(e, t, ...r) : g(e + "_Plural", t, ...r),
-            LocalizeInSpecificLang: (e, t, ...r) => a(m(t, [e]), ...r),
+              1 === t || "1" === t ? d(e, t, ...r) : d(e + "_Plural", t, ...r),
+            LocalizeInSpecificLang: (e, t, ...r) => a(u(t, [e]), ...r),
             Ready: () => r,
-            IsReady: () => c,
+            IsReady: () => l,
           }
         );
       }
-      function u() {
+      function c() {
         if (!(0, s.VD)(i.TS.LANGUAGE))
           throw `unknown language ${i.TS.LANGUAGE}`;
         return {
@@ -6351,6 +6345,17 @@
           ],
         };
       }
+    },
+    92724: (e, t, r) => {
+      "use strict";
+      let i, n;
+      function s() {
+        return (n ??= Promise.all(i));
+      }
+      function a(e) {
+        (i ??= new Set()), i.add(e), (n = Promise.all(i));
+      }
+      r.d(t, { n: () => a, u: () => s }), (i ??= new Set());
     },
     56545: (e, t, r) => {
       "use strict";
@@ -34575,7 +34580,7 @@
     55672: (e, t, r) => {
       "use strict";
       r.d(t, { Z: () => s });
-      var i = r(42475);
+      var i = r(48891);
       const n = {};
       (n.arabic = () => r.e(3710).then(r.t.bind(r, 8476, 19))),
         (n.brazilian = () => r.e(6562).then(r.t.bind(r, 99574, 19))),
@@ -68688,7 +68693,7 @@
           t
         );
       }
-      var Mr = r(42475);
+      var Mr = r(48891);
       const Cr = {};
       (Cr.arabic = () => r.e(1460).then(r.t.bind(r, 61460, 19))),
         (Cr.brazilian = () => r.e(1262).then(r.t.bind(r, 31262, 19))),
@@ -75175,6 +75180,7 @@
           e
         );
       }
+      var _l = r(92724);
       r(64641);
       (0, gl.jK)({ enforceActions: "never" }),
         performance.mark("storeReactStartup");
@@ -75187,7 +75193,7 @@
           t.responseEnd &&
           (0, fo.D)()
         ) {
-          const e = _l - t.responseEnd;
+          const e = fl - t.responseEnd;
           (0, fo.D)().IncrementStat("storeReactStartup", e),
             performance.measure("storeReactStartup", {
               start: t.responseEnd,
@@ -75195,19 +75201,19 @@
             });
         }
       }).observe({ type: "navigation", buffered: !0 });
-      let _l = performance.now();
-      let fl,
-        bl = !1;
-      function Bl() {
-        if (!bl) {
+      let fl = performance.now();
+      let bl,
+        Bl = !1;
+      function wl() {
+        if (!Bl) {
           (0, s.XJ)("application_config").config
-            ? (wl(), (bl = !0))
+            ? (yl(), (Bl = !0))
             : console.warn("application_config not ready yet, will retry");
         }
       }
-      async function wl() {
-        fl ||
-          (fl = (async function (e) {
+      async function yl() {
+        bl ||
+          (bl = (async function (e) {
             0;
             const t = a.A0.GetLanguageFallback(e),
               i = e === t,
@@ -75220,17 +75226,18 @@
                 i ? {} : r(95386)(`./sales_${t}.json`),
                 i ? {} : r(68982)(`./main_${t}.json`),
                 i ? {} : r(13122)(`./marketing_${t}.json`),
+                (0, _l.u)(),
               ]);
             a.pf.AddTokens(
               { ...s, ...n, ...o, ...l },
               { ...u, ...c, ...d, ...m },
             );
           })(s.TS.LANGUAGE)),
-          await fl;
+          await bl;
       }
-      Bl(),
+      wl(),
         _t.oQ(async function () {
-          Bl();
+          wl();
           const e = (0, pl.zR)({ basename: (0, ie.C)() });
           (0, ml.aj)().Init(
             "Store",
@@ -75238,7 +75245,7 @@
             new dl.D(s.TS.WEBAPI_BASE_URL).GetServiceTransport(),
             { fnGetReportTags: hl },
           ),
-            await wl(),
+            await yl(),
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
@@ -75247,7 +75254,7 @@
             (0, fo.D)() &&
               (0, fo.D)().IncrementStat(
                 "storeReactLocalizationReady",
-                performance.now() - _l,
+                performance.now() - fl,
               ),
             performance.measure("storeReactLocalizationReady", {
               start: "storeReactStartup",
@@ -75259,7 +75266,7 @@
       r.d(t, { U: () => l });
       var i = r(61859),
         n = r(30470),
-        s = r(42475);
+        s = r(48891);
       const a = {};
       (a.arabic = () => r.e(1347).then(r.t.bind(r, 23386, 19))),
         (a.brazilian = () => r.e(4977).then(r.t.bind(r, 97932, 19))),

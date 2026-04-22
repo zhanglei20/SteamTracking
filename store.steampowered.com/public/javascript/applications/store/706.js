@@ -754,7 +754,7 @@
         (i.turkish = () => n.e(7996).then(n.t.bind(n, 87996, 19))),
         (i.ukrainian = () => n.e(7306).then(n.t.bind(n, 47306, 19))),
         (i.vietnamese = () => n.e(2539).then(n.t.bind(n, 72539, 19)));
-      const o = (0, n(42475).l)(async function (e) {
+      const o = (0, n(48891).l)(async function (e) {
         if (i[e]) return i[e]();
       });
       var a,
@@ -1909,7 +1909,7 @@
     62151: (e, t, n) => {
       "use strict";
       n.d(t, { F5: () => o });
-      var r = n(42475);
+      var r = n(48891);
       const i = {};
       (i.arabic = () => n.e(3695).then(n.t.bind(n, 93695, 19))),
         (i.brazilian = () => n.e(1091).then(n.t.bind(n, 41091, 19))),

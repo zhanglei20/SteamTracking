@@ -1405,7 +1405,8 @@
           })(_, !!_),
           _ = _ ? void 0 : _,
           _ = {};
-        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`));
+        _ && ((_.width = `${_.nWidth}px`), (_.height = `${_.nHeight}px`)),
+          _.use(_._.Ready());
         let _ = (0, _._)(_().TrailerPlayer, _);
         return (0, _.jsxs)("div", {
           ref: _,
