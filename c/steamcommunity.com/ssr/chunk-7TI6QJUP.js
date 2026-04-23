@@ -10201,6 +10201,7 @@ function _(_) {
                     disabled: _ == null,
                     onClick: _,
                     icon: !0,
+                    variant: "ghost",
                     children: (0, _.jsx)(_, {}),
                   }),
                   (0, _.jsxs)("div", {
@@ -10210,6 +10211,7 @@ function _(_) {
                     disabled: _ == null,
                     onClick: _,
                     icon: !0,
+                    variant: "ghost",
                     children: (0, _.jsx)(_, {}),
                   }),
                 ],
@@ -10948,6 +10950,7 @@ function _(_) {
         children: [
           (0, _.jsx)(_, {
             color: "accent",
+            variant: "ghost",
             disabled: _ == 0,
             onClick: () => _(_ - 1),
             size: "3",
@@ -10963,6 +10966,7 @@ function _(_) {
           ),
           (0, _.jsx)(_, {
             color: "accent",
+            variant: "ghost",
             disabled: _ == _.length - 1,
             onClick: () => _(_ + 1),
             size: "3",
@@ -11020,6 +11024,8 @@ function _(_) {
     }, []),
     _ = _(_.trim(), {
       nTimeoutMS: 1e3,
+      nTimeoutExtensionMS: 500,
+      nMaxTimeoutExtensions: 100,
     });
   (0, _.useEffect)(() => {
     _.current &&
@@ -11410,6 +11416,7 @@ function _(_) {
     marginTop: "5",
     marginX: {
       initial: "3",
+      _: "7",
       _: "9",
     },
     children: (0, _.jsxs)(_, {
@@ -13506,6 +13513,8 @@ function _(_) {
   );
 }
 export {
+  _,
+  _,
   _,
   _,
   _,
