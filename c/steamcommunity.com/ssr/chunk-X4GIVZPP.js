@@ -11093,7 +11093,7 @@ function _(_) {
         onOpenChange: _,
         interactions: {
           click: !0,
-          hover: !0,
+          hover: !1,
         },
         placement: {
           initial: "bottom-start",
