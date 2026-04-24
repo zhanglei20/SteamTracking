@@ -306,13 +306,13 @@ class ClientExtractor
 		{
 			if( file_exists( $SteamBinary ) )
 			{
-				$Name = $File->getBasename();
+				$Name = basename( $SteamBinary );
 				$Command = escapeshellarg( $DumpStrings ) . ' -target elf -binary ' . escapeshellarg( $SteamBinary );
 				exec( $Command, $Output, $ReturnCode );
 
 				if( $ReturnCode !== 0 )
 				{
-					$this->Log( '{lightred}Failed to dump strings from: ' . $File->getFilename() );
+					$this->Log( '{lightred}Failed to dump strings from: ' . $Name );
 					continue;
 				}
 				$Strings = array_unique( $Output );
