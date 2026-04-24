@@ -1457,7 +1457,15 @@ function _(_) {
                       (0, _.jsx)(_, {
                         marginBottom: "7",
                         children: (0, _.jsx)(_, {
-                          children: _.children,
+                          children: (0, _.jsx)(_, {
+                            marginTop: "5",
+                            marginX: {
+                              initial: "3",
+                              _: "7",
+                              _: "9",
+                            },
+                            children: _.children,
+                          }),
                         }),
                       }),
                     ],

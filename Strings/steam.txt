@@ -2530,6 +2530,9 @@ $ffn
 17RefCountPvWrapperI18CProtoBufNetPacketE
 17RefCountPvWrapperI22CClientStructNetPacketE
 18446744073709551615
+18:46:36
+18:46:44
+18:46:45
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CFutureSharedStateIbE
@@ -2642,9 +2645,6 @@ $ffn
 22CEC25519PrivateKeyBase
 22CFutureSharedStateBase
 22ISSLConnectionCallback
-23:19:36
-23:19:43
-23:19:44
 23CActivationCodeItemInfo
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
@@ -2825,6 +2825,7 @@ $ffn
 50UserContentDescriptorPreferences_ContentDescriptor
 512 Kbps
 512K
+524288
 52F*
 55Ly
 55j_WW
@@ -2848,10 +2849,7 @@ $ffn
 6*Fc7
 6-nn
 6144
-8000
-8192
 65536
-524288
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 64CK\vH
@@ -2906,6 +2904,8 @@ $ffn
 8.K%G
 8/A0
 80 Mbps
+8000
+8192
 82\n:XPH
 83L3
 83N6
@@ -3470,7 +3470,7 @@ Application transferred too few scanlines
 Application transferred too many scanlines
 Applying update...
 Approved Friends
-Apr 20 2026
+Apr 21 2026
 April
 Arabic
 Arithmetic table 0x%02x was not defined
@@ -9350,7 +9350,7 @@ StartSteamRTLogger
 Starting packet has timeout of 0?  Caller should not have sent it!
 Startup
 Startup - Steam Client launched with: %s%s
-Startup - updater built Apr 20 2026 23:19:43
+Startup - updater built Apr 21 2026 18:46:44
 State
 StaticFileWriterThread()
 Steam
