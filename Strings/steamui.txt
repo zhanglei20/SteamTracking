@@ -626,7 +626,7 @@
 "-\n+CAuthenticationSupport_RevokeToken_Response"B\n.CAuthenticationSupport_GetTokenHistory_Request
 "-\n+CCommunity_DeleteCommentFromThread_Response"
 "-\n+CQueuedMatchmakingGameHost_EndGame_Response*
-"-\n+CSteamInputService_EnableQosStatus_Response*
+"-\n+CSteamInputService_EnableQosStatus_Response"{\n6CSteamInputService_ControllerBatteryState_Notification
 "-\n+CTransportValidation_ThreadedCount_Response"<\n-CTransportValidation_NotifyCount_Notification
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
@@ -2250,6 +2250,9 @@ ${LANGUAGE}
 %s/video_bitrate
 %s: %s returned %s %d (%s), disconnecting TCP connection. %d sends, %lld bytes outstanding %s\n
 %s: (%d bit)\n
+%s: ----------------------
+%s: ------[ stderr ]------\n%s
+%s: ------[ stdout ]------\n%s
 %s: Command '%s' returned: %d
 %s: Corrupt stream, resetting\n
 %s: Hardware encoding is too slow, disabling\n
@@ -3325,6 +3328,7 @@ ${LANGUAGE}
 (\r"W\n%CClientNotificationBatteryTemperature
 (\r"X\n&CCommunity_GetLinkFilterHashes_Request
 (\r"Y\n"CPublishedFile_GetDetails_Response
+(\r"Y\n'CClientNotificationControllerLowBattery
 (\r"Y\n\rCMsgSizePopup
 (\r"Z\n"CCloud_EnumerateUserFiles_Response
 (\r"Z\n0CContentServerDirectory_GetCDNAuthToken_Response
@@ -6002,8 +6006,8 @@ ${LANGUAGE}
 ../steamUI/gamestream/x264wrapper.cpp
 ../steamUI/hardwareupdatecontroller.cpp
 ../steamUI/hardwareupdatecontroller.cpp:148
-../steamUI/hardwareupdatecontroller.cpp:218
-../steamUI/hardwareupdatecontroller.cpp:255
+../steamUI/hardwareupdatecontroller.cpp:219
+../steamUI/hardwareupdatecontroller.cpp:256
 ../steamUI/installfoldercontroller.cpp
 ../steamUI/ledcontroller.cpp
 ../steamUI/libraryassetcache.cpp
@@ -7390,7 +7394,6 @@ ${LANGUAGE}
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
-0123456789ABCDEFP
 0123456789abcdef
 03000000de280000fc11000001000000,Steam Controller,a:b0,b:b1,back:b6,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,guide:b8,leftshoulder:b4,leftstick:b9,lefttrigger:a2,leftx:a0,lefty:a1,rightshoulder:b5,rightstick:b10,righttrigger:a5,rightx:a3,righty:a4,start:b7,x:b2,y:b3,
 03000000de280000ff11000001000000
@@ -10536,6 +10539,7 @@ ${LANGUAGE}
 2\n-k_EStreamControlRemotePlayTogetherGroupUpdate
 2\n.EOSBranch
 2\n.k_EAppGamepadGyroTrackpadSupportLevelNoGamepad
+2\n.k_EClientNotificationType_ControllerLowBattery
 2\n.k_ECloudPendingRemoteOperationAppSessionActive
 2\n.k_ECloudPendingRemoteOperationUploadInProgress
 2\n.k_ECommentThreadTypePublishedFile_Announcement
@@ -10877,7 +10881,7 @@ ${LANGUAGE}
 32CPlayer_GetPostedStatus_Response
 32CPlayer_SetFavoriteBadge_Request
 32CPlayer_SetProfileTheme_Response
-32CProcessWorkItemReadStdOutThread
+32CProcessWorkItemPipeReaderThread
 32CProcessWorkItemWriteStdInThread
 32CPublishedFile_AddChild_Response
 32CPublishedFile_Subscribe_Request
@@ -11434,6 +11438,7 @@ ${LANGUAGE}
 39CChatRoom_GetChatRoomGroupState_Request
 39CChatRoom_UpdateMessageReaction_Request
 39CClientMetrics_AppInterfaceMethodCounts
+39CClientNotificationControllerLowBattery
 39CCloud_AppCloudStateChange_Notification
 39CCommunity_GetBestEventsForUser_Request
 39CCommunity_GetLinkFilterHashes_Response
@@ -12528,6 +12533,7 @@ ${LANGUAGE}
 54CPublishedFile_SetPlaytimeForControllerConfigs_Request
 54CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 54CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+54CSteamInputService_ControllerBatteryState_Notification
 54CSteamInputService_ControllerDisconnected_Notification
 54CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 54CTransportValidation_NotifySyntheticEvent_Notification
@@ -12719,7 +12725,6 @@ ${LANGUAGE}
 6.CSteamOSManager_RefreshScreenReaderAutoLocale_Request
 6.CTransportValidation_RequestLargeNotification_Request
 60.0
-6144
 60000000
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 60CAccountHardware_CompleteSteamControllerRegistration_Request
@@ -12731,6 +12736,7 @@ ${LANGUAGE}
 60CPlayer_GetAchievementsProgress_Response_AchievementProgress
 60CPlayer_GetPurchasedAndUpgradedProfileCustomizations_Request
 60CSteamInputService_ControllerButtonStateChanged_Notification
+6144
 61CAccountHardware_CompleteSteamControllerRegistration_Response
 61CEcon_GetInventoryItemsWithDescriptions_Request_FilterOptions
 61CFamilyGroupsClient_NotifyRunningApps_Notification_RunningApp
@@ -12829,6 +12835,7 @@ ${LANGUAGE}
 7.CPublishedFile_SetPlaytimeForControllerConfigs_Request
 7.CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 7.CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+7.CSteamInputService_ControllerBatteryState_Notification
 7.CSteamInputService_ControllerDisconnected_Notification
 7.CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 7.CTransportValidation_NotifySyntheticEvent_Notification
@@ -14626,7 +14633,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 21 2026 18:46:50
+Apr 25 2026 01:39:34
 April
 Arabic
 AreFilesInSubscriptionList
@@ -17633,7 +17640,6 @@ CSteamUIInputController::OnControllerConnected
 CSteamUIInputController::OnControllerDisconnected
 CSteamUIInputController::OnControllerDisplayKeyboard
 CSteamUIInputController::OnControllerPairing
-CSteamUIInputController::OnControllerStatusFlagsChanged
 CSteamUIInputController::OnDismissModalAPIKeyboard
 CSteamUIInputController::OnDispatchDismissGamepadTextInput
 CSteamUIInputController::OnDispatchRequestDismissGamepadTextInput
@@ -18568,6 +18574,7 @@ Comma separated list of metrics catalogs to disable.  This is the last check.
 Comma separated list of metrics operations that are disabled.  This setting has highest priority
 Comma separated list of metrics operations.  Overrides disabled catalogs
 Command
+Command output: %s
 Command: %s\n
 CommandLine static
 CommentCount
@@ -18838,6 +18845,7 @@ Couldn't load %s, DRM support disabled\n
 Couldn't load %s, x264 support disabled
 Couldn't load CreateWebRTCSession()
 Couldn't load Wayland symbols\n
+Couldn't load game config for appID %u, path '%s'
 Couldn't load icon %s
 Couldn't open %s for capture: %s\n
 Couldn't open %s for writing\n
@@ -20346,6 +20354,7 @@ Error in encoding\n
 Error in manifest for appID: %u - no configurations listed\n
 Error on Release(): Not the lock owner\n
 Error parsing text-format
+Error pipe( stderr ) for %s\n
 Error pipe( stdin ) for %s\n
 Error pipe( stdout ) for %s\n
 Error reading from BMP
@@ -23469,7 +23478,6 @@ Input.RegisterForActiveConfigLoadedMessages
 Input.RegisterForActiveControllerChanges
 Input.RegisterForConfigSelectionChanges
 Input.RegisterForControllerAccountChanges
-Input.RegisterForControllerBatteryChanges
 Input.RegisterForControllerCommandMessages
 Input.RegisterForControllerConfigCloudStateChanges
 Input.RegisterForControllerConfigInfoMessages
@@ -25357,7 +25365,6 @@ N23CSteamUIInputController43CCallbackInternal_OnDisplayModalAPIKeyboardE
 N23CSteamUIInputController45CCallbackInternal_OnControllerActionTriggeredE
 N23CSteamUIInputController45CCallbackInternal_OnControllerDisplayKeyboardE
 N23CSteamUIInputController47CCallbackInternal_OnShowControllerLayoutPreviewE
-N23CSteamUIInputController48CCallbackInternal_OnControllerStatusFlagsChangedE
 N23CSteamUIInputController48CCallbackInternal_OnDispatchShowGamepadTextInputE
 N23CSteamUIInputController51CCallbackInternal_OnControllerConfigSelectionChangeE
 N23CSteamUIInputController51CCallbackInternal_OnDispatchDismissGamepadTextInputE
@@ -26343,6 +26350,7 @@ NotifyChatRoomHeaderStateChange
 NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
+NotifyControllerBatteryState
 NotifyControllerDisconnected
 NotifyControllerListChanged
 NotifyControllerPairingChanged
@@ -36615,7 +36623,6 @@ bCaptureButton
 bCenterTrackpad
 bCenterTrackpadTouch
 bChangeBetaEnabled
-bCharging
 bChecking
 bChooseDirectory
 bChordInvoked
@@ -37643,6 +37650,7 @@ characteristic-two-field
 charge_limit_default
 charge_limit_max
 charge_limit_min
+charging
 charset
 charset=ISO-8859-1
 charset=UTF-8
@@ -41038,7 +41046,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggen(m/
+ggenh
 ghost_
 gidlist
 gidparentcomment
@@ -48060,6 +48068,7 @@ local://controller_base/basicui_controller_legion_go_s.vdf
 local://controller_base/basicui_gamepad.vdf
 local://controller_base/basicui_neptune.vdf
 local://controller_base/chord%s
+local://controller_base/chord_controller_triton.vdf
 local://controller_base/desktop_neptune.vdf
 local://controller_base/desktop_steamcontroller_gordon.vdf
 local://controller_base/empty.vdf
@@ -49191,7 +49200,6 @@ m_vecAutoDetectedProxyExcludedHosts
 m_vecAvailableBetas
 m_vecAxisState
 m_vecBarriers
-m_vecBatteryStateCallbacks
 m_vecBuffers.Count() == 0
 m_vecButtonPressCallbacks
 m_vecCachedLocalBindings
@@ -54234,6 +54242,7 @@ steamcommunity.com
 steamconsole.so
 steamcontrollerconfigfileids
 steamcontrollertemplateindex
+steamcontrollertouchconfigfile
 steamcontrollertouchtemplateindex
 steamdeck-hwmon
 steamdeck_
@@ -55780,7 +55789,6 @@ ubuntu12_32/steamoverlayvulkanlayer.so
 ubuntu12_32/steamsysinfo
 ubuntu12_64/libVkLayer_steam_fossilize.so
 ubuntu12_64/steamoverlayvulkanlayer.so
-ucBatteryLevel
 udev-events1
 udisks2_block_proxy_get_property
 udisks2_block_proxy_set_property

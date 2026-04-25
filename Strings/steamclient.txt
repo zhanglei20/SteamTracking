@@ -106,7 +106,7 @@
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123M
+ !"#$%&'()*+,-./0123\r
  !BAllIntraProcessMessagesReceived( %d outstanding )
  "iss": "%s"
  $8O[lv
@@ -883,7 +883,7 @@
 "-\n+CAuthenticationSupport_RevokeToken_Response"B\n.CAuthenticationSupport_GetTokenHistory_Request
 "-\n+CCommunity_DeleteCommentFromThread_Response"
 "-\n+CQueuedMatchmakingGameHost_EndGame_Response*
-"-\n+CSteamInputService_EnableQosStatus_Response*
+"-\n+CSteamInputService_EnableQosStatus_Response"{\n6CSteamInputService_ControllerBatteryState_Notification
 "-\n+CTransportValidation_ThreadedCount_Response"<\n-CTransportValidation_NotifyCount_Notification
 ".  To use it here, please add the necessary import.
 ". If this is intended, set 'option allow_alias = true;' to the enum definition.
@@ -1481,6 +1481,7 @@
 #\v+(bF&drJ:x#
 #]hK Ed
 #bML"
+#controller_mobile_touch
 #include
 #include is NULL
 #origin_PS5_leftfn
@@ -5336,8 +5337,9 @@ $steammessages_parental_objects.proto"
 +'+1+3+=+?+K+O+U+i+m+o+{+
 +(#\v&dbF:xrJ'$#
 ++CCUNG
-++CCUNG"
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
+++CCUNG=
+++CCUNGb
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAuthenticationSupport_RevokeToken_Request
@@ -8000,10 +8002,6 @@ $steammessages_parental_objects.proto"
 0 == sm_ThreadSafeQueueLogMsgSpew.Count()
 0 Umv
 0"W\n+CCommunity_GetUserPartnerEventNews_Response
-00000
-000000
-00000000
-0000000000000000000000000000000000000000
 0.0333
 0.050
 0.13.15.106
@@ -8050,18 +8048,22 @@ $steammessages_parental_objects.proto"
 0.CTransportValidation_CountOrderedBytes_Response
 0.CTransportValidation_RequestInvalidBool_Request
 0.CVideo_BeginGameRecordingSegmentsUpload_Request
+00000
+000000
+00000000
+0000000000000000000000000000000000000000
 00000001
 00003333
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 00|000
 01/01/00
 0123456789.
 0123456789
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
-0123456789ABCDEF0
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
+0123456789ABCDEFp
 0123456789abcdef
 08bX
 0: Only use software drift calibration based on controller capabilities. 1: Any controllers with IMUs will be forced to use the standard software drift calibration.
@@ -11592,11 +11594,11 @@ $steammessages_parental_objects.proto"
 20.CAuthenticationResponseMsg.AuthenticationResult
 200 Mbps
 2000
-200M
 2019
 2048
 20000
 2000000
+200M
 208.64.200.0/22
 208.78.164.0/22
 20AccountHardware_Stub
@@ -12451,7 +12453,6 @@ $steammessages_parental_objects.proto"
 25CScheduleCallbackWorkItemI24ControllerHotplugEvent_tE
 25CScheduleCallbackWorkItemI28ControllerWirelessPresence_tE
 25CScheduleCallbackWorkItemI30ControllerDongleUpdateStatus_tE
-25CScheduleCallbackWorkItemI30ControllerStatusFlagsChanged_tE
 25CScheduledFunctionUserJobI12CCMInterface9CBaseUserE
 25CScopedSystemLogCollector
 25CSetStreamingClientConfig
@@ -13625,7 +13626,7 @@ $steammessages_parental_objects.proto"
 32CPlayer_GetPostedStatus_Response
 32CPlayer_SetFavoriteBadge_Request
 32CPlayer_SetProfileTheme_Response
-32CProcessWorkItemReadStdOutThread
+32CProcessWorkItemPipeReaderThread
 32CProcessWorkItemWriteStdInThread
 32CPublishedFile_AddChild_Response
 32CPublishedFile_Subscribe_Request
@@ -15026,6 +15027,7 @@ $steammessages_parental_objects.proto"
 43CUserAccount_ViewFriendInviteToken_Response
 43RemoteStorage_SteamCloudEnableStateChange_t
 43zV18
+443510
 44CAccountHardware_ManageSavedHardware_Request
 44CAuthentication_RefreshToken_Revoke_Response
 44CBluetoothManager_GetAdapterDetails_Response
@@ -15657,6 +15659,7 @@ $steammessages_parental_objects.proto"
 54CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 54CRemoteClientJobHandleClientAuthorizationCancelRequest
 54CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+54CSteamInputService_ControllerBatteryState_Notification
 54CSteamInputService_ControllerDisconnected_Notification
 54CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 54CTransportValidation_NotifySyntheticEvent_Notification
@@ -15958,6 +15961,7 @@ $steammessages_parental_objects.proto"
 7.CPublishedFile_SetPlaytimeForControllerConfigs_Request
 7.CQueuedMatchmakingGameHost_SubmitPlayerResult_Response
 7.CSteamEngine_SearchAppDataCacheByStoreKeywords_Request
+7.CSteamInputService_ControllerBatteryState_Notification
 7.CSteamInputService_ControllerDisconnected_Notification
 7.CSteamOSManager_RefreshScreenReaderAutoLocale_Response
 7.CTransportValidation_NotifySyntheticEvent_Notification
@@ -16448,7 +16452,7 @@ $steammessages_parental_objects.proto"
 9Econ_Stub
 9GameNotes
 9Gamescope
-9H(1
+9Hh9
 9IClientVR
 9IGv
 9ISteamUGC
@@ -22646,7 +22650,9 @@ Config Edit Failed: %d, %d, %s, %s, %d, %d, %d
 Config fetch is in progess, but network config avail is %d?
 Config store has m_bDisableDiskSave on beta or public!
 ConfigSet - failed to find config set file on-disk: %s
+ConfigSet - failed to find ibex config set file on-disk: %s
 ConfigSet - found config set file on-disk: %s
+ConfigSet - found ibex config set file on-disk: %s
 ConfigSet Failed to Resolve Path: %s
 ConfigStore (%s) is dirty, and being destroyed, we're discarding data
 Configuration
@@ -24795,6 +24801,7 @@ Error loading %s: staging mismatch
 Error loading %s: wrong marker
 Error on Release(): Not the lock owner\n
 Error parsing text-format
+Error pipe( stderr ) for %s\n
 Error pipe( stdin ) for %s\n
 Error pipe( stdout ) for %s\n
 Error querying screen resolution, using architecture default %dx%d
@@ -27342,7 +27349,6 @@ Guest Pass
 Guides
 Gujarati
 Gurmukhi
-GwNI9Q5
 Gy?K
 Gyro Noise Value: %f, Raw Jerk Value: %f, Low Pass Jerk Value: %f, Jerk Threshold: %f, Jerks Detected: %u\n
 Gyro Rate switched from: %u us to: %u us.\n
@@ -31176,6 +31182,7 @@ NotifyClientUsabilityMetrics
 NotifyClipCreated
 NotifyClipDeleted
 NotifyClock
+NotifyControllerBatteryState
 NotifyControllerDisconnected
 NotifyControllerListChanged
 NotifyControllerPairingChanged
@@ -36006,6 +36013,7 @@ SteamInputManager.GetDongles#1
 SteamInputManager.GetTritonPairingInfo#1
 SteamInputManager.NotifyAxesStateChanged#1
 SteamInputManager.NotifyButtonStateChanged#1
+SteamInputManager.NotifyControllerBatteryState#1
 SteamInputManager.NotifyControllerDisconnected#1
 SteamInputManager.NotifyControllerListChanged#1
 SteamInputManager.NotifyControllerPairingChanged#1
@@ -44661,6 +44669,7 @@ charge_limit_default
 charge_limit_max
 charge_limit_min
 charge_now
+charging
 charing state change
 charset
 charset=ISO-8859-1
@@ -48249,7 +48258,7 @@ getting staging path
 getuid
 getwc
 gf2m not supported
-ggen(
+ggen
 ghjkl
 gidlist
 gidparentcomment
@@ -60684,7 +60693,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr 21 2026 18:46:43
+steam Apr 25 2026 01:39:30
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 steam-runtime-launch-client --alongside-steam -- amixer -c acp5x contents
