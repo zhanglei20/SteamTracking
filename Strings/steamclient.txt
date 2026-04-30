@@ -3719,7 +3719,7 @@ $steammessages_parental_objects.proto"
 (\r"7\n%CMsgRemoteClientAppUpdateInfoComplete
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
-(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
+(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"5\n3CSteamInputService_SteamDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"7\n\rCMsgWasHidden
 (\r"8\n%CGameRecording_StartRecording_Request
 (\r"8\n%CMsgRemoteClientSuspendLanPeerContent
@@ -14594,6 +14594,7 @@ $steammessages_parental_objects.proto"
 4.CSteamInputService_ForgetDonglePairingBond_Response
 4.CSteamInputService_ForgetTritonPairingBond_Response
 4.CSteamInputService_GyroSoftwareCalibration_Response
+4.CSteamInputService_SteamDonglesChanged_Notification
 4.CTransportValidation_TriggerSyntheticEvents_Request
 40 Mbps
 4000
@@ -15493,7 +15494,6 @@ $steammessages_parental_objects.proto"
 5.CQueuedMatchmakingGameHost_SearchForPlayers_Response
 5.CSteamEngine_UpdateTextFilterDictionary_Notification
 5.CSteamInputService_PairDongleTritonConnected_Request
-5.CSteamInputService_TritonDonglesChanged_Notification
 5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
 5.ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -15573,6 +15573,7 @@ $steammessages_parental_objects.proto"
 51CSteamInputService_ForgetDonglePairingBond_Response
 51CSteamInputService_ForgetTritonPairingBond_Response
 51CSteamInputService_GyroSoftwareCalibration_Response
+51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
 524288
@@ -15598,7 +15599,6 @@ $steammessages_parental_objects.proto"
 52CQueuedMatchmakingGameHost_SearchForPlayers_Response
 52CSteamEngine_UpdateTextFilterDictionary_Notification
 52CSteamInputService_PairDongleTritonConnected_Request
-52CSteamInputService_TritonDonglesChanged_Notification
 52CSteamInputService_UnpairedTritonDocked_Notification
 52CTransportValidation_TriggerSyntheticEvents_Response
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -31244,6 +31244,7 @@ NotifyShowPowerMenu
 NotifyStartShutdown
 NotifyStateChanged
 NotifySteamBroadcastPacket
+NotifySteamDonglesChanged
 NotifySteamEngineGotLocationString
 NotifySteamToSteamPacket
 NotifyStopBroadcastUpload
@@ -31257,7 +31258,6 @@ NotifyTimelineEntryRemoved
 NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
-NotifyTritonDonglesChanged
 NotifyTritonQos
 NotifyTritonUndocked
 NotifyUIOfMenuChange
@@ -36022,7 +36022,7 @@ SteamInputManager.NotifyGyroAccelerometerStateChanged#1
 SteamInputManager.NotifyGyroCalibrationStateChanged#1
 SteamInputManager.NotifyGyroQuaternionStateChanged#1
 SteamInputManager.NotifyGyroSpeedStateChanged#1
-SteamInputManager.NotifyTritonDonglesChanged#1
+SteamInputManager.NotifySteamDonglesChanged#1
 SteamInputManager.NotifyTritonQos#1
 SteamInputManager.NotifyTritonUndocked#1
 SteamInputManager.NotifyUnpairedTritonDocked#1
@@ -60692,7 +60692,7 @@ stderr
 stdin
 stdout
 steam
-steam Apr 28 2026 20:39:46
+steam Apr 30 2026 02:47:34
 steam-runtime-launch-client --alongside-steam --
 steam-runtime-launch-client --alongside-steam -- /usr/bin/steamos-polkit-helpers/steamos-select-branch %s
 steam-runtime-launch-client --alongside-steam -- amixer -c acp5x contents

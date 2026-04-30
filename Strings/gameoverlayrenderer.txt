@@ -49,7 +49,8 @@ $ORIGIN
 *\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f*\f
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNGq
+++CCUNG1
+++CCUNGV
 ++CCUNGstd::exception
 ----------------------------\n
 /ValveIPCSHM_%d
@@ -97,6 +98,7 @@ Attrib_TexCoord
 BOverlayNeedsPresent
 Bad Access flag on shared mem create: %s: %u\n
 CBaseOverlayRenderer
+CLcx
 COpenGLFrameCapture - missing opengl methods\n
 COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader\n
 COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)\n
@@ -104,6 +106,7 @@ COverlayGLRenderer
 COverlayGLRenderer::ValveDrawSharedHandleTexture - failed to get texture from handle\n
 CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
 CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
+CVulkanRenderer
 Clearing input stream because it is about to overflow\n
 Corrupt render stream (getting cmd)... %s\n
 Corrupt render stream: k_EBeginFrame\n
@@ -199,6 +202,7 @@ Force release of key 0x%x\n
 Forced create but already created for SharedObjectEvent\n
 Forcing internal overlay disable and requesting ui disable\n
 Frame time: %f ms\n
+GAMESCOPE_WAYLAND_DISPLAY
 GCC: (SteamRT 14.2.0-19~steamrt3.1+bsrt3c.1) 14.2.0
 GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
 GL extensions: %s\n
@@ -425,6 +429,7 @@ Video stream full!\n
 Video stream full.. couldn't get buffer!\n
 VulkanSteamOverlayPresent
 VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlaySetWindowType
 Waiting for shared fd client failed\n
 Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.\n
 Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.\n
@@ -454,6 +459,7 @@ XCreatePixmapCursor
 XCreateSimpleWindow
 XCreateWindow
 XDGAQueryExtension
+XDG_SESSION_TYPE
 XDefineCursor
 XDestroyIC
 XDestroyWindow
@@ -631,6 +637,12 @@ dst_width > 0
 dx != __null
 dy != __null
 dynamic_cast
+eglCreateWindowSurface
+eglGetDisplay
+eglGetDisplay for Wayland display %p\n
+eglGetPlatformDisplay
+eglGetPlatformDisplayEXT
+eglGetProcAddress
 en_US.UTF-8
 enable
 exec
@@ -1061,7 +1073,9 @@ vsnprintf
 vtable for
 waitid
 waitpid
+wayland
 wchar_t
+wl_display
 wpp >= 1 && wpp <= 2
 write
 x != __null

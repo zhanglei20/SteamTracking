@@ -797,6 +797,7 @@
 "A\n+CMsgRemoteClientBroadcastClientIDDeconflict
 "A\n2CMarketingMessages_CreateMarketingMessage_Response
 "B\n%CBroadcast_GetBuildClipStatus_Request
+"B\n&CClientNotificationControllerConnected
 "B\n-CTransportValidation_GetLargeResponse_Request
 "B\n.CFriendMessages_UpdateMessageReaction_Response
 "B\n/CClientNotificationGameRecordingUserMarkerAdded
@@ -3252,7 +3253,7 @@ ${LANGUAGE}
 (\r"7\n%CMsgRemoteClientAppUpdateInfoComplete
 (\r"7\n%CSteamEngine_GetGameIDForPID_Response
 (\r"7\n&CPlayer_GetFriendsGameplayInfo_Request
-(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"6\n4CSteamInputService_TritonDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
+(\r"7\n5CSteamInputService_PairDongleTritonConnected_Response"5\n3CSteamInputService_SteamDonglesChanged_Notification"S\n7CSteamInputService_UnpairedTritonPluggedIn_Notification
 (\r"7\n\rCMsgWasHidden
 (\r"8\n%CGameRecording_StartRecording_Request
 (\r"8\n%CMsgRemoteClientSuspendLanPeerContent
@@ -3338,6 +3339,7 @@ ${LANGUAGE}
 (\r"\\n\fCMsgCellList
 (\r"]\n&CClientMetrics_IPv6Connectivity_Result
 (\r"]\n'CCommunity_VerifyClanMembership_Request
+(\r"]\n)CClientNotificationControllerDisconnected
 (\r"^\n#CMsgZoomToElementAtPositionResponse
 (\r"^\n$CRemoteClient_SetPairingInfo_Request
 (\r"^\n,CParental_GetSignedParentalSettings_Response
@@ -5001,7 +5003,6 @@ ${LANGUAGE}
 +(#\v&dbF:xrJ'$#
 ++CCUNG
 ++CCUNG%s: __pos (which is %zu) > __size (which is %zu)
-++CCUNG8F
 ++CCUNGpure virtual method called\n
 ++CCUNGstd::exception
 +.CAuthenticationSupport_RevokeToken_Request
@@ -7387,11 +7388,11 @@ ${LANGUAGE}
 0000000000000000000000000000000000000000
 000000001532
 00003333
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 00:00:00
 01/01/00
 0123456789.
 0123456789
-00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 0123456789.:abcdefABCDEF
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
@@ -9277,6 +9278,7 @@ ${LANGUAGE}
 1\n,k_EMsgFBSBootstrapperPackageTransferProgress
 1\n,k_EMsgRemoteClientAuthorizationCancelRequest
 1\n,k_eMsgRemoteClientRestrictAutoUpdatesChanged
+1\n-k_EClientNotificationType_ControllerConnected
 1\n-k_EClientNotificationType_OverlaySplashScreen
 1\n-k_EClientNotificationType_TimedTrialRemaining
 1\n-k_EClientSettingStore_ConfigStore_UserRoaming
@@ -11361,6 +11363,7 @@ ${LANGUAGE}
 38CChatRoom_RenameChatRoomGroup_Response
 38CClientMetrics_ClientBootstrap_Summary
 38CClientMetrics_IPv6Connectivity_Result
+38CClientNotificationControllerConnected
 38CClientNotificationOverlaySplashScreen
 38CClientNotificationTimedTrialRemaining
 38CCloudGaming_GetTimeRemaining_Response
@@ -11583,6 +11586,7 @@ ${LANGUAGE}
 4.CSteamInputService_ForgetDonglePairingBond_Response
 4.CSteamInputService_ForgetTritonPairingBond_Response
 4.CSteamInputService_GyroSoftwareCalibration_Response
+4.CSteamInputService_SteamDonglesChanged_Notification
 4.CTransportValidation_TriggerSyntheticEvents_Request
 4.hr\F
 40 Mbps
@@ -11702,6 +11706,7 @@ ${LANGUAGE}
 41CChatRoom_SetChatRoomGroupTagline_Request
 41CChat_RequestFriendPersonaStates_Response
 41CClientMetrics_DownloadRates_Notification
+41CClientNotificationControllerDisconnected
 41CClientNotificationRemoteClientConnection
 41CCommunity_GetClanCrowdInMetadata_Request
 41CCommunity_GetClanLocGroupImages_Response
@@ -12334,6 +12339,7 @@ ${LANGUAGE}
 4\n/k_EMsgTestWorkerProcessServiceModuleCallRequest
 4\n/k_EStreamControlControllerPersonalizationUpdate
 4\n0k_EAsyncGameSessionUserVisibilitySessionListOnly
+4\n0k_EClientNotificationType_ControllerDisconnected
 4\n0k_EClientNotificationType_ParentalFeatureRequest
 4\n0k_EClientNotificationType_RemoteClientConnection
 4\n0k_EContentReportReason_LinkingToMaliciousContent
@@ -12384,7 +12390,6 @@ ${LANGUAGE}
 5.CQueuedMatchmakingGameHost_SearchForPlayers_Response
 5.CSteamEngine_UpdateTextFilterDictionary_Notification
 5.CSteamInputService_PairDongleTritonConnected_Request
-5.CSteamInputService_TritonDonglesChanged_Notification
 5.CSteamInputService_UnpairedTritonDocked_Notification
 5.CTransportValidation_TriggerSyntheticEvents_Response
 5.ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -12457,6 +12462,7 @@ ${LANGUAGE}
 51CSteamInputService_ForgetDonglePairingBond_Response
 51CSteamInputService_ForgetTritonPairingBond_Response
 51CSteamInputService_GyroSoftwareCalibration_Response
+51CSteamInputService_SteamDonglesChanged_Notification
 51CSteamOSManager_IsTelemetryHelperAvailable_Response
 51CTransportValidation_TriggerSyntheticEvents_Request
 524288
@@ -12478,7 +12484,6 @@ ${LANGUAGE}
 52CQueuedMatchmakingGameHost_SearchForPlayers_Response
 52CSteamEngine_UpdateTextFilterDictionary_Notification
 52CSteamInputService_PairDongleTritonConnected_Request
-52CSteamInputService_TritonDonglesChanged_Notification
 52CSteamInputService_UnpairedTritonDocked_Notification
 52CTransportValidation_TriggerSyntheticEvents_Response
 52ChatRoomClient_NotifyChatRoomDisconnect_Notification
@@ -14372,7 +14377,7 @@ AddedGameToWishlist
 Adding connection back to pool, but not found in in use list or waiting list
 Adding preview config for appid: %u\n
 Adding process %u for gameID %llu\n
-Adding window %llu for process %u and gameID %llu\n
+Adding window %llu (%d) for process %u and gameID %llu\n
 AdditionalRoute
 Address
 Address is invalid or contains invalid characters
@@ -14634,7 +14639,7 @@ Apps.ToggleEnableSteamOverlayForApp
 Apps.ToggleOverrideResolutionForInternalDisplay
 Apps.UninstallFlatpakApp
 Apps.VerifyApp
-Apr 28 2026 20:39:49
+Apr 30 2026 02:47:37
 April
 Arabic
 AreFilesInSubscriptionList
@@ -26402,6 +26407,7 @@ NotifyShowPowerMenu
 NotifyStartShutdown
 NotifyStateChanged
 NotifySteamBroadcastPacket
+NotifySteamDonglesChanged
 NotifySteamToSteamPacket
 NotifyStopBroadcastUpload
 NotifyStorePreferencesChanged
@@ -26415,7 +26421,6 @@ NotifyTimelineEntryRemoved
 NotifyTouchDown
 NotifyTouchMotion
 NotifyTouchUp
-NotifyTritonDonglesChanged
 NotifyTritonQos
 NotifyTritonUndocked
 NotifyUnlockedH264
@@ -41047,7 +41052,7 @@ getting socktype
 getuid
 getwc
 gf2m not supported
-ggenh
+ggen(
 ghost_
 gidlist
 gidparentcomment

@@ -77,7 +77,6 @@ $ORIGIN
 -deckard
 -holo
 -hometest
--jL G
 -noassert
 -nocrashdialog
 -stack=
@@ -114,10 +113,10 @@ $ORIGIN
 /tmp/.steam-sem-names
 0123456789
 0123456789ABCDEF
+02:47:31
 11CTrackItems
 12CStdMemAlloc
 16CAdHocValidation
-20:39:43
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 <family %u, %u bytes>
@@ -125,7 +124,7 @@ $ORIGIN
 <unknown>
 AllocateCrashMemoryReserve
 Anonymous mutex cannot have bAllAccess == true
-Apr 28 2026
+Apr 30 2026
 AreStackTrackingFiltersEnabledAtStart
 Assert( %s ):%s:%d\n
 AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
